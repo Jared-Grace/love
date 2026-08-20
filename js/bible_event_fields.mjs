@@ -3,7 +3,8 @@ export function bible_event_fields() {
   let fields = [
     {
       name: "name",
-      holds: "a short stable human-readable name for the event, e.g. 'Abraham told to offer Isaac'",
+      holds:
+        "a short stable human-readable name for the event, e.g. 'Abraham told to offer Isaac'",
       why: "the identity a second witness and an `after` reference both point at, so it must not change once written",
     },
     {
@@ -18,7 +19,8 @@ export function bible_event_fields() {
     },
     {
       name: "when",
-      holds: "what the text itself says about timing, relative or absolute, or empty",
+      holds:
+        "what the text itself says about timing, relative or absolute, or empty",
       why: "the text's own claim, kept apart from the ordering fields below so a reading is never confused with an inference",
     },
     {
@@ -33,7 +35,8 @@ export function bible_event_fields() {
     },
     {
       name: "after",
-      holds: "the names of events this one follows where the text establishes it, as a list",
+      holds:
+        "the names of events this one follows where the text establishes it, as a list",
       why: "order as the text gives it — within a narrative book this is free, so it is recorded rather than derived later",
     },
     {
@@ -53,7 +56,8 @@ export function bible_event_fields() {
     },
     {
       name: "gaps",
-      holds: "a list of {missing, filled_by} — what this passage does not say, and the passages elsewhere in Scripture that do say it; filled_by empty means genuinely unfilled",
+      holds:
+        "a list of {missing, filled_by} — what this passage does not say, and the passages elsewhere in Scripture that do say it; filled_by empty means genuinely unfilled",
       why: "the field that keeps invention small. Genesis 22 gives no interior until Hebrews 11:19 supplies it, and Genesis omits Joseph's fetters until Psalm 105:18 supplies them. gathering this while the chapter is open is far cheaper than reconstructing it, and a pass that skips it means reading the whole Bible twice",
     },
   ];
