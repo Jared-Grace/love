@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_money_section_why_receive() {
   "The part of what this app does with money that answers why anything is received at all, when everything here is free.";
   let texts = {
