@@ -323,6 +323,10 @@ export function bible_glyph_artwork_names() {
       glyph: "child",
       asset: "Child",
     },
+    {
+      glyph: "hands_raised",
+      asset: "Raising hands",
+    },
   ];
   return names;
 }
