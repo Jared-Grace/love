@@ -1,0 +1,60 @@
+import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_ast } from "./function_ast.mjs";
+import { function_reachable_names } from "./function_reachable_names.mjs";
+import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
+import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_map } from "./list_map.mjs";
+import { not } from "./not.mjs";
+import { property_count_add } from "./property_count_add.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { text_is } from "./text_is.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
+import { equal } from "./equal.mjs";
+export async function app_shared_text_reader_seats_candidates(f_name_app) {
+  "$plain f_name_app";
+  "Everything inside one app that is handed written words and is not one of the doors being watched, counted by how often each is handed some.";
+  "This is the one question the count of untranslated words cannot ask about itself. That count walks the doors it was given, so a door left off the list is not a fault it finds - it is a fault it is blind to, and its answer comes out clean because it never went and looked.";
+  "So it is read by a person rather than compared against a number. Most of what comes back is not a door at all: a name looked up under a word, a colour, a key something is filed under. What is being looked for is the one line among them that is a page of words going out to a reader through a way nobody had listed.";
+  "It says nothing about whether the words are already in the reader's language, because it is not reading the words - it is reading where they are going.";
+  arguments_assert(arguments, 1);
+  let seats = app_shared_text_reader_seats();
+  function lambda$seat(seat) {
+    let fn = property_get(seat, "fn");
+    return fn;
+  }
+  let doors = list_map(seats, lambda$seat);
+  let f_names = await function_reachable_names(f_name_app);
+  let candidates = {};
+  for (let f_name of f_names) {
+    let ast = await function_ast(f_name);
+    let calls = js_list_type_nodes(ast, "CallExpression");
+    for (let call of calls) {
+      let callee = property_get(call, "callee");
+      let named = equal(callee.type, "Identifier");
+      if (not(named)) {
+        continue;
+      }
+      let watched = list_includes(doors, callee.name);
+      if (watched) {
+        continue;
+      }
+      for (let argument of call.arguments) {
+        let words = js_literal_value_deep_try(argument);
+        let written = text_is(words);
+        if (not(written)) {
+          continue;
+        }
+        let letters = text_letters_only(words);
+        let anything = text_empty_not_is(letters);
+        if (not(anything)) {
+          continue;
+        }
+        property_count_add(candidates, callee.name, 1);
+      }
+    }
+  }
+  return candidates;
+}
