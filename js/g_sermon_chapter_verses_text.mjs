@@ -4,7 +4,6 @@ import { property_equals } from "./property_equals.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_wrap_brackets } from "./text_wrap_brackets.mjs";
-import { property_list_join_comma } from "./property_list_join_comma.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { integer_to } from "./integer_to.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
