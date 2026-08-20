@@ -1,9 +1,8 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { ebible_firebase_folder_path } from "./ebible_firebase_folder_path.mjs";
 import { firebase_storage_list_page } from "./firebase_storage_list_page.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_slash_forward } from "./list_join_slash_forward.mjs";
-import { property_get } from "./property_get.mjs";
 export async function ebible_version_uploaded_is(bible_folder) {
   "$plain bible_folder";
   "Whether storage holds anything at all for this bible - which is what stands between a reader on a phone and the text that is already built on this machine.";
@@ -14,7 +13,6 @@ export async function ebible_version_uploaded_is(bible_folder) {
   let folder = ebible_firebase_folder_path(bible_folder);
   let prefix = list_join_slash_forward([folder, ""]);
   let page = await firebase_storage_list_page(project_url, prefix, null);
-  let names = property_get(page, "names");
-  let uploaded = list_empty_not_is(names);
+  let uploaded = property_list_empty_not_is(page, "names");
   return uploaded;
 }
