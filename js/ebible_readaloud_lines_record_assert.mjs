@@ -1,3 +1,4 @@
+import { ebible_readaloud_lines_differ_to_fix_names } from "./ebible_readaloud_lines_differ_to_fix_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -6,7 +7,6 @@ import { object_merge_set } from "./object_merge_set.mjs";
 import { list_map } from "./list_map.mjs";
 import { lists_combine } from "./lists_combine.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { ebible_readaloud_lines_differ_names } from "./ebible_readaloud_lines_differ_names.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
@@ -55,12 +55,18 @@ export async function ebible_readaloud_lines_record_assert(
   let differ_each = list_map(bibles, lambda);
   let differ = lists_combine(differ_each);
   let f_name2 = fn_name("ebible_readaloud_lines_write");
-  let names = await ebible_readaloud_lines_differ_names();
+  let names = await ebible_readaloud_lines_differ_to_fix_names();
   let baseline_path = ebible_readaloud_lines_baseline_path();
   let name_write = fn_name("ebible_readaloud_lines_baseline_write");
+  let f_name_prove = fn_name(
+    "ebible_readaloud_lines_differ_as_published_record",
+  );
   let hint = text_combine_multiple([
     "a chapter is written for reading aloud in a different number of lines from the number of verses its page marks, so its verses cannot be laid against their numbers and nobody is shown that chapter at all. Look at the chapter itself; when it is put right, measure again with ",
     f_name2,
+    ". If what is wrong looks like it came with the download - a chapter stopping partway through - fetch that bible again from scratch and see, with ",
+    f_name_prove,
+    ", which records the ones that come back the same rather than leaving them here to be looked at twice",
   ]);
   await baseline_names_gate_generic(names, baseline_path, hint, name_write);
   let measured_names = list_map_property(bibles, "bible_folder");
