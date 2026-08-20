@@ -1,17 +1,11 @@
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
-import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
-import { list_get_or_null } from "./list_get_or_null.mjs";
+import { bible_glyph_chapter_rosetta_lines } from "./bible_glyph_chapter_rosetta_lines.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
-import { bible_interlinear_verse_original_text } from "./bible_interlinear_verse_original_text.mjs";
-import { bible_interlinear_verse_gloss_text } from "./bible_interlinear_verse_gloss_text.mjs";
 import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
-export async function bible_glyph_chapter_rosetta_verses(
-  chapter_code,
-  traditions,
-) {
+export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
   "$plain chapter_code";
   "$plain traditions";
   "the code names one chapter and the traditions are lists of glyph redrawings. Both are data to read and neither runs.";
