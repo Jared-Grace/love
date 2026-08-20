@@ -1,3 +1,4 @@
+import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_text_align } from "./html_text_align.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -17,7 +18,7 @@ export function song_image_luma_badge(parent, candidate) {
   html_style_font_size(badge, "10px");
   html_style_set(badge, "width", "48px");
   html_text_align(badge, "center");
-  html_style_set(badge, "color", "#676767");
+  html_style_set(badge, "color", song_image_color_text_quiet());
   html_text_set(badge, "…");
   function lambda(luma) {
     let band = image_luma_band(luma);
