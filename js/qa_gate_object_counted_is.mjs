@@ -6,14 +6,14 @@ import { list_includes } from "./list_includes.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { qa_gate_asserted_empty_names } from "./qa_gate_asserted_empty_names.mjs";
+import { qa_gate_judged_list_names } from "./qa_gate_judged_list_names.mjs";
 import { qa_gate_count_hollow_is } from "./qa_gate_count_hollow_is.mjs";
 export function qa_gate_object_counted_is(ast, answer) {
   "Whether the record a gate hands back holds even one part that is a reading rather than a restatement of what it refused to find.";
   "One part is enough. A gate that says how much it walked has already given a reader the thing that falls when its sweep goes blind, and whatever else it says beside that is its own business.";
   "Three shapes are passed over as saying nothing. A number written out in the answer is true of the gate and says nothing about what it reached. A name the gate hands to an emptiness check is nothing on every run that passes. And a value worked out from nothing but those names is the same nothing with arithmetic on top - which is the shape that was actually found here, a gate reporting how much it had checked and reporting the number of things wrong with it.";
   "A name that no line here binds is called a reading. It came in as something asked for or out of something imported, and this file cannot follow it either way, so it is let through - which lets somebody past rather than accusing them, and that is the direction to be wrong in.";
-  let asserted = qa_gate_asserted_empty_names(ast);
+  let asserted = qa_gate_judged_list_names(ast);
   let properties = property_get(answer, "properties");
   for (let property of properties) {
     let plain_is = js_node_type_is(property, "Property");
