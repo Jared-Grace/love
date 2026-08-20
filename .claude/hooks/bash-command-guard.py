@@ -3637,11 +3637,6 @@ def alias_full_name(name):
     return None
 
 
-def alias_full_name_unused(name, aliases):
-    full = aliases.get(name)
-    if isinstance(full, str) and full:
-        return full
-    return None
 
 
 def function_name_near_misses(name, live_names):
