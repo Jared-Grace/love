@@ -21,6 +21,10 @@ export async function app_replace_tests_run_e2e_goal(
   rule_set,
   e2e_inner_fn,
 ) {
+  "Drives one goal of the replacing game through a real browser: opens the page fresh, picks the rule set and then the goal by name, works out the run of steps that gets from the start to the end, and takes every one of them.";
+  "What a single step actually does is handed in rather than written here, so the one walk serves more than one kind of checking. The walk itself - the refreshing, the counting of refreshes, the clicking on - is the part that is the same however the step is checked.";
+  "Whether this was the end is decided by comparing the goal against the last goal of the last rule set. Being there means the whole course is done and the finishing mark has to be on the page; anywhere else there is a next to go on to. That comparison is why the last rule set is fetched at the top of a function that otherwise only knows about the one it was given.";
+  "A failure is written down with the goal and the rule set it happened in, and then let through unchanged. A browser test that broke somewhere inside a hundred clicks says almost nothing by itself; which goal it was is the whole of what is needed before anybody can go and look.";
   try {
     log_keep(app_replace_tests_run_e2e_goal.name, {
       goal,
