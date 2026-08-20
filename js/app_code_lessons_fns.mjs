@@ -245,6 +245,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order_brackets,
     app_code_lesson_expression_brackets_or,
     app_code_lesson_expression_choose_order_brackets_moved,
+    app_code_lesson_expression_brackets_moved,
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_choose_order_not,
     app_code_lesson_expression_not_comparison,
