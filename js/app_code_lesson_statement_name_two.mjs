@@ -26,6 +26,7 @@ export function app_code_lesson_statement_name_two() {
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
     unscramble: false,
+    decoys: app_code_lesson_decoy_code_words,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
