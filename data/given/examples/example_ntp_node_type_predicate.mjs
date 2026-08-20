@@ -1,4 +1,4 @@
-import { js_node_type_is_new } from "../../js/js_node_type_is_new.mjs";
+import { js_node_type_is_new } from "../../../js/js_node_type_is_new.mjs";
 export const example = {
   fn: js_node_type_is_new.name,
   args: ["js_return_is", "ReturnStatement"],

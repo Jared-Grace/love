@@ -1,5 +1,5 @@
-import { js_imports_auto_relative } from "../../js/js_imports_auto_relative.mjs";
-import { log } from "../../js/log.mjs";
+import { js_imports_auto_relative } from "../../../js/js_imports_auto_relative.mjs";
+import { log } from "../../../js/log.mjs";
 export const example = {
   fn: js_imports_auto_relative.name,
   args: ["js/shorthand_computed.mjs"],

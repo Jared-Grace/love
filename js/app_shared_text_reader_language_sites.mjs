@@ -1,4 +1,4 @@
-import { app_shared_text_reader_language_ast_objects } from "./app_shared_text_reader_language_ast_objects.mjs";
+import { app_shared_text_reader_language_ast_picked } from "./app_shared_text_reader_language_ast_picked.mjs";
 import { app_shared_text_reader_language_pickers } from "./app_shared_text_reader_language_pickers.mjs";
 import { js_file_name } from "./js_file_name.mjs";
 import { js_files_texts } from "./js_files_texts.mjs";
@@ -28,7 +28,7 @@ export async function app_shared_text_reader_language_sites() {
       continue;
     }
     let ast = js_parse(text);
-    let picked = app_shared_text_reader_language_ast_objects(ast);
+    let picked = app_shared_text_reader_language_ast_picked(ast);
     for (let one of picked) {
       list_add(sites, {
         file: record.file,

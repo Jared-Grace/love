@@ -1,4 +1,4 @@
-import { js_statement_if_test_set } from "../../js/js_statement_if_test_set.mjs";
+import { js_statement_if_test_set } from "../../../js/js_statement_if_test_set.mjs";
 export const example = {
   fn: js_statement_if_test_set.name,
   args: ["b"],

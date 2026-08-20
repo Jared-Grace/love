@@ -1,7 +1,7 @@
-import { js_statement_find_call_named_index } from "../../js/js_statement_find_call_named_index.mjs";
-import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
-import { js_call_named_find_index } from "../../js/js_call_named_find_index.mjs";
-import { js_statement_delete } from "../../js/js_statement_delete.mjs";
+import { js_statement_find_call_named_index } from "../../../js/js_statement_find_call_named_index.mjs";
+import { js_statement_find_call_named } from "../../../js/js_statement_find_call_named.mjs";
+import { js_call_named_find_index } from "../../../js/js_call_named_find_index.mjs";
+import { js_statement_delete } from "../../../js/js_statement_delete.mjs";
 export const example = {
   fn: js_statement_delete.name,
   select: js_statement_find_call_named_index.name,

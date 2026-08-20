@@ -1,4 +1,4 @@
-import { js_block_body_add_code_first } from "../../js/js_block_body_add_code_first.mjs";
+import { js_block_body_add_code_first } from "../../../js/js_block_body_add_code_first.mjs";
 export const example = {
   fn: js_block_body_add_code_first.name,
   args: ["ready_is", "consequent", "log_starting()"],

@@ -8,6 +8,7 @@ import { permission_replay_reading } from "./permission_replay_reading.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export async function permission_replay_grants_add() {
+  "do NOT grant this - it writes allow rules, and a command that writes them is the one command the human has to see every time.";
   arguments_assert(arguments, 0);
   ("Grants every function the daily reading says could stop prompting, so a day's worth of interruptions costs the human one approval instead of one each.");
   ("It finds its own set rather than being handed one. A list pasted into a command is a list somebody had to read off a report and retype, and the set drifts from what the record actually holds between the reading and the typing - where this cannot, because it is the same file the reading was written to.");

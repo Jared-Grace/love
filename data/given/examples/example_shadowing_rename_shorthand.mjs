@@ -1,4 +1,4 @@
-import { js_shadowing_rename } from "../../js/js_shadowing_rename.mjs";
+import { js_shadowing_rename } from "../../../js/js_shadowing_rename.mjs";
 export const example = {
   fn: js_shadowing_rename.name,
   args: ["exists", "present"],

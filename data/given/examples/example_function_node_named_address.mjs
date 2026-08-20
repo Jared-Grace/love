@@ -1,7 +1,7 @@
-import { js_statement_delete } from "../../js/js_statement_delete.mjs";
-import { js_function_node_find_named_node } from "../../js/js_function_node_find_named_node.mjs";
-import { js_function_node_find_named } from "../../js/js_function_node_find_named.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
+import { js_statement_delete } from "../../../js/js_statement_delete.mjs";
+import { js_function_node_find_named_node } from "../../../js/js_function_node_find_named_node.mjs";
+import { js_function_node_find_named } from "../../../js/js_function_node_find_named.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
 export const example = {
   fn: js_statement_delete.name,
   select: js_function_node_find_named_node.name,

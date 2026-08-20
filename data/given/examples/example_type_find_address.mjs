@@ -1,6 +1,6 @@
-import { js_statement_if_return_add } from "../../js/js_statement_if_return_add.mjs";
-import { js_type_find } from "../../js/js_type_find.mjs";
-import { js_find_body_block } from "../../js/js_find_body_block.mjs";
+import { js_statement_if_return_add } from "../../../js/js_statement_if_return_add.mjs";
+import { js_type_find } from "../../../js/js_type_find.mjs";
+import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
 export const example = {
   fn: js_statement_if_return_add.name,
   select: js_type_find.name,

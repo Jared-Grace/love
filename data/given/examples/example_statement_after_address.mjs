@@ -1,5 +1,5 @@
-import { js_statement_delete } from "../../js/js_statement_delete.mjs";
-import { js_find_statement_after } from "../../js/js_find_statement_after.mjs";
+import { js_statement_delete } from "../../../js/js_statement_delete.mjs";
+import { js_find_statement_after } from "../../../js/js_find_statement_after.mjs";
 export const example = {
   fn: js_statement_delete.name,
   select: js_find_statement_after.name,

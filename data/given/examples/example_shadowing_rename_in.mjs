@@ -1,4 +1,4 @@
-import { js_shadowing_rename_in } from "../../js/js_shadowing_rename_in.mjs";
+import { js_shadowing_rename_in } from "../../../js/js_shadowing_rename_in.mjs";
 export const example = {
   fn: js_shadowing_rename_in.name,
   args: ["change", "overlay", "overlay_change"],

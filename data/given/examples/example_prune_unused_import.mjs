@@ -1,7 +1,7 @@
-import { js_imports_unused_remove } from "../../js/js_imports_unused_remove.mjs";
-import { list_first } from "../../js/list_first.mjs";
-import { list_size } from "../../js/list_size.mjs";
-import { js_imports_auto_relative } from "../../js/js_imports_auto_relative.mjs";
+import { js_imports_unused_remove } from "../../../js/js_imports_unused_remove.mjs";
+import { list_first } from "../../../js/list_first.mjs";
+import { list_size } from "../../../js/list_size.mjs";
+import { js_imports_auto_relative } from "../../../js/js_imports_auto_relative.mjs";
 export const example = {
   fn: js_imports_unused_remove.name,
   args: [],

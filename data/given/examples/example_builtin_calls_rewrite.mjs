@@ -1,4 +1,4 @@
-import { js_builtin_calls_rewrite } from "../../js/js_builtin_calls_rewrite.mjs";
+import { js_builtin_calls_rewrite } from "../../../js/js_builtin_calls_rewrite.mjs";
 export const example = {
   fn: js_builtin_calls_rewrite.name,
   args: [],

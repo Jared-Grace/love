@@ -1,6 +1,6 @@
-import { js_find_call_argument } from "../../js/js_find_call_argument.mjs";
-import { js_object_field_add } from "../../js/js_object_field_add.mjs";
-import { js_find_call_index_argument } from "../../js/js_find_call_index_argument.mjs";
+import { js_find_call_argument } from "../../../js/js_find_call_argument.mjs";
+import { js_object_field_add } from "../../../js/js_object_field_add.mjs";
+import { js_find_call_index_argument } from "../../../js/js_find_call_index_argument.mjs";
 export const example = {
   fn: js_object_field_add.name,
   select: js_find_call_index_argument.name,

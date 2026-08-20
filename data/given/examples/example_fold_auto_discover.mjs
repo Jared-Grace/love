@@ -1,6 +1,6 @@
-import { js_fold_auto } from "../../js/js_fold_auto.mjs";
-import { list_get_wrap_index } from "../../js/list_get_wrap_index.mjs";
-import { list_last } from "../../js/list_last.mjs";
+import { js_fold_auto } from "../../../js/js_fold_auto.mjs";
+import { list_get_wrap_index } from "../../../js/list_get_wrap_index.mjs";
+import { list_last } from "../../../js/list_last.mjs";
 export const example = {
   fn: js_fold_auto.name,
   args: [list_last.name, list_get_wrap_index.name],

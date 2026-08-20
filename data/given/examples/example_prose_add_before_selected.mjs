@@ -1,6 +1,6 @@
-import { js_selects_prose_add_before } from "../../js/js_selects_prose_add_before.mjs";
-import { js_find_declaration_named } from "../../js/js_find_declaration_named.mjs";
-import { js_selects_prose_add_after } from "../../js/js_selects_prose_add_after.mjs";
+import { js_selects_prose_add_before } from "../../../js/js_selects_prose_add_before.mjs";
+import { js_find_declaration_named } from "../../../js/js_find_declaration_named.mjs";
+import { js_selects_prose_add_after } from "../../../js/js_selects_prose_add_after.mjs";
 export const example = {
   fn: js_selects_prose_add_before.name,
   select: js_find_declaration_named.name,

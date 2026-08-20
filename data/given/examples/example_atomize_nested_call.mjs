@@ -1,4 +1,4 @@
-import { js_atomize } from "../../js/js_atomize.mjs";
+import { js_atomize } from "../../../js/js_atomize.mjs";
 export const example = {
   fn: js_atomize.name,
   args: [],

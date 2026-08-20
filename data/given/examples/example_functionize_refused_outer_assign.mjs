@@ -1,4 +1,4 @@
-import { js_statements_outer_assign_assert } from "../../js/js_statements_outer_assign_assert.mjs";
+import { js_statements_outer_assign_assert } from "../../../js/js_statements_outer_assign_assert.mjs";
 export const example = {
   kind: "rejection",
   title: "Refuse to cut out a run that moves a mark bound above it",

@@ -1,5 +1,5 @@
-import { js_selects_functionize } from "../../js/js_selects_functionize.mjs";
-import { js_selects_functionize_local } from "../../js/js_selects_functionize_local.mjs";
+import { js_selects_functionize } from "../../../js/js_selects_functionize.mjs";
+import { js_selects_functionize_local } from "../../../js/js_selects_functionize_local.mjs";
 export const example = {
   fn: js_selects_functionize.name,
   args: ["report_write", "list_unique,list_size", "rows_summarize"],

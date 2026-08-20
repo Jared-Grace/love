@@ -1,4 +1,4 @@
-import { js_statements_move_binding_assert } from "../../js/js_statements_move_binding_assert.mjs";
+import { js_statements_move_binding_assert } from "../../../js/js_statements_move_binding_assert.mjs";
 export const example = {
   kind: "rejection",
   title: "Refuse to move a line past the lines that read it",

@@ -1,4 +1,4 @@
-import { function_param_new } from "../../js/function_param_new.mjs";
+import { function_param_new } from "../../../js/function_param_new.mjs";
 export const example = {
   fn: function_param_new.name,
   args: ["list_size", "factor", "1"],

@@ -1,4 +1,4 @@
-import { js_shadowing_assign } from "../../js/js_shadowing_assign.mjs";
+import { js_shadowing_assign } from "../../../js/js_shadowing_assign.mjs";
 export const example = {
   fn: js_shadowing_assign.name,
   args: ["dictionary"],

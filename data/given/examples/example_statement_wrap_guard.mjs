@@ -1,7 +1,7 @@
-import { js_statement_if_return_add } from "../../js/js_statement_if_return_add.mjs";
-import { js_statement_find_call_named } from "../../js/js_statement_find_call_named.mjs";
-import { js_statement_wrap_guard } from "../../js/js_statement_wrap_guard.mjs";
-import { js_statement_wrap_if } from "../../js/js_statement_wrap_if.mjs";
+import { js_statement_if_return_add } from "../../../js/js_statement_if_return_add.mjs";
+import { js_statement_find_call_named } from "../../../js/js_statement_find_call_named.mjs";
+import { js_statement_wrap_guard } from "../../../js/js_statement_wrap_guard.mjs";
+import { js_statement_wrap_if } from "../../../js/js_statement_wrap_if.mjs";
 export const example = {
   fn: js_statement_wrap_guard.name,
   select: js_statement_find_call_named.name,

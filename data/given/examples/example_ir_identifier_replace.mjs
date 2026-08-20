@@ -1,4 +1,4 @@
-import { function_identifier_replace_current } from "../../js/function_identifier_replace_current.mjs";
+import { function_identifier_replace_current } from "../../../js/function_identifier_replace_current.mjs";
 export const example = {
   fn: function_identifier_replace_current.name,
   args: ["x", "a * b"],

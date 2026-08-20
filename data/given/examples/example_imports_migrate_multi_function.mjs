@@ -1,5 +1,5 @@
-import { file_imports_repair } from "../../js/file_imports_repair.mjs";
-import { js_flo } from "../../js/js_flo.mjs";
+import { file_imports_repair } from "../../../js/file_imports_repair.mjs";
+import { js_flo } from "../../../js/js_flo.mjs";
 export const example = {
   fn: file_imports_repair.name,
   args: ["js/two_sizes.mjs"],

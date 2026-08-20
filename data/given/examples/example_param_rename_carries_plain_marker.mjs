@@ -1,4 +1,4 @@
-import { function_param_rename } from "../../js/function_param_rename.mjs";
+import { function_param_rename } from "../../../js/function_param_rename.mjs";
 export const example = {
   fn: function_param_rename.name,
   args: ["chapter_file_name", "chapter_code", "chapter_id"],
