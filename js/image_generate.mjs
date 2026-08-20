@@ -12,6 +12,8 @@ import { multiply } from "./multiply.mjs";
 import { divide } from "./divide.mjs";
 export async function image_generate(text, path_output) {
   "Writes one tall picture - a phone screen's worth, white words on black - of a piece of text, centred, at the largest size that still lets the whole of it stand inside the margins.";
+  "The size is searched for rather than worked out. Whether a text fits depends on where its words happen to break, and that is only knowable by wrapping it and measuring what came out - so the wrapping is handed to the search and run again at every size it tries.";
+  "The lines are placed as one block about the middle of the picture rather than down from the top, so a short text and a long one come out sitting in the same place on the screen. The drawing library is installed the first time this is asked for rather than being carried about as a standing dependency.";
   let v2 = await import_install("canvas");
   property_get(v2, "registerFont");
   let createCanvas = property_get(v2, "createCanvas");
