@@ -24,12 +24,16 @@ export function app_g_bless_overlay_render_tap_prayed(
   let rung = property_get(r2, "rung");
   let container_map = property_get(r2, "container_map");
   let bar = property_get(r2, "bar");
+  let view_everyone = property_get(r2, "view_everyone");
   function render() {
-    let view = view_now();
-    ("the marks are worked out from the record on every step rather than left where they were");
-    ("laid, because the people wearing them are walking - and a light left behind on an empty");
-    ("square reads as the prayer having missed the person it was for");
-    let lit = bless_view_blessed(blessed, view);
+    "the marks are worked out from the record on every step rather than left where they were";
+    "laid, because the people wearing them are walking - and a light left behind on an empty";
+    "square reads as the prayer having missed the person it was for";
+    "they are worked out over the whole street and not over the cone, because a mark says";
+    "this person has been prayed for and that stays true while the player looks away. The";
+    "cone below decides what may be prayed for next, which is the question sight is the";
+    "cost of - and the two are drawn as two layers because they answer two questions";
+    let lit = bless_view_blessed(blessed, view_everyone);
     app_g_bless_glows(glows, lit);
     let cone = cone_get();
     app_g_bless_wash(wash, cone);
