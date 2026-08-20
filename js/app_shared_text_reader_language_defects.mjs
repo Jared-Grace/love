@@ -25,72 +25,8 @@ export async function app_shared_text_reader_language_defects() {
   "The set of languages is not written down anywhere and is not asked for. It is whatever the sayings between them already offer, so the first button to gain a language asks every other button for it, and nobody has to remember to widen a list that would otherwise be the one thing left behind.";
   "The whole folder is read rather than an index of who calls what. An index is built at some moment and answers for that moment; a button added since would be missing from it, and a gate that cannot see the newest thing is red exactly when it does not matter and green exactly when it does.";
   "The saying has to stand written out at the place it is used, as words and nothing else. Worked out at the time it is wanted it could still be right, and no reading of the files could show that it was - so what cannot be counted without running the app is a defect here even when the app is fine.";
-  "There is more than one way a saying gets picked, and every one of them is asked about. A saying with a name dropped into the middle of it goes through the one that wraps the language's words around the name, and counting only the plainer way would walk past a whole screen of buttons while reporting a number that looked like all of them.";
-  "The ways of picking are the only files whose own calls do not count. Each of them hands on what it was given rather than saying anything, so a saying written out at neither end is the mechanism working and not a page half turned.";
-  let pickers = app_shared_text_reader_language_pickers();
-  let picker_files = list_map(pickers, js_file_name);
-  let records = await js_files_texts();
-  let sites = [];
-  for (let record of records) {
-    let text = record.text;
-    let mentions = text_includes_multiple_is(text, pickers);
-    if (not(mentions)) {
-      continue;
-    }
-    let mechanism = list_includes(picker_files, record.file);
-    if (mechanism) {
-      continue;
-    }
-    let ast = js_parse(text);
-    let objects = {};
-    let declarators = js_list_type_nodes(ast, "VariableDeclarator");
-    for (let declarator of declarators) {
-      let named = equal(declarator.id.type, "Identifier");
-      if (not(named)) {
-        continue;
-      }
-      let init = declarator.init;
-      let missing = null_is(init);
-      if (missing) {
-        continue;
-      }
-      let object_expression_is = equal(init.type, "ObjectExpression");
-      if (not(object_expression_is)) {
-        continue;
-      }
-      property_set(objects, declarator.id.name, init);
-    }
-    let calls = js_list_type_nodes(ast, "CallExpression");
-    for (let call of calls) {
-      let callee = call.callee;
-      let named = equal(callee.type, "Identifier");
-      if (not(named)) {
-        continue;
-      }
-      let ours = list_includes(pickers, callee.name);
-      if (not(ours)) {
-        continue;
-      }
-      let site = {
-        file: record.file,
-        object: null,
-      };
-      ("the languages are always the first thing handed over, whichever way the saying is picked, so the rest of what a call takes is no business of this count");
-      let anything = list_empty_not_is(call.arguments);
-      if (anything) {
-        let argument = call.arguments[0];
-        let object_expression_is = equal(argument.type, "ObjectExpression");
-        if (object_expression_is) {
-          site.object = argument;
-        }
-        let named_argument = equal(argument.type, "Identifier");
-        if (named_argument) {
-          site.object = property_get_or_null(objects, argument.name);
-        }
-      }
-      list_add(sites, site);
-    }
-  }
+  "Where the places are and which of them count is asked elsewhere, because the change that repairs what is complained about here has to walk exactly the same set. Asked twice they could differ, and the repair would then quietly fix something other than what was named.";
+  let sites = await app_shared_text_reader_language_sites();
   let defects = [];
   let languages = [];
   let counted = [];
