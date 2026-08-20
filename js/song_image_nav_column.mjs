@@ -19,12 +19,14 @@ export function song_image_nav_column(parent, state, on_change) {
   let symbol = html_div(column);
   html_style_margin_top(symbol, "14px");
   html_style_font_size(symbol, "14px");
-  html_style_set(symbol, "color", song_image_color_text());
+  let style_value = song_image_color_text();
+  html_style_set(symbol, "color", style_value);
   html_text_set(symbol, current.symbol);
   let reference = html_div(column);
   html_style_margin_top(reference, "6px");
   html_style_font_size(reference, "13px");
-  html_style_set(reference, "color", song_image_color_text_quiet());
+  let style_value2 = song_image_color_text_quiet();
+  html_style_set(reference, "color", style_value2);
   html_text_set(reference, current.ref);
   let prompt = html_div(column);
   html_style_margin_top(prompt, "16px");

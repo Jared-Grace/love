@@ -66,7 +66,8 @@ export function song_image_candidate_column(parent, state, on_change) {
     html_cursor_pointer(thumbnail);
     let text = html_div(row);
     html_style_font_size(text, "11px");
-    html_style_set(text, "color", song_image_color_text());
+    let style_value = song_image_color_text();
+    html_style_set(text, "color", style_value);
     html_style_flex(text, "1");
     html_text_set(
       text,
@@ -97,7 +98,8 @@ export function song_image_candidate_column(parent, state, on_change) {
   if (equal(candidates.length, 0)) {
     let empty = html_div(column);
     html_style_font_size(empty, "13px");
-    html_style_set(empty, "color", song_image_color_text_quiet());
+    let style_value2 = song_image_color_text_quiet();
+    html_style_set(empty, "color", style_value2);
     html_text_set(empty, "Nobody has searched for this symbol yet.");
   }
 }
