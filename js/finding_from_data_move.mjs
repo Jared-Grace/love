@@ -1,3 +1,25 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { folder_repo_love } from "./folder_repo_love.mjs";
+import { data_folder } from "./data_folder.mjs";
+import { findings_folder } from "./findings_folder.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_exists_assert_json } from "./file_exists_assert_json.mjs";
+import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
+import { folder_js } from "./folder_js.mjs";
+import { file_read_try } from "./file_read_try.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { text_replace } from "./text_replace.mjs";
+import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
+import { function_auto_checked } from "./function_auto_checked.mjs";
+import { function_run } from "./function_run.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
+import { file_move } from "./file_move.mjs";
+import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function finding_from_data_move(name, path_fn_name) {
   "Move one file out of the data folder into the findings folder, and repoint the single function that says where it lives.";
   "A file in the data folder is read as a record of the present. The two commands that ask whether a name is still spoken for - one before a delete, one during a rename - read every file in there, so a function named anywhere in the data folder is answered still in use and a rename rewrites what a past run actually said. A file that is a record of what a check found out belongs on the other side of that line, and this is how one gets there.";
@@ -36,15 +58,19 @@ export async function finding_from_data_move(name, path_fn_name) {
     leaf,
   });
   let whole = text_includes(text, from_spelled);
-  let asked = text_includes(text, fn_name("data_folder"));
+  let part = fn_name("data_folder");
+  let asked = text_includes(text, part);
   let written = text;
   if (whole) {
     written = text_replace(text, from_spelled, to_spelled);
   }
   if (asked) {
-    written = text_replace(written, fn_name("data_folder"), fn_name("findings_folder"));
+    let from2 = fn_name("data_folder");
+    let to2 = fn_name("findings_folder");
+    written = text_replace(written, from2, to2);
   }
-  let moved_spelling = not(equal(written, text));
+  let b = equal(written, text);
+  let moved_spelling = not(b);
   assert_json(moved_spelling, {
     hint: "the address in this function is written in a shape this does not recognise - repoint it by hand rather than letting a guess move the file",
     path_fn_name,
