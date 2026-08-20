@@ -694,6 +694,26 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
+      root: "lechem",
+      gloss: "bread, food",
+      words: [
+        {
+          strong: "3899",
+          glyph: "bread",
+        },
+      ],
+    },
+    {
+      root: "chereb",
+      gloss: "sword",
+      words: [
+        {
+          strong: "2719",
+          glyph: "sword",
+        },
+      ],
+    },
+    {
       root: "choshek",
       gloss: "darkness",
       words: [

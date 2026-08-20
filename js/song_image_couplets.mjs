@@ -131,7 +131,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed into wood by an iron nail",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
       ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -141,7 +141,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed into wood by an iron nail",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
       ref: "Colossians 2:14",
       same_as: 8,
     },
