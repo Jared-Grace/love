@@ -15,6 +15,10 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ebible_readaloud_heading_only_names } from "./ebible_readaloud_heading_only_names.mjs";
 import { ebible_readaloud_heading_only_baseline_path } from "./ebible_readaloud_heading_only_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
+import { ebible_readaloud_lines_differ_as_published_names } from "./ebible_readaloud_lines_differ_as_published_names.mjs";
+import { ebible_readaloud_lines_differ_names } from "./ebible_readaloud_lines_differ_names.mjs";
+import { list_difference } from "./list_difference.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function ebible_readaloud_lines_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no bible has a chapter written for reading aloud in a different number of lines from the number of verses its own pages mark.");
@@ -70,6 +74,22 @@ export async function ebible_readaloud_lines_gate_run() {
     heading_only_hint,
     heading_only_write,
   );
+  ("A chapter recorded as having been published in the state it is in is excused from the list that gets worked through, so the one thing that has to stay true of it is that it is still in that state. That is what this asks. A verdict outliving the thing it was reached about is how a chapter comes back broken under cover of being already known, and here it would do it silently, because nothing else looks at that record at all.");
+  let as_published = await ebible_readaloud_lines_differ_as_published_names();
+  let differ_now = await ebible_readaloud_lines_differ_names();
+  let mended = list_difference(as_published, differ_now);
+  let f_name_prove = fn_name(
+    "ebible_readaloud_lines_differ_as_published_record",
+  );
+  list_empty_is_assert_json(mended, {
+    hint: text_combine_multiple([
+      "this chapter is recorded as being read aloud in a different number of lines from the verses its page marks, and it no longer is - so either its publishers have put it right or the record was wrong about it. It must not stay recorded either way, because a name in there excuses that chapter from the list somebody works through. Fetch that bible again and record it afresh with ",
+      f_name_prove,
+      ", which writes that bible's names from what it finds rather than adding to them, and then measure the lot again with ",
+      f_name,
+    ]),
+    mended,
+  });
   function lambda2(measured) {
     let chapters = property_get(measured, "same");
     return chapters;
