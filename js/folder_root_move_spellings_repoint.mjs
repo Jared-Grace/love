@@ -16,7 +16,7 @@ export async function folder_root_move_spellings_repoint(before, after) {
   "The one folder left out is the one holding records of what the repository used to contain. Those name paths that are gone, and saying they were somewhere they never were does not repoint anything - it only makes the record lie.";
   let repo = folder_repo_love();
   let from = text_combine(before, "/");
-  let kept = folder_findings_name();
+  let kept = findings_folder();
   let records = text_combine(kept, "/");
   let paths = await git_files_tracked_folder(repo);
   let changed = [];
