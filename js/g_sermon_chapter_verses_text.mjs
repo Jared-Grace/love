@@ -1,6 +1,5 @@
 import { fn_name } from "./fn_name.mjs";
-import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
-import { list_join_colon } from "./list_join_colon.mjs";
+import { g_passage_reference } from "./g_passage_reference.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -52,9 +51,7 @@ export function g_sermon_chapter_verses_text(passages) {
     let mine = list_filter(copied, of_this_chapter);
     let ordered = list_sort_number_mapper(mine, first_verse);
     for (let passage of ordered) {
-      let joined = property_list_join_comma(passage, "verse_numbers");
-      let named = ebible_chapter_code_label(chapter);
-      let reference = list_join_colon([named, joined]);
+      let reference = g_passage_reference(passage);
       let cited = text_wrap_brackets(reference);
       let scripture = property_get(passage, "scripture");
       let line = list_join_space([cited, scripture]);
