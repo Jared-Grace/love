@@ -9,7 +9,7 @@ export function psalms_playlist_chapter_change(
   holds,
   songs,
 ) {
-  "What one chapter's playlist would have to change to hold every sung passage of that chapter in the order of the Psalm: which songs belong in it, how many it already holds, which of them are still missing, how many strangers are sitting in it, and whether the ones already there stand in the wrong order.";
+  "What one chapter's playlist would have to change to hold every sung passage of that chapter in the order of the Psalm: which songs belong in it, how many it already holds, which of them are still missing, how many strangers are sitting in it, whether the ones already there stand in the wrong order, and which songs would then have to be sent to the end to set that order right.";
   "The songs already in the playlist are handed in rather than asked for here, because asking the channel is the one slow part of the judgement and every chapter is asked at the same time. What is left is a comparison of two lists, which needs nothing outside itself and can be checked by reading it.";
   "A chapter with no playlist at all is handed an empty list of songs held, so it comes out asking for every song to be added rather than needing a case of its own.";
   arguments_assert(arguments, 4);
@@ -41,8 +41,13 @@ export function psalms_playlist_chapter_change(
   let left = kept.join(",");
   let right = ordered.join(",");
   let out_of_order = not_equal(left, right);
-  ("Which of the songs already there would have to be taken out and put back at the end for the playlist to read in the order of the Psalm. A playlist offers no other move, so this is the whole of what fixing the order costs, and it is empty exactly when the order is already right.");
-  let move_to_end = list_order_moves_to_end(kept, ordered);
+  ("Which songs would have to be taken out and put back at the end for the playlist to read in the order of the Psalm, counted as if the missing ones had already gone in. A playlist offers no other move, so this is the whole of what fixing the order costs.");
+  ("It is counted after the adding rather than before it because adding a song puts it at the end too, so a list of moves worked out beforehand would be wrong by the time it was used. Counted this way the two halves are one instruction: put these in, then send these to the end. It is empty exactly when doing the first half leaves the order already right.");
+  let holds_after_add = kept.slice();
+  for (let song of songs_to_add) {
+    holds_after_add.push(song.video_id);
+  }
+  let move_to_end = list_order_moves_to_end(holds_after_add, order_wanted);
   let r = {
     chapter: chapter,
     playlist_id: playlist_id,

@@ -7,6 +7,7 @@ import { youtube_channel_bible_singing } from "./youtube_channel_bible_singing.m
 export async function psalms_playlists_plan_payload_write() {
   "Writes down only the Psalm playlists that still need something done to them, so a new song can be put where it belongs without the whole channel being gone over again.";
   "Everything that needs no sign-in is worked out first and what is left is small, which is what makes it safe to look over before anything is touched. When nothing has been uploaded since last time the list comes out empty, and an empty list is the whole answer.";
+  "Each chapter carries both halves of its change: the songs to put in, and the songs to send to the end afterwards so the chapter reads in the order of the Psalm. A new song goes in at the end, so putting one in is itself what puts the order wrong, and the two halves were never separable. Doing them in one run is what keeps a fresh upload from needing a second visit.";
   let channel_id = youtube_channel_bible_singing();
   let plan = await psalms_playlists_plan(channel_id);
   let pending = [];
@@ -17,13 +18,15 @@ export async function psalms_playlists_plan_payload_write() {
     }
     let nothing_to_add = equal(video_ids.length, 0);
     let has_playlist = not_equal(one.playlist_id, null);
-    if (nothing_to_add && has_playlist && equal(one.out_of_order, false)) {
+    let nothing_to_move = equal(one.move_to_end.length, 0);
+    if (nothing_to_add && has_playlist && nothing_to_move) {
       continue;
     }
     pending.push({
       chapter: one.chapter,
       playlist_id: one.playlist_id,
       add: video_ids,
+      move_to_end: one.move_to_end,
       songs_wanted: one.songs_wanted,
       out_of_order: one.out_of_order,
     });

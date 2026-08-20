@@ -1,3 +1,4 @@
+import { g_coordinates_index } from "./g_coordinates_index.mjs";
 import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest_crowd.mjs";
@@ -50,6 +51,16 @@ export async function app_g_bless_walk(
   ("walk. The one who must not be shuffled out of reach is whoever was tapped, and here");
   ("that is nobody - the walk is always to open ground.");
   app_g_crowd_part(world, path, null);
+  ("The way is then HELD for as long as the walk lasts: everybody who stepped off it is");
+  ("kept off it, and nobody new may wander onto it.");
+  ("Parting alone is a single moment and a walk is many. The lane opens, and over the");
+  ("several seconds it takes to walk it the crowd goes on about its business straight back");
+  ("into the middle of it - so the player arrives inside somebody who was standing politely");
+  ("aside when the walk began. Holding it is the other half of the same act, and without");
+  ("the second half the first one only moves the collision further down the street.");
+  ("It is given back the moment the walk ends, so the street closes up behind the player");
+  ("rather than keeping a corridor open across it for the rest of the game.");
+  world.way = g_coordinates_index(path);
   let steps = g_path_steps(path);
   for (let step of steps) {
     let from = property_get(step, "from");
@@ -72,4 +83,5 @@ export async function app_g_bless_walk(
     app_g_player_center(to, player_img_c, div_map);
     on_arrive();
   }
+  world.way = {};
 }

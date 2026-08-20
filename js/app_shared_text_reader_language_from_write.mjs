@@ -1,10 +1,7 @@
-import { app_shared_text_reader_language_ast_objects } from "./app_shared_text_reader_language_ast_objects.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
+import { app_shared_text_reader_language_sayings_change } from "./app_shared_text_reader_language_sayings_change.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
-import { js_value_expression } from "./js_value_expression.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_without } from "./list_without.mjs";
@@ -22,49 +19,43 @@ export async function app_shared_text_reader_language_from_write(f_name) {
   arguments_assert(arguments, 1);
   let en = ebible_language_en_code();
   let from_key = app_shared_text_reader_language_from_key();
-  async function lambda(ast) {
-    let objects = app_shared_text_reader_language_ast_objects(ast);
-    for (let object of objects) {
-      let unwritten = null_is(object);
-      if (unwritten) {
-        continue;
-      }
-      let saying = js_literal_value_deep_try(object);
-      let unreadable = null_is(saying);
-      if (unreadable) {
-        continue;
-      }
-      let named = object_property_names(saying);
-      let codes = list_without(named, from_key);
-      let english = list_includes(codes, en);
-      if (not(english)) {
-        continue;
-      }
-      let translations = list_without(codes, en);
-      let english_only = list_empty_is(translations);
-      if (english_only) {
-        continue;
-      }
-      let words = property_get(saying, en);
-      let standing = property_get_or_null(saying, from_key);
-      let record = {};
-      let recorded = null_is(standing);
-      if (not(recorded)) {
-        record = standing;
-      }
-      for (let code of translations) {
-        let held = property_get_or_null(record, code);
-        let absent = null_is(held);
-        if (absent) {
-          property_set(record, code, words);
-        }
-      }
-      property_set(saying, from_key, record);
-      let written = js_value_expression(saying);
-      let properties = property_get(written, "properties");
-      property_set(object, "properties", properties);
+  function lambda$saying(saying) {
+    let named = object_property_names(saying);
+    let codes = list_without(named, from_key);
+    let english = list_includes(codes, en);
+    if (not(english)) {
+      return null;
     }
+    let translations = list_without(codes, en);
+    let english_only = list_empty_is(translations);
+    if (english_only) {
+      return null;
+    }
+    let words = property_get(saying, en);
+    let standing = property_get_or_null(saying, from_key);
+    let record = {};
+    let unrecorded = null_is(standing);
+    if (not(unrecorded)) {
+      record = standing;
+    }
+    let filled = false;
+    for (let code of translations) {
+      let held = property_get_or_null(record, code);
+      let absent = null_is(held);
+      if (absent) {
+        property_set(record, code, words);
+        filled = true;
+      }
+    }
+    if (not(filled)) {
+      return null;
+    }
+    property_set(saying, from_key, record);
+    return saying;
   }
-  let output = await function_transform(f_name, lambda);
+  let output = await app_shared_text_reader_language_sayings_change(
+    f_name,
+    lambda$saying,
+  );
   return output;
 }

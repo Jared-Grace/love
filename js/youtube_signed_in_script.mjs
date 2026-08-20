@@ -1,5 +1,6 @@
 export function youtube_signed_in_script() {
   "The small piece of javascript that, pasted into a youtube page somebody is already signed in on, gives that page the four things a playlist change needs: proof of who is asking, a way to write words under a playlist, a way to put a song into one, and a way to send a song already in one to the end.";
+  "Putting songs in and setting the order right are done together, chapter by chapter, because a song put in lands at the end and so is itself what puts the order wrong. Split apart they would need two visits, and the second would be working from a reading taken before the first one happened.";
   "The signing-in is the part no reader here can do, and it is deliberately left where it already is rather than copied into this repo. Nothing about anybody's account is written down; the page proves who it is from the cookie it already has.";
   "It is kept as words rather than as a file to be loaded because the page refuses to fetch anything from elsewhere, so the only way in is to be pasted, and a paste that has to be typed out fresh each time is a paste that drifts.";
   let lines = [
@@ -43,17 +44,6 @@ export function youtube_signed_in_script() {
     "  if (back !== 'STATUS_SUCCEEDED') { return 'TAKEN OUT AND NOT PUT BACK, ' + video_id + ': ' + back; }",
     "  return 'moved';",
     "};",
-    "window.psalm_order_apply = async function () {",
-    "  const out = {};",
-    "  for (const item of window.psalm_order) {",
-    "    const answers = [];",
-    "    for (const video_id of item.move_to_end) {",
-    "      answers.push(await window.playlist_video_move_to_end(item.playlist_id, video_id));",
-    "    }",
-    "    out[item.chapter] = answers.join(' ');",
-    "  }",
-    "  return JSON.stringify(out);",
-    "};",
     "window.psalm_descriptions_apply = async function () {",
     "  const out = {};",
     "  for (const item of window.psalm_batch) {",
@@ -65,8 +55,12 @@ export function youtube_signed_in_script() {
     "  const out = {};",
     "  for (const item of window.psalm_plan) {",
     "    if (item.playlist_id === null) { out[item.chapter] = 'no playlist yet'; continue; }",
-    "    if (item.add.length === 0) { out[item.chapter] = 'nothing to add'; continue; }",
-    "    out[item.chapter] = await window.playlist_videos_add(item.playlist_id, item.add);",
+    "    const said = [];",
+    "    if (item.add.length > 0) { said.push('put in: ' + await window.playlist_videos_add(item.playlist_id, item.add)); }",
+    "    for (const video_id of item.move_to_end) {",
+    "      said.push(await window.playlist_video_move_to_end(item.playlist_id, video_id));",
+    "    }",
+    "    out[item.chapter] = said.length === 0 ? 'nothing to do' : said.join(' ');",
     "  }",
     "  return JSON.stringify(out);",
     "};",

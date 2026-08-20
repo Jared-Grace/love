@@ -1,6 +1,6 @@
+import { baseline_known_collapse_assert } from "./baseline_known_collapse_assert.mjs";
+import { baseline_known_write_unchecked } from "./baseline_known_write_unchecked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { json_format_to } from "./json_format_to.mjs";
-import { file_overwrite } from "./file_overwrite.mjs";
 export async function baseline_known_write(known, path) {
   arguments_assert(arguments, 2);
   ("Put what a ratchet knows on disk, and answer how many that is.");
@@ -12,11 +12,10 @@ export async function baseline_known_write(known, path) {
   ("that matters is the key: a reader looking for known and a writer spelling it");
   ("something else would leave a file that reads back empty, and an empty baseline");
   ("refuses nothing.");
-  let baseline = {
-    known,
-  };
-  let json = json_format_to(baseline);
-  await file_overwrite(path, json);
-  let r = known.length;
+  ("It will not empty a record that was holding names, which is the one shape a");
+  ("reading that reached nothing arrives in. Emptying one on purpose is asked for by");
+  ("its own name, and the refusal says which name.");
+  await baseline_known_collapse_assert(known, path);
+  let r = await baseline_known_write_unchecked(known, path);
   return r;
 }
