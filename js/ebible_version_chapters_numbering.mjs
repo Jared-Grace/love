@@ -1,3 +1,11 @@
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_version_verse_numbers } from "./ebible_version_verse_numbers.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { list_intersect } from "./list_intersect.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal_by_json_lambda } from "./equal_by_json_lambda.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_filter_not } from "./list_filter_not.mjs";
 export async function ebible_version_chapters_numbering(bible_folder) {
   "$plain bible_folder";
   "Which of one bible's chapters number their verses the way the English bible everything is read in does, and which do not.";
