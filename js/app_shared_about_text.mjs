@@ -6,6 +6,9 @@ export function app_shared_about_text() {
   let texts = {
     en: " About",
     ur: " تعارف",
+    translated_from: {
+      ur: " About",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_information();
