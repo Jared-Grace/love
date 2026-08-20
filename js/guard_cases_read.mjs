@@ -1,6 +1,7 @@
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 export async function guard_cases_read() {
+  "The written-down commands the bash guard is judged against, read out of the file that holds them.";
   let parsed = await file_read_json("data/given/cases/guard_cases.json");
   let cases = property_get(parsed, "cases");
   return cases;

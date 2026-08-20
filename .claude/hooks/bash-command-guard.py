@@ -3637,8 +3637,6 @@ def alias_full_name(name):
     return None
 
 
-
-
 def function_name_near_misses(name, live_names):
     """Up to three live names sharing at least two underscore-separated words
     with `name`, closest first (most words shared, then fewest words differing).
