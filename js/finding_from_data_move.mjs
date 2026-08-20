@@ -1,5 +1,5 @@
+import { function_name_to_path_absolute } from "./function_name_to_path_absolute.mjs";
 import { function_source_to_repoint } from "./function_source_to_repoint.mjs";
-import { property_get } from "./property_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
@@ -42,9 +42,7 @@ export async function finding_from_data_move(name, path_fn_name) {
     hint: "the findings folder already holds a file of this name",
     to_spelled,
   });
-  let source = await function_source_to_repoint(path_fn_name);
-  let fn_path = property_get(source, "fn_path");
-  let text = property_get(source, "text");
+  let text = await function_source_to_repoint(path_fn_name);
   let spells = text_includes(text, leaf);
   assert_json(spells, {
     hint: "this function does not spell that file at all, so it is not the one holding its address",
@@ -68,6 +66,7 @@ export async function finding_from_data_move(name, path_fn_name) {
     hint: "the address in this function is written in a shape this does not recognise - repoint it by hand rather than letting a guess move the file",
     path_fn_name,
   });
+  let fn_path = function_name_to_path_absolute(path_fn_name);
   await file_overwrite_uncached(fn_path, written);
   await function_auto_checked(path_fn_name);
   let said = await function_run(path_fn_name, []);
