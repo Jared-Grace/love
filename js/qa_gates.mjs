@@ -240,6 +240,9 @@ import { js_block_body_get_cases_gate_run } from "./js_block_body_get_cases_gate
 import { js_unparse_cases_gate_run } from "./js_unparse_cases_gate_run.mjs";
 import { js_parse_statement_cases_gate_run } from "./js_parse_statement_cases_gate_run.mjs";
 import { js_call_arguments_get_cases_gate_run } from "./js_call_arguments_get_cases_gate_run.mjs";
+import { js_parse_cases_gate_run } from "./js_parse_cases_gate_run.mjs";
+import { js_parse_expression_cases_gate_run } from "./js_parse_expression_cases_gate_run.mjs";
+import { js_function_declaration_to_block_body_cases_gate_run } from "./js_function_declaration_to_block_body_cases_gate_run.mjs";
 import { js_binding_names_cases_gate_run } from "./js_binding_names_cases_gate_run.mjs";
 import { js_scope_binding_names_cases_gate_run } from "./js_scope_binding_names_cases_gate_run.mjs";
 import { js_shadowing_names_cases_gate_run } from "./js_shadowing_names_cases_gate_run.mjs";
@@ -404,6 +407,9 @@ export function qa_gates() {
     js_unparse_cases_gate_run,
     js_parse_statement_cases_gate_run,
     js_call_arguments_get_cases_gate_run,
+    js_parse_cases_gate_run,
+    js_parse_expression_cases_gate_run,
+    js_function_declaration_to_block_body_cases_gate_run,
     js_binding_names_cases_gate_run,
     js_scope_binding_names_cases_gate_run,
     js_shadowing_names_cases_gate_run,

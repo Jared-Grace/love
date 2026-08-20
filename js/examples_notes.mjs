@@ -252,6 +252,8 @@ export function examples_notes() {
       "the one shape the setter family could not reach - and the one that stopped a whole transform being written from commands alone",
     example_block_local_boolean_add:
       "the fifth starting value - a flag set one way here and turned the other by whichever step below finds the reason",
+    example_block_local_call_add:
+      "the commonest line in the repo - a name bound to what the last call answered - and the one shape the five literal binders beside it could not reach",
   };
   return notes;
 }
