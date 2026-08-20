@@ -12,26 +12,29 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
   "One chapter as Rosetta verses: for each verse its number, the same verse in pictures, in the language it was written in, and word for word in English.";
   "THE THREE BANDS ARE THE WHOLE TEACHING METHOD. Nobody is told what a picture means anywhere on the page. A reader who knows one of the three lines works out the other two from it, the way the Rosetta stone was read - and every reader who does that arrives at the same meanings, because the pictures are keyed to the original word and not to anybody's translation.";
   "The pictures come first of the three on purpose. They are the thing being learned, and the two known bands are underneath as the key rather than above it as a crutch, so a reader who can already read the verse meets the pictures before the answer.";
-  "The verse number is what joins the bands, and the bands are built from two different sources - a hand-written chapter and the downloaded interlinear - so a verse the picture chapter has not reached yet simply has no row here. A missing picture is a chapter half written, which is the normal state of this work, and it must not stop the verses that ARE written from being read.";
+  "The verse number is what joins the bands, and the bands come from two different places - a hand-written picture chapter and the two known lines written out beside it - so a verse either of them has not reached yet simply has no row here. A half-written chapter is the normal state of this work, and it must not stop the verses that ARE written from being read.";
+  "THE TWO KNOWN BANDS ARE READ, NOT BUILT. They were worked out from the interlinear once, at authoring time, and put into a committed function; asking the interlinear here instead would drag a walk over a table of a few hundred megabytes, a downloader and an unzipper into a page that only ever wanted two lines of text - and would then throw, because a browser's store starts empty.";
+  "The verse number joins them rather than a place in a list, because the written-out bands hold only the verses the pictures have reached. Counting from the start of either list would silently pair one verse's pictures with another verse's words the moment a chapter was authored out of order.";
   let chapter = bible_glyph_chapter(chapter_code);
   let lookup = bible_glyph_characters_lookup(traditions);
-  let verses = await bible_interlinear_chapter_words(chapter_code);
+  let lines = bible_glyph_chapter_rosetta_lines(chapter_code);
   let rows = [];
   for (let verse of chapter.verses) {
-    let index = subtract(verse.verse_number, 1);
-    let interlinear = list_get_or_null(verses, index);
-    let missing = null_is(interlinear);
+    let known = list_find_property_or_null(
+      lines.verses,
+      "verse_number",
+      verse.verse_number,
+    );
+    let missing = null_is(known);
     if (missing) {
       continue;
     }
     let glyphs = bible_glyph_verse_draw(verse.words, lookup);
-    let original = bible_interlinear_verse_original_text(interlinear);
-    let english = bible_interlinear_verse_gloss_text(interlinear);
     let row = {
       verse_number: verse.verse_number,
       glyphs,
-      original,
-      english,
+      original: known.original,
+      english: known.english,
     };
     list_add(rows, row);
   }
