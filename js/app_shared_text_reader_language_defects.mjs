@@ -38,8 +38,8 @@ export async function app_shared_text_reader_language_defects() {
       if (missing) {
         continue;
       }
-      let object_is = equal(init.type, "ObjectExpression");
-      if (not(object_is)) {
+      let object_expression_is = equal(init.type, "ObjectExpression");
+      if (not(object_expression_is)) {
         continue;
       }
       property_set(objects, declarator.id.name, init);
@@ -62,8 +62,8 @@ export async function app_shared_text_reader_language_defects() {
       let one = equal(call.arguments.length, 1);
       if (one) {
         let argument = call.arguments[0];
-        let object_is = equal(argument.type, "ObjectExpression");
-        if (object_is) {
+        let object_expression_is = equal(argument.type, "ObjectExpression");
+        if (object_expression_is) {
           site.object = argument;
         }
         let named_argument = equal(argument.type, "Identifier");
