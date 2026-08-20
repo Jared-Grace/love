@@ -5,6 +5,7 @@ export function bible_verse_end_suffixes() {
   "Marks that only look like an ending are deliberately out. Amharic's own colon and semicolon end a clause rather than a sentence, and Arabic's comma leans the other way from the Latin one - each of those would have cut a sentence in half every time it appeared.";
   "One language ends on nothing at all. Thai writes a space where other languages write a stop, so no mark in any set could find the end of one of its sentences - which is why the folders that cannot be read this way are named separately rather than pretended about here.";
   "Urdu's full stop was added afterwards and is worth the sentence it takes. That first measurement was done by hand and it read Urdu under a folder name that did not exist, so every verse of it came back as nothing and Urdu was written down as a language without sentences. It is not: it ends them on a small upright stroke, which sits here now. What found the mistake was this being measured by a command that asks the list of bibles for their folder names instead of by somebody typing them, and that is the whole argument for the record beside this file.";
-  let suffixes = ".?!।。።？！۔";
+  "THEY ARE LISTED ONE BY ONE RATHER THAN SPELLED INTO ONE WORD, and the reason is that a full stop is not always one character long. Written as a word, this could only ever be cut back into single characters, so a language whose sentence ends on two of them had no way of being written down here at all - and the one reader of this list was already asking whether a verse ends on any of several suffixes, so nothing but this line had to change to let it say so.";
+  let suffixes = [".", "?", "!", "।", "。", "።", "？", "！", "۔"];
   return suffixes;
 }
