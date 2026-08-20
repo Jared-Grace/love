@@ -1,3 +1,4 @@
+import { catch_null_async } from "./catch_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { fn_name } from "./fn_name.mjs";
