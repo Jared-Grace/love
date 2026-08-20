@@ -1063,7 +1063,7 @@ export function permission_grant_names() {
   let spelled1042 = fn_name("g_profiles_leader");
   let spelled1043 = fn_name("text_replace_once_cases_gate_run");
   let spelled1044 = fn_name("app_original_bible_gloss_write_file");
-  let spelled1045 = fn_name("ebible_chapter_verse_numbers_with_words");
+  let spelled1045 = fn_name("ebible_chapter_verse_numbers_to_pair");
   let spelled1046 = fn_name("g_arc_prompt_chapter_leader");
   let spelled1047 = fn_name("storage_prefix_read_check");
   let spelled1048 = fn_name("app_original_bible_gloss_write_next");

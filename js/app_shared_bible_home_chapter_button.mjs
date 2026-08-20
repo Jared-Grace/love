@@ -15,6 +15,7 @@ export function app_shared_bible_home_chapter_button(
   }
   ("only the app that actually draws a whole-chapter reader offers the way into it. the others are verse-only: the button was there for all of them, and in three of the four it switched to a mode nothing renders, so the reader was handed a way to a page that does not exist. which kind an app is cannot be read from here - it is the app that knows, so it says.");
   if (chapter_reader_is) {
-    app_shared_button(bottom, "📖 Whole chapter", lambda3);
+    let text = app_shared_bible_chapter_whole_text_get();
+    app_shared_button(bottom, text, lambda3);
   }
 }

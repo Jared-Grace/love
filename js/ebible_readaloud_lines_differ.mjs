@@ -1,5 +1,5 @@
 import { ebible_chapter_codes } from "./ebible_chapter_codes.mjs";
-import { ebible_chapter_verse_numbers_with_words } from "./ebible_chapter_verse_numbers_with_words.mjs";
+import { ebible_chapter_verse_numbers_to_pair } from "./ebible_chapter_verse_numbers_to_pair.mjs";
 import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
@@ -18,7 +18,7 @@ export async function ebible_readaloud_lines_differ(bible_folder) {
   let unread = [];
   async function lambda(chapter_code) {
     async function lambda2() {
-      let markers = await ebible_chapter_verse_numbers_with_words(
+      let markers = await ebible_chapter_verse_numbers_to_pair(
         bible_folder,
         chapter_code,
       );
