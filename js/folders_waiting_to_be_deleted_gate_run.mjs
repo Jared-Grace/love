@@ -11,8 +11,8 @@ export async function folders_waiting_to_be_deleted_gate_run() {
     hint: "these have been waiting for somebody who knows to decide, for longer than anybody meant them to - so decide: move the folder onto the live name, or delete it on purpose",
   });
   let r = {
-    checked: 0,
-    overdue: 0,
+    overdue: list_size(offenders),
+    days,
   };
   return r;
 }
