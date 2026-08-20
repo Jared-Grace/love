@@ -343,6 +343,10 @@ export function bible_glyph_characters() {
       name: "child",
       character: "🧒",
     },
+    {
+      name: "hands_raised",
+      character: "🙌",
+    },
   ];
   return characters;
 }
