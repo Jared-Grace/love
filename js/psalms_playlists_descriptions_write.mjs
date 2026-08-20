@@ -1,3 +1,5 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { subtract } from "./subtract.mjs";
 import { psalms_chapters_descriptions_write } from "./psalms_chapters_descriptions_write.mjs";
 import { psalms_playlist_chapter_ids } from "./psalms_playlist_chapter_ids.mjs";
 import { youtube_channel_bible_singing } from "./youtube_channel_bible_singing.mjs";
@@ -9,12 +11,15 @@ export async function psalms_playlists_descriptions_write() {
   let playlists = await youtube_channel_playlists(channel_id);
   let chapter_ids = psalms_playlist_chapter_ids(playlists);
   let chapters = [];
-  for (let named of Object.keys(chapter_ids)) {
-    chapters.push(Number(named));
+  for (let named of object_property_names(chapter_ids)) {
+    let v = Number(named);
+    chapters.push(v);
   }
-  chapters.sort(function lambda(one, other) {
-    return one - other;
-  });
+  function lambda(one, other) {
+    let difference = subtract(one, other);
+    return difference;
+  }
+  chapters.sort(lambda);
   let written = await psalms_chapters_descriptions_write(chapters);
   return written;
 }
