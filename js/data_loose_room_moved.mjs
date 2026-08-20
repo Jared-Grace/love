@@ -16,6 +16,7 @@ export async function data_loose_room_moved() {
   "Which room a file belongs in is a judgment and so is written down here. Nothing in the shape of a file says whether it is a setting somebody may change or a word frozen because it has already left this repo; only somebody who knows why it was written can say, and a rule guessing from the name would put them in the same place and be wrong about half of them.";
   "What is still loose is asked of the repo rather than written down beside the rooms, so the two cannot drift. A file already moved falls out of the asking by itself, which is what makes running this again after an interruption do only what is left.";
   "A loose file with no room named for it is handed back rather than passed over. Passing it over would let this finish clean while leaving the folder exactly as unfinished as before, and a run that reports success on work it did not do is worse than one that fails.";
+  "One the mover will not touch is handed back too, and does not stop the rest. The mover refuses a function that builds its address out of parts, and refusing is the right answer there - but a refusal that ended the run left every file after it untouched for no reason of its own. Why one was refused is not carried here, because the mover says it plainly: ask it for that one name on its own and read what it says.";
   arguments_assert(arguments, 0);
   await ai_git_noted();
   let f_name = fn_name("commands_only_path");
@@ -35,6 +36,7 @@ export async function data_loose_room_moved() {
   let moved = [];
   let unroomed = [];
   let absent = [];
+  let refused = [];
   for (let pair of loose) {
     let path_fn_name = list_first(pair);
     let spelled = list_last(pair);
@@ -59,13 +61,22 @@ export async function data_loose_room_moved() {
       continue;
     }
     let args = [path_fn_name, room];
-    await function_call_commit(data_file_room_move, args);
+    async function lambda() {
+      await function_call_commit(data_file_room_move, args);
+      return true;
+    }
+    let done = await catch_null_async(lambda);
+    if (not(done)) {
+      refused.push(pair);
+      continue;
+    }
     moved.push([path_fn_name, room]);
   }
   let r = {
     moved,
     unroomed,
     absent,
+    refused,
   };
   return r;
 }
