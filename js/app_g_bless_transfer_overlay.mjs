@@ -1,3 +1,5 @@
+import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
+import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
@@ -22,9 +24,22 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("arrows glowing faintly through the prayer would be the game asking to be played while the");
   ("player is being asked to pray, and the prayer would lose - so the first thing on the");
   ("screen is the player's own words and nothing else at all.");
+  ("The prayer stands in the MIDDLE of the screen, and that is not decoration. Covered over");
+  ("solid, everything the door does not use is one flat colour - so a prayer sitting along the");
+  ("top edge leaves a whole screen of blank underneath it, and a page that is blank below a");
+  ("thin band is what a page that failed to load looks like. Somebody who reads it that way");
+  ("closes the tab before praying anything, which is the one outcome praying at the door was");
+  ("meant to prevent. In the middle, the same emptiness reads as room around the words.");
+  ("It is centred with automatic margins above and below rather than by asking the column to");
+  ("justify its contents, because those two agree until the words are taller than the screen");
+  ("and then part company: a justified column pushes its overflow off the top edge, where the");
+  ("overlay's own scrolling cannot reach it. Automatic margins collapse to nothing instead, so");
+  ("a long prayer on a short phone starts at the top and scrolls, which is what it should do.");
   let background = app_shared_color_page_background();
   html_style_background_color_set(overlay, background);
+  html_flex_column_stretch(overlay);
   let container = app_g_container_player(overlay);
+  html_style_margin_y(container, "auto");
   let prayer = bless_prayer_transfer();
   app_g_p_text(container, prayer);
   let praying = emoji_pray();
