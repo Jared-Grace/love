@@ -33,6 +33,70 @@ export function psalms_videos_verse_heard_right() {
       video_id: "zJt01nB7h8s",
       titled: "Psalms 80:9",
     },
+    {
+      video_id: "yKJN9T-HYBo",
+      titled: "Psalms 33:14",
+    },
+    {
+      video_id: "jq1JD6BOjzU",
+      titled: "Psalms 35:11",
+    },
+    {
+      video_id: "K8LWci2ov9Q",
+      titled: "Psalms 36:4",
+    },
+    {
+      video_id: "zkjK3WFg7Ds",
+      titled: "Psalms 48:5-7",
+    },
+    {
+      video_id: "z2cfKrngE6w",
+      titled: "Psalms 52:6",
+    },
+    {
+      video_id: "JvB6sdkxvRw",
+      titled: "Psalms 55:19",
+    },
+    {
+      video_id: "n1Va7McnAvs",
+      titled: "Psalms 60:8",
+    },
+    {
+      video_id: "dkVc8u8cjMw",
+      titled: "Psalms 66:10",
+    },
+    {
+      video_id: "10Usi6TWT7I",
+      titled: "Psalms 67:1-2",
+    },
+    {
+      video_id: "Z-zq3rgSV0Y",
+      titled: "Psalms 67:5",
+    },
+    {
+      video_id: "eQyqh_8YBrk",
+      titled: "Psalms 73:21",
+    },
+    {
+      video_id: "CqFb6I7iJp4",
+      titled: "Psalms 77:17",
+    },
+    {
+      video_id: "7OakV_DVQzY",
+      titled: "Psalms 80:1",
+    },
+    {
+      video_id: "qvVlwnTewsQ",
+      titled: "Psalms 83:11",
+    },
+    {
+      video_id: "IwyNFp9RhXc",
+      titled: "Psalms 85:5",
+    },
+    {
+      video_id: "Bkp05AUuXyw",
+      titled: "Psalms 91:7",
+    },
   ];
   return heard_right;
 }
