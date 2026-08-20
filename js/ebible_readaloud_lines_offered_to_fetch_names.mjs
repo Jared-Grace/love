@@ -8,7 +8,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { ebible_readaloud_heading_only_chapters } from "./ebible_readaloud_heading_only_chapters.mjs";
 import { property_get } from "./property_get.mjs";
 export async function ebible_readaloud_lines_offered_to_fetch_names() {
-  "Every bible a reader can choose that the record names with chapters of it unread, each named by its folder alone.";
+  "Every bible a reader can choose that has chapters of it still waiting to be fetched, each named by its folder alone.";
   "One flat name apiece, because what watches this list only ever asks whether a name is in it. How many chapters went unread and whether the bible was measured at all are worth knowing and are next door; a ratchet needs neither, and putting them in a name would make the same bible a different name every time a download half finished.";
   "Read out of the record rather than measured, because measuring opens every chapter of every bible and takes the better part of an hour. The record is rewritten by the one command that does the measuring.";
   "A bible whose unread chapters are every one of them published as a heading and nothing else is left out, because this list is watched by a ratchet whose whole message is to go and fetch what is missing, and for those there is nothing to fetch: the words are not upstream to be had. Three bibles held this list red for weeks on that advice, and following it brought back the same two lines every time.";
