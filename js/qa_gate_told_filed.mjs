@@ -23,7 +23,8 @@ export async function qa_gate_told_filed(commit, told, before) {
   ("Nothing is written when a share of the gates stopped without complaining about any gate either. Such a run found nothing out: it is not green, and it cannot say what is wrong, so every question a later reader puts to it comes back empty - which is what a commit already answers before anybody judges it.");
   ("Written down all the same, it is worse than useless. It looks judged, so it is never judged again; and the cheap reading of what is red hands back an empty list off the front of the record, which anybody reading it takes for nothing is red. That is the reading a deployment is meant to lean on, and it once said the repo was clean while five and twenty gates were complaining.");
   ("Declining costs a quarter of an hour to somebody who asks about this commit later, and that is the right way round to be wrong. Having no answer keeps the deployment waiting; having a false one lets it through.");
-  let answered = qa_gate_told_answered_is(told);
+  ("Whether the run answered is read off what was handed here rather than worked out again from the green and the named gates. It was worked out share by share, where a share that stopped is still distinguishable, and one share stopping while another complained leaves a green of false and a list of real names - a shape indistinguishable from a whole run, standing for the third of the questions that share never got to ask.");
+  let answered = property_get(told, "answered");
   if (not(answered)) {
     console.log(
       "\nnot kept for commit " +
