@@ -113,6 +113,10 @@ export function bible_glyph_characters() {
       character: "👥",
     },
     {
+      name: "handshake",
+      character: "🤝",
+    },
+    {
       name: "king",
       character: "🤴",
     },
