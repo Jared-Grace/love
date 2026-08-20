@@ -1,10 +1,10 @@
+import { functions_shadowing_operator_walked } from "./functions_shadowing_operator_walked.mjs";
+import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_join } from "./list_join.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { functions_shadowing_operator } from "./functions_shadowing_operator.mjs";
 import { js_operator_function_names } from "./js_operator_function_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -27,8 +27,11 @@ export async function functions_shadowing_operator_gate_run() {
   "app carries all sixteen of these, so the gate could never be shown to be";
   "about somewhere else and held every deployment there was.";
   "What was moved off the failing path there had to be moved the rest of the way. The set printed on the way in was only half of it: an offender's own line spelled the name it hides, and the advice spelled the command that repairs it, so a complaint still arrived carrying names of things that are not at fault. Both now travel in the hint, and the complaint carries the offenders and nothing else.";
+  "What it hands back used to say it had checked sixteen, and sixteen is how many names the pass writes rather than how much this opened - the same number on the run it read every hiding in the repo and on the run it read none. The count that travels now is the hidings it actually walked, which is the one number here that falls when the reading behind it stops arriving.";
   let names = js_operator_function_names();
-  let offenders = await functions_shadowing_operator();
+  let told = await functions_shadowing_operator_walked();
+  let walked = property_get(told, "walked");
+  let offenders = property_get(told, "offenders");
   let bound = list_map_property(offenders, "name");
   function lambda(offender) {
     let hiding = property_get(offender, "name");
@@ -44,19 +47,14 @@ export async function functions_shadowing_operator_gate_run() {
   console.log("\nhiding an operator " + size);
   let f_name2 = fn_name("functions_shadowing_rename_all");
   let joined2 = list_join(pairs, "; ");
-  list_empty_is_assert_json(bound, {
-    hint: text_combine_multiple([
-      "these functions hide a name the auto pass writes into code, so the next operator written in one of them becomes a call to the local - rename the local with ",
-      f_name2,
-      ". What each of them hides is ",
-      joined2,
-    ]),
-  });
+  let hint = text_combine_multiple([
+    "these functions hide a name the auto pass writes into code, so the next operator written in one of them becomes a call to the local - rename the local with ",
+    f_name2,
+    ". What each of them hides is ",
+    joined2,
+  ]);
+  let r = list_empty_is_assert_walked_generic(walked, bound, hint);
   let joined = list_join_comma(names);
   console.log("names the auto pass writes: " + joined);
-  let r = {
-    checked: names.length,
-    hiding: 0,
-  };
   return r;
 }
