@@ -1,3 +1,4 @@
+import { folder_user } from "./folder_user.mjs";
 export function folder_waiting_to_be_deleted_root() {
   "The folder outside this repo where something nobody is sure about waits until somebody who knows decides.";
   "There is a third answer between keeping a folder and deleting it, and until this existed there was nowhere to put it. Whoever finds stored data under a name nothing answers to can usually tell it is dead and almost never tell it is safe to destroy, because the one thing a folder cannot say is who else was reading it. Deleting on a guess is the only mistake here that cannot be taken back, so the guess gets somewhere to stand instead.";
