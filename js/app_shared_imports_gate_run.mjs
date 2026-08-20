@@ -35,11 +35,12 @@ export async function app_shared_imports_gate_run() {
   ("are read.");
   let offenders = await app_shared_app_specific_imports();
   let path = app_shared_imports_baseline_path();
+  let name_write = fn_name("app_shared_imports_baseline_write");
   await baseline_names_gate_generic(
     offenders,
     path,
     "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
-    fn_name("app_shared_imports_baseline_write"),
+    name_write,
   );
   let r = {
     offenders: list_size(offenders),
