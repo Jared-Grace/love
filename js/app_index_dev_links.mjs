@@ -12,6 +12,12 @@ export function app_index_dev_links() {
       text: "Two streets of people standing at their doors. Pray for anybody you can see, or tap the ground to walk down to the other street. Nothing is saved, so every visit is a street nobody has prayed for yet",
     },
     {
+      app_fn: fn_name("app_en_learn_bible"),
+      hash: {},
+      label: "English from the Bible, in Urdu",
+      text: "The Bible in English with every English word explained in Urdu. The page turns to read right to left when the reader's language does, and the buttons say their piece in Urdu rather than in the language being learned",
+    },
+    {
       app_fn: fn_name("app_ceb_bible"),
       hash: {
         c: "PRO31",

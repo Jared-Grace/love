@@ -15,8 +15,9 @@ export async function workspace_shortcuts_ensure() {
   "The folders the links live in are made first, because a machine that has never had either is the same case as a machine whose repo has moved, and asking for both to work means neither may assume the other has been done.";
   let repo = folder_repo_love();
   let home = folder_home();
-  let script = path_join([repo, "linux", "xfce-workspace-shortcuts"]);
-  let entry = path_join([repo, "linux", "xfce-workspace-shortcuts.desktop"]);
+  let desktop = path_join([repo, "scripts", "linux"]);
+  let script = path_join([desktop, "xfce-workspace-shortcuts"]);
+  let entry = path_join([desktop, "xfce-workspace-shortcuts.desktop"]);
   let programs = path_join([home, ".local", "bin"]);
   let startup = path_join([home, ".config", "autostart"]);
   await each_async([programs, startup], folder_exists_ensure);
