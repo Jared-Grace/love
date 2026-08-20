@@ -26,7 +26,7 @@ export function commands_only_write_denied_cases() {
     },
     {
       level: "js",
-      path: "data/guard_cases.json",
+      path: "data/given/cases/guard_cases.json",
       denied: false,
       why: "the same, for the written-down corpora - this setting is about javascript only",
     },
