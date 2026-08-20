@@ -1,3 +1,4 @@
+import { list_order_moves_to_end } from "./list_order_moves_to_end.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -40,6 +41,8 @@ export function psalms_playlist_chapter_change(
   let left = kept.join(",");
   let right = ordered.join(",");
   let out_of_order = not_equal(left, right);
+  ("Which of the songs already there would have to be taken out and put back at the end for the playlist to read in the order of the Psalm. A playlist offers no other move, so this is the whole of what fixing the order costs, and it is empty exactly when the order is already right.");
+  let move_to_end = list_order_moves_to_end(kept, ordered);
   let r = {
     chapter: chapter,
     playlist_id: playlist_id,
@@ -48,6 +51,7 @@ export function psalms_playlist_chapter_change(
     add: songs_to_add,
     strangers: subtract(holds.length, kept.length),
     out_of_order: out_of_order,
+    move_to_end: move_to_end,
   };
   return r;
 }
