@@ -5,7 +5,7 @@ import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-export async function ebible_chapter_verse_numbers_with_words(
+export async function ebible_chapter_verse_numbers_to_pair(
   bible_folder,
   chapter_code,
 ) {
