@@ -15,7 +15,7 @@ export function folders_moved_stale_folders() {
   let r2 = path_join([love_folder, "notes"]);
   let r3 = path_join([love_folder, "scripts"]);
   let r7 = path_join([love_folder, "data"]);
-  let r8 = path_join([love_folder, "linux"]);
+  let r8 = path_join([r3, "linux"]);
   let r4 = path_join([love_folder, ".claude"]);
   let r6 = path_join([r4, "hooks"]);
   let folder = folder_memory_backup();
