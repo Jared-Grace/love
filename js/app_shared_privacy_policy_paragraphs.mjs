@@ -14,8 +14,8 @@ export function app_shared_privacy_policy_paragraphs() {
     "Nothing is sold, and nothing is passed on to anybody.",
     "Google hosts these pages, and like any web host keeps ordinary records of the requests made to it. Those records are Google's and are covered by Google's own privacy policy.",
     "You do not have to take any of this on trust. The code these pages are built from is public, at github.com/Jared-Grace/love.",
-    "To have a message you sent deleted, or to ask anything about this, write to christrosetolife@gmail.com.",
-    "Last updated 20 August 2026.",
+    "To have a message you sent deleted, or to ask anything about this, send a message from the message page at jared-grace.web.app/message.html. Send it from the same device you wrote the first one on, because the random number is the only thing tying the two together and it belongs to that browser.",
+    "Last updated 21 August 2026.",
   ];
   return paragraphs;
 }
