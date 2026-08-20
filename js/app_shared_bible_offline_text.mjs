@@ -5,6 +5,9 @@ export function app_shared_bible_offline_text() {
   let texts = {
     en: " Download for offline",
     ur: " آف لائن کے لیے ڈاؤن لوڈ کریں",
+    translated_from: {
+      ur: " Download for offline",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let text = app_shared_bible_offline_arrow_text(label);
