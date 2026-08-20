@@ -6,6 +6,9 @@ export function html_button_share_text() {
   let texts = {
     en: " Share",
     ur: " شیئر کریں",
+    translated_from: {
+      ur: " Share",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_link();
