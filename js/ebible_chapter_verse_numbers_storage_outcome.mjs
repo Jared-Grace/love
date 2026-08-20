@@ -1,3 +1,4 @@
+import { ebible_chapter_outcome_reasons_merge } from "./ebible_chapter_outcome_reasons_merge.mjs";
 import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
 import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
@@ -19,14 +20,11 @@ export async function ebible_chapter_verse_numbers_storage_outcome(
     chapter_code,
   );
   let verses = property_get(outcome, "verses");
-  let absent = property_get(outcome, "absent");
-  let unreachable = property_get(outcome, "unreachable");
   let property_name = verse_number_key();
   let verse_numbers = list_map_property(verses, property_name);
   let counted = {
     verse_numbers,
-    absent,
-    unreachable,
   };
+  ebible_chapter_outcome_reasons_merge(counted, outcome);
   return counted;
 }
