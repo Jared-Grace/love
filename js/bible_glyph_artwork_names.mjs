@@ -4,6 +4,7 @@ export function bible_glyph_artwork_names() {
   "THE NAME HERE IS ONLY USED TO FETCH, and never to draw. A file lands under this repo's own glyph name, so every page addresses a glyph the way it already does and no page ever learns the artwork set's vocabulary. That is what makes the artwork replaceable: swapping sets means rewriting this one table and running the fetch again, and nothing else in the repo notices.";
   "A NAME HERE IS A GUESS UNTIL IT IS CHECKED, which is why the fetch reports the ones it could not find rather than failing on the first. These names were written from knowing the emoji, and the artwork set spells a few of them its own way; the report is what turns the guesses into facts, and it costs one run.";
   "THE LAST THREE WERE ASKED OF THE SET BEFORE THEY WERE WRITTEN, which is the cheap way round and the one to copy. Searching the set's own names for a word costs one listing and answers with the whole neighbourhood of that word, so the name lands correct the first time; guessing costs a fetching run for every guess and only ever answers yes or no.";
+  "THE LAST TWO WERE ASKED OF THE SET THE SAME WAY and both came back on the first search, which is what the line above is describing rather than recommending. The set answers to Grinning face and to Left-right arrow, spelled its way and not this repo's, and neither spelling could have been guessed from the glyph name here - which is the whole reason this table exists.";
   "A GLYPH MISSING FROM THIS TABLE IS NOT AN OVERSIGHT. Two of them are named next door instead, in the list of pictures the set simply does not have, because no spelling would have found them. This table is the glyphs that can be fetched, and that list is the glyphs that cannot - together they are all of them.";
   let names = [
     {
@@ -297,6 +298,14 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "no_entry",
       asset: "Prohibited",
+    },
+    {
+      glyph: "smile",
+      asset: "Grinning face",
+    },
+    {
+      glyph: "arrow_both_ways",
+      asset: "Left-right arrow",
     },
   ];
   return names;

@@ -12,6 +12,8 @@ export function bible_glyph_characters() {
   "AND NEITHER OF THEM IS AN OBJECT, which is why the sun and the moon were both turned down for this. A sun is a thing this Bible will have to name in its own right, and a moon likewise the first time the fourth day is written; spending either of them on light or on darkness would take the word away from the verse that actually means it. A brightness and a dark field are not things anybody has to name later.";
   "THE LIGHT WAS CHECKED AGAINST THE SUN AS A DRAWING and not only as a character, because the two arguments are different ones and only the second is what a reader meets. Side by side the artwork draws the light as a thin open ring with straight rays and the sun as a filled scalloped disc - a different fill, a different outline and a different ray - so the two survive being set next to each other. That check is worth repeating whenever a character is chosen near one this Bible already spends, since a pair that reads apart in a font can be drawn almost the same by a set.";
   "THE WITNESS IS A PERSON WITH A RAISED HAND rather than an eye or a mouth, because the word is neither seeing nor speaking but the two joined: somebody who saw it, standing up to say so. An eye alone drops the saying and a mouth alone drops the seeing, and either loss is the whole word.";
+  "THE SMILE AND THE BOTH-WAYS ARROW WERE FOUND BY MEASURING A CHAPTER AND NOT BY DRAWING ONE, which is the cheaper of the two ways and the one to copy. John fifteen was asked which of its words the root table could not draw, and after the interlinear's dash, the article and the pronouns were skipped past, joy and one another were what was left. The light, the darkness and the witness cost a whole authored page to find; these cost one call, before a word of the chapter was written.";
+  "THE BOTH-WAYS ARROW SAYS THE ONE THING THE EQUALS SIGN WAS TAKEN BACK FOR SAYING, and it is right here for exactly the reason the equals sign was wrong there. A symmetric mark misleads on God is love, because that sentence does not run backwards. One another is symmetric in the word itself - to love one another IS for each to love the other - so here the symmetry is the word's own claim rather than something the mark adds to it.";
   "Single characters are preferred over joined sequences. A joined sequence such as the burning heart is several characters held together by a joiner, and a terminal that does not join them shows the parts instead, which is how a reader ends up seeing a heart and a fire where one glyph was meant.";
   let characters = [
     {
@@ -149,6 +151,10 @@ export function bible_glyph_characters() {
     {
       name: "eyes",
       character: "👀",
+    },
+    {
+      name: "smile",
+      character: "😀",
     },
     {
       name: "hand",
@@ -313,6 +319,10 @@ export function bible_glyph_characters() {
     {
       name: "no_entry",
       character: "🚫",
+    },
+    {
+      name: "arrow_both_ways",
+      character: "↔️",
     },
   ];
   return characters;
