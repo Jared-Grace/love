@@ -68,7 +68,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "though innocent",
       second: "condemned to die",
-      symbol: "Pilate's basin, water poured",
+      symbol:
+        "A wide shallow washing basin of plain grey stone, low and flat-bottomed with no stem and no foot at all, brimful of clear blue water that is spilling over its rim and running down its side",
       ref: "Matthew 27:24",
       same_as: 0,
     },
