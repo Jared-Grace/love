@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rosetta_lines_name } from "./bible_glyph_chapter_rosetta_lines_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
@@ -9,7 +10,6 @@ import { bible_interlinear_verse_original_text } from "./bible_interlinear_verse
 import { bible_interlinear_verse_gloss_text } from "./bible_interlinear_verse_gloss_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { json_to } from "./json_to.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { function_source_new } from "./function_source_new.mjs";
 export async function bible_glyph_chapter_rosetta_lines_write(chapter_code) {
   "$plain chapter_code";
