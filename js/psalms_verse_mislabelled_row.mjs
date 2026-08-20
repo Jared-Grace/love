@@ -12,12 +12,16 @@ export function psalms_verse_mislabelled_row(root, entry) {
   arguments_assert(arguments, 2);
   let row = html_div(root);
   html_style_padding(row, "12px 0");
-  html_style_set(row, "border-bottom", "1px solid #333333");
+  html_style_set(
+    row,
+    "border-bottom",
+    "1px solid " + app_shared_color_gray_dark(),
+  );
   let said = html_p_text(row, entry.titled + " is really " + entry.sung);
   html_style_margin(said, "0 0 4px 0");
   html_bold_semi(said);
   let heard = html_p_text(row, entry.heard);
   html_style_margin(heard, "0 0 4px 0");
-  html_style_set(heard, "color", "#aaaaaa");
+  html_style_set(heard, "color", app_shared_color_gray());
   psalms_second_take_link(row, entry.video_id, "hear it");
 }

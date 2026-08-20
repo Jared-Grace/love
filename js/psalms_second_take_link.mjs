@@ -12,7 +12,7 @@ export function psalms_second_take_link(root, video_id, label) {
     label,
   );
   html_display_inline_block(a);
-  html_style_set(a, "color", "#8ab4f8");
+  html_style_set(a, "color", html_color_blue_on_dark());
   html_style_set(a, "margin-right", "16px");
   html_style_padding(a, "10px 0");
   return a;
