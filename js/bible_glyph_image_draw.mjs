@@ -1,3 +1,5 @@
+import { html_display_none } from "./html_display_none.mjs";
+import { html_display_set } from "./html_display_set.mjs";
 import { bible_glyph_image_source } from "./bible_glyph_image_source.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_img } from "./html_img.mjs";
@@ -15,7 +17,7 @@ export function bible_glyph_image_draw(parent, glyph_name, character) {
   "The picture is sized in EMS rather than pixels, so it grows with the text around it - the reader who made this Bible bigger meant the pictures too, and a picture fixed in pixels would be the one word on the page that ignored them.";
   "ONLY THE HEIGHT IS SET AND THE WIDTH FOLLOWS IT, because the artwork is not promised to be square and nothing here knows the shape of a file it has not fetched. Setting both would silently stretch any picture that is not, and a stretched picture is worse than a missing one: it still reads as the word, so nobody looks twice at it.";
   let fallback = html_span_text_content(parent, character);
-  html_style_set(fallback, "display", "none");
+  html_display_none(fallback);
   let src = bible_glyph_image_source(glyph_name);
   let image = html_img(parent, src);
   html_attribute_set(image, "alt", character);
@@ -23,8 +25,8 @@ export function bible_glyph_image_draw(parent, glyph_name, character) {
   html_style_set(image, "width", "auto");
   html_style_set(image, "verticalAlign", "-0.15em");
   function on_missing() {
-    html_style_set(image, "display", "none");
-    html_style_set(fallback, "display", "inline");
+    html_display_none(image);
+    html_display_set(fallback, "inline");
   }
   html_on(image, "error", on_missing);
   return image;
