@@ -7,7 +7,8 @@ export async function song_image_drawn_attempt_last(number) {
   let attempts = await song_image_drawn_attempts(number);
   let last = list_max_or_null(attempts);
   if (equal(last, null)) {
-    return 0;
+    let r = 0;
+    return r;
   }
   return last;
 }
