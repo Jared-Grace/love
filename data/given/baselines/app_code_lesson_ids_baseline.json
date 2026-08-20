@@ -112,6 +112,7 @@
   "expressions_solving_inside_brackets",
   "expressions_brackets_around_or",
   "expressions_moving_the_brackets",
+  "expressions_brackets_around_either_pair",
   "operators_not_twice",
   "expressions_solving_inside_not",
   "expressions_not_around_a_comparison",
