@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 export function color_near_miss_threshold() {
   function_duplicate_kind_parallel();
