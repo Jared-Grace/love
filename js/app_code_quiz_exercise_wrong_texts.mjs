@@ -1,3 +1,4 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -23,14 +24,12 @@ export function app_code_quiz_exercise_wrong_texts(exercise, qa_texts) {
     if (qa_for) {
       shown = qa_for(item);
     }
-    let input = property_get(shown, question_property);
-    let shown_question_text = text_to(input);
+    let shown_question_text = property_text_to(shown, question_property);
     let same = equal(shown_question_text, question_text);
     if (same) {
       continue;
     }
-    let input2 = property_get(shown, answer_property);
-    let shown_answer_text = text_to(input2);
+    let shown_answer_text = property_text_to(shown, answer_property);
     let right = equal(shown_answer_text, answer_text);
     if (right) {
       continue;
