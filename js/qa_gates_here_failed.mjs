@@ -3,7 +3,6 @@ import { text_split_comma } from "./text_split_comma.mjs";
 import { qa_gates_named } from "./qa_gates_named.mjs";
 import { qa_gate_result } from "./qa_gate_result.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_and_empty_not_is } from "./text_and_empty_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function qa_gates_here_failed(names_comma) {
   "Of the gates that went red in a frozen run, the ones still red in the folder as it stands right now.";
