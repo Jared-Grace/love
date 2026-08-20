@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
 export function app_shared_languages_prompt_text() {
   "What the list of languages asks the reader, in the language the reader of this app reads.";
   let texts = {
