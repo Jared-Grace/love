@@ -6,7 +6,6 @@ import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_and_empty_not_is } from "./text_and_empty_not_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 export async function qa_gate_failures_report(results, gates) {
