@@ -6,7 +6,6 @@ import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 export async function function_reachable_calls_named(f_name_root) {
   "$plain f_name_root";
   "Every call that says out loud what it is calling, in every function this one can reach, each one carrying the function it stands in and the name it calls - and alongside them how many functions had to be read to find them.";
