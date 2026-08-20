@@ -1,3 +1,5 @@
+import { html_width_full } from "./html_width_full.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { html_img } from "./html_img.mjs";
@@ -21,13 +23,13 @@ export function song_image_frame_picture(frame, state, candidate) {
     html_style_set(picture, "top", not(wide) && state.flip ? "50%" : "0");
     return picture;
   }
-  html_style_set(picture, "width", "100%");
+  html_width_full(picture);
   html_style_set(picture, "height", "100%");
   html_style_set(picture, "left", "0");
   html_style_set(picture, "top", "0");
   let veil = equal(state.placement, "behind") && not(drawn);
   if (veil) {
-    html_style_set(picture, "opacity", "0.34");
+    html_style_opacity(picture, "0.34");
     html_style_set(picture, "filter", "brightness(0.75)");
   }
   return picture;
