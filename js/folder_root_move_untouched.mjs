@@ -1,3 +1,5 @@
+import { path_join } from "./path_join.mjs";
+import { data_given_baselines_folder } from "./data_given_baselines_folder.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { findings_folder } from "./findings_folder.mjs";
 import { folder_public } from "./folder_public.mjs";
@@ -15,7 +17,10 @@ export function folder_root_move_untouched() {
   let untouched = [
     combined,
     combined2,
-    "data/given/baselines/git_history_heavy_absent_baseline.json",
+    path_join([
+      data_given_baselines_folder(),
+      "git_history_heavy_absent_baseline.json",
+    ]),
   ];
   return untouched;
 }
