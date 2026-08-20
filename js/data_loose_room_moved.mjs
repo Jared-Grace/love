@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
@@ -55,8 +56,7 @@ export async function data_loose_room_moved() {
         room = list_last(entry);
       }
     }
-    let b = equal(room, "");
-    let known = not(b);
+    let known = equal_not(room, "");
     if (not(known)) {
       unroomed.push(pair);
       continue;
