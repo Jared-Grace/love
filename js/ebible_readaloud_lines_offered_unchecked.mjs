@@ -44,12 +44,12 @@ export function ebible_readaloud_lines_offered_unchecked(recorded) {
     if (none) {
       return null;
     }
-    let read_none = {
+    let chapters_unread = {
       bible_folder,
       measured: true,
       unread: list_size(unread),
     };
-    return read_none;
+    return chapters_unread;
   }
   let unchecked = list_map_filter_null_not_is(offered, unchecked_or_null);
   return unchecked;

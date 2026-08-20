@@ -29,9 +29,9 @@ export async function ebible_readaloud_lines_record_assert(
   ("Measured against what the repo already carried rather than against zero, and for the same reason the disagreements are: seventy-nine of the offered bibles were already like this when it was first asked, so refusing them outright would leave this red for a fact about which files happen to sit on one machine. Files not being here is a fact about a machine and not a fault in a bible. What must not happen is the number going up - a bible newly offered whose chapters nobody has read is a reader newly told that something was checked when it was not.");
   ("Each disagreeing chapter is named with the bible it belongs to before they are gathered together. The record keeps them under their bible, and gathering them loses that - which left an answer telling somebody to go and look at Mark 9 without saying whose Mark 9, in a folder holding a Mark 9 for every translation there is.");
   let unchecked_hint = text_combine_multiple([
-    "a bible a reader can choose has no chapter of it read, so nothing here has compared a single one of them and the answer below passes over it in silence - fetch what is missing for it with ",
+    "a bible a reader can choose has chapters with no reading-aloud text, so nobody is shown those chapters and the counts below pass over them in silence. The count beside the name says how many, and one is enough to be named here - so this may be a bible that never arrived, or one a single chapter short of complete. Is the missing text still to be fetched, with ",
     f_name_download,
-    ", then measure again with ",
+    "? Some chapters are published as a heading and nothing else, and for those there is nothing left to fetch. Either way, measure again afterwards with ",
     f_name,
   ]);
   await baseline_names_gate_generic(
