@@ -315,6 +315,10 @@ export function bible_glyph_artwork_names() {
       glyph: "arrow_both_ways",
       asset: "Left-right arrow",
     },
+    {
+      glyph: "water",
+      asset: "Droplet",
+    },
   ];
   return names;
 }

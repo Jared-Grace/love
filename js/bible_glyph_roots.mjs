@@ -902,6 +902,16 @@ export function bible_glyph_roots() {
         },
       ],
     },
+    {
+      root: "hydor",
+      gloss: "water",
+      words: [
+        {
+          strong: "5204",
+          glyph: "water",
+        },
+      ],
+    },
   ];
   return roots;
 }

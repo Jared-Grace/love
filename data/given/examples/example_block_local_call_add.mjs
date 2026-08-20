@@ -2,6 +2,7 @@ import { js_block_local_call_add } from "../../../js/js_block_local_call_add.mjs
 import { js_find_body_block } from "../../../js/js_find_body_block.mjs";
 import { js_block_call_add } from "../../../js/js_block_call_add.mjs";
 import { js_block_local_text_add } from "../../../js/js_block_local_text_add.mjs";
+import { js_call_argument_named_identifier_set } from "../../../js/js_call_argument_named_identifier_set.mjs";
 export const example = {
   fn: js_block_local_call_add.name,
   select: js_find_body_block.name,
@@ -25,10 +26,19 @@ export const example = {
     "its value — so the argument filling, the import adding and the await ",
     "deciding are all done by the verb that already does them rather than done ",
     "again differently here.",
+    " ",
+    "The call brings its argument names from the called function's own ",
+    "parameters, so the same uniquifier is at work here as next door: ",
+    { code: "selects" },
+    " is taken already, and what gets written is ",
+    { code: "selects2" },
+    " rather than a quiet read of a different value than the callee meant. ",
+    { fn: js_call_argument_named_identifier_set.name },
+    " is what points it at the one that was meant.",
   ],
   before: `export function f(selects) {
 }`,
   after: `export function f(selects) {
-  let body = js_selects_block_body(selects);
+  let body = js_selects_block_body(selects2);
 }`,
 };
