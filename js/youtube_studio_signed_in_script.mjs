@@ -1,9 +1,11 @@
 export function youtube_studio_signed_in_script() {
   "The small piece of javascript that, pasted into the youtube studio page somebody is already signed in on, gives that page three things: proof of who is asking, a way to put a question to studio, and a way to write words under one video.";
   "It is a second script rather than more lines in the first one because studio is a different place. The words a playlist carries are set from the ordinary youtube page and the words a video carries are set from studio, and each proof of who is asking names the place it was made for - a proof made for one is refused by the other. Two scripts say that; one script with a place hidden inside it would not.";
-  "THE SHAPE OF THE QUESTION HAS NOT BEEN WATCHED GOING PAST. It is written from what studio's own page is understood to send, and understood is not the same as seen. So the batch stops at the first refusal and hands back what studio said, rather than asking the same wrong question thirteen hundred times.";
-  "THE ASK CARRIES THE WORDS AND NOTHING ELSE. Everything a video has that is not its words - what it is called, what sort of thing it is, who may see it - is left unnamed, because a field named wrongly is a field set wrongly, and a guess about the words fails where a guess about the sort of thing quietly succeeds at the wrong thing.";
+  "IT COPIES A REAL SAVE RATHER THAN WRITING ONE. A question built up field by field was tried three times over, each time nearer to what studio sends, and all three came back two hundred and changed nothing. Studio's own save carries a token it mints for itself, which cannot be worked out from outside, so the only question that lands is studio's own question with two things swapped: which video, and what words.";
+  "So it waits for the person to save one video by hand. That save is caught on its way out and becomes the pattern for every song after it, and one save answers for the whole run - the token was tried on a second video and that video took it. Waiting is what keeps this one paste: paste it, then go and save any video by hand, and the run starts itself, so the two cannot be done in the wrong order.";
+  "TWO HUNDRED IS NOT YES. A refused write and an accepted write both come back two hundred, and the refused one was silent - only the answer's own shape tells them apart, so a write is believed only when studio names it a success outright. Everything a video has that is not its words is left exactly as the caught save had it, because a field named wrongly is a field set wrongly.";
   "Nothing here takes a video down, and nothing here reads. It writes words under a video that has none, and the reading back is done from outside by anybody with the address, which is the only check worth having: studio saying yes is studio's word, and the page a listener lands on is the fact.";
+  "It waits a moment between songs. Thirteen hundred asks arriving as fast as they can be made is the shape of something being fended off rather than somebody working, and the whole run is not worth losing to look quick.";
   "It is kept as words rather than as a file to be loaded because the page refuses to fetch anything from elsewhere, so the only way in is to be pasted.";
   let lines = [
     "window.studio_hash = async function () {",
@@ -16,10 +18,28 @@ export function youtube_studio_signed_in_script() {
     "  const hex = [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, '0')).join('');",
     "  return 'SAPISIDHASH ' + ts + '_' + hex;",
     "};",
-    "window.studio_ask = async function (name, ask) {",
+    "window.studio_save_caught = null;",
+    "window.studio_save_watch = function () {",
+    "  const open_before = XMLHttpRequest.prototype.open;",
+    "  XMLHttpRequest.prototype.open = function (method, url) { this.studio_url = url; return open_before.apply(this, arguments); };",
+    "  const send_before = XMLHttpRequest.prototype.send;",
+    "  XMLHttpRequest.prototype.send = function (body) {",
+    "    const wanted = typeof body === 'string' && body.indexOf('encryptedVideoId') >= 0 && String(this.studio_url).indexOf('metadata_update') >= 0;",
+    "    if (wanted) { window.studio_save_caught = body; }",
+    "    return send_before.apply(this, arguments);",
+    "  };",
+    "};",
+    "window.studio_save_wait = async function (minutes) {",
+    "  const until = Date.now() + minutes * 60 * 1000;",
+    "  while (window.studio_save_caught === null) {",
+    "    if (Date.now() > until) { return 'nobody saved a video by hand within ' + minutes + ' minutes'; }",
+    "    await new Promise((r) => setTimeout(r, 1000));",
+    "  }",
+    "  return 'caught';",
+    "};",
+    "window.studio_ask = async function (name, body) {",
     "  const cfg = window.ytcfg.data_;",
-    "  const body = Object.assign({}, ask, { context: cfg.INNERTUBE_CONTEXT });",
-    "  const res = await fetch('/youtubei/v1/' + name + '?key=' + cfg.INNERTUBE_API_KEY + '&alt=json', {",
+    "  const res = await fetch('/youtubei/v1/' + name + '?alt=json', {",
     "    method: 'POST', credentials: 'include',",
     "    headers: {",
     "      'Content-Type': 'application/json',",
@@ -34,20 +54,25 @@ export function youtube_studio_signed_in_script() {
     "  return json;",
     "};",
     "window.video_description_set = async function (video_id, description) {",
-    "  const json = await window.studio_ask('video_manager/metadata_update', {",
-    "    externalVideoId: video_id,",
-    "    description: { newDescription: description },",
-    "  });",
+    "  const body = JSON.parse(window.studio_save_caught);",
+    "  body.encryptedVideoId = video_id;",
+    "  body.description = { newDescription: description, descriptionOperation: 'MDE_TEXT_UPDATE_OPERATION_SET' };",
+    "  const json = await window.studio_ask('video_manager/metadata_update', body);",
     "  if (json.error) { return 'refused: ' + json.error.message; }",
-    "  if (json.overallResult && json.overallResult.status !== 'STATUS_SUCCEEDED') { return 'refused: ' + JSON.stringify(json.overallResult); }",
+    "  const said = json.overallResult && json.overallResult.resultCode;",
+    "  if (said !== 'UPDATE_SUCCESS') { return 'refused: ' + JSON.stringify(json.overallResult || Object.keys(json)); }",
     "  return 'written';",
     "};",
     "window.psalm_video_descriptions_apply = async function () {",
+    "  window.studio_save_watch();",
+    "  const ready = await window.studio_save_wait(20);",
+    "  if (ready !== 'caught') { return JSON.stringify({ written: 0, stopped_at: null, said: ready }); }",
     "  const written = [];",
     "  for (const item of window.psalm_videos) {",
     "    const said = await window.video_description_set(item.video_id, item.description);",
     "    if (said !== 'written') { return JSON.stringify({ written: written.length, stopped_at: item.video_id, said: said }); }",
     "    written.push(item.video_id);",
+    "    await new Promise((r) => setTimeout(r, 400));",
     "  }",
     "  return JSON.stringify({ written: written.length, stopped_at: null, said: 'all of this piece' });",
     "};",
