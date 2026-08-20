@@ -59,7 +59,18 @@ export async function bible_sentence_end_marks_findings() {
   let unfindable = list_map_property(ended_none, property_name);
   let named = bible_folders_sentence_end_unmarked();
   let unnamed = list_difference(unfindable, named);
-  let named_wrongly = list_difference(named, unfindable);
+  ("A NAME FOR A BIBLE NOBODY SHIPS IS A FINDING OF ITS OWN, and it used to be told as the opposite of what it is. The list of languages that write no marks was being subtracted from the bibles read and found to write some, so anything named and not read at all fell out of that subtraction and was reported as a bible that ends its sentences after all. Thai sat there: it is named here, it is in no bible this repo ships, and whoever read the fault was told to take the name out because its readers were being denied a reading - of a bible that is not there to read.");
+  ("So the naming is asked two separate questions. Does this name point at a bible we ship, and if it does, was that bible read finishing sentences. The first has no repair in common with the second: one is a name left behind by a bible that went away, and the other is a bible that changed under a name still describing how it used to read.");
+  let named_unshipped = list_difference(named, shipped);
+  ("Only a bible really read and really found to finish a sentence is named wrongly. Reaching it by subtraction gathered up everything not in one list - the never measured, the empty in storage, the unreadable this afternoon - and offered every one of them the same single repair.");
+  function lambda7(entry) {
+    let none = property_equals(entry, "ended", 0);
+    let some = not(none);
+    return some;
+  }
+  let ended_some = list_filter(stored, lambda7);
+  let findable = list_map_property(ended_some, property_name);
+  let named_wrongly = list_intersection(named, findable);
   let findings = {
     shipped,
     unmeasured,
@@ -68,6 +79,7 @@ export async function bible_sentence_end_marks_findings() {
     unread,
     ended_none,
     unnamed,
+    named_unshipped,
     named_wrongly,
     unreached,
   };
