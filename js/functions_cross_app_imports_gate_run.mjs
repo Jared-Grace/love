@@ -24,7 +24,7 @@ export async function functions_cross_app_imports_gate_run() {
     name_write,
   );
   let r = {
-    checked: list_size(offenders),
+    offenders: list_size(offenders),
     added: 0,
     stale: 0,
   };
