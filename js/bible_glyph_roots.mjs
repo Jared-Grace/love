@@ -609,6 +609,12 @@ export function bible_glyph_roots() {
           strong: "3162",
           glyph: "sword",
         },
+      ],
+    },
+    {
+      root: "rhomphaia",
+      gloss: "sword",
+      words: [
         {
           strong: "4501",
           glyph: "sword",
