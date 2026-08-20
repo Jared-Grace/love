@@ -2,7 +2,6 @@ import { app_code_lesson_expression_choose_order_strong_card } from "./app_code_
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
