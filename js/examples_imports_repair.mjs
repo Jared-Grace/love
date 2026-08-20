@@ -1,10 +1,9 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { examples_import_prefixes } from "./examples_import_prefixes.mjs";
 import { examples_imports_wrong } from "./examples_imports_wrong.mjs";
 import { file_read } from "./file_read.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_replace } from "./text_replace.mjs";
@@ -19,8 +18,7 @@ export async function examples_imports_repair() {
     let f_path = property_get(offender, "f_path");
     return f_path;
   }
-  let named = list_map(before, path_of);
-  let paths = list_unique(named);
+  let paths = list_map_unique(before, path_of);
   let prefixes = examples_import_prefixes();
   let right = property_get(prefixes, "right");
   let wrong = property_get(prefixes, "wrong");
