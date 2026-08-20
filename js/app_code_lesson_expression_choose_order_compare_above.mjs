@@ -1,7 +1,7 @@
+import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { app_code_expression_replace_swap_say } from "./app_code_expression_replace_swap_say.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
@@ -47,23 +47,20 @@ export function app_code_lesson_expression_choose_order_compare_above(root) {
   let line_card = app_code_container_light_blue(root);
   app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
   let run = app_code_container_light_blue(root);
+  ("the brackets are named FIRST, as the reason, and everything after them follows from them - because they are the whole of why this line has an order at all");
+  ("It used to open with the outer operator having something on one side, so it could not be solved yet. That is true of the line and it is not the reason: a learner reads it as an order that comes from one part having something beside it, which is not a rule they can carry anywhere, and the real rule - what is inside brackets goes before what is outside - was never said at all. Worse, it left the two operators unexplained beside each other, so a learner had no way to tell whether it was the brackets or the operators that decided.");
+  ("The brackets are drawn round the part as well as named, because the word and the mark have to be pinned to each other here - this is the screen where a learner meets brackets as a REASON rather than as something they have merely seen.");
+  let step_gathered = text_wrap_parenthesis(step_code);
   html_div_cycle_code(run, [
     "The ",
-    outer_symbol,
-    " has ",
-    step_code,
-    " on one side, so it cannot be solved yet",
+    step_gathered,
+    " has parentheses, so what is inside them must be solved before what is outside",
   ]);
-  html_div_cycle_code(run, [
-    "",
-    step_code,
-    " has a number on each side, so it goes first",
-  ]);
-  let solved = app_code_expression_equals_text(step_code, step_text);
-  html_div_cycle_code(run, [
-    "And a comparison comes to true or false, so ",
-    solved,
-  ]);
+  html_div_cycle_code(run, ["So we cannot solve the ", outer_symbol, " yet"]);
+  let step_symbol = property_get(step, "operator");
+  html_div_cycle_code(run, ["We must solve the ", step_symbol, " first"]);
+  ("said as the doing rather than as an equation, because the three lines above it are all about what may be done and this is the one that does it");
+  html_div_cycle_code(run, ["We solve ", step_code, " to get ", step_text]);
   ("the swap is said in the very words the button that makes it says, out of the one place both of them read, so the word for the swap and its two pieces wear the colour they wear on the line itself");
   let swap_line = html_div(run);
   app_code_expression_replace_swap_say(
@@ -74,9 +71,9 @@ export function app_code_lesson_expression_choose_order_compare_above(root) {
     step_text,
   );
   html_div_cycle_code(run, [
-    "That leaves ",
+    "Then all we have left is ",
     stepped_code,
-    ", and there is nothing left inside it, so the whole line is ",
+    ", and that solves to ",
     final_text,
   ]);
   let change_card = app_code_container_light_blue(root);
