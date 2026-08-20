@@ -16,6 +16,9 @@ export function bible_glyph_roots() {
   "A BABY WOULD CLAIM MORE THAN GENNAO CLAIMS. Born is eight of John three and the obvious mark for it is an infant, which is right for a first birth and wrong for every other use in the chapter. That which is born of the Spirit is spirit puts no infant in the world at all, and Nicodemus asking whether a man can enter his mother's womb a second time is the text itself saying that the infant reading is the wrong one. A picture that makes the reader make Nicodemus's mistake is worse than no picture, because the sentence exists to correct that mistake.";
   "ETERNAL HAS NO POINTABLE MARK. An hourglass says time that is running out, which is the opposite of the word, and an infinity sign says an unbounded quantity, which is arithmetic rather than a thing anybody can point at - and pointing is the whole method here, since a reader with no shared language learns a picture by recognising what it is a picture OF. Eternal life is drawn as the sprout with the word eternal standing in letters beside it, and that is honest: the life is drawn and the duration is not.";
   "HOTI KEEPS ONE GLYPH THOUGH IT GLOSSES TWO WAYS, and the survey will report the spread, so this is the answer to that report rather than an oversight. The word is that five hundred times and because a hundred and eighty, and Greek marked no difference between the two - one word did both jobs and a Greek reader met the same word each time. Splitting it by which English word the interlinear reached for would draw a distinction the writer never drew, which is the rule the referent table already states: SPLIT ON A DIFFERENT REFERENT, NEVER ON A DIFFERENT WORDING.";
+  "JOY JOINED THE GRACE ROOT RATHER THAN STARTING ONE OF ITS OWN, and it is drawn differently from its own relatives - which is the case the rule about words naming their own glyph was written for, met for the first time here. Grace, joy and rejoice grow off one stem, and a reader seeing the kinship has been told something true; a gift and a smile are still not the same picture, and drawing joy as a gift to make the family tidy would lose the word. The family is the root and the picture is the word, and this is what it looks like when those two answers differ.";
+  "OUDEIS WAS REFUSED AND THE REASON IS WORTH KEEPING, because the picture for it looks obvious and is wrong. The set draws a person struck through, which reads as no one exactly, and it would be built out of two glyphs the reader already has - the prohibition and the standing person. But one Strong's number carries both no one and nothing: the Greek is one word inflected, and apart from Me you can do nothing is the same number as no one has seen God. A struck-through person is right for half of its uses and says the wrong noun in the other half, and this table would rather leave a word in English than answer the reader's question wrongly.";
+  "A ZERO WAS THE OTHER CANDIDATE AND FALLS TO THE ARGUMENT ETERNAL ALREADY FELL TO. Not even one is what the word is built from, so the mark fits the sense - but a zero is arithmetic rather than a thing anybody can point at, and pointing is the whole method here. The same objection that turned down the infinity sign turns this down, and a rule that only holds when it is convenient is not one.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -520,11 +523,19 @@ export function bible_glyph_roots() {
     },
     {
       root: "charis",
-      gloss: "grace, favour",
+      gloss: "grace, favour, joy, rejoice",
       words: [
         {
           strong: "5485",
           glyph: "gift",
+        },
+        {
+          strong: "5479",
+          glyph: "smile",
+        },
+        {
+          strong: "5463",
+          glyph: "smile",
         },
       ],
     },
@@ -839,6 +850,16 @@ export function bible_glyph_roots() {
         {
           strong: "3361",
           glyph: "no_entry",
+        },
+      ],
+    },
+    {
+      root: "allelon",
+      gloss: "one another, each other",
+      words: [
+        {
+          strong: "240",
+          glyph: "arrow_both_ways",
         },
       ],
     },
