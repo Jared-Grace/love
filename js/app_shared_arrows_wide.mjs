@@ -1,3 +1,5 @@
+import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
+import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
