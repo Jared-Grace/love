@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -19,8 +20,7 @@ export async function qa_commit_named_stale_is() {
   if (nothing) {
     return true;
   }
-  let newest = property_get(opened, "newest");
-  let behind = property_get(newest, "behind");
+  let behind = property_path_get_2(opened, "newest", "behind");
   let ceiling = qa_commit_named_behind_ceiling();
   let stale = greater_than(behind, ceiling);
   return stale;
