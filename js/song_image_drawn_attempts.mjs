@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_number } from "./list_sort_number.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -15,7 +16,8 @@ export async function song_image_drawn_attempts(number) {
   }
   let pictures = names.filter(name_is_picture);
   function name_to_number(name) {
-    let text = name.slice(0, name.length - ".png".length);
+    let difference = subtract(name.length, ".png".length);
+    let text = name.slice(0, difference);
     let n = Number(text);
     return n;
   }
