@@ -18,7 +18,8 @@ export async function qa_gate_miscounted_keys(f_name) {
   "Which parts of one gate's answer are named for how much it looked at while holding how much was wrong - each named as the gate and the key joined by a space.";
   "This is the other half of asking whether a gate says anything. Its sibling asks whether even one part of the answer is a reading, and stops as soon as it finds one; so a gate carrying an honest count is passed the moment that count is seen, and a lying word sitting in the next key along is never looked at. The two faults are independent: one gate can walk ten thousand files, report the number honestly, and still call its offender count the amount checked.";
   "Worth catching separately because of who it fools. A gate that says nothing at all invites a reader to go and look. A gate that says checked and means found does not - it hands back a word that answers the question, so nobody asks it again, and the answer has been nothing all along.";
-  "A key whose value is written straight into the answer counts as one of these when the word promises the looking. A nought spelled out is true of the gate and says nothing about what it reached, which is exactly what the word denies.";
+  "A number written straight into the answer counts as one of these when the word promises the looking. A nought spelled out is true of the gate and says nothing about what it reached, which is exactly what the word denies.";
+  "A yes or no written there does not count, and the difference is what the word is answering rather than how it is spelled. A number under one of these words claims an amount was reached; a yes or no under the same word claims the reading happened at all, and a gate that steps out early because there was nothing to compare against is saying so truthfully. One in this repo does exactly that, and calling it a liar was the first thing this sweep did.";
   "A name bound outside anything this can read is let through. It came in as something asked for or out of something imported, and there is no following it either way from here - so it is called honest, which lets somebody past rather than accusing them.";
   arguments_assert(arguments, 1);
   let ast = await function_ast(f_name);
@@ -53,8 +54,12 @@ export async function qa_gate_miscounted_keys(f_name) {
     let value = property_get(property, "value");
     let written_is = js_node_type_is(value, "Literal");
     if (written_is) {
-      let pair = text_combine_multiple([f_name, " ", key]);
-      list_add(names, pair);
+      let spelled = js_literal_value_get(value);
+      let counted_is = number_is(spelled);
+      if (counted_is) {
+        let pair = text_combine_multiple([f_name, " ", key]);
+        list_add(names, pair);
+      }
       continue;
     }
     let field = js_identifier_name_try(value);
