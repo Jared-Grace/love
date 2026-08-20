@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
@@ -28,13 +29,27 @@ export function app_code_lesson_expression_choose_order_compare_above(root) {
   app_code_lesson_expression_comparing_a_comparison_recall(root);
   let want_true = true;
   let comparison_left = false;
+  ("the line is drawn again while the operator inside the brackets is the same symbol as the one outside them - about a quarter of draws put === inside ===, because the inner operator comes from four symbols and the outer from two of those same four");
+  ("The two lines under the run point at one operator each and have nothing but its symbol to point with. Drawn the same, they stand one under the other reading we cannot solve the === yet and we must solve the === first, which is a contradiction rather than two parts of one line.");
+  ("Only the telling is held to this. The card below may draw the two the same and is none the worse for it: a learner there presses a chip they can see, so the symbol is not what tells the two apart.");
+  ("Drawing again, rather than choosing the inner operator to differ, because the line the learner reads must stay one the generator would really produce - and it ends, since half the inner draws are < or > and neither can ever be the outer one.");
   let tree = app_code_lesson_expression_choose_order_compare_expression(
     want_true,
     comparison_left,
   );
-  let whole_line = app_code_expression_code(tree);
   let ready = app_code_expression_nodes_ready(tree);
   let step = list_first(ready);
+  while (
+    equal(property_get(tree, "operator"), property_get(step, "operator"))
+  ) {
+    tree = app_code_lesson_expression_choose_order_compare_expression(
+      want_true,
+      comparison_left,
+    );
+    ready = app_code_expression_nodes_ready(tree);
+    step = list_first(ready);
+  }
+  let whole_line = app_code_expression_code(tree);
   let step_code = app_code_expression_code(step);
   let step_value = app_code_expression_value(step);
   let step_text = text_to(step_value);

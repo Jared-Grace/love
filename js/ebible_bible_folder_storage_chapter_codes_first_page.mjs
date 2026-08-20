@@ -1,18 +1,15 @@
+import { ebible_bible_folder_storage_first_page } from "./ebible_bible_folder_storage_first_page.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { ebible_chapter_code_known_is } from "./ebible_chapter_code_known_is.mjs";
 import { text_dot } from "./text_dot.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_remove_if_starts_with } from "./text_remove_if_starts_with.mjs";
 import { list_first } from "./list_first.mjs";
-import { ebible_firebase_folder_prefix } from "./ebible_firebase_folder_prefix.mjs";
-import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
-import { firebase_storage_list_page } from "./firebase_storage_list_page.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_slash_forward } from "./text_split_slash_forward.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_size } from "./list_size.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 export async function ebible_bible_folder_storage_chapter_codes_first_page(
   bible_folder,
 ) {
@@ -25,10 +22,9 @@ export async function ebible_bible_folder_storage_chapter_codes_first_page(
   "THE CHAPTER IS READ OFF THE FIRST STEP INSIDE THE FOLDER AND NEVER OFF THE LAST. One bible here is uploaded a verse to a file, under a step of its own for each chapter, so its last step is a verse number and says nothing about a chapter. Reading the first step answers the same for both layouts, and reading the last one turned eighteen thousand files of a whole bible into a list of numbers.";
   "AND THE NAME OF A FILE IS TAKEN OFF THAT STEP, because the two layouts spell it differently - one ends the step in a file and the other ends the step there and goes on. Cutting at the dot serves both. Cutting at a fixed length would not: a chapter code is not one, since the Psalms carry three digits where every other book carries two, and a hundred and nineteenth psalm read five characters deep comes out as an eleventh.";
   "ONLY A NAME THAT SPELLS ONE OF THE CHAPTERS IS COUNTED. A bible's folder holds more than its scripture - an index of what is in it lives there too - and a folder holding an index and nothing else holds nothing anybody can read. Counting every file called that folder full, which is the one answer this must never give, because it is the answer that lets a reader be offered a language with no words in it.";
-  let prefix = ebible_firebase_folder_prefix(bible_folder);
-  let project_url = firebase_storage_url_project_jg();
-  let page = await firebase_storage_list_page(project_url, prefix, null);
-  let names = property_get(page, "names");
+  let first = await ebible_bible_folder_storage_first_page(bible_folder);
+  let prefix = property_get(first, "prefix");
+  let names = property_get(first, "names");
   let dot = text_dot();
   function lambda(name) {
     let inside = text_remove_if_starts_with(name, prefix);
@@ -41,8 +37,7 @@ export async function ebible_bible_folder_storage_chapter_codes_first_page(
   let derived = list_map_unique(names, lambda);
   let named = list_filter(derived, ebible_chapter_code_known_is);
   let chapter_codes = list_sort_text(named);
-  let next = property_get(page, "next");
-  let more = null_not_is(next);
+  let more = property_get(first, "more");
   let r = {
     bible_folder,
     chapter_codes,
