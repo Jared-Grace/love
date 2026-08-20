@@ -110,7 +110,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "CHRIST crucified",
       second: "to pardon me",
-      symbol: "A single bare cross",
+      symbol:
+        "One single cross of plain brown wood standing alone, tall and upright, its beams bare and empty",
       ref: "",
       same_as: 0,
     },
@@ -119,7 +120,8 @@ export function song_image_couplets() {
       verse: 1,
       first: "the LOVE of GOD",
       second: "for all to see",
-      symbol: "Three crosses",
+      symbol:
+        "Three crosses of plain brown wood standing together on a green hill, the middle one taller than the two beside it",
       ref: "",
       same_as: 0,
     },

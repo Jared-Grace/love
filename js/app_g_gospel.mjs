@@ -29,6 +29,10 @@ export async function app_g_gospel(
   player,
   div_map,
 ) {
+  "One turn of sharing the gospel with a person standing on the map: while they still have an objection left they raise one, and the player answers by choosing the passage that meets it rather than a verse that does not.";
+  "Answering rightly takes one objection off them and begins the whole turn over again, so nobody is talked round in a single exchange. When the last objection is gone they speak the doxology, they are marked a Christian, and a cross goes up over them on the map.";
+  "The objections written for a chapter are fetched once and then kept on this function itself. Everybody in the chapter is talked to out of the same file and the file does not change while the player is there, so fetching it again for each person would be paying for the same answer over and over.";
+  "Walking away is not always allowed. A player who has prayed for discernment is shown the dove instead and the conversation stays open, because guidance that has been asked for and given is not something the player is then free to step around.";
   html_clear(overlay);
   let objections = property_get(npc, "objections");
   let p = positive_is(objections);
