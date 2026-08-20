@@ -1,3 +1,7 @@
+import { app_shared_contact_prompt_text } from "./app_shared_contact_prompt_text.mjs";
+import { app_shared_contact_placeholder_text } from "./app_shared_contact_placeholder_text.mjs";
+import { app_shared_contact_send_text } from "./app_shared_contact_send_text.mjs";
+import { app_shared_close_text } from "./app_shared_close_text.mjs";
 import { app_shared_contact_overlay_thread_render } from "./app_shared_contact_overlay_thread_render.mjs";
 import { app_shared_contact_message_add } from "./app_shared_contact_message_add.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -63,12 +67,11 @@ export function app_shared_contact_overlay() {
   app_shared_contact_overlay_thread_render(thread);
   form();
   function form() {
-    html_p_text(
-      card,
-      "Is there anything you would like to tell the developer?",
-    );
+    let prompt = app_shared_contact_prompt_text();
+    html_p_text(card, prompt);
     let textarea = html_textarea(card);
-    html_placeholder(textarea, "Please write your message here");
+    let placeholder = app_shared_contact_placeholder_text();
+    html_placeholder(textarea, placeholder);
     app_shared_input_style(textarea);
     ("the box is deliberately not focused as the panel opens. Taking focus in the same moment the panel is built and laid out asks the phone to raise its keyboard against a layout that is still settling, which is the same race that has left keys going nowhere before - so the person taps the box themselves, the way every ordinary page works");
     async function on_send() {
@@ -86,9 +89,11 @@ export function app_shared_contact_overlay() {
       html_focus(textarea);
     }
     let left2 = emoji_email();
-    let text = text_combine(left2, " Send");
+    let send = app_shared_contact_send_text();
+    let text = text_combine(left2, send);
     app_shared_button_green(card, text, on_send);
-    app_shared_button(card, "Close", close);
+    let close_text = app_shared_close_text();
+    app_shared_button(card, close_text, close);
   }
   return backdrop;
 }

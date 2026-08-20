@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { ffmpeg_crop_box } from "./ffmpeg_crop_box.mjs";
 import { ffmpeg_crop_write } from "./ffmpeg_crop_write.mjs";
 import { file_delete_if_exists } from "./file_delete_if_exists.mjs";
@@ -11,14 +12,22 @@ export async function image_black_trim(path) {
   "a picture with no black around it is trimmed to itself, which costs one rewrite and changes nothing, so this is safe to run twice and safe to run on a picture that never needed it";
   "when nothing can be found it says so and leaves the picture alone. A picture entirely black or entirely not has no border to cut, and neither does one ffmpeg could not read; in all three the right answer is the picture as it stands.";
   let box = await ffmpeg_crop_box(path);
-  if (box === null) {
-    let untrimmed = { path, box: null, trimmed: false };
+  if (equal(box, null)) {
+    let untrimmed = {
+      path,
+      box: null,
+      trimmed: false,
+    };
     return untrimmed;
   }
   let path_trimmed = text_combine(path, ".trimmed.png");
   await ffmpeg_crop_write(path, box, path_trimmed);
   await file_delete_if_exists(path);
   await file_move(path_trimmed, path);
-  let trimmed = { path, box, trimmed: true };
+  let trimmed = {
+    path,
+    box,
+    trimmed: true,
+  };
   return trimmed;
 }

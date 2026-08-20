@@ -1,3 +1,4 @@
+import { app_shared_verses_order_prompt_text } from "./app_shared_verses_order_prompt_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
@@ -31,7 +32,8 @@ export function html_subset_ordered_choose(
     let multiple = list_multiple_is(chosen);
     if (multiple) {
       let order_card = app_shared_container_blue(container);
-      html_div_text_bold(order_card, "What order do you want the verses in?");
+      let order_label = app_shared_verses_order_prompt_text();
+      html_div_text_bold(order_card, order_label);
       html_subset_ordered_selected(order_card, chosen, name_property, changed);
     }
   }
