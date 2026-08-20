@@ -5,6 +5,9 @@ export function app_shared_search_by_name_text() {
   let texts = {
     en: "Search by name",
     ur: "نام سے تلاش کریں",
+    translated_from: {
+      ur: "Search by name",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
