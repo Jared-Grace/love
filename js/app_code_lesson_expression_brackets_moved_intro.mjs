@@ -30,7 +30,11 @@ export function app_code_lesson_expression_brackets_moved_intro(root) {
   let rest_left = app_code_operator_code(false_word, or_symbol, true_word);
   let or_pair = app_code_operator_code(true_word, or_symbol, true_word);
   let or_bracketed = js_code_wrap_parenthesis(or_pair);
-  let whole_right = app_code_operator_code(false_word, and_symbol, or_bracketed);
+  let whole_right = app_code_operator_code(
+    false_word,
+    and_symbol,
+    or_bracketed,
+  );
   let rest_right = app_code_operator_code(false_word, and_symbol, true_word);
   let heading_none = [];
   let heading_other =
