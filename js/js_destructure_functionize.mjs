@@ -20,6 +20,7 @@ import { js_visit_type } from "./js_visit_type.mjs";
 import { js_return_identifier_name } from "./js_return_identifier_name.mjs";
 export async function js_destructure_functionize(ast) {
   "Writes out the shorthand that takes several names out of one object in a single line, as the plain reading it stands for: the object under a name of its own, then one line for each name asking that object for that property.";
+  "Whether the object needs a name depends on whether it already has one. If what it was set to is itself just a name, that name is used and the shorthand line goes away altogether; otherwise an unused name is made up, the shorthand is replaced by it, and what it was set to stays where it was.";
   let variable_name = js_return_identifier_name();
   function lambda(v) {
     let properties = property_path_get_2(v, "node", "properties");
