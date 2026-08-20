@@ -1,7 +1,7 @@
 import { property_list_size } from "./property_list_size.mjs";
 import { ebible_readaloud_lines_record_assert } from "./ebible_readaloud_lines_record_assert.mjs";
 import { ebible_readaloud_lines_offered_to_fetch_names } from "./ebible_readaloud_lines_offered_to_fetch_names.mjs";
-import { ebible_readaloud_lines_offered_unchecked_baseline_path } from "./ebible_readaloud_lines_offered_unchecked_baseline_path.mjs";
+import { ebible_readaloud_lines_offered_to_fetch_baseline_path } from "./ebible_readaloud_lines_offered_to_fetch_baseline_path.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_readaloud_lines_path } from "./ebible_readaloud_lines_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -42,7 +42,7 @@ export async function ebible_readaloud_lines_gate_run() {
   });
   ("The four things the call below needs are gathered here rather than fetched in there, because three of them are the whereabouts of a record and the name of the command that rewrites it - facts about this repo's own filing, which is what this gate is the keeper of.");
   let unchecked_names = await ebible_readaloud_lines_offered_to_fetch_names();
-  let unchecked_path = ebible_readaloud_lines_offered_unchecked_baseline_path();
+  let unchecked_path = ebible_readaloud_lines_offered_to_fetch_baseline_path();
   let unchecked_write = fn_name(
     "ebible_readaloud_lines_offered_unchecked_baseline_write",
   );
