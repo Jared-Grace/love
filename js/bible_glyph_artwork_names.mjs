@@ -96,6 +96,10 @@ export function bible_glyph_artwork_names() {
       asset: "Busts in silhouette",
     },
     {
+      glyph: "handshake",
+      asset: "Handshake",
+    },
+    {
       glyph: "king",
       asset: "Prince",
     },
@@ -162,6 +166,10 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "meat",
       asset: "Cut of meat",
+    },
+    {
+      glyph: "blood",
+      asset: "Drop of blood",
     },
     {
       glyph: "skull",

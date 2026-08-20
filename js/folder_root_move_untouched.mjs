@@ -15,7 +15,7 @@ export function folder_root_move_untouched() {
   let untouched = [
     combined,
     combined2,
-    "data/git_history_heavy_absent_baseline.json",
+    "data/given/baselines/git_history_heavy_absent_baseline.json",
   ];
   return untouched;
 }

@@ -1,5 +1,6 @@
 export function bible_sentence_end_marks_path() {
   "Where the record of which bibles mark the end of a sentence is kept.";
-  let path = "findings/bible_sentence_end_marks.json";
+  let folder = findings_folder();
+  let path = path_join([folder, "bible_sentence_end_marks.json"]);
   return path;
 }
