@@ -1,3 +1,4 @@
+import { html_style_background_color_black } from "./html_style_background_color_black.mjs";
 import { bless_prayer_read_ms } from "./bless_prayer_read_ms.mjs";
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
@@ -7,8 +8,6 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { app_g_button_green } from "./app_g_button_green.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
-import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { bless_prayer_transfer } from "./bless_prayer_transfer.mjs";
 export function app_g_bless_transfer_overlay(overlay, on_amen) {
   arguments_assert(arguments, 2);
@@ -36,8 +35,16 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("and then part company: a justified column pushes its overflow off the top edge, where the");
   ("overlay's own scrolling cannot reach it. Automatic margins collapse to nothing instead, so");
   ("a long prayer on a short phone starts at the top and scrolls, which is what it should do.");
-  let background = app_shared_color_page_background();
-  html_style_background_color_set(overlay, background);
+  ("The flat colour is BLACK, and not the off-white every other page in the family sits on.");
+  ("Off-white is the colour of a page - a document with something written on it, which is");
+  ("what the reading apps are and what this screen is not. Black is the colour of nothing");
+  ("else being there. It takes away not only the game behind the prayer but the page around");
+  ("it, so the only lit thing on the phone is the words the player is about to say.");
+  ("It also marks the threshold in the one way a player cannot miss. The street is bright;");
+  ("the door is dark; stepping through is a visible change of place rather than a panel");
+  ("being taken down. And a game that is often opened at night opens gently instead of");
+  ("filling the screen with white.");
+  html_style_background_color_black(overlay);
   html_flex_column_stretch(overlay);
   let container = app_g_container_player(overlay);
   html_style_margin_y(container, "auto");
