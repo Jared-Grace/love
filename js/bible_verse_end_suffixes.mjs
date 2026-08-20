@@ -8,6 +8,19 @@ export function bible_verse_end_suffixes() {
   "THEY ARE LISTED ONE BY ONE RATHER THAN SPELLED INTO ONE WORD, and the reason is that a full stop is not always one character long. Written as a word, this could only ever be cut back into single characters, so a language whose sentence ends on two of them had no way of being written down here at all - and the one reader of this list was already asking whether a verse ends on any of several suffixes, so nothing but this line had to change to let it say so.";
   "THREE MORE WERE MEASURED ON 2026-08-20 and each of them had a bible sitting at none out of sixteen until it arrived. Hebrew ends a verse on a mark whose name is end of verse. Burmese, Danu and Rakhine end a sentence on the section sign and a clause on the little section sign beside it, so only the first of that pair is here. Amharic ends one on its word separator written twice.";
   "THE DOUBLED AMHARIC SEPARATOR IS WHY THE LIST STOPPED BEING A WORD, and it does not take back the line above about the single one. One separator ends a word, and that is still true - the reading of it that refused it has not been overturned. Two of them together are a full stop, and an Amharic bible that types it that way rather than as the two dots reads with sentences again. A set of single characters could not tell those two apart, so it had to answer for the pair with the answer it had for one, and the answer it had for one was no.";
-  let suffixes = [".", "?", "!", "।", "。", "።", "？", "！", "۔", "׃", "။", "፡፡"];
+  let suffixes = [
+    ".",
+    "?",
+    "!",
+    "।",
+    "。",
+    "።",
+    "？",
+    "！",
+    "۔",
+    "׃",
+    "။",
+    "፡፡",
+  ];
   return suffixes;
 }

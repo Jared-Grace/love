@@ -20,7 +20,9 @@ export async function app_shared_text_reader_language_defects() {
   let defects = [];
   let languages = [];
   let counted = [];
+  let picked = {};
   for (let site of sites) {
+    property_count_add(picked, site.picker, 1);
     let missing = null_is(site.object);
     if (missing) {
       list_add(defects, {
@@ -85,6 +87,7 @@ export async function app_shared_text_reader_language_defects() {
   let r = {
     defects,
     languages,
+    picked,
     sites: counted.length,
   };
   return r;
