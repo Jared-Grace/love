@@ -19,6 +19,12 @@ export function js_scope_binds_is_cases_gate_run() {
     let binds = js_scope_binds_is(node, asked);
     return binds;
   }
-  let r = cases_gate_run_generic(cases, answer, "binds", "name", "scope binds a name");
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "binds",
+    "name",
+    "scope binds a name",
+  );
   return r;
 }
