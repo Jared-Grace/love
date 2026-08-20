@@ -13,6 +13,12 @@ export function app_shared_bible_offline_unfinished_all_text(names) {
       before: "یہ مکمل نہیں ہوئیں: ",
       after: "۔ کیا آپ اپنا کنکشن دیکھ کر انہیں دوبارہ آزمانا چاہیں گے؟",
     },
+    translated_from: {
+      ur: {
+        before: "These did not finish: ",
+        after: ". Would you like to check your connection and try them again?",
+      },
+    },
   };
   let text = app_shared_text_reader_language_around(parts, names);
   return text;
