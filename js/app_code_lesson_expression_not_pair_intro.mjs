@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapped.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_operator_code } from "./app_code_operator_code.mjs";
@@ -38,26 +39,12 @@ export function app_code_lesson_expression_not_pair_intro(root) {
     symbol,
     " holds all of it",
   ]);
-  let worked = app_code_container_light_blue(root);
-  html_div_cycle_code(worked, ["For ", whole, ", we do ", pair, " first"]);
-  html_div_cycle_code(worked, [
-    "",
+  app_code_lesson_expression_worked_card_not(
+    root,
+    whole,
     pair,
-    " is ",
     false_word,
-    ", so ",
-    whole,
-    " is ",
     not_false,
-  ]);
-  html_div_cycle_code(worked, [
-    "",
-    not_false,
-    " is ",
     true_word,
-    ", so ",
-    whole,
-    " is ",
-    true_word,
-  ]);
+  );
 }
