@@ -8,8 +8,14 @@ export function visit_unique_async_cases() {
     {
       name: "a node is handed over before the one it reaches",
       edges: [
-        { node: "a", reaches: ["b"] },
-        { node: "b", reaches: [] },
+        {
+          node: "a",
+          reaches: ["b"],
+        },
+        {
+          node: "b",
+          reaches: [],
+        },
       ],
       from: "a",
       visited: ["a", "b"],
@@ -17,10 +23,22 @@ export function visit_unique_async_cases() {
     {
       name: "a node two branches reach is handed over once, on the first branch",
       edges: [
-        { node: "a", reaches: ["b", "c"] },
-        { node: "b", reaches: ["d"] },
-        { node: "c", reaches: ["d"] },
-        { node: "d", reaches: [] },
+        {
+          node: "a",
+          reaches: ["b", "c"],
+        },
+        {
+          node: "b",
+          reaches: ["d"],
+        },
+        {
+          node: "c",
+          reaches: ["d"],
+        },
+        {
+          node: "d",
+          reaches: [],
+        },
       ],
       from: "a",
       visited: ["a", "b", "d", "c"],
@@ -28,8 +46,14 @@ export function visit_unique_async_cases() {
     {
       name: "a ring back to where the walk started comes to an end",
       edges: [
-        { node: "a", reaches: ["b"] },
-        { node: "b", reaches: ["a"] },
+        {
+          node: "a",
+          reaches: ["b"],
+        },
+        {
+          node: "b",
+          reaches: ["a"],
+        },
       ],
       from: "a",
       visited: ["a", "b"],
@@ -37,22 +61,41 @@ export function visit_unique_async_cases() {
     {
       name: "a ring that closes below where the walk started comes to an end",
       edges: [
-        { node: "a", reaches: ["b"] },
-        { node: "b", reaches: ["c"] },
-        { node: "c", reaches: ["b"] },
+        {
+          node: "a",
+          reaches: ["b"],
+        },
+        {
+          node: "b",
+          reaches: ["c"],
+        },
+        {
+          node: "c",
+          reaches: ["b"],
+        },
       ],
       from: "a",
       visited: ["a", "b", "c"],
     },
     {
       name: "a node that reaches itself is handed over once",
-      edges: [{ node: "a", reaches: ["a"] }],
+      edges: [
+        {
+          node: "a",
+          reaches: ["a"],
+        },
+      ],
       from: "a",
       visited: ["a"],
     },
     {
       name: "a node that reaches nothing is still handed over",
-      edges: [{ node: "b", reaches: [] }],
+      edges: [
+        {
+          node: "b",
+          reaches: [],
+        },
+      ],
       from: "b",
       visited: ["b"],
     },

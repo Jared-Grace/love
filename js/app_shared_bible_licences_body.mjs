@@ -1,3 +1,5 @@
+import { app_shared_bible_licences_heading_text } from "./app_shared_bible_licences_heading_text.mjs";
+import { app_shared_bible_licences_intro_text } from "./app_shared_bible_licences_intro_text.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { app_shared_bible_licence_card } from "./app_shared_bible_licence_card.mjs";
 import { each } from "./each.mjs";
