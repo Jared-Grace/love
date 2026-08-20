@@ -39,6 +39,9 @@ import { app_replace_rule_set_grow_different } from "./app_replace_rule_set_grow
 import { app_replace_rule_set_replace } from "./app_replace_rule_set_replace.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace_rule_sets_v_1() {
+  "The exercises of the replacing game as the list first stood, in the order a player met them: from swapping one symbol for another up to counting in twos and turning one-sided equations into two-sided ones.";
+  "The order is the whole of what it says. Each exercise is written in its own function beside its own words, so this is a running order and no content - which is what let an exercise be reworded without touching where it came.";
+  "IT IS NO LONGER THE LIST. The one the app shows is the plainly named one, which has been added to since and is now most of twice as long; nothing calls this but the reading that takes the names out of it. It is kept because the record of what the course was first is worth having, and it stays under a numbered name so that neither list can be mistaken for the other.";
   let r = app_replace_rule_set_replace();
   let r2 = app_replace_rule_set_grow_different();
   let r3 = app_replace_rule_set_shrink_different();
