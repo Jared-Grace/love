@@ -1,3 +1,4 @@
+import { html_style_padding } from "./html_style_padding.mjs";
 import { bible_glyph_image_draw } from "./bible_glyph_image_draw.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -35,7 +36,7 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
       group = html_span(parent);
       html_style_set(group, "border", "0.06em solid currentColor");
       html_style_set(group, "borderRadius", "0.5em");
-      html_style_set(group, "padding", "0 0.12em");
+      html_style_padding(group, "0 0.12em");
       html_style_set(group, "whiteSpace", "nowrap");
     }
     for (let name of part) {
