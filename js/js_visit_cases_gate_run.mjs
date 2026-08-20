@@ -1,6 +1,6 @@
+import { property_js_parse } from "./property_js_parse.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
 import { js_node_type } from "./js_node_type.mjs";
-import { js_parse } from "./js_parse.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { js_visit_cases } from "./js_visit_cases.mjs";
 import { list_add } from "./list_add.mjs";
@@ -23,8 +23,7 @@ export function js_visit_cases_gate_run() {
     return type;
   }
   function answer(c) {
-    let code = property_get(c, "code");
-    let ast = js_parse(code);
+    let ast = property_js_parse(c, "code");
     let visited = [];
     function on_each(v) {
       let node = property_get(v, "node");
