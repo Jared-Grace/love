@@ -11,14 +11,15 @@ export async function song_image_draw_resume(number_text, polling_url) {
   let number = number_from_text(number_text);
   let couplet = song_image_couplet_get(number);
   let prompt = song_image_prompt(couplet);
-  let path = song_image_drawn_path(number);
+  let attempt = await song_image_draw_attempt_next(number);
+  let path = song_image_drawn_path(number, attempt);
   let tries = 120;
   await bfl_draw_wait_write(polling_url, tries, path);
   let drawn = await song_image_draw_finish(
     number,
     couplet.symbol,
     prompt,
-    path,
+    attempt,
   );
   return drawn;
 }
