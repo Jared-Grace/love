@@ -21,6 +21,10 @@ export function baseline_writers_growth_exempt() {
       why: "a new lesson is a new id, and there is nothing wrong with a new id. what its record is for is the opposite direction: that an id a learner's finished-lessons record is already keyed by goes on naming a lesson. refusing growth here would make adding a lesson a fight with a gate, and would teach people to clear the record wholesale - which is exactly how an id somebody's progress hangs on gets written away",
     },
     {
+      f_name: fn_name("ebible_readaloud_heading_only_baseline_write"),
+      why: "a chapter arriving in it is not a fault anybody in this repo can put right - the words do not exist upstream and no amount of fetching will bring them, so a list that refused to grow would go red and stay red on a chapter that is already as complete as it can ever be. That is how this list came to be needed, and building the same trap again would only rebuild it. What its own prose asks for instead is a proof before each new name: delete the cached reading-aloud text for that bible, fetch it again, and record the name only if the same two lines come back",
+    },
+    {
       f_name: fn_name("baseline_known_write"),
       why: "the one writer every ratchet ends at, and the one the refusal itself would have to call. putting the check here would put it inside the thing it checks",
     },

@@ -505,6 +505,7 @@ export function qa_gates() {
     g_arc_prompt_style_assert,
     bible_glyph_gate_run,
     bible_glyph_artwork_gate_run,
+    bible_glyph_roots_characters_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
