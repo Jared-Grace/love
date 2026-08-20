@@ -1,3 +1,4 @@
+import { bless_view_of_people } from "./bless_view_of_people.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_cone_view } from "./bless_cone_view.mjs";
@@ -18,6 +19,18 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     let view = bless_cone_view(cone, npcs);
     return view;
   }
+  ("everybody on the street, whether the player is facing them or not - what the marks are");
+  ("drawn from, while the cone above decides what may be prayed for.");
+  ("Sight is what a prayer costs, and it is charged once, at the moment of praying. Whether");
+  ("somebody has been prayed for is a fact about them and not about where the player is");
+  ("looking now, so turning away cannot unsay it. Marking only the cone would charge the");
+  ("cost again every time the player looked elsewhere, and the mark exists to be a map: walk");
+  ("to the edge of your own work and the crowd goes dark, which is where to pray next. A map");
+  ("that is only ever as wide as one glance shows no edge, because dark is what everywhere");
+  ("already looks like.");
+  ("Asked once rather than again per step, because who is on the street does not change -");
+  ("only where they are standing, and each of them is read for that at the moment of drawing.");
+  let view_everyone = bless_view_of_people(npcs);
   let r3 = {
     bar,
     container_map,
@@ -27,6 +40,7 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     world,
     walking,
     view_now,
+    view_everyone,
   };
   return r3;
 }
