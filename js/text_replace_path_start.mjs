@@ -14,8 +14,12 @@ export function text_replace_path_start(t, before, after) {
   let started = false;
   for (let piece of pieces) {
     if (started) {
-      let end = text_last(written);
-      let carried = text_character_name_part_is(end);
+      let carried = false;
+      let blank = text_empty_is(written);
+      if (not(blank)) {
+        let end = text_last(written);
+        carried = text_character_name_part_is(end);
+      }
       let joiner = to;
       if (carried) {
         joiner = from;
