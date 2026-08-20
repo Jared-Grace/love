@@ -1,9 +1,7 @@
+import { psalms_videos_descriptions_payload_write_video } from "./psalms_videos_descriptions_payload_write_video.mjs";
 import { property_get } from "./property_get.mjs";
 import { psalms_videos_descriptions_payload_write_one } from "./psalms_videos_descriptions_payload_write_one.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { psalms_passage_verses_description } from "./psalms_passage_verses_description.mjs";
 import { psalms_videos_descriptions_payload_path } from "./psalms_videos_descriptions_payload_path.mjs";
 import { youtube_channel_bible_singing } from "./youtube_channel_bible_singing.mjs";
 export async function psalms_videos_descriptions_payload_write() {
@@ -20,24 +18,12 @@ export async function psalms_videos_descriptions_payload_write() {
   let passages = property_get(r2, "passages");
   let uploads = property_get(r2, "uploads");
   let paired = [];
-  let titles_verses_absent = [];
-  for (let video of uploads) {
-    let passage = passages[video.video_id];
-    if (not(passage)) {
-      continue;
-    }
-    let verses = verses_by_chapter[passage.chapter];
-    let description = psalms_passage_verses_description(passage, verses);
-    if (equal(description, null)) {
-      titles_verses_absent.push(video.title);
-      continue;
-    }
-    paired.push({
-      video_id: video.video_id,
-      title: video.title,
-      description: description,
-    });
-  }
+  let titles_verses_absent = psalms_videos_descriptions_payload_write_video(
+    uploads,
+    passages,
+    verses_by_chapter,
+    paired,
+  );
   let path = psalms_videos_descriptions_payload_path();
   await file_overwrite_json(path, paired);
   let r = {
