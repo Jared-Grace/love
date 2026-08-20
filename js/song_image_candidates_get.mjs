@@ -3,7 +3,6 @@ import { equal } from "./equal.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { song_image_candidates } from "./song_image_candidates.mjs";
-import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_candidate_drawn } from "./song_image_candidate_drawn.mjs";
 import { song_image_drawn_attempts_known } from "./song_image_drawn_attempts_known.mjs";
 export function song_image_candidates_get(n) {
