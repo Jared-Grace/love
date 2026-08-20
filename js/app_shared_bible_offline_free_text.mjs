@@ -12,6 +12,12 @@ export function app_shared_bible_offline_free_text(name) {
       before: "",
       after: " کی جگہ خالی کریں",
     },
+    translated_from: {
+      ur: {
+        before: "Free the space ",
+        after: " uses",
+      },
+    },
   };
   let text = app_shared_text_reader_language_around(parts, name);
   return text;
