@@ -2,6 +2,8 @@ export function song_image_couplets() {
   "the 36 couplets of the hymn 'the FATHER's SON' in order, each with the symbol chosen for it; four verses of nine, and every ninth couplet repeats the eighth, so same_as points a repeat at the couplet whose image it shares";
   "a symbol says what the thing is and never where it is, because the picture already has a where. The window supplies a field above and a field below; a symbol that also names a hill or a horizon or a stretch of ground is asking for the same thing twice, and what came back was three overlapping hills in three colours - which is also depth, the one thing the look forbids outright. Three crosses on a hill, distant became three crosses, and the distant went with it: a symbol asked to be far away cannot also be large enough to read on a phone.";
   "a symbol names one thing and never a choice between two. Scales with the beam broken or one pan forced down reads as a menu and gets picked from afresh every time, so the same couplet came back as two different objects; and here the table settles it without anyone having to have a preference, because a later couplet asks for those same scales upright and level, and scales that survive to be levelled are scales whose beam was never broken. The serpent went the same way - the verse behind it is about the serpent's head, so the broken chains beside it were never a real alternative.";
+  "a symbol names the thing and never the material it is made of, because the look already decides every material and one of them is spoken for. A royal crown of gold asked for the one colour the whole film keeps back for the word of GOD; a royal crown asks for a crown, and the look gives it glass. Nothing was lost - a crown is a crown to anybody alive whether it is gold or ruby, which is most of why the crown is a good symbol in the first place.";
+  "the lamb carries a cross on a staff, which is the church's own answer to a question this hymn asks: how a picture says that this lamb is CHRIST, when no face may be drawn. It is very old and it is everywhere in glass, and it costs one more shape rather than the fourteen that the seven eyes and seven horns of the lamb in Revelation would cost - a count no generator obeys, in features too small for a phone. The staff is asked for slender and bare on purpose, since the banner that often hangs from it is where lettering gets in.";
   "a symbol may not point at another couplet either. The same scales was written for a human reader who has just seen the first pair; whatever draws this sees one line and has no memory of any other, so the same names nothing and the word is simply lost.";
   let couplets = [
     {
@@ -153,7 +155,7 @@ export function song_image_couplets() {
       verse: 2,
       first: "HE paid the price",
       second: "with HIS own blood",
-      symbol: "A lamb",
+      symbol: "A lamb bearing a cross on a slender staff",
       ref: "Exodus 12, John 1:29",
       same_as: 0,
     },
@@ -162,7 +164,7 @@ export function song_image_couplets() {
       verse: 2,
       first: "HE paid the price",
       second: "with HIS own blood",
-      symbol: "A lamb",
+      symbol: "A lamb bearing a cross on a slender staff",
       ref: "Exodus 12, John 1:29",
       same_as: 17,
     },
@@ -225,7 +227,7 @@ export function song_image_couplets() {
       verse: 3,
       first: "WHO conquered death",
       second: "now glorified",
-      symbol: "A royal crown of gold",
+      symbol: "A royal crown",
       ref: "",
       same_as: 0,
     },

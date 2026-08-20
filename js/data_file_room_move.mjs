@@ -1,5 +1,5 @@
+import { function_name_to_path_absolute } from "./function_name_to_path_absolute.mjs";
 import { function_source_to_repoint } from "./function_source_to_repoint.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_split_last } from "./text_split_last.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -42,9 +42,7 @@ export async function data_file_room_move(path_fn_name, room) {
     hint: "the room already holds a file of this name",
     to_spelled,
   });
-  let source = await function_source_to_repoint(path_fn_name);
-  let fn_path = property_get(source, "fn_path");
-  let text = property_get(source, "text");
+  let text = await function_source_to_repoint(path_fn_name);
   let whole = text_includes(text, from_spelled);
   assert_json(whole, {
     hint: "this function does not spell its address as one whole word, so it builds it out of parts - repoint it by hand rather than letting a guess move the file",
@@ -54,6 +52,7 @@ export async function data_file_room_move(path_fn_name, room) {
   let written = text_replace(text, from_spelled, to_spelled);
   let to_folder = path_join([repo, given, room]);
   await folder_exists_ensure(to_folder);
+  let fn_path = function_name_to_path_absolute(path_fn_name);
   await file_overwrite_uncached(fn_path, written);
   await function_auto_checked(path_fn_name);
   let after = await file_read_try(fn_path);
