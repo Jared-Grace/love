@@ -35,7 +35,7 @@ export function song_image_style() {
     "colour follows the thing and never the pane - every pane belonging to one thing is that thing's one colour, and the thing stands in a colour clearly apart from the field of glass behind it",
     "anything that has a colour of its own in life keeps it - a lamb is white glass, a flame is red, water is blue, wood is brown, iron and stone are grey, cloth is white, blood is deep red",
     "the head of the arch is one single colour all the way across, and below it the field behind the symbol is one flat colour above and one flat colour below, parted by a single straight line running right across the window - three colours in all behind the symbol, each one single and not several shades of the same one",
-    "no gold, no amber and no yellow anywhere in the picture, and anything that would be gold in life - a cup, a crown, a lampstand, a trumpet - is drawn in ruby glass instead",
+    "no gold, no amber and no yellow anywhere in the picture, not as a rim, an edge, a lining or a highlight either, and anything that would be gold in life - a cup, a crown, a lampstand, a trumpet - is drawn in ruby glass instead",
     "the arch centred and reaching almost to all four edges of the square, the symbol large inside it, bold enough to read on a phone",
     "where the church has long had a settled way of drawing this thing, drawn that way rather than in a new way invented for the occasion",
     "reverent and still, not a cartoon, not a modern logo, not a photograph",
