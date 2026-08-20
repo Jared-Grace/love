@@ -30,7 +30,7 @@ export async function permission_replay_write() {
   ("both rankings are then put to the same safety check, so the file answers what can be removed today rather than only what still stops the human. The check writes nothing: a reading that granted as it read would be an unattended thing editing the file that decides what may run unattended.");
   ("the proved rows are named here rather than where they were grouped, because they were grouped by the label a rule would wear and a grant is written to a function. The one row can want both readings at once.");
   let confirmed_rows = property_get(confirmed, "rows");
-  permission_rows_run_named(confirmed_rows);
+  await permission_rows_run_named(confirmed_rows);
   ("the proved rows are then read under today's rules, because a week of interruptions holds prompts somebody has already granted away and a ranking that counted those would send the next reader at work already done");
   let live_rows = permission_rows_unsolved(confirmed_rows);
   property_set(r, "confirmed_live", live_rows.length);
