@@ -192,6 +192,14 @@ export function bible_glyph_characters() {
       character: "🥩",
     },
     {
+      name: "bread",
+      character: "🍞",
+    },
+    {
+      name: "sword",
+      character: "🗡️",
+    },
+    {
       name: "blood",
       character: "🩸",
     },

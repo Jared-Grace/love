@@ -1,64 +1,21 @@
 export function bible_event_fields() {
-  "the shape of ONE gathered Bible event — the durable reading artifact the Scripture-drama game is built on. an EVENT is the thing that happened; PASSAGES attach to it, so Kings and Chronicles telling the same event are two witnesses on one record rather than two records. every field here is DESCRIPTION — what the text says — and never a game decision (no difficulty, no player action, no weapon, no vantage), because a description cannot be invalidated by a mechanic nobody has invented yet, while a stored game decision would invalidate every event the moment the design moved. the inclusion test for a field is NOT 'might this be useful' but 'would recovering it later need a broad re-scan': whether an angel is present must be gathered while reading, since finding it afterwards means re-reading everything, whereas who spoke a line is left out because the passage reference recovers it by reading five verses";
+  "the shape of ONE gathered Bible event — TWO fields, a title and the references under it, and nothing else. an EVENT is the thing that happened; PASSAGES attach to it, so Kings and Chronicles telling the same event are two witnesses on one record rather than two records.";
+  "★ WHY IT IS ONLY TWO. this record had eleven fields for one day (who, where, when, happens, gaps, angels_present, wrongdoing_shown, and the rest) on the argument that a plain fact is cheap to capture while the chapter is open and expensive to return for. that argument was WRONG, and the first scene built on the record is what showed it: writing the Genesis 22 turns used the references and a re-read of the chapter, and consumed none of the other nine. a FACT is speculative for exactly the reason a game decision is — nothing yet reads it, so nobody knows which facts the mechanic will want. capturing more is not caution, it is guessing earlier.";
+  "★ SO THE RULE IS: THE GATHER MAY ONLY POINT. a reference points at the text and cannot disagree with it, so a gathered event can never need rework — it is forward progress in the strict sense. the moment the record holds a READING (a paraphrase, a judgment that an angel is present, a claim about what is missing) it holds something that can be wrong, and being wrong at four hundred chapters is the cost the two fields exist to avoid.";
+  "THE ONE THING THAT CAN STILL MOVE, and it is cheap: where the boundary between two events falls. regrouping is re-titling verse ranges, never re-reading, so it does not make the gather backwards-going.";
+  "A TITLE IS STILL A SUMMARY, so keep it descriptive and neutral — it names the event so a later reference can point at it, and it is not the place to interpret one.";
+  "AND THE CONSTRAINT THIS RECORD PUTS ON THE MECHANIC: every event is made of verses and of nothing else that is gathered here. so the one thing the player does, whatever it turns out to be, has to be made of verses — a mechanic needing speech works only where someone speaks, and a game whose action changes per event is four hundred games.";
   let fields = [
     {
-      name: "name",
+      name: "title",
       holds:
-        "a short stable human-readable name for the event, e.g. 'Abraham told to offer Isaac'",
-      why: "the identity a second witness and an `after` reference both point at, so it must not change once written",
-    },
-    {
-      name: "who",
-      holds: "the agents the text places in the event, as a list of names",
-      why: "the primary MATCH KEY — a streaming pass reading Chronicles after Kings finds the existing event by who and what, and without a matchable identity it silently writes a duplicate instead of a second witness",
-    },
-    {
-      name: "where",
-      holds: "the place the text names, or empty when it names none",
-      why: "part of the match key, and empty is a real answer rather than a hole to fill",
-    },
-    {
-      name: "when",
-      holds:
-        "what the text itself says about timing, relative or absolute, or empty",
-      why: "the text's own claim, kept apart from the ordering fields below so a reading is never confused with an inference",
-    },
-    {
-      name: "happens",
-      holds: "what occurs, in plain words",
-      why: "the description proper — the one field a scene cannot be built without",
+        "a short descriptive name for the event, e.g. 'Abraham told to offer Isaac'",
+      why: "the handle a later reference points at, and the only thing here that is written rather than pointed at — so it must not change once written",
     },
     {
       name: "passages",
-      holds: "the witnesses, as a list of {chapter_code, verses}",
-      why: "references rather than text, so the translation stays swappable and the record never carries a copy of Scripture that could drift from its source",
-    },
-    {
-      name: "after",
-      holds:
-        "the names of events this one follows where the text establishes it, as a list",
-      why: "order as the text gives it — within a narrative book this is free, so it is recorded rather than derived later",
-    },
-    {
-      name: "order_uncertain",
-      holds: "why this event's position is not settled, or empty when it is",
-      why: "some orderings are genuinely disputed (Job's date, Ezra against Nehemiah, Galatians against Acts 15) and forcing one would make a claim Scripture does not. recording the uncertainty is description; resolving it silently is not",
-    },
-    {
-      name: "angels_present",
-      holds: "whether the text places an angel or messenger in this event",
-      why: "the subject of the game that reads this, and it passes the inclusion test — recovering it afterwards means re-reading every chapter",
-    },
-    {
-      name: "wrongdoing_shown",
-      holds: "whether the text shows someone doing wrong here",
-      why: "also needs a broad re-scan to recover. NOTE it is the TEXT's presentation being recorded, not a ruling this record makes, and what a game does with it belongs to the game",
-    },
-    {
-      name: "gaps",
-      holds:
-        "a list of {missing, filled_by} — what this passage does not say, and the passages elsewhere in Scripture that do say it; filled_by empty means genuinely unfilled",
-      why: "the field that keeps invention small. Genesis 22 gives no interior until Hebrews 11:19 supplies it, and Genesis omits Joseph's fetters until Psalm 105:18 supplies them. gathering this while the chapter is open is far cheaper than reconstructing it, and a pass that skips it means reading the whole Bible twice",
+      holds: "the references, as a list of {chapter_code, verses}",
+      why: "references rather than text, so the translation stays swappable and the record never carries a copy of Scripture that could drift from its source. SEVERAL means several witnesses to one event, which is what makes Chronicles beside Kings stop being a special case",
     },
   ];
   return fields;

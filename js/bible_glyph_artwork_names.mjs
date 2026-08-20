@@ -168,6 +168,14 @@ export function bible_glyph_artwork_names() {
       asset: "Cut of meat",
     },
     {
+      glyph: "bread",
+      asset: "Bread",
+    },
+    {
+      glyph: "sword",
+      asset: "Dagger",
+    },
+    {
       glyph: "blood",
       asset: "Drop of blood",
     },

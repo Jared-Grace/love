@@ -21,6 +21,10 @@ import { js_operator_dot_name } from "./js_operator_dot_name.mjs";
 import { js_operator_dot } from "./js_operator_dot.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_operators_dot_numbers() {
+  "The lesson on the dot: the same mark is the point inside a decimal number and the way a name reaches into what it holds, and this is where a student meets both of its uses at once.";
+  "It comes as a decimal point first, shown with the beginning of pi, then beside the arithmetic symbols as something that stands between two things, and only then between two names. The second use arrives as a small step from the first rather than as a new idea.";
+  "Last comes what the dot will not take: a name on one side and a number on the other, shown failing both ways round. That is the one place it stops behaving like the arithmetic symbols it was just stood beside, so it is said rather than left to be discovered.";
+  "Two further sections stand at the bottom and are never reached: a return sits above them. They are the general drills the other operator lessons use, and the words above ask about the dot in particular instead.";
   let operator = js_operator_dot();
   let operator_name = js_operator_dot_name();
   let name_rights = ["property access", "numbers"];
