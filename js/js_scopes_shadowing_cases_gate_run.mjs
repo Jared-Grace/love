@@ -1,10 +1,7 @@
+import { js_scope_label } from "./js_scope_label.mjs";
 import { cases_gate_run_generic } from "./cases_gate_run_generic.mjs";
-import { js_node_type } from "./js_node_type.mjs";
-import { js_scope_binding_names } from "./js_scope_binding_names.mjs";
 import { js_scopes_shadowing } from "./js_scopes_shadowing.mjs";
 import { js_scopes_shadowing_cases } from "./js_scopes_shadowing_cases.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { property_js_parse } from "./property_js_parse.mjs";
@@ -15,11 +12,7 @@ export function js_scopes_shadowing_cases_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   let cases = js_scopes_shadowing_cases();
   function scope_shown(scope) {
-    let type = js_node_type(scope);
-    let names = js_scope_binding_names(scope);
-    let sorted = list_sort_text(names);
-    let joined = list_join_comma_space(sorted);
-    let shown = list_join_space([type, "binds", joined]);
+    let shown = js_scope_label(scope);
     return shown;
   }
   function answer(c) {
