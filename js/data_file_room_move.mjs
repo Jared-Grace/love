@@ -1,3 +1,5 @@
+import { function_source_to_repoint } from "./function_source_to_repoint.mjs";
+import { property_get } from "./property_get.mjs";
 import { text_split_last } from "./text_split_last.mjs";
 import { text_includes_not } from "./text_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,8 +9,6 @@ import { data_given_folder } from "./data_given_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists_assert_json } from "./file_exists_assert_json.mjs";
 import { file_exists_not_assert_json } from "./file_exists_not_assert_json.mjs";
-import { folder_js } from "./folder_js.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { file_read_try } from "./file_read_try.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_includes } from "./text_includes.mjs";
