@@ -1,14 +1,10 @@
+import { qa_gate_answer_node_try } from "./qa_gate_answer_node_try.mjs";
 import { qa_gate_object_counted_is } from "./qa_gate_object_counted_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast } from "./function_ast.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
-import { js_return_argument_get } from "./js_return_argument_get.mjs";
-import { js_ast_declarator_init_named } from "./js_ast_declarator_init_named.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_last } from "./list_last.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -20,6 +16,7 @@ export async function qa_gate_counted_is(f_name, depth) {
   "A gate handing its whole complaint to a shared way of running one is followed into it, because the number, if there is one, is that one's to report. The following is bounded rather than open, and the bound is a plain guess at how deep these ever go - a chain longer than that is called uncounted, which is the safe way round: it asks a person to look rather than promising them something was measured.";
   "A number written down in the answer is not a reading either. Two of the ratchets hand back a nought spelled out, which is true of them and says nothing about whether their sweep reached anything.";
   "What this cannot see: a count that reaches the answer under a name this file cannot follow back - through a parameter, or out of something imported. Those read as counted, which is the direction that lets somebody through rather than the one that stops them, and is on purpose: this exists to name gates worth looking at, not to accuse them.";
+  "Getting from the return to the piece of code that makes the answer is three steps and none of them are this question - a name is looked up, a waiting is stepped through, and four different ways of reaching nothing come back as one. They live one name along now, because the sweep for a count named after the looking has to take exactly the same three before it can ask its own question.";
   arguments_assert(arguments, 2);
   let spent_is = equal(depth, 0);
   if (spent_is) {
