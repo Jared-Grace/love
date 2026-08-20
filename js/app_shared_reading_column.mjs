@@ -5,7 +5,7 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
-export function app_next_reading_column(context) {
+export function app_shared_reading_column(context) {
   arguments_assert(arguments, 1);
   ("The place the reading stands in, dressed the way the bible reader is dressed: the same text size to start from on a phone, the same face, and on a wide screen the same column down the middle rather than a line of text run edge to edge.");
   ("A verse somebody was sent should look like the bible it came out of, and every one of those is a thing the reader already knows how to do - so each is asked for by name rather than spelled again here.");
