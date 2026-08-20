@@ -9,7 +9,7 @@ import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_next_reading_show } from "./app_next_reading_show.mjs";
 import { app_next_verse_block } from "./app_next_verse_block.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { app_next_reading_column } from "./app_next_reading_column.mjs";
+import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
 import { app_next_url_onward } from "./app_next_url_onward.mjs";
 import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -36,7 +36,7 @@ export async function app_next_home(context) {
   "One verse at a time was the only thing a link could ask for, and reading is not done one verse at a time - somebody copying a passage out had to open this page once per verse and paste the pieces together. So the link may now say how many verses it wants, and saying nothing means one, which is what every link written before this did mean.";
   "Several verses are shown as the one-verse block repeated rather than as a run of text under a single reference. That way each verse still says which verse it is, and a run that crosses into the next chapter needs nothing said about it - the reference on each block already says so.";
   let hash = html_hash_object_get();
-  let content = app_next_reading_column(context);
+  let content = app_shared_reading_column(context);
   let chapter_code = app_shared_bible_chapter_hash_get_or_default(hash);
   let property_name = app_shared_bible_verse_hash_key();
   let fallback = app_shared_bible_verse_number_default();
