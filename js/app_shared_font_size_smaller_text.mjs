@@ -7,6 +7,9 @@ export function app_shared_font_size_smaller_text() {
   let texts = {
     en: " Font size smaller",
     ur: " لکھائی چھوٹی کریں",
+    translated_from: {
+      ur: " Font size smaller",
+    },
   };
   let label = app_shared_text_reader_language(texts);
   let left = emoji_font_smaller();
