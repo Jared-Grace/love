@@ -1,3 +1,4 @@
+import { app_shared_bible_chapter_whole_text_get } from "./app_shared_bible_chapter_whole_text_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
 import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
