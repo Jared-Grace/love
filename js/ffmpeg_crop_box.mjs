@@ -1,3 +1,5 @@
+import { subtract } from "./subtract.mjs";
+import { not } from "./not.mjs";
 import { command_line } from "./command_line.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ffmpeg_crop_box(path) {
@@ -15,10 +17,10 @@ export async function ffmpeg_crop_box(path) {
   let ran = await command_line(command);
   let said = ran.stderr;
   let found = said.match(/crop=\d+:\d+:\d+:\d+/g);
-  if (!found) {
+  if (not(found)) {
     return null;
   }
-  let last = found[found.length - 1];
+  let last = found[subtract(found.length, 1)];
   let box = last.slice("crop=".length);
   return box;
 }
