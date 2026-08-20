@@ -1,9 +1,8 @@
+import { youtube_video_page } from "./youtube_video_page.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { json_from } from "./json_from.mjs";
-import { http } from "./http.mjs";
-import { buffer_text_to } from "./buffer_text_to.mjs";
 export async function youtube_video_description(video_id) {
   "$plain video_id";
   "The words that sit under one video, read the way anybody with the address would see them - or nothing at all when the page carries no such words.";
@@ -11,9 +10,7 @@ export async function youtube_video_description(video_id) {
   "The words are taken out of the page itself rather than asked for, because the private address a player uses came back with almost nothing when asked from outside. The page still carries them, written where a player would find them, and reading them from there needs no permission and no key.";
   "The end of the words is found by walking, not by looking for the next quotation mark. The words are a person's writing and may hold quotation marks of their own, each one written with a stroke before it; a search for the next mark would stop at the first of those and hand back a sentence cut in half.";
   arguments_assert(arguments, 1);
-  let url = "https://www.youtube.com/watch?v=" + video_id;
-  let buffer = await http(url);
-  let page = buffer_text_to(buffer);
+  let page = await youtube_video_page(video_id);
   let mark = '"shortDescription":"';
   let at = page.indexOf(mark);
   let absent = less_than(at, 0);
