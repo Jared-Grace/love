@@ -29,7 +29,8 @@ export function song_image_drawn_attempts_known() {
   3
  ],
  "6": [
-  1
+  1,
+  2
  ],
  "7": [
   1
