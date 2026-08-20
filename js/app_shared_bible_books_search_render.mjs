@@ -1,3 +1,4 @@
+import { app_shared_search_books_text } from "./app_shared_search_books_text.mjs";
 import { app_shared_bible_books_render } from "./app_shared_bible_books_render.mjs";
 import { app_shared_search_render } from "./app_shared_search_render.mjs";
 export function app_shared_bible_books_search_render(
@@ -17,5 +18,6 @@ export function app_shared_bible_books_search_render(
       current_book_code,
     );
   }
-  app_shared_search_render(content, "Search books", on_query);
+  let search_text = app_shared_search_books_text();
+  app_shared_search_render(content, search_text, on_query);
 }
