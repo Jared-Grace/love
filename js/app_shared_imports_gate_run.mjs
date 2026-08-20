@@ -21,31 +21,24 @@ export async function app_shared_imports_gate_run() {
   ("name it does not hold fails, and a name it holds that no longer offends fails");
   ("too, because an entry left behind after a cleanup quietly lets the same thing");
   ("back in.");
-  ("The number handed back is the faults, and it is named for the faults. It used to");
-  ("be named for the looking, and since this family has stood at zero for as long as");
-  ("the record goes back, what it printed every single time was a word promising a");
-  ("sweep beside the one number that reads as no sweep at all - the exact shape of a");
-  ("gate that is green because it never went and looked. Nothing was wrong with it");
-  ("but the word.");
-  ("What tells the two apart is not in here, and cannot be. Its wider sibling walks");
-  ("the same one-hop sweep over every function belonging to no app, and comes back");
-  ("with hundreds of pairs; the walk is one piece of code, so a walk that had");
-  ("stopped working would take that gate down with this one and could not leave this");
-  ("one quietly clean. Read the pair, the way the two readers of untranslated words");
-  ("are read.");
-  let offenders = await app_shared_app_specific_imports();
+  ("The number handed back is how many shared functions were opened, not how many");
+  ("were wrong. Counting the faults said nothing: this family has stood at zero for");
+  ("as long as the record goes back, so every run it has ever had printed a word");
+  ("promising a sweep beside the one number that reads as no sweep at all - the");
+  ("exact shape of a gate that is green because it never went and looked. Nothing");
+  ("was wrong with it but the word, and the count of what the walk reached is what");
+  ("now tells a clean family from an unread one.");
+  let told = await app_shared_app_specific_imports_walked();
+  let walked = property_get(told, "walked");
+  let offenders = property_get(told, "offenders");
   let path = app_shared_imports_baseline_path();
   let name_write = fn_name("app_shared_imports_baseline_write");
-  await baseline_names_gate_generic(
+  let r = await baseline_names_gate_walked_generic(
+    walked,
     offenders,
     path,
     "these shared units reach into one app and did not before - move what they need into shared code, or move the unit into the app it belongs to",
     name_write,
   );
-  let r = {
-    offenders: list_size(offenders),
-    added: 0,
-    stale: 0,
-  };
   return r;
 }
