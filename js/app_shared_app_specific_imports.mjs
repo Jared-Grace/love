@@ -1,6 +1,6 @@
+import { app_shared_app_specific_imports_walked } from "./app_shared_app_specific_imports_walked.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_app_specific_imports_generic } from "./functions_app_specific_imports_generic.mjs";
-import { not_equal } from "./not_equal.mjs";
 export async function app_shared_app_specific_imports() {
   arguments_assert(arguments, 0);
   ("Every place a shared unit reaches into one particular app - each answer naming the shared function and the app-specific name it imports.");
