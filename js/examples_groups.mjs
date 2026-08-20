@@ -75,6 +75,7 @@ export function examples_groups() {
         "example_block_local_record_add",
         "example_block_local_list_add",
         "example_block_local_boolean_add",
+        "example_block_local_call_add",
         "example_argument_text_set",
         "example_argument_boolean_set",
         "example_prose_add_after_selected",

@@ -24,6 +24,9 @@ export function song_image_couplets() {
   "the thicket became a few stout boughs, and that is the pane count reaching the symbol rather than a change of mind about Genesis 22. A thicket is a mesh by definition - it is the word for many thin things crossing - so asking for one asks for fifty small panes and hairline leading in the same breath as asking for a dozen large panes and heavy lead, and the symbol wins that argument every time because it is the part that was chosen deliberately. Three or four thick branches are still thorns holding a ram, which is the whole of what the couplet needs, and they are drawable at the weight everything else here is drawn at.";
   "the price paid is drawn as the blood itself rather than as the lamb that gave it, and that settles three separate failures at once. The lamb of Revelation was asked for twice with its seven horns and seven eyes and came back with six and two, then six and five - a shape whose definition is a number, which no wording reaches. Both attempts came back as a ram, which is the symbol six couplets earlier. And Revelation's own wording could not even be sent, since a lamb standing as though it had been slain was refused as violence before anything was drawn.";
   "the blood on the doorway was already in this couplet's references and nobody had looked at it. Exodus 12 is named here, and Exodus 12:7 says to put the blood on the two doorposts and the lintel - so the couplet had been pointing at a drawable emblem the whole time while the symbol reached for a lamb instead. It is one object rather than two, it is deep red on grey stone, it has no face, no count and no gold in it, and it collides with nothing else in the table.";
+  "the doorway is said to be grey stone and empty, and both halves of that were bought with a drawing. Struck with deep red blood was read as made of deep red blood, and what came back was a doorway red from top to bottom - which is not blood on a door at all, only a red door. The blood has to be described as marks lying on a surface that has its own colour, so the stone is named first and the strokes are put on it.";
+  "the word blood is not in this symbol and could not be, which is worth recording because it looks like squeamishness and is not. Asked for posts marked with deep red blood, the drawing was refused outright before it began, as violence - the second time this hymn has had Scripture's own vocabulary turned back, the first being a lamb standing as though it had been slain. Deep crimson strokes on grey stone is the same picture by every measure that reaches a viewer, since nobody watching ever sees the wording. What is lost is only that the file no longer says plainly what the red is, so it is said here instead: it is the blood of the lamb on the doorposts of Exodus 12.";
+  "and the emptiness has to be asked for because Passover comes with furniture. Nothing in the symbol mentioned a lamb, a fire or a horn, and the drawing supplied all three - a lamb standing in the gateway, flames above it, a pair of white horns over the arch. Whatever draws this knows what Exodus 12 contains and will finish the scene unless the doorway is said to hold nothing. This is the same lesson as the border in the style: an unsaid thing is not an absent thing, it is a space something familiar will walk into.";
   "it also keeps what the lamb was for. The blood on the door is the lamb's blood, and the door is the place the destroyer passed over - so the couplet still says a price was paid and a people spared, without a lamb having to be drawn to say it. The line is HE paid the price with HIS own blood, and this is the one symbol here that draws the blood rather than the animal.";
   "the spices carry the burial rather than the tomb, because the tomb is spoken for three times over within six couplets - a rock-cut mouth, a stone closed against it, and the same stone rolled away. A fourth tomb would be the same shape four times in the stretch of film where the story is actually moving fastest, and the couplet that has to give way is this one, since the three others each name the tomb in their own lines and this one names the body.";
   "the spices are also what the accounts themselves dwell on. John gives myrrh and aloes by weight and says it was the burial custom; Luke has the women prepare spices and ointments and rest before bringing them. The burial is told through what was brought to it.";
@@ -186,7 +189,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "A doorway, its two upright posts and the beam across the top struck with deep red blood",
+        "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
       ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
@@ -196,7 +199,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "A doorway, its two upright posts and the beam across the top struck with deep red blood",
+        "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
       ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
