@@ -1,5 +1,8 @@
 {
  "known": [
+  "mya HAB03",
+  "tgo ZEP01",
+  "tgo MAL03",
   "lit LEV01",
   "lit JDG01",
   "lit RUT01",
@@ -17,9 +20,6 @@
   "lit JOL01",
   "lit AMO01",
   "lit HAG01",
-  "lit MAL01",
-  "mya HAB03",
-  "tgo ZEP01",
-  "tgo MAL03"
+  "lit MAL01"
  ]
 }
