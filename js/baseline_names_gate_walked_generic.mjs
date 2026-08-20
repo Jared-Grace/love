@@ -1,5 +1,5 @@
+import { baseline_names_gate_walked_verdict } from "./baseline_names_gate_walked_verdict.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { property_get } from "./property_get.mjs";
 export async function baseline_names_gate_walked_generic(
   walked,
   offenders,
@@ -18,12 +18,6 @@ export async function baseline_names_gate_walked_generic(
     hint,
     name_write,
   );
-  let added = property_get(told, "added");
-  let stale = property_get(told, "stale");
-  let r = {
-    walked,
-    added,
-    stale,
-  };
+  let r = baseline_names_gate_walked_verdict(walked, told);
   return r;
 }

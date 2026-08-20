@@ -6,6 +6,7 @@ export function bible_glyph_chapter_1jn05() {
   "KEEP IS TWO DIFFERENT GREEK WORDS IN TWO CONSECUTIVE VERSES AND THE PAGE SHOWS IT. The second verse keeps the commandments with poieo and it is drawn as the hammer; the third verse keeps them with tereo and it is left in English. A reader meeting the same English word drawn once and blank once is meeting the truth about the sentence rather than an inconsistency in the table, because the glyph attaches to the Greek word and never to the gloss the interlinear reached for.";
   "THE NEGATIVE IN THE FIFTH VERSE IS DELIBERATELY NOT DRAWN. The Greek is if not, an idiom that English turns round into only he who, so a prohibition mark standing before he who believes would tell the reader the exact opposite of the verse. The rule the table states is that a mark must not claim more than the word claims, and a mark claiming the reverse of it is the worst case of that, so this one is left out.";
   "THE SUPPLIED GOD IN THE SIXTEENTH VERSE IS NOT DRAWN EITHER, for the same reason read the other way round. He should ask has no object in the Greek and the translation puts one in to finish the English sentence; drawing the fire there would put a word into the picture that the writer did not put into the text. The English keeps its own shape and the pictures stay level with the Greek.";
+  "THE CHILDREN OF THE SECOND VERSE WERE DRAWN LATER, on 2026-08-20, when the third chapter of this letter bought the picture. They were written in plain letters here because nothing was seated under the word yet, and the word was one of the four this page said it was leaving in English. A chapter authored before a picture exists is not wrong afterwards, it is stale - and the fix is one word, because the glyph attaches to the root and the root did not move.";
   "THE LAST VERSE CARRIES NO PICTURE AT ALL and it is left that way. Little children, keep yourselves from idols is five content words and the table draws none of them - guarding is not the keeping already drawn, an idol is a thing this Bible has not decided how to show, and little children is not the children of the second verse. A chapter that ends in plain words is honest about where the drawing stops.";
   "WATER AND BLOOD STAND SIDE BY SIDE IN THE SIXTH VERSE AND THE EIGHTH, and why that is allowed is argued in the root table rather than here, because it is a decision about a mark and not about a passage. The short of it is that the writer is the one who put them together, and the reader sees two drops of different colours because the sentence has two things in it.";
   "The glyph a word gets is taken from the root table and never chosen here, so a word drawn one way in this chapter is drawn that way in every chapter.";
@@ -53,7 +54,7 @@ export function bible_glyph_chapter_1jn05() {
           "we",
           "$heart_red",
           "the",
-          "children",
+          "$child",
           "of",
           "$fire:",
           "when",
