@@ -7,11 +7,9 @@ import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_map } from "./list_map.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export async function app_shared_text_reader_seats_candidates(f_name_app) {
   "$plain f_name_app";
   "Everything inside one app that is handed written words and is not one of the doors being watched, counted by how often each is handed some.";
