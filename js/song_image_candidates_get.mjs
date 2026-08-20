@@ -11,8 +11,7 @@ export function song_image_candidates_get(n) {
   "every attempt is a row rather than only the newest, which is the whole point of keeping them. Two wordings for the same symbol are told apart by looking at both, and a list that shows only the last one makes that comparison impossible at exactly the moment it is wanted.";
   "the attempts go on in the order they were drawn, so a position already remembered keeps meaning the same picture as more are drawn - a new attempt lands after every existing row and moves nothing";
   "a couplet nobody has searched for still answers with the drawn ones, because a symbol with nothing found for it is exactly the symbol most worth drawing";
-  let couplet = song_image_couplet_get(n);
-  let key = equal(couplet.same_as, 0) ? n : couplet.same_as;
+  let key = song_image_couplet_key(n);
   let candidates = song_image_candidates();
   let found = candidates[key];
   let listed = equal(found, undefined) ? [] : found;
