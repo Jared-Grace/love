@@ -24,17 +24,8 @@ export async function qa_gate_miscounted_keys_property(
 ) {
   arguments_assert(arguments, 6);
   for (let property of properties) {
-    let plain_is = js_node_type_is(property, "Property");
-    if (not(plain_is)) {
-      continue;
-    }
-    let key_node = property_get(property, "key");
-    let key = js_identifier_name_try(key_node);
-    let key_named_is = null_not_is(key);
-    if (not(key_named_is)) {
-      continue;
-    }
-    let promised_is = list_includes(words, key);
+    let key = qa_gate_population_key_try(property, words);
+    let promised_is = null_not_is(key);
     if (not(promised_is)) {
       continue;
     }

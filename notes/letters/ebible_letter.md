@@ -9,16 +9,18 @@ make the letter wrong.
 
 ---
 
-Subject: Three small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page
+Subject: Four small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page, Berean Standard Bible (engbsb) Psalm 3
 
 Hello,
 
 Thank you for eBible.org. I run a free Bible reading app that gets almost all of
 its translations from you, and it exists because you give them away.
 
-While checking every translation we carry, three came up with faults in the
-published files. All three look like faults in the published output rather than in
-the translations, so I thought you would want to know.
+While checking every translation we carry, four came up with faults in the
+published files. The first three look like faults in the published output rather
+than in the translations. The fourth is a single wrong letter in a heading, and I
+cannot tell from here whether it came from the source text or from the publishing,
+so I have described what the file says and left that to you.
 
 **1. Bangwinji (bsj) — Mark, in the read-aloud edition**
 
@@ -66,8 +68,23 @@ Because of that we cannot tell what the Apalaí New Testament is offered on, and
 carry only translations whose terms we can read, so it sits unused. A corrected
 page would be enough on its own.
 
+**4. Berean Standard Bible (engbsb) — the heading of Psalm 3**
+
+The heading above Psalm 3 reads "A Psalms of David" where every other psalm reads
+"A Psalm of David".
+
+```
+<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>
+```
+
+It is the only one. Across the whole book, forty-nine headings begin "A Psalm" and
+this single one begins "A Psalms". It appears the same way on the chapter page
+`PSA003.htm` and on the whole-book page `PSA000.htm`, so the two agree with each
+other and only differ from the rest of the book.
+
 No reply needed. We pass the affected chapters over rather than show anyone a
 chapter we cannot read, and we will pick them up on their own whenever a corrected
-download appears.
+download appears. The Psalm 3 heading we carry as published, since a translation is
+not ours to correct.
 
 Thank you again for the work.
