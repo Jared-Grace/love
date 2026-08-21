@@ -1,3 +1,4 @@
+import { g_arc_feedback_checked_add } from "./g_arc_feedback_checked_add.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +8,6 @@ import { words_early_reader_outside } from "./words_early_reader_outside.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { g_arc_feedback_add } from "./g_arc_feedback_add.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_size } from "./list_size.mjs";
@@ -54,7 +54,13 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
         "a child that age would not have these words: ",
         joined,
       );
-      await g_arc_feedback_checked_add(chapter_code, index, number, field, note);
+      await g_arc_feedback_checked_add(
+        chapter_code,
+        index,
+        number,
+        field,
+        note,
+      );
       filed = add_1(filed);
       list_add_multiple(words_named, outside);
     }
