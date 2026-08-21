@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_api_get } from "./youtube_api_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -22,7 +23,7 @@ export async function youtube_playlist_items(playlist_id) {
       maxResults: "50",
     };
     let first = null_is(page_token);
-    if (!first) {
+    if (not(first)) {
       property_set(params, "pageToken", page_token);
     }
     let answer = await youtube_api_get("playlistItems", params);
@@ -39,7 +40,8 @@ export async function youtube_playlist_items(playlist_id) {
       list_add(items, entry);
     }
     page_token = property_get_or_null(answer, "nextPageToken");
-    more = !null_is(page_token);
+    let b = null_is(page_token);
+    more = not(b);
   }
   return items;
 }

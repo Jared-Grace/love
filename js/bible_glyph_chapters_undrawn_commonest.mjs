@@ -25,6 +25,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   let chapters_seen = {};
   let words_total = 0;
   let drawn_total = 0;
+  let filler_total = 0;
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");
     let testament_name = bible_chapter_testament_name(chapter_code);
@@ -42,6 +43,10 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
           continue;
         }
         let gloss = word.gloss;
+        let filler = bible_glyph_chapters_undrawn_filler_is(gloss);
+        if (filler) {
+          filler_total = add(filler_total, 1);
+        }
         property_count_add(occurrences, gloss, 1);
         property_set(here, gloss, true);
       }
