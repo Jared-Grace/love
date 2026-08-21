@@ -1,7 +1,7 @@
 import { app_g_player_path_onscreen_is } from "./app_g_player_path_onscreen_is.mjs";
 import { or } from "./or.mjs";
 import { app_g_day_followers_face } from "./app_g_day_followers_face.mjs";
-import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
+import { app_shared_game_crowd_part } from "./app_shared_game_crowd_part.mjs";
 import { app_g_player_path_choose } from "./app_g_player_path_choose.mjs";
 import { app_g_day_line_blocking_is } from "./app_g_day_line_blocking_is.mjs";
 import { app_g_day_line_back_out } from "./app_g_day_line_back_out.mjs";
@@ -35,7 +35,7 @@ export async function app_g_player_move(
   let reachable = walkable && app_g_player_path_onscreen_is(path, div_map);
   if (reachable) {
     ("the way opens before the player walks it: anybody standing on it steps aside first, and the few too hemmed in to have anywhere to go are passed one at a time by trading places as the walk reaches them");
-    app_g_crowd_part(g, path, still);
+    app_shared_game_crowd_part(g, path, still);
     ("the player is put where the walk actually GOT to, not where the tap asked them to go - and it is the walk itself that puts them there, a tile at a time, rather than this line writing the destination down at the end. the two answers are the same today, because a walk always runs to the end of its path, but only the first of them stays true while the walk is still going on");
     await app_g_player_path_animate(g, player, path, player_img_c, div_map);
   }
