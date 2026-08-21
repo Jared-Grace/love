@@ -1,3 +1,5 @@
+import { words_irregular_base } from "./words_irregular_base.mjs";
+import { property_or_null } from "./property_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 import { text_size } from "./text_size.mjs";
