@@ -35,6 +35,7 @@ export function g_arc_lines_addressed(arc) {
         list_add(lines, {
           number,
           field: "catch_up",
+          address: g_arc_line_address(number, "catch_up"),
           text: catch_up,
         });
       }
