@@ -277,7 +277,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol:
-        "The tomb of Jesus, a great mass of plain grey rock with the mouth of the tomb cut into it as a plain black arch, and one very great round stone of plain grey stone, the same grey as the rock it stands against and no other colour, larger than that mouth and being rolled across to cover it - the stone drawn as a full round circle and never as an oval, its flat face turned squarely to the front as the rock behind it is, standing at the right of the mouth with its left edge lying across the mouth and covering part of the black - and the ground below one plain flat pale grey",
+        "The tomb of Jesus, a great mass of plain grey rock with the mouth of the tomb cut into it as a plain black arch, and one very great round stone of plain grey stone, the same grey as the rock it stands against and no other colour, larger than that mouth and being rolled across to cover it - the stone drawn as a full round circle and never as an oval, its flat face turned squarely to the front as the rock behind it is, standing at the right of the mouth with its left edge lying across the mouth and covering part of the black - the rock and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
