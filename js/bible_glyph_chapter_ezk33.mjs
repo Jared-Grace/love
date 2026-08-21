@@ -308,7 +308,7 @@ export function bible_glyph_chapter_ezk33() {
           "you",
           "warn",
           "the",
-          "wicked",
+          "$thumbs_down",
           "one",
           "to",
           "$turn_back",
