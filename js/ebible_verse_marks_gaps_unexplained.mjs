@@ -39,7 +39,7 @@ export async function ebible_verse_marks_gaps_unexplained() {
   let rows = [];
   function gaps_bible_read(bible) {
     let bible_folder = property_get(bible, "bible_folder");
-    let gapped = property_get(bible, "gapped");
+    let gapped = property_get(bible, "found");
     function gaps_chapter_read(chapter) {
       let chapter_code = property_get(chapter, "chapter_code");
       let address = list_join_space([bible_folder, chapter_code]);
@@ -47,7 +47,7 @@ export async function ebible_verse_marks_gaps_unexplained() {
       if (already) {
         return;
       }
-      let gaps = property_get(chapter, "gaps");
+      let gaps = property_get(chapter, "found");
       function gap_read(number) {
         let name = ebible_verse_gap_name(chapter_code, number);
         let deliberate = list_includes(omitted, name);
