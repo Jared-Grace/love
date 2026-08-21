@@ -119,6 +119,11 @@ class="verse" id="V28">'
 
 possible correction: a verse 27 marker. Markers run 26 then 28 — there is no id="V27".
 
+Eighteen more chapters of tczchongthu skip a marker the same way: GEN37 (3), EXO25
+(21), EXO27 (7), EXO36 (19), NUM02 (13), DEU25 (4), 1SA26 (18), 2CH34 (11), ECC06 (5),
+ISA30 (18), JER19 (12), DAN04 (7), DAN08 (18 and 24), HOS11 (2), HOS12 (5), OBA01 (7),
+ZEC02 (12). In each the words appear to be present and only the marker is absent.
+
 **9.**
 
 url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
