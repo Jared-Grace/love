@@ -58,21 +58,21 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "בְּאָמְרִ֣י לָרָשָׁ֗ע רָשָׁע֙ מ֣וֹת תָּמ֔וּת וְלֹ֣א דִבַּ֔רְתָּ לְהַזְהִ֥יר רָשָׁ֖ע מִדַּרְכּ֑וֹ ה֤וּא רָשָׁע֙ בַּעֲוֺנ֣וֹ יָמ֔וּת וְדָמ֖וֹ מִיָּדְךָ֥ אֲבַקֵּֽשׁ׃",
         english:
-          "If I say to the wicked O wicked [man] you will surely die but you do not speak out to dissuade him from his way then that wicked [man] in his iniquity will die his blood yet I will hold you accountable for",
+          "If I say to the wicked O wicked man you will surely die but you do not speak out to dissuade him from his way then that wicked man in his iniquity will die his blood yet I will hold you accountable for",
       },
       {
         verse_number: 9,
         original:
           "וְ֠אַתָּה כִּֽי־ הִזְהַ֨רְתָּ רָשָׁ֤ע מִדַּרְכּוֹ֙ לָשׁ֣וּב מִמֶּ֔נָּה וְלֹא־ שָׁ֖ב מִדַּרְכּ֑וֹ ה֚וּא בַּעֲוֺנ֣וֹ יָמ֔וּת וְאַתָּ֖ה נַפְשְׁךָ֥ הִצַּֽלְתָּ׃ס",
         english:
-          "you But if warn the wicked [man] from his way to turn and he does not turn from it he in his iniquity will die but you your life will have saved",
+          "you But if warn the wicked man from his way to turn and he does not turn from it he in his iniquity will die but you your life will have saved",
       },
       {
         verse_number: 10,
         original:
           "וְאַתָּ֣ה בֶן־ אָדָ֗ם אֱמֹר֙ אֶל־ בֵּ֣ית יִשְׂרָאֵ֔ל כֵּ֤ן אֲמַרְתֶּם֙ לֵאמֹ֔ר כִּֽי־ פְשָׁעֵ֥ינוּ וְחַטֹּאתֵ֖ינוּ עָלֵ֑ינוּ וּבָ֛ם אֲנַ֥חְנוּ נְמַקִּ֖ים וְאֵ֥יךְ נִֽחְיֶֽה׃",
         english:
-          "Now as for you son of man tell the house of Israel that this is what [they] have said Our transgressions and our sins are heavy upon us and we are wasting away because of them How can we live",
+          "Now as for you son of man tell the house of Israel that this is what they have said Our transgressions and our sins are heavy upon us and we are wasting away because of them How can we live",
       },
       {
         verse_number: 11,
@@ -168,14 +168,14 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "בֶּן־ אָדָ֗ם יֹ֠שְׁבֵי הֶחֳרָב֨וֹת הָאֵ֜לֶּה עַל־ אַדְמַ֤ת יִשְׂרָאֵל֙ אֹמְרִ֣ים לֵאמֹ֔ר אֶחָד֙ הָיָ֣ה אַבְרָהָ֔ם וַיִּירַ֖שׁ אֶת־ הָאָ֑רֶץ וַאֲנַ֣חְנוּ רַבִּ֔ים לָ֛נוּ נִתְּנָ֥ה הָאָ֖רֶץ לְמוֹרָשָֽׁה׃ס",
         english:
-          "Son of man those living ruins in the in the land of Israel are saying only one man was Abraham yet he possessed the land But we are many to us has been given [surely] the land as a possession",
+          "Son of man those living ruins in the in the land of Israel are saying only one man was Abraham yet he possessed the land But we are many to us has been given surely the land as a possession",
       },
       {
         verse_number: 25,
         original:
           "לָכֵן֩ אֱמֹ֨ר אֲלֵיהֶ֜ם כֹּֽה־ אָמַ֣ר׀ אֲדֹנָ֣י יְהֹוִ֗ה עַל־ הַדָּ֧ם׀ תֹּאכֵ֛לוּ וְעֵינֵכֶ֛ם תִּשְׂא֥וּ אֶל־ גִּלּוּלֵיכֶ֖ם וְדָ֣ם תִּשְׁפֹּ֑כוּ וְהָאָ֖רֶץ תִּירָֽשׁוּ׃",
         english:
-          "Therefore tell them that this is what says the Lord GOD meat with the blood [in it] You eat your eyes lift up to your idols blood and shed the land Should you then possess",
+          "Therefore tell them that this is what says the Lord GOD meat with the blood in it You eat your eyes lift up to your idols blood and shed the land Should you then possess",
       },
       {
         verse_number: 26,
@@ -224,7 +224,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וְהִנְּךָ֤ לָהֶם֙ כְּשִׁ֣יר עֲגָבִ֔ים יְפֵ֥ה ק֖וֹל וּמֵטִ֣ב נַגֵּ֑ן וְשָֽׁמְעוּ֙ אֶת־ דְּבָרֶ֔יךָ וְעֹשִׂ֥ים אֵינָ֖ם אוֹתָֽם׃",
         english:
-          "Indeed, you [are] to them songs like a singer of love with a beautiful voice who skillfully plays an instrument They hear your words put them into practice but do not",
+          "Indeed, you are to them songs like a singer of love with a beautiful voice who skillfully plays an instrument They hear your words put them into practice but do not",
       },
       {
         verse_number: 33,
