@@ -34,6 +34,13 @@ export function g_arc_review_turn_lines(turn, passages, number) {
     let item4 = text_combine_multiple([value4, after]);
     list_add(lines, item4);
   }
+  let believes = property_get(turn, "believes");
+  let unmarked = text_empty_is(believes);
+  if (not(unmarked)) {
+    let value5 = property_get(marks, "believes");
+    let item5 = text_combine_multiple([value5, believes]);
+    list_add(lines, item5);
+  }
   list_add(lines, "");
   return lines;
 }
