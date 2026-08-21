@@ -1,0 +1,298 @@
+export function bible_glyph_chapter_ezk33() {
+  "The twelfth picture Bible chapter written by hand: the whole of the thirty third chapter of Ezekiel, in the shorthand a person types.";
+  "IT IS THE FIRST FROM THE PROPHETS, and with it the Old Testament side is drawn from three kinds of book rather than one. Ten of the first eleven chapters came from two books; this Bible now stands in the letters, the psalter, the law and the prophets, and the fact worth noticing is that none of the last three were reached by looking harder at the survey. Each was reached by seating words the survey had no way to reward until they existed.";
+  "THE SWORD WAS BOUGHT THE SAME MORNING AND THIS IS WHY IT WAS BOUGHT. Chereb stands six times here and it is the whole engine of the parable the chapter opens with: a sword brought against a land, a watchman who sees the sword coming, a horn that warns, a man who does not listen and the sword takes him. Before today every one of those six stood in English inside a line made of pictures, which reads as a page somebody gave up on. It is the first glyph in this Bible bought for a concrete noun rather than for a covenant word.";
+  "AND IT WAS DRAWN AS ONE BLADE RATHER THAN AS TWO CROSSED, which this chapter is the argument for. Crossed swords say battle, and four of the six occurrences here are not a battle at all - they are one blade coming for one man who was warned and did not listen. The more obvious picture would have been right in verse twenty seven and wrong in verse four, and verse four is the verse the chapter is about.";
+  "THE COVENANT NAME WAS BLANK IN NINE VERSES OF THIS CHAPTER UNTIL THE MORNING IT WAS AUTHORED, and that is the second thing the chapter bought. Ezekiel says the Lord GOD, where the second word is the same four letters as the LORD, pointed to be read differently because Adonai stands in front of it - and the interlinear counts it as a separate number, which the table had never seated. So the crown drew and the name beside it stayed in English. A chapter of the prophets is where that had to surface, because the prophets are where the phrase lives.";
+  "THE TWO HANDS ARE TWO DIFFERENT WORDS AND THIS CHAPTER PUTS THEM IN ONE VERSE. The open palms are nathan, to give, and the receiving palm is laqach, to take; in the second verse the people take a man from among them and give him to be their watchman, and in the fourth and sixth the sword takes a life away. English says choose, appoint and take away for those, so a reader following the English sees three different acts and a reader following the pictures sees the two Hebrew words doing all of it.";
+  "THE SIN IS DRAWN AS A BOW AND IT IS AN ARGUMENT RATHER THAN A PICTURE OF A WEAPON. The mark was seated on the Greek hamartia, which is an archer's word for a shot that misses, and it carries here to the Hebrew. A reader meeting it in this chapter has a sword four verses earlier on the same page, and the two are not the same kind of thing at all - which is exactly the risk, and is why it is written down rather than left to be noticed.";
+  "THE LIVING AND THE DYING ARE THE SAME TWO MARKS ALL THE WAY DOWN, and the chapter is the reason a Bible drawn this way is worth having. Chayah and muth alternate through twenty verses - live, die, live, die - and English spreads them over surely live, be able to live, will die, death, and wasting away. In pictures the alternation is the shape of the page, and the eleventh verse, where God says He takes no pleasure in the death of the wicked but that he should turn and live, has both marks in one line.";
+  "THE TURNING IS NOT DRAWN AND IT IS THE CHAPTER'S OWN VERB. Shub, to turn back, stands more than a dozen times here and has no picture, so the sentence that the whole chapter is built to say arrives in English between two drawn words. It is left as it is rather than borrowed from something near it, and it is named here because a chapter this dependent on one undrawn word is the strongest case the survey has yet produced for what to buy next.";
+  "THE PROPER NAMES ARE LEFT IN ENGLISH - Israel, Jerusalem, Abraham. That is the same rule every chapter here keeps and never a gap to fill later. A name points at one person or one place, and a picture of it would be a portrait.";
+  let chapter = {
+    chapter_code: "EZK33",
+    reference: "Ezekiel 33",
+    verses: [
+      {
+        verse_number: 1,
+        words: ["And", "the", "$speech", "of", "the", "$name_tag", "came", "to", "me,", "$speech,"],
+      },
+      {
+        verse_number: 2,
+        words: [
+          "$son", "of", "$person,", "$mouth", "to", "your", "$family", "and", "tell", "them:",
+          "Suppose", "I", "$footprints", "the", "$sword", "against", "a", "$earth,", "and", "the",
+          "$family", "of", "that", "$earth", "$hand_receiving", "a", "$man_beard", "from", "among",
+          "them,", "$hands_giving", "him", "as", "their", "watchman,",
+        ],
+      },
+      {
+        verse_number: 3,
+        words: [
+          "and", "he", "$eye", "the", "$sword", "$footprints", "against", "that", "$earth", "and",
+          "blows", "the", "horn", "to", "warn", "the", "$family.",
+        ],
+      },
+      {
+        verse_number: 4,
+        words: [
+          "Then", "if", "anyone", "$ear", "the", "$voice", "of", "the", "horn", "but", "does",
+          "$no_entry", "heed", "the", "warning,", "and", "the", "$sword", "$footprints", "and",
+          "$hand_receiving", "him", "away,", "his", "$blood", "will", "be", "on", "his", "own",
+          "head.",
+        ],
+      },
+      {
+        verse_number: 5,
+        words: [
+          "Since", "he", "$ear", "the", "$voice", "of", "the", "horn", "but", "did", "$no_entry",
+          "heed", "the", "warning,", "his", "$blood", "will", "be", "on", "his", "own", "head.",
+          "If", "he", "had", "heeded", "the", "warning,", "he", "would", "have", "saved", "his",
+          "$person_other.",
+        ],
+      },
+      {
+        verse_number: 6,
+        words: [
+          "But", "if", "the", "watchman", "$eye", "the", "$sword", "$footprints", "and", "does",
+          "$no_entry", "blow", "the", "horn", "to", "warn", "the", "$family,", "and", "the",
+          "$sword", "$footprints", "and", "$hand_receiving", "away", "a", "$person_other,", "then",
+          "that", "one", "is", "$hand_receiving", "away", "in", "his", "iniquity,", "but", "his",
+          "$blood", "I", "will", "require", "from", "the", "watchman's", "$hand.",
+        ],
+      },
+      {
+        verse_number: 7,
+        words: [
+          "As", "for", "you,", "$son", "of", "$person,", "I", "have", "$hands_giving", "you", "as",
+          "a", "watchman", "for", "the", "$house", "of", "Israel;", "so", "$ear", "the", "$speech",
+          "from", "My", "mouth", "and", "give", "them", "the", "warning", "$tray_out", "Me.",
+        ],
+      },
+      {
+        verse_number: 8,
+        words: [
+          "If", "I", "$speech", "to", "the", "wicked,", "O", "wicked", "one,", "you", "will",
+          "surely", "$skull,", "but", "you", "do", "$no_entry", "$mouth", "to", "dissuade", "him",
+          "from", "his", "$road,", "then", "that", "wicked", "one", "will", "$skull", "in", "his",
+          "iniquity,", "yet", "his", "$blood", "I", "will", "require", "from", "your", "$hand.",
+        ],
+      },
+      {
+        verse_number: 9,
+        words: [
+          "But", "if", "you", "warn", "the", "wicked", "one", "to", "turn", "$tray_out", "his",
+          "$road,", "and", "he", "does", "$no_entry", "turn", "from", "his", "$road,", "he", "will",
+          "$skull", "in", "his", "iniquity,", "but", "you", "will", "have", "saved", "your",
+          "$person_other.",
+        ],
+      },
+      {
+        verse_number: 10,
+        words: [
+          "Now", "as", "for", "you,", "$son", "of", "$person,", "$speech", "to", "the", "$house",
+          "of", "Israel", "that", "this", "is", "what", "they", "are", "$speech:", "Our",
+          "transgressions", "and", "our", "$bow", "are", "heavy", "upon", "us,", "and", "we", "are",
+          "wasting", "away", "because", "of", "them.", "How", "can", "we", "$sprout?",
+        ],
+      },
+      {
+        verse_number: 11,
+        words: [
+          "$speech", "to", "them:", "As", "surely", "as", "I", "$sprout,", "declares", "the",
+          "$crown", "$name_tag,", "I", "take", "no", "pleasure", "in", "the", "$skull", "of", "the",
+          "wicked,", "but", "rather", "that", "the", "wicked", "should", "turn", "from", "his",
+          "$road", "and", "$sprout.", "Turn!", "Turn", "from", "your", "evil", "$road!", "For",
+          "why", "should", "you", "$skull,", "O", "$house", "of", "Israel?",
+        ],
+      },
+      {
+        verse_number: 12,
+        words: [
+          "Therefore,", "$son", "of", "$person,", "$speech", "to", "your", "$family:", "The",
+          "righteousness", "of", "the", "righteous", "will", "$no_entry", "deliver", "him", "in",
+          "the", "$sun", "of", "his", "transgression;", "the", "wickedness", "of", "the", "wicked",
+          "will", "$no_entry", "cause", "him", "to", "stumble", "in", "the", "$sun", "he", "turns",
+          "from", "his", "wickedness.", "Nor", "will", "the", "righteous", "be", "able", "to",
+          "$sprout", "by", "his", "righteousness", "in", "the", "$sun", "he", "$bow.",
+        ],
+      },
+      {
+        verse_number: 13,
+        words: [
+          "If", "I", "$speech", "to", "the", "righteous", "that", "he", "will", "surely",
+          "$sprout,", "but", "he", "then", "trusts", "in", "his", "righteousness", "and", "$hammer",
+          "iniquity,", "then", "none", "of", "his", "righteous", "works", "will", "$no_entry", "be",
+          "remembered;", "he", "will", "$skull", "because", "of", "the", "iniquity", "he", "has",
+          "$hammer.",
+        ],
+      },
+      {
+        verse_number: 14,
+        words: [
+          "But", "if", "I", "$speech", "to", "the", "wicked,", "You", "will", "surely", "$skull,",
+          "and", "he", "turns", "from", "his", "$bow", "and", "$hammer", "what", "is", "just",
+          "and", "right", "-",
+        ],
+      },
+      {
+        verse_number: 15,
+        words: [
+          "if", "he", "restores", "a", "pledge,", "makes", "restitution", "for", "what", "he",
+          "has", "stolen,", "and", "$walking", "in", "the", "statutes", "of", "$sprout", "without",
+          "$hammer", "iniquity", "-", "then", "he", "will", "surely", "$sprout;", "he", "will",
+          "$no_entry", "$skull.",
+        ],
+      },
+      {
+        verse_number: 16,
+        words: [
+          "None", "of", "the", "$bow", "he", "has", "$bow", "will", "$no_entry", "be", "held",
+          "against", "him.", "He", "has", "$hammer", "what", "is", "just", "and", "right;", "he",
+          "will", "surely", "$sprout.",
+        ],
+      },
+      {
+        verse_number: 17,
+        words: [
+          "Yet", "your", "$family", "$speech,", "The", "$road", "of", "the", "$crown", "is",
+          "$no_entry", "just.", "But", "it", "is", "their", "$road", "that", "is", "$no_entry",
+          "just.",
+        ],
+      },
+      {
+        verse_number: 18,
+        words: [
+          "If", "a", "righteous", "one", "turns", "from", "his", "righteousness", "and", "$hammer",
+          "iniquity,", "he", "will", "$skull", "for", "it.",
+        ],
+      },
+      {
+        verse_number: 19,
+        words: [
+          "But", "if", "a", "wicked", "one", "turns", "from", "his", "wickedness", "and", "$hammer",
+          "what", "is", "just", "and", "right,", "he", "will", "$sprout", "because", "of", "this.",
+        ],
+      },
+      {
+        verse_number: 20,
+        words: [
+          "Yet", "you", "$speech,", "The", "$road", "of", "the", "$crown", "is", "$no_entry",
+          "just.", "But", "I", "will", "judge", "each", "$man_beard", "of", "you", "according",
+          "to", "his", "$road,", "O", "$house", "of", "Israel.",
+        ],
+      },
+      {
+        verse_number: 21,
+        words: [
+          "In", "the", "twelfth", "year", "of", "our", "exile,", "on", "the", "fifth", "day", "of",
+          "the", "tenth", "month,", "a", "fugitive", "from", "Jerusalem", "$footprints", "to", "me",
+          "and", "$speech,", "The", "$city", "has", "been", "taken.",
+        ],
+      },
+      {
+        verse_number: 22,
+        words: [
+          "Now", "the", "evening", "before", "the", "fugitive", "$footprints,", "the", "$hand",
+          "of", "the", "$name_tag", "was", "upon", "me,", "and", "He", "opened", "my", "mouth",
+          "before", "he", "$footprints", "to", "me", "in", "the", "morning.", "So", "my", "mouth",
+          "was", "opened", "and", "I", "was", "$no_entry", "mute", "any", "longer.",
+        ],
+      },
+      {
+        verse_number: 23,
+        words: ["And", "the", "$speech", "of", "the", "$name_tag", "came", "to", "me,", "$speech,"],
+      },
+      {
+        verse_number: 24,
+        words: [
+          "$son", "of", "$person,", "those", "living", "in", "the", "ruins", "in", "the", "land",
+          "of", "Israel", "are", "$speech,", "Abraham", "was", "only", "one,", "yet", "he",
+          "possessed", "the", "$earth.", "But", "we", "are", "many;", "surely", "the", "$earth",
+          "has", "been", "$hands_giving", "to", "us", "as", "a", "possession.",
+        ],
+      },
+      {
+        verse_number: 25,
+        words: [
+          "Therefore", "$speech", "to", "them", "that", "this", "is", "what", "the", "$crown",
+          "$name_tag", "$speech:", "You", "eat", "with", "the", "$blood", "still", "in", "it,",
+          "you", "lift", "up", "your", "$eyes", "to", "your", "idols,", "and", "you", "shed",
+          "$blood.", "Should", "you", "then", "possess", "the", "$earth?",
+        ],
+      },
+      {
+        verse_number: 26,
+        words: [
+          "You", "have", "relied", "on", "your", "$sword,", "you", "have", "$hammer", "detestable",
+          "acts,", "and", "each", "$man_beard", "of", "you", "has", "defiled", "his",
+          "neighbor's", "$woman.", "Should", "you", "then", "possess", "the", "$earth?",
+        ],
+      },
+      {
+        verse_number: 27,
+        words: [
+          "Tell", "them", "that", "this", "is", "what", "the", "$crown", "$name_tag", "$speech:",
+          "As", "surely", "as", "I", "$sprout,", "those", "in", "the", "ruins", "will", "fall",
+          "by", "the", "$sword,", "those", "in", "the", "open", "field", "I", "will",
+          "$hands_giving", "to", "the", "$sprout", "of", "the", "field", "to", "be", "devoured,",
+          "and", "those", "in", "the", "strongholds", "and", "caves", "will", "$skull", "by",
+          "plague.",
+        ],
+      },
+      {
+        verse_number: 28,
+        words: [
+          "I", "will", "$hands_giving", "the", "$earth", "a", "desolate", "waste,", "and", "the",
+          "pride", "of", "her", "strength", "will", "come", "to", "an", "end.", "The", "mountains",
+          "of", "Israel", "will", "become", "desolate,", "so", "that", "no", "one", "will", "pass",
+          "through.",
+        ],
+      },
+      {
+        verse_number: 29,
+        words: [
+          "Then", "they", "will", "$lightbulb", "that", "I", "am", "the", "$name_tag,", "when",
+          "I", "have", "$hands_giving", "the", "$earth", "a", "desolate", "waste", "because", "of",
+          "all", "the", "abominations", "they", "have", "$hammer.",
+        ],
+      },
+      {
+        verse_number: 30,
+        words: [
+          "As", "for", "you,", "$son", "of", "$person,", "your", "$family", "are", "$mouth",
+          "about", "you", "near", "the", "walls", "and", "in", "the", "doorways", "of", "their",
+          "$house.", "One", "$mouth", "to", "another,", "each", "$man_beard", "to", "his",
+          "$brother:", "$footprints", "and", "$ear", "the", "$speech", "that", "has", "come",
+          "from", "the", "$name_tag.",
+        ],
+      },
+      {
+        verse_number: 31,
+        words: [
+          "So", "they", "$footprints", "to", "you", "as", "usual", "and", "sit", "before", "you",
+          "as", "My", "$family,", "and", "they", "$ear", "your", "$speech", "but", "do",
+          "$no_entry", "$hammer", "them.", "Although", "they", "express", "love", "with", "their",
+          "mouths,", "their", "$heart_organ", "$walking", "after", "dishonest", "gain.",
+        ],
+      },
+      {
+        verse_number: 32,
+        words: [
+          "Indeed,", "you", "are", "to", "them", "like", "a", "singer", "of", "love", "songs",
+          "with", "a", "beautiful", "$voice,", "who", "skillfully", "plays", "an", "instrument.",
+          "They", "$ear", "your", "$speech", "but", "do", "$no_entry", "$hammer", "them.",
+        ],
+      },
+      {
+        verse_number: 33,
+        words: [
+          "So", "when", "it", "$footprints", "to", "pass", "-", "and", "surely", "it", "will",
+          "$footprints", "-", "then", "they", "will", "$lightbulb", "that", "a", "$megaphone",
+          "has", "been", "among", "them.",
+        ],
+      },
+    ],
+  };
+  return chapter;
+}
