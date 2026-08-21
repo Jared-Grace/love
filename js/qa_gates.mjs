@@ -1,3 +1,4 @@
+import { bible_event_fields_gate_run } from "./bible_event_fields_gate_run.mjs";
 import { functions_prose_silent_oversize_gate_run } from "./functions_prose_silent_oversize_gate_run.mjs";
 import { bible_glyph_roots_characters_gate_run } from "./bible_glyph_roots_characters_gate_run.mjs";
 import { app_code_lessons_prod_last_gate_run } from "./app_code_lessons_prod_last_gate_run.mjs";

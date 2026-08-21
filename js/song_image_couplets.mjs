@@ -150,7 +150,8 @@ export function song_image_couplets() {
       verse: 2,
       first: "forsaken by",
       second: "almighty GOD",
-      symbol: "The sun blackened",
+      symbol:
+        "A round sun with a ring of short pointed rays all around it, the disc and every ray alike filled with the same solid black as the lead lines, so that the whole sun is black",
       ref: "Matthew 27:45",
       same_as: 0,
     },
