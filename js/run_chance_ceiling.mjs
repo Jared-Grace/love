@@ -11,8 +11,8 @@ export function run_chance_ceiling(positions, choices) {
   let expected = positions;
   for (let length = 1; less_than(length, 64); length++) {
     expected = divide(expected, choices);
-    let believable = greater_than_or_equal(expected, bar);
-    if (not(believable)) {
+    let rare = less_than(expected, bar);
+    if (rare) {
       break;
     }
     ceiling = length;
