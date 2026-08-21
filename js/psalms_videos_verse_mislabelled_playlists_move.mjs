@@ -47,13 +47,6 @@ export async function psalms_videos_verse_mislabelled_playlists_move(
     );
     list_add(rows, moved);
   }
-  let moved_rows = list_filter_property(rows, "moved", true);
-  let moved_count = list_size(moved_rows);
-  let asked_count = list_size(rows);
-  let r = {
-    asked_count,
-    moved_count,
-    rows,
-  };
+  let r = list_property_true_report(rows, "moved");
   return r;
 }

@@ -25,13 +25,6 @@ export async function psalms_videos_verse_mislabelled_titles_write() {
     );
     list_add(rows, written);
   }
-  let written_rows = list_filter_property(rows, "written", true);
-  let written_count = list_size(written_rows);
-  let asked_count = list_size(rows);
-  let r = {
-    asked_count,
-    written_count,
-    rows,
-  };
+  let r = list_property_true_report(rows, "written");
   return r;
 }
