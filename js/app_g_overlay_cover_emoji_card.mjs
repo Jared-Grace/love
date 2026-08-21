@@ -1,4 +1,4 @@
-import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
+import { app_shared_game_emoji_glow_apply } from "./app_shared_game_emoji_glow_apply.mjs";
 import { app_g_overlay_card_style } from "./app_g_overlay_card_style.mjs";
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -40,7 +40,7 @@ export function app_g_overlay_cover_emoji_card(background, emoji_text) {
     "font-size": fonts.emoji,
     margin: "0",
   });
-  app_g_emoji_glow_apply(emoji);
+  app_shared_game_emoji_glow_apply(emoji);
   let card = html_div(div);
   app_g_overlay_card_style(card);
   let r = {
