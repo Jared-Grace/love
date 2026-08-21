@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
 import { bible_dream_click_still_far } from "./bible_dream_click_still_far.mjs";
 import { multiply } from "./multiply.mjs";
@@ -28,6 +30,8 @@ export function bible_dream_scene_trace_show(scene) {
   "★ THE MOVEMENT OF THE POINTER IS ANSWERED EVEN WHEN NOTHING IS BEING TRACED, AND IT USED TO BE THROWN AWAY. A press had to happen before any movement meant anything, which was true of the drawing and false of the picture: the strokes brighten as the pointer nears them, and that is guidance for choosing which one to take, so it has to be working while the choosing is going on. Nothing is drawn by it and no trace is moved by it - it only says where the hand is.";
   "★ A BUTTON DOES NOT HAVE TO BE HELD DOWN FOR A STROKE TO GO ON BEING DRAWN, AND THAT IS A CLICK AWAY. Tracing a long shape means holding a button through the whole of it, and a hand that is holding something is a hand that is worse at going where it is aimed - it drifts on the press, it drifts again on the release, and on a trackpad it can barely turn a corner without letting go by accident. So a press and a release with no journey between them is read as a request to carry on without being held: from then on bare movement draws, and the next press ends it. Nothing is taken away by this - a press, a drag and a release still behave exactly as they always did, because that release DID have a journey between its ends.";
   "The two gestures are told apart by distance and not by time, and time was the obvious thing to reach for. A slow careful click is still a click and a fast flick is still a drag, so what separates them is whether the hand went anywhere, which is the thing the player actually did.";
+  "★ THE DISTANCE IS THE FURTHEST THE HAND EVER GOT FROM THE PRESS, NOT WHERE IT HAPPENED TO BE WHEN THE BUTTON CAME UP. Those two are the same for a straight drag and completely different for a round one, and the shapes here are mostly round: a player who presses on a cow's back, traces the whole animal and lets go where they began has moved a great deal and finished a foot from where they started. Read at the release alone that is a click, and the drawing carries on following an unpressed mouse - which is exactly what was reported. Keeping the furthest cannot be fooled that way, because a hand that went anywhere has to have BEEN somewhere far, whatever it did afterwards.";
+  "★ A REPORT WITH NO BUTTON HELD ENDS THE PRESS, WHICHEVER WAY THE RELEASE WENT MISSING. A press is supposed to end with a release, and several ordinary things stop that release from arriving: the button comes up outside the picture, or the browser cancels the gesture in favour of one of its own, or the window loses the mouse altogether. Every one of them leaves a stroke being drawn by a hand that is no longer pressing anything, and no amount of care in the release can fix a release that never happens. Every movement says whether a button is down, so the truth is available on every report and does not have to be remembered - and while the hand is latched this is ignored on purpose, because there the whole point is that nothing is being held.";
   "Letting go of a latched stroke lifts the hand as any release would, so the line breaks where the player stopped rather than joining that place to wherever they press next.";
   "What is left here is the watching of the hand and nothing else. Making the words and making the surface both went to their own names, because neither of them has anything to do with a pointer, and a reader looking for what a drag does should not have to walk past twenty lines of laying out a page to reach it.";
   let root = html_body_div_page_dark();
@@ -56,12 +60,11 @@ export function bible_dream_scene_trace_show(scene) {
   function on_press(event) {
     let at = bible_dream_drawing_point(drawing, event);
     if (latched) {
-      bible_dream_stroke_hand_lift(active);
-      active = null;
-      latched = false;
+      let_go();
       return;
     }
     pressed_at = at;
+    travelled = 0;
     active = bible_dream_stroke_begin_near(states, at, 169);
     if (active) {
       bible_dream_stroke_hand_lift(active);
@@ -73,12 +76,20 @@ export function bible_dream_scene_trace_show(scene) {
     if (not(active)) {
       return;
     }
+    if (not(latched)) {
+      if (equal(event.buttons, 0)) {
+        let_go();
+        return;
+      }
+      let gone = bible_dream_point_gap_squared(at, pressed_at);
+      if (greater_than(gone, travelled)) {
+        travelled = gone;
+      }
+    }
     bible_dream_stroke_hand_step(active, at);
     if (active.done) {
       bible_dream_stroke_finish_told(active, told);
-      bible_dream_stroke_hand_lift(active);
-      active = null;
-      latched = false;
+      let_go();
     }
     readout_show();
   }
@@ -86,16 +97,13 @@ export function bible_dream_scene_trace_show(scene) {
     if (not(active)) {
       return;
     }
-    let at = bible_dream_drawing_point(drawing, event);
-    let gap_squared = bible_dream_point_gap_squared(at, pressed_at);
     let still = bible_dream_click_still_far();
     let still_squared = multiply(still, still);
-    if (less_than(gap_squared, still_squared)) {
+    if (less_than(travelled, still_squared)) {
       latched = true;
       return;
     }
-    bible_dream_stroke_hand_lift(active);
-    active = null;
+    let_go();
   }
   function on_leave(event) {
     if (active) {
