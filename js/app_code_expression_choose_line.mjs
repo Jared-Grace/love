@@ -1,3 +1,4 @@
+import { app_code_expression_chips_rise } from "./app_code_expression_chips_rise.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
@@ -57,7 +58,9 @@ export function app_code_expression_choose_line(
     ("every operator refused on this drawing of the line is kept, because a refusal is answered again the moment the right one is pressed - and by then the line is holding the marks rather than the presses that made them");
     let refused = [];
     function on_operator(node, span, node_span) {
-      app_code_expression_operator_pressable(span);
+      if (not(rising)) {
+        app_code_expression_operator_pressable(span);
+      }
       list_add(pressable, span);
       async function on_click() {
         if (chosen) {
@@ -100,7 +103,10 @@ export function app_code_expression_choose_line(
         ("and the settling that follows is the same on both, so nothing is asked of the answerer about what it showed - the front page flies the value down and the quiz simply writes it, and either way what is left to do is let the blue go and close the line up");
         await app_code_expression_replaced_settle(line, node_span, node_value);
         let stepped = app_code_expression_solved(current, node);
-        draw(stepped, node, node_value);
+        ("the shorter line goes up plain and its chips are put on afterwards, so what the learner watches is the next operator opening its room and only then becoming something to press");
+        ("Drawn chipped, the shorter line arrives with every operator already wider than the plain one that stood there a frame earlier - so the whole line jumps sideways in the frame it is drawn, and it jumps at the same moment the colour lands. The learner is shown a move they cannot follow and a change they did not ask about, together, at the one moment they are looking for what to press next.");
+        let risen = draw(stepped, node, node_value);
+        await app_code_expression_chips_rise(line, risen);
         let more = app_code_expression_node_is(stepped);
         if (more) {
           return;
@@ -117,5 +123,8 @@ export function app_code_expression_choose_line(
       value,
     };
     on_change(step);
+    ("the operators this drawing put up are handed back, because a drawing after a step leaves them plain and somebody has to put the chips on them");
+    ("Handed back rather than kept in a name out here, because there is one of these lists per drawing and the drawing that made it is the only thing that knows it is finished with it.");
+    return pressable;
   }
 }

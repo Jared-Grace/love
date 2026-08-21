@@ -305,7 +305,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "Three royal bands of white glass, each one a broad smooth circle carrying one small ruby red jewel at the front of it, set one directly above another with the widest at the bottom and the narrowest at the top, drawn very large so that the three together reach almost to both sides of the window and almost to the top and the bottom of it",
+        "One royal crown of white glass, a plain broad band with five upright points standing above it and one small ruby red jewel set in the band below each point, drawn very large and alone so that it reaches almost across the whole window",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
