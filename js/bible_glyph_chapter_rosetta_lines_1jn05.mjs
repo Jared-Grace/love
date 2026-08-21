@@ -11,7 +11,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "Πᾶς ὁ πιστεύων ὅτι Ἰησοῦς ἐστιν ὁ Χριστὸς ἐκ τοῦ Θεοῦ γεγέννηται καὶ πᾶς ὁ ἀγαπῶν τὸν γεννήσαντα ἀγαπᾷ τὸν γεγεννημένον ἐξ αὐτοῦ",
         english:
-          "Everyone who believes that Jesus is the Christ of God has been born and everyone who loves the [Father] loves those born of Him",
+          "Everyone who believes that Jesus is the Christ of God has been born and everyone who loves the Father loves those born of Him",
       },
       {
         verse_number: 2,
@@ -46,7 +46,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "οὗτός ἐστιν ὁ ἐλθὼν δι’ ὕδατος καὶ αἵματος Ἰησοῦς Χριστός οὐκ ἐν τῷ ὕδατι μόνον ἀλλ’ ἐν τῷ ὕδατι καὶ ἐν τῷ αἵματι καὶ τὸ Πνεῦμά ἐστιν τὸ μαρτυροῦν ὅτι τὸ Πνεῦμά ἐστιν ἡ ἀλήθεια",
         english:
-          "This is the [One who] came by water and blood Jesus Christ not by water alone but by water and blood And the Spirit it is who testifies [to this] because the Spirit is the truth",
+          "This is the One who came by water and blood Jesus Christ not by water alone but by water and blood And the Spirit it is who testifies to this because the Spirit is the truth",
       },
       {
         verse_number: 7,
@@ -58,28 +58,28 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "τὸ Πνεῦμα καὶ τὸ ὕδωρ καὶ τὸ αἷμα καὶ οἱ τρεῖς εἰς τὸ ἕν εἰσιν",
         english:
-          "the Spirit the water and the blood and [these] three in agreement are",
+          "the Spirit the water and the blood and these three in agreement are",
       },
       {
         verse_number: 9,
         original:
           "Εἰ τὴν μαρτυρίαν τῶν ἀνθρώπων λαμβάνομεν ἡ μαρτυρία τοῦ Θεοῦ μείζων ἐστίν ὅτι αὕτη ἐστὶν ἡ μαρτυρία τοῦ Θεοῦ ὅτι μεμαρτύρηκεν περὶ τοῦ Υἱοῦ αὐτοῦ",
         english:
-          "[Even] if testimony human we accept the testimony of God greater is For this is the testimony God that has [given] about Son His",
+          "Even if testimony human we accept the testimony of God greater is For this is the testimony God that has given about Son His",
       },
       {
         verse_number: 10,
         original:
           "ὁ πιστεύων εἰς τὸν Υἱὸν τοῦ Θεοῦ ἔχει τὴν μαρτυρίαν ἐν αὑτῷ ὁ μὴ πιστεύων τῷ Θεῷ ψεύστην πεποίηκεν αὐτόν ὅτι οὐ πεπίστευκεν εἰς τὴν μαρτυρίαν ἣν μεμαρτύρηκεν ὁ Θεὸς περὶ τοῦ Υἱοῦ αὐτοῦ",
         english:
-          "Whoever believes in the Son of God has [this] testimony within him whoever does not believe God a liar has made Him [out to be] because he has not believed in the testimony that has given God about Son His",
+          "Whoever believes in the Son of God has this testimony within him whoever does not believe God a liar has made Him out to be because he has not believed in the testimony that has given God about Son His",
       },
       {
         verse_number: 11,
         original:
           "Καὶ αὕτη ἐστὶν ἡ μαρτυρία ὅτι ζωὴν αἰώνιον ἔδωκεν ὁ Θεὸς ἡμῖν καὶ αὕτη ἡ ζωὴ ἐν τῷ Υἱῷ αὐτοῦ ἐστιν",
         english:
-          "And this is [that] testimony life eternal has given God us and this life in Son His is",
+          "And this is that testimony life eternal has given God us and this life in Son His is",
       },
       {
         verse_number: 12,
@@ -114,7 +114,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "Ἐάν τις ἴδῃ τὸν ἀδελφὸν αὐτοῦ ἁμαρτάνοντα ἁμαρτίαν μὴ πρὸς θάνατον αἰτήσει καὶ δώσει αὐτῷ ζωήν τοῖς ἁμαρτάνουσιν μὴ πρὸς θάνατον ἔστιν ἁμαρτία πρὸς θάνατον οὐ περὶ ἐκείνης λέγω ἵνα ἐρωτήσῃ",
         english:
-          "If anyone sees brother his committing a sin not leading to death he should ask [God] who will give life to those who commit [this kind of] sin There is a sin that leads to death regarding that [sin] I am not saying he should ask",
+          "If anyone sees brother his committing a sin not leading to death he should ask God who will give life to those who commit this kind of sin There is a sin that leads to death regarding that sin I am not saying he should ask",
       },
       {
         verse_number: 17,
@@ -127,21 +127,21 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "Οἴδαμεν ὅτι πᾶς ὁ γεγεννημένος ἐκ τοῦ Θεοῦ οὐχ ἁμαρτάνει ἀλλ’ ὁ γεννηθεὶς ἐκ τοῦ Θεοῦ τηρεῖ αὐτόν καὶ ὁ πονηρὸς οὐχ ἅπτεται αὐτοῦ",
         english:
-          "We know that anyone born of God does not keep on sinning the [One who] was born of God protects him and the evil [one] cannot touch him",
+          "We know that anyone born of God does not keep on sinning the One who was born of God protects him and the evil one cannot touch him",
       },
       {
         verse_number: 19,
         original:
           "οἴδαμεν ὅτι ἐκ τοῦ Θεοῦ ἐσμεν καὶ ὁ κόσμος ὅλος ἐν τῷ πονηρῷ κεῖται",
         english:
-          "We know that of God we are and [that] the world whole of the evil [one] is under the power",
+          "We know that of God we are and that the world whole of the evil one is under the power",
       },
       {
         verse_number: 20,
         original:
           "οἴδαμεν δὲ ὅτι ὁ Υἱὸς τοῦ Θεοῦ ἥκει καὶ δέδωκεν ἡμῖν διάνοιαν ἵνα γινώσκωμεν τὸν ἀληθινόν καὶ ἐσμὲν ἐν τῷ ἀληθινῷ ἐν τῷ Υἱῷ αὐτοῦ Ἰησοῦ Χριστῷ οὗτός ἐστιν ὁ ἀληθινὸς Θεὸς καὶ ζωὴ αἰώνιος",
         english:
-          "we know And that the Son of God has come and has given us understanding so that we may know Him who [is] true and we are in Him who [is] true in Son His Jesus Christ He is the true God and life eternal",
+          "we know And that the Son of God has come and has given us understanding so that we may know Him who is true and we are in Him who is true in Son His Jesus Christ He is the true God and life eternal",
       },
       {
         verse_number: 21,
