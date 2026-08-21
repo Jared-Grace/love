@@ -1,3 +1,5 @@
+import { text_empty_is } from "./text_empty_is.mjs";
+import { not } from "./not.mjs";
 import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { g_openers_lines } from "./g_openers_lines.mjs";
 import { g_arc_prompt_arguments_assert } from "./g_arc_prompt_arguments_assert.mjs";
