@@ -1,3 +1,4 @@
+import { words_early_reader_gate_run } from "./words_early_reader_gate_run.mjs";
 import { g_arc_prompt_chapter_role_gate_run } from "./g_arc_prompt_chapter_role_gate_run.mjs";
 import { g_arc_shared_steps_gate_run } from "./g_arc_shared_steps_gate_run.mjs";
 import { bible_gathered_finders_gate_run } from "./bible_gathered_finders_gate_run.mjs";
@@ -463,6 +464,7 @@ export function qa_gates() {
     g_arc_written_gate_run,
     g_arc_shared_steps_gate_run,
     g_arc_prompt_chapter_role_gate_run,
+    words_early_reader_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
     js_storage_browser_objects_cases_gate_run,

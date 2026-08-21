@@ -1,3 +1,16 @@
+import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
+import { list_first_property } from "./list_first_property.mjs";
+import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
+import { property_get } from "./property_get.mjs";
+import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { function_exists } from "./function_exists.mjs";
+import { function_source_overwrite } from "./function_source_overwrite.mjs";
+import { function_source_new } from "./function_source_new.mjs";
+import { json_to } from "./json_to.mjs";
+import { not } from "./not.mjs";
 export async function bible_glyph_chapters_language_write(
   language_code,
   written_name,
@@ -83,7 +96,7 @@ export async function bible_glyph_chapters_language_write(
       "() {\n" +
       '  "Every picture Bible chapter in plain ' +
       word +
-      ', one entry a chapter, for the band a ' +
+      ", one entry a chapter, for the band a " +
       word +
       ' reader checks themselves against after they have guessed.";\n' +
       '  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is a public-domain bible read once, at authoring time, for the chapters the pictures have reached.";\n' +
