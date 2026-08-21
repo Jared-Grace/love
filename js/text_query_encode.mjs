@@ -1,8 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join } from "./list_join.mjs";
+import { list_map_join_separator } from "./list_map_join_separator.mjs";
 import { text_url_encode } from "./text_url_encode.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function text_query_encode(pairs) {
@@ -18,7 +17,6 @@ export function text_query_encode(pairs) {
     let piece = text_combine_multiple([name_encoded, "=", value_encoded]);
     return piece;
   }
-  let pieces = list_map(names, named);
-  let query = list_join(pieces, "&");
+  let query = list_map_join_separator(names, named, "&");
   return query;
 }
