@@ -1,3 +1,4 @@
+import { list_join_dot } from "./list_join_dot.mjs";
 export function g_arc_line_address(number, field) {
   "$plain field";
   "The one way of writing where a line of an arc is - its turn number and its field name joined, as a reviewer says it and as a note files it.";

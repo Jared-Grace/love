@@ -24,14 +24,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   "ITS FIRST RUN FAULTED THIRTY-SEVEN OF FIFTY-THREE LINES, and the repair was a second list rather than a softer rule. The accepted list of a child's words deliberately carries no word from the faith, so god, sinned, cross and confess all read as outside it - and those are the words the game is FOR. A word outside a child's vocabulary is two different things wearing one shape: one a writer reached for when a plainer word was there, and one the game means to teach. What tells them apart is intent, written down once as an accepted list, and never any measure of how rare a word is - frequency would have dropped ACTUALLY too, which is the one this caught unaided that a person had already faulted by hand.";
   let arcs = await g_arc_written_chapter(chapter_code);
   let wanted = number_from_text(index);
-  let found = null;
-  for (let entry of arcs) {
-    let entry_index = property_get(entry, "index");
-    let same = equal(entry_index, wanted);
-    if (same) {
-      found = property_get(entry, "arc");
-    }
-  }
+  let found = g_arc_chapter_person_or_null(arcs, wanted);
   let missing = equal(found, null);
   let there = not(missing);
   assert_json(there, {
