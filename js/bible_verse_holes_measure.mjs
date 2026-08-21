@@ -1,3 +1,4 @@
+import { date_now_iso } from "./date_now_iso.mjs";
 import { bible_folders_at_once } from "./bible_folders_at_once.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
@@ -46,9 +47,13 @@ export async function bible_verse_holes_measure() {
     lambda2,
     at_once,
   );
+  ("WHEN IT WAS ASKED IS WRITTEN DOWN BESIDE WHAT WAS FOUND, because every finding here is a statement about what storage held at one moment and none of it says so on its own. A hole is closed by an upload, and a record written before that upload goes on naming the same verses afterwards - so a reader is looking at a repair that was already done and cannot tell. Its neighbour was read that way once and named seventy-seven bibles as holding nothing, all of them full.");
+  ("It is stamped at the end rather than the start, so what it says is when the answer was complete and not when somebody set it going. This one reads a whole book of every shipped bible a few at a time and takes minutes, and a stamp from before it began would be the one part of the record that was never measured.");
+  let measured_at = date_now_iso();
   let r = {
     book_code,
     chapters: list_size(chapters),
+    measured_at,
     bibles: measured_each,
   };
   return r;
