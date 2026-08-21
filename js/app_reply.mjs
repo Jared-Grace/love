@@ -1,10 +1,10 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { each } from "./each.mjs";
 import { app_reply_key_down } from "./app_reply_key_down.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
-import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
@@ -177,5 +177,5 @@ export async function app_reply(context) {
   function typed_reset() {
     typed = "";
   }
-  app_shared_contact_button(root);
+  app_shared_footer(root);
 }
