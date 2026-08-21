@@ -1,3 +1,10 @@
+import { ebible_verse_marks_repeated_measure } from "./ebible_verse_marks_repeated_measure.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_all } from "./list_all.mjs";
+import { text_digits_is } from "./text_digits_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
+import { not } from "./not.mjs";
 export async function ebible_verse_marks_repeated_unexplained() {
   "Every repeated verse id in every translation that the one known publishing fault does not already explain.";
   "A repeated id is always wrong - two marks wearing one address make a link land on whichever the browser reaches first and leave the other verse with no address at all - but every repeat in the corpus today comes from one fault in the publishing, and that fault has been written to them about as a whole. Reporting its instances again one at a time would waste the reader we are asking to fix it.";
