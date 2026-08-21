@@ -1,7 +1,7 @@
 import { g_npc_id } from "./g_npc_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
-export function app_g_npc_property_get_generic(store, npc) {
+export function app_shared_game_npc_property_get_generic(store, npc) {
   arguments_assert(arguments, 2);
   ("One thing remembered about a person, found by WHO that person is - with which of the things it is left open, so a second thing costs a name and nothing else.");
   ("It used to be found by where they were STANDING, and the tile had to do for a name because a person had nothing else that was theirs. That held only while nobody walked: every step changed the address, so every step had to empty the drawers and fill them again, and two people ever sent to one tile meant the second took over the first one's drawer and the first dragged somebody else's picture about from then on. An id is the address a step cannot change, so a person may now walk about freely and still be found.");
