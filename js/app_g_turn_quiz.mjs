@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
 import { app_g_pray_discern } from "./app_g_pray_discern.mjs";
 import { app_g_reveal_scripture } from "./app_g_reveal_scripture.mjs";
@@ -21,7 +21,7 @@ export function app_g_turn_quiz(
     ", running `leave`) is one of the CHOICES in the box, placed LAST of everything in it — the prompt asks what you would like to SAY, and saying goodbye is an answer to that, but it is the answer you reach for once none of the passages is what you want. every caller used to append it to the overlay under the box instead, so this places it once for all of them.");
   app_g_npc_says(npc, overlay, npc_text);
   let container = app_shared_game_container_player(overlay);
-  app_g_p_text(container, prompt);
+  app_shared_game_p_text(container, prompt);
   let correct = null;
   function place_correct() {
     correct = build_correct(container);

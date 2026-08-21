@@ -5,7 +5,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_bless_map } from "./app_g_bless_map.mjs";
 import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { bless_told_tap } from "./bless_told_tap.mjs";
 import { bless_blessed_new } from "./bless_blessed_new.mjs";
 export function app_g_bless_overlay_blessed(container_map) {
@@ -28,7 +28,7 @@ export function app_g_bless_overlay_blessed(container_map) {
   let bar = app_g_bless_bar(container_map);
   let told = html_div(bar);
   let name = bless_told_tap();
-  app_g_p_text(told, name);
+  app_shared_game_p_text(told, name);
   ("the ladder starts at one person, and every rung above it is earned rather than begun");
   ("with - so the first prayer of a new game reaches exactly the person it is said over");
   let rung = "person";
