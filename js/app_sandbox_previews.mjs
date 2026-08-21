@@ -5,31 +5,38 @@ export function app_sandbox_previews() {
   "Each entry is its own small function naming its file outright, and neither half of that is decoration. The builder has to be able to READ which file is wanted before it can set that file aside as a piece of its own to fetch; a path put together while running is a path it cannot read, and what it does with one of those is pack the whole folder in, which is the opposite of what this is for.";
   async function spinner_load() {
     let m = await import("./app_sandbox_spinner_preview.mjs");
-    return m.app_sandbox_spinner_preview;
+    let r = m.app_sandbox_spinner_preview;
+    return r;
   }
   async function week_calendar_load() {
     let m = await import("./week_calendar_preview.mjs");
-    return m.week_calendar_preview;
+    let r2 = m.week_calendar_preview;
+    return r2;
   }
   async function availability_editor_load() {
     let m = await import("./availability_editor_preview.mjs");
-    return m.availability_editor_preview;
+    let r3 = m.availability_editor_preview;
+    return r3;
   }
   async function song_image_choose_load() {
     let m = await import("./song_image_choose_preview.mjs");
-    return m.song_image_choose_preview;
+    let r4 = m.song_image_choose_preview;
+    return r4;
   }
   async function song_image_audit_load() {
     let m = await import("./song_image_audit_preview.mjs");
-    return m.song_image_audit_preview;
+    let r5 = m.song_image_audit_preview;
+    return r5;
   }
   async function second_takes_load() {
     let m = await import("./psalms_second_takes_preview.mjs");
-    return m.psalms_second_takes_preview;
+    let r6 = m.psalms_second_takes_preview;
+    return r6;
   }
   async function dream_trace_load() {
     let m = await import("./bible_dream_trace_preview.mjs");
-    return m.bible_dream_trace_preview;
+    let r7 = m.bible_dream_trace_preview;
+    return r7;
   }
   let previews = {
     spinner_preview: spinner_load,
