@@ -1,3 +1,6 @@
+import { divide } from "./divide.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
@@ -10,7 +13,6 @@ import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_get } from "./property_get.mjs";
-
 export async function webpack_watch_rebuild_fan_out() {
   "How many of the dev apps the watcher rebuilds when one function is edited, counted over every app at once.";
   arguments_assert(arguments, 0);
@@ -36,15 +38,15 @@ export async function webpack_watch_rebuild_fan_out() {
   let tally = list_tally(named);
   let f_names = properties_get(tally);
   let functions = list_size(f_names);
-  let half = apps / 2;
+  let half = divide(apps, 2);
   let every_app = [];
   let more_than_half = [];
   for (let f_name of f_names) {
     let reach = property_get(tally, f_name);
-    if (reach === apps) {
+    if (equal(reach, apps)) {
       list_add(every_app, f_name);
     }
-    if (reach > half) {
+    if (greater_than(reach, half_apps)) {
       list_add(more_than_half, f_name);
     }
   }
@@ -53,7 +55,7 @@ export async function webpack_watch_rebuild_fan_out() {
     apps,
     functions,
     every_app: list_size(every_app),
-    more_than_half: list_size(more_than_half),
+    more_than_half: list_size(more_than_half_apps),
     top,
   };
   return r;
