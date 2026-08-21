@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets_glossed } from "./song_image_couplets_glossed.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
 export function song_image_couplets_scripture_brief(verse_number) {
   "$plain verse_number";
   "The passages a verse of the hymn rests on, named and not written out - a line to a couplet, each line saying the words sung and then where they come from - or the whole hymn's when the number is 0.";
