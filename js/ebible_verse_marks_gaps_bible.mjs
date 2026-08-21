@@ -1,3 +1,5 @@
+import { ebible_bible_chapters_found_generic } from "./ebible_bible_chapters_found_generic.mjs";
+import { ebible_chapter_verse_marks_gaps } from "./ebible_chapter_verse_marks_gaps.mjs";
 export async function ebible_verse_marks_gaps_bible(bible_folder) {
   "$plain bible_folder";
   "Every chapter of one bible whose page skips a verse number between its first mark and its last, each named with the numbers it skips.";
