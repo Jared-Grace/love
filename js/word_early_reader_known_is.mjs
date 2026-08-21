@@ -14,6 +14,7 @@ export function word_early_reader_known_is(word, known_words) {
   "IT IS DELIBERATELY CRUDE and it is allowed to be, because of where its answer goes. Nothing here fails a build: a yes drops a line out of a report and a no leaves one in for somebody to read past. So the cost of being wrong is one line either way, and a rule somebody can hold in their head is worth more here than a rule that is right more often.";
   "THE STEMS ARE GUESSED FOUR WAYS because English spells the same join four ways. Hope loses an e before d, stop doubles its p before ed, try turns its y to an i before es, and want does nothing at all. Rather than decide which happened, every shape is tried and any hit counts - over-reaching costs a line unread, and reaching too little was the fault being fixed.";
   "A stem shorter than three letters is refused. Otherwise the s comes off small words and lands on a letter the list keeps for its own sake - his becomes hi, as becomes a - and the filter starts agreeing with words on the strength of a single letter.";
+  "BUT THE FLOOR IS THE ENDING'S, NOT THE WORD'S. A three-letter ending cannot leave a one-letter accident behind, because there was three letters' worth of evidence that an ending was taken at all: going leaves go and doing leaves do, and both were being refused for the crime of being two letters long. That refusal faulted DOING and GOING inside a written line, which is the plainest English there is, and did it twice before anybody noticed - so the floor drops to one letter when the ending is three, and stays at two for the s and the d that the rule was written for.";
   "THE SHAPES WITH NO ENDING TO TAKE ARE LOOKED UP INSTEAD. Given, taken, caught, worn and rose are the commonest words in English and every one of them defeated the stripper, because English spelt them by changing the word rather than by adding to it. A list holding GIVE therefore faulted GIVEN, and a writer using the plainest word there is was told to find a plainer one. The table is a fact about the language rather than about the reader, so it is consulted whichever list is being read.";
   let there = list_includes(known_words, word);
   if (there) {
@@ -33,8 +34,14 @@ export function word_early_reader_known_is(word, known_words) {
     let shorter = text_suffix_without_try(word, ending);
     let cut = not_equal(shorter, word);
     if (cut) {
+      let ending_size = text_size(ending);
+      let long_ending = greater_than(ending_size, 2);
+      let smallest = 2;
+      if (long_ending) {
+        smallest = 1;
+      }
       let a = text_size(shorter);
-      let long_enough = greater_than(a, 2);
+      let long_enough = greater_than(a, smallest);
       if (long_enough) {
         let stems = [shorter];
         let with_e = text_combine(shorter, "e");
