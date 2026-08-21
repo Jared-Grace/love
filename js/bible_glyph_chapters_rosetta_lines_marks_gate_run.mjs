@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_glyph_chapters_rosetta_lines_marks_only } from "./bible_glyph_chapters_rosetta_lines_marks_only.mjs";
+import { property_get } from "./property_get.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { not_equal } from "./not_equal.mjs";
 export function bible_glyph_chapters_rosetta_lines_marks_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no word of any written Rosetta band is nothing but marks. Throws naming the chapter, the verse and the mark that reached the English.");
@@ -12,8 +18,10 @@ export function bible_glyph_chapters_rosetta_lines_marks_gate_run() {
   let found = property_get(surveyed, "found");
   let marks = property_get(surveyed, "marks");
   let examples = property_get(surveyed, "examples");
-  list_empty_not_is_assert_json(words, {
-    hint: "no Rosetta band held a single word, so this gate checked nothing and would have passed for that reason - the bands are named one by one next door and the list has come up empty",
+  let counted = not_equal(words, 0);
+  assert_json(counted, {
+    chapters,
+    hint: "no Rosetta band held a single word, so this gate checked nothing and would have passed for that reason - the bands are named one by one next door and either the list or every band in it has come up empty",
   });
   list_empty_is_assert_json(found, {
     hint: "these words of the written bands are nothing but marks, so a reader meets a character that cannot be said out loud and cannot be told from scripture - decide for each mark whether it should be dropped by the builder or spelled out, and rebuild the chapters named here",
