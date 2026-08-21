@@ -12,7 +12,7 @@ import { list_remove } from "./list_remove.mjs";
 export async function js_dollar_g({
   remaining,
   node,
-  stack_1,
+  stack_: stack_1,
   stack_2,
   ast,
   afters,

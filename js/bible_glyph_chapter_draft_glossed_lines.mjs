@@ -1,9 +1,5 @@
 import { bible_glyph_group_characters } from "./bible_glyph_group_characters.mjs";
-import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
-import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
-import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
-import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
-import { bible_glyph_draft_gap } from "./bible_glyph_draft_gap.mjs";
+import { bible_glyph_chapter_draft_reading } from "./bible_glyph_chapter_draft_reading.mjs";
 import { add } from "./add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -24,21 +20,21 @@ export async function bible_glyph_chapter_draft_glossed_lines(
   "IT WAS BUILT BECAUSE AUTHORING WAS BEING DONE OUT OF A SIXTY KILOBYTE FILE. The word by word draft carries the Hebrew, the gloss, the number and the glyph for every word of the chapter, which is everything and is why it is unreadable; what an author actually needs is one line per verse that they can read as a sentence and see the pictures inside. That is this, and it is the same two readings the dotted twin already does, joined differently.";
   "A WORD WITH NO GLOSS FALLS BACK TO THE GAP MARK rather than vanishing, because a word the interlinear leaves unglossed is still a word of the verse and closing the line up over it would quietly shorten the sentence. The dash the interlinear writes where English has no word for something is treated the same way, since printing a bare dash in the middle of a line reads as punctuation the verse does not have.";
   "This is a DRAFT and never scripture, exactly as the dotted twin says of itself. It seats whatever glyph the table happens to carry under each number and has no view about the sentence, and the interlinear's gloss is one place's turn of phrase rather than a translation. An authored chapter is a person's judgment and this is a lookup.";
-  let roots = bible_glyph_roots_testament_table(testament_name);
-  let drawn = bible_glyph_roots_drawn_lookup(roots);
-  let lookup = bible_glyph_characters_lookup(traditions);
-  let verses = await bible_interlinear_chapter_words(chapter_code);
-  let gap = bible_glyph_draft_gap();
+  let reading = await bible_glyph_chapter_draft_reading(
+    chapter_code,
+    testament_name,
+    traditions,
+  );
   let lines = [];
   let verse_number = 0;
-  for (let verse of verses) {
+  for (let verse of reading.verses) {
     verse_number = add(verse_number, 1);
     let pieces = [];
     for (let word of verse.words) {
-      let glyph = property_get_or_null(drawn, word.strong);
+      let glyph = property_get_or_null(reading.drawn, word.strong);
       let undrawn = null_is(glyph);
       if (not(undrawn)) {
-        let character = bible_glyph_group_characters(glyph, lookup);
+        let character = bible_glyph_group_characters(glyph, reading.lookup);
         list_add(pieces, character);
         continue;
       }
@@ -47,7 +43,7 @@ export async function bible_glyph_chapter_draft_glossed_lines(
       let empty = not(gloss);
       let unsaid = dash || empty;
       if (unsaid) {
-        list_add(pieces, gap);
+        list_add(pieces, reading.gap);
         continue;
       }
       list_add(pieces, gloss);
