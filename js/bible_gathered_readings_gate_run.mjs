@@ -1,3 +1,4 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { bible_gathered_events_all } from "./bible_gathered_events_all.mjs";
@@ -9,7 +10,6 @@ import { list_map } from "./list_map.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
@@ -88,8 +88,7 @@ export async function bible_gathered_readings_gate_run() {
     let kinds = property_get(reading, "kinds");
     return kinds;
   }
-  let kinds_lists = list_map(readings, kinds_of);
-  let list2 = list_concat_multiple(kinds_lists);
+  let list2 = list_map_concat_multiple(readings, kinds_of);
   let kinds_used = list_unique(list2);
   function kind_declared_is(kind) {
     let is = list_includes(declared, kind);
