@@ -11,12 +11,12 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Ἐν ἀρχῇ ἦν ὁ Λόγος καὶ ὁ Λόγος ἦν πρὸς τὸν Θεόν καὶ Θεὸς ἦν ὁ Λόγος",
         english:
-          "In [the] beginning was the Word and the Word was with God and God was the Word",
+          "In the beginning was the Word and the Word was with God and God was the Word",
       },
       {
         verse_number: 2,
         original: "Οὗτος ἦν ἐν ἀρχῇ πρὸς τὸν Θεόν",
-        english: "He was in [the] beginning with God",
+        english: "He was in the beginning with God",
       },
       {
         verse_number: 3,
@@ -28,19 +28,19 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
       {
         verse_number: 4,
         original: "ἐν αὐτῷ ζωὴ ἦν καὶ ἡ ζωὴ ἦν τὸ φῶς τῶν ἀνθρώπων",
-        english: "In Him life was and [that] life was the light of men",
+        english: "In Him life was and that life was the light of men",
       },
       {
         verse_number: 5,
         original:
           "καὶ τὸ φῶς ἐν τῇ σκοτίᾳ φαίνει καὶ ἡ σκοτία αὐτὸ οὐ κατέλαβεν",
         english:
-          "The Light in the darkness shines and the darkness it {has} not overcome",
+          "The Light in the darkness shines and the darkness it has not overcome",
       },
       {
         verse_number: 6,
         original: "Ἐγένετο ἄνθρωπος ἀπεσταλμένος παρὰ Θεοῦ ὄνομα αὐτῷ Ἰωάννης",
-        english: "There came a man who was sent from God name His [was] John",
+        english: "There came a man who was sent from God name His was John",
       },
       {
         verse_number: 7,
@@ -67,12 +67,12 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "ἐν τῷ κόσμῳ ἦν καὶ ὁ κόσμος δι’ αὐτοῦ ἐγένετο καὶ ὁ κόσμος αὐτὸν οὐκ ἔγνω",
         english:
-          "in the world He was and [though] the world through Him was made the world Him {did} not recognize",
+          "in the world He was and though the world through Him was made the world Him did not recognize",
       },
       {
         verse_number: 11,
         original: "εἰς τὰ ἴδια ἦλθεν καὶ οἱ ἴδιοι αὐτὸν οὐ παρέλαβον",
-        english: "to [His] own He came and [His] own Him {did} not receive",
+        english: "to His own He came and His own Him did not receive",
       },
       {
         verse_number: 12,
@@ -86,14 +86,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "οἳ οὐκ ἐξ αἱμάτων οὐδὲ ἐκ θελήματος σαρκὸς οὐδὲ ἐκ θελήματος ἀνδρὸς ἀλλ’ ἐκ Θεοῦ ἐγεννήθησαν",
         english:
-          "[children born] not of blood nor of [the] desire [or] will of man but of God born",
+          "children born not of blood nor of the desire or will of man but of God born",
       },
       {
         verse_number: 14,
         original:
           "Καὶ ὁ Λόγος σὰρξ ἐγένετο καὶ ἐσκήνωσεν ἐν ἡμῖν καὶ ἐθεασάμεθα τὴν δόξαν αὐτοῦ δόξαν ὡς μονογενοῦς παρὰ Πατρός πλήρης χάριτος καὶ ἀληθείας",
         english:
-          "The Word flesh became and made His dwelling among us We have seen glory His [the] glory of [the] one and only [Son] from [the] Father full of grace and truth",
+          "The Word flesh became and made His dwelling among us We have seen glory His the glory of the one and only Son from the Father full of grace and truth",
       },
       {
         verse_number: 15,
@@ -106,7 +106,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         verse_number: 16,
         original:
           "Ὅτι ἐκ τοῦ πληρώματος αὐτοῦ ἡμεῖς πάντες ἐλάβομεν καὶ χάριν ἀντὶ χάριτος",
-        english: "From fullness His we {have} all received grace upon grace",
+        english: "From fullness His we have all received grace upon grace",
       },
       {
         verse_number: 17,
@@ -120,7 +120,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Θεὸν οὐδεὶς ἑώρακεν πώποτε μονογενὴς Θεὸς ὁ ὢν εἰς τὸν κόλπον τοῦ Πατρὸς ἐκεῖνος ἐξηγήσατο",
         english:
-          "God No one has ever seen [but] the one and only Son [who is Himself] God [and] is at the side Father’s has made [Him] known",
+          "God No one has ever seen but the one and only Son who is Himself God and is at the side Father’s has made Him known",
       },
       {
         verse_number: 19,
@@ -141,7 +141,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Καὶ ἠρώτησαν αὐτόν Τί οὖν σὺ Ἠλίας εἶ Καὶ λέγει Οὐκ εἰμί Ὁ προφήτης εἶ σύ Καὶ ἀπεκρίθη Οὔ",
         english:
-          "they inquired who [are you] Then you Elijah Are He said not I am the Prophet Are you He answered No",
+          "they inquired who are you Then you Elijah Are He said not I am the Prophet Are you He answered No",
       },
       {
         verse_number: 22,
@@ -155,7 +155,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Ἔφη Ἐγὼ φωνὴ βοῶντος ἐν τῇ ἐρήμῳ Εὐθύνατε τὴν ὁδὸν Κυρίου καθὼς εἶπεν Ἠσαΐας ὁ προφήτης",
         english:
-          "[John] replied I [am] a voice of one calling in the wilderness Make straight the way for [the] Lord in the words of Isaiah the prophet",
+          "John replied I am a voice of one calling in the wilderness Make straight the way for the Lord in the words of Isaiah the prophet",
       },
       {
         verse_number: 24,
@@ -174,14 +174,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Ἀπεκρίθη αὐτοῖς ὁ Ἰωάννης λέγων Ἐγὼ βαπτίζω ἐν ὕδατι μέσος ὑμῶν ἕστηκεν ὃν ὑμεῖς οὐκ οἴδατε",
         english:
-          "replied John I baptize with water but among you stands [One] you {do} not know",
+          "replied John I baptize with water but among you stands One you do not know",
       },
       {
         verse_number: 27,
         original:
           "ὁ ὀπίσω μου ἐρχόμενος οὗ οὐκ εἰμὶ ἐγὼ ἄξιος ἵνα λύσω αὐτοῦ τὸν ἱμάντα τοῦ ὑποδήματος",
         english:
-          "[He is] the One who after me comes of whose not am I worthy to untie the straps sandals",
+          "He is the One who after me comes of whose not am I worthy to untie the straps sandals",
       },
       {
         verse_number: 28,
@@ -195,7 +195,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Τῇ ἐπαύριον βλέπει τὸν Ἰησοῦν ἐρχόμενον πρὸς αὐτόν καὶ λέγει Ἴδε ὁ Ἀμνὸς τοῦ Θεοῦ ὁ αἴρων τὴν ἁμαρτίαν τοῦ κόσμου",
         english:
-          "The next day [John] saw Jesus coming toward him and said Look the Lamb of God who takes away the sin of the world",
+          "The next day John saw Jesus coming toward him and said Look the Lamb of God who takes away the sin of the world",
       },
       {
         verse_number: 30,
@@ -209,7 +209,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "κἀγὼ οὐκ ᾔδειν αὐτόν ἀλλ’ ἵνα φανερωθῇ τῷ Ἰσραὴλ διὰ τοῦτο ἦλθον ἐγὼ ἐν ὕδατι βαπτίζων",
         english:
-          "I myself {did} not know Him but [was] that He might be revealed to Israel the reason came I with water baptizing",
+          "I myself did not know Him but was that He might be revealed to Israel the reason came I with water baptizing",
       },
       {
         verse_number: 32,
@@ -223,7 +223,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "κἀγὼ οὐκ ᾔδειν αὐτόν ἀλλ’ ὁ πέμψας με βαπτίζειν ἐν ὕδατι ἐκεῖνός μοι εἶπεν Ἐφ’ ὃν ἂν ἴδῃς τὸ Πνεῦμα καταβαῖνον καὶ μένον ἐπ’ αὐτόν οὗτός ἐστιν ὁ βαπτίζων ἐν Πνεύματι Ἁγίῳ",
         english:
-          "I myself {did} not know Him but the [One who] sent me to baptize with water me told [The man] on whom you see the Spirit descend and rest is He who will baptize with Spirit [the] Holy",
+          "I myself did not know Him but the One who sent me to baptize with water me told The man on whom you see the Spirit descend and rest is He who will baptize with Spirit the Holy",
       },
       {
         verse_number: 34,
@@ -261,49 +261,49 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Λέγει αὐτοῖς Ἔρχεσθε καὶ ὄψεσθε ἦλθαν οὖν καὶ εἶδαν ποῦ μένει καὶ παρ’ αὐτῷ ἔμειναν τὴν ἡμέραν ἐκείνην ὥρα ἦν ὡς δεκάτη",
         english:
-          "He replied Come and see they went So and saw where He was staying and with Him spent day that hour It was about [the] tenth",
+          "He replied Come and see they went So and saw where He was staying and with Him spent day that hour It was about the tenth",
       },
       {
         verse_number: 40,
         original:
           "Ἦν Ἀνδρέας ὁ ἀδελφὸς Σίμωνος Πέτρου εἷς ἐκ τῶν δύο τῶν ἀκουσάντων παρὰ Ἰωάννου καὶ ἀκολουθησάντων αὐτῷ",
         english:
-          "was Andrew brother Simon Peter’s one of the two who heard John’s [ testimony ] and followed [Jesus]",
+          "was Andrew brother Simon Peter’s one of the two who heard John’s testimony and followed Jesus",
       },
       {
         verse_number: 41,
         original:
           "εὑρίσκει οὗτος πρῶτον τὸν ἀδελφὸν τὸν ἴδιον Σίμωνα καὶ λέγει αὐτῷ Εὑρήκαμεν τὸν Μεσσίαν ὅ ἐστιν μεθερμηνευόμενον Χριστός",
         english:
-          "found He first brother [his] Simon and told him We have found the Messiah (which is translated as Christ)",
+          "found He first brother his Simon and told him We have found the Messiah (which is translated as Christ)",
       },
       {
         verse_number: 42,
         original:
           "ἤγαγεν αὐτὸν πρὸς τὸν Ἰησοῦν ἐμβλέψας αὐτῷ ὁ Ἰησοῦς εἶπεν Σὺ εἶ Σίμων ὁ υἱὸς Ἰωάννου σὺ κληθήσῃ Κηφᾶς ὃ ἑρμηνεύεται Πέτρος",
         english:
-          "[Andrew] brought him to Jesus looked at him [who] [and] said You are Simon son of John You will be called Cephas (which is translated as Peter)",
+          "Andrew brought him to Jesus looked at him who and said You are Simon son of John You will be called Cephas (which is translated as Peter)",
       },
       {
         verse_number: 43,
         original:
           "Τῇ ἐπαύριον ἠθέλησεν ἐξελθεῖν εἰς τὴν Γαλιλαίαν καὶ εὑρίσκει Φίλιππον καὶ λέγει αὐτῷ ὁ Ἰησοῦς Ἀκολούθει μοι",
         english:
-          "The next day [Jesus] decided to set out for Galilee Finding Philip told him [He] Follow Me",
+          "The next day Jesus decided to set out for Galilee Finding Philip told him He Follow Me",
       },
       {
         verse_number: 44,
         original:
           "ἦν δὲ ὁ Φίλιππος ἀπὸ Βηθσαϊδά ἐκ τῆς πόλεως Ἀνδρέου καὶ Πέτρου",
         english:
-          "was Now Philip from Bethsaida the [same] town as Andrew and Peter",
+          "was Now Philip from Bethsaida the same town as Andrew and Peter",
       },
       {
         verse_number: 45,
         original:
           "Εὑρίσκει Φίλιππος τὸν Ναθαναὴλ καὶ λέγει αὐτῷ Ὃν ἔγραψεν Μωϋσῆς ἐν τῷ νόμῳ καὶ οἱ προφῆται εὑρήκαμεν Ἰησοῦν υἱὸν τοῦ Ἰωσὴφ τὸν ἀπὸ Ναζαρέτ",
         english:
-          "found Philip Nathanael and told him the [One] wrote about Moses in the Law [ the One] the prophets [foretold] We have found Jesus [the] son of Joseph of Nazareth",
+          "found Philip Nathanael and told him the One wrote about Moses in the Law the One the prophets foretold We have found Jesus the son of Joseph of Nazareth",
       },
       {
         verse_number: 46,
@@ -317,7 +317,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn01() {
         original:
           "Εἶδεν Ἰησοῦς τὸν Ναθαναὴλ ἐρχόμενον πρὸς αὐτὸν καὶ λέγει περὶ αὐτοῦ Ἴδε ἀληθῶς Ἰσραηλίτης ἐν ᾧ δόλος οὐκ ἔστιν",
         english:
-          "saw [When] Jesus Nathanael approaching He said of him Here [is] a true Israelite in whom deceit no there is",
+          "saw When Jesus Nathanael approaching He said of him Here is a true Israelite in whom deceit no there is",
       },
       {
         verse_number: 48,
