@@ -21,6 +21,9 @@ export function bible_glyph_characters() {
   "THE BLOOD AND THE JOINED HANDS CAME THE SAME WAY, one chapter later, which is now the settled way of finding a glyph rather than a second success. The first letter of John was measured before it was authored and those two were what its blanks came down to once the grammar was skipped past. Each was checked against the artwork set BEFORE being written here - the set draws a drop of blood and it draws a handshake - because a glyph written down without an artwork decision turns a gate red, and checking first costs one call while checking after costs a retraction.";
   "THE DROP OF WATER IS THE THIRD FOUND THAT WAY AND IT WAS THE ONLY ONE A WHOLE CHAPTER NEEDED. The fifth chapter of the same letter was measured before it was authored, its blanks came down to the grammar plus two words the root table had already refused, and water was what was left over. It sits one line away from the drop of blood on purpose: the two are different characters in different colours, and the verses that use them are the ones that name them together.";
   "THE CHILD IS THE FOURTH FOUND THAT WAY AND IT SITS DELIBERATELY APART FROM THE BOY. The son is a boy's face and the child is a face of no stated sex, which is the difference the two Greek words carry and the reason the plainer character was chosen over the nearer one. A pair that reads apart in a font can be drawn almost the same by a set, so this one was checked as a drawing too: the set draws the child with a level fringe and the boy with a parted one, and the two survive being set side by side.";
+  "THE THUMB DOWN WAS BOUGHT AS THE MIRROR OF THE THUMB UP AND THE PAIR IS THE POINT. Tob and ra are one opposition in Hebrew and both of them are as broad as the English word bad once was - good and pleasant and fine on one side, evil and harmful and disastrous on the other - so a mark for one that did not have the other would have left the commoner half of the pair blank. Six hundred and sixty two occurrences of ra were undrawn while its opposite was seated, which is the largest hole a single character has closed here.";
+  "AND IT IS WHAT MAKES THE CURSE WRITABLE, which is the second thing it bought. The blessing is the speech and the thumb up, to speak good over somebody; the curse is the speech and the thumb down, and the two are the same construction with one mark flipped. A reader who has learned either one reads the other without being taught it, which is what a mirrored pair is worth and why the thumb down was chosen over a skull or a sick face - death and sickness are things a curse may bring, not things a curse says.";
+  "THE BOWING IS A DIFFERENT BODY FROM THE KNEELING AND THEY WILL STAND NEAR EACH OTHER. The knee is the servant and the bend at the waist is shachah, to bow down, which the interlinear also glosses as worship a hundred and seventy one times. Drawing worship as a building or as a folded pair of hands would say where it happens or what is said during it; the word says what the body does, and so does the picture.";
   "Single characters are preferred over joined sequences. A joined sequence such as the burning heart is several characters held together by a joiner, and a terminal that does not join them shows the parts instead, which is how a reader ends up seeing a heart and a fire where one glyph was meant.";
   let characters = [
     {
@@ -362,6 +365,26 @@ export function bible_glyph_characters() {
     {
       name: "hands_raised",
       character: "🙌",
+    },
+    {
+      name: "thumbs_down",
+      character: "👎",
+    },
+    {
+      name: "bowing",
+      character: "🙇",
+    },
+    {
+      name: "mountain",
+      character: "⛰️",
+    },
+    {
+      name: "scales",
+      character: "⚖️",
+    },
+    {
+      name: "sea",
+      character: "🌊",
     },
     {
       name: "altar",
