@@ -38,6 +38,10 @@ export function app_code_expression_choose_line(
   draw(tree, null, null);
   function draw(current, solved, value) {
     html_clear(line);
+    ("a line drawn after a step is drawn plain and takes its chips afterwards, in two beats; the first drawing of all takes them at once, because there is nothing behind it for anything to have moved from");
+    ("Told apart by whether a step is behind this drawing, rather than by being asked. Whoever draws the line again after a press already has to say which operator went and what it came to, and a drawing with an operator behind it is exactly a drawing something could have moved from - so the two cannot fall out of step with each other.");
+    let stepped_from = null_is(solved);
+    let rising = not(stepped_from);
     let ready = app_code_expression_nodes_ready(current);
     ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");
     let chosen = false;
