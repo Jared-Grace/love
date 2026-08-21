@@ -9,7 +9,7 @@ import { app_g_p_text } from "./app_g_p_text.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { g_something_else } from "./g_something_else.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_g_conversation_render_boundary(
@@ -53,7 +53,7 @@ export function app_g_conversation_render_boundary(
         goodbye,
       );
     }
-    app_g_button_green(container, text, acknowledged);
+    app_shared_game_button_green(container, text, acknowledged);
     app_g_button_conversation_end(container, leave);
   }
   let delay = list_random_item([2500, 3000, 3500]);

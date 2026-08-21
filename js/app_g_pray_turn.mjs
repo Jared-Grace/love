@@ -6,7 +6,7 @@ import { not_equal } from "./not_equal.mjs";
 import { app_g_prayer_menu_overlay } from "./app_g_prayer_menu_overlay.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { g_prayer_petition } from "./g_prayer_petition.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
@@ -73,7 +73,7 @@ export function app_g_pray_turn(prayer_texts, on_part, on_done) {
         let emoji_text = emoji_pray();
         app_g_message_overlay(emoji_text, text, color, 3500, render);
       }
-      app_g_button_green(container, label, on_pick);
+      app_shared_game_button_green(container, label, on_pick);
     }
     each(remaining, add_item);
   }

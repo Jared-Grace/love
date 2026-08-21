@@ -1,4 +1,4 @@
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_prayer_overlay } from "./app_g_prayer_overlay.mjs";
 import { app_g_message_overlay } from "./app_g_message_overlay.mjs";
 import { app_g_discern_prayed } from "./app_g_discern_prayed.mjs";
@@ -10,7 +10,14 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-export function app_g_pray_reveal(container, correct, label, label_thanks, effect, discern) {
+export function app_g_pray_reveal(
+  container,
+  correct,
+  label,
+  label_thanks,
+  effect,
+  discern,
+) {
   "a pray button that walks the discernment prayer full circle: the first click ASKS God for discernment (marks `discern` prayed, waits on God, then effect(correct) reveals the discerned choice); the button then re-enables and relabels to a thanksgiving, so EACH later click THANKS God for the discernment He gave (1 Thess 5:18) with a freshly-varied prayer — thank as often as you like (gratitude is inexhaustible)";
   function disable() {
     html_style_assign(pray_b, {
@@ -36,7 +43,13 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
   }
   function on_thanks() {
     let color = app_shared_color_green_light();
-    app_g_message_overlay(emoji_pray(), g_thanks_discernment(), color, 3500, noop);
+    app_g_message_overlay(
+      emoji_pray(),
+      g_thanks_discernment(),
+      color,
+      3500,
+      noop,
+    );
   }
   function on_click() {
     if (discern.prayed) {
@@ -45,6 +58,6 @@ export function app_g_pray_reveal(container, correct, label, label_thanks, effec
     }
     on_pray();
   }
-  let pray_b = app_g_button_green(container, label, on_click);
+  let pray_b = app_shared_game_button_green(container, label, on_click);
   return pray_b;
 }

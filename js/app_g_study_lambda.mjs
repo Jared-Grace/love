@@ -14,7 +14,7 @@ import { list_index_last_is } from "./list_index_last_is.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_player_save } from "./app_g_player_save.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { invoke_multiple_shuffle_2 } from "./invoke_multiple_shuffle_2.mjs";
@@ -62,11 +62,11 @@ export async function app_g_study_lambda(overlay, player, review, close) {
           refresh();
         }
       }
-      let b = app_g_button_green(div, item, lambda3);
+      let b = app_shared_game_button_green(div, item, lambda3);
     }
     function wrong() {
       let r2 = list_random_item(sermon_wrong_list);
-      let b = app_g_button_green(div, r2, lambda3);
+      let b = app_shared_game_button_green(div, r2, lambda3);
       function lambda3() {
         mistakes = true;
         app_g_button_wrong(b);
