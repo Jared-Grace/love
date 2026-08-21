@@ -10,6 +10,9 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 export function text_identifier_segments(text) {
+  "Cuts a piece of text into runs, each run being either all characters a name may be made of or all characters a name may not be made of, and says of each run which of the two it is.";
+  "What it is for is finding names inside prose without mistaking part of a longer word for a name. Looking for a word in text finds it in the middle of another word; looking through these runs cannot, because a run is the whole unbroken stretch and a longer word is a longer run.";
+  "The runs come out in the order they were read, and joined end to end they give the text back exactly, spaces and punctuation and all. Everything built on this - counting a name, asking whether a name is there, putting another name in its place - puts the runs back together afterwards and relies on that.";
   let empty = "";
   let chars = text_split(text, empty);
   let segments = [];
