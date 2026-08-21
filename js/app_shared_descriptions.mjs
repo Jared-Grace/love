@@ -18,6 +18,8 @@ export function app_shared_descriptions() {
       "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
     g_bless:
       "A game where you walk a street, turn to look at the people around you, and pray a blessing over everyone you can see.",
+    privacy_policy:
+      "What these apps do with anything you give them. There is nothing to sign up for and nothing is tracked, and what an app remembers is kept on your own device.",
   };
   return r;
 }
