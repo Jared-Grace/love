@@ -1,4 +1,4 @@
-import { app_shared_all_apps_button } from "./app_shared_all_apps_button.mjs";
+import { app_shared_footer_all_apps } from "./app_shared_footer_all_apps.mjs";
 import { app_message_refresh } from "./app_message_refresh.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
