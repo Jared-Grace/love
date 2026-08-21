@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_playlist_items } from "./youtube_playlist_items.mjs";
 import { youtube_playlist_item_position_write } from "./youtube_playlist_item_position_write.mjs";
@@ -7,6 +8,7 @@ import { list_copy } from "./list_copy.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_add } from "./list_add.mjs";
+import { list_insert } from "./list_insert.mjs";
 import { list_remove_at } from "./list_remove_at.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
@@ -41,7 +43,7 @@ export async function psalms_playlist_order_write(playlist_id) {
   let moves = [];
   let count = list_size(wanted);
   let place = 0;
-  while (place < count) {
+  while (less_than(place, count)) {
     let item = wanted[place];
     let at = list_index_of(standing, item);
     let already = equal(at, place);
@@ -55,7 +57,7 @@ export async function psalms_playlist_order_write(playlist_id) {
         place,
       );
       list_remove_at(standing, at);
-      standing.splice(place, 0, item);
+      list_insert(standing, place, item);
       let move = {
         title: property_get(item, "title"),
         from: at,
