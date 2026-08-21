@@ -1,10 +1,9 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { subtract } from "./subtract.mjs";
 import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_tally_ranked } from "./list_tally_ranked.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -31,8 +30,7 @@ export async function bible_event_kind_mechanic_order() {
     let kinds = property_get(reading, "kinds");
     return kinds;
   }
-  let kinds_lists = list_map(readings, kinds_of);
-  let kinds_all = list_concat_multiple(kinds_lists);
+  let kinds_all = list_map_concat_multiple(readings, kinds_of);
   let ranked = list_tally_ranked(kinds_all);
   let uncovered = list_copy(readings);
   let chosen = [];
