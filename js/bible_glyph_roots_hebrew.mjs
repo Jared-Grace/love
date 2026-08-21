@@ -28,6 +28,9 @@ export function bible_glyph_roots_hebrew() {
   "THE CURSE IS THE BLESSING WITH ONE MARK FLIPPED, and it was reached by asking what the opposite of speak good would be rather than by looking for a picture of a curse. Ra was seated first - six hundred and sixty two occurrences, the largest content word this table had left undrawn, and the plain opposite of tob which was already the thumb up - and once the thumb down existed, arar and qalal cost nothing. Two roots share the group because two unrelated words meaning one thing may share a mark; they stay two rows because a root claims kinship and these are not kin.";
   "A SKULL AND A SICK FACE WERE BOTH CONSIDERED AND BOTH CLAIM TOO MUCH. Speak death and speak sickness name what a curse is feared to bring, and the word names only what is said - Balaam is hired to curse and the thing he is asked to say is not death - so either would have written an outcome into every occurrence of a word that states none. The thumb down states no outcome at all, which is exactly as much as arar states.";
   "THE MOUNTAIN, THE SCALES AND THE SEA WERE MEASURED IN THE SAME PASS and are here for frequency rather than for an argument. Har is five hundred and forty four, mishpat four hundred and nine, yam three hundred and ninety four, and all three had been sitting near the top of the undrawn list underneath the grammar and the proper names. Yam is glossed west forty seven times and the wave is drawn there anyway: the word is the sea and west is what English calls the direction the sea lies in, so the paraphrase is in the English rather than in the picture.";
+  "THE FOLDED HANDS WERE ON THE WRONG WORD AND THE COUNT SETTLED IT WITHOUT A JUDGMENT. They sat on amen H543 from the beginning, on the reasoning that folded hands are what a reader takes for prayer. Then the interlinear was asked what amen actually says, and the Hebrew answers Amen twenty eight times out of thirty while the Greek answers Truly a hundred times out of a hundred and twenty six. Amen is not a prayer word. It is an oath word - so be it, truly - and the prayer closing is that word standing in one particular place. So the folded hands were drawing prayer over a hundred and thirty occurrences of a word that means truly, and every one of them was a wrong mark.";
+  "THE FIX COST NOTHING BECAUSE THE RIGHT PICTURE WAS ALREADY IN THE TABLE. The check is seated on emeth, truth, which comes from this same root - aman is the verb, emeth and amen are both what it makes - so a reader who meets the check on both is being shown a real kinship rather than a coincidence. Amen took the check, the folded hands came free, and palal walked into them: eighty four occurrences glossed prayed, pray and praying in every inflection and nothing else, with tephillah H8605 for the noun. No new picture, no artwork, and two words that were both mismarked are now both right.";
+  "AND THE HUMAN IS WHY THIS WAS LOOKED AT. The objection raised was that folded hands are not exclusively a praying gesture in common use - people send them for please and for thank you - so the picture was never the automatic property of prayer that seating it on amen had assumed. That is an argument about the picture. Asking what the word says turned out to answer it from the other end, and the two agree.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -452,6 +455,20 @@ export function bible_glyph_roots_hebrew() {
         },
         {
           strong: "543",
+          glyph: "check",
+        },
+      ],
+    },
+    {
+      root: "palal",
+      gloss: "pray, intercede",
+      words: [
+        {
+          strong: "6419",
+          glyph: "hands_praying",
+        },
+        {
+          strong: "8605",
           glyph: "hands_praying",
         },
       ],
