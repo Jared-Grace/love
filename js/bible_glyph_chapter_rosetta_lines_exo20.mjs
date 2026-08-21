@@ -30,28 +30,28 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "לֹֽ֣א תַֽעֲשֶׂ֨ה־ לְךָ֥֣ פֶ֣֙סֶל֙׀ וְכָל־ תְּמוּנָ֡֔ה אֲשֶׁ֤ר֣ בַּשָּׁמַ֙יִם֙׀ מִמַּ֡֔עַל וַֽאֲשֶׁ֥ר֩ בָּאָ֖֨רֶץ מִתַָּ֑֜חַת וַאֲשֶׁ֥֣ר בַּמַּ֖֣יִם׀ מִתַּ֥֣חַת לָאָֽ֗רֶץ׃",
         english:
-          "{You shall} not make for yourself an idol in the form of anything in the heavens above on the earth below or in the waters beneath",
+          "You shall not make for yourself an idol in the form of anything in the heavens above on the earth below or in the waters beneath",
       },
       {
         verse_number: 5,
         original:
           "לֹֽא־ תִשְׁתַּחְוֶ֥֣ה לָהֶ֖ם֮ וְלֹ֣א תָעָבְדֵ֑ם֒ כִּ֣י אָֽנֹכִ֞י יְהוָ֤ה אֱלֹהֶ֙יךָ֙ אֵ֣ל קַנָּ֔א פֹּ֠קֵד עֲוֺ֨ן אָבֹ֧ת עַל־ בָּנִ֛ים עַל־ שִׁלֵּשִׁ֥ים וְעַל־ רִבֵּעִ֖ים לְשֹׂנְאָֽ֑י׃",
         english:
-          "You shall not bow down to them or worship them for I the LORD your God God am a jealous visiting the iniquity of the fathers on [their] children to the third and fourth [generations] of those who hate Me",
+          "You shall not bow down to them or worship them for I the LORD your God God am a jealous visiting the iniquity of the fathers on their children to the third and fourth generations of those who hate Me",
       },
       {
         verse_number: 6,
         original:
           "וְעֹ֥֤שֶׂה חֶ֖֙סֶד֙ לַאֲלָפִ֑֔ים לְאֹהֲבַ֖י וּלְשֹׁמְרֵ֥י מִצְוֺתָֽי׃ס",
         english:
-          "but showing loving devotion to a thousand [generations] of those who love Me and keep My commandments",
+          "but showing loving devotion to a thousand generations of those who love Me and keep My commandments",
       },
       {
         verse_number: 7,
         original:
           "לֹ֥א תִשָּׂ֛א אֶת־ שֵֽׁם־ יְהוָ֥ה אֱלֹהֶ֖יךָ לַשָּׁ֑וְא כִּ֣י לֹ֤א יְנַקֶּה֙ יְהוָ֔ה אֵ֛ת אֲשֶׁר־ יִשָּׂ֥א אֶת־ שְׁמ֖וֹ לַשָּֽׁוְא׃פ",
         english:
-          "You {shall} not take the name of the LORD your God in vain for will not leave anyone unpunished the LORD who takes His name in vain",
+          "You shall not take the name of the LORD your God in vain for will not leave anyone unpunished the LORD who takes His name in vain",
       },
       {
         verse_number: 8,
@@ -76,7 +76,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "כִּ֣י שֵֽׁשֶׁת־ יָמִים֩ עָשָׂ֨ה יְהוָ֜ה אֶת־ הַשָּׁמַ֣יִם וְאֶת־ הָאָ֗רֶץ אֶת־ הַיָּם֙ וְאֶת־ כָּל־ אֲשֶׁר־ בָּ֔ם וַיָּ֖נַח בַּיּ֣וֹם הַשְּׁבִיעִ֑י עַל־ כֵּ֗ן בֵּרַ֧ךְ יְהוָ֛ה אֶת־ י֥וֹם הַשַּׁבָּ֖ת וַֽיְקַדְּשֵֽׁהוּ׃ס",
         english:
-          "For [in] six days made the LORD the heavens and the earth and the sea and all that [is] in them He rested day but on the seventh Therefore blessed the LORD day the Sabbath and set it apart as holy",
+          "For in six days made the LORD the heavens and the earth and the sea and all that is in them He rested day but on the seventh Therefore blessed the LORD day the Sabbath and set it apart as holy",
       },
       {
         verse_number: 12,
