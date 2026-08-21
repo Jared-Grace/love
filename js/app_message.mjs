@@ -1,3 +1,4 @@
+import { app_shared_all_apps_button } from "./app_shared_all_apps_button.mjs";
 import { app_message_refresh } from "./app_message_refresh.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -64,4 +65,5 @@ export async function app_message(context) {
     storage_local_set_context(context, messages_property, messages);
     await app_message_refresh(div_messages, context, messages_property, start);
   }
+  let button = app_shared_all_apps_button(root);
 }
