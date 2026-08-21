@@ -49,6 +49,10 @@ export function bible_glyph_roots() {
   "ABIDE AND RIGHTEOUS WERE LEFT IN ENGLISH TOO and neither one is close. Abiding is a relation rather than a thing, and the relations in this Bible are drawn as diagrams that teach in pairs, each one learnable only because its opposite stands beside it; abiding has no opposite to stand against, so the mark would arrive as a picture nobody could learn. Righteousness has a mark the set offers and it is the balance scale, which draws weighing - and weighing is what the righteous one is subjected to rather than what he is.";
   "AMEN GAVE UP THE FOLDED HANDS AND THIS IS THE TESTAMENT WHERE THE MISTAKE WAS VISIBLE. G281 is glossed Truly a hundred times out of a hundred and twenty six and Amen the other twenty six, so four occurrences in five are Jesus swearing to what follows rather than anybody praying - and three chapters of John were already shipped drawing folded hands ten times, every one of them on Truly, truly, I say to you. Nobody in those verses is praying. The check was already seated on aletheia, truth, so amen moved onto it, which reads as truly in the exact place a reader meets it and costs no new picture.";
   "AND PROSEUCHOMAI TOOK THE HANDS THAT CAME FREE, with proseuche beside it for the noun. The word is glossed to pray, praying and prayers and nothing else, so a picture of folded hands over it claims precisely what the word claims. That is the whole of the rule this table runs on, and it is worth noticing that the mark did not change - only which word it was standing on. A wrong seat is not a wrong picture.";
+  "ENTOLE WAS SEATED ON THE SCROLL ON 2026-08-21 AND IT COST NO PICTURE AT ALL, which is the third time the shared table has paid and the first time it has paid without anybody drawing a chapter to find out. A survey of every chapter this Bible has written was asked which words it still leaves in English, keyed by the word itself rather than by the English printed under it, and commandment came back ten times across four of them - John fifteen and three of the letters, which is exactly where the word lives.";
+  "THE HEBREW SIDE HAD ALREADY BOUGHT IT TWICE OVER. Torah is drawn as a scroll and mitsvah, which IS commandment, is drawn as the same scroll; and nomos, the Greek for law, was already crossed onto that scroll in this table. So the reader has met this mark meaning law on both sides of the Bible and meaning commandment on one of them, and entole is the one row that was missing from a square already three-quarters drawn.";
+  "THE OBJECTION IS THAT A SCROLL IS WRITTEN AND A NEW COMMANDMENT I GIVE YOU IS SPOKEN, and it is answered by the Hebrew rather than dismissed. Mitsvah is spoken at least as often as it is written - the commandment which I command you this day is the formula the law states itself in - and the scroll was seated there anyway, because what the reader learns from a mark is the WORD it stands on and not the object it draws. Refusing the Greek on an objection the Hebrew already survived would leave the reader learning a mark in Deuteronomy that goes blank in John, which is the exact failure the bread and the sword were crossed over to prevent.";
+  "THE VERB WAS LEFT ALONE. G1781 is the same root and is he commanded, and a scroll standing on a verb reads as the noun the reader already knows - so the mark would put a document into a sentence that only has a saying in it. The measurement named the noun and the noun is what was seated; the verb is a separate question and nothing here has answered it.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -463,6 +467,16 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "3551",
+          glyph: "scroll",
+        },
+      ],
+    },
+    {
+      root: "entole",
+      gloss: "commandment",
+      words: [
+        {
+          strong: "1785",
           glyph: "scroll",
         },
       ],
