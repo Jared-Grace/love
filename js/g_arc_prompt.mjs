@@ -21,8 +21,10 @@ export function g_arc_prompt(
   turn_target,
   profile,
   leader,
+  written_text,
 ) {
   "$plain profile";
+  "$plain written_text";
   "$plain chapter_code";
   "The LLM prompt that writes one person/arc, as one string ready to send.";
   "ONE PERSON A CALL, not the whole chapter's cast (fewer tokens - higher LLM quality)";
@@ -34,14 +36,19 @@ export function g_arc_prompt(
     ".");
   ("~Twelve turns make a conversation, and one person holds at most one conversation a day, so seventy turns is about six days this person is met on - not six days running, because the player's day holds a conversation with everybody else too.");
   ("LLM groups 'turn_target' turns into conversations.");
-  ("STILL MISSING: people written blind to each other come out as variations on one person. The fix is to hand over the summaries already written for this chapter.");
-  ("ALSO MISSING: how often each passage has been answered with SO FAR. The prompt asks for equal usage and then hands over nothing to measure it against, so every call evens out a chapter it is the first to touch. It wants to arrive as an argument, counted off the arcs already written - which is also why converts are written before the leader, whose turns are one per sermon line of the plant and so the largest single lever on coverage. It is not a parameter yet because nothing has been generated for it to count.");
+  ("WHAT THE CHAPTER ALREADY HOLDS ARRIVES AS AN ARGUMENT, written by ",
+    fn_name("g_arc_prompt_written"),
+    " - who has been written, and how many turns have answered out of each passage so far. Both of those used to be missing, and each was missing in the same way: this call could only see itself, so it wrote a person nobody else had met and evened out a chapter it believed it was the first to touch.");
+  ("It comes in AS TEXT rather than as the arcs themselves, because reading arcs is the one thing this function must not do. It is handed everything it says and so can be rendered for any arguments at all, which is what lets a gate check the shape of a prompt on a machine where nothing has been generated.");
+  ("EMPTY IS THE FIRST PERSON of a chapter and the section is left out whole. Nobody written and every passage at zero is a paragraph saying nothing, and the writer would weigh it anyway.");
+  ("Converts are written before the leader for the same reason: the elder's turns are one per sermon line of the plant, so that arc is the largest single lever on coverage and wants the fullest count to aim with.");
   g_arc_prompt_arguments_assert(
     chapter_code,
     verses_text,
     turn_target,
     profile,
     leader,
+    written_text,
   );
   let list = g_openers_unbeliever();
   let unbeliever_lines = g_openers_lines(list);
@@ -112,6 +119,13 @@ export function g_arc_prompt(
   ("THE BAN NAMES WHO IT MEANS NOW, because as written it took away somebody the openers ask about. It said only 'no other townspeople - this person knows none of them', while one of the three doors to a believer asks how ministering to their NEIGHBOUR is going. A person whose profile gives them a husband and children can send those turns through their household; one dealt single and childless has nobody left, and the only way to answer is to invent the person the line just forbade.");
   ("What the ban was ever protecting is the people at the plants. Each of those is written by a call that never sees this one, so this person saying what another of them believes can contradict that person's own arc with nothing to catch it. Somebody the person knows who is at no plant cannot collide with anything, because no other arc knows they exist - so the ban is now spelled as the people at a plant, and household, family and friends are allowed out loud beside it.");
   ("It also asks for nothing new. The line above it already wants an answer plain to somebody who has never read the Bible, and an answer turning on one word's precise sense already fails that - so this says out loud what the fit test was already asking for.");
+  ("The section carries its OWN blank line above and below it, and is one empty entry when there is nothing written. Written as an ordinary entry between two blank ones, an empty section would print two blank lines running - which is the shape a reader takes for a section that failed to render rather than one that was correctly left out.");
+  let written_said = "";
+  let written_none = text_empty_is(written_text);
+  let written_any = not(written_none);
+  if (written_any) {
+    written_said = list_join_newline(["", written_text, ""]);
+  }
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
@@ -146,7 +160,7 @@ export function g_arc_prompt(
     "Every pronoun must be unmistakable, with whoever or whatever it stands for named in the same sentence. The player reads one line at a time and has nobody to ask who was meant.",
     "Where a passage speaks in an image, what the person says connects to what that passage plainly says, and never to what the image suggests anywhere else.",
     "What the person says should rely on what the passage plainly means, never on the precise sense of a single word if that sense in English disagrees with the Greek/Hebrew/Aramaic meaning.",
-    "",
+    written_said,
     "LENGTH",
     joined9,
     "This is a target, not a quota. Turns following from/relevant to the arc matter more than reaching the count.",

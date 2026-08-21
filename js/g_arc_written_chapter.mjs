@@ -1,5 +1,4 @@
-import { local_function_path_json } from "./local_function_path_json.mjs";
-import { g_arc_write } from "./g_arc_write.mjs";
+import { g_arc_write_path } from "./g_arc_write_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
