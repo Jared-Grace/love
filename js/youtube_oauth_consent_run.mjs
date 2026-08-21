@@ -31,7 +31,8 @@ export async function youtube_oauth_consent_run() {
   }
   let token = await youtube_oauth_token_ask(code);
   let refresh_token = property_get_or_null(token, "refresh_token");
-  let lasting = not(null_is(refresh_token));
+  let b = null_is(refresh_token);
+  let lasting = not(b);
   let file_path = youtube_oauth_token_path();
   await file_write_json(file_path, token);
   let r = {

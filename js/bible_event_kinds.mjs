@@ -122,6 +122,37 @@ export function bible_event_kinds() {
       description:
         "A person declares their own strength or their own vengeance.",
     },
+    {
+      name: "law",
+      description:
+        "A rule is laid down that binds after the moment ends and is addressed to whoever comes under it, rather than to one person about one thing. Kept apart from command, which is one person told one thing, and from covenant, which is sworn between two parties.",
+    },
+    {
+      name: "obedience",
+      description:
+        "A command given in an earlier event is carried out here, as its own event. Where the telling and the doing are one scene, command already covers it; this word is for where the text separates them, and makes the doing the thing being reported.",
+    },
+    {
+      name: "presence",
+      description:
+        "God comes to be with a people, or goes with them, or withdraws from them. Kept apart from revelation, which is about what is made KNOWN; this is about who is THERE.",
+    },
+    {
+      name: "grumbling",
+      description:
+        "A people or a person accuses the one who delivered them of having brought them into harm. Not transgression, because the text usually answers it with provision rather than with judgment.",
+    },
+    {
+      name: "hardening",
+      description:
+        "A heart is set against a word and will not turn - whether the text says the man hardened it or that God hardened it. It is one kind because Scripture uses both sayings of the same Pharaoh.",
+    },
+    {
+      name: "consecration",
+      description:
+        "A person, a day, or a thing is set apart for God and so taken out of ordinary use. Kept apart from offering, where the thing is handed over and gone.",
+    },
   ];
+  ("THE SIX WORDS AFTER boast WERE ADDED BY EXODUS, and each one is a finding rather than a tidying. Genesis needed no word for a block of law, none for a doing reported apart from its telling, none for God dwelling with a people, none for a rescued people accusing their rescuer, none for a will that will not turn, and none for a thing set apart. Their absence from Genesis is as much a reading of Genesis as their presence here is of Exodus.");
   return kinds;
 }
