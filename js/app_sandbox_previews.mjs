@@ -38,6 +38,11 @@ export function app_sandbox_previews() {
     let r7 = m.bible_dream_trace_preview;
     return r7;
   }
+  async function dream_prison_load() {
+    let m = await import("./bible_dream_prison_trace_preview.mjs");
+    let r8 = m.bible_dream_prison_trace_preview;
+    return r8;
+  }
   let previews = {
     spinner_preview: spinner_load,
     week_calendar: week_calendar_load,
@@ -46,6 +51,7 @@ export function app_sandbox_previews() {
     song_image_audit: song_image_audit_load,
     second_takes: second_takes_load,
     dream_trace: dream_trace_load,
+    dream_prison: dream_prison_load,
   };
   return previews;
 }
