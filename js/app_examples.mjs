@@ -59,7 +59,7 @@ export async function app_examples(context) {
     } else {
       examples_menu_dom(page, examples, select);
     }
-    ("render() clears root each time, so re-add the contact button here to keep it present on every view");
+    ("render() clears root each time, so re-add the foot of the page here to keep it present on every view");
     app_shared_footer(page);
   }
   render();
