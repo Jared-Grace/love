@@ -4,7 +4,7 @@ import { list_size } from "./list_size.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_div_map_style_rows(div_map, rows) {
+export function app_shared_game_div_map_style_rows(div_map, rows) {
   arguments_assert(arguments, 2);
   ("Lays a map's grid out to the shape of the rows handed in - one grid column per tile");
   ("across and one grid row per tile down.");
