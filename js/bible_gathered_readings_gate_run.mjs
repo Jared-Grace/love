@@ -1,21 +1,16 @@
+import { list_repeated } from "./list_repeated.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { bible_event_reading_kinds } from "./bible_event_reading_kinds.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-import { list_filter_size } from "./list_filter_size.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { bible_gathered_events_all } from "./bible_gathered_events_all.mjs";
 import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
 import { bible_event_kinds } from "./bible_event_kinds.mjs";
 import { bible_event_key } from "./bible_event_key.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
-import { each } from "./each.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 export async function bible_gathered_readings_gate_run() {
@@ -33,35 +28,11 @@ export async function bible_gathered_readings_gate_run() {
     hint: "no readings of gathered Bible events were found at all, so this gate compared nothing; either every readings function has been removed or the prefix the finder looks for has moved",
   });
   let event_keys = list_map(events, bible_event_key);
-  let event_keys_unique = list_unique(event_keys);
-  let keys_count = list_size(event_keys);
-  let unique_count = list_size(event_keys_unique);
-  let keys_all_unique = equal(keys_count, unique_count);
-  let duplicated = [];
-  if (not(keys_all_unique)) {
-    function key_duplicated_is(key) {
-      function same_is(other) {
-        let same = equal(other, key);
-        return same;
-      }
-      let left = list_filter_size(event_keys, same_is);
-      let duplicate = equal_not(left, 1);
-      return duplicate;
-    }
-    let repeated = list_filter(event_keys_unique, key_duplicated_is);
-    function each_repeated(key) {
-      list_add(duplicated, key);
-    }
-    each(repeated, each_repeated);
-  }
+  let duplicated = list_repeated(event_keys);
   list_empty_is_assert_json(duplicated, {
     hint: "two gathered events point at exactly the same verses, so one key names both and a reading cannot say which it is about; the same verses were gathered twice under two titles",
   });
-  function reading_key(reading) {
-    let key = property_get(reading, "key");
-    return key;
-  }
-  let reading_keys = list_map(readings, reading_key);
+  let reading_keys = list_map_property(readings, "key");
   function event_key_unread_is(key) {
     let read = list_includes(reading_keys, key);
     return read;
@@ -78,17 +49,9 @@ export async function bible_gathered_readings_gate_run() {
   list_empty_is_assert_json(stranded, {
     hint: "a reading names verses that no gathered event points at; either the event was re-cut and its key moved, or the key was mistyped - compare it against the gathered span for that chapter",
   });
-  function kind_name(kind) {
-    let name = property_get(kind, "name");
-    return name;
-  }
   let list = bible_event_kinds();
-  let declared = list_map(list, kind_name);
-  function kinds_of(reading) {
-    let kinds = property_get(reading, "kinds");
-    return kinds;
-  }
-  let list2 = list_map_concat_multiple(readings, kinds_of);
+  let declared = list_map_property(list, "name");
+  let list2 = list_map_concat_multiple(readings, bible_event_reading_kinds);
   let kinds_used = list_unique(list2);
   function kind_declared_is(kind) {
     let is = list_includes(declared, kind);
