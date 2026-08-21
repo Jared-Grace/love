@@ -14,10 +14,10 @@ export function app_index_generic(context, entries) {
   ("A link also gives a reader the choice this page cannot give them: held down rather than tapped, a browser offers to open it here, or beside this, or to keep the address. A button offers none of those, whichever way its lambda was written.");
   function lambda3(entry) {
     let fn = property_get(entry, "app_fn");
-    let without = app_shared_name_prefix_without(fn);
+    let label = app_index_label(fn);
     let url = window_app_url_generic(app_shared_name_prefix_without, fn, hash);
     let text = property_get(entry, "text");
-    app_index_card_link(root, without, text, url);
+    app_index_card_link(root, label, text, url);
   }
   each(entries, lambda3);
 }
