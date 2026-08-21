@@ -1,3 +1,5 @@
+import { app_index_emoji } from "./app_index_emoji.mjs";
+import { app_index_label_generic } from "./app_index_label_generic.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
 import { window_app_url_generic } from "./window_app_url_generic.mjs";
 import { app_index_card_link } from "./app_index_card_link.mjs";
@@ -14,7 +16,8 @@ export function app_index_dev_apps_all_card(root) {
     a_name,
     hash,
   );
-  let label = "All apps";
+  let emoji = app_index_emoji(a_name);
+  let label = app_index_label_generic(emoji, "All apps");
   let text =
     "Every app there is, built from the apps themselves rather than chosen - the way to reach one that is still being written";
   app_index_card_link(root, label, text, url);
