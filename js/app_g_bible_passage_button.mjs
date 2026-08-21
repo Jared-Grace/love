@@ -1,6 +1,6 @@
 import { ebible_parts_chapter_code_to_reference } from "./ebible_parts_chapter_code_to_reference.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bible_passage_button_direct } from "./app_g_bible_passage_button_direct.mjs";
+import { app_shared_bible_passage_button_direct } from "./app_shared_bible_passage_button_direct.mjs";
 export function app_g_bible_passage_button(
   passage,
   chapter_code,
@@ -16,7 +16,7 @@ export function app_g_bible_passage_button(
     verse_numbers,
   );
   let verse_text = property_get(passage, "text");
-  let b = app_g_bible_passage_button_direct(
+  let b = app_shared_bible_passage_button_direct(
     reference,
     verse_text,
     overlay,

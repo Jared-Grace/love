@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { invoke_once } from "./invoke_once.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bible_passage_button_direct } from "./app_g_bible_passage_button_direct.mjs";
+import { app_shared_bible_passage_button_direct } from "./app_shared_bible_passage_button_direct.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_g_gospel_build_wrong(
@@ -23,7 +23,7 @@ export function app_g_gospel_build_wrong(
   }
   let reference = property_get(verse_wrong, "reference");
   let verse_text = property_get(verse_wrong, "text");
-  let b = app_g_bible_passage_button_direct(
+  let b = app_shared_bible_passage_button_direct(
     reference,
     verse_text,
     container,
