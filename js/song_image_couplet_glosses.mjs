@@ -247,7 +247,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 1,
+      kept: 2,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",
