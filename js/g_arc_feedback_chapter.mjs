@@ -1,3 +1,8 @@
+import { g_arc_feedback_write_path } from "./g_arc_feedback_write_path.mjs";
+import { file_exists } from "./file_exists.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
 export async function g_arc_feedback_chapter(chapter_code) {
   "Every note standing against one chapter's arcs, in the order they were made.";
   "$plain chapter_code";
