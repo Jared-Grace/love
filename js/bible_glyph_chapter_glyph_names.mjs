@@ -1,3 +1,7 @@
+import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { equal } from "./equal.mjs";
 export function bible_glyph_chapter_glyph_names(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter, spelled as the chapter codes spell it. It names a chapter to look up and nothing that runs.";
