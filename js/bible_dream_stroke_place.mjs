@@ -1,3 +1,4 @@
+import { bible_dream_corridor_width } from "./bible_dream_corridor_width.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { less_than } from "./less_than.mjs";
@@ -22,7 +23,9 @@ export function bible_dream_stroke_place(drawing, stroke) {
   html_attribute_set(guide, "fill", "none");
   let guide_color = app_shared_color_gray_dark();
   html_attribute_set(guide, "stroke", guide_color);
-  html_attribute_set(guide, "stroke-width", String(bible_dream_corridor_width()));
+  let result = bible_dream_corridor_width();
+  let value = String(result);
+  html_attribute_set(guide, "stroke-width", value);
   html_attribute_set(guide, "stroke-linecap", "round");
   html_attribute_set(guide, "stroke-linejoin", "round");
   let marks = html_element_svg(group, "g");

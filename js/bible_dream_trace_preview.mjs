@@ -1,3 +1,5 @@
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
+import { bible_dream_corridor_tolerance_squared } from "./bible_dream_corridor_tolerance_squared.mjs";
 import { bible_dream_hand_nearness } from "./bible_dream_hand_nearness.mjs";
 import { bible_dream_hand_mark_add } from "./bible_dream_hand_mark_add.mjs";
 import { bible_dream_stroke_counters_show } from "./bible_dream_stroke_counters_show.mjs";
@@ -31,6 +33,7 @@ export function bible_dream_trace_preview() {
   "The order is the freedom here and it is a real one. Nothing enforces the Nile before the reeds, or the fat cows before the gaunt ones, and drawing the gaunt ones first tells Pharaoh a different dream out of the same strokes. Within a stroke there is no order at all: put your hand down anywhere on it and go either way.";
   "Two things answer the wandering rather than only punishing it. The hand's own line stays on the page, thinning and fading the further it went from what it was given, so an imprecise trace leaves a real drawing behind it and not a blank. And a finished shape is answered by ornament read out of its own bumps, written in a moment later at about the speed of a hand, so that something else is plainly at work beside the player. Neither adds a line the passage did not give: the first is the player's own line and the second is a reply to the shape, and only the ink between them is Scripture's.";
   "The slips are the second half of the answer. A stroke can be finished having left its corridor a dozen times, and the count says so, because NUM12:8 puts a plain word above a riddle and a shape drawn badly is what a riddle is made of. Nothing yet DOES anything with that number - what it costs is a design decision and this is not the file to make it in.";
+  "The drawing gets the whole width of the page and the words get a reading column that stays at the top while the page scrolls under it. The words were what set the width before, and that made every shape a thumbnail: a cow about a finger wide has bumps too small to be answered by anything, so the ornament was being built and then made invisible by the layout. Reading is the thing that needs a narrow measure and drawing is the thing that needs room, and they were sharing one.";
   let scene = bible_dream_pharaoh_strokes();
   let root = html_body_div_page_dark();
   let column = html_div(root);
@@ -39,7 +42,8 @@ export function bible_dream_trace_preview() {
   html_style_set(column, "position", "sticky");
   html_style_set(column, "top", "0");
   html_style_set(column, "padding-bottom", "8px");
-  html_style_set(column, "background", app_shared_color_page_dark());
+  let style_value = app_shared_color_page_dark();
+  html_style_set(column, "background", style_value);
   let heading = html_div(column);
   html_style_font_size(heading, "22px");
   html_text_set(heading, scene.reference + " — the dream you are sent to draw");
@@ -50,7 +54,7 @@ export function bible_dream_trace_preview() {
   let quiet = app_shared_color_gray_light();
   html_style_set(meaning, "color", quiet);
   html_text_set(meaning, scene.meaning);
-  let readout = html_div(root);
+  let readout = html_div(column);
   html_style_margin_top(readout, "10px");
   html_style_font_size(readout, "14px");
   let drawing = html_element_svg(root, "svg");
