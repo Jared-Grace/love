@@ -38,7 +38,7 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "ק֣וֹל יְ֭הוָה שֹׁבֵ֣ר אֲרָזִ֑ים וַיְשַׁבֵּ֥ר יְ֝הוָ֗ה אֶת־ אַרְזֵ֥י הַלְּבָנֽוֹן׃",
         english:
-          "The voice of the LORD breaks the cedars shatters the LORD - the cedars of Lebanon",
+          "The voice of the LORD breaks the cedars shatters the LORD the cedars of Lebanon",
       },
       {
         verse_number: 6,
@@ -78,7 +78,7 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "יְֽהוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהוָ֓ה׀ יְבָרֵ֖ךְ אֶת־ עַמּ֣וֹ בַשָּׁלֽוֹם׃",
         english:
-          "The LORD strength His people gives the LORD blesses - His people with peace",
+          "The LORD strength His people gives the LORD blesses His people with peace",
       },
     ],
   };
