@@ -1,6 +1,6 @@
 import { app_g_player_npc_swap_if } from "./app_g_player_npc_swap_if.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
-import { app_g_crowd_part } from "./app_g_crowd_part.mjs";
+import { app_shared_game_crowd_part } from "./app_shared_game_crowd_part.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest_crowd.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -51,7 +51,7 @@ export async function app_g_bless_walk(
   ("Nobody is held still, because in this game a tap on a person is a prayer and never a");
   ("walk. The one who must not be shuffled out of reach is whoever was tapped, and here");
   ("that is nobody - the walk is always to open ground.");
-  app_g_crowd_part(world, path, null);
+  app_shared_game_crowd_part(world, path, null);
   ("The way is then HELD for as long as the walk lasts: everybody who stepped off it is");
   ("kept off it, and nobody new may wander onto it.");
   ("Parting alone is a single moment and a walk is many. The lane opens, and over the");
