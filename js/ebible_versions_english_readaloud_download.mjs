@@ -1,3 +1,8 @@
+import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
+import { ebible_versions_readaloud_missing } from "./ebible_versions_readaloud_missing.mjs";
+import { list_map_async_record_try } from "./list_map_async_record_try.mjs";
+import { ebible_version_readaloud_download } from "./ebible_version_readaloud_download.mjs";
+import { list_size } from "./list_size.mjs";
 export async function ebible_versions_english_readaloud_download() {
   "Fetch the read-aloud edition of every English bible upstream offers that has not got one on this disk yet.";
   "The search index walks the English bibles that can be downloaded, and it cuts each chapter into verses out of the read-aloud edition. So a bible whose pages are all here and whose read-aloud half is not carries not one word into the index, and says nothing about it: the walk opens every chapter, has nothing to lay against the marks, and passes over the lot. Twenty-seven were in that state.";
