@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
+import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
   "a run of people all shuffle one tile along the run they were given, and the tile at the head of it is left empty.";
   "The one furthest out goes first, into the free tile the run was built to reach, and each one after that steps into the tile just vacated by the one beyond them. Going in the other order would ask somebody to step onto a tile that is still occupied.";
@@ -26,7 +26,7 @@ export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
     property_set(npc_index, key_next, npc);
     let wait = g_ripple_delay_seconds(index);
     let waited = add(delay, wait);
-    app_g_npc_move(npc, to, waited);
+    app_shared_game_npc_move(npc, to, waited);
   }
   each_index(outward, shift);
 }
