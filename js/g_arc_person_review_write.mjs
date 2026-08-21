@@ -1,3 +1,4 @@
+import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_arc_write_path } from "./g_arc_write_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -27,12 +28,13 @@ export async function g_arc_person_review_write(chapter_code, index) {
   let found = g_arc_chapter_person_or_null(written, wanted);
   let missing = equal(found, null);
   let there = not(missing);
+  let f_name = fn_name("g_arc_written_gate_run");
   assert_json(there, {
     chapter_code,
     index: wanted,
     hint: text_combine_multiple([
       "no person of that number is written in this chapter - ask ",
-      fn_name("g_arc_written_gate_run"),
+      f_name,
       " how many there are",
     ]),
   });
