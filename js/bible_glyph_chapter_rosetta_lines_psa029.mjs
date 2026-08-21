@@ -25,13 +25,13 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "ק֥וֹל יְהוָ֗ה עַל־ הַ֫מָּ֥יִם אֵֽל־ הַכָּב֥וֹד הִרְעִ֑ים יְ֝הוָ֗ה עַל־ מַ֥יִם רַבִּֽים׃",
         english:
-          "The voice of the LORD is over the waters the God of glory thunders the LORD [is heard] over waters many",
+          "The voice of the LORD is over the waters the God of glory thunders the LORD is heard over waters many",
       },
       {
         verse_number: 4,
         original: "קוֹל־ יְהוָ֥ה בַּכֹּ֑חַ ק֥וֹל יְ֝הוָ֗ה בֶּהָדָֽר׃",
         english:
-          "The voice of the LORD [is] powerful the voice of the LORD [is] majestic",
+          "The voice of the LORD is powerful the voice of the LORD is majestic",
       },
       {
         verse_number: 5,
