@@ -355,7 +355,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One steep mountain of plain grey stone standing alone, its two straight sides rising from the bottom corners of the window to one sharp peak, with one thick cloud of violet glass lying across the peak and hiding the top of it, drawn very large so that the mountain reaches almost to both sides of the window and almost to the top of it",
+        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the window upward, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, drawn very large so that the mountain reaches almost to both sides of the window and the violet band runs from one side of the window to the other",
       symbol_ref: "Exodus 19:18, Hebrews 12:18-21",
       same_as: 0,
     },
