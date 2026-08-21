@@ -3,7 +3,7 @@ import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_emoji_glow_apply } from "./app_g_emoji_glow_apply.mjs";
+import { app_shared_game_emoji_glow_apply } from "./app_shared_game_emoji_glow_apply.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -35,7 +35,7 @@ export function app_g_bless_glows(glows, view) {
       background: background,
       "pointer-events": "none",
     });
-    app_g_emoji_glow_apply(halo);
+    app_shared_game_emoji_glow_apply(halo);
   }
   each(people, person_light);
 }
