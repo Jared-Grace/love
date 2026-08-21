@@ -30,6 +30,7 @@ export async function qa_app_commit_gate_run_at(search, commit) {
     app: search,
     commit,
     remembered,
+    moved: property_get(at, "moved"),
     filed: property_get(at, "filed"),
     reach: reach.length,
     deployable: clear,
