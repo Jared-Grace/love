@@ -525,6 +525,7 @@ export function qa_gates() {
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
     bible_glyph_chapters_rosetta_lines_gate_run,
+    bible_glyph_chapters_language_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
