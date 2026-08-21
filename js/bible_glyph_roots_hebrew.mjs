@@ -13,6 +13,8 @@ export function bible_glyph_roots_hebrew() {
   "TWO OF THOSE FOUR WERE BOUGHT LATER THE SAME DAY AND TWO COULD NOT BE, and which two is decided by the artwork set rather than by anything about the Hebrew. Lechem and chereb both measure clean - the interlinear says bread or food in every wording it gives lechem, and says sword in every wording it gives chereb - and the artwork set draws a loaf and draws a blade, so both are seated. Mizbeach and kohen measure cleaner still, the altar being glossed the altar a hundred and twenty seven times and the priest the priest two hundred and five, and neither can be seated at all, because there is no altar and no priest in the artwork set and none in the emoji either.";
   "AND NEITHER OF THEM COMPOSES OUT OF WHAT IS ALREADY DRAWN, which is the first thing that was tried once groups of glyphs were allowed. An altar wants the meat and the fire, and the fire in this table is God, so meat beside fire would read as meat God rather than as a place of burning. A priest wants the person and the oil, and a person marked with oil is an anointed one, which is the Messiah - the largest wrong claim available anywhere in this Bible. A group multiplies what is honest and it cannot manufacture an honest mark out of two wrong ones.";
   "SO THE TWO OF THEM ARE THE FIRST WORDS WAITING ON A PICTURE BEING DRAWN RATHER THAN FOUND. Every glyph here so far was borrowed from a set somebody else made, which is cheap and has a ceiling, and the altar and the priest are the ceiling: they are among the commonest concrete nouns in the law and the world outside has no picture of either. This Bible ships its glyphs as images, so the answer is to draw two, and that is a different kind of work from every seat above it.";
+  "AND THEY ARE SEATED ANYWAY, WAITING OR NOT, which is the change that let this table hold a word nothing draws. A glyph's character may be an English word instead of a picture; where it is, the glyph belongs to the drawn text alone and the emoji text prints the English - which is precisely what the emoji text was already doing for these two when they were not seated at all. So seating them costs nothing, changes not one character of the plain text, and means the drawn text finishes the moment somebody draws an altar rather than needing every verse re-authored then.";
+  "WHICH TURNS TWO REFUSALS INTO TWO COMMISSIONS. The note above was written when a word with no picture had nowhere to live, so measuring these two and failing to buy them was the end of it; now the failure is recorded in the table itself, in the place a reader of the table will meet it, and the missing thing is one file each rather than a decision. A gap that is seated and blank asks a question. A gap that is absent from the table does not exist to be asked.";
   "THE COVENANT NAME WAS BLANK THREE HUNDRED AND SIX TIMES AND NOBODY HAD NOTICED. It carries two Strong's numbers rather than one: the ordinary 3068, and 3069 for the same four letters wherever they stand behind Adonai, where the reader says God instead of LORD and the interlinear writes GOD in capitals to say so. Only 3068 was seated, so every Lord GOD in the prophets drew the crown and left the name itself in English - and the prophets are where that phrase lives, which is why eleven chapters went by without it showing.";
   "IT IS THE SAME NAME AND IT GETS THE SAME MARK, and there was never a decision to make here. Two numbers over one word is a fact about how the interlinear counts vowel points, not about what the word means, and this table has always drawn the word. What the two numbers show is that a table keyed by number can go blank in a way nothing measures: the survey counted those three hundred and six words as undrawable vocabulary, which was true of the number and false of the name.";
   "THE TURNING WAS BOUGHT BY A CHAPTER RATHER THAN BY A SURVEY, and that is the second time in a day. The four nouns were measured and chosen ahead of authoring; shub was found by authoring the thirty third of Ezekiel and discovering that the one word the chapter exists to say - turn, turn from your evil ways - was arriving in English between two drawn words. No count would have raised it, because it was never near the top of any list of undrawable words. A chapter read end to end is a different instrument from a survey, and it finds a different kind of hole.";
@@ -723,6 +725,26 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "2719",
           glyph: "sword",
+        },
+      ],
+    },
+    {
+      root: "mizbeach",
+      gloss: "altar",
+      words: [
+        {
+          strong: "4196",
+          glyph: "altar",
+        },
+      ],
+    },
+    {
+      root: "kohen",
+      gloss: "priest",
+      words: [
+        {
+          strong: "3548",
+          glyph: "priest",
         },
       ],
     },

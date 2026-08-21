@@ -1,6 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_privacy_policy_paragraphs } from "./app_shared_privacy_policy_paragraphs.mjs";
+import { app_shared_privacy_policy_part_show } from "./app_shared_privacy_policy_part_show.mjs";
+import { app_shared_privacy_policy_updated } from "./app_shared_privacy_policy_updated.mjs";
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
+import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { html_p } from "./html_p.mjs";
 import { html_p_text } from "./html_p_text.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_bold } from "./html_bold.mjs";
 export function app_shared_privacy_policy_show(root) {
   "The privacy policy written into whatever box it is handed, heading and all.";

@@ -14,11 +14,12 @@ export async function gloss_parsing_sentence_gate_run() {
   let unphrased = await gloss_parsing_words_unphrased(testament_name);
   let unphrased_count = list_size(unphrased);
   let b = not(unphrased_count);
+  let f_name = fn_name("gloss_parsing_phrases");
   assert_json(b, {
     unphrased,
     hint: text_combine_multiple([
       "every word the New Testament's parsings are built out of needs an entry in ",
-      fn_name("gloss_parsing_phrases"),
+      f_name,
       "; add one for each word listed here",
     ]),
   });
@@ -26,12 +27,20 @@ export async function gloss_parsing_sentence_gate_run() {
   let unsaid = list_filter_property(ranked, "sentence", null);
   let unsaid_count = list_size(unsaid);
   let b2 = not(unsaid_count);
+  let f_name2 = fn_name("gloss_parsing_sentence");
   assert_json(b2, {
     unsaid,
     hint: text_combine_multiple([
       "every parsing in the New Testament must compose into a sentence; these composed into nothing, which means ",
-      fn_name("gloss_parsing_sentence"),
+      f_name2,
       " found no kind to build a head out of",
     ]),
   });
+  ("HOW MANY PARSINGS WERE WALKED TRAVELS OUT WITH THE VERDICT, because both checks here pass by finding nothing and finding nothing is also what they say when the reading underneath them has stopped reaching the text. A parsing the source starts using would then go on being unexplained forever with nobody told, which is the one failure this gate exists to prevent.");
+  ("One count answers for both checks because both read one source. The words are the parsings split apart, so a testament that came back empty empties the word list and the parsing list together - and this number is the one that falls while the two verdicts stay green.");
+  let parsings = list_size(ranked);
+  let r = {
+    parsings,
+  };
+  return r;
 }
