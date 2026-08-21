@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
+import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 export function app_g_bless_person_step(world, person) {
   arguments_assert(arguments, 2);
@@ -52,5 +52,5 @@ export function app_g_bless_person_step(world, person) {
     property_set(person, "heading", back);
   }
   let to = property_get(tiles, way);
-  app_g_npc_move(person, to, 0);
+  app_shared_game_npc_move(person, to, 0);
 }
