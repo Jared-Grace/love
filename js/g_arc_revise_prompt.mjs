@@ -25,14 +25,7 @@ export async function g_arc_revise_prompt(chapter_code, index) {
   "THE TURN COUNT MUST NOT MOVE, and that is stated rather than hoped for. Every note is addressed by a turn number, so a reviser that splits one turn into two silently repoints every note filed after it - at a line nobody faulted, with nothing going red.";
   let arcs = await g_arc_written_chapter(chapter_code);
   let wanted = number_from_text(index);
-  let found = null;
-  for (let entry of arcs) {
-    let entry_index = property_get(entry, "index");
-    let same = equal(entry_index, wanted);
-    if (same) {
-      found = property_get(entry, "arc");
-    }
-  }
+  let found = g_arc_chapter_person_or_null(arcs, wanted);
   let missing = equal(found, null);
   let there = not(missing);
   assert_json(there, {
@@ -62,7 +55,7 @@ export async function g_arc_revise_prompt(chapter_code, index) {
     let number = property_get(line, "number");
     let field = property_get(line, "field");
     let text = property_get(line, "text");
-    let address = list_join_dot([number, field]);
+    let address = property_get(line, "address");
     let shown = list_join_space([address, text]);
     list_add(said, shown);
     let faulted = false;
