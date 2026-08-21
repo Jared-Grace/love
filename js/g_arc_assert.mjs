@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple_arc } from "./g_openers_disciple_arc.mjs";
@@ -95,8 +96,7 @@ export function g_arc_assert(arc, passages) {
       });
       let changed = equal_not(opener, opener_last);
       if (changed) {
-        let repeated = list_includes(opened, opener);
-        let b = not(repeated);
+        let b = list_includes_not(opened, opener);
         assert_json(b, {
           opener,
           conversation_number,
