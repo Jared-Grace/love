@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { bible_event_reading_function_names } from "./bible_event_reading_function_names.mjs";
 import { bible_gathered_event_function_names } from "./bible_gathered_event_function_names.mjs";
 import { function_names_reaching } from "./function_names_reaching.mjs";
@@ -20,12 +19,13 @@ export async function bible_gathered_finders_gate_run() {
   list_empty_not_is_assert_json(events_names, {
     hint: "no gathered event functions were found by their prefix, so this gate checked nothing; either every gathered span has been removed or the prefix the finder looks for has moved",
   });
-  let f_name_target = fn_name("bible_event_reading_function_names");
+  ("Each finder is named off the function itself rather than spelled, because a spelling here would be read as an accusation. What a failed gate says is scraped for function names, and every name found is held out of a deployment - so the one call that turns a name into a word belongs under a hint, where the reader drops it, and nowhere else.");
+  let f_name_target = bible_event_reading_function_names.name;
   let readings_offenders = await function_names_reaching(
     readings_names,
     f_name_target,
   );
-  let f_name_target2 = fn_name("bible_gathered_event_function_names");
+  let f_name_target2 = bible_gathered_event_function_names.name;
   let events_offenders = await function_names_reaching(
     events_names,
     f_name_target2,
