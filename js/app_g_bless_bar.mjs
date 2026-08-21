@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { g_z } from "./g_z.mjs";
 export function app_g_bless_bar(container) {
   arguments_assert(arguments, 1);
@@ -23,6 +23,6 @@ export function app_g_bless_bar(container) {
     bottom: "0",
     "z-index": g_z("click"),
   });
-  let bar = app_g_container_player(pinned);
+  let bar = app_shared_game_container_player(pinned);
   return bar;
 }

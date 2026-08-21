@@ -4,7 +4,7 @@ import { g_prayer_prompt_more } from "./g_prayer_prompt_more.mjs";
 import { petitions_choose } from "./petitions_choose.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_prayer_menu_overlay } from "./app_g_prayer_menu_overlay.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { g_prayer_petition } from "./g_prayer_petition.mjs";
@@ -51,7 +51,7 @@ export function app_g_pray_turn(prayer_texts, on_part, on_done) {
       on_done();
       return;
     }
-    let container = app_g_container_player(overlay);
+    let container = app_shared_game_container_player(overlay);
     let prompt = g_prayer_prompt();
     if (prayed.done) {
       prompt = g_prayer_prompt_more();
