@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_exists_equals } from "./property_exists_equals.mjs";
-
 export function webpack_watch_building_count(building) {
   "$plain building";
   "How many apps the watcher is building at this moment, read off the flags it already keeps.";

@@ -18,6 +18,7 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
   let chapter = bible_glyph_chapter(chapter_code);
   let lookup = bible_glyph_characters_lookup(traditions);
   let lines = bible_glyph_chapter_rosetta_lines(chapter_code);
+  let tagalog_verses = bible_glyph_chapter_tagalog_verses(chapter_code);
   let rows = [];
   for (let verse of chapter.verses) {
     let known = list_find_property_or_null(
@@ -30,13 +31,31 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
       continue;
     }
     let glyphs = bible_glyph_verse_draw(verse.words, lookup);
+    let tagalog = bible_glyph_verse_tagalog_text(
+      tagalog_verses,
+      verse.verse_number,
+    );
     let row = {
       verse_number: verse.verse_number,
       glyphs,
       original: known.original,
       english: known.english,
+      tagalog,
     };
     list_add(rows, row);
   }
   return rows;
+  function bible_glyph_verse_tagalog_text(verses, verse_number) {
+    "one verse's plain Tagalog, or empty text where this chapter or this verse has none.";
+    let found = list_find_property_or_null(
+      verses,
+      "verse_number",
+      verse_number,
+    );
+    let none = null_is(found);
+    if (none) {
+      return "";
+    }
+    return found.text;
+  }
 }
