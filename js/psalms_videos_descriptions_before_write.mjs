@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { date_now_file } from "./date_now_file.mjs";
+import { psalms_videos_descriptions_before_path } from "./psalms_videos_descriptions_before_path.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { equal } from "./equal.mjs";
 export async function psalms_videos_descriptions_before_write(read) {
   "Keeps a copy of every song already carrying words of its own, with the moment it was read and the video it was read from, so that a run which writes over them can be undone by hand.";
   "NOTHING ELSE KEEPS A COPY. The writing goes straight to youtube and youtube keeps no earlier version of a description; once the words are replaced the old ones exist nowhere. Adding words to an empty box needs no such copy, and that is the ordinary case here, but the ordinary case is not what a backup is for.";

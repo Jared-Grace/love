@@ -210,7 +210,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "A dead serpent lying limp and flat along the ground with its mouth shut and no part of it raised up, its flattened head pinned beneath the foot of a plain brown wooden post standing upright on it",
+        "A dead snake with no legs and no arms, lying limp and flat along the ground with its mouth shut and no part of it raised up, its flattened head lying under the lower end of a plain brown wooden post that stands upright on it",
       ref: "Genesis 3:15",
       same_as: 0,
     },
