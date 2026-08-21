@@ -1,3 +1,5 @@
+import { bible_dream_drawing_scale } from "./bible_dream_drawing_scale.mjs";
+import { multiply } from "./multiply.mjs";
 import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { bible_dream_corridor_tolerance_squared } from "./bible_dream_corridor_tolerance_squared.mjs";
 import { bible_dream_hand_nearness } from "./bible_dream_hand_nearness.mjs";
@@ -60,6 +62,10 @@ export function bible_dream_trace_preview() {
   let drawing = html_element_svg(root, "svg");
   html_attribute_set(drawing, "viewBox", scene.view_box);
   html_style_set(drawing, "width", "100%");
+  let across = Number(scene.view_box.split(" ")[2]);
+  let right = bible_dream_drawing_scale();
+  let least_wide = multiply(across, right);
+  html_style_set(drawing, "min-width", least_wide + "px");
   html_style_set(drawing, "margin-top", "10px");
   html_style_set(drawing, "touch-action", "none");
   let states = [];
