@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -8,8 +9,6 @@ import { list_filter_size } from "./list_filter_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function bible_event_kind_coverage() {
   "How much of the read corpus each kind of event accounts for, commonest kind first, and how many events are covered once that kind and every commoner one are taken together.";
   "★ THIS IS THE MEASUREMENT THAT ANSWERS HOW MANY MECHANICS THE GAME NEEDS. Build a mechanic per kind and this says what each one buys: the count is how many events it can be used in, and the running total is how much of the book is playable once the first so many are built. Without it the number of mechanics is a guess, and a guess made before reading is the mechanic deciding what Scripture may be.";
@@ -36,8 +35,7 @@ export async function bible_event_kind_coverage() {
         return is;
       }
       let hits = list_filter_size(kinds, chosen_is);
-      let none = equal(hits, 0);
-      let covered = not(none);
+      let covered = equal_not(hits, 0);
       return covered;
     }
     let events_covered = list_filter_size(readings, reading_covered_is);
