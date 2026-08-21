@@ -1,3 +1,4 @@
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -10,10 +11,12 @@ export function html_body_div_page_dark() {
   "The two preview pages on the sandbox app opened with these same six lines each. Standing apart they drift: one gets a lighter ground or a wider margin than the other, and nothing says so, because two pages looking slightly different is not a fault anything can name.";
   arguments_assert(arguments, 0);
   let root = html_body_div();
-  html_style_background(root, app_shared_color_page_dark());
+  let value = app_shared_color_page_dark();
+  html_style_background(root, value);
   html_style_set(root, "color", "#ffffff");
   html_font_set(root, "system-ui, sans-serif");
-  html_style_set(root, "min-height", html_viewport_height_full());
+  let style_value = html_viewport_height_full();
+  html_style_set(root, "min-height", style_value);
   html_style_padding(root, "16px");
   return root;
 }
