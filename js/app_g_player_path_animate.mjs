@@ -16,7 +16,7 @@ import { property_get } from "./property_get.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
-import { app_g_player_center } from "./app_g_player_center.mjs";
+import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 export async function app_g_player_path_animate(
   g,
   player,
@@ -49,7 +49,7 @@ export async function app_g_player_path_animate(
       app_g_day_followers_step(g);
     }
     await app_g_player_move_animate(to, player_img_c);
-    app_g_player_center(to, player_img_c, div_map);
+    app_shared_game_player_center(to, player_img_c, div_map);
     await app_g_day_followers_settle();
     ("written after the step has finished, never before it, so a walk cut short leaves this naming the last tile the player really stood on");
     arrived = to;
