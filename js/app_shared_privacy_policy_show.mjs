@@ -21,7 +21,9 @@ export function app_shared_privacy_policy_show(root) {
       app_shared_privacy_policy_part_show(paragraph, part);
     }
   }
-  let updated = html_p_text(root, app_shared_privacy_policy_updated());
+  let text = app_shared_privacy_policy_updated();
+  let updated = html_p_text(root, text);
   app_shared_text_deemphasized(updated);
-  html_style_margin_top(updated, app_shared_spaced_large_gap());
+  let value = app_shared_spaced_large_gap();
+  html_style_margin_top(updated, value);
 }
