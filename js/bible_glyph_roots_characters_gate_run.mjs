@@ -1,3 +1,4 @@
+import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { property_set } from "./property_set.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
@@ -15,6 +16,7 @@ export function bible_glyph_roots_characters_gate_run() {
   "IT WALKS THE TESTAMENTS RATHER THAN NAMING THE TABLES, so a third table added later is covered without this being edited. The testament list is the same one the book divisions are grouped by, and the one place that says which table belongs to which testament answers for each name in turn - so this gate cannot fall behind the tables it is checking.";
   "IT PASSES AT ZERO AND ALWAYS SHOULD. Both tables were clean the day it was written, so this is a door shut before anything got in rather than a queue of work; there is no baseline to ratchet and none is wanted. A gate that starts at zero is the only kind that can honestly refuse the first offender.";
   "IT COUNTS WHAT IT WALKED and hands the count back, because a gate that returns nothing on a clean run reads the same whether it swept two tables or none.";
+  "A SEATED FIELD MAY NAME A GROUP RATHER THAN ONE PICTURE, so each name in it is asked about separately and the count still counts words. A group half seated is the worst version of this fault - one picture draws, the other comes out as a name in angle brackets, and the reader meets half a word - so a report names both the whole field and the one name inside it that is missing.";
   let characters = bible_glyph_characters();
   let known = {};
   for (let character of characters) {
@@ -29,17 +31,20 @@ export function bible_glyph_roots_characters_gate_run() {
     for (let root of roots) {
       for (let word of root.words) {
         walked = add(walked, 1);
-        let drawn = property_exists(known, word.glyph);
-        if (drawn) {
-          continue;
+        for (let name of bible_glyph_group_names(word.glyph)) {
+          let drawn = property_exists(known, name);
+          if (drawn) {
+            continue;
+          }
+          let gap = {
+            testament_name,
+            root: root.root,
+            strong: word.strong,
+            glyph: word.glyph,
+            name,
+          };
+          list_add(missing, gap);
         }
-        let gap = {
-          testament_name,
-          root: root.root,
-          strong: word.strong,
-          glyph: word.glyph,
-        };
-        list_add(missing, gap);
       }
     }
   }

@@ -1,3 +1,4 @@
+import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_arc_answer_passage } from "./g_arc_answer_passage.mjs";
 import { g_passage_reference } from "./g_passage_reference.mjs";
@@ -17,26 +18,20 @@ export function g_arc_review_turn_lines(turn, passages, number) {
   let scripture = property_get(passage, "scripture");
   let marks = g_arc_review_marks();
   let lines = [];
-  let item = text_combine_multiple([
-    number,
-    property_get(marks, "number"),
-    before,
-  ]);
+  let value = property_get(marks, "number");
+  let item = text_combine_multiple([number, value, before]);
   list_add(lines, item);
-  let item2 = text_combine_multiple([
-    property_get(marks, "reference"),
-    reference,
-  ]);
+  let value2 = property_get(marks, "reference");
+  let item2 = text_combine_multiple([value2, reference]);
   list_add(lines, item2);
-  let item3 = text_combine_multiple([
-    property_get(marks, "scripture"),
-    scripture,
-  ]);
+  let value3 = property_get(marks, "scripture");
+  let item3 = text_combine_multiple([value3, scripture]);
   list_add(lines, item3);
   let after = property_get(turn, "after");
   let empty = text_empty_is(after);
   if (not(empty)) {
-    let item4 = text_combine_multiple([property_get(marks, "after"), after]);
+    let value4 = property_get(marks, "after");
+    let item4 = text_combine_multiple([value4, after]);
     list_add(lines, item4);
   }
   list_add(lines, "");
