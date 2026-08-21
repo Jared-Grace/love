@@ -152,7 +152,23 @@ export function bible_event_kinds() {
       description:
         "A person, a day, or a thing is set apart for God and so taken out of ordinary use. Kept apart from offering, where the thing is handed over and gone.",
     },
+    {
+      name: "census",
+      description:
+        "A people, or what a people has, is counted and the number put on record. It is not merely a command obeyed: what the passage reports is the reckoning itself, and the number is the thing said.",
+    },
+    {
+      name: "petition",
+      description:
+        "Someone asks another for something on their OWN behalf - passage through a land, a share in an inheritance, a ruling on their case - and is granted it or refused. Kept apart from intercession, which is pleading for somebody else, and from command, where the asker has standing to compel.",
+    },
+    {
+      name: "cleansing",
+      description:
+        "Someone or something unclean is made clean again and let back among the people. The reverse direction from consecration: that one takes a thing OUT of ordinary use, this one puts a thing back INTO it.",
+    },
   ];
   ("THE SIX WORDS AFTER boast WERE ADDED BY EXODUS, and each one is a finding rather than a tidying. Genesis needed no word for a block of law, none for a doing reported apart from its telling, none for God dwelling with a people, none for a rescued people accusing their rescuer, none for a will that will not turn, and none for a thing set apart. Their absence from Genesis is as much a reading of Genesis as their presence here is of Exodus.");
+  ("THE THREE WORDS AFTER consecration WERE ADDED BY NUMBERS, and the number three is itself the finding. Genesis cost twenty-five words, Exodus cost six more, Numbers cost three. A vocabulary that grew by six again would be runaway and the mechanic count derived from it would mean nothing; one that grew by none would only prove the third book was too like the second. Falling by half is what a vocabulary approaching its size looks like.");
   return kinds;
 }
