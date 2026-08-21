@@ -1,0 +1,26 @@
+import { multiply } from "./multiply.mjs";
+import { html_element_svg } from "./html_element_svg.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
+import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
+export function bible_dream_hand_path_start(state, at, strength) {
+  "Begin a fresh stroke of the hand's own line at a point and at one setting of thickness and brightness, and remember it as the one being grown.";
+  "★ THE HAND'S LINE IS ONE STROKE AND NOT A HEAP OF PIECES, AND THAT IS THE WHOLE REASON THIS EXISTS. Every report of the pointer used to become its own path, half clear, with a round cap at each end. Two of those meet at every joint, so every joint was drawn twice over and came out darker than the line - a string of beads - and anywhere the hand crossed its own earlier line the two darkened again. A single stroke composites once however many bends it has and however often it crosses itself, so the joints and the crossings simply are the line.";
+  "The thickness is four times the brightness because the two are the one setting seen twice, and the setting is asked for rather than worked out here so that a caller can decide when a new stroke is worth starting.";
+  "It notes the text of the path as well as the path, so growing it needs no reading back from the page. Reading an attribute to append to it would make the drawing depend on what the page says it is, and the page is not where this is decided.";
+  let path = html_element_svg(state.marks, "path");
+  let opened = "M" + at.x + "," + at.y;
+  html_attribute_set(path, "d", opened);
+  html_attribute_set(path, "fill", "none");
+  let value = app_shared_color_gold_glow();
+  html_attribute_set(path, "stroke", value);
+  html_attribute_set(path, "stroke-linecap", "round");
+  html_attribute_set(path, "stroke-linejoin", "round");
+  let thick = multiply(strength, 4);
+  let value2 = String(thick);
+  html_attribute_set(path, "stroke-width", value2);
+  let value3 = String(strength);
+  html_attribute_set(path, "opacity", value3);
+  state.hand_path = path;
+  state.hand_level = strength;
+  state.hand_d = opened;
+}
