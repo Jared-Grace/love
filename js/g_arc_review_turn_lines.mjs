@@ -15,17 +15,28 @@ export function g_arc_review_turn_lines(turn, passages, number) {
   let passage = g_arc_answer_passage(passages, reference_written);
   let reference = g_passage_reference(passage);
   let scripture = property_get(passage, "scripture");
+  let marks = g_arc_review_marks();
   let lines = [];
-  let item = text_combine_multiple([number, ". ", before]);
+  let item = text_combine_multiple([
+    number,
+    property_get(marks, "number"),
+    before,
+  ]);
   list_add(lines, item);
-  let item2 = text_combine_multiple(["   -> ", reference]);
+  let item2 = text_combine_multiple([
+    property_get(marks, "reference"),
+    reference,
+  ]);
   list_add(lines, item2);
-  let item3 = text_combine_multiple(["      ", scripture]);
+  let item3 = text_combine_multiple([
+    property_get(marks, "scripture"),
+    scripture,
+  ]);
   list_add(lines, item3);
   let after = property_get(turn, "after");
   let empty = text_empty_is(after);
   if (not(empty)) {
-    let item4 = text_combine_multiple(["   after: ", after]);
+    let item4 = text_combine_multiple([property_get(marks, "after"), after]);
     list_add(lines, item4);
   }
   list_add(lines, "");
