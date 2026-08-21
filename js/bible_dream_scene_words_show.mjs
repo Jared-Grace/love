@@ -1,0 +1,35 @@
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { html_style_line_height } from "./html_style_line_height.mjs";
+export function bible_dream_scene_words_show(root, scene) {
+  "Put the words of a dream at the top of the page - which passage it is, what it turned out to mean - and hand back the empty line underneath them that the running count of traced strokes is written into.";
+  "★ THE WORDS AND THE DRAWING NEED OPPOSITE WIDTHS, WHICH IS WHY THEY ARE TWO THINGS AND NOT ONE. Reading wants a narrow measure and drawing wants all the room there is. While they shared one box the words won, and every shape came out a thumbnail with bumps too small for anything to answer.";
+  "It stays put while the page scrolls under it, and it paints its own ground for that reason: a transparent bar that stays still has the drawing slide through it.";
+  let column = html_div(root);
+  html_style_set(column, "max-width", "1000px");
+  html_style_set(column, "margin", "0 auto");
+  html_style_set(column, "position", "sticky");
+  html_style_set(column, "top", "0");
+  html_style_set(column, "padding-bottom", "8px");
+  let ground = app_shared_color_page_dark();
+  html_style_set(column, "background", ground);
+  let heading = html_div(column);
+  html_style_font_size(heading, "22px");
+  html_text_set(heading, scene.reference + " — the dream you are sent to draw");
+  let meaning = html_div(column);
+  html_style_margin_top(meaning, "8px");
+  html_style_font_size(meaning, "14px");
+  html_style_line_height(meaning, "1.5");
+  let quiet = app_shared_color_gray_light();
+  html_style_set(meaning, "color", quiet);
+  html_text_set(meaning, scene.meaning);
+  let readout = html_div(column);
+  html_style_margin_top(readout, "10px");
+  html_style_font_size(readout, "14px");
+  return readout;
+}
