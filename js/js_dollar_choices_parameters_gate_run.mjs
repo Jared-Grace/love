@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_dollar_choices_parameters_unknown } from "./js_dollar_choices_parameters_unknown.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -10,7 +12,11 @@ export async function js_dollar_choices_parameters_gate_run() {
   ("Throws so the dispatcher seam exits nonzero.");
   let rows = await js_dollar_choices_parameters_unknown();
   list_empty_is_assert_json(rows, {
-    hint: "these dollar-macros unpack a name the expander does not put in the record it hands them, so each one receives nothing under that name and fails on the line that uses it - either add the name to the record js_dollar builds, or unpack the name that is really there and bind it to whatever the body already calls it",
+    hint: text_combine_multiple([
+      "these dollar-macros unpack a name the expander does not put in the record it hands them, so each one receives nothing under that name and fails on the line that uses it - either add the name to the record ",
+      fn_name("js_dollar"),
+      " builds, or unpack the name that is really there and bind it to whatever the body already calls it",
+    ]),
     rows,
   });
   let r = {
