@@ -1,5 +1,5 @@
+import { song_image_audit_picture } from "./song_image_audit_picture.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_img } from "./html_img.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
@@ -7,10 +7,8 @@ import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_line_height } from "./html_style_line_height.mjs";
-import { html_border_radius } from "./html_border_radius.mjs";
 import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
 import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
-import { song_image_drawn_url } from "./song_image_drawn_url.mjs";
 import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
 import { song_image_audit_note } from "./song_image_audit_note.mjs";
 export function song_image_audit_row(parent, couplet) {
@@ -28,11 +26,7 @@ export function song_image_audit_row(parent, couplet) {
   let gloss = song_image_couplet_gloss(couplet.n);
   let left = html_div(row);
   html_style_set(left, "width", "260px");
-  let src = song_image_drawn_url(key, gloss.kept);
-  let picture = html_img(left, src);
-  html_style_set(picture, "width", "100%");
-  html_style_set(picture, "display", "block");
-  html_border_radius(picture, "8px");
+  song_image_audit_picture(left, key, gloss.kept);
   let symbol = html_div(left);
   html_style_margin_top(symbol, "10px");
   html_style_font_size(symbol, "12px");
@@ -47,7 +41,7 @@ export function song_image_audit_row(parent, couplet) {
   let style_value2 = song_image_color_text_quiet();
   html_style_set(head, "color", style_value2);
   let numbers = "verse " + couplet.verse + " · couplet " + couplet.n;
-  let drawn = " · drawing " + key + "/" + gloss.kept;
+  let drawn = " · drawing " + key;
   html_text_set(head, numbers + drawn);
   let lines = html_div(right);
   html_style_margin_top(lines, "8px");
