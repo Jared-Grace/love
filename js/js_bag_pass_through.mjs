@@ -1,14 +1,9 @@
+import { js_bag_pass_through_read } from "./js_bag_pass_through_read.mjs";
 import { js_bag_pass_through_decl } from "./js_bag_pass_through_decl.mjs";
 import { js_bag_pass_through_entries } from "./js_bag_pass_through_entries.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
-import { js_identifier_is } from "./js_identifier_is.mjs";
-import { js_identifier_name } from "./js_identifier_name.mjs";
 import { js_property_get_rows } from "./js_property_get_rows.mjs";
-import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
 export function js_bag_pass_through(ast) {
   arguments_assert(arguments, 1);
   ("Every place in this file where a record handed in from elsewhere is taken apart a name at a time and the same names are put straight back into another record, read out as the record it came from, the names that went through untouched, and the names added on the way.");
@@ -22,32 +17,7 @@ export function js_bag_pass_through(ast) {
   let reads = js_property_get_rows(ast);
   let producers = js_bag_pass_through_decl(decls);
   let unpacked = [];
-  for (let read of reads) {
-    let target = property_get(read, "target");
-    let named_is = js_identifier_is(target);
-    if (not(named_is)) {
-      continue;
-    }
-    let call = property_get(read, "call");
-    let key = property_get(read, "key");
-    let bag = js_identifier_name(target);
-    for (let decl of decls) {
-      let init = property_get(decl, "init");
-      let same_is = equal(init, call);
-      if (not(same_is)) {
-        continue;
-      }
-      let name = property_get(decl, "name");
-      let plain_is = equal(name, key);
-      if (not(plain_is)) {
-        continue;
-      }
-      list_add(unpacked, {
-        bag,
-        name,
-      });
-    }
-  }
+  js_bag_pass_through_read(reads, decls, unpacked);
   let found = [];
   js_bag_pass_through_entries(decls, unpacked, producers, found);
   return found;
