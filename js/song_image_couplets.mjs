@@ -211,7 +211,7 @@ export function song_image_couplets() {
       second: "has been undone",
       symbol:
         "The tree of life, one tall tree standing alone with a straight plain brown trunk and a wide round crown of emerald green leaves, with large ruby red fruit hanging in the leaves",
-      ref: "Genesis 3:15",
+      ref: "Revelation 22:2-3",
       same_as: 0,
     },
     {
