@@ -1,3 +1,6 @@
+import { list_size } from "./list_size.mjs";
+import { list_add } from "./list_add.mjs";
+import { less_than } from "./less_than.mjs";
 import { html_element_svg } from "./html_element_svg.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -35,6 +38,12 @@ export function bible_dream_stroke_place(drawing, stroke) {
   html_attribute_set(ink, "stroke-dasharray", length_text);
   html_attribute_set(ink, "stroke-dashoffset", length_text);
   let samples = bible_dream_stroke_samples(ink, 160);
+  let covered = [];
+  let index = 0;
+  while (less_than(index, list_size(samples))) {
+    list_add(covered, false);
+    index = index + 1;
+  }
   let state = {
     symbol: stroke.symbol,
     said: stroke.said,
@@ -43,6 +52,7 @@ export function bible_dream_stroke_place(drawing, stroke) {
     ink,
     total,
     samples,
+    covered,
     index: 0,
     slips: 0,
     off: false,
