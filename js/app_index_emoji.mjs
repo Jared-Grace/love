@@ -5,6 +5,12 @@ export function app_index_emoji(app_fn_name) {
   "Nothing is answered as empty writing rather than as a missing thing, because every caller is about to put this in front of a name and empty writing goes in front of a name correctly on its own. A missing thing would make each of them ask the same question again before they could use the answer.";
   let emojis = app_index_emojis();
   let none = "";
-  let r = list_find_property_get_or(emojis, "app_fn", app_fn_name, "emoji", none);
+  let r = list_find_property_get_or(
+    emojis,
+    "app_fn",
+    app_fn_name,
+    "emoji",
+    none,
+  );
   return r;
 }
