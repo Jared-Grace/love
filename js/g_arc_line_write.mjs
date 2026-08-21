@@ -1,3 +1,9 @@
+import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { g_arc_turns_numbered } from "./g_arc_turns_numbered.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
 export function g_arc_line_write(arc, number, field, text) {
   "$plain field";
   "$plain text";
@@ -7,7 +13,8 @@ export function g_arc_line_write(arc, number, field, text) {
   "IT CHANGES THE ARC IT WAS GIVEN. A copy would leave the caller holding the old one with no sign of it, and the caller is about to hand what it holds to the store.";
   let person_field = equal(number, 0);
   if (person_field) {
-    let known = list_includes(g_arc_answer_field_names("person"), field);
+    let list = g_arc_answer_field_names("person");
+    let known = list_includes(list, field);
     assert_json(known, {
       field,
       hint: "turn zero is a person's own field and this is not one of them",
