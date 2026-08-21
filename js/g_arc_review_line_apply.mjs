@@ -13,6 +13,7 @@ import { assert_json } from "./assert_json.mjs";
 export function g_arc_review_line_apply(arc, state, line) {
   "One line of a review page put where it belongs - into the person, into the conversation being read, or into the turn being read.";
   "RECOGNISED BY ITS MARK, never by its position. Every line of the page begins with the mark of what it is, so a page can be edited freely - a turn moved, a conversation split - and still read back as the arc it now says it is.";
+  "A TALLY LINE IS DROPPED for the same reason a Scripture line is: it is counted from the arc when the page is laid out, so taking one back in would let a hand-corrected count become the arc's own idea of what it used.";
   "A SCRIPTURE LINE IS DROPPED. The arc stores the reference and the Scripture is fetched from it when the page is laid out, so those words are a rendering and never a source; taken back in, an edited verse would become an arc that quotes the Bible wrongly.";
   "THE TURN'S OWN NUMBER IS KEPT even though the arc has no use for it, because a reviewer's note is about a turn and a note handed back without one is a remark about a page rather than about a line.";
   "A LINE MATCHING NOTHING THROWS. Every mark is a prefix, and an edited page is exactly where a line loses one - a sentence reflowed onto a second line, a note written in the margin. Skipped quietly, that line would disappear out of the middle of a turn and the arc would still parse, which is the one failure a reviewer could not see.";
@@ -78,6 +79,11 @@ export function g_arc_review_line_apply(arc, state, line) {
   let prefix11 = property_get(marks, "scripture");
   let quoted = text_starts_with(line, prefix11);
   if (quoted) {
+    return;
+  }
+  let prefix12 = property_get(marks, "tally");
+  let counted = text_starts_with(line, prefix12);
+  if (counted) {
     return;
   }
   let numbered = text_starts_with_digit(line);
