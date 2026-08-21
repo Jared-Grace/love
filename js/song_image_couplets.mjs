@@ -71,7 +71,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A wide shallow washing basin of plain grey stone resting flat on the ground, brimful of clear blue water spilling over its rim and running down its outside",
+        "A wide shallow washing basin of plain grey stone resting flat on the ground, drawn very large so that it reaches almost the whole width of the window, brimful of clear blue water spilling over its rim and running down its outside",
       ref: "Matthew 27:24",
       same_as: 0,
     },
@@ -249,7 +249,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "hewn in the rock",
       second: "it was brand new",
-      symbol: "A rock-cut tomb mouth, fresh chisel marks",
+      symbol:
+        "The mouth of a brand new tomb cut straight into a face of plain grey rock, the opening standing clear and empty as a plain dark arch, and the whole face of the rock around it covered in fresh straight chisel marks",
       ref: "",
       same_as: 0,
     },
@@ -286,8 +287,9 @@ export function song_image_couplets() {
       verse: 3,
       first: "the SON of GOD",
       second: "was raised to life",
-      symbol: "The tomb open, stone rolled away",
-      ref: "",
+      symbol:
+        "The mouth of a tomb standing wide open in plain grey rock, a great round grey stone resting on the ground well away to one side of the opening, and one white linen cloth lying folded by itself inside the dark opening",
+      ref: "John 20:6-7",
       same_as: 0,
     },
     {
@@ -369,7 +371,8 @@ export function song_image_couplets() {
       verse: 4,
       first: "for every tear",
       second: "HE'll wipe away",
-      symbol: "A single drop",
+      symbol:
+        "One single teardrop of clear blue glass, drawn very large and alone in the middle of the window, round below and drawn to a point above",
       ref: "Revelation 21:4",
       same_as: 0,
     },
