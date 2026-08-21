@@ -30,7 +30,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "הֵ֤ן כָּל־ הַנְּפָשׁוֹת֙ לִ֣י הֵ֔נָּה כְּנֶ֧פֶשׁ הָאָ֛ב וּכְנֶ֥פֶשׁ הַבֵּ֖ן לִי־ הֵ֑נָּה הַנֶּ֥פֶשׁ הַחֹטֵ֖את הִ֥יא תָמֽוּת׃ס",
         english:
-          "Behold every soul belongs to Me both father [and] son Mine are The soul who sins is the one who will die",
+          "Behold every soul belongs to Me both father and son Mine are The soul who sins is the one who will die",
       },
       {
         verse_number: 5,
@@ -44,7 +44,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "אֶל־ הֶֽהָרִים֙ לֹ֣א אָכָ֔ל וְעֵינָיו֙ לֹ֣א נָשָׂ֔א אֶל־ גִּלּוּלֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל וְאֶת־ אֵ֤שֶׁת רֵעֵ֙הוּ֙ לֹ֣א טִמֵּ֔א וְאֶל־ אִשָּׁ֥ה נִדָּ֖ה לֹ֥א יִקְרָֽב׃",
         english:
-          "at the mountain He does not eat [or] look to the idols of the house of Israel wife his neighbor’s He does not defile a woman during her period or approach",
+          "at the mountain He does not eat or look to the idols of the house of Israel wife his neighbor’s He does not defile a woman during her period or approach",
       },
       {
         verse_number: 7,
@@ -58,21 +58,21 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "בַּנֶּ֣שֶׁךְ לֹֽא־ יִתֵּ֗ן וְתַרְבִּית֙ לֹ֣א יִקָּ֔ח מֵעָ֖וֶל יָשִׁ֣יב יָד֑וֹ מִשְׁפַּ֤ט אֱמֶת֙ יַֽעֲשֶׂ֔ה בֵּ֥ין אִ֖ישׁ לְאִֽישׁ׃",
         english:
-          "in usury He does not engage excess interest [or] take from iniquity but he withholds his hand justice true [and] executes between men",
+          "in usury He does not engage excess interest or take from iniquity but he withholds his hand justice true and executes between men",
       },
       {
         verse_number: 9,
         original:
           "בְּחֻקּוֹתַ֧י יְהַלֵּ֛ךְ וּמִשְׁפָּטַ֥י שָׁמַ֖ר לַעֲשׂ֣וֹת אֱמֶ֑ת צַדִּ֥יק הוּא֙ חָיֹ֣ה יִֽחְיֶ֔ה נְאֻ֖ם אֲדֹנָ֥י יְהוִֽה׃",
         english:
-          "My statutes He follows My ordinances keeps and faithfully righteous [That man] is surely he will live declares the Lord GOD",
+          "My statutes He follows My ordinances keeps and faithfully righteous That man is surely he will live declares the Lord GOD",
       },
       {
         verse_number: 10,
         original:
           "וְהוֹלִ֥יד בֵּן־ פָּרִ֖יץ שֹׁפֵ֣ךְ דָּ֑ם וְעָ֣שָׂה אָ֔ח מֵאַחַ֖ד מֵאֵֽלֶּה׃",
         english:
-          "Now suppose [that man] has son a violent who sheds blood or does any of these [things]",
+          "Now suppose that man has son a violent who sheds blood or does any of these things",
       },
       {
         verse_number: 11,
@@ -93,21 +93,21 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "בַּנֶּ֧שֶׁךְ נָתַ֛ן וְתַרְבִּ֥ית לָקַ֖ח וָחָ֑י לֹ֣א יִֽחְיֶ֗ה אֵ֣ת כָּל־ הַתּוֹעֵב֤וֹת הָאֵ֙לֶּה֙ עָשָׂ֔ה מ֣וֹת יוּמָ֔ת דָּמָ֖יו בּ֥וֹ יִהְיֶֽה׃",
         english:
-          "in usury He engages excess interest and takes Will [this son] live He will not all abominations these Since he has committed he will surely die his blood on his own head will be",
+          "in usury He engages excess interest and takes Will this son live He will not all abominations these Since he has committed he will surely die his blood on his own head will be",
       },
       {
         verse_number: 14,
         original:
           "וְהִנֵּה֙ הוֹלִ֣יד בֵּ֔ן וַיַּ֕רְא אֶת־ כָּל־ חַטֹּ֥את אָבִ֖יו אֲשֶׁ֣ר עָשָׂ֑ה וַיִּרְאֶ֕ה וְלֹ֥א יַעֲשֶׂ֖ה כָּהֵֽן׃",
         english:
-          "Now suppose [this son] has a son who sees all the sins his father has committed considers them and does not do likewise",
+          "Now suppose this son has a son who sees all the sins his father has committed considers them and does not do likewise",
       },
       {
         verse_number: 15,
         original:
           "עַל־ הֶֽהָרִים֙ לֹ֣א אָכָ֔ל וְעֵינָיו֙ לֹ֣א נָשָׂ֔א אֶל־ גִּלּוּלֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל אֶת־ אֵ֥שֶׁת רֵעֵ֖הוּ לֹ֥א טִמֵּֽא׃",
         english:
-          "at the mountain He does not eat [or] look to the idols of the house of Israel wife his neighbor’s He does not defile",
+          "at the mountain He does not eat or look to the idols of the house of Israel wife his neighbor’s He does not defile",
       },
       {
         verse_number: 16,
@@ -121,7 +121,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "מֵעָנִ֞י הֵשִׁ֣יב יָד֗וֹ נֶ֤שֶׁךְ וְתַרְבִּית֙ לֹ֣א לָקָ֔ח מִשְׁפָּטַ֣י עָשָׂ֔ה בְּחֻקּוֹתַ֖י הָלָ֑ךְ ה֗וּא לֹ֥א יָמ֛וּת בַּעֲוֺ֥ן אָבִ֖יו חָיֹ֥ה יִחְיֶֽה׃",
         english:
-          "{from harming} the poor He withholds his hand interest or usury no and takes My ordinances keeps My statutes and follows He Such a man will not die iniquity for his father’s He will surely live",
+          "from harming the poor He withholds his hand interest or usury no and takes My ordinances keeps My statutes and follows He Such a man will not die iniquity for his father’s He will surely live",
       },
       {
         verse_number: 18,
