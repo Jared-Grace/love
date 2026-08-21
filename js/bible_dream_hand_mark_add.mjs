@@ -16,11 +16,16 @@ export function bible_dream_hand_mark_add(state, point, nearness, taper) {
   "★ BOTH THICKNESS AND BRIGHTNESS START WELL ABOVE NOTHING, BECAUSE A RECORD THAT CANNOT BE SEEN IS NOT A RECORD. The floors were once low enough that a mark outside the corridor read as bare background, which quietly turned the claim above into an eraser wearing different words: the wandering was kept in the numbers and deleted from the picture, and only the picture is what a player has. What fades is the DIFFERENCE between a careful hand and a straying one, and a difference can be plain while both of its ends are plainly visible.";
   "★ THE TAPER IS ALLOWED TO TAKE THOSE FLOORS AWAY AGAIN, AND ONLY IT IS. The floors hold everywhere a mark is still the record of tracing this shape. Far enough out it is not that any more - it is a hand crossing the picture on its way elsewhere - and a floor there only guarantees that travel is drawn as firmly as drawing is.";
   "A spent taper lifts the hand rather than skipping a point. Skipping would leave the places on either side of the journey sitting next to each other in the same remembered run, and a curve would then be drawn straight across the picture between them - the very streak that not drawing travel exists to prevent. Lifting ends the line where the hand left and begins a new one where it comes back.";
+  "★ A LEAP LIFTS THE HAND TOO, AND IT CATCHES WHAT A SPENT TAPER CANNOT. A taper can only be spent at a place the pointer was actually reported at, and the two ways a hand really does go far away report nothing at all: past the edge of the picture the browser stops speaking, and a fast movement over a busy page arrives as one report standing where several should have been. Either way the first thing heard from the hand again is a place a long way off, with a perfectly ordinary taper, and joining it to the last one drew a straight line across everything in between - which is exactly the join that was complained of. Measuring the step itself catches both, because a hand that went anywhere had to cross the distance to get there whether or not anyone was told.";
   "★ THE FIRST POINT IS KEPT TWICE, WHICH IS WHAT LETS A SWEEP START AT ITS BEGINNING. A curve through a point is bent by the point before it, and the first place a hand is put down has nothing before it; standing it in for its own predecessor makes it arrive straight, which is what a hand that has just started did. Without that the first piece of every sweep could never be drawn and each press would begin a step late.";
   "It refuses to keep a point the hand has barely moved to. A browser reports a pointer far more often than a hand crosses a shape, so without that refusal a slow careful trace would pile up hundreds of places within a few units of each other, and curves fitted through them would answer to the jitter of the reporting rather than to the movement of the hand.";
   if (equal(taper, 0)) {
     bible_dream_stroke_hand_lift(state);
     return;
+  }
+  let leapt = bible_dream_hand_leap_is(state.hand_points, point);
+  if (leapt) {
+    bible_dream_stroke_hand_lift(state);
   }
   let points = state.hand_points;
   let strength = bible_dream_hand_mark_strength(nearness, taper);

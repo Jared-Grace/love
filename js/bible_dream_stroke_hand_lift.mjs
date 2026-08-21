@@ -4,10 +4,9 @@ import { list_last } from "./list_last.mjs";
 import { list_size } from "./list_size.mjs";
 import { bible_dream_hand_segment_draw } from "./bible_dream_hand_segment_draw.mjs";
 export function bible_dream_stroke_hand_lift(state) {
-  "Take the hand off a stroke: draw the last piece that was still waiting for a point after it, and forget everything a continuing line was remembering.";
+  "Take the hand off a stroke: draw the last piece that was still waiting for a point after it, and forget the places a continuing line was being drawn between.";
   "★ THE WAITING PIECE IS DRAWN RATHER THAN DROPPED, AND THE LAST POINT STANDS IN FOR THE ONE THAT NEVER CAME. Every piece of the hand's line waits for the point after it before it can be bent, so at the moment a hand is lifted there is always exactly one piece that has been travelled and not yet drawn. Dropping it would mean every sweep a player makes ends a step short of where they stopped, which reads as the line failing to keep up rather than as the hand having stopped. Repeating the final point gives that piece a neighbour whose slope is its own, so it arrives straight, which is exactly what a hand that has come to a stop did.";
-  "Forgetting the points is what stops the next press from being joined to this one. Two presses in different corners of a picture are two lines and not one, and a curve drawn between them would be a stroke the passage never gave.";
-  "Forgetting the stroke being grown matters as much as forgetting the points. A path that stayed remembered would go on being extended after the pen came back down somewhere else, and every earlier setting would be rewritten to the new one, because a stroke carries one brightness for the whole of itself.";
+  "★ FORGETTING THE PLACES IS THE WHOLE OF HOW A LINE IS BROKEN, AND EVERY BREAK IN THE DRAWING COMES THROUGH HERE. A hand let go of, a hand that jumped further than a hand can travel between two reports, a hand gone so far from the shape that its mark is no longer drawn, a hand off the edge of the picture: all four are one thing to the line, which is that the next place it is told about is not the continuation of the last one. Kept, those two places would be joined by a curve, and the curve would be a stroke the passage never gave running straight across the picture.";
   let points = state.hand_points;
   let left = list_size(points);
   if (equal(left, 3)) {
@@ -16,7 +15,4 @@ export function bible_dream_stroke_hand_lift(state) {
     bible_dream_hand_segment_draw(state, points);
   }
   state.hand_points = [];
-  state.hand_path = null;
-  state.hand_level = null;
-  state.hand_d = "";
 }
