@@ -1,10 +1,9 @@
+import { list_property_true_report } from "./list_property_true_report.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_videos_verse_mislabelled } from "./psalms_videos_verse_mislabelled.mjs";
 import { youtube_video_title_write_if_titled } from "./youtube_video_title_write_if_titled.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
-import { list_size } from "./list_size.mjs";
 export async function psalms_videos_verse_mislabelled_titles_write() {
   "Renames every song whose title names a verse other than the one it sings, so that each is called the verse it actually is.";
   "The set is asked for rather than handed in, so this cannot be run over a list that has drifted from the one the songs were listened to against. Adding a newly heard song to that list is the whole of what it takes to include it here.";
