@@ -31,8 +31,10 @@ export function bible_dream_hand_mark_add(state, point, nearness, taper) {
   let value = app_shared_color_gold_glow();
   html_attribute_set(segment, "stroke", value);
   html_attribute_set(segment, "stroke-linecap", "round");
-  let value2 = String(1.2 + multiply(nearness, 2.4));
+  let thick = 1.2 + multiply(nearness, 2.4);
+  let value2 = String(multiply(thick, taper));
   html_attribute_set(segment, "stroke-width", value2);
-  let value3 = String(0.3 + multiply(nearness, 0.6));
+  let bright = 0.3 + multiply(nearness, 0.6);
+  let value3 = String(multiply(bright, taper));
   html_attribute_set(segment, "opacity", value3);
 }
