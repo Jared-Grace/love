@@ -20,10 +20,14 @@ export function bible_glyph_chapters_rosetta_lines_notation_gate_run() {
   ("IT REFUSES TO PASS ON NO BANDS AT ALL. A gate that walks whatever it finds goes green the day it finds nothing, and stays green, and says the same word it said when everything was checked.");
   ("THE EXACT CHECK WOULD BE TO BUILD EACH BAND AGAIN AND COMPARE, and it is not what this does. That walks a table of a few hundred megabytes fifteen times and would add minutes to a gate run that already takes a quarter of an hour, to answer a question this answers in no time at all. What it would catch beyond this is a band gone stale in some way that leaves no mark in the text - which is worth a command somebody runs on purpose, and is not worth taxing every run.");
   let chapters = bible_glyph_chapters_rosetta_lines();
+  ("THE READING THIS ASKS IS NAMED INSIDE THE HINT AND NEVER BESIDE IT. A failed gate's words are read back afterwards for function names, and every name found is blamed - so a name sitting in its own field of the complaint accuses a function that did nothing, and the one named here is a small atom every app ships, which would hold every app out of its deployment at once. The hint is dropped before the names are read, so a name inside it reaches the person and not the scraper.");
   let asked = fn_name("bible_glyph_gloss_placeholder_is");
-  list_empty_not_is_assert_json(chapters, {
-    hint: "no Rosetta band was found at all, so this gate checked nothing and would have passed for that reason - the bands are named one by one next door and the list has come up empty",
+  let hint_none = text_combine_multiple([
+    "no Rosetta band was found at all, so this gate checked nothing and would have passed for that reason - the bands are named one by one next door and the list has come up empty. The reading it would have asked is ",
     asked,
+  ]);
+  list_empty_not_is_assert_json(chapters, {
+    hint: hint_none,
   });
   let leaked = [];
   let lines = 0;
@@ -50,9 +54,12 @@ export function bible_glyph_chapters_rosetta_lines_notation_gate_run() {
       }
     }
   }
-  list_empty_is_assert_json(leaked, {
-    hint: "these Rosetta bands print the interlinear's own notation as if it were scripture, so a reader meets a mark nobody put there and cannot tell it from a word - rebuild the bands for the chapters named here",
+  let hint_leaked = text_combine_multiple([
+    "these Rosetta bands print the interlinear's own notation as if it were scripture, so a reader meets a mark nobody put there and cannot tell it from a word - rebuild the bands for the chapters named here. The reading that found them is ",
     asked,
+  ]);
+  list_empty_is_assert_json(leaked, {
+    hint: hint_leaked,
     leaked,
   });
   let r = {
