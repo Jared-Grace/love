@@ -250,7 +250,7 @@ export function song_image_couplets() {
       first: "hewn in the rock",
       second: "it was brand new",
       symbol:
-        "The mouth of a brand new tomb cut straight into a face of plain grey rock, the opening standing clear and empty as a plain dark arch, and the whole face of the rock around it covered in fresh straight chisel marks",
+        "A face of plain grey rock filling the whole window from side to side and top to bottom, covered all over in fresh straight chisel marks, with the mouth of a brand new tomb cut into the middle of it as a plain dark arch standing clear and empty",
       ref: "",
       same_as: 0,
     },
@@ -278,7 +278,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "but on the third",
       second: "near dawn's first light",
-      symbol: "The bright morning star, a single star alone",
+      symbol:
+        "One single star of white glass with eight straight pointed rays, drawn very large and alone in the middle of the window with its points reaching almost to all four sides of it",
       ref: "Revelation 22:16, 2 Peter 1:19",
       same_as: 0,
     },
@@ -297,8 +298,9 @@ export function song_image_couplets() {
       verse: 3,
       first: "WHO conquered death",
       second: "now glorified",
-      symbol: "A royal crown",
-      ref: "",
+      symbol:
+        "One royal crown of white glass, a plain broad band with five upright points standing above it and one small ruby red jewel set in the band below each point, drawn very large and alone so that it reaches almost across the whole window",
+      ref: "Revelation 19:12",
       same_as: 0,
     },
     {
