@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { subtract } from "./subtract.mjs";
 import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
@@ -80,8 +81,7 @@ export async function bible_event_kind_mechanic_order() {
     list_add(chosen_names, kind);
     function reading_uncovered_stays(reading) {
       let kinds = kinds_of(reading);
-      let carries = list_includes(kinds, kind);
-      let stays = not(carries);
+      let stays = list_includes_not(kinds, kind);
       return stays;
     }
     uncovered = list_filter(uncovered, reading_uncovered_stays);
