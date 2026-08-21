@@ -21,6 +21,8 @@ export async function bible_storage_empty_gate_run() {
     f_name,
     "what storage holds for it",
   );
+  ("WHAT IS SAID HERE IS SAID ABOUT A MEASUREMENT AND NOT ABOUT A SERVER, so the date of that measurement goes into the complaint. Both repairs below cost real work - one sends a whole bible again - and both are wasted if what is actually wrong is that nobody has measured since the upload. Seventy-seven bibles were named here by a record older than the uploads that filled them, and the way that was found out was by going and asking storage by hand, which is the reading the record exists to save.");
+  let measured_at = property_get(record, "measured_at");
   let bibles = property_get(record, "bibles");
   let shipped = property_get(record, "shipped");
   let unmeasured = property_get(record, "unmeasured");
@@ -34,12 +36,16 @@ export async function bible_storage_empty_gate_run() {
       f_name3,
       " named with this folder is what runs it, or the folder is spelled here differently from how it was spelled there, which is a line of ",
       f_name4,
-      " to correct",
+      " to correct. Before doing either, look at when this was measured: a record taken before the upload ran says exactly this and is simply out of date, and running ",
+      f_name,
+      " again is what settles which of the three it is",
     ]),
     empty,
+    measured_at,
   });
   let r = {
     checked: list_size(shipped),
+    measured_at,
     unmeasured,
     departed,
     empty,

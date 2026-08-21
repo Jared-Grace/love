@@ -1,3 +1,4 @@
+import { date_now_iso } from "./date_now_iso.mjs";
 import { ebible_bible_folders_sorted } from "./ebible_bible_folders_sorted.mjs";
 import { bible_folders_at_once } from "./bible_folders_at_once.mjs";
 import { ebible_bible_folder_storage_books_first_page } from "./ebible_bible_folder_storage_books_first_page.mjs";
@@ -10,6 +11,8 @@ export async function bible_storage_books_measure() {
   "IT ANSWERS THE QUESTION THE MISSING-VERSE RECORD CANNOT. That record reads one book, so a bible with none of that book looks the same whether it is a real translation lacking that book or a folder nothing was ever put in. Those two want opposite work, and this is what tells them apart.";
   "Sorted by folder name so that a change in the record is a change in what was measured rather than a reshuffle.";
   "This reaches the network, so it is run by hand and its answer is kept in a file. What reads that file afterwards needs nothing but the file.";
+  "WHEN IT WAS ASKED IS WRITTEN DOWN BESIDE WHAT WAS FOUND, because a record of what is on a server says nothing on its own about whether it is still true, and everything downstream reads it as though it were. Seventy-seven bibles were accused of holding nothing by a record old enough to predate the uploads that filled them, and the accusation named a repair that would have sent again what was already there. Nothing in the record itself could have told anybody that.";
+  "It is stamped at the end rather than the start, so what it says is when the answer was complete and not when somebody set it going. A sweep of this size takes minutes, and a stamp from before it began would be the one part of the record that was never measured.";
   let bible_folders = ebible_bible_folders_sorted();
   async function lambda(bible_folder) {
     let listed =
@@ -22,8 +25,10 @@ export async function bible_storage_books_measure() {
     lambda,
     at_once,
   );
+  let measured_at = date_now_iso();
   let r = {
     asked: list_size(bible_folders),
+    measured_at,
     bibles: measured_each,
   };
   return r;
