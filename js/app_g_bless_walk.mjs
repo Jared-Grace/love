@@ -7,7 +7,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
-import { app_g_player_center } from "./app_g_player_center.mjs";
+import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
@@ -94,7 +94,7 @@ export async function app_g_bless_walk(
     ("than when their slide catches up.");
     object_assign(player, to);
     await app_g_player_move_animate(to, player_img_c);
-    app_g_player_center(to, player_img_c, div_map);
+    app_shared_game_player_center(to, player_img_c, div_map);
     on_arrive();
   }
   world.way = {};
