@@ -16,8 +16,10 @@ export async function js_dollar_choices_parameters_unknown() {
   ("What that costs is the whole macro rather than one line of it. The nothing is not noticed where it lands - it is carried into whatever the macro does with it, and comes out as a complaint about converting nothing to an object, from a line that looks fine. Nine of them stood dead this way, and no gate could go red over it, because a macro only ever runs when somebody types one and a person typing one reads the failure as their own mistake.");
   ("Both lists are read rather than written down here. The expander's list is the record it builds, and each macro's list is what it unpacks - so a name added or dropped on either side is seen the moment it changes, and this cannot fall out of step with the thing it is checking.");
   ("Only the macros the expander actually reaches are asked. A helper further in may well take the same names one at a time, fed by hand from a macro that has them, and what it calls its own parameters is nobody's contract.");
+  ("How many were read is handed back beside them, and it is counted up as the reading goes rather than taken from the length of the list of macros. The two are not the same number: one that does not unpack a record at all is passed over, and a reading that reached nothing would otherwise report the same figure as one that reached them all.");
   let allowed = await js_dollar_choice_argument_names();
   let choices = js_dollar_choices();
+  let read = 0;
   let rows = [];
   for (let choice of choices) {
     let fn = property_get(choice, "fn");

@@ -2,9 +2,8 @@ import { psalms_videos_descriptions_live_read } from "./psalms_videos_descriptio
 import { psalms_videos_descriptions_before_write } from "./psalms_videos_descriptions_before_write.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { psalms_videos_descriptions_parts_cut } from "./psalms_videos_descriptions_parts_cut.mjs";
-import { psalms_videos_descriptions_payload_parts_path } from "./psalms_videos_descriptions_payload_parts_path.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { psalms_videos_descriptions_parts_written } from "./psalms_videos_descriptions_parts_written.mjs";
+import { property_set } from "./property_set.mjs";
 export async function psalms_videos_descriptions_remaining_parts_write(
   letters_most,
 ) {
@@ -24,19 +23,11 @@ export async function psalms_videos_descriptions_remaining_parts_write(
     }
     remaining.push(paired.one);
   }
-  let parts = psalms_videos_descriptions_parts_cut(remaining, letters_most);
-  let path = psalms_videos_descriptions_payload_parts_path();
-  await file_overwrite_json(path, parts);
-  let sizes = [];
-  for (let one of parts) {
-    sizes.push(one.length);
-  }
-  let r = {
-    path: path,
-    parts: parts.length,
-    videos: remaining.length,
-    videos_by_part: sizes,
-    before: before,
-  };
+  ("THE BACKUP IS ADDED TO WHAT THE WRITING SAYS RATHER THAN REPORTED SEPARATELY, because the two belong to one another: the record of what the songs held before is only trustworthy as the copy taken immediately ahead of these pieces, and a caller reading them apart could pair a backup with a different run's pieces without noticing.");
+  let r = await psalms_videos_descriptions_parts_written(
+    remaining,
+    letters_most,
+  );
+  property_set(r, "before", before);
   return r;
 }
