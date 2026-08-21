@@ -101,6 +101,9 @@ export function song_image_drawn_attempts_known() {
   1,
   2
  ],
+ "20": [
+  1
+ ],
  "21": [
   1,
   2,
