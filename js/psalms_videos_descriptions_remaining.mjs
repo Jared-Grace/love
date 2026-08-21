@@ -9,12 +9,12 @@ export async function psalms_videos_descriptions_remaining() {
   arguments_assert(arguments, 0);
   let read = await psalms_videos_descriptions_live_read();
   let remaining = [];
-  for (let each of read) {
-    let same = equal(each.live, each.one.description);
+  for (let paired of read) {
+    let same = equal(paired.live, paired.one.description);
     if (same) {
       continue;
     }
-    remaining.push(each.one);
+    remaining.push(paired.one);
   }
   return remaining;
 }
