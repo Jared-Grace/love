@@ -24,14 +24,7 @@ export async function g_arc_person_review_write(chapter_code, index) {
   let chapter = await file_read_json(path);
   let written = property_get(chapter, "arcs");
   let wanted = number_from_text(index);
-  let found = null;
-  for (let entry of written) {
-    let entry_index = property_get(entry, "index");
-    let same = equal(entry_index, wanted);
-    if (same) {
-      found = property_get(entry, "arc");
-    }
-  }
+  let found = g_arc_chapter_person_or_null(written, wanted);
   let missing = equal(found, null);
   let there = not(missing);
   assert_json(there, {
