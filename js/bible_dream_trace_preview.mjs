@@ -13,7 +13,7 @@ import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { bible_dream_pharaoh_strokes } from "./bible_dream_pharaoh_strokes.mjs";
 import { bible_dream_stroke_place } from "./bible_dream_stroke_place.mjs";
 import { bible_dream_drawing_point } from "./bible_dream_drawing_point.mjs";
-import { bible_dream_stroke_start_near } from "./bible_dream_stroke_start_near.mjs";
+import { bible_dream_stroke_begin_near } from "./bible_dream_stroke_begin_near.mjs";
 import { bible_dream_stroke_advance } from "./bible_dream_stroke_advance.mjs";
 import { bible_dream_stroke_ink_show } from "./bible_dream_stroke_ink_show.mjs";
 import { bible_dream_trace_status_text } from "./bible_dream_trace_status_text.mjs";
@@ -62,7 +62,7 @@ export function bible_dream_trace_preview() {
   }
   function on_press(event) {
     let at = bible_dream_drawing_point(drawing, event);
-    active = bible_dream_stroke_start_near(states, at, 169);
+    active = bible_dream_stroke_begin_near(states, at, 169);
   }
   function on_drag(event) {
     if (not(active)) {
