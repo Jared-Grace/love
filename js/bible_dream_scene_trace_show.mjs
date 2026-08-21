@@ -1,3 +1,4 @@
+import { bible_dream_scene_guides_dim } from "./bible_dream_scene_guides_dim.mjs";
 import { bible_dream_stroke_hand_lift } from "./bible_dream_stroke_hand_lift.mjs";
 import { bible_dream_stroke_hand_step } from "./bible_dream_stroke_hand_step.mjs";
 import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told.mjs";
@@ -20,6 +21,7 @@ export function bible_dream_scene_trace_show(scene) {
   "Two things answer the wandering rather than only punishing it. The hand's own line stays on the page, thinning and fading the further it went from what it was given, so an imprecise trace leaves a real drawing behind it and not a blank. And a finished shape is answered by ornament read out of its own bumps, written in a moment later at about the speed of a hand, so that something else is plainly at work beside the player. Neither adds a line the passage did not give: the first is the player's own line and the second is a reply to the shape, and only the ink between them is Scripture's.";
   "The slips are the second half of the answer. A stroke can be finished having left its corridor a dozen times, and the count says so, because NUM12:8 puts a plain word above a riddle and a shape drawn badly is what a riddle is made of. Nothing yet DOES anything with that number - what it costs is a design decision and this is not the file to make it in.";
   "★ THE HAND LEAVING THE PICTURE BREAKS THE LINE, AND THE STROKE STAYS THE ONE BEING TRACED. Off the edge nothing is reported at all, so a hand that goes out and comes back in somewhere else is heard from twice with no word about the journey, and the two places would be joined. Breaking the line on the way out says the truth: what happened outside is not part of the drawing. The stroke is deliberately not let go of at the same time, because a button held down is a hand still on that stroke, and returning to it should carry on and not have to be begun again.";
+  "★ THE MOVEMENT OF THE POINTER IS ANSWERED EVEN WHEN NOTHING IS BEING TRACED, AND IT USED TO BE THROWN AWAY. A press had to happen before any movement meant anything, which was true of the drawing and false of the picture: the strokes brighten as the pointer nears them, and that is guidance for choosing which one to take, so it has to be working while the choosing is going on. Nothing is drawn by it and no trace is moved by it - it only says where the hand is.";
   "What is left here is the watching of the hand and nothing else. Making the words and making the surface both went to their own names, because neither of them has anything to do with a pointer, and a reader looking for what a drag does should not have to walk past twenty lines of laying out a page to reach it.";
   let root = html_body_div_page_dark();
   let readout = bible_dream_scene_words_show(root, scene);
@@ -44,10 +46,11 @@ export function bible_dream_scene_trace_show(scene) {
     }
   }
   function on_drag(event) {
+    let at = bible_dream_drawing_point(drawing, event);
+    bible_dream_scene_guides_dim(states, at);
     if (not(active)) {
       return;
     }
-    let at = bible_dream_drawing_point(drawing, event);
     bible_dream_stroke_hand_step(active, at);
     if (active.done) {
       bible_dream_stroke_finish_told(active, told);
