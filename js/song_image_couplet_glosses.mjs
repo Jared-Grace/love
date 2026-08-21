@@ -7,7 +7,7 @@ export function song_image_couplet_glosses() {
   "the references are given as the verses the line itself is making its claim from, not as everything the line could be connected to. A list long enough to cover every echo says nothing about where the words came from, and the point of writing them down is that somebody can look them up and disagree.";
   let glosses = {
     1: {
-      kept: 1,
+      kept: 2,
       lyric_ref: "Matthew 26:59-60, Mark 14:56, Isaiah 53:8",
       lyric_explain:
         "The council sought false witness against HIM and found none until two came forward, and Mark adds that their witness did not even agree together. Isaiah had said HE would be taken from prison and from judgment.",
