@@ -130,7 +130,8 @@ export function song_image_drawn_attempts_known() {
   7,
   8,
   9,
-  10
+  10,
+  11
  ],
  "22": [
   1,
