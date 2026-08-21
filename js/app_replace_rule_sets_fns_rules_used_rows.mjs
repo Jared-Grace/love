@@ -1,5 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
 export function app_replace_rule_sets_fns_rules_used_rows() {
-  "Which of an exercise's rules each of its goals actually leant on, by exercise name, three words to a rule: what it matches, what it puts there instead, and the line the author wrote it on. Read back into whole records by app_replace_rule_sets_fns_rules_used_from_rows - an edit made here is thrown away the next time app_replace_rule_sets_fns_rules_used_generate runs.";
+  ("Which of an exercise's rules each of its goals actually leant on, by exercise name, three words to a rule: what it matches, what it puts there instead, and the line the author wrote it on. Read back into whole records by ",
+    fn_name("app_replace_rule_sets_fns_rules_used_from_rows"),
+    " - an edit made here is thrown away the next time ",
+    fn_name("app_replace_rule_sets_fns_rules_used_generate"),
+    " runs.");
   let v = {
     "Binary Numbers Simple": [
       [
