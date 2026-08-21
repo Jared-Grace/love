@@ -1,5 +1,5 @@
 import { app_shared_scripture_reference_god_says } from "./app_shared_scripture_reference_god_says.mjs";
-import { app_g_scripture_separator_font_size } from "./app_g_scripture_separator_font_size.mjs";
+import { app_shared_scripture_separator_font_size } from "./app_shared_scripture_separator_font_size.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -13,7 +13,7 @@ export function app_g_scripture(parent, reference, verse_text) {
   let reference_span = html_span_text(parent, said);
   html_font_color_set(reference_span, "#a0eaa0");
   let separator = html_span_text(parent, "📖");
-  let font_size = app_g_scripture_separator_font_size();
+  let font_size = app_shared_scripture_separator_font_size();
   html_style_assign(separator, {
     margin: "0 0.6em",
     "font-size": font_size,
