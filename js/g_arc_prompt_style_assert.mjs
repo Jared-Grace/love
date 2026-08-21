@@ -1,3 +1,4 @@
+import { g_arc_prompt_written } from "./g_arc_prompt_written.mjs";
 import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -28,9 +29,16 @@ export function g_arc_prompt_style_assert() {
   let profile = deck[0];
   let stand_in = {
     summary: "a stand-in, so the lines around it have something to sit under",
-    turns: [],
+    conversations: [],
   };
-  let written_text = g_arc_prompt_written([{ arc: stand_in }], []);
+  let written_text = g_arc_prompt_written(
+    [
+      {
+        arc: stand_in,
+      },
+    ],
+    [],
+  );
   let s = json_format_to(profile);
   let example = g_arc_answer_example();
   let blocks = [s, example];
