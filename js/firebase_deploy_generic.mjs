@@ -1,3 +1,4 @@
+import { firebase_deploy_deadline_ms } from "./firebase_deploy_deadline_ms.mjs";
 import { npx_run } from "./npx_run.mjs";
 import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
 import { retry_standard } from "./retry_standard.mjs";
@@ -6,9 +7,14 @@ export async function firebase_deploy_generic(words_after) {
   let combined = await user_repo_path_combine(".");
   let words = ["firebase-tools", "deploy"].concat(words_after);
   async function lambda() {
-    let out = await npx_run(words, {
-      cwd: combined,
-    });
+    let ms = firebase_deploy_deadline_ms();
+    let out = await npx_run(
+      words,
+      {
+        cwd: combined,
+      },
+      ms,
+    );
     return out;
   }
   let printed = await retry_standard(lambda);

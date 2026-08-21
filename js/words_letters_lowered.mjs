@@ -1,3 +1,8 @@
+import { text_words } from "./text_words.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { list_add } from "./list_add.mjs";
 export function words_letters_lowered(text) {
   "Some written text broken into its words, each one lowered and stripped down to its letters, with anything that had no letters at all dropped.";
   "IT EXISTS SO THAT A WORD IS ONE WORD. A full stop riding along, or a capital because the sentence began, splits one word into three entries, and every count taken over them is then wrong by however often that word happened to end a sentence or start one.";
