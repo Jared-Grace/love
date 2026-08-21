@@ -1,3 +1,8 @@
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { equal } from "./equal.mjs";
 import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_dream_stroke_advance(state, point, tolerance_squared) {
@@ -7,30 +12,32 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
   "The window is what makes a fast drag work. A pointer reports where it is, not where it went, so a quick sweep arrives many samples further on than the last report; without a window to search, the trace could only step one sample per report and the stroke would feel stuck rather than fast. The window is counted in samples, and samples are laid at even distances, so it reaches further on a long stroke than on a short one - which is the behaviour wanted anyway.";
   "Searching for the nearest is also what makes a fold safe. A cow's leg is drawn down one side and up the other, bringing two far-apart parts of the line within a few units of each other, and the far side of the fold is inside the window; but the hand is standing ON the near side, so the near side is nearer, and the leg cannot be skipped.";
   "Everything passed over is marked drawn, rather than only the sample landed on, so a sweep that crosses several samples in one report leaves no unmarked gaps behind it. That is also what lets a stroke be finished in pieces: the marks are kept per sample and not as one run, so a half drawn one way and a half drawn the other join up by themselves.";
+  "How far off the line the hand was is kept whether it was inside the corridor or outside it, because it is wanted for something other than judging. The mark drawn where the hand went fades by exactly this number, and a mark that stopped fading at the corridor's edge would say the wandering beyond it was all the same amount of wandering.";
   "A slip is counted once for each leaving of the corridor and not once for each report while outside it, so it measures how often the hand left the line rather than how long the pointer was made to sit still off it. That count is the whole scoring axis: NUM12:8 ranks a plain word above a riddle, and a stroke traced badly is what a riddle is made of here.";
   let samples = state.samples;
   let count = list_size(samples);
-  let last = count - 1;
+  let last = subtract(count, 1);
   let reached = state.index;
   let nearest = bible_dream_point_gap_squared(point, samples[state.index]);
-  let low = state.index - 12;
-  if (low < 0) {
+  let low = subtract(state.index, 12);
+  if (less_than(low, 0)) {
     low = 0;
   }
   let high = state.index + 12;
-  if (high > last) {
+  if (greater_than(high, last)) {
     high = last;
   }
   let index = low;
-  while (index <= high) {
+  while (less_than_equal(index, high)) {
     let gap = bible_dream_point_gap_squared(point, samples[index]);
-    if (gap < nearest) {
+    if (less_than(gap, nearest)) {
       nearest = gap;
       reached = index;
     }
     index = index + 1;
   }
-  if (nearest > tolerance_squared) {
+  state.gap = nearest;
+  if (greater_than(nearest, tolerance_squared)) {
     if (state.off) {
       return;
     }
@@ -41,19 +48,19 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
   state.off = false;
   let from = state.index;
   let to = reached;
-  if (to < from) {
+  if (less_than(to, from)) {
     from = reached;
     to = state.index;
   }
   let marking = from;
-  while (marking <= to) {
+  while (less_than_equal(marking, to)) {
     state.covered[marking] = true;
     marking = marking + 1;
   }
   state.index = reached;
   let undrawn = 0;
   let counting = 0;
-  while (counting < count) {
+  while (less_than(counting, count)) {
     if (state.covered[counting]) {
       counting = counting + 1;
       continue;
@@ -61,7 +68,7 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
     undrawn = undrawn + 1;
     counting = counting + 1;
   }
-  if (undrawn === 0) {
+  if (equal(undrawn, 0)) {
     state.done = true;
   }
 }

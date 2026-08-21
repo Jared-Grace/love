@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { list_first_property } from "./list_first_property.mjs";
 import { not } from "./not.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
@@ -8,7 +10,6 @@ import { function_source_overwrite } from "./function_source_overwrite.mjs";
 import { json_to } from "./json_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first } from "./list_first.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_glyph_chapters_tagalog_write() {
@@ -22,8 +23,7 @@ export async function bible_glyph_chapters_tagalog_write() {
   "THE FOLDER IS LOOKED UP BY LANGUAGE CODE rather than spelled here, because the name of a Tagalog bible on somebody's server is not a fact this function should know. The code is tgl - three letters, because Tagalog has no two-letter code in the list - and the folder it currently resolves to is a detail of the curated list.";
   "AN EMPTY CHAPTER IS REPORTED AND NEVER SILENTLY KEPT. A bible that does not hold a chapter answers with no verses and so does a fetch that never arrived, and both would write a chapter with nothing in it - which reads on the page as a reveal panel that simply has no Tagalog, indistinguishable from one nobody asked for. The names come back so a caller can see which.";
   let languages = ebible_languages_from_codes(["tgl"]);
-  let language = list_first(languages);
-  let bible_folder = property_get(language, "bible_folder");
+  let bible_folder = list_first_property(languages, "bible_folder");
   let chapters = bible_glyph_chapters();
   let gathered = [];
   let empty = [];
@@ -54,7 +54,7 @@ export async function bible_glyph_chapters_tagalog_write() {
       verses: numbered,
     });
   }
-  let f_name = "bible_glyph_chapters_tagalog";
+  let f_name = fn_name("bible_glyph_chapters_tagalog");
   let json = json_to(gathered);
   let source = bible_glyph_chapters_tagalog_source(f_name, json);
   let found = await function_exists(f_name);
