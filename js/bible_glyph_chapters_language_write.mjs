@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { bible_glyph_language_written_mark } from "./bible_glyph_language_written_mark.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
@@ -46,7 +47,7 @@ export async function bible_glyph_chapters_language_write(
     };
     return missed;
   }
-  let bible_folder = list_first_property(languages, "bible_folder");
+  let bible_folder = list_first_property(languages, bible_folder_key());
   let chapters = bible_glyph_chapters();
   let gathered = [];
   let empty = [];
