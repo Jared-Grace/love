@@ -1,0 +1,69 @@
+export function g_arc_review_line_apply(arc, state, line) {
+  "One line of a review page put where it belongs - into the person, into the conversation being read, or into the turn being read.";
+  "RECOGNISED BY ITS MARK, never by its position. Every line of the page begins with the mark of what it is, so a page can be edited freely - a turn moved, a conversation split - and still read back as the arc it now says it is.";
+  "A SCRIPTURE LINE IS DROPPED. The arc stores the reference and the Scripture is fetched from it when the page is laid out, so those words are a rendering and never a source; taken back in, an edited verse would become an arc that quotes the Bible wrongly.";
+  "A LINE MATCHING NOTHING THROWS. Every mark is a prefix, and an edited page is exactly where a line loses one - a sentence reflowed onto a second line, a note written in the margin. Skipped quietly, that line would disappear out of the middle of a turn and the arc would still parse, which is the one failure a reviewer could not see.";
+  let marks = g_arc_review_marks();
+  let names = g_arc_answer_field_names("person");
+  for (let name of names) {
+    let prefix = text_combine_multiple([name, ": "]);
+    let starts = text_starts_with(line, prefix);
+    if (starts) {
+      let value = text_prefix_without(line, prefix);
+      property_set(arc, name, value);
+      return;
+    }
+  }
+  let started = text_starts_with(line, property_get(marks, "conversation"));
+  if (started) {
+    let conversation = { catch_up: "", turns: [] };
+    let conversations = property_get(arc, "conversations");
+    list_add(conversations, conversation);
+    property_set(state, "conversation", conversation);
+    property_set(state, "opener", "");
+    return;
+  }
+  let caught_up = text_starts_with(line, property_get(marks, "catch_up"));
+  if (caught_up) {
+    let catch_up = text_prefix_without(line, property_get(marks, "catch_up"));
+    property_set(property_get(state, "conversation"), "catch_up", catch_up);
+    return;
+  }
+  let opened = text_starts_with(line, property_get(marks, "opener"));
+  if (opened) {
+    let opener = text_prefix_without(line, property_get(marks, "opener"));
+    property_set(state, "opener", opener);
+    return;
+  }
+  let referenced = text_starts_with(line, property_get(marks, "reference"));
+  if (referenced) {
+    let reference = text_prefix_without(line, property_get(marks, "reference"));
+    property_set(property_get(state, "turn"), "reference", reference);
+    return;
+  }
+  let afterward = text_starts_with(line, property_get(marks, "after"));
+  if (afterward) {
+    let after = text_prefix_without(line, property_get(marks, "after"));
+    property_set(property_get(state, "turn"), "after", after);
+    return;
+  }
+  let quoted = text_starts_with(line, property_get(marks, "scripture"));
+  if (quoted) {
+    return;
+  }
+  let numbered = text_starts_with_digit(line);
+  if (numbered) {
+    let before = text_index_of_skip(line, property_get(marks, "number"));
+    let opener = property_get(state, "opener");
+    let turn = { opener, before, reference: "", after: "" };
+    let conversation = property_get(state, "conversation");
+    let turns = property_get(conversation, "turns");
+    list_add(turns, turn);
+    property_set(state, "turn", turn);
+    return;
+  }
+  assert_json(false, {
+    line,
+    hint: "every line of a review page begins with the mark of what it is, so this one is either a sentence that has been reflowed onto a second line or a note written into the page, and either way it would be lost silently",
+  });
+}
