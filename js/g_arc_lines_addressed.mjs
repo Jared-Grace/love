@@ -18,6 +18,7 @@ export function g_arc_lines_addressed(arc) {
       list_add(lines, {
         number: 0,
         field: name,
+        address: g_arc_line_address(0, name),
         text: value,
       });
     }
