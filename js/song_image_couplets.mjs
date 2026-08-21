@@ -224,7 +224,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone standing open and holding nothing, struck with deep crimson blood down each post and across the lintel, the blood daubed on unevenly with ragged wandering edges and a few thin trickles running down the stone below each mark",
+        "An empty doorway of plain grey stone standing open and holding nothing, marked with deep crimson down each post and across the lintel, the crimson laid on unevenly with ragged wandering edges, wider in some places than others, and reaching a little way down the stone below each mark in a few narrow tapering runs",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
@@ -234,7 +234,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone standing open and holding nothing, struck with deep crimson blood down each post and across the lintel, the blood daubed on unevenly with ragged wandering edges and a few thin trickles running down the stone below each mark",
+        "An empty doorway of plain grey stone standing open and holding nothing, marked with deep crimson down each post and across the lintel, the crimson laid on unevenly with ragged wandering edges, wider in some places than others, and reaching a little way down the stone below each mark in a few narrow tapering runs",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
