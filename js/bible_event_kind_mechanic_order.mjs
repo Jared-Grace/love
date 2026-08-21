@@ -1,4 +1,4 @@
-import { bible_event_readings_kinds_ranked } from "./bible_event_readings_kinds_ranked.mjs";
+import { bible_gathered_readings_kinds_ranked } from "./bible_gathered_readings_kinds_ranked.mjs";
 import { bible_event_reading_kinds } from "./bible_event_reading_kinds.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -24,7 +24,7 @@ export async function bible_event_kind_mechanic_order() {
   ("★ A KIND CAN MOVE FROM MODIFIER TO MECHANIC WHEN A BOOK ARRIVES, and that is the one thing running this today cannot show you. At two books law was never chosen and offering was never chosen - both were carried by scenes some other mechanic already reached. Numbers put law fifth with a gain of sixteen and made offering a mechanic too. So a kind in the unchosen list is a finding about the corpus READ SO FAR and never a verdict about Scripture; the honest reading of that list is NOT YET, not NEVER.");
   ("★ THE COUNT BARELY MOVES WHEN THE CORPUS GROWS. Two books gave a hundred and sixty-seven events and twenty-two mechanics; three books give two hundred and forty-eight events and twenty-four. Half again as much Scripture cost two more mechanics. That is the number the whole reading pass existed to produce, and it is the reason a game over the whole Bible is a buildable thing rather than an open-ended one.");
   ("It is the obvious greedy choice and so not proven to be the smallest possible set. It is an upper bound on how many mechanics are needed, and an upper bound is the side to be wrong on: it never says a mechanic can be skipped when it cannot.");
-  let counted = await bible_event_readings_kinds_ranked();
+  let counted = await bible_gathered_readings_kinds_ranked();
   let readings = counted.readings;
   let ranked = counted.ranked;
   let uncovered = list_copy(readings);

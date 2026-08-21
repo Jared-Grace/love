@@ -134,7 +134,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood standing behind it, the cross cut from squared timber with flat sides and sharp square corners, its upright and its crossbar each one plain flat brown all over",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp square corners",
       symbol_ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -144,7 +144,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood standing behind it, the cross cut from squared timber with flat sides and sharp square corners, its upright and its crossbar each one plain flat brown all over",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp square corners",
       symbol_ref: "Colossians 2:14",
       same_as: 8,
     },
