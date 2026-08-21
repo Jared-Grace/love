@@ -1,13 +1,9 @@
-import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_oauth_consent_url } from "./youtube_oauth_consent_url.mjs";
 import { youtube_oauth_answer_wait } from "./youtube_oauth_answer_wait.mjs";
-import { youtube_oauth_token_ask } from "./youtube_oauth_token_ask.mjs";
-import { youtube_oauth_token_path } from "./youtube_oauth_token_path.mjs";
+import { youtube_oauth_token_save } from "./youtube_oauth_token_save.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
-import { file_write_json } from "./file_write_json.mjs";
 import { log_keep } from "./log_keep.mjs";
 export async function youtube_oauth_consent_run() {
   "The whole of asking once for permission to edit the channel: prints the address to open, waits for the browser to come back, trades what it brings for a token, and keeps the token.";
@@ -30,15 +26,6 @@ export async function youtube_oauth_consent_run() {
     };
     return refused;
   }
-  let token = await youtube_oauth_token_ask(code);
-  let b = property_null_is(token, "refresh_token");
-  let lasting = not(b);
-  let file_path = youtube_oauth_token_path();
-  await file_write_json(file_path, token);
-  let r = {
-    saved: true,
-    lasting,
-    file_path,
-  };
+  let r = await youtube_oauth_token_save(code);
   return r;
 }

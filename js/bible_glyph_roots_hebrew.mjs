@@ -506,6 +506,16 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
+      root: "gillulim",
+      gloss: "idols",
+      words: [
+        {
+          strong: "1544",
+          glyph: "moai",
+        },
+      ],
+    },
+    {
       root: "qadash",
       gloss: "holy, set apart",
       words: [
