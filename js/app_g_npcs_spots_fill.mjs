@@ -1,4 +1,4 @@
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
+import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
 import { g_coordinates_distance_squared } from "./g_coordinates_distance_squared.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
@@ -28,7 +28,7 @@ export function app_g_npcs_spots_fill(npcs, wanted, player) {
       ("fewer people on the map than the arrangement asks for - stand the ones there are and leave it short, because a shape missing somebody still shows most of what it is for");
       return;
     }
-    app_g_npc_move(npc, tile, 0);
+    app_shared_game_npc_move(npc, tile, 0);
   }
   each_index(to_fill, fill);
   let filled = list_size(to_fill);

@@ -1,7 +1,7 @@
 import { g_path_steps } from "./g_path_steps.mjs";
 import { g_img_square_slide_seconds } from "./g_img_square_slide_seconds.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
+import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { each_async } from "./each_async.mjs";
 export async function app_g_npc_walk(npc, path) {
@@ -11,7 +11,7 @@ export async function app_g_npc_walk(npc, path) {
   let seconds = g_img_square_slide_seconds();
   async function walk(step) {
     let to = property_get(step, "to");
-    app_g_npc_move(npc, to, 0);
+    app_shared_game_npc_move(npc, to, 0);
     await sleep_seconds(seconds);
   }
   await each_async(steps, walk);

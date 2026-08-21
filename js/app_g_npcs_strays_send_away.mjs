@@ -1,4 +1,4 @@
-import { app_g_npc_move } from "./app_g_npc_move.mjs";
+import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
 import { g_coordinates_land } from "./g_coordinates_land.mjs";
 import { g_coordinates_distance_squared } from "./g_coordinates_distance_squared.mjs";
@@ -43,7 +43,7 @@ export function app_g_npcs_strays_send_away(npcs, wanted, coordinates, player) {
     if (none) {
       return;
     }
-    app_g_npc_move(npc, tile, 0);
+    app_shared_game_npc_move(npc, tile, 0);
   }
   each_index(strays, evacuate);
   let sent = list_size(strays);
