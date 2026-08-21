@@ -1,3 +1,5 @@
+import { less_than } from "./less_than.mjs";
+import { divide } from "./divide.mjs";
 export function run_chance_ceiling(positions, choices) {
   "The longest run of matching items two sequences can share before chance stops being an explanation - given how many places a run could start and how many different items there were to pick from.";
   "A SHARED RUN IS NOT EVIDENCE UNTIL IT IS LONGER THAN CHANCE PRODUCES. Two sequences drawn from the same small set of items will share short runs whatever wrote them, and how short depends on both numbers: many places to start makes a coincidence likelier, many items to choose from makes it rarer. So a fixed number typed into a check is right for one pair of sequences and silently wrong for every other size, which is exactly the case where it reads as a working check.";
