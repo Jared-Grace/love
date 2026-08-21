@@ -8,8 +8,7 @@ import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { greater_than } from "./greater_than.mjs";
+import { bible_glyph_roots_collisions } from "./bible_glyph_roots_collisions.mjs";
 export async function bible_glyph_survey_sense_spread(testament_name) {
   "Gathers everything about one testament that has to be in hand before its words can be counted: the glosses recorded against each Strong's number, the roots the picture alphabet is built on, and which picture each word has been given.";
   "On the way it answers two questions about the alphabet itself, which are only askable once the whole table is laid out. A picture named in the table that the alphabet does not hold is a word nothing can yet be drawn for. A picture standing for more than one root is worse: two different words would come out looking the same, and the reader would have no way of telling which was meant.";
@@ -54,17 +53,7 @@ export async function bible_glyph_survey_sense_spread(testament_name) {
       });
     }
   }
-  let glyph_collisions = [];
-  for (let glyph of object_property_names(glyph_roots)) {
-    let sharers = property_get(glyph_roots, glyph);
-    let shared = greater_than(sharers.length, 1);
-    if (shared) {
-      list_add(glyph_collisions, {
-        glyph,
-        roots: sharers,
-      });
-    }
-  }
+  let glyph_collisions = bible_glyph_roots_collisions(glyph_roots);
   let occurrences_total = 0;
   let occurrences_mapped = 0;
   let sense_spread = [];
