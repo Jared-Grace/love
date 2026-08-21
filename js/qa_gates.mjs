@@ -537,6 +537,7 @@ export function qa_gates() {
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
     ebible_readaloud_lines_gate_run,
+    ebible_letter_unaccounted_gate_run,
     ebible_versions_english_readaloud_gate_run,
     ebible_languages_licences_gate_run,
     ebible_languages_curated_codes_gate_run,
