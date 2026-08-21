@@ -12,10 +12,10 @@ export async function js_dollar_choices_parameters_gate_run() {
   ("What it catches cannot be caught by running anything. A macro runs only when a person types one, and a person who types one and is told that nothing cannot be turned into an object reads that as their own mistake. Nine macros stood dead for as long as it took somebody to type one and not report it.");
   ("Both sides are read from the code, so this goes red when either changes and is not a copy of either that could quietly fall behind.");
   ("Throws so the dispatcher seam exits nonzero.");
-  ("How many macros were asked is handed back beside the verdict, because a run that reached none of them and a run that cleared all of them both say nothing otherwise, and the number of registered macros is the whole of what there is to reach.");
-  let choices = js_dollar_choices();
-  let walked = list_size(choices);
-  let rows = await js_dollar_choices_parameters_unknown();
+  ("How many macros were read is handed back beside the verdict, because a run that reached none of them and a run that cleared all of them both say nothing otherwise. It is the reading's own tally of what it got through, not the length of the list it started from, which would be the same figure either way.");
+  let unknown = await js_dollar_choices_parameters_unknown();
+  let walked = property_get(unknown, "read");
+  let rows = property_get(unknown, "rows");
   let f_name = fn_name("js_dollar");
   list_empty_is_assert_json(rows, {
     hint: text_combine_multiple([
