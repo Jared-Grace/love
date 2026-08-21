@@ -199,7 +199,8 @@ export function song_image_couplets() {
       verse: 2,
       first: "the wrath of GOD",
       second: "was satisfied",
-      symbol: "A sword returning to its sheath",
+      symbol:
+        "A sword of plain grey iron held point downward, the lower half of its blade already inside a plain brown leather sheath and the upper half still bare above the sheath's mouth",
       ref: "Zechariah 13:7",
       same_as: 0,
     },
