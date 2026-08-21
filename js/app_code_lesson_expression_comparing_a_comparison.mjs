@@ -126,6 +126,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
       f,
       " can be used, we can use a comparison",
     ]);
+    ("the card lands back on the line the screen is here to solve. Every row above it is worked on 1 < 2 and true === true, which are not that line and are not meant to be - they are the smallest pair that can carry the swap. But the card used to stop at the general sentence, and a reader who has just watched a different line being taken apart is left holding a rule with nothing under it: the card reads as a second problem rather than as the reason the first one is a line at all. One row naming the goal line closes it, and the card after this one begins on that same line");
+    html_div_cycle_code(idea, ["So we can write ", goal_line]);
     let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
     replacing(root, "3 === 5", false);
