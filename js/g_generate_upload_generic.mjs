@@ -3,6 +3,6 @@ import { folder_user_storage_function_each } from "./folder_user_storage_functio
 export async function g_generate_upload_generic(fn, path_get) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
-    await g_generate_upload_single(fn, path_get, file);
+    await g_generate_upload_single(path_get, file);
   }
 }
