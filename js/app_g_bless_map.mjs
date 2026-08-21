@@ -4,7 +4,7 @@ import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { app_shared_game_div_map_style_rows } from "./app_shared_game_div_map_style_rows.mjs";
-import { app_g_div_map_tiles_add_rows } from "./app_g_div_map_tiles_add_rows.mjs";
+import { app_shared_game_div_map_tiles_add_rows } from "./app_shared_game_div_map_tiles_add_rows.mjs";
 import { app_g_map_room_new } from "./app_g_map_room_new.mjs";
 import { app_g_npc_img_set } from "./app_g_npc_img_set.mjs";
 import { g_character_img } from "./g_character_img.mjs";
@@ -30,7 +30,7 @@ export function app_g_bless_map(container, world) {
   let div_map = html_div(room);
   property_set_exists_not(div_map, "container", container);
   app_shared_game_div_map_style_rows(div_map, rows);
-  app_g_div_map_tiles_add_rows(div_map, rows);
+  app_shared_game_div_map_tiles_add_rows(div_map, rows);
   let wash = html_div(div_map);
   ("each person's picture is written down under who they are, because the mover that walks");
   ("them looks it up that way and by no other route - a person drawn without being");
