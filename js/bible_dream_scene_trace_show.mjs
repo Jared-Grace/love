@@ -1,22 +1,15 @@
-import { bible_dream_corridor_tolerance_squared } from "./bible_dream_corridor_tolerance_squared.mjs";
-import { bible_dream_hand_nearness } from "./bible_dream_hand_nearness.mjs";
-import { bible_dream_hand_mark_add } from "./bible_dream_hand_mark_add.mjs";
-import { bible_dream_stroke_counters_show } from "./bible_dream_stroke_counters_show.mjs";
-import { bible_dream_stroke_finish_show } from "./bible_dream_stroke_finish_show.mjs";
+import { bible_dream_stroke_hand_step } from "./bible_dream_stroke_hand_step.mjs";
+import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told.mjs";
 import { bible_dream_scene_words_show } from "./bible_dream_scene_words_show.mjs";
 import { bible_dream_scene_drawing_add } from "./bible_dream_scene_drawing_add.mjs";
-import { subtract } from "./subtract.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_on } from "./html_on.mjs";
 import { bible_dream_stroke_place } from "./bible_dream_stroke_place.mjs";
 import { bible_dream_drawing_point } from "./bible_dream_drawing_point.mjs";
 import { bible_dream_stroke_begin_near } from "./bible_dream_stroke_begin_near.mjs";
-import { bible_dream_stroke_advance } from "./bible_dream_stroke_advance.mjs";
-import { bible_dream_stroke_ink_show } from "./bible_dream_stroke_ink_show.mjs";
 import { bible_dream_trace_status_text } from "./bible_dream_trace_status_text.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { each } from "./each.mjs";
 import { not } from "./not.mjs";
 export function bible_dream_scene_trace_show(scene) {
@@ -53,22 +46,9 @@ export function bible_dream_scene_trace_show(scene) {
       return;
     }
     let at = bible_dream_drawing_point(drawing, event);
-    let near = {
-      x: subtract(at.x, active.x),
-      y: subtract(at.y, active.y),
-    };
-    let tolerance_squared = bible_dream_corridor_tolerance_squared();
-    bible_dream_stroke_advance(active, near, tolerance_squared);
-    let nearness = bible_dream_hand_nearness(active.gap, tolerance_squared);
-    bible_dream_hand_mark_add(active, near, nearness);
-    bible_dream_stroke_ink_show(active);
+    bible_dream_stroke_hand_step(active, at);
     if (active.done) {
-      bible_dream_stroke_finish_show(active);
-      bible_dream_stroke_counters_show(active);
-      let already = list_includes(told, active.said);
-      if (not(already)) {
-        list_add(told, active.said);
-      }
+      bible_dream_stroke_finish_told(active, told);
       active = null;
     }
     readout_show();
