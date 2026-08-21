@@ -20,7 +20,8 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   "IT IS THE FIRST CHECK TO FILE RATHER THAN PRINT, and that is the change it is really making. A report is read by a person, who then has to carry what they read to wherever the fixing happens; a note is already there when the fixing starts. The same finding costs a person a reading in the first shape and nothing at all in the second.";
   "SO WHAT A PERSON IS LEFT WITH IS WHAT THIS COULD NOT SEE. Run before anybody opens the arc, it takes the whole vocabulary question off their desk, and every check written after it takes another one - until what is left needs a person because no rule could have caught it.";
   "IT NAMES THE WORDS AND ASKS FOR NOTHING, in the shape every note here is written in. Saying which words are too hard leaves the sentence with whoever writes sentences; saying what the line should say instead has written the line, and then the next line needs writing too. A word may also be perfectly fair - a dyer says dye - so a note that had demanded a replacement would have demanded a worse line.";
-  "IT DOES NOT CLEAR FIRST, so running it twice files everything twice. Clearing is a separate command on purpose: the notes it would drop include a person's, and a check has no business throwing away a reading it cannot reproduce.";
+  "IT DOES NOT CLEAR FIRST, so running it twice files everything twice. Clearing is a separate command on purpose: the notes it would drop include a person's, and a check has no business throwing away a reading it cannot reproduce. The clear that drops only what a check filed is the one to run before running this again.";
+  "ITS FIRST RUN FAULTED THIRTY-SEVEN OF FIFTY-THREE LINES, and that number is the finding rather than a defect in the arc. The accepted list of a child's words deliberately carries no word from the faith, so god, sinned, cross and confess all read as outside it - and those are the words the game is FOR. A word outside a child's vocabulary is therefore two different things wearing one shape: a word the writer should not have reached for, and a word the game means to teach. Only the second has a gloss, so what tells them apart is the gloss store and not any measure of how rare the word is - frequency would have dropped ACTUALLY too, which is the one this caught that a person had already faulted by hand.";
   let arcs = await g_arc_written_chapter(chapter_code);
   let wanted = number_from_text(index);
   let found = null;
@@ -53,7 +54,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
         "a child that age would not have these words: ",
         joined,
       );
-      await g_arc_feedback_add(chapter_code, index, number, field, note);
+      await g_arc_feedback_checked_add(chapter_code, index, number, field, note);
       filed = add_1(filed);
       list_add_multiple(words_named, outside);
     }

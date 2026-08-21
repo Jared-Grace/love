@@ -1,3 +1,9 @@
+import { g_arc_feedback_write_path } from "./g_arc_feedback_write_path.mjs";
+import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { list_add } from "./list_add.mjs";
+import { json_format_to } from "./json_format_to.mjs";
+import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function g_arc_feedback_note_add(
   chapter_code,
   index,
