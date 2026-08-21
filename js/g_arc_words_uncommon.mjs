@@ -1,3 +1,5 @@
+import { words_early_reader } from "./words_early_reader.mjs";
+import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { g_arc_write } from "./g_arc_write.mjs";
 import { folder_user_storage_function_path } from "./folder_user_storage_function_path.mjs";
@@ -16,10 +18,11 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function g_arc_words_uncommon() {
   "The two shapes a word a young reader will not have shows up in, taken over every arc written so far, each one carrying the person who said it - a word said once in the whole corpus, and a word said several times by one person and by nobody else.";
-  "IT IS A REPORT AND NOT A GATE, deliberately. Whether a word is too hard is a question about English rather than about this repo, and answering it properly needs a list of the words a child of the settled reading age already has. There is no such list here, so a gate built on this would be ratcheting against a signal it cannot justify - and a check that fails for a reason nobody can state gets switched off rather than fixed.";
+  "IT IS A REPORT AND NOT A GATE, deliberately. There is a list of the words a child of the settled reading age already has, and it is read below - but a list of ordinary English is not a list of every word a person may fairly say. A dyer says dye and a weaver says loom, and neither belongs on a list of what a six-year-old knows nor in a build that fails. So the list is used to SHORTEN what a human reads and never to decide anything, and what is left over is handed to somebody who can tell a trade from a barrier.";
   "USED ONCE IS THE ONE THRESHOLD THAT IS NOT A CHOICE. Any other cut - fewer than three, fewer than five - is a number somebody picked, right for one size of corpus and quietly wrong for the next. The bottom of the distribution is where it is whatever the corpus does.";
   "ONCE-SAID CANNOT SEE A WORD SOMEBODY REPEATS, and that is most of the hard ones. A person's trouble is the thing they keep coming back to, so the word for it is said in the line that opens the arc and again every time the trouble is answered - rites was said three times by the dyer, was the hardest word in the chapter, and sat below this report's floor the whole time. It was found by a reader, which is the one way it could have been found.";
   "SO THE SECOND SHAPE IS SAID MORE THAN ONCE AND BY ONE PERSON ONLY. Both halves are extremes of the distribution rather than numbers somebody picked: more than once is the complement of the first list, and one speaker is the fewest a said word can have. A word everybody uses is the language; a word one person keeps using is that person's own, and a person's own word is exactly where a translated trade or a household religion puts a word no child has met.";
+  "A WORD AN EARLY READER ALREADY HAS IS DROPPED BEFORE EITHER LIST, and the count of those is handed back rather than thrown away. Without it both lists are mostly ordinary English - laughed, smiling, waiting - and a list somebody has to wade through is a list nobody reads twice. The dropping is the only place a judgement about English enters this function, it is made in accepted data where a human can correct it, and it can only ever shorten what is shown.";
   "It says nothing about whether the word is HARD. Every arc has its own subject and so has its own words for it, and most of what comes back is ordinary - wool, dye, husband. The list is short enough to read, which is the whole of what a report owes; a gate here would be ratcheting against the fact that people talk about different things.";
   "IT SHARPENS AS MORE IS WRITTEN, which is why it reads every chapter rather than taking one. With a single chapter written, once-said catches roughly ten ordinary words for every hard one - laughed, smiling, waiting sit beside rite and unaccounted. With twenty chapters the ordinary words have all been said elsewhere and stop appearing, while a genuinely rare word still will not have been.";
   "COUNTS THE LOOKING AND HANDS THE COUNT BACK. Arcs live in storage and storage is not in the repo, so a machine that has written none answers nothing, and nothing is the right answer rather than a broken one.";
@@ -32,6 +35,7 @@ export async function g_arc_words_uncommon() {
     people: 0,
     said: 0,
     words: 0,
+    known: 0,
     once: [],
     own: [],
   };
@@ -71,11 +75,18 @@ export async function g_arc_words_uncommon() {
     }
   }
   let counts = list_tally(said);
+  let known_words = await words_early_reader();
   let once = [];
   let own = [];
   let words = 0;
+  let known = 0;
   for (let word of object_property_names(counts)) {
     words = add_1(words);
+    let already = word_early_reader_known_is(word, known_words);
+    if (already) {
+      known = add_1(known);
+      continue;
+    }
     let uses = property_get(counts, word);
     let home = property_get(homes, word);
     let chapter_code = property_get(home, "chapter_code");
@@ -109,6 +120,7 @@ export async function g_arc_words_uncommon() {
     people,
     said: list_size(said),
     words,
+    known,
     once,
     own,
   };

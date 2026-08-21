@@ -9,6 +9,7 @@ export function bible_dream_samples_turn_signs(samples) {
   "The bend is read from the two steps meeting at the point, by the sign of their cross product. That is a bend and not a direction: it says nothing about which way along the line the hand went, and reversing the whole list leaves every sign as it was in magnitude. So a shape's bumps are a property of the shape, which is what they have to be for anything built on them to be the same shape's ornament whichever way it was drawn.";
   "★ THE CROSS PRODUCT IS DIVIDED BY THE LENGTHS OF THE TWO STEPS, WHICH TURNS IT FROM AN AREA INTO AN ANGLE. Left as an area it grows with the square of how far apart the samples are, so one fixed dead band means something quite different on a shape drawn small than on one drawn large. Measured on the page: a cow three hundred units round, sampled a hundred and sixty times, had its bend flip sign almost every step, and the whole outline came back as ONE run six samples long - the noise in the sampling was larger than the band. The river, sampled the same number of times but three times the size, was read perfectly. Nothing went red; the small shapes simply had no features. Divided through, the number is the sine of the angle between the steps, which does not care how big the drawing is.";
   "The small dead band around nothing is what makes a straight run read as straight. Samples are taken at even distances along a curve and so carry rounding, and without a band a dead straight line would come back as a rapid alternation of the two signs and every ornament built on it would be nonsense.";
+  "★ THE BAND IS SET WHERE IT IS BY MEASUREMENT AND THE NUMBER IS SMALLER THAN IT LOOKS SAFE TO MAKE IT. Set at five hundredths, the river of GEN41 came back with no bends at all - a long gentle sweep turns very little between one sample and the next, and it was being read as a straight line four hundred units long. At one hundredth every shape in the dream returns features except a reed, which really is a straight blade. It can be set this low BECAUSE it is an angle: the error in a sampled point is a small fraction of a unit against steps half a unit long at worst, which is an angle two orders of magnitude below the band. An area could not have been trusted this near to nothing.";
   "The two ends are given nothing, because a bend needs a step on each side of it and an end has only one.";
   let count = list_size(samples);
   let signs = [];
@@ -37,10 +38,10 @@ export function bible_dream_samples_turn_signs(samples) {
       turn = divide(crossed, both_long);
     }
     let sign = 0;
-    if (greater_than(turn, 0.05)) {
+    if (greater_than(turn, 0.01)) {
       sign = 1;
     }
-    if (less_than(turn, -0.05)) {
+    if (less_than(turn, -0.01)) {
       sign = -1;
     }
     list_add(signs, sign);
