@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
@@ -11,7 +12,7 @@ import { list_first } from "./list_first.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_glyph_chapters_tagalog_write() {
-  "Fetches the Tagalog of every picture Bible chapter and writes it beside the repo, so the reveal panel can print a plain translation the reader already speaks.";
+  "Fetches the Tagalog of every picture Bible chapter and writes it out as a committed function, so the key band can print a plain translation the reader already speaks.";
   "IT IS FOR THE READER AND NOT FOR THE PICTURES. A picture Bible verse is marks interleaved with the words no mark covers, in ENGLISH word order, and Tagalog does not use that order - it puts the verb first and marks the subject with ang. So a Tagalog line of pictures has to be AUTHORED, one chapter at a time, exactly as the English ones were. What this fetches is a different thing and a cheaper one: the ordinary Tagalog verse, to be shown AFTER the reader has guessed, so somebody who does not read English can check themselves against their own language rather than against ours.";
   "THAT IS THE WHOLE TEST THIS PROJECT HAS BEEN WAITING ON. The claim is that a stranger with no shared language can follow the marks; the claim cannot be tested by an English speaker, and until now the reveal band answered in English, so the only people who could check the answer were the people who did not need the pictures.";
   "THE TEXT IS WRITTEN DOWN RATHER THAN FETCHED WHEN THE PAGE OPENS, and that is deliberate. This Bible is meant to reach a phone with no network, so a reveal that needs one would fail in exactly the situation the pictures were chosen for. A fetch at build time costs nothing at read time.";
@@ -40,20 +41,28 @@ export async function bible_glyph_chapters_tagalog_write() {
     }
     let numbered = [];
     for (let verse of verses) {
-      let verse_number = number_from_text(property_get(verse, "verse_number"));
+      let text2 = property_get(verse, "verse_number");
+      let verse_number = number_from_text(text2);
       let text = property_get(verse, "text");
-      list_add(numbered, { verse_number, text });
+      list_add(numbered, {
+        verse_number,
+        text,
+      });
     }
-    list_add(gathered, { chapter_code, verses: numbered });
+    list_add(gathered, {
+      chapter_code,
+      verses: numbered,
+    });
   }
   let f_name = "bible_glyph_chapters_tagalog";
-  let source = bible_glyph_chapters_tagalog_source(f_name, json_to(gathered));
+  let json = json_to(gathered);
+  let source = bible_glyph_chapters_tagalog_source(f_name, json);
   let found = await function_exists(f_name);
   let exists = property_get(found, "exists");
   if (exists) {
     await function_source_overwrite(f_name, source);
   }
-  if (!exists) {
+  if (not(exists)) {
     await function_source_new(f_name, source);
   }
   let report = {
@@ -72,7 +81,8 @@ export async function bible_glyph_chapters_tagalog_write() {
       '  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is a public-domain Tagalog bible read once, at authoring time, for the chapters the pictures have reached.";\n' +
       '  "IT IS COMMITTED RATHER THAN FETCHED because this Bible is meant to reach a phone with no network, and a reveal that needed one would fail in exactly the situation the pictures were chosen for.";\n' +
       '  "IT IS NOT A LINE OF PICTURES AND CANNOT BECOME ONE. Tagalog puts the verb first and marks the subject with ang, while a picture verse is marks interleaved into English word order, so a Tagalog picture line has to be authored a chapter at a time exactly as the English ones were.";\n';
-    let body = "  let chapters = " + chapters_json + ";\n  return chapters;\n}\n";
+    let body =
+      "  let chapters = " + chapters_json + ";\n  return chapters;\n}\n";
     let file_text = head + body;
     return file_text;
   }
