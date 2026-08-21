@@ -6,7 +6,7 @@ import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_character_face } from "./app_g_character_face.mjs";
+import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
 import { g_direction } from "./g_direction.mjs";
@@ -67,7 +67,7 @@ export async function app_g_bless_walk(
     let from = property_get(step, "from");
     let to = property_get(step, "to");
     let direction = g_direction(from, to);
-    app_g_character_face(player, player_img_c, direction);
+    app_shared_game_character_face(player, player_img_c, direction);
     ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
     ("player goes on, and that person steps back into the tile being left. The gospel game's");
     ("own trade, called and not copied, at the same moment in the step that it makes it.");

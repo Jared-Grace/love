@@ -6,7 +6,7 @@ import { list_first } from "./list_first.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
 import { property_set } from "./property_set.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { app_g_character_face } from "./app_g_character_face.mjs";
+import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { app_g_day_followers_step } from "./app_g_day_followers_step.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
@@ -28,7 +28,7 @@ export async function app_g_day_line_back_step(player, player_img_c, div_map) {
   let remaining = list_skip_1(trail);
   property_set(state, "trail", remaining);
   let direction = g_direction(player, to);
-  app_g_character_face(player, player_img_c, direction);
+  app_shared_game_character_face(player, player_img_c, direction);
   let g = await app_g_game_save_get();
   app_g_day_followers_step(g);
   object_assign(player, to);
