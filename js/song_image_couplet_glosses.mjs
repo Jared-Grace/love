@@ -151,7 +151,7 @@ export function song_image_couplet_glosses() {
         "Described. Hewn out in the rock is the verse, and the mouth is drawn standing empty with no stone near it so that the same doorway can be shut at couplet 21 and open again at couplet 24.",
     },
     21: {
-      kept: 24,
+      kept: 30,
       lyric_ref: "Matthew 27:60, Mark 16:4, Matthew 27:66",
       lyric_explain:
         "HE rolled a great stone to the door of the sepulchre. Mark says the stone was very great, and Matthew has them make the sepulchre sure, sealing the stone and setting a watch.",

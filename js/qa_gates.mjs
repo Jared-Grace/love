@@ -1,3 +1,4 @@
+import { function_names_app_grouped_cases_gate_run } from "./function_names_app_grouped_cases_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_marks_gate_run } from "./bible_glyph_chapters_rosetta_lines_marks_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_notation_gate_run } from "./bible_glyph_chapters_rosetta_lines_notation_gate_run.mjs";
 import { ebible_letter_unaccounted_gate_run } from "./ebible_letter_unaccounted_gate_run.mjs";
@@ -664,6 +665,7 @@ export function qa_gates() {
     machine_path_literals_gate_run,
     commands_only_write_denied_cases_gate_run,
     text_lines_search_cases_gate_run,
+    function_names_app_grouped_cases_gate_run,
     text_replace_once_cases_gate_run,
     text_replace_path_start_cases_gate_run,
     folders_root_gate_run,
