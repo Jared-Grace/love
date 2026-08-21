@@ -7,7 +7,7 @@ import { g_water } from "./g_water.mjs";
 import { app_shared_game_map_generate_waters_next } from "./app_shared_game_map_generate_waters_next.mjs";
 import { floor } from "./floor.mjs";
 import { multiply } from "./multiply.mjs";
-export function app_g_map_generate_waters(rows) {
+export function app_shared_game_map_generate_waters(rows) {
   let coordinates = g_coordinates(rows);
   let total = list_size_nested(rows);
   let water_count = floor(multiply(total, 0.3));
