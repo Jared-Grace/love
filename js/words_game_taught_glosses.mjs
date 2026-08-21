@@ -1,3 +1,8 @@
+import { data_given_accepted_folder } from "./data_given_accepted_folder.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { path_join } from "./path_join.mjs";
+import { file_read_json } from "./file_read_json.mjs";
 export async function words_game_taught_glosses() {
   "What each word the game means to teach is to be told to a player who taps it - a short gloss to read at a glance, and a longer explain underneath it - kept as accepted data rather than written into any code.";
   "IT IS THE ANSWER THE OTHER TWO LISTS LEAVE OWING. One accepted list says which words a child already has and the other says which ones the game means to teach; together they say a tapped word is fair rather than careless, and neither says a single thing about what the player is then told. A word marked as taught with nothing behind it is a word the game has decided not to rewrite and also not to explain.";
