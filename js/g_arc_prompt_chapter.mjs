@@ -1,3 +1,4 @@
+import { number_from_text } from "./number_from_text.mjs";
 import { g_arc_prompt_chapter_role } from "./g_arc_prompt_chapter_role.mjs";
 export async function g_arc_prompt_chapter(chapter, index_text) {
   "The arc prompt for one written chapter, written for one named person of the convert pool - the whole prompt as one string.";
