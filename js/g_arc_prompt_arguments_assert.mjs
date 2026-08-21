@@ -1,3 +1,4 @@
+import { text_is } from "./text_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_and_empty_not_is_assert_json } from "./text_and_empty_not_is_assert_json.mjs";
 import { number_is } from "./number_is.mjs";
@@ -49,7 +50,7 @@ export function g_arc_prompt_arguments_assert(
     leader,
     hint,
   });
-  "WHAT IS ALREADY WRITTEN IS ASKED FOR ITS TYPE AND NEVER FOR CONTENT, and it is the one argument here that is allowed to be empty. Empty is the first person of a chapter, which is an ordinary case rather than a hole - so the question is whether it is text at all. A list of arcs handed over by mistake would print as the word object into the middle of the prompt and read as prose.";
+  ("WHAT IS ALREADY WRITTEN IS ASKED FOR ITS TYPE AND NEVER FOR CONTENT, and it is the one argument here that is allowed to be empty. Empty is the first person of a chapter, which is an ordinary case rather than a hole - so the question is whether it is text at all. A list of arcs handed over by mistake would print as the word object into the middle of the prompt and read as prose.");
   let ti = text_is(written_text);
   assert_json(ti, {
     written_text,
