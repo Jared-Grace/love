@@ -23,15 +23,6 @@ export function g_arc_words_said(arc) {
     }
   }
   let joined = list_join_space(said);
-  let words = text_words(joined);
-  let kept = [];
-  for (let word of words) {
-    let lowered = text_lower_to(word);
-    let letters = text_letters_only(lowered);
-    let any = text_empty_not_is(letters);
-    if (any) {
-      list_add(kept, letters);
-    }
-  }
+  let kept = words_letters_lowered(joined);
   return kept;
 }
