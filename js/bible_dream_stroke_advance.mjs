@@ -4,11 +4,12 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
   "Move a trace as far along its stroke as the pointer's present position allows, and count a slip if the pointer has left the corridor.";
   "It looks FORWARD only. A trace can never be pushed back down a stroke by wandering, because the shape being revealed is Scripture's and not the player's, and a line already given should not be taken away again by an unsteady hand.";
   "The lookahead is what makes a fast drag work. A pointer reports where it is, not where it went, so a quick sweep arrives several samples further on than the last one; without a look forward the trace would stall at the first gap it could not step over and the stroke would feel stuck rather than fast.";
+  "★ AND THE LOOKAHEAD MUST BE SHORT, WHICH WAS MEASURED AND NOT GUESSED. A stroke that doubles back on itself - a cow's leg, drawn down one side and up the other - brings two far-apart parts of the line within a few units of each other, and a long lookahead reads the far side of the fold as progress and skips the leg entirely. The trace then counts the leg it is about to draw as a wandering, and a perfect trace of a cow came out with five slips against none for the smooth river. Four samples is short enough that no fold in these shapes can be stepped over, and because samples are laid at even distances along each stroke, four of them reach further on a long stroke than on a short one, which is the behaviour wanted anyway.";
   "A slip is counted once for each leaving of the corridor and not once for each report while outside it, so it measures how often the hand left the line rather than how long the pointer was made to sit still off it. That count is the whole scoring axis: NUM12:8 ranks a plain word above a riddle, and a stroke traced badly is what a riddle is made of here.";
   let samples = state.samples;
   let last = list_size(samples) - 1;
   let reached = state.index;
-  let look = state.index + 24;
+  let look = state.index + 4;
   if (look > last) {
     look = last;
   }

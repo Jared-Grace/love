@@ -73,7 +73,7 @@ export function bible_dream_trace_preview() {
       x: subtract(at.x, active.x),
       y: subtract(at.y, active.y),
     };
-    bible_dream_stroke_advance(active, near, 49);
+    bible_dream_stroke_advance(active, near, 20);
     bible_dream_stroke_ink_show(active);
     if (active.done) {
       let already = list_includes(told, active.said);
