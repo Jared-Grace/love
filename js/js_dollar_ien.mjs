@@ -3,7 +3,7 @@ import { null_is } from "./null_is.mjs";
 export async function js_dollar_ien({
   remaining,
   node,
-  stack_1,
+  stack_: stack_1,
   stack_2,
   stack_3,
   ast,
