@@ -1,3 +1,4 @@
+import { bible_glyph_language_written_mark } from "./bible_glyph_language_written_mark.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
