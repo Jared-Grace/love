@@ -20,7 +20,12 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
   let count = list_size(samples);
   let reached = state.index;
   let nearest = bible_dream_point_gap_squared(point, samples[state.index]);
-  let window = bible_dream_sample_window(state.index, 12, count, state.loop);
+  let near_numbers = bible_dream_sample_window(
+    state.index,
+    12,
+    count,
+    state.loop,
+  );
   function each_near(index) {
     let gap = bible_dream_point_gap_squared(point, samples[index]);
     if (less_than(gap, nearest)) {
@@ -28,7 +33,7 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
       reached = index;
     }
   }
-  each(window, each_near);
+  each(near_numbers, each_near);
   state.gap = nearest;
   if (greater_than(nearest, tolerance_squared)) {
     if (state.off) {
