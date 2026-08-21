@@ -62,7 +62,7 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     return list;
   }
   function above(root) {
-    "recall what ( and ) do, then each side named as a comparison and the rule read off the pair, then the two put together and valued, then why the parentheses are needed here when they were not needed before";
+    "recall what ( and ) do, then the line posed and solved a side at a time, then why the parentheses are needed here when they were not needed before";
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
@@ -76,38 +76,17 @@ export function app_code_lesson_expression_parentheses_both_sides() {
       " is solved on its own",
     ]);
     let both = app_code_container_light_blue(root);
-    ("The two comparisons first and the rule about them after, rather than the rule and then its instances. A general sentence arriving first has nothing yet to attach itself to, so the learner has to hold it until something does - the same climb from one instance up to the rule is argued at length in the comparing-a-comparison lesson, and this card used to open on the rule it now ends the first half with.");
-    ("Each side is named as a comparison before it is valued, because that is the premise the rule below rests on. The card used to state both values and leave a learner to notice for themselves that each of them came from a comparison.");
-    ("Putting the two on either side is its own line, and the line it makes is the next one, and the value of that line is the one after. One line carrying the assembly and the answer together hides the step where two false values are compared, which is the only new thing here.");
-    ("The whole line is written out again rather than referred back to, the same way the flat-line card below writes false === 5 twice. The repeated name is what ties the answer to the line it belongs to.");
+    ("The line is posed first and then solved, which is the shape of the two screens behind this one - the comparing-a-comparison walkthrough and the choose-order-pair run both open on Suppose we want to solve and work down from it. A learner arriving here reads the third one as the same act rather than as a third way of being taught.");
+    ("The card used to spend its first four rows arguing that the line was allowed to exist: each side named as a comparison, then both sides of === can be comparisons, then so we can put one on either side of another ===. That is construction, and this lesson never asks for it - the quiz hands over a finished line every time and asks what it comes to. The two rows that did solving were the last two, and they jumped from the assembled line straight to its value, hiding the one step that is actually new here: two false values compared against each other. Solving it row by row spends the card on the direction the learner is graded in, and costs two rows fewer than arguing the line into existence first.");
+    ("The last row is word for word the shape the choose-order-pair run ends on - replace them to get the middle line, which is the answer. That run is the lesson immediately before this one and the learner has just pressed their way through it, so the same sentence closes the loop rather than opening a new one.");
+    let whole = "(3 === 5) === (5 === 3)";
+    app_code_lesson_suppose_solve_line(both, "Suppose", whole);
+    html_div_cycle_code(both, ["", "3 === 5", " is ", "false"]);
+    html_div_cycle_code(both, ["", "5 === 3", " is ", "false"]);
     html_div_cycle_code(both, [
-      "",
-      "3 === 5",
-      " is a comparison and is ",
-      "false",
-    ]);
-    html_div_cycle_code(both, [
-      "",
-      "5 === 3",
-      " is also a comparison and is ",
-      "false",
-    ]);
-    html_div_cycle_code(both, ["Both sides of ", "===", " can be comparisons"]);
-    ("A side is a side of something, and this line has to say what. Left at on one side it leans back on the sentence above it, and the two things being placed each hold a === of their own - so the one word missing is the one that tells those apart from the one they are being put either side of. Another names it and says there is now one more of them than there was.");
-    html_div_cycle_code(both, [
-      "So we can put ",
-      "3 === 5",
-      " on one side of another ",
-      "===",
-      " and ",
-      "5 === 3",
-      " on the other side",
-    ]);
-    html_div_cycle_code(both, ["Then we have ", "(3 === 5) === (5 === 3)"]);
-    html_div_cycle_code(both, [
-      "And ",
-      "(3 === 5) === (5 === 3)",
-      " is ",
+      "Then we replace them to get ",
+      "false === false",
+      ", which is ",
       "true",
     ]);
     app_code_lesson_expression_parentheses_both_sides_card_flat_line(
