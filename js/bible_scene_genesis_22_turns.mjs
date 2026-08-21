@@ -5,7 +5,7 @@ export function bible_scene_genesis_22_turns() {
     " already consumes ({concern, correct:{reference, text}}), so it runs against ",
     fn_name("bible_verses_said_off_scene"),
     " as the wrong answers with NO new mechanic code. built from ",
-    fn_name("bible_events_genesis_22"),
+    fn_name("bible_events_genesis_12_25"),
     ", which is the point of it: a gathered record is not validated by gathering more, only by something consuming one. this one consumed the references and a re-read of the chapter and nothing else, which is what shrank that record from eleven fields to two");
   ("★ THIS IS A PROTOTYPE OF A MECHANIC, NOT THE MECHANIC. it asks what the man SAID, and most Bible events have no speech in them — the flood rising, Joseph sold, the walls falling. a mechanic that only works where someone speaks makes the game different per event, which is four hundred games. whatever the one common action turns out to be, it has to be made of the thing every event actually has, which is verses. this scene is kept as the proof that a gathered event can be played at all, and as the shape a real mechanic will be measured against");
   ("THE ATOM IS UNCHANGED. the player is given the situation and chooses the word that meets it. what differs from the g quizzes is only the consequence — there the verse meets a person's need, here it is what the man actually said, and saying it is how the scene goes forward");

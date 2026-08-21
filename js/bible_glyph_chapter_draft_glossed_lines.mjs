@@ -1,3 +1,4 @@
+import { bible_glyph_group_characters } from "./bible_glyph_group_characters.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
@@ -6,7 +7,6 @@ import { bible_glyph_draft_gap } from "./bible_glyph_draft_gap.mjs";
 import { add } from "./add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { equal } from "./equal.mjs";
@@ -38,7 +38,7 @@ export async function bible_glyph_chapter_draft_glossed_lines(
       let glyph = property_get_or_null(drawn, word.strong);
       let undrawn = null_is(glyph);
       if (not(undrawn)) {
-        let character = property_get(lookup, glyph);
+        let character = bible_glyph_group_characters(glyph, lookup);
         list_add(pieces, character);
         continue;
       }
