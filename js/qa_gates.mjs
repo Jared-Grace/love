@@ -1,3 +1,4 @@
+import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
 import { bible_gathered_readings_gate_run } from "./bible_gathered_readings_gate_run.mjs";
 import { ebible_versions_english_readaloud_gate_run } from "./ebible_versions_english_readaloud_gate_run.mjs";
 import { qa_commit_entry_beside_moved_cases_gate_run } from "./qa_commit_entry_beside_moved_cases_gate_run.mjs";
@@ -711,6 +712,7 @@ export function qa_gates() {
     app_code_lessons_prod_last_gate_run,
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,
+    js_dollar_choices_parameters_gate_run,
   ];
   return gates;
 }
