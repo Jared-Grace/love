@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_index } from "./each_index.mjs";
-import { app_g_tile } from "./app_g_tile.mjs";
+import { app_shared_game_tile } from "./app_shared_game_tile.mjs";
 export function app_shared_game_div_map_tiles_add_rows(div_map, rows) {
   arguments_assert(arguments, 2);
   ("Draws every tile of the rows handed in onto a map, each one carrying the coordinates it");
@@ -10,7 +10,7 @@ export function app_shared_game_div_map_tiles_add_rows(div_map, rows) {
   ("needed to know where they came from.");
   function lambda2(columns, y) {
     function lambda(r, x) {
-      app_g_tile(div_map, r, x, y);
+      app_shared_game_tile(div_map, r, x, y);
     }
     each_index(columns, lambda);
   }
