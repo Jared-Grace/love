@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
 import { app_shared_game_event_target_closest_tile } from "./app_shared_game_event_target_closest_tile.mjs";
 import { not } from "./not.mjs";
-import { app_g_tile_coordinates_get } from "./app_g_tile_coordinates_get.mjs";
+import { app_shared_game_tile_coordinates_get } from "./app_shared_game_tile_coordinates_get.mjs";
 import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
 export function app_g_bless_overlay_tapped(r) {
   arguments_assert(arguments, 1);
@@ -26,7 +26,7 @@ export function app_g_bless_overlay_tapped(r) {
     if (not(tile)) {
       return;
     }
-    let target = app_g_tile_coordinates_get(tile);
+    let target = app_shared_game_tile_coordinates_get(tile);
     ("one tap and two verbs, told apart by what is standing there: somebody the player can");
     ("see is prayed for, and everything else is walked to. Nothing has to be chosen from a");
     ("menu first, and a tap on a person too far off to see is not refused - it walks the");
