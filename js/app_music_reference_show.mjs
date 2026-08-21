@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
+import { text_replace_space_to } from "./text_replace_space_to.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_a_href_text } from "./html_a_href_text.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 export function app_music_reference_show(parent, reference) {
   "$plain reference";
   "One passage under a line of the song: its name, as a link that opens the passage in the bible reader, and an empty place under it for the words themselves.";

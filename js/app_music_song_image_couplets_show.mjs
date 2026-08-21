@@ -1,3 +1,20 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets } from "./song_image_couplets.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { html_div_text_bold } from "./html_div_text_bold.mjs";
+import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
+import { text_split_comma_or_empty } from "./text_split_comma_or_empty.mjs";
+import { list_map } from "./list_map.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { app_music_reference_show } from "./app_music_reference_show.mjs";
+import { app_music_references_fill } from "./app_music_references_fill.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 export async function app_music_song_image_couplets_show(parent) {
   "The hymn's own page: every line it sings in the order it is sung, and under each line what it means and the passages it rests on, with their words.";
   "A REPEATED LINE IS SUNG AGAIN AND SO WRITTEN AGAIN, but explained once. The words are the same the second time and the reason behind them has not changed, so a second explanation would read as a second, different reason for the same line.";
