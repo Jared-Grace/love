@@ -229,7 +229,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone standing open and holding nothing, marked with deep crimson down each post and across the lintel, the crimson laid on unevenly with ragged wandering edges, wider in some places than others, and reaching a little way down the stone below each mark in a few narrow tapering runs",
+        "An empty doorway of plain grey stone standing open and holding nothing, a broad band of deep crimson covering most of the width of each post and most of the depth of the lintel, its edges torn and blunt and thicker in some places than others, and reaching a little way down the stone below the lintel in a few short tapering runs",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
@@ -239,7 +239,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone standing open and holding nothing, marked with deep crimson down each post and across the lintel, the crimson laid on unevenly with ragged wandering edges, wider in some places than others, and reaching a little way down the stone below each mark in a few narrow tapering runs",
+        "An empty doorway of plain grey stone standing open and holding nothing, a broad band of deep crimson covering most of the width of each post and most of the depth of the lintel, its edges torn and blunt and thicker in some places than others, and reaching a little way down the stone below the lintel in a few short tapering runs",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
@@ -269,7 +269,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol:
-        "A very great rolling stone, one thick round slab of plain grey stone standing upright on its edge, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, rolled hard against a wall of plain grey rock only a little wider than itself, the rock unbroken all the way round the stone and reaching nowhere near the sides of the window",
+        "A very great rolling stone, one thick round slab of plain grey stone standing upright on its edge, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, set in front of the mouth of a tomb cut into a wall of plain grey rock, the mouth a black arch a little larger than the stone so that a narrow black band of the same width shows all the way round it, the ground below the stone one plain flat pale grey",
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
