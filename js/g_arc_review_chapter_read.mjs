@@ -14,9 +14,12 @@ export async function g_arc_review_chapter_read(
   "Read an edited review page back into an arc and write that arc as JSON - the way work that came back as readable text becomes the stored thing.";
   "EVERY REFERENCE IS RESOLVED on the way in, against the very passages the chapter offered. That is the step that makes taking readable text seriously safe: the words of an arc are the writer's own and nobody can check them for them, but a passage either was handed to them or was not, and one that was not stops the whole page here rather than being stored as an arc nothing can play.";
   "The Scripture printed on the page is not read back, so a page whose verses were edited still writes an arc that agrees with the Bible.";
+  "THE REVIEWER'S NOTES COME BACK WITH THE COUNT, because they are the reason somebody read the page and the arc written here does not carry them. Handed back, they are still in front of whoever ran this; left out, the one call that consumed the page would also be the call that discarded the reading.";
   "READ UNCACHED, because the whole point of the page is that a person edits it outside this process. A cached read would hand back the words as they stood when something else last looked, and write those over the edit that was the reason for the call.";
   let review_text = await file_read_uncached(review_path);
-  let arc = g_arc_review_text_parse(review_text);
+  let read = g_arc_review_text_parse(review_text);
+  let arc = property_get(read, "arc");
+  let notes = property_get(read, "notes");
   let passages = await g_sermon_chapter_passages_chaptered(chapter_code);
   let turns = 0;
   let conversations = property_get(arc, "conversations");
@@ -33,6 +36,7 @@ export async function g_arc_review_chapter_read(
     arc_path,
     conversations: list_size(conversations),
     turns,
+    notes,
   };
   return r;
 }
