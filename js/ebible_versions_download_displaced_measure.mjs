@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ebible_versions_download } from "./ebible_versions_download.mjs";
+import { property_get } from "./property_get.mjs";
+import { ebible_bibles_measure_generic } from "./ebible_bibles_measure_generic.mjs";
+import { ebible_verse_marks_displaced_bible } from "./ebible_verse_marks_displaced_bible.mjs";
 export async function ebible_versions_download_displaced_measure() {
   "Every translation downloaded again from eBible, and then measured, on the spot, for verse marks whose id names a different verse from the one it prints.";
   arguments_assert(arguments, 0);
