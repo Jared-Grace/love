@@ -1,3 +1,4 @@
+import { js_dollar_c } from "./js_dollar_c.mjs";
 import { js_dollar_inr } from "./js_dollar_inr.mjs";
 import { js_dollar_t } from "./js_dollar_t.mjs";
 import { js_dollar_0 } from "./js_dollar_0.mjs";
@@ -24,6 +25,10 @@ import { js_dollar_i } from "./js_dollar_i.mjs";
 import { js_dollar_x } from "./js_dollar_x.mjs";
 export function js_dollar_choices() {
   let choices = [
+    {
+      name: "c",
+      fn: js_dollar_c,
+    },
     {
       name: "i",
       fn: js_dollar_i,

@@ -47,6 +47,8 @@ export function bible_glyph_roots() {
   "THE DEVIL WAS REFUSED AND IT IS THE MOST WANTED REFUSAL SO FAR. The chapter names him four times and the middle of it is his works being destroyed, so a mark would have carried more weight here than any other addition on offer. The set draws him as a horned face, and horns are not in the text: nothing in scripture describes him that way, so the mark would hand the reader an iconography the writer never wrote. A mark must not claim more than the word claims, and inventing a body for a spirit is the largest claim a picture can make.";
   "AND THE SERPENT WAS NOT TAKEN INSTEAD, though it is the one picture here that is scriptural. It is scriptural because it is a DIFFERENT WORD - the serpent is a word this Bible will have to draw in its own right, in the garden and again at the end - so spending it on the devil here would take it away from the verses that actually say it. That is the argument the sun and the moon were kept back by, made about a word rather than about a thing.";
   "ABIDE AND RIGHTEOUS WERE LEFT IN ENGLISH TOO and neither one is close. Abiding is a relation rather than a thing, and the relations in this Bible are drawn as diagrams that teach in pairs, each one learnable only because its opposite stands beside it; abiding has no opposite to stand against, so the mark would arrive as a picture nobody could learn. Righteousness has a mark the set offers and it is the balance scale, which draws weighing - and weighing is what the righteous one is subjected to rather than what he is.";
+  "AMEN GAVE UP THE FOLDED HANDS AND THIS IS THE TESTAMENT WHERE THE MISTAKE WAS VISIBLE. G281 is glossed Truly a hundred times out of a hundred and twenty six and Amen the other twenty six, so four occurrences in five are Jesus swearing to what follows rather than anybody praying - and three chapters of John were already shipped drawing folded hands ten times, every one of them on Truly, truly, I say to you. Nobody in those verses is praying. The check was already seated on aletheia, truth, so amen moved onto it, which reads as truly in the exact place a reader meets it and costs no new picture.";
+  "AND PROSEUCHOMAI TOOK THE HANDS THAT CAME FREE, with proseuche beside it for the noun. The word is glossed to pray, praying and prayers and nothing else, so a picture of folded hands over it claims precisely what the word claims. That is the whole of the rule this table runs on, and it is worth noticing that the mark did not change - only which word it was standing on. A wrong seat is not a wrong picture.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -879,6 +881,20 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "281",
+          glyph: "check",
+        },
+      ],
+    },
+    {
+      root: "proseuchomai",
+      gloss: "pray, prayer",
+      words: [
+        {
+          strong: "4336",
+          glyph: "hands_praying",
+        },
+        {
+          strong: "4335",
           glyph: "hands_praying",
         },
       ],
