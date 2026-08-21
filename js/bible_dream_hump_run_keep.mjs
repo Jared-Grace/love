@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -23,7 +24,8 @@ export function bible_dream_hump_run_keep(humps, samples, sign, first, last) {
   if (less_than(facing.reach, 0.3)) {
     return;
   }
-  if (less_than(facing.reach, multiply(facing.span, 0.12))) {
+  let b = multiply(facing.span, 0.12);
+  if (less_than(facing.reach, b)) {
     return;
   }
   list_add(humps, {
