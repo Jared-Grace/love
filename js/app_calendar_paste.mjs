@@ -1,3 +1,4 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { country_pakistan } from "./country_pakistan.mjs";
 import { html_p_text_multiple } from "./html_p_text_multiple.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -71,4 +72,5 @@ export function app_calendar_paste(context) {
   }
   each(countries, lambda3);
   output = html_p(root);
+  let footer = app_shared_footer(root);
 }
