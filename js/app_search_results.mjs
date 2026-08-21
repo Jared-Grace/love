@@ -1,7 +1,7 @@
 import { app_search_results_with_verses_and_books } from "./app_search_results_with_verses_and_books.mjs";
 import { app_search_chapter_verses_matching } from "./app_search_chapter_verses_matching.mjs";
 import { app_search_results_render } from "./app_search_results_render.mjs";
-import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
+import { app_shared_collapse_setters_set } from "./app_shared_collapse_setters_set.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { app_search_words_missing_text } from "./app_search_words_missing_text.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -55,13 +55,13 @@ export async function app_search_results(context, div_results) {
   let one_book = list_size_1(book_collapse_setters);
   if (one_book) {
     ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
-    app_search_results_collapse_setters_set(book_collapse_setters, false);
+    app_shared_collapse_setters_set(book_collapse_setters, false);
     let only_book_expand = list_single(book_chapter_single_expanders);
     await only_book_expand();
   } else {
     let scrolls = html_page_scrolls();
     if (scrolls) {
-      app_search_results_collapse_setters_set(book_collapse_setters, true);
+      app_shared_collapse_setters_set(book_collapse_setters, true);
     }
   }
   let s = list_size_1(button_list);
