@@ -3,7 +3,6 @@ import { git_paths_commits_last } from "./git_paths_commits_last.mjs";
 import { global_function_property_exists } from "./global_function_property_exists.mjs";
 import { global_function_property_get } from "./global_function_property_get.mjs";
 import { global_function_property_set } from "./global_function_property_set.mjs";
-
 export async function git_paths_commits_last_remembered(folder) {
   "$plain folder";
   "The last commit to touch each file in one repository, read once and then kept for as long as this process lives.";
