@@ -349,7 +349,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A pair of plain brown leather sandals set down side by side on the ground and seen from straight above, each one a flat sole with two plain straps across it, drawn very large so that the two together reach almost across the whole window",
+        "A pair of brown leather sandals set down side by side and seen from straight above, each one a flat sole of one plain unmarked brown with two plain straps across it, drawn very large so that the two together reach from the bottom of the window almost to the top of it",
       ref: "Exodus 3:5",
       same_as: 0,
     },
