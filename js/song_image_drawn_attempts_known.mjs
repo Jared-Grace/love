@@ -129,6 +129,12 @@ export function song_image_drawn_attempts_known() {
  "25": [
   1
  ],
+ "26": [
+  1
+ ],
+ "28": [
+  1
+ ],
  "35": [
   1
  ]
