@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
 export function g_arc_chapter_person_or_null(arcs, index) {
   "One person's arc picked out of a chapter's arcs by their number, or nothing at all if the chapter holds no arc for them.";
   "IT ANSWERS NOTHING RATHER THAN REFUSING, because who wants an assert and what it should say differ at every caller. A reviser has no person to revise, a report has nothing to compare against, and the writer is doing the ordinary thing of writing somebody for the first time - one refusal worded here would be wrong for two of those three.";

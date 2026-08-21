@@ -28,14 +28,7 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   let answer = await file_read_json(answer_path);
   let index = number_from_text(index_text);
   let arcs = await g_arc_written_chapter(chapter_code);
-  let found = null;
-  for (let entry of arcs) {
-    let entry_index = property_get(entry, "index");
-    let same = equal(entry_index, index);
-    if (same) {
-      found = property_get(entry, "arc");
-    }
-  }
+  let found = g_arc_chapter_person_or_null(arcs, index);
   let missing = equal(found, null);
   let there = not(missing);
   assert_json(there, {
@@ -48,7 +41,7 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   for (let note of standing) {
     let turn = property_get(note, "turn");
     let field = property_get(note, "field");
-    let address = list_join_dot([turn, field]);
+    let address = g_arc_line_address(turn, field);
     let already = list_includes(faulted, address);
     let fresh = not(already);
     if (fresh) {
