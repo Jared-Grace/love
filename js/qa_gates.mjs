@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_rosetta_lines_gate_run } from "./bible_glyph_chapters_rosetta_lines_gate_run.mjs";
 import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
 import { bible_gathered_readings_gate_run } from "./bible_gathered_readings_gate_run.mjs";
 import { ebible_versions_english_readaloud_gate_run } from "./ebible_versions_english_readaloud_gate_run.mjs";
@@ -516,6 +517,7 @@ export function qa_gates() {
     bible_glyph_gate_run,
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
+    bible_glyph_chapters_rosetta_lines_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
