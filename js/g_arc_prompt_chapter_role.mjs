@@ -1,3 +1,6 @@
+import { list_get } from "./list_get.mjs";
+import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
+import { g_arc_prompt_written } from "./g_arc_prompt_written.mjs";
 import { g_profiles_dealt } from "./g_profiles_dealt.mjs";
 import { g_arc_chapter_passages_role } from "./g_arc_chapter_passages_role.mjs";
 import { fn_name } from "./fn_name.mjs";

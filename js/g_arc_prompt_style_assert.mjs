@@ -23,8 +23,14 @@ export function g_arc_prompt_style_assert() {
   "It builds the prompt from a stand-in profile because it is checking the SHAPE of the lines rather than any particular person's. The leader form is checked too, since it is a different set of lines and can drift on its own.";
   "The JSON blocks are INJECTED rather than authored, and they are skipped. Serialized data is printed at the one-space indent this repo prints JSON at everywhere, so holding it to a prose convention would be asking the formatter to be prose. What is checked is the lines somebody wrote by hand.";
   "There are TWO such blocks and there was one, which is why they are gathered from a list rather than named singly. The profile went over from the start; the answer example arrived later and tripped this gate on its first run, correctly - it is the same kind of thing and wanted the same exemption, not a loosened rule.";
+  "WHAT IS ALREADY WRITTEN IS RENDERED FROM A STAND-IN RATHER THAN LEFT EMPTY, because empty leaves that whole section out of the prompt and its lines are prose somebody wrote by hand like every other line here. One stand-in person with no turns is enough: the summary and the counts are content and are indented, and what is being checked is the heading and the paragraphs around them.";
   let deck = g_profiles();
   let profile = deck[0];
+  let stand_in = {
+    summary: "a stand-in, so the lines around it have something to sit under",
+    turns: [],
+  };
+  let written_text = g_arc_prompt_written([{ arc: stand_in }], []);
   let s = json_format_to(profile);
   let example = g_arc_answer_example();
   let blocks = [s, example];
@@ -36,7 +42,14 @@ export function g_arc_prompt_style_assert() {
   each(blocks, block_add);
   let faults = [];
   function check_prompt(leader) {
-    let prompt = g_arc_prompt("JHN04", "verses", 36, profile, leader);
+    let prompt = g_arc_prompt(
+      "JHN04",
+      "verses",
+      36,
+      profile,
+      leader,
+      written_text,
+    );
     let lines = text_split_newline(prompt);
     function check_line(line) {
       if (list_includes(injected, line)) {
