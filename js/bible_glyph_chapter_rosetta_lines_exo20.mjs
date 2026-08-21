@@ -10,7 +10,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         verse_number: 1,
         original:
           "וַיְדַבֵּ֣ר אֱלֹהִ֔ים אֵ֛ת כָּל־ הַדְּבָרִ֥ים הָאֵ֖לֶּה לֵאמֹֽר׃ס",
-        english: "spoke And God - all words these",
+        english: "spoke And God all words these",
       },
       {
         verse_number: 2,
@@ -30,7 +30,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "לֹֽ֣א תַֽעֲשֶׂ֨ה־ לְךָ֥֣ פֶ֣֙סֶל֙׀ וְכָל־ תְּמוּנָ֡֔ה אֲשֶׁ֤ר֣ בַּשָּׁמַ֙יִם֙׀ מִמַּ֡֔עַל וַֽאֲשֶׁ֥ר֩ בָּאָ֖֨רֶץ מִתַָּ֑֜חַת וַאֲשֶׁ֥֣ר בַּמַּ֖֣יִם׀ מִתַּ֥֣חַת לָאָֽ֗רֶץ׃",
         english:
-          "{You shall} not make for yourself an idol in the form of anything - in the heavens above - on the earth below - or in the waters beneath",
+          "{You shall} not make for yourself an idol in the form of anything in the heavens above on the earth below or in the waters beneath",
       },
       {
         verse_number: 5,
@@ -51,12 +51,12 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "לֹ֥א תִשָּׂ֛א אֶת־ שֵֽׁם־ יְהוָ֥ה אֱלֹהֶ֖יךָ לַשָּׁ֑וְא כִּ֣י לֹ֤א יְנַקֶּה֙ יְהוָ֔ה אֵ֛ת אֲשֶׁר־ יִשָּׂ֥א אֶת־ שְׁמ֖וֹ לַשָּֽׁוְא׃פ",
         english:
-          "You {shall} not take - the name of the LORD your God in vain for will not leave anyone unpunished the LORD - who takes - His name in vain",
+          "You {shall} not take the name of the LORD your God in vain for will not leave anyone unpunished the LORD who takes His name in vain",
       },
       {
         verse_number: 8,
         original: "זָכ֛וֹר֩ אֶת־ י֥֨וֹם הַשַּׁבָּ֖֜ת לְקַדְּשֽׁ֗וֹ׃",
-        english: "Remember - day the Sabbath by keeping it holy",
+        english: "Remember day the Sabbath by keeping it holy",
       },
       {
         verse_number: 9,
@@ -76,14 +76,14 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "כִּ֣י שֵֽׁשֶׁת־ יָמִים֩ עָשָׂ֨ה יְהוָ֜ה אֶת־ הַשָּׁמַ֣יִם וְאֶת־ הָאָ֗רֶץ אֶת־ הַיָּם֙ וְאֶת־ כָּל־ אֲשֶׁר־ בָּ֔ם וַיָּ֖נַח בַּיּ֣וֹם הַשְּׁבִיעִ֑י עַל־ כֵּ֗ן בֵּרַ֧ךְ יְהוָ֛ה אֶת־ י֥וֹם הַשַּׁבָּ֖ת וַֽיְקַדְּשֵֽׁהוּ׃ס",
         english:
-          "For [in] six days made the LORD - the heavens - and the earth - and the sea and all that [is] in them He rested day but on the seventh Therefore blessed the LORD - day the Sabbath and set it apart as holy",
+          "For [in] six days made the LORD the heavens and the earth and the sea and all that [is] in them He rested day but on the seventh Therefore blessed the LORD day the Sabbath and set it apart as holy",
       },
       {
         verse_number: 12,
         original:
           "כַּבֵּ֥ד אֶת־ אָבִ֖יךָ וְאֶת־ אִמֶּ֑ךָ לְמַ֙עַן֙ יַאֲרִכ֣וּן יָמֶ֔יךָ עַ֚ל הָאֲדָמָ֔ה אֲשֶׁר־ יְהוָ֥ה אֱלֹהֶ֖יךָ נֹתֵ֥ן לָֽךְ׃ס",
         english:
-          "Honor - your father - and mother so that may be long your days in the land that the LORD your God is giving you",
+          "Honor your father and mother so that may be long your days in the land that the LORD your God is giving you",
       },
       {
         verse_number: 13,
@@ -117,7 +117,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "וְכָל־ הָעָם֩ רֹאִ֨ים אֶת־ הַקּוֹלֹ֜ת וְאֶת־ הַלַּפִּידִ֗ם וְאֵת֙ ק֣וֹל הַשֹּׁפָ֔ר וְאֶת־ הָהָ֖ר עָשֵׁ֑ן וַיַּ֤רְא הָעָם֙ וַיָּנֻ֔עוּ וַיַּֽעַמְד֖וּ מֵֽרָחֹֽק׃",
         english:
-          "When all the people witnessed - the thunder - and lightning - the sounding of the ram’s horn - and the mountain enveloped in smoke - - they trembled and stood at a distance",
+          "When all the people witnessed the thunder and lightning the sounding of the ram’s horn and the mountain enveloped in smoke they trembled and stood at a distance",
       },
       {
         verse_number: 19,
@@ -131,7 +131,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל־ הָעָם֮ אַל־ תִּירָאוּ֒ כִּ֗י לְבַֽעֲבוּר֙ נַסּ֣וֹת אֶתְכֶ֔ם בָּ֖א הָאֱלֹהִ֑ים וּבַעֲב֗וּר תִּהְיֶ֧ה יִרְאָת֛וֹ עַל־ פְּנֵיכֶ֖ם לְבִלְתִּ֥י תֶחֱטָֽאוּ׃",
         english:
-          "replied Moses - - Do not be afraid For to test you - has come God so that the fear of Him may be before you to keep you from sinning",
+          "replied Moses Do not be afraid For to test you has come God so that the fear of Him may be before you to keep you from sinning",
       },
       {
         verse_number: 21,
@@ -159,7 +159,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "מִזְבַּ֣ח אֲדָמָה֮ תַּעֲשֶׂה־ לִּי֒ וְזָבַחְתָּ֣ עָלָ֗יו אֶת־ עֹלֹתֶ֙יךָ֙ וְאֶת־ שְׁלָמֶ֔יךָ אֶת־ צֹֽאנְךָ֖ וְאֶת־ בְּקָרֶ֑ךָ בְּכָל־ הַמָּקוֹם֙ אֲשֶׁ֣ר אַזְכִּ֣יר אֶת־ שְׁמִ֔י אָב֥וֹא אֵלֶ֖יךָ וּבֵרַכְתִּֽיךָ׃",
         english:
-          "an altar of earth You are to make for Me and sacrifice on it - your burnt offerings - and peace offerings - your sheep and goats - and cattle In every place where to be remembered - I cause My name I will come to you and bless you",
+          "an altar of earth You are to make for Me and sacrifice on it your burnt offerings and peace offerings your sheep and goats and cattle In every place where to be remembered I cause My name I will come to you and bless you",
       },
       {
         verse_number: 25,
@@ -173,7 +173,7 @@ export function bible_glyph_chapter_rosetta_lines_exo20() {
         original:
           "וְלֹֽא־ תַעֲלֶ֥ה בְמַעֲלֹ֖ת עַֽל־ מִזְבְּחִ֑י אֲשֶׁ֛ר לֹֽא־ תִגָּלֶ֥ה עֶרְוָתְךָ֖ עָלָֽיו׃פ",
         english:
-          "And you must not go up on steps to My altar lest  be exposed your nakedness on it",
+          "And you must not go up on steps to My altar lest be exposed your nakedness on it",
       },
     ],
   };
