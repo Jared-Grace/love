@@ -26,6 +26,19 @@
   "eng-uk-lxx2012 PSA118": "in the unsent draft letter",
   "engtcent 3JN01": "in the unsent draft letter",
   "englxxup PRO31": "in the unsent draft letter",
-  "engPEV ACT02": "not a fault: this paraphrase marks merged verses as ranges, such as 9-11, so it carries 38 marks for 41 verses on purpose"
+  "engPEV ACT02": "not a fault: this paraphrase marks merged verses as ranges, such as 9-11, so it carries 38 marks for 41 verses on purpose",
+  "engerv JOB24": "in the unsent draft letter",
+  "engkjvcpb ESG10": "in the unsent draft letter",
+  "enggw NUM04": "not a fault: the page carries its own note saying verse 48 in Hebrew has been put into verse 46, so the number is missing on purpose",
+  "eng-web ESG04": "not a fault: six English translations of the Greek Esther skip this same verse, Brenton's among them, so the Greek they all translate is what has no verse there",
+  "eng-web ESG09": "not a fault: the same six translations skip verses 5 and 30 of this chapter together",
+  "eng-web-c ESG04": "not a fault: same as eng-web ESG04",
+  "eng-web-c ESG09": "not a fault: same as eng-web ESG09",
+  "eng-webbe ESG04": "not a fault: same as eng-web ESG04",
+  "eng-webbe ESG09": "not a fault: same as eng-web ESG09",
+  "engwebu ESG04": "not a fault: same as eng-web ESG04",
+  "engwebu ESG09": "not a fault: same as eng-web ESG09",
+  "engWycliffe EXO40": "not a fault: Wycliffe translates the Vulgate and the two Septuagint editions here skip the same verse, so the chapter is numbered as its own tradition numbers it",
+  "eng-rv S3Y01": "not a fault: the Song of the Three Youths is numbered differently by different editions and a second edition here skips the same verses"
  }
 }
