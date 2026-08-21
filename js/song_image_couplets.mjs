@@ -274,7 +274,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol:
-        "A wall of plain grey rock with a low narrow doorway cut into it down at the foot of the wall, the doorway one plain flat black upright shape reaching no more than a third of the way up the wall, and one very great round stone standing on its edge to the right of that doorway and overlapping it - a solid slab of plain grey stone with no hole in it, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, half as tall again as the doorway, its left edge crossing the doorway so that only a narrow upright strip of the black is left open down the left side - and the ground below one plain flat pale grey",
+        "The mouth of a tomb cut into a great mass of plain grey rock, the opening a plain black arch, and one very great round stone standing on its edge to the right of that opening and overlapping it - a solid slab of plain grey stone taller and wider than the opening, its left edge crossing the opening so that only a narrow upright strip of the black is still showing at the left - and the ground below one plain flat pale grey",
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
