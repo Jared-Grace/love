@@ -71,9 +71,6 @@ export function bible_dream_stroke_place(drawing, stroke) {
     done: false,
     gap: 0,
     hand_points: [],
-    hand_path: null,
-    hand_level: null,
-    hand_d: "",
   };
   return state;
 }
