@@ -8,7 +8,7 @@ import { list_includes } from "./list_includes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-export async function functions_bag_pass_through_ordered() {
+export async function functions_bag_pass_through_judged() {
   arguments_assert(arguments, 0);
   ("Of the functions that carry a record's names through by hand, which ones write those names in the order the record's own maker wrote them - and which ones cannot be told, because the record was handed in rather than made by a function that can be read.");
   ("This is the measurement that says whether the carrying could be replaced by handing the record over whole. Handing it over whole keeps the names in the maker's order; writing them out again keeps them in the order they were written. Where the two orders agree, the replacement changes nothing anybody could see. Where they disagree it changes the order, and whether that matters is a further question about whoever reads the record - so those are the ones to leave alone.");
