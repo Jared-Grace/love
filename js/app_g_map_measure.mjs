@@ -1,4 +1,4 @@
-import { app_g_div_map_container_get } from "./app_g_div_map_container_get.mjs";
+import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 export function app_g_map_measure(div_map) {
   "everything a reading of which tiles are on screen is worked out from, as plain numbers already gathered into the groups the arithmetic receives: how wide one tile is, the box the map is seen through, where the grid sits inside it, how big the whole grid is, and how far it has been scrolled.";
@@ -8,7 +8,7 @@ export function app_g_map_measure(div_map) {
   "the bar is measured here rather than by each caller because a bar across the page covers the bottom edge of the map, and a tile underneath it is not on screen whoever is asking. it goes in beside the height it takes away from, as a number of pixels rather than an element, because none of them wants the bar itself.";
   "the scrolled position and the size of the whole grid are both gathered even though no one reader wants both. one reads where the map is actually sitting, the other predicts where it is about to sit, and reading a number nobody asked for costs nothing next to two of these existing at all.";
   "BESPOKE (querySelector / getBoundingClientRect), do NOT auto-canonicalize";
-  let component = app_g_div_map_container_get(div_map);
+  let component = app_shared_game_div_map_container_get(div_map);
   let container = html_component_element_get(component);
   let img = container.querySelector("img[data-coordinates]");
   let tile = img.getBoundingClientRect().width;
