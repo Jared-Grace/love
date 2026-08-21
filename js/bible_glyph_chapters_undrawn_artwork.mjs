@@ -1,3 +1,18 @@
+import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_glyph_artwork_names_available } from "./bible_glyph_artwork_names_available.mjs";
+import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
+import { property_set } from "./property_set.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_or_null } from "./property_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_take } from "./list_take.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { text_words } from "./text_words.mjs";
+import { text_includes } from "./text_includes.mjs";
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 export async function bible_glyph_chapters_undrawn_artwork(count) {
   "$plain count";
   "the count is how many words to weigh. It is a number and nothing that runs.";
@@ -12,7 +27,8 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let names = await bible_glyph_artwork_names_available();
   let bridged = {};
   for (let entry of bible_glyph_artwork_names()) {
-    property_set(bridged, text_lower_to(entry.asset), entry.glyph);
+    let property_name = text_lower_to(entry.asset);
+    property_set(bridged, property_name, entry.glyph);
   }
   let lowered_names = [];
   for (let name of names) {
@@ -55,7 +71,8 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let drawable = [];
   let needs_drawing = [];
   for (let row of weighed) {
-    let none = list_empty_is(property_get(row, "assets"));
+    let list = property_get(row, "assets");
+    let none = list_empty_is(list);
     if (none) {
       list_add(needs_drawing, row);
       continue;
