@@ -30,7 +30,7 @@ export async function g_arc_prompt_chapter_role(chapter, leader, index) {
   let turns_wanted = await g_npc_pool_convert_turns();
   let next = random_seed_generator_from_text(g_npc_pool.name);
   let pool = g_npc_pool(turns_wanted, next);
-  let npc = list_at(pool, index);
+  let npc = list_get(pool, index);
   let turn_target = property_get(npc, "turns");
   let deck = g_profiles();
   let cast = pool.length;
@@ -44,7 +44,7 @@ export async function g_arc_prompt_chapter_role(chapter, leader, index) {
   }
   let deal_next = random_seed_generator_from_text(g_profiles_dealt.name);
   let dealt = g_profiles_dealt(deck, cast, deal_next);
-  let profile = list_at(dealt, deal_index);
+  let profile = list_get(dealt, deal_index);
   let written = await g_arc_written_chapter(chapter);
   let written_text = g_arc_prompt_written(written, passages);
   let prompt = g_arc_prompt(
