@@ -1,6 +1,6 @@
-import { js_bag_pass_through_read } from "./js_bag_pass_through_read.mjs";
+import { js_bag_pass_through_unpacked_add } from "./js_bag_pass_through_unpacked_add.mjs";
 import { js_declarations_call_producers } from "./js_declarations_call_producers.mjs";
-import { js_bag_pass_through_entries } from "./js_bag_pass_through_entries.mjs";
+import { js_bag_pass_through_records_add } from "./js_bag_pass_through_records_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
 import { js_property_get_rows } from "./js_property_get_rows.mjs";
@@ -17,8 +17,8 @@ export function js_bag_pass_through(ast) {
   let reads = js_property_get_rows(ast);
   let producers = js_declarations_call_producers(decls);
   let unpacked = [];
-  js_bag_pass_through_read(reads, decls, unpacked);
+  js_bag_pass_through_unpacked_add(reads, decls, unpacked);
   let found = [];
-  js_bag_pass_through_entries(decls, unpacked, producers, found);
+  js_bag_pass_through_records_add(decls, unpacked, producers, found);
   return found;
 }
