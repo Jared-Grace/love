@@ -9,7 +9,13 @@ import { each } from "./each.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
-export function js_dollar_a({ stack_1, stack_2, ast, afters, remaining }) {
+export function js_dollar_a({
+  stack_: stack_1,
+  stack_2,
+  ast,
+  afters,
+  remaining,
+}) {
   let count = 1;
   let s = list_size_1(remaining);
   if (s) {
