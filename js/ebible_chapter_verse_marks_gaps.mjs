@@ -1,3 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { ebible_chapter_verse_numbers } from "./ebible_chapter_verse_numbers.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_integers } from "./text_integers.mjs";
+import { list_concat_unique } from "./list_concat_unique.mjs";
+import { list_map } from "./list_map.mjs";
+import { lists_combine } from "./lists_combine.mjs";
+import { list_min_try } from "./list_min_try.mjs";
+import { list_max_or_null } from "./list_max_or_null.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { numbers_from_to } from "./numbers_from_to.mjs";
+import { list_filter } from "./list_filter.mjs";
 export async function ebible_chapter_verse_marks_gaps(
   bible_folder,
   chapter_code,
@@ -26,7 +38,7 @@ export async function ebible_chapter_verse_marks_gaps(
     let missing = list_includes_not(covered, number);
     return missing;
   }
-  let between = integers_between_inclusive(first, last);
+  let between = numbers_from_to(first, last);
   let gaps = list_filter(between, lambda_missing);
   return gaps;
 }
