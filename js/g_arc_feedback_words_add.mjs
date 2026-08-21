@@ -21,10 +21,11 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   "IT NAMES THE WORDS AND ASKS FOR NOTHING, in the shape every note here is written in. Saying which words are too hard leaves the sentence with whoever writes sentences; saying what the line should say instead has written the line, and then the next line needs writing too. A word may also be perfectly fair - a dyer says dye - so a note that had demanded a replacement would have demanded a worse line.";
   "IT DOES NOT CLEAR FIRST, so running it twice files everything twice. Clearing is a separate command on purpose: the notes it would drop include a person's, and a check has no business throwing away a reading it cannot reproduce.";
   let arcs = await g_arc_written_chapter(chapter_code);
+  let wanted = number_from_text(index);
   let found = null;
   for (let entry of arcs) {
     let entry_index = property_get(entry, "index");
-    let same = equal(entry_index, index);
+    let same = equal(entry_index, wanted);
     if (same) {
       found = property_get(entry, "arc");
     }
@@ -33,7 +34,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   let there = not(missing);
   assert_json(there, {
     chapter_code,
-    index,
+    index: wanted,
     hint: "no person of that number is written in this chapter",
   });
   let lines = g_arc_lines_addressed(found);
@@ -58,7 +59,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   }
   let r = {
     chapter_code,
-    index,
+    index: wanted,
     lines: list_size(lines),
     filed,
     words: list_size(words_named),
