@@ -1,3 +1,4 @@
+import { bible_dream_samples_loop_is } from "./bible_dream_samples_loop_is.mjs";
 import { bible_dream_corridor_width } from "./bible_dream_corridor_width.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,6 +14,7 @@ export function bible_dream_stroke_place(drawing, stroke) {
   "The faint one IS the corridor. It is drawn wide rather than described in words because a player has to be able to see how much room they have before they start moving, and a rule that only announces itself by being broken is not a rule anybody can play against.";
   "The bright one is drawn whole and then hidden entirely by a dash as long as itself, so that revealing it is a matter of saying which parts to show rather than of building a new path out of what has been traced so far. What a player sees appear is exactly the shape that was always there, which is the point of the whole palette: no move adds a line the passage did not give.";
   "The marks start out all false and there is one for every sample, because a stroke may be begun anywhere along itself and drawn either way, so what has been covered can be several pieces at once and only a mark per sample can say that.";
+  "Whether the stroke closes is asked once here rather than at every report of the pointer, because it is a fact about the drawing and cannot change while the drawing is being traced. It is asked of the samples and not of the path text, so it can never disagree with the thing actually being compared against.";
   "Two empty layers are made at the same time and the order they sit in is the argument the picture makes. The corridor is underneath everything because it is only a direction. The hand's own wandering line goes over it, because what the player did is more than a direction. Scripture's ink goes over that, because what arrived outranks what was attempted. The ornament goes over all of it, because it is the answer made to a finished thing.";
   "It is placed by moving the whole pair rather than by redrawing the shape at its position, so the pointer only ever has to be shifted by the offset to be compared against the samples.";
   let group = html_element_svg(drawing, "g");
@@ -44,6 +46,7 @@ export function bible_dream_stroke_place(drawing, stroke) {
   html_attribute_set(ink, "stroke-dasharray", length_text);
   html_attribute_set(ink, "stroke-dashoffset", length_text);
   let samples = bible_dream_stroke_samples(ink, 160);
+  let loop = bible_dream_samples_loop_is(samples);
   let covered = [];
   let index = 0;
   while (less_than(index, list_size(samples))) {
@@ -60,6 +63,7 @@ export function bible_dream_stroke_place(drawing, stroke) {
     flourish,
     total,
     samples,
+    loop,
     covered,
     index: 0,
     slips: 0,
