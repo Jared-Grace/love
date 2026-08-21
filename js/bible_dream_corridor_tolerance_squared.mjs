@@ -10,7 +10,7 @@ export function bible_dream_corridor_tolerance_squared() {
     fn_name("bible_dream_point_gap_squared"),
     ", which leaves the root off on purpose.");
   let top = bible_dream_corridor_width();
-  let half = divide(top, 2);
-  let p = multiply(half, half);
+  let half_width = divide(top, 2);
+  let p = multiply(half_width, half_width);
   return p;
 }
