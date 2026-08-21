@@ -564,7 +564,7 @@ export function bible_glyph_chapter_jhn14() {
           "Whoever",
           "has",
           "My",
-          "commandments",
+          "$scroll$s",
           "$plus",
           "keeps",
           "$pointing_back",
