@@ -8,7 +8,7 @@ import { g_character_img_url_direction } from "./g_character_img_url_direction.m
 import { html_img_retry } from "./html_img_retry.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,7 +31,7 @@ export function app_g_npc_bubble(npc, overlay) {
   let name_color = property_get(name_map, gender);
   let name_npc = property_get(npc, "name");
   let name = text_combine(name_npc, " says:");
-  let label = app_g_p_text(container, name);
+  let label = app_shared_game_p_text(container, name);
   html_font_color_set(label, name_color);
   html_style_margin_top(label, "-0.4em");
   html_bold_mild(label);
