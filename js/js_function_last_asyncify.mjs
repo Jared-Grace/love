@@ -19,6 +19,11 @@ export async function js_function_last_asyncify(
   functions,
   visited,
 ) {
+  "Marks the function a piece of work is standing in as one that waits, and where that function is the one the file is named for, goes on to open every function that calls it and do the same inside each of them.";
+  "Waiting spreads outwards and there is no end to it short of the callers. A call that has to be waited for makes the function holding it a waiting one; a call to that function then has to be waited for in turn, in files nobody opened. So marking one function is never the whole of the job, and this is the step that goes and finds the rest of it.";
+  "Only the function the file is named for spreads. One written inside another is marked and stopped at, because nothing outside the file can name it, so there is nobody upward to tell.";
+  "The list of names already opened is handed in rather than kept here, and a name goes on that list before its callers are walked rather than after. Two functions that call each other would otherwise send each other round for ever.";
+  "Nothing at all happens when the function is already marked. That is what lets the spreading run back over ground it has covered and stop, and it is why the same list of callers can be walked from several directions without being opened twice.";
   let f = js_stack_last_function(stack);
   let property_name = "async";
   let async = property_get(f, property_name);
