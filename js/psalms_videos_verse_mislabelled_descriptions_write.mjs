@@ -1,10 +1,9 @@
+import { list_property_true_report } from "./list_property_true_report.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_videos_verse_mislabelled } from "./psalms_videos_verse_mislabelled.mjs";
 import { psalms_video_description_write } from "./psalms_video_description_write.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
-import { list_size } from "./list_size.mjs";
 export async function psalms_videos_verse_mislabelled_descriptions_write() {
   "Puts right the words written under every song whose name has been corrected, so that each quotes the verse it actually sings.";
   "Correcting a name breaks the words beneath it, because those words were worked out from the name the song used to wear. So this is the second half of one mend and not a separate errand, and it is the half a watcher can see - a wrong place in a playlist is untidy, whereas a song titled one verse and quoting another tells whoever is reading it something false.";
