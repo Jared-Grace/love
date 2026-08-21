@@ -43,6 +43,12 @@ export function bible_dream_scene_trace_show(scene) {
   let active = null;
   let latched = false;
   let pressed_at = null;
+  let travelled = 0;
+  function let_go() {
+    bible_dream_stroke_hand_lift(active);
+    active = null;
+    latched = false;
+  }
   function readout_show() {
     let text = bible_dream_trace_status_text(states, told);
     html_text_set(readout, text);
