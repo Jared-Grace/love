@@ -362,7 +362,7 @@ import { g_clock_sky_phase_check } from "./g_clock_sky_phase_check.mjs";
 import { g_day_sky_phase_check } from "./g_day_sky_phase_check.mjs";
 import { app_g_day_fraction_check } from "./app_g_day_fraction_check.mjs";
 import { app_g_day_guide_pick_check } from "./app_g_day_guide_pick_check.mjs";
-import { app_g_map_pad_check } from "./app_g_map_pad_check.mjs";
+import { app_shared_game_map_pad_check } from "./app_shared_game_map_pad_check.mjs";
 import { app_g_day_blocked_check } from "./app_g_day_blocked_check.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
@@ -556,7 +556,7 @@ export function qa_gates() {
     g_day_sky_phase_check,
     app_g_day_fraction_check,
     app_g_day_guide_pick_check,
-    app_g_map_pad_check,
+    app_shared_game_map_pad_check,
     app_g_day_blocked_check,
     app_g_day_line_corner_check,
     functions_parallel_marks_gate_run,
