@@ -279,7 +279,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "One single star of white glass, one broad solid eight sided body with eight short straight points around it, standing alone and drawn large in the middle of the window",
+        "One single star of white glass with eight straight points, drawn very large so that its points reach almost to both sides of the window and almost to the top and the bottom of it",
       ref: "Revelation 22:16, 2 Peter 1:19",
       same_as: 0,
     },
