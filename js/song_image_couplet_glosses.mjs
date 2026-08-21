@@ -2,7 +2,8 @@ export function song_image_couplet_glosses() {
   "what each couplet of the hymn rests on in Scripture, kept beside what its picture rests on, so that the words and the emblem can be checked against the text one after the other rather than argued about separately";
   "there are thirty-two entries and thirty-six couplets, because four couplets repeat the eight before them word for word. A repeat is looked up through the couplet it repeats, so the same two lines cannot end up with two accounts of themselves that somebody then has to keep agreeing with each other.";
   "the kept attempt is written down here rather than worked out as the newest one, and that is the whole reason this field exists. The last drawing of a symbol is very often not the best one - a later attempt buys a better field and loses the border, or fixes the shape and splits the colour - so newest is a rule that quietly discards the picture somebody actually chose. Two couplets already contradict it.";
-  "the symbol note says plainly where an emblem is described by Scripture and where it is inherited from the church instead, because those are different claims and the difference is exactly what an audit is for. A crown of thorns is in Matthew; a pair of scales for a rigged trial is in no verse at all. Both may be right to draw and only one of them may be defended from the text, so the note says which.";
+  "the symbol note says plainly where an emblem is described by Scripture and where it is inherited from the church instead, because those are different claims and the difference is exactly what an audit is for. A crown of thorns is in Matthew; a bare cross standing empty is in no verse at all. Both may be right to draw and only one of them may be defended from the text, so the note says which.";
+  "an emblem can be described by Scripture without the scene being in Scripture, and missing that put the wrong verdict on the first couplet here. No account puts scales at the trial, so inherited looked like the honest answer - but Proverbs 11:1 says a false balance is abomination to the LORD, and Micah and Amos say it again, so the tilted beam is GOD's own picture of a perverted measure and not a courthouse emblem borrowed for the occasion. The question to ask is not does this object appear in this account, it is does Scripture use this object to mean this thing. The narrower question fails an emblem that is Biblical everywhere except in the passage being illustrated.";
   "the references are given as the verses the line itself is making its claim from, not as everything the line could be connected to. A list long enough to cover every echo says nothing about where the words came from, and the point of writing them down is that somebody can look them up and disagree.";
   let glosses = {
     1: {
@@ -62,7 +63,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:33 puts two others with HIM, one on either side. The three crosses are the one arrangement the accounts give, and the middle one is drawn taller so the eye finds it first.",
     },
     8: {
-      kept: 3,
+      kept: 5,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "Blotting out the handwriting of ordinances that was against us, and took it out of the way, nailing it to HIS cross. The debt is Paul's own word for it, and the suffering is Isaiah's, wounded for our transgressions.",
@@ -86,7 +87,7 @@ export function song_image_couplet_glosses() {
         "Described. Genesis 22:13 has the ram caught in a thicket by his horns, offered up in the stead of the son. The picture is that verse and no more; the thicket is thinned to a few boughs for the leading.",
     },
     12: {
-      kept: 3,
+      kept: 4,
       lyric_ref: "Galatians 3:13, Deuteronomy 21:23, Matthew 26:39",
       lyric_explain:
         "Cursed is every one that hangeth on a tree, quoted by Paul to say that HE was made a curse for us. The cup is HIS own word in Gethsemane, let this cup pass from me.",
@@ -110,12 +111,12 @@ export function song_image_couplet_glosses() {
         "Described. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction.",
     },
     15: {
-      kept: 2,
+      kept: 3,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
       symbol_explain:
-        "Described. Awake, O sword, against my shepherd is Zechariah 13:7, quoted by CHRIST of HIMSELF. The blade going back into its sheath says satisfied, which is the couplet's word and not the verse's.",
+        "Described. Awake, O sword, against my shepherd is Zechariah 13:7, quoted by CHRIST of HIMSELF. The sword put away, the whole blade inside the sheath, says satisfied - which is the couplet's word and not the verse's, and it is the state rather than the act, because the act would be the sword still falling.",
     },
     16: {
       kept: 7,
