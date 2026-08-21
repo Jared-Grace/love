@@ -17,7 +17,7 @@ export async function webpack_config() {
   let filename = process_env_get(webpack_config_filename);
   let folder = process_env_get(webpack_config_folder);
   let path = await path_resolve(folder);
-  let cache = await webpack_config_cache(folder);
+  let cache = await webpack_config_cache(folder, filename);
   let plugin = webpack_config_node_scheme_strip_plugin();
   let r = {
     mode: "production",
