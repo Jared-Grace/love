@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets } from "./song_image_couplets.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { equal } from "./equal.mjs";
 export function song_image_couplets_verse(verse_number) {
   "$plain verse_number";
   "the couplets of one verse of the hymn in the order they are sung, or every couplet in the hymn when the number is 0";

@@ -10,7 +10,7 @@ import { app_reply_main_shortcuts_shortcut_each } from "./app_reply_main_shortcu
 import { app_reply_main_shortcuts_shortcut_extend_response } from "./app_reply_main_shortcuts_shortcut_extend_response.mjs";
 import { app_reply_main_shortcuts_shortcut_extend } from "./app_reply_main_shortcuts_shortcut_extend.mjs";
 import { ebible_language_english } from "./ebible_language_english.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { each } from "./each.mjs";
 export function app_reply_main_shortcuts(
   root,
@@ -23,7 +23,7 @@ export function app_reply_main_shortcuts(
   "Lays out the shortcut buttons of the reply screen. A shortcut is a saved choice of which languages to reply in and how many verses to send, kept under a short name, so a reply that gets written over and over is one press instead of the same set of choices made again every time.";
   "The shortcuts are built in a run of steps, each handed the bag the step before it made and adding its own to it. That is the shape a long stretch of building takes here once it has been cut up, and it is why the names come out of a bag at the top rather than standing where they are used.";
   "The order of the list is the order the buttons come out in, so adding one is adding a name to the list and nothing else. Drawing a shortcut is somebody else's job entirely, which is what keeps this file a list rather than a screen.";
-  let languages_chosen_default = app_reply_languages_chosen_default();
+  let languages_chosen_default = app_shared_bible_languages_chosen_default();
   let r2 = app_reply_main_shortcuts_gl(root, languages_chosen_default);
   let gl = property_get(r2, "gl");
   let r_pk_ = property_get(r2, "r_pk_");

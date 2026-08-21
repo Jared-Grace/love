@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_api_url } from "./youtube_api_url.mjs";
-import { youtube_oauth_access_token_buy } from "./youtube_oauth_access_token_buy.mjs";
+import { youtube_oauth_access_token } from "./youtube_oauth_access_token.mjs";
 import { http_generic } from "./http_generic.mjs";
 import { text_combine } from "./text_combine.mjs";
 export async function youtube_api_bytes(method, path, params, body) {
@@ -14,7 +14,7 @@ export async function youtube_api_bytes(method, path, params, body) {
   "What came back is left as bytes rather than read, because the ways of asking do not agree on what comes back. Three of them answer with a record and one answers with nothing at all, and reading nothing at all as a record fails - so the reading belongs to whoever knows which ask was made.";
   arguments_assert(arguments, 4);
   let url = youtube_api_url(path, params);
-  let access_token = await youtube_oauth_access_token_buy();
+  let access_token = await youtube_oauth_access_token();
   let authorization = text_combine("Bearer ", access_token);
   let options = {
     method: method,
