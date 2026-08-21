@@ -5,7 +5,7 @@ import { html_attribute_set } from "./html_attribute_set.mjs";
 import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { not } from "./not.mjs";
-export function bible_dream_hand_mark_add(state, point, nearness) {
+export function bible_dream_hand_mark_add(state, point, nearness, taper) {
   "Lay down one short piece of the line the hand actually took, as thick and as bright as it was close to the stroke, so that what the player did stays on the screen underneath what the passage gave.";
   "★ THE HAND'S LINE IS KEPT AND NOT CORRECTED. The bright ink is Scripture's shape and never the hand's, which is right, but on its own it means every wobble simply vanishes - the error is hidden rather than answered. Keeping the hand's own line alongside it says something better: here is what you did, and here is what arrived, and they are both on the page. The first is yours and imperfect; the second is exact and was never yours to make.";
   "Thickness and brightness both come from the one nearness, because they are saying one thing and not two. A hand on the line leaves a firm gold mark; a hand that strays leaves a thinner and fainter one, and the fading IS the record of the straying.";
@@ -14,6 +14,9 @@ export function bible_dream_hand_mark_add(state, point, nearness) {
   let before = state.hand_at;
   state.hand_at = point;
   if (not(before)) {
+    return;
+  }
+  if (equal(taper, 0)) {
     return;
   }
   let moved = bible_dream_point_gap_squared(point, before);
