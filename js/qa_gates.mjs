@@ -511,6 +511,7 @@ export function qa_gates() {
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
+    bible_event_fields_gate_run,
     ebible_chapter_code_known_cases_gate_run,
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
