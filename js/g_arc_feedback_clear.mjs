@@ -1,3 +1,4 @@
+import { number_from_text } from "./number_from_text.mjs";
 import { g_arc_feedback_write_path } from "./g_arc_feedback_write_path.mjs";
 import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -17,9 +18,10 @@ export async function g_arc_feedback_clear(chapter_code, index) {
   let path = g_arc_feedback_write_path(chapter_code);
   let notes = await g_arc_feedback_chapter(chapter_code);
   let before = list_size(notes);
+  let person = number_from_text(index);
   function note_other(note) {
     let left = property_get(note, "index");
-    let neq = not_equal(left, index);
+    let neq = not_equal(left, person);
     return neq;
   }
   let kept = list_filter(notes, note_other);
