@@ -1,3 +1,4 @@
+import { bible_dream_trace_preview } from "./bible_dream_trace_preview.mjs";
 import { song_image_audit_preview } from "./song_image_audit_preview.mjs";
 import { app_sandbox_spinner_preview } from "./app_sandbox_spinner_preview.mjs";
 import { week_calendar_preview } from "./week_calendar_preview.mjs";
@@ -13,6 +14,7 @@ export function app_sandbox_previews() {
     song_image_choose: song_image_choose_preview,
     song_image_audit: song_image_audit_preview,
     second_takes: psalms_second_takes_preview,
+    dream_trace: bible_dream_trace_preview,
   };
   return previews;
 }
