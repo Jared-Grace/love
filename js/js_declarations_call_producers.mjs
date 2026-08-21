@@ -5,7 +5,7 @@ import { not } from "./not.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { js_identifier_name } from "./js_identifier_name.mjs";
 import { list_add } from "./list_add.mjs";
-export function js_bag_pass_through_decl(decls) {
+export function js_declarations_call_producers(decls) {
   arguments_assert(arguments, 1);
   let producers = [];
   for (let decl of decls) {
