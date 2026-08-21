@@ -1,3 +1,4 @@
+import { app_index_label } from "./app_index_label.mjs";
 import { window_app_url_generic } from "./window_app_url_generic.mjs";
 import { app_index_card_link } from "./app_index_card_link.mjs";
 import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
