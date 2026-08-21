@@ -11,14 +11,14 @@ export function bible_glyph_chapter_rosetta_lines_jdg13() {
         original:
           "וַיֹּסִ֙פוּ֙ בְּנֵ֣י יִשְׂרָאֵ֔ל לַעֲשׂ֥וֹת הָרַ֖ע בְּעֵינֵ֣י יְהוָ֑ה וַיִּתְּנֵ֧ם יְהוָ֛ה בְּיַד־ פְּלִשְׁתִּ֖ים אַרְבָּעִ֥ים שָׁנָֽה׃פ",
         english:
-          "Again the Israelites did evil in the sight of the LORD delivered them so [He] into the hand of the Philistines for forty years",
+          "Again the Israelites did evil in the sight of the LORD delivered them so He into the hand of the Philistines for forty years",
       },
       {
         verse_number: 2,
         original:
           "וַיְהִי֩ אִ֨ישׁ אֶחָ֧ד מִצָּרְעָ֛ה מִמִּשְׁפַּ֥חַת הַדָּנִ֖י וּשְׁמ֣וֹ מָנ֑וֹחַ וְאִשְׁתּ֥וֹ עֲקָרָ֖ה וְלֹ֥א יָלָֽדָה׃",
         english:
-          "Now there was man a from Zorah from the clan of the Danites named Manoah whose wife [was] barren and had no children",
+          "Now there was man a from Zorah from the clan of the Danites named Manoah whose wife was barren and had no children",
       },
       {
         verse_number: 3,
@@ -74,7 +74,7 @@ export function bible_glyph_chapter_rosetta_lines_jdg13() {
         original:
           "וַתְּמַהֵר֙ הָֽאִשָּׁ֔ה וַתָּ֖רָץ וַתַּגֵּ֣ד לְאִישָׁ֑הּ וַתֹּ֣אמֶר אֵלָ֔יו הִנֵּ֨ה נִרְאָ֤ה אֵלַי֙ הָאִ֔ישׁ אֲשֶׁר־ בָּ֥א בַיּ֖וֹם אֵלָֽי׃",
         english:
-          "quickly her husband ran The woman to tell Behold has reappeared the man who came the [other] day to me",
+          "quickly her husband ran The woman to tell Behold has reappeared the man who came the other day to me",
       },
       {
         verse_number: 11,
@@ -116,7 +116,7 @@ export function bible_glyph_chapter_rosetta_lines_jdg13() {
         original:
           "וַיֹּאמֶר֩ מַלְאַ֨ךְ יְהוָ֜ה אֶל־ מָנ֗וֹחַ אִם־ תַּעְצְרֵ֙נִי֙ לֹא־ אֹכַ֣ל בְּלַחְמֶ֔ךָ וְאִם־ תַּעֲשֶׂ֣ה עֹלָ֔ה לַיהוָ֖ה תַּעֲלֶ֑נָּה כִּ֚י לֹא־ יָדַ֣ע מָנ֔וֹחַ כִּֽי־ מַלְאַ֥ךְ יְהוָ֖ה הֽוּא׃",
         english:
-          "replied And the angel of the LORD Even if I stay I will not eat your food But if you prepare a burnt offering to the LORD offer it For did not know [that] Manoah the angel of the LORD it [was]",
+          "replied And the angel of the LORD Even if I stay I will not eat your food But if you prepare a burnt offering to the LORD offer it For did not know that Manoah the angel of the LORD it was",
       },
       {
         verse_number: 17,
@@ -144,14 +144,14 @@ export function bible_glyph_chapter_rosetta_lines_jdg13() {
         original:
           "וַיְהִי֩ בַעֲל֨וֹת הַלַּ֜הַב מֵעַ֤ל הַמִּזְבֵּ֙חַ֙ הַשָּׁמַ֔יְמָה וַיַּ֥עַל מַלְאַךְ־ יְהוָ֖ה בְּלַ֣הַב הַמִּזְבֵּ֑חַ וּמָנ֤וֹחַ וְאִשְׁתּוֹ֙ רֹאִ֔ים וַיִּפְּל֥וּ עַל־ פְּנֵיהֶ֖ם אָֽרְצָה׃",
         english:
-          "went up When the flame from the altar to the sky ascended the angel of the LORD flame in the When Manoah and his wife saw [this] they fell facedown to the ground",
+          "went up When the flame from the altar to the sky ascended the angel of the LORD flame in the When Manoah and his wife saw this they fell facedown to the ground",
       },
       {
         verse_number: 21,
         original:
           "וְלֹא־ יָ֤סַף עוֹד֙ מַלְאַ֣ךְ יְהוָ֔ה לְהֵרָאֹ֖ה אֶל־ מָנ֣וֹחַ וְאֶל־ אִשְׁתּ֑וֹ אָ֚ז יָדַ֣ע מָנ֔וֹחַ כִּֽי־ מַלְאַ֥ךְ יְהוָ֖ה הֽוּא׃",
         english:
-          "did not again And when the angel of the LORD appear to Manoah and his wife realized Manoah that the angel of the LORD it [had been]",
+          "did not again And when the angel of the LORD appear to Manoah and his wife realized Manoah that the angel of the LORD it had been",
       },
       {
         verse_number: 22,
