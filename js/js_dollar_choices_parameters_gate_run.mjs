@@ -1,3 +1,5 @@
+import { js_dollar_choices } from "./js_dollar_choices.mjs";
+import { list_size } from "./list_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -14,16 +16,17 @@ export async function js_dollar_choices_parameters_gate_run() {
   let choices = js_dollar_choices();
   let walked = list_size(choices);
   let rows = await js_dollar_choices_parameters_unknown();
+  let f_name = fn_name("js_dollar");
   list_empty_is_assert_json(rows, {
     hint: text_combine_multiple([
       "these dollar-macros unpack a name the expander does not put in the record it hands them, so each one receives nothing under that name and fails on the line that uses it - either add the name to the record ",
-      fn_name("js_dollar"),
+      f_name,
       " builds, or unpack the name that is really there and bind it to whatever the body already calls it",
     ]),
     rows,
   });
   let r = {
-    pass: true,
+    walked,
   };
   return r;
 }
