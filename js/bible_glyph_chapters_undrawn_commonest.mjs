@@ -3,7 +3,6 @@ import { null_is } from "./null_is.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
-import { or } from "./or.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -29,7 +28,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   "IT COUNTS THE WORD AND NOT ITS ENGLISH, which is the whole difference between an answer and a misleading one. The first version of this counted the wording the interlinear printed, and Ezekiel's word for iniquity came back four separate times - as iniquity, as the iniquity, as in his iniquity and as because of the iniquity - each one looking too rare to be worth a picture while the word itself was one of the commonest in the book. English wrappers split a word into as many rows as it has neighbours, and every split understates it. So the key is the word's own number, and the wording is carried alongside only as a label a person can read.";
   "THE NUMBER IS KEPT WITH ITS TESTAMENT BECAUSE THE TWO NUMBERINGS COLLIDE. Greek 3056 and Hebrew 3056 are different words wearing one key, and fifteen chapters here come from both testaments - so a count keyed by the number alone would quietly add a Greek word's occurrences to an unrelated Hebrew one and rank the total.";
   "IT DOES NOT FILTER THE GRAMMAR OUT, and the head of the answer is therefore always the article and the pronouns. Cutting them means typing a list of words that do not count, and a list typed once quietly stops matching without anything going red. Ask for more rows than you mean to read; the words worth seeing start below that head.";
-  "THE INTERLINEAR'S OWN NOTATION IS DROPPED RATHER THAN RANKED, which is the one exception to the line above and rests on a different footing. A dash, a row of dots, a vvv and an empty wording are not words of scripture at all and can never become pictures, so they are not vocabulary this Bible has failed to draw - they are counted, reported as their own number, and kept out of the ranking.";
+  "THE INTERLINEAR'S OWN NOTATION IS DROPPED RATHER THAN RANKED, which is the one exception to the line above and rests on a different footing. A dash, a row of dots, a vvv and an empty wording are not words of scripture at all and can never become pictures, so they are not vocabulary this Bible has failed to draw - they are counted, reported as their own number, and kept out of the ranking. Which four they are is not decided here: this asks the shared reading next door, which held two of them until the day it was widened to hold all four.";
   "A HIGH COUNT IS A CANDIDATE AND NEVER A DECISION. Some of these are deliberately drawn as nothing, and the reasons are written down where that choice was made; others are proper names, which this Bible never draws; and a few would need artwork that does not exist. The number says where to look and a person still decides.";
   let chapters = bible_glyph_chapters();
   let occurrences = {};
@@ -58,7 +57,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
           continue;
         }
         let gloss = word.gloss;
-        let filler = bible_glyph_chapters_undrawn_filler_is(gloss);
+        let filler = bible_glyph_gloss_placeholder_is(gloss);
         if (filler) {
           filler_total = add(filler_total, 1);
           continue;
@@ -134,16 +133,5 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
       }
     }
     return most;
-  }
-  function bible_glyph_chapters_undrawn_filler_is(gloss) {
-    "whether a wording under a word is the interlinear's own notation rather than a word of scripture at all.";
-    "IT ASKS THE SHARED READING FIRST AND THEN TWO MORE THINGS, and the two are here rather than there on purpose. That reading says the tables print two fillers, a row of dots and a vvv, and it is asked by a survey of word senses that has its own reasons for the line it draws. Widening it would move that survey's numbers as a side effect of measuring this one, which is a change somebody should make deliberately if they make it at all.";
-    "THE TWO ADDED HERE ARE THE DASH AND THE EMPTY WORDING. A dash stands where the original says a word English does not say, and an empty wording is a row the table left blank. Neither can ever become a picture, because neither is a word - so counting them as vocabulary this Bible has failed to draw overstates the gap, and the dash alone is four hundred of them.";
-    let notation = bible_glyph_gloss_placeholder_is(gloss);
-    let dash = equal(gloss, "-");
-    let blank = equal(gloss, "");
-    let either = or(dash, blank);
-    let v = or(notation, either);
-    return v;
   }
 }
