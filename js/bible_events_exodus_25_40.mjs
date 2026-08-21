@@ -4,7 +4,8 @@ export function bible_events_exodus_25_40() {
   "★ THE BUILDING IS NOT THE SAME EVENT AS THE COMMAND TO BUILD, EVEN THOUGH THE WORDS REPEAT ALMOST EXACTLY. Between the two stands the calf, and that is the whole point of the repetition - the text says a second time what was already said once, after the people had made it impossible. Collapsing the pattern and the making into one event because they read alike would delete the thing the repetition was there to show.";
   let events = [
     {
-      title: "The pattern shown: the ark, the table, the lampstand, the tabernacle, the altar, the courtyard",
+      title:
+        "The pattern shown: the ark, the table, the lampstand, the tabernacle, the altar, the courtyard",
       passages: [
         {
           chapter_code: "EXO25",
@@ -34,7 +35,8 @@ export function bible_events_exodus_25_40() {
       ],
     },
     {
-      title: "The incense altar, the basin, the anointing oil, and Bezalel called by name",
+      title:
+        "The incense altar, the basin, the anointing oil, and Bezalel called by name",
       passages: [
         {
           chapter_code: "EXO30",
@@ -92,7 +94,8 @@ export function bible_events_exodus_25_40() {
       ],
     },
     {
-      title: "I will not go up among you, and the people strip off their ornaments",
+      title:
+        "I will not go up among you, and the people strip off their ornaments",
       passages: [
         {
           chapter_code: "EXO33",
@@ -155,7 +158,8 @@ export function bible_events_exodus_25_40() {
       ],
     },
     {
-      title: "Bezalel and Oholiab set to work, and the people told to stop bringing",
+      title:
+        "Bezalel and Oholiab set to work, and the people told to stop bringing",
       passages: [
         {
           chapter_code: "EXO35",
