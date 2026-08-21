@@ -1,6 +1,6 @@
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_g_button_background_translucent(
+export function app_shared_game_button_background_translucent(
   component,
   base_color,
   alpha,
