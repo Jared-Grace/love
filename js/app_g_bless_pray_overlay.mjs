@@ -1,7 +1,7 @@
 import { app_g_bless_amen } from "./app_g_bless_amen.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_remove } from "./html_remove.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { bless_prayer_rung } from "./bless_prayer_rung.mjs";
@@ -20,7 +20,7 @@ export function app_g_bless_pray_overlay(container_map, rung, on_amen) {
   ("length of the words - the one amen of this game, put up the same way it is put up at");
   ("the door.");
   let overlay = app_g_overlay_container(container_map);
-  let container = app_g_container_player(overlay);
+  let container = app_shared_game_container_player(overlay);
   let prayer = bless_prayer_rung(rung);
   app_g_p_text(container, prayer);
   function amen() {
