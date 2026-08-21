@@ -344,7 +344,7 @@ export function bible_glyph_chapter_ezk18() {
           "his",
           "$eyes",
           "to",
-          "idols;",
+          "$moai;",
           "he",
           "$hammer$s",
           "abominations.",
