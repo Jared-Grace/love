@@ -13,7 +13,7 @@ that record to `sent 2026-08-21`.
 
 ---
 
-Subject: Twenty-two faults in published files, one of them serious
+Subject: Twenty-three faults in published files, one serious and one affecting 31 translations
 
 Hello,
 
@@ -159,7 +159,8 @@ quote(s): '<span class="verse" id="V4">3b&#160;</span>' and, four lines later, '
 possible correction: id="V9" on the first of the two. The chapter carries id="V4"
 twice and carries no id="V9" at all, so a link to Job 24:9 lands nowhere and a link to
 24:4 lands on the wrong verse. The verse itself is present and correct — it is the one
-the page's own note explains, 'In the Hebrew text this verse follows verse 8'.
+the page's own note explains, 'In the Hebrew text this verse follows verse 8'. One
+instance of item 23.
 
 **12.**
 
@@ -197,7 +198,8 @@ quote(s): '<span class="verse" id="V1">3-9&#160;</span>' … '<span class="verse
 possible correction: ids matching the printed numbers — id="V3" for the block printed
 3-9, and so on. This is a selection edition and printing ranges is right, but the ids
 count the blocks (V1…V8) instead of naming the verses, and then the last one switches
-to the real number (V65). So a link to Mark 14:3 lands nowhere and #V1 reaches it.
+to the real number (V65). So a link to Mark 14:3 lands nowhere and #V1 reaches it. One
+instance of item 23, showing it on merged ranges rather than part-verses.
 
 **15.**
 
@@ -268,6 +270,33 @@ quote(s): markers run '<span class="verse" id="V43">43&#160;</span>' then '<span
 
 possible correction: a verse 44 marker. uigara skips one the same way in GEN09 (10),
 PRO06 (5) and LUK01 (42) — separate from the read-aloud loss in item 3.
+
+One last item came from a third check: verse ids that a chapter uses twice. Unlike a
+missing number, a repeated id can never be a numbering tradition, so this one needed no
+judging. It is a single fault and a single fix, and it accounts for every repeated id
+in all 399 translations we carry.
+
+**23.**
+
+url: https://ebible.org/grcbrent/JOS09.htm
+
+quote(s): the chapter's ids against the numbers they print, in page order — 'V1=1 V2=2
+V3=2a V4=2b V5=2c V6=2d V7=2e V8=2f' and then 'V3=3 V4=4 V5=5 V6=6 V7=7 V8=8'. In full:
+'<span class="verse" id="V4">2b&#160;</span>' and, later in the same chapter,
+'<span class="verse" id="V4">4&#160;</span>'
+
+possible correction: take the id from the label the marker prints, not from the marker
+before it. A marker whose label is not a plain number — a part-verse like '2b', or a
+merged range like '3-9' — is currently given the id one greater than the previous
+marker's id. The next plain-numbered marker resyncs to its own number, so the invented
+ids land on real verses further down the chapter. Every collision costs two verses: a
+link to one lands on the other, and the other has no address at all.
+
+678 verses in 31 translations, 299 chapters: grcbrent (176), eng-Brenton (174),
+englxxup (174), wlo (13), aaz, hegNTpo, llg, mkn, nfa, row, tet, txq, engnna (9 each),
+nldnbg, ntu, rgu, sbe (7 each), msy2020 (6), tdt (5), nce (4), beu, urt, engasvbt
+(3 each), bkx, hvn, mzq, pdo, shr, tgo, engerv, engkjvcpb (1 each). Items 11 and 14
+above are single instances of this same fault, so fixing this fixes those too.
 
 We pass affected chapters over rather than show a chapter we cannot read, and pick
 them up whenever a corrected download appears — so at present neither Brenton edition
