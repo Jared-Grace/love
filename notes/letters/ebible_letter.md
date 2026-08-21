@@ -13,7 +13,7 @@ that record to `sent 2026-08-21`.
 
 ---
 
-Subject: Twelve small faults in published files
+Subject: Twenty-two faults in published files, one of them serious
 
 Hello,
 
@@ -171,6 +171,103 @@ possible correction: number the colophon 14, or give it its own chapter. Beginni
 the chapter at 4 is right, and the Additions are placed back in chapters 1, 3, 4, 5, 8
 and 10 rather than kept at 11–16, which is a fair choice — but the colophon kept the
 number it had at 11:1, so it now prints after verse 13 as verse 1.
+
+The rest came from a second, wider check: every chapter's own verse markers, laid
+against each other across all 399 translations we carry. A number missing from one
+translation and from five others is that tradition's numbering and we have left it
+alone; a number missing from one translation alone is below. **Item 13 is the most
+serious thing in this letter.**
+
+**13.**
+
+url: https://ebible.org/mwf2018/MAT27.htm
+
+quote(s): the whole file is 6,803 bytes and runs '<span class="verse" id="V10">10&#160;</span>… Nhini-wa murrinh-yu ngarra Yile neki kathu mamna ngarra nukunu Jeremiah da murntak warra, i murrinh nhini-ka murrinh da thathpirr nhini-yu.” </div>' straight into '<div class='s'>Ku Soldier Pirangkadhaneme Pe Da Weyi Palyirr </div> <div class='p'> <span class="verse" id="V62">62&#160;</span>'
+
+possible correction: Matthew 27:11–61 is absent — not the markers, the words. The
+chapter goes from Judas's death to the guard at the tomb, so the trial before Pilate,
+the crucifixion and the death are all missing. Other chapters of mwf2018 look complete.
+
+**14.**
+
+url: https://ebible.org/kjn/MRK14.htm
+
+quote(s): '<span class="verse" id="V1">3-9&#160;</span>' … '<span class="verse" id="V8">62-64&#160;</span>' … '<span class="verse" id="V65">65&#160;</span>'
+
+possible correction: ids matching the printed numbers — id="V3" for the block printed
+3-9, and so on. This is a selection edition and printing ranges is right, but the ids
+count the blocks (V1…V8) instead of naming the verses, and then the last one switches
+to the real number (V65). So a link to Mark 14:3 lands nowhere and #V1 reaches it.
+
+**15.**
+
+url: https://ebible.org/nay/GEN03.htm
+
+quote(s): markers run '<span class="verse" id="V14">14&#160;</span>' then '<span class="verse" id="V16">16&#160;</span>'
+
+possible correction: a verse 15 marker. Verse 14's block appears to carry verse 15's
+words as well — it ends with the two parallel clauses about the head and the heel.
+nay JHN19 skips 24 the same way.
+
+**16.**
+
+url: https://ebible.org/jni/JHN01.htm
+
+quote(s): markers run '<span class="verse" id="V5">5&#160;</span>' then '<span class="verse" id="V9">9&#160;</span>'
+
+possible correction: markers for verses 6, 7 and 8 — the sentences about the man sent
+from God.
+
+**17.**
+
+url: https://ebible.org/kiz/2TH02.htm
+
+quote(s): markers run '<span class="verse" id="V7">7&#160;</span>' then '<span class="verse" id="V11">11&#160;</span>'
+
+possible correction: markers for verses 8, 9 and 10. kiz GAL05 skips 13 the same way.
+
+**18.**
+
+url: https://ebible.org/amo/MRK07.htm
+
+quote(s): markers run '<span class="verse" id="V26">26&#160;</span>' then '<span class="verse" id="V28">28&#160;</span>'
+
+possible correction: a verse 27 marker. amo HEB11 skips 19 the same way.
+
+**19.**
+
+url: https://ebible.org/jid/MRK16.htm
+
+quote(s): markers run '<span class="verse" id="V12">12&#160;</span>' then '<span class="verse" id="V14">14&#160;</span>'
+
+possible correction: a verse 13 marker. The chapter carries the long ending, so verse
+13 belongs in it.
+
+**20.**
+
+url: https://ebible.org/tsn/MRK15.htm
+
+quote(s): markers run '<span class="verse" id="V36">36&#160;</span>' then '<span class="verse" id="V38">38&#160;</span>'
+
+possible correction: a verse 37 marker. tsn GAL04 skips 16 the same way.
+
+**21.**
+
+url: https://ebible.org/tdx/MAT16.htm
+
+quote(s): markers run '<span class="verse" id="V5">5&#160;</span>' then '<span class="verse" id="V8">8&#160;</span>'
+
+possible correction: markers for verses 6 and 7. tdx skips one marker the same way in
+2SA13 (3), 1CH08 (38), PSA029 (2), MAT10 (33) and MAT18 (4).
+
+**22.**
+
+url: https://ebible.org/uigara/MRK01.htm
+
+quote(s): markers run '<span class="verse" id="V43">43&#160;</span>' then '<span class="verse" id="V45">45&#160;</span>'
+
+possible correction: a verse 44 marker. uigara skips one the same way in GEN09 (10),
+PRO06 (5) and LUK01 (42) — separate from the read-aloud loss in item 3.
 
 We pass affected chapters over rather than show a chapter we cannot read, and pick
 them up whenever a corrected download appears — so at present neither Brenton edition
