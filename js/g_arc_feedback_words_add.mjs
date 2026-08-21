@@ -44,7 +44,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   let words_named = [];
   for (let line of lines) {
     let text = property_get(line, "text");
-    let outside = await words_early_reader_outside(text);
+    let outside = await words_early_reader_outside_untaught(text);
     let any = list_empty_not_is(outside);
     if (any) {
       let number = property_get(line, "number");
