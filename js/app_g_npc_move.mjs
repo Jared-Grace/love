@@ -1,6 +1,6 @@
 import { app_g_npc_img_get } from "./app_g_npc_img_get.mjs";
 import { app_g_npc_cross_get } from "./app_g_npc_cross_get.mjs";
-import { app_g_character_face } from "./app_g_character_face.mjs";
+import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_img_square_style_position_object } from "./g_img_square_style_position_object.mjs";
 import { g_img_square_style_transition_delay } from "./g_img_square_style_transition_delay.mjs";
@@ -16,7 +16,7 @@ export function app_g_npc_move(npc, to, delay) {
   let cross = app_g_npc_cross_get(npc);
   let direction = g_direction(npc, to);
   object_assign(npc, to);
-  app_g_character_face(npc, img, direction);
+  app_shared_game_character_face(npc, img, direction);
   g_img_square_style_position_object(npc, img);
   g_img_square_style_transition_delay(img, delay);
   let b = null_is(cross);
