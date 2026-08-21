@@ -38,7 +38,7 @@ export function bible_dream_scene_trace_show(scene) {
     let at = bible_dream_drawing_point(drawing, event);
     active = bible_dream_stroke_begin_near(states, at, 169);
     if (active) {
-      active.hand_at = null;
+      bible_dream_stroke_hand_lift(active);
     }
   }
   function on_drag(event) {
@@ -49,13 +49,14 @@ export function bible_dream_scene_trace_show(scene) {
     bible_dream_stroke_hand_step(active, at);
     if (active.done) {
       bible_dream_stroke_finish_told(active, told);
+      bible_dream_stroke_hand_lift(active);
       active = null;
     }
     readout_show();
   }
   function on_release(event) {
     if (active) {
-      active.hand_at = null;
+      bible_dream_stroke_hand_lift(active);
     }
     active = null;
   }

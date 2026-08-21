@@ -1,3 +1,4 @@
+import { round } from "./round.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
 export function bible_dream_hand_mark_strength(nearness, taper) {
@@ -8,7 +9,8 @@ export function bible_dream_hand_mark_strength(nearness, taper) {
   let bright = 0.3 + multiply(nearness, 0.6);
   let full = multiply(bright, taper);
   let steps = 20;
-  let stepped = Math.round(multiply(full, steps));
+  let n = multiply(full, steps);
+  let stepped = round(n);
   let strength = divide(stepped, steps);
   return strength;
 }
