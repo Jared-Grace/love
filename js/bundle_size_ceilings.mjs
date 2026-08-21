@@ -26,7 +26,10 @@ export function bundle_size_ceilings() {
     ", so a page that will only ever take the browser half still carries both.");
   ("It arrived because the audit asks the API for the glosses on each couplet, which is the feature and not an accident. But it is the first time a preview has brought something to this page that cannot run on it, and the shape is not the sandbox's to fix: every app importing ",
     fn_name("app_shared_api"),
-    " carries the same pair, so the fix belongs where the two halves are chosen and would pay for itself everywhere at once.");
+    " carries the same pair, so the fix belongs where the two halves are chosen. It was measured before being acted on and it is worth four KiB of source in a four hundred KiB page, which is why nothing was done about it.");
+  "sandbox then went from 160 to 32 the same day, and the raise above is left standing because a reversal is only worth reading beside the thing it reversed. The way out written down twice as a person's to take was taken: the registry now keeps a way to FETCH each preview instead of the preview, so a visit downloads the one the address names. The page went from a hundred and forty five KiB to eighteen.";
+  "It was checked by opening it rather than by reading it, which is the whole reason it had waited. Three addresses on a phone-facing dev build: the dream trace drew its picture after fetching one fourteen KiB piece, the hymn audit's chooser drew after two pieces, and the bare page listing the seven fetched no piece at all. That last one is the point - somebody who lands on the sandbox without naming a preview now downloads none of them.";
+  "So the ceiling stops being a ratchet. An eighth preview costs a visitor who does not open it nothing, and a ceiling of thirty two KiB against a page of eighteen is once again far below what one preview tree arriving by accident would measure - which is the only thing this line was ever for.";
   let ceilings = [
     {
       name: "index",
@@ -42,7 +45,7 @@ export function bundle_size_ceilings() {
     },
     {
       name: "sandbox",
-      kib: 160,
+      kib: 32,
     },
     {
       name: "designs_universal",
