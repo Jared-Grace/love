@@ -81,7 +81,7 @@ export function bible_glyph_chapter_rosetta_lines_jdg13() {
         original:
           "וַיָּ֛קָם וַיֵּ֥לֶךְ מָנ֖וֹחַ אַחֲרֵ֣י אִשְׁתּ֑וֹ וַיָּבֹא֙ אֶל־ הָאִ֔ישׁ וַיֹּ֣אמֶר ל֗וֹ הַאַתָּ֥ה הָאִ֛ישׁ אֲשֶׁר־ דִּבַּ֥רְתָּ אֶל־ הָאִשָּׁ֖ה וַיֹּ֥אמֶר אָֽנִי׃",
         english:
-          "got up and followed So Manoah his wife When he came to the man he asked Are you the man who spoke to my wife am, ” he said I",
+          "got up and followed So Manoah his wife When he came to the man he asked Are you the man who spoke to my wife am, he said I",
       },
       {
         verse_number: 12,
