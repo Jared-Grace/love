@@ -1,8 +1,7 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_glyph_roots_collisions(glyph_roots) {
   "$plain glyph_roots";
@@ -14,8 +13,7 @@ export function bible_glyph_roots_collisions(glyph_roots) {
   let collisions = [];
   for (let glyph of object_property_names(glyph_roots)) {
     let sharers = property_get(glyph_roots, glyph);
-    let count = list_size(sharers);
-    let shared = greater_than(count, 1);
+    let shared = list_size_greater_than(sharers, 1);
     if (shared) {
       list_add(collisions, {
         glyph,
