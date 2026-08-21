@@ -25,7 +25,7 @@ export function bible_glyph_chapter_rosetta_lines_psa138() {
         original:
           "בְּי֣וֹם קָ֭רָֽאתִי וַֽתַּעֲנֵ֑נִי תַּרְהִבֵ֖נִי בְנַפְשִׁ֣י עֹֽז׃",
         english:
-          "On the day I called You answered me You emboldened me my soul [and] strengthened",
+          "On the day I called You answered me You emboldened me my soul and strengthened",
       },
       {
         verse_number: 4,
@@ -60,7 +60,7 @@ export function bible_glyph_chapter_rosetta_lines_psa138() {
         original:
           "יְהוָה֮ יִגְמֹ֪ר בַּ֫עֲדִ֥י יְ֭הוָה חַסְדְּךָ֣ לְעוֹלָ֑ם מַעֲשֵׂ֖י יָדֶ֣יךָ אַל־ תֶּֽרֶף׃",
         english:
-          "The LORD will fulfill [His purpose] for me O LORD Your loving devotion endures forever the works of Your hands do not abandon",
+          "The LORD will fulfill His purpose for me O LORD Your loving devotion endures forever the works of Your hands do not abandon",
       },
     ],
   };
