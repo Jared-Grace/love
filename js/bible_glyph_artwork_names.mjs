@@ -280,6 +280,26 @@ export function bible_glyph_artwork_names() {
       asset: "Right arrow curving left",
     },
     {
+      glyph: "thumbs_down",
+      asset: "Thumbs down",
+    },
+    {
+      glyph: "bowing",
+      asset: "Person bowing",
+    },
+    {
+      glyph: "mountain",
+      asset: "Mountain",
+    },
+    {
+      glyph: "scales",
+      asset: "Balance scale",
+    },
+    {
+      glyph: "sea",
+      asset: "Water wave",
+    },
+    {
       glyph: "light",
       asset: "Bright button",
     },

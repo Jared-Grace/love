@@ -25,6 +25,9 @@ export function bible_glyph_roots_hebrew() {
   "THE BLESSING IS THE FIRST WORD HERE DRAWN BY TWO PICTURES INSTEAD OF ONE, and the gap is what made it possible. Every hand in the vocabulary was already a word - the joined hands are amen, the raised hands are giving thanks, the knee is a servant - so barak had nothing left to take, and a mark that a reader has already learned as another word is worse than a blank. What it is given instead is the speech and the good sign, which is what the word says: to speak good over somebody.";
   "AND IT RUNS BOTH DIRECTIONS, which is the reason no single mark was ever going to work. God blesses man and man blesses God, in the same book with the same word, and a picture of a hand over a head says only the first. Speaking good says both without choosing, because it is the same act whichever way round the two are standing.";
   "EACH HALF IS HONEST ON ITS OWN, and that is the test a group has to pass before it is written. The speech is a word being said and the good sign is a thing being good, so a reader who has met either one elsewhere reads this correctly on sight - and a reader who has met neither learns two words from one blessing. That test is what refused the altar as meat and fire, and what lets this through.";
+  "THE CURSE IS THE BLESSING WITH ONE MARK FLIPPED, and it was reached by asking what the opposite of speak good would be rather than by looking for a picture of a curse. Ra was seated first - six hundred and sixty two occurrences, the largest content word this table had left undrawn, and the plain opposite of tob which was already the thumb up - and once the thumb down existed, arar and qalal cost nothing. Two roots share the group because two unrelated words meaning one thing may share a mark; they stay two rows because a root claims kinship and these are not kin.";
+  "A SKULL AND A SICK FACE WERE BOTH CONSIDERED AND BOTH CLAIM TOO MUCH. Speak death and speak sickness name what a curse is feared to bring, and the word names only what is said - Balaam is hired to curse and the thing he is asked to say is not death - so either would have written an outcome into every occurrence of a word that states none. The thumb down states no outcome at all, which is exactly as much as arar states.";
+  "THE MOUNTAIN, THE SCALES AND THE SEA WERE MEASURED IN THE SAME PASS and are here for frequency rather than for an argument. Har is five hundred and forty four, mishpat four hundred and nine, yam three hundred and ninety four, and all three had been sitting near the top of the undrawn list underneath the grammar and the proper names. Yam is glossed west forty seven times and the wave is drawn there anyway: the word is the sea and west is what English calls the direction the sea lies in, so the paraphrase is in the English rather than in the picture.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -640,6 +643,76 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "2896",
           glyph: "thumbs_up",
+        },
+      ],
+    },
+    {
+      root: "ra",
+      gloss: "evil, bad, disaster",
+      words: [
+        {
+          strong: "7451",
+          glyph: "thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "arar",
+      gloss: "curse",
+      words: [
+        {
+          strong: "779",
+          glyph: "speech+thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "qalal",
+      gloss: "curse, treat as light",
+      words: [
+        {
+          strong: "7043",
+          glyph: "speech+thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "shachah",
+      gloss: "bow down, worship",
+      words: [
+        {
+          strong: "7812",
+          glyph: "bowing",
+        },
+      ],
+    },
+    {
+      root: "har",
+      gloss: "mountain, hill country",
+      words: [
+        {
+          strong: "2022",
+          glyph: "mountain",
+        },
+      ],
+    },
+    {
+      root: "mishpat",
+      gloss: "justice, judgment, ordinance",
+      words: [
+        {
+          strong: "4941",
+          glyph: "scales",
+        },
+      ],
+    },
+    {
+      root: "yam",
+      gloss: "sea",
+      words: [
+        {
+          strong: "3220",
+          glyph: "sea",
         },
       ],
     },

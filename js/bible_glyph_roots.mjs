@@ -764,6 +764,70 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "poneros",
+      gloss: "evil, wicked",
+      words: [
+        {
+          strong: "4190",
+          glyph: "thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "kakos",
+      gloss: "bad, evil",
+      words: [
+        {
+          strong: "2556",
+          glyph: "thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "kataraomai",
+      gloss: "curse",
+      words: [
+        {
+          strong: "2672",
+          glyph: "speech+thumbs_down",
+        },
+        {
+          strong: "2671",
+          glyph: "speech+thumbs_down",
+        },
+      ],
+    },
+    {
+      root: "proskuneo",
+      gloss: "bow down, worship",
+      words: [
+        {
+          strong: "4352",
+          glyph: "bowing",
+        },
+      ],
+    },
+    {
+      root: "oros",
+      gloss: "mountain",
+      words: [
+        {
+          strong: "3735",
+          glyph: "mountain",
+        },
+      ],
+    },
+    {
+      root: "thalassa",
+      gloss: "sea",
+      words: [
+        {
+          strong: "2281",
+          glyph: "sea",
+        },
+      ],
+    },
+    {
       root: "eulogeo",
       gloss: "bless, blessing",
       words: [
