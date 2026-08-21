@@ -9,7 +9,8 @@ export function bible_dream_stroke_hand_lift(state) {
   "Forgetting the points is what stops the next press from being joined to this one. Two presses in different corners of a picture are two lines and not one, and a curve drawn between them would be a stroke the passage never gave.";
   "Forgetting the stroke being grown matters as much as forgetting the points. A path that stayed remembered would go on being extended after the pen came back down somewhere else, and every earlier setting would be rewritten to the new one, because a stroke carries one brightness for the whole of itself.";
   let points = state.hand_points;
-  if (equal(list_size(points), 3)) {
+  let left = list_size(points);
+  if (equal(left, 3)) {
     let last = list_last(points);
     list_add(points, last);
     bible_dream_hand_segment_draw(state, points);
