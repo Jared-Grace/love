@@ -1,3 +1,18 @@
+import { g_arc_write } from "./g_arc_write.mjs";
+import { folder_user_storage_function_path } from "./folder_user_storage_function_path.mjs";
+import { folder_exists } from "./folder_exists.mjs";
+import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
+import { file_read_json } from "./file_read_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { add_1 } from "./add_1.mjs";
+import { g_arc_words_said } from "./g_arc_words_said.mjs";
+import { list_add } from "./list_add.mjs";
+import { property_or_null } from "./property_or_null.mjs";
+import { list_tally } from "./list_tally.mjs";
+import { list_size } from "./list_size.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function g_arc_words_uncommon() {
   "Every word that has been said once and only once across every arc written so far, with the person who said it - the candidates for a word a young reader will not have.";
   "IT IS A REPORT AND NOT A GATE, deliberately. Whether a word is too hard is a question about English rather than about this repo, and answering it properly needs a list of the words a child of the settled reading age already has. There is no such list here, so a gate built on this would be ratcheting against a signal it cannot justify - and a check that fails for a reason nobody can state gets switched off rather than fixed.";
@@ -49,7 +64,7 @@ export async function g_arc_words_uncommon() {
   let counts = list_tally(said);
   let once = [];
   let words = 0;
-  for (let word of Object.keys(counts)) {
+  for (let word of object_property_names(counts)) {
     words = add_1(words);
     let uses = property_get(counts, word);
     let alone = equal(uses, 1);
