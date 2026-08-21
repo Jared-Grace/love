@@ -11,21 +11,21 @@ export function bible_glyph_chapter_rosetta_lines_1jn01() {
         original:
           "Ὃ ἦν ἀπ’ ἀρχῆς ὃ ἀκηκόαμεν ὃ ἑωράκαμεν τοῖς ὀφθαλμοῖς ἡμῶν ὃ ἐθεασάμεθα καὶ αἱ χεῖρες ἡμῶν ἐψηλάφησαν περὶ τοῦ Λόγου τῆς ζωῆς",
         english:
-          "That which was from [the] beginning which we have heard which we have seen with eyes our own which we have gazed upon and [own] hands our touched [with] [this is ] the Word of life",
+          "That which was from the beginning which we have heard which we have seen with eyes our own which we have gazed upon and own hands our touched with this is the Word of life",
       },
       {
         verse_number: 2,
         original:
           "καὶ ἡ ζωὴ ἐφανερώθη καὶ ἑωράκαμεν καὶ μαρτυροῦμεν καὶ ἀπαγγέλλομεν ὑμῖν τὴν ζωὴν τὴν αἰώνιον ἥτις ἦν πρὸς τὸν Πατέρα καὶ ἐφανερώθη ἡμῖν",
         english:
-          "And [this is] the life that was revealed we have seen [it] and testified [to it] and we proclaim to you life the eternal that was with the Father and was revealed to us",
+          "And this is the life that was revealed we have seen it and testified to it and we proclaim to you life the eternal that was with the Father and was revealed to us",
       },
       {
         verse_number: 3,
         original:
           "ὃ ἑωράκαμεν καὶ ἀκηκόαμεν ἀπαγγέλλομεν καὶ ὑμῖν ἵνα καὶ ὑμεῖς κοινωνίαν ἔχητε μεθ’ ἡμῶν καὶ ἡ κοινωνία δὲ ἡ ἡμετέρα μετὰ τοῦ Πατρὸς καὶ μετὰ τοῦ Υἱοῦ αὐτοῦ Ἰησοῦ Χριστοῦ",
         english:
-          "what we have seen and heard We proclaim to you so that also you fellowship may have with us And [this] fellowship of ours [is] with the Father and with Son His Jesus Christ",
+          "what we have seen and heard We proclaim to you so that also you fellowship may have with us And this fellowship of ours is with the Father and with Son His Jesus Christ",
       },
       {
         verse_number: 4,
@@ -37,14 +37,14 @@ export function bible_glyph_chapter_rosetta_lines_1jn01() {
         original:
           "Καὶ ἔστιν αὕτη ἡ ἀγγελία ἣν ἀκηκόαμεν ἀπ’ αὐτοῦ καὶ ἀναγγέλλομεν ὑμῖν ὅτι ὁ Θεὸς φῶς ἐστιν καὶ σκοτία ἐν αὐτῷ οὐκ ἔστιν οὐδεμία",
         english:
-          "And is this the message we have heard from Him and announce to you God light is and darkness in Him no there is [at all]",
+          "And is this the message we have heard from Him and announce to you God light is and darkness in Him no there is at all",
       },
       {
         verse_number: 6,
         original:
           "Ἐὰν εἴπωμεν ὅτι κοινωνίαν ἔχομεν μετ’ αὐτοῦ καὶ ἐν τῷ σκότει περιπατῶμεν ψευδόμεθα καὶ οὐ ποιοῦμεν τὴν ἀλήθειαν",
         english:
-          "If we say fellowship we have with Him yet in the darkness walk we lie and {do} not practice the truth",
+          "If we say fellowship we have with Him yet in the darkness walk we lie and do not practice the truth",
       },
       {
         verse_number: 7,
@@ -65,7 +65,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn01() {
         original:
           "ἐὰν ὁμολογῶμεν τὰς ἁμαρτίας ἡμῶν πιστός ἐστιν καὶ δίκαιος ἵνα ἀφῇ ἡμῖν τὰς ἁμαρτίας καὶ καθαρίσῃ ἡμᾶς ἀπὸ πάσης ἀδικίας",
         english:
-          "If we confess sins our faithful He is and just to forgive us [our] sins and to cleanse us from all unrighteousness",
+          "If we confess sins our faithful He is and just to forgive us our sins and to cleanse us from all unrighteousness",
       },
       {
         verse_number: 10,
