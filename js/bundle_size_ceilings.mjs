@@ -60,7 +60,7 @@ export function bundle_size_ceilings() {
     },
     {
       name: "reply_local",
-      kib: 208,
+      kib: 200,
     },
   ];
   return ceilings;

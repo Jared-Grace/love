@@ -21,21 +21,13 @@ export async function g_arc_feedback_add(
   "IT APPENDS AND NEVER REPLACES. Two readers may fault the same line for two different things, and a store keeping one note a line would let the second silently erase the first - which is the reading that took longest to arrive.";
   "IT MARKS ITS NOTES AS A PERSON'S, and the check beside it marks its own, because the two are worth undoing on completely different terms. A check's finding can be thrown away at no cost - running it again reproduces every note exactly, so nothing is lost that a second is cannot restore. A person's finding cannot be reproduced by anything; it took a reading, and the reading is gone. A clear that could not tell them apart could therefore only be safe by refusing to drop either, which is what left thirty-seven notes standing that a reviser was about to act on.";
   "THE ADDRESS IS MADE A NUMBER HERE, at the one door into the store, and that is a repair rather than a tidying. A person files a note from a command line, which hands every argument over as text; a check files one from inside, where a turn number is already counted. Both were being written down as they arrived, so the same line was addressed two different ways and neither could find the other - a clear asked for person one dropped nothing, because the note standing there said the person was the WORD one. Nothing goes red for that: the store took both happily and every reader answered honestly about the half it could see.";
-  let path = g_arc_feedback_write_path(chapter_code);
-  let notes = await g_arc_feedback_chapter(chapter_code);
-  let person = number_from_text(index);
-  let line = number_from_text(turn);
-  list_add(notes, {
-    index: person,
-    turn: line,
+  let path = await g_arc_feedback_note_add(
+    chapter_code,
+    index,
+    turn,
     field,
     note,
-    checked: false,
-  });
-  let contents = json_format_to({
-    chapter_code,
-    notes,
-  });
-  await file_overwrite_uncached(path, contents);
+    false,
+  );
   return path;
 }
