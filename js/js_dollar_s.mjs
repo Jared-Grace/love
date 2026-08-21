@@ -56,7 +56,6 @@ export function js_dollar_s({ stack_: stack_1, stack_2, ast, afters }) {
       let index_next = list_next_index(stack_2_inner, stack_1_inner);
       list_insert(stack_2_inner, index_next, assign);
       list_remove(stack_2_inner, stack_1_inner);
-      return;
     }
     each(declarations, lambda2);
   }
