@@ -11,7 +11,7 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "The council sought false witness against HIM and found none until two came forward, and Mark adds that their witness did not even agree together. Isaiah had said HE would be taken from prison and from judgment.",
       symbol_explain:
-        "Inherited, not described. No verse puts scales at the trial; the tilted balance is the oldest emblem there is for a judgment weighted before it begins, and it is drawn here so that the same scales can come back level at couplet 29.",
+        "Described. A false balance is abomination to the LORD, and Micah asks shall I count them pure with the wicked balances. Scripture does not say scales stood at this trial, but it does say that a rigged measure is what injustice looks like to GOD, so the tilted beam is HIS own image for the thing and not a courthouse emblem borrowed for it. The same scales come back level at couplet 29.",
     },
     2: {
       kept: 3,

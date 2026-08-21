@@ -62,7 +62,7 @@ export function song_image_couplets() {
       second: "unjustly tried",
       symbol:
         "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam",
-      symbol_ref: "",
+      symbol_ref: "Proverbs 11:1, Micah 6:11, Amos 8:5",
       same_as: 0,
     },
     {
