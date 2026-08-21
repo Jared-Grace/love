@@ -583,7 +583,7 @@ export function bible_glyph_chapter_1jn04() {
         words: [
           "And",
           "this",
-          "commandment",
+          "$scroll",
           "we",
           "have",
           "from",
