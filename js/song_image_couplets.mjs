@@ -210,7 +210,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "A dead serpent of emerald green glass lying limp and flat along the ground, one long smooth body tapering to the tip of its tail, and a heavy grey stone lying on top of its head, the stone hiding the head completely so that the body runs out from underneath the stone and no head can be seen at all",
+        "The tree of life, one tall tree standing alone with a straight plain brown trunk and a wide round crown of emerald green leaves, with large ruby red fruit hanging in the leaves",
       ref: "Genesis 3:15",
       same_as: 0,
     },

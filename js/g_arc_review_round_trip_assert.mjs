@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { g_arc_review_text } from "./g_arc_review_text.mjs";
 import { g_arc_review_text_parse } from "./g_arc_review_text_parse.mjs";
 import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
@@ -7,7 +8,12 @@ export function g_arc_review_round_trip_assert(arc, passages) {
   "THIS IS WHAT MAKES THE PAGE A FORM OF THE ARC rather than a picture of it. A reviewer edits the page and the edited page is read back in, so anything the laying out drops or the reading back cannot recognise is content lost between two steps that both looked like they worked. Rendered and read here in one breath, the two halves are checked against each other rather than against a description of the layout.";
   "The comparison is by JSON, so a field that arrived as the wrong shape fails as loudly as one that arrived with the wrong words.";
   let text = g_arc_review_text(arc, passages);
-  let parsed = g_arc_review_text_parse(text);
+  let read = g_arc_review_text_parse(text);
+  let parsed = property_get(read, "arc");
+  let notes = property_get(read, "notes");
+  json_equal_assert_json(notes, [], {
+    hint: "a page laid out from an arc holds no reviewer's notes, so a note found in one means the arc itself is carrying braces where a person's words should be",
+  });
   json_equal_assert_json(parsed, arc, {
     hint: "a review page and the arc it was laid out from have to hold the same thing, so either the laying out is dropping something or the reading back does not recognise a line it wrote itself",
   });
