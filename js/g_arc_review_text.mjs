@@ -1,3 +1,5 @@
+import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
+import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -28,19 +30,15 @@ export function g_arc_review_text(arc, passages) {
   let conversation_number = 0;
   for (let conversation of conversations) {
     conversation_number = add(conversation_number, 1);
-    let item2 = text_combine_multiple([
-      property_get(marks, "conversation"),
-      conversation_number,
-    ]);
+    let value2 = property_get(marks, "conversation");
+    let item2 = text_combine_multiple([value2, conversation_number]);
     list_add(lines, item2);
     let catch_up = property_get(conversation, "catch_up");
     let b = text_empty_is(catch_up);
     let caught_up = not(b);
     if (caught_up) {
-      let item3 = text_combine_multiple([
-        property_get(marks, "catch_up"),
-        catch_up,
-      ]);
+      let value3 = property_get(marks, "catch_up");
+      let item3 = text_combine_multiple([value3, catch_up]);
       list_add(lines, item3);
     }
     list_add(lines, "");
@@ -51,10 +49,8 @@ export function g_arc_review_text(arc, passages) {
       let b2 = equal(opener, opener_shown);
       let changed = not(b2);
       if (changed) {
-        let item4 = text_combine_multiple([
-          property_get(marks, "opener"),
-          opener,
-        ]);
+        let value4 = property_get(marks, "opener");
+        let item4 = text_combine_multiple([value4, opener]);
         list_add_multiple(lines, [item4, ""]);
         opener_shown = opener;
       }

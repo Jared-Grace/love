@@ -1,3 +1,14 @@
+import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
+import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { text_prefix_without } from "./text_prefix_without.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { text_starts_with_digit } from "./text_starts_with_digit.mjs";
+import { text_index_of_skip } from "./text_index_of_skip.mjs";
+import { assert_json } from "./assert_json.mjs";
 export function g_arc_review_line_apply(arc, state, line) {
   "One line of a review page put where it belongs - into the person, into the conversation being read, or into the turn being read.";
   "RECOGNISED BY ITS MARK, never by its position. Every line of the page begins with the mark of what it is, so a page can be edited freely - a turn moved, a conversation split - and still read back as the arc it now says it is.";
@@ -14,48 +25,70 @@ export function g_arc_review_line_apply(arc, state, line) {
       return;
     }
   }
-  let started = text_starts_with(line, property_get(marks, "conversation"));
+  let prefix2 = property_get(marks, "conversation");
+  let started = text_starts_with(line, prefix2);
   if (started) {
-    let conversation = { catch_up: "", turns: [] };
+    let conversation = {
+      catch_up: "",
+      turns: [],
+    };
     let conversations = property_get(arc, "conversations");
     list_add(conversations, conversation);
     property_set(state, "conversation", conversation);
     property_set(state, "opener", "");
     return;
   }
-  let caught_up = text_starts_with(line, property_get(marks, "catch_up"));
+  let prefix3 = property_get(marks, "catch_up");
+  let caught_up = text_starts_with(line, prefix3);
   if (caught_up) {
-    let catch_up = text_prefix_without(line, property_get(marks, "catch_up"));
-    property_set(property_get(state, "conversation"), "catch_up", catch_up);
+    let prefix4 = property_get(marks, "catch_up");
+    let catch_up = text_prefix_without(line, prefix4);
+    let object = property_get(state, "conversation");
+    property_set(object, "catch_up", catch_up);
     return;
   }
-  let opened = text_starts_with(line, property_get(marks, "opener"));
+  let prefix5 = property_get(marks, "opener");
+  let opened = text_starts_with(line, prefix5);
   if (opened) {
-    let opener = text_prefix_without(line, property_get(marks, "opener"));
+    let prefix6 = property_get(marks, "opener");
+    let opener = text_prefix_without(line, prefix6);
     property_set(state, "opener", opener);
     return;
   }
-  let referenced = text_starts_with(line, property_get(marks, "reference"));
+  let prefix7 = property_get(marks, "reference");
+  let referenced = text_starts_with(line, prefix7);
   if (referenced) {
-    let reference = text_prefix_without(line, property_get(marks, "reference"));
-    property_set(property_get(state, "turn"), "reference", reference);
+    let prefix8 = property_get(marks, "reference");
+    let reference = text_prefix_without(line, prefix8);
+    let object2 = property_get(state, "turn");
+    property_set(object2, "reference", reference);
     return;
   }
-  let afterward = text_starts_with(line, property_get(marks, "after"));
+  let prefix9 = property_get(marks, "after");
+  let afterward = text_starts_with(line, prefix9);
   if (afterward) {
-    let after = text_prefix_without(line, property_get(marks, "after"));
-    property_set(property_get(state, "turn"), "after", after);
+    let prefix10 = property_get(marks, "after");
+    let after = text_prefix_without(line, prefix10);
+    let object3 = property_get(state, "turn");
+    property_set(object3, "after", after);
     return;
   }
-  let quoted = text_starts_with(line, property_get(marks, "scripture"));
+  let prefix11 = property_get(marks, "scripture");
+  let quoted = text_starts_with(line, prefix11);
   if (quoted) {
     return;
   }
   let numbered = text_starts_with_digit(line);
   if (numbered) {
-    let before = text_index_of_skip(line, property_get(marks, "number"));
+    let item = property_get(marks, "number");
+    let before = text_index_of_skip(line, item);
     let opener = property_get(state, "opener");
-    let turn = { opener, before, reference: "", after: "" };
+    let turn = {
+      opener,
+      before,
+      reference: "",
+      after: "",
+    };
     let conversation = property_get(state, "conversation");
     let turns = property_get(conversation, "turns");
     list_add(turns, turn);
