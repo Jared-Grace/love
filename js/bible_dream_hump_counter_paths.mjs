@@ -12,8 +12,8 @@ export function bible_dream_hump_counter_paths(samples, hump) {
   let end = samples[hump.last];
   let sideways = subtract(end.x, start.x);
   let up = subtract(end.y, start.y);
-  let span = Math.sqrt(multiply(sideways, sideways) + multiply(up, up));
-  if (less_than(span, 4)) {
+  let span = hump.facing.span;
+  if (less_than(span, 0.5)) {
     let r = [];
     return r;
   }
