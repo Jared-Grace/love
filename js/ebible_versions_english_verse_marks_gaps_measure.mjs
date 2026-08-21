@@ -1,3 +1,6 @@
+import { ebible_versions_english_downloadable_cache } from "./ebible_versions_english_downloadable_cache.mjs";
+import { ebible_bibles_measure_generic } from "./ebible_bibles_measure_generic.mjs";
+import { ebible_verse_marks_gaps_bible } from "./ebible_verse_marks_gaps_bible.mjs";
 export async function ebible_versions_english_verse_marks_gaps_measure() {
   "Every English bible the search index walks, measured for chapters whose pages skip a verse number between the first mark and the last.";
   "The English ones first because a gap has to be judged by somebody reading the chapter, and these are the chapters that can be read here. The same measuring applies to every bible whose pages are on this machine and costs about a second and a half for two hundred and sixty chapters, so widening it is a question of who will read the answer rather than what it costs.";
