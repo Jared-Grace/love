@@ -81,8 +81,9 @@ export function bible_dream_trace_preview() {
       x: subtract(at.x, active.x),
       y: subtract(at.y, active.y),
     };
-    bible_dream_stroke_advance(active, near, 20);
-    let nearness = bible_dream_hand_nearness(active.gap, 20);
+    let tolerance_squared = bible_dream_corridor_tolerance_squared();
+    bible_dream_stroke_advance(active, near, tolerance_squared);
+    let nearness = bible_dream_hand_nearness(active.gap, tolerance_squared);
     bible_dream_hand_mark_add(active, near, nearness);
     bible_dream_stroke_ink_show(active);
     if (active.done) {
