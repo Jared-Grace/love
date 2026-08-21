@@ -271,7 +271,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol:
-        "A very great rolling stone, one thick round slab of plain grey stone standing upright on its edge, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, set flat against the mouth of a tomb cut into a wall of plain grey rock and covering nearly the whole of it, the mouth showing only as a narrow rim of black round the stone, the same width all the way round and nowhere wider across than a tenth of the stone, the ground below the stone one plain flat pale grey",
+        "A very great rolling stone, one thick round slab of plain grey stone standing upright on its edge, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, the stone standing taller than the mouth of the tomb behind it and covering most of it, the mouth a plain black doorway cut into a wall of plain grey rock, one narrow upright slice of it still uncovered at one side of the stone with the straight side and the squared top of the doorway showing in that slice, the ground below the stone one plain flat pale grey",
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
