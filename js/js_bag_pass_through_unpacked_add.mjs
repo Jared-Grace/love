@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
@@ -20,8 +21,7 @@ export function js_bag_pass_through_unpacked_add(reads, decls, unpacked) {
     let key = property_get(read, "key");
     let bag = js_identifier_name(target);
     for (let decl of decls) {
-      let init = property_get(decl, "init");
-      let same_is = equal(init, call);
+      let same_is = property_equals(decl, "init", call);
       if (not(same_is)) {
         continue;
       }
