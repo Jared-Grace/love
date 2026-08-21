@@ -17,8 +17,8 @@ export async function ebible_bible_chapters_found_generic(
   let found_each = [];
   async function lambda(chapter_code) {
     async function lambda2() {
-      let found = await chapter_find(bible_folder, chapter_code);
-      return found;
+      let answer = await chapter_find(bible_folder, chapter_code);
+      return answer;
     }
     let found = await catch_null_async(lambda2);
     let unreadable = null_is(found);
