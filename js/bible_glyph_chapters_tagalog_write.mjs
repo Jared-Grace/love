@@ -22,6 +22,18 @@ export async function bible_glyph_chapters_tagalog_write() {
   "THE VERSE NUMBER IS TURNED INTO A NUMBER HERE, because the bible store answers with the text \"1\" and a picture chapter says 1, and the page joins the two by that value. Left as it arrived the join would match nothing at all, throw nothing, and show every verse with its Tagalog band simply missing - which is indistinguishable from a chapter nobody has translated.";
   "THE FOLDER IS LOOKED UP BY LANGUAGE CODE rather than spelled here, because the name of a Tagalog bible on somebody's server is not a fact this function should know. The code is tgl - three letters, because Tagalog has no two-letter code in the list - and the folder it currently resolves to is a detail of the curated list.";
   "AN EMPTY CHAPTER IS REPORTED AND NEVER SILENTLY KEPT. A bible that does not hold a chapter answers with no verses and so does a fetch that never arrived, and both would write a chapter with nothing in it - which reads on the page as a reveal panel that simply has no Tagalog, indistinguishable from one nobody asked for. The names come back so a caller can see which.";
+  "ALL OF THE DOING MOVED NEXT DOOR AND ONLY THE THREE CHOICES STAYED HERE. This was written for one language with the code, the file name and the wording fixed inside it, which is right for one language and a rewrite for the second - and a stranger test is worth as much as the number of strangers it can be run on. What is left here is the answer to which language, and it is kept as a name of its own rather than folded away so that the Tagalog reveal has one place to be asked about and one command to rebuild it.";
+  let language_code = "tgl";
+  let written_name = fn_name("bible_glyph_chapters_tagalog");
+  let language_word = "Tagalog";
+  let report = await bible_glyph_chapters_language_write(
+    language_code,
+    written_name,
+    language_word,
+  );
+  return report;
+}
+export async function bible_glyph_chapters_tagalog_write_unused() {
   let languages = ebible_languages_from_codes(["tgl"]);
   let bible_folder = list_first_property(languages, "bible_folder");
   let chapters = bible_glyph_chapters();
