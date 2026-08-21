@@ -1,3 +1,4 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_style_background } from "./html_style_background.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
@@ -16,7 +17,6 @@ import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { number_is } from "./number_is.mjs";
 import { examples_menu_dom } from "./examples_menu_dom.mjs";
 import { examples_single_dom } from "./examples_single_dom.mjs";
-import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 export async function app_examples(context) {
   "no-store so a data-only corpus rebuild is never masked by a cached JSON on hash-only navigation";
   let response = await fetch("examples_data.json", {
@@ -60,7 +60,7 @@ export async function app_examples(context) {
       examples_menu_dom(page, examples, select);
     }
     ("render() clears root each time, so re-add the contact button here to keep it present on every view");
-    app_shared_contact_button(page);
+    app_shared_footer(page);
   }
   render();
 }
