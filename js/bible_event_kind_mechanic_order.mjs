@@ -1,19 +1,17 @@
+import { bible_event_kind_best_gain } from "./bible_event_kind_best_gain.mjs";
+import { bible_event_kinds_unchosen } from "./bible_event_kinds_unchosen.mjs";
 import { bible_gathered_readings_kinds_ranked } from "./bible_gathered_readings_kinds_ranked.mjs";
 import { bible_event_reading_kinds } from "./bible_event_reading_kinds.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_filter_size } from "./list_filter_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { each } from "./each.mjs";
 import { not } from "./not.mjs";
-import { greater_than } from "./greater_than.mjs";
 export async function bible_event_kind_mechanic_order() {
   "Which kinds of event a mechanic has to be built for, in the order to build them, each one chosen for how many events it NEWLY reaches - and which kinds are never chosen at all, because everything carrying them is already reachable through something else.";
   "★ THIS SAYS WHICH KINDS ARE MECHANICS AND WHICH ARE ONLY MODIFIERS, and it says it by deriving rather than by anybody deciding. A kind that is never chosen names no event of its own: every scene carrying it also carries a kind that was already built. So it is a thing that happens INSIDE a mechanic and not a mechanic, and that is a fact about the corpus which changes by itself when another book is read.";
@@ -30,40 +28,8 @@ export async function bible_event_kind_mechanic_order() {
   let uncovered = list_copy(readings);
   let chosen = [];
   let chosen_names = [];
-  function gain_of(kind) {
-    function reading_carries_is(reading) {
-      let kinds = bible_event_reading_kinds(reading);
-      let carries = list_includes(kinds, kind);
-      return carries;
-    }
-    let gain = list_filter_size(uncovered, reading_carries_is);
-    return gain;
-  }
-  function best_remaining() {
-    let best = null;
-    let best_gain = 0;
-    function each_ranked(row) {
-      let kind = property_get(row, "value");
-      let already = list_includes(chosen_names, kind);
-      if (already) {
-        return;
-      }
-      let gain = gain_of(kind);
-      let better = greater_than(gain, best_gain);
-      if (better) {
-        best = row;
-        best_gain = gain;
-      }
-    }
-    each(ranked, each_ranked);
-    let found = {
-      best,
-      best_gain,
-    };
-    return found;
-  }
   while (list_empty_not_is(uncovered)) {
-    let r2 = best_remaining();
+    let r2 = bible_event_kind_best_gain(ranked, uncovered, chosen_names);
     let best_gain = property_get(r2, "best_gain");
     let best = property_get(r2, "best");
     if (not(best)) {
@@ -88,20 +54,7 @@ export async function bible_event_kind_mechanic_order() {
       covered_running,
     });
   }
-  let unchosen = [];
-  function each_ranked_unchosen(row) {
-    let kind = property_get(row, "value");
-    let already = list_includes(chosen_names, kind);
-    if (already) {
-      return;
-    }
-    let count = property_get(row, "count");
-    list_add(unchosen, {
-      kind,
-      count,
-    });
-  }
-  each(ranked, each_ranked_unchosen);
+  let unchosen = bible_event_kinds_unchosen(ranked, chosen_names);
   let r = {
     events: list_size(readings),
     kinds_used: list_size(ranked),
