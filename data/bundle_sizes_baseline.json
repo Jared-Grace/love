@@ -62,7 +62,7 @@
   },
   {
    "name": "145.sandbox.js",
-   "size": 18349
+   "size": 18141
   },
   {
    "name": "158.a.js",
@@ -553,12 +553,16 @@
    "size": 5754
   },
   {
+   "name": "798.sandbox.js",
+   "size": 16216
+  },
+  {
    "name": "804.examples.js",
    "size": 805
   },
   {
    "name": "819.sandbox.js",
-   "size": 7525
+   "size": 7526
   },
   {
    "name": "846.examples.js",
@@ -566,7 +570,7 @@
   },
   {
    "name": "852.sandbox.js",
-   "size": 14493
+   "size": 14604
   },
   {
    "name": "871.examples.js",
