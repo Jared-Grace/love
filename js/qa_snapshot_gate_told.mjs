@@ -30,5 +30,7 @@ export async function qa_snapshot_gate_told(folder) {
   let said = property_get(r, "printed");
   let value = text_combine(said, taken);
   property_set(r, "printed", value);
+  ("It is also handed back on its own, and that is what makes it reachable at all. Everything the gates said is shown only when one of them went red, which is right for hundreds of lines nobody reads on a green run - but these dozen lines are the only place the run says whether the work was divided well, and a run that divided it badly and passed is exactly the run that needs to say so. Put in the said pile alone, the number was visible on failing runs only, where whoever is reading is reading the failures.");
+  property_set(r, "shares", taken);
   return r;
 }

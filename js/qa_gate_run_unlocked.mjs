@@ -1,3 +1,4 @@
+import { qa_gate_shares_print } from "./qa_gate_shares_print.mjs";
 import { qa_gate_machine_red_print } from "./qa_gate_machine_red_print.mjs";
 import { qa_gate_run_timings_write } from "./qa_gate_run_timings_write.mjs";
 import { qa_gate_printed_print } from "./qa_gate_printed_print.mjs";
@@ -78,6 +79,8 @@ export async function qa_gate_run_unlocked() {
   let blamed_ms = date_milliseconds_since(at_blame);
   qa_gate_failed_assert(told, here, asked_ms, blamed_ms);
   qa_gate_parts_print(asked_ms, blamed_ms);
+  ("How the work was divided is shown beside how long each part took, because the two are one question. The parts say the gates were most of the run; the shares say whether that was work or whether six of seven processes finished early and waited. Shown only where everything else the gates said is shown, it appeared on failing runs alone, and a badly divided run passes.");
+  qa_gate_shares_print(told);
   console.log("\nall gates passed");
   ("How long each gate took is still deliberately NOT returned here, and the reason has changed. It used to be that it could not be: the half asked of this machine had its timings in hand, the half asked of the copy is several separate processes whose only channel back is the text they printed, and returning the half in hand would have handed back three gates' numbers in a shape that reads like all of them - a number that looks complete and is not being worse than no number. That is answered now. Each share prints one marked line per gate, the way it already printed one per complaining gate, and both halves are read back into one list.");
   ("What is left is a question of size rather than of truth. A hundred gates is not a verdict, and a run whose answer is a hundred rows is one nobody can read at a glance - so the list is written down and the verdict comes back. Whoever wants the rows asks for them by name.");
