@@ -1,5 +1,4 @@
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { window_go } from "./window_go.mjs";
 export function app_shared_all_apps_button(parent) {
@@ -10,7 +9,11 @@ export function app_shared_all_apps_button(parent) {
     window_go("index.html");
   }
   let left = emoji_home();
-  let label = text_combine(left, " All apps");
-  let button = app_shared_button_wide(parent, label, on_click);
+  let button = app_shared_button_wide_text_combine(
+    parent,
+    left,
+    " All apps",
+    on_click,
+  );
   return button;
 }
