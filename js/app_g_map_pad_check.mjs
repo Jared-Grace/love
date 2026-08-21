@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { assert_message } from "./assert_message.mjs";
-import { app_g_map_pad } from "./app_g_map_pad.mjs";
+import { app_shared_game_map_pad } from "./app_shared_game_map_pad.mjs";
 import { app_shared_game_map_buffer_pad } from "./app_shared_game_map_buffer_pad.mjs";
 import { g_water } from "./g_water.mjs";
 import { equal } from "./equal.mjs";
@@ -15,7 +15,7 @@ export function app_g_map_pad_check() {
     ["a", "b"],
     ["c", "d"],
   ];
-  let padded = app_g_map_pad(core);
+  let padded = app_shared_game_map_pad(core);
   let size = 2 + multiply(2, pad);
   let b = equal(padded.length, size);
   assert_message(b, "padded has inner + 2*pad rows");
