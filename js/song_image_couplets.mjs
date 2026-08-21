@@ -379,7 +379,7 @@ export function song_image_couplets() {
       first: "for every tear",
       second: "HE'll wipe away",
       symbol:
-        "One single teardrop of clear blue glass, drawn very large and alone in the middle of the window, round below and drawn to a point above",
+        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large so that it reaches from near the top of the window almost to the bottom of it",
       ref: "Revelation 21:4",
       same_as: 0,
     },
