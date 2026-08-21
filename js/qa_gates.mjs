@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_rosetta_lines_notation_gate_run } from "./bible_glyph_chapters_rosetta_lines_notation_gate_run.mjs";
 import { ebible_letter_unaccounted_gate_run } from "./ebible_letter_unaccounted_gate_run.mjs";
 import { bible_glyph_chapters_language_gate_run } from "./bible_glyph_chapters_language_gate_run.mjs";
 import { words_early_reader_gate_run } from "./words_early_reader_gate_run.mjs";
@@ -527,6 +528,7 @@ export function qa_gates() {
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
     bible_glyph_chapters_rosetta_lines_gate_run,
+    bible_glyph_chapters_rosetta_lines_notation_gate_run,
     bible_glyph_chapters_language_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,

@@ -18,7 +18,7 @@ export async function bundle_sizes_now() {
   let js_names = list_filter(names, js_is);
   let sorted = list_sort_text(js_names);
   async function measure(name) {
-    let path = path_join(folder, name);
+    let path = path_join([folder, name]);
     let size = await file_size(path);
     let entry = {
       name,
