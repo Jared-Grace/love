@@ -21,7 +21,8 @@ export async function psalms_videos_verse_mislabelled_playlists_order_moves(
     list_add(plans, plan);
     let ordered = property_get(plan, "ordered");
     if (ordered) {
-      move_count = add(move_count, property_get(plan, "move_count"));
+      let right = property_get(plan, "move_count");
+      move_count = add(move_count, right);
     }
   }
   let r = {
