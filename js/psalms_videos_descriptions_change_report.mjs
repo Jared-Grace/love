@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_videos_descriptions_live_read } from "./psalms_videos_descriptions_live_read.mjs";
 import { equal } from "./equal.mjs";
@@ -5,8 +6,11 @@ export async function psalms_videos_descriptions_change_report() {
   "Says what running the whole thing would actually do to the channel: how many songs would be given words they do not have, how many already have the right ones, and how many carry words of somebody's own that would be written over.";
   "THE THIRD NUMBER IS THE ONLY ONE WORTH ASKING FOR. Adding words to a video that has none takes nothing away and can be undone by emptying the box again. Writing over words somebody sat down and wrote destroys them, and no run here keeps a copy. So the third number is what the decision to run this actually rests on, and it should be looked at before the run rather than found afterwards.";
   "It names a few of the third sort rather than counting them only, because a count of eleven says nothing about whether losing them matters and one look at what they say usually settles it.";
+  "A fourth number counts the songs youtube said nothing about, and it is deliberately not folded into the ones that would be given words. Those songs have not been shown to be empty - only not to have been described - and a reading that quietly called them empty is what once turned a refusal into four hundred and thirty-seven imaginary blanks.";
   arguments_assert(arguments, 0);
-  let read = await psalms_videos_descriptions_live_read();
+  let reading = await psalms_videos_descriptions_live_read();
+  let read = property_get(reading, "read");
+  let silent = property_get(reading, "silent");
   let right = 0;
   let empty = 0;
   let carrying = [];
@@ -33,6 +37,7 @@ export async function psalms_videos_descriptions_change_report() {
     would_be_added: empty,
     would_be_written_over: carrying.length,
     written_over_first: carrying.slice(0, 8),
+    could_not_be_read: silent.length,
   };
   return r;
 }
