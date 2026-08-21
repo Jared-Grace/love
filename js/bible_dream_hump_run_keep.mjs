@@ -7,8 +7,9 @@ import { bible_dream_hump_facing } from "./bible_dream_hump_facing.mjs";
 import { not } from "./not.mjs";
 export function bible_dream_hump_run_keep(humps, samples, sign, first, last) {
   "Take one run of samples that all bend the same way and add it to the list of bumps, unless it is too small or too flat or not a bend at all.";
-  "Four separate refusals, and each of them is a different way of not being a bump. A run of no bend is a straight stretch. A run of a handful of samples is the rounding in the sampling rather than a shape anybody drew. A run that stands a fraction of nothing off its own chord is the rounding again. A run that bends steadily but barely leaves its own chord in proportion to how wide it is, is a long gentle sweep, which a reader sees as the line itself and not as a feature of it.";
-  "★ HOW DEEP A BUMP HAS TO BE IS A SHARE OF ITS OWN WIDTH AND NOT A FIXED DISTANCE. This was first written as a fixed one, and measured on the page: the river and one cow were ornamented and every other shape in the dream got nothing at all, because a river drawn four hundred units wide and an ear of grain drawn fifty have bumps that differ by the same fifteen times. Nothing went red - the ornament simply was not there, which looks exactly like a shape that has no bumps. Anything judging a shape's own features has to be scale-free or it is really judging the shape's size.";
+  "Three separate refusals, and each of them is a different way of not being a bump. A run of no bend is a straight stretch. A run of a handful of samples is the rounding in the sampling rather than a shape anybody drew. A run standing a fraction of nothing off its own chord is the rounding again.";
+  "★ HOW DEEP A BUMP HAS TO BE IS NOT WHERE THIS DECISION IS MADE, THOUGH IT LOOKS LIKE THE OBVIOUS PLACE. A bar was put here demanding a bump stand off its own chord by a share of its width, and measured on the page it threw the river of GEN41 away - the very largest and plainest feature in the drawing - because a river IS a long shallow sweep, and shallowness relative to width is exactly what a river has. What was actually going wrong lived one function upstream, in how a bend was detected at all. The lesson is worth more than the bar was: a threshold that looks like it is selecting for quality is often selecting for something else entirely, and only measuring several shapes at once tells them apart.";
+  "So the one measurement of depth left here is a floor low enough that nothing real approaches it. Its whole job is rounding, and it makes no judgement about whether a shape deserves ornament.";
   "The refusals matter more than they look, because everything downstream is ornament, and ornament hung on something the eye does not read as a feature does not look like decoration - it looks like a mistake.";
   if (equal(sign, 0)) {
     return;
@@ -22,10 +23,6 @@ export function bible_dream_hump_run_keep(humps, samples, sign, first, last) {
     return;
   }
   if (less_than(facing.reach, 0.3)) {
-    return;
-  }
-  let b = multiply(facing.span, 0.12);
-  if (less_than(facing.reach, b)) {
     return;
   }
   list_add(humps, {

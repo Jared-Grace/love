@@ -1,3 +1,4 @@
+import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_src_set } from "./html_src_set.mjs";
 import { less_than } from "./less_than.mjs";
@@ -63,7 +64,8 @@ export function song_image_audit_picture(parent, key, kept) {
   async function keep_click() {
     let attempt = attempts[shown];
     html_text_set(keep, "keeping");
-    await api_read(fn_name("song_image_kept_set"), [key, attempt]);
+    let f_name = fn_name("song_image_kept_set");
+    await api_read(f_name, [key, attempt]);
     kept_now = attempt;
     html_text_set(keep, "keep");
     redraw();
