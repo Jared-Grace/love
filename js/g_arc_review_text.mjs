@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { g_arc_review_tally_lines } from "./g_arc_review_tally_lines.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
@@ -6,11 +7,9 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { g_arc_review_turn_lines } from "./g_arc_review_turn_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { not } from "./not.mjs";
 export function g_arc_review_text(arc, passages) {
   "A whole written arc laid out to be read by a person, with the Scripture of each answer printed under the line it answers.";
   "WHAT IS STORED AND WHAT IS READ ARE NOT THE SAME SHAPE, and this is the difference between them. A turn stores a reference, which is the smallest thing that cannot disagree with Scripture; a reviewer needs the passage's own words in front of them to see whether it answers what the person said. So the words are added on the way out and never on the way in.";
@@ -36,8 +35,7 @@ export function g_arc_review_text(arc, passages) {
     let item2 = text_combine_multiple([value2, conversation_number]);
     list_add(lines, item2);
     let catch_up = property_get(conversation, "catch_up");
-    let b = text_empty_is(catch_up);
-    let caught_up = not(b);
+    let caught_up = text_empty_not_is(catch_up);
     if (caught_up) {
       let value3 = property_get(marks, "catch_up");
       let item3 = text_combine_multiple([value3, catch_up]);
