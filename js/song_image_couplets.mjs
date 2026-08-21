@@ -76,7 +76,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A wide shallow bowl of plain grey stone, its outside one unbroken curve running from rim to rim with its lowest point resting on the bottom edge of the window, drawn very large so that it reaches almost to both sides of the window, brimful of clear blue water spilling over the rim and running down the outside",
+        "A washing bowl of plain grey stone seen from straight above, drawn as one plain grey ring with clear blue water filling the whole circle inside it, drawn very large so that the ring reaches almost to both sides of the window and almost to the top and the bottom of it",
       symbol_ref: "Matthew 27:24",
       same_as: 0,
     },
@@ -355,8 +355,8 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A pair of brown leather sandals set down side by side and seen from straight above, each one a flat sole of one plain unmarked brown with two plain straps across it, drawn very large so that the two together reach from the bottom of the window almost to the top of it and almost to both sides of it",
-      symbol_ref: "Exodus 3:5",
+        "One steep mountain of plain grey stone standing alone, its two straight sides rising from the bottom corners of the window to one sharp peak, with one thick cloud of violet glass lying across the peak and hiding the top of it, drawn very large so that the mountain reaches almost to both sides of the window and almost to the top of it",
+      symbol_ref: "Exodus 19:18, Hebrews 12:18-21",
       same_as: 0,
     },
     {
