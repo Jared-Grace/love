@@ -11,7 +11,7 @@ import { ebible_versions_english_choices_browser } from "./ebible_versions_engli
 import { clipboard_copy } from "./clipboard_copy.mjs";
 import { log } from "./log.mjs";
 import { list_map_existing } from "./list_map_existing.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -36,7 +36,7 @@ export async function app_reply(context) {
   let choices = property_get(r, "choices");
   let languages = property_get(r, "languages");
   await ebible_versions_english_choices_browser();
-  let languages_chosen_default = app_reply_languages_chosen_default();
+  let languages_chosen_default = app_shared_bible_languages_chosen_default();
   let languages_chosen = [];
   languages_chosen_reset();
   let root = property_get(r, "root");
