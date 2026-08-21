@@ -29,6 +29,11 @@ export async function js_curry_expression_replace(
   la,
   node,
 ) {
+  "Turns a whole small function into a name for another function with one of its arguments already filled in, where all that function did was pass its own parameters on to a single call.";
+  "The shape looked for is a body of one call whose arguments are the function's own parameters, except for exactly one that is not. That one is the whole of what the function was adding. Everything else it was handing on untouched, and a function that hands its parameters on untouched is a name for the call with the odd value already filled in.";
+  "Where that value sits decides which filling is used: the first argument, the last, or a stated set of places. Three exist rather than one because filling the first is much the commonest and deserves the plainest name, and because the general one carries the places in its own name - without that, two different fillings of the same function would ask for one name and the second would find the first.";
+  "The filled version is written out only the first time it is asked for. The name is put on the list of ones known, and it is generated only if putting it there was new. That is what stops a hundred callers writing the same function a hundred times, and it is why the list is handed in from outside rather than kept here.";
+  "A wait around the call is taken off before anything is looked at. Whether the answer is waited for is a fact about whoever is calling, not about which function is being named, so leaving it on would hide every shape that is written with one.";
   expression = js_await_if_unwrap_argument(expression);
   await js_call_is_if_async(expression, on_call_is);
   async function on_call_is() {

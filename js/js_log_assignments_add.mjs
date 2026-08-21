@@ -19,6 +19,10 @@ import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { js_imports_missing_add_specified_single } from "./js_imports_missing_add_specified_single.mjs";
 export async function js_log_assignments_add(ast) {
+  "Puts a line after every declaration in a file which prints, when the function is run, that declaration as it was written and what each name in it came out as.";
+  "This is for watching a function work, not for keeping. It is run over a file by hand when what the function does has stopped matching what it reads as, and the file is put back afterwards.";
+  "The written line is filed under a name made unique against everything else in the file rather than under a fixed word. It sits in the same record as the names being printed, so a fixed word would be lost the moment the function itself declared one - and lost quietly, since a record keeps the last of two same names without complaint.";
+  "The lines are all worked out during the walk and put in afterwards rather than as each one is found. Putting a statement into the list being walked shifts everything behind it along, and the walk would then either step over a declaration or come back round to one it had already done.";
   let f_name = js_flo_name(ast);
   function lambda_declarator_name(declarator) {
     let id = property_get(declarator, "id");
