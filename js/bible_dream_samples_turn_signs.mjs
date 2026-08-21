@@ -1,3 +1,4 @@
+import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
