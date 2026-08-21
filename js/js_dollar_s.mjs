@@ -14,7 +14,7 @@ import { each } from "./each.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { js_dollar_a_generic } from "./js_dollar_a_generic.mjs";
 import { js_null } from "./js_null.mjs";
-export function js_dollar_s({ stack_1, stack_2, ast, afters }) {
+export function js_dollar_s({ stack_: stack_1, stack_2, ast, afters }) {
   let count = 1;
   js_dollar_a_generic({
     stack_1,

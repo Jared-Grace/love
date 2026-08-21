@@ -369,7 +369,7 @@ export function song_image_couplets() {
       first: "with no more sorrow",
       second: "no more pain",
       symbol:
-        "One wide straight river of blue water running from the top of the window down to the bottom of it through the middle, with one tall tree of brown wood carrying emerald green leaves standing on each bank of it",
+        "One wide river of blue water winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood carrying emerald green leaves standing on the bank at each side of the water",
       ref: "Revelation 22:1-2",
       same_as: 0,
     },
