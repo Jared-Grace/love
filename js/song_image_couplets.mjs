@@ -328,8 +328,9 @@ export function song_image_couplets() {
       verse: 4,
       first: "HE will return",
       second: "to judge the earth",
-      symbol: "A trumpet",
-      ref: "",
+      symbol:
+        "One long straight trumpet of white glass lying across the window, its narrow mouthpiece at one end and its wide flared bell at the other, drawn very large so that it reaches almost from one side of the window to the other",
+      ref: "Matthew 24:31, 1 Corinthians 15:52",
       same_as: 0,
     },
     {
@@ -337,8 +338,9 @@ export function song_image_couplets() {
       verse: 4,
       first: "we will receive",
       second: "what we have earned",
-      symbol: "Scales, upright and level",
-      ref: "",
+      symbol:
+        "One pair of balance scales of plain grey iron standing upright, a tall straight post with one level crossbeam at its top and one shallow round pan hanging by straight cords from each end of the beam, drawn very large so that it reaches almost to all four sides of the window",
+      ref: "Daniel 5:27, 2 Corinthians 5:10",
       same_as: 0,
     },
     {
@@ -346,7 +348,8 @@ export function song_image_couplets() {
       verse: 4,
       first: "we live our lives",
       second: "in godly fear",
-      symbol: "A pair of sandals set down",
+      symbol:
+        "A pair of plain brown leather sandals set down side by side on the ground and seen from straight above, each one a flat sole with two plain straps across it, drawn very large so that the two together reach almost across the whole window",
       ref: "Exodus 3:5",
       same_as: 0,
     },
@@ -355,7 +358,8 @@ export function song_image_couplets() {
       verse: 4,
       first: "HE's coming soon",
       second: "the day draws near",
-      symbol: "A fig tree branch in leaf",
+      symbol:
+        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the bottom of the window almost to the top of it",
       ref: "Matthew 24:32",
       same_as: 0,
     },
@@ -364,7 +368,8 @@ export function song_image_couplets() {
       verse: 4,
       first: "with no more sorrow",
       second: "no more pain",
-      symbol: "River of life, trees on both banks",
+      symbol:
+        "One wide straight river of blue water running from the top of the window down to the bottom of it through the middle, with one tall tree of brown wood carrying emerald green leaves standing on each bank of it",
       ref: "Revelation 22:1-2",
       same_as: 0,
     },
@@ -383,7 +388,8 @@ export function song_image_couplets() {
       verse: 4,
       first: "our GOD will reign",
       second: "in perfect LOVE",
-      symbol: "A throne with a sceptre",
+      symbol:
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty, with one straight ruby red sceptre laid across the seat, drawn very large so that the throne reaches almost to all four sides of the window",
       ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
