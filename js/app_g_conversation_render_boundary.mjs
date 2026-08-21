@@ -4,7 +4,7 @@ import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
 import { app_g_conversation_topic_for } from "./app_g_conversation_topic_for.mjs";
 import { g_boundary } from "./g_boundary.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { g_boundary_acknowledge } from "./g_boundary_acknowledge.mjs";
 import { g_something_else } from "./g_something_else.mjs";
@@ -35,7 +35,7 @@ export function app_g_conversation_render_boundary(
     let topic = app_g_conversation_topic_for(turn);
     let message = g_boundary(meet, topic);
     app_g_npc_says(npc, overlay, message);
-    let container = app_g_container_player(overlay);
+    let container = app_shared_game_container_player(overlay);
     app_g_p_text(container, "What would you like to say?");
     let text = g_boundary_acknowledge();
     function acknowledged() {

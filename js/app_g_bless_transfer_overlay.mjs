@@ -3,7 +3,7 @@ import { html_style_background_color_black } from "./html_style_background_color
 import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { bless_prayer_transfer } from "./bless_prayer_transfer.mjs";
 export function app_g_bless_transfer_overlay(overlay, on_amen) {
@@ -43,7 +43,7 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("filling the screen with white.");
   html_style_background_color_black(overlay);
   html_flex_column_stretch(overlay);
-  let container = app_g_container_player(overlay);
+  let container = app_shared_game_container_player(overlay);
   html_style_margin_y(container, "auto");
   ("The amen is not there when the door opens and arrives a moment later, timed from the");
   ("length of the words - the same rule every prayer in this game is under, met here first");
