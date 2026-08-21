@@ -10,7 +10,7 @@ export function html_body_div_page_dark() {
   "The two preview pages on the sandbox app opened with these same six lines each. Standing apart they drift: one gets a lighter ground or a wider margin than the other, and nothing says so, because two pages looking slightly different is not a fault anything can name.";
   arguments_assert(arguments, 0);
   let root = html_body_div();
-  html_style_background(root, "#0b0b0b");
+  html_style_background(root, app_shared_color_page_dark());
   html_style_set(root, "color", "#ffffff");
   html_font_set(root, "system-ui, sans-serif");
   html_style_set(root, "min-height", html_viewport_height_full());

@@ -1,3 +1,8 @@
+import { emoji_picture_frame } from "./emoji_picture_frame.mjs";
+import { emoji_home } from "./emoji_home.mjs";
+import { emoji_folder } from "./emoji_folder.mjs";
+import { emoji_martial_arts_uniform } from "./emoji_martial_arts_uniform.mjs";
+import { emoji_check } from "./emoji_check.mjs";
 import { emoji_arrow_right } from "./emoji_arrow_right.mjs";
 import { emoji_arrows_crossed } from "./emoji_arrows_crossed.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
