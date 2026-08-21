@@ -22,6 +22,9 @@ export function bible_glyph_roots_hebrew() {
   "THE ARROW CURVES BACK AND IT WILL STAND BESIDE THE ROAD CONSTANTLY. Derek already has the road, and the sentence the prophets are made of puts them together - turn from your evil way - so a reader meets both on their first page. That is a good pairing rather than a collision: the road is the noun and the arrow is the verb, and neither is readable without the other in the line they share.";
   "THE SWORD IS DRAWN AS ONE BLADE AND NOT AS TWO CROSSED, and the choice is worth a line because the crossed pair was the more obvious picture. Crossed swords say battle; chereb says a sword, and it is a sword in the hand of one man as often as it is a war. A single blade claims less than the word does and the crossed pair claims more, and of the two errors only the first is safe.";
   "THE TWO NEGATIVES ARE HERE ON PURPOSE AND ARE NOT AN OVERSTEP. Drawing grammar was settled by the second chapter, which draws the grammar words where the first does not, and lo is met more often in the Old Testament than any word seated in this table before today. A reader who cannot see the not cannot read a commandment, and the commandments are most of what law is.";
+  "THE BLESSING IS THE FIRST WORD HERE DRAWN BY TWO PICTURES INSTEAD OF ONE, and the gap is what made it possible. Every hand in the vocabulary was already a word - the joined hands are amen, the raised hands are giving thanks, the knee is a servant - so barak had nothing left to take, and a mark that a reader has already learned as another word is worse than a blank. What it is given instead is the speech and the good sign, which is what the word says: to speak good over somebody.";
+  "AND IT RUNS BOTH DIRECTIONS, which is the reason no single mark was ever going to work. God blesses man and man blesses God, in the same book with the same word, and a picture of a hand over a head says only the first. Speaking good says both without choosing, because it is the same act whichever way round the two are standing.";
+  "EACH HALF IS HONEST ON ITS OWN, and that is the test a group has to pass before it is written. The speech is a word being said and the good sign is a thing being good, so a reader who has met either one elsewhere reads this correctly on sight - and a reader who has met neither learns two words from one blessing. That test is what refused the altar as meat and fire, and what lets this through.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -637,6 +640,20 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "2896",
           glyph: "thumbs_up",
+        },
+      ],
+    },
+    {
+      root: "barak",
+      gloss: "bless, blessing",
+      words: [
+        {
+          strong: "1288",
+          glyph: "speech+thumbs_up",
+        },
+        {
+          strong: "1293",
+          glyph: "speech+thumbs_up",
         },
       ],
     },

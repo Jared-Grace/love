@@ -1,3 +1,4 @@
+import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
@@ -27,13 +28,16 @@ export async function bible_glyph_survey_sense_spread(testament_name) {
   for (let root of roots) {
     for (let word of root.words) {
       let glyph = word.glyph;
-      let known = property_exists(character_names, glyph);
-      if (not(known)) {
-        list_add(glyph_missing, {
-          root: root.root,
-          strong: word.strong,
-          glyph,
-        });
+      for (let name of bible_glyph_group_names(glyph)) {
+        let known = property_exists(character_names, name);
+        if (not(known)) {
+          list_add(glyph_missing, {
+            root: root.root,
+            strong: word.strong,
+            glyph,
+            name,
+          });
+        }
       }
       let started = property_exists(glyph_roots, glyph);
       if (not(started)) {
