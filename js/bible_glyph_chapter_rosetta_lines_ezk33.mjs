@@ -23,35 +23,35 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וְרָאָ֥ה אֶת־ הַחֶ֖רֶב בָּאָ֣ה עַל־ הָאָ֑רֶץ וְתָקַ֥ע בַּשּׁוֹפָ֖ר וְהִזְהִ֥יר אֶת־ הָעָֽם׃",
         english:
-          "and he sees - the sword coming against that land and blows the ram’s horn to warn - the people",
+          "and he sees the sword coming against that land and blows the ram’s horn to warn the people",
       },
       {
         verse_number: 4,
         original:
           "וְשָׁמַ֨ע הַשֹּׁמֵ֜עַ אֶת־ ק֤וֹל הַשּׁוֹפָר֙ וְלֹ֣א נִזְהָ֔ר וַתָּ֥בוֹא חֶ֖רֶב וַתִּקָּחֵ֑הוּ דָּמ֥וֹ בְרֹאשׁ֖וֹ יִֽהְיֶֽה׃",
         english:
-          "Then if anyone hears - the sound of the horn but fails to heed the warning comes and the sword and takes him away his blood on his own head will be",
+          "Then if anyone hears the sound of the horn but fails to heed the warning comes and the sword and takes him away his blood on his own head will be",
       },
       {
         verse_number: 5,
         original:
           "אֵת֩ ק֨וֹל הַשּׁוֹפָ֤ר שָׁמַע֙ וְלֹ֣א נִזְהָ֔ר דָּמ֖וֹ בּ֣וֹ יִֽהְיֶ֑ה וְה֥וּא נִזְהָ֖ר נַפְשׁ֥וֹ מִלֵּֽט׃",
         english:
-          "- the sound of the horn Since he heard but failed to heed the warning his blood on his own head will be If he had heeded the warning his life he would have saved",
+          "the sound of the horn Since he heard but failed to heed the warning his blood on his own head will be If he had heeded the warning his life he would have saved",
       },
       {
         verse_number: 6,
         original:
           "וְ֠הַצֹּפֶה כִּֽי־ יִרְאֶ֨ה אֶת־ הַחֶ֜רֶב בָּאָ֗ה וְלֹֽא־ תָקַ֤ע בַּשּׁוֹפָר֙ וְהָעָ֣ם לֹֽא־ נִזְהָ֔ר וַתָּב֣וֹא חֶ֔רֶב וַתִּקַּ֥ח מֵהֶ֖ם נָ֑פֶשׁ ה֚וּא בַּעֲוֺנ֣וֹ נִלְקָ֔ח וְדָמ֖וֹ מִיַּֽד־ הַצֹּפֶ֥ה אֶדְרֹֽשׁ׃ס",
         english:
-          "the watchman But if sees - the sword coming and fails to blow the horn the people - to warn comes and the sword and takes away a life then that one in his iniquity will be taken away for his blood but I will hold the watchman accountable",
+          "the watchman But if sees the sword coming and fails to blow the horn the people to warn comes and the sword and takes away a life then that one in his iniquity will be taken away for his blood but I will hold the watchman accountable",
       },
       {
         verse_number: 7,
         original:
           "וְאַתָּ֣ה בֶן־ אָדָ֔ם צֹפֶ֥ה נְתַתִּ֖יךָ לְבֵ֣ית יִשְׂרָאֵ֑ל וְשָׁמַעְתָּ֤ מִפִּי֙ דָּבָ֔ר וְהִזְהַרְתָּ֥ אֹתָ֖ם מִמֶּֽנִּי׃",
         english:
-          "As for you O son of man you a watchman I have made for the house of Israel so hear My mouth the word and give them the warning from Me  from",
+          "As for you O son of man you a watchman I have made for the house of Israel so hear My mouth the word and give them the warning from Me from",
       },
       {
         verse_number: 8,
@@ -65,14 +65,14 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וְ֠אַתָּה כִּֽי־ הִזְהַ֨רְתָּ רָשָׁ֤ע מִדַּרְכּוֹ֙ לָשׁ֣וּב מִמֶּ֔נָּה וְלֹא־ שָׁ֖ב מִדַּרְכּ֑וֹ ה֚וּא בַּעֲוֺנ֣וֹ יָמ֔וּת וְאַתָּ֖ה נַפְשְׁךָ֥ הִצַּֽלְתָּ׃ס",
         english:
-          "you But if warn the wicked [man] from his way to turn  and he does not turn from it he in his iniquity will die but you your life will have saved",
+          "you But if warn the wicked [man] from his way to turn and he does not turn from it he in his iniquity will die but you your life will have saved",
       },
       {
         verse_number: 10,
         original:
           "וְאַתָּ֣ה בֶן־ אָדָ֗ם אֱמֹר֙ אֶל־ בֵּ֣ית יִשְׂרָאֵ֔ל כֵּ֤ן אֲמַרְתֶּם֙ לֵאמֹ֔ר כִּֽי־ פְשָׁעֵ֥ינוּ וְחַטֹּאתֵ֖ינוּ עָלֵ֑ינוּ וּבָ֛ם אֲנַ֥חְנוּ נְמַקִּ֖ים וְאֵ֥יךְ נִֽחְיֶֽה׃",
         english:
-          "Now as for you son of man tell - the house of Israel that this is what [they] have said Our transgressions and our sins are heavy upon us and we are wasting away because of them How can we live",
+          "Now as for you son of man tell the house of Israel that this is what [they] have said Our transgressions and our sins are heavy upon us and we are wasting away because of them How can we live",
       },
       {
         verse_number: 11,
@@ -86,14 +86,14 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וְאַתָּ֣ה בֶן־ אָדָ֗ם אֱמֹ֤ר אֶל־ בְּנֵֽי־ עַמְּךָ֙ צִדְקַ֣ת הַצַּדִּ֗יק לֹ֤א תַצִּילֶ֙נּוּ֙ בְּי֣וֹם פִּשְׁע֔וֹ וְרִשְׁעַ֤ת הָֽרָשָׁע֙ לֹֽא־ יִכָּ֣שֶׁל בָּ֔הּ בְּי֖וֹם שׁוּב֣וֹ מֵֽרִשְׁע֑וֹ וְצַדִּ֗יק לֹ֥א יוּכַ֛ל לִֽחְי֥וֹת בָּ֖הּ בְּי֥וֹם חֲטֹאתֽוֹ׃",
         english:
-          "Therefore son of man say to your people The righteousness of the righteous man will not deliver him in the day of his transgression will the wickedness of the wicked man neither cause him to stumble  on the day he turns from his wickedness the righteous man Nor will be able to survive by his righteousness on the day he sins",
+          "Therefore son of man say to your people The righteousness of the righteous man will not deliver him in the day of his transgression will the wickedness of the wicked man neither cause him to stumble on the day he turns from his wickedness the righteous man Nor will be able to survive by his righteousness on the day he sins",
       },
       {
         verse_number: 13,
         original:
           "בְּאָמְרִ֤י לַצַּדִּיק֙ חָיֹ֣ה יִֽחְיֶ֔ה וְהֽוּא־ בָטַ֥ח עַל־ צִדְקָת֖וֹ וְעָ֣שָׂה עָ֑וֶל כָּל־ צִדְקָתוֹ לֹ֣א תִזָּכַ֔רְנָה וּבְעַוְל֥וֹ אֲשֶׁר־ עָשָׂ֖ה בּ֥וֹ יָמֽוּת׃",
         english:
-          "If I tell the righteous man that he will surely live but he then trusts in his righteousness and commits iniquity then none of his righteous works will be remembered because of the iniquity - he has committed  he will die",
+          "If I tell the righteous man that he will surely live but he then trusts in his righteousness and commits iniquity then none of his righteous works will be remembered because of the iniquity he has committed he will die",
       },
       {
         verse_number: 14,
@@ -114,7 +114,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "כָּל־ חַטָּאתוֹ אֲשֶׁ֣ר חָטָ֔א לֹ֥א תִזָּכַ֖רְנָה ל֑וֹ מִשְׁפָּ֧ט וּצְדָקָ֛ה עָשָׂ֖ה חָי֥וֹ יִֽחְיֶֽה׃",
         english:
-          "None of the sins - he has committed will be held against him what is just and right He has done he will surely live",
+          "None of the sins he has committed will be held against him what is just and right He has done he will surely live",
       },
       {
         verse_number: 17,
@@ -149,14 +149,14 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וַיְהִ֞י בִּשְׁתֵּ֧י עֶשְׂרֵ֣ה שָׁנָ֗ה בָּעֲשִׂרִ֛י בַּחֲמִשָּׁ֥ה לַחֹ֖דֶשׁ לְגָלוּתֵ֑נוּ בָּא־ אֵלַ֨י הַפָּלִ֧יט מִירוּשָׁלִַ֛ם לֵאמֹ֖ר הֻכְּתָ֥ה הָעִֽיר׃",
         english:
-          "- In the twelfth year of the tenth month on the fifth day - of our exile came to me a fugitive from Jerusalem and reported has been taken The city",
+          "In the twelfth year of the tenth month on the fifth day of our exile came to me a fugitive from Jerusalem and reported has been taken The city",
       },
       {
         verse_number: 22,
         original:
           "וְיַד־ יְהוָה֩ הָיְתָ֨ה אֵלַ֜י בָּעֶ֗רֶב לִפְנֵי֙ בּ֣וֹא הַפָּלִ֔יט וַיִּפְתַּ֣ח אֶת־ פִּ֔י עַד־ בּ֥וֹא אֵלַ֖י בַּבֹּ֑קֶר וַיִּפָּ֣תַח פִּ֔י וְלֹ֥א נֶאֱלַ֖מְתִּי עֽוֹד׃פ",
         english:
-          "the hand of the LORD was upon me Now the evening before arrived the fugitive and He opened - my mouth before the man came to me in the morning was opened So my mouth and I was no mute longer",
+          "the hand of the LORD was upon me Now the evening before arrived the fugitive and He opened my mouth before the man came to me in the morning was opened So my mouth and I was no mute longer",
       },
       {
         verse_number: 23,
@@ -168,7 +168,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "בֶּן־ אָדָ֗ם יֹ֠שְׁבֵי הֶחֳרָב֨וֹת הָאֵ֜לֶּה עַל־ אַדְמַ֤ת יִשְׂרָאֵל֙ אֹמְרִ֣ים לֵאמֹ֔ר אֶחָד֙ הָיָ֣ה אַבְרָהָ֔ם וַיִּירַ֖שׁ אֶת־ הָאָ֑רֶץ וַאֲנַ֣חְנוּ רַבִּ֔ים לָ֛נוּ נִתְּנָ֥ה הָאָ֖רֶץ לְמוֹרָשָֽׁה׃ס",
         english:
-          "Son of man those living ruins in the in the land of Israel are saying only one man was Abraham yet he possessed  the land But we are many to us has been given [surely] the land as a possession",
+          "Son of man those living ruins in the in the land of Israel are saying only one man was Abraham yet he possessed the land But we are many to us has been given [surely] the land as a possession",
       },
       {
         verse_number: 25,
@@ -182,7 +182,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "עֲמַדְתֶּ֤ם עַֽל־ חַרְבְּכֶם֙ עֲשִׂיתֶ֣ן תּוֹעֵבָ֔ה וְאִ֛ישׁ אֶת־ אֵ֥שֶׁת רֵעֵ֖הוּ טִמֵּאתֶ֑ם וְהָאָ֖רֶץ תִּירָֽשׁוּ׃ס",
         english:
-          "You have relied on your swords you have committed detestable acts and each - wife his neighbor’s of you has defiled the land Should you then possess",
+          "You have relied on your swords you have committed detestable acts and each wife his neighbor’s of you has defiled the land Should you then possess",
       },
       {
         verse_number: 27,
@@ -196,35 +196,35 @@ export function bible_glyph_chapter_rosetta_lines_ezk33() {
         original:
           "וְנָתַתִּ֤י אֶת־ הָאָ֙רֶץ֙ שְׁמָמָ֣ה וּמְשַׁמָּ֔ה וְנִשְׁבַּ֖ת גְּא֣וֹן עֻזָּ֑הּ וְשָֽׁמְמ֛וּ הָרֵ֥י יִשְׂרָאֵ֖ל מֵאֵ֥ין עוֹבֵֽר׃",
         english:
-          "I will make - the land a desolate waste will come to an end and the pride of her strength will become desolate The mountains of Israel so that no one will pass through",
+          "I will make the land a desolate waste will come to an end and the pride of her strength will become desolate The mountains of Israel so that no one will pass through",
       },
       {
         verse_number: 29,
         original:
           "וְיָדְע֖וּ כִּֽי־ אֲנִ֣י יְהוָ֑ה בְּתִתִּ֤י אֶת־ הָאָ֙רֶץ֙ שְׁמָמָ֣ה וּמְשַׁמָּ֔ה עַ֥ל כָּל־ תּוֹעֲבֹתָ֖ם אֲשֶׁ֥ר עָשֽׂוּ׃ס",
         english:
-          "Then they will know that I am the LORD when I have made - the land a desolate waste because of all the abominations - they have committed",
+          "Then they will know that I am the LORD when I have made the land a desolate waste because of all the abominations they have committed",
       },
       {
         verse_number: 30,
         original:
           "וְאַתָּ֣ה בֶן־ אָדָ֔ם בְּנֵ֣י עַמְּךָ֗ הַנִּדְבָּרִ֤ים בְּךָ֙ אֵ֣צֶל הַקִּיר֔וֹת וּבְפִתְחֵ֖י הַבָּתִּ֑ים וְדִבֶּר־ חַ֣ד אֶת־ אַחַ֗ד אִ֤ישׁ אֶת־ אָחִיו֙ לֵאמֹ֔ר בֹּֽאוּ־ נָ֣א וְשִׁמְע֔וּ מָ֣ה הַדָּבָ֔ר הַיּוֹצֵ֖א מֵאֵ֥ת יְהוָֽה׃",
         english:
-          "As for you son of man your people are talking about you near the city walls and in the doorways of their houses speaks One another each to to his brother saying Come and hear - the message that has come from the LORD",
+          "As for you son of man your people are talking about you near the city walls and in the doorways of their houses speaks One another each to to his brother saying Come and hear the message that has come from the LORD",
       },
       {
         verse_number: 31,
         original:
           "וְיָב֣וֹאוּ אֵ֠לֶיךָ כִּמְבוֹא־ עָ֞ם וְיֵשְׁב֤וּ לְפָנֶ֙יךָ֙ עַמִּ֔י וְשָֽׁמְעוּ֙ אֶת־ דְּבָרֶ֔יךָ וְאוֹתָ֖ם לֹ֣א יַֽעֲשׂ֑וּ כִּֽי־ עֲגָבִ֤ים בְּפִיהֶם֙ הֵ֣מָּה עֹשִׂ֔ים אַחֲרֵ֥י בִצְעָ֖ם לִבָּ֥ם הֹלֵֽךְ׃",
         english:
-          "come to you as usual So My people sit before you and hear - your words - but they do not put them into practice Although love with their mouths they express dishonest gain their hearts pursue",
+          "come to you as usual So My people sit before you and hear your words but they do not put them into practice Although love with their mouths they express dishonest gain their hearts pursue",
       },
       {
         verse_number: 32,
         original:
           "וְהִנְּךָ֤ לָהֶם֙ כְּשִׁ֣יר עֲגָבִ֔ים יְפֵ֥ה ק֖וֹל וּמֵטִ֣ב נַגֵּ֑ן וְשָֽׁמְעוּ֙ אֶת־ דְּבָרֶ֔יךָ וְעֹשִׂ֥ים אֵינָ֖ם אוֹתָֽם׃",
         english:
-          "Indeed, you [are] to them songs like a singer of love with a beautiful voice who skillfully plays an instrument They hear - your words put them into practice but do not -",
+          "Indeed, you [are] to them songs like a singer of love with a beautiful voice who skillfully plays an instrument They hear your words put them into practice but do not",
       },
       {
         verse_number: 33,
