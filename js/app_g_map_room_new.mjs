@@ -8,7 +8,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_g_map_room_new(parent) {
   "the open water around the map, drawn as a REPEATING BACKGROUND rather than as tiles. holds half a window of room on every side, which is what lets the player sit in the middle of the screen even standing on the outermost tile of the world.";
   ("the same room used to be real water tiles - a ring padded into the grid by ",
-    fn_name("app_g_map_buffer_pad"),
+    fn_name("app_shared_game_map_buffer_pad"),
     " - and that cost grew as the square of how far it reached, so it was always sized to ALMOST enough: a wide desktop needed about 15 tiles of ring and had 8, and the player drifted off centre near the edge. one repeating image costs the same whatever it covers, so the room is now half a viewport each way and the centring is exact at every screen size.");
   ("the padding is 50vh/50vw and the background is offset by the same, so a water square begins exactly where the grid begins and the drawn water lines up with the water tiles inside the map.");
   let room = html_div(parent);
