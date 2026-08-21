@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { properties_get } from "./properties_get.mjs";
+import { properties_get_multiple_unique } from "./properties_get_multiple_unique.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 export function qa_commit_entry_beside_moved(remembered, heads) {
@@ -21,10 +19,7 @@ export function qa_commit_entry_beside_moved(remembered, heads) {
     return r;
   }
   ("Both sides are walked, not just the recorded one, so a neighbour that has appeared since - or one that could not say where it stands this time - is named rather than passed over as agreeing.");
-  let names = properties_get(written);
-  let standing = properties_get(heads);
-  list_add_multiple(names, standing);
-  let names_unique = list_unique(names);
+  let names_unique = properties_get_multiple_unique([written, heads]);
   let moved = [];
   for (let name of names_unique) {
     let was = property_get_or_null(written, name);
