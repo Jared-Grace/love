@@ -1,3 +1,7 @@
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_dream_samples_turn_signs(samples) {
@@ -9,17 +13,22 @@ export function bible_dream_samples_turn_signs(samples) {
   let signs = [];
   list_add(signs, 0);
   let index = 1;
-  while (index < count - 1) {
-    let back_sideways = samples[index].x - samples[index - 1].x;
-    let back_up = samples[index].y - samples[index - 1].y;
-    let ahead_sideways = samples[index + 1].x - samples[index].x;
-    let ahead_up = samples[index + 1].y - samples[index].y;
-    let turn = back_sideways * ahead_up - back_up * ahead_sideways;
+  while (less_than(index, subtract(count, 1))) {
+    let back_sideways = subtract(
+      samples[index].x,
+      samples[subtract(index, 1)].x,
+    );
+    let back_up = subtract(samples[index].y, samples[subtract(index, 1)].y);
+    let ahead_sideways = subtract(samples[index + 1].x, samples[index].x);
+    let ahead_up = subtract(samples[index + 1].y, samples[index].y);
+    let left = multiply(back_sideways, ahead_up);
+    let right = multiply(back_up, ahead_sideways);
+    let turn = subtract(left, right);
     let sign = 0;
-    if (turn > 0.02) {
+    if (greater_than(turn, 0.02)) {
       sign = 1;
     }
-    if (turn < -0.02) {
+    if (less_than(turn, -0.02)) {
       sign = -1;
     }
     list_add(signs, sign);

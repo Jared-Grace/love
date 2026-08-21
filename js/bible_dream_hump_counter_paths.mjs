@@ -1,3 +1,7 @@
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
+import { less_than } from "./less_than.mjs";
+import { divide } from "./divide.mjs";
 import { bible_dream_counter_arc } from "./bible_dream_counter_arc.mjs";
 export function bible_dream_hump_counter_paths(samples, hump) {
   "Answer one bump with two smaller ones facing the other way, one off each of its ends, and hand back the two shapes to draw.";
@@ -6,18 +10,31 @@ export function bible_dream_hump_counter_paths(samples, hump) {
   "A bump whose ends have all but met gets no counters, because there is no direction along it to put them on. That is a loop closing on itself, and the honest answer to it is silence.";
   let start = samples[hump.first];
   let end = samples[hump.last];
-  let sideways = end.x - start.x;
-  let up = end.y - start.y;
-  let span = Math.sqrt(sideways * sideways + up * up);
-  if (span < 4) {
-    return [];
+  let sideways = subtract(end.x, start.x);
+  let up = subtract(end.y, start.y);
+  let span = Math.sqrt(multiply(sideways, sideways) + multiply(up, up));
+  if (less_than(span, 4)) {
+    let r = [];
+    return r;
   }
-  let along = { x: sideways / span, y: up / span };
-  let width = span * 0.55;
-  let bulge = hump.facing.reach * 0.8;
-  let before = { x: start.x - along.x * width, y: start.y - along.y * width };
-  let after = { x: end.x + along.x * width, y: end.y + along.y * width };
+  let along = {
+    x: divide(sideways, span),
+    y: divide(up, span),
+  };
+  let width = multiply(span, 0.55);
+  let bulge = multiply(hump.facing.reach, 0.8);
+  let right = multiply(along.x, width);
+  let right2 = multiply(along.y, width);
+  let before = {
+    x: subtract(start.x, right),
+    y: subtract(start.y, right2),
+  };
+  let after = {
+    x: end.x + multiply(along.x, width),
+    y: end.y + multiply(along.y, width),
+  };
   let leading = bible_dream_counter_arc(before, start, hump.facing, bulge);
   let trailing = bible_dream_counter_arc(end, after, hump.facing, bulge);
-  return [leading, trailing];
+  let r2 = [leading, trailing];
+  return r2;
 }
