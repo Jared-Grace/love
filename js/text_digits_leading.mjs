@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_empty } from "./text_split_empty.mjs";
+import { text_digits_is } from "./text_digits_is.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { not } from "./not.mjs";
 export function text_digits_leading(text) {
   "$plain text";
   "The run of digits a text begins with, as text, or nothing when it does not begin with a digit.";

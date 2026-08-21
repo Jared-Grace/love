@@ -12,7 +12,7 @@ export function bible_dream_hand_segment_draw(state, points) {
   "★ THE BRIGHTNESS IS A FADING ALONG THE PIECE AND NOT ONE NUMBER FOR THE WHOLE OF IT, WHICH IS WHAT MAKES THE COLOUR CONTINUOUS RATHER THAN MERELY FINE. A flat piece has to pick one of its two ends, so the line changed in a step at every joint - small, a hundredth of the brightness and a few thousandths of a second apart, but a step, and a run of them is a stair however shallow each one is. Running the fading from the near end's brightness to the far end's means every piece begins at exactly the brightness its neighbour ended on, so the whole sweep is one unbroken change with no value repeated and none jumped over. The squared ends are what allow it: a rounded end would paint its neighbour's beginning over again at a brightness that beginning had already left behind.";
   "The fading is written along the straight line between the two ends rather than along the curve, because that is the only path a drawing surface can be told to fade over. A piece spans a couple of units and bows by a fraction of one, so the two differ by less than the thickness of the line they describe.";
   "★ IT IS NAMED FROM WHAT IS ALREADY ON THE SURFACE AND FROM NOTHING KEPT BETWEEN CALLS. A fading has to be referred to by name, every name has to be its own, and a running total would be one more thing to keep correct across a lift, a break and a finished stroke. The stroke's place in the drawing never changes and the count of what is already in its layer only ever grows, so the two together name a piece uniquely without anything being remembered on purpose.";
-  "The thickness is four times the brightness because the two are the one setting seen twice, and it is taken from the middle of the piece because the piece is now bright at one end and less bright at the other. Thickness cannot be faded along a line the way colour can, so the honest single number for it is the one the fading passes through halfway.";
+  "The thickness is a fixed multiple of the brightness because the two are the one setting seen twice, and it is taken from the middle of the piece because the piece is now bright at one end and less bright at the other. Thickness cannot be faded along a line the way colour can, so the honest single number for it is the one the fading passes through halfway.";
   let start = points[1];
   let end = points[2];
   let marks = state.marks;
@@ -51,7 +51,8 @@ export function bible_dream_hand_segment_draw(state, points) {
   html_attribute_set(piece, "stroke-linecap", "butt");
   let both = start.strength + end.strength;
   let middle = divide(both, 2);
-  let thick = multiply(middle, 4);
+  let times = bible_dream_hand_mark_thickness();
+  let thick = multiply(middle, times);
   let value = String(thick);
   html_attribute_set(piece, "stroke-width", value);
 }

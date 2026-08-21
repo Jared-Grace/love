@@ -2,6 +2,8 @@ export function bible_dream_corridor_width() {
   "How wide the faint corridor around a stroke is drawn, in the drawing's own units.";
   "★ IT IS A FRACTION OF THE SHAPE AND NOT A NUMBER OF PIXELS, WHICH IS WHY MAKING THE PICTURE BIGGER IS A REAL IMPROVEMENT AND NOT ONLY A NICER ONE. Everything here is measured in the drawing's units, so a corridor is always the same share of a cow however large the cow is drawn. Shrinking it makes the tracing finer against the shape; drawing the shape larger makes the same corridor wider against a fingertip. Doing both at once is the only way to get a trace that is both demanding and reachable, and neither alone can.";
   "It is here rather than written where the corridor is drawn because what a trace is allowed to stray is derived from it. Two numbers, one saying how wide the corridor looks and one saying how far off the line counts as off it, can disagree - and when they do the corridor is a lie, showing room that is not there or hiding room that is.";
-  let r = 5;
+  "★ IT WAS DOUBLED, AND WIDENING THE ROOM ALLOWED IS ONLY HALF OF WHAT THAT DID. A corridor is also the thing a player aims down, and at five units it was a hairline on a picture a thousand units across - thinner than the ink that fills it once traced, so the room being offered was hidden by the line offering it. Ten units is wide enough to be seen as a lane with the ink sitting inside it and some of the lane still showing on either side, which is the picture the whole idea depends on: here is where to go, and here is how far you may be wrong.";
+  "It was widened at the same time as the distance a hand may stray and still leave a mark was cut, and the two pull opposite ways on purpose. More room to be right, less room to wander - a corridor that forgives a shaking hand is not the same thing as a picture that accepts a scrawl.";
+  let r = 10;
   return r;
 }
