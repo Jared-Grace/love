@@ -36,7 +36,7 @@ export function app_g_html_initialize(context) {
   app_g_player_style_initialize();
   let div_map_container = html_div(root);
   ("the camera is the PLAYER, so the map does not scroll by hand: overflow HIDDEN still lets the code set scrollLeft/scrollTop (unlike overflow clip), which is the only thing that ever moves this view — ",
-    fn_name("app_g_player_center"),
+    fn_name("app_shared_game_player_center"),
     " animates it back to the player after each move, and the 350ms glide is the delay you see. dragging the map away from the player used to be possible and left the player off-screen with nothing to bring them back");
   html_style_assign(div_map_container, {
     position: "relative",

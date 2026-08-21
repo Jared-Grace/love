@@ -10,7 +10,7 @@ import { app_shared_game_character_face } from "./app_shared_game_character_face
 import { app_g_day_followers_step } from "./app_g_day_followers_step.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_g_player_move_animate } from "./app_g_player_move_animate.mjs";
-import { app_g_player_center } from "./app_g_player_center.mjs";
+import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { app_g_day_followers_settle } from "./app_g_day_followers_settle.mjs";
 import { not } from "./not.mjs";
 export async function app_g_day_line_back_step(player, player_img_c, div_map) {
@@ -33,7 +33,7 @@ export async function app_g_day_line_back_step(player, player_img_c, div_map) {
   app_g_day_followers_step(g);
   object_assign(player, to);
   await app_g_player_move_animate(to, player_img_c);
-  app_g_player_center(to, player_img_c, div_map);
+  app_shared_game_player_center(to, player_img_c, div_map);
   await app_g_day_followers_settle();
   return true;
 }
