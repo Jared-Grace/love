@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { storage_function_path_json } from "./storage_function_path_json.mjs";
 export function g_arc_feedback_write_path(chapter_code) {
   "Where the notes standing against one chapter's arcs are kept - what is wrong with a line, said without saying what it should be instead.";
   "$plain chapter_code";
