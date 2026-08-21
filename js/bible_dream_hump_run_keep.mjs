@@ -1,4 +1,3 @@
-import { multiply } from "./multiply.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
