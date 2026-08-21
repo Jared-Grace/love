@@ -40,7 +40,9 @@ export function bible_dream_stroke_place(drawing, stroke) {
   html_attribute_set(ink, "fill", "none");
   let ink_color = app_shared_color_white();
   html_attribute_set(ink, "stroke", ink_color);
-  html_attribute_set(ink, "stroke-width", "3");
+  let ink_width = bible_dream_ink_width();
+  let ink_value = String(ink_width);
+  html_attribute_set(ink, "stroke-width", ink_value);
   html_attribute_set(ink, "stroke-linecap", "round");
   html_attribute_set(ink, "stroke-linejoin", "round");
   let flourish = html_element_svg(group, "g");
