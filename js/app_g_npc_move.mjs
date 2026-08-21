@@ -1,5 +1,5 @@
 import { app_g_npc_img_get } from "./app_g_npc_img_get.mjs";
-import { app_g_npc_cross_get } from "./app_g_npc_cross_get.mjs";
+import { app_shared_game_npc_cross_get } from "./app_shared_game_npc_cross_get.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_img_square_style_position_object } from "./g_img_square_style_position_object.mjs";
@@ -13,7 +13,7 @@ export function app_g_npc_move(npc, to, delay) {
   "two things are remembered about the person, their picture and their cross, and both are filed under WHO they are - so a step moves what is on the screen and nothing has to be filed again. it was not always so: while the filing was by tile, this had to find both before the move and put them back afterwards, and any other way of moving somebody left their picture behind on an empty tile";
   "the delay is how long they stand still first, which is what puts one member of the line after another instead of all of them at once. it is written after the picture is placed, because placing it writes the whole transition over again";
   let img = app_g_npc_img_get(npc);
-  let cross = app_g_npc_cross_get(npc);
+  let cross = app_shared_game_npc_cross_get(npc);
   let direction = g_direction(npc, to);
   object_assign(npc, to);
   app_shared_game_character_face(npc, img, direction);
