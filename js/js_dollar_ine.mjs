@@ -3,7 +3,7 @@ import { equal_not } from "./equal_not.mjs";
 export async function js_dollar_ine({
   remaining,
   node,
-  stack_1,
+  stack_: stack_1,
   stack_2,
   stack_3,
   ast,
