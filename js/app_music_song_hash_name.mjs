@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_replace_space_to } from "./text_replace_space_to.mjs";
 export function app_music_song_hash_name(title) {
   "$plain title";
   "The word a song is reached by in an address, made out of what the song is called - the FATHER's SON becomes the_FATHERs_SON.";
