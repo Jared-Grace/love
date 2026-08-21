@@ -1,3 +1,4 @@
+import { g_arc_review_tally_lines } from "./g_arc_review_tally_lines.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,6 +17,7 @@ export function g_arc_review_text(arc, passages) {
   "The turns are numbered STRAIGHT THROUGH the whole arc rather than restarting each conversation, because a reviewer says which turn is wrong and one number says it without also naming a conversation.";
   "An opener is printed when it CHANGES. The turns under one opener are back-to-back by the rules the arc was written under, so a heading each time it changes shows the grouping the writer chose, and repeating it every turn would bury the turns in it.";
   "The passages are handed in rather than read here, because a leader arc stands on several chapters at once and only the caller knows which ones were offered to it.";
+  "The page CLOSES WITH A TALLY of what was offered against what was used, because the last thing a reviewer can see by reading turn after turn is which passages never came up at all.";
   let marks = g_arc_review_marks();
   let lines = [];
   let names = g_arc_answer_field_names("person");
@@ -60,6 +62,8 @@ export function g_arc_review_text(arc, passages) {
     }
     list_add(lines, "");
   }
+  let tally_lines = g_arc_review_tally_lines(arc, passages);
+  list_add_multiple(lines, tally_lines);
   let r = list_join_newline(lines);
   return r;
 }
