@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { webpack_config_cache } from "./webpack_config_cache.mjs";
 import { log } from "./log.mjs";
 import { webpack_config_folder } from "./webpack_config_folder.mjs";
@@ -12,6 +13,11 @@ import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export async function webpack_config() {
   "The one settings object every bundle in this repo is built from. What differs between one build and another arrives in four values and nothing else: where to start reading, what to call what comes out, which folder to put it in, and whether that folder is one whose builds may keep what they compiled. Everything below those four is the same for the bundle a person is working on and the bundle that goes out to readers, which is why a change made here is felt everywhere at once.";
+  "The plugin that ignores a module by name is here with nothing named in it, and the biggest thing in this repo's built output is what would go there. Every page that can reach the admin half of Firebase carries the whole admin package as a piece of its own: three and a half megabytes each, seven hundred KiB of it over the wire, nine copies of it in the dev folder alone and more in the two folders beside that - and they are tracked, so each rebuild that moves a byte writes another one into the history.";
+  ("Nothing in a browser can run a line of it. It arrives because ",
+    fn_name("firebase_admin_get"),
+    " asks for the package while it runs, which is what makes a piece of its own, and the asking sits behind a service account file read off a disk - so the piece is built and shipped and committed and never once fetched. A smaller one beside it, three hundred KiB in four pages, is the code formatter's parsers, and it is there for the same reason.");
+  ("It is written down rather than fixed because naming a package here is a build decision and the size it is worth is somebody's to weigh - and because untracking what is already tracked is a separate question again, with a history behind it.");
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let filename = process_env_get(webpack_config_filename);
