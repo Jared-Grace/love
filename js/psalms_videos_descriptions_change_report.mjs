@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { psalms_videos_descriptions_live_read } from "./psalms_videos_descriptions_live_read.mjs";
+import { equal } from "./equal.mjs";
 export async function psalms_videos_descriptions_change_report() {
   "Says what running the whole thing would actually do to the channel: how many songs would be given words they do not have, how many already have the right ones, and how many carry words of somebody's own that would be written over.";
   "THE THIRD NUMBER IS THE ONLY ONE WORTH ASKING FOR. Adding words to a video that has none takes nothing away and can be undone by emptying the box again. Writing over words somebody sat down and wrote destroys them, and no run here keeps a copy. So the third number is what the decision to run this actually rests on, and it should be looked at before the run rather than found afterwards.";

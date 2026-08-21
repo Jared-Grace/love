@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_exo20 } from "./bible_glyph_chapter_exo20.mjs";
 import { bible_glyph_chapter_ezk33 } from "./bible_glyph_chapter_ezk33.mjs";
 import { bible_glyph_chapter_deu30 } from "./bible_glyph_chapter_deu30.mjs";
 import { bible_glyph_chapter_psa138 } from "./bible_glyph_chapter_psa138.mjs";
