@@ -1,7 +1,7 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_search_home_query_hash } from "./app_search_home_query_hash.mjs";
 import { app_shared_language_hash_unknown_page_shown_is } from "./app_shared_language_hash_unknown_page_shown_is.mjs";
-import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 import { not_equal_loose } from "./not_equal_loose.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { html_value_set } from "./html_value_set.mjs";
@@ -29,5 +29,5 @@ export async function app_search_home(context) {
     await search();
   }
   ("this screen clears root each time it draws, so re-add the way to reach the developer here; named from the search app so the note reads 'search app: '");
-  app_shared_contact_button(content);
+  app_shared_footer(content);
 }
