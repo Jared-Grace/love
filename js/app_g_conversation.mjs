@@ -18,7 +18,7 @@ import { app_g_button_conversation_end } from "./app_g_button_conversation_end.m
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
 import { g_response } from "./g_response.mjs";
@@ -64,7 +64,7 @@ export async function app_g_conversation(
     }
     let pray_emoji = emoji_pray();
     let pray_label = text_combine(pray_emoji, " Pray together");
-    app_g_button_green(container_believer, pray_label, pray_together);
+    app_shared_game_button_green(container_believer, pray_label, pray_together);
     app_g_button_conversation_end(overlay, overlay_close);
     return;
   }
@@ -198,7 +198,7 @@ export async function app_g_conversation(
     }
     let left = emoji_pray();
     let text2 = text_combine(left, " Pray");
-    app_g_button_green(container, text2, pray);
+    app_shared_game_button_green(container, text2, pray);
   }
   await app_g_sky_reset();
   app_g_conversation_render(

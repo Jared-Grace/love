@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_bless_arrow } from "./app_g_bless_arrow.mjs";
 import { g_directions } from "./g_directions.mjs";
 export function app_g_bless_arrows(bar, on_turn) {
@@ -28,7 +28,7 @@ export function app_g_bless_arrows(bar, on_turn) {
       on_turn(way);
     }
     let label = app_g_bless_arrow(way);
-    let button = app_g_button_green(row, label, turn);
+    let button = app_shared_game_button_green(row, label, turn);
     html_style_assign(button, {
       padding: "0.2rem 0.7rem",
       "font-size": "1.1rem",

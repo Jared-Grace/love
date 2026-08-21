@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { bless_prayer_read_ms } from "./bless_prayer_read_ms.mjs";
@@ -31,7 +31,7 @@ export function app_g_bless_amen(container, prayer, on_amen) {
   ("under the learner when one replaces the other. Reserve the room, then reveal.");
   let praying = emoji_pray();
   let label = text_combine(praying, " Amen");
-  let button = app_g_button_green(container, label, on_amen);
+  let button = app_shared_game_button_green(container, label, on_amen);
   html_visibility_hidden(button);
   function offer() {
     html_visibility_visible(button);

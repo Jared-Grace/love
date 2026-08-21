@@ -2,7 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_pray_discern } from "./app_g_pray_discern.mjs";
 import { app_g_reveal_word } from "./app_g_reveal_word.mjs";
 import { each } from "./each.mjs";
@@ -20,7 +20,7 @@ export function app_g_turn_menu(overlay, prompt, choices, discern, leave) {
   function render_choice(choice) {
     let text = property_get(choice, "label");
     let lambda = property_get(choice, "on_click");
-    let b = app_g_button_green(container, text, lambda);
+    let b = app_shared_game_button_green(container, text, lambda);
     if (property_get(choice, "correct")) {
       correct = b;
     }

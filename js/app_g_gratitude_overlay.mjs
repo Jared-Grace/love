@@ -5,7 +5,7 @@ import { html_clear } from "./html_clear.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_g_container_player } from "./app_g_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { g_thanks_gratitude } from "./g_thanks_gratitude.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
 import { list_take } from "./list_take.mjs";
@@ -46,7 +46,7 @@ export function app_g_gratitude_overlay() {
         let emoji_text = emoji_pray();
         app_g_message_overlay(emoji_text, text, color, 3500, render);
       }
-      app_g_button_green(container, label, on_pick);
+      app_shared_game_button_green(container, label, on_pick);
     }
     each(some, add_thanks);
     function done() {
@@ -59,7 +59,7 @@ export function app_g_gratitude_overlay() {
       amen_name,
       ", Amen",
     ]);
-    app_g_button_green(overlay, amen, done);
+    app_shared_game_button_green(overlay, amen, done);
   }
   render();
   return overlay;
