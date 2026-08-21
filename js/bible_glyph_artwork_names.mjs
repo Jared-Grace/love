@@ -24,6 +24,14 @@ export function bible_glyph_artwork_names() {
       asset: "Red heart",
     },
     {
+      glyph: "heart_on_fire",
+      asset: "Heart on fire",
+    },
+    {
+      glyph: "moai",
+      asset: "Moai",
+    },
+    {
       glyph: "heart_orange",
       asset: "Orange heart",
     },
