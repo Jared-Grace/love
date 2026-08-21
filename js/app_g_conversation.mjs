@@ -16,7 +16,7 @@ import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overl
 import { g_busy } from "./g_busy.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
 import { app_g_npc_says } from "./app_g_npc_says.mjs";
-import { app_g_container_player } from "./app_g_container_player.mjs";
+import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_g_p_text } from "./app_g_p_text.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
@@ -56,7 +56,7 @@ export async function app_g_conversation(
   if (christian) {
     ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
-    let container_believer = app_g_container_player(overlay);
+    let container_believer = app_shared_game_container_player(overlay);
     app_g_p_text(container_believer, "What would you like to do?");
     function pray_together() {
       let r2 = app_g_conversation_pray_together(overlay_close, pronouns);
@@ -177,7 +177,7 @@ export async function app_g_conversation(
       pending.text = null;
     }
     app_g_npc_says(npc, overlay, npc_says);
-    let container = app_g_container_player(overlay);
+    let container = app_shared_game_container_player(overlay);
     app_g_p_text(container, "What do you want to do?");
     async function pray() {
       let r6 = await app_g_conversation_pray(
