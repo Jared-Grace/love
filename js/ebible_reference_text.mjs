@@ -19,39 +19,10 @@ export async function ebible_reference_text(reference) {
   "A REFERENCE COVERING SEVERAL VERSES COMES BACK AS ONE FLOWING LINE, without the verse numbers in it. The reason for wanting the words at all is usually to put them in front of somebody who has just been given the reference, and a reader in that position is reading a sentence, not consulting a table.";
   "It is the plain-words twin of the reader the apps use, which goes through the browser's own fetching. This one goes through the same store the songs' verses come from, so anything running outside a page - a description being written, a prompt being built - can ask the same question without a page around it.";
   "NULL RATHER THAN A THROW for a reference this bible does not carry, because a list of references is a thing a person wrote by hand and one of them being wrong must not stop the other thirty being answered.";
+  "ASKING FOR SEVERAL AT ONCE IS A DIFFERENT NAME, not this one in a loop: the slow half is fetching the list of books, which is the same answer every time, so a loop around this pays it once per reference instead of once.";
   arguments_assert(arguments, 1);
   let folder = ebible_folder_english();
   let books = await ebible_version_books(folder);
-  let named = ebible_references_names(books, [reference]);
-  let book_names = property_get(named, "book_names");
-  let unnamed = list_empty_is(book_names);
-  if (unnamed) {
-    return null;
-  }
-  let chapter_verses_list = property_get(named, "chapter_verses_list");
-  let book_name = list_first(book_names);
-  let chapter_verses = list_first(chapter_verses_list);
-  let parts = ebible_reference_parts(books, book_name, chapter_verses);
-  let chapter_code = property_get(parts, "chapter_code");
-  let value = property_get(parts, "verse_start");
-  let verse_first = Number(value);
-  let value2 = property_get(parts, "verse_end");
-  let verse_last = Number(value2);
-  let verses = await ebible_verses_storage_browser(folder, chapter_code);
-  function lambda$asked(verse) {
-    let property_name = verse_number_key();
-    let value3 = property_get(verse, property_name);
-    let number = Number(value3);
-    let started = greater_than_equal(number, verse_first);
-    let ended = less_than_equal(number, verse_last);
-    let inside = and(started, ended);
-    return inside;
-  }
-  let asked = list_filter(verses, lambda$asked);
-  let none = list_empty_is(asked);
-  if (none) {
-    return null;
-  }
-  let text = list_map_property_join_space(asked, "text");
+  let text = await ebible_reference_books_text(books, reference);
   return text;
 }

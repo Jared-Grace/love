@@ -1,0 +1,173 @@
+export function bible_dream_passages() {
+  "Every dream and night vision in Scripture whose content is written down, and what each one hands somebody who has to draw it: the shapes it names, the numbers it spends words on, what happens in it that a still picture cannot hold, and the words that are spoken inside it.";
+  "★ THIS IS A MEASUREMENT AND NOT A PLAN. Nothing here is a decision about what to build. It was written by reading all nineteen passages before counting anything, because a count taken while looking at the two dreams already built would have found that those two are typical, and they are not.";
+  "★ WHAT IT MEASURES IS THAT THE MECHANIC ALREADY BUILT SERVES THE SMALLEST OF THE THREE KINDS. Nine of the nineteen are spoken and hand a drawer nothing at all - Abimelech, Solomon, all five of Joseph the carpenter's, Pilate's wife. Of the ten that give a picture, every single one moves: a ladder is still but the angels on it go up and down, a statue is still until the stone strikes it, a tree stands until it is cut down. Not one dream in Scripture is a picture that only stands there. Pharaoh's own gaunt cows eat the sleek ones and the birds eat out of the baker's basket, and the mechanic as built drops both.";
+  "So the tracing is not the wrong mechanic; it is half of one. The shapes it asks for are really there in ten passages, and in every one of them the shape is what a thing looked like BEFORE something happened to it. What is missing is the happening, and it is missing from the two dreams already drawn as much as from the eight not drawn yet.";
+  "The nine spoken dreams are the harder finding, because no amount of drawing reaches them. An angel sent to Joseph in Matthew carries a sentence and no picture whatsoever. Either those passages are not this game's, or delivering a dream sometimes means delivering words - and that is a decision, so it is not made here.";
+  "A field is left empty when the passage gives nothing of that kind, so the three kinds can be counted off the reading rather than off a word somebody typed. There is deliberately no kind field: a name for the kind would be a judgement written down once, and it would go stale the moment somebody read a passage more closely.";
+  "GEN31 is the odd one and is worth arguing about. What Jacob is shown is streaked, spotted and speckled - markings on animals whose outlines are all the same. A traced outline carries none of it, so its shapes are recorded as the markings rather than as the goats.";
+  "MAT27:19 is in the list although Pilate's wife is never told to us. It is here so that the count of dreams-with-no-picture is not quietly improved by leaving out the one whose content Scripture withholds.";
+  let passages = [
+    {
+      reference: "GEN20:3",
+      dreamer: "Abimelech",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "you are as good as dead because of the woman you have taken",
+    },
+    {
+      reference: "GEN28:12-15",
+      dreamer: "Jacob",
+      shapes: "a ladder resting on the earth with its top reaching heaven, and angels",
+      counts: [],
+      moves: "the angels are going up and down it, which is the whole of what they do",
+      spoken: "the LORD standing at the top promising the land, offspring like the dust, and to keep him wherever he goes",
+    },
+    {
+      reference: "GEN31:10-13",
+      dreamer: "Jacob",
+      shapes: "streaked, spotted and speckled markings on the mating males",
+      counts: [],
+      moves: "",
+      spoken: "the angel of God calling him by name and telling him to leave the land",
+    },
+    {
+      reference: "GEN37:6-7",
+      dreamer: "Joseph",
+      shapes: "sheaves of grain bound in a field",
+      counts: [],
+      moves: "his sheaf rises and stands upright and the others gather round and bow to it, which is the whole of what the dream says",
+      spoken: "",
+    },
+    {
+      reference: "GEN37:9",
+      dreamer: "Joseph",
+      shapes: "the sun, the moon and stars",
+      counts: [11],
+      moves: "all thirteen of them bow down to him",
+      spoken: "",
+    },
+    {
+      reference: "GEN40:9-11",
+      dreamer: "the cupbearer",
+      shapes: "a vine, its branches, its clusters, Pharaoh's cup and the dreamer's own hand",
+      counts: [3],
+      moves: "the vine buds, blossoms and ripens, and he presses the grapes into the cup and puts it in Pharaoh's hand",
+      spoken: "",
+    },
+    {
+      reference: "GEN40:16-17",
+      dreamer: "the baker",
+      shapes: "baskets of white bread on his head, all sorts of baked goods in the top one, and birds",
+      counts: [3],
+      moves: "the birds are eating out of the basket on his head and he cannot reach them",
+      spoken: "",
+    },
+    {
+      reference: "GEN41:1-7",
+      dreamer: "Pharaoh",
+      shapes: "the Nile, sleek and gaunt cows, reeds, plump and scorched heads of grain on one stalk",
+      counts: [7],
+      moves: "the gaunt cows eat the sleek ones and the thin heads swallow the plump ones, and the east wind scorches them",
+      spoken: "",
+    },
+    {
+      reference: "JDG7:13",
+      dreamer: "a man in the Midianite camp",
+      shapes: "a loaf of barley bread and a tent",
+      counts: [],
+      moves: "the loaf comes tumbling into the camp and strikes the tent so hard it overturns and collapses, which is the whole of what the dream says",
+      spoken: "",
+    },
+    {
+      reference: "1KI3:5-15",
+      dreamer: "Solomon",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "God at Gibeon saying ask what you wish, and granting a discerning heart, and riches and honour unasked",
+    },
+    {
+      reference: "DAN2:31-35",
+      dreamer: "Nebuchadnezzar",
+      shapes: "a great statue - head of gold, chest and arms of silver, belly and thighs of bronze, legs of iron, feet part iron and part clay - and a stone cut without hands",
+      counts: [5],
+      moves: "the stone strikes the feet, every metal shatters into chaff, the wind carries it away leaving no trace, and the stone becomes a mountain filling the earth",
+      spoken: "",
+    },
+    {
+      reference: "DAN4:10-17",
+      dreamer: "Nebuchadnezzar",
+      shapes: "a tree reaching the sky with beautiful leaves and abundant fruit, beasts sheltering under it, birds nesting in its branches, a watcher coming down from heaven, and a stump banded with iron and bronze",
+      counts: [],
+      moves: "the tree is cut down, its branches chopped, its leaves stripped, its fruit scattered, the beasts and birds flee, and the stump is left in the grass for seven times",
+      spoken: "the watcher calling out the decree of the holy ones, that the Most High rules the kingdom of mankind",
+    },
+    {
+      reference: "DAN7:2-14",
+      dreamer: "Daniel",
+      shapes: "winds churning a great sea, a lion with eagle's wings, a bear raised on one side with ribs in its teeth, a leopard with wings and heads, a fourth beast with iron teeth and horns, a little horn with a man's eyes and mouth, thrones, the Ancient of Days in white with hair like wool, a throne of fire on burning wheels, a river of fire, and One like the Son of Man coming with the clouds",
+      counts: [4, 3, 10],
+      moves: "the beasts come up out of the sea, the lion's wings are torn off and it is stood on two feet, the little horn comes up and uproots three of the horns, the court sits and the books are opened, the fourth beast is slain and burned, and the Son of Man is led in and given dominion",
+      spoken: "the horn speaking words of arrogance, and the bear told to get up and gorge itself",
+    },
+    {
+      reference: "MAT1:20-23",
+      dreamer: "Joseph the carpenter",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "an angel telling him not to fear to take Mary as his wife, and to call the child Jesus",
+    },
+    {
+      reference: "MAT2:12",
+      dreamer: "the Magi",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "a warning not to return to Herod",
+    },
+    {
+      reference: "MAT2:13",
+      dreamer: "Joseph the carpenter",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "an angel telling him to take the Child and His mother and flee to Egypt",
+    },
+    {
+      reference: "MAT2:19-20",
+      dreamer: "Joseph the carpenter",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "an angel telling him that those who sought the Child's life are dead, and to go back to Israel",
+    },
+    {
+      reference: "MAT2:22",
+      dreamer: "Joseph the carpenter",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "a warning that sent him to Galilee instead of Judea",
+    },
+    {
+      reference: "MAT27:19",
+      dreamer: "Pilate's wife",
+      shapes: "",
+      counts: [],
+      moves: "",
+      spoken: "",
+    },
+    {
+      reference: "ACT10:11-16",
+      dreamer: "Peter",
+      shapes: "heaven opened, a large sheet held by its four corners, and all kinds of four-footed animals, reptiles and birds inside it",
+      counts: [4, 3],
+      moves: "the sheet is let down to the earth and then taken back up into heaven",
+      spoken: "a voice telling him to kill and eat, and answering his refusal that what God has made clean is not impure - three times over",
+    },
+  ];
+  return passages;
+}
