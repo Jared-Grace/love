@@ -4,7 +4,7 @@ import { html_overlay } from "./html_overlay.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_stop_propagation } from "./html_stop_propagation.mjs";
 import { g_z } from "./g_z.mjs";
-export function app_g_overlay_container(container) {
+export function app_shared_game_overlay_container(container) {
   arguments_assert(arguments, 1);
   ("the overlay every g-family screen is drawn on, asked for by the plain box it covers rather than by a map. a map has one, so ",
     fn_name("app_g_overlay"),
