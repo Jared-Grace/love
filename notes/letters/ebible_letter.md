@@ -9,18 +9,19 @@ make the letter wrong.
 
 ---
 
-Subject: Four small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page, Berean Standard Bible (engbsb) Psalm 3
+Subject: Five small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page, Berean Standard Bible (engbsb) Psalm 3, Brenton Septuagint (eng-lxx2012, eng-uk-lxx2012) Psalm 118
 
 Hello,
 
 Thank you for eBible.org. I run a free Bible reading app that gets almost all of
 its translations from you, and it exists because you give them away.
 
-While checking every translation we carry, four came up with faults in the
+While checking every translation we carry, five came up with faults in the
 published files. The first three look like faults in the published output rather
 than in the translations. The fourth is a single wrong letter in a heading, and I
 cannot tell from here whether it came from the source text or from the publishing,
-so I have described what the file says and left that to you.
+so I have described what the file says and left that to you. The fifth is a missing
+verse marker, where the words are all present but one verse number is absent.
 
 **1. Bangwinji (bsj) — Mark, in the read-aloud edition**
 
@@ -82,9 +83,32 @@ this single one begins "A Psalms". It appears the same way on the chapter page
 `PSA003.htm` and on the whole-book page `PSA000.htm`, so the two agree with each
 other and only differ from the rest of the book.
 
+**5. Brenton Septuagint (eng-lxx2012 and eng-uk-lxx2012) — Psalm 118 is missing its verse 44 marker**
+
+In the HTML edition, Psalm 118 (Psalm 119 in the Hebrew numbering) carries verse
+markers for 1 to 43 and then 45 onward. There is no `id="V44"`.
+
+The words of verse 44 are not lost — they sit at the end of verse 43's block:
+
+```
+<span class="verse" id="V43">43&#160;</span>And take not the word of truth utterly
+out of my mouth; for I have hoped in your judgments. So shall I keep your law
+continually, for ever and ever.
+```
+
+"So shall I keep your law continually, for ever and ever." is verse 44, and the
+read-aloud edition of the same psalm agrees: it gives those as two separate lines,
+and its 176 verse lines match the psalm's 176 verses. So the two editions of the
+same chapter disagree, and the HTML one is the one a verse short.
+
+Both editions are affected, identically apart from spelling — eng-lxx2012 reads
+"judgments" and eng-uk-lxx2012 "judgements". It is the only psalm in either where
+the markers skip a number.
+
 No reply needed. We pass the affected chapters over rather than show anyone a
 chapter we cannot read, and we will pick them up on their own whenever a corrected
-download appears. The Psalm 3 heading we carry as published, since a translation is
-not ours to correct.
+download appears. That includes Psalm 118 above, so at present neither of those two
+translations shows the longest psalm in the Bible at all. The Psalm 3 heading we
+carry as published, since a translation is not ours to correct.
 
 Thank you again for the work.

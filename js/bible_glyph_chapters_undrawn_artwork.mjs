@@ -1,3 +1,5 @@
+import { text_starts_with } from "./text_starts_with.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_artwork_names_available } from "./bible_glyph_artwork_names_available.mjs";
@@ -10,7 +12,6 @@ import { null_is } from "./null_is.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_words } from "./text_words.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_chapters_undrawn_artwork(count) {
