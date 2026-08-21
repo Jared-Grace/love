@@ -8,8 +8,7 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 export function g_arc_words_said(arc) {
   "Every word a player actually reads off this person, once each occurrence, in lower case and stripped down to its letters.";
   "IT IS THE PLAYER'S HALF OF THE ARC AND NOT THE WHOLE OF IT. An arc also carries an occupation, a trouble and a summary, and none of those is ever shown while playing - the summary is written for the call that writes the next person. Counting them would put words in front of a reading check that no reader ever meets, and the check would then be answered about somebody who is not the player.";
-  "STRIPPED TO LETTERS AND LOWERED so a word is one word. A full stop riding along, or a capital because the sentence began, splits one word into three entries and every count taken over them is wrong by however often that word happened to end a sentence.";
-  "Occurrences are kept rather than deduplicated here, because how OFTEN a word is used is the whole of what a rarity count is made of, and a caller wanting the distinct ones can always drop the repeats.";
+  "STRIPPED TO LETTERS AND LOWERED so a word is one word, and that stripping is done by the shared reader rather than here, because the same normalizing has to be applied to every field the word reports read - two spellings of what counts as one word would put the same word in two entries and make each of them look rarer than it is.";
   let said = [];
   let conversations = property_get(arc, "conversations");
   for (let conversation of conversations) {
