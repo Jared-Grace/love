@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_tagalog_verses } from "./bible_glyph_chapter_tagalog_verses.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { bible_glyph_chapter_rosetta_lines } from "./bible_glyph_chapter_rosetta_lines.mjs";
@@ -9,9 +10,11 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
   "$plain chapter_code";
   "$plain traditions";
   "the code names one chapter and the traditions are lists of glyph redrawings. Both are data to read and neither runs.";
-  "One chapter as Rosetta verses: for each verse its number, the same verse in pictures, in the language it was written in, and word for word in English.";
-  "THE THREE BANDS ARE THE WHOLE TEACHING METHOD. Nobody is told what a picture means anywhere on the page. A reader who knows one of the three lines works out the other two from it, the way the Rosetta stone was read - and every reader who does that arrives at the same meanings, because the pictures are keyed to the original word and not to anybody's translation.";
-  "The pictures come first of the three on purpose. They are the thing being learned, and the two known bands are underneath as the key rather than above it as a crutch, so a reader who can already read the verse meets the pictures before the answer.";
+  "One chapter as Rosetta verses: for each verse its number, the same verse in pictures, in the language it was written in, word for word in English, and in plain Tagalog.";
+  "THE BANDS ARE THE WHOLE TEACHING METHOD. Nobody is told what a picture means anywhere on the page. A reader who knows any one of the lines works out the rest from it, the way the Rosetta stone was read - and every reader who does that arrives at the same meanings, because the pictures are keyed to the original word and not to anybody's translation.";
+  "A BAND THE READER CANNOT READ COSTS THEM NOTHING, which is why the Tagalog is shown to everybody rather than hidden behind a language setting. The page already prints Hebrew and Greek to people who read neither; a band is not a translation of the page, it is a key somebody else is holding, and the reader simply looks down the stack until they find their own. Adding a picker would make the page ask a question before it could teach anything, and the whole design is that it asks nothing.";
+  "IT IS THE TAGALOG BAND THAT MAKES THE CLAIM TESTABLE. The claim is that a stranger with no shared language can follow the marks, and while the only keys were Hebrew, Greek and English the only people who could check the answer were the people who did not need the pictures.";
+  "The pictures come first on purpose. They are the thing being learned, and every known band is underneath as a key rather than above it as a crutch, so a reader who can already read the verse meets the pictures before the answer.";
   "The verse number is what joins the bands, and the bands come from two different places - a hand-written picture chapter and the two known lines written out beside it - so a verse either of them has not reached yet simply has no row here. A half-written chapter is the normal state of this work, and it must not stop the verses that ARE written from being read.";
   "THE TWO KNOWN BANDS ARE READ, NOT BUILT. They were worked out from the interlinear once, at authoring time, and put into a committed function; asking the interlinear here instead would drag a walk over a table of a few hundred megabytes, a downloader and an unzipper into a page that only ever wanted two lines of text - and would then throw, because a browser's store starts empty.";
   "The verse number joins them rather than a place in a list, because the written-out bands hold only the verses the pictures have reached. Counting from the start of either list would silently pair one verse's pictures with another verse's words the moment a chapter was authored out of order.";
@@ -54,8 +57,10 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
     );
     let none = null_is(found);
     if (none) {
-      return "";
+      let r = "";
+      return r;
     }
-    return found.text;
+    let r2 = found.text;
+    return r2;
   }
 }
