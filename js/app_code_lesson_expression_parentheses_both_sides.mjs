@@ -1,5 +1,6 @@
 import { app_code_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_code_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_code_comparison_side_wrapped } from "./app_code_comparison_side_wrapped.mjs";
+import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_parentheses_both_sides_title_name_id } from "./app_code_lesson_expression_parentheses_both_sides_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
