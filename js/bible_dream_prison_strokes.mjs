@@ -1,3 +1,5 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export function bible_dream_prison_strokes() {
@@ -18,52 +20,66 @@ export function bible_dream_prison_strokes() {
     y: 180,
   });
   let branch_said = "and on the vine were three branches";
-  let cluster_said = "as it budded, its blossoms opened and its clusters ripened into grapes";
+  let cluster_said =
+    "as it budded, its blossoms opened and its clusters ripened into grapes";
   let branch_d = "M0,0 C24,-6 48,-16 62,-34";
   let cluster_d = "M0,0 Q-16,8 -12,24 Q-8,40 6,42 Q20,40 23,24 Q26,8 10,0 Z";
   let branches_at = [
-    { x: 122, y: 410 },
-    { x: 124, y: 330 },
-    { x: 122, y: 250 },
+    {
+      x: 122,
+      y: 410,
+    },
+    {
+      x: 124,
+      y: 330,
+    },
+    {
+      x: 122,
+      y: 250,
+    },
   ];
   function each_branch(place) {
-    list_add(strokes, {
-      symbol: "branch",
-      said: branch_said,
-      d: branch_d,
-      x: place.x,
-      y: place.y,
-    });
-    list_add(strokes, {
-      symbol: "cluster",
-      said: cluster_said,
-      d: cluster_d,
-      x: place.x + 62,
-      y: place.y - 34,
-    });
+    list_add_multiple(strokes, [
+      {
+        symbol: "branch",
+        said: branch_said,
+        d: branch_d,
+        x: place.x,
+        y: place.y,
+      },
+      {
+        symbol: "cluster",
+        said: cluster_said,
+        d: cluster_d,
+        x: place.x + 62,
+        y: subtract(place.y, 34),
+      },
+    ]);
   }
   each(branches_at, each_branch);
-  list_add(strokes, {
-    symbol: "cup",
-    said: "Pharaoh's cup was in my hand, and I took the grapes and squeezed them into his cup",
-    d: "M0,0 L7,44 Q10,58 30,58 Q50,58 53,44 L60,0 Z",
-    x: 280,
-    y: 236,
-  });
-  list_add(strokes, {
-    symbol: "hand",
-    said: "and placed the cup in his hand",
-    d: "M0,26 L36,26 L36,10 Q39,0 47,4 L64,14 L64,32 Q64,44 50,44 L8,44 Q0,44 0,26 Z",
-    x: 278,
-    y: 302,
-  });
-  list_add(strokes, {
-    symbol: "head",
-    said: "there were three baskets of white bread on my head",
-    d: "M0,0 Q-28,0 -28,30 Q-28,60 0,60 Q28,60 28,30 Q28,0 0,0 Z",
-    x: 700,
-    y: 440,
-  });
+  list_add_multiple(strokes, [
+    {
+      symbol: "cup",
+      said: "Pharaoh's cup was in my hand, and I took the grapes and squeezed them into his cup",
+      d: "M0,0 L7,44 Q10,58 30,58 Q50,58 53,44 L60,0 Z",
+      x: 280,
+      y: 236,
+    },
+    {
+      symbol: "hand",
+      said: "and placed the cup in his hand",
+      d: "M0,26 L36,26 L36,10 Q39,0 47,4 L64,14 L64,32 Q64,44 50,44 L8,44 Q0,44 0,26 Z",
+      x: 278,
+      y: 302,
+    },
+    {
+      symbol: "head",
+      said: "there were three baskets of white bread on my head",
+      d: "M0,0 Q-28,0 -28,30 Q-28,60 0,60 Q28,60 28,30 Q28,0 0,0 Z",
+      x: 700,
+      y: 440,
+    },
+  ]);
   let basket_said = "three baskets of white bread on my head";
   let basket_d = "M0,0 L12,40 L88,40 L100,0 Z";
   let baskets_at = [398, 354, 310];
@@ -77,7 +93,8 @@ export function bible_dream_prison_strokes() {
     });
   }
   each(baskets_at, each_basket);
-  let goods_said = "in the top basket were all sorts of baked goods for Pharaoh";
+  let goods_said =
+    "in the top basket were all sorts of baked goods for Pharaoh";
   let goods = [
     {
       symbol: "loaf_round",
@@ -117,8 +134,14 @@ export function bible_dream_prison_strokes() {
   let bird_said = "but the birds were eating them out of the basket on my head";
   let bird_d = "M0,16 Q12,0 24,16 Q36,0 48,16";
   let birds_at = [
-    { x: 566, y: 296 },
-    { x: 754, y: 268 },
+    {
+      x: 566,
+      y: 296,
+    },
+    {
+      x: 754,
+      y: 268,
+    },
   ];
   function each_bird(place) {
     list_add(strokes, {
