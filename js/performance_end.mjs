@@ -1,5 +1,5 @@
 import { list_reverse } from "./list_reverse.mjs";
-import { list_sort_number_property } from "./list_sort_number_property.mjs";
+import { list_sort_number_delta } from "./list_sort_number_delta.mjs";
 import { list_map_property_exists } from "./list_map_property_exists.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { object_values_map } from "./object_values_map.mjs";
@@ -16,7 +16,7 @@ export function performance_end(measurements) {
   }
   let summary = object_values_map(grouped, lambda);
   let sorted = object_to_list_names(summary, "category", "delta");
-  list_sort_number_property(sorted);
+  list_sort_number_delta(sorted);
   list_reverse(sorted);
   let r = {
     measurements,
