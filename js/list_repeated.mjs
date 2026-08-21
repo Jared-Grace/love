@@ -16,8 +16,8 @@ export function list_repeated(list) {
       return same;
     }
     let count = list_filter_size(list, same_is);
-    let repeated = greater_than(count, 1);
-    return repeated;
+    let more_than_once = greater_than(count, 1);
+    return more_than_once;
   }
   let unique = list_unique(list);
   let repeated = list_filter(unique, repeated_is);
