@@ -25,6 +25,7 @@ export function song_image_audit_picture(parent, key, kept) {
   "the number under the picture is the attempt's own number and not a fresh label, because that number is already the name of the file it came from and already the number written in the table as kept. A page that lettered them a to g would be inventing a second name for a thing that has one, and the moment somebody said try b nobody could tell which file they meant.";
   "it opens on the kept attempt rather than on the first, because the kept one is what the film shows and every other one is being offered as an alternative to it. Opening on the first would make the page argue for a picture nobody chose.";
   "the arrows stop at each end instead of wrapping round, so a couplet with one attempt shows two dead arrows rather than two that appear to do something and change nothing";
+  "keep writes the attempt now on screen into the glosses file, so the choice is made in the one place where both pictures can be seen at once. Reading a number off this page and typing it into the file afterwards is the same choice made from memory, and a misread number there is a wrong picture in the film that nothing catches.";
   ("the picture is moved with ",
     fn_name("html_src_set"),
     " and never by writing to a src property, because everything ",
@@ -50,13 +51,22 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_gap(strip, "8px");
   html_style_margin_top(strip, "8px");
   html_style_set(strip, "align-items", "center");
+  let kept_now = kept;
   function redraw() {
     let attempt = attempts[shown];
     let src2 = song_image_drawn_url(key, attempt);
     html_src_set(picture, src2);
     let of = String(attempt) + " of " + String(attempts.length);
-    let mark = equal(attempt, kept) ? " · kept" : "";
+    let mark = equal(attempt, kept_now) ? " · kept" : "";
     html_text_set(attempt_line, of + mark);
+  }
+  async function keep_click() {
+    let attempt = attempts[shown];
+    html_text_set(keep, "keeping");
+    await api_read(fn_name("song_image_kept_set"), [key, attempt]);
+    kept_now = attempt;
+    html_text_set(keep, "keep");
+    redraw();
   }
   function step(by) {
     let next = shown + by;
@@ -85,6 +95,10 @@ export function song_image_audit_picture(parent, key, kept) {
   let on = html_button(strip, "›", on_click);
   html_style_padding(on, "4px 12px");
   html_cursor_pointer(on);
+  let keep = html_button(strip, "keep", keep_click);
+  html_style_padding(keep, "4px 10px");
+  html_style_font_size(keep, "12px");
+  html_cursor_pointer(keep);
   redraw();
   return picture;
 }
