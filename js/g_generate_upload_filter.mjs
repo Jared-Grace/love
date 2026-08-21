@@ -9,6 +9,6 @@ export async function g_generate_upload_filter(fn, path_get, search) {
     if (not(i)) {
       return;
     }
-    await g_generate_upload_single(fn, path_get, file);
+    await g_generate_upload_single(path_get, file);
   }
 }
