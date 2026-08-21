@@ -98,6 +98,20 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "zelos",
+      gloss: "jealousy",
+      words: [
+        {
+          strong: "2205",
+          glyph: "heart_on_fire",
+        },
+        {
+          strong: "2206",
+          glyph: "heart_on_fire",
+        },
+      ],
+    },
+    {
       root: "iesous",
       gloss: "Jesus",
       words: [

@@ -25,6 +25,10 @@ export function bible_glyph_characters() {
   "AND IT IS WHAT MAKES THE CURSE WRITABLE, which is the second thing it bought. The blessing is the speech and the thumb up, to speak good over somebody; the curse is the speech and the thumb down, and the two are the same construction with one mark flipped. A reader who has learned either one reads the other without being taught it, which is what a mirrored pair is worth and why the thumb down was chosen over a skull or a sick face - death and sickness are things a curse may bring, not things a curse says.";
   "THE BOWING IS A DIFFERENT BODY FROM THE KNEELING AND THEY WILL STAND NEAR EACH OTHER. The knee is the servant and the bend at the waist is shachah, to bow down, which the interlinear also glosses as worship a hundred and seventy one times. Drawing worship as a building or as a folded pair of hands would say where it happens or what is said during it; the word says what the body does, and so does the picture.";
   "Single characters are preferred over joined sequences. A joined sequence such as the burning heart is several characters held together by a joiner, and a terminal that does not join them shows the parts instead, which is how a reader ends up seeing a heart and a fire where one glyph was meant.";
+  "AND THE BURNING HEART IS NOW HERE ANYWAY, WHICH IS THE RULE ABOVE BEING SPENT RATHER THAN BROKEN. A preference is a thing you pay to override, so the question was never whether a joined sequence is worse - it is - but whether this word is worth the price. Jealousy had no mark at all and stood in bare English in the verse the Ten Commandments give as God's reason for the second one, and no single character in the whole set says it: the flame alone is already God here, a green heart says the English idiom for envy rather than anything the Hebrew says, and envy and jealousy are opposite in who is in the right.";
+  "IT WAS PUT ON THE RARE WORD ON PURPOSE AND THE COMMON ONE WAS LEFT ALONE. The other way round was offered - the burning heart for God and the plain flame for jealousy - and it reads just as well, because the burning heart CONTAINS the flame either way, so a jealous God draws as the fire inside the love whichever of them is which. What decided it was exposure: the fragile mark breaks wherever a font is old, so it belongs on the word said forty times and not on the word said nineteen hundred times. A preference that costs little is worth overriding once and never worth overriding at scale.";
+  "THE CARVED STONE FIGURE IS HERE UNSEATED, AND THE WORD IT WAS FETCHED FOR IS THE ONE IT MUST NOT BE SPENT ON. It was brought in to split elohim - God against gods - because the interlinear does write that difference down, ninety eight lowercase plurals against some nineteen hundred capitals, and because a verse names its own glyph and so could carry a split a table keyed by number never can. Two chapters had already refused it in their own notes and their argument is better. Exodus says you shall have no other elohim before Me and Deuteronomy warns against bowing to them, and in both the forbidden thing is drawn with the SAME flame as the LORD, four words apart in one verse. That is not a mark being sloppy, it is the mark teaching the reader that Hebrew has one word for both - which is a fact about the language no translation on the shelf hands over, and which a second picture would hide the moment it was introduced.";
+  "SO IT WAITS FOR GILLULIM AND FOR THE WORDS THAT REALLY MEAN A CARVED THING, which are different Hebrew words and not a sense of this one. A picture kept clean is worth more than a picture spent early - the star was held back from the stars of the sky for exactly this reason and then carried a whole psalm - and the general rule underneath both is that a split by referent is only honest where the two senses are genuinely two, never where a language has deliberately made them one.";
   let characters = [
     {
       name: "cross",
@@ -41,6 +45,14 @@ export function bible_glyph_characters() {
     {
       name: "heart_red",
       character: "❤️",
+    },
+    {
+      name: "heart_on_fire",
+      character: "❤️‍🔥",
+    },
+    {
+      name: "moai",
+      character: "🗿",
     },
     {
       name: "heart_orange",
