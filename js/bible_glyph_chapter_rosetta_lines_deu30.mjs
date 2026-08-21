@@ -11,7 +11,7 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "וְהָיָה֩ כִֽי־ יָבֹ֨אוּ עָלֶ֜יךָ כָּל־ הַדְּבָרִ֣ים הָאֵ֗לֶּה הַבְּרָכָה֙ וְהַקְּלָלָ֔ה אֲשֶׁ֥ר נָתַ֖תִּי לְפָנֶ֑יךָ וַהֲשֵׁבֹתָ֙ אֶל־ לְבָבֶ֔ךָ בְּכָל־ הַגּוֹיִ֔ם אֲשֶׁ֧ר הִדִּיחֲךָ֛ יְהוָ֥ה אֱלֹהֶ֖יךָ שָֽׁמָּה׃",
         english:
-          "When come upon you all things these the blessings and curses I have set before you and you call [them] to mind in all the nations to which has banished you the LORD your God",
+          "When come upon you all things these the blessings and curses I have set before you and you call them to mind in all the nations to which has banished you the LORD your God",
       },
       {
         verse_number: 2,
@@ -25,7 +25,7 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "וְשָׁ֨ב יְהוָ֧ה אֱלֹהֶ֛יךָ אֶת־ שְׁבוּתְךָ֖ וְרִחֲמֶ֑ךָ וְשָׁ֗ב וְקִבֶּצְךָ֙ מִכָּל־ הָ֣עַמִּ֔ים אֲשֶׁ֧ר הֱפִֽיצְךָ֛ יְהוָ֥ה אֱלֹהֶ֖יךָ שָֽׁמָּה׃",
         english:
-          "will restore then [He] you from captivity and have compassion on you and gather you from all the nations to which has scattered you the LORD your God",
+          "will restore then He you from captivity and have compassion on you and gather you from all the nations to which has scattered you the LORD your God",
       },
       {
         verse_number: 4,
@@ -67,14 +67,14 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "וְהוֹתִֽירְךָ֩ יְהוָ֨ה אֱלֹהֶ֜יךָ בְּכֹ֣ל׀ מַעֲשֵׂ֣ה יָדֶ֗ךָ בִּפְרִ֨י בִטְנְךָ֜ וּבִפְרִ֧י בְהֶמְתְּךָ֛ וּבִפְרִ֥י אַדְמָתְךָ֖ לְטוֹבָ֑ה כִּ֣י׀ יָשׁ֣וּב יְהוָ֗ה לָשׂ֤וּשׂ עָלֶ֙יךָ֙ לְט֔וֹב כַּאֲשֶׁר־ שָׂ֖שׂ עַל־ אֲבֹתֶֽיךָ׃",
         english:
-          "will make you abound So the LORD your God in all the work of your hands [and] in the fruit of your womb the offspring of your livestock and the produce of your land Indeed, will again the LORD delight in your prosperity as He delighted in that of your fathers",
+          "will make you abound So the LORD your God in all the work of your hands and in the fruit of your womb the offspring of your livestock and the produce of your land Indeed, will again the LORD delight in your prosperity as He delighted in that of your fathers",
       },
       {
         verse_number: 10,
         original:
           "כִּ֣י תִשְׁמַ֗ע בְּקוֹל֙ יְהוָ֣ה אֱלֹהֶ֔יךָ לִשְׁמֹ֤ר מִצְוֺתָיו֙ וְחֻקֹּתָ֔יו הַכְּתוּבָ֕ה בְּסֵ֥פֶר הַתּוֹרָ֖ה הַזֶּ֑ה כִּ֤י תָשׁוּב֙ אֶל־ יְהוָ֣ה אֱלֹהֶ֔יךָ בְּכָל־ לְבָבְךָ֖ וּבְכָל־ נַפְשֶֽׁךָ׃פ",
         english:
-          "if you obey the LORD your God by keeping His commandments and statutes that are written Book of the Law in this [and] if you turn to Him with all your heart and with all your soul",
+          "if you obey the LORD your God by keeping His commandments and statutes that are written Book of the Law in this and if you turn to Him with all your heart and with all your soul",
       },
       {
         verse_number: 11,
@@ -102,7 +102,7 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "כִּֽי־ קָר֥וֹב אֵלֶ֛יךָ הַדָּבָ֖ר מְאֹ֑ד בְּפִ֥יךָ וּבִֽלְבָבְךָ֖ לַעֲשֹׂתֽוֹ׃ס",
         english:
-          "But near you the word [is] very [it is] in your mouth and in your heart so that you may obey it",
+          "But near you the word is very it is in your mouth and in your heart so that you may obey it",
       },
       {
         verse_number: 15,
@@ -130,7 +130,7 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "הִגַּ֤דְתִּי לָכֶם֙ הַיּ֔וֹם כִּ֥י אָבֹ֖ד תֹּאבֵד֑וּן לֹא־ תַאֲרִיכֻ֤ן יָמִים֙ עַל־ הָ֣אֲדָמָ֔ה אֲשֶׁ֨ר אַתָּ֤ה עֹבֵר֙ אֶת־ הַיַּרְדֵּ֔ן לָבֹ֥א שָׁ֖מָּה לְרִשְׁתָּֽהּ׃",
         english:
-          "I declare to you today that you will surely perish you shall not prolong [your] days in the land that you are crossing the Jordan to possess",
+          "I declare to you today that you will surely perish you shall not prolong your days in the land that you are crossing the Jordan to possess",
       },
       {
         verse_number: 19,
@@ -144,7 +144,7 @@ export function bible_glyph_chapter_rosetta_lines_deu30() {
         original:
           "לְאַֽהֲבָה֙ אֶת־ יְהוָ֣ה אֱלֹהֶ֔יךָ לִשְׁמֹ֥עַ בְּקֹל֖וֹ וּלְדָבְקָה־ ב֑וֹ כִּ֣י ה֤וּא חַיֶּ֙יךָ֙ וְאֹ֣רֶךְ יָמֶ֔יךָ לָשֶׁ֣בֶת עַל־ הָאֲדָמָ֗ה אֲשֶׁר֩ נִשְׁבַּ֨ע יְהוָ֧ה לַאֲבֹתֶ֛יךָ לְאַבְרָהָ֛ם לְיִצְחָ֥ק וּֽלְיַעֲקֹ֖ב לָתֵ֥ת לָהֶֽם׃פ",
         english:
-          "and that you may love the LORD your God obey Him and hold fast to Him For He [is] your life and He will prolong your life in the land that swore the LORD to your fathers to Abraham Isaac and Jacob to give",
+          "and that you may love the LORD your God obey Him and hold fast to Him For He is your life and He will prolong your life in the land that swore the LORD to your fathers to Abraham Isaac and Jacob to give",
       },
     ],
   };
