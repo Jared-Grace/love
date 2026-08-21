@@ -1,6 +1,5 @@
+import { app_replace_rule_sets_fns_rules_used_rows_write } from "./app_replace_rule_sets_fns_rules_used_rows_write.mjs";
 import { property_js_object_expression_properties } from "./property_js_object_expression_properties.mjs";
-import { js_flo_body_empty_return } from "./js_flo_body_empty_return.mjs";
-import { function_transform_exists_ensure } from "./function_transform_exists_ensure.mjs";
 import { object_adder_async } from "./object_adder_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { functions_asts_list } from "./functions_asts_list.mjs";
@@ -20,6 +19,9 @@ import { property_get } from "./property_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
   "Works out which of a rule set rules each of its goals actually leant on, and writes the answer back into a function of its own so nothing has to work it out again.";
+  ("It hands the answer to ",
+    fn_name("app_replace_rule_sets_fns_rules_used_rows_write"),
+    " rather than laying the file down itself, so that the one other thing that writes this file - the re-render that reshapes it from what it already reads back as - cannot lay it down differently.");
   async function lambda3(oad) {
     async function lambda(a) {
       let f_name = property_get(a, "name");
@@ -54,11 +56,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     await list_map_unordered_async(asts, r);
   }
   let result = await object_adder_async(lambda3);
-  let e = js_object_to_expression(result);
-  function lambda4(ast) {
-    js_flo_body_empty_return(ast, e);
-  }
-  let f_name2 = fn_name("app_replace_rule_sets_fns_rules_used");
-  await function_transform_exists_ensure(f_name2, lambda4);
+  await app_replace_rule_sets_fns_rules_used_rows_write(result);
   return result;
 }
