@@ -85,6 +85,24 @@ export async function g_arc_words_uncommon() {
   }
   let counts = list_tally(said);
   let known_words = await words_early_reader();
+  let carried = [];
+  let carried_seen = {};
+  for (let record of carried_words) {
+    let carried_word = property_get(record, "word");
+    let ordinary = word_early_reader_known_is(carried_word, known_words);
+    let unusual = not(ordinary);
+    if (unusual) {
+      let carried_chapter = property_get(record, "chapter_code");
+      let carried_index = property_get(record, "index");
+      let key = list_join_space([carried_chapter, carried_index, carried_word]);
+      let met = property_or_null(carried_seen, key);
+      let new_here = equal(met, null);
+      if (new_here) {
+        carried_seen[key] = true;
+        list_add(carried, record);
+      }
+    }
+  }
   let once = [];
   let own = [];
   let words = 0;
@@ -132,6 +150,7 @@ export async function g_arc_words_uncommon() {
     known,
     once,
     own,
+    carried,
   };
   return r;
 }
