@@ -697,7 +697,7 @@ export function bible_glyph_chapter_ezk33() {
           "But",
           "if",
           "a",
-          "wicked",
+          "$thumbs_down",
           "one",
           "$turn_back",
           "from",
