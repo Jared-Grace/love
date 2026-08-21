@@ -4,7 +4,7 @@ import { app_g_prayer_menu_overlay } from "./app_g_prayer_menu_overlay.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { g_thanks_gratitude } from "./g_thanks_gratitude.mjs";
 import { list_shuffle } from "./list_shuffle.mjs";
@@ -32,7 +32,7 @@ export function app_g_gratitude_overlay() {
     html_clear(overlay);
     let container = app_shared_game_container_player(overlay);
     let prompt = g_prayer_prompt();
-    app_g_p_text(container, prompt);
+    app_shared_game_p_text(container, prompt);
     let candidates = list_filter_includes_not(all, "text", previous_texts);
     list_shuffle(candidates);
     let some = list_take(candidates, 4);

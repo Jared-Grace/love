@@ -4,7 +4,7 @@ import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
 import { html_style_margin_y } from "./html_style_margin_y.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { bless_prayer_transfer } from "./bless_prayer_transfer.mjs";
 export function app_g_bless_transfer_overlay(overlay, on_amen) {
   arguments_assert(arguments, 2);
@@ -55,6 +55,6 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("real people only because this one was said, so it is the single worst prayer to let a");
   ("player click past without reading.");
   let prayer = bless_prayer_transfer();
-  app_g_p_text(container, prayer);
+  app_shared_game_p_text(container, prayer);
   app_g_bless_amen(container, prayer, on_amen);
 }
