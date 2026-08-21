@@ -32,9 +32,11 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   }
   let lowered_names = [];
   for (let name of names) {
+    let lowered = text_lower_to(name);
     list_add(lowered_names, {
       name,
-      lowered: text_lower_to(name),
+      lowered,
+      words: text_words(lowered),
     });
   }
   let weighed = [];
