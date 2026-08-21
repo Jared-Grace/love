@@ -1,3 +1,4 @@
+import { ebible_letter_unaccounted_gate_run } from "./ebible_letter_unaccounted_gate_run.mjs";
 import { bible_glyph_chapters_language_gate_run } from "./bible_glyph_chapters_language_gate_run.mjs";
 import { words_early_reader_gate_run } from "./words_early_reader_gate_run.mjs";
 import { g_arc_prompt_chapter_role_gate_run } from "./g_arc_prompt_chapter_role_gate_run.mjs";
