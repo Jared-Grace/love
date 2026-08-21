@@ -9,8 +9,10 @@ export function bible_dream_pharaoh_strokes() {
     "M12,44 L12,24 Q12,16 22,16 L64,16 Q74,16 74,24 L74,28 L88,20 L88,36 L74,30 L74,44 L66,44 L66,56 L60,56 L60,44 L48,44 L48,56 L42,56 L42,44 L30,44 L30,56 L24,56 L24,44 L18,44 L18,56 L12,56 Z";
   let cow_gaunt =
     "M12,42 L12,30 Q12,26 20,26 L42,32 L64,26 Q72,26 72,30 L72,32 L86,26 L86,38 L72,34 L72,42 L66,42 L66,56 L63,56 L63,42 L48,42 L48,56 L45,56 L45,42 L30,42 L30,56 L27,56 L27,42 L17,42 L17,56 L14,56 Z";
-  let grain_plump = "M24,58 L24,26 Q10,20 15,9 Q24,3 24,15 Q24,3 33,9 Q38,20 24,26";
-  let grain_thin = "M24,58 L24,30 Q17,25 19,15 Q24,11 24,19 Q24,11 29,15 Q31,25 24,30";
+  let grain_plump =
+    "M24,58 L24,26 Q10,20 15,9 Q24,3 24,15 Q24,3 33,9 Q38,20 24,26";
+  let grain_thin =
+    "M24,58 L24,30 Q17,25 19,15 Q24,11 24,19 Q24,11 29,15 Q31,25 24,30";
   let strokes = [
     {
       symbol: "nile",
@@ -67,7 +69,7 @@ export function bible_dream_pharaoh_strokes() {
   ];
   let counts = [0, 1, 2, 3, 4, 5, 6];
   function each_seven(seven) {
-    function each_index(index) {
+    function each_count(index) {
       list_add(strokes, {
         symbol: seven.symbol,
         said: seven.said,
@@ -76,7 +78,7 @@ export function bible_dream_pharaoh_strokes() {
         y: seven.y,
       });
     }
-    each(counts, each_index);
+    each(counts, each_count);
   }
   each(sevens, each_seven);
   let scene = {
