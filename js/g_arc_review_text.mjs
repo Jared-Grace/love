@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { g_arc_review_tally_lines } from "./g_arc_review_tally_lines.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
@@ -9,7 +10,6 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { g_arc_review_turn_lines } from "./g_arc_review_turn_lines.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function g_arc_review_text(arc, passages) {
   "A whole written arc laid out to be read by a person, with the Scripture of each answer printed under the line it answers.";
@@ -48,8 +48,7 @@ export function g_arc_review_text(arc, passages) {
     let turns = property_get(conversation, "turns");
     for (let turn of turns) {
       let opener = property_get(turn, "opener");
-      let b2 = equal(opener, opener_shown);
-      let changed = not(b2);
+      let changed = equal_not(opener, opener_shown);
       if (changed) {
         let value4 = property_get(marks, "opener");
         let item4 = text_combine_multiple([value4, opener]);
