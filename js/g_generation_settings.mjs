@@ -36,6 +36,8 @@ export function g_generation_settings() {
   ("Below the target a plant may fall two, so a settled plant is eleven to thirteen rather than always thirteen. A church that lost people is as real as one that grew.");
   ("Eleven areas is the escalation ladder's own length - a rung apiece - and it is a CEILING rather than a count. A selection that only makes three plants climbs three rungs, because one plant cannot be a whole escalation; a selection twice the size climbs the same eleven more slowly. What it is NOT is the number of books, which is the player's choice and says nothing about pacing.");
   ("The pool multiple is how many npcs are written for every one a single playthrough meets. One means every game meets everybody in a different order and grouping; two means a game meets half of them and a second game is genuinely new people.");
+  ("READING AGE is the age the words have to clear, and it is not the age the game is for. Somebody younger than this has been watched playing on a phone, so the floor is low on purpose - and a word a six-year-old knows is not a poorer word for anybody older, which is why there is one number here and not one per audience.");
+  ("IT REACHES THE DIALOGUE AND CANNOT REACH THE SCRIPTURE. Measured over the seventy turns written for 1 John 1, the dialogue was already plain and the eight hardest words in it were still easier than proclaim, fellowship, testified and unrighteousness, which come from the passages. So this number stops the writing being an extra barrier and does not by itself put the chapter within reach - what does that is a translation the player can read, or a word they can tap.");
   let day_matches = g_day_matches();
   let day_lines = g_day_lines();
   let r = {
@@ -67,6 +69,7 @@ export function g_generation_settings() {
     question_matches_percent: 25,
     arc_length_swaps: 50,
     npcs_available_minimum: 4,
+    reading_age: 6,
   };
   return r;
 }
