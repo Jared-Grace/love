@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets_verse } from "./song_image_couplets_verse.mjs";
+import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { equal } from "./equal.mjs";
 export function song_image_couplets_glossed(verse_number) {
   "$plain verse_number";
   "The couplets of a verse of the hymn that somebody has written references for, each as the words it sings and the references behind them - or the whole hymn's when the number is 0.";
@@ -27,7 +35,10 @@ export function song_image_couplets_glossed(verse_number) {
     }
     let halves = [couplet.first, couplet.second];
     let words = list_join_space(halves);
-    list_add(glossed, { words: words, references: references });
+    list_add(glossed, {
+      words: words,
+      references: references,
+    });
   }
   return glossed;
 }
