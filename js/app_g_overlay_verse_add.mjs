@@ -1,5 +1,5 @@
 import { app_g_overlay_fonts } from "./app_g_overlay_fonts.mjs";
-import { app_g_scripture_verse } from "./app_g_scripture_verse.mjs";
+import { app_shared_scripture_verse } from "./app_shared_scripture_verse.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -16,7 +16,7 @@ export function app_g_overlay_verse_add(card, drawn) {
     "max-width": "80vw",
     "text-align": "center",
   });
-  app_g_scripture_verse(verse);
+  app_shared_scripture_verse(verse);
   let text_reference = property_get(drawn, "reference");
   let reference = html_p_text(card, text_reference);
   html_style_assign(reference, {

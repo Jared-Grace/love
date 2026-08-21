@@ -2,7 +2,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 import { app_shared_color_gold_text_light } from "./app_shared_color_gold_text_light.mjs";
-export function app_g_scripture_verse(element) {
+export function app_shared_scripture_verse(element) {
   "style an element as a Scripture verse: softly glowing LIGHTER-GOLD text (gold = God's word; the lighter shade keeps the verse distinct from God's-leading PROSE, which uses the richer base gold) — the ref-less DRY piece, shared by the passage-button (gospel-share) verse, the prayer-wait verse, and the dove (HS-warning) verse";
   let color = app_shared_color_gold_text_light();
   html_font_color_set(element, color);
