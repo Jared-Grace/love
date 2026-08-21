@@ -1,7 +1,8 @@
+import { property_get_curried_right } from "./property_get_curried_right.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_sort_number_property } from "./list_sort_number_property.mjs";
 import { youtube_video_address } from "./youtube_video_address.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
@@ -25,7 +26,8 @@ export function song_image_couplets_videos_elsewhere(hymn_videos) {
     let nothing = "";
     return nothing;
   }
-  let ordered = list_sort_number_property(verse_videos, "verse");
+  let verse_of = property_get_curried_right("verse");
+  let ordered = list_sort_number_mapper(verse_videos, verse_of);
   function lambda$said(hymn_video) {
     let address = youtube_video_address(hymn_video.video_id);
     let said = list_join_newline([hymn_video.title, address]);
