@@ -1,5 +1,5 @@
 import { js_bag_pass_through_read } from "./js_bag_pass_through_read.mjs";
-import { js_bag_pass_through_decl } from "./js_bag_pass_through_decl.mjs";
+import { js_declarations_call_producers } from "./js_declarations_call_producers.mjs";
 import { js_bag_pass_through_entries } from "./js_bag_pass_through_entries.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
@@ -15,7 +15,7 @@ export function js_bag_pass_through(ast) {
   ("Those names are the names the entries are filed under, and not the names standing in them. The two are almost always the same word, which is why writing the wrong one of them went unnoticed: the shorthand every record here is written in says the word once and means it twice. Where an entry does file one name under another, only the filed name is the record's, and reading the other one made an entry that carries nothing look like one that carries a name straight through.");
   let decls = js_declarations_single_rows(ast);
   let reads = js_property_get_rows(ast);
-  let producers = js_bag_pass_through_decl(decls);
+  let producers = js_declarations_call_producers(decls);
   let unpacked = [];
   js_bag_pass_through_read(reads, decls, unpacked);
   let found = [];
