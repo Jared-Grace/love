@@ -1,5 +1,5 @@
 import { app_shared_game_map_generate_waters } from "./app_shared_game_map_generate_waters.mjs";
-import { app_g_map_pad } from "./app_g_map_pad.mjs";
+import { app_shared_game_map_pad } from "./app_shared_game_map_pad.mjs";
 import { list_random_item_count_nested } from "./list_random_item_count_nested.mjs";
 import { g_tiles_grasses_choices_weighted } from "./g_tiles_grasses_choices_weighted.mjs";
 export function app_shared_game_map_generate() {
@@ -12,6 +12,6 @@ export function app_shared_game_map_generate() {
     column_count,
   );
   app_shared_game_map_generate_waters(rows);
-  let padded = app_g_map_pad(rows);
+  let padded = app_shared_game_map_pad(rows);
   return padded;
 }
