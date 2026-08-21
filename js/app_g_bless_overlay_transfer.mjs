@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { app_g_player_center } from "./app_g_player_center.mjs";
 import { app_g_bless_people_walk } from "./app_g_bless_people_walk.mjs";
-import { app_g_overlay_container } from "./app_g_overlay_container.mjs";
+import { app_shared_game_overlay_container } from "./app_shared_game_overlay_container.mjs";
 export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   arguments_assert(arguments, 3);
   let player = property_get(r, "player");
@@ -19,6 +19,6 @@ export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   ("look at it");
   app_g_bless_people_walk(world, render);
   ("the world is built and drawn behind this before it is covered, so the first thing after the amen is a world already standing rather than a wait");
-  let transfer = app_g_overlay_container(container_map);
+  let transfer = app_shared_game_overlay_container(container_map);
   return transfer;
 }
