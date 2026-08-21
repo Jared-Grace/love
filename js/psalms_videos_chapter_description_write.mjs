@@ -17,8 +17,9 @@ export async function psalms_videos_chapter_description_write(
   "IT IS TOLD WHICH SONGS RATHER THAN FINDING THEM. Every other song on the channel says its passage in its own name, and is answered from that name alone; these are the ones whose names say a hymn, or a person, or nothing at all. Which psalm such a song is of cannot be read off anything - it is a judgement about what is being sung, made by somebody who has listened, and the whole of this command is carrying that judgement out.";
   "The whole psalm goes under each of them, first verse to last, because a name that does not say a verse does not say which verses either. A song of a psalm in parts is still of that psalm, and the whole of it under each part is true of every part, where a guess at which part sings which verse would be true of at most one.";
   "A song already carrying these words is left alone and counted apart. Otherwise running this twice would spend the day's allowance rewriting every song to the value it already held, and the report would not tell that apart from having mended them all.";
+  "Naming no songs at all means no songs, and comes back with the words it would have written and nothing changed. That is the way to look at the words before letting them out - and it is what the empty run has to mean anyway, since the alternative was reading it as one song whose name is nothing and failing three calls deep on a name youtube could not have.";
   arguments_assert(arguments, 2);
-  let video_ids = text_split_comma(video_ids_comma);
+  let video_ids = text_split_comma_or_empty(video_ids_comma);
   let chapter = Number(chapter_number);
   let verse_last_by_chapter = await psalms_chapters_verse_last([chapter]);
   let verse_last = property_get(verse_last_by_chapter, chapter);
