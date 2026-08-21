@@ -1,24 +1,18 @@
-import { arguments_assert } from "./arguments_assert.mjs";
-import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
-import { html_button_copy_text } from "./html_button_copy_text.mjs";
-import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
-import { html_br_2 } from "./html_br_2.mjs";
 export function app_search_results_top_buttons(
   div_results,
   expand_all_lambda,
   collapse_all_lambda,
   copy_all_lambda,
 ) {
+  "The row above a page of results: open everything, shut everything, and take the lot away as text.";
+  "The first two are next door and shared, because a song's page hides its passages behind clicks for the same reason results hide theirs, and a reader who has learnt the pair on one page should not have to learn them again on the other.";
+  "Copying stays here, because it is the results that are worth carrying off whole - a song's words are already the page.";
   arguments_assert(arguments, 4);
-  let down = emoji_triangle_down();
-  let expand_all_text = text_combine(down, " Expand all");
-  app_shared_button_wide(div_results, expand_all_text, expand_all_lambda);
-  let up = emoji_triangle_up();
-  let collapse_all_text = text_combine(up, " Collapse all");
-  app_shared_button_wide(div_results, collapse_all_text, collapse_all_lambda);
+  app_shared_buttons_expand_collapse(
+    div_results,
+    expand_all_lambda,
+    collapse_all_lambda,
+  );
   let left = html_button_copy_text();
   app_shared_button_wide_text_combine(
     div_results,

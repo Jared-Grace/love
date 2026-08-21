@@ -4,7 +4,7 @@ import { app_search_results_division_card } from "./app_search_results_division_
 import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
 import { app_search_results_chapter_card } from "./app_search_results_chapter_card.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_search_results_collapse_setters_set } from "./app_search_results_collapse_setters_set.mjs";
+import { app_shared_collapse_setters_set } from "./app_shared_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
@@ -23,15 +23,15 @@ export function app_search_results_render(
   async function expand_all_lambda() {
     "open the book cards first: on a page long enough to scroll they start collapsed, so filling in the verses inside them changes nothing the reader can see, and the button reads as broken. opening them costs no waiting, so it lands before the verse texts are fetched and the reader watches them arrive";
     "the testament cards open ahead of the books inside them, since a reader who folded one away would otherwise press this and watch nothing happen there";
-    app_search_results_collapse_setters_set(testament_collapse_setters, false);
-    app_search_results_collapse_setters_set(book_collapse_setters, false);
+    app_shared_collapse_setters_set(testament_collapse_setters, false);
+    app_shared_collapse_setters_set(book_collapse_setters, false);
     let squashed = await app_search_results_collect_all_texts(button_list);
     return squashed;
   }
   function collapse_all_lambda() {
     "shut every book card, the way back from having opened them all. it stays out of the reader's way rather than replacing the opening button, because a reader can also open and shut single books, so neither action is ever the only sensible one. nothing is thrown away - the verse texts already fetched are still there when a card opens again";
     "the testament cards stay as the reader left them: shutting those too would hide the very overview of books this button exists to come back to";
-    app_search_results_collapse_setters_set(book_collapse_setters, true);
+    app_shared_collapse_setters_set(book_collapse_setters, true);
   }
   async function copy_all_lambda() {
     "copying is opening and then taking a copy of what was opened: the reader is left looking at the very verses now on their clipboard, so they can see what they have got rather than trust that something happened. It is the opening button's own work, called rather than written again, so the two can never come to open different things";

@@ -1,3 +1,4 @@
+import { words_game_taught_glosses_gate_run } from "./words_game_taught_glosses_gate_run.mjs";
 import { function_names_app_grouped_cases_gate_run } from "./function_names_app_grouped_cases_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_marks_gate_run } from "./bible_glyph_chapters_rosetta_lines_marks_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_notation_gate_run } from "./bible_glyph_chapters_rosetta_lines_notation_gate_run.mjs";
@@ -471,6 +472,7 @@ export function qa_gates() {
     g_arc_shared_steps_gate_run,
     g_arc_prompt_chapter_role_gate_run,
     words_early_reader_gate_run,
+    words_game_taught_glosses_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
     js_storage_browser_objects_cases_gate_run,
