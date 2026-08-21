@@ -49,7 +49,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The Levites counted by clan, and their charge at each side of the tent",
+      title:
+        "The Levites counted by clan, and their charge at each side of the tent",
       passages: [
         {
           chapter_code: "NUM03",
@@ -58,7 +59,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The firstborn numbered, and the redemption price paid for the surplus",
+      title:
+        "The firstborn numbered, and the redemption price paid for the surplus",
       passages: [
         {
           chapter_code: "NUM03",
@@ -67,7 +69,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The Kohathites, Gershonites and Merarites given their loads to carry",
+      title:
+        "The Kohathites, Gershonites and Merarites given their loads to carry",
       passages: [
         {
           chapter_code: "NUM04",
@@ -130,7 +133,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The twelve leaders bring their offerings, one a day for twelve days",
+      title:
+        "The twelve leaders bring their offerings, one a day for twelve days",
       passages: [
         {
           chapter_code: "NUM07",
@@ -184,7 +188,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The cloud over the tabernacle decides when they camp and when they move",
+      title:
+        "The cloud over the tabernacle decides when they camp and when they move",
       passages: [
         {
           chapter_code: "NUM09",
@@ -238,7 +243,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The craving for meat, and Moses asking to be killed rather than carry them",
+      title:
+        "The craving for meat, and Moses asking to be killed rather than carry them",
       passages: [
         {
           chapter_code: "NUM11",
@@ -265,7 +271,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "Miriam and Aaron speak against Moses, and Miriam is shut out seven days",
+      title:
+        "Miriam and Aaron speak against Moses, and Miriam is shut out seven days",
       passages: [
         {
           chapter_code: "NUM12",
@@ -292,7 +299,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The people weep to go back to Egypt, and threaten to stone Joshua and Caleb",
+      title:
+        "The people weep to go back to Egypt, and threaten to stone Joshua and Caleb",
       passages: [
         {
           chapter_code: "NUM14",
@@ -328,7 +336,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "Offerings for when they come into the land, and sin done in ignorance and sin done defiantly",
+      title:
+        "Offerings for when they come into the land, and sin done in ignorance and sin done defiantly",
       passages: [
         {
           chapter_code: "NUM15",
@@ -346,7 +355,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "Tassels on the corners of their garments, to look at and remember",
+      title:
+        "Tassels on the corners of their garments, to look at and remember",
       passages: [
         {
           chapter_code: "NUM15",
@@ -373,7 +383,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "Aaron runs with incense and stands between the living and the dead",
+      title:
+        "Aaron runs with incense and stands between the living and the dead",
       passages: [
         {
           chapter_code: "NUM16",
@@ -400,7 +411,8 @@ export function bible_events_numbers_01_19() {
       ],
     },
     {
-      title: "The red heifer, and the water that makes a man clean from a corpse",
+      title:
+        "The red heifer, and the water that makes a man clean from a corpse",
       passages: [
         {
           chapter_code: "NUM19",

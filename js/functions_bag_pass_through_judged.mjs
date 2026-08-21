@@ -1,12 +1,12 @@
+import { list_without_multiple } from "./list_without_multiple.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { functions_bag_pass_through } from "./functions_bag_pass_through.mjs";
 import { js_record_returned_keys } from "./js_record_returned_keys.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
@@ -49,24 +49,14 @@ export async function functions_bag_pass_through_judged() {
       let taken = property_get(one, "taken");
       let keys = property_get(one, "keys");
       let added = property_get(one, "added");
-      let over_is = false;
-      for (let key of keys_made) {
-        let inside_is = list_includes(taken, key);
-        if (not(inside_is)) {
-          over_is = true;
-        }
-      }
+      let over = list_without_multiple(keys_made, taken);
+      let over_is = list_empty_not_is(over);
       if (over_is) {
         list_add(extra, f_name);
         continue;
       }
-      let under_is = false;
-      for (let key of taken) {
-        let inside_is = list_includes(keys_made, key);
-        if (not(inside_is)) {
-          under_is = true;
-        }
-      }
+      let under = list_without_multiple(taken, keys_made);
+      let under_is = list_empty_not_is(under);
       if (under_is) {
         list_add(absent, f_name);
         continue;

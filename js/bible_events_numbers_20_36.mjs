@@ -85,7 +85,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Balak sends for Balaam twice, and God says go but say only what I tell you",
+      title:
+        "Balak sends for Balaam twice, and God says go but say only what I tell you",
       passages: [
         {
           chapter_code: "NUM22",
@@ -170,7 +171,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Attack the Midianites, for they seduced you in the matter of Peor",
+      title:
+        "Attack the Midianites, for they seduced you in the matter of Peor",
       passages: [
         {
           chapter_code: "NUM25",
@@ -197,7 +199,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "The Levites counted, and not one of the first generation left but Caleb and Joshua",
+      title:
+        "The Levites counted, and not one of the first generation left but Caleb and Joshua",
       passages: [
         {
           chapter_code: "NUM26",
@@ -237,7 +240,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Vows: a man must do what he said, and when a father or a husband may nullify",
+      title:
+        "Vows: a man must do what he said, and when a father or a husband may nullify",
       passages: [
         {
           chapter_code: "NUM30",
@@ -255,7 +259,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "The plunder divided, and the officers bring gold because not one man was missing",
+      title:
+        "The plunder divided, and the officers bring gold because not one man was missing",
       passages: [
         {
           chapter_code: "NUM31",
@@ -264,7 +269,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Reuben and Gad ask for the land east of the Jordan, and promise to cross armed",
+      title:
+        "Reuben and Gad ask for the land east of the Jordan, and promise to cross armed",
       passages: [
         {
           chapter_code: "NUM32",
@@ -282,7 +288,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Drive out the inhabitants, or what is left will be barbs in your eyes",
+      title:
+        "Drive out the inhabitants, or what is left will be barbs in your eyes",
       passages: [
         {
           chapter_code: "NUM33",
@@ -318,7 +325,8 @@ export function bible_events_numbers_20_36() {
       ],
     },
     {
-      title: "Six cities of refuge, and the difference between a murderer and a manslayer",
+      title:
+        "Six cities of refuge, and the difference between a murderer and a manslayer",
       passages: [
         {
           chapter_code: "NUM35",
