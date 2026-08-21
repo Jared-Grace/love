@@ -255,7 +255,7 @@ export function permission_grant_names() {
   let spelled252 = fn_name("timings_total_ms");
   let spelled253 = fn_name("g_clock_sky_phase_check");
   let spelled254 = fn_name("timings_ranked");
-  let spelled255 = fn_name("app_g_map_pad_check");
+  let spelled255 = fn_name("app_shared_game_map_pad_check");
   let spelled256 = fn_name("function_copy");
   let spelled257 = fn_name("machine_load_average");
   let spelled258 = fn_name("qa_gate_names_in_flight");
