@@ -1,4 +1,3 @@
-import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
@@ -6,7 +5,6 @@ import { app_code_lesson_expression_comparing_a_comparison_worked_example } from
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
-import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -14,8 +12,6 @@ import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_keyword_false } from "./js_keyword_false.mjs";
-import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -61,74 +57,18 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     html_div_cycle_code(card, ["So we can replace ", code, " with ", answer]);
   }
   function above(root) {
-    "first what the word comparison names, then the line the whole screen is here to solve, then the idea, climbed from one comparison up to the rule that any of them will do; then the replacing rule, then two lines walked through a replacement at a time";
+    "first what the word comparison names, then the line the whole screen is here to solve, then the replacing rule, then two lines walked through a replacement at a time";
     "The line comes second, before anything that solves it, because the screen used to prove its lemmas first and only then name the theorem: a learner met a comparison results in true or false, and then we can replace 3 === 5 with false, with nowhere to put either - the line those two facts were FOR had not been shown yet. Asked first, each line after it is heard as an answer, and the second walkthrough was already written this way round, so the screen now asks in one voice rather than two";
-    "The idea names two operators, < and ===, and needs both. One alone was < , which marks the rule as general - a rule shown on the same symbol as the instance under it reads as a rule about that symbol - but it left the learner to carry the rule over to === on their own, and === is the one operator they need it for, because it is the one the line in front of them is made of. Naming both makes the pair read as a class rather than as a symbol, so the generality survives, and the carrying over is done for them";
+    "An idea card used to stand between the line and the replacing rule: seven rows climbing from 1 < 2 is true up to so anywhere true or false can be used, we can use a comparison. It argued the line was LEGAL - a comparison may stand where a plain true or false stands - which is the opposite direction from the one that solves it, and it argued it on 1 < 2 and true === true, neither of which is the line on the screen. Nothing in this lesson or its quiz ever runs that direction: the learner is handed a line and asked for its value, every time, and the replacing card with the two walkthroughs carries that the whole way. So the longest explanation on the screen was answering a question the screen never asks, and a learner reading down it met a second line being taken apart before the first one had been. It is gone; the learner now reaches a worked line four rows sooner. What makes the line legal is learned by working it, not by reading a derivation of it";
     app_code_lesson_expression_comparing_a_comparison_recall(root);
-    let same_first = js_operator_triple_equal();
+    let same = js_operator_triple_equal();
     let goal = app_code_container_light_blue(root);
     let goal_line = app_code_lesson_expression_comparing_a_comparison_line(
       "3 === 5",
-      same_first,
+      same,
       false,
     );
     app_code_lesson_suppose_solve_line(goal, "Suppose", goal_line);
-    let idea = app_code_container_light_blue(root);
-    let t = js_keyword_true();
-    let f = js_keyword_false();
-    let smaller = js_operator_less_than_symbol();
-    let same_symbol = js_operator_triple_equal_symbol();
-    let smaller_code = "1 < 2";
-    ("the card climbs from the one comparison to the rule, a step at a time, and never the other way: one comparison is true, so that one comparison may stand where a true stands, so here is a line where it does - and only then, over the top of something already watched, comparisons result in true or false, and so any of them may stand anywhere true or false may. Opening on the rule instead put the general sentence in front of a learner with nothing yet to attach it to, and left them to picture a line nobody had written for them");
-    ("true === true is the line to start from because they already write it - it is the lesson three back, on plain true and false - so the only new thing on screen is the swap itself");
-    ("1 < 2 rather than a comparison made with ===, so it cannot be mistaken for the === already in the line");
-    ("the first true is named, not left to anywhere: the line to swap into holds two of them, and a learner reading anywhere we see true across a line with two could fairly swap both and reach 1 < 2 === 1 < 2. The first one, because the left side is where every line this lesson goes on to solve carries its comparison");
-    ("write instead, then replace: the permission has nothing to name as the thing being replaced, so it says what the learner would write; the line under it does have one, and says replace. The next card says replace for the other direction, a comparison down to its answer, and that is the same word on purpose - each card names its direction, and the one verb pointing both ways is the interchangeability this lesson is about");
-    html_div_cycle_code(idea, ["", smaller_code, " is ", t]);
-    html_div_cycle_code(idea, [
-      "So anywhere we see ",
-      t,
-      ", we can write ",
-      smaller_code,
-      " instead",
-    ]);
-    let plain_line = app_code_lesson_expression_comparing_a_comparison_line(
-      t,
-      same_first,
-      true,
-    );
-    html_div_cycle_code(idea, ["Suppose we write ", plain_line]);
-    let swapped_line = app_code_lesson_expression_comparing_a_comparison_line(
-      smaller_code,
-      same_first,
-      true,
-    );
-    html_div_cycle_code(idea, [
-      "Then we replace the first ",
-      t,
-      " and have ",
-      swapped_line,
-    ]);
-    html_div_cycle_code(idea, [
-      "Comparisons like ",
-      smaller,
-      " and ",
-      same_symbol,
-      " will result in ",
-      t,
-      " or ",
-      f,
-    ]);
-    html_div_cycle_code(idea, [
-      "So anywhere ",
-      t,
-      " or ",
-      f,
-      " can be used, we can use a comparison",
-    ]);
-    ("the card lands back on the line the screen is here to solve. Every row above it is worked on 1 < 2 and true === true, which are not that line and are not meant to be - they are the smallest pair that can carry the swap. But the card used to stop at the general sentence, and a reader who has just watched a different line being taken apart is left holding a rule with nothing under it: the card reads as a second problem rather than as the reason the first one is a line at all. One row naming the goal line closes it, and the card after this one begins on that same line");
-    html_div_cycle_code(idea, ["So we can write ", goal_line]);
-    let same = js_operator_triple_equal();
     let different = js_operator_bang_double_equal();
     replacing(root, "3 === 5", false);
     app_code_lesson_expression_comparing_a_comparison_worked_example(
