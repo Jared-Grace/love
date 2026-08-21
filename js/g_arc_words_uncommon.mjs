@@ -53,9 +53,9 @@ export async function g_arc_words_uncommon() {
       people = add_1(people);
       let index = property_get(entry, "index");
       let arc = property_get(entry, "arc");
-      let words = g_arc_words_said(arc);
+      let spoken = g_arc_words_said(arc);
       let mouth = list_join_space([chapter_code, index]);
-      for (let word of words) {
+      for (let word of spoken) {
         list_add(said, word);
         let home = property_or_null(homes, word);
         let first = equal(home, null);
