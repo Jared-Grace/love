@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { bible_dream_hand_side_point } from "./bible_dream_hand_side_point.mjs";
 import { bible_dream_hand_curve_controls } from "./bible_dream_hand_curve_controls.mjs";
 export function bible_dream_hand_ribbon_text(
@@ -14,8 +15,14 @@ export function bible_dream_hand_ribbon_text(
   "★ NEIGHBOURING PIECES SHARE THEIR EDGE EXACTLY, WHICH IS WHY NOTHING SHOWS AT A JOINT. The far end of one piece and the near end of the next are the same hand point, so they are asked for the same width; and the direction used at that end is read off the handle, which the slope rule makes the same coming in as going out. Same place, same width, same direction, so the two ends' corners land on each other to the last decimal. The pieces meet edge to edge and cover the line between them exactly once - no gap to show as a nick and no overlap to show as a darker bead.";
   "The ends are cut straight across rather than rounded, for the same reason. A rounded end would reach past the piece and paint its neighbour's beginning over again, and two half-clear paints make a darker one.";
   let controls = bible_dream_hand_curve_controls(before, start, end, after);
-  let leaving = { x: controls.out.x - start.x, y: controls.out.y - start.y };
-  let arriving = { x: end.x - controls.in.x, y: end.y - controls.in.y };
+  let leaving = {
+    x: subtract(controls.out.x, start.x),
+    y: subtract(controls.out.y, start.y),
+  };
+  let arriving = {
+    x: subtract(end.x, controls.in.x),
+    y: subtract(end.y, controls.in.y),
+  };
   let near_left = bible_dream_hand_side_point(start, leaving, half_start);
   let out_left = bible_dream_hand_side_point(controls.out, leaving, half_start);
   let in_left = bible_dream_hand_side_point(controls.in, arriving, half_end);
