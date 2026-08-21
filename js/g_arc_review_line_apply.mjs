@@ -76,6 +76,14 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(object3, "after", after);
     return;
   }
+  let prefix13 = property_get(marks, "believes");
+  let believed = text_starts_with(line, prefix13);
+  if (believed) {
+    let believes = text_prefix_without(line, prefix13);
+    let object4 = property_get(state, "turn");
+    property_set(object4, "believes", believes);
+    return;
+  }
   let prefix11 = property_get(marks, "scripture");
   let quoted = text_starts_with(line, prefix11);
   if (quoted) {

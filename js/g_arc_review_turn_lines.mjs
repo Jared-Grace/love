@@ -10,6 +10,7 @@ export function g_arc_review_turn_lines(turn, passages, number) {
   "One turn of a written arc as it is read for review: what the person said, the passage the answer named, and that passage's own words printed underneath it.";
   "THE SCRIPTURE IS FETCHED HERE, NEVER STORED IN THE ARC. A written arc keeps the reference alone, because the Scripture is already written down and a second copy of it inside every turn is a second place for it to go wrong. Reading is the one moment the two belong side by side: the whole question a reviewer is asking is whether this passage answers what this person just said, and that cannot be judged against a reference.";
   "Finding the passage is what makes reading an arc CHECK it. A reference naming a passage that was never offered has nowhere to land and says so, rather than being printed as a line the reviewer would have to catch by eye.";
+  "THE TURN WHERE THEY BELIEVE IS SHOWN IN CAPITALS, on the one turn that carries it. It is the only line of a turn that is not somebody speaking, and a reviewer reading straight down the page needs to see the moment the arc turns without hunting for it - which is the whole of what a reviewer asked for when they said the page has to say when conversion happens.";
   "An empty after is left out rather than printed empty, because empty means the person carried straight on to their next line - a blank labelled after would show an absence as though it were something that happened.";
   let before = property_get(turn, "before");
   let reference_written = property_get(turn, "reference");

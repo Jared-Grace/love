@@ -30,6 +30,7 @@ export async function js_dollar_choices_parameters_unknown() {
     if (null_is(names)) {
       continue;
     }
+    read = add(read, 1);
     let unknown = [];
     for (let name of names) {
       let known_is = list_includes(allowed, name);
@@ -48,5 +49,9 @@ export async function js_dollar_choices_parameters_unknown() {
       unknown,
     });
   }
-  return rows;
+  let r = {
+    read,
+    rows,
+  };
+  return r;
 }
