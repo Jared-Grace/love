@@ -25,6 +25,10 @@ export function baseline_writers_growth_exempt() {
       why: "a chapter arriving in it is not a fault anybody in this repo can put right - the words do not exist upstream and no amount of fetching will bring them, so a list that refused to grow would go red and stay red on a chapter that is already as complete as it can ever be. That is how this list came to be needed, and building the same trap again would only rebuild it. What its own prose asks for instead is a proof before each new name: delete the cached reading-aloud text for that bible, fetch it again, and record the name only if the same two lines come back",
     },
     {
+      f_name: fn_name("bundle_sizes_baseline_write"),
+      why: "it is the only one here whose record is of sizes rather than of names, and a size is meant to move. What the gate beside it measures is a single step - how much one bundle grew since it was last written down - against a ceiling, so an ordinary day's growth under that ceiling is not an offense and has to be written down, or the next day's step would be measured from a number nobody has been at for a month and every bundle would go red at once for growing slowly. A bundle nobody has a size for yet is explicitly not a step either, so a page arriving must be recorded rather than refused. Refusing growth here would not tighten the ratchet, it would break the measurement the ratchet is made of",
+    },
+    {
       f_name: fn_name("baseline_known_write"),
       why: "the one writer every ratchet ends at, and the one the refusal itself would have to call. putting the check here would put it inside the thing it checks",
     },
