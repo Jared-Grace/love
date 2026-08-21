@@ -1,3 +1,6 @@
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
 import { bible_dream_samples_turn_signs } from "./bible_dream_samples_turn_signs.mjs";
 import { bible_dream_hump_run_keep } from "./bible_dream_hump_run_keep.mjs";
@@ -11,17 +14,19 @@ export function bible_dream_stroke_humps(samples) {
   let run_first = 0;
   let run_sign = 0;
   let index = 0;
-  while (index < count) {
+  while (less_than(index, count)) {
     let sign = signs[index];
-    if (sign === run_sign) {
+    if (equal(sign, run_sign)) {
       index = index + 1;
       continue;
     }
-    bible_dream_hump_run_keep(humps, samples, run_sign, run_first, index - 1);
+    let last = subtract(index, 1);
+    bible_dream_hump_run_keep(humps, samples, run_sign, run_first, last);
     run_sign = sign;
     run_first = index;
     index = index + 1;
   }
-  bible_dream_hump_run_keep(humps, samples, run_sign, run_first, count - 1);
+  let last2 = subtract(count, 1);
+  bible_dream_hump_run_keep(humps, samples, run_sign, run_first, last2);
   return humps;
 }

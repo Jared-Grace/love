@@ -1,3 +1,5 @@
+import { less_than } from "./less_than.mjs";
+import { multiply } from "./multiply.mjs";
 import { html_element_svg } from "./html_element_svg.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
@@ -14,7 +16,7 @@ export function bible_dream_hand_mark_add(state, point, nearness) {
     return;
   }
   let moved = bible_dream_point_gap_squared(point, before);
-  if (moved < 4) {
+  if (less_than(moved, 4)) {
     state.hand_at = before;
     return;
   }
@@ -22,8 +24,11 @@ export function bible_dream_hand_mark_add(state, point, nearness) {
   let drawn = "M" + before.x + "," + before.y + " L" + point.x + "," + point.y;
   html_attribute_set(segment, "d", drawn);
   html_attribute_set(segment, "fill", "none");
-  html_attribute_set(segment, "stroke", app_shared_color_gold_glow());
+  let value = app_shared_color_gold_glow();
+  html_attribute_set(segment, "stroke", value);
   html_attribute_set(segment, "stroke-linecap", "round");
-  html_attribute_set(segment, "stroke-width", String(0.6 + nearness * 2.4));
-  html_attribute_set(segment, "opacity", String(0.06 + nearness * 0.44));
+  let value2 = String(0.6 + multiply(nearness, 2.4));
+  html_attribute_set(segment, "stroke-width", value2);
+  let value3 = String(0.06 + multiply(nearness, 0.44));
+  html_attribute_set(segment, "opacity", value3);
 }

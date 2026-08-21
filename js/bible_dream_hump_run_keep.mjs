@@ -1,3 +1,6 @@
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_add } from "./list_add.mjs";
 import { bible_dream_hump_facing } from "./bible_dream_hump_facing.mjs";
 import { not } from "./not.mjs";
@@ -5,18 +8,23 @@ export function bible_dream_hump_run_keep(humps, samples, sign, first, last) {
   "Take one run of samples that all bend the same way and add it to the list of bumps, unless it is too small or too flat or not a bend at all.";
   "Three separate refusals, and each of them is a different way of not being a bump. A run of no bend is a straight stretch. A run of a handful of samples is the rounding in the sampling rather than a shape anybody drew. A run that bends steadily but barely leaves its own chord is a long gentle sweep, which a reader sees as the line itself and not as a feature of it.";
   "The refusals matter more than they look, because everything downstream is ornament, and ornament hung on something the eye does not read as a feature does not look like decoration - it looks like a mistake.";
-  if (sign === 0) {
+  if (equal(sign, 0)) {
     return;
   }
-  if (last - first < 6) {
+  let a = subtract(last, first);
+  if (less_than(a, 6)) {
     return;
   }
   let facing = bible_dream_hump_facing(samples, first, last);
   if (not(facing)) {
     return;
   }
-  if (facing.reach < 3) {
+  if (less_than(facing.reach, 3)) {
     return;
   }
-  list_add(humps, { first, last, facing });
+  list_add(humps, {
+    first,
+    last,
+    facing,
+  });
 }
