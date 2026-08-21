@@ -1,3 +1,4 @@
+import { text_split_first } from "./text_split_first.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -13,6 +14,7 @@ export function g_arc_review_line_apply(arc, state, line) {
   "One line of a review page put where it belongs - into the person, into the conversation being read, or into the turn being read.";
   "RECOGNISED BY ITS MARK, never by its position. Every line of the page begins with the mark of what it is, so a page can be edited freely - a turn moved, a conversation split - and still read back as the arc it now says it is.";
   "A SCRIPTURE LINE IS DROPPED. The arc stores the reference and the Scripture is fetched from it when the page is laid out, so those words are a rendering and never a source; taken back in, an edited verse would become an arc that quotes the Bible wrongly.";
+  "THE TURN'S OWN NUMBER IS KEPT even though the arc has no use for it, because a reviewer's note is about a turn and a note handed back without one is a remark about a page rather than about a line.";
   "A LINE MATCHING NOTHING THROWS. Every mark is a prefix, and an edited page is exactly where a line loses one - a sentence reflowed onto a second line, a note written in the margin. Skipped quietly, that line would disappear out of the middle of a turn and the arc would still parse, which is the one failure a reviewer could not see.";
   let marks = g_arc_review_marks();
   let names = g_arc_answer_field_names("person");
@@ -82,6 +84,8 @@ export function g_arc_review_line_apply(arc, state, line) {
   if (numbered) {
     let item = property_get(marks, "number");
     let before = text_index_of_skip(line, item);
+    let number = text_split_first(line, item);
+    property_set(state, "number", number);
     let opener = property_get(state, "opener");
     let turn = {
       opener,
