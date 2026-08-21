@@ -11,7 +11,8 @@ export function bible_dream_hand_segment_draw(state, points) {
   let start = points[1];
   let end = points[2];
   let strength = end.strength;
-  if (not(equal(strength, state.hand_level))) {
+  let b = equal(strength, state.hand_level);
+  if (not(b)) {
     bible_dream_hand_path_start(state, start, strength);
   }
   let text = bible_dream_hand_curve_text(points[0], start, end, points[3]);
