@@ -13,7 +13,7 @@ that record to `sent 2026-08-21`.
 
 ---
 
-Subject: Ten small faults in published files
+Subject: Twelve small faults in published files
 
 Hello,
 
@@ -144,6 +144,28 @@ possible correction: 'A Psalm of David'. Forty-nine headings in the book begin '
 Psalm' and this one begins 'A Psalms'. Same on PSA000.htm, so the two pages agree with
 each other and differ only from the rest of the book. I cannot tell from here whether
 it came from the source text or the publishing, so we carry it as published.
+
+**11.**
+
+url: https://ebible.org/engerv/JOB24.htm
+
+quote(s): '<span class="verse" id="V4">3b&#160;</span>' and, four lines later, '<span class="verse" id="V4">4&#160;</span>'
+
+possible correction: id="V9" on the first of the two. The chapter carries id="V4"
+twice and carries no id="V9" at all, so a link to Job 24:9 lands nowhere and a link to
+24:4 lands on the wrong verse. The verse itself is present and correct — it is the one
+the page's own note explains, 'In the Hebrew text this verse follows verse 8'.
+
+**12.**
+
+url: https://ebible.org/engkjvcpb/ESG10.htm
+
+quote(s): verse numbers run '4' … '13' and then '1': '<span class="verse" id="V1">1&#160;</span>In the fourth year of the reign of Ptolemeus and Cleopatra'
+
+possible correction: number the colophon 14, or give it its own chapter. Beginning
+the chapter at 4 is right, and the Additions are placed back in chapters 1, 3, 4, 5, 8
+and 10 rather than kept at 11–16, which is a fair choice — but the colophon kept the
+number it had at 11:1, so it now prints after verse 13 as verse 1.
 
 We pass affected chapters over rather than show a chapter we cannot read, and pick
 them up whenever a corrected download appears — so at present neither Brenton edition

@@ -1,10 +1,10 @@
+import { words_early_reader_outside_untaught } from "./words_early_reader_outside_untaught.mjs";
 import { g_arc_feedback_checked_add } from "./g_arc_feedback_checked_add.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
-import { words_early_reader_outside } from "./words_early_reader_outside.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -21,7 +21,7 @@ export async function g_arc_feedback_words_add(chapter_code, index) {
   "SO WHAT A PERSON IS LEFT WITH IS WHAT THIS COULD NOT SEE. Run before anybody opens the arc, it takes the whole vocabulary question off their desk, and every check written after it takes another one - until what is left needs a person because no rule could have caught it.";
   "IT NAMES THE WORDS AND ASKS FOR NOTHING, in the shape every note here is written in. Saying which words are too hard leaves the sentence with whoever writes sentences; saying what the line should say instead has written the line, and then the next line needs writing too. A word may also be perfectly fair - a dyer says dye - so a note that had demanded a replacement would have demanded a worse line.";
   "IT DOES NOT CLEAR FIRST, so running it twice files everything twice. Clearing is a separate command on purpose: the notes it would drop include a person's, and a check has no business throwing away a reading it cannot reproduce. The clear that drops only what a check filed is the one to run before running this again.";
-  "ITS FIRST RUN FAULTED THIRTY-SEVEN OF FIFTY-THREE LINES, and that number is the finding rather than a defect in the arc. The accepted list of a child's words deliberately carries no word from the faith, so god, sinned, cross and confess all read as outside it - and those are the words the game is FOR. A word outside a child's vocabulary is therefore two different things wearing one shape: a word the writer should not have reached for, and a word the game means to teach. Only the second has a gloss, so what tells them apart is the gloss store and not any measure of how rare the word is - frequency would have dropped ACTUALLY too, which is the one this caught that a person had already faulted by hand.";
+  "ITS FIRST RUN FAULTED THIRTY-SEVEN OF FIFTY-THREE LINES, and the repair was a second list rather than a softer rule. The accepted list of a child's words deliberately carries no word from the faith, so god, sinned, cross and confess all read as outside it - and those are the words the game is FOR. A word outside a child's vocabulary is two different things wearing one shape: one a writer reached for when a plainer word was there, and one the game means to teach. What tells them apart is intent, written down once as an accepted list, and never any measure of how rare a word is - frequency would have dropped ACTUALLY too, which is the one this caught unaided that a person had already faulted by hand.";
   let arcs = await g_arc_written_chapter(chapter_code);
   let wanted = number_from_text(index);
   let found = null;
