@@ -9,7 +9,7 @@ export async function song_image_couplets_description(verse_number) {
   "The heading between the two is there because without it a reader meets the first reference line as if it were another lyric.";
   arguments_assert(arguments, 1);
   let lyrics = song_image_couplets_lyrics(verse_number);
-  let scripture = song_image_couplets_scripture(verse_number);
+  let scripture = await song_image_couplets_scripture(verse_number);
   let heading = "Scripture these words rest on:";
   let parts = [lyrics, heading, scripture];
   let r = list_join_newline_2(parts);
