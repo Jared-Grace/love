@@ -23,6 +23,8 @@ export async function bible_verse_holes_gate_run() {
     f_name,
     "whether it holds the verses a page will ask it for",
   );
+  ("WHEN THE RECORD WAS MEASURED TRAVELS WITH EVERY FINDING TAKEN OUT OF IT, because both of the ones refused below are answered with the same instruction - go and measure again - and how old the record is decides whether that instruction is worth anything. A far end that would not answer an hour ago is worth asking again; one that would not answer in a record from before the last upload says nothing about today at all.");
+  let measured_at = property_get(record, "measured_at");
   let bibles = property_get(record, "bibles");
   let shipped = property_get(record, "shipped");
   let unmeasured = property_get(record, "unmeasured");
@@ -53,6 +55,7 @@ export async function bible_verse_holes_gate_run() {
       f_name4,
     ]),
     unasked,
+    measured_at,
   });
   ("The transient finding is refused after the standing ones on purpose. A bible that is shipped and never measured, or measured and no longer shipped, is true until somebody changes the roster; a chapter that would not answer this afternoon may answer this evening. Reporting the passing thing first would bury the lasting one under it.");
   let f_name6 = fn_name("bible_verse_holes_write");
@@ -63,9 +66,11 @@ export async function bible_verse_holes_gate_run() {
       ", and if the same chapters come back unreachable twice then the far end really is refusing them and it is worth looking at by hand",
     ]),
     unreachable,
+    measured_at,
   });
   let r = {
     checked: list_size(shipped),
+    measured_at,
     unmeasured,
     departed,
     unasked,

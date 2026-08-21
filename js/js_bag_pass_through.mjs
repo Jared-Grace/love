@@ -1,3 +1,4 @@
+import { js_node_type_is } from "./js_node_type_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -22,6 +23,30 @@ export function js_bag_pass_through(ast) {
   ("Fewer than three names carried through is not reported. Two names passed on is as likely to be a body that wanted them as a join, and a list that says so about half the repo is a list nobody reads.");
   let decls = js_declarations_single_rows(ast);
   let reads = js_property_get_rows(ast);
+  let producers = [];
+  for (let decl of decls) {
+    let name = property_get(decl, "name");
+    let init = property_get(decl, "init");
+    let value = init;
+    let waited_is = js_node_type_is(init, "AwaitExpression");
+    if (waited_is) {
+      value = property_get(init, "argument");
+    }
+    let called_is = js_node_type_is(value, "CallExpression");
+    if (not(called_is)) {
+      continue;
+    }
+    let callee = property_get(value, "callee");
+    let named_is = js_identifier_is(callee);
+    if (not(named_is)) {
+      continue;
+    }
+    let producer = js_identifier_name(callee);
+    list_add(producers, {
+      name,
+      producer,
+    });
+  }
   let unpacked = [];
   for (let read of reads) {
     let target = property_get(read, "target");
@@ -95,10 +120,21 @@ export function js_bag_pass_through(ast) {
         }
         list_add(added, key);
       }
+      let producer = null;
+      for (let one of producers) {
+        let name = property_get(one, "name");
+        let same_is = equal(name, bag);
+        if (not(same_is)) {
+          continue;
+        }
+        producer = property_get(one, "producer");
+      }
       let record = property_get(decl, "name");
       list_add(found, {
         record,
         bag,
+        producer,
+        keys,
         taken,
         added,
       });
