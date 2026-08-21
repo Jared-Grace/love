@@ -28,7 +28,11 @@ export async function ebible_chapter_verse_marks_gaps(
     let spelled = text_integers(name);
     let number = property_get(verse_number, "number");
     let both = list_concat_unique([number], spelled);
-    return both;
+    ("A range is covered all the way across rather than at its two ends. Crediting only the numbers actually written leaves the middle of a wide one looking missing - a mark reading nine to eleven hid verse ten - and a range two long has no middle, so the fault stays invisible until a translation writes a wider one.");
+    let low = list_min_try(both);
+    let high = list_max_or_null(both);
+    let run = numbers_from_to(low, high);
+    return run;
   }
   let covered_each = list_map(verse_numbers, lambda_covers);
   let covered = lists_combine(covered_each);
