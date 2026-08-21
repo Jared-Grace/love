@@ -19,8 +19,8 @@ export async function ebible_versions_download() {
       let file_path = await ebible_version_download(bible_folder);
       return file_path;
     }
-    let file_path = await catch_null_async(download);
-    let missed = null_is(file_path);
+    let arrived = await catch_null_async(download);
+    let missed = null_is(arrived);
     if (missed) {
       list_add(failed, bible_folder);
       return;
