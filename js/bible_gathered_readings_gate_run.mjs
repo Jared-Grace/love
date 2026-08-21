@@ -1,5 +1,5 @@
 import { bible_gathered_events_all } from "./bible_gathered_events_all.mjs";
-import { bible_event_readings_all } from "./bible_event_readings_all.mjs";
+import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
 import { bible_event_kinds } from "./bible_event_kinds.mjs";
 import { bible_event_key } from "./bible_event_key.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,14 +16,14 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
-export async function bible_event_readings_gate_run() {
+export async function bible_gathered_readings_gate_run() {
   "Gate: the readings of gathered Bible events line up with the events one for one, and say nothing outside the declared vocabulary of kinds. Throws so the dispatcher seam exits nonzero.";
   "★ THE READING IS THE FALLIBLE HALF, WHICH IS WHY IT IS THE HALF THAT IS GATED. A gathered event only points, so it cannot drift. A reading states what a passage is doing, and it is attached to its event by a key rather than sitting inside it - so the two can silently come apart. Re-cut one event's verses and its key changes, and the reading of it goes on existing, correctly spelled, describing a passage that is no longer there.";
   "THREE THINGS ARE CHECKED, and each catches a different way of coming apart. An event with no reading is a hole in the corpus that a tally would quietly count around. A reading with no event is the stranding just described. A kind outside the vocabulary is the near-enough word - the failure that matters most, because filing an event under a word that almost fits is exactly how the reading stops being a finding and becomes a confirmation.";
   "DUPLICATE KEYS ARE CHECKED TOO, because a key is only an identity while it is unique. Two events with the same references would be the same verses gathered twice, and one reading would then answer for both.";
   "The empty answer is asserted against first. A gate that finds nothing to compare passes, and passing for want of anything to check is the one failure a gate cannot report about itself.";
   let events = await bible_gathered_events_all();
-  let readings = await bible_event_readings_all();
+  let readings = await bible_gathered_readings_all();
   list_empty_not_is_assert_json(events, {
     hint: "no gathered Bible events were found at all, so this gate compared nothing; either every gathered span has been removed or the prefix the finder looks for has moved",
   });

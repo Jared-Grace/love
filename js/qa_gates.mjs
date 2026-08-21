@@ -1,4 +1,4 @@
-import { bible_event_readings_gate_run } from "./bible_event_readings_gate_run.mjs";
+import { bible_gathered_readings_gate_run } from "./bible_gathered_readings_gate_run.mjs";
 import { ebible_versions_english_readaloud_gate_run } from "./ebible_versions_english_readaloud_gate_run.mjs";
 import { qa_commit_entry_beside_moved_cases_gate_run } from "./qa_commit_entry_beside_moved_cases_gate_run.mjs";
 import { bible_event_fields_gate_run } from "./bible_event_fields_gate_run.mjs";
@@ -517,7 +517,7 @@ export function qa_gates() {
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
     bible_event_fields_gate_run,
-    bible_event_readings_gate_run,
+    bible_gathered_readings_gate_run,
     ebible_chapter_code_known_cases_gate_run,
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
