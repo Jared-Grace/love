@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_split_first } from "./text_split_first.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
@@ -108,8 +109,7 @@ export function g_arc_review_line_apply(arc, state, line) {
       after: "",
       believes: "",
     };
-    let conversation = property_get(state, "conversation");
-    let turns = property_get(conversation, "turns");
+    let turns = property_path_get_2(state, "conversation", "turns");
     list_add(turns, turn);
     property_set(state, "turn", turn);
     return;
