@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { list_map } from "./list_map.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 export function js_import_expression_source_nodes(ast) {
   ("the piece of writing that names the file in every fetch-it-while-running import - the one inside the brackets of import(...), as against the one after the word from, which ",
     fn_name("js_import_source_nodes"),
