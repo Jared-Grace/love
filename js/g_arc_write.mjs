@@ -1,8 +1,7 @@
+import { g_arc_write_path } from "./g_arc_write_path.mjs";
+import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_person_assert } from "./g_arc_person_assert.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
-import { local_function_path_json } from "./local_function_path_json.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,14 +17,8 @@ export async function g_arc_write(chapter_code, index, arc) {
   "The person's number is what ties the arc back to the pool entry that fixed how many turns it may have. Written anywhere else it would be an arc for nobody, and the turn counts it was written against would have nothing to attach to.";
   let passages = await g_sermon_chapter_passages_chaptered(chapter_code);
   await g_arc_person_assert(index, arc, passages);
-  let path = local_function_path_json(chapter_code, g_arc_write);
-  let exists = await file_exists(path);
-  let empty = {
-    chapter_code,
-    arcs: [],
-  };
-  let chapter = exists ? await file_read_json(path) : empty;
-  let arcs = property_get(chapter, "arcs");
+  let path = g_arc_write_path(chapter_code);
+  let arcs = await g_arc_written_chapter(chapter_code);
   function arc_other(other) {
     let left = property_get(other, "index");
     let neq = not_equal(left, index);

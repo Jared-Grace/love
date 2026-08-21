@@ -11,6 +11,7 @@ export function g_arc_prompt_arguments_assert(
   turn_target,
   profile,
   leader,
+  written_text,
 ) {
   "Every argument the arc prompt is handed, checked before a word of the prompt is written.";
   "A PROMPT NEVER FAILS, which is the whole reason this exists. All five arguments are dropped into the text unchecked, so a missing one leaves a hole that still reads as finished prose - `The player is answering from .`, and a heading saying here is JSON about the person with nothing under it. The writing call then answers something anyway, and nothing anywhere goes red.";
@@ -47,5 +48,11 @@ export function g_arc_prompt_arguments_assert(
   assert_json(bi, {
     leader,
     hint,
+  });
+  "WHAT IS ALREADY WRITTEN IS ASKED FOR ITS TYPE AND NEVER FOR CONTENT, and it is the one argument here that is allowed to be empty. Empty is the first person of a chapter, which is an ordinary case rather than a hole - so the question is whether it is text at all. A list of arcs handed over by mistake would print as the word object into the middle of the prompt and read as prose.";
+  let ti = text_is(written_text);
+  assert_json(ti, {
+    written_text,
+    hint: "who has already been written for this chapter and how the passages stand so far, as the text that section is rendered to - empty when nobody has been written yet",
   });
 }
