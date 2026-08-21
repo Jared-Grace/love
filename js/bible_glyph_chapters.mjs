@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_ezk33 } from "./bible_glyph_chapter_ezk33.mjs";
 import { bible_glyph_chapter_deu30 } from "./bible_glyph_chapter_deu30.mjs";
 import { bible_glyph_chapter_psa138 } from "./bible_glyph_chapter_psa138.mjs";
 import { bible_glyph_chapter_psa029 } from "./bible_glyph_chapter_psa029.mjs";
@@ -26,7 +27,10 @@ export function bible_glyph_chapters() {
   "AND THREE OF THE TEN ARE NOW PSALMS, which is a fact about the table rather than a taste. The survey ranks by what can be drawn and the table was built out of covenant words - the name, the gift, the glory, the fire - which is what a psalm is made of. The psalter will keep coming top until the words that narrative and law are made of are seated too, so the way to a chapter of Genesis runs through the table and not through the survey.";
   "THE ELEVENTH IS THE FIRST FROM THE LAW, and it is the entry that answers the note above it. That note said the psalter would keep coming top until the words narrative and law are made of were seated, and named that as the way to a chapter outside the psalms. So the table was asked which pictures the Greek side already draws that the Hebrew side had never seated - nineteen of them - and eight turned out to mean the same thing in both languages: the blood, the darkness, the witness, the child, the two negatives, the out-of and the world. None cost a picture. The survey moved the same morning, and Deuteronomy took three of the ten highest places outside the psalter.";
   "AND IT IS THE FIRST TIME THE TABLE WAS GROWN INSTEAD OF THE SURVEY BEING RE-RUN. Every chapter before this one was chosen by asking what was most drawable and taking the answer. This one was reached by changing what drawable means. Those are different acts, and only the second can get you out of a book the table happens to be good at - which is why ten chapters had come from two books and no amount of surveying was going to find an eleventh anywhere else.";
-  "Eleven chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE TWELFTH IS THE FIRST FROM THE PROPHETS, and the books are now four. The eleventh's note said the way out of the psalter runs through the table rather than through the survey, and this one says the same thing about a different kind of word. Eleven chapters had been drawn almost entirely out of covenant vocabulary, so a chapter whose engine is a sword could not be reached at all: the thirty third of Ezekiel says chereb six times, and every one of them would have stood in English inside a line made of pictures. The sword was bought, and the chapter became authorable the same morning.";
+  "AND IT IS THE FIRST PICTURE BOUGHT FOR A CONCRETE NOUN. Every glyph before it was seated for something a covenant is made of - the name, the fire, the gift, the heart - or for grammar. Four plain nouns were measured together and two of them could be seated; the other two, the altar and the priest, have no artwork and no honest composition, so they are the first words in this Bible waiting on a picture being drawn rather than found. What this chapter shows is that the two which could be bought were enough to open a book.";
+  "AND THE COVENANT NAME WAS HALF BLANK UNTIL THIS CHAPTER LOOKED. The four letters carry two Strong's numbers, and only the first was seated - so wherever the prophets write the Lord GOD, the crown drew and the name beside it stayed in English, three hundred and six times across the testament. Eleven chapters went by without it surfacing because none of them came from the prophets, which is where that phrase lives. A table keyed by number can go blank in a way no survey measures: those three hundred and six words were counted as undrawable vocabulary, which was true of the number and false of the name.";
+  "Twelve chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -41,6 +45,7 @@ export function bible_glyph_chapters() {
   let ninth = bible_glyph_chapter_psa029();
   let tenth = bible_glyph_chapter_psa138();
   let eleventh = bible_glyph_chapter_deu30();
+  let twelfth = bible_glyph_chapter_ezk33();
   let chapters = [
     first,
     second,
@@ -53,6 +58,7 @@ export function bible_glyph_chapters() {
     ninth,
     tenth,
     eleventh,
+    twelfth,
   ];
   return chapters;
 }

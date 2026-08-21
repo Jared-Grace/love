@@ -151,7 +151,7 @@ export function song_image_couplets() {
       first: "forsaken by",
       second: "almighty GOD",
       symbol:
-        "A round sun with a ring of short pointed rays all around it, the disc and every ray alike filled with the same solid black as the lead lines, so that the whole sun is black",
+        "A round sun with a ring of short pointed rays all around it, the disc and every ray alike filled with the same solid black as the lead lines, so that the whole sun is black, drawn large in the middle of the window with its rays reaching almost to both sides of it",
       ref: "Matthew 27:45",
       same_as: 0,
     },
