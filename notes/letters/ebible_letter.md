@@ -1,114 +1,111 @@
-# Letter to eBible.org — five faults in published files
+# Letter to eBible.org — draft, not sent
 
-Written 2026-08-19, a fourth finding added 2026-08-20, a fifth 2026-08-21. Not sent
-yet. Send it as one letter; all five findings are small and none needs a reply.
-
-The facts below were each checked against the files on disk before writing. If you
-send this after a fresh download, check them again first — a corrected file would
+Every item below was checked against the downloaded files before writing. Re-check
+before sending if the downloads have been refreshed since — a corrected file would
 make the letter wrong.
+
+**Each item is mentioned once, ever.** When this letter is sent, copy it into
+`notes/letters/sent/<date>.md` and add its item keys to
+`data/given/ebible_letter_reported.json`, so a later letter cannot repeat one.
+Item keys are in `<!-- key: … -->` comments, which do not render.
 
 ---
 
-Subject: Five small faults in published files — Bangwinji (bsj) Mark, Bugun (bgg) Matthew, Apalaí (apyNT) copyright page, Berean Standard Bible (engbsb) Psalm 3, Brenton Septuagint (eng-lxx2012, eng-uk-lxx2012) Psalm 118
+Subject: Seven small faults in published files
 
 Hello,
 
-Thank you for eBible.org. I run a free Bible reading app that gets almost all of
-its translations from you, and it exists because you give them away.
+Thank you for eBible.org — I run a free Bible reading app that takes almost all of
+its translations from you. While checking every translation we carry, these came
+up. No reply needed.
 
-While checking every translation we carry, five came up with faults in the
-published files. The first three look like faults in the published output rather
-than in the translations. The fourth is a single wrong letter in a heading, and I
-cannot tell from here whether it came from the source text or from the publishing,
-so I have described what the file says and left that to you. The fifth is a missing
-verse marker, where the words are all present but one verse number is absent.
+<!-- key: bgg MAT -->
+url: https://ebible.org/bgg/MAT07.htm
 
-**1. Bangwinji (bsj) — Mark, in the read-aloud edition**
+quote(s): '<span class="verse" id="V13">13&#160;</span> <span class="verse" id="V14">14&#160;</span>'
 
-Every chapter of Mark stops after two or three verses. `bsj_071_MRK_01_read.txt`
-holds the book name, the chapter number, and verses 1 to 3, and then ends. All
-sixteen chapters are like that — three to six lines each, 73 lines for the whole
-book.
+possible correction: 'Matthew has words through 7:12, then verse numbers with no
+text after them — the rest of chapter 7 and all of chapters 8–28. Chapters 1–6 and
+every other book in bgg are fine. Possible clue: the last thing before the text
+stops is a footnote at 7:12 whose popup span is opened and never closed
+(`<a href="#FN2" class="notemark"><span class="popup"> <span class="verse" id="V13">`),
+and the footnotes at the foot of those chapters are empty — `<span class="ft"></span>`.'
 
-The HTML edition of the same chapter is complete: `MRK01.htm` carries all 45
-verses.
+<!-- key: bsj MRK readaloud -->
+url: https://ebible.org/Scriptures/bsj_readaloud.zip
 
-Mark is the only book affected. In the same read-aloud edition, Matthew runs 19 to
-50 lines a chapter and Revelation 22 to 31.
+quote(s): 'bsj_071_MRK_01_read.txt holds the book name, the chapter number, and
+verses 1 to 3, then ends.'
 
-**2. Bugun (bgg) — Matthew from 7:13 to the end**
+possible correction: 'Every chapter of Mark in the read-aloud edition stops after
+two or three verses — 73 lines for the whole book. The HTML MRK01.htm has all 45
+verses. Mark is the only book affected; Matthew runs 19–50 lines a chapter and
+Revelation 22–31.'
 
-In the HTML edition, Matthew has text through 7:12. From 7:13 onward the verse
-numbers are all there with no words after them:
+<!-- key: apyNT copr -->
+url: https://ebible.org/apyNT/copr.htm
 
-```
-<span class="verse" id="V13">13&#160;</span> <span class="verse" id="V14">14&#160;</span> …
-```
+quote(s): 'the page opens with the Apalaí title, and the copyright block below it
+names the Khmer Standard Version, the Bible Society in Cambodia, and Khmer
+quotation terms.'
 
-That holds for the rest of chapter 7 and for every chapter from 8 to 28. Chapters
-1 to 6 are complete, and every other book in bgg is complete.
+possible correction: 'the Apalaí New Testament's own terms. Nothing on the page
+states terms for the Apalaí text, so we cannot tell what it is offered on and carry
+only translations whose terms we can read.'
 
-One possible clue: the last thing before the text stops is a footnote marker at
-7:12 whose popup span is opened and never closed.
+<!-- key: eng-lxx2012 PSA118 -->
+<!-- key: eng-uk-lxx2012 PSA118 -->
+url: https://ebible.org/eng-lxx2012/PSA118.htm and https://ebible.org/eng-uk-lxx2012/PSA118.htm
 
-```
-<a href="#FN2" class="notemark"><span class="popup"> <span class="verse" id="V13">
-```
+quote(s): '<span class="verse" id="V43">43&#160;</span>And take not the word of
+truth utterly out of my mouth; for I have hoped in your judgments. So shall I keep
+your law continually, for ever and ever.'
 
-The footnotes at the foot of those chapters are empty too — `<span class="ft"></span>`
-with nothing inside them.
+possible correction: 'a verse 44 marker before "So shall I keep your law
+continually". The markers run 1–43 then 45 onward — there is no id="V44". The words
+are all present; the read-aloud edition of the same psalm gives them as two lines
+and totals 176, matching the psalm. Both editions affected, identically apart from
+"judgments"/"judgements". It is the only psalm in either where the markers skip.'
 
-**3. Apalaí (apyNT) — the copyright page belongs to a different translation**
+<!-- key: engtcent 3JN01 -->
+url: https://ebible.org/engtcent/3JN01.htm
 
-`apyNT/copr.htm` opens with the Apalaí title, and then the copyright block on the
-same page is the Khmer Standard Version's: it names that translation, the Bible
-Society in Cambodia, and Khmer quotation terms. Nothing on the page states terms
-for the Apalaí text itself.
+quote(s): '<span class="verse" id="V14">14&#160;</span>I hope to see yoʋ soon, and
+we will speak face to face.  </div><div class=\'p\'>Peace be with yoʋ. The friends
+greet yoʋ. Greet the friends by name.'
 
-Because of that we cannot tell what the Apalaí New Testament is offered on, and we
-carry only translations whose terms we can read, so it sits unused. A corrected
-page would be enough on its own.
+possible correction: 'a verse 15 marker before "Peace be with yoʋ". That sentence
+is an unnumbered paragraph on the page; the read-aloud edition numbers it as verse
+15 and totals 15. Same shape as the Psalm 118 item above.'
 
-**4. Berean Standard Bible (engbsb) — the heading of Psalm 3**
+<!-- key: englxxup PRO31 -->
+url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
 
-The heading above Psalm 3 reads "A Psalms of David" where every other psalm reads
-"A Psalm of David".
+quote(s): 'PRO31.htm starts at "<span class="verse" id="V10">10&#160;</span>Who
+shall find a virtuous woman?" — there is no verse 1–9. PRO24.htm carries them at
+54–62: "<span class="verse" id="V54">54&#160;</span>My words have been spoken by
+God—". The read-aloud englxxup_021_PRO_31_read.txt opens instead with "My words
+have been spoken by God—the oracular answer of a king, whom his mother instructed."
+and runs 31 verses.'
 
-```
-<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>
-```
+possible correction: 'the two published editions of the same translation put
+Proverbs 31:1–9 in different chapters. eng-Brenton handles the same LXX ordering
+with a note on the page — "See chapter 24 for the content of chapter 30." —
+englxxup has no such note, and no PRO30.htm at all.'
 
-It is the only one. Across the whole book, forty-nine headings begin "A Psalm" and
-this single one begins "A Psalms". It appears the same way on the chapter page
-`PSA003.htm` and on the whole-book page `PSA000.htm`, so the two agree with each
-other and only differ from the rest of the book.
+<!-- key: engbsb PSA003 -->
+url: https://ebible.org/engbsb/PSA003.htm
 
-**5. Brenton Septuagint (eng-lxx2012 and eng-uk-lxx2012) — Psalm 118 is missing its verse 44 marker**
+quote(s): '<div class=\'d\'>A Psalms of David, when he fled from his son Absalom. </div>'
 
-In the HTML edition, Psalm 118 (Psalm 119 in the Hebrew numbering) carries verse
-markers for 1 to 43 and then 45 onward. There is no `id="V44"`.
+possible correction: 'A Psalm of David'. Forty-nine headings in the book begin "A
+Psalm" and this one begins "A Psalms". Same on PSA000.htm, so the two pages agree
+with each other and differ only from the rest of the book. I cannot tell from here
+whether it came from the source text or the publishing.'
 
-The words of verse 44 are not lost — they sit at the end of verse 43's block:
-
-```
-<span class="verse" id="V43">43&#160;</span>And take not the word of truth utterly
-out of my mouth; for I have hoped in your judgments. So shall I keep your law
-continually, for ever and ever.
-```
-
-"So shall I keep your law continually, for ever and ever." is verse 44, and the
-read-aloud edition of the same psalm agrees: it gives those as two separate lines,
-and its 176 verse lines match the psalm's 176 verses. So the two editions of the
-same chapter disagree, and the HTML one is the one a verse short.
-
-Both editions are affected, identically apart from spelling — eng-lxx2012 reads
-"judgments" and eng-uk-lxx2012 "judgements". It is the only psalm in either where
-the markers skip a number.
-
-No reply needed. We pass the affected chapters over rather than show anyone a
-chapter we cannot read, and we will pick them up on their own whenever a corrected
-download appears. That includes Psalm 118 above, so at present neither of those two
-translations shows the longest psalm in the Bible at all. The Psalm 3 heading we
-carry as published, since a translation is not ours to correct.
+We pass affected chapters over rather than show a chapter we cannot read, and pick
+them up whenever a corrected download appears — so at present neither Brenton
+edition shows Psalm 119 at all. The Psalm 3 heading we carry as published, since a
+translation is not ours to correct.
 
 Thank you again for the work.
