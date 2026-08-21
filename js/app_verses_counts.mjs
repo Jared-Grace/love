@@ -1,7 +1,7 @@
 import { app_shared_bar_center_content_pad } from "./app_shared_bar_center_content_pad.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_reply_languages_chosen_default } from "./app_reply_languages_chosen_default.mjs";
+import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_join_plus } from "./list_join_plus.mjs";
@@ -21,7 +21,7 @@ import { app_shared_bible_verses_counts } from "./app_shared_bible_verses_counts
 export async function app_verses_counts(r, hash) {
   arguments_assert(arguments, 2);
   let root = property_get(r, "root");
-  let languages_chosen_default = app_reply_languages_chosen_default();
+  let languages_chosen_default = app_shared_bible_languages_chosen_default();
   let property_name = language_code_key();
   let default_codes = list_map_property(
     languages_chosen_default,
