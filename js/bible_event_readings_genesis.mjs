@@ -5,109 +5,412 @@ export function bible_event_readings_genesis() {
   "AN EVENT MAY CARRY SEVERAL KINDS, and most do. A scene is not one verb. Genesis 22:9-14 is a rescue and a provision and a naming at once, and flattening it to one of the three would be choosing which mechanic may claim it before any mechanic exists.";
   "THE ORDER IS THE BOOK'S ORDER, so this file can be read alongside the four gathered spans without looking anything up.";
   let readings = [
-    { key: "GEN01:1-31,GEN02:1-3", kinds: ["word_fulfilled"] },
-    { key: "GEN02:4-25", kinds: ["provision", "command", "naming", "marriage"] },
-    { key: "GEN03:1-24", kinds: ["temptation", "deception", "transgression", "judgment"] },
-    { key: "GEN04:1-16", kinds: ["offering", "conflict", "transgression", "judgment"] },
-    { key: "GEN04:23-24", kinds: ["boast"] },
-    { key: "GEN04:25-26", kinds: ["birth", "worship"] },
-    { key: "GEN05:21-24", kinds: ["taken"] },
-    { key: "GEN06:1-8", kinds: ["transgression", "judgment"] },
-    { key: "GEN06:9-22", kinds: ["command", "covenant"] },
-    { key: "GEN07:1-24", kinds: ["command", "rescue", "judgment"] },
-    { key: "GEN08:1-19", kinds: ["sign_sought"] },
-    { key: "GEN08:20-22", kinds: ["offering", "covenant"] },
-    { key: "GEN09:1-17", kinds: ["covenant", "blessing_or_curse", "command"] },
-    { key: "GEN09:18-29", kinds: ["transgression", "blessing_or_curse", "death"] },
-    { key: "GEN11:1-9", kinds: ["boast", "judgment"] },
-    { key: "GEN11:31-32", kinds: ["journey", "death"] },
-    { key: "GEN12:1-9", kinds: ["command", "blessing_or_curse", "journey", "offering"] },
-    { key: "GEN12:10-20", kinds: ["deception", "judgment"] },
-    { key: "GEN13:1-13", kinds: ["conflict", "reconciliation"] },
-    { key: "GEN13:14-18", kinds: ["revelation", "blessing_or_curse", "offering"] },
-    { key: "GEN14:1-16", kinds: ["conflict", "rescue"] },
-    { key: "GEN14:17-24", kinds: ["blessing_or_curse", "offering"] },
-    { key: "GEN15:1-21", kinds: ["revelation", "covenant"] },
-    { key: "GEN16:1-16", kinds: ["conflict", "revelation", "naming"] },
-    { key: "GEN17:1-27", kinds: ["covenant", "naming", "command"] },
-    { key: "GEN18:1-15", kinds: ["revelation", "provision"] },
-    { key: "GEN18:16-33", kinds: ["intercession"] },
-    { key: "GEN19:1-29", kinds: ["transgression", "rescue", "judgment"] },
-    { key: "GEN19:30-38", kinds: ["deception", "transgression", "birth"] },
-    { key: "GEN20:1-18", kinds: ["deception", "revelation", "intercession"] },
-    { key: "GEN21:1-7", kinds: ["birth", "word_fulfilled", "naming"] },
-    { key: "GEN21:8-21", kinds: ["conflict", "revelation", "provision"] },
-    { key: "GEN21:22-34", kinds: ["covenant", "naming"] },
-    { key: "GEN22:1-2", kinds: ["command"] },
-    { key: "GEN22:3-8", kinds: ["journey"] },
-    { key: "GEN22:9-14", kinds: ["rescue", "provision", "naming", "offering"] },
-    { key: "GEN22:15-19", kinds: ["covenant", "blessing_or_curse"] },
-    { key: "GEN23:1-20", kinds: ["death"] },
-    { key: "GEN24:1-27", kinds: ["sign_sought", "journey"] },
-    { key: "GEN24:28-61", kinds: ["covenant", "marriage"] },
-    { key: "GEN24:62-67", kinds: ["marriage"] },
-    { key: "GEN25:1-6", kinds: ["inheritance"] },
-    { key: "GEN25:7-11", kinds: ["death"] },
-    { key: "GEN25:19-26", kinds: ["intercession", "revelation", "birth", "naming"] },
-    { key: "GEN25:27-34", kinds: ["inheritance"] },
-    { key: "GEN26:1-6", kinds: ["command", "blessing_or_curse"] },
-    { key: "GEN26:7-11", kinds: ["deception"] },
-    { key: "GEN26:12-22", kinds: ["conflict", "naming"] },
-    { key: "GEN26:23-25", kinds: ["revelation", "offering"] },
-    { key: "GEN26:26-33", kinds: ["covenant", "naming"] },
-    { key: "GEN26:34-35", kinds: ["marriage"] },
-    { key: "GEN27:1-29", kinds: ["deception", "blessing_or_curse", "inheritance"] },
-    { key: "GEN27:30-40", kinds: ["blessing_or_curse", "inheritance"] },
-    { key: "GEN27:41-46", kinds: ["conflict"] },
-    { key: "GEN28:1-9", kinds: ["command", "blessing_or_curse", "marriage"] },
-    { key: "GEN28:10-22", kinds: ["revelation", "covenant", "naming"] },
-    { key: "GEN29:1-14", kinds: ["journey"] },
-    { key: "GEN29:15-30", kinds: ["deception", "marriage"] },
-    { key: "GEN29:31-35,GEN30:1-24", kinds: ["birth", "naming", "conflict"] },
-    { key: "GEN30:25-43", kinds: ["conflict", "provision"] },
-    { key: "GEN31:1-21", kinds: ["revelation", "deception", "journey"] },
-    { key: "GEN31:22-42", kinds: ["conflict"] },
-    { key: "GEN31:43-55,GEN32:1-2", kinds: ["covenant", "naming"] },
-    { key: "GEN32:3-21", kinds: ["intercession", "reconciliation"] },
-    { key: "GEN32:22-32", kinds: ["conflict", "blessing_or_curse", "naming"] },
-    { key: "GEN33:1-17", kinds: ["reconciliation"] },
-    { key: "GEN33:18-20", kinds: ["offering", "naming"] },
-    { key: "GEN34:1-31", kinds: ["transgression", "deception", "conflict"] },
-    { key: "GEN35:1-15", kinds: ["command", "revelation", "offering", "naming"] },
-    { key: "GEN35:16-20", kinds: ["birth", "death", "naming"] },
-    { key: "GEN35:21-22", kinds: ["transgression"] },
-    { key: "GEN35:27-29", kinds: ["death"] },
-    { key: "GEN37:1-11", kinds: ["revelation", "conflict"] },
-    { key: "GEN37:12-36", kinds: ["conflict", "deception"] },
-    { key: "GEN38:1-11", kinds: ["marriage", "transgression", "judgment"] },
-    { key: "GEN38:12-30", kinds: ["deception", "birth", "naming"] },
-    { key: "GEN39:1-6", kinds: ["blessing_or_curse"] },
-    { key: "GEN39:7-20", kinds: ["temptation", "deception"] },
-    { key: "GEN39:21-23", kinds: ["blessing_or_curse"] },
-    { key: "GEN40:1-23", kinds: ["revelation", "word_fulfilled"] },
-    { key: "GEN41:1-36", kinds: ["revelation"] },
-    { key: "GEN41:37-57", kinds: ["provision", "word_fulfilled"] },
-    { key: "GEN42:1-25", kinds: ["deception", "word_fulfilled"] },
-    { key: "GEN42:26-38", kinds: ["deception", "conflict"] },
-    { key: "GEN43:1-15", kinds: ["covenant", "journey"] },
-    { key: "GEN43:16-34", kinds: ["provision"] },
-    { key: "GEN44:1-17", kinds: ["deception"] },
-    { key: "GEN44:18-34", kinds: ["intercession"] },
-    { key: "GEN45:1-15", kinds: ["revelation", "reconciliation"] },
-    { key: "GEN45:16-28", kinds: ["provision"] },
-    { key: "GEN46:1-7", kinds: ["revelation", "offering", "journey"] },
-    { key: "GEN46:28-34", kinds: ["reconciliation"] },
-    { key: "GEN47:1-12", kinds: ["blessing_or_curse", "provision"] },
-    { key: "GEN47:13-26", kinds: ["provision"] },
-    { key: "GEN47:27-31", kinds: ["covenant"] },
-    { key: "GEN48:1-22", kinds: ["blessing_or_curse", "inheritance"] },
-    { key: "GEN49:1-28", kinds: ["blessing_or_curse", "inheritance"] },
-    { key: "GEN49:29-33", kinds: ["covenant", "death"] },
-    { key: "GEN50:1-14", kinds: ["death", "journey"] },
-    { key: "GEN50:15-21", kinds: ["reconciliation", "revelation"] },
-    { key: "GEN50:22-26", kinds: ["covenant", "death"] },
+    {
+      key: "GEN01:1-31,GEN02:1-3",
+      kinds: ["word_fulfilled"],
+    },
+    {
+      key: "GEN02:4-25",
+      kinds: ["provision", "command", "naming", "marriage"],
+    },
+    {
+      key: "GEN03:1-24",
+      kinds: ["temptation", "deception", "transgression", "judgment"],
+    },
+    {
+      key: "GEN04:1-16",
+      kinds: ["offering", "conflict", "transgression", "judgment"],
+    },
+    {
+      key: "GEN04:23-24",
+      kinds: ["boast"],
+    },
+    {
+      key: "GEN04:25-26",
+      kinds: ["birth", "worship"],
+    },
+    {
+      key: "GEN05:21-24",
+      kinds: ["taken"],
+    },
+    {
+      key: "GEN06:1-8",
+      kinds: ["transgression", "judgment"],
+    },
+    {
+      key: "GEN06:9-22",
+      kinds: ["command", "covenant"],
+    },
+    {
+      key: "GEN07:1-24",
+      kinds: ["command", "rescue", "judgment"],
+    },
+    {
+      key: "GEN08:1-19",
+      kinds: ["sign_sought"],
+    },
+    {
+      key: "GEN08:20-22",
+      kinds: ["offering", "covenant"],
+    },
+    {
+      key: "GEN09:1-17",
+      kinds: ["covenant", "blessing_or_curse", "command"],
+    },
+    {
+      key: "GEN09:18-29",
+      kinds: ["transgression", "blessing_or_curse", "death"],
+    },
+    {
+      key: "GEN11:1-9",
+      kinds: ["boast", "judgment"],
+    },
+    {
+      key: "GEN11:31-32",
+      kinds: ["journey", "death"],
+    },
+    {
+      key: "GEN12:1-9",
+      kinds: ["command", "blessing_or_curse", "journey", "offering"],
+    },
+    {
+      key: "GEN12:10-20",
+      kinds: ["deception", "judgment"],
+    },
+    {
+      key: "GEN13:1-13",
+      kinds: ["conflict", "reconciliation"],
+    },
+    {
+      key: "GEN13:14-18",
+      kinds: ["revelation", "blessing_or_curse", "offering"],
+    },
+    {
+      key: "GEN14:1-16",
+      kinds: ["conflict", "rescue"],
+    },
+    {
+      key: "GEN14:17-24",
+      kinds: ["blessing_or_curse", "offering"],
+    },
+    {
+      key: "GEN15:1-21",
+      kinds: ["revelation", "covenant"],
+    },
+    {
+      key: "GEN16:1-16",
+      kinds: ["conflict", "revelation", "naming"],
+    },
+    {
+      key: "GEN17:1-27",
+      kinds: ["covenant", "naming", "command"],
+    },
+    {
+      key: "GEN18:1-15",
+      kinds: ["revelation", "provision"],
+    },
+    {
+      key: "GEN18:16-33",
+      kinds: ["intercession"],
+    },
+    {
+      key: "GEN19:1-29",
+      kinds: ["transgression", "rescue", "judgment"],
+    },
+    {
+      key: "GEN19:30-38",
+      kinds: ["deception", "transgression", "birth"],
+    },
+    {
+      key: "GEN20:1-18",
+      kinds: ["deception", "revelation", "intercession"],
+    },
+    {
+      key: "GEN21:1-7",
+      kinds: ["birth", "word_fulfilled", "naming"],
+    },
+    {
+      key: "GEN21:8-21",
+      kinds: ["conflict", "revelation", "provision"],
+    },
+    {
+      key: "GEN21:22-34",
+      kinds: ["covenant", "naming"],
+    },
+    {
+      key: "GEN22:1-2",
+      kinds: ["command"],
+    },
+    {
+      key: "GEN22:3-8",
+      kinds: ["journey"],
+    },
+    {
+      key: "GEN22:9-14",
+      kinds: ["rescue", "provision", "naming", "offering"],
+    },
+    {
+      key: "GEN22:15-19",
+      kinds: ["covenant", "blessing_or_curse"],
+    },
+    {
+      key: "GEN23:1-20",
+      kinds: ["death"],
+    },
+    {
+      key: "GEN24:1-27",
+      kinds: ["sign_sought", "journey"],
+    },
+    {
+      key: "GEN24:28-61",
+      kinds: ["covenant", "marriage"],
+    },
+    {
+      key: "GEN24:62-67",
+      kinds: ["marriage"],
+    },
+    {
+      key: "GEN25:1-6",
+      kinds: ["inheritance"],
+    },
+    {
+      key: "GEN25:7-11",
+      kinds: ["death"],
+    },
+    {
+      key: "GEN25:19-26",
+      kinds: ["intercession", "revelation", "birth", "naming"],
+    },
+    {
+      key: "GEN25:27-34",
+      kinds: ["inheritance"],
+    },
+    {
+      key: "GEN26:1-6",
+      kinds: ["command", "blessing_or_curse"],
+    },
+    {
+      key: "GEN26:7-11",
+      kinds: ["deception"],
+    },
+    {
+      key: "GEN26:12-22",
+      kinds: ["conflict", "naming"],
+    },
+    {
+      key: "GEN26:23-25",
+      kinds: ["revelation", "offering"],
+    },
+    {
+      key: "GEN26:26-33",
+      kinds: ["covenant", "naming"],
+    },
+    {
+      key: "GEN26:34-35",
+      kinds: ["marriage"],
+    },
+    {
+      key: "GEN27:1-29",
+      kinds: ["deception", "blessing_or_curse", "inheritance"],
+    },
+    {
+      key: "GEN27:30-40",
+      kinds: ["blessing_or_curse", "inheritance"],
+    },
+    {
+      key: "GEN27:41-46",
+      kinds: ["conflict"],
+    },
+    {
+      key: "GEN28:1-9",
+      kinds: ["command", "blessing_or_curse", "marriage"],
+    },
+    {
+      key: "GEN28:10-22",
+      kinds: ["revelation", "covenant", "naming"],
+    },
+    {
+      key: "GEN29:1-14",
+      kinds: ["journey"],
+    },
+    {
+      key: "GEN29:15-30",
+      kinds: ["deception", "marriage"],
+    },
+    {
+      key: "GEN29:31-35,GEN30:1-24",
+      kinds: ["birth", "naming", "conflict"],
+    },
+    {
+      key: "GEN30:25-43",
+      kinds: ["conflict", "provision"],
+    },
+    {
+      key: "GEN31:1-21",
+      kinds: ["revelation", "deception", "journey"],
+    },
+    {
+      key: "GEN31:22-42",
+      kinds: ["conflict"],
+    },
+    {
+      key: "GEN31:43-55,GEN32:1-2",
+      kinds: ["covenant", "naming"],
+    },
+    {
+      key: "GEN32:3-21",
+      kinds: ["intercession", "reconciliation"],
+    },
+    {
+      key: "GEN32:22-32",
+      kinds: ["conflict", "blessing_or_curse", "naming"],
+    },
+    {
+      key: "GEN33:1-17",
+      kinds: ["reconciliation"],
+    },
+    {
+      key: "GEN33:18-20",
+      kinds: ["offering", "naming"],
+    },
+    {
+      key: "GEN34:1-31",
+      kinds: ["transgression", "deception", "conflict"],
+    },
+    {
+      key: "GEN35:1-15",
+      kinds: ["command", "revelation", "offering", "naming"],
+    },
+    {
+      key: "GEN35:16-20",
+      kinds: ["birth", "death", "naming"],
+    },
+    {
+      key: "GEN35:21-22",
+      kinds: ["transgression"],
+    },
+    {
+      key: "GEN35:27-29",
+      kinds: ["death"],
+    },
+    {
+      key: "GEN37:1-11",
+      kinds: ["revelation", "conflict"],
+    },
+    {
+      key: "GEN37:12-36",
+      kinds: ["conflict", "deception"],
+    },
+    {
+      key: "GEN38:1-11",
+      kinds: ["marriage", "transgression", "judgment"],
+    },
+    {
+      key: "GEN38:12-30",
+      kinds: ["deception", "birth", "naming"],
+    },
+    {
+      key: "GEN39:1-6",
+      kinds: ["blessing_or_curse"],
+    },
+    {
+      key: "GEN39:7-20",
+      kinds: ["temptation", "deception"],
+    },
+    {
+      key: "GEN39:21-23",
+      kinds: ["blessing_or_curse"],
+    },
+    {
+      key: "GEN40:1-23",
+      kinds: ["revelation", "word_fulfilled"],
+    },
+    {
+      key: "GEN41:1-36",
+      kinds: ["revelation"],
+    },
+    {
+      key: "GEN41:37-57",
+      kinds: ["provision", "word_fulfilled"],
+    },
+    {
+      key: "GEN42:1-25",
+      kinds: ["deception", "word_fulfilled"],
+    },
+    {
+      key: "GEN42:26-38",
+      kinds: ["deception", "conflict"],
+    },
+    {
+      key: "GEN43:1-15",
+      kinds: ["covenant", "journey"],
+    },
+    {
+      key: "GEN43:16-34",
+      kinds: ["provision"],
+    },
+    {
+      key: "GEN44:1-17",
+      kinds: ["deception"],
+    },
+    {
+      key: "GEN44:18-34",
+      kinds: ["intercession"],
+    },
+    {
+      key: "GEN45:1-15",
+      kinds: ["revelation", "reconciliation"],
+    },
+    {
+      key: "GEN45:16-28",
+      kinds: ["provision"],
+    },
+    {
+      key: "GEN46:1-7",
+      kinds: ["revelation", "offering", "journey"],
+    },
+    {
+      key: "GEN46:28-34",
+      kinds: ["reconciliation"],
+    },
+    {
+      key: "GEN47:1-12",
+      kinds: ["blessing_or_curse", "provision"],
+    },
+    {
+      key: "GEN47:13-26",
+      kinds: ["provision"],
+    },
+    {
+      key: "GEN47:27-31",
+      kinds: ["covenant"],
+    },
+    {
+      key: "GEN48:1-22",
+      kinds: ["blessing_or_curse", "inheritance"],
+    },
+    {
+      key: "GEN49:1-28",
+      kinds: ["blessing_or_curse", "inheritance"],
+    },
+    {
+      key: "GEN49:29-33",
+      kinds: ["covenant", "death"],
+    },
+    {
+      key: "GEN50:1-14",
+      kinds: ["death", "journey"],
+    },
+    {
+      key: "GEN50:15-21",
+      kinds: ["reconciliation", "revelation"],
+    },
+    {
+      key: "GEN50:22-26",
+      kinds: ["covenant", "death"],
+    },
   ];
-  "★ WHERE THE READING STRAINED, named so nobody has to rediscover it. GEN05:21-24 needed a kind of its own: Enoch neither dies nor is born, and every other word in the vocabulary was a near-enough word. GEN11:1-9 is filed under boast because what the builders SAY is let us make a name for ourselves, which is the same act Lamech commits in one man's mouth - but nobody strikes anybody, so it sits oddly beside the other boast. GEN35:21-22 is a transgression with no answer given for fourteen chapters, until GEN49:4; keeping the two apart is what the two kinds are for.";
-  "GENESIS 38 IS FILED AS ITSELF and not as an interruption of Joseph's story. The book puts it where it is; a reading that called it a digression would be judging the arrangement rather than the passage.";
+  ("★ WHERE THE READING STRAINED, named so nobody has to rediscover it. GEN05:21-24 needed a kind of its own: Enoch neither dies nor is born, and every other word in the vocabulary was a near-enough word. GEN11:1-9 is filed under boast because what the builders SAY is let us make a name for ourselves, which is the same act Lamech commits in one man's mouth - but nobody strikes anybody, so it sits oddly beside the other boast. GEN35:21-22 is a transgression with no answer given for fourteen chapters, until GEN49:4; keeping the two apart is what the two kinds are for.");
+  ("GENESIS 38 IS FILED AS ITSELF and not as an interruption of Joseph's story. The book puts it where it is; a reading that called it a digression would be judging the arrangement rather than the passage.");
   return readings;
 }

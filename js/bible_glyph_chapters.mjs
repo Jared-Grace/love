@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_jdg13 } from "./bible_glyph_chapter_jdg13.mjs";
 import { bible_glyph_chapter_exo20 } from "./bible_glyph_chapter_exo20.mjs";
 import { bible_glyph_chapter_ezk33 } from "./bible_glyph_chapter_ezk33.mjs";
 import { bible_glyph_chapter_deu30 } from "./bible_glyph_chapter_deu30.mjs";
@@ -33,7 +34,9 @@ export function bible_glyph_chapters() {
   "AND THE COVENANT NAME WAS HALF BLANK UNTIL THIS CHAPTER LOOKED. The four letters carry two Strong's numbers, and only the first was seated - so wherever the prophets write the Lord GOD, the crown drew and the name beside it stayed in English, three hundred and six times across the testament. Eleven chapters went by without it surfacing because none of them came from the prophets, which is where that phrase lives. A table keyed by number can go blank in a way no survey measures: those three hundred and six words were counted as undrawable vocabulary, which was true of the number and false of the name.";
   "THE THIRTEENTH IS THE FIRST NOT TAKEN OFF THE TOP OF THE SURVEY, and the reason is the only reason that should ever override a measurement here. Every chapter before it was the highest-scoring one available; the twentieth of Exodus was fourth. It is the Ten Commandments, which is the one passage a stranger who has never opened a Bible has still met - so it is the only chapter where a reader with no shared language can be shown the pictures and checked against something they already know. The test this whole project is waiting on needs a chapter like that to exist, and no amount of coverage substitutes for it.";
   "AND IT IS THE CHAPTER WHERE THE TWO REFUSALS COST THE MOST, WHICH IS WHY NEITHER SURVIVED IT. The blessing was blank in the verse that gives the Sabbath its reason and the altar in the three verses the chapter ends on; both had been measured, wanted, and left undrawn on purpose. Writing them out where they hurt is what bought them. Barak became the first word here drawn by two pictures rather than one - the speech and the good sign, to speak good over somebody - and the altar became the first word seated with no picture at all, drawing its own English until somebody makes one. A chapter is a better instrument than a survey for finding what a table is missing, because a survey counts a gap and a chapter makes you read it.";
-  "Thirteen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE FOURTEENTH IS THE FIRST STORY, and thirteen chapters went by without one. Every chapter above it is a psalm, a law, a letter or a prophecy - forms whose sentences could be reordered without a reader losing much. The claim this Bible makes is that somebody with no shared language can follow it, and a psalm only ever hands such a reader a mood. A narrative hands them events in an order, so a reader who takes nothing from a line but the angel, the woman and the fire has still learnt what happened. The strongest form of the claim had never been attempted until the thirteenth of Judges.";
+  "AND IT IS THE FIRST TIME A HIGHER SHARE WAS TURNED DOWN FOR A REASON THE SURVEY CANNOT SEE. The twenty sixth of Jeremiah measured slightly higher and is a trial, whose cast is seven proper names - and a proper name is never drawn here, so a stranger meets long blank runs and cannot tell which man is speaking. The share was real and the reading would have been unusable. This chapter's cast is a man, his wife, an angel and a son, and none of them is named until the last verse. The survey counts drawable words; it cannot count whether the people in the story are the kind a picture can draw, and in narrative that is the thing that decides.";
+  "Fourteen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -50,6 +53,7 @@ export function bible_glyph_chapters() {
   let eleventh = bible_glyph_chapter_deu30();
   let twelfth = bible_glyph_chapter_ezk33();
   let thirteenth = bible_glyph_chapter_exo20();
+  let fourteenth = bible_glyph_chapter_jdg13();
   let chapters = [
     first,
     second,
@@ -64,6 +68,7 @@ export function bible_glyph_chapters() {
     eleventh,
     twelfth,
     thirteenth,
+    fourteenth,
   ];
   return chapters;
 }
