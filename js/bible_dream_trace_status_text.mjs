@@ -1,3 +1,5 @@
+import { greater_than } from "./greater_than.mjs";
+import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
 export function bible_dream_trace_status_text(states, told) {
@@ -15,8 +17,8 @@ export function bible_dream_trace_status_text(states, told) {
   each(states, each_state);
   let text = done + " of " + total + " strokes traced, " + slips + " slips";
   let said_count = list_size(told);
-  if (said_count > 0) {
-    let last = told[said_count - 1];
+  if (greater_than(said_count, 0)) {
+    let last = told[subtract(said_count, 1)];
     text = text + " — " + last;
   }
   return text;
