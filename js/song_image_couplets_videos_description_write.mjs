@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { youtube_channel_uploads_playlist } from "./youtube_channel_uploads_playlist.mjs";
+import { youtube_playlist_videos } from "./youtube_playlist_videos.mjs";
+import { song_image_couplets_title_verse } from "./song_image_couplets_title_verse.mjs";
+import { song_image_couplets_description } from "./song_image_couplets_description.mjs";
+import { youtube_video_record } from "./youtube_video_record.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { youtube_video_description_write } from "./youtube_video_description_write.mjs";
+import { equal } from "./equal.mjs";
 export async function song_image_couplets_videos_description_write(channel_id) {
   "$plain channel_id";
   "Puts the hymn's own words, and under them the passages those words rest on, beneath every song of the hymn on a channel - and says which songs it had to change and which were already carrying it.";
@@ -27,6 +37,9 @@ export async function song_image_couplets_videos_description_write(channel_id) {
     await youtube_video_description_write(video.video_id, description);
     list_add(written, video.title);
   }
-  let r = { written: written, already: already };
+  let r = {
+    written: written,
+    already: already,
+  };
   return r;
 }
