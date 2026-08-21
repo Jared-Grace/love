@@ -19,7 +19,8 @@ export function psalms_videos_descriptions_remaining_of(reading) {
     let video_id = property_get(entry, "video_id");
     return video_id;
   }
-  let mislabelled = list_map(psalms_videos_verse_mislabelled(), lambda$id);
+  let list = psalms_videos_verse_mislabelled();
+  let mislabelled = list_map(list, lambda$id);
   let remaining = [];
   for (let paired of read) {
     let same = equal(paired.live, paired.one.description);
