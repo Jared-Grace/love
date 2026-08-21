@@ -26,7 +26,7 @@
   "qa_gates -> app_g_day_fraction_check",
   "qa_gates -> app_g_day_guide_pick_check",
   "qa_gates -> app_g_day_line_corner_check",
-  "qa_gates -> app_g_map_pad_check",
+  "qa_gates -> app_shared_game_map_pad_check",
   "qa_gates -> app_g_player_walk_cases_gate_run",
   "qa_gates -> app_original_bible_gloss_lexicons_named_gate_run",
   "qa_gates -> app_original_bible_gloss_misaligned_gate_run",
