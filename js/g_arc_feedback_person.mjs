@@ -1,3 +1,8 @@
+import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { equal } from "./equal.mjs";
 export async function g_arc_feedback_person(chapter_code, index) {
   "Every note standing against one person's arc, whoever filed it, in the order they were filed.";
   "$plain chapter_code";

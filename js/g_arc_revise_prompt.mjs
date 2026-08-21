@@ -1,3 +1,20 @@
+import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { property_get } from "./property_get.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { g_arc_feedback_person } from "./g_arc_feedback_person.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_join_dot } from "./list_join_dot.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { list_add } from "./list_add.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { add_1 } from "./add_1.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function g_arc_revise_prompt(chapter_code, index) {
   "The whole of one written person laid out line by line with every standing note set against the line it faults, asking for those lines back and nothing else.";
   "$plain chapter_code";
@@ -32,27 +49,14 @@ export async function g_arc_revise_prompt(chapter_code, index) {
   });
   let lines = g_arc_lines_addressed(found);
   let said = [];
-  list_add(
-    said,
+  list_add_multiple(said, [
     "Below is one person from a conversation game, written out line by line. Some lines have a note under them saying what is wrong with that line.",
-  );
-  list_add(
-    said,
     "Write those lines again. Write nothing else. A line with no note under it is already right and must not be touched.",
-  );
-  list_add(
-    said,
     "Keep the person's voice exactly as it is. The notes ask about words and about clearness, never about who this person is or how they talk.",
-  );
-  list_add(
-    said,
     "Do not add a turn and do not take one away. Every note is addressed by the number beside a line, so a line that moves takes every other note with it.",
-  );
-  list_add(
-    said,
     "Answer as a JSON object. Every key is the number and the field name joined by a full stop, exactly as they are written below - 6.before, 0.summary. Every value is the whole line written again.",
-  );
-  list_add(said, "");
+    "",
+  ]);
   let revising = 0;
   for (let line of lines) {
     let number = property_get(line, "number");
@@ -66,13 +70,14 @@ export async function g_arc_revise_prompt(chapter_code, index) {
       let note_turn = property_get(note, "turn");
       let note_field = property_get(note, "field");
       let turn_same = equal(note_turn, number);
-      let field_same = equal(note_field, field);
-      let both = and(turn_same, field_same);
-      if (both) {
-        faulted = true;
-        let wrong = property_get(note, "note");
-        let marked = text_combine("    WRONG: ", wrong);
-        list_add(said, marked);
+      if (turn_same) {
+        let field_same = equal(note_field, field);
+        if (field_same) {
+          faulted = true;
+          let wrong = property_get(note, "note");
+          let marked = text_combine("    WRONG: ", wrong);
+          list_add(said, marked);
+        }
       }
     }
     if (faulted) {

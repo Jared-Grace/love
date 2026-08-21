@@ -11,8 +11,8 @@ export async function functions_reachable_names(f_names) {
   let names = text_split_comma(f_names);
   let reached = [];
   for (let f_name of names) {
-    let each = await function_reachable_names(f_name);
-    reached = list_concat_unique(reached, each);
+    let from_one = await function_reachable_names(f_name);
+    reached = list_concat_unique(reached, from_one);
   }
   return reached;
 }
