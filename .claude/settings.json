@@ -1950,6 +1950,7 @@
       "Bash(node scripts/ai.mjs js_parse_expression_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs js_call_arguments_get_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs js_parse_statement_cases_gate_run:*)",
+      "Bash(node scripts/ai.mjs ebible_chapter_verses_storage_outcome:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -3800,6 +3801,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args js_parse_expression_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args js_call_arguments_get_cases_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args js_parse_statement_cases_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args ebible_chapter_verses_storage_outcome:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -5649,6 +5651,7 @@
       "Bash(node scripts/aig.mjs js_parse_expression_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs js_call_arguments_get_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs js_parse_statement_cases_gate_run:*)",
+      "Bash(node scripts/aig.mjs ebible_chapter_verses_storage_outcome:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -7498,7 +7501,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args js_function_declaration_to_block_body_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_parse_expression_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args js_call_arguments_get_cases_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args js_parse_statement_cases_gate_run:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args js_parse_statement_cases_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_chapter_verses_storage_outcome:*)"
     ],
     "defaultMode": "acceptEdits"
   },

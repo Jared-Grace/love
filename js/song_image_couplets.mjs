@@ -179,8 +179,9 @@ export function song_image_couplets() {
       verse: 2,
       first: "in agony",
       second: "'til all was done",
-      symbol: "An olive press",
-      ref: "Gethsemane means oil press",
+      symbol:
+        "An olive press of the oldest kind, a square vat of plain grey stone with a heavy plain beam of brown wood pressing straight down into it from above, and three or four large dark red drops falling from the vat's lip",
+      ref: "Gethsemane means oil press, Luke 22:44",
       same_as: 0,
     },
     {
