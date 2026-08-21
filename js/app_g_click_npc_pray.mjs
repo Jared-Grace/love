@@ -1,5 +1,5 @@
 import { app_g_container_text } from "./app_g_container_text.mjs";
-import { app_g_p_text } from "./app_g_p_text.mjs";
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
@@ -21,7 +21,7 @@ export async function app_g_click_npc_pray(
   );
   let conversed = property_get(player, "conversed");
   if (not(conversed)) {
-    app_g_p_text(
+    app_shared_game_p_text(
       container,
       " To pray, tap or click on yourself (You glow with white)",
     );
