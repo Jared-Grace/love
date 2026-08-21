@@ -1,3 +1,4 @@
+import { list_join_space } from "./list_join_space.mjs";
 import { g_arc_write } from "./g_arc_write.mjs";
 import { folder_user_storage_function_path } from "./folder_user_storage_function_path.mjs";
 import { folder_exists } from "./folder_exists.mjs";
@@ -14,9 +15,12 @@ import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function g_arc_words_uncommon() {
-  "Every word that has been said once and only once across every arc written so far, with the person who said it - the candidates for a word a young reader will not have.";
+  "The two shapes a word a young reader will not have shows up in, taken over every arc written so far, each one carrying the person who said it - a word said once in the whole corpus, and a word said several times by one person and by nobody else.";
   "IT IS A REPORT AND NOT A GATE, deliberately. Whether a word is too hard is a question about English rather than about this repo, and answering it properly needs a list of the words a child of the settled reading age already has. There is no such list here, so a gate built on this would be ratcheting against a signal it cannot justify - and a check that fails for a reason nobody can state gets switched off rather than fixed.";
   "USED ONCE IS THE ONE THRESHOLD THAT IS NOT A CHOICE. Any other cut - fewer than three, fewer than five - is a number somebody picked, right for one size of corpus and quietly wrong for the next. The bottom of the distribution is where it is whatever the corpus does.";
+  "ONCE-SAID CANNOT SEE A WORD SOMEBODY REPEATS, and that is most of the hard ones. A person's trouble is the thing they keep coming back to, so the word for it is said in the line that opens the arc and again every time the trouble is answered - rites was said three times by the dyer, was the hardest word in the chapter, and sat below this report's floor the whole time. It was found by a reader, which is the one way it could have been found.";
+  "SO THE SECOND SHAPE IS SAID MORE THAN ONCE AND BY ONE PERSON ONLY. Both halves are extremes of the distribution rather than numbers somebody picked: more than once is the complement of the first list, and one speaker is the fewest a said word can have. A word everybody uses is the language; a word one person keeps using is that person's own, and a person's own word is exactly where a translated trade or a household religion puts a word no child has met.";
+  "It says nothing about whether the word is HARD. Every arc has its own subject and so has its own words for it, and most of what comes back is ordinary - wool, dye, husband. The list is short enough to read, which is the whole of what a report owes; a gate here would be ratcheting against the fact that people talk about different things.";
   "IT SHARPENS AS MORE IS WRITTEN, which is why it reads every chapter rather than taking one. With a single chapter written, once-said catches roughly ten ordinary words for every hard one - laughed, smiling, waiting sit beside rite and unaccounted. With twenty chapters the ordinary words have all been said elsewhere and stop appearing, while a genuinely rare word still will not have been.";
   "COUNTS THE LOOKING AND HANDS THE COUNT BACK. Arcs live in storage and storage is not in the repo, so a machine that has written none answers nothing, and nothing is the right answer rather than a broken one.";
   let f = g_arc_write;
@@ -68,20 +72,36 @@ export async function g_arc_words_uncommon() {
   }
   let counts = list_tally(said);
   let once = [];
+  let own = [];
   let words = 0;
   for (let word of object_property_names(counts)) {
     words = add_1(words);
     let uses = property_get(counts, word);
+    let home = property_get(homes, word);
+    let chapter_code = property_get(home, "chapter_code");
+    let index = property_get(home, "index");
     let alone = equal(uses, 1);
     if (alone) {
-      let home = property_get(homes, word);
-      let chapter_code = property_get(home, "chapter_code");
-      let index = property_get(home, "index");
       list_add(once, {
         word,
         chapter_code,
         index,
       });
+    }
+    let again = not(alone);
+    if (again) {
+      let heard = property_get(mouths, word);
+      let list = object_property_names(heard);
+      let speakers = list_size(list);
+      let only = equal(speakers, 1);
+      if (only) {
+        list_add(own, {
+          word,
+          uses,
+          chapter_code,
+          index,
+        });
+      }
     }
   }
   let r = {
@@ -90,6 +110,7 @@ export async function g_arc_words_uncommon() {
     said: list_size(said),
     words,
     once,
+    own,
   };
   return r;
 }
