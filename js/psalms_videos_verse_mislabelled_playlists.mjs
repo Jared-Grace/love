@@ -2,9 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_videos_mislabelled_playlist_moves } from "./psalms_videos_mislabelled_playlist_moves.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_contains } from "./list_contains.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
 export async function psalms_videos_verse_mislabelled_playlists(channel_id) {
   "$plain channel_id";
   "Every chapter playlist a wrongly named song touched, whether it is the one the song sat in or the one it belongs to, each named once.";
@@ -21,8 +20,8 @@ export async function psalms_videos_verse_mislabelled_playlists(channel_id) {
       if (missing) {
         continue;
       }
-      let known = list_contains(playlist_ids, playlist_id);
-      if (not(known)) {
+      let fresh = list_includes_not(playlist_ids, playlist_id);
+      if (fresh) {
         list_add(playlist_ids, playlist_id);
       }
     }
