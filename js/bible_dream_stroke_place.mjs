@@ -7,7 +7,8 @@ import { app_shared_color_white } from "./app_shared_color_white.mjs";
 export function bible_dream_stroke_place(drawing, stroke) {
   "Draw one stroke of a dream twice over - a wide faint one showing where it goes, and a bright thin one hidden until it is traced - and hand back everything a trace of it will need.";
   "The faint one IS the corridor. It is drawn wide rather than described in words because a player has to be able to see how much room they have before they start moving, and a rule that only announces itself by being broken is not a rule anybody can play against.";
-  "The bright one is drawn whole and then hidden by a dash as long as itself, so that revealing it is a matter of moving one number rather than of building a new path out of the part traced so far. What a player sees appear is exactly the shape that was always there, which is the point of the whole palette: no move adds a line the passage did not give.";
+  "The bright one is drawn whole and then hidden entirely by a dash as long as itself, so that revealing it is a matter of saying which parts to show rather than of building a new path out of what has been traced so far. What a player sees appear is exactly the shape that was always there, which is the point of the whole palette: no move adds a line the passage did not give.";
+  "The marks start out all false and there is one for every sample, because a stroke may be begun anywhere along itself and drawn either way, so what has been covered can be several pieces at once and only a mark per sample can say that.";
   "It is placed by moving the whole pair rather than by redrawing the shape at its position, so the pointer only ever has to be shifted by the offset to be compared against the samples.";
   let group = html_element_svg(drawing, "g");
   let moved = "translate(" + stroke.x + "," + stroke.y + ")";
