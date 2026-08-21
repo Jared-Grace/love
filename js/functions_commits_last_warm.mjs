@@ -13,7 +13,6 @@ import { null_is } from "./null_is.mjs";
 import { path_join } from "./path_join.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-
 export async function functions_commits_last_warm(f_names) {
   "$plain f_names";
   "Answers the last-commit question for all of these functions at once by reading each history once, and puts the answers where the one-at-a-time question looks.";
