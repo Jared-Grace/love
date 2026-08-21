@@ -1,3 +1,4 @@
+import { bible_dream_hand_taper } from "./bible_dream_hand_taper.mjs";
 import { bible_dream_stroke_stray_squared } from "./bible_dream_stroke_stray_squared.mjs";
 import { bible_dream_hand_fade_far } from "./bible_dream_hand_fade_far.mjs";
 import { bible_dream_corridor_tolerance_squared } from "./bible_dream_corridor_tolerance_squared.mjs";
@@ -19,6 +20,7 @@ export function bible_dream_stroke_hand_step(state, at) {
   let stray_squared = bible_dream_stroke_stray_squared(state, near);
   let far = bible_dream_hand_fade_far();
   let nearness = bible_dream_hand_nearness(stray_squared, far);
-  bible_dream_hand_mark_add(state, near, nearness);
+  let taper = bible_dream_hand_taper(stray_squared);
+  bible_dream_hand_mark_add(state, near, nearness, taper);
   bible_dream_stroke_ink_show(state);
 }
