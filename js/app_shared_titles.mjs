@@ -8,6 +8,7 @@ export function app_shared_titles() {
     verses: "Verses - encouraging Bible verses to share",
     code: "Code - learn to program one step at a time",
     replace: "Replace - turn one row of symbols into another",
+    music: "Music - the words of the songs, and the Scripture behind them",
   };
   return r;
 }
