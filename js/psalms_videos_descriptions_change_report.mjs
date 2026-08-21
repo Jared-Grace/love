@@ -10,21 +10,21 @@ export async function psalms_videos_descriptions_change_report() {
   let right = 0;
   let empty = 0;
   let carrying = [];
-  for (let each of read) {
-    let same = equal(each.live, each.one.description);
+  for (let paired of read) {
+    let same = equal(paired.live, paired.one.description);
     if (same) {
       right = right + 1;
       continue;
     }
-    let nothing = equal(each.live, "") || equal(each.live, null);
+    let nothing = equal(paired.live, "") || equal(paired.live, null);
     if (nothing) {
       empty = empty + 1;
       continue;
     }
     carrying.push({
-      video_id: each.one.video_id,
-      title: each.one.title,
-      live: each.live,
+      video_id: paired.one.video_id,
+      title: paired.one.title,
+      live: paired.live,
     });
   }
   let r = {
