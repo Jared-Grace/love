@@ -1,7 +1,6 @@
+import { song_image_couplets_description_of } from "./song_image_couplets_description_of.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { song_image_couplets_lyrics } from "./song_image_couplets_lyrics.mjs";
 import { song_image_couplets_scripture } from "./song_image_couplets_scripture.mjs";
-import { list_join_newline_2 } from "./list_join_newline_2.mjs";
 export async function song_image_couplets_description(verse_number) {
   "$plain verse_number";
   "what goes under a video of this hymn: the words it sings, then a line saying what follows, then the passages those words rest on - for one verse, or for the whole hymn when the number is 0";
