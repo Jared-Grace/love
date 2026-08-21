@@ -4,7 +4,7 @@ import { youtube_playlist_item_add } from "./youtube_playlist_item_add.mjs";
 import { youtube_playlist_item_remove } from "./youtube_playlist_item_remove.mjs";
 import { psalms_playlist_items_position } from "./psalms_playlist_items_position.mjs";
 import { psalms_title_passage } from "./psalms_title_passage.mjs";
-import { list_find_property } from "./list_find_property.mjs";
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 export async function psalms_video_playlist_move(
@@ -22,7 +22,7 @@ export async function psalms_video_playlist_move(
   "A song already gone from the playlist it was to leave is left entirely alone. That is what an earlier run of this looks like, and doing the work again would put a second copy into the playlist it was to join.";
   arguments_assert(arguments, 3);
   let items_leave = await youtube_playlist_items(playlist_leave);
-  let sitting = list_find_property(items_leave, "video_id", video_id);
+  let sitting = list_find_property_or_null(items_leave, "video_id", video_id);
   let gone = null_is(sitting);
   if (gone) {
     let refused = {
