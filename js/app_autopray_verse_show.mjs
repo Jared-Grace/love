@@ -19,7 +19,7 @@ export async function app_autopray_verse_show(root, reference, verse_text) {
     reference,
     v3,
   ]);
-  ("add the way to reach the developer while this verse is on screen — it is drawn fresh each verse because the page is cleared every time, so it stays visible through the pause below rather than flickering");
+  ("add the foot of the page while this verse is on screen — it is drawn fresh each verse because the page is cleared every time, so it stays visible through the pause below rather than flickering");
   app_shared_footer(root);
   let c = isaiah_chapters_count();
   await sleep(c);
