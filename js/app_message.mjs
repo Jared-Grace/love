@@ -65,5 +65,5 @@ export async function app_message(context) {
     storage_local_set_context(context, messages_property, messages);
     await app_message_refresh(div_messages, context, messages_property, start);
   }
-  let button = app_shared_all_apps_button(root);
+  app_shared_footer_all_apps(root);
 }
