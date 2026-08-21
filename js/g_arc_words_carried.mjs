@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { words_letters_lowered } from "./words_letters_lowered.mjs";
 export function g_arc_words_carried(arc) {
   "The words of the one field a written person hands on to the person written after them - their summary - lowered and stripped to letters, the same way their spoken words are.";
   "IT IS THE SUMMARY AND NOTHING ELSE, because the summary alone travels. A written arc keeps an occupation, a trouble and a summary, and none of the three is ever shown to a player - but the prompt for the NEXT person is handed every summary written so far, so that nobody is written blind to who is already taken. The other two stop where they are.";

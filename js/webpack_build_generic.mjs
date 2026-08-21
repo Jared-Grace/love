@@ -1,3 +1,4 @@
+import { webpack_build_deadline_ms } from "./webpack_build_deadline_ms.mjs";
 import { webpack_build_generic_source } from "./webpack_build_generic_source.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { npx_run } from "./npx_run.mjs";
@@ -38,9 +39,14 @@ export async function webpack_build_generic(
     let config_path = folder_scripts_join_mjs("webpack.config");
     let words = ["webpack", "--config", config_path].concat(words_after);
     let env = object_merge_set(env_vars, process.env);
-    let out = await npx_run(words, {
-      env,
-    });
+    let ms = webpack_build_deadline_ms();
+    let out = await npx_run(
+      words,
+      {
+        env,
+      },
+      ms,
+    );
     let stdout = {
       stdout: out,
     };

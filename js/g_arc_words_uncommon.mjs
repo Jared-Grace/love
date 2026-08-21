@@ -1,3 +1,4 @@
+import { g_arc_words_carried } from "./g_arc_words_carried.mjs";
 import { words_early_reader } from "./words_early_reader.mjs";
 import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
@@ -23,6 +24,8 @@ export async function g_arc_words_uncommon() {
   "ONCE-SAID CANNOT SEE A WORD SOMEBODY REPEATS, and that is most of the hard ones. A person's trouble is the thing they keep coming back to, so the word for it is said in the line that opens the arc and again every time the trouble is answered - rites was said three times by the dyer, was the hardest word in the chapter, and sat below this report's floor the whole time. It was found by a reader, which is the one way it could have been found.";
   "SO THE SECOND SHAPE IS SAID MORE THAN ONCE AND BY ONE PERSON ONLY. Both halves are extremes of the distribution rather than numbers somebody picked: more than once is the complement of the first list, and one speaker is the fewest a said word can have. A word everybody uses is the language; a word one person keeps using is that person's own, and a person's own word is exactly where a translated trade or a household religion puts a word no child has met.";
   "A WORD AN EARLY READER ALREADY HAS IS DROPPED BEFORE EITHER LIST, and the count of those is handed back rather than thrown away. Without it both lists are mostly ordinary English - laughed, smiling, waiting - and a list somebody has to wade through is a list nobody reads twice. The dropping is the only place a judgement about English enters this function, it is made in accepted data where a human can correct it, and it can only ever shorten what is shown.";
+  "A THIRD LIST IS NOT ABOUT THE PLAYER AT ALL. Every summary written so far is handed to the prompt that writes the next person, so a word in a summary is not sitting still - it is the example the next arc is written from, and a summary written in a harder register hands that register on. The two lists above cannot see it, because a summary is never spoken and the words a player reads are the only ones they count.";
+  "IT IS FILTERED AND NOT RANKED, unlike the other two. A chapter holds one summary per person, so rarity among a dozen sentences means nothing and any threshold over it would be invented. What is left is every summary word outside the vocabulary the writing was asked for, said once per person who used it.";
   "It says nothing about whether the word is HARD. Every arc has its own subject and so has its own words for it, and most of what comes back is ordinary - wool, dye, husband. The list is short enough to read, which is the whole of what a report owes; a gate here would be ratcheting against the fact that people talk about different things.";
   "IT SHARPENS AS MORE IS WRITTEN, which is why it reads every chapter rather than taking one. With a single chapter written, once-said catches roughly ten ordinary words for every hard one - laughed, smiling, waiting sit beside rite and unaccounted. With twenty chapters the ordinary words have all been said elsewhere and stop appearing, while a genuinely rare word still will not have been.";
   "COUNTS THE LOOKING AND HANDS THE COUNT BACK. Arcs live in storage and storage is not in the repo, so a machine that has written none answers nothing, and nothing is the right answer rather than a broken one.";
@@ -38,6 +41,7 @@ export async function g_arc_words_uncommon() {
     known: 0,
     once: [],
     own: [],
+    carried: [],
   };
   if (none) {
     return empty;
