@@ -1,9 +1,7 @@
-import { psalms_videos_descriptions_parts_cut } from "./psalms_videos_descriptions_parts_cut.mjs";
+import { psalms_videos_descriptions_parts_written } from "./psalms_videos_descriptions_parts_written.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { psalms_videos_descriptions_payload_path } from "./psalms_videos_descriptions_payload_path.mjs";
-import { psalms_videos_descriptions_payload_parts_path } from "./psalms_videos_descriptions_payload_parts_path.mjs";
 export async function psalms_videos_descriptions_payload_parts_write(
   letters_most,
 ) {
@@ -14,18 +12,6 @@ export async function psalms_videos_descriptions_payload_parts_write(
   arguments_assert(arguments, 1);
   let path_whole = psalms_videos_descriptions_payload_path();
   let paired = await file_read_json(path_whole);
-  let parts = psalms_videos_descriptions_parts_cut(paired, letters_most);
-  let path = psalms_videos_descriptions_payload_parts_path();
-  await file_overwrite_json(path, parts);
-  let sizes = [];
-  for (let one of parts) {
-    sizes.push(one.length);
-  }
-  let r = {
-    path: path,
-    parts: parts.length,
-    videos: paired.length,
-    videos_by_part: sizes,
-  };
+  let r = await psalms_videos_descriptions_parts_written(paired, letters_most);
   return r;
 }
