@@ -1,5 +1,5 @@
+import { js_bag_pass_through_decl } from "./js_bag_pass_through_decl.mjs";
 import { js_bag_pass_through_entries } from "./js_bag_pass_through_entries.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { js_declarations_single_rows } from "./js_declarations_single_rows.mjs";
@@ -20,30 +20,7 @@ export function js_bag_pass_through(ast) {
   ("Those names are the names the entries are filed under, and not the names standing in them. The two are almost always the same word, which is why writing the wrong one of them went unnoticed: the shorthand every record here is written in says the word once and means it twice. Where an entry does file one name under another, only the filed name is the record's, and reading the other one made an entry that carries nothing look like one that carries a name straight through.");
   let decls = js_declarations_single_rows(ast);
   let reads = js_property_get_rows(ast);
-  let producers = [];
-  for (let decl of decls) {
-    let name = property_get(decl, "name");
-    let init = property_get(decl, "init");
-    let value = init;
-    let waited_is = js_node_type_is(init, "AwaitExpression");
-    if (waited_is) {
-      value = property_get(init, "argument");
-    }
-    let called_is = js_node_type_is(value, "CallExpression");
-    if (not(called_is)) {
-      continue;
-    }
-    let callee = property_get(value, "callee");
-    let named_is = js_identifier_is(callee);
-    if (not(named_is)) {
-      continue;
-    }
-    let producer = js_identifier_name(callee);
-    list_add(producers, {
-      name,
-      producer,
-    });
-  }
+  let producers = js_bag_pass_through_decl(decls);
   let unpacked = [];
   for (let read of reads) {
     let target = property_get(read, "target");
