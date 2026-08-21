@@ -10,14 +10,15 @@ import { property_set_if_exists_not } from "./property_set_if_exists_not.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
-export function bible_glyph_chapters_rosetta_lines_letterless() {
+export function bible_glyph_chapters_rosetta_lines_marks_only() {
   arguments_assert(arguments, 0);
-  ("Every word of every written Rosetta band that holds no letter at all, with the distinct marks found and one line showing each - so a mark that reached the English is read here rather than by a stranger.");
+  ("Every word of every written Rosetta band that is nothing but marks, with the distinct marks found and one line showing each - so a mark that reached the English is read here rather than by a stranger.");
   ("IT ASKS THE QUESTION THE GATE NEXT DOOR CANNOT ASK. That gate holds the band to a reading of notation that knows four marks, and it is green. Green there means no word of the band is one of those four; it says nothing whatever about a fifth mark, because a mark the reading has never heard of is not recognised, is not dropped, and passes the gate wearing the same face as a word. The two questions look like one question and they are opposites: the gate asks whether a known mark got through, this asks whether an unknown one did.");
-  ("IT FINDS ITS SET BY A PROPERTY AND NEVER BY A LIST OF MARKS. A survey that went looking for a hyphen, an en dash and an em dash would find exactly the three somebody thought of, and would be silent about the fourth on the day it appeared - which is the whole failure being hunted, rebuilt one level up. Holding no letter is a property of the word itself, so a mark nobody has imagined yet is caught by the same line that catches the ones we know.");
+  ("IT FINDS ITS SET BY A PROPERTY AND NEVER BY A LIST OF MARKS. A survey that went looking for a hyphen, an en dash and an em dash would find exactly the three somebody thought of, and would be silent about the fourth on the day it appeared - which is the whole failure being hunted, rebuilt one level up. Being nothing but marks is a property of the word itself, so a mark nobody has imagined yet is caught by the same line that catches the ones we know.");
   ("IT READS THE BANDS AND NOT THE TABLES, and that is deliberate. A mark the tables print and the reading drops correctly never reaches anybody and is not a fault; a mark that survives into the band is in front of a reader. Reading the tables would answer about marks, reading the bands answers about readers, and the second is the question. It is also the cheap one: the bands are fifteen small files in this repo, and the tables are seventy-seven megabytes.");
-  ("A LETTER MEANS AN ENGLISH LETTER AND NOTHING WIDER. The gloss column of these tables is plain English, so a word with no A to Z in it is notation, a numeral, or a stray character - all three worth a look. A word that comes back and turns out to be fine costs one reading; a mark that never comes back costs every reader of that chapter.");
-  ("IT DOES NOT THROW AND IS NOT A GATE. What it finds needs a person to decide whether the mark should be dropped, spelled out, or left alone, and that decision belongs in the shared reading of notation once it is made rather than here. When a mark is settled, the gate is what stops it coming back.");
+  ("IT ASKS THE SAME READING THE BUILDER ASKS, and that is what makes the answer mean anything. The builder of the band drops a word that is nothing but marks; this looks for one that is. Written with two readings of what counts as a mark, the survey would go green on exactly the words the builder had decided to keep, and the disagreement would be invisible because both halves would look right on their own.");
+  ("A NUMERAL IS NOT A MARK AND STAYS. Three hundred has no letter in it and is still something a reader can say out loud, so a gloss that is a bare number is left alone by the builder and is not reported here. The property being asked is whether the word can be spoken at all, not whether it is spelled with letters.");
+  ("IT DOES NOT THROW AND THE GATE NEXT DOOR DOES. What comes back needs a person to decide whether a mark should be dropped, spelled out, or left alone; this is the reading somebody does while deciding, and the gate is what holds the answer once it is made.");
   let chapters = bible_glyph_chapters_rosetta_lines();
   let found = [];
   let marks_seen = [];
@@ -32,9 +33,8 @@ export function bible_glyph_chapters_rosetta_lines_letterless() {
       let words = text_split(english, " ");
       for (let word of words) {
         words_total = add(words_total, 1);
-        let letters = text_letters_only(word);
-        let letterless = text_empty_is(letters);
-        if (not(letterless)) {
+        let marks_only = text_letters_digits_none_is(word);
+        if (not(marks_only)) {
           continue;
         }
         list_add(found, {
@@ -51,7 +51,7 @@ export function bible_glyph_chapters_rosetta_lines_letterless() {
   let r = {
     chapters: list_size(chapters),
     words: words_total,
-    letterless: list_size(found),
+    marks_only: list_size(found),
     marks,
     examples,
     found,
