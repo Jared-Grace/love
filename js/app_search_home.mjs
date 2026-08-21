@@ -28,6 +28,6 @@ export async function app_search_home(context) {
     html_value_set(input, query_from_hash);
     await search();
   }
-  ("this screen clears root each time it draws, so re-add the way to reach the developer here; named from the search app so the note reads 'search app: '");
+  ("this screen clears root each time it draws, so re-add the foot of the page here; named from the search app so the note reads 'search app: '");
   app_shared_footer(content);
 }
