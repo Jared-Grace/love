@@ -1,8 +1,8 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { function_ast } from "./function_ast.mjs";
 import { js_record_returned_keys } from "./js_record_returned_keys.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
@@ -46,8 +46,7 @@ export async function functions_bag_carry_verdict(one) {
     let r5 = "absent";
     return r5;
   }
-  let added = property_get(one, "added");
-  let would = list_concat(keys_made, added);
+  let would = list_concat_property(keys_made, one, "added");
   let keys = property_get(one, "keys");
   let same_is = lists_equal_pair(keys, would);
   if (same_is) {
