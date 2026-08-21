@@ -25,7 +25,7 @@ export async function song_image_couplets_videos_description_write(channel_id) {
     if (other) {
       continue;
     }
-    let description = song_image_couplets_description(verse);
+    let description = await song_image_couplets_description(verse);
     let record = await youtube_video_record(video.video_id);
     let snippet = property_get(record, "snippet");
     let description_now = property_get(snippet, "description");
