@@ -1,3 +1,4 @@
+import { object_copy } from "./object_copy.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { object_assign } from "./object_assign.mjs";
@@ -19,6 +20,8 @@ export async function ebible_references_parse_lines_generic(
   lines,
   verse_get,
 ) {
+  "WHAT THE READER HANDS BACK IS COPIED BEFORE ANYTHING IS WRITTEN ON IT. The browser's reader keeps every verse it has fetched for the life of the page and hands the same object back the second time, so writing the reference onto that object wrote it into what is kept. The writing is strict - it refuses a property that is already there - so the second time anybody asked for a verse this page had already read, it threw, the catch below turned that into nothing, and the passage came out blank with no error anywhere.";
+  "It showed up on a page that names the same verse under two different lines, which is ordinary once a page explains something rather than just displaying it. Copying costs one small object per verse and takes the shared thing out of reach.";
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(bible_folders, books_get);
   let books = await books_get(bible_folder);
@@ -49,9 +52,11 @@ export async function ebible_references_parse_lines_generic(
   }
   let list = list_adder(lambda2);
   async function lambda3(v4) {
-    let verse_number = property_get(v4, verse_number_key());
+    let property_name = verse_number_key();
+    let verse_number = property_get(v4, property_name);
     let chapter_code = property_get(v4, "chapter_code");
-    let bible_folder_of_verse = property_get(v4, bible_folder_key());
+    let property_name2 = bible_folder_key();
+    let bible_folder_of_verse = property_get(v4, property_name2);
     let v3 = await catch_null_async(verse_get_lambda);
     async function verse_get_lambda() {
       let reference = ebible_parts_chapter_code_to_reference(
@@ -59,11 +64,12 @@ export async function ebible_references_parse_lines_generic(
         books,
         [verse_number],
       );
-      let result = await verse_get(
+      let held = await verse_get(
         bible_folder_of_verse,
         chapter_code,
         verse_number,
       );
+      let result = object_copy(held);
       object_merge_set(result, {
         reference,
       });
