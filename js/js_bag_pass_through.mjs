@@ -23,6 +23,7 @@ export function js_bag_pass_through(ast) {
   ("Fewer than three names carried through is not reported. Two names passed on is as likely to be a body that wanted them as a join, and a list that says so about half the repo is a list nobody reads.");
   ("The record the names came out of is named beside its own maker where there is one to name - the function whose answer it was, and nothing when it was handed in as a parameter. Whether the taking apart can go turns on what that maker returns, so a reading that left the name out would have to walk the whole repo a second time to find it.");
   ("The names of the record being built are handed back in the order they are written in, and not only as the two sets they fall into. Handing the record over whole would put the names in the order its maker wrote them, which is the same order or is not, and that is a question about a list rather than about a set.");
+  ("Those names are the names the entries are filed under, and not the names standing in them. The two are almost always the same word, which is why writing the wrong one of them went unnoticed: the shorthand every record here is written in says the word once and means it twice. Where an entry does file one name under another, only the filed name is the record's, and reading the other one made an entry that carries nothing look like one that carries a name straight through.");
   let decls = js_declarations_single_rows(ast);
   let reads = js_property_get_rows(ast);
   let producers = [];
@@ -83,7 +84,7 @@ export function js_bag_pass_through(ast) {
     if (null_is(entries)) {
       continue;
     }
-    let keys = list_map_property(entries, "name");
+    let keys = list_map_property(entries, "key");
     let bags = [];
     for (let one of unpacked) {
       let name = property_get(one, "name");
