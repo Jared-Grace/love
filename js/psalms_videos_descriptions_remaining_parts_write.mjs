@@ -17,12 +17,12 @@ export async function psalms_videos_descriptions_remaining_parts_write(
   let read = await psalms_videos_descriptions_live_read();
   let before = await psalms_videos_descriptions_before_write(read);
   let remaining = [];
-  for (let each of read) {
-    let same = equal(each.live, each.one.description);
+  for (let paired of read) {
+    let same = equal(paired.live, paired.one.description);
     if (same) {
       continue;
     }
-    remaining.push(each.one);
+    remaining.push(paired.one);
   }
   let parts = psalms_videos_descriptions_parts_cut(remaining, letters_most);
   let path = psalms_videos_descriptions_payload_parts_path();
