@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { storage_function_path_json } from "./storage_function_path_json.mjs";
 export function g_arc_write_path(chapter_code) {
   "Where one chapter's written arcs are kept.";
   "$plain chapter_code";

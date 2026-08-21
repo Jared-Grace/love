@@ -134,7 +134,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp square corners",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp corners, its crossbar reaching almost to both sides of the window and its upright running the whole height of the window",
       symbol_ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -144,7 +144,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp square corners",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp corners, its crossbar reaching almost to both sides of the window and its upright running the whole height of the window",
       symbol_ref: "Colossians 2:14",
       same_as: 8,
     },
@@ -174,7 +174,7 @@ export function song_image_couplets() {
       first: "cursed on a cross",
       second: "HE drank the cup",
       symbol:
-        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large so that it reaches from the bottom of the window almost to the top of it",
+        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large with the bowl reaching almost to both sides of the window and the foot standing near the bottom of it",
       symbol_ref: "Matthew 26:39, John 18:11",
       same_as: 0,
     },
@@ -224,7 +224,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
+        "An empty doorway of plain grey stone standing open and holding nothing, struck with deep crimson blood down each post and across the lintel, the blood daubed on unevenly with ragged wandering edges and a few thin trickles running down the stone below each mark",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
@@ -234,7 +234,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
+        "An empty doorway of plain grey stone standing open and holding nothing, struck with deep crimson blood down each post and across the lintel, the blood daubed on unevenly with ragged wandering edges and a few thin trickles running down the stone below each mark",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
@@ -264,7 +264,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol:
-        "A very great rolling stone, one flat round slab of plain grey stone standing upright on its edge with its face smooth and completely blank, rolled hard across the mouth of a tomb so that it hides the mouth entirely and the mouth shows only as a narrow black crescent at the stone's left and right edges",
+        "A very great rolling stone, one thick round slab of plain grey stone standing upright on its edge, its rim turned in and out in broad shallow flats and dents instead of running as a true circle, rolled hard across a tomb mouth in a wall of plain grey rock so that only a thin black crescent of the mouth shows at each side of it",
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
