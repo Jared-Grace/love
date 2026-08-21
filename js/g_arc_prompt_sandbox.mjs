@@ -11,7 +11,8 @@ export async function g_arc_prompt_sandbox() {
     ", and this is a convert prompt - the elder twin is ",
     fn_name("g_arc_prompt_sandbox_leader"),
     ".");
+  "The first person of the pool is the one shown, for the same reason the first chapter is - a sandbox picks so that nothing has to be typed, and any other person can still be asked for by number.";
   let chapter = await g_arc_prompt_sandbox_chapter();
-  let r = await g_arc_prompt_chapter(chapter);
+  let r = await g_arc_prompt_chapter(chapter, "0");
   return r;
 }
