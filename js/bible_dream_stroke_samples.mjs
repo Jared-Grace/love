@@ -1,3 +1,6 @@
+import { less_than_equal } from "./less_than_equal.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_dream_stroke_samples(path_component, count) {
@@ -8,10 +11,14 @@ export function bible_dream_stroke_samples(path_component, count) {
   let total = element.getTotalLength();
   let points = [];
   let index = 0;
-  while (index <= count) {
-    let along = (total * index) / count;
+  while (less_than_equal(index, count)) {
+    let top = multiply(total, index);
+    let along = divide(top, count);
     let point = element.getPointAtLength(along);
-    list_add(points, { x: point.x, y: point.y });
+    list_add(points, {
+      x: point.x,
+      y: point.y,
+    });
     index = index + 1;
   }
   return points;
