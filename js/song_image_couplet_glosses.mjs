@@ -188,7 +188,7 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",
       symbol_explain:
-        "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many because a count is a thing this medium cannot be made to keep. It is white glass with ruby jewels, never gold.",
+        "Described. On HIS head were many crowns is Revelation 19:12, and many is now drawn as many: three plain bands set one above another. A diadem in that verse is a band and not a spiked crown, and a stack is the one way a window can say several of them with no head under them. It is white glass with ruby jewels, never gold. Three bands stacked is also the shape of the papal tiara, which is a thing to decide rather than to discover - the single crown is kept as attempt 1 and the arrow reaches it.",
     },
     26: {
       kept: 1,
@@ -220,7 +220,7 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
       symbol_explain:
-        "Inherited from an account about somebody else. Exodus 3:5 tells Moses to put off his shoes because the ground is holy, which is reverence drawn as an object; no verse attaches sandals to the believer's own walk. It is the weakest emblem in the table.",
+        "Described in part. Put off thy shoes from off thy feet is Exodus 3:5, said to Moses, and it is reverence drawn as an object. The couplet is about our own walk, and 1 Peter 1:17 calls that walk a sojourning to be passed in fear, so the sandals hold both halves: the walking, and the one thing Scripture has reverence take off. It still carries less of its own verse than any other emblem here.",
     },
     31: {
       kept: 1,

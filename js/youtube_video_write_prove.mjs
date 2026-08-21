@@ -11,12 +11,16 @@ export async function youtube_video_write_prove(video_id) {
   "Only what was sent is compared. The tag YouTube keeps for its own bookkeeping changes on every write by design, so holding that against the record would report damage on a run that did none, and a check that cries wolf is worse than no check because it teaches its reader to skip it.";
   arguments_assert(arguments, 1);
   let before = await youtube_video_record(video_id);
-  let snippet_before = json_to(property_get(before, "snippet"));
-  let status_before = json_to(property_get(before, "status"));
+  let object = property_get(before, "snippet");
+  let snippet_before = json_to(object);
+  let object2 = property_get(before, "status");
+  let status_before = json_to(object2);
   await youtube_video_record_write(before);
   let after = await youtube_video_record(video_id);
-  let snippet_after = json_to(property_get(after, "snippet"));
-  let status_after = json_to(property_get(after, "status"));
+  let object3 = property_get(after, "snippet");
+  let snippet_after = json_to(object3);
+  let object4 = property_get(after, "status");
+  let status_after = json_to(object4);
   let snippet_same = equal(snippet_before, snippet_after);
   let status_same = equal(status_before, status_after);
   let r = {
