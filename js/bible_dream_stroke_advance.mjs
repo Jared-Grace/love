@@ -36,6 +36,7 @@ export function bible_dream_stroke_advance(state, point, tolerance_squared) {
   each(near_numbers, each_near);
   if (greater_than(nearest, tolerance_squared)) {
     if (state.off) {
+      bible_dream_stroke_land_again(state, point, tolerance_squared);
       return;
     }
     state.off = true;
