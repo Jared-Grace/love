@@ -38,7 +38,7 @@ export async function webpack_watch_rebuild_fan_out() {
   let tally = list_tally(named);
   let f_names = properties_get(tally);
   let functions = list_size(f_names);
-  let half = divide(apps, 2);
+  let half_apps = divide(apps, 2);
   let every_app = [];
   let more_than_half = [];
   for (let f_name of f_names) {
@@ -55,7 +55,7 @@ export async function webpack_watch_rebuild_fan_out() {
     apps,
     functions,
     every_app: list_size(every_app),
-    more_than_half: list_size(more_than_half_apps),
+    more_than_half: list_size(more_than_half),
     top,
   };
   return r;
