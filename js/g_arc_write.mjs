@@ -1,7 +1,5 @@
-import { g_arc_person } from "./g_arc_person.mjs";
-import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
+import { g_arc_person_assert } from "./g_arc_person_assert.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
-import { g_arc_assert } from "./g_arc_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -19,15 +17,7 @@ export async function g_arc_write(chapter_code, index, arc) {
   "THE ARC IS CHECKED BEFORE IT IS STORED. A written arc that names a passage nobody offered, or an opener the player is never given, is not something to keep and correct later - stored, it becomes a file that reads as content until somebody plays it. Checked here, the store cannot hold one.";
   "The person's number is what ties the arc back to the pool entry that fixed how many turns it may have. Written anywhere else it would be an arc for nobody, and the turn counts it was written against would have nothing to attach to.";
   let passages = await g_sermon_chapter_passages_chaptered(chapter_code);
-  let counts = g_arc_assert(arc, passages);
-  let turns = property_get(counts, "turns");
-  let person = await g_arc_person(index);
-  let turns_wanted = property_get(person, "turns");
-  json_equal_assert_json(turns, turns_wanted, {
-    chapter_code,
-    index,
-    hint: "a person's arc is exactly as many turns long as the pool gave them, because a player meets them that many times and no more - a shorter arc runs out mid-game and a longer one holds turns nobody reaches",
-  });
+  await g_arc_person_assert(index, arc, passages);
   let path = local_function_path_json(chapter_code, g_arc_write);
   let exists = await file_exists(path);
   let empty = {
