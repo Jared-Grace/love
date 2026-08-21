@@ -1,5 +1,5 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { js_bag_unpacked_kept } from "./js_bag_unpacked_kept.mjs";
 import { js_record_name_entries_try } from "./js_record_name_entries_try.mjs";
 import { list_add } from "./list_add.mjs";
@@ -7,7 +7,6 @@ import { list_filter_property } from "./list_filter_property.mjs";
 import { list_find_property_get_or } from "./list_find_property_get_or.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
@@ -35,8 +34,7 @@ export function js_bag_pass_through_records_add(
     for (let bag of bags) {
       let from = list_filter_property(kept, "bag", bag);
       let taken = list_map_property_unique(from, "name");
-      let carried = list_size(taken);
-      let enough_is = greater_than(carried, 2);
+      let enough_is = list_size_greater_than(taken, 2);
       if (not(enough_is)) {
         continue;
       }
