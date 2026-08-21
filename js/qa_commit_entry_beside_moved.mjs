@@ -24,9 +24,9 @@ export function qa_commit_entry_beside_moved(remembered, heads) {
   let names = properties_get(written);
   let standing = properties_get(heads);
   list_add_multiple(names, standing);
-  let each = list_unique(names);
+  let names_unique = list_unique(names);
   let moved = [];
-  for (let name of each) {
+  for (let name of names_unique) {
     let was = property_get_or_null(written, name);
     let now = property_get_or_null(heads, name);
     let same = equal(was, now);
