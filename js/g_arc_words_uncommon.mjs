@@ -44,6 +44,7 @@ export async function g_arc_words_uncommon() {
   }
   let files = await folder_read_paths_async(path);
   let said = [];
+  let carried_words = [];
   let homes = {};
   let mouths = {};
   let chapters = 0;
