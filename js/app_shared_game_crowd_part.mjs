@@ -9,7 +9,7 @@ import { property_exists } from "./property_exists.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { null_is } from "./null_is.mjs";
 import { g_ripple_delay_seconds } from "./g_ripple_delay_seconds.mjs";
-import { app_g_crowd_push_shift } from "./app_g_crowd_push_shift.mjs";
+import { app_shared_game_crowd_push_shift } from "./app_shared_game_crowd_push_shift.mjs";
 import { each_index } from "./each_index.mjs";
 import { not } from "./not.mjs";
 export function app_shared_game_crowd_part(g, path, still) {
@@ -54,7 +54,7 @@ export function app_shared_game_crowd_part(g, path, still) {
       return;
     }
     let delay = g_ripple_delay_seconds(index);
-    app_g_crowd_push_shift(npc_index, route, delay);
+    app_shared_game_crowd_push_shift(npc_index, route, delay);
   }
   each_index(steps, part);
 }
