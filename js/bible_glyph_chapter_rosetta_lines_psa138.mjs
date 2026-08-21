@@ -18,7 +18,7 @@ export function bible_glyph_chapter_rosetta_lines_psa138() {
         original:
           "אֶשְׁתַּחֲוֶ֨ה אֶל־ הֵיכַ֪ל קָדְשְׁךָ֡ וְא֘וֹדֶ֤ה אֶת־ שְׁמֶ֗ךָ עַל־ חַסְדְּךָ֥ וְעַל־ אֲמִתֶּ֑ךָ כִּֽי־ הִגְדַּ֥לְתָּ עַל־ כָּל־ שִׁ֝מְךָ֗ אִמְרָתֶֽךָ׃",
         english:
-          "I bow down toward temple Your holy and give thanks - to Your name for Your loving devotion and Your faithfulness You have exalted above all else Your name and Your word",
+          "I bow down toward temple Your holy and give thanks to Your name for Your loving devotion and Your faithfulness You have exalted above all else Your name and Your word",
       },
       {
         verse_number: 3,
