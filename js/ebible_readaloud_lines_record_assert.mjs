@@ -1,3 +1,4 @@
+import { ebible_readaloud_lines_bible_folders } from "./ebible_readaloud_lines_bible_folders.mjs";
 import { ebible_readaloud_lines_differ_to_fix_names } from "./ebible_readaloud_lines_differ_to_fix_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -9,7 +10,6 @@ import { lists_combine } from "./lists_combine.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { ebible_readaloud_bible_folders } from "./ebible_readaloud_bible_folders.mjs";
 import { ebible_bibles_answered_assert } from "./ebible_bibles_answered_assert.mjs";
 export async function ebible_readaloud_lines_record_assert(
   f_name_download,
@@ -73,10 +73,11 @@ export async function ebible_readaloud_lines_record_assert(
   let answered = lists_combine([measured_names, unmeasured]);
   let f_name3 = fn_name("ebible_readaloud_lines_write");
   let unasked_hint = text_combine_multiple([
-    "a bible is shipped that this record says nothing about, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
+    "a bible is shipped, or is one the search index walks, and this record says nothing about it, so its chapters have never been measured and one of them could be cut short unseen - measure again with ",
     f_name3,
   ]);
-  let expected = ebible_readaloud_bible_folders();
+  ("Which bibles were supposed to be in here is asked of the same name the measuring asks, so that neither can quietly come to mean a different set from the other.");
+  let expected = await ebible_readaloud_lines_bible_folders();
   ebible_bibles_answered_assert(expected, answered, f_name3, unasked_hint);
   return differ;
 }
