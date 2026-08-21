@@ -1,3 +1,4 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
@@ -8,7 +9,6 @@ import { or } from "./or.mjs";
 import { g_openers_arc } from "./g_openers_arc.mjs";
 import { property_get } from "./property_get.mjs";
 import { add_1 } from "./add_1.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -36,8 +36,7 @@ export function g_arc_assert(arc, passages) {
   for (let conversation of conversations) {
     conversation_number = add_1(conversation_number);
     let catch_up = property_get(conversation, "catch_up");
-    let empty = text_empty_is(catch_up);
-    let written = not(empty);
+    let written = text_empty_not_is(catch_up);
     let expected = equal_not(conversation_number, 1);
     json_equal_assert_json(written, expected, {
       conversation_number,
@@ -51,8 +50,7 @@ export function g_arc_assert(arc, passages) {
       turns_total = add_1(turns_total);
       let opener = property_get(turn, "opener");
       let believes = property_get(turn, "believes");
-      let unmarked = text_empty_is(believes);
-      let marked = not(unmarked);
+      let marked = text_empty_not_is(believes);
       if (marked) {
         let believed_already = equal(believes_turn, 0);
         assert_json(believed_already, {
@@ -107,8 +105,7 @@ export function g_arc_assert(arc, passages) {
         opener_last = opener;
       }
       let before = property_get(turn, "before");
-      let silent = text_empty_is(before);
-      let b2 = not(silent);
+      let b2 = text_empty_not_is(before);
       assert_json(b2, {
         conversation_number,
         turns_total,
