@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
-import { app_g_event_target_closest_tile } from "./app_g_event_target_closest_tile.mjs";
+import { app_shared_game_event_target_closest_tile } from "./app_shared_game_event_target_closest_tile.mjs";
 import { not } from "./not.mjs";
 import { app_g_tile_coordinates_get } from "./app_g_tile_coordinates_get.mjs";
 import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
@@ -22,7 +22,7 @@ export function app_g_bless_overlay_tapped(r) {
     if (walking) {
       return;
     }
-    let tile = app_g_event_target_closest_tile(e);
+    let tile = app_shared_game_event_target_closest_tile(e);
     if (not(tile)) {
       return;
     }
