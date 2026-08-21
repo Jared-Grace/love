@@ -12,15 +12,15 @@ export async function psalms_videos_descriptions_before_write(read) {
   arguments_assert(arguments, 1);
   let moment = date_now_file();
   let carrying = [];
-  for (let each of read) {
-    let nothing = equal(each.live, "") || equal(each.live, null);
+  for (let paired of read) {
+    let nothing = equal(paired.live, "") || equal(paired.live, null);
     if (nothing) {
       continue;
     }
     carrying.push({
-      video_id: each.one.video_id,
-      title: each.one.title,
-      description: each.live,
+      video_id: paired.one.video_id,
+      title: paired.one.title,
+      description: paired.live,
     });
   }
   let path = psalms_videos_descriptions_before_path(moment);
