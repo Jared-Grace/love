@@ -18,10 +18,14 @@ export async function bible_glyph_chapters_language_gate_run() {
   "IT REFUSES TO PASS ON AN EMPTY SET, which is the failure this kind of gate dies of. Finding the languages is a search for a sentence, and a search that stops matching answers with nothing rather than with an error - so a gate that only checked what it found would go green the moment it lost the ability to find anything, and would stay green forever. The looking is counted as well as the found.";
   "IT NAMES THE CHAPTERS RATHER THAN COUNTING THEM, because the repair is per chapter and a number does not say which. Re-running the writer for that language is the whole of the fix, and knowing it is short of one chapter rather than of fourteen says whether a chapter was authored yesterday or a language was written before half of them existed.";
   let names = await bible_glyph_chapters_language_functions();
+  "THE SENTENCE THIS IS FOUND BY IS NAMED INSIDE THE HINT AND NEVER BESIDE IT. A failed gate's words are read back afterwards for function names, and every name found is taken as an accusation - so a name in its own field of the complaint holds an innocent function's app out of its deployment. The hint is dropped before the names are read, which is what lets a person be told where to look without anybody being blamed for it.";
   let mark = fn_name("bible_glyph_language_written_mark");
-  list_empty_not_is_assert_json(names, {
-    hint: "no reveal-language function was found at all, so this gate checked nothing and would have passed for that reason - has the sentence they are found by been reworded in one place and not the other?",
+  let hint_none = text_combine_multiple([
+    "no reveal-language function was found at all, so this gate checked nothing and would have passed for that reason - has the sentence they are found by been reworded in one place and not the other? The sentence is spelled in ",
     mark,
+  ]);
+  list_empty_not_is_assert_json(names, {
+    hint: hint_none,
   });
   let chapters = bible_glyph_chapters();
   let wanted = [];
