@@ -4,6 +4,7 @@
 #   Shift+Super+1..9,0  -> move the active window to workspace 1..10
 #   Super+Left/Right    -> previous / next workspace (wraps at the ends)
 #   Ctrl+Alt+Left/Right -> previous / next workspace (wraps at the ends)
+#   Alt+Delete          -> nothing (xfwm4 ships it as "delete this workspace")
 #
 # Why command shortcuts (wmctrl) instead of xfwm4's built-in workspace keys:
 # xfwm4's own /xfwm4/ keyboard grabs proved fragile here -- after a hibernate
@@ -81,11 +82,16 @@ digits_wire_to_workspaces() {
   done
 }
 
-# Disable an xfwm4-native shortcut by writing an empty custom value. Unlike -r
-# (which reverts to any /xfwm4/default action, leaving the grab alive), an empty
-# override tells xfwm4 "no action" -- freeing the accelerator for xfsettingsd to
-# grab as a command shortcut. This is exactly what the Settings GUI's "Clear"
-# does. Idempotent: creating vs overwriting the same empty string is a no-op.
+# Write an empty custom value over an xfwm4-native shortcut -- exactly what the
+# Settings GUI's "Clear" does. Idempotent.
+#
+# This frees the accelerator for xfsettingsd only where it is followed by a
+# command shortcut that does the same job, as it is below: measured 2026-08-21,
+# an empty value did NOT stop Alt+Delete deleting workspaces, and neither did
+# removing the property outright (/etc/xdg/.../xfce4-keyboard-shortcuts.xml is
+# root-owned and re-supplies the /xfwm4/default action the moment it is
+# deleted). So "empty" is not a way to make a key do nothing -- for that, see
+# xfwm4_shortcut_neutralize below.
 xfwm4_shortcut_disable() {
   local path="/xfwm4/custom/$1"
   if xfconf-query -c "$KB" -p "$path" >/dev/null 2>&1; then
@@ -109,9 +115,36 @@ arrows_wire_to_workspaces() {
   command_shortcut_set "<Primary><Alt>Right"  "${WORKSPACE_SWITCH} next"
 }
 
+# Make a key harmless by giving it a DIFFERENT real xfwm4 action, so there is no
+# absence for xfwm4 to fall back from (see xfwm4_shortcut_disable above for why
+# emptying or removing does not work). raise_window_key is the inert choice: it
+# is a genuine binding, so it is certainly grabbed, and raising the window that
+# already has focus changes nothing a person can see.
+xfwm4_shortcut_neutralize() {
+  local path="/xfwm4/custom/$1"
+  if xfconf-query -c "$KB" -p "$path" >/dev/null 2>&1; then
+    xfconf-query -c "$KB" -p "$path" -s raise_window_key
+  else
+    xfconf-query -c "$KB" -p "$path" -n -t string -s raise_window_key
+  fi
+}
+
+# Alt+Delete is xfwm4's del_workspace_key. On 2026-08-21 it was hit by accident
+# while clearing a text field and took the desktop from 10 workspaces down to 1
+# -- silently, since deleting a workspace moves its windows onto the survivor
+# rather than closing them, and Super+digit then does nothing at all because
+# `wmctrl -s 9` cannot reach a workspace that no longer exists. Nothing about
+# this machine wants a workspace deleted by one keystroke, so the key is taken
+# away. Alt+Insert (add_workspace_key) is deliberately left alone: gaining a
+# workspace costs nothing, and it is how you add one back from the keyboard.
+destructive_keys_neutralize() {
+  xfwm4_shortcut_neutralize "<Alt>Delete"
+}
+
 require_wmctrl
 workspace_count_ensure_minimum
 digits_wire_to_workspaces
 arrows_wire_to_workspaces
+destructive_keys_neutralize
 echo "OK: $(workspace_count_get) workspaces; Super+1..9,0 & Shift+Super+1..9,0 wired;" \
-     "Super+Left/Right & Ctrl+Alt+Left/Right switch prev/next."
+     "Super+Left/Right & Ctrl+Alt+Left/Right switch prev/next; Alt+Delete disarmed."
