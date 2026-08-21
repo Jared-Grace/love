@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_g_turn_quiz } from "./app_g_turn_quiz.mjs";
-import { app_g_bible_passage_button_direct } from "./app_g_bible_passage_button_direct.mjs";
+import { app_shared_bible_passage_button_direct } from "./app_shared_bible_passage_button_direct.mjs";
 import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { invoke_once } from "./invoke_once.mjs";
@@ -23,7 +23,7 @@ export function app_g_turn_quiz_once(
   function build_correct(container) {
     let reference = property_get(correct, "reference");
     let verse_text = property_get(correct, "text");
-    let b = app_g_bible_passage_button_direct(
+    let b = app_shared_bible_passage_button_direct(
       reference,
       verse_text,
       container,
@@ -41,7 +41,7 @@ export function app_g_turn_quiz_once(
     }
     let reference2 = property_get(wrong, "reference");
     let verse_text2 = property_get(wrong, "text");
-    let b = app_g_bible_passage_button_direct(
+    let b = app_shared_bible_passage_button_direct(
       reference2,
       verse_text2,
       container,
