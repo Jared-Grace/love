@@ -11,70 +11,161 @@ covers, and that answer is what a next letter is for. On sending: copy this file
 `notes/letters/sent/2026-08-21.md` and change every `in the unsent draft letter` in
 that record to `sent 2026-08-21`.
 
+The record is keyed by chapter, not by item number, so the items here can be reordered
+or merged freely without touching it.
+
 ---
 
-Subject: Twenty-three faults in published files, one serious and one affecting 31 translations
+Subject: Ten problems in published files — one of them affects 131 translations
 
 Hello,
 
-Thank you for eBible.org — I run a free Bible reading app that takes almost all of
-its translations from you. While checking every translation we carry, these came up.
-No reply needed.
+Thank you for eBible.org. I run a free Bible reading app. Almost all of its
+translations come from you. I checked every one we carry. Here is what came up,
+biggest first. No reply needed.
 
-**1.**
+**1. Verse ids do not match the numbers they print. 131 translations.**
+
+url: https://ebible.org/aaz/GEN02.htm
+
+quote(s): '<span class="verse" id="V5">4b&#160;</span>' and, two markers later,
+'<span class="verse" id="V6">5-6&#160;</span>'
+
+possible correction: take the id from the number the marker prints.
+
+Right now a marker gets the id one higher than the marker before it, whenever its
+label is not a plain number. A part-verse like '4b' is not a plain number. Nor is a
+range like '5-6'. The next plain number puts the count back in step. So the made-up
+ids land on real verses further down.
+
+In the quote above, '4b' is given id V5. A link to Genesis 2:5 lands on the second
+half of verse 4. Then '5-6' is given id V6, so verse 5 has no address at all. Later
+in that same chapter '19-20' is given id V19, which is right. So this is not a scheme
+for keeping ids unique. It is right in one place and wrong in another, in one chapter.
+
+Your own footnote links pick it up too. On https://ebible.org/engerv/JOB24.htm a
+footnote back-link points at '#V4' and is labelled '24:8'.
+
+We counted 2,690 markers like this, in 1,362 chapters, in 131 translations. The
+largest: grcbrent (316), eng-Brenton (314), englxxup (288), pesopcb (118), msy2020
+(103), engasvbt (83), ind (66), beo (64), mya (61), engnna (56).
+
+Two label shapes cause all of it: 1,384 ranges and 1,168 part-verses. No plain-numbered
+marker is ever affected.
+
+Sometimes two markers end up with the same id. Then a link to one lands on the other,
+and the other has no address. That happens in 299 chapters. Sometimes a number is
+skipped instead, and a link to it lands nowhere. Most of the time it is neither, and
+the link just goes quietly to the wrong verse.
+
+Two clear cases. https://ebible.org/grcbrent/JOS09.htm prints 2a 2b 2c 2d 2e 2f under
+ids V3 to V8, then prints 3 4 5 6 7 8 under ids V3 to V8 again.
+https://ebible.org/kjn/MRK14.htm prints '3-9' under id V1, then '62-64' under id V8,
+then '65' under id V65.
+
+**2. Fifty-one verses of Matthew 27 are not on the page.**
+
+url: https://ebible.org/mwf2018/MAT27.htm
+
+quote(s): the file is 6,803 bytes. It runs '<span class="verse" id="V10">10&#160;</span>…
+Jeremiah da murntak warra, i murrinh nhini-ka murrinh da thathpirr nhini-yu.” </div>'
+straight into '<div class='s'>Ku Soldier Pirangkadhaneme Pe Da Weyi Palyirr </div>
+<div class='p'> <span class="verse" id="V62">62&#160;</span>'
+
+possible correction: Matthew 27:11 to 27:61. Not the markers — the words. The chapter
+jumps from Judas's death to the guard at the tomb. The trial, the crucifixion and the
+death are all absent. Other chapters of mwf2018 look complete.
+
+**3. Most of Matthew has numbers but no words.**
 
 url: https://ebible.org/bgg/MAT07.htm
 
 quote(s): '<span class="verse" id="V13">13&#160;</span> <span class="verse" id="V14">14&#160;</span>'
 
-possible correction: Matthew has words through 7:12, then verse numbers with no text
-after them — the rest of chapter 7 and all of chapters 8–28. Chapters 1–6 and every
-other book in bgg are complete. Possible clue: the last thing before the text stops
-is a footnote at 7:12 whose popup span is opened and never closed —
-'<a href="#FN2" class="notemark"><span class="popup"> <span class="verse" id="V13">'
-— and the footnotes at the foot of those chapters are empty, '<span class="ft"></span>'.
+possible correction: the words. Matthew has text up to 7:12. After that there are
+verse numbers with nothing after them, to the end of chapter 28. Chapters 1 to 6 are
+fine, and so is every other book in bgg.
 
-**2.**
+A possible clue. The last thing before the text stops is a footnote at 7:12. Its popup
+span is opened and never closed: '<a href="#FN2" class="notemark"><span class="popup">
+<span class="verse" id="V13">'. And the footnotes at the foot of those chapters are
+empty: '<span class="ft"></span>'.
+
+**4. Every chapter of Mark stops after two or three verses, in the read-aloud edition.**
 
 url: https://ebible.org/Scriptures/bsj_readaloud.zip
 
 quote(s): 'bsj_071_MRK_01_read.txt' holds the book name, the chapter number, and
-verses 1 to 3, then ends.
+verses 1 to 3. Then it ends.
 
-possible correction: every chapter of Mark in the read-aloud edition stops after two
-or three verses — 73 lines for the whole book, where the HTML MRK01.htm has all 45
-verses. Mark is the only book affected; Matthew runs 19–50 lines a chapter and
-Revelation 22–31.
+possible correction: the rest of each chapter. The whole of Mark is 73 lines, while
+MRK01.htm alone has all 45 verses. Mark is the only book affected. Matthew runs 19 to
+50 lines a chapter, and Revelation 22 to 31.
 
-**3.**
+**5. Two verses missing from a read-aloud chapter.**
 
 url: https://ebible.org/Scriptures/uigara_readaloud.zip
 
 quote(s): 'uigara_015_2CH_36_read.txt' ends at verse 21, '…زېمىن يەتمىش يىل توشقۇچە
 خارابىلىكتە تۇرۇپ «شابات تۇتۇپ» دەم ئېلىپ راھەتلەندى.'
 
-possible correction: the read-aloud edition of 2 Chronicles 36 is two verses short —
-verses 22 and 23, Cyrus's decree, are not in it. The page at
-https://ebible.org/uigara/2CH36.htm carries all 23.
+possible correction: verses 22 and 23, Cyrus's decree. The page at
+https://ebible.org/uigara/2CH36.htm has all 23.
 
-**4.**
+**6. The copyright page is for a different Bible.**
 
 url: https://ebible.org/apyNT/copr.htm
 
-quote(s): the page opens with the Apalaí title, and the copyright block below it
-names the Khmer Standard Version, the Bible Society in Cambodia, and Khmer quotation
-terms.
+quote(s): the page opens with the Apalaí title. The copyright block below it names the
+Khmer Standard Version, the Bible Society in Cambodia, and Khmer terms.
 
 possible correction: the Apalaí New Testament's own terms. Nothing on the page states
-terms for the Apalaí text, so we cannot tell what it is offered on, and we carry only
+terms for the Apalaí text, so we cannot tell what it is offered on. We only carry
 translations whose terms we can read.
 
-**5–8. A verse marker absent where the words are present.** In each, the words of the
-missing verse sit inside the previous verse's block, and the read-aloud edition of the
-same chapter numbers them correctly — so the two published editions disagree and the
-HTML one is a verse short.
+**7. Proverbs 31:1–9 is in a different chapter in the two editions.**
 
-**5.**
+url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
+
+quote(s): PRO31.htm opens '<span class="verse" id="V10">10&#160;</span>Who shall find a
+virtuous woman?' — there is no verse 1 to 9. PRO24.htm carries them at 54 to 62,
+'<span class="verse" id="V54">54&#160;</span>My words have been spoken by God—'. But the
+read-aloud file englxxup_021_PRO_31_read.txt opens 'My words have been spoken by God—the
+oracular answer of a king, whom his mother instructed.' and runs 31 verses.
+
+possible correction: a note on the page, as eng-Brenton has for the same ordering —
+'See chapter 24 for the content of chapter 30.' englxxup has no such note, and no
+PRO30.htm at all.
+
+**8. A colophon is numbered verse 1, after verse 13.**
+
+url: https://ebible.org/engkjvcpb/ESG10.htm
+
+quote(s): the numbers run '4' … '13' and then '1':
+'<span class="verse" id="V1">1&#160;</span>In the fourth year of the reign of Ptolemeus
+and Cleopatra'
+
+possible correction: number it 14, or give it its own chapter. Starting the chapter at
+4 is right. Putting the Additions back into chapters 1, 3, 4, 5, 8 and 10 is a fair
+choice. But the colophon kept the number it had at 11:1, so it now prints as verse 1.
+
+**9. A heading reads 'A Psalms'.**
+
+url: https://ebible.org/engbsb/PSA003.htm
+
+quote(s): '<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>'
+
+possible correction: 'A Psalm of David'. Forty-nine headings in the book begin 'A
+Psalm'. This one begins 'A Psalms'. PSA000.htm says the same, so the two pages agree
+with each other and differ only from the rest of the book. I cannot tell from here
+whether it came from the source text or from the publishing, so we carry it as
+published.
+
+**10. A verse marker is missing. The words are there.**
+
+In each of these, the numbers skip one, and the missing verse's words sit inside the
+block before it. Where there is a read-aloud edition, it numbers them correctly. So the
+two published editions disagree, and the HTML one is a verse short.
 
 url: https://ebible.org/eng-lxx2012/PSA118.htm and https://ebible.org/eng-uk-lxx2012/PSA118.htm
 
@@ -83,11 +174,9 @@ utterly out of my mouth; for I have hoped in your judgments. So shall I keep you
 continually, for ever and ever.'
 
 possible correction: a verse 44 marker before 'So shall I keep your law continually'.
-Markers run 1–43 then 45 onward — there is no id="V44". The read-aloud totals 176,
-matching the psalm. Both editions affected, identically apart from
-'judgments'/'judgements'. It is the only psalm in either where the markers skip.
-
-**6.**
+The numbers run 1 to 43, then 45 on. There is no id="V44". The read-aloud totals 176,
+which matches the psalm. Both editions have it, differing only in
+'judgments'/'judgements'. It is the only psalm in either where the numbers skip.
 
 url: https://ebible.org/engtcent/3JN01.htm
 
@@ -96,210 +185,32 @@ will speak face to face.  </div><div class='p'>Peace be with yoʋ. The friends g
 yoʋ. Greet the friends by name.'
 
 possible correction: a verse 15 marker before 'Peace be with yoʋ'. That sentence is an
-unnumbered paragraph on the page; the read-aloud numbers it 15 and totals 15.
-
-**7.**
-
-url: https://ebible.org/tczchongthu/GEN44.htm
-
-quote(s): '<span class="verse" id="V25">25&#160;</span>Hichun ka paovin eidonbut un,
-'Keima ho kache thei lou dingu ahi na chapa alhum pen pa ache lou dingle kasopiu
-alhumpen Benjamin ajao lou le ei kimu pi lou dingu ahi.   <span class="verse" id="V27">'
-
-possible correction: a verse 26 marker. Markers run 25 then 27 — there is no id="V26".
-
-**8.**
-
-url: https://ebible.org/tczchongthu/EXO40.htm
-
-quote(s): '<span class="verse" id="V26">26&#160;</span>Aman ponbuh sung lam'a chun sana
-gimnamtui chu aluoi doh'in hichu pondal maiya muntheng chungnung chu ahi. Achung'a chun
-sana gimnamtui chu ahal'in ahi. Ajeh chu Pakaiyin athupeh bang'a abol ahi.   <span
-class="verse" id="V28">'
-
-possible correction: a verse 27 marker. Markers run 26 then 28 — there is no id="V27".
-
-Eighteen more chapters of tczchongthu skip a marker the same way: GEN37 (3), EXO25
-(21), EXO27 (7), EXO36 (19), NUM02 (13), DEU25 (4), 1SA26 (18), 2CH34 (11), ECC06 (5),
-ISA30 (18), JER19 (12), DAN04 (7), DAN08 (18 and 24), HOS11 (2), HOS12 (5), OBA01 (7),
-ZEC02 (12). In each the words appear to be present and only the marker is absent.
-
-**9.**
-
-url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
-
-quote(s): PRO31.htm begins '<span class="verse" id="V10">10&#160;</span>Who shall find
-a virtuous woman?' — there is no verse 1–9. PRO24.htm carries them at 54–62, '<span
-class="verse" id="V54">54&#160;</span>My words have been spoken by God—'. The read-aloud
-englxxup_021_PRO_31_read.txt instead opens 'My words have been spoken by God—the
-oracular answer of a king, whom his mother instructed.' and runs 31 verses.
-
-possible correction: the two published editions put Proverbs 31:1–9 in different
-chapters. eng-Brenton handles the same LXX ordering with a note on the page — 'See
-chapter 24 for the content of chapter 30.' — englxxup has no such note, and no
-PRO30.htm at all.
-
-**10.**
-
-url: https://ebible.org/engbsb/PSA003.htm
-
-quote(s): '<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>'
-
-possible correction: 'A Psalm of David'. Forty-nine headings in the book begin 'A
-Psalm' and this one begins 'A Psalms'. Same on PSA000.htm, so the two pages agree with
-each other and differ only from the rest of the book. I cannot tell from here whether
-it came from the source text or the publishing, so we carry it as published.
-
-**11.**
-
-url: https://ebible.org/engerv/JOB24.htm
-
-quote(s): '<span class="verse" id="V4">3b&#160;</span>' and, four lines later, '<span class="verse" id="V4">4&#160;</span>'
-
-possible correction: id="V9" on the first of the two. The chapter carries id="V4"
-twice and carries no id="V9" at all, so a link to Job 24:9 lands nowhere and a link to
-24:4 lands on the wrong verse. The verse itself is present and correct — it is the one
-the page's own note explains, 'In the Hebrew text this verse follows verse 8'. One
-instance of item 23.
-
-**12.**
-
-url: https://ebible.org/engkjvcpb/ESG10.htm
-
-quote(s): verse numbers run '4' … '13' and then '1': '<span class="verse" id="V1">1&#160;</span>In the fourth year of the reign of Ptolemeus and Cleopatra'
-
-possible correction: number the colophon 14, or give it its own chapter. Beginning
-the chapter at 4 is right, and the Additions are placed back in chapters 1, 3, 4, 5, 8
-and 10 rather than kept at 11–16, which is a fair choice — but the colophon kept the
-number it had at 11:1, so it now prints after verse 13 as verse 1.
-
-The rest came from a second, wider check: every chapter's own verse markers, laid
-against each other across all 399 translations we carry. A number missing from one
-translation and from five others is that tradition's numbering and we have left it
-alone; a number missing from one translation alone is below. **Item 13 is the most
-serious thing in this letter.**
-
-**13.**
-
-url: https://ebible.org/mwf2018/MAT27.htm
-
-quote(s): the whole file is 6,803 bytes and runs '<span class="verse" id="V10">10&#160;</span>… Nhini-wa murrinh-yu ngarra Yile neki kathu mamna ngarra nukunu Jeremiah da murntak warra, i murrinh nhini-ka murrinh da thathpirr nhini-yu.” </div>' straight into '<div class='s'>Ku Soldier Pirangkadhaneme Pe Da Weyi Palyirr </div> <div class='p'> <span class="verse" id="V62">62&#160;</span>'
-
-possible correction: Matthew 27:11–61 is absent — not the markers, the words. The
-chapter goes from Judas's death to the guard at the tomb, so the trial before Pilate,
-the crucifixion and the death are all missing. Other chapters of mwf2018 look complete.
-
-**14.**
-
-url: https://ebible.org/kjn/MRK14.htm
-
-quote(s): '<span class="verse" id="V1">3-9&#160;</span>' … '<span class="verse" id="V8">62-64&#160;</span>' … '<span class="verse" id="V65">65&#160;</span>'
-
-possible correction: ids matching the printed numbers — id="V3" for the block printed
-3-9, and so on. This is a selection edition and printing ranges is right, but the ids
-count the blocks (V1…V8) instead of naming the verses, and then the last one switches
-to the real number (V65). So a link to Mark 14:3 lands nowhere and #V1 reaches it. One
-instance of item 23, showing it on merged ranges rather than part-verses.
-
-**15.**
-
-url: https://ebible.org/nay/GEN03.htm
-
-quote(s): markers run '<span class="verse" id="V14">14&#160;</span>' then '<span class="verse" id="V16">16&#160;</span>'
-
-possible correction: a verse 15 marker. Verse 14's block appears to carry verse 15's
-words as well — it ends with the two parallel clauses about the head and the heel.
-nay JHN19 skips 24 the same way.
-
-**16.**
-
-url: https://ebible.org/jni/JHN01.htm
-
-quote(s): markers run '<span class="verse" id="V5">5&#160;</span>' then '<span class="verse" id="V9">9&#160;</span>'
-
-possible correction: markers for verses 6, 7 and 8 — the sentences about the man sent
-from God.
-
-**17.**
-
-url: https://ebible.org/kiz/2TH02.htm
-
-quote(s): markers run '<span class="verse" id="V7">7&#160;</span>' then '<span class="verse" id="V11">11&#160;</span>'
-
-possible correction: markers for verses 8, 9 and 10. kiz GAL05 skips 13 the same way.
-
-**18.**
-
-url: https://ebible.org/amo/MRK07.htm
-
-quote(s): markers run '<span class="verse" id="V26">26&#160;</span>' then '<span class="verse" id="V28">28&#160;</span>'
-
-possible correction: a verse 27 marker. amo HEB11 skips 19 the same way.
-
-**19.**
-
-url: https://ebible.org/jid/MRK16.htm
-
-quote(s): markers run '<span class="verse" id="V12">12&#160;</span>' then '<span class="verse" id="V14">14&#160;</span>'
-
-possible correction: a verse 13 marker. The chapter carries the long ending, so verse
-13 belongs in it.
-
-**20.**
-
-url: https://ebible.org/tsn/MRK15.htm
-
-quote(s): markers run '<span class="verse" id="V36">36&#160;</span>' then '<span class="verse" id="V38">38&#160;</span>'
-
-possible correction: a verse 37 marker. tsn GAL04 skips 16 the same way.
-
-**21.**
-
-url: https://ebible.org/tdx/MAT16.htm
-
-quote(s): markers run '<span class="verse" id="V5">5&#160;</span>' then '<span class="verse" id="V8">8&#160;</span>'
-
-possible correction: markers for verses 6 and 7. tdx skips one marker the same way in
-2SA13 (3), 1CH08 (38), PSA029 (2), MAT10 (33) and MAT18 (4).
-
-**22.**
-
-url: https://ebible.org/uigara/MRK01.htm
-
-quote(s): markers run '<span class="verse" id="V43">43&#160;</span>' then '<span class="verse" id="V45">45&#160;</span>'
-
-possible correction: a verse 44 marker. uigara skips one the same way in GEN09 (10),
-PRO06 (5) and LUK01 (42) — separate from the read-aloud loss in item 3.
-
-One last item came from a third check: verse ids that a chapter uses twice. Unlike a
-missing number, a repeated id can never be a numbering tradition, so this one needed no
-judging. It is a single fault and a single fix, and it accounts for every repeated id
-in all 399 translations we carry.
-
-**23.**
-
-url: https://ebible.org/grcbrent/JOS09.htm
-
-quote(s): the chapter's ids against the numbers they print, in page order — 'V1=1 V2=2
-V3=2a V4=2b V5=2c V6=2d V7=2e V8=2f' and then 'V3=3 V4=4 V5=5 V6=6 V7=7 V8=8'. In full:
-'<span class="verse" id="V4">2b&#160;</span>' and, later in the same chapter,
-'<span class="verse" id="V4">4&#160;</span>'
-
-possible correction: take the id from the label the marker prints, not from the marker
-before it. A marker whose label is not a plain number — a part-verse like '2b', or a
-merged range like '3-9' — is currently given the id one greater than the previous
-marker's id. The next plain-numbered marker resyncs to its own number, so the invented
-ids land on real verses further down the chapter. Every collision costs two verses: a
-link to one lands on the other, and the other has no address at all.
-
-678 verses in 31 translations, 299 chapters: grcbrent (176), eng-Brenton (174),
-englxxup (174), wlo (13), aaz, hegNTpo, llg, mkn, nfa, row, tet, txq, engnna (9 each),
-nldnbg, ntu, rgu, sbe (7 each), msy2020 (6), tdt (5), nce (4), beu, urt, engasvbt
-(3 each), bkx, hvn, mzq, pdo, shr, tgo, engerv, engkjvcpb (1 each). Items 11 and 14
-above are single instances of this same fault, so fixing this fixes those too.
-
-We pass affected chapters over rather than show a chapter we cannot read, and pick
-them up whenever a corrected download appears — so at present neither Brenton edition
-shows Psalm 119 at all.
+unnumbered paragraph on the page. The read-aloud numbers it 15 and totals 15.
+
+The same thing, in these chapters, with the skipped number in brackets:
+
+- tczchongthu — GEN37 (3), GEN44 (26), EXO25 (21), EXO27 (7), EXO36 (19), EXO40 (27),
+  NUM02 (13), DEU25 (4), 1SA26 (18), 2CH34 (11), ECC06 (5), ISA30 (18), JER19 (12),
+  DAN04 (7), DAN08 (18 and 24), HOS11 (2), HOS12 (5), OBA01 (7), ZEC02 (12)
+- tdx — MAT16 (6 and 7), 2SA13 (3), 1CH08 (38), PSA029 (2), MAT10 (33), MAT18 (4)
+- uigara — MRK01 (44), GEN09 (10), PRO06 (5), LUK01 (42)
+- kiz — 2TH02 (8, 9 and 10), GAL05 (13)
+- nay — GEN03 (15), JHN19 (24)
+- amo — MRK07 (27), HEB11 (19)
+- tsn — MRK15 (37), GAL04 (16)
+- jni — JHN01 (6, 7 and 8)
+- jid — MRK16 (13)
+
+Two of those are worth a word. jni JHN01 is missing the three verses about the man
+sent from God. jid MRK16 has the long ending, so verse 13 belongs in it.
+
+One note on how we found these. We laid every chapter's verse numbers against the same
+chapter in the other 398 translations we carry. A number missing from six translations
+at once is that tradition's numbering, and we left those alone. The ones above are
+missing from one translation on its own.
+
+Where we cannot read a chapter, we pass it over rather than show it, and pick it up
+whenever a corrected download appears. At present neither Brenton edition shows Psalm
+119 at all.
 
 Thank you again for the work.
