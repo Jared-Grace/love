@@ -22,6 +22,7 @@ export function app_index_emojis() {
   "A name on its own is read; a picture is recognised, and a reader looking for the one app they came for finds it without reading the twelve names above it. That is the whole of what these are for, so an app only gets one where the picture genuinely says which app it is.";
   "AN APP WITH NO SUITABLE PICTURE IS SIMPLY LEFT OUT, and its name stands alone. A picture chosen because every other app had one says nothing about the app it sits on, and worse, it makes the pictures beside it stop meaning anything either - the reader learns they are decoration and goes back to reading the names.";
   "Two apps may share a picture where they really are the same kind of thing, as the two ways of copying verses to send do. What the picture tells the reader is which KIND of thing this is, and narrowing that from thirty to two has already done nearly all of the work.";
+  "Two are left out on purpose rather than not got round to: the bible inside the game, which is a bible and would have to wear the same picture as THE bible, saying the wrong thing about both; and the page listing every app, which is the page these pictures are drawn on and has nothing to be told apart from.";
   "Kept apart from the list of which apps the index offers, because the two answer different questions and change on different days: that list is a judgment about what a visitor should be offered, and this is a judgment about what a thing looks like. An app is also on this list whether or not the index offers it, so the page listing EVERY app is drawn from the same pictures.";
   let r = [
     {
@@ -115,6 +116,26 @@ export function app_index_emojis() {
     {
       app_fn: fn_name("app_next"),
       emoji: emoji_arrow_right(),
+    },
+    {
+      app_fn: fn_name("app_emoji_bible"),
+      emoji: emoji_picture_frame(),
+    },
+    {
+      app_fn: fn_name("app_index"),
+      emoji: emoji_home(),
+    },
+    {
+      app_fn: fn_name("app_a"),
+      emoji: emoji_folder(),
+    },
+    {
+      app_fn: fn_name("app_karate"),
+      emoji: emoji_martial_arts_uniform(),
+    },
+    {
+      app_fn: fn_name("app_g_verify"),
+      emoji: emoji_check(),
     },
   ];
   return r;
