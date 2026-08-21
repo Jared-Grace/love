@@ -11,28 +11,28 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "Ἀγαπητοί μὴ παντὶ πνεύματι πιστεύετε ἀλλὰ δοκιμάζετε τὰ πνεύματα εἰ ἐκ τοῦ Θεοῦ ἐστιν ὅτι πολλοὶ ψευδοπροφῆται ἐξεληλύθασιν εἰς τὸν κόσμον",
         english:
-          "Beloved every spirit do not believe but test the spirits [to see] whether from God they are For many false prophets have gone out into the world",
+          "Beloved every spirit do not believe but test the spirits to see whether from God they are For many false prophets have gone out into the world",
       },
       {
         verse_number: 2,
         original:
           "Ἐν τούτῳ γινώσκετε τὸ Πνεῦμα τοῦ Θεοῦ πᾶν πνεῦμα ὃ ὁμολογεῖ Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθότα ἐκ τοῦ Θεοῦ ἐστιν",
         english:
-          "By this you will know the Spirit of God Every spirit that confesses [that] Jesus Christ in [the] flesh has come from God is",
+          "By this you will know the Spirit of God Every spirit that confesses that Jesus Christ in the flesh has come from God is",
       },
       {
         verse_number: 3,
         original:
           "καὶ πᾶν πνεῦμα ὃ μὴ ὁμολογεῖ τὸν Ἰησοῦν ἐκ τοῦ Θεοῦ οὐκ ἔστιν καὶ τοῦτό ἐστιν τὸ τοῦ ἀντιχρίστου ὃ ἀκηκόατε ὅτι ἔρχεται καὶ νῦν ἐν τῷ κόσμῳ ἐστὶν ἤδη",
         english:
-          "and every spirit that does not confess Jesus from God not is This is the [spirit] of the antichrist which you have heard is coming and at this time in the world [which] is already",
+          "and every spirit that does not confess Jesus from God not is This is the spirit of the antichrist which you have heard is coming and at this time in the world which is already",
       },
       {
         verse_number: 4,
         original:
           "Ὑμεῖς ἐκ τοῦ Θεοῦ ἐστε τεκνία καὶ νενικήκατε αὐτούς ὅτι μείζων ἐστὶν ὁ ἐν ὑμῖν ἢ ὁ ἐν τῷ κόσμῳ",
         english:
-          "You from God are little children and have overcome them because greater is He who [is] in you than he who [is] in the world",
+          "You from God are little children and have overcome them because greater is He who is in you than he who is in the world",
       },
       {
         verse_number: 5,
@@ -72,7 +72,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "ἐν τούτῳ ἐστὶν ἡ ἀγάπη οὐχ ὅτι ἡμεῖς ἠγαπήκαμεν τὸν Θεόν ἀλλ’ ὅτι αὐτὸς ἠγάπησεν ἡμᾶς καὶ ἀπέστειλεν τὸν Υἱὸν αὐτοῦ ἱλασμὸν περὶ τῶν ἁμαρτιῶν ἡμῶν",
         english:
-          "in this consists [And] love not that we loved God but that He loved us and sent Son His [as the] atoning sacrifice for sins our",
+          "in this consists And love not that we loved God but that He loved us and sent Son His as the atoning sacrifice for sins our",
       },
       {
         verse_number: 11,
@@ -85,7 +85,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "Θεὸν οὐδεὶς πώποτε τεθέαται ἐὰν ἀγαπῶμεν ἀλλήλους ὁ Θεὸς ἐν ἡμῖν μένει καὶ ἡ ἀγάπη αὐτοῦ τετελειωμένη ἐν ἡμῖν ἐστιν",
         english:
-          "God No one has ever seen [but] if we love one another God in us remains and love His perfected in us is",
+          "God No one has ever seen but if we love one another God in us remains and love His perfected in us is",
       },
       {
         verse_number: 13,
@@ -99,7 +99,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "καὶ ἡμεῖς τεθεάμεθα καὶ μαρτυροῦμεν ὅτι ὁ Πατὴρ ἀπέσταλκεν τὸν Υἱὸν Σωτῆρα τοῦ κόσμου",
         english:
-          "And we have seen and testify that the Father has sent [His] Son [to be] [the] Savior of the world",
+          "And we have seen and testify that the Father has sent His Son to be the Savior of the world",
       },
       {
         verse_number: 15,
@@ -120,14 +120,14 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "Ἐν τούτῳ τετελείωται ἡ ἀγάπη μεθ’ ἡμῶν ἵνα παρρησίαν ἔχωμεν ἐν τῇ ἡμέρᾳ τῆς κρίσεως ὅτι καθὼς ἐκεῖνός ἐστιν καὶ ἡμεῖς ἐσμεν ἐν τῷ κόσμῳ τούτῳ",
         english:
-          "In this [way] has been perfected love among us so that confidence we may have on the day of judgment for just like Him we are in world this",
+          "In this way has been perfected love among us so that confidence we may have on the day of judgment for just like Him we are in world this",
       },
       {
         verse_number: 18,
         original:
           "Φόβος οὐκ ἔστιν ἐν τῇ ἀγάπῃ ἀλλ’ ἡ τελεία ἀγάπη ἔξω βάλλει τὸν φόβον ὅτι ὁ φόβος κόλασιν ἔχει ὁ δὲ φοβούμενος οὐ τετελείωται ἐν τῇ ἀγάπῃ",
         english:
-          "fear no There is in love but perfect love out drives fear because fear punishment involves The [one who] fears has not been perfected in love",
+          "fear no There is in love but perfect love out drives fear because fear punishment involves The one who fears has not been perfected in love",
       },
       {
         verse_number: 19,
@@ -139,7 +139,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn04() {
         original:
           "Ἐάν τις εἴπῃ ὅτι Ἀγαπῶ τὸν Θεόν καὶ τὸν ἀδελφὸν αὐτοῦ μισῇ ψεύστης ἐστίν ὁ γὰρ μὴ ἀγαπῶν τὸν ἀδελφὸν αὐτοῦ ὃν ἑώρακεν τὸν Θεὸν ὃν οὐχ ἑώρακεν οὐ δύναται ἀγαπᾶν",
         english:
-          "If anyone says I love God [but] brother his hates a liar he is anyone who For does not love brother his whom he has seen God whom he has not seen cannot love",
+          "If anyone says I love God but brother his hates a liar he is anyone who For does not love brother his whom he has seen God whom he has not seen cannot love",
       },
       {
         verse_number: 21,
