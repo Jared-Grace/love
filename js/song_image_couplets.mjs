@@ -289,8 +289,8 @@ export function song_image_couplets() {
       first: "the SON of GOD",
       second: "was raised to life",
       symbol:
-        "The mouth of a tomb standing wide open in plain grey rock, a great round grey stone resting on the ground well away to one side of the opening, and one white linen cloth lying folded by itself inside the dark opening",
-      ref: "John 20:6-7",
+        "The mouth of a tomb standing wide open and empty in plain grey rock, with one great round grey stone standing upright on the ground well away to one side of the opening",
+      ref: "Matthew 28:2",
       same_as: 0,
     },
     {
