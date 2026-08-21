@@ -10,7 +10,12 @@ import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
-export function js_bag_pass_through_entries(decls, unpacked, producers, found) {
+export function js_bag_pass_through_records_add(
+  decls,
+  unpacked,
+  producers,
+  found,
+) {
   arguments_assert(arguments, 4);
   for (let decl of decls) {
     let init = property_get(decl, "init");
