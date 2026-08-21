@@ -3,7 +3,7 @@ import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { g_gender_male } from "./g_gender_male.mjs";
 import { g_gender_female } from "./g_gender_female.mjs";
-import { app_g_container_color } from "./app_g_container_color.mjs";
+import { app_shared_game_container_color } from "./app_shared_game_container_color.mjs";
 import { g_character_img_url_direction } from "./g_character_img_url_direction.mjs";
 import { html_img_retry } from "./html_img_retry.mjs";
 import { html_display_block } from "./html_display_block.mjs";
@@ -17,7 +17,7 @@ export function app_g_npc_bubble(npc, overlay) {
   "the NPC's speech bubble WITHOUT its words — the gender-colored container, the south-facing avatar, and the bold 'Name says:' label. shared by the spoken-words bubble and the typing-dots bubble, so the avatar and name header live in ONE place";
   let gender = property_get(npc, "gender");
   let color_background = app_g_npc_color(npc);
-  let container = app_g_container_color(overlay, color_background);
+  let container = app_shared_game_container_color(overlay, color_background);
   let c_src = g_character_img_url_direction(npc, "south");
   let component = html_img_retry(container, c_src);
   html_display_block(component);
