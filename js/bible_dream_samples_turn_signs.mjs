@@ -7,6 +7,7 @@ import { list_size } from "./list_size.mjs";
 export function bible_dream_samples_turn_signs(samples) {
   "Say which way a line bends at each of its points - one for one way, minus one for the other, nothing at all where it runs straight - giving one answer for every sample handed in.";
   "The bend is read from the two steps meeting at the point, by the sign of their cross product. That is a bend and not a direction: it says nothing about which way along the line the hand went, and reversing the whole list leaves every sign as it was in magnitude. So a shape's bumps are a property of the shape, which is what they have to be for anything built on them to be the same shape's ornament whichever way it was drawn.";
+  "★ THE CROSS PRODUCT IS DIVIDED BY THE LENGTHS OF THE TWO STEPS, WHICH TURNS IT FROM AN AREA INTO AN ANGLE. Left as an area it grows with the square of how far apart the samples are, so one fixed dead band means something quite different on a shape drawn small than on one drawn large. Measured on the page: a cow three hundred units round, sampled a hundred and sixty times, had its bend flip sign almost every step, and the whole outline came back as ONE run six samples long - the noise in the sampling was larger than the band. The river, sampled the same number of times but three times the size, was read perfectly. Nothing went red; the small shapes simply had no features. Divided through, the number is the sine of the angle between the steps, which does not care how big the drawing is.";
   "The small dead band around nothing is what makes a straight run read as straight. Samples are taken at even distances along a curve and so carry rounding, and without a band a dead straight line would come back as a rapid alternation of the two signs and every ornament built on it would be nonsense.";
   "The two ends are given nothing, because a bend needs a step on each side of it and an end has only one.";
   let count = list_size(samples);
@@ -23,12 +24,23 @@ export function bible_dream_samples_turn_signs(samples) {
     let ahead_up = subtract(samples[index + 1].y, samples[index].y);
     let left = multiply(back_sideways, ahead_up);
     let right = multiply(back_up, ahead_sideways);
-    let turn = subtract(left, right);
+    let crossed = subtract(left, right);
+    let back_long = Math.sqrt(
+      multiply(back_sideways, back_sideways) + multiply(back_up, back_up),
+    );
+    let ahead_long = Math.sqrt(
+      multiply(ahead_sideways, ahead_sideways) + multiply(ahead_up, ahead_up),
+    );
+    let both_long = multiply(back_long, ahead_long);
+    let turn = 0;
+    if (greater_than(both_long, 0)) {
+      turn = divide(crossed, both_long);
+    }
     let sign = 0;
-    if (greater_than(turn, 0.02)) {
+    if (greater_than(turn, 0.05)) {
       sign = 1;
     }
-    if (less_than(turn, -0.02)) {
+    if (less_than(turn, -0.05)) {
       sign = -1;
     }
     list_add(signs, sign);
