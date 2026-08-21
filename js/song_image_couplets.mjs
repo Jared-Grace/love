@@ -210,7 +210,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "A dead serpent of emerald green glass, made of nothing but one long smooth body tapering from its head to the tip of its tail, lying limp and flat with its mouth shut, and a plain brown wooden post standing upright squarely on its flattened head",
+        "A dead serpent of emerald green glass, made of nothing but one long smooth body tapering from its head to the tip of its tail, lying limp and flat with its mouth shut, and a plain brown wooden post standing upright in front of its head, the post's lower end covering the whole of the head so that only the snout shows out to one side of the post and the neck to the other",
       ref: "Genesis 3:15",
       same_as: 0,
     },
