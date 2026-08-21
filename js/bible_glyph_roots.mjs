@@ -10,6 +10,7 @@ export function bible_glyph_roots() {
   "AND THE HARDEST VERSE IS THE ONE THE MARK GETS EXACTLY BACKWARDS. John wrote the Word was God with the article left OFF God, and had he put it on, the sentence would have said the Word is the Father - which the rest of his gospel spends twenty chapters denying. That missing article carries the whole doctrinal weight of the verse. An equals sign puts it back.";
   "The rule this leaves behind is A MARK MUST NOT CLAIM MORE THAN THE WORD CLAIMS, and it outranks frequency. A word appearing two thousand times looks like the best investment in the table right up to the moment the only available mark overstates it, and then those two thousand places are wrong rather than blank - which is strictly worse, because a blank asks the reader a question and a wrong mark answers it.";
   "THE LIGHT, THE DARKNESS AND THE WITNESS WERE FOUND BY DRAWING A PAGE and not by reading the frequency table, the same way the not was. The prologue of John says light five times, darkness twice and witness five times in eighteen verses, and every one of them stood in English inside a sentence made of pictures - which reads as a page somebody gave up on rather than as a page still being written.";
+  "THE TURNING CROSSED THE SAME WAY AND TWO NEIGHBOURS OF IT WERE REFUSED. Epistrepho is epi and strepho, to turn upon or turn back, so the arrow the Hebrew shub bought says exactly what the Greek word says and it was seated the same hour. Strepho on its own was not: it is often only to turn round, and an arrow that curves back would put a back into a sentence where the Greek has none. Metanoeo was not either, and that refusal is the more interesting one - it is the word the New Testament uses where the prophets say shub, so seating it on the same arrow would have been defensible by meaning and wrong by picture. Metanoeo is a mind changing and not a body turning, and this table draws what a word says rather than what it is used to translate.";
   "THE BREAD AND THE SWORD CAME FROM THE HEBREW SIDE AND WERE SEATED HERE THE SAME HOUR, which is the first time this table has grown for a reason that had nothing to do with the Greek. Lechem and chereb were measured for a chapter of the law and turned out to be drawable, so two pictures were bought; and artos and machaira mean the same two things, so leaving them undrawn here would have made the reader learn a mark in Deuteronomy that goes blank in the feeding of the five thousand. The shared table is only shared if a picture bought on one side is looked for on the other, and this is that being done rather than being claimed.";
   "RHOMPHAIA HAS ITS OWN ROW AND THE SAME PICTURE, and the two together are the rule this table keeps twice over. It is not machaira's root and so it cannot sit inside machaira's family - a root is a claim about kinship and these two words are not kin. It is the same object and so it takes the same mark, because two unrelated words meaning one thing sharing a glyph is exactly what a glyph is for. Kinship and meaning are different questions and the table answers them in different places.";
   "GINOMAI IS STILL BLANK AND IT WAS THE FOURTH WORD ON THAT LIST, so this says what stopped it rather than leaving the next author to work the same ground again. The word is come to be, and one mark WOULD be right for all of it - the Greek reader met one word where English needs became, was made, was born and there came, and splitting it by which English word the interlinear reached for is the thing this table refuses to do everywhere else.";
@@ -620,6 +621,16 @@ export function bible_glyph_roots() {
         {
           strong: "4501",
           glyph: "sword",
+        },
+      ],
+    },
+    {
+      root: "epistrepho",
+      gloss: "turn back, return",
+      words: [
+        {
+          strong: "1994",
+          glyph: "turn_back",
         },
       ],
     },
