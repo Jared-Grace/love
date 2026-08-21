@@ -12,8 +12,8 @@ export function bible_event_kinds_unchosen(ranked, chosen_names) {
   ("The tallied word is called value and comes back out called kind, because a tally is general and does not know what it counted. Renaming it here is the one place that knows.");
   function unchosen_is(row) {
     let kind = property_get(row, "value");
-    let unchosen = list_includes_not(chosen_names, kind);
-    return unchosen;
+    let chosen_not = list_includes_not(chosen_names, kind);
+    return chosen_not;
   }
   function row_named(row) {
     let kind = property_get(row, "value");
