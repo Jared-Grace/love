@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function song_image_couplets_title_verse(title) {
   "$plain title";
   "which verse of the hymn a song's name says it sings: the number when the name says one, 0 when it says the whole hymn, and null when the name is not this hymn at all";
