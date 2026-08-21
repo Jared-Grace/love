@@ -1,3 +1,4 @@
+import { g_arc_shared_steps_gate_run } from "./g_arc_shared_steps_gate_run.mjs";
 import { bible_gathered_finders_gate_run } from "./bible_gathered_finders_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_gate_run } from "./bible_glyph_chapters_rosetta_lines_gate_run.mjs";
 import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
@@ -459,6 +460,7 @@ export function qa_gates() {
     js_hash_key_getters_own_cases_gate_run,
     g_verify_chapter_asked_cases_gate_run,
     g_arc_written_gate_run,
+    g_arc_shared_steps_gate_run,
     js_query_key_literals_cases_gate_run,
     js_query_key_getters_cases_gate_run,
     js_storage_browser_objects_cases_gate_run,
