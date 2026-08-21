@@ -23,6 +23,7 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   "IT ASKS THE SET ONCE AND MATCHES THE REST HERE, rather than asking per word. The neighbourhood search next door reads the whole listing every time it is called, which is right for one word typed at a command line and is a listing per candidate when a list of forty is being weighed.";
   "IT SAYS WHICH MATCHES ARE ALREADY SEATED IN THIS REPO, because that changes what the row means. A picture this Bible already draws for another word is a picture the reader has already met, so seating it for a second word costs them nothing new to learn - and reusing a mark a reader knows is worth more than a mark that is merely available.";
   "A MATCH IS A LEAD AND NEVER AN ANSWER. The set is searched for the English the interlinear happened to print, so a word whose picture is obvious under another name comes back empty, and a word that shares a syllable with a fruit comes back with the fruit. What this rules out is the expensive mistake - writing a glyph the set cannot draw - and it does not rule in anything.";
+  "IT CARRIES THE WORD'S OWN NUMBER AND ITS TESTAMENT, which the reading upstairs already knows and this used to drop. A row of this report is read by somebody about to write a row into a root table, and that row is keyed by the number - so dropping it made every seating start with a lookup by hand, which is the exact move whose going wrong is written two paragraphs up. The testament travels with it because the two numberings collide, and a number without one names two different words.";
   let report = await bible_glyph_chapters_undrawn_commonest(count);
   let candidates = property_get(report, "commonest");
   let names = await bible_glyph_artwork_names_available();
@@ -63,6 +64,8 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
     }
     list_add(weighed, {
       gloss,
+      strong: property_get(candidate, "strong"),
+      testament: property_get(candidate, "testament"),
       original: property_get(candidate, "original"),
       occurrences: property_get(candidate, "occurrences"),
       chapters: property_get(candidate, "chapters"),
