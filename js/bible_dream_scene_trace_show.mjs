@@ -1,3 +1,4 @@
+import { bible_dream_stroke_hand_lift } from "./bible_dream_stroke_hand_lift.mjs";
 import { bible_dream_stroke_hand_step } from "./bible_dream_stroke_hand_step.mjs";
 import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told.mjs";
 import { bible_dream_scene_words_show } from "./bible_dream_scene_words_show.mjs";
