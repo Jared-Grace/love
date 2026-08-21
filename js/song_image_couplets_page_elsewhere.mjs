@@ -10,7 +10,7 @@ export function song_image_couplets_page_elsewhere() {
   let title = song_image_couplets_title();
   let address = app_music_song_address(title);
   let heading =
-    "Every passage named above is written out in full, under the line it belongs to, here:";
+    "Open this link for the lyrics, the verse references, and the full verses written out:";
   let r = list_join_newline([heading, address]);
   return r;
 }

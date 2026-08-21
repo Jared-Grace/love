@@ -1,3 +1,4 @@
+import { words_reached_for_plain_lines } from "./words_reached_for_plain_lines.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { not } from "./not.mjs";
 import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
@@ -92,11 +93,19 @@ export function g_arc_prompt(
   ("It also asks for nothing new. The fit rule above already wants a reader able to point at what in the person's line the passage answers, and the plainest word is nearly always the most concrete one - so a line that names a category rather than a thing was already failing that test, and this says out loud why.");
   ("The age is READ rather than written here, because a gate over what has been written has to measure against the same number the writing was asked for.");
   ("IT COVERS THE UNSPOKEN FIELDS TOO, and that was added rather than assumed. It first asked only for the words the person SAYS, which is the only text a child ever meets - and the occupation, the trouble and the summary looked like they were nobody's business, being written for the next call rather than for a player. They are not, for two reasons. The four fields are written in ONE answer by one writer, so a register let loose in three of them is the register the fourth is written beside; the dyer's summary said she had practised her household religion, and her spoken lines said rites three times. And the summary alone is handed to the prompt that writes the NEXT person, so a hard word there is not sitting still - it is the example the following arc is written from.");
+  ("THE WORDS ARE NAMED BECAUSE THE RULE ALONE DOES NOT WORK, and that is measured rather than supposed. The sentence above has always been in this prompt, and the two arcs written under it reached past a child's vocabulary on fifty of a hundred and ten lines - one of them for SINCE five times. The writer was not breaking the rule; it cannot tell that SINCE is hard, because nothing in the word says so and no amount of care recovers a fact about a reader from the word itself. So the rule is kept and the answer is written down beside it.");
+  ("The plain twin is given rather than the fault alone. Told only what not to write, a writer works around the word and the sentence comes out bent; handed what to write instead, there is nothing left to decide.");
   let reading_age = property_get(s, "reading_age");
-  let plain_words = list_join_space([
+  let reached_for = words_reached_for_plain_lines();
+  let joined2 = list_join_space([
     "Write every word of your answer so a child of",
     reading_age,
     "could read it - the lines the person speaks, and the occupation, trouble and summary beside them. Where the plain word and the exact word differ, take the plain one; where you need something a child that age has no word for, have the person show the thing rather than name it - what they do, in the words they would use while doing it.",
+  ]);
+  let plain_words = list_join_newline([
+    joined2,
+    "These are the words writers reach for here past what that child has, and what to write in place of each. Do not use the word on the left.",
+    reached_for,
   ]);
   let becoming = g_arc_prompt_becoming(leader);
   ("The field list and the answer example are BOTH rendered from one source, so a renamed field cannot be described here and missing from the shape at the end. A prompt never fails, so that disagreement would have gone out unnoticed on every call.");
