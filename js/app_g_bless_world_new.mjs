@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
-import { app_g_map_generate } from "./app_g_map_generate.mjs";
+import { app_shared_game_map_generate } from "./app_shared_game_map_generate.mjs";
 import { g_coordinates } from "./g_coordinates.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
 import { g_player_img_get } from "./g_player_img_get.mjs";
@@ -38,7 +38,7 @@ export function app_g_bless_world_new() {
   ("Every block is handed to the world as the places named so far. The ground knows a");
   ("pavement is paved; only the world knows which tiles that pavement IS and which doorstep");
   ("belongs to which building, and that is what a rung is asked against.");
-  let rows = app_g_map_generate();
+  let rows = app_shared_game_map_generate();
   let blocks = app_g_bless_blocks(rows);
   app_g_bless_blocks_raise(rows, blocks);
   let coordinates = g_coordinates(rows);
