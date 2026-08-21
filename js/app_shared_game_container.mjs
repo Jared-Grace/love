@@ -4,7 +4,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_style_control } from "./app_shared_style_control.mjs";
 import { app_shared_container_centered } from "./app_shared_container_centered.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_g_container(overlay) {
+export function app_shared_game_container(overlay) {
   let container = app_shared_container_centered(overlay);
   app_shared_style_control(container);
   let left = app_shared_container_background_color();
