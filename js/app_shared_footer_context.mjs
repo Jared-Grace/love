@@ -5,15 +5,15 @@ import { null_not_is } from "./null_not_is.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_shared_footer_context(context) {
-  "a screen-based app clears its whole page on every navigation, so a way to reach the developer has to be re-added once each screen has drawn. Hand this to a context as its after-render hook and every screen ends with the contact button.";
+  "a screen-based app clears its whole page on every navigation, so the foot of the page has to be re-added once each screen has drawn. Hand this to a context as its after-render hook and every screen ends with the footer.";
   let root = property_get(context, "root");
-  ("two renders can overlap — a slow screen may still be loading when the next render clears the page — so take away the button the previous render left before adding this one, and the reader never sees it offered twice");
-  let previous = property_get_or_null(context, "contact_button");
+  ("two renders can overlap — a slow screen may still be loading when the next render clears the page — so take away the foot the previous render left before adding this one, and the reader never sees it offered twice");
+  let previous = property_get_or_null(context, "footer");
   let had_previous = null_not_is(previous);
   if (had_previous) {
     html_remove(previous);
   }
-  let button = app_shared_footer(root);
-  property_set(context, "contact_button", button);
-  return button;
+  let footer = app_shared_footer(root);
+  property_set(context, "footer", footer);
+  return footer;
 }
