@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets } from "./song_image_couplets.mjs";
+import { song_image_couplet_references } from "./song_image_couplet_references.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
 export function song_image_couplets_references() {
   "Every passage of scripture this hymn rests on, each named once, in the order the song first names it.";
   "IT IS ASKED BEFORE ANYBODY OPENS THE PAGE, which is the whole point of it - the set is fixed by the song, so the words behind it can be fetched, written into one file and put in storage ahead of time instead of a chapter at a time while a reader waits.";

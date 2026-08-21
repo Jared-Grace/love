@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
+import { text_replace_space_to } from "./text_replace_space_to.mjs";
+import { property_set } from "./property_set.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { window_open_app } from "./window_open_app.mjs";
 export function app_shared_bible_reference_open(reference) {
   "$plain reference";
   "Opens the bible reader beside what is already open, at the passage a written reference names.";

@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
+import { app_music_reference_show } from "./app_music_reference_show.mjs";
+import { list_add } from "./list_add.mjs";
 export function app_music_song_line_show(parent, words, references) {
   "$plain words";
   "$plain references";
