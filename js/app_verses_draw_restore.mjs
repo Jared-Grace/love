@@ -1,3 +1,4 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -7,7 +8,6 @@ import { text_combine } from "./text_combine.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
-import { app_shared_contact_button } from "./app_shared_contact_button.mjs";
 export async function app_verses_draw_restore(
   counts,
   count_each,
@@ -34,7 +34,7 @@ export async function app_verses_draw_restore(
   app_shared_button_copy(card, copy);
   let card4 = app_shared_container_blue(content);
   app_verses_card4_refresh(verse_groups, card4);
-  app_shared_contact_button(content);
+  app_shared_footer(content);
   await draw_restore();
   return card4;
 }
