@@ -53,15 +53,14 @@ export function bible_glyph_chapter_rosetta_lines_psa136() {
         verse_number: 8,
         original:
           "אֶת־ הַ֭שֶּׁמֶשׁ לְמֶמְשֶׁ֣לֶת בַּיּ֑וֹם כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
-        english:
-          "- the sun to rule the day endures forever His loving devotion",
+        english: "the sun to rule the day endures forever His loving devotion",
       },
       {
         verse_number: 9,
         original:
           "אֶת־ הַיָּרֵ֣חַ וְ֭כוֹכָבִים לְמֶמְשְׁל֣וֹת בַּלָּ֑יְלָה כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
         english:
-          "- the moon and stars to govern the night endures forever His loving devotion",
+          "the moon and stars to govern the night endures forever His loving devotion",
       },
       {
         verse_number: 10,
