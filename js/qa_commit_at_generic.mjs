@@ -1,3 +1,4 @@
+import { qa_commit_entry_beside_moved } from "./qa_commit_entry_beside_moved.mjs";
 import { qa_commit_kept_file } from "./qa_commit_kept_file.mjs";
 import { qa_commit_beside_heads } from "./qa_commit_beside_heads.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,11 +26,14 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
   let remembered = property_get_or_null(known, named);
   ("An answer already written down is handed straight back, and one of us paying the couple of minutes is all of us knowing - but only when it was worked out beside the very same neighbours, which is a question with its own name and its own corpus.");
   let matching = qa_commit_entry_beside_matching_is(remembered, heads);
+  ("Which neighbours moved is worked out before the gates are run rather than afterwards, because the answer is about the record we just declined to use and the record is what changes underneath us while a run of the gates goes on. Read after, it would name whatever had moved by then.");
+  let moved = qa_commit_entry_beside_moved(remembered, heads);
   if (matching) {
     ("An answer read back out of the record is in the record, so this way out says so too. Every way out of here now answers the same question - is this judging written down where the next asker will find it - and an asker that has to tell which way out it came from before it knows what it was told is an asker that will one day get it wrong.");
     let r = {
       commit: named,
       remembered: true,
+      moved,
       filed: true,
       kept: remembered,
     };
@@ -45,6 +49,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
     let r3 = {
       commit: named,
       remembered: false,
+      moved,
       filed: false,
       silent: property_get(beside, "silent"),
       kept,
@@ -58,9 +63,11 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
     known[named] = kept;
   }
   ("Whether the answer was written down is handed back rather than left to be guessed from the record afterwards. An asker who wanted this remembered and is quietly not getting it should be able to see so, and the neighbours that could not say are named where they were worked out.");
+  ("The neighbours that moved are named beside them, because an asker who spent a quarter of an hour here wants to know which one cost it - and being an empty list means the record held nothing about this commit at all, which is a different thing from a record it could not use.");
   let r2 = {
     commit: named,
     remembered: false,
+    moved,
     filed,
     silent: property_get(stamped, "silent"),
     kept,
