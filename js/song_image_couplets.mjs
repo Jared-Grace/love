@@ -329,7 +329,7 @@ export function song_image_couplets() {
       first: "HE will return",
       second: "to judge the earth",
       symbol:
-        "One long straight herald's trumpet of white glass, one plain smooth tube bare and unbroken from end to end, running from a small mouthpiece at one end and opening into a wide flared bell at the other, lying across the window and drawn very large so that it reaches almost from one side of it to the other",
+        "One long straight herald's trumpet of white glass, one plain smooth tube bare and unbroken from end to end, its small mouthpiece at the bottom and its wide flared bell at the top, standing upright inside the window and drawn very large so that it reaches almost from the bottom of the window to the top",
       ref: "Matthew 24:31, 1 Corinthians 15:52",
       same_as: 0,
     },
