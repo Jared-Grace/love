@@ -5,7 +5,7 @@ import { g_water } from "./g_water.mjs";
 import { g_tile_path } from "./g_tile_path.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_map_room_new(parent) {
+export function app_shared_game_map_room_new(parent) {
   "the open water around the map, drawn as a REPEATING BACKGROUND rather than as tiles. holds half a window of room on every side, which is what lets the player sit in the middle of the screen even standing on the outermost tile of the world.";
   ("the same room used to be real water tiles - a ring padded into the grid by ",
     fn_name("app_shared_game_map_buffer_pad"),
