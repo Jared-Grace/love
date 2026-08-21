@@ -8,7 +8,7 @@ export function song_image_couplets_title_verse(title) {
   "THE NAME IS THE ONLY THING THAT SAYS IT. Nothing about a video says which words are sung in it except what it was called, so this is a reading of a name and not a fact about a recording. A song of this hymn that was named something else answers null here, and rightly - it would be worse to guess.";
   "A name that says the hymn but no verse is the whole hymn, which is what 'the FATHER's SON' and 'the FATHER's SON (widescreen)' both are. That is the same reading a name saying nothing extra should get: a cut of the whole song is still the whole song's words.";
   arguments_assert(arguments, 1);
-  let hymn = "the FATHER's SON";
+  let hymn = song_image_couplets_title();
   let of_hymn = text_starts_with(title, hymn);
   let other = not(of_hymn);
   if (other) {
