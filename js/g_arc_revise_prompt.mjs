@@ -1,3 +1,4 @@
+import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { g_arc_feedback_person } from "./g_arc_feedback_person.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-import { list_join_dot } from "./list_join_dot.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine } from "./text_combine.mjs";

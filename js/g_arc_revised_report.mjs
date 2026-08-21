@@ -1,3 +1,17 @@
+import { g_arc_previous_chapter } from "./g_arc_previous_chapter.mjs";
+import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
+import { g_arc_lines_by_address } from "./g_arc_lines_by_address.mjs";
+import { property_get } from "./property_get.mjs";
+import { property_or_null } from "./property_or_null.mjs";
+import { list_add } from "./list_add.mjs";
+import { text_words_gone_come } from "./text_words_gone_come.mjs";
+import { list_size } from "./list_size.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { equal } from "./equal.mjs";
 export async function g_arc_revised_report(chapter_code, index) {
   "$plain chapter_code";
   "Every line of one person's arc that a rewrite actually moved, set beside what it used to say, with the words that went out and the words that came in.";
