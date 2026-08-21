@@ -1,0 +1,63 @@
+export function words_reached_for_plain() {
+  "Each word a writer has actually reached for past a child's vocabulary, paired with the plain way of saying the same thing.";
+  "IT IS EVIDENCE AND NOT A GUESS. Every word on the left was faulted by the word check against an arc somebody had already written - so this is a list of the mistakes that get made here, rather than a list of words that sound hard. Two people written independently reached for RATHER, ANYBODY, ACTUALLY, PLAINLY, CERTAIN, HOUSEHOLD and EARN, and one of them reached for SINCE five times in one arc.";
+  "THE PLAIN SIDE IS THE HALF THAT DOES THE WORK. A writer told not to use a word and left there writes around it badly or writes it anyway; handed the plain twin, the sentence is already finished. Naming the fault costs a reader nothing and fixes nothing, which is the same reason a feedback note says what is wrong and the reviser picks the words - except that here the answer is the same every time, so it can be written down once.";
+  "IT IS NOT A RULE ABOUT ENGLISH. Nothing here is bad writing; SINCE and WHETHER are ordinary words that a grown reader would not notice. They are on this list only because of who is reading, and a game written for a different reader would want none of it.";
+  "EVERY PLAIN SIDE IS ITSELF INSIDE THE LIST, checked rather than assumed. A twin that faults is worse than no twin at all - it teaches the writer a word the check will fault next time, and the fault then arrives wearing the authority of the prompt that asked for it.";
+  "A WORD THE GAME TEACHES IS NOT HERE. Sin, cross, confess and complete are outside a child's vocabulary too and belong there - the whole point of the game is that a child leaves holding them. What separates the two lists is intent, and nothing else.";
+  let r = {
+    ago: "back",
+    able: "can",
+    actually: "really",
+    aged: "old",
+    agree: "say yes",
+    allowed: "let",
+    anybody: "a person",
+    anyone: "a person",
+    approval: "a good word",
+    argument: "a fight",
+    arguing: "fighting",
+    ashamed: "sorry",
+    certain: "sure",
+    charge: "what I am said to have done",
+    claim: "say",
+    cruel: "hard",
+    deal: "put right",
+    dealt: "put right",
+    decent: "good",
+    doubled: "grown bigger",
+    earn: "work for",
+    expect: "wait for",
+    expecting: "waiting for",
+    gain: "get",
+    gladness: "being glad",
+    guessing: "not knowing",
+    habit: "a thing I keep on with",
+    household: "at home",
+    instead: "in place of",
+    measuring: "telling myself",
+    message: "what I was told",
+    neither: "not one",
+    otherwise: "if not",
+    owe: "have to pay",
+    owed: "had to pay",
+    owing: "have to pay",
+    plainly: "straight",
+    practised: "done",
+    pretending: "making out",
+    purpose: "because I wanted to",
+    questions: "things to ask",
+    rather: "sooner",
+    relationship: "knowing Him",
+    silence: "the quiet",
+    since: "from the time",
+    single: "one",
+    slips: "goes back",
+    steadies: "holds me up",
+    undo: "put right",
+    weight: "how heavy it was",
+    whatever: "all that",
+    whether: "if",
+  };
+  return r;
+}
