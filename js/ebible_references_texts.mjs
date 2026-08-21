@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_split_comma_or_empty } from "./text_split_comma_or_empty.mjs";
+import { list_map } from "./list_map.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { ebible_folder_english } from "./ebible_folder_english.mjs";
+import { ebible_version_books } from "./ebible_version_books.mjs";
+import { ebible_reference_books_text } from "./ebible_reference_books_text.mjs";
+import { property_set } from "./property_set.mjs";
 export async function ebible_references_texts(references_comma) {
   "$plain references_comma";
   "The words the English bible holds at each of several references, named the way a person writes them and joined with commas - 'John 3:16, Romans 5:8' - answered as each reference against its words.";

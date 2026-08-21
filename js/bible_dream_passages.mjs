@@ -19,10 +19,13 @@ export function bible_dream_passages() {
     {
       reference: "GEN28:12-15",
       dreamer: "Jacob",
-      shapes: "a ladder resting on the earth with its top reaching heaven, and angels",
+      shapes:
+        "a ladder resting on the earth with its top reaching heaven, and angels",
       counts: [],
-      moves: "the angels are going up and down it, which is the whole of what they do",
-      spoken: "the LORD standing at the top promising the land, offspring like the dust, and to keep him wherever he goes",
+      moves:
+        "the angels are going up and down it, which is the whole of what they do",
+      spoken:
+        "the LORD standing at the top promising the land, offspring like the dust, and to keep him wherever he goes",
     },
     {
       reference: "GEN31:10-13",
@@ -30,14 +33,16 @@ export function bible_dream_passages() {
       shapes: "streaked, spotted and speckled markings on the mating males",
       counts: [],
       moves: "the marked males are mating with the flock",
-      spoken: "the angel of God calling him by name and telling him to leave the land",
+      spoken:
+        "the angel of God calling him by name and telling him to leave the land",
     },
     {
       reference: "GEN37:6-7",
       dreamer: "Joseph",
       shapes: "sheaves of grain bound in a field",
       counts: [],
-      moves: "his sheaf rises and stands upright and the others gather round and bow to it, which is the whole of what the dream says",
+      moves:
+        "his sheaf rises and stands upright and the others gather round and bow to it, which is the whole of what the dream says",
       spoken: "",
     },
     {
@@ -51,25 +56,31 @@ export function bible_dream_passages() {
     {
       reference: "GEN40:9-11",
       dreamer: "the cupbearer",
-      shapes: "a vine, its branches, its clusters, Pharaoh's cup and the dreamer's own hand",
+      shapes:
+        "a vine, its branches, its clusters, Pharaoh's cup and the dreamer's own hand",
       counts: [3],
-      moves: "the vine buds, blossoms and ripens, and he presses the grapes into the cup and puts it in Pharaoh's hand",
+      moves:
+        "the vine buds, blossoms and ripens, and he presses the grapes into the cup and puts it in Pharaoh's hand",
       spoken: "",
     },
     {
       reference: "GEN40:16-17",
       dreamer: "the baker",
-      shapes: "baskets of white bread on his head, all sorts of baked goods in the top one, and birds",
+      shapes:
+        "baskets of white bread on his head, all sorts of baked goods in the top one, and birds",
       counts: [3],
-      moves: "the birds are eating out of the basket on his head and he cannot reach them",
+      moves:
+        "the birds are eating out of the basket on his head and he cannot reach them",
       spoken: "",
     },
     {
       reference: "GEN41:1-7",
       dreamer: "Pharaoh",
-      shapes: "the Nile, sleek and gaunt cows, reeds, plump and scorched heads of grain on one stalk",
+      shapes:
+        "the Nile, sleek and gaunt cows, reeds, plump and scorched heads of grain on one stalk",
       counts: [7],
-      moves: "the gaunt cows eat the sleek ones and the thin heads swallow the plump ones, and the east wind scorches them",
+      moves:
+        "the gaunt cows eat the sleek ones and the thin heads swallow the plump ones, and the east wind scorches them",
       spoken: "",
     },
     {
@@ -77,7 +88,8 @@ export function bible_dream_passages() {
       dreamer: "a man in the Midianite camp",
       shapes: "a loaf of barley bread and a tent",
       counts: [],
-      moves: "the loaf comes tumbling into the camp and strikes the tent so hard it overturns and collapses, which is the whole of what the dream says",
+      moves:
+        "the loaf comes tumbling into the camp and strikes the tent so hard it overturns and collapses, which is the whole of what the dream says",
       spoken: "",
     },
     {
@@ -86,31 +98,40 @@ export function bible_dream_passages() {
       shapes: "",
       counts: [],
       moves: "",
-      spoken: "God at Gibeon saying ask what you wish, and granting a discerning heart, and riches and honour unasked",
+      spoken:
+        "God at Gibeon saying ask what you wish, and granting a discerning heart, and riches and honour unasked",
     },
     {
       reference: "DAN2:31-35",
       dreamer: "Nebuchadnezzar",
-      shapes: "a great statue - head of gold, chest and arms of silver, belly and thighs of bronze, legs of iron, feet part iron and part clay - and a stone cut without hands",
+      shapes:
+        "a great statue - head of gold, chest and arms of silver, belly and thighs of bronze, legs of iron, feet part iron and part clay - and a stone cut without hands",
       counts: [5],
-      moves: "the stone strikes the feet, every metal shatters into chaff, the wind carries it away leaving no trace, and the stone becomes a mountain filling the earth",
+      moves:
+        "the stone strikes the feet, every metal shatters into chaff, the wind carries it away leaving no trace, and the stone becomes a mountain filling the earth",
       spoken: "",
     },
     {
       reference: "DAN4:10-17",
       dreamer: "Nebuchadnezzar",
-      shapes: "a tree reaching the sky with beautiful leaves and abundant fruit, beasts sheltering under it, birds nesting in its branches, a watcher coming down from heaven, and a stump banded with iron and bronze",
+      shapes:
+        "a tree reaching the sky with beautiful leaves and abundant fruit, beasts sheltering under it, birds nesting in its branches, a watcher coming down from heaven, and a stump banded with iron and bronze",
       counts: [],
-      moves: "the tree is cut down, its branches chopped, its leaves stripped, its fruit scattered, the beasts and birds flee, and the stump is left in the grass for seven times",
-      spoken: "the watcher calling out the decree of the holy ones, that the Most High rules the kingdom of mankind",
+      moves:
+        "the tree is cut down, its branches chopped, its leaves stripped, its fruit scattered, the beasts and birds flee, and the stump is left in the grass for seven times",
+      spoken:
+        "the watcher calling out the decree of the holy ones, that the Most High rules the kingdom of mankind",
     },
     {
       reference: "DAN7:2-14",
       dreamer: "Daniel",
-      shapes: "winds churning a great sea, a lion with eagle's wings, a bear raised on one side with ribs in its teeth, a leopard with wings and heads, a fourth beast with iron teeth and horns, a little horn with a man's eyes and mouth, thrones, the Ancient of Days in white with hair like wool, a throne of fire on burning wheels, a river of fire, and One like the Son of Man coming with the clouds",
+      shapes:
+        "winds churning a great sea, a lion with eagle's wings, a bear raised on one side with ribs in its teeth, a leopard with wings and heads, a fourth beast with iron teeth and horns, a little horn with a man's eyes and mouth, thrones, the Ancient of Days in white with hair like wool, a throne of fire on burning wheels, a river of fire, and One like the Son of Man coming with the clouds",
       counts: [4, 3, 10],
-      moves: "the beasts come up out of the sea, the lion's wings are torn off and it is stood on two feet, the little horn comes up and uproots three of the horns, the court sits and the books are opened, the fourth beast is slain and burned, and the Son of Man is led in and given dominion",
-      spoken: "the horn speaking words of arrogance, and the bear told to get up and gorge itself",
+      moves:
+        "the beasts come up out of the sea, the lion's wings are torn off and it is stood on two feet, the little horn comes up and uproots three of the horns, the court sits and the books are opened, the fourth beast is slain and burned, and the Son of Man is led in and given dominion",
+      spoken:
+        "the horn speaking words of arrogance, and the bear told to get up and gorge itself",
     },
     {
       reference: "MAT1:20-23",
@@ -118,7 +139,8 @@ export function bible_dream_passages() {
       shapes: "",
       counts: [],
       moves: "",
-      spoken: "an angel telling him not to fear to take Mary as his wife, and to call the child Jesus",
+      spoken:
+        "an angel telling him not to fear to take Mary as his wife, and to call the child Jesus",
     },
     {
       reference: "MAT2:12",
@@ -134,7 +156,8 @@ export function bible_dream_passages() {
       shapes: "",
       counts: [],
       moves: "",
-      spoken: "an angel telling him to take the Child and His mother and flee to Egypt",
+      spoken:
+        "an angel telling him to take the Child and His mother and flee to Egypt",
     },
     {
       reference: "MAT2:19-20",
@@ -142,7 +165,8 @@ export function bible_dream_passages() {
       shapes: "",
       counts: [],
       moves: "",
-      spoken: "an angel telling him that those who sought the Child's life are dead, and to go back to Israel",
+      spoken:
+        "an angel telling him that those who sought the Child's life are dead, and to go back to Israel",
     },
     {
       reference: "MAT2:22",
@@ -163,10 +187,13 @@ export function bible_dream_passages() {
     {
       reference: "ACT10:11-16",
       dreamer: "Peter",
-      shapes: "heaven opened, a large sheet held by its four corners, and all kinds of four-footed animals, reptiles and birds inside it",
+      shapes:
+        "heaven opened, a large sheet held by its four corners, and all kinds of four-footed animals, reptiles and birds inside it",
       counts: [4, 3],
-      moves: "the sheet is let down to the earth and then taken back up into heaven",
-      spoken: "a voice telling him to kill and eat, and answering his refusal that what God has made clean is not impure - three times over",
+      moves:
+        "the sheet is let down to the earth and then taken back up into heaven",
+      spoken:
+        "a voice telling him to kill and eat, and answering his refusal that what God has made clean is not impure - three times over",
     },
   ];
   return passages;
