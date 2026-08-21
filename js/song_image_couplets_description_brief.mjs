@@ -1,7 +1,7 @@
-export function song_image_couplets_description_brief(
-  verse_number,
-  elsewhere,
-) {
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets_scripture_brief } from "./song_image_couplets_scripture_brief.mjs";
+import { song_image_couplets_description_of } from "./song_image_couplets_description_of.mjs";
+export function song_image_couplets_description_brief(verse_number, elsewhere) {
   "$plain verse_number";
   "$plain elsewhere";
   "What goes under a video of this hymn when the passages themselves will not fit: the words it sings, then the references named only, then whatever says where the words can be read.";
@@ -9,6 +9,10 @@ export function song_image_couplets_description_brief(
   "It is the same shape as the full one, laid out by the same name, so the two cannot drift apart.";
   arguments_assert(arguments, 2);
   let scripture = song_image_couplets_scripture_brief(verse_number);
-  let r = song_image_couplets_description_of(verse_number, scripture, elsewhere);
+  let r = song_image_couplets_description_of(
+    verse_number,
+    scripture,
+    elsewhere,
+  );
   return r;
 }
