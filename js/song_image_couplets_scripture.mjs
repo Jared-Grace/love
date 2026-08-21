@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets_verse } from "./song_image_couplets_verse.mjs";
+import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { list_add } from "./list_add.mjs";
+import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { equal } from "./equal.mjs";
 export function song_image_couplets_scripture(verse_number) {
   "$plain verse_number";
   "the passages a verse of the hymn rests on, a line to a couplet, each line saying the words first and then where they come from - or the whole hymn's passages when the number is 0";
