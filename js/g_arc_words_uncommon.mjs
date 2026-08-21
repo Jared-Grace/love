@@ -29,6 +29,7 @@ export async function g_arc_words_uncommon() {
     said: 0,
     words: 0,
     once: [],
+    own: [],
   };
   if (none) {
     return empty;
