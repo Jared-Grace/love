@@ -8,10 +8,16 @@ export function bible_glyph_chapter_tagalog_verses(chapter_code) {
   "AN UNKNOWN CHAPTER ANSWERS WITH NOTHING RATHER THAN REFUSING, which is the opposite of what the Rosetta bands next door do, and the difference is what the caller can do about it. A missing band there means a command has not been run and the page would be wrong to carry on pretending; a missing Tagalog here means this chapter has no Tagalog yet, which is the ordinary state of a translation and must not stop the verse being read in the languages it does have.";
   "It is a plain read and nothing else. The text was fetched once, at authoring time, and written into a function of its own; this asks that function and hands over what it says.";
   let chapters = bible_glyph_chapters_tagalog();
-  let found = list_find_property_or_null(chapters, "chapter_code", chapter_code);
+  let found = list_find_property_or_null(
+    chapters,
+    "chapter_code",
+    chapter_code,
+  );
   let missing = null_is(found);
   if (missing) {
-    return [];
+    let r = [];
+    return r;
   }
-  return found.verses;
+  let r2 = found.verses;
+  return r2;
 }
