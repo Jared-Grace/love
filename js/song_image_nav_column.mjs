@@ -27,7 +27,7 @@ export function song_image_nav_column(parent, state, on_change) {
   html_style_font_size(reference, "13px");
   let style_value2 = song_image_color_text_quiet();
   html_style_set(reference, "color", style_value2);
-  html_text_set(reference, current.ref);
+  html_text_set(reference, current.symbol_ref);
   let prompt = html_div(column);
   html_style_margin_top(prompt, "16px");
   html_style_padding(prompt, "8px");
