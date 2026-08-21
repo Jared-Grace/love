@@ -1,5 +1,4 @@
-import { js_dollar_choices } from "./js_dollar_choices.mjs";
-import { list_size } from "./list_size.mjs";
+import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
