@@ -33,6 +33,10 @@ export function folders_moved_expected() {
       after: git_mirrors_folder(),
     },
     {
+      before: "/media/j/JPM/a/mirrors",
+      after: git_mirrors_folder(),
+    },
+    {
       before: "/home/j/repos/love",
       after: folder_home_repo("love"),
     },
