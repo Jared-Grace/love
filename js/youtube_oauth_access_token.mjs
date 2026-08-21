@@ -20,16 +20,16 @@ export async function youtube_oauth_access_token() {
     "held",
   );
   if (kept) {
-    let held = global_function_property_get(
+    let held_found = global_function_property_get(
       youtube_oauth_access_token_buy,
       "held",
     );
-    let bought_at = property_get(held, "bought_at");
+    let bought_at = property_get(held_found, "bought_at");
     let age = subtract(now, bought_at);
     let spell = youtube_oauth_access_token_spell();
     let young = less_than(age, spell);
     if (young) {
-      let already = property_get(held, "access_token");
+      let already = property_get(held_found, "access_token");
       return already;
     }
   }
