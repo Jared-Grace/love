@@ -16,21 +16,21 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "מַה־ לָּכֶ֗ם אַתֶּם֙ מֹֽשְׁלִים֙ אֶת־ הַמָּשָׁ֣ל הַזֶּ֔ה עַל־ אַדְמַ֥ת יִשְׂרָאֵ֖ל לֵאמֹ֑ר אָבוֹת֙ יֹ֣אכְלוּ בֹ֔סֶר וְשִׁנֵּ֥י הַבָּנִ֖ים תִּקְהֶֽינָה׃",
         english:
-          "What mean do you people proverb - - by quoting this about the land of Israel The fathers have eaten sour grapes and the teeth of the children are set on edge",
+          "What mean do you people proverb by quoting this about the land of Israel The fathers have eaten sour grapes and the teeth of the children are set on edge",
       },
       {
         verse_number: 3,
         original:
           "חַי־ אָ֕נִי נְאֻ֖ם אֲדֹנָ֣י יְהוִ֑ה אִם־ יִֽהְיֶ֨ה לָכֶ֜ם ע֗וֹד מְשֹׁ֛ל הַמָּשָׁ֥ל הַזֶּ֖ה בְּיִשְׂרָאֵֽל׃",
         english:
-          "I live As surely as declares the Lord GOD you will no  longer quote proverb this in Israel",
+          "I live As surely as declares the Lord GOD you will no longer quote proverb this in Israel",
       },
       {
         verse_number: 4,
         original:
           "הֵ֤ן כָּל־ הַנְּפָשׁוֹת֙ לִ֣י הֵ֔נָּה כְּנֶ֧פֶשׁ הָאָ֛ב וּכְנֶ֥פֶשׁ הַבֵּ֖ן לִי־ הֵ֑נָּה הַנֶּ֥פֶשׁ הַחֹטֵ֖את הִ֥יא תָמֽוּת׃ס",
         english:
-          "Behold every soul belongs to Me   both father [and] son Mine are The soul who sins is the one who will die",
+          "Behold every soul belongs to Me both father [and] son Mine are The soul who sins is the one who will die",
       },
       {
         verse_number: 5,
@@ -44,7 +44,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "אֶל־ הֶֽהָרִים֙ לֹ֣א אָכָ֔ל וְעֵינָיו֙ לֹ֣א נָשָׂ֔א אֶל־ גִּלּוּלֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל וְאֶת־ אֵ֤שֶׁת רֵעֵ֙הוּ֙ לֹ֣א טִמֵּ֔א וְאֶל־ אִשָּׁ֥ה נִדָּ֖ה לֹ֥א יִקְרָֽב׃",
         english:
-          "at the mountain He does not eat [or] look to the idols of the house of Israel - wife his neighbor’s He does not defile  a woman during her period or approach",
+          "at the mountain He does not eat [or] look to the idols of the house of Israel wife his neighbor’s He does not defile a woman during her period or approach",
       },
       {
         verse_number: 7,
@@ -79,7 +79,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "וְה֕וּא אֶת־ כָּל־ אֵ֖לֶּה לֹ֣א עָשָׂ֑ה כִּ֣י גַ֤ם אֶל־ הֶֽהָרִים֙ אָכַ֔ל וְאֶת־ אֵ֥שֶׁת רֵעֵ֖הוּ טִמֵּֽא׃",
         english:
-          "though the father - none of them has done Indeed at the mountain the son eats - wife his neighbor’s and defiles",
+          "though the father none of them has done Indeed at the mountain the son eats wife his neighbor’s and defiles",
       },
       {
         verse_number: 12,
@@ -93,21 +93,21 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "בַּנֶּ֧שֶׁךְ נָתַ֛ן וְתַרְבִּ֥ית לָקַ֖ח וָחָ֑י לֹ֣א יִֽחְיֶ֗ה אֵ֣ת כָּל־ הַתּוֹעֵב֤וֹת הָאֵ֙לֶּה֙ עָשָׂ֔ה מ֣וֹת יוּמָ֔ת דָּמָ֖יו בּ֥וֹ יִהְיֶֽה׃",
         english:
-          "in usury He engages excess interest and takes Will [this son] live He will not - all abominations these Since he has committed he will surely die his blood on his own head will be",
+          "in usury He engages excess interest and takes Will [this son] live He will not all abominations these Since he has committed he will surely die his blood on his own head will be",
       },
       {
         verse_number: 14,
         original:
           "וְהִנֵּה֙ הוֹלִ֣יד בֵּ֔ן וַיַּ֕רְא אֶת־ כָּל־ חַטֹּ֥את אָבִ֖יו אֲשֶׁ֣ר עָשָׂ֑ה וַיִּרְאֶ֕ה וְלֹ֥א יַעֲשֶׂ֖ה כָּהֵֽן׃",
         english:
-          "Now suppose [this son] has a son who sees - all the sins his father - has committed considers them and does not do likewise",
+          "Now suppose [this son] has a son who sees all the sins his father has committed considers them and does not do likewise",
       },
       {
         verse_number: 15,
         original:
           "עַל־ הֶֽהָרִים֙ לֹ֣א אָכָ֔ל וְעֵינָיו֙ לֹ֣א נָשָׂ֔א אֶל־ גִּלּוּלֵ֖י בֵּ֣ית יִשְׂרָאֵ֑ל אֶת־ אֵ֥שֶׁת רֵעֵ֖הוּ לֹ֥א טִמֵּֽא׃",
         english:
-          "at the mountain He does not eat [or] look to the idols of the house of Israel - wife his neighbor’s He does not defile",
+          "at the mountain He does not eat [or] look to the idols of the house of Israel wife his neighbor’s He does not defile",
       },
       {
         verse_number: 16,
@@ -135,7 +135,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "וַאֲמַרְתֶּ֕ם מַדֻּ֛עַ לֹא־ נָשָׂ֥א הַבֵּ֖ן בַּעֲוֺ֣ן הָאָ֑ב וְהַבֵּ֞ן מִשְׁפָּ֧ט וּצְדָקָ֣ה עָשָׂ֗ה אֵ֣ת כָּל־ חֻקּוֹתַ֥י שָׁמַ֛ר וַיַּעֲשֶׂ֥ה אֹתָ֖ם חָיֹ֥ה יִחְיֶֽה׃",
         english:
-          "Yet you may ask Why bear shouldn’t the son the iniquity of his father Since the son what is just and right has done - all My statutes carefully observing - he will surely live",
+          "Yet you may ask Why bear shouldn’t the son the iniquity of his father Since the son what is just and right has done all My statutes carefully observing he will surely live",
       },
       {
         verse_number: 20,
@@ -149,14 +149,14 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "וְהָרָשָׁ֗ע כִּ֤י יָשׁוּב֙ מִכָּל־ חַטָּאתוֹ אֲשֶׁ֣ר עָשָׂ֔ה וְשָׁמַר֙ אֶת־ כָּל־ חֻקּוֹתַ֔י וְעָשָׂ֥ה מִשְׁפָּ֖ט וּצְדָקָ֑ה חָיֹ֥ה יִחְיֶ֖ה לֹ֥א יָמֽוּת׃",
         english:
-          "the wicked man But if turns from all the sins - he has committed keeps - all My statutes and does what is just and right he will surely live he will not die",
+          "the wicked man But if turns from all the sins he has committed keeps all My statutes and does what is just and right he will surely live he will not die",
       },
       {
         verse_number: 22,
         original:
           "כָּל־ פְּשָׁעָיו֙ אֲשֶׁ֣ר עָשָׂ֔ה לֹ֥א יִזָּכְר֖וּ ל֑וֹ בְּצִדְקָת֥וֹ אֲשֶׁר־ עָשָׂ֖ה יִֽחְיֶֽה׃",
         english:
-          "None of the transgressions - he has committed will be held against him Because of the righteousness - he has practiced he will live",
+          "None of the transgressions he has committed will be held against him Because of the righteousness he has practiced he will live",
       },
       {
         verse_number: 23,
@@ -170,7 +170,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "וּבְשׁ֨וּב צַדִּ֤יק מִצִּדְקָתוֹ֙ וְעָ֣שָׂה עָ֔וֶל כְּכֹ֨ל הַתּוֹעֵב֜וֹת אֲשֶׁר־ עָשָׂ֧ה הָרָשָׁ֛ע יַעֲשֶׂ֖ה וָחָ֑י כָּל־ צִדְקָתוֹ אֲשֶׁר־ עָשָׂה֙ לֹ֣א תִזָּכַ֔רְנָה בְּמַעֲל֧וֹ אֲשֶׁר־ מָעַ֛ל וּבְחַטָּאת֥וֹ אֲשֶׁר־ חָטָ֖א בָּ֥ם יָמֽוּת׃",
         english:
-          "turns But if a righteous man from his righteousness and practices iniquity  the same abominations as committing the wicked will he live of the righteous acts - he did None will be remembered - - Because of the unfaithfulness and sin - he has committed  he will die",
+          "turns But if a righteous man from his righteousness and practices iniquity the same abominations as committing the wicked will he live of the righteous acts he did None will be remembered Because of the unfaithfulness and sin he has committed he will die",
       },
       {
         verse_number: 25,
@@ -184,28 +184,28 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "בְּשׁוּב־ צַדִּ֧יק מִצִּדְקָת֛וֹ וְעָ֥שָׂה עָ֖וֶל וּמֵ֣ת עֲלֵיהֶ֑ם בְּעַוְל֥וֹ אֲשֶׁר־ עָשָׂ֖ה יָמֽוּת׃ס",
         english:
-          "turns If a righteous man from his righteousness and practices iniquity he will die for this because of the iniquity - he has committed He will die",
+          "turns If a righteous man from his righteousness and practices iniquity he will die for this because of the iniquity he has committed He will die",
       },
       {
         verse_number: 27,
         original:
           "וּבְשׁ֣וּב רָשָׁ֗ע מֵֽרִשְׁעָתוֹ֙ אֲשֶׁ֣ר עָשָׂ֔ה וַיַּ֥עַשׂ מִשְׁפָּ֖ט וּצְדָקָ֑ה ה֖וּא אֶת־ נַפְשׁ֥וֹ יְחַיֶּֽה׃",
         english:
-          "turns But if a wicked man from the wickedness - he has committed and does what is just and right he - his life will save",
+          "turns But if a wicked man from the wickedness he has committed and does what is just and right he his life will save",
       },
       {
         verse_number: 28,
         original:
           "וַיִּרְאֶ֣ה וַיָּשׁוֹב מִכָּל־ פְּשָׁעָ֖יו אֲשֶׁ֣ר עָשָׂ֑ה חָי֥וֹ יִחְיֶ֖ה לֹ֥א יָמֽוּת׃",
         english:
-          "Because he considered and turned from all the transgressions - he had committed he will surely live he will not die",
+          "Because he considered and turned from all the transgressions he had committed he will surely live he will not die",
       },
       {
         verse_number: 29,
         original:
           "וְאָֽמְרוּ֙ בֵּ֣ית יִשְׂרָאֵ֔ל לֹ֥א יִתָּכֵ֖ן דֶּ֣רֶךְ אֲדֹנָ֑י הַדְּרָכַ֞י לֹ֤א יִתָּֽכְנּוּ֙ בֵּ֣ית יִשְׂרָאֵ֔ל הֲלֹ֥א דַרְכֵיכֶ֖ם לֹ֥א יִתָּכֵֽן׃",
         english:
-          "says Yet the house of Israel is not just The way of the Lord Are My ways unjust  O house of Israel Is it not your ways that are unjust",
+          "says Yet the house of Israel is not just The way of the Lord Are My ways unjust O house of Israel Is it not your ways that are unjust",
       },
       {
         verse_number: 30,
@@ -219,7 +219,7 @@ export function bible_glyph_chapter_rosetta_lines_ezk18() {
         original:
           "הַשְׁלִ֣יכוּ מֵעֲלֵיכֶ֗ם אֶת־ כָּל־ פִּשְׁעֵיכֶם֙ אֲשֶׁ֣ר פְּשַׁעְתֶּ֣ם בָּ֔ם וַעֲשׂ֥וּ לָכֶ֛ם לֵ֥ב חָדָ֖שׁ וְר֣וּחַ חֲדָשָׁ֑ה וְלָ֥מָּה תָמֻ֖תוּ בֵּ֥ית יִשְׂרָאֵֽל׃",
         english:
-          "Cast away from yourselves - all the transgressions - you have committed  and fashion for yourselves heart a new spirit and a new Why should you die O house of Israel",
+          "Cast away from yourselves all the transgressions you have committed and fashion for yourselves heart a new spirit and a new Why should you die O house of Israel",
       },
       {
         verse_number: 32,
