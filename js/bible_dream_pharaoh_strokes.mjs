@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export function bible_dream_pharaoh_strokes() {
@@ -74,7 +75,7 @@ export function bible_dream_pharaoh_strokes() {
         symbol: seven.symbol,
         said: seven.said,
         d: seven.d,
-        x: seven.x_first + seven.x_step * index,
+        x: seven.x_first + multiply(seven.x_step, index),
         y: seven.y,
       });
     }

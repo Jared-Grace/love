@@ -1,3 +1,8 @@
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { modulo } from "./modulo.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
@@ -7,16 +12,16 @@ export function bible_dream_stroke_ink_show(state) {
   "The pattern is built to add up to exactly the length of the line. A browser repeats a dash pattern that runs out before the line does, so one that adds up short would print itself again, out of step, and show pieces nobody drew. It is also padded to an even number of runs for the same reason: an odd one is repeated with the dashes and the gaps swapped, which would show precisely what is meant to be hidden.";
   let samples = state.samples;
   let count = list_size(samples);
-  let last = count - 1;
-  let step = state.total / last;
+  let last = subtract(count, 1);
+  let step = divide(state.total, last);
   let text = "";
   let runs = 0;
   let showing = true;
   let run = 0;
   let index = 0;
-  while (index < last) {
+  while (less_than(index, last)) {
     let visible = state.covered[index] && state.covered[index + 1];
-    if (visible === showing) {
+    if (equal(visible, showing)) {
       run = run + step;
       index = index + 1;
       continue;
@@ -29,8 +34,8 @@ export function bible_dream_stroke_ink_show(state) {
   }
   text = text + run;
   runs = runs + 1;
-  let odd = runs % 2;
-  if (odd === 1) {
+  let odd = modulo(runs, 2);
+  if (equal(odd, 1)) {
     text = text + " 0";
   }
   html_attribute_set(state.ink, "stroke-dasharray", text);
