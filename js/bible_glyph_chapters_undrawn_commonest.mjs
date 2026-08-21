@@ -1,3 +1,8 @@
+import { divide_round } from "./divide_round.mjs";
+import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
+import { or } from "./or.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
@@ -70,12 +75,32 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   list_sort_number_mapper_reverse(ranked, lambda);
   let many = Number(count);
   let commonest = list_take(ranked, many);
+  let words_real = subtract(words_total, filler_total);
+  let number = multiply(drawn_total, 100);
+  let share = divide_round(number, words_total);
+  let number2 = multiply(drawn_total, 100);
+  let share_of_words = divide_round(number2, words_real);
   let report = {
     chapters: chapters.length,
     words: words_total,
+    filler: filler_total,
+    words_real,
     drawn: drawn_total,
+    share,
+    share_of_words,
     undrawn_words_distinct: ranked.length,
     commonest,
   };
   return report;
+  function bible_glyph_chapters_undrawn_filler_is(gloss) {
+    "whether a wording under a word is the interlinear's own notation rather than a word of scripture at all.";
+    "IT ASKS THE SHARED READING FIRST AND THEN TWO MORE THINGS, and the two are here rather than there on purpose. That reading says the tables print two fillers, a row of dots and a vvv, and it is asked by a survey of word senses that has its own reasons for the line it draws. Widening it would move that survey's numbers as a side effect of measuring this one, which is a change somebody should make deliberately if they make it at all.";
+    "THE TWO ADDED HERE ARE THE DASH AND THE EMPTY WORDING. A dash stands where the original says a word English does not say, and an empty wording is a row the table left blank. Neither can ever become a picture, because neither is a word - so counting them as vocabulary this Bible has failed to draw overstates the gap, and the dash alone is four hundred of them.";
+    let notation = bible_glyph_gloss_placeholder_is(gloss);
+    let dash = equal(gloss, "-");
+    let blank = equal(gloss, "");
+    let either = or(dash, blank);
+    let v = or(notation, either);
+    return v;
+  }
 }
