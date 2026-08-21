@@ -1,3 +1,6 @@
+import { bible_dream_hand_nearness } from "./bible_dream_hand_nearness.mjs";
+import { bible_dream_hand_mark_add } from "./bible_dream_hand_mark_add.mjs";
+import { bible_dream_stroke_counters_show } from "./bible_dream_stroke_counters_show.mjs";
 import { bible_dream_stroke_finish_show } from "./bible_dream_stroke_finish_show.mjs";
 import { subtract } from "./subtract.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
@@ -26,6 +29,7 @@ export function bible_dream_trace_preview() {
   "Pharaoh's two dreams on a screen, on the sandbox app at the hash dream_trace: every stroke GEN41:1-7 says he saw, laid out faint and all at once, waiting to be drawn by dragging along it.";
   "It exists to answer ONE question that no amount of reasoning can answer - whether tracing a given shape, in an order you choose, feels like anything at all. Everything else about it is deliberately cheap. If the dragging is dull the whole dream palette is wrong and the reading it was built on still stands, which is why the reading was written down somewhere else first.";
   "The order is the freedom here and it is a real one. Nothing enforces the Nile before the reeds, or the fat cows before the gaunt ones, and drawing the gaunt ones first tells Pharaoh a different dream out of the same strokes. Within a stroke there is no order at all: put your hand down anywhere on it and go either way.";
+  "Two things answer the wandering rather than only punishing it. The hand's own line stays on the page, thinning and fading the further it went from what it was given, so an imprecise trace leaves a real drawing behind it and not a blank. And a finished shape is answered by ornament read out of its own bumps, written in a moment later at about the speed of a hand, so that something else is plainly at work beside the player. Neither adds a line the passage did not give: the first is the player's own line and the second is a reply to the shape, and only the ink between them is Scripture's.";
   "The slips are the second half of the answer. A stroke can be finished having left its corridor a dozen times, and the count says so, because NUM12:8 puts a plain word above a riddle and a shape drawn badly is what a riddle is made of. Nothing yet DOES anything with that number - what it costs is a design decision and this is not the file to make it in.";
   let scene = bible_dream_pharaoh_strokes();
   let root = html_body_div_page_dark();
@@ -64,6 +68,9 @@ export function bible_dream_trace_preview() {
   function on_press(event) {
     let at = bible_dream_drawing_point(drawing, event);
     active = bible_dream_stroke_begin_near(states, at, 169);
+    if (active) {
+      active.hand_at = null;
+    }
   }
   function on_drag(event) {
     if (not(active)) {
@@ -75,9 +82,12 @@ export function bible_dream_trace_preview() {
       y: subtract(at.y, active.y),
     };
     bible_dream_stroke_advance(active, near, 20);
+    let nearness = bible_dream_hand_nearness(active.gap, 20);
+    bible_dream_hand_mark_add(active, near, nearness);
     bible_dream_stroke_ink_show(active);
     if (active.done) {
       bible_dream_stroke_finish_show(active);
+      bible_dream_stroke_counters_show(active);
       let already = list_includes(told, active.said);
       if (not(already)) {
         list_add(told, active.said);
@@ -87,6 +97,9 @@ export function bible_dream_trace_preview() {
     readout_show();
   }
   function on_release(event) {
+    if (active) {
+      active.hand_at = null;
+    }
     active = null;
   }
   html_on(drawing, "pointerdown", on_press);
