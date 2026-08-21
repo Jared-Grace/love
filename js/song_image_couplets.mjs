@@ -62,7 +62,7 @@ export function song_image_couplets() {
       second: "unjustly tried",
       symbol:
         "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -72,7 +72,7 @@ export function song_image_couplets() {
       second: "condemned to die",
       symbol:
         "A wide shallow washing basin of plain grey stone resting flat on the ground, drawn very large so that it reaches almost the whole width of the window, brimful of clear blue water spilling over its rim and running down its outside",
-      ref: "Matthew 27:24",
+      symbol_ref: "Matthew 27:24",
       same_as: 0,
     },
     {
@@ -82,7 +82,7 @@ export function song_image_couplets() {
       second: "beaten and scorned",
       symbol:
         "A scourge hanging still by its plain short straight handle, the handle upright at the top and three thick heavy leather cords and no more falling straight down from it, limp and slack the way a rope hangs, each cord ending in a small round knot",
-      ref: "John 19:1, Isaiah 53:5",
+      symbol_ref: "John 19:1, Isaiah 53:5",
       same_as: 0,
     },
     {
@@ -92,7 +92,7 @@ export function song_image_couplets() {
       second: "was crowned with thorns",
       symbol:
         "A crown of thorns, a few thick woody thorn branches twisted into one ring",
-      ref: "Matthew 27:29",
+      symbol_ref: "Matthew 27:29",
       same_as: 0,
     },
     {
@@ -102,7 +102,7 @@ export function song_image_couplets() {
       second: "nailed to the tree",
       symbol:
         "Three long iron nails, every one of the three the same plain grey iron from its head to its point, laid crossing one another",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -112,7 +112,7 @@ export function song_image_couplets() {
       second: "to pardon me",
       symbol:
         "One single cross of plain brown wood standing alone, tall and upright, its beams bare and empty",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -122,7 +122,7 @@ export function song_image_couplets() {
       second: "for all to see",
       symbol:
         "Three crosses of plain brown wood standing together on a green hill, the middle one taller than the two beside it",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -132,7 +132,7 @@ export function song_image_couplets() {
       second: "through suffering",
       symbol:
         "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
-      ref: "Colossians 2:14",
+      symbol_ref: "Colossians 2:14",
       same_as: 0,
     },
     {
@@ -142,7 +142,7 @@ export function song_image_couplets() {
       second: "through suffering",
       symbol:
         "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
-      ref: "Colossians 2:14",
+      symbol_ref: "Colossians 2:14",
       same_as: 8,
     },
     {
@@ -152,7 +152,7 @@ export function song_image_couplets() {
       second: "almighty GOD",
       symbol:
         "A round sun with a ring of short pointed rays all around it, the disc and every ray alike filled with the same solid black as the lead lines, so that the whole sun is black, drawn large in the middle of the window with its rays reaching almost to both sides of it",
-      ref: "Matthew 27:45",
+      symbol_ref: "Matthew 27:45",
       same_as: 0,
     },
     {
@@ -162,7 +162,7 @@ export function song_image_couplets() {
       second: "HIS only SON",
       symbol:
         "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, its head caught fast and held in three or four stout brown thorn branches",
-      ref: "Genesis 22",
+      symbol_ref: "Genesis 22",
       same_as: 0,
     },
     {
@@ -171,7 +171,7 @@ export function song_image_couplets() {
       first: "cursed on a cross",
       second: "HE drank the cup",
       symbol: "A cup",
-      ref: "Matthew 26:39",
+      symbol_ref: "Matthew 26:39",
       same_as: 0,
     },
     {
@@ -181,7 +181,7 @@ export function song_image_couplets() {
       second: "'til all was done",
       symbol:
         "An olive press of the oldest kind, a square vat of plain grey stone with a heavy plain beam of brown wood pressing straight down into it from above, and three or four large dark red drops falling from the vat's lip",
-      ref: "Gethsemane means oil press, Luke 22:44",
+      symbol_ref: "Gethsemane means oil press, Luke 22:44",
       same_as: 0,
     },
     {
@@ -191,7 +191,7 @@ export function song_image_couplets() {
       second: "and then HE died",
       symbol:
         "The temple veil hanging alone with nothing else in the picture, no animals and no other objects, torn in two from top to bottom, the tear beginning at the very top and running all the way down",
-      ref: "Matthew 27:51",
+      symbol_ref: "Matthew 27:51",
       same_as: 0,
     },
     {
@@ -201,7 +201,7 @@ export function song_image_couplets() {
       second: "was satisfied",
       symbol:
         "A sword of plain grey iron held point downward, the lower half of its blade already inside a plain brown leather sheath and the upper half still bare above the sheath's mouth",
-      ref: "Zechariah 13:7",
+      symbol_ref: "Zechariah 13:7",
       same_as: 0,
     },
     {
@@ -211,7 +211,7 @@ export function song_image_couplets() {
       second: "has been undone",
       symbol:
         "The tree of life, one tall tree standing alone with a straight plain brown trunk and a wide round crown of emerald green leaves, with large ruby red fruit hanging in the leaves",
-      ref: "Revelation 22:2-3",
+      symbol_ref: "Revelation 22:2-3",
       same_as: 0,
     },
     {
@@ -221,7 +221,7 @@ export function song_image_couplets() {
       second: "with HIS own blood",
       symbol:
         "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
-      ref: "Exodus 12:7, John 1:29",
+      symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
     {
@@ -231,7 +231,7 @@ export function song_image_couplets() {
       second: "with HIS own blood",
       symbol:
         "An empty doorway of plain grey stone, standing open and holding nothing at all, marked with one broad stroke of deep crimson paint down each of its two grey posts and a third stroke of the same deep crimson across its grey lintel",
-      ref: "Exodus 12:7, John 1:29",
+      symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 17,
     },
     {
@@ -241,7 +241,7 @@ export function song_image_couplets() {
       second: "inside a tomb",
       symbol:
         "An alabaster flask of burial ointment, white and tall and narrow with a slender neck, stoppered shut, standing upright on a small flat foot",
-      ref: "John 19:39-40, Luke 23:56",
+      symbol_ref: "John 19:39-40, Luke 23:56",
       same_as: 0,
     },
     {
@@ -251,7 +251,7 @@ export function song_image_couplets() {
       second: "it was brand new",
       symbol:
         "The mouth of a new tomb cut straight into a great mass of plain grey rock, the opening standing clear and empty as a plain dark arch with nothing inside it and no stone anywhere near it",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -261,7 +261,7 @@ export function song_image_couplets() {
       second: "to seal the grave",
       symbol:
         "A very great rolling stone, one flat round slab of plain grey stone standing upright on its edge with its face smooth and completely blank, rolled hard across the mouth of a tomb so that it hides the mouth entirely and the mouth shows only as a narrow black crescent at the stone's left and right edges",
-      ref: "Mark 16:4",
+      symbol_ref: "Mark 16:4",
       same_as: 0,
     },
     {
@@ -270,7 +270,7 @@ export function song_image_couplets() {
       first: "then pilate put",
       second: "the guard in place",
       symbol: "A Roman soldier's helmet in grey iron, empty and set down",
-      ref: "Matthew 27:66",
+      symbol_ref: "Matthew 27:66",
       same_as: 0,
     },
     {
@@ -280,7 +280,7 @@ export function song_image_couplets() {
       second: "near dawn's first light",
       symbol:
         "One single star of white glass with eight straight points, drawn very large so that its points reach almost to both sides of the window and almost to the top and the bottom of it",
-      ref: "Revelation 22:16, 2 Peter 1:19",
+      symbol_ref: "Revelation 22:16, 2 Peter 1:19",
       same_as: 0,
     },
     {
@@ -290,7 +290,7 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol:
         "The mouth of a tomb standing wide open and empty in plain grey rock, with one great round grey stone standing upright on the ground well away to one side of the opening",
-      ref: "Matthew 28:2",
+      symbol_ref: "Matthew 28:2",
       same_as: 0,
     },
     {
@@ -300,7 +300,7 @@ export function song_image_couplets() {
       second: "now glorified",
       symbol:
         "One royal crown of white glass, a plain broad band with five upright points standing above it and one small ruby red jewel set in the band below each point, drawn very large and alone so that it reaches almost across the whole window",
-      ref: "Revelation 19:12",
+      symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
     {
@@ -310,7 +310,7 @@ export function song_image_couplets() {
       second: "the risen CHRIST",
       symbol:
         "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
-      ref: "",
+      symbol_ref: "",
       same_as: 0,
     },
     {
@@ -320,7 +320,7 @@ export function song_image_couplets() {
       second: "the risen CHRIST",
       symbol:
         "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
-      ref: "",
+      symbol_ref: "",
       same_as: 26,
     },
     {
@@ -330,7 +330,7 @@ export function song_image_couplets() {
       second: "to judge the earth",
       symbol:
         "One long straight herald's trumpet of white glass, one plain smooth tube bare and unbroken from end to end, its small mouthpiece at the bottom and its wide flared bell at the top, standing upright inside the window and drawn very large so that it reaches almost from the bottom of the window to the top",
-      ref: "Matthew 24:31, 1 Corinthians 15:52",
+      symbol_ref: "Matthew 24:31, 1 Corinthians 15:52",
       same_as: 0,
     },
     {
@@ -340,7 +340,7 @@ export function song_image_couplets() {
       second: "what we have earned",
       symbol:
         "One pair of balance scales of plain grey iron standing upright, a tall straight post with one level crossbeam at its top and one shallow round pan hanging by straight cords from each end of the beam, drawn very large so that it reaches almost to all four sides of the window",
-      ref: "Daniel 5:27, 2 Corinthians 5:10",
+      symbol_ref: "Daniel 5:27, 2 Corinthians 5:10",
       same_as: 0,
     },
     {
@@ -350,7 +350,7 @@ export function song_image_couplets() {
       second: "in godly fear",
       symbol:
         "A pair of brown leather sandals set down side by side and seen from straight above, each one a flat sole of one plain unmarked brown with two plain straps across it, drawn very large so that the two together reach from the bottom of the window almost to the top of it",
-      ref: "Exodus 3:5",
+      symbol_ref: "Exodus 3:5",
       same_as: 0,
     },
     {
@@ -360,7 +360,7 @@ export function song_image_couplets() {
       second: "the day draws near",
       symbol:
         "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the bottom of the window almost to the top of it",
-      ref: "Matthew 24:32",
+      symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
     {
@@ -370,7 +370,7 @@ export function song_image_couplets() {
       second: "no more pain",
       symbol:
         "One wide river of blue water winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood carrying emerald green leaves standing on the bank at each side of the water",
-      ref: "Revelation 22:1-2",
+      symbol_ref: "Revelation 22:1-2",
       same_as: 0,
     },
     {
@@ -380,7 +380,7 @@ export function song_image_couplets() {
       second: "HE'll wipe away",
       symbol:
         "One single teardrop of blue glass all of one blue throughout, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch and its round foot near the bottom of the window",
-      ref: "Revelation 21:4",
+      symbol_ref: "Revelation 21:4",
       same_as: 0,
     },
     {
@@ -390,7 +390,7 @@ export function song_image_couplets() {
       second: "in perfect LOVE",
       symbol:
         "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty, with one straight ruby red sceptre laid across the seat, drawn very large so that the throne reaches almost to all four sides of the window",
-      ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
+      symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
     {
@@ -400,7 +400,7 @@ export function song_image_couplets() {
       second: "the FATHER's SON",
       symbol:
         "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
-      ref: "Exodus 3:2, Exodus 3:14",
+      symbol_ref: "Exodus 3:2, Exodus 3:14",
       same_as: 0,
     },
     {
@@ -410,7 +410,7 @@ export function song_image_couplets() {
       second: "the FATHER's SON",
       symbol:
         "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
-      ref: "Exodus 3:2, Exodus 3:14",
+      symbol_ref: "Exodus 3:2, Exodus 3:14",
       same_as: 35,
     },
   ];
