@@ -33,6 +33,8 @@ export function words_irregular_base() {
     found: "find",
     flew: "fly",
     flown: "fly",
+    forgave: "forgive",
+    forgiven: "forgive",
     forgot: "forget",
     forgotten: "forget",
     gave: "give",
