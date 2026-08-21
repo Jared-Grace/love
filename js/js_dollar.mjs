@@ -48,7 +48,7 @@ export async function js_dollar(ast) {
       if (equal(lower, choice_name)) {
         let right = fn_name("js_dollar_choice_argument");
         text_combine("This variable name is used by ", right);
-        let js_dollar_arguments = {
+        let js_dollar_argument = {
           remaining,
           node,
           stack_,
@@ -57,7 +57,7 @@ export async function js_dollar(ast) {
           ast,
           afters,
         };
-        await fn(js_dollar_arguments);
+        await fn(js_dollar_argument);
       }
     }
     await each_async(choices, lambda2);
