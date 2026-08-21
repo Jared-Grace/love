@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_dollar_choice_argument_names } from "./js_dollar_choice_argument_names.mjs";

@@ -106,6 +106,7 @@ export function g_arc_review_line_apply(arc, state, line) {
       before,
       reference: "",
       after: "",
+      believes: "",
     };
     let conversation = property_get(state, "conversation");
     let turns = property_get(conversation, "turns");
