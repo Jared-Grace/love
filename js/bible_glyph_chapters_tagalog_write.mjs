@@ -1,12 +1,15 @@
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
-import { file_write_json } from "./file_write_json.mjs";
+import { function_exists } from "./function_exists.mjs";
+import { function_source_new } from "./function_source_new.mjs";
+import { function_source_overwrite } from "./function_source_overwrite.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
+import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 export async function bible_glyph_chapters_tagalog_write() {
   "Fetches the Tagalog of every picture Bible chapter and writes it beside the repo, so the reveal panel can print a plain translation the reader already speaks.";
   "IT IS FOR THE READER AND NOT FOR THE PICTURES. A picture Bible verse is marks interleaved with the words no mark covers, in ENGLISH word order, and Tagalog does not use that order - it puts the verb first and marks the subject with ang. So a Tagalog line of pictures has to be AUTHORED, one chapter at a time, exactly as the English ones were. What this fetches is a different thing and a cheaper one: the ordinary Tagalog verse, to be shown AFTER the reader has guessed, so somebody who does not read English can check themselves against their own language rather than against ours.";
