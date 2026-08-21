@@ -1,3 +1,4 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { app_emoji_bible_key_shown_get } from "./app_emoji_bible_key_shown_get.mjs";
 import { app_emoji_bible_key_shown_toggle } from "./app_emoji_bible_key_shown_toggle.mjs";
@@ -64,4 +65,5 @@ export async function app_emoji_bible(context) {
     }
     bible_glyph_chapter_draw_html(content, chapter.chapter_code, traditions);
   }
+  let footer = app_shared_footer(content);
 }

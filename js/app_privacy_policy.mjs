@@ -1,3 +1,4 @@
+import { app_shared_footer } from "./app_shared_footer.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_reading_column } from "./app_shared_reading_column.mjs";
 import { app_shared_privacy_policy_show } from "./app_shared_privacy_policy_show.mjs";
@@ -8,4 +9,5 @@ export function app_privacy_policy(context) {
   arguments_assert(arguments, 1);
   let content = app_shared_reading_column(context);
   app_shared_privacy_policy_show(content);
+  let footer = app_shared_footer(content);
 }
