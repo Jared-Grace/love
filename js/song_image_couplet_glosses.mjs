@@ -15,7 +15,7 @@ export function song_image_couplet_glosses() {
         "Described. A false balance is abomination to the LORD, and Micah asks shall I count them pure with the wicked balances. Scripture does not say scales stood at this trial, but it does say that a rigged measure is what injustice looks like to GOD, so the tilted beam is HIS own image for the thing and not a courthouse emblem borrowed for it. The same scales come back level at couplet 29.",
     },
     2: {
-      kept: 3,
+      kept: 7,
       lyric_ref: "Luke 23:4, Matthew 27:24, 1 Peter 2:22",
       lyric_explain:
         "Pilate said outright, I find no fault in this man, and then washed his hands before the crowd saying he was innocent of HIS blood. Peter says HE did no sin, neither was guile found in HIS mouth.",
@@ -175,7 +175,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 2,
+      kept: 4,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -188,7 +188,7 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",
       symbol_explain:
-        "Described. On HIS head were many crowns is Revelation 19:12, and many is now drawn as many: three plain bands set one above another. A diadem in that verse is a band and not a spiked crown, and a stack is the one way a window can say several of them with no head under them. It is white glass with ruby jewels, never gold. Three bands stacked is also the shape of the papal tiara, which is a thing to decide rather than to discover - the single crown is kept as attempt 1 and the arrow reaches it.",
+        "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
       kept: 1,
@@ -215,15 +215,15 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 2,
+      kept: 4,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
       symbol_explain:
-        "Described in part. Put off thy shoes from off thy feet is Exodus 3:5, said to Moses, and it is reverence drawn as an object. The couplet is about our own walk, and 1 Peter 1:17 calls that walk a sojourning to be passed in fear, so the sandals hold both halves: the walking, and the one thing Scripture has reverence take off. It still carries less of its own verse than any other emblem here.",
+        "Described. The sandals are gone and the mountain has taken their place. Hebrews 12:18-21 is the passage the couplet's own verse sits in - ye are not come unto the mount that might be touched, and so terrible was the sight that Moses said I exceedingly fear and quake - and four verses later comes reverence and godly fear. Exodus 19:18 puts the mount altogether on a smoke and the LORD upon it in cloud. So the covered peak is the picture: godly fear is standing at the foot of what you may not climb.",
     },
     31: {
-      kept: 1,
+      kept: 2,
       lyric_ref: "Matthew 24:32-33, Romans 13:12, Revelation 22:20",
       lyric_explain:
         "When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: so likewise ye, when ye shall see all these things, know that it is near, even at the doors.",
