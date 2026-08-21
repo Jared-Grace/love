@@ -1,3 +1,4 @@
+import { app_index_dev_apps_all_card } from "./app_index_dev_apps_all_card.mjs";
 import { app_index_dev_pages } from "./app_index_dev_pages.mjs";
 import { app_index_dev_page_card } from "./app_index_dev_page_card.mjs";
 import { app_index_dev_link_card } from "./app_index_dev_link_card.mjs";
@@ -21,5 +22,7 @@ export function app_index_dev_links_show(root) {
       app_index_dev_page_card(root, page);
     }
     each(pages, page_show);
+    ("and last of the three, the way to every app there is rather than to one of them. It comes after the named links because it is what you reach for when the thing you want is NOT named above - the whole list, chosen by nobody, including whatever somebody started this week.");
+    app_index_dev_apps_all_card(root);
   }
 }
