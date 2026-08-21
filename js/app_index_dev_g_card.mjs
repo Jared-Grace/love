@@ -1,3 +1,5 @@
+import { emoji_gear } from "./emoji_gear.mjs";
+import { app_index_label_generic } from "./app_index_label_generic.mjs";
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
 import { app_index_card } from "./app_index_card.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -10,7 +12,9 @@ export function app_index_dev_g_card(root) {
     let hash_name = app_shared_g_dev_index_hash_name();
     window_go_app_hash_name(a_name, hash_name);
   }
-  let label = "g dev tools";
+  ("the picture is a gear rather than the game's own cross, which is the one card on this page where the app's picture would say the wrong thing. This does not lead to the game; it leads through the game to the screens the game is BUILT with, and a cross in front of it would offer a reader the thing they already have a card for two rows up.");
+  let emoji = emoji_gear();
+  let label = app_index_label_generic(emoji, "g dev tools");
   let text = "Opens the game's test screens - every dev route in one directory";
   app_index_card(root, label, text, opened);
 }

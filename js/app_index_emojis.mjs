@@ -1,3 +1,6 @@
+import { emoji_wine } from "./emoji_wine.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { emoji_mobile_arrow } from "./emoji_mobile_arrow.mjs";
 import { emoji_picture_frame } from "./emoji_picture_frame.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { emoji_folder } from "./emoji_folder.mjs";
@@ -27,8 +30,14 @@ export function app_index_emojis() {
   "A name on its own is read; a picture is recognised, and a reader looking for the one app they came for finds it without reading the twelve names above it. That is the whole of what these are for, so an app only gets one where the picture genuinely says which app it is.";
   "AN APP WITH NO SUITABLE PICTURE IS SIMPLY LEFT OUT, and its name stands alone. A picture chosen because every other app had one says nothing about the app it sits on, and worse, it makes the pictures beside it stop meaning anything either - the reader learns they are decoration and goes back to reading the names.";
   "Two apps may share a picture where they really are the same kind of thing, as the two ways of copying verses to send do. What the picture tells the reader is which KIND of thing this is, and narrowing that from thirty to two has already done nearly all of the work.";
-  "Two are left out on purpose rather than not got round to: the bible inside the game, which is a bible and would have to wear the same picture as THE bible, saying the wrong thing about both; and the page listing every app, which is the page these pictures are drawn on and has nothing to be told apart from.";
+  "A picture may be two pictures where the thing itself is two. The Lord's Supper is bread AND wine, and a loaf on its own tells the reader half of what that app is; the two together are still recognised at a glance, which is the only test that matters here.";
+  "One is left out on purpose rather than not got round to: the bible inside the game, which is a bible and would have to wear the same picture as THE bible, saying the wrong thing about both.";
+  "The page listing every app was left out for a while on the reasoning that these pictures are drawn ON it, so it has nothing there to be told apart from. That was answered by where else its name turns up: it is a card on the index, a link in the foot of nearly every app, and a line on its own page among the rest. Everywhere but one, it is one name among many, so it gets a picture like the others - a phone with an arrow leaving it, which is what going to the other apps looks like.";
   "Kept apart from the list of which apps the index offers, because the two answer different questions and change on different days: that list is a judgment about what a visitor should be offered, and this is a judgment about what a thing looks like. An app is also on this list whether or not the index offers it, so the page listing EVERY app is drawn from the same pictures.";
+  let v = emoji_bread();
+  let v2 = emoji_wine();
+  let v3 = emoji_bread();
+  let v4 = emoji_wine();
   let r = [
     {
       app_fn: fn_name("app_bible"),
@@ -76,11 +85,11 @@ export function app_index_emojis() {
     },
     {
       app_fn: fn_name("app_supper"),
-      emoji: emoji_bread(),
+      emoji: text_combine_multiple([v, v2]),
     },
     {
       app_fn: fn_name("app_supper_tl"),
-      emoji: emoji_bread(),
+      emoji: text_combine_multiple([v3, v4]),
     },
     {
       app_fn: fn_name("app_examples"),
@@ -141,6 +150,10 @@ export function app_index_emojis() {
     {
       app_fn: fn_name("app_g_verify"),
       emoji: emoji_check(),
+    },
+    {
+      app_fn: fn_name("app_apps_all"),
+      emoji: emoji_mobile_arrow(),
     },
   ];
   return r;
