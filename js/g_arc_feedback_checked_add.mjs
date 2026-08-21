@@ -1,3 +1,4 @@
+import { g_arc_feedback_note_add } from "./g_arc_feedback_note_add.mjs";
 export async function g_arc_feedback_checked_add(
   chapter_code,
   index,
