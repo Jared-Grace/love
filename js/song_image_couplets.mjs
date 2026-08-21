@@ -250,7 +250,7 @@ export function song_image_couplets() {
       first: "hewn in the rock",
       second: "it was brand new",
       symbol:
-        "A face of plain grey rock filling the whole window from side to side and top to bottom, covered all over in fresh straight chisel marks, with the mouth of a brand new tomb cut into the middle of it as a plain dark arch standing clear and empty",
+        "The mouth of a new tomb cut straight into a great mass of plain grey rock, the opening standing clear and empty as a plain dark arch with nothing inside it and no stone anywhere near it",
       ref: "",
       same_as: 0,
     },
