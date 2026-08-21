@@ -72,5 +72,5 @@ export function app_calendar_paste(context) {
   }
   each(countries, lambda3);
   output = html_p(root);
-  let footer = app_shared_footer(root);
+  app_shared_footer(root);
 }

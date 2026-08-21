@@ -65,5 +65,5 @@ export async function app_emoji_bible(context) {
     }
     bible_glyph_chapter_draw_html(content, chapter.chapter_code, traditions);
   }
-  let footer = app_shared_footer(content);
+  app_shared_footer(content);
 }
