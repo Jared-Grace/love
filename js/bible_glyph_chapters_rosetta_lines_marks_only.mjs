@@ -1,10 +1,9 @@
+import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_rosetta_lines } from "./bible_glyph_chapters_rosetta_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { add } from "./add.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set_if_exists_not } from "./property_set_if_exists_not.mjs";
 import { list_unique } from "./list_unique.mjs";
