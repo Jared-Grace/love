@@ -31,6 +31,7 @@ export async function bible_glyph_chapters_language_write(
   "THE FOLDER IS LOOKED UP BY LANGUAGE CODE rather than spelled by a caller, because the name of a bible on somebody's server is not a fact a caller should know. A code naming no bible in the list is dropped rather than refused, so this answers with no folder at all and writes nothing - which is why the folder comes back in the report.";
   "THE CODE IS THE ONE THIS REPO STORES AND NOT THE ONE EBIBLE PRINTS, and the two disagree for exactly the languages somebody is most likely to reach for. The curated-codes answer next door is spelled eBible's way on purpose - Urdu is urd there and ur here, Turkish is three letters there and two here - so a code copied out of that list names nothing in this one. Reaching for the wrong list is not a mistake this can prevent, and it is one it can stop pretending is an unrelated crash.";
   "A CODE NAMING NOTHING IS REPORTED AND NEVER ALLOWED TO THROW, which is what this paragraph used to claim while the code did the opposite. Looking a missing code up walked straight into taking the first of no languages, and the caller got a stack trace about an empty list four functions away rather than the one fact they needed - that the code they typed names no bible here. A function that says which folder it found is a function that has to survive finding none.";
+  "THE SENTENCE SAYING THE FILE IS GENERATED IS KEPT SOMEWHERE ELSE, and it is the one line of the written file that is not spelled here. A gate finds these files by looking for that sentence rather than by reading a list of which languages exist, so the sentence is a thing two functions agree about - and two spellings of one sentence drift silently, because the file still parses, the gate still runs, and it simply finds nothing to check.";
   "AN EMPTY CHAPTER IS REPORTED AND NEVER SILENTLY KEPT. A bible that does not hold a chapter answers with no verses and so does a fetch that never arrived, and both would write a chapter with nothing in it - which reads on the page as a reveal panel that simply has no translation, indistinguishable from one nobody asked for. The names come back so a caller can see which.";
   let languages = ebible_languages_from_codes([language_code]);
   let unknown = list_empty_is(languages);
@@ -112,7 +113,9 @@ export async function bible_glyph_chapters_language_write(
       ", one entry a chapter, for the band a " +
       word +
       ' reader checks themselves against after they have guessed.";\n' +
-      '  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is a public-domain bible read once, at authoring time, for the chapters the pictures have reached.";\n' +
+      '  "' +
+      bible_glyph_language_written_mark() +
+      '";\n' +
       '  "IT IS COMMITTED RATHER THAN FETCHED because this Bible is meant to reach a phone with no network, and a reveal that needed one would fail in exactly the situation the pictures were chosen for.";\n' +
       '  "IT IS NOT A LINE OF PICTURES AND CANNOT BECOME ONE. A picture verse is marks interleaved into English word order, so a line of pictures in this language would have to be authored a chapter at a time exactly as the English ones were.";\n';
     let body =
