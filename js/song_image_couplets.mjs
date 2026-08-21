@@ -137,7 +137,7 @@ export function song_image_couplets() {
       first: "the LOVE of GOD",
       second: "for all to see",
       symbol:
-        "Three crosses of plain brown wood standing together on a green hill, the middle one taller than the two beside it",
+        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the left edge of the window right across to the right edge and rises to the middle of its height, and the tallest of the three crosses no more than a third of the height of the window",
       symbol_ref: "",
       same_as: 0,
     },
@@ -197,8 +197,8 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "An olive press of the oldest kind, a square vat of plain grey stone with a heavy plain beam of brown wood pressing straight down into it from above, and three or four large dark red drops falling from the vat's lip",
-      symbol_ref: "Gethsemane means oil press, Luke 22:44",
+        "Three very large drops of deep crimson in the air one below another, each drop a plain round bead with a point at its top, and below them a plain flat band of green ground, the three drops together filling most of the height of the window and the widest of them a good part of its width",
+      symbol_ref: "Luke 22:44",
       same_as: 0,
     },
     {
