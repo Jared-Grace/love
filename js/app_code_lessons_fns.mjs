@@ -185,6 +185,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_plus_divide,
     app_code_lesson_expression_minus_times,
     app_code_lesson_expression_minus_divide,
+    app_code_lesson_expression_which_part_first,
     app_code_lesson_expression_exponent,
     app_code_lesson_expression_parentheses_arithmetic,
     app_code_lesson_expression_parentheses_minus_divide,
