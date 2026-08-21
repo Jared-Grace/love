@@ -1,10 +1,7 @@
+import { ebible_languages_more_rows_write } from "./ebible_languages_more_rows_write.mjs";
 import { property_in_list_not } from "./property_in_list_not.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ebible_languages_commercial_single } from "./ebible_languages_commercial_single.mjs";
 import { ebible_languages_curated_codes } from "./ebible_languages_curated_codes.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { function_delete } from "./function_delete.mjs";
-import { function_new_getter } from "./function_new_getter.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function ebible_languages_more_write() {
