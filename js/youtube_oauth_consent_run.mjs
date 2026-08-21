@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_oauth_consent_url } from "./youtube_oauth_consent_url.mjs";
 import { youtube_oauth_answer_wait } from "./youtube_oauth_answer_wait.mjs";
@@ -30,8 +31,7 @@ export async function youtube_oauth_consent_run() {
     return refused;
   }
   let token = await youtube_oauth_token_ask(code);
-  let refresh_token = property_get_or_null(token, "refresh_token");
-  let b = null_is(refresh_token);
+  let b = property_null_is(token, "refresh_token");
   let lasting = not(b);
   let file_path = youtube_oauth_token_path();
   await file_write_json(file_path, token);
