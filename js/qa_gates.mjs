@@ -1,3 +1,4 @@
+import { ebible_versions_english_readaloud_gate_run } from "./ebible_versions_english_readaloud_gate_run.mjs";
 import { qa_commit_entry_beside_moved_cases_gate_run } from "./qa_commit_entry_beside_moved_cases_gate_run.mjs";
 import { bible_event_fields_gate_run } from "./bible_event_fields_gate_run.mjs";
 import { functions_prose_silent_oversize_gate_run } from "./functions_prose_silent_oversize_gate_run.mjs";
