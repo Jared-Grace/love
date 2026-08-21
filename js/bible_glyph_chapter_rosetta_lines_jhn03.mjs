@@ -18,7 +18,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "οὗτος ἦλθεν πρὸς αὐτὸν νυκτὸς καὶ εἶπεν αὐτῷ Ῥαββί οἴδαμεν ὅτι ἀπὸ Θεοῦ ἐλήλυθας διδάσκαλος οὐδεὶς γὰρ δύναται ταῦτα τὰ σημεῖα ποιεῖν ἃ σὺ ποιεῖς ἐὰν μὴ ᾖ ὁ Θεὸς μετ’ αὐτοῦ",
         english:
-          "He came to [Jesus] at night and said Rabbi we know that from God who has come [You are] a teacher no one For could [the] signs perform You are doing if not were God with him",
+          "He came to Jesus at night and said Rabbi we know that from God who has come You are a teacher no one For could the signs perform You are doing if not were God with him",
       },
       {
         verse_number: 3,
@@ -39,13 +39,13 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "Ἀπεκρίθη Ἰησοῦς Ἀμὴν ἀμὴν λέγω σοι ἐὰν μή τις γεννηθῇ ἐξ ὕδατος καὶ Πνεύματος οὐ δύναται εἰσελθεῖν εἰς τὴν βασιλείαν τοῦ Θεοῦ",
         english:
-          "answered Jesus Truly truly I tell you unless one he is born of water and [the] Spirit no can enter the kingdom of God",
+          "answered Jesus Truly truly I tell you unless one he is born of water and the Spirit no can enter the kingdom of God",
       },
       {
         verse_number: 6,
         original:
           "τὸ γεγεννημένον ἐκ τῆς σαρκὸς σάρξ ἐστιν καὶ τὸ γεγεννημένον ἐκ τοῦ Πνεύματος πνεῦμά ἐστιν",
-        english: "born of flesh Flesh is [but] born of the Spirit spirit is",
+        english: "born of flesh Flesh is but born of the Spirit spirit is",
       },
       {
         verse_number: 7,
@@ -57,7 +57,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "τὸ πνεῦμα ὅπου θέλει πνεῖ καὶ τὴν φωνὴν αὐτοῦ ἀκούεις ἀλλ’ οὐκ οἶδας πόθεν ἔρχεται καὶ ποῦ ὑπάγει οὕτως ἐστὶν πᾶς ὁ γεγεννημένος ἐκ τοῦ Πνεύματος",
         english:
-          "The wind where it wishes blows sound its You hear but you do not know where it comes {from} [or] where it is going So it is with everyone born of the Spirit",
+          "The wind where it wishes blows sound its You hear but you do not know where it comes from or where it is going So it is with everyone born of the Spirit",
       },
       {
         verse_number: 9,
@@ -84,14 +84,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "Εἰ τὰ ἐπίγεια εἶπον ὑμῖν καὶ οὐ πιστεύετε πῶς ἐὰν εἴπω ὑμῖν τὰ ἐπουράνια πιστεύσετε",
         english:
-          "If things earthly I have told you {about} and you do not believe how if I tell you {about} things heavenly will you believe",
+          "If things earthly I have told you about and you do not believe how if I tell you about things heavenly will you believe",
       },
       {
         verse_number: 13,
         original:
           "καὶ οὐδεὶς ἀναβέβηκεν εἰς τὸν οὐρανὸν εἰ μὴ ὁ ἐκ τοῦ οὐρανοῦ καταβάς ὁ Υἱὸς τοῦ ἀνθρώπου",
         english:
-          "No one has ascended into heaven except the [One who] from heaven descended the Son of Man",
+          "No one has ascended into heaven except the One who from heaven descended the Son of Man",
       },
       {
         verse_number: 14,
@@ -110,14 +110,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "Οὕτως γὰρ ἠγάπησεν ὁ Θεὸς τὸν κόσμον ὥστε τὸν Υἱὸν τὸν μονογενῆ ἔδωκεν ἵνα πᾶς ὁ πιστεύων εἰς αὐτὸν μὴ ἀπόληται ἀλλ’ ἔχῃ ζωὴν αἰώνιον",
         english:
-          "so For loved God the world that [His] Son one and only He gave that everyone who believes in Him shall not perish but have life eternal",
+          "so For loved God the world that His Son one and only He gave that everyone who believes in Him shall not perish but have life eternal",
       },
       {
         verse_number: 17,
         original:
           "οὐ γὰρ ἀπέστειλεν ὁ Θεὸς τὸν Υἱὸν εἰς τὸν κόσμον ἵνα κρίνῃ τὸν κόσμον ἀλλ’ ἵνα σωθῇ ὁ κόσμος δι’ αὐτοῦ",
         english:
-          "{did} not For send God His Son into the world to condemn the world but to save the world through Him",
+          "did not For send God His Son into the world to condemn the world but to save the world through Him",
       },
       {
         verse_number: 18,
@@ -138,47 +138,47 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "πᾶς γὰρ ὁ φαῦλα πράσσων μισεῖ τὸ φῶς καὶ οὐκ ἔρχεται πρὸς τὸ φῶς ἵνα μὴ ἐλεγχθῇ τὰ ἔργα αὐτοῦ",
         english:
-          "Everyone who evil does hates the Light and {does} not come into the Light for fear that will be exposed deeds his",
+          "Everyone who evil does hates the Light and does not come into the Light for fear that will be exposed deeds his",
       },
       {
         verse_number: 21,
         original:
           "ὁ δὲ ποιῶν τὴν ἀλήθειαν ἔρχεται πρὸς τὸ φῶς ἵνα φανερωθῇ αὐτοῦ τὰ ἔργα ὅτι ἐν Θεῷ ἐστιν εἰργασμένα",
         english:
-          "whoever But practices the truth comes into the Light so that it may be seen clearly [what] he has done that in God has been accomplished",
+          "whoever But practices the truth comes into the Light so that it may be seen clearly what he has done that in God has been accomplished",
       },
       {
         verse_number: 22,
         original:
           "Μετὰ ταῦτα ἦλθεν ὁ Ἰησοῦς καὶ οἱ μαθηταὶ αὐτοῦ εἰς τὴν Ἰουδαίαν γῆν καὶ ἐκεῖ διέτριβεν μετ’ αὐτῶν καὶ ἐβάπτιζεν",
         english:
-          "After this went Jesus and disciples His into the Judean countryside [where] He spent some time with them and baptized",
+          "After this went Jesus and disciples His into the Judean countryside where He spent some time with them and baptized",
       },
       {
         verse_number: 23,
         original:
           "Ἦν δὲ καὶ Ἰωάννης βαπτίζων ἐν Αἰνὼν ἐγγὺς τοῦ Σαλείμ ὅτι ὕδατα πολλὰ ἦν ἐκεῖ καὶ παρεγίνοντο καὶ ἐβαπτίζοντο",
         english:
-          "was Now also John baptizing at Aenon near Salim because [the] water plentiful was there and [people] kept coming to be baptized",
+          "was Now also John baptizing at Aenon near Salim because the water plentiful was there and people kept coming to be baptized",
       },
       {
         verse_number: 24,
         original: "οὔπω γὰρ ἦν βεβλημένος εἰς τὴν φυλακὴν Ἰωάννης",
-        english: "{had} not yet (For been thrown into prison John",
+        english: "had not yet (For been thrown into prison John",
       },
       {
         verse_number: 25,
         original:
           "Ἐγένετο οὖν ζήτησις ἐκ τῶν μαθητῶν Ἰωάννου μετὰ Ἰουδαίου περὶ καθαρισμοῦ",
         english:
-          "arose Then a dispute between disciples John’s [and] [a certain] Jew over [the issue of] ceremonial washing",
+          "arose Then a dispute between disciples John’s and a certain Jew over the issue of ceremonial washing",
       },
       {
         verse_number: 26,
         original:
           "καὶ ἦλθον πρὸς τὸν Ἰωάννην καὶ εἶπαν αὐτῷ Ῥαββί ὃς ἦν μετὰ σοῦ πέραν τοῦ Ἰορδάνου ᾧ σὺ μεμαρτύρηκας ἴδε οὗτος βαπτίζει καὶ πάντες ἔρχονται πρὸς αὐτόν",
         english:
-          "So [John’s disciples] came to [him] and said Rabbi the [One who] was with you beyond the Jordan the One you testified about Look He is baptizing and everyone is going to Him",
+          "So John’s disciples came to him and said Rabbi the One who was with you beyond the Jordan the One you testified about Look He is baptizing and everyone is going to Him",
       },
       {
         verse_number: 27,
@@ -198,19 +198,19 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "Ὁ ἔχων τὴν νύμφην νυμφίος ἐστίν ὁ δὲ φίλος τοῦ νυμφίου ὁ ἑστηκὼς καὶ ἀκούων αὐτοῦ χαρᾷ χαίρει διὰ τὴν φωνὴν τοῦ νυμφίου αὕτη οὖν ἡ χαρὰ ἡ ἐμὴ πεπλήρωται",
         english:
-          "belongs to The bride [the] bridegroom The friend of the bridegroom stands and listens for him [and] is overjoyed [to hear] the voice bridegroom’s That joy [is] mine [and] it is now complete",
+          "belongs to The bride the bridegroom The friend of the bridegroom stands and listens for him and is overjoyed to hear the voice bridegroom’s That joy is mine and it is now complete",
       },
       {
         verse_number: 30,
         original: "ἐκεῖνον δεῖ αὐξάνειν ἐμὲ δὲ ἐλαττοῦσθαι",
-        english: "He must increase I [must] decrease",
+        english: "He must increase I must decrease",
       },
       {
         verse_number: 31,
         original:
           "Ὁ ἄνωθεν ἐρχόμενος ἐπάνω πάντων ἐστίν ὁ ὢν ἐκ τῆς γῆς ἐκ τῆς γῆς ἐστιν καὶ ἐκ τῆς γῆς λαλεῖ ὁ ἐκ τοῦ οὐρανοῦ ἐρχόμενος ἐπάνω πάντων ἐστίν",
         english:
-          "The [One who] from above comes above all is The [one who] is from the earth to the earth belongs and from the earth speaks [as one] The [One who] from heaven comes above all is",
+          "The One who from above comes above all is The one who is from the earth to the earth belongs and from the earth speaks as one The One who from heaven comes above all is",
       },
       {
         verse_number: 32,
@@ -231,7 +231,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "ὃν γὰρ ἀπέστειλεν ὁ Θεὸς τὰ ῥήματα τοῦ Θεοῦ λαλεῖ οὐ γὰρ ἐκ μέτρου δίδωσιν τὸ Πνεῦμα",
         english:
-          "the [One] For has sent whom God the words of God speaks without for limit [God] gives the Spirit",
+          "the One For has sent whom God the words of God speaks without for limit God gives the Spirit",
       },
       {
         verse_number: 35,
