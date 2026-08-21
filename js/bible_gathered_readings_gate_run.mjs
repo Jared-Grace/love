@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { bible_gathered_events_all } from "./bible_gathered_events_all.mjs";
 import { bible_gathered_readings_all } from "./bible_gathered_readings_all.mjs";
@@ -43,8 +44,7 @@ export async function bible_gathered_readings_gate_run() {
         let same = equal(other, key);
         return same;
       }
-      let times = list_filter(event_keys, same_is);
-      let left = list_size(times);
+      let left = list_filter_size(event_keys, same_is);
       let duplicate = equal_not(left, 1);
       return duplicate;
     }
