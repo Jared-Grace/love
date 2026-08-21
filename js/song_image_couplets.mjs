@@ -76,7 +76,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A wide shallow washing basin of plain grey stone resting flat on the ground, drawn very large so that it reaches almost the whole width of the window, brimful of clear blue water spilling over its rim and running down its outside",
+        "A wide shallow bowl of plain grey stone, its outside one unbroken curve running from rim to rim with its lowest point resting on the bottom edge of the window, drawn very large so that it reaches almost to both sides of the window, brimful of clear blue water spilling over the rim and running down the outside",
       symbol_ref: "Matthew 27:24",
       same_as: 0,
     },
@@ -295,7 +295,7 @@ export function song_image_couplets() {
       first: "the SON of GOD",
       second: "was raised to life",
       symbol:
-        "The mouth of a tomb standing wide open and empty in plain grey rock, with one great round grey stone standing upright on the ground well away to one side of the opening",
+        "The mouth of a tomb standing wide open and empty in plain grey rock, with one great round grey stone standing upright on the ground well away to one side of the opening, the opening and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it",
       symbol_ref: "Matthew 28:2",
       same_as: 0,
     },
@@ -305,7 +305,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "One royal crown of white glass, a plain broad band with five upright points standing above it and one small ruby red jewel set in the band below each point, drawn very large and alone so that it reaches almost across the whole window",
+        "Three royal bands of white glass, each one a broad smooth circle carrying one small ruby red jewel at the front of it, set one directly above another with the widest at the bottom and the narrowest at the top, drawn very large so that the three together reach almost to both sides of the window and almost to the top and the bottom of it",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
@@ -355,7 +355,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A pair of brown leather sandals set down side by side and seen from straight above, each one a flat sole of one plain unmarked brown with two plain straps across it, drawn very large so that the two together reach from the bottom of the window almost to the top of it",
+        "A pair of brown leather sandals set down side by side and seen from straight above, each one a flat sole of one plain unmarked brown with two plain straps across it, drawn very large so that the two together reach from the bottom of the window almost to the top of it and almost to both sides of it",
       symbol_ref: "Exodus 3:5",
       same_as: 0,
     },
@@ -365,7 +365,7 @@ export function song_image_couplets() {
       first: "HE's coming soon",
       second: "the day draws near",
       symbol:
-        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the bottom of the window almost to the top of it",
+        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the bottom of the window almost to the top of it and almost to both sides of it",
       symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
