@@ -63,7 +63,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:33 puts two others with HIM, one on either side. The three crosses are the one arrangement the accounts give, and the middle one is drawn taller so the eye finds it first.",
     },
     8: {
-      kept: 5,
+      kept: 6,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "Blotting out the handwriting of ordinances that was against us, and took it out of the way, nailing it to HIS cross. The debt is Paul's own word for it, and the suffering is Isaiah's, wounded for our transgressions.",
@@ -87,7 +87,7 @@ export function song_image_couplet_glosses() {
         "Described. Genesis 22:13 has the ram caught in a thicket by his horns, offered up in the stead of the son. The picture is that verse and no more; the thicket is thinned to a few boughs for the leading.",
     },
     12: {
-      kept: 4,
+      kept: 6,
       lyric_ref: "Galatians 3:13, Deuteronomy 21:23, Matthew 26:39",
       lyric_explain:
         "Cursed is every one that hangeth on a tree, quoted by Paul to say that HE was made a curse for us. The cup is HIS own word in Gethsemane, let this cup pass from me.",
@@ -127,7 +127,7 @@ export function song_image_couplet_glosses() {
         "Described. Revelation 22:2-3 sets the tree of life bearing fruit in the very verse that says the curse is gone. It replaced a serpent with a crushed head, which six drawings could not keep from looking alive.",
     },
     17: {
-      kept: 4,
+      kept: 5,
       lyric_ref: "Acts 20:28, 1 Peter 1:18-19, Exodus 12:7",
       lyric_explain:
         "The church of GOD, which HE hath purchased with HIS own blood. Peter says we were redeemed not with silver and gold but with the precious blood of CHRIST, as of a lamb without blemish.",
@@ -151,7 +151,7 @@ export function song_image_couplet_glosses() {
         "Described. Hewn out in the rock is the verse, and the mouth is drawn standing empty with no stone near it so that the same doorway can be shut at couplet 21 and open again at couplet 24.",
     },
     21: {
-      kept: 4,
+      kept: 6,
       lyric_ref: "Matthew 27:60, Mark 16:4, Matthew 27:66",
       lyric_explain:
         "HE rolled a great stone to the door of the sepulchre. Mark says the stone was very great, and Matthew has them make the sepulchre sure, sealing the stone and setting a watch.",
