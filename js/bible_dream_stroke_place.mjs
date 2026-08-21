@@ -17,6 +17,8 @@ export function bible_dream_stroke_place(drawing, stroke) {
   "Whether the stroke closes is asked once here rather than at every report of the pointer, because it is a fact about the drawing and cannot change while the drawing is being traced. It is asked of the samples and not of the path text, so it can never disagree with the thing actually being compared against.";
   "Two empty layers are made at the same time and the order they sit in is the argument the picture makes. The corridor is underneath everything because it is only a direction. The hand's own wandering line goes over it, because what the player did is more than a direction. Scripture's ink goes over that, because what arrived outranks what was attempted. The ornament goes over all of it, because it is the answer made to a finished thing.";
   "It is placed by moving the whole pair rather than by redrawing the shape at its position, so the pointer only ever has to be shifted by the offset to be compared against the samples.";
+  let laid = html_component_element_get(drawing);
+  let rank = laid.children.length;
   let group = html_element_svg(drawing, "g");
   let moved = "translate(" + stroke.x + "," + stroke.y + ")";
   html_attribute_set(group, "transform", moved);
@@ -58,6 +60,8 @@ export function bible_dream_stroke_place(drawing, stroke) {
     said: stroke.said,
     x: stroke.x,
     y: stroke.y,
+    rank,
+    guide,
     ink,
     marks,
     flourish,
