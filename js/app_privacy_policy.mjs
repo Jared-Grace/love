@@ -9,5 +9,5 @@ export function app_privacy_policy(context) {
   arguments_assert(arguments, 1);
   let content = app_shared_reading_column(context);
   app_shared_privacy_policy_show(content);
-  let footer = app_shared_footer(content);
+  app_shared_footer(content);
 }
