@@ -15,6 +15,9 @@ export function bible_glyph_roots_hebrew() {
   "SO THE TWO OF THEM ARE THE FIRST WORDS WAITING ON A PICTURE BEING DRAWN RATHER THAN FOUND. Every glyph here so far was borrowed from a set somebody else made, which is cheap and has a ceiling, and the altar and the priest are the ceiling: they are among the commonest concrete nouns in the law and the world outside has no picture of either. This Bible ships its glyphs as images, so the answer is to draw two, and that is a different kind of work from every seat above it.";
   "THE COVENANT NAME WAS BLANK THREE HUNDRED AND SIX TIMES AND NOBODY HAD NOTICED. It carries two Strong's numbers rather than one: the ordinary 3068, and 3069 for the same four letters wherever they stand behind Adonai, where the reader says God instead of LORD and the interlinear writes GOD in capitals to say so. Only 3068 was seated, so every Lord GOD in the prophets drew the crown and left the name itself in English - and the prophets are where that phrase lives, which is why eleven chapters went by without it showing.";
   "IT IS THE SAME NAME AND IT GETS THE SAME MARK, and there was never a decision to make here. Two numbers over one word is a fact about how the interlinear counts vowel points, not about what the word means, and this table has always drawn the word. What the two numbers show is that a table keyed by number can go blank in a way nothing measures: the survey counted those three hundred and six words as undrawable vocabulary, which was true of the number and false of the name.";
+  "THE TURNING WAS BOUGHT BY A CHAPTER RATHER THAN BY A SURVEY, and that is the second time in a day. The four nouns were measured and chosen ahead of authoring; shub was found by authoring the thirty third of Ezekiel and discovering that the one word the chapter exists to say - turn, turn from your evil ways - was arriving in English between two drawn words. No count would have raised it, because it was never near the top of any list of undrawable words. A chapter read end to end is a different instrument from a survey, and it finds a different kind of hole.";
+  "IT IS ONE SENSE AND IT NEEDED NO SPLIT, which is worth saying because the word is so common. Every reading of shub is a going back - returned, return, back, restore, turn - so there is no second referent hiding under it the way meat and the human race hide under one word for flesh. It takes one mark and the mark is honest everywhere. A word being frequent is not the same as a word being ambiguous, and only the second costs a pair.";
+  "THE ARROW CURVES BACK AND IT WILL STAND BESIDE THE ROAD CONSTANTLY. Derek already has the road, and the sentence the prophets are made of puts them together - turn from your evil way - so a reader meets both on their first page. That is a good pairing rather than a collision: the road is the noun and the arrow is the verb, and neither is readable without the other in the line they share.";
   "THE SWORD IS DRAWN AS ONE BLADE AND NOT AS TWO CROSSED, and the choice is worth a line because the crossed pair was the more obvious picture. Crossed swords say battle; chereb says a sword, and it is a sword in the hand of one man as often as it is a war. A single blade claims less than the word does and the crossed pair claims more, and of the two errors only the first is safe.";
   "THE TWO NEGATIVES ARE HERE ON PURPOSE AND ARE NOT AN OVERSTEP. Drawing grammar was settled by the second chapter, which draws the grammar words where the first does not, and lo is met more often in the Old Testament than any word seated in this table before today. A reader who cannot see the not cannot read a commandment, and the commandments are most of what law is.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
@@ -720,6 +723,16 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "2719",
           glyph: "sword",
+        },
+      ],
+    },
+    {
+      root: "shub",
+      gloss: "return, turn back, restore",
+      words: [
+        {
+          strong: "7725",
+          glyph: "turn_back",
         },
       ],
     },

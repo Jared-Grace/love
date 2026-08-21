@@ -276,6 +276,10 @@ export function bible_glyph_artwork_names() {
       asset: "Motorway",
     },
     {
+      glyph: "turn_back",
+      asset: "Right arrow curving left",
+    },
+    {
       glyph: "light",
       asset: "Bright button",
     },
