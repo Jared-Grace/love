@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_bible_reference_open } from "./app_shared_bible_reference_open.mjs";
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 export function app_music_reference_show(parent, reference) {
   "$plain reference";
   "One passage under a line of the song: its name, as a button that opens the passage in the bible reader in a tab of its own, and an empty place under it for the words themselves.";

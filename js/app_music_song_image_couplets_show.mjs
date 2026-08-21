@@ -1,3 +1,20 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { song_image_couplets } from "./song_image_couplets.mjs";
+import { app_music_lines_instruction_text } from "./app_music_lines_instruction_text.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_collapse_setters_set } from "./app_shared_collapse_setters_set.mjs";
+import { app_shared_buttons_expand_collapse } from "./app_shared_buttons_expand_collapse.mjs";
+import { html_br_2 } from "./html_br_2.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { song_image_couplet_references } from "./song_image_couplet_references.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { html_div_text_bold } from "./html_div_text_bold.mjs";
+import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { app_music_references_fill } from "./app_music_references_fill.mjs";
+import { not_equal } from "./not_equal.mjs";
 export async function app_music_song_image_couplets_show(parent) {
   "The hymn's own page: every line it sings in the order it is sung, each one opening to the passages of scripture it rests on.";
   "THE PASSAGES ARE FOLDED BEHIND THE LINES. Written out flat this song runs to some twenty thousand letters, and a reader looking for the words of one line would be scrolling past ninety passages to find them. Folded, the page is the song - and the scripture is one tap under whichever line raised the question.";
