@@ -11,14 +11,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Μὴ ταρασσέσθω ὑμῶν ἡ καρδία πιστεύετε εἰς τὸν Θεόν καὶ εἰς ἐμὲ πιστεύετε",
         english:
-          "{Do} not {let} be troubled your hearts You believe in God as well in Me believe",
+          "Do not let be troubled your hearts You believe in God as well in Me believe",
       },
       {
         verse_number: 2,
         original:
           "ἐν τῇ οἰκίᾳ τοῦ Πατρός μου μοναὶ πολλαί εἰσιν εἰ δὲ μή εἶπον ἂν ὑμῖν ὅτι πορεύομαι ἑτοιμάσαι τόπον ὑμῖν",
         english:
-          "In house Father’s My rooms many are If [it were] not would I have told so you that I am going [there] to prepare a place for you",
+          "In house Father’s My rooms many are If it were not would I have told so you that I am going there to prepare a place for you",
       },
       {
         verse_number: 3,
@@ -37,7 +37,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Λέγει αὐτῷ Θωμᾶς Κύριε οὐκ οἴδαμεν ποῦ ὑπάγεις πῶς δυνάμεθα τὴν ὁδὸν",
         english:
-          "said Thomas Lord we do not know where You are going [so] how can we the way",
+          "said Thomas Lord we do not know where You are going so how can we the way",
       },
       {
         verse_number: 6,
@@ -65,28 +65,28 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Λέγει αὐτῷ ὁ Ἰησοῦς Τοσούτῳ χρόνῳ μεθ’ ὑμῶν εἰμι καὶ οὐκ ἔγνωκάς με Φίλιππε ὁ ἑωρακὼς ἐμὲ ἑώρακεν τὸν Πατέρα πῶς σὺ λέγεις Δεῖξον ἡμῖν τὸν Πατέρα",
         english:
-          "replied Jesus all this time with you I have been and still you do not know Me Philip Anyone who has seen Me has seen the Father How {can} you say Show us the Father",
+          "replied Jesus all this time with you I have been and still you do not know Me Philip Anyone who has seen Me has seen the Father How can you say Show us the Father",
       },
       {
         verse_number: 10,
         original:
           "οὐ πιστεύεις ὅτι ἐγὼ ἐν τῷ Πατρὶ καὶ ὁ Πατὴρ ἐν ἐμοί ἐστιν τὰ ῥήματα ἃ ἐγὼ λέγω ὑμῖν ἀπ’ ἐμαυτοῦ οὐ λαλῶ ὁ δὲ Πατὴρ ἐν ἐμοὶ μένων ποιεῖ τὰ ἔργα αὐτοῦ",
         english:
-          "Do you not believe that I [am] in the Father and the Father in Me is The words I say to you on My own I do not speak {it is} the Instead Father in Me dwelling performing works His",
+          "Do you not believe that I am in the Father and the Father in Me is The words I say to you on My own I do not speak it is the Instead Father in Me dwelling performing works His",
       },
       {
         verse_number: 11,
         original:
           "πιστεύετέ μοι ὅτι ἐγὼ ἐν τῷ Πατρὶ καὶ ὁ Πατὴρ ἐν ἐμοί εἰ δὲ μή διὰ τὰ ἔργα αὐτὰ πιστεύετε",
         english:
-          "Believe Me that I [am] in the Father and the Father [is] in Me or at least on account of the works themselves believe",
+          "Believe Me that I am in the Father and the Father is in Me or at least on account of the works themselves believe",
       },
       {
         verse_number: 12,
         original:
           "Ἀμὴν ἀμὴν λέγω ὑμῖν ὁ πιστεύων εἰς ἐμὲ τὰ ἔργα ἃ ἐγὼ ποιῶ κἀκεῖνος ποιήσει καὶ μείζονα τούτων ποιήσει ὅτι ἐγὼ πρὸς τὸν Πατέρα πορεύομαι",
         english:
-          "Truly truly I tell you whoever believes in Me the works that I am doing will also do even greater [things] than these He will do because I to the Father am going",
+          "Truly truly I tell you whoever believes in Me the works that I am doing will also do even greater things than these He will do because I to the Father am going",
       },
       {
         verse_number: 13,
@@ -98,7 +98,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
       {
         verse_number: 14,
         original: "ἐάν τι αἰτήσητέ με ἐν τῷ ὀνόματί μου ἐγὼ ποιήσω",
-        english: "If for anything you ask Me in name My I will do [it]",
+        english: "If for anything you ask Me in name My I will do it",
       },
       {
         verse_number: 15,
@@ -117,7 +117,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "τὸ Πνεῦμα τῆς ἀληθείας ὃ ὁ κόσμος οὐ δύναται λαβεῖν ὅτι οὐ θεωρεῖ αὐτὸ οὐδὲ γινώσκει ὑμεῖς γινώσκετε αὐτό ὅτι παρ’ ὑμῖν μένει καὶ ἐν ὑμῖν ἔσται",
         english:
-          "the Spirit of truth [Him] The world cannot receive because it neither sees Him nor knows [Him] But you do know Him for with you He abides and in you will be",
+          "the Spirit of truth Him The world cannot receive because it neither sees Him nor knows Him But you do know Him for with you He abides and in you will be",
       },
       {
         verse_number: 18,
@@ -136,14 +136,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "ἐν ἐκείνῃ τῇ ἡμέρᾳ γνώσεσθε ὑμεῖς ὅτι ἐγὼ ἐν τῷ Πατρί μου καὶ ὑμεῖς ἐν ἐμοὶ κἀγὼ ἐν ὑμῖν",
         english:
-          "On that day will know you that I [am] in Father My and you [are] in Me and I [am] in you",
+          "On that day will know you that I am in Father My and you are in Me and I am in you",
       },
       {
         verse_number: 21,
         original:
           "ὁ ἔχων τὰς ἐντολάς μου καὶ τηρῶν αὐτὰς ἐκεῖνός ἐστιν ὁ ἀγαπῶν με ὁ δὲ ἀγαπῶν με ἀγαπηθήσεται ὑπὸ τοῦ Πατρός μου κἀγὼ ἀγαπήσω αὐτὸν καὶ ἐμφανίσω αὐτῷ ἐμαυτόν",
         english:
-          "Whoever has commandments My and keeps them is the [one who] loves Me The [one who] loves Me will be loved by Father My and I will love him and reveal to him Myself",
+          "Whoever has commandments My and keeps them is the one who loves Me The one who loves Me will be loved by Father My and I will love him and reveal to him Myself",
       },
       {
         verse_number: 22,
@@ -164,12 +164,12 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "ὁ μὴ ἀγαπῶν με τοὺς λόγους μου οὐ τηρεῖ καὶ ὁ λόγος ὃν ἀκούετε οὐκ ἔστιν ἐμὸς ἀλλὰ τοῦ πέμψαντός με Πατρός",
         english:
-          "Whoever does not love Me words My does not keep The word that you hear not is My own but [it is ] from the who sent Me Father",
+          "Whoever does not love Me words My does not keep The word that you hear not is My own but it is from the who sent Me Father",
       },
       {
         verse_number: 25,
         original: "Ταῦτα λελάληκα ὑμῖν παρ’ ὑμῖν μένων",
-        english: "All this I have spoken to you with you [while] I am still",
+        english: "All this I have spoken to you with you while I am still",
       },
       {
         verse_number: 26,
@@ -183,14 +183,14 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Εἰρήνην ἀφίημι ὑμῖν εἰρήνην τὴν ἐμὴν δίδωμι ὑμῖν οὐ καθὼς ὁ κόσμος δίδωσιν ἐγὼ δίδωμι ὑμῖν μὴ ταρασσέσθω ὑμῶν ἡ καρδία μηδὲ δειλιάτω",
         english:
-          "Peace I leave with you peace My I give to you not as the world gives I {do} give to you {Do} not {let} be troubled your hearts {do} not be afraid",
+          "Peace I leave with you peace My I give to you not as the world gives I do give to you Do not let be troubled your hearts do not be afraid",
       },
       {
         verse_number: 28,
         original:
           "ἠκούσατε ὅτι ἐγὼ εἶπον ὑμῖν Ὑπάγω καὶ ἔρχομαι πρὸς ὑμᾶς εἰ ἠγαπᾶτέ με ἐχάρητε ἄν ὅτι πορεύομαι πρὸς τὸν Πατέρα ὅτι ὁ Πατὴρ μείζων μού ἐστιν",
         english:
-          "You heard Me say I am going away and I am coming [back] to you If you loved Me you would rejoice that I am going to the Father because the Father greater than I is",
+          "You heard Me say I am going away and I am coming back to you If you loved Me you would rejoice that I am going to the Father because the Father greater than I is",
       },
       {
         verse_number: 29,
@@ -204,7 +204,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Οὐκέτι πολλὰ λαλήσω μεθ’ ὑμῶν ἔρχεται γὰρ ὁ τοῦ κόσμου ἄρχων καὶ ἐν ἐμοὶ οὐκ ἔχει οὐδέν",
         english:
-          "[longer] much I will {not} speak with you is coming for the of this world prince and on Me no claim he has",
+          "longer much I will not speak with you is coming for the of this world prince and on Me no claim he has",
       },
       {
         verse_number: 31,
