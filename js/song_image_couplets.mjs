@@ -54,6 +54,9 @@ export function song_image_couplets() {
   "burial cloth was the other candidate and it is ruled out by a collision rather than by argument. The temple veil five couplets earlier is a large white cloth, and a white linen burial cloth is near enough the same object that the two would read as one repeated picture. This table has already had a ram and a lamb come back as each other, so the risk is measured rather than imagined.";
   "the jar is asked for stoppered and round-bellied so that it cannot be read as the cup six couplets earlier. A vessel is a vessel to whatever draws it, and two couplets that come back with the same object are worth less than either would be alone - which is not a guess, since a ram and a lamb have already come back as each other in this same table.";
   "a symbol may not point at another couplet either. The same scales was written for a human reader who has just seen the first pair; whatever draws this sees one line and has no memory of any other, so the same names nothing and the word is simply lost.";
+  "half in and half out asks for two equal halves, and two equal halves cannot say which end is which. The sword was written as the lower half of its blade inside the sheath and the upper half bare above it, and what came back had a long bare blade above the crossguard with the sheath hanging below it - a sword being drawn, which is the opposite of what the couplet says. A fraction is a proportion and not a state: it gives away nothing about where the thing is going, and the two parts it makes are the same length, so the eye has no reason to read one as the cover and the other as the covered. The state is asked for by putting the whole of the blade inside and letting the grip alone show, which is one arrangement rather than a point on a scale.";
+  "post gives a cylinder and never a beam. The debt was nailed to a plain upright post of brown wood and came back on a rounded pole with grain running down it, which is a post drawn correctly; the verse says nailing it to HIS cross, and a cross is squared timber. The word for a flat-sided thing is squared timber with flat sides and sharp square corners, said in the symbol, because nothing in the style says what shape a named object is.";
+  "a symbol of one or two words is an invitation rather than an instruction. A cup was the whole of couplet 12 for eight months, and what came back was a chalice with shading and modelling on it, standing small in a white square with magenta and tan in the border - four separate faults, every one of them in the space the symbol left empty. The style clauses cannot fill that space: they say how a thing is drawn and never what it is, so a short symbol is not a plain symbol, it is a symbol with the plainness left to whatever is drawing.";
   let couplets = [
     {
       n: 1,
@@ -131,7 +134,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood standing behind it, the cross cut from squared timber with flat sides and sharp square corners, its upright and its crossbar each one plain flat brown all over",
       symbol_ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -141,7 +144,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a plain upright post of brown wood",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood standing behind it, the cross cut from squared timber with flat sides and sharp square corners, its upright and its crossbar each one plain flat brown all over",
       symbol_ref: "Colossians 2:14",
       same_as: 8,
     },
@@ -170,8 +173,9 @@ export function song_image_couplets() {
       verse: 2,
       first: "cursed on a cross",
       second: "HE drank the cup",
-      symbol: "A cup",
-      symbol_ref: "Matthew 26:39",
+      symbol:
+        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large so that it reaches from the bottom of the window almost to the top of it",
+      symbol_ref: "Matthew 26:39, John 18:11",
       same_as: 0,
     },
     {
@@ -200,7 +204,7 @@ export function song_image_couplets() {
       first: "the wrath of GOD",
       second: "was satisfied",
       symbol:
-        "A sword of plain grey iron held point downward, the lower half of its blade already inside a plain brown leather sheath and the upper half still bare above the sheath's mouth",
+        "A sword put away, standing upright with its point downward and the whole of its blade inside a long plain brown leather sheath, the sheath running from the middle of the window right down almost to the bottom of it, and above the sheath's mouth a straight crossguard of grey iron, a short grey grip above the crossguard, and one round grey pommel at the very top",
       symbol_ref: "Zechariah 13:7",
       same_as: 0,
     },
