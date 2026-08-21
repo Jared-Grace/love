@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { g_openers_unbeliever } from "./g_openers_unbeliever.mjs";
 import { g_openers_disciple_arc } from "./g_openers_disciple_arc.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
@@ -36,8 +37,7 @@ export function g_arc_assert(arc, passages) {
     let catch_up = property_get(conversation, "catch_up");
     let empty = text_empty_is(catch_up);
     let written = not(empty);
-    let first = equal(conversation_number, 1);
-    let expected = not(first);
+    let expected = equal_not(conversation_number, 1);
     json_equal_assert_json(written, expected, {
       conversation_number,
       catch_up,
@@ -93,8 +93,7 @@ export function g_arc_assert(arc, passages) {
         turns_total,
         hint: "a turn is marked with one of the openers the writer was offered, copied word for word, and one spelled any other way is a door the player is never given",
       });
-      let same = equal(opener, opener_last);
-      let changed = not(same);
+      let changed = equal_not(opener, opener_last);
       if (changed) {
         let repeated = list_includes(opened, opener);
         let b = not(repeated);
