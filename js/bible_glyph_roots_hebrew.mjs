@@ -62,6 +62,24 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
+      root: "qanna",
+      gloss: "jealous",
+      words: [
+        {
+          strong: "7067",
+          glyph: "heart_on_fire",
+        },
+        {
+          strong: "7065",
+          glyph: "heart_on_fire",
+        },
+        {
+          strong: "7068",
+          glyph: "heart_on_fire",
+        },
+      ],
+    },
+    {
       root: "ab",
       gloss: "father",
       words: [
