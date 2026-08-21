@@ -300,6 +300,10 @@ export function bible_glyph_characters() {
       character: "🛣️",
     },
     {
+      name: "turn_back",
+      character: "↩️",
+    },
+    {
       name: "light",
       character: "🔆",
     },
