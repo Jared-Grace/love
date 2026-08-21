@@ -5,7 +5,7 @@
   "app_calendar_contact -> app_calendar_paste_convert",
   "app_calendar_home -> app_a_button_wide",
   "app_calendar_home -> app_a_list_chooser_generic",
-  "app_g_bible_passage_button_direct -> app_g_button_green",
+  "app_g_bible_passage_button_direct -> app_shared_game_button_green",
   "app_g_bible_passage_button_direct -> app_g_scripture",
   "app_g_gospel -> app_g_bible_passage_button",
   "app_g_gospel -> app_g_bible_passage_button_direct",

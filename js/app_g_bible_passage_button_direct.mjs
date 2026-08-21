@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { html_style_background } from "./html_style_background.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_scripture } from "./app_g_scripture.mjs";
 export function app_g_bible_passage_button_direct(
   reference,
@@ -13,7 +13,7 @@ export function app_g_bible_passage_button_direct(
     "); the base that ",
     fn_name("app_g_bible_passage_button"),
     " delegates to");
-  let b = app_g_button_green(overlay, "", lambda);
+  let b = app_shared_game_button_green(overlay, "", lambda);
   html_style_background(b, "rgba(0, 0, 0, 0.8)");
   app_g_scripture(b, reference, verse_text);
   return b;

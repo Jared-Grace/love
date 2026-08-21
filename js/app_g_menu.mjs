@@ -10,7 +10,7 @@ import { html_remove } from "./html_remove.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_study } from "./app_g_study.mjs";
 import { app_g_new_game } from "./app_g_new_game.mjs";
-import { app_g_button_green } from "./app_g_button_green.mjs";
+import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_button_uncolored } from "./app_g_button_uncolored.mjs";
 import { app_g_button_back } from "./app_g_button_back.mjs";
 import { property_set } from "./property_set.mjs";
@@ -51,7 +51,7 @@ export function app_g_menu(overlay, player) {
       close();
     }
     let words = g_prayer_conversation();
-    app_g_button_green(sub, words, lambda22);
+    app_shared_game_button_green(sub, words, lambda22);
     ("on a day walk (#day_unbelievers) this screen offers a SECOND prayer under the first: one for discernment about WHO to go to next, which on answering picks the person and lays the gold guide to them. it belongs here rather than on a bar of its own across the bottom of the map, because it is a prayer, and every other prayer in the game is prayed from this screen. a bar at the bottom also read as the primary action of the whole map, which put the walking second to a button.");
     ("it is ADDED, never swapped for the conversation prayer. the two ask for different things - one for who to go to, one for the conversation once you are there - so a walk needs BOTH, and hiding the older one behind the newer took away the prayer the player prays most. the always-present one also stays FIRST, so learning where it is survives a day starting.");
     ("it comes and goes with there being something to be shown (",
@@ -63,7 +63,7 @@ export function app_g_menu(overlay, player) {
         close();
       }
       let words_discern = g_prayer_discern();
-      app_g_button_green(sub, words_discern, on_discern);
+      app_shared_game_button_green(sub, words_discern, on_discern);
     }
   }
   app_g_button_uncolored(container, text, lambda7);
