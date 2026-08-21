@@ -1,3 +1,4 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -23,10 +24,13 @@ export function bible_dream_hand_mark_add(state, point, nearness, taper) {
   }
   let points = state.hand_points;
   let strength = bible_dream_hand_mark_strength(nearness, taper);
-  let marked = { x: point.x, y: point.y, strength };
+  let marked = {
+    x: point.x,
+    y: point.y,
+    strength,
+  };
   if (list_empty_is(points)) {
-    list_add(points, marked);
-    list_add(points, marked);
+    list_add_multiple(points, [marked, marked]);
     return;
   }
   let before = list_last(points);
@@ -35,7 +39,8 @@ export function bible_dream_hand_mark_add(state, point, nearness, taper) {
     return;
   }
   list_add(points, marked);
-  if (less_than(list_size(points), 4)) {
+  let a = list_size(points);
+  if (less_than(a, 4)) {
     return;
   }
   bible_dream_hand_segment_draw(state, points);
