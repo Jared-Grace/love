@@ -1,3 +1,4 @@
+import { song_image_audit_preview } from "./song_image_audit_preview.mjs";
 import { app_sandbox_spinner_preview } from "./app_sandbox_spinner_preview.mjs";
 import { week_calendar_preview } from "./week_calendar_preview.mjs";
 import { availability_editor_preview } from "./availability_editor_preview.mjs";
@@ -10,6 +11,7 @@ export function app_sandbox_previews() {
     week_calendar: week_calendar_preview,
     availability_editor: availability_editor_preview,
     song_image_choose: song_image_choose_preview,
+    song_image_audit: song_image_audit_preview,
     second_takes: psalms_second_takes_preview,
   };
   return previews;

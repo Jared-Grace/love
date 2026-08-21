@@ -1,0 +1,34 @@
+import { html_div } from "./html_div.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { html_style_line_height } from "./html_style_line_height.mjs";
+import { song_image_color_text } from "./song_image_color_text.mjs";
+import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
+export function song_image_audit_note(parent, title, reference, body) {
+  "one labelled note on the audit page: what is being accounted for, the verses it stands on, and the account itself";
+  "the verses go above the prose rather than under it, because the whole use of this page is to look something up and disagree with it. A reference printed after the argument is read once the reader has already been persuaded, which is the wrong way round for a check.";
+  let note = html_div(parent);
+  html_style_margin_top(note, "14px");
+  let head = html_div(note);
+  html_style_font_size(head, "11px");
+  html_style_set(head, "letter-spacing", "0.09em");
+  html_style_set(head, "text-transform", "uppercase");
+  let style_value = song_image_color_text_quiet();
+  html_style_set(head, "color", style_value);
+  html_text_set(head, title);
+  let verses = html_div(note);
+  html_style_margin_top(verses, "4px");
+  html_style_font_size(verses, "13px");
+  html_style_set(verses, "color", "#7ec97e");
+  html_text_set(verses, reference);
+  let prose = html_div(note);
+  html_style_margin_top(prose, "6px");
+  html_style_font_size(prose, "15px");
+  html_style_line_height(prose, "1.55");
+  let style_value2 = song_image_color_text();
+  html_style_set(prose, "color", style_value2);
+  html_text_set(prose, body);
+  return note;
+}
