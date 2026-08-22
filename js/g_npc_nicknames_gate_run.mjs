@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { g_npc_nicknames } from "./g_npc_nicknames.mjs";
 import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
 import { g_npc_nickname_lists } from "./g_npc_nickname_lists.mjs";
@@ -6,7 +7,6 @@ import { range } from "./range.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_letters_is } from "./text_letters_is.mjs";
@@ -39,8 +39,7 @@ export async function g_npc_nicknames_gate_run() {
     if (broken) {
       list_add(unfilable, nickname);
     }
-    let profile = list_get(dealt, index);
-    let gender = property_get(profile, "gender");
+    let gender = list_get_property(dealt, index, "gender");
     let named_woman = list_includes(women, nickname);
     let dealt_woman = equal(gender, "female");
     let agrees = equal(named_woman, dealt_woman);
