@@ -71,7 +71,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     10: {
-      kept: 4,
+      kept: 5,
       lyric_ref: "Matthew 27:46, Psalm 22:1, Matthew 27:45",
       lyric_explain:
         "My God, my God, why hast thou forsaken me is the first line of Psalm 22, cried from the cross. Matthew puts darkness over all the land from the sixth hour to the ninth.",
