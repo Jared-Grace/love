@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
 import { youtube_video_title_write } from "./youtube_video_title_write.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function youtube_video_title_write_if_titled(
   video_id,
   titled,
@@ -19,8 +18,7 @@ export async function youtube_video_title_write_if_titled(
   let record = await youtube_video_record(video_id);
   let snippet = property_get(record, "snippet");
   let title_now = property_get(snippet, "title");
-  let titled_still = equal(title_now, titled);
-  let titled_moved = not(titled_still);
+  let titled_moved = equal_not(title_now, titled);
   if (titled_moved) {
     let refused = {
       video_id,
