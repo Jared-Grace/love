@@ -10,7 +10,8 @@ export function bible_dream_errand_beats() {
     {
       name: "sent",
       acting: "",
-      scripture: "HEB1:14 - ministering spirits sent out; GEN31:11 and DAN4:13 have the messenger come down with words already given",
+      scripture:
+        "HEB1:14 - ministering spirits sent out; GEN31:11 and DAN4:13 have the messenger come down with words already given",
       settled:
         "the message is given to the angel and not composed by the angel, and it is for a named person",
       open: "how an errand is handed over, and whether any of it is chosen",
@@ -48,16 +49,14 @@ export function bible_dream_errand_beats() {
         "eight passages hang on a number: seven cows, eleven stars, three baskets, three branches, four corners, ten horns, five metals, three beasts torn from four",
       settled:
         "the numbers, exactly - Pharaoh's seven years of plenty are seven because the cows were",
-      open:
-        "whether a count is its own beat or a property of showing, and how a wrong count is answered",
+      open: "whether a count is its own beat or a property of showing, and how a wrong count is answered",
     },
     {
       name: "word",
       acting: "yes",
       scripture:
         "twelve of the twenty speak, and seven of those give no picture at all - MAT2:13 is a sentence and nothing else",
-      settled:
-        "the words themselves, and that a messenger may not add to them",
+      settled: "the words themselves, and that a messenger may not add to them",
       open: "how a sentence is carried and delivered",
     },
     {
