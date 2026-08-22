@@ -1,3 +1,4 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
@@ -10,7 +11,6 @@ import { list_add } from "./list_add.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { text_words } from "./text_words.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
@@ -77,8 +77,7 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let drawable = [];
   let needs_drawing = [];
   for (let row of weighed) {
-    let list = property_get(row, "assets");
-    let none = list_empty_is(list);
+    let none = property_list_empty_is(row, "assets");
     if (none) {
       list_add(needs_drawing, row);
       continue;
