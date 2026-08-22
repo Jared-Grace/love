@@ -1,7 +1,7 @@
+import { song_image_audit_picture_kept_now } from "./song_image_audit_picture_kept_now.mjs";
 import { song_image_audit_picture_redraw } from "./song_image_audit_picture_redraw.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_display_block } from "./html_display_block.mjs";
-import { html_align_items_center } from "./html_align_items_center.mjs";
 import { html_style_flex } from "./html_style_flex.mjs";
 import { html_text_align } from "./html_text_align.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -13,10 +13,7 @@ import { html_div } from "./html_div.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_display_flex } from "./html_display_flex.mjs";
-import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
@@ -55,11 +52,7 @@ export function song_image_audit_picture(parent, key, kept) {
   html_display_block(picture);
   html_border_radius(picture, "8px");
   let strip = html_div(parent);
-  html_display_flex(strip);
-  html_style_gap(strip, "8px");
-  html_style_margin_top(strip, "8px");
-  html_align_items_center(strip);
-  let kept_now = kept;
+  let kept_now = song_image_audit_picture_kept_now(strip, kept);
   async function keep_click() {
     let attempt = attempts[shown];
     html_text_set(keep, "keeping");
