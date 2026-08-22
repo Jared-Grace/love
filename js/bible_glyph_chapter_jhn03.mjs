@@ -6,6 +6,7 @@ export function bible_glyph_chapter_jhn03() {
   "THE WIND AND THE SPIRIT ARE ONE GREEK WORD AND THIS PAGE SHOWS IT, which is the best thing the pictures have done anywhere so far. Verse eight says the wind blows where it wishes and ends so it is with everyone born of the Spirit, and in English those are two different words joined by a footnote nobody reads. Here both are the same mark, so the sentence argues for itself: the reader watches one picture stand for the moving air at the start and for the Spirit at the end, and the comparison lands without being explained. No translation into words can do that without spending a footnote, and a footnote is the thing this Bible exists to remove.";
   "BORN AND ETERNAL WERE LEFT IN ENGLISH AND THE REASONS ARE IN THE ROOT TABLE with the other refusals, because a decision made here would be a decision made per passage, which is the one thing this Bible never does. Both were found by the coverage measurement before a word of the chapter was authored, and finding them early is what let them be argued about calmly rather than in the middle of a verse.";
   "NICODEMUS ARRIVES AT NIGHT AND THE CHAPTER ENDS IN LIGHT AND DARKNESS, so the three glyphs drawn for the prologue of John one - the light, the darkness and the witness - all pay for themselves again here without anything new being drawn. That is what a root table is for. A picture chosen for one passage and then never met again is a picture the reader had to learn for nothing.";
+  "EVIL IS DRAWN IN THE NINETEENTH VERSE AND BLANK IN THE TWENTIETH, WHICH IS NOT AN INCONSISTENCY. Their deeds were evil is poneros and takes the thumb down; everyone who does evil, one line later, is phaulos, a different Greek word meaning worthless or good-for-nothing, and it has no seat. A reader meeting the same English word marked once and bare once is meeting the truth about the sentence, because the mark attaches to the Greek and never to the English the interlinear reached for. This chapter has made that point twice already with the wind and with the folded hands; here it is made by an adjacency the reader cannot miss.";
   "The glyph a word gets is taken from the root table and never chosen here, so a word drawn one way in this chapter is drawn that way in every chapter.";
   "GRAMMAR IS LEFT IN ENGLISH, the same as the two chapters before it, and this chapter is where that shows its price most plainly. The dialogue with Nicodemus is a question and an answer and another question, and questions live almost entirely in grammar - how, can, unless, whether. So a conversation draws thinner than a discourse does, in the same way narrative drew thinner than the prologue did, and for the same reason.";
   let chapter = {
@@ -153,7 +154,7 @@ export function bible_glyph_chapter_jhn03() {
           "is",
           "born",
           "$tray_out",
-          "water",
+          "$water",
           "$plus",
           "the",
           "$wind.”",
@@ -599,7 +600,7 @@ export function bible_glyph_chapter_jhn03() {
           "Salim,",
           "because",
           "the",
-          "water",
+          "$water",
           "was",
           "plentiful",
           "there,",

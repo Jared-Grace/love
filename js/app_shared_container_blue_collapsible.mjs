@@ -11,8 +11,13 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_caret_open } from "./app_shared_caret_open.mjs";
 import { app_shared_caret_closed } from "./app_shared_caret_closed.mjs";
 import { not } from "./not.mjs";
-export function app_shared_container_blue_collapsible(parent, title_text) {
+export function app_shared_container_blue_collapsible(
+  parent,
+  title_text,
+  changed,
+) {
   "a blue card whose bold centered title folds everything inside it away when tapped, with a caret saying which way it is - so a phone reader can shut a whole group and jump past it to the next one. it hands back the div to draw into, which starts open";
+  ("it says which way it has just gone, every time it goes either way, because a page with an open-everything button has to know how many of its cards are still shut and this card is the only thing that knows when a reader taps its own title. A card on a page with no such button is handed something that does nothing with the news.");
   let card = app_shared_container_blue(parent);
   ("this card only holds one line of its own - the title - so it wears the framing card's trim: this is the outermost of four cards nested one inside the next, and every bit of padding here comes off both the height of the page and the width of the verse text at the bottom of them");
   app_shared_container_trim_frame(card);
@@ -30,6 +35,7 @@ export function app_shared_container_blue_collapsible(parent, title_text) {
     let caret = collapsed ? caret_closed : caret_open;
     let text = text_combine_multiple([caret, " ", title_text]);
     html_text_set(title_div, text);
+    changed(collapsed);
   }
   function toggle() {
     let next = not(collapsed);

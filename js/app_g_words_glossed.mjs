@@ -1,3 +1,13 @@
+import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
+import { html_bold_mild } from "./html_bold_mild.mjs";
+import { words_game_taught_gloss_or_null } from "./words_game_taught_gloss_or_null.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_span_words_on_click } from "./html_span_words_on_click.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { equal } from "./equal.mjs";
+import { not_equal } from "./not_equal.mjs";
 export function app_g_words_glossed(container, text) {
   "$plain text";
   "A line somebody says, drawn into a bubble with every word the game means to teach marked as touchable, and an answer underneath it that fills in with what the tapped word means.";

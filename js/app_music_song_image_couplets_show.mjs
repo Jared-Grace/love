@@ -27,14 +27,22 @@ export async function app_music_song_image_couplets_show(parent) {
   let couplets = song_image_couplets();
   let said = app_music_lines_instruction_text();
   html_p_text(parent, said);
-  let setters = [];
+  let folds = app_shared_folds();
   function expand_all() {
-    app_shared_collapse_setters_set(setters, false);
+    app_shared_folds_set(folds, false);
   }
   function collapse_all() {
-    app_shared_collapse_setters_set(setters, true);
+    app_shared_folds_set(folds, true);
   }
-  app_shared_buttons_expand_collapse(parent, expand_all, collapse_all);
+  ("both buttons act on the one group of cards, because a song has a single level of them - unlike the results of a search, where the books sit inside sections and only the books are shut");
+  let groups = [folds];
+  app_shared_buttons_expand_collapse(
+    parent,
+    expand_all,
+    collapse_all,
+    groups,
+    groups,
+  );
   html_br_2(parent);
   let verse_shown = 0;
   let asked_all = [];
@@ -57,8 +65,7 @@ export async function app_music_song_image_couplets_show(parent) {
       html_div_text_bold(parent, words);
       continue;
     }
-    let shown = app_music_song_line_show(parent, words, references);
-    list_add(setters, shown.collapsed_set);
+    let shown = app_music_song_line_show(folds, parent, words, references);
     list_add_multiple(asked_all, shown.asked_list);
   }
   await app_music_references_fill(asked_all);
