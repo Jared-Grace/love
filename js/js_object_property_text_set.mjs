@@ -1,3 +1,4 @@
+import { property_get_or } from "./property_get_or.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -19,8 +20,9 @@ export function js_object_property_text_set(ast, key, text) {
     let properties = property_get(object, "properties");
     for (let one of properties) {
       let key_node = property_get(one, "key");
-      let name = property_get(key_node, "name");
-      let spelled = property_get(key_node, "value");
+      ("A KEY IS ASKED BOTH WAYS AND NEITHER WAY IS AN ERROR. A property written plainly carries its name on a name node, and one written in quotes carries it as a written-out word; whichever it is, the other field is simply absent, so both are asked for tolerantly and the one that is there answers.");
+      let name = property_get_or(key_node, "name", null);
+      let spelled = property_get_or(key_node, "value", null);
       let named = equal(name, key);
       let valued = equal(spelled, key);
       if (named || valued) {
