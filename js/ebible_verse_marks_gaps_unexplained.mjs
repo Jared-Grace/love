@@ -1,3 +1,4 @@
+import { ebible_verse_marks_gaps_unexplained_displaced_bible_note } from "./ebible_verse_marks_gaps_unexplained_displaced_bible_note.mjs";
 import { ebible_verse_marks_gaps_unexplained_bible_summary } from "./ebible_verse_marks_gaps_unexplained_bible_summary.mjs";
 import { ebible_verse_marks_gaps_unexplained_gaps_bible_read } from "./ebible_verse_marks_gaps_unexplained_gaps_bible_read.mjs";
 import { ebible_letter_accounted } from "./ebible_letter_accounted.mjs";
@@ -6,8 +7,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_verse_marks_gaps_measure } from "./ebible_verse_marks_gaps_measure.mjs";
 import { ebible_verse_marks_displaced_measure } from "./ebible_verse_marks_displaced_measure.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_join_space } from "./list_join_space.mjs";
-import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { ebible_verse_gaps_critical_text_omitted } from "./ebible_verse_gaps_critical_text_omitted.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
@@ -24,14 +23,11 @@ export async function ebible_verse_marks_gaps_unexplained() {
   let displaced_measured = await ebible_verse_marks_displaced_measure();
   let displaced_chapters = [];
   function displaced_bible_note(bible) {
-    let bible_folder = property_get(bible, "bible_folder");
-    let chapters = property_get(bible, "found");
-    function displaced_chapter_note(chapter) {
-      let chapter_code = property_get(chapter, "chapter_code");
-      let address = list_join_space([bible_folder, chapter_code]);
-      list_add(displaced_chapters, address);
-    }
-    each(chapters, displaced_chapter_note);
+    let r3 = ebible_verse_marks_gaps_unexplained_displaced_bible_note(
+      bible,
+      displaced_chapters,
+    );
+    return r3;
   }
   let list = property_get(displaced_measured, "bibles");
   each(list, displaced_bible_note);
