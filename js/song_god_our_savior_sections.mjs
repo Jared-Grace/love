@@ -35,7 +35,7 @@ export function song_god_our_savior_sections() {
         "My sin on Him, nailed to the cross",
         "From all hell's anguish I'm set free,",
         "My Savior bore my penalty",
-        "For \"It is finished!\" was His cry",
+        'For "It is finished!" was His cry',
         "The Son of God laid down His life",
         "And may the water and the blood",
         "Wash all my sin, O fount of love",
