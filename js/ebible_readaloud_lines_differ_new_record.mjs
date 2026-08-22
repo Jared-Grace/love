@@ -1,11 +1,10 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_readaloud_lines_differ_to_fix_names } from "./ebible_readaloud_lines_differ_to_fix_names.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_map_async_record_try } from "./list_map_async_record_try.mjs";
 import { ebible_readaloud_lines_differ_as_published_record } from "./ebible_readaloud_lines_differ_as_published_record.mjs";
 export async function ebible_readaloud_lines_differ_new_record() {
@@ -23,8 +22,7 @@ export async function ebible_readaloud_lines_differ_new_record() {
     let bible_folder = list_first(words);
     return bible_folder;
   }
-  let named_each = list_map(fresh, bible_named);
-  let bible_folders = list_unique(named_each);
+  let bible_folders = list_map_unique(fresh, bible_named);
   let recorded = await list_map_async_record_try(
     bible_folders,
     ebible_readaloud_lines_differ_as_published_record,
