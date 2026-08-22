@@ -1,3 +1,4 @@
+import { js_statements_change_cases_gate_run } from "./js_statements_change_cases_gate_run.mjs";
 import { function_name_words_repeated_cases_gate_run } from "./function_name_words_repeated_cases_gate_run.mjs";
 import { g_profiles_balance_next_cases_gate_run } from "./g_profiles_balance_next_cases_gate_run.mjs";
 import { bible_glyph_marks_group_misread_gate_run } from "./bible_glyph_marks_group_misread_gate_run.mjs";
@@ -759,6 +760,7 @@ export function qa_gates() {
     function_part_name_cases_gate_run,
     functions_names_repeated_gate_run,
     function_name_words_repeated_cases_gate_run,
+    js_statements_change_cases_gate_run,
   ];
   return gates;
 }
