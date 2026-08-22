@@ -1,19 +1,11 @@
+import { bible_dream_trace_hand } from "./bible_dream_trace_hand.mjs";
+import { bible_dream_trace_readout_write } from "./bible_dream_trace_readout_write.mjs";
+import { bible_dream_trace_hand_press } from "./bible_dream_trace_hand_press.mjs";
+import { bible_dream_trace_hand_drag } from "./bible_dream_trace_hand_drag.mjs";
+import { bible_dream_trace_hand_release } from "./bible_dream_trace_hand_release.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_dream_stroke_hand_lift } from "./bible_dream_stroke_hand_lift.mjs";
-import { bible_dream_trace_status_text } from "./bible_dream_trace_status_text.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { bible_dream_drawing_point } from "./bible_dream_drawing_point.mjs";
-import { bible_dream_stroke_begin_near } from "./bible_dream_stroke_begin_near.mjs";
-import { bible_dream_scene_guides_dim } from "./bible_dream_scene_guides_dim.mjs";
-import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
-import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { bible_dream_stroke_hand_step } from "./bible_dream_stroke_hand_step.mjs";
-import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told.mjs";
-import { bible_dream_click_still_far } from "./bible_dream_click_still_far.mjs";
-import { multiply } from "./multiply.mjs";
-import { less_than } from "./less_than.mjs";
 export function bible_dream_scene_trace_hand_watch(
   states,
   told,
@@ -21,71 +13,26 @@ export function bible_dream_scene_trace_hand_watch(
   drawing,
 ) {
   "Everything that watches the hand over a dream being traced - what a press, a movement, a release and a leaving each do - handed back together with the writing of the line that says how far along the drawing is.";
-  "THE FIVE ARE ONE THING AND NOT FIVE, because they share what is being traced right now, whether the hand has been let off the button, where it was pressed and how far it has been since. Those four words are held here and nowhere else, so a hand watcher taken out on its own would be handed a copy of them and would answer about a drawing nobody is doing.";
+  "WHAT THE FIVE SHARE IS ONE RECORD, made here and handed to each of them. What is being traced, whether the hand has been let off the button, where it was pressed and how far it has been since are only ever true together, and a watcher handed a copy of them would answer about a drawing nobody is doing.";
+  "SO EACH OF THEM HAS A NAME AND A FILE OF ITS OWN, and what is left here is the joining: which movement of a pointer means which of them, in five lines a reader can see at once.";
   "IT IS HANDED THE PAGE RATHER THAN MAKING IT, so that the page can be laid out once and watched by this, and so that a reader looking for what a drag does does not walk past the laying out of a page to reach it.";
+  "THE HAND LEAVING THE PICTURE IS THE ONE THING STILL WRITTEN OUT HERE, because it is the one thing that is not a step of the drawing: it breaks the line and deliberately does not let the stroke go, since a button held down is a hand still on that stroke and returning to it should carry on rather than begin again.";
   arguments_assert(arguments, 4);
-  let active = null;
-  let latched = false;
-  let pressed_at = null;
-  let travelled = 0;
-  function let_go() {
-    bible_dream_stroke_hand_lift(active);
-    active = null;
-    latched = false;
-  }
+  let hand = bible_dream_trace_hand();
   function readout_show() {
-    let text = bible_dream_trace_status_text(states, told);
-    html_text_set(readout, text);
+    bible_dream_trace_readout_write(readout, states, told);
   }
   function on_press(event) {
-    let at = bible_dream_drawing_point(drawing, event);
-    if (latched) {
-      let_go();
-      return;
-    }
-    pressed_at = at;
-    travelled = 0;
-    active = bible_dream_stroke_begin_near(states, at, 169);
-    if (active) {
-      bible_dream_stroke_hand_lift(active);
-    }
+    bible_dream_trace_hand_press(hand, states, drawing, event);
   }
   function on_drag(event) {
-    let at = bible_dream_drawing_point(drawing, event);
-    bible_dream_scene_guides_dim(states, at);
-    if (not(active)) {
-      return;
-    }
-    if (not(latched)) {
-      if (equal(event.buttons, 0)) {
-        let_go();
-        return;
-      }
-      let gone = bible_dream_point_gap_squared(at, pressed_at);
-      if (greater_than(gone, travelled)) {
-        travelled = gone;
-      }
-    }
-    bible_dream_stroke_hand_step(active, at);
-    if (active.done) {
-      bible_dream_stroke_finish_told(active, told);
-      let_go();
-    }
-    readout_show();
+    bible_dream_trace_hand_drag(hand, states, told, readout, drawing, event);
   }
   function on_release(event) {
-    if (not(active)) {
-      return;
-    }
-    let still = bible_dream_click_still_far();
-    let still_squared = multiply(still, still);
-    if (less_than(travelled, still_squared)) {
-      latched = true;
-      return;
-    }
-    let_go();
+    bible_dream_trace_hand_release(hand);
   }
   function on_leave(event) {
+    let active = property_get(hand, "active");
     if (active) {
       bible_dream_stroke_hand_lift(active);
     }
