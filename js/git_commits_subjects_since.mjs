@@ -16,8 +16,8 @@ export async function git_commits_subjects_since(since) {
   "THE WHOLE RANGE COMES BACK AS ONE READING. A reading that asks the history once for thousands of lines and a reading that starts thousands of programs answer the same question, and only one of them can be run inside a gate.";
   arguments_assert(arguments, 1);
   let folder = folder_current_absolute();
-  let range = text_combine(since, "..HEAD");
-  let words = ["log", range, "--format=%H\t%s"];
+  let spanned = text_combine(since, "..HEAD");
+  let words = ["log", spanned, "--format=%H\t%s"];
   let out = await git_folder_run(folder, words);
   let lines = text_split_newline(out);
   let full = list_filter(lines, text_empty_not_is);
