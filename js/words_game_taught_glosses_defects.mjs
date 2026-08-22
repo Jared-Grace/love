@@ -1,3 +1,4 @@
+import { words_game_taught_glosses_defects_word } from "./words_game_taught_glosses_defects_word.mjs";
 import { words_game_taught_glosses_defects_entry } from "./words_game_taught_glosses_defects_entry.mjs";
 import { words_game_taught } from "./words_game_taught.mjs";
 import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
@@ -12,17 +13,7 @@ export async function words_game_taught_glosses_defects() {
   let taught_words = await words_game_taught();
   let glosses = words_game_taught_glosses();
   let written = object_property_names(glosses);
-  let defects = [];
-  for (let word of taught_words) {
-    let answered = list_includes(written, word);
-    if (not(answered)) {
-      let missing = {
-        word,
-        fault: "the game teaches this word and nothing here says what it means",
-      };
-      list_add(defects, missing);
-    }
-  }
+  let defects = words_game_taught_glosses_defects_word(taught_words, written);
   for (let word of written) {
     let taught = list_includes(taught_words, word);
     if (not(taught)) {
