@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { add_1 } from "./add_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -6,17 +7,14 @@ import { js_node_types_is } from "./js_node_types_is.mjs";
 import { js_node_types_operator } from "./js_node_types_operator.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { js_visit } from "./js_visit.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-
 export function app_code_line_shape(code) {
   arguments_assert(arguments, 1);
-  "How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.";
-  "The lessons at the front of the course hand out words rather than lines - For God so, TheWorld, God-so-loved - and several of those read in as code even so, because a hyphen between two words is a subtraction and the word in between two others is an operator JS knows. A line is counted here only when reading it in finds a written-out value on it: a number, a piece of text in quotes, a true or a false. That is what every lesson about solving a line has and no lesson about how names are spelled has.";
-  "Nothing is said about which operators they are. Two lines carrying the same count are the same size to a learner holding them in their head, and which two operators those are is a question the lesson itself answers.";
+  ("How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.");
+  ("The lessons at the front of the course hand out words rather than lines - For God so, TheWorld, God-so-loved - and several of those read in as code even so, because a hyphen between two words is a subtraction and the word in between two others is an operator JS knows. A line is counted here only when reading it in finds a written-out value on it: a number, a piece of text in quotes, a true or a false. That is what every lesson about solving a line has and no lesson about how names are spelled has.");
+  ("Nothing is said about which operators they are. Two lines carrying the same count are the same size to a learner holding them in their head, and which two operators those are is a question the lesson itself answers.");
   let ast = js_parse_try(code);
   let unread = null_is(ast);
   if (unread) {
@@ -44,8 +42,7 @@ export function app_code_line_shape(code) {
       let above_is = js_node_types_is(above, types);
       return above_is;
     }
-    let enclosing = list_filter(stack, enclosing_is);
-    let inside = list_size(enclosing);
+    let inside = list_filter_size(stack, enclosing_is);
     let deeper = greater_than(inside, depth);
     if (deeper) {
       depth = inside;
