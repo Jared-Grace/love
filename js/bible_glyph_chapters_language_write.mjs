@@ -1,17 +1,13 @@
-import { bible_glyph_chapters_language_source } from "./bible_glyph_chapters_language_source.mjs";
+import { bible_glyph_chapters_language_write_source } from "./bible_glyph_chapters_language_write_source.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { number_from_text } from "./number_from_text.mjs";
 import { function_exists } from "./function_exists.mjs";
 import { function_source_overwrite } from "./function_source_overwrite.mjs";
 import { function_source_new } from "./function_source_new.mjs";
-import { json_to } from "./json_to.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_chapters_language_write(
   language_code,
@@ -52,38 +48,13 @@ export async function bible_glyph_chapters_language_write(
   let chapters = bible_glyph_chapters();
   let gathered = [];
   let empty = [];
-  for (let chapter of chapters) {
-    let chapter_code = property_get(chapter, "chapter_code");
-    let outcome = await ebible_chapter_verses_storage_outcome(
-      bible_folder,
-      chapter_code,
-    );
-    let verses = property_get(outcome, "verses");
-    let nothing = list_empty_is(verses);
-    if (nothing) {
-      list_add(empty, chapter_code);
-      continue;
-    }
-    let numbered = [];
-    for (let verse of verses) {
-      let text2 = property_get(verse, "verse_number");
-      let verse_number = number_from_text(text2);
-      let text = property_get(verse, "text");
-      list_add(numbered, {
-        verse_number,
-        text,
-      });
-    }
-    list_add(gathered, {
-      chapter_code,
-      verses: numbered,
-    });
-  }
-  let json = json_to(gathered);
-  let source = bible_glyph_chapters_language_source(
+  let source = await bible_glyph_chapters_language_write_source(
+    chapters,
+    bible_folder,
+    empty,
+    gathered,
     written_name,
     language_word,
-    json,
   );
   let found = await function_exists(written_name);
   let exists = property_get(found, "exists");
