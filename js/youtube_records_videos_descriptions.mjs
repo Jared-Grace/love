@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { youtube_videos_descriptions } from "./youtube_videos_descriptions.mjs";
-
 export async function youtube_records_videos_descriptions(records) {
   "Ask youtube what every video named by a list of records is carrying, where each record names its video in a field called video_id.";
   "IT TAKES THE RECORDS RATHER THAN THE IDS, because every caller has records and none of them has a bare list. Pulling the ids out is one line, and one line written at two call sites is two chances to pull the wrong field - which does not fail, it asks about nothing and reads back silence, and silence is indistinguishable from a video carrying nothing.";
