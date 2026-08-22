@@ -367,7 +367,7 @@ export function bible_glyph_chapter_1jn03() {
           "own",
           "$tools",
           "were",
-          "evil,",
+          "$thumbs_down,",
           "while",
           "those",
           "of",
