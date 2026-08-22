@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
 import { g_arc_review_line_apply_mark } from "./g_arc_review_line_apply_mark.mjs";
 import { g_arc_review_line_apply_counted } from "./g_arc_review_line_apply_counted.mjs";
 import { g_arc_review_line_apply_quoted } from "./g_arc_review_line_apply_quoted.mjs";
@@ -46,13 +47,7 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(state, "opener", "");
     return;
   }
-  let conversation_read = property_get(state, "conversation");
-  let caught_up = g_arc_review_line_apply_mark(
-    marks,
-    line,
-    "catch_up",
-    conversation_read,
-  );
+  let caught_up = g_arc_review_line_apply_caught_up(state, marks, line);
   if (caught_up) {
     return;
   }
