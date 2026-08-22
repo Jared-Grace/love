@@ -1,10 +1,9 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gates } from "./qa_gates.mjs";
 import { qa_gate_timings_read } from "./qa_gate_timings_read.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 export async function qa_gate_timings_missing() {
   arguments_assert(arguments, 0);
   ("The gates the record of what each gate takes says nothing about, by name.");
@@ -18,7 +17,6 @@ export async function qa_gate_timings_missing() {
     let missing = list_includes_not(timed, gate.name);
     return missing;
   }
-  let untimed = list_filter(gates, timed_not);
-  let names = list_map_property(untimed, "name");
+  let names = list_filter_map_property(gates, timed_not, "name");
   return names;
 }
