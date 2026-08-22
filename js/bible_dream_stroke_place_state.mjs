@@ -1,3 +1,4 @@
+import { bible_dream_stroke_line_paint } from "./bible_dream_stroke_line_paint.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
@@ -21,12 +22,8 @@ export function bible_dream_stroke_place_state(
   "THE LINE IS HIDDEN BY ITS OWN LENGTH. The dashes are set as long as the whole stroke and pushed exactly that far along, so nothing shows until the tracing pulls them back - which is what lets the drawing appear at the speed of the hand rather than all at once.";
   arguments_assert(arguments, 6);
   let ink_color = app_shared_color_white();
-  html_attribute_set(ink, "stroke", ink_color);
   let ink_width = bible_dream_ink_width();
-  let ink_value = String(ink_width);
-  html_attribute_set(ink, "stroke-width", ink_value);
-  html_attribute_set(ink, "stroke-linecap", "round");
-  html_attribute_set(ink, "stroke-linejoin", "round");
+  bible_dream_stroke_line_paint(ink, ink_color, ink_width);
   let flourish = html_element_svg(group, "g");
   let element = html_component_element_get(ink);
   let total = element.getTotalLength();
