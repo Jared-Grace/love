@@ -1,5 +1,5 @@
+import { bible_glyph_chapters_language_write_bible_glyph_chapters_language_source } from "./bible_glyph_chapters_language_write_bible_glyph_chapters_language_source.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
-import { bible_glyph_language_written_mark } from "./bible_glyph_language_written_mark.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -47,7 +47,8 @@ export async function bible_glyph_chapters_language_write(
     };
     return missed;
   }
-  let bible_folder = list_first_property(languages, bible_folder_key());
+  let property_name = bible_folder_key();
+  let bible_folder = list_first_property(languages, property_name);
   let chapters = bible_glyph_chapters();
   let gathered = [];
   let empty = [];
@@ -79,11 +80,12 @@ export async function bible_glyph_chapters_language_write(
     });
   }
   let json = json_to(gathered);
-  let source = bible_glyph_chapters_language_source(
-    written_name,
-    language_word,
-    json,
-  );
+  let source =
+    bible_glyph_chapters_language_write_bible_glyph_chapters_language_source(
+      written_name,
+      language_word,
+      json,
+    );
   let found = await function_exists(written_name);
   let exists = property_get(found, "exists");
   if (exists) {
@@ -100,29 +102,4 @@ export async function bible_glyph_chapters_language_write(
     empty,
   };
   return report;
-  function bible_glyph_chapters_language_source(
-    name_written,
-    word,
-    chapters_json,
-  ) {
-    "the whole text of the file being written, as source a person can read.";
-    let head =
-      "export function " +
-      name_written +
-      "() {\n" +
-      '  "Every picture Bible chapter in plain ' +
-      word +
-      ", one entry a chapter, for the band a " +
-      word +
-      ' reader checks themselves against after they have guessed.";\n' +
-      '  "' +
-      bible_glyph_language_written_mark() +
-      '";\n' +
-      '  "IT IS COMMITTED RATHER THAN FETCHED because this Bible is meant to reach a phone with no network, and a reveal that needed one would fail in exactly the situation the pictures were chosen for.";\n' +
-      '  "IT IS NOT A LINE OF PICTURES AND CANNOT BECOME ONE. A picture verse is marks interleaved into English word order, so a line of pictures in this language would have to be authored a chapter at a time exactly as the English ones were.";\n';
-    let body =
-      "  let chapters = " + chapters_json + ";\n  return chapters;\n}\n";
-    let file_text = head + body;
-    return file_text;
-  }
 }
