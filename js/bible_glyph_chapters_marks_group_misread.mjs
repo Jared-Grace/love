@@ -24,9 +24,9 @@ export function bible_glyph_chapters_marks_group_misread() {
   let closes = [];
   for (let group of vocabulary) {
     let parts = bible_glyph_group_names(group);
-    let left = list_size(parts);
-    let pair = equal(left, 2);
-    assert_json(pair, {
+    let pictures = list_size(parts);
+    let two_long = equal(pictures, 2);
+    assert_json(two_long, {
       group,
       parts,
       hint: "this reading compares the last picture of one word against the first of the next, which is the whole of the risk only while a group is two pictures long - a longer group can be spelled across a gap without either of those two marks belonging to it, so this reading has to be widened to every ending and every beginning before a group like this is seated",
