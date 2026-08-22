@@ -1,18 +1,9 @@
+import { words_game_taught_glosses_defects_entry } from "./words_game_taught_glosses_defects_entry.mjs";
 import { words_game_taught } from "./words_game_taught.mjs";
 import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_or_null } from "./property_or_null.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { and } from "./and.mjs";
-import { list_join_space } from "./list_join_space.mjs";
-import { words_early_reader_outside_untaught } from "./words_early_reader_outside_untaught.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 export async function words_game_taught_glosses_defects() {
   "Everything wrong with the glosses the game means to show a player who taps a taught word - a taught word with no answer written for it, an answer written for a word nothing teaches, an empty half, and an explanation that reaches for a word the reader would have to tap in turn.";
@@ -42,42 +33,6 @@ export async function words_game_taught_glosses_defects() {
       list_add(defects, stray);
     }
   }
-  for (let word of written) {
-    let entry = property_get(glosses, word);
-    let gloss = property_or_null(entry, "gloss");
-    let explain = property_or_null(entry, "explain");
-    let halves = [gloss, explain];
-    let said_both = true;
-    for (let piece of halves) {
-      let there = not_equal(piece, null);
-      let filled = text_empty_not_is(piece);
-      let said = and(there, filled);
-      if (not(said)) {
-        let blank = {
-          word,
-          fault: "one half of the answer is not written",
-        };
-        list_add(defects, blank);
-        said_both = false;
-      }
-    }
-    if (not(said_both)) {
-      continue;
-    }
-    let both = list_join_space([gloss, explain]);
-    let outside = await words_early_reader_outside_untaught(both);
-    let reached = list_empty_not_is(outside);
-    if (reached) {
-      let joined = list_join_comma_space(outside);
-      let harder = {
-        word,
-        fault: text_combine(
-          "the answer says words the reader would have to tap in turn: ",
-          joined,
-        ),
-      };
-      list_add(defects, harder);
-    }
-  }
+  await words_game_taught_glosses_defects_entry(written, glosses, defects);
   return defects;
 }
