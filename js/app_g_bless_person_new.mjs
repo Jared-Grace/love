@@ -22,6 +22,11 @@ export function app_g_bless_person_new(index, genders) {
   ("fast they walk, or about whether they live here, would be nobody in particular.");
   ("Everybody is set facing south, which is where the player is. Where each of them is");
   ("going is their own business from their first step.");
+  ("Nobody starts standing about, and the count that says so is written down here rather");
+  ("than left off. A person is asked how many turns they still owe before their very first");
+  ("step, and a missing answer is not nought - it is nothing, which compares as neither");
+  ("standing nor walking and would send the first tick down whichever branch the language");
+  ("happened to choose. Said plainly, a new person is somebody with nowhere to look yet.");
   let turn = list_get_wrap_index(genders, index);
   let imgs = list_get_property(genders, turn, "imgs");
   let img = list_random_item(imgs);
@@ -37,6 +42,7 @@ export function app_g_bless_person_new(index, genders) {
     pace: pace,
     walker: walker,
     heading: heading,
+    standing: 0,
   };
   return person;
 }
