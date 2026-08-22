@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_started } from "./g_arc_review_line_apply_started.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_split_first } from "./text_split_first.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
@@ -29,8 +30,7 @@ export function g_arc_review_line_apply(arc, state, line) {
       return;
     }
   }
-  let prefix2 = property_get(marks, "conversation");
-  let started = text_starts_with(line, prefix2);
+  let started = g_arc_review_line_apply_started(marks, line);
   if (started) {
     let conversation = {
       catch_up: "",
