@@ -1,9 +1,6 @@
+import { g_arc_review_line_apply_mark } from "./g_arc_review_line_apply_mark.mjs";
 import { g_arc_review_line_apply_counted } from "./g_arc_review_line_apply_counted.mjs";
 import { g_arc_review_line_apply_quoted } from "./g_arc_review_line_apply_quoted.mjs";
-import { g_arc_review_line_apply_afterward } from "./g_arc_review_line_apply_afterward.mjs";
-import { g_arc_review_line_apply_referenced } from "./g_arc_review_line_apply_referenced.mjs";
-import { g_arc_review_line_apply_opened } from "./g_arc_review_line_apply_opened.mjs";
-import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
 import { g_arc_review_line_apply_started } from "./g_arc_review_line_apply_started.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_split_first } from "./text_split_first.mjs";
@@ -24,6 +21,7 @@ export function g_arc_review_line_apply(arc, state, line) {
   "A TALLY LINE IS DROPPED for the same reason a Scripture line is: it is counted from the arc when the page is laid out, so taking one back in would let a hand-corrected count become the arc's own idea of what it used.";
   "A SCRIPTURE LINE IS DROPPED. The arc stores the reference and the Scripture is fetched from it when the page is laid out, so those words are a rendering and never a source; taken back in, an edited verse would become an arc that quotes the Bible wrongly.";
   "THE TURN'S OWN NUMBER IS KEPT even though the arc has no use for it, because a reviewer's note is about a turn and a note handed back without one is a remark about a page rather than about a line.";
+  "THE CONVERSATION AND THE TURN BEING READ ARE PICKED UP BEFORE IT IS KNOWN WHETHER THIS LINE BELONGS TO EITHER, which is a change of order and not of behaviour: the page's running state carries both words from the moment it is made, so asking for one costs nothing and answers nothing when no conversation has been started yet. Putting a word on a conversation that was never started still fails, in the same branch as before.";
   "A LINE MATCHING NOTHING THROWS. Every mark is a prefix, and an edited page is exactly where a line loses one - a sentence reflowed onto a second line, a note written in the margin. Skipped quietly, that line would disappear out of the middle of a turn and the arc would still parse, which is the one failure a reviewer could not see.";
   let marks = g_arc_review_marks();
   let names = g_arc_answer_field_names("person");
@@ -48,43 +46,41 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(state, "opener", "");
     return;
   }
-  let caught_up = g_arc_review_line_apply_caught_up(marks, line);
+  let conversation_read = property_get(state, "conversation");
+  let caught_up = g_arc_review_line_apply_mark(
+    marks,
+    line,
+    "catch_up",
+    conversation_read,
+  );
   if (caught_up) {
-    let prefix4 = property_get(marks, "catch_up");
-    let catch_up = text_prefix_without(line, prefix4);
-    let object = property_get(state, "conversation");
-    property_set(object, "catch_up", catch_up);
     return;
   }
-  let opened = g_arc_review_line_apply_opened(marks, line);
+  let opened = g_arc_review_line_apply_mark(marks, line, "opener", state);
   if (opened) {
-    let prefix6 = property_get(marks, "opener");
-    let opener = text_prefix_without(line, prefix6);
-    property_set(state, "opener", opener);
     return;
   }
-  let referenced = g_arc_review_line_apply_referenced(marks, line);
+  let turn_read = property_get(state, "turn");
+  let referenced = g_arc_review_line_apply_mark(
+    marks,
+    line,
+    "reference",
+    turn_read,
+  );
   if (referenced) {
-    let prefix8 = property_get(marks, "reference");
-    let reference = text_prefix_without(line, prefix8);
-    let object2 = property_get(state, "turn");
-    property_set(object2, "reference", reference);
     return;
   }
-  let afterward = g_arc_review_line_apply_afterward(marks, line);
+  let afterward = g_arc_review_line_apply_mark(marks, line, "after", turn_read);
   if (afterward) {
-    let prefix10 = property_get(marks, "after");
-    let after = text_prefix_without(line, prefix10);
-    let object3 = property_get(state, "turn");
-    property_set(object3, "after", after);
     return;
   }
-  let prefix13 = property_get(marks, "believes");
-  let believed = text_starts_with(line, prefix13);
+  let believed = g_arc_review_line_apply_mark(
+    marks,
+    line,
+    "believes",
+    turn_read,
+  );
   if (believed) {
-    let believes = text_prefix_without(line, prefix13);
-    let object4 = property_get(state, "turn");
-    property_set(object4, "believes", believes);
     return;
   }
   let quoted = g_arc_review_line_apply_quoted(marks, line);
