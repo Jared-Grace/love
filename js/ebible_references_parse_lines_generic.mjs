@@ -22,6 +22,8 @@ export async function ebible_references_parse_lines_generic(
 ) {
   "WHAT THE READER HANDS BACK IS COPIED BEFORE ANYTHING IS WRITTEN ON IT. The browser's reader keeps every verse it has fetched for the life of the page and hands the same object back the second time, so writing the reference onto that object wrote it into what is kept. The writing is strict - it refuses a property that is already there - so the second time anybody asked for a verse this page had already read, it threw, the catch below turned that into nothing, and the passage came out blank with no error anywhere.";
   "It showed up on a page that names the same verse under two different lines, which is ordinary once a page explains something rather than just displaying it. Copying costs one small object per verse and takes the shared thing out of reach.";
+  "ONE REFERENCE THAT NAMES NO VERSE IS STEPPED OVER, AND THE REST OF THE PAGE STILL FILLS. Reading these is one straight run through every reference on the page, so a reference the reader cannot take apart used to end the run where it stood and every reference after it was never looked at. Jude 24, written without the chapter a book of one chapter still needs, left fourteen of a song's thirty-six lines with no Scripture under them - while the page above them looked finished, because the lines were drawn before the words were fetched.";
+  "Stepped over, such a reference comes back holding nothing, which is the same answer as a reference this bible does not carry and is already drawn as the reference alone with no words beneath it. So the one bad entry is visible to the reader who could mend it, and costs only itself.";
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(bible_folders, books_get);
   let books = await books_get(bible_folder);
@@ -30,6 +32,12 @@ export async function ebible_references_parse_lines_generic(
   let chapter_verses_list = property_get(v, "chapter_verses_list");
   function lambda2(la) {
     function lambda(book_name, chapter_verses) {
+      let reference = text_combine_multiple([book_name, " ", chapter_verses]);
+      let shaped = bible_reference_chapter_verse_shape_is(reference);
+      let unshaped = not(shaped);
+      if (unshaped) {
+        return;
+      }
       let v2 = ebible_reference_parts(books, book_name, chapter_verses);
       let verse_end = property_get(v2, "verse_end");
       let verse_start = property_get(v2, "verse_start");
