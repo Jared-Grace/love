@@ -71,7 +71,7 @@ export function bible_glyph_marks_free_for_groups() {
   let artwork = {};
   for (let entry of bible_glyph_artwork_names()) {
     let glyph_name = property_get(entry, "glyph");
-    let set_name = property_get(entry, "name");
+    let set_name = property_get(entry, "asset");
     property_set(artwork, glyph_name, set_name);
   }
   let characters = bible_glyph_characters();
