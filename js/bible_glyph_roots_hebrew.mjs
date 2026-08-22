@@ -818,10 +818,6 @@ export function bible_glyph_roots_hebrew() {
           strong: "4899",
           glyph: "oil",
         },
-        {
-          strong: "4886",
-          glyph: "oil",
-        },
       ],
     },
     {
@@ -1018,14 +1014,10 @@ export function bible_glyph_roots_hebrew() {
     },
     {
       root: "mashach",
-      gloss: "to anoint, the anointed one",
+      gloss: "to anoint",
       words: [
         {
           strong: "4886",
-          glyph: "oil",
-        },
-        {
-          strong: "4899",
           glyph: "oil",
         },
       ],
