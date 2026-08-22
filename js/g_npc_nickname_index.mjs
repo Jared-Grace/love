@@ -1,8 +1,9 @@
+import { g_npc_nicknames } from "./g_npc_nicknames.mjs";
+import { list_size } from "./list_size.mjs";
+import { range } from "./range.mjs";
+import { list_get } from "./list_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { g_npc_pool_drawn } from "./g_npc_pool_drawn.mjs";
-import { property_get } from "./property_get.mjs";
-import { g_npc_nickname } from "./g_npc_nickname.mjs";
 import { equal } from "./equal.mjs";
 import { error_json } from "./error_json.mjs";
 export async function g_npc_nickname_index(nickname) {
@@ -20,11 +21,12 @@ export async function g_npc_nickname_index(nickname) {
       return index;
     }
   }
+  let f_name = fn_name("g_npc_nickname");
   error_json({
     nickname,
     hint: text_combine_multiple([
       "nobody in the pool is called this; the names are the Bible names the game draws from, spelled as they are written there, and one is handed out per person - ask ",
-      fn_name("g_npc_nickname"),
+      f_name,
       " of a number to see what a given person is called",
     ]),
   });
