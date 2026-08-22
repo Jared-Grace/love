@@ -1,3 +1,4 @@
+import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_verses_group } from "./app_verses_group.mjs";
 import { app_verses_count_updates } from "./app_verses_count_updates.mjs";
 import { app_verses_copy } from "./app_verses_copy.mjs";
