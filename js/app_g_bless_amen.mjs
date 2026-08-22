@@ -29,11 +29,38 @@ export function app_g_bless_amen(container, prayer, on_amen) {
   ("There, the correction under a question is drawn in full and kept unseen so the slot is");
   ("always as tall as the taller of the two things that can fill it, and nothing shifts");
   ("under the learner when one replaces the other. Reserve the room, then reveal.");
+  ("While it is hidden, three softly pulsing dots stand in its place, so the wait is");
+  ("something the player can SEE rather than a screen that has stopped.");
+  ("The door is where this matters. It is black, it holds one paragraph and nothing else,");
+  ("and it says nothing at all for several seconds - which is what a page that failed to");
+  ("load looks like. A player who reads it that way closes the tab before praying");
+  ("anything, and that is the one outcome praying at the door was meant to prevent.");
+  ("They are the gospel game's own dots, called and not copied, and they are the right");
+  ("thing here for the reason they were the right thing there: they are IN-FICTION. A");
+  ("technical spinner would say the app is working, which is a lie - nothing is loading,");
+  ("and the only work being done is the player's own reading. Dots under a prayer say the");
+  ("prayer is still being said, which is exactly true.");
+  ("They stand ON the button rather than above it, laid over the space it is already");
+  ("holding, so taking them away and showing it moves nothing. Put in the flow beside it,");
+  ("they would add their own height to the panel and hand back the very jump the hidden");
+  ("button was built to prevent.");
+  let slot = html_div(container);
+  html_style_relative(slot);
   let praying = emoji_pray();
   let label = text_combine(praying, " Amen");
-  let button = app_shared_game_button_green(container, label, on_amen);
+  let button = app_shared_game_button_green(slot, label, on_amen);
   html_visibility_hidden(button);
+  let waiting = html_div(slot);
+  html_style_assign(waiting, {
+    position: "absolute",
+    inset: "0",
+    display: "flex",
+    "align-items": "center",
+    "justify-content": "center",
+  });
+  app_g_typing_dots(waiting);
   function offer() {
+    html_remove(waiting);
     html_visibility_visible(button);
   }
   let least = bless_prayer_read_ms(prayer);
