@@ -1,15 +1,8 @@
+import { bible_gathered_chapter_gaps } from "./bible_gathered_chapter_gaps.mjs";
 import { bible_gathered_chapters_missing } from "./bible_gathered_chapters_missing.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 import { bible_gathered_events_by_chapter } from "./bible_gathered_events_by_chapter.mjs";
-import { text_digits_only } from "./text_digits_only.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { text_split } from "./text_split.mjs";
-import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export async function bible_gathered_verse_gaps() {
   "Every run of verses inside a gathered chapter that no event points at, found by laying the gathered ranges of each chapter end to end and looking at what is between them.";
@@ -23,59 +16,7 @@ export async function bible_gathered_verse_gaps() {
   let unreadable = [];
   function each_code(code) {
     let taken = by_chapter[code];
-    let spans = [];
-    function each_take(take) {
-      let parts = text_split(take.verses, "-");
-      let first_text = parts[0];
-      let last_text = parts[subtract(parts.length, 1)];
-      let first_digits = text_digits_only(first_text);
-      let last_digits = text_digits_only(last_text);
-      let readable =
-        equal(first_digits, first_text) && equal(last_digits, last_text);
-      if (not(readable)) {
-        let unread = {
-          chapter_code: code,
-          title: take.title,
-          verses: take.verses,
-        };
-        list_add(unreadable, unread);
-        return;
-      }
-      let span = {
-        first: Number(first_text),
-        last: Number(last_text),
-      };
-      list_add(spans, span);
-    }
-    each(taken, each_take);
-    function span_first(span) {
-      let r = span.first;
-      return r;
-    }
-    let sorted = list_sort_number_mapper(spans, span_first);
-    let gaps = [];
-    let reached = 0;
-    function each_span(span) {
-      let after = reached + 1;
-      if (greater_than(span.first, after)) {
-        let gap = {
-          from: after,
-          to: subtract(span.first, 1),
-        };
-        list_add(gaps, gap);
-      }
-      if (greater_than(span.last, reached)) {
-        reached = span.last;
-      }
-    }
-    each(sorted, each_span);
-    if (gaps.length) {
-      let chapter = {
-        chapter_code: code,
-        gaps,
-      };
-      list_add(chapters, chapter);
-    }
+    bible_gathered_chapter_gaps(code, taken, chapters, unreadable);
   }
   each(codes, each_code);
   let whole = bible_gathered_chapters_missing(codes);
