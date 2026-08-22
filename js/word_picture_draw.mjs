@@ -1,3 +1,4 @@
+import { word_pictures_drawn_known_write } from "./word_pictures_drawn_known_write.mjs";
 import { word_picture_wording } from "./word_picture_wording.mjs";
 import { word_picture_folder } from "./word_picture_folder.mjs";
 import { folder_attempt_next } from "./folder_attempt_next.mjs";
