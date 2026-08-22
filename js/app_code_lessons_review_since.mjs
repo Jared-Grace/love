@@ -1,3 +1,5 @@
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -65,16 +67,15 @@ export async function app_code_lessons_review_since(commit) {
     imports_remembered[name] = imported;
     return imported;
   }
-  async function lesson_edited_is(lesson_name) {
+  async function lesson_reached_paths(lesson_name) {
     "the walk turns aside at any name outside the lesson prefix, which is what keeps it small: a lesson reaches the whole of the list and text machinery through its containers, and none of that is what this is asking about";
     let seen = [lesson_name];
     let waiting = [lesson_name];
+    let paths = [];
     while (greater_than(list_size(waiting), 0)) {
       let name = waiting.pop();
-      let file_path = text_combine_multiple(["js/", name, ".mjs"]);
-      if (list_includes(changed_paths, file_path)) {
-        return true;
-      }
+      let reached_path = text_combine_multiple(["js/", name, ".mjs"]);
+      paths.push(reached_path);
       let imported = await lesson_imports_of(name);
       for (let imported_name of imported) {
         if (text_starts_with(imported_name, lesson_prefix)) {
@@ -86,7 +87,38 @@ export async function app_code_lessons_review_since(commit) {
         }
       }
     }
-    return false;
+    return paths;
+  }
+  ("Which lessons reach a file is what tells a lesson's own writing apart from the machinery every lesson is built on, and it is counted rather than read off a list of words. A list of words goes stale the moment somebody adds a helper, and goes stale silently, which is the one way a reading like this fails without saying so.");
+  ("A file only one lesson reaches is that lesson's writing. A file several lessons reach is shared, and it is reported once with how many lessons stand on it rather than turned into a complaint against each of them - the first run of this put all ninety-seven old lessons on the review list because the quiz machinery had been edited, which is a list nobody could have read.");
+  let lessons_of_path = {};
+  for (let lesson_name of names_after) {
+    let reached_paths = await lesson_reached_paths(lesson_name);
+    for (let reached_path of reached_paths) {
+      let holders = lessons_of_path[reached_path];
+      if (not(holders)) {
+        holders = [];
+        lessons_of_path[reached_path] = holders;
+      }
+      holders.push(lesson_name);
+    }
+  }
+  let lessons_edited = [];
+  let helpers_shared_edited = [];
+  for (let changed_path of changed_paths) {
+    let holders = lessons_of_path[changed_path];
+    if (not(holders)) {
+      continue;
+    }
+    let left = list_size(holders);
+    if (equal(left, 1)) {
+      lessons_edited.push(holders[0]);
+    } else {
+      helpers_shared_edited.push({
+        helper: changed_path,
+        lessons: list_size(holders),
+      });
+    }
   }
   let cut_fn = app_code_lessons_prod_last_fn();
   let cut_place = list_index_of(names_after, cut_fn.name) + 1;
@@ -113,7 +145,7 @@ export async function app_code_lessons_review_since(commit) {
           now: place_number,
         });
       }
-      if (await lesson_edited_is(lesson_name)) {
+      if (list_includes(lessons_edited, lesson_name)) {
         lessons_changed.push({
           place: place_number,
           lesson: lesson_name,
@@ -136,6 +168,7 @@ export async function app_code_lessons_review_since(commit) {
     changed: lessons_changed,
     moved: lessons_moved,
     hidden_by_cut: lessons_hidden,
+    shared_helpers_changed: helpers_shared_edited,
   };
   return r;
 }
