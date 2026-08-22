@@ -30,6 +30,7 @@ export async function app_code_lessons_review_since_names_after(
     names_before,
     files_of_lesson,
   );
+  let lessons_removed = property_get(r3, "lessons_removed");
   let lessons_hidden = property_get(r3, "lessons_hidden");
   let lessons_moved = property_get(r3, "lessons_moved");
   let lessons_changed = property_get(r3, "lessons_changed");
@@ -40,6 +41,7 @@ export async function app_code_lessons_review_since_names_after(
   let r = {
     names_before,
     helpers_shared_edited,
+    lessons_removed,
     lessons_hidden,
     lessons_moved,
     lessons_changed,
