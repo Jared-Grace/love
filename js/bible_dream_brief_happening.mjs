@@ -12,8 +12,7 @@ export function bible_dream_brief_happening() {
     passages,
     settled:
       "what moves, what is done to it, and the order of it; that the movement is the message in most of these passages",
-    open:
-      "everything else - whether the player causes, times or releases the motion; whether it plays once or is worked at; how a thing done TO something is asked for",
+    open: "everything else - whether the player causes, times or releases the motion; whether it plays once or is worked at; how a thing done TO something is asked for",
     forbidden:
       "inventing motion the passage does not give; letting the player reorder what happens; treating the movement as decoration on a finished drawing",
     done: "all twelve moving passages move in their own order, with no code particular to any one of them",

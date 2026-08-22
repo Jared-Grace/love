@@ -12,8 +12,7 @@ export function bible_dream_brief_counting() {
     passages,
     settled:
       "the numbers themselves; that exactness is required here where closeness is enough elsewhere; that a number the passage withholds stays withheld",
-    open:
-      "whether counting is its own moment or a property of showing; what answers a wrong count - refusal, or a miscount the dreamer then reports; how a count that depends on another count is asked for",
+    open: "whether counting is its own moment or a property of showing; what answers a wrong count - refusal, or a miscount the dreamer then reports; how a count that depends on another count is asked for",
     forbidden:
       "rounding; supplying a number the passage does not give; any design that can hold only one number per dream",
     done: "all seven counting passages deliver their numbers exactly, DAN7 included with its ten and its three",
