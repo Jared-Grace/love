@@ -1,4 +1,4 @@
-import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
+import { list_get_wrap } from "./list_get_wrap.mjs";
 import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
 import { g_npc_nickname_lists } from "./g_npc_nickname_lists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -41,8 +41,7 @@ export async function g_npc_nicknames() {
     });
     taken[side] = add_1(within);
     let stepped = multiply(within, 61);
-    let at = list_get_wrap_index(names, stepped);
-    let nickname = list_get(names, at);
+    let nickname = list_get_wrap(names, stepped);
     list_add(nicknames, nickname);
   }
   return nicknames;
