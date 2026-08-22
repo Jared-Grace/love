@@ -1,10 +1,8 @@
 import { list_includes_not } from "./list_includes_not.mjs";
-import { equal_not } from "./equal_not.mjs";
-import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
+import { g_arc_written_person_assert } from "./g_arc_written_person_assert.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { g_arc_feedback_person } from "./g_arc_feedback_person.mjs";
@@ -28,14 +26,7 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   "THE NOTES GO LAST. Cleared first, a refusal further down would throw away the only record of what was wrong while leaving the writing unchanged, and a fault found by a person cannot be found again by running anything.";
   let answer = await file_read_json(answer_path);
   let index = number_from_text(index_text);
-  let arcs = await g_arc_written_chapter(chapter_code);
-  let found = g_arc_chapter_person_or_null(arcs, index);
-  let there = equal_not(found, null);
-  assert_json(there, {
-    chapter_code,
-    index,
-    hint: "no person of that number is written in this chapter",
-  });
+  let found = await g_arc_written_person_assert(chapter_code, index);
   let standing = await g_arc_feedback_person(chapter_code, index);
   let faulted = [];
   for (let note of standing) {
