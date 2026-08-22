@@ -6,6 +6,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { bless_prayer_transfer } from "./bless_prayer_transfer.mjs";
+import { bless_prayer_transfer_shown } from "./bless_prayer_transfer_shown.mjs";
 export function app_g_bless_transfer_overlay(overlay, on_amen) {
   arguments_assert(arguments, 2);
   ("The prayer that gives the whole session to real people, asked BEFORE the game begins.");
