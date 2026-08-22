@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_psa100 } from "./bible_glyph_chapter_psa100.mjs";
 import { bible_glyph_chapter_1jn02 } from "./bible_glyph_chapter_1jn02.mjs";
 import { bible_glyph_chapter_ezk18 } from "./bible_glyph_chapter_ezk18.mjs";
 import { bible_glyph_chapter_jdg13 } from "./bible_glyph_chapter_jdg13.mjs";
@@ -42,7 +43,9 @@ export function bible_glyph_chapters() {
   "THE SIXTEENTH COMPLETES A BOOK, and it is the first entry chosen for what it finishes rather than for what share of it can be drawn. Four chapters of John's first letter were already here and the second was the only gap, so writing it turns fifteen scattered chapters into one whole book a reader can open at the start and read to the end. Every earlier entry was the top of a survey or, twice, a chapter the survey could not judge; none of them changed what the collection IS.";
   "AND THE SURVEY WAS STILL ASKED FIRST, which is what keeps the reason above from being an excuse to stop measuring. Two hundred and fifty three unwritten chapters were ranked and this one came back one point off the highest, so completing the book cost nothing that could be counted. That is a tie-break and not an override, and the difference matters: a reason the survey cannot see is exactly the kind that would let a chapter be chosen by taste and called strategy.";
   "AND A WHOLE BOOK IS THE FIRST THING HERE THAT TESTS THE PICTURES ACROSS AN ARGUMENT. Scattered chapters test whether a passage carries. A book is one writer turning the same few words over for five chapters, so the light and the darkness a reader meets in the first chapter come back in the second as the thing the whole letter turns on - and whether the marks hold their meaning over that distance is a question no single chapter can put.";
-  "Sixteen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE SEVENTEENTH IS THE FIRST CHAPTER CHOSEN TO SPEND A PICTURE BOUGHT THE SAME HOUR. The twenty third psalm was asked for, its four words were measured, and one of them - the sheep - turned out to be worth a mark while the shepherd needed none and the rod and the staff had to be refused. The survey was then re-run against the grown table and the hundredth psalm came back third of nine hundred and twenty one, holding the sheep in its third verse. So the purchase and its first use are one commit apart, which is the shortest a claim about a picture has ever had to wait to be checked.";
+  "AND IT IS THE FIRST PAIR IN THIS LIST WHERE ONE CHAPTER FINISHES THE OTHER'S SENTENCE. The twenty third has the LORD as one man's shepherd and the hundredth has the nation as His flock, the same animal at both scales - and because the shepherd is drawn as the human and the sheep together, a reader who has met either verse is looking at half of the other. The twenty third is not written yet and does not have to be for that to be true, because the mark carries it rather than the chapter.";
+  "Seventeen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -62,6 +65,7 @@ export function bible_glyph_chapters() {
   let fourteenth = bible_glyph_chapter_jdg13();
   let fifteenth = bible_glyph_chapter_ezk18();
   let sixteenth = bible_glyph_chapter_1jn02();
+  let seventeenth = bible_glyph_chapter_psa100();
   let chapters = [
     first,
     second,
@@ -79,6 +83,7 @@ export function bible_glyph_chapters() {
     fourteenth,
     fifteenth,
     sixteenth,
+    seventeenth,
   ];
   return chapters;
 }

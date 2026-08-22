@@ -18,6 +18,13 @@ export function bible_glyph_chapter_undrawn_deliberate() {
       because:
         "the one place the bubble is missing is the eighteenth verse, where let us love not in word and speech puts logos and glossa side by side. The bubble is seated on logos and would be drawn one word away from the English word speech, so a reader meets a mark and its own translation touching and takes the mark for the word it is standing next to. A mark that lands beside its own translation has been explained away, and the verse loses the distinction it exists to make.",
     },
+    {
+      chapter_code: "PSA100",
+      glyph: "no_entry",
+      strong: "3808",
+      because:
+        "the one place the no entry sign is missing is the third verse, where the word is the ketiv and qere every translation has to decide about. The consonants written are lo, not, and the reading handed down is lo, to Him, so the King James has and not we ourselves and nearly everything since has and we are His. The interlinear keys the word to the number for not and glosses it and. Drawing the mark would put a picture of not on an English word saying and, and rewriting the English to make the mark land would mean this chapter taking a side in a textual question in order to use a glyph.",
+    },
   ];
   return undrawn;
 }
