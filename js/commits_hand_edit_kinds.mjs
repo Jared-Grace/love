@@ -1,61 +1,10 @@
-import { git_message_hand_made } from "./git_message_hand_made.mjs";
-import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
-import { property_equals } from "./property_equals.mjs";
-import { integer_from_base_try } from "./integer_from_base_try.mjs";
-import { commits_ai_js_numstat } from "./commits_ai_js_numstat.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { commits_hand_edit_kinds_generic } from "./commits_hand_edit_kinds_generic.mjs";
 import { commit_edit_kind } from "./commit_edit_kind.mjs";
-import { list_map_limited_async } from "./list_map_limited_async.mjs";
-import { probes_at_once } from "./probes_at_once.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_add } from "./list_add.mjs";
-import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 export async function commits_hand_edit_kinds(count_given) {
-  "What the hand-made single-file edits to code actually were, counted by kind";
-  "Only the ones that reached a single file. A commit reaching many at once is nearly always the sweeping commit gathering up whatever several of us had in the folder at that moment, so it is a batch rather than an edit, and counting it as one edit says the gap is twice what it is";
-  "The point of naming the kinds is subtraction. A reworded comment and a colour chosen are hand-made and always will be, and an import repaired is the canonicalizing pass's own work wearing a hand-made label - none of the three is a missing command. What is left after taking those out is the real gap, and the largest kind in it is the command worth writing next";
-  let count = integer_from_base_try(count_given, 10);
-  let commits = await commits_ai_js_numstat(count);
-  let single = [];
-  for (let commit of commits) {
-    let by_hand = property_equals(commit, "subject", git_message_hand_made());
-    if (not(by_hand)) {
-      continue;
-    }
-    let alone = property_equals(commit, "files", 1);
-    if (not(alone)) {
-      continue;
-    }
-    let item = property_get(commit, "commit");
-    list_add(single, item);
-  }
-  let limit = probes_at_once();
-  let kinds = await list_map_limited_async(single, commit_edit_kind, limit);
-  let counted = {};
-  let size = list_size(single);
-  for (let index = 0; less_than(index, size); index++) {
-    let kind = kinds[index];
-    let seen = property_exists(counted, kind);
-    if (not(seen)) {
-      property_set(counted, kind, {
-        count: 0,
-        samples: [],
-      });
-    }
-    let bucket = property_get(counted, kind);
-    bucket.count = bucket.count + 1;
-    let few = list_size_less_than_value(bucket.samples, 4);
-    if (few) {
-      list_add(bucket.samples, single[index]);
-    }
-  }
-  let r = {
-    window: count,
-    single_file_hand_edits: size,
-    kinds: counted,
-  };
+  "What the hand-made single-file edits to code actually were, counted by kind, with each one named by counting the lines its diff printed.";
+  "THE NAMES THIS ONE CAN OFFER RUN OUT AT SEVERAL LINES OF CODE, because reading the printed lines of a diff is all it does, and a diff does not know what a statement is. That bucket is the largest one it finds and it specifies no command at all, which is what the reading standing on parsed trees was written for.";
+  arguments_assert(arguments, 1);
+  let r = await commits_hand_edit_kinds_generic(count_given, commit_edit_kind);
   return r;
 }

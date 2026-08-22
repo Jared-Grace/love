@@ -23,7 +23,8 @@ export async function commits_hand_edit_kinds_generic(count_given, kind_named) {
   let commits = await commits_ai_js_numstat(count);
   let single = [];
   for (let commit of commits) {
-    let by_hand = property_equals(commit, "subject", git_message_hand_made());
+    let property_value = git_message_hand_made();
+    let by_hand = property_equals(commit, "subject", property_value);
     if (not(by_hand)) {
       continue;
     }
