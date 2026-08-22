@@ -1,3 +1,4 @@
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_verse_marks_displaced_measure } from "./ebible_verse_marks_displaced_measure.mjs";
@@ -10,7 +11,6 @@ import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { ebible_verse_marks_displaced_letter_path } from "./ebible_verse_marks_displaced_letter_path.mjs";
-import { file_write_json } from "./file_write_json.mjs";
 export async function ebible_verse_marks_displaced_letter_write() {
   "Writes every verse mark whose id names a different verse from the one it prints to one public file, shaped so a stranger can work through it without the repo.";
   arguments_assert(arguments, 0);
@@ -90,7 +90,8 @@ export async function ebible_verse_marks_displaced_letter_write() {
     bibles,
   };
   let path = ebible_verse_marks_displaced_letter_path();
-  await file_write_json(path, written);
+  ("Overwritten rather than written fresh, because this file is a measurement and a rebuild has to be able to replace it whole - it exists after the first run, and refusing the second one would mean deleting it by hand every time.");
+  await file_overwrite_json(path, written);
   let reported = {
     path,
     marks: marks_total,
