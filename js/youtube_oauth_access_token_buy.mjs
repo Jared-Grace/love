@@ -1,9 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { youtube_oauth_client } from "./youtube_oauth_client.mjs";
+import { youtube_oauth_token_post } from "./youtube_oauth_token_post.mjs";
 import { youtube_oauth_token_path } from "./youtube_oauth_token_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
-import { http_post_json } from "./http_post_json.mjs";
 export async function youtube_oauth_access_token_buy() {
   "A key that opens the channel for the next hour, bought fresh with the lasting permission already granted.";
   "It buys a new one every time rather than keeping the last one and watching a clock. A kept key needs the moment it dies written down beside it, and a clock read wrong fails in the worst way there is - it looks like the permission was revoked, when all that happened was that a key was used a minute too late.";
@@ -12,17 +11,11 @@ export async function youtube_oauth_access_token_buy() {
   let file_path = youtube_oauth_token_path();
   let token = await file_read_json(file_path);
   let refresh_token = property_get(token, "refresh_token");
-  let client = await youtube_oauth_client();
-  let client_id = property_get(client, "client_id");
-  let client_secret = property_get(client, "client_secret");
-  let token_uri = property_get(client, "token_uri");
   let pairs = {
-    client_id: client_id,
-    client_secret: client_secret,
     refresh_token: refresh_token,
     grant_type: "refresh_token",
   };
-  let fresh = await http_post_json(token_uri, pairs);
+  let fresh = await youtube_oauth_token_post(pairs);
   let access_token = property_get(fresh, "access_token");
   return access_token;
 }
