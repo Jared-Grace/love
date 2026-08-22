@@ -1,6 +1,5 @@
+import { list_slice_count } from "./list_slice_count.mjs";
 import { list_size } from "./list_size.mjs";
-import { add } from "./add.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { less_than } from "./less_than.mjs";
 export function list_includes_run(list, run) {
@@ -12,8 +11,7 @@ export function list_includes_run(list, run) {
   let size_run = list_size(run);
   let held = false;
   for (let start = 0; less_than(start, size); start++) {
-    let end = add(start, size_run);
-    let taken = list_slice(list, start, end);
+    let taken = list_slice_count(list, start, size_run);
     let same = json_equal(taken, run);
     if (same) {
       held = true;
