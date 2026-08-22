@@ -1,7 +1,5 @@
+import { text_split_comma_trimmed } from "./text_split_comma_trimmed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_split_comma_or_empty } from "./text_split_comma_or_empty.mjs";
-import { list_map } from "./list_map.mjs";
-import { text_trim } from "./text_trim.mjs";
 import { equal } from "./equal.mjs";
 export function song_gloss_references(gloss) {
   "$plain gloss";
@@ -14,7 +12,6 @@ export function song_gloss_references(gloss) {
     let r = [];
     return r;
   }
-  let split = text_split_comma_or_empty(gloss.lyric_ref);
-  let references = list_map(split, text_trim);
+  let references = text_split_comma_trimmed(gloss.lyric_ref);
   return references;
 }

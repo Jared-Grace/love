@@ -40,7 +40,12 @@ export function app_g_bless_map(container, world) {
     app_shared_game_npc_img_set(person, ci);
   }
   each(npcs, person_draw);
+  ("the player is drawn like everybody else and then LIT, which is the same mark the gospel");
+  ("game puts on them. A street where the player looks exactly like the crowd is a street the");
+  ("player loses themselves in - and this game asks them to look at other people, so the one");
+  ("they are looking out of has to be findable without being hunted for.");
   let player_img_c = g_character_img(div_map, player);
+  app_shared_game_player_style(player_img_c);
   let drawn = {
     div_map: div_map,
     wash: wash,
