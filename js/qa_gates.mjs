@@ -1,3 +1,4 @@
+import { g_npc_nicknames_gate_run } from "./g_npc_nicknames_gate_run.mjs";
 import { bible_search_built_path_gate_run } from "./bible_search_built_path_gate_run.mjs";
 import { app_music_song_references_shape_gate_run } from "./app_music_song_references_shape_gate_run.mjs";
 import { song_god_our_savior_glosses_gate_run } from "./song_god_our_savior_glosses_gate_run.mjs";
