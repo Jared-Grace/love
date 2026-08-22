@@ -87,6 +87,7 @@ export function bible_glyph_chapters() {
     fifteenth,
     sixteenth,
     seventeenth,
+    eighteenth,
   ];
   return chapters;
 }
