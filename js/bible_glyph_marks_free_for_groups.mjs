@@ -54,15 +54,15 @@ export function bible_glyph_marks_free_for_groups() {
         let ends = bible_glyph_word_marks_edge(word, true);
         let no_ending = equal(ends, null);
         if (not(no_ending)) {
-          let property_name = list_last(ends);
-          property_set(edges_seen, property_name, true);
+          let word_ending = list_last(ends);
+          property_set(edges_seen, word_ending, true);
           edges_count = edges_count + 1;
         }
         let starts = bible_glyph_word_marks_edge(word, false);
         let no_beginning = equal(starts, null);
         if (not(no_beginning)) {
-          let property_name2 = list_first(starts);
-          property_set(edges_seen, property_name2, true);
+          let word_beginning = list_first(starts);
+          property_set(edges_seen, word_beginning, true);
           edges_count = edges_count + 1;
         }
       }
@@ -70,9 +70,9 @@ export function bible_glyph_marks_free_for_groups() {
   }
   let artwork = {};
   for (let entry of bible_glyph_artwork_names()) {
-    let property_name3 = property_get(entry, "glyph");
-    let value = property_get(entry, "name");
-    property_set(artwork, property_name3, value);
+    let glyph_name = property_get(entry, "glyph");
+    let set_name = property_get(entry, "name");
+    property_set(artwork, glyph_name, set_name);
   }
   let characters = bible_glyph_characters();
   let free = [];
