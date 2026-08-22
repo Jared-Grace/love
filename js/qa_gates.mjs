@@ -1,3 +1,4 @@
+import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
 import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
 import { bible_glyph_groups_spellable_gate_run } from "./bible_glyph_groups_spellable_gate_run.mjs";
 import { js_statements_change_cases_gate_run } from "./js_statements_change_cases_gate_run.mjs";
@@ -556,6 +557,7 @@ export function qa_gates() {
     bible_glyph_chapters_language_gate_run,
     bible_glyph_marks_group_misread_gate_run,
     bible_glyph_groups_spellable_gate_run,
+    bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
