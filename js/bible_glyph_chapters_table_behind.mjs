@@ -1,3 +1,5 @@
+import { bible_glyph_chapters_revisited } from "./bible_glyph_chapters_revisited.mjs";
+import { bible_glyph_chapters_table_behind_defer } from "./bible_glyph_chapters_table_behind_defer.mjs";
 import { bible_glyph_chapters_table_behind_chapter } from "./bible_glyph_chapters_table_behind_chapter.mjs";
 import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,21 +15,29 @@ export async function bible_glyph_chapters_table_behind() {
   ("IT NAMES THE WORD AND NOT ONLY THE PICTURE, because a person reading this is about to open a chapter and find somewhere to put a mark. The original and the English are what let them search the verse; the picture alone would tell them a thing is missing and leave them to find where.");
   ("A PICTURE A CHAPTER REFUSED ON PURPOSE IS NOT WORK AND IS REPORTED SEPARATELY. This reading can see what a chapter did not draw and can never see why, so a refusal argued out in the chapter's own prose used to arrive here looking exactly like the drift this was built to find. Measured on the day the consulting was added, three chapters came back behind and two of the three were settled decisions - the Red Sea, which is a name, and a speech bubble that would have landed touching its own English translation. The answer was more wrong than right.");
   ("THE REFUSALS ARE CONSULTED AND NEVER SUBTRACTED IN SILENCE. They are counted, named, and handed back with the reason attached, because a number nobody can check is worth less than a number somebody can argue with - which is the rule the word-level refusal lists set for themselves and the reason they write their reasons down.");
+  ("AND A GAP IS NOT A FAULT UNTIL SOMEBODY HAS BEEN BACK TO THE CHAPTER. The order of work is one pass over every chapter and then a second pass over all of them, so under that order this count can never reach zero - each picture seated leaves every chapter written before it holding the word in English, and a count that is permanently red is a count people stop opening. So the lagging chapters are sorted by whether the second pass has reached them: waiting is the queue for that pass, and behind is a person having read the verse, left the word, and written down no reason.");
   let chapters = bible_glyph_chapters();
   let deliberate = bible_glyph_chapter_undrawn_deliberate();
-  let behind = [];
+  let revisited = bible_glyph_chapters_revisited();
+  let lagging = [];
   let settled = [];
   await bible_glyph_chapters_table_behind_chapter(
     chapters,
     deliberate,
     settled,
-    behind,
+    lagging,
   );
+  let behind = [];
+  let waiting = [];
+  bible_glyph_chapters_table_behind_defer(lagging, revisited, behind, waiting);
   let r = {
     chapters: list_size(chapters),
+    revisited_count: list_size(revisited),
     behind_count: list_size(behind),
+    waiting_count: list_size(waiting),
     settled_count: list_size(settled),
     behind,
+    waiting,
     settled,
   };
   return r;
