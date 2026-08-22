@@ -1,3 +1,4 @@
+import { g_profiles_balance_next_cases_gate_run } from "./g_profiles_balance_next_cases_gate_run.mjs";
 import { bible_glyph_marks_group_misread_gate_run } from "./bible_glyph_marks_group_misread_gate_run.mjs";
 import { functions_names_repeated_gate_run } from "./functions_names_repeated_gate_run.mjs";
 import { word_picture_wordings_gate_run } from "./word_picture_wordings_gate_run.mjs";
@@ -478,6 +479,7 @@ export function qa_gates() {
     js_hash_key_getters_own_cases_gate_run,
     g_verify_chapter_asked_cases_gate_run,
     g_arc_written_gate_run,
+    g_profiles_balance_next_cases_gate_run,
     g_arc_shared_steps_gate_run,
     g_npc_nicknames_gate_run,
     g_arc_prompt_chapter_role_gate_run,
