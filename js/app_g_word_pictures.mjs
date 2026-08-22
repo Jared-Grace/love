@@ -1,6 +1,5 @@
 import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
 import { word_pictures_drawn_known } from "./word_pictures_drawn_known.mjs";
-import { word_picture_wordings } from "./word_picture_wordings.mjs";
 import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_div } from "./html_div.mjs";
@@ -17,11 +16,11 @@ export function app_g_word_pictures() {
   "A SHEET RATHER THAN A PICKER. Nothing here is chosen or clicked. The question it exists to answer is which attempt to keep, and that question is only answerable by looking at the attempts side by side - which is exactly what a screen showing one at a time cannot do.";
   "THE WORDS ARE UNDER THE PICTURES ON PURPOSE. The picture is offered to a child who is stuck on the word, so the thing being checked is whether the picture says what the sentence says. A sheet showing pictures alone would be checking whether they are good pictures, which is a different and easier question to pass.";
   "THE ATTEMPT NUMBER IS SHOWN AND IS THE FILE'S OWN NUMBER, not a fresh label. That number is already the name of the file and already what a redraw would be counted from, so lettering them a and b would invent a second name for a thing that has one, and the moment somebody said keep b nobody could tell which file they meant.";
-  "THE DRAWING WORDING IS PRINTED UNDER EACH WORD, quietly, because half of what this sheet turns up is not a bad draw but a wording that asked for the wrong thing - and a reader who can only see the picture can say it is wrong without being able to say what to change.";
+  "THE DRAWING WORDING IS PRINTED UNDER EACH ATTEMPT, quietly, because half of what this sheet turns up is not a bad draw but a wording that asked for the wrong thing - and a reader who can only see the picture can say it is wrong without being able to say what to change.";
+  "IT IS UNDER THE ATTEMPT AND NOT UNDER THE WORD because two attempts at one word are usually two different askings - the second exists because the first came out wrong and the wording was changed. Printed once at the top it would be the newest wording standing over the oldest picture, which reads as the generator having ignored a wording that in fact nobody ever gave it.";
   "IT IS A DEV SCREEN BY CONSTRUCTION. The pictures are addressed at the local server's copy of the ignored folder, so this screen shows nothing at all against the deployed site; a picture that has been chosen gets moved somewhere the site serves, and that move is what puts it in the game.";
   let column = app_g_dev_overlay("Word pictures");
   let known = word_pictures_drawn_known();
-  let wordings = word_picture_wordings();
   let glosses = words_game_taught_glosses();
   let words = object_property_names(known);
   let gap = app_shared_spaced_gap();
@@ -53,8 +52,10 @@ export function app_g_word_pictures() {
       "margin-top": "0.6rem",
     });
     let attempts = property_get(known, word);
-    function attempt_block(attempt) {
+    function attempt_block(drawn) {
       "280px is the width below which an attempt drops to its own row, and it is set just under half the overlay column rather than at a round number, because two attempts fitting side by side is the whole reason this screen exists and 320 missed it by the width of the gap. A phone is narrower than two of anything, so there it stacks - which is the right answer on a phone and not a fallback.";
+      let attempt = property_get(drawn, "attempt");
+      let wording = property_get(drawn, "wording");
       let cell = html_div(strip);
       html_style_assign(cell, {
         flex: "1 1 280px",
@@ -74,20 +75,19 @@ export function app_g_word_pictures() {
         "text-align": "center",
         opacity: "0.6",
       });
+      let wording_line = html_div_text(cell, wording);
+      html_style_assign(wording_line, {
+        "margin-top": "0.2rem",
+        "font-size": app_shared_font_size_label(),
+        "line-height": "1.4",
+        opacity: "0.55",
+      });
     }
     each(attempts, attempt_block);
     let explain_line = html_div_text(block, explain);
     html_style_assign(explain_line, {
       "margin-top": "0.6rem",
       "line-height": "1.4",
-    });
-    let wording = property_get(wordings, word);
-    let wording_line = html_div_text(block, wording);
-    html_style_assign(wording_line, {
-      "margin-top": "0.4rem",
-      "font-size": app_shared_font_size_label(),
-      "line-height": "1.4",
-      opacity: "0.55",
     });
   }
   each(words, word_block);
