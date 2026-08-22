@@ -1,11 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_verse_numbers } from "./ebible_chapter_verse_numbers.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_digits_leading } from "./text_digits_leading.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function ebible_chapter_verse_marks_displaced(
   bible_folder,
   chapter_code,
@@ -27,8 +26,7 @@ export async function ebible_chapter_verse_marks_displaced(
       return false;
     }
     let number = property_get(verse_number, "number");
-    let agree = equal(leading, number);
-    let disagrees = not(agree);
+    let disagrees = equal_not(leading, number);
     return disagrees;
   }
   let displaced = list_filter(verse_numbers, displaced_is);
