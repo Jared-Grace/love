@@ -1,6 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { youtube_videos_descriptions } from "./youtube_videos_descriptions.mjs";
+import { youtube_records_videos_descriptions } from "./youtube_records_videos_descriptions.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
@@ -15,12 +14,7 @@ export async function psalms_videos_descriptions_verify(part_number) {
   "It asks as the owner rather than reading pages a stranger sees, fifty songs to an ask. Reading the pages was how this was done first, and a couple of hundred page reads in a row is what gets the machine served a sign-in wall instead of videos - at which point every song behind the wall looks empty and the reading-back says the work never landed.";
   arguments_assert(arguments, 1);
   let part = await psalms_videos_descriptions_payload_part(part_number);
-  function lambda$id(one) {
-    let video_id = property_get(one, "video_id");
-    return video_id;
-  }
-  let video_ids = list_map(part, lambda$id);
-  let answered = await youtube_videos_descriptions(video_ids);
+  let answered = await youtube_records_videos_descriptions(part);
   let said = property_get(answered, "said");
   let silent = property_get(answered, "silent");
   let written = 0;
