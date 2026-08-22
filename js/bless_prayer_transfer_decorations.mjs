@@ -19,12 +19,24 @@ import { emoji_home } from "./emoji_home.mjs";
 import { emoji_church } from "./emoji_church.mjs";
 export function bless_prayer_transfer_decorations() {
   arguments_assert(arguments, 0);
-  ("Every picture the prayer at the door is shown with, and the words in it each one stands");
-  ("beside.");
+  ("Every picture the prayer at the door is shown with, the words in it each one stands");
+  ("beside, and which side of those words it stands on.");
   ("A run of pictures rather than one, at every anchor, because a single picture is a");
   ("label and several are a scene. People are a person and a family and a heart; God is a");
   ("crown and a cross and lifted hands. Each run says a little more than any of its members");
   ("would alone, and the reader takes it in at the speed of a glance either way.");
+  ("Half of the runs are SPLIT around their words and half stand whole after them, and that");
+  ("mixture is the point. Every run here is two pictures or three, so with all of them on");
+  ("one side the sentence comes out as word-pair, word-pair, word-pair the whole way down -");
+  ("a shape the eye learns in three anchors and then stops reading. Splitting some of them");
+  ("breaks the count without changing a single picture: the same crown, cross and hands are");
+  ("shown, but the words are held between them rather than trailed by them.");
+  ("Which ones are split is chosen for what the words are, not to make the numbers come");
+  ("out. A thing gets a picture in front of it where the picture is what the thing IS - a");
+  ("crown before God, a person before people, a game before the game, a hand offered before");
+  ("everyone - and the rest of the run follows to say more about it. An action keeps its");
+  ("whole run behind it instead, because praying and blessing are things the words do, and a");
+  ("picture in front of a verb reads as the thing doing it rather than as the doing.");
   ("Eight anchors is nearly every noun in the sentence, and that is the point of this");
   ("screen in particular. It is a wall of words shown to somebody who has not yet decided");
   ("to play, on a phone, before anything has moved - so it is the one screen in the game");
@@ -40,64 +52,71 @@ export function bless_prayer_transfer_decorations() {
   ("once and read closely, so its pictures are chosen for what they MEAN; a prayer read a");
   ("thousand times is drawn from a pool instead, because what a picture there has to do is");
   ("keep a panel from going stale, and nothing seen once can go stale.");
-  let v = emoji_crown();
-  let v2 = emoji_cross();
-  let v3 = emoji_hands_raising();
-  let god = text_combine_multiple([v, v2, v3]);
-  let v4 = emoji_pray();
-  let v5 = emoji_bow();
-  let praying = text_combine_multiple([v4, v5]);
-  let v6 = emoji_person_outline();
-  let v7 = emoji_family();
-  let v8 = emoji_heart();
-  let people = text_combine_multiple([v6, v7, v8]);
-  let v9 = emoji_video_game();
-  let e = emoji_mobile();
-  let game = text_combine_multiple([v9, e]);
-  let v10 = emoji_pray();
-  let v11 = emoji_dove();
-  let prayer = text_combine_multiple([v10, v11]);
-  let v12 = emoji_handshake();
-  let v13 = emoji_wave();
-  let everyone = text_combine_multiple([v12, v13]);
-  let v14 = emoji_globe_americas();
-  let v15 = emoji_sunrise();
-  let world = text_combine_multiple([v14, v15]);
-  let v16 = emoji_home();
-  let v17 = emoji_church();
-  let home = text_combine_multiple([v16, v17]);
+  let none = "";
+  let god_before = emoji_crown();
+  let v = emoji_cross();
+  let v2 = emoji_hands_raising();
+  let god_after = text_combine_multiple([v, v2]);
+  let v3 = emoji_pray();
+  let v4 = emoji_bow();
+  let praying = text_combine_multiple([v3, v4]);
+  let people_before = emoji_person_outline();
+  let v5 = emoji_family();
+  let v6 = emoji_heart();
+  let people_after = text_combine_multiple([v5, v6]);
+  let game_before = emoji_video_game();
+  let game_after = emoji_mobile();
+  let v7 = emoji_pray();
+  let v8 = emoji_dove();
+  let prayer = text_combine_multiple([v7, v8]);
+  let everyone_before = emoji_handshake();
+  let everyone_after = emoji_wave();
+  let v9 = emoji_globe_americas();
+  let v10 = emoji_sunrise();
+  let world = text_combine_multiple([v9, v10]);
+  let v11 = emoji_home();
+  let v12 = emoji_church();
+  let home = text_combine_multiple([v11, v12]);
   let decorations = [
     {
+      before: god_before,
       anchor: "God,",
-      emojis: god,
+      after: god_after,
     },
     {
+      before: none,
       anchor: "as I pray",
-      emojis: praying,
+      after: praying,
     },
     {
+      before: people_before,
       anchor: "people",
-      emojis: people,
+      after: people_after,
     },
     {
+      before: game_before,
       anchor: "video game,",
-      emojis: game,
+      after: game_after,
     },
     {
+      before: none,
       anchor: "this prayer",
-      emojis: prayer,
+      after: prayer,
     },
     {
+      before: everyone_before,
       anchor: "everyone",
-      emojis: everyone,
+      after: everyone_after,
     },
     {
+      before: none,
       anchor: "in the world",
-      emojis: world,
+      after: world,
     },
     {
+      before: none,
       anchor: "I live in",
-      emojis: home,
+      after: home,
     },
   ];
   return decorations;
