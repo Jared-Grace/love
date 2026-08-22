@@ -21,7 +21,7 @@ import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { song_image_drawn_url } from "./song_image_drawn_url.mjs";
 import { song_image_drawn_attempts_known } from "./song_image_drawn_attempts_known.mjs";
-import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
+import { song_image_text_quiet_line } from "./song_image_text_quiet_line.mjs";
 export function song_image_audit_picture(parent, key, kept) {
   "one couplet's picture with an arrow at each side of it, so every attempt that was ever drawn for that couplet can be looked at rather than only the one being kept";
   "the number under the picture is the attempt's own number and not a fresh label, because that number is already the name of the file it came from and already the number written in the table as kept. A page that lettered them a to g would be inventing a second name for a thing that has one, and the moment somebody said try b nobody could tell which file they meant.";
@@ -92,10 +92,7 @@ export function song_image_audit_picture(parent, key, kept) {
   let back = html_button(strip, "‹", back_click);
   html_style_padding(back, "4px 12px");
   html_cursor_pointer(back);
-  let attempt_line = html_div(strip);
-  html_style_font_size(attempt_line, "12px");
-  let style_value = song_image_color_text_quiet();
-  html_style_set(attempt_line, "color", style_value);
+  let attempt_line = song_image_text_quiet_line(strip);
   html_style_set(attempt_line, "flex", "1 1 auto");
   html_style_set(attempt_line, "text-align", "center");
   let on = html_button(strip, "›", on_click);
