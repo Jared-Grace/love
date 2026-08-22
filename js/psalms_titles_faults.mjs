@@ -1,14 +1,9 @@
+import { psalms_titles_faults_item } from "./psalms_titles_faults_item.mjs";
 import { psalms_titles_faults_verse_first } from "./psalms_titles_faults_verse_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_channel_uploads_playlist } from "./youtube_channel_uploads_playlist.mjs";
 import { youtube_playlist_items } from "./youtube_playlist_items.mjs";
-import { psalms_title_passage } from "./psalms_title_passage.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
-import { null_is } from "./null_is.mjs";
 export async function psalms_titles_faults(channel_id) {
   "$plain channel_id";
   "Every song on the channel whose name is wrong about the Psalms in a way that can be proved without listening to it, and everything set aside as not being about the Psalms at all.";
@@ -21,28 +16,7 @@ export async function psalms_titles_faults(channel_id) {
   let passages = [];
   let named_otherwise = [];
   let chapters = [];
-  for (let item of items) {
-    let title = property_get(item, "title");
-    let passage = psalms_title_passage(title);
-    let unreadable = null_is(passage);
-    if (unreadable) {
-      let aside = {
-        video_id: property_get(item, "video_id"),
-        title,
-      };
-      list_add(named_otherwise, aside);
-      continue;
-    }
-    let value = property_get(item, "video_id");
-    property_set(passage, "video_id", value);
-    property_set(passage, "title", title);
-    list_add(passages, passage);
-    let chapter = property_get(passage, "chapter");
-    let fresh = list_includes_not(chapters, chapter);
-    if (fresh) {
-      list_add(chapters, chapter);
-    }
-  }
+  psalms_titles_faults_item(items, named_otherwise, passages, chapters);
   let faults = await psalms_titles_faults_verse_first(chapters, passages);
   let r = {
     video_count: list_size(items),
