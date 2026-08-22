@@ -1,3 +1,4 @@
+import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
