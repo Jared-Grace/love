@@ -7,7 +7,8 @@ export function bible_glyph_chapter_psa029() {
   "THE GLORY IS THE STAR, FOUR TIMES, AND THE EIGHTH CHAPTER PAID FOR THAT. The hundred and thirty sixth psalm had the stars of the sky in its ninth verse and left them in English on purpose, because the star is seated on kabod and spending it on the sky would have cost the reader the word. This psalm is what that refusal was saving it for: glory opens the psalm, is ascribed twice, thunders in the third verse, and is the one word the whole temple cries at the end of the ninth. A picture kept clean in one chapter is a picture that can carry a whole chapter later.";
   "THE NAME AND THE LORD ARE ONE PICTURE AND THAT IS DELIBERATE. The second verse asks for the glory due His name, and the tag drawn on the name is the same tag drawn on the LORD in the line above it, because the covenant name and the word for a name are two Hebrew words seated under one mark. Two words sharing a picture is allowed everywhere in this Bible; here it happens to say something true, which an English reader gets no help seeing.";
   "THE SONS OF THE MIGHTY AND THE YOUNG WILD OX ARE THE SAME WORD. The first verse calls on what English renders heavenly beings and the Hebrew calls sons of God; the sixth verse has what English renders a young wild ox and the Hebrew calls a son of wild oxen. Both are ben, and both are drawn as the son. The sixth verse reads oddly in English because of it, and it is left that way: a reader who notices the same mark in two unlike places has been shown a fact about Hebrew that no translation on the shelf would have told them.";
-  "THE BLESSING AT THE END IS NOT DRAWN. The last verse has the LORD giving strength and blessing His people with peace, and only the giving has a picture. Blessing is one of the commonest verbs in the psalter and it has no seat in this table yet, which is worth naming rather than hiding, because a psalm whose last word is peace and whose last verb is blank is a fair measure of how much of this language is still unbuilt.";
+  "THE BLESSING AT THE END WAS NOT DRAWN WHEN THIS CHAPTER WAS WRITTEN, AND IT IS DRAWN NOW. The last verse has the LORD giving strength and blessing His people with peace, and for a while only the giving had a picture - blessing is one of the commonest verbs in the psalter and had no seat, which was named here rather than hidden, because a psalm whose last word is peace and whose last verb is blank was a fair measure of how much of this language was still unbuilt. The table has since seated barak on the mouth and the thumb, and this verse was brought up to it.";
+  "WHICH IS THE FAULT THIS CHAPTER WAS SITTING IN, WRITTEN DOWN BY THE CHAPTER ITSELF. A chapter is authored once out of whatever the table held that day, and nothing rebuilds it when the table grows; the paragraph above sat here saying a word could not be drawn for as long as it took somebody to read it again. Nothing went red and nothing could - the survey next door asks what the table draws, and the table drew it. What found this was a reading that compares the two, and what closed it was a person opening the verse.";
   "THE PROPER NAMES ARE LEFT IN ENGLISH - David, Lebanon, Sirion, Kadesh. That is the same rule every chapter here keeps and never a gap to fill later. A name points at one person or one place, and a picture of it would be a portrait.";
   let chapter = {
     chapter_code: "PSA029",
@@ -45,7 +46,8 @@ export function bible_glyph_chapter_psa029() {
           "due",
           "His",
           "$name_tag;",
-          "worship",
+          "$bowing",
+          "to",
           "the",
           "$name_tag",
           "in",
@@ -230,7 +232,7 @@ export function bible_glyph_chapter_psa029() {
           "$family;",
           "the",
           "$name_tag",
-          "blesses",
+          "$speech+thumbs_up$es",
           "His",
           "$family",
           "with",
