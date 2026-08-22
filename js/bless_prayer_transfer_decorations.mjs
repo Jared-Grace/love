@@ -55,7 +55,7 @@ export function bless_prayer_transfer_decorations() {
   ("this thick would be noise laid over words the player has already chosen to read.");
   ("Every anchor is short and stands exactly once in the prayer, which is what lets each be");
   ("found without a rule for which one was meant. Where a word repeats - pray, and again in");
-  ("prayer - the anchor takes in enough of the line around it to tell the two apart.");
+  ("prayers - the anchor takes in enough of the line around it to tell the two apart.");
   ("An anchor holds the punctuation next to it where there is any, so the pictures land");
   ("after the comma rather than inside the phrase. A picture between a word and its own");
   ("comma reads as an interruption of the sentence rather than as a picture of it.");
@@ -111,7 +111,7 @@ export function bless_prayer_transfer_decorations() {
     },
     {
       before: none,
-      anchor: "this prayer",
+      anchor: "these prayers",
       after: prayer,
     },
     {
