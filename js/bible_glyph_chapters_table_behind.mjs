@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -113,13 +114,11 @@ export async function bible_glyph_chapters_table_behind() {
   ) {
     "the reason one chapter leaves one seated picture in English on purpose, or nothing at all when no such decision has been written.";
     for (let row of deliberate_rows) {
-      let left = property_get(row, "chapter_code");
-      let same_chapter = equal(left, chapter_code);
+      let same_chapter = property_equals(row, "chapter_code", chapter_code);
       if (not(same_chapter)) {
         continue;
       }
-      let left2 = property_get(row, "glyph");
-      let same_glyph = equal(left2, glyph);
+      let same_glyph = property_equals(row, "glyph", glyph);
       if (not(same_glyph)) {
         continue;
       }
