@@ -1,20 +1,14 @@
+import { g_arc_review_line_apply_person } from "./g_arc_review_line_apply_person.mjs";
+import { g_arc_review_line_apply_conversation_start } from "./g_arc_review_line_apply_conversation_start.mjs";
+import { g_arc_review_line_apply_turn_start } from "./g_arc_review_line_apply_turn_start.mjs";
 import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
 import { g_arc_review_line_apply_mark } from "./g_arc_review_line_apply_mark.mjs";
 import { g_arc_review_line_apply_counted } from "./g_arc_review_line_apply_counted.mjs";
 import { g_arc_review_line_apply_quoted } from "./g_arc_review_line_apply_quoted.mjs";
 import { g_arc_review_line_apply_started } from "./g_arc_review_line_apply_started.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-import { text_split_first } from "./text_split_first.mjs";
 import { g_arc_review_marks } from "./g_arc_review_marks.mjs";
-import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { text_prefix_without } from "./text_prefix_without.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
 import { text_starts_with_digit } from "./text_starts_with_digit.mjs";
-import { text_index_of_skip } from "./text_index_of_skip.mjs";
 import { assert_json } from "./assert_json.mjs";
 export function g_arc_review_line_apply(arc, state, line) {
   "One line of a review page put where it belongs - into the person, into the conversation being read, or into the turn being read.";
@@ -25,26 +19,13 @@ export function g_arc_review_line_apply(arc, state, line) {
   "THE CONVERSATION AND THE TURN BEING READ ARE PICKED UP BEFORE IT IS KNOWN WHETHER THIS LINE BELONGS TO EITHER, which is a change of order and not of behaviour: the page's running state carries both words from the moment it is made, so asking for one costs nothing and answers nothing when no conversation has been started yet. Putting a word on a conversation that was never started still fails, in the same branch as before.";
   "A LINE MATCHING NOTHING THROWS. Every mark is a prefix, and an edited page is exactly where a line loses one - a sentence reflowed onto a second line, a note written in the margin. Skipped quietly, that line would disappear out of the middle of a turn and the arc would still parse, which is the one failure a reviewer could not see.";
   let marks = g_arc_review_marks();
-  let names = g_arc_answer_field_names("person");
-  for (let name of names) {
-    let prefix = text_combine_multiple([name, ": "]);
-    let starts = text_starts_with(line, prefix);
-    if (starts) {
-      let value = text_prefix_without(line, prefix);
-      property_set(arc, name, value);
-      return;
-    }
+  let told = g_arc_review_line_apply_person(arc, line);
+  if (told) {
+    return;
   }
   let started = g_arc_review_line_apply_started(marks, line);
   if (started) {
-    let conversation = {
-      catch_up: "",
-      turns: [],
-    };
-    let conversations = property_get(arc, "conversations");
-    list_add(conversations, conversation);
-    property_set(state, "conversation", conversation);
-    property_set(state, "opener", "");
+    g_arc_review_line_apply_conversation_start(arc, state);
     return;
   }
   let caught_up = g_arc_review_line_apply_caught_up(state, marks, line);
@@ -88,21 +69,7 @@ export function g_arc_review_line_apply(arc, state, line) {
   }
   let numbered = text_starts_with_digit(line);
   if (numbered) {
-    let item = property_get(marks, "number");
-    let before = text_index_of_skip(line, item);
-    let number = text_split_first(line, item);
-    property_set(state, "number", number);
-    let opener = property_get(state, "opener");
-    let turn = {
-      opener,
-      before,
-      reference: "",
-      after: "",
-      believes: "",
-    };
-    let turns = property_path_get_2(state, "conversation", "turns");
-    list_add(turns, turn);
-    property_set(state, "turn", turn);
+    g_arc_review_line_apply_turn_start(marks, state, line);
     return;
   }
   assert_json(false, {
