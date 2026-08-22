@@ -1,10 +1,4 @@
-import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
-import { song_image_draw_attempt_next } from "./song_image_draw_attempt_next.mjs";
-import { song_image_draw_finish } from "./song_image_draw_finish.mjs";
-import { number_from_text } from "./number_from_text.mjs";
-import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
-import { song_image_prompt } from "./song_image_prompt.mjs";
-import { song_image_drawn_path } from "./song_image_drawn_path.mjs";
+import { song_image_couplet_attempt_write } from "./song_image_couplet_attempt_write.mjs";
 import { bfl_draw_write } from "./bfl_draw_write.mjs";
 export async function song_image_draw(number_text) {
   "draw the picture for one couplet of the hymn with Black Forest Labs, using the wording that couplet's own symbol already implies, and save it where a cut can be built from it";
@@ -14,20 +8,11 @@ export async function song_image_draw(number_text) {
   "nothing already drawn is written over. Every draw is saved as the next numbered attempt in that couplet's own folder, with the wording that made it written down beside it, because the way a symbol is settled is by drawing it several ways and looking at them together - and while each draw replaced the last there was never anything to look at together. What was lost that way is not recoverable: the wording is in the history, but the picture it made is gone.";
   "a couplet that repeats another one is drawn into the folder of the couplet it repeats, because that is the folder the picker reads. Asked for a repeated couplet by its own number, this used to draw into a folder of that number, report the path it had written, and be right about every word of that - and no reader ever opens it, so three attempts were bought and shown to nobody. The address is now worked out by one name that both sides call.";
   "the square is what is asked for and not what is kept. It is the canvas the drawing is composed on, and the black left over around the drawing is cut off before this returns - so the shape that reaches the cut is whatever shape the drawing turned out to be, and it is as large in the frame as fitting can make it.";
-  let number = number_from_text(number_text);
-  let key = song_image_couplet_key(number);
-  let couplet = song_image_couplet_get(key);
-  let prompt = song_image_prompt(couplet);
-  let model = "flux-2-pro-preview";
-  let size = 1024;
-  let attempt = await song_image_draw_attempt_next(key);
-  let path = song_image_drawn_path(key, attempt);
-  await bfl_draw_write(model, prompt, size, size, path);
-  let drawn = await song_image_draw_finish(
-    key,
-    couplet.symbol,
-    prompt,
-    attempt,
-  );
+  async function draw_to_path(prompt, path) {
+    let model = "flux-2-pro-preview";
+    let size = 1024;
+    await bfl_draw_write(model, prompt, size, size, path);
+  }
+  let drawn = await song_image_couplet_attempt_write(number_text, draw_to_path);
   return drawn;
 }
