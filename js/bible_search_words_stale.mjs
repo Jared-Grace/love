@@ -1,3 +1,5 @@
+import { bible_search_built_path } from "./bible_search_built_path.mjs";
+import { list_add } from "./list_add.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "./ebible_versions_english_downloadable_words_lookup_cache.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -14,6 +16,9 @@ export async function bible_search_words_stale() {
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   let words = properties_get(result);
   let wanted = list_map(words, bible_search_word_path);
+  ("the mark saying which build these words came from lives in with them and is not one of them, so it has to be asked for by name here or every sweep would take away the one thing that dates what it left behind");
+  let built = bible_search_built_path();
+  list_add(wanted, built);
   let folder = bible_search_folder();
   ("storage is asked for a prefix and not for a folder, so the slash has to be spelled out here - without it the bucket answers four hundred rather than listing anything");
   let slash = text_slash_forward();

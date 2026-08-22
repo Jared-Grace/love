@@ -1,3 +1,5 @@
+import { date_time_zone_now_iso } from "./date_time_zone_now_iso.mjs";
+import { bible_search_built_upload } from "./bible_search_built_upload.mjs";
 import { firebase_upload_object_compressed_chunked } from "./firebase_upload_object_compressed_chunked.mjs";
 import { object_to_list } from "./object_to_list.mjs";
 import { properties_get } from "./properties_get.mjs";
@@ -8,6 +10,10 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   let v2 = object_to_list(result);
   await firebase_upload_object_compressed_chunked(v2, get);
+  ("the build is marked last, once every word of it is up there, and that mark is what tells a reader the copies they saved came from an index that no longer exists");
+  let built = date_time_zone_now_iso();
+  await bible_search_built_upload(built);
+  return built;
   function get({ value: v, key }) {
     let destination = bible_search_word_path(key);
     function lambda(verses_obj, chapter_code) {
