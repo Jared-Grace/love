@@ -1,5 +1,7 @@
+import { html_style_opacity } from "./html_style_opacity.mjs";
+import { html_cursor_default } from "./html_cursor_default.mjs";
+import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_disabled_set } from "./html_disabled_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_shared_button_disabled_set(button, disabled) {
   "$plain disabled";
@@ -12,9 +14,10 @@ export function app_shared_button_disabled_set(button, disabled) {
   let faded = "0.45";
   let full = "1";
   let opacity = disabled ? faded : full;
-  html_style_set(button, "opacity", opacity);
-  let arrow = "default";
-  let hand = "pointer";
-  let cursor = disabled ? arrow : hand;
-  html_style_set(button, "cursor", cursor);
+  html_style_opacity(button, opacity);
+  if (disabled) {
+    html_cursor_default(button);
+    return;
+  }
+  html_cursor_pointer(button);
 }
