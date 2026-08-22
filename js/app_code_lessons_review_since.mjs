@@ -1,18 +1,14 @@
-import { app_code_lessons_review_since_lesson_reached_paths } from "./app_code_lessons_review_since_lesson_reached_paths.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_lessons_review_since_changed_path } from "./app_code_lessons_review_since_changed_path.mjs";
 import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
-import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
-import { text_lines_working } from "./text_lines_working.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -33,64 +29,14 @@ export async function app_code_lessons_review_since(commit) {
     list_text,
     lesson_prefix,
   );
-  function fn_named(f) {
-    let named = f.name;
-    return named;
-  }
-  let list = app_code_lessons_fns();
-  let names_after = list_map(list, fn_named);
-  let diff_text = await git_folder_run(folder, [
-    "diff",
-    "--name-only",
+  let r2 = await app_code_lessons_review_since_changed_path(
+    folder,
     commit,
-    "HEAD",
-    "--",
-    "js",
-  ]);
-  let changed_paths = text_lines_working(diff_text);
-  let imports_remembered = {};
-  ("Which lessons reach a file is what tells a lesson's own writing apart from the machinery every lesson is built on, and it is counted rather than read off a list of words. A list of words goes stale the moment somebody adds a helper, and goes stale silently, which is the one way a reading like this fails without saying so.");
-  ("A file only one lesson reaches is that lesson's writing. A file several lessons reach is shared, and it is reported once with how many lessons stand on it rather than turned into a complaint against each of them - the first run of this put all ninety-seven old lessons on the review list because the quiz machinery had been edited, which is a list nobody could have read.");
-  let lessons_of_path = {};
-  for (let lesson_name of names_after) {
-    let reached_paths =
-      await app_code_lessons_review_since_lesson_reached_paths(
-        lesson_name,
-        imports_remembered,
-        lesson_prefix,
-      );
-    for (let reached_path of reached_paths) {
-      let holders = lessons_of_path[reached_path];
-      if (not(holders)) {
-        holders = [];
-        lessons_of_path[reached_path] = holders;
-      }
-      holders.push(lesson_name);
-    }
-  }
-  let files_of_lesson = {};
-  let helpers_shared_edited = [];
-  for (let changed_path of changed_paths) {
-    let holders = lessons_of_path[changed_path];
-    if (not(holders)) {
-      continue;
-    }
-    let left = list_size(holders);
-    if (equal(left, 1)) {
-      let owner = holders[0];
-      let owned = files_of_lesson[owner];
-      if (not(owned)) {
-        owned = [];
-        files_of_lesson[owner] = owned;
-      }
-      owned.push(changed_path);
-    } else {
-      helpers_shared_edited.push({
-        helper: changed_path,
-        lessons: list_size(holders),
-      });
-    }
-  }
+    lesson_prefix,
+  );
+  let helpers_shared_edited = property_get(r2, "helpers_shared_edited");
+  let files_of_lesson = property_get(r2, "files_of_lesson");
+  let names_after = property_get(r2, "names_after");
   let cut_fn = app_code_lessons_prod_last_fn();
   let cut_place = list_index_of(names_after, cut_fn.name) + 1;
   let lessons_added = [];
