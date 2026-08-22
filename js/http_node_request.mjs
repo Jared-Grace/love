@@ -1,3 +1,4 @@
+import { buffer_text_to } from "./buffer_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_call_later } from "./catch_call_later.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,6 +17,7 @@ export function http_node_request(
   body,
   h,
 ) {
+  "WHAT THE FAR END SAID IS PART OF THE REFUSAL, not something to be thrown away with it. The bytes are already gathered by the time the status is looked at, and a refusal answered with only an address and a number is a refusal nobody can act on: fal turning a picture down and fal being sent a body it cannot read are both four hundred and twenty two, and telling those two apart decides whether the next move is rewording the picture or fixing the code. Both were guessed at, and the reason was sitting in the bytes being dropped one line further down.";
   arguments_assert(arguments, 8);
   let urlObj = new URL(url);
   function lambda5(res) {
@@ -29,11 +31,13 @@ export function http_node_request(
       let statusCode = property_get(res, "statusCode");
       let rounded = divide_round(statusCode, 100);
       let b = equal(rounded, 2);
+      let v = Buffer.concat(chunks);
+      let said = buffer_text_to(v);
       assert_json(b, {
         url,
         statusCode,
+        said,
       });
-      let v = Buffer.concat(chunks);
       resolve(v);
     }
     let i2 = catch_call_later(reject, on_end);
