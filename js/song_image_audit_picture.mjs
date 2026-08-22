@@ -1,3 +1,8 @@
+import { html_width_full } from "./html_width_full.mjs";
+import { html_display_block } from "./html_display_block.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
+import { html_text_align } from "./html_text_align.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -9,7 +14,6 @@ import { html_div } from "./html_div.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
 import { html_style_gap } from "./html_style_gap.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
@@ -48,14 +52,14 @@ export function song_image_audit_picture(parent, key, kept) {
   let picture = html_img(parent, src);
   html_attribute_set(picture, "loading", "lazy");
   html_attribute_set(picture, "decoding", "async");
-  html_style_set(picture, "width", "100%");
-  html_style_set(picture, "display", "block");
+  html_width_full(picture);
+  html_display_block(picture);
   html_border_radius(picture, "8px");
   let strip = html_div(parent);
   html_display_flex(strip);
   html_style_gap(strip, "8px");
   html_style_margin_top(strip, "8px");
-  html_style_set(strip, "align-items", "center");
+  html_align_items_center(strip);
   let kept_now = kept;
   function redraw() {
     let attempt = attempts[shown];
@@ -93,8 +97,8 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_padding(back, "4px 12px");
   html_cursor_pointer(back);
   let attempt_line = song_image_text_quiet_line(strip);
-  html_style_set(attempt_line, "flex", "1 1 auto");
-  html_style_set(attempt_line, "text-align", "center");
+  html_style_flex(attempt_line, "1 1 auto");
+  html_text_align(attempt_line, "center");
   let on = html_button(strip, "›", on_click);
   html_style_padding(on, "4px 12px");
   html_cursor_pointer(on);
