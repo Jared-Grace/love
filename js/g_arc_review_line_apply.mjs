@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_counted } from "./g_arc_review_line_apply_counted.mjs";
 import { g_arc_review_line_apply_quoted } from "./g_arc_review_line_apply_quoted.mjs";
 import { g_arc_review_line_apply_afterward } from "./g_arc_review_line_apply_afterward.mjs";
 import { g_arc_review_line_apply_referenced } from "./g_arc_review_line_apply_referenced.mjs";
@@ -90,8 +91,7 @@ export function g_arc_review_line_apply(arc, state, line) {
   if (quoted) {
     return;
   }
-  let prefix12 = property_get(marks, "tally");
-  let counted = text_starts_with(line, prefix12);
+  let counted = g_arc_review_line_apply_counted(marks, line);
   if (counted) {
     return;
   }
