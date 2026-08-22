@@ -15,6 +15,7 @@ import { words_early_reader_gate_run } from "./words_early_reader_gate_run.mjs";
 import { g_arc_prompt_chapter_role_gate_run } from "./g_arc_prompt_chapter_role_gate_run.mjs";
 import { g_arc_shared_steps_gate_run } from "./g_arc_shared_steps_gate_run.mjs";
 import { bible_gathered_finders_gate_run } from "./bible_gathered_finders_gate_run.mjs";
+import { bible_gathered_gaps_gate_run } from "./bible_gathered_gaps_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_gate_run } from "./bible_glyph_chapters_rosetta_lines_gate_run.mjs";
 import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
 import { bible_gathered_readings_gate_run } from "./bible_gathered_readings_gate_run.mjs";
@@ -552,6 +553,7 @@ export function qa_gates() {
     bible_event_fields_gate_run,
     bible_gathered_readings_gate_run,
     bible_gathered_finders_gate_run,
+    bible_gathered_gaps_gate_run,
     ebible_chapter_code_known_cases_gate_run,
     ebible_index_flat_uploaded_gate_run,
     ebible_index_flats_union_cases_gate_run,
