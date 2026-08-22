@@ -1,6 +1,5 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { bible_dream_passages } from "./bible_dream_passages.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -44,8 +43,7 @@ export function bible_dream_passage_steps_needed() {
       let wants = list_includes(need.steps, step);
       return wants;
     }
-    let wanting = list_filter(needs, need_wants);
-    let count = list_size(wanting);
+    let count = list_filter_size(needs, need_wants);
     return count;
   }
   let answer = {
