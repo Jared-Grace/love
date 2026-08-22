@@ -1,3 +1,4 @@
+import { app_code_lessons_review_since_lessons_of_path } from "./app_code_lessons_review_since_lessons_of_path.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_values } from "./object_values.mjs";
@@ -7,7 +8,6 @@ import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_map } from "./list_map.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
-import { app_code_lessons_review_since_lesson_reached_paths } from "./app_code_lessons_review_since_lesson_reached_paths.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -31,25 +31,8 @@ export async function app_code_lessons_review_since_changed_path(
     "js",
   ]);
   let changed_paths = text_lines_working(diff_text);
-  let imports_remembered = {};
-  ("Which lessons reach a file is what tells a lesson's own writing apart from the machinery every lesson is built on, and it is counted rather than read off a list of words. A list of words goes stale the moment somebody adds a helper, and goes stale silently, which is the one way a reading like this fails without saying so.");
-  ("A file only one lesson reaches is that lesson's writing. A file several lessons reach is shared, and it is reported once with how many lessons stand on it rather than turned into a complaint against each of them - the first run of this put all ninety-seven old lessons on the review list because the quiz machinery had been edited, which is a list nobody could have read.");
-  let lessons_of_path = {};
-  for (let lesson_name of names_after) {
-    let reached_paths =
-      await app_code_lessons_review_since_lesson_reached_paths(
-        lesson_name,
-        imports_remembered,
-      );
-    for (let reached_path of reached_paths) {
-      let holders = lessons_of_path[reached_path];
-      if (not(holders)) {
-        holders = [];
-        lessons_of_path[reached_path] = holders;
-      }
-      holders.push(lesson_name);
-    }
-  }
+  let lessons_of_path =
+    await app_code_lessons_review_since_lessons_of_path(names_after);
   ("Shared helpers are grouped by WHICH lessons stand on them rather than listed one file at a time, because the reading a person does is per group and not per file. Four helpers all reached by the same four lessons are one thing to go and look at, and named as four rows they read as four.");
   ("Grouping by the set also says what the count alone could not: a group of a hundred and thirty-three is the app itself and needs no lesson named, while a group of four names its four and can be gone through. Both fall out of the same grouping, so neither needs a number typed in to tell them apart.");
   let files_of_lesson = {};
