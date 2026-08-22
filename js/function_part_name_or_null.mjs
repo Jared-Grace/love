@@ -1,3 +1,5 @@
+import { text_combine } from "./text_combine.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
 import { js_name_lambda_is } from "./js_name_lambda_is.mjs";
 import { text_letters_is } from "./text_letters_is.mjs";
 import { text_capitals_apart_is } from "./text_capitals_apart_is.mjs";
@@ -30,6 +32,11 @@ export function function_part_name_or_null(f_name, nested) {
       return null;
     }
     nested_named = text_capitals_underscore_lower(nested);
+  }
+  let held = text_combine(f_name, "_");
+  let carried_is = text_starts_with(nested_named, held);
+  if (carried_is) {
+    return nested_named;
   }
   let f_name_new = text_combine_3(f_name, "_", nested_named);
   return f_name_new;
