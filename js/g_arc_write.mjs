@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { g_arc_person_replaced_write } from "./g_arc_person_replaced_write.mjs";
 import { g_arc_previous_write } from "./g_arc_previous_write.mjs";
-import { equal } from "./equal.mjs";
 import { g_arc_write_path } from "./g_arc_write_path.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_person_assert } from "./g_arc_person_assert.mjs";
@@ -20,8 +20,7 @@ export async function g_arc_write(chapter_code, index, arc) {
   let path = g_arc_write_path(chapter_code);
   let arcs = await g_arc_written_chapter(chapter_code);
   function arc_same(other) {
-    let left = property_get(other, "index");
-    let eq = equal(left, index);
+    let eq = property_equals(other, "index", index);
     return eq;
   }
   let replaced = list_filter(arcs, arc_same);
