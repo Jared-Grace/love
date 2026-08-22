@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { app_shared_name_dev_bundle_path } from "./app_shared_name_dev_bundle_path.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
 import { date_ms_to_hours } from "./date_ms_to_hours.mjs";
@@ -20,6 +21,10 @@ export async function bundles_dev_stale_names() {
   "Each name comes with how many hours old its bundle file is, because that is the reading that tells churn from a backlog and the bare list does not: an app six hours behind is a peer who saved a file, an app eight days behind is one nothing has rebuilt since. A null there is no reading at all, and the word beside it says why there is none.";
   "Being named here does not mean the bundle would come out different - it means its sources moved. The eight-day-old one this was first pointed at rebuilt to the same bytes. So this narrows where to look and never says on its own that anything is wrong.";
   "Each name comes with a word for WHY it is here, because the first reading of this list put three unlike things under one heading and a person had to say which was which. An app behind its sources, an app with no bundle built, and a page in the dev folder that is no app at all are three different pieces of news, and only the first is about staleness.";
+  "★ THIS ASKED A QUESTION THE DATE ON A BUNDLE COULD NOT ANSWER, AND SO NAMED HEALTHY APPS FOREVER. A compiler that finds it would write the bytes already there leaves the file alone, so a bundle rebuilt and found correct kept the date it was last different - and a rebuild, the one thing a person would try, was exactly what could not change it. Twenty apps sat here for that reason and the watcher was doing its job the whole time.";
+  ("It is fixed where the date is made rather than here: ",
+    fn_name("webpack_config"),
+    " writes every time now, so a date means the last build that confirmed the bundle. A name stays on this list until that app has been built once since, which is why the list empties gradually rather than at once.");
   let names = await apps_names_dev();
   function a_name_of(ad) {
     let a_name = property_get(ad, "a_name");
