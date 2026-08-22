@@ -251,8 +251,8 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone, the opening one plain flat black shape holding nothing, a broad band of deep crimson running down the middle of each post and across the middle of the lintel, each band about half as wide as the stone it lies on and its two long edges torn and uneven so that it swells wider in some places and narrows in others rather than running straight, and reaching a little way down the stone below the lintel in a few short tapering runs",
-      symbol_ref: "Exodus 12:7, John 1:29",
+        "One lamb all of one white glass, standing side-on in profile on all four legs with no horns at all, and one slender staff of plain grey iron standing upright behind its shoulder with a small plain cross at the top of the staff, the lamb drawn very large so that it reaches almost to both sides of the window",
+      symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
     {
@@ -340,8 +340,8 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
-      symbol_ref: "",
+        "One harp standing upright and alone, its frame plain brown wood in one curved sweep from the foot up and over to the top with a straight upright pillar closing it at the front, and a row of straight white strings running between the two, drawn very large so that the frame reaches almost to both sides of the window and almost to the top and the bottom of it",
+      symbol_ref: "Revelation 5:8, Revelation 15:2",
       same_as: 26,
     },
     {
@@ -430,8 +430,8 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
-      symbol_ref: "Exodus 3:2, Exodus 3:14",
+        "One vine of plain brown wood, its stem rising from the bottom of the window and its branches spreading out to both sides of it, carrying broad emerald green leaves and heavy hanging clusters of deep crimson grapes, drawn very large so that the branches reach almost to both sides of the window and almost to the top of it",
+      symbol_ref: "John 15:1",
       same_as: 35,
     },
   ];
