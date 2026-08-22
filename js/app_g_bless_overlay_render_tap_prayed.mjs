@@ -26,9 +26,13 @@ export function app_g_bless_overlay_render_tap_prayed(
   let bar = property_get(r2, "bar");
   let view_everyone = property_get(r2, "view_everyone");
   function render() {
-    "the marks are worked out from the record on every step rather than left where they were";
-    "laid, because the people wearing them are walking - and a light left behind on an empty";
-    "square reads as the prayer having missed the person it was for";
+    "who is marked is worked out from the record on every step rather than remembered here,";
+    "so a person covered by a prayer over their whole block lights up the moment they walk";
+    "into view without anybody having gone back to write their name down";
+    "the mark itself is not redrawn, though. it is drawn once and then carried by the person";
+    "as they walk, because a person's square is written the moment their step begins - so a";
+    "light placed afresh from that square arrives at the tile they are walking towards while";
+    "they are still crossing the one before it, and runs on ahead of them";
     "they are worked out over the whole street and not over the cone, because a mark says";
     "this person has been prayed for and that stays true while the player looks away. The";
     "cone below decides what may be prayed for next, which is the question sight is the";
