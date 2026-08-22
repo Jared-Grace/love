@@ -1,3 +1,5 @@
+import { word_picture_folder } from "./word_picture_folder.mjs";
+import { path_join } from "./path_join.mjs";
 export function word_picture_note_path(word, attempt) {
   "$plain word";
   "Where the note saying what produced one attempt at a taught word's picture is saved.";
