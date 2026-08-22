@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
+import { app_code_lesson_expression_choose_order_run_open } from "./app_code_lesson_expression_choose_order_run_open.mjs";
+import { app_code_lesson_expression_choose_order_run_remains } from "./app_code_lesson_expression_choose_order_run_remains.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -10,8 +11,6 @@ import { text_to } from "./text_to.mjs";
 import { app_code_expression_equals_text } from "./app_code_expression_equals_text.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 export function app_code_lesson_expression_choose_order_run_cards(
   root,
   heading,
@@ -30,9 +29,11 @@ export function app_code_lesson_expression_choose_order_run_cards(
   if (heading_written) {
     html_div_cycle_code(line_card, heading);
   }
-  let whole_line = app_code_expression_code(tree);
-  app_code_lesson_suppose_solve_line(line_card, "Suppose", whole_line);
-  let run = app_code_container_light_blue(root);
+  let run = app_code_lesson_expression_choose_order_run_open(
+    root,
+    line_card,
+    tree,
+  );
   let current = tree;
   let ready = app_code_expression_nodes_ready(current);
   while (list_empty_not_is(ready)) {
@@ -43,17 +44,6 @@ export function app_code_lesson_expression_choose_order_run_cards(
     let solved = app_code_expression_equals_text(step_code, step_text);
     html_div_cycle_code(run, ["Only ", step_code, step_sides, solved]);
     current = app_code_expression_solved(current, node);
-    let current_code = app_code_expression_code(current);
-    ready = app_code_expression_nodes_ready(current);
-    let done = list_empty_is(ready);
-    if (done) {
-      html_div_cycle_code(run, [
-        "Nothing is left inside it, so the whole line is ",
-        current_code,
-      ]);
-    }
-    if (not(done)) {
-      html_div_cycle_code(run, ["That leaves ", current_code]);
-    }
+    ready = app_code_lesson_expression_choose_order_run_remains(run, current);
   }
 }
