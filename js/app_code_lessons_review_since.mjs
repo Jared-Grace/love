@@ -1,3 +1,4 @@
+import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -12,7 +13,6 @@ import { function_imports } from "./function_imports.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_remove } from "./text_remove.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -30,18 +30,10 @@ export async function app_code_lessons_review_since(commit) {
   let lesson_prefix = "app_code_lesson_";
   let shown = text_combine_multiple([commit, ":", list_path]);
   let list_text = await git_folder_run(folder, ["show", shown]);
-  function lesson_names_of_text(t) {
-    let lines = text_lines_working(t);
-    let named = [];
-    for (let line of lines) {
-      if (text_starts_with(line, lesson_prefix)) {
-        let replaced = text_remove(line, ",");
-        named.push(replaced);
-      }
-    }
-    return named;
-  }
-  let names_before = lesson_names_of_text(list_text);
+  let names_before = app_code_lessons_review_since_lesson_names_of_text(
+    list_text,
+    lesson_prefix,
+  );
   function fn_named(f) {
     let named = f.name;
     return named;
