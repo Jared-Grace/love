@@ -55,28 +55,28 @@ export function bless_prayer_transfer_decorations() {
   let none = "";
   let god_before = emoji_crown();
   let v = emoji_cross();
-  let v2 = emoji_hands_raising();
+  let v2 = emoji_dove();
   let god_after = text_combine_multiple([v, v2]);
   let v3 = emoji_pray();
   let v4 = emoji_bow();
   let praying = text_combine_multiple([v3, v4]);
-  let people_before = emoji_person_outline();
-  let v5 = emoji_family();
-  let v6 = emoji_heart();
-  let people_after = text_combine_multiple([v5, v6]);
+  let v5 = emoji_person_outline();
+  let v6 = emoji_family();
+  let v7 = emoji_heart();
+  let people = text_combine_multiple([v5, v6, v7]);
   let game_before = emoji_video_game();
   let game_after = emoji_mobile();
-  let v7 = emoji_pray();
-  let v8 = emoji_dove();
-  let prayer = text_combine_multiple([v7, v8]);
+  let v8 = emoji_pray();
+  let v9 = emoji_hands_raising();
+  let prayer = text_combine_multiple([v8, v9]);
   let everyone_before = emoji_handshake();
   let everyone_after = emoji_wave();
-  let v9 = emoji_globe_americas();
-  let v10 = emoji_sunrise();
-  let world = text_combine_multiple([v9, v10]);
-  let v11 = emoji_home();
-  let v12 = emoji_church();
-  let home = text_combine_multiple([v11, v12]);
+  let v10 = emoji_globe_americas();
+  let v11 = emoji_sunrise();
+  let world = text_combine_multiple([v10, v11]);
+  let v12 = emoji_home();
+  let v13 = emoji_church();
+  let home = text_combine_multiple([v12, v13]);
   let decorations = [
     {
       before: god_before,
@@ -89,9 +89,9 @@ export function bless_prayer_transfer_decorations() {
       after: praying,
     },
     {
-      before: people_before,
+      before: none,
       anchor: "people",
-      after: people_after,
+      after: people,
     },
     {
       before: game_before,
