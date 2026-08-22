@@ -1,5 +1,5 @@
+import { g_npc_nickname_index } from "./g_npc_nickname_index.mjs";
 import { g_arc_written_person_assert } from "./g_arc_written_person_assert.mjs";
-import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { g_arc_feedback_person } from "./g_arc_feedback_person.mjs";
@@ -13,21 +13,23 @@ import { add_1 } from "./add_1.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-export async function g_arc_revise_prompt(chapter_code, index) {
+export async function g_arc_revise_prompt(chapter_code, nickname) {
   "The whole of one written person laid out line by line with every standing note set against the line it faults, asking for those lines back and nothing else.";
   "$plain chapter_code";
+  "$plain nickname";
+  "THE PERSON IS NAMED, and the name is turned into their pool number here. A reviewer who has just read an arc is holding the name of whoever they read; the number they would have to hold instead is on nothing they were looking at.";
   "the code is a chapter's name, like 1JN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "IT ASKS FOR THE FAULTED LINES AND NOT A NEW PERSON, which is the whole reason it exists. Writing the person again from the top produces a stranger who shares nothing with the one already read - so every line has to be read again, and the reading is the expensive thing. Revised, the lines that were right are the same words they were, and a reader looks only at what changed.";
   "THE WHOLE ARC IS SHOWN AND ONLY SOME OF IT IS ASKED FOR. A line is written in a voice, and a voice is only visible in the lines around it; handed six faulted lines alone, a reviser writes them in its own register and the person comes apart. The cost of showing everything is tokens, which are cheap, against a person's reading, which is not.";
   "THE NOTE SAYS WHAT IS WRONG AND NEVER WHAT TO SAY, and the reviser picks the words. That is what makes reviewing cheap enough to keep doing: naming a defect takes one line and can be done by a machine, while writing the replacement takes the same care the original took. It also keeps the voice with whoever is holding the voice.";
   "THE TURN COUNT MUST NOT MOVE, and that is stated rather than hoped for. Every note is addressed by a turn number, so a reviser that splits one turn into two silently repoints every note filed after it - at a line nobody faulted, with nothing going red.";
-  let wanted = number_from_text(index);
+  let wanted = await g_npc_nickname_index(nickname);
   let found = await g_arc_written_person_assert(chapter_code, wanted);
-  let standing = await g_arc_feedback_person(chapter_code, index);
+  let standing = await g_arc_feedback_person(chapter_code, wanted);
   let any_standing = list_empty_not_is(standing);
   assert_json(any_standing, {
     chapter_code,
-    index: wanted,
+    nickname,
     hint: "nothing is faulted against this person, so there is nothing to revise",
   });
   let lines = g_arc_lines_addressed(found);
@@ -70,7 +72,7 @@ export async function g_arc_revise_prompt(chapter_code, index) {
   let text = list_join_newline(said);
   let r = {
     chapter_code,
-    index: wanted,
+    nickname,
     lines: list_size(lines),
     notes: list_size(standing),
     revising,
