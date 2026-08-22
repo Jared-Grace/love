@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_label_comes_first_done_first } from "./app_code_label_comes_first_done_first.mjs";
+import { app_code_label_solve_left_to_right } from "./app_code_label_solve_left_to_right.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_cross_precedence_rule(
   root,
@@ -13,7 +13,7 @@ export function app_code_lesson_cross_precedence_rule(
   "IT DOES NOT SAY NORMALLY OR USUALLY. The but on the next line is what makes the first line the ordinary case, and doing that job twice would hedge the recall at the moment it is meant to be firm.";
   arguments_assert(arguments, 3);
   let header = app_code_container_light_blue(root);
-  let same_strength = app_code_label_comes_first_done_first();
+  let same_strength = app_code_label_solve_left_to_right();
   html_div_cycle_code(header, [same_strength]);
   html_div_cycle_code(header, [
     "But some operators are done before other operators",
