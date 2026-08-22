@@ -127,7 +127,7 @@ export function song_image_couplets() {
       second: "nailed to the tree",
       symbol:
         "Three long iron nails, every one of the three the same plain grey iron from its head to its point, laid crossing one another",
-      symbol_ref: "",
+      symbol_ref: "John 20:25, Colossians 2:14",
       same_as: 0,
     },
     {
@@ -137,7 +137,7 @@ export function song_image_couplets() {
       second: "to pardon me",
       symbol:
         "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty",
-      symbol_ref: "",
+      symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
     {
@@ -147,7 +147,7 @@ export function song_image_couplets() {
       second: "for all to see",
       symbol:
         "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the left edge of the window right across to the right edge and rises to the middle of its height, and the tallest of the three crosses no more than a third of the height of the window",
-      symbol_ref: "",
+      symbol_ref: "Luke 23:33, Matthew 27:38, Isaiah 53:12",
       same_as: 0,
     },
     {
