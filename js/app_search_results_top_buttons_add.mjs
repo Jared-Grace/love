@@ -20,6 +20,8 @@ export function app_search_results_top_buttons_add(
     app_shared_folds_set(book_folds, false);
     let button_list = property_get(buttons, "list");
     let squashed = await app_search_results_collect_all_texts(button_list);
+    ("the verses are what took the waiting, and this button is lit while any of them is still empty, so the moment they have all arrived is the moment it has to be asked again - the folding it did before the fetch asked while every verse was still missing");
+    app_shared_folds_refresh(book_folds);
     return squashed;
   }
   function collapse_all_lambda() {
@@ -35,6 +37,10 @@ export function app_search_results_top_buttons_add(
   ("the three buttons stand in one row, so each wears a picture for the same reason the copying one always has: a reader picks the one they want by its picture before they have read any of the words");
   let folds_expand = [testament_folds, book_folds];
   let folds_collapse = [book_folds];
+  function expand_more_is() {
+    let more = app_search_results_expand_more_is(buttons);
+    return more;
+  }
   app_search_results_top_buttons(
     div_results,
     expand_all_lambda,
@@ -42,5 +48,6 @@ export function app_search_results_top_buttons_add(
     copy_all_lambda,
     folds_expand,
     folds_collapse,
+    expand_more_is,
   );
 }
