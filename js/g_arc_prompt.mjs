@@ -1,6 +1,5 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { words_reached_for_plain_lines } from "./words_reached_for_plain_lines.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
-import { not } from "./not.mjs";
 import { ebible_chapter_code_label } from "./ebible_chapter_code_label.mjs";
 import { g_openers_lines } from "./g_openers_lines.mjs";
 import { g_arc_prompt_arguments_assert } from "./g_arc_prompt_arguments_assert.mjs";
@@ -146,8 +145,7 @@ export function g_arc_prompt(
   ("It leaves the passage alone. Where the Scripture itself says WE HAVE SEEN AND OUR HANDS HAVE TOUCHED, that is the writer of the letter speaking and the person may say so - what is barred is the person putting the player inside that WE.");
   ("The section carries its OWN blank line above and below it, and is one empty entry when there is nothing written. Written as an ordinary entry between two blank ones, an empty section would print two blank lines running - which is the shape a reader takes for a section that failed to render rather than one that was correctly left out.");
   let written_said = "";
-  let written_none = text_empty_is(written_text);
-  let written_any = not(written_none);
+  let written_any = text_empty_not_is(written_text);
   if (written_any) {
     written_said = list_join_newline(["", written_text, ""]);
   }
