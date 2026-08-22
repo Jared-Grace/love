@@ -1,8 +1,12 @@
+import { g_npc_nicknames } from "./g_npc_nicknames.mjs";
+import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
+import { g_npc_nickname_lists } from "./g_npc_nickname_lists.mjs";
+import { list_get } from "./list_get.mjs";
+import { range } from "./range.mjs";
+import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { g_npc_pool_drawn } from "./g_npc_pool_drawn.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_npc_nickname } from "./g_npc_nickname.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_letters_is } from "./text_letters_is.mjs";
@@ -48,10 +52,11 @@ export async function g_npc_nicknames_gate_run() {
   list_empty_is_assert_json(repeated, {
     hint: "two people of the pool are called the same name, so an arc addressed to that name reaches whichever of them is found first; the step of sixty-one must share no factor with the length of either name list, so check what was added to one of them",
   });
+  let f_name = fn_name("g_npc_nickname_lists");
   list_empty_is_assert_json(unfilable, {
     hint: text_combine_multiple([
       "a name holds something other than letters, and a person's file is named after them under a path builder that allows letters and digits only; the name lists are cleaned in ",
-      fn_name("g_npc_nickname_lists"),
+      f_name,
       " and something got past it",
     ]),
   });
