@@ -1,10 +1,9 @@
+import { app_shared_folds_collapsible } from "./app_shared_folds_collapsible.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_code_to_division } from "./ebible_book_code_to_division.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { app_shared_container_blue_collapsible } from "./app_shared_container_blue_collapsible.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_shared_container_blue_medium_titled } from "./app_shared_container_blue_medium_titled.mjs";
 export function app_search_results_division_card(
   book_code,

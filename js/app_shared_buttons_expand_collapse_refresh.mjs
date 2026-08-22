@@ -19,6 +19,8 @@ export function app_shared_buttons_expand_collapse_refresh(pair) {
   }
   let expandable = list_any(pair.folds_expand, folds_shut_any);
   let collapsible = list_any(pair.folds_collapse, folds_open_any);
-  app_shared_button_disabled_set(pair.expand, not(expandable));
-  app_shared_button_disabled_set(pair.collapse, not(collapsible));
+  let disabled = not(expandable);
+  app_shared_button_disabled_set(pair.expand, disabled);
+  let disabled2 = not(collapsible);
+  app_shared_button_disabled_set(pair.collapse, disabled2);
 }

@@ -1,3 +1,4 @@
+import { app_shared_folds_setter_add } from "./app_shared_folds_setter_add.mjs";
 import { app_search_results_book_card_header } from "./app_search_results_book_card_header.mjs";
 import { app_search_results_chapters_single_expand } from "./app_search_results_chapters_single_expand.mjs";
 import { app_search_results_book_card_collapsed_set } from "./app_search_results_book_card_collapsed_set.mjs";
@@ -53,9 +54,7 @@ export function app_search_results_book_card(
     );
     return r;
   }
-  (
-    "this card folds itself its own way - it scrolls into view and fetches its verses as it opens - so it cannot be the shared folding card; it joins the page's group of them by handing over its own setter, and everything below folds it through what comes back, which is the only setter the group hears"
-  );
+  ("this card folds itself its own way - it scrolls into view and fetches its verses as it opens - so it cannot be the shared folding card; it joins the page's group of them by handing over its own setter, and everything below folds it through what comes back, which is the only setter the group hears");
   let collapsed_set_heard = app_shared_folds_setter_add(
     book_folds,
     collapsed_set,
