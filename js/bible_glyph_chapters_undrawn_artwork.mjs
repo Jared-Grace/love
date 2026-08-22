@@ -1,5 +1,5 @@
-import { bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_carries } from "./bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_carries.mjs";
-import { bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words } from "./bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words.mjs";
+import { bible_glyph_chapters_undrawn_artwork_carries } from "./bible_glyph_chapters_undrawn_artwork_carries.mjs";
+import { bible_glyph_chapters_undrawn_artwork_words } from "./bible_glyph_chapters_undrawn_artwork_words.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
 import { property_get } from "./property_get.mjs";
@@ -43,18 +43,14 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let weighed = [];
   for (let candidate of candidates) {
     let gloss = property_get(candidate, "gloss");
-    let words =
-      bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words(
-        gloss,
-      );
+    let words = bible_glyph_chapters_undrawn_artwork_words(gloss);
     let assets = [];
     let seated = [];
     for (let entry of lowered_names) {
-      let carries =
-        bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_carries(
-          entry.words,
-          words,
-        );
+      let carries = bible_glyph_chapters_undrawn_artwork_carries(
+        entry.words,
+        words,
+      );
       if (not(carries)) {
         continue;
       }
