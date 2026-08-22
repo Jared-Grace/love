@@ -26,6 +26,7 @@ export async function app_code_lessons_review_since(commit) {
   let lessons_added = property_get(r2, "lessons_added");
   let lessons_changed = property_get(r2, "lessons_changed");
   let lessons_moved = property_get(r2, "lessons_moved");
+  let lessons_removed = property_get(r2, "lessons_removed");
   let lessons_hidden = property_get(r2, "lessons_hidden");
   let helpers_shared_edited = property_get(r2, "helpers_shared_edited");
   let names_before = property_get(r2, "names_before");
@@ -38,6 +39,7 @@ export async function app_code_lessons_review_since(commit) {
     added: lessons_added,
     changed: lessons_changed,
     moved: lessons_moved,
+    removed: lessons_removed,
     hidden_by_cut: lessons_hidden,
     shared_helpers_changed: helpers_shared_edited,
   };
