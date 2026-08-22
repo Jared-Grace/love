@@ -1,7 +1,6 @@
+import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_triangle_down } from "./emoji_triangle_down.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_triangle_up } from "./emoji_triangle_up.mjs";
 import { each } from "./each.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -21,17 +20,17 @@ export function app_shared_buttons_expand_collapse(
   "What each button DOES is still handed in rather than worked out from the groups, because opening everything is not always only folding: the search results fetch the verses inside the cards they have just opened, and copying everything is that same opening followed by a copy.";
   arguments_assert(arguments, 5);
   let down = emoji_triangle_down();
-  let expand_all_text = text_combine(down, " Expand all");
-  let expand = app_shared_button_wide(
+  let expand = app_shared_button_wide_text_combine(
     parent,
-    expand_all_text,
+    down,
+    " Expand all",
     expand_all_lambda,
   );
   let up = emoji_triangle_up();
-  let collapse_all_text = text_combine(up, " Collapse all");
-  let collapse = app_shared_button_wide(
+  let collapse = app_shared_button_wide_text_combine(
     parent,
-    collapse_all_text,
+    up,
+    " Collapse all",
     collapse_all_lambda,
   );
   let pair = {
