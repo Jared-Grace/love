@@ -1,3 +1,4 @@
+import { list_map_squash } from "./list_map_squash.mjs";
 import { app_search_results_top_buttons_add } from "./app_search_results_top_buttons_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_folds } from "./app_shared_folds.mjs";
@@ -9,8 +10,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
 import { property_list_size } from "./property_list_size.mjs";
 import { html_div_centered } from "./html_div_centered.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_squash } from "./list_squash.mjs";
 export function app_search_results_render(
   div_results,
   books,
@@ -77,8 +76,7 @@ export function app_search_results_render(
     );
     return r4;
   }
-  let button_lists = list_map(results, each_result);
-  let button_list = list_squash(button_lists);
+  let button_list = list_map_squash(results, each_result);
   property_set(buttons, "list", button_list);
   let r = {
     button_list,
