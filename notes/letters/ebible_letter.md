@@ -8,7 +8,9 @@ The record is keyed by chapter, not by item number, so items here can be reorder
 
 **One line per paragraph, on purpose.** This is pasted into an email, and a hard-wrapped paragraph breaks in the wrong place at every window width. Do not re-wrap it.
 
-**No greeting, no sign-off, no preamble.** Every line is a fault, its evidence, or a correction. Each heading names the versions affected, or their count where there are too many to name.
+**No greeting, no sign-off, no preamble.** Every line is a fault, its evidence, or a possible correction. Each heading names the versions affected, or their count where there are too many to name.
+
+**"possible correction", never "correction".** Two reasons, and the first is the weaker one: it protects the writer if the writer is the one who is wrong. The second is why it stays even when we are certain — "possible" asks what he thinks and lets him reach the answer himself, where the bare word says *this is the truth, I already know it, and disagreeing makes you wrong.* Paul writes with authority and does not hedge, so this is not absolute; it is not ours to claim here.
 
 ---
 
@@ -20,7 +22,7 @@ Found by a free Bible reading app that carries 399 of your translations. No repl
 
 A marker takes the id one above the marker before it whenever its label is not a plain number. Only ranges and part-verses are affected — 1,384 and 1,168. The next plain number resets the count, so the invented ids land on real verses.
 
-correction: take the id from the number the marker prints.
+possible correction: take the id from the number the marker prints.
 
 - part-verse — https://ebible.org/aaz/GEN02.htm prints `4b` as `id="V5"`. A link to Genesis 2:5 lands on half of verse 4.
 - range — same page, `5-6` as `id="V6"`, so verse 5 has no address. Later in that chapter `19-20` gets `id="V19"`, which is right, so this is not a scheme for keeping ids unique.
@@ -38,7 +40,7 @@ url: https://ebible.org/bgg/MAT07.htm
 
 quote: `<span class="verse" id="V13">13&#160;</span> <span class="verse" id="V14">14&#160;</span>`
 
-correction: the words. Chapters 1 to 6 are fine, as is every other book. The footnote at 7:12 opens a popup span and never closes it — `<a href="#FN2" class="notemark"><span class="popup"><span class="verse" id="V13">` — and the footnotes at the foot of those chapters are empty.
+possible correction: the words. Chapters 1 to 6 are fine, as is every other book. The footnote at 7:12 opens a popup span and never closes it — `<a href="#FN2" class="notemark"><span class="popup"><span class="verse" id="V13">` — and the footnotes at the foot of those chapters are empty.
 
 **3. Every chapter of Mark stops after two or three verses, read-aloud edition.** bsj.
 
@@ -46,7 +48,7 @@ url: https://ebible.org/Scriptures/bsj_readaloud.zip
 
 quote: `bsj_071_MRK_01_read.txt` holds the book name, the chapter number, and verses 1 to 3. Then it ends.
 
-correction: the rest of each chapter. The whole of Mark is 73 lines; MRK01.htm alone has 45 verses. Only Mark — Matthew runs 19 to 50 lines a chapter.
+possible correction: the rest of each chapter. The whole of Mark is 73 lines; MRK01.htm alone has 45 verses. Only Mark — Matthew runs 19 to 50 lines a chapter.
 
 **4. 2 Chronicles 36 is two verses short, read-aloud edition.** uigara.
 
@@ -54,7 +56,7 @@ url: https://ebible.org/Scriptures/uigara_readaloud.zip
 
 quote: `uigara_015_2CH_36_read.txt` ends at verse 21, '…زېمىن يەتمىش يىل توشقۇچە خارابىلىكتە تۇرۇپ «شابات تۇتۇپ» دەم ئېلىپ راھەتلەندى.'
 
-correction: verses 22 and 23, Cyrus's decree. https://ebible.org/uigara/2CH36.htm has all 23.
+possible correction: verses 22 and 23, Cyrus's decree. https://ebible.org/uigara/2CH36.htm has all 23.
 
 **5. The copyright page is for a different Bible.** apyNT.
 
@@ -62,7 +64,7 @@ url: https://ebible.org/apyNT/copr.htm
 
 quote: the page opens with the Apalaí title; the copyright block below names the Khmer Standard Version, the Bible Society in Cambodia, and Khmer terms.
 
-correction: the Apalaí New Testament's own terms. Nothing on the page states terms for the Apalaí text, and we only carry translations whose terms we can read.
+possible correction: the Apalaí New Testament's own terms. Nothing on the page states terms for the Apalaí text, and we only carry translations whose terms we can read.
 
 **6. Galatians 1 to 2:9 is in a different language from the rest, and verse 2:10 is lost at the seam.** sbs.
 
@@ -70,7 +72,7 @@ url: https://ebible.org/sbs/GAL02.htm
 
 quote: verse 9 ends 'Pamene Jemusi, Kefasi, na Yohane, enze na mbili ngati sandamila, pebezindikila cisomo cenze pa neo etilola'. Verse 11 begins 'Lyahanu linu Kefasi henza kwa Antioke…'
 
-correction: those chapters in Chikuahane. They read as Chichewa — 'Mulungu' and 'Yesu Kristu', where Galatians 3 to 6, Matthew, John and Romans say 'Ireeza' and 'Jesu Kereste'. Verse 9 stops mid-sentence and verse 10 goes with it: there is no `id="V10"`, and 'they asked us to remember the poor' is nowhere on the page.
+possible correction: those chapters in Chikuahane. They read as Chichewa — 'Mulungu' and 'Yesu Kristu', where Galatians 3 to 6, Matthew, John and Romans say 'Ireeza' and 'Jesu Kereste'. Verse 9 stops mid-sentence and verse 10 goes with it: there is no `id="V10"`, and 'they asked us to remember the poor' is nowhere on the page.
 
 **7. Luke 4:16 and 4:17 are missing.** plj.
 
@@ -78,7 +80,7 @@ url: https://ebible.org/plj/LUK04.htm
 
 quote: verse 15 ends '…ar ni mbarǝm pita yari zo shirǝm den ti.' Then a blank line, then `<span class="verse" id="V18">18&#160;</span>&lt;&lt;Ruhu kǝ Babom Yam ra na demǝni`
 
-correction: Jesus coming to Nazareth, standing to read, being handed the scroll. The Isaiah words begin at verse 18 with nothing to introduce them. The read-aloud file has the same hole, so the text is short, not the numbering.
+possible correction: Jesus coming to Nazareth, standing to read, being handed the scroll. The Isaiah words begin at verse 18 with nothing to introduce them. The read-aloud file has the same hole, so the text is short, not the numbering.
 
 **8. Proverbs 31:1 to 31:9 is in chapter 24 in the HTML and in chapter 31 in the read-aloud.** englxxup.
 
@@ -86,7 +88,7 @@ url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24
 
 quote: PRO31.htm opens `<span class="verse" id="V10">10&#160;</span>Who shall find a virtuous woman?` — no verses 1 to 9. PRO24.htm carries them at 54 to 62. But `englxxup_021_PRO_31_read.txt` opens 'My words have been spoken by God—the oracular answer of a king, whom his mother instructed' and runs 31 verses.
 
-correction: a note on the page, as eng-Brenton has for the same ordering — 'See chapter 24 for the content of chapter 30.' englxxup has no such note and no PRO30.htm at all, though its own book index lists one.
+possible correction: a note on the page, as eng-Brenton has for the same ordering — 'See chapter 24 for the content of chapter 30.' englxxup has no such note and no PRO30.htm at all, though its own book index lists one.
 
 **9. A colophon is numbered verse 1, after verse 13.** engkjvcpb.
 
@@ -94,7 +96,7 @@ url: https://ebible.org/engkjvcpb/ESG10.htm
 
 quote: the numbers run `4` … `13` and then `1`: `<span class="verse" id="V1">1&#160;</span>In the fourth year of the reign of Ptolemeus and Cleopatra`
 
-correction: number it 14, or give it its own chapter. It kept the number it had at 11:1.
+possible correction: number it 14, or give it its own chapter. It kept the number it had at 11:1.
 
 **10. A heading reads 'A Psalms'.** engbsb.
 
@@ -102,7 +104,7 @@ url: https://ebible.org/engbsb/PSA003.htm
 
 quote: `<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>`
 
-correction: 'A Psalm of David'. Forty-nine headings in the book begin 'A Psalm'. PSA000.htm says the same, so the two pages agree with each other and differ only from the rest of the book.
+possible correction: 'A Psalm of David'. Forty-nine headings in the book begin 'A Psalm'. PSA000.htm says the same, so the two pages agree with each other and differ only from the rest of the book.
 
 **11. A verse marker is missing; the words are there, so a link to that verse lands nowhere.** 13 versions.
 
@@ -112,13 +114,13 @@ url: https://ebible.org/eng-lxx2012/PSA118.htm and https://ebible.org/eng-uk-lxx
 
 quote: `<span class="verse" id="V43">43&#160;</span>And take not the word of truth utterly out of my mouth; for I have hoped in your judgments. So shall I keep your law continually, for ever and ever.`
 
-correction: a verse 44 marker before 'So shall I keep your law continually'. The numbers run 1 to 43, then 45 on; there is no `id="V44"`. The read-aloud totals 176. It is the only psalm in either edition where the numbers skip.
+possible correction: a verse 44 marker before 'So shall I keep your law continually'. The numbers run 1 to 43, then 45 on; there is no `id="V44"`. The read-aloud totals 176. It is the only psalm in either edition where the numbers skip.
 
 url: https://ebible.org/engtcent/3JN01.htm
 
 quote: `<span class="verse" id="V14">14&#160;</span>I hope to see yoʋ soon, and we will speak face to face.  </div><div class='p'>Peace be with yoʋ.`
 
-correction: a verse 15 marker before 'Peace be with yoʋ', an unnumbered paragraph. The read-aloud numbers it 15 and totals 15.
+possible correction: a verse 15 marker before 'Peace be with yoʋ', an unnumbered paragraph. The read-aloud numbers it 15 and totals 15.
 
 The same, skipped number in brackets:
 
@@ -149,25 +151,25 @@ url: https://ebible.org/bsj/MAT22.htm and https://ebible.org/bsj/2TH03.htm
 
 quote: MAT22 runs verse 44 straight into `<span class="verse" id="V46">46&#160;</span>ni kange mani wo kar cine kange…`. 2TH03 runs verse 9 straight into `<span class="verse" id="V11">11&#160;</span>fiya nyo wari ka-nge kome…`.
 
-correction: Matthew 22:45, 'If David then calls him Lord, how is he his son?', and 2 Thessalonians 3:10, 'if anyone will not work, let him not eat'.
+possible correction: Matthew 22:45, 'If David then calls him Lord, how is he his son?', and 2 Thessalonians 3:10, 'if anyone will not work, let him not eat'.
 
 url: https://ebible.org/jid/ACT10.htm
 
 quote: verse 14 ends '…nda na kpanya ni shishi Irji na.' and the next marker is `<span class="verse" id="V16">16&#160;</span>Ama ilan ala kma tre niwu nkpuwu ha ngari…`
 
-correction: Acts 10:15, 'What God has cleansed, do not call common'. The page proves it — verse 16 says the voice spoke a second time, and the first time is not there. 47 read-aloud lines for 48 verses.
+possible correction: Acts 10:15, 'What God has cleansed, do not call common'. The page proves it — verse 16 says the voice spoke a second time, and the first time is not there. 47 read-aloud lines for 48 verses.
 
 url: https://ebible.org/jid/LUK10.htm
 
 quote: verse 25 ends '…me tie ngye miti mi ni kpa re u tuntrun?' and the next marker is `<span class="verse" id="V27">27&#160;</span>Wa a kasa nda tre gbigbi…`
 
-correction: Luke 10:26, 'What is written in the law? How do you read it?' Verse 27 begins 'and he answered', with nothing to answer. 41 lines for 42 verses.
+possible correction: Luke 10:26, 'What is written in the law? How do you read it?' Verse 27 begins 'and he answered', with nothing to answer. 41 lines for 42 verses.
 
 url: https://ebible.org/tczchongthu/EXO15.htm
 
 quote: verse 15 ends '…Canaaan gam'a cheng jouse jong alung thoi gamta uve.' and the next marker is `<span class="verse" id="V17">17&#160;</span>“Nangman namite nahin puilut ding…`
 
-correction: Exodus 15:16, 'terror and dread fall on them… till your people pass by'. 26 lines for 27 verses.
+possible correction: Exodus 15:16, 'terror and dread fall on them… till your people pass by'. 26 lines for 27 verses.
 
 ---
 
