@@ -13,8 +13,8 @@ export async function app_code_expression_replace_fly(
   duration,
 ) {
   arguments_assert(arguments, 3);
-  ("carry the swap the learner just pressed across the page in two beats: the blue block on the line goes up to the words that named it, and then what those words say it comes to goes back down to the room the block was holding");
-  ("The two blue pieces in the sentence are the same two the beats travel between - the block itself, and the value it turns into - so the sentence is not describing the swap alongside it but is the place the swap happens.");
+  ("carry the swap the learner just pressed across the page in two stages: the blue block on the line goes up to the words that named it, and then what those words say it comes to goes back down to the room the block was holding");
+  ("The two blue pieces in the sentence are the same two the stages travel between - the block itself, and the value it turns into - so the sentence is not describing the swap alongside it but is the place the swap happens.");
   ("Nothing is redrawn to make this happen. The block leaves under its own translation and is put back hidden, so the line keeps the room and the value arrives into the very gap the working out left.");
   let piece_solved = list_get(chosen_pieces, 0);
   let piece_value = list_get(chosen_pieces, 1);
@@ -27,7 +27,7 @@ export async function app_code_expression_replace_fly(
   html_visibility_hidden(node_span);
   html_translation_transition_clear(node_span);
   html_raised_clear(node_span);
-  ("both beats stay blue the whole way. The blue is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
-  ("both beats take the same while. The value coming down was tried quicker, on the reasoning that the sentence had already named it and only its room was news - and it read as snatched away rather than as placed. What the learner is following here is one thing crossing the page in two halves, and half of a journey travelling at a different speed is two journeys.");
+  ("both stages stay blue the whole way. The blue is what says these two are the same thing said twice - the working out and what it comes to - and a piece that loses it in mid-air is read as having become something else before it got there.");
+  ("both stages take the same while. The value coming down was tried quicker, on the reasoning that the sentence had already named it and only its room was news - and it read as snatched away rather than as placed. What the learner is following here is one thing crossing the page in two halves, and half of a journey travelling at a different speed is two journeys.");
   await html_copy_fly_rect(piece_value, rect_from, duration);
 }
