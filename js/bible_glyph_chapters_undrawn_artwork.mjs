@@ -1,7 +1,6 @@
+import { bible_glyph_chapters_undrawn_artwork_row } from "./bible_glyph_chapters_undrawn_artwork_row.mjs";
 import { bible_glyph_chapters_undrawn_artwork_weighed } from "./bible_glyph_chapters_undrawn_artwork_weighed.mjs";
-import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
-import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapters_undrawn_artwork(count) {
   "$plain count";
   "the count is how many words to weigh. It is a number and nothing that runs.";
@@ -16,14 +15,7 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let weighed = await bible_glyph_chapters_undrawn_artwork_weighed(report);
   let drawable = [];
   let needs_drawing = [];
-  for (let row of weighed) {
-    let none = property_list_empty_is(row, "assets");
-    if (none) {
-      list_add(needs_drawing, row);
-      continue;
-    }
-    list_add(drawable, row);
-  }
+  bible_glyph_chapters_undrawn_artwork_row(weighed, needs_drawing, drawable);
   let r = {
     weighed: weighed.length,
     drawable_count: drawable.length,
