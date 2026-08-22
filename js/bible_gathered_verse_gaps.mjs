@@ -1,3 +1,8 @@
+import { object_property_names } from "./object_property_names.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { not } from "./not.mjs";
 import { bible_gathered_events_by_chapter } from "./bible_gathered_events_by_chapter.mjs";
 import { text_digits_only } from "./text_digits_only.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
@@ -11,7 +16,7 @@ export async function bible_gathered_verse_gaps() {
   "A gap being reported is not the same as a mistake. The spans keep only what happens with agents, so a run of verses left out may be a genealogy somebody set aside deliberately - and that judgement is written in prose at the foot of each span rather than in the data, which is exactly why a reader has to look at what comes back rather than treating the list as a fault report.";
   "A verse range this cannot read is collected rather than skipped. The gathered ranges are written as one number or two with a dash between, and anything else - a comma, a letter, a stray space - is handed back under its own heading, because a range silently treated as zero would invent a gap that is not there.";
   let by_chapter = await bible_gathered_events_by_chapter();
-  let codes = Object.keys(by_chapter);
+  let codes = object_property_names(by_chapter);
   let chapters = [];
   let unreadable = [];
   function each_code(code) {
@@ -20,11 +25,12 @@ export async function bible_gathered_verse_gaps() {
     function each_take(take) {
       let parts = text_split(take.verses, "-");
       let first_text = parts[0];
-      let last_text = parts[parts.length - 1];
+      let last_text = parts[subtract(parts.length, 1)];
       let first_digits = text_digits_only(first_text);
       let last_digits = text_digits_only(last_text);
-      let readable = first_digits === first_text && last_digits === last_text;
-      if (!readable) {
+      let readable =
+        equal(first_digits, first_text) && equal(last_digits, last_text);
+      if (not(readable)) {
         let unread = {
           chapter_code: code,
           title: take.title,
@@ -41,21 +47,22 @@ export async function bible_gathered_verse_gaps() {
     }
     each(taken, each_take);
     function span_first(span) {
-      return span.first;
+      let r = span.first;
+      return r;
     }
     let sorted = list_sort_number_mapper(spans, span_first);
     let gaps = [];
     let reached = 0;
     function each_span(span) {
       let after = reached + 1;
-      if (span.first > after) {
+      if (greater_than(span.first, after)) {
         let gap = {
           from: after,
-          to: span.first - 1,
+          to: subtract(span.first, 1),
         };
         list_add(gaps, gap);
       }
-      if (span.last > reached) {
+      if (greater_than(span.last, reached)) {
         reached = span.last;
       }
     }
