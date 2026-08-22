@@ -749,7 +749,7 @@ export function bible_glyph_chapter_jhn03() {
           "him,",
           "$plus",
           "is",
-          "overjoyed",
+          "$smile",
           "to",
           "$ear",
           "the",
