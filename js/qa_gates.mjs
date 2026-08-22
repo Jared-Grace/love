@@ -1,3 +1,4 @@
+import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
 import { bible_glyph_groups_spellable_gate_run } from "./bible_glyph_groups_spellable_gate_run.mjs";
 import { js_statements_change_cases_gate_run } from "./js_statements_change_cases_gate_run.mjs";
 import { function_name_words_repeated_cases_gate_run } from "./function_name_words_repeated_cases_gate_run.mjs";
@@ -763,6 +764,7 @@ export function qa_gates() {
     functions_names_repeated_gate_run,
     function_name_words_repeated_cases_gate_run,
     js_statements_change_cases_gate_run,
+    commits_message_alias_gate_run,
   ];
   return gates;
 }
