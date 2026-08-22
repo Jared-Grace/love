@@ -16,7 +16,7 @@ or merged freely without touching it.
 
 ---
 
-Subject: Ten problems in published files — one of them affects 131 translations
+Subject: Nine problems in published files — one of them affects 131 translations
 
 Hello,
 
@@ -63,20 +63,7 @@ ids V3 to V8, then prints 3 4 5 6 7 8 under ids V3 to V8 again.
 https://ebible.org/kjn/MRK14.htm prints '3-9' under id V1, then '62-64' under id V8,
 then '65' under id V65.
 
-**2. Fifty-one verses of Matthew 27 are not on the page.**
-
-url: https://ebible.org/mwf2018/MAT27.htm
-
-quote(s): the file is 6,803 bytes. It runs '<span class="verse" id="V10">10&#160;</span>…
-Jeremiah da murntak warra, i murrinh nhini-ka murrinh da thathpirr nhini-yu.” </div>'
-straight into '<div class='s'>Ku Soldier Pirangkadhaneme Pe Da Weyi Palyirr </div>
-<div class='p'> <span class="verse" id="V62">62&#160;</span>'
-
-possible correction: Matthew 27:11 to 27:61. Not the markers — the words. The chapter
-jumps from Judas's death to the guard at the tomb. The trial, the crucifixion and the
-death are all absent. Other chapters of mwf2018 look complete.
-
-**3. Most of Matthew has numbers but no words.**
+**2. Most of Matthew has numbers but no words.**
 
 url: https://ebible.org/bgg/MAT07.htm
 
@@ -91,7 +78,7 @@ span is opened and never closed: '<a href="#FN2" class="notemark"><span class="p
 <span class="verse" id="V13">'. And the footnotes at the foot of those chapters are
 empty: '<span class="ft"></span>'.
 
-**4. Every chapter of Mark stops after two or three verses, in the read-aloud edition.**
+**3. Every chapter of Mark stops after two or three verses, in the read-aloud edition.**
 
 url: https://ebible.org/Scriptures/bsj_readaloud.zip
 
@@ -102,7 +89,7 @@ possible correction: the rest of each chapter. The whole of Mark is 73 lines, wh
 MRK01.htm alone has all 45 verses. Mark is the only book affected. Matthew runs 19 to
 50 lines a chapter, and Revelation 22 to 31.
 
-**5. Two verses missing from a read-aloud chapter.**
+**4. Two verses missing from a read-aloud chapter.**
 
 url: https://ebible.org/Scriptures/uigara_readaloud.zip
 
@@ -112,7 +99,7 @@ quote(s): 'uigara_015_2CH_36_read.txt' ends at verse 21, '…زېمىن يەتم
 possible correction: verses 22 and 23, Cyrus's decree. The page at
 https://ebible.org/uigara/2CH36.htm has all 23.
 
-**6. The copyright page is for a different Bible.**
+**5. The copyright page is for a different Bible.**
 
 url: https://ebible.org/apyNT/copr.htm
 
@@ -123,7 +110,7 @@ possible correction: the Apalaí New Testament's own terms. Nothing on the page 
 terms for the Apalaí text, so we cannot tell what it is offered on. We only carry
 translations whose terms we can read.
 
-**7. Proverbs 31:1–9 is in a different chapter in the two editions.**
+**6. Proverbs 31:1–9 is in a different chapter in the two editions.**
 
 url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
 
@@ -137,7 +124,7 @@ possible correction: a note on the page, as eng-Brenton has for the same orderin
 'See chapter 24 for the content of chapter 30.' englxxup has no such note, and no
 PRO30.htm at all.
 
-**8. A colophon is numbered verse 1, after verse 13.**
+**7. A colophon is numbered verse 1, after verse 13.**
 
 url: https://ebible.org/engkjvcpb/ESG10.htm
 
@@ -149,7 +136,7 @@ possible correction: number it 14, or give it its own chapter. Starting the chap
 4 is right. Putting the Additions back into chapters 1, 3, 4, 5, 8 and 10 is a fair
 choice. But the colophon kept the number it had at 11:1, so it now prints as verse 1.
 
-**9. A heading reads 'A Psalms'.**
+**8. A heading reads 'A Psalms'.**
 
 url: https://ebible.org/engbsb/PSA003.htm
 
@@ -161,7 +148,7 @@ with each other and differ only from the rest of the book. I cannot tell from he
 whether it came from the source text or from the publishing, so we carry it as
 published.
 
-**10. A verse marker is missing. The words are there.**
+**9. A verse marker is missing. The words are there.**
 
 In each of these, the numbers skip one, and the missing verse's words sit inside the
 block before it. Where there is a read-aloud edition, it numbers them correctly. So the
@@ -195,7 +182,6 @@ The same thing, in these chapters, with the skipped number in brackets:
 - tdx — MAT16 (6 and 7), 2SA13 (3), 1CH08 (38), PSA029 (2), MAT10 (33), MAT18 (4)
 - uigara — MRK01 (44), GEN09 (10), PRO06 (5), LUK01 (42)
 - kiz — 2TH02 (8, 9 and 10), GAL05 (13)
-- nay — GEN03 (15), JHN19 (24)
 - amo — MRK07 (27), HEB11 (19)
 - tsn — MRK15 (37), GAL04 (16)
 - jni — JHN01 (6, 7 and 8)
