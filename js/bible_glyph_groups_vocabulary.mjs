@@ -24,7 +24,8 @@ export function bible_glyph_groups_vocabulary() {
       for (let word of root.words) {
         let glyph = property_get(word, "glyph");
         let names = bible_glyph_group_names(glyph);
-        let single = less_than(list_size(names), 2);
+        let a = list_size(names);
+        let single = less_than(a, 2);
         if (single) {
           continue;
         }
