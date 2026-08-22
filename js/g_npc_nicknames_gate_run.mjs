@@ -10,7 +10,7 @@ import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function g_npc_nicknames_gate_run() {
-  "Prove that every person the pool holds gets a name of their own, and that the name can be filed under.";
+  "Prove that every person the pool holds gets a name of their own, that the name can be filed under, and that the name agrees with the gender the deck already dealt them.";
   "IT ASKS THE WHOLE POOL rather than a few, because the two ways this breaks both break far from where they are written. The stepping is unique only while the number sixty-one shares no factor with a list's length, so somebody adding one name to the women's list can quietly make two people share a word - and nothing about that edit looks like it touched a person's name. The other way is the pool outgrowing the short list, which arrives by a sermon being written.";
   "A DUPLICATE IS THE FAILURE THAT CANNOT BE SEEN LATER. Two people answering to one name means one arc addressed to that name reaches whichever of them the reader happens to find first, and both look correct. The letters check is the cheaper one and is here for the same reason - a dash in a name throws only at the moment something is filed, which is after the arc was written.";
   "COUNTED AND HANDED BACK, so that passing says how much was asked. A gate that walked no people would pass in silence.";
