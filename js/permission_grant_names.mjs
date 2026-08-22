@@ -1941,6 +1941,168 @@ export function permission_grant_names() {
   let spelled1866 = fn_name("qa_commit_entry_beside_moved_cases_gate_run");
   let spelled1867 = fn_name("qa_gate_counted_is");
   let spelled1868 = fn_name("ebible_version_uploaded_is");
+  let spelled1869 = fn_name("ebible_versions_english_numbering_agreement");
+  let spelled1870 = fn_name("ebible_verse_marks_gaps_bible");
+  let spelled1871 = fn_name("song_image_kept_set");
+  let spelled1872 = fn_name("g_arc_feedback_words_add");
+  let spelled1873 = fn_name("bible_glyph_chapter_glyph_names");
+  let spelled1874 = fn_name("bible_glyph_chapters_table_behind");
+  let spelled1875 = fn_name("bible_glyph_chapters_undrawn_commonest");
+  let spelled1876 = fn_name("word_picture_draw");
+  let spelled1877 = fn_name("words_early_reader_outside_untaught");
+  let spelled1878 = fn_name("youtube_playlist_items");
+  let spelled1879 = fn_name("g_arc_written_gate_run");
+  let spelled1880 = fn_name("g_npc_nickname");
+  let spelled1881 = fn_name("g_arc_feedback_checked_clear");
+  let spelled1882 = fn_name("g_arc_feedback_add");
+  let spelled1883 = fn_name("bible_glyph_chapters_rosetta_lines_gate_run");
+  let spelled1884 = fn_name("g_arc_revised_report");
+  let spelled1885 = fn_name("g_arc_revise_file");
+  let spelled1886 = fn_name("g_arc_person_review_write");
+  let spelled1887 = fn_name("g_arc_words_uncommon");
+  let spelled1888 = fn_name("bible_glyph_word_parse");
+  let spelled1889 = fn_name("ebible_reference_text");
+  let spelled1890 = fn_name("js_dollar_choices_parameters_gate_run");
+  let spelled1891 = fn_name("functions_reachable_names");
+  let spelled1892 = fn_name("bible_event_kind_mechanic_order");
+  let spelled1893 = fn_name("ebible_verse_marks_gaps_unexplained");
+  let spelled1894 = fn_name(
+    "bible_glyph_chapters_rosetta_lines_notation_gate_run",
+  );
+  let spelled1895 = fn_name("bible_glyph_chapters_rosetta_lines_rewrite");
+  let spelled1896 = fn_name("g_arc_revise_prompt");
+  let spelled1897 = fn_name("words_early_reader_outside");
+  let spelled1898 = fn_name("g_arc_prompt_chapter_role_gate_run");
+  let spelled1899 = fn_name("bundle_size_step_gate_run");
+  let spelled1900 = fn_name("bible_gathered_events_by_chapter");
+  let spelled1901 = fn_name("bible_glyph_chapters_language_gate_run");
+  let spelled1902 = fn_name("bible_glyph_chapters_language_write");
+  let spelled1903 = fn_name("bible_glyph_chapters_undrawn_artwork");
+  let spelled1904 = fn_name("bible_glyph_chapters_tagalog_write");
+  let spelled1905 = fn_name("song_image_couplets_description");
+  let spelled1906 = fn_name("song_image_couplet_gloss");
+  let spelled1907 = fn_name("youtube_video_record");
+  let spelled1908 = fn_name("words_game_taught_glosses_gate_run");
+  let spelled1909 = fn_name("g_arc_feedback_person");
+  let spelled1910 = fn_name("functions_reachable_app_names");
+  let spelled1911 = fn_name("bible_gathered_finders_gate_run");
+  let spelled1912 = fn_name("function_imports_reached");
+  let spelled1913 = fn_name("bible_gathered_readings_gate_run");
+  let spelled1914 = fn_name("bundle_sizes_baseline_write");
+  let spelled1915 = fn_name("ebible_letter_unaccounted_gate_run");
+  let spelled1916 = fn_name("ebible_letter_unaccounted_names");
+  let spelled1917 = fn_name("bible_glyph_chapter_rosetta_lines_write");
+  let spelled1918 = fn_name("bible_gathered_verse_gaps");
+  let spelled1919 = fn_name("bible_scene_division_brief");
+  let spelled1920 = fn_name("bible_dream_errand_steps");
+  let spelled1921 = fn_name("bible_event_kind_events");
+  let spelled1922 = fn_name("text_letters_digits_none_is");
+  let spelled1923 = fn_name("bible_glyph_chapter_draft_tagalog");
+  let spelled1924 = fn_name("song_image_couplet_get");
+  let spelled1925 = fn_name("psalms_videos_verse_mislabelled_titles_write");
+  let spelled1926 = fn_name("youtube_oauth_token_save");
+  let spelled1927 = fn_name("js_dollar_choices_parameters_unknown");
+  let spelled1928 = fn_name("js_dollar_choice_argument_names");
+  let spelled1929 = fn_name("bible_reference_chapter_verse_shape_is");
+  let spelled1930 = fn_name("song_image_couplets_videos_description_write");
+  let spelled1931 = fn_name("gloss_chapter_read");
+  let spelled1932 = fn_name("song_image_draw_attempt_next");
+  let spelled1933 = fn_name("g_npc_cast_dealt");
+  let spelled1934 = fn_name("g_npc_nicknames_gate_run");
+  let spelled1935 = fn_name("words_game_taught_gloss_or_null");
+  let spelled1936 = fn_name("g_arc_words_outside_chapter");
+  let spelled1937 = fn_name("g_arc_feedback_clear");
+  let spelled1938 = fn_name("g_arc_shared_steps_gate_run");
+  let spelled1939 = fn_name("g_arc_write_upload");
+  let spelled1940 = fn_name("g_arc_review_round_trip_assert");
+  let spelled1941 = fn_name("webpack_builds_running_count");
+  let spelled1942 = fn_name("bible_event_kind_coverage");
+  let spelled1943 = fn_name("function_names_reaching");
+  let spelled1944 = fn_name(
+    "app_replace_rule_sets_fns_rules_used_rows_rewrite",
+  );
+  let spelled1945 = fn_name("ebible_languages_more_rows_rewrite");
+  let spelled1946 = fn_name("ebible_letter_accounted");
+  let spelled1947 = fn_name("bible_search_built_download");
+  let spelled1948 = fn_name("bible_search_built_path_gate_run");
+  let spelled1949 = fn_name("bible_interpolation_brief");
+  let spelled1950 = fn_name("bible_dream_brief_withheld");
+  let spelled1951 = fn_name("bible_gathered_events_all");
+  let spelled1952 = fn_name("bible_events_genesis_37_50");
+  let spelled1953 = fn_name("bible_dream_brief_word");
+  let spelled1954 = fn_name("bible_dream_brief_counting");
+  let spelled1955 = fn_name("bible_dream_passages");
+  let spelled1956 = fn_name("bible_dream_passages_kinds");
+  let spelled1957 = fn_name("ebible_chapter_code_known_cases");
+  let spelled1958 = fn_name("bible_glyph_chapters_urdu_write");
+  let spelled1959 = fn_name("bible_glyph_roots_collisions");
+  let spelled1960 = fn_name(
+    "bible_glyph_chapters_rosetta_lines_marks_gate_run",
+  );
+  let spelled1961 = fn_name("bible_glyph_chapters_rosetta_lines");
+  let spelled1962 = fn_name("bible_glyph_chapters_language_functions");
+  let spelled1963 = fn_name("qa_app_gates_sorted");
+  let spelled1964 = fn_name("bible_glyph_artwork_folder");
+  let spelled1965 = fn_name("folder_secret_join");
+  let spelled1966 = fn_name("song_image_couplets_descriptions_sizes");
+  let spelled1967 = fn_name("song_image_drawn_attempts");
+  let spelled1968 = fn_name("psalms_playlists_chapters");
+  let spelled1969 = fn_name("psalms_playlists_order_moves");
+  let spelled1970 = fn_name("psalms_titles_faults");
+  let spelled1971 = fn_name(
+    "psalms_videos_verse_mislabelled_playlists_order_moves",
+  );
+  let spelled1972 = fn_name("psalms_videos_verse_mislabelled_playlists_move");
+  let spelled1973 = fn_name("psalms_video_playlist_move");
+  let spelled1974 = fn_name("psalms_title_passage");
+  let spelled1975 = fn_name(
+    "psalms_videos_verse_mislabelled_descriptions_write",
+  );
+  let spelled1976 = fn_name("psalms_video_description_write");
+  let spelled1977 = fn_name("youtube_video_title_write_if_titled");
+  let spelled1978 = fn_name("youtube_video_write_prove");
+  let spelled1979 = fn_name("youtube_oauth_consent_url");
+  let spelled1980 = fn_name("app_music_song_references_shape_gate_run");
+  let spelled1981 = fn_name("song_god_our_savior_glosses_gate_run");
+  let spelled1982 = fn_name("song_image_couplets_videos_descriptions");
+  let spelled1983 = fn_name("youtube_channel_bible_singing");
+  let spelled1984 = fn_name("psalms_videos_descriptions_payload_path");
+  let spelled1985 = fn_name("psalms_videos_verse_mislabelled");
+  let spelled1986 = fn_name("youtube_oauth_token_path");
+  let spelled1987 = fn_name("word_picture_wordings_gate_run");
+  let spelled1988 = fn_name("g_npc_pool_drawn");
+  let spelled1989 = fn_name("g_arc_chapter_person_or_null");
+  let spelled1990 = fn_name("g_npc_nickname_index");
+  let spelled1991 = fn_name("g_genders_get");
+  let spelled1992 = fn_name("g_arc_person_assert");
+  let spelled1993 = fn_name("g_npc_pool");
+  let spelled1994 = fn_name("words_game_taught");
+  let spelled1995 = fn_name("g_arc_feedback_write_path");
+  let spelled1996 = fn_name("g_arc_feedback_chapter");
+  let spelled1997 = fn_name("words_early_reader_gate_run");
+  let spelled1998 = fn_name("run_chance_ceiling");
+  let spelled1999 = fn_name("g_arc_chapter_shared_steps");
+  let spelled2000 = fn_name("qa_gate_timings_missing");
+  let spelled2001 = fn_name("qa_gate_timings_stale_days");
+  let spelled2002 = fn_name("qa_gates_sweep_reach");
+  let spelled2003 = fn_name("function_names_app_grouped_cases_gate_run");
+  let spelled2004 = fn_name("apps_paths");
+  let spelled2005 = fn_name("function_name_words_repeated_cases_gate_run");
+  let spelled2006 = fn_name("functions_names_repeated_gate_run");
+  let spelled2007 = fn_name("functions_names_repeated_baseline_write");
+  let spelled2008 = fn_name("functions_names_repeated");
+  let spelled2009 = fn_name("function_part_name_cases_gate_run");
+  let spelled2010 = fn_name("functions_cross_app_imports_baseline_path");
+  let spelled2011 = fn_name("color_near_miss_threshold");
+  let spelled2012 = fn_name("bundles_dev_stale_names");
+  let spelled2013 = fn_name("ebible_bible_chapters_skipped");
+  let spelled2014 = fn_name("ebible_verse_marks_displaced_measure");
+  let spelled2015 = fn_name("ebible_verse_marks_repeated_unexplained");
+  let spelled2016 = fn_name("ebible_chapter_verse_marks_repeated");
+  let spelled2017 = fn_name("ebible_verse_marks_repeated_bible");
+  let spelled2018 = fn_name("ebible_chapter_verse_numbers_marked");
+  let spelled2019 = fn_name("ebible_readaloud_lines_differ_as_published_names");
+  let spelled2020 = fn_name("bible_search_built_upload");
   let names = [
     spelled,
     spelled2,
@@ -3810,6 +3972,158 @@ export function permission_grant_names() {
     spelled1866,
     spelled1867,
     spelled1868,
+    spelled1869,
+    spelled1870,
+    spelled1871,
+    spelled1872,
+    spelled1873,
+    spelled1874,
+    spelled1875,
+    spelled1876,
+    spelled1877,
+    spelled1878,
+    spelled1879,
+    spelled1880,
+    spelled1881,
+    spelled1882,
+    spelled1883,
+    spelled1884,
+    spelled1885,
+    spelled1886,
+    spelled1887,
+    spelled1888,
+    spelled1889,
+    spelled1890,
+    spelled1891,
+    spelled1892,
+    spelled1893,
+    spelled1894,
+    spelled1895,
+    spelled1896,
+    spelled1897,
+    spelled1898,
+    spelled1899,
+    spelled1900,
+    spelled1901,
+    spelled1902,
+    spelled1903,
+    spelled1904,
+    spelled1905,
+    spelled1906,
+    spelled1907,
+    spelled1908,
+    spelled1909,
+    spelled1910,
+    spelled1911,
+    spelled1912,
+    spelled1913,
+    spelled1914,
+    spelled1915,
+    spelled1916,
+    spelled1917,
+    spelled1918,
+    spelled1919,
+    spelled1920,
+    spelled1921,
+    spelled1922,
+    spelled1923,
+    spelled1924,
+    spelled1925,
+    spelled1926,
+    spelled1927,
+    spelled1928,
+    spelled1929,
+    spelled1930,
+    spelled1931,
+    spelled1932,
+    spelled1933,
+    spelled1934,
+    spelled1935,
+    spelled1936,
+    spelled1937,
+    spelled1938,
+    spelled1939,
+    spelled1940,
+    spelled1941,
+    spelled1942,
+    spelled1943,
+    spelled1944,
+    spelled1945,
+    spelled1946,
+    spelled1947,
+    spelled1948,
+    spelled1949,
+    spelled1950,
+    spelled1951,
+    spelled1952,
+    spelled1953,
+    spelled1954,
+    spelled1955,
+    spelled1956,
+    spelled1957,
+    spelled1958,
+    spelled1959,
+    spelled1960,
+    spelled1961,
+    spelled1962,
+    spelled1963,
+    spelled1964,
+    spelled1965,
+    spelled1966,
+    spelled1967,
+    spelled1968,
+    spelled1969,
+    spelled1970,
+    spelled1971,
+    spelled1972,
+    spelled1973,
+    spelled1974,
+    spelled1975,
+    spelled1976,
+    spelled1977,
+    spelled1978,
+    spelled1979,
+    spelled1980,
+    spelled1981,
+    spelled1982,
+    spelled1983,
+    spelled1984,
+    spelled1985,
+    spelled1986,
+    spelled1987,
+    spelled1988,
+    spelled1989,
+    spelled1990,
+    spelled1991,
+    spelled1992,
+    spelled1993,
+    spelled1994,
+    spelled1995,
+    spelled1996,
+    spelled1997,
+    spelled1998,
+    spelled1999,
+    spelled2000,
+    spelled2001,
+    spelled2002,
+    spelled2003,
+    spelled2004,
+    spelled2005,
+    spelled2006,
+    spelled2007,
+    spelled2008,
+    spelled2009,
+    spelled2010,
+    spelled2011,
+    spelled2012,
+    spelled2013,
+    spelled2014,
+    spelled2015,
+    spelled2016,
+    spelled2017,
+    spelled2018,
+    spelled2019,
+    spelled2020,
   ];
   return names;
 }
