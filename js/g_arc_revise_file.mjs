@@ -1,3 +1,4 @@
+import { g_npc_nickname_index } from "./g_npc_nickname_index.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { g_arc_written_person_assert } from "./g_arc_written_person_assert.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
@@ -14,9 +15,10 @@ import { g_arc_write } from "./g_arc_write.mjs";
 import { g_arc_feedback_clear } from "./g_arc_feedback_clear.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
+export async function g_arc_revise_file(answer_path, chapter_code, nickname) {
   "$plain chapter_code";
   "$plain answer_path";
+  "$plain nickname";
   "Take the revised lines drafted as their own file, put each one back at the address it was written for, save the person over the version that was faulted, and drop the notes that asked for it.";
   "the code is a chapter's name, like 1JN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "IT CLOSES THE LOOP AND IS THE ONLY REASON THE LOOP IS WORTH HAVING. A note that never becomes changed writing is a reader's time spent twice - once finding the fault and once, later, finding it again. The prompt turns notes into an ask, and this turns the answer back into the store; without it the two halves are a report nobody can act on.";
@@ -24,8 +26,9 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   "IT REFUSES A FAULTED LINE LEFT UNANSWERED, for the opposite reason. Half an answer installed and then cleared leaves the unwritten fault gone from the queue with the line still wrong in the store, and nothing afterwards says so. Both checks run before anything is written, so a refusal leaves the store exactly as it was.";
   "THE OUTGOING VERSION IS KEPT, and it is kept by the store rather than here - a revision is the case that comparison was built for, and the one reader who has to judge whether a rewrite helped wants the lines that moved and not the arc.";
   "THE NOTES GO LAST. Cleared first, a refusal further down would throw away the only record of what was wrong while leaving the writing unchanged, and a fault found by a person cannot be found again by running anything.";
+  "THE PERSON IS NAMED, and the name is turned into their pool number here. This is the step that writes over an arc, so reaching the wrong person costs a whole reading rather than a wasted run - and a name nobody in the pool answers to throws, where a number one too high installs somebody else's answers over writing that was never faulted.";
   let answer = await file_read_json(answer_path);
-  let index = number_from_text(index_text);
+  let index = await g_npc_nickname_index(nickname);
   let found = await g_arc_written_person_assert(chapter_code, index);
   let standing = await g_arc_feedback_person(chapter_code, index);
   let faulted = [];
