@@ -1,5 +1,4 @@
-import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
-import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
+import { g_arc_written_person_assert } from "./g_arc_written_person_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -14,7 +13,6 @@ import { add_1 } from "./add_1.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_revise_prompt(chapter_code, index) {
   "The whole of one written person laid out line by line with every standing note set against the line it faults, asking for those lines back and nothing else.";
   "$plain chapter_code";
@@ -23,16 +21,8 @@ export async function g_arc_revise_prompt(chapter_code, index) {
   "THE WHOLE ARC IS SHOWN AND ONLY SOME OF IT IS ASKED FOR. A line is written in a voice, and a voice is only visible in the lines around it; handed six faulted lines alone, a reviser writes them in its own register and the person comes apart. The cost of showing everything is tokens, which are cheap, against a person's reading, which is not.";
   "THE NOTE SAYS WHAT IS WRONG AND NEVER WHAT TO SAY, and the reviser picks the words. That is what makes reviewing cheap enough to keep doing: naming a defect takes one line and can be done by a machine, while writing the replacement takes the same care the original took. It also keeps the voice with whoever is holding the voice.";
   "THE TURN COUNT MUST NOT MOVE, and that is stated rather than hoped for. Every note is addressed by a turn number, so a reviser that splits one turn into two silently repoints every note filed after it - at a line nobody faulted, with nothing going red.";
-  let arcs = await g_arc_written_chapter(chapter_code);
   let wanted = number_from_text(index);
-  let found = g_arc_chapter_person_or_null(arcs, wanted);
-  let missing = equal(found, null);
-  let there = not(missing);
-  assert_json(there, {
-    chapter_code,
-    index: wanted,
-    hint: "no person of that number is written in this chapter",
-  });
+  let found = await g_arc_written_person_assert(chapter_code, wanted);
   let standing = await g_arc_feedback_person(chapter_code, index);
   let any_standing = list_empty_not_is(standing);
   assert_json(any_standing, {
