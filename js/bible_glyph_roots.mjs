@@ -121,6 +121,24 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "dikaios",
+      gloss: "righteous, righteousness, justify",
+      words: [
+        {
+          strong: "1343",
+          glyph: "ruler",
+        },
+        {
+          strong: "1342",
+          glyph: "ruler",
+        },
+        {
+          strong: "1344",
+          glyph: "ruler",
+        },
+      ],
+    },
+    {
       root: "iesous",
       gloss: "Jesus",
       words: [

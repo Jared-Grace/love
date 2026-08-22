@@ -29,6 +29,9 @@ export function bible_glyph_roots_hebrew() {
   "A SKULL AND A SICK FACE WERE BOTH CONSIDERED AND BOTH CLAIM TOO MUCH. Speak death and speak sickness name what a curse is feared to bring, and the word names only what is said - Balaam is hired to curse and the thing he is asked to say is not death - so either would have written an outcome into every occurrence of a word that states none. The thumb down states no outcome at all, which is exactly as much as arar states.";
   "RASHA JOINED THE THUMB DOWN AND COST NOTHING, which is the third time that mark has seated a word it was not bought for. The word is the wicked man - sixteen occurrences across two of the written chapters, and the commonest content word the survey still had undrawn once the grammar, the pronouns and the proper names were skipped past. It is not ra's kin: ra is a thing or a deed gone bad and rasha is a person in the wrong, two roots and not one family, so it takes its own row and the same picture - the arar rule again.";
   "AND A PERSON ON THE THUMB DOWN IS ALREADY PRECEDENTED HERE. The objection to answer is that the mark was argued from tob, which is a quality of things, so hanging it on a man might be reading it as bad rather than as guilty. The Greek side settled that before this side asked: poneros sits on this same mark and the New Testament says the evil one with it, meaning a person. The mark understates rasha - it says bad where the word says guilty - and understating is what this table allows, because a reader who is told less than the word says can still be told the rest by the sentence.";
+  "THE OTHER HALF OF EZEKIEL'S SENTENCE IS BOUGHT NOW AND IT IS A RULER. Tsedeq, tsedaqah, tsaddiq and tsadaq are five hundred and twenty two between them, with two hundred and nine more on the Greek side, and that made righteousness the largest thing this table had left undrawn by a wide margin. The two obvious pictures were both already spent or refused: the check sits on emeth, and the scales sit on mishpat - four hundred and nine occurrences, glossed justice sixty times - so the balance would have said judgment in a chapter that means standing.";
+  "A RULER IS THE ROOT'S OWN PICTURE AND NOT A GESTURE OF APPROVAL. Tsedeq is straightness before it is anything else, which is why Amos is shown a plumb line and not a verdict; a measure held against a wall says conforms to the standard, and that is the whole of what the word claims. The hand sign meaning good was proposed and refused three times over: the thumb up already sits on tob, so two approving hands one mark apart would teach that righteous is a flavour of good rather than a standing before God; and the ring gesture is obscene in Brazil, Turkey and Greece and has carried a hate reading since twenty seventeen, which fails a Bible aimed at strangers harder than being unclear ever could.";
+  "IT WILL NOT READ ON SIGHT AND NOTHING ABSTRACT EVER HAS. The check, the hourglass and the key were all opaque the first time and are read fluently now, because a mark is learned from the sentences it stands in rather than from its picture. What the ruler has that a gesture does not is that nothing it suggests is wrong: a reader who guesses measure, standard or straight has guessed the word, and a reader who guesses good has guessed a different mark that is drawn elsewhere.";
   "WHAT IT DOES NOT BUY IS THE OTHER HALF OF EZEKIEL'S SENTENCE, and that is worth writing down rather than discovering while authoring. The thirty third of Ezekiel is built on the wicked against the righteous, said in alternation for a whole chapter, so this mark lands next to tsaddiq standing in English every time. The obvious picture for tsaddiq is the check, and the check is already spent on emeth - moving it would change a chapter that has been read, which is the objection the sprout lost on. So the antithesis is half drawn on purpose: half a pair is still more than none, because the mark says exactly what its word says and the blank beside it asks the reader a question rather than answering one wrongly.";
   "THE MOUNTAIN, THE SCALES AND THE SEA WERE MEASURED IN THE SAME PASS and are here for frequency rather than for an argument. Har is five hundred and forty four, mishpat four hundred and nine, yam three hundred and ninety four, and all three had been sitting near the top of the undrawn list underneath the grammar and the proper names. Yam is glossed west forty seven times and the wave is drawn there anyway: the word is the sea and west is what English calls the direction the sea lies in, so the paraphrase is in the English rather than in the picture.";
   "THE FOLDED HANDS WERE ON THE WRONG WORD AND THE COUNT SETTLED IT WITHOUT A JUDGMENT. They sat on amen H543 from the beginning, on the reasoning that folded hands are what a reader takes for prayer. Then the interlinear was asked what amen actually says, and the Hebrew answers Amen twenty eight times out of thirty while the Greek answers Truly a hundred times out of a hundred and twenty six. Amen is not a prayer word. It is an oath word - so be it, truly - and the prayer closing is that word standing in one particular place. So the folded hands were drawing prayer over a hundred and thirty occurrences of a word that means truly, and every one of them was a wrong mark.";
@@ -769,6 +772,28 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4941",
           glyph: "scales",
+        },
+      ],
+    },
+    {
+      root: "tsedeq",
+      gloss: "righteous, righteousness, justice",
+      words: [
+        {
+          strong: "6664",
+          glyph: "ruler",
+        },
+        {
+          strong: "6666",
+          glyph: "ruler",
+        },
+        {
+          strong: "6662",
+          glyph: "ruler",
+        },
+        {
+          strong: "6663",
+          glyph: "ruler",
         },
       ],
     },

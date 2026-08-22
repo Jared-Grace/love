@@ -21,7 +21,7 @@ export function app_code_lesson_expression_worked_card_two_operators(
   if (heading_written) {
     html_div_cycle_code(worked, heading);
   }
-  html_div_cycle_code(worked, ["For ", whole, ", we do ", pair, " first"]);
+  html_div_cycle_code(worked, ["For ", whole, ", we solve ", pair, " first"]);
   html_div_cycle_code(worked, [
     "",
     pair,

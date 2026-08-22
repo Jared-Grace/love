@@ -44,7 +44,7 @@ export function app_code_lesson_expression_plus_minus() {
     html_div_cycle_code(example_box, [
       "For example, for ",
       "5 + 2 - 3",
-      ", we do ",
+      ", we solve ",
       "5 + 2",
       " first, which is ",
       "7",

@@ -45,7 +45,7 @@ export function app_code_lesson_expression_arithmetic_less_than_worked_example(
   html_div_cycle_code(box, [
     "For ",
     full_expression,
-    ", we do ",
+    ", we solve ",
     sub,
     " first, which is ",
     t5,
