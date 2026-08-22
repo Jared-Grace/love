@@ -5,6 +5,10 @@ export function app_shared_bible_verse_absent_text() {
   "The way forward is another bible rather than a button, because every page that draws a verse lets the reader choose which bibles they read, and not every one of them has a way to open the chapter.";
   let texts = {
     en: "The bible you are reading gave no words here. That bible may not carry this verse, or the words may not have arrived. Would another bible have this verse?",
+    ur: "جو بائبل آپ پڑھ رہے ہیں اُس نے یہاں کوئی الفاظ نہیں دیے۔ ہو سکتا ہے اُس بائبل میں یہ آیت نہ ہو، یا الفاظ ابھی پہنچے نہ ہوں۔ کیا کسی اور بائبل میں یہ آیت ہو گی؟",
+    translated_from: {
+      ur: "The bible you are reading gave no words here. That bible may not carry this verse, or the words may not have arrived. Would another bible have this verse?",
+    },
   };
   let text = app_shared_text_reader_language(texts);
   return text;
