@@ -9,36 +9,35 @@ import { emoji_church } from "./emoji_church.mjs";
 import { emoji_bread } from "./emoji_bread.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 export function bless_prayer_emojis() {
-  ("The little pictures a prayer over one person may be set between - praying hands, a");
-  ("heart, a dove, raised hands, a crown, a sunrise, a rainbow, a church, bread, and a");
-  ("home.");
-  ("There is exactly one prayer in this game and it is said thousands of times in a");
-  ("sitting. Word-identical every time is the point of it and must not be touched; but a");
-  ("panel that is pixel-identical every time stops being read after the tenth one, and a");
-  ("prayer nobody reads is a button being pressed. So the WORDS never move and the page");
-  ("around them does, which keeps the panel new without making the prayer new.");
-  ("Every one of them is something the prayer is actually asking for, so the picture is a");
-  ("second reading of the same sentence rather than decoration: the asking, the love, the");
-  ("Spirit, the praise, the King, a new morning, a promise kept, the church, daily bread,");
-  ("and the household the ladder climbs to next.");
-  ("The believer's cross is deliberately NOT among them. In both games a cross is a mark");
-  ("worn by a person on the map and it means something exact - one drawn beside the words");
-  ("would read as saying something about the person just prayed for, and it would be");
-  ("saying it at random.");
-  ("Nothing here is a celebration either. A prayer that a soul be saved answered with a");
-  ("party popper reads as the game congratulating the player on a score, which is the one");
-  ("thing this must never look like.");
-  let emojis = [
-    emoji_pray(),
-    emoji_heart(),
-    emoji_dove(),
-    emoji_hands_raising(),
-    emoji_crown(),
-    emoji_sunrise(),
-    emoji_rainbow(),
-    emoji_church(),
-    emoji_bread(),
-    emoji_home(),
-  ];
+  "The little pictures a prayer over one person may be set between - praying hands, a";
+  "heart, a dove, raised hands, a crown, a sunrise, a rainbow, a church, bread, and a";
+  "home.";
+  "There is exactly one prayer in this game and it is said thousands of times in a";
+  "sitting. Word-identical every time is the point of it and must not be touched; but a";
+  "panel that is pixel-identical every time stops being read after the tenth one, and a";
+  "prayer nobody reads is a button being pressed. So the WORDS never move and the page";
+  "around them does, which keeps the panel new without making the prayer new.";
+  "Every one of them is something the prayer is actually asking for, so the picture is a";
+  "second reading of the same sentence rather than decoration: the asking, the love, the";
+  "Spirit, the praise, the King, a new morning, a promise kept, the church, daily bread,";
+  "and the household the ladder climbs to next.";
+  "The believer's cross is deliberately NOT among them. In both games a cross is a mark";
+  "worn by a person on the map and it means something exact - one drawn beside the words";
+  "would read as saying something about the person just prayed for, and it would be";
+  "saying it at random.";
+  "Nothing here is a celebration either. A prayer that a soul be saved answered with a";
+  "party popper reads as the game congratulating the player on a score, which is the one";
+  "thing this must never look like.";
+  let v = emoji_pray();
+  let v2 = emoji_heart();
+  let v3 = emoji_dove();
+  let v4 = emoji_hands_raising();
+  let v5 = emoji_crown();
+  let v6 = emoji_sunrise();
+  let v7 = emoji_rainbow();
+  let v8 = emoji_church();
+  let v9 = emoji_bread();
+  let v10 = emoji_home();
+  let emojis = [v, v2, v3, v4, v5, v6, v7, v8, v9, v10];
   return emojis;
 }
