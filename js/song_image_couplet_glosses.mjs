@@ -2,6 +2,7 @@ export function song_image_couplet_glosses() {
   "what each couplet of the hymn rests on in Scripture, kept beside what its picture rests on, so that the words and the emblem can be checked against the text one after the other rather than argued about separately";
   "there are thirty-six entries, one for every couplet, and the four that repeat the eight before them word for word are entries in their own right. They were looked up through the couplet they repeat while they shared its picture; they were given emblems of their own so that the film does not show one drawing twice for two singings, and a couplet with its own drawing needs its own account of it. The repeat's lyric note says plainly that the words are the earlier ones, so nothing here claims a second reading of the same two lines.";
   "and a repeat's emblem is chosen against the first one rather than freely, which is what stops the second picture being merely another good picture. Couplet 8 draws the debt and 9 draws the bond broken; 17 draws the blood on the doorway and 18 draws the Lamb that doorway is about; 26 draws glory as light and 27 draws the giving of it; 35 draws where the name I AM was spoken and 36 draws HIS own taking of it up. Read in order each pair is a sentence rather than an echo.";
+  "a repeat's lyric passages are the earlier couplet's, exactly, and only its symbol passages are its own. The two fields answer different questions - one says where the words come from and the other says where the picture comes from - and the four repeats were first written with the emblem's verses standing in both. That reads as a claim nobody meant: the same two lines printed twice with a different scriptural basis under each, and nothing on the page saying why. The words did not change when the picture did, so the verses under the words must not change either. Where a repeat's emblem rests on something new, that belongs under the symbol, which is the field that exists to hold it.";
   "the kept attempt is written down here rather than worked out as the newest one, and that is the whole reason this field exists. The last drawing of a symbol is very often not the best one - a later attempt buys a better field and loses the border, or fixes the shape and splits the colour - so newest is a rule that quietly discards the picture somebody actually chose. Two couplets already contradict it.";
   "the symbol note says plainly where an emblem is described by Scripture and where it is inherited from the church instead, because those are different claims and the difference is exactly what an audit is for. A crown of thorns is in Matthew; a bare cross standing empty is in no verse at all. Both may be right to draw and only one of them may be defended from the text, so the note says which.";
   "an emblem can be described by Scripture without the scene being in Scripture, and missing that put the wrong verdict on the first couplet here. No account puts scales at the trial, so inherited looked like the honest answer - but Proverbs 11:1 says a false balance is abomination to the LORD, and Micah and Amos say it again, so the tilted beam is GOD's own picture of a perverted measure and not a courthouse emblem borrowed for the occasion. The question to ask is not does this object appear in this account, it is does Scripture use this object to mean this thing. The narrower question fails an emblem that is Biblical everywhere except in the passage being illustrated.";
@@ -145,9 +146,9 @@ export function song_image_couplet_glosses() {
     },
     18: {
       kept: 1,
-      lyric_ref: "John 1:29, Revelation 5:9, 1 Peter 1:18-19",
+      lyric_ref: "Acts 20:28, 1 Peter 1:18-19, Exodus 12:7",
       lyric_explain:
-        "The same two lines as couplet 17, sung a second time to a different melody. Behold the Lamb of GOD, which taketh away the sin of the world; and the new song in Revelation 5:9 is thou wast slain, and hast redeemed us to GOD by thy blood.",
+        "The same two lines as couplet 17, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
       symbol_explain:
         "Inherited, and the film's only lamb. Couplet 17 draws the blood on the doorway of Exodus 12 and leaves the lamb out on purpose, so the repeat is where the Lamb HIMSELF stands. The staff with a small cross at its top is the church's own answer to a question this film cannot answer any other way - how a picture says that this lamb is CHRIST, when no face may be drawn - and it is very old and everywhere in glass. The seven-eyed lamb of Revelation 5 was tried twice at couplet 11 and abandoned, because a shape whose definition is a number came back with six and two and then six and five, and both attempts drew a ram. The staff costs one shape instead of fourteen.",
     },
@@ -217,9 +218,9 @@ export function song_image_couplet_glosses() {
     },
     27: {
       kept: 1,
-      lyric_ref: "Revelation 5:8, Revelation 15:2-3, Revelation 5:12",
+      lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
-        "The same two lines as couplet 26, sung a second time to a different melody. Revelation 5:8 has every one of them with harps, and 15:2 sets them that had gotten the victory standing with the harps of GOD, singing the song of the Lamb.",
+        "The same two lines as couplet 26, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
       symbol_explain:
         "Described. Couplet 26 draws the glory itself as light breaking outward, which is inherited and in no verse; this draws the giving of it, and for that Revelation names an object twice over. A harp is one shape everybody can name, it belongs to nothing else in this table, and its wood and its white strings are already on the colour list.",
     },
@@ -289,9 +290,9 @@ export function song_image_couplet_glosses() {
     },
     36: {
       kept: 1,
-      lyric_ref: "John 15:1, John 15:5, Exodus 3:14",
+      lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
-        "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn. I am the true vine, and my FATHER is the husbandman - which is an I AM saying with the FATHER named in the very same breath, so the two lines are both in the one verse.",
+        "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
       symbol_explain:
         "Described. Couplet 35 draws where the name comes from, the bush of Exodus 3; this draws HIS own use of it, and John 15:1 is the one I AM saying that names the FATHER alongside the SON. It is also the only one of them with a shape left to draw: the door and the light and the good shepherd are a doorway, a lamp and a face, and this table already has three doorways, a flame beside it at couplet 35, and no faces anywhere.",
     },
