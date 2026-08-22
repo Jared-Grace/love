@@ -1,3 +1,5 @@
+import { git_message_hand_made } from "./git_message_hand_made.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_alias_since } from "./commits_message_alias_since.mjs";
 import { git_commits_subjects_since } from "./git_commits_subjects_since.mjs";
@@ -24,7 +26,8 @@ export async function commits_message_alias_named() {
   let offenders = [];
   for (let commit of commits) {
     let subject = property_get(commit, "subject");
-    let by_hand = equal(subject, git_message_hand_made());
+    let right = git_message_hand_made();
+    let by_hand = equal(subject, right);
     if (by_hand) {
       continue;
     }
