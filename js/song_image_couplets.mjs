@@ -181,7 +181,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, and a round bush of brown thorn branches as tall as the ram itself standing at the ram's head, the branches and the horns crossing one another where they meet",
+        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, and a round bush of brown thorn branches as tall as the ram itself standing at the ram's head, the lowest branches of the bush winding in and out between the white horns",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
