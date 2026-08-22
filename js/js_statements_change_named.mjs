@@ -1,3 +1,4 @@
+import { js_statements_change_replaced_named } from "./js_statements_change_replaced_named.mjs";
 import { js_statements_change_one_direction_named } from "./js_statements_change_one_direction_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_unparse_multiple } from "./js_unparse_multiple.mjs";
@@ -53,7 +54,12 @@ export function js_statements_change_named(before, after) {
   let right = list_size(after);
   let lengths = equal(left5, right);
   if (one_in && one_out && lengths) {
-    let r9 = "one statement replaced";
+    let r9 = js_statements_change_replaced_named(
+      before,
+      after,
+      texts_before,
+      texts_after,
+    );
     return r9;
   }
   let r10 = "the body rewritten";
