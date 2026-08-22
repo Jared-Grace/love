@@ -1,3 +1,8 @@
+import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
+import { word_early_reader_matched_or_null } from "./word_early_reader_matched_or_null.mjs";
+import { property_get } from "./property_get.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+import { equal } from "./equal.mjs";
 export function words_game_taught_gloss_or_null(word) {
   "$plain word";
   "What the game has to say about one word a player tapped, or null when it has nothing to say about that word.";
