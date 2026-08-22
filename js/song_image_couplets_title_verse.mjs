@@ -1,8 +1,7 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function song_image_couplets_title_verse(title) {
   "$plain title";
   "which verse of the hymn a song's name says it sings: the number when the name says one, 0 when it says the whole hymn, and null when the name is not this hymn at all";
@@ -10,8 +9,7 @@ export function song_image_couplets_title_verse(title) {
   "A name that says the hymn but no verse is the whole hymn, which is what 'the FATHER's SON' and 'the FATHER's SON (widescreen)' both are. That is the same reading a name saying nothing extra should get: a cut of the whole song is still the whole song's words.";
   arguments_assert(arguments, 1);
   let hymn = song_image_couplets_title();
-  let of_hymn = text_starts_with(title, hymn);
-  let other = not(of_hymn);
+  let other = text_starts_with_not(title, hymn);
   if (other) {
     return null;
   }
