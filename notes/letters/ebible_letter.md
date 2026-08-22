@@ -235,7 +235,7 @@ sitting in the running text, with no marker around it, and the words after it ar
 '36 tano co ci ki bweldi, la wurombo ker kwamaro bo cinene (mani a dolti ki kero mor
 bifumere)'. So the page carries a printed number that is both unmarked and one too high.
 
-**12. Two verses are missing from bsj, words and all.**
+**12. Verses are missing, words and all.**
 
 url: https://ebible.org/bsj/MAT22.htm and https://ebible.org/bsj/2TH03.htm
 
