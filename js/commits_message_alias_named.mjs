@@ -14,6 +14,7 @@ import { null_is } from "./null_is.mjs";
 export async function commits_message_alias_named() {
   "Every commit made since the rule came in whose message opens with a short name the human types at the keyboard rather than with the name of the command that made the change.";
   "AN ALIAS KEY IS NOT AN IDENTITY. Pointing it somewhere else is a single command, and the log then reads as a record of a change made by whatever it points at now - a history that says a thing nobody did. A function name cannot be re-pointed like that: renaming one carries its aliases with it and leaves the old word answering to nothing.";
+  "THE HAND-MADE MESSAGE IS LET THROUGH FIRST AND BY ITSELF, because that word is registered as an alias key like any other and would otherwise be the only thing this ever found - it is the one message the convention asks for where nothing named made the change, and nine tenths of the log is it.";
   "ONLY A WORD THAT IS AN ALIAS TODAY OFFENDS, and a word that merely names no live function does not. Names are renamed here constantly, so an old commit correctly named after the command that made it would start failing the moment that command was renamed - a rule that goes red for something nobody wrote is a rule that gets switched off.";
   arguments_assert(arguments, 0);
   let since = commits_message_alias_since();
@@ -23,6 +24,10 @@ export async function commits_message_alias_named() {
   let offenders = [];
   for (let commit of commits) {
     let subject = property_get(commit, "subject");
+    let by_hand = equal(subject, git_message_hand_made());
+    if (by_hand) {
+      continue;
+    }
     let words = text_split(subject, " ");
     let word = list_first(words);
     let live = list_includes(f_names, word);
