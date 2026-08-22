@@ -21,12 +21,14 @@ export function app_music_song_folds_show(parent) {
     app_shared_folds_set(folds, true);
   }
   let groups = [folds];
+  ("opening a song is only folding - the passages are already on the page behind the cards - so once every card is open there is nothing further this page could open, and it says so with a flat no");
   app_shared_buttons_expand_collapse(
     parent,
     expand_all,
     collapse_all,
     groups,
     groups,
+    false_get,
   );
   html_br_2(parent);
   return folds;

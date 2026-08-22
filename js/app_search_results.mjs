@@ -69,4 +69,6 @@ export async function app_search_results(context, div_results) {
     let only_click = list_single_property(button_list, "click");
     await only_click();
   }
+  ("the first draw fetches some verses without folding anything, and the open-everything button above them is lit while any verse on the page is still empty - so it is asked once more here, when the page has settled, rather than being left saying there is work to do that has already been done");
+  app_shared_folds_refresh(book_folds);
 }
