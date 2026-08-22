@@ -48,9 +48,9 @@ export async function words_game_taught_glosses_defects() {
     let explain = property_or_null(entry, "explain");
     let halves = [gloss, explain];
     let said_both = true;
-    for (let half of halves) {
-      let there = not_equal(half, null);
-      let filled = text_empty_not_is(half);
+    for (let piece of halves) {
+      let there = not_equal(piece, null);
+      let filled = text_empty_not_is(piece);
       let said = and(there, filled);
       if (not(said)) {
         let blank = {
