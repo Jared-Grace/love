@@ -13,11 +13,11 @@ export function bible_depiction_brief() {
     step: "depiction",
     what: "how a figure, place or garment that Scripture leaves undescribed is settled once and used by every scene that names it",
     settled:
-      "the five rules and their order; that added detail must point at the passage; that anything which would stand on its own without the Scripture is too much",
-    open: "how a depiction is addressed and named; what to do where traditions disagree; how a figure who ages is held together; whether a depiction may differ between renderings",
+      "the five rules and their order; that added detail must point at the passage; that the bound falls on added story and not on added quality, so craft in the manner of a depiction is unbounded",
+    open: "where manner has accumulated far enough to imply events; how a depiction is addressed and named; what to do where traditions disagree; how a figure who ages is held together; whether a depiction may differ between renderings",
     forbidden:
-      "invented biography, motive or backstory for anyone; any detail contradicting any passage anywhere; added material interesting enough to follow on its own",
-    done: "every figure named in a gathered scene has a depiction that satisfies the five rules in order, and nothing added would hold anybody's attention with the passage removed",
+      "invented biography, motive or backstory for anyone; any invented event, cause or reason, however small; any detail contradicting any passage anywhere",
+    done: "every figure named in a gathered scene has a depiction that satisfies the five rules in order, and nothing added to any of them tells anybody something that happened",
   };
   return brief;
 }
