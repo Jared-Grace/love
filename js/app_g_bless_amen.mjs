@@ -1,4 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_remove } from "./html_remove.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { app_g_typing_dots } from "./app_g_typing_dots.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
@@ -45,7 +49,9 @@ export function app_g_bless_amen(container, prayer, on_amen) {
   ("they would add their own height to the panel and hand back the very jump the hidden");
   ("button was built to prevent.");
   let slot = html_div(container);
-  html_style_relative(slot);
+  html_style_assign(slot, {
+    position: "relative",
+  });
   let praying = emoji_pray();
   let label = text_combine(praying, " Amen");
   let button = app_shared_game_button_green(slot, label, on_amen);
