@@ -1,11 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_god_our_savior_sections } from "./song_god_our_savior_sections.mjs";
-import { app_music_lines_instruction_text } from "./app_music_lines_instruction_text.mjs";
-import { html_p_text } from "./html_p_text.mjs";
-import { app_shared_folds } from "./app_shared_folds.mjs";
-import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
-import { app_shared_buttons_expand_collapse } from "./app_shared_buttons_expand_collapse.mjs";
-import { html_br_2 } from "./html_br_2.mjs";
+import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -27,25 +22,7 @@ export async function app_music_song_god_our_savior_show(parent) {
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
   arguments_assert(arguments, 1);
   let sections = song_god_our_savior_sections();
-  let said = app_music_lines_instruction_text();
-  html_p_text(parent, said);
-  let folds = app_shared_folds();
-  function expand_all() {
-    app_shared_folds_set(folds, false);
-  }
-  function collapse_all() {
-    app_shared_folds_set(folds, true);
-  }
-  ("both buttons act on the one group of cards, because a song has a single level of them - unlike the results of a search, where the books sit inside sections and only the books are shut");
-  let groups = [folds];
-  app_shared_buttons_expand_collapse(
-    parent,
-    expand_all,
-    collapse_all,
-    groups,
-    groups,
-  );
-  html_br_2(parent);
+  let folds = app_music_song_folds_show(parent);
   let sung = [];
   let asked_all = [];
   for (let section of sections) {

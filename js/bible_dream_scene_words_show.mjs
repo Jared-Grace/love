@@ -5,7 +5,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_style_line_height } from "./html_style_line_height.mjs";
+import { html_div_paragraph_small } from "./html_div_paragraph_small.mjs";
 export function bible_dream_scene_words_show(root, scene) {
   "Put the words of a dream at the top of the page - which passage it is, what it turned out to mean - and hand back the empty line underneath them that the running count of traced strokes is written into.";
   "★ THE WORDS AND THE DRAWING NEED OPPOSITE WIDTHS, WHICH IS WHY THEY ARE TWO THINGS AND NOT ONE. Reading wants a narrow measure and drawing wants all the room there is. While they shared one box the words won, and every shape came out a thumbnail with bumps too small for anything to answer.";
@@ -21,10 +21,7 @@ export function bible_dream_scene_words_show(root, scene) {
   let heading = html_div(column);
   html_style_font_size(heading, "22px");
   html_text_set(heading, scene.reference + " — the dream you are sent to draw");
-  let meaning = html_div(column);
-  html_style_margin_top(meaning, "8px");
-  html_style_font_size(meaning, "14px");
-  html_style_line_height(meaning, "1.5");
+  let meaning = html_div_paragraph_small(column);
   let quiet = app_shared_color_gray_light();
   html_style_set(meaning, "color", quiet);
   html_text_set(meaning, scene.meaning);
