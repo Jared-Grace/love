@@ -1,7 +1,6 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
-import { multiply } from "./multiply.mjs";
 export function psalms_passage_order_key(passage) {
   "$plain passage";
   "One number standing for where a passage falls in the reading of its chapter, so that two passages can be put in order by comparing two numbers.";
@@ -11,7 +10,6 @@ export function psalms_passage_order_key(passage) {
   arguments_assert(arguments, 1);
   let verse_first = property_get(passage, "verse_first");
   let verse_last = property_get(passage, "verse_last");
-  let opening = multiply(verse_first, 1000);
-  let r = add(opening, verse_last);
+  let r = multiply_add(verse_first, 1000, verse_last);
   return r;
 }
