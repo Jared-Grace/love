@@ -2,6 +2,8 @@ import { song_image_audit_picture } from "./song_image_audit_picture.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
+import { html_border_top } from "./html_border_top.mjs";
+import { song_image_color_border_resting } from "./song_image_color_border_resting.mjs";
 import { song_image_row_wrapping } from "./song_image_row_wrapping.mjs";
 import { song_image_text_quiet_line } from "./song_image_text_quiet_line.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
@@ -15,7 +17,8 @@ export function song_image_audit_row(parent, couplet) {
   "the picture and the words sit side by side because the question the page exists to answer is whether they say the same thing, and that is a question nobody can hold in their head across a scroll";
   let row = song_image_row_wrapping(parent);
   html_style_margin_top(row, "38px");
-  html_style_set(row, "border-top", "1px solid #262626");
+  let resting = song_image_color_border_resting();
+  html_border_top(row, "1px", resting);
   html_style_set(row, "padding-top", "22px");
   let key = song_image_couplet_key(couplet.n);
   let gloss = song_image_couplet_gloss(couplet.n);
