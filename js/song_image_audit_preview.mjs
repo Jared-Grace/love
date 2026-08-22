@@ -3,8 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_style_line_height } from "./html_style_line_height.mjs";
+import { html_div_paragraph_small } from "./html_div_paragraph_small.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { song_image_audit_row } from "./song_image_audit_row.mjs";
@@ -19,11 +18,9 @@ export function song_image_audit_preview() {
   let title = html_div(root);
   html_style_font_size(title, "26px");
   html_style_set(title, "font-weight", "700");
-  html_text_set(title, song_image_couplets_title());
-  let subtitle = html_div(root);
-  html_style_margin_top(subtitle, "8px");
-  html_style_font_size(subtitle, "14px");
-  html_style_line_height(subtitle, "1.5");
+  let text = song_image_couplets_title();
+  html_text_set(title, text);
+  let subtitle = html_div_paragraph_small(root);
   let style_value = song_image_color_text_quiet();
   html_style_set(subtitle, "color", style_value);
   let said =

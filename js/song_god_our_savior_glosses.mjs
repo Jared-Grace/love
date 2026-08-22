@@ -148,7 +148,7 @@ export function song_god_our_savior_glosses() {
         "Even when we were dead in sins, hath quickened us together with Christ, and hath raised us up together. The line says raised WITH, which is the whole point: his rising is not only shown to us, it is shared. He that heareth my word is passed from death unto life.",
     },
     "He holds me fast, He'll never lose": {
-      lyric_ref: "John 10:28-29, John 6:39, Jude 24",
+      lyric_ref: "John 10:28-29, John 6:39, Jude 1:24",
       lyric_explain:
         "Neither shall any man pluck them out of my hand. The losing is his own word too - of all which he hath given me I should lose nothing - and Jude names him as able to keep you from falling.",
     },
