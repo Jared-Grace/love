@@ -1,3 +1,5 @@
+import { html_style_padding_top } from "./html_style_padding_top.mjs";
+import { html_style_flex } from "./html_style_flex.mjs";
 import { song_image_audit_picture } from "./song_image_audit_picture.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -19,7 +21,7 @@ export function song_image_audit_row(parent, couplet) {
   html_style_margin_top(row, "38px");
   let resting = song_image_color_border_resting();
   html_border_top(row, "1px", resting);
-  html_style_set(row, "padding-top", "22px");
+  html_style_padding_top(row, "22px");
   let key = song_image_couplet_key(couplet.n);
   let gloss = song_image_couplet_gloss(couplet.n);
   let left = html_div(row);
@@ -30,7 +32,7 @@ export function song_image_audit_row(parent, couplet) {
   html_style_line_height(symbol, "1.5");
   html_text_set(symbol, couplet.symbol);
   let right = html_div(row);
-  html_style_set(right, "flex", "1 1 340px");
+  html_style_flex(right, "1 1 340px");
   let head = song_image_text_quiet_line(right);
   let numbers = "verse " + couplet.verse + " · couplet " + couplet.n;
   let drawn = " · drawing " + key;
