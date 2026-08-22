@@ -1,3 +1,4 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { list_get } from "./list_get.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_prompt_written } from "./g_arc_prompt_written.mjs";
@@ -33,8 +34,7 @@ export async function g_arc_prompt_chapter_role(chapter, leader, index) {
   let turns_wanted = await g_npc_pool_convert_turns();
   let next = random_seed_generator_from_text(g_npc_pool.name);
   let pool = g_npc_pool(turns_wanted, next);
-  let npc = list_get(pool, index);
-  let turn_target = property_get(npc, "turns");
+  let turn_target = list_get_property(pool, index, "turns");
   let deck = g_profiles();
   let cast = pool.length;
   let deal_index = index;
