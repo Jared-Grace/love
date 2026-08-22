@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,8 +31,7 @@ export function g_arc_lines_addressed(arc) {
     let number = property_get(entry, "number");
     let opening = property_get(entry, "conversation_first");
     if (opening) {
-      let conversation = property_get(entry, "conversation");
-      let catch_up = property_get(conversation, "catch_up");
+      let catch_up = property_path_get_2(entry, "conversation", "catch_up");
       let caught_up = text_empty_not_is(catch_up);
       if (caught_up) {
         list_add(lines, {
