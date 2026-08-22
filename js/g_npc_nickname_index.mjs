@@ -12,10 +12,13 @@ export async function g_npc_nickname_index(nickname) {
   "IT WALKS THE NAMES RATHER THAN UNDOING THE ARITHMETIC. The name is worked out by stepping through a list, so the way back is a piece of modular arithmetic that is correct and unreadable, and it would answer for a name belonging to nobody by handing back a number anyway. Walking the names is a couple of hundred comparisons once, and it can only answer with somebody who is really there.";
   "A NAME NOBODY ANSWERS TO THROWS, which is the whole reason this is not a lookup that falls back to something. A misspelled name that quietly became a number would address a different person than the one meant, and both the writing and the report of it would look correct.";
   let nicknames = await g_npc_nicknames();
-  let index = list_index_of(nicknames, nickname);
-  let found = not_equal(index, -1);
-  if (found) {
-    return index;
+  let count = list_size(nicknames);
+  for (let index of range(count)) {
+    let named = list_get(nicknames, index);
+    let same = equal(named, nickname);
+    if (same) {
+      return index;
+    }
   }
   error_json({
     nickname,
