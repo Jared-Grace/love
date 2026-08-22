@@ -54,7 +54,14 @@ export function app_g_bless_transfer_overlay(overlay, on_amen) {
   ("It is also the prayer that most deserves it. Everything prayed in this game is real to");
   ("real people only because this one was said, so it is the single worst prayer to let a");
   ("player click past without reading.");
+  ("Praying hands stand in front of the words and the world stands behind them. On a black");
+  ("screen holding one paragraph and nothing else, they are the only thing that is not");
+  ("text - and between them they say the whole of what the door is for to somebody who has");
+  ("not read a word yet.");
+  ("The screen prints the shown form and times its amen from the bare prayer, so the two");
+  ("pictures are not counted as words the player has to get through.");
   let prayer = bless_prayer_transfer();
-  app_shared_game_p_text(container, prayer);
+  let shown = bless_prayer_transfer_shown(prayer);
+  app_shared_game_p_text(container, shown);
   app_g_bless_amen(container, prayer, on_amen);
 }
