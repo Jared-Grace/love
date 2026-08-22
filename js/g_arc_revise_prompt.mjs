@@ -54,9 +54,9 @@ export async function g_arc_revise_prompt(chapter_code, index) {
   for (let line of lines) {
     let number = property_get(line, "number");
     let field = property_get(line, "field");
-    let text = property_get(line, "text");
+    let line_text = property_get(line, "text");
     let address = property_get(line, "address");
-    let shown = list_join_space([address, text]);
+    let shown = list_join_space([address, line_text]);
     list_add(said, shown);
     let faulted = false;
     for (let note of standing) {
