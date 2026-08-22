@@ -1,4 +1,4 @@
-import { bible_glyph_chapters_language_write_bible_glyph_chapters_language_source } from "./bible_glyph_chapters_language_write_bible_glyph_chapters_language_source.mjs";
+import { bible_glyph_chapters_language_source } from "./bible_glyph_chapters_language_source.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
@@ -80,12 +80,11 @@ export async function bible_glyph_chapters_language_write(
     });
   }
   let json = json_to(gathered);
-  let source =
-    bible_glyph_chapters_language_write_bible_glyph_chapters_language_source(
-      written_name,
-      language_word,
-      json,
-    );
+  let source = bible_glyph_chapters_language_source(
+    written_name,
+    language_word,
+    json,
+  );
   let found = await function_exists(written_name);
   let exists = property_get(found, "exists");
   if (exists) {
