@@ -277,7 +277,7 @@ export function song_image_couplets() {
       second: "it was brand new",
       symbol:
         "The mouth of a new tomb cut straight into a great mass of plain grey rock, the opening standing clear and empty as a plain dark arch with nothing inside it and no stone anywhere near it",
-      symbol_ref: "",
+      symbol_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       same_as: 0,
     },
     {
@@ -336,7 +336,7 @@ export function song_image_couplets() {
       second: "the risen CHRIST",
       symbol:
         "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
-      symbol_ref: "",
+      symbol_ref: "Revelation 1:16, Acts 26:13",
       same_as: 0,
     },
     {
