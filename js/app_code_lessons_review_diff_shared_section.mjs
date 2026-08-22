@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
@@ -10,6 +11,12 @@ export function app_code_lessons_review_diff_shared_section(entry) {
   let named = "the whole run";
   if (not(entry.whole_run)) {
     named = list_join_comma_space(entry.lessons);
+  }
+  ("The heading says which of those lessons the learner already had, because that is what decides whether the group is worth opening at all. A helper only new lessons stand on is new writing and gets read with them; a helper an already-read screen stands on is the one that changed under somebody who has finished it.");
+  let already = "  ALL NEW";
+  if (greater_than(entry.had, 0)) {
+    let joined = list_join_comma_space(entry.lessons_had);
+    already = text_combine_multiple(["  already read: ", joined]);
   }
   let v = String(entry.count);
   let v2 = String(entry.added);
@@ -26,6 +33,7 @@ export function app_code_lessons_review_diff_shared_section(entry) {
     v3,
     "  moved ",
     v4,
+    already,
     "\n\n",
   ]);
   let section = text_combine_multiple([heading, entry.diff_text, "\n"]);
