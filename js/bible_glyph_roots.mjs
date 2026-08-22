@@ -53,6 +53,11 @@ export function bible_glyph_roots() {
   "THE HEBREW SIDE HAD ALREADY BOUGHT IT TWICE OVER. Torah is drawn as a scroll and mitsvah, which IS commandment, is drawn as the same scroll; and nomos, the Greek for law, was already crossed onto that scroll in this table. So the reader has met this mark meaning law on both sides of the Bible and meaning commandment on one of them, and entole is the one row that was missing from a square already three-quarters drawn.";
   "THE OBJECTION IS THAT A SCROLL IS WRITTEN AND A NEW COMMANDMENT I GIVE YOU IS SPOKEN, and it is answered by the Hebrew rather than dismissed. Mitsvah is spoken at least as often as it is written - the commandment which I command you this day is the formula the law states itself in - and the scroll was seated there anyway, because what the reader learns from a mark is the WORD it stands on and not the object it draws. Refusing the Greek on an objection the Hebrew already survived would leave the reader learning a mark in Deuteronomy that goes blank in John, which is the exact failure the bread and the sword were crossed over to prevent.";
   "THE VERB WAS LEFT ALONE. G1781 is the same root and is he commanded, and a scroll standing on a verb reads as the noun the reader already knows - so the mark would put a document into a sentence that only has a saying in it. The measurement named the noun and the noun is what was seated; the verb is a separate question and nothing here has answered it.";
+  "THE ANOINTING WAS THE GAP AUTHORING FOUND AND IT COST NOTHING TO CLOSE. The second of first John draws christos with the oil in its first verse and in its twenty second, and puts chrisma - the anointing you received from Him - in bare English in the twentieth and twice in the twenty seventh, which is precisely the link the chapter is arguing from. Chrisma is three occurrences and chrio is five, so no survey would ever have raised either; the chapter raised both, the way the turning was raised by Ezekiel rather than by a count.";
+  "AND THE SAME PICTURE ON BOTH IS THE WHOLE POINT RATHER THAN A SHORTAGE OF PICTURES. Chrisma is what the Anointed One gives and chrio is the anointing of Him, one root making three words, so a reader meeting the oil on all three is being shown a real kinship exactly as the check on aman and emeth and amen shows one. A second picture here would have hidden the argument the chapter is making, which is that the anointing and the Anointed are the same word.";
+  "THE OIL ITSELF IS STILL NOT SEATED AND MUST NOT BE. Elaion is the substance - eleven occurrences, the lamps of the ten virgins and the good Samaritan's wound - and this mark says anointed one, not oil. The Hebrew note says the same thing at scale about shemen. A picture drifting from the word it was bought for is the one failure in this table that nothing anywhere goes red for.";
+  "THE SHEPHERD AND THE SHEEP CAME FROM THE OTHER TESTAMENT and are seated here because the meanings match, which is the only reason this table ever borrows. Probaton is sheep in thirty nine of thirty nine wordings and tson is sheep or flock in all of its two hundred and seventy two; poimen is a shepherd and raah is to shepherd. So a reader who learns the ewe in the psalms meets the same animal in the tenth of John, which is what the shared vocabulary was built to do, and the good shepherd reads as the human and the sheep in both.";
+  "THE LAMB IS DELIBERATELY NOT SEATED HERE AND IT IS NOT AN OVERSIGHT. Arnion is the Lamb of the Revelation twenty six times over, a title for Christ and not an animal in a field, and kebes is the lamb of the offering a hundred and five times in the law. Whether those are one word with one picture, or whether the Revelation's Lamb wants the cross or the oil beside it, is a real question with a real answer and nobody has asked it yet. Seating the ewe on them to finish the set would have answered it by accident.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -1100,6 +1105,44 @@ export function bible_glyph_roots() {
         {
           strong: "5043",
           glyph: "child",
+        },
+      ],
+    },
+    {
+      root: "probaton",
+      gloss: "sheep",
+      words: [
+        {
+          strong: "4263",
+          glyph: "sheep",
+        },
+      ],
+    },
+    {
+      root: "poimen",
+      gloss: "shepherd, to shepherd",
+      words: [
+        {
+          strong: "4166",
+          glyph: "person+sheep",
+        },
+        {
+          strong: "4165",
+          glyph: "person+sheep",
+        },
+      ],
+    },
+    {
+      root: "chrisma",
+      gloss: "anointing, to anoint",
+      words: [
+        {
+          strong: "5545",
+          glyph: "oil",
+        },
+        {
+          strong: "5548",
+          glyph: "oil",
         },
       ],
     },
