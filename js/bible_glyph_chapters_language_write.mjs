@@ -1,14 +1,9 @@
-import { bible_glyph_chapters_language_write_source } from "./bible_glyph_chapters_language_write_source.mjs";
+import { bible_glyph_chapters_language_write_report } from "./bible_glyph_chapters_language_write_report.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { function_exists } from "./function_exists.mjs";
-import { function_source_overwrite } from "./function_source_overwrite.mjs";
-import { function_source_new } from "./function_source_new.mjs";
-import { not } from "./not.mjs";
 export async function bible_glyph_chapters_language_write(
   language_code,
   written_name,
@@ -46,30 +41,12 @@ export async function bible_glyph_chapters_language_write(
   let property_name = bible_folder_key();
   let bible_folder = list_first_property(languages, property_name);
   let chapters = bible_glyph_chapters();
-  let gathered = [];
-  let empty = [];
-  let source = await bible_glyph_chapters_language_write_source(
+  let report = await bible_glyph_chapters_language_write_report(
     chapters,
     bible_folder,
-    empty,
-    gathered,
     written_name,
     language_word,
-  );
-  let found = await function_exists(written_name);
-  let exists = property_get(found, "exists");
-  if (exists) {
-    await function_source_overwrite(written_name, source);
-  }
-  if (not(exists)) {
-    await function_source_new(written_name, source);
-  }
-  let report = {
     language_code,
-    written_name,
-    bible_folder,
-    written: gathered.length,
-    empty,
-  };
+  );
   return report;
 }
