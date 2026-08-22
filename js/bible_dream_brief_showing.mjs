@@ -11,8 +11,7 @@ export function bible_dream_brief_showing() {
     passages,
     settled:
       "which shapes appear, that they are the passage's and never the angel's, and that a poorly drawn shape is delivered anyway",
-    open:
-      "the whole of how a shape gets made - tracing, or something else entirely; what a stray hand looks like; whether shapes are chosen in any order; how a slip is shown to the player at all",
+    open: "the whole of how a shape gets made - tracing, or something else entirely; what a stray hand looks like; whether shapes are chosen in any order; how a slip is shown to the player at all",
     forbidden:
       "adding a shape the passage does not give; refusing delivery on grounds of neatness; anything that needs code particular to one passage",
     done: "all twelve passages that name shapes can be shown, with nothing in the code that knows which dream it is drawing",
