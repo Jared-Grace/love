@@ -22,7 +22,11 @@ export function app_shared_buttons_expand_collapse(
   arguments_assert(arguments, 5);
   let down = emoji_triangle_down();
   let expand_all_text = text_combine(down, " Expand all");
-  let expand = app_shared_button_wide(parent, expand_all_text, expand_all_lambda);
+  let expand = app_shared_button_wide(
+    parent,
+    expand_all_text,
+    expand_all_lambda,
+  );
   let up = emoji_triangle_up();
   let collapse_all_text = text_combine(up, " Collapse all");
   let collapse = app_shared_button_wide(
