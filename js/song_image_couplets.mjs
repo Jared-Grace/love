@@ -245,7 +245,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "An empty doorway of plain grey stone, the opening one plain flat black shape holding nothing, a broad band of deep crimson running down the middle of each post and across the middle of the lintel, each band about half as wide as the stone it lies on and its two long edges torn and uneven so that it swells wider in some places and narrows in others rather than running straight, and reaching a little way down the stone below the lintel in a few short tapering runs",
+        "An empty doorway of plain grey stone, the opening one plain flat black shape holding nothing, and one broad stripe of deep crimson glass laid along the middle of each post and along the middle of the lintel, each stripe about half as wide as the stone it lies on and its two long edges uneven so that it swells wider in some places and narrows in others rather than being drawn straight, with a few short tapering points of the same crimson below the lintel's stripe",
       symbol_ref: "Exodus 12:7, John 1:29",
       same_as: 0,
     },
