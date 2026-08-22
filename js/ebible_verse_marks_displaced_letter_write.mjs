@@ -58,6 +58,11 @@ export async function ebible_verse_marks_displaced_letter_write() {
     }
     each(chapters_measured, chapter_read);
     let chapters_here = list_size(chapters);
+    ("A translation with nothing wrong in it is left out entirely rather than written as an empty entry. The measure walks all three hundred and ninety-nine because it has to look at each one to know; a reader of this file is being told what is wrong, and two hundred and sixty-eight empty entries would bury the hundred and thirty-one that are the point.");
+    let none = number_zero_is(chapters_here);
+    if (none) {
+      return;
+    }
     let bible = {
       bible_folder,
       marks: marks_here,
