@@ -79,7 +79,7 @@ export function js_statements_change_cases() {
     },
     {
       before: ["work(a);", "work(b);", "work(c);"],
-      after: ["work(x);", "work(y);", "work(z);"],
+      after: ["work(a);", "work(y);", "work(z);"],
       named: "statements replaced",
       why: "two out and two in and the run the length it was, with one statement still standing where it stood - which is a handful of lines swapped rather than a body thrown away, and it used to be counted as the second",
     },
