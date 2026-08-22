@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { g_sermon_chapters_written } from "./g_sermon_chapters_written.mjs";
 import { list_get } from "./list_get.mjs";
 import { g_arc_prompt_chapter_role } from "./g_arc_prompt_chapter_role.mjs";
@@ -7,9 +8,7 @@ import { add_1 } from "./add_1.mjs";
 import { text_size } from "./text_size.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_prompt_chapter_role_gate_run() {
   "QA gate: prove the arc prompt still renders for both roles, and that the number it is asked for still reaches the person it names.";
   "NOTHING RAN THIS BEFORE. It is the one call that gathers every argument the prompt needs, so its shape changes whenever any of them does - and its arity changed twice with nothing calling it but a human at a terminal. A wrong count throws on the first call, which means it was found by whoever next asked for a prompt rather than by the commit that broke it.";
@@ -39,8 +38,7 @@ export async function g_arc_prompt_chapter_role_gate_run() {
   let differing = 0;
   for (let index = 1; less_than(index, tried); index++) {
     let other = await g_arc_prompt_chapter_role(chapter, false, index);
-    let same = equal(other, convert);
-    let apart = not(same);
+    let apart = equal_not(other, convert);
     if (apart) {
       differing = add_1(differing);
     }
