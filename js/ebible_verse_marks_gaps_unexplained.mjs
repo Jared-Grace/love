@@ -1,15 +1,10 @@
-import { ebible_verse_marks_gaps_unexplained_displaced_bible_note } from "./ebible_verse_marks_gaps_unexplained_displaced_bible_note.mjs";
+import { ebible_verse_marks_gaps_unexplained_grouped } from "./ebible_verse_marks_gaps_unexplained_grouped.mjs";
 import { ebible_verse_marks_gaps_unexplained_bible_summary } from "./ebible_verse_marks_gaps_unexplained_bible_summary.mjs";
-import { ebible_verse_marks_gaps_unexplained_gaps_bible_read } from "./ebible_verse_marks_gaps_unexplained_gaps_bible_read.mjs";
-import { ebible_letter_accounted } from "./ebible_letter_accounted.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_verse_marks_gaps_measure } from "./ebible_verse_marks_gaps_measure.mjs";
 import { ebible_verse_marks_displaced_measure } from "./ebible_verse_marks_displaced_measure.mjs";
 import { property_get } from "./property_get.mjs";
-import { each } from "./each.mjs";
-import { ebible_verse_gaps_critical_text_omitted } from "./ebible_verse_gaps_critical_text_omitted.mjs";
-import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function ebible_verse_marks_gaps_unexplained() {
   "Every verse number a chapter leaves out that neither the known publishing fault nor the known textual omissions account for, gathered under the translation it is in.";
@@ -22,34 +17,14 @@ export async function ebible_verse_marks_gaps_unexplained() {
   let gaps_measured = await ebible_verse_marks_gaps_measure();
   let displaced_measured = await ebible_verse_marks_displaced_measure();
   let displaced_chapters = [];
-  function displaced_bible_note(bible) {
-    let r3 = ebible_verse_marks_gaps_unexplained_displaced_bible_note(
-      bible,
-      displaced_chapters,
-    );
-    return r3;
-  }
-  let list = property_get(displaced_measured, "bibles");
-  each(list, displaced_bible_note);
-  let omitted = ebible_verse_gaps_critical_text_omitted();
-  let accounted = await ebible_letter_accounted();
-  let rows = [];
-  function gaps_bible_read(bible) {
-    let r = ebible_verse_marks_gaps_unexplained_gaps_bible_read(
-      bible,
-      displaced_chapters,
-      accounted,
-      omitted,
-      rows,
-    );
-    return r;
-  }
-  let list2 = property_get(gaps_measured, "bibles");
-  each(list2, gaps_bible_read);
-  let grouped = list_group_by_property(rows, "bible_folder");
+  let grouped = await ebible_verse_marks_gaps_unexplained_grouped(
+    displaced_chapters,
+    displaced_measured,
+    gaps_measured,
+  );
   async function bible_summary(group) {
-    let r2 = await ebible_verse_marks_gaps_unexplained_bible_summary(group);
-    return r2;
+    let r = await ebible_verse_marks_gaps_unexplained_bible_summary(group);
+    return r;
   }
   let summaries = await list_map_async(grouped, bible_summary);
   function gaps_of(summary) {
