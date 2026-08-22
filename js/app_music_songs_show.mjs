@@ -14,6 +14,8 @@ export function app_music_songs_show(parent) {
     function lambda$go() {
       html_hash_name_reload(song.hash_name);
     }
-    app_shared_button_wide(parent, song.title, lambda$go);
+    let button = app_shared_button_wide(parent, song.title, lambda$go);
+    ("each song stands off from the one above it by the gap this app spaces stacked buttons by, which is the same gap the buttons on a song's own page keep - so a reader moving between the two pages meets one rhythm rather than two. Left touching, several songs read as one block to choose within rather than as several things to choose between.");
+    app_shared_button_gap_above(button);
   }
 }
