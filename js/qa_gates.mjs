@@ -737,6 +737,7 @@ export function qa_gates() {
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,
     js_dollar_choices_parameters_gate_run,
+    song_god_our_savior_glosses_gate_run,
   ];
   return gates;
 }
