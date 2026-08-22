@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words } from "./bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words.mjs";
 import { bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_stems } from "./bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_stems.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
@@ -11,7 +12,6 @@ import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_take } from "./list_take.mjs";
 import { text_words } from "./text_words.mjs";
-import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 export async function bible_glyph_chapters_undrawn_artwork(count) {
   "$plain count";
@@ -43,7 +43,10 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   let weighed = [];
   for (let candidate of candidates) {
     let gloss = property_get(candidate, "gloss");
-    let words = bible_glyph_chapters_undrawn_artwork_words(gloss);
+    let words =
+      bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_words(
+        gloss,
+      );
     let assets = [];
     let seated = [];
     for (let entry of lowered_names) {
@@ -91,21 +94,6 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
     needs_drawing,
   };
   return r;
-  function bible_glyph_chapters_undrawn_artwork_words(gloss) {
-    "the words of a wording worth searching the artwork set for.";
-    "THE SHORT ONES ARE DROPPED because they are the grammar the interlinear wrapped the word in - of, the, in, his - and every one of them appears inside some name the set holds, so leaving them in matches the whole set for every candidate and says nothing.";
-    let lowered = text_lower_to(gloss);
-    let all = text_words(lowered);
-    let kept = [];
-    for (let word of all) {
-      let short = less_than(word.length, 4);
-      if (short) {
-        continue;
-      }
-      list_add(kept, word);
-    }
-    return kept;
-  }
   function bible_glyph_chapters_undrawn_artwork_carries(name_words, words) {
     "whether one of the set's names carries any of the words being looked for.";
     "IT MATCHES WORD AGAINST WORD AND NEVER INTO THE MIDDLE OF ONE. The first version asked whether the name held the letters anywhere, and the word for righteousness - which the interlinear prints as and right - came back with copyright and with a bright button. A syllable landing inside an unrelated name is not a lead, it is noise wearing the shape of one, and it arrives in bulk: that one word matched thirty-four names.";
