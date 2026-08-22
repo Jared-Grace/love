@@ -1,3 +1,6 @@
+import { html_width_full } from "./html_width_full.mjs";
+import { html_style_min_width } from "./html_style_min_width.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { bible_dream_drawing_scale } from "./bible_dream_drawing_scale.mjs";
 import { multiply } from "./multiply.mjs";
 import { html_element_svg } from "./html_element_svg.mjs";
@@ -9,12 +12,12 @@ export function bible_dream_scene_drawing_add(root, scene) {
   "It refuses the browser's own touch gestures over itself, because a drag on a phone is a scroll everywhere else and here it is the whole game.";
   let drawing = html_element_svg(root, "svg");
   html_attribute_set(drawing, "viewBox", scene.view_box);
-  html_style_set(drawing, "width", "100%");
+  html_width_full(drawing);
   let across = Number(scene.view_box.split(" ")[2]);
   let right = bible_dream_drawing_scale();
   let least_wide = multiply(across, right);
-  html_style_set(drawing, "min-width", least_wide + "px");
-  html_style_set(drawing, "margin-top", "10px");
+  html_style_min_width(drawing, least_wide + "px");
+  html_style_margin_top(drawing, "10px");
   html_style_set(drawing, "touch-action", "none");
   return drawing;
 }

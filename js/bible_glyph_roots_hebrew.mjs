@@ -988,6 +988,40 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "tson",
+      gloss: "sheep, a flock",
+      words: [
+        {
+          strong: "6629",
+          glyph: "sheep",
+        },
+      ],
+    },
+    {
+      root: "raah",
+      gloss: "to shepherd, to pasture, a shepherd",
+      words: [
+        {
+          strong: "7462",
+          glyph: "person+sheep",
+        },
+      ],
+    },
+    {
+      root: "mashach",
+      gloss: "to anoint, the anointed one",
+      words: [
+        {
+          strong: "4886",
+          glyph: "oil",
+        },
+        {
+          strong: "4899",
+          glyph: "oil",
+        },
+      ],
+    },
   ];
   return roots;
 }
