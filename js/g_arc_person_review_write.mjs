@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { g_arc_write_path } from "./g_arc_write_path.mjs";
@@ -12,8 +13,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { folder_user_join } from "./folder_user_join.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { text_size } from "./text_size.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_person_review_write(chapter_code, index) {
   "One written person, laid out with the Scripture of every answer, written where the human already goes to read one.";
   "$plain chapter_code";
@@ -26,8 +25,7 @@ export async function g_arc_person_review_write(chapter_code, index) {
   let written = property_get(chapter, "arcs");
   let wanted = number_from_text(index);
   let found = g_arc_chapter_person_or_null(written, wanted);
-  let missing = equal(found, null);
-  let there = not(missing);
+  let there = equal_not(found, null);
   let f_name = fn_name("g_arc_written_gate_run");
   assert_json(there, {
     chapter_code,
