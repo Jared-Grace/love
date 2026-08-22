@@ -1,3 +1,4 @@
+import { html_attribute_set } from "./html_attribute_set.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_src_set } from "./html_src_set.mjs";
@@ -34,6 +35,7 @@ export function song_image_audit_picture(parent, key, kept) {
     " and ",
     fn_name("html_img"),
     " hand back is a wrapped component and not the element itself. Writing picture.src on the wrapper is accepted in silence: the property lands on the wrapper, nothing throws, no gate goes red, and the arrows move the number under the picture while the picture never changes at all - which is exactly how this was found, by a human clicking them.");
+  ("the picture is marked lazy and async because there are thirty-two of these on the page and every one of them is a full square drawing about a thousand pixels on a side, shown at a fraction of that. Loaded eagerly the browser holds all thirty-two decoded at once, which is what made the page heavy to scroll; lazy leaves a row's drawing unfetched until it is nearly on screen, and async keeps the decoding off the thread that is doing the scrolling. The arrows still work, because changing src on an image already on screen fetches straight away.");
   let known = song_image_drawn_attempts_known();
   let text_key = String(key);
   let attempts = property_exists(known, text_key)
@@ -44,6 +46,8 @@ export function song_image_audit_picture(parent, key, kept) {
   let shown = start;
   let src = song_image_drawn_url(key, attempts[shown]);
   let picture = html_img(parent, src);
+  html_attribute_set(picture, "loading", "lazy");
+  html_attribute_set(picture, "decoding", "async");
   html_style_set(picture, "width", "100%");
   html_style_set(picture, "display", "block");
   html_border_radius(picture, "8px");
