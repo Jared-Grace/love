@@ -16,6 +16,8 @@ export async function words_game_taught_glosses_defects_entry(
   glosses,
   defects,
 ) {
+  "Every taught word's written answer checked for the two things that make it unusable: a half of it left unwritten, and an answer leaning on words the reader has not been taught yet.";
+  "AN ANSWER THAT NEEDS ANOTHER ANSWER IS NOT AN ANSWER. A reader who taps a word to find out what it means and is handed three more words to tap has been sent further from the sentence they were reading, so the words a gloss may use are exactly the ones already taught.";
   arguments_assert(arguments, 3);
   for (let word of written) {
     let entry = property_get(glosses, word);

@@ -18,6 +18,8 @@ export async function g_arc_words_uncommon_record(
   said,
   homes,
 ) {
+  "Every written character arc read off disk and reduced to what was said: how many chapters and how many people there were, every spoken word tallied, which mouths said each one, where each was first heard, and the unusual words characters hand to one another.";
+  "A WORD HANDED FROM ONE CHARACTER TO ANOTHER IS KEPT ONCE PER MOUTH AND PER CHAPTER, because the same object carried through a scene is mentioned again and again, and a list counting every mention would report a prop as the rarest word in the game.";
   arguments_assert(arguments, 4);
   let mouths = {};
   let chapters = 0;

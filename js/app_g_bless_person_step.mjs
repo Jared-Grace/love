@@ -1,4 +1,6 @@
 import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
+import { app_g_bless_person_slide } from "./app_g_bless_person_slide.mjs";
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
@@ -53,4 +55,16 @@ export function app_g_bless_person_step(world, person) {
   }
   let to = property_get(tiles, way);
   app_shared_game_npc_move(person, to, 0);
+  ("The step is then made to LAST as long as the wait before their next one, so the");
+  ("picture is still crossing the tile when the following step is asked for and the person");
+  ("is walking rather than appearing a tile further on.");
+  ("It is set here, after the move, because the move writes the map's own quick length");
+  ("over whatever was there - so this is not a setting a person keeps, it is part of");
+  ("taking a step and has to be said again every time one is taken.");
+  ("No delay is wanted with it. A delay staggers a line of people who were all sent at the");
+  ("same instant, and nobody here is: everybody on this street already keeps their own");
+  ("clock, so there is nothing to spread out.");
+  let pace = property_get(person, "pace");
+  let seconds = divide(pace, 1000);
+  app_g_bless_person_slide(person, seconds);
 }

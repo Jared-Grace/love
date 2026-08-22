@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";

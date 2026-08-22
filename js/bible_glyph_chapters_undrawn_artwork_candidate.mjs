@@ -15,6 +15,8 @@ export function bible_glyph_chapters_undrawn_artwork_candidate(
   candidates,
   bridged,
 ) {
+  "Each undrawn word weighed against the artwork already sitting in the folder: which picture files carry its English words, and which of those files the table has already seated a picture on.";
+  "ONLY THE FIRST FEW MATCHES ARE KEPT, with the whole count beside them, because a word whose English is a common one matches hundreds of files and the untrimmed list would be the thing nobody could read.";
   arguments_assert(arguments, 4);
   for (let name of names) {
     let lowered = text_lower_to(name);
