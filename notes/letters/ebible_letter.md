@@ -215,17 +215,20 @@ The same thing, in these chapters, with the skipped number in brackets:
 - jni — JHN01 (6, 7 and 8)
 - jid — MRK16 (13)
 
-Two more do the same thing, but their read-aloud editions are short in exactly the same
-places, so there the numbering is the source text's own and the two editions agree. We
-list them because the words are still on the page with no number on them, so a link to
+These chapters do the same thing, but their read-aloud editions are short in exactly the
+same places, so there the numbering is the source text's own and the two editions agree.
+We list them because the words are still on the page with no number on them, so a link to
 the verse lands nowhere:
 
 - bsj — MAT12 (30), MAT15 (26), JHN01 (21), JHN10 (35), JHN13 (9), 3JN01 (6), REV14 (9)
+- uigara — PRO26 (19), EZK18 (11)
 - dji — GEN25 (15)
 
 For bsj MAT12 the words of verse 30 — 'whoever is not with me is against me, and whoever
-does not gather with me scatters' — are the tail of verse 29. For dji GEN25 the five names
-of verse 15 are the tail of verse 14.
+does not gather with me scatters' — are the tail of verse 29. For uigara PRO26 verse 18
+is one line of the couplet and verse 19's line follows it unnumbered; for uigara EZK18
+the words of verse 11 are the tail of verse 10. For dji GEN25 the five names of verse 15
+are the tail of verse 14.
 
 https://ebible.org/bsj/JHN10.htm is worth a separate look. Verse 34 ends with a bare '36'
 sitting in the running text, with no marker around it, and the words after it are verse 35:
