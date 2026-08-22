@@ -5,7 +5,8 @@ export function word_picture_chosen() {
   let r = {
  "cross": 2,
  "dyer": 2,
- "offer": 2
+ "offer": 2,
+ "fellowship": 1
 };
   return r;
 }
