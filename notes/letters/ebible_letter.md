@@ -190,10 +190,17 @@ The same thing, in these chapters, with the skipped number in brackets:
 Two of those are worth a word. jni JHN01 is missing the three verses about the man
 sent from God. jid MRK16 has the long ending, so verse 13 belongs in it.
 
-One note on how we found these. We laid every chapter's verse numbers against the same
-chapter in the other 398 translations we carry. A number missing from six translations
-at once is that tradition's numbering, and we left those alone. The ones above are
-missing from one translation on its own.
+One note on how we found these, and on what we left out. We laid every chapter's verse
+numbers against the same chapter in the other 398 translations we carry.
+
+We dropped anything that eight or more translations agreed on. That turned out to be
+exactly the sixteen verses the critical texts omit — Matthew 17:21, Mark 9:44, Acts
+8:37 and the rest — so those are a translation's own decision about its text.
+
+We also dropped every translation that skips a whole chapter. If a translation has no
+Genesis 5 at all, then verses missing inside its Genesis 4 are the same editorial
+choice, not a fault. That rules out the ones still being translated and the selection
+editions.
 
 Where we cannot read a chapter, we pass it over rather than show it, and pick it up
 whenever a corrected download appears. At present neither Brenton edition shows Psalm
