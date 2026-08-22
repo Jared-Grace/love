@@ -1,10 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
 import { youtube_video_description_write } from "./youtube_video_description_write.mjs";
 import { psalms_video_description } from "./psalms_video_description.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 export async function psalms_video_description_write(video_id) {
   "$plain video_id";
   "Puts under one sung Psalm the words it is actually of, worked out from the name it now wears.";
@@ -26,8 +26,7 @@ export async function psalms_video_description_write(video_id) {
     };
     return refused;
   }
-  let description_now = property_get(snippet, "description");
-  let already = equal(description_now, wanted);
+  let already = property_equals(snippet, "description", wanted);
   if (already) {
     let agreed = {
       video_id,
