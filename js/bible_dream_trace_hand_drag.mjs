@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_dream_drawing_point } from "./bible_dream_drawing_point.mjs";
 import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
@@ -31,8 +32,7 @@ export function bible_dream_trace_hand_drag(
   if (not(active)) {
     return;
   }
-  let latched = property_get(hand, "latched");
-  let held_still_asked = not(latched);
+  let held_still_asked = property_not(hand, "latched");
   if (held_still_asked) {
     let buttons_none = equal(event.buttons, 0);
     if (buttons_none) {
