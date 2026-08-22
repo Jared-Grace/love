@@ -10,8 +10,7 @@ export async function function_prose_add(f_name, sentence) {
   "The sentence is quoted before it is written, so nothing handed in here can arrive as code. That is what keeps the command approvable once rather than at every use.";
   arguments_assert(arguments, 2);
   function lambda(ast) {
-    let statement = js_prose_statement(sentence);
-    js_flo_body_add_after_prose(ast, statement);
+    js_flo_prose_add(ast, sentence);
   }
   let output = await function_transform_auto(f_name, lambda);
   return output;
