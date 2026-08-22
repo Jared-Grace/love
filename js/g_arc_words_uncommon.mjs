@@ -1,17 +1,11 @@
+import { g_arc_words_uncommon_record } from "./g_arc_words_uncommon_record.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
-import { g_arc_words_carried } from "./g_arc_words_carried.mjs";
-import { words_early_reader } from "./words_early_reader.mjs";
 import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
-import { list_join_space } from "./list_join_space.mjs";
 import { g_arc_written_files_or_null } from "./g_arc_written_files_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { add_1 } from "./add_1.mjs";
-import { g_arc_words_said } from "./g_arc_words_said.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_or_null } from "./property_or_null.mjs";
-import { list_tally } from "./list_tally.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
@@ -46,63 +40,13 @@ export async function g_arc_words_uncommon() {
   let said = [];
   let carried_words = [];
   let homes = {};
-  let mouths = {};
-  let chapters = 0;
-  let people = 0;
-  for (let file of files) {
-    let chapter = await file_read_json(file);
-    let chapter_code = property_get(chapter, "chapter_code");
-    let written = property_get(chapter, "arcs");
-    chapters = add_1(chapters);
-    for (let entry of written) {
-      people = add_1(people);
-      let index = property_get(entry, "index");
-      let arc = property_get(entry, "arc");
-      let spoken = g_arc_words_said(arc);
-      let handed = g_arc_words_carried(arc);
-      for (let word of handed) {
-        list_add(carried_words, {
-          word,
-          chapter_code,
-          index,
-        });
-      }
-      let mouth = list_join_space([chapter_code, index]);
-      for (let word of spoken) {
-        list_add(said, word);
-        let home = property_or_null(homes, word);
-        let first = equal(home, null);
-        if (first) {
-          homes[word] = {
-            chapter_code,
-            index,
-          };
-          mouths[word] = {};
-        }
-        mouths[word][mouth] = true;
-      }
-    }
-  }
-  let counts = list_tally(said);
-  let known_words = await words_early_reader();
-  let carried = [];
-  let carried_seen = {};
-  for (let record of carried_words) {
-    let carried_word = property_get(record, "word");
-    let ordinary = word_early_reader_known_is(carried_word, known_words);
-    let unusual = not(ordinary);
-    if (unusual) {
-      let carried_chapter = property_get(record, "chapter_code");
-      let carried_index = property_get(record, "index");
-      let key = list_join_space([carried_chapter, carried_index, carried_word]);
-      let met = property_or_null(carried_seen, key);
-      let new_here = equal(met, null);
-      if (new_here) {
-        carried_seen[key] = true;
-        list_add(carried, record);
-      }
-    }
-  }
+  let r2 = await g_arc_words_uncommon_record(files, carried_words, said, homes);
+  let carried = property_get(r2, "carried");
+  let known_words = property_get(r2, "known_words");
+  let counts = property_get(r2, "counts");
+  let people = property_get(r2, "people");
+  let chapters = property_get(r2, "chapters");
+  let mouths = property_get(r2, "mouths");
   let once = [];
   let own = [];
   let words = 0;
