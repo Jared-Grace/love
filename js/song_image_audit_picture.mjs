@@ -1,9 +1,8 @@
+import { song_image_audit_picture_on } from "./song_image_audit_picture_on.mjs";
 import { song_image_audit_picture_shown } from "./song_image_audit_picture_shown.mjs";
 import { song_image_audit_picture_strip } from "./song_image_audit_picture_strip.mjs";
 import { song_image_audit_picture_kept_now } from "./song_image_audit_picture_kept_now.mjs";
 import { song_image_audit_picture_redraw } from "./song_image_audit_picture_redraw.mjs";
-import { html_style_flex } from "./html_style_flex.mjs";
-import { html_text_align } from "./html_text_align.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
@@ -85,9 +84,7 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_padding(back, "4px 12px");
   html_cursor_pointer(back);
   let attempt_line = song_image_text_quiet_line(strip);
-  html_style_flex(attempt_line, "1 1 auto");
-  html_text_align(attempt_line, "center");
-  let on = html_button(strip, "›", on_click);
+  let on = song_image_audit_picture_on(attempt_line, strip, on_click);
   html_style_padding(on, "4px 12px");
   html_cursor_pointer(on);
   let keep = html_button(strip, "keep", keep_click);
