@@ -73,9 +73,9 @@ export function song_image_couplet_glosses() {
     },
     9: {
       kept: 1,
-      lyric_ref: "Psalm 107:14, Isaiah 61:1, Colossians 2:14",
+      lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
-        "The same two lines as couplet 8, sung a second time to a different melody. The debt is Paul's word for it in Colossians 2:14, blotted out and nailed to the cross; the deliverance is the psalm's, HE brake their bands in sunder.",
+        "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
       symbol_explain:
         "Described, and drawn as a second emblem rather than as the first one shown twice. Couplet 8 draws the debt itself, the blank bond nailed up; this draws what the payment did, which Psalm 107:14 says as HE brake their bands in sunder and Isaiah 61:1 as the opening of the prison to them that are bound. A fetter broken clean through is one grey shape anybody reads at a glance, and it collides with nothing else in the table.",
     },
