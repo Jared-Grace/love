@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_written_person_assert(chapter_code, index) {
   "One person's written arc, fetched out of the chapter it was written against, refusing outright if that chapter holds no arc for them.";
   "$plain chapter_code";
@@ -13,8 +12,7 @@ export async function g_arc_written_person_assert(chapter_code, index) {
   arguments_assert(arguments, 2);
   let arcs = await g_arc_written_chapter(chapter_code);
   let found = g_arc_chapter_person_or_null(arcs, index);
-  let missing = equal(found, null);
-  let there = not(missing);
+  let there = equal_not(found, null);
   assert_json(there, {
     chapter_code,
     index,
