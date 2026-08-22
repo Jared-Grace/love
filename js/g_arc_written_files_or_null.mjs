@@ -4,7 +4,6 @@ import { folder_user_storage_function_path } from "./folder_user_storage_functio
 import { folder_exists } from "./folder_exists.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
 import { not } from "./not.mjs";
-
 export async function g_arc_written_files_or_null() {
   "The file of every chapter that has written arcs in it, or nothing at all when the store has never been written to.";
   "IT ANSWERS NOTHING RATHER THAN AN EMPTY LIST, and the two are different questions. A store that was never written to and a store holding a chapter with no arcs in it both walk to zero, so a reader handed an empty list cannot tell a fresh machine from a real finding - and every caller here has to tell them apart, because one is right and the other is the thing worth looking at.";
