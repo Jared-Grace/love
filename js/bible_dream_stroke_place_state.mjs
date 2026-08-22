@@ -17,6 +17,8 @@ export function bible_dream_stroke_place_state(
   guide,
   marks,
 ) {
+  "One stroke of a dream made ready to be traced: its line drawn hidden, measured, and broken into points, with everything the tracing will need to remember about it gathered into a single record.";
+  "THE LINE IS HIDDEN BY ITS OWN LENGTH. The dashes are set as long as the whole stroke and pushed exactly that far along, so nothing shows until the tracing pulls them back - which is what lets the drawing appear at the speed of the hand rather than all at once.";
   arguments_assert(arguments, 6);
   let ink_color = app_shared_color_white();
   html_attribute_set(ink, "stroke", ink_color);

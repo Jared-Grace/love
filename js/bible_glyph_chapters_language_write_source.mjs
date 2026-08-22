@@ -14,6 +14,8 @@ export async function bible_glyph_chapters_language_write_source(
   written_name,
   language_word,
 ) {
+  "Every chapter of one translation read out of storage and turned into the text of a written file holding them all, with the chapters that came back with nothing gathered separately.";
+  "A CHAPTER THAT CAME BACK EMPTY IS NAMED RATHER THAN PASSED OVER IN SILENCE, because an empty answer from storage looks exactly like a chapter that has no verses, and only a person can tell those two apart.";
   arguments_assert(arguments, 6);
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");

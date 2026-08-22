@@ -17,9 +17,16 @@ export function bless_pace_ms(fraction) {
   ("Nobody is ever entirely still. Somebody who never moves at all is scenery, and a");
   ("player who prayed for them and came back an hour later would find them exactly where");
   ("they were - which says the world stopped, not that the person is standing about.");
+  ("The slowest is a little over five times the wait of the quickest, and the top of that");
+  ("range came down a long way once a person's step began to LAST their whole wait rather");
+  ("than being over in a moment. While the step was quick, this number only said how long");
+  ("somebody stood between steps and a very long one merely made them rare to see move;");
+  ("now it is how long they take to cross a single tile, and a wait of twenty seconds is a");
+  ("person creeping so slowly that no eye could tell them from scenery. Five times over is");
+  ("as far apart as two people can be while both are plainly walking.");
   let squared = multiply(fraction, fraction);
   let cubed = multiply(squared, fraction);
-  let stretched = multiply(cubed, 20000);
+  let stretched = multiply(cubed, 3300);
   let ms = add(700, stretched);
   return ms;
 }

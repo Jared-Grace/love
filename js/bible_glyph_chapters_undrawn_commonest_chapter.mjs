@@ -20,6 +20,8 @@ export async function bible_glyph_chapters_undrawn_commonest_chapter(
   strongs,
   chapters_seen,
 ) {
+  "Every authored picture chapter walked in turn, counting the words that have no picture: how often each one comes round, how many chapters it appears in, and every English wording it has been given - with the totals of how many words there were, how many were drawn, and how many were only placeholders.";
+  "IT TALLIES BY THE ORIGINAL WORD AND NOT BY ITS ENGLISH, because the same original is glossed differently from verse to verse and counting the wordings apart would hide how much one picture is worth. The wordings are kept beside the count so whoever draws it can see what it has been called.";
   arguments_assert(arguments, 7);
   let words_total = 0;
   let drawn_total = 0;

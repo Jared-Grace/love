@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { app_code_lessons_review_diff_shared_section } from "./app_code_lessons_review_diff_shared_section.mjs";
 import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_review_diff_shared_size.mjs";
 import { equal } from "./equal.mjs";
@@ -57,16 +58,28 @@ export async function app_code_lessons_review_diff_write(commit) {
       whole_run: equal(group.count, lessons_now),
       lessons: group.lessons,
       helpers: list_size(group.helpers),
+      had: group.had,
+      lessons_had: group.lessons_had,
       added: counts.added,
       taken: counts.taken,
       moved: counts.moved,
       diff_text,
     });
   }
-  let shared_smallest_first = list_sort_number_mapper(
-    shared_sized,
-    lines_touched,
-  );
+  ("A group no lesson the learner already had stands on is put at the end rather than left out. It is new writing, and it will be read with the new lessons it belongs to - but it is still a change since the commit, and a report that silently drops a whole class of change stops being an answer to what changed.");
+  ("The ordering says so instead: everything that touches a screen the learner has already seen comes first, cheapest first, and the new machinery follows it.");
+  let shared_had = [];
+  let shared_new = [];
+  for (let entry of shared_sized) {
+    if (greater_than(entry.had, 0)) {
+      shared_had.push(entry);
+      continue;
+    }
+    shared_new.push(entry);
+  }
+  let had_smallest_first = list_sort_number_mapper(shared_had, lines_touched);
+  let new_smallest_first = list_sort_number_mapper(shared_new, lines_touched);
+  let shared_smallest_first = had_smallest_first.concat(new_smallest_first);
   let shared_sections = list_map(
     shared_smallest_first,
     app_code_lessons_review_diff_shared_section,
