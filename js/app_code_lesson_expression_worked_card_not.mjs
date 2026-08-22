@@ -20,7 +20,7 @@ export function app_code_lesson_expression_worked_card_not(
     "One card rather than one per lesson, because the lessons that put a ! around something differ in what stands inside it, never in the three steps. It is deliberately not the same card as the one for two joining marks: there the middle step leaves a shorter line, here it leaves the whole line with a value already."
   );
   let worked = app_code_container_light_blue(root);
-  html_div_cycle_code(worked, ["For ", whole, ", we do ", inner, " first"]);
+  html_div_cycle_code(worked, ["For ", whole, ", we solve ", inner, " first"]);
   html_div_cycle_code(worked, [
     "",
     inner,

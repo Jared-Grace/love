@@ -8,7 +8,7 @@ export function app_code_lesson_expression_comparison_and_card_one_side(root) {
   ("One line became three, each carrying one step: what the comparison is worth, what putting that value back leaves, and what the line then is. The old line did all three at once, so the middle one - true && true, the shape the learner already knows appearing where the comparison stood - was never written down at all.");
   ("Then we have, and we repeat the line to value it, is the frame the both-sides parentheses card uses for the same move. Two lessons doing one thing one way is worth more than each reading best on its own.");
   app_code_container_light_blue_cycle_code_multiple(root, [
-    ["For ", "true && 1 < 2", ", we do ", "1 < 2", " before ", "&&"],
+    ["For ", "true && 1 < 2", ", we solve ", "1 < 2", " before ", "&&"],
     ["", "1 < 2", " is ", "true"],
     ["Then we have ", "true && true"],
     ["And ", "true && true", " is ", "true"],

@@ -36,7 +36,7 @@ export function app_code_lesson_cross_precedence_intro(params) {
     html_div_cycle_code(box, [
       "For ",
       expression,
-      ", we do ",
+      ", we solve ",
       sub,
       " first, which is ",
       t3,
