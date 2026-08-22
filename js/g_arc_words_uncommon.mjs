@@ -1,15 +1,9 @@
+import { g_arc_words_uncommon_word } from "./g_arc_words_uncommon_word.mjs";
 import { g_arc_words_uncommon_record } from "./g_arc_words_uncommon_record.mjs";
-import { list_size_equal } from "./list_size_equal.mjs";
-import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
 import { g_arc_written_files_or_null } from "./g_arc_written_files_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { add_1 } from "./add_1.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_words_uncommon() {
   "The two shapes a word a young reader will not have shows up in, taken over every arc written so far, each one carrying the person who said it - a word said once in the whole corpus, and a word said several times by one person and by nobody else.";
   "IT IS A REPORT AND NOT A GATE, deliberately. There is a list of the words a child of the settled reading age already has, and it is read below - but a list of ordinary English is not a list of every word a person may fairly say. A dyer says dye and a weaver says loom, and neither belongs on a list of what a six-year-old knows nor in a build that fails. So the list is used to SHORTEN what a human reads and never to decide anything, and what is left over is handed to somebody who can tell a trade from a barrier.";
@@ -46,45 +40,11 @@ export async function g_arc_words_uncommon() {
   let counts = property_get(r2, "counts");
   let people = property_get(r2, "people");
   let chapters = property_get(r2, "chapters");
-  let mouths = property_get(r2, "mouths");
-  let once = [];
-  let own = [];
-  let words = 0;
-  let known = 0;
-  for (let word of object_property_names(counts)) {
-    words = add_1(words);
-    let already = word_early_reader_known_is(word, known_words);
-    if (already) {
-      known = add_1(known);
-      continue;
-    }
-    let uses = property_get(counts, word);
-    let home = property_get(homes, word);
-    let chapter_code = property_get(home, "chapter_code");
-    let index = property_get(home, "index");
-    let alone = equal(uses, 1);
-    if (alone) {
-      list_add(once, {
-        word,
-        chapter_code,
-        index,
-      });
-    }
-    let again = not(alone);
-    if (again) {
-      let heard = property_get(mouths, word);
-      let list = object_property_names(heard);
-      let only = list_size_equal(list, 1);
-      if (only) {
-        list_add(own, {
-          word,
-          uses,
-          chapter_code,
-          index,
-        });
-      }
-    }
-  }
+  let r3 = g_arc_words_uncommon_word(r2, counts, known_words, homes);
+  let known = property_get(r3, "known");
+  let words = property_get(r3, "words");
+  let own = property_get(r3, "own");
+  let once = property_get(r3, "once");
   let r = {
     chapters,
     people,
