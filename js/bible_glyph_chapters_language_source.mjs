@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_language_written_mark } from "./bible_glyph_language_written_mark.mjs";
-export function bible_glyph_chapters_language_write_bible_glyph_chapters_language_source(
+export function bible_glyph_chapters_language_source(
   name_written,
   word,
   chapters_json,
