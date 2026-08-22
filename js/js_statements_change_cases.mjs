@@ -80,6 +80,18 @@ export function js_statements_change_cases() {
     {
       before: ["work(a);", "work(b);", "work(c);"],
       after: ["work(x);", "work(y);", "work(z);"],
+      named: "statements replaced",
+      why: "two out and two in and the run the length it was, with one statement still standing where it stood - which is a handful of lines swapped rather than a body thrown away, and it used to be counted as the second",
+    },
+    {
+      before: ["work(a);", "work(b);", "work(c);"],
+      after: ["work(a);", "work(x);"],
+      named: "statements added and removed",
+      why: "the run came out shorter, so as many did not go in as came out - no single command does that, and saying so is different from saying nothing survived",
+    },
+    {
+      before: ["work(a);", "work(b);", "work(c);"],
+      after: ["work(x);", "work(y);", "work(z);"],
       named: "the body rewritten",
       why: "nothing survives, and no command is being asked for - this is the bucket that stays honestly unnamed, and it earns its keep by being small",
     },
