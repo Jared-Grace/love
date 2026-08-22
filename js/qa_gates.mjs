@@ -473,6 +473,7 @@ export function qa_gates() {
     g_verify_chapter_asked_cases_gate_run,
     g_arc_written_gate_run,
     g_arc_shared_steps_gate_run,
+    g_npc_nicknames_gate_run,
     g_arc_prompt_chapter_role_gate_run,
     words_early_reader_gate_run,
     words_game_taught_glosses_gate_run,
