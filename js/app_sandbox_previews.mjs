@@ -43,6 +43,11 @@ export function app_sandbox_previews() {
     let r8 = m.bible_dream_prison_trace_preview;
     return r8;
   }
+  async function typing_box_load() {
+    let m = await import("./typing_box_preview.mjs");
+    let r9 = m.typing_box_preview;
+    return r9;
+  }
   let previews = {
     spinner_preview: spinner_load,
     week_calendar: week_calendar_load,
@@ -52,6 +57,7 @@ export function app_sandbox_previews() {
     second_takes: second_takes_load,
     dream_trace: dream_trace_load,
     dream_prison: dream_prison_load,
+    typing_box: typing_box_load,
   };
   return previews;
 }
