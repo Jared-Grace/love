@@ -1,3 +1,4 @@
+import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,14 +7,15 @@ import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function bible_glyph_chapter_marks_adjacent(chapter) {
-  "$plain chapter";
-  "the chapter is one stored picture Bible chapter. It is data to read and nothing that runs.";
+export function bible_glyph_chapter_marks_adjacent(chapter_code) {
+  "$plain chapter_code";
+  "the code names one chapter, spelled as the chapter codes spell it. It names a chapter to look up and nothing that runs.";
   "Every neighbouring pair of words in one chapter where the first ends in pictures and the second begins with them, with the marks on each side and whether they are the same.";
   "IT WALKS THE PAIRS AND NOT THE WORDS, because the thing being measured lives between two words rather than in either of them. A word ending in a semicolon separates itself from whatever follows, so the reading next door answers nothing for that end and the pair is skipped without a rule of its own here.";
   "THE MARKS ARE JOINED INTO ONE PIECE OF TEXT for comparing and for reporting, since a name list is what the store holds and a person reading the answer wants to see the two sides side by side.";
+  "IT ASKS FOR THE PARSED CHAPTER AND NEVER THE STORED ONE, which is the whole reason it takes a code rather than a chapter. The list of chapters hands back what an author typed - shorthand, where every word is still a piece of text - so a reading that walked it would find no pictures anywhere and answer nothing at all. That is exactly what this did when it was first written, and nothing threw: an empty answer to a question about ambiguity reads as good news.";
   arguments_assert(arguments, 1);
-  let chapter_code = property_get(chapter, "chapter_code");
+  let chapter = bible_glyph_chapter(chapter_code);
   let verses = property_get(chapter, "verses");
   let found = [];
   for (let verse of verses) {
