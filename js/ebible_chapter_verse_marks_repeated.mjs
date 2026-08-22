@@ -1,7 +1,6 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_verse_numbers } from "./ebible_chapter_verse_numbers.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,8 +22,7 @@ export async function ebible_chapter_verse_marks_repeated(
   let grouped = list_group_by_property(verse_numbers, "number");
   function repeated_is(group) {
     let items = property_get(group, "items");
-    let count = list_size(items);
-    let more_than_once = greater_than(count, 1);
+    let more_than_once = list_size_greater_than(items, 1);
     return more_than_once;
   }
   let repeated = list_filter(grouped, repeated_is);
