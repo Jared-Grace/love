@@ -1,3 +1,6 @@
+import { list_size } from "./list_size.mjs";
+import { add } from "./add.mjs";
+import { song_image_emblem_caption } from "./song_image_emblem_caption.mjs";
 import { song_image_couplet_repeat_numbers } from "./song_image_couplet_repeat_numbers.mjs";
 import { app_music_song_emblem_show } from "./app_music_song_emblem_show.mjs";
 import { not } from "./not.mjs";
@@ -51,8 +54,17 @@ export async function app_music_song_image_couplets_show(parent) {
       list_add_multiple(asked_all, shown.asked_list);
     }
     let numbers = song_image_couplet_repeat_numbers(couplet.n);
+    let count = list_size(numbers);
+    let position = 0;
     for (let number of numbers) {
-      let asked_emblem = app_music_song_emblem_show(folds, parent, number);
+      position = add(position, 1);
+      let caption = song_image_emblem_caption(position, count);
+      let asked_emblem = app_music_song_emblem_show(
+        folds,
+        parent,
+        number,
+        caption,
+      );
       list_add_multiple(asked_all, asked_emblem);
     }
   }
