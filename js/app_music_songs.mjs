@@ -1,3 +1,6 @@
+import { song_god_our_savior_title } from "./song_god_our_savior_title.mjs";
+import { app_music_song_god_our_savior_show } from "./app_music_song_god_our_savior_show.mjs";
+import { song_god_our_savior_references } from "./song_god_our_savior_references.mjs";
 import { song_image_couplets_references } from "./song_image_couplets_references.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
@@ -20,5 +23,14 @@ export function app_music_songs() {
     references: song_image_couplets_references,
   };
   list_add(songs, hymn);
+  let savior_title = song_god_our_savior_title();
+  let savior_hash_name = app_music_song_hash_name(savior_title);
+  let savior = {
+    title: savior_title,
+    hash_name: savior_hash_name,
+    show: app_music_song_god_our_savior_show,
+    references: song_god_our_savior_references,
+  };
+  list_add(songs, savior);
   return songs;
 }
