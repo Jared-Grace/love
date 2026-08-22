@@ -1,8 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
-import { app_shared_game_npc_cross_get } from "./app_shared_game_npc_cross_get.mjs";
+import { each } from "./each.mjs";
+import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs";
 import { g_img_square_style_transition_seconds } from "./g_img_square_style_transition_seconds.mjs";
 import { g_img_square_style_transition_timing } from "./g_img_square_style_transition_timing.mjs";
 import { bless_step_timing } from "./bless_step_timing.mjs";
@@ -21,23 +19,23 @@ export function app_g_bless_person_slide(person, seconds) {
   ("the same at every speed. The difference between somebody dawdling and somebody brisk");
   ("is the speed of their walking, and until the slide carries their pace there was");
   ("nowhere for that difference to be seen.");
-  ("Their cross goes with them at the same speed when they have one, because it is its");
-  ("own thing on the map rather than part of the picture - left at the shared length it");
-  ("would arrive first and hang over an empty square until the person caught up.");
+  ("Everything a person is made of is given the same length, and not only their picture.");
+  ("A cross over somebody and a light under them are their own things on the map rather");
+  ("than part of the picture - left at the shared length either one would arrive first and");
+  ("hang over an empty square until the person caught up.");
+  ("The parts are asked for as one list rather than named here. Named, a part added later");
+  ("keeps the map's quick length while the person keeps theirs, which is exactly the");
+  ("arrives-early fault above, in a piece nobody thought to visit.");
   ("The step is also given its SHAPE here, and not only its length. Length alone makes a");
   ("person take the right amount of time to cross a tile; it does nothing about their");
   ("crossing it at one unvarying rate, which is a piece being slid rather than somebody");
   ("walking. The two belong together because they are one act, and a caller who set the");
   ("length and forgot the shape would get the slow glide the length was meant to fix.");
   let timing = bless_step_timing();
-  let img = app_shared_game_npc_img_get(person);
-  g_img_square_style_transition_seconds(img, seconds);
-  g_img_square_style_transition_timing(img, timing);
-  let cross = app_shared_game_npc_cross_get(person);
-  let b = null_is(cross);
-  let crossed = not(b);
-  if (crossed) {
-    g_img_square_style_transition_seconds(cross, seconds);
-    g_img_square_style_transition_timing(cross, timing);
+  let elements = app_shared_game_npc_elements(person);
+  function element_slide(element) {
+    g_img_square_style_transition_seconds(element, seconds);
+    g_img_square_style_transition_timing(element, timing);
   }
+  each(elements, element_slide);
 }
