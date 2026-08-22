@@ -14,7 +14,8 @@ export function bible_glyph_chapters_marks_adjacent() {
   let chapters = bible_glyph_chapters();
   let touching = [];
   for (let chapter of chapters) {
-    let found = bible_glyph_chapter_marks_adjacent(chapter);
+    let chapter_code = property_get(chapter, "chapter_code");
+    let found = bible_glyph_chapter_marks_adjacent(chapter_code);
     list_add_multiple(touching, found);
   }
   let repeated = [];
