@@ -1,7 +1,6 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { bible_dream_hand_ribbon_text } from "./bible_dream_hand_ribbon_text.mjs";
 import { bible_dream_hand_mark_thickness } from "./bible_dream_hand_mark_thickness.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { html_element_svg } from "./html_element_svg.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -45,10 +44,8 @@ export function bible_dream_hand_segment_draw(state, points) {
   html_attribute_set(closing, "stop-opacity", value7);
   let piece = html_element_svg(marks, "path");
   let times = bible_dream_hand_mark_thickness();
-  let top = multiply(start.strength, times);
-  let half_start = divide(top, 2);
-  let top2 = multiply(end.strength, times);
-  let half_end = divide(top2, 2);
+  let half_start = multiply_divide(start.strength, times, 2);
+  let half_end = multiply_divide(end.strength, times, 2);
   let drawn = bible_dream_hand_ribbon_text(
     points[0],
     start,
