@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-export function bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because(
+export function bible_glyph_chapters_table_behind_because(
   deliberate_rows,
   chapter_code,
   glyph,
