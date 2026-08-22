@@ -1,7 +1,7 @@
+import { app_code_lessons_review_diff_shared_sized } from "./app_code_lessons_review_diff_shared_sized.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_code_lessons_review_diff_shared_section } from "./app_code_lessons_review_diff_shared_section.mjs";
 import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_review_diff_shared_size.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_code_lessons_review_diff_counted } from "./app_code_lessons_review_diff_counted.mjs";
@@ -48,24 +48,12 @@ export async function app_code_lessons_review_diff_write(commit) {
   ("THE SHARED HELPERS ARE IN THE SAME FILE, because a reading that stops short of them is not a reading of everything that changed. A helper two lessons share is edited by somebody who was thinking about one of them, and it lands on both screens; left out of the report it is the one kind of change nobody is ever handed.");
   ("They come after the lessons and are sized the same way, so the same rule applies twice over: within each part the cheap reading is done before the expensive one starts.");
   let lessons_now = review.lessons_now;
-  let shared_sized = [];
-  for (let group of review.shared_helpers_changed) {
-    let words = ["diff", commit, "HEAD", "--"].concat(group.helpers);
-    let diff_text = await git_folder_run(folder, words);
-    let counts = app_code_lessons_review_diff_counted(diff_text);
-    shared_sized.push({
-      count: group.count,
-      whole_run: equal(group.count, lessons_now),
-      lessons: group.lessons,
-      helpers: list_size(group.helpers),
-      had: group.had,
-      lessons_had: group.lessons_had,
-      added: counts.added,
-      taken: counts.taken,
-      moved: counts.moved,
-      diff_text,
-    });
-  }
+  let shared_sized = await app_code_lessons_review_diff_shared_sized(
+    folder,
+    commit,
+    review.shared_helpers_changed,
+    lessons_now,
+  );
   ("A group no lesson the learner already had stands on is put at the end rather than left out. It is new writing, and it will be read with the new lessons it belongs to - but it is still a change since the commit, and a report that silently drops a whole class of change stops being an answer to what changed.");
   ("The ordering says so instead: everything that touches a screen the learner has already seen comes first, cheapest first, and the new machinery follows it.");
   let shared_had = [];
