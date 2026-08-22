@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_letter_accounted } from "./ebible_letter_accounted.mjs";
 import { ebible_letter_accounted_is } from "./ebible_letter_accounted_is.mjs";
 import { ebible_bible_chapters_skipped } from "./ebible_bible_chapters_skipped.mjs";
@@ -15,7 +16,6 @@ import { ebible_verse_gap_name } from "./ebible_verse_gap_name.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function ebible_verse_marks_gaps_unexplained() {
@@ -87,8 +87,7 @@ export async function ebible_verse_marks_gaps_unexplained() {
       let chapter_code = property_get(item, "chapter_code");
       return chapter_code;
     }
-    let chapter_codes = list_map(items, chapter_code_of);
-    let list3 = list_unique(chapter_codes);
+    let list3 = list_map_unique(items, chapter_code_of);
     let chapters = list_size(list3);
     function name_of(item) {
       let name = property_get(item, "name");
