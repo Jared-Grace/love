@@ -1,3 +1,4 @@
+import { g_arc_person_replaced_write } from "./g_arc_person_replaced_write.mjs";
 import { g_arc_previous_write } from "./g_arc_previous_write.mjs";
 import { equal } from "./equal.mjs";
 import { g_arc_write_path } from "./g_arc_write_path.mjs";
@@ -6,10 +7,6 @@ import { g_arc_person_assert } from "./g_arc_person_assert.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_add } from "./list_add.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { json_format_to } from "./json_format_to.mjs";
-import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function g_arc_write(chapter_code, index, arc) {
   "Save one person's written arc into the chapter it answers from, replacing whatever was written for that same person and leaving every other arc of the chapter as it was.";
   "$plain chapter_code";
@@ -22,11 +19,6 @@ export async function g_arc_write(chapter_code, index, arc) {
   await g_arc_person_assert(index, arc, passages);
   let path = g_arc_write_path(chapter_code);
   let arcs = await g_arc_written_chapter(chapter_code);
-  function arc_other(other) {
-    let left = property_get(other, "index");
-    let neq = not_equal(left, index);
-    return neq;
-  }
   function arc_same(other) {
     let left = property_get(other, "index");
     let eq = equal(left, index);
@@ -37,15 +29,12 @@ export async function g_arc_write(chapter_code, index, arc) {
     let going = property_get(entry, "arc");
     await g_arc_previous_write(chapter_code, index, going);
   }
-  let others = list_filter(arcs, arc_other);
-  list_add(others, {
+  let written = await g_arc_person_replaced_write(
+    path,
+    arcs,
+    chapter_code,
     index,
     arc,
-  });
-  let contents = json_format_to({
-    chapter_code,
-    arcs: others,
-  });
-  await file_overwrite_uncached(path, contents);
-  return path;
+  );
+  return written;
 }
