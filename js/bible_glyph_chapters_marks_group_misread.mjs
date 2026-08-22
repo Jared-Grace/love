@@ -20,10 +20,12 @@ export function bible_glyph_chapters_marks_group_misread() {
   let touching = property_get(adjacent, "touching");
   let misread = [];
   for (let pair of touching) {
-    let before = bible_glyph_group_names(property_get(pair, "before"));
-    let after = bible_glyph_group_names(property_get(pair, "after"));
+    let glyph = property_get(pair, "before");
+    let before = bible_glyph_group_names(glyph);
+    let glyph2 = property_get(pair, "after");
+    let after = bible_glyph_group_names(glyph2);
     let joined = list_last(before) + "+" + list_first(after);
-    let spelled = vocabulary.includes(joined);
+    let spelled = list_includes(vocabulary, joined);
     if (spelled) {
       list_add(misread, {
         chapter_code: property_get(pair, "chapter_code"),
