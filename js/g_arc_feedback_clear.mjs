@@ -1,13 +1,7 @@
+import { g_arc_feedback_kept_write } from "./g_arc_feedback_kept_write.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { g_arc_feedback_write_path } from "./g_arc_feedback_write_path.mjs";
-import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { json_format_to } from "./json_format_to.mjs";
-import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { subtract } from "./subtract.mjs";
 export async function g_arc_feedback_clear(chapter_code, index) {
   "Drop every note standing against one person's arc, leaving the notes against everybody else in the chapter where they are, and say how many were dropped.";
   "$plain chapter_code";
