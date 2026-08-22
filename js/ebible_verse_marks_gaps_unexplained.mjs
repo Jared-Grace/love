@@ -1,7 +1,6 @@
+import { ebible_verse_marks_gaps_unexplained_bible_summary } from "./ebible_verse_marks_gaps_unexplained_bible_summary.mjs";
 import { ebible_verse_marks_gaps_unexplained_gaps_bible_read } from "./ebible_verse_marks_gaps_unexplained_gaps_bible_read.mjs";
-import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_letter_accounted } from "./ebible_letter_accounted.mjs";
-import { ebible_bible_chapters_skipped } from "./ebible_bible_chapters_skipped.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_verse_marks_gaps_measure } from "./ebible_verse_marks_gaps_measure.mjs";
@@ -12,9 +11,6 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { ebible_verse_gaps_critical_text_omitted } from "./ebible_verse_gaps_critical_text_omitted.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function ebible_verse_marks_gaps_unexplained() {
   "Every verse number a chapter leaves out that neither the known publishing fault nor the known textual omissions account for, gathered under the translation it is in.";
@@ -56,31 +52,8 @@ export async function ebible_verse_marks_gaps_unexplained() {
   each(list2, gaps_bible_read);
   let grouped = list_group_by_property(rows, "bible_folder");
   async function bible_summary(group) {
-    let bible_folder = property_get(group, "key");
-    let items = property_get(group, "items");
-    let gaps = list_size(items);
-    function chapter_code_of(item) {
-      let chapter_code = property_get(item, "chapter_code");
-      return chapter_code;
-    }
-    let list3 = list_map_unique(items, chapter_code_of);
-    let chapters = list_size(list3);
-    function name_of(item) {
-      let name = property_get(item, "name");
-      return name;
-    }
-    let names = list_map(items, name_of);
-    let examples = list_slice(names, 0, 5);
-    let skipped = await ebible_bible_chapters_skipped(bible_folder);
-    let chapters_skipped = list_size(skipped);
-    let summary = {
-      bible_folder,
-      gaps,
-      chapters,
-      chapters_skipped,
-      examples,
-    };
-    return summary;
+    let r2 = await ebible_verse_marks_gaps_unexplained_bible_summary(group);
+    return r2;
   }
   let summaries = await list_map_async(grouped, bible_summary);
   function gaps_of(summary) {
