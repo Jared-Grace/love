@@ -18,10 +18,10 @@ export function bible_scene_division_brief() {
     step: "scene division",
     what: "the unit that is read aloud once and rendered once, and how it is addressed",
     settled:
-      "a scene has exactly one reading; the accounts differ and the differences are Scripture; blended text is ruled out; the existing shape is a title with a list of passages",
-    open: "serial or primary-and-glossed for parallel accounts; how a quotation from another book is marked as such; how a depiction is addressed and shared between scenes; how a scene too long to hear in one sitting is handled",
+      "a scene has exactly one reading; the accounts differ and the differences are Scripture; blended text is ruled out; primary-and-glossed is the rendering, with serial offered as a second one generated from the same gathering; a scene keeps every parallel passage and marks which is primary",
+    open: "how a quotation from another book is marked as coming from elsewhere; which account is primary where the choice is not obvious; how a depiction is addressed and shared between scenes; how a scene too long to hear in one sitting is handled",
     forbidden:
-      "merging parallel accounts into one text; picking one account as the true one; a scene with two readings; gathering a Gospel before this is decided",
+      "merging parallel accounts into one text; picking one account as the true one; a scene with two readings; gathering a scene that keeps only its primary passage",
     done: "every Gospel can be gathered without later re-cutting, one afternoon on a hillside is drawn once, and nothing any of the four books says has been dropped",
   };
   return brief;
