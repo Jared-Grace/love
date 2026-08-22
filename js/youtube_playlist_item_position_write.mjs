@@ -1,7 +1,7 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_api_put } from "./youtube_api_put.mjs";
 import { youtube_playlist_item_snippet } from "./youtube_playlist_item_snippet.mjs";
-import { property_get } from "./property_get.mjs";
 export async function youtube_playlist_item_position_write(
   playlist_item_id,
   playlist_id,
@@ -25,8 +25,7 @@ export async function youtube_playlist_item_position_write(
     part: "snippet",
   };
   let answer = await youtube_api_put("playlistItems", params, body);
-  let snippet_after = property_get(answer, "snippet");
-  let position_after = property_get(snippet_after, "position");
+  let position_after = property_path_get_2(answer, "snippet", "position");
   let r = {
     playlist_item_id,
     video_id,
