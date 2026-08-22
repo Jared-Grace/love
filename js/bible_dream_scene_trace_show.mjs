@@ -1,12 +1,7 @@
 import { property_get } from "./property_get.mjs";
-import { bible_dream_scene_trace_show_on_leave } from "./bible_dream_scene_trace_show_on_leave.mjs";
-import { bible_dream_scene_words_show } from "./bible_dream_scene_words_show.mjs";
-import { bible_dream_scene_drawing_add } from "./bible_dream_scene_drawing_add.mjs";
+import { bible_dream_scene_trace_show_readout_show } from "./bible_dream_scene_trace_show_readout_show.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_on } from "./html_on.mjs";
-import { bible_dream_stroke_place } from "./bible_dream_stroke_place.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
 export function bible_dream_scene_trace_show(scene) {
   "Put one dream on a screen and let it be drawn: every stroke the passage gave, laid out faint and all at once, each waiting to be traced by dragging along it, in whatever order the player picks.";
   "★ IT KNOWS NOTHING ABOUT WHICH DREAM IT IS SHOWING, AND THAT IS THE CLAIM THE SECOND PASSAGE WAS BUILT TO TEST. Pharaoh's dream is a row of repeated shapes standing apart; the prison dreams are things stacked on and hanging off one another, with open strokes and closed ones mixed. If a scene needed its own code to be drawable then there is no mechanic here, only one passage with a picture painted for it. Everything that varies between the two lives in the scene, and everything here is the same for both.";
@@ -22,21 +17,13 @@ export function bible_dream_scene_trace_show(scene) {
   "Letting go of a latched stroke lifts the hand as any release would, so the line breaks where the player stopped rather than joining that place to wherever they press next.";
   "What is left here is the watching of the hand and nothing else. Making the words and making the surface both went to their own names, because neither of them has anything to do with a pointer, and a reader looking for what a drag does should not have to walk past twenty lines of laying out a page to reach it.";
   let root = html_body_div_page_dark();
-  let readout = bible_dream_scene_words_show(root, scene);
-  let drawing = bible_dream_scene_drawing_add(root, scene);
-  let states = [];
-  function each_stroke(stroke) {
-    let state = bible_dream_stroke_place(drawing, stroke);
-    list_add(states, state);
-  }
-  each(scene.strokes, each_stroke);
-  let told = [];
-  let r = bible_dream_scene_trace_show_on_leave(states, told, readout, drawing);
-  let on_leave = property_get(r, "on_leave");
-  let on_release = property_get(r, "on_release");
-  let on_drag = property_get(r, "on_drag");
-  let on_press = property_get(r, "on_press");
+  let r = bible_dream_scene_trace_show_readout_show(root, scene);
   let readout_show = property_get(r, "readout_show");
+  let on_press = property_get(r, "on_press");
+  let on_drag = property_get(r, "on_drag");
+  let on_release = property_get(r, "on_release");
+  let on_leave = property_get(r, "on_leave");
+  let drawing = property_get(r, "drawing");
   html_on(drawing, "pointerdown", on_press);
   html_on(drawing, "pointermove", on_drag);
   html_on(drawing, "pointerup", on_release);
