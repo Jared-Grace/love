@@ -1,6 +1,5 @@
+import { bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_stems } from "./bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_stems.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_artwork_names_available } from "./bible_glyph_artwork_names_available.mjs";
@@ -113,10 +112,11 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
     "A PREFIX STILL COUNTS, because the interlinear's English and the set's names inflect differently - commandments against command, keeping against keep - and demanding the two spell the same word throws those away. The shorter of the pair has to reach four letters for the same reason the grammar was dropped upstairs.";
     for (let word of words) {
       for (let name_word of name_words) {
-        let carries = bible_glyph_chapters_undrawn_artwork_stems(
-          word,
-          name_word,
-        );
+        let carries =
+          bible_glyph_chapters_undrawn_artwork_bible_glyph_chapters_undrawn_artwork_stems(
+            word,
+            name_word,
+          );
         if (carries) {
           let v = true;
           return v;
@@ -124,23 +124,6 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
       }
     }
     let v2 = false;
-    return v2;
-  }
-  function bible_glyph_chapters_undrawn_artwork_stems(word, name_word) {
-    "whether two words are the same word or one is the other's opening.";
-    let shorter = word;
-    let longer = name_word;
-    let swap = greater_than(word.length, name_word.length);
-    if (swap) {
-      shorter = name_word;
-      longer = word;
-    }
-    let too_short = less_than(shorter.length, 4);
-    if (too_short) {
-      let v = false;
-      return v;
-    }
-    let v2 = text_starts_with(longer, shorter);
     return v2;
   }
 }
