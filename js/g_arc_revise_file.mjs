@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -14,7 +15,6 @@ import { g_arc_write } from "./g_arc_write.mjs";
 import { g_arc_feedback_clear } from "./g_arc_feedback_clear.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   "$plain chapter_code";
@@ -30,8 +30,7 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   let index = number_from_text(index_text);
   let arcs = await g_arc_written_chapter(chapter_code);
   let found = g_arc_chapter_person_or_null(arcs, index);
-  let missing = equal(found, null);
-  let there = not(missing);
+  let there = equal_not(found, null);
   assert_json(there, {
     chapter_code,
     index,
