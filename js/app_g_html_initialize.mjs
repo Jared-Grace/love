@@ -9,7 +9,7 @@ import { html_hide_loadable } from "./html_hide_loadable.mjs";
 import { g_icon_cross_unpositioned } from "./g_icon_cross_unpositioned.mjs";
 import { html_scroll_none } from "./html_scroll_none.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_g_player_style_initialize } from "./app_g_player_style_initialize.mjs";
+import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -33,7 +33,7 @@ export function app_g_html_initialize(context) {
     height: "100%",
   });
   html_style_overflow_hidden(root);
-  app_g_player_style_initialize();
+  app_shared_game_player_style_initialize();
   let div_map_container = html_div(root);
   ("the camera is the PLAYER, so the map does not scroll by hand: overflow HIDDEN still lets the code set scrollLeft/scrollTop (unlike overflow clip), which is the only thing that ever moves this view — ",
     fn_name("app_shared_game_player_center"),
