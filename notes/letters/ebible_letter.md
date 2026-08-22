@@ -16,7 +16,7 @@ or merged freely without touching it.
 
 ---
 
-Subject: Nine problems in published files — one of them affects 131 translations
+Subject: Eleven problems in published files — one of them affects 131 translations
 
 Hello,
 
@@ -110,7 +110,35 @@ possible correction: the Apalaí New Testament's own terms. Nothing on the page 
 terms for the Apalaí text, so we cannot tell what it is offered on. We only carry
 translations whose terms we can read.
 
-**6. Proverbs 31:1–9 is in a different chapter in the two editions.**
+**6. Galatians is in two languages, and a verse is lost where they meet.**
+
+url: https://ebible.org/sbs/GAL02.htm
+
+quote(s): verse 9 ends 'Pamene Jemusi, Kefasi, na Yohane, enze na mbili ngati sandamila,
+pebezindikila cisomo cenze pa neo etilola'. Verse 11 begins 'Lyahanu linu Kefasi henza kwa
+Antioke, Chi ni mu kanina havusu bwe mpaata ya kwe kakuti ava foseze.'
+
+possible correction: Galatians 1 and Galatians 2:1–9 in Chikuahane, like the rest of the
+Bible. They are in a different language at present. Galatians 3 to 6 are in Chikuahane, and
+so are Matthew, John and Romans — those say 'Ireeza' for God and 'Jesu Kereste' for Jesus.
+Galatians 1 and 2:1–9 say 'Mulungu' and 'Yesu Kristu' and read as Chichewa.
+
+Verse 9 stops mid-sentence at the seam, and verse 10 is gone with it. There is no id="V10",
+and 'they asked us to remember the poor' is nowhere on the page.
+
+**7. Two verses are missing from Luke 4.**
+
+url: https://ebible.org/plj/LUK04.htm
+
+quote(s): verse 15 ends '…ar ni mbarǝm pita yari zo shirǝm den ti.' Then a blank line, then
+'<span class="verse" id="V18">18&#160;</span>&lt;&lt;Ruhu kǝ Babom Yam ra na demǝni'
+
+possible correction: verses 16 and 17 — Jesus coming to Nazareth, standing up to read, and
+being handed the scroll of Isaiah. The Isaiah words begin at verse 18 with nothing to
+introduce them. The read-aloud file plj_072_LUK_04_read.txt has the same hole, so both
+editions agree and it is the text itself that is short, not the numbering.
+
+**8. Proverbs 31:1–9 is in a different chapter in the two editions.**
 
 url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
 
@@ -124,7 +152,7 @@ possible correction: a note on the page, as eng-Brenton has for the same orderin
 'See chapter 24 for the content of chapter 30.' englxxup has no such note, and no
 PRO30.htm at all.
 
-**7. A colophon is numbered verse 1, after verse 13.**
+**9. A colophon is numbered verse 1, after verse 13.**
 
 url: https://ebible.org/engkjvcpb/ESG10.htm
 
@@ -136,7 +164,7 @@ possible correction: number it 14, or give it its own chapter. Starting the chap
 4 is right. Putting the Additions back into chapters 1, 3, 4, 5, 8 and 10 is a fair
 choice. But the colophon kept the number it had at 11:1, so it now prints as verse 1.
 
-**8. A heading reads 'A Psalms'.**
+**10. A heading reads 'A Psalms'.**
 
 url: https://ebible.org/engbsb/PSA003.htm
 
@@ -148,7 +176,7 @@ with each other and differ only from the rest of the book. I cannot tell from he
 whether it came from the source text or from the publishing, so we carry it as
 published.
 
-**9. A verse marker is missing. The words are there.**
+**11. A verse marker is missing. The words are there.**
 
 In each of these, the numbers skip one, and the missing verse's words sit inside the
 block before it. Where there is a read-aloud edition, it numbers them correctly. So the
@@ -186,6 +214,19 @@ The same thing, in these chapters, with the skipped number in brackets:
 - tsn — MRK15 (37), GAL04 (16)
 - jni — JHN01 (6, 7 and 8)
 - jid — MRK16 (13)
+
+Two more do the same thing, but their read-aloud editions are short in exactly the same
+places, so there the numbering is the source text's own and the two editions agree. We
+list them because the words are still on the page with no number on them, so a link to
+the verse lands nowhere:
+
+- bsj — MAT12 (30), MAT15 (26), MAT22 (45), JHN01 (21), JHN10 (35), JHN13 (9),
+  2TH03 (10), 3JN01 (6), REV14 (9)
+- dji — GEN25 (15)
+
+For bsj MAT12 the words of verse 30 — 'whoever is not with me is against me, and whoever
+does not gather with me scatters' — are the tail of verse 29. For dji GEN25 the five names
+of verse 15 are the tail of verse 14.
 
 Two of those are worth a word. jni JHN01 is missing the three verses about the man
 sent from God. jid MRK16 has the long ending, so verse 13 belongs in it.
