@@ -9,6 +9,10 @@ export async function song_image_draw_resume(number_text, polling_url) {
     let tries = 120;
     await bfl_draw_wait_write(polling_url, tries, path);
   }
-  let drawn = await song_image_couplet_attempt_write(number_text, draw_to_path);
+  let drawn = await song_image_couplet_attempt_write(
+    number_text,
+    "bfl",
+    draw_to_path,
+  );
   return drawn;
 }
