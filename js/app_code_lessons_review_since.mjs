@@ -1,4 +1,4 @@
-import { app_code_lessons_review_since_lesson_imports_of } from "./app_code_lessons_review_since_lesson_imports_of.mjs";
+import { app_code_lessons_review_since_lesson_reached_paths } from "./app_code_lessons_review_since_lesson_reached_paths.mjs";
 import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -12,7 +12,6 @@ import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -50,36 +49,16 @@ export async function app_code_lessons_review_since(commit) {
   ]);
   let changed_paths = text_lines_working(diff_text);
   let imports_remembered = {};
-  async function lesson_reached_paths(lesson_name) {
-    "the walk turns aside at any name outside the lesson prefix, which is what keeps it small: a lesson reaches the whole of the list and text machinery through its containers, and none of that is what this is asking about";
-    let seen = [lesson_name];
-    let waiting = [lesson_name];
-    let paths = [];
-    while (greater_than(list_size(waiting), 0)) {
-      let name = waiting.pop();
-      let reached_path = text_combine_multiple(["js/", name, ".mjs"]);
-      paths.push(reached_path);
-      let imported = await app_code_lessons_review_since_lesson_imports_of(
-        name,
-        imports_remembered,
-      );
-      for (let imported_name of imported) {
-        if (text_starts_with(imported_name, lesson_prefix)) {
-          if (list_includes(seen, imported_name)) {
-            continue;
-          }
-          seen.push(imported_name);
-          waiting.push(imported_name);
-        }
-      }
-    }
-    return paths;
-  }
   ("Which lessons reach a file is what tells a lesson's own writing apart from the machinery every lesson is built on, and it is counted rather than read off a list of words. A list of words goes stale the moment somebody adds a helper, and goes stale silently, which is the one way a reading like this fails without saying so.");
   ("A file only one lesson reaches is that lesson's writing. A file several lessons reach is shared, and it is reported once with how many lessons stand on it rather than turned into a complaint against each of them - the first run of this put all ninety-seven old lessons on the review list because the quiz machinery had been edited, which is a list nobody could have read.");
   let lessons_of_path = {};
   for (let lesson_name of names_after) {
-    let reached_paths = await lesson_reached_paths(lesson_name);
+    let reached_paths =
+      await app_code_lessons_review_since_lesson_reached_paths(
+        lesson_name,
+        imports_remembered,
+        lesson_prefix,
+      );
     for (let reached_path of reached_paths) {
       let holders = lessons_of_path[reached_path];
       if (not(holders)) {
