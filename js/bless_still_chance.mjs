@@ -11,14 +11,21 @@ export function bless_still_chance(walker) {
   ("somewhere.");
   ("A walker stops about one tick in ten, which is enough that no two walkers stay in step");
   ("and few enough that they plainly have somewhere to be.");
-  ("Somebody at home stops more often than not, because their whole business IS standing");
-  ("there. They are still given the odd step, which is what keeps them from being scenery -");
-  ("shifting a pace along your own doorstep is a thing a person does, and a person who has");
-  ("not moved a tile in ten minutes has become part of the building.");
+  ("Somebody at home stops about one tick in three, so they are MOSTLY moving even though");
+  ("standing there is their whole business. That is not a contradiction: a person on their");
+  ("own doorstep still shifts about constantly, and it is the size of what they do rather");
+  ("than the frequency of it that says they are at home - they move a pace and come back,");
+  ("while a walker's paces add up and take them out of sight.");
+  ("It used to be the other way round, stopping more often than not, and the street was");
+  ("wrong for it. Three people in four live at a door, so their answer is very nearly the");
+  ("street's answer, and at better than even odds each of them was standing through most of");
+  ("a stretch of turns - which read as a crowd waiting for something rather than a crowd");
+  ("going about its day. A pavement is only still when everybody on it has stopped to");
+  ("listen to somebody, and nobody here is speaking.");
   if (walker) {
     let going = 0.1;
     return going;
   }
-  let home = 0.55;
+  let home = 0.3;
   return home;
 }
