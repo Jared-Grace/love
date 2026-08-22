@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_referenced } from "./g_arc_review_line_apply_referenced.mjs";
 import { g_arc_review_line_apply_opened } from "./g_arc_review_line_apply_opened.mjs";
 import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
 import { g_arc_review_line_apply_started } from "./g_arc_review_line_apply_started.mjs";
@@ -59,8 +60,7 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(state, "opener", opener);
     return;
   }
-  let prefix7 = property_get(marks, "reference");
-  let referenced = text_starts_with(line, prefix7);
+  let referenced = g_arc_review_line_apply_referenced(marks, line);
   if (referenced) {
     let prefix8 = property_get(marks, "reference");
     let reference = text_prefix_without(line, prefix8);
