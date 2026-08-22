@@ -71,6 +71,8 @@ export function app_search_results_book_card(
       ("the scrolling comes first because it costs no waiting: the reader sees the card land where they can read it while the verses inside it are still arriving");
       await html_scroll_center(div_book);
       await chapters_single_expand();
+      ("opening this card can fetch the verses inside it, and the button above the page is lit while any verse is still empty; the folding asked before the fetch, so the answer it got was about the page as it stood a moment ago");
+      app_shared_folds_refresh(book_folds);
     }
   }
   html_on_click(header, toggle);
