@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_afterward } from "./g_arc_review_line_apply_afterward.mjs";
 import { g_arc_review_line_apply_referenced } from "./g_arc_review_line_apply_referenced.mjs";
 import { g_arc_review_line_apply_opened } from "./g_arc_review_line_apply_opened.mjs";
 import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
@@ -68,8 +69,7 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(object2, "reference", reference);
     return;
   }
-  let prefix9 = property_get(marks, "after");
-  let afterward = text_starts_with(line, prefix9);
+  let afterward = g_arc_review_line_apply_afterward(marks, line);
   if (afterward) {
     let prefix10 = property_get(marks, "after");
     let after = text_prefix_without(line, prefix10);
