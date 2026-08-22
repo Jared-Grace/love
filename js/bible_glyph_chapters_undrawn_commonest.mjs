@@ -1,6 +1,6 @@
+import { bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest } from "./bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
 import { subtract } from "./subtract.mjs";
@@ -84,7 +84,10 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   let ranked = [];
   for (let key of object_property_names(occurrences)) {
     let wordings = property_get(glosses, key);
-    let gloss = bible_glyph_chapters_undrawn_wording_commonest(wordings);
+    let gloss =
+      bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest(
+        wordings,
+      );
     list_add(ranked, {
       strong: property_get(strongs, key),
       testament: property_get(testaments, key),
@@ -119,19 +122,4 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
     commonest,
   };
   return report;
-  function bible_glyph_chapters_undrawn_wording_commonest(wordings) {
-    "the wording the interlinear printed most often under one word, to label it by.";
-    "A LABEL IS NEEDED BECAUSE A NUMBER IS NOT READABLE. The counting is keyed by the word rather than by its English, and nobody choosing a picture can look at a Strong's number and know what it means - so the commonest of that word's wordings is carried alongside as the thing a person actually reads.";
-    let most = "";
-    let best = 0;
-    for (let wording of object_property_names(wordings)) {
-      let seen = property_get(wordings, wording);
-      let bigger = greater_than(seen, best);
-      if (bigger) {
-        best = seen;
-        most = wording;
-      }
-    }
-    return most;
-  }
 }
