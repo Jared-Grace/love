@@ -16,7 +16,7 @@ or merged freely without touching it.
 
 ---
 
-Subject: Eleven problems in published files — one of them affects 131 translations
+Subject: Twelve problems in published files — one of them affects 131 translations
 
 Hello,
 
@@ -220,13 +220,32 @@ places, so there the numbering is the source text's own and the two editions agr
 list them because the words are still on the page with no number on them, so a link to
 the verse lands nowhere:
 
-- bsj — MAT12 (30), MAT15 (26), MAT22 (45), JHN01 (21), JHN10 (35), JHN13 (9),
-  2TH03 (10), 3JN01 (6), REV14 (9)
+- bsj — MAT12 (30), MAT15 (26), JHN01 (21), JHN10 (35), JHN13 (9), 3JN01 (6), REV14 (9)
 - dji — GEN25 (15)
 
 For bsj MAT12 the words of verse 30 — 'whoever is not with me is against me, and whoever
 does not gather with me scatters' — are the tail of verse 29. For dji GEN25 the five names
 of verse 15 are the tail of verse 14.
+
+https://ebible.org/bsj/JHN10.htm is worth a separate look. Verse 34 ends with a bare '36'
+sitting in the running text, with no marker around it, and the words after it are verse 35:
+'36 tano co ci ki bweldi, la wurombo ker kwamaro bo cinene (mani a dolti ki kero mor
+bifumere)'. So the page carries a printed number that is both unmarked and one too high.
+
+**12. Two verses are missing from bsj, words and all.**
+
+url: https://ebible.org/bsj/MAT22.htm and https://ebible.org/bsj/2TH03.htm
+
+quote(s): MAT22 runs '<span class="verse" id="V44">44&#160;</span>bi bwe kwama yi bi bwe
+kwama yi kangko catiyer mer…' straight into '<span class="verse" id="V46">46&#160;</span>ni
+kange mani wo kar cine kange…'. 2TH03 runs verse 9 '…bena nyo yilam chker merangka kumen.'
+straight into '<span class="verse" id="V11">11&#160;</span>fiya nyo wari ka-nge kome…'.
+
+possible correction: Matthew 22:45, 'If David then calls him Lord, how is he his son?', and
+2 Thessalonians 3:10, 'if anyone will not work, let him not eat'. Unlike the seven bsj
+chapters listed above, these two are not a marker missing over words that are there. We read
+verses 43 to 46 and 7 to 12 and the words are not on the page. The read-aloud files are short
+in the same places.
 
 Two of those are worth a word. jni JHN01 is missing the three verses about the man
 sent from God. jid MRK16 has the long ending, so verse 13 belongs in it.
