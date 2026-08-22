@@ -1,7 +1,7 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_code_lessons_review_diff_lines } from "./app_code_lessons_review_diff_lines.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -35,8 +35,7 @@ export function app_code_lessons_review_diff_counted(diff_text) {
       added = add(added, 1);
     }
   }
-  let left = list_size(lines_taken);
-  let taken = subtract(left, moved);
+  let taken = list_size_subtract(lines_taken, moved);
   let r = {
     added,
     taken,
