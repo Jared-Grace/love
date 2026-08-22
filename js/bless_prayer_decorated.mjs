@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
+import { list_join_space } from "./list_join_space.mjs";
 import { list_reduce } from "./list_reduce.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_replace_once } from "./text_replace_once.mjs";
 export function bless_prayer_decorated(prayer, decorations) {
   arguments_assert(arguments, 2);
@@ -13,11 +14,20 @@ export function bless_prayer_decorated(prayer, decorations) {
   ("said a second way, so somebody who reads none of the words has still followed what is");
   ("being asked. That is worth doing exactly where a player has not yet agreed to read");
   ("anything, which is the one screen this is for.");
-  ("Each picture is put AFTER the words it belongs to and never in place of them. The");
-  ("replacement is the anchor with the pictures added to it, so what was there before is");
-  ("still there afterwards by construction - there is no wording of a decoration that could");
-  ("quietly change what is prayed, which is the promise every prayer in this game is");
-  ("written in one place to keep.");
+  ("A decoration may stand in FRONT of its words as well as after them, and that is what");
+  ("keeps a sentence full of pictures from reading as a list. Pictures only ever trailing");
+  ("their words puts every run in the same place relative to the same kind of thing, and by");
+  ("the third one the eye has learned the pattern and stops looking at any of them. A run");
+  ("split across a word makes the word look held rather than labelled, and a page that");
+  ("alternates the two has a rhythm the eye keeps following.");
+  ("Either side may be empty, and an empty side takes no room at all - not even the space");
+  ("that would have gone before it. Left in, that space would land at the very start of the");
+  ("prayer, where a sentence beginning with a blank is the one place the eye is certain to");
+  ("catch it.");
+  ("The words are never in place of the anchor. What goes in is the anchor with pictures");
+  ("put around it, so what was there before is still there afterwards by construction -");
+  ("there is no wording of a decoration that could quietly change what is prayed, which is");
+  ("the promise every prayer in this game is written in one place to keep.");
   ("An anchor that is not found, or that is found twice, THROWS rather than being skipped.");
   ("Skipping is the failure that hides: a prayer reworded by a hand that did not know about");
   ("this list would simply lose a picture, and lose it silently, and nobody would meet the");
@@ -29,9 +39,12 @@ export function bless_prayer_decorated(prayer, decorations) {
   ("destroy an anchor for a later one. The order is for whoever is reading the list beside");
   ("the prayer.");
   function lambda(text, decoration) {
+    let before = property_get(decoration, "before");
     let anchor = property_get(decoration, "anchor");
-    let emojis = property_get(decoration, "emojis");
-    let to = text_combine_multiple([anchor, " ", emojis]);
+    let after = property_get(decoration, "after");
+    let pieces = [before, anchor, after];
+    let kept = list_filter_text_empty_not_is(pieces);
+    let to = list_join_space(kept);
     let replaced = text_replace_once(text, anchor, to);
     return replaced;
   }
