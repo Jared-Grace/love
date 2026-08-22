@@ -47,7 +47,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 4,
+      kept: 7,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
