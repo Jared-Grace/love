@@ -10,6 +10,6 @@ export function bless_prayer_transfer() {
   "the screen has not been prayed, and a button pressed is the one part of this a person";
   "cannot do by accident.";
   let prayer =
-    "God, as I pray for people in this video game, may it be as if I pray this prayer for everyone in the world I live in";
+    "God, as I pray for people in this video game, may it be as if I pray these prayers for everyone in the world I live in";
   return prayer;
 }

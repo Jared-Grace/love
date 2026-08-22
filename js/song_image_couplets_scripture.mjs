@@ -1,10 +1,8 @@
+import { text_split_comma_trimmed } from "./text_split_comma_trimmed.mjs";
 import { song_image_couplets_glossed } from "./song_image_couplets_glossed.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { ebible_references_texts } from "./ebible_references_texts.mjs";
-import { text_split_comma_or_empty } from "./text_split_comma_or_empty.mjs";
-import { list_map } from "./list_map.mjs";
-import { text_trim } from "./text_trim.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
@@ -24,8 +22,7 @@ export async function song_image_couplets_scripture(verse_number) {
   let texts = await ebible_references_texts(references_all);
   let blocks = [];
   for (let entry of glossed) {
-    let split = text_split_comma_or_empty(entry.references);
-    let references = list_map(split, text_trim);
+    let references = text_split_comma_trimmed(entry.references);
     let lines = [entry.words];
     for (let reference of references) {
       let text = property_get(texts, reference);

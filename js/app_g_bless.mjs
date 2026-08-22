@@ -16,7 +16,9 @@ export async function app_g_bless(context) {
   ("the box the screen is drawn in is a plain empty div, sized to the height that is actually VISIBLE rather than the tallest the window ever gets, because on a phone the taller figure counts the strip the browser's own bar sits over and would hang the bottom row underneath it. the overlay measures itself against this box, so a box measured wrong is a screen wrong by the same strip");
   ("there is a world to walk about in and no saving, so a refresh begins a new one. what is here is the loop: look somewhere, see who is there, pray for them, and walk until somebody else is in front of you");
   ("the zoom is set once here, at the top, before anything is drawn. every tile, person and icon is sized and placed from that one variable, so setting it on the page means the whole map is drawn to this game's camera rather than the gospel game's - without either game having to know the other exists");
+  ("the animations the map's own pieces name are put on the page here, before any of them is drawn. they are named as plain CSS by whatever uses them, so a page that never asks for them shows a player with no glow at all and says nothing about it - which is a screen that looks merely wrong rather than broken");
   html_reload_on_hash_change();
+  app_shared_game_player_style_initialize();
   let root = html_mobile_default(context);
   let variable = g_img_square_size_variable();
   let size = app_g_bless_tile_size();
