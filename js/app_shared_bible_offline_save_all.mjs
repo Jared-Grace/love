@@ -7,6 +7,7 @@ import { app_shared_bible_offline_starting_all_text } from "./app_shared_bible_o
 import { app_shared_bible_offline_unfinished_all_text } from "./app_shared_bible_offline_unfinished_all_text.mjs";
 import { app_shared_bible_offline_try_again_text } from "./app_shared_bible_offline_try_again_text.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
+import { app_shared_spaced_small } from "./app_shared_spaced_small.mjs";
 import { app_shared_bible_offline_download_progress } from "./app_shared_bible_offline_download_progress.mjs";
 import { app_shared_bible_offline_pending } from "./app_shared_bible_offline_pending.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -38,15 +39,18 @@ export function app_shared_bible_offline_save_all(parent, listed, on_done) {
   app_shared_button(row, save, on_save);
   async function on_save() {
     html_clear(row);
+    ("the lines stand apart from each other by the smaller of the two gaps: they are one group - one press, one set of downloads - so they must not read as far apart as the languages above them do, and a line each is still what tells the reader there are several counts moving rather than one");
+    let lines = html_div(row);
+    app_shared_spaced_small(lines);
     let starting = app_shared_bible_offline_starting_all_text();
-    app_shared_text_quiet(row, starting);
+    app_shared_text_quiet(lines, starting);
     ("asked again here, so pressing try again after a half-finished run fetches only what is still missing");
     let waiting = app_shared_bible_offline_pending(listed);
     let unfinished = [];
     async function save_one(language) {
       let name = property_get(language, "name");
       let one = app_shared_bible_offline_starting_named_text(name);
-      let status = app_shared_text_quiet(row, one);
+      let status = app_shared_text_quiet(lines, one);
       let finished = await app_shared_bible_offline_download_progress(
         status,
         language,
