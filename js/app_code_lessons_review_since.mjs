@@ -1,3 +1,4 @@
+import { app_code_lessons_review_since_lesson_imports_of } from "./app_code_lessons_review_since_lesson_imports_of.mjs";
 import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -9,7 +10,6 @@ import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
-import { function_imports } from "./function_imports.mjs";
 import { text_lines_working } from "./text_lines_working.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -50,16 +50,6 @@ export async function app_code_lessons_review_since(commit) {
   ]);
   let changed_paths = text_lines_working(diff_text);
   let imports_remembered = {};
-  async function lesson_imports_of(name) {
-    "the same lesson helper is reached from several lessons, and asking the tree what a file imports means reading and parsing that file - so the answer is kept the first time it is worked out. Without this the walk parses a few thousand files instead of a few hundred and takes longer than anybody will wait";
-    let remembered = imports_remembered[name];
-    if (remembered) {
-      return remembered;
-    }
-    let imported = await function_imports(name);
-    imports_remembered[name] = imported;
-    return imported;
-  }
   async function lesson_reached_paths(lesson_name) {
     "the walk turns aside at any name outside the lesson prefix, which is what keeps it small: a lesson reaches the whole of the list and text machinery through its containers, and none of that is what this is asking about";
     let seen = [lesson_name];
@@ -69,7 +59,10 @@ export async function app_code_lessons_review_since(commit) {
       let name = waiting.pop();
       let reached_path = text_combine_multiple(["js/", name, ".mjs"]);
       paths.push(reached_path);
-      let imported = await lesson_imports_of(name);
+      let imported = await app_code_lessons_review_since_lesson_imports_of(
+        name,
+        imports_remembered,
+      );
       for (let imported_name of imported) {
         if (text_starts_with(imported_name, lesson_prefix)) {
           if (list_includes(seen, imported_name)) {
