@@ -49,6 +49,11 @@ export async function app_g_word_pictures() {
   function status_set(text) {
     html_text_set(status, text);
   }
+  function status_working(text) {
+    "SAYING THE PRESS WAS TAKEN IS PART OF TAKING IT, and this was measured rather than guessed: a press writes a file, then asks the seam three times, and each of those questions is answered by a reader started after the write - six seconds, on this machine, before anything on the page moves. A page that says nothing for six seconds has told the reader the press missed, and the reader's answer to that is to press again, which is exactly what must not happen to the button that spends money.";
+    let combined = text_combine_multiple([text, "…"]);
+    html_text_set(status, combined);
+  }
   async function api(f_name, args) {
     let a = {
       f_name,
@@ -133,6 +138,8 @@ export async function app_g_word_pictures() {
           "margin-top": "0.2rem",
         });
         async function on_keep() {
+          let combined7 = text_combine_multiple(["keeping ", word, " ", text]);
+          status_working(combined7);
           try {
             let f_name5 = fn_name("word_picture_chosen_set");
             await api(f_name5, [word, attempt]);
@@ -190,6 +197,11 @@ export async function app_g_word_pictures() {
       });
       async function on_save() {
         let typed = html_value_get(box);
+        let combined8 = text_combine_multiple([
+          "saving the wording for ",
+          word,
+        ]);
+        status_working(combined8);
         try {
           let f_name6 = fn_name("word_picture_wording_set");
           await api(f_name6, [word, typed]);
@@ -220,6 +232,11 @@ export async function app_g_word_pictures() {
         }
         armed = false;
         html_text_set(draw, "Drawing");
+        let combined9 = text_combine_multiple([
+          "drawing another attempt for ",
+          word,
+        ]);
+        status_working(combined9);
         try {
           let f_name7 = fn_name("word_picture_draw");
           await api(f_name7, [word]);
