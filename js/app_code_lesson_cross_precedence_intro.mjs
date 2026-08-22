@@ -1,4 +1,4 @@
-import { app_code_label_comes_first_done_first } from "./app_code_label_comes_first_done_first.mjs";
+import { app_code_lesson_cross_precedence_rule } from "./app_code_lesson_cross_precedence_rule.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { property_get } from "./property_get.mjs";
@@ -28,30 +28,7 @@ export function app_code_lesson_cross_precedence_intro(params) {
     let code = text_combine_multiple([t, " ", op, " ", t2]);
     return code;
   }
-  let header = app_code_container_light_blue(root);
-  ("the rule is built in four steps rather than stated in one: the ordinary rule the learner already has, that it has exceptions at all, which two operators this one is about, and only last the case where the strong one is written second. Stated in one line it is four new things arriving together, and the only one a learner can check against anything they already know is the last.");
-  ("The first line is the sentence the same-strength pair lessons end on, word for word, which is why it is a shared unit rather than typed again here. A recall reworded is read as a second rule, and a second rule is the one thing this screen must not add - what follows takes the first line away, so the learner has to recognise it as the very sentence being taken away.");
-  ("It does not say normally or usually. The but on the next line is what makes the first line the ordinary case, and doing that job twice would hedge the recall at the moment it is meant to be firm.");
-  let same_strength = app_code_label_comes_first_done_first();
-  html_div_cycle_code(header, [same_strength]);
-  html_div_cycle_code(header, [
-    "But some operators are done before other operators",
-  ]);
-  html_div_cycle_code(header, [
-    "We do ",
-    strong_symbol,
-    " before ",
-    weak_symbol,
-  ]);
-  html_div_cycle_code(header, [
-    "Even when ",
-    weak_symbol,
-    " comes first and ",
-    strong_symbol,
-    " comes later, we still do ",
-    strong_symbol,
-    " first",
-  ]);
+  app_code_lesson_cross_precedence_rule(root, weak_symbol, strong_symbol);
   function example_say(expression, sub, inner, combined, final) {
     "one example said in two lines: the whole expression and the strong sub-expression taken out of it with its value, then what is left of the line and what that comes to";
     let box = app_code_container_light_blue(root);
