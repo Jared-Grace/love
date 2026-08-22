@@ -1,3 +1,4 @@
+import { html_p_text_centered } from "./html_p_text_centered.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { app_music_lines_instruction_text } from "./app_music_lines_instruction_text.mjs";
@@ -18,7 +19,7 @@ import { not_equal } from "./not_equal.mjs";
 export async function app_music_song_image_couplets_show(parent) {
   "The hymn's own page: every line it sings in the order it is sung, each one opening to the passages of scripture it rests on.";
   "THE PASSAGES ARE FOLDED BEHIND THE LINES. Written out flat this song runs to some twenty thousand letters, and a reader looking for the words of one line would be scrolling past ninety passages to find them. Folded, the page is the song - and the scripture is one tap under whichever line raised the question.";
-  "A REPEATED LINE IS SUNG AGAIN AND SO WRITTEN AGAIN, and opens to the same passages. They are the same words resting on the same scripture, and a second card that opened to nothing would read as a line with nothing behind it.";
+  "A LINE THE SONG ONLY REPEATS IS LEFT OUT. Written down, the same words twice in a row read as a mistake rather than as a refrain, and the second card would open onto the passages the first one already showed - so the reader is offered the same scripture twice and learns nothing from the second offer. The singing repeats it; the page does not need to.";
   "A line resting on nothing is drawn plainly rather than as a card that opens on emptiness.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while ninety passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
@@ -38,11 +39,15 @@ export async function app_music_song_image_couplets_show(parent) {
   let verse_shown = 0;
   let asked_all = [];
   for (let couplet of couplets) {
+    let repeated = not_equal(couplet.same_as, 0);
+    if (repeated) {
+      continue;
+    }
     let verse_new = not_equal(couplet.verse, verse_shown);
     if (verse_new) {
       verse_shown = couplet.verse;
       let heading = text_combine("verse ", verse_shown);
-      html_p_text(parent, heading);
+      html_p_text_centered(parent, heading);
     }
     let halves = [couplet.first, couplet.second];
     let words = list_join_space(halves);
