@@ -367,6 +367,10 @@ export function bible_glyph_artwork_names() {
       glyph: "hands_raised",
       asset: "Raising hands",
     },
+    {
+      glyph: "sheep",
+      asset: "Ewe",
+    },
   ];
   return names;
 }

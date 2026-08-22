@@ -1,3 +1,6 @@
+import { html_style_margin } from "./html_style_margin.mjs";
+import { html_style_padding_bottom } from "./html_style_padding_bottom.mjs";
+import { html_style_background } from "./html_style_background.mjs";
 import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { html_div } from "./html_div.mjs";
@@ -12,12 +15,12 @@ export function bible_dream_scene_words_show(root, scene) {
   "It stays put while the page scrolls under it, and it paints its own ground for that reason: a transparent bar that stays still has the drawing slide through it.";
   let column = html_div(root);
   html_style_set(column, "max-width", "1000px");
-  html_style_set(column, "margin", "0 auto");
+  html_style_margin(column, "0 auto");
   html_style_set(column, "position", "sticky");
   html_style_set(column, "top", "0");
-  html_style_set(column, "padding-bottom", "8px");
+  html_style_padding_bottom(column, "8px");
   let ground = app_shared_color_page_dark();
-  html_style_set(column, "background", ground);
+  html_style_background(column, ground);
   let heading = html_div(column);
   html_style_font_size(heading, "22px");
   html_text_set(heading, scene.reference + " — the dream you are sent to draw");
