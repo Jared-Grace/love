@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { g_arc_words_carried } from "./g_arc_words_carried.mjs";
 import { words_early_reader } from "./words_early_reader.mjs";
 import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
@@ -129,8 +130,7 @@ export async function g_arc_words_uncommon() {
     if (again) {
       let heard = property_get(mouths, word);
       let list = object_property_names(heard);
-      let speakers = list_size(list);
-      let only = equal(speakers, 1);
+      let only = list_size_equal(list, 1);
       if (only) {
         list_add(own, {
           word,
