@@ -1,3 +1,4 @@
+import { function_name_words_repeated_cases_gate_run } from "./function_name_words_repeated_cases_gate_run.mjs";
 import { g_profiles_balance_next_cases_gate_run } from "./g_profiles_balance_next_cases_gate_run.mjs";
 import { bible_glyph_marks_group_misread_gate_run } from "./bible_glyph_marks_group_misread_gate_run.mjs";
 import { functions_names_repeated_gate_run } from "./functions_names_repeated_gate_run.mjs";
@@ -757,6 +758,7 @@ export function qa_gates() {
     app_music_song_references_shape_gate_run,
     function_part_name_cases_gate_run,
     functions_names_repeated_gate_run,
+    function_name_words_repeated_cases_gate_run,
   ];
   return gates;
 }
