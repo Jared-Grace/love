@@ -1,5 +1,5 @@
-import { bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent } from "./bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent.mjs";
-import { bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because } from "./bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because.mjs";
+import { bible_glyph_chapters_table_behind_absent } from "./bible_glyph_chapters_table_behind_absent.mjs";
+import { bible_glyph_chapters_table_behind_because } from "./bible_glyph_chapters_table_behind_because.mjs";
 import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -51,11 +51,7 @@ export async function bible_glyph_chapters_table_behind() {
         if (blank) {
           continue;
         }
-        let absent =
-          bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent(
-            used,
-            glyph,
-          );
+        let absent = bible_glyph_chapters_table_behind_absent(used, glyph);
         if (not(absent)) {
           continue;
         }
@@ -78,12 +74,11 @@ export async function bible_glyph_chapters_table_behind() {
     let glyphs = [];
     for (let name of names) {
       let item = property_get(missing, name);
-      let because =
-        bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because(
-          deliberate,
-          chapter_code,
-          name,
-        );
+      let because = bible_glyph_chapters_table_behind_because(
+        deliberate,
+        chapter_code,
+        name,
+      );
       let b = null_is(because);
       let refused = not(b);
       if (refused) {
