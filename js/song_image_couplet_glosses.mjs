@@ -160,7 +160,7 @@ export function song_image_couplet_glosses() {
         "Described. The burial spices are what the accounts themselves dwell on. The flask carries the burial so that the tomb is not drawn a fourth time in six couplets.",
     },
     20: {
-      kept: 3,
+      kept: 8,
       lyric_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       lyric_explain:
         "HIS own new tomb, which he had hewn out in the rock. Luke adds that it was one wherein never man before was laid, and John that it was a new sepulchre in a garden.",

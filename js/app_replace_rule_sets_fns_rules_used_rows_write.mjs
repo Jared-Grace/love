@@ -1,10 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_replace_rule_sets_fns_rules_used_to_rows } from "./app_replace_rule_sets_fns_rules_used_to_rows.mjs";
-import { function_unalias_exists } from "./function_unalias_exists.mjs";
-import { property_get } from "./property_get.mjs";
-import { function_delete } from "./function_delete.mjs";
-import { function_new_getter } from "./function_new_getter.mjs";
+import { function_new_getter_rewrite } from "./function_new_getter_rewrite.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 export async function app_replace_rule_sets_fns_rules_used_rows_write(
   rule_sets,
@@ -22,12 +19,7 @@ export async function app_replace_rule_sets_fns_rules_used_rows_write(
     " runs.",
   ]);
   let by_name = app_replace_rule_sets_fns_rules_used_to_rows(rule_sets);
-  let u = await function_unalias_exists(f_name);
-  let exists = property_get(u, "exists");
-  if (exists) {
-    await function_delete(f_name);
-  }
-  await function_new_getter(f_name, meaning, by_name);
+  await function_new_getter_rewrite(f_name, meaning, by_name);
   let names = object_property_names(by_name);
   let count = names.length;
   let written = {
