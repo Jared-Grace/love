@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_replace_space_to } from "./text_replace_space_to.mjs";
-export function app_music_song_hash_name(title) {
+export function song_title_hash_name(title) {
   "$plain title";
   "The word a song is reached by in an address, made out of what the song is called - the FATHER's SON becomes the_FATHERs_SON.";
   "AN ADDRESS CANNOT HOLD WHAT A TITLE HOLDS. A space ends the address in some places that carry links as plain text, and an apostrophe is turned into an escape by others, so both are taken out rather than trusted - a link to a song is a thing people send each other, and it has to survive being pasted.";

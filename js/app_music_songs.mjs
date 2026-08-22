@@ -4,7 +4,7 @@ import { song_god_our_savior_references } from "./song_god_our_savior_references
 import { song_image_couplets_references } from "./song_image_couplets_references.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
-import { app_music_song_hash_name } from "./app_music_song_hash_name.mjs";
+import { song_title_hash_name } from "./song_title_hash_name.mjs";
 import { app_music_song_image_couplets_show } from "./app_music_song_image_couplets_show.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_music_songs() {
@@ -15,7 +15,7 @@ export function app_music_songs() {
   arguments_assert(arguments, 0);
   let songs = [];
   let title = song_image_couplets_title();
-  let hash_name = app_music_song_hash_name(title);
+  let hash_name = song_title_hash_name(title);
   let hymn = {
     title: title,
     hash_name: hash_name,
@@ -24,7 +24,7 @@ export function app_music_songs() {
   };
   list_add(songs, hymn);
   let savior_title = song_god_our_savior_title();
-  let savior_hash_name = app_music_song_hash_name(savior_title);
+  let savior_hash_name = song_title_hash_name(savior_title);
   let savior = {
     title: savior_title,
     hash_name: savior_hash_name,
