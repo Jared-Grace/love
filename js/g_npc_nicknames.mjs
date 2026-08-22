@@ -1,0 +1,51 @@
+import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
+import { g_npc_nickname_lists } from "./g_npc_nickname_lists.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_size_less_1 } from "./list_size_less_1.mjs";
+import { list_add } from "./list_add.mjs";
+import { less_than_equal_assert_json } from "./less_than_equal_assert_json.mjs";
+import { multiply } from "./multiply.mjs";
+import { mod } from "./mod.mjs";
+import { add_1 } from "./add_1.mjs";
+export async function g_npc_nicknames() {
+  "What every person of the convert pool is called, in pool order - one name each, worked out from the cast and nothing else.";
+  "PEOPLE ARE NOT NUMBERS, which is the whole of why this exists. The pool draws a person as a turn count and files them under a running number, and that number then became the address every arc was written and reported against - so a reader was handed PERSON 2 IS RED and had to go and look up who that was. A name is the same address and needs no lookup, and it stops a person in a game about people being an entry in a count.";
+  "WORKED OUT RATHER THAN STORED, so nothing in the pool has to be regenerated to gain a name and no file can fall out of step with another. The pool's files hold a turn count that authored arcs are attached to; a name written into them would be a second thing to keep true, and a person's name would then depend on when their file was last written rather than on who they are.";
+  "THE NAMES ARE THE ONES THE GAME ALREADY USES for the people in its streets, so a person in the pool and a person walking past are called the same kinds of thing. Inventing a second naming would have meant a reader learning two. The two lists arrive already cleaned and pulled apart, which is what lets the stepping below be a proof rather than a hope.";
+  "WHICH LIST A NAME COMES FROM IS READ OFF THE DEAL AND NEVER DECIDED HERE. It was decided here once, by taking the two lists in turn, and that was wrong in the way that costs the most: the deck had already settled every person's gender, the prompt hands it over as a fact that must not be changed, and a name picked alongside it disagreed with it for about half the pool with nothing going red. It was found by writing an arc for a man whose settled facts said woman. So the deal is the one source, and the name follows it.";
+  "THE WHOLE POOL IS NAMED AT ONCE, because a name depends on how many people of the same gender came before it. Asked one at a time, each answer would have to deal the whole cast again to count them, and the counting is the work.";
+  "THE STEP IS WHAT KEEPS THE NAMES APART. Walking a list in order would name the people in the order they were drawn, so two people next to each other in the pool would read as next to each other in the alphabet, which is the numbering wearing a different coat. Stepping sixty-one names at a time scatters them, and because sixty-one shares no factor with either list's length, stepping cannot land twice on the same name before it has used them all - so the names are unique by working rather than by being checked.";
+  "The check is that neither list is asked for more names than it holds. Past that the stepping wraps onto a name it has already given out, and two people would answer to one word - which is the one way this can go wrong, so it throws rather than returning a name that lies.";
+  let dealt = await g_npc_cast_dealt();
+  let lists = g_npc_nickname_lists();
+  let women = list_get(lists, 0);
+  let men = list_get(lists, 1);
+  let taken = [0, 0];
+  let nicknames = [];
+  for (let profile of dealt) {
+    let gender = property_get(profile, "gender");
+    let woman = equal(gender, "female");
+    let side = 1;
+    let names = men;
+    if (woman) {
+      side = 0;
+      names = women;
+    }
+    let within = list_get(taken, side);
+    let last = list_size_less_1(names);
+    less_than_equal_assert_json(within, last, {
+      gender,
+      hint: "the cast holds more people of that gender than there are names to hand out one each, so two people would be called the same word; the repair is a longer list of names, not a smaller cast",
+    });
+    taken[side] = add_1(within);
+    let stepped = multiply(within, 61);
+    let size = list_size(names);
+    let at = mod(stepped, size);
+    let nickname = list_get(names, at);
+    list_add(nicknames, nickname);
+  }
+  return nicknames;
+}

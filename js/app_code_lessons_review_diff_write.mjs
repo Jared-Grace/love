@@ -1,3 +1,6 @@
+import { app_code_lessons_review_diff_shared_section } from "./app_code_lessons_review_diff_shared_section.mjs";
+import { app_code_lessons_review_diff_shared_size } from "./app_code_lessons_review_diff_shared_size.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { app_code_lessons_review_diff_counted } from "./app_code_lessons_review_diff_counted.mjs";
@@ -41,18 +44,52 @@ export async function app_code_lessons_review_diff_write(commit) {
   }
   let smallest_first = list_sort_number_mapper(sized, lines_touched);
   let sections = list_map(smallest_first, app_code_lessons_review_diff_section);
-  let report = text_combine_multiple(sections);
+  ("THE SHARED HELPERS ARE IN THE SAME FILE, because a reading that stops short of them is not a reading of everything that changed. A helper two lessons share is edited by somebody who was thinking about one of them, and it lands on both screens; left out of the report it is the one kind of change nobody is ever handed.");
+  ("They come after the lessons and are sized the same way, so the same rule applies twice over: within each part the cheap reading is done before the expensive one starts.");
+  let lessons_now = review.lessons_now;
+  let shared_sized = [];
+  for (let group of review.shared_helpers_changed) {
+    let words = ["diff", commit, "HEAD", "--"].concat(group.helpers);
+    let diff_text = await git_folder_run(folder, words);
+    let counts = app_code_lessons_review_diff_counted(diff_text);
+    shared_sized.push({
+      count: group.count,
+      whole_run: equal(group.count, lessons_now),
+      lessons: group.lessons,
+      helpers: list_size(group.helpers),
+      added: counts.added,
+      taken: counts.taken,
+      moved: counts.moved,
+      diff_text,
+    });
+  }
+  let shared_smallest_first = list_sort_number_mapper(
+    shared_sized,
+    lines_touched,
+  );
+  let shared_sections = list_map(
+    shared_smallest_first,
+    app_code_lessons_review_diff_shared_section,
+  );
+  let list = sections.concat(shared_sections);
+  let report = text_combine_multiple(list);
   let report_path = text_combine_multiple([
     folder,
     "/gitignore/app_code_lessons_review_diff.txt",
   ]);
   await file_overwrite(report_path, report);
   let sizes = list_map(smallest_first, app_code_lessons_review_diff_size);
+  let shared_sizes = list_map(
+    shared_smallest_first,
+    app_code_lessons_review_diff_shared_size,
+  );
   let r = {
     commit,
     report_path,
     changed: list_size(sizes),
     sizes,
+    shared_groups: list_size(shared_sizes),
+    shared_sizes,
   };
   return r;
 }
