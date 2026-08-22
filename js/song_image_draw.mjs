@@ -13,6 +13,10 @@ export async function song_image_draw(number_text) {
     let size = 1024;
     await bfl_draw_write(model, prompt, size, size, path);
   }
-  let drawn = await song_image_couplet_attempt_write(number_text, draw_to_path);
+  let drawn = await song_image_couplet_attempt_write(
+    number_text,
+    "bfl",
+    draw_to_path,
+  );
   return drawn;
 }
