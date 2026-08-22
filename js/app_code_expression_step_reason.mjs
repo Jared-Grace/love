@@ -1,11 +1,10 @@
+import { list_any } from "./list_any.mjs";
 import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -27,8 +26,7 @@ export function app_code_expression_step_reason(symbol, others) {
     return held;
   }
   let strong = list_includes(strong_symbols, symbol);
-  let others_strong = list_filter(others, strong_is);
-  let any_strong = list_empty_not_is(others_strong);
+  let any_strong = list_any(others, strong_is);
   let right = not(any_strong);
   let outranks = and(strong, right);
   if (outranks) {
