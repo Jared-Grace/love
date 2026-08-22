@@ -1,3 +1,5 @@
+import { git_file_read_at_or_null } from "./git_file_read_at_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { git_commit_files } from "./git_commit_files.mjs";
@@ -17,7 +19,8 @@ export async function commit_ast_edit_kind(commit) {
   "What one commit did to the code, read by parsing the file on both sides of it and comparing the two, rather than by counting the lines the diff printed.";
   "THE OLDER READING OF THIS QUESTION COUNTS DIFF LINES, and the largest bucket it can offer is several lines of code - which names no command anybody could go and write. A tree knows what a text diff cannot: that three statements swapped places, that one was put in the middle, that everything survived. Those are the names a missing transform can be specified from.";
   "ONLY A COMMIT THAT REACHED ONE CODE FILE IS ANSWERED. A commit touching several is nearly always the sweeping commit gathering up whatever was in the folder at that moment, so it is a batch rather than an edit, and there is no single before and after to compare.";
-  "EVERY WAY OF FAILING IS ANSWERED IN WORDS RATHER THAN BY THROWING, because a sweep of hundreds of commits meets a file that did not exist yet, a file a rename carried elsewhere, and a file written before this repo kept one function to a file - and it wants to count each of those and go on.";
+  "A FILE WRITTEN FOR THE FIRST TIME IS NOT AN EDIT AND IS NAMED APART FROM ONE. There is nothing on the older side to compare against, and no transform is missing for it either - writing a new function is already a command this repo answers to. Folded in with the files that would not parse it was the second largest thing this reading claimed to find, which said the instrument was blind rather than that the repo had a gap.";
+  "EVERY OTHER WAY OF FAILING IS ANSWERED IN WORDS RATHER THAN BY THROWING, because a sweep of hundreds of commits meets a file that did not exist yet, a file a rename carried elsewhere, and a file written before this repo kept one function to a file - and it wants to count each of those and go on.";
   arguments_assert(arguments, 1);
   let folder = folder_current_absolute();
   let touched = await git_commit_files(commit);
@@ -39,6 +42,12 @@ export async function commit_ast_edit_kind(commit) {
   let ast_after = await git_file_js_parse_at_or_null(folder, commit, path);
   let read_both = null_not_is(ast_before) && null_not_is(ast_after);
   if (not(read_both)) {
+    let text_before = await git_file_read_at_or_null(folder, parent, path);
+    let born = null_is(text_before);
+    if (born) {
+      let r4 = "the file written";
+      return r4;
+    }
     let r2 = "the file would not parse at one end";
     return r2;
   }
