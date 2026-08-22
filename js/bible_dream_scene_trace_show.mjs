@@ -1,25 +1,12 @@
-import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { bible_dream_point_gap_squared } from "./bible_dream_point_gap_squared.mjs";
-import { bible_dream_click_still_far } from "./bible_dream_click_still_far.mjs";
-import { multiply } from "./multiply.mjs";
-import { less_than } from "./less_than.mjs";
-import { bible_dream_scene_guides_dim } from "./bible_dream_scene_guides_dim.mjs";
-import { bible_dream_stroke_hand_lift } from "./bible_dream_stroke_hand_lift.mjs";
-import { bible_dream_stroke_hand_step } from "./bible_dream_stroke_hand_step.mjs";
-import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_dream_scene_trace_show_on_leave } from "./bible_dream_scene_trace_show_on_leave.mjs";
 import { bible_dream_scene_words_show } from "./bible_dream_scene_words_show.mjs";
 import { bible_dream_scene_drawing_add } from "./bible_dream_scene_drawing_add.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_on } from "./html_on.mjs";
 import { bible_dream_stroke_place } from "./bible_dream_stroke_place.mjs";
-import { bible_dream_drawing_point } from "./bible_dream_drawing_point.mjs";
-import { bible_dream_stroke_begin_near } from "./bible_dream_stroke_begin_near.mjs";
-import { bible_dream_trace_status_text } from "./bible_dream_trace_status_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { not } from "./not.mjs";
 export function bible_dream_scene_trace_show(scene) {
   "Put one dream on a screen and let it be drawn: every stroke the passage gave, laid out faint and all at once, each waiting to be traced by dragging along it, in whatever order the player picks.";
   "★ IT KNOWS NOTHING ABOUT WHICH DREAM IT IS SHOWING, AND THAT IS THE CLAIM THE SECOND PASSAGE WAS BUILT TO TEST. Pharaoh's dream is a row of repeated shapes standing apart; the prison dreams are things stacked on and hanging off one another, with open strokes and closed ones mixed. If a scene needed its own code to be drawable then there is no mechanic here, only one passage with a picture painted for it. Everything that varies between the two lives in the scene, and everything here is the same for both.";
@@ -44,72 +31,12 @@ export function bible_dream_scene_trace_show(scene) {
   }
   each(scene.strokes, each_stroke);
   let told = [];
-  let active = null;
-  let latched = false;
-  let pressed_at = null;
-  let travelled = 0;
-  function let_go() {
-    bible_dream_stroke_hand_lift(active);
-    active = null;
-    latched = false;
-  }
-  function readout_show() {
-    let text = bible_dream_trace_status_text(states, told);
-    html_text_set(readout, text);
-  }
-  function on_press(event) {
-    let at = bible_dream_drawing_point(drawing, event);
-    if (latched) {
-      let_go();
-      return;
-    }
-    pressed_at = at;
-    travelled = 0;
-    active = bible_dream_stroke_begin_near(states, at, 169);
-    if (active) {
-      bible_dream_stroke_hand_lift(active);
-    }
-  }
-  function on_drag(event) {
-    let at = bible_dream_drawing_point(drawing, event);
-    bible_dream_scene_guides_dim(states, at);
-    if (not(active)) {
-      return;
-    }
-    if (not(latched)) {
-      if (equal(event.buttons, 0)) {
-        let_go();
-        return;
-      }
-      let gone = bible_dream_point_gap_squared(at, pressed_at);
-      if (greater_than(gone, travelled)) {
-        travelled = gone;
-      }
-    }
-    bible_dream_stroke_hand_step(active, at);
-    if (active.done) {
-      bible_dream_stroke_finish_told(active, told);
-      let_go();
-    }
-    readout_show();
-  }
-  function on_release(event) {
-    if (not(active)) {
-      return;
-    }
-    let still = bible_dream_click_still_far();
-    let still_squared = multiply(still, still);
-    if (less_than(travelled, still_squared)) {
-      latched = true;
-      return;
-    }
-    let_go();
-  }
-  function on_leave(event) {
-    if (active) {
-      bible_dream_stroke_hand_lift(active);
-    }
-  }
+  let r = bible_dream_scene_trace_show_on_leave(states, told, readout, drawing);
+  let on_leave = property_get(r, "on_leave");
+  let on_release = property_get(r, "on_release");
+  let on_drag = property_get(r, "on_drag");
+  let on_press = property_get(r, "on_press");
+  let readout_show = property_get(r, "readout_show");
   html_on(drawing, "pointerdown", on_press);
   html_on(drawing, "pointermove", on_drag);
   html_on(drawing, "pointerup", on_release);
