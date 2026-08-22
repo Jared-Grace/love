@@ -499,7 +499,7 @@ export function bible_glyph_chapter_jhn03() {
           "their",
           "$tools",
           "were",
-          "evil.",
+          "$thumbs_down.",
         ],
       },
       {
@@ -756,7 +756,7 @@ export function bible_glyph_chapter_jhn03() {
           "bridegroom’s",
           "$voice.",
           "That",
-          "joy",
+          "$smile",
           "is",
           "mine,",
           "$plus",

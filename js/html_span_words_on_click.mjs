@@ -9,7 +9,8 @@ import { html_on_click } from "./html_on_click.mjs";
 import { not } from "./not.mjs";
 export function html_span_words_on_click(parent, text, word_lambda) {
   "$plain text";
-  "Some written text put into a parent one word at a time, each word its own span that calls the given lambda with that word when it is tapped, handing back the spans so a caller can do something to them all at once.";
+  "Some written text put into a parent one word at a time, each word its own span that calls the given lambda with that word when it is tapped, handing back a span-and-word pair for each so a caller can do something to them all at once.";
+  "THE WORD COMES BACK BESIDE ITS SPAN because a caller that wants to MARK the tappable words has to know which is which, and handing back a bare list of spans made that a second walk over the same sentence, matched up by counting. Two walks that have to stay in step is a bug waiting for somebody to add a token type, and the pairing was already sitting here for free.";
   "IT SPLITS FOR TAPPING AND NOT FOR LAYOUT. The spans are inline and the spaces between them are real spaces, so the sentence wraps exactly as one run of text would - a reader cannot tell it was cut up until they touch it. Laying the words out as boxes was the other way to do this and it reflows the line, which moves the text a player was already reading.";
   "THE WORD HANDED OVER IS NOT THE WORD SHOWN. What is drawn keeps its comma and its capital, because that is the sentence the person said; what the lambda is given is stripped to letters and lowered, by the same reader every word report uses. Two spellings of what counts as one word would let the game ask about a word the reports have never heard of.";
   "A TOKEN WITH NO LETTERS GETS NO HANDLER. A lone dash or a bare number is drawn and left alone, because there is nothing to ask about it and a tap that opens an empty answer teaches a reader that tapping is not worth doing.";
@@ -23,9 +24,13 @@ export function html_span_words_on_click(parent, text, word_lambda) {
     }
     first = false;
     let span = html_span_text(parent, word);
-    list_add(spans, span);
     let lowered = text_lower_to(word);
     let letters = text_letters_only(lowered);
+    let record = {
+      span,
+      word: letters,
+    };
+    list_add(spans, record);
     let any = text_empty_not_is(letters);
     if (any) {
       function span_click() {
