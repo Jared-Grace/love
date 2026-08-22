@@ -24,7 +24,7 @@ export function bible_depiction_brief() {
     open: "where manner has accumulated far enough to imply events; how a depiction is addressed and named; what to do where traditions disagree; how a figure who ages is held together; whether a depiction may differ between renderings",
     forbidden:
       "an event, cause, reason or outcome no passage anywhere supplies; invented biography or backstory for anyone; a depicted exchange that leaves the subject the passage named; supplying anything at a point the text chose to withhold; detail magnified far enough that it is what a viewer is looking at; any detail contradicting any passage anywhere",
-    done: "every figure named in a gathered scene has a depiction that satisfies the five rules in order, and nothing added to any of them tells anybody something that happened",
+    done: "every figure named in a gathered scene has a depiction that satisfies the five rules in order, every added detail can be traced to a passage or is manner only, and none of it is magnified far enough to be what a viewer ends up looking at",
   };
   return brief;
 }
