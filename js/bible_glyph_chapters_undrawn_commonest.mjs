@@ -1,4 +1,4 @@
-import { bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest } from "./bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest.mjs";
+import { bible_glyph_chapters_undrawn_wording_commonest } from "./bible_glyph_chapters_undrawn_wording_commonest.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { divide_round } from "./divide_round.mjs";
@@ -84,10 +84,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   let ranked = [];
   for (let key of object_property_names(occurrences)) {
     let wordings = property_get(glosses, key);
-    let gloss =
-      bible_glyph_chapters_undrawn_commonest_bible_glyph_chapters_undrawn_wording_commonest(
-        wordings,
-      );
+    let gloss = bible_glyph_chapters_undrawn_wording_commonest(wordings);
     list_add(ranked, {
       strong: property_get(strongs, key),
       testament: property_get(testaments, key),
