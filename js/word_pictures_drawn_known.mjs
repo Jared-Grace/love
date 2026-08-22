@@ -4,28 +4,58 @@ export function word_pictures_drawn_known() {
   "IT IS GENERATED AND NOT KEPT BY HAND for the usual reason - a hand-kept list disagrees with the folder silently, and the disagreement shows up as a picture that will not load rather than as an error.";
   let r = {
  "cross": [
-  1,
-  2
+  {
+   "attempt": 1,
+   "wording": "A bare wooden cross standing alone on a low hill against a wide pale sky. Two rough dark beams, one laid across the other and bound at the crossing with rope. Nobody on it and nobody near it. Warm daylight, quiet, painted plainly. No lettering anywhere in the picture."
+  },
+  {
+   "attempt": 2,
+   "wording": "A bare wooden cross standing alone on a low hill against a wide pale sky. Two rough dark beams, one laid across the other and bound at the crossing with rope. Nobody on it and nobody near it. Warm daylight, quiet, painted plainly. No lettering anywhere in the picture, and no painted signature in any corner."
+  }
  ],
  "dye": [
-  1
+  {
+   "attempt": 1,
+   "wording": "A strip of three panels side by side, left to right, in a first-century workshop. First panel: a bundle of plain undyed wool, pale and clean, held in two hands. Second panel: the same wool pushed down into a wide clay pot of dark water, the water almost black. Third panel: the wool lifted out and hung on a line to dry, now deep dark all through. Warm daylight, plain earthy colours. No lettering anywhere in the picture."
+  }
  ],
  "dyer": [
-  1
+  {
+   "attempt": 1,
+   "wording": "A dyer at work in a small first-century workshop, seen from a little way off. Clay pots of dark water at their feet, hands stained dark to the wrist, lengths of dyed cloth hanging on lines behind them in the sun. Calm and unhurried, the look of somebody who does this every day. Warm daylight, plain earthy colours. No lettering anywhere in the picture."
+  }
  ],
  "weave": [
-  1
+  {
+   "attempt": 1,
+   "wording": "A strip of three panels side by side, left to right, in a first-century workshop. First panel: long threads of wool stretched tight and parallel on an upright wooden loom. Second panel: a hand passing one thread across, over and under the standing threads. Third panel: a finished piece of cloth, the crossing threads now a whole close weave. Warm daylight, plain earthy colours. No lettering anywhere in the picture."
+  }
  ],
  "offer": [
-  1
+  {
+   "attempt": 1,
+   "wording": "Two open hands held out flat toward the viewer, holding a small round loaf of bread. The hands are steady and the loaf is not yet taken; nobody is reaching for it. Plain clothing, plain background, warm daylight. No lettering anywhere in the picture."
+  }
  ],
  "pray": [
-  1,
-  2
+  {
+   "attempt": 1,
+   "wording": "One person kneeling alone in a small plain room, head bowed and hands open and empty in front of them, a clay lamp burning on the floor beside them. Nobody else there, and nothing above them but the quiet room. Warm lamplight, soft shadows. No lettering anywhere in the picture."
+  },
+  {
+   "attempt": 2,
+   "wording": "One person kneeling alone in a small plain room in a first-century stone house, wearing a plain woven tunic, head bowed and hands open and empty in front of them, a small clay oil lamp burning on the floor beside them. Nobody else there, and nothing above them but the quiet room. Warm lamplight, soft shadows. No modern clothing and nothing modern in the room. No lettering anywhere in the picture."
+  }
  ],
  "fellowship": [
-  1,
-  2
+  {
+   "attempt": 1,
+   "wording": "Six or seven people of different ages sitting close together around a low table by lamplight, sharing bread and a jug, leaning in and talking. Everyone is turned toward somebody; nobody is sitting apart. First-century clothing, warm lamplight, plain room. No lettering anywhere in the picture."
+  },
+  {
+   "attempt": 2,
+   "wording": "Five people of different ages sitting close together on the floor around a small round table in a plain first-century house, sharing bread and a jug by lamplight, leaning in and talking to each other. They are grouped off to one side of the picture and nobody sits at the middle of it. Everyone is turned toward somebody; nobody is sitting apart. This is an ordinary evening meal among neighbours and is not the Last Supper: nobody is set apart from the others, nobody is facing the viewer, and there is no central figure. First-century clothing, warm lamplight, plain room. No lettering anywhere in the picture."
+  }
  ]
 };
   return r;
