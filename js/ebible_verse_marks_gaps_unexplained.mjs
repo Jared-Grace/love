@@ -85,15 +85,18 @@ export async function ebible_verse_marks_gaps_unexplained() {
     }
     let names = list_map(items, name_of);
     let examples = list_slice(names, 0, 5);
+    let skipped = await ebible_bible_chapters_skipped(bible_folder);
+    let chapters_skipped = list_size(skipped);
     let summary = {
       bible_folder,
       gaps,
       chapters,
+      chapters_skipped,
       examples,
     };
     return summary;
   }
-  let summaries = list_map(grouped, bible_summary);
+  let summaries = await list_map_async(grouped, bible_summary);
   function gaps_of(summary) {
     let gaps = property_get(summary, "gaps");
     return gaps;
