@@ -14,7 +14,7 @@ export function song_image_audit_preview() {
   "all thirty-six are shown and not the thirty-two distinct ones, because the thing being checked is the film, and in the film a repeated couplet is sung again and its picture is shown again. A list of distinct symbols would be a check on the drawing rather than on what a viewer sees.";
   let root = html_body_div_page_dark();
   html_style_set(root, "max-width", "860px");
-  html_style_set(root, "margin", "0 auto");
+  html_style_margin(root, "0 auto");
   let title = html_div(root);
   html_style_font_size(title, "26px");
   html_style_set(title, "font-weight", "700");
