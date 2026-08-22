@@ -46,7 +46,7 @@ export function bible_dream_errand_steps() {
       name: "counting",
       acting: "yes",
       scripture:
-        "eight passages hang on a number: seven cows, eleven stars, three baskets, three branches, four corners, ten horns, five metals, three beasts torn from four",
+        "seven passages hang on a number: seven cows, eleven stars, three baskets, three branches, four corners, five metals, and DAN7 twice over with ten horns and three of them torn out",
       settled:
         "the numbers, exactly - Pharaoh's seven years of plenty are seven because the cows were",
       open: "whether a count is its own step or a property of showing, and how a wrong count is answered",
