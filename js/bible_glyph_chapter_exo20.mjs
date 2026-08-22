@@ -605,7 +605,7 @@ export function bible_glyph_chapter_exo20() {
           "peace",
           "offerings,",
           "your",
-          "sheep",
+          "$sheep",
           "and",
           "goats",
           "and",
