@@ -1,3 +1,4 @@
+import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
 export function song_image_couplets() {
   "the 36 couplets of the hymn 'the FATHER's SON' in order, each with the symbol chosen for it; four verses of nine, and every ninth couplet repeats the eighth, so same_as points a repeat at the couplet whose image it shares";
   "a symbol says what the thing is and never where it is, because the picture already has a where. The window supplies a field above and a field below; a symbol that also names a hill or a horizon or a stretch of ground is asking for the same thing twice, and what came back was three overlapping hills in three colours - which is also depth, the one thing the look forbids outright. Three crosses on a hill, distant became three crosses, and the distant went with it: a symbol asked to be far away cannot also be large enough to read on a phone.";
@@ -414,7 +415,7 @@ export function song_image_couplets() {
       n: 35,
       verse: 4,
       first: "the great I AM",
-      second: "the FATHER's SON",
+      second: song_image_couplets_title(),
       symbol:
         "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
       symbol_ref: "Exodus 3:2, Exodus 3:14",
@@ -424,7 +425,7 @@ export function song_image_couplets() {
       n: 36,
       verse: 4,
       first: "the great I AM",
-      second: "the FATHER's SON",
+      second: song_image_couplets_title(),
       symbol:
         "A bush standing in red flame with its leaves whole and green, unburnt and untouched by the fire",
       symbol_ref: "Exodus 3:2, Exodus 3:14",
