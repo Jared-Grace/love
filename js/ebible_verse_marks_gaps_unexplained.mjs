@@ -1,6 +1,6 @@
+import { ebible_verse_marks_gaps_unexplained_gaps_bible_read } from "./ebible_verse_marks_gaps_unexplained_gaps_bible_read.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { ebible_letter_accounted } from "./ebible_letter_accounted.mjs";
-import { ebible_letter_accounted_is } from "./ebible_letter_accounted_is.mjs";
 import { ebible_bible_chapters_skipped } from "./ebible_bible_chapters_skipped.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,8 +11,6 @@ import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { ebible_verse_gaps_critical_text_omitted } from "./ebible_verse_gaps_critical_text_omitted.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { ebible_verse_gap_name } from "./ebible_verse_gap_name.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map } from "./list_map.mjs";
@@ -45,36 +43,14 @@ export async function ebible_verse_marks_gaps_unexplained() {
   let accounted = await ebible_letter_accounted();
   let rows = [];
   function gaps_bible_read(bible) {
-    let bible_folder = property_get(bible, "bible_folder");
-    let gapped = property_get(bible, "found");
-    function gaps_chapter_read(chapter) {
-      let chapter_code = property_get(chapter, "chapter_code");
-      let address = list_join_space([bible_folder, chapter_code]);
-      let already = list_includes(displaced_chapters, address);
-      if (already) {
-        return;
-      }
-      let judged = ebible_letter_accounted_is(accounted, address);
-      if (judged) {
-        return;
-      }
-      let gaps = property_get(chapter, "found");
-      function gap_read(number) {
-        let name = ebible_verse_gap_name(chapter_code, number);
-        let deliberate = list_includes(omitted, name);
-        if (deliberate) {
-          return;
-        }
-        let row = {
-          bible_folder,
-          chapter_code,
-          name,
-        };
-        list_add(rows, row);
-      }
-      each(gaps, gap_read);
-    }
-    each(gapped, gaps_chapter_read);
+    let r = ebible_verse_marks_gaps_unexplained_gaps_bible_read(
+      bible,
+      displaced_chapters,
+      accounted,
+      omitted,
+      rows,
+    );
+    return r;
   }
   let list2 = property_get(gaps_measured, "bibles");
   each(list2, gaps_bible_read);
