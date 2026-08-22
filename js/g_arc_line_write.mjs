@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -24,8 +25,7 @@ export function g_arc_line_write(arc, number, field, text) {
   }
   let numbered = g_arc_turns_numbered(arc);
   for (let entry of numbered) {
-    let entry_number = property_get(entry, "number");
-    let same = equal(entry_number, number);
+    let same = property_equals(entry, "number", number);
     if (same) {
       let catch_up_field = equal(field, "catch_up");
       if (catch_up_field) {
