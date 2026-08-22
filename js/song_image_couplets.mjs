@@ -127,7 +127,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, its beams bare and empty",
+        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty",
       symbol_ref: "",
       same_as: 0,
     },
@@ -177,7 +177,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, its head caught fast and held in three or four stout brown thorn branches",
+        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, and a low round bush of brown thorn branches standing on the ground at the ram's head, the branches and the horns crossing one another where they meet",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -207,8 +207,8 @@ export function song_image_couplets() {
       first: "HE breathed HIS last",
       second: "and then HE died",
       symbol:
-        "The temple veil hanging alone with nothing else in the picture, no animals and no other objects, torn in two from top to bottom, the tear beginning at the very top and running all the way down",
-      symbol_ref: "Matthew 27:51",
+        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing a little apart with a plain straight gap between them running the whole height of the veil from its very top edge down past its bottom hem",
+      symbol_ref: "Exodus 26:31, Matthew 27:51",
       same_as: 0,
     },
     {
