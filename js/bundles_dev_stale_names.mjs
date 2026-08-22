@@ -20,25 +20,33 @@ export async function bundles_dev_stale_names() {
   "It answers the question the step gate cannot ask for itself: that gate weighs what is on disk, so a bundle nobody has rebuilt hides its growth until somebody does, and the growth then lands on whoever happened to rebuild it. This says which readings are stale before the weighing rather than after.";
   "It is a report and not a gate on purpose. Ten people edit shared code here all day, so at any instant some bundle is behind its sources and a gate against zero would be red almost always - it would be measuring how recently somebody saved a file. The thing that keeps this at zero is the watching daemon rather than a refusal, and what a report is for is telling whether that daemon is in fact doing it.";
   "The judging is borrowed whole from the watcher rather than written again here - the same reachable set, the same comparison - because two answers to is this bundle stale would be two chances to disagree about what an app is built from.";
-  "Each name comes with how many hours old its bundle file is, because that is the reading that tells churn from a backlog and the bare list does not: an app six hours behind is a peer who saved a file, an app eight days behind is one nothing has rebuilt since. A null there is an app with no dev bundle at all, which is as stale as a bundle gets.";
+  "Each name comes with how many hours old its bundle file is, because that is the reading that tells churn from a backlog and the bare list does not: an app six hours behind is a peer who saved a file, an app eight days behind is one nothing has rebuilt since. A null there is no reading at all, and the word beside it says why there is none.";
   "Being named here does not mean the bundle would come out different - it means its sources moved. The eight-day-old one this was first pointed at rebuilt to the same bytes. So this narrows where to look and never says on its own that anything is wrong.";
-  let f_path = app_shared_name_dev_text();
-  let dev_relative = folder_public_join(f_path);
+  ("Each name comes with a word for WHY it is here, because the first reading of this list put three unlike things under one heading and a person had to say which was which. An app behind its sources, an app with no bundle built, and a page in the dev folder that is no app at all are three different pieces of news, and only the first is about staleness.");
   let names = await apps_names_dev();
   function a_name_of(ad) {
     let a_name = property_get(ad, "a_name");
     return a_name;
   }
   let now = date_now_milliseconds();
-  async function aged(a_name) {
-    let file = text_combine(a_name, ".js");
-    let bundle = path_join([dev_relative, file]);
+  async function aged(a_name, why) {
+    let bundle = await app_shared_name_dev_bundle_path(a_name);
+    let no_app = null_is(bundle);
+    if (no_app) {
+      let page_only = {
+        name: a_name,
+        hours: null,
+        why: "no app of that name",
+      };
+      return page_only;
+    }
     let built_ms = await path_modified_ms(bundle);
     let never = null_is(built_ms);
     if (never) {
       let unbuilt = {
         name: a_name,
         hours: null,
+        why: "never built",
       };
       return unbuilt;
     }
@@ -48,6 +56,7 @@ export async function bundles_dev_stale_names() {
     let old = {
       name: a_name,
       hours,
+      why,
     };
     return old;
   }
@@ -55,16 +64,12 @@ export async function bundles_dev_stale_names() {
     let ad = await webpack_watch_app_deps_get(a_name);
     let unreadable = null_is(ad);
     if (unreadable) {
-      let unknown = await aged(a_name);
+      let unknown = await aged(a_name, "sources could not be read");
       return unknown;
     }
-    let stale = await webpack_watch_bundle_stale_is(
-      ad,
-      a_name_of,
-      dev_relative,
-    );
+    let stale = await webpack_watch_bundle_stale_is(ad, a_name_of);
     if (stale) {
-      let behind = await aged(a_name);
+      let behind = await aged(a_name, "behind its sources");
       return behind;
     }
     return null;

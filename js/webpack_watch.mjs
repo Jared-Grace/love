@@ -21,8 +21,6 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "./repos_paths_map_unordered_combine_squash_functions.mjs";
 export async function webpack_watch() {
-  let f_path = app_shared_name_dev_text();
-  let dev_relative = folder_public_join(f_path);
   let a_names = await apps_names_dev();
   async function app_deps_get(a_name) {
     let r = await webpack_watch_app_deps_get(a_name);
@@ -81,7 +79,6 @@ export async function webpack_watch() {
     let r3 = await webpack_watch_schedule_if_stale(
       ad,
       a_name_of,
-      dev_relative,
       build_schedule,
     );
     return r3;
