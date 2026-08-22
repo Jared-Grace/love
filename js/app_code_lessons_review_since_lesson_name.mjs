@@ -1,4 +1,4 @@
-import { list_size } from "./list_size.mjs";
+import { app_code_lessons_review_since_helpers_had } from "./app_code_lessons_review_since_helpers_had.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
@@ -68,25 +68,11 @@ export function app_code_lessons_review_since_lesson_name(
       was: place_was,
     });
   }
-  ("A group of shared helpers is worth a person's time only where a lesson they have already read stands on it. Where every lesson in the group is one of the new ones, the helper is part of the new writing and will be read with it - reported as a change it is the same work counted twice, and it is most of the list: the new lessons brought most of their own machinery with them.");
-  ("Which lessons in the group the learner already had is answered rather than the yes or no, because the two are wanted in different places. The count orders the reading; the names say which screens to go and look at.");
   let helpers_shared_edited = property_get(r2, "helpers_shared_edited");
-  let helpers_annotated = [];
-  for (let group of helpers_shared_edited) {
-    let lessons_had = [];
-    for (let lesson_name of property_get(group, "lessons")) {
-      if (list_includes(names_before, lesson_name)) {
-        lessons_had.push(lesson_name);
-      }
-    }
-    helpers_annotated.push({
-      count: property_get(group, "count"),
-      lessons: property_get(group, "lessons"),
-      helpers: property_get(group, "helpers"),
-      had: list_size(lessons_had),
-      lessons_had,
-    });
-  }
+  let helpers_annotated = app_code_lessons_review_since_helpers_had(
+    helpers_shared_edited,
+    names_before,
+  );
   let r = {
     names_after,
     helpers_shared_edited: helpers_annotated,
