@@ -100,7 +100,7 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "Being in an agony HE prayed more earnestly, and HIS sweat was as it were great drops of blood falling down to the ground. It was finished is what HE said at the end of it.",
       symbol_explain:
-        "Named rather than described. Gethsemane is the oil press, and Luke's drops falling to the ground are the verse the red drops come from. The press itself is the meaning of the place name, not a thing any verse pictures.",
+        "Described. HIS sweat was as it were great drops of blood falling down to the ground is Luke 22:44, and the drops and the ground are both in that clause. It replaced an olive press, which was the meaning of the place name rather than a thing any verse pictures - and a press of the oldest kind is a round stone in a trough, which almost nobody reads as a press even when it is drawn correctly. The two drawings of it read as a washtub. So the verse's own object is drawn instead, and the claim moves from named to described.",
     },
     14: {
       kept: 4,

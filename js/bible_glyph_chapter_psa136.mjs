@@ -9,6 +9,7 @@ export function bible_glyph_chapter_psa136() {
   "THE STARS ARE LEFT IN ENGLISH ON PURPOSE, in the ninth verse, and the star is one of the pictures this Bible already has. It is seated on kabod, the weight and glory of God, and a psalm that put it on the stars in the sky would spend the reader's understanding of the word to save one blank. A wrong mark is worse than no mark, and a mark that is right elsewhere is the easiest wrong one to write.";
   "THE CREATURE OF THE TWENTY FIFTH VERSE IS DRAWN AS MEAT AND IT SITS BADLY. The Hebrew is basar, all flesh, and the table draws basar as meat - which is right for a sacrifice and reads, beside the word food in the same clause, as though God fed every steak. The author does not get to pick a different picture for one passage, because a word drawn one way in one chapter and another way in the next breaks the only promise a reader learning these pictures has. So it is drawn as the table says and named here instead: this verse is the evidence that basar wants a second seat, for the living creature as against the flesh of one.";
   "THE PROPER NAMES ARE ALL LEFT IN ENGLISH - Egypt, Israel, Pharaoh, Sihon, Og, Bashan, the Amorites, the Red Sea. That is not a gap to fill later. A name points at one person or one place and a picture of it would be a portrait, which is the largest claim a picture can make and the one this table refuses everywhere. The kings around them are drawn, because king is a word rather than a name.";
+  "AND THE RED SEA IS WHY THE READING THAT COMPARES A CHAPTER TO THE TABLE CANNOT BE OBEYED BLINDLY. That reading walks every authored chapter and names the pictures the table now seats for words the chapter leaves in English; the sea is seated on yam, yam is the second half of the Red Sea, and so this psalm is reported twice as behind for a word the paragraph above refuses on purpose. The reading is right about the fact and wrong about the verdict, which is the shape of every survey that measures a table against a page: it can see what was not drawn and never why. A refusal written in prose is invisible to it, so a person reading its answer has to open the chapter before spending the mark.";
   "THE GOD OF GODS AND THE LORD OF LORDS ARE EACH ONE PICTURE TWICE OVER, in the second and third verses, because each is one Hebrew word twice over. English writes a plural and a singular; the Hebrew writes the same word in both slots. Drawing it the same way both times is what shows the construction, and it is the sort of thing a reader sees on a picture page and would never see in a translation.";
   let chapter = {
     chapter_code: "PSA136",
@@ -392,7 +393,7 @@ export function bible_glyph_chapter_psa136() {
         words: [
           "He",
           "$hands_giving",
-          "food",
+          "$bread",
           "to",
           "every",
           "$meat.",
