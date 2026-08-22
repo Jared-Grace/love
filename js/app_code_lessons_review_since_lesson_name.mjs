@@ -53,6 +53,20 @@ export function app_code_lessons_review_since_lesson_name(
       });
     }
   }
+  ("A lesson taken out of the run is found by reading the other list, because the walk above only ever visits lessons that still exist. Nothing else in this reading would mention it: it has no place now, so it cannot be moved or hidden, and it has no file left to have been edited.");
+  ("It matters more than its rarity suggests. A learner who worked a lesson and can no longer find it has lost a thing they were told they had finished, and that is the one change here that a release cannot undo later.");
+  let lessons_removed = [];
+  let place_was = 0;
+  for (let lesson_name of names_before) {
+    place_was = place_was + 1;
+    if (list_includes(names_after, lesson_name)) {
+      continue;
+    }
+    lessons_removed.push({
+      lesson: lesson_name,
+      was: place_was,
+    });
+  }
   let r = {
     names_after,
     cut_fn,
@@ -61,6 +75,7 @@ export function app_code_lessons_review_since_lesson_name(
     lessons_changed,
     lessons_moved,
     lessons_hidden,
+    lessons_removed,
   };
   return r;
 }
