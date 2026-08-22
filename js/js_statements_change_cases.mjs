@@ -61,6 +61,24 @@ export function js_statements_change_cases() {
     },
     {
       before: ["work(a);", "work(b);", "work(c);"],
+      after: ["work(b);", "work(a);", "work(x);"],
+      named: "one statement replaced and others reordered",
+      why: "one out and one in and the run the length it was, which is the whole of what counting can see - and three positions changed, so pointing a replace command at a position would point it at the wrong one",
+    },
+    {
+      before: ["function inner(a) {\n  work(a);\n}", "work(b);"],
+      after: ["function inner(a, b) {\n  work(a);\n}", "work(b);"],
+      named: "a nested function's header changed",
+      why: "the body came back identical and the two are still written differently, so what moved was the line the function opens with - here a parameter put in, which is a command in its own right",
+    },
+    {
+      before: ["function inner(a) {\n  work(a);\n}", "work(b);"],
+      after: ["function inner(a) {\n  work(a);\n  work(c);\n}", "work(b);"],
+      named: "in a nested function, one statement added",
+      why: "comparing only the lines the run is written out of, this is one statement swapped for another - and the edit is a single statement put inside a function that never moved",
+    },
+    {
+      before: ["work(a);", "work(b);", "work(c);"],
       after: ["work(x);", "work(y);", "work(z);"],
       named: "the body rewritten",
       why: "nothing survives, and no command is being asked for - this is the bucket that stays honestly unnamed, and it earns its keep by being small",
