@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent } from "./bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent.mjs";
 import { bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because } from "./bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because.mjs";
 import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,8 +14,6 @@ import { add } from "./add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -52,7 +51,11 @@ export async function bible_glyph_chapters_table_behind() {
         if (blank) {
           continue;
         }
-        let absent = bible_glyph_chapters_table_behind_absent(used, glyph);
+        let absent =
+          bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_absent(
+            used,
+            glyph,
+          );
         if (not(absent)) {
           continue;
         }
@@ -108,17 +111,4 @@ export async function bible_glyph_chapters_table_behind() {
     settled,
   };
   return r;
-  function bible_glyph_chapters_table_behind_absent(used, glyph) {
-    "whether an authored chapter is missing any name of one seated picture, so that it cannot be drawing that picture anywhere.";
-    let names = bible_glyph_group_names(glyph);
-    for (let name of names) {
-      let held = property_exists(used, name);
-      if (not(held)) {
-        let v = true;
-        return v;
-      }
-    }
-    let v2 = false;
-    return v2;
-  }
 }
