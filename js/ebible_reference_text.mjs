@@ -12,6 +12,6 @@ export async function ebible_reference_text(reference) {
   arguments_assert(arguments, 1);
   let folder = ebible_folder_english();
   let books = await ebible_version_books(folder);
-  let text = await ebible_reference_books_text(books, reference);
+  let text = await ebible_reference_books_text(folder, books, reference);
   return text;
 }

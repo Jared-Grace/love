@@ -14,7 +14,11 @@ export async function ebible_folder_references_texts(bible_folder, references) {
   arguments_assert(arguments, 2);
   let books = await ebible_version_books(bible_folder);
   async function lambda$pair(reference) {
-    let text = await ebible_reference_books_text(books, reference);
+    let text = await ebible_reference_books_text(
+      bible_folder,
+      books,
+      reference,
+    );
     let pair = {
       reference: reference,
       text: text,
