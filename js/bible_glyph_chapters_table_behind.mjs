@@ -1,4 +1,4 @@
-import { property_equals } from "./property_equals.mjs";
+import { bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because } from "./bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because.mjs";
 import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -75,11 +75,12 @@ export async function bible_glyph_chapters_table_behind() {
     let glyphs = [];
     for (let name of names) {
       let item = property_get(missing, name);
-      let because = bible_glyph_chapters_table_behind_because(
-        deliberate,
-        chapter_code,
-        name,
-      );
+      let because =
+        bible_glyph_chapters_table_behind_bible_glyph_chapters_table_behind_because(
+          deliberate,
+          chapter_code,
+          name,
+        );
       let b = null_is(because);
       let refused = not(b);
       if (refused) {
@@ -107,27 +108,6 @@ export async function bible_glyph_chapters_table_behind() {
     settled,
   };
   return r;
-  function bible_glyph_chapters_table_behind_because(
-    deliberate_rows,
-    chapter_code,
-    glyph,
-  ) {
-    "the reason one chapter leaves one seated picture in English on purpose, or nothing at all when no such decision has been written.";
-    for (let row of deliberate_rows) {
-      let same_chapter = property_equals(row, "chapter_code", chapter_code);
-      if (not(same_chapter)) {
-        continue;
-      }
-      let same_glyph = property_equals(row, "glyph", glyph);
-      if (not(same_glyph)) {
-        continue;
-      }
-      let v = property_get(row, "because");
-      return v;
-    }
-    let v2 = null;
-    return v2;
-  }
   function bible_glyph_chapters_table_behind_absent(used, glyph) {
     "whether an authored chapter is missing any name of one seated picture, so that it cannot be drawing that picture anywhere.";
     let names = bible_glyph_group_names(glyph);
