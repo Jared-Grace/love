@@ -1,10 +1,9 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_lyrics } from "./song_image_couplets_lyrics.mjs";
 import { song_image_couplets_scripture_heading } from "./song_image_couplets_scripture_heading.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_join_newline_2 } from "./list_join_newline_2.mjs";
-import { not } from "./not.mjs";
 export function song_image_couplets_description_of(
   verse_number,
   scripture,
@@ -22,8 +21,7 @@ export function song_image_couplets_description_of(
   let heading = song_image_couplets_scripture_heading();
   let parts = [lyrics, heading, scripture, elsewhere];
   function lambda$said(part) {
-    let empty = text_empty_is(part);
-    let said = not(empty);
+    let said = text_empty_not_is(part);
     return said;
   }
   let present = list_filter(parts, lambda$said);
