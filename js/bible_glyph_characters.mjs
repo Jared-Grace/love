@@ -406,6 +406,10 @@ export function bible_glyph_characters() {
       character: "🐑",
     },
     {
+      name: "ruler",
+      character: "📏",
+    },
+    {
       name: "altar",
       character: "altar",
     },

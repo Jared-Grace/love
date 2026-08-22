@@ -73,7 +73,7 @@ export function app_code_lesson_expression_comparison_and() {
     html_div_cycle_code(yes, [
       "For ",
       "3 < 5 && 2 < 4",
-      ", we do ",
+      ", we solve ",
       "3 < 5",
       " and ",
       "2 < 4",
@@ -92,7 +92,7 @@ export function app_code_lesson_expression_comparison_and() {
     html_div_cycle_code(no, [
       "Likewise, for ",
       "7 > 2 && 5 > 8",
-      ", we do ",
+      ", we solve ",
       "7 > 2",
       " and ",
       "5 > 8",
