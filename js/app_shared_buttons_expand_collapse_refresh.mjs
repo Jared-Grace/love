@@ -17,7 +17,10 @@ export function app_shared_buttons_expand_collapse_refresh(pair) {
     let open_any = app_shared_folds_open_any(folds);
     return open_any;
   }
-  let expandable = list_any(pair.folds_expand, folds_shut_any);
+  let folds_expandable = list_any(pair.folds_expand, folds_shut_any);
+  ("the page is asked its own question beside the cards, because opening is not only folding: the search results fetch the words of every verse as they open, and a page can stand with every card open and not one verse fetched");
+  let more = pair.expand_more_is();
+  let expandable = or(folds_expandable, more);
   let collapsible = list_any(pair.folds_collapse, folds_open_any);
   let disabled = not(expandable);
   app_shared_button_disabled_set(pair.expand, disabled);
