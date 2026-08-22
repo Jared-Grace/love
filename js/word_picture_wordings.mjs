@@ -1,0 +1,22 @@
+export function word_picture_wordings() {
+  "What to draw for each taught word that can be shown as a picture, keyed by the same base form the gloss list spells.";
+  "NOT EVERY TAUGHT WORD IS IN HERE, AND THE ONES LEFT OUT WERE LEFT OUT ON PURPOSE. A picture is worth drawing when the word names a thing you could point at or a piece of work you could watch somebody do. TRUTH and JOY and GUILT name none of those, and a picture of one is a picture of some particular scene the word merely turned up in - which teaches the scene and not the word. DARKNESS would come back as a black rectangle. DEATH would come back as a grave, which says nothing the sentence did not already say and makes a hard thing harder to look at for no gain.";
+  "GOD AND JESUS ARE NOT IN HERE AND MUST NEVER BE. A drawn face of God is a claim about what God is like, made by a machine, shown to a child as though somebody had checked it - and that whole class of thing is exactly what the human's reading is reserved for. RAISE and ROSE are out for the same reason: the only scene either one names is His.";
+  "THE CROSS IS IN, AND IT IS BARE. Its gloss says two long pieces of wood, and two long pieces of wood is what gets drawn - nobody on it, nobody near it. That is the word the child tapped.";
+  "A WORD THAT NAMES WORK IS DRAWN AS A STRIP OF PANELS, because the work is what the word means and one frozen moment out of it shows a person standing near some wool. The panels run left to right in the order the work is done, which is the order the sentence under them reads in.";
+  "THE WORDING SAYS NO LETTERING. A drawing machine asked for wool and a pot will cheerfully write WOOL across the top of it, in a spelling nobody checked, in a language the reader may not have - and this picture exists for a child who is stuck on one word already.";
+  let r = {
+    cross:
+      "A bare wooden cross standing alone on a low hill against a wide pale sky. Two rough dark beams, one laid across the other and bound at the crossing with rope. Nobody on it and nobody near it. Warm daylight, quiet, painted plainly. No lettering anywhere in the picture.",
+    dye: "A strip of three panels side by side, left to right, in a first-century workshop. First panel: a bundle of plain undyed wool, pale and clean, held in two hands. Second panel: the same wool pushed down into a wide clay pot of dark water, the water almost black. Third panel: the wool lifted out and hung on a line to dry, now deep dark all through. Warm daylight, plain earthy colours. No lettering anywhere in the picture.",
+    dyer: "A dyer at work in a small first-century workshop, seen from a little way off. Clay pots of dark water at their feet, hands stained dark to the wrist, lengths of dyed cloth hanging on lines behind them in the sun. Calm and unhurried, the look of somebody who does this every day. Warm daylight, plain earthy colours. No lettering anywhere in the picture.",
+    weave:
+      "A strip of three panels side by side, left to right, in a first-century workshop. First panel: long threads of wool stretched tight and parallel on an upright wooden loom. Second panel: a hand passing one thread across, over and under the standing threads. Third panel: a finished piece of cloth, the crossing threads now a whole close weave. Warm daylight, plain earthy colours. No lettering anywhere in the picture.",
+    offer:
+      "Two open hands held out flat toward the viewer, holding a small round loaf of bread. The hands are steady and the loaf is not yet taken; nobody is reaching for it. Plain clothing, plain background, warm daylight. No lettering anywhere in the picture.",
+    pray: "One person kneeling alone in a small plain room, head bowed and hands open and empty in front of them, a clay lamp burning on the floor beside them. Nobody else there, and nothing above them but the quiet room. Warm lamplight, soft shadows. No lettering anywhere in the picture.",
+    fellowship:
+      "Six or seven people of different ages sitting close together around a low table by lamplight, sharing bread and a jug, leaning in and talking. Everyone is turned toward somebody; nobody is sitting apart. First-century clothing, warm lamplight, plain room. No lettering anywhere in the picture.",
+  };
+  return r;
+}
