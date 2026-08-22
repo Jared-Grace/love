@@ -95,7 +95,7 @@ export function song_image_couplet_glosses() {
         "Described. The cup is named in Matthew 26:39 and again in John 18:11. It is drawn in glass rather than gold because gold is kept in this film for the word of GOD itself.",
     },
     13: {
-      kept: 2,
+      kept: 3,
       lyric_ref: "Luke 22:44, John 19:30",
       lyric_explain:
         "Being in an agony HE prayed more earnestly, and HIS sweat was as it were great drops of blood falling down to the ground. It was finished is what HE said at the end of it.",

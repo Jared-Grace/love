@@ -19,7 +19,7 @@ export async function words_game_taught_glosses_defects() {
   "IT ANSWERS WITH A LIST RATHER THAN THROWING, so the gate beside it can name every defect in one reading instead of one per run. Fixing twenty of these one throw at a time is twenty runs of a check that takes the same time to find all twenty.";
   "THE LAST OF THE FOUR IS THE ONE WORTH HAVING. The first three are bookkeeping and a person would notice them; an explanation quietly reaching past the reader is the failure that looks like success, because the page renders, the word has an answer, and the player is no better off than before they tapped.";
   let taught_words = await words_game_taught();
-  let glosses = await words_game_taught_glosses();
+  let glosses = words_game_taught_glosses();
   let written = object_property_names(glosses);
   let defects = [];
   for (let word of taught_words) {
