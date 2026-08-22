@@ -1,3 +1,4 @@
+import { app_music_song_references_shape_gate_run } from "./app_music_song_references_shape_gate_run.mjs";
 import { song_god_our_savior_glosses_gate_run } from "./song_god_our_savior_glosses_gate_run.mjs";
 import { words_game_taught_glosses_gate_run } from "./words_game_taught_glosses_gate_run.mjs";
 import { function_names_app_grouped_cases_gate_run } from "./function_names_app_grouped_cases_gate_run.mjs";
@@ -739,6 +740,7 @@ export function qa_gates() {
     app_shared_text_reader_untranslated_gate_run,
     js_dollar_choices_parameters_gate_run,
     song_god_our_savior_glosses_gate_run,
+    app_music_song_references_shape_gate_run,
   ];
   return gates;
 }

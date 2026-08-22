@@ -1,0 +1,21 @@
+export function bible_depiction_brief() {
+  "The whole brief for depicting anything Scripture does not describe - a face, a garment, a room, a tone of voice - covering how much may be added, in what order the rules bind, and how a figure stays the same figure from scene to scene.";
+  "★ ADDING DETAIL IS UNAVOIDABLE, SO THE QUESTION IS NEVER WHETHER BUT HOW MUCH AND POINTING AT WHAT. A face has features, a robe has a colour, a spoken line has a tone, and Scripture gives none of those for most of what it narrates. It cannot be escaped by refusing to draw either: a person simply reading a chapter aloud has already chosen a pronunciation, a pace and a tone, and nobody has ever called that adding to Scripture. So a rule forbidding addition would forbid reading the Bible out loud, and what is wanted is a bound.";
+  "★ FIVE RULES, AND THE ORDER IS THE WHOLE OF IT. Include every detail the passage gives. Contradict no detail anywhere in Scripture. Be playable somehow. Honour tradition where possible. Honour history where possible. A lower rule never buys a higher one, so a depiction that plays beautifully and contradicts a verse is simply wrong, and a historically exact soldier who is missing something the passage said is also wrong.";
+  "The first two rules are different jobs and both are needed. The first forbids leaving out what is in front of you. The second forbids putting in something that collides with a book you were not reading - the garments of a priest are described in Exodus whatever chapter you are drawing, and a depiction that ignores them has contradicted Scripture without ever touching its own passage.";
+  "★ THE DETAIL MUST POINT AT THE SCRIPTURE AND NOT AT ITSELF, AND THAT IS A BOUND ON SIZE RATHER THAN ONLY ON CONTENT. 1TI4:7 sets aside godless myths and old wives' tales. One invented detail is not a myth; a mass of them becomes one, because detail accumulates into story. Give an added figure a name, a history and a motive and a second story is now running, it has to be followed, and the passage has quietly become the setting for it. Past some size the additions carry more story than Scripture does, and a viewer is then following the additions.";
+  "★ THE TEST IS WHETHER THE ADDED MATERIAL WOULD STILL BE INTERESTING WITH THE SCRIPTURE TAKEN OUT. If it would, it is too much - it has become its own thing and is competing rather than pointing. A tone of voice fails that test instantly, which is why nobody objects to it, and an invented childhood for a minor character passes it, which is exactly why it must not be there.";
+  "Tradition and history are last because they disagree, with Scripture and with each other. A Levite's garments are Scripture and not tradition. A Roman soldier's armour is historical record and settles itself. A face is neither: the iconographic tradition and the painted one do not agree and never have, and the repo already meets this elsewhere by carrying more than one tradition rather than choosing between them.";
+  "A figure who ages is the ordinary hard case and not a rare one. Joseph is seventeen in one gathered scene and a hundred and ten in another, so a depiction is not one drawing but a thing that has to answer for a lifetime, and whoever takes this step should design for that from the start rather than discover it at Genesis 41.";
+  let brief = {
+    step: "depiction",
+    what: "how a figure, place or garment that Scripture leaves undescribed is settled once and used by every scene that names it",
+    settled:
+      "the five rules and their order; that added detail must point at the passage; that anything which would stand on its own without the Scripture is too much",
+    open: "how a depiction is addressed and named; what to do where traditions disagree; how a figure who ages is held together; whether a depiction may differ between renderings",
+    forbidden:
+      "invented biography, motive or backstory for anyone; any detail contradicting any passage anywhere; added material interesting enough to follow on its own",
+    done: "every figure named in a gathered scene has a depiction that satisfies the five rules in order, and nothing added would hold anybody's attention with the passage removed",
+  };
+  return brief;
+}
