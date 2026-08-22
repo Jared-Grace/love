@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_undrawn_deliberate } from "./bible_glyph_chapter_undrawn_deliberate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,8 +25,12 @@ export async function bible_glyph_chapters_table_behind() {
   ("A PICTURE THE CHAPTER NEVER DRAWS AT ALL IS THE ONLY THING REPORTED, and that is deliberately less than the question deserves. A picture drawn in one verse and missing from another may be an author choosing the shape of a sentence - which is the one thing authoring actually decides - so counting occurrences here would report the author's own judgment back as a fault. Never once in the whole chapter cannot be a shape decision, so it is the part of the answer that can be trusted. This therefore UNDERSTATES, and a chapter absent from the answer is not thereby up to date.");
   ("A GROUP IS BEHIND IF ANY ONE OF ITS NAMES IS MISSING. Two pictures standing for one word are drawn touching, so a chapter holding one of them and not the other cannot be drawing the group - and asking for all of the names rather than any of them is what keeps a picture that happens to be shared with an unrelated word from hiding the gap.");
   ("IT NAMES THE WORD AND NOT ONLY THE PICTURE, because a person reading this is about to open a chapter and find somewhere to put a mark. The original and the English are what let them search the verse; the picture alone would tell them a thing is missing and leave them to find where.");
+  ("A PICTURE A CHAPTER REFUSED ON PURPOSE IS NOT WORK AND IS REPORTED SEPARATELY. This reading can see what a chapter did not draw and can never see why, so a refusal argued out in the chapter's own prose used to arrive here looking exactly like the drift this was built to find. Measured on the day the consulting was added, three chapters came back behind and two of the three were settled decisions - the Red Sea, which is a name, and a speech bubble that would have landed touching its own English translation. The answer was more wrong than right.");
+  ("THE REFUSALS ARE CONSULTED AND NEVER SUBTRACTED IN SILENCE. They are counted, named, and handed back with the reason attached, because a number nobody can check is worth less than a number somebody can argue with - which is the rule the word-level refusal lists set for themselves and the reason they write their reasons down.");
   let chapters = bible_glyph_chapters();
+  let deliberate = bible_glyph_chapter_undrawn_deliberate();
   let behind = [];
+  let settled = [];
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");
     let testament_name = bible_chapter_testament_name(chapter_code);
@@ -66,14 +71,27 @@ export async function bible_glyph_chapters_table_behind() {
       }
     }
     let names = object_property_names(missing);
-    let none = list_empty_is(names);
-    if (none) {
-      continue;
-    }
     let glyphs = [];
     for (let name of names) {
       let item = property_get(missing, name);
+      let because = bible_glyph_chapters_table_behind_because(
+        deliberate,
+        chapter_code,
+        name,
+      );
+      let b = null_is(because);
+      let refused = not(b);
+      if (refused) {
+        item.chapter_code = chapter_code;
+        item.because = because;
+        list_add(settled, item);
+        continue;
+      }
       list_add(glyphs, item);
+    }
+    let none = list_empty_is(glyphs);
+    if (none) {
+      continue;
     }
     list_add(behind, {
       chapter_code,
@@ -83,9 +101,34 @@ export async function bible_glyph_chapters_table_behind() {
   let r = {
     chapters: list_size(chapters),
     behind_count: list_size(behind),
+    settled_count: list_size(settled),
     behind,
+    settled,
   };
   return r;
+  function bible_glyph_chapters_table_behind_because(
+    deliberate,
+    chapter_code,
+    glyph,
+  ) {
+    "the reason one chapter leaves one seated picture in English on purpose, or nothing at all when no such decision has been written.";
+    for (let row of deliberate) {
+      let left = property_get(row, "chapter_code");
+      let same_chapter = equal(left, chapter_code);
+      if (not(same_chapter)) {
+        continue;
+      }
+      let left2 = property_get(row, "glyph");
+      let same_glyph = equal(left2, glyph);
+      if (not(same_glyph)) {
+        continue;
+      }
+      let v = property_get(row, "because");
+      return v;
+    }
+    let v2 = null;
+    return v2;
+  }
   function bible_glyph_chapters_table_behind_absent(used, glyph) {
     "whether an authored chapter is missing any name of one seated picture, so that it cannot be drawing that picture anywhere.";
     let names = bible_glyph_group_names(glyph);

@@ -103,12 +103,12 @@ export function song_image_couplet_glosses() {
         "Described. HIS sweat was as it were great drops of blood falling down to the ground is Luke 22:44, and the drops and the ground are both in that clause. It replaced an olive press, which was the meaning of the place name rather than a thing any verse pictures - and a press of the oldest kind is a round stone in a trough, which almost nobody reads as a press even when it is drawn correctly. The two drawings of it read as a washtub. So the verse's own object is drawn instead, and the claim moves from named to described.",
     },
     14: {
-      kept: 4,
+      kept: 6,
       lyric_ref: "Luke 23:46, Mark 15:37, Matthew 27:51",
       lyric_explain:
         "Father, into thy hands I commend my spirit: and having said thus, HE gave up the ghost. Matthew puts the tearing of the veil in the same breath as the death.",
       symbol_explain:
-        "Described. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction.",
+        "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
       kept: 3,
