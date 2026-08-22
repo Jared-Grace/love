@@ -242,6 +242,24 @@ itself — a `*`, a bracket, an inline gloss — are not.
 - **Digital Bible Library** — requires an account and per-text agreements. Nothing
   here may be assumed shippable; each text is its own negotiation.
 
+## The language field is closed too — measured 2026-08-22
+
+eBible offers **515 versions this repo may ship and earn from, in 350 distinct
+language codes**. The app offers **347** of them, and the generated half of the
+list regenerates to the same bytes, so nothing usable is sitting unoffered.
+
+The three codes eBible carries and the app does not are not translations.
+`bbd` (Bau) and `kld` (Gamilaraay) both hold **zero of the sixty-six books** —
+the first an introduction page, the second fifteen chapters of an 1856
+instruction booklet — and the third group is the English versions whose
+copyright page names no language code at all (the World English Bible printings,
+the Messianic editions, the Septuagints), every one of which is already offered
+under English.
+
+So "which language could we add next" has no answer from eBible. Growth in
+languages has to come from a second source, which is what `door43_versions`
+exists for.
+
 ## English is a closed field — measured 2026-08-22
 
 Choosing which English wording to quote is not an open search. eBible already
