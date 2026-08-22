@@ -1,3 +1,4 @@
+import { app_code_label_comes_first_done_first } from "./app_code_label_comes_first_done_first.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
@@ -14,17 +15,20 @@ export function app_code_lesson_expression_times_divide() {
   let divided = js_operator_division_symbol();
   function first_of(index) {
     "the possible b numbers 2 through 5 (distinct across the four questions, so they never repeat)";
-    return add(index, 2);
+    let sum = add(index, 2);
+    return sum;
   }
   function triple_of(b) {
     "a is b times c, so a is divisible by both b and c - that makes a * b / c and a / b * c whole no matter which order the pair generic uses";
     let c = integer_random(2, 3);
     let a = multiply(b, c);
-    return [a, b, c];
+    let r = [a, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT b numbers, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(4, first_of), 4, triple_of);
+    let list = range_map(4, first_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -36,7 +40,8 @@ export function app_code_lesson_expression_times_divide() {
       divided,
       " together",
     ]);
-    html_div_cycle_code(box, ["Whichever one comes first, we do first"]);
+    let same_strength = app_code_label_comes_first_done_first();
+    html_div_cycle_code(box, [same_strength]);
     let example_box = app_code_container_light_blue(root);
     html_div_cycle_code(example_box, [
       "For example, for ",
