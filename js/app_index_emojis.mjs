@@ -1,3 +1,4 @@
+import { emoji_music_notes } from "./emoji_music_notes.mjs";
 import { emoji_wine } from "./emoji_wine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { emoji_mobile_arrow } from "./emoji_mobile_arrow.mjs";
@@ -154,6 +155,10 @@ export function app_index_emojis() {
     {
       app_fn: fn_name("app_apps_all"),
       emoji: emoji_mobile_arrow(),
+    },
+    {
+      app_fn: fn_name("app_music"),
+      emoji: emoji_music_notes(),
     },
   ];
   return r;
