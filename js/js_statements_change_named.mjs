@@ -1,3 +1,4 @@
+import { js_statements_change_both_ways_named } from "./js_statements_change_both_ways_named.mjs";
 import { js_statements_change_replaced_named } from "./js_statements_change_replaced_named.mjs";
 import { js_statements_change_one_direction_named } from "./js_statements_change_one_direction_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
