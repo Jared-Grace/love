@@ -1,3 +1,4 @@
+import { app_code_label_comes_first_done_first } from "./app_code_label_comes_first_done_first.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_pair_generic } from "./app_code_lesson_expression_pair_generic.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -13,16 +14,19 @@ export function app_code_lesson_expression_plus_minus() {
   let minus = js_operator_minus_symbol();
   function first_of(index) {
     "the possible first numbers 5 through 9 (big enough that taking one away stays at or above 0)";
-    return add(index, 5);
+    let sum = add(index, 5);
+    return sum;
   }
   function triple_of(first) {
     let b = integer_random(2, 4);
     let c = integer_random(2, 4);
-    return [first, b, c];
+    let r = [first, b, c];
+    return r;
   }
   function triples_get() {
     "four triples with four DIFFERENT first numbers, so the four questions are all distinct";
-    let triples = list_shuffle_take_map(range_map(5, first_of), 4, triple_of);
+    let list = range_map(5, first_of);
+    let triples = list_shuffle_take_map(list, 4, triple_of);
     return triples;
   }
   function above(root) {
@@ -34,7 +38,8 @@ export function app_code_lesson_expression_plus_minus() {
       minus,
       " together",
     ]);
-    html_div_cycle_code(box, ["Whichever one comes first, we do first"]);
+    let same_strength = app_code_label_comes_first_done_first();
+    html_div_cycle_code(box, [same_strength]);
     let example_box = app_code_container_light_blue(root);
     html_div_cycle_code(example_box, [
       "For example, for ",
