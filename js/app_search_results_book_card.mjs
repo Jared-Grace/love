@@ -16,7 +16,7 @@ export function app_search_results_book_card(
   books,
   results,
   result_verses_count,
-  book_collapse_setters,
+  book_folds,
   book_chapter_single_expanders,
 ) {
   arguments_assert(arguments, 8);
@@ -53,13 +53,20 @@ export function app_search_results_book_card(
     );
     return r;
   }
+  (
+    "this card folds itself its own way - it scrolls into view and fetches its verses as it opens - so it cannot be the shared folding card; it joins the page's group of them by handing over its own setter, and everything below folds it through what comes back, which is the only setter the group hears"
+  );
+  let collapsed_set_heard = app_shared_folds_setter_add(
+    book_folds,
+    collapsed_set,
+  );
   async function chapters_single_expand() {
     let r2 = await app_search_results_chapters_single_expand(chapter_expands);
     return r2;
   }
   async function toggle() {
     let next = not(card.collapsed);
-    collapsed_set(next);
+    collapsed_set_heard(next);
     let expanded = not(next);
     if (expanded) {
       ("the scrolling comes first because it costs no waiting: the reader sees the card land where they can read it while the verses inside it are still arriving");
@@ -68,7 +75,6 @@ export function app_search_results_book_card(
     }
   }
   html_on_click(header, toggle);
-  collapsed_set(false);
-  list_add(book_collapse_setters, collapsed_set);
+  collapsed_set_heard(false);
   list_add(book_chapter_single_expanders, chapters_single_expand);
 }

@@ -50,18 +50,18 @@ export async function app_search_results(context, div_results) {
     r3,
     "book_chapter_single_expanders",
   );
-  let book_collapse_setters = property_get(r3, "book_collapse_setters");
+  let book_folds = property_get(r3, "book_folds");
   let button_list = property_get(r3, "button_list");
-  let one_book = list_size_1(book_collapse_setters);
+  let one_book = list_size_1(book_folds.members);
   if (one_book) {
     ("a search landing inside a single book leaves no book to choose between, so it opens rather than waiting for a click that could only go one way, however long the page is. opening it here, with its chapters already in place, is also what lets a lone chapter open along with it");
-    app_shared_collapse_setters_set(book_collapse_setters, false);
+    app_shared_folds_set(book_folds, false);
     let only_book_expand = list_single(book_chapter_single_expanders);
     await only_book_expand();
   } else {
     let scrolls = html_page_scrolls();
     if (scrolls) {
-      app_shared_collapse_setters_set(book_collapse_setters, true);
+      app_shared_folds_set(book_folds, true);
     }
   }
   let s = list_size_1(button_list);
