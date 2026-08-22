@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
-import { app_music_song_address } from "./app_music_song_address.mjs";
+import { song_page_address } from "./song_page_address.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function song_image_couplets_page_elsewhere() {
   "The lines that stand under the references and say where their words actually are: one sentence, and then the address of this hymn's own page.";
@@ -8,7 +8,7 @@ export function song_image_couplets_page_elsewhere() {
   "It points at a page rather than at the other songs, because a page can be made longer and a description cannot - what will not fit under a video is not a problem to be worked around once, it is a ceiling that gets lower every time the hymn is explained better.";
   arguments_assert(arguments, 0);
   let title = song_image_couplets_title();
-  let address = app_music_song_address(title);
+  let address = song_page_address(title);
   let heading =
     "Open this link for the lyrics, the verse references, and the full verses written out:";
   let r = list_join_newline([heading, address]);
