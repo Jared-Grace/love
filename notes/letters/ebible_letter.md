@@ -238,12 +238,16 @@ We dropped anything that eight or more translations agreed on. That turned out t
 exactly the sixteen verses the critical texts omit — Matthew 17:21, Mark 9:44, Acts
 8:37 and the rest — so those are a translation's own decision about its text.
 
-We also dropped missing verses in any translation that skips a whole chapter. If a
-translation has no Genesis 5 at all, then verses missing inside its Genesis 4 are the
-same editorial choice, not a fault. That rules out the ones still being translated and
-the selection editions — six of them, holding about six thousand of the gaps we found.
-It does not rule out a missing number over words that are on the page, which is why dji
-is in the list above even though it publishes 37 chapters.
+We also set aside the translations that skip whole chapters. If a translation has no
+Genesis 5 at all, then verses missing inside its Genesis 4 are the same editorial choice,
+not a fault. Seven do this on a large scale — lit, pma, engPEV, tkr, engnna, mwf2018 and
+nay, skipping between 38 and 477 chapters each — and between them they hold about six
+thousand of the gaps we found. Those are the ones still being translated and the selection
+editions.
+
+That test lets missing verses go, not missing numbers. dji publishes 37 chapters and is
+still in the list above, because its Genesis 25:15 is a number missing over words that are
+on the page.
 
 Where we cannot read a chapter, we pass it over rather than show it, and pick it up
 whenever a corrected download appears. At present neither Brenton edition shows Psalm
