@@ -9,6 +9,7 @@ export async function bfl_draw_start(model, prompt, width, height) {
   "no caller wants the other answer, so there is no parameter for it. One appears the day somebody does.";
   "THE CONTENT CHECK IS ASKED FOR AT ITS MOST PERMISSIVE, which is theirs to offer and not a way round anything: it is a number in their own published range, and the strictest and the loosest end of it are equally settings they support. It was never passed at all until now, so every drawing so far was made one step off the strictest setting there is - by omission rather than by anybody deciding that.";
   "WHAT IT WAS REFUSING WAS SCRIPTURE. The couplet that kept coming back Content Moderated asks for a doorway with blood on the lintel and the two posts, which is Exodus 12, and the check reads the word and not the passage. There is no case in which drawing that is the wrong thing to do, and paying for two refusals to get one Passover door was the whole cost of leaving this alone.";
+  "FIVE IS THE MOST PERMISSIVE, not six, even though the published range runs to six. Six is refused outright with safety_tolerance > 5 requires authorization - a four hundred and three before anything is drawn, so it costs nothing to have got wrong, but it draws nothing either. Six would be an account setting to arrange with them rather than a number to pass.";
   let options = await bfl_http_options();
   let url = text_combine("https://api.bfl.ai/v1/", model);
   let body = {

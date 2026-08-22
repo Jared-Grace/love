@@ -1,3 +1,4 @@
+import { bible_glyph_groups_spellable_gate_run } from "./bible_glyph_groups_spellable_gate_run.mjs";
 import { js_statements_change_cases_gate_run } from "./js_statements_change_cases_gate_run.mjs";
 import { function_name_words_repeated_cases_gate_run } from "./function_name_words_repeated_cases_gate_run.mjs";
 import { g_profiles_balance_next_cases_gate_run } from "./g_profiles_balance_next_cases_gate_run.mjs";
