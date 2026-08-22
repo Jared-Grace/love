@@ -80,6 +80,8 @@ export function examples_groups() {
         "example_argument_boolean_set",
         "example_prose_add_after_selected",
         "example_prose_add_before_selected",
+        "example_prose_add_after_summary",
+        "example_prose_add_below_count",
         "example_arguments_same_names_set",
       ],
     },

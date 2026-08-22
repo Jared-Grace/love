@@ -218,6 +218,10 @@ export function examples_notes() {
       "explain one step beside the step - an account anywhere but the top of a block",
     example_prose_add_before_selected:
       "the same account written above the line it is about",
+    example_prose_add_after_summary:
+      "an account of the whole function rather than of one step - added at the end of what it already says, above everything it does",
+    example_prose_add_below_count:
+      "the same addition to a function that writes the count of its arguments first - which used to put the new line above the summary, and nothing went red",
     example_arguments_same_names_set:
       "finish a generated call in one command - the loop that ran after every one of them",
     example_shadowing_rename_in:

@@ -1,3 +1,5 @@
+import { folder_repo_love } from "./folder_repo_love.mjs";
+import { path_join } from "./path_join.mjs";
 export function word_picture_folder(word) {
   "$plain word";
   "The folder holding every picture ever drawn for one taught word, one folder per word, the attempts numbered inside it from one.";
