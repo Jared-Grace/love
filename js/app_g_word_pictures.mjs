@@ -54,9 +54,10 @@ export function app_g_word_pictures() {
     });
     let attempts = property_get(known, word);
     function attempt_block(attempt) {
+      "280px is the width below which an attempt drops to its own row, and it is set just under half the overlay column rather than at a round number, because two attempts fitting side by side is the whole reason this screen exists and 320 missed it by the width of the gap. A phone is narrower than two of anything, so there it stacks - which is the right answer on a phone and not a fallback.";
       let cell = html_div(strip);
       html_style_assign(cell, {
-        flex: "1 1 320px",
+        flex: "1 1 280px",
       });
       let src = word_picture_url(word, attempt);
       let picture = html_img(cell, src);
