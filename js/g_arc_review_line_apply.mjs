@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_opened } from "./g_arc_review_line_apply_opened.mjs";
 import { g_arc_review_line_apply_caught_up } from "./g_arc_review_line_apply_caught_up.mjs";
 import { g_arc_review_line_apply_started } from "./g_arc_review_line_apply_started.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -51,8 +52,7 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(object, "catch_up", catch_up);
     return;
   }
-  let prefix5 = property_get(marks, "opener");
-  let opened = text_starts_with(line, prefix5);
+  let opened = g_arc_review_line_apply_opened(marks, line);
   if (opened) {
     let prefix6 = property_get(marks, "opener");
     let opener = text_prefix_without(line, prefix6);
