@@ -18,6 +18,10 @@ export function app_index_main_fns() {
       text: "Gospel sharing game",
     },
     {
+      app_fn: fn_name("app_g_bless"),
+      text: "Praying game - walk a street and pray for the people you can see",
+    },
+    {
       app_fn: fn_name("app_code"),
       text: "Teaches the JavaScript programming language one small step at a time, by solving code",
     },
