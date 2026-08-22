@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
@@ -15,7 +16,6 @@ import { g_arc_write } from "./g_arc_write.mjs";
 import { g_arc_feedback_clear } from "./g_arc_feedback_clear.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { not } from "./not.mjs";
 export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
   "$plain chapter_code";
   "$plain answer_path";
@@ -42,8 +42,7 @@ export async function g_arc_revise_file(answer_path, chapter_code, index_text) {
     let turn = property_get(note, "turn");
     let field = property_get(note, "field");
     let address = g_arc_line_address(turn, field);
-    let already = list_includes(faulted, address);
-    let fresh = not(already);
+    let fresh = list_includes_not(faulted, address);
     if (fresh) {
       list_add(faulted, address);
     }
