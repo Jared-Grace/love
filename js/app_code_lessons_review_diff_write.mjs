@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
@@ -36,14 +37,18 @@ export async function app_code_lessons_review_diff_write(commit) {
         continue;
       }
       if (text_starts_with(line, "+")) {
-        lines_added.push(text_trim(text_remove_if_starts_with(line, "+")));
+        let message = text_remove_if_starts_with(line, "+");
+        let trimmed = text_trim(message);
+        lines_added.push(trimmed);
       }
       if (text_starts_with(line, "-")) {
-        lines_taken.push(text_trim(text_remove_if_starts_with(line, "-")));
+        let message2 = text_remove_if_starts_with(line, "-");
+        let trimmed2 = text_trim(message2);
+        lines_taken.push(trimmed2);
       }
     }
-    "A line that leaves one file and arrives in another is a move, and a move is not something to review - the lifts this repo does constantly would otherwise read as the largest rewrites on the list. So a line taken away and put back verbatim somewhere in the same change is counted apart, and the two numbers left are the writing that is really new and the writing that is really gone.";
-    "The keys are written with a bar in front of them so that a line of code spelling a word every object already answers to cannot be mistaken for a count.";
+    ("A line that leaves one file and arrives in another is a move, and a move is not something to review - the lifts this repo does constantly would otherwise read as the largest rewrites on the list. So a line taken away and put back verbatim somewhere in the same change is counted apart, and the two numbers left are the writing that is really new and the writing that is really gone.");
+    ("The keys are written with a bar in front of them so that a line of code spelling a word every object already answers to cannot be mistaken for a count.");
     let taken_counts = {};
     for (let line_taken of lines_taken) {
       let key = text_combine_multiple(["|", line_taken]);
@@ -59,13 +64,14 @@ export async function app_code_lessons_review_diff_write(commit) {
       let key = text_combine_multiple(["|", line_added]);
       let counted = taken_counts[key];
       if (counted) {
-        taken_counts[key] = counted - 1;
+        taken_counts[key] = subtract(counted, 1);
         moved = moved + 1;
       } else {
         added = added + 1;
       }
     }
-    let taken = list_size(lines_taken) - moved;
+    let left = list_size(lines_taken);
+    let taken = subtract(left, moved);
     sized.push({
       place: entry.place,
       lesson: entry.lesson,
@@ -85,6 +91,7 @@ export async function app_code_lessons_review_diff_write(commit) {
     let v = String(entry.place);
     let v2 = String(entry.added);
     let v3 = String(entry.taken);
+    let v4 = String(entry.moved);
     let heading = text_combine_multiple([
       "======== ",
       v,
@@ -95,7 +102,7 @@ export async function app_code_lessons_review_diff_write(commit) {
       " -",
       v3,
       "  moved ",
-      String(entry.moved),
+      v4,
       "\n\n",
     ]);
     let section = text_combine_multiple([heading, entry.diff_text, "\n"]);
