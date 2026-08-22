@@ -8,6 +8,8 @@ import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 export function g_arc_words_uncommon_word(r2, counts, known_words, homes) {
+  "The words a beginning reader would not know, sorted into the two kinds worth acting on: the ones said exactly once in the whole game, and the ones said often but only ever by a single character.";
+  "A WORD ONLY ONE MOUTH EVER SAYS IS THE ONE WORTH TEACHING, because it belongs to that character and will come back; a word said once anywhere at all is the one worth cutting, because nothing later in the game depends on the reader having learned it.";
   arguments_assert(arguments, 4);
   let mouths = property_get(r2, "mouths");
   let once = [];

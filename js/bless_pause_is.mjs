@@ -14,6 +14,13 @@ export function bless_pause_is(fraction) {
   ("simply somebody the draw went against several times running, and their next step comes");
   ("with the same chance as anybody else's - so a crowd never quietly sorts itself into");
   ("walkers and statues.");
-  let pausing = less_than(fraction, 0.25);
+  ("One step in ten, and the share came down once a step began to LAST the whole wait");
+  ("before the next one. While a step was over in a moment, a person spent nearly all of");
+  ("every wait standing still anyway and one skipped step in four was barely noticed. Now");
+  ("the picture is moving for the whole of a wait, so a skipped step is the only time");
+  ("anybody is still at all - and at one in four that fell on somebody every few seconds,");
+  ("which read as walking that kept catching rather than as a person stopping to look at");
+  ("something.");
+  let pausing = less_than(fraction, 0.1);
   return pausing;
 }

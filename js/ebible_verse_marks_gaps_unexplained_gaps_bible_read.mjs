@@ -13,6 +13,8 @@ export function ebible_verse_marks_gaps_unexplained_gaps_bible_read(
   omitted,
   rows,
 ) {
+  "One Bible's missing verse marks read through, adding to the list of faults every gap that nobody has yet explained.";
+  "THREE KINDS OF EXPLANATION ARE ACCEPTED AND EACH IS CHECKED BEFORE A GAP IS REPORTED: a chapter whose marks are known to sit in the wrong places, a chapter already accounted for as a whole, and a single verse this translation leaves out on purpose. What is left over is the answer, and it is deliberately the smallest thing that could not be argued away.";
   arguments_assert(arguments, 5);
   let bible_folder = property_get(bible, "bible_folder");
   let gapped = property_get(bible, "found");

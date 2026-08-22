@@ -8,6 +8,8 @@ export function app_code_lessons_review_diff_shared_size(entry) {
     whole_run: entry.whole_run,
     lessons: entry.lessons,
     helpers: entry.helpers,
+    had: entry.had,
+    lessons_had: entry.lessons_had,
     added: entry.added,
     taken: entry.taken,
     moved: entry.moved,
