@@ -1,0 +1,32 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { g_directions } from "./g_directions.mjs";
+import { list_without } from "./list_without.mjs";
+import { list_random_item } from "./list_random_item.mjs";
+import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
+import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
+export function app_g_bless_person_turn(person) {
+  arguments_assert(arguments, 1);
+  ("Somebody looks another way without going anywhere - the whole of what standing about");
+  ("outside your own front door consists of.");
+  ("A person who is not walking had nothing to do until now. Standing still was the");
+  ("ABSENCE of a step, so a still person was a picture that had stopped, and a street where");
+  ("three quarters of everybody lives at a door was three quarters statues. Yet standing");
+  ("about is not nothing: somebody outside their house looks up the road, then at the door,");
+  ("then back up the road. That is the whole behaviour, and it needs no ground.");
+  ("It is also the only thing a crowded pavement can afford. Every step is a claim on a");
+  ("tile and a walker with nowhere to go turns round and bounces; a turn asks the map for");
+  ("nothing at all, so any number of people can do it at once in a street that is full.");
+  ("They are never turned to the way they are already facing. A quarter of the draws would");
+  ("otherwise be a person visibly doing nothing at the moment they were meant to be seen");
+  ("doing something, and the wait after it would read as the game having stalled.");
+  ("The four facings are the ones the pictures exist for, and the same four a step could");
+  ("have taken - so a turn is a step's worth of intention with the step withheld, which is");
+  ("what makes turning and walking read as one person rather than two behaviours.");
+  let facing = property_get(person, "direction");
+  let all = g_directions();
+  let others = list_without(all, facing);
+  let direction = list_random_item(others);
+  let img = app_shared_game_npc_img_get(person);
+  app_shared_game_character_face(person, img, direction);
+}
