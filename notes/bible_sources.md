@@ -242,6 +242,60 @@ itself — a `*`, a bracket, an inline gloss — are not.
 - **Digital Bible Library** — requires an account and per-text agreements. Nothing
   here may be assumed shippable; each text is its own negotiation.
 
+## English is a closed field — measured 2026-08-22
+
+Choosing which English wording to quote is not an open search. eBible already
+aggregates almost everything free that exists in English, so the whole field is
+countable, and it was counted rather than estimated.
+
+`ebible_versions_english` lists **55** English entries. `ebible_versions_english_books_count_cache`
+holds a book count for **53** of them; the two with no count are `engamp`
+(Amplified) and `engnasb` (NASB) — listed but not downloadable, which is how a
+restricted text appears here. Of the 53, **32 are complete Bibles** (66 books or
+more) and **21 of those may be shipped and earned from** (`ebible_versions_english_choices_licences`).
+
+The other 21 are partial by design, and knowing which kind matters when a line of
+a song falls in the wrong testament: New Testament only (`engnna`, `engemtv`,
+`engtnt`, `engtcent`, `engPEV`, `engf35`, all 26-27 books), Septuagint or Old
+Testament only (`eng-Brenton` 53, `eng-lxx2012` and `eng-uk-lxx2012` 54,
+`englxxup` 52), Tanakh (`engjps` 39, `englee` 39), Noyes 49, and fragments
+(`engbarkly` 1, `eng-glw` 4, `engoke` 5, `engaoi` 6, `engWycliffe` 9, `engourb` 14).
+
+**The Open English Bible is not a complete Bible.** `engoebcw` and `engoebus`
+hold 42 books: the New Testament and part of the Old, which is still in progress.
+Its CC0 dedication makes it tempting to reach for, and it can only cover New
+Testament references.
+
+**The five complete English texts we may not ship** are `engnet` (NET, terms the
+mark-reader cannot classify), `enggw` (GOD'S WORD) and `engerv` (Easy-to-Read),
+both all-rights-reserved, and `engwyc2017` / `engwyc2018` (Wycliffe modern
+spelling), both CC BY-NC-ND.
+
+**Off eBible the yield in English is one text, not a catalogue.** Rotherham's
+Emphasized Bible (1902) is complete, public domain, and absent from eBible; it is
+carried as a CrossWire/Sword module. STEPBible (Tyndale House, CC BY 4.0) is
+lexical and morphological data rather than a translation. open.bible (Biblica)
+releases mostly non-English texts. The aggregators — `seven1m/open-bibles`,
+bible-api.com, Free Use Bible API, midvash bible-data — index the same public
+domain pool eBible already carries, so they add reach in other languages and no
+new English wording.
+
+**The modern translations people quote from memory are all closed to us.** NIV is
+not licensable for commercial use through API.Bible at all. The ESV API and
+Tyndale's NLT API are free for non-commercial use only, which is a trap for this
+repo: it works while nothing earns and becomes a breach the day something does
+([[project_mission_reinvest_in_people]] is why that day is intended). Other
+copyrighted texts can be licensed through API.Bible's Express Licensing from
+about $10 a month per translation, priced by the rights holder and scaling with
+monthly users.
+
+**A prefix nearly cost us a translation.** `ebible_versions_english_choices` used
+to drop the World English Bible family by the prefix `engweb`, which also caught
+`engwebster` — Noah Webster's 1833 revision of the King James, a different
+translation from a different century sharing three letters. It was absent from
+every English choice list and nothing said so. The family is now named folder by
+folder in `ebible_versions_english_web_family`.
+
 ## Worked example: the Thai KJV disagreement
 
 Indexes list `thaKJV` as public domain, on the reasoning that a translation of the
