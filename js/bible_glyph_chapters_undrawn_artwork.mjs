@@ -1,11 +1,6 @@
-import { bible_glyph_chapters_undrawn_artwork_candidate } from "./bible_glyph_chapters_undrawn_artwork_candidate.mjs";
+import { bible_glyph_chapters_undrawn_artwork_weighed } from "./bible_glyph_chapters_undrawn_artwork_weighed.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { bible_glyph_chapters_undrawn_commonest } from "./bible_glyph_chapters_undrawn_commonest.mjs";
-import { property_get } from "./property_get.mjs";
-import { bible_glyph_artwork_names_available } from "./bible_glyph_artwork_names_available.mjs";
-import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapters_undrawn_artwork(count) {
   "$plain count";
@@ -18,20 +13,7 @@ export async function bible_glyph_chapters_undrawn_artwork(count) {
   "A MATCH IS A LEAD AND NEVER AN ANSWER. The set is searched for the English the interlinear happened to print, so a word whose picture is obvious under another name comes back empty, and a word that shares a syllable with a fruit comes back with the fruit. What this rules out is the expensive mistake - writing a glyph the set cannot draw - and it does not rule in anything.";
   "IT CARRIES THE WORD'S OWN NUMBER AND ITS TESTAMENT, which the reading upstairs already knows and this used to drop. A row of this report is read by somebody about to write a row into a root table, and that row is keyed by the number - so dropping it made every seating start with a lookup by hand, which is the exact move whose going wrong is written two paragraphs up. The testament travels with it because the two numberings collide, and a number without one names two different words.";
   let report = await bible_glyph_chapters_undrawn_commonest(count);
-  let candidates = property_get(report, "commonest");
-  let names = await bible_glyph_artwork_names_available();
-  let bridged = {};
-  for (let entry of bible_glyph_artwork_names()) {
-    let property_name = text_lower_to(entry.asset);
-    property_set(bridged, property_name, entry.glyph);
-  }
-  let lowered_names = [];
-  let weighed = bible_glyph_chapters_undrawn_artwork_candidate(
-    names,
-    lowered_names,
-    candidates,
-    bridged,
-  );
+  let weighed = await bible_glyph_chapters_undrawn_artwork_weighed(report);
   let drawable = [];
   let needs_drawing = [];
   for (let row of weighed) {
