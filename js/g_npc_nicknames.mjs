@@ -1,14 +1,13 @@
+import { list_get_wrap_index } from "./list_get_wrap_index.mjs";
 import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
 import { g_npc_nickname_lists } from "./g_npc_nickname_lists.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_size_less_1 } from "./list_size_less_1.mjs";
 import { list_add } from "./list_add.mjs";
 import { less_than_equal_assert_json } from "./less_than_equal_assert_json.mjs";
 import { multiply } from "./multiply.mjs";
-import { mod } from "./mod.mjs";
 import { add_1 } from "./add_1.mjs";
 export async function g_npc_nicknames() {
   "What every person of the convert pool is called, in pool order - one name each, worked out from the cast and nothing else.";
@@ -42,8 +41,7 @@ export async function g_npc_nicknames() {
     });
     taken[side] = add_1(within);
     let stepped = multiply(within, 61);
-    let size = list_size(names);
-    let at = mod(stepped, size);
+    let at = list_get_wrap_index(names, stepped);
     let nickname = list_get(names, at);
     list_add(nicknames, nickname);
   }
