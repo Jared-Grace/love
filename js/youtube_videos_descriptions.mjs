@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_videos_records } from "./youtube_videos_records.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,8 +15,7 @@ export async function youtube_videos_descriptions(video_ids) {
   let said = {};
   for (let record of records) {
     let video_id = property_get(record, "id");
-    let snippet = property_get(record, "snippet");
-    let description = property_get(snippet, "description");
+    let description = property_path_get_2(record, "snippet", "description");
     property_set(said, video_id, description);
   }
   function lambda$absent(video_id) {
