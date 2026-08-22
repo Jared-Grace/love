@@ -1,6 +1,4 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { bible_reference_chapter_verse_shape_is } from "./bible_reference_chapter_verse_shape_is.mjs";
-import { not } from "./not.mjs";
+import { bible_reference_book_chapter_verses_shape_not_is } from "./bible_reference_book_chapter_verses_shape_not_is.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
@@ -35,9 +33,10 @@ export async function ebible_references_parse_lines_generic(
   let chapter_verses_list = property_get(v, "chapter_verses_list");
   function lambda2(la) {
     function lambda(book_name, chapter_verses) {
-      let reference = text_combine_multiple([book_name, " ", chapter_verses]);
-      let shaped = bible_reference_chapter_verse_shape_is(reference);
-      let unshaped = not(shaped);
+      let unshaped = bible_reference_book_chapter_verses_shape_not_is(
+        book_name,
+        chapter_verses,
+      );
       if (unshaped) {
         return;
       }
@@ -45,7 +44,6 @@ export async function ebible_references_parse_lines_generic(
       let verse_end = property_get(v2, "verse_end");
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
-      property_get(v2, "book_code");
       function each_version(bible_folder_each, books_each) {
         function lambda4(verse_number) {
           verse_number = text_to(verse_number);
