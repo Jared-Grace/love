@@ -1,3 +1,4 @@
+import { song_image_audit_picture_redraw } from "./song_image_audit_picture_redraw.mjs";
 import { html_width_full } from "./html_width_full.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { html_align_items_center } from "./html_align_items_center.mjs";
@@ -6,9 +7,7 @@ import { html_text_align } from "./html_text_align.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { api_read } from "./api_read.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { html_src_set } from "./html_src_set.mjs";
 import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_img } from "./html_img.mjs";
@@ -61,14 +60,6 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_margin_top(strip, "8px");
   html_align_items_center(strip);
   let kept_now = kept;
-  function redraw() {
-    let attempt = attempts[shown];
-    let src2 = song_image_drawn_url(key, attempt);
-    html_src_set(picture, src2);
-    let of = String(attempt) + " of " + String(attempts.length);
-    let mark = equal(attempt, kept_now) ? " · kept" : "";
-    html_text_set(attempt_line, of + mark);
-  }
   async function keep_click() {
     let attempt = attempts[shown];
     html_text_set(keep, "keeping");
@@ -76,7 +67,14 @@ export function song_image_audit_picture(parent, key, kept) {
     await api_read(f_name, [key, attempt]);
     kept_now = attempt;
     html_text_set(keep, "keep");
-    redraw();
+    song_image_audit_picture_redraw(
+      attempts,
+      shown,
+      key,
+      picture,
+      kept_now,
+      attempt_line,
+    );
   }
   function step(by) {
     let next = shown + by;
@@ -84,7 +82,14 @@ export function song_image_audit_picture(parent, key, kept) {
       greater_than_equal(next, 0) && less_than(next, attempts.length);
     if (inside) {
       shown = next;
-      redraw();
+      song_image_audit_picture_redraw(
+        attempts,
+        shown,
+        key,
+        picture,
+        kept_now,
+        attempt_line,
+      );
     }
   }
   function back_click() {
@@ -106,6 +111,13 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_padding(keep, "4px 10px");
   html_style_font_size(keep, "12px");
   html_cursor_pointer(keep);
-  redraw();
+  song_image_audit_picture_redraw(
+    attempts,
+    shown,
+    key,
+    picture,
+    kept_now,
+    attempt_line,
+  );
   return picture;
 }
