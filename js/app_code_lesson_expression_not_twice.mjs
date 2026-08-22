@@ -59,7 +59,7 @@ export function app_code_lesson_expression_not_twice() {
     html_div_cycle_code(c, [
       "For ",
       twice_true,
-      ", we do ",
+      ", we solve ",
       not_true,
       " first",
     ]);

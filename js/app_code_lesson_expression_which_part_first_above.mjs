@@ -100,7 +100,7 @@ export function app_code_lesson_expression_which_part_first_above(root) {
   html_div_cycle_code(wrong_card, [
     "That is because ",
     times,
-    " is done before ",
+    " is solved before ",
     plus,
   ]);
   let rule_card = app_code_container_light_blue(root);

@@ -29,7 +29,7 @@ export function app_code_lesson_expression_comparison_or_intro(root) {
   html_div_cycle_code(worked, [
     "For ",
     whole,
-    ", we do ",
+    ", we solve ",
     left_side,
     " and ",
     right_side,

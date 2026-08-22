@@ -371,6 +371,10 @@ export function bible_glyph_artwork_names() {
       glyph: "sheep",
       asset: "Ewe",
     },
+    {
+      glyph: "ruler",
+      asset: "Straight ruler",
+    },
   ];
   return names;
 }
