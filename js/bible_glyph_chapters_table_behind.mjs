@@ -107,12 +107,12 @@ export async function bible_glyph_chapters_table_behind() {
   };
   return r;
   function bible_glyph_chapters_table_behind_because(
-    deliberate,
+    deliberate_rows,
     chapter_code,
     glyph,
   ) {
     "the reason one chapter leaves one seated picture in English on purpose, or nothing at all when no such decision has been written.";
-    for (let row of deliberate) {
+    for (let row of deliberate_rows) {
       let left = property_get(row, "chapter_code");
       let same_chapter = equal(left, chapter_code);
       if (not(same_chapter)) {
