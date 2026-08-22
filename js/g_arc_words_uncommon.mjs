@@ -2,10 +2,8 @@ import { g_arc_words_carried } from "./g_arc_words_carried.mjs";
 import { words_early_reader } from "./words_early_reader.mjs";
 import { word_early_reader_known_is } from "./word_early_reader_known_is.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { g_arc_write } from "./g_arc_write.mjs";
-import { folder_user_storage_function_path } from "./folder_user_storage_function_path.mjs";
-import { folder_exists } from "./folder_exists.mjs";
-import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
+import { g_arc_written_files_or_null } from "./g_arc_written_files_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -29,10 +27,8 @@ export async function g_arc_words_uncommon() {
   "It says nothing about whether the word is HARD. Every arc has its own subject and so has its own words for it, and most of what comes back is ordinary - wool, dye, husband. The list is short enough to read, which is the whole of what a report owes; a gate here would be ratcheting against the fact that people talk about different things.";
   "IT SHARPENS AS MORE IS WRITTEN, which is why it reads every chapter rather than taking one. With a single chapter written, once-said catches roughly ten ordinary words for every hard one - laughed, smiling, waiting sit beside rite and unaccounted. With twenty chapters the ordinary words have all been said elsewhere and stop appearing, while a genuinely rare word still will not have been.";
   "COUNTS THE LOOKING AND HANDS THE COUNT BACK. Arcs live in storage and storage is not in the repo, so a machine that has written none answers nothing, and nothing is the right answer rather than a broken one.";
-  let f = g_arc_write;
-  let path = folder_user_storage_function_path(f);
-  let exists = await folder_exists(path);
-  let none = not(exists);
+  let files = await g_arc_written_files_or_null();
+  let none = null_is(files);
   let empty = {
     chapters: 0,
     people: 0,
@@ -46,7 +42,6 @@ export async function g_arc_words_uncommon() {
   if (none) {
     return empty;
   }
-  let files = await folder_read_paths_async(path);
   let said = [];
   let carried_words = [];
   let homes = {};

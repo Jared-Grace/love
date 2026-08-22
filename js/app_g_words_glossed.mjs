@@ -5,12 +5,10 @@ import { property_get } from "./property_get.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_span_words_on_click } from "./html_span_words_on_click.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { equal } from "./equal.mjs";
-import { not_equal } from "./not_equal.mjs";
 export function app_g_words_glossed(container, text) {
   "$plain text";
-  "A line somebody says, drawn into a bubble with every word the game means to teach marked as touchable, and an answer underneath it that fills in with what the tapped word means.";
+  "A line somebody says, drawn into a bubble with every word of it touchable, and an answer underneath it that fills in with what the tapped word means.";
   "NOTHING IS MARKED, AND THAT IS THE WHOLE POINT OF IT. Twenty-five words carry a meaning and seven hundred are assumed known; the ones worth hearing about are the assumed ones a reader turns out not to know, and a reader only tells us which those are by tapping one. Underlining the twenty-five was tried and it shuts that off - a player taps only what is marked, so the seven hundred are never touched and the words we guessed wrong about stay guessed wrong forever.";
   "SO EVERY TAP ANSWERS, including a tap on a word with nothing written for it. That is what makes an unmarked sentence worth touching at all: a reader who tries three words and gets three silences has learned that tapping does nothing, and stops - taking the signal with them. Saying plainly that nothing is written keeps the tap honest and keeps them tapping.";
   "THE ANSWER SITS UNDER THE WORDS AND NOT OVER THEM. A popup covers the sentence the player was reading, which is the sentence the word they did not know is in - so they get the meaning and lose the place. Two quiet lines below leave both on the screen at once.";
@@ -23,6 +21,11 @@ export function app_g_words_glossed(container, text) {
     let found = words_game_taught_gloss_or_null(word);
     let none = equal(found, null);
     if (none) {
+      html_text_set(gloss_line, word);
+      html_text_set(
+        explain_line,
+        "There is nothing written for this word yet.",
+      );
       return;
     }
     let named = property_get(found, "word");
@@ -32,16 +35,6 @@ export function app_g_words_glossed(container, text) {
     let explain = property_get(found, "explain");
     html_text_set(explain_line, explain);
   }
-  let records = html_span_words_on_click(speech, text, word_tapped);
-  for (let record of records) {
-    let word = property_get(record, "word");
-    let found = words_game_taught_gloss_or_null(word);
-    let there = not_equal(found, null);
-    if (there) {
-      let span = property_get(record, "span");
-      html_style_set(span, "text-decoration", "underline dotted");
-      html_style_set(span, "cursor", "pointer");
-    }
-  }
+  html_span_words_on_click(speech, text, word_tapped);
   return speech;
 }
