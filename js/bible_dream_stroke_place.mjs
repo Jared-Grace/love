@@ -1,9 +1,9 @@
+import { property_get } from "./property_get.mjs";
+import { bible_dream_stroke_place_marks } from "./bible_dream_stroke_place_marks.mjs";
 import { bible_dream_stroke_place_state } from "./bible_dream_stroke_place_state.mjs";
-import { bible_dream_corridor_width } from "./bible_dream_corridor_width.mjs";
 import { html_element_svg } from "./html_element_svg.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 export function bible_dream_stroke_place(drawing, stroke) {
   "Draw one stroke of a dream twice over - a wide faint one showing where it goes, and a bright thin one hidden until it is traced - and hand back everything a trace of it will need.";
   "The faint one IS the corridor. It is drawn wide rather than described in words because a player has to be able to see how much room they have before they start moving, and a rule that only announces itself by being broken is not a rule anybody can play against.";
@@ -18,18 +18,9 @@ export function bible_dream_stroke_place(drawing, stroke) {
   let rank = laid.children.length;
   let group = html_element_svg(drawing, "g");
   let moved = "translate(" + stroke.x + "," + stroke.y + ")";
-  html_attribute_set(group, "transform", moved);
-  let guide = html_element_svg(group, "path");
-  html_attribute_set(guide, "d", stroke.d);
-  html_attribute_set(guide, "fill", "none");
-  let guide_color = app_shared_color_gray_dark();
-  html_attribute_set(guide, "stroke", guide_color);
-  let result = bible_dream_corridor_width();
-  let value = String(result);
-  html_attribute_set(guide, "stroke-width", value);
-  html_attribute_set(guide, "stroke-linecap", "round");
-  html_attribute_set(guide, "stroke-linejoin", "round");
-  let marks = html_element_svg(group, "g");
+  let r = bible_dream_stroke_place_marks(group, moved, stroke);
+  let marks = property_get(r, "marks");
+  let guide = property_get(r, "guide");
   let ink = html_element_svg(group, "path");
   html_attribute_set(ink, "d", stroke.d);
   html_attribute_set(ink, "fill", "none");
