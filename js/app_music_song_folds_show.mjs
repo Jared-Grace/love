@@ -23,7 +23,7 @@ export function app_music_song_folds_show(parent) {
   }
   let groups = [folds];
   ("opening a song is only folding - the passages are already on the page behind the cards - so once every card is open there is nothing further this page could open, and it says so with a flat no");
-  app_shared_buttons_expand_collapse(
+  let pair = app_shared_buttons_expand_collapse(
     parent,
     expand_all,
     collapse_all,
@@ -31,6 +31,9 @@ export function app_music_song_folds_show(parent) {
     groups,
     false_get,
   );
+  ("EVERY BUTTON DOWN THIS COLUMN KEEPS THE SAME GAP. These two carried only the hair's width a wide button keeps by default, while the way-home button above them keeps the gap this app spaces stacked buttons by - so one column of identically dressed buttons was drawn at two rhythms, the top one standing clear and the bottom two touching. Read down the page that says the pair is one thing and the button above it is another, which is the opposite of what they are.");
+  app_shared_button_gap_above(pair.expand);
+  app_shared_button_gap_above(pair.collapse);
   html_br_2(parent);
   return folds;
 }
