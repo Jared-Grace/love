@@ -1,3 +1,5 @@
+import { list_empty_is } from "./list_empty_is.mjs";
+import { app_shared_bible_verse_absent } from "./app_shared_bible_verse_absent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
@@ -10,6 +12,12 @@ export function app_shared_bible_verse_block(parent, reference, entries) {
   arguments_assert(arguments, 3);
   let heading = html_div_text_centered(parent, reference);
   app_shared_text_deemphasized(heading);
+  ("a bible that stops short of this verse is dropped on the way here rather than reported, so no bibles left means the reference was drawn over nothing - and a reference with a gap under it tells the reader nothing about why");
+  let none = list_empty_is(entries);
+  if (none) {
+    app_shared_bible_verse_absent(parent);
+    return heading;
+  }
   ("each language reads in its own colour along one gradient, which is what tells them apart when several are stacked");
   app_shared_bible_verse_texts(parent, entries);
   return heading;
