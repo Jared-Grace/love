@@ -1,5 +1,5 @@
+import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { not } from "./not.mjs";
-import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
 import { property_get } from "./property_get.mjs";
 import { file_name_js } from "./file_name_js.mjs";
