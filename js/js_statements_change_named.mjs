@@ -62,6 +62,6 @@ export function js_statements_change_named(before, after) {
     );
     return r9;
   }
-  let r10 = "the body rewritten";
+  let r10 = js_statements_change_both_ways_named(texts_before, texts_after);
   return r10;
 }
