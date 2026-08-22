@@ -1,3 +1,4 @@
+import { g_arc_review_line_apply_quoted } from "./g_arc_review_line_apply_quoted.mjs";
 import { g_arc_review_line_apply_afterward } from "./g_arc_review_line_apply_afterward.mjs";
 import { g_arc_review_line_apply_referenced } from "./g_arc_review_line_apply_referenced.mjs";
 import { g_arc_review_line_apply_opened } from "./g_arc_review_line_apply_opened.mjs";
@@ -85,8 +86,7 @@ export function g_arc_review_line_apply(arc, state, line) {
     property_set(object4, "believes", believes);
     return;
   }
-  let prefix11 = property_get(marks, "scripture");
-  let quoted = text_starts_with(line, prefix11);
+  let quoted = g_arc_review_line_apply_quoted(marks, line);
   if (quoted) {
     return;
   }
