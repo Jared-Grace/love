@@ -15,7 +15,7 @@ export async function bfl_draw_start(model, prompt, width, height) {
     prompt,
     width,
     height,
-    safety_tolerance: 6,
+    safety_tolerance: 5,
     output_format: "png",
   };
   let buffer = await http_post_options(url, body, options);
