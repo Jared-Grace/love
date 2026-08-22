@@ -1,3 +1,4 @@
+import { song_image_audit_picture_shown } from "./song_image_audit_picture_shown.mjs";
 import { song_image_audit_picture_strip } from "./song_image_audit_picture_strip.mjs";
 import { song_image_audit_picture_kept_now } from "./song_image_audit_picture_kept_now.mjs";
 import { song_image_audit_picture_redraw } from "./song_image_audit_picture_redraw.mjs";
@@ -37,9 +38,7 @@ export function song_image_audit_picture(parent, key, kept) {
   let attempts = property_exists(known, text_key)
     ? property_get(known, text_key)
     : [kept];
-  let at = attempts.indexOf(kept);
-  let start = less_than(at, 0) ? 0 : at;
-  let shown = start;
+  let shown = song_image_audit_picture_shown(attempts, kept);
   let src = song_image_drawn_url(key, attempts[shown]);
   let picture = html_img(parent, src);
   let strip = song_image_audit_picture_strip(picture, parent);
