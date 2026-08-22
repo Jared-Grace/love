@@ -1,3 +1,4 @@
+import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -18,7 +19,7 @@ export function song_image_audit_preview() {
   let title = html_div(root);
   html_style_font_size(title, "26px");
   html_style_set(title, "font-weight", "700");
-  html_text_set(title, "the FATHER's SON");
+  html_text_set(title, song_image_couplets_title());
   let subtitle = html_div(root);
   html_style_margin_top(subtitle, "8px");
   html_style_font_size(subtitle, "14px");
