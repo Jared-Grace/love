@@ -1,3 +1,4 @@
+import { bible_glyph_marks_group_misread_gate_run } from "./bible_glyph_marks_group_misread_gate_run.mjs";
 import { functions_names_repeated_gate_run } from "./functions_names_repeated_gate_run.mjs";
 import { word_picture_wordings_gate_run } from "./word_picture_wordings_gate_run.mjs";
 import { function_part_name_cases_gate_run } from "./function_part_name_cases_gate_run.mjs";
@@ -547,6 +548,7 @@ export function qa_gates() {
     bible_glyph_chapters_rosetta_lines_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_marks_gate_run,
     bible_glyph_chapters_language_gate_run,
+    bible_glyph_marks_group_misread_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
