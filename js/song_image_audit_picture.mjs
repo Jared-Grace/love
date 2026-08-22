@@ -1,3 +1,4 @@
+import { song_image_audit_picture_attempts } from "./song_image_audit_picture_attempts.mjs";
 import { song_image_audit_picture_on } from "./song_image_audit_picture_on.mjs";
 import { song_image_audit_picture_shown } from "./song_image_audit_picture_shown.mjs";
 import { song_image_audit_picture_strip } from "./song_image_audit_picture_strip.mjs";
@@ -13,8 +14,6 @@ import { html_text_set } from "./html_text_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_style_padding } from "./html_style_padding.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { property_get } from "./property_get.mjs";
 import { song_image_drawn_url } from "./song_image_drawn_url.mjs";
 import { song_image_drawn_attempts_known } from "./song_image_drawn_attempts_known.mjs";
 import { song_image_text_quiet_line } from "./song_image_text_quiet_line.mjs";
@@ -33,10 +32,7 @@ export function song_image_audit_picture(parent, key, kept) {
     " hand back is a wrapped component and not the element itself. Writing picture.src on the wrapper is accepted in silence: the property lands on the wrapper, nothing throws, no gate goes red, and the arrows move the number under the picture while the picture never changes at all - which is exactly how this was found, by a human clicking them.");
   ("the picture is marked lazy and async because there are thirty-two of these on the page and every one of them is a full square drawing about a thousand pixels on a side, shown at a fraction of that. Loaded eagerly the browser holds all thirty-two decoded at once, which is what made the page heavy to scroll; lazy leaves a row's drawing unfetched until it is nearly on screen, and async keeps the decoding off the thread that is doing the scrolling. The arrows still work, because changing src on an image already on screen fetches straight away.");
   let known = song_image_drawn_attempts_known();
-  let text_key = String(key);
-  let attempts = property_exists(known, text_key)
-    ? property_get(known, text_key)
-    : [kept];
+  let attempts = song_image_audit_picture_attempts(key, known, kept);
   let shown = song_image_audit_picture_shown(attempts, kept);
   let src = song_image_drawn_url(key, attempts[shown]);
   let picture = html_img(parent, src);
