@@ -250,6 +250,36 @@ chapters listed above, these two are not a marker missing over words that are th
 verses 43 to 46 and 7 to 12 and the words are not on the page. The read-aloud files are short
 in the same places.
 
+Three more chapters in two other translations do the same thing.
+
+url: https://ebible.org/jid/ACT10.htm
+
+quote(s): verse 14 ends '…nda na kpanya ni shishi Irji na.' and the next marker is
+'<span class="verse" id="V16">16&#160;</span>Ama ilan ala kma tre niwu nkpuwu ha ngari ndi
+“Kpe wa Irji ngla ti sa'a, na yo ndi a he ni Irji na.”'
+
+possible correction: Acts 10:15, 'What God has cleansed, do not call common'. The page
+proves this itself: verse 16 says the voice spoke a second time, and the first time is not
+on the page. The read-aloud has 47 lines for 48 verses.
+
+url: https://ebible.org/jid/LUK10.htm
+
+quote(s): verse 25 ends '…me tie ngye miti mi ni kpa re u tuntrun?' and the next marker is
+'<span class="verse" id="V27">27&#160;</span>Wa a kasa nda tre gbigbi wuka sun Bachi Irji…'
+
+possible correction: Luke 10:26, 'What is written in the law? How do you read it?' Verse
+27 begins 'and he answered', with nothing for him to answer. The read-aloud has 41 lines
+for 42 verses.
+
+url: https://ebible.org/tczchongthu/EXO15.htm
+
+quote(s): verse 15 ends '…Canaaan gam'a cheng jouse jong alung thoi gamta uve.' and the
+next marker is '<span class="verse" id="V17">17&#160;</span>“Nangman namite nahin puilut
+ding…'
+
+possible correction: Exodus 15:16, 'terror and dread fall on them… till your people pass
+by'. The read-aloud has 26 lines for 27 verses.
+
 Two of those are worth a word. jni JHN01 is missing the three verses about the man
 sent from God. jid MRK16 has the long ending, so verse 13 belongs in it.
 
