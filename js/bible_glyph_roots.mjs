@@ -58,6 +58,11 @@ export function bible_glyph_roots() {
   "THE OIL ITSELF IS STILL NOT SEATED AND MUST NOT BE. Elaion is the substance - eleven occurrences, the lamps of the ten virgins and the good Samaritan's wound - and this mark says anointed one, not oil. The Hebrew note says the same thing at scale about shemen. A picture drifting from the word it was bought for is the one failure in this table that nothing anywhere goes red for.";
   "THE SHEPHERD AND THE SHEEP CAME FROM THE OTHER TESTAMENT and are seated here because the meanings match, which is the only reason this table ever borrows. Probaton is sheep in thirty nine of thirty nine wordings and tson is sheep or flock in all of its two hundred and seventy two; poimen is a shepherd and raah is to shepherd. So a reader who learns the ewe in the psalms meets the same animal in the tenth of John, which is what the shared vocabulary was built to do, and the good shepherd reads as the human and the sheep in both.";
   "THE LAMB IS DELIBERATELY NOT SEATED HERE AND IT IS NOT AN OVERSIGHT. Arnion is the Lamb of the Revelation twenty six times over, a title for Christ and not an animal in a field, and kebes is the lamb of the offering a hundred and five times in the law. Whether those are one word with one picture, or whether the Revelation's Lamb wants the cross or the oil beside it, is a real question with a real answer and nobody has asked it yet. Seating the ewe on them to finish the set would have answered it by accident.";
+  "FOLLOW IS THE FIRST DOUBLED MARK IN THIS TABLE AND THE DEVICE IS THE ARGUMENT. Two walking figures side by side say one person moving as another moves, and imitation is what following is - the picture is not a person plus a person, it is a posture repeated. Akoloutheo is eighty nine occurrences and sixty five of them are plainly follow, so the word is large, clean and central: it is what Jesus says to the men he calls.";
+  "DOUBLING WAS FREE BECAUSE NOTHING ELSE HAD CLAIMED IT. The thing it could have collided with is plural, and no picture in this Bible is drawn twice for a plural or for anything else - the three groups written before this one are each two different marks - so repetition meant nothing until now and means this. What it costs is that a group is told apart from two separate words by the gap around it, and with two identical marks that gap is the only signal there is, where a group of two different marks has several.";
+  "A STANDING FIGURE WITH A WALKING ONE WAS TRIED FIRST AND IT READS AS MEETING. Someone approaching someone stationary is an arrival, not a following, and the order of a group cannot fix that because a group has no order in it. Skin tone was also proposed as the way to tell the leader from the follower and is refused for a reason already written down next door: the artwork is always taken in the default yellow so that no page of this Bible quietly casts its people in a particular skin, and using two skins to mark who leads and who follows is that claim at its worst.";
+  "LEADING IS NOT SEATED AND FIRE PLUS FOLLOW WOULD NOT BE IT. Nachah, nahal and hodegeo mean going in front and bringing along; none of them says the one in front is following God, and Scripture is full of leaders who are not - the shepherds of the thirty fourth of Ezekiel lead, and the chapter is a rebuke. God plus follow would be a picture claiming more than any of those words claim, which is the rule that took the equals sign back off eimi.";
+  "AND THE HEBREW SIDE IS LEFT BLANK ON PURPOSE, the same way the righteous man was until this week. Radaph is a hundred and forty two occurrences and it is pursue and chase - pursuers, my pursuers, those who pursue me - so it is a different word about a different thing, and the following of the twenty third psalm is goodness and mercy chasing a man rather than a disciple walking behind one. Seating the pair on radaph to give the Old Testament a follow would have drawn hunting as discipleship.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -117,6 +122,16 @@ export function bible_glyph_roots() {
         {
           strong: "2206",
           glyph: "heart_on_fire",
+        },
+      ],
+    },
+    {
+      root: "akoloutheo",
+      gloss: "follow",
+      words: [
+        {
+          strong: "190",
+          glyph: "walking+walking",
         },
       ],
     },
