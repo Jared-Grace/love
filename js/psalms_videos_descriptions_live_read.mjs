@@ -1,8 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_videos_descriptions_payload_path } from "./psalms_videos_descriptions_payload_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { list_map } from "./list_map.mjs";
-import { youtube_videos_descriptions } from "./youtube_videos_descriptions.mjs";
+import { youtube_records_videos_descriptions } from "./youtube_records_videos_descriptions.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_add } from "./list_add.mjs";
@@ -14,12 +13,7 @@ export async function psalms_videos_descriptions_live_read() {
   arguments_assert(arguments, 0);
   let path = psalms_videos_descriptions_payload_path();
   let paired = await file_read_json(path);
-  function lambda$id(one) {
-    let video_id = property_get(one, "video_id");
-    return video_id;
-  }
-  let video_ids = list_map(paired, lambda$id);
-  let answered = await youtube_videos_descriptions(video_ids);
+  let answered = await youtube_records_videos_descriptions(paired);
   let said = property_get(answered, "said");
   let read = [];
   let silent = [];
