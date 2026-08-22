@@ -31,7 +31,7 @@ export function app_code_expression_choose_line(
 ) {
   arguments_assert(arguments, 6);
   ("a line of code whose operators are pressed one at a time until nothing is left but a value: every operator in it is pressable, pressing the one that may go next works it out and the line becomes the shorter one, and pressing one that may not is refused until the one that may go is pressed");
-  ("A right press is answered in three beats rather than one. The operator and both its sides turn blue together, so what is about to go is seen whole; on_chosen is waited on, which is where the front page says what the blue comes to and holds for a press of replace; then the blue turns into its value where it stood and stays blue for as long as any other success does, before the line is drawn again plain. A line that changed the instant it was pressed asked the learner to find what had moved.");
+  ("A right press is answered in three stages rather than one. The operator and both its sides turn blue together, so what is about to go is seen whole; on_chosen is waited on, which is where the front page says what the blue comes to and holds for a press of replace; then the blue turns into its value where it stood and stays blue for as long as any other success does, before the line is drawn again plain. A line that changed the instant it was pressed asked the learner to find what had moved.");
   ("The one place this behaviour lives. The lesson's front page and its quiz are the same thing to press - what the front page adds is that it SAYS what to press at each step, which it does from on_change rather than by being a second copy of the pressing.");
   ("Every operator is pressable on both, including the front page. A page that only offers the right one teaches nothing about the wrong one, and a learner who has never been allowed to pick the leftmost has never found out that the leftmost is not the rule.");
   let line = html_div(parent);
@@ -39,7 +39,7 @@ export function app_code_expression_choose_line(
   draw(tree, null, null);
   function draw(current, solved, value) {
     html_clear(line);
-    ("a line drawn after a step is drawn plain and takes its chips afterwards, in two beats; the first drawing of all takes them at once, because there is nothing behind it for anything to have moved from");
+    ("a line drawn after a step is drawn plain and takes its chips afterwards, in two stages; the first drawing of all takes them at once, because there is nothing behind it for anything to have moved from");
     ("Told apart by whether a step is behind this drawing, rather than by being asked. Whoever draws the line again after a press already has to say which operator went and what it came to, and a drawing with an operator behind it is exactly a drawing something could have moved from - so the two cannot fall out of step with each other.");
     let stepped_from = null_is(solved);
     let rising = not(stepped_from);
@@ -90,7 +90,7 @@ export function app_code_expression_choose_line(
         app_code_expression_chosen_set(node_span, span);
         ("and only then do the other chips go, so the line stops offering presses it will not answer while the value question is open");
         ("This is the whole of the fix for a learner pressing a second operator and being met with nothing. The press was already refused - it was the LOOK of the thing that lied, and a screen that looks pressable and is not reads as broken rather than as finished with.");
-        ("They go in two beats rather than one: plain where they stand, a pause, and then the room they were holding closes up and the rest of the line slides along into it. Together it is two changes in one frame and the operators are read as having been moved rather than as having stopped answering.");
+        ("They go in two stages rather than one: plain where they stand, a pause, and then the room they were holding closes up and the rest of the line slides along into it. Together it is two changes in one frame and the operators are read as having been moved rather than as having stopped answering.");
         await app_code_expression_chips_settle(line, pressable);
         let node_value = app_code_expression_solved(node, node);
         ("the blue block is handed over with what it comes to, so whatever answers the press may show the swap happening ON the line rather than only saying it beside the line");
