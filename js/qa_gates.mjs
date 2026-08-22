@@ -1,3 +1,4 @@
+import { functions_names_repeated_gate_run } from "./functions_names_repeated_gate_run.mjs";
 import { word_picture_wordings_gate_run } from "./word_picture_wordings_gate_run.mjs";
 import { function_part_name_cases_gate_run } from "./function_part_name_cases_gate_run.mjs";
 import { g_npc_nicknames_gate_run } from "./g_npc_nicknames_gate_run.mjs";
@@ -749,6 +750,7 @@ export function qa_gates() {
     song_god_our_savior_glosses_gate_run,
     app_music_song_references_shape_gate_run,
     function_part_name_cases_gate_run,
+    functions_names_repeated_gate_run,
   ];
   return gates;
 }
