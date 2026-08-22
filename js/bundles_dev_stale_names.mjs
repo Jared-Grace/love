@@ -1,12 +1,9 @@
-import { text_combine } from "./text_combine.mjs";
-import { path_join } from "./path_join.mjs";
+import { app_shared_name_dev_bundle_path } from "./app_shared_name_dev_bundle_path.mjs";
 import { path_modified_ms } from "./path_modified_ms.mjs";
 import { date_ms_to_hours } from "./date_ms_to_hours.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { subtract } from "./subtract.mjs";
-import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
-import { folder_public_join } from "./folder_public_join.mjs";
 import { apps_names_dev } from "./apps_names_dev.mjs";
 import { property_get } from "./property_get.mjs";
 import { webpack_watch_app_deps_get } from "./webpack_watch_app_deps_get.mjs";
@@ -22,7 +19,7 @@ export async function bundles_dev_stale_names() {
   "The judging is borrowed whole from the watcher rather than written again here - the same reachable set, the same comparison - because two answers to is this bundle stale would be two chances to disagree about what an app is built from.";
   "Each name comes with how many hours old its bundle file is, because that is the reading that tells churn from a backlog and the bare list does not: an app six hours behind is a peer who saved a file, an app eight days behind is one nothing has rebuilt since. A null there is no reading at all, and the word beside it says why there is none.";
   "Being named here does not mean the bundle would come out different - it means its sources moved. The eight-day-old one this was first pointed at rebuilt to the same bytes. So this narrows where to look and never says on its own that anything is wrong.";
-  ("Each name comes with a word for WHY it is here, because the first reading of this list put three unlike things under one heading and a person had to say which was which. An app behind its sources, an app with no bundle built, and a page in the dev folder that is no app at all are three different pieces of news, and only the first is about staleness.");
+  "Each name comes with a word for WHY it is here, because the first reading of this list put three unlike things under one heading and a person had to say which was which. An app behind its sources, an app with no bundle built, and a page in the dev folder that is no app at all are three different pieces of news, and only the first is about staleness.";
   let names = await apps_names_dev();
   function a_name_of(ad) {
     let a_name = property_get(ad, "a_name");
