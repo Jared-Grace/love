@@ -1,9 +1,8 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { list_any } from "./list_any.mjs";
-import { not } from "./not.mjs";
 export function app_search_results_expand_more_is(buttons) {
   "Whether pressing open-everything on a page of search results would still bring anything new to it: any verse listed on the page whose words have not been fetched yet.";
   "THE BUTTON'S MAIN WORK IS NOT FOLDING. It opens the cards, and then it fetches the words of every verse inside them - and a page can land with every card already open and not one verse fetched, which is exactly what a search matching a single book does. Asked only about the cards, the button switched itself off there and left the reader looking at a list of references with nothing under any of them, and a button greyed out beside it saying there was nothing left to do.";
@@ -15,8 +14,7 @@ export function app_search_results_expand_more_is(buttons) {
     return true;
   }
   function button_unfetched_is(b) {
-    let fetched = property_exists(b, "bible_texts");
-    let unfetched = not(fetched);
+    let unfetched = property_exists_not(b, "bible_texts");
     return unfetched;
   }
   let any = list_any(button_list, button_unfetched_is);

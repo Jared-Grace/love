@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { bible_dream_scene_trace_show_readout_show } from "./bible_dream_scene_trace_show_readout_show.mjs";
+import { bible_dream_scene_trace_show_page } from "./bible_dream_scene_trace_show_page.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_on } from "./html_on.mjs";
 export function bible_dream_scene_trace_show(scene) {
@@ -17,7 +17,7 @@ export function bible_dream_scene_trace_show(scene) {
   "Letting go of a latched stroke lifts the hand as any release would, so the line breaks where the player stopped rather than joining that place to wherever they press next.";
   "What is left here is the watching of the hand and nothing else. Making the words and making the surface both went to their own names, because neither of them has anything to do with a pointer, and a reader looking for what a drag does should not have to walk past twenty lines of laying out a page to reach it.";
   let root = html_body_div_page_dark();
-  let r = bible_dream_scene_trace_show_readout_show(root, scene);
+  let r = bible_dream_scene_trace_show_page(root, scene);
   let readout_show = property_get(r, "readout_show");
   let on_press = property_get(r, "on_press");
   let on_drag = property_get(r, "on_drag");
