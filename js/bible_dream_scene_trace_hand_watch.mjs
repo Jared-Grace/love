@@ -14,12 +14,15 @@ import { bible_dream_stroke_finish_told } from "./bible_dream_stroke_finish_told
 import { bible_dream_click_still_far } from "./bible_dream_click_still_far.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
-export function bible_dream_scene_trace_show_on_leave(
+export function bible_dream_scene_trace_hand_watch(
   states,
   told,
   readout,
   drawing,
 ) {
+  "Everything that watches the hand over a dream being traced - what a press, a movement, a release and a leaving each do - handed back together with the writing of the line that says how far along the drawing is.";
+  "THE FIVE ARE ONE THING AND NOT FIVE, because they share what is being traced right now, whether the hand has been let off the button, where it was pressed and how far it has been since. Those four words are held here and nowhere else, so a hand watcher taken out on its own would be handed a copy of them and would answer about a drawing nobody is doing.";
+  "IT IS HANDED THE PAGE RATHER THAN MAKING IT, so that the page can be laid out once and watched by this, and so that a reader looking for what a drag does does not walk past the laying out of a page to reach it.";
   arguments_assert(arguments, 4);
   let active = null;
   let latched = false;
