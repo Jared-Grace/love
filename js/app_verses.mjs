@@ -16,7 +16,8 @@ export async function app_verses(context) {
   if (unknown_shown) {
     return;
   }
-  let r = await app_verses_count_updates(context, hash);
+  let initialized = await app_reply_initialize(context);
+  let r = await app_verses_count_updates(initialized, hash);
   let count_updates = property_get(r, "count_updates");
   let languages_chosen = property_get(r, "languages_chosen");
   let verse_groups = property_get(r, "verse_groups");
