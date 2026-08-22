@@ -1,3 +1,10 @@
+import { word_picture_wording } from "./word_picture_wording.mjs";
+import { word_picture_folder } from "./word_picture_folder.mjs";
+import { folder_attempt_next } from "./folder_attempt_next.mjs";
+import { word_picture_path } from "./word_picture_path.mjs";
+import { bfl_draw_write } from "./bfl_draw_write.mjs";
+import { word_picture_note_path } from "./word_picture_note_path.mjs";
+import { file_write_json } from "./file_write_json.mjs";
 export async function word_picture_draw(word) {
   "$plain word";
   "Draw one more picture for one taught word with Black Forest Labs, using the wording that word already has written down, and save it as that word's next numbered attempt.";
@@ -6,13 +13,22 @@ export async function word_picture_draw(word) {
   "NOTHING ALREADY DRAWN IS WRITTEN OVER. Every draw is the next numbered attempt in that word's own folder, with the wording that made it written down beside it, because a wording is settled by drawing it several ways and looking at them together - and while each draw replaced the last there was never anything to look at together.";
   "IT COSTS MONEY EVERY TIME IT IS RUN. That is why it draws one word rather than sweeping the list: a sweep that is cheap to type is a sweep that gets typed twice.";
   let wording = word_picture_wording(word);
-  let attempt = await folder_attempt_next(word_picture_folder(word), ".png");
+  let folder = word_picture_folder(word);
+  let attempt = await folder_attempt_next(folder, ".png");
   let path = word_picture_path(word, attempt);
   let model = "flux-2-pro-preview";
   let width = 1024;
   let height = 512;
   await bfl_draw_write(model, wording, width, height, path);
-  let drawn = { word, attempt, wording, path, width, height };
-  await file_write_json(word_picture_note_path(word, attempt), drawn);
+  let drawn = {
+    word,
+    attempt,
+    wording,
+    path,
+    width,
+    height,
+  };
+  let file_path = word_picture_note_path(word, attempt);
+  await file_write_json(file_path, drawn);
   return drawn;
 }
