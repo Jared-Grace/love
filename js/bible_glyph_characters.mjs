@@ -399,6 +399,10 @@ export function bible_glyph_characters() {
       character: "🌊",
     },
     {
+      name: "sheep",
+      character: "🐑",
+    },
+    {
       name: "altar",
       character: "altar",
     },
