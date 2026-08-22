@@ -20,7 +20,7 @@ export function bible_scene_division_brief() {
     open: "serial or primary-and-glossed for parallel accounts; how a quotation from another book is marked as such; how a depiction is addressed and shared between scenes; how a scene too long to hear in one sitting is handled",
     forbidden:
       "merging parallel accounts into one text; picking one account as the true one; a scene with two readings; gathering a Gospel before this is decided",
-    done: "every Gospel can be gathered without later re-cutting, and one afternoon on a hillside is drawn once while being read four times",
+    done: "every Gospel can be gathered without later re-cutting, one afternoon on a hillside is drawn once, and nothing any of the four books says has been dropped",
   };
   return brief;
 }
