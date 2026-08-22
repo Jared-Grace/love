@@ -13,8 +13,8 @@ export function bible_dream_scene_guides_dim(states, at) {
   "Nothing here treats a finished stroke differently. Its guide is underneath the bright ink that was earned by tracing it, so the ink is what shows and the fading beneath it changes nothing anyone can see; and a special case for done-ness would be a rule about scoring living in a file about looking.";
   "The nearness is the same reckoning the hand's own mark fades by, given a much wider distance to spend itself over. It is a ratio, so it never quite reaches nothing however far away the pointer is, and the floor underneath it is what keeps a far stroke plainly visible rather than merely present.";
   let far = bible_dream_guide_dim_far();
-  let floor = bible_dream_guide_dim_floor();
-  let range = subtract(1, floor);
+  let dim_floor = bible_dream_guide_dim_floor();
+  let range = subtract(1, dim_floor);
   function each_state(state) {
     let near = {
       x: subtract(at.x, state.x),
@@ -23,7 +23,7 @@ export function bible_dream_scene_guides_dim(states, at) {
     let stray_squared = bible_dream_stroke_stray_squared(state, near);
     let nearness = bible_dream_hand_nearness(stray_squared, far);
     let lifted = multiply(nearness, range);
-    let showing = floor + lifted;
+    let showing = dim_floor + lifted;
     let value = String(showing);
     html_attribute_set(state.guide, "opacity", value);
   }
