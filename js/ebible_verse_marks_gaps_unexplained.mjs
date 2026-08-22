@@ -1,9 +1,5 @@
-import { ebible_verse_marks_gaps_unexplained_grouped } from "./ebible_verse_marks_gaps_unexplained_grouped.mjs";
-import { ebible_verse_marks_gaps_unexplained_bible_summary } from "./ebible_verse_marks_gaps_unexplained_bible_summary.mjs";
-import { list_map_async } from "./list_map_async.mjs";
+import { ebible_verse_marks_gaps_unexplained_summaries } from "./ebible_verse_marks_gaps_unexplained_summaries.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_verse_marks_gaps_measure } from "./ebible_verse_marks_gaps_measure.mjs";
-import { ebible_verse_marks_displaced_measure } from "./ebible_verse_marks_displaced_measure.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function ebible_verse_marks_gaps_unexplained() {
@@ -14,19 +10,7 @@ export async function ebible_verse_marks_gaps_unexplained() {
   ("Gathered under the translation rather than listed one gap at a time, because that is what turns the answer from a thing nobody can read into a thing anybody can. The corpus holds a few thousand gaps, and a translation skipping four thousand numbers is one question about that translation - is this how it numbers, or is something wrong - while a translation skipping four is four chapters worth naming in a letter. Both are one row here, and the count is what tells them apart, so no line has to be drawn in advance.");
   ("Nothing is dropped for being widely shared. Sharing was what found the critical-text list, and once found the list stands on its own, so the count is not consulted again. A gap shared by five translations of the Septuagint is still reported here, because whether the Greek text is the reason for it is a judgment about those translations and this hands it over rather than making it.");
   ("How many whole chapters the translation skips is carried alongside, because a translation with a hole in its chapters is publishing a selection and its missing verses are that same editorial choice. It is a field and not a filter, for the same reason as the paragraph above: mwf2018 leaves out fifty-one verses of Matthew 27 and skips Psalms entirely, and the second fact is what settles the first - but the reader is the one who should get to see both and say so.");
-  let gaps_measured = await ebible_verse_marks_gaps_measure();
-  let displaced_measured = await ebible_verse_marks_displaced_measure();
-  let displaced_chapters = [];
-  let grouped = await ebible_verse_marks_gaps_unexplained_grouped(
-    displaced_chapters,
-    displaced_measured,
-    gaps_measured,
-  );
-  async function bible_summary(group) {
-    let r = await ebible_verse_marks_gaps_unexplained_bible_summary(group);
-    return r;
-  }
-  let summaries = await list_map_async(grouped, bible_summary);
+  let summaries = await ebible_verse_marks_gaps_unexplained_summaries();
   function gaps_of(summary) {
     let gaps = property_get(summary, "gaps");
     return gaps;
