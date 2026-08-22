@@ -18,11 +18,7 @@ export async function app_code_lessons_review_since_names_after(
     list_text,
     lesson_prefix,
   );
-  let r2 = await app_code_lessons_review_since_changed_path(
-    folder,
-    commit,
-    lesson_prefix,
-  );
+  let r2 = await app_code_lessons_review_since_changed_path(folder, commit);
   let helpers_shared_edited = property_get(r2, "helpers_shared_edited");
   let files_of_lesson = property_get(r2, "files_of_lesson");
   let r3 = app_code_lessons_review_since_lesson_name(
