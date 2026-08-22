@@ -1,6 +1,7 @@
 export function song_image_couplet_glosses() {
   "what each couplet of the hymn rests on in Scripture, kept beside what its picture rests on, so that the words and the emblem can be checked against the text one after the other rather than argued about separately";
-  "there are thirty-two entries and thirty-six couplets, because four couplets repeat the eight before them word for word. A repeat is looked up through the couplet it repeats, so the same two lines cannot end up with two accounts of themselves that somebody then has to keep agreeing with each other.";
+  "there are thirty-six entries, one for every couplet, and the four that repeat the eight before them word for word are entries in their own right. They were looked up through the couplet they repeat while they shared its picture; they were given emblems of their own so that the film does not show one drawing twice for two singings, and a couplet with its own drawing needs its own account of it. The repeat's lyric note says plainly that the words are the earlier ones, so nothing here claims a second reading of the same two lines.";
+  "and a repeat's emblem is chosen against the first one rather than freely, which is what stops the second picture being merely another good picture. Couplet 8 draws the debt and 9 draws the bond broken; 17 draws the blood on the doorway and 18 draws the Lamb that doorway is about; 26 draws glory as light and 27 draws the giving of it; 35 draws where the name I AM was spoken and 36 draws HIS own taking of it up. Read in order each pair is a sentence rather than an echo.";
   "the kept attempt is written down here rather than worked out as the newest one, and that is the whole reason this field exists. The last drawing of a symbol is very often not the best one - a later attempt buys a better field and loses the border, or fixes the shape and splits the colour - so newest is a rule that quietly discards the picture somebody actually chose. Two couplets already contradict it.";
   "the symbol note says plainly where an emblem is described by Scripture and where it is inherited from the church instead, because those are different claims and the difference is exactly what an audit is for. A crown of thorns is in Matthew; a bare cross standing empty is in no verse at all. Both may be right to draw and only one of them may be defended from the text, so the note says which.";
   "an emblem can be described by Scripture without the scene being in Scripture, and missing that put the wrong verdict on the first couplet here. No account puts scales at the trial, so inherited looked like the honest answer - but Proverbs 11:1 says a false balance is abomination to the LORD, and Micah and Amos say it again, so the tilted beam is GOD's own picture of a perverted measure and not a courthouse emblem borrowed for the occasion. The question to ask is not does this object appear in this account, it is does Scripture use this object to mean this thing. The narrower question fails an emblem that is Biblical everywhere except in the passage being illustrated.";
@@ -70,6 +71,14 @@ export function song_image_couplet_glosses() {
       symbol_explain:
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
+    9: {
+      kept: 1,
+      lyric_ref: "Psalm 107:14, Isaiah 61:1, Colossians 2:14",
+      lyric_explain:
+        "The same two lines as couplet 8, sung a second time to a different melody. The debt is Paul's word for it in Colossians 2:14, blotted out and nailed to the cross; the deliverance is the psalm's, HE brake their bands in sunder.",
+      symbol_explain:
+        "Described, and drawn as a second emblem rather than as the first one shown twice. Couplet 8 draws the debt itself, the blank bond nailed up; this draws what the payment did, which Psalm 107:14 says as HE brake their bands in sunder and Isaiah 61:1 as the opening of the prison to them that are bound. A fetter broken clean through is one grey shape anybody reads at a glance, and it collides with nothing else in the table.",
+    },
     10: {
       kept: 5,
       lyric_ref: "Matthew 27:46, Psalm 22:1, Matthew 27:45",
@@ -132,7 +141,15 @@ export function song_image_couplet_glosses() {
       lyric_explain:
         "The church of GOD, which HE hath purchased with HIS own blood. Peter says we were redeemed not with silver and gold but with the precious blood of CHRIST, as of a lamb without blemish.",
       symbol_explain:
-        "Described. Exodus 12:7 says to strike the blood on the two side posts and on the upper door post. The lamb itself is deliberately not drawn: the blood on the doorway is what the verse puts there, and it is what the couplet says.",
+        "Described. Exodus 12:7 says to strike the blood on the two side posts and on the upper door post. The lamb is not drawn here, because the blood on the doorway is what the verse puts there and it is what the couplet says; it is drawn at couplet 18, which sings these same two lines a second time.",
+    },
+    18: {
+      kept: 1,
+      lyric_ref: "John 1:29, Revelation 5:9, 1 Peter 1:18-19",
+      lyric_explain:
+        "The same two lines as couplet 17, sung a second time to a different melody. Behold the Lamb of GOD, which taketh away the sin of the world; and the new song in Revelation 5:9 is thou wast slain, and hast redeemed us to GOD by thy blood.",
+      symbol_explain:
+        "Inherited, and the film's only lamb. Couplet 17 draws the blood on the doorway of Exodus 12 and leaves the lamb out on purpose, so the repeat is where the Lamb HIMSELF stands. The staff with a small cross at its top is the church's own answer to a question this film cannot answer any other way - how a picture says that this lamb is CHRIST, when no face may be drawn - and it is very old and everywhere in glass. The seven-eyed lamb of Revelation 5 was tried twice at couplet 11 and abandoned, because a shape whose definition is a number came back with six and two and then six and five, and both attempts drew a ram. The staff costs one shape instead of fourteen.",
     },
     19: {
       kept: 2,
@@ -198,6 +215,14 @@ export function song_image_couplet_glosses() {
       symbol_explain:
         "Inherited. Light breaking outward is the church's oldest way of drawing glory and no verse describes it as a shape. It is white rather than gold, because light is gold in life and gold is spent elsewhere in this film.",
     },
+    27: {
+      kept: 1,
+      lyric_ref: "Revelation 5:8, Revelation 15:2-3, Revelation 5:12",
+      lyric_explain:
+        "The same two lines as couplet 26, sung a second time to a different melody. Revelation 5:8 has every one of them with harps, and 15:2 sets them that had gotten the victory standing with the harps of GOD, singing the song of the Lamb.",
+      symbol_explain:
+        "Described. Couplet 26 draws the glory itself as light breaking outward, which is inherited and in no verse; this draws the giving of it, and for that Revelation names an object twice over. A harp is one shape everybody can name, it belongs to nothing else in this table, and its wood and its white strings are already on the colour list.",
+    },
     28: {
       kept: 3,
       lyric_ref: "Acts 1:11, Matthew 24:31, Psalm 96:13, 2 Timothy 4:1",
@@ -261,6 +286,14 @@ export function song_image_couplet_glosses() {
         "I AM THAT I AM is the name given at the bush. Before Abraham was, I am is HIS own claim to that name, and it is the claim the whole hymn has been building towards since its title.",
       symbol_explain:
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
+    },
+    36: {
+      kept: 1,
+      lyric_ref: "John 15:1, John 15:5, Exodus 3:14",
+      lyric_explain:
+        "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn. I am the true vine, and my FATHER is the husbandman - which is an I AM saying with the FATHER named in the very same breath, so the two lines are both in the one verse.",
+      symbol_explain:
+        "Described. Couplet 35 draws where the name comes from, the bush of Exodus 3; this draws HIS own use of it, and John 15:1 is the one I AM saying that names the FATHER alongside the SON. It is also the only one of them with a shape left to draw: the door and the light and the good shepherd are a doorway, a lamp and a face, and this table already has three doorways, a flame beside it at couplet 35, and no faces anywhere.",
     },
   };
   return glosses;
