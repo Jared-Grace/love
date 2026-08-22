@@ -1,10 +1,11 @@
+import { app_shared_folds } from "./app_shared_folds.mjs";
+import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
 import { app_search_results_top_buttons } from "./app_search_results_top_buttons.mjs";
 import { app_search_results_bible_order_key } from "./app_search_results_bible_order_key.mjs";
 import { app_search_results_division_card } from "./app_search_results_division_card.mjs";
 import { app_search_results_book_card } from "./app_search_results_book_card.mjs";
 import { app_search_results_chapter_card } from "./app_search_results_chapter_card.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_collapse_setters_set } from "./app_shared_collapse_setters_set.mjs";
 import { app_search_results_collect_all_texts } from "./app_search_results_collect_all_texts.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_sort_text_mapper } from "./list_sort_text_mapper.mjs";
@@ -20,9 +21,7 @@ export function app_search_results_render(
 ) {
   arguments_assert(arguments, 4);
   let button_list = null;
-  (
-    "the two levels of card are kept as two groups rather than one, because the buttons do not act on both: opening acts on the sections and the books, shutting only on the books. Held apart, each button can also switch itself off at the right moment - shutting has something to do while any BOOK is open, whatever the sections are doing"
-  );
+  ("the two levels of card are kept as two groups rather than one, because the buttons do not act on both: opening acts on the sections and the books, shutting only on the books. Held apart, each button can also switch itself off at the right moment - shutting has something to do while any BOOK is open, whatever the sections are doing");
   let book_folds = app_shared_folds();
   let testament_folds = app_shared_folds();
   async function expand_all_lambda() {
