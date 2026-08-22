@@ -1,3 +1,4 @@
+import { function_part_name_cases_gate_run } from "./function_part_name_cases_gate_run.mjs";
 import { g_npc_nicknames_gate_run } from "./g_npc_nicknames_gate_run.mjs";
 import { bible_search_built_path_gate_run } from "./bible_search_built_path_gate_run.mjs";
 import { app_music_song_references_shape_gate_run } from "./app_music_song_references_shape_gate_run.mjs";
@@ -745,6 +746,7 @@ export function qa_gates() {
     js_dollar_choices_parameters_gate_run,
     song_god_our_savior_glosses_gate_run,
     app_music_song_references_shape_gate_run,
+    function_part_name_cases_gate_run,
   ];
   return gates;
 }
