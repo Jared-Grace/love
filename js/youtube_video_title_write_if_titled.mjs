@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_video_record } from "./youtube_video_record.mjs";
@@ -16,8 +17,7 @@ export async function youtube_video_title_write_if_titled(
   "Refusing on a name that does not match turns both of those into something plainly readable. It also makes running this twice cost nothing, which matters because the honest thing to do when a run stops halfway is run it again.";
   arguments_assert(arguments, 3);
   let record = await youtube_video_record(video_id);
-  let snippet = property_get(record, "snippet");
-  let title_now = property_get(snippet, "title");
+  let title_now = property_path_get_2(record, "snippet", "title");
   let titled_moved = equal_not(title_now, titled);
   if (titled_moved) {
     let refused = {
