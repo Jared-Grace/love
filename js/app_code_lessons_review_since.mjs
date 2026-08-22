@@ -104,7 +104,7 @@ export async function app_code_lessons_review_since(commit) {
       holders.push(lesson_name);
     }
   }
-  let lessons_edited = [];
+  let files_of_lesson = {};
   let helpers_shared_edited = [];
   for (let changed_path of changed_paths) {
     let holders = lessons_of_path[changed_path];
@@ -113,7 +113,13 @@ export async function app_code_lessons_review_since(commit) {
     }
     let left = list_size(holders);
     if (equal(left, 1)) {
-      lessons_edited.push(holders[0]);
+      let owner = holders[0];
+      let owned = files_of_lesson[owner];
+      if (not(owned)) {
+        owned = [];
+        files_of_lesson[owner] = owned;
+      }
+      owned.push(changed_path);
     } else {
       helpers_shared_edited.push({
         helper: changed_path,
@@ -146,10 +152,13 @@ export async function app_code_lessons_review_since(commit) {
           now: place_number,
         });
       }
-      if (list_includes(lessons_edited, lesson_name)) {
+      let files_edited = files_of_lesson[lesson_name];
+      if (files_edited) {
+        ("the files come back with the lesson so a reader can go straight to the change rather than looking the family up again - and so that asking how big each change is costs no second walk");
         lessons_changed.push({
           place: place_number,
           lesson: lesson_name,
+          files: files_edited,
         });
       }
     } else {
