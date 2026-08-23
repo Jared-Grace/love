@@ -17,7 +17,8 @@ export async function bible_strong_gloss_wordings(strong, testament_name) {
   let found = property_get_or_null(ranked, strong);
   let none = null_is(found);
   if (none) {
-    return [];
+    let r = [];
+    return r;
   }
   return found;
 }
