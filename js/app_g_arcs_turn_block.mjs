@@ -72,21 +72,7 @@ export function app_g_arcs_turn_block(parent, card, nickname, bench) {
       "font-weight": "bold",
     });
   }
-  function note_line(one) {
-    let field = property_get(one, "field");
-    let words = property_get(one, "note");
-    let joined = text_combine_multiple([field, " — ", words]);
-    let line = html_div_text(block, joined);
-    html_style_assign(line, {
-      "margin-top": "0.3rem",
-      "font-size": app_shared_font_size_label(),
-      "line-height": "1.4",
-      "background-color": "rgba(0,0,0,0.06)",
-      padding: "0.3rem 0.4rem",
-      "border-radius": "0.25rem",
-    });
-  }
-  each(notes, note_line);
+  app_g_arcs_note_pills(block, notes);
   let names = g_arc_answer_field_names("turn");
   app_g_arcs_note_row(block, bench, nickname, number, names);
 }
