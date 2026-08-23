@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { function_imports } from "./function_imports.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { property_get } from "./property_get.mjs";
+import { visit_unique_async } from "./visit_unique_async.mjs";
+import { list_adder_unique_async } from "./list_adder_unique_async.mjs";
 export async function function_reachable_names_stopping(f_name, f_names_stop) {
   "$plain f_name";
   "Every function this one can reach through its imports, itself included, except that the walk turns aside at any of the given names and never opens them.";
@@ -7,7 +15,8 @@ export async function function_reachable_names_stopping(f_name, f_names_stop) {
   arguments_assert(arguments, 2);
   let stopped = list_includes(f_names_stop, f_name);
   if (stopped) {
-    return [];
+    let r2 = [];
+    return r2;
   }
   async function imports_unstopped(f_name_visiting) {
     let names = await function_imports(f_name_visiting);
