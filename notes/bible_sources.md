@@ -314,6 +314,47 @@ translation from a different century sharing three letters. It was absent from
 every English choice list and nothing said so. The family is now named folder by
 folder in `ebible_versions_english_web_family`.
 
+## A recorded reading has two licences, not one — read 2026-08-23
+
+A generated audio file is downstream of **the words** and **the engine that spoke
+them**. Either one can forbid shipping it, so both were read.
+
+**The words: the Berean Standard Bible is public domain.** berean.bible/licensing.htm
+states it plainly:
+
+> The Berean Bible and Majority Bible texts are officially placed into the public
+> domain as of April 30, 2023.
+
+and adds that "Licensing is not required for any use." So the text imposes nothing
+at all — no attribution duty, no share-alike, no derivative limit. This is the
+reason `ebible_folder_berean` is the one folder the speaker parse runs over: it was
+chosen because its quotation marks balance, and it happens to also be the freest
+text in the catalogue. Nothing about a cast, a voice, or a recording is constrained
+by the text's terms.
+
+**The engine: Kokoro-82M is Apache 2.0.** The model card
+(huggingface.co/hexgrad/Kokoro-82M) states `apache-2.0`, ships 54 voices across 8
+languages, and the authors write that they "welcome the deployment of the model in
+real use cases", noting it already runs in commercial APIs. Apache 2.0 governs the
+model weights; it places no claim on the audio the model produces. So the output is
+ours to ship and to earn from.
+
+**What that leaves open is not a licence question.** Two things still have to be
+recorded per file, and neither is imposed by anybody's terms:
+
+- **Which engine and which version made it.** A voice is a property of the sound,
+  so a file made by Kokoro v1.0 and a file made by its successor are different
+  readings even when the text is identical. Nothing on disk says which today.
+- **Whether a human read it.** The plan is to replace generated readings with human
+  ones as readers become available, and a mixed folder with no marking is a folder
+  nobody can audit.
+
+**Kokoro does not sing, and nothing on its model card claims otherwise.** It is a
+text-to-speech system. The songs in Scripture — the Psalms, the Song of Moses,
+Lamentations, Habakkuk 3, the Magnificat — therefore have no generated setting from
+this engine, and a singing voice matched to a spoken one is a second pipeline rather
+than a flag on this one.
+
 ## Worked example: the Thai KJV disagreement
 
 Indexes list `thaKJV` as public domain, on the reasoning that a translation of the
