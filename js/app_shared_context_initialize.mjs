@@ -1,4 +1,3 @@
-import { app_shared_error_report_watch } from "./app_shared_error_report_watch.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_context_initialize_root } from "./app_shared_context_initialize_root.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -6,6 +5,7 @@ import { app_shared_boot_safe } from "./app_shared_boot_safe.mjs";
 import { html_loading_splash_take } from "./html_loading_splash_take.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_size_adjust_lock } from "./html_text_size_adjust_lock.mjs";
+import { app_shared_error_report_watch } from "./app_shared_error_report_watch.mjs";
 export async function app_shared_context_initialize(fn) {
   ("boot every app through the corruption net: the happy path renders exactly once, unchanged; if a read hits CORRUPT storage the net quarantines that key and retries, clearing the root first so a partial first render never doubles the DOM. lock the browser's text-inflation to 100% here, at the one boot EVERY app shares, so mobile Firefox never enlarges the type past the authored size — universal, unlike ",
     fn_name("html_mobile_default"),
