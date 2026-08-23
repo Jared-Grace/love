@@ -1,3 +1,4 @@
+import { app_code_first_decimal_digit_words } from "./app_code_first_decimal_digit_words.mjs";
 import { app_code_lesson_expression_round_nearest_digit_card } from "./app_code_lesson_expression_round_nearest_digit_card.mjs";
 import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -9,7 +10,6 @@ import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_round_nearest_round_code } from "./app_code_lesson_expression_round_nearest_round_code.mjs";
 import { app_code_lesson_expression_round_nearest_rule_line } from "./app_code_lesson_expression_round_nearest_rule_line.mjs";
-import { app_code_first_decimal_digit_phrase } from "./app_code_first_decimal_digit_phrase.mjs";
 import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
@@ -80,7 +80,8 @@ export function app_code_lesson_expression_round_nearest_above(root) {
   app_shared_spaced_below(up);
   let decides = html_div(rule);
   html_span_text(decides, "So the ");
-  app_code_first_decimal_digit_phrase(decides);
+  let text = app_code_first_decimal_digit_words();
+  html_span_text(decides, text);
   html_span_text(
     decides,
     ' decides which way a number rounds - "up" or "down"',

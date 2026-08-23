@@ -14,7 +14,7 @@ export function app_code_first_decimal_digit_line(
   decimal_after,
   color,
 ) {
-  "one worked line naming the first digit after the decimal point. The number reads tight like a normal decimal (6.4999), with ONLY the first fraction digit called out as a lifted colour chip; that chip carries a small horizontal margin (tuned by eye) so its lift rings clear the point and the digits beside it without opening up a whole space. The same digit is repeated as a bare chip at the end of the sentence so the eye links the two. Each different first digit gets its OWN colour so the reader sees they are distinct digits, both in the same rounding group. The words naming the digit are coloured, and coloured the one way wherever they are said, so a reader meets one term rather than a sentence to read again. lead is the sentence opener (In / in); whole_text is the whole part; digit is the highlighted first fraction digit; decimal_after is the rest of the fraction (like 5 or 999)";
+  "one worked line naming the first digit after the decimal point. The number reads tight like a normal decimal (6.4999), with ONLY the first fraction digit called out as a lifted colour chip; that chip carries a small horizontal margin (tuned by eye) so its lift rings clear the point and the digits beside it without opening up a whole space. The same digit is repeated as a bare chip at the end of the sentence so the eye links the two. Each different first digit gets its OWN colour so the reader sees they are distinct digits, both in the same rounding group. The words naming the digit are coloured too, in THIS line's colour and not a colour of their own, which is what ties the words to the code: phrase, chip in the number and chip at the end all wear the one colour, so the reader sees which digit the words are about instead of parsing them. This is the only place on the screen where the phrase is coloured - the lines that stand away from any code say it plainly. lead is the sentence opener (In / in); whole_text is the whole part; digit is the highlighted first fraction digit; decimal_after is the rest of the fraction (like 5 or 999)";
   let div = html_div(parent);
   html_span_text(div, lead);
   let tile = html_span_code_dark_nowrap(div);
@@ -25,7 +25,7 @@ export function app_code_first_decimal_digit_line(
   html_style_margin_x(chip, value);
   html_span_text(tile, decimal_after);
   html_span_text(div, " the ");
-  app_code_first_decimal_digit_phrase(div);
+  app_code_first_decimal_digit_phrase(div, color);
   html_span_text(div, " is ");
   app_code_lesson_number_chip(div, digit, color);
   return div;
