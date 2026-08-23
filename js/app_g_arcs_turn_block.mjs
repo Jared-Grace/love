@@ -1,3 +1,4 @@
+import { app_g_arcs_note_pills } from "./app_g_arcs_note_pills.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
