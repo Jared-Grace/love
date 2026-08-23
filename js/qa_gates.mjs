@@ -1,3 +1,4 @@
+import { functions_name_word_repeated_gate_run } from "./functions_name_word_repeated_gate_run.mjs";
 import { js_object_property_text_set_cases_gate_run } from "./js_object_property_text_set_cases_gate_run.mjs";
 import { commits_message_path_gate_run } from "./commits_message_path_gate_run.mjs";
 import { app_music_references_versions_gate_run } from "./app_music_references_versions_gate_run.mjs";
@@ -773,6 +774,7 @@ export function qa_gates() {
     js_statements_change_cases_gate_run,
     commits_message_alias_gate_run,
     commits_message_path_gate_run,
+    functions_name_word_repeated_gate_run,
   ];
   return gates;
 }
