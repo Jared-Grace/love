@@ -47,7 +47,7 @@ export function app_code_lesson_expression_choose_order_pair_above(root) {
     left_code,
     " and ",
     right_code,
-    " are in parentheses, so they go before what is outside the parentheses",
+    " are in parentheses, so they are solved before what is outside the parentheses",
   ]);
   ("the question is asked out loud before it is answered, because a learner who has only ever had one right press at a time is already looking for which of the two it is - asked, they are looking for the answer to the line below rather than for a trap");
   html_div_cycle_code(run, ["Which one do we solve first?"]);
