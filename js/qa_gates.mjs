@@ -1,3 +1,4 @@
+import { commits_message_path_gate_run } from "./commits_message_path_gate_run.mjs";
 import { app_music_references_versions_gate_run } from "./app_music_references_versions_gate_run.mjs";
 import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
 import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
@@ -769,6 +770,7 @@ export function qa_gates() {
     function_name_words_repeated_cases_gate_run,
     js_statements_change_cases_gate_run,
     commits_message_alias_gate_run,
+    commits_message_path_gate_run,
   ];
   return gates;
 }
