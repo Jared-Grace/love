@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_dev_routes_routes(r, day_conversation, hru) {
+export function app_g_dev_routes_collect(r, day_conversation, hru) {
   arguments_assert(arguments, 3);
   let believe = property_get(r, "believe");
   let gospel_share = property_get(r, "gospel_share");

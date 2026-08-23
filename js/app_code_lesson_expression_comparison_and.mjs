@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_comparison_and_card_one_side } from "./app_code_lesson_expression_comparison_and_card_one_side.mjs";
-import { app_code_lesson_expression_comparison_and_and_operands_false } from "./app_code_lesson_expression_comparison_and_and_operands_false.mjs";
+import { app_code_lesson_expression_comparison_and_operands_false } from "./app_code_lesson_expression_comparison_and_operands_false.mjs";
 import { app_code_lesson_expression_comparison_and_comparison } from "./app_code_lesson_expression_comparison_and_comparison.mjs";
 import { app_code_lesson_expression_comparison_and_title_name_id } from "./app_code_lesson_expression_comparison_and_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
@@ -17,8 +17,7 @@ export function app_code_lesson_expression_comparison_and() {
   function operand_truths(want_true) {
     "the two operand truth values: both true for a true &&, otherwise a false-making pair";
     let both_true = [true, true];
-    let on_false =
-      app_code_lesson_expression_comparison_and_and_operands_false();
+    let on_false = app_code_lesson_expression_comparison_and_operands_false();
     let truths = ternary(want_true, both_true, on_false);
     return truths;
   }
