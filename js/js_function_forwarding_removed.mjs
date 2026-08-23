@@ -1,3 +1,4 @@
+import { js_function_forwarding_removed_expression } from "./js_function_forwarding_removed_expression.mjs";
 import { js_function_forwarding_removed_holder } from "./js_function_forwarding_removed_holder.mjs";
 import { js_function_forwarding_removed_name } from "./js_function_forwarding_removed_name.mjs";
 import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
@@ -12,8 +13,6 @@ import { equal_not } from "./equal_not.mjs";
 import { js_name_variable_declared_is } from "./js_name_variable_declared_is.mjs";
 import { js_call_argument_site } from "./js_call_argument_site.mjs";
 import { not } from "./not.mjs";
-import { list_remove } from "./list_remove.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_function_forwarding_removed(ast, node, stack) {
   "Drops this one function when every condition for dropping it holds, and leaves the code exactly as it stands when any one of them does not.";
@@ -73,8 +72,13 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (not(holder_is)) {
     return;
   }
-  list_remove(holder, node);
-  let argument = property_get(site, "argument");
-  let expression = js_parse_expression(target);
+  let r4 = js_function_forwarding_removed_expression(
+    holder,
+    node,
+    site,
+    target,
+  );
+  let expression = property_get(r4, "expression");
+  let argument = property_get(r4, "argument");
   object_replace(argument, expression);
 }
