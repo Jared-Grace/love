@@ -1,4 +1,4 @@
-import { command_line } from "./command_line.mjs";
+import { ffmpeg_words_run } from "./ffmpeg_words_run.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ffmpeg_palette_write(path_from, colors_most, path_to) {
   "$plain path_from";
