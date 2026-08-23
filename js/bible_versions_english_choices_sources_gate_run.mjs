@@ -22,8 +22,8 @@ export async function bible_versions_english_choices_sources_gate_run() {
   let reference = "John 3:16";
   let wordings = await bible_versions_english_choices_reference(reference);
   let read_folders = list_map_property(wordings, "bible_folder");
-  let list2 = list_map(read_folders, bible_folder_source);
-  let heard = list_unique(list2);
+  let read_sources = list_map(read_folders, bible_folder_source);
+  let heard = list_unique(read_sources);
   let silent = list_without_multiple(offered, heard);
   list_empty_is_assert_json(silent, {
     reference,

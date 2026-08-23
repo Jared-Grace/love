@@ -44,10 +44,17 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let called = js_node_type_is(node_before, "ExpressionStatement");
   if (called) {
+    let prose = js_statement_prose_is(node_before);
+    let prose_after = js_statement_prose_is(node_after);
+    let both_prose = prose && prose_after;
+    if (both_prose) {
+      let r6 = "the prose written differently";
+      return r6;
+    }
     let expression = property_get(node_before, "expression");
     let expression_after = property_get(node_after, "expression");
-    let callee = js_call_callee_name_try(expression);
-    let callee_after = js_call_callee_name_try(expression_after);
+    let callee = js_call_callee_name_dotted_try(expression);
+    let callee_after = js_call_callee_name_dotted_try(expression_after);
     let unknown = null_is(callee);
     if (unknown) {
       return null;

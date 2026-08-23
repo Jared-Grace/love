@@ -770,6 +770,7 @@ export function qa_gates() {
     song_god_our_savior_glosses_gate_run,
     app_music_song_references_shape_gate_run,
     app_music_references_versions_gate_run,
+    bible_versions_english_choices_sources_gate_run,
     function_part_name_cases_gate_run,
     functions_names_repeated_gate_run,
     function_name_words_repeated_cases_gate_run,
