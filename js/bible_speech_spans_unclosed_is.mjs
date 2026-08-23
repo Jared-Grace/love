@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
-import { not } from "./not.mjs";
 export function bible_speech_spans_unclosed_is(spans) {
   "$plain spans";
   "Whether a chapter's spans end while a quotation is still open - which is to say, whether somebody is still speaking when the chapter runs out.";
