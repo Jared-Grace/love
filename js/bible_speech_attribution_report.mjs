@@ -1,3 +1,4 @@
+import { bible_speech_quotation_gloss_is } from "./bible_speech_quotation_gloss_is.mjs";
 import { bible_speech_spans_unclosed_is } from "./bible_speech_spans_unclosed_is.mjs";
 import { bible_speech_quotation_citation_is } from "./bible_speech_quotation_citation_is.mjs";
 import { bible_speech_quotation_heading_is } from "./bible_speech_quotation_heading_is.mjs";

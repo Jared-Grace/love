@@ -1,3 +1,7 @@
+import { bible_speech_narration_words } from "./bible_speech_narration_words.mjs";
+import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function bible_speech_quotation_gloss_is(quotation) {
@@ -9,11 +13,11 @@ export function bible_speech_quotation_gloss_is(quotation) {
   "★ THE INTRODUCING WORD IS TAKEN OFF THE STRIPPED WORD LIST RATHER THAN OFF THE RAW TEXT, BECAUSE THE COMMA IS OPTIONAL AND UNPREDICTABLE. Matthew writes which means, with a comma and Mark writes which means without one, and a test on the raw characters would have caught one and not the other. The word list the verb search already uses drops punctuation, so asking it for the last word answers both.";
   arguments_assert(arguments, 1);
   let words = bible_speech_narration_words(quotation.before);
-  let last = words[words.length - 1];
+  let last = words[subtract(words.length, 1)];
   let means_is = equal(last, "means");
   let meaning_is = equal(last, "meaning");
   let introduced = means_is || meaning_is;
-  if (!introduced) {
+  if (not(introduced)) {
     return false;
   }
   let closing = quotation.after.trim();

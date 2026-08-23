@@ -35,6 +35,7 @@ export async function bible_speech_attribution_report_bible(bible_folder) {
   let attributed = 0;
   let citations = 0;
   let headings = 0;
+  let glosses = 0;
   let continuations = 0;
   let unattributed = 0;
   function row_each(row) {
@@ -42,6 +43,7 @@ export async function bible_speech_attribution_report_bible(bible_folder) {
     attributed = add(attributed, row.attributed);
     citations = add(citations, row.citations);
     headings = add(headings, row.headings);
+    glosses = add(glosses, row.glosses);
     continuations = add(continuations, row.continuations);
     unattributed = add(unattributed, row.unattributed);
   }
@@ -53,6 +55,7 @@ export async function bible_speech_attribution_report_bible(bible_folder) {
     attributed,
     citations,
     headings,
+    glosses,
     continuations,
     unattributed,
     rows,
