@@ -22,6 +22,8 @@ export async function ebible_reference_books_text(
   "THE BIBLE IS NAMED AS WELL AS ITS BOOKS, because the two are asked of different places and only the books were being handed in. The verses were fetched from the English one whatever list of books arrived, so every caller naming another translation was answered in English and told nothing - the wording came back, it was well formed, and it was the wrong bible. A list of books does not say which bible it came from, so the name has to travel beside it.";
   "THE BOOKS ARE HANDED IN RATHER THAN FETCHED HERE because fetching them is the slow half. Measured, one reference took twenty-two seconds and the words themselves were a fraction of it; the rest was asking which books this bible has, an answer that is the same for every reference in a list of a hundred. A caller answering one reference pays it once and a caller answering a hundred also pays it once.";
   "That is the whole reason this is a name of its own rather than the inside of the singular reader. Both readers are that reader now, and neither can drift from the other.";
+  "THE CHAPTER IS ASKED FOR IN A WAY THAT KNOWS WHICH SHELF THE BIBLE CAME OFF. It used to go straight to the store the eBible ones are uploaded to, which quietly made this English-of-one-source only: a Door43 translation could be named here, could hand over its books, and then had no words, because its words were being looked for somewhere they had never been put.";
+  "A chapter that is not there is answered with nothing, the same as a book that is not there. These translations are published a book at a time, so the missing chapter is an ordinary fact about them rather than a failure to read.";
   arguments_assert(arguments, 3);
   let named = ebible_references_names(books, [reference]);
   let book_names = property_get(named, "book_names");
@@ -38,7 +40,11 @@ export async function ebible_reference_books_text(
   let verse_first = Number(value);
   let value2 = property_get(parts, "verse_end");
   let verse_last = Number(value2);
-  let verses = await ebible_verses_storage_browser(bible_folder, chapter_code);
+  let verses = await bible_chapter_verses(bible_folder, chapter_code);
+  let missing = null_is(verses);
+  if (missing) {
+    return null;
+  }
   function lambda$asked(verse) {
     let property_name = verse_number_key();
     let value3 = property_get(verse, property_name);

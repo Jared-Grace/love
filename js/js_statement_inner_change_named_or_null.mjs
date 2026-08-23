@@ -1,16 +1,14 @@
+import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_runs } from "./js_statement_runs.mjs";
 import { js_statement_kind_word } from "./js_statement_kind_word.mjs";
 import { js_statements_change_named } from "./js_statements_change_named.mjs";
-import { js_unparse_multiple } from "./js_unparse_multiple.mjs";
-import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statement_inner_change_named_or_null(before, after) {
@@ -20,30 +18,10 @@ export function js_statement_inner_change_named_or_null(before, after) {
   "A BRANCH ADDED OR TAKEN AWAY IS NOT AN EDIT INSIDE ONE. The counts differing is an else appearing or a catch going, which is a change to the statement itself, and the runs on either side no longer line up to be compared at all.";
   "EVERY RUN MATCHING IS THE HEAD HAVING MOVED - the condition, the thing looped over - and that too belongs to the caller rather than here, because nothing inside changed for this to name.";
   arguments_assert(arguments, 2);
-  let kind = property_get(before, "type");
-  let kind_after = property_get(after, "type");
-  let kinds_same = equal(kind, kind_after);
-  if (not(kinds_same)) {
+  let differing = js_statement_runs_differing_or_null(before, after);
+  let apart = null_is(differing);
+  if (apart) {
     return null;
-  }
-  let runs_before = js_statement_runs(before);
-  let runs_after = js_statement_runs(after);
-  let size = list_size(runs_before);
-  let right = list_size(runs_after);
-  let counts_same = equal(size, right);
-  if (not(counts_same)) {
-    return null;
-  }
-  let differing = [];
-  for (let index = 0; less_than(index, size); index++) {
-    let run_before = list_get(runs_before, index);
-    let run_after = list_get(runs_after, index);
-    let texts_before = js_unparse_multiple(run_before);
-    let texts_after = js_unparse_multiple(run_after);
-    let same = lists_equal_pair(texts_before, texts_after);
-    if (not(same)) {
-      list_add(differing, index);
-    }
   }
   let moved = list_size(differing);
   let one_branch = equal(moved, 1);
@@ -51,9 +29,12 @@ export function js_statement_inner_change_named_or_null(before, after) {
     return null;
   }
   let place = list_first(differing);
+  let runs_before = js_statement_runs(before);
+  let runs_after = js_statement_runs(after);
   let before2 = list_get(runs_before, place);
   let after2 = list_get(runs_after, place);
   let inner = js_statements_change_named(before2, after2);
+  let kind = property_get(before, "type");
   let word = js_statement_kind_word(kind);
   let named = text_combine_multiple(["in ", word, ", ", inner]);
   return named;
