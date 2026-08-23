@@ -1,3 +1,6 @@
+import { song_image_tomb_rock } from "./song_image_tomb_rock.mjs";
+import { song_image_tomb_stone } from "./song_image_tomb_stone.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
 import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
 export function song_image_couplets() {
   "the 36 couplets of the hymn 'the FATHER's SON' in order, each with the symbol chosen for it; four verses of nine, and every ninth couplet repeats the eighth, so same_as points a repeat at the couplet whose image it shares";
@@ -79,6 +82,11 @@ export function song_image_couplets() {
   "and the refusal is not about the words, which was tried and cost three more pictures to find out. The guess was that the action words were doing it - torn, running down, a few short tapering runs - since an action is not drawable anyway and the state was all this ever needed. Rewritten with none of them, as one broad stripe laid along each post with uneven edges and a few tapering points below, the same doorway was refused three times out of three where the old wording had at least been getting through two times in seven. So the moderator is not reading for words, it is reading what the picture would be, and a red mark down the posts of a door is that picture however it is asked for. Couplet 13's three great drops of blood pass every time, which says the subject is not blood either - it is blood on a doorway. Nothing that can be written in this table will fix it, so the wording that made the kept picture is the wording to keep, and the fix if one is wanted is a different place to draw.";
   "and how much this has already cost elsewhere cannot be recovered, which is worth saying rather than leaving to be assumed. An attempt number is only spent when a picture arrives, so a refused draw leaves no gap in the folder and no file anywhere - the money is gone and the record of it going is gone with it. Every couplet drawn before the reason was carried out could have been paying this and nothing would show. From here the batch answers with the reason beside each failure, so the question is answerable going forward and not backward.";
   "and the paragraph above is the reason to read before writing. Pinning all five would have cost five clauses out of five fields to repair a fault that was not there, and a clause taken out of the field is the one price this prompt is known to pay - so a sweep that repairs by prediction is a sweep that breaks working pictures. The finding a sweep is for is the negative one: where a fault seen once is real everywhere, and where it was about the couplet it was found in.";
+  let r = song_image_tomb_rock();
+  let r2 = song_image_tomb_rock();
+  let r3 = song_image_tomb_stone();
+  let r4 = song_image_tomb_rock();
+  let r5 = song_image_tomb_stone();
   let couplets = [
     {
       n: 1,
@@ -276,7 +284,7 @@ export function song_image_couplets() {
       first: "hewn in the rock",
       second: "it was brand new",
       symbol: list_join_empty([
-        song_image_tomb_rock(),
+        r,
         " standing clear and empty and holding nothing, and no stone anywhere in the picture at all, the rock drawn very large so that it reaches almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
       ]),
       symbol_ref: "Matthew 27:60, Luke 23:53, John 19:41",
@@ -287,8 +295,12 @@ export function song_image_couplets() {
       verse: 3,
       first: "a stone was rolled",
       second: "to seal the grave",
-      symbol:
-        "The tomb of Jesus, a great mass of plain grey rock with the mouth of the tomb cut into it as a plain black arch, and one very great round stone of plain grey stone, the same grey as the rock it stands against and no other colour, larger than that mouth and being rolled across to cover it - the stone drawn as a full round circle and never as an oval, its flat face turned squarely to the front as the rock behind it is, standing at the right of the mouth with its left edge lying across the mouth and covering part of the black - the rock and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
+      symbol: list_join_empty([
+        r2,
+        ", and ",
+        r3,
+        ", being rolled across to cover it and standing at the right of the mouth with its left edge lying across the mouth and covering part of the black - the rock and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
+      ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,
     },
@@ -316,8 +328,12 @@ export function song_image_couplets() {
       verse: 3,
       first: "the SON of GOD",
       second: "was raised to life",
-      symbol:
-        "The mouth of a tomb standing wide open and empty in plain grey rock, with one great round grey stone standing upright on the ground well away to one side of the opening, the opening and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it",
+      symbol: list_join_empty([
+        r4,
+        " standing wide open and empty, and ",
+        r5,
+        ", standing upright on the ground well away to the right of the mouth and clear of it, so that the whole of the mouth stands open and black - the rock and the stone together drawn very large so that they reach almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
+      ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
     },
