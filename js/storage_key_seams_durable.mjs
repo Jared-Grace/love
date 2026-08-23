@@ -12,6 +12,8 @@ export function storage_key_seams_durable() {
   let f_name5 = fn_name("storage_local_quarantine");
   ("The one that is handed the owner name on its own rather than the owner itself. It publishes exactly what the others publish - the name is joined to the word the same way - so a reading that stopped at the calls taking a function would have missed every key written through this door.");
   let f_name6 = fn_name("storage_local_name_get");
-  let seams = [f_name, f_name3, f_name4, f_name5, f_name6];
+  ("The key the errors a device has hit are filed under. It belongs here because what it writes is still there after the tab closes - that is the whole point of it, since the failure worth hearing about most is the one that killed the boot, and the send can only happen on the load after. What it publishes is a frozen word rather than any live function's name, so no rename can move it; it is named here so a reading of what this repo has written onto other people's disks accounts for it.");
+  let f_name7 = fn_name("html_error_records_storage_key");
+  let seams = [f_name, f_name3, f_name4, f_name5, f_name6, f_name7];
   return seams;
 }
