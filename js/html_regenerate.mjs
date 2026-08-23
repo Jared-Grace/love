@@ -22,6 +22,10 @@ export async function html_regenerate(file_path) {
   let parts = html_code_parse(contents);
   let name = property_get(parts, "name");
   let body = property_get(parts, "body");
+  null_is_not_assert_json(body, {
+    hint: "this page opens like a generated one but its body is not the shape html_code leaves - so the pieces in it were put there by hand, and rewriting it would wrap them a second time and drop whatever its head carries that html_code does not build. Edit it directly instead",
+    file_path,
+  });
   let code = html_code(name, body);
   await file_overwrite(file_path, code);
   return file_path;
