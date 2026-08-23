@@ -1,3 +1,6 @@
+import { text_index_of_try } from "./text_index_of_try.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_code_tag } from "./html_code_tag.mjs";
 import { html_code_tag_close } from "./html_code_tag_close.mjs";
@@ -17,6 +20,9 @@ export function html_code_parse(contents) {
   ("The body comes back as nothing when the page was not written by ",
     fn_name("html_code"),
     ". Deciding that here is what lets the caller refuse a hand-written page whose head this cannot carry through.");
+  ("A page opening its body tag any other way says the same thing and is answered the same way rather than thrown over. ",
+    fn_name("html_code_is"),
+    " reads only the line the page starts with, so a page kept by hand that copies that line reaches here and then holds nothing in the shape this looks for - the plain body tag alone on its line. Refusing it is the wanted answer, and throwing would take the whole sweep down over one page that was never a fault.");
   let attributes_none = {};
   let title_open = html_code_tag("title", attributes_none);
   let title_close = html_code_tag_close("title");
