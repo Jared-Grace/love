@@ -19,8 +19,9 @@ export async function functions_oversize_refusal_reasons() {
   for (let row of walked) {
     let f_name = property_get(row, "f_name");
     let skips = property_get(row, "skips");
-    for (let skip of skips) {
+    for (let offered of skips) {
       runs = runs + 1;
+      let skip = property_get(offered, "skip");
       let taken_is = null_is(skip);
       if (taken_is) {
         cuttable = cuttable + 1;
