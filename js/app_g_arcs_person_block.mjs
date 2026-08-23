@@ -1,3 +1,4 @@
+import { app_g_arcs_note_pills } from "./app_g_arcs_note_pills.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -29,13 +30,13 @@ export function app_g_arcs_person_block(parent, person, bench) {
     "padding-top": "0.6rem",
   });
   let v = String(index);
-  let v2 = String(notes_count);
+  let counted = String(notes_count);
   let named = text_combine_multiple([
     nickname,
     "  (",
     v,
     ")  ·  ",
-    v2,
+    counted,
     " notes",
   ]);
   let heading = html_div_text(block, named);
