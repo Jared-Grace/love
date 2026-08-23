@@ -5,7 +5,7 @@ import { bible_verses_uplifting_package_upload } from "./bible_verses_uplifting_
 import { each_async } from "./each_async.mjs";
 import { log } from "./log.mjs";
 export async function bible_verses_uplifting_packages_upload_all() {
-  "build an uplifting package for EVERY language the app offers. Each language whose Bible text is reachable (locally cached or downloadable) writes public/bible/uplifting/<folder>.json; a language that produces no text is SKIPPED (no empty file) and falls back to per-verse fetch at runtime. count -1 = the build threw (e.g. offline for an un-cached version).";
+  "build an uplifting package for EVERY language the app offers. Each language whose Bible text is reachable (locally cached or downloadable) writes bible/uplifting/<folder>.json in storage; a language that produces no text is SKIPPED (no empty file) and falls back to per-verse fetch at runtime. count -1 = the build threw (e.g. offline for an un-cached version).";
   let languages = ebible_languages();
   let property_name = bible_folder_key();
   let unique_folders = list_map_property_unique(languages, property_name);
