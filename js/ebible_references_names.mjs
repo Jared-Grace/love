@@ -1,12 +1,9 @@
+import { property_get } from "./property_get.mjs";
+import { ebible_references_names_written } from "./ebible_references_names_written.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { ternary } from "./ternary.mjs";
-import { null_is } from "./null_is.mjs";
-import { text_prefix_without } from "./text_prefix_without.mjs";
-import { text_split_space } from "./text_split_space.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_add } from "./list_add.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { each } from "./each.mjs";
 import { each_object } from "./each_object.mjs";
@@ -56,30 +53,9 @@ export function ebible_references_names(books, lines) {
     each_object(replacements, lambda2);
     return renamed;
   }
-  let book_names = [];
-  let chapter_verses_list = [];
-  for (let written of lines) {
-    let renamed = aliased(written);
-    let named = book_name_or_null(renamed);
-    let unnamed = null_is(named);
-    let line_read = ternary(unnamed, written, renamed);
-    let written_named = book_name_or_null(written);
-    let book_named = ternary(unnamed, written_named, named);
-    let missing = null_is(book_named);
-    if (missing) {
-      continue;
-    }
-    let book_prefix = text_combine(book_named, " ");
-    let after = text_prefix_without(line_read, book_prefix);
-    let parts = text_split_space(after);
-    let chapter_verses = list_first(parts);
-    let blank = text_empty_is(chapter_verses);
-    if (blank) {
-      continue;
-    }
-    list_add(book_names, book_named);
-    list_add(chapter_verses_list, chapter_verses);
-  }
+  let r = ebible_references_names_written(lines, aliased, book_name_or_null);
+  let chapter_verses_list = property_get(r, "chapter_verses_list");
+  let book_names = property_get(r, "book_names");
   let v = {
     chapter_verses_list,
     book_names,
