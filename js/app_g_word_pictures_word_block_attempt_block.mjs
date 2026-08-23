@@ -9,7 +9,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
+import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_g_word_pictures_word_block_attempt_block(
   drawn,
@@ -61,7 +61,7 @@ export function app_g_word_pictures_word_block_attempt_block(
     status_working(combined7);
     try {
       let f_name = fn_name("word_picture_chosen_set");
-      await app_g_word_pictures_api(f_name, [word, attempt]);
+      await app_shared_api_named(f_name, [word, attempt]);
       let combined = text_combine_multiple(["kept ", word, " ", text]);
       status_set(combined);
       await render();

@@ -1,7 +1,7 @@
 import { app_shared_dev_overlay_status } from "./app_shared_dev_overlay_status.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_word_pictures_word_block } from "./app_g_word_pictures_word_block.mjs";
-import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
+import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
@@ -31,11 +31,11 @@ export async function app_g_word_pictures() {
   async function render() {
     "the three tables are asked for before anything is cleared, so a seam that is down leaves the sheet standing as it was instead of blanking the page.";
     let f_name = fn_name("word_pictures_drawn_known");
-    let known = await app_g_word_pictures_api(f_name, []);
+    let known = await app_shared_api_named(f_name, []);
     let f_name3 = fn_name("word_picture_chosen");
-    let chosen = await app_g_word_pictures_api(f_name3, []);
+    let chosen = await app_shared_api_named(f_name3, []);
     let f_name4 = fn_name("word_picture_wordings");
-    let wordings = await app_g_word_pictures_api(f_name4, []);
+    let wordings = await app_shared_api_named(f_name4, []);
     html_clear(sheet);
     let words = object_property_names(known);
     function word_block(word) {

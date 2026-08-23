@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
+import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -34,7 +34,7 @@ export function app_g_word_pictures_word_block_draw_button(
     status_working(combined);
     try {
       let f_name = fn_name("word_picture_draw");
-      await app_g_word_pictures_api(f_name, [word]);
+      await app_shared_api_named(f_name, [word]);
       let combined5 = text_combine_multiple([
         "drew another attempt for ",
         word,
