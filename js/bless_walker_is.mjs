@@ -15,7 +15,7 @@ export function bless_walker_is(fraction) {
   ("the difference between a person the player will see again in a minute and a person who");
   ("will have walked out of sight, and a person who changed their mind about it every step");
   ("would be neither.");
-  ("One in three, and the number is set by how much room there is rather than by taste. The");
+  ("The share is set by how much room there is rather than by taste. The");
   ("pavement holds a fixed count of tiles and a person standing on one blocks it, so too");
   ("many walkers and the pavement jams solid - people would spend the game turning round");
   ("in front of each other. The rest have the whole block to spread over, which is far more");
