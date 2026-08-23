@@ -1,3 +1,5 @@
+import { door43_versions_english_choices } from "./door43_versions_english_choices.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -19,8 +21,8 @@ export async function bible_versions_english_choices_reference(reference) {
   "They are held in a separate list because they are not whole bibles - fifty-six books of the sixty-six - and the eBible list is defined as the ones we hold entire. A passage in one of the ten they do not carry simply answers without them, which is the same thing that already happens to any translation missing the verse.";
   arguments_assert(arguments, 1);
   let licences = await ebible_versions_english_choices_licences();
-  let door43 = door43_versions_english_choices();
-  let both = list_concat(licences, door43);
+  let door = door43_versions_english_choices();
+  let both = list_concat(licences, door);
   let usable = list_filter_property(both, "commercial", true);
   async function lambda$read(record) {
     let bible_folder = property_get(record, "bible_folder");
