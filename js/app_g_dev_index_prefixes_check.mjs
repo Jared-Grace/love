@@ -1,6 +1,6 @@
 import { app_g_dev_route_names } from "./app_g_dev_route_names.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_dev_index_prefixes_derived } from "./app_g_dev_index_prefixes_derived.mjs";
+import { app_shared_hash_index_prefixes_derived } from "./app_shared_hash_index_prefixes_derived.mjs";
 import { app_g_dev_index_prefixes_all } from "./app_g_dev_index_prefixes_all.mjs";
 import { assert_message } from "./assert_message.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -19,7 +19,7 @@ export async function app_g_dev_index_prefixes_check() {
     fn_name("app_g_dev_route_names"),
     "), so a route added by any of the three ways routes get added is checked, including the ones whose names are joined together at run time and are written nowhere");
   let names = app_g_dev_route_names();
-  let derived = app_g_dev_index_prefixes_derived(names);
+  let derived = app_shared_hash_index_prefixes_derived(names);
   let all = app_g_dev_index_prefixes_all(names);
   let filed = [];
   for (let name of object_property_names(derived)) {

@@ -1,4 +1,4 @@
-import { app_g_dev_index_render_node } from "./app_g_dev_index_render_node.mjs";
+import { app_shared_hash_index_render_node } from "./app_shared_hash_index_render_node.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_g_dev_index_open_key } from "./app_g_dev_index_open_key.mjs";
@@ -37,7 +37,7 @@ export function app_g_dev_index() {
   let open_paths = new Set(open_stored);
   let top = object_property_names(tree.children).sort();
   for (let label of top) {
-    app_g_dev_index_render_node(
+    app_shared_hash_index_render_node(
       div,
       label,
       label,
