@@ -1,23 +1,13 @@
 import { html_loading } from "./html_loading.mjs";
-import { firebase_app_initialize } from "./firebase_app_initialize.mjs";
-import { getStorage, ref, uploadString } from "firebase/storage";
-import { log_keep } from "./log_keep.mjs";
+import { firebase_upload_text_browser_quiet } from "./firebase_upload_text_browser_quiet.mjs";
 export async function firebase_upload_text_generic_browser(
   destination,
   content,
 ) {
+  ("send one piece of text up to storage from a browser, with the loading overlay around the wait");
+  ("The send itself is the quiet twin's, so the two cannot come to send a file two ways. What is left here is only the overlay - which is the whole of the difference between a send somebody asked for and one nobody did.");
   async function lambda() {
-    let app = await firebase_app_initialize();
-    ('const storageMod = await import(\n      "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"\n    );');
-    let storage = getStorage(app);
-    let jsonRef = ref(storage, destination);
-    await uploadString(jsonRef, content, "raw", {
-      contentType: "application/json",
-    });
-    log_keep(
-      firebase_upload_text_generic_browser.name,
-      "✅ JSON uploaded successfully",
-    );
+    await firebase_upload_text_browser_quiet(destination, content);
   }
   let r = await html_loading(lambda);
   return r;

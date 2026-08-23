@@ -1,3 +1,4 @@
+import { html_code_error_record_script } from "./html_code_error_record_script.mjs";
 import { html_error_notice_style } from "./html_error_notice_style.mjs";
 import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
 import { html_error_notice_message_text } from "./html_error_notice_message_text.mjs";
@@ -34,12 +35,16 @@ export function html_code_error_notice() {
   let splash_id = html_loading_splash_id();
   ("the notice covers the splash and then takes it away, so the spinner cannot keep turning behind the words telling a person that the turning has stopped.");
   ("it is moved onto the DOCUMENT element the moment it is found, and held onto, because an app boots by clearing the body - which swept the notice away with everything else, and left the one thing meant to survive a failed boot as the one thing that could not. the loading overlay lives up there for the same reason.");
+  ("the notice says nothing about what went wrong, on purpose - so what went wrong is written down beside it instead, where the person who can fix it will read it and the person waiting will never see it");
+  let record_script = html_code_error_record_script();
   let code = text_combine_multiple([
+    record_script,
     "var app_error_box = document.getElementById('",
     id,
     "'); ",
     "if (app_error_box) { document.documentElement.appendChild(app_error_box); } ",
-    "var app_error_show = function () { ",
+    "var app_error_show = function (event) { ",
+    "app_error_record(event); ",
     "if (!app_error_box) { return; } ",
     "app_error_box.style.display = 'flex'; ",
     "var splash = document.getElementById('",
