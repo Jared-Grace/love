@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -12,7 +13,7 @@ export function bible_speech_spans_unclosed_is(spans) {
   if (empty) {
     return false;
   }
-  let last = spans[spans.length - 1];
+  let last = spans[subtract(spans.length, 1)];
   let is = less_than(0, last.depth);
   return is;
 }
