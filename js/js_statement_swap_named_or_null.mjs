@@ -1,9 +1,10 @@
+import { js_statement_prose_is } from "./js_statement_prose_is.mjs";
+import { js_call_callee_name_dotted_try } from "./js_call_callee_name_dotted_try.mjs";
 import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
