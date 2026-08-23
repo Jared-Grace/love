@@ -1,3 +1,4 @@
+import { app_g_arcs } from "./app_g_arcs.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_word_pictures } from "./app_g_word_pictures.mjs";
 import { app_g_dev_routes_local } from "./app_g_dev_routes_local.mjs";
@@ -21,6 +22,12 @@ export function app_g_dev_routes(div_map) {
     await app_g_word_pictures();
   }
   property_set(routes, "word_pictures", word_pictures);
+  ("#arcs is registered beside it and for the same reason: both are review sheets for content being settled rather than mechanics under test, and neither belongs to any of the groups chained above");
+  async function arcs() {
+    await app_g_view_set(null);
+    await app_g_arcs();
+  }
+  property_set(routes, "arcs", arcs);
   if (local) {
     ("#design is the ONE route that stays localhost-only, and it is held back HERE rather than at the dispatcher because this registry is what both the dispatcher and the #index directory read — gating it once means the card cannot be listed on a screen where tapping it would do nothing. every other route ships, so the dev screens are reachable on a phone against the deployed site, where there is no localhost to develop from. design is different in kind: it is the private design notes, not a mechanic under test");
     property_set(routes, "design", design);
