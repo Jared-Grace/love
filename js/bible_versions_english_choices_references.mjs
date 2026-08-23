@@ -36,9 +36,9 @@ export async function bible_versions_english_choices_references(references) {
       );
       return found;
     }
-    let found = await catch_null_async(read);
-    let unread = null_is(found);
-    let texts = ternary(unread, {}, found);
+    let caught = await catch_null_async(read);
+    let unread = null_is(caught);
+    let texts = ternary(unread, {}, caught);
     let v = {
       bible_folder,
       name,
