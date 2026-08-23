@@ -1,7 +1,7 @@
 import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { commits_message_alias_since } from "./commits_message_alias_since.mjs";
+import { commits_message_rules_since } from "./commits_message_rules_since.mjs";
 import { git_commits_subjects_since } from "./git_commits_subjects_since.mjs";
 import { function_aliases } from "./function_aliases.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -19,7 +19,7 @@ export async function commits_message_alias_named() {
   "THE HAND-MADE MESSAGE IS LET THROUGH FIRST AND BY ITSELF, because that word is registered as an alias key like any other and would otherwise be the only thing this ever found - it is the one message the convention asks for where nothing named made the change, and nine tenths of the log is it.";
   "ONLY A WORD THAT IS AN ALIAS TODAY OFFENDS, and a word that merely names no live function does not. Names are renamed here constantly, so an old commit correctly named after the command that made it would start failing the moment that command was renamed - a rule that goes red for something nobody wrote is a rule that gets switched off.";
   arguments_assert(arguments, 0);
-  let since = commits_message_alias_since();
+  let since = commits_message_rules_since();
   let commits = await git_commits_subjects_since(since);
   let aliases = await function_aliases();
   let f_names = await functions_names();
