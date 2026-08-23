@@ -4,7 +4,7 @@ import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { markdown_render } from "./markdown_render.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
-import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
+import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -24,7 +24,7 @@ export async function app_g_design() {
     fn_name("g_design_notes"),
     " and read here. one collapsible card per note - its name and one-line description always showing, the whole note underneath when you open it - so the design can be read in the game itself rather than from the files.");
   ("the notes live outside this repo and are never bundled, so this asks the dev api for them. a page with no dev api behind it says so gently instead of showing an empty screen.");
-  let div = app_g_dev_overlay("Design");
+  let div = app_shared_dev_overlay("Design");
   let f_name = fn_name("g_design_notes");
   let notes = await catch_null_async(read);
   async function read() {
