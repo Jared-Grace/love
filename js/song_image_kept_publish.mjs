@@ -1,6 +1,7 @@
+import { song_image_palette_colors } from "./song_image_palette_colors.mjs";
+import { ffmpeg_palette_write } from "./ffmpeg_palette_write.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { file_copy_overwrite } from "./file_copy_overwrite.mjs";
 import { list_add } from "./list_add.mjs";
 import { song_image_couplet_kept } from "./song_image_couplet_kept.mjs";
 import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
