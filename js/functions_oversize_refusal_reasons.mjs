@@ -10,6 +10,7 @@ import { not } from "./not.mjs";
 export async function functions_oversize_refusal_reasons() {
   "Which of the reasons for stepping over a run of lines actually turns runs down, counted across every function standing over the ceiling.";
   "A REFUSAL IS WHERE THE TOOLING HANDS THE WORK BACK. Everything a named command turns down gets done by hand instead, so the reason turning down the most runs is the one costing the most hand editing - and it is the next thing worth building a way around. The count beside this one says how many runs a function had turned down; it does not say which reason did it, and the reasons want completely different things done about them.";
+  "A SAMPLE CARRIES THE WORD AS WELL AS THE FUNCTION. Six of the seven reasons are reasons about one word, so a sample naming only the function it was found in sends a reader off to read a whole oversize body to find out which word the answer was even about.";
   "THE REASON ITSELF IS THE KEY. Each way of stepping over a run says something different in full, and none of them carries a short word for itself - so the sentences are counted as they stand rather than a label being added to each of them for the sake of the count. A label would be a second spelling of the same distinction, free to drift from the sentence a reader is actually shown.";
   arguments_assert(arguments, 0);
   let walked = await functions_oversize_span_skips();
@@ -39,7 +40,9 @@ export async function functions_oversize_refusal_reasons() {
       bucket.count = bucket.count + 1;
       let few = list_size_less_than_value(bucket.samples, 4);
       if (few) {
-        list_add(bucket.samples, f_name);
+        let address_to = property_get(offered, "address_to");
+        let said = text_combine_multiple([f_name, " ", address_to]);
+        list_add(bucket.samples, said);
       }
     }
   }
