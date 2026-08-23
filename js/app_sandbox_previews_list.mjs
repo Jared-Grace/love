@@ -12,5 +12,8 @@ export function app_sandbox_previews_list(previews) {
   let prefixes = app_shared_hash_index_prefixes_derived(names);
   let div = app_shared_dev_overlay("Sandbox previews");
   let app_fn = app_sandbox_storage_app();
-  app_shared_hash_index_render(div, names, prefixes, app_fn);
+  ("picking a preview opens it in a NEW TAB, and that is where this directory parts company with the game's. A preview is one of a list somebody is working through - comparing two, or watching one while reading the code that draws it - so the list has to survive being used. Going there in this tab spends the list to see one preview and then asks for the way back to it.");
+  let new_tab = true;
+  let settings = app_shared_hash_index_settings(app_fn, new_tab);
+  app_shared_hash_index_render(div, names, prefixes, settings);
 }
