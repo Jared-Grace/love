@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
@@ -15,7 +16,8 @@ export function bible_speech_quotations(verses_spans) {
   let gathering = null;
   function span_each(span) {
     if (equal(span.depth, 0)) {
-      if (not(equal(gathering, null))) {
+      let b = equal(gathering, null);
+      if (not(b)) {
         gathering.after = span.text;
       }
       gathering = null;
