@@ -19,7 +19,14 @@ export function app_shared_game_container(overlay) {
   let container = app_shared_container_centered(overlay);
   app_shared_style_control(container);
   let left = app_shared_container_background_color();
+  ("The room at the sides is counted INSIDE the panel's width rather than added to it. The");
+  ("panel is told to be as wide as the screen, and by the ordinary rule padding is laid on");
+  ("outside that - so a panel exactly as wide as the phone grew by whatever room it was");
+  ("given and hung off the right-hand edge, taking its last button with it. It was already");
+  ("hanging over by the small amount it had before; widening the sides is what made it");
+  ("plain.");
   html_style_assign(container, {
+    "box-sizing": "border-box",
     "font-size": "inherit",
     "background-color": text_combine(left, "bc"),
   });
