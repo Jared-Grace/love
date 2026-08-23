@@ -11,7 +11,7 @@ export async function apps_pages_not_app() {
   "a page is an app when a function is named after it, and that is the whole test. The name of the page and the name of its way in are the same word, so nothing has to be registered anywhere for a page to count - which is also what makes a page that counts for nothing so easy to leave behind.";
   "a one-off screen belongs behind the sandbox's hash instead of at an address of its own. A page costs an address forever, and an address is the one thing that cannot quietly be taken back once a reader has kept it; a hash costs nothing and is thrown away by closing the tab.";
   "the pages that WERE looked at come back beside the offenders, because an empty offender list is also what a sweep over no pages at all hands back.";
-  let paths = await apps_paths();
+  let paths = await apps_paths_full();
   let identifier_names = await data_identifiers_get_properties();
   let allowed = apps_page_not_app_allowed_names();
   let offenders = [];

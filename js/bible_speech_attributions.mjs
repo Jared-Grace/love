@@ -45,8 +45,8 @@ export function bible_speech_attributions() {
       chapter_code: "1CH16",
       verse_number: "41",
       opening: "His loving devotion endures forever.",
-      speaker: "undecided",
-      reason: "the singers singing it, or the narrator citing it",
+      speaker: "the appointed singers",
+      reason: "a quoted refrain, sung by the men the verse appoints",
     },
     {
       chapter_code: "NEH10",
@@ -164,8 +164,8 @@ export function bible_speech_attributions() {
       chapter_code: "JER51",
       verse_number: "9",
       opening: "We tried to heal Babylon",
-      speaker: "undecided",
-      reason: "the exiles living in her, or the nations that traded with her",
+      speaker: "the foreigners in Babylon",
+      reason: "an unnamed voice, narrowed by its own words",
     },
     {
       chapter_code: "HOS10",
