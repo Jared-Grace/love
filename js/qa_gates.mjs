@@ -1,3 +1,4 @@
+import { js_object_property_text_set_cases_gate_run } from "./js_object_property_text_set_cases_gate_run.mjs";
 import { commits_message_path_gate_run } from "./commits_message_path_gate_run.mjs";
 import { app_music_references_versions_gate_run } from "./app_music_references_versions_gate_run.mjs";
 import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
@@ -515,6 +516,7 @@ export function qa_gates() {
     js_function_forwarding_remove_cases_gate_run,
     js_let_add_cases_gate_run,
     js_await_add_cases_gate_run,
+    js_object_property_text_set_cases_gate_run,
     js_calls_to_each_cases_gate_run,
     js_function_shape_cases_gate_run,
     js_identifier_rename_cases_gate_run,
