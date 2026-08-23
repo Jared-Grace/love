@@ -1,5 +1,5 @@
 import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
-import { app_shared_spaced_below } from "./app_shared_spaced_below.mjs";
+import { app_code_lesson_expression_either_first_above } from "./app_code_lesson_expression_either_first_above.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
@@ -7,7 +7,6 @@ import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_either_first_expression } from "./app_code_lesson_expression_either_first_expression.mjs";
-import { app_code_lesson_expression_either_first_proof } from "./app_code_lesson_expression_either_first_proof.mjs";
 import { app_code_lesson_expression_either_first_title_name_id } from "./app_code_lesson_expression_either_first_title_name_id.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
@@ -20,7 +19,7 @@ export function app_code_lesson_expression_either_first() {
   "The one new fact. Every line up to here has had exactly one operator that could go next, so a learner has never had to make a choice that was theirs - the rule picked for them and they only had to read it. Here the rule leaves two, and the thing to learn is that leaving two is not the rule failing to say: both answers are right.";
   "It stands immediately before arithmetic on both sides of a comparison, which is the first line in the course with three operators in it and two of them ready at once. That lesson has been asking a learner to make this choice with nothing said about it, on a line that is also teaching them something else. Here the choice is met on its own, on the smallest line that can carry one.";
   "Times and plus, no comparison, because the choice is about the shape of the line and not about what the operators mean. Adding a comparison on top of it is the next lesson, and it is one step from this one.";
-  "The example and the quiz press the same line. What the example adds is the working: both orders written out, ending on one value. The quiz then says nothing at all, because what it is asking for is the choice.";
+  "The example and the quiz are the same pressing, and neither of them says which operator to take. What the lesson adds is a third line above the card, worked out both ways round to one value - so the claim is made where it can be read and tested, and the two lines under it are left to be pressed.";
   let name_id = app_code_lesson_expression_either_first_title_name_id();
   let trees = {};
   function item_new() {
@@ -61,11 +60,17 @@ export function app_code_lesson_expression_either_first() {
     );
   }
   function on_question_example(parent, question, card) {
-    "the line, and under it the same line worked out both ways round to the same value";
+    "the front page presses the same line the quiz does, with nothing said about which of the two ready operators to press - either is taken and the line goes on down";
+    "It used to be the line written out flat with both orders worked underneath it. That is the one thing this lesson exists to teach handed over as something to read, on the very screen where it could be found by pressing instead. The working out still stands, above the card, on a line of its own.";
     let tree = property_get(trees, question);
-    html_text_set_code_dark(parent, question);
-    app_shared_spaced_below(parent);
-    app_code_lesson_expression_either_first_proof(card, tree);
+    app_code_expression_choose_line(
+      parent,
+      tree,
+      noop,
+      noop,
+      app_code_expression_chosen_pause,
+      noop,
+    );
   }
   function quizzes_get(question, answer) {
     "one kind, so one quiz";
@@ -86,10 +91,10 @@ export function app_code_lesson_expression_either_first() {
     return quizzes_exercises;
   }
   let example_question_label = app_code_label_code_question();
-  ("nothing stands above the examples, because what this lesson is for is worked INSIDE each one, on the line the learner is about to press rather than on a line built to be read");
+  ("the working out stands ABOVE the examples, on a line of its own, and every line on the card is pressed - so what a learner reads and what a learner does are not the same line, and the card asks for a press without having just answered it");
   let lesson = app_code_lesson_base(
     name_id,
-    noop,
+    app_code_lesson_expression_either_first_above,
     1,
     batch_get,
     on_question_example,
