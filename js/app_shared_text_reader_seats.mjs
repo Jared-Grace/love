@@ -33,6 +33,26 @@ export function app_shared_text_reader_seats() {
     fn: fn_name("html_placeholder"),
     at: 1,
   };
+  let button_html = {
+    fn: fn_name("html_button"),
+    at: 1,
+  };
+  let span_text = {
+    fn: fn_name("html_span_text"),
+    at: 1,
+  };
+  let a_href_text = {
+    fn: fn_name("html_a_href_text"),
+    at: 2,
+  };
+  let progress_caption = {
+    fn: fn_name("html_progress_caption"),
+    at: 3,
+  };
+  let game_p_text = {
+    fn: fn_name("app_shared_game_p_text"),
+    at: 1,
+  };
   let biblehub = {
     fn: fn_name("html_button_biblehub_open"),
     at: 4,
