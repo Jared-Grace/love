@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { functions_name_word_repeated_named } from "./functions_name_word_repeated_named.mjs";
 import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,7 +13,10 @@ export async function functions_name_word_repeated_gate_run() {
   let result = list_empty_is_assert_walked_generic(
     walked,
     offenders,
-    "these names say one word twice running - the second telling narrows nothing, so give the second part a word that says what it is instead, and rename with function_rename",
+    text_combine_multiple([
+      "these names say one word twice running - the second telling narrows nothing, so give the second part a word that says what it is instead, and rename with ",
+      fn_name("function_rename"),
+    ]),
   );
   return result;
 }
