@@ -21,10 +21,8 @@ export async function app_g_click_npc_pray(
   );
   let conversed = property_get(player, "conversed");
   if (not(conversed)) {
-    app_shared_game_p_text(
-      container,
-      " To pray, tap or click on yourself (You glow with white)",
-    );
+    let told = app_g_pray_tap_self_text();
+    app_shared_game_p_text(container, told);
   }
   async function on_back() {
     await overlay_close();
