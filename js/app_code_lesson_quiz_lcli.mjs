@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_quiz_index } from "./app_code_lesson_quiz_quiz_index.mjs";
+import { app_code_lesson_quiz_index } from "./app_code_lesson_quiz_index.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_index_last_is } from "./list_index_last_is.mjs";
 import { app_code_lesson_current_number } from "./app_code_lesson_current_number.mjs";
@@ -15,7 +15,7 @@ export function app_code_lesson_quiz_lcli(
   quizzes,
 ) {
   arguments_assert(arguments, 7);
-  let r4 = app_code_lesson_quiz_quiz_index(
+  let r4 = app_code_lesson_quiz_index(
     info,
     qa,
     container_blue_light,
