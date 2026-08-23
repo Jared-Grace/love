@@ -1,9 +1,7 @@
-import { js_statement_prose_template_is } from "./js_statement_prose_template_is.mjs";
-import { js_statement_prose_sequence_is } from "./js_statement_prose_sequence_is.mjs";
+import { js_statement_prose_is } from "./js_statement_prose_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_node_is } from "./js_statement_node_is.mjs";
 import { js_block_statement_is } from "./js_block_statement_is.mjs";
-import { js_statement_string_is } from "./js_statement_string_is.mjs";
 import { js_function_marker_call_is } from "./js_function_marker_call_is.mjs";
 import { not } from "./not.mjs";
 export function js_statement_work_is(node) {
