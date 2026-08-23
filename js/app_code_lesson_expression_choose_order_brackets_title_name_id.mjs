@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_brackets_title_name_id()
     let pair = text_combine(left_bracket, right_bracket);
     html_cycle_code(parent, ["solving inside ", pair]);
   }
-  let rights = ["solving inside brackets"];
+  let rights = ["brackets inside"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

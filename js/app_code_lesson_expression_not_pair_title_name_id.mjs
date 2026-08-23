@@ -24,7 +24,7 @@ export function app_code_lesson_expression_not_pair_title_name_id() {
       or_symbol,
     ]);
   }
-  let rights = ["not around and or"];
+  let rights = ["not and or"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

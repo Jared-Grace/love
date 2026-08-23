@@ -8,7 +8,7 @@ export function app_code_lesson_expression_comparison_and_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["comparison inside ", "&&"]);
   }
-  let rights = ["comparison inside and"];
+  let rights = ["and comparison"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;
