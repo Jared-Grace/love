@@ -26,6 +26,44 @@ export function door43_versions() {
     licence: ebible_licence_cc_by_sa(),
     url: "https://git.door43.org/Door43-Catalog/am_ulb",
   };
-  let versions = [am];
+  ("The two English ones are here for one reason: they are a wording nobody else on the shelf offers. The literal one follows the Hebrew and Greek word order closely enough to show what the sentence is actually built out of, and the simplified one says the same verse in the plainest English it can, so a line of a song has something to be compared against at both ends rather than twenty translations that all sound alike.");
+  ("The trademark is kept in the name exactly as their licence asks. It may only be dropped from a work that has been changed, and nothing here changes the text.");
+  let ult = {
+    bible_folder: "en_ult",
+    tag: "v90",
+    org: "unfoldingWord",
+    door43_folder: "en_ult",
+    books_count: 56,
+    name: "unfoldingWord® Literal Text",
+    description: "English unfoldingWord Literal Text",
+    language_code: "eng",
+    language_name: "English",
+    credit: [
+      "unfoldingWord® Literal Text, version 90",
+      "unfoldingWord",
+      "Original work available at https://www.unfoldingword.org/ult.",
+    ],
+    licence: ebible_licence_cc_by_sa(),
+    url: "https://git.door43.org/unfoldingWord/en_ult",
+  };
+  let ust = {
+    bible_folder: "en_ust",
+    tag: "v90",
+    org: "unfoldingWord",
+    door43_folder: "en_ust",
+    books_count: 56,
+    name: "unfoldingWord® Simplified Text",
+    description: "English unfoldingWord Simplified Text",
+    language_code: "eng",
+    language_name: "English",
+    credit: [
+      "unfoldingWord® Simplified Text, version 90",
+      "unfoldingWord",
+      "Original work available at https://www.unfoldingword.org/ust.",
+    ],
+    licence: ebible_licence_cc_by_sa(),
+    url: "https://git.door43.org/unfoldingWord/en_ust",
+  };
+  let versions = [am, ult, ust];
   return versions;
 }
