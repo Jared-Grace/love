@@ -78,16 +78,16 @@ export function js_statements_change_cases() {
       why: "comparing only the lines the run is written out of, this is one statement swapped for another - and the edit is a single statement put inside a function that never moved",
     },
     {
-      before: ["work(a);", "work(b);", "work(c);"],
-      after: ["work(a);", "work(y);", "work(z);"],
+      before: ["work(a);", "work(b);", "work(c);", "work(d);", "work(e);"],
+      after: ["work(a);", "work(x);", "work(c);", "work(y);", "work(e);"],
       named: "statements replaced",
-      why: "two out and two in and the run the length it was, with one statement still standing where it stood - which is a handful of lines swapped rather than a body thrown away, and it used to be counted as the second",
+      why: "two lines swapped at two separate places and the run the length it was - the count is right and there is still nothing single to point a command at, which is what keeps this name alive now that a one-place swap has its own",
     },
     {
-      before: ["work(a);", "work(b);", "work(c);"],
-      after: ["work(a);", "work(x);"],
+      before: ["work(a);", "work(b);", "work(a);", "work(c);"],
+      after: ["work(a);", "work(x);", "work(a);"],
       named: "statements added and removed",
-      why: "the run came out shorter, so as many did not go in as came out - no single command does that, and saying so is different from saying nothing survived",
+      why: "a statement standing twice, so there is no saying which of the two the survivor on the other side answers to - every place worked out after that would rest on a guess, and the count is what is left to say honestly",
     },
     {
       before: ["if (a) {\n  work(a);\n}", "work(b);"],
