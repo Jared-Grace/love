@@ -1,3 +1,4 @@
+import { app_g_word_pictures_word_block_on_save } from "./app_g_word_pictures_word_block_on_save.mjs";
 import { app_g_word_pictures_word_block_attempt_block } from "./app_g_word_pictures_word_block_attempt_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -13,7 +14,6 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
 import { html_textarea } from "./html_textarea.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { html_value_get } from "./html_value_get.mjs";
 import { not } from "./not.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 export function app_g_word_pictures_word_block(
@@ -93,22 +93,14 @@ export function app_g_word_pictures_word_block(
     "margin-top": "0.4rem",
   });
   async function on_save() {
-    let typed = html_value_get(box);
-    let combined = text_combine_multiple(["saving the wording for ", word]);
-    status_working(combined);
-    try {
-      let f_name = fn_name("word_picture_wording_set");
-      await app_g_word_pictures_api(f_name, [word, typed]);
-      let combined3 = text_combine_multiple(["saved the wording for ", word]);
-      status_set(combined3);
-      await render();
-    } catch (failed) {
-      let combined4 = text_combine_multiple([
-        "could not save the wording for ",
-        word,
-      ]);
-      status_set(combined4);
-    }
+    let r2 = app_g_word_pictures_word_block_on_save(
+      box,
+      word,
+      status_working,
+      status_set,
+      render,
+    );
+    return r2;
   }
   app_shared_button(controls, "Save wording", on_save);
   let armed = false;
@@ -123,14 +115,14 @@ export function app_g_word_pictures_word_block(
     }
     armed = false;
     html_text_set(draw, "Drawing");
-    let combined9 = text_combine_multiple([
+    let combined = text_combine_multiple([
       "drawing another attempt for ",
       word,
     ]);
-    status_working(combined9);
+    status_working(combined);
     try {
-      let f_name7 = fn_name("word_picture_draw");
-      await app_g_word_pictures_api(f_name7, [word]);
+      let f_name = fn_name("word_picture_draw");
+      await app_g_word_pictures_api(f_name, [word]);
       let combined5 = text_combine_multiple([
         "drew another attempt for ",
         word,
