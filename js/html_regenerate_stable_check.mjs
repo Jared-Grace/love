@@ -1,3 +1,4 @@
+import { html_regenerate_stable_check_settled } from "./html_regenerate_stable_check_settled.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { folder_public } from "./folder_public.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
@@ -42,8 +43,9 @@ export async function html_regenerate_stable_check() {
   }
   let mapped = await list_map_unordered_async(folders, lambda);
   let paths = list_squash(mapped);
-  let offenders = [];
-  let settled = [];
+  let r = html_regenerate_stable_check_settled();
+  let settled = property_get(r, "settled");
+  let offenders = property_get(r, "offenders");
   async function lambda3(file_path) {
     let frozen = html_regenerate_frozen_is(file_path);
     if (frozen) {
