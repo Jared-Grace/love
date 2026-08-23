@@ -1,10 +1,10 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { equal } from "./equal.mjs";
 import { app_code_first_decimal_digit_phrase } from "./app_code_first_decimal_digit_phrase.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_code_lesson_expression_round_nearest_rule_line(
   parent,
@@ -21,13 +21,12 @@ export function app_code_lesson_expression_round_nearest_rule_line(
   html_span_text(div, "If the ");
   app_code_first_decimal_digit_phrase(div);
   let parts = [" is "];
-  let digit_count = list_size(first_digits);
-  let last_index = subtract(digit_count, 1);
+  let last_index = list_size_subtract(first_digits, 1);
+  let second_last_index = subtract(last_index, 1);
   let index = 0;
   for (let digit of first_digits) {
     parts.push(digit);
     let last = equal(index, last_index);
-    let second_last_index = subtract(last_index, 1);
     let before_last = equal(index, second_last_index);
     if (last) {
       parts.push(" then ");
