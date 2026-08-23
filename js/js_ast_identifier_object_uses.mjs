@@ -12,8 +12,10 @@ export function js_ast_identifier_object_uses(ast) {
   "IT HANDS BACK NODES RATHER THAN NAMES, and the nodes are the point. Two different things in one function can be spelled with the same word - a parameter and the key of an object literal, say - so an answer given as names would fold them together and every later question about either would be answered about both. Comparing the nodes themselves is exact and costs nothing, because the tree is already in hand.";
   "A KEY IS NOT A MENTION. In a dot access and in an object written out in full, the word after the dot and the word before the colon are labels of a place, not readings of anything - the same word may be a parameter three lines up and have nothing to do with it. Counting them would make almost every name look as though it were used in ways it is not, which is the direction that quietly turns a check into a rubber stamp.";
   "A DOT IS NOT EVIDENCE OF AN OBJECT, and reading it as one was wrong. A piece of text has a replace and a length, a list has a map, a function has a name - so the dot says only that the thing has properties, which everything in the language does. Counting it named fifteen standing grants as unreachable, among them the reader that splits a passage into words, whose whole argument is a string. Only a call to one of this repository's own property atoms is evidence, because those are written for the plain objects it builds and for nothing else.";
+  "WHICH ATOMS COUNT IS ASKED RATHER THAN GUESSED FROM THE NAME. Reading every function whose name begins with property as taking the object first was a second version of the same mistake: a fifth of them take the property NAME first, because they hand back a function that will be given the object later. The list that is asked instead is deliberately short, and a call this cannot see only makes the reading quieter.";
   "THE WORD AFTER THE DOT IS STILL PUT ASIDE, which is a separate matter from the one above. Reading it as a mention was never about what the thing on the left holds; it is about the word on the right belonging to no scope at all.";
   arguments_assert(arguments, 1);
+  let atoms = property_atoms_object_first();
   let ignored = [];
   let object_uses = [];
   let members = js_list_type_nodes(ast, "MemberExpression");
@@ -40,7 +42,7 @@ export function js_ast_identifier_object_uses(ast) {
       continue;
     }
     let t = property_get(callee, "name");
-    let asking = text_starts_with(t, "property_");
+    let asking = list_includes(atoms, t);
     if (not(asking)) {
       continue;
     }
