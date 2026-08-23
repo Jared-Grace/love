@@ -10,8 +10,9 @@ export function app_code_lesson_log_twice_title_name_id() {
   ("Nothing inside the brackets. The numbers that stood there were never the lesson - every question picks its own - and a title is recognised rather than worked out, so what is left is the shape alone.");
   ("The words below are what the id is built from, so they are the one thing here that is not free to change. These were reworded once, on 2026-08-23, from two things to twice - safe only because the lesson had never been reachable in prod and had stood in latest for three days. Anything less certain than that is a decision about learners' records rather than about wording.");
   let words = "writing out twice";
+  ("No space before the count. Measured on a phone, the line and its count with a space between them reached nine pixels past the right edge of its own row, and without one they finish three pixels inside it - the space was the whole of the difference.");
   let one = js_code_console_log_statement("...");
-  let code = text_combine(one, " (x2)");
+  let code = text_combine(one, "(x2)");
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
 }

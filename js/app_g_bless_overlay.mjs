@@ -1,3 +1,4 @@
+import { app_g_bless_door_skipped_is } from "./app_g_bless_door_skipped_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_overlay_begun } from "./app_g_bless_overlay_begun.mjs";
 import { app_g_bless_overlay_turned } from "./app_g_bless_overlay_turned.mjs";
@@ -29,6 +30,15 @@ export async function app_g_bless_overlay(container_map) {
   let r2 = await app_g_bless_overlay_begun(r, container_map);
   let begun = property_get(r2, "begun");
   let transfer = property_get(r2, "transfer");
+  ("The door is put up unless the address asked to open past it. The skip is taken HERE,");
+  ("where the door is put up, rather than inside the door itself, because a door that");
+  ("sometimes builds nothing is a screen with two meanings; here there is one line saying");
+  ("which of two things this visit is, and the door below stays the one thing it always was.");
+  let skipped = app_g_bless_door_skipped_is();
+  if (skipped) {
+    begun();
+    return transfer;
+  }
   app_g_bless_transfer_overlay(transfer, begun);
   return transfer;
 }
