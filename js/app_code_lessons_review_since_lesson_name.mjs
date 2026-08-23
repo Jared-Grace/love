@@ -36,6 +36,10 @@ export function app_code_lessons_review_since_lesson_name(
           was: place_before,
           now: place_number,
         });
+        let edited_past_cut = files_of_lesson[lesson_name];
+        if (edited_past_cut) {
+          beyond_cut = beyond_cut + 1;
+        }
         continue;
       }
       if (not_equal(place_before, place_number)) {
