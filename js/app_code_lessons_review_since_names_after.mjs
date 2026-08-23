@@ -32,6 +32,7 @@ export async function app_code_lessons_review_since_names_after(
   let lessons_changed = property_get(r3, "lessons_changed");
   let lessons_added = property_get(r3, "lessons_added");
   let cut_place = property_get(r3, "cut_place");
+  let beyond_cut = property_get(r3, "beyond_cut");
   let cut_fn = property_get(r3, "cut_fn");
   let names_after = property_get(r3, "names_after");
   let r = {
@@ -43,6 +44,7 @@ export async function app_code_lessons_review_since_names_after(
     lessons_changed,
     lessons_added,
     cut_place,
+    beyond_cut,
     cut_fn,
     names_after,
   };

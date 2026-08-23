@@ -93,6 +93,7 @@ export function app_code_lessons_review_since_lesson_name(
     helpers_shared_edited: helpers_annotated,
     cut_fn,
     cut_place,
+    beyond_cut,
     lessons_added,
     lessons_changed,
     lessons_moved,
