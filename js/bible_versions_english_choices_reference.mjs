@@ -20,7 +20,7 @@ export async function bible_versions_english_choices_reference(reference) {
   arguments_assert(arguments, 1);
   let licences = await ebible_versions_english_choices_licences();
   let door43 = door43_versions_english_choices();
-  let both = list_combine(licences, door43);
+  let both = list_concat(licences, door43);
   let usable = list_filter_property(both, "commercial", true);
   async function lambda$read(record) {
     let bible_folder = property_get(record, "bible_folder");
