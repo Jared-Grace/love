@@ -1,25 +1,17 @@
 import { app_code_lesson_statement_title_name_id } from "./app_code_lesson_statement_title_name_id.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
-
+import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_log_twice_title_name_id() {
   arguments_assert(arguments, 0);
-  ("the home title: writing out two things, followed by the two lines that do it");
-  (
-    "The line shown is two lines, which is the whole lesson. Every title above this one shows one line, so the thing that makes this one different is visible in the title before it is read - there are two of them."
-  );
-  (
-    "Plain numbers rather than the sums the questions ask about. A title is recognised rather than worked out, and a sum in it would be asking the reader of a list to add before they know which lesson they are looking at."
-  );
-  (
-    "The two lines are spelled with nothing between them, the way every title in this category spells a line compactly. A title sits beside a number on a list of a hundred and twenty and a break in it would cost a whole row."
-  );
+  ("the home title: writing out two things, followed by the one line that does it and how many times this lesson writes it");
+  ("The line is shown once and counted, rather than shown twice. What makes this lesson different from every title above it is still visible before the title is read - there are two of them - but it is said by the count instead of by a second copy.");
+  ("Shown twice, it ran off the right edge of a narrow screen. A title's line is spelled with no wrapping allowed, on purpose: a title sits beside a number on a list of a hundred and twenty and a break in it would cost a whole row. So a line that will not fit has nowhere to go but sideways, and it takes the rest of the title with it - the reader of a phone is shown a lesson whose name ends off the screen.");
+  ("Nothing inside the brackets. The numbers that stood there were never the lesson - every question picks its own - and a title is recognised rather than worked out, so what is left is the shape alone.");
   ("Only what is painted changes; the id is built from the words below.");
   let words = "writing out two things";
-  let first = js_code_console_log_statement(7);
-  let last = js_code_console_log_statement(8);
-  let code = list_join_empty([first, last]);
+  let one = js_code_console_log_statement("...");
+  let code = text_combine(one, " (x2)");
   let built = app_code_lesson_statement_title_name_id(words, code);
   return built;
 }

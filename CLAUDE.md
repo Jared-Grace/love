@@ -88,6 +88,10 @@ A *selector* is any fn `(ast, …args) → node`; a *transform* is any fn `(ast,
 
 Two files spelling the same value get one function, and you never judge up front whether they *mean* the same thing by it — a split costs nothing later, provided you never change a shared value in place. The one exception is a value that has already left this repo (a localStorage or IndexedDB key, a word in a bookmarked URL): those are frozen, and `text_frozen("word")` is what stops `ao` promoting one into a reference. The note has the migration steps, the freeze list commands, and why `text_frozen` and `fn_name` mean opposite things.
 
+## Pictures and data files live in `web_assets/` — **read [notes/web_assets.md](notes/web_assets.md) before adding or addressing one**
+
+Not in `public/` any more (moved 2026-08-23: `public/img`, `public/bible`, the loose card and icon PNGs). The repo folder and the storage prefix are the same layout, and reads are public. **Never spell an address or stick a path onto a prefix** — storage writes slashes as `%2F`, so a prefix plus the rest names a file that is not there. Ask `web_assets_url` / `web_assets_img_url` / `g_img_game_url` / `web_assets_bible_uplifting_url` / `web_assets_app_img_url` for the whole address; write with `web_assets_folder_join`, send up with `web_assets_upload_all`.
+
 ## Authoring Bible word glosses — **read [notes/gloss_method.md](notes/gloss_method.md) before authoring a passage**
 
 The rubric for `app_original_bible` and `app_ceb_bible`: the interlinear already gives you the word, its transliteration, its parsing, and its Strong's number (`bible_interlinear_chapters_words_cache`), so a parsing is **explained, never generated**; the note also covers what an `explain` owes the reader and the plain-text limits the renderer imposes.

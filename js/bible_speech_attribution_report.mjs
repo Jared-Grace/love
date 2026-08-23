@@ -17,6 +17,7 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
   "★ THIS IS THE MEASUREMENT THE CASTING DECISION WAS WAITING ON, AND IT IS WORTH SAYING WHY A GUESS WOULD NOT DO. Every argument about a cast so far has been about what is permitted; none of it says what it COSTS, and the cost is entirely the count of quotations a person has to attribute by hand. If that count is a handful per book, casting is cheap; if it is most of them, casting is a translation project.";
   "★ IT REPORTS AN UPPER BOUND ON ATTRIBUTION AND NOT A TRUTH, BECAUSE THE VERB LIST IS DELIBERATELY GENEROUS. A quotation counted as attributed here has a speaking verb near it, which is not the same as having a subject that names a person. The number to trust is the UNATTRIBUTED one - a quotation with no speaking verb anywhere near it is certainly not attributed, so that side of the count is sound.";
   "★ THE EXAMPLES MATTER MORE THAN THE PROPORTION AND ARE RETURNED FOR THAT REASON. A proportion says how much work there is; the unattributed quotations themselves say what KIND of work it is, and those are different questions. A book whose misses are all one repeated shape is solvable with one rule, and a book whose misses are all different is not.";
+  "★ THE UNATTRIBUTED QUOTATIONS ARE RETURNED IN FULL AS WELL AS IN A SAMPLE, BECAUSE THE TWO ARE READ FOR DIFFERENT REASONS. A dozen examples are what somebody skims to see what SHAPE the misses are; the whole list is what somebody sits down with to actually attribute them. The sample is kept beside the full list rather than replaced by it, because a report of the whole Bible printed with every miss in it is a report nobody reads.";
   "★ TWO KINDS OF QUOTATION ARE TAKEN OUT BEFORE ANY VERB IS LOOKED FOR, AND NEITHER OF THEM IS AN ATTRIBUTION PROBLEM. A quotation in a letter is the author citing something and keeps his voice, so it is counted as a citation and asked nothing further. A quotation in verse zero is inside a superscription and is never read aloud at all, so it is counted as a heading. Both used to land in the unattributed pile, where they looked like work waiting for a person; a third of the whole remainder was these two.";
   arguments_assert(arguments, 2);
   let chapter_codes = await ebible_book_code_to_chapter_codes(
@@ -73,6 +74,7 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     headings: headings.length,
     unattributed: unattributed.length,
     unattributed_examples: unattributed.slice(0, 12),
+    unattributed_quotations: unattributed,
   };
   return report;
 }
