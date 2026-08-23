@@ -25,5 +25,8 @@ export function app_g_dev_index() {
   let all = list_concat(names, ["reset", "index"]);
   let prefixes = app_g_dev_index_prefixes_all(all);
   let app_fn = app_g_storage_app();
-  app_shared_hash_index_render(div, all, prefixes, app_fn);
+  ("a dev route REPLACES the game rather than opening beside it, which is why these cards go in the tab you are standing in. Every route draws itself over the map the player was on, and the '← routes' pill is the way back - so a new tab per route would leave a trail of games behind, each one still standing on the screen its route replaced.");
+  let new_tab = false;
+  let settings = app_shared_hash_index_settings(app_fn, new_tab);
+  app_shared_hash_index_render(div, all, prefixes, settings);
 }
