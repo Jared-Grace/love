@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_remainder_subtract_title_name_id } from "./app_code_lesson_expression_remainder_subtract_title_name_id.mjs";
-import { app_code_lesson_expression_remainder_subtract_subtract_code } from "./app_code_lesson_expression_remainder_subtract_subtract_code.mjs";
+import { app_code_lesson_expression_remainder_subtract_code } from "./app_code_lesson_expression_remainder_subtract_code.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
 import { integer_random_below } from "./integer_random_below.mjs";
 import { multiply_add } from "./multiply_add.mjs";
@@ -30,7 +30,7 @@ export function app_code_lesson_expression_remainder_subtract() {
       let leftover = integer_random_below(divisor);
       let number = multiply_add(count, divisor, leftover);
       let question = js_code_binary_spaced_nb(number, percent, divisor);
-      let answer = app_code_lesson_expression_remainder_subtract_subtract_code(
+      let answer = app_code_lesson_expression_remainder_subtract_code(
         number,
         divisor,
         count,

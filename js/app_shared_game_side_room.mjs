@@ -1,4 +1,4 @@
-import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { app_shared_margin_y } from "./app_shared_margin_y.mjs";
 export function app_shared_game_side_room() {
   "How far a game panel is held off the left and right edges of the screen.";
   "Named rather than spelled twice, because the panels it applies to are placed by two";

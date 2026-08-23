@@ -1,4 +1,4 @@
-import { app_g_view_render_study_fresh_fresh } from "./app_g_view_render_study_fresh_fresh.mjs";
+import { app_g_view_render_study_fresh } from "./app_g_view_render_study_fresh.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_space } from "./text_split_space.mjs";
@@ -14,12 +14,7 @@ export function app_g_view_render_study_r(view, text, div_map) {
   let left = emoji_book_open();
   let text2 = text_combine(left, " Study: Tap each word in order");
   app_g_container_text(overlay, text2);
-  let r4 = app_g_view_render_study_fresh_fresh(
-    word_index,
-    text,
-    overlay,
-    words,
-  );
+  let r4 = app_g_view_render_study_fresh(word_index, text, overlay, words);
   let fresh2 = property_get(r4, "fresh");
   let render_words2 = property_get(r4, "render_words");
   let container2 = property_get(r4, "container");

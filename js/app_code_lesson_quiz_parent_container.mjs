@@ -1,11 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_quiz_quiz_question } from "./app_code_lesson_quiz_quiz_question.mjs";
+import { app_code_lesson_quiz_question } from "./app_code_lesson_quiz_question.mjs";
 import { app_code_lesson_quiz_qa_for } from "./app_code_lesson_quiz_qa_for.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_answer_property } from "./app_code_lesson_quiz_answer_property.mjs";
 export function app_code_lesson_quiz_parent_container(r) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_quiz_question(r);
+  let r4 = app_code_lesson_quiz_question(r);
   let r5 = app_code_lesson_quiz_qa_for(r4);
   let qa_for = property_get(r5, "qa_for");
   let r3 = app_code_lesson_quiz_answer_property(r5);
