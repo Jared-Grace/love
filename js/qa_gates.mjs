@@ -1,3 +1,4 @@
+import { bible_speech_attributions_gate_run } from "./bible_speech_attributions_gate_run.mjs";
 import { bible_glyph_chapters_marks_unseated_gate_run } from "./bible_glyph_chapters_marks_unseated_gate_run.mjs";
 import { bible_versions_english_choices_sources_gate_run } from "./bible_versions_english_choices_sources_gate_run.mjs";
 import { app_code_lessons_order_ahead_gate_run } from "./app_code_lessons_order_ahead_gate_run.mjs";
