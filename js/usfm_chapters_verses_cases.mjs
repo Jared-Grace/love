@@ -171,6 +171,21 @@ export function usfm_chapters_verses_cases() {
       ],
       why: "a pair of brackets is how a translation writes a verse it has no words for. A reader shown a numbered blank would take it for a fault in the app rather than a fact about the translation",
     },
+    {
+      usfm: '\\c 1\n\\v 1 \\zaln-s |x-strong="H3068" x-content="יְהוָה"\\*\\w Yahweh|x-occurrence="1"\\w*\\zaln-e\\*\\zaln-s |x-strong="H0559"\\*\\w said|x-occurrence="1"\\w*\\zaln-e\\*,\n',
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "Yahweh said,",
+            },
+          ],
+        },
+      ],
+      why: "a translation aligned word by word to the Hebrew. Three things about it are each enough on their own to ruin the verse: the pair marks are named with a hyphen, so stopping at the letters leaves a dash and a letter behind between every word; the star that closes the opening mark stands on its own away from any letters; and the marking falls between a word and its comma, which is how the comma ends up standing alone with a space either side of it",
+    },
   ];
   return cases;
 }
