@@ -1,4 +1,4 @@
-import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
+import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
@@ -21,7 +21,7 @@ export async function app_g_arcs() {
   "THE NOTE IS FILED FROM THE PAGE THE FAULT WAS SEEN ON. Filing used to mean reading the turn number off one screen and typing it into a terminal on another, which is one person at two keyboards carrying a number in their head - and a wrong number there names a real line and is taken in silence. Here the number is never typed: it is the one belonging to the card that was pressed.";
   "THE CHAPTER IS CHOSEN FROM WHAT IS WRITTEN rather than from a name spelled into this page. One chapter has arcs today, and a page naming it would go on showing that one after a second was written, with nothing to say it was not showing everything.";
   "IT IS A DEV SCREEN AND SHOWS NOTHING AGAINST THE DEPLOYED SITE, because the store it reads is on the machine the arcs are being written on.";
-  let column = app_g_dev_overlay("Arcs");
+  let column = app_shared_dev_overlay("Arcs");
   let status = html_div_text(column, "");
   html_style_assign(status, {
     "text-align": "center",

@@ -1,6 +1,6 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_dev_tools_open_verify_page_page } from "./app_g_dev_tools_open_verify_page_page.mjs";
+import { app_g_dev_tools_open_verify_page_visit } from "./app_g_dev_tools_open_verify_page_visit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function app_g_dev_tools_open_verify_page(r) {
   arguments_assert(arguments, 1);
@@ -36,6 +36,6 @@ export async function app_g_dev_tools_open_verify_page(r) {
     told: told3,
   };
   let r2 = r3;
-  let told = await app_g_dev_tools_open_verify_page_page(r2);
+  let told = await app_g_dev_tools_open_verify_page_visit(r2);
   return told;
 }

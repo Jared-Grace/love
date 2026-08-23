@@ -6,7 +6,7 @@ import { app_g_dev_tools_open_verify_console_each } from "./app_g_dev_tools_open
 import { divide } from "./divide.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { folder_gitignore_join } from "./folder_gitignore_join.mjs";
-export async function app_g_dev_tools_open_verify_page_page(r2) {
+export async function app_g_dev_tools_open_verify_page_visit(r2) {
   arguments_assert(arguments, 1);
   let told = property_get(r2, "told");
   let lines = property_get(r2, "lines");
