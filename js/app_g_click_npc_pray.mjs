@@ -1,3 +1,4 @@
+import { app_g_pray_tap_self_text } from "./app_g_pray_tap_self_text.mjs";
 import { app_g_container_text } from "./app_g_container_text.mjs";
 import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
