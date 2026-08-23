@@ -21,10 +21,10 @@ export function bible_cast_brief() {
     step: "cast",
     what: "whether the read Bible gets more than one voice, what that costs, and what has to be decided by a person",
     measured:
-      "6088 quotations in the Berean; 5712 attributed; 234 citations inside letters, wanting no cast; 13 inside chapter headings, never read aloud; 129 left for a person, the largest block being Job's 14",
+      "6088 quotations in the Berean; 5686 attributed; 234 citations inside letters, wanting no cast; 70 continuing from the previous chapter, which attributes them; 13 inside chapter headings, never read aloud; 85 left for a person, scattered across 32 books with no block larger than Isaiah's 10",
     settled:
-      "the parse walks double quotation marks over a whole chapter and ignores single ones, because a quoter keeps his voice; what is unmarked is the book's own speaker, which the speaker table supplies; attribution is looked for on both sides of a quotation and a closing colon counts as attribution; a quotation in a letter is a citation and a quotation in verse zero is apparatus; the Berean is the translation to parse because its marks balance; Young's Literal cannot be parsed at all",
-    open: "who reads Jesus and who reads the Father; how the Song of Songs is cast; who sits down with the remaining 129",
+      "the parse walks double quotation marks over a whole chapter and ignores single ones, because a quoter keeps his voice; what is unmarked is the book's own speaker, which the speaker table supplies; attribution is looked for on both sides of a quotation and a closing colon counts as attribution; a quotation in a letter is a citation, a quotation in verse zero is apparatus, and a quotation opening a chapter whose predecessor ended unclosed is the same speech continuing; the Berean is the translation to parse because its marks balance; Young's Literal cannot be parsed at all",
+    open: "who reads Jesus and who reads the Father; how the Song of Songs is cast; who sits down with the remaining 85",
     forbidden:
       "giving Jesus a voice the product also uses editorially; treating a quotation mark as if it were in the manuscripts; casting a recording after it is generated; reading a zero result from a parser as a fact about a translation without counting its marks first",
     done: "every quotation in the Berean names a speaker, and a chapter can be generated in more than one voice with the verse boundaries recorded",
