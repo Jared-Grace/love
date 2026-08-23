@@ -23,7 +23,9 @@ export function app_code_first_decimal_digit_line(
   let value = app_shared_spaced_neighbor_gap();
   html_style_margin_x(chip, value);
   html_span_text(tile, decimal_after);
-  html_span_text(div, " the first digit after the decimal point is ");
+  html_span_text(div, " the ");
+  app_code_first_decimal_digit_phrase(div);
+  html_span_text(div, " is ");
   app_code_lesson_number_chip(div, digit, color);
   return div;
 }
