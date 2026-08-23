@@ -1,3 +1,5 @@
+import { bible_speech_quotation_citation_is } from "./bible_speech_quotation_citation_is.mjs";
+import { bible_speech_quotation_heading_is } from "./bible_speech_quotation_heading_is.mjs";
 import { bible_speech_text_attribution_after } from "./bible_speech_text_attribution_after.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";

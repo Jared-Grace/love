@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_book_speaker_default } from "./bible_book_speaker_default.mjs";
 export function bible_speech_quotation_citation_is(book_code) {
