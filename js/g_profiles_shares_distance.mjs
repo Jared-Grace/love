@@ -3,7 +3,7 @@ import { g_profiles_shares } from "./g_profiles_shares.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
-import { number_distance } from "./number_distance.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
 import { add } from "./add.mjs";
 export function g_profiles_shares_distance(profiles) {
   "How far a set of dealt people is from the spread the cast is supposed to have: every value on every axis, its share of this set against its share in the target, added up.";
@@ -23,7 +23,7 @@ export function g_profiles_shares_distance(profiles) {
     for (let value of values) {
       let share_wanted = property_get(wanted, value);
       let share_actual = property_get_or(actual, value, 0);
-      let gap = number_distance(share_actual, share_wanted);
+      let gap = numbers_apart(share_actual, share_wanted);
       total = add(total, gap);
     }
   }

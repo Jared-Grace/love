@@ -27,6 +27,14 @@ export async function app_g_bless_overlay(container_map) {
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
   let r = app_g_bless_overlay_turned(container_map);
+  ("The dev way in goes up as soon as there is a street under it, and the address is asked");
+  ("what it wants straight after. Both are done HERE because this is the first place the");
+  ("world exists, and every dev screen in this game reports on the world - asked earlier");
+  ("they would have to build one of their own, and a screen describing a street the player");
+  ("is not standing in would be believed rather than doubted.");
+  let world = property_get(r, "world");
+  app_g_bless_dev_entry();
+  let drawn = await app_g_bless_dev_if(world);
   let r2 = await app_g_bless_overlay_begun(r, container_map);
   let begun = property_get(r2, "begun");
   let transfer = property_get(r2, "transfer");
@@ -34,7 +42,12 @@ export async function app_g_bless_overlay(container_map) {
   ("where the door is put up, rather than inside the door itself, because a door that");
   ("sometimes builds nothing is a screen with two meanings; here there is one line saying");
   ("which of two things this visit is, and the door below stays the one thing it always was.");
-  let skipped = app_g_bless_door_skipped_is();
+  ("A dev screen counts as asking past it, and it is ORed in here rather than folded into");
+  ("the question next door, because the two are different kinds of asking: one is a word");
+  ("this game reserved for exactly this, the other is any word that turned out to name a");
+  ("screen. Folded together, adding a dev route would quietly change what the door does.");
+  let asked = app_g_bless_door_skipped_is();
+  let skipped = or(asked, drawn);
   if (skipped) {
     begun();
     return transfer;

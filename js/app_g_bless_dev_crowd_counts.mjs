@@ -8,7 +8,6 @@ import { list_concat } from "./list_concat.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
-
 export function app_g_bless_dev_crowd_counts(world) {
   arguments_assert(arguments, 1);
   ("How crowded the street actually is right now: how many people are out, how many tiles");
@@ -45,8 +44,10 @@ export function app_g_bless_dev_crowd_counts(world) {
   let people = list_size(npcs);
   let room = list_size(tiles);
   let stuck = list_size(stuck_people);
-  let occupied = divide_round(multiply(people, 100), room);
-  let held = divide_round(multiply(stuck, 100), people);
+  let number = multiply(people, 100);
+  let occupied = divide_round(number, room);
+  let number2 = multiply(stuck, 100);
+  let held = divide_round(number2, people);
   let counts = {
     people: people,
     room: room,
