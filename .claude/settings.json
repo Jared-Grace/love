@@ -2134,6 +2134,8 @@
       "Bash(node scripts/ai.mjs bible_speech_attribution_report_bible:*)",
       "Bash(node scripts/ai.mjs ebible_versions_english_readaloud_gate_run:*)",
       "Bash(node scripts/ai.mjs bible_gathered_gaps_gate_run:*)",
+      "Bash(node scripts/ai.mjs bible_gathered_gaps_baseline_write:*)",
+      "Bash(node scripts/ai.mjs bible_gathered_gaps_named:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -4168,6 +4170,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args bible_speech_attribution_report_bible:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_versions_english_readaloud_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_gathered_gaps_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_gathered_gaps_baseline_write:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_gathered_gaps_named:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -6201,6 +6205,8 @@
       "Bash(node scripts/aig.mjs bible_speech_attribution_report_bible:*)",
       "Bash(node scripts/aig.mjs ebible_versions_english_readaloud_gate_run:*)",
       "Bash(node scripts/aig.mjs bible_gathered_gaps_gate_run:*)",
+      "Bash(node scripts/aig.mjs bible_gathered_gaps_baseline_write:*)",
+      "Bash(node scripts/aig.mjs bible_gathered_gaps_named:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -8234,7 +8240,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_event_fields:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_speech_attribution_report_bible:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_versions_english_readaloud_gate_run:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args bible_gathered_gaps_gate_run:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_gathered_gaps_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_gathered_gaps_baseline_write:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_gathered_gaps_named:*)"
     ],
     "defaultMode": "acceptEdits"
   },
