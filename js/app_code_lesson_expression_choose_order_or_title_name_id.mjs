@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_or_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["solving both sides of ", "||"]);
   }
-  let rights = ["solving both sides of or"];
+  let rights = ["or both sides"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

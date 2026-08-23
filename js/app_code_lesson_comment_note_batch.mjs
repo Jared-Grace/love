@@ -31,7 +31,7 @@ export function app_code_lesson_comment_note_batch() {
       last: 6,
     },
     {
-      words: "notes are for people to read",
+      words: "comments are for people to read",
       first: 4,
       last: 9,
     },
