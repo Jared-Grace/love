@@ -224,7 +224,8 @@ export function song_image_drawn_attempts_known() {
   4,
   5,
   6,
-  7
+  7,
+  8
  ],
  "25": [
   1,
