@@ -1,3 +1,5 @@
+import { add } from "./add.mjs";
+import { list_map_async } from "./list_map_async.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -34,7 +36,8 @@ export async function bible_audio_chunk_texts(bible_folder, chapter_code) {
   each(texts, name_each);
   list_sort_number(numbers);
   async function number_each(n) {
-    let name = add(add("", n), ".txt");
+    let left = add("", n);
+    let name = add(left, ".txt");
     let p = path_join([folder, name]);
     let text = await file_read(p);
     let chunk = {

@@ -1,3 +1,6 @@
+import { add } from "./add.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { each } from "./each.mjs";
 import { list_add } from "./list_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -19,10 +22,13 @@ export async function bible_audio_verses_manifest_write(
   let chunks = await bible_audio_chunk_texts(bible_folder, chapter_code);
   let aligned = equal(chunks.length, verses.length);
   let rows = [];
-  function chunk_each(chunk, index) {
+  let index = 0;
+  function chunk_each(chunk) {
     let verse = verses[index];
+    index = add(index, 1);
     let verse_number = null;
-    if (not(equal(verse, undefined))) {
+    let b = equal(verse, undefined);
+    if (not(b)) {
       verse_number = verse.verse_number;
     }
     let row = {
