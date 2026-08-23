@@ -28,10 +28,15 @@ export async function g_arc_review_person_cards(entry, passages, notes) {
     let card = g_arc_review_turn_card(one, passages, notes, index);
     list_add(turns, card);
   }
+  let theirs = g_arc_review_notes_person(notes, index);
+  let notes_count = list_size(theirs);
+  let person_notes = g_arc_review_notes_turn(notes, index, 0);
   let r = {
     index,
     nickname,
     fields,
+    notes_count,
+    person_notes,
     turns,
   };
   return r;

@@ -11,6 +11,7 @@ export function app_shared_hash_index_render(parent, names, prefixes, settings) 
   ("the sandbox gets the folders for free, and that is the part worth expecting. Nothing about a preview name was written down anywhere, but the names group themselves - song_image_choose and song_image_audit share a first word, and so do the two dream traces - so a page that had nine links in a flat stack now opens as five headings.");
   ("the open set is READ here and handed down rather than reached for at each node, so one session-storage read draws the whole tree.");
   let key = app_shared_hash_index_open_key();
+  let app_fn = property_get(settings, "app_fn");
   let open_stored = storage_session_get(app_fn, key);
   let open_paths = new Set(open_stored);
   let tree = app_shared_hash_index_tree(names, prefixes);
@@ -22,7 +23,7 @@ export function app_shared_hash_index_render(parent, names, prefixes, settings) 
       label,
       tree.children[label],
       open_paths,
-      app_fn,
+      settings,
     );
   }
 }
