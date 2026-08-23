@@ -54,7 +54,9 @@ export function bible_glyph_chapters() {
   "AND IT COST NOTHING BECAUSE THE SAME MAN WROTE THE FIVE CHAPTERS ABOVE IT. The ninth entry was the first chapter to buy no picture and the note beside it says a table keyed by root is proved by a measurement rather than a claim. This is that measurement taken along a new axis - not a second chapter inside a book, but a second BOOK by one writer, turning over the same truth and love and walking and commandment. The saving follows the hand that wrote, and not only the scroll it was written on.";
   "THE TWENTIETH IS THE SECOND WHOLE BOOK IN A ROW, AND THE SECOND FOR NOTHING. The entry above it says a complete book gives a reader something a chapter cannot; two of them side by side give something further, which is a run - finish one and the next is also finishable. And the free cost repeated is the part worth writing down: one chapter costing nothing says the table has begun to pay back, and two whole books in succession costing nothing says paying back is now the ordinary case and buying was the exception.";
   "AND IT IS THE LETTER WITH THREE MEN'S NAMES IN IT AND NOT ONE OF THEM DRAWN. Gaius, Diotrephes and Demetrius stay in English by the rule that turned down the twenty sixth of Jeremiah, and then the seventh verse draws THE Name. So the chapter that most tests the no-proper-names rule is the chapter where that rule says the most.";
-  "Twenty chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE TWENTY FIRST IS THE THIRD WHOLE BOOK IN A ROW AND THE THIRD FOR NOTHING, AND IT IS THE ONE THAT SETTLES THE ARGUMENT. The two entries above it are the two shortest books in the New Testament, so a sceptic could read their free cost as short books being cheap. Jude is nearly twice the length of either and goes where neither goes - angels, the sea, Egypt, the last judgment - and it still asked for no picture at all. Cheapness on unfamiliar ground is a property of the table; cheapness on home ground was only a property of the neighbourhood.";
+  "AND ITS FIFTH VERSE PUTS THE CROSS IN THE EXODUS. The Greek there reads Iesous and the sentence is about bringing a people out of Egypt, so the mark that stands beside the man from Nazareth everywhere else in this list stands here beside Sinai. Nothing was smoothed to spare the reader that, because the rule is that the mark is drawn where the word is. It is the first place in this Bible where the pictures walk a reader into a hard reading rather than around it.";
+  "Twenty one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -78,6 +80,7 @@ export function bible_glyph_chapters() {
   let eighteenth = bible_glyph_chapter_psa023();
   let nineteenth = bible_glyph_chapter_2jn01();
   let twentieth = bible_glyph_chapter_3jn01();
+  let twenty_first = bible_glyph_chapter_jud01();
   let chapters = [
     first,
     second,
@@ -99,6 +102,7 @@ export function bible_glyph_chapters() {
     eighteenth,
     nineteenth,
     twentieth,
+    twenty_first,
   ];
   return chapters;
 }
