@@ -1,3 +1,14 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_speech_attributions } from "./bible_speech_attributions.mjs";
+import { ebible_folder_berean } from "./ebible_folder_berean.mjs";
+import { bible_speech_unattributed_bible } from "./bible_speech_unattributed_bible.mjs";
+import { bible_speech_attribution_hand } from "./bible_speech_attribution_hand.mjs";
+import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { list_find_or_null } from "./list_find_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function bible_speech_attributions_gate_run() {
   "Whether the hand rulings and the parser still describe the same set of quotations - that every ruling answers a quotation the rules really cannot reach, and that every quotation the rules cannot reach has a ruling.";
   "★ THIS IS THE WHOLE REASON THE RULINGS WERE STORED RATHER THAN WRITTEN IN A REPLY, AND IT FAILS IN BOTH DIRECTIONS ON PURPOSE. A ruling with no quotation under it is a row that has gone stale - the instrument improved and now attributes that verse itself, or the translation was re-downloaded and the words moved. A quotation with no ruling is new hand work that arrived without anybody noticing, which is the dangerous one: the cast would simply have no voice for that line and the generation would fall back to the book's default, silently and in the wrong voice.";
@@ -5,7 +16,8 @@ export async function bible_speech_attributions_gate_run() {
   "★ IT PARSES THE WHOLE BIBLE, SO IT IS SLOW AND IS WORTH IT. Nothing smaller answers the question - the misses are wherever they are, and a gate that checked one book would pass while another book quietly grew hand work. Everything it reads is on the local disk, so slow here means seconds rather than a network.";
   arguments_assert(arguments, 0);
   let attributions = bible_speech_attributions();
-  let report = await bible_speech_unattributed_bible(bible_folder_default());
+  let bible_folder = ebible_folder_berean();
+  let report = await bible_speech_unattributed_bible(bible_folder);
   let unruled = [];
   function quotation_each(quotation) {
     let speaker = bible_speech_attribution_hand(quotation);
