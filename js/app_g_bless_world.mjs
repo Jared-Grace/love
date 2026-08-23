@@ -14,7 +14,10 @@ export function app_g_bless_world(rows, coordinates, player, npcs, blocks) {
   ("are asked about the buildings and the doorsteps in it and those would otherwise have to");
   ("be worked out a second time from the ground.");
   ("They are kept in the order they were laid, which is the order the crowd is numbered in:");
-  ("the first sixty people live on the first block. That is what lets an address worked out");
+  ("a block's worth of people live on the first block, the next block's worth on the next.");
+  ("It is said as a block's worth rather than as a count, because the count is whatever the");
+  ("ladder currently makes it and a number written here would be a second place to remember");
+  ("to change. That is what lets an address worked out");
   ("by dividing be turned back into a door somebody can be seen standing at.");
   ("Held in memory and never written down. This game has no save yet, and one that saved");
   ("would have to answer which game's save it was; the gospel game's is a single fixed path");
