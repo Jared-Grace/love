@@ -18,7 +18,6 @@ export function app_g_arcs_note_row(parent, bench, nickname, number, names) {
   "THE PARTS ARE HANDED IN rather than named here, because this row is drawn under a turn and under a person and those have different parts. Named here it would offer a reviewer a part the thing above it does not have.";
   arguments_assert(arguments, 5);
   let chapter_code = property_get(bench, "chapter_code");
-  let api = property_get(bench, "api");
   let status_set = property_get(bench, "status_set");
   let status_working = property_get(bench, "status_working");
   let render = property_get(bench, "render");
@@ -56,7 +55,13 @@ export function app_g_arcs_note_row(parent, bench, nickname, number, names) {
       status_working(said);
       try {
         let f_name = fn_name("g_arc_feedback_add");
-        await api(f_name, [chapter_code, nickname, number, field, typed]);
+        await app_shared_api_named(f_name, [
+          chapter_code,
+          nickname,
+          number,
+          field,
+          typed,
+        ]);
         let v2 = String(number);
         let done = text_combine_multiple([
           "filed a note against ",
