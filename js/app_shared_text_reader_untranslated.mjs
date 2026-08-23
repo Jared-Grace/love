@@ -1,3 +1,4 @@
+import { js_literal_text_deep_is } from "./js_literal_text_deep_is.mjs";
 import { app_shared_text_reader_stops } from "./app_shared_text_reader_stops.mjs";
 import { function_reachable_calls_named_stopping } from "./function_reachable_calls_named_stopping.mjs";
 import { property_count_add } from "./property_count_add.mjs";
