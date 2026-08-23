@@ -36,7 +36,8 @@ export function app_g_arcs_turn_block(parent, card, nickname, bench) {
     "font-size": app_shared_font_size_label(),
     opacity: "0.55",
   });
-  let said = text_combine_multiple([String(number), ". ", before]);
+  let v = String(number);
+  let said = text_combine_multiple([v, ". ", before]);
   let before_line = html_div_text(block, said);
   html_style_assign(before_line, {
     "margin-top": "0.2rem",
