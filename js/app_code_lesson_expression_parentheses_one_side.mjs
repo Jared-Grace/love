@@ -55,7 +55,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     return list;
   }
   function above(root) {
-    "the word this lesson rests on, then what ( and ) do, that they change nothing on this shape, then the same line worked out twice";
+    "the word this lesson rests on, then what ( and ) do, that they change nothing on this shape, then one such line worked out, then that the brackets may stand on either side";
     "The recall card comes first because the word comparison was defined in the arithmetic-comparison lesson and then went quiet for thirty-two lessons before this one, whose every line is about putting brackets around one. It is the same card the comparing-a-comparison lesson shows, word for word, which is what a recall should be - recognised and passed over rather than compared against a near-copy.";
     app_code_lesson_expression_comparing_a_comparison_recall(root);
     let open = js_code_parenthesis_left();
@@ -71,7 +71,7 @@ export function app_code_lesson_expression_parentheses_one_side() {
     html_div_cycle_code(idea, [
       "",
       "(3 === 5)",
-      " means the same as ",
+      " solves to same value as ",
       "3 === 5",
     ]);
     let r = app_code_parentheses_inside_before_outside(
@@ -81,9 +81,6 @@ export function app_code_lesson_expression_parentheses_one_side() {
     let first = app_code_container_light_blue(root);
     html_div_cycle_code(first, ["", "3 === 5", " is ", "false"]);
     html_div_cycle_code(first, ["So ", "(3 === 5) === false", " is ", "true"]);
-    let second = app_code_container_light_blue(root);
-    html_div_cycle_code(second, ["", "2 < 5", " is ", "true"]);
-    html_div_cycle_code(second, ["So ", "(2 < 5) !== true", " is ", "false"]);
     let either = app_code_container_light_blue(root);
     ("The outer operator is named by its SYMBOL, never by the word comparison. Two comparisons stand on this line - the > inside the brackets and the === outside them - and the word is already spent on the inner one by the card above, which says we put ( and ) AROUND a comparison. So either side of the comparison would say the brackets can sit outside the thing they are around. Both symbols are listed because the quiz asks both, and a rule naming only === would read as a rule about ===.");
     let same_symbol = js_operator_triple_equal_symbol();
