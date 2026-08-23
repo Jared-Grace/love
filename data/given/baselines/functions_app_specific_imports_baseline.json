@@ -14,7 +14,7 @@
   "qa_gates -> app_code_lesson_expression_which_part_first_gate_run",
   "qa_gates -> app_code_lesson_ids_gate_run",
   "qa_gates -> app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
-  "qa_gates -> app_code_lessons_prod_last_gate_run",
+  "qa_gates -> app_code_lessons_read_through_last_gate_run",
   "qa_gates -> app_code_lessons_rights_space_gate_run",
   "qa_gates -> app_code_quiz_choice_pool_gate_run",
   "qa_gates -> app_code_quiz_leniency_gate_run",

@@ -1874,7 +1874,7 @@ export function permission_grant_names() {
   let spelled1801 = fn_name("song_image_drawn_files_migrate");
   let spelled1802 = fn_name("youtube_playlist_count_stated");
   let spelled1803 = fn_name("psalms_videos_descriptions_paste_write");
-  let spelled1804 = fn_name("app_code_lessons_prod_last_gate_run");
+  let spelled1804 = fn_name("app_code_lessons_read_through_last_gate_run");
   let spelled1805 = fn_name("baselines_folder_literal_names");
   let spelled1806 = fn_name("data_rooms_gate_run");
   let spelled1807 = fn_name("js_parse_cases_gate_run");
