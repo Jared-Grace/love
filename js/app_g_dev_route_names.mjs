@@ -1,29 +1,12 @@
-import { js_function_node_find_named_node } from "./js_function_node_find_named_node.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { function_ast } from "./function_ast.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
-export async function app_g_dev_route_names() {
-  ("the word after the # for every dev screen the game has, read out of ",
-    fn_name("app_g_dev_routes"),
-    " itself rather than listed here: each route is a function written directly inside it, so asking the code which functions those are cannot fall behind the moment somebody adds a screen");
-  ("only the functions standing DIRECTLY in that body count. a route may write a little helper inside itself - one of them writes an empty one called done - and a reading that took every function anywhere inside would offer that helper as a screen and then find nothing there");
-  ("for something that walks all the screens - a sweep at phone size, say - so it walks the ones that exist today rather than the ones that existed when it was written");
-  let name = fn_name("app_g_dev_routes");
-  let ast = await function_ast(name);
-  let node = js_function_node_find_named_node(ast, name);
-  let statements = property_path_get_2(node, "body", "body");
-  function route_is(statement) {
-    let v = js_node_type_is(statement, "FunctionDeclaration");
-    return v;
-  }
-  let routes = list_filter(statements, route_is);
-  function route_name(statement) {
-    let v = property_path_get_2(statement, "id", "name");
-    return v;
-  }
-  let names = list_map(routes, route_name);
+import { app_g_dev_routes } from "./app_g_dev_routes.mjs";
+import { object_property_names } from "./object_property_names.mjs";
+export function app_g_dev_route_names() {
+  "the word after the # for every dev screen the game has, got by building the registry and reading back the names it ended up holding.";
+  "IT USED TO READ THE REGISTRY'S CODE AS TEXT, AND THAT ANSWER WAS ONCE RIGHT AND IS NOT ANY MORE. When every route was a function written directly inside the registry, the functions standing in that body were the routes, and asking the code which those were could not fall behind somebody adding a screen. Routes now reach the registry three different ways: seventeen of them are keys of an object written out in one of the chained groups, two are put in one at a time by name afterwards, and the ones for clearing an npc's path are not written down anywhere at all - their names are built at run time by joining a prefix to each situation the game knows about. No reading of the source can see the third kind, because the words do not exist until the code runs.";
+  "SO IT CALLS THE REGISTRY, WHICH IS THE THING THE OLD READING WAS ONLY EVER AN IMITATION OF. What used to make that impossible was one line asking whether the page came from localhost, in a place where there is no page - so the question threw and took the whole list down with it. That question answers no now where there is nothing to ask, which is what a localhost-only screen deserves anyway.";
+  "WHICH MEANS THE LIST IS ONE SHORTER AWAY FROM A BROWSER, AND THAT IS THE RIGHT LENGTH. #design is held back off localhost, so a sweep run from a script does not get it - and a sweep is exactly the caller that must not be handed a screen the sweep's own browser would be refused.";
+  "the two callers both wanted the screens that exist TODAY rather than the ones that existed when they were written, which is what they were promised and, until this, not what they got: the reading returned the single route that happened still to be written inside the registry itself, so a walk of every dev screen at phone size walked one.";
+  let routes = app_g_dev_routes(null);
+  let names = object_property_names(routes);
   return names;
 }

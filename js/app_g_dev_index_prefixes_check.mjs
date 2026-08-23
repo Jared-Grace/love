@@ -15,10 +15,10 @@ export async function app_g_dev_index_prefixes_check() {
     fn_name("names_first_word_groups_gate_run"),
     "). what is left is the one question a rule cannot answer about itself: is every route whose NAME says its folder actually filed in one. that is the failure that put day_baptisms_collect at the top level while its four siblings sat under day");
   ("the merged view is what answers it, because a path written by hand is a decision and counts as filed - the check is for a route falling through BOTH, not for one the typed list caught");
-  ("the names are read out of the registry's own code (",
+  ("the names come from building the registry and reading it back (",
     fn_name("app_g_dev_route_names"),
-    ") rather than by calling it, because calling it asks whether this is localhost and there is no page here to ask");
-  let names = await app_g_dev_route_names();
+    "), so a route added by any of the three ways routes get added is checked, including the ones whose names are joined together at run time and are written nowhere");
+  let names = app_g_dev_route_names();
   let derived = app_g_dev_index_prefixes_derived(names);
   let all = app_g_dev_index_prefixes_all(names);
   let filed = [];
