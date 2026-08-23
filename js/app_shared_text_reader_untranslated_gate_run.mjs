@@ -19,7 +19,9 @@ export async function app_shared_text_reader_untranslated_gate_run() {
     let carried = property_get(scan, "carried");
     list_add_multiple(untranslated, found);
     console.log("app  " + f_name_app + "  doors watched  " + json_to(looked));
-    console.log("app  " + f_name_app + "  words carried in  " + json_to(carried));
+    console.log(
+      "app  " + f_name_app + "  words carried in  " + json_to(carried),
+    );
     for (let one of found) {
       let f_name = property_get(one, "f_name");
       let door = property_get(one, "door");

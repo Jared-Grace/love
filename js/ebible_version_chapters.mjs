@@ -17,9 +17,10 @@ export async function ebible_version_chapters(bible_folder) {
   let door = door43_version_or_null(bible_folder);
   let elsewhere = null_not_is(door);
   if (elsewhere) {
+    let org = property_get(door, "org");
     let door43_folder = property_get(door, "door43_folder");
     let tag = property_get(door, "tag");
-    await door43_version_download(door43_folder, tag);
+    await door43_version_download(org, door43_folder, tag);
     let carried = await door43_version_chapters(door43_folder);
     return carried;
   }
