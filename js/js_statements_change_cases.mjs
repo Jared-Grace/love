@@ -174,6 +174,30 @@ export function js_statements_change_cases() {
       why: "a call reached through a dot becoming a function of this repo, which is the shape of the wrapping done here constantly - the callee reading that answers only for plain names is the wrong one to ask, because it exists to tell callers whether a name is ours",
     },
     {
+      before: ["work(a);", "work(b);", "work(c);", "work(d);"],
+      after: ["work(a);", "inner(b);", "work(d);"],
+      named: "a run of statements collapsed into one",
+      why: "two lines out and one in between the same two survivors, which is the shape the cut leaves behind in the function it cut from - and counted rather than placed it is only a run that came out shorter",
+    },
+    {
+      before: ["work(a);", "inner(b);", "work(d);"],
+      after: ["work(a);", "work(b);", "work(c);", "work(d);"],
+      named: "one statement grown into a run",
+      why: "the same edit the other way round, a call opened back up into the lines it stood for - the mirror of the case above and a different command from it",
+    },
+    {
+      before: ["work(a);", "work(b);", "work(c);", "work(d);"],
+      after: ["work(a);", "work(x);", "work(y);", "work(z);", "work(d);"],
+      named: "one run of statements reworked",
+      why: "several out and several in at one place, with the lines on either side of it untouched - no lopsided shape to name, and still a place a command could be pointed at rather than a total",
+    },
+    {
+      before: ["work(a);", "work(b);", "work(c);", "work(d);"],
+      after: ["work(a);", "work(x);", "work(c);", "work(y);", "work(z);"],
+      named: "statements added and removed",
+      why: "two places changed at once, so there is nothing single to point at - the counted name is the truest thing left, and it is kept rather than a place being guessed at",
+    },
+    {
       before: ["work(a);", "work(b);", "work(c);"],
       after: ["work(x);", "work(y);", "work(z);"],
       named: "the body rewritten",
