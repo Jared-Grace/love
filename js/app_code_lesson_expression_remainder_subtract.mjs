@@ -87,22 +87,35 @@ export function app_code_lesson_expression_remainder_subtract() {
     html_div_cycle_code(setup, [
       "What if you keep subtracting the same number until you can not subtract it again?",
     ]);
+    ("ONE STEP TO A LINE. Three lines carried six steps between them: a chain and its value, then a second chain proposed and worked out and judged too many all in one breath, then the reason for that judgement folded together with the conclusion drawn from it. A learner who lost the thread had no line to go back to, because each line held the step they missed AND the step after it.");
+    ("The count of 5s is now said out loud as its own line - We used three 5s - so the four-5s line has something to be four OF. It used to be the first mention of counting the subtractions at all, and it arrived already claiming the count was too big.");
+    ("Too many is reached rather than asserted. The chain is proposed, worked out to -3, the -3 is called below zero on a line of its own, and only then is four called too many. Every one of those is a step a learner can disagree with separately, which is what makes the conclusion theirs.");
     let work = app_code_container_light_blue(root);
-    html_div_cycle_code(work, ["", "17 - 5 - 5 - 5", " leaves ", "2"]);
+    html_div_cycle_code(work, ["", "17 - 5 - 5 - 5", " solves to ", "2"]);
+    html_div_cycle_code(work, ["We used three ", "5", "s"]);
+    html_div_cycle_code(work, [
+      "If we used another ",
+      "5",
+      " - if we used four ",
+      "5",
+      "s then we would have ",
+      "17 - 5 - 5 - 5 - 5",
+      " which is ",
+      "-3",
+    ]);
+    html_div_cycle_code(work, ["", "-3", " is below zero"]);
     html_div_cycle_code(work, [
       "Four ",
       "5",
-      "s would be too many: ",
-      "17 - 5 - 5 - 5 - 5",
-      " is ",
-      "-3",
+      "s solved to a negative number, so that was too many ",
+      "5",
+      "s",
     ]);
     html_div_cycle_code(work, [
-      "",
-      "-3",
-      " is below zero, so three ",
+      "So three ",
       "5",
-      "s is the most we can subtract",
+      "s is the most we can subtract from ",
+      "17",
     ]);
     let result = app_code_container_light_blue(root);
     html_div_cycle_code(result, [
