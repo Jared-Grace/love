@@ -1,8 +1,7 @@
 import { app_shared_card_image } from "./app_shared_card_image.mjs";
-import { firebase_project_url_jg } from "./firebase_project_url_jg.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
+import { web_assets_app_img_url } from "./web_assets_app_img_url.mjs";
 export function app_shared_card_image_url(app_name) {
   "$plain app_name";
   "The full address of the picture on an app's link card.";
@@ -12,7 +11,6 @@ export function app_shared_card_image_url(app_name) {
     let none = text_empty();
     return none;
   }
-  let prefix = firebase_project_url_jg();
-  let r = text_combine_multiple([prefix, "/", f_name]);
+  let r = web_assets_app_img_url(app_name, f_name);
   return r;
 }
