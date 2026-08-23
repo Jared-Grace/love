@@ -46,30 +46,33 @@ export function app_g_arcs_note_row(parent, bench, nickname, number, names) {
         status_set("write the note first, then press the part it is about");
         return;
       }
+      let v = String(number);
       let said = text_combine_multiple([
         "filing a note against ",
         field,
         " of turn ",
-        String(number),
+        v,
       ]);
       status_working(said);
       try {
         let f_name = fn_name("g_arc_feedback_add");
         await api(f_name, [chapter_code, nickname, number, field, typed]);
+        let v2 = String(number);
         let done = text_combine_multiple([
           "filed a note against ",
           field,
           " of turn ",
-          String(number),
+          v2,
         ]);
         status_set(done);
         await render();
       } catch (failed) {
+        let v3 = String(number);
         let missed = text_combine_multiple([
           "could not file the note against ",
           field,
           " of turn ",
-          String(number),
+          v3,
         ]);
         status_set(missed);
       }
