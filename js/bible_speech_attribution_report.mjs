@@ -1,8 +1,6 @@
-import { bible_speech_quotation_gloss_is } from "./bible_speech_quotation_gloss_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_speech_attribution_report_quotation_measure } from "./bible_speech_attribution_report_quotation_measure.mjs";
 import { bible_speech_spans_unclosed_is } from "./bible_speech_spans_unclosed_is.mjs";
-import { bible_speech_quotation_citation_is } from "./bible_speech_quotation_citation_is.mjs";
-import { bible_speech_quotation_heading_is } from "./bible_speech_quotation_heading_is.mjs";
-import { bible_speech_text_attribution_after } from "./bible_speech_text_attribution_after.mjs";
 import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -11,7 +9,6 @@ import { list_map_async } from "./list_map_async.mjs";
 import { ebible_book_code_to_chapter_codes } from "./ebible_book_code_to_chapter_codes.mjs";
 import { bible_speech_spans_chapter } from "./bible_speech_spans_chapter.mjs";
 import { bible_speech_quotations } from "./bible_speech_quotations.mjs";
-import { bible_speech_text_attribution } from "./bible_speech_text_attribution.mjs";
 export async function bible_speech_attribution_report(bible_folder, book_code) {
   "$plain bible_folder";
   "$plain book_code";
@@ -62,42 +59,16 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
   let attributed = [];
   let unattributed = [];
   let citations = [];
-  let headings = [];
-  let glosses = [];
-  let continuations = [];
-  let citation_is = bible_speech_quotation_citation_is(book_code);
-  function quotation_measure(quotation) {
-    let heading_is = bible_speech_quotation_heading_is(quotation);
-    if (heading_is) {
-      list_add(headings, quotation);
-      return;
-    }
-    let gloss_is = bible_speech_quotation_gloss_is(quotation);
-    if (gloss_is) {
-      list_add(glosses, quotation);
-      return;
-    }
-    if (citation_is) {
-      list_add(citations, quotation);
-      return;
-    }
-    if (quotation.continues_is) {
-      list_add(continuations, quotation);
-      return;
-    }
-    let verb_before = bible_speech_text_attribution(quotation.before);
-    let verb_after = bible_speech_text_attribution_after(quotation.after);
-    let verb = verb_before;
-    if (equal(verb, null)) {
-      verb = verb_after;
-    }
-    if (equal(verb, null)) {
-      list_add(unattributed, quotation);
-      return;
-    }
-    quotation.verb = verb;
-    list_add(attributed, quotation);
-  }
+  let r = bible_speech_attribution_report_quotation_measure(
+    book_code,
+    citations,
+    unattributed,
+    attributed,
+  );
+  let quotation_measure = property_get(r, "quotation_measure");
+  let continuations = property_get(r, "continuations");
+  let glosses = property_get(r, "glosses");
+  let headings = property_get(r, "headings");
   each(quotations_all, quotation_measure);
   let report = {
     book_code,
