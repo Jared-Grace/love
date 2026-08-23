@@ -8,6 +8,8 @@ import { list_add } from "./list_add.mjs";
 export async function g_arc_review_person_cards(entry, passages, notes) {
   "One written arc gathered for a reviewer: who the person is, and every turn of theirs with its Scripture and its standing notes.";
   "THE NICKNAME TRAVELS WITH THE ARC BECAUSE FILING A NOTE ASKS FOR IT. The store addresses a person by number and the door a person files through asks for the name, so a screen holding only the number would have to turn one into the other itself - and the turning is already done in one place, for the whole pool at once, because a name depends on who came before it.";
+  "THE COUNT IS OF EVERY NOTE FILED AGAINST THEM AND NOT OF THE ONES DRAWN. It is there so a reviewer coming back can see which arcs they have already been through, and an arc whose notes point at turns it no longer has is exactly the one that must not read as untouched.";
+  "A NOTE THAT IS NOBODY'S TURN IS CARRIED SEPARATELY, under turn nought, which is the store's own address for a fault in the person rather than in a line. Left in with the turns it would be drawn under whichever line came first and read as being about that line.";
   "THE FIELDS ARE WALKED RATHER THAN NAMED, from the one source the writing of an arc is built from. A field renamed there is renamed here in the same breath; spelled out here, this would go on looking for a field nothing writes any more and show it empty.";
   arguments_assert(arguments, 3);
   let index = property_get(entry, "index");
