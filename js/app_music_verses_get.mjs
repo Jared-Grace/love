@@ -1,5 +1,6 @@
+import { app_music_bible_default_version } from "./app_music_bible_default_version.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { app_music_verses_build } from "./app_music_verses_build.mjs";
 import { app_shared_bible_built_get } from "./app_shared_bible_built_get.mjs";
 import { app_music } from "./app_music.mjs";
