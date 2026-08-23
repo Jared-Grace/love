@@ -33,8 +33,8 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   html_attribute_set(picture, "alt", couplet.symbol);
   html_attribute_set(picture, "loading", "lazy");
   html_attribute_set(picture, "decoding", "async");
-  html_style_set(picture, "width", "100%");
-  html_style_set(picture, "display", "block");
+  html_width_full(picture);
+  html_display_block(picture);
   html_style_margin_top(picture, "12px");
   let references = song_image_couplet_symbol_references(n);
   let unreferenced = list_empty_is(references);
