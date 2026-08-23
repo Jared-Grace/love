@@ -18,7 +18,7 @@ export function app_g_dev_routes(div_map) {
   ("#word_pictures is registered here rather than inside one of the chained groups above, because it belongs to none of them: it is a review sheet for content being settled, not a mechanic under test, and a group it was folded into would have to thread it through every group after that one for no reason");
   async function word_pictures() {
     await app_g_view_set(null);
-    app_g_word_pictures();
+    await app_g_word_pictures();
   }
   property_set(routes, "word_pictures", word_pictures);
   if (local) {
