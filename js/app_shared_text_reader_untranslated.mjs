@@ -1,8 +1,9 @@
+import { app_shared_text_reader_stops } from "./app_shared_text_reader_stops.mjs";
+import { function_reachable_calls_named_stopping } from "./function_reachable_calls_named_stopping.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { js_literal_text_letters_try } from "./js_literal_text_letters_try.mjs";
 import { app_shared_text_reader_seats } from "./app_shared_text_reader_seats.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_reachable_calls_named } from "./function_reachable_calls_named.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -17,9 +18,11 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   "It is asked of one app rather than of the folder, because whether a word should be turned into another language is a promise that particular app made and not a rule of the repo. An app that only ever speaks english is not in breach for speaking it.";
   "Words with no letters in them are passed over. An arrow, a space, a gap between two things reads the same in every language there is, and naming those would bury the ones that matter under the ones that never could.";
   "It says alongside what it found how many doors it went and stood at, one line per door, because a small answer here has two readings and they are opposite. Two words left in english is a good day; two doors watched out of ten is a page nobody looked at, reported as a good day.";
+  "The app's own dev screens are not walked into. The promise is to a reader, and the screens the person building the app opens to look at their own work have no reader; where the walk turns aside and why is settled next door, so that this stays a reading of doors and does not become a second opinion about which screens are private. Read the number of functions read alongside the findings if that ever looks like too much to have been dropped: it counts what was actually opened, so the stopping shows up there rather than hiding.";
   arguments_assert(arguments, 1);
   let seats = app_shared_text_reader_seats();
-  let walked = await function_reachable_calls_named(f_name_app);
+  let stops = await app_shared_text_reader_stops(f_name_app);
+  let walked = await function_reachable_calls_named_stopping(f_name_app, stops);
   let calls = property_get(walked, "calls");
   let found = [];
   let looked = {};
