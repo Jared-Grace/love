@@ -169,12 +169,14 @@ possible correction: Exodus 15:16, 'terror and dread fall on them… till your p
 
 ---
 
-Method, so you can see what is not here. Every chapter's verse numbers were laid against the same chapter in the other 398 versions.
+Method, so you can see what was excluded rather than missed. Every chapter's verse numbers were laid against the same chapter in the other 398 versions.
 
-Anything eight or more versions agreed on was dropped. That turned out to be exactly the sixteen verses the critical texts omit — Matthew 17:21, Mark 9:44, Acts 8:37 and the rest.
+Excluded: anything eight or more versions agreed on — which turned out to be exactly the sixteen verses the critical texts omit, Matthew 17:21, Mark 9:44, Acts 8:37 and the rest.
 
-Versions that skip whole chapters were set aside: if there is no Genesis 5 at all, verses missing inside Genesis 4 are the same editorial choice. Seven do this on a large scale — lit, pma, engPEV, tkr, engnna, mwf2018, nay — skipping 38 to 477 chapters each and holding about six thousand of the gaps found. That test lets missing verses go, not missing numbers, which is why dji is still listed above at 37 chapters published.
+Excluded: versions that skip whole chapters, since a gap inside Genesis 4 is the same editorial choice as having no Genesis 5 at all. Seven do this on a large scale — lit, pma, engPEV, tkr, engnna, mwf2018, nay — skipping 38 to 477 chapters each and holding about six thousand of the gaps found. That test lets missing verses go, not missing numbers, which is why dji is still listed above at 37 chapters published.
 
-The five Septuagint editions were set aside too. englxxup skips exactly the same 299 numbers as grcbrent, the Greek it revises. eng-Brenton differs from that Greek only at 1 Samuel 17:12–31, supplied in brackets from another manuscript, and at its Nehemiah filing. eng-lxx2012 and eng-uk-lxx2012 skip the same 255 as each other, 153 shared with Brenton's Greek and the rest in Jeremiah, 3 Kingdoms, Proverbs and Nehemiah, where the Greek differs from the Hebrew in length and order.
+Excluded: the five Septuagint editions, whose gaps are the Greek's own arrangement. englxxup skips exactly the same 299 numbers as grcbrent, the Greek it revises; eng-Brenton differs from that Greek only at 1 Samuel 17:12–31, supplied in brackets from another manuscript, and at its Nehemiah filing; eng-lxx2012 and eng-uk-lxx2012 skip the same 255 as each other.
+
+Excluded: numbering that follows a deliberate scheme, even where it reads oddly. engkjvcpb ESG10 ends with a verse numbered 1 after verse 13, which is the colophon keeping its number from 11:1 — and ESG01 begins at verse 2, the other half of that same sequence.
 
 Chapters we cannot read are passed over and picked up when a corrected download appears. At present neither Brenton edition shows Psalm 119 at all.
