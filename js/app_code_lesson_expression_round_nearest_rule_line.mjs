@@ -8,7 +8,7 @@ import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_code_lesson_expression_round_nearest_rule_line(
   parent,
-  digits,
+  first_digits,
   like_name,
 ) {
   arguments_assert(arguments, 3);
@@ -21,14 +21,14 @@ export function app_code_lesson_expression_round_nearest_rule_line(
   html_span_text(div, "If the ");
   app_code_first_decimal_digit_phrase(div);
   let parts = [" is "];
-  let left = list_size(digits);
-  let last_index = subtract(left, 1);
+  let digit_count = list_size(first_digits);
+  let last_index = subtract(digit_count, 1);
   let index = 0;
-  for (let digit of digits) {
+  for (let digit of first_digits) {
     parts.push(digit);
     let last = equal(index, last_index);
-    let right = subtract(last_index, 1);
-    let before_last = equal(index, right);
+    let second_last_index = subtract(last_index, 1);
+    let before_last = equal(index, second_last_index);
     if (last) {
       parts.push(" then ");
     } else if (before_last) {
