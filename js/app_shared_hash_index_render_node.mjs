@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";

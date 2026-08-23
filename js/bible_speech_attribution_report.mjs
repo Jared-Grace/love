@@ -21,7 +21,7 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
   "★ THE UNATTRIBUTED QUOTATIONS ARE RETURNED IN FULL AS WELL AS IN A SAMPLE, BECAUSE THE TWO ARE READ FOR DIFFERENT REASONS. A dozen examples are what somebody skims to see what SHAPE the misses are; the whole list is what somebody sits down with to actually attribute them. The sample is kept beside the full list rather than replaced by it, because a report of the whole Bible printed with every miss in it is a report nobody reads.";
   "★ A SPEECH THAT CROSSES A CHAPTER BOUNDARY IS ATTRIBUTED BY THE CHAPTER BEFORE IT AND NOT BY A PERSON. Job 4 announces Eliphaz and then never closes his quotation, because he is still talking in Job 5, so Job 5 opens inside a quotation with no narration in front of it. Asked whether the previous chapter ended unclosed, this answers yes and the speaker carries over. Forty-six of what were a hundred and twenty-nine misses are that one shape, and all fourteen of Job's are.";
   "★ THE CHAPTERS ARE GATHERED IN ORDER RATHER THAN AS THEY FINISH, WHICH IS WHAT THE CONTINUATION RULE NEEDS AND WHAT THE OLD SHAPE THREW AWAY. They are fetched all at once and were being pushed into one list as each returned, so a book's quotations arrived in whatever order the disk answered in. Nothing was wrong with the counts, because a count does not care; the moment a rule asks about the chapter BEFORE, the order stops being cosmetic.";
-  "★ TWO KINDS OF QUOTATION ARE TAKEN OUT BEFORE ANY VERB IS LOOKED FOR, AND NEITHER OF THEM IS AN ATTRIBUTION PROBLEM. A quotation in a letter is the author citing something and keeps his voice, so it is counted as a citation and asked nothing further. A quotation in verse zero is inside a superscription and is never read aloud at all, so it is counted as a heading. Both used to land in the unattributed pile, where they looked like work waiting for a person; a third of the whole remainder was these two.";
+  "★ SEVERAL KINDS OF QUOTATION ARE TAKEN OUT BEFORE ANY VERB IS LOOKED FOR, AND NONE OF THEM IS AN ATTRIBUTION PROBLEM. A quotation in a letter is the author citing something and keeps his voice. A quotation in verse zero is inside a superscription and is never read aloud at all. A quotation the narrator closes a bracket on is him saying what a foreign word means. All of them used to land in the unattributed pile, where they looked like work waiting for a person, and the last two are worse than that - they are quotations that must never be given a voice, so counting them as work would have got them done.";
   arguments_assert(arguments, 2);
   let chapter_codes = await ebible_book_code_to_chapter_codes(
     bible_folder,
@@ -62,12 +62,18 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
   let unattributed = [];
   let citations = [];
   let headings = [];
+  let glosses = [];
   let continuations = [];
   let citation_is = bible_speech_quotation_citation_is(book_code);
   function quotation_measure(quotation) {
     let heading_is = bible_speech_quotation_heading_is(quotation);
     if (heading_is) {
       list_add(headings, quotation);
+      return;
+    }
+    let gloss_is = bible_speech_quotation_gloss_is(quotation);
+    if (gloss_is) {
+      list_add(glosses, quotation);
       return;
     }
     if (citation_is) {
@@ -99,6 +105,7 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     attributed: attributed.length,
     citations: citations.length,
     headings: headings.length,
+    glosses: glosses.length,
     continuations: continuations.length,
     unattributed: unattributed.length,
     unattributed_examples: unattributed.slice(0, 12),

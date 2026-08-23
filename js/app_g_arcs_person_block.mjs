@@ -12,12 +12,15 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { each } from "./each.mjs";
 export function app_g_arcs_person_block(parent, person, bench) {
   "One written arc drawn for review: who the person is, a row for filing a note against the person themselves, and every turn of theirs as a card, with each conversation's heading and catch-up standing over the turns it holds.";
+  "THE COUNT IN THE HEADING IS OF EVERY NOTE AGAINST THEM, and it is there for the reviewer who is coming back rather than starting. Reviewing a chapter takes more than one sitting, and without it the only way to find out where they stopped is to scroll the whole page looking for bands.";
   "A NOTE AGAINST THE PERSON IS FILED AT TURN NOUGHT, which is the store's own answer to a fault that is nobody's turn. Their occupation or their summary can be wrong without any line being wrong, and a reviewer with only turn-shaped presses would have to file that against whichever line was nearest.";
   "THE CONVERSATION HEADING IS DRAWN HERE AND NOT INSIDE THE CARD, because it stands over several cards and a card drawing its own would repeat it down the page. It carries the catch-up, which is what happened to the person between conversations and is the only thing on the page that is not somebody speaking to them.";
   arguments_assert(arguments, 3);
   let index = property_get(person, "index");
   let nickname = property_get(person, "nickname");
   let fields = property_get(person, "fields");
+  let notes_count = property_get(person, "notes_count");
+  let person_notes = property_get(person, "person_notes");
   let turns = property_get(person, "turns");
   let block = html_div(parent);
   html_style_assign(block, {
@@ -26,7 +29,15 @@ export function app_g_arcs_person_block(parent, person, bench) {
     "padding-top": "0.6rem",
   });
   let v = String(index);
-  let named = text_combine_multiple([nickname, "  (", v, ")"]);
+  let v2 = String(notes_count);
+  let named = text_combine_multiple([
+    nickname,
+    "  (",
+    v,
+    ")  ·  ",
+    v2,
+    " notes",
+  ]);
   let heading = html_div_text(block, named);
   html_style_assign(heading, {
     "font-weight": "bold",
@@ -44,6 +55,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
     });
   }
   each(fields, field_line);
+  app_g_arcs_note_pills(block, person_notes);
   let names = g_arc_answer_field_names("person");
   app_g_arcs_note_row(block, bench, nickname, 0, names);
   function turn_block(card) {
