@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_arithmetic_equality_equality(
+export function app_code_lesson_expression_arithmetic_equality_example(
   left,
   right,
 ) {
