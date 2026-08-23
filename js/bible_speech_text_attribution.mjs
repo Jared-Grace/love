@@ -1,3 +1,4 @@
+import { bible_speech_colon_attribution } from "./bible_speech_colon_attribution.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_speech_narration_words } from "./bible_speech_narration_words.mjs";
 import { bible_speech_words_attribution } from "./bible_speech_words_attribution.mjs";
@@ -8,7 +9,8 @@ export function bible_speech_text_attribution(text) {
   arguments_assert(arguments, 1);
   let colon = bible_speech_colon_attribution(text);
   if (colon) {
-    return ":";
+    let r = ":";
+    return r;
   }
   let words = bible_speech_narration_words(text);
   let tail = words.slice(-12);
