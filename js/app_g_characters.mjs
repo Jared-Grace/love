@@ -1,6 +1,6 @@
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { app_g_dev_overlay } from "./app_g_dev_overlay.mjs";
+import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
 import { g_genders_get } from "./g_genders_get.mjs";
 import { g_directions_all } from "./g_directions_all.mjs";
 import { g_character_img_url_direction } from "./g_character_img_url_direction.mjs";
@@ -21,7 +21,7 @@ export function app_g_characters() {
     fn_name("g_directions"),
     ".");
   ("One character is one block: its eight facings as four across and two down, its folder name underneath. The blocks wrap, so a wide screen puts several characters on a row and a phone puts one, and neither has to be scrolled sideways.");
-  let column = app_g_dev_overlay("Characters");
+  let column = app_shared_dev_overlay("Characters");
   let genders = g_genders_get();
   let directions = g_directions_all();
   let sheet = html_div(column);

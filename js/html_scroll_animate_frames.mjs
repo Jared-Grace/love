@@ -8,7 +8,7 @@ import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
-export function html_scroll_animate_animate_animate_frames(
+export function html_scroll_animate_frames(
   r,
   element,
   token,
