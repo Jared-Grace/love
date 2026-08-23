@@ -1,7 +1,7 @@
+import { door43_version_record_download } from "./door43_version_record_download.mjs";
 import { door43_version_or_null } from "./door43_version_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { door43_version_download } from "./door43_version_download.mjs";
 import { door43_version_chapters } from "./door43_version_chapters.mjs";
 import { log } from "./log.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -17,10 +17,8 @@ export async function ebible_version_chapters(bible_folder) {
   let door = door43_version_or_null(bible_folder);
   let elsewhere = null_not_is(door);
   if (elsewhere) {
-    let org = property_get(door, "org");
+    await door43_version_record_download(door);
     let door43_folder = property_get(door, "door43_folder");
-    let tag = property_get(door, "tag");
-    await door43_version_download(org, door43_folder, tag);
     let carried = await door43_version_chapters(door43_folder);
     return carried;
   }
