@@ -93,7 +93,7 @@ export function app_g_word_pictures_word_block(
     "margin-top": "0.4rem",
   });
   async function on_save() {
-    let r2 = app_g_word_pictures_word_block_on_save(
+    let r2 = await app_g_word_pictures_word_block_on_save(
       box,
       word,
       status_working,
