@@ -4,7 +4,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
-export function app_g_dev_index_prefixes_derived(names) {
+export function app_shared_hash_index_prefixes_derived(names) {
   ("the #index folders the route NAMES already say, in place of typing them out again in ",
     fn_name("app_g_dev_index_prefixes"),
     ": a route called day_hours is asking to sit under day, and every route that names its own folder is one nobody has to remember to file");

@@ -11,7 +11,7 @@ import { html_display_none } from "./html_display_none.mjs";
 import { not } from "./not.mjs";
 import { app_g_dev_index_open_persist } from "./app_g_dev_index_open_persist.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-export function app_g_dev_index_render_node(
+export function app_shared_hash_index_render_node(
   parent,
   path,
   label,
@@ -52,7 +52,7 @@ export function app_g_dev_index_render_node(
     app_shared_hash_index_leaf_card(body, "→ " + label, node.hash);
   }
   for (let cl of child_labels) {
-    app_g_dev_index_render_node(
+    app_shared_hash_index_render_node(
       body,
       path + "/" + cl,
       cl,
