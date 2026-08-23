@@ -32,6 +32,6 @@ export function bless_walker_is(fraction) {
   ("their doors are still enough to say these are people who LIVE here rather than a crowd");
   ("passing through - which is what the player is being asked to pray for - and one in five");
   ("is a doorstep in sight almost everywhere the player looks.");
-  let walker = less_than(fraction, 0.8);
+  let walker = less_than(fraction, 0.4);
   return walker;
 }
