@@ -1,3 +1,5 @@
+import { null_is } from "./null_is.mjs";
+import { ternary } from "./ternary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { door43_versions_english_choices } from "./door43_versions_english_choices.mjs";
@@ -12,13 +14,13 @@ import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function bible_versions_english_choices_references(references) {
-  ("$plain references");
-  ("A list of passages, each read out of every English translation this repo may lawfully put in front of a reader, from either of the two shelves it fetches from - each passage against the translations that carry it and the words each one uses there.");
-  ("A WHOLE SONG'S WORTH AT ONCE RATHER THAN ONE PASSAGE AT A TIME. Asking a translation for its words costs almost nothing once its list of books is on this disk, and fetching that list is the slow half - measured at most of the time one passage took. Asked one passage at a time, a hundred passages pay for twenty-one book lists a hundred times over; asked together they pay for them once.");
-  ("The passages come back in the order they were asked in, because that order is usually the order somebody means to read them in - the lines of a song from its first verse to its last - and a comparison shuffled out of that order has to be sorted back by hand before it can be read.");
-  ("A translation that does not carry a passage is left out of that passage rather than listed as empty, so each passage shows the set of real options. That is an ordinary state and not a fault: two of the translations here are published a book at a time and hold fifty-six of the sixty-six, so a passage in one of the other ten simply has fewer options.");
-  ("A TRANSLATION THAT CANNOT BE READ AT ALL IS LEFT OUT RATHER THAN ALLOWED TO END THE COMPARISON. Being on the choices list and having had its chapters uploaded are two separate things, and the first can be true while the second is not. Thrown, one such translation emptied the whole comparison and twenty others that had already been read were shown to nobody.");
-  ("SEVERAL TRANSLATIONS AT A TIME, because each one not already on this disk has to come down, and waiting for one is no reason to stop asking for the next. A few at a time and not all at once, because the answer is a set of chapters and asking for every translation at once would only queue them somewhere else.");
+  "$plain references";
+  "A list of passages, each read out of every English translation this repo may lawfully put in front of a reader, from either of the two shelves it fetches from - each passage against the translations that carry it and the words each one uses there.";
+  "A WHOLE SONG'S WORTH AT ONCE RATHER THAN ONE PASSAGE AT A TIME. Asking a translation for its words costs almost nothing once its list of books is on this disk, and fetching that list is the slow half - measured at most of the time one passage took. Asked one passage at a time, a hundred passages pay for twenty-one book lists a hundred times over; asked together they pay for them once.";
+  "The passages come back in the order they were asked in, because that order is usually the order somebody means to read them in - the lines of a song from its first verse to its last - and a comparison shuffled out of that order has to be sorted back by hand before it can be read.";
+  "A translation that does not carry a passage is left out of that passage rather than listed as empty, so each passage shows the set of real options. That is an ordinary state and not a fault: two of the translations here are published a book at a time and hold fifty-six of the sixty-six, so a passage in one of the other ten simply has fewer options.";
+  "A TRANSLATION THAT CANNOT BE READ AT ALL IS LEFT OUT RATHER THAN ALLOWED TO END THE COMPARISON. Being on the choices list and having had its chapters uploaded are two separate things, and the first can be true while the second is not. Thrown, one such translation emptied the whole comparison and twenty others that had already been read were shown to nobody.";
+  "SEVERAL TRANSLATIONS AT A TIME, because each one not already on this disk has to come down, and waiting for one is no reason to stop asking for the next. A few at a time and not all at once, because the answer is a set of chapters and asking for every translation at once would only queue them somewhere else.";
   arguments_assert(arguments, 1);
   let licences = await ebible_versions_english_choices_licences();
   let door = door43_versions_english_choices();

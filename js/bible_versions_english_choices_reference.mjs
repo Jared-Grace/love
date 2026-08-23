@@ -1,48 +1,16 @@
-import { door43_versions_english_choices } from "./door43_versions_english_choices.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_versions_english_choices_licences } from "./ebible_versions_english_choices_licences.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
+import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
+import { list_single } from "./list_single.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
-import { list_map_limited_async } from "./list_map_limited_async.mjs";
-import { list_filter_property_not } from "./list_filter_property_not.mjs";
 export async function bible_versions_english_choices_reference(reference) {
   "$plain reference";
   "One passage, written the way a person writes one - 'Malachi 3:17' - read out of every English translation this repo may lawfully put in front of a reader, from either of the two shelves it fetches from, as each translation against the words it uses there.";
   "IT IS FOR CHOOSING WORDING, WHICH IS A COMPARISON AND NOT A LOOKUP. A line of a song rests on a passage, and the several translations of that passage differ in exactly the way the choice turns on - one says jewels where another says treasured possession. Read one at a time the differences are invisible, because nothing is beside anything.";
-  "ONLY THE ONES WE MAY SHIP AND MAY EARN FROM. A wording that cannot be quoted is not a choice, and offering it as one only wastes the reading of whoever is choosing.";
-  "A translation that does not carry the passage is left out rather than listed as empty, so what comes back is the set of real options.";
-  "A TRANSLATION STORAGE HAS NOT BEEN GIVEN YET IS LEFT OUT THE SAME WAY, rather than being allowed to end the comparison. Being on the choices list and having had its chapters uploaded are two separate things, and the first can be true while the second is not - engwebster was listed for a day before its chapters were sent, and asking for one of them answered with a plain not-found. Thrown, that emptied the whole comparison: twenty other translations had already been read and none of them was shown, because one of them was missing. A comparison that loses everything to its weakest member is worth less than one that says what it could find.";
-  "SEVERAL AT A TIME, because each translation that is not already on this disk has to come down, and waiting for one is no reason to stop asking for the next.";
-  "BOTH SHELVES ARE ASKED, NOT JUST EBIBLE. The two Door43 English translations are the only ones on offer that were written to be unlike the rest - one follows the Hebrew and Greek word order closely enough to show what the sentence is built out of, the other says the same verse in the plainest English it can. Twenty translations that all descend from the same Victorian revision differ over a word here and there; these two differ over the whole shape of the sentence, which is what a person choosing a line for a song is actually looking at. Leaving them out left the widest two options invisible while the comparison still called itself complete.";
-  "They are held in a separate list because they are not whole bibles - fifty-six books of the sixty-six - and the eBible list is defined as the ones we hold entire. A passage in one of the ten they do not carry simply answers without them, which is the same thing that already happens to any translation missing the verse.";
+  "IT IS THE LIST OF PASSAGES ASKED FOR ONE PASSAGE, rather than its own reading. Everything that makes this answer worth trusting - which translations may lawfully be shown, that both shelves are asked and not only eBible, that a translation missing the passage drops out instead of ending the comparison - is said once next door and cannot be said differently here.";
+  "It stays a name of its own because asking about one passage is what a person does at a keyboard, and a name that has to be handed a list of one to answer about one is a name that makes its reader do arithmetic before they may ask their question.";
   arguments_assert(arguments, 1);
-  let licences = await ebible_versions_english_choices_licences();
-  let door = door43_versions_english_choices();
-  let both = list_concat(licences, door);
-  let usable = list_filter_property(both, "commercial", true);
-  async function lambda$read(record) {
-    let bible_folder = property_get(record, "bible_folder");
-    async function read() {
-      let found = await ebible_folder_references_texts(bible_folder, [
-        reference,
-      ]);
-      return found;
-    }
-    let texts = await catch_null_async(read);
-    let text = property_get_or_null(texts, reference);
-    let name = property_get(record, "name");
-    let wording = {
-      bible_folder,
-      name,
-      text,
-    };
-    return wording;
-  }
-  let wordings = await list_map_limited_async(usable, lambda$read, 4);
-  let held = list_filter_property_not(wordings, "text", null);
-  return held;
+  let passages = await bible_versions_english_choices_references([reference]);
+  let passage = list_single(passages);
+  let wordings = property_get(passage, "wordings");
+  return wordings;
 }
