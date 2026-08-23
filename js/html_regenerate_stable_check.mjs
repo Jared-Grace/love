@@ -3,7 +3,7 @@ import { html_regenerate_stable_page } from "./html_regenerate_stable_page.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
-import { list_map_property_get } from "./list_map_property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export async function html_regenerate_stable_check() {
   "Which pages here settle when they are written out again, and which turn into something that would change again on the next pass.";
   "What is asked of each one is that reading a page back gives what building it was given: parse, build, parse again, and the second answer is the first. A page with that property settles after one pass, which is what makes running the whole set safe to do at any time. A page without it drifts a little further every pass, and the drift is invisible in the moment because each single pass looks like a page.";
@@ -16,7 +16,7 @@ export async function html_regenerate_stable_check() {
   );
   let asked = list_filter_null_not_is(judged);
   let kept = list_filter_property(asked, "settled", true);
-  let settled = list_map_property_get(kept, "file_path");
+  let settled = list_map_property(kept, "file_path");
   let offenders = list_filter_property(asked, "settled", false);
   let report = {
     settled,
