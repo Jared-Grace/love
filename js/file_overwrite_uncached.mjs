@@ -1,3 +1,4 @@
+import { folder_public_root_blocked_assert } from "./folder_public_root_blocked_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
 import { promise_catch_ignore } from "./promise_catch_ignore.mjs";
@@ -51,6 +52,7 @@ export async function file_overwrite_uncached(file_path, contents) {
     );
     return;
   } else {
+    await folder_public_root_blocked_assert(file_path);
     await file_parent_exists_ensure(file_path);
     let fs = await import("fs");
     let temp_path = file_path_temp(file_path);
