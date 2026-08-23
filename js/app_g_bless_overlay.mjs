@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { app_g_bless_dev_entry } from "./app_g_bless_dev_entry.mjs";
 import { app_g_bless_dev_if } from "./app_g_bless_dev_if.mjs";
 import { or } from "./or.mjs";
@@ -30,14 +31,21 @@ export async function app_g_bless_overlay(container_map) {
   ("redrawn, because rebuilding the map would replace the very picture that is sliding and");
   ("the player would jump rather than walk.");
   let r = app_g_bless_overlay_turned(container_map);
-  ("The dev way in goes up as soon as there is a street under it, and the address is asked");
-  ("what it wants straight after. Both are done HERE because this is the first place the");
-  ("world exists, and every dev screen in this game reports on the world - asked earlier");
-  ("they would have to build one of their own, and a screen describing a street the player");
-  ("is not standing in would be believed rather than doubted.");
+  ("The address is asked what it wants as soon as there is a world to ask about, because");
+  ("every dev screen in this game reports on the world - asked earlier they would each have");
+  ("to build one of their own, and a screen describing a street the player is not standing");
+  ("in would be believed rather than doubted.");
+  ("The way IN goes up only when nothing was drawn, and the order is the whole of why. A");
+  ("dev screen puts its own back pill in the top corner, and the way in is a pill in that");
+  ("same corner; both up at once, they sit exactly on top of each other and the one you can");
+  ("press is whichever was drawn second. Two pills in one place is not a layout to be");
+  ("nudged apart - the way in has nothing to do on a screen you already came in through.");
   let world = property_get(r, "world");
-  app_g_bless_dev_entry();
   let drawn = await app_g_bless_dev_if(world);
+  let street_shown = not(drawn);
+  if (street_shown) {
+    app_g_bless_dev_entry();
+  }
   let r2 = await app_g_bless_overlay_begun(r, container_map);
   let begun = property_get(r2, "begun");
   let transfer = property_get(r2, "transfer");
