@@ -24,22 +24,38 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     bible_folder,
     book_code,
   );
-  let quotations_all = [];
   async function chapter_each(chapter_code) {
     let spans = await bible_speech_spans_chapter(bible_folder, chapter_code);
     let quotations = bible_speech_quotations(spans);
     function quotation_each(quotation) {
       quotation.chapter_code = chapter_code;
-      list_add(quotations_all, quotation);
     }
     each(quotations, quotation_each);
-    return chapter_code;
+    let unclosed_is = bible_speech_spans_unclosed_is(spans);
+    let chapter = { chapter_code, quotations, unclosed_is };
+    return chapter;
   }
-  await list_map_async(chapter_codes, chapter_each);
+  let chapters = await list_map_async(chapter_codes, chapter_each);
+  let quotations_all = [];
+  let unclosed_previous = false;
+  function chapter_gather(chapter) {
+    let first = true;
+    function quotation_each(quotation) {
+      let announced = quotation.before.trim();
+      let silent_is = equal(announced, "");
+      quotation.continues_is = first && silent_is && unclosed_previous;
+      first = false;
+      list_add(quotations_all, quotation);
+    }
+    each(chapter.quotations, quotation_each);
+    unclosed_previous = chapter.unclosed_is;
+  }
+  each(chapters, chapter_gather);
   let attributed = [];
   let unattributed = [];
   let citations = [];
   let headings = [];
+  let continuations = [];
   let citation_is = bible_speech_quotation_citation_is(book_code);
   function quotation_measure(quotation) {
     let heading_is = bible_speech_quotation_heading_is(quotation);
@@ -49,6 +65,10 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     }
     if (citation_is) {
       list_add(citations, quotation);
+      return;
+    }
+    if (quotation.continues_is) {
+      list_add(continuations, quotation);
       return;
     }
     let verb_before = bible_speech_text_attribution(quotation.before);
@@ -72,6 +92,7 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     attributed: attributed.length,
     citations: citations.length,
     headings: headings.length,
+    continuations: continuations.length,
     unattributed: unattributed.length,
     unattributed_examples: unattributed.slice(0, 12),
     unattributed_quotations: unattributed,
