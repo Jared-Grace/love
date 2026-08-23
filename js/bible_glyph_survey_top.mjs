@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { round } from "./round.mjs";
 export function bible_glyph_survey_top(r3) {
+  "Settles how many of the still-uncovered words the survey will show, rounding the number it was asked for to a whole one, and carries everything else the survey has gathered through untouched.";
   arguments_assert(arguments, 1);
   let n = property_get(r3, "n");
   let roots = property_get(r3, "roots");

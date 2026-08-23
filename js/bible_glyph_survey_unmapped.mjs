@@ -2,6 +2,7 @@ import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function bible_glyph_survey_unmapped(r) {
+  "Lifts the list of words no picture covers yet out of the inner reading it was gathered inside and sets it beside the survey's other counts, so every stage after this one can reach it without knowing where it was found.";
   arguments_assert(arguments, 1);
   let roots = property_get(r, "roots");
   let mapped = property_get(r, "mapped");

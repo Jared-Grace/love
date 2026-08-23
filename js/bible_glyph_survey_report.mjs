@@ -10,6 +10,7 @@ export function bible_glyph_survey_report(
   occurrences_total,
   glyph_collisions,
 ) {
+  "Turns one testament's gathered survey into the reading a person actually looks at - how much of the text a picture already covers, which pictures are still missing or claimed twice, and the most frequent of the words nothing covers yet.";
   arguments_assert(arguments, 5);
   let r4 = bible_glyph_survey_referent(r, referent_reach);
   let occurrences_mapped = property_get(r4, "occurrences_mapped");

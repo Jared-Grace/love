@@ -10,6 +10,7 @@ export async function functions_oversize_span_skips() {
   "For every function still standing over the ceiling, each run of lines the cut is offered in it and the reason it would be stepped over - or nothing, where the cut would take it.";
   "IT IS THE WALK ITSELF AND COUNTS NOTHING. Two readings want it and want different tallies out of it: one asks per function whether anything is left that a cut could take, the other asks across the whole repo which reason turns runs down most often. Written into either of them the walk would have to be written into both, and the second one drifting from the first would be a measurement of a walk nobody runs.";
   "NOTHING IS WRITTEN AND NOTHING IS MOVED. Every reading here is the same one the sweep makes before it cuts, asked without cutting.";
+  "THE RUN COMES BACK BESIDE ITS ANSWER RATHER THAN THE ANSWER ALONE. A reason for stepping over a run says which word turned it down and not which run was turned down, so a reading that wants to offer the same run a line shorter has no way back to the run from the answer about it.";
   "A FUNCTION THAT CANNOT BE READ AT ALL IS PASSED OVER rather than allowed to end the count, because one unreadable file should not cost the answer about all the others.";
   arguments_assert(arguments, 0);
   let named = await functions_work_oversize_names();
@@ -33,7 +34,11 @@ export async function functions_oversize_span_skips() {
         address_from,
         address_to,
       );
-      list_add(skips, skip);
+      list_add(skips, {
+        address_from,
+        address_to,
+        skip,
+      });
     }
     list_add(rows, {
       f_name,

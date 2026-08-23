@@ -24,7 +24,8 @@ export async function functions_oversize_blockers() {
     let cuttable = 0;
     let starting = 0;
     let naming = 0;
-    for (let skip of skips) {
+    for (let row of skips) {
+      let skip = property_get(row, "skip");
       let taken_is = null_is(skip);
       if (taken_is) {
         cuttable = add(cuttable, 1);
