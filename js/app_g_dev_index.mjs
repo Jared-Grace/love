@@ -8,10 +8,10 @@ import { app_shared_hash_index_render } from "./app_shared_hash_index_render.mjs
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
 export function app_g_dev_index() {
-  let f_name2 = fn_name("app_shared_hash_index_render");
+  let f_name = fn_name("app_shared_hash_index_render");
   (text_combine_multiple([
     "the #index dev directory: WHICH routes this game has, WHERE each is filed, and whose session storage remembers the drilled-open path - handed to ",
-    f_name2,
+    f_name,
     ", which is the drill-down of cards itself and belongs to no app. routes + categories come from the ",
   ]),
     fn_name("app_g_dev_routes"),

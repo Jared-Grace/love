@@ -8,10 +8,10 @@
   "bible_glyph_coverage_curve_begin",
   "html_scroll_animate_frames",
   "html_scroll_animate_run_frames",
-  "html_scroll_animate_animate_start",
-  "html_scroll_animate_animate",
-  "literals_unnamed_generic_found_found_files_by_literal",
-  "literals_unnamed_generic_found_found",
-  "memory_index_hooks_compress_line_line"
+  "html_scroll_animate_start",
+  "html_scroll_animate_run",
+  "literals_unnamed_generic_files_by_literal",
+  "literals_unnamed_generic_gather",
+  "memory_index_hooks_compress_line_walk"
  ]
 }
