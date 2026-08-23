@@ -1,3 +1,4 @@
+import { app_shared_error_report_watch } from "./app_shared_error_report_watch.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_context_initialize_root } from "./app_shared_context_initialize_root.mjs";
 import { html_document_body } from "./html_document_body.mjs";
@@ -22,4 +23,6 @@ export async function app_shared_context_initialize(fn) {
   };
   await app_shared_boot_safe(render);
   html_loading_splash_take();
+  ("the app is up and the splash is gone before anything is reported, so a report can never be the thing standing between somebody and the screen they came for - and a boot that died never reaches here at all, which is why what it wrote down waits for the next load rather than being sent by this one");
+  await app_shared_error_report_watch();
 }
