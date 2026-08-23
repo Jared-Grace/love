@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_jud01 } from "./bible_glyph_chapter_jud01.mjs";
 import { bible_glyph_chapter_3jn01 } from "./bible_glyph_chapter_3jn01.mjs";
 import { bible_glyph_chapter_2jn01 } from "./bible_glyph_chapter_2jn01.mjs";
 import { bible_glyph_chapter_psa023 } from "./bible_glyph_chapter_psa023.mjs";

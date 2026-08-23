@@ -1,3 +1,4 @@
+import { bible_speech_spans_unclosed_is } from "./bible_speech_spans_unclosed_is.mjs";
 import { bible_speech_quotation_citation_is } from "./bible_speech_quotation_citation_is.mjs";
 import { bible_speech_quotation_heading_is } from "./bible_speech_quotation_heading_is.mjs";
 import { bible_speech_text_attribution_after } from "./bible_speech_text_attribution_after.mjs";
@@ -34,7 +35,11 @@ export async function bible_speech_attribution_report(bible_folder, book_code) {
     }
     each(quotations, quotation_each);
     let unclosed_is = bible_speech_spans_unclosed_is(spans);
-    let chapter = { chapter_code, quotations, unclosed_is };
+    let chapter = {
+      chapter_code,
+      quotations,
+      unclosed_is,
+    };
     return chapter;
   }
   let chapters = await list_map_async(chapter_codes, chapter_each);
