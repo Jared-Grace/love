@@ -7,8 +7,10 @@ import { app_code_arrow } from "./app_code_arrow.mjs";
 export function app_code_lesson_expression_whole_part_both_above(root) {
   arguments_assert(arguments, 1);
   let intro = app_code_container_light_blue(root);
+  ("Now we will find rather than Now find, because the screen does the finding here and the learner watches - the steps under this line are worked out for them. An imperative promises them a turn that does not come until the quiz, and a learner told to find something and then handed the answer stops reading for the step they were asked to take.");
+  ("At once rather than in one go: the same claim in the plainest words, and one fewer idiom for a learner to have met before.");
   html_div_cycle_code(intro, [
-    "Now find the whole part of a division in one go:",
+    "Now we will find the whole part of a division at once",
   ]);
   let steps = app_code_container_light_blue(root);
   html_div_cycle_code(steps, ["Rewrite the division with the formula:"]);
