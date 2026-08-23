@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_dev_index_leaf_card } from "./app_g_dev_index_leaf_card.mjs";
-import { app_g_dev_index_index_card } from "./app_g_dev_index_index_card.mjs";
+import { app_g_dev_index_card } from "./app_g_dev_index_card.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_div } from "./html_div.mjs";
@@ -24,7 +24,7 @@ export function app_g_dev_index_render_node(
     app_g_dev_index_leaf_card(parent, label, node.hash);
     return;
   }
-  let card = app_g_dev_index_index_card(parent);
+  let card = app_g_dev_index_card(parent);
   let header = html_div_text_bold(card, label + " ›");
   html_cursor_pointer(header);
   let body = html_div(card);

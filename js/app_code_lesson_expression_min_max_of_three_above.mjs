@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_min_max_of_three_three_numbers } from "./app_code_lesson_expression_min_max_of_three_three_numbers.mjs";
+import { app_code_lesson_expression_min_max_of_three_numbers } from "./app_code_lesson_expression_min_max_of_three_numbers.mjs";
 import { list_get } from "./list_get.mjs";
 import { math_min } from "./math_min.mjs";
 import { math_max } from "./math_max.mjs";
@@ -15,7 +15,7 @@ import { html_bold } from "./html_bold.mjs";
 export function app_code_lesson_expression_min_max_of_three_above(root) {
   arguments_assert(arguments, 1);
   ("the duo: Math.min and Math.max each shown with the same three numbers, so both are established as taking more than two; randomized each visit");
-  let three = app_code_lesson_expression_min_max_of_three_three_numbers();
+  let three = app_code_lesson_expression_min_max_of_three_numbers();
   let a = list_get(three, 0);
   let b = list_get(three, 1);
   let c = list_get(three, 2);
