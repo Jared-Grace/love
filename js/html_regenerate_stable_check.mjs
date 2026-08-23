@@ -24,13 +24,15 @@ export async function html_regenerate_stable_check() {
   "What is asked of each one is that reading a page back gives what building it was given: parse, build, parse again, and the second answer is the first. A page with that property settles after one pass, which is what makes running the whole set safe to do at any time. A page without it drifts a little further every pass, and the drift is invisible in the moment because each single pass looks like a page.";
   "This is asked rather than assumed because the answer went wrong once and nothing said so. Measured 2026-08-23: every page failed it. Reading a page back handed the wrapped body over as though the app had written it, so building it wrapped it again - one pass turned 47 lines into 80, the next turned those into 113 - and it handed the title over as though it were the app's name, so six apps looked up their description under a sentence, found nothing, and lost every social tag they had.";
   "A page whose body comes back as nothing is not counted against. That is a page saying it was not written this way, and refusing it is the wanted answer rather than a fault to report.";
+  "How many pages were looked at is handed back beside the ones that failed, because a list of failures that is empty reads the same whether every page passed or no page was read. Every way this stops early - a folder renamed, a page shape no longer recognised, a refusal that grew to cover everything - empties the failures without touching them, so the count is what tells the two apart.";
   let dev = app_shared_name_dev_text();
   let folder_dev = folder_public_join(dev);
   let p = folder_public();
   let folders = [p, folder_dev];
   async function lambda(folder) {
     let files = await folder_read_files(folder);
-    let names = list_filter_ends_with(files, html_extension());
+    let sufix = html_extension();
+    let names = list_filter_ends_with(files, sufix);
     function lambda2(name) {
       let joined = path_join([folder, name]);
       return joined;
@@ -41,6 +43,7 @@ export async function html_regenerate_stable_check() {
   let mapped = await list_map_unordered_async(folders, lambda);
   let paths = list_squash(mapped);
   let offenders = [];
+  let settled = [];
   async function lambda3(file_path) {
     let frozen = html_regenerate_frozen_is(file_path);
     if (frozen) {
@@ -66,6 +69,7 @@ export async function html_regenerate_stable_check() {
     let body_same = equal(body_again, body);
     if (name_same) {
       if (body_same) {
+        list_add(settled, file_path);
         return;
       }
     }
@@ -78,5 +82,9 @@ export async function html_regenerate_stable_check() {
     list_add(offenders, offender);
   }
   await each_async(paths, lambda3);
-  return offenders;
+  let report = {
+    settled,
+    offenders,
+  };
+  return report;
 }
