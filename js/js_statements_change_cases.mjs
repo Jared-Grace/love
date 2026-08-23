@@ -116,14 +116,44 @@ export function js_statements_change_cases() {
     {
       before: ["if (a) {\n  work(a);\n}", "work(c);"],
       after: ["if (b) {\n  work(a);\n}", "work(c);"],
-      named: "one statement replaced",
-      why: "every branch came back identical, so what moved was the condition itself - a change to the statement rather than an edit inside one of its runs",
+      named: "a condition written differently",
+      why: "every branch came back identical, so what moved was the condition itself - the reading that goes inside a branch gives this up on purpose, and the one that names the kind of line picks it up",
     },
     {
       before: ["if (a) {\n  work(a);\n}", "work(c);"],
       after: ["if (a) {\n  work(a);\n} else {\n  work(b);\n}", "work(c);"],
       named: "one statement replaced",
       why: "an else appearing changes how many runs there are to compare, so the two sides no longer line up at all - and it is a change to the if, not an edit inside a branch of it",
+    },
+    {
+      before: ["let total = add(a, b);", "work(total);"],
+      after: ["let total = add(a, c);", "work(total);"],
+      named: "total written differently",
+      why: "the binding kept its name and its value was written another way, so the name is the address a reader goes to - which is the whole difference between a specification and a count",
+    },
+    {
+      before: ["let total = add(a, b);", "work(total);"],
+      after: ["let sum = add(a, b);", "work(total);"],
+      named: "one value written differently",
+      why: "the name moved too, so saying either name would point at half the edit - the kind of line is still worth saying and the name is not",
+    },
+    {
+      before: ["work(a);", "return a;"],
+      after: ["work(a);", "return b;"],
+      named: "what comes back written differently",
+      why: "a different thing coming back is its own kind of edit, and there is only ever one of these to point at in a run",
+    },
+    {
+      before: ["work(a);", "work(b);"],
+      after: ["work(a);", "other(b);"],
+      named: "one call swapped for another",
+      why: "the line is still a call and it is a call to something else, which is a different edit from the same call handed different things",
+    },
+    {
+      before: ["work(a);", "let total = a;"],
+      after: ["work(a);", "return a;"],
+      named: "one statement replaced",
+      why: "a binding became a return, which is a change of what the line is for rather than a change inside it - and there is nothing shorter and true to say than that one went out and another came in",
     },
     {
       before: ["work(a);", "work(b);", "work(c);"],
