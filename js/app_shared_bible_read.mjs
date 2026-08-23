@@ -1,16 +1,13 @@
+import { app_shared_bible_read_render_verse } from "./app_shared_bible_read_render_verse.mjs";
 import { app_shared_bible_read_unknown_shown } from "./app_shared_bible_read_unknown_shown.mjs";
 import { app_shared_bible_reference_hash_english } from "./app_shared_bible_reference_hash_english.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
-import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_languages_verses.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
-import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
-import { app_shared_bible_hash_verse_numbers } from "./app_shared_bible_hash_verse_numbers.mjs";
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
 import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
@@ -33,9 +30,6 @@ import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { app_shared_bible_change } from "./app_shared_bible_change.mjs";
-import { list_previous_wrap } from "./list_previous_wrap.mjs";
-import { list_next_wrap } from "./list_next_wrap.mjs";
 export async function app_shared_bible_read(context, verse_action) {
   let r3 = app_shared_bible_read_frame(context);
   let r6 = app_shared_bible_read_unknown_shown(r3);
@@ -109,65 +103,28 @@ export async function app_shared_bible_read(context, verse_action) {
       chapter_code = ref_chapter;
     }
   }
-  async function chapter_previous() {
-    await app_shared_bible_change(
-      chapter_code,
-      languages_chosen,
-      list_previous_wrap,
-    );
-  }
-  async function chapter_next() {
-    await app_shared_bible_change(
-      chapter_code,
-      languages_chosen,
-      list_next_wrap,
-    );
-  }
-  let verse_numbers_chosen = app_shared_bible_hash_verse_numbers(hash);
-  ("The passage is remembered for this tab, so that going off to choose another one can be changed one's mind about. A chapter with nothing picked in it is remembered as itself - it is still somewhere a reader was, and coming back to it is coming back to the chapter.");
-  let r = await app_shared_bible_read_languages_verses(
-    context,
+  let r = await app_shared_bible_read_render_verse(
     chapter_code,
-    verse_numbers_chosen,
+    languages_chosen,
+    hash,
+    context,
     ref_mode,
     bar,
     content,
     books,
-    chapter_previous,
-    chapter_next,
-    languages_chosen,
     ref_line,
-    hash,
     count_status,
+    books_en,
+    dismiss_help,
+    max,
+    verse_action,
+    t,
   );
-  let languages_verses = property_get(r, "languages_verses");
-  let updates = property_get(r, "updates");
-  let verse_rows = property_get(r, "verse_rows");
-  let show_language_names = property_get(r, "show_language_names");
+  let render_verse = property_get(r, "render_verse");
   let primary_verses = property_get(r, "primary_verses");
-  let verse_here_is = property_get(r, "verse_here_is");
-  verse_numbers_chosen = list_filter(verse_numbers_chosen, verse_here_is);
-  async function render_verse(v) {
-    let r2 = await app_shared_bible_read_verse_row(
-      v,
-      chapter_code,
-      books_en,
-      content,
-      updates,
-      verse_numbers_chosen,
-      languages_verses,
-      dismiss_help,
-      max,
-      count_status,
-      show_language_names,
-      verse_action,
-      context,
-      t,
-      languages_chosen,
-      verse_rows,
-    );
-    return r2;
-  }
+  let verse_rows = property_get(r, "verse_rows");
+  let updates = property_get(r, "updates");
+  let verse_numbers_chosen = property_get(r, "verse_numbers_chosen");
   await list_map_add_async(primary_verses, render_verse, updates);
   html_page_bottom_space(content);
   app_shared_bible_read_count_refresh(verse_numbers_chosen, max, count_status);
