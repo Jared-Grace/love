@@ -12,21 +12,26 @@ export async function ffmpeg_palette_write(path_from, colors_most, path_to) {
   "it writes somewhere new rather than over the picture it read, because a program that reads and writes the same file at once has already destroyed the thing it is halfway through reading";
   "it says yes in advance to overwriting, because ffmpeg otherwise asks that question on the terminal and waits for an answer that is never coming";
   "it says one frame and one update because a still picture handed to a tool built for film is otherwise taken for the first of a numbered series";
-  let quoted_from = text_combine_multiple(['"', path_from, '"']);
-  let quoted_to = text_combine_multiple(['"', path_to, '"']);
   let filters = text_combine_multiple([
-    '"[0:v]split[a][b];[a]palettegen=max_colors=',
+    "[0:v]split[a][b];[a]palettegen=max_colors=",
     colors_most,
-    ':stats_mode=full[p];[b][p]paletteuse=dither=none"',
+    ":stats_mode=full[p];[b][p]paletteuse=dither=none",
   ]);
-  let command = text_combine_multiple([
-    "ffmpeg -hide_banner -loglevel error -y -i ",
-    quoted_from,
-    " -filter_complex ",
+  let command_words = [
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-y",
+    "-i",
+    path_from,
+    "-filter_complex",
     filters,
-    " -frames:v 1 -update 1 ",
-    quoted_to,
-  ]);
-  let ran = await command_line(command);
+    "-frames:v",
+    "1",
+    "-update",
+    "1",
+    path_to,
+  ];
+  let ran = await ffmpeg_words_run(command_words);
   return ran;
 }
