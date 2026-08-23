@@ -1,3 +1,4 @@
+import { app_code_first_decimal_digit_phrase } from "./app_code_first_decimal_digit_phrase.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
 import { app_code_lesson_number_chip_lifted } from "./app_code_lesson_number_chip_lifted.mjs";
 import { app_shared_spaced_neighbor_gap } from "./app_shared_spaced_neighbor_gap.mjs";
@@ -13,7 +14,7 @@ export function app_code_first_decimal_digit_line(
   decimal_after,
   color,
 ) {
-  "one worked line naming the first digit after the decimal point. The number reads tight like a normal decimal (6.4999), with ONLY the first fraction digit called out as a lifted colour chip; that chip carries a small horizontal margin (tuned by eye) so its lift rings clear the point and the digits beside it without opening up a whole space. The same digit is repeated as a bare chip at the end of the sentence so the eye links the two. Each different first digit gets its OWN colour so the reader sees they are distinct digits, both in the same rounding group. lead is the sentence opener (For example, in / in); whole_text is the whole part; digit is the highlighted first fraction digit; decimal_after is the rest of the fraction (like 5 or 999)";
+  "one worked line naming the first digit after the decimal point. The number reads tight like a normal decimal (6.4999), with ONLY the first fraction digit called out as a lifted colour chip; that chip carries a small horizontal margin (tuned by eye) so its lift rings clear the point and the digits beside it without opening up a whole space. The same digit is repeated as a bare chip at the end of the sentence so the eye links the two. Each different first digit gets its OWN colour so the reader sees they are distinct digits, both in the same rounding group. The words naming the digit are coloured, and coloured the one way wherever they are said, so a reader meets one term rather than a sentence to read again. lead is the sentence opener (In / in); whole_text is the whole part; digit is the highlighted first fraction digit; decimal_after is the rest of the fraction (like 5 or 999)";
   let div = html_div(parent);
   html_span_text(div, lead);
   let tile = html_span_code_dark_nowrap(div);
