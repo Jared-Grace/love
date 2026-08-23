@@ -17,12 +17,13 @@ export function app_shared_hash_index_render_node(
   label,
   node,
   open_paths,
-  app_fn,
+  settings,
 ) {
   arguments_assert(arguments, 6);
+  let new_tab = property_get(settings, "new_tab");
   let child_labels = object_property_names(node.children).sort();
   if (equal(child_labels.length, 0)) {
-    app_shared_hash_index_leaf_card(parent, label, node.hash);
+    app_shared_hash_index_leaf_card(parent, label, node.hash, new_tab);
     return;
   }
   let card = app_shared_hash_index_card(parent);
@@ -46,6 +47,7 @@ export function app_shared_hash_index_render_node(
       html_display_none(body);
       open_paths.delete(path);
     }
+    let app_fn = property_get(settings, "app_fn");
     app_shared_hash_index_open_persist(app_fn, open_paths);
   }
   html_on_click(header, toggle);
