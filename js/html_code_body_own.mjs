@@ -32,7 +32,7 @@ export function html_code_body_own(body) {
   function lambda(anchor) {
     let line = text_combine(separator, anchor);
     let index = text_index_of_try(body, line);
-    let found = greater_or_equal(index, 0);
+    let found = greater_than_equal(index, 0);
     if (found) {
       let size = text_size(line);
       start = add(index, size);
