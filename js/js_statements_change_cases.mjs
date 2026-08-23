@@ -44,8 +44,8 @@ export function js_statements_change_cases() {
     {
       before: ["work(a);", "work(b);", "work(c);"],
       after: ["work(a);", "work(x);", "work(c);"],
-      named: "one statement replaced",
-      why: "one out and one in at the same place, which is the shape of a line edited rather than a line moved - and it is the only shape here where both lists changed and the edit is still small",
+      named: "work called differently",
+      why: "one out and one in at the same place, which is the shape of a line edited rather than a line moved - and both lines call the same thing, so what changed is what it was handed rather than what was done",
     },
     {
       before: ["work(a);", "work(b);"],
@@ -104,7 +104,7 @@ export function js_statements_change_cases() {
     {
       before: ["if (a) {\n  work(a);\n} else {\n  work(b);\n}", "work(c);"],
       after: ["if (a) {\n  work(a);\n} else {\n  work(x);\n}", "work(c);"],
-      named: "in an if, one statement replaced",
+      named: "in an if, work called differently",
       why: "the branch that moved is the second one, so the runs have to be lined up in a fixed order - read out of the properties as they happen to be written, the then would be compared against the else",
     },
     {
