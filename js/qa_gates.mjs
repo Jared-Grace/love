@@ -1,3 +1,4 @@
+import { app_music_references_versions_gate_run } from "./app_music_references_versions_gate_run.mjs";
 import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
 import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
 import { bible_glyph_groups_spellable_gate_run } from "./bible_glyph_groups_spellable_gate_run.mjs";
@@ -762,6 +763,7 @@ export function qa_gates() {
     js_dollar_choices_parameters_gate_run,
     song_god_our_savior_glosses_gate_run,
     app_music_song_references_shape_gate_run,
+    app_music_references_versions_gate_run,
     function_part_name_cases_gate_run,
     functions_names_repeated_gate_run,
     function_name_words_repeated_cases_gate_run,
