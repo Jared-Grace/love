@@ -20,12 +20,16 @@ export function bless_walker_is(fraction) {
   ("many walkers and the pavement jams solid - people would spend the game turning round");
   ("in front of each other. The rest have the whole block to spread over, which is far more");
   ("room, so the crowded side is what sets the share.");
-  ("It was one in four, and the reason for raising it is what a jam actually costs here.");
-  ("Somebody with nowhere to step simply does not step, and stands where they are until a");
-  ("way opens - which is a person waiting to get past, and a pavement with a few of those");
-  ("on it is more like a street than one nobody has to get past at all. The share is what");
-  ("decides how OFTEN that happens, not whether the crowd survives it, so it can be pushed");
-  ("until waiting stops being occasional; a third is short of that and a half would not be.");
-  let walker = less_than(fraction, 0.33);
+  ("It was one in four, then a third, and the reason for raising it twice is what a jam");
+  ("actually costs here. Somebody with nowhere to step simply does not step, and stands");
+  ("where they are until a way opens - which is a person waiting to get past, and a pavement");
+  ("with a few of those on it is more like a street than one nobody has to get past at all.");
+  ("The share decides how OFTEN that happens, not whether the crowd survives it, so it can");
+  ("be pushed until waiting stops being occasional.");
+  ("Two in five is where it stands, and it is short of half on purpose. Half would make the");
+  ("pavement the whole street and empty the doorsteps, and it is the doorsteps that say");
+  ("these are people who LIVE here rather than a crowd passing through - which is what the");
+  ("player is being asked to pray for.");
+  let walker = less_than(fraction, 0.4);
   return walker;
 }

@@ -1,3 +1,4 @@
+import { app_g_word_unglossed_text } from "./app_g_word_unglossed_text.mjs";
 import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
 import { words_game_taught_gloss_or_null } from "./words_game_taught_gloss_or_null.mjs";
@@ -22,10 +23,8 @@ export function app_g_words_glossed(container, text) {
     let none = equal(found, null);
     if (none) {
       html_text_set(gloss_line, word);
-      html_text_set(
-        explain_line,
-        "There is nothing written for this word yet.",
-      );
+      let unglossed = app_g_word_unglossed_text();
+      html_text_set(explain_line, unglossed);
       return;
     }
     let named = property_get(found, "word");

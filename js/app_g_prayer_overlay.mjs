@@ -1,3 +1,4 @@
+import { app_g_prayer_waiting_text } from "./app_g_prayer_waiting_text.mjs";
 import { app_g_overlay_cover_emoji_card } from "./app_g_overlay_cover_emoji_card.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_reflow_opacity_full } from "./html_reflow_opacity_full.mjs";
@@ -16,7 +17,8 @@ export function app_g_prayer_overlay() {
   let cover = app_g_overlay_cover_emoji_card("rgba(0, 0, 0, 0.82)", text);
   let div = property_get(cover, "div");
   let card = property_get(cover, "card");
-  let waiting_text = html_p_text(card, "Waiting on the Lord...");
+  let waiting = app_g_prayer_waiting_text();
+  let waiting_text = html_p_text(card, waiting);
   html_style_assign(waiting_text, {
     color: "white",
     "font-size": fonts.statement,

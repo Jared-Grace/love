@@ -7,6 +7,7 @@ import { app_shared_game_emoji_glow_apply } from "./app_shared_game_emoji_glow_a
 import { app_shared_game_npc_glow_get } from "./app_shared_game_npc_glow_get.mjs";
 import { app_shared_game_npc_glow_set } from "./app_shared_game_npc_glow_set.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -33,12 +34,31 @@ export function app_g_bless_glows(glows, view) {
   ("them.");
   ("Nothing is ever taken away, which is what makes drawing-once safe as well as cheaper:");
   ("a person prayed for stays prayed for, so a light once drawn is never wrong afterwards.");
+  ("The light has a WHITE heart, a solid gold body and a dark rim, and every one of those");
+  ("three is there because the ground it lies on is not one colour. The grass this map is");
+  ("built from runs from jungle green through snow to a pale yellow, and a soft gold fading");
+  ("to nothing - which is what this was - all but disappeared on the yellow: same hue, same");
+  ("lightness, so there was nothing for an eye to catch. A mark that only shows up on some");
+  ("of the ground is worse than no mark, because the player reads the gap as somebody they");
+  ("have not prayed for yet.");
+  ("Hue could not fix it without spending a different colour, and the colour is the meaning");
+  ("here. Lightness could: white is brighter than any ground on this map and the dark rim is");
+  ("darker than all of it, so whichever end the grass sits at, one of the two stands away");
+  ("from it. The gold in between is then read as gold rather than looked for.");
+  ("The rim is drawn from the light's own shape rather than laid on as a border, which is");
+  ("why it follows the circle and not the square the light is drawn in.");
   let gold = app_shared_color_gold_glow();
+  let white = app_shared_color_white();
   let background = text_combine_multiple([
     "radial-gradient(circle, ",
+    white,
+    " 0%, ",
     gold,
-    " 0%, rgba(255, 255, 255, 0) 70%)",
+    " 34%, ",
+    gold,
+    " 50%, rgba(255, 255, 255, 0) 62%)",
   ]);
+  let rim = "drop-shadow(0 0 2px rgba(0, 0, 0, 0.55))";
   let people = bless_view_people(view);
   function person_light(person) {
     let already = app_shared_game_npc_glow_get(person);
@@ -50,6 +70,7 @@ export function app_g_bless_glows(glows, view) {
     g_img_square_style_position(halo, person, "ground_tint");
     html_style_assign(halo, {
       background: background,
+      filter: rim,
       "pointer-events": "none",
     });
     app_shared_game_emoji_glow_apply(halo);
