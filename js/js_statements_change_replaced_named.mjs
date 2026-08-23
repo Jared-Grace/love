@@ -1,3 +1,4 @@
+import { js_statement_inner_change_named_or_null } from "./js_statement_inner_change_named_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_functions_change_named_or_null } from "./js_functions_change_named_or_null.mjs";
 import { list_add } from "./list_add.mjs";
@@ -16,6 +17,7 @@ export function js_statements_change_replaced_named(
 ) {
   "The name for an edit where one statement went out and one came in and the run stayed the length it was - read at the place it happened rather than settled for as a count.";
   "ONE OUT AND ONE IN DOES NOT YET MEAN ONE PLACE CHANGED. The same arithmetic comes out of a run that swapped a statement and shuffled the rest at once, and calling that a replacement points a command at a position where two things happened. So the positions are compared one by one, and only a single position differing earns the name.";
+  "A CONDITION AND A LOOP HIDE AN EDIT THE SAME WAY A FUNCTION DOES. A statement holding a run of other statements is opaque to a reading of the lines it is written out of, whether the braces belong to a function or to an if, and only the first of those two was ever gone into. The two readings answer about disjoint kinds of statement, so asking them in either order gives the same answer; this order is the one the buckets were measured in.";
   "WHERE THE STATEMENT IS A FUNCTION, THE ANSWER IS INSIDE IT. Almost every line of this repo lives in a function nested in the one the file hands out, so an edit to any of them arrives here looking like one statement swapped for another - true, and useless as a specification. Going in is what turns it back into an edit somebody can name.";
   arguments_assert(arguments, 4);
   let differing = [];
@@ -41,6 +43,11 @@ export function js_statements_change_replaced_named(
   let found = null_not_is(inner);
   if (found) {
     return inner;
+  }
+  let held = js_statement_inner_change_named_or_null(node_before, node_after);
+  let held_found = null_not_is(held);
+  if (held_found) {
+    return held;
   }
   let r2 = "one statement replaced";
   return r2;

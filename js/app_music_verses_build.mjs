@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_music_references_all } from "./app_music_references_all.mjs";
+import { app_music_reference_version } from "./app_music_reference_version.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_group_by_property } from "./list_group_by_property.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
+import { list_map_limited_async } from "./list_map_limited_async.mjs";
+import { object_merge_set } from "./object_merge_set.mjs";
 export async function app_music_verses_build() {
   "Works out the words behind every passage any song on this page names, as each reference against its words.";
   "IT IS THE SLOW WAY, AND IT IS WHY THERE IS A FILE. About a hundred references across some sixty chapters, each chapter a file of its own: done here it is one long wait, done once and put in storage it is one small download for every reader afterwards.";

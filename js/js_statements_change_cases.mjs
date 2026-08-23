@@ -90,6 +90,42 @@ export function js_statements_change_cases() {
       why: "the run came out shorter, so as many did not go in as came out - no single command does that, and saying so is different from saying nothing survived",
     },
     {
+      before: ["if (a) {\n  work(a);\n}", "work(b);"],
+      after: ["if (a) {\n  work(a);\n  work(c);\n}", "work(b);"],
+      named: "in an if, one statement added",
+      why: "a condition hides an edit exactly as a function does, and this is the same statement put in one level down - named by the branch it landed in rather than by the whole if having been swapped",
+    },
+    {
+      before: ["for (let x of xs) {\n  work(x);\n}", "work(b);"],
+      after: ["for (let x of xs) {\n  work(x);\n  work(c);\n}", "work(b);"],
+      named: "in a loop, one statement added",
+      why: "all five kinds of loop answer to the one word, because which of them a run sits in changes nothing about the edit that happened inside it",
+    },
+    {
+      before: ["if (a) {\n  work(a);\n} else {\n  work(b);\n}", "work(c);"],
+      after: ["if (a) {\n  work(a);\n} else {\n  work(x);\n}", "work(c);"],
+      named: "in an if, one statement replaced",
+      why: "the branch that moved is the second one, so the runs have to be lined up in a fixed order - read out of the properties as they happen to be written, the then would be compared against the else",
+    },
+    {
+      before: ["if (a) {\n  work(a);\n} else {\n  work(b);\n}", "work(c);"],
+      after: ["if (a) {\n  work(x);\n} else {\n  work(y);\n}", "work(c);"],
+      named: "one statement replaced",
+      why: "both branches moved, which is two edits - the name is given up and the caller keeps the one it had, because pointing a command at the if would specify work nobody did",
+    },
+    {
+      before: ["if (a) {\n  work(a);\n}", "work(c);"],
+      after: ["if (b) {\n  work(a);\n}", "work(c);"],
+      named: "one statement replaced",
+      why: "every branch came back identical, so what moved was the condition itself - a change to the statement rather than an edit inside one of its runs",
+    },
+    {
+      before: ["if (a) {\n  work(a);\n}", "work(c);"],
+      after: ["if (a) {\n  work(a);\n} else {\n  work(b);\n}", "work(c);"],
+      named: "one statement replaced",
+      why: "an else appearing changes how many runs there are to compare, so the two sides no longer line up at all - and it is a change to the if, not an edit inside a branch of it",
+    },
+    {
       before: ["work(a);", "work(b);", "work(c);"],
       after: ["work(x);", "work(y);", "work(z);"],
       named: "the body rewritten",
