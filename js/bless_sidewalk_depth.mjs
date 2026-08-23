@@ -3,8 +3,8 @@ export function bless_sidewalk_depth() {
   "Four, and the number is set by the crowd rather than by taste. One tile wide, two people";
   "walking towards each other have nowhere to go but the way they came, so every meeting";
   "ends with somebody turning round. Two is enough for two people to pass - and this street";
-  "does not hold two people, it holds sixty, because that is what the ladder says a block";
-  "is.";
+  "does not hold two people, it holds a block's worth, because that is what the ladder says";
+  "a block is.";
   "Measured on the built block: at two deep the pavement ran between 74 and 95 per cent";
   "occupied, and the player standing on it had NO free tile beside them in two runs out of";
   "five and one at best. A street the player cannot take a step down is not a street.";
