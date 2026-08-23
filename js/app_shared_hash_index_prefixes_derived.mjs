@@ -5,8 +5,8 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_shared_hash_index_prefixes_derived(names) {
-  ("the #index folders the NAMES already say, in place of an app typing them out again in a list of its own: a route called day_hours is asking to sit under day, and every name that carries its own folder is one nobody has to remember to file");
-  ("no app is named here on purpose - not even in the prose. Shared code that reaches one app's name hands that app to every other app importing it, so the two callers are described by what they are rather than pointed at: a game's dev routes and a sandbox's previews both arrive as a plain list of hash names.");
+  "the #index folders the NAMES already say, in place of an app typing them out again in a list of its own: a route called day_hours is asking to sit under day, and every name that carries its own folder is one nobody has to remember to file";
+  "no app is named here on purpose - not even in the prose. Shared code that reaches one app's name hands that app to every other app importing it, so the two callers are described by what they are rather than pointed at: a game's dev routes and a sandbox's previews both arrive as a plain list of hash names.";
   ("the grouping itself belongs to nobody (",
     fn_name("names_first_word_groups"),
     ") - it is a question about names, not about this game - and two is the number that makes a folder, because one route under a heading of its own first word is a heading saying nothing and a tap to open it. that is also what stops gospel_share inventing a lonely `gospel` for itself");

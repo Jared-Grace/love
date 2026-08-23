@@ -12,7 +12,7 @@ import { literal_distinctive_is } from "./literal_distinctive_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
 import { list_add } from "./list_add.mjs";
-export function literals_unnamed_generic_found_found_files_by_literal(
+export function literals_unnamed_generic_files_by_literal(
   codes,
   named,
   files_by_literal,
