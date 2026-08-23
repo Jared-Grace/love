@@ -1,3 +1,6 @@
+import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
+import { list_size } from "./list_size.mjs";
+import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_npc_nickname } from "./g_npc_nickname.mjs";
