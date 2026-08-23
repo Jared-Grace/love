@@ -1,3 +1,4 @@
+import { permission_grant_refusals_parameters_object } from "./permission_grant_refusals_parameters_object.mjs";
 import { permission_grant_refusals_context_destructive } from "./permission_grant_refusals_context_destructive.mjs";
 import { permission_grant_refusals_parameters } from "./permission_grant_refusals_parameters.mjs";
 import { permission_grant_seam_chains_text } from "./permission_grant_seam_chains_text.mjs";
@@ -45,5 +46,6 @@ export async function permission_grant_refusals_context(unaliased, context) {
     );
   }
   permission_grant_refusals_parameters(ast, params, refusals, unaliased);
+  permission_grant_refusals_parameters_object(ast, params, refusals, unaliased);
   return refusals;
 }

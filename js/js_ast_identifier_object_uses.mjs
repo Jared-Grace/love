@@ -19,7 +19,8 @@ export function js_ast_identifier_object_uses(ast) {
   for (let member of members) {
     let computed = property_get(member, "computed");
     if (not(computed)) {
-      list_add(ignored, property_get(member, "property"));
+      let item = property_get(member, "property");
+      list_add(ignored, item);
     }
     let object = property_get(member, "object");
     let named = property_equals(object, "type", "Identifier");
@@ -31,7 +32,8 @@ export function js_ast_identifier_object_uses(ast) {
   for (let property of properties) {
     let computed = property_get(property, "computed");
     if (not(computed)) {
-      list_add(ignored, property_get(property, "key"));
+      let item2 = property_get(property, "key");
+      list_add(ignored, item2);
     }
   }
   let calls = js_list_type_nodes(ast, "CallExpression");
@@ -41,7 +43,8 @@ export function js_ast_identifier_object_uses(ast) {
     if (not(named)) {
       continue;
     }
-    let asking = text_starts_with(property_get(callee, "name"), "property_");
+    let t = property_get(callee, "name");
+    let asking = text_starts_with(t, "property_");
     if (not(asking)) {
       continue;
     }
@@ -56,6 +59,9 @@ export function js_ast_identifier_object_uses(ast) {
       list_add(object_uses, asked);
     }
   }
-  let r = { ignored, object_uses };
+  let r = {
+    ignored,
+    object_uses,
+  };
   return r;
 }

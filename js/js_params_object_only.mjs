@@ -24,7 +24,8 @@ export function js_params_object_only(ast, params) {
   for (let param of params) {
     let named = property_equals(param, "type", "Identifier");
     if (named) {
-      list_add(asked, property_get(param, "name"));
+      let item = property_get(param, "name");
+      list_add(asked, item);
     }
   }
   let object_only = {};
