@@ -1,0 +1,44 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
+import { app_shared_hash_index_render } from "./app_shared_hash_index_render.mjs";
+import { app_shared_hash_index_settings } from "./app_shared_hash_index_settings.mjs";
+import { app_shared_hash_index_prefixes_derived } from "./app_shared_hash_index_prefixes_derived.mjs";
+import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
+import { app_g_bless_storage_app } from "./app_g_bless_storage_app.mjs";
+import { app_g_bless_dev_routes } from "./app_g_bless_dev_routes.mjs";
+import { bless_hash_street } from "./bless_hash_street.mjs";
+
+export function app_g_bless_dev_index(world) {
+  arguments_assert(arguments, 1);
+  ("The praying game's dev directory: every screen and every opening this game answers to,");
+  ("as cards you can tap.");
+  ("It is the gospel game's directory with the gospel game taken out of it - the same shared");
+  ("drill-down of cards, handed a different list of names. The two games would otherwise");
+  ("have grown the same screen twice, and the one that got improved would not have been");
+  ("both.");
+  ("The list is the registry plus the two words that are askable but are not routes. A route");
+  ("DRAWS something over the map; the street opening and this page itself do not, so neither");
+  ("is registered and both still have to be listed. A directory that leaves out the way back");
+  ("to itself is the one card a reader goes looking for, and a directory that leaves out the");
+  ("street opening hides the only entry anybody uses daily.");
+  ("The folders come from what the names already say, with no typed list laid over them.");
+  ("Three names is too few to group and they group into nothing, which is the right answer");
+  ("rather than a missing one - the day there are two screens sharing a first word, the");
+  ("folder appears without anybody filing them.");
+  let routes = app_g_bless_dev_routes(world);
+  let names = properties_get(routes);
+  let openings = [bless_hash_street(), app_shared_g_dev_index_hash_name()];
+  let all = list_concat(names, openings);
+  let prefixes = app_shared_hash_index_prefixes_derived(all);
+  let app_fn = app_g_bless_storage_app();
+  ("A dev screen here REPLACES the street rather than opening beside it, so the cards go in");
+  ("the tab you are standing in and the back pill is the way out. A new tab for each would");
+  ("leave a trail of half-played streets behind, every one of them still generating a world");
+  ("nobody is looking at.");
+  let new_tab = false;
+  let settings = app_shared_hash_index_settings(app_fn, new_tab);
+  let column = app_shared_dev_overlay("Dev routes");
+  app_shared_hash_index_render(column, all, prefixes, settings);
+}
