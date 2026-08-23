@@ -1,13 +1,10 @@
+import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { null_is } from "./null_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { door43_versions_english_choices } from "./door43_versions_english_choices.mjs";
 import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
-import { ebible_versions_english_choices_licences } from "./ebible_versions_english_choices_licences.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
 import { list_filter_property_not } from "./list_filter_property_not.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
