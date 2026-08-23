@@ -94,23 +94,15 @@ The two englxxup editions also disagree about where that material lives. `englxx
 
 Not part of this item: Proverbs 31:1–9 appearing in chapter 24. We checked, and that is the Septuagint's own order — eng-Brenton files it identically.
 
-**9. A colophon is numbered verse 1, after verse 13.** engkjvcpb.
-
-url: https://ebible.org/engkjvcpb/ESG10.htm
-
-quote: the numbers run `4` … `13` and then `1`: `<span class="verse" id="V1">1&#160;</span>In the fourth year of the reign of Ptolemeus and Cleopatra`
-
-possible correction: number it 14, or give it its own chapter. It kept the number it had at 11:1.
-
-**10. A heading reads 'A Psalms'.** engbsb.
+**9. A heading reads 'A Psalms'.** engbsb.
 
 url: https://ebible.org/engbsb/PSA003.htm
 
 quote: `<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>`
 
-possible correction: 'A Psalm of David'. Forty-nine headings in the book begin 'A Psalm'. PSA000.htm says the same, so the two pages agree with each other and differ only from the rest of the book.
+possible correction: 'A Psalm of David', which is what the Berean Standard Bible itself reads. Forty-nine headings in the book begin 'A Psalm'. PSA000.htm says 'A Psalms' too, so the two pages agree with each other and differ from the rest of the book and from the source.
 
-**11. A verse marker is missing; the words are there, so a link to that verse lands nowhere.** 13 versions.
+**10. A verse marker is missing; the words are there, so a link to that verse lands nowhere.** 13 versions.
 
 Where the read-aloud edition numbers the verse correctly, the two published editions disagree and the HTML is a verse short:
 
