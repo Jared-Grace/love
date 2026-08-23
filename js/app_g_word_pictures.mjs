@@ -1,16 +1,12 @@
+import { app_shared_dev_overlay_status } from "./app_shared_dev_overlay_status.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_g_word_pictures_word_block } from "./app_g_word_pictures_word_block.mjs";
 import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
 import { words_game_taught_glosses } from "./words_game_taught_glosses.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 export async function app_g_word_pictures() {
@@ -25,26 +21,13 @@ export async function app_g_word_pictures() {
   "IT IS UNDER THE ATTEMPT AND NOT UNDER THE WORD because two attempts at one word are usually two different askings - the second exists because the first came out wrong and the wording was changed. Printed once at the top it would be the newest wording standing over the oldest picture, which reads as the generator having ignored a wording that in fact nobody ever gave it.";
   "SO THERE ARE TWO KINDS OF WORDING ON THIS PAGE AND THEY MUST NOT BE READ AS ONE. The line under a picture is what was asked for and cannot be changed, because the picture above it was already made from it. The box at the bottom of the word is what will be asked for next, and it is the only writing on this page a press can alter. A reader who edited the line under a picture would be editing history; a reader who expected the box to describe the pictures above it would be wrong for every word whose wording has ever been mended.";
   "IT IS A DEV SCREEN BY CONSTRUCTION. The pictures are addressed at the local server's copy of the ignored folder, so this screen shows nothing at all against the deployed site; a picture that has been chosen gets moved somewhere the site serves, and that move is what puts it in the game.";
-  let column = app_shared_dev_overlay("Word pictures");
+  let top = app_shared_dev_overlay_status("Word pictures");
+  let column = property_get(top, "column");
+  let status_set = property_get(top, "status_set");
+  let status_working = property_get(top, "status_working");
   let glosses = words_game_taught_glosses();
   let gap = app_shared_spaced_gap();
-  ("the line that says what just happened sits once at the top rather than beside each button, because a press is answered by the whole sheet being drawn again and anything written next to a button is thrown away by that redraw. it keeps its height while empty so that a message arriving does not push the pictures down");
-  let status = html_div_text(column, "");
-  html_style_assign(status, {
-    "text-align": "center",
-    "min-height": "1.2rem",
-    opacity: "0.7",
-    "font-size": app_shared_font_size_label(),
-  });
   let sheet = html_div(column);
-  function status_set(text) {
-    html_text_set(status, text);
-  }
-  function status_working(text) {
-    "SAYING THE PRESS WAS TAKEN IS PART OF TAKING IT, and this was measured rather than guessed: a press writes a file, then asks the seam three times, and each of those questions is answered by a reader started after the write - six seconds, on this machine, before anything on the page moves. A page that says nothing for six seconds has told the reader the press missed, and the reader's answer to that is to press again, which is exactly what must not happen to the button that spends money.";
-    let combined = text_combine_multiple([text, "…"]);
-    html_text_set(status, combined);
-  }
   async function render() {
     "the three tables are asked for before anything is cleared, so a seam that is down leaves the sheet standing as it was instead of blanking the page.";
     let f_name = fn_name("word_pictures_drawn_known");

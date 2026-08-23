@@ -1,14 +1,10 @@
-import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
+import { app_shared_dev_overlay_status } from "./app_shared_dev_overlay_status.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_arcs_person_block } from "./app_g_arcs_person_block.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -21,14 +17,10 @@ export async function app_g_arcs() {
   "THE NOTE IS FILED FROM THE PAGE THE FAULT WAS SEEN ON. Filing used to mean reading the turn number off one screen and typing it into a terminal on another, which is one person at two keyboards carrying a number in their head - and a wrong number there names a real line and is taken in silence. Here the number is never typed: it is the one belonging to the card that was pressed.";
   "THE CHAPTER IS CHOSEN FROM WHAT IS WRITTEN rather than from a name spelled into this page. One chapter has arcs today, and a page naming it would go on showing that one after a second was written, with nothing to say it was not showing everything.";
   "IT IS A DEV SCREEN AND SHOWS NOTHING AGAINST THE DEPLOYED SITE, because the store it reads is on the machine the arcs are being written on.";
-  let column = app_shared_dev_overlay("Arcs");
-  let status = html_div_text(column, "");
-  html_style_assign(status, {
-    "text-align": "center",
-    "min-height": "1.2rem",
-    opacity: "0.7",
-    "font-size": app_shared_font_size_label(),
-  });
+  let top = app_shared_dev_overlay_status("Arcs");
+  let column = property_get(top, "column");
+  let status_set = property_get(top, "status_set");
+  let status_working = property_get(top, "status_working");
   let chooser = html_div(column);
   html_style_assign(chooser, {
     display: "flex",
@@ -38,13 +30,6 @@ export async function app_g_arcs() {
   });
   let sheet = html_div(column);
   let chapter_code = null;
-  function status_set(text) {
-    html_text_set(status, text);
-  }
-  function status_working(text) {
-    let combined = text_combine_multiple([text, "…"]);
-    html_text_set(status, combined);
-  }
   async function api(f_name, args) {
     let a = {
       f_name,
