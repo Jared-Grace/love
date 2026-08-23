@@ -18,6 +18,14 @@ export function js_statements_change_both_ways_named(
     let r = "the body rewritten";
     return r;
   }
+  let placed = js_statements_change_gaps_named_or_null(
+    texts_before,
+    texts_after,
+  );
+  let placed_found = null_not_is(placed);
+  if (placed_found) {
+    return placed;
+  }
   let left = list_size(texts_before);
   let right = list_size(texts_after);
   let lengths = equal(left, right);
