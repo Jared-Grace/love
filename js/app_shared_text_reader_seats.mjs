@@ -63,11 +63,16 @@ export function app_shared_text_reader_seats() {
   };
   let seats = [
     button,
+    button_html,
     text_set,
     div_text,
     div_bold,
     div_centered,
     p_text,
+    span_text,
+    a_href_text,
+    progress_caption,
+    game_p_text,
     placeholder,
     biblehub,
     subset_screen,

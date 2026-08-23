@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 import { file_read } from "./file_read.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
@@ -11,20 +13,34 @@ import { html_regenerate_frozen_is } from "./html_regenerate_frozen_is.mjs";
 export async function html_regenerate(file_path) {
   let frozen = html_regenerate_frozen_is(file_path);
   false_is_assert_json(frozen, {
-    hint: "this page belongs to a frozen app (its prod copy must not change and it has its own build) — regenerate a different page, or take it off apps_frozen() first",
+    hint: text_combine_multiple([
+      "this page belongs to a frozen app (its prod copy must not change and it has its own build) — regenerate a different page, or take it off ",
+      fn_name("apps_frozen"),
+      "() first",
+    ]),
     file_path,
   });
   let contents = await file_read(file_path);
   let generated = html_code_is(contents);
   true_is_assert_json(generated, {
-    hint: "only pages written by html_code can be regenerated — is this one hand-written, and would you rather edit it directly?",
+    hint: text_combine_multiple([
+      "only pages written by ",
+      fn_name("html_code"),
+      " can be regenerated — is this one hand-written, and would you rather edit it directly?",
+    ]),
     file_path,
   });
   let parts = html_code_parse(contents);
   let name = property_get(parts, "name");
   let body = property_get(parts, "body");
   null_not_is_assert_json(body, {
-    hint: "this page opens like a generated one but its body is not the shape html_code leaves - so the pieces in it were put there by hand, and rewriting it would wrap them a second time and drop whatever its head carries that html_code does not build. Edit it directly instead",
+    hint: text_combine_multiple([
+      "this page opens like a generated one but its body is not the shape ",
+      fn_name("html_code"),
+      " leaves - so the pieces in it were put there by hand, and rewriting it would wrap them a second time and drop whatever its head carries that ",
+      fn_name("html_code"),
+      " does not build. Edit it directly instead",
+    ]),
     file_path,
   });
   let code = html_code(name, body);
