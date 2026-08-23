@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_round_nearest_digit_card } from "./app_code_lesson_expression_round_nearest_digit_card.mjs";
 import { text_decimal_combine } from "./text_decimal_combine.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -15,7 +16,6 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-import { app_code_first_decimal_digit_line } from "./app_code_first_decimal_digit_line.mjs";
 import { app_code_lesson_expression_round_nearest_rounds_line } from "./app_code_lesson_expression_round_nearest_rounds_line.mjs";
 export function app_code_lesson_expression_round_nearest_above(root) {
   arguments_assert(arguments, 1);
@@ -36,25 +36,10 @@ export function app_code_lesson_expression_round_nearest_above(root) {
   let input = add(whole, 1);
   let whole_up = text_to(input);
   ("first question: which digit is it. Two numbers, two different first digits in two colours, and nothing about rounding yet - the digit is found before it is put to work");
-  let finding = app_code_container_light_blue(root);
-  let asked = html_div(finding);
-  html_span_text(asked, "What's the ");
-  app_code_first_decimal_digit_phrase(asked);
-  html_span_text(asked, "?");
-  app_code_first_decimal_digit_line(
-    finding,
-    "In ",
+  app_code_lesson_expression_round_nearest_digit_card(
+    root,
     whole_text,
-    "3",
-    "5",
     color_low,
-  );
-  app_code_first_decimal_digit_line(
-    finding,
-    "in ",
-    whole_text,
-    "4",
-    "999",
     color_high,
   );
   ("second question: what the digit decides. Each case is a rule line, then that rule on an ordinary number, then that rule on the knife-edge number where a learner would most doubt it");
