@@ -57,7 +57,8 @@ export async function app_g_conversation(
     ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
     app_g_npc_says(npc, overlay, greeting);
     let container_believer = app_shared_game_container_player(overlay);
-    app_shared_game_p_text(container_believer, "What would you like to do?");
+    let ask_believer = app_g_ask_what_to_do_text();
+    app_shared_game_p_text(container_believer, ask_believer);
     function pray_together() {
       let r2 = app_g_conversation_pray_together(overlay_close, pronouns);
       return r2;
@@ -178,7 +179,8 @@ export async function app_g_conversation(
     }
     app_g_npc_says(npc, overlay, npc_says);
     let container = app_shared_game_container_player(overlay);
-    app_shared_game_p_text(container, "What do you want to do?");
+    let ask_pray = app_g_ask_what_to_do_text();
+    app_shared_game_p_text(container, ask_pray);
     async function pray() {
       let r6 = await app_g_conversation_pray(
         steps,

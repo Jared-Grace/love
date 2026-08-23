@@ -36,7 +36,8 @@ export function app_g_conversation_render_boundary(
     let message = g_boundary(meet, topic);
     app_g_npc_says(npc, overlay, message);
     let container = app_shared_game_container_player(overlay);
-    app_shared_game_p_text(container, "What would you like to say?");
+    let ask = app_g_ask_what_to_say_text();
+    app_shared_game_p_text(container, ask);
     let text = g_boundary_acknowledge();
     function acknowledged() {
       "the NPC has just declined a topic, so the prompt waiting back at the openers must invite something ELSE — the usual continue-prompt is open half the time ('what's on your mind?'), and an open invitation from the same person who just said no reads as taking the limit back. carried as the pending intro so it replaces that prompt.";
