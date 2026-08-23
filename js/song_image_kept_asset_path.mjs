@@ -11,7 +11,8 @@ export function song_image_kept_asset_path(n) {
   arguments_assert(arguments, 1);
   let key = song_image_couplet_key(n);
   let song_name = song_image_couplets_hash_name();
-  let img_name = text_combine(String(key), ".png");
+  let left = String(key);
+  let img_name = text_combine(left, ".png");
   let path = web_assets_song_path(song_name, img_name);
   return path;
 }
