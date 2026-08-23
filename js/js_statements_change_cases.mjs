@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function js_statements_change_cases() {
   "A run of statements before an edit and after it, with the name that edit ought to come back under, and why.";
@@ -162,14 +164,24 @@ export function js_statements_change_cases() {
       why: "a paragraph reworded and nothing else touched, which is three of every four edits that used to land in the bare bucket - this repo keeps its reasoning in its prose, so it is the change a later reader most wants to be able to find",
     },
     {
-      before: ["work(a);", '("see ", fn_name("other"), " for the rest");'],
+      before: [
+        "work(a);",
+        text_combine_multiple([
+          '("see ", ',
+          fn_name("fn_name"),
+          '("other"), " for the rest");',
+        ]),
+      ],
       after: ["work(a);", '"see other for the rest";'],
       named: "the prose written differently",
       why: "the same paragraph written in another of the three shapes a paragraph gets written in here, which is a fact about the writer's day rather than about the line - so the shapes answer to one reading and the name does not mention them",
     },
     {
       before: ["work(a);", "window.addEventListener(x, reload);"],
-      after: ["work(a);", "html_on_hash_change(reload);"],
+      after: [
+        "work(a);",
+        text_combine_multiple([fn_name("html_on_hash_change"), "(reload);"]),
+      ],
       named: "one call swapped for another",
       why: "a call reached through a dot becoming a function of this repo, which is the shape of the wrapping done here constantly - the callee reading that answers only for plain names is the wrong one to ask, because it exists to tell callers whether a name is ours",
     },
