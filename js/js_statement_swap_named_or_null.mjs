@@ -1,8 +1,8 @@
+import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
 import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_statement_address_name } from "./js_statement_address_name.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,8 +27,8 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let bound = js_node_type_is(node_before, "VariableDeclaration");
   if (bound) {
-    let name = js_statement_address_name(node_before);
-    let name_after = js_statement_address_name(node_after);
+    let name = js_declaration_single_variable_name_try(node_before);
+    let name_after = js_declaration_single_variable_name_try(node_after);
     let same_name = equal(name, name_after);
     let nameless = null_is(name);
     if (nameless) {
