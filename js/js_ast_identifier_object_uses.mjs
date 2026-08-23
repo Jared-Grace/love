@@ -1,3 +1,5 @@
+import { property_atoms_object_first } from "./property_atoms_object_first.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,7 +7,6 @@ import { property_equals } from "./property_equals.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { not } from "./not.mjs";
 export function js_ast_identifier_object_uses(ast) {
   "Two sets of nodes read off one tree - the mentions of a name that are asking it for a property, and the mentions that are not really mentions of it at all.";

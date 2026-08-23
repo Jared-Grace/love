@@ -1,3 +1,5 @@
+import { app_shared_game_side_room } from "./app_shared_game_side_room.mjs";
+import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -15,6 +17,11 @@ export function app_g_bless_bar(container) {
   ("what it looks like was already decided.");
   ("It sits above the map and below anything that stops the game - a prayer being read");
   ("covers this, because at that moment nothing else is to be pressed.");
+  ("It is pinned to both edges and then held back off them by the same room the overlay");
+  ("holds its own panels off by, so the green ends here and the green on a menu screen line");
+  ("up down the side of the phone. Pinned WITHOUT that room, the strip ran the whole way");
+  ("across and the outer arrows sat against the glass, which is the corner of a phone a");
+  ("thumb reaches least well.");
   let pinned = html_div(container);
   html_style_assign(pinned, {
     position: "absolute",
@@ -23,6 +30,8 @@ export function app_g_bless_bar(container) {
     bottom: "0",
     "z-index": g_z("click"),
   });
+  let room = app_shared_game_side_room();
+  html_style_padding_x(pinned, room);
   let bar = app_shared_game_container_player(pinned);
   return bar;
 }
