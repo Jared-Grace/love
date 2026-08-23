@@ -82,13 +82,17 @@ quote: verse 15 ends '…ar ni mbarǝm pita yari zo shirǝm den ti.' Then a blan
 
 possible correction: Jesus coming to Nazareth, standing to read, being handed the scroll. The Isaiah words begin at verse 18 with nothing to introduce them. The read-aloud file has the same hole, so the text is short, not the numbering.
 
-**8. Proverbs 31:1 to 31:9 is in chapter 24 in the HTML and in chapter 31 in the read-aloud.** englxxup.
+**8. The Proverbs index links a chapter 30 that is not published, and the read-aloud edition has that chapter while the HTML does not.** englxxup.
 
-url: https://ebible.org/englxxup/PRO31.htm and https://ebible.org/englxxup/PRO24.htm
+url: https://ebible.org/englxxup/PRO.htm
 
-quote: PRO31.htm opens `<span class="verse" id="V10">10&#160;</span>Who shall find a virtuous woman?` — no verses 1 to 9. PRO24.htm carries them at 54 to 62. But `englxxup_021_PRO_31_read.txt` opens 'My words have been spoken by God—the oracular answer of a king, whom his mother instructed' and runs 31 verses.
+quote: `href='PRO30.htm'`, and https://ebible.org/englxxup/PRO30.htm is not there.
 
-possible correction: a note on the page, as eng-Brenton has for the same ordering — 'See chapter 24 for the content of chapter 30.' englxxup has no such note and no PRO30.htm at all, though its own book index lists one.
+possible correction: the file, carrying the note eng-Brenton uses — 'See chapter 24 for the content of chapter 30.' eng-Brenton, which englxxup revises, keeps PRO30.htm for exactly this.
+
+The two englxxup editions also disagree about where that material lives. `englxxup_021_PRO_30_read.txt` has 33 verses beginning 'These things says the man to them that trust in God', and `englxxup_021_PRO_31_read.txt` begins at 31:1, 'My words have been spoken by God'. The HTML has no chapter 30 and PRO31.htm begins at verse 10, 'Who shall find a virtuous woman?'. eng-Brenton's two editions agree with each other: its read-aloud chapter 30 is empty and its chapter 31 begins at verse 10, matching its HTML.
+
+Not part of this item: Proverbs 31:1–9 appearing in chapter 24. We checked, and that is the Septuagint's own order — eng-Brenton files it identically.
 
 **9. A colophon is numbered verse 1, after verse 13.** engkjvcpb.
 
