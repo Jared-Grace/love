@@ -1,3 +1,4 @@
+import { app_code_lessons_order_ahead_gate_run } from "./app_code_lessons_order_ahead_gate_run.mjs";
 import { functions_name_word_repeated_gate_run } from "./functions_name_word_repeated_gate_run.mjs";
 import { js_object_property_text_set_cases_gate_run } from "./js_object_property_text_set_cases_gate_run.mjs";
 import { commits_message_path_gate_run } from "./commits_message_path_gate_run.mjs";
