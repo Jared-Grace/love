@@ -275,8 +275,10 @@ export function song_image_couplets() {
       verse: 3,
       first: "hewn in the rock",
       second: "it was brand new",
-      symbol:
-        "The mouth of a new tomb cut straight into a great mass of plain grey rock, the opening standing clear and empty as a plain dark arch with nothing inside it and no stone anywhere near it",
+      symbol: list_join_empty([
+        song_image_tomb_rock(),
+        " standing clear and empty and holding nothing, and no stone anywhere in the picture at all, the rock drawn very large so that it reaches almost to both sides of the window and almost to the top and the bottom of it, and the ground below one plain flat pale grey",
+      ]),
       symbol_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       same_as: 0,
     },
