@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
-import { app_g_dev_index_leaf_card } from "./app_g_dev_index_leaf_card.mjs";
-import { app_g_dev_index_card } from "./app_g_dev_index_card.mjs";
+import { app_shared_hash_index_leaf_card } from "./app_shared_hash_index_leaf_card.mjs";
+import { app_shared_hash_index_card } from "./app_shared_hash_index_card.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_cursor_pointer } from "./html_cursor_pointer.mjs";
 import { html_div } from "./html_div.mjs";
@@ -21,10 +21,10 @@ export function app_g_dev_index_render_node(
   arguments_assert(arguments, 5);
   let child_labels = object_property_names(node.children).sort();
   if (equal(child_labels.length, 0)) {
-    app_g_dev_index_leaf_card(parent, label, node.hash);
+    app_shared_hash_index_leaf_card(parent, label, node.hash);
     return;
   }
-  let card = app_g_dev_index_card(parent);
+  let card = app_shared_hash_index_card(parent);
   let header = html_div_text_bold(card, label + " ›");
   html_cursor_pointer(header);
   let body = html_div(card);
@@ -49,7 +49,7 @@ export function app_g_dev_index_render_node(
   }
   html_on_click(header, toggle);
   if (node.hash) {
-    app_g_dev_index_leaf_card(body, "→ " + label, node.hash);
+    app_shared_hash_index_leaf_card(body, "→ " + label, node.hash);
   }
   for (let cl of child_labels) {
     app_g_dev_index_render_node(
