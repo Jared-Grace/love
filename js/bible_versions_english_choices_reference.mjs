@@ -15,9 +15,13 @@ export async function bible_versions_english_choices_reference(reference) {
   "A translation that does not carry the passage is left out rather than listed as empty, so what comes back is the set of real options.";
   "A TRANSLATION STORAGE HAS NOT BEEN GIVEN YET IS LEFT OUT THE SAME WAY, rather than being allowed to end the comparison. Being on the choices list and having had its chapters uploaded are two separate things, and the first can be true while the second is not - engwebster was listed for a day before its chapters were sent, and asking for one of them answered with a plain not-found. Thrown, that emptied the whole comparison: twenty other translations had already been read and none of them was shown, because one of them was missing. A comparison that loses everything to its weakest member is worth less than one that says what it could find.";
   "SEVERAL AT A TIME, because each translation that is not already on this disk has to come down, and waiting for one is no reason to stop asking for the next.";
+  "BOTH SHELVES ARE ASKED, NOT JUST EBIBLE. The two Door43 English translations are the only ones on offer that were written to be unlike the rest - one follows the Hebrew and Greek word order closely enough to show what the sentence is built out of, the other says the same verse in the plainest English it can. Twenty translations that all descend from the same Victorian revision differ over a word here and there; these two differ over the whole shape of the sentence, which is what a person choosing a line for a song is actually looking at. Leaving them out left the widest two options invisible while the comparison still called itself complete.";
+  "They are held in a separate list because they are not whole bibles - fifty-six books of the sixty-six - and the eBible list is defined as the ones we hold entire. A passage in one of the ten they do not carry simply answers without them, which is the same thing that already happens to any translation missing the verse.";
   arguments_assert(arguments, 1);
   let licences = await ebible_versions_english_choices_licences();
-  let usable = list_filter_property(licences, "commercial", true);
+  let door43 = door43_versions_english_choices();
+  let both = list_combine(licences, door43);
+  let usable = list_filter_property(both, "commercial", true);
   async function lambda$read(record) {
     let bible_folder = property_get(record, "bible_folder");
     async function read() {
