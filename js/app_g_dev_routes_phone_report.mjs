@@ -16,7 +16,7 @@ export async function app_g_dev_routes_phone_report() {
   "reads the dev build off the local server, so what it measures is the code as it stands rather than whatever was last promoted";
   "the measuring is handed over as a STRING and not as a function. it runs where none of this repo's names exist, and the canonicalizing pass has already once turned its comparisons into calls to functions of this repo - which would have thrown in the browser and been read here as a screen that simply had nothing wrong with it. the gates that watch for that only see a function written INSIDE the one that sends it, so a probe living in its own file was invisible to them; a string is invisible to the pass instead, which is the safe way round";
   "BROWSER-SERIALIZED - do NOT auto-canonicalize";
-  let names = await app_g_dev_route_names();
+  let names = app_g_dev_route_names();
   let url = await app_shared_url_dev_local(app_g);
   let width = phone_test_width();
   let height = phone_test_height();
