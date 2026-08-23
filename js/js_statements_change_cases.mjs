@@ -1,5 +1,3 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function js_statements_change_cases() {
   "A run of statements before an edit and after it, with the name that edit ought to come back under, and why.";
