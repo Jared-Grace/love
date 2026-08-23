@@ -38,7 +38,7 @@ import { qa_commit_entry_beside_moved_cases_gate_run } from "./qa_commit_entry_b
 import { bible_event_fields_gate_run } from "./bible_event_fields_gate_run.mjs";
 import { functions_prose_silent_oversize_gate_run } from "./functions_prose_silent_oversize_gate_run.mjs";
 import { bible_glyph_roots_characters_gate_run } from "./bible_glyph_roots_characters_gate_run.mjs";
-import { app_code_lessons_prod_last_gate_run } from "./app_code_lessons_prod_last_gate_run.mjs";
+import { app_code_lessons_read_through_last_gate_run } from "./app_code_lessons_read_through_last_gate_run.mjs";
 import { qa_gate_count_fixed_is_cases_gate_run } from "./qa_gate_count_fixed_is_cases_gate_run.mjs";
 import { qa_gates_miscounted_gate_run } from "./qa_gates_miscounted_gate_run.mjs";
 import { data_rooms_gate_run } from "./data_rooms_gate_run.mjs";
@@ -766,7 +766,7 @@ export function qa_gates() {
     bible_storage_empty_gate_run,
     bible_search_built_path_gate_run,
     app_code_quiz_leniency_gate_run,
-    app_code_lessons_prod_last_gate_run,
+    app_code_lessons_read_through_last_gate_run,
     app_code_lessons_order_ahead_gate_run,
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,

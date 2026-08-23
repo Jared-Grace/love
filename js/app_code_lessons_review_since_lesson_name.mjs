@@ -1,7 +1,7 @@
 import { app_code_lessons_review_since_helpers_had } from "./app_code_lessons_review_since_helpers_had.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
+import { app_code_lessons_read_through_last_fn } from "./app_code_lessons_read_through_last_fn.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -13,7 +13,7 @@ export function app_code_lessons_review_since_lesson_name(
 ) {
   arguments_assert(arguments, 3);
   let names_after = property_get(r2, "names_after");
-  let cut_fn = app_code_lessons_prod_last_fn();
+  let cut_fn = app_code_lessons_read_through_last_fn();
   let cut_place = list_index_of(names_after, cut_fn.name) + 1;
   let lessons_added = [];
   let lessons_changed = [];
