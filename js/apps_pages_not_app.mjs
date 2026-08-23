@@ -1,7 +1,7 @@
+import { apps_paths_full } from "./apps_paths_full.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
 import { apps_page_not_app_allowed_names } from "./apps_page_not_app_allowed_names.mjs";
 import { apps_page_redirect_is } from "./apps_page_redirect_is.mjs";
-import { apps_paths } from "./apps_paths.mjs";
 import { data_identifiers_get_properties } from "./data_identifiers_get_properties.mjs";
 import { file_read } from "./file_read.mjs";
 import { list_includes } from "./list_includes.mjs";
