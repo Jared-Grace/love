@@ -29,6 +29,9 @@ service firebase.storage {
     match /http/{allPaths=**} {
       allow read;
     }
+    match /web_assets/{allPaths=**} {
+      allow read;
+    }
     match /user/uuid/{allPaths=**} {
       allow write;
     }
