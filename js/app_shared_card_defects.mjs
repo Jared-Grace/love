@@ -4,7 +4,8 @@ import { app_shared_description } from "./app_shared_description.mjs";
 import { apps_names } from "./apps_names.mjs";
 import { each_async } from "./each_async.mjs";
 import { file_exists_not } from "./file_exists_not.mjs";
-import { folder_public_join } from "./folder_public_join.mjs";
+import { web_assets_app_img_path } from "./web_assets_app_img_path.mjs";
+import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -30,7 +31,8 @@ export async function app_shared_card_defects() {
         hint: "this app names a card picture and has no sentence, so no card tags are written at all and the picture is never asked for - write the sentence, or take the picture name away",
       });
     }
-    let f_path = folder_public_join(f_name);
+    let path = web_assets_app_img_path(app_name, f_name);
+    let f_path = web_assets_folder_join(path);
     let absent = await file_exists_not(f_path);
     if (absent) {
       list_add(defects, {
