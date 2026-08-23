@@ -6,6 +6,9 @@ export function bible_speech_quote_marks() {
   "That the two facts line up is luck rather than design, and it is worth writing down, because a later reader tempted to handle the single marks properly would be spending effort on a distinction the reading does not make.";
   let open = text_from_code_number(8220);
   let close = text_from_code_number(8221);
-  let marks = { open, close };
+  let marks = {
+    open,
+    close,
+  };
   return marks;
 }
