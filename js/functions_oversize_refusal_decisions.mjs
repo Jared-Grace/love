@@ -41,7 +41,8 @@ export async function functions_oversize_refusal_decisions() {
         property_set(seen, pair, 0);
       }
       let runs = property_get(seen, pair);
-      property_set(seen, pair, add(runs, 1));
+      let value = add(runs, 1);
+      property_set(seen, pair, value);
     }
   }
   let pairs = object_property_names(seen);
