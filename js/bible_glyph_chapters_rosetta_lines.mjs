@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rosetta_lines_2jn01 } from "./bible_glyph_chapter_rosetta_lines_2jn01.mjs";
 import { bible_glyph_chapter_rosetta_lines_psa023 } from "./bible_glyph_chapter_rosetta_lines_psa023.mjs";
 import { bible_glyph_chapter_rosetta_lines_1jn02 } from "./bible_glyph_chapter_rosetta_lines_1jn02.mjs";
 import { bible_glyph_chapter_rosetta_lines_psa100 } from "./bible_glyph_chapter_rosetta_lines_psa100.mjs";
