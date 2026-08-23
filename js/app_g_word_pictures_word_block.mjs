@@ -1,4 +1,4 @@
-import { app_g_word_pictures_word_block_on_save } from "./app_g_word_pictures_word_block_on_save.mjs";
+import { app_g_word_pictures_word_block_armed } from "./app_g_word_pictures_word_block_armed.mjs";
 import { app_g_word_pictures_word_block_attempt_block } from "./app_g_word_pictures_word_block_attempt_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -92,18 +92,14 @@ export function app_g_word_pictures_word_block(
     gap: "0.6rem",
     "margin-top": "0.4rem",
   });
-  async function on_save() {
-    let r2 = await app_g_word_pictures_word_block_on_save(
-      box,
-      word,
-      status_working,
-      status_set,
-      render,
-    );
-    return r2;
-  }
-  app_shared_button(controls, "Save wording", on_save);
-  let armed = false;
+  let armed = app_g_word_pictures_word_block_armed(
+    box,
+    word,
+    status_working,
+    status_set,
+    render,
+    controls,
+  );
   let draw = null;
   async function on_draw() {
     "the first press only arms the second, and the button says so on its own face. the browser's own confirm box would stop the page dead until it is cleared, which on a phone is a worse thing to be stuck behind than the press is to make twice.";
