@@ -1,3 +1,4 @@
+import { app_code_arithmetic_to_value_parts } from "./app_code_arithmetic_to_value_parts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_generic } from "./app_code_lesson_expression_choose_order_both_sides_expression_generic.mjs";
@@ -12,6 +13,7 @@ export function app_code_lesson_expression_choose_order_both_sides_expression(
     app_code_lesson_expression_choose_order_both_sides_expression_generic(
       want_true,
       outer_symbol,
+      app_code_arithmetic_to_value_parts,
     );
   return tree;
 }
