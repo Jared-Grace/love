@@ -14,7 +14,7 @@ The record is keyed by chapter, not by item number, so items here can be reorder
 
 ---
 
-Subject: Twelve faults in published files — the first affects 131 versions
+Subject: Eleven faults in published files — the first affects 131 versions
 
 Found by a free Bible reading app that carries 399 of your translations. No reply needed.
 
@@ -139,7 +139,7 @@ bsj MAT12 verse 30 is the tail of verse 29; uigara PRO26 verse 19 is the second 
 
 Separately, https://ebible.org/bsj/JHN10.htm ends verse 34 with a bare `36` in the running text, no marker around it, and the words after it are verse 35 — a number both unmarked and one too high.
 
-**12. Verses are missing, words and all.** bsj, jid, tczchongthu.
+**11. Verses are missing, words and all.** bsj, jid, tczchongthu.
 
 We read the verses either side; the words are not on the page, and every read-aloud file below is short in the same place.
 
