@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_bless_dev_crowd } from "./app_g_bless_dev_crowd.mjs";
-
 export function app_g_bless_dev_routes(world) {
   arguments_assert(arguments, 1);
   ("Every dev screen the praying game has, keyed by the word that asks for it after the");
