@@ -1,13 +1,10 @@
 import { app_code_lesson_validity_operator } from "./app_code_lesson_validity_operator.mjs";
 import { app_code_lesson_operators_dot_batch_numbers } from "./app_code_lesson_operators_dot_batch_numbers.mjs";
-import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { app_code_lesson_operators_dot_numbers_example } from "./app_code_lesson_operators_dot_numbers_example.mjs";
 import { app_code_lesson_operators_dot_numbers_both_sides_text } from "./app_code_lesson_operators_dot_numbers_both_sides_text.mjs";
 import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
 import { number_pi_truncated_text } from "./number_pi_truncated_text.mjs";
 import { digit_random } from "./digit_random.mjs";
-import { app_code_lesson_operators_asterisk_generic_invalid } from "./app_code_lesson_operators_asterisk_generic_invalid.mjs";
-import { app_code_lesson_operators_asterisk_generic_minus } from "./app_code_lesson_operators_asterisk_generic_minus.mjs";
 import { js_code_binary } from "./js_code_binary.mjs";
 import { app_code_lesson_operators_minus_generic_container_both_sides } from "./app_code_lesson_operators_minus_generic_container_both_sides.mjs";
 import { html_span_text } from "./html_span_text.mjs";
@@ -84,13 +81,6 @@ export function app_code_lesson_operators_dot_numbers() {
     let left = digit_random();
     let first2 = js_code_binary(left, operator, "invalid");
     html_div_code(c3, first2);
-    return;
-    app_code_lesson_operators_asterisk_generic_minus(root, operator, "");
-    app_code_lesson_operators_asterisk_generic_invalid(
-      root,
-      operator,
-      text_combine_middle_space,
-    );
   }
   let lesson = app_code_lesson_validity_operator(
     name_rights,
