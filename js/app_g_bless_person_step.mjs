@@ -34,8 +34,8 @@ export function app_g_bless_person_step(world, person) {
   ("Nobody walks out of their own life. A tile too far from home is refused before the");
   ("directions are even looked at, which is what keeps the people who live at a door near");
   ("that door and the people out walking on the pavement. Without it every address in the");
-  ("game would be true for about a minute and then be a lie, because the twelve people the");
-  ("prayer calls one building would have wandered off in twelve directions.");
+  ("game would be true for about a minute and then be a lie, because the handful of people");
+  ("the prayer calls one building would each have wandered off their own way.");
   ("Somebody standing outside their own reach is let go anywhere instead, because that");
   ("person can only have got there by being set down there when their doorstep was full -");
   ("and held to a rule they already break, they would never take a step again. Loose, they");
