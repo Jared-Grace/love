@@ -52,7 +52,7 @@ export function app_shared_hash_index_render_node(
   }
   html_on_click(header, toggle);
   if (node.hash) {
-    app_shared_hash_index_leaf_card(body, "→ " + label, node.hash);
+    app_shared_hash_index_leaf_card(body, "→ " + label, node.hash, new_tab);
   }
   for (let cl of child_labels) {
     app_shared_hash_index_render_node(
