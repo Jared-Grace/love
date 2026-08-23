@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -54,22 +55,14 @@ export async function app_g_word_pictures() {
     let combined = text_combine_multiple([text, "…"]);
     html_text_set(status, combined);
   }
-  async function api(f_name, args) {
-    let a = {
-      f_name,
-      args,
-    };
-    let result = await app_shared_api(a);
-    return result;
-  }
   async function render() {
     "the three tables are asked for before anything is cleared, so a seam that is down leaves the sheet standing as it was instead of blanking the page.";
     let f_name2 = fn_name("word_pictures_drawn_known");
-    let known = await api(f_name2, []);
+    let known = await app_g_word_pictures_api(f_name2, []);
     let f_name3 = fn_name("word_picture_chosen");
-    let chosen = await api(f_name3, []);
+    let chosen = await app_g_word_pictures_api(f_name3, []);
     let f_name4 = fn_name("word_picture_wordings");
-    let wordings = await api(f_name4, []);
+    let wordings = await app_g_word_pictures_api(f_name4, []);
     html_clear(sheet);
     let words = object_property_names(known);
     function word_block(word) {
@@ -142,7 +135,7 @@ export async function app_g_word_pictures() {
           status_working(combined7);
           try {
             let f_name5 = fn_name("word_picture_chosen_set");
-            await api(f_name5, [word, attempt]);
+            await app_g_word_pictures_api(f_name5, [word, attempt]);
             let combined = text_combine_multiple(["kept ", word, " ", text]);
             status_set(combined);
             await render();
@@ -204,7 +197,7 @@ export async function app_g_word_pictures() {
         status_working(combined8);
         try {
           let f_name6 = fn_name("word_picture_wording_set");
-          await api(f_name6, [word, typed]);
+          await app_g_word_pictures_api(f_name6, [word, typed]);
           let combined3 = text_combine_multiple([
             "saved the wording for ",
             word,
@@ -239,7 +232,7 @@ export async function app_g_word_pictures() {
         status_working(combined9);
         try {
           let f_name7 = fn_name("word_picture_draw");
-          await api(f_name7, [word]);
+          await app_g_word_pictures_api(f_name7, [word]);
           let combined5 = text_combine_multiple([
             "drew another attempt for ",
             word,
@@ -261,4 +254,13 @@ export async function app_g_word_pictures() {
     each(words, word_block);
   }
   await render();
+}
+async function app_g_word_pictures_api(f_name, args) {
+  arguments_assert(arguments, 2);
+  let a = {
+    f_name,
+    args,
+  };
+  let result = await app_shared_api(a);
+  return result;
 }
