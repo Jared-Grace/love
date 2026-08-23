@@ -9,7 +9,7 @@ import { html_div } from "./html_div.mjs";
 import { html_display_block } from "./html_display_block.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { not } from "./not.mjs";
-import { app_g_dev_index_open_persist } from "./app_g_dev_index_open_persist.mjs";
+import { app_shared_hash_index_open_persist } from "./app_shared_hash_index_open_persist.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 export function app_shared_hash_index_render_node(
   parent,
@@ -45,7 +45,7 @@ export function app_shared_hash_index_render_node(
       html_display_none(body);
       open_paths.delete(path);
     }
-    app_g_dev_index_open_persist(open_paths);
+    app_shared_hash_index_open_persist(open_paths);
   }
   html_on_click(header, toggle);
   if (node.hash) {
