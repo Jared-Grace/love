@@ -63,9 +63,12 @@ export function app_shared_button_numbered(root, index, on_click, with_marker) {
     "padding-left": reserved,
     "padding-right": reserved,
   });
+  ("the one column is floored at nothing rather than left to find its own floor, which is what lets a title that will not fit wrap instead of widening the button past the screen");
+  ("A plain 1fr does not mean what it reads as. A grid column sized in fr still refuses to go below what its content says it needs, and what the title says it needs is its longest unbreakable piece PLUS the padding above - and the padding above is two gutters wide, so a title carrying a piece of code that cannot be broken asks for that code and a hundred and fifty pixels of reserved space on one line. The column grows to it, the button grows to the column, and the row runs off the right edge of a phone taking the rest of the list's width with it. Floored at nothing, the same title wraps inside the width it was given.");
+  ("Nothing changes for a title that already fitted, because a floor is only ever reached from below. This is the whole of the fix for a hundred and thirty rows of which eight ran off the screen, and it is one property rather than eight rewordings - the titles were never the fault.");
   html_style_assign(button, {
     display: "grid",
-    "grid-template-columns": "1fr",
+    "grid-template-columns": "minmax(0, 1fr)",
     "align-items": "center",
   });
   let result = {
