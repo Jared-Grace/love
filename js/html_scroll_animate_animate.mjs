@@ -1,6 +1,6 @@
 import { html_scroll_animate_animate_start } from "./html_scroll_animate_animate_start.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_scroll_animate_animate_animate } from "./html_scroll_animate_animate_animate.mjs";
+import { html_scroll_animate_run_frames } from "./html_scroll_animate_run_frames.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function html_scroll_animate_animate(
   element,
@@ -20,7 +20,7 @@ export function html_scroll_animate_animate(
     from_top,
   };
   let r = r2;
-  let animate = html_scroll_animate_animate_animate(
+  let animate = html_scroll_animate_run_frames(
     r,
     element,
     target_left,
