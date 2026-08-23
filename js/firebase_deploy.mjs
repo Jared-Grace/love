@@ -1,14 +1,12 @@
-import { firebase_deploy_promote_generic } from "./firebase_deploy_promote_generic.mjs";
-import { property_get } from "./property_get.mjs";
+import { firebase_apps_frozen_unchanged_assert_deploy } from "./firebase_apps_frozen_unchanged_assert_deploy.mjs";
+import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 export async function firebase_deploy() {
-  "Puts this repo's pages live, but only after the whole check passes and every frozen app is proved unchanged, and only one such deploy may run on this machine at a time. Sends what is already waiting and puts nothing new there.";
-  "Its pair puts one more build into the folder on the way past, between the check and the sending, and everything else about the two is the same. Written out twice, the copy without the build was the one that stayed right, and the one with it kept the older order - asking after it had already written - which is how a refused run still changed what would go out next time.";
-  async function promote() {
-    "nothing is put in place by this one, and the sending is told so rather";
-    "than left to work it out from an absent answer";
-    return null;
-  }
-  let done = await firebase_deploy_promote_generic(promote);
-  let published = property_get(done, "published");
+  "Sends out what is already waiting in the folder that goes live, one sending at a time on this machine, and only once every frozen app is proved to be exactly what prod is already serving. Nothing new is put there on the way past.";
+  "It asks nothing about whether the code is correct, and that is deliberate. The folder it sends means ready to send - a build only reaches it by way of a latest that was generated and approved, and that is where the question of correctness is asked. Asked again here it would be answered about the working folder, which is not what is being sent: a peer's half-written file, or a gate somebody else turned red an hour ago, would hold back a folder that was judged and approved before either of them existed.";
+  "So the only two things that may stop a sending are the two that are about the very bytes going out. One is a copy already under way - the lock is shared with the copying from latest, so a sending can never walk a folder that is half-written. The other is the proof that the frozen apps have not moved, which is a question about content and has an answer in the folder itself.";
+  let published = await firebase_deploy_locked_generic(
+    firebase_apps_frozen_unchanged_assert_deploy,
+    firebase_deploy.name,
+  );
   return published;
 }
