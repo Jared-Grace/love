@@ -66,6 +66,7 @@ export function app_code_lesson_expression_remainder_subtract() {
     forwards,
     backwards,
   });
+  let above = app_code_lesson_expression_remainder_subtract_above;
   let lesson = app_code_lesson_base(
     name_id,
     above,

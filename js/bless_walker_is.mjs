@@ -29,6 +29,13 @@ export function bless_walker_is(fraction) {
   ("which is what lets this number be four in five at all. Raising the share and widening");
   ("the pavement are one change, and either half alone is a street that does not work: the");
   ("share without the room is a jam, the room without the share is an empty pavement.");
+  ("Both of those were argued when a block held sixty people. It holds thirty now, and the");
+  ("ceiling moved with it: the pavement was widened as far as the ground allows and the");
+  ("street still read as packed, so the crowd itself gave instead. That does not change this");
+  ("number, and it is worth saying why not - the share and the head-count answer different");
+  ("complaints. How many people are out decides whether anybody can move at all; how many of");
+  ("them walk decides whether the ones who can are worth watching. Thirty people all stood");
+  ("at their own doors would be a street with room to spare and nothing happening in it.");
   ("The opposite complaint is real too. The doorstep crowd moves a pace and comes back,");
   ("so from across the map they barely change tiles at all, and the eye counts anybody who");
   ("stays on one square as scenery. At a third, and then at two in five, most of the people");
