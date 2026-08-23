@@ -8,6 +8,7 @@ export async function app_shared_text_reader_untranslated_gate_run() {
   "Gate: in an app that promised to meet its reader in their own language, no word goes onto the page in english straight from where it was typed. Throws so the dispatcher seam exits nonzero.";
   "This is the half the count of sayings cannot reach. That one asks of every saying already going through the picking whether it has been written in each language, and a word that never went near the picking is not a saying it finds short - it is a saying it never met, so it comes out clean while a whole screen stays in english.";
   "It says how many doors it stood at as well as what it found, one line per door, because nothing here can tell a clean app from an unwatched one by the answer alone. Nothing found at nine doors is a good day; nothing found at one door is a page nobody looked at.";
+  "Next to the doors it says how many of the words that went through each one were carried in from somewhere else rather than written out at the door. That is the size of what it could not read, printed beside what it read, so a clean answer can be weighed instead of taken. An app whose screens are built out of records will show a large number there and still be in perfect order - the words were simply settled somewhere this did not go, and it is the other half of the pair that answers for them.";
   "Even at every door it is only half a guard, and the half it is not covers a whole way of writing a screen. Words gathered into a record first and read back out at the door are settled while the app runs, so nothing written in the code says what the reader gets, and this passes them by. Its partner reads the sayings themselves and catches those. So a green answer here is a promise about one shape of code and not about the app, and it is the pair that means the app was looked at.";
   let apps = app_shared_text_reader_apps();
   let untranslated = [];
@@ -15,8 +16,10 @@ export async function app_shared_text_reader_untranslated_gate_run() {
     let scan = await app_shared_text_reader_untranslated(f_name_app);
     let found = property_get(scan, "found");
     let looked = property_get(scan, "looked");
+    let carried = property_get(scan, "carried");
     list_add_multiple(untranslated, found);
     console.log("app  " + f_name_app + "  doors watched  " + json_to(looked));
+    console.log("app  " + f_name_app + "  words carried in  " + json_to(carried));
     for (let one of found) {
       let f_name = property_get(one, "f_name");
       let door = property_get(one, "door");

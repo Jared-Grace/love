@@ -18,6 +18,8 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   "It is asked of one app rather than of the folder, because whether a word should be turned into another language is a promise that particular app made and not a rule of the repo. An app that only ever speaks english is not in breach for speaking it.";
   "Words with no letters in them are passed over. An arrow, a space, a gap between two things reads the same in every language there is, and naming those would bury the ones that matter under the ones that never could.";
   "It says alongside what it found how many doors it went and stood at, one line per door, because a small answer here has two readings and they are opposite. Two words left in english is a good day; two doors watched out of ten is a page nobody looked at, reported as a good day.";
+  "It also counts, door by door, how often the words handed over were not written out there at all but carried in from somewhere else, because that number is the size of what this cannot see. Nothing found at a door where every word was written out in place is a door read to the end; nothing found at a door where every word was carried in is a door this walked up to and could say nothing about. Both come back as nothing, and until now the answer was the same word for both.";
+  "That count is a floor under the blindness rather than a measure of it. A word carried in was typed somewhere, and where it was typed may well be a saying already offered in every language - so a high count is not a fault and does not mean anybody was let down. What it means is that the number next to it was answered somewhere this did not go, and how far somebody should trust a zero here is the ratio of the two.";
   "The app's own dev screens are not walked into. The promise is to a reader, and the screens the person building the app opens to look at their own work have no reader; where the walk turns aside and why is settled next door, so that this stays a reading of doors and does not become a second opinion about which screens are private. Read the number of functions read alongside the findings if that ever looks like too much to have been dropped: it counts what was actually opened, so the stopping shows up there rather than hiding.";
   arguments_assert(arguments, 1);
   let seats = app_shared_text_reader_seats();
@@ -26,6 +28,7 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   let calls = property_get(walked, "calls");
   let found = [];
   let looked = {};
+  let carried = {};
   for (let one of calls) {
     let f_name = property_get(one, "f_name");
     let callee_name = property_get(one, "callee_name");
@@ -41,6 +44,11 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
       let argument = call.arguments[at];
       let absent = null_is(argument);
       if (absent) {
+        continue;
+      }
+      let written = js_literal_text_deep_is(argument);
+      if (not(written)) {
+        property_count_add(carried, door, 1);
         continue;
       }
       let words = js_literal_text_letters_try(argument);
@@ -59,6 +67,7 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   let r = {
     found,
     looked,
+    carried,
     reachable,
   };
   return r;
