@@ -46,6 +46,7 @@ import { command_grantable_run_name_cases_gate_run } from "./command_grantable_r
 import { app_shared_text_reader_untranslated_gate_run } from "./app_shared_text_reader_untranslated_gate_run.mjs";
 import { folders_waiting_to_be_deleted_gate_run } from "./folders_waiting_to_be_deleted_gate_run.mjs";
 import { folders_root_gate_run } from "./folders_root_gate_run.mjs";
+import { html_regenerate_stable_gate_run } from "./html_regenerate_stable_gate_run.mjs";
 import { text_replace_path_start_cases_gate_run } from "./text_replace_path_start_cases_gate_run.mjs";
 import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
 import { js_delegate_only_cases_gate_run } from "./js_delegate_only_cases_gate_run.mjs";
@@ -701,6 +702,7 @@ export function qa_gates() {
     text_replace_once_cases_gate_run,
     text_replace_path_start_cases_gate_run,
     folders_root_gate_run,
+    html_regenerate_stable_gate_run,
     data_rooms_gate_run,
     word_root_cases_gate_run,
     firebase_storage_list_url_cases_gate_run,
