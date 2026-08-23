@@ -1,4 +1,6 @@
 import { app_code_expression_replace_await } from "./app_code_expression_replace_await.mjs";
+import { app_code_head_flush_above_code } from "./app_code_head_flush_above_code.mjs";
+import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { app_code_expression_step_say } from "./app_code_expression_step_say.mjs";
 import { app_code_expression_choose_say } from "./app_code_expression_choose_say.mjs";
 import { html_remove_if_not_null } from "./html_remove_if_not_null.mjs";
@@ -29,6 +31,8 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("what the lesson is for is said of the very line the learner is about to press, so it stands inside the example rather than in a card of its own above it");
   ("It used to be said above the example, of a line built for the saying. That put two different lines of the same shape one under the other, and a learner comparing them for what had changed was reading a difference the lesson never meant to draw.");
   let head = html_div_first(card);
+  ("the words stand off from the Code label under them, because the label and the line it introduces are a second thing on the card and words running straight into a label read as one sentence broken in the middle");
+  app_code_head_spaced_above_code(head);
   let duration = app_shared_animation_duration();
   let intro = html_div(head);
   let note = html_div(head);
@@ -58,6 +62,16 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     );
     return promise;
   }
+  async function head_said_button(change) {
+    "the same settling, for words that end in a button rather than in a line to read: the head gives back the room it leaves above the Code label, because the button carries room of its own underneath it";
+    "The giving back is done INSIDE the change, where the two heights are measured around it, so the room leaves at the same moment the words do and the head slides once instead of jumping and then sliding.";
+    function change_flush() {
+      app_code_head_flush_above_code(head);
+      change();
+    }
+    let promise = await head_said(change_flush);
+    return promise;
+  }
   async function on_chosen(node, value, node_span, waiting_on) {
     "the press is answered in words before anything on the line moves: what the chosen operator comes to, and then a button to make the swap, so the replacement is something the learner does rather than something that happens to them";
     "the blue block itself is handed over too, because once the button is pressed the swap is shown travelling between that block and the two blue pieces of the sentence naming it";
@@ -67,7 +81,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       node_span,
       value,
       rule_line_retire,
-      head_said,
+      head_said_button,
       waiting_on,
     );
   }
@@ -86,6 +100,8 @@ export function app_code_lesson_expression_choose_order_walkthrough(
       return;
     }
     function change() {
+      "the room above the Code label comes back, because what stands there now is a line to read again rather than the button that had given it up";
+      app_code_head_spaced_above_code(head);
       app_code_expression_step_say(note, current, ready, line_code);
     }
     head_said(change);
@@ -94,6 +110,7 @@ export function app_code_lesson_expression_choose_order_walkthrough(
     "a press on an operator that cannot go yet: say why, and leave the rest of the line to be pressed";
     "Answered with the rule the head of the example stated, said again of the line being pressed. The refusal alone told a learner that this operator is not the one without ever telling them what decides which is - so the same press was left to be made again on the next line by the same reading that made it here.";
     function change() {
+      app_code_head_spaced_above_code(head);
       app_code_lesson_expression_choose_order_wrong_say(
         note,
         node,
