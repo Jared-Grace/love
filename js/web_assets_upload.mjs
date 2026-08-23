@@ -1,7 +1,7 @@
 import { cache_control_asset_value } from "./cache_control_asset_value.mjs";
 import { file_content_type } from "./file_content_type.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
-import { firebase_upload_generic } from "./firebase_upload_generic.mjs";
+import { firebase_upload_settings } from "./firebase_upload_settings.mjs";
 import { web_assets_destination } from "./web_assets_destination.mjs";
 import { web_assets_folder_join } from "./web_assets_folder_join.mjs";
 export async function web_assets_upload(path) {
@@ -20,6 +20,6 @@ export async function web_assets_upload(path) {
       cacheControl: cache_control,
     },
   };
-  await firebase_upload_generic(destination, settings, buffer);
+  await firebase_upload_settings(destination, settings, buffer);
   return destination;
 }

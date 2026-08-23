@@ -13,11 +13,11 @@ import { list_concat } from "./list_concat.mjs";
 import { text_to } from "./text_to.mjs";
 export function app_code_lesson_expression_either_first_proof(parent, tree) {
   arguments_assert(arguments, 2);
-  ("the whole of what this lesson teaches, shown of the very line the learner is about to press: that two operators are ready at once, that either of them may be taken first, and that both orders land on the same value");
+  ("the whole of what this lesson teaches, shown of one line of its kind: that two operators are ready at once, that either of them may be taken first, and that both orders land on the same value");
   ("Worked, not asserted. A sentence saying the order does not matter is something to believe; the two orders written out one under the other, ending on one value, is something to check - and checking it is how a learner comes to trust a choice they made themselves rather than waiting to be told which one was meant.");
   ("Every ready operator gets a row, read from the shape rather than from a count, so the rows say what is true of the line standing there instead of what was true of the line this was written for.");
-  ("Each row names its operator by the little line it is - Take 2 * 3 first - rather than by which side it is on. The learner has to find that operator on the line below to press it, and a name they can read off the line is one they can find; left and right is a second reading to do first.");
-  ("a plain block rather than a card of its own, because it already stands inside the example's card and a card drawn inside a card reads as a second thing beside the line rather than as what is being said about it");
+  ("Each row names its operator by the little line it is - Take 2 * 3 first - rather than by which side it is on. A name read off the line is one a learner can find again on the line above it; left and right is a second reading to do first.");
+  ("a plain block rather than a card of its own, because what stands above the card on the lessons either side of this one is said as plain lines too, and a box around these ones would read as a different kind of saying rather than as the same saying carried on");
   let ready = app_code_expression_nodes_ready(tree);
   let card = html_div(parent);
   let heading = html_div_cycle_code(card, [

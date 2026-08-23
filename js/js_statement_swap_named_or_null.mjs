@@ -1,3 +1,5 @@
+import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_statement_address_name } from "./js_statement_address_name.mjs";
@@ -14,6 +16,7 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   "ONE STATEMENT REPLACED IS AN ARITHMETIC RESULT AND NOT A SPECIFICATION. It is what is left after the readings that go inside a statement have all said nothing, and measured over the corpus it was the largest bucket there was. A hundred edits under one name is a hundred edits nobody can search for, because the name says only that the run stayed the length it was.";
   "WHAT A READER WANTS TO KNOW IS WHICH LINE AND WHAT KIND OF LINE. A binding whose value was written differently, a call whose arguments moved, a different thing coming back: those are three separate edits, and each of them is the shape of a transform somebody could write. Told apart they are specifications; told together they are a count.";
   "A SWAP BETWEEN TWO KINDS IS NOT NAMED HERE. A binding that became a return, or a call that became an if, is a change of what the line is for rather than a change inside it, and there is no shorter true thing to say about it than that one statement went out and another came in.";
+  "AN IF IS ONLY THE CONDITION ONCE EVERY BRANCH HAS COME BACK IDENTICAL. Both branches moving is two edits and an else appearing is a change of shape, and neither of those touched the condition at all - so the branches are compared before the condition is named, and the two other shapes are handed back unnamed. The reading beside this one gives that same case up on purpose, saying every run matching is the head having moved and belongs to the caller; this is the caller it meant.";
   "THE NAME OF A BINDING IS ONLY WORTH SAYING WHILE IT STAYS THE SAME. Where the value was written differently the name is the address a reader goes to; where the name changed too, saying either of them points at half the edit, so the kind is said on its own.";
   arguments_assert(arguments, 2);
   let kind = property_get(node_before, "type");
@@ -64,6 +67,18 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let asked = js_node_type_is(node_before, "IfStatement");
   if (asked) {
+    let differing = js_statement_runs_differing_or_null(
+      node_before,
+      node_after,
+    );
+    let apart = null_is(differing);
+    if (apart) {
+      return null;
+    }
+    let inside = list_empty_not_is(differing);
+    if (inside) {
+      return null;
+    }
     let r5 = "a condition written differently";
     return r5;
   }

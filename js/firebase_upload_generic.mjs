@@ -1,14 +1,8 @@
-import { google_storage_host } from "./google_storage_host.mjs";
-import { firebase_bucket_file_get } from "./firebase_bucket_file_get.mjs";
-import { retry_standard } from "./retry_standard.mjs";
+import { firebase_upload_settings } from "./firebase_upload_settings.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function firebase_upload_generic(destination, settings, buffer) {
-  let bucket = null;
-  let file = null;
-  ({ bucket, file, destination } = await firebase_bucket_file_get(destination));
+  "Writes a file to storage, said to be one a reader should ask about again rather than keep.";
+  "The merge is strict, so a caller that says anything about how the file is described collides with that rather than replacing it - and the door to take when that is what you meant is the one this calls.";
   let merged = object_merge_set(
     {
       metadata: {
@@ -17,21 +11,5 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     },
     settings,
   );
-  await retry_standard(lambda);
-  let message = text_combine("Uploaded data to ", destination);
-  log_keep(firebase_upload_generic.name, message);
-  let host = google_storage_host();
-  let url = text_combine_multiple([
-    "https://",
-    host,
-    "/",
-    bucket.name,
-    "/",
-    file.name,
-  ]);
-  let message2 = text_combine("Accessible at:", url);
-  log_keep(firebase_upload_generic.name, message2);
-  async function lambda() {
-    await file.save(buffer, merged);
-  }
+  await firebase_upload_settings(destination, merged, buffer);
 }
