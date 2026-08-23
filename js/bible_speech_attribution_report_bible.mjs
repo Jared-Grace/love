@@ -24,6 +24,7 @@ export async function bible_speech_attribution_report_bible(bible_folder) {
       attributed: book_report.attributed,
       citations: book_report.citations,
       headings: book_report.headings,
+      continuations: book_report.continuations,
       unattributed: book_report.unattributed,
     };
     return row;
