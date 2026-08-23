@@ -17,6 +17,8 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   "IT IS DRAWN AS WIDE AS THE READER'S PAGE ALLOWS. These are single shapes on black glass, made large on purpose so somebody whose eyes no longer read small things can see what they are, and shrinking one to sit politely beside the words would undo the one thing the drawing was for.";
   "The description the picture was drawn from is what a reader who cannot see it is given instead. It is already a plain account of the shape, written before the picture existed, so there is nothing to compose - and nothing else on the page says what is in the window.";
   "A line whose picture nobody has settled on yet is passed over in silence rather than left as a gap where a picture failed to load.";
+  "EACH PICTURE IS FETCHED ONLY WHEN THE READER IS NEARLY AT IT. A hymn of thirty-six lines is thirty-six pictures, and asked for all at once on a phone they arrive together and therefore slowly - the person this was drawn for watched them fill in downwards a line at a time, which is what a browser does when every picture is sharing the one connection. Asked for one at a time as the page is scrolled, the first is alone and arrives at once, and every later one has the whole time the reader spends on the line above it.";
+  "DECODING IS LEFT TO ITS OWN TIME for the same reason. Turning a picture back into an image is work, and done in the middle of everything else it stops the page moving while it happens - which on a page that is meant to be scrolled slowly through is felt as the scroll catching rather than as a picture appearing.";
   "It hands back the places waiting for words, the same way one sung line does, because the page fetches every passage on it in one go.";
   "WHAT TO CALL THE CARD IS DECIDED BY THE CALLER, because only the caller knows whether this picture has a neighbour. A line sung once has one picture and can simply say this picture; a line sung twice has two, one under the other, and two cards both saying this picture tell a reader who cannot see them apart nothing at all about which is which.";
   arguments_assert(arguments, 4);
@@ -29,6 +31,8 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   let couplet = song_image_couplet_get(n);
   let picture = html_img(parent, url);
   html_attribute_set(picture, "alt", couplet.symbol);
+  html_attribute_set(picture, "loading", "lazy");
+  html_attribute_set(picture, "decoding", "async");
   html_style_set(picture, "width", "100%");
   html_style_set(picture, "display", "block");
   html_style_margin_top(picture, "12px");
