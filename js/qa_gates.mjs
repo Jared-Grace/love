@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_marks_unseated_gate_run } from "./bible_glyph_chapters_marks_unseated_gate_run.mjs";
 import { bible_versions_english_choices_sources_gate_run } from "./bible_versions_english_choices_sources_gate_run.mjs";
 import { app_code_lessons_order_ahead_gate_run } from "./app_code_lessons_order_ahead_gate_run.mjs";
 import { functions_name_word_repeated_gate_run } from "./functions_name_word_repeated_gate_run.mjs";
@@ -779,6 +780,7 @@ export function qa_gates() {
     commits_message_alias_gate_run,
     commits_message_path_gate_run,
     functions_name_word_repeated_gate_run,
+    bible_glyph_chapters_marks_unseated_gate_run,
   ];
   return gates;
 }
