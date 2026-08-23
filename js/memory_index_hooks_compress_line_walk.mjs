@@ -11,7 +11,7 @@ import { memory_index_head_separated_is } from "./memory_index_head_separated_is
 import { memory_index_head_tidy } from "./memory_index_head_tidy.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-export function memory_index_hooks_compress_line_line(
+export function memory_index_hooks_compress_line_walk(
   r2,
   lines,
   link_open,

@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_shared_hash_index_open_key } from "./app_shared_hash_index_open_key.mjs";
 import { storage_session_set } from "./storage_session_set.mjs";
 export function app_shared_hash_index_open_persist(app_fn, open_paths) {

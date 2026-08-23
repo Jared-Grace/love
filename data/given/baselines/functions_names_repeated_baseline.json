@@ -21,11 +21,11 @@
   "gloss_entries_affix_letters_wrong_entry_read_entry_read",
   "html_scroll_animate_frames",
   "html_scroll_animate_run_frames",
-  "html_scroll_animate_animate_start",
-  "html_scroll_animate_animate",
-  "literals_unnamed_generic_found_found_files_by_literal",
-  "literals_unnamed_generic_found_found",
-  "memory_index_hooks_compress_line_line",
+  "html_scroll_animate_start",
+  "html_scroll_animate_run",
+  "literals_unnamed_generic_files_by_literal",
+  "literals_unnamed_generic_gather",
+  "memory_index_hooks_compress_line_walk",
   "property_starts_with_property_starts_with_curried_specify_2_3"
  ]
 }

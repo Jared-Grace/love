@@ -11,5 +11,5 @@ export async function app_sandbox(context) {
   html_clear(root);
   html_mobile_default(context);
   let name = html_hash_name_get();
-  await app_sandbox_choose(root, name);
+  await app_sandbox_choose(name);
 }

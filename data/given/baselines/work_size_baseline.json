@@ -14,7 +14,7 @@
   "app_code_review_present_fn",
   "js_function_forwarding_removed",
   "js_expand_generic",
-  "memory_index_hooks_compress_line_line",
+  "memory_index_hooks_compress_line_walk",
   "app_replace_rule_set_proof_show",
   "app_g_study_lambda",
   "app_g_dev_tools_open_verify_page_visit"
