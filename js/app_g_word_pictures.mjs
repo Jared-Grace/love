@@ -1,6 +1,5 @@
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_shared_api } from "./app_shared_api.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { property_get_or } from "./property_get_or.mjs";
@@ -57,8 +56,8 @@ export async function app_g_word_pictures() {
   }
   async function render() {
     "the three tables are asked for before anything is cleared, so a seam that is down leaves the sheet standing as it was instead of blanking the page.";
-    let f_name2 = fn_name("word_pictures_drawn_known");
-    let known = await app_g_word_pictures_api(f_name2, []);
+    let f_name = fn_name("word_pictures_drawn_known");
+    let known = await app_g_word_pictures_api(f_name, []);
     let f_name3 = fn_name("word_picture_chosen");
     let chosen = await app_g_word_pictures_api(f_name3, []);
     let f_name4 = fn_name("word_picture_wordings");
@@ -254,13 +253,4 @@ export async function app_g_word_pictures() {
     each(words, word_block);
   }
   await render();
-}
-async function app_g_word_pictures_api(f_name, args) {
-  arguments_assert(arguments, 2);
-  let a = {
-    f_name,
-    args,
-  };
-  let result = await app_shared_api(a);
-  return result;
 }
