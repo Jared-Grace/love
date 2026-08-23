@@ -11,6 +11,7 @@ export async function functions_oversize_shortened_rescues() {
   "How many of the runs the cut turns down would be taken if the run were offered ending a line or more earlier, counted across every function standing over the ceiling.";
   "IT SAYS WHETHER OFFERING THE SHORTER RUN IS WORTH BUILDING INTO THE WALK. Every reason the cut steps over a run except the one about where it starts is a reason about the word its last line ends on, so in principle moving that line out answers all of them - and in principle is not a number. What matters is how many of the runs actually turned down have a nameable word waiting one or two lines up, because a run that is turned down again at every length it can be shortened to was never rescued by anything.";
   "THE LINES GIVEN UP ARE COUNTED BESIDE THE RESCUES. A shorter run is a smaller cut, and a rescue that had to walk back five lines to find a word took most of the run away to get there - which is a different offer from one that dropped a single line, and the two should not be read as the same win.";
+  "A RESCUE IS COUNTED AGAIN FOR EVERY RUN IT RESCUES, AND THE DISTINCT ONES ARE COUNTED APART FROM IT. The list offers one run per starting line, so every run reaching a given last line ends on the same unnameable word and walks back to the same word above it. Reading the raw count as an amount of work is the mistake that made sixty six refusals look like sixty six problems when they were twenty three choices; the same collapse is done here, keyed on the function and the word walked back from, so what comes back says how many separate places would gain rather than how many offers would change.";
   "NOTHING IS WRITTEN AND NOTHING IS MOVED.";
   arguments_assert(arguments, 0);
   let walked = await functions_oversize_span_skips();
@@ -18,6 +19,7 @@ export async function functions_oversize_shortened_rescues() {
   let rescued = 0;
   let dropped = 0;
   let samples = [];
+  let places = [];
   for (let row of walked) {
     let f_name = property_get(row, "f_name");
     let skips = property_get(row, "skips");
@@ -42,6 +44,11 @@ export async function functions_oversize_shortened_rescues() {
       rescued = add(rescued, 1);
       let lost = property_get(shorter, "dropped");
       dropped = add(dropped, lost);
+      let place = text_combine_multiple([f_name, " ", address_to]);
+      let counted = list_includes(places, place);
+      if (not(counted)) {
+        list_add(places, place);
+      }
       let few = list_size_less_than_value(samples, 6);
       if (few) {
         let value = property_get(shorter, "address_to");

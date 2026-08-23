@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { door43_versions } from "./door43_versions.mjs";
-import { ebible_language_code_english } from "./ebible_language_code_english.mjs";
+import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { ebible_licence_commercial_is } from "./ebible_licence_commercial_is.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -12,7 +12,7 @@ export function door43_versions_english_choices() {
   ("THESE ARE NOT WHOLE BIBLES AND THAT IS WHY THEY ARE LISTED APART. The eBible side is defined as the translations we hold all sixty-six books of, and these two are published a book at a time - fifty-six of the sixty-six at the release read here. Folding them in would either break that definition or lose them, so they are their own list and the comparison holds both.");
   ("The language is asked for by its code rather than by the English word for it, because the code is what every other list here joins a bible to a language by.");
   let versions = door43_versions();
-  let english = ebible_language_code_english();
+  let english = ebible_language_en_code();
   let held = list_filter_property(versions, "language_code", english);
   function choice(record) {
     let bible_folder = property_get(record, "bible_folder");
