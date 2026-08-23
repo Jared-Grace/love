@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function bible_speech_quotation_gloss_is(quotation) {
   "$plain quotation";
