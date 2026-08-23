@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_2jn01 } from "./bible_glyph_chapter_2jn01.mjs";
 import { bible_glyph_chapter_psa023 } from "./bible_glyph_chapter_psa023.mjs";
 import { bible_glyph_chapter_psa100 } from "./bible_glyph_chapter_psa100.mjs";
 import { bible_glyph_chapter_1jn02 } from "./bible_glyph_chapter_1jn02.mjs";
@@ -48,7 +49,9 @@ export function bible_glyph_chapters() {
   "AND IT IS THE FIRST PAIR IN THIS LIST WHERE ONE CHAPTER FINISHES THE OTHER'S SENTENCE. The twenty third has the LORD as one man's shepherd and the hundredth has the nation as His flock, the same animal at both scales - and because the shepherd is drawn as the human and the sheep together, a reader who has met either verse is looking at half of the other. The twenty third is not written yet and does not have to be for that to be true, because the mark carries it rather than the chapter.";
   "THE EIGHTEENTH IS THE CHAPTER THE SEVENTEENTH WAS BOUGHT FOR, AND IT ARRIVED ONE COMMIT LATE ON PURPOSE. The twenty third psalm asked for four pictures, was told it could have one, and then had to wait while the hundredth psalm proved that one was worth having. So the pair above closed from the other end: the promise in the seventeenth entry that the twenty third need not be written for the mark to carry is now a promise that was kept and can be checked by reading both.";
   "AND IT IS THE FIRST CHAPTER WHOSE MOST FAMOUS VERSE DRAWS NOTHING. The table, the enemies, the oil, the cup running over - five words a reader could recite and not one of them seated, so the fifth verse sits in plain English between two marked ones. That is the clearest thing this list contains about what the project is: the marks follow the root table and not the imagery, and a chapter that drew where the pictures were vivid would be illustrating rather than glossing.";
-  "Eighteen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE NINETEENTH IS THE FIRST WHOLE BOOK, AND IT IS ONE CHAPTER LONG. The sixteenth entry completed a book too, and it took five chapters and five sittings to do it; the second letter of John is thirteen verses, so the book and the chapter are the same object and a reader gets a complete piece of the Bible in one file. What that buys is the only thing a scattered chapter cannot: a reader who has finished it has finished something, rather than having stopped.";
+  "AND IT COST NOTHING BECAUSE THE SAME MAN WROTE THE FIVE CHAPTERS ABOVE IT. The ninth entry was the first chapter to buy no picture and the note beside it says a table keyed by root is proved by a measurement rather than a claim. This is that measurement taken along a new axis - not a second chapter inside a book, but a second BOOK by one writer, turning over the same truth and love and walking and commandment. The saving follows the hand that wrote, and not only the scroll it was written on.";
+  "Nineteen chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -70,6 +73,7 @@ export function bible_glyph_chapters() {
   let sixteenth = bible_glyph_chapter_1jn02();
   let seventeenth = bible_glyph_chapter_psa100();
   let eighteenth = bible_glyph_chapter_psa023();
+  let nineteenth = bible_glyph_chapter_2jn01();
   let chapters = [
     first,
     second,
@@ -89,6 +93,7 @@ export function bible_glyph_chapters() {
     sixteenth,
     seventeenth,
     eighteenth,
+    nineteenth,
   ];
   return chapters;
 }

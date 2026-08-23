@@ -1,3 +1,6 @@
+import { list_includes } from "./list_includes.mjs";
+import { list_size } from "./list_size.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_oversize_span_skips } from "./functions_oversize_span_skips.mjs";
 import { function_span_cut_shortened_or_null } from "./function_span_cut_shortened_or_null.mjs";
@@ -68,6 +71,7 @@ export async function functions_oversize_shortened_rescues() {
   let r = {
     refused,
     rescued,
+    places: list_size(places),
     dropped,
     samples,
   };
