@@ -12,7 +12,7 @@ export function app_code_lesson_expression_comparison_or_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["comparison inside ", symbol]);
   }
-  let rights = ["comparison inside or"];
+  let rights = ["or comparison"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

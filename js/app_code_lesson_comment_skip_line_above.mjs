@@ -40,7 +40,7 @@ export function app_code_lesson_comment_skip_line_above(root) {
   let value = text_to(first_total);
   app_code_code_lines_writes_out(box_last_off, [first_line, last_noted], value);
   html_div_cycle_code(box_last_off, [
-    "That line is a note now, so it is skipped",
+    "That line is a comment now, so it is skipped",
   ]);
   html_div_cycle_code(box_last_off, ["Its answer is gone"]);
   let box_first_off = app_code_container_light_blue(root);

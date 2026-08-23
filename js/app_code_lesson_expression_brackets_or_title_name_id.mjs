@@ -19,7 +19,7 @@ export function app_code_lesson_expression_brackets_or_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["", pair, " around ", symbol]);
   }
-  let rights = ["brackets around or"];
+  let rights = ["brackets or"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

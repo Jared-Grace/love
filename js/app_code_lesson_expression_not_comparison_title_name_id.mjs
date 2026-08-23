@@ -12,7 +12,7 @@ export function app_code_lesson_expression_not_comparison_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["", symbol, " around a comparison"]);
   }
-  let rights = ["not around a comparison"];
+  let rights = ["not comparison"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;

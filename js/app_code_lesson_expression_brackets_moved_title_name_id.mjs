@@ -17,7 +17,7 @@ export function app_code_lesson_expression_brackets_moved_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["", pair, " around either pair"]);
   }
-  let rights = ["brackets around either pair"];
+  let rights = ["brackets either pair"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;
