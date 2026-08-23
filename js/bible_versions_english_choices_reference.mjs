@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { list_filter_property_not } from "./list_filter_property_not.mjs";
-export async function ebible_versions_english_choices_reference(reference) {
+export async function bible_versions_english_choices_reference(reference) {
   "$plain reference";
   "One passage, written the way a person writes one - 'Malachi 3:17' - read out of every complete English translation this repo may lawfully put in front of a reader, as each translation against the words it uses there.";
   "IT IS FOR CHOOSING WORDING, WHICH IS A COMPARISON AND NOT A LOOKUP. A line of a song rests on a passage, and the several translations of that passage differ in exactly the way the choice turns on - one says jewels where another says treasured possession. Read one at a time the differences are invisible, because nothing is beside anything.";
