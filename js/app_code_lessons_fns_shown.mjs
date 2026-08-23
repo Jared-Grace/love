@@ -1,6 +1,6 @@
 import { app_shared_page_stage_latest_is } from "./app_shared_page_stage_latest_is.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
-import { app_code_lessons_prod_last_fn } from "./app_code_lessons_prod_last_fn.mjs";
+import { app_code_lessons_read_through_last_fn } from "./app_code_lessons_read_through_last_fn.mjs";
 import { app_shared_page_stage_prod_is } from "./app_shared_page_stage_prod_is.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_slice_include } from "./list_slice_include.mjs";
@@ -19,7 +19,7 @@ export function app_code_lessons_fns_shown() {
     return fns;
   }
   ("naming the last one and cutting there, rather than counting, because a lesson put in ahead of it moves every number and moves no name");
-  let last = app_code_lessons_prod_last_fn();
+  let last = app_code_lessons_read_through_last_fn();
   let index = list_index_of(fns, last);
   let shown = list_slice_include(fns, 0, index);
   return shown;
