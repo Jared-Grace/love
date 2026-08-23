@@ -1,8 +1,8 @@
+import { app_code_lesson_expression_comparing_a_comparison_replacing_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_replacing_worked_example.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_line } from "./app_code_lesson_expression_comparing_a_comparison_line.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_expression } from "./app_code_lesson_expression_comparing_a_comparison_expression.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_worked_example } from "./app_code_lesson_expression_comparing_a_comparison_worked_example.mjs";
-import { js_true_false_word } from "./js_true_false_word.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_title_name_id } from "./app_code_lesson_expression_comparing_a_comparison_title_name_id.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -11,7 +11,6 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_label_value } from "./app_code_label_value.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_operator_bang_double_equal } from "./js_operator_bang_double_equal.mjs";
 import { js_operator_triple_equal } from "./js_operator_triple_equal.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -48,17 +47,10 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function replacing(root, code, value) {
-    "the move the whole lesson is: a comparison works out to a true or false, so the comparison can be replaced by that true or false. Said on its own, before any line is walked through, because it is the rule and the walkthroughs are only it happening";
-    "The card used to close on In general, replacing must honor order like * before +, and that line is gone. Every line this lesson can put in front of a learner holds one comparison and one true or false, so there is never a second place a replacement could have gone and the caveat fires on nothing. Worse, it names the wrong rule for the lines that are here: * before + is precedence, one operator outranking another, while the question these lines actually raise is which end of 6 !== 8 !== false groups first, and that is associativity. A caveat that answers a question the screen never asks, with a rule that would not answer the question it does ask, is a step off the ladder the card climbs";
-    let card = app_code_container_light_blue(root);
-    let answer = js_true_false_word(value);
-    html_div_cycle_code(card, ["", code, " is ", answer]);
-    html_div_cycle_code(card, ["So we can replace ", code, " with ", answer]);
-  }
   function above(root) {
-    "first what the word comparison names, then the line the whole screen is here to solve, then the replacing rule, then two lines walked through a replacement at a time";
+    "first what the word comparison names, then the line the whole screen is here to solve, then that line worked out, then a second line worked out the same way";
     "The line comes second, before anything that solves it, because the screen used to prove its lemmas first and only then name the theorem: a learner met a comparison results in true or false, and then we can replace 3 === 5 with false, with nowhere to put either - the line those two facts were FOR had not been shown yet. Asked first, each line after it is heard as an answer, and the second walkthrough was already written this way round, so the screen now asks in one voice rather than two";
+    "The replacing rule used to have a card to itself, standing between the line and the first walkthrough - and the walkthrough then opened by supposing that very line again. So the screen said Suppose we want to solve 3 === 5 === false, said a rule, and said Suppose we want to solve 3 === 5 === false. A learner met the sentence twice and had to check nothing had changed. The rule and the first walkthrough are one card now: the line is put up once at the top, and the card under it takes that line all the way down to its answer.";
     "An idea card used to stand between the line and the replacing rule: seven rows climbing from 1 < 2 is true up to so anywhere true or false can be used, we can use a comparison. It argued the line was LEGAL - a comparison may stand where a plain true or false stands - which is the opposite direction from the one that solves it, and it argued it on 1 < 2 and true === true, neither of which is the line on the screen. Nothing in this lesson or its quiz ever runs that direction: the learner is handed a line and asked for its value, every time, and the replacing card with the two walkthroughs carries that the whole way. So the longest explanation on the screen was answering a question the screen never asks, and a learner reading down it met a second line being taken apart before the first one had been. It is gone; the learner now reaches a worked line four rows sooner. What makes the line legal is learned by working it, not by reading a derivation of it";
     app_code_lesson_expression_comparing_a_comparison_recall(root);
     let same = js_operator_triple_equal();
@@ -70,10 +62,8 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     );
     app_code_lesson_suppose_solve_line(goal, "Suppose", goal_line);
     let different = js_operator_bang_double_equal();
-    replacing(root, "3 === 5", false);
-    app_code_lesson_expression_comparing_a_comparison_worked_example(
+    app_code_lesson_expression_comparing_a_comparison_replacing_worked_example(
       root,
-      "Suppose",
       "3 === 5",
       false,
       same,
@@ -81,7 +71,7 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     );
     app_code_lesson_expression_comparing_a_comparison_worked_example(
       root,
-      "And suppose",
+      "Now suppose",
       "2 < 5",
       true,
       different,
