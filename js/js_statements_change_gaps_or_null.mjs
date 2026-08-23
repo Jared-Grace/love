@@ -63,8 +63,10 @@ export function js_statements_change_gaps_or_null(texts_before, texts_after) {
     index_before = add(index_before, 1);
     index_after = add(index_after, 1);
   }
-  let tail_before = subtract(list_size(texts_before), index_before);
-  let tail_after = subtract(list_size(texts_after), index_after);
+  let left = list_size(texts_before);
+  let tail_before = subtract(left, index_before);
+  let left2 = list_size(texts_after);
+  let tail_after = subtract(left2, index_after);
   let ended = equal(tail_before, 0) && equal(tail_after, 0);
   if (not(ended)) {
     list_add(gaps, {
