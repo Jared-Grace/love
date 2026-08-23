@@ -15,9 +15,5 @@ export function bible_speech_spans_unclosed_is(spans) {
   }
   let last = spans[spans.length - 1];
   let is = less_than(0, last.depth);
-  let b = not(is);
-  if (b) {
-    return false;
-  }
-  return true;
+  return is;
 }
