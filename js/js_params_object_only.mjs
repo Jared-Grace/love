@@ -5,7 +5,10 @@ import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_add } from "./list_add.mjs";
-import { and } from "./and.mjs";
+import { or } from "./or.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_params_object_only(ast, params) {
   "The parameters of a tree that are only ever asked for a property - never counted, never compared, never handed on - so nothing but an object can be put in them.";
@@ -29,7 +32,7 @@ export function js_params_object_only(ast, params) {
   for (let identifier of identifiers) {
     let declared = list_includes(params, identifier);
     let a_key = list_includes(ignored, identifier);
-    let aside = declared || a_key;
+    let aside = or(declared, a_key);
     if (aside) {
       continue;
     }
@@ -39,13 +42,19 @@ export function js_params_object_only(ast, params) {
       continue;
     }
     let object_use = list_includes(object_uses, identifier);
-    let so_far = property_get(object_only, name);
-    let still = and(so_far !== false, object_use);
-    object_only[name] = still;
+    if (not(object_use)) {
+      property_set(object_only, name, false);
+      continue;
+    }
+    let seen = property_get_or_null(object_only, name);
+    let unset = equal(seen, null);
+    if (unset) {
+      property_set(object_only, name, true);
+    }
   }
   let names = [];
   for (let name of asked) {
-    let only = object_only[name];
+    let only = property_get_or_null(object_only, name);
     if (only) {
       list_add(names, name);
     }
