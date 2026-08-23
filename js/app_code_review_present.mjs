@@ -1,4 +1,4 @@
-import { app_code_review_present_present } from "./app_code_review_present_present.mjs";
+import { app_code_review_present_fn } from "./app_code_review_present_fn.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_review_present(r, home_button, context) {
@@ -27,7 +27,7 @@ export function app_code_review_present(r, home_button, context) {
   };
   let restart_button = property_get(r6, "restart_button");
   let success_container = property_get(r6, "success_container");
-  let present = app_code_review_present_present(
+  let present = app_code_review_present_fn(
     r6,
     home_button,
     success_container,

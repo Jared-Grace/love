@@ -24,7 +24,7 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
-export function app_code_review_present_present(
+export function app_code_review_present_fn(
   r4,
   home_button,
   success_container,

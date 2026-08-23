@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_arithmetic_equality_above } from "./app_code_lesson_expression_arithmetic_equality_above.mjs";
-import { app_code_lesson_expression_arithmetic_equality_equality } from "./app_code_lesson_expression_arithmetic_equality_equality.mjs";
+import { app_code_lesson_expression_arithmetic_equality_example } from "./app_code_lesson_expression_arithmetic_equality_example.mjs";
 import { app_code_lesson_expression_arithmetic_equality_title_name_id } from "./app_code_lesson_expression_arithmetic_equality_title_name_id.mjs";
 import { app_code_label_value_backwards } from "./app_code_label_value_backwards.mjs";
 import { app_code_label_value } from "./app_code_label_value.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_arithmetic_equality() {
     let same = equal(left.code, right.code);
     let right_retry = app_code_arithmetic_to_value(value);
     let right_final = ternary(same, right_retry, right);
-    let example = app_code_lesson_expression_arithmetic_equality_equality(
+    let example = app_code_lesson_expression_arithmetic_equality_example(
       left,
       right_final,
     );
@@ -36,7 +36,7 @@ export function app_code_lesson_expression_arithmetic_equality() {
     let value_other = add(value, bump);
     let left = app_code_arithmetic_to_value(value);
     let right = app_code_arithmetic_to_value(value_other);
-    let example = app_code_lesson_expression_arithmetic_equality_equality(
+    let example = app_code_lesson_expression_arithmetic_equality_example(
       left,
       right,
     );
