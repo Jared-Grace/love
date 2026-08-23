@@ -22,10 +22,7 @@ export async function bible_versions_english_choices_references(references) {
   "A TRANSLATION THAT CANNOT BE READ AT ALL IS LEFT OUT RATHER THAN ALLOWED TO END THE COMPARISON. Being on the choices list and having had its chapters uploaded are two separate things, and the first can be true while the second is not. Thrown, one such translation emptied the whole comparison and twenty others that had already been read were shown to nobody.";
   "SEVERAL TRANSLATIONS AT A TIME, because each one not already on this disk has to come down, and waiting for one is no reason to stop asking for the next. A few at a time and not all at once, because the answer is a set of chapters and asking for every translation at once would only queue them somewhere else.";
   arguments_assert(arguments, 1);
-  let licences = await ebible_versions_english_choices_licences();
-  let door = door43_versions_english_choices();
-  let both = list_concat(licences, door);
-  let usable = list_filter_property(both, "commercial", true);
+  let usable = await bible_versions_english_choices_usable();
   async function lambda$read(record) {
     let bible_folder = property_get(record, "bible_folder");
     let name = property_get(record, "name");

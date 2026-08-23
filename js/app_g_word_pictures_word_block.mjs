@@ -1,3 +1,4 @@
+import { app_g_word_pictures_word_block_draw_button } from "./app_g_word_pictures_word_block_draw_button.mjs";
 import { app_g_word_pictures_word_block_on_save } from "./app_g_word_pictures_word_block_on_save.mjs";
 import { app_g_word_pictures_word_block_attempt_block } from "./app_g_word_pictures_word_block_attempt_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,15 +8,10 @@ import { html_div_text } from "./html_div_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { app_g_word_pictures_api } from "./app_g_word_pictures_api.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
 import { html_textarea } from "./html_textarea.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-import { not } from "./not.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 export function app_g_word_pictures_word_block(
   word,
   sheet,
@@ -103,37 +99,11 @@ export function app_g_word_pictures_word_block(
     return r;
   }
   app_shared_button(controls, "Save wording", on_save);
-  let armed = false;
-  let draw = null;
-  async function on_draw() {
-    "the first press only arms the second, and the button says so on its own face. the browser's own confirm box would stop the page dead until it is cleared, which on a phone is a worse thing to be stuck behind than the press is to make twice.";
-    let armed_not = not(armed);
-    if (armed_not) {
-      armed = true;
-      html_text_set(draw, "Press again to spend money");
-      return;
-    }
-    armed = false;
-    html_text_set(draw, "Drawing");
-    let combined = text_combine_multiple([
-      "drawing another attempt for ",
-      word,
-    ]);
-    status_working(combined);
-    try {
-      let f_name = fn_name("word_picture_draw");
-      await app_g_word_pictures_api(f_name, [word]);
-      let combined5 = text_combine_multiple([
-        "drew another attempt for ",
-        word,
-      ]);
-      status_set(combined5);
-      await render();
-    } catch (failed) {
-      let combined6 = text_combine_multiple(["the draw for ", word, " failed"]);
-      status_set(combined6);
-      html_text_set(draw, "Draw another");
-    }
-  }
-  draw = app_shared_button(controls, "Draw another", on_draw);
+  app_g_word_pictures_word_block_draw_button(
+    controls,
+    word,
+    status_working,
+    status_set,
+    render,
+  );
 }

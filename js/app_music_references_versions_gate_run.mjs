@@ -1,8 +1,7 @@
+import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_versions_english_choices_licences } from "./ebible_versions_english_choices_licences.mjs";
-import { list_filter_property } from "./list_filter_property.mjs";
 import { app_music_references_versions } from "./app_music_references_versions.mjs";
 import { app_music_bible_default_version } from "./app_music_bible_default_version.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -18,9 +17,9 @@ export async function app_music_references_versions_gate_run() {
   "THE NAME IS A SECOND COPY, AND THIS IS WHAT KEEPS IT HONEST. The chosen translation is written down twice on purpose - once as the folder its chapters sit in, and once as the name shown to a reader - so that labelling a verse costs the page no fetch. Two copies of one fact drift, and this one would drift silently: the page would show the King James under whatever word was typed beside it, and a wrong label on a right verse looks exactly like a right label.";
   "IT ALSO ASKS WHETHER THE TRANSLATION MAY BE QUOTED AT ALL. Choosing a wording is done by reading translations side by side, and that reading includes ones we may not ship - so the way a forbidden wording gets onto the page is somebody copying the folder name of the one that read best. There is nothing about a folder name that says which of the two it was.";
   "The usual translation is checked alongside the exceptions, because it is written the same way and is the one every other passage on the page is labelled with.";
+  "WHICH TRANSLATIONS MAY BE SHIPPED IS ASKED OF BOTH SHELVES. It used to ask only eBible, which was right while that was the only shelf and became silently wrong the moment a second one was added: a wording chosen out of a comparison that offered both would be refused here as unshippable, and the refusal would blame the wording rather than the question.";
   arguments_assert(arguments, 0);
-  let licences = await ebible_versions_english_choices_licences();
-  let usable = list_filter_property(licences, "commercial", true);
+  let usable = await bible_versions_english_choices_usable();
   let versions = app_music_references_versions();
   let usual = app_music_bible_default_version();
   let checked = list_concat(versions, [usual]);
@@ -55,10 +54,11 @@ export async function app_music_references_versions_gate_run() {
       fault: "the name shown to a reader is not what this bible calls itself",
     });
   }
+  let f_name = fn_name("bible_versions_english_choices_usable");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
       "each of these passages is quoted from a bible that either may not be shipped or is labelled with a name it does not answer to - the names come from ",
-      fn_name("ebible_versions_english_choices_licences"),
+      f_name,
       ", so copy the name written there",
     ]),
   });
