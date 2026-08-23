@@ -4,6 +4,6 @@ export function song_image_tomb_rock() {
   "ONE UNBROKEN MASS AND NEVER ANYTHING BUILT is the whole load-bearing clause, and it is spelled out at length rather than left to hewn. Hewn in the rock was the wording that produced the masonry arch: the drawing knows what a tomb looks like and reaches for the built one unless it is told, in the words it will not mistake, that there are no blocks and no courses and no slabs. Saying what it must not be is what saying what it must be could not do.";
   "IT IS KEPT SHORT ON PURPOSE, and that was learned by making it long. Spelled out at full length it ran to three lines and the drawing came back photographic - mottled glass, shading, a cast shadow, and in one case the whole field replaced by red tracery with candles in it. The symbol and the style share one prompt, so every word added here is weight taken off the style, and a symbol described three times as carefully as the others is a symbol that stops looking like them. What is left is only what could not be dropped: the mass, the cut mouth, and the four words that stop it being built.";
   let r =
-    "A great mass of plain grey rock with the mouth of the tomb cut into it as one plain flat black arch, the rock one unbroken mass and never blocks, bricks, courses or slabs";
+    "A great mass of plain grey rock, one unbroken mass and never blocks, bricks, courses or slabs, with the mouth of the tomb cut into it as one plain flat black arch";
   return r;
 }
