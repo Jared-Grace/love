@@ -30,18 +30,10 @@ export async function app_g_arcs() {
   });
   let sheet = html_div(column);
   let chapter_code = null;
-  async function api(f_name, args) {
-    let a = {
-      f_name,
-      args,
-    };
-    let result = await app_shared_api(a);
-    return result;
-  }
   async function render() {
     "the store is asked before anything is cleared, so a seam that is down leaves the page standing as it was rather than blanking it.";
     let f_name = fn_name("g_arc_written_chapter_codes");
-    let codes = await api(f_name, []);
+    let codes = await app_shared_api_named(f_name, []);
     let none = list_empty_is(codes);
     if (none) {
       each([chooser, sheet], html_clear);
@@ -53,7 +45,7 @@ export async function app_g_arcs() {
       chapter_code = list_get(codes, 0);
     }
     let f_name2 = fn_name("g_arc_review_chapter_cards");
-    let read = await api(f_name2, [chapter_code]);
+    let read = await app_shared_api_named(f_name2, [chapter_code]);
     let people = property_get(read, "people");
     each([chooser, sheet], html_clear);
     function chapter_button(code) {
