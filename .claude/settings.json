@@ -2123,6 +2123,7 @@
       "Bash(node scripts/ai.mjs ebible_verse_marks_displaced_letter_write:*)",
       "Bash(node scripts/ai.mjs bible_production_brief:*)",
       "Bash(node scripts/ai.mjs bible_glyph_chapters_marks_group_misread:*)",
+      "Bash(node scripts/ai.mjs song_god_our_savior_folder_faults:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -4146,6 +4147,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_verse_marks_displaced_letter_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_production_brief:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_marks_group_misread:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args song_god_our_savior_folder_faults:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -6168,6 +6170,7 @@
       "Bash(node scripts/aig.mjs ebible_verse_marks_displaced_letter_write:*)",
       "Bash(node scripts/aig.mjs bible_production_brief:*)",
       "Bash(node scripts/aig.mjs bible_glyph_chapters_marks_group_misread:*)",
+      "Bash(node scripts/aig.mjs song_god_our_savior_folder_faults:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -8190,7 +8193,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args js_statements_change_cases_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_verse_marks_displaced_letter_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_production_brief:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_marks_group_misread:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_marks_group_misread:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args song_god_our_savior_folder_faults:*)"
     ],
     "defaultMode": "acceptEdits"
   },
