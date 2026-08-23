@@ -4,7 +4,7 @@ import { storage_session_get } from "./storage_session_get.mjs";
 import { app_shared_hash_index_open_key } from "./app_shared_hash_index_open_key.mjs";
 import { app_shared_hash_index_tree } from "./app_shared_hash_index_tree.mjs";
 import { app_shared_hash_index_render_node } from "./app_shared_hash_index_render_node.mjs";
-export function app_shared_hash_index_render(parent, names, prefixes, app_fn) {
+export function app_shared_hash_index_render(parent, names, prefixes, settings) {
   arguments_assert(arguments, 4);
   ("a DIRECTORY of hash routes drawn as a drill-down of blue cards: a category card 'a ›' toggles a nested body of its children, and a leaf card's link goes to that #name. everything an app has to say to get one is here - the names it offers, where each is filed, and which app is remembering the drilled-open path.");
   ("this is the whole of the game's #index screen with the game taken out of it, and taking the game out is what let the sandbox have the same screen. Both pages had grown the same thing twice over: a registry keyed by the word after the hash, and a list to pick from when the address names none. The game's list was cards you drill into; the sandbox's was a stack of bare links, which is what the game's had been before somebody improved one of them and not the other.");

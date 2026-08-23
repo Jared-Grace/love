@@ -8,13 +8,9 @@ export function g_arc_review_notes_turn(notes, index, number) {
   "A NOTE IS ADDRESSED BY TWO NUMBERS AND NEITHER ONE ALONE FINDS IT. The turn numbers restart for each person, so turn six exists once per arc in the chapter; a reader filtering on the turn alone would show one person the notes filed against somebody else's line and there is nothing in a note's own words that would look wrong.";
   "IT DOES NOT SAY WHO FILED WHAT, and hands the notes back exactly as they were stored. Whether a check or a person found it decides what may later be thrown away, which is a question for the store and not for the page a reviewer is reading.";
   arguments_assert(arguments, 3);
+  let theirs = g_arc_review_notes_person(notes, index);
   let standing = [];
-  for (let one of notes) {
-    let person = property_get(one, "index");
-    let theirs = equal(person, index);
-    if (not(theirs)) {
-      continue;
-    }
+  for (let one of theirs) {
     let turn = property_get(one, "turn");
     let here = equal(turn, number);
     if (not(here)) {

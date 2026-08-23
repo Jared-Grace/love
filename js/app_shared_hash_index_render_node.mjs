@@ -61,7 +61,7 @@ export function app_shared_hash_index_render_node(
       cl,
       node.children[cl],
       open_paths,
-      app_fn,
+      settings,
     );
   }
 }
