@@ -1,3 +1,4 @@
+import { app_g_ask_what_to_say_text } from "./app_g_ask_what_to_say_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_g_npc_typing } from "./app_g_npc_typing.mjs";
