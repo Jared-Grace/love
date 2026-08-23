@@ -19,8 +19,8 @@ export async function bible_versions_english_choices_words_none(reference) {
   let heard = list_map_property(wordings, "bible_folder");
   function silent_is(record) {
     let bible_folder = property_get(record, "bible_folder");
-    let silent = list_includes_not(heard, bible_folder);
-    return silent;
+    let wordless = list_includes_not(heard, bible_folder);
+    return wordless;
   }
   let silent = list_filter(usable, silent_is);
   function named(record) {
