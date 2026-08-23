@@ -7,8 +7,9 @@ export function app_code_expression_choose_say(note, ready, lead) {
   arguments_assert(arguments, 3);
   ("name the one operator that may go next, so a walkthrough tells rather than asks");
   ("The lead is handed in because the same naming opens the line and then carries it on - So first, choose * and Now, choose + are one sentence with one word changed, and writing them as two would let them drift apart.");
-  ("ends by saying where to press, and sits straight on top of the line it is pointing at, with no room left between them");
-  ("It used to stand off by the app's one gap, on the reasoning that it hands the learner over to what follows. But the sentence and the line are the same thing said twice, and a gap says the opposite - it reads as the saying having finished rather than as it pointing one line down. Room here also made the walkthrough two heights: this sentence carries the gap and the replace button that stands in its place does not, so the whole card tightened at the first press and loosened again at the next.");
+  ("ends by saying where to press, and carries no room of its own underneath it");
+  ("It used to stand off by the app's one gap. That was too much - the sentence and the line are the same thing said twice, and the app's full gap reads as the saying having finished rather than as it pointing one line down. It also made the walkthrough two heights, because this sentence carried the gap and the replace button that stands in its place did not, so the whole card tightened at the first press and loosened again at the next.");
+  ("What stands between the words and the code is now left to the head they are written into, which knows whether it is ending in words or in a button and leaves the right room for each. Room asked for here would be added to that and would only bring the jumping back.");
   ("The operator was named without ever saying where it was, and the same symbol is sitting in the sentence being read - so a learner told to choose the times had to work out that the one to press is the one on the line below, not the one in front of them.");
   ("the operator is drawn as the very chip it is on the line, not as plain code, so the thing being named and the thing to press look like one thing said twice rather than two things");
   let symbol = list_first_property(ready, "operator");
