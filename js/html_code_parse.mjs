@@ -25,6 +25,15 @@ export function html_code_parse(contents) {
   let r = html_code_tag("body", attributes_none);
   let v2 = html_code_indent();
   let body_open = text_combine_multiple([r, "\n", v2]);
+  let opened = text_index_of_try(contents, body_open);
+  let opens = greater_than_equal(opened, 0);
+  if (not(opens)) {
+    let unwritten = {
+      name,
+      body: null,
+    };
+    return unwritten;
+  }
   let right = html_code_tag_close("body");
   let body_close = text_combine("\n", right);
   let wrapped = text_between(contents, body_open, body_close);
