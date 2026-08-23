@@ -14,6 +14,7 @@ export async function ebible_version_books(bible_folder) {
   let door = door43_version_or_null(bible_folder);
   let elsewhere = null_not_is(door);
   if (elsewhere) {
+    await door43_version_record_download(door);
     let door43_folder = property_get(door, "door43_folder");
     let carried = await door43_version_books(door43_folder);
     return carried;
