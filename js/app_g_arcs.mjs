@@ -60,7 +60,6 @@ export async function app_g_arcs() {
     each(codes, chapter_button);
     let bench = {
       chapter_code,
-      api,
       status_set,
       status_working,
       render,
