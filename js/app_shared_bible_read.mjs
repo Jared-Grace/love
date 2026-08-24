@@ -1,6 +1,6 @@
+import { app_shared_bible_read_books } from "./app_shared_bible_read_books.mjs";
 import { app_shared_bible_read_render_verse } from "./app_shared_bible_read_render_verse.mjs";
 import { app_shared_bible_read_unknown_shown } from "./app_shared_bible_read_unknown_shown.mjs";
-import { app_shared_bible_reference_hash_english } from "./app_shared_bible_reference_hash_english.mjs";
 import { app_shared_bible_read_books_en } from "./app_shared_bible_read_books_en.mjs";
 import { app_shared_bible_read_dismiss_help } from "./app_shared_bible_read_dismiss_help.mjs";
 import { app_shared_bible_read_resume } from "./app_shared_bible_read_resume.mjs";
@@ -8,27 +8,19 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
 import { app_shared_bible_hash_field_reference } from "./app_shared_bible_hash_field_reference.mjs";
 import { app_shared_hash_fields_unknown_shown_is } from "./app_shared_hash_fields_unknown_shown_is.mjs";
-import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
-import { app_shared_bible_book_hash_get } from "./app_shared_bible_book_hash_get.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
-import { app_shared_bible_reference_hash_key } from "./app_shared_bible_reference_hash_key.mjs";
 import { app_shared_bible_settings_gear } from "./app_shared_bible_settings_gear.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
 import { app_shared_bible_ref_chapter_code } from "./app_shared_bible_ref_chapter_code.mjs";
 import { app_shared_bible_ref_chapter_codes } from "./app_shared_bible_ref_chapter_codes.mjs";
 import { app_shared_bible_ref_chapters_guard } from "./app_shared_bible_ref_chapters_guard.mjs";
-import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
 import { promise_later } from "./promise_later.mjs";
 import { list_map_add_async } from "./list_map_add_async.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { null_is } from "./null_is.mjs";
-import { ebible_language_to_bible_folder } from "./ebible_language_to_bible_folder.mjs";
-import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
-import { property_get_or } from "./property_get_or.mjs";
 import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapter.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { list_last } from "./list_last.mjs";
 import { html_centered } from "./html_centered.mjs";
 export async function app_shared_bible_read(context, verse_action) {
   let r3 = app_shared_bible_read_frame(context);
@@ -44,17 +36,15 @@ export async function app_shared_bible_read(context, verse_action) {
   if (unknown_shown) {
     return;
   }
-  let c = app_shared_bible_chapter_hash_get_or_empty(hash);
-  let b = app_shared_bible_book_hash_get(hash);
-  let key = app_shared_bible_reference_hash_key();
-  let ref = property_get_or(hash, key, "");
-  ("A reference is understood in whatever language its book was written in, and is English from here on down - the checking of it, the reading of it, the link the reader copies. One place knows the reader's spelling; nothing after this has to.");
-  let ref_line = await app_shared_bible_reference_hash_english(hash, ref);
-  let ref_mode = text_empty_is(c) && text_empty_not_is(ref);
-  let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
-  let language = list_last(languages_chosen);
-  let primary_folder = ebible_language_to_bible_folder(language);
-  let books = await ebible_version_books_browser(primary_folder);
+  let r2 = await app_shared_bible_read_books(hash);
+  let books = property_get(r2, "books");
+  let primary_folder = property_get(r2, "primary_folder");
+  let languages_chosen = property_get(r2, "languages_chosen");
+  let ref_mode = property_get(r2, "ref_mode");
+  let ref_line = property_get(r2, "ref_line");
+  let ref = property_get(r2, "ref");
+  let b = property_get(r2, "b");
+  let c = property_get(r2, "c");
   html_centered(bar);
   if (text_empty_is(c) && text_empty_is(ref) && text_empty_not_is(b)) {
     await app_shared_bible_choose_chapter(
