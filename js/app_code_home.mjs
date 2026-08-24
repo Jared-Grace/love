@@ -1,3 +1,4 @@
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { app_code_home_bar_gear_content } from "./app_code_home_bar_gear_content.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
@@ -35,8 +36,11 @@ export async function app_code_home(context) {
   ("each row says whether that lesson is finished - every quiz in it answered right at least once - so a learner coming back can see where they got to instead of remembering it. The same row is what the replace app's list is made of, so the check, the pointing hand and the colours mean one thing across the apps");
   let progress = app_code_progress_read(context);
   let complete_previous = true;
+  ("the list marks ONE of its rows as the way on for a walk of the whole course: the first lesson that is open and not yet finished. That is the row a learner arriving at this list presses, and it is the only row that moves the course along - a finished one goes back over what is done, and a locked one does nothing at all.");
+  let way_marked = false;
   function lambda(item, index) {
     let id = property_get(item, "id");
+    let open = complete_previous;
     async function lambda3() {
       await app_shared_screen_go_tab(
         context,
@@ -55,6 +59,7 @@ export async function app_code_home(context) {
     );
     complete_previous = complete;
     let button = property_get(r, "button");
+    way_mark(button, open, complete);
     let gap = app_shared_spaced_gap();
     html_style_margin_top(button, gap);
     let title = property_get(r, "title");
@@ -68,6 +73,18 @@ export async function app_code_home(context) {
     let has_review = null_not_is(scope);
     if (has_review) {
       review_row(lesson_number, scope);
+    }
+  }
+  function way_mark(button, open, complete) {
+    if (way_marked) {
+      return;
+    }
+    if (complete) {
+      return;
+    }
+    if (open) {
+      html_data_set_test_happy(button);
+      way_marked = true;
     }
   }
   function review_row(lesson_number, scope) {
