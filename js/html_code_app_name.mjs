@@ -1,8 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_titles } from "./app_shared_titles.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { each } from "./each.mjs";
 export function html_code_app_name(title_text) {
   "$plain title_text";
