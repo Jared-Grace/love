@@ -40,6 +40,11 @@ export async function app_code_expression_value_choose_await(
   function each_button(choice) {
     let choice_text = text_to(choice);
     let b = app_code_quiz_choice_button(box, choice_text, on_click);
+    ("the right value is marked as the way on where being right is already decided, so a walk of the whole course answers this kind without a second answer key that could disagree with this one");
+    let marked_is = equal(choice, value);
+    if (marked_is) {
+      html_data_set_test_happy(b);
+    }
     async function on_click() {
       if (answered) {
         return;
@@ -53,6 +58,8 @@ export async function app_code_expression_value_choose_await(
         return;
       }
       answered = true;
+      ("taken, so it stops being the way on for the whole of the pause that follows - the buttons stay on screen while the right one is held green, and a walk that found this still marked would press it again and again into a locked handler");
+      html_data_set_test_happy_remove(b);
       app_shared_button_screen_green_style_assign(b);
       await sleep_success_color();
       press(null);
