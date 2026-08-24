@@ -16,8 +16,7 @@ export function html_code_app_name(title_text) {
   let names = object_property_names(titles);
   let found = title_text;
   function lambda(name) {
-    let title = property_get(titles, name);
-    let same = equal(title, title_text);
+    let same = property_equals(titles, name, title_text);
     if (same) {
       found = name;
     }
