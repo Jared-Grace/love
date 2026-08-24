@@ -30,6 +30,11 @@ export function app_code_lesson_quiz_choose_operand(
   let answered = false;
   function each_button(choice) {
     let b = app_code_quiz_choice_button(parent, choice, on_click);
+    ("the right number is marked as the way on where being right is already decided, so a walk of the whole course answers this kind without a second answer key that could disagree with this one");
+    let right = equal(choice, quiz_answer_text);
+    if (right) {
+      html_data_set_test_happy(b);
+    }
     async function on_click() {
       if (answered) {
         ("locked once the correct choice is chosen");
@@ -38,6 +43,8 @@ export function app_code_lesson_quiz_choose_operand(
       let eq = equal(choice, quiz_answer_text);
       if (eq) {
         answered = true;
+        ("taken, so it stops being the way on - a walk that kept pressing this locked button would never reach what comes after it");
+        html_data_set_test_happy_remove(b);
         app_shared_button_screen_green_style_assign(b);
         await on_success();
       } else {
