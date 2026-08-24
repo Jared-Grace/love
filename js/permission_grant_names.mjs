@@ -2076,7 +2076,7 @@ export function permission_grant_names() {
   let spelled1991 = fn_name("qa_gate_timings_stale_days");
   let spelled1992 = fn_name("qa_gates_sweep_reach");
   let spelled1993 = fn_name("function_names_app_grouped_cases_gate_run");
-  let spelled1994 = fn_name("apps_paths");
+  let spelled1994 = fn_name("apps_page_file_names");
   let spelled1995 = fn_name("function_name_words_repeated_cases_gate_run");
   let spelled1996 = fn_name("functions_names_repeated_gate_run");
   let spelled1997 = fn_name("functions_names_repeated_baseline_write");
