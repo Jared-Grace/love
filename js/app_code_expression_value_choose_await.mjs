@@ -1,3 +1,5 @@
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
+import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
