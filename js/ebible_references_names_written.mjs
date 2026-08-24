@@ -1,11 +1,6 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { null_is } from "./null_is.mjs";
-import { ternary } from "./ternary.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { text_prefix_without } from "./text_prefix_without.mjs";
-import { text_split_space } from "./text_split_space.mjs";
-import { list_first } from "./list_first.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 export function ebible_references_names_written(lines, line_named_or_null) {
   arguments_assert(arguments, 2);
