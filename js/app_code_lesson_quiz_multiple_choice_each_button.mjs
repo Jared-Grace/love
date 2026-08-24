@@ -1,3 +1,5 @@
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
+import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_code_quiz_choice_button } from "./app_code_quiz_choice_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_multiple_choice_answered } from "./app_code_lesson_quiz_multiple_choice_answered.mjs";
@@ -28,6 +30,11 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
   let choices = property_get(r2, "choices");
   function each_button(quiz_choice) {
     let b = app_code_quiz_choice_button(parent, quiz_choice, on_click);
+    ("the right one is marked as the way on as it is BUILT, here where being right is already decided, so a walk of the whole course answers every question of this kind without a second answer key that could disagree with this one");
+    let right = equal(quiz_choice, quiz_answer_text);
+    if (right) {
+      html_data_set_test_happy(b);
+    }
     async function on_click() {
       if (answered) {
         ("locked once the correct choice is chosen");
@@ -36,6 +43,8 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
       let eq = equal(quiz_choice, quiz_answer_text);
       if (eq) {
         answered = true;
+        ("taken, so it stops being the way on - a walk that kept pressing this locked button would never reach the Next behind it");
+        html_data_set_test_happy_remove(b);
         app_shared_button_screen_green_style_assign(b);
         await on_success();
       } else {
