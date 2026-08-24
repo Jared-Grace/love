@@ -9,6 +9,8 @@ export function bible_glyph_chapter_exo20() {
   "THE SWORD WAS BOUGHT FOR EZEKIEL AND IT TURNS UP IN THE TWENTY FIFTH VERSE. English says if you use a chisel on it you will defile it, and the Hebrew word there is chereb, the same sword the watchman sees coming. It is the ordinary sense of the word - an iron edge - and the altar law is about not putting one to the stone. A picture bought for one chapter appearing unlooked for in another is what a table keyed by root is for, and it is worth a line each time it happens.";
   "THE SERVANT AND THE LABOUR ARE THE SAME KNEE. Abad, to serve or work, and ebed, a servant, share a root and both take the kneeling figure, so the ninth verse says six days you shall abad and the tenth forbids the work of your ebed. The chapter opens on the house of slavery, which is the same word again. A reader following the pictures sees that the commandment about rest is written out of the vocabulary of servitude, and no English translation on the shelf lets that show.";
   "THE TENTH COMMANDMENT NAMES THE HOUSE BEFORE THE WIFE and the marks keep that order rather than tidying it. Four of the ten are one line long and draw almost nothing - do not murder, do not commit adultery, do not steal - because the words are single Hebrew verbs with no seat. The negative is drawn and the verb is not, so those three verses are a prohibition with a hole in the middle. It is the plainest measure this Bible has of how far the table still has to go, and it sits in the most quoted passage in it.";
+  "THE THICK DARKNESS IN THE TWENTY FIRST VERSE IS A DIFFERENT HEBREW WORD AND IT IS NOT DRAWN. This chapter drew the darkness there for a year and it was wrong: the mark is seated on choshek, and the word Moses walks into is araphel, the storm gloom of the mountain. Nothing said so, because both words are darkness in English and the picture was chosen off the translation - which is the one way a mark can land on a word the table never gave it, and the reason there is now a gate that compares every chapter's marks against the numbers underneath them.";
+  "ARAPHEL WAS MEASURED AND NOT SEATED, which is the half worth writing down. The table already lets two unrelated words meaning one thing share a mark - the curse does it, the wicked man does it - so seating araphel beside choshek was allowed by rule and was refused by measurement: the interlinear glosses it darkness or blackness eleven times in fifteen and a thick cloud or dark clouds the other four, and a word a quarter of whose places name the cloud rather than the dark is not the clean single meaning the bread and the sword were taken on. So the verse says darkness in plain English, which is what this Bible does with every word it has not earned a picture for.";
   "THE PROPER NAMES ARE LEFT IN ENGLISH - Moses, Egypt, Israel. That is the same rule every chapter here keeps and never a gap to fill later. A name points at one person or one place, and a picture of it would be a portrait.";
   let chapter = {
     chapter_code: "EXO20",
@@ -513,7 +515,7 @@ export function bible_glyph_chapter_exo20() {
           "approached",
           "the",
           "thick",
-          "$darkness",
+          "darkness",
           "where",
           "$fire",
           "was.",
