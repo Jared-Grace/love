@@ -49,6 +49,11 @@ export function commit_edit_diff_kind_named(kinds, changed) {
     let r3 = "comment, values, names alone and imports only";
     return r3;
   }
+  let written = diff_lines_function_written_is(changed);
+  if (written) {
+    let r11 = "a whole new function written";
+    return r11;
+  }
   let pair = equal(size, 2);
   if (pair) {
     let swapped = commit_edit_callee_swap_is(code);
