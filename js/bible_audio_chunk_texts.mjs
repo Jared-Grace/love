@@ -19,11 +19,11 @@ export async function bible_audio_chunk_texts(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
   let folder = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files(folder);
-  function text_is(name) {
+  function text_file_is(name) {
     let is = text_ends_with(name, ".txt");
     return is;
   }
-  let texts = list_filter(files, text_is);
+  let texts = list_filter(files, text_file_is);
   function number_of(name) {
     let n = parseInt(name, 10);
     return n;
