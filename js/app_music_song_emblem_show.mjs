@@ -32,10 +32,7 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   let couplet = song_image_couplet_get(n);
   let picture = html_img(parent, url);
   html_attribute_set(picture, "alt", couplet.symbol);
-  html_attribute_set(picture, "loading", "lazy");
-  html_attribute_set(picture, "decoding", "async");
-  html_width_full(picture);
-  html_display_block(picture);
+  html_img_lazy_full_block(picture);
   html_style_margin_top(picture, "12px");
   let references = song_image_couplet_symbol_references(n);
   let unreferenced = list_empty_is(references);
