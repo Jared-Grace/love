@@ -26,7 +26,6 @@ export function app_g_bless_overlay_render_tap_prayed(
   let bar = property_get(r2, "bar");
   let view_everyone = property_get(r2, "view_everyone");
   let hold = property_get(r2, "hold");
-  let held_people = property_get(r2, "held_people");
   function render() {
     "who is marked is worked out from the record on every step rather than remembered here,";
     "so a person covered by a prayer over their whole block lights up the moment they walk";
@@ -50,13 +49,7 @@ export function app_g_bless_overlay_render_tap_prayed(
     ("them would each have to remember to say so, and the one that forgot would be a person");
     ("the player thought they were holding and were not.");
     hold();
-    ("The ground under somebody being held is lit as well as the cone, because a rule the");
-    ("player cannot see is a bug to them. Held people wander out of the pale shape and stay");
-    ("prayable, and without their own square lighting with them that reads as a tap landing");
-    ("on somebody standing in the dark. With it, the light follows them, and the player can");
-    ("see they still have them.");
-    let people_held = held_people();
-    app_g_bless_wash(wash, cone, people_held);
+    app_g_bless_wash(wash, cone);
   }
   function tap_prayed(target) {
     "Whether the tap landed on somebody, and so became a prayer instead of a walk.";
