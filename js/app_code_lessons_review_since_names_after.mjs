@@ -10,6 +10,7 @@ export async function app_code_lessons_review_since_names_after(
   list_path,
   folder,
 ) {
+  "What has become of the code lessons since a given commit - which were added, changed, hidden, moved or taken away, which shared helpers were edited, and where the run a student can reach now stops.";
   arguments_assert(arguments, 3);
   let lesson_prefix = "app_code_lesson_";
   let shown = text_combine_multiple([commit, ":", list_path]);

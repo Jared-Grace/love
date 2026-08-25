@@ -16,6 +16,7 @@ export function ebible_references_names_book_names(
   lines,
 ) {
   "Every bible reference these lines open with, given back as the book it names and the chapter and verses that follow it.";
+  "THIS BIBLE'S OWN BOOK NAMES ARE TRIED BEFORE THE CANON'S, so a translation that names a book its own way is read that way rather than through a name borrowed from somewhere else. Within each of those, the line with Psalm and Song of Solomon put right is tried before the line as a person spelt it.";
   arguments_assert(arguments, 6);
   function aliased(line) {
     let replacements = {
