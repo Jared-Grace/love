@@ -1,12 +1,11 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_source } from "./bible_folder_source.mjs";
 import { bible_versions_english_choices_reference } from "./bible_versions_english_choices_reference.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 export async function bible_versions_english_choices_sources_gate_run() {
   arguments_assert(arguments, 0);
@@ -17,13 +16,11 @@ export async function bible_versions_english_choices_sources_gate_run() {
   ("A passage every English translation carries is the one it compares. The point is to hear from each place, so a passage that some of them genuinely do not hold would fail for the honest reason and teach nobody anything.");
   let usable = await bible_versions_english_choices_usable();
   let usable_folders = list_map_property(usable, "bible_folder");
-  let usable_sources = list_map(usable_folders, bible_folder_source);
-  let offered = list_unique(usable_sources);
+  let offered = list_map_unique(usable_folders, bible_folder_source);
   let reference = "John 3:16";
   let wordings = await bible_versions_english_choices_reference(reference);
   let read_folders = list_map_property(wordings, "bible_folder");
-  let read_sources = list_map(read_folders, bible_folder_source);
-  let heard = list_unique(read_sources);
+  let heard = list_map_unique(read_folders, bible_folder_source);
   let silent = list_without_multiple(offered, heard);
   list_empty_is_assert_json(silent, {
     reference,
