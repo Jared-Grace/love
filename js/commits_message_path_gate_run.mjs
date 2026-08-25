@@ -10,20 +10,12 @@ export async function commits_message_path_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let told = await commits_message_path_named();
-  let walked = property_get(told, "walked");
-  let offenders = property_get(told, "offenders");
-  let since = commits_message_rules_since();
-  let f_name = fn_name("commits_message_rules_since");
-  let f_name2 = fn_name("ai_git");
-  let hint = text_combine_multiple([
+  let f_name = fn_name("ai_git");
+  let opening = text_combine_multiple([
     "these commit messages carry a path beginning at the root of the machine or at somebody's home, which this repo being public publishes unreviewed to anybody who clones it - say the file the way the repo says it, relative to the repo, or take the honest fallback ",
-    f_name2,
-    " where the real argument cannot be written publicly. Nothing before ",
-    since,
-    " is read, and moving that place forward in ",
     f_name,
-    " is not the repair",
+    " where the real argument cannot be written publicly. ",
   ]);
-  let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
+  let r = commits_message_rules_gate_generic(told, opening);
   return r;
 }
