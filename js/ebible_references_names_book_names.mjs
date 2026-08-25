@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_replace_if_starts_with } from "./text_replace_if_starts_with.mjs";
@@ -5,7 +6,6 @@ import { each } from "./each.mjs";
 import { each_object } from "./each_object.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { ebible_references_names_written } from "./ebible_references_names_written.mjs";
 export function ebible_references_names_book_names(
   books_names,
@@ -65,8 +65,7 @@ export function ebible_references_names_book_names(
       if (unmatched) {
         continue;
       }
-      let own = property_get(attempt, "own");
-      let borrowed = not(own);
+      let borrowed = property_not(attempt, "own");
       let book_name = matched;
       if (borrowed) {
         book_name = bible_name_of_canon_or_null(matched);
