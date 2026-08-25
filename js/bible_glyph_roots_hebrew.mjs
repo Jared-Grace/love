@@ -85,7 +85,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "7067",
-          glyph: "heart_on_fire+crown",
+          glyph: "heart_on_fire",
         },
         {
           strong: "7065",

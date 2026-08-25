@@ -1,3 +1,4 @@
+import { diff_line_kind_cases_gate_run } from "./diff_line_kind_cases_gate_run.mjs";
 import { apps_node_only_carried_gate_run } from "./apps_node_only_carried_gate_run.mjs";
 import { js_edit_prose_only_is_cases_gate_run } from "./js_edit_prose_only_is_cases_gate_run.mjs";
 import { js_guard_statements_cases_gate_run } from "./js_guard_statements_cases_gate_run.mjs";
@@ -797,6 +798,7 @@ export function qa_gates() {
     js_guard_statements_cases_gate_run,
     js_edit_prose_only_is_cases_gate_run,
     apps_node_only_carried_gate_run,
+    diff_line_kind_cases_gate_run,
   ];
   return gates;
 }
