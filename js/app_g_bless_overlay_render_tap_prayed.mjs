@@ -29,16 +29,18 @@ export function app_g_bless_overlay_render_tap_prayed(
     "who is marked is worked out from the record on every step rather than remembered here,";
     "so a person covered by a prayer over their whole block lights up the moment they walk";
     "into view without anybody having gone back to write their name down";
-    "the mark itself is not redrawn, though. it is drawn once and then carried by the person";
-    "as they walk, because a person's square is written the moment their step begins - so a";
-    "light placed afresh from that square arrives at the tile they are walking towards while";
-    "they are still crossing the one before it, and runs on ahead of them";
+    "the mark itself is not redrawn, though. everybody was given one when the street was";
+    "drawn and praying only SHOWS theirs, because a person's square is written the moment";
+    "their step begins - so a light placed from that square arrives at the tile they are";
+    "walking towards while they are still crossing the one before it, and runs on ahead of";
+    "them. made before anybody had moved, it is carried by their steps instead of placed by";
+    "them, which is why the whole street is handed over here and not only the prayed-for";
     "they are worked out over the whole street and not over the cone, because a mark says";
     "this person has been prayed for and that stays true while the player looks away. The";
     "cone below decides what may be prayed for next, which is the question sight is the";
     "cost of - and the two are drawn as two layers because they answer two questions";
     let lit = bless_view_blessed(blessed, view_everyone);
-    app_g_bless_glows(glows, lit);
+    app_g_bless_glows(glows, view_everyone, lit);
     let cone = cone_get();
     app_g_bless_wash(wash, cone);
   }

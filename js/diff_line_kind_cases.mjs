@@ -29,16 +29,41 @@ export function diff_line_kind_cases() {
     {
       name: "an entry in a record with another entry after it, which closes at a comma and is not a paragraph",
       line: text_frozen('+  "offer": 2,'),
-      kind: "code",
+      kind: "data",
     },
     {
       name: "the last entry in a record, which closes at its own value and is not a paragraph either",
       line: text_frozen('+  "fellowship": 1'),
-      kind: "code",
+      kind: "data",
     },
     {
       name: "an entry whose value is itself a piece of text, which opens and closes on a quote and is still not a paragraph",
       line: text_frozen('+  "lamp": "#ffcc00",'),
+      kind: "data",
+    },
+    {
+      name: "a number raised in a record under a name spelled without quotes, which is the commonest hand-made edit there is",
+      line: text_frozen("+      kept: 8,"),
+      kind: "data",
+    },
+    {
+      name: "a name whose value waits on the next line, which is a key even with nothing after the colon",
+      line: text_frozen("+      lyric_explain:"),
+      kind: "data",
+    },
+    {
+      name: "the value that waited, standing alone as a piece of text and closing at a comma rather than a semicolon",
+      line: text_frozen('+        "Being in an agony HE prayed more earnestly.",'),
+      kind: "data",
+    },
+    {
+      name: "a line of program holding a colon inside a piece of text, which the opening run rules out before the colon is reached",
+      line: text_frozen('+  let ref = text_trim("1 Peter 1:17");'),
+      kind: "code",
+    },
+    {
+      name: "a name alone on its line, which is left as program because an argument to a call broken over several lines looks the same",
+      line: text_frozen("+    app_fn,"),
       kind: "code",
     },
     {
