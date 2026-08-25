@@ -532,7 +532,6 @@ export function bible_glyph_chapter_ezk33() {
           "righteous",
           "works",
           "will",
-          "$no_entry",
           "be",
           "remembered;",
           "he",
