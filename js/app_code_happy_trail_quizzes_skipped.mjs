@@ -1,3 +1,4 @@
+import { less_than } from "./less_than.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -12,8 +13,10 @@ import { property_set } from "./property_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_includes } from "./text_includes.mjs";
 export function app_code_happy_trail_quizzes_skipped(trail) {
-  "the quiz screens a walk went past in a single press, read back out of the trail it left";
-  "A quiz costs at least two presses: the answer, and then the way on. One press means the walk found the way on already standing there before the question had been answered, pressed it, and never answered anything - so the quiz was on the screen and was not taken.";
+  "the quiz screens a walk went past without answering them, read back out of the trail it left";
+  "A quiz costs at least two presses that land: the answer, and then the way on. Fewer than two means the walk found the way on already standing there before the question had been answered, pressed it, and never answered anything - so the quiz was on the screen and was not taken.";
+  "PRESSES THAT LANDED, not steps taken. A control found and gone again by the time it was pressed is an ordinary thing on a screen that moves, and it is already accounted for where it happens; counted here it would let a quiz whose one real answer missed read as a quiz answered twice.";
+  "THE STEP THAT SAYS THE COURSE HAS ENDED IS NOT ONE OF THEM. It is a marker read off the last screen rather than anything pressed, and that screen is a quiz address like any other - so left in, the end of every complete walk reads as a question skipped, which is the one reading that would make this fail on the very run that proves it right.";
   "This is the check on the CHECK. The walk is kept honest by an ordering nothing enforces: every screen marks its way on, and a quiz marks its answer too, standing earlier in the page, so the earliest mark is the answer and the way on is only reached afterwards. Draw the same two the other way round and the walk still passes, still reports thousands of steps, and has quietly stopped asking any questions. Nothing else would go red, because from the outside a course walked without answering looks exactly like a course walked correctly.";
   "It reads the address rather than the screen, because the address is all a finished walk kept - and the address is enough: the quiz says which lesson and which question it is, so a run of steps sharing one says how many presses that one question took.";
   arguments_assert(arguments, 1);
@@ -23,7 +26,12 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
   ("the steps are gathered into runs of one address rather than counted per address, because a course comes back: a review asks about a lesson already walked, and the same question answered properly twice would otherwise be one address seen four times and look fine even if each visit had been skipped");
   let runs = [];
   let run = null;
+  let presses_least = 2;
   function lambda(step) {
+    let end = property_get(step, "end");
+    if (end) {
+      return;
+    }
     let url = property_get(step, "url");
     let carrying = null_not_is(run);
     let same = false;
@@ -31,22 +39,27 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
       let url_run = property_get(run, "url");
       same = equal(url_run, url);
     }
+    let pressed = property_get(step, "pressed");
+    let landed = 0;
+    if (pressed) {
+      landed = 1;
+    }
     if (same) {
       let presses = property_get(run, "presses");
-      property_set(run, "presses", presses + 1);
+      property_set(run, "presses", presses + landed);
       return;
     }
     run = {
       url,
-      presses: 1,
+      presses: landed,
     };
     list_add(runs, run);
   }
   each(trail, lambda);
   function lambda2(r) {
     let presses = property_get(r, "presses");
-    let one = equal(presses, 1);
-    if (not(one)) {
+    let few = less_than(presses, presses_least);
+    if (not(few)) {
       return false;
     }
     let url = property_get(r, "url");
