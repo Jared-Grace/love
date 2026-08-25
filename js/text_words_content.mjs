@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_words } from "./text_words.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -85,7 +86,7 @@ export function text_words_content(text) {
   let words = text_words(text);
   let kept = [];
   for (let word of words) {
-    let bare = word.replace(/[^A-Za-z]/g, "");
+    let bare = text_letters_only(word);
     let lowered = text_lower_to(bare);
     let some = greater_than(lowered.length, 0);
     if (some) {
