@@ -13,12 +13,15 @@ export async function bible_speech_unattributed_bible(bible_folder) {
   arguments_assert(arguments, 1);
   let book_codes = ebible_book_codes();
   async function book_each(book_code) {
-    let report = await bible_speech_attribution_report(bible_folder, book_code);
+    let book_report = await bible_speech_attribution_report(
+      bible_folder,
+      book_code,
+    );
     function quotation_each(quotation) {
       quotation.book_code = book_code;
     }
-    each(report.unattributed_quotations, quotation_each);
-    let r = report.unattributed_quotations;
+    each(book_report.unattributed_quotations, quotation_each);
+    let r = book_report.unattributed_quotations;
     return r;
   }
   let books = await list_map_async(book_codes, book_each);
