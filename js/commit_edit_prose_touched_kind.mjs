@@ -12,10 +12,12 @@ export async function commit_edit_prose_touched_kind(commit) {
   arguments_assert(arguments, 1);
   let changed = await commit_edit_changed_lines(commit);
   let counts = diff_lines_kind_counts(changed);
-  let put_in = property_get(counts, "put_in");
-  let taken_out = property_get(counts, "taken_out");
+  let put_in = property_get(counts, "prose_put_in");
+  let taken_out = property_get(counts, "prose_taken_out");
   let code = property_get(counts, "code");
-  let data = property_get(counts, "data");
+  let data_put_in = property_get(counts, "data_put_in");
+  let data_taken_out = property_get(counts, "data_taken_out");
+  let data = add(data_put_in, data_taken_out);
   let else_touched = add(code, data);
   let prose = add(put_in, taken_out);
   let untouched_is = equal(prose, 0);
