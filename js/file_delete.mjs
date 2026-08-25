@@ -1,5 +1,5 @@
-import { folder_public_root_blocked_assert } from "./folder_public_root_blocked_assert.mjs";
-import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 import { browser_is } from "./browser_is.mjs";
 export async function file_delete(file_path) {
@@ -10,10 +10,8 @@ export async function file_delete(file_path) {
     await file_overwrite(file_path, "");
     return;
   }
-  ("taking a file away from the top of the folder that goes out is as much a change to it as writing one, so the block over that folder is asked about here on the same terms");
-  await folder_public_root_blocked_assert(file_path);
-  let fs = await import("fs");
-  await fs.promises.unlink(file_path);
-  ("a file taken away is as much a change to commit as one written, and the note a commit reads is a note of changes rather than of writing — without this line the command that removed it could name everything it did except the removal");
-  await file_to_commit_add_try(file_path);
+  ("★ THE DISK HALF IS ASKED FOR BY NAME AND NOT IMPORTED, and that is about weight rather than about tidiness. The check above decides which machine RUNS it and settles nothing about which machine DOWNLOADS it - a bundler follows a plain import whether the branch is walked or not, so a page offering to delete a function carried the public-folder guard, the note-what-to-commit machinery, and through it an npm install, in order never to run a line of any of it. A name joined into a path at the moment it is wanted is something a bundler cannot see through.");
+  let f_name = fn_name("file_delete_node");
+  let fn = await function_import_relative(f_name);
+  await fn(file_path);
 }
