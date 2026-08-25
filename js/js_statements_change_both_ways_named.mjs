@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { js_statements_change_gaps_named_or_null } from "./js_statements_change_gaps_named_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,8 +16,7 @@ export function js_statements_change_both_ways_named(
   arguments_assert(arguments, 2);
   let taken_out = list_without_multiple(texts_before, texts_after);
   let kept = list_without_multiple(texts_before, taken_out);
-  let survived = list_size(kept);
-  let none = equal(survived, 0);
+  let none = list_size_equal(kept, 0);
   if (none) {
     let r = "the body rewritten";
     return r;
