@@ -19,7 +19,7 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
   arguments_assert(arguments, 1);
   let key = app_code_screen_hash_key();
   let screen = fn_name("app_code_quiz");
-  let marker = text_combine_multiple([key, "=", screen]);
+  let quiz_marker = text_combine_multiple([key, "=", screen]);
   ("the steps are gathered into runs of one address rather than counted per address, because a course comes back: a review asks about a lesson already walked, and the same question answered properly twice would otherwise be one address seen four times and look fine even if each visit had been skipped");
   let runs = [];
   let run = null;
@@ -50,7 +50,7 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
       return false;
     }
     let url = property_get(r, "url");
-    let quiz = text_includes(url, marker);
+    let quiz = text_includes(url, quiz_marker);
     return quiz;
   }
   let skipped = list_filter(runs, lambda2);
