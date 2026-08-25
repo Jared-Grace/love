@@ -43,7 +43,9 @@ export function js_source_bare_token_kind_cases() {
     },
     {
       name: "a parameter of a function written out over several lines is program",
-      code: text_frozen("function ask(\n  cross,\n  pray,\n) {\n  return cross;\n}"),
+      code: text_frozen(
+        "function ask(\n  cross,\n  pray,\n) {\n  return cross;\n}",
+      ),
       bare: text_frozen("pray,"),
       kind: text_frozen("code"),
     },
@@ -55,7 +57,9 @@ export function js_source_bare_token_kind_cases() {
     },
     {
       name: "a name standing in both settings at once stays undecided rather than being guessed at",
-      code: text_frozen("let names = [\n  pray,\n];\nlet r = combine(\n  pray,\n);"),
+      code: text_frozen(
+        "let names = [\n  pray,\n];\nlet r = combine(\n  pray,\n);",
+      ),
       bare: text_frozen("pray,"),
       kind: text_frozen("name alone"),
     },
