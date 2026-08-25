@@ -11,13 +11,16 @@ export async function commit_edit_prose_verb_named(commit) {
   "COUNTING PROSE EDITS WAS NEVER THE QUESTION. Knowing that a paragraph was reworded by hand says nothing about whether a command was there to be reached for, and the reading beside this one stops exactly there. Three verbs write a prose line - one adds a line, one takes a line away, one puts different words in a line that is already there - so the answer worth having is which of the three fits, and how often none of them does.";
   "THE SHAPE OF THE DIFFERENCE DECIDES, and it decides completely. A line put in with none taken out is an addition and nothing else; a line taken out with none put in is a removal; one for one is a rewording of a single line, which is what the replacing verb does. Anything larger is a paragraph rewritten, where the count of lines changed and so no one verb spans it.";
   "AN EDIT THAT TOUCHED CODE IS NOT ASKED ABOUT AT ALL, because the question is what a prose verb would have made outright, and an edit that also changed code was never going to be made by one command whatever its prose looked like.";
+  "A VALUE CHOSEN COUNTS WITH THE CODE and not with the prose, for the same reason the code does. A number raised in a record beside a reworded paragraph is still two changes, and no one prose verb makes two changes; whether a named command exists for the value is a real question, but it is a different one and answering it here would make this bucket say something it does not mean.";
   arguments_assert(arguments, 1);
   let changed = await commit_edit_changed_lines(commit);
   let counts = diff_lines_kind_counts(changed);
   let put_in = property_get(counts, "put_in");
   let taken_out = property_get(counts, "taken_out");
   let code = property_get(counts, "code");
-  let touched_code_is = equal_not(code, 0);
+  let data = property_get(counts, "data");
+  let else_touched = add(code, data);
+  let touched_code_is = equal_not(else_touched, 0);
   if (touched_code_is) {
     let r = "not prose alone";
     return r;

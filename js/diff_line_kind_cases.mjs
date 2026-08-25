@@ -53,7 +53,9 @@ export function diff_line_kind_cases() {
     },
     {
       name: "the value that waited, standing alone as a piece of text and closing at a comma rather than a semicolon",
-      line: text_frozen('+        "Being in an agony HE prayed more earnestly.",'),
+      line: text_frozen(
+        '+        "Being in an agony HE prayed more earnestly.",',
+      ),
       kind: "data",
     },
     {
