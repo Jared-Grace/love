@@ -1,7 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 export function g_arc_review_notes_turn(notes, index, number) {
@@ -12,8 +11,7 @@ export function g_arc_review_notes_turn(notes, index, number) {
   let theirs = g_arc_review_notes_person(notes, index);
   let standing = [];
   for (let one of theirs) {
-    let turn = property_get(one, "turn");
-    let here = equal(turn, number);
+    let here = property_equals(one, "turn", number);
     if (not(here)) {
       continue;
     }
