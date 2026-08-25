@@ -1,16 +1,11 @@
-import { bible_folder_key } from "./bible_folder_key.mjs";
+import { bible_versions_english_choices_silent_named } from "./bible_versions_english_choices_silent_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_source } from "./bible_folder_source.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_in_list_not } from "./property_in_list_not.mjs";
 export async function bible_versions_english_choices_words_none_everywhere_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every English translation this repo offers a reader hands over words somewhere, rather than being offered and then reading as nothing wherever it is asked.");
@@ -23,24 +18,7 @@ export async function bible_versions_english_choices_words_none_everywhere_gate_
   let passages = await bible_versions_english_choices_references(references);
   let wordings_lists = list_map_property(passages, "wordings");
   let wordings = list_concat_multiple(wordings_lists);
-  let heard = list_map_property(wordings, bible_folder_key());
-  function silent_is(record) {
-    let wordless = property_in_list_not(record, bible_folder_key(), heard);
-    return wordless;
-  }
-  let silent = list_filter(usable, silent_is);
-  function named(record) {
-    let bible_folder = property_get(record, "bible_folder");
-    let name = property_get(record, "name");
-    let source = bible_folder_source(bible_folder);
-    let v = {
-      bible_folder,
-      name,
-      source,
-    };
-    return v;
-  }
-  let reported = list_map(silent, named);
+  let reported = bible_versions_english_choices_silent_named(usable, wordings);
   list_empty_is_assert_json(reported, {
     references,
     hint: "each of these translations is offered to a reader and reads as nothing at every one of these passages - so a comparison silently offers fewer wordings than it says it does, and nothing else notices",
