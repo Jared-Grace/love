@@ -1,6 +1,6 @@
 import { folder_public } from "./folder_public.mjs";
 import { repos_paths_map_unordered_combine_squash } from "./repos_paths_map_unordered_combine_squash.mjs";
-import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
+import { folder_read_recursive_paths_async } from "./folder_read_recursive_paths_async.mjs";
 import { html_extension } from "./html_extension.mjs";
 import { list_filter_ends_with } from "./list_filter_ends_with.mjs";
 export async function apps_page_paths() {
@@ -9,7 +9,7 @@ export async function apps_page_paths() {
   let fop = folder_public();
   let result = await repos_paths_map_unordered_combine_squash(
     fop,
-    folder_read_paths_async,
+    folder_read_recursive_paths_async,
   );
   let sufix = html_extension();
   let aps = list_filter_ends_with(result, sufix);

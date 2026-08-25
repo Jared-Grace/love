@@ -1,3 +1,4 @@
+import { apps_node_only_carried_gate_run } from "./apps_node_only_carried_gate_run.mjs";
 import { js_edit_prose_only_is_cases_gate_run } from "./js_edit_prose_only_is_cases_gate_run.mjs";
 import { js_guard_statements_cases_gate_run } from "./js_guard_statements_cases_gate_run.mjs";
 import { js_statements_span_repack_only_is_cases_gate_run } from "./js_statements_span_repack_only_is_cases_gate_run.mjs";
