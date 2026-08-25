@@ -1,11 +1,10 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_skip } from "./list_skip.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_split_space } from "./text_split_space.mjs";
@@ -27,8 +26,7 @@ export async function pronunciation_dictionary_stresses(file_path) {
     if (not(written)) {
       return;
     }
-    let already = property_get_or_null(stresses, word);
-    let fresh = null_is(already);
+    let fresh = property_null_is(stresses, word);
     if (not(fresh)) {
       return;
     }
