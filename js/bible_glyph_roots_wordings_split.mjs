@@ -24,16 +24,10 @@ export async function bible_glyph_roots_wordings_split(testament_name) {
   ("$plain testament_name");
   ("the name is a testament's own, spelled as the book divisions spell it. It names which table to read and nothing that runs.");
   ("EVERY SEAT IN THE TABLE WAS ARGUED ONE AT A TIME BY HAND, and the argument was always this reading: the staff was refused because the interlinear glosses it of the tribe far more often than the staff, the bread was taken because every wording given it says bread. Each of those was somebody doing this by eye for one number and then writing the answer into the prose. Done for the whole table at once it stops being an argument and becomes a reading list, ordered so the seats most worth re-reading come first.");
-  ("THE WORDINGS ARE NOT COUNTED WHOLE, AND COUNTING THEM WHOLE WAS TRIED AND WAS WRONG. The interlinear glosses one word for seeing as see, as you see, and as See to it, so its commonest wording covers six places in a hundred and thirty one and the seat reads as the worst in the table when it is one of the plainest. Those are one word in three sets of clothes. So each wording is cut down to the words that carry a meaning of their own and every one of them is credited with that wording's count, which puts see back together at a hundred and eighteen and leaves a word that really is split still split.");
-  ("IT HANDS BACK NO VERDICT AND CANNOT. Whether two of those words are one meaning is a question about the language: darkness beside blackness answers one way and of the tribe beside the staff answers the other, and nothing here can tell them apart. So the share is the commonest single word's alone and it is a place in a reading list rather than a mark out of ten, low for a word spread thin over near-synonyms exactly as it is low for a word genuinely holding two meanings, and a person reads the tally to say which.");
-  ("THE WHOLE TALLY TRAVELS WITH EACH ROW rather than the share on its own, because the share is the thing that got somebody to look and the tally is the thing they look at. Handing back the number alone would send every reader back to the interlinear to ask the question this already asked. The wordings behind it are one call to ",
+  ("HOW ONE SEAT IS MEASURED IS ANSWERED NEXT DOOR, one row at a time. What is left here is which table to read, that every word of every root gets a row, and the order they come back in.");
+  ("THE WORDINGS THEMSELVES ARE NOT CARRIED. They are one call to ",
     fn_name("bible_strong_gloss_wordings"),
     " away and are left there, because a hundred and thirty rows each carrying every turn of phrase given it is not a list anybody reads.");
-  ("A word the interlinear never glosses comes back measured and empty rather than missing, so a seat nobody can measure sits at the top of the reading list instead of quietly falling out of it.");
-  function bible_glyph_roots_wordings_split_count(wording) {
-    let n = wording.count;
-    return n;
-  }
   function bible_glyph_roots_wordings_split_share(row) {
     let n = row.share;
     return n;
