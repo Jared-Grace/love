@@ -1,7 +1,7 @@
+import { bless_people_hold_release } from "./bless_people_hold_release.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 export function bless_people_hold_replace(people_before, people_after, cone) {
   arguments_assert(arguments, 3);
   ("Lets go of everybody who was being held and takes hold of everybody who is now, marking");
