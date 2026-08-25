@@ -1,3 +1,4 @@
+import { bless_person_hold_tile_allowed } from "./bless_person_hold_tile_allowed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_person_step_tiles } from "./app_g_bless_person_step_tiles.mjs";
 import { property_get } from "./property_get.mjs";
