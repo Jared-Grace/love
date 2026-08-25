@@ -126,7 +126,7 @@ export function song_image_couplets() {
       first: "falsely accused",
       second: "unjustly tried",
       symbol:
-        "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam, drawn very large so that the two ends of the beam reach almost to the white border on both sides",
+        "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the whole stand drawn so tall that its foot rests on the white border at the bottom of the window and its beam crosses near the top of the glass, the two ends of that beam reaching almost to the white border on both sides, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam",
       symbol_ref: "Proverbs 11:1, Micah 6:11, Amos 8:5",
       same_as: 0,
     },
