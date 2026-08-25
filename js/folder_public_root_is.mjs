@@ -1,9 +1,8 @@
-import { subtract } from "./subtract.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { folder_public } from "./folder_public.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { list_size } from "./list_size.mjs";
 import { path_normalize } from "./path_normalize.mjs";
 import { text_split_slash_forward } from "./text_split_slash_forward.mjs";
 export function folder_public_root_is(file_path) {
@@ -14,8 +13,7 @@ export function folder_public_root_is(file_path) {
   arguments_assert(arguments, 1);
   let normalized = path_normalize(file_path);
   let parts = text_split_slash_forward(normalized);
-  let depth = list_size(parts);
-  let parent_index = subtract(depth, 2);
+  let parent_index = list_size_subtract(parts, 2);
   let parent = list_get_or_null(parts, parent_index);
   let public_name = folder_public();
   let root = equal(parent, public_name);
