@@ -1,8 +1,7 @@
+import { function_name_to_part_last } from "./function_name_to_part_last.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_names_prefixed } from "./apps_names_prefixed.mjs";
-import { function_name_to_parts } from "./function_name_to_parts.mjs";
-import { list_last } from "./list_last.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { equal } from "./equal.mjs";
@@ -17,8 +16,7 @@ export async function function_name_word_repeated_app_boundary_is(f_name) {
   ("The cut does not ask this. A cut composes a holder with a word its own last statement mentions, and both of those are subject words in one sentence, so a repeat there is always the slip the plain reading says it is.");
   let prefixes = await apps_names_prefixed();
   for (let prefix of prefixes) {
-    let parts = function_name_to_parts(prefix);
-    let word = list_last(parts);
+    let word = function_name_to_part_last(prefix);
     let doubled = text_combine_multiple([prefix, "_", word]);
     let exactly = equal(f_name, doubled);
     if (exactly) {
