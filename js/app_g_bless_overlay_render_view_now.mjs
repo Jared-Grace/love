@@ -12,12 +12,49 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   let r2 = property_get(r, "r2");
   let world = property_get(r2, "world");
   let walking = property_get(r2, "walking");
+  ("Who the player is HOLDING - the people who were wholly inside the cone at the moment");
+  ("the player last moved or turned, kept prayable until the player moves or turns again.");
+  ("Without it, praying for somebody walking was a chase. You tap empty ground to get near");
+  ("them, you arrive, they are in front of you - and by the time you have looked at them");
+  ("they have strolled out of the cone, so you walk again, and the street keeps walking");
+  ("too. The wish was never for the player to catch anybody; it was to pray for the person");
+  ("they went over to.");
+  ("It is what the player LOOKED at, so it is taken when the player looks and not when they");
+  ("pray. That is a real shift: sight used to be charged at the instant of praying, and now");
+  ("it is charged at the instant of arriving. It reads the way seeing a crowd reads - you");
+  ("take them in, and then you pray for them, and they need not stand still for it.");
+  ("Only people held WHOLLY, because the loose test would quietly annex whoever happened to");
+  ("have a foot on the cone's last square as the player stopped.");
+  ("Replaced and never added to. Grown instead, standing still would eventually hold the");
+  ("whole street, because everybody wanders through the cone sooner or later - and the game");
+  ("would have no edge in it at all.");
+  let held = [];
+  let held_cone = null;
+  function hold() {
+    ("Taken when the cone CHANGES rather than on every draw, because a draw also happens");
+    ("after a prayer - and a fresh snapshot there would drop the very people the player");
+    ("walked over to hold on to, the moment they prayed for the first of them. The cone is");
+    ("made of where the player stands, which way they face and how far they reach, so a cone");
+    ("that has not changed means the player has not acted.");
+    let cone = cone_get();
+    let text = json_to(cone);
+    let same = equal(text, held_cone);
+    if (same) {
+      return;
+    }
+    held_cone = text;
+    held = bless_cone_people_wholly(cone, npcs);
+  }
+  function held_people() {
+    return held;
+  }
   function view_now() {
     "who the player can see AT THIS MOMENT, asked again rather than remembered, because the";
     "crowd walks between one question and the next";
     let cone = cone_get();
     let view = bless_cone_view(cone, npcs);
-    return view;
+    let view_held = bless_view_add_people(view, held);
+    return view_held;
   }
   ("everybody on the street, whether the player is facing them or not - what the marks are");
   ("drawn from, while the cone above decides what may be prayed for.");
@@ -41,6 +78,8 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     walking,
     view_now,
     view_everyone,
+    hold,
+    held_people,
   };
   return r3;
 }

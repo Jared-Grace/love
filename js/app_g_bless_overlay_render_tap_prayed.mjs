@@ -25,7 +25,13 @@ export function app_g_bless_overlay_render_tap_prayed(
   let container_map = property_get(r2, "container_map");
   let bar = property_get(r2, "bar");
   let view_everyone = property_get(r2, "view_everyone");
+  let hold = property_get(r2, "hold");
+  let held_people = property_get(r2, "held_people");
   function render() {
+    "the draw is also where the player is noticed to have MOVED, because every player action";
+    "ends in one - a step, a turn, a prayer. Asked here, the hold updates itself off the";
+    "cone and needs nobody to tell it which of the three just happened.";
+    hold();
     "who is marked is worked out from the record on every step rather than remembered here,";
     "so a person covered by a prayer over their whole block lights up the moment they walk";
     "into view without anybody having gone back to write their name down";
