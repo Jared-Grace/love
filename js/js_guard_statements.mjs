@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
+import { js_guard_statements_shape_assert } from "./js_guard_statements_shape_assert.mjs";
 export function js_guard_statements(
   test_fn_name,
   tested_name,
