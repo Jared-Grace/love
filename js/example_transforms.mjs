@@ -1,3 +1,5 @@
+import { js_selects_number_set } from "./js_selects_number_set.mjs";
+import { js_selects_text_set } from "./js_selects_text_set.mjs";
 import { js_selects_guard_add_before } from "./js_selects_guard_add_before.mjs";
 import { js_selects_guard_add_after } from "./js_selects_guard_add_after.mjs";
 import { js_block_local_call_add } from "./js_block_local_call_add.mjs";
@@ -123,6 +125,8 @@ export function example_transforms() {
     js_block_local_call_add,
     js_selects_guard_add_after,
     js_selects_guard_add_before,
+    js_selects_text_set,
+    js_selects_number_set,
   };
   return transforms;
 }
