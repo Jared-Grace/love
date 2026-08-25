@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { js_statements_change_both_ways_named } from "./js_statements_change_both_ways_named.mjs";
 import { js_statements_change_replaced_named } from "./js_statements_change_replaced_named.mjs";
 import { js_statements_change_one_direction_named } from "./js_statements_change_one_direction_named.mjs";
@@ -47,10 +48,8 @@ export function js_statements_change_named(before, after) {
     );
     return r6;
   }
-  let left = list_size(put_in);
-  let one_in = equal(left, 1);
-  let left4 = list_size(taken_out);
-  let one_out = equal(left4, 1);
+  let one_in = list_size_equal(put_in, 1);
+  let one_out = list_size_equal(taken_out, 1);
   let left5 = list_size(before);
   let right = list_size(after);
   let lengths = equal(left5, right);
