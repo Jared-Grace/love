@@ -1,3 +1,5 @@
+import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { property_exists } from "./property_exists.mjs";
@@ -27,6 +29,14 @@ export async function app_g_bless_dev_if(world) {
   ("screen nobody can see - and the prayer would be said, carelessly, forty times an");
   ("afternoon by somebody who only wanted to read a number. A screen was drawn or it was");
   ("not; the caller is the only one that can act on it.");
+  ("Nothing here draws at all off this network, the same answer the pill that opens it asks,");
+  ("so a hash typed by hand cannot reach a screen the way in was taken away from. It is");
+  ("asked first because it is the cheapest of the refusals and the only one that is about");
+  ("who is reading rather than about what they typed.");
+  let shown = app_shared_dev_shown_is();
+  if (not(shown)) {
+    return false;
+  }
   let name = html_hash_name_get();
   let index = app_shared_g_dev_index_hash_name();
   let asked_index = equal(name, index);
