@@ -25,6 +25,7 @@ export function g_profiles_dealt(deck, count, next) {
     fn_name("g_profiles_deal_weights"),
     " before every single draw is what makes the spread come out right, and the note there says why a single fitting up front does not.");
   ("The caller brings the deck, so the same dealer serves the whole cast and the elder's shorter deck without needing to know which it was handed.");
+  ("THE TABLE IS WALKED ONCE HERE AND WHAT IT SAYS IS CARRIED INTO EVERY DRAW. Counting out what the cast is owed already reads the axis names and the values on each of them, and the weighting for a single draw wants exactly those same two things - so read afresh per draw they were built again for every person dealt, two hundred and twenty-nine times over for an answer settled before the first card left. Handing them down changed nothing about who is dealt, which was checked person for person against the deal as it stood.");
   let short = greater_than(count, deck.length);
   let room = not(short);
   assert_json(room, {
@@ -35,9 +36,11 @@ export function g_profiles_dealt(deck, count, next) {
   let shares = g_profile_target_shares();
   let names = object_property_names(shares);
   let owed = {};
+  let values_by_name = {};
   for (let name of names) {
     let table = property_get(shares, name);
     let values = object_property_names(table);
+    property_set(values_by_name, name, values);
     let axis_owed = {};
     for (let value of values) {
       let share = property_get(table, value);
@@ -51,7 +54,13 @@ export function g_profiles_dealt(deck, count, next) {
   let dealt = [];
   for (let index = 0; less_than(index, count); index++) {
     let left = subtract(count, index);
-    let weights = g_profiles_deal_weights(remaining, owed, left);
+    let weights = g_profiles_deal_weights(
+      remaining,
+      owed,
+      left,
+      names,
+      values_by_name,
+    );
     let picked = list_weighted_pick_index(weights, next);
     let profile = remaining[picked];
     list_add(dealt, profile);
