@@ -1,11 +1,8 @@
-import { folder_public_root_blocked_assert } from "./folder_public_root_blocked_assert.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { file_to_commit_add_try } from "./file_to_commit_add_try.mjs";
-import { promise_catch_ignore } from "./promise_catch_ignore.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { null_is } from "./null_is.mjs";
-import { data_file_update } from "./data_file_update.mjs";
 import { property_set } from "./property_set.mjs";
 import { json_compress } from "./json_compress.mjs";
 import { indexeddb_put } from "./indexeddb_put.mjs";
@@ -13,8 +10,6 @@ import { browser_files_database_initialize } from "./browser_files_database_init
 import { browser_files_store } from "./browser_files_store.mjs";
 import { file_path_normalize } from "./file_path_normalize.mjs";
 import { browser_is } from "./browser_is.mjs";
-import { file_parent_exists_ensure } from "./file_parent_exists_ensure.mjs";
-import { file_path_temp } from "./file_path_temp.mjs";
 export async function file_overwrite_uncached(file_path, contents) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -51,21 +46,9 @@ export async function file_overwrite_uncached(file_path, contents) {
       value_get,
     );
     return;
-  } else {
-    await folder_public_root_blocked_assert(file_path);
-    await file_parent_exists_ensure(file_path);
-    let fs = await import("fs");
-    let temp_path = file_path_temp(file_path);
-    try {
-      await fs.promises.writeFile(temp_path, contents, "utf-8");
-      await fs.promises.rename(temp_path, file_path);
-    } catch (e) {
-      let promise = fs.promises.unlink(temp_path);
-      await promise_catch_ignore(promise);
-      throw e;
-    }
-    ("noted only once the file is actually on disk, and only on this side of the branch: a browser keeps its files in its own store, where there is no commit for a note to serve");
-    await file_to_commit_add_try(file_path);
   }
-  await data_file_update(file_path);
+  ("★ THE DISK HALF IS ASKED FOR BY NAME AND NOT IMPORTED, and that is about weight rather than about tidiness. The check above decides which machine RUNS it and settles nothing about which machine DOWNLOADS it - a bundler follows a plain import whether the branch is walked or not, so every page that saved anything at all carried the whole of a build machine's file writing in order never to run a line of it. A name joined into a path at the moment it is wanted is something a bundler cannot see through.");
+  let f_name = fn_name("file_overwrite_uncached_node");
+  let fn = await function_import_relative(f_name);
+  await fn(file_path, contents);
 }
