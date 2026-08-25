@@ -356,7 +356,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line the same solid black as the lead lines and everything above it one whole unbroken sheet of deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, the very top edge of the sun and no more of it than that, a low shallow white arc lying along the line and reaching almost to the white border on both sides, with no rays of any kind coming from it and nothing else in the picture at all",
+        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line the same solid black as the lead lines and everything above it one whole unbroken sheet of deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, the very top edge of the sun and no more of it than that, a low shallow white arc lying along the line and reaching almost to the white border on both sides, its upper edge one plain smooth unbroken curve from end to end, and nothing else in the picture at all",
       symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
