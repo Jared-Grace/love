@@ -1,3 +1,5 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { kinds_all_is } from "./kinds_all_is.mjs";
 export function commit_edit_diff_kinds_only_named_or_null(kinds) {
   "The few words for a commit whose changed lines are all of one kind - imports, prose, values chosen, or names standing alone - or nothing, where the lines are of more than one kind.";
   "A log of commits is read to find the ones worth opening, and a commit that only moved imports about or only reworded a sentence is not one of them. Those two are the commonest kind in this repo, because the canonicalizing pass writes imports on almost every commit, so saying so in three words is most of what the reading is for.";
