@@ -1,3 +1,5 @@
+import { list_empty_is } from "./list_empty_is.mjs";
+import { playwright_by_tag_name_text_contents } from "./playwright_by_tag_name_text_contents.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -38,10 +40,17 @@ export async function playwright_happy_step(page) {
   if (found) {
     ways = waited;
   }
+  let stuck = list_empty_is(ways);
+  let controls = [];
+  if (stuck) {
+    ("what the screen is OFFERING goes in the report, because an address on its own says which screen it is and not which of its controls should have been the one marked - and the words on the buttons are what somebody comparing the two has to read anyway");
+    controls = await playwright_by_tag_name_text_contents(page, "button");
+  }
   list_empty_not_is_assert_json(ways, {
     url,
     key,
     end_key,
+    controls,
     hint: "nothing on this screen is marked as the way on and nothing marks it as the end, so the walk is stuck - either the screen forgot to mark its right answer, or the answer is there and cannot be pressed",
   });
   let way = list_first(ways);
