@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -23,12 +24,12 @@ export async function pronunciation_dictionary_stresses(file_path) {
     let bare = first.replace(/\(\d+\)$/, "");
     let word = text_lower_to(bare);
     let written = greater_than(word.length, 0);
-    if (!written) {
+    if (not(written)) {
       return;
     }
     let already = property_get_or_null(stresses, word);
     let fresh = null_is(already);
-    if (!fresh) {
+    if (not(fresh)) {
       return;
     }
     let sounds = list_skip(fields, 1);
