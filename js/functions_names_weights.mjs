@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
+import { property_get } from "./property_get.mjs";
+import { file_size } from "./file_size.mjs";
+import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function functions_names_weights(f_names) {
   "$plain f_names";
   "A list of function names paired with the bytes of the file each one lives in, heaviest first.";

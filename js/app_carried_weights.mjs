@@ -19,21 +19,6 @@ export async function app_carried_weights(a_main) {
     a_main,
     hint: "this entry point reached nothing at all, so nothing was weighed - the name is the thing to look at, not the empty answer",
   });
-  let paths = await functions_names_to_paths();
-  async function measure(f_name) {
-    let f_path = property_get(paths, f_name);
-    let size = await file_size(f_path);
-    let result = {
-      f_name,
-      size,
-    };
-    return result;
-  }
-  let measured = await list_map_unordered_async(carried, measure);
-  function size_of(m) {
-    let size = property_get(m, "size");
-    return size;
-  }
-  let sorted = list_sort_number_mapper_reverse(measured, size_of);
+  let sorted = await functions_names_weights(carried);
   return sorted;
 }
