@@ -1,7 +1,7 @@
+import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_block_body_get } from "./js_block_body_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_is } from "./list_is.mjs";
 import { null_is } from "./null_is.mjs";
 export function js_statement_run_or_null(held) {
@@ -19,8 +19,7 @@ export function js_statement_run_or_null(held) {
   }
   let caught = js_node_type_is(held, "CatchClause");
   if (caught) {
-    let block = property_get(held, "body");
-    let r = js_block_body_get(block);
+    let r = js_function_declaration_to_block_body(held);
     return r;
   }
   let blocked = js_node_type_is(held, "BlockStatement");
