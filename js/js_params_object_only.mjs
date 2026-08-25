@@ -1,3 +1,4 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_ast_identifier_object_uses } from "./js_ast_identifier_object_uses.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -8,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { or } from "./or.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_params_object_only(ast, params) {
   "The parameters of a tree that are only ever asked for a property - never counted, never compared, never handed on - so nothing but an object can be put in them.";
@@ -47,8 +47,7 @@ export function js_params_object_only(ast, params) {
       property_set(object_only, name, false);
       continue;
     }
-    let seen = property_get_or_null(object_only, name);
-    let unset = equal(seen, null);
+    let unset = property_get_or_null_equal(object_only, name, null);
     if (unset) {
       property_set(object_only, name, true);
     }
