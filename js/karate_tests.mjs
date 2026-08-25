@@ -1,5 +1,4 @@
 import { sleep_seconds } from "./sleep_seconds.mjs";
-import { app_replace_url_dev } from "./app_replace_url_dev.mjs";
 import { playwright_test_app_dev } from "./playwright_test_app_dev.mjs";
 import { portfolio_qa_attribute_test_data } from "../../portfolio_qa/js/portfolio_qa_attribute_test_data.mjs";
 import { app_karate_main_title } from "../../karate_code/js/app_karate_main_title.mjs";
@@ -7,9 +6,7 @@ import { app_karate } from "../../karate_code/js/app_karate.mjs";
 import { playwright_by_attribute } from "./playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "./playwright_by_attribute_type.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
-import { text_combine } from "./text_combine.mjs";
 export async function karate_tests() {
-  text_combine("TODO: fix url like ", app_replace_url_dev);
   await playwright_test_app_dev(app_karate, lambda);
   async function lambda(page) {
     let title_actual = await page.title();

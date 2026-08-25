@@ -137,7 +137,7 @@ export function song_image_couplet_glosses() {
         "Described. Revelation 22:2-3 sets the tree of life bearing fruit in the very verse that says the curse is gone. It replaced a serpent with a crushed head, which six drawings could not keep from looking alive.",
     },
     17: {
-      kept: 9,
+      kept: 7,
       lyric_ref: "Acts 20:28, 1 Peter 1:18-19, Exodus 12:7",
       lyric_explain:
         "The church of GOD, which HE hath purchased with HIS own blood. Peter says we were redeemed not with silver and gold but with the precious blood of CHRIST, as of a lamb without blemish.",

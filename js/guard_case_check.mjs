@@ -1,3 +1,4 @@
+import { text_column } from "./text_column.mjs";
 import { equal } from "./equal.mjs";
 import { guard_check } from "./guard_check.mjs";
 import { property_get } from "./property_get.mjs";
