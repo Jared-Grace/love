@@ -45,19 +45,7 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let asked = js_node_type_is(node_before, "IfStatement");
   if (asked) {
-    let differing = js_statement_runs_differing_or_null(
-      node_before,
-      node_after,
-    );
-    let apart = null_is(differing);
-    if (apart) {
-      return null;
-    }
-    let inside = list_empty_not_is(differing);
-    if (inside) {
-      return null;
-    }
-    let r5 = "a condition written differently";
+    let r5 = js_statement_swap_asked_named_or_null(node_before, node_after);
     return r5;
   }
   return null;
