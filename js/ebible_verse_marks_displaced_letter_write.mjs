@@ -1,3 +1,4 @@
+import { ebible_url } from "./ebible_url.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -42,7 +43,7 @@ export async function ebible_verse_marks_displaced_letter_write() {
       }
       let marks = list_map(marks_measured, mark_row);
       let url = text_combine_multiple([
-        "https://ebible.org/",
+        ebible_url(),
         bible_folder,
         "/",
         chapter_code,
