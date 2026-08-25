@@ -1,10 +1,51 @@
-export function app_g_bless_color_looking() {
-  "The wash laid over the ground the player is looking at, so the cone is visible as a shape";
-  "rather than something you have to work out from where you are facing.";
-  "Plain light, deliberately NOT gold. Gold and the gold-to-white glow are kept for God's";
-  "presence, and the cone is only where a pair of eyes happen to be pointed - it is the";
-  "player's attention, not an answered prayer. Tinting it gold would spend the one colour";
-  "that has to still mean something when a blessing actually lands.";
-  let color = "rgba(255, 255, 255, 0.32)";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
+import { not } from "./not.mjs";
+import { number_round_places } from "./number_round_places.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { text_combine_3 } from "./text_combine_3.mjs";
+export function app_g_bless_color_looking(ahead, depth) {
+  arguments_assert(arguments, 2);
+  ("The wash laid over one tile of the ground the player is looking at, so the cone is");
+  ("visible as a shape rather than something you have to work out from where you are");
+  ("facing.");
+  ("Plain light, deliberately NOT gold. Gold and the gold-to-white glow are kept for God's");
+  ("presence, and the cone is only where a pair of eyes happen to be pointed - it is the");
+  ("player's attention, not an answered prayer. Tinting it gold would spend the one colour");
+  ("that has to still mean something when a blessing actually lands.");
+  ("It FADES with distance, brightest on the row at the player's feet and faintest on the");
+  ("last row they can reach. Flat, the cone was a slab of light with a hard edge all the way");
+  ("round it, which reads as a thing lying on the street; a wash that gives out gradually");
+  ("reads as how far somebody can make a face out, which is what it actually means. Sight");
+  ("does not stop at a line, it runs out.");
+  ("The fade also says which way the player is FACING without an arrow, because the bright");
+  ("end is the near end and the whole shape leans away from it.");
+  ("Row by row rather than smoothly inside a row, because the ground is squares and a");
+  ("person either is or is not on one. A gradient across a square would give two people");
+  ("standing on it two different strengths of light for one fact about them.");
+  ("The near strength is what the whole cone used to be, so a cone one row deep looks");
+  ("exactly as it always did - it is the far rows that were added, not the near one that");
+  ("was dimmed.");
+  let near = 0.32;
+  let far = 0.1;
+  let row = subtract(ahead, 1);
+  let rows = subtract(depth, 1);
+  ("A cone one row deep has no distance to fade over, and asking for the fraction anyway");
+  ("would divide by nothing. That row is the near row, so it takes the near strength.");
+  let shallow = less_than_equal(rows, 0);
+  let deep = not(shallow);
+  let fraction = 0;
+  if (deep) {
+    fraction = divide(row, rows);
+  }
+  let fall = subtract(near, far);
+  let drop = multiply(fraction, fall);
+  let alpha_exact = subtract(near, drop);
+  ("Rounded, because a third of a fall lands on a number with seventeen digits in it and");
+  ("every one of those digits is written into the page as style text.");
+  let alpha = number_round_places(alpha_exact, 3);
+  let color = text_combine_3("rgba(255, 255, 255, ", alpha, ")");
   return color;
 }
