@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -63,10 +64,8 @@ export function js_statements_change_gaps_or_null(texts_before, texts_after) {
     index_before = add(index_before, 1);
     index_after = add(index_after, 1);
   }
-  let left = list_size(texts_before);
-  let tail_before = subtract(left, index_before);
-  let left2 = list_size(texts_after);
-  let tail_after = subtract(left2, index_after);
+  let tail_before = list_size_subtract(texts_before, index_before);
+  let tail_after = list_size_subtract(texts_after, index_after);
   let ended = equal(tail_before, 0) && equal(tail_after, 0);
   if (not(ended)) {
     list_add(gaps, {
