@@ -1,7 +1,6 @@
+import { window_app_hash_name_url } from "./window_app_hash_name_url.mjs";
 import { app_index_emoji } from "./app_index_emoji.mjs";
 import { app_index_label_generic } from "./app_index_label_generic.mjs";
-import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
-import { window_app_url_generic } from "./window_app_url_generic.mjs";
 import { app_index_card_link } from "./app_index_card_link.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_index_dev_link_card(root, entry) {
