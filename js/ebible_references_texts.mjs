@@ -1,8 +1,6 @@
+import { text_split_comma_trimmed } from "./text_split_comma_trimmed.mjs";
 import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_split_comma_or_empty } from "./text_split_comma_or_empty.mjs";
-import { list_map } from "./list_map.mjs";
-import { text_trim } from "./text_trim.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 export async function ebible_references_texts(references_comma) {
   "$plain references_comma";
@@ -13,8 +11,7 @@ export async function ebible_references_texts(references_comma) {
   "SEVERAL AT A TIME RATHER THAN ONE AFTER ANOTHER, because each reference that is not in a chapter already on this disk has to wait for that chapter to come down, and waiting for one is no reason to stop asking for the next. Measured, five references took fifty-four seconds one behind the other, nearly all of it waiting. A few at a time and not all at once, because the answer is a set of chapters and asking for a hundred at once would only queue them somewhere else.";
   "The reading itself is next door and takes the bible as well, so a page wanting a passage in the reader's own language asks the same question with a different first word. This name is the English one, which is what a person at a command line means.";
   arguments_assert(arguments, 1);
-  let split = text_split_comma_or_empty(references_comma);
-  let references = list_map(split, text_trim);
+  let references = text_split_comma_trimmed(references_comma);
   let folder = ebible_folder_english();
   let texts = await ebible_folder_references_texts(folder, references);
   return texts;
