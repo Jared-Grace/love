@@ -1,9 +1,9 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_source } from "./bible_folder_source.mjs";
 import { bible_versions_english_choices_reference } from "./bible_versions_english_choices_reference.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,8 +18,7 @@ export async function bible_versions_english_choices_words_none(reference) {
   let wordings = await bible_versions_english_choices_reference(reference);
   let heard = list_map_property(wordings, "bible_folder");
   function silent_is(record) {
-    let bible_folder = property_get(record, "bible_folder");
-    let wordless = list_includes_not(heard, bible_folder);
+    let wordless = property_in_list_not(record, "bible_folder", heard);
     return wordless;
   }
   let silent = list_filter(usable, silent_is);
