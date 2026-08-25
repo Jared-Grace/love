@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { js_guard_statements_cases } from "./js_guard_statements_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { catch_null } from "./catch_null.mjs";
@@ -33,21 +34,18 @@ export function js_guard_statements_cases_gate_run() {
     }
     let binding = list_first(statements);
     let guard = list_get(statements, 1);
-    let declarations = property_get(binding, "declarations");
-    let declarator = list_first(declarations);
+    let declarator = property_list_first(binding, "declarations");
     let id = property_get(declarator, "id");
     let bound = property_get(id, "name");
     let source = property_get(declarator, "init");
     let callee = property_get(source, "callee");
     let test_fn = property_get(callee, "name");
-    let args = property_get(source, "arguments");
-    let argument = list_first(args);
+    let argument = property_list_first(source, "arguments");
     let tested = property_get(argument, "name");
     let test = property_get(guard, "test");
     let guarded = property_get(test, "name");
     let block = property_get(guard, "consequent");
-    let body = property_get(block, "body");
-    let statement = list_first(body);
+    let statement = property_list_first(block, "body");
     let handed = property_get(statement, "argument");
     let returned = js_unparse(handed);
     let built = {
