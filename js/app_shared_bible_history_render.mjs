@@ -19,12 +19,13 @@ export function app_shared_bible_history_render(
     app_shared_text_quiet(container, empty_text);
     return;
   }
+  ("Each reading gets a line to itself. A passage name is short, so buttons of the ordinary width sit several to a row, and two readings that stood side by side read as one longer name - John 3:16 next to John 2:5-9 came out as a single run of writing with no break in it. A list of places is read down, one glance per line, so each one fills its line.");
   function entry_button(entry) {
     let reference = property_get(entry, "reference");
     async function on_entry() {
       await open_entry(entry);
     }
-    app_shared_button(container, reference, on_entry);
+    app_shared_button_wide(container, reference, on_entry);
   }
   each(entries, entry_button);
 }
