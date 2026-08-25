@@ -1,3 +1,4 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_history_get } from "./app_shared_bible_history_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,10 +18,13 @@ export async function app_shared_bible_history_entries(context) {
       chapter_code,
       verse_numbers,
     );
+    ("Which reader the line was taken down in is carried across untouched, because it is part of the reading rather than part of the naming - it is not said out loud to anybody, and it is what the opening needs. A line written before it was recorded says nothing here, and the opening answers for that.");
+    let mode = property_get_or_null(entry, "mode");
     let entry_named = {
       chapter_code,
       verse_numbers,
       reference,
+      mode,
     };
     return entry_named;
   }
