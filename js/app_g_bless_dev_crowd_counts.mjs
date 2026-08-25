@@ -1,10 +1,10 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_flat } from "./list_flat.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
@@ -29,8 +29,7 @@ export function app_g_bless_dev_crowd_counts(world) {
   let blocks = property_get(world, "blocks");
   function block_tiles(block) {
     let sidewalk = property_get(block, "sidewalk");
-    let alleys = property_get(block, "alleys");
-    let both = list_concat(sidewalk, alleys);
+    let both = list_concat_property(sidewalk, block, "alleys");
     return both;
   }
   let tiles_each = list_map(blocks, block_tiles);
