@@ -77,6 +77,8 @@ export function literals_frozen_names() {
   ("A fourth folder of the same kind, and the one the entry above predicted. The game's written arcs are uploaded under it, a shipped page builds the same address to read them back, and the list saying which folders a backup may take names it too - so it escaped on the first upload and is spelled in two places that must never disagree.");
   ("It came here the way that entry said a new store would: written correctly and frozen at its own site from the day it was made, and unwatched until a gate asked who was missing. The word was already safe from the canonicalizing pass; what it was not safe from was somebody retyping it.");
   let spelled44 = fn_name("g_arc_write_upload_namespace");
+  let spelled3 = fn_name("app_shared_bible_history_key");
+  let spelled45 = fn_name("app_shared_bible_session_id_key");
   let names = [
     spelled,
     spelled2,
@@ -121,6 +123,8 @@ export function literals_frozen_names() {
     spelled42,
     spelled43,
     spelled44,
+    spelled3,
+    spelled45,
   ];
   return names;
 }
