@@ -38,34 +38,22 @@ export async function app_code_home(context) {
   function lambda(item, index) {
     let id = property_get(item, "id");
     let open = complete_previous;
-    async function lambda3() {
-      await app_shared_screen_go_tab(
-        context,
-        "lesson_id",
-        id,
-        app_code_examples,
-      );
-    }
     let complete = app_code_lesson_complete_is(progress, id);
-    let r = app_shared_button_numbered_progress(
+    let button = app_code_home_lesson_button(
       g,
+      context,
+      item,
+      index,
       complete,
       complete_previous,
-      index,
-      lambda3,
     );
     complete_previous = complete;
-    let button = property_get(r, "button");
     way_marked = app_code_home_way_marked_next(
       button,
       way_marked,
       open,
       complete,
     );
-    let gap = app_shared_spaced_gap();
-    html_style_margin_top(button, gap);
-    let title = property_get(r, "title");
-    app_code_lesson_title_render(title, item);
     let is_current = equal(id, current_id);
     if (is_current) {
       just_left = button;
