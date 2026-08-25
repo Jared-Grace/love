@@ -11,6 +11,7 @@ export async function app_en_learn_bible_gloss_urdu_write_next(chapter_code) {
   "$plain chapter_code";
   "the code is a chapter's name, like JHN01, chosen from the Bible's own book and chapter numbering. It names text to read and nothing that runs.";
   "It answers with how many passages are still waiting as well as with the one to write, so an author knows whether a chapter is nearly done without asking a second question, and a chapter that is finished says so rather than handing over nothing and leaving that to be read as a failure.";
+  "A chapter with nothing left to write is answered by the one that knows what else is owed on it, because finishing the writing is not the same as the work arriving anywhere, and the moment an author reads that there is nothing left is the moment the difference matters.";
   let coverage =
     await app_en_learn_bible_gloss_urdu_write_coverage(chapter_code);
   let missing = property_get(coverage, "missing");
