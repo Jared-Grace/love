@@ -737,6 +737,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_roots_shallower_gate_run,
     app_ceb_bible_gloss_affix_letters_apart_gate_run,
     app_en_learn_bible_gloss_urdu_misaligned_gate_run,
+    app_en_learn_bible_gloss_urdu_unpublished_gate_run,
     gloss_write_root_files_gate_run,
     text_edit_distance_gate_run,
     cors_gate_run,
