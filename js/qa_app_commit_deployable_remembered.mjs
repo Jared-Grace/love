@@ -1,3 +1,5 @@
+import { qa_app_shipped_names } from "./qa_app_shipped_names.mjs";
+import { qa_app_commit_gate_run_at_reach } from "./qa_app_commit_gate_run_at_reach.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { not } from "./not.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
@@ -7,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { qa_app_commit_gate_run_at } from "./qa_app_commit_gate_run_at.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 export async function qa_app_commit_deployable_remembered(
   search,
@@ -23,6 +24,8 @@ export async function qa_app_commit_deployable_remembered(
   let head = await git_head_commit();
   let commits = await git_commits_between(folder, head, commit_floor);
   let known = await qa_commit_named();
+  ("What this app ships is asked ONCE, out here, and handed to every commit below. It is read off the folder as it stands rather than off any commit, so asked inside the walk it would be the same answer fetched again for each one - measured 2026-08-25 at about thirty-two seconds a fetch, which is where fifteen of the fifteen and a half minutes of one run went. The prose above promises about a second, and now it can keep that promise.");
+  let reach = await qa_app_shipped_names(search);
   let looked = [];
   let unjudged = 0;
   let chosen = null;
@@ -32,7 +35,7 @@ export async function qa_app_commit_deployable_remembered(
       unjudged = unjudged + 1;
       continue;
     }
-    let at = await qa_app_commit_gate_run_at(search, commit);
+    let at = await qa_app_commit_gate_run_at_reach(search, commit, reach);
     let deployable = property_get(at, "deployable");
     let blocking = property_get(at, "blocking");
     let elsewhere = property_list_map_property(at, "elsewhere", "gate");
