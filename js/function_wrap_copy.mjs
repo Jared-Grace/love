@@ -24,7 +24,8 @@ export async function function_wrap_copy(f_name) {
     let copier = fn_name("clipboard_copy_value");
     await js_call_add_before_return(ast, copier);
     let name_returned = js_return_name(ast);
-    let selects = js_find_call_name_includes(ast, copier);
+    let found = js_find_call_name_includes(ast, copier);
+    let selects = list_single_item(found);
     await js_call_argument_named_identifier_set(
       ast,
       selects,
