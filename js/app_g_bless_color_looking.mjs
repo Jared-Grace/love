@@ -32,7 +32,7 @@ export function app_g_bless_color_looking(ahead, depth) {
   ("The last row is the edge of what may be prayed for, so the player has to be able to SEE");
   ("where their reach ends - faded until it is barely there, the shape stops telling them,");
   ("and they walk forward to find out instead.");
-  let near = 0.32;
+  let near = 0.45;
   let far = 0.18;
   let row = subtract(ahead, 1);
   let rows = subtract(depth, 1);
