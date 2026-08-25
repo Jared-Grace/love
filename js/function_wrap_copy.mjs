@@ -1,3 +1,4 @@
+import { function_auto_checked } from "./function_auto_checked.mjs";
 import { list_single_item } from "./list_single_item.mjs";
 import { js_return_name } from "./js_return_name.mjs";
 import { js_find_call_name_includes } from "./js_find_call_name_includes.mjs";
@@ -18,8 +19,10 @@ export async function function_wrap_copy(f_name) {
   let suffix = "copy";
   await function_wrap_suffix_add(f_name, suffix);
   let name_copy = function_name_combine(f_name, suffix);
-  let output = await function_transform(name_copy, lambda);
-  return output;
+  ("CANONICALISED BEFORE IT IS HANDED BACK, because the call this writes is the twin's only mention of the copier and a written call brings no import with it. Left as it stood, the file parsed, showed the right lines, and threw the moment anybody ran it - a name nothing imported.");
+  await function_transform(name_copy, lambda);
+  let checked = await function_auto_checked(name_copy);
+  return checked;
   async function lambda(ast) {
     "A generated call arrives holding the CALLED function's own parameter names, which name nothing where it now sits - so the second half points its one argument at the answer this wrapper is already holding. Written and left, it would have read a name nobody bound.";
     let copier = fn_name("clipboard_copy_value");
