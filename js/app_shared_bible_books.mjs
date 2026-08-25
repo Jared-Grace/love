@@ -1,6 +1,6 @@
+import { app_shared_bible_index_flat_offered } from "./app_shared_bible_index_flat_offered.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
-import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_index_flat_books_browser } from "./ebible_index_flat_books_browser.mjs";
 import { ebible_index_flat_book_chapter_codes } from "./ebible_index_flat_book_chapter_codes.mjs";
 import { list_first } from "./list_first.mjs";

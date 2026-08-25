@@ -1,8 +1,6 @@
-import { apps_names } from "./apps_names.mjs";
+import { firebase_prod_apps_disk_hashes } from "./firebase_prod_apps_disk_hashes.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { firebase_prod_hashes_path } from "./firebase_prod_hashes_path.mjs";
-import { list_unique } from "./list_unique.mjs";
 export async function firebase_prod_hashes_write_from_disk() {
   "Writes the whole note of what is being served from what is built and waiting, which is what sending has just made true";
   "Sending puts out the folder of waiting pieces wholesale, so the moment a sending finishes, what is waiting IS what is being served. Reading it back off the wire to learn that would be asking a question already answered - and answered more surely here, because a piece just sent can take a moment to appear at every place that serves it, and a reader arriving inside that moment is told the old thing and writes it down as the new one";

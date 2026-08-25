@@ -1,6 +1,6 @@
+import { app_shared_bible_index_flat_offered } from "./app_shared_bible_index_flat_offered.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
-import { ebible_index_flat_chosen } from "./ebible_index_flat_chosen.mjs";
 import { ebible_index_flat_book_chapter_codes } from "./ebible_index_flat_book_chapter_codes.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
@@ -25,9 +25,10 @@ export async function app_shared_bible_chapters(context) {
   let book_name = property_get(r, "book_name");
   let book_code = property_get(r, "book_code");
   ("only the chapters of this book the reader's own bibles have between them, on the same footing as the book list before it: one of the chosen bibles holding a chapter is enough to offer it, and a chapter none of them holds is left off rather than opened on nothing.");
+  ("and only the chapters this app is willing to offer, on the same footing again: a chapter nobody has written this app's work for is left off rather than offered and opened on a page that cannot do what the reader came for.");
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
-  let list = await ebible_index_flat_chosen(bible_folders);
+  let list = await app_shared_bible_index_flat_offered(context, bible_folders);
   let chapter_codes = ebible_index_flat_book_chapter_codes(list, book_code);
   let oc = app_shared_bible_chapter_open_curried(context);
   let current = property_get(r, "chapter_code");
