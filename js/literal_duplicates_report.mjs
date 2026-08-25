@@ -1,3 +1,4 @@
+import { text_column_right } from "./text_column_right.mjs";
 import { json_to } from "./json_to.mjs";
 import { literal_duplicates } from "./literal_duplicates.mjs";
 ("Human-readable listing of duplicated constants, widest first, so the next");
@@ -6,8 +7,9 @@ import { literal_duplicates } from "./literal_duplicates.mjs";
 export async function literal_duplicates_report() {
   let found = await literal_duplicates();
   for (let f of found) {
+    let s = String(f.files.length);
     console.log(
-      text_column_right(String(f.files.length), 4) +
+      text_column_right(s, 4) +
         "  " +
         f.f_name +
         " = " +
@@ -17,5 +19,6 @@ export async function literal_duplicates_report() {
     );
   }
   console.log("\n" + found.length + " duplicated constants");
-  return found.length;
+  let r = found.length;
+  return r;
 }

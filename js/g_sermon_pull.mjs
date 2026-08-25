@@ -1,3 +1,4 @@
+import { text_column } from "./text_column.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { json_to } from "./json_to.mjs";

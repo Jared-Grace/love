@@ -1,3 +1,5 @@
+import { text_upper_to } from "./text_upper_to.mjs";
+import { text_column } from "./text_column.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
@@ -31,7 +33,8 @@ export async function examples_gate_run() {
     } else {
       skip++;
     }
-    console.log(text_column(text_upper_to(result), 6) + e.title);
+    let s = text_upper_to(result);
+    console.log(text_column(s, 6) + e.title);
   }
   timings_print(timings);
   console.log("\npass " + pass + "  fail " + fail + "  skip " + skip);
