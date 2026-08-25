@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { assert } from "./assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_first } from "./list_first.mjs";
+import { js_identifier_is_assert } from "./js_identifier_is_assert.mjs";
+import { js_identifier_is } from "./js_identifier_is.mjs";
+import { equal } from "./equal.mjs";
 export function js_guard_statements_shape_assert(binding, guard) {
   "Stops unless the two lines built for a guard came out as exactly the two shapes a guard is made of - a name bound to a call on one name, and a test of that name returning one thing.";
   "THE WORDS HANDED IN ARE READ BACK OUT OF THE TREE RATHER THAN CHECKED AS TEXT. Each of the four is dropped into a line, the line is parsed, and the tree is asked whether it is still the shape it was meant to be. A word carrying anything besides a name - a second argument, a call of its own, a line ending and another statement behind it - shows up here as a different shape, and there is no spelling of it that both slips past this and stays the shape.";
@@ -6,7 +15,8 @@ export function js_guard_statements_shape_assert(binding, guard) {
   let bound_is = js_node_type_is(binding, "VariableDeclaration");
   assert(bound_is);
   let declarations = property_get(binding, "declarations");
-  let alone_is = equal(list_size(declarations), 1);
+  let left = list_size(declarations);
+  let alone_is = equal(left, 1);
   assert(alone_is);
   let declarator = list_first(declarations);
   let id = property_get(declarator, "id");
@@ -17,7 +27,8 @@ export function js_guard_statements_shape_assert(binding, guard) {
   let callee = property_get(source, "callee");
   js_identifier_is_assert(callee);
   let args = property_get(source, "arguments");
-  let single_is = equal(list_size(args), 1);
+  let left2 = list_size(args);
+  let single_is = equal(left2, 1);
   assert(single_is);
   let argument = list_first(args);
   js_identifier_is_assert(argument);
@@ -27,7 +38,8 @@ export function js_guard_statements_shape_assert(binding, guard) {
   js_identifier_is_assert(test);
   let block = property_get(guard, "consequent");
   let body = property_get(block, "body");
-  let one_line_is = equal(list_size(body), 1);
+  let left3 = list_size(body);
+  let one_line_is = equal(left3, 1);
   assert(one_line_is);
   let statement = list_first(body);
   let returning_is = js_node_type_is(statement, "ReturnStatement");
