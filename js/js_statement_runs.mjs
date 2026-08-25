@@ -1,8 +1,7 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_run_or_null } from "./js_statement_run_or_null.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_or_null } from "./property_or_null.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { not } from "./not.mjs";
@@ -23,8 +22,7 @@ export function js_statement_runs(node) {
     "BlockStatement",
     "LabeledStatement",
   ];
-  let kind = property_get(node, "type");
-  let holding = list_includes(kinds, kind);
+  let holding = property_in_list(node, "type", kinds);
   if (not(holding)) {
     let r = [];
     return r;
