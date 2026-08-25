@@ -12,7 +12,7 @@ export async function ebible_folder_references_texts(bible_folder, references) {
   "SEVERAL AT A TIME RATHER THAN ONE AFTER ANOTHER, because each reference that is not in a chapter already on this disk has to wait for that chapter to come down, and waiting for one is no reason to stop asking for the next. A few at a time and not all at once, because the answer is a set of chapters and asking for a hundred at once would only queue them somewhere else.";
   "It takes the bible as well as the references because the thing above it that only ever asks the English one is one line, and a page that wants a passage in the reader's own language is the same question with a different first word.";
   arguments_assert(arguments, 2);
-  let books = await ebible_version_books(bible_folder);
+  let books = await ebible_version_books_browser_or_node(bible_folder);
   async function lambda$pair(reference) {
     let text = await ebible_reference_books_text(
       bible_folder,
