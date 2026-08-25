@@ -1,3 +1,7 @@
+import { bless_cone_people_wholly } from "./bless_cone_people_wholly.mjs";
+import { bless_view_add_people } from "./bless_view_add_people.mjs";
+import { json_to } from "./json_to.mjs";
+import { equal } from "./equal.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,11 +35,11 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   let held = [];
   let held_cone = null;
   function hold() {
-    ("Taken when the cone CHANGES rather than on every draw, because a draw also happens");
-    ("after a prayer - and a fresh snapshot there would drop the very people the player");
-    ("walked over to hold on to, the moment they prayed for the first of them. The cone is");
-    ("made of where the player stands, which way they face and how far they reach, so a cone");
-    ("that has not changed means the player has not acted.");
+    "Taken when the cone CHANGES rather than on every draw, because a draw also happens";
+    "after a prayer - and a fresh snapshot there would drop the very people the player";
+    "walked over to hold on to, the moment they prayed for the first of them. The cone is";
+    "made of where the player stands, which way they face and how far they reach, so a cone";
+    "that has not changed means the player has not acted.";
     let cone = cone_get();
     let text = json_to(cone);
     let same = equal(text, held_cone);
