@@ -1,3 +1,4 @@
+import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
 import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
 import { app_code_lesson_expression_either_first_above } from "./app_code_lesson_expression_either_first_above.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
@@ -13,7 +14,6 @@ import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exe
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { noop } from "./noop.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
 export function app_code_lesson_expression_either_first() {
   "two operators ready at the same time, and either of them may be worked out first: 2 * 3 + 4 * 5 has a times on each side of the plus, and the line lands on the same value whichever times is taken";
   "The one new fact. Every line up to here has had exactly one operator that could go next, so a learner has never had to make a choice that was theirs - the rule picked for them and they only had to read it. Here the rule leaves two, and the thing to learn is that leaving two is not the rule failing to say: both answers are right.";
@@ -21,12 +21,10 @@ export function app_code_lesson_expression_either_first() {
   "Times and plus, no comparison, because the choice is about the shape of the line and not about what the operators mean. Adding a comparison on top of it is the next lesson, and it is one step from this one.";
   "The example and the quiz are the same pressing, and neither of them says which operator to take. What the lesson adds is a third line above the card, worked out both ways round to one value - so the claim is made where it can be read and tested, and the two lines under it are left to be pressed.";
   let name_id = app_code_lesson_expression_either_first_title_name_id();
-  let trees = {};
   function item_new() {
-    "a question is the line as written and its answer is what the line comes to; the shape it was built from is kept beside them under the same writing, because both the working and the quiz need the shape and a shape cannot be recovered from its own text";
+    "a question is the line as written and its answer is what the line comes to";
     let tree = app_code_lesson_expression_either_first_expression();
     let question = app_code_expression_code(tree);
-    property_set(trees, question, tree);
     let answer = app_code_expression_value(tree);
     let item = {
       question,
@@ -42,9 +40,11 @@ export function app_code_lesson_expression_either_first() {
   }
   function tree_of(qa, info) {
     "the shape behind a question, found again from the writing it was printed as - the quiz hands its question over as text, and the step-at-a-time working needs the shape it came from";
+    "READ BACK RATHER THAN REMEMBERED, which is what every other lesson of this kind does and what this one used to get wrong. A line outlives the run that built it: a review keeps the writing to ask again, and comes back to it on a page loaded afresh, where a shape kept beside the line at the moment it was printed is gone. The lesson then threw at the exact moment a learner answered the question before it correctly - so the fault landed on the screen after the one that caused it, on a review of a different lesson entirely.";
+    "The general reader serves it: this lesson's lines are arithmetic with no brackets, which is the one thing that reader takes, and it hands back the same hanging the maker built - each times gathering its two numbers, the plus holding both of them.";
     let answer_property = property_get(info, "answer_property");
     let question = app_code_lesson_quiz_qa_question(qa, answer_property);
-    let tree = property_get(trees, question);
+    let tree = app_code_expression_flat_tree_of_code(question);
     return tree;
   }
   function on_answer(parent, info, qa, on_success, on_wrong) {
@@ -62,7 +62,7 @@ export function app_code_lesson_expression_either_first() {
   function on_question_example(parent, question, card) {
     "the front page presses the same line the quiz does, with nothing said about which of the two ready operators to press - either is taken and the line goes on down";
     "It used to be the line written out flat with both orders worked underneath it. That is the one thing this lesson exists to teach handed over as something to read, on the very screen where it could be found by pressing instead. The working out still stands, above the card, on a line of its own.";
-    let tree = property_get(trees, question);
+    let tree = app_code_expression_flat_tree_of_code(question);
     app_code_expression_choose_line(
       parent,
       tree,
