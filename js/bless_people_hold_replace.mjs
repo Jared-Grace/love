@@ -13,10 +13,7 @@ export function bless_people_hold_replace(people_before, people_after, cone) {
   ("Let go FIRST, and of everybody, even those about to be held again. Told to skip the");
   ("ones common to both, this would have to compare the two lists, and setting the mark");
   ("again costs less than working out that it did not need to be set.");
-  function hold_release(person) {
-    property_delete_if_exists(person, "hold_cone");
-  }
-  each(people_before, hold_release);
+  bless_people_hold_release(people_before);
   function hold_take(person) {
     property_set(person, "hold_cone", cone);
   }
