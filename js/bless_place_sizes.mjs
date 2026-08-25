@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 export function bless_place_sizes() {
-  "How many of each rung fit inside the one above it - three people to a household, two";
+  "How many of each rung fit inside the one above it - three people to a household, three";
   "households to a building, and so on up.";
   "Keyed by the CONTAINER, and the number is how many of the rung below it holds. Read";
   ("against `",
@@ -33,23 +33,29 @@ export function bless_place_sizes() {
   ("come to: seven tiles in ten occupied. At that density a person is hemmed in on all four");
   ("sides often enough that the street reads as a crowd holding still, which is what a");
   ("player reported twice.");
-  ("Two households to a building leaves thirty on those same ninety-two tiles - one tile in");
-  ("three - and almost nobody with nowhere to step. It is the BUILDING that gives, rather");
-  ("than the block, because the block is the rung the player is asked to cover and thinning");
-  ("it would shorten the street itself: buildings-per-block sets the length of the pavement");
-  ("as well as the size of the crowd, so cutting it moves both ends of the fraction and");
-  ("changes the density not at all.");
-  ("Six people to a building is also the truer number for what is DRAWN. A building here is");
-  ("three tiles across and two deep; twelve people living in that was a claim the picture");
-  ("never supported, and two households in it reads as the small house the row actually");
-  ("looks like.");
-  ("The cost is honest and it is that a building is now a thin rung - two of the thing");
-  ("below it, where every other rung branches five or more ways. A rung that thin is close");
-  ("to not being a rung at all, and if it is ever dropped, this is the number that says");
-  ("why it could be. It is kept because a prayer that reaches your own building rather than");
-  ("only your own household is a step the player can feel, and because widening the street");
-  ("instead is not available: the ground is twenty-seven tiles across and a block is");
-  ("already nineteen of them.");
+  ("It is the BUILDING that gives, rather than the block, because the block is the rung the");
+  ("player is asked to cover and thinning it would shorten the street itself:");
+  ("buildings-per-block sets the length of the pavement as well as the size of the crowd, so");
+  ("cutting it moves both ends of the fraction and changes the density not at all.");
+  ("It went to two first and that was too far. Thirty on a block is one tile in three and");
+  ("about one person in twenty with nowhere to step, which is a pavement anybody can walk");
+  ("but is thin enough that the player asked for the crowd back. Three is where it stands:");
+  ("forty-five to a block, four tiles in seven, and about one person in seven momentarily");
+  ("boxed in. That last number is the one to read, and it is read on a world the instant it");
+  ("is built, before anybody has taken a step - the walkers spread out afterwards, so it is");
+  ("the worst the street ever is rather than the way it looks. Against it, sixty to a block");
+  ("stranded one person in four and never recovered, because the crowd that would have to");
+  ("move to free somebody was itself stuck.");
+  ("Nine people to a building is also nearer what is DRAWN than twelve was. A building here");
+  ("is three tiles across and two deep, and three households in that is a small terrace,");
+  ("which is what the row looks like.");
+  ("Three is also what keeps the building a rung at all. At two it branched fewer ways than");
+  ("anything else on the ladder - every other rung goes five or more - and a rung that thin");
+  ("is close to being a relabelling of the one below it rather than a step up from it. Three");
+  ("is still the narrowest rung here, and it is narrow for a reason the picture agrees with:");
+  ("a building really is a small thing next to a block. Widening the street instead is not");
+  ("available - the ground is twenty-seven tiles across and a block is already nineteen of");
+  ("them.");
   let sizes = {
     household: 3,
     building: 3,
