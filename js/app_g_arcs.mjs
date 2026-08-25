@@ -1,3 +1,4 @@
+import { html_parent_get } from "./html_parent_get.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_dev_overlay_status } from "./app_shared_dev_overlay_status.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -29,6 +30,7 @@ export async function app_g_arcs() {
     "justify-content": "center",
   });
   let sheet = html_div(column);
+  let panel = html_parent_get(column);
   let chapter_code = null;
   async function render() {
     "the store is asked before anything is cleared, so a seam that is down leaves the page standing as it was rather than blanking it.";
