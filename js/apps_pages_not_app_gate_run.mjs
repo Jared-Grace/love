@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { apps_pages_not_app } from "./apps_pages_not_app.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -14,9 +15,14 @@ export async function apps_pages_not_app_gate_run() {
     hint: "no page was looked at at all, which is not a pass - it is a sweep that found nothing to check. The public folders it reads have moved",
   });
   let offenders = property_get(report, "offenders");
+  let sandbox_named = fn_name("app_sandbox");
+  let hint = text_combine_multiple([
+    "these pages have an address of their own and no app behind them - either give each one an entry point named after it, or take the page down and put the screen behind the hash of ",
+    sandbox_named,
+    " instead",
+  ]);
   list_empty_is_assert_json(offenders, {
-    hint: "these pages have an address of their own and no app behind them - either give each one an entry point named after it, or take the page down and put the screen behind the sandbox's hash instead",
-    sandbox: fn_name("app_sandbox"),
+    hint,
     offenders,
   });
   let r = {
