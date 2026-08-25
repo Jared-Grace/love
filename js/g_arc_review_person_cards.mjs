@@ -1,3 +1,4 @@
+import { g_npc_gender } from "./g_npc_gender.mjs";
 import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
 import { list_size } from "./list_size.mjs";
 import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
