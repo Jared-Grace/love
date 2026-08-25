@@ -10,9 +10,7 @@ export async function commit_edit_prose_touched_kind(commit) {
   "IMPORTS ARE COUNTED AS NEITHER, because they are the canonicalizing pass's own work wearing a hand-made label, so an edit that reworded a paragraph and let the pass repair an import is prose only and not prose beside code.";
   arguments_assert(arguments, 1);
   let counts = await commit_edit_kind_counts(commit, "prose");
-  let put_in = property_get(counts, "put_in");
-  let taken_out = property_get(counts, "taken_out");
-  let prose = add(put_in, taken_out);
+  let prose = property_get(counts, "touched");
   let untouched_is = equal(prose, 0);
   if (untouched_is) {
     let r = "no prose touched";
