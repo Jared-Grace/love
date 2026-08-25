@@ -998,7 +998,7 @@ export function bible_glyph_chapter_ezk33() {
           "$hands_giving",
           "to",
           "the",
-          "$sprout",
+          "beasts",
           "of",
           "the",
           "field",
