@@ -17,9 +17,14 @@ export function app_shared_game_npc_elements(npc) {
   ("means a part added later is carried by every caller that already exists, rather than by");
   ("whichever ones somebody remembers to visit.");
   ("Only the parts a person actually HAS come back. A picture is the one everybody has; a");
-  ("cross belongs to somebody converted today and a light to somebody prayed for, so most");
-  ("people have neither. Filtering here is what lets a caller simply do the same thing to");
-  ("everything in the list.");
+  ("cross belongs to somebody converted today, and a light exists only in a game that lights");
+  ("people at all, so in most games most people have neither. Filtering here is what lets a");
+  ("caller simply do the same thing to everything in the list.");
+  ("A part that is hidden still comes back, and must. The praying game gives everybody a");
+  ("light before anybody has taken a step and shows it only when they are prayed for, which");
+  ("works precisely because the hidden ones are carried along with the rest - a part left");
+  ("behind while it is invisible is a part standing in the wrong place the moment it is");
+  ("shown.");
   let img = app_shared_game_npc_img_get(npc);
   let cross = app_shared_game_npc_cross_get(npc);
   let glow = app_shared_game_npc_glow_get(npc);
