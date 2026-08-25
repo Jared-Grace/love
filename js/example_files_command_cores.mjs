@@ -1,3 +1,4 @@
+import { js_identifier_param_delete_dir } from "./js_identifier_param_delete_dir.mjs";
 import { js_identifier_wrap_copy_dir } from "./js_identifier_wrap_copy_dir.mjs";
 import { app_shared_prod_snapshot_folder } from "./app_shared_prod_snapshot_folder.mjs";
 import { js_identifier_params_delete_dir } from "./js_identifier_params_delete_dir.mjs";
@@ -58,6 +59,10 @@ export function example_files_command_cores() {
     {
       name: fn_name("app_shared_prod_snapshot"),
       core: app_shared_prod_snapshot_folder,
+    },
+    {
+      name: fn_name("function_param_delete"),
+      core: js_identifier_param_delete_dir,
     },
   ];
   return cores;
