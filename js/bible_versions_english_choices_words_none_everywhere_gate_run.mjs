@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_source } from "./bible_folder_source.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
@@ -22,9 +23,9 @@ export async function bible_versions_english_choices_words_none_everywhere_gate_
   let passages = await bible_versions_english_choices_references(references);
   let wordings_lists = list_map_property(passages, "wordings");
   let wordings = list_concat_multiple(wordings_lists);
-  let heard = list_map_property(wordings, "bible_folder");
+  let heard = list_map_property(wordings, bible_folder_key());
   function silent_is(record) {
-    let wordless = property_in_list_not(record, "bible_folder", heard);
+    let wordless = property_in_list_not(record, bible_folder_key(), heard);
     return wordless;
   }
   let silent = list_filter(usable, silent_is);
