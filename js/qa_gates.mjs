@@ -514,6 +514,7 @@ export function qa_gates() {
     qa_commit_entry_beside_matching_cases_gate_run,
     qa_commit_entry_beside_moved_cases_gate_run,
     js_statements_span_outputs_cases_gate_run,
+    js_statements_span_repack_only_is_cases_gate_run,
     js_span_cuttable_cases_gate_run,
     js_relabel_only_cases_gate_run,
     js_delegate_only_cases_gate_run,
