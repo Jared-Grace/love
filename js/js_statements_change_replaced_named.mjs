@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { js_statement_swap_named_or_null } from "./js_statement_swap_named_or_null.mjs";
 import { js_statement_inner_change_named_or_null } from "./js_statement_inner_change_named_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -32,8 +33,7 @@ export function js_statements_change_replaced_named(
       list_add(differing, index);
     }
   }
-  let left = list_size(differing);
-  let one_place = equal(left, 1);
+  let one_place = list_size_equal(differing, 1);
   if (not(one_place)) {
     let r = "one statement replaced and others reordered";
     return r;
