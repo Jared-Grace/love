@@ -1,3 +1,9 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { commits_message_rules_since } from "./commits_message_rules_since.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
 export function commits_message_rules_gate_generic(told, hint_opening) {
   "$plain hint_opening";
   "The half of a commit-message gate that is the same whichever rule is being watched - unpack what the reading walked and what it caught, finish the advice with the sentence about how far back the reading goes, and throw if anything was caught.";
