@@ -624,7 +624,6 @@ export function bible_glyph_chapter_ezk33() {
           "has",
           "$bow",
           "will",
-          "$no_entry",
           "be",
           "held",
           "against",
