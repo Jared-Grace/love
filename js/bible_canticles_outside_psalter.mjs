@@ -3,8 +3,16 @@ export function bible_canticles_outside_psalter() {
   "★ THIS LIST RESTS ON CHURCH USE AND THE OTHER ONE RESTS ON THE TEXT, AND THAT IS WHY THEY ARE TWO FUNCTIONS RATHER THAN A FLAG ON ONE. Its companion is a measurement: every entry there carries the verse saying the passage was sung. Every entry here is contradicted by its own introduction - Hannah and Jonah prayed, Mary said, Zechariah prophesied, and the elders of Revelation are saying rather than singing. Merging them would make a choice look like a finding, and a later reader would have no way to tell which entries could be checked against the text and which could not.";
   "★ THE OLDEST CANTICLE OF ALL IS NOT HERE, AND THE FOLDER IS THE REASON. The Benedicite - the Song of the Three Children, sung at morning prayer for fifteen centuries - stands in Daniel three of the ecumenical printings and nowhere in the sixty-six book protocanon this repo reads. So choosing the smaller book set silently dropped a canticle rather than only dropping books nobody planned to record, and that is the price of the choice rather than an oversight in this list.";
   "Two hundred and nineteen verses, of which Lamentations is a hundred and fifty-four, against the two hundred and seventy-four the text itself calls sung and the Psalter's two thousand four hundred and sixty-one.";
-  "Lamentations is deliberately still absent. It is sung at Tenebrae, so it has as good a claim as anything here, but it is a hundred and fifty-four verses - more than twice this whole list - and a decision that size should be made on its own rather than carried in on the back of the canticles.";
+  "★ LAMENTATIONS IS HERE ON THE STRENGTH OF ITS NAME RATHER THAN OF A VERSE, WHICH IS WHY IT IS IN THIS LIST AND NOT THE MEASURED ONE. A lamentation is a sung form, and the book is titled with it; that is a real argument, and it is an argument about the word rather than a sentence saying this book was sung. The nearest the text comes is Second Chronicles thirty-five verse twenty-five, where the singing men and the singing women have their lamentations for Josiah written down - singers, and lamentations, but the verb there is spoke. It is also sung at Tenebrae. At a hundred and fifty-four verses it is more than twice the rest of this list put together, so it is the one entry whose size makes it worth naming on its own.";
   let canticles = [
+    {
+      chapter_code: "LAM",
+      verse_first: 1,
+      verse_last: 154,
+      name: "Lamentations, the whole book",
+      office:
+        "sung at Tenebrae; a lamentation is a sung form and the book is titled with it, though no verse says the book was sung",
+    },
     {
       chapter_code: "1SA02",
       verse_first: 1,
