@@ -1,3 +1,4 @@
+import { firebase_prod_app_live_sent_for_names } from "./firebase_prod_app_live_sent_for_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { firebase_prod_asset_disk_hash_or_null } from "./firebase_prod_asset_disk_hash_or_null.mjs";
@@ -9,7 +10,6 @@ import { folder_public } from "./folder_public.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { text_hash } from "./text_hash.mjs";
@@ -34,7 +34,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     };
     return none;
   }
-  let file_names = object_property_names(noted);
+  let file_names = await firebase_prod_app_live_sent_for_names(app_name, noted);
   let restored = [];
   let unchanged = [];
   let moved = [];
