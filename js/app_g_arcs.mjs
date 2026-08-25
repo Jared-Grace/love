@@ -73,7 +73,7 @@ export async function app_g_arcs() {
       app_g_arcs_person_block(sheet, person, bench);
     }
     each(people, person_block);
-    app_g_arcs_scroll_resume(panel2, watched2, chapter_code2);
+    app_g_arcs_scroll_resume(panel, watched, chapter_code);
   }
   await render();
 }
