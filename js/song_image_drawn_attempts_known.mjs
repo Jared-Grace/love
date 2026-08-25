@@ -283,11 +283,13 @@ export function song_image_drawn_attempts_known() {
   6,
   7,
   8,
-  9
+  9,
+  10
  ],
  "31": [
   1,
-  2
+  2,
+  3
  ],
  "32": [
   1,
