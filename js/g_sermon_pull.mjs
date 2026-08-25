@@ -51,11 +51,11 @@ export async function g_sermon_pull(chapter, key) {
       }
       console.log(
         "  " +
-          w.original.padEnd(13) +
+          text_column(w.original, 13) +
           " " +
-          w.parsing.padEnd(11) +
+          text_column(w.parsing, 11) +
           " " +
-          w.gloss.padEnd(15) +
+          text_column(w.gloss, 15) +
           (root ? "  ⟵ " + root : ""),
       );
     }

@@ -12,10 +12,7 @@ export function g_chapter_code_next(chapter_code) {
   let digit_texts = numbered[0];
   let difference = subtract(chapter_code.length, digit_texts.length);
   let book = chapter_code.slice(0, difference);
-  let next_number = String(Number(digit_texts) + 1).padStart(
-    digit_texts.length,
-    "0",
-  );
+  let next_number = number_pad(add(Number(digit_texts), 1), digit_texts.length);
   let r = book + next_number;
   return r;
 }
