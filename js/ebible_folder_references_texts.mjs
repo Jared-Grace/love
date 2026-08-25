@@ -1,5 +1,5 @@
+import { ebible_version_books_browser_or_node } from "./ebible_version_books_browser_or_node.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_version_books } from "./ebible_version_books.mjs";
 import { ebible_reference_books_text } from "./ebible_reference_books_text.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { property_set } from "./property_set.mjs";
@@ -7,6 +7,7 @@ export async function ebible_folder_references_texts(bible_folder, references) {
   "$plain bible_folder";
   "$plain references";
   "The words one bible holds at each of a list of references, answered as each reference against its words.";
+  "The books are asked for in a way that knows which of the two places it is running in, so this is the same question in a browser as on a build machine. Asked the build machine's way it ends in downloading and unpacking a bible release, which a page cannot do - and a page that could reach it carried that whole tree in its bundle whether or not it ever walked it.";
   "THE LIST OF BOOKS IS FETCHED ONCE FOR THE WHOLE LIST. That fetch is the slow half of answering even one reference, so asking a hundred references one at a time costs a hundred times what asking them together does.";
   "A reference this bible does not carry is answered with null and the rest are still answered, so one mistyped reference in a hand-written list cannot take the other thirty down with it.";
   "SEVERAL AT A TIME RATHER THAN ONE AFTER ANOTHER, because each reference that is not in a chapter already on this disk has to wait for that chapter to come down, and waiting for one is no reason to stop asking for the next. A few at a time and not all at once, because the answer is a set of chapters and asking for a hundred at once would only queue them somewhere else.";
