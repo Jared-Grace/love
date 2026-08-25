@@ -65,6 +65,8 @@ export function bible_glyph_roots() {
   "AND THE HEBREW SIDE IS LEFT BLANK ON PURPOSE, the same way the righteous man was until this week. Radaph is a hundred and forty two occurrences and it is pursue and chase - pursuers, my pursuers, those who pursue me - so it is a different word about a different thing, and the following of the twenty third psalm is goodness and mercy chasing a man rather than a disciple walking behind one. Seating the pair on radaph to give the Old Testament a follow would have drawn hunting as discipleship.";
   "THE BURNING HEART KEEPS BOTH SENSES HERE AND DOES NOT KEEP BOTH IN HEBREW, AND THAT ASYMMETRY IS DELIBERATE (2026-08-25). Zelos and zeloo are jealous and zealous and envious in the same breath - jealous three, zealous three, desire two, eagerly two, envy one - and Greek has no cognate reserved for God the way Hebrew keeps qanna for him alone. So there is no number here that can be split off without somebody deciding, verse by verse, which sense a particular occurrence carries, and this table is keyed by number and cannot hold that decision.";
   "SO THE MARK IS SINGLE IN BOTH TABLES AND THE REPAIR IS THE SAME REPAIR. Hebrew has one number, 7067, that is said of God alone and could have taken a mark of its own; it was seated on a group and the spellable-groups gate refused it, and the vocabulary turned out to have no free half to offer instead. The rule both tables now carry is that a human envy is written in plain English rather than drawn, which is a rule for whoever authors a chapter and cannot be enforced anywhere else.";
+  "THREE GLOSSES WERE WIDENED ON 2026-08-25 AND THE REST OF THE WEAK LIST WAS LEFT ALONE. Lambano gained take, doulos gained slave, and poimen gained to rule - each because the second wording is a different sense and not a different tense of the first. Lambano is received thirty nine times and took thirty six, and taking is something you do where receiving is something done to you. Doulos is servant fifty five and slave eighteen, and the word that Paul calls himself by is the harder one. Poimaino is shepherd three and RULE three, which is the iron rod of the Revelation and not a man with a flock at all.";
+  "AND WIDENING A GLOSS IS NOT WIDENING A MARK, which is why these three cost nothing where the burning heart cost an argument. A gloss says what the word covers and is read by whoever authors a chapter; the mark is what the reader sees. One picture over servant and slave is right because the Greek is one word and neither sense is a claim about God the other would libel - that was the whole difficulty with jealousy and it does not arise here. Commandment, work and deed were looked at and left: those rivals are the same sense wearing a different English part of speech.";
   "THE WORDINGS AUDIT RANKS THE VERB HALF OF EVERY NOUN AND VERB ROOT AS WEAK, AND IT IS WRONG TO EVERY TIME (2026-08-25). A root here is named for its noun and holds the cognate verb under the same number-by-number seating - phos holds 5457 and 5461, martus holds 3144 and 3140 and 3141, poimen holds 4166 and 4165, hamartia holds 266 and 264 and 268 - so the audit walks the verb as a seat in its own right and reports how thin its commonest English wording is. A noun has one wording and a verb has a dozen, because English conjugates where it does not decline: witness against testify, testified, bear witness, bore witness. The seat is not thin. The word is inflected, and the measure cannot tell those apart.";
   "SO THE AUDIT ANSWERS ABOUT WORDINGS AND IS READ AS ANSWERING ABOUT SEATS, and the fix is in the reading rather than in the measure. Five of the twenty weakest New Testament rows are verb halves of roots whose noun sits at the top of the same table, and an author working down that list from the bottom will spend the whole list re-arguing seats that were right when they were made. Check whether the row's number is the verb of the row above it BEFORE reaching for a picture; if it is, the row is measurement and not a finding.";
   "AUTOS IS THE SAME DEFECT WEARING A DIFFERENT COAT. The pointing-back mark on 846 reports its commonest content wording as jesus, a hundred and ninety nine times, which reads as a pronoun mis-seated on a name. It is the interlinear resolving pronouns to whoever they point at, so what has been counted is an editor's decision about a hundred and ninety nine particular verses and not a fact about the Greek word. Every pronoun in this table will do this, and none of them is evidence of anything.";
@@ -380,7 +382,7 @@ export function bible_glyph_roots() {
     },
     {
       root: "lambano",
-      gloss: "receive",
+      gloss: "receive, take",
       words: [
         {
           strong: "2983",
@@ -760,7 +762,7 @@ export function bible_glyph_roots() {
     },
     {
       root: "doulos",
-      gloss: "servant",
+      gloss: "servant, slave",
       words: [
         {
           strong: "1401",
@@ -1158,7 +1160,7 @@ export function bible_glyph_roots() {
     },
     {
       root: "poimen",
-      gloss: "shepherd, to shepherd",
+      gloss: "shepherd, to shepherd, to rule",
       words: [
         {
           strong: "4166",
