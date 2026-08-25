@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 1,
+      kept: 5,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 8,
+      kept: 11,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
@@ -249,7 +249,7 @@ export function song_image_couplet_glosses() {
         "Described. The sandals are gone and the mountain has taken their place. Hebrews 12:18-21 is the passage the couplet's own verse sits in - ye are not come unto the mount that might be touched, and so terrible was the sight that Moses said I exceedingly fear and quake - and four verses later comes reverence and godly fear. Exodus 19:18 puts the mount altogether on a smoke and the LORD upon it in cloud. So the covered peak is the picture: godly fear is standing at the foot of what you may not climb.",
     },
     31: {
-      kept: 2,
+      kept: 4,
       lyric_ref: "Matthew 24:32-33, Romans 13:12, Revelation 22:20",
       lyric_explain:
         "When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: so likewise ye, when ye shall see all these things, know that it is near, even at the doors.",
