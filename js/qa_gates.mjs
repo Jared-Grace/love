@@ -1,3 +1,4 @@
+import { js_guard_statements_cases_gate_run } from "./js_guard_statements_cases_gate_run.mjs";
 import { js_statements_span_repack_only_is_cases_gate_run } from "./js_statements_span_repack_only_is_cases_gate_run.mjs";
 import { apps_pages_not_app_gate_run } from "./apps_pages_not_app_gate_run.mjs";
 import { apps_all_main_fns_gate_run } from "./apps_all_main_fns_gate_run.mjs";
@@ -791,6 +792,7 @@ export function qa_gates() {
     bible_glyph_chapters_marks_unseated_gate_run,
     apps_all_main_fns_gate_run,
     apps_pages_not_app_gate_run,
+    js_guard_statements_cases_gate_run,
   ];
   return gates;
 }

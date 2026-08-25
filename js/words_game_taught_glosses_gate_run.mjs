@@ -1,3 +1,5 @@
+import { words_game_taught } from "./words_game_taught.mjs";
+import { list_size } from "./list_size.mjs";
 import { words_game_taught_glosses_defects } from "./words_game_taught_glosses_defects.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -19,8 +21,10 @@ export async function words_game_taught_glosses_gate_run() {
         " taught words are missing an answer or answered in words the reader does not have",
     );
   }
+  ("What comes back is how many taught words were reached, not how many were wrong. The count of what was wrong is nothing on every run that passes, so an answer holding only that could never fall - and a taught list that had moved would go on reading clean forever.");
+  let taught_words = await words_game_taught();
   let r = {
-    defects: 0,
+    taught: list_size(taught_words),
   };
   return r;
 }
