@@ -1,11 +1,10 @@
+import { property_equals_not } from "./property_equals_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_set } from "./property_set.mjs";
 import { storage_local_get } from "./storage_local_get.mjs";
 import { app_g_arcs_scroll_remember } from "./app_g_arcs_scroll_remember.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { html_scroll_top_set } from "./html_scroll_top_set.mjs";
 export function app_g_arcs_scroll_resume(panel, watched, chapter_code) {
   "Says which chapter the sheet now holds, and puts the reader back as far down it as they had come.";
@@ -20,9 +19,7 @@ export function app_g_arcs_scroll_resume(panel, watched, chapter_code) {
   if (missing) {
     return;
   }
-  let remembered = property_get(place, "chapter_code");
-  let b = equal(remembered, chapter_code);
-  let elsewhere = not(b);
+  let elsewhere = property_equals_not(place, "chapter_code", chapter_code);
   if (elsewhere) {
     return;
   }
