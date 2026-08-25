@@ -189,8 +189,8 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "One long straight reed of plain brown wood standing upright and alone, running from the white border at the bottom almost to the white border at the top, with one very large sponge fixed at its top, the sponge a plain rounded shape of grey soaked through with deep crimson and one heavy drop of that same deep crimson hanging from its underside",
-      symbol_ref: "John 19:29, Psalm 69:21, Hebrews 2:10",
+        "One Roman spear standing upright and alone, its long straight shaft plain brown wood running from the white border at the bottom well up the window, and at the top of the shaft one large broad leaf-shaped spearhead of plain grey iron with its point upward, and hanging from the lower edge of that head two large drops side by side, one of them deep crimson and the other one blue water",
+      symbol_ref: "John 19:34, Zechariah 12:10, Hebrews 2:10",
       same_as: 8,
     },
     {
@@ -418,7 +418,7 @@ export function song_image_couplets() {
       first: "HE's coming soon",
       second: "the day draws near",
       symbol:
-        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the white border at the bottom almost to the top of it and almost to the white border on both sides",
+        "One young fig shoot rising from the white border at the bottom right up the window, its stem tender and slender and smooth the whole way with no rough bark and no old thick wood on it anywhere, and near the top of the shoot a few broad emerald green fig leaves standing out from it on short stalks, every one of them only just opened, and at the very tip of the shoot two or three closed buds not opened into leaves yet, no fig and no fruit of any kind anywhere on it, the leaves reaching almost to the white border on both sides",
       symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
