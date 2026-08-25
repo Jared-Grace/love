@@ -43,8 +43,13 @@ export async function playwright_happy_walk(page, steps_max) {
     let missing = less_than(missed_max, missed);
     let url = property_get(step, "url");
     let b = not(missing);
+    ("the words on the control and the reason the press missed go into the failure, because the address alone names the screen and not which of the things on it is the one that cannot be pressed, nor which of the several ways a press can miss this one is");
+    let text = property_get(step, "text");
+    let why = property_get(step, "why");
     assert_json(b, {
       url,
+      text,
+      why,
       missed,
       hint: "this screen keeps offering a control marked as the way on that cannot be pressed - it is there to be found and gone by the time it is pressed, so either it is being drawn again and again, or it is marked and then taken away without the mark going with it",
     });
