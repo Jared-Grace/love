@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { bless_cone_ahead_across } from "./bless_cone_ahead_across.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
