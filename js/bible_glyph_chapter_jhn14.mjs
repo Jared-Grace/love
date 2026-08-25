@@ -94,7 +94,7 @@ export function bible_glyph_chapter_jhn14() {
           "am,",
           "there",
           "you",
-          "$plus",
+          "also",
           "may",
           "be.",
         ],
