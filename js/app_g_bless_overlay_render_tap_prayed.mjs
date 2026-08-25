@@ -44,7 +44,19 @@ export function app_g_bless_overlay_render_tap_prayed(
     let lit = bless_view_blessed(blessed, view_everyone);
     app_g_bless_glows(glows, view_everyone, lit);
     let cone = cone_get();
-    app_g_bless_wash(wash, cone);
+    ("The draw is also where the player is noticed to have MOVED, because every player action");
+    ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");
+    ("from the outside instead, the two places that walk the player and the one that turns");
+    ("them would each have to remember to say so, and the one that forgot would be a person");
+    ("the player thought they were holding and were not.");
+    hold();
+    ("The ground under somebody being held is lit as well as the cone, because a rule the");
+    ("player cannot see is a bug to them. Held people wander out of the pale shape and stay");
+    ("prayable, and without their own square lighting with them that reads as a tap landing");
+    ("on somebody standing in the dark. With it, the light follows them, and the player can");
+    ("see they still have them.");
+    let people_held = held_people();
+    app_g_bless_wash(wash, cone, people_held);
   }
   function tap_prayed(target) {
     "Whether the tap landed on somebody, and so became a prayer instead of a walk.";
