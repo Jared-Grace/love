@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_token_is } from "./js_node_token_is.mjs";
+import { not } from "./not.mjs";
 export function js_properties_shorthand_token_any_is(properties, token) {
   "$plain token";
   "Whether any part of a written-out record is written under its own name and that name is exactly the given word.";
