@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
 import { diff_line_kind } from "./diff_line_kind.mjs";
@@ -34,8 +35,7 @@ export async function commit_edit_prose_verb_named(commit) {
     }
     taken_out = add(taken_out, 1);
   }
-  let b = equal(code, 0);
-  let touched_code_is = not(b);
+  let touched_code_is = equal_not(code, 0);
   if (touched_code_is) {
     let r = "not prose alone";
     return r;
