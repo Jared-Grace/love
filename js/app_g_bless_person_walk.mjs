@@ -9,6 +9,7 @@ import { bless_pause_is } from "./bless_pause_is.mjs";
 import { bless_still_turns } from "./bless_still_turns.mjs";
 import { bless_still_wait_ms } from "./bless_still_wait_ms.mjs";
 import { app_g_bless_person_step } from "./app_g_bless_person_step.mjs";
+import { bless_person_crossing_clear } from "./bless_person_crossing_clear.mjs";
 import { app_g_bless_person_turn } from "./app_g_bless_person_turn.mjs";
 export function app_g_bless_person_walk(world, person) {
   arguments_assert(arguments, 2);
@@ -46,6 +47,14 @@ export function app_g_bless_person_walk(world, person) {
   let pace = property_get(person, "pace");
   let walker = property_get(person, "walker");
   function stepped() {
+    ("Their last step is over by the time they are asked what to do next, because the step");
+    ("is made to last exactly this long - so the square they were crossing off is forgotten");
+    ("here, first of all and whatever they go on to do. Every way of doing nothing passes");
+    ("through this line: standing about, looking around, boxed in with nowhere to go. Left");
+    ("to the mover to clear, only the people who moved would ever forget, and somebody who");
+    ("stopped walking would go on claiming the square they left for as long as they stood");
+    ("there - so a tap on empty ground behind them would have prayed for them.");
+    bless_person_crossing_clear(person);
     let standing = property_get(person, "standing");
     let still = positive_is(standing);
     if (still) {
