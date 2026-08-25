@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { html_display_block } from "./html_display_block.mjs";
 export function html_img_lazy_full_block(picture) {
   "Settle one picture the way a page that is scrolled slowly through wants every picture on it: fetched only when the reader is nearly at it, turned back into an image in its own time, and drawn as wide as the page allows on a line of its own.";
   "FETCHING LATE IS WHY A LONG PAGE ARRIVES AT ALL. Thirty-six pictures asked for at once share the one connection and fill in downwards a line at a time; asked for one at a time as the page moves, the first is alone and arrives at once and every later one has the whole time the reader spends above it.";
