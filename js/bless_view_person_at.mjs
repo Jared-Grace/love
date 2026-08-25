@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { and } from "./and.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { property_get } from "./property_get.mjs";
+import { bless_person_tile_is } from "./bless_person_tile_is.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
 export function bless_view_person_at(view, x, y) {
   arguments_assert(arguments, 3);
@@ -16,12 +14,13 @@ export function bless_view_person_at(view, x, y) {
   ("Nobody there is the ordinary answer rather than a fault. Most of the ground is empty,");
   ("and a tap on empty ground is how the player walks.");
   let people = bless_view_people(view);
+  ("Somebody mid-step is on two squares and a tap on either one finds them. A player taps");
+  ("where they SEE a person, and a walking person is between squares with part of their");
+  ("picture on each. Matched against the square they are walking to alone, a tap on somebody");
+  ("plainly there found nobody and walked the player toward them instead - so the person");
+  ("carried on walking, the player followed, and praying for anybody on the move was a chase.");
   function person_here(someone) {
-    let px = property_get(someone, "x");
-    let py = property_get(someone, "y");
-    let left = equal(px, x);
-    let right = equal(py, y);
-    let here = and(left, right);
+    let here = bless_person_tile_is(someone, x, y);
     return here;
   }
   let standing = list_filter(people, person_here);

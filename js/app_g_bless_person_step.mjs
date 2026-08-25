@@ -6,6 +6,7 @@ import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
+import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 export function app_g_bless_person_step(world, person) {
   arguments_assert(arguments, 2);
@@ -54,6 +55,11 @@ export function app_g_bless_person_step(world, person) {
     property_set(person, "heading", back);
   }
   let to = property_get(tiles, way);
+  ("The square they are leaving is written down first, because the move writes the square");
+  ("they are heading for over the top of it - and until they arrive, BOTH are true. Anything");
+  ("reading only the new one is reading where this person will be rather than where they");
+  ("are, which is how a tap on somebody walking used to find nobody.");
+  bless_person_crossing_set(person);
   app_shared_game_npc_move(person, to, 0);
   ("The step is then made to LAST as long as the wait before their next one, so the");
   ("picture is still crossing the tile when the following step is asked for and the person");

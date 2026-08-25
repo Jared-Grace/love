@@ -19,14 +19,14 @@ export async function commit_edit_kind_shape_named(commit, kind) {
     let r = "something else touched";
     return r;
   }
-  let put_in = property_get(counts, "put_in");
-  let taken_out = property_get(counts, "taken_out");
-  let left = add(put_in, taken_out);
-  let untouched_is = equal(left, 0);
+  let touched = property_get(counts, "touched");
+  let untouched_is = equal(touched, 0);
   if (untouched_is) {
     let r2 = "untouched";
     return r2;
   }
+  let put_in = property_get(counts, "put_in");
+  let taken_out = property_get(counts, "taken_out");
   let added_only_is = equal(taken_out, 0);
   if (added_only_is) {
     let r3 = "put in only";
