@@ -52,7 +52,7 @@ export function bless_place_sizes() {
   ("already nineteen of them.");
   let sizes = {
     household: 3,
-    building: 2,
+    building: 3,
     block: 5,
     neighborhood: 12,
     district: 8,
