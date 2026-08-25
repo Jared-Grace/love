@@ -1,5 +1,4 @@
 import { list_get } from "./list_get.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
@@ -125,8 +124,7 @@ export function app_code_lesson_quiz_token_select(
       let token_each = list_get(tokens_unique, index);
       let concated = list_concat_single_right(chosen, token_each);
       let lambda6 = list_starts_with_curried_right(concated);
-      let surviving = list_filter(variations, lambda6);
-      let may = list_empty_not_is(surviving);
+      let may = list_any(variations, lambda6);
       if (may) {
         html_data_set_test_happy(b2);
         return;
