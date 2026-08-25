@@ -1,3 +1,11 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
+import { list_map } from "./list_map.mjs";
+import { diff_line_kind } from "./diff_line_kind.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { commit_edit_js_sources } from "./commit_edit_js_sources.mjs";
+import { diff_line_kind_settled } from "./diff_line_kind_settled.mjs";
+import { list_add } from "./list_add.mjs";
 export async function commit_edit_lines_placed(commit) {
   "$plain commit";
   "Every line one commit changed, each one carrying the kind of thing it turned out to be - the line read first on its own and then, where the line could not say, looked up in the file it came from.";
@@ -7,7 +15,10 @@ export async function commit_edit_lines_placed(commit) {
   let changed = await commit_edit_changed_lines(commit);
   let kinds = list_map(changed, diff_line_kind);
   let doubted = list_includes(kinds, "name alone");
-  let sources = { before: null, after: null };
+  let sources = {
+    before: null,
+    after: null,
+  };
   if (doubted) {
     sources = await commit_edit_js_sources(commit);
   }
@@ -15,7 +26,10 @@ export async function commit_edit_lines_placed(commit) {
   for (let line of changed) {
     let kind = diff_line_kind(line);
     let settled = diff_line_kind_settled(kind, line, sources);
-    let record = { line, kind: settled };
+    let record = {
+      line,
+      kind: settled,
+    };
     list_add(placed, record);
   }
   return placed;
