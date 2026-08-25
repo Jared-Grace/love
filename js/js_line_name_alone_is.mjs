@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_slice } from "./text_slice.mjs";
@@ -15,7 +16,8 @@ export function js_line_name_alone_is(bare) {
     return false;
   }
   let size = text_size(bare);
-  let head = text_slice(bare, 0, subtract(size, 1));
+  let to = subtract(size, 1);
+  let head = text_slice(bare, 0, to);
   let empty_is = equal(head, "");
   if (empty_is) {
     return false;
