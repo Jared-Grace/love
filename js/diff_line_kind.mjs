@@ -27,6 +27,15 @@ export function diff_line_kind(line) {
       return r2;
     }
   }
+  ("A LONG PARAGRAPH IS PRINTED OVER SEVERAL LINES AND ONLY ITS FIRST ONE IS ANSWERED HERE. Where a paragraph names a function it is written as pieces of text with the name between them, so the paragraph opens on one line, hands the name over on the next, and closes on a third. The opening line is unmistakable - it opens a bracket, opens a piece of text, and runs out at a comma - and nothing that is program is written that way, so it is answered as prose. The lines between are not: a name handed over inside brackets is written the same way whether a reader or a program is going to receive it, so those still count as program and a paragraph of this shape still shows up a line or two short.");
+  if (wrapped) {
+    let running = ['",'];
+    let opening = text_ends_with_any(bare, running);
+    if (opening) {
+      let r6 = "comment";
+      return r6;
+    }
+  }
   ("WHAT IS LEFT SPLITS AGAIN, and this reading used to stop before it. A value written into a record is not a paragraph, which is why it stopped being read as one - but it is not a command missing either, and calling it code put every colour picked and every number raised into the one bucket this whole reading exists to size. It is asked about last on purpose: prose is settled first, so a line reaching here has already failed to be a whole statement of its own.");
   let held = js_line_data_is(bare);
   if (held) {
