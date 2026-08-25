@@ -1,3 +1,4 @@
+import { git_folder_worktree_prune } from "./git_folder_worktree_prune.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { qa_snapshot_clean } from "./qa_snapshot_clean.mjs";
 import { git_folder_worktree_add } from "./git_folder_worktree_add.mjs";
@@ -39,6 +40,9 @@ export async function qa_snapshot_ensure_named(copy_name, commit) {
     }
     await retry_standard(lambda);
   } else {
+    ("The copies this repository still lists whose folders have gone are forgotten first. These copies are laid out in memory, so a restart of the machine takes every one of them and leaves every entry behind - and laying one out again under the same name is then refused outright, in words that name a folder rather than a restart. Measured on 2026-08-25: the gates would not run at all, and the way through was three words typed by hand that nothing in here said.");
+    ("It is asked for every time rather than after a failure, because forgetting an entry whose folder has gone is not a repair - it is what the list saying that entry was always meant to mean. A copy somebody is working in is not touched.");
+    await git_folder_worktree_prune(here);
     await git_folder_worktree_add(here, folder, commit);
   }
   for (let kept of qa_snapshot_uncommitted_names()) {
