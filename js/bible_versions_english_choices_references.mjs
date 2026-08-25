@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { null_is } from "./null_is.mjs";
 import { ternary } from "./ternary.mjs";
@@ -9,7 +10,6 @@ import { list_filter_property_not } from "./list_filter_property_not.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function bible_versions_english_choices_references(references) {
   "$plain references";
   "A list of passages, each read out of every English translation this repo may lawfully put in front of a reader, from either of the two shelves it fetches from - each passage against the translations that carry it and the words each one uses there.";
@@ -45,8 +45,7 @@ export async function bible_versions_english_choices_references(references) {
     function wording(record) {
       let bible_folder = property_get(record, "bible_folder");
       let name = property_get(record, "name");
-      let texts = property_get(record, "texts");
-      let text = property_get_or_null(texts, reference);
+      let text = property_nested_or_null(record, "texts", reference);
       let worded = {
         bible_folder,
         name,
