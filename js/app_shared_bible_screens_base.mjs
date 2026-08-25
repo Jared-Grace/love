@@ -15,6 +15,7 @@ export function app_shared_bible_screens_base(a) {
     app_shared_bible_verses,
     app_shared_bible_languages,
     app_shared_bible_settings,
+    app_shared_bible_history,
     app_shared_bible_offline,
     app_shared_bible_about,
     app_shared_bible_licences,
