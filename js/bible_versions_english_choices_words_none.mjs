@@ -1,13 +1,7 @@
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { property_in_list_not } from "./property_in_list_not.mjs";
+import { bible_versions_english_choices_silent_named } from "./bible_versions_english_choices_silent_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_folder_source } from "./bible_folder_source.mjs";
 import { bible_versions_english_choices_reference } from "./bible_versions_english_choices_reference.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { property_get } from "./property_get.mjs";
 export async function bible_versions_english_choices_words_none(reference) {
   arguments_assert(arguments, 1);
   ("$plain reference");
