@@ -3,6 +3,7 @@ import { js_source_bare_token_kind_cases_gate_run } from "./js_source_bare_token
 import { list_starts_with_cases_gate_run } from "./list_starts_with_cases_gate_run.mjs";
 import { bible_versions_english_choices_words_none_everywhere_gate_run } from "./bible_versions_english_choices_words_none_everywhere_gate_run.mjs";
 import { diff_line_kind_cases_gate_run } from "./diff_line_kind_cases_gate_run.mjs";
+import { apps_import_relative_unguarded_gate_run } from "./apps_import_relative_unguarded_gate_run.mjs";
 import { apps_node_only_carried_gate_run } from "./apps_node_only_carried_gate_run.mjs";
 import { js_edit_prose_only_is_cases_gate_run } from "./js_edit_prose_only_is_cases_gate_run.mjs";
 import { js_guard_statements_cases_gate_run } from "./js_guard_statements_cases_gate_run.mjs";
@@ -804,6 +805,7 @@ export function qa_gates() {
     js_guard_statements_cases_gate_run,
     js_edit_prose_only_is_cases_gate_run,
     apps_node_only_carried_gate_run,
+    apps_import_relative_unguarded_gate_run,
     public_chunks_orphaned_gate_run,
     diff_line_kind_cases_gate_run,
     js_source_bare_token_kind_cases_gate_run,
