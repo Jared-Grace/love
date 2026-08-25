@@ -33,7 +33,8 @@ export function song_image_drawn_attempts_known() {
  "5": [
   1,
   2,
-  3
+  3,
+  4
  ],
  "6": [
   1,
