@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 export function bible_glyph_roots_wording_count(wording) {
   "$plain wording";
   "How many places the interlinear gives one English wording to the word it is a wording of.";
