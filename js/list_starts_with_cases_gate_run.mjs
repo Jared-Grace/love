@@ -13,6 +13,12 @@ export function list_starts_with_cases_gate_run() {
     let starts = list_starts_with(list, list_prefix);
     return starts;
   }
-  let r = cases_gate_run_generic(cases, answer, "starts", "why", "list starts with");
+  let r = cases_gate_run_generic(
+    cases,
+    answer,
+    "starts",
+    "why",
+    "list starts with",
+  );
   return r;
 }
