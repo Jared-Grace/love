@@ -266,7 +266,7 @@ export function song_image_couplets() {
       first: "the wrath of GOD",
       second: "was satisfied",
       symbol:
-        "A sword put away, standing upright with its point downward and the whole of its blade inside a long plain brown leather sheath, the sheath running from the middle of the window right down almost to the bottom of it, and above the sheath's mouth a straight crossguard of grey iron reaching almost to the white border on both sides, a short grey grip above the crossguard, and one round grey pommel at the very top",
+        "A sword put away, standing upright with its point downward and the whole of its blade inside a long plain brown leather sheath, the sword drawn so tall that it runs the whole height of the glass inside the white border, its one round grey pommel almost touching the white border at the top and the tip of the sheath almost touching the white border at the bottom, and above the sheath's mouth a straight crossguard of grey iron reaching almost to the white border on both sides",
       symbol_ref: "Zechariah 13:7",
       same_as: 0,
     },
