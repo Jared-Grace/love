@@ -1,5 +1,5 @@
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { diff_line_kind } from "./diff_line_kind.mjs";
 import { add } from "./add.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { equal } from "./equal.mjs";

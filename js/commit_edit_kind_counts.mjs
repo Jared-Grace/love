@@ -1,5 +1,5 @@
+import { commit_edit_lines_placed } from "./commit_edit_lines_placed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
 import { diff_lines_kind_counts } from "./diff_lines_kind_counts.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { property_get } from "./property_get.mjs";

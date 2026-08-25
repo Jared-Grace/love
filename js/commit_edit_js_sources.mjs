@@ -1,3 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { git_commit_files } from "./git_commit_files.mjs";
+import { property_get } from "./property_get.mjs";
+import { folder_js } from "./folder_js.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_first } from "./list_first.mjs";
+import { folder_current_absolute } from "./folder_current_absolute.mjs";
+import { git_file_read_at_or_null } from "./git_file_read_at_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export async function commit_edit_js_sources(commit) {
   "$plain commit";
   "The one code file a commit changed, as it stood before the commit and as it stood after - or nothing on both sides where the commit did not change exactly one.";
@@ -13,7 +25,10 @@ export async function commit_edit_js_sources(commit) {
   let size = list_size(code_files);
   let one_is = equal(size, 1);
   if (not(one_is)) {
-    let r = { before: null, after: null };
+    let r = {
+      before: null,
+      after: null,
+    };
     return r;
   }
   let path = list_first(code_files);
@@ -21,6 +36,9 @@ export async function commit_edit_js_sources(commit) {
   let parent = text_combine(commit, "^");
   let after = await git_file_read_at_or_null(folder, commit, path);
   let before = await git_file_read_at_or_null(folder, parent, path);
-  let r2 = { before, after };
+  let r2 = {
+    before,
+    after,
+  };
   return r2;
 }
