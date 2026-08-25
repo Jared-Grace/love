@@ -13,15 +13,10 @@ export async function commit_edit_prose_verb_named(commit) {
   "AN EDIT THAT TOUCHED CODE IS NOT ASKED ABOUT AT ALL, because the question is what a prose verb would have made outright, and an edit that also changed code was never going to be made by one command whatever its prose looked like.";
   "A VALUE CHOSEN COUNTS WITH THE CODE and not with the prose, for the same reason the code does. A number raised in a record beside a reworded paragraph is still two changes, and no one prose verb makes two changes; whether a named command exists for the value is a real question, but it is a different one and answering it here would make this bucket say something it does not mean.";
   arguments_assert(arguments, 1);
-  let changed = await commit_edit_changed_lines(commit);
-  let counts = diff_lines_kind_counts(changed);
-  let put_in = property_get(counts, "prose_put_in");
-  let taken_out = property_get(counts, "prose_taken_out");
-  let code = property_get(counts, "code");
-  let data_put_in = property_get(counts, "data_put_in");
-  let data_taken_out = property_get(counts, "data_taken_out");
-  let data = add(data_put_in, data_taken_out);
-  let else_touched = add(code, data);
+  let counts = await commit_edit_prose_counts(commit);
+  let put_in = property_get(counts, "put_in");
+  let taken_out = property_get(counts, "taken_out");
+  let else_touched = property_get(counts, "else_touched");
   let touched_code_is = equal_not(else_touched, 0);
   if (touched_code_is) {
     let r = "not prose alone";
