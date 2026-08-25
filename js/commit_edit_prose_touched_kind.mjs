@@ -1,8 +1,6 @@
 import { commit_edit_prose_counts } from "./commit_edit_prose_counts.mjs";
-import { diff_lines_kind_counts } from "./diff_lines_kind_counts.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 export async function commit_edit_prose_touched_kind(commit) {
