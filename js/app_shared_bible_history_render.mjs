@@ -1,9 +1,9 @@
+import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_shared_bible_history_empty_text } from "./app_shared_bible_history_empty_text.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
 export function app_shared_bible_history_render(
   container,
