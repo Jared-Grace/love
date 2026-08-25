@@ -33,7 +33,7 @@ export function song_image_couplet_glosses() {
         "Described in part. John 19:1 says Pilate scourged HIM, so the whip is in the text; its three cords are not, and are drawn that way because the style asks for a dozen large panes and a real scourge is many thin ones.",
     },
     4: {
-      kept: 1,
+      kept: 2,
       lyric_ref: "Matthew 27:29, John 19:2, Revelation 19:16",
       lyric_explain:
         "They plaited a crown of thorns and put it on HIS head, hailing HIM King of the Jews in mockery. The couplet answers the mockery with Revelation's own title, KING OF KINGS, written on HIS thigh.",
@@ -41,7 +41,7 @@ export function song_image_couplet_glosses() {
         "Described. The crown of thorns is named in the verse. The picture reduces the tangle to a few thick woody branches, which is a concession to how heavy the leading has to be, not a claim about the crown.",
     },
     5: {
-      kept: 3,
+      kept: 4,
       lyric_ref: "Psalm 22:16, John 20:25, Acts 5:30, 1 Peter 2:24",
       lyric_explain:
         "They pierced my hands and my feet is written in a psalm long before any crucifixion, and Thomas asks for the print of the nails. Peter and the apostles say plainly that HE was hanged on a tree.",
