@@ -37,67 +37,7 @@ export async function bible_glyph_roots_wordings_split(testament_name) {
   let rows = [];
   for (let root of roots) {
     for (let word of root.words) {
-      let strong = word.strong;
-      let glyph = word.glyph;
-      let wordings = property_get_or_null(ranked, strong);
-      let unglossed = null_is(wordings);
-      if (unglossed) {
-        wordings = [];
-      }
-      let total = list_map_sum(
-        wordings,
-        bible_glyph_roots_wordings_split_count,
-      );
-      let tally = {};
-      for (let wording of wordings) {
-        let content = text_words_content(wording.value);
-        let said_once = list_unique(content);
-        for (let said of said_once) {
-          let before = property_get_or_null(tally, said);
-          let fresh = null_is(before);
-          if (fresh) {
-            before = 0;
-          }
-          let after = add(before, wording.count);
-          property_set(tally, said, after);
-        }
-      }
-      let words = [];
-      for (let said of object_property_names(tally)) {
-        let count = property_get(tally, said);
-        let counted_word = {
-          value: said,
-          count,
-        };
-        list_add(words, counted_word);
-      }
-      let ranked_words = list_sort_number_mapper_reverse(
-        words,
-        bible_glyph_roots_wordings_split_count,
-      );
-      let top = "";
-      let top_count = 0;
-      let measured = list_empty_not_is(ranked_words);
-      if (measured) {
-        let commonest = list_first(ranked_words);
-        top = commonest.value;
-        top_count = commonest.count;
-      }
-      let share = 0;
-      let counted = greater_than(total, 0);
-      if (counted) {
-        share = divide(top_count, total);
-      }
-      let row = {
-        root: root.root,
-        strong,
-        glyph,
-        total,
-        top,
-        top_count,
-        share,
-        words: ranked_words,
-      };
+      let row = bible_glyph_roots_word_row(root.root, word, ranked);
       list_add(rows, row);
     }
   }
