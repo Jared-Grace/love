@@ -23,48 +23,37 @@ export async function app_shared_text_reader_untranslated(f_name_app) {
   "That count is a floor under the blindness rather than a measure of it. A word carried in was typed somewhere, and where it was typed may well be a saying already offered in every language - so a high count is not a fault and does not mean anybody was let down. What it means is that the number next to it was answered somewhere this did not go, and how far somebody should trust a zero here is the ratio of the two.";
   "The app's own dev screens are not walked into. The promise is to a reader, and the screens the person building the app opens to look at their own work have no reader; where the walk turns aside and why is settled next door, so that this stays a reading of doors and does not become a second opinion about which screens are private. Read the number of functions read alongside the findings if that ever looks like too much to have been dropped: it counts what was actually opened, so the stopping shows up there rather than hiding.";
   arguments_assert(arguments, 1);
-  let seats = app_shared_text_reader_seats();
-  let stops = await app_shared_text_reader_stops(f_name_app);
-  let walked = await function_reachable_calls_named_stopping(f_name_app, stops);
-  let calls = property_get(walked, "calls");
+  let read = await app_shared_text_reader_door_arrivals(f_name_app);
+  let arrivals = property_get(read, "arrivals");
   let found = [];
   let looked = {};
   let carried = {};
-  for (let one of calls) {
-    let f_name = property_get(one, "f_name");
-    let callee_name = property_get(one, "callee_name");
-    let call = property_get(one, "call");
-    for (let seat of seats) {
-      let door = property_get(seat, "fn");
-      let ours = equal(callee_name, door);
-      if (not(ours)) {
-        continue;
-      }
-      property_count_add(looked, door, 1);
-      let at = property_get(seat, "at");
-      let argument = call.arguments[at];
-      let absent = null_is(argument);
-      if (absent) {
-        continue;
-      }
-      let written = js_literal_text_deep_is(argument);
-      if (not(written)) {
-        property_count_add(carried, door, 1);
-        continue;
-      }
-      let words = js_literal_text_letters_try(argument);
-      let unwritten = null_is(words);
-      if (unwritten) {
-        continue;
-      }
-      list_add(found, {
-        f_name,
-        door,
-        words,
-      });
+  for (let arrival of arrivals) {
+    let door = property_get(arrival, "door");
+    property_count_add(looked, door, 1);
+    let argument = property_get(arrival, "argument");
+    let absent = null_is(argument);
+    if (absent) {
+      continue;
     }
+    let written = js_literal_text_deep_is(argument);
+    if (not(written)) {
+      property_count_add(carried, door, 1);
+      continue;
+    }
+    let words = js_literal_text_letters_try(argument);
+    let unwritten = null_is(words);
+    if (unwritten) {
+      continue;
+    }
+    let f_name = property_get(arrival, "f_name");
+    list_add(found, {
+      f_name,
+      door,
+      words,
+    });
   }
-  let reachable = property_get(walked, "reachable");
+  let reachable = property_get(read, "reachable");
   let r = {
     found,
     looked,
