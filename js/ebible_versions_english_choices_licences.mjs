@@ -1,8 +1,8 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_versions_english_choices } from "./ebible_versions_english_choices.mjs";
 import { ebible_versions_copyrights } from "./ebible_versions_copyrights.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { ebible_licence_commercial_is } from "./ebible_licence_commercial_is.mjs";
 import { list_map } from "./list_map.mjs";
@@ -14,8 +14,11 @@ export async function ebible_versions_english_choices_licences() {
   let english_choices = await ebible_versions_english_choices();
   let copyrights = await ebible_versions_copyrights();
   function chosen_is(copyright_read) {
-    let bible_folder = property_get(copyright_read, "bible_folder");
-    let chosen = list_includes(english_choices, bible_folder);
+    let chosen = property_in_list(
+      copyright_read,
+      "bible_folder",
+      english_choices,
+    );
     return chosen;
   }
   let chosen_copyrights = list_filter(copyrights, chosen_is);
