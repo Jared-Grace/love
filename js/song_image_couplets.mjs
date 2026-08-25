@@ -104,7 +104,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A washing bowl of plain grey stone seen from straight above, drawn as one plain grey ring with clear blue water filling the whole circle inside it, drawn very large so that the ring reaches almost to both sides of the window and almost to the top and the bottom of it",
+        "A washing bowl of plain grey stone seen from straight above, drawn as one plain grey ring with clear blue water filling the whole circle inside it, drawn very large so that the ring reaches almost to the white border on both sides and almost to the top and the bottom of it",
       symbol_ref: "Matthew 27:24",
       same_as: 0,
     },
