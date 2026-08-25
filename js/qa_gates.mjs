@@ -795,6 +795,7 @@ export function qa_gates() {
     apps_pages_not_app_gate_run,
     js_guard_statements_cases_gate_run,
     js_edit_prose_only_is_cases_gate_run,
+    apps_node_only_carried_gate_run,
   ];
   return gates;
 }
