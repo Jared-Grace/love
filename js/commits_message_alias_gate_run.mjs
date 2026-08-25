@@ -10,23 +10,15 @@ export async function commits_message_alias_gate_run() {
   "Throws so the dispatcher seam exits nonzero.";
   arguments_assert(arguments, 0);
   let told = await commits_message_alias_named();
-  let walked = property_get(told, "walked");
-  let offenders = property_get(told, "offenders");
-  let since = commits_message_rules_since();
-  let f_name = fn_name("commits_message_rules_since");
-  let f_name2 = fn_name("ai_git_command_args");
-  let f_name3 = fn_name("ai_git");
-  let hint = text_combine_multiple([
+  let f_name = fn_name("ai_git_command_args");
+  let f_name2 = fn_name("ai_git");
+  let opening = text_combine_multiple([
     "these commits are named after an alias key rather than after a command, so the log records a change as having been made by whatever that key points at today - commit through ",
-    f_name2,
-    " with the full function name, or take the honest fallback ",
-    f_name3,
-    " where no named command made the change. Nothing before ",
-    since,
-    " is read, and moving that place forward in ",
     f_name,
-    " is not the repair",
+    " with the full function name, or take the honest fallback ",
+    f_name2,
+    " where no named command made the change. ",
   ]);
-  let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
+  let r = commits_message_rules_gate_generic(told, opening);
   return r;
 }
