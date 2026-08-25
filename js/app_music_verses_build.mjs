@@ -1,10 +1,10 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_music_references_all } from "./app_music_references_all.mjs";
 import { app_music_reference_version } from "./app_music_reference_version.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
@@ -29,8 +29,7 @@ export async function app_music_verses_build() {
   let groups = list_group_by_property(pairs, "bible_folder");
   async function group_texts(group) {
     let bible_folder = property_get(group, "key");
-    let items = property_get(group, "items");
-    let named = list_map_property(items, "reference");
+    let named = property_list_map_property(group, "items", "reference");
     let found = await ebible_folder_references_texts(bible_folder, named);
     return found;
   }
