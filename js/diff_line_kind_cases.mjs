@@ -64,8 +64,23 @@ export function diff_line_kind_cases() {
       kind: "code",
     },
     {
-      name: "a name alone on its line, which is left as program because an argument to a call broken over several lines looks the same",
+      name: "a name alone on its line, which is answered as itself because an entry of a list, a part of a record and an argument to a call broken over several lines are all written that way",
       line: text_frozen("+    app_fn,"),
+      kind: "name alone",
+    },
+    {
+      name: "a name alone taken out, which proves the doubt is carried on both sides of a difference",
+      line: text_frozen("-    js_selects_text_set,"),
+      kind: "name alone",
+    },
+    {
+      name: "a name with a dot in it standing alone, which is a reading rather than a name and so is program",
+      line: text_frozen("+    js_array_text_add.name,"),
+      kind: "code",
+    },
+    {
+      name: "a call standing alone as an argument, which ends at a comma but is not a bare name",
+      line: text_frozen("+    text_trim(line),"),
       kind: "code",
     },
     {
