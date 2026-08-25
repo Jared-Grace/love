@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { apps_all_main_fns_stale } from "./apps_all_main_fns_stale.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -17,9 +18,13 @@ export async function apps_all_main_fns_gate_run() {
   let missing = property_get(report, "missing");
   let extra = property_get(report, "extra");
   let both = list_concat(missing, extra);
+  let fix = fn_name("apps_all_main_fns_generate");
+  let hint = text_combine_multiple([
+    "the written list of every app no longer matches the apps that are here - write it out again with ",
+    fix,
+  ]);
   list_empty_is_assert_json(both, {
-    hint: "the written list of every app no longer matches the apps that are here - write it out again",
-    fix: fn_name("apps_all_main_fns_generate"),
+    hint,
     missing,
     extra,
   });
