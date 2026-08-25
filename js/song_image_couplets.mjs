@@ -219,7 +219,7 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "Three very large drops of blood of ruby red glass falling one below another, each drop round below and drawn to a point at its top, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides and running a little way down from its edges, the drops and the pool together filling most of the height of the window and the widest drop a good part of its width",
+        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, standing two side by side high up, one alone below and between those two, and two more side by side lower down and set wider apart than the first pair, so that no drop stands directly above another and they never make one column, each drop hanging free with nothing joined to it and no stalk or stem under any of them, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
       symbol_ref: "Luke 22:44",
       same_as: 0,
     },
@@ -324,7 +324,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "One plain round sun of white glass only just risen, standing low in the window with its lower half hidden behind one straight level line of dark ground running right across from one side to the other, so that only the top half of the disc shows above that line, the disc drawn very large so that it reaches almost to the white border on both sides, with no rays of any kind coming from it and the flat field above it deep cobalt blue",
+        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line the same solid black as the lead lines and everything above it one whole unbroken sheet of deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, the very top edge of the sun and no more of it than that, a low shallow white arc lying along the line and reaching almost to the white border on both sides, with no rays of any kind coming from it and nothing else in the picture at all",
       symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
@@ -398,8 +398,8 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the glass inside the white border upward and each side broken and uneven, stepping in and out in ridges and shoulders as it rises rather than running as one straight slope, so that the two sides are never a pair of straight lines meeting at a point and the shape is never a pyramid, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, that band level and straight-edged along its top and along its bottom alike and never rounded or lobed like a cloud, drawn very large so that the mountain reaches almost to the white border on both sides and the violet band runs from the white border on one side to the white border on the other",
-      symbol_ref: "Exodus 19:18, Hebrews 12:18-21",
+        "One steep mountain standing alone, both its sides one plain flat grey rising from the bottom corners of the glass inside the white border and each side broken and uneven, stepping in and out in ridges and shoulders as it rises rather than running as one straight slope, so that the two sides are never a pair of straight lines meeting at a point and the shape is never a pyramid, and the whole upper part of the mountain swallowed in one thick bank of grey smoke that runs from the white border on one side to the white border on the other and rolls upward above it in a few broad round lobes, the two sides of the mountain running up into that smoke and stopping there so that no peak and no summit and no snow of any kind shows anywhere above it, one band of ruby red fire burning along the mountain where it goes into the smoke, and the flat field standing above the smoke the same solid black as the lead lines",
+      symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },
     {
@@ -438,7 +438,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one straight ruby red sceptre standing upright on the ground beside the throne at the throne's own right hand, which is the left hand side as the window is seen, its foot on the ground and its head reaching as high as the top of the throne's back, drawn very large so that the throne reaches almost to the white border on every side",
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one straight ruby red sceptre standing upright on the ground at the left hand side of the window as the window is seen, beside the throne and clear of it, its foot on the ground and its head reaching as high as the top of the throne's back, drawn very large so that the throne reaches almost to the white border on every side",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
