@@ -11,7 +11,7 @@ export function app_shared_bible_screen_open(context, back) {
   html_centered(page);
   html_page_padding_x(page);
   let content = html_div(page);
-  let column = app_shared_content_column_pad(content);
+  app_shared_content_column_pad(content);
   app_shared_button_back(content, back);
   return content;
 }
