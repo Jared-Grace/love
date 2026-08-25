@@ -1,12 +1,11 @@
+import { diff_lines_kind_counts } from "./diff_lines_kind_counts.mjs";
+import { property_get } from "./property_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
-import { diff_line_kind } from "./diff_line_kind.mjs";
 import { add } from "./add.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function commit_edit_prose_verb_named(commit) {
   "Which of the prose-writing verbs would have made one hand-made edit outright, or that no single one of them would have.";
   "COUNTING PROSE EDITS WAS NEVER THE QUESTION. Knowing that a paragraph was reworded by hand says nothing about whether a command was there to be reached for, and the reading beside this one stops exactly there. Three verbs write a prose line - one adds a line, one takes a line away, one puts different words in a line that is already there - so the answer worth having is which of the three fits, and how often none of them does.";
@@ -14,27 +13,10 @@ export async function commit_edit_prose_verb_named(commit) {
   "AN EDIT THAT TOUCHED CODE IS NOT ASKED ABOUT AT ALL, because the question is what a prose verb would have made outright, and an edit that also changed code was never going to be made by one command whatever its prose looked like.";
   arguments_assert(arguments, 1);
   let changed = await commit_edit_changed_lines(commit);
-  let put_in = 0;
-  let taken_out = 0;
-  let code = 0;
-  for (let line of changed) {
-    let kind = diff_line_kind(line);
-    let code_is = equal(kind, "code");
-    if (code_is) {
-      code = add(code, 1);
-      continue;
-    }
-    let prose_is = equal(kind, "comment");
-    if (not(prose_is)) {
-      continue;
-    }
-    let added_is = text_starts_with(line, "+");
-    if (added_is) {
-      put_in = add(put_in, 1);
-      continue;
-    }
-    taken_out = add(taken_out, 1);
-  }
+  let counts = diff_lines_kind_counts(changed);
+  let put_in = property_get(counts, "put_in");
+  let taken_out = property_get(counts, "taken_out");
+  let code = property_get(counts, "code");
   let touched_code_is = equal_not(code, 0);
   if (touched_code_is) {
     let r = "not prose alone";

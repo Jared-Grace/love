@@ -1,6 +1,7 @@
+import { diff_lines_kind_counts } from "./diff_lines_kind_counts.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
-import { diff_line_kind } from "./diff_line_kind.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 export async function commit_edit_prose_touched_kind(commit) {
@@ -10,20 +11,11 @@ export async function commit_edit_prose_touched_kind(commit) {
   "IMPORTS ARE COUNTED AS NEITHER, because they are the canonicalizing pass's own work wearing a hand-made label, so an edit that reworded a paragraph and let the pass repair an import is prose only and not prose beside code.";
   arguments_assert(arguments, 1);
   let changed = await commit_edit_changed_lines(commit);
-  let prose = 0;
-  let code = 0;
-  for (let line of changed) {
-    let kind = diff_line_kind(line);
-    let prose_is = equal(kind, "comment");
-    if (prose_is) {
-      prose = add(prose, 1);
-      continue;
-    }
-    let code_is = equal(kind, "code");
-    if (code_is) {
-      code = add(code, 1);
-    }
-  }
+  let counts = diff_lines_kind_counts(changed);
+  let put_in = property_get(counts, "put_in");
+  let taken_out = property_get(counts, "taken_out");
+  let code = property_get(counts, "code");
+  let prose = add(put_in, taken_out);
   let untouched_is = equal(prose, 0);
   if (untouched_is) {
     let r = "no prose touched";
