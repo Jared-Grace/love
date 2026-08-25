@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,10 +7,8 @@ import { js_statement_kind_word } from "./js_statement_kind_word.mjs";
 import { js_statements_change_named } from "./js_statements_change_named.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_first } from "./list_first.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statement_inner_change_named_or_null(before, after) {
   "What happened inside one branch of a statement that holds runs of other statements - or nothing at all, where the two handed in are not one such statement edited in one branch.";
@@ -23,8 +22,7 @@ export function js_statement_inner_change_named_or_null(before, after) {
   if (apart) {
     return null;
   }
-  let moved = list_size(differing);
-  let one_branch = equal(moved, 1);
+  let one_branch = list_size_equal(differing, 1);
   if (not(one_branch)) {
     return null;
   }
