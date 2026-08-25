@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
 import { apps_node_only_carried_baseline_path } from "./apps_node_only_carried_baseline_path.mjs";
@@ -9,7 +11,11 @@ export async function apps_node_only_carried_baseline_write() {
   await baseline_known_growth_assert(
     known,
     path,
-    "a page now carries code it could never run, and did not before - ask apps_node_only_carried_steps for the chain and give the build machine's half its own name",
+    text_combine_multiple([
+      "a page now carries code it could never run, and did not before - ask ",
+      fn_name("apps_node_only_carried_steps"),
+      " for the chain and give the build machine's half its own name",
+    ]),
   );
   let r = await baseline_known_write(known, path);
   return r;
