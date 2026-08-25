@@ -1,7 +1,3 @@
-import { bless_person_tiles } from "./bless_person_tiles.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_flat } from "./list_flat.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
