@@ -1,3 +1,4 @@
+import { js_find_record_property_by_text } from "./js_find_record_property_by_text.mjs";
 import { js_statement_find_name_body } from "./js_statement_find_name_body.mjs";
 import { js_statement_find_name_inner } from "./js_statement_find_name_inner.mjs";
 import { js_function_nested_find_named } from "./js_function_nested_find_named.mjs";
@@ -40,6 +41,7 @@ export function example_selectors() {
     js_function_nested_find_named,
     js_statement_find_name_inner,
     js_statement_find_name_body,
+    js_find_record_property_by_text,
   };
   return selectors;
 }
