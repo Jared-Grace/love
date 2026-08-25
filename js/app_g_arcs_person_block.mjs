@@ -73,37 +73,61 @@ export function app_g_arcs_person_block(parent, person, bench) {
   let catch_up_shape = g_arc_answer_field_shape("conversation", catch_up_name);
   let conversation_block = block;
   function turn_block(card) {
-    let starting = property_get(card, "conversation_first");
-    if (starting) {
-      conversation_block = app_g_arcs_depth_block(block, 1);
-      let conversation_number = property_get(card, "conversation_number");
-      let v2 = String(conversation_number);
-      let said = text_combine_multiple(["conversation ", v2]);
-      let line = html_div_text(conversation_block, said);
-      html_style_assign(line, {
-        "font-weight": "bold",
-        color: voice_color,
-        opacity: "0.85",
-      });
-      let catch_up = property_get(card, "catch_up");
-      let caught_up = text_empty_not_is(catch_up);
-      if (caught_up) {
-        app_g_arcs_field_shaped(
-          conversation_block,
-          catch_up_name,
-          catch_up,
-          catch_up_shape,
-          voice_color,
-        );
-      }
-    }
-    app_g_arcs_turn_block(
-      conversation_block,
-      card,
-      nickname,
-      bench,
-      voice_color,
+    let app_g_arcs_conversation_turn_block_answer =
+      app_g_arcs_conversation_turn_block(
+        card,
+        conversation_block,
+        block,
+        voice_color,
+        catch_up_name,
+        catch_up_shape,
+        nickname,
+        bench,
+      );
+    conversation_block = property_get(
+      app_g_arcs_conversation_turn_block_answer,
+      "conversation_block",
     );
   }
   each(turns, turn_block);
+}
+function app_g_arcs_conversation_turn_block(
+  card,
+  conversation_block,
+  block,
+  voice_color,
+  catch_up_name,
+  catch_up_shape,
+  nickname,
+  bench,
+) {
+  arguments_assert(arguments, 8);
+  let starting = property_get(card, "conversation_first");
+  if (starting) {
+    conversation_block = app_g_arcs_depth_block(block, 1);
+    let conversation_number = property_get(card, "conversation_number");
+    let v2 = String(conversation_number);
+    let said = text_combine_multiple(["conversation ", v2]);
+    let line = html_div_text(conversation_block, said);
+    html_style_assign(line, {
+      "font-weight": "bold",
+      color: voice_color,
+      opacity: "0.85",
+    });
+    let catch_up = property_get(card, "catch_up");
+    let caught_up = text_empty_not_is(catch_up);
+    if (caught_up) {
+      app_g_arcs_field_shaped(
+        conversation_block,
+        catch_up_name,
+        catch_up,
+        catch_up_shape,
+        voice_color,
+      );
+    }
+  }
+  app_g_arcs_turn_block(conversation_block, card, nickname, bench, voice_color);
+  return {
+    conversation_block,
+  };
 }
