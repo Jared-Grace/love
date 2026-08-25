@@ -1,13 +1,14 @@
+import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { app_index_label } from "./app_index_label.mjs";
 import { window_app_url_generic } from "./window_app_url_generic.mjs";
 import { app_index_card_link } from "./app_index_card_link.mjs";
-import { app_shared_mobile_default_font_size } from "./app_shared_mobile_default_font_size.mjs";
 import { app_shared_name_prefix_without } from "./app_shared_name_prefix_without.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_index_generic(context, entries) {
   let root = property_get(context, "root");
-  app_shared_mobile_default_font_size(context);
+  ("★ THE SIZE THIS OPENS AT IS THE ONE CHOSEN IN THE BIBLE READER, not one of its own. The twin that reads a page's own remembered size is right for a page a reader settles into, because that is where the buttons changing it are; this page has no such buttons, so its own remembered size is one nobody ever chose. It stayed at the size everything starts at while somebody who needed larger text had already said so next door, and they met that answer again every time they came back here to open anything - the one page in the way of every other, telling them it was not part of what they were reading.");
+  app_shared_mobile_default_bible_font_size(context);
   let hash = {};
   ("an app opens in a tab of its own, so this page stays where it is and a reader who came here to open two things does not have to come back for the second.");
   ("The tab that could not be typed into was a tab this page OPENED, by running window.open itself. Measured on a phone: a box in such a tab received keyup for every letter and never keydown, so nothing was ever entered, while the same page reached by its own address took every letter. The letters were lost before the page saw them, so no code here could have caught it or fixed it.");

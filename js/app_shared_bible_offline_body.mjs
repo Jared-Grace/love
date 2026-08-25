@@ -1,3 +1,4 @@
+import { list_multiple_is } from "./list_multiple_is.mjs";
 import { app_shared_bible_offline_prompt_text } from "./app_shared_bible_offline_prompt_text.mjs";
 import { app_shared_bible_offline_reason_text } from "./app_shared_bible_offline_reason_text.mjs";
 import { app_shared_bible_offline_free_all_text } from "./app_shared_bible_offline_free_all_text.mjs";
@@ -14,7 +15,6 @@ import { ebible_offline_delete_all } from "./ebible_offline_delete_all.mjs";
 import { ebible_offline_folders_get } from "./ebible_offline_folders_get.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export function app_shared_bible_offline_body(container, languages) {
   "the offline choices without any framing, so both the chapter reader's in-place panel and the verse reader's settings screen can host them, each supplying its own way back";
   html_clear(container);

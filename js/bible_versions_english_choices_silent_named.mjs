@@ -1,12 +1,22 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_folder_key } from "./bible_folder_key.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { property_in_list_not } from "./property_in_list_not.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { property_get } from "./property_get.mjs";
+import { bible_folder_source } from "./bible_folder_source.mjs";
+import { list_map } from "./list_map.mjs";
 export function bible_versions_english_choices_silent_named(usable, wordings) {
   "Which of the English translations on offer handed over no words in a set of wordings that came back - each against what it calls itself and which of the two places it comes from.";
   "SILENCE IS WORKED OUT BY ABSENCE RATHER THAN BY ASKING EACH TRANSLATION, because a wordings list only ever carries the translations that answered. What is on offer and not in that list is exactly what was offered and read as nothing, which is the whole of the question.";
   "IT TAKES THE WORDINGS ALREADY GATHERED AND NEVER FETCHES THEM, because the two readings built on this differ only in how many passages they gathered - one asks about a single passage and one runs several together and lays them end to end. Fetching here, the one that runs several would have to fetch them again.";
   "THE PLACE A TRANSLATION COMES FROM IS SAID BESIDE ITS NAME, because a whole place going quiet and a single translation going quiet are different faults with different repairs, and a list of names alone cannot tell a reader which of the two they are looking at.";
   arguments_assert(arguments, 2);
-  let heard = list_map_property(wordings, bible_folder_key());
+  let property_name = bible_folder_key();
+  let heard = list_map_property(wordings, property_name);
   function silent_is(record) {
-    let wordless = property_in_list_not(record, bible_folder_key(), heard);
+    let property_name2 = bible_folder_key();
+    let wordless = property_in_list_not(record, property_name2, heard);
     return wordless;
   }
   let silent = list_filter(usable, silent_is);
