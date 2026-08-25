@@ -12,6 +12,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   "A log of commits is read to find the ones worth opening, and a commit that only moved imports about or only reworded a sentence is not one of them. Those two are the commonest kind in this repo, because the canonicalizing pass writes imports on almost every commit, so saying so in three words is most of what the reading is for.";
   "Lines that are prose or imports are set aside first and the words are chosen from what is left, which is why a commit touching thirty import lines and one line of code is called one line of code. Counting the lines rather than the kinds would have called it a large change and hidden the only part anybody needs to look at.";
   "Two lines of code, one taken out and one put in, is looked at once more: where the two differ only in which function is being called, that is worth saying, because it is the shape almost every routing and renaming commit takes and it is always safe to skip.";
+  "A VALUE CHOSEN IS SET ASIDE WITH THE OTHER TWO. A number raised in a record or a colour picked is hand-made and always will be, so it is no more a line worth opening than a reworded sentence is, and counting it as program called every such commit several lines of code. It gets a name of its own rather than joining the prose, because a person scanning the log for what changed wants to know which of the two it was.";
   arguments_assert(arguments, 2);
   let only_import = kinds_all_is(kinds, "import");
   if (only_import) {
@@ -22,6 +23,11 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   if (only_comment) {
     let r2 = "comment prose only";
     return r2;
+  }
+  let only_data = kinds_all_is(kinds, "data");
+  if (only_data) {
+    let r9 = "values chosen only";
+    return r9;
   }
   let code = [];
   for (let line of changed) {
@@ -34,7 +40,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   let size = list_size(code);
   let none = equal(size, 0);
   if (none) {
-    let r3 = "comment and imports only";
+    let r3 = "comment, values and imports only";
     return r3;
   }
   let pair = equal(size, 2);
