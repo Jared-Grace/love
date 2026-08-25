@@ -1,13 +1,9 @@
-import { js_statement_prose_is } from "./js_statement_prose_is.mjs";
-import { js_call_callee_name_dotted_try } from "./js_call_callee_name_dotted_try.mjs";
-import { js_declaration_single_variable_name_try } from "./js_declaration_single_variable_name_try.mjs";
-import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_statement_swap_bound_named } from "./js_statement_swap_bound_named.mjs";
+import { js_statement_swap_called_named_or_null } from "./js_statement_swap_called_named_or_null.mjs";
+import { js_statement_swap_asked_named_or_null } from "./js_statement_swap_asked_named_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statement_swap_named_or_null(node_before, node_after) {
@@ -40,8 +36,8 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let back = js_node_type_is(node_before, "ReturnStatement");
   if (back) {
-    let r4 = "what comes back written differently";
-    return r4;
+    let r = "what comes back written differently";
+    return r;
   }
   let asked = js_node_type_is(node_before, "IfStatement");
   if (asked) {

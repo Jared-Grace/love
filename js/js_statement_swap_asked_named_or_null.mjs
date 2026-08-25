@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_statement_runs_differing_or_null } from "./js_statement_runs_differing_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export function js_statement_swap_asked_named_or_null(node_before, node_after) {
   "$plain node_before";
   "$plain node_after";
@@ -13,6 +17,6 @@ export function js_statement_swap_asked_named_or_null(node_before, node_after) {
   if (inside) {
     return null;
   }
-  let r5 = "a condition written differently";
-  return r5;
+  let r = "a condition written differently";
+  return r;
 }
