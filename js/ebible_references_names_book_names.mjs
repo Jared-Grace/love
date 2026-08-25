@@ -44,7 +44,7 @@ export function ebible_references_names_book_names(
     for (let attempt of attempts) {
       let line = property_get(attempt, "line");
       let names = property_get(attempt, "names");
-      let matched = longest_named_or_null(line, names);
+      let matched = ebible_book_longest_named_or_null(line, names);
       let unmatched = null_is(matched);
       if (unmatched) {
         continue;
@@ -58,7 +58,10 @@ export function ebible_references_names_book_names(
       if (unknown) {
         continue;
       }
-      let chapter_verses = chapter_verses_or_null(line, matched);
+      let chapter_verses = ebible_reference_chapter_verses_or_null(
+        line,
+        matched,
+      );
       let blank = null_is(chapter_verses);
       if (blank) {
         continue;

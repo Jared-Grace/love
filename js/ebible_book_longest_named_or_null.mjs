@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_lower_to } from "./text_lower_to.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { text_size } from "./text_size.mjs";
+import { each } from "./each.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { ternary } from "./ternary.mjs";
+import { greater_than } from "./greater_than.mjs";
 export function ebible_book_longest_named_or_null(line, names) {
   "The book name a hand-written passage line opens with, taken from a list of names, or nothing where the line opens with none of them.";
   "A NAME IS ONLY MATCHED WHERE THE NEXT CHARACTER IS A SPACE. Matched on the bare name, a bible whose list calls the book Psalm swallows the line Psalms 89:1 as well, and what is left after the name is stripped is the letter s - carried on as if it were a chapter and verse, and raising further downstream rather than here. One passage raising empties the whole reading of that bible, so it reads as carrying nothing at all, which cannot be told apart from one nobody uploaded. Four translations looked exactly like that.";

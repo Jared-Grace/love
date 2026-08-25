@@ -1,3 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { text_replace_if_starts_with } from "./text_replace_if_starts_with.mjs";
+import { each } from "./each.mjs";
+import { each_object } from "./each_object.mjs";
 export function ebible_reference_line_aliased(line) {
   "One hand-written passage line with the two book names people spell more than one way put into the spelling most of these bibles use.";
   "PSALM BECOMES PSALMS AND SONG OF SOLOMON BECOMES SONG. Most bibles here list them the second way, so a line written the first way reaches none of them - and the line as a person actually wrote it is still tried afterwards, for the bible that lists them the other way round.";
