@@ -14,7 +14,7 @@ export function app_index_built_card(root) {
   let name = app_shared_name_prefix_without(name2);
   let path = file_name_html(name);
   let shown = app_shared_page_dev_build_is();
-  let label = "Built pages";
+  let label = "prod index";
   let text =
     "The same index, opening every app's built page instead of the dev build";
   app_index_stage_card_generic(root, shown, path, label, text);
