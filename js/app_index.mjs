@@ -9,7 +9,7 @@ import { app_index_main_fns } from "./app_index_main_fns.mjs";
 import { app_index_generic } from "./app_index_generic.mjs";
 import { app_index_dev_g_card } from "./app_index_dev_g_card.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_index(context) {
+export async function app_index(context) {
   app_shared_app_fn_set(context, app_index);
   let root = property_get(context, "root");
   ("the way into the dev builds comes before even the working links, because it is not a place to go but a choice of which copy of everything below it the rest of this page leads to");
@@ -17,7 +17,8 @@ export function app_index(context) {
   ("and the same card the other way for whoever is standing in the dev build, so the way back to the ordinary site is a tap rather than an address typed out on a phone. Exactly one of the two ever shows, because each asks which copy this page is.");
   app_index_built_card(root);
   ("the working links come before the apps, and only on a machine on this same network: while something is being worked on they are the reason this page was opened, and the top is the part a phone shows without scrolling");
-  app_index_dev_links_show(root);
+  ("waited on, so the cards below still land below them: what is drawn there is fetched by name rather than imported, to keep it out of the public page's bundle, and a fetch that is not waited on would let the rest of this page overtake it");
+  await app_index_dev_links_show(root);
   ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
   app_index_dev_about_card(root, lambda_about);
   let entries = app_index_main_fns();
@@ -27,9 +28,9 @@ export function app_index(context) {
   function lambda_about() {
     app_index_about_open(root, lambda_index_again);
   }
-  function lambda_index_again() {
+  async function lambda_index_again() {
     "about is drawn over this page rather than beside it, so coming back means drawing this page again from nothing rather than uncovering it";
     html_clear(root);
-    app_index(context);
+    await app_index(context);
   }
 }
