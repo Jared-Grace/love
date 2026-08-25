@@ -45,7 +45,7 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   function hold_release(person) {
     "Lets one person go, and they are then an ordinary passer-by again: free to walk out of";
     "the view, and no longer prayable once they have.";
-    "Said after a prayer. What being held is FOR is giving the player time to pray for");
+    "Said after a prayer. What being held is FOR is giving the player time to pray for";
     "somebody they walked over to, and once that prayer is said there is nothing left to";
     "hold them for - keeping them would pin somebody already blessed in front of a player";
     "looking for the next person, which is the crowd standing still to no purpose.";
@@ -117,6 +117,7 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     view_now,
     view_everyone,
     hold,
+    hold_release,
   };
   return r3;
 }
