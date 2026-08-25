@@ -86,6 +86,8 @@ export function examples_groups() {
         "example_guard_add_after_selected",
         "example_guard_add_before_selected",
         "example_nested_list_text_add",
+        "example_record_value_text_set",
+        "example_record_value_number_set",
       ],
     },
     {

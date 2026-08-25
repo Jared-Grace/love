@@ -1,6 +1,5 @@
+import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { commit_edit_changed_lines } from "./commit_edit_changed_lines.mjs";
-import { diff_lines_kind_counts } from "./diff_lines_kind_counts.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
@@ -12,20 +11,15 @@ export async function commit_edit_value_shape_named(commit) {
   "AN EDIT THAT TOUCHED ANYTHING ELSE IS NOT ASKED ABOUT, because the question is what one command would have made outright and an edit that also changed a paragraph or a line of program was never going to be made by one whatever its values look like.";
   "WHICH VERB IS NOT NAMED HERE, and that is a limit rather than an omission. An entry of a list and a named part of a record are added by two different verbs, and a changed line on its own does not always say which of the two it was; the shape is what the case for building rests on, and the shape is answerable.";
   arguments_assert(arguments, 1);
-  let changed = await commit_edit_changed_lines(commit);
-  let counts = diff_lines_kind_counts(changed);
-  let prose_put_in = property_get(counts, "prose_put_in");
-  let prose_taken_out = property_get(counts, "prose_taken_out");
-  let code = property_get(counts, "code");
-  let prose = add(prose_put_in, prose_taken_out);
-  let else_touched = add(code, prose);
+  let counts = await commit_edit_kind_counts(commit, "data");
+  let else_touched = property_get(counts, "else_touched");
   let touched_else_is = equal_not(else_touched, 0);
   if (touched_else_is) {
     let r = "not values alone";
     return r;
   }
-  let put_in = property_get(counts, "data_put_in");
-  let taken_out = property_get(counts, "data_taken_out");
+  let put_in = property_get(counts, "put_in");
+  let taken_out = property_get(counts, "taken_out");
   let left = add(put_in, taken_out);
   let untouched_is = equal(left, 0);
   if (untouched_is) {
