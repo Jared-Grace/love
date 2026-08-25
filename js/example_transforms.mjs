@@ -1,3 +1,4 @@
+import { js_selects_guard_add_before } from "./js_selects_guard_add_before.mjs";
 import { js_selects_guard_add_after } from "./js_selects_guard_add_after.mjs";
 import { js_block_local_call_add } from "./js_block_local_call_add.mjs";
 import { js_block_local_boolean_add } from "./js_block_local_boolean_add.mjs";
@@ -121,6 +122,7 @@ export function example_transforms() {
     js_block_local_boolean_add,
     js_block_local_call_add,
     js_selects_guard_add_after,
+    js_selects_guard_add_before,
   };
   return transforms;
 }
