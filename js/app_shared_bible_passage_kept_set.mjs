@@ -1,3 +1,4 @@
+import { app_shared_bible_history_note } from "./app_shared_bible_history_note.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_passage_kept_key } from "./app_shared_bible_passage_kept_key.mjs";
 import { storage_session_set_context } from "./storage_session_set_context.mjs";
@@ -10,6 +11,8 @@ export function app_shared_bible_passage_kept_set(
   "The reader says this as it draws rather than the pickers saying it as they open, and that is the whole reason it is right. There is more than one way out of a reading screen, and a note taken at each door is a note somebody forgets to take at the next door somebody adds. What is drawn is what you were on, whichever way you left it.";
   "The verses are a list because the readers disagree about how many there are, and all of them are right: a verse reader is standing on one, a whole-chapter reader may have several picked or none at all. A list says all three, and none is the empty one rather than a missing word - a chapter with nothing picked in it is still a place to come back to.";
   "Kept per tab, like the screen beside it: two tabs reading two passages must each come back to their own.";
+  "The same passage is written down a second time, on the device rather than in the tab, in the list of readings this app has been left on. A tab keeps its note only for as long as it is open, so a tab that closes takes with it the one thing somebody would want back; the second note is what survives it.";
+  "Both notes are taken here for the same reason: this is the moment the reading is known. Somewhere else would be another door to remember, and the list of doors is what this function exists not to keep.";
   arguments_assert(arguments, 3);
   let key = app_shared_bible_passage_kept_key();
   let kept = {
@@ -17,4 +20,5 @@ export function app_shared_bible_passage_kept_set(
     verse_numbers,
   };
   storage_session_set_context(context, key, kept);
+  app_shared_bible_history_note(context, chapter_code, verse_numbers);
 }
