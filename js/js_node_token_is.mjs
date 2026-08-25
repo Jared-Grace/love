@@ -1,3 +1,7 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { equal } from "./equal.mjs";
 export function js_node_token_is(node, token) {
   "$plain token";
   "Whether one piece of parsed code is a bare name or a bare value written exactly as the given word.";

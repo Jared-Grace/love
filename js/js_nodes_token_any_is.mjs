@@ -1,3 +1,6 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_node_token_is } from "./js_node_token_is.mjs";
 export function js_nodes_token_any_is(nodes, token) {
   "$plain token";
   "Whether any one of a run of pieces of parsed code is a bare name or bare value written exactly as the given word.";
