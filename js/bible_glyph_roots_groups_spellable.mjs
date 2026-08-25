@@ -1,3 +1,4 @@
+import { list_first_is } from "./list_first_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_groups_vocabulary } from "./bible_glyph_groups_vocabulary.mjs";
@@ -44,8 +45,7 @@ export function bible_glyph_roots_groups_spellable() {
           if (ends_it) {
             list_add(before, seated);
           }
-          let left2 = list_first(names);
-          let starts_it = equal(left2, closing);
+          let starts_it = list_first_is(names, closing);
           if (starts_it) {
             list_add(after, seated);
           }
