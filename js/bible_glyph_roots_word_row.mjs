@@ -1,3 +1,13 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
+import { bible_glyph_roots_wording_count } from "./bible_glyph_roots_wording_count.mjs";
+import { bible_glyph_roots_wordings_ranked } from "./bible_glyph_roots_wordings_ranked.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { divide } from "./divide.mjs";
 export function bible_glyph_roots_word_row(root_name, word, ranked) {
   "$plain root_name";
   "$plain word";

@@ -1,23 +1,10 @@
+import { bible_glyph_roots_word_row } from "./bible_glyph_roots_word_row.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_strong_glosses } from "./bible_strong_glosses.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { list_map_sum } from "./list_map_sum.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_first } from "./list_first.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { text_words_content } from "./text_words_content.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { add } from "./add.mjs";
 export async function bible_glyph_roots_wordings_split(testament_name) {
   arguments_assert(arguments, 1);
   ("Every word one testament's seed table seats on a picture, measured against every English wording the interlinear gives it, weakest seat first.");
