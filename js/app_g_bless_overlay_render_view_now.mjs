@@ -1,3 +1,4 @@
+import { bless_people_hold_replace } from "./bless_people_hold_replace.mjs";
 import { bless_cone_people_wholly } from "./bless_cone_people_wholly.mjs";
 import { bless_view_add_people } from "./bless_view_add_people.mjs";
 import { json_to } from "./json_to.mjs";
