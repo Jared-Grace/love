@@ -15,21 +15,29 @@ export async function html_regenerate_stable_gate_run() {
     hint: "no page settled, which is not a pass - it is a sweep that found nothing to look at. Either the folders it reads have moved, or every page is now refused before it is checked",
   });
   let offenders = property_get(report, "offenders");
+  let f_name = fn_name("html_code");
+  let f_name2 = fn_name("html_code_body_own");
+  let f_name3 = fn_name("html_code_app_name");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
       "regenerating one of these pages would change it, and regenerating the result would change it again - so the page never settles and each pass drifts further from what the app wrote. Look at what ",
-      fn_name("html_code"),
+      f_name,
       " puts around a body that ",
-      fn_name("html_code_body_own"),
+      f_name2,
       " does not take back off, or at a title that ",
-      fn_name("html_code_app_name"),
+      f_name3,
       " does not turn back into a name",
     ]),
     offenders,
   });
+  ("What it did NOT look at is handed back beside what it did, and named page by page rather than totalled, so a reader of the result can tell a clean pass from a clean pass over half the pages. It is not failed on, because the commonest reason a page is skipped is that its built copy is older than the shape building one produces now - which is a stale artifact rather than a fault in the code, and a gate that went red over it would be red until somebody rebuilt ten apps they were not otherwise touching.");
+  let skipped = property_get(report, "skipped");
   let checked = list_size(settled);
+  let passed_over = list_size(skipped);
   let counted = {
     checked,
+    passed_over,
+    skipped,
   };
   return counted;
 }
