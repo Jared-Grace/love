@@ -1,3 +1,4 @@
+import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -11,15 +12,18 @@ export function diff_line_kind(line) {
     let r = "import";
     return r;
   }
+  ("A LINE THAT OPENS WITH A PIECE OF TEXT IS NOT YET PROSE, and reading it as prose was wrong wherever a piece of text is data. A name inside a written-out record opens with the same character - a key, a colour, a word in a list - so counting by the opening alone filed every such line under the paragraphs written for a reader, and two of the four commits held up as prose rewritten by hand turned out to be entries added to a record.");
+  ("WHAT SETTLES IT IS THE OTHER END. Prose here is a piece of text standing alone as a whole statement, which is the thing this already said it was looking for, so it closes the way a statement closes and nothing that is being handed to something else does. A key is followed by its value, an entry in a list by the comma before the next one; only a paragraph runs out at a semicolon.");
   let written = text_starts_with(bare, '"');
-  if (written) {
-    let r2 = "comment";
-    return r2;
-  }
   let wrapped = text_starts_with(bare, '("');
-  if (wrapped) {
-    let r3 = "comment";
-    return r3;
+  let opened = written || wrapped;
+  if (opened) {
+    let endings = ['";', '");'];
+    let standing = text_ends_with_any(bare, endings);
+    if (standing) {
+      let r2 = "comment";
+      return r2;
+    }
   }
   let r4 = "code";
   return r4;
