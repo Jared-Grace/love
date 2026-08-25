@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -14,7 +15,11 @@ export async function apps_node_only_carried_gate_run() {
   let r = await baseline_names_gate_generic(
     offenders,
     path,
-    "a page now downloads this in order never to execute it - ask apps_node_only_carried_steps for the chain, then give the build machine's half its own name and ask for it by that name, so a bundler cannot see through the address",
+    text_combine_multiple([
+      "a page now downloads this in order never to execute it - ask ",
+      fn_name("apps_node_only_carried_steps"),
+      " for the chain, then give the build machine's half its own name and ask for it by that name, so a bundler cannot see through the address",
+    ]),
     name_write,
   );
   return r;
