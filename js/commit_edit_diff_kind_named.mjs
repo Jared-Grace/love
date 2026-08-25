@@ -1,3 +1,4 @@
+import { diff_lines_function_written_is } from "./diff_lines_function_written_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { kinds_all_is } from "./kinds_all_is.mjs";
 import { diff_line_kind } from "./diff_line_kind.mjs";
@@ -14,6 +15,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   "Two lines of code, one taken out and one put in, is looked at once more: where the two differ only in which function is being called, that is worth saying, because it is the shape almost every routing and renaming commit takes and it is always safe to skip.";
   "A VALUE CHOSEN IS SET ASIDE WITH THE OTHER TWO. A number raised in a record or a colour picked is hand-made and always will be, so it is no more a line worth opening than a reworded sentence is, and counting it as program called every such commit several lines of code. It gets a name of its own rather than joining the prose, because a person scanning the log for what changed wants to know which of the two it was.";
   "A NAME STANDING ALONE GETS A NAME OF ITS OWN AND SAYS SO. An entry added to a register, a part written into a record and an argument of a call broken over several lines are all written as one name and a comma, so a commit made only of those lines cannot be placed by the lines; naming the doubt is honest, and folding it into the bucket beside it would have had that bucket claim the change was imports and values when it was neither.";
+  "A WHOLE NEW FUNCTION IS SAID SO RATHER THAN COUNTED AS SEVERAL LINES OF PROGRAM. It reads as the largest bucket there is and is the one shape this repo has had a command for the longest, so a reader scanning for what no command covers was being handed the covered work first. It is asked after the lines have been sorted and before their number is looked at, because the number is the thing it is there to stop being trusted.";
   arguments_assert(arguments, 2);
   let only_import = kinds_all_is(kinds, "import");
   if (only_import) {
