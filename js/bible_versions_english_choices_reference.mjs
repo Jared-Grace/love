@@ -1,7 +1,6 @@
+import { list_single_property } from "./list_single_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
-import { list_single } from "./list_single.mjs";
-import { property_get } from "./property_get.mjs";
 export async function bible_versions_english_choices_reference(reference) {
   "$plain reference";
   "One passage, written the way a person writes one - 'Malachi 3:17' - read out of every English translation this repo may lawfully put in front of a reader, from either of the two shelves it fetches from, as each translation against the words it uses there.";
@@ -10,7 +9,6 @@ export async function bible_versions_english_choices_reference(reference) {
   "It stays a name of its own because asking about one passage is what a person does at a keyboard, and a name that has to be handed a list of one to answer about one is a name that makes its reader do arithmetic before they may ask their question.";
   arguments_assert(arguments, 1);
   let passages = await bible_versions_english_choices_references([reference]);
-  let passage = list_single(passages);
-  let wordings = property_get(passage, "wordings");
+  let wordings = list_single_property(passages, "wordings");
   return wordings;
 }
