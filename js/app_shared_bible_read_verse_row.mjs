@@ -1,3 +1,4 @@
+import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
 import { app_shared_bible_read_verse_row_cells } from "./app_shared_bible_read_verse_row_cells.mjs";
 import { app_shared_bible_read_verse_actions } from "./app_shared_bible_read_verse_actions.mjs";
 import { app_shared_bible_read_verse_row_grid } from "./app_shared_bible_read_verse_row_grid.mjs";
@@ -60,6 +61,12 @@ export async function app_shared_bible_read_verse_row(
       verse_numbers_chosen,
       max,
       count_status,
+    );
+    ("Picking a verse moves where you are reading just as truly as turning the page does, so the passage is written down again here. Turning the page draws the reading afresh and the drawing writes it down; picking a verse changes only this row and the link, and nothing draws, so a note taken at drawing time alone would keep saying the chapter somebody arrived at hours ago.");
+    app_shared_bible_passage_kept_set(
+      context,
+      chapter_code,
+      verse_numbers_chosen,
     );
   }
   app_shared_bible_read_verse_row_cells(

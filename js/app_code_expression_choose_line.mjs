@@ -1,3 +1,6 @@
+import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
+import { each } from "./each.mjs";
+import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_code_expression_chips_rise } from "./app_code_expression_chips_rise.mjs";
 import { null_is } from "./null_is.mjs";
 import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
@@ -62,6 +65,11 @@ export function app_code_expression_choose_line(
         app_code_expression_operator_pressable(span);
       }
       list_add(pressable, span);
+      ("the operator that may go next is marked as the way on, from the same list that decides whether a press of it is answered or refused - so a walk of the whole course works this line the way a learner does, and there is no second answer key to disagree with the one the presses are judged by");
+      let ready_now = list_includes(ready, node);
+      if (ready_now) {
+        html_data_set_test_happy(span);
+      }
       async function on_click() {
         if (chosen) {
           ("the line has already been pressed and is waiting on an answer somewhere else, so this press is spent saying where: the question glows rather than the press being swallowed");
@@ -84,6 +92,8 @@ export function app_code_expression_choose_line(
           return;
         }
         chosen = true;
+        ("and the marks go with the answering: the line has stopped taking presses, so nothing on it is the way on any more. What is left standing marked would be pressed again by a walk, over and over, into the guard above that answers it with a glow - and the question it should be answering is the one that just opened somewhere else.");
+        each(pressable, html_data_set_test_happy_remove);
         ("the reds go before anything else happens, so what the learner watches from here is one block being worked out rather than a working out with a refusal still standing beside it");
         app_code_expression_refusals_clear(refused);
         ("the blue block is the first thing that happens, in the frame the press is made, so the press is answered before anything else on the line is asked to change");
