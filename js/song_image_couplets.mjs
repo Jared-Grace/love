@@ -194,7 +194,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "One Roman spear standing upright and alone, its long straight shaft plain brown wood running from the white border at the bottom well up the window, and at the top of the shaft one large broad leaf-shaped spearhead of plain grey iron with its point upward, and hanging from the lower edge of that head two large drops side by side, one of them deep crimson and the other one blue water",
+        "One Roman spear standing upright and alone, at its top one large broad leaf-shaped spearhead of plain grey iron with its point upward, drawn wide enough that the head reaches almost to the white border on both sides, and hanging straight down from the lower edge of that head two large drops side by side, the one on the left deep crimson blood and the one on the right blue water, and under the head the spear's long straight shaft of plain brown wood running down to the white border at the bottom",
       symbol_ref: "John 19:34, Zechariah 12:10, Hebrews 2:10",
       same_as: 8,
     },
@@ -244,7 +244,7 @@ export function song_image_couplets() {
       first: "HE breathed HIS last",
       second: "and then HE died",
       symbol:
-        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing well apart with a broad plain straight gap of the flat field showing between them, that gap as wide as one of the veil's own stripes and running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole and no part of the gap carried on below it",
+        "The veil of the temple hanging alone with nothing else in the picture, torn in two from top to bottom, the two halves standing well apart with a broad plain straight gap of the flat field showing between them as wide as one of the veil's own stripes, that gap running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole, each half woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and the whole veil hanging from one plain straight rod of grey iron running across the top of it",
       symbol_ref: "Exodus 26:31, Matthew 27:51",
       same_as: 0,
     },
