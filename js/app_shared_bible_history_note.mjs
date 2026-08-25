@@ -1,3 +1,4 @@
+import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_session_id } from "./app_shared_bible_session_id.mjs";
 import { app_shared_bible_session_id_key } from "./app_shared_bible_session_id_key.mjs";
@@ -23,9 +24,12 @@ export function app_shared_bible_history_note(
   let kept = app_shared_bible_history_get(context);
   let property_name = app_shared_bible_session_id_key();
   let others = list_filter_property_not(kept, property_name, session);
+  ("Which of the two readers was open is written down with the passage, because a passage on its own is not enough to put somebody back where they were. The two readers do not read a picked passage the same way: the whole-chapter one takes several verses at once, and the single-verse one takes exactly one. Handed several, it looked for a verse called five-to-nine, found none, and printed the failure over the chapter the reader had asked for.");
+  let mode = app_shared_bible_mode_get();
   let entry = {
     chapter_code,
     verse_numbers,
+    mode,
   };
   property_set(entry, property_name, session);
   list_add_first(others, entry);
