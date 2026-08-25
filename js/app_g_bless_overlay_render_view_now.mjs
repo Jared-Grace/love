@@ -35,12 +35,39 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   ("would have no edge in it at all.");
   let held = [];
   let held_cone = null;
+  function hold_none() {
+    "Holds nobody at all - everybody is let go and no view is remembered, so the next hold";
+    "is taken fresh rather than compared against a view that is over.";
+    bless_people_hold_release(held);
+    held = [];
+    held_cone = null;
+  }
+  function hold_release(person) {
+    "Lets one person go, and they are then an ordinary passer-by again: free to walk out of";
+    "the view, and no longer prayable once they have.";
+    "Said after a prayer. What being held is FOR is giving the player time to pray for");
+    "somebody they walked over to, and once that prayer is said there is nothing left to";
+    "hold them for - keeping them would pin somebody already blessed in front of a player";
+    "looking for the next person, which is the crowd standing still to no purpose.";
+    bless_people_hold_release([person]);
+    held = list_without(held, person);
+  }
   function hold() {
     "Taken when the cone CHANGES rather than on every draw, because a draw also happens";
     "after a prayer - and a fresh snapshot there would drop the very people the player";
     "walked over to hold on to, the moment they prayed for the first of them. The cone is";
     "made of where the player stands, which way they face and how far they reach, so a cone";
     "that has not changed means the player has not acted.";
+    "Nobody is held while the player is WALKING. The view swings and slides the whole way,";
+    "so a hold taken mid-walk pins whoever happens to be in front of the player on that";
+    "step and lets them go on the next - the street would clutch and release at the pace of";
+    "the player's feet. Held only when the player has stopped, the rule is what it says it";
+    "is: what you are looking at, once you are looking at it.";
+    let walking = bless_world_walking_is(world);
+    if (walking) {
+      hold_none();
+      return;
+    }
     let cone = cone_get();
     let text = json_to(cone);
     let same = equal(text, held_cone);
