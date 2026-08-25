@@ -41,13 +41,13 @@ export async function example_new_from_temp(
     hint: "an example already answers to this name, and a corpus entry is replaced by editing it rather than by promoting a second draft over the top of it",
     file_name,
   });
-  let text = await file_read(path_draft);
-  await file_overwrite(path_corpus, text);
-  await examples_imports_repair();
   let path_import = text_combine("../", path_draft);
   let module_read = await import(path_import);
   let example = property_get(module_read, "example");
   let verdict = await example_check(example);
+  let text = await file_read(path_draft);
+  await file_overwrite(path_corpus, text);
+  await examples_imports_repair();
   let passed = equal(verdict, "pass");
   if (not(passed)) {
     await file_delete(path_corpus);
