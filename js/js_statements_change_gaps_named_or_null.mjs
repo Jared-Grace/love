@@ -1,7 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_change_gaps_or_null } from "./js_statements_change_gaps_or_null.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { null_is } from "./null_is.mjs";
 import { less_than } from "./less_than.mjs";
@@ -22,8 +22,7 @@ export function js_statements_change_gaps_named_or_null(
   if (apart) {
     return null;
   }
-  let places = list_size(gaps);
-  let one_place = equal(places, 1);
+  let one_place = list_size_equal(gaps, 1);
   if (not(one_place)) {
     return null;
   }
