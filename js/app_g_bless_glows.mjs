@@ -39,9 +39,17 @@ export function app_g_bless_glows(glows, everyone, lit) {
   ("picture, over the same time, with the same shape of start and stop. So it crosses the");
   ("tile at their speed because it is not being placed at all.");
   ("Hidden rather than absent, because a light that does not exist yet cannot have been");
-  ("carried. Being hidden is also what keeps the cost of ninety of them at nothing: an");
-  ("element that is not displayed is not drawn and its breathing does not run, so the crowd's");
-  ("worth of unlit lights costs a step two style writes each and no painting whatever.");
+  ("carried.");
+  ("Hidden by being INVISIBLE and not by being undisplayed, and the difference is the whole");
+  ("bug over again. An undisplayed element has no box on the page at all, so it does not");
+  ("slide - each step simply moved it, in no time, to the square being walked to, and it sat");
+  ("there. Shown, it was therefore already at the far end of the step: exactly the fault this");
+  ("was written to cure, arrived at by the other road. Invisible, it keeps its box and its");
+  ("place in every step, and so it is mid-square when it is shown because it has been");
+  ("crossing squares all along with nobody watching.");
+  ("The breathing is started at the moment of showing rather than at the moment of making,");
+  ("which is what keeps ninety unlit lights cheap: an invisible box is laid out but never");
+  ("painted, so an unlit light costs a step two style writes and nothing else.");
   ("Nothing is ever taken away, which is what makes showing-once safe: a person prayed for");
   ("stays prayed for, so a light once shown is never wrong afterwards, and asking for it");
   ("again on the next beat asks for what it already says.");
@@ -83,16 +91,16 @@ export function app_g_bless_glows(glows, everyone, lit) {
       background: background,
       filter: rim,
       "pointer-events": "none",
-      display: "none",
+      visibility: "hidden",
     });
-    app_shared_game_emoji_glow_apply(halo);
     app_shared_game_npc_glow_set(person, halo);
   }
   each(people_all, person_halo);
   let people_lit = bless_view_people(lit);
   function person_light(person) {
     let halo = app_shared_game_npc_glow_get(person);
-    html_style_set(halo, "display", "block");
+    html_style_set(halo, "visibility", "visible");
+    app_shared_game_emoji_glow_apply(halo);
   }
   each(people_lit, person_light);
 }
