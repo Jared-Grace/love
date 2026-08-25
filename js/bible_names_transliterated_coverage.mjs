@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_names_transliterated } from "./bible_names_transliterated.mjs";
@@ -6,11 +7,9 @@ import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
 import { pronunciation_dictionary_path } from "./pronunciation_dictionary_path.mjs";
 import { pronunciation_dictionary_words } from "./pronunciation_dictionary_words.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { set_includes } from "./set_includes.mjs";
 export async function bible_names_transliterated_coverage(bible_folder) {
   "$plain bible_folder";
@@ -31,8 +30,7 @@ export async function bible_names_transliterated_coverage(bible_folder) {
   let missing = list_filter(names, unknown_is);
   let transliterated = await bible_names_transliterated(bible_folder);
   function untransliterated_is(name) {
-    let spelled = property_get_or_null(transliterated, name);
-    let none = null_is(spelled);
+    let none = property_null_is(transliterated, name);
     return none;
   }
   function transliterated_is(name) {
