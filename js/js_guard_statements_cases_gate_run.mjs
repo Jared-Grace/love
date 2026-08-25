@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { js_guard_statements_cases } from "./js_guard_statements_cases.mjs";
 import { property_get } from "./property_get.mjs";
@@ -35,8 +36,7 @@ export function js_guard_statements_cases_gate_run() {
     let binding = list_first(statements);
     let guard = list_get(statements, 1);
     let declarator = property_list_first(binding, "declarations");
-    let id = property_get(declarator, "id");
-    let bound = property_get(id, "name");
+    let bound = property_path_get_2(declarator, "id", "name");
     let source = property_get(declarator, "init");
     let callee = property_get(source, "callee");
     let test_fn = property_get(callee, "name");
