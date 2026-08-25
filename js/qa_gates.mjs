@@ -1,3 +1,4 @@
+import { bible_versions_english_choices_psalms_agreement_gate_run } from "./bible_versions_english_choices_psalms_agreement_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_unpublished_gate_run } from "./app_en_learn_bible_gloss_urdu_unpublished_gate_run.mjs";
 import { public_chunks_orphaned_gate_run } from "./public_chunks_orphaned_gate_run.mjs";
 import { js_source_bare_token_kind_cases_gate_run } from "./js_source_bare_token_kind_cases_gate_run.mjs";
@@ -811,6 +812,7 @@ export function qa_gates() {
     public_chunks_orphaned_gate_run,
     diff_line_kind_cases_gate_run,
     js_source_bare_token_kind_cases_gate_run,
+    bible_versions_english_choices_psalms_agreement_gate_run,
   ];
   return gates;
 }
