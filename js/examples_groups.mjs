@@ -28,6 +28,7 @@ export function examples_groups() {
         "example_declaration_delete",
         "example_statement_duplicate",
         "example_call_argument_named_set",
+        "example_call_before_return_takes_the_returned_value",
         "example_statement_move_after",
         "example_span_move_after",
         "example_statement_last_address",
