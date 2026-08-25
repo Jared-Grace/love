@@ -13,7 +13,7 @@ export async function guard_case_check(c) {
   ("The command is padded out to a fixed width so a run of these lines reads as");
   ("three columns; every corpus hands its case's one-line reading over under the");
   ("same name, which is what lets one frame print all of them.");
-  let label = command.padEnd(44);
+  let label = text_column(command, 44);
   let r = {
     label,
     expected,

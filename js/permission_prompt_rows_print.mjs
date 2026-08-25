@@ -8,13 +8,13 @@ export function permission_prompt_rows_print(title, rows, keep) {
   let shown = rows.slice(0, v);
   for (let row of shown) {
     console.log(
-      String(row.count).padStart(6) +
+      text_column_right(String(row.count), 6) +
         "  worst " +
-        String(row.seconds_worst).padStart(5) +
+        text_column_right(String(row.seconds_worst), 5) +
         "s  last " +
         row.latest.slice(5, 16) +
         "  " +
-        row.verdict.padEnd(7) +
+        text_column(row.verdict, 7) +
         row.label,
     );
   }

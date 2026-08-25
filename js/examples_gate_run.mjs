@@ -31,7 +31,7 @@ export async function examples_gate_run() {
     } else {
       skip++;
     }
-    console.log(result.toUpperCase().padEnd(6) + e.title);
+    console.log(text_column(text_upper_to(result), 6) + e.title);
   }
   timings_print(timings);
   console.log("\npass " + pass + "  fail " + fail + "  skip " + skip);
