@@ -73,7 +73,7 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
       waiting_on,
     );
   }
-  return {
+  let r = {
     line_holder,
     head,
     note,
@@ -82,4 +82,5 @@ export function app_code_lesson_expression_choose_order_walkthrough_on_chosen(
     head_said,
     on_chosen,
   };
+  return r;
 }

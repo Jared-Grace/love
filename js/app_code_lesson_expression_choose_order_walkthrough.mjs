@@ -20,12 +20,18 @@ export function app_code_lesson_expression_choose_order_walkthrough(
   ("Every operator is pressable here too, so a learner may take the leftmost and be told why it cannot go yet. Being told the answer and being stopped from getting it wrong are not the same lesson, and only the first one is this page's job.");
   ("Pressing changes nothing that is kept, so leaving the page and coming back starts the line over, and a learner who wants the walkthrough again just takes it again.");
   ("The walkthrough stands at the TOP of the card, above the Code label, because it is an instruction and an instruction is read before the thing it is about; underneath the line it was a caption on something already pressed.");
-  let { line_holder, head, note, line_code, ready_now, head_said, on_chosen } =
-    app_code_lesson_expression_choose_order_walkthrough_on_chosen(
-      parent,
-      card,
-      tree,
-    );
+  let r = app_code_lesson_expression_choose_order_walkthrough_on_chosen(
+    parent,
+    card,
+    tree,
+  );
+  let on_chosen = property_get(r, "on_chosen");
+  let head_said = property_get(r, "head_said");
+  let ready_now = property_get(r, "ready_now");
+  let line_code = property_get(r, "line_code");
+  let note = property_get(r, "note");
+  let head = property_get(r, "head");
+  let line_holder = property_get(r, "line_holder");
   function on_change(step) {
     "after every replacement, say what the line is now and what to choose next";
     let current = property_get(step, "current");
