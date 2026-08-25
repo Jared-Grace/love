@@ -1,3 +1,4 @@
+import { js_statements_span_repack_only_is } from "./js_statements_span_repack_only_is.mjs";
 import { list_slice_include } from "./list_slice_include.mjs";
 import { add } from "./add.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -58,6 +59,10 @@ export async function function_span_cut_shortened_or_null(
     let head = list_take(statements, from);
     let cuttable = js_statements_span_cuttable_is(head, span, tail);
     if (not(cuttable)) {
+      continue;
+    }
+    let repack_is = js_statements_span_repack_only_is(span, tail);
+    if (repack_is) {
       continue;
     }
     let r = {

@@ -29,7 +29,7 @@ export function app_g_dev_routes(div_map) {
   }
   property_set(routes, "arcs", arcs);
   if (local) {
-    ("#design is the ONE route that stays localhost-only, and it is held back HERE rather than at the dispatcher because this registry is what both the dispatcher and the #index directory read — gating it once means the card cannot be listed on a screen where tapping it would do nothing. every other route ships, so the dev screens are reachable on a phone against the deployed site, where there is no localhost to develop from. design is different in kind: it is the private design notes, not a mechanic under test");
+    ("#design is the ONE route that stays localhost-only, and it is held back HERE rather than at the dispatcher because this registry is what both the dispatcher and the #index directory read — gating it once means the card cannot be listed on a screen where tapping it would do nothing. every other route is held to this same network, which is a phone reaching this machine by its network name as well as this machine itself, so a phone still has its way in. design is different in kind: it is the private design notes, not a mechanic under test");
     property_set(routes, "design", design);
   }
   return routes;
