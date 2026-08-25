@@ -413,7 +413,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One steep mountain standing alone, both its sides one plain flat grey rising from the bottom corners of the glass inside the white border and each side broken and uneven, stepping in and out in ridges and shoulders as it rises rather than running as one straight slope, so that the two sides are never a pair of straight lines meeting at a point and the shape is never a pyramid, and one thick bank of grey smoke lying straight across the window from the white border on one side to the white border on the other and rolling upward above it in a few broad round lobes, the lower edge of that smoke crossing both sides of the mountain well down from the top so that the whole upper part of the mountain is inside the smoke and no peak and no summit and no snow shows anywhere above it, and ruby red fire lying in broad patches along both slopes of the mountain below the smoke, spread out low and wide on the two sides and never gathered together at the middle, never rising in one plume, and never coming up out of any opening in the mountain",
+        "One mountain buried in smoke, with no peak and no summit and no top of any kind anywhere in the picture, only the lower part of its two plain grey slopes showing at the very bottom of the window and rising a little way from the bottom corners before they go into the smoke, and the smoke itself thick grey glass in a few broad round lobes piled one above another, filling the whole window from the white border on one side to the white border on the other and standing right up to the head of the arch, and low down where the slopes go into the smoke one broad band of ruby red fire burning along the mountain from one side of it to the other",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },
@@ -423,7 +423,7 @@ export function song_image_couplets() {
       first: "HE's coming soon",
       second: "the day draws near",
       symbol:
-        "One young fig shoot rising from the white border at the bottom right up the window, its stem tender and slender and smooth the whole way with no rough bark and no old thick wood on it anywhere, and near the top of the shoot a few broad emerald green fig leaves standing out from it on short stalks, every one of them only just opened, and at the very tip of the shoot two or three closed buds not opened into leaves yet, no fig and no fruit of any kind anywhere on it, the leaves reaching almost to the white border on both sides",
+        "One young fig shoot rising from the white border at the bottom right up the window, its stem tender and slender and smooth the whole way with no rough bark and no old thick wood on it anywhere, and broad emerald green fig leaves standing out from it on short stalks all the way up its length from near the bottom of the window to near the top, every one of them only just opened and the lowest of them reaching almost to the white border on both sides, and at the very tip of the shoot two or three closed buds not opened into leaves yet, and no fig and no fruit of any kind anywhere on it",
       symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
