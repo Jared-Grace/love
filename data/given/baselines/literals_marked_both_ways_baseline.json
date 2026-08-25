@@ -1,11 +1,14 @@
 {
  "known": [
+  "app_bible",
+  "app_calendar",
   "app_ceb_bible_gloss_generate_upload",
   "app_original_bible_gloss_generate_upload",
+  "g_arc_write_upload",
   "list_add",
+  "list_empty_is",
   "list_map",
-  "property_get",
-  "app_calendar",
-  "app_bible"
+  "null_is",
+  "property_get"
  ]
 }
