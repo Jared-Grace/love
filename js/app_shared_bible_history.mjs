@@ -1,9 +1,11 @@
+import { app_shared_bible_history_entry_mode } from "./app_shared_bible_history_entry_mode.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_mode_switch } from "./app_shared_bible_mode_switch.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_screen_set } from "./app_shared_screen_set.mjs";
 import { app_shared_bible_settings } from "./app_shared_bible_settings.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_bible_history_hash_set } from "./app_shared_bible_history_hash_set.mjs";
-import { app_shared_bible_screen_home_set } from "./app_shared_bible_screen_home_set.mjs";
 import { app_shared_bible_history_fill } from "./app_shared_bible_history_fill.mjs";
 export async function app_shared_bible_history(context) {
   "the readings this app has been left on, as its own screen reached from settings; back returns to the settings hub";
@@ -15,8 +17,10 @@ export async function app_shared_bible_history(context) {
   let root = app_shared_bible_screen_open(context, lambda_back);
   let container = html_div(root);
   async function open_entry(entry) {
+    let mode = app_shared_bible_history_entry_mode(entry);
     app_shared_bible_history_hash_set(entry);
-    await app_shared_bible_screen_home_set(context);
+    let app_fn = property_get(context, "app_fn");
+    await app_shared_bible_mode_switch(context, mode, app_fn);
   }
   await app_shared_bible_history_fill(container, context, open_entry);
 }
