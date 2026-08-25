@@ -1,3 +1,4 @@
+import { app_g_arcs_scroll_resume } from "./app_g_arcs_scroll_resume.mjs";
 import { app_g_arcs_scroll_watch } from "./app_g_arcs_scroll_watch.mjs";
 import { html_parent_get } from "./html_parent_get.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
@@ -72,6 +73,7 @@ export async function app_g_arcs() {
       app_g_arcs_person_block(sheet, person, bench);
     }
     each(people, person_block);
+    app_g_arcs_scroll_resume(panel2, watched2, chapter_code2);
   }
   await render();
 }
