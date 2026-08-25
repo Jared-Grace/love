@@ -48,6 +48,7 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter19 = bible_glyph_chapter_rosetta_lines_2jn01();
   let chapter20 = bible_glyph_chapter_rosetta_lines_3jn01();
   let chapter21 = bible_glyph_chapter_rosetta_lines_jud01();
+  let chapter22 = bible_glyph_chapter_rosetta_lines_jhn10();
   let chapters = [
     chapter,
     chapter2,
