@@ -1,3 +1,4 @@
+import { list_filter_map_property } from "./list_filter_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { functions_reachable_carried } from "./functions_reachable_carried.mjs";
@@ -5,8 +6,6 @@ import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { property_get } from "./property_get.mjs";
 import { function_node_only_is } from "./function_node_only_is.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 export async function apps_node_only_carried() {
@@ -35,8 +34,7 @@ export async function apps_node_only_carried() {
     let only = property_get(m, "only");
     return only;
   }
-  let violations = list_filter(measured, only_lambda);
-  let f_names = list_map_property(violations, "f_name");
+  let f_names = list_filter_map_property(measured, only_lambda, "f_name");
   let sorted = list_sort_text(f_names);
   return sorted;
 }
