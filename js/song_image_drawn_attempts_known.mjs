@@ -5,7 +5,8 @@ export function song_image_drawn_attempts_known() {
   let r = {
  "1": [
   1,
-  2
+  2,
+  3
  ],
  "2": [
   1,
