@@ -16,7 +16,7 @@ export async function app_en_learn_bible_gloss_urdu_write_next(chapter_code) {
   let missing = property_get(coverage, "missing");
   if (list_empty_is(missing)) {
     let finished =
-      await app_en_learn_bible_gloss_urdu_write_finished(chapter_code2);
+      await app_en_learn_bible_gloss_urdu_write_finished(chapter_code);
     return finished;
   }
   let verse_key = list_first(missing);
