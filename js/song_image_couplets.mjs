@@ -204,7 +204,7 @@ export function song_image_couplets() {
       first: "cursed on a cross",
       second: "HE drank the cup",
       symbol:
-        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large with the bowl reaching almost to both sides of the window and the foot standing near the bottom of it",
+        "One plain cup of white glass standing alone and upright, a deep round bowl on a short stem with a round foot under it, filled to the brim with deep crimson, drawn very large with the bowl reaching almost to the white border on both sides and the foot standing near the bottom of it",
       symbol_ref: "Matthew 26:39, John 18:11",
       same_as: 0,
     },
@@ -264,7 +264,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One lamb all of one white glass, standing side-on in profile on all four legs with no horns at all, and one slender staff of plain grey iron standing upright behind its shoulder with a small plain cross at the top of the staff, the lamb drawn very large so that it reaches almost to both sides of the window",
+        "One lamb all of one white glass, standing side-on in profile on all four legs with no horns at all, and one slender staff of plain grey iron standing upright behind its shoulder with a small plain cross at the top of the staff, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
@@ -319,7 +319,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "One single star of white glass with eight straight points, drawn very large so that its points reach almost to both sides of the window and almost to the top and the bottom of it",
+        "One single star of white glass with eight straight points, drawn very large so that its points reach almost to the white border on both sides and almost to the top and the bottom of it",
       symbol_ref: "Revelation 22:16, 2 Peter 1:19",
       same_as: 0,
     },
@@ -363,7 +363,7 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "One harp standing upright and alone, its frame plain brown wood in one curved sweep from the foot up and over to the top with a straight upright pillar closing it at the front, and a row of straight white strings running between the two, drawn very large so that the frame reaches almost to both sides of the window and almost to the top and the bottom of it",
+        "One harp standing upright and alone, its frame plain brown wood in one curved sweep from the foot up and over to the top with a straight upright pillar closing it at the front, and a row of straight white strings running between the two, drawn very large so that the frame reaches almost to the white border on both sides and almost to the top and the bottom of it",
       symbol_ref: "Revelation 5:8, Revelation 15:2",
       same_as: 26,
     },
