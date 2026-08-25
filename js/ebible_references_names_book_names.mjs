@@ -10,33 +10,15 @@ import { ebible_references_names_written } from "./ebible_references_names_writt
 export function ebible_references_names_book_names(
   books_names,
   canon_names,
-  longest_named_or_null,
   bible_name_of_canon_or_null,
-  chapter_verses_or_null,
   lines,
 ) {
   "Every bible reference these lines open with, given back as the book it names and the chapter and verses that follow it.";
-  "THIS BIBLE'S OWN BOOK NAMES ARE TRIED BEFORE THE CANON'S, so a translation that names a book its own way is read that way rather than through a name borrowed from somewhere else. Within each of those, the line with Psalm and Song of Solomon put right is tried before the line as a person spelt it.";
-  arguments_assert(arguments, 6);
-  function aliased(line) {
-    let replacements = {
-      Psalms: ["Psalm"],
-      Song: ["Song of Solomon"],
-    };
-    let renamed = line;
-    function lambda2(froms, to) {
-      function lambda3(from) {
-        let prefix = text_combine(from, " ");
-        let replacement = text_combine(to, " ");
-        renamed = text_replace_if_starts_with(renamed, prefix, replacement);
-      }
-      each(froms, lambda3);
-    }
-    each_object(replacements, lambda2);
-    return renamed;
-  }
+  "THIS BIBLE'S OWN BOOK NAMES ARE TRIED BEFORE THE CANON'S, so a translation that names a book its own way is read that way rather than through a name borrowed from somewhere else. Within each of those, the line with Psalm and Song of Solomon put right is tried before the line as a person spelt it - trying the written line first would break the other direction, because Song is a prefix of Song of Solomon and would match before the rewrite could turn one into the other.";
+  "GETTING FROM A CANON NAME BACK TO THIS BIBLE'S OWN IS THE ONE THING HANDED IN, because it is the only step that needs this bible's list of books. Everything else here holds for any bible, which is why nothing else is a parameter.";
+  arguments_assert(arguments, 4);
   function line_named_or_null(written) {
-    let renamed = aliased(written);
+    let renamed = ebible_reference_line_aliased(written);
     let attempts = [
       {
         line: renamed,
