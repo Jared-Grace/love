@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_source } from "./bible_folder_source.mjs";
@@ -15,11 +16,11 @@ export async function bible_versions_english_choices_sources_gate_run() {
   ("IT ASKS THE OFFERED LIST WHICH PLACES IT NAMES, rather than being told which places to expect. Somewhere to fetch from is a thing this repo gains, not a fixed pair, so a typed list of two would go stale by staying green - a third place could be added, read as nothing from its first day, and never be missed.");
   ("A passage every English translation carries is the one it compares. The point is to hear from each place, so a passage that some of them genuinely do not hold would fail for the honest reason and teach nobody anything.");
   let usable = await bible_versions_english_choices_usable();
-  let usable_folders = list_map_property(usable, "bible_folder");
+  let usable_folders = list_map_property(usable, bible_folder_key());
   let offered = list_map_unique(usable_folders, bible_folder_source);
   let reference = "John 3:16";
   let wordings = await bible_versions_english_choices_reference(reference);
-  let read_folders = list_map_property(wordings, "bible_folder");
+  let read_folders = list_map_property(wordings, bible_folder_key());
   let heard = list_map_unique(read_folders, bible_folder_source);
   let silent = list_without_multiple(offered, heard);
   list_empty_is_assert_json(silent, {
