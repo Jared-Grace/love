@@ -11,7 +11,13 @@ import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
 import { g_arc_answer_field_shape } from "./g_arc_answer_field_shape.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-export function app_g_arcs_turn_block(parent, card, nickname, bench, voice_color) {
+export function app_g_arcs_turn_block(
+  parent,
+  card,
+  nickname,
+  bench,
+  voice_color,
+) {
   "$plain nickname";
   "$plain voice_color";
   "One turn of an arc drawn as a box of its own inside the conversation that holds it: what the person said, the passage that answered them printed underneath, the reaction, the moment they believe, every note already standing against the turn, and the row that files another.";
@@ -47,7 +53,13 @@ export function app_g_arcs_turn_block(parent, card, nickname, bench, voice_color
   turn_field("opener", opener);
   turn_field("before", before);
   turn_field("reference", reference);
-  app_g_arcs_field_shaped(block, "scripture", scripture, "scripture", voice_color);
+  app_g_arcs_field_shaped(
+    block,
+    "scripture",
+    scripture,
+    "scripture",
+    voice_color,
+  );
   let reacted = text_empty_not_is(after);
   if (reacted) {
     turn_field("after", after);
