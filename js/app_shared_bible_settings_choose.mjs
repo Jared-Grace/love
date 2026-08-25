@@ -1,3 +1,4 @@
+import { app_shared_bible_history_panel } from "./app_shared_bible_history_panel.mjs";
 import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_shared_bible_language_codes_chosen } from "./app_shared_bible_language_codes_chosen.mjs";
 import { app_shared_bible_passage_kept_reference } from "./app_shared_bible_passage_kept_reference.mjs";
@@ -47,8 +48,12 @@ export async function app_shared_bible_settings_choose(bar, content, context) {
   function on_about() {
     app_shared_bible_about_panel(content, back);
   }
+  async function on_history() {
+    await app_shared_bible_history_panel(content, back, context);
+  }
   app_shared_bible_settings_render(
     content,
+    on_history,
     open_languages,
     on_offline,
     on_about,
