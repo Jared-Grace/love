@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
 import { list_size } from "./list_size.mjs";
@@ -37,8 +38,7 @@ export function js_statements_span_repack_only_is(span, tail) {
     let bound_is = js_node_type_is(statement, "VariableDeclaration");
     if (bound_is) {
       let declarations = property_get(statement, "declarations");
-      let left = list_size(declarations);
-      let alone_is = equal(left, 1);
+      let alone_is = list_size_equal(declarations, 1);
       if (alone_is) {
         let declarator = list_first(declarations);
         let id = property_get(declarator, "id");
