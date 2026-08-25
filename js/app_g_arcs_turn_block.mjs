@@ -47,7 +47,7 @@ export function app_g_arcs_turn_block(parent, card, nickname, bench, voice_color
   turn_field("opener", opener);
   turn_field("before", before);
   turn_field("reference", reference);
-  app_g_arcs_field_shaped(block, "scripture", scripture, "scripture");
+  app_g_arcs_field_shaped(block, "scripture", scripture, "scripture", voice_color);
   let reacted = text_empty_not_is(after);
   if (reacted) {
     turn_field("after", after);
