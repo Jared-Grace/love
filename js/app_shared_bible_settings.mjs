@@ -1,3 +1,4 @@
+import { app_shared_bible_history } from "./app_shared_bible_history.mjs";
 import { app_shared_bible_screen_open } from "./app_shared_bible_screen_open.mjs";
 import { app_shared_screen_set_home } from "./app_shared_screen_set_home.mjs";
 import { app_shared_screen_later } from "./app_shared_screen_later.mjs";
@@ -22,10 +23,12 @@ export function app_shared_bible_settings(context) {
       app_shared_bible_languages,
     );
   }
+  let open_history = app_shared_screen_later(context, app_shared_bible_history);
   let open_offline = app_shared_screen_later(context, app_shared_bible_offline);
   let open_about = app_shared_screen_later(context, app_shared_bible_about);
   app_shared_bible_settings_render(
     root,
+    open_history,
     open_languages,
     open_offline,
     open_about,
