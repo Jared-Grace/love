@@ -62,12 +62,20 @@ export async function playwright_happy_step(page) {
     hint: "nothing on this screen is marked as the way on and nothing marks it as the end, so the walk is stuck - either the screen threw and is showing its apology, or it forgot to mark its right answer, or the answer is there and cannot be pressed",
   });
   let way = list_first(ways);
-  let text = await way.textContent();
-  await way.click();
+  async function press() {
+    let words = await way.textContent();
+    await way.click();
+    return words;
+  }
+  ("a control that has gone from the page between being found and being pressed is an ordinary miss rather than a failure, so the press is caught and the step simply says it did not land");
+  ("A screen is a moving thing: a piece the learner no longer needs is taken away, an answer settles, a line closes up. Any of those can carry off the very control this step chose, and none of them is anything wrong - the next step asks the screen again and finds whatever is standing then. Thrown instead, it would fail a walk of a course that works, and the fault it named would be a screen doing exactly what it is meant to.");
+  let text = await catch_null_async(press);
+  let pressed = null_not_is(text);
   let step = {
     end: false,
     url,
     text,
+    pressed,
   };
   return step;
 }
