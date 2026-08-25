@@ -373,7 +373,7 @@ export function song_image_couplets() {
       first: "HE will return",
       second: "to judge the earth",
       symbol:
-        "One long straight herald's trumpet of white glass, one plain smooth tube bare and unbroken from end to end, its small mouthpiece at the bottom and its wide flared bell at the top, standing upright inside the window and drawn very large so that it reaches almost from the bottom of the window to the top",
+        "One long straight herald's trumpet of white glass, one plain smooth tube bare and unbroken from end to end, its small mouthpiece at the bottom and its wide flared bell at the top, standing upright inside the window and drawn very large so that it reaches almost from the white border at the bottom to the white border at the top",
       symbol_ref: "Matthew 24:31, 1 Corinthians 15:52",
       same_as: 0,
     },
@@ -383,7 +383,7 @@ export function song_image_couplets() {
       first: "we will receive",
       second: "what we have earned",
       symbol:
-        "One pair of balance scales of plain grey iron standing upright, a tall straight post with one level crossbeam at its top and one shallow round pan hanging by straight cords from each end of the beam, drawn very large so that it reaches almost to all four sides of the window",
+        "One pair of balance scales of plain grey iron standing upright, a tall straight post with one level crossbeam at its top and one shallow round pan hanging by straight cords from each end of the beam, drawn very large so that it reaches almost to the white border on every side",
       symbol_ref: "Daniel 5:27, 2 Corinthians 5:10",
       same_as: 0,
     },
