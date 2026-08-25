@@ -92,6 +92,10 @@ export function bible_glyph_artwork_names() {
       asset: "Person",
     },
     {
+      glyph: "door",
+      asset: "Door",
+    },
+    {
       glyph: "man_beard",
       asset: "Person beard",
     },
