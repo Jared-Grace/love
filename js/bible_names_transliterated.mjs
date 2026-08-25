@@ -5,6 +5,7 @@ import { each } from "./each.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
+import { list_add } from "./list_add.mjs";
 import { list_first } from "./list_first.mjs";
 import { null_is } from "./null_is.mjs";
 import { object_values } from "./object_values.mjs";
@@ -40,7 +41,7 @@ export async function bible_names_transliterated(bible_folder) {
       let lower = name_of(piece);
       let known = set_includes(named, lower);
       if (known) {
-        pieces.push(lower);
+        list_add(pieces, lower);
       }
     });
     let alone = list_size_1(pieces);
