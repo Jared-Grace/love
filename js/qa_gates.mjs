@@ -803,6 +803,7 @@ export function qa_gates() {
     js_guard_statements_cases_gate_run,
     js_edit_prose_only_is_cases_gate_run,
     apps_node_only_carried_gate_run,
+    public_chunks_orphaned_gate_run,
     diff_line_kind_cases_gate_run,
     js_source_bare_token_kind_cases_gate_run,
   ];
