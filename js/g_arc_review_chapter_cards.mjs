@@ -1,3 +1,9 @@
+import { g_npc_nicknames } from "./g_npc_nicknames.mjs";
+import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
+import { property_get } from "./property_get.mjs";
+import { number_from_text } from "./number_from_text.mjs";
+import { list_get } from "./list_get.mjs";
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
