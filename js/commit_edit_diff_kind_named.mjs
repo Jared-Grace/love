@@ -13,6 +13,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   "Lines that are prose or imports are set aside first and the words are chosen from what is left, which is why a commit touching thirty import lines and one line of code is called one line of code. Counting the lines rather than the kinds would have called it a large change and hidden the only part anybody needs to look at.";
   "Two lines of code, one taken out and one put in, is looked at once more: where the two differ only in which function is being called, that is worth saying, because it is the shape almost every routing and renaming commit takes and it is always safe to skip.";
   "A VALUE CHOSEN IS SET ASIDE WITH THE OTHER TWO. A number raised in a record or a colour picked is hand-made and always will be, so it is no more a line worth opening than a reworded sentence is, and counting it as program called every such commit several lines of code. It gets a name of its own rather than joining the prose, because a person scanning the log for what changed wants to know which of the two it was.";
+  "A NAME STANDING ALONE GETS A NAME OF ITS OWN AND SAYS SO. An entry added to a register, a part written into a record and an argument of a call broken over several lines are all written as one name and a comma, so a commit made only of those lines cannot be placed by the lines; naming the doubt is honest, and folding it into the bucket beside it would have had that bucket claim the change was imports and values when it was neither.";
   arguments_assert(arguments, 2);
   let only_import = kinds_all_is(kinds, "import");
   if (only_import) {
@@ -29,6 +30,11 @@ export function commit_edit_diff_kind_named(kinds, changed) {
     let r9 = "values chosen only";
     return r9;
   }
+  let only_alone = kinds_all_is(kinds, "name alone");
+  if (only_alone) {
+    let r10 = "names standing alone, values or program";
+    return r10;
+  }
   let code = [];
   for (let line of changed) {
     let kind = diff_line_kind(line);
@@ -40,7 +46,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   let size = list_size(code);
   let none = equal(size, 0);
   if (none) {
-    let r3 = "comment, values and imports only";
+    let r3 = "comment, values, names alone and imports only";
     return r3;
   }
   let pair = equal(size, 2);
