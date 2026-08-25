@@ -1,3 +1,5 @@
+import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
@@ -14,10 +16,16 @@ export function app_g_bless_dev_entry() {
   ("the two. The bar is laid out and every pixel it takes is a pixel of street the player");
   ("cannot see; a floated pill overlaps a corner of ground and moves nothing. The map is");
   ("what this game is looking at, so the map is what a dev button must not cost.");
-  ("It ships rather than being kept to localhost, for the same reason the routes do: the");
-  ("game is played and tested on a phone against the deployed site, where there is no");
-  ("localhost. A player who taps it gets a list of dev screens and a way back, which is a");
-  ("smaller wrong than the tester having no way in on the only device that matters.");
+  ("It goes up only where the screens behind it run, for the same reason the routes do, and");
+  ("that is this same network rather than this same machine. It used to ship, on the");
+  ("reasoning that the game is tested on a phone and a phone has no localhost; a phone");
+  ("reaching this machine by the name its own network gives it answers yes to the wider");
+  ("question, so the tester keeps the only way in that mattered and a player who came to");
+  ("pray is not handed a corner of somebody else's toolbox.");
+  let shown = app_shared_dev_shown_is();
+  if (not(shown)) {
+    return;
+  }
   let index = app_shared_g_dev_index_hash_name();
   let href = "#index";
   function open() {

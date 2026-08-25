@@ -1,4 +1,4 @@
-import { app_g_dev_shown_is } from "./app_g_dev_shown_is.mjs";
+import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
 import { not } from "./not.mjs";
 import { emoji_gear } from "./emoji_gear.mjs";
 import { app_index_label_generic } from "./app_index_label_generic.mjs";
@@ -10,7 +10,7 @@ export function app_index_dev_g_card(root) {
   "the card on the index page that opens the game's dev tools - the directory listing every test screen the game has";
   "it is here because reaching the dev screens any other way means starting a game and opening the player menu, which is a game begun to look at a screen that has nothing to do with playing one";
   "shown only where the dev screens themselves are, and by the same answer rather than a second one kept beside it, because a card that opened a directory the screens behind it refuse would read as a fault rather than as a decision";
-  let shown = app_g_dev_shown_is();
+  let shown = app_shared_dev_shown_is();
   if (not(shown)) {
     return;
   }

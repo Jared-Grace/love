@@ -2,6 +2,7 @@ import { firebase_storage_download_json_jg } from "./firebase_storage_download_j
 import { ebible_versions_english_choices_upload_path } from "./ebible_versions_english_choices_upload_path.mjs";
 import { global_function_initialize_lambda_async } from "./global_function_initialize_lambda_async.mjs";
 export async function ebible_versions_english_choices_browser() {
+  "The English versions a screen offers, downloaded the first time something asks and kept for the rest of the page's life. Kept because every asker wants the whole list and the list cannot change while the page is open.";
   async function lambda() {
     let destination = ebible_versions_english_choices_upload_path();
     let choices = await firebase_storage_download_json_jg(destination);

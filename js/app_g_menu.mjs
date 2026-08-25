@@ -1,4 +1,4 @@
-import { app_g_dev_shown_is } from "./app_g_dev_shown_is.mjs";
+import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
 import { app_g_page_reload } from "./app_g_page_reload.mjs";
 import { app_g_day_discern_wanted_is } from "./app_g_day_discern_wanted_is.mjs";
 import { app_g_day_discern } from "./app_g_day_discern.mjs";
@@ -72,7 +72,7 @@ export function app_g_menu(overlay, player) {
   app_g_new_game(container, player);
   app_g_button_uncolored(container, "🔄 Refresh", app_g_page_reload);
   ("dev tools only where they are offered at all, so a player of the deployed game is not shown a button into somebody else's test screens - and never a button that opens a directory the screens behind it would refuse");
-  let dev_shown = app_g_dev_shown_is();
+  let dev_shown = app_shared_dev_shown_is();
   if (dev_shown) {
     app_g_button_uncolored(container, "🛠 Dev Tools", app_g_dev_tools_open);
   }
