@@ -1,7 +1,7 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
-import { list_size } from "./list_size.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_statement_prose_is } from "./js_statement_prose_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -11,7 +11,6 @@ import { property_or_null } from "./property_or_null.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { add } from "./add.mjs";
-import { less_than } from "./less_than.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function js_statements_span_repack_only_is(span, tail) {
@@ -22,8 +21,7 @@ export function js_statements_span_repack_only_is(span, tail) {
   "NOTHING IS WRITTEN AND NOTHING IS MOVED.";
   arguments_assert(arguments, 2);
   let outputs = js_statements_span_outputs(span, tail);
-  let handed = list_size(outputs);
-  let few_is = less_than(handed, 2);
+  let few_is = list_size_less_than_value(outputs, 2);
   if (few_is) {
     return false;
   }
