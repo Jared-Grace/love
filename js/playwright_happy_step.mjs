@@ -62,9 +62,13 @@ export async function playwright_happy_step(page) {
     hint: "nothing on this screen is marked as the way on and nothing marks it as the end, so the walk is stuck - either the screen threw and is showing its apology, or it forgot to mark its right answer, or the answer is there and cannot be pressed",
   });
   let way = list_first(ways);
+  ("the press is given seconds rather than the half-minute a press is normally allowed, because this one has just been FOUND: it was on the page a moment ago, so it is either pressable now or it has gone. Waiting out the full allowance buys nothing and costs it on every screen that moves while it is being read, which over a whole course is most of the time the walk takes.");
+  let press_ms = 5000;
   async function press() {
     let words = await way.textContent();
-    await way.click();
+    await way.click({
+      timeout: press_ms,
+    });
     return words;
   }
   ("a control that has gone from the page between being found and being pressed is an ordinary miss rather than a failure, so the press is caught and the step simply says it did not land");
