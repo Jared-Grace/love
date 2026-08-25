@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_oversize_span_skips } from "./functions_oversize_span_skips.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -7,7 +8,6 @@ import { property_set } from "./property_set.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_size } from "./list_size.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { not } from "./not.mjs";
 export async function functions_oversize_refusal_decisions() {
@@ -28,8 +28,7 @@ export async function functions_oversize_refusal_decisions() {
       if (taken) {
         continue;
       }
-      let about = property_get(skip, "about");
-      let named = equal(about, "name");
+      let named = property_equals(skip, "about", "name");
       if (not(named)) {
         continue;
       }
