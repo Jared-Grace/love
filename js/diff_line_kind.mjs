@@ -4,7 +4,7 @@ import { text_slice_from } from "./text_slice_from.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 export function diff_line_kind(line) {
-  "What one changed line of a difference is made of: an import, a written-out comment, a value chosen, or actual code";
+  "What one changed line of a difference is made of: an import, a written-out comment, a value chosen, a name standing alone that could be either, or actual code";
   "The four are worth telling apart because only one of them is a gap. Imports are already written by the canonicalizing pass, and a comment in this repo is a bare piece of text standing on its own line, which no transform was ever going to compose. What is left is the code, and that is where a missing command would have helped";
   let without_sign = text_slice_from(line, 1);
   let bare = text_trim(without_sign);
@@ -32,6 +32,12 @@ export function diff_line_kind(line) {
     let r3 = "data";
     return r3;
   }
-  let r4 = "code";
-  return r4;
+  ("ONE SHAPE IS LEFT UNDECIDED RATHER THAN GUESSED. A single name and a comma is written the same way whether it is an entry of a list, a part of a record under its own name, or an argument of a call broken over several lines - values, values, and program. The line carries no mark that separates them, so it is answered as itself and the reader is handed the doubt as a number instead of a sentence.");
+  let alone = js_line_name_alone_is(bare);
+  if (alone) {
+    let r4 = "name alone";
+    return r4;
+  }
+  let r5 = "code";
+  return r5;
 }
