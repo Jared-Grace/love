@@ -16,8 +16,8 @@ export async function commit_edit_kind_counts(commit, kind) {
   "THE TWO DIRECTIONS ADDED TOGETHER COME BACK AS WELL AS SEPARATELY, because every reading built on this asks first whether this sort of line was touched at all and only then which way it went. The sum is worked out here anyway to take it away from the whole, so handing it over costs nothing and saves each reading writing the addition again.";
   "It is one function rather than the same opening at the top of each reading, so two readings of the same commit cannot come to disagree about what it did while looking as though they agree.";
   arguments_assert(arguments, 2);
-  let changed = await commit_edit_changed_lines(commit);
-  let counts = diff_lines_kind_counts(changed);
+  let placed = await commit_edit_lines_placed(commit);
+  let counts = diff_lines_kind_counts(placed);
   let put_in_name = text_combine(kind, "_put_in");
   let taken_out_name = text_combine(kind, "_taken_out");
   let put_in = property_get(counts, put_in_name);
