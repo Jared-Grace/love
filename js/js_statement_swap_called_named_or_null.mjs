@@ -1,4 +1,15 @@
-export function js_statement_swap_called_named_or_null(node_before, node_after) {
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_statement_prose_is } from "./js_statement_prose_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_call_callee_name_dotted_try } from "./js_call_callee_name_dotted_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+export function js_statement_swap_called_named_or_null(
+  node_before,
+  node_after,
+) {
   "$plain node_before";
   "$plain node_after";
   "The name for one standing expression swapped for another, said as the wording having moved where both lines are paragraphs and as the called name where both lines are calls - or nothing, where what stands there is neither.";
@@ -9,8 +20,8 @@ export function js_statement_swap_called_named_or_null(node_before, node_after) 
   let prose_after = js_statement_prose_is(node_after);
   let both_prose = prose && prose_after;
   if (both_prose) {
-    let r6 = "the prose written differently";
-    return r6;
+    let r = "the prose written differently";
+    return r;
   }
   let expression = property_get(node_before, "expression");
   let expression_after = property_get(node_after, "expression");
