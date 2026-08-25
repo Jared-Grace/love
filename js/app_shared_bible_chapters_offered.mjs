@@ -1,3 +1,4 @@
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { app_shared_bible_chapters_offered_key } from "./app_shared_bible_chapters_offered_key.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -13,5 +14,11 @@ export async function app_shared_bible_chapters_offered(context) {
     return null;
   }
   let chapter_codes = await ask();
+  ("AN APP THAT NAMED A RESTRICTION AND THEN NAMED NO CHAPTER IS BROKEN, NOT RESTRICTED. Saying nothing and naming nothing are one character apart here and mean opposite things - one hands the reader the whole bible, the other takes every book off the list and leaves a bible with no books in it, which reads as a bible nobody uploaded rather than as a fault. So the second one is raised rather than passed on.");
+  ("Nothing legitimate reaches this empty. The layer that goes and asks already refuses to turn a dropped connection into an empty answer, so an empty list here means what was asked about is not there at all - a name misspelled, or an app shipped before anything was written for it. Both are ours to fix and neither is a reader's to look at.");
+  let json = {
+    key,
+  };
+  list_empty_not_is_assert_json(chapter_codes, json);
   return chapter_codes;
 }

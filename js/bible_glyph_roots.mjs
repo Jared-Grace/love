@@ -70,6 +70,9 @@ export function bible_glyph_roots() {
   "THE WORDINGS AUDIT RANKS THE VERB HALF OF EVERY NOUN AND VERB ROOT AS WEAK, AND IT IS WRONG TO EVERY TIME (2026-08-25). A root here is named for its noun and holds the cognate verb under the same number-by-number seating - phos holds 5457 and 5461, martus holds 3144 and 3140 and 3141, poimen holds 4166 and 4165, hamartia holds 266 and 264 and 268 - so the audit walks the verb as a seat in its own right and reports how thin its commonest English wording is. A noun has one wording and a verb has a dozen, because English conjugates where it does not decline: witness against testify, testified, bear witness, bore witness. The seat is not thin. The word is inflected, and the measure cannot tell those apart.";
   "SO THE AUDIT ANSWERS ABOUT WORDINGS AND IS READ AS ANSWERING ABOUT SEATS, and the fix is in the reading rather than in the measure. Five of the twenty weakest New Testament rows are verb halves of roots whose noun sits at the top of the same table, and an author working down that list from the bottom will spend the whole list re-arguing seats that were right when they were made. Check whether the row's number is the verb of the row above it BEFORE reaching for a picture; if it is, the row is measurement and not a finding.";
   "AUTOS IS THE SAME DEFECT WEARING A DIFFERENT COAT. The pointing-back mark on 846 reports its commonest content wording as jesus, a hundred and ninety nine times, which reads as a pronoun mis-seated on a name. It is the interlinear resolving pronouns to whoever they point at, so what has been counted is an editor's decision about a hundred and ninety nine particular verses and not a fact about the Greek word. Every pronoun in this table will do this, and none of them is evidence of anything.";
+  "THE BORROWING RAN THE OTHER WAY FOR THE FIRST TIME ON 2026-08-25, AND IT COST NOTHING. Psuche was blank on this side while nephesh had been seated on the person since the Hebrew table was written, and the two words mean the same thing to the same degree the shepherd and the sheep do: psuche is life thirty times, soul twenty three and souls thirteen, and nephesh is glossed soul, life, self. So the Greek reader of the tenth of John, where the good shepherd lays down his psuche, now sees the mark a reader of the twenty third psalm already knows. The shepherd and the sheep came Hebrew to Greek; this went Greek to Hebrew, and the table is a shared vocabulary in both directions rather than a Greek one the Hebrew borrows from.";
+  "AND IT WAS BLANK IN THE WAY NO SURVEY MEASURES, which is the third time that has happened here. The covenant name was half seated for three hundred and six verses because a root holds two numbers and only one had a picture; this was a whole root with no row at all, and a coverage share counts its occurrences as undrawable vocabulary - true of the Greek number and false of the word, since the picture was sitting in the same vocabulary under a different number. What finds a blank of that kind is a chapter, and never a percentage: the tenth of John made somebody read the line.";
+  "THE DOOR IS THE PICTURE THAT CHAPTER BOUGHT, and it is the second concrete noun ever bought here. Thura is thirty seven occurrences with one sense - door fourteen, doors six, gate five, entrance four - which clears the twelve the staff of the psalm was refused at three times over, and the artwork set already draws it, so it needed finding rather than making. It is bought for the seventh verse, where Jesus says he IS the door: a sentence whose whole force is one plain object, and which would have read as a blank in the middle of a line made of pictures.";
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   let roots = [
     {
@@ -737,6 +740,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "psuche",
+      gloss: "soul, life",
+      words: [
+        {
+          strong: "5590",
+          glyph: "person_other",
+        },
+      ],
+    },
+    {
       root: "nekros",
       gloss: "dead",
       words: [
@@ -1169,6 +1182,16 @@ export function bible_glyph_roots() {
         {
           strong: "4165",
           glyph: "person+sheep",
+        },
+      ],
+    },
+    {
+      root: "thura",
+      gloss: "door, gate",
+      words: [
+        {
+          strong: "2374",
+          glyph: "door",
         },
       ],
     },

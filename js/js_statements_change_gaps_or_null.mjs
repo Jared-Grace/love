@@ -18,22 +18,9 @@ export function js_statements_change_gaps_or_null(texts_before, texts_after) {
   "A LINE STANDING TWICE MAKES THE LINING UP A GUESS. Two identical statements in one run give no way to say which of them the surviving one on the other side answers to, and every place worked out after that rests on the guess. There is no honest naming of a run like that, so nothing comes back and the caller keeps the name it already had.";
   "A REORDERING IS HANDED BACK AS NOTHING TOO. Where the surviving lines come back in another order, the edit shuffled the run as well as changing it, and there are no places to walk at all: what sits between two survivors on one side is not what sits between the same two on the other.";
   arguments_assert(arguments, 2);
-  function kept_before_lambda(text) {
-    let held = list_includes(texts_after, text);
-    return held;
-  }
-  function kept_after_lambda(text_after) {
-    let held_after = list_includes(texts_before, text_after);
-    return held_after;
-  }
-  let kept_before = list_filter(texts_before, kept_before_lambda);
-  let kept_after = list_filter(texts_after, kept_after_lambda);
-  let ordered = lists_equal_pair(kept_before, kept_after);
-  if (not(ordered)) {
-    return null;
-  }
-  let once = list_unique_is(kept_before);
-  if (not(once)) {
+  let kept_before = js_statements_kept_or_null(texts_before, texts_after);
+  let unlined = null_is(kept_before);
+  if (unlined) {
     return null;
   }
   let gaps = [];
