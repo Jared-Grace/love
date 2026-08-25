@@ -17,10 +17,7 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   "ONE STATEMENT REPLACED IS AN ARITHMETIC RESULT AND NOT A SPECIFICATION. It is what is left after the readings that go inside a statement have all said nothing, and measured over the corpus it was the largest bucket there was. A hundred edits under one name is a hundred edits nobody can search for, because the name says only that the run stayed the length it was.";
   "WHAT A READER WANTS TO KNOW IS WHICH LINE AND WHAT KIND OF LINE. A binding whose value was written differently, a call whose arguments moved, a different thing coming back: those are three separate edits, and each of them is the shape of a transform somebody could write. Told apart they are specifications; told together they are a count.";
   "A SWAP BETWEEN TWO KINDS IS NOT NAMED HERE. A binding that became a return, or a call that became an if, is a change of what the line is for rather than a change inside it, and there is no shorter true thing to say about it than that one statement went out and another came in.";
-  "AN IF IS ONLY THE CONDITION ONCE EVERY BRANCH HAS COME BACK IDENTICAL. Both branches moving is two edits and an else appearing is a change of shape, and neither of those touched the condition at all - so the branches are compared before the condition is named, and the two other shapes are handed back unnamed. The reading beside this one gives that same case up on purpose, saying every run matching is the head having moved and belongs to the caller; this is the caller it meant.";
-  "A PARAGRAPH EDITED IS NOT A CALL EDITED, AND IT IS WHAT MOST OF THE RESIDUE TURNED OUT TO BE. Three of the four edits still landing under the bare name after the kinds above were told apart were somebody rewording an explanation and touching nothing else. This repo keeps its reasoning in its prose, so that is a real and frequent edit, and filing it under a name that says only that some statement changed hides the one kind of change a later reader most wants to find. All three shapes a paragraph gets written in answer to one reading, so a paragraph rewritten from one shape into another is still named as the wording having moved.";
-  "A CALL REACHED THROUGH A DOT IS STILL A CALL. The fourth of the four was window.addEventListener becoming a function of this repo, which is the shape of the wrapping this repo does constantly - and the plain callee reading answers nothing for it, because it exists to tell callers whether a name is one of ours. So the dotted reading is asked here instead.";
-  "THE NAME OF A BINDING IS ONLY WORTH SAYING WHILE IT STAYS THE SAME. Where the value was written differently the name is the address a reader goes to; where the name changed too, saying either of them points at half the edit, so the kind is said on its own.";
+  "WHAT EACH KIND OF LINE IS WORTH SAYING IS ANSWERED NEXT DOOR, ONE READING PER KIND. This one settles that the two lines are the same kind of line at all and then hands the pair to whichever reading that kind belongs to; a return is the one kind with nothing to weigh, so it is said here.";
   arguments_assert(arguments, 2);
   let kind = property_get(node_before, "type");
   let kind_after = property_get(node_after, "type");
@@ -30,44 +27,15 @@ export function js_statement_swap_named_or_null(node_before, node_after) {
   }
   let bound = js_node_type_is(node_before, "VariableDeclaration");
   if (bound) {
-    let name = js_declaration_single_variable_name_try(node_before);
-    let name_after = js_declaration_single_variable_name_try(node_after);
-    let same_name = equal(name, name_after);
-    let nameless = null_is(name);
-    if (nameless) {
-      let r = "one value written differently";
-      return r;
-    }
-    if (not(same_name)) {
-      let r2 = "one value written differently";
-      return r2;
-    }
-    let said = text_combine_multiple([name, " written differently"]);
+    let said = js_statement_swap_bound_named(node_before, node_after);
     return said;
   }
   let called = js_node_type_is(node_before, "ExpressionStatement");
   if (called) {
-    let prose = js_statement_prose_is(node_before);
-    let prose_after = js_statement_prose_is(node_after);
-    let both_prose = prose && prose_after;
-    if (both_prose) {
-      let r6 = "the prose written differently";
-      return r6;
-    }
-    let expression = property_get(node_before, "expression");
-    let expression_after = property_get(node_after, "expression");
-    let callee = js_call_callee_name_dotted_try(expression);
-    let callee_after = js_call_callee_name_dotted_try(expression_after);
-    let unknown = null_is(callee);
-    if (unknown) {
-      return null;
-    }
-    let same_callee = equal(callee, callee_after);
-    if (not(same_callee)) {
-      let r3 = "one call swapped for another";
-      return r3;
-    }
-    let said_call = text_combine_multiple([callee, " called differently"]);
+    let said_call = js_statement_swap_called_named_or_null(
+      node_before,
+      node_after,
+    );
     return said_call;
   }
   let back = js_node_type_is(node_before, "ReturnStatement");
