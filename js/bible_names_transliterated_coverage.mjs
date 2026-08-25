@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_names_transliterated } from "./bible_names_transliterated.mjs";
 import { bible_words_names_apart } from "./bible_words_names_apart.mjs";
@@ -41,9 +42,11 @@ export async function bible_names_transliterated_coverage(bible_folder) {
   }
   let reached = list_filter(missing, transliterated_is);
   let unreached = list_filter(missing, untransliterated_is);
+  let left = list_size(names);
+  let right = list_size(missing);
   let coverage = {
     names: list_size(names),
-    in_dictionary: list_size(names) - list_size(missing),
+    in_dictionary: subtract(left, right),
     transliterated_only: list_size(reached),
     unreached: list_size(unreached),
     unreached_names: unreached,

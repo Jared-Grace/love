@@ -1,8 +1,8 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_interlinear_chapters_words_cache } from "./bible_interlinear_chapters_words_cache.mjs";
 import { bible_words_names_apart } from "./bible_words_names_apart.mjs";
 import { each } from "./each.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_size_1 } from "./list_size_1.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { list_add } from "./list_add.mjs";
@@ -37,21 +37,22 @@ export async function bible_names_transliterated(bible_folder) {
       return lower;
     }
     let pieces = [];
-    each(spelled, function collect(piece) {
+    function collect(piece) {
       let lower = name_of(piece);
       let known = set_includes(named, lower);
       if (known) {
         list_add(pieces, lower);
       }
-    });
+    }
+    each(spelled, collect);
     let alone = list_size_1(pieces);
-    if (!alone) {
+    if (not(alone)) {
       return;
     }
     let name = list_first(pieces);
     let already = property_get_or_null(transliterated, name);
     let fresh = null_is(already);
-    if (!fresh) {
+    if (not(fresh)) {
       return;
     }
     let translit = property_get(word, "translit");
