@@ -19,7 +19,7 @@ export function app_index_dev_build_card(root) {
   let path = list_join_slash_forward([folder, file]);
   let already = app_shared_page_dev_build_is();
   let shown = not(already);
-  let label = "Dev builds";
+  let label = "dev index";
   let text =
     "The same index, opening every app's dev build instead of the built one";
   app_index_stage_card_generic(root, shown, path, label, text);
