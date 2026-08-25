@@ -12,6 +12,6 @@ export async function functions_search(search) {
   arguments_assert(arguments, 1);
   let all = await functions_search_all(search);
   let count = functions_search_shown_count();
-  let r = functions_search_found_shown_family(all2, count2, search2);
+  let r = functions_search_found_shown_family(all, count, search);
   return r;
 }
