@@ -1,3 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_words_content } from "./text_words_content.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { add } from "./add.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { bible_glyph_roots_wording_count } from "./bible_glyph_roots_wording_count.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 export function bible_glyph_roots_wordings_ranked(wordings) {
   "$plain wordings";
   "The single words carrying a meaning of their own across every English wording one original word is given, each credited with the places of every wording it appears in, commonest first.";
