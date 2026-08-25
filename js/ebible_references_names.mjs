@@ -1,7 +1,7 @@
+import { text_prefix_without_inner } from "./text_prefix_without_inner.mjs";
 import { ebible_references_names_book_names } from "./ebible_references_names_book_names.mjs";
 import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { text_skip } from "./text_skip.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -51,8 +51,7 @@ export function ebible_references_names(books, lines) {
     return found;
   }
   function chapter_verses_or_null(line, matched) {
-    let skipped = text_size(matched);
-    let after = text_skip(line, skipped);
+    let after = text_prefix_without_inner(line, matched);
     let parts = text_split_space(after);
     let filtered = list_filter_text_empty_not_is(parts);
     let empty = list_empty_is(filtered);
