@@ -1,3 +1,5 @@
+import { app_en_learn_bible_gloss_urdu_chapters_uploaded } from "./app_en_learn_bible_gloss_urdu_chapters_uploaded.mjs";
+import { app_shared_bible_chapters_offered_key } from "./app_shared_bible_chapters_offered_key.mjs";
 import { language_code_key } from "./language_code_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_language_code_reader_set } from "./app_shared_language_code_reader_set.mjs";
@@ -14,6 +16,7 @@ export async function app_en_learn_bible(context) {
   "The app is named for the language being learned rather than for the language being read from, so a reader of another language is served by this same app choosing another store of explanations, not by an app of their own.";
   "Urdu is the one language explained so far, so it is what this opens in. Every other bible app here opens in english, which is the one thing a reader learning english cannot read - they would arrive at a verse in the language they came here not knowing, twice over, and nothing they could read at all until they found the settings.";
   "It offers only the languages it can explain a word in, so the settings show no chooser while that is one language. Every other bible reader here says nothing on the matter and is handed all of them, which is what they have always done.";
+  "The same promise is made about chapters, and it has to be asked for rather than written down: which chapters have been explained is a fact about what has been published, and it grows without this file being told. So what is handed to the pickers is a way of asking, and the book list and the chapter list show exactly what a reader can be shown - one chapter of John today, and whatever has gone up by the time they next open it.";
   "It is the one app here that speaks to its reader in something other than english, and it says so once, at the start. Everything that has to know - which end a row of buttons begins at, and in time what is written on them - asks that one answer rather than guessing from whatever text happens to be on the screen, which here is english on purpose.";
   let language = ebible_language_urdu();
   let property_name = language_code_key();
@@ -23,6 +26,9 @@ export async function app_en_learn_bible(context) {
   let languages_offered = app_en_learn_bible_languages_offered();
   let key = app_shared_bible_languages_offered_key();
   property_set(context, key, languages_offered);
+  let chapters_ask = app_en_learn_bible_gloss_urdu_chapters_uploaded;
+  let key_chapters = app_shared_bible_chapters_offered_key();
+  property_set(context, key_chapters, chapters_ask);
   let app_fn = app_en_learn_bible;
   let screens = app_en_learn_bible_screens();
   let screen_home = app_en_learn_bible_home;
