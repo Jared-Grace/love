@@ -25,9 +25,12 @@ export function app_g_bless_color_looking(ahead, depth) {
   ("Row by row rather than smoothly inside a row, because the ground is squares and a");
   ("person either is or is not on one. A gradient across a square would give two people");
   ("standing on it two different strengths of light for one fact about them.");
-  ("The near strength is what the whole cone used to be, so a cone one row deep looks");
-  ("exactly as it always did - it is the far rows that were added, not the near one that");
-  ("was dimmed.");
+  ("The near strength is brighter than the whole flat cone used to be, and that is what");
+  ("makes the fade READ. The far row was raised first so the edge of the reach could be");
+  ("seen at all, which left the two ends close enough together that a player looking at");
+  ("the shape saw one wash rather than a near end and a far end. A fade is a difference,");
+  ("so the way to show more of it is to open the two ends further apart, and the near end");
+  ("is the one with room to move.");
   ("The far strength is dim but not as dim as it can be while still being on the screen.");
   ("The last row is the edge of what may be prayed for, so the player has to be able to SEE");
   ("where their reach ends - faded until it is barely there, the shape stops telling them,");
