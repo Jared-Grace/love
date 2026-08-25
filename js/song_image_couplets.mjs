@@ -154,7 +154,7 @@ export function song_image_couplets() {
       first: "the LOVE of GOD",
       second: "for all to see",
       symbol:
-        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the left edge of the window right across to the right edge and rises to the middle of its height, and the tallest of the three crosses no more than a third of the height of the window",
+        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, and the tallest of the three crosses no more than a third of the height of the window",
       symbol_ref: "Luke 23:33, Matthew 27:38, Isaiah 53:12",
       same_as: 0,
     },
@@ -164,7 +164,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp corners, its crossbar reaching almost to both sides of the window and its upright running the whole height of the window",
+        "A parchment with nothing written on it, blank and unmarked, nailed by one grey iron nail to a cross of brown wood behind it, the cross squared timber with flat sides and sharp corners, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border",
       symbol_ref: "Colossians 2:14",
       same_as: 0,
     },
@@ -174,7 +174,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn a little apart, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to both sides of the window",
+        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn a little apart, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
       symbol_ref: "Psalm 107:14, Isaiah 61:1",
       same_as: 8,
     },
