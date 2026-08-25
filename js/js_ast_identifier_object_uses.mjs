@@ -1,5 +1,5 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { property_atoms_object_first } from "./property_atoms_object_first.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -42,8 +42,7 @@ export function js_ast_identifier_object_uses(ast) {
     if (not(named)) {
       continue;
     }
-    let t = property_get(callee, "name");
-    let asking = list_includes(atoms, t);
+    let asking = property_in_list(callee, "name", atoms);
     if (not(asking)) {
       continue;
     }
