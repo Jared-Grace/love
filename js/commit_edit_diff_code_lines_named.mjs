@@ -1,3 +1,10 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { diff_lines_function_written_is } from "./diff_lines_function_written_is.mjs";
+import { list_size } from "./list_size.mjs";
+import { commit_edit_callee_swap_is } from "./commit_edit_callee_swap_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { equal } from "./equal.mjs";
 export function commit_edit_diff_code_lines_named(code, changed) {
   "The few words for a commit that did touch program, chosen from how many lines of program it touched - a whole new function, one call swapped for another, one line replaced, added or removed, or several lines.";
   "A WHOLE NEW FUNCTION IS SAID SO RATHER THAN COUNTED AS SEVERAL LINES OF PROGRAM. It reads as the largest bucket there is and is the one shape this repo has had a command for the longest, so a reader scanning for what no command covers was being handed the covered work first. It is asked before the number of lines is looked at, because the number is the thing it is there to stop being trusted.";
@@ -6,8 +13,8 @@ export function commit_edit_diff_code_lines_named(code, changed) {
   arguments_assert(arguments, 2);
   let written = diff_lines_function_written_is(changed);
   if (written) {
-    let r11 = "a whole new function written";
-    return r11;
+    let r = "a whole new function written";
+    return r;
   }
   let size = list_size(code);
   let pair = equal(size, 2);
