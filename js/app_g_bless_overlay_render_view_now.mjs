@@ -59,9 +59,6 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     ("asked again - so nobody is held by a glance the player has already finished.");
     bless_people_hold_replace(held_before, held, cone);
   }
-  function held_people() {
-    return held;
-  }
   function view_now() {
     "who the player can see AT THIS MOMENT, asked again rather than remembered, because the";
     "crowd walks between one question and the next";
@@ -93,7 +90,6 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     view_now,
     view_everyone,
     hold,
-    held_people,
   };
   return r3;
 }
