@@ -1,10 +1,10 @@
+import { list_last_is } from "./list_last_is.mjs";
 import { list_first_is } from "./list_first_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_groups_vocabulary } from "./bible_glyph_groups_vocabulary.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -40,8 +40,7 @@ export function bible_glyph_roots_groups_spellable() {
             strong: property_get(word, "strong"),
             glyph,
           };
-          let left = list_last(names);
-          let ends_it = equal(left, opening);
+          let ends_it = list_last_is(names, opening);
           if (ends_it) {
             list_add(before, seated);
           }
