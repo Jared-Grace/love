@@ -83,6 +83,8 @@ export function examples_groups() {
         "example_prose_add_after_summary",
         "example_prose_add_below_count",
         "example_arguments_same_names_set",
+        "example_guard_add_after_selected",
+        "example_guard_add_before_selected",
       ],
     },
     {

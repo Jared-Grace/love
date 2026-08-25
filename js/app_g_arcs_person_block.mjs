@@ -31,6 +31,9 @@ export function app_g_arcs_person_block(parent, person, bench) {
   let person_notes = property_get(person, "person_notes");
   let turns = property_get(person, "turns");
   let block = app_g_arcs_depth_block(parent, 0);
+  let voice_color = app_g_npc_name_color(person);
+  let wash_color = app_g_npc_color(person);
+  html_style_set(block, "border-left-color", voice_color);
   let v = String(index);
   let counted = String(notes_count);
   let named = text_combine_multiple([
@@ -45,12 +48,16 @@ export function app_g_arcs_person_block(parent, person, bench) {
   html_style_assign(heading, {
     "font-weight": "bold",
     "font-size": "1.25rem",
+    color: voice_color,
+    "background-color": wash_color,
+    padding: "0.2rem 0.5rem",
+    "border-radius": "0.3rem",
   });
   function field_line(one) {
     let name = property_get(one, "name");
     let value = property_get(one, "value");
     let shape = property_get(one, "shape");
-    app_g_arcs_field_shaped(block, name, value, shape);
+    app_g_arcs_field_shaped(block, name, value, shape, voice_color);
   }
   each(fields, field_line);
   app_g_arcs_note_pills(block, person_notes);
@@ -78,10 +85,17 @@ export function app_g_arcs_person_block(parent, person, bench) {
           catch_up_name,
           catch_up,
           catch_up_shape,
+          voice_color,
         );
       }
     }
-    app_g_arcs_turn_block(conversation_block, card, nickname, bench);
+    app_g_arcs_turn_block(
+      conversation_block,
+      card,
+      nickname,
+      bench,
+      voice_color,
+    );
   }
   each(turns, turn_block);
 }
