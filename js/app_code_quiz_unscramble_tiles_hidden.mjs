@@ -22,10 +22,12 @@ export function app_code_quiz_unscramble_tiles_hidden(rounds) {
     let lesson = property_get(item, "lesson");
     let tokens = app_code_quiz_tokens(code);
     let repeated = list_repeated(tokens);
-    let hides = not(list_empty_is(repeated));
+    let b = list_empty_is(repeated);
+    let hides = not(b);
     if (hides) {
       let pieces = list_size(tokens);
-      let buttons = list_size(list_unique(tokens));
+      let list = list_unique(tokens);
+      let buttons = list_size(list);
       list_add(found, {
         lesson,
         code,
