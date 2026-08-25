@@ -1,3 +1,4 @@
+import { ebible_references_names_book_names } from "./ebible_references_names_book_names.mjs";
 import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_skip } from "./text_skip.mjs";
@@ -8,17 +9,13 @@ import { list_first } from "./list_first.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { ebible_references_names_written } from "./ebible_references_names_written.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_size } from "./text_size.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { each } from "./each.mjs";
-import { each_object } from "./each_object.mjs";
-import { text_replace_if_starts_with } from "./text_replace_if_starts_with.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function ebible_references_names(books, lines) {
@@ -80,81 +77,16 @@ export function ebible_references_names(books, lines) {
     let bible_name = property_get(entry, "text");
     return bible_name;
   }
-  function aliased(line) {
-    let replacements = {
-      Psalms: ["Psalm"],
-      Song: ["Song of Solomon"],
-    };
-    let renamed = line;
-    function lambda2(froms, to) {
-      function lambda3(from) {
-        let prefix = text_combine(from, " ");
-        let replacement = text_combine(to, " ");
-        renamed = text_replace_if_starts_with(renamed, prefix, replacement);
-      }
-      each(froms, lambda3);
-    }
-    each_object(replacements, lambda2);
-    return renamed;
-  }
-  function line_named_or_null(written) {
-    let renamed = aliased(written);
-    let attempts = [
-      {
-        line: renamed,
-        names: books_names,
-        own: true,
-      },
-      {
-        line: written,
-        names: books_names,
-        own: true,
-      },
-      {
-        line: renamed,
-        names: canon_names,
-        own: false,
-      },
-      {
-        line: written,
-        names: canon_names,
-        own: false,
-      },
-    ];
-    for (let attempt of attempts) {
-      let line = property_get(attempt, "line");
-      let names = property_get(attempt, "names");
-      let matched = longest_named_or_null(line, names);
-      let unmatched = null_is(matched);
-      if (unmatched) {
-        continue;
-      }
-      let own = property_get(attempt, "own");
-      let borrowed = not(own);
-      let book_name = matched;
-      if (borrowed) {
-        book_name = bible_name_of_canon_or_null(matched);
-      }
-      let unknown = null_is(book_name);
-      if (unknown) {
-        continue;
-      }
-      let chapter_verses = chapter_verses_or_null(line, matched);
-      let blank = null_is(chapter_verses);
-      if (blank) {
-        continue;
-      }
-      let found = {
-        book_name,
-        chapter_verses,
-      };
-      return found;
-    }
-    return null;
-  }
-  let r = ebible_references_names_written(lines, line_named_or_null);
-  let chapter_verses_list = property_get(r, "chapter_verses_list");
+  let r = ebible_references_names_book_names(
+    books_names,
+    canon_names,
+    longest_named_or_null,
+    bible_name_of_canon_or_null,
+    chapter_verses_or_null,
+    lines,
+  );
   let book_names = property_get(r, "book_names");
+  let chapter_verses_list = property_get(r, "chapter_verses_list");
   let v = {
     chapter_verses_list,
     book_names,
