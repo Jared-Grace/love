@@ -85,6 +85,7 @@ export function examples_groups() {
         "example_arguments_same_names_set",
         "example_guard_add_after_selected",
         "example_guard_add_before_selected",
+        "example_nested_list_text_add",
       ],
     },
     {
