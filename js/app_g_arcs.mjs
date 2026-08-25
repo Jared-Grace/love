@@ -1,3 +1,4 @@
+import { app_g_arcs_scroll_watch } from "./app_g_arcs_scroll_watch.mjs";
 import { html_parent_get } from "./html_parent_get.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_dev_overlay_status } from "./app_shared_dev_overlay_status.mjs";
@@ -31,6 +32,7 @@ export async function app_g_arcs() {
   });
   let sheet = html_div(column);
   let panel = html_parent_get(column);
+  let watched = app_g_arcs_scroll_watch(panel);
   let chapter_code = null;
   async function render() {
     "the store is asked before anything is cleared, so a seam that is down leaves the page standing as it was rather than blanking it.";
