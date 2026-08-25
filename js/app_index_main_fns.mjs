@@ -1,5 +1,8 @@
 import { fn_name } from "./fn_name.mjs";
 export function app_index_main_fns() {
+  "The apps the front page offers, each with the sentence shown under it.";
+  "THIS IS A FRONT PAGE, NOT A REGISTER OF WHAT IS NEEDED, and the difference has already misled one reading. Fourteen apps are named here; thirty-three exist. The nineteen left out are not leftovers - checked 2026-08-25, every one of them is wanted. Some are infrastructure nobody browses to, some are tools for the person building this, and one is a kept address that only forwards. What they have in common is that none of them is what a visitor arriving for the first time should be shown, which is the only question this list answers.";
+  "So an app being absent here says nothing at all about whether it may go. Counting references does not help either and looks as though it does: an app named here picks up references BECAUSE it is named here, so few references and not on the front page are one fact wearing two faces, not two findings agreeing. There is no reading in the repo that separates an app somebody still uses from one nobody does - that answer is held by the person who uses them, and asking is cheaper than any measurement of it.";
   let r = [
     {
       app_fn: fn_name("app_bible"),
