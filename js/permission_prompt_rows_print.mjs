@@ -1,3 +1,5 @@
+import { text_column_right } from "./text_column_right.mjs";
+import { text_column } from "./text_column.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 export function permission_prompt_rows_print(title, rows, keep) {
@@ -7,10 +9,12 @@ export function permission_prompt_rows_print(title, rows, keep) {
   let v = Number(keep);
   let shown = rows.slice(0, v);
   for (let row of shown) {
+    let s = String(row.count);
+    let s2 = String(row.seconds_worst);
     console.log(
-      text_column_right(String(row.count), 6) +
+      text_column_right(s, 6) +
         "  worst " +
-        text_column_right(String(row.seconds_worst), 5) +
+        text_column_right(s2, 5) +
         "s  last " +
         row.latest.slice(5, 16) +
         "  " +
