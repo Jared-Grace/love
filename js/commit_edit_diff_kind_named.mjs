@@ -32,7 +32,7 @@ export function commit_edit_diff_kind_named(kinds, changed) {
   }
   let only_alone = kinds_all_is(kinds, "name alone");
   if (only_alone) {
-    let r10 = "names standing alone, values or program";
+    let r10 = "names or numbers standing alone, values or program";
     return r10;
   }
   let code = [];
