@@ -22,7 +22,8 @@ export function app_code_lesson_expression_parentheses_both_sides_title_name_id(
       " on both sides",
     ]);
   }
-  let rights = ["brackets both sides"];
+  ("These words are FROZEN and must not be shortened. They build the id, and the id is the key a learner's finished-lessons record is saved under. This lesson is the last one handed to a learner on the built site, so its key is one somebody is holding right now - rewording it does not rename their tick, it loses it. Measured 2026-08-25: the built site hands out a hundred and one lessons and this is the hundred and first, so shortening this to brackets both sides was reverted the same day it was written. Every lesson after this one is free, because nobody has been handed it.");
+  let rights = ["parentheses both sides"];
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(rights, left, paint);
   return built;
