@@ -7,7 +7,7 @@ export async function literal_duplicates_report() {
   let found = await literal_duplicates();
   for (let f of found) {
     console.log(
-      String(f.files.length).padStart(4) +
+      text_column_right(String(f.files.length), 4) +
         "  " +
         f.f_name +
         " = " +

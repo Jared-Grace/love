@@ -176,8 +176,8 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn a little apart, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
-      symbol_ref: "Psalm 107:14, Isaiah 61:1",
+        "One long straight reed of plain brown wood standing upright and alone, running from the white border at the bottom almost to the white border at the top, with one very large sponge fixed at its top, the sponge a plain rounded shape of grey soaked through with deep crimson and one heavy drop of that same deep crimson hanging from its underside",
+      symbol_ref: "John 19:29, Psalm 69:21, Hebrews 2:10",
       same_as: 8,
     },
     {
@@ -226,7 +226,7 @@ export function song_image_couplets() {
       first: "HE breathed HIS last",
       second: "and then HE died",
       symbol:
-        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing a little apart with a plain straight gap between them running the whole height of the veil from its very top edge down past its bottom hem",
+        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing a little apart with a plain straight gap between them running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole and no part of the gap carried on below it",
       symbol_ref: "Exodus 26:31, Matthew 27:51",
       same_as: 0,
     },
@@ -246,8 +246,8 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "The tree of life, one tall tree standing alone with a straight plain brown trunk and a wide round crown of emerald green leaves, with large ruby red fruit hanging in the leaves",
-      symbol_ref: "Revelation 22:2-3",
+        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn a little apart, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
+      symbol_ref: "Galatians 3:13, Romans 6:6, Psalm 107:14",
       same_as: 0,
     },
     {
@@ -321,8 +321,8 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "One single star of white glass with eight straight points, drawn very large so that its points reach almost to the white border on both sides and almost to the top and the bottom of it",
-      symbol_ref: "Revelation 22:16, 2 Peter 1:19",
+        "One plain round sun of white glass only just risen, standing low in the window with its lower half hidden behind one straight level line of dark ground running right across from one side to the other, so that only the top half of the disc shows above that line, the disc drawn very large so that it reaches almost to the white border on both sides, with no rays of any kind coming from it and the flat field above it deep cobalt blue",
+      symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
     {
@@ -332,9 +332,9 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open and empty, and ",
+        " standing wide open, that mouth no longer black but filled edge to edge with plain white glass so that light is shining out of the tomb into the picture, and ",
         r5,
-        ", standing on the ground well clear to the right of the mouth so that the whole mouth stands open and black, the rock and the stone together drawn very large, and the ground below one plain flat pale grey",
+        ", plainly wider and taller than that mouth so that it could have covered the whole of it, standing on the ground well clear to the right of the mouth and touching nothing, the rock and the stone together drawn very large, and the ground below one plain flat pale grey",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
@@ -355,8 +355,8 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "A burst of broad straight rays of white glass breaking outward from one centre, about a dozen rays and no more",
-      symbol_ref: "Revelation 1:16, Acts 26:13",
+        "One flat bank of cloud of white glass lying straight across the upper part of the window from one side to the other, its top edge level and its lower edge rolling in a few broad round lobes, and about eight broad straight rays of white glass and no more coming down out of the underside of that cloud, slanting outward as they fall and widening as they go, reaching almost to the bottom of the glass inside the white border, with the flat field standing between the rays and behind them deep cobalt blue",
+      symbol_ref: "Acts 1:9, Luke 2:9, Acts 26:13",
       same_as: 0,
     },
     {
@@ -395,7 +395,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the glass inside the white border upward, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, drawn very large so that the mountain reaches almost to the white border on both sides and the violet band runs from the white border on one side to the white border on the other",
+        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the glass inside the white border upward and each side broken and uneven, stepping in and out in ridges and shoulders as it rises rather than running as one straight slope, so that the two sides are never a pair of straight lines meeting at a point and the shape is never a pyramid, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, that band level and straight-edged along its top and along its bottom alike and never rounded or lobed like a cloud, drawn very large so that the mountain reaches almost to the white border on both sides and the violet band runs from the white border on one side to the white border on the other",
       symbol_ref: "Exodus 19:18, Hebrews 12:18-21",
       same_as: 0,
     },
