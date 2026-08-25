@@ -6,7 +6,13 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_arcs_field_shaped(parent, name, value, shape, voice_color) {
+export function app_g_arcs_field_shaped(
+  parent,
+  name,
+  value,
+  shape,
+  voice_color,
+) {
   "$plain name";
   "$plain value";
   "$plain shape";
