@@ -1,11 +1,8 @@
-import { abs } from "./abs.mjs";
 import { and } from "./and.mjs";
-import { equal } from "./equal.mjs";
-import { negative } from "./negative.mjs";
 import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
+import { bless_cone_ahead_across } from "./bless_cone_ahead_across.mjs";
 export function bless_cone_holds(cone, x, y) {
   "Whether a tile is one the player can see from where they are looking.";
   "PURE arithmetic over the grid, with nothing measured off a page - so it answers the";
@@ -15,27 +12,12 @@ export function bless_cone_holds(cone, x, y) {
   "that a crowd fills it rather than a single file.";
   "The tile the player stands on is NOT in it. You are not among the people you are";
   "blessing, and a cone that started at zero would quietly count the player.";
-  let right = property_get(cone, "x");
-  let dx = subtract(x, right);
-  let right2 = property_get(cone, "y");
-  let dy = subtract(y, right2);
-  let direction = property_get(cone, "direction");
-  let ahead = dy;
-  let across = abs(dx);
-  if (equal(direction, "north")) {
-    ahead = negative(dy);
-  }
-  if (equal(direction, "east")) {
-    ahead = dx;
-    across = abs(dy);
-  }
-  if (equal(direction, "west")) {
-    ahead = negative(dx);
-    across = abs(dy);
-  }
+  let r = bless_cone_ahead_across(cone, x, y);
+  let ahead = property_get(r, "ahead");
+  let across = property_get(r, "across");
   let started = greater_than_equal(ahead, 1);
-  let b = property_get(cone, "depth");
-  let reachable = less_than_equal(ahead, b);
+  let depth = property_get(cone, "depth");
+  let reachable = less_than_equal(ahead, depth);
   let inside = less_than_equal(across, ahead);
   let left = and(started, reachable);
   let holds = and(left, inside);
