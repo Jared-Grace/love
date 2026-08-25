@@ -58,7 +58,12 @@ export async function app_code_home(context) {
     );
     complete_previous = complete;
     let button = property_get(r, "button");
-    way_mark(button, open, complete);
+    way_marked = app_code_home_way_marked_next(
+      button,
+      way_marked,
+      open,
+      complete,
+    );
     let gap = app_shared_spaced_gap();
     html_style_margin_top(button, gap);
     let title = property_get(r, "title");
@@ -71,34 +76,8 @@ export async function app_code_home(context) {
     let scope = app_code_review_scope(lesson_number);
     let has_review = null_not_is(scope);
     if (has_review) {
-      review_row(lesson_number, scope);
+      app_code_home_review_row(g, context, lesson_number, scope);
     }
-  }
-  function way_mark(button, open, complete) {
-    if (way_marked) {
-      return;
-    }
-    if (complete) {
-      return;
-    }
-    if (open) {
-      html_data_set_test_happy(button);
-      way_marked = true;
-    }
-  }
-  function review_row(lesson_number, scope) {
-    let label = app_code_review_range_label(lesson_number, scope);
-    async function on_click() {
-      await app_shared_screen_go_tab(
-        context,
-        "review_number",
-        lesson_number,
-        app_code_review,
-      );
-    }
-    let review = app_code_review_button(g, label, on_click);
-    let gap = app_shared_spaced_gap();
-    html_style_margin_top(review, gap);
   }
   each_index(lessons, lambda);
   await app_code_home_just_left_center(just_left, context);
