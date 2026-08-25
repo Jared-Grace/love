@@ -77,12 +77,8 @@ export function literals_frozen_names() {
   ("A fourth folder of the same kind, and the one the entry above predicted. The game's written arcs are uploaded under it, a shipped page builds the same address to read them back, and the list saying which folders a backup may take names it too - so it escaped on the first upload and is spelled in two places that must never disagree.");
   ("It came here the way that entry said a new store would: written correctly and frozen at its own site from the day it was made, and unwatched until a gate asked who was missing. The word was already safe from the canonicalizing pass; what it was not safe from was somebody retyping it.");
   let spelled44 = fn_name("g_arc_write_upload_namespace");
-  (
-    "The word the readings a bible app has been left on are kept under, on the reader's own disk. It holds something a person did rather than something this repo published, like the record of finished lessons above it, and it is read at the one moment somebody most needs it - they have lost the tab they were reading in and have come looking for where they were. Retyping the word would not break a link; it would answer that question with nothing, on the day it is asked.",
-  );
-  (
-    "Beside it, the word one tab calls itself by - which is a tab's own and dies with the tab, and would be nothing to freeze if that were all it were. It is also the field each remembered reading is marked with, so it is sitting inside the list on that disk. Renaming it would leave every reading already written down marked with a word the reader no longer looks for, and each tab would then add a second line instead of writing over its own.",
-  );
+  ("The word the readings a bible app has been left on are kept under, on the reader's own disk. It holds something a person did rather than something this repo published, like the record of finished lessons above it, and it is read at the one moment somebody most needs it - they have lost the tab they were reading in and have come looking for where they were. Retyping the word would not break a link; it would answer that question with nothing, on the day it is asked.");
+  ("Beside it, the word one tab calls itself by - which is a tab's own and dies with the tab, and would be nothing to freeze if that were all it were. It is also the field each remembered reading is marked with, so it is sitting inside the list on that disk. Renaming it would leave every reading already written down marked with a word the reader no longer looks for, and each tab would then add a second line instead of writing over its own.");
   let spelled3 = fn_name("app_shared_bible_history_key");
   let spelled45 = fn_name("app_shared_bible_session_id_key");
   let names = [
