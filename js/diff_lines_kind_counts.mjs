@@ -5,10 +5,11 @@ import { text_starts_with } from "./text_starts_with.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function diff_lines_kind_counts(changed) {
-  "How many of a difference's changed lines are paragraphs put in, paragraphs taken out, and lines of program.";
+  "How many of a difference's changed lines are paragraphs put in, paragraphs taken out, values chosen, and lines of program.";
   "TWO READINGS WERE COUNTING THE SAME THING SIDE BY SIDE. One asked whether prose was touched and whether anything else was, the other asked which way the prose went; both walked the changed lines and both called the same reading on each one, so the walk was written out twice and only the arithmetic after it differed.";
   "IMPORTS ARE COUNTED IN NEITHER, and that is the one place the two callers agreed already. A repaired import is the canonicalizing pass's own work wearing a hand-made label, so counting it would make an edit that reworded a paragraph and let the pass tidy up look like an edit that also changed the program.";
   "THE TWO DIRECTIONS ARE KEPT APART even though one caller adds them straight back together. Which way a paragraph went is the whole of what tells an addition from a rewording, and a caller that does not care can add two numbers far more easily than a caller that does can take one apart.";
+  "A VALUE CHOSEN IS COUNTED ON ITS OWN, apart from both the paragraphs and the program. A number raised in a record is neither a sentence a prose verb would have written nor a line standing for a command that was missing, so folding it into either one answers a different question from the one being asked - and every caller here is asking what a named command would have made outright.";
   arguments_assert(arguments, 1);
   let put_in = 0;
   let taken_out = 0;
