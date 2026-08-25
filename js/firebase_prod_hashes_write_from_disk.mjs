@@ -10,13 +10,7 @@ export async function firebase_prod_hashes_write_from_disk() {
   "That difference is the whole reason for it. Everything asking whether an app still needs sending stands on this note, and a note nobody can afford to keep current is one that quietly stops being true - after which those questions go on being answered confidently and wrongly";
   "It is only true straight after a sending. Called at any other moment it writes down what somebody is in the middle of building as though it had gone out, which is the dangerous way to be wrong: an app would then read as already sent and be carried past every later check without anybody looking at it. So this belongs where the sending finishes and nowhere else";
   "The note is written from scratch rather than merged into, because a sending is about all of them at once - every app in the folder went out, not only the one somebody came to send";
-  let app_names = await apps_names();
-  let names = list_unique(app_names);
-  let hashes = {};
-  for (let app_name of names) {
-    let disk = await firebase_prod_app_disk_hashes(app_name);
-    hashes[app_name] = disk;
-  }
+  let hashes = await firebase_prod_apps_disk_hashes();
   let path = firebase_prod_hashes_path();
   await file_overwrite_json(path, hashes);
   return hashes;

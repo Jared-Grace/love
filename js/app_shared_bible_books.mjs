@@ -19,9 +19,10 @@ export async function app_shared_bible_books(context) {
   let hash = html_hash_object_get();
   let current_book_code = app_shared_bible_hash_book_code(hash);
   ("only the books the reader's own bibles have between them. a book none of them holds is left off rather than offered and opened on nothing, and where several are chosen one of them holding it is enough - the page shows what it has and says nothing where it has nothing, which is what it already does verse by verse.");
+  ("and only the books this app is willing to offer. an app that has to have been written for you chapter by chapter cuts the list down to what has been written; every other one says nothing on the matter and is handed the whole bible, as it always has been.");
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
   let bible_folders = ebible_languages_to_bible_folders(languages_chosen);
-  let list = await ebible_index_flat_chosen(bible_folders);
+  let list = await app_shared_bible_index_flat_offered(context, bible_folders);
   let books = await ebible_index_flat_books_browser(list);
   async function on_open(book) {
     "open a chosen book at the first chapter of it the reader's bibles have, then hand off to the chapter picker";
