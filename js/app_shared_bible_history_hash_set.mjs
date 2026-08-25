@@ -1,5 +1,4 @@
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_not_is } from "./null_not_is.mjs";
+import { app_shared_bible_history_entry_mode } from "./app_shared_bible_history_entry_mode.mjs";
 import { app_shared_bible_mode_set } from "./app_shared_bible_mode_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";

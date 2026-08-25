@@ -1,3 +1,4 @@
+import { text_frozen } from "./text_frozen.mjs";
 export function diff_line_kind_cases() {
   "Single changed lines of a difference, each beside the kind of thing that line is made of.";
   "IT WAS WRITTEN THE DAY THE READING WAS FOUND WRONG. A line was called a paragraph on its opening character alone, so every key inside a written-out record counted as prose, and the mistake stood long enough for a whole measurement to be built on it and reported. Nothing went red, because nothing was watching.";
