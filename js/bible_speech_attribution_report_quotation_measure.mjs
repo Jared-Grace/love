@@ -12,6 +12,7 @@ export function bible_speech_attribution_report_quotation_measure(
   unattributed,
   attributed,
 ) {
+  "Sorts each quotation in a book into what kind of quoting it is - a heading, an explanation of a word, a citation, a carrying on of the quotation before it, or speech with a verb saying who spoke - and hands back both the sorter and the three lists it keeps itself.";
   arguments_assert(arguments, 4);
   let headings = [];
   let glosses = [];

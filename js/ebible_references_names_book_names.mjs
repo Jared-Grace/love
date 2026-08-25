@@ -15,6 +15,7 @@ export function ebible_references_names_book_names(
   chapter_verses_or_null,
   lines,
 ) {
+  "Every bible reference these lines open with, given back as the book it names and the chapter and verses that follow it.";
   arguments_assert(arguments, 6);
   function aliased(line) {
     let replacements = {
