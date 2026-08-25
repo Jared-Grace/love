@@ -196,7 +196,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A whole ram all of one white glass with white horns, standing side-on in profile on all four legs, and a round bush of brown thorn branches as tall as the ram itself standing at the ram's head, the branches and the horns crossing one another where they meet",
+        "A whole ram all of one white glass with two thick curled white horns, standing side-on in profile on all four legs and caught fast by those horns in a low thicket of bare brown thorn branches, the thicket a tangle growing straight up out of the ground beside the ram's head with no trunk and no crown and standing no higher than the ram's own back, its branches lying across and closing over both horns so that the horns are inside the tangle and held there, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -216,7 +216,7 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "Three very large drops of deep crimson in the air one below another, each drop a plain round bead with a point at its top, and below them a plain flat band of green ground, the three drops together filling most of the height of the window and the widest of them a good part of its width",
+        "Three very large drops of blood of ruby red glass falling one below another, each drop round below and drawn to a point at its top, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides and running a little way down from its edges, the drops and the pool together filling most of the height of the window and the widest drop a good part of its width",
       symbol_ref: "Luke 22:44",
       same_as: 0,
     },
