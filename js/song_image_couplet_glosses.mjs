@@ -89,7 +89,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:45 says the sun was darkened. A sun drawn in the same solid black as the lead lines is the plainest way a window can say a sun that has stopped giving light.",
     },
     11: {
-      kept: 17,
+      kept: 27,
       lyric_ref: "John 3:16, Romans 8:32, Genesis 22:8",
       lyric_explain:
         "HE that spared not HIS own Son, but delivered HIM up for us all. Abraham had told Isaac that GOD would provide HIMSELF a lamb, and the couplet reads the giving of the SON as that promise kept.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 6,
+      kept: 14,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
