@@ -1,21 +1,15 @@
-import { app_index_dev_apps_all_card } from "./app_index_dev_apps_all_card.mjs";
-import { app_index_dev_link_card } from "./app_index_dev_link_card.mjs";
-import { app_index_dev_links } from "./app_index_dev_links.mjs";
-import { each } from "./each.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 import { host_local_network_is } from "./host_local_network_is.mjs";
-export function app_index_dev_links_show(root) {
+export async function app_index_dev_links_show(root) {
   "The working links at the very top of the index page, shown only when the page came from a machine on this same network.";
   "The test is asked here rather than by the page that calls this, so there is one answer to keep right instead of one per caller. A caller asks to show the links and gets nothing where nothing should be shown.";
-  "They sit above the apps because they are the reason this page was opened at all while something is being worked on, and because the top of a page is the part a phone shows without any scrolling.";
+  "★ WHAT IS DRAWN IS ASKED FOR BY NAME AND NOT IMPORTED, and that is about weight rather than about tidiness. The test below decides who SEES these links and settles nothing about who DOWNLOADS them - a bundler follows a plain import whether the branch is walked or not, so every reader of the public index was fetching the list of half-finished things to look at, and every sentence describing them, in order never to be shown any of it. A name joined into a path at the moment it is wanted is something a bundler cannot see through.";
+  "That is what makes this the one place the test may be asked. Were a caller to ask it instead, the caller would hold the import and the weight would come straight back.";
   let wanted = host_local_network_is();
   if (wanted) {
-    let links = app_index_dev_links();
-    function link_show(link) {
-      app_index_dev_link_card(root, link);
-    }
-    each(links, link_show);
-    ("There used to be a third kind of card here, for a page kept by hand and reached by its file name rather than by an app's name. There are no such pages now: a page at an address of its own must be an app, so a card that could only ever point at one that was not has nothing left to point at.");
-    ("and last, the way to every app there is rather than to one of them. It comes after the named links because it is what you reach for when the thing you want is NOT named above - the whole list, chosen by nobody, including whatever somebody started this week.");
-    app_index_dev_apps_all_card(root);
+    let f_name = fn_name("app_index_dev_links_draw");
+    let fn = await function_import_relative(f_name);
+    await fn(root);
   }
 }
