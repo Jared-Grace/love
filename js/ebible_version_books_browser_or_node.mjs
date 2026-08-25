@@ -1,7 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { ebible_version_books_browser } from "./ebible_version_books_browser.mjs";
-import { ebible_version_books } from "./ebible_version_books.mjs";
 export async function ebible_version_books_browser_or_node(bible_folder) {
   "$plain bible_folder";
   "Every book one bible carries, asked of whichever of the two places this is running in.";
