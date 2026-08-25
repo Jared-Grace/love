@@ -115,7 +115,7 @@ export function bible_glyph_roots() {
     },
     {
       root: "zelos",
-      gloss: "jealousy",
+      gloss: "jealousy, zeal, envy",
       words: [
         {
           strong: "2205",
