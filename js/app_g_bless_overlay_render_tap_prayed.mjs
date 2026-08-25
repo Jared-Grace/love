@@ -26,6 +26,7 @@ export function app_g_bless_overlay_render_tap_prayed(
   let bar = property_get(r2, "bar");
   let view_everyone = property_get(r2, "view_everyone");
   let hold = property_get(r2, "hold");
+  let hold_release = property_get(r2, "hold_release");
   function render() {
     "who is marked is worked out from the record on every step rather than remembered here,";
     "so a person covered by a prayer over their whole block lights up the moment they walk";
@@ -75,6 +76,11 @@ export function app_g_bless_overlay_render_tap_prayed(
       if (earned) {
         rung = bless_rung_after(rung);
       }
+      ("The person prayed for is let go here, before the draw, so the draw sees them already");
+      ("free. Being held was only ever the time the player needed to say this prayer, and it");
+      ("is said - keeping them any longer would stand somebody already blessed in front of a");
+      ("player who has moved on to the next face.");
+      hold_release(person);
       render();
     }
     app_g_bless_pray_overlay(container_map, rung, amen);
