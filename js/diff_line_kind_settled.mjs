@@ -1,3 +1,12 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
+import { property_get } from "./property_get.mjs";
+import { null_is } from "./null_is.mjs";
+import { text_slice_from } from "./text_slice_from.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { js_source_bare_token_kind } from "./js_source_bare_token_kind.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 export function diff_line_kind_settled(kind, line, sources) {
   "$plain kind";
   "$plain line";

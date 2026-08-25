@@ -1,9 +1,9 @@
+import { list_map_property } from "./list_map_property.mjs";
+import { placed_lines_of_kind } from "./placed_lines_of_kind.mjs";
 import { diff_lines_function_written_is } from "./diff_lines_function_written_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { kinds_all_is } from "./kinds_all_is.mjs";
-import { diff_line_kind } from "./diff_line_kind.mjs";
 import { equal } from "./equal.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { commit_edit_callee_swap_is } from "./commit_edit_callee_swap_is.mjs";
 import { list_first } from "./list_first.mjs";
