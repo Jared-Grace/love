@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { git_file_read_at_or_null } from "./git_file_read_at_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -10,10 +11,8 @@ import { text_ends_with } from "./text_ends_with.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_first } from "./list_first.mjs";
-import { list_size } from "./list_size.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function commit_ast_edit_kind(commit) {
   "What one commit did to the code, read by parsing the file on both sides of it and comparing the two, rather than by counting the lines the diff printed.";
@@ -30,8 +29,7 @@ export async function commit_ast_edit_kind(commit) {
     return code;
   }
   let code_paths = list_filter(paths, code_is);
-  let left = list_size(code_paths);
-  let alone = equal(left, 1);
+  let alone = list_size_equal(code_paths, 1);
   if (not(alone)) {
     let r = "not one code file";
     return r;
