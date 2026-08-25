@@ -6,10 +6,11 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_arcs_field_shaped(parent, name, value, shape) {
+export function app_g_arcs_field_shaped(parent, name, value, shape, voice_color) {
   "$plain name";
   "$plain value";
   "$plain shape";
+  "$plain voice_color";
   "One filled field of a written arc drawn as a row: what the field is called down the left, and what was written in it drawn in the shape of the kind of thing it is.";
   "THE THREE THINGS CHOSEN ABOUT A PERSON USED TO BE ONE PARAGRAPH THREE TIMES OVER. Their work, their trouble in their own words, and somebody's description of their whole arc were set one under another in the same type at the same weight - so nothing on the page said that the middle one is the person speaking and the other two are not, and a reviewer had to read all three to find out which was which.";
   "THE NAME IS SHOWN ON EVERY ROW BECAUSE THE PRESSES UNDERNEATH ARE NAMED AFTER IT. Filing a note means picking the part that is wrong out of a row of buttons, and a row of buttons reading occupation, trouble, summary is only usable if the lines above them are labelled with the same words.";
