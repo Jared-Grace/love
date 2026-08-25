@@ -10,7 +10,6 @@ import { greater_than } from "./greater_than.mjs";
 import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
-
 export async function bible_glyph_roots_wordings_split(testament_name) {
   arguments_assert(arguments, 1);
   ("Every word one testament's seed table seats on a picture, measured against every English wording the interlinear gives it, weakest seat first.");
@@ -40,7 +39,10 @@ export async function bible_glyph_roots_wordings_split(testament_name) {
       if (unglossed) {
         wordings = [];
       }
-      let total = list_map_sum(wordings, bible_glyph_roots_wordings_split_count);
+      let total = list_map_sum(
+        wordings,
+        bible_glyph_roots_wordings_split_count,
+      );
       let top = "";
       let top_count = 0;
       let measured = list_empty_not_is(wordings);
@@ -67,16 +69,9 @@ export async function bible_glyph_roots_wordings_split(testament_name) {
       list_add(rows, row);
     }
   }
-  let sorted = list_sort_number_mapper(rows, bible_glyph_roots_wordings_split_share);
+  let sorted = list_sort_number_mapper(
+    rows,
+    bible_glyph_roots_wordings_split_share,
+  );
   return sorted;
-}
-
-function bible_glyph_roots_wordings_split_count(wording) {
-  let n = wording.count;
-  return n;
-}
-
-function bible_glyph_roots_wordings_split_share(row) {
-  let n = row.share;
-  return n;
 }

@@ -1,6 +1,6 @@
+import { playwright_by_tag_name_text_contents_visible } from "./playwright_by_tag_name_text_contents_visible.mjs";
 import { playwright_error_records } from "./playwright_error_records.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { playwright_by_tag_name_text_contents } from "./playwright_by_tag_name_text_contents.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,7 +46,10 @@ export async function playwright_happy_step(page) {
   let errors = [];
   if (stuck) {
     ("what the screen is OFFERING goes in the report, because an address on its own says which screen it is and not which of its controls should have been the one marked - and the words on the buttons are what somebody comparing the two has to read anyway");
-    controls = await playwright_by_tag_name_text_contents(page, "button");
+    controls = await playwright_by_tag_name_text_contents_visible(
+      page,
+      "button",
+    );
     ("and what the page WROTE DOWN goes in beside them, because the commonest way to be stuck is not a screen that forgot to mark its answer but a screen that never drew one: a fault took the app down and left the apology standing where the quiz should be. Without this the report says only that there is nothing to press, which is the true half that sends somebody looking in the wrong place.");
     errors = await playwright_error_records(page);
   }
