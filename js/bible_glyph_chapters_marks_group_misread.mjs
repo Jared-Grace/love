@@ -1,5 +1,5 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_marks_adjacent } from "./bible_glyph_chapters_marks_adjacent.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
@@ -24,8 +24,7 @@ export function bible_glyph_chapters_marks_group_misread() {
   let closes = [];
   for (let group of vocabulary) {
     let parts = bible_glyph_group_names(group);
-    let pictures = list_size(parts);
-    let two_long = equal(pictures, 2);
+    let two_long = list_size_equal(parts, 2);
     assert_json(two_long, {
       group,
       parts,
