@@ -7,7 +7,8 @@ import { app_shared_bible_screen_home_set } from "./app_shared_bible_screen_home
 import { app_shared_bible_history_fill } from "./app_shared_bible_history_fill.mjs";
 export async function app_shared_bible_history(context) {
   "the readings this app has been left on, as its own screen reached from settings; back returns to the settings hub";
-  "picking one points the link at that passage and then hands the reader their home screen, which is the reader this app opens with and the one that will draw what the link now says";
+  "picking one points the link at that passage and then draws this app again in the reader that reading was taken down in, landing on the screen this app opens with - which is the one that reads the link.";
+  "Drawing the app again rather than just changing screen, because a reading remembers which of the two readers it was in and the two are not the same page. Handing the home screen alone leaves the tab in the reader it was already in: a whole chapter with several verses picked, opened this way from the single-verse reader, went looking for a verse called five-to-nine, found no such verse, and printed the failure where the passage should have been.";
   async function lambda_back() {
     await app_shared_screen_set(context, app_shared_bible_settings);
   }
