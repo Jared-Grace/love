@@ -1,3 +1,4 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_text_reader_language_sites } from "./app_shared_text_reader_language_sites.mjs";
 import { app_shared_text_reader_apps } from "./app_shared_text_reader_apps.mjs";
@@ -8,7 +9,6 @@ import { js_file_name } from "./js_file_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { not } from "./not.mjs";
 export async function app_shared_text_reader_language_sites_apps() {
@@ -37,8 +37,7 @@ export async function app_shared_text_reader_language_sites_apps() {
     let file = property_get(site, "file");
     let anywhere = false;
     for (let one of opened) {
-      let files = property_get(one, "files");
-      let reached = list_includes(files, file);
+      let reached = property_list_includes(one, "files", file);
       if (not(reached)) {
         continue;
       }
