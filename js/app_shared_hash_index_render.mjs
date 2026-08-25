@@ -1,7 +1,6 @@
-import { property_get } from "./property_get.mjs";
+import { storage_session_get_context } from "./storage_session_get_context.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { storage_session_get } from "./storage_session_get.mjs";
 import { app_shared_hash_index_open_key } from "./app_shared_hash_index_open_key.mjs";
 import { app_shared_hash_index_tree } from "./app_shared_hash_index_tree.mjs";
 import { app_shared_hash_index_render_node } from "./app_shared_hash_index_render_node.mjs";
@@ -17,8 +16,7 @@ export function app_shared_hash_index_render(
   ("the sandbox gets the folders for free, and that is the part worth expecting. Nothing about a preview name was written down anywhere, but the names group themselves - song_image_choose and song_image_audit share a first word, and so do the two dream traces - so a page that had nine links in a flat stack now opens as five headings.");
   ("the open set is READ here and handed down rather than reached for at each node, so one session-storage read draws the whole tree.");
   let key = app_shared_hash_index_open_key();
-  let app_fn = property_get(settings, "app_fn");
-  let open_stored = storage_session_get(app_fn, key);
+  let open_stored = storage_session_get_context(settings, key);
   let open_paths = new Set(open_stored);
   let tree = app_shared_hash_index_tree(names, prefixes);
   let top = object_property_names(tree.children).sort();
