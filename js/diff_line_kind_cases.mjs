@@ -4,6 +4,8 @@ export function diff_line_kind_cases() {
   "IT WAS WRITTEN THE DAY THE READING WAS FOUND WRONG. A line was called a paragraph on its opening character alone, so every key inside a written-out record counted as prose, and the mistake stood long enough for a whole measurement to be built on it and reported. Nothing went red, because nothing was watching.";
   "THE RECORD ENTRIES ARE THE POINT OF THE CORPUS. Three of them are here and all three would have passed before - one closing at a comma because another entry follows, one closing at its own value because it is the last, one whose value is itself a piece of text so that the line opens and closes on a quote. Between them they hold the fix in place, which is that a paragraph is known by how it ends and not by how it begins.";
   "BOTH SIGNS APPEAR, because the sign is cut off before anything else is asked and a reading that only ever cut the one sign would answer about a line taken out by looking at its first letter.";
+  "THE UNDECIDED SHAPE IS HELD FROM BOTH ENDS. A name and a number are here, and one of each closes at a comma while the other runs out at its own value, because requiring the comma was the narrowing that let a list of plain numbers extended by one be read as a line of program put in place of another - the whole of that commit, three changed lines, and not a word of program in any of them.";
+  "A PARAGRAPH PRINTED OVER SEVERAL LINES IS HERE FOR BOTH OF ITS ANSWERS. Its opening line is prose and is named so, and the line under it, which hands a function's name over inside brackets, is program and is named that - not because it is program but because nothing about the line says it is not, and a corpus that only pinned the parts that come out right would hide the shortfall it is here to record.";
   "THE LINES ARE FROZEN TEXT, because they hold names spelled the way the code spells them and the pass that turns a mentioned name into a reference would otherwise rewrite the corpus out from under the gate.";
   let cases = [
     {
@@ -72,6 +74,33 @@ export function diff_line_kind_cases() {
       name: "a name alone taken out, which proves the doubt is carried on both sides of a difference",
       line: text_frozen("-    js_selects_text_set,"),
       kind: "name alone",
+    },
+    {
+      name: "a number standing alone with a comma, which is an entry of a list of numbers and under the same doubt a name is",
+      line: text_frozen("+  8,"),
+      kind: "name alone",
+    },
+    {
+      name: "a number standing alone with no comma, which is how the last entry of a list is written and was read as program until it was opened",
+      line: text_frozen("+  9"),
+      kind: "name alone",
+    },
+    {
+      name: "a name standing alone with no comma, which is how the last argument of a call broken over several lines is written",
+      line: text_frozen("-    changed"),
+      kind: "name alone",
+    },
+    {
+      name: "the opening line of a paragraph printed over several lines, which opens a bracket and a piece of text and runs out at a comma",
+      line: text_frozen(
+        '+  ("A page opening its body tag any other way says the same thing. ",',
+      ),
+      kind: "comment",
+    },
+    {
+      name: "a name handed over inside a paragraph printed over several lines, which is written the same way whether a reader or a program receives it and so stays program",
+      line: text_frozen('+    fn_name("html_code_is"),'),
+      kind: "code",
     },
     {
       name: "a name with a dot in it standing alone, which is a reading rather than a name and so is program",

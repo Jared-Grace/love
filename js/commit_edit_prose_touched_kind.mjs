@@ -1,7 +1,6 @@
 import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 export async function commit_edit_prose_touched_kind(commit) {
   "Whether one hand-made edit touched the paragraphs written for a reader, and if it did, whether it touched anything else.";
