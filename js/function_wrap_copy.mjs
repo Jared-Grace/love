@@ -1,3 +1,6 @@
+import { js_return_name } from "./js_return_name.mjs";
+import { js_find_call_name_includes } from "./js_find_call_name_includes.mjs";
+import { js_call_argument_named_identifier_set } from "./js_call_argument_named_identifier_set.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_add_before_return } from "./js_call_add_before_return.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -17,7 +20,16 @@ export async function function_wrap_copy(f_name) {
   let output = await function_transform(name_copy, lambda);
   return output;
   async function lambda(ast) {
+    "A generated call arrives holding the CALLED function's own parameter names, which name nothing where it now sits - so the second half points its one argument at the answer this wrapper is already holding. Written and left, it would have read a name nobody bound.";
     let copier = fn_name("clipboard_copy_value");
     await js_call_add_before_return(ast, copier);
+    let name_returned = js_return_name(ast);
+    let selects = js_find_call_name_includes(ast, copier);
+    await js_call_argument_named_identifier_set(
+      ast,
+      selects,
+      "value",
+      name_returned,
+    );
   }
 }
