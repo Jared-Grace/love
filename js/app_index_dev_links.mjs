@@ -32,6 +32,17 @@ export function app_index_dev_links() {
       label: "Cebuano Proverbs 31",
       text: "The first Cebuano chapter with word explanations written by hand rather than generated",
     },
+    {
+      app_fn: fn_name("app_bible"),
+      hash: {
+        c: "1JN03",
+        v: "17",
+        l: "ur+swh+lug+en",
+        mode: "chapter",
+      },
+      label: "Saving the Bible on the phone",
+      text: "Four languages open at once. Press Settings, then the offline downloads, to see whether each language reads as its own group now and whether one press really does fetch all of them side by side",
+    },
   ];
   return r;
 }

@@ -1,19 +1,10 @@
 import { html_hash_symbol } from "./html_hash_symbol.mjs";
-import { list_join_comma } from "./list_join_comma.mjs";
-import { list_adder } from "./list_adder.mjs";
-import { each_object } from "./each_object.mjs";
+import { hash_pairs_text } from "./hash_pairs_text.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function hash_to_url(hash) {
-  function lambda3(la) {
-    function lambda(value, property) {
-      let part = text_combine_multiple([property, "=", value]);
-      la(part);
-    }
-    each_object(hash, lambda);
-  }
-  let parts = list_adder(lambda3);
-  let result = list_join_comma(parts);
+  "A set of named values written as the hash end of an address - the mark, then the pairs.";
+  "The pairs are built next door and only the mark is added here, so a caller holding a bare screen name rather than a set of values has the same job with one step fewer instead of a different function to find.";
+  let result = hash_pairs_text(hash);
   let h = html_hash_symbol();
   let url = text_combine(h, result);
   return url;
