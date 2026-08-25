@@ -1,10 +1,9 @@
+import { app_code_home_value } from "./app_code_home_value.mjs";
 import { app_code_home_way_marked } from "./app_code_home_way_marked.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { app_code_home_bar_gear_content } from "./app_code_home_bar_gear_content.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { app_shared_button_numbered_progress } from "./app_shared_button_numbered_progress.mjs";
-import { html_div_text_centered } from "./html_div_text_centered.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { app_code_review } from "./app_code_review.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
@@ -26,9 +25,10 @@ import { each_index } from "./each_index.mjs";
 export async function app_code_home(context) {
   "on returning home the lesson just left (its id is remembered in lesson_id) is scrolled to the vertical center, so the learner lands back where they were";
   let root = html_clear_context(context);
-  let g = app_code_home_bar_gear_content(root, context);
-  let div = html_div_text_centered(g, "Lessons:");
-  let value = app_shared_spaced_gap();
+  let r3 = app_code_home_value(root, context);
+  let value = property_get(r3, "value");
+  let div = property_get(r3, "div");
+  let g = property_get(r3, "g");
   html_style_margin_y(div, value);
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
