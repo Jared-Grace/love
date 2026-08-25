@@ -111,7 +111,7 @@ export function bible_glyph_chapter_exo20() {
           "$fire,",
           "am",
           "a",
-          "$heart_on_fire+crown",
+          "$heart_on_fire",
           "$fire,",
           "visiting",
           "the",
