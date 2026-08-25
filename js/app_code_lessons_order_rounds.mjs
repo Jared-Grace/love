@@ -1,5 +1,7 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_code_lessons_order_rounds() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("How many times each lesson is asked for a line when the course order is being measured.");
   ("A lesson hands out a line built fresh each time, so the hardest line it can reach is found by asking it more than once and keeping the worst answer. One ask would report whatever the first draw happened to be, and a lesson that only sometimes reaches three operators would read as a two-operator lesson on most runs and a three-operator one on the rest.");
