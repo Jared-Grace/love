@@ -29,38 +29,6 @@ export function ebible_references_names(books, lines) {
   let books_names = list_map_property(books, "text");
   let canon = ebible_books_engbsb();
   let canon_names = list_map_property(canon, "text");
-  function longest_named_or_null(line, names) {
-    let lowered = text_lower_to(line);
-    let longest = "";
-    function lambda(book_text) {
-      let book_prefix = text_combine(book_text, " ");
-      let prefix_lowered = text_lower_to(book_prefix);
-      let starts = text_starts_with(lowered, prefix_lowered);
-      if (starts) {
-        let book_size = text_size(book_text);
-        let longest_size = text_size(longest);
-        let longer = greater_than(book_size, longest_size);
-        if (longer) {
-          longest = book_text;
-        }
-      }
-    }
-    each(names, lambda);
-    let none = text_empty_is(longest);
-    let found = ternary(none, null, longest);
-    return found;
-  }
-  function chapter_verses_or_null(line, matched) {
-    let after = text_prefix_without_inner(line, matched);
-    let parts = text_split_space(after);
-    let filtered = list_filter_text_empty_not_is(parts);
-    let empty = list_empty_is(filtered);
-    if (empty) {
-      return null;
-    }
-    let chapter_verses = list_first(filtered);
-    return chapter_verses;
-  }
   function bible_name_of_canon_or_null(canon_name) {
     let book_code = list_find_property_get(
       canon,
@@ -79,9 +47,7 @@ export function ebible_references_names(books, lines) {
   let r = ebible_references_names_book_names(
     books_names,
     canon_names,
-    longest_named_or_null,
     bible_name_of_canon_or_null,
-    chapter_verses_or_null,
     lines,
   );
   let book_names = property_get(r, "book_names");

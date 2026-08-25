@@ -258,6 +258,10 @@ export function bible_glyph_characters() {
       character: "🏠",
     },
     {
+      name: "door",
+      character: "🚪",
+    },
+    {
       name: "church",
       character: "⛪",
     },
