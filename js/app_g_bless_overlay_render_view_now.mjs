@@ -47,7 +47,16 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
       return;
     }
     held_cone = text;
+    let held_before = held;
     held = bless_cone_people_wholly(cone, npcs);
+    ("Held people are also kept from walking OUT of the view, so the promise is true in the");
+    ("picture and not only in the rules. Prayable while strolling away, somebody is still");
+    ("something the player has to watch leave; kept where the player put their eyes, there is");
+    ("nothing to watch and nothing to chase, and the player looks at a few faces and prays");
+    ("for them.");
+    ("It lets go the instant the player moves or turns, which is the same instant this is");
+    ("asked again - so nobody is held by a glance the player has already finished.");
+    bless_people_hold_replace(held_before, held, cone);
   }
   function held_people() {
     return held;

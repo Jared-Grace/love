@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_jhn10 } from "./bible_glyph_chapter_jhn10.mjs";
 import { bible_glyph_chapter_jud01 } from "./bible_glyph_chapter_jud01.mjs";
 import { bible_glyph_chapter_3jn01 } from "./bible_glyph_chapter_3jn01.mjs";
 import { bible_glyph_chapter_2jn01 } from "./bible_glyph_chapter_2jn01.mjs";
@@ -57,7 +58,10 @@ export function bible_glyph_chapters() {
   "AND IT IS THE LETTER WITH THREE MEN'S NAMES IN IT AND NOT ONE OF THEM DRAWN. Gaius, Diotrephes and Demetrius stay in English by the rule that turned down the twenty sixth of Jeremiah, and then the seventh verse draws THE Name. So the chapter that most tests the no-proper-names rule is the chapter where that rule says the most.";
   "THE TWENTY FIRST IS THE THIRD WHOLE BOOK IN A ROW AND THE THIRD FOR NOTHING, AND IT IS THE ONE THAT SETTLES THE ARGUMENT. The two entries above it are the two shortest books in the New Testament, so a sceptic could read their free cost as short books being cheap. Jude is nearly twice the length of either and goes where neither goes - angels, the sea, Egypt, the last judgment - and it still asked for no picture at all. Cheapness on unfamiliar ground is a property of the table; cheapness on home ground was only a property of the neighbourhood.";
   "AND ITS FIFTH VERSE PUTS THE CROSS IN THE EXODUS. The Greek there reads Iesous and the sentence is about bringing a people out of Egypt, so the mark that stands beside the man from Nazareth everywhere else in this list stands here beside Sinai. Nothing was smoothed to spare the reader that, because the rule is that the mark is drawn where the word is. It is the first place in this Bible where the pictures walk a reader into a hard reading rather than around it.";
-  "Twenty one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE TWENTY SECOND IS THE FIRST CHAPTER A PICTURE WAS BOUGHT FOR BEFORE THE CHAPTER WAS THOUGHT OF. The note beside the shepherd and the sheep in the Greek table has said since the day they were borrowed that a reader who learns the ewe in the psalms meets the same animal in the tenth of John. Two psalms were written on the strength of that sentence and this is the other end of it: the twenty third has the LORD as one man's shepherd, the hundredth has the nation as His flock, and the eleventh verse here says I am the good shepherd in the same two marks. The eighteenth entry says a promise about a mark can be kept a commit later; this one was kept a fortnight later and across a testament.";
+  "AND IT WAS NINTH ON THE SURVEY, WHICH IS THE SECOND TIME A HIGHER SHARE WAS TURNED DOWN. The thirteenth entry reached past three chapters for the Ten Commandments and its note says what makes such a reach honest - the measurement is asked first and out loud, and the reason given is one the measurement could not have found. Four of the eight chapters above this one are the Revelation, whose share comes from a vocabulary of thrones and lamps this table has barely seated, and none of the eight cashes a promise the table had already made in writing. A survey cannot rank a promise, because it cannot read one.";
+  "AND THE CHAPTER FOUND A BLANK OF THE KIND NO SURVEY MEASURES, WHICH IS NOW THE THIRD. Psuche had no row in the Greek table at all while nephesh had been seated on the person since the Hebrew table was written, so the good shepherd laying down his life stood in plain English three times over. The covenant name was half seated the same way for three hundred and six verses of the prophets. A share counts those occurrences as vocabulary that cannot be drawn, which is true of the number and false of the word - and only a chapter makes somebody read the line.";
+  "Twenty two chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -82,6 +86,7 @@ export function bible_glyph_chapters() {
   let nineteenth = bible_glyph_chapter_2jn01();
   let twentieth = bible_glyph_chapter_3jn01();
   let twenty_first = bible_glyph_chapter_jud01();
+  let twenty_second = bible_glyph_chapter_jhn10();
   let chapters = [
     first,
     second,
@@ -104,6 +109,7 @@ export function bible_glyph_chapters() {
     nineteenth,
     twentieth,
     twenty_first,
+    twenty_second,
   ];
   return chapters;
 }
