@@ -1,7 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
+import { function_import_relative } from "./function_import_relative.mjs";
 import { app_index_built_card } from "./app_index_built_card.mjs";
 import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
 import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
-import { app_index_about_open } from "./app_index_about_open.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
@@ -25,8 +26,12 @@ export async function app_index(context) {
   app_index_generic(context, entries);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
-  function lambda_about() {
-    app_index_about_open(root, lambda_index_again);
+  async function lambda_about() {
+    "★ WHAT THIS OPENS IS ASKED FOR BY NAME AND NOT IMPORTED, and that is about weight rather than about tidiness. The card above decides who ever TAPS this and settles nothing about who DOWNLOADS what it opens - a bundler follows a plain import whether the branch is walked or not, so every reader of the public index was fetching the whole of what is promised about money, every section of it, in order never to be shown any of it. A name joined into a path at the moment it is wanted is something a bundler cannot see through.";
+    "It is fetched here rather than where the card asks its question, because this is the one place that names what opens; the card is handed a way to open something and is right not to know what.";
+    let f_name = fn_name("app_index_about_open");
+    let fn = await function_import_relative(f_name);
+    await fn(root, lambda_index_again);
   }
   async function lambda_index_again() {
     "about is drawn over this page rather than beside it, so coming back means drawing this page again from nothing rather than uncovering it";
