@@ -1,9 +1,8 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_subsequence_is } from "./list_subsequence_is.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statements_change_one_direction_named(
   kept,
@@ -20,8 +19,7 @@ export function js_statements_change_one_direction_named(
     let moved = text_combine_3("statements ", word_done, " and reordered");
     return moved;
   }
-  let left = list_size(changed);
-  let one = equal(left, 1);
+  let one = list_size_equal(changed, 1);
   if (one) {
     let single = text_combine("one statement ", word_done);
     return single;
