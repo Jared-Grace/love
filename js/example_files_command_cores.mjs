@@ -1,3 +1,4 @@
+import { js_identifier_wrap_copy_dir } from "./js_identifier_wrap_copy_dir.mjs";
 import { app_shared_prod_snapshot_folder } from "./app_shared_prod_snapshot_folder.mjs";
 import { js_identifier_params_delete_dir } from "./js_identifier_params_delete_dir.mjs";
 import { js_identifier_param_rename_dir } from "./js_identifier_param_rename_dir.mjs";
@@ -29,6 +30,10 @@ export function example_files_command_cores() {
     {
       name: fn_name("function_wrap"),
       core: js_identifier_wrap_dir,
+    },
+    {
+      name: fn_name("function_wrap_copy"),
+      core: js_identifier_wrap_copy_dir,
     },
     {
       name: fn_name("functions_rename_if_starts_with"),
