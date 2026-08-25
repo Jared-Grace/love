@@ -14,8 +14,8 @@ export function g_profiles_shares(profiles) {
   let total = 0;
   for (let profile of profiles) {
     total = add_1(total);
-    let names = object_property_names(profile);
-    for (let name of names) {
+    let profile_names = object_property_names(profile);
+    for (let name of profile_names) {
       let held = profile[name];
       let axis = property_get_or(counted, name, null);
       if (equal(axis, null)) {
