@@ -209,7 +209,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A whole ram all of one white glass with two thick curled white horns, standing side-on in profile on all four legs and caught fast by those horns in a low thicket of bare brown thorn branches, the thicket a tangle growing straight up out of the ground beside the ram's head with no trunk and no crown and standing no higher than the ram's own back, its branches lying across and closing over both horns so that the horns are inside the tangle and held there, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head held fast in a low tangle of bare brown thorn branches that grows straight out of the ground at the height of that head and stands no higher than the ram's own back, the branches winding across and between the horns, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -239,7 +239,7 @@ export function song_image_couplets() {
       first: "HE breathed HIS last",
       second: "and then HE died",
       symbol:
-        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing a little apart with a plain straight gap between them running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole and no part of the gap carried on below it",
+        "The veil of the temple hanging alone with nothing else in the picture, woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and torn in two from top to bottom, the two halves standing well apart with a broad plain straight gap of the flat field showing between them, that gap as wide as one of the veil's own stripes and running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole and no part of the gap carried on below it",
       symbol_ref: "Exodus 26:31, Matthew 27:51",
       same_as: 0,
     },

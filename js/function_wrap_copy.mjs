@@ -24,17 +24,8 @@ export async function function_wrap_copy(f_name) {
   let checked = await function_auto_checked(name_copy);
   return checked;
   async function lambda(ast) {
-    "A generated call arrives holding the CALLED function's own parameter names, which name nothing where it now sits - so the second half points its one argument at the answer this wrapper is already holding. Written and left, it would have read a name nobody bound.";
+    "The one line of code this adds is the copying call, given the answer the wrapper is already holding. Both halves of that - writing the call and pointing its argument at the returned value - are one named verb next door, because a call added before a return is unfinished until its arguments say something true about where it landed, and that is not particular to copying.";
     let copier = fn_name("clipboard_copy_value");
-    await js_call_add_before_return(ast, copier);
-    let name_returned = js_return_name(ast);
-    let found = js_find_call_name_includes(ast, copier);
-    let selects = list_single_item(found);
-    await js_call_argument_named_identifier_set(
-      ast,
-      selects,
-      "value",
-      name_returned,
-    );
+    await js_call_add_before_return_argument_returned(ast, copier, "value");
   }
 }
