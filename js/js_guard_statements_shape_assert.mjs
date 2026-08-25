@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -33,8 +34,7 @@ export function js_guard_statements_shape_assert(binding, guard) {
   assert(tested_is);
   let test = property_get(guard, "test");
   js_identifier_is_assert(test);
-  let block = property_get(guard, "consequent");
-  let body = property_get(block, "body");
+  let body = property_path_get_2(guard, "consequent", "body");
   let one_line_is = list_size_equal(body, 1);
   assert(one_line_is);
   let statement = list_first(body);
