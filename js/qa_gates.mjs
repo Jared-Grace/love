@@ -723,6 +723,7 @@ export function qa_gates() {
     text_split_outside_quotes_cases_gate_run,
     command_grantable_run_name_cases_gate_run,
     text_lines_ends_kept_cases_gate_run,
+    list_starts_with_cases_gate_run,
     bytes_text_try_cases_gate_run,
     app_original_bible_gloss_misaligned_gate_run,
     app_original_bible_gloss_parsings_gate_run,
