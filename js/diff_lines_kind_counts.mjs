@@ -13,11 +13,17 @@ export function diff_lines_kind_counts(changed) {
   let put_in = 0;
   let taken_out = 0;
   let code = 0;
+  let data = 0;
   for (let line of changed) {
     let kind = diff_line_kind(line);
     let code_is = equal(kind, "code");
     if (code_is) {
       code = add(code, 1);
+      continue;
+    }
+    let data_is = equal(kind, "data");
+    if (data_is) {
+      data = add(data, 1);
       continue;
     }
     let prose_is = equal(kind, "comment");
@@ -35,6 +41,7 @@ export function diff_lines_kind_counts(changed) {
     put_in,
     taken_out,
     code,
+    data,
   };
   return counts;
 }
