@@ -393,7 +393,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the window upward, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, drawn very large so that the mountain reaches almost to both sides of the window and the violet band runs from one side of the window to the other",
+        "One steep mountain standing alone, both its sides one plain flat grey from the bottom corners of the glass inside the white border upward, rising to a top that is covered over and nowhere in sight, with one thick flat band of violet glass lying straight across the mountain and holding everything above it, drawn very large so that the mountain reaches almost to the white border on both sides and the violet band runs from the white border on one side to the white border on the other",
       symbol_ref: "Exodus 19:18, Hebrews 12:18-21",
       same_as: 0,
     },
@@ -403,7 +403,7 @@ export function song_image_couplets() {
       first: "HE's coming soon",
       second: "the day draws near",
       symbol:
-        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the bottom of the window almost to the top of it and almost to both sides of it",
+        "One fig branch of plain brown wood with broad emerald green fig leaves along it, drawn very large so that it reaches from the white border at the bottom almost to the top of it and almost to the white border on both sides",
       symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
