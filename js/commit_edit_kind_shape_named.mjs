@@ -3,7 +3,6 @@ import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { equal } from "./equal.mjs";
-import { add } from "./add.mjs";
 export async function commit_edit_kind_shape_named(commit, kind) {
   "$plain kind";
   "The shape of what one hand-made edit did to one sort of changed line, said in words that carry no opinion about what sort it was.";
