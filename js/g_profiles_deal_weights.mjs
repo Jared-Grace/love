@@ -1,22 +1,26 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { g_profiles_deal_weights_fit } from "./g_profiles_deal_weights_fit.mjs";
-import { g_profile_target_shares } from "./g_profile_target_shares.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
-export function g_profiles_deal_weights(remaining, owed, left) {
+export function g_profiles_deal_weights(
+  remaining,
+  owed,
+  left,
+  names,
+  values_by_name,
+) {
   "One weight per person still in the deck, fitted so that the next card drawn moves every axis at once toward what the cast is still owed.";
   "Fitted rather than calculated, because the axes are NOT independent. A share can be written for gender and a share for age, but the deck holds no row for every pairing of them - the sieve withholds Roman office from women, and marriage and children from the young - so a weight worked out one axis at a time lands right on that axis and wrong on the next. Rescaling each axis in turn, over and over, is what lets all seven come out near their share together.";
   "Rescaling one axis unsettles the ones already done, which is why it repeats rather than passing once. Four passes was measured: the spread stops moving after about that, and at four every one of the forty-seven values landed within two points of its share.";
   "OWED is counted down as cards leave, so this is asked afresh for every draw. That is the whole reason the deal hits its target where a single fitting did not - a group that is running short pulls harder as it empties, and one already satisfied stops pulling. Fitted once against the whole deck instead, the scarce groups were drained early and came out five to nine points light.";
   "A group owed nobody is floored rather than zeroed. Zero would multiply that person's weight away for good, and the same person is still wanted by the six other axes - so it has to become unlikely without becoming impossible.";
-  let shares = g_profile_target_shares();
-  let names = object_property_names(shares);
+  "THE AXIS NAMES AND THE VALUES ON EACH AXIS ARE HANDED IN RATHER THAN LOOKED UP, and that is a fact about cost rather than about taste. They are the same seven words and the same forty-seven values on every draw of a deal, and a deal draws a card for every person in the cast - so read here they were built two hundred and twenty-nine times over for an answer that never changed. The caller already holds them, because counting out what the cast is owed is the same walk over the same table. The deal that comes out is the same deal, person for person, which is how the change was checked.";
+  arguments_assert(arguments, 5);
   let groups = {};
   for (let name of names) {
-    let table = property_get(shares, name);
-    let values = object_property_names(table);
+    let values = property_get(values_by_name, name);
     let by_value = {};
     for (let value of values) {
       property_set(by_value, value, []);
@@ -38,6 +42,7 @@ export function g_profiles_deal_weights(remaining, owed, left) {
   g_profiles_deal_weights_fit(
     passes,
     names,
+    values_by_name,
     groups,
     owed,
     weights,

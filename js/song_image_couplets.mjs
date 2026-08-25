@@ -106,6 +106,8 @@ export function song_image_couplets() {
   "three of those four faults were the reserved colour arriving in a part of the picture nobody had named, which is this file's oldest lesson wearing a new coat. The veil had never said what it hangs from, and a temple veil in life hangs on hooks of gold - so the rod came back gold, exactly as the chalice and the horn and the border did before it. Naming the rod grey iron is the fix and forbidding gold again would not have been, because the gold rule is already said twice in the style and was already being read.";
   "the mountain was cut rather than corrected, and the cut is the correction. Every repair to it had been an addition, so it had grown to seven clauses and about a thousand characters - and the style file has measured three separate times that a rule six hundred characters in stops being read, which is precisely where the fire clause had ended up. What came back was a volcano with its peak showing, which is the front of the sentence obeyed and the back of it not read at all. Said in three clauses instead, the mountain is buried, the smoke fills the window and the fire is one band; nothing was given up except the refusals, and the refusals were the words naming the volcano.";
   "the fig shoot failed on width and not on wording, and the style file predicted it in advance. The plant was drawn exactly as asked - tender, smooth, leaves only just opened, closed buds at the tip - and the field around it came back a jumble of lobes, because a single slender stem leaves both sides of the window empty for most of its height and the drawing will not leave a large area alone. The recorded remedy is to say which part of the thing reaches the sides, so the leaves now run the whole length of the shoot instead of clustering at its top, which is also the truer reading of a branch that sprouts leaves.";
+  "ten couplets said no width at all, and seven of them have now been told one - which is this table paying a bill the style file wrote down and nobody had gone through the table to settle. The remedy has been measured twice over there: a symbol that leaves the sides of the window empty gets a chequered field, and the cure is to take the space away by naming which part of the thing reaches the sides. It had only ever been applied to whichever couplet was being redrawn that hour, so the couplets nobody had complained about still had the fault waiting in them.";
+  "which part spans is chosen from the object and never invented for it, and that is what kept three of the ten out. A beam, a ring, a crossbar, a crossguard, a helmet and a teardrop's round foot are all really the widest part of the thing, so telling them to reach the sides asks for a large drawing of the object rather than a distorted one. A scourge hangs limp by its own description, a herald's trumpet stands on end, and an alabaster flask is called tall and narrow in the same sentence - so widening any of those three would be drawing something else and calling it the same symbol. Biblical shape outranks a field rule here for the same reason it outranks pane count.";
   "the mountain now has two summits instead of one, and that is the summit fault moved rather than cured. Told that its slopes rise out of the two bottom corners and go up under the smoke while they are still wide apart - which was written to stop them meeting at a point - what came back was two separate grey triangles with a valley between them, which is two mountains, and Sinai is one. The drawing before it had the same two peaks and a fanned lunette besides, so the newer one is kept as the better window rather than as a solved couplet. What has not been tried is bringing the smoke down instead: a mountain whose slopes leave the bottom corners and are inside the smoke before they are halfway up has no room to form a summit at all, and needs no clause about where the slopes end.";
   "naming the rod cost more than the gold it saved, and the trade is the lesson rather than the rod. The veil was coming back hanging from a gold rail, so the rail was named as grey iron on this file's own hole-filling rule - and what came back was a small curtain on a white pole, four narrow stripes wide, reaching neither the sides of the window nor the bottom of it, where the drawing before had filled the whole window. A fixture named is a fixture drawn, and a thing that hangs from a named fixture is drawn the size that fixture wants. So the rod is gone again and the veil is told instead that its top edge runs from border to border with nothing at all above it, which closes the same hole by saying where the veil ends rather than by adding a second object to the picture.";
   "the tomb keeps a broken field on purpose, and that is the one exception the style file writes down itself. A face of rock is a symbol that is also a background, so the field clause and the symbol are pointed at the same pixels and the field clause is the one that loses; the note there says the leftover-field fault is cheaper to accept than to cure. The tomb, its dark mouth, the light inside it and the round stone rolled clear all drew correctly, so it was kept with the mosaic behind it rather than drawn again for a fault that has no fix.";
@@ -121,7 +123,7 @@ export function song_image_couplets() {
       first: "falsely accused",
       second: "unjustly tried",
       symbol:
-        "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam",
+        "A pair of scales tilted hard over to one side, its beam steeply slanted and never level, the left pan pushed right down almost to the foot of the stand and the right pan swung high up near the top of the beam, drawn very large so that the two ends of the beam reach almost to the white border on both sides",
       symbol_ref: "Proverbs 11:1, Micah 6:11, Amos 8:5",
       same_as: 0,
     },
@@ -151,7 +153,7 @@ export function song_image_couplets() {
       first: "the KING of kings",
       second: "was crowned with thorns",
       symbol:
-        "A crown of thorns, a few thick woody thorn branches twisted into one ring",
+        "A crown of thorns, a few thick woody thorn branches twisted into one ring, drawn very large so that the ring reaches almost to the white border on both sides and almost to the top and the bottom of it",
       symbol_ref: "Matthew 27:29",
       same_as: 0,
     },
@@ -161,7 +163,7 @@ export function song_image_couplets() {
       first: "HIS hands HIS feet",
       second: "nailed to the tree",
       symbol:
-        "Three long iron nails, every one of the three the same plain grey iron from its head to its point, laid crossing one another",
+        "Three long iron nails, every one of the three the same plain grey iron from its head to its point, laid crossing one another, drawn very large so that the nails reach almost to the white border on both sides and almost to the top and the bottom of it",
       symbol_ref: "John 20:25, Colossians 2:14",
       same_as: 0,
     },
@@ -171,7 +173,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty",
+        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border",
       symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
@@ -261,7 +263,7 @@ export function song_image_couplets() {
       first: "the wrath of GOD",
       second: "was satisfied",
       symbol:
-        "A sword put away, standing upright with its point downward and the whole of its blade inside a long plain brown leather sheath, the sheath running from the middle of the window right down almost to the bottom of it, and above the sheath's mouth a straight crossguard of grey iron, a short grey grip above the crossguard, and one round grey pommel at the very top",
+        "A sword put away, standing upright with its point downward and the whole of its blade inside a long plain brown leather sheath, the sheath running from the middle of the window right down almost to the bottom of it, and above the sheath's mouth a straight crossguard of grey iron reaching almost to the white border on both sides, a short grey grip above the crossguard, and one round grey pommel at the very top",
       symbol_ref: "Zechariah 13:7",
       same_as: 0,
     },
@@ -336,7 +338,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "then pilate put",
       second: "the guard in place",
-      symbol: "A Roman soldier's helmet in grey iron, empty and set down",
+      symbol:
+        "A Roman soldier's helmet in grey iron, empty and set down, drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Matthew 27:66",
       same_as: 0,
     },
@@ -450,7 +453,7 @@ export function song_image_couplets() {
       first: "for every tear",
       second: "HE'll wipe away",
       symbol:
-        "One single teardrop of blue glass all of one blue throughout, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch and its round foot near the bottom of the window",
+        "One single teardrop of blue glass all of one blue throughout, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides",
       symbol_ref: "Revelation 21:4",
       same_as: 0,
     },
