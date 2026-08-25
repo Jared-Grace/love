@@ -419,7 +419,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "One mountain buried in smoke, with no peak and no summit and no top of any kind anywhere in the picture, only the lower part of its two plain grey slopes showing at the very bottom of the window and rising a little way from the bottom corners before they go into the smoke, and the smoke itself thick grey glass in a few broad round lobes piled one above another, filling the whole window from the white border on one side to the white border on the other and standing right up to the head of the arch, and low down where the slopes go into the smoke one broad band of ruby red fire burning along the mountain from one side of it to the other",
+        "One mountain buried in smoke, with no peak and no summit and no top of any kind anywhere in the picture, all that is drawn of the mountain being two plain grey slopes at the very bottom of the window, one climbing out of the bottom left corner and the other out of the bottom right corner and each of them going up under the smoke and ending there while the two are still wide apart, so that they are two grey wedges rising into the smoke from the two corners and nowhere in the picture do they meet or come together, and the smoke itself thick grey glass in a few broad round lobes piled one above another, filling the whole window from the white border on one side to the white border on the other and standing right up to the head of the arch, and low down where the slopes go into the smoke one broad band of ruby red fire burning along the mountain from one side of it to the other",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },

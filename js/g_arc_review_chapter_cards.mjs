@@ -1,5 +1,4 @@
 import { g_npc_cast_dealt_nicknames } from "./g_npc_cast_dealt_nicknames.mjs";
-import { g_npc_nicknames } from "./g_npc_nicknames.mjs";
 import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
 import { property_get } from "./property_get.mjs";
 import { number_from_text } from "./number_from_text.mjs";
