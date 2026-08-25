@@ -11,9 +11,10 @@ export function app_g_bless_wash(wash, cone) {
   ("Lights the ground the player is looking at, one pale square per tile the cone reaches.");
   ("EXACTLY one square per tile, and that is a rule about the drawing and not only about");
   ("the arithmetic. The squares are see-through, so two laid on the same tile make a paler");
-  ("patch than a tile with one on it, and the street reads as having several strengths of");
-  ("light in it when it is meant to have one. Anything added to this list has to be checked");
-  ("for tiles already in it, and the cheapest way to pass that check is to add nothing.");
+  ("patch than a tile with one on it - and since the strength of a square now says how far");
+  ("off it is, a doubled tile does not merely look wrong, it says the wrong distance.");
+  ("Anything added to this list has to be checked for tiles already in it, and the cheapest");
+  ("way to pass that check is to add nothing.");
   ("The people being held are NOT lit separately for that reason. They may not walk out of");
   ("the cone, so the ground they stand on is cone ground already, and lighting it again");
   ("only made a second layer on the squares they happened to be on.");
@@ -27,11 +28,19 @@ export function app_g_bless_wash(wash, cone) {
   ("hides the person standing on it.");
   html_clear(wash);
   let tiles = bless_cone_tiles(cone);
+  let depth = property_get(cone, "depth");
   function tile_light(tile) {
     let square = html_div(wash);
     g_img_square_style_position(square, tile, "ground_tint");
+    ("Which row of the cone the tile is in is asked of the cone's own arithmetic rather than");
+    ("worked out from the two sets of coordinates here, so the drawing cannot come to");
+    ("disagree with the rule about who can be seen.");
+    let x = property_get(tile, "x");
+    let y = property_get(tile, "y");
+    let r = bless_cone_ahead_across(cone, x, y);
+    let ahead = property_get(r, "ahead");
     html_style_assign(square, {
-      background: app_g_bless_color_looking(),
+      background: app_g_bless_color_looking(ahead, depth),
       "pointer-events": "none",
     });
   }
