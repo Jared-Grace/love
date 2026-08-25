@@ -26,6 +26,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
   "THE PERSON IS DRAWN IN THE GAME'S OWN COLOUR FOR THEIR GENDER, in both the shades the game keeps: the wash goes behind their name, the ink goes on their name and on every word they speak anywhere down the arc. So who is a man and who is a woman is answered by the page rather than by remembering which of these names belongs to whom, and a reviewer who has just come from the game is not asked to learn a second set of colours for the same people.";
   "THE WASH HUGS THEIR NAME RATHER THAN CROSSING THE PAGE. Laid across the whole width it was a bright band the eye went to before anything else on the screen, which is the wrong thing to be loudest on a page whose subject is the words underneath it. Held to the name it is the same shape as the bubble the game draws that person's speech in, and it says the same thing at a tenth of the volume.";
   "THE RAIL OF THEIR OWN LEVEL IS COLOURED TOO, which is what makes the answer survive scrolling. An arc is many screens long and the heading is on the first of them; the rail is beside every line of it, so the gender is still being stated at the bottom of a long conversation where the name has been off-screen for a minute.";
+  "THE THREE HEADINGS FADE IN ONE DIRECTION, which is what says which of them contains which. The person is their colour at full strength on a wash, the conversation is the same colour a shade quieter, and the turn is not coloured at all - so a heading met halfway down a long scroll says how deep it is by how loud it is, without the reader counting rails.";
   "A TURN ARRIVING BEFORE ANY CONVERSATION HAS OPENED IS DRAWN AT THE PERSON'S OWN LEVEL rather than thrown away or thrown for. Every arc read so far opens its first conversation on its first turn, so this is the case that should not happen; a reviewer meeting it sees the turn sitting one rail out from where turns belong, which is both readable and plainly wrong, where a throw would have blanked the whole chapter over one arc.";
   arguments_assert(arguments, 3);
   let index = property_get(person, "index");
@@ -81,6 +82,8 @@ export function app_g_arcs_person_block(parent, person, bench) {
       let line = html_div_text(conversation_block, said);
       html_style_assign(line, {
         "font-weight": "bold",
+        color: voice_color,
+        opacity: "0.85",
       });
       let catch_up = property_get(card, "catch_up");
       let caught_up = text_empty_not_is(catch_up);
