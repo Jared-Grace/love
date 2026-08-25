@@ -1,9 +1,8 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { ebible_book_testaments } from "./ebible_book_testaments.mjs";
-import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -24,8 +23,7 @@ export function bible_glyph_groups_vocabulary() {
       for (let word of root.words) {
         let glyph = property_get(word, "glyph");
         let names = bible_glyph_group_names(glyph);
-        let a = list_size(names);
-        let single = less_than(a, 2);
+        let single = list_size_less_than_value(names, 2);
         if (single) {
           continue;
         }
