@@ -17,23 +17,6 @@ export async function bible_versions_english_choices_words_none(reference) {
   ("The passage is asked for rather than fixed, because a translation that holds fifty-six books of the sixty-six answers for one passage and not another, and which one was asked is the whole of why.");
   let usable = await bible_versions_english_choices_usable();
   let wordings = await bible_versions_english_choices_reference(reference);
-  let heard = list_map_property(wordings, bible_folder_key());
-  function silent_is(record) {
-    let wordless = property_in_list_not(record, bible_folder_key(), heard);
-    return wordless;
-  }
-  let silent = list_filter(usable, silent_is);
-  function named(record) {
-    let bible_folder = property_get(record, "bible_folder");
-    let name = property_get(record, "name");
-    let source = bible_folder_source(bible_folder);
-    let v = {
-      bible_folder,
-      name,
-      source,
-    };
-    return v;
-  }
-  let reported = list_map(silent, named);
+  let reported = bible_versions_english_choices_silent_named(usable, wordings);
   return reported;
 }
