@@ -29,7 +29,7 @@ export function app_g_bless_color_looking(ahead, depth) {
   ("exactly as it always did - it is the far rows that were added, not the near one that");
   ("was dimmed.");
   let near = 0.32;
-  let far = 0.1;
+  let far = 0.18;
   let row = subtract(ahead, 1);
   let rows = subtract(depth, 1);
   ("A cone one row deep has no distance to fade over, and asking for the fraction anyway");
