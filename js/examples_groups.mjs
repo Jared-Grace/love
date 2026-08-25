@@ -156,6 +156,7 @@ export function examples_groups() {
         "example_wrap_adds_delegating_file",
         "example_wrap_refuses_a_taken_name",
         "example_wrap_copy_adds_copying_file",
+        "example_param_delete_drops_the_argument_too",
         "example_param_new_across_files",
         "example_param_new_refuses_an_unknown_function",
         "example_param_delete_across_files",
