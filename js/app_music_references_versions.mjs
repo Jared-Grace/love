@@ -5,7 +5,8 @@ export function app_music_references_versions() {
   "ONLY THE PASSAGES THAT DIFFER ARE WRITTEN HERE. Naming a translation for all hundred passages would mean maintaining all hundred, and ninety nine of the entries would say the same word. A passage absent from this list is not undecided - it is decided the ordinary way, next door.";
   "THE NAME IS WRITTEN BESIDE THE FOLDER RATHER THAN LOOKED UP. Showing a reader which translation they are reading has to cost the page nothing, and looking a name up means fetching the thing it is written on. It is kept honest by a gate instead of by care - a name that disagrees with what the translation calls itself fails the build rather than reaching a reader.";
   "WHAT DECIDES IS THE WORDS THE LINE AND THE VERSE SHARE IN A ROW, AND NOTHING ELSE DECIDES FIRST. Every English translation on offer was read against the line that rests on the passage, and the one that says the most of that line the same way one after the other wins - counted words, not an impression. Where two of them say it equally well the older sounding one is taken, and where that still does not separate them the plainer one is. Taken in the other order the answer is the King James at every passage on the page, because it is the older sounding one everywhere, and a hundred entries all saying one word is the thing the paragraph above exists to prevent.";
-  "TIED IS NOT BETTER, SO A TIE LEAVES THE PASSAGE OUT. Reading two hundred wordings by eye and keeping whichever felt right would have written an entry here for nearly all of them; only the passages where some translation genuinely says more of the line than the usual one does are written down, which is twenty one of a hundred and one.";
+  "TIED IS NOT BETTER, SO A TIE LEAVES THE PASSAGE OUT. Reading two hundred wordings by eye and keeping whichever felt right would have written an entry here for nearly all of them; only the passages where some translation genuinely says more of the line than the usual one does are written down, which is twenty two of a hundred and one.";
+  "THE COUNTING WAS DONE TWICE, ONCE WITH THE ENDINGS OF WORDS LEFT ON AND ONCE WITH THEM TAKEN OFF, because the first way asks whether the two say the same word and misses them saying the same thing. The line sings wash all my sin and the King James says washed us from our sins, which is the whole of that verse's claim on the page and scored nothing at all until wash and washed were allowed to meet. Two passages here were found only on the second reading.";
   arguments_assert(arguments, 0);
   let versions = [
     {
@@ -52,6 +53,11 @@ export function app_music_references_versions() {
       reference: "Romans 5:9",
       bible_folder: "eng-asv",
       name: "American Standard Version (1901)",
+    },
+    {
+      reference: "Psalm 86:13",
+      bible_folder: "eng-kjv2006",
+      name: "King James (Authorized) Version",
     },
     {
       reference: "Revelation 1:5",
