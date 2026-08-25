@@ -1,10 +1,9 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { equal } from "./equal.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { property_set } from "./property_set.mjs";
 import { add_1 } from "./add_1.mjs";
-import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 export function g_profiles_shares(profiles) {
   "What share of a set of dealt people each value on each axis actually holds, out of a hundred per axis, in the same shape the target table is written in.";
   "IT IS THE SAME SHAPE AS THE TARGET ON PURPOSE, so the two can be compared value by value without either side knowing which axes there are. Add an axis to the deck and both tables grow one together; a reader that named its axes here would go on comparing the old ones and say nothing at all about the new one.";
@@ -35,8 +34,7 @@ export function g_profiles_shares(profiles) {
     let values = object_property_names(axis);
     for (let value of values) {
       let held = property_get_or(axis, value, 0);
-      let hundredths = multiply(held, 100);
-      let share = divide(hundredths, total);
+      let share = multiply_divide(held, 100, total);
       property_set(shares, value, share);
     }
     property_set(r, name, shares);
