@@ -47,12 +47,12 @@ export async function bible_versions_english_choices_references(references) {
       let name = property_get(record, "name");
       let texts = property_get(record, "texts");
       let text = property_get_or_null(texts, reference);
-      let v = {
+      let worded = {
         bible_folder,
         name,
         text,
       };
-      return v;
+      return worded;
     }
     let wordings = list_map(reads, wording);
     let held = list_filter_property_not(wordings, "text", null);
