@@ -37,8 +37,9 @@ export function app_shared_bible_offline_body(container, languages) {
   each(listed, lambda);
   app_shared_bible_offline_save_all(card, listed, on_change);
   let folders = ebible_offline_folders_get();
-  let any = list_empty_not_is(folders);
-  if (any) {
+  ("more than one saved, never merely one: with a single language saved, that language's own row already carries a button freeing exactly it, and a second button beside it freeing 'all' frees the same one thing. Two buttons doing one thing is a reader stopping to work out how they differ, and the answer is that they do not - the same reason the button offering to save them all appears only when there is more than one left to save");
+  let several = list_multiple_is(folders);
+  if (several) {
     async function on_delete() {
       await ebible_offline_delete_all();
       app_shared_bible_offline_body(container, languages);

@@ -16,7 +16,7 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 export async function app_music_references_versions_gate_run() {
-  "QA gate: every passage the music page quotes from some translation other than its usual one names a translation we may lawfully ship, and calls it what that translation calls itself.";
+  "QA gate: every passage the music page quotes from some translation other than its usual one names a translation we may lawfully ship, calls it what that translation calls itself, names a passage a song actually rests on, and gets words back from it there.";
   "THE NAME IS A SECOND COPY, AND THIS IS WHAT KEEPS IT HONEST. The chosen translation is written down twice on purpose - once as the folder its chapters sit in, and once as the name shown to a reader - so that labelling a verse costs the page no fetch. Two copies of one fact drift, and this one would drift silently: the page would show the King James under whatever word was typed beside it, and a wrong label on a right verse looks exactly like a right label.";
   "IT ALSO ASKS WHETHER THE TRANSLATION MAY BE QUOTED AT ALL. Choosing a wording is done by reading translations side by side, and that reading includes ones we may not ship - so the way a forbidden wording gets onto the page is somebody copying the folder name of the one that read best. There is nothing about a folder name that says which of the two it was.";
   "The usual translation is checked alongside the exceptions, because it is written the same way and is the one every other passage on the page is labelled with.";
