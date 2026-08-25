@@ -1,3 +1,4 @@
+import { examples_data_write_fresh } from "./examples_data_write_fresh.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { path_join } from "./path_join.mjs";
@@ -17,7 +18,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { function_select_apply_args_auto } from "./function_select_apply_args_auto.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { scripts_temp_delete } from "./scripts_temp_delete.mjs";
-import { examples_data_write } from "./examples_data_write.mjs";
 export async function example_new_from_temp(
   example_name,
   group_name,
@@ -74,7 +74,7 @@ export async function example_new_from_temp(
     apply_args,
   );
   await scripts_temp_delete(file_name);
-  await examples_data_write();
+  await examples_data_write_fresh();
   let r = {
     example_name,
     group_name,
