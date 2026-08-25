@@ -14,9 +14,8 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_statements_change_gaps_or_null(texts_before, texts_after) {
   "The places a run of statements was edited, given the run written out before and after, each place said as where it starts on either side and how many lines went out and came in there - or nothing at all, where the run cannot be lined up.";
-  "THE LINES STILL STANDING ARE WHAT THE TWO SIDES ARE LINED UP ON. A statement written the same way on both sides did not move, so an edit is whatever sits between one such line and the next. That turns a whole-run comparison, which can only ever say how many went in and how many came out, into a list of separate places - and a place is what a command is pointed at, where a total is not.";
-  "A LINE STANDING TWICE MAKES THE LINING UP A GUESS. Two identical statements in one run give no way to say which of them the surviving one on the other side answers to, and every place worked out after that rests on the guess. There is no honest naming of a run like that, so nothing comes back and the caller keeps the name it already had.";
-  "A REORDERING IS HANDED BACK AS NOTHING TOO. Where the surviving lines come back in another order, the edit shuffled the run as well as changing it, and there are no places to walk at all: what sits between two survivors on one side is not what sits between the same two on the other.";
+  "THE LINES STILL STANDING ARE WHAT THE TWO SIDES ARE LINED UP ON, and which lines those are is asked for next door along with whether they can be lined up at all. An edit is then whatever sits between one survivor and the next, which turns a whole-run comparison - it can only ever say how many went in and how many came out - into a list of separate places, and a place is what a command is pointed at where a total is not.";
+  "NOTHING COMES BACK WHEREVER THE LINING UP DOES, and it is handed straight on rather than judged again here. The caller then keeps the name it already had, which is the right answer to a run nobody can honestly say where the edit fell in.";
   arguments_assert(arguments, 2);
   let kept_before = js_statements_kept_or_null(texts_before, texts_after);
   let unlined = null_is(kept_before);

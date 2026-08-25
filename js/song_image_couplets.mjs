@@ -249,7 +249,7 @@ export function song_image_couplets() {
       first: "HE breathed HIS last",
       second: "and then HE died",
       symbol:
-        "The veil of the temple hanging alone with nothing else in the picture, torn in two from top to bottom, the two halves standing well apart with a broad plain straight gap of the flat field showing between them as wide as one of the veil's own stripes, that gap running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole, each half woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side, and the whole veil hanging from one plain straight rod of grey iron running across the top of it",
+        "The veil of the temple hanging alone with nothing else in the picture, torn in two from top to bottom, the two halves standing well apart with a broad plain straight gap of the flat field showing between them as wide as one of the veil's own stripes, that gap running the whole height of the veil from its very top edge down to its bottom hem and ending there, with the glass below the hem left plain and whole, each half woven in broad upright stripes of deep cobalt blue, violet, ruby red and white standing side by side and no stripe any other colour, the veil drawn very large so that its top edge runs straight across from the white border on one side to the white border on the other with nothing at all hanging above it, and its hem falling near the bottom of the window",
       symbol_ref: "Exodus 26:31, Matthew 27:51",
       same_as: 0,
     },
