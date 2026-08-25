@@ -1,10 +1,10 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { list_sorted_text_is } from "./list_sorted_text_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 import { baselines_known_holding } from "./baselines_known_holding.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_replace } from "./list_replace.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -23,8 +23,7 @@ export async function baselines_name_rename(name_before, name_after) {
   let unread = property_get(found, "unread");
   let clashes = [];
   for (let holder of holders) {
-    let known = property_get(holder, "known");
-    let taken = list_includes(known, name_after);
+    let taken = property_list_includes(holder, "known", name_after);
     if (taken) {
       let f_name = property_get(holder, "f_name");
       list_add(clashes, f_name);
