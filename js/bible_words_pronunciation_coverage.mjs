@@ -1,3 +1,4 @@
+import { set_includes_not } from "./set_includes_not.mjs";
 import { text_digits_is } from "./text_digits_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_names_apart } from "./bible_words_names_apart.mjs";
@@ -8,7 +9,6 @@ import { not } from "./not.mjs";
 import { pronunciation_dictionary_path } from "./pronunciation_dictionary_path.mjs";
 import { pronunciation_dictionary_words } from "./pronunciation_dictionary_words.mjs";
 import { property_get } from "./property_get.mjs";
-import { set_includes } from "./set_includes.mjs";
 export async function bible_words_pronunciation_coverage(bible_folder) {
   "$plain bible_folder";
   "How much of one bible's vocabulary the pronouncing dictionary on this machine already knows, counted apart for names and for ordinary words, with the words it does not know handed back rather than only counted.";
@@ -30,8 +30,7 @@ export async function bible_words_pronunciation_coverage(bible_folder) {
   let entries = await pronunciation_dictionary_words(path);
   let known = list_unique_set(entries);
   function unknown_is(word) {
-    let heard = set_includes(known, word);
-    let n = not(heard);
+    let n = set_includes_not(known, word);
     return n;
   }
   let names_missing = list_filter(names, unknown_is);
