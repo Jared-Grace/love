@@ -1,3 +1,4 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_code_screen_hash_key } from "./app_code_screen_hash_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +12,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_includes } from "./text_includes.mjs";
 export function app_code_happy_trail_quizzes_skipped(trail) {
   "the quiz screens a walk went past without answering them, read back out of the trail it left";
   "A quiz costs at least two presses that land: the answer, and then the way on. Fewer than two means the walk found the way on already standing there before the question had been answered, pressed it, and never answered anything - so the quiz was on the screen and was not taken.";
@@ -62,8 +62,7 @@ export function app_code_happy_trail_quizzes_skipped(trail) {
     if (not(few)) {
       return false;
     }
-    let url = property_get(r, "url");
-    let quiz = text_includes(url, quiz_marker);
+    let quiz = property_text_includes(r, "url", quiz_marker);
     return quiz;
   }
   let skipped = list_filter(runs, lambda2);
