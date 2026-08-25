@@ -1,3 +1,4 @@
+import { set_includes_not } from "./set_includes_not.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -10,7 +11,6 @@ import { not } from "./not.mjs";
 import { pronunciation_dictionary_path } from "./pronunciation_dictionary_path.mjs";
 import { pronunciation_dictionary_words } from "./pronunciation_dictionary_words.mjs";
 import { property_get } from "./property_get.mjs";
-import { set_includes } from "./set_includes.mjs";
 export async function bible_names_transliterated_coverage(bible_folder) {
   "$plain bible_folder";
   "How the bible's names would be said, counted three ways: the ones an English pronouncing dictionary already knows, the ones only the interlinear transliteration reaches, and the ones nothing here can say at all.";
@@ -23,8 +23,7 @@ export async function bible_names_transliterated_coverage(bible_folder) {
   let entries = await pronunciation_dictionary_words(path);
   let known = list_unique_set(entries);
   function unknown_is(name) {
-    let heard = set_includes(known, name);
-    let n = not(heard);
+    let n = set_includes_not(known, name);
     return n;
   }
   let missing = list_filter(names, unknown_is);
