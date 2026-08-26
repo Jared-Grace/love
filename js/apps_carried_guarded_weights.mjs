@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
-import { app_carried_guarded } from "./app_carried_guarded.mjs";
+import { app_shared_carried_guarded } from "./app_shared_carried_guarded.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_sum } from "./list_sum.mjs";
@@ -21,7 +21,7 @@ export async function apps_carried_guarded_weights() {
     hint: "there are no app entry points to weigh, which is a broken list of apps rather than a repo with nothing below a check in it",
   });
   async function main_entry(main) {
-    let guarded = await app_carried_guarded(main);
+    let guarded = await app_shared_carried_guarded(main);
     let weighed = await functions_names_weights(guarded);
     let sizes = list_map_property(weighed, "size");
     let bytes = list_sum(sizes);

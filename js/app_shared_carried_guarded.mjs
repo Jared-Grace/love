@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-export async function app_carried_guarded(a_main) {
+export async function app_shared_carried_guarded(a_main) {
   "$plain a_main";
   "Everything one app's bundle holds that sits below an environment check - a shortlist of the places where a page's half and the build machine's half were written in one file.";
   "★ IT NAMES BOTH HALVES AND NOT THE NODE ONE. The walk it subtracts stops AT the check rather than travelling the page's branch through it, so a browser-only helper reached only from below one is in this answer too, and it is not weight to remove - it is exactly what the page runs. Read it as forty places to look rather than forty faults; the reader decides which side of each check the name is on.";
