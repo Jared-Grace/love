@@ -1,3 +1,4 @@
+import { each_async } from "./each_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -27,8 +28,7 @@ export async function function_span_call_existing(
   ("The checks the named function makes are counted as no difference. A run living inside a longer function was checked once at the top of that function and never again, so the piece that comes out carries no checks and would differ from every function worth calling. A check cannot change what comes back, so allowing it cannot change what the holder does.");
   ("The scratch name is made from the holder's own name and is refused if anything already answers to it, so no existing function can be written over; it is taken away again whichever way the reading goes. What is left behind is the call and nothing else - no alias, no second name for work that already had one.");
   ("Put back from the text rather than by cutting backwards, so not one character of the holder differs when the answer is no.");
-  await function_exists_assert(f_name);
-  await function_exists_assert(f_name_call);
+  await each_async([f_name, f_name_call], function_exists_assert);
   let f_name_new = text_combine(f_name, "_span_scratch");
   await function_exists_not_assert(f_name_new);
   let before = await function_read(f_name);
