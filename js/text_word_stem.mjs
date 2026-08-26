@@ -28,7 +28,7 @@ export function text_word_stem(word) {
         let plural = equal(ending, "ies");
         let on_true = text_combine(kept, "y");
         let stemmed = ternary(plural, on_true, kept);
-        return stemmed;
+        return text_word_end_e_dropped(stemmed);
       }
     }
   }
