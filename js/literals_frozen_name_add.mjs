@@ -1,6 +1,4 @@
-import { folder_repo_love } from "./folder_repo_love.mjs";
-import { node_run } from "./node_run.mjs";
-import { json_from } from "./json_from.mjs";
+import { function_run_fresh } from "./function_run_fresh.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
@@ -61,10 +59,7 @@ export async function literals_frozen_name_add(name) {
   ("Recording follows in the same breath, because the two halves are one promise and a list naming a word nothing has read is a promise nobody is keeping. It is also what the gates check, so stopping halfway would leave them exactly as red as before.");
   ("It is asked for in a process of its own, and that is not carelessness about what a process costs - it is the only way it can see the line just written. The list is a function, and a run that has already loaded it goes on holding the version it loaded; the file changing underneath it changes nothing about what is in hand. Asked for directly from here it answered that it had added nothing, which reads exactly like the trap this exists to close.");
   let f_name2 = fn_name("literals_frozen_record_new");
-  let folder = folder_repo_love();
-  let words = ["scripts/ai.mjs", f_name2];
-  let printed = await node_run(folder, words);
-  let recorded = json_from(printed);
+  let recorded = await function_run_fresh(f_name2);
   let report = {
     name,
     added: true,
