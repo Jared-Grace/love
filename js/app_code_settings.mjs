@@ -10,7 +10,7 @@ import { emoji_check } from "./emoji_check.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_settings(context) {
-  "the gear on the lesson list opens this: the settings every app offers, plus the two things only this app can be asked - to call every lesson finished, and to forget that any of them were. It is laid out like the bible and replace settings so a learner who has met one has met them all";
+  "the gear on the lesson list opens this: the settings every app offers, plus the two things only this app can be asked - to call every lesson and review finished, and to forget that any of them were. It is laid out like the bible and replace settings so a learner who has met one has met them all";
   "Both of those two ask before they act, and each asks on a screen of its own, so what stands here is a plain list of choices with nothing that grows a question inside it and moves the rest of the list down the page.";
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
