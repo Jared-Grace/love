@@ -1,17 +1,9 @@
+import { app_code_review_preview_question_show } from "./app_code_review_preview_question_show.mjs";
 import { app_code_review_preview_fns } from "./app_code_review_preview_fns.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_buttons_cap_style } from "./app_code_buttons_cap_style.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_code_review_containers } from "./app_code_review_containers.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
-import { app_code_review_seed_from_items } from "./app_code_review_seed_from_items.mjs";
-import { app_code_review_seed_to_exercise } from "./app_code_review_seed_to_exercise.mjs";
-import { app_code_review_show_success } from "./app_code_review_show_success.mjs";
-import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
-import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 export function app_code_review_preview() {
   arguments_assert(arguments, 0);
   ("One review question, on the sandbox app at hash code_review: pick a lesson, pick one of its question kinds, and that question is drawn - the real one, out of the review's own parts.");
@@ -23,24 +15,7 @@ export function app_code_review_preview() {
   let root = html_body_div();
   let picker = html_div(root);
   let stage = html_div(root);
-  function question_show(lesson_id, kind_index) {
-    "draw one real review question for this lesson and this kind, in the review's own frame and answering the way the review answers";
-    html_clear(stage);
-    let frame = app_code_review_containers(stage);
-    let success_container = property_get(frame, "success_container");
-    let c = property_get(frame, "c");
-    let items = app_code_review_items_by_id(lesson_id);
-    let seed = app_code_review_seed_from_items(lesson_id, kind_index, items);
-    let exercise = app_code_review_seed_to_exercise(seed);
-    function on_correct(clean) {
-      "answered right - whether it was answered right first time is what the review counts, and there is nothing here counting, so all that is left is the well done";
-      app_code_review_show_success(success_container);
-    }
-    function on_incorrect() {
-      app_code_review_hide_success(success_container);
-    }
-    app_code_review_exercise(c, exercise, on_correct, on_incorrect);
-  }
+  let question_show = app_code_review_preview_question_show(stage);
   let shortlist_show = app_code_review_preview_fns(
     picker,
     stage,
