@@ -1,8 +1,8 @@
+import { app_shared_textarea_reader_direction } from "./app_shared_textarea_reader_direction.mjs";
 import { app_shared_footer_all_apps } from "./app_shared_footer_all_apps.mjs";
 import { app_message_refresh } from "./app_message_refresh.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
-import { html_textarea } from "./html_textarea.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -39,7 +39,7 @@ export async function app_message(context) {
   await app_message_refresh(div_messages, context, messages_property, start);
   let div = app_shared_container(root);
   html_div_text(div, "Please enter your message for me:");
-  let textarea = html_textarea(div);
+  let textarea = app_shared_textarea_reader_direction(div);
   html_placeholder(textarea, "Please enter your message here");
   app_shared_input_style(textarea);
   html_focus(textarea);
