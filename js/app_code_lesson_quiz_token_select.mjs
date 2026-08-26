@@ -1,43 +1,43 @@
-import { app_code_quiz_token_run_together_note_set } from "./app_code_quiz_token_run_together_note_set.mjs";
-import { list_get } from "./list_get.mjs";
+import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
+import { app_code_lesson_quiz_token_select_chosen } from "./app_code_lesson_quiz_token_select_chosen.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { html_style_code_dark } from "./html_style_code_dark.mjs";
+import { list_concat_single_right } from "./list_concat_single_right.mjs";
+import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
+import { app_code_quiz_token_run_together_note_set } from "./app_code_quiz_token_run_together_note_set.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
+import { each } from "./each.mjs";
+import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_first } from "./list_first.mjs";
+import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
+import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
+import { text_index_of_from_start } from "./text_index_of_from_start.mjs";
+import { list_reduce } from "./list_reduce.mjs";
+import { text_take } from "./text_take.mjs";
+import { html_clear } from "./html_clear.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { lists_equal_pair } from "./lists_equal_pair.mjs";
+import { list_any } from "./list_any.mjs";
+import { log } from "./log.mjs";
+import { sleep_seconds } from "./sleep_seconds.mjs";
+import { list_size } from "./list_size.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
+import { list_unique } from "./list_unique.mjs";
+import { list_includes_not } from "./list_includes_not.mjs";
+import { html_remove } from "./html_remove.mjs";
+import { list_get } from "./list_get.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_code_lesson_quiz_token_select_chosen } from "./app_code_lesson_quiz_token_select_chosen.mjs";
-import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
-import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
-import { sleep_seconds } from "./sleep_seconds.mjs";
-import { html_remove } from "./html_remove.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_skip } from "./list_skip.mjs";
-import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { text_index_of_from_start } from "./text_index_of_from_start.mjs";
-import { text_take } from "./text_take.mjs";
-import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
-import { list_first } from "./list_first.mjs";
-import { lists_equal_pair } from "./lists_equal_pair.mjs";
-import { list_any } from "./list_any.mjs";
-import { each } from "./each.mjs";
-import { list_add } from "./list_add.mjs";
-import { html_div_code_dark } from "./html_div_code_dark.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_concat_single_right } from "./list_concat_single_right.mjs";
-import { log } from "./log.mjs";
-import { html_style_code_dark } from "./html_style_code_dark.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_reduce } from "./list_reduce.mjs";
 export function app_code_lesson_quiz_token_select(
   parent,
   info,
@@ -45,12 +45,14 @@ export function app_code_lesson_quiz_token_select(
   on_success,
   on_wrong,
   batch_get,
+  correction_code_set,
 ) {
   "A quiz where the student builds one line of code by tapping its pieces in order, out of a row of buttons holding every piece the line needs and no others.";
   "More than one order can be right, so what is kept is the whole set of orders still possible rather than one expected answer. A tap that no surviving order begins with is wrong and the button says so; a tap that some order begins with keeps those orders and drops the rest. The question is answered when one of the survivors has been spelled out exactly.";
   "That set is also what the row of buttons is trimmed from. After each tap, a piece that no surviving order still needs is taken away - so the buttons left standing are always the pieces that could come next, and the student is never left staring at a piece there is no longer any way to use.";
   "What is shown back is the code itself rather than the pieces tapped. The first surviving order is written out as a line and cut off where the student has got to, so the spacing and the punctuation are the ones the finished line will have, and what appears is a line of code growing rather than a list of words.";
   "A wrong tap that put two pieces side by side which real code writes as a third piece is answered in words as well as in red, under the line being built. That mistake is a reading of the language rather than a slip, so the red button alone would leave the reader to guess at something the row of pieces can never show them.";
+  "THE ORDER BEING AIMED AT IS SAID OUT LOUD after every tap that is accepted, because it is the answer this quiz would have to show if the student asked to see one. The line can be built several ways, and which of them is still reachable is known here and nowhere else. A student who has correctly built 2 * and asks for the answer must be shown 2 * 3 + 2 and not 2 + 2 * 3, or the screen tells them their own first two pieces were a mistake when they were not.";
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
   let r = app_code_lesson_quiz_token_select_variation_buildable(
@@ -90,6 +92,7 @@ export function app_code_lesson_quiz_token_select(
         let variation_first = list_first(variations);
         let merged = app_code_quiz_string_tokens_merge(variation_first);
         let code = js_tokens_to_code(merged);
+        correction_code_set(code);
         function lambda5(index, token_each) {
           let sum = text_index_of_from_start(code, token_each, index);
           return sum;
