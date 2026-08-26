@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -20,7 +22,11 @@ export function js_list_type_module_item(ast, node_type) {
     "ExportAllDeclaration",
   ];
   list_includes_assert_json(module_item_types, node_type, {
-    hint: "only a kind the language confines to the top of a module can be read off the module's own list - ask js_list_type for anything else",
+    hint: text_combine_multiple([
+      "only a kind the language confines to the top of a module can be read off the module's own list - ask ",
+      fn_name("js_list_type"),
+      " for anything else",
+    ]),
   });
   let program_is = js_node_type_is(ast, "Program");
   if (not(program_is)) {
