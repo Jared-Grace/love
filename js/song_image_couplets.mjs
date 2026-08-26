@@ -362,7 +362,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line solid black and everything above it deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, so shallow that it is almost a straight line and only barely bows upward in the middle, ten times wider than it is tall, reaching almost to the white border on both sides, the black ground below the line one whole unbroken sheet with nothing standing on it and nothing rising out of it, and the blue sky above one whole unbroken sheet with nothing hanging in it",
+        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line solid black and everything above it deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, so shallow that it is almost a straight line and only barely bows upward in the middle, ten times wider than it is tall, reaching almost to the white border on both sides, the black ground below the line one single flat pane of black glass unbroken from side to side and from that line right down to the white border, and the sky above one single flat pane of deep cobalt blue unbroken from side to side and from that line right up to the head of the arch",
       symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
@@ -373,7 +373,7 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, the light coming from inside the tomb itself so that every white ray starts within the mouth and passes out through it and widens across the field as it goes, and no ray ever starts behind the rock or above it, and ",
+        " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, and the rays of white light springing out of that sheet itself, each ray at its narrowest where it stands inside the mouth and widening only once it is out past the edge of the mouth, so that every ray can be followed back to a foot inside the opening, and ",
         r5,
         " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, big enough to have covered the whole opening and more, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
