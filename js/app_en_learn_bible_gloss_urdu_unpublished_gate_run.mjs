@@ -1,5 +1,5 @@
+import { app_en_learn_bible_gloss_urdu_unpublished_upload } from "./app_en_learn_bible_gloss_urdu_unpublished_upload.mjs";
 import { app_en_learn_bible_gloss_urdu_generate_upload_namespace } from "./app_en_learn_bible_gloss_urdu_generate_upload_namespace.mjs";
-import { app_en_learn_bible_gloss_urdu_chapter_upload_stored } from "./app_en_learn_bible_gloss_urdu_chapter_upload_stored.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { app_en_learn_bible_gloss_urdu_passages } from "./app_en_learn_bible_gloss_urdu_passages.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -19,7 +19,7 @@ export async function app_en_learn_bible_gloss_urdu_unpublished_gate_run() {
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",
-    app_en_learn_bible_gloss_urdu_chapter_upload_stored.name,
+    app_en_learn_bible_gloss_urdu_unpublished_upload.name,
   ]);
   let r = gloss_chapters_offenders_assert(walked, "en_learn_bible", fault);
   return r;
