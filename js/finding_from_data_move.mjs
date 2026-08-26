@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { function_name_to_path_absolute } from "./function_name_to_path_absolute.mjs";
 import { function_source_to_repoint } from "./function_source_to_repoint.mjs";
 import { equal_not } from "./equal_not.mjs";
@@ -29,7 +30,7 @@ export async function finding_from_data_move(name, path_fn_name) {
   let repo = folder_repo_love();
   let data = data_folder();
   let records = findings_folder();
-  let leaf = text_combine(name, ".json");
+  let leaf = text_combine(name, json_extension());
   let from_spelled = path_join([data, leaf]);
   let to_spelled = path_join([records, leaf]);
   let from = path_join([repo, from_spelled]);
