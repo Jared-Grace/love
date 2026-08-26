@@ -274,6 +274,9 @@ export function examples_notes() {
       "a twin that also copies the answer - a wrapper whose behaviour is fixed, rather than one command taking a function name to run, so it can be approved once and left alone",
     example_param_delete_drops_the_argument_too:
       "dropping a parameter and the argument every caller passes in one move - the position is read once off the definition, because deleting only the parameter leaves every call still parsing and wrong",
+    example_wrap_copy_refuses_a_taken_name: "the refusal for the one wrapping verb never told the name it writes - it works the twin's name out, so the file it would write over is the very one somebody wrote by hand for the same purpose",
+    example_param_delete_refuses_a_name_it_never_binds: "the same refusal as the list-taking verb beside it, written down for the single-name one - a guard standing on only one side of a pairing is what goes stale unnoticed",
+    example_span_call_existing_refuses_different_work: "the refusal that has to cut before it can read - and the one place the two halves of a pairing refuse differently, one throwing where the other puts the holder back",
   };
   return notes;
 }
