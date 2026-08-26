@@ -9,8 +9,9 @@ import { text_split_search_terms } from "./text_split_search_terms.mjs";
 export function functions_search_family_or_null(names, search) {
   "The longer word every name in a search's answer begins with, when there is one, and nothing at all when the answer is not one family.";
   ("A full answer is the dangerous one. An empty search announces itself and sends the asker back to their words, but a search that returns four names reads as the repo's reply, and the asker stops. On 2026-08-25 a hunt for a transform that writes a guard asked for js_guard, was handed four names all beginning ",
-    fn_name("js_guard_statements"),
+    text_frozen("js_guard_statements"),
     ", read that as a reader with no writer, and recommended building a writer that had been there all along. Every one of the four shared a word longer than the word asked for. That is the whole cue, and saying it beside the answer costs nothing the asker has to remember.");
+  ("That name is frozen rather than spelled as a reference, because the sentence around it is a record of one day rather than a pointer at anything. A rename carries a reference along, and the sentence would then say four names began with a word that did not exist on the day - which is false. The word is not being used to reach the function, only to say what was on the screen.");
   ("Two things keep it quiet where it would only be noise. Two names or more, because a single name shares its whole self with itself and says nothing. And the shared beginning is measured with any trailing underscore cut off, so a beginning that only reaches the next word boundary - the text_pad_ of text_pad_left and text_pad_right - is what was asked for and not a family beyond it.");
   arguments_assert(arguments, 2);
   let few = less_than(names.length, 2);
