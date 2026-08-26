@@ -1,3 +1,4 @@
+import { js_code_literal_key_only_remembered } from "./js_code_literal_key_only_remembered.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_js_parse } from "./property_js_parse.mjs";
@@ -10,7 +11,6 @@ import { text_is } from "./text_is.mjs";
 import { not } from "./not.mjs";
 import { literal_distinctive_is } from "./literal_distinctive_is.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
 import { list_add } from "./list_add.mjs";
 export function literals_unnamed_generic_files_by_literal(
   codes,
@@ -54,7 +54,7 @@ export function literals_unnamed_generic_files_by_literal(
       held[value] = true;
     }
     for (let value of object_property_names(held)) {
-      if (js_code_literal_key_only(codes[f_name], value)) {
+      if (js_code_literal_key_only_remembered(codes[f_name], value)) {
         continue;
       }
       let files = property_get_or_null(files_by_literal, value);
