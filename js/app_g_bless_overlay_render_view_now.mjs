@@ -16,6 +16,11 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   let container_map = property_get(r, "container_map");
   let rung = property_get(r, "rung");
   let blessed = property_get(r, "blessed");
+  ("The layer the lit houses are drawn on, and the blocks whose buildings they are. Both are");
+  ("carried through here rather than fetched where they are used, because the drawing sits");
+  ("inside the closure below and the closure can only see what this record hands it.");
+  let homes = property_get(r, "homes");
+  let blocks = property_get(r, "blocks");
   let cone_get = property_get(r, "cone_get");
   let r2 = property_get(r, "r2");
   let world = property_get(r2, "world");

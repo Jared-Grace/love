@@ -9,6 +9,7 @@ export function app_g_bless_overlay_player(container_map) {
   let rung2 = property_get(r4, "rung");
   let told2 = property_get(r4, "told");
   let bar2 = property_get(r4, "bar");
+  let homes2 = property_get(r4, "homes");
   let glows2 = property_get(r4, "glows");
   let player_img_c2 = property_get(r4, "player_img_c");
   let wash2 = property_get(r4, "wash");
@@ -24,6 +25,7 @@ export function app_g_bless_overlay_player(container_map) {
     rung: rung2,
     told: told2,
     bar: bar2,
+    homes: homes2,
     glows: glows2,
     player_img_c: player_img_c2,
     wash: wash2,
@@ -41,6 +43,7 @@ export function app_g_bless_overlay_player(container_map) {
   let rung = property_get(r2, "rung");
   let told = property_get(r2, "told");
   let bar = property_get(r2, "bar");
+  let homes = property_get(r2, "homes");
   let glows = property_get(r2, "glows");
   let player_img_c = property_get(r2, "player_img_c");
   let wash = property_get(r2, "wash");
@@ -56,6 +59,7 @@ export function app_g_bless_overlay_player(container_map) {
     rung,
     told,
     bar,
+    homes,
     glows,
     player_img_c,
     wash,
