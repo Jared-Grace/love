@@ -37,9 +37,9 @@ export async function bible_glyph_chapters_collision_marks_walked() {
   let walked = 0;
   for (let chapter of chapters) {
     let chapter_code = chapter.chapter_code;
-    let testament_name = bible_chapter_testament_name(chapter_code);
-    let roots = bible_glyph_roots_testament_table(testament_name);
-    let filed = bible_glyph_roots_root_lookup(roots);
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
+    let roots = both.roots;
+    let filed = both.filed;
     let glyph_roots = bible_glyph_roots_glyph_sharers(roots);
     let collisions = bible_glyph_roots_collisions(glyph_roots);
     let shared = {};
