@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_import_expression_source_nodes } from "./js_import_expression_source_nodes.mjs";
@@ -6,7 +7,6 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -43,7 +43,6 @@ export function js_imports_module_names(ast) {
     }
     return source;
   }
-  let bare = list_map(packages, scheme_without);
-  let names = list_unique(bare);
+  let names = list_map_unique(packages, scheme_without);
   return names;
 }
