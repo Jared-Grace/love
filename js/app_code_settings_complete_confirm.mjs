@@ -8,7 +8,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_settings_complete_confirm(context) {
-  "the screen that asks before calling every lesson finished; saying yes goes straight back to the list, where the rows themselves are the whole answer and no message says it as plainly";
+  "the screen that asks before calling every lesson and every review finished; saying yes goes straight back to the list, where the rows themselves are the whole answer and no message says it as plainly";
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let check = emoji_check();
