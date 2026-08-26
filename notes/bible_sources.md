@@ -343,6 +343,49 @@ is blind to the language offered as *many*. Anywhere a list is narrowed to one e
 group before the terms are read, the entries the group holds beyond the first were never
 asked.
 
+### Guarding the chooser guarded one path of five — found 2026-08-26
+
+Carrying that shape to the next check found that the English chooser was **not** the
+only way a translation's text reaches storage, and not even the main one. A
+translation's text leaves this machine by four doors, each taking a folder name:
+`ebible_verses_upload`, `ebible_chapters_upload`, `ebible_version_books_upload`,
+`ebible_offline_version_upload`. The callers do not funnel — the wholesale sweep
+(`ebible_version_upload_refresh_all`) goes through the version door, and the
+fill-in-what-is-missing sweep (`ebible_versions_uploaded_absent_upload`) calls the
+chapters door directly — so a guard on either one alone leaves the other open. Below
+those four every step has exactly one caller, which is what makes four of them a cover
+rather than a sample.
+
+All four now call `ebible_bible_folder_commercial_assert` (the one-folder form of the
+list check) before a word is sent. `ebible_upload_doors_commercial_gate_run` (in `q`)
+proves it: the whole offered set is shippable, each of the four doors still reaches the
+check, and the check still refuses a refused text and keeps an allowed one.
+
+**A door added later will not be on that list and nothing will say so.** The list is
+named in the gate rather than derived because the sending seams (`ebible_firebase_upload`,
+`ebible_firebase_upload_path`, `ebible_firebase_upload_verse`) are called by readers and
+address builders too, so "who calls a seam" over-matches badly. To find a missing door,
+ask who calls those three and keep only the ones handed a folder to publish.
+
+### The licence reading knew one catalogue and refused the other — found 2026-08-26
+
+Putting the check on the doors turned the assert on the set the sweeps actually walk,
+and it refused `am_ulb` — the Amharic Unlocked Literal Bible. That translation is
+**CC BY-SA**, which this repo may ship; `door43_versions` says so in its own record. The
+refusal happened because `ebible_versions_commercial` derives from
+`ebible_versions_copyrights`, which reads **eBible copyright pages only**. A Door43 text
+has no such page, so it looked like a text nobody here had read any terms for — and this
+repo refuses silence rather than treating it as permission, which is the right default
+and was the wrong answer here.
+
+Fixed by `bible_versions_commercial`, which reads both catalogues: eBible's commercial
+list plus the Door43 records whose own `licence` field passes
+`ebible_licence_commercial_is`. Both asserts read the union now. **A source is a way of
+getting a text, not a different kind of duty owed for it** — so the reading of what may
+be shipped has to cover the whole shelf, and a licence check that knows one catalogue
+reports a permitted text as forbidden with exactly the confidence it reports a forbidden
+one.
+
 ## A recorded reading has two licences, not one — read 2026-08-23
 
 A generated audio file is downstream of **the words** and **the engine that spoke
