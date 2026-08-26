@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { null_is } from "./null_is.mjs";
@@ -21,7 +22,7 @@ export async function bible_versions_english_choices_references(references) {
   arguments_assert(arguments, 1);
   let usable = await bible_versions_english_choices_usable();
   async function lambda$read(record) {
-    let bible_folder = property_get(record, "bible_folder");
+    let bible_folder = property_get(record, bible_folder_key());
     let name = property_get(record, "name");
     async function read() {
       let found = await ebible_folder_references_texts(
@@ -43,7 +44,7 @@ export async function bible_versions_english_choices_references(references) {
   let reads = await list_map_limited_async(usable, lambda$read, 4);
   function passage(reference) {
     function wording(record) {
-      let bible_folder = property_get(record, "bible_folder");
+      let bible_folder = property_get(record, bible_folder_key());
       let name = property_get(record, "name");
       let text = property_nested_or_null(record, "texts", reference);
       let worded = {
