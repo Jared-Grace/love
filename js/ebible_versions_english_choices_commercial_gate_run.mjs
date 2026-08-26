@@ -25,7 +25,7 @@ export async function ebible_versions_english_choices_commercial_gate_run() {
     return missing;
   }
   let refused = list_filter(all, refused_is);
-  let door = ebible_versions_english_choices_upload.name;
+  let door = fn_name("ebible_versions_english_choices_upload");
   let check = ebible_bible_folders_commercial_assert.name;
   let path = await function_dependency_path(door, check);
   let wired = null_not_is(path);
