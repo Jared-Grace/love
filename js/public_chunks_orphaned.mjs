@@ -1,4 +1,4 @@
-import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
+import { folder_public_dev } from "./folder_public_dev.mjs";
 import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_chunks_orphaned } from "./folder_chunks_orphaned.mjs";
@@ -15,8 +15,7 @@ export async function public_chunks_orphaned() {
   "Nothing is removed here. What to do about a leftover under the folder that is being served is a question about what people have in front of them, so this only ever says what is there.";
   arguments_assert(arguments, 0);
   let prod = folder_public();
-  let f_path = app_shared_name_dev_text();
-  let dev = folder_public_join(f_path);
+  let dev = folder_public_dev();
   let f_path2 = app_shared_name_latest_text();
   let latest = folder_public_join(f_path2);
   let folders = [prod, dev, latest];
