@@ -1,7 +1,7 @@
-import { app_a_file_system_initialize_download } from "../../love/js/app_a_file_system_initialize_download.mjs";
-import { global_function_initialize_lambda_async } from "../../love/js/global_function_initialize_lambda_async.mjs";
-import { app_a } from "../../love/js/app_a.mjs";
-import { storage_local_exists } from "../../love/js/storage_local_exists.mjs";
+import { app_a_file_system_initialize_download } from "./app_a_file_system_initialize_download.mjs";
+import { global_function_initialize_lambda_async } from "./global_function_initialize_lambda_async.mjs";
+import { app_a } from "./app_a.mjs";
+import { storage_local_exists } from "./storage_local_exists.mjs";
 export async function app_a_file_system_initialize() {
   let value = storage_local_exists(app_a, app_a_file_system_initialize.name);
   if (value) {
