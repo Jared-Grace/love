@@ -6,7 +6,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_carried_exclusive_weights_reached_without(
+export function app_shared_carried_exclusive_weights_reached_without(
   blocked,
   a_main,
   edges,
