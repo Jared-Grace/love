@@ -1,8 +1,8 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { property_get } from "./property_get.mjs";
 import { public_chunks_orphaned } from "./public_chunks_orphaned.mjs";
 export async function public_chunks_orphaned_names() {
   "Just the addresses of the leftover script files across the three folders a build writes into, flat and in order.";
@@ -10,8 +10,7 @@ export async function public_chunks_orphaned_names() {
   "Put in order because the reading behind this answers its folders as each finishes rather than in the order it was asked, so a record written straight from it would change on a run where nothing had.";
   arguments_assert(arguments, 0);
   let reading = await public_chunks_orphaned();
-  let folders = property_get(reading, "folders");
-  let nested = list_map_property(folders, "orphaned");
+  let nested = property_list_map_property(reading, "folders", "orphaned");
   let flat = list_flat(nested);
   let f_paths = list_map_property(flat, "f_path");
   let names = list_sort_text(f_paths);
