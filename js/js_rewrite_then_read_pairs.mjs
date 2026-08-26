@@ -1,9 +1,9 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { js_list_calls_nodes } from "./js_list_calls_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { js_rewrite_targets } from "./js_rewrite_targets.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -48,8 +48,7 @@ export function js_rewrite_then_read_pairs(ast) {
       let imported = named && list_includes(imports, callee);
       let seam_is = list_includes(seams, callee);
       let self_is = equal(callee, f_name);
-      let start = property_get(node, "start");
-      let after = greater_than(start, at);
+      let after = property_greater_than(node, "start", at);
       let kept = imported && after && not(seam_is) && not(self_is);
       if (kept) {
         list_add_unique(callees, callee);
