@@ -1,3 +1,4 @@
+import { app_g_bless_overlay_loaded } from "./app_g_bless_overlay_loaded.mjs";
 import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
@@ -8,7 +9,6 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
-import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
 import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 export async function app_g_bless(context) {
@@ -38,5 +38,5 @@ export async function app_g_bless(context) {
   });
   let height = html_viewport_height_visible();
   html_style_set(container, "height", height);
-  await app_g_bless_overlay(container);
+  await app_g_bless_overlay_loaded(container);
 }
