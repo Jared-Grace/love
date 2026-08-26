@@ -881,7 +881,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "He",
           "$speech,",
-          "“Come",
+          "“$footprints",
           "$plus",
           "$eye.”",
           "So",
