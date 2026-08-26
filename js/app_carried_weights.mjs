@@ -1,7 +1,6 @@
+import { app_carried_names } from "./app_carried_names.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_reachable_carried } from "./functions_reachable_carried.mjs";
-import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 export async function app_carried_weights(a_main) {
   "$plain a_main";
   "Every function one app's bundle holds, heaviest source first.";

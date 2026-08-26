@@ -1,6 +1,5 @@
+import { app_carried_names } from "./app_carried_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_reachable_carried } from "./functions_reachable_carried.mjs";
-import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -21,12 +20,10 @@ export async function app_carried_exclusive_weights(a_main) {
   "The number is what a cut would free rather than what the name itself costs. A name whose whole subtree is shared with the rest of the page comes back at its own size alone, which is the honest answer - taking it away would free only itself.";
   "It names a place to look and never a saving. The bytes are the source file's, so prose weighs the same as work here for the reason written where the weighing is done, and whether a branch is really optional is a question about people rather than about imports - which is why nothing here decides anything.";
   arguments_assert(arguments, 1);
-  let mains = [a_main];
-  let carried = await functions_reachable_carried(mains);
-  list_empty_not_is_assert_json(carried, {
+  let carried = await app_carried_names(
     a_main,
-    hint: "this entry point reached nothing at all, so nothing was weighed - the name is the thing to look at, not the empty answer",
-  });
+    "this entry point reached nothing at all, so nothing was weighed - the name is the thing to look at, not the empty answer",
+  );
   let weights = await functions_names_weights(carried);
   let sizes = {};
   for (let weight of weights) {
