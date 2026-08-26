@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_call_first_argument_try } from "./js_call_first_argument_try.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
@@ -71,8 +72,7 @@ export function js_rewrite_targets(ast) {
         let target = spelled_or_null(first);
         let found = null_not_is(target);
         if (found) {
-          let visited = property_get(called, "v");
-          let node = property_get(visited, "node");
+          let node = property_path_get_2(called, "v", "node");
           let at = property_get(node, "start");
           let site = {
             target,
