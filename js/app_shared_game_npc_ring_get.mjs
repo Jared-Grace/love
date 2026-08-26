@@ -1,9 +1,7 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_npc_property_get_null_generic } from "./app_shared_game_npc_property_get_null_generic.mjs";
 export function app_shared_game_npc_ring_get(npc) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 1);
   ("The ring drawn under a person to say they share a house with somebody already prayed");
   ("for, found by WHO that person is - the same lookup their picture and their light use,");
   ("and keyed the same way so all of them are found and moved together.");

@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_collision_marks_gate_run } from "./bible_glyph_chapters_collision_marks_gate_run.mjs";
 import { app_shared_text_reader_carried_unpicked_gate_run } from "./app_shared_text_reader_carried_unpicked_gate_run.mjs";
 import { apps_published_dev_gate_run } from "./apps_published_dev_gate_run.mjs";
 import { example_files_command_args_gate_run } from "./example_files_command_args_gate_run.mjs";
@@ -819,6 +820,7 @@ export function qa_gates() {
     bible_glyph_chapters_marks_unseated_gate_run,
     bible_glyph_chapters_verse_marks_underdrawn_gate_run,
     bible_glyph_roots_collisions_gate_run,
+    bible_glyph_chapters_collision_marks_gate_run,
     apps_all_main_fns_gate_run,
     apps_pages_not_app_gate_run,
     js_guard_statements_cases_gate_run,

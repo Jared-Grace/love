@@ -17,7 +17,7 @@ export function song_image_couplet_glosses() {
         "Described. A false balance is abomination to the LORD, and Micah asks shall I count them pure with the wicked balances. Scripture does not say scales stood at this trial, but it does say that a rigged measure is what injustice looks like to GOD, so the tilted beam is HIS own image for the thing and not a courthouse emblem borrowed for it. The same scales come back level at couplet 29.",
     },
     2: {
-      kept: 11,
+      kept: 12,
       lyric_ref: "Luke 23:4, Matthew 27:24, 1 Peter 2:22",
       lyric_explain:
         "Pilate said outright, I find no fault in this man, and then washed his hands before the crowd saying he was innocent of HIS blood. Peter says HE did no sin, neither was guile found in HIS mouth.",
@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 10,
+      kept: 11,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
