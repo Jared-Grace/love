@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_folder_chapter_sentence_gaps } from "./bible_folder_chapter_sentence_gaps.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
@@ -25,6 +26,6 @@ export async function bible_folder_chapters_sentence_gaps(
     chapter_codes,
     each_chapter,
   );
-  property_set(measured, "bible_folder", bible_folder);
+  property_set(measured, bible_folder_key(), bible_folder);
   return measured;
 }
