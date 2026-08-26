@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -28,7 +29,7 @@ export async function git_history_paths_absent_at_head_report(folder) {
     v,
     text_combine_multiple([
       fn_name("git_history_paths_absent_at_head"),
-      ".json",
+      json_extension(),
     ]),
   ]);
   await file_overwrite_json(file_path, ranked);
