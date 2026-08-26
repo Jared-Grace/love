@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
@@ -162,8 +163,7 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
         list_add(word_lines, walk);
       }
     }
-    let left2 = list_size(word_lines);
-    let counted = equal(left2, 0);
+    let counted = list_size_equal(word_lines, 0);
     if (counted) {
       list_add(left, {
         verse_number: plan.verse_number,
