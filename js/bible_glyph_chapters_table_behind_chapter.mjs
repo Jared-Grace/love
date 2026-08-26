@@ -1,6 +1,5 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { bible_glyph_chapter_glyph_names } from "./bible_glyph_chapter_glyph_names.mjs";
 import { bible_glyph_chapters_table_behind_glyphs } from "./bible_glyph_chapters_table_behind_glyphs.mjs";
 import { bible_glyph_chapters_table_behind_missing } from "./bible_glyph_chapters_table_behind_missing.mjs";

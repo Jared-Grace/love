@@ -1,8 +1,7 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -32,11 +31,8 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
   "The word already drawing the picture is counted rather than skipped, because a verse half drawn by hand earlier is exactly the verse where the agreement matters most.";
   "BOTH FORMS OF THE CHAPTER ARE READ AND THEY ARE NOT INTERCHANGEABLE. The marks already drawn can only be counted on the parsed form, where a picture is a list rather than a run of letters; the words to change can only be read off the shorthand, which is what the written file actually holds and what a person typed. The two are one for one in the same order, so walking them together is what lets a count taken on one decide an edit made to the other.";
   arguments_assert(arguments, 1);
-  let testament_name = bible_chapter_testament_name(chapter_code);
-  let rows = await bible_glyph_chapter_draft_words(
-    chapter_code,
-    testament_name,
-  );
+  let both = await bible_glyph_chapter_rows_filed(chapter_code);
+  let rows = both.rows;
   let wanted_by_verse = {};
   for (let row of rows) {
     let wanted = 0;
