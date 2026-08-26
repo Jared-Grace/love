@@ -12,6 +12,7 @@ export function app_g_bless_overlay_cone_get(r) {
   let div_map = property_get(r, "div_map");
   let wash = property_get(r, "wash");
   let player_img_c = property_get(r, "player_img_c");
+  let homes = property_get(r, "homes");
   let glows = property_get(r, "glows");
   let bar = property_get(r, "bar");
   let told = property_get(r, "told");
@@ -35,6 +36,7 @@ export function app_g_bless_overlay_cone_get(r) {
     div_map,
     wash,
     player_img_c,
+    homes,
     glows,
     bar,
     told,
