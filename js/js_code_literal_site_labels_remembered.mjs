@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { global_function_property_exists } from "./global_function_property_exists.mjs";
@@ -13,7 +14,6 @@ import { js_code_literals_site_labels } from "./js_code_literals_site_labels.mjs
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { json_to } from "./json_to.mjs";
-import { list_map } from "./list_map.mjs";
 import { identity } from "./identity.mjs";
 export function js_code_literal_site_labels_remembered(code, literal) {
   arguments_assert(arguments, 2);
@@ -76,7 +76,6 @@ export function js_code_literal_site_labels_remembered(code, literal) {
     let r = [];
     return r;
   }
-  let labels = property_get(labels_by_literal, key);
-  let copy = list_map(labels, identity);
+  let copy = property_list_map(labels_by_literal, key, identity);
   return copy;
 }
