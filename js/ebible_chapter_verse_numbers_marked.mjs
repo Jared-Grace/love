@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +16,7 @@ export async function ebible_chapter_verse_numbers_marked(
   ("Taken from the same cutting of the page as the words-only reading rather than from the page a second time, so the two lists are the same list with one of them filtered, and cannot come to disagree about how many marks there are or what order they come in.");
   let cut = await ebible_chapter_verse_texts(bible_folder, chapter_code);
   let verses = property_get(cut, "verses");
-  let property_name = "verse_number";
+  let property_name = verse_number_key();
   let numbers = list_map_property(verses, property_name);
   return numbers;
 }
