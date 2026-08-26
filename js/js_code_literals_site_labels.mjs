@@ -36,8 +36,8 @@ export function js_code_literals_site_labels(code) {
   ("back, and no caller can be holding this reading's own objects.");
   let ast = js_parse(code);
   let labels_by_literal = {};
-  function lambda_site(visit) {
-    let node = property_get(visit, "node");
+  function lambda_site(site) {
+    let node = property_get(site, "node");
     let pattern = property_get_or_null(node, "regex");
     if (pattern) {
       return;
@@ -49,7 +49,7 @@ export function js_code_literals_site_labels(code) {
       labels = [];
       property_set(labels_by_literal, key, labels);
     }
-    let stack = property_get(visit, "stack");
+    let stack = property_get(site, "stack");
     let label = js_string_site_label(stack);
     let already = list_includes(labels, label);
     if (already) {
