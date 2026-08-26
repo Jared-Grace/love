@@ -19,7 +19,7 @@ export async function app_ceb_bible_gloss_unpublished_gate_run() {
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",
-    app_ceb_bible_gloss_chapter_upload_stored.name,
+    app_ceb_bible_gloss_unpublished_upload.name,
   ]);
   let r = gloss_chapters_offenders_assert(walked, "ceb_bible", fault);
   return r;
