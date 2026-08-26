@@ -1,4 +1,4 @@
-import { app_carried_names } from "./app_carried_names.mjs";
+import { app_shared_carried_names } from "./app_shared_carried_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_reachable_unguarded } from "./functions_reachable_unguarded.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -12,7 +12,7 @@ export async function app_shared_carried_guarded(a_main) {
   "It asserts it looked at something before reporting what it found, because an empty answer here is indistinguishable from a walk that never started, and the second one reads as a clean bill of health.";
   arguments_assert(arguments, 1);
   let mains = [a_main];
-  let carried = await app_carried_names(
+  let carried = await app_shared_carried_names(
     a_main,
     "this entry point reached nothing at all, so nothing was examined - the name is the thing to look at, not the empty answer",
   );
