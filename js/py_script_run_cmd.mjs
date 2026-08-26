@@ -1,6 +1,7 @@
+import { py_script_run_cmd_exe } from "./py_script_run_cmd_exe.mjs";
 import { py_exe_name } from "./py_exe_name.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function py_script_run_cmd(script_name) {
-  let v = text_combine_multiple([py_exe_name(), "./scripts/py/", script_name, ".py"]);
+  let exe_name = py_exe_name();
+  let v = py_script_run_cmd_exe(exe_name, script_name);
   return v;
 }
