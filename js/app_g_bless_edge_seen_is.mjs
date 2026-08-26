@@ -1,6 +1,7 @@
+import { app_g_bless_edge_inside } from "./app_g_bless_edge_inside.mjs";
+import { g_coordinates_axes_generic } from "./g_coordinates_axes_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { math_number_clamp } from "./math_number_clamp.mjs";
 import { equal } from "./equal.mjs";
 export function app_g_bless_edge_seen_is(box, point) {
   arguments_assert(arguments, 2);

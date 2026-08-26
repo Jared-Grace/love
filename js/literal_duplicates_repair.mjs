@@ -1,7 +1,7 @@
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { literal_duplicates_unambiguous } from "./literal_duplicates_unambiguous.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
-import { function_literal_route } from "./function_literal_route.mjs";
+import { function_literal_route_any } from "./function_literal_route_any.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -19,7 +19,7 @@ export async function literal_duplicates_repair() {
     let files = property_get(offender, "files");
     for (let f_name of files) {
       let args = [f_name, getter_f_name];
-      await function_call_commit(function_literal_route, args);
+      await function_call_commit(function_literal_route_any, args);
       let pair = text_combine_multiple([f_name, " -> ", getter_f_name]);
       list_add(routed, pair);
     }
