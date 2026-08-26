@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -13,8 +14,7 @@ export function bible_glyph_word_negation_drawn(word) {
   "A WORD ALREADY CARRYING A PICTURE IS REFUSED OUTRIGHT, and the reason is worth writing down because it looked like it needed no rule at all. The picture a negation is seated on is spelled with the letters n and o, so the first run of letters in an already drawn word reads as the English word no - which makes a word that is finished look exactly like a word waiting to be drawn, and drawing it a second time would put the picture inside its own name.";
   arguments_assert(arguments, 1);
   let carried = word.indexOf("$");
-  let b = equal(carried, -1);
-  let drawn_already = not(b);
+  let drawn_already = equal_not(carried, -1);
   if (drawn_already) {
     return null;
   }
