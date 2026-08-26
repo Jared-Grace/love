@@ -7,7 +7,7 @@ import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { app_code_review_complete_message } from "./app_code_review_complete_message.mjs";
-export function app_code_review_complete(parent) {
+export function app_code_review_celebration(parent) {
   "the large end-of-review celebration: an enlarged green success message and a centered congratulatory line with emojis, with generous vertical spacing (more under the line than the green message)";
   let celebration = html_div(parent);
   let celebration_size = "clamp(1.4rem, 5vw, 1.8rem)";
