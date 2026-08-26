@@ -175,6 +175,8 @@ export function bible_glyph_chapter_1jn01() {
           "is",
           "$no_entry",
           "$darkness",
+          "-",
+          "$no_entry",
           "at",
           "all.",
         ],
