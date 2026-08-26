@@ -1,3 +1,4 @@
+import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
@@ -21,6 +22,8 @@ export function app_g_bless_overlay_render_tap_prayed(
   let world = property_get(r2, "world");
   let cone_get = property_get(r2, "cone_get");
   let blessed = property_get(r2, "blessed");
+  let homes = property_get(r2, "homes");
+  let blocks = property_get(r2, "blocks");
   let rung = property_get(r2, "rung");
   let container_map = property_get(r2, "container_map");
   let bar = property_get(r2, "bar");
@@ -43,6 +46,14 @@ export function app_g_bless_overlay_render_tap_prayed(
     "cost of - and the two are drawn as two layers because they answer two questions";
     let lit = bless_view_blessed(blessed, view_everyone);
     app_g_bless_glows(glows, view_everyone, lit);
+    ("The houses are lit from the same record and on the same step as the faces, so a prayer");
+    ("that finished a household shows on the ground the moment it is said - and a house whose");
+    ("thirds were filled in one at a time turns whole at the very prayer that finished it.");
+    ("It is worked out over the whole world rather than over what the player can see, for the");
+    ("reason the marks are: a lit house is a fact about that house and stays true while the");
+    ("player is round the corner. Drawn only where the player was looking, the street would go");
+    ("dark behind them and the map would forget where the work had reached.");
+    app_g_bless_homes(homes, blessed, blocks);
     let cone = cone_get();
     ("The draw is also where the player is noticed to have MOVED, because every player action");
     ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");
