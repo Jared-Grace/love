@@ -1,4 +1,4 @@
-import { app_carried_exclusive_weights_reached_without } from "./app_carried_exclusive_weights_reached_without.mjs";
+import { app_shared_carried_exclusive_weights_reached_without } from "./app_shared_carried_exclusive_weights_reached_without.mjs";
 import { app_carried_names } from "./app_carried_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
@@ -41,7 +41,7 @@ export async function app_carried_exclusive_weights(a_main) {
     if (itself) {
       continue;
     }
-    let seen = app_carried_exclusive_weights_reached_without(
+    let seen = app_shared_carried_exclusive_weights_reached_without(
       blocked,
       a_main,
       edges,
