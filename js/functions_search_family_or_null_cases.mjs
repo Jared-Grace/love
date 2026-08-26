@@ -1,7 +1,7 @@
 import { text_frozen } from "./text_frozen.mjs";
 export function functions_search_family_or_null_cases() {
-  "Six searches written down beside the names each one answered with, and beside the longer beginning those names should be reported as sharing, or nothing where they should be reported as sharing none.";
-  "The two that must stay quiet are what the corpus is really for. A warning worth reading is one that hardly ever fires, and the two commonest searches in this repo - a prefix typed out in full, and a word that happens to end where the next one begins - would both fire under any rule that only asks whether the names share a beginning at all.";
+  "Seven searches written down beside the names each one answered with, and beside the longer beginning those names should be reported as sharing, or nothing where they should be reported as sharing none.";
+  "The four that must stay quiet are what the corpus is really for. A warning worth reading is one that hardly ever fires, and the commonest searches in this repo - a prefix typed out in full, a word that happens to end where the next one begins, and two names that merely start alike - would every one of them fire under a rule that only asks whether the names share a beginning at all.";
   "The names are frozen text, because the pass that turns a mentioned name into a reference would otherwise rewrite them and the case would stop asking what it was written for.";
   let t = text_frozen("js_guard_statements");
   let t2 = text_frozen("js_guard_statements_cases");
@@ -54,6 +54,12 @@ export function functions_search_family_or_null_cases() {
       name: "one name on its own, which shares the whole of itself with itself and so says nothing about any family",
       names: [t14],
       search: text_frozen("start"),
+      family: null,
+    },
+    {
+      name: "a shared beginning that stops in the middle of a word, so the names merely start alike rather than belonging to one corner",
+      names: [t15, t16],
+      search: text_frozen("get"),
       family: null,
     },
   ];
