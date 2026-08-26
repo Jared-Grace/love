@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -7,7 +8,6 @@ import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { ebible_folder_references_texts } from "./ebible_folder_references_texts.mjs";
 import { property_set } from "./property_set.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 export async function app_music_references_versions_faults_add(
   versions,
@@ -52,8 +52,7 @@ export async function app_music_references_versions_faults_add(
       });
       continue;
     }
-    let texts = property_get(answers, bible_folder);
-    let text = property_get_or_null(texts, reference);
+    let text = property_nested_or_null(answers, bible_folder, reference);
     let wordless = null_is(text);
     if (wordless) {
       list_add(wrong, {
