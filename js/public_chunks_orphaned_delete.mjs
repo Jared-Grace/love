@@ -1,3 +1,4 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { public_chunks_orphaned } from "./public_chunks_orphaned.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,8 +15,7 @@ export async function public_chunks_orphaned_delete() {
   "do NOT grant. It works out for itself which files to remove, which is precisely what a standing approval must never be given to - the set it acts on is not visible in the words that start it.";
   arguments_assert(arguments, 0);
   let before = await public_chunks_orphaned();
-  let all = property_get(before, "folders");
-  let folders = list_map_property(all, "folder");
+  let folders = property_list_map_property(before, "folders", "folder");
   let cleared = [];
   for (let folder of folders) {
     let one = await folder_chunks_orphaned_delete(folder);
