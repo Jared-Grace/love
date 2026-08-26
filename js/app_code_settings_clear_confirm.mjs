@@ -8,7 +8,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_x_red } from "./emoji_x_red.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_settings_clear_confirm(context) {
-  "the screen that asks before forgetting which lessons a learner has finished; saying yes goes straight back to the list, where the rows themselves are the whole answer and no message says it as plainly";
+  "the screen that asks before forgetting which lessons and reviews a learner has finished; saying yes goes straight back to the list, where the rows themselves are the whole answer and no message says it as plainly";
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let cross = emoji_x_red();
