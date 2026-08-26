@@ -70,7 +70,7 @@ export async function ebible_readaloud_lines_record_assert(
     ", which records the ones that come back the same rather than leaving them here to be looked at twice",
   ]);
   await baseline_names_gate_generic(names, baseline_path, hint, name_write);
-  let measured_names = list_map_property(bibles, "bible_folder");
+  let measured_names = list_map_property(bibles, bible_folder_key());
   let answered = lists_combine([measured_names, unmeasured]);
   let f_name3 = fn_name("ebible_readaloud_lines_write");
   let unasked_hint = text_combine_multiple([
