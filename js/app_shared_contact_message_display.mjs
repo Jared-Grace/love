@@ -1,8 +1,8 @@
+import { html_text_set_directed } from "./html_text_set_directed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_container } from "./app_shared_container.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 export function app_shared_contact_message_display(
   direction,
   message,
@@ -14,6 +14,6 @@ export function app_shared_contact_message_display(
     width: "80%",
     [text_combine("margin-", direction)]: "auto",
   });
-  html_text_set(div_message, message);
+  html_text_set_directed(div_message, message);
   return div_message;
 }
