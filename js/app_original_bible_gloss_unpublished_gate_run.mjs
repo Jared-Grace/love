@@ -1,4 +1,4 @@
-import { app_original_bible_gloss_unpublished_upload } from "./app_original_bible_gloss_unpublished_upload.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
@@ -19,7 +19,7 @@ export async function app_original_bible_gloss_unpublished_gate_run() {
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",
-    app_original_bible_gloss_unpublished_upload.name,
+    fn_name("app_original_bible_gloss_unpublished_upload"),
   ]);
   let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
   return r;
