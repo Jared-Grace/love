@@ -1,5 +1,4 @@
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { equal } from "./equal.mjs";
 export async function bible_glyph_chapter_draft_glyph_counts(chapter_code) {
