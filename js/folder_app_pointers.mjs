@@ -1,3 +1,4 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { path_join } from "./path_join.mjs";
@@ -6,8 +7,6 @@ import { property_set } from "./property_set.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
 import { text_quote_double } from "./text_quote_double.mjs";
 import { file_name_app_is } from "./file_name_app_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 export async function folder_app_pointers(folder, app_names) {
   "$plain folder";
   "$plain app_names";
@@ -34,8 +33,7 @@ export async function folder_app_pointers(folder, app_names) {
       if (own) {
         continue;
       }
-      let text = property_get(texts, file_name);
-      let names = text_includes(text, quoted);
+      let names = property_text_includes(texts, file_name, quoted);
       if (names) {
         naming.push(file_name);
       }
