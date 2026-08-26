@@ -1,6 +1,6 @@
-import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { list_filter_equal_not } from "./list_filter_equal_not.mjs";
 export function app_shared_text_language_codes(texts) {
   arguments_assert(arguments, 1);
