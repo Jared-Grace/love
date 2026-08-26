@@ -1,4 +1,4 @@
-import { repo_functions_names } from "./repo_functions_names.mjs";
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_duplicate_keys } from "./js_duplicate_keys.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -11,7 +11,7 @@ export async function functions_duplicate_keys() {
   "is how a note written for one example came to be discarded by a note written";
   "for another.";
   "One parse per file, the same shape as the sweep for hidden names next door.";
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let offenders = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
