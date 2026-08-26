@@ -14,5 +14,6 @@ export function g_z(z) {
     ],
     z,
   );
-  return index;
+  let layer = multiply(index, g_z_layer_step());
+  return layer;
 }
