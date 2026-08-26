@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_extension_js } from "./file_extension_js.mjs";
 import { file_name_app_chunk_app_name_or_null } from "./file_name_app_chunk_app_name_or_null.mjs";
@@ -6,9 +7,7 @@ import { folder_app_chunks_orphaned } from "./folder_app_chunks_orphaned.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_flat } from "./list_flat.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { null_is } from "./null_is.mjs";
 import { path_join } from "./path_join.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -36,8 +35,7 @@ export async function folder_chunks_orphaned(folder) {
     }
     return chunk_app;
   }
-  let all_apps = list_map(js_names, app_name_of);
-  let app_names = list_unique(all_apps);
+  let app_names = list_map_unique(js_names, app_name_of);
   async function app_lambda(app_name) {
     let orphaned = await folder_app_chunks_orphaned(folder, app_name);
     async function sized_lambda(file_name) {
