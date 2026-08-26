@@ -1,9 +1,8 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 export function bible_glyph_word_negation_drawn(word) {
@@ -36,8 +35,7 @@ export function bible_glyph_word_negation_drawn(word) {
     "nobody",
     "cannot",
   ];
-  let known = list_includes(plain, lowered);
-  let unknown = not(known);
+  let unknown = list_includes_not(plain, lowered);
   if (unknown) {
     return null;
   }
