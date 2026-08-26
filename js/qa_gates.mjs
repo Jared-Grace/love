@@ -1,3 +1,4 @@
+import { beats_seconds_cases_gate_run } from "./beats_seconds_cases_gate_run.mjs";
 import { ebible_upload_doors_commercial_gate_run } from "./ebible_upload_doors_commercial_gate_run.mjs";
 import { ebible_versions_english_choices_commercial_gate_run } from "./ebible_versions_english_choices_commercial_gate_run.mjs";
 import { qa_public_files_empty_gate_run } from "./qa_public_files_empty_gate_run.mjs";
@@ -849,6 +850,7 @@ export function qa_gates() {
     qa_public_files_empty_gate_run,
     ebible_versions_english_choices_commercial_gate_run,
     ebible_upload_doors_commercial_gate_run,
+    beats_seconds_cases_gate_run,
   ];
   return gates;
 }
