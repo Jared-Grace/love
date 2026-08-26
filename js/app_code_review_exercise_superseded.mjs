@@ -1,23 +1,19 @@
-import { property_get } from "./property_get.mjs";
+import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
-import { app_code_label_text_set } from "./app_code_label_text_set.mjs";
-import { html_div } from "./html_div.mjs";
-import { object_copy_property_set } from "./object_copy_property_set.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
-import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
-export function app_code_review_exercise(
+import { property_get } from "./property_get.mjs";
+export function app_code_review_exercise_superseded(
   parent,
   exercise,
   on_correct,
   on_incorrect,
 ) {
   "render one review question; on_incorrect fires on a wrong answer, on_correct(clean) fires when finally answered correctly (clean is false if any wrong attempt happened first)";
-  "A WRONG ANSWER IS NOT ANSWERED BY SHOWING THE ANSWER. The learner is told they were wrong and left to go on trying, and the answer waits under a button of its own. This screen used to put the answer up the instant anything went wrong, which is the one moment it helps least: a learner who was one tap away from working it out never finds out that they were.";
-  "WHICH WORDING OF THE ANSWER IS SHOWN FOLLOWS WHAT THE LEARNER HAS BUILT. A quiz whose answer can be written more than one way says which way it is aiming at as the learner narrows it down, and that is the one the button shows. Shown the wording the question happened to be written in, a learner who has correctly built 2 * would be told the answer is 2 + 2 * 3 - which calls their own first two pieces a mistake when they were not.";
   let info = property_get(exercise, "info");
   let question = property_get(exercise, "question");
   let answer = property_get(exercise, "answer");
@@ -50,19 +46,11 @@ export function app_code_review_exercise(
   }
   let answers_div = html_div(a_container);
   let container_correction = html_div(parent);
-  let qa_shown = qa;
-  function correction_code_set(code) {
-    "kept rather than drawn, because nothing is drawn here until the learner asks";
-    qa_shown = object_copy_property_set(qa, answer_property, code);
-  }
-  function on_reveal() {
-    html_clear(container_correction);
-    app_code_quiz_correction(container_correction, qa_shown);
-  }
-  app_code_quiz_reveal_button(parent, on_reveal);
   let failed = false;
   function on_wrong() {
     failed = true;
+    html_clear(container_correction);
+    app_code_quiz_correction(container_correction, qa);
     on_incorrect();
   }
   async function on_success() {
@@ -77,7 +65,6 @@ export function app_code_review_exercise(
     on_success,
     on_wrong,
     batch_get,
-    correction_code_set,
     answer_label_set,
   );
 }
