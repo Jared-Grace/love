@@ -1,4 +1,4 @@
-import { app_shared_text_language_codes } from "./app_shared_text_reader_language_defects_site_span_scratch.mjs";
+import { app_shared_text_language_codes } from "./app_shared_text_language_codes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { null_is } from "./null_is.mjs";
