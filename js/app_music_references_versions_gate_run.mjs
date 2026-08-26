@@ -1,3 +1,4 @@
+import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
 import { app_music_references_all } from "./app_music_references_all.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { ebible_folder_reference_text } from "./ebible_folder_reference_text.mjs";
@@ -61,6 +62,7 @@ export async function app_music_references_versions_gate_run() {
       fault: "the name shown to a reader is not what this bible calls itself",
     });
   }
+  await app_music_references_versions_faults_add(versions2, rested_on2, wrong2);
   for (let version of versions) {
     let reference = property_get(version, "reference");
     let bible_folder = property_get(version, "bible_folder");
