@@ -1,5 +1,5 @@
 import { list_get } from "./list_get.mjs";
-import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_run_together_parts.mjs";
+import { app_code_quiz_token_run_together_text } from "./app_code_quiz_token_run_together_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { null_is } from "./null_is.mjs";
@@ -74,7 +74,7 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(variations_new);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
-        let said = app_code_quiz_token_run_together_parts(
+        let said = app_code_quiz_token_run_together_text(
           chosen,
           token,
           tokens_unique,
