@@ -1,14 +1,13 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_commit_files } from "./git_commit_files.mjs";
 import { property_get } from "./property_get.mjs";
 import { folder_js } from "./folder_js.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { folder_current_absolute } from "./folder_current_absolute.mjs";
 import { git_file_read_at_or_null } from "./git_file_read_at_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export async function commit_edit_js_sources(commit) {
   "$plain commit";
@@ -22,8 +21,7 @@ export async function commit_edit_js_sources(commit) {
   let code_folder = folder_js();
   let prefix = text_combine(code_folder, "/");
   let code_files = list_filter_starts_with(files, prefix);
-  let size = list_size(code_files);
-  let one_is = equal(size, 1);
+  let one_is = list_size_equal(code_files, 1);
   if (not(one_is)) {
     let r = {
       before: null,
