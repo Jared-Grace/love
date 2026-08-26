@@ -1,8 +1,8 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { js_call_absence_tested_name } from "./js_call_absence_tested_name.mjs";
 import { functions_refusing_finders } from "./functions_refusing_finders.mjs";
 import { js_call_of_any_named } from "./js_call_of_any_named.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
@@ -23,7 +23,7 @@ export async function functions_unreachable_check_sites() {
   "with that written, this stays at zero.";
   let checkers = [fn_name("assert_json"), fn_name("null_is"), fn_name("not")];
   let finders = functions_refusing_finders();
-  let f_names = await repo_functions_names("love");
+  let f_names = await repo_love_functions_names();
   let sites = [];
   for (let f_name of f_names) {
     let parsed = await function_parse_declaration(f_name);
