@@ -1,3 +1,4 @@
+import { firebase_function_chapters_uploaded } from "./firebase_function_chapters_uploaded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapters_write_coverage_generic } from "./gloss_chapters_write_coverage_generic.mjs";
@@ -22,7 +23,7 @@ export async function gloss_chapters_finished_unpublished(
   ("The chapters still wanting work are read from the coverage report rather than worked out again here, so that what finished means is settled in exactly one place and cannot drift between the report an author reads and the gate that stops a chapter being forgotten.");
   let waiting_codes = list_map_property(waiting, "chapter_code");
   let finished = list_without_multiple(chapter_codes, waiting_codes);
-  "What a store was uploaded under is asked for rather than worked out from the writing function's name, because that word is frozen: the files up there were filed under the word as it stood on the day they went, and a name that followed a later rename would look in a folder nothing was ever written to.";
+  ("What a store was uploaded under is asked for rather than worked out from the writing function's name, because that word is frozen: the files up there were filed under the word as it stood on the day they went, and a name that followed a later rename would look in a folder nothing was ever written to.");
   let f_name = namespace_read();
   let published = await firebase_function_chapters_uploaded(f_name);
   let offenders = list_without_multiple(finished, published);
