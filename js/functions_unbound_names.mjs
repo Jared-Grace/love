@@ -1,7 +1,7 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { functions_names_set } from "./functions_names_set.mjs";
 import { list_set_difference } from "./list_set_difference.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_free_names_scoped } from "./js_free_names_scoped.mjs";
 import { list_add } from "./list_add.mjs";
@@ -11,7 +11,7 @@ export async function functions_unbound_names() {
   "The detector is the scope-aware one rather than the name-based one, because a name bound somewhere else in the file is exactly the case this is looking for.";
   "The fifteen thousand names the repo answers to are gathered into a set once, outside the loop, rather than asked as a list eight thousand times. A difference over two lists builds its own set of the second one every time it is called, which is the right thing for one call and the wrong thing for eight thousand: measured 2026-08-11, building it afresh each time cost nine seconds and building it once costs a millisecond.";
   let answered_to = await functions_names_set();
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let offenders = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
