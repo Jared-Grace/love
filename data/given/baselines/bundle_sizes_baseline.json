@@ -1,288 +1,56 @@
 {
  "known": [
   {
-   "name": "4.examples.js",
-   "size": 912
-  },
-  {
    "name": "4.sandbox.js",
    "size": 19731
   },
   {
-   "name": "20.examples.js",
-   "size": 1009
+   "name": "10.privacy_policy.js",
+   "size": 4123
   },
   {
-   "name": "38.examples.js",
-   "size": 766
+   "name": "33.calendar_paste.js",
+   "size": 3755
   },
   {
-   "name": "45.sandbox.js",
-   "size": 30096
-  },
-  {
-   "name": "48.designs_universal.js",
-   "size": 4100
-  },
-  {
-   "name": "60.sandbox.js",
-   "size": 30638
-  },
-  {
-   "name": "65.sandbox.js",
-   "size": 20697
-  },
-  {
-   "name": "109.g_verify.js",
-   "size": 2512
-  },
-  {
-   "name": "109.replace.js",
-   "size": 2512
+   "name": "98.music.js",
+   "size": 3653
   },
   {
    "name": "117.sandbox.js",
    "size": 946
   },
   {
-   "name": "123.sandbox.js",
-   "size": 6330
-  },
-  {
    "name": "135.sandbox.js",
    "size": 1420
-  },
-  {
-   "name": "136.a.js",
-   "size": 67
-  },
-  {
-   "name": "136.bible.js",
-   "size": 67
-  },
-  {
-   "name": "136.ceb_bible.js",
-   "size": 67
-  },
-  {
-   "name": "136.emoji_bible.js",
-   "size": 68
-  },
-  {
-   "name": "136.en_learn_bible.js",
-   "size": 67
-  },
-  {
-   "name": "136.examples.js",
-   "size": 68
-  },
-  {
-   "name": "136.g_bible.js",
-   "size": 67
-  },
-  {
-   "name": "136.g_verify.js",
-   "size": 66
-  },
-  {
-   "name": "136.g.js",
-   "size": 67
-  },
-  {
-   "name": "136.next.js",
-   "size": 67
-  },
-  {
-   "name": "136.original_bible.js",
-   "size": 67
-  },
-  {
-   "name": "136.reply_local.js",
-   "size": 68
   },
   {
    "name": "138.g_bible.js",
    "size": 2479
   },
   {
-   "name": "145.sandbox.js",
-   "size": 19262
+   "name": "154.sandbox.js",
+   "size": 33359
   },
   {
    "name": "158.a.js",
    "size": 67
   },
   {
-   "name": "158.bible.js",
+   "name": "158.g.js",
    "size": 67
   },
   {
-   "name": "158.ceb_bible.js",
-   "size": 67
-  },
-  {
-   "name": "158.en_learn_bible.js",
-   "size": 67
-  },
-  {
-   "name": "158.examples.js",
-   "size": 67
-  },
-  {
-   "name": "158.g_bible.js",
-   "size": 67
-  },
-  {
-   "name": "158.music.js",
-   "size": 67
-  },
-  {
-   "name": "158.next.js",
-   "size": 67
-  },
-  {
-   "name": "158.original_bible.js",
-   "size": 67
-  },
-  {
-   "name": "158.reply_local.js",
-   "size": 67
-  },
-  {
-   "name": "162.examples.js",
-   "size": 1032
-  },
-  {
-   "name": "165.sandbox.js",
-   "size": 34940
-  },
-  {
-   "name": "182.sandbox.js",
-   "size": 18916
-  },
-  {
-   "name": "191.g_bible.js",
-   "size": 1377
-  },
-  {
-   "name": "199.examples.js",
-   "size": 664
-  },
-  {
-   "name": "207.examples.js",
-   "size": 1204
-  },
-  {
-   "name": "209.sandbox.js",
-   "size": 5297
-  },
-  {
-   "name": "213.bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.ceb_bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.emoji_bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.en_learn_bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.g_bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.music.js",
-   "size": 68
-  },
-  {
-   "name": "213.next.js",
-   "size": 68
-  },
-  {
-   "name": "213.original_bible.js",
-   "size": 68
-  },
-  {
-   "name": "213.reply_local.js",
-   "size": 68
-  },
-  {
-   "name": "229.sandbox.js",
-   "size": 7103
-  },
-  {
-   "name": "232.sandbox.js",
-   "size": 14001
-  },
-  {
-   "name": "244.examples.js",
-   "size": 5032
-  },
-  {
-   "name": "249.examples.js",
-   "size": 1062
-  },
-  {
-   "name": "265.examples.js",
-   "size": 1779
+   "name": "180.sandbox.js",
+   "size": 24737
   },
   {
    "name": "283.a.js",
    "size": 321760
   },
   {
-   "name": "283.examples.js",
-   "size": 321760
-  },
-  {
-   "name": "283.next.js",
-   "size": 321760
-  },
-  {
-   "name": "283.reply_local.js",
-   "size": 321760
-  },
-  {
-   "name": "315.bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.ceb_bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.emoji_bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.en_learn_bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.g_bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.music.js",
-   "size": 1282
-  },
-  {
-   "name": "315.next.js",
-   "size": 1282
-  },
-  {
-   "name": "315.original_bible.js",
-   "size": 1282
-  },
-  {
-   "name": "315.reply_local.js",
-   "size": 1282
+   "name": "309.sandbox.js",
+   "size": 6887
   },
   {
    "name": "330.sandbox.js",
@@ -293,60 +61,12 @@
    "size": 2987
   },
   {
-   "name": "337.bible.js",
-   "size": 168
+   "name": "342.autopray.js",
+   "size": 3692
   },
   {
-   "name": "337.ceb_bible.js",
-   "size": 168
-  },
-  {
-   "name": "337.emoji_bible.js",
-   "size": 168
-  },
-  {
-   "name": "337.en_learn_bible.js",
-   "size": 168
-  },
-  {
-   "name": "337.g_bible.js",
-   "size": 168
-  },
-  {
-   "name": "337.music.js",
-   "size": 168
-  },
-  {
-   "name": "337.next.js",
-   "size": 168
-  },
-  {
-   "name": "337.original_bible.js",
-   "size": 168
-  },
-  {
-   "name": "337.reply_local.js",
-   "size": 168
-  },
-  {
-   "name": "352.sandbox.js",
-   "size": 12197
-  },
-  {
-   "name": "366.sandbox.js",
-   "size": 31061
-  },
-  {
-   "name": "371.sandbox.js",
-   "size": 17562
-  },
-  {
-   "name": "379.g_bible.js",
-   "size": 1265
-  },
-  {
-   "name": "380.examples.js",
-   "size": 1437
+   "name": "342.calendar.js",
+   "size": 1261
   },
   {
    "name": "397.a.js",
@@ -361,24 +81,12 @@
    "size": 380
   },
   {
-   "name": "397.calendar.js",
-   "size": 379
-  },
-  {
    "name": "397.ceb_bible.js",
    "size": 380
   },
   {
-   "name": "397.chapter.js",
-   "size": 379
-  },
-  {
    "name": "397.en_learn_bible.js",
    "size": 380
-  },
-  {
-   "name": "397.examples.js",
-   "size": 379
   },
   {
    "name": "397.g_bible.js",
@@ -409,372 +117,84 @@
    "size": 380
   },
   {
-   "name": "411.sandbox.js",
-   "size": 4544
+   "name": "455.index.js",
+   "size": 14856
   },
   {
-   "name": "421.apps_all.js",
-   "size": 3635
+   "name": "513.emoji_bible.js",
+   "size": 3695
   },
   {
-   "name": "421.index.js",
-   "size": 3635
+   "name": "586.apps_all.js",
+   "size": 3853
   },
   {
-   "name": "441.examples.js",
-   "size": 918
-  },
-  {
-   "name": "457.bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.ceb_bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.emoji_bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.en_learn_bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.g_bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.music.js",
-   "size": 4685
-  },
-  {
-   "name": "457.next.js",
-   "size": 4685
-  },
-  {
-   "name": "457.original_bible.js",
-   "size": 4685
-  },
-  {
-   "name": "457.reply_local.js",
-   "size": 4685
-  },
-  {
-   "name": "458.sandbox.js",
-   "size": 18563
-  },
-  {
-   "name": "472.sandbox.js",
-   "size": 35014
-  },
-  {
-   "name": "483.sandbox.js",
-   "size": 837
-  },
-  {
-   "name": "489.designs_universal.js",
-   "size": 4985
-  },
-  {
-   "name": "511.a.js",
-   "size": 933
-  },
-  {
-   "name": "511.autopray.js",
-   "size": 933
-  },
-  {
-   "name": "511.bible.js",
-   "size": 933
-  },
-  {
-   "name": "511.calendar_paste.js",
-   "size": 933
-  },
-  {
-   "name": "511.calendar.js",
-   "size": 933
-  },
-  {
-   "name": "511.ceb_bible.js",
-   "size": 933
-  },
-  {
-   "name": "511.code.js",
-   "size": 951
-  },
-  {
-   "name": "511.emoji_bible.js",
-   "size": 933
-  },
-  {
-   "name": "511.en_learn_bible.js",
-   "size": 933
-  },
-  {
-   "name": "511.examples.js",
-   "size": 933
-  },
-  {
-   "name": "511.message.js",
-   "size": 933
-  },
-  {
-   "name": "511.music.js",
-   "size": 932
-  },
-  {
-   "name": "511.next.js",
-   "size": 933
-  },
-  {
-   "name": "511.original_bible.js",
-   "size": 933
-  },
-  {
-   "name": "511.privacy_policy.js",
-   "size": 931
-  },
-  {
-   "name": "511.reply_local.js",
-   "size": 933
-  },
-  {
-   "name": "511.reply.js",
-   "size": 933
-  },
-  {
-   "name": "511.search.js",
-   "size": 933
-  },
-  {
-   "name": "511.supper_tl.js",
-   "size": 932
-  },
-  {
-   "name": "511.supper.js",
-   "size": 932
-  },
-  {
-   "name": "511.verses.js",
-   "size": 932
-  },
-  {
-   "name": "514.bible.js",
-   "size": 3395563
-  },
-  {
-   "name": "514.ceb_bible.js",
-   "size": 3395567
-  },
-  {
-   "name": "514.emoji_bible.js",
-   "size": 3395569
-  },
-  {
-   "name": "514.en_learn_bible.js",
-   "size": 3395572
-  },
-  {
-   "name": "514.g_bible.js",
-   "size": 3395565
-  },
-  {
-   "name": "514.music.js",
-   "size": 3395563
-  },
-  {
-   "name": "514.next.js",
-   "size": 3395562
-  },
-  {
-   "name": "514.original_bible.js",
-   "size": 3395572
-  },
-  {
-   "name": "514.reply_local.js",
-   "size": 3395569
-  },
-  {
-   "name": "521.examples.js",
-   "size": 3041
-  },
-  {
-   "name": "543.sandbox.js",
-   "size": 33948
-  },
-  {
-   "name": "551.sandbox.js",
-   "size": 30502
-  },
-  {
-   "name": "555.sandbox.js",
-   "size": 17544
-  },
-  {
-   "name": "557.examples.js",
-   "size": 1062
-  },
-  {
-   "name": "560.sandbox.js",
-   "size": 12679
-  },
-  {
-   "name": "564.sandbox.js",
-   "size": 17772
-  },
-  {
-   "name": "565.sandbox.js",
-   "size": 12865
-  },
-  {
-   "name": "568.sandbox.js",
-   "size": 13115
-  },
-  {
-   "name": "585.examples.js",
-   "size": 828
+   "name": "586.index.js",
+   "size": 3853
   },
   {
    "name": "586.sandbox.js",
    "size": 757
   },
   {
-   "name": "598.a.js",
-   "size": 67
+   "name": "623.sandbox.js",
+   "size": 30221
   },
   {
-   "name": "598.bible.js",
-   "size": 67
+   "name": "644.a.js",
+   "size": 2589
   },
   {
-   "name": "598.ceb_bible.js",
-   "size": 67
-  },
-  {
-   "name": "598.en_learn_bible.js",
-   "size": 67
-  },
-  {
-   "name": "598.examples.js",
-   "size": 68
-  },
-  {
-   "name": "598.g_bible.js",
-   "size": 67
-  },
-  {
-   "name": "598.music.js",
-   "size": 67
-  },
-  {
-   "name": "598.next.js",
-   "size": 67
-  },
-  {
-   "name": "598.original_bible.js",
-   "size": 67
-  },
-  {
-   "name": "602.examples.js",
-   "size": 1085
-  },
-  {
-   "name": "605.a.js",
-   "size": 67
-  },
-  {
-   "name": "605.bible.js",
-   "size": 67
-  },
-  {
-   "name": "605.ceb_bible.js",
-   "size": 67
-  },
-  {
-   "name": "605.emoji_bible.js",
-   "size": 68
-  },
-  {
-   "name": "605.en_learn_bible.js",
-   "size": 67
-  },
-  {
-   "name": "605.examples.js",
-   "size": 68
-  },
-  {
-   "name": "605.g_bible.js",
-   "size": 67
-  },
-  {
-   "name": "605.g_bless.js",
-   "size": 2763
-  },
-  {
-   "name": "605.g_verify.js",
-   "size": 66
-  },
-  {
-   "name": "605.g.js",
-   "size": 67
-  },
-  {
-   "name": "605.music.js",
-   "size": 67
-  },
-  {
-   "name": "605.next.js",
-   "size": 67
-  },
-  {
-   "name": "605.original_bible.js",
-   "size": 67
-  },
-  {
-   "name": "605.reply_local.js",
-   "size": 68
-  },
-  {
-   "name": "611.sandbox.js",
-   "size": 31052
-  },
-  {
-   "name": "616.examples.js",
-   "size": 1409
+   "name": "644.sandbox.js",
+   "size": 5128
   },
   {
    "name": "646.sandbox.js",
-   "size": 10932
-  },
-  {
-   "name": "647.examples.js",
-   "size": 859
-  },
-  {
-   "name": "660.sandbox.js",
-   "size": 6980
-  },
-  {
-   "name": "664.examples.js",
-   "size": 647
-  },
-  {
-   "name": "669.sandbox.js",
-   "size": 16297
+   "size": 10873
   },
   {
    "name": "679.sandbox.js",
    "size": 5403
   },
   {
+   "name": "682.a.js",
+   "size": 56459
+  },
+  {
    "name": "682.apps_all.js",
    "size": 56466
   },
   {
+   "name": "682.autopray.js",
+   "size": 56466
+  },
+  {
+   "name": "682.bible.js",
+   "size": 56463
+  },
+  {
+   "name": "682.calendar_paste.js",
+   "size": 56472
+  },
+  {
+   "name": "682.ceb_bible.js",
+   "size": 56467
+  },
+  {
    "name": "682.designs_universal.js",
    "size": 56460
+  },
+  {
+   "name": "682.emoji_bible.js",
+   "size": 56469
+  },
+  {
+   "name": "682.en_learn_bible.js",
+   "size": 56472
+  },
+  {
+   "name": "682.examples.js",
+   "size": 56466
   },
   {
    "name": "682.g_bless.js",
@@ -793,100 +213,56 @@
    "size": 56463
   },
   {
+   "name": "682.music.js",
+   "size": 56463
+  },
+  {
+   "name": "682.next.js",
+   "size": 56462
+  },
+  {
+   "name": "682.original_bible.js",
+   "size": 56472
+  },
+  {
+   "name": "682.privacy_policy.js",
+   "size": 56457
+  },
+  {
    "name": "682.replace.js",
    "size": 56465
+  },
+  {
+   "name": "682.reply_local.js",
+   "size": 56469
+  },
+  {
+   "name": "682.reply.js",
+   "size": 56463
   },
   {
    "name": "682.sandbox.js",
    "size": 56465
   },
   {
-   "name": "688.sandbox.js",
-   "size": 30004
+   "name": "682.search.js",
+   "size": 56464
   },
   {
-   "name": "696.examples.js",
-   "size": 761
+   "name": "682.supper_tl.js",
+   "size": 56467
   },
   {
-   "name": "712.apps_all.js",
-   "size": 3772
+   "name": "682.supper.js",
+   "size": 56464
   },
   {
-   "name": "712.index.js",
-   "size": 3772
-  },
-  {
-   "name": "713.examples.js",
-   "size": 1307
-  },
-  {
-   "name": "714.sandbox.js",
-   "size": 20047
-  },
-  {
-   "name": "718.bible.js",
-   "size": 125282
-  },
-  {
-   "name": "718.ceb_bible.js",
-   "size": 125286
-  },
-  {
-   "name": "718.emoji_bible.js",
-   "size": 125288
-  },
-  {
-   "name": "718.en_learn_bible.js",
-   "size": 125291
-  },
-  {
-   "name": "718.g_bible.js",
-   "size": 125284
-  },
-  {
-   "name": "718.music.js",
-   "size": 125282
-  },
-  {
-   "name": "718.next.js",
-   "size": 125281
-  },
-  {
-   "name": "718.original_bible.js",
-   "size": 125291
-  },
-  {
-   "name": "718.reply_local.js",
-   "size": 125288
-  },
-  {
-   "name": "725.g.js",
-   "size": 2395
-  },
-  {
-   "name": "736.sandbox.js",
-   "size": 34904
-  },
-  {
-   "name": "744.examples.js",
-   "size": 731
+   "name": "682.verses.js",
+   "size": 56464
   },
   {
    "name": "745.a.js",
    "size": 199777
-  },
-  {
-   "name": "745.examples.js",
-   "size": 199778
-  },
-  {
-   "name": "745.next.js",
-   "size": 199778
-  },
-  {
-   "name": "745.reply_local.js",
-   "size": 199778
   },
   {
    "name": "758.a.js",
@@ -906,7 +282,7 @@
   },
   {
    "name": "758.calendar.js",
-   "size": 1045
+   "size": 1043
   },
   {
    "name": "758.ceb_bible.js",
@@ -930,15 +306,15 @@
   },
   {
    "name": "758.message.js",
-   "size": 1045
+   "size": 1043
   },
   {
    "name": "758.music.js",
-   "size": 1045
+   "size": 1044
   },
   {
    "name": "758.next.js",
-   "size": 1045
+   "size": 1046
   },
   {
    "name": "758.original_bible.js",
@@ -946,15 +322,15 @@
   },
   {
    "name": "758.privacy_policy.js",
-   "size": 1044
+   "size": 1043
   },
   {
    "name": "758.reply_local.js",
-   "size": 1045
+   "size": 1043
   },
   {
    "name": "758.reply.js",
-   "size": 1045
+   "size": 1043
   },
   {
    "name": "758.search.js",
@@ -973,22 +349,6 @@
    "size": 1044
   },
   {
-   "name": "767.sandbox.js",
-   "size": 5754
-  },
-  {
-   "name": "798.sandbox.js",
-   "size": 16360
-  },
-  {
-   "name": "802.sandbox.js",
-   "size": 20022
-  },
-  {
-   "name": "804.examples.js",
-   "size": 805
-  },
-  {
    "name": "817.g_verify.js",
    "size": 2624
   },
@@ -997,136 +357,104 @@
    "size": 2625
   },
   {
-   "name": "819.sandbox.js",
-   "size": 7526
-  },
-  {
-   "name": "846.examples.js",
-   "size": 1443
-  },
-  {
-   "name": "852.sandbox.js",
-   "size": 14604
-  },
-  {
-   "name": "857.sandbox.js",
-   "size": 16542
-  },
-  {
-   "name": "871.examples.js",
-   "size": 907
-  },
-  {
-   "name": "894.examples.js",
-   "size": 908
-  },
-  {
    "name": "897.sandbox.js",
    "size": 2526
+  },
+  {
+   "name": "907.bible.js",
+   "size": 2507
+  },
+  {
+   "name": "907.ceb_bible.js",
+   "size": 2507
+  },
+  {
+   "name": "907.en_learn_bible.js",
+   "size": 2507
   },
   {
    "name": "907.g.js",
    "size": 2508
   },
   {
+   "name": "907.next.js",
+   "size": 2508
+  },
+  {
+   "name": "907.original_bible.js",
+   "size": 2507
+  },
+  {
+   "name": "907.reply_local.js",
+   "size": 2505
+  },
+  {
    "name": "907.sandbox.js",
    "size": 7657
+  },
+  {
+   "name": "907.search.js",
+   "size": 2505
+  },
+  {
+   "name": "907.supper_tl.js",
+   "size": 2507
+  },
+  {
+   "name": "907.supper.js",
+   "size": 2507
+  },
+  {
+   "name": "907.verses.js",
+   "size": 2506
   },
   {
    "name": "910.designs_universal.js",
    "size": 4819
   },
   {
-   "name": "910.sandbox.js",
-   "size": 21216
+   "name": "937.index.js",
+   "size": 2258
   },
   {
-   "name": "919.a.js",
-   "size": 67
+   "name": "965.reply.js",
+   "size": 2605
   },
   {
-   "name": "919.examples.js",
-   "size": 68
-  },
-  {
-   "name": "919.next.js",
-   "size": 68
-  },
-  {
-   "name": "919.reply_local.js",
-   "size": 68
-  },
-  {
-   "name": "939.examples.js",
-   "size": 743
-  },
-  {
-   "name": "946.examples.js",
-   "size": 1084
-  },
-  {
-   "name": "951.sandbox.js",
-   "size": 30990
-  },
-  {
-   "name": "978.g_verify.js",
-   "size": 117999
-  },
-  {
-   "name": "978.next.js",
-   "size": 118000
-  },
-  {
-   "name": "978.reply_local.js",
-   "size": 118000
-  },
-  {
-   "name": "987.sandbox.js",
-   "size": 20277
-  },
-  {
-   "name": "992.bible.js",
-   "size": 4714
-  },
-  {
-   "name": "992.search.js",
-   "size": 4714
-  },
-  {
-   "name": "999.examples.js",
-   "size": 936
+   "name": "995.examples.js",
+   "size": 3187
   },
   {
    "name": "a.js",
-   "size": 489170
+   "size": 421308
   },
   {
    "name": "apps_all.js",
-   "size": 29604
+   "size": 29282
   },
   {
    "name": "autopray.js",
-   "size": 116978
+   "size": 52657
   },
   {
    "name": "bible.js",
-   "size": 287222
+   "size": 226234
   },
   {
    "name": "calendar_paste.js",
-   "size": 184129
+   "size": 112983
   },
   {
    "name": "calendar.js",
-   "size": 211029
+   "size": 207574
   },
   {
    "name": "ceb_bible.js",
-   "size": 270040
+   "size": 209373
   },
   {
    "name": "code.js",
-   "size": 858149
+   "size": 860456
   },
   {
    "name": "designs_universal.js",
@@ -1134,23 +462,23 @@
   },
   {
    "name": "emoji_bible.js",
-   "size": 468219
+   "size": 424906
   },
   {
    "name": "en_learn_bible.js",
-   "size": 270704
+   "size": 212631
   },
   {
    "name": "examples.js",
-   "size": 236445
+   "size": 166349
   },
   {
    "name": "g_bible.js",
-   "size": 359981
+   "size": 361200
   },
   {
    "name": "g_bless.js",
-   "size": 117694
+   "size": 122767
   },
   {
    "name": "g_verify.js",
@@ -1158,31 +486,31 @@
   },
   {
    "name": "g.js",
-   "size": 300276
+   "size": 295340
   },
   {
    "name": "index.js",
-   "size": 50872
+   "size": 38410
   },
   {
    "name": "message.js",
-   "size": 114325
+   "size": 114573
   },
   {
    "name": "music.js",
-   "size": 204650
+   "size": 145325
   },
   {
    "name": "next.js",
-   "size": 205034
+   "size": 144030
   },
   {
    "name": "original_bible.js",
-   "size": 270039
+   "size": 209356
   },
   {
    "name": "privacy_policy.js",
-   "size": 99739
+   "size": 27098
   },
   {
    "name": "recorder.js",
@@ -1190,35 +518,35 @@
   },
   {
    "name": "replace.js",
-   "size": 174690
+   "size": 174946
   },
   {
    "name": "reply_local.js",
-   "size": 206007
+   "size": 143834
   },
   {
    "name": "reply.js",
-   "size": 203822
+   "size": 141540
   },
   {
    "name": "sandbox.js",
-   "size": 30256
+   "size": 30527
   },
   {
    "name": "search.js",
-   "size": 196594
+   "size": 135221
   },
   {
    "name": "supper_tl.js",
-   "size": 179714
+   "size": 118384
   },
   {
    "name": "supper.js",
-   "size": 179433
+   "size": 118106
   },
   {
    "name": "verses.js",
-   "size": 193782
+   "size": 132071
   }
  ]
 }
