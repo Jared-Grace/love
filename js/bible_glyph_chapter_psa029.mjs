@@ -45,7 +45,7 @@ export function bible_glyph_chapter_psa029() {
           "$star",
           "due",
           "His",
-          "name;",
+          "$name_tag;",
           "$bowing",
           "to",
           "the",
