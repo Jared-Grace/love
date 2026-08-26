@@ -1,10 +1,9 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { list_sizes_section_end_best } from "./list_sizes_section_end_best.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
 import { list_add } from "./list_add.mjs";
@@ -25,8 +24,7 @@ export function list_sizes_section_ends_balanced(sizes, limit, sections) {
   let done = 1;
   while (less_than(done, sections)) {
     let left = subtract(sections, done);
-    let shared = multiply(total, done);
-    let ideal = divide(shared, sections);
+    let ideal = multiply_divide(total, done, sections);
     let best = list_sizes_section_end_best(sizes, limit, start, left, ideal);
     null_not_is_assert_json(best, {
       start,
