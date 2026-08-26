@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
@@ -56,8 +57,7 @@ export function js_code_product_dropped(code) {
   }
   let init = property_get(declarator, "init");
   let held = js_parse("null;");
-  let held_body = property_get(held, "body");
-  let statement = list_first(held_body);
+  let statement = property_list_first(held, "body");
   statement.expression = init;
   statements.splice(at, 2, statement);
   let written = js_unparse(ast);
