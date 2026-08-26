@@ -1,9 +1,9 @@
-import { app_shared_symbol_tile_style_box_shadow_value_set } from "../../love/js/app_shared_symbol_tile_style_box_shadow_value_set.mjs";
-import { html_font_jetbrains_mono } from "../../love/js/html_font_jetbrains_mono.mjs";
-import { html_font_color_set } from "../../love/js/html_font_color_set.mjs";
-import { html_style_background_color_set } from "../../love/js/html_style_background_color_set.mjs";
-import { app_shared_symbol_tile_style } from "../../love/js/app_shared_symbol_tile_style.mjs";
-import { app_shared_symbol_tile } from "../../love/js/app_shared_symbol_tile.mjs";
+import { app_shared_symbol_tile_style_box_shadow_value_set } from "./app_shared_symbol_tile_style_box_shadow_value_set.mjs";
+import { html_font_jetbrains_mono } from "./html_font_jetbrains_mono.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
+import { app_shared_symbol_tile } from "./app_shared_symbol_tile.mjs";
 export function app_code_symbol_generic(
   parent,
   d,
