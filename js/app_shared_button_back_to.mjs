@@ -7,6 +7,7 @@ export function app_shared_button_back_to(container, destination, lambda) {
   ("A way out that names where it leads, drawn the same way as the plain one beside it - the twin of ",
     fn_name("app_shared_button_back"),
     " for the screens that know their destination.");
+  ("Written at the size of the words around it for the same reason as the plain one beside it - the reason is written there");
   arguments_assert(arguments, 3);
   let text = app_shared_button_back_to_text(destination);
   let button = app_shared_button_uncolored(container, text, lambda);
