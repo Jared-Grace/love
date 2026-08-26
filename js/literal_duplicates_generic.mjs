@@ -1,6 +1,6 @@
+import { f_names_holding_literal_getter_values_remembered } from "./f_names_holding_literal_getter_values_remembered.mjs";
 import { js_code_literal_site_none } from "./js_code_literal_site_none.mjs";
 import { literal_getters } from "./literal_getters.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { json_to } from "./json_to.mjs";
 import { js_code_literal_key_only } from "./js_code_literal_key_only.mjs";
 import { js_code_literal_prose_only } from "./js_code_literal_prose_only.mjs";
@@ -40,7 +40,9 @@ export function literal_duplicates_generic(codes) {
   for (let getter of getters) {
     let quoted = json_to(getter.literal);
     let files = [];
-    for (let f_name of object_property_names(codes)) {
+    for (let f_name of f_names_holding_literal_getter_values_remembered(
+      codes,
+    )) {
       ("The two cheap questions are asked first and the file is left alone the moment either says no, because the third reads every getter there is to answer about one file. Asked of all of them it is a walk over the getters for every file in the repo for every getter - and almost none of those files hold the spelling at all, so nearly the whole of that walk was to establish something the string search had already settled. Measured: three quarters of this gate's whole cost sat in that one call.");
       ("The stop is written as its own line rather than left to the order of an and, because the auto pass lifts a call out of an expression into a line above it, and a call lifted out of an and is a call that no longer waits for the tests in front of it.");
       let holds = codes[f_name].includes(quoted);
