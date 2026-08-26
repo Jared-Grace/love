@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_psalms_agreement } from "./bible_versions_english_choices_psalms_agreement.mjs";
-import { equal } from "./equal.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -23,8 +23,7 @@ export async function bible_versions_english_choices_psalms_agreement_gate_run()
     hint: "each of these translations may be shipped and was never read at these psalms, so nothing here has looked at them - a fetch that failed leaves a translation out silently, and this check cannot fail a translation it never saw; run it again, and if the same one is missing twice it cannot be read at all and belongs in the withheld list rather than on the shelf",
   });
   function alone_is(record) {
-    let nearest = property_get(record, "nearest");
-    let unshared = equal(nearest, 0);
+    let unshared = property_equals(record, "nearest", 0);
     return unshared;
   }
   let alone = list_filter(apart, alone_is);
