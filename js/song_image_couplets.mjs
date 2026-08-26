@@ -476,7 +476,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one straight ruby red sceptre standing upright on the ground at the left hand side of the window as the window is seen, beside the throne and clear of it, its foot on the ground and its head reaching as high as the top of the throne's back, drawn very large so that the throne reaches almost to the white border on every side",
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one ruby red sceptre standing upright at the left hand side of the window as the window is seen, beside the throne and clear of it, drawn as a short slender rod carrying at its top one large round knop plainly broader than the rod itself with a small collar of the same ruby red under that knop, the rod itself no longer than half the height of the throne's back so that the knop is the widest and the most of it, drawn very large so that the throne reaches almost to the white border on every side",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
