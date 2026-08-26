@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_verse_marks_gaps_unexplained_displaced_bible_note } from "./ebible_verse_marks_gaps_unexplained_displaced_bible_note.mjs";
 import { property_get } from "./property_get.mjs";
@@ -36,6 +37,6 @@ export async function ebible_verse_marks_gaps_unexplained_grouped(
   }
   let list2 = property_get(gaps_measured, "bibles");
   each(list2, gaps_bible_read);
-  let grouped = list_group_by_property(rows, "bible_folder");
+  let grouped = list_group_by_property(rows, bible_folder_key());
   return grouped;
 }
