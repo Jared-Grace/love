@@ -1,3 +1,4 @@
+import { app_code_quiz_token_run_together_note_set } from "./app_code_quiz_token_run_together_note_set.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
@@ -72,6 +73,12 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(variations_new);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
+        app_code_quiz_token_run_together_note_set(
+          note_div,
+          chosen,
+          token,
+          tokens_unique,
+        );
         on_wrong();
       } else {
         html_text_content_set(note_div, "");
