@@ -375,7 +375,7 @@ export function song_image_couplets() {
         r4,
         " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, the light coming from inside the tomb itself so that every white ray starts within the mouth and passes out through it and widens across the field as it goes, and no ray ever starts behind the rock or above it, and ",
         r5,
-        ", plainly half as wide again and half as tall again as that mouth so that it could easily have covered the whole of it, standing on the ground well clear to the right of the mouth and touching nothing, the rock and the stone together drawn very large, and the ground below one plain flat pale grey",
+        ", plainly twice as wide and twice as tall as that mouth so that it could easily have covered the whole of it, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, and the ground below one plain flat pale grey",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
