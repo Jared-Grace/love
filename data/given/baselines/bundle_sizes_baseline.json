@@ -181,6 +181,10 @@
    "size": 56467
   },
   {
+   "name": "682.code.js",
+   "size": 56477
+  },
+  {
    "name": "682.designs_universal.js",
    "size": 56460
   },
@@ -349,6 +353,10 @@
    "size": 1044
   },
   {
+   "name": "817.code.js",
+   "size": 2649
+  },
+  {
    "name": "817.g_verify.js",
    "size": 2624
   },
@@ -454,7 +462,7 @@
   },
   {
    "name": "code.js",
-   "size": 860456
+   "size": 788182
   },
   {
    "name": "designs_universal.js",
