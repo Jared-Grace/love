@@ -33,7 +33,7 @@ export function app_g_bless_world_new() {
   ("their own picture out of the crowd's; being moved after is what puts the game's first");
   ("act - look at a person, pray for them - in front of them the moment it opens.");
   ("Onto the FIRST block, because the crowd is numbered from the beginning of the line and");
-  ("the first sixty of them live there. Set down at the far end the player would open the");
+  ("the first forty-five of them live there. Set down at the far end the player would open the");
   ("game beside the block the ladder means them to reach second.");
   ("Every block is handed to the world as the places named so far. The ground knows a");
   ("pavement is paved; only the world knows which tiles that pavement IS and which doorstep");
