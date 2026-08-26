@@ -1,8 +1,9 @@
-import { commits_message_rules_gate_generic } from "./commits_message_rules_gate_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_path_named } from "./commits_message_path_named.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { commits_message_path_baseline_path } from "./commits_message_path_baseline_path.mjs";
+import { commits_message_rules_gate_generic } from "./commits_message_rules_gate_generic.mjs";
 export async function commits_message_path_gate_run() {
   "QA gate: a commit message names only things that are already public, never a path reaching out of this repo into the machine it was written on.";
   "Throws so the dispatcher seam exits nonzero.";
@@ -14,6 +15,13 @@ export async function commits_message_path_gate_run() {
     f_name,
     " where the real argument cannot be written publicly. ",
   ]);
-  let r = commits_message_rules_gate_generic(told, opening);
+  let path = commits_message_path_baseline_path();
+  let name_write = fn_name("commits_message_path_baseline_write");
+  let r = await commits_message_rules_gate_generic(
+    told,
+    opening,
+    path,
+    name_write,
+  );
   return r;
 }
