@@ -21,7 +21,7 @@ export async function bible_glyph_survey_sense_spread(testament_name) {
     property_set(character_names, character.name, true);
   }
   let roots = bible_glyph_roots_testament_table(testament_name);
-  let glyph_roots = {};
+  let glyph_roots = bible_glyph_roots_glyph_sharers(roots);
   let mapped = {};
   let glyph_missing = [];
   for (let root of roots) {

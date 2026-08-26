@@ -39,6 +39,8 @@ That command is narrow on purpose:
 
 It adds an atom, and it can do nothing else. Nothing *stops* it being granted — `permission_grant_refusals function_new_from_temp` comes back empty — but it is deliberately left ungranted, so `guard_check` answers `ask` and every promotion is one prompt the human sees. That is what keeps it a last resort rather than a habit, and it is also the only measurement of how much of the repo the transforms do not yet cover. **Don't grant it.**
 
+**The same door for a function that already exists: `node scripts/ai.mjs function_overwrite_from_temp <name>`.** Every narrowing above holds identically — one exported function named after its own file, the name decides the file, the draft is deleted once it lands — except the third, which is inverted: the name **must** be one the repo already answers to, so this can never make a file. Both halves ask that one question of `function_temp_declaration_read` and disagree only about which answer they want. It exists because "rewriting a function goes through a transform" is right for a shape that will recur and pure overhead for one that will not: a change no transform makes had nowhere at all to go, and building the transform first was the only way through. An overwrite the caller spelled out by name is not the silent clobber the other half guards against. **Don't grant this one either**, for the same reason.
+
 ### How it is put together
 
 | piece | what it is |
