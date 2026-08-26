@@ -1,7 +1,6 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
