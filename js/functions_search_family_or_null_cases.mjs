@@ -17,6 +17,8 @@ export function functions_search_family_or_null_cases() {
   let t12 = text_frozen("list_first");
   let t13 = text_frozen("property_list_first");
   let t14 = text_frozen("texts_start_shared");
+  let t15 = text_frozen("properties_get");
+  let t16 = text_frozen("property_get");
   let cases = [
     {
       name: "the measured miss - a whole family answered a search for something none of them is, and every one of them begins with a word longer than the one asked for",
