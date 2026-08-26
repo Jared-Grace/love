@@ -16,8 +16,7 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
 ) {
   arguments_assert(arguments, 6);
   ("the quiz of a solve-each-step lesson: the same line to press as the front page, and after every press the values it could come to");
-  ("The line and the values stand in two places set aside before either is drawn, so the buttons are always UNDER the line - built as they are needed they would land wherever the line had left off.");
-  ("What is being asked changes twice a step and the asking says so: choose what to solve, then what it comes to, then what to solve next.");
+  ("The pressing itself is the front page's pressing, out of the one place both of them read. The two screens are one screen with one thing counted, so the asking a learner is answered with here is the very asking they were shown next door - and the label over the answers is where this screen puts it.");
   ("Which wrong values are offered is the one thing the lessons on this engine differ by, so it is handed in. A line of numbers and a line of comparisons are pressed the same way and answered the same way; what a learner could plausibly press INSTEAD is the only place the two part company, and writing the pressing out again for each of them would leave one lesson's habits to be repaired in two files.");
   let line_holder = html_div(parent);
   let choices_holder = html_div(parent);
