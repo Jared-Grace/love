@@ -12,12 +12,10 @@ export function bible_glyph_chapter_glyph_counts(chapter_code) {
   let chapter = bible_glyph_chapter(chapter_code);
   let counts = {};
   for (let verse of chapter.verses) {
-    for (let word of verse.words) {
-      let plain = equal(typeof word, "string");
-      if (plain) {
-        continue;
-      }
-      for (let part of word) {
+    let verse_counts = bible_glyph_verse_glyph_counts(verse);
+    for (let glyph of object_property_names(verse_counts)) {
+      let drew = property_get(verse_counts, glyph);
+      property_count_add(counts, glyph, drew);
         let text = equal(typeof part, "string");
         if (text) {
           continue;
