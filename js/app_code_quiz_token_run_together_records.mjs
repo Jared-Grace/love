@@ -4,7 +4,7 @@ import { js_tokens_run_together } from "./js_tokens_run_together.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_concat } from "./list_concat.mjs";
-export function app_code_quiz_token_run_together_parts(
+export function app_code_quiz_token_run_together_records(
   chosen,
   token,
   tokens_unique,
