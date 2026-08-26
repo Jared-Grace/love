@@ -28,10 +28,7 @@ export function app_g_bless_cover() {
   ("Hung on the document rather than inside the game's box, for the reason the shared cover");
   ("is: the box gets emptied and rebuilt, and a cover inside it would be thrown away by the");
   ("very redraw it is covering.");
-  let html = html_document_root();
-  let div = html_div(html);
-  let backdrop = html_loading_backdrop_style();
-  html_style_assign(div, backdrop);
+  let div = html_loading_backdrop();
   let dark = app_shared_color_page_dark();
   html_style_background(div, dark);
   html_style_assign(div, {
