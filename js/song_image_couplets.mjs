@@ -306,7 +306,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One lamb all of one white glass, standing side-on in profile on all four legs, its brow plain and smooth with the line of its head running unbroken from ear to ear, and one slender staff of plain grey iron standing upright and held in the lamb's raised front leg, that leg bent around the staff so the lamb itself carries it, the staff topped by a small cross in the shape of a plus sign, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One lamb all of one white glass, standing side-on in profile on all four legs, its brow plain and smooth with the line of its head running unbroken from ear to ear, and one slender staff of plain grey iron topped by a small cross in the shape of a plus sign, the lamb carrying that staff the way the church's Agnus Dei carries it, its near front leg lifted off the ground and crooked round the staff so that the staff leans back against the crook of that leg, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
