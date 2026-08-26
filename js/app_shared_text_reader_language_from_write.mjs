@@ -1,4 +1,4 @@
-import { app_shared_text_reader_language_from_write_span_scratch } from "./app_shared_text_reader_language_from_write_span_scratch.mjs";
+import { app_shared_text_language_codes } from "./app_shared_text_language_codes.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { app_shared_text_reader_language_sayings_change } from "./app_shared_text_reader_language_sayings_change.mjs";
@@ -21,7 +21,7 @@ export async function app_shared_text_reader_language_from_write(f_name) {
   let en = ebible_language_en_code();
   let from_key = app_shared_text_reader_language_from_key();
   function lambda$saying(saying) {
-    let codes = app_shared_text_reader_language_from_write_span_scratch(saying);
+    let codes = app_shared_text_language_codes(saying);
     let english = list_includes(codes, en);
     if (not(english)) {
       return null;
