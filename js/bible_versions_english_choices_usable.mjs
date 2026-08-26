@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_in_list_not } from "./property_in_list_not.mjs";
 import { bible_versions_english_choices_withheld } from "./bible_versions_english_choices_withheld.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -19,11 +20,11 @@ export async function bible_versions_english_choices_usable() {
   let both = list_concat(licences, door);
   let allowed = list_filter_property(both, "commercial", true);
   let withheld = bible_versions_english_choices_withheld();
-  let withheld_folders = list_map_property(withheld, "bible_folder");
+  let withheld_folders = list_map_property(withheld, bible_folder_key());
   function offered_is(version) {
     let outside = property_in_list_not(
       version,
-      "bible_folder",
+      bible_folder_key(),
       withheld_folders,
     );
     return outside;
