@@ -1,5 +1,5 @@
+import { node_run_lines_whole } from "./node_run_lines_whole.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { node_run } from "./node_run.mjs";
 import { qa_tree_ensure } from "./qa_tree_ensure.mjs";
 export async function qa_snapshot_timed_solo_told() {
   "Freezes the folder, times every gate inside the copy one at a time, and brings back what it said.";
@@ -10,7 +10,7 @@ export async function qa_snapshot_timed_solo_told() {
   let folder = await qa_tree_ensure();
   let f_name = fn_name("qa_gate_tree_timed_solo");
   let words = ["scripts/ai.mjs", f_name];
-  let said = await node_run(folder, words);
+  let said = await node_run_lines_whole(folder, words);
   console.log(said);
   let r = {
     folder,
