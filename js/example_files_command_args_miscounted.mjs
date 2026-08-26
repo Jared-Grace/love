@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { example_files_command_cores } from "./example_files_command_cores.mjs";
@@ -5,7 +6,6 @@ import { examples_corpus_read } from "./examples_corpus_read.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { not } from "./not.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -28,8 +28,7 @@ export async function example_files_command_args_miscounted() {
     let core = property_get(pair, "core");
     let declared = property_get(core, "length");
     let wanted = subtract(declared, 1);
-    let args = property_get(e, "args");
-    let got = list_size(args);
+    let got = property_list_size(e, "args");
     let fits = equal(got, wanted);
     if (fits) {
       return;
