@@ -1,3 +1,4 @@
+import { html_text_set_directed } from "./html_text_set_directed.mjs";
 import { app_shared_contact_received_text } from "./app_shared_contact_received_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -7,7 +8,6 @@ import { app_shared_button_uncolored_background_color } from "./app_shared_butto
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { reply_messages_matches } from "./reply_messages_matches.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
 import { list_map } from "./list_map.mjs";
@@ -36,7 +36,7 @@ export async function app_message_refresh(
       html_clear(right);
       if (e) {
         let text = app_shared_contact_received_text();
-        html_text_set(right, text);
+        html_text_set_directed(right, text);
       } else {
         let outputs = list_first_property(results, "outputs");
         html_div_text_multiple(right, outputs);
