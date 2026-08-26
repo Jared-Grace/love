@@ -1,9 +1,7 @@
 import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_prod_hashes } from "./firebase_prod_hashes.mjs";
-import { folder_public } from "./folder_public.mjs";
 import { qa_promoted_public_copy_folder_is } from "./qa_promoted_public_copy_folder_is.mjs";
-import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
 export async function qa_promoted_public_copy_is(app_name) {
   "$plain app_name";
   "Whether the pieces waiting to be sent under one name are a copy of something already being served - which is an account of where they came from, and the only one a kept copy of an app can give.";

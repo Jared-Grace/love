@@ -2,8 +2,6 @@ import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_promoted } from "./qa_promoted.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { folder_public } from "./folder_public.mjs";
-import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
 import { property_get } from "./property_get.mjs";
 import { path_join } from "./path_join.mjs";
 import { file_exists } from "./file_exists.mjs";

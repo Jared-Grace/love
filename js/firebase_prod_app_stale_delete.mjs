@@ -1,7 +1,5 @@
 import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { folder_app_stale_delete } from "./folder_app_stale_delete.mjs";
-import { folder_public } from "./folder_public.mjs";
-import { user_repo_path_combine } from "./user_repo_path_combine.mjs";
 export async function firebase_prod_app_stale_delete(app_name, kept) {
   "$plain app_name";
   "Takes away any piece of one app that is waiting to be sent and was not made by the build now replacing it, answering with what it took away.";
