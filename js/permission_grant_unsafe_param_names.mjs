@@ -1,3 +1,4 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -11,7 +12,6 @@ import { property_set } from "./property_set.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { function_params_get } from "./function_params_get.mjs";
 import { function_params_plain } from "./function_params_plain.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_includes } from "./text_includes.mjs";
 export async function permission_grant_unsafe_param_names() {
@@ -21,7 +21,7 @@ export async function permission_grant_unsafe_param_names() {
   "a parameter already declared ordinary data in a function is left out of that function's count, so what is listed is only what nobody has weighed yet.";
   "this writes nothing. Declaring a name to be ordinary data is a judgment, and the place for it is the function it applies to, where a reader meets it beside the code and can argue with it. A sweep that marked them would be that judgment taken for every function at once by somebody who read none of them.";
   let words = permission_grant_words_unsafe();
-  let names = await repo_functions_names("love");
+  let names = await repo_love_functions_names();
   let found = {};
   for (let name of names) {
     let params = await function_params_get(name);
