@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -9,7 +10,6 @@ import { not } from "./not.mjs";
 import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function js_code_product_dropped(code) {
@@ -44,8 +44,7 @@ export function js_code_product_dropped(code) {
     return code;
   }
   let declarators = property_get(above, "declarations");
-  let left = list_size(declarators);
-  let one_is = equal(left, 1);
+  let one_is = list_size_equal(declarators, 1);
   if (not(one_is)) {
     return code;
   }
