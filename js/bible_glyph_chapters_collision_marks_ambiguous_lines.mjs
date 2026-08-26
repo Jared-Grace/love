@@ -24,7 +24,7 @@ export async function bible_glyph_chapters_collision_marks_ambiguous_lines() {
   "IT DECIDES NOTHING AND WRITES NOTHING. What comes out is text for a person, because the reason these are here at all is that no rule the interlinear can state reaches them.";
   arguments_assert(arguments, 0);
   let walk = await bible_glyph_chapters_collision_marks_walked();
-  let lookup = bible_glyph_characters_lookup();
+  let lookup = bible_glyph_characters_lookup([]);
   let chapter_rows = {};
   let chapter_filed = {};
   let lines = [];
