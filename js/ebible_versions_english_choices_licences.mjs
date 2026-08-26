@@ -1,6 +1,6 @@
 import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_versions_english_choices } from "./ebible_versions_english_choices.mjs";
+import { ebible_versions_english_full_web_family_not } from "./ebible_versions_english_full_web_family_not.mjs";
 import { ebible_versions_copyrights } from "./ebible_versions_copyrights.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -11,7 +11,7 @@ export async function ebible_versions_english_choices_licences() {
   "CHOOSING WHICH ENGLISH WORDING TO QUOTE IS TWO QUESTIONS AT ONCE - which translations are here in full, and which of those a reader may lawfully be shown. Both are already answered, in two places, and every time somebody asks they are joined by hand; joined here the answer reads in one pass and the joining cannot be got wrong twice.";
   "The terms are read off the licence pages rather than written down, so a translation whose terms change at eBible changes here too.";
   arguments_assert(arguments, 0);
-  let english_choices = await ebible_versions_english_choices();
+  let english_choices = await ebible_versions_english_full_web_family_not();
   let copyrights = await ebible_versions_copyrights();
   function chosen_is(copyright_read) {
     let chosen = property_in_list(
