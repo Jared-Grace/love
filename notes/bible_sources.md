@@ -314,6 +314,35 @@ translation from a different century sharing three letters. It was absent from
 every English choice list and nothing said so. The family is now named folder by
 folder in `ebible_versions_english_web_family`.
 
+### The licence question was asked per language, and English is offered as many — found 2026-08-26
+
+`ebible_languages_licences_commercial_not` reads `ebible_languages_credits`, which holds
+**one translation per language** — 348 entries, of which exactly one is English
+(`engbsb`). Every other English wording reaches a reader through
+`ebible_versions_english_choices`, which filtered only the six World English Bible
+printings and asked nothing about terms. So the offender baseline sat at zero while
+twenty-five English translations went out unasked, five of them on terms that refuse
+us: `engerv` and `enggw` (all rights reserved), `engnet` (unreadable terms),
+`engwyc2017` and `engwyc2018` (CC BY-NC-ND). Their verses were uploaded to public
+storage as well as listed.
+
+What changed: `ebible_versions_english_full_web_family_not` now holds the whole field
+(complete English minus the WEB printings, whatever the terms) and is what the licence
+report reads; `ebible_versions_english_choices` filters that by
+`ebible_licence_commercial_is` and is what readers are offered — 21 texts, republished
+to `bibles/en/choices.json` on 2026-08-26. `ebible_bible_folders_commercial_assert`
+guards the door the list leaves through, and
+`ebible_versions_english_choices_commercial_gate_run` (in `q`) proves both halves: the
+check refuses a refused text and keeps `engbsb`, and the door still reaches the check.
+
+**The verses of those five are still in storage.** Removing them is a separate,
+outward-facing job and has not been done.
+
+**The general shape, worth carrying to the next check:** a question asked *per language*
+is blind to the language offered as *many*. Anywhere a list is narrowed to one entry per
+group before the terms are read, the entries the group holds beyond the first were never
+asked.
+
 ## A recorded reading has two licences, not one — read 2026-08-23
 
 A generated audio file is downstream of **the words** and **the engine that spoke
