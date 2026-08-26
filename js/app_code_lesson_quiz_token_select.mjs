@@ -23,10 +23,10 @@ import { list_reduce } from "./list_reduce.mjs";
 import { text_take } from "./text_take.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { sleep_seconds } from "./sleep_seconds.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { list_any } from "./list_any.mjs";
 import { log } from "./log.mjs";
-import { sleep_seconds } from "./sleep_seconds.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
@@ -53,6 +53,8 @@ export function app_code_lesson_quiz_token_select(
   "What is shown back is the code itself rather than the pieces tapped. The first surviving order is written out as a line and cut off where the student has got to, so the spacing and the punctuation are the ones the finished line will have, and what appears is a line of code growing rather than a list of words.";
   "A wrong tap that put two pieces side by side which real code writes as a third piece is answered in words as well as in red, under the line being built. That mistake is a reading of the language rather than a slip, so the red button alone would leave the reader to guess at something the row of pieces can never show them.";
   "THE ORDER BEING AIMED AT IS SAID OUT LOUD after every tap that is accepted, because it is the answer this quiz would have to show if the student asked to see one. The line can be built several ways, and which of them is still reachable is known here and nowhere else. A student who has correctly built 2 * and asks for the answer must be shown 2 * 3 + 2 and not 2 + 2 * 3, or the screen tells them their own first two pieces were a mistake when they were not.";
+  "EVERY TAP GOES GREEN FOR THE SAME LENGTH OF TIME, the last one included. The green is cleared before the question is answered rather than after, because answering it hands control away - to a success message, to a wait, to the next question - and none of that comes back to let the colour go. Done the other way round the final piece sat lit up for as long as everything downstream took, which reads as the last tap having been more right than the ones before it.";
+  "The finished line is left standing exactly as the student built it. The trimming that takes away a piece nothing needs any more has nothing left to say once every piece has been used, and a button vanishing at the moment of success would move the row under a student who is reading the answer they just got right.";
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
   let r = app_code_lesson_quiz_token_select_variation_buildable(
@@ -101,6 +103,8 @@ export function app_code_lesson_quiz_token_select(
         let taken = text_take(code, reduced);
         html_clear(answer_div);
         html_span_text(answer_div, taken);
+        await sleep_seconds(0.1);
+        html_style_code_dark(b);
         function lambda4(variation) {
           let same = lists_equal_pair(variation, chosen);
           return same;
@@ -112,9 +116,8 @@ export function app_code_lesson_quiz_token_select(
             chosen,
           });
           await on_success();
+          return;
         }
-        await sleep_seconds(0.1);
-        html_style_code_dark(b);
         let size = list_size(chosen);
         function lambda3(variation) {
           let skipped = list_skip(variation, size);
