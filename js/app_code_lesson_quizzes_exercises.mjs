@@ -1,4 +1,4 @@
-import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
+import { app_code_lesson_quiz_superseded } from "./app_code_lesson_quiz_superseded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quizzes_exercises(
@@ -17,7 +17,7 @@ export function app_code_lesson_quizzes_exercises(
   };
   function each_info(info) {
     function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz(
+      app_code_lesson_quiz_superseded(
         container,
         qa,
         parent,
