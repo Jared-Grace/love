@@ -1,5 +1,5 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { functions_shape_blocks_key } from "./functions_shape_blocks_key.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_get } from "./property_get.mjs";
 export async function functions_shape_blocks(line_count) {
@@ -21,7 +21,7 @@ export async function functions_shape_blocks(line_count) {
   "writing a shared unit would take back.";
   "Reads and changes nothing. Whether a shared block is one idea or two that happen to";
   "be written alike is a judgment, and so is what to call the unit that would hold it.";
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let groups = await functions_shape_blocks_key(love, line_count);
   function saving_of(group) {
     let saving = property_get(group, "saving");
