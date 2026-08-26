@@ -71,8 +71,8 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     "step and lets them go on the next - the street would clutch and release at the pace of";
     "the player's feet. Held only when the player has stopped, the rule is what it says it";
     "is: what you are looking at, once you are looking at it.";
-    let walking = bless_world_walking_is(world);
-    if (walking) {
+    let world_walking = bless_world_walking_is(world);
+    if (world_walking) {
       hold_none();
       return;
     }
