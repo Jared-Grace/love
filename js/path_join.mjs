@@ -1,3 +1,5 @@
+import { arguments_assert_each } from "./arguments_assert_each.mjs";
+import { list_is } from "./list_is.mjs";
 import { error_json } from "./error_json.mjs";
 import { less_than } from "./less_than.mjs";
 import { null_is } from "./null_is.mjs";
@@ -9,9 +11,10 @@ import { not } from "./not.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { subtract } from "./subtract.mjs";
 export function path_join(segments) {
-  "One path built out of the pieces given, with the separators and the doubling up between them sorted out, and a piece that is nothing at all refused rather than passed over.";
-  "A piece that arrives as nothing is a caller who went to work one out and came back with nothing, so it is thrown for. Passed over instead, what comes back is a real path to the wrong place, and every reader and writer handed it then answers about that place without a word of complaint. That is how a store's own folder went missing out of the middle of a handover path: the folder is named after a function, a caller handed the function's name over as text, the piece came out as nothing, the file was written beside the folder rather than inside it, and the run that read it reported success over a stale file somebody else had left there.";
-  "An empty piece is a different thing and is still passed over. Nothing was worked out and lost there - a caller wrote the emptiness down themselves, and joining nothing on adds nothing.";
+  arguments_assert_each(arguments, [list_is]);
+  ("One path built out of the pieces given, with the separators and the doubling up between them sorted out, and a piece that is nothing at all refused rather than passed over.");
+  ("A piece that arrives as nothing is a caller who went to work one out and came back with nothing, so it is thrown for. Passed over instead, what comes back is a real path to the wrong place, and every reader and writer handed it then answers about that place without a word of complaint. That is how a store's own folder went missing out of the middle of a handover path: the folder is named after a function, a caller handed the function's name over as text, the piece came out as nothing, the file was written beside the folder rather than inside it, and the run that read it reported success over a stale file somebody else had left there.");
+  ("An empty piece is a different thing and is still passed over. Nothing was worked out and lost there - a caller wrote the emptiness down themselves, and joining nothing on adds nothing.");
   if (not(segments) || not(segments.length)) {
     throw new Error("Missing segments");
   }
