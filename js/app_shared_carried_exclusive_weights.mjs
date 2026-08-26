@@ -11,7 +11,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-export async function app_carried_exclusive_weights(a_main) {
+export async function app_shared_carried_exclusive_weights(a_main) {
   "$plain a_main";
   "For one app, what its bundle holds only because of each name it carries - the weight that would go if that one name stopped being reached and nothing else changed.";
   "★ A BRANCH NOBODY WALKS IS STILL CARRIED, AND THE QUESTION IN FRONT OF IT NEED NOT BE ABOUT THE ENVIRONMENT. The walk that finds a page's build-machine half turns aside wherever somebody asked which environment they were in, and it is right about those. A plain question about what this reader would rather see looks like nothing at all to it - and the picture bible was carrying better than a third of itself behind one of those, a key that stays hidden until somebody presses it. So this asks the question with no guard in it at all: what hangs off this name and off nothing else.";
