@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { findings_folder } from "./findings_folder.mjs";
@@ -10,7 +11,7 @@ export function psalms_videos_descriptions_before_path(moment) {
   arguments_assert(arguments, 1);
   ("THE STEM IS A WORD AND NOT A FUNCTION NAME, deliberately, the same way its neighbour in this folder is. Spelling it as a reference asked the repo for a function nothing answers to, which is a claim rather than a reading and is what the spelled-name gate is for. Worse if it were ever true: a stem that named a real function would follow that function through every later rename, while the files already written kept the old name and stopped being found.");
   let stem = "psalms_videos_descriptions_before";
-  let name = text_combine_multiple([stem, "_", moment, ".json"]);
+  let name = text_combine_multiple([stem, "_", moment, json_extension()]);
   let v = findings_folder();
   let path = path_join([v, name]);
   return path;
