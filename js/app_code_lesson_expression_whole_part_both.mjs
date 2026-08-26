@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_expression_whole_part_both_above } from "./app_code_lesson_expression_whole_part_both_above.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys_backwards } from "./app_code_lesson_expression_whole_part_both_decoys_backwards.mjs";
 import { app_code_lesson_expression_whole_part_both_decoys } from "./app_code_lesson_expression_whole_part_both_decoys.mjs";
@@ -5,7 +6,6 @@ import { app_code_lesson_expression_whole_part_both_title_name_id } from "./app_
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quiz_superseded } from "./app_code_lesson_quiz_superseded.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
@@ -75,7 +75,7 @@ export function app_code_lesson_expression_whole_part_both() {
     let infos = [forwards, backwards];
     function each_info(info) {
       function quiz(context, parent, container, refresh, next_get) {
-        app_code_lesson_quiz_superseded(
+        app_code_lesson_quiz(
           container,
           {
             question,
