@@ -1,3 +1,4 @@
+import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
 import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
@@ -28,6 +29,7 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
   "THE AGREEMENT IS THE WHOLE SAFETY. A verse where the two counts match can have its negations paired off one for one, so replacing each plain word with the picture leaves the verse saying exactly what it said. A verse where they disagree cannot be paired without guessing which English word came from which original word, and guessing there writes scripture nobody checked - so those verses are named and left alone for a person.";
   "IT SWEEPS RATHER THAN TAKING A LIST because the set of undrawn negations is not a choice anybody made. Seating a negation root draws it everywhere at once in principle and nowhere in fact until the chapters already written are gone back over, and that going-back-over was being done by hand, one word at a time, which leaves nothing behind and cannot be run again after the next root is seated.";
   "The word already drawing the picture is counted rather than skipped, because a verse half drawn by hand earlier is exactly the verse where the agreement matters most.";
+  "BOTH FORMS OF THE CHAPTER ARE READ AND THEY ARE NOT INTERCHANGEABLE. The marks already drawn can only be counted on the parsed form, where a picture is a list rather than a run of letters; the words to change can only be read off the shorthand, which is what the written file actually holds and what a person typed. The two are one for one in the same order, so walking them together is what lets a count taken on one decide an edit made to the other.";
   arguments_assert(arguments, 1);
   let testament_name = bible_chapter_testament_name(chapter_code);
   let rows = await bible_glyph_chapter_draft_words(
