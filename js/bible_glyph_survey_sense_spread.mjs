@@ -38,9 +38,6 @@ export async function bible_glyph_survey_sense_spread(testament_name) {
           });
         }
       }
-      if (not(already)) {
-        list_add(sharers, root.root);
-      }
       property_set(mapped, word.strong, {
         root: root.root,
         glyph,
