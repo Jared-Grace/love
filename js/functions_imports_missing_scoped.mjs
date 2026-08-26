@@ -1,5 +1,5 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { functions_names_set } from "./functions_names_set.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_free_names_scoped } from "./js_free_names_scoped.mjs";
 import { js_imports_missing_specify_set } from "./js_imports_missing_specify_set.mjs";
@@ -13,7 +13,7 @@ export async function functions_imports_missing_scoped() {
   "The name-based gate's own offenders are taken out, so what this returns is only what that gate cannot see. Today that subtraction removes nothing, because that gate is green; it is here so the two readings cannot start counting the same function twice.";
   "The names to look for are gathered into a set once, before the walk, and both readings cross against that one set. The cost was in the second reading, which gathered its own set of all nine thousand names afresh for every one of nine thousand files: measured 2026-08-14, twelve and a half seconds of pure re-gathering. The first reading crossed against the list rather than a set, which cost nothing measurable here because what it crosses is nearly always empty - it is written the same way for one reason only, that a caller holding a set should not have to think about which of the two it may hand it to.";
   let known = await functions_names_set();
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let offenders = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
