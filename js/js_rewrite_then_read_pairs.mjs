@@ -12,8 +12,10 @@ import { list_intersect } from "./list_intersect.mjs";
 import { not } from "./not.mjs";
 export function js_rewrite_then_read_pairs(ast) {
   arguments_assert(arguments, 1);
-  ("Every pairing this tree makes of a function it names as a word and a function it imports, in a tree that also asks for a named function to be written out again. It is the shape a stale read is made of, said before anything has been asked about what those imports reach.");
-  ("A TREE THAT REWRITES NOTHING IS NOT ASKED THE REST. The pairing is a cross of two lists and the reading built on it walks the import graph once per callee, so the cheap test comes first and answers nothing at all for almost every function in the repo.");
+  ("Every pairing this tree makes of a function it has written out again by name and a function it goes on to call after that, further down the same body. It is the shape a stale read is made of, said before anything has been asked about what those calls reach.");
+  ("A TREE THAT REWRITES NOTHING IS NOT ASKED THE REST. The reading built on this walks the import graph once per callee, so the cheap test comes first and answers nothing at all for almost every function in the repo.");
+  ("AFTER, NOT MERELY ALONGSIDE. Reading a function and then rewriting it is what a careful command does - it looks at the list, sees the name is not on it, and adds it. Rewriting it and then reading it is the trap. Ignoring the order named both, and the two it named were both of the careful kind, so the whole answer was noise.");
+  ("The order is read off where the calls sit in the source rather than off anything that follows what runs. Every function here is straight-line by the time it is canonical, so a call written below another is a call made after it, and the one shape that would break that reading - work handed to a callback to run later - is the shape this repo's own pass writes back out as a wait.");
   ("THE TARGET IS READ OFF THE REWRITING CALL RATHER THAN OFF EVERY WORD THE TREE SPELLS. Both were built; the wider one is worthless. A function names small things as words constantly, and the small things are exactly the ones every other function also reaches, so pairing on spelled names alone put the error thrower beside half the repo and told nobody anything.");
   ("THE SEAMS THEMSELVES ARE NOT CALLEES. A rewriting command reaches most of the repo by construction, so pairing a target with the very command that wrote it would name every candidate and separate none of them.");
   ("THE PLAINEST CASE IS KEPT RATHER THAN SKIPPED: a tree that spells a name, has it written out again, and then imports and calls that very name. It looks like a pairing of something with itself and it is the strongest reading there is - the loaded copy and the rewritten file are the same function, so there is no import graph to walk before the answer is known.");
@@ -27,24 +29,36 @@ export function js_rewrite_then_read_pairs(ast) {
     return none;
   }
   let f_name = js_flo_name(ast);
-  let targets = js_rewrite_targets(ast);
+  let sites = js_rewrite_targets(ast);
+  let nodes = js_list_calls_nodes(ast);
   let pairs = [];
-  function target_lambda(target) {
-    function callee_lambda(callee) {
+  function site_lambda(site) {
+    let target = property_get(site, "target");
+    let at = property_get(site, "at");
+    let callees = [];
+    function node_lambda(node) {
+      let callee = js_call_callee_name_try(node);
+      let named = null_not_is(callee);
+      let imported = named && list_includes(imports, callee);
       let seam_is = list_includes(seams, callee);
       let self_is = equal(callee, f_name);
-      let skipped = seam_is || self_is;
-      let kept = not(skipped);
+      let start = property_get(node, "start");
+      let after = greater_than(start, at);
+      let kept = imported && after && not(seam_is) && not(self_is);
       if (kept) {
-        let pair = {
-          target,
-          callee,
-        };
-        list_add(pairs, pair);
+        list_add_unique(callees, callee);
       }
     }
-    each(imports, callee_lambda);
+    each(nodes, node_lambda);
+    function callee_lambda(callee) {
+      let pair = {
+        target,
+        callee,
+      };
+      list_add(pairs, pair);
+    }
+    each(callees, callee_lambda);
   }
-  each(targets, target_lambda);
+  each(sites, site_lambda);
   return pairs;
 }
