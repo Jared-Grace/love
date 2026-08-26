@@ -1,4 +1,4 @@
-import { functions_search_found_shown_family } from "./functions_search_found_shown_family.mjs";
+import { functions_search_family_found_shown } from "./functions_search_family_found_shown.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_search_shown_count } from "./functions_search_shown_count.mjs";
 import { functions_search_all } from "./functions_search_all.mjs";
@@ -11,7 +11,7 @@ export async function functions_searches_found_shown(searches) {
   let found = {};
   for (let search of searches) {
     let all = await functions_search_all(search);
-    let summary = functions_search_found_shown_family(all, count, search);
+    let summary = functions_search_family_found_shown(all, count, search);
     property_set(found, search, summary);
   }
   return found;
