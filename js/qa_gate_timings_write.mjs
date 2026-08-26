@@ -57,7 +57,7 @@ export async function qa_gate_timings_write() {
     taken[f_name] = milliseconds;
   }
   let gates = object_property_names(taken).length;
-  let short = qa_gate_timings_run_short_is(gates);
+  let short = await qa_gate_timings_run_short_is(gates);
   if (short) {
     error_json({
       hint: "the run named far fewer gates than the list holds, so it stopped before it reached the end - writing this would look like a measurement of every gate and would be one of the ones it got to",

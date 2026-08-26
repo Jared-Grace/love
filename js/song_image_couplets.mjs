@@ -375,7 +375,7 @@ export function song_image_couplets() {
         r4,
         " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, and the rays of white light springing out of that sheet itself, each ray at its narrowest where it stands inside the mouth and widening only once it is out past the edge of the mouth, so that every ray can be followed back to a foot inside the opening, and ",
         r5,
-        " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, big enough to have covered the whole opening and more, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
+        " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
@@ -476,7 +476,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one ruby red sceptre standing upright in front of the throne's tall white back so that the whole length of the sceptre lies against that white glass and no part of it is ever against the field, drawn as a short plain straight rod no longer than half the height of the throne's back with one small plain round ball at its top and nothing else on it, drawn very large so that the throne reaches almost to the white border on every side",
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one ruby red sceptre standing upright in front of the throne's tall white back so that its whole length lies against that white glass, drawn as a short stout rod plainly thick and heavy, its top reaching only halfway up the throne's back so that a clear stretch of white glass shows above it, with one small plain round ball at its top and nothing else on it, drawn very large so that the throne reaches almost to the white border on every side",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
