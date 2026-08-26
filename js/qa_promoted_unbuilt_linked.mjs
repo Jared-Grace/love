@@ -1,8 +1,6 @@
-import { folder_current_absolute } from "./folder_current_absolute.mjs";
-import { path_join } from "./path_join.mjs";
+import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { folder_app_names } from "./folder_app_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_public } from "./folder_public.mjs";
 import { folder_app_pointers } from "./folder_app_pointers.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
@@ -17,9 +15,7 @@ export async function qa_promoted_unbuilt_linked() {
   "What travels out beside the offenders is the number of pointings found across every app, not the number of offenders. Offenders are nothing on a good day by construction, so they cannot tell a clean folder from a search that stopped finding anything - and this search can stop finding anything, in one quiet way, if a build ever changes which quotation mark it spells a name with.";
   arguments_assert(arguments, 0);
   ("Where the folder is, worked out from where this is standing rather than looked up by the name of a repo. The lookup reads a setting nobody commits, so inside the frozen copy the gates are judged in it comes back with no repo of that name and throws - and a gate that throws writes down no offenders, cannot be shown to be about somewhere else, and holds every app out of every deployment. Measured 2026-08-26: sixteen judged commits in a row unshippable for every app, all of it this one line.");
-  let here = folder_current_absolute();
-  let public_relative = folder_public();
-  let folder = path_join([here, public_relative]);
+  let folder = folder_public_absolute();
   let app_names = await folder_app_names(folder);
   let pointers = await folder_app_pointers(folder, app_names);
   let walked = 0;
