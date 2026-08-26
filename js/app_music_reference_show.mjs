@@ -16,6 +16,8 @@ export function app_music_reference_show(parent, reference) {
   "WHOSE WORDS THEY ARE IS WRITTEN UNDER THEM, AND IT IS WRITTEN NOW. The page quotes most passages from one translation and a few from another, so a reader met by a wording they do not recognise has no way of telling a different bible from a mistake. Which translation a passage comes from is decided before anything is fetched, so the name can be put on the screen in the same pass that draws the place - it waits on nothing and cannot arrive late or not at all.";
   arguments_assert(arguments, 2);
   let box = html_div(parent);
+  let inset = app_shared_spaced_gap();
+  html_style_padding(box, inset);
   function open() {
     app_shared_bible_reference_open(reference);
   }
@@ -27,6 +29,9 @@ export function app_music_reference_show(parent, reference) {
   html_text_set(caption, name);
   let size = app_shared_caption_font_size();
   html_style_font_size(caption, size);
+  html_centered(caption);
+  let paleness = app_shared_caption_opacity();
+  html_style_opacity(caption, paleness);
   let asked = {
     reference: reference,
     words: words,
