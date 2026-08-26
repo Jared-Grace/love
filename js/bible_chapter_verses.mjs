@@ -17,11 +17,8 @@ export async function bible_chapter_verses(bible_folder, chapter_code) {
   ("FETCHING THE CATALOGUE'S COPY IS SOMETHING ONLY A BUILD MACHINE CAN DO, so being a Door43 bible is no longer the whole of the question - where this is running is the other half. That road ends in downloading a release and unpacking it onto a disk, and a browser has neither the disk nor any business doing it; a page that could merely reach the road carried the whole unpacking tree in its bundle whether or not it ever walked it.");
   ("THAT ROAD IS ASKED FOR BY NAME RATHER THAN IMPORTED, because refusing to walk it and refusing to carry it are two different things. A bundler follows a plain import whether the branch runs or not, so every page that can read a bible was shipping the whole fetch-and-unpack tree in order never to use it. Named and fetched at the moment it is wanted, it is not in the page at all.");
   ("In a browser a Door43 bible is therefore read the same way every other bible is, out of storage - which answers with its words if it has been uploaded and with nothing if it has not. Nothing is the answer every caller here already handles, and it is the truth: a translation nobody has published is one this page cannot read.");
-  let browser = browser_is();
-  let here = not(browser);
-  let door = door43_version_or_null(bible_folder);
-  let elsewhere = null_not_is(door);
-  let fetchable = and(elsewhere, here);
+  let door = door43_version_fetchable_or_null(bible_folder);
+  let fetchable = null_not_is(door);
   if (fetchable) {
     let f_name = fn_name("door43_version_chapter_verses_downloaded");
     let fn = await function_import_relative(f_name);
