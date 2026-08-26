@@ -1,3 +1,4 @@
+import { text_word_end_e_dropped } from "./text_word_end_e_dropped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_size } from "./text_size.mjs";
@@ -28,9 +29,11 @@ export function text_word_stem(word) {
         let plural = equal(ending, "ies");
         let on_true = text_combine(kept, "y");
         let stemmed = ternary(plural, on_true, kept);
-        return text_word_end_e_dropped(stemmed);
+        let word2 = text_word_end_e_dropped(stemmed);
+        return word2;
       }
     }
   }
-  return word;
+  let word3 = text_word_end_e_dropped(word);
+  return word3;
 }

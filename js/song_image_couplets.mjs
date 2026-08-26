@@ -236,7 +236,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head held fast in a low tangle of bare brown thorn branches that grows straight out of the ground at the height of that head and stands no higher than the ram's own back, the branches crowded thickest right where the horns are caught and tangled into one dense knot of them there, thinning out to a few scattered branches further away on both sides, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its horns held fast in a dense knot of bare brown thorn branches packed tight and tangled close around the horns themselves, that knot thinning out into a few scattered branches further away on both sides and standing no higher than the ram's own back, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
