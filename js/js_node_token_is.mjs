@@ -1,7 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export function js_node_token_is(node, token) {
   "$plain token";
   "Whether one piece of parsed code is a bare name or a bare value written exactly as the given word.";
@@ -10,14 +9,12 @@ export function js_node_token_is(node, token) {
   arguments_assert(arguments, 2);
   let name_is = js_node_type_is(node, "Identifier");
   if (name_is) {
-    let name = property_get(node, "name");
-    let same = equal(name, token);
+    let same = property_equals(node, "name", token);
     return same;
   }
   let value_is = js_node_type_is(node, "Literal");
   if (value_is) {
-    let raw = property_get(node, "raw");
-    let same2 = equal(raw, token);
+    let same2 = property_equals(node, "raw", token);
     return same2;
   }
   return false;
