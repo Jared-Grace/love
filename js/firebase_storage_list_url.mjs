@@ -1,3 +1,4 @@
+import { https_prefix } from "./https_prefix.mjs";
 import { text_url_encode } from "./text_url_encode.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { firebase_storage_list_page_size } from "./firebase_storage_list_page_size.mjs";
@@ -10,7 +11,7 @@ export function firebase_storage_list_url(project_url, prefix, page_token) {
   let size = firebase_storage_list_page_size();
   let host = firebase_storage_host();
   let first = text_combine_multiple([
-    "https://",
+    https_prefix(),
     host,
     "/v0/b/",
     project_url,
