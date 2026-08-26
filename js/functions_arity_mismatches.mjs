@@ -1,6 +1,6 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
 import { not } from "./not.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_calls_imported_sizes } from "./js_calls_imported_sizes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +16,7 @@ export async function functions_arity_mismatches() {
   "Nothing here can catch this today, and the rule that makes it catchable is one this repo already keeps: no parameter is optional, defaulted, or variadic, so the declared count is the only right count and any other is a mistake. Elsewhere that question has no answer, which is why it is worth asking here.";
   "The two ways it goes wrong are not alike. Too few and the missing parameter is undefined, which reads as a value right up until something asks it to behave like one - a list handed one argument pushes onto whatever the caller passed first. Too many and the extra is dropped without a word, so a message a caller believed it was giving is simply never given.";
   "One sweep, not two: the same parse answers what a function declares and what it calls, and reading every file twice to ask two questions about it would cost twice for nothing.";
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let declared = {};
   let calling = [];
   for (let name of love) {
