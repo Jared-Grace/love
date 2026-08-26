@@ -4,7 +4,7 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choose_operand.mjs";
 import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_code_lesson_quiz_token_select_superseded } from "./app_code_lesson_quiz_token_select_superseded.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_code_lesson_operand_generic_quizzes_get(
   question,
@@ -36,7 +36,7 @@ export function app_code_lesson_operand_generic_quizzes_get(
       answer_on_button: null,
       answer_count_override: null,
       answer_property: "question",
-      on_answer: app_code_lesson_quiz_token_select,
+      on_answer: app_code_lesson_quiz_token_select_superseded,
       correction: app_code_quiz_correction_operand(role),
     };
     list_add(infos, build);

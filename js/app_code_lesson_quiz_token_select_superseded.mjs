@@ -23,22 +23,22 @@ import { list_reduce } from "./list_reduce.mjs";
 import { text_take } from "./text_take.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { sleep_seconds } from "./sleep_seconds.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { list_any } from "./list_any.mjs";
-import { sleep_seconds } from "./sleep_seconds.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { log } from "./log.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
+import { html_remove } from "./html_remove.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_map } from "./list_map.mjs";
-export function app_code_lesson_quiz_token_select(
+export function app_code_lesson_quiz_token_select_superseded(
   parent,
   info,
   qa,
@@ -54,7 +54,7 @@ export function app_code_lesson_quiz_token_select(
   "A wrong tap that put two pieces side by side which real code writes as a third piece is answered in words as well as in red, under the line being built. That mistake is a reading of the language rather than a slip, so the red button alone would leave the reader to guess at something the row of pieces can never show them.";
   "THE ORDER BEING AIMED AT IS SAID OUT LOUD after every tap that is accepted, because it is the answer this quiz would have to show if the student asked to see one. The line can be built several ways, and which of them is still reachable is known here and nowhere else. A student who has correctly built 2 * and asks for the answer must be shown 2 * 3 + 2 and not 2 + 2 * 3, or the screen tells them their own first two pieces were a mistake when they were not.";
   "EVERY TAP GOES GREEN FOR THE SAME LENGTH OF TIME, the last one included. The green is cleared before the question is answered rather than after, because answering it hands control away - to a success message, to a wait, to the next question - and none of that comes back to let the colour go. Done the other way round the final piece sat lit up for as long as everything downstream took, which reads as the last tap having been more right than the ones before it.";
-  "THE PIECE THAT FINISHES THE LINE GOES INVISIBLE when its green is done, rather than back to the colour of a piece waiting to be tapped. There is nothing left for it to be tapped for, so dressing it as available again invites a tap the quiz has stopped listening for. It keeps its place in the row while it is invisible, so nothing beside it moves.";
+  "The finished line is left standing exactly as the student built it. The trimming that takes away a piece nothing needs any more has nothing left to say once every piece has been used, and a button vanishing at the moment of success would move the row under a student who is reading the answer they just got right.";
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
   let r = app_code_lesson_quiz_token_select_variation_buildable(
@@ -103,22 +103,21 @@ export function app_code_lesson_quiz_token_select(
         let taken = text_take(code, reduced);
         html_clear(answer_div);
         html_span_text(answer_div, taken);
+        await sleep_seconds(0.1);
+        html_style_code_dark(b);
         function lambda4(variation) {
           let same = lists_equal_pair(variation, chosen);
           return same;
         }
         let any = list_any(variations, lambda4);
-        await sleep_seconds(0.1);
         if (any) {
-          html_visibility_hidden(b);
-          log(app_code_lesson_quiz_token_select.name, {
+          log(app_code_lesson_quiz_token_select_superseded.name, {
             variations,
             chosen,
           });
           await on_success();
           return;
         }
-        html_style_code_dark(b);
         let size = list_size(chosen);
         function lambda3(variation) {
           let skipped = list_skip(variation, size);
@@ -128,7 +127,7 @@ export function app_code_lesson_quiz_token_select(
         let unique = list_unique(combined);
         let n = list_includes_not(unique, token);
         if (n) {
-          html_visibility_hidden(b);
+          html_remove(b);
         }
       }
     }
@@ -154,7 +153,7 @@ export function app_code_lesson_quiz_token_select(
   }
   buttons = list_map(tokens_unique, lambda);
   marks_set();
-  log(app_code_lesson_quiz_token_select.name, {
+  log(app_code_lesson_quiz_token_select_superseded.name, {
     variations,
   });
 }
