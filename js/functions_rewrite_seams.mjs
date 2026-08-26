@@ -17,6 +17,7 @@ export function functions_rewrite_seams() {
   let spelled2 = fn_name("function_identifier_replace");
   let spelled3 = fn_name("function_source_overwrite");
   let spelled4 = fn_name("function_functionize");
+  let spelled5 = fn_name("function_replace");
   let names = [
     f_name,
     f_name2,
@@ -31,6 +32,7 @@ export function functions_rewrite_seams() {
     spelled2,
     spelled3,
     spelled4,
+    spelled5,
   ];
   return names;
 }
