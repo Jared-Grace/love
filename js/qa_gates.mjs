@@ -1,3 +1,4 @@
+import { bible_glyph_roots_collisions_gate_run } from "./bible_glyph_roots_collisions_gate_run.mjs";
 import { ffmpeg_metadata_numbers_cases_gate_run } from "./ffmpeg_metadata_numbers_cases_gate_run.mjs";
 import { firebase_prod_hashes_stale_gate_run } from "./firebase_prod_hashes_stale_gate_run.mjs";
 import { bible_glyph_chapters_verse_marks_underdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_underdrawn_gate_run.mjs";
