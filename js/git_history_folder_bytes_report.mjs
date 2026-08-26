@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,7 +18,7 @@ export async function git_history_folder_bytes_report(folder) {
   let folders = list_size(ranked);
   let v = findings_folder();
   let f_name = fn_name("git_history_folder_bytes");
-  let combined = text_combine_multiple([f_name, ".json"]);
+  let combined = text_combine_multiple([f_name, json_extension()]);
   let file_path = path_join([v, combined]);
   await file_overwrite_json(file_path, ranked);
   let heaviest = list_take(ranked, 30);
