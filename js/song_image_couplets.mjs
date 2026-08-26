@@ -146,7 +146,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "A washing bowl of plain grey stone seen from straight above, drawn as one plain grey ring with clear blue water filling the whole circle inside it, drawn very large so that the ring reaches almost to the white border on both sides and almost to the top and the bottom of it",
+        "A washing bowl of plain grey stone seen from straight above, drawn as one plain grey ring with clear blue water filling the whole circle inside it, drawn as large as it can be while the whole ring still stands clear inside the white border, with a narrow strip of the field showing between the ring and the border all the way round",
       symbol_ref: "Matthew 27:24",
       same_as: 0,
     },
@@ -216,7 +216,7 @@ export function song_image_couplets() {
       first: "my debt HE paid",
       second: "through suffering",
       symbol:
-        "One Roman spear standing upright and alone, at its top one large broad leaf-shaped spearhead of plain grey iron with its point upward, drawn wide enough that the head reaches almost to the white border on both sides, and hanging straight down from the lower edge of that head two large drops side by side, the one on the left deep crimson blood and the one on the right blue water, and under the head the spear's long straight shaft of plain brown wood running down to the white border at the bottom",
+        "One Roman spear standing upright and alone, at its top one large broad leaf-shaped spearhead of plain grey iron with its point upward, drawn wide enough that the head reaches almost to the white border on both sides, and hanging straight down from the lower edge of that head two large drops side by side, the one on the left bright ruby red blood and the one on the right blue water, and under the head the spear's long straight shaft of plain brown wood running down to the white border at the bottom",
       symbol_ref: "John 19:34, Zechariah 12:10, Hebrews 2:10",
       same_as: 8,
     },
