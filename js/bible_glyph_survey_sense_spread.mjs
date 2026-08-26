@@ -38,9 +38,6 @@ export async function bible_glyph_survey_sense_spread(testament_name) {
           });
         }
       }
-      let started = property_exists(glyph_roots, glyph);
-      let sharers = property_get(glyph_roots, glyph);
-      let already = sharers.includes(root.root);
       if (not(already)) {
         list_add(sharers, root.root);
       }
