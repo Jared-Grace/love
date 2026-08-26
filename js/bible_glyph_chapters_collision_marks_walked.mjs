@@ -1,12 +1,9 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
-import { bible_glyph_roots_root_lookup } from "./bible_glyph_roots_root_lookup.mjs";
 import { bible_glyph_roots_glyph_sharers } from "./bible_glyph_roots_glyph_sharers.mjs";
 import { bible_glyph_roots_collisions } from "./bible_glyph_roots_collisions.mjs";
 import { property_set } from "./property_set.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -46,10 +43,7 @@ export async function bible_glyph_chapters_collision_marks_walked() {
     for (let collision of collisions) {
       property_set(shared, collision.glyph, collision.roots);
     }
-    let rows = await bible_glyph_chapter_draft_words(
-      chapter_code,
-      testament_name,
-    );
+    let rows = both.rows;
     let present_by_verse = {};
     for (let row of rows) {
       let present = {};
