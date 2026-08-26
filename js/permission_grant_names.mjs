@@ -2231,7 +2231,7 @@ export function permission_grant_names() {
   );
   let spelled2145 = fn_name("page_capture_settle_ms");
   let spelled2146 = fn_name("g_arc_answer_field_shape");
-  let spelled2147 = fn_name("app_carried_guarded");
+  let spelled2147 = fn_name("app_shared_carried_guarded");
   let spelled2148 = fn_name("http_generic");
   let spelled2149 = fn_name("apps_node_only_carried_gate_run");
   let spelled2150 = fn_name("apps_node_only_carried_baseline_write");
