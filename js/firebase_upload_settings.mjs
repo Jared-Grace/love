@@ -1,3 +1,4 @@
+import { https_prefix } from "./https_prefix.mjs";
 import { google_storage_host } from "./google_storage_host.mjs";
 import { firebase_bucket_file_get } from "./firebase_bucket_file_get.mjs";
 import { retry_standard } from "./retry_standard.mjs";
@@ -17,7 +18,7 @@ export async function firebase_upload_settings(destination, settings, buffer) {
   log_keep(firebase_upload_settings.name, message);
   let host = google_storage_host();
   let url = text_combine_multiple([
-    "https://",
+    https_prefix(),
     host,
     "/",
     bucket.name,
