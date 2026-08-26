@@ -1,3 +1,4 @@
+import { list_join_empty } from "./list_join_empty.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_collision_marks_report } from "./bible_glyph_chapters_collision_marks_report.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -33,7 +34,8 @@ export async function bible_glyph_chapters_collision_marks_lines() {
       unseated_marks = add(unseated_marks, entry.drew);
     }
     let padded = text_column(picture.name, 34);
-    let padded2 = text_column(picture.marks, 6);
+    let marks = list_join_empty([picture.marks]);
+    let padded2 = text_column(marks, 6);
     let padded3 = text_column(divided, 30);
     let joined = list_join_colon(["ambiguous", ambiguous_marks]);
     let joined2 = list_join_colon(["unseated", unseated_marks]);
