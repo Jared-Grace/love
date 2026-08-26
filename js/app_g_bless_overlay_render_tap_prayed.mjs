@@ -1,3 +1,4 @@
+import { app_g_bless_edge } from "./app_g_bless_edge.mjs";
 import { app_g_bless_marks } from "./app_g_bless_marks.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -28,12 +29,24 @@ export function app_g_bless_overlay_render_tap_prayed(
   let view_everyone = property_get(r2, "view_everyone");
   let hold = property_get(r2, "hold");
   let hold_release = property_get(r2, "hold_release");
+  let edge = property_get(r2, "edge");
   function render() {
     "Everything the record has to say about the street - who is lit, which houses are filled";
     "in, who is ringed - is drawn from the record on every step rather than remembered here,";
     "so a person covered by a prayer over their whole block lights up the moment they walk";
     "into view without anybody having gone back to write their name down.";
-    app_g_bless_marks(glows, homes, blocks, blessed, view_everyone);
+    let remaining = app_g_bless_marks(
+      glows,
+      homes,
+      blocks,
+      blessed,
+      view_everyone,
+    );
+    ("The arrow at the edge of the screen is aimed here rather than with the marks on the");
+    ("ground, because it is the one hint that is not about the street at all - it is about");
+    ("where the screen ENDS, and so it has to be worked out from the frame and the strip of");
+    ("buttons, neither of which anything drawing on the map has any business knowing about.");
+    app_g_bless_edge(edge, container_map, bar, remaining);
     let cone = cone_get();
     ("The draw is also where the player is noticed to have MOVED, because every player action");
     ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");

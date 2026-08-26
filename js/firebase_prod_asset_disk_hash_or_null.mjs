@@ -11,8 +11,7 @@ export async function firebase_prod_asset_disk_hash_or_null(file_name) {
   "Nothing rather than a refusal, because the caller is comparing what is waiting against what is being served and an absent piece is one of the ordinary answers to that - a page can pick up a piece its last build never had. Refused instead, the one file nobody put there would end the whole comparison, and the comparison is the thing being asked for.";
   "Its neighbour asks the same question of a whole page at once and refuses on an absent piece, which is right for a page that has been built and is being described. This is for the other case, where what is on the disk is what is in doubt.";
   arguments_assert(arguments, 1);
-  let relative = folder_public_join(file_name);
-  let combined = await user_repo_path_combine(relative);
+  let combined = folder_public_absolute_join(file_name);
   let there = await file_exists(combined);
   let absent = not(there);
   if (absent) {

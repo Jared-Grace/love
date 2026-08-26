@@ -1,3 +1,4 @@
+import { browser_is } from "./browser_is.mjs";
 import { door43_version_fetchable_or_null } from "./door43_version_fetchable_or_null.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { function_import_relative } from "./function_import_relative.mjs";
@@ -14,6 +15,12 @@ export async function bible_chapter_verses(bible_folder, chapter_code) {
   ("FETCHING THE CATALOGUE'S COPY IS SOMETHING ONLY A BUILD MACHINE CAN DO, so being a Door43 bible is no longer the whole of the question - where this is running is the other half. That road ends in downloading a release and unpacking it onto a disk, and a browser has neither the disk nor any business doing it; a page that could merely reach the road carried the whole unpacking tree in its bundle whether or not it ever walked it.");
   ("THAT ROAD IS ASKED FOR BY NAME RATHER THAN IMPORTED, because refusing to walk it and refusing to carry it are two different things. A bundler follows a plain import whether the branch runs or not, so every page that can read a bible was shipping the whole fetch-and-unpack tree in order never to use it. Named and fetched at the moment it is wanted, it is not in the page at all.");
   ("In a browser a Door43 bible is therefore read the same way every other bible is, out of storage - which answers with its words if it has been uploaded and with nothing if it has not. Nothing is the answer every caller here already handles, and it is the truth: a translation nobody has published is one this page cannot read.");
+  ("WHERE THIS IS RUNNING IS ASKED HERE, AND NOT ONLY UNDERNEATH. The catalogue lookup below already refuses in a browser, so the road was never actually walked from a page - but refusing to walk a road and being SEEN to refuse are two different things. The gate that keeps a page from dying on this fault reads one function at a time, and a guard moved down into a helper is a guard it cannot see, so the branch it names is judged unguarded and every page that can read a bible is held back from shipping. Asked here the fork is guarded where it forks, in the same shape every other two-place reading of a bible already uses.");
+  let browser = browser_is();
+  if (browser) {
+    let here = await ebible_verses_storage_browser(bible_folder, chapter_code);
+    return here;
+  }
   let door = door43_version_fetchable_or_null(bible_folder);
   let fetchable = null_not_is(door);
   if (fetchable) {
