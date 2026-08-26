@@ -60,6 +60,7 @@ export function app_g_bless_overlay_player(container_map) {
   let r3 = {
     r2,
     container_map,
+    edge,
     cone_get,
     blessed,
     rung,

@@ -6,6 +6,7 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   arguments_assert(arguments, 2);
   let bar = property_get(r, "bar");
   let container_map = property_get(r, "container_map");
+  let edge = property_get(r, "edge");
   let rung = property_get(r, "rung");
   let blessed = property_get(r, "blessed");
   ("The layer the lit houses are drawn on, and the blocks whose buildings they are. Both are");
@@ -40,6 +41,7 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   let r3 = {
     bar,
     container_map,
+    edge,
     rung,
     blessed,
     homes,
