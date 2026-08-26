@@ -7,7 +7,7 @@ export function bless_marks_climbed_cases() {
   "been broken. How far the player climbs and whether anybody is left behind can both be";
   "reasoned, so both are written down and nothing else is.";
   "The crowds are whole containers, because a part-filled one has no interesting answer.";
-  "Three people are a household, twelve are a building, sixty are a block - so each of";
+  "Three people are a household, nine are a building, forty-five are a block - so each of";
   "those crowds ends one rung higher than the last, and the three answers differ from one";
   "another rather than agreeing by luck.";
   "Nobody is left dark in any of them, and that is a claim rather than a hope. The player";

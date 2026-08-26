@@ -30,6 +30,8 @@ export async function app_code_home(context) {
   let complete_previous = property_get(r2, "complete_previous");
   let progress = property_get(r2, "progress");
   let just_left = property_get(r2, "just_left");
+  ("which reviews have been finished is read once for the whole list, the same way the finished lessons are, rather than once inside every row");
+  let reviews_complete = app_code_reviews_complete_read(context);
   function lambda(item, index) {
     let id = property_get(item, "id");
     let open = complete_previous;
@@ -57,7 +59,17 @@ export async function app_code_home(context) {
     let scope = app_code_review_scope(lesson_number);
     let has_review = null_not_is(scope);
     if (has_review) {
-      app_code_home_review_row(g, context, lesson_number, scope);
+      let review_complete = app_code_review_complete_is(
+        reviews_complete,
+        lesson_number,
+      );
+      app_code_home_review_row(
+        g,
+        context,
+        lesson_number,
+        scope,
+        review_complete,
+      );
     }
   }
   each_index(lessons, lambda);
