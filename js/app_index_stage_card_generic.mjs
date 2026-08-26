@@ -9,6 +9,7 @@ export function app_index_stage_card_generic(root, shown, path, label, text) {
   "It is here for a phone. A phone has no way from one copy to the other except by pecking the whole address out by hand, which takes longer than most of the changes it is meant to check took to make, and one wrong character lands on a blank page that looks exactly like a broken app. One tap cannot be mistyped.";
   "Shown only on a machine on this same network, the same as the working links it sits with, so a reader of the deployed site is never offered a door into a copy that was never meant for them.";
   "Whether this direction is the one worth offering is decided by the caller and handed over, because the answer is which copy the page is standing in, and a card that leads to the page it is standing on says nothing and still costs a tap to find out.";
+  "It opens the other copy in a tab of its own rather than in this one, so both copies are open at once and a change can be looked at beside what it changed. It went to this tab until 2026-08-26, on the reasoning that the browser's back button is the way home and a phone should not be left with tabs to close - the whole of this page is links now, and one card behaving differently from the rest is the more expensive surprise.";
   arguments_assert(arguments, 5);
   let local = host_local_network_is();
   let wanted = local && shown;
