@@ -280,6 +280,10 @@ export function examples_notes() {
       "the same refusal as the list-taking verb beside it, written down for the single-name one - a guard standing on only one side of a pairing is what goes stale unnoticed",
     example_span_call_existing_refuses_different_work:
       "the refusal that has to cut before it can read - and the one place the two halves of a pairing refuse differently, one throwing where the other puts the holder back",
+    example_span_call_existing:
+      "pointing a run at a function that already writes it out - the fold whose proof is the cut itself rather than a diff a reader has to trust",
+    example_span_call_existing_inner:
+      "the same fold addressed by the line a word is really written on - a duplicated run usually sits inside a loop and the climbing twin can only ever cut the whole loop",
   };
   return notes;
 }
