@@ -34,14 +34,14 @@ export function js_code_literals_key_only(code) {
   let ast = js_parse(code);
   let sites = {};
   let keys = {};
-  function lambda_site(visit) {
-    let node = property_get(visit, "node");
+  function lambda_site(site) {
+    let node = property_get(site, "node");
     let held = js_literal_value_get(node);
     let written_is = text_is(held);
     if (not(written_is)) {
       return;
     }
-    let stack = property_get(visit, "stack");
+    let stack = property_get(site, "stack");
     let above = js_stack_node_above(stack);
     let above_type = js_node_type(above);
     let said_is = equal(above_type, "ExpressionStatement");
