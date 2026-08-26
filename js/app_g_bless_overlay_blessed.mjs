@@ -1,3 +1,4 @@
+import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
