@@ -1,7 +1,7 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { js_dot_name_object_name_try } from "./js_dot_name_object_name_try.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -28,7 +28,7 @@ export async function functions_name_references_mixed() {
     " is not defined the moment the prayer screen opened, from a docstring");
   ("the repair is to spell every name the same way, as the marker, which makes the run pure again and drops it from the bundle entirely. asking which functions mix is what makes that repairable in one command instead of by eye");
   let f_names = await functions_names();
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let mixed = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
