@@ -1,6 +1,6 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { js_fn_name_literals } from "./js_fn_name_literals.mjs";
 import { functions_names } from "./functions_names.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -15,7 +15,7 @@ export async function functions_fn_name_literals_unresolved() {
   "name travels all the way to the call that uses it and only then behaves as if absent.";
   "Which strings count as spelled names is not decided here. It is one question about a tree, asked the same way by the index that records what each file mentions, and asking it in one place is what keeps this check and that index from ever disagreeing about what a spelled name is.";
   let candidates = await functions_names();
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let offenders = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
