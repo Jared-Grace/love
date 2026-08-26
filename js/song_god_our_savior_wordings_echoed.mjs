@@ -41,7 +41,7 @@ export async function song_god_our_savior_wordings_echoed() {
       }
       let names = property_get(wording, "names");
       let bible_folders = property_get(wording, "bible_folders");
-      let v = {
+      let wording_scored = {
         folded_run,
         folded_shared,
         run,
@@ -50,7 +50,7 @@ export async function song_god_our_savior_wordings_echoed() {
         bible_folders,
         text,
       };
-      return v;
+      return wording_scored;
     }
     let wordings = list_map(distinct, heard);
     function ordered(one, other) {

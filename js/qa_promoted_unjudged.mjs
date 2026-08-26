@@ -56,6 +56,16 @@ export async function qa_promoted_unjudged() {
       });
       continue;
     }
+    ("a name written down before history was rewritten is not a commit that went wrong - there is nothing there at all to have gone wrong. asked about first it costs one read and is an answer; reached for instead, the copy of the repo cannot be stood at it, and the whole question dies several retries in on a message about a tree - which tells whoever came to send nothing about which app it was, nor that eight more are in the same state behind it");
+    let alive = await git_commit_exists_is(commit);
+    if (not(alive)) {
+      list_add(offenders, {
+        app: app_name,
+        commit,
+        why: "the commit these pieces came out of no longer exists",
+      });
+      continue;
+    }
     let remembered = property_get_or_null(known, commit);
     let unjudged = null_is(remembered);
     if (unjudged) {
