@@ -8,7 +8,7 @@ import { property_get } from "./property_get.mjs";
 export async function gloss_chapters_finished_unpublished(
   fn,
   passages_read,
-  chapters_uploaded_read,
+  namespace_read,
 ) {
   "Every chapter of one gloss store that has been explained all the way through and is still not published, with how many chapters the store holds.";
   "Writing a chapter and publishing it are separate steps on purpose, and this is the gap that opens between them. A finished chapter that was never carried up sits on the one machine it was written on, and nothing anywhere goes wrong: the app offers exactly the chapters it can see, every reader who arrives is shown something correct, and the work simply never reaches anybody. That is the one fault a reader cannot report, because from where they stand there is nothing to report.";
@@ -22,7 +22,9 @@ export async function gloss_chapters_finished_unpublished(
   ("The chapters still wanting work are read from the coverage report rather than worked out again here, so that what finished means is settled in exactly one place and cannot drift between the report an author reads and the gate that stops a chapter being forgotten.");
   let waiting_codes = list_map_property(waiting, "chapter_code");
   let finished = list_without_multiple(chapter_codes, waiting_codes);
-  let published = await chapters_uploaded_read();
+  "What a store was uploaded under is asked for rather than worked out from the writing function's name, because that word is frozen: the files up there were filed under the word as it stood on the day they went, and a name that followed a later rename would look in a folder nothing was ever written to.";
+  let f_name = namespace_read();
+  let published = await firebase_function_chapters_uploaded(f_name);
   let offenders = list_without_multiple(finished, published);
   let r = {
     chapters: list_size(chapter_codes),
