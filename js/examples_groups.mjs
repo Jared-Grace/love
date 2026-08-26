@@ -172,6 +172,7 @@ export function examples_groups() {
         "example_snapshot_refuses_a_taken_label",
         "example_snapshot_refuses_a_split_build",
         "example_span_call_existing_refuses_different_work",
+        "example_span_call_existing_inner_refuses_different_work",
       ],
     },
   ];

@@ -284,6 +284,8 @@ export function examples_notes() {
       "pointing a run at a function that already writes it out - the fold whose proof is the cut itself rather than a diff a reader has to trust",
     example_span_call_existing_inner:
       "the same fold addressed by the line a word is really written on - a duplicated run usually sits inside a loop and the climbing twin can only ever cut the whole loop",
+    example_span_call_existing_inner_refuses_different_work:
+      "the same fold turned away - the two ends are taken inside the loop and the piece that comes out is still held against the whole of the named function",
   };
   return notes;
 }
