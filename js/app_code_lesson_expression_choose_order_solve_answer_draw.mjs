@@ -18,38 +18,14 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
   ("the quiz of a solve-each-step lesson: the same line to press as the front page, and after every press the values it could come to");
   ("The pressing itself is the front page's pressing, out of the one place both of them read. The two screens are one screen with one thing counted, so the asking a learner is answered with here is the very asking they were shown next door - and the label over the answers is where this screen puts it.");
   ("Which wrong values are offered is the one thing the lessons on this engine differ by, so it is handed in. A line of numbers and a line of comparisons are pressed the same way and answered the same way; what a learner could plausibly press INSTEAD is the only place the two part company, and writing the pressing out again for each of them would leave one lesson's habits to be repaired in two files.");
-  let line_holder = html_div(parent);
-  let choices_holder = html_div(parent);
-  let current = tree;
-  function on_change(step) {
-    current = property_get(step, "current");
-    let solved = property_get(step, "solved");
-    if (null_is(solved)) {
-      return;
-    }
-    let said = app_code_label_solve_next();
-    answer_label_set(said);
-  }
-  async function on_chosen(node, value, node_span_unused, waiting_on) {
-    "a right press is answered by asking what that part comes to, and the line does not move until the right value is pressed";
-    "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
-    let said = app_code_label_solve_choice();
-    answer_label_set(said);
-    waiting_on(choices_holder);
-    let decoys = decoys_get(current, node);
-    await app_code_expression_value_choose_await(
-      choices_holder,
-      value,
-      decoys,
-      on_wrong,
-    );
-  }
-  app_code_expression_choose_line(
-    line_holder,
+  ("nothing is said once the line is down to a value, because this screen answers a finished line with its own success message and a second well done in the label would be the same thing said twice");
+  app_code_expression_choose_order_ask(
+    parent,
     tree,
-    on_change,
+    answer_label_set,
+    noop,
+    decoys_get,
     on_wrong,
-    on_chosen,
     on_success,
   );
 }
