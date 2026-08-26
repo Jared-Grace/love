@@ -70,17 +70,17 @@ export function bless_marks_climbed_cases() {
       why: "a whole block met seven at a time mixes every household with the ones either side of it, and still ends as a whole block",
     },
     {
-      count: 60,
-      stride: 23,
+      count: 45,
+      stride: 14,
       climbed: {
         rung: "block",
         dark: 0,
       },
-      why: "a long stride crosses buildings rather than households, so no place is ever finished by the prayers that started it",
+      why: "a stride longer than a whole building crosses buildings rather than households, so no place is ever finished by the prayers that started it",
     },
     {
-      count: 60,
-      stride: 29,
+      count: 45,
+      stride: 22,
       climbed: {
         rung: "block",
         dark: 0,
@@ -88,7 +88,7 @@ export function bless_marks_climbed_cases() {
       why: "a stride of nearly half the crowd walks the block end to end and back, which is the least orderly way in that still reaches everybody",
     },
     {
-      count: 120,
+      count: 90,
       stride: 7,
       climbed: {
         rung: "block",
