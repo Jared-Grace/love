@@ -1,6 +1,6 @@
+import { qa_gate_timings_worth_measuring_is } from "./qa_gate_timings_worth_measuring_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_log_async } from "./catch_log_async.mjs";
-import { qa_gate_timings_stale_is } from "./qa_gate_timings_stale_is.mjs";
 import { qa_gate_timings_quiet_load } from "./qa_gate_timings_quiet_load.mjs";
 import { qa_gate_timings_write_when_quiet } from "./qa_gate_timings_write_when_quiet.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
@@ -14,7 +14,7 @@ export async function qa_gate_timings_write_when_quiet_auto() {
   let hour_seconds = 3600;
   while (true) {
     async function round_take() {
-      let stale = await qa_gate_timings_stale_is();
+      let stale = await qa_gate_timings_worth_measuring_is();
       if (stale) {
         let load_most = qa_gate_timings_quiet_load();
         await qa_gate_timings_write_when_quiet(load_most, 1);
