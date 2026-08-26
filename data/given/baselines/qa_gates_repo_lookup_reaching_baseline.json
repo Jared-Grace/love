@@ -17,7 +17,6 @@
   "bible_glyph_chapters_collision_marks_gate_run",
   "bible_versions_english_choices_psalms_agreement_gate_run",
   "app_original_bible_gloss_unpublished_gate_run",
-  "app_ceb_bible_gloss_unpublished_gate_run",
-  "firebase_prod_hashes_stale_gate_run"
+  "app_ceb_bible_gloss_unpublished_gate_run"
  ]
 }
