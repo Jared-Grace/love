@@ -4,7 +4,7 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { html_remove } from "./html_remove.mjs";
-export function app_g_toast(text, dismiss_ms) {
+export function app_shared_game_toast(text, dismiss_ms) {
   "a small NON-blocking toast pill near the top of the screen: fades in, holds, then fades out and removes itself after dismiss_ms. pointer-events off so it never intercepts a tap underneath. used by the #day_conversation demo to announce the time of day each time a step advances the sky";
   let div = html_body_div();
   html_style_assign(div, {

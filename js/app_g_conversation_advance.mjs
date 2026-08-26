@@ -9,7 +9,7 @@ import { g_day_clock } from "./g_day_clock.mjs";
 import { g_clock_label } from "./g_clock_label.mjs";
 import { emoji_clock } from "./emoji_clock.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_g_toast } from "./app_g_toast.mjs";
+import { app_shared_game_toast } from "./app_shared_game_toast.mjs";
 export async function app_g_conversation_advance(steps, steps_total) {
   arguments_assert(arguments, 2);
   ("one advancing step of the conversation moves the day forward: every forward choice — each opener chosen, each objection answered, choosing to pray, each prayer prayed, the final goodbye — ticks the shared step counter and drifts the sky to steps.done / steps_total of this conversation's slice, so the whole minimum path (not just the gospel turns) spans the slice and the goodbye lands at its end. wrong openers do NOT tick — guessing costs no daylight, so discernment stays the fast path.");
@@ -24,6 +24,6 @@ export async function app_g_conversation_advance(steps, steps_total) {
     let label = g_clock_label(clock);
     let r = emoji_clock();
     let text = text_combine_multiple([r, " ", label]);
-    app_g_toast(text, 1400);
+    app_shared_game_toast(text, 1400);
   }
 }

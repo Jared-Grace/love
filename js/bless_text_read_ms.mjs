@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { multiply } from "./multiply.mjs";
 import { text_words } from "./text_words.mjs";
-export function bless_prayer_read_ms(prayer) {
+export function bless_text_read_ms(prayer) {
   arguments_assert(arguments, 1);
   ("How long the quickest honest reading of a prayer takes - long enough that nobody gets");
   ("past the words without seeing them.");
