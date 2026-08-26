@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_given_accepted_folder } from "./data_given_accepted_folder.mjs";
@@ -12,7 +13,7 @@ export async function words_early_reader() {
   let folder = data_given_accepted_folder();
   let path = path_join([
     folder,
-    text_combine_multiple([fn_name("words_early_reader"), ".json"]),
+    text_combine_multiple([fn_name("words_early_reader"), json_extension()]),
   ]);
   let words = await file_read_json(path);
   return words;
