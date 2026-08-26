@@ -5,6 +5,7 @@ import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { literal_getter_peer_is } from "./literal_getter_peer_is.mjs";
 import { js_code_literal_prose_only } from "./js_code_literal_prose_only.mjs";
+import { js_code_literal_entry_key_only } from "./js_code_literal_entry_key_only.mjs";
 import { js_code_literal_site_none } from "./js_code_literal_site_none.mjs";
 import { list_add } from "./list_add.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -14,28 +15,35 @@ export function literal_duplicates_generic(codes) {
   "Every getter in a handed-in body of source whose written value some other file";
   "there still spells out, with a word each for what those other files are doing";
   "with it.";
-  "Two kinds of file hold the spelling without being a copy of the constant, and";
-  "both are dropped here rather than left for a reader to notice. One is a file";
-  "that only mentions the word in its own account of itself: nothing can be done";
-  "about a sentence, so offering it asks forever for something nobody can do.";
+  "Three kinds of file hold the spelling without being a copy of the constant, and";
+  "all three are dropped here rather than left for a reader to notice. What they";
+  "have in common is that there is nowhere in them for a call to stand, so offering";
+  "any of them asks forever for something nobody can do.";
+  "One is a file that only mentions the word in its own account of itself: nothing";
+  "can be done about a sentence.";
   "The second is the one the first cannot see. It looks for the word written as a";
   "string of its own and then asks what it is doing there, so a file where the";
   "letters sit inside a longer sentence, or inside a comment, reads to it as a";
   "file with no mentions at all - and the text search that found it in the first";
   "place still counts it. A sentence quoting a name while explaining an argument";
-  "is exactly that, and there is nowhere in it for a call to stand.";
-  "A third kind used to be dropped here as well: a file where the word names a";
-  "field rather than carrying a value. The reason written beside that drop was";
-  "that acting on it would tie the shape of saved data to a name in this code.";
-  "Routing writes a call, and the call hands back the same word, so no saved shape";
-  "moves. The hazard the reason was really about - a value that has already left";
-  "this repo, into a browser's storage or a bookmarked address - belongs to the";
-  "value rather than to how some other file happens to spell it, and it is already";
-  "marked at the getter itself, where anybody opening the file can see it.";
-  "Withholding by the shape of the site instead guarded a handful of values by";
-  "hiding dozens of files, and the getters it hid behind read as fully routed";
-  "while the word was still everywhere: two of them, measured 2026-08-26, over";
-  "thirty-six files between them.";
+  "is exactly that.";
+  "The third is a file whose only mentions stand before the colon of a written-out";
+  "record. A call written there stops being a call and becomes a field named by";
+  "the letters of the call, so the repair would not be wrong so much as";
+  "unparseable.";
+  "That third drop used to be much wider: it covered the naming of a field in all";
+  "three of its shapes, on the reasoning that acting on any of them would tie the";
+  "shape of saved data to a name in this code. Two of those shapes have room for a";
+  "call - the word inside the brackets of a lookup, and the word handed second to a";
+  "field call - and in both of them the call hands back the same word, so no saved";
+  "shape moves. The hazard that reasoning was really about, a value that has";
+  "already left this repo into a browser's storage or a bookmarked address,";
+  "belongs to the value rather than to how some other file happens to spell it,";
+  "and it is already marked at the getter itself where anybody opening the file";
+  "can see it. Withholding by the shape of the site instead guarded a handful of";
+  "values by hiding dozens of files, and the getters it hid behind read as fully";
+  "routed while the word was still everywhere: two of them, measured 2026-08-26,";
+  "over thirty-six files between them.";
   "The source arrives as an argument rather than being read here, because an audit";
   "whose answer is a clean empty list reads exactly the same whether its judgment";
   "works or is broken. Handing the body of source in is what lets a written-down";
@@ -64,11 +72,15 @@ export function literal_duplicates_generic(codes) {
           codes[f_name],
           getter.literal,
         );
+        let entry_key_only = js_code_literal_entry_key_only(
+          codes[f_name],
+          getter.literal,
+        );
         let site_none = js_code_literal_site_none(
           codes[f_name],
           getter.literal,
         );
-        let site_is = not(prose_only) && not(site_none);
+        let site_is = not(prose_only) && not(entry_key_only) && not(site_none);
         if (site_is) {
           list_add(files, f_name);
         }
