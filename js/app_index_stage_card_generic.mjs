@@ -2,8 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { host_local_network_is } from "./host_local_network_is.mjs";
 import { text_slash_forward } from "./text_slash_forward.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { window_go } from "./window_go.mjs";
-import { app_index_card } from "./app_index_card.mjs";
+import { app_index_card_link } from "./app_index_card_link.mjs";
 import { not } from "./not.mjs";
 export function app_index_stage_card_generic(root, shown, path, label, text) {
   "The card at the very top of the index page that swaps which copy of the whole site the rest of the page leads to - the dev build or the built one - written once for both directions.";
@@ -19,9 +18,5 @@ export function app_index_stage_card_generic(root, shown, path, label, text) {
   ("counted from the top of the site rather than from the page asking, because the dev folder sits at the top and nowhere else. Asked relatively it would be right from the page people see and wrong from the checked-over copy one folder in, which would look for a dev folder inside that copy and find nothing.");
   let root_mark = text_slash_forward();
   let url = text_combine(root_mark, path);
-  function opened() {
-    "gone to in this tab rather than opened beside it, so the browser's own back button is the way back and a phone is not left with tabs to close";
-    window_go(url);
-  }
-  app_index_card(root, label, text, opened);
+  app_index_card_link(root, label, text, url);
 }
