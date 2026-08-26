@@ -32,44 +32,23 @@ export function app_g_bless_edge(edge, container_map, bar, remaining) {
     html_visibility_hidden(outer);
     return;
   }
-  let person_x = property_get(point, "x");
-  let person_y = property_get(point, "y");
+  let seen = app_g_bless_edge_seen_is(box, point);
+  if (seen) {
+    html_visibility_hidden(outer);
+    return;
+  }
+  let stand = app_g_bless_edge_stand(outer, box, point);
+  let degrees = app_g_bless_edge_degrees(box, point);
+  html_style_rotate_degrees_set(spin, degrees);
   let box_left = property_get(box, "left");
   let box_top = property_get(box, "top");
-  let box_right = property_get(box, "right");
-  let box_bottom = property_get(box, "bottom");
-  let seen_x = math_number_clamp(person_x, box_left, box_right);
-  let seen_y = math_number_clamp(person_y, box_top, box_bottom);
-  let across_is = equal(seen_x, person_x);
-  let along_is = equal(seen_y, person_y);
-  if (across_is) {
-    if (along_is) {
-      html_visibility_hidden(outer);
-      return;
-    }
-  }
-  let rect_arrow = html_bounding_client_rect(outer);
-  let wide = property_get(rect_arrow, "width");
-  let tall = property_get(rect_arrow, "height");
-  let top2 = math_max(wide, tall);
-  let pad = divide(top2, 2);
-  let low = add(box_left, pad);
-  let high = subtract(box_right, pad);
-  let stand_x = math_number_clamp(person_x, low, high);
-  let low2 = add(box_top, pad);
-  let high2 = subtract(box_bottom, pad);
-  let stand_y = math_number_clamp(person_y, low2, high2);
-  let right = property_get(box, "y");
-  let down = subtract(person_y, right);
-  let right2 = property_get(box, "x");
-  let right_of = subtract(person_x, right2);
-  let degrees = math_atan2_degrees(down, right_of);
-  html_style_rotate_degrees_set(spin, degrees);
-  let value = subtract(stand_x, box_left);
-  let value2 = subtract(stand_y, box_top);
+  let stand_x = property_get(stand, "x");
+  let stand_y = property_get(stand, "y");
+  let from_left = subtract(stand_x, box_left);
+  let from_top = subtract(stand_y, box_top);
   html_style_assign(outer, {
-    left: html_pixels_text(value),
-    top: html_pixels_text(value2),
+    left: html_pixels_text(from_left),
+    top: html_pixels_text(from_top),
   });
   html_visibility_visible(outer);
 }
