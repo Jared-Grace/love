@@ -1,4 +1,4 @@
-import { app_code_review_exercise_superseded } from "./app_code_review_exercise_superseded.mjs";
+import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -84,7 +84,7 @@ export function app_code_review_present_fn(
     function on_incorrect() {
       app_code_review_hide_success(success_container);
     }
-    app_code_review_exercise_superseded(c, exercise, on_correct, on_incorrect);
+    app_code_review_exercise(c, exercise, on_correct, on_incorrect);
   }
   return present;
 }
