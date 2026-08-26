@@ -31,6 +31,10 @@ export function app_g_bless_overlay_blessed(container_map) {
   let glows = html_div(div_map);
   let bar = app_g_bless_bar(container_map);
   let told = app_g_bless_told(bar);
+  ("The arrow that leans off the edge of the screen towards the next person to pray for. It");
+  ("is made here, once, with the frame it hangs on - and made AFTER the buttons so that a");
+  ("hint can never end up underneath the thing a thumb is reaching for.");
+  let edge = app_g_bless_edge_new(container_map);
   ("the ladder starts at one person, and every rung above it is earned rather than begun");
   ("with - so the first prayer of a new game reaches exactly the person it is said over");
   let rung = "person";
@@ -48,6 +52,7 @@ export function app_g_bless_overlay_blessed(container_map) {
     glows,
     bar,
     told,
+    edge,
     rung,
     blessed,
   };
