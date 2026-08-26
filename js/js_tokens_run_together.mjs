@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
@@ -5,7 +6,6 @@ import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { or } from "./or.mjs";
 import { js_tokenizer } from "./js_tokenizer.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { undefined_is } from "./undefined_is.mjs";
@@ -33,8 +33,7 @@ export function js_tokens_run_together(before, after) {
     return null;
   }
   let tokens = js_tokenizer(joined);
-  let size = list_size(tokens);
-  let one = equal(size, 1);
+  let one = list_size_equal(tokens, 1);
   if (not(one)) {
     return null;
   }
