@@ -10,7 +10,13 @@ export function bible_glyph_word_negation_drawn(word) {
   "One shorthand word of a chapter with its English negation turned into the picture the negation roots are seated on, or nothing at all when the word is not a plain negation.";
   "IT KEEPS EVERYTHING THAT IS NOT THE NEGATION. A shorthand word carries its punctuation and sometimes an English stem as well - cannot is one word holding a verb and a negation - so replacing the whole word would silently drop a comma or a can, and neither shows up as anything but a sentence that reads slightly wrong to a person who never saw the original.";
   "ANSWERING WITH NOTHING IS THE COMMON CASE and it is not a failure. Almost every word of a chapter is not a negation, and a word that already draws the picture is not one either, because its letters spell the picture's name rather than an English no.";
+  "A WORD ALREADY CARRYING A PICTURE IS REFUSED OUTRIGHT, and the reason is worth writing down because it looked like it needed no rule at all. The picture a negation is seated on is spelled with the letters n and o, so the first run of letters in an already drawn word reads as the English word no - which makes a word that is finished look exactly like a word waiting to be drawn, and drawing it a second time would put the picture inside its own name.";
   arguments_assert(arguments, 1);
+  let carried = word.indexOf("$");
+  let drawn_already = not(equal(carried, -1));
+  if (drawn_already) {
+    return null;
+  }
   let letters = word.match(/[A-Za-z]+/);
   let none = equal(letters, null);
   if (none) {

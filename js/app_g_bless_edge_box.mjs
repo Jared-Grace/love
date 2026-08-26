@@ -1,9 +1,8 @@
+import { sides_middle_point } from "./sides_middle_point.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { add } from "./add.mjs";
 export function app_g_bless_edge_box(container_map, bar) {
   arguments_assert(arguments, 2);
   ("The part of the screen an arrow pointing off the map is allowed to stand in: the whole map, less the strip of buttons along the bottom - with the middle of what is left worked out as well, since that is the point every direction is measured from.");
@@ -17,7 +16,12 @@ export function app_g_bless_edge_box(container_map, bar) {
   let bottom_full = property_get(rect, "bottom");
   let height_bar = property_get(rect_bar, "height");
   let bottom = subtract(bottom_full, height_bar);
-  let sides = { left, top, right, bottom };
+  let sides = {
+    left,
+    top,
+    right,
+    bottom,
+  };
   let middle = sides_middle_point(sides);
   let x = property_get(middle, "x");
   let y = property_get(middle, "y");
