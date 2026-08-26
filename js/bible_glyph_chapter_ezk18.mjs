@@ -702,7 +702,7 @@ export function bible_glyph_chapter_ezk18() {
       {
         verse_number: 22,
         words: [
-          "None",
+          "$no_entry",
           "of",
           "the",
           "transgressions",
