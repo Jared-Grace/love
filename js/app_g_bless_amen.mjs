@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_typing_dots } from "./app_g_typing_dots.mjs";
+import { app_shared_typing_dots } from "./app_shared_typing_dots.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
@@ -64,7 +64,7 @@ export function app_g_bless_amen(container, prayer, on_amen) {
     "align-items": "center",
     "justify-content": "center",
   });
-  app_g_typing_dots(waiting);
+  app_shared_typing_dots(waiting);
   function offer() {
     html_remove(waiting);
     html_visibility_visible(button);
