@@ -15,9 +15,11 @@ export async function qa_promoted_unbuilt_linked() {
   "So the exemption keeps its reason and is made to prove it. An app with nothing built and nothing pointing at it is still waved through, and the work on it still holds nobody up. An app with nothing built that the front page is advertising is a broken link about to be published.";
   "What travels out beside the offenders is the number of pointings found across every app, not the number of offenders. Offenders are nothing on a good day by construction, so they cannot tell a clean folder from a search that stopped finding anything - and this search can stop finding anything, in one quiet way, if a build ever changes which quotation mark it spells a name with.";
   arguments_assert(arguments, 0);
+  ("Where the folder is, worked out from where this is standing rather than looked up by the name of a repo. The lookup reads a setting nobody commits, so inside the frozen copy the gates are judged in it comes back with no repo of that name and throws - and a gate that throws writes down no offenders, cannot be shown to be about somewhere else, and holds every app out of every deployment. Measured 2026-08-26: sixteen judged commits in a row unshippable for every app, all of it this one line.");
+  let here = folder_current_absolute();
   let public_relative = folder_public();
-  let folder = await user_repo_path_combine(public_relative);
-  let app_names = await firebase_prod_app_names();
+  let folder = path_join([here, public_relative]);
+  let app_names = await folder_app_names(folder);
   let pointers = await folder_app_pointers(folder, app_names);
   let walked = 0;
   let offenders = [];
