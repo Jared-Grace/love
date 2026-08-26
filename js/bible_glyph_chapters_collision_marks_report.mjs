@@ -7,8 +7,9 @@ import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_glyph_chapters_collision_marks_report() {
-  "What the split of every shared picture would actually cost, counted one shared picture at a time: how many marks already on the page the interlinear decides by itself, how many a person has to read, and where those are.";
+  "What the split of every shared picture would actually cost, counted one shared picture at a time: how many marks already on the page the interlinear decides by itself, how many the marks and the words pair off between them, how many a person has to read, and where those are.";
   "THE COUNT IS THE WHOLE POINT AND THE LISTS ARE THE LEFTOVER. The reading underneath hands back every mark it examined, which is hundreds of rows and unreadable in one sitting; almost all of them are the answer nobody needs to see, because a mark the interlinear decides on its own is a mark nobody will ever open. So the decided ones come back as a tally per root and the undecided ones come back in full, which is the shape of the work rather than the shape of the data.";
+  "A PAIRED MARK IS COUNTED ONCE PER WORD AND NEVER ONCE PER VERSE. Where the counts agree the verse hands over as many marks as it has words, and each one goes to the root of the word in its place, so a verse drawing three marks moves three into the tally and can move them to different roots. That is the whole difference between pairing and presence: presence has one answer for the verse, pairing has one answer for each mark in it.";
   "A PICTURE WITH NOTHING UNDECIDED UNDER IT IS A PICTURE THAT CAN BE SPLIT TODAY, and that is the sentence this exists to be able to say. Which of the pair keeps the picture is still a person's call, but nothing about the chapters already written stands in the way.";
   arguments_assert(arguments, 0);
   let walk = await bible_glyph_chapters_collision_marks_walked();
@@ -17,6 +18,12 @@ export async function bible_glyph_chapters_collision_marks_report() {
     let row = bible_glyph_collision_marks_row(rows, entry);
     let root_name = list_first(entry.roots);
     property_count_add(row.decided, root_name, entry.drew);
+  }
+  for (let entry of walk.aligned) {
+    let row = bible_glyph_collision_marks_row(rows, entry);
+    for (let root_name of entry.order) {
+      property_count_add(row.paired, root_name, 1);
+    }
   }
   for (let entry of walk.ambiguous) {
     let row = bible_glyph_collision_marks_row(rows, entry);
