@@ -1,7 +1,6 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { bible_versions_english_choices_withheld } from "./bible_versions_english_choices_withheld.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { door43_versions_english_choices } from "./door43_versions_english_choices.mjs";
@@ -22,8 +21,11 @@ export async function bible_versions_english_choices_usable() {
   let withheld = bible_versions_english_choices_withheld();
   let withheld_folders = list_map_property(withheld, "bible_folder");
   function offered_is(version) {
-    let bible_folder = property_get(version, "bible_folder");
-    let outside = list_includes_not(withheld_folders, bible_folder);
+    let outside = property_in_list_not(
+      version,
+      "bible_folder",
+      withheld_folders,
+    );
     return outside;
   }
   let usable = list_filter(allowed, offered_is);
