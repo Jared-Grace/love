@@ -39,7 +39,7 @@ export async function bible_chapter_suno_sections(bible_folder, chapter_code) {
     list_add(sizes, with_break);
   }
   let sections = list_sizes_sections_least(sizes, limit);
-  let ends = list_sizes_section_ends_balanced(sizes, limit, sections, []);
+  let ends = list_sizes_section_ends_balanced(sizes, limit, sections);
   let runs = list_sections_at_ends(parts, ends);
   let texts = [];
   for (let run of runs) {
