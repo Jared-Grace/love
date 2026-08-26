@@ -1,3 +1,4 @@
+import { app_code_expression_choose_order_ask } from "./app_code_expression_choose_order_ask.mjs";
 import { app_code_head_spaced_above_code } from "./app_code_head_spaced_above_code.mjs";
 import { app_shared_animation_duration } from "./app_shared_animation_duration.mjs";
 import { html_height_change_animate } from "./html_height_change_animate.mjs";
@@ -5,18 +6,9 @@ import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_div_first } from "./html_div_first.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_code_label_solve_first } from "./app_code_label_solve_first.mjs";
-import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
-import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { noop } from "./noop.mjs";
-import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
 export function app_code_lesson_expression_choose_order_solve_example(
   parent,
   card,
@@ -50,8 +42,8 @@ export function app_code_lesson_expression_choose_order_solve_example(
     app_shared_success_message(asking);
   }
   async function finished_grow() {
-    ("the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.");
-    ("Everything under the card - the line, the buttons, the whole rest of the page - slides down as the room is made, rather than being somewhere else by the time the learner looks back. Taken at once it was a jump, and the well done arrived in the middle of it, so the one thing on the screen worth reading was the thing hardest to catch.");
+    "the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.";
+    "Everything under the card - the line, the buttons, the whole rest of the page - slides down as the room is made, rather than being somewhere else by the time the learner looks back. Taken at once it was a jump, and the well done arrived in the middle of it, so the one thing on the screen worth reading was the thing hardest to catch.";
     await html_height_change_animate(head, asking, finished_say, duration);
   }
   ("the pressing is the quiz next door's pressing, out of the one place both of them read - all this page does differently is write the asking on the card instead of over a row of answers, and count nothing against a wrong press");

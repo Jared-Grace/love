@@ -1,0 +1,34 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_bless_cover } from "./app_g_bless_cover.mjs";
+import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
+import { html_imgs_load_wait } from "./html_imgs_load_wait.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
+import { sleep } from "./sleep.mjs";
+import { html_remove } from "./html_remove.mjs";
+export async function app_g_bless_overlay_loaded(container_map) {
+  arguments_assert(arguments, 1);
+  ("The whole game, put up behind a cover that only comes away once every picture on the");
+  ("street has arrived.");
+  ("Without this the player watched the street assemble. The page has already been covered");
+  ("once, while the code was downloading, and that cover is taken away the moment the code");
+  ("runs - which is well before any of the ground, the buildings or the faces have been");
+  ("fetched. So the first thing a player saw was an empty white page filling in square by");
+  ("square, and on a phone away from the desk that took long enough to read as the game");
+  ("being broken.");
+  ("The wait is for the pictures that are on the page once it has been built, so the cover");
+  ("goes up first and the street is built behind it. Asked any earlier there would be");
+  ("nothing to wait for, and the answer would come back at once and mean nothing.");
+  ("It fades rather than cutting, and the fade is the shared cover's own length, because a");
+  ("solid colour vanishing in one frame reads as a fault rather than as a screen being");
+  ("handed over.");
+  ("Each picture carries its own short patience underneath, so one that never arrives holds");
+  ("the street up by that much and no longer - a game that will not start at all is a worse");
+  ("outcome than a game with one square missing from it.");
+  let cover = app_g_bless_cover();
+  let transfer = await app_g_bless_overlay(container_map);
+  await html_imgs_load_wait(container_map);
+  html_style_opacity(cover, "0");
+  await sleep(150);
+  html_remove(cover);
+  return transfer;
+}
