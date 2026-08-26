@@ -236,7 +236,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head and horns held fast in a ring of bare brown thorn branches twisted round them like a crown of thorns, that ring not a separate thing but the thickest part of one thicket of the same branches, the thicket growing out of the ground on both sides of the ram and running unbroken from the ground up into that ring so that every branch of the crown is joined to the thicket below it, the thicket standing no higher than the ram's own back, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "One dense thicket of bare brown thorn branches standing on the ground and rising only as high as a ram's back, and caught in the top of that thicket a ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head bent low into the thicket so that the branches close round its horns like a crown of thorns, and every branch of that crown running down unbroken into the thicket beneath it so that the crown and the thicket are one plant, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -476,7 +476,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one sceptre of white glass standing upright at the left hand side of the window as the window is seen, beside the throne and clear of it, drawn as a short plain straight rod no longer than half the height of the throne's back with one small plain round ball at its top and nothing else on it, and the glass immediately behind the sceptre deep cobalt blue so that the red of the sceptre stands clear of it and is nowhere against red or crimson, drawn very large so that the throne reaches almost to the white border on every side",
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one sceptre of white glass standing upright at the left hand side of the window as the window is seen, beside the throne and clear of it, drawn as a short plain straight rod no longer than half the height of the throne's back with one small plain round ball at its top and nothing else on it, standing clear of the throne with a broad gap of the field's own colour between the two, drawn very large so that the throne reaches almost to the white border on every side",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },

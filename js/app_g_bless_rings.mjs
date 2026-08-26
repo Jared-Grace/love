@@ -3,12 +3,12 @@ import { app_g_bless_color_household_remaining } from "./app_g_bless_color_house
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
-import { app_g_bless_ring_get } from "./app_g_bless_ring_get.mjs";
+import { app_shared_game_npc_ring_get } from "./app_shared_game_npc_ring_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_div } from "./html_div.mjs";
 import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_bless_ring_set } from "./app_g_bless_ring_set.mjs";
+import { app_shared_game_npc_ring_set } from "./app_shared_game_npc_ring_set.mjs";
 import { each } from "./each.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
@@ -45,7 +45,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
   let border = text_combine_multiple([width, " dashed ", color]);
   let people_all = bless_view_people(everyone);
   function person_ring(person) {
-    let already = app_g_bless_ring_get(person);
+    let already = app_shared_game_npc_ring_get(person);
     let made = null_not_is(already);
     if (made) {
       return;
@@ -59,17 +59,17 @@ export function app_g_bless_rings(rings, everyone, remaining) {
       "pointer-events": "none",
       visibility: "hidden",
     });
-    app_g_bless_ring_set(person, ring);
+    app_shared_game_npc_ring_set(person, ring);
   }
   each(people_all, person_ring);
   function person_hide(person) {
-    let ring = app_g_bless_ring_get(person);
+    let ring = app_shared_game_npc_ring_get(person);
     html_visibility_hidden(ring);
   }
   each(people_all, person_hide);
   let people_remaining = bless_view_people(remaining);
   function person_show(person) {
-    let ring = app_g_bless_ring_get(person);
+    let ring = app_shared_game_npc_ring_get(person);
     html_visibility_visible(ring);
   }
   each(people_remaining, person_show);
