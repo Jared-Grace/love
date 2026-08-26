@@ -69,13 +69,20 @@ export function js_rewrite_targets(ast) {
   }
   function collect(la) {
     function seam_lambda(seam) {
-      function on_call(v) {
-        let args = property_get(v, "args");
+      function on_call(called) {
+        let args = property_get(called, "args");
         let first = list_first_try(args);
         let target = spelled_or_null(first);
         let found = null_not_is(target);
         if (found) {
-          la(target);
+          let visited = property_get(called, "v");
+          let node = property_get(visited, "node");
+          let at = property_get(node, "start");
+          let site = {
+            target,
+            at,
+          };
+          la(site);
         }
       }
       js_visit_calls_named(ast, seam, on_call);
