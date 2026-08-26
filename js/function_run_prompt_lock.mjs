@@ -1,4 +1,4 @@
-import { lock_wait_prompt } from "../../love/js/lock_wait_prompt.mjs";
+import { lock_wait_prompt } from "./lock_wait_prompt.mjs";
 export async function function_run_prompt_lock(lambda) {
   let who = function_run_prompt_lock.name;
   let r = await lock_wait_prompt(lambda, who);
