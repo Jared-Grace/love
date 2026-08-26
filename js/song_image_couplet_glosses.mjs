@@ -49,7 +49,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 7,
+      kept: 12,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 5,
+      kept: 7,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -89,7 +89,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:45 says the sun was darkened. A sun drawn in the same solid black as the lead lines is the plainest way a window can say a sun that has stopped giving light.",
     },
     11: {
-      kept: 27,
+      kept: 29,
       lyric_ref: "John 3:16, Romans 8:32, Genesis 22:8",
       lyric_explain:
         "HE that spared not HIS own Son, but delivered HIM up for us all. Abraham had told Isaac that GOD would provide HIMSELF a lamb, and the couplet reads the giving of the SON as that promise kept.",
@@ -105,7 +105,7 @@ export function song_image_couplet_glosses() {
         "Described. The cup is named in Matthew 26:39 and again in John 18:11. It is drawn in glass rather than gold because gold is kept in this film for the word of GOD itself.",
     },
     13: {
-      kept: 6,
+      kept: 9,
       lyric_ref: "Luke 22:44, John 19:30",
       lyric_explain:
         "Being in an agony HE prayed more earnestly, and HIS sweat was as it were great drops of blood falling down to the ground. It was finished is what HE said at the end of it.",
