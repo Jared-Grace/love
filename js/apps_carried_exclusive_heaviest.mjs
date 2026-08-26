@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { apps_all_main_fns } from "./apps_all_main_fns.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
-import { app_carried_exclusive_weights } from "./app_carried_exclusive_weights.mjs";
+import { app_shared_carried_exclusive_weights } from "./app_shared_carried_exclusive_weights.mjs";
 import { functions_reachable_carried } from "./functions_reachable_carried.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -25,7 +25,7 @@ export async function apps_carried_exclusive_heaviest() {
     hint: "no app entry points were found at all, so nothing was weighed - the finding is what to look at, not the empty answer",
   });
   async function main_lambda(a_main) {
-    let ranked = await app_carried_exclusive_weights(a_main);
+    let ranked = await app_shared_carried_exclusive_weights(a_main);
     let carried = await functions_reachable_carried([a_main]);
     let weights = await functions_names_weights(carried);
     let sizes = list_map_property(weights, "size");
