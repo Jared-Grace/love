@@ -1,3 +1,4 @@
+import { js_span_call_existing_dir } from "./js_span_call_existing_dir.mjs";
 import { js_identifier_param_delete_dir } from "./js_identifier_param_delete_dir.mjs";
 import { js_identifier_wrap_copy_dir } from "./js_identifier_wrap_copy_dir.mjs";
 import { app_shared_prod_snapshot_folder } from "./app_shared_prod_snapshot_folder.mjs";
@@ -63,6 +64,10 @@ export function example_files_command_cores() {
     {
       name: fn_name("function_param_delete"),
       core: js_identifier_param_delete_dir,
+    },
+    {
+      name: fn_name("function_span_call_existing"),
+      core: js_span_call_existing_dir,
     },
   ];
   return cores;

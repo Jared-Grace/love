@@ -1,10 +1,8 @@
+import { song_god_our_savior_wording_echo } from "./song_god_our_savior_wording_echo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_god_our_savior_wordings } from "./song_god_our_savior_wordings.mjs";
 import { property_get } from "./property_get.mjs";
 import { song_god_our_savior_reference_lines } from "./song_god_our_savior_reference_lines.mjs";
-import { text_words_content_echo } from "./text_words_content_echo.mjs";
-import { numbers_larger } from "./numbers_larger.mjs";
-import { text_words_content_echo_stemmed } from "./text_words_content_echo_stemmed.mjs";
 import { list_map } from "./list_map.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
@@ -22,34 +20,7 @@ export async function song_god_our_savior_wordings_echoed() {
     let distinct = property_get(passage, "distinct");
     let lines = song_god_our_savior_reference_lines(reference);
     function heard(wording) {
-      let text = property_get(wording, "text");
-      let run = 0;
-      let shared = 0;
-      let folded_run = 0;
-      let folded_shared = 0;
-      for (let line of lines) {
-        let plain = text_words_content_echo(line, text);
-        let plain_run = property_get(plain, "run");
-        let plain_shared = property_get(plain, "shared");
-        run = numbers_larger(run, plain_run);
-        shared = numbers_larger(shared, plain_shared);
-        let folded = text_words_content_echo_stemmed(line, text);
-        let folded_run_one = property_get(folded, "run");
-        let folded_shared_one = property_get(folded, "shared");
-        folded_run = numbers_larger(folded_run, folded_run_one);
-        folded_shared = numbers_larger(folded_shared, folded_shared_one);
-      }
-      let names = property_get(wording, "names");
-      let bible_folders = property_get(wording, "bible_folders");
-      let wording_scored = {
-        folded_run,
-        folded_shared,
-        run,
-        shared,
-        names,
-        bible_folders,
-        text,
-      };
+      let wording_scored = song_god_our_savior_wording_echo(wording, lines);
       return wording_scored;
     }
     let wordings = list_map(distinct, heard);
