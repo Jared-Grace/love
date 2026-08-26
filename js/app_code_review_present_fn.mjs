@@ -51,6 +51,9 @@ export function app_code_review_present_fn(
         html_remove(skip_button);
       }
       storage_local_remove_context(context, key);
+      ("the half-answered state is thrown away and the fact that the whole thing was finished is written down in its place. Without the second half, finishing a review left no trace anywhere: the only sign of it was the screen the learner was about to walk away from, and the button they had just earned went back to looking exactly like one they had never pressed.");
+      let number = app_code_review_number_get(context);
+      app_code_review_complete_record(context, number);
       app_code_review_celebration(c);
       function render_continue(continue_parent) {
         let r = app_code_review_render_continue(continue_parent, go_next);

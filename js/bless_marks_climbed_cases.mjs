@@ -17,8 +17,8 @@ export function bless_marks_climbed_cases() {
   "A rung is reached because the LAST prayer earns it. When the final dark face is lit,";
   "every person in the crowd is done, so every household is, so every building is - and";
   "the rung after the largest whole container is not earned, because that one needs more";
-  "people than the crowd holds. Sixty people are one block of a neighbourhood of twelve,";
-  "so the climb stops at the block whatever order the crowd is met in.";
+  "people than the crowd holds. Forty-five people are one block of a neighbourhood of";
+  "twelve, so the climb stops at the block whatever order the crowd is met in.";
   "The scattered strides are the ones that matter. Met one after another, a household";
   "arrives whole and finishes itself by accident, which is the easy case and the one a";
   "real pavement never gives; a stride steps across households and buildings, so the game";
@@ -31,19 +31,19 @@ export function bless_marks_climbed_cases() {
         rung: "household",
         dark: 0,
       },
-      why: "three people are one household and no more, so the third prayer finishes it and the building above it is still eleven people short",
+      why: "three people are one household and no more, so the third prayer finishes it and the building above it is still six people short",
     },
     {
-      count: 12,
+      count: 9,
       stride: 1,
       climbed: {
         rung: "building",
         dark: 0,
       },
-      why: "twelve people are four households, which is a whole building, and a block wants five buildings",
+      why: "nine people are three households, which is a whole building, and a block wants five buildings",
     },
     {
-      count: 12,
+      count: 9,
       stride: 7,
       climbed: {
         rung: "building",
