@@ -1,3 +1,5 @@
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { not } from "./not.mjs";
 import { html_img_lazy_full_block } from "./html_img_lazy_full_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_kept_url } from "./song_image_kept_url.mjs";
@@ -19,6 +21,7 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   "A line whose picture nobody has settled on yet is passed over in silence rather than left as a gap where a picture failed to load.";
   "It hands back the places waiting for words, the same way one sung line does, because the page fetches every passage on it in one go.";
   "WHAT TO CALL THE CARD IS DECIDED BY THE CALLER, because only the caller knows whether this picture has a neighbour. A line sung once has one picture and can simply say this picture; a line sung twice has two, one under the other, and two cards both saying this picture tell a reader who cannot see them apart nothing at all about which is which.";
+  "THE CARD IS DRAWN ABOVE THE PICTURE, not below it. A picture arrives late and at a height nobody knew in advance, so a card underneath one jumps down the page the moment the picture lands - and a reader reaching for the caret taps whatever slid into its place. Above the picture, the card is where it was when the reader looked at it.";
   arguments_assert(arguments, 4);
   let url = song_image_kept_url(n);
   let unchosen = equal(url, "");
@@ -27,17 +30,16 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
     return none;
   }
   let couplet = song_image_couplet_get(n);
+  let references = song_image_couplet_symbol_references(n);
+  let unreferenced = list_empty_is(references);
+  let asked_list = [];
+  if (not(unreferenced)) {
+    let shown = app_music_song_line_show(folds, parent, caption, references);
+    list_add_multiple(asked_list, shown.asked_list);
+  }
   let picture = html_img(parent, url);
   html_attribute_set(picture, "alt", couplet.symbol);
   html_img_lazy_full_block(picture);
   html_style_margin_top(picture, "12px");
-  let references = song_image_couplet_symbol_references(n);
-  let unreferenced = list_empty_is(references);
-  if (unreferenced) {
-    let none = [];
-    return none;
-  }
-  let shown = app_music_song_line_show(folds, parent, caption, references);
-  let r = shown.asked_list;
-  return r;
+  return asked_list;
 }
