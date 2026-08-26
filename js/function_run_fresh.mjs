@@ -1,7 +1,7 @@
+import { node_run_lines_whole } from "./node_run_lines_whole.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { folder_repo_love } from "./folder_repo_love.mjs";
-import { node_run } from "./node_run.mjs";
 import { json_from } from "./json_from.mjs";
 export async function function_run_fresh(f_name) {
   arguments_assert(arguments, 1);
@@ -13,7 +13,7 @@ export async function function_run_fresh(f_name) {
   await function_exists_assert(f_name);
   let folder = folder_repo_love();
   let words = ["scripts/ai.mjs", f_name];
-  let printed = await node_run(folder, words);
+  let printed = await node_run_lines_whole(folder, words);
   let answered = json_from(printed);
   return answered;
 }

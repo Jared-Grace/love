@@ -1,3 +1,4 @@
+import { qa_promoted_pieces_gone_forget } from "./qa_promoted_pieces_gone_forget.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { public_chunks_orphaned } from "./public_chunks_orphaned.mjs";
@@ -13,6 +14,7 @@ export async function public_chunks_orphaned_delete() {
   "The counts left over are the proof. A clearing that quietly did nothing leaves a folder looking exactly like one it cleared, so the second reading each folder does is what tells the two apart, and it is expected to be nothing at all.";
   "Nothing is sent anywhere. What is being served goes on being served until somebody sends the folder out, and that is a decision about what people have in front of them.";
   "do NOT grant. It works out for itself which files to remove, which is precisely what a standing approval must never be given to - the set it acts on is not visible in the words that start it.";
+  "Taking a file away also takes it out of the note of what each waiting app came out as, because that note is checked before anything is sent and a name in it for a file that is gone stops the sending of every app standing beside it - measured the day this line was written: one clearing held back sixteen apps, and the refusal named all sixteen and not the clearing.";
   arguments_assert(arguments, 0);
   let before = await public_chunks_orphaned();
   let folders = property_list_map_property(before, "folders", "folder");
@@ -25,6 +27,7 @@ export async function public_chunks_orphaned_delete() {
   let deleted = list_sum(deleted_counts);
   let left_counts = list_map_property(cleared, "left");
   let left = list_sum(left_counts);
+  await qa_promoted_pieces_gone_forget();
   let r = {
     deleted,
     left,
