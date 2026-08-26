@@ -14,6 +14,7 @@ export function bible_glyph_chapter_jhn01() {
   ("EVERY IS IN THIS CHAPTER IS ENGLISH, and it did not start that way. This chapter was first drawn with an equals sign on the verb to be, because the seed table seated one there and the table is meant to be obeyed rather than argued with inside a verse. Verse one is what settled it: the same word appears three times in one sentence and does three different jobs - the Word EXISTED, the Word stood in a relation to God, the Word WAS God - and only the third is anything an equals sign was drawn for.");
   ("The mark was withdrawn from the seed table rather than avoided here, because a wrong mark that an author quietly steps around is a wrong mark waiting for the next author.");
   ("Verse eighteen reads the one and only God rather than the one and only Son, because that is what the Greek in the interlinear says, and a picture Bible that quietly moved to the easier reading would be hiding the one place the prologue is hardest.");
+  ("THE THIRTY NINTH VERSE SAID COME TWICE AND DREW IT ONCE. He says come and see, and then they came and saw; the seeing was drawn both times and the coming only the second. The verse proves itself: the picture standing beside the plain word in the matching half is the whole evidence, and no interlinear was opened to reach it. Where one verse says a word twice, draw it twice or leave it twice.");
   let chapter = {
     chapter_code: "JHN01",
     reference: "John 1",
