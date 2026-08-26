@@ -1,9 +1,9 @@
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_code_lesson_quiz_superseded } from "./app_code_lesson_quiz_superseded.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { object_assign } from "./object_assign.mjs";
@@ -67,7 +67,7 @@ export function app_code_lesson_quizzes_generic(params) {
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
-        app_code_lesson_quiz_superseded(
+        app_code_lesson_quiz(
           container,
           {
             question,

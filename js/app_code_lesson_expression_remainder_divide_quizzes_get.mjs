@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { app_code_lesson_expression_remainder_divide_percent_expression } from "./app_code_lesson_expression_remainder_divide_percent_expression.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
@@ -6,7 +7,6 @@ import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_mul
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
-import { app_code_lesson_quiz_superseded } from "./app_code_lesson_quiz_superseded.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_remainder_divide_quizzes_get(
@@ -60,7 +60,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
       percent_expression,
     );
     function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz_superseded(
+      app_code_lesson_quiz(
         container,
         quiz_qa,
         parent,
