@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { qa_promoted } from "./qa_promoted.mjs";
@@ -5,7 +6,6 @@ import { object_property_names } from "./object_property_names.mjs";
 import { firebase_prod_apps_unshipped } from "./firebase_prod_apps_unshipped.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
 import { git_commit_exists_is } from "./git_commit_exists_is.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { firebase_prod_app_public_live_restore } from "./firebase_prod_app_public_live_restore.mjs";
@@ -29,8 +29,7 @@ export async function qa_promoted_commits_gone_live_restore() {
     if (not(waiting)) {
       continue;
     }
-    let note = property_get(promoted, app_name);
-    let commit = property_get(note, "commit");
+    let commit = property_path_get_2(promoted, app_name, "commit");
     let alive = await git_commit_exists_is(commit);
     if (alive) {
       continue;
