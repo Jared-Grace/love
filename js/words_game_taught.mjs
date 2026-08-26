@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { data_given_accepted_folder } from "./data_given_accepted_folder.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -12,7 +13,7 @@ export async function words_game_taught() {
   "BASE FORMS ONLY, and the same reader that takes endings off for the other list takes them off for this one. Listing sinned beside sin, and prays beside pray, would double the file to say nothing new.";
   let folder = data_given_accepted_folder();
   let f_name = fn_name("words_game_taught");
-  let combined = text_combine_multiple([f_name, ".json"]);
+  let combined = text_combine_multiple([f_name, json_extension()]);
   let path = path_join([folder, combined]);
   let words = await file_read_json(path);
   return words;
