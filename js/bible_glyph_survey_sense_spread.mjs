@@ -1,3 +1,4 @@
+import { bible_glyph_roots_glyph_sharers } from "./bible_glyph_roots_glyph_sharers.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -7,7 +8,6 @@ import { property_set } from "./property_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
 import { bible_glyph_roots_collisions } from "./bible_glyph_roots_collisions.mjs";
 export async function bible_glyph_survey_sense_spread(testament_name) {
   "Gathers everything about one testament that has to be in hand before its words can be counted: the glosses recorded against each Strong's number, the roots the picture alphabet is built on, and which picture each word has been given.";
