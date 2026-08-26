@@ -1,8 +1,7 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { equal } from "./equal.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -29,11 +28,8 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_walked() {
   let walked = 0;
   for (let chapter of chapters) {
     let chapter_code = chapter.chapter_code;
-    let testament_name = bible_chapter_testament_name(chapter_code);
-    let rows = await bible_glyph_chapter_draft_words(
-      chapter_code,
-      testament_name,
-    );
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
+    let rows = both.rows;
     let seated_by_verse = {};
     for (let row of rows) {
       let counts = {};
