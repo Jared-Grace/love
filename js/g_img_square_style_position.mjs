@@ -6,7 +6,13 @@ export function g_img_square_style_position(tile, { x, y }, z) {
   g_img_square_style(tile);
   html_style_assign(tile, {
     position: "absolute",
-    "z-index": g_z(z),
   });
+  "The layer is written onto the square as a style variable rather than as the z-index";
+  "itself, because the z-index is worked out afresh on every step - the layer plus the row";
+  "the square has reached - and the one that does the working out is handed nothing but the";
+  "element. Written here as a plain z-index it would be wiped by the first move made.";
+  let name = g_img_square_layer_variable();
+  let layer = g_z(z);
+  html_style_variable_set(tile, name, layer);
   g_img_square_style_position_only(tile, x, y);
 }
