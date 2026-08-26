@@ -31,12 +31,12 @@ export async function webpack_dev_stale_names() {
       continue;
     }
     let deps = property_get(built, "deps");
-    let each = [];
+    let dep_times = [];
     for (let f_name of deps) {
       let ms = property_get_or_null(times, f_name);
-      list_add(each, ms);
+      list_add(dep_times, ms);
     }
-    let known = list_filter_null_not_is(each);
+    let known = list_filter_null_not_is(dep_times);
     let newest = list_max(known);
     let path = await webpack_dev_bundle_path(a_name);
     let written = await path_modified_ms(path);
