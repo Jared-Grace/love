@@ -119,6 +119,8 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     container_map,
     rung,
     blessed,
+    homes,
+    blocks,
     cone_get,
     world,
     walking,
