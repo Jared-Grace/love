@@ -12,6 +12,13 @@ disk ended up unable to say where a verse begins.  Splitting here is a
 loop over lines, so the count of files and the count of verses cannot
 disagree.
 
+A BLANK LINE STILL GETS A FILE, HOLDING A QUARTER SECOND OF SILENCE.
+The note written beside the recording pairs the first piece with the
+first verse, the second with the second, and so on by position, so
+dropping a piece would not lose one verse - it would shift every verse
+after it onto the wrong sound.  A silent file keeps the positions true
+and says plainly that the verse handed over had nothing in it.
+
 A LONG LINE IS STILL ONE FILE, SPOKEN IN SENTENCES AND JOINED BACK UP.
 The model takes a bounded number of phonemes at a time, so a verse past
 that bound has to be spoken in pieces - but the pieces are concatenated
@@ -92,19 +99,17 @@ def main():
     kokoro = Kokoro(MODEL_PATH, VOICES_PATH)
 
     lines = [line.strip() for line in text.split("\n")]
-    written = 0
+    silent = 0
     for i, line in enumerate(lines):
-        if not line:
-            continue
         samples, rate = line_samples(g2p, kokoro, line)
         if samples is None:
-            continue
+            samples = np.zeros(int(rate / 4), dtype=np.float32)
+            silent += 1
         sf.write(str(out_dir / f"{i}.wav"), samples, rate)
         with open(out_dir / f"{i}.txt", "w", encoding="utf-8") as f:
             f.write(line)
-        written += 1
 
-    print(json.dumps({"lines": len(lines), "written": written, "folder": path_output}))
+    print(json.dumps({"lines": len(lines), "silent": silent, "folder": path_output}))
 
 
 if __name__ == "__main__":
