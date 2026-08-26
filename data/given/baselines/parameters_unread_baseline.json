@@ -19,6 +19,12 @@
    ]
   },
   {
+   "name": "app_code_lesson_quiz_token_select",
+   "unread": [
+    "batch_get"
+   ]
+  },
+  {
    "name": "app_code_lesson_quiz_token_select_superseded",
    "unread": [
     "batch_get"
