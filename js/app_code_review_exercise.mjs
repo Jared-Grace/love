@@ -1,3 +1,4 @@
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
@@ -9,7 +10,6 @@ import { app_code_quiz_reveal_button } from "./app_code_quiz_reveal_button.mjs";
 import { app_code_lesson_quiz_render_correction } from "./app_code_lesson_quiz_render_correction.mjs";
 import { app_code_quiz_correction } from "./app_code_quiz_correction.mjs";
 import { app_code_lesson_quiz_correction_code_set } from "./app_code_lesson_quiz_correction_code_set.mjs";
-import { html_clear } from "./html_clear.mjs";
 import { not } from "./not.mjs";
 export function app_code_review_exercise(
   parent,
@@ -74,7 +74,7 @@ export function app_code_review_exercise(
     on_incorrect();
   }
   async function on_success() {
-    html_clear(container_correction);
+    html_visibility_hidden(container_correction);
     let clean = not(failed);
     await on_correct(clean);
   }
