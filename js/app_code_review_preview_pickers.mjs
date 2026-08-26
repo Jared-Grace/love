@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -21,10 +22,13 @@ export function app_code_review_preview_pickers(picker, stage, question_show) {
     function each_kind(kind, kind_index) {
       let info = property_get(kind, "info");
       let question_label = property_get(info, "question_label");
+      let answer_label = property_get(info, "answer_label");
+      ("named by what it hands you and then by what it wants back, because several kinds of one lesson are asked over the very same words and part company only in what is being asked for - four buttons all reading Code: is a list nobody can pick from");
+      let label = text_combine_multiple([question_label, "→ ", answer_label]);
       function kind_chosen() {
         question_show(lesson_id, kind_index);
       }
-      app_shared_button(picker, question_label, kind_chosen);
+      app_shared_button(picker, label, kind_chosen);
     }
     each_index(kinds, each_kind);
   }
