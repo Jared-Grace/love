@@ -1,3 +1,4 @@
+import { ffmpeg_stats_numbers_cases_gate_run } from "./ffmpeg_stats_numbers_cases_gate_run.mjs";
 import { beats_seconds_cases_gate_run } from "./beats_seconds_cases_gate_run.mjs";
 import { ebible_upload_doors_commercial_gate_run } from "./ebible_upload_doors_commercial_gate_run.mjs";
 import { ebible_versions_english_choices_commercial_gate_run } from "./ebible_versions_english_choices_commercial_gate_run.mjs";
@@ -851,6 +852,7 @@ export function qa_gates() {
     ebible_versions_english_choices_commercial_gate_run,
     ebible_upload_doors_commercial_gate_run,
     beats_seconds_cases_gate_run,
+    ffmpeg_stats_numbers_cases_gate_run,
   ];
   return gates;
 }

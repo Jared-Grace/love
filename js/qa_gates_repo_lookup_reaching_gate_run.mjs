@@ -1,9 +1,9 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_empty_is_assert_walked_generic } from "./list_empty_is_assert_walked_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gates_repo_lookup_reaching } from "./qa_gates_repo_lookup_reaching.mjs";
 import { property_get } from "./property_get.mjs";
-import { qa_gates_repo_lookup_reaching_baseline_path } from "./qa_gates_repo_lookup_reaching_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { baseline_names_gate_walked_generic } from "./baseline_names_gate_walked_generic.mjs";
 export async function qa_gates_repo_lookup_reaching_gate_run() {
   "Gate: no gate may spell a folder as the public folder joined onto whichever repo this machine is currently pointed at. Read-only.";
   "Every gate is judged inside a frozen copy of the repo, and only committed files are in that copy. The answer to that question lives in a setting nobody commits, so asked in there it comes back with no repo of that name and throws.";
@@ -13,8 +13,11 @@ export async function qa_gates_repo_lookup_reaching_gate_run() {
   let found = await qa_gates_repo_lookup_reaching();
   let walked = property_get(found, "walked");
   let offenders = property_get(found, "offenders");
-  let hint =
-    "this gate spells a folder by joining the public folder onto whichever repo this machine is pointed at, and that lookup throws inside the frozen copy every gate is judged in - work the folder out from where the code is standing instead, with folder_public_absolute or its joining neighbour";
+  let hint = text_combine_multiple([
+    "this gate spells a folder by joining the public folder onto whichever repo this machine is pointed at, and that lookup throws inside the frozen copy every gate is judged in - work the folder out from where the code is standing instead, with ",
+    fn_name("folder_public_absolute"),
+    " or its joining neighbour",
+  ]);
   let r = list_empty_is_assert_walked_generic(walked, offenders, hint);
   return r;
 }
