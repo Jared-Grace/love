@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -32,11 +33,11 @@ export async function bible_versions_english_choices_psalms_agreement() {
   for (let passage of passages) {
     let wordings = property_get(passage, "wordings");
     for (let wording of wordings) {
-      let bible_folder = property_get(wording, "bible_folder");
+      let bible_folder = property_get(wording, bible_folder_key());
       let text = property_get(wording, "text");
       let nearest = 0;
       for (let against of wordings) {
-        let itself = property_equals(against, "bible_folder", bible_folder);
+        let itself = property_equals(against, bible_folder_key(), bible_folder);
         if (itself) {
           continue;
         }
@@ -76,7 +77,7 @@ export async function bible_versions_english_choices_psalms_agreement() {
   let usable = await bible_versions_english_choices_usable();
   let unmeasured = [];
   for (let version of usable) {
-    let bible_folder = property_get(version, "bible_folder");
+    let bible_folder = property_get(version, bible_folder_key());
     let seen = lowest_by_folder[bible_folder];
     let unasked = equal(seen, undefined);
     if (unasked) {
