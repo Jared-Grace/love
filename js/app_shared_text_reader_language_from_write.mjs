@@ -1,3 +1,4 @@
+import { app_shared_text_reader_language_from_write_span_scratch } from "./app_shared_text_reader_language_from_write_span_scratch.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { app_shared_text_reader_language_sayings_change } from "./app_shared_text_reader_language_sayings_change.mjs";
@@ -8,7 +9,6 @@ import { list_includes } from "./list_includes.mjs";
 import { list_without } from "./list_without.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
@@ -21,9 +21,7 @@ export async function app_shared_text_reader_language_from_write(f_name) {
   let en = ebible_language_en_code();
   let from_key = app_shared_text_reader_language_from_key();
   function lambda$saying(saying) {
-    let named = object_property_names(saying);
-    let item = app_shared_text_reader_language_from_key();
-    let codes = list_without(named, item);
+    let codes = app_shared_text_reader_language_from_write_span_scratch(saying);
     let english = list_includes(codes, en);
     if (not(english)) {
       return null;
