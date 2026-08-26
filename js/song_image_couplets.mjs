@@ -436,7 +436,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A mountain burning at its top, one plain grey mountain standing alone with no other hill beside it, filling the lower half of the window from the white border on one side to the white border on the other, and on its summit a great mass of fire rising in tall pointed tongues as high again as the mountain below it and as wide as the whole summit, the tongues in three colours together - deep crimson at their roots, ruby red through their middles and white glass at their tips - and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
+        "A mountain burning at its top, one plain grey mountain standing alone with no other hill beside it, filling the lower half of the window from the white border on one side to the white border on the other, and on its summit a great mass of fire rising in tall pointed tongues as high again as the mountain below it and as wide as the whole summit, the tongues deep crimson at their roots and ruby red through most of their height, only their very tips white, and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },

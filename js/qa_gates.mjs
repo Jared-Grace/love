@@ -833,6 +833,7 @@ export function qa_gates() {
     functions_rewrite_then_read_gate_run,
     firebase_prod_hashes_stale_gate_run,
     ffmpeg_metadata_numbers_cases_gate_run,
+    example_files_command_args_gate_run,
   ];
   return gates;
 }
