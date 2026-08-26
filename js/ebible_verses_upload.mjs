@@ -1,3 +1,4 @@
+import { ebible_bible_folder_commercial_assert } from "./ebible_bible_folder_commercial_assert.mjs";
 import { door43_version_or_null } from "./door43_version_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { ebible_version_chapters_cache } from "./ebible_version_chapters_cache.mjs";
@@ -12,6 +13,7 @@ import { ebible_version_download } from "./ebible_version_download.mjs";
 export async function ebible_verses_upload(bible_folder) {
   "Every verse of one bible published one at a time, whichever of the two places the bible came from.";
   "A bible from the Door43 catalogue is walked from the chapters already read out of its own marks, rather than downloaded twice and checked against itself. The checking below exists because eBible says where a verse begins in two places that can disagree; usfm says it in one, so there is nothing there to check.";
+  await ebible_bible_folder_commercial_assert(bible_folder);
   let door = door43_version_or_null(bible_folder);
   let elsewhere = null_not_is(door);
   if (elsewhere) {

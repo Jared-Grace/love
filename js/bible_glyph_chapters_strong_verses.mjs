@@ -1,3 +1,4 @@
+import { number_from_text } from "./number_from_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
@@ -17,6 +18,7 @@ export async function bible_glyph_chapters_strong_verses(strong) {
   "IT ALSO FINDS THE OPPOSITE DEFECT TO THE UNDERDRAWN READING. That reading only looks at verses which drew at least one mark of a picture, because a verse drawing none of it gives nothing to compare against. So a word that is seated and left in plain letters everywhere in its verse is invisible there and visible here, as a row whose picture is set and whose count of marks is nought.";
   "A COUNT OF NOUGHT IS NOT BY ITSELF A FAULT and this hands back no verdict. English hides a negation inside cannot and inside except, and a verse that drew no mark may be right to have drawn none. What the row gives a reader is the gloss beside the count, which is what settles it.";
   "The unseated case is carried rather than skipped: a word with no picture yet has nothing to count marks of, so its count is nought for that reason instead, and the gloss is again what tells the two apart.";
+  "THE NUMBER IS READ BACK FROM TEXT BEFORE ANYTHING IS COMPARED. The interlinear files a root number as a number and a command line hands every argument over as text, so comparing the two as they arrive matches nothing at all and answers with an empty list - which reads exactly like a word the chapters do not contain.";
   arguments_assert(arguments, 1);
   let wanted = number_from_text(strong);
   let chapters = bible_glyph_chapters();
