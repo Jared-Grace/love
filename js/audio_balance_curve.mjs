@@ -1,5 +1,5 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { floor } from "./floor.mjs";
-import { abs } from "./abs.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -43,8 +43,7 @@ export function audio_balance_curve(differences) {
     let total_difference = 0;
     let counted_here = 0;
     for (let one_difference of differences) {
-      let n = subtract(one_difference.second, second_here);
-      let a = abs(n);
+      let a = numbers_apart(one_difference.second, second_here);
       if (greater_than(a, smooth_seconds)) {
         continue;
       }
