@@ -581,6 +581,7 @@ export function qa_gates() {
     bible_glyph_chapters_rosetta_lines_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_marks_gate_run,
     bible_glyph_chapters_language_gate_run,
+    bible_glyph_negation_doubled_gate_run,
     bible_glyph_marks_group_misread_gate_run,
     bible_glyph_groups_spellable_gate_run,
     bible_glyph_marks_reserved_gate_run,
