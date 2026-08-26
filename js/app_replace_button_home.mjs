@@ -1,6 +1,6 @@
-import { app_shared_button_home_text } from "../../love/js/app_shared_button_home_text.mjs";
-import { app_replace_home } from "../../love/js/app_replace_home.mjs";
-import { app_shared_screen_set_button } from "../../love/js/app_shared_screen_set_button.mjs";
+import { app_shared_button_home_text } from "./app_shared_button_home_text.mjs";
+import { app_replace_home } from "./app_replace_home.mjs";
+import { app_shared_screen_set_button } from "./app_shared_screen_set_button.mjs";
 export function app_replace_button_home(root, context) {
   let text = app_shared_button_home_text();
   app_shared_screen_set_button(root, context, app_replace_home, text);
