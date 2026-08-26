@@ -256,7 +256,7 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, five of them in all and every one a plainly different size, the largest low and towards the left and the smallest high and towards the right, scattered unevenly so that no two stand level and none is directly above another, the whole group leaning to the left rather than balanced across the middle and all five of them well up in the upper half of the window, each drop hanging free with nothing joined to it, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
+        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, five of them in all and every one a plainly different size, the largest low and towards the left and the smallest high and towards the right, scattered unevenly so that no two stand level and none is directly above another, the whole group leaning to the left rather than balanced across the middle and all five of them well up in the upper half of the window, each drop hanging free with nothing joined to it, and below them a plain flat band of green ground with a broad splatter of that same ruby red already lying on the ground where the drops have struck, its edge running in uneven rounded lobes and a few small separate specks of the same red thrown out beyond it to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
       symbol_ref: "Luke 22:44",
       same_as: 0,
     },
@@ -306,7 +306,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One lamb all of one white glass, standing side-on in profile on all four legs, its brow plain and smooth with the line of its head running unbroken from ear to ear, and one slender staff of plain grey iron topped by a small cross in the shape of a plus sign, the lamb carrying that staff the way the church's Agnus Dei carries it, its near front leg lifted off the ground and crooked round the staff so that the staff leans back against the crook of that leg, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One lamb all of one white glass, standing side-on in profile on all four legs, its brow plain and smooth with the line of its head running unbroken from ear to ear, and one slender staff of plain grey iron topped by a small cross in the shape of a plus sign, the lamb carrying that staff the way the church's Agnus Dei carries it, its near front leg lifted off the ground and crooked round the staff, and the staff not upright but leaning well back over the lamb's shoulder at a slant, its foot on the ground in front of the lamb and its cross up behind the lamb's back, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
