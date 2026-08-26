@@ -1,3 +1,4 @@
+import { app_carried_exclusive_weights_reached_without } from "./app_carried_exclusive_weights_reached_without.mjs";
 import { app_carried_names } from "./app_carried_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
@@ -5,11 +6,8 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { function_imports } from "./function_imports.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_pop } from "./list_pop.mjs";
 import { equal } from "./equal.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -37,38 +35,17 @@ export async function app_carried_exclusive_weights(a_main) {
     property_set(edges, f_name, imports);
   }
   await list_map_unordered_async(carried, edges_lambda);
-  function reached_without(blocked) {
-    let seen = {};
-    let unread = [a_main];
-    while (list_empty_not_is(unread)) {
-      let f_name = list_pop(unread);
-      let skip = equal(f_name, blocked);
-      if (skip) {
-        continue;
-      }
-      let already = property_get_or_null(seen, f_name);
-      if (already) {
-        continue;
-      }
-      let imports = property_get_or_null(edges, f_name);
-      let outside = null_is(imports);
-      if (outside) {
-        continue;
-      }
-      property_set(seen, f_name, true);
-      for (let name of imports) {
-        list_add(unread, name);
-      }
-    }
-    return seen;
-  }
   let rows = [];
   for (let blocked of carried) {
     let itself = equal(blocked, a_main);
     if (itself) {
       continue;
     }
-    let seen = reached_without(blocked);
+    let seen = app_carried_exclusive_weights_reached_without(
+      blocked,
+      a_main,
+      edges,
+    );
     let bytes = 0;
     let count = 0;
     for (let f_name of carried) {
