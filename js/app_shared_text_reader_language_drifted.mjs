@@ -27,10 +27,8 @@ export function app_shared_text_reader_language_drifted(counted) {
     if (english_only) {
       continue;
     }
-    let record = property_get_or_null(
-      saying,
-      app_shared_text_reader_language_from_key(),
-    );
+    let property = app_shared_text_reader_language_from_key();
+    let record = property_get_or_null(saying, property);
     let unrecorded = null_is(record);
     if (unrecorded) {
       list_add(defects, {
