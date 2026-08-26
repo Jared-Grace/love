@@ -36,7 +36,7 @@ export async function bible_glyph_chapters_strong_verses(strong) {
     }
     for (let row of rows) {
       for (let word of row.words) {
-        let here = equal(word.strong, strong);
+        let here = equal(word.strong, wanted);
         if (not(here)) {
           continue;
         }
