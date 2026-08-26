@@ -1,3 +1,4 @@
+import { https_prefix } from "./https_prefix.mjs";
 import { firebase_storage_host } from "./firebase_storage_host.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -7,7 +8,7 @@ export function firebase_storage_url_metadata(storage_path, project_url) {
   let replaced = text_replace(storage_path, "/", "%2F");
   let host = firebase_storage_host();
   let url = text_combine_multiple([
-    "https://",
+    https_prefix(),
     host,
     "/v0/b/",
     project_url,
