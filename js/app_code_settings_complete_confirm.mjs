@@ -12,7 +12,7 @@ export function app_code_settings_complete_confirm(context) {
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let check = emoji_check();
-  let text_confirm = text_combine(check, " Yes, mark lessons complete");
+  let text_confirm = text_combine(check, " Yes, mark lessons and reviews complete");
   async function on_confirm() {
     app_code_progress_all_complete_mark(context);
     await app_shared_screen_set(context, app_code_home);
@@ -21,7 +21,7 @@ export function app_code_settings_complete_confirm(context) {
     g,
     context,
     app_code_settings,
-    "Are you sure you want to mark every lesson as complete? You can still open any completed lesson you like.",
+    "Are you sure you want to mark every lesson and every review as complete? You can still open any of them you like.",
     text_confirm,
     on_confirm,
   );

@@ -1,15 +1,9 @@
+import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
-import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
-import { bible_glyph_roots_root_lookup } from "./bible_glyph_roots_root_lookup.mjs";
-import { property_set } from "./property_set.mjs";
-import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_join_colon } from "./list_join_colon.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
@@ -27,25 +21,12 @@ export async function bible_glyph_chapters_collision_marks_unseated_lines() {
   arguments_assert(arguments, 0);
   let walk = await bible_glyph_chapters_collision_marks_walked();
   let lookup = bible_glyph_characters_lookup([]);
-  let chapter_rows = {};
-  let chapter_filed = {};
   let lines = [];
   for (let entry of walk.unseated) {
     let chapter_code = entry.chapter_code;
-    let fetched = property_exists(chapter_rows, chapter_code);
-    if (not(fetched)) {
-      let testament_name = bible_chapter_testament_name(chapter_code);
-      let roots = bible_glyph_roots_testament_table(testament_name);
-      let value = bible_glyph_roots_root_lookup(roots);
-      property_set(chapter_filed, chapter_code, value);
-      let fresh = await bible_glyph_chapter_draft_words(
-        chapter_code,
-        testament_name,
-      );
-      property_set(chapter_rows, chapter_code, fresh);
-    }
-    let filed = property_get(chapter_filed, chapter_code);
-    let rows = property_get(chapter_rows, chapter_code);
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
+    let filed = both.filed;
+    let rows = both.rows;
     let joined = list_join_colon(["v", entry.verse_number]);
     let joined2 = list_join_colon(["drew", entry.drew]);
     let heading = list_join_space([chapter_code, joined, entry.glyph, joined2]);
