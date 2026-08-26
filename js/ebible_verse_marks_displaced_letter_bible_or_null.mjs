@@ -1,7 +1,7 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { ebible_verse_marks_displaced_letter_chapter } from "./ebible_verse_marks_displaced_letter_chapter.mjs";
@@ -28,8 +28,7 @@ export function ebible_verse_marks_displaced_letter_bible_or_null(
     return null;
   }
   function chapter_marks_size(chapter) {
-    let marks = property_get(chapter, "marks");
-    let size = list_size(marks);
+    let size = property_list_size(chapter, "marks");
     return size;
   }
   let marks = list_map_sum(chapters, chapter_marks_size);
