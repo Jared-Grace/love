@@ -1,10 +1,7 @@
+import { fn_name } from "./fn_name.mjs";
 import { ebible_languages_without_original_bible_folders } from "./ebible_languages_without_original_bible_folders.mjs";
 import { ebible_bible_folders_commercial_assert } from "./ebible_bible_folders_commercial_assert.mjs";
 import { ebible_bible_folder_commercial_assert } from "./ebible_bible_folder_commercial_assert.mjs";
-import { ebible_verses_upload } from "./ebible_verses_upload.mjs";
-import { ebible_chapters_upload } from "./ebible_chapters_upload.mjs";
-import { ebible_version_books_upload } from "./ebible_version_books_upload.mjs";
-import { ebible_offline_version_upload } from "./ebible_offline_version_upload.mjs";
 import { function_names_reaching } from "./function_names_reaching.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -27,10 +24,10 @@ export async function ebible_upload_doors_commercial_gate_run() {
   await ebible_bible_folders_commercial_assert(offered);
   let check = ebible_bible_folder_commercial_assert.name;
   let doors = [
-    ebible_verses_upload.name,
-    ebible_chapters_upload.name,
-    ebible_version_books_upload.name,
-    ebible_offline_version_upload.name,
+    fn_name("ebible_verses_upload"),
+    fn_name("ebible_chapters_upload"),
+    fn_name("ebible_version_books_upload"),
+    fn_name("ebible_offline_version_upload"),
   ];
   let wired = await function_names_reaching(doors, check);
   function unwired_is(door) {
