@@ -8,12 +8,10 @@ export async function app_carried_weights(a_main) {
   "★ A CEILING SAYS A PAGE IS TOO BIG AND NAMES NOTHING TO CUT. The reader is left walking the imports by hand looking for something fat, and the thing actually costing the bytes is rarely the file anybody suspects. This turns the one number into a list somebody can act on.";
   "What a byte here is worth is the weigher's business and is written there. What belongs here is why it can be asked at all without a build: the alternative was reading the bundler's own accounting, which needs a build to have happened and answers only about the app already built. This answers about any entry point there is, in a second.";
   arguments_assert(arguments, 1);
-  let mains = [a_main];
-  let carried = await functions_reachable_carried(mains);
-  list_empty_not_is_assert_json(carried, {
+  let carried = await app_carried_names(
     a_main,
-    hint: "this entry point reached nothing at all, so nothing was weighed - the name is the thing to look at, not the empty answer",
-  });
+    "this entry point reached nothing at all, so nothing was weighed - the name is the thing to look at, not the empty answer",
+  );
   let sorted = await functions_names_weights(carried);
   return sorted;
 }
