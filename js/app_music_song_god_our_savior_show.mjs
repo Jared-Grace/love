@@ -37,7 +37,11 @@ export async function app_music_song_god_our_savior_show(parent) {
       list_add(sung, line);
       let unnamed = not(named);
       if (unnamed) {
-        html_p_text_centered(parent, name);
+        let heading = html_p_text_centered(parent, name);
+        let above = app_shared_spaced_large_gap();
+        html_style_margin_top(heading, above);
+        let below = app_shared_spaced_tiny_gap();
+        html_style_margin_bottom(heading, below);
         named = true;
       }
       let references = song_god_our_savior_line_references(line);

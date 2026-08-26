@@ -1,3 +1,4 @@
+import { app_shared_text_reader_carried_unpicked_gate_run } from "./app_shared_text_reader_carried_unpicked_gate_run.mjs";
 import { apps_published_dev_gate_run } from "./apps_published_dev_gate_run.mjs";
 import { example_files_command_args_gate_run } from "./example_files_command_args_gate_run.mjs";
 import { bible_glyph_roots_collisions_gate_run } from "./bible_glyph_roots_collisions_gate_run.mjs";
@@ -837,6 +838,7 @@ export function qa_gates() {
     ffmpeg_metadata_numbers_cases_gate_run,
     example_files_command_args_gate_run,
     apps_published_dev_gate_run,
+    app_shared_text_reader_carried_unpicked_gate_run,
   ];
   return gates;
 }
