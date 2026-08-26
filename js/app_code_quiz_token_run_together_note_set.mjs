@@ -1,6 +1,6 @@
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_run_together_parts.mjs";
+import { app_code_quiz_token_run_together_records } from "./app_code_quiz_token_run_together_records.mjs";
 import { null_is } from "./null_is.mjs";
 export function app_code_quiz_token_run_together_note_set(
   note_div,
@@ -11,7 +11,7 @@ export function app_code_quiz_token_run_together_note_set(
   "Put under the line being built the answer to a wrong tap that spelled a third piece, or leave that place empty when the tap was wrong for some other reason.";
   "It is one step rather than two because the place is emptied whether or not anything is said there. Said only when there is something to say, the sentence from the tap before would still be sitting there under a different mistake, reading as an answer to it.";
   html_clear(note_div);
-  let parts = app_code_quiz_token_run_together_parts(
+  let parts = app_code_quiz_token_run_together_records(
     chosen,
     token,
     tokens_unique,
