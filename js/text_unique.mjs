@@ -1,9 +1,9 @@
-import { text_is_assert_multiple_json } from "../../love/js/text_is_assert_multiple_json.mjs";
-import { equal } from "../../love/js/equal.mjs";
-import { list_includes } from "../../love/js/list_includes.mjs";
-import { text_empty_is } from "../../love/js/text_empty_is.mjs";
-import { text_empty_not_is } from "../../love/js/text_empty_not_is.mjs";
-import { text_combine } from "../../love/js/text_combine.mjs";
+import { text_is_assert_multiple_json } from "./text_is_assert_multiple_json.mjs";
+import { equal } from "./equal.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { text_empty_is } from "./text_empty_is.mjs";
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function text_unique(used, name, prefix) {
   text_is_assert_multiple_json(used, {
     hint: "the used names should all be text",
