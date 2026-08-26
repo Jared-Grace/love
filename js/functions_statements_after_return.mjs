@@ -1,5 +1,5 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { list_size } from "./list_size.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_function_statements_after_return } from "./js_function_statements_after_return.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +9,7 @@ export async function functions_statements_after_return() {
   "Every love function carrying work below the line that already left it.";
   "Nothing else here can see this. The body parses, every name in it is bound and imported, and each statement is perfectly good code - it simply never runs, so a function can read like it does the work while doing none of it. That is worse than an empty one: an empty function is visibly unfinished, and this one is not.";
   "How many functions were opened travels out beside what was wrong with them, because finding nothing here is written exactly the same way as reading nothing at all.";
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let offenders = [];
   for (let name of love) {
     let parsed = await function_parse_declaration(name);
