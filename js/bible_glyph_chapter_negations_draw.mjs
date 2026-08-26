@@ -73,7 +73,7 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
     }
     let changes = [];
     let place = 0;
-    for (let word of verse.words) {
+    for (let word of shorthand.words) {
       let drawn = bible_glyph_word_negation_drawn(word);
       let b = null_is(drawn);
       let plain = not(b);
