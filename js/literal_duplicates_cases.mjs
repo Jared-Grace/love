@@ -9,7 +9,11 @@ export function literal_duplicates_cases() {
   "reader that offered everything would fail the withheld ones; a reader that";
   "offered nothing would fail the first; and a reader that dropped a whole body of";
   "source the moment one file in it looked wrong would fail the last case, which";
-  "puts the real site and all three withheld kinds in one place.";
+  "puts the real sites and both withheld kinds in one place.";
+  "A file naming a field with the value used to be a third withheld kind, and the";
+  "case for it is kept here with the opposite answer rather than taken away. What";
+  "it pins now is that such a file is offered, which is the half of the change";
+  "somebody could undo by accident; a case that is simply deleted pins nothing.";
   "Every file's source is held as fixed text, because the pass that canonicalizes";
   "this file would otherwise read the names written inside a case as references and";
   "change what the case says.";
@@ -61,8 +65,13 @@ export function literal_duplicates_cases() {
         x_pad_size: getter,
         x_pad_keys: key,
       },
-      found: [],
-      why: "the other file names a field with it, so routing that through a getter would tie saved data to a name in this code",
+      found: [
+        {
+          f_name: "x_pad_size",
+          files: ["x_pad_keys"],
+        },
+      ],
+      why: "the other file names a field with it, and a call standing there hands back the same word, so the shape of saved data does not move",
     },
     {
       codes: {
@@ -90,10 +99,10 @@ export function literal_duplicates_cases() {
       found: [
         {
           f_name: "x_pad_size",
-          files: ["x_pad_draw"],
+          files: ["x_pad_draw", "x_pad_keys"],
         },
       ],
-      why: "the real site and all three withheld kinds at once, so withholding has to be selective rather than all or nothing",
+      why: "the real sites and both withheld kinds at once, so withholding has to be selective rather than all or nothing",
     },
   ];
   return cases;

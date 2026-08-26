@@ -1,8 +1,9 @@
-import { commits_message_rules_gate_generic } from "./commits_message_rules_gate_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_alias_named } from "./commits_message_alias_named.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { commits_message_alias_baseline_path } from "./commits_message_alias_baseline_path.mjs";
+import { commits_message_rules_gate_generic } from "./commits_message_rules_gate_generic.mjs";
 export async function commits_message_alias_gate_run() {
   "QA gate: a commit message opens with the full name of the command that made the change, never with the short name the human types to reach it.";
   "Throws so the dispatcher seam exits nonzero.";
@@ -17,6 +18,13 @@ export async function commits_message_alias_gate_run() {
     f_name2,
     " where no named command made the change. ",
   ]);
-  let r = commits_message_rules_gate_generic(told, opening);
+  let path = commits_message_alias_baseline_path();
+  let name_write = fn_name("commits_message_alias_baseline_write");
+  let r = await commits_message_rules_gate_generic(
+    told,
+    opening,
+    path,
+    name_write,
+  );
   return r;
 }
