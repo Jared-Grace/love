@@ -33,14 +33,11 @@ export function app_code_lesson_expression_choose_order_solve_example(
   ("The asking goes when the line is down to a value, because there is nothing left to press and an instruction still standing there would be asking for a press that cannot be made. What was said ABOVE it stays, because it is what the lesson is for rather than what to do next.");
   ("A wrong press is answered by the line itself, in red, the same way it is in the quiz. Being stopped from getting it wrong is not this page's job.");
   ("Which wrong values are offered is handed in, because it is the one thing the lessons on this page differ by. A line of numbers and a line of comparisons are pressed the same way, laid out the same way and finished the same way; what a learner could plausibly press INSTEAD is the only place the two part company, and a second copy of this page would leave one lesson's habits to be repaired in two files.");
-  let line_holder = html_div(parent);
-  let choices_holder = html_div(parent);
   let head = html_div_first(card);
   ("the asking stands off from the Code label under it, by the same small gap the walkthrough of the lesson before leaves there - the two screens are one screen with one thing changed, and a gap on one of them and none on the other would be a second difference to find");
   ("It never gives that room back, because nothing but words ever stands here: where the walkthrough grows a button to press, this screen asks its question and then asks the next one.");
   app_code_head_spaced_above_code(head);
   let asking = html_div(head);
-  let current = tree;
   let duration = app_shared_animation_duration();
   function ask(words) {
     "the one place the asking is written, so the three askings take turns in it instead of standing beside each other";
@@ -52,46 +49,19 @@ export function app_code_lesson_expression_choose_order_solve_example(
     html_clear(asking);
     app_shared_success_message(asking);
   }
-  async function on_change(step) {
-    "the line as it now stands is kept, because the wrong values offered for a part are worked out from the line the part is standing in";
-    current = property_get(step, "current");
-    let more = app_code_expression_node_is(current);
-    if (not(more)) {
-      ("the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.");
-      ("Everything under the card - the line, the buttons, the whole rest of the page - slides down as the room is made, rather than being somewhere else by the time the learner looks back. Taken at once it was a jump, and the well done arrived in the middle of it, so the one thing on the screen worth reading was the thing hardest to catch.");
-      await html_height_change_animate(head, asking, finished_say, duration);
-      return;
-    }
-    let solved = property_get(step, "solved");
-    let first_is = null_is(solved);
-    if (first_is) {
-      let opening = app_code_label_solve_first();
-      ask(opening);
-      return;
-    }
-    let next = app_code_label_solve_next();
-    ask(next);
+  async function finished_grow() {
+    ("the well done is three times the height of the asking it stands in place of, so the room for it is taken slowly and the words are held back until it has been taken - by the very unit the walkthrough of the lesson before moves its own head with, so the two screens grow at one speed and in one manner.");
+    ("Everything under the card - the line, the buttons, the whole rest of the page - slides down as the room is made, rather than being somewhere else by the time the learner looks back. Taken at once it was a jump, and the well done arrived in the middle of it, so the one thing on the screen worth reading was the thing hardest to catch.");
+    await html_height_change_animate(head, asking, finished_say, duration);
   }
-  async function on_chosen(node, value, node_span, waiting_on) {
-    "the press is answered by asking what the chosen part comes to, and nothing on the line moves until the right value is pressed";
-    "the values are named as the thing being waited on, so a learner who goes on pressing the line is shown where the asking moved to rather than being answered with nothing";
-    let said = app_code_label_solve_choice();
-    ask(said);
-    waiting_on(choices_holder);
-    let decoys = decoys_get(current, node);
-    await app_code_expression_value_choose_await(
-      choices_holder,
-      value,
-      decoys,
-      noop,
-    );
-  }
-  app_code_expression_choose_line(
-    line_holder,
+  ("the pressing is the quiz next door's pressing, out of the one place both of them read - all this page does differently is write the asking on the card instead of over a row of answers, and count nothing against a wrong press");
+  app_code_expression_choose_order_ask(
+    parent,
     tree,
-    on_change,
+    ask,
+    finished_grow,
+    decoys_get,
     noop,
-    on_chosen,
     noop,
   );
 }
