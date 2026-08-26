@@ -38,8 +38,8 @@ export function js_imports_module_names(ast) {
   function scheme_without(source) {
     let prefixed = text_starts_with(source, scheme);
     if (prefixed) {
-      let bare = text_prefix_without(source, scheme);
-      return bare;
+      let unprefixed = text_prefix_without(source, scheme);
+      return unprefixed;
     }
     return source;
   }
