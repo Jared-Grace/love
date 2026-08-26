@@ -236,7 +236,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head held fast in a low tangle of bare brown thorn branches that grows straight out of the ground at the height of that head and stands no higher than the ram's own back, the branches winding across and between the horns, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "A ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head held fast in a low tangle of bare brown thorn branches that grows straight out of the ground at the height of that head and stands no higher than the ram's own back, the branches crowded thickest right where the horns are caught and tangled into one dense knot of them there, thinning out to a few scattered branches further away on both sides, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -256,7 +256,7 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, standing two side by side high up, one alone below and between those two, and two more side by side lower down and set wider apart than the first pair, so that no drop stands directly above another and they never make one column, each drop hanging free with nothing joined to it and no stalk or stem under any of them, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
+        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, five of them in all and every one a plainly different size from the others, the largest of them low and towards the left and the smallest high and towards the right, the five set at five different heights and five different distances across the window so that no two ever stand level with each other and no drop is directly above another, the group leaning to one side rather than balanced across the middle, each drop hanging free with nothing joined to it and no stalk or stem under any of them, and below them a plain flat band of green ground with a broad pool of that same ruby red already lying on the ground where the drops have struck, the pool spreading out sideways along the ground to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
       symbol_ref: "Luke 22:44",
       same_as: 0,
     },

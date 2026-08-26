@@ -1,7 +1,7 @@
+import { function_span_scratch_name } from "./function_span_scratch_name.mjs";
 import { each_async } from "./each_async.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { function_exists_not_assert } from "./function_exists_not_assert.mjs";
 import { function_read } from "./function_read.mjs";
 import { function_functionize } from "./function_functionize.mjs";
@@ -29,7 +29,7 @@ export async function function_span_call_existing(
   ("The scratch name is made from the holder's own name and is refused if anything already answers to it, so no existing function can be written over; it is taken away again whichever way the reading goes. What is left behind is the call and nothing else - no alias, no second name for work that already had one.");
   ("Put back from the text rather than by cutting backwards, so not one character of the holder differs when the answer is no.");
   await each_async([f_name, f_name_call], function_exists_assert);
-  let f_name_new = text_combine(f_name, "_span_scratch");
+  let f_name_new = function_span_scratch_name(f_name);
   await function_exists_not_assert(f_name_new);
   let before = await function_read(f_name);
   await function_functionize(f_name, address_from, address_to, f_name_new);
