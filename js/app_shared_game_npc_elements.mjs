@@ -1,3 +1,4 @@
+import { app_shared_game_npc_pointer_get } from "./app_shared_game_npc_pointer_get.mjs";
 import { app_shared_game_npc_ring_get } from "./app_shared_game_npc_ring_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
@@ -34,7 +35,12 @@ export function app_shared_game_npc_elements(npc) {
   ("this list, it stayed on the square the person was standing on when it was made, and the");
   ("person walked out of their own ring while nothing reported anything.");
   let ring = app_shared_game_npc_ring_get(npc);
-  let all = [img, cross, glow, ring];
+  ("The arrow nodding over their head is the fifth part, and it is asked for here for the");
+  ("same reason as the ring. It is the one part of a person drawn ABOVE them rather than on");
+  ("the ground under them, which changes nothing about who has to carry it: left out of this");
+  ("list it would nod over the square somebody used to be standing on.");
+  let pointer = app_shared_game_npc_pointer_get(npc);
+  let all = [img, cross, glow, ring, pointer];
   let elements = list_filter_null_not_is(all);
   return elements;
 }
