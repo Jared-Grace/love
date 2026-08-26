@@ -1,6 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_get_try } from "./list_get_try.mjs";
@@ -18,8 +18,7 @@ export function js_calls_named_literal_argument(ast, f_name, literal) {
   let found = [];
   function lambda(node) {
     let args = js_call_arguments_get(node);
-    let count = list_size(args);
-    let single = equal(count, 1);
+    let single = list_size_equal(args, 1);
     if (not(single)) {
       return;
     }
