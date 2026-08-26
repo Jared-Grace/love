@@ -1,4 +1,8 @@
 import { list_get } from "./list_get.mjs";
+import { app_code_quiz_token_run_together_text } from "./app_code_quiz_token_run_together_text.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
+import { null_is } from "./null_is.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
@@ -47,7 +51,9 @@ export function app_code_lesson_quiz_token_select(
   "More than one order can be right, so what is kept is the whole set of orders still possible rather than one expected answer. A tap that no surviving order begins with is wrong and the button says so; a tap that some order begins with keeps those orders and drops the rest. The question is answered when one of the survivors has been spelled out exactly.";
   "That set is also what the row of buttons is trimmed from. After each tap, a piece that no surviving order still needs is taken away - so the buttons left standing are always the pieces that could come next, and the student is never left staring at a piece there is no longer any way to use.";
   "What is shown back is the code itself rather than the pieces tapped. The first surviving order is written out as a line and cut off where the student has got to, so the spacing and the punctuation are the ones the finished line will have, and what appears is a line of code growing rather than a list of words.";
+  "A wrong tap that put two pieces side by side which real code writes as a third piece is answered in words as well as in red, under the line being built. That mistake is a reading of the language rather than a slip, so the red button alone would leave the reader to guess at something the row of pieces can never show them.";
   let answer_div = html_div_code_dark(parent);
+  let note_div = html_div_text(parent, "");
   let r = app_code_lesson_quiz_token_select_variation_buildable(
     info,
     qa,
@@ -68,8 +74,20 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(variations_new);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
+        let said = app_code_quiz_token_run_together_text(
+          chosen,
+          token,
+          tokens_unique,
+        );
+        let quiet = null_is(said);
+        if (quiet) {
+          said = "";
+        }
+        ("set as plain text and never as markup, because the pieces being named are punctuation and a less-than read as markup would take the rest of the sentence with it");
+        html_text_content_set(note_div, said);
         on_wrong();
       } else {
+        html_text_content_set(note_div, "");
         each(buttons, html_style_code_dark);
         app_shared_button_screen_green_style_assign(b);
         list_add(chosen, token);
