@@ -24,13 +24,13 @@ export async function public_chunks_orphaned() {
     let orphaned = await folder_chunks_orphaned(folder);
     let sizes = list_map_property(orphaned, "size");
     let folder_bytes = list_sum(sizes);
-    let r = {
+    let folder_row = {
       folder,
       count: list_size(orphaned),
       bytes: folder_bytes,
       orphaned,
     };
-    return r;
+    return folder_row;
   }
   let all = await list_map_unordered_async(folders, folder_lambda);
   let byte_counts = list_map_property(all, "bytes");
