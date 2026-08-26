@@ -1,4 +1,3 @@
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { commit_edit_kind_shape_named } from "./commit_edit_kind_shape_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,7 +8,6 @@ export async function commit_edit_value_shape_named(commit) {
   "AN EDIT THAT TOUCHED ANYTHING ELSE IS NOT ASKED ABOUT, because the question is what one command would have made outright and an edit that also changed a paragraph or a line of program was never going to be made by one whatever its values look like.";
   "WHICH VERB IS NOT NAMED HERE, and that is a limit rather than an omission. An entry of a list and a named part of a record are added by two different verbs, and a changed line on its own does not always say which of the two it was; the shape is what the case for building rests on, and the shape is answerable.";
   "THAT SHAPE IS WORKED OUT NEXT DOOR AND ONLY NAMED HERE, because the same counting decides it for the paragraphs written for a reader, where the answers are different words about a different thing. What is left here is a vocabulary - one word of this reading's own for each shape there is.";
-  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   let shape = await commit_edit_kind_shape_named(commit, "data");
   let words = {
