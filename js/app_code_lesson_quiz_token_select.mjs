@@ -1,8 +1,7 @@
+import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
 import { app_code_lesson_quiz_token_select_marks_set } from "./app_code_lesson_quiz_token_select_marks_set.mjs";
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { app_code_lesson_quiz_token_select_variation_buildable } from "./app_code_lesson_quiz_token_select_variation_buildable.mjs";
-import { app_code_lesson_quiz_token_select_chosen } from "./app_code_lesson_quiz_token_select_chosen.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -54,12 +53,7 @@ export function app_code_lesson_quiz_token_select(
   "THE PIECE THAT FINISHES THE LINE GOES INVISIBLE when its green is done, rather than back to the colour of a piece waiting to be tapped. There is nothing left for it to be tapped for, so dressing it as available again invites a tap the quiz has stopped listening for. It keeps its place in the row while it is invisible, so nothing beside it moves.";
   let answer_div = html_div_code_dark(parent);
   let note_div = html_div_text(parent, "");
-  let r = app_code_lesson_quiz_token_select_variation_buildable(
-    info,
-    qa,
-    answer_div,
-  );
-  let pieces = app_code_lesson_quiz_token_select_chosen(r);
+  let pieces = app_code_lesson_quiz_token_select_pieces(info, qa, answer_div);
   let chosen = property_get(pieces, "chosen");
   let tokens_unique = property_get(pieces, "tokens_unique");
   let variations = property_get(pieces, "variations");
