@@ -56,7 +56,10 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
   }
   let planned = [];
   let left = [];
+  let verse_at = -1;
   for (let verse of parsed.verses) {
+    verse_at = add(verse_at, 1);
+    let shorthand = raw.verses[verse_at];
     let wanted = property_get_or_null(wanted_by_verse, verse.verse_number);
     let unknown = null_is(wanted);
     if (unknown) {
