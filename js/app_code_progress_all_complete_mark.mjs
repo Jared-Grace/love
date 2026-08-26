@@ -1,3 +1,5 @@
+import { app_code_review_numbers } from "./app_code_review_numbers.mjs";
+import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_progress_storage_key } from "./app_code_progress_storage_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -28,4 +30,10 @@ export function app_code_progress_all_complete_mark(context) {
     return progress;
   }
   storage_local_transform_empty_context(context, key, lambda$progress);
+  ("the reviews are marked too, and are filed apart from the lessons, so they are written down by their own name here. Marking only the lessons would leave a list of finished lessons with unfinished reviews standing between them, which says the learner has work left to do that they have just said they have not.");
+  let numbers = app_code_review_numbers();
+  function each_number(number) {
+    app_code_review_complete_record(context, number);
+  }
+  each(numbers, each_number);
 }
