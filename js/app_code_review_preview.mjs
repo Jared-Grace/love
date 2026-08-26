@@ -49,7 +49,7 @@ export function app_code_review_preview() {
   function kinds_show(lesson_id) {
     "the question kinds this lesson holds, one button each, named by the very words the question is asked over";
     each([picker, stage], html_clear);
-    app_shared_button(picker, "← all lessons", lessons_show);
+    app_shared_button(picker, "← back", shortlist_show);
     html_p_text(picker, lesson_id);
     let items = app_code_review_items_by_id(lesson_id);
     let kinds = list_first_property(items, "exercises");
