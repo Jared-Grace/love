@@ -835,6 +835,7 @@ export function qa_gates() {
     firebase_prod_hashes_stale_gate_run,
     ffmpeg_metadata_numbers_cases_gate_run,
     example_files_command_args_gate_run,
+    apps_published_dev_gate_run,
   ];
   return gates;
 }
