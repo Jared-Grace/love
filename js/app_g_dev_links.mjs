@@ -1,6 +1,6 @@
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
-import { app_g_dev_pill } from "./app_g_dev_pill.mjs";
+import { app_shared_dev_pill } from "./app_shared_dev_pill.mjs";
 import { html_hash_get } from "./html_hash_get.mjs";
 import { window_reload } from "./window_reload.mjs";
 export function app_g_dev_links() {
@@ -10,7 +10,7 @@ export function app_g_dev_links() {
   function routes() {
     html_hash_name_reload(app_shared_g_dev_index_hash_name());
   }
-  app_g_dev_pill("← routes", "#index", routes, "0.5rem");
+  app_shared_dev_pill("← routes", "#index", routes, "0.5rem");
   let here = html_hash_get();
-  app_g_dev_pill("⟳ refresh", here, window_reload, "7.5rem");
+  app_shared_dev_pill("⟳ refresh", here, window_reload, "7.5rem");
 }
