@@ -33,4 +33,10 @@ export function app_g_bless_marks(glows, homes, blocks, blessed, everyone) {
   ("one of them cannot hide the other - and which of the two a player notices first is a");
   ("question about where they happen to be standing, not one this has to answer.");
   app_g_bless_pointers(glows, everyone, remaining);
+  ("Who is left is handed BACK as well as drawn on, because one more thing is aimed at them");
+  ("and it is not on the map: the arrow at the edge of the screen, which hangs on the frame");
+  ("and stays put while the street slides underneath. Working the same question out a second");
+  ("time where that arrow is aimed would be two readings of one record, free to disagree on");
+  ("the step where a prayer has just landed.");
+  return remaining;
 }
