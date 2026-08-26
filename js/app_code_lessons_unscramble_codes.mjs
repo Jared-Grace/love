@@ -1,6 +1,6 @@
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_code_exercise_on_answer_is } from "./app_code_exercise_on_answer_is.mjs";
-import { app_code_lesson_quiz_token_select_superseded } from "./app_code_lesson_quiz_token_select_superseded.mjs";
+import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lessons_exercises_each } from "./app_code_lessons_exercises_each.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -17,7 +17,7 @@ export function app_code_lessons_unscramble_codes(rounds) {
     let exercise = property_get(exercise_visit, "exercise");
     let unscramble = app_code_exercise_on_answer_is(
       exercise,
-      app_code_lesson_quiz_token_select_superseded,
+      app_code_lesson_quiz_token_select,
     );
     if (not(unscramble)) {
       return;
