@@ -1,9 +1,9 @@
 import { html_code_error_record_script } from "./html_code_error_record_script.mjs";
 import { html_error_notice_style } from "./html_error_notice_style.mjs";
 import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
-import { html_error_notice_message_text } from "./html_error_notice_message_text.mjs";
+import { html_error_notice_message_texts } from "./html_error_notice_message_texts.mjs";
 import { html_error_notice_button_style } from "./html_error_notice_button_style.mjs";
-import { html_error_notice_button_text } from "./html_error_notice_button_text.mjs";
+import { html_error_notice_button_texts } from "./html_error_notice_button_texts.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_loading_splash_id } from "./html_loading_splash_id.mjs";
 import { html_code_element } from "./html_code_element.mjs";
@@ -15,10 +15,10 @@ export function html_code_error_notice() {
   let id = "app-error";
   let style = html_error_notice_style();
   let style_attribute = html_code_style_attribute(style);
-  let message = html_error_notice_message_text();
+  let message = html_error_notice_message_texts();
   let button_style = html_error_notice_button_style();
   let button_attribute = html_code_style_attribute(button_style);
-  let button_text = html_error_notice_button_text();
+  let button_text = html_error_notice_button_texts();
   let markup = text_combine_multiple([
     '<div id="',
     id,
