@@ -1,5 +1,5 @@
+import { text_frozen } from "./text_frozen.mjs";
 import { texts_start_shared_family } from "./texts_start_shared_family.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
