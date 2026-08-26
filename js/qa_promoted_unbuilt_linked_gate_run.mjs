@@ -6,7 +6,8 @@ export async function qa_promoted_unbuilt_linked_gate_run() {
   "Gate: nothing in the folder that gets sent may point at an app that has nothing built under its name.";
   "The sending asks every app to account for where its pieces came from, and lets one off when every piece under its name is empty. The reason written beside that letting-off is that a page with no bytes in it puts nothing on the internet that anything links to. This is that reason, asked of the folder instead of assumed.";
   "Written because it had already happened and nothing had noticed for six days. The front page was advertising a game, the page behind the link had no bytes in it, and the address answered every request with a success and an empty screen. No gate was red. The sending was content. The only thing the emptiness did was buy the app a pass on the one question that would have caught it.";
-  "Measured against nothing rather than against a ratchet, because the one app it named was fixed rather than grandfathered.";
+  "Measured against nothing rather than against a ratchet, and it is red on the day it was written, naming the praying game. That is deliberate. A ratchet here would file a link that has been dead on the public site for a week as an accepted fact, and the one thing a dead public link must not become is accepted.";
+  "The app it names cannot be talked out of the list by taking its card off the front page, and that was tried first. The all-apps page is built from every app that exists rather than from a chosen few - that is what it is for - so it names the game whether or not the front page does. Nothing short of a real page standing at that address clears this.";
   arguments_assert(arguments, 0);
   let found = await qa_promoted_unbuilt_linked();
   let walked = property_get(found, "walked");
