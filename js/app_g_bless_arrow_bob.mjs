@@ -25,6 +25,7 @@ export function app_g_bless_arrow_bob(parent, degrees) {
   let keyframe = app_g_bless_arrow_keyframe();
   let name_animation = app_g_bless_arrow_animation_name();
   html_style_animation_alternate_apply(bob, keyframe, name_animation);
-  html_text_set(bob, app_shared_arrow_svg(0));
+  let text = app_shared_arrow_svg(0);
+  html_text_set(bob, text);
   return spin;
 }
