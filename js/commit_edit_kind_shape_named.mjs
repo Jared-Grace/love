@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { property_equals_not } from "./property_equals_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
@@ -17,8 +18,7 @@ export async function commit_edit_kind_shape_named(commit, kind) {
     let r = "something else touched";
     return r;
   }
-  let touched = property_get(counts, "touched");
-  let untouched_is = equal(touched, 0);
+  let untouched_is = property_equals(counts, "touched", 0);
   if (untouched_is) {
     let r2 = "untouched";
     return r2;
