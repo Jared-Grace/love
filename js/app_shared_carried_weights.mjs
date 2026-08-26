@@ -1,7 +1,7 @@
 import { app_shared_carried_names } from "./app_shared_carried_names.mjs";
 import { functions_names_weights } from "./functions_names_weights.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export async function app_carried_weights(a_main) {
+export async function app_shared_carried_weights(a_main) {
   "$plain a_main";
   "Every function one app's bundle holds, heaviest source first.";
   "★ A CEILING SAYS A PAGE IS TOO BIG AND NAMES NOTHING TO CUT. The reader is left walking the imports by hand looking for something fat, and the thing actually costing the bytes is rarely the file anybody suspects. This turns the one number into a list somebody can act on.";

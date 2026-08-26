@@ -2212,7 +2212,7 @@ export function permission_grant_names() {
   let spelled2127 = fn_name("bundle_sizes_now");
   let spelled2128 = fn_name("webpack_build_dev_stale");
   let spelled2129 = fn_name("bible_names_transliterated_coverage");
-  let spelled2130 = fn_name("app_carried_weights");
+  let spelled2130 = fn_name("app_shared_carried_weights");
   let spelled2131 = fn_name("commits_hand_edit_prose_verbs");
   let spelled2132 = fn_name("bible_words_pronunciation_coverage");
   let spelled2133 = fn_name("bible_glyph_roots_wordings_split_lines");
