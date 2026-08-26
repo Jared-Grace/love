@@ -2139,7 +2139,7 @@ export function permission_grant_names() {
   let spelled2054 = fn_name("ebible_versions_english_choices_licences");
   let spelled2055 = fn_name("ebible_versions_english_choices_upload");
   let spelled2056 = fn_name("ebible_languages_codes_offered");
-  let spelled2057 = fn_name("ebible_versions_english_choices");
+  let spelled2057 = fn_name("ebible_versions_english_full_web_family_not");
   let spelled2058 = fn_name("html_public_exists_ensure");
   let spelled2059 = fn_name("ebible_references_texts");
   let spelled2060 = fn_name("app_code_lessons_order_ahead_gate_run");

@@ -4,7 +4,7 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { ebible_versions_english_full } from "./ebible_versions_english_full.mjs";
-export async function ebible_versions_english_choices() {
+export async function ebible_versions_english_full_web_family_not() {
   "Every complete English translation on this disk that a person choosing a wording could be offered, with the six printings of the World English Bible standing as none of them.";
   "THE FAMILY IS NAMED, NOT GUESSED AT BY ITS FIRST LETTERS. Six letters used to stand in for the list and took Webster's revision of the King James down with it, unasked and unreported. The names now live where they can be read.";
   arguments_assert(arguments, 0);
