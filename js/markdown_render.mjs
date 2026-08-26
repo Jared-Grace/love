@@ -1,3 +1,4 @@
+import { markdown_heading_font_sizes } from "./markdown_heading_font_sizes.mjs";
 import { markdown_render_mono_block } from "./markdown_render_mono_block.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -66,7 +67,7 @@ export function markdown_render(parent, text) {
       }
       flush_paragraph();
       let heading = html_div(parent);
-      let sizes = ["1.5em", "1.3em", "1.15em", "1.05em"];
+      let sizes = markdown_heading_font_sizes();
       let a = subtract(level, 1);
       let b = subtract(sizes.length, 1);
       let size = sizes[math_min(a, b)];

@@ -12,7 +12,7 @@ export function app_code_settings_clear_confirm(context) {
   arguments_assert(arguments, 1);
   let g = app_code_screen_capped(context);
   let cross = emoji_x_red();
-  let text_confirm = text_combine(cross, " Yes, mark lessons incomplete");
+  let text_confirm = text_combine(cross, " Yes, mark lessons and reviews incomplete");
   async function on_confirm() {
     app_code_progress_all_clear(context);
     await app_shared_screen_set(context, app_code_home);
@@ -21,7 +21,7 @@ export function app_code_settings_clear_confirm(context) {
     g,
     context,
     app_code_settings,
-    "Are you sure you want to mark all lessons as incomplete? The lesson list goes back to how it looked on your first day, and every lesson is yours to complete again. This only affects whether or not you've completed the lessons.",
+    "Are you sure you want to mark all lessons and reviews as incomplete? The lesson list goes back to how it looked on your first day, and every lesson and review is yours to complete again. This only affects whether or not you've completed them.",
     text_confirm,
     on_confirm,
   );
