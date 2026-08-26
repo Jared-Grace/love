@@ -428,7 +428,7 @@ export function bible_glyph_chapter_ezk33() {
           "$turn_back",
           "from",
           "your",
-          "evil",
+          "$thumbs_down",
           "$road!",
           "For",
           "why",
