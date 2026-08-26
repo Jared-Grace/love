@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function storage_local_key_names_path() {
@@ -5,7 +6,7 @@ export function storage_local_key_names_path() {
   let p = text_combine_multiple([
     "data/given/frozen/",
     fn_name("storage_local_key_names"),
-    ".json",
+    json_extension(),
   ]);
   return p;
 }
