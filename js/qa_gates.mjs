@@ -827,6 +827,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_unpublished_gate_run,
     qa_promoted_unbuilt_linked_gate_run,
     functions_rewrite_then_read_gate_run,
+    firebase_prod_hashes_stale_gate_run,
   ];
   return gates;
 }
