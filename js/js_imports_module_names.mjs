@@ -1,3 +1,4 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_import_expression_source_nodes } from "./js_import_expression_source_nodes.mjs";
 import { js_import_source_nodes } from "./js_import_source_nodes.mjs";
@@ -6,7 +7,6 @@ import { list_concat } from "./list_concat.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
@@ -30,8 +30,7 @@ export function js_imports_module_names(ast) {
   }
   let sources = list_map(literals, value_of);
   function package_is(source) {
-    let repo = text_starts_with(source, ".");
-    let outside = not(repo);
+    let outside = text_starts_with_not(source, ".");
     return outside;
   }
   let packages = list_filter(sources, package_is);
