@@ -25,11 +25,8 @@ export async function bible_glyph_chapters_strong_verses(strong) {
   let found = [];
   for (let chapter of chapters) {
     let chapter_code = chapter.chapter_code;
-    let testament_name = bible_chapter_testament_name(chapter_code);
-    let rows = await bible_glyph_chapter_draft_words(
-      chapter_code,
-      testament_name,
-    );
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
+    let rows = both.rows;
     let parsed = bible_glyph_chapter(chapter_code);
     let drawn_by_verse = {};
     for (let verse of parsed.verses) {

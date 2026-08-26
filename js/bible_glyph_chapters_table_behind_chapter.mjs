@@ -26,10 +26,7 @@ export async function bible_glyph_chapters_table_behind_chapter(
     for (let name of drawn) {
       property_set(used, name, true);
     }
-    let rows = await bible_glyph_chapter_draft_words(
-      chapter_code,
-      testament_name,
-    );
+    let rows = both.rows;
     let missing = bible_glyph_chapters_table_behind_missing(rows, used);
     let glyphs = bible_glyph_chapters_table_behind_glyphs(
       missing,
