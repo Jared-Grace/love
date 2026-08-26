@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { list_map } from "./list_map.mjs";
@@ -15,7 +16,7 @@ export function wordings_distinct(wordings) {
     let text = property_get(group, "key");
     let items = property_get(group, "items");
     let names = list_map_property(items, "name");
-    let bible_folders = list_map_property(items, "bible_folder");
+    let bible_folders = list_map_property(items, bible_folder_key());
     let v = {
       text,
       names,
