@@ -1,5 +1,5 @@
-import { app_shared_button_list } from "../../love/js/app_shared_button_list.mjs";
-import { html_div_centered } from "../../love/js/html_div_centered.mjs";
+import { app_shared_button_list } from "./app_shared_button_list.mjs";
+import { html_div_centered } from "./html_div_centered.mjs";
 export function app_shared_button_list_centered(
   root,
   items,
