@@ -9,7 +9,6 @@ export async function firebase_prod_asset_disk_write(file_name, text) {
   "The other way round from its twin next door, which reads one piece out of that same folder, and working out where the folder is is the one line they share - so the two cannot drift into disagreeing about which folder is the one that goes live.";
   "Straight onto the disk rather than through the remembering, because whoever asks for this is about to have the folder read back by something that never went through the remembering at all - the check that says what is waiting to be sent, and the sending itself.";
   arguments_assert(arguments, 2);
-  let relative = folder_public_join(file_name);
-  let combined = await user_repo_path_combine(relative);
+  let combined = folder_public_absolute_join(file_name);
   await file_overwrite_uncached(combined, text);
 }
