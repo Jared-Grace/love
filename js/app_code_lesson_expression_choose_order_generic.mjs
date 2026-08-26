@@ -28,6 +28,7 @@ export function app_code_lesson_expression_choose_order_generic(
     on_success,
     on_wrong,
     batch_get_unused,
+    correction_code_set_unused,
     answer_label_set,
   ) {
     "the quiz hands over a question and a place to draw it, and the shape it was printed from is looked up here - that is the one thing the bank keeps that a lesson has no other way to reach";

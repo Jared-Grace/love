@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 22,
+      kept: 23,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
@@ -249,7 +249,7 @@ export function song_image_couplet_glosses() {
         "Described. The sandals are gone and the mountain has taken their place. Hebrews 12:18-21 is the passage the couplet's own verse sits in - ye are not come unto the mount that might be touched, and so terrible was the sight that Moses said I exceedingly fear and quake - and four verses later comes reverence and godly fear. Exodus 19:18 puts the mount altogether on a smoke and the LORD upon it in cloud. So the covered peak is the picture: godly fear is standing at the foot of what you may not climb.",
     },
     31: {
-      kept: 4,
+      kept: 11,
       lyric_ref: "Matthew 24:32-33, Romans 13:12, Revelation 22:20",
       lyric_explain:
         "When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: so likewise ye, when ye shall see all these things, know that it is near, even at the doors.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 4,
+      kept: 6,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",

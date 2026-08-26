@@ -1,3 +1,4 @@
+import { js_function_arguments_assert_each_size_or_null } from "./js_function_arguments_assert_each_size_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_function_declaration_params_ast_get } from "./js_function_declaration_params_ast_get.mjs";
@@ -25,7 +26,10 @@ export function js_code_arguments_assert_stale(code) {
     let r = [];
     return r;
   }
-  let declared = js_function_arguments_assert_count_or_null(declaration);
+  let counted = js_function_arguments_assert_count_or_null(declaration);
+  let declared = null_is(counted)
+    ? js_function_arguments_assert_each_size_or_null(declaration)
+    : counted;
   let unguarded = null_is(declared);
   if (unguarded) {
     let r2 = [];
