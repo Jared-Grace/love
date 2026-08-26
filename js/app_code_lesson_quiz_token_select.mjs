@@ -83,8 +83,6 @@ export function app_code_lesson_quiz_token_select(
         if (quiet) {
           said = "";
         }
-        ("set as plain text and never as markup, because the pieces being named are punctuation and a less-than read as markup would take the rest of the sentence with it");
-        html_text_content_set(note_div, said);
         on_wrong();
       } else {
         html_text_content_set(note_div, "");
