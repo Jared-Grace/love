@@ -1,3 +1,5 @@
+import { bible_glyph_negation_doubled_gate_run } from "./bible_glyph_negation_doubled_gate_run.mjs";
+import { app_original_bible_gloss_unpublished_gate_run } from "./app_original_bible_gloss_unpublished_gate_run.mjs";
 import { functions_search_family_or_null_cases_gate_run } from "./functions_search_family_or_null_cases_gate_run.mjs";
 import { bible_versions_english_choices_psalms_agreement_gate_run } from "./bible_versions_english_choices_psalms_agreement_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_unpublished_gate_run } from "./app_en_learn_bible_gloss_urdu_unpublished_gate_run.mjs";
@@ -816,6 +818,7 @@ export function qa_gates() {
     js_source_bare_token_kind_cases_gate_run,
     bible_versions_english_choices_psalms_agreement_gate_run,
     functions_search_family_or_null_cases_gate_run,
+    app_original_bible_gloss_unpublished_gate_run,
   ];
   return gates;
 }
