@@ -1,11 +1,9 @@
+import { app_shared_text_language_codes } from "./app_shared_text_reader_language_defects_site_span_scratch.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_literal_value_deep_try } from "./js_literal_value_deep_try.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
-import { list_without } from "./list_without.mjs";
 import { ebible_language_en_code } from "./ebible_language_en_code.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
@@ -41,9 +39,7 @@ export function app_shared_text_reader_language_defects_site(
       });
       continue;
     }
-    let named = object_property_names(saying);
-    let from_key = app_shared_text_reader_language_from_key();
-    let codes = list_without(named, from_key);
+    let codes = app_shared_text_language_codes(saying);
     let en = ebible_language_en_code();
     let english = list_includes(codes, en);
     if (not(english)) {
