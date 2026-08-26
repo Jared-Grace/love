@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { log_console_json } from "./log_console_json.mjs";
 import { process_result_lines_wanted } from "./process_result_lines_wanted.mjs";
@@ -28,7 +29,7 @@ export async function log_console_json_capped(value) {
       return;
     }
     let v = String(process.pid);
-    let name = text_combine_multiple(["ai_result_", v, ".json"]);
+    let name = text_combine_multiple(["ai_result_", v, json_extension()]);
     let path = folder_gitignore_join(name);
     await file_overwrite(path, json);
     console.log(kept);
