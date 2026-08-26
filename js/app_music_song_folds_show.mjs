@@ -1,3 +1,4 @@
+import { html_br } from "./html_br.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { false_get } from "./false_get.mjs";
 import { app_music_lines_instruction_text } from "./app_music_lines_instruction_text.mjs";
@@ -5,7 +6,6 @@ import { app_shared_buttons_expand_collapse } from "./app_shared_buttons_expand_
 import { app_shared_folds } from "./app_shared_folds.mjs";
 import { app_shared_folds_set } from "./app_shared_folds_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_br_2 } from "./html_br_2.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 export function app_music_song_folds_show(parent) {
   "Put the top of a song's page in place - the sentence saying that a line opens onto its passages, and the open-everything and shut-everything buttons - and hand back the group of cards those buttons act on.";
@@ -35,6 +35,7 @@ export function app_music_song_folds_show(parent) {
   ("EVERY BUTTON DOWN THIS COLUMN KEEPS THE SAME GAP. These two carried only the hair's width a wide button keeps by default, while the way-home button above them keeps the gap this app spaces stacked buttons by - so one column of identically dressed buttons was drawn at two rhythms, the top one standing clear and the bottom two touching. Read down the page that says the pair is one thing and the button above it is another, which is the opposite of what they are.");
   app_shared_button_gap_above(pair.expand);
   app_shared_button_gap_above(pair.collapse);
-  html_br_2(parent);
+  ("ONE BREAK UNDER THE BUTTONS AND NOT TWO. The song opens with the name of its first part, and that name is drawn with no room above it because there is no part before it to stand clear of - so whatever is left here is the whole distance between the last button and the first word of the song. Two breaks made that gap larger than any other on the page and pushed the song down out of the first screen.");
+  html_br(parent);
   return folds;
 }
