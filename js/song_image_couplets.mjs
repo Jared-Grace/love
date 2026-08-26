@@ -496,7 +496,7 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "One grapevine, its stem one slender gnarled twisting rope of plain brown wood no thicker than a wrist, standing with its foot on the white border at the bottom and rising only a short way, no higher than a quarter of the height of the window, and out of the top of that short stem two long thin brown branches running out sideways to the left and to the right and curling back on themselves as they go, with small curled tendrils springing from them all along their length, carrying broad emerald green vine leaves and several heavy clusters of grapes hanging straight down underneath the branches, every grape of every cluster the same deep crimson as every other one and no grape any other colour, the branches reaching almost to the white border on both sides and filling the width of the window, and no branch left floating with nothing under it",
+        "One grapevine growing sideways and not upward, one slender brown stem no thicker than a finger entering the picture low at the left hand side and running right across the window to the right hand side, curling back on itself as it goes, with small curled tendrils springing from it all along its length, carrying broad emerald green vine leaves and several heavy clusters of grapes hanging straight down underneath it, every grape of every cluster the same deep crimson as every other one and no grape any other colour, the stem reaching almost to the white border on both sides and filling the width of the window, and every cluster hanging from the stem itself",
       symbol_ref: "John 15:1",
       same_as: 35,
     },
