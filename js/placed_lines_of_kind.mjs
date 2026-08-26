@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 export function placed_lines_of_kind(placed, kind) {
   "$plain kind";
   "Out of changed lines each carrying the kind of thing it is, the lines of one named kind, in the order they were changed in.";
@@ -9,8 +9,7 @@ export function placed_lines_of_kind(placed, kind) {
   arguments_assert(arguments, 2);
   let lines = [];
   for (let record of placed) {
-    let held = property_get(record, "kind");
-    let same = equal(held, kind);
+    let same = property_equals(record, "kind", kind);
     if (same) {
       let line = property_get(record, "line");
       list_add(lines, line);
