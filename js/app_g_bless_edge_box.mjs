@@ -17,10 +17,10 @@ export function app_g_bless_edge_box(container_map, bar) {
   let bottom_full = property_get(rect, "bottom");
   let height_bar = property_get(rect_bar, "height");
   let bottom = subtract(bottom_full, height_bar);
-  let top2 = add(left, right);
-  let x = divide(top2, 2);
-  let top3 = add(top, bottom);
-  let y = divide(top3, 2);
+  let sides = { left, top, right, bottom };
+  let middle = sides_middle_point(sides);
+  let x = property_get(middle, "x");
+  let y = property_get(middle, "y");
   let box = {
     left,
     top,
