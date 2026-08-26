@@ -1,6 +1,6 @@
+import { js_scope_binder_nearest_remembered_stopping } from "./js_scope_binder_nearest_remembered_stopping.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_scope_binder_nearest_remembered } from "./js_scope_binder_nearest_remembered.mjs";
 import { js_visit } from "./js_visit.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { equal } from "./equal.mjs";
@@ -26,7 +26,11 @@ export function js_names_unbound_mentioned_referenced(ast, referenced) {
     }
     let name = property_get_name(node);
     let stack = property_get(v, "stack");
-    let nearest = js_scope_binder_nearest_remembered(stack, name, remembered);
+    let nearest = js_scope_binder_nearest_remembered_stopping(
+      stack,
+      name,
+      remembered,
+    );
     let outside = equal(nearest, null);
     if (outside) {
       unbound.add(name);
