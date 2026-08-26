@@ -1,7 +1,7 @@
+import { property_equals_not } from "./property_equals_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { equal } from "./equal.mjs";
 export async function commit_edit_kind_shape_named(commit, kind) {
   "$plain kind";
@@ -12,8 +12,7 @@ export async function commit_edit_kind_shape_named(commit, kind) {
   "THE UNEVEN CASE IS KEPT APART FROM THE EVEN ONE even where a caller has one word for both. Several lines in for the same number out is a run rewritten and might one day be worth a command; a different number in from out cannot be anything but a rewrite, and folding them together here would take that difference away from a caller that wanted it.";
   arguments_assert(arguments, 2);
   let counts = await commit_edit_kind_counts(commit, kind);
-  let else_touched = property_get(counts, "else_touched");
-  let touched_else_is = equal_not(else_touched, 0);
+  let touched_else_is = property_equals_not(counts, "else_touched", 0);
   if (touched_else_is) {
     let r = "something else touched";
     return r;
