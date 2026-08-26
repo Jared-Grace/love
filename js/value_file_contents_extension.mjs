@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { text_is } from "./text_is.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 export function value_file_contents_extension(value) {
@@ -15,7 +16,7 @@ export function value_file_contents_extension(value) {
   }
   let json = {
     contents: json_format_to(value),
-    extension: ".json",
+    extension: json_extension(),
   };
   return json;
 }
