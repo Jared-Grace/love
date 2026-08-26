@@ -1,7 +1,6 @@
-import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
-import { app_code_lesson_quiz_token_select_marks_set } from "./app_code_lesson_quiz_token_select_marks_set.mjs";
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { app_code_lesson_quiz_token_select_pieces } from "./app_code_lesson_quiz_token_select_pieces.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
@@ -9,30 +8,18 @@ import { list_concat_single_right } from "./list_concat_single_right.mjs";
 import { list_starts_with_curried_right } from "./list_starts_with_curried_right.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { app_code_quiz_token_run_together_note_set } from "./app_code_quiz_token_run_together_note_set.mjs";
+import { app_code_lesson_quiz_token_select_wrong_show } from "./app_code_lesson_quiz_token_select_wrong_show.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_first } from "./list_first.mjs";
-import { app_code_quiz_string_tokens_merge } from "./app_code_quiz_string_tokens_merge.mjs";
-import { js_tokens_to_code } from "./js_tokens_to_code.mjs";
-import { text_index_of_from_start } from "./text_index_of_from_start.mjs";
-import { list_reduce } from "./list_reduce.mjs";
-import { text_take } from "./text_take.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { lists_equal_pair } from "./lists_equal_pair.mjs";
-import { list_any } from "./list_any.mjs";
+import { app_code_lesson_quiz_token_select_marks_set } from "./app_code_lesson_quiz_token_select_marks_set.mjs";
+import { app_code_lesson_quiz_token_select_code_show } from "./app_code_lesson_quiz_token_select_code_show.mjs";
+import { app_code_lesson_quiz_token_select_done_is } from "./app_code_lesson_quiz_token_select_done_is.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { log } from "./log.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_skip } from "./list_skip.mjs";
-import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
+import { app_code_lesson_quiz_token_select_needed_not_is } from "./app_code_lesson_quiz_token_select_needed_not_is.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quiz_token_select(
   parent,
@@ -67,65 +54,52 @@ export function app_code_lesson_quiz_token_select(
       let variations_new = list_filter(variations, lambda2);
       let e = list_empty_is(variations_new);
       if (e) {
-        app_code_lesson_quiz_wrong_set(b);
-        app_code_quiz_token_run_together_note_set(
+        app_code_lesson_quiz_token_select_wrong_show(
+          b,
           note_div,
           chosen,
           token,
           tokens_unique,
+          on_wrong,
         );
-        on_wrong();
-      } else {
-        html_text_content_set(note_div, "");
-        each(buttons, html_style_code_dark);
-        app_shared_button_screen_green_style_assign(b);
-        list_add(chosen, token);
-        variations = variations_new;
-        app_code_lesson_quiz_token_select_marks_set(
-          tokens_unique,
-          chosen,
+        return;
+      }
+      html_text_content_set(note_div, "");
+      each(buttons, html_style_code_dark);
+      app_shared_button_screen_green_style_assign(b);
+      list_add(chosen, token);
+      variations = variations_new;
+      app_code_lesson_quiz_token_select_marks_set(
+        tokens_unique,
+        chosen,
+        variations,
+        buttons,
+      );
+      app_code_lesson_quiz_token_select_code_show(
+        variations,
+        chosen,
+        answer_div,
+        correction_code_set,
+      );
+      let any = app_code_lesson_quiz_token_select_done_is(variations, chosen);
+      await sleep_seconds(0.1);
+      if (any) {
+        html_visibility_hidden(b);
+        log(app_code_lesson_quiz_token_select.name, {
           variations,
-          buttons,
-        );
-        let variation_first = list_first(variations);
-        let merged = app_code_quiz_string_tokens_merge(variation_first);
-        let code = js_tokens_to_code(merged);
-        correction_code_set(code);
-        function lambda5(index, token_each) {
-          let sum = text_index_of_from_start(code, token_each, index);
-          return sum;
-        }
-        let reduced = list_reduce(chosen, lambda5, 0);
-        let taken = text_take(code, reduced);
-        html_clear(answer_div);
-        html_span_text(answer_div, taken);
-        function lambda4(variation) {
-          let same = lists_equal_pair(variation, chosen);
-          return same;
-        }
-        let any = list_any(variations, lambda4);
-        await sleep_seconds(0.1);
-        if (any) {
-          html_visibility_hidden(b);
-          log(app_code_lesson_quiz_token_select.name, {
-            variations,
-            chosen,
-          });
-          await on_success();
-          return;
-        }
-        html_style_code_dark(b);
-        let size = list_size(chosen);
-        function lambda3(variation) {
-          let skipped = list_skip(variation, size);
-          return skipped;
-        }
-        let combined = list_map_concat_multiple(variations, lambda3);
-        let unique = list_unique(combined);
-        let n = list_includes_not(unique, token);
-        if (n) {
-          html_visibility_hidden(b);
-        }
+          chosen,
+        });
+        await on_success();
+        return;
+      }
+      html_style_code_dark(b);
+      let n = app_code_lesson_quiz_token_select_needed_not_is(
+        variations,
+        chosen,
+        token,
+      );
+      if (n) {
+        html_visibility_hidden(b);
       }
     }
     return b;

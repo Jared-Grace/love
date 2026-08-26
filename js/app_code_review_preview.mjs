@@ -1,3 +1,4 @@
+import { app_code_review_preview_lessons_under_test } from "./app_code_review_preview_lessons_under_test.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_buttons_cap_style } from "./app_code_buttons_cap_style.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -67,8 +68,9 @@ export function app_code_review_preview() {
     "every lesson the page is showing, named by its id - the id and not the painted home title, because the id is a plain word that can be read down a long list and typed into a search, and a hundred painted titles is a hundred running animations";
     each([picker, stage], html_clear);
     let asked =
-      "Pick a lesson, then a question kind. One real review question is drawn, and picking the same kind again asks it again on a fresh line.";
+      "Every lesson, in the order they are learned. Pick one, then a question kind.";
     html_p_text(picker, asked);
+    app_shared_button(picker, "← the ones under test", shortlist_show);
     let lessons = app_code_lessons();
     function each_lesson(lesson) {
       let lesson_id = property_get(lesson, "id");
@@ -79,5 +81,24 @@ export function app_code_review_preview() {
     }
     each(lessons, each_lesson);
   }
-  lessons_show();
+  function shortlist_show() {
+    "the screen this page opens on: only the lessons named as waiting to be looked at, so what is being asked for is four buttons instead of a hundred and thirty four";
+    "The whole run is still here, one button down, because a shortlist that cannot be got past is a shortlist that decides for the person reading it what they are allowed to look at.";
+    each([picker, stage], html_clear);
+    let asked =
+      "The lessons waiting to be looked at. Pick one, then a question kind - that draws one real review question, and picking the same kind again asks it again on a fresh line.";
+    html_p_text(picker, asked);
+    let fns = app_code_review_preview_lessons_under_test();
+    function each_fn(fn) {
+      let lesson = fn();
+      let lesson_id = property_get(lesson, "id");
+      function fn_chosen() {
+        kinds_show(lesson_id);
+      }
+      app_shared_button(picker, lesson_id, fn_chosen);
+    }
+    each(fns, each_fn);
+    app_shared_button(picker, "every lesson", lessons_show);
+  }
+  shortlist_show();
 }

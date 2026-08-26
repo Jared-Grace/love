@@ -1,22 +1,29 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { html_code_indent } from "./html_code_indent.mjs";
-import { html_code_error_banner } from "./html_code_error_banner.mjs";
-import { html_code_error_notice } from "./html_code_error_notice.mjs";
-import { html_code_recorder_include } from "./html_code_recorder_include.mjs";
-import { html_code_service_worker_register } from "./html_code_service_worker_register.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { html_code_error_banner } from "./html_code_error_banner.mjs";
+import { html_error_notice_message_texts } from "./html_error_notice_message_texts.mjs";
+import { app_shared_text_language_codes } from "./app_shared_text_language_codes.mjs";
+import { html_code_error_notice } from "./html_code_error_notice.mjs";
+import { list_map } from "./list_map.mjs";
+import { html_code_recorder_include } from "./html_code_recorder_include.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_add } from "./list_add.mjs";
 import { text_index_of_try } from "./text_index_of_try.mjs";
-import { text_size } from "./text_size.mjs";
-import { text_skip } from "./text_skip.mjs";
-import { add } from "./add.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { equal } from "./equal.mjs";
+import { text_size } from "./text_size.mjs";
+import { add } from "./add.mjs";
 import { each } from "./each.mjs";
+import { equal } from "./equal.mjs";
+import { text_skip } from "./text_skip.mjs";
 import { text_prefix_without_try } from "./text_prefix_without_try.mjs";
+import { html_code_service_worker_register } from "./html_code_service_worker_register.mjs";
 import { text_suffix_without_try } from "./text_suffix_without_try.mjs";
 export function html_code_body_own(body) {
   "$plain body";
-  "The part of a generated page's body the app itself was given, with the pieces every page gets taken back off it.";
+  arguments_assert(arguments, 1);
+  ("The part of a generated page's body the app itself was given, with the pieces every page gets taken back off it.");
   (fn_name("html_code"),
     " opens an app's body with things it did not ask for - the loading splash, the error band, the error notice, the recorder - and closes it with the service worker line. Reading a page back has to take exactly those off again, or regenerating it wraps the wrapping. Measured 2026-08-23: one pass turned a 47 line page into 80 and a second turned those into 113, gaining a splash every time and never settling, because each pass handed the whole wrapped body back as though the app had written it.");
   ("The splash cannot be taken off by matching it, because it is drawn fresh every time it is built - its ring breathes to a run of random sizes on purpose, so the copy on a page and a copy made now are never the same text. What is found instead is the last of the pieces that ARE the same every time, and the app's own body is whatever follows it. That reaches past the splash without having to recognise it.");
@@ -28,9 +35,18 @@ export function html_code_body_own(body) {
   let separator = text_combine("\n", indent);
   ("each piece is looked for with the separator that stands in front of it, so what is found is a whole child of the body rather than text that happens to sit inside one");
   let r = html_code_error_banner();
-  let r2 = html_code_error_notice();
+  ("the notice is written in the language its page was built for, so there is no longer one of it to look for. every language it can come out in is looked for instead, because which one a page on disk carries is a fact about the app that wrote it rather than something that can be read off the text in front of us. Only one of them can be in any one page, so they cannot disagree about where the app's own body starts.");
+  let texts = html_error_notice_message_texts();
+  let codes = app_shared_text_language_codes(texts);
+  function lambda_notice(code) {
+    let notice = html_code_error_notice(code);
+    return notice;
+  }
+  let notices = list_map(codes, lambda_notice);
   let r3 = html_code_recorder_include();
-  let anchors = [r, r2, r3];
+  let anchors = [r];
+  list_add_multiple(anchors, notices);
+  list_add(anchors, r3);
   let start = -1;
   function lambda(anchor) {
     let line = text_combine(separator, anchor);
