@@ -1,7 +1,7 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { function_paths_frozen_enable } from "./function_paths_frozen_enable.mjs";
 import { function_name_to_path_found } from "./function_name_to_path_found.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_free_names_scoped } from "./js_free_names_scoped.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
@@ -16,7 +16,7 @@ export async function functions_free_names_scoped_timed() {
   ("It says the folders cannot change, which is what the suite says before asking any gate, so that asking this from inside the frozen copy measures what a gate there actually pays. Saying it costs nothing anywhere else: it is looked at where it lands and refused unless the folder is one that can honestly promise it, so from the folder people are editing this is simply the slow reading it always was.");
   ("It is not the gate. There is no baseline here and nothing is compared to anything, so it can be asked freely without a red answer meaning anything. It is also not a copy of the gate's loop for the same reason - what it leaves out is exactly what makes the gate a gate.");
   function_paths_frozen_enable();
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let path_ms = 0;
   let parse_ms = 0;
   let free_ms = 0;
