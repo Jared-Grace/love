@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -25,7 +26,7 @@ export async function ebible_chapter_verse_numbers_to_pair(
   if (wordless) {
     chosen = verses;
   }
-  let property_name = "verse_number";
+  let property_name = verse_number_key();
   let numbers = list_map_property(chosen, property_name);
   return numbers;
 }
