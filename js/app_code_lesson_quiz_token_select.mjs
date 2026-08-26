@@ -1,8 +1,6 @@
 import { list_get } from "./list_get.mjs";
-import { app_code_quiz_token_run_together_text } from "./app_code_quiz_token_run_together_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
-import { null_is } from "./null_is.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { each_index } from "./each_index.mjs";
@@ -74,15 +72,6 @@ export function app_code_lesson_quiz_token_select(
       let e = list_empty_is(variations_new);
       if (e) {
         app_code_lesson_quiz_wrong_set(b);
-        let said = app_code_quiz_token_run_together_text(
-          chosen,
-          token,
-          tokens_unique,
-        );
-        let quiet = null_is(said);
-        if (quiet) {
-          said = "";
-        }
         on_wrong();
       } else {
         html_text_content_set(note_div, "");
