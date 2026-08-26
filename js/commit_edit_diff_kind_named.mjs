@@ -1,11 +1,10 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { commit_edit_diff_kinds_only_named_or_null } from "./commit_edit_diff_kinds_only_named_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { commit_edit_diff_code_lines_named } from "./commit_edit_diff_code_lines_named.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { placed_lines_of_kind } from "./placed_lines_of_kind.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 export function commit_edit_diff_kind_named(placed) {
   "What one commit's change amounts to, in a few words a person can read down a list of - imports only, prose only, one line added, one call swapped for another, several lines.";
   "Lines that are prose or imports are set aside first and the words are chosen from what is left, which is why a commit touching thirty import lines and one line of code is called one line of code. Counting the lines rather than the kinds would have called it a large change and hidden the only part anybody needs to look at.";
@@ -21,8 +20,7 @@ export function commit_edit_diff_kind_named(placed) {
     return only;
   }
   let code = placed_lines_of_kind(placed, "code");
-  let size = list_size(code);
-  let none = equal(size, 0);
+  let none = list_size_equal(code, 0);
   if (none) {
     let r = "comment, values, names alone and imports only";
     return r;
