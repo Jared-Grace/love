@@ -27,7 +27,7 @@ export async function app_music_verses_build() {
     return pair;
   }
   let pairs = list_map(references, quoted_from);
-  let groups = list_group_by_property(pairs, "bible_folder");
+  let groups = list_group_by_property(pairs, bible_folder_key());
   async function group_texts(group) {
     let bible_folder = property_get(group, "key");
     let named = property_list_map_property(group, "items", "reference");
