@@ -1,10 +1,10 @@
+import { js_call_first_argument_try } from "./js_call_first_argument_try.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_rewrite_seams } from "./functions_rewrite_seams.mjs";
-import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_find_declaration_named_or_null } from "./js_find_declaration_named_or_null.mjs";
 import { js_node_value_get } from "./js_node_value_get.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
@@ -61,8 +61,7 @@ export function js_rewrite_targets(ast) {
     if (not(marked)) {
       return null;
     }
-    let call_arguments = js_call_arguments_get(value_node);
-    let first = list_first_try(call_arguments);
+    let first = js_call_first_argument_try(value_node);
     let spelled = literal_or_null(first);
     return spelled;
   }
