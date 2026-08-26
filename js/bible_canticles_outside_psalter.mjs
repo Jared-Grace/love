@@ -21,6 +21,14 @@ export function bible_canticles_outside_psalter() {
       office: "sung as a canticle though 1SA02:1 says Hannah prayed",
     },
     {
+      chapter_code: "1CH16",
+      verse_first: 8,
+      verse_last: 36,
+      name: "Psalm of thanks at the bringing up of the ark",
+      office:
+        "sung by Asaph and his brothers though 1CH16:7 says David ordained giving of thanks; its words are near but not equal to Psalms 105, 96 and 106",
+    },
+    {
       chapter_code: "ISA12",
       verse_first: 2,
       verse_last: 6,
