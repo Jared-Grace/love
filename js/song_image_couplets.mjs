@@ -386,7 +386,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "Four royal diadems of white glass, each one a plain broad smooth ring whose upper edge runs as one unbroken level line the whole way round, the four worn one above another and stacked directly on top of one another into a single tall pile with nothing under the lowest ring, drawn very large and alone so that the pile reaches almost across the whole window",
+        "Three royal crowns of white glass worn one above another, each one a plain broad band with short upright points standing along the top of it so that it is plainly a crown and not a ring, the three stacked directly on top of one another into a single tall pile with nothing under the lowest crown, drawn very large and alone so that the pile reaches almost across the whole window",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
