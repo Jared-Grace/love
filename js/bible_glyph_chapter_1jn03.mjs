@@ -163,7 +163,7 @@ export function bible_glyph_chapter_1jn03() {
       {
         verse_number: 6,
         words: [
-          "No",
+          "$no_entry",
           "one",
           "who",
           "remains",
@@ -172,7 +172,7 @@ export function bible_glyph_chapter_1jn03() {
           "keeps",
           "on",
           "$bow.",
-          "No",
+          "$no_entry",
           "one",
           "who",
           "continues",
