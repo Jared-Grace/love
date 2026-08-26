@@ -1,3 +1,4 @@
+import { qa_gate_timings_load_settle_wait } from "./qa_gate_timings_load_settle_wait.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
 import { lock_wait } from "./lock_wait.mjs";
@@ -19,6 +20,7 @@ export async function qa_gate_timings_write() {
   "The reading is checked for being suspiciously short before anything is written, because the timing comes back as the words a second run printed, and a run that died early prints something that still parses. A record naming a handful of gates would look like a successful measurement and would quietly hand every unmeasured gate the same average, which is the shape the dealing already falls back to and would report as though it had measured";
   let who = qa_snapshot_owner();
   async function lambda() {
+    await qa_gate_timings_load_settle_wait();
     let timed = await qa_snapshot_timed_solo_told();
     return timed;
   }
