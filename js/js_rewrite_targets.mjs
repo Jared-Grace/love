@@ -1,10 +1,10 @@
+import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_rewrite_seams } from "./functions_rewrite_seams.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { js_find_declaration_named_or_null } from "./js_find_declaration_named_or_null.mjs";
 import { js_node_value_get } from "./js_node_value_get.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
@@ -57,8 +57,7 @@ export function js_rewrite_targets(ast) {
       return null;
     }
     let value_node = js_node_value_get(declaration);
-    let called = js_call_callee_name_try(value_node);
-    let marked = equal(called, marker_fn_name);
+    let marked = js_call_callee_name_equal(value_node, marker_fn_name);
     if (not(marked)) {
       return null;
     }
