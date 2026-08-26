@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { js_call_first_argument_try } from "./js_call_first_argument_try.mjs";
 import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { functions_rewrite_seams } from "./functions_rewrite_seams.mjs";
 import { js_find_declaration_named_or_null } from "./js_find_declaration_named_or_null.mjs";
@@ -27,8 +27,7 @@ export function js_rewrite_targets(ast) {
     if (not(there)) {
       return null;
     }
-    let type = property_get(node, "type");
-    let literal_is = equal(type, "Literal");
+    let literal_is = property_equals(node, "type", "Literal");
     if (not(literal_is)) {
       return null;
     }
@@ -45,8 +44,7 @@ export function js_rewrite_targets(ast) {
     if (not(there)) {
       return null;
     }
-    let type = property_get(node, "type");
-    let identifier_is = equal(type, "Identifier");
+    let identifier_is = property_equals(node, "type", "Identifier");
     if (not(identifier_is)) {
       return null;
     }
