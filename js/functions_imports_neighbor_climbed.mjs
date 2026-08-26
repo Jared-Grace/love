@@ -1,10 +1,10 @@
+import { property_text_includes } from "./property_text_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_code_offenders_generic } from "./functions_code_offenders_generic.mjs";
 import { js_code_imports_neighbor_climbed } from "./js_code_imports_neighbor_climbed.mjs";
 import { functions_names_to_paths } from "./functions_names_to_paths.mjs";
 import { folder_repo_love_js_spelled } from "./folder_repo_love_js_spelled.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_includes } from "./text_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function functions_imports_neighbor_climbed() {
   arguments_assert(arguments, 0);
@@ -20,8 +20,7 @@ export async function functions_imports_neighbor_climbed() {
   let repo_js_path = folder_repo_love_js_spelled();
   function here_is(offender) {
     let f_name = property_get(offender, "f_name");
-    let f_path = property_get(paths, f_name);
-    let here = text_includes(f_path, repo_js_path);
+    let here = property_text_includes(paths, f_name, repo_js_path);
     return here;
   }
   let r = list_filter(found, here_is);
