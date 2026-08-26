@@ -1,9 +1,5 @@
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
+import { text_words_echo } from "./text_words_echo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { add } from "./add.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { text_words_content } from "./text_words_content.mjs";
 export function text_words_content_echo(first, second) {
   arguments_assert(arguments, 2);
@@ -15,44 +11,6 @@ export function text_words_content_echo(first, second) {
   ("It says nothing about which of the two came first, because it cannot: the words are the whole of the evidence and they are the same words either way.");
   let first_words = text_words_content(first);
   let second_words = text_words_content(second);
-  let shared = 0;
-  for (let word of first_words) {
-    let both = list_includes(second_words, word);
-    if (both) {
-      shared = add(shared, 1);
-    }
-  }
-  let run = 0;
-  for (
-    let start = 0;
-    less_than(start, first_words.length);
-    start = add(start, 1)
-  ) {
-    for (
-      let against = 0;
-      less_than(against, second_words.length);
-      against = add(against, 1)
-    ) {
-      let length = 0;
-      while (
-        less_than(add(start, length), first_words.length) &&
-        less_than(add(against, length), second_words.length) &&
-        equal(
-          first_words[add(start, length)],
-          second_words[add(against, length)],
-        )
-      ) {
-        length = add(length, 1);
-      }
-      let longer = greater_than(length, run);
-      if (longer) {
-        run = length;
-      }
-    }
-  }
-  let echo = {
-    run,
-    shared,
-  };
+  let echo = text_words_echo(first_words, second_words);
   return echo;
 }

@@ -1,7 +1,8 @@
+import { bible_glyph_verse_glyph_counts } from "./bible_glyph_verse_glyph_counts.mjs";
+import { property_get } from "./property_get.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
-import { list_join } from "./list_join.mjs";
 import { property_count_add } from "./property_count_add.mjs";
-import { equal } from "./equal.mjs";
 export function bible_glyph_chapter_glyph_counts(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter, spelled as the chapter codes spell it. It names a chapter to look up and nothing that runs.";
@@ -16,13 +17,6 @@ export function bible_glyph_chapter_glyph_counts(chapter_code) {
     for (let glyph of object_property_names(verse_counts)) {
       let drew = property_get(verse_counts, glyph);
       property_count_add(counts, glyph, drew);
-        let text = equal(typeof part, "string");
-        if (text) {
-          continue;
-        }
-        let name = list_join(part, "+");
-        property_count_add(counts, name, 1);
-      }
     }
   }
   return counts;
