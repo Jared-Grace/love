@@ -1,3 +1,7 @@
+import { app_shared_spaced_large_gap } from "./app_shared_spaced_large_gap.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_shared_spaced_tiny_gap } from "./app_shared_spaced_tiny_gap.mjs";
+import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_god_our_savior_sections } from "./song_god_our_savior_sections.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
@@ -17,6 +21,7 @@ export async function app_music_song_god_our_savior_show(parent) {
   "THE PASSAGES ARE FOLDED BEHIND THE LINES, so what a reader meets is the song rather than a wall of scripture, and the verses behind whichever line raised the question are one tap under it.";
   "A LINE THE SONG ONLY REPEATS IS LEFT OUT, wherever the repeat falls. The tag sings the last line of the fourth verse over again, and drawn a second time it would open onto the passages the first one already showed - so the reader is offered the same scripture twice and learns nothing from the second offer. The singing repeats it; the page does not need to.";
   "A PART WHOSE LINES HAVE ALL BEEN SUNG ALREADY IS NOT ANNOUNCED. The heading is drawn when the first line under it is drawn rather than when the part is reached, which is what stops the tag leaving a name over nothing.";
+  "A PART IS NAMED CLOSE OVER ITS OWN LINES AND WELL CLEAR OF THE PART BEFORE IT. A heading starts out wearing the same generous band above it as below, which reads as a name floating between two blocks rather than belonging to either, and the reader has to work out by counting which side it goes with. It belongs to what is under it, so the room under it is cut to almost nothing and the room over it is opened up: the same total distance, spent so that the name and its first line touch.";
   "A line resting on nothing is drawn plainly rather than as a card that opens on emptiness.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while the passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
