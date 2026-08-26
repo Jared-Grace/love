@@ -1,3 +1,4 @@
+import { functions_prose_search_answer } from "./functions_prose_search_answer.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { property_list_first } from "./property_list_first.mjs";
 import { functions_names } from "./functions_names.mjs";
@@ -34,10 +35,6 @@ export async function functions_prose_search(search) {
   let all = await functions_names();
   let searched = list_size(names);
   let silent = list_size_subtract(all, searched);
-  let report = {
-    searched,
-    silent,
-    found: result,
-  };
+  let report = functions_prose_search_answer(result, searched, silent);
   return report;
 }
