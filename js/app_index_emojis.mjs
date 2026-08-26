@@ -1,7 +1,7 @@
+import { emoji_mobile } from "./emoji_mobile.mjs";
 import { emoji_music_notes } from "./emoji_music_notes.mjs";
 import { emoji_wine } from "./emoji_wine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { emoji_mobile_arrow } from "./emoji_mobile_arrow.mjs";
 import { emoji_picture_frame } from "./emoji_picture_frame.mjs";
 import { emoji_home } from "./emoji_home.mjs";
 import { emoji_folder } from "./emoji_folder.mjs";
@@ -154,7 +154,7 @@ export function app_index_emojis() {
     },
     {
       app_fn: fn_name("app_apps_all"),
-      emoji: emoji_mobile_arrow(),
+      emoji: emoji_mobile(),
     },
     {
       app_fn: fn_name("app_music"),
