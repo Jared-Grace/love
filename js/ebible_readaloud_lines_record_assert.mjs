@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { ebible_readaloud_lines_bible_folders } from "./ebible_readaloud_lines_bible_folders.mjs";
 import { ebible_readaloud_lines_differ_to_fix_names } from "./ebible_readaloud_lines_differ_to_fix_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -42,7 +43,7 @@ export async function ebible_readaloud_lines_record_assert(
   );
   function lambda(measured) {
     let uneven = property_get(measured, "differ");
-    let bible_folder = property_get(measured, "bible_folder");
+    let bible_folder = property_get(measured, bible_folder_key());
     function lambda_bible_folder_name(counts) {
       let counts_named = object_merge_set(counts, {
         bible_folder,
