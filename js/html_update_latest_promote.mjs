@@ -1,3 +1,5 @@
+import { app_shared_name_search } from "./app_shared_name_search.mjs";
+import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
 import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 import { property_get } from "./property_get.mjs";
 import { firebase_public_app_expected_write } from "./firebase_public_app_expected_write.mjs";
@@ -10,6 +12,10 @@ export async function html_update_latest_promote(search) {
   "The copying holds the sending lock, and the building does not. A sending puts out whatever is in the published folder at the moment it walks it, so a copy running loose beside one sends half of this app and half of the last - and neither half is anything anybody judged. The building writes nowhere the sending looks and takes minutes, so holding the lock through it would only make everybody else wait on a compile.";
   "This is the whole reason the sending itself is allowed to ask so little. It asks nothing about whether the code is correct, because a correct build is what generating latest is for; what it does insist on is that nothing is writing the folder underneath it, and that insisting only works if every writer takes the same lock. This was the one that did not.";
   await app_shared_build(search);
+  ("Before anything is copied out, the app is walked the whole way through as somebody who gets every question right. It happens here and not after, so an app that cannot be finished never reaches the folder the sending reads from - being told no then costs nothing, where a walk run afterwards would already have overwritten whatever was waiting to go.");
+  ("What is walked is the dev copy the build just above has made, out of the same code as the latest copy about to be moved up. An app with no walk of its own goes straight past.");
+  let app_name = await app_shared_name_search(search);
+  await qa_app_e2e_happy_run(app_name);
   ("The copying is written down as soon as it is finished, and inside the same block. That note is what turns promoting into approving: a sending later reads it and refuses a folder holding anything else. Written outside the block, or later, it would describe a folder somebody else had already begun changing.");
   async function lambda() {
     let copied = await html_public_from_latest(search);
