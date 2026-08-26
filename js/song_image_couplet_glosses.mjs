@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 18,
+      kept: 17,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -201,7 +201,7 @@ export function song_image_couplet_glosses() {
         "Described. Matthew 28:2 has the angel roll back the stone, and the tomb is found empty. The stone is drawn well away from the opening so that this and couplet 21 read as two moments and not two pictures of one thing.",
     },
     25: {
-      kept: 3,
+      kept: 1,
       lyric_ref: "1 Corinthians 15:54-55, 2 Timothy 1:10, Revelation 19:12",
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",
