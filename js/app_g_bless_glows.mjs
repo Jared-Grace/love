@@ -1,4 +1,4 @@
-import { html_style_set } from "./html_style_set.mjs";
+import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -99,7 +99,7 @@ export function app_g_bless_glows(glows, everyone, lit) {
   let people_lit = bless_view_people(lit);
   function person_light(person) {
     let halo = app_shared_game_npc_glow_get(person);
-    html_style_set(halo, "visibility", "visible");
+    html_visibility_visible(halo);
     app_shared_game_emoji_glow_apply(halo);
   }
   each(people_lit, person_light);
