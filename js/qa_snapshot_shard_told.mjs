@@ -1,8 +1,8 @@
+import { node_run_lines_whole } from "./node_run_lines_whole.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
 import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { node_run } from "./node_run.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
 import { qa_gate_told_answered_is } from "./qa_gate_told_answered_is.mjs";
@@ -22,7 +22,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
   let words = ["scripts/ai.mjs", f_name, index_word, count_word];
   let began = date_now_milliseconds();
   try {
-    let said = await node_run(folder, words);
+    let said = await node_run_lines_whole(folder, words);
     let r = {
       green: true,
       failed: [],
