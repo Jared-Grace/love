@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { functions_parameters_unread } from "./functions_parameters_unread.mjs";
@@ -7,8 +8,6 @@ import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { functions_parameters_unread_baseline_path } from "./functions_parameters_unread_baseline_path.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { list_intersection } from "./list_intersection.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
@@ -38,8 +37,7 @@ export async function functions_parameters_unread_baseline_add(names_comma) {
     hint: "the record already holds these, so asking for them again means it does not say what you think it says - read the file",
   });
   function asked_for_is(entry) {
-    let name = property_get(entry, "name");
-    let asked = list_includes(names, name);
+    let asked = property_in_list(entry, "name", names);
     return asked;
   }
   let adding = list_filter(offenders, asked_for_is);
