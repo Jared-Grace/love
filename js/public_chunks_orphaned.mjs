@@ -23,11 +23,11 @@ export async function public_chunks_orphaned() {
   async function folder_lambda(folder) {
     let orphaned = await folder_chunks_orphaned(folder);
     let sizes = list_map_property(orphaned, "size");
-    let bytes = list_sum(sizes);
+    let folder_bytes = list_sum(sizes);
     let r = {
       folder,
       count: list_size(orphaned),
-      bytes,
+      bytes: folder_bytes,
       orphaned,
     };
     return r;
