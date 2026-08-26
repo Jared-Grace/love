@@ -3,7 +3,7 @@ import { app_g_player_get } from "./app_g_player_get.mjs";
 import { app_g_npcs_spots_fill } from "./app_g_npcs_spots_fill.mjs";
 import { app_g_npcs_strays_send_away } from "./app_g_npcs_strays_send_away.mjs";
 import { app_g_day_guide_highlight } from "./app_g_day_guide_highlight.mjs";
-import { app_g_toast } from "./app_g_toast.mjs";
+import { app_shared_game_toast } from "./app_shared_game_toast.mjs";
 import { g_npc_path_clear_places } from "./g_npc_path_clear_places.mjs";
 import { g_coordinates_land_index } from "./g_coordinates_land_index.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,7 +24,7 @@ export async function app_g_npc_path_clear_start(situation, div_map) {
   app_g_day_guide_highlight(div_map, gold);
   let what = property_get(situation, "what");
   ("the line stays up long enough to tap and watch, because what it names happens once and is over in about a second");
-  app_g_toast(what, 12000);
+  app_shared_game_toast(what, 12000);
   let report = {
     filled,
     sent,

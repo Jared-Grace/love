@@ -8,7 +8,7 @@ import { emoji_pray } from "./emoji_pray.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-import { bless_prayer_read_ms } from "./bless_prayer_read_ms.mjs";
+import { bless_text_read_ms } from "./bless_text_read_ms.mjs";
 export function app_g_bless_amen(container, prayer, on_amen) {
   arguments_assert(arguments, 3);
   ("The amen under a prayer: absent while the prayer is being read, and there once it has");
@@ -69,7 +69,7 @@ export function app_g_bless_amen(container, prayer, on_amen) {
     html_remove(waiting);
     html_visibility_visible(button);
   }
-  let least = bless_prayer_read_ms(prayer);
+  let least = bless_text_read_ms(prayer);
   setTimeout(offer, least);
   return button;
 }
