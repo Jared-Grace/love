@@ -486,7 +486,7 @@ export function bible_glyph_chapter_ezk33() {
           "from",
           "his",
           "wickedness.",
-          "Nor",
+          "$no_entry",
           "will",
           "the",
           "righteous",
@@ -529,7 +529,7 @@ export function bible_glyph_chapter_ezk33() {
           "$hammer",
           "iniquity,",
           "then",
-          "none",
+          "$no_entry",
           "of",
           "his",
           "righteous",
@@ -619,7 +619,7 @@ export function bible_glyph_chapter_ezk33() {
       {
         verse_number: 16,
         words: [
-          "None",
+          "$no_entry",
           "of",
           "the",
           "$bow",
