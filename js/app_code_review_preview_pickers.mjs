@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { each_index } from "./each_index.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_review_preview_lessons_under_test } from "./app_code_review_preview_lessons_under_test.mjs";
-export function app_code_review_preview_fns(picker, stage, question_show) {
+export function app_code_review_preview_pickers(picker, stage, question_show) {
   arguments_assert(arguments, 3);
   function kinds_show(lesson_id) {
     "the question kinds this lesson holds, one button each, named by the very words the question is asked over";
