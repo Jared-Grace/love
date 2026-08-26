@@ -1,6 +1,6 @@
+import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
-import { js_flo } from "./js_flo.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_last } from "./list_last.mjs";
@@ -20,8 +20,7 @@ export function js_code_product_dropped(code) {
   ("Nothing else can be reading the name, and that is settled by where it is bound rather than by looking. A line below it would have to be the return, since the return is the last line; a line above it cannot read a name not yet bound. So the binding has exactly one reader and dropping it drops no other line's value.");
   ("Refusing by handing the code straight back rather than by throwing. Every caller of this is about to compare what comes out against something else, and code that could not be shortened simply fails to match - which is the same answer, reached without a caller having to catch anything.");
   let ast = js_parse(code);
-  let declaration = js_flo(ast);
-  let block = property_get(declaration, "body");
+  let block = js_find_body_block(ast);
   let statements = property_get(block, "body");
   let too_few = list_size_less_than_value(statements, 2);
   if (too_few) {
