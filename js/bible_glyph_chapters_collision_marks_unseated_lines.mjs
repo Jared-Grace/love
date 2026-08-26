@@ -1,3 +1,4 @@
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_collision_marks_walked } from "./bible_glyph_chapters_collision_marks_walked.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
@@ -65,7 +66,7 @@ export async function bible_glyph_chapters_collision_marks_unseated_lines() {
       let place = 0;
       for (let word of row.words) {
         place = add(place, 1);
-        let root_name = property_get(filed, word.strong);
+        let root_name = property_get_or_null(filed, word.strong);
         let joined3 = list_join_empty([word.gloss]);
         let joined4 = list_join_empty([word.glyph]);
         let at = list_join_colon(["at", place]);
