@@ -1,4 +1,4 @@
-import { apps_names } from "./apps_names.mjs";
+import { apps_published_names } from "./apps_published_names.mjs";
 import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { firebase_public_expected } from "./firebase_public_expected.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
@@ -12,7 +12,7 @@ export async function firebase_public_expected_changed() {
   "Nothing here goes near a wire. Both sides are a handful of short words - one read off the folder, one written down when the app was promoted - so the whole set can be asked about in the time a single request would take to leave the machine, which is what lets it be asked before every sending rather than once in a while.";
   "An app nobody has promoted since this record began is counted as changed, because not having been approved is not the same as agreeing, and of the two ways to be wrong the one to choose is the one that holds a sending rather than the one that lets it by.";
   "The names are made unique because an app can be reached by more than one path, and one name arriving twice would read as two apps to look at when it is one.";
-  let app_names = await apps_names();
+  let app_names = await apps_published_names();
   let names = list_unique(app_names);
   let expected = await firebase_public_expected();
   let changed = [];
