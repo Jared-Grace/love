@@ -54,6 +54,17 @@ export function app_g_bless_overlay_render_tap_prayed(
     ("player is round the corner. Drawn only where the player was looking, the street would go");
     ("dark behind them and the map would forget where the work had reached.");
     app_g_bless_homes(homes, blessed, blocks);
+    ("The people left in a house the player has started are ringed on the same step, from");
+    ("the same record, so the ring appears on the prayer that started the house and the last");
+    ("of them goes out on the prayer that finishes it.");
+    ("It is worked out over the whole street rather than over the cone, like the lights and");
+    ("the houses, because who lives with whom stays true while the player looks elsewhere -");
+    ("and a ring that only existed inside the cone would be a hint that vanished the moment");
+    ("the player turned to walk towards it.");
+    ("Drawn onto the layer the lights are on, because a ring and a light are the same kind of");
+    ("thing: a mark under a person, made once and carried by their steps.");
+    let remaining = bless_view_household_started(blessed, view_everyone);
+    app_g_bless_rings(glows, view_everyone, remaining);
     let cone = cone_get();
     ("The draw is also where the player is noticed to have MOVED, because every player action");
     ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");
