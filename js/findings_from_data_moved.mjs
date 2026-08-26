@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { findings_from_data_named } from "./findings_from_data_named.mjs";
@@ -25,7 +26,7 @@ export async function findings_from_data_moved() {
   for (let pair of named) {
     let name = list_first(pair);
     let path_fn_name = list_last(pair);
-    let leaf = text_combine(name, ".json");
+    let leaf = text_combine(name, json_extension());
     let from = path_join([repo, data, leaf]);
     let there = await file_exists(from);
     if (not(there)) {
