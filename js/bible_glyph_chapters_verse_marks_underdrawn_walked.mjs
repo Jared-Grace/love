@@ -1,3 +1,4 @@
+import { text_letters_digits_none_is } from "./text_letters_digits_none_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
@@ -41,7 +42,9 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_walked() {
         if (undrawn) {
           continue;
         }
-        if (text_letters_digits_none_is(word.gloss)) continue;
+        if (text_letters_digits_none_is(word.gloss)) {
+          continue;
+        }
         property_count_add(counts, word.glyph, 1);
       }
       property_set(seated_by_verse, row.verse_number, counts);
