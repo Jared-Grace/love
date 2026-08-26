@@ -1,3 +1,4 @@
+import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
@@ -10,8 +11,6 @@ import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_game_npc_ring_set } from "./app_shared_game_npc_ring_set.mjs";
 import { each } from "./each.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { html_visibility_visible } from "./html_visibility_visible.mjs";
 export function app_g_bless_rings(rings, everyone, remaining) {
   arguments_assert(arguments, 3);
   ("Rings everybody who is left in a house the player has started, and nobody else.");
