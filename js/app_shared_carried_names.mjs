@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_reachable_carried } from "./functions_reachable_carried.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
-export async function app_carried_names(a_main, hint) {
+export async function app_shared_carried_names(a_main, hint) {
   "$plain a_main";
   "$plain hint";
   "Every function one app's entry point carries into its bundle, refusing to answer at all when the walk reached nothing.";
