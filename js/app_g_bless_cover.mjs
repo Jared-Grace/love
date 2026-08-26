@@ -1,10 +1,10 @@
+import { html_style_background } from "./html_style_background.mjs";
 import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_document_root } from "./html_document_root.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_loading_backdrop_style } from "./html_loading_backdrop_style.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_loading_spinner } from "./html_loading_spinner.mjs";
 export function app_g_bless_cover() {
   arguments_assert(arguments, 0);
@@ -33,7 +33,7 @@ export function app_g_bless_cover() {
   let backdrop = html_loading_backdrop_style();
   html_style_assign(div, backdrop);
   let dark = app_shared_color_page_dark();
-  html_style_set(div, "background", dark);
+  html_style_background(div, dark);
   html_style_assign(div, {
     transition: "opacity 0.15s ease",
   });
