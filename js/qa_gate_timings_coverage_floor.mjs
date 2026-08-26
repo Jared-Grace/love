@@ -1,0 +1,10 @@
+export function qa_gate_timings_coverage_floor() {
+  "How much of the walkable gate list the record of what each gate takes must cover before it stops being worth measuring again.";
+  "Four fifths, so at most one gate in five is dealt at the guessed weight rather than a measured one. The dealing hands a gate nobody has timed the average of the ones that have, which is a sound guess for a few gates and stops being one when it is deciding half the shares.";
+  "The number is against the gates that can be walked rather than against all of them. Around seventeen ask something of the machine around them and are never walked by a run inside the frozen copy, so they can never appear in the record - counted in, they alone are four percent of the list and a floor near the top would be unmeetable rather than strict.";
+  "★ WHY THIS EXISTS AT ALL: THE AGE RULE BESIDE IT RESTS ON A PREMISE THIS REPO NO LONGER MEETS. That rule allows a fortnight because a gate is written once and then left alone for weeks - true of one gate's speed, and false of the list. Counted 2026-08-26, the gate list went 43, 165, 177, 273, 361, 421 over a month, and grew by 148 in the nine days since the record was last written. At sixteen new gates a day a fortnight of drift is about two hundred and twenty gates the record has never heard of, which is what was found: 197 of 404 walkable gates covered, so more than half the shares were being guessed while the file was still young enough to pass as fresh.";
+  "Four fifths rather than something tighter because the run this triggers is the heaviest thing this machine does. At the growth measured it asks for about one extra run a week, which a machine that already waits for a quiet hour can afford; a floor near the top would ask for one most days and would spend the saving on the measuring.";
+  "It can only ever cause more measuring. Nothing fails on it, no build goes red, and the age rule still stands underneath - so the worst a wrong number here does is time the gates more often than they needed timing.";
+  let share = 0.8;
+  return share;
+}
