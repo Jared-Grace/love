@@ -1,3 +1,4 @@
+import { html_p_text_directed } from "./html_p_text_directed.mjs";
 import { app_shared_contact_prompt_text } from "./app_shared_contact_prompt_text.mjs";
 import { app_shared_contact_placeholder_text } from "./app_shared_contact_placeholder_text.mjs";
 import { app_shared_contact_send_text } from "./app_shared_contact_send_text.mjs";
@@ -8,7 +9,6 @@ import { html_value_set } from "./html_value_set.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_p_text } from "./html_p_text.mjs";
 import { html_textarea } from "./html_textarea.mjs";
 import { html_placeholder } from "./html_placeholder.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -68,7 +68,7 @@ export function app_shared_contact_overlay() {
   form();
   function form() {
     let prompt = app_shared_contact_prompt_text();
-    html_p_text(card, prompt);
+    html_p_text_directed(card, prompt);
     let textarea = html_textarea(card);
     let placeholder = app_shared_contact_placeholder_text();
     html_placeholder(textarea, placeholder);
