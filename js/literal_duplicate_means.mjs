@@ -1,6 +1,6 @@
-import { property_js_parse } from "./property_js_parse.mjs";
+import { js_code_literal_site_labels_remembered } from "./js_code_literal_site_labels_remembered.mjs";
+import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_string_site_labels } from "./js_string_site_labels.mjs";
 import { each } from "./each.mjs";
 export function literal_duplicate_means(codes, files, literal) {
   arguments_assert(arguments, 3);
@@ -11,8 +11,8 @@ export function literal_duplicate_means(codes, files, literal) {
   ("none of them agreed with the getter they were about to be routed through.");
   let means = {};
   function lambda(f_name) {
-    let ast = property_js_parse(codes, f_name);
-    let labels = js_string_site_labels(ast, literal);
+    let ast = property_get(codes, f_name);
+    let labels = js_code_literal_site_labels_remembered(ast, literal);
     means[f_name] = labels;
   }
   each(files, lambda);
