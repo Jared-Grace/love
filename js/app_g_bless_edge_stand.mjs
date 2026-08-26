@@ -1,11 +1,9 @@
+import { app_g_bless_edge_inside } from "./app_g_bless_edge_inside.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { math_max } from "./math_max.mjs";
 import { divide } from "./divide.mjs";
-import { math_number_clamp } from "./math_number_clamp.mjs";
-import { add } from "./add.mjs";
-import { subtract } from "./subtract.mjs";
 export function app_g_bless_edge_stand(outer, box, point) {
   arguments_assert(arguments, 3);
   ("Where on the glass the edge arrow has to stand to be pointing at somebody off the screen: their own place, pulled back inside the box far enough that the whole arrow still fits.");

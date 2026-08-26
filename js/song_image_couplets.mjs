@@ -476,7 +476,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one ruby red sceptre standing upright in front of the throne's tall white back so that its whole length lies against that white glass, drawn as a short stout rod plainly thick and heavy, its top reaching only halfway up the throne's back so that a clear stretch of white glass shows above it, with one small plain round ball at its top and nothing else on it, drawn very large so that the throne reaches almost to the white border on every side",
+        "One high throne of white glass seen from straight in front, its tall straight back and its broad seat standing empty and nothing at all resting on the seat, with one ruby red sceptre standing upright in front of the throne's tall white back so that its whole length lies against that white glass, drawn as a short stout bar of even thickness from foot to head, its top reaching only halfway up the throne's back so that a clear stretch of white glass shows above it, and one plain round ball at its top no wider than the bar itself and nothing else on it, drawn very large, the throne's broad seat reaching almost to the white border on both sides and its back rising almost to the head of the arch",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
@@ -496,7 +496,7 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "One grapevine heavy with broad emerald green vine leaves and with several thick clusters of grapes, its one slender brown stem no thicker than a finger winding right across the window from the left hand side to the right hand side in a long line of deep S shaped curves, bending up and dipping down again several times along the way, never standing upright and never reaching the top or the bottom of the glass, with small curled tendrils springing from it all along its length and every leaf and every cluster growing straight off that one sideways stem, the clusters hanging straight down underneath it, every grape deep crimson, the stem reaching almost to the white border on both sides, and the flat field standing behind the whole vine deep cobalt blue everywhere it shows",
+        "One grapevine heavy with broad emerald green vine leaves and with several thick clusters of grapes, its one slender brown stem no thicker than a finger winding right across the window from the left hand side to the right hand side in a long line of deep S shaped curves, bending up and dipping down again several times along the way, never standing upright and never reaching the top or the bottom of the glass, with small curled tendrils springing from it all along its length and every leaf and every cluster growing straight off that one sideways stem, the clusters hanging straight down underneath it, every grape deep crimson, the stem reaching almost to the white border on both sides, and deep cobalt blue glass showing plainly between the leaves and behind the whole vine everywhere the vine itself does not cover",
       symbol_ref: "John 15:1",
       same_as: 35,
     },
