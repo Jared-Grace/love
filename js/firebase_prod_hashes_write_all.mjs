@@ -1,4 +1,4 @@
-import { apps_names } from "./apps_names.mjs";
+import { apps_published_names } from "./apps_published_names.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { firebase_prod_app_hashes } from "./firebase_prod_app_hashes.mjs";
@@ -12,7 +12,7 @@ export async function firebase_prod_hashes_write_all() {
   "The record is written from scratch rather than merged into, because it is answering about all of them at once. An app that has since gone is then gone from the record too, instead of sitting there being agreed with by nothing";
   "An app that cannot be read is left out and named in the answer instead of stopping the whole run. An app that was never sent has nothing to download, and one such would otherwise mean the record could never be made at all. Leaving it out is also the safe way round: unrecorded reads as not yet looked at, which holds a deploy rather than letting one by";
   "The apps that could not be read are handed back rather than only counted, because that list is the actual finding here - it is the set of apps nobody can ship until somebody sends them once";
-  let app_names = await apps_names();
+  let app_names = await apps_published_names();
   let hashes = {};
   let failed = [];
   for (let app_name of app_names) {
