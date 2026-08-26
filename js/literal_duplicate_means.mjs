@@ -11,8 +11,8 @@ export function literal_duplicate_means(codes, files, literal) {
   ("none of them agreed with the getter they were about to be routed through.");
   let means = {};
   function lambda(f_name) {
-    let ast = property_get(codes, f_name);
-    let labels = js_code_literal_site_labels_remembered(ast, literal);
+    let code = property_get(codes, f_name);
+    let labels = js_code_literal_site_labels_remembered(code, literal);
     means[f_name] = labels;
   }
   each(files, lambda);
