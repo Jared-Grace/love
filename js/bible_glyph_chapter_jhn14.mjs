@@ -160,7 +160,7 @@ export function bible_glyph_chapter_jhn14() {
           "$plus",
           "the",
           "$sprout.",
-          "$no_entry",
+          "No",
           "one",
           "$footprints",
           "to",
