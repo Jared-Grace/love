@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { subtract } from "./subtract.mjs";
@@ -35,8 +36,7 @@ export async function bible_versions_english_choices_psalms_agreement() {
       let text = property_get(wording, "text");
       let nearest = 0;
       for (let against of wordings) {
-        let other_folder = property_get(against, "bible_folder");
-        let itself = equal(other_folder, bible_folder);
+        let itself = property_equals(against, "bible_folder", bible_folder);
         if (itself) {
           continue;
         }
