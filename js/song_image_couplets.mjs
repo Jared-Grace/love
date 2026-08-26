@@ -396,7 +396,7 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "One flat bank of cloud of white glass lying straight across the upper part of the window, its lower edge rolling in broad round lobes, and broad straight rays of white glass falling from under it and widening as they fall, reaching almost to the bottom of the glass inside the white border, with deep cobalt blue between the rays and behind them",
+        "One flat bank of cloud of white glass lying straight across the upper part of the window, its lower edge rolling in broad round lobes, and broad straight rays of white glass falling from under it and widening as they fall, reaching almost to the bottom of the glass inside the white border, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, with deep cobalt blue between the rays and behind them",
       symbol_ref: "Acts 1:9, Luke 2:9, Acts 26:13",
       same_as: 0,
     },
