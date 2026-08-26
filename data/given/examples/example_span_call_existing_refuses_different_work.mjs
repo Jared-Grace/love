@@ -1,7 +1,7 @@
 import { function_span_call_existing } from "../../../js/function_span_call_existing.mjs";
 export const example = {
   fn: function_span_call_existing.name,
-  args: ["price_total", "number_multiply,number_add", "price_with_tax"],
+  args: ["price_total", "number_multiply", "number_add", "price_with_tax"],
   kind: "files",
   refuses: true,
   title: "Refuse to point a run at a function that does different work",
