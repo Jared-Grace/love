@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { ebible_verse_marks_displaced_letter_bible_or_null } from "./ebible_verse_marks_displaced_letter_bible_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
@@ -31,8 +32,7 @@ export async function ebible_verse_marks_displaced_letter_write() {
     list_add(bibles, bible);
     let marks_here = property_get(bible, "marks");
     marks_total = add(marks_total, marks_here);
-    let chapters = property_get(bible, "chapters");
-    let chapters_here = list_size(chapters);
+    let chapters_here = property_list_size(bible, "chapters");
     chapters_total = add(chapters_total, chapters_here);
   }
   each(bibles_measured, bible_read);
