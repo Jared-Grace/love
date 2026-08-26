@@ -44,6 +44,7 @@ export function app_g_bless_overlay_blessed(container_map) {
     div_map,
     wash,
     player_img_c,
+    homes,
     glows,
     bar,
     told,
