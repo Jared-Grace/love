@@ -1,3 +1,4 @@
+import { text_ends_with_not } from "./text_ends_with_not.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
@@ -5,8 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { js_statement_call_any_get } from "./js_statement_call_any_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
 import { null_is } from "./null_is.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_unparse } from "./js_unparse.mjs";
@@ -25,8 +24,7 @@ export function js_code_asserts_dropped(code) {
     if (unnamed) {
       return true;
     }
-    let asserting = text_ends_with(name, "_assert");
-    let keep = not(asserting);
+    let keep = text_ends_with_not(name, "_assert");
     return keep;
   }
   let kept = list_filter(statements, lambda);
