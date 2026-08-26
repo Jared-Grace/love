@@ -375,7 +375,7 @@ export function song_image_couplets() {
         r4,
         " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, the light coming from inside the tomb itself so that every white ray starts within the mouth and passes out through it and widens across the field as it goes, and no ray ever starts behind the rock or above it, and ",
         r5,
-        " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, big enough to have covered the whole opening and more, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, and the ground below one plain flat pale grey",
+        " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, big enough to have covered the whole opening and more, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
@@ -396,7 +396,7 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, deeper on one side than on the other, and broad straight rays of white glass falling from under it and widening as they fall, reaching almost to the bottom of the glass inside the white border, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, the space below the cloud holding the rays alone and nothing else standing in the light, and the face of the cloud one plain sheet of white with nothing resting on it and nothing set into it, with deep cobalt blue between the rays and behind them, that blue one single sheet running from the cloud all the way down to the white border with no line across it anywhere",
+        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, deeper on one side than on the other, and broad straight rays of white glass falling from under it and widening as they fall, reaching almost to the bottom of the glass inside the white border, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, with deep cobalt blue between the rays and behind them, and the cloud and the rays the only things in the picture",
       symbol_ref: "Acts 1:9, Luke 2:9, Acts 26:13",
       same_as: 0,
     },
