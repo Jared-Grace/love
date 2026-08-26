@@ -1,3 +1,4 @@
+import { ebible_version_books_remembered } from "./ebible_version_books_remembered.mjs";
 import { browser_is } from "./browser_is.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
@@ -7,7 +8,6 @@ import { fn_name } from "./fn_name.mjs";
 import { function_import_relative } from "./function_import_relative.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_books_to_chapter_codes } from "./ebible_books_to_chapter_codes.mjs";
-import { ebible_version_books_browser_or_node } from "./ebible_version_books_browser_or_node.mjs";
 export async function ebible_chapter_codes(bible_folder) {
   arguments_assert(arguments, 1);
   ("The name of every chapter one bible carries, whichever of the two places the bible came from.");
@@ -27,7 +27,7 @@ export async function ebible_chapter_codes(bible_folder) {
     let carried = await fn(bible_folder);
     return carried;
   }
-  let books = await ebible_version_books_browser_or_node(bible_folder);
+  let books = await ebible_version_books_remembered(bible_folder);
   let chapter_codes = await ebible_books_to_chapter_codes(books, bible_folder);
   return chapter_codes;
 }
