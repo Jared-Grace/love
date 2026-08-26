@@ -1,5 +1,5 @@
-import { js_identifier_is_if } from "../../love/js/js_identifier_is_if.mjs";
-import { js_identifier_name_includes } from "../../love/js/js_identifier_name_includes.mjs";
+import { js_identifier_is_if } from "./js_identifier_is_if.mjs";
+import { js_identifier_name_includes } from "./js_identifier_name_includes.mjs";
 export function js_identifier_name_includes_try(callee, part) {
   let includes = false;
   function lambda2() {
