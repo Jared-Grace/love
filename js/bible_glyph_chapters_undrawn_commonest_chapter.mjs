@@ -28,11 +28,9 @@ export async function bible_glyph_chapters_undrawn_commonest_chapter(
   let filler_total = 0;
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");
-    let testament_name = bible_chapter_testament_name(chapter_code);
-    let rows = await bible_glyph_chapter_draft_words(
-      chapter_code,
-      testament_name,
-    );
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
+    let testament_name = both.testament_name;
+    let rows = both.rows;
     let here = {};
     for (let row of rows) {
       for (let word of row.words) {
