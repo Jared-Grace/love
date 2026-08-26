@@ -1,3 +1,4 @@
+import { app_shared_game_npc_ring_get } from "./app_shared_game_npc_ring_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { app_shared_game_npc_cross_get } from "./app_shared_game_npc_cross_get.mjs";
@@ -28,7 +29,12 @@ export function app_shared_game_npc_elements(npc) {
   let img = app_shared_game_npc_img_get(npc);
   let cross = app_shared_game_npc_cross_get(npc);
   let glow = app_shared_game_npc_glow_get(npc);
-  let all = [img, cross, glow];
+  ("The ring is the fourth part, and it is fetched here rather than moved by whoever draws");
+  ("it, for the reason written above. Drawn into the same layer as the light but left out of");
+  ("this list, it stayed on the square the person was standing on when it was made, and the");
+  ("person walked out of their own ring while nothing reported anything.");
+  let ring = app_shared_game_npc_ring_get(npc);
+  let all = [img, cross, glow, ring];
   let elements = list_filter_null_not_is(all);
   return elements;
 }
