@@ -23,6 +23,11 @@ export function app_g_bless_overlay_blessed(container_map) {
   let div_map = property_get(drawn, "div_map");
   let wash = property_get(drawn, "wash");
   let player_img_c = property_get(drawn, "player_img_c");
+  ("The layer the lit houses are drawn on, made BEFORE the glows so that it sits under");
+  ("them. Both lie flat on the ground, so which one is made first is the whole of what");
+  ("decides which covers the other - and a halo saying somebody has been prayed for must");
+  ("never be dimmed by the ground they happen to be standing on.");
+  let homes = html_div(div_map);
   let glows = html_div(div_map);
   let bar = app_g_bless_bar(container_map);
   let told = app_g_bless_told(bar);
