@@ -1,7 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { commit_edit_kind_counts } from "./commit_edit_kind_counts.mjs";
-import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 export async function commit_edit_prose_touched_kind(commit) {
   "Whether one hand-made edit touched the paragraphs written for a reader, and if it did, whether it touched anything else.";
   "THE READING BESIDE THIS ONE UNDERCOUNTS PROSE AND CANNOT HELP IT. It names a whole edit with a single kind, so an edit that reworded a paragraph and changed a line of code is filed under the code and the prose in it is never counted. That is right for what it is for - finding the largest missing command - and wrong for asking how often prose is edited by hand, because the answer it gives is a floor rather than a count.";
@@ -9,14 +8,12 @@ export async function commit_edit_prose_touched_kind(commit) {
   "IMPORTS ARE COUNTED AS NEITHER, because they are the canonicalizing pass's own work wearing a hand-made label, so an edit that reworded a paragraph and let the pass repair an import is prose only and not prose beside code.";
   arguments_assert(arguments, 1);
   let counts = await commit_edit_kind_counts(commit, "prose");
-  let prose = property_get(counts, "touched");
-  let untouched_is = equal(prose, 0);
+  let untouched_is = property_equals(counts, "touched", 0);
   if (untouched_is) {
     let r = "no prose touched";
     return r;
   }
-  let else_touched = property_get(counts, "else_touched");
-  let alone_is = equal(else_touched, 0);
+  let alone_is = property_equals(counts, "else_touched", 0);
   if (alone_is) {
     let r2 = "prose only";
     return r2;
