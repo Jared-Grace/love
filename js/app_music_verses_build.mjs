@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_music_references_all } from "./app_music_references_all.mjs";
@@ -18,7 +19,7 @@ export async function app_music_verses_build() {
   let references = app_music_references_all();
   function quoted_from(reference) {
     let version = app_music_reference_version(reference);
-    let bible_folder = property_get(version, "bible_folder");
+    let bible_folder = property_get(version, bible_folder_key());
     let pair = {
       reference: reference,
       bible_folder: bible_folder,
