@@ -21,8 +21,7 @@ export async function qa_promoted_pieces_gone_forget() {
   arguments_assert(arguments, 0);
   let promoted = await qa_promoted();
   let app_names = object_property_names(promoted);
-  let public_relative = folder_public();
-  let folder = await user_repo_path_combine(public_relative);
+  let folder = folder_public_absolute();
   let forgotten = [];
   for (let app_name of app_names) {
     let note = property_get(promoted, app_name);
