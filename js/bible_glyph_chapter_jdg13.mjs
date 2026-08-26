@@ -588,7 +588,7 @@ export function bible_glyph_chapter_jdg13() {
           "“What",
           "is",
           "your",
-          "name,",
+          "$name_tag,",
           "so",
           "that",
           "we",
