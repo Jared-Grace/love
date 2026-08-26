@@ -1,6 +1,6 @@
+import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { shapes_shared_groups } from "./shapes_shared_groups.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { repo_functions_names } from "./repo_functions_names.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -17,7 +17,7 @@ export async function functions_run_duplicates_generic(size, fn_shape) {
   ("waiting to be written, or several functions that merely begin or finish alike,");
   ("is a judgment - and the collapse is the ordinary one, a new function holding the");
   ("shared run and a call to it where each run stood.");
-  let love = await repo_functions_names("love");
+  let love = await repo_love_functions_names();
   let by_shape = {};
   for (let f_name of love) {
     let shape = await fn_shape(f_name, size);
