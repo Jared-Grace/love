@@ -258,6 +258,22 @@ export function examples_notes() {
       "the fifth starting value - a flag set one way here and turned the other by whichever step below finds the reason",
     example_block_local_call_add:
       "the commonest line in the repo - a name bound to what the last call answered - and the one shape the five literal binders beside it could not reach",
+    example_call_before_return_takes_the_returned_value:
+      "the generated call finished in one step - a call written above a return arrives holding the callee's own parameter names, and those name nothing where it landed",
+    example_guard_add_after_selected:
+      "the guard this repo actually types, written from four names - it binds its question to a name before asking it, which is two lines and so was past every single verb",
+    example_guard_add_before_selected:
+      "the same guard named from the line it stops rather than from the line above it - the address the reader already has in hand",
+    example_nested_list_text_add:
+      "a list no line binds - held under a name inside a record inside another list, so until this address every register verb stopped at the edge of one",
+    example_record_value_text_set:
+      "writing over one written-out value - the commonest hand edit nothing named could make, and the one whose address has to find the record before it can find the name",
+    example_record_value_number_set:
+      "the same value written as a number - split from its sister only because a command line hands every argument over as text, and a count stored as a spelling complains to nobody",
+    example_wrap_copy_adds_copying_file:
+      "a twin that also copies the answer - a wrapper whose behaviour is fixed, rather than one command taking a function name to run, so it can be approved once and left alone",
+    example_param_delete_drops_the_argument_too:
+      "dropping a parameter and the argument every caller passes in one move - the position is read once off the definition, because deleting only the parameter leaves every call still parsing and wrong",
   };
   return notes;
 }
