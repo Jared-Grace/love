@@ -851,7 +851,7 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "4899",
-          glyph: "oil",
+          glyph: "person+oil",
         },
       ],
     },
