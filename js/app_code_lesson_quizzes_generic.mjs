@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_code_lesson_quiz_token_select_superseded } from "./app_code_lesson_quiz_token_select_superseded.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { object_copy } from "./object_copy.mjs";
 import { object_copy_assign } from "./object_copy_assign.mjs";
@@ -57,7 +57,7 @@ export function app_code_lesson_quizzes_generic(params) {
     if (include) {
       let token_select = object_copy(base);
       object_assign(token_select, {
-        on_answer: app_code_lesson_quiz_token_select,
+        on_answer: app_code_lesson_quiz_token_select_superseded,
         answer_label: unscramble_label,
       });
       list_add(infos, token_select);

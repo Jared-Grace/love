@@ -4,7 +4,7 @@ import { app_code_lesson_expression_whole_part_formula_above } from "./app_code_
 import { app_code_lesson_expression_whole_part_formula_title_name_id } from "./app_code_lesson_expression_whole_part_formula_title_name_id.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
+import { app_code_lesson_quiz_token_select_superseded } from "./app_code_lesson_quiz_token_select_superseded.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { text_to } from "./text_to.mjs";
@@ -59,7 +59,7 @@ export function app_code_lesson_expression_whole_part_formula() {
       answer_on_button: null,
       answer_count_override: null,
       answer_property: "answer",
-      on_answer: app_code_lesson_quiz_token_select,
+      on_answer: app_code_lesson_quiz_token_select_superseded,
     };
     let infos = [recognize, build];
     function each_info(info) {
