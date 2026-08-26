@@ -5,7 +5,7 @@ import { text_combine } from "./text_combine.mjs";
 import { function_exists_not_assert } from "./function_exists_not_assert.mjs";
 import { function_read } from "./function_read.mjs";
 import { function_functionize } from "./function_functionize.mjs";
-import { js_codes_function_work_same_discarding_is } from "./js_codes_function_work_same_is.mjs";
+import { js_codes_function_work_same_discarding_is } from "./js_codes_function_work_same_discarding_is.mjs";
 import { not } from "./not.mjs";
 import { function_source_overwrite } from "./function_source_overwrite.mjs";
 import { function_delete } from "./function_delete.mjs";
