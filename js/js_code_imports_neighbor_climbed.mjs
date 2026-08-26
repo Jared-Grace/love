@@ -21,13 +21,13 @@ export function js_code_imports_neighbor_climbed(code) {
   let folder = folder_repo_love();
   let repo_name = text_split_last(folder, "/");
   let js = folder_js();
-  let marker = text_combine_multiple(["/", repo_name, "/", js, "/"]);
+  let repo_js_path = text_combine_multiple(["/", repo_name, "/", js, "/"]);
   function climbed_is(source) {
     let climbs = text_starts_with(source, "..");
     if (not(climbs)) {
       return false;
     }
-    let named = text_includes(source, marker);
+    let named = text_includes(source, repo_js_path);
     return named;
   }
   let climbed = list_filter(sources, climbed_is);
