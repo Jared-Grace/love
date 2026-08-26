@@ -1,3 +1,4 @@
+import { json_extension } from "./json_extension.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { data_given_accepted_folder } from "./data_given_accepted_folder.mjs";
@@ -12,7 +13,7 @@ export function app_code_screens_accepted_path() {
   let folder = data_given_accepted_folder();
   let path = path_join([
     folder,
-    text_combine_multiple([fn_name("app_code_screens"), ".json"]),
+    text_combine_multiple([fn_name("app_code_screens"), json_extension()]),
   ]);
   return path;
 }
