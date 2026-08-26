@@ -3,7 +3,7 @@ import { html_hash_get } from "./html_hash_get.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { window_reload } from "./window_reload.mjs";
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
-import { app_g_dev_pill } from "./app_g_dev_pill.mjs";
+import { app_shared_dev_pill } from "./app_shared_dev_pill.mjs";
 export function app_g_bless_dev_links() {
   arguments_assert(arguments, 0);
   ("The two pills over every dev screen in the praying game: back to the directory, and load");
@@ -20,7 +20,7 @@ export function app_g_bless_dev_links() {
     let name = app_shared_g_dev_index_hash_name();
     html_hash_name_reload(name);
   }
-  app_g_dev_pill("← routes", routes_hash, routes, "0.5rem");
+  app_shared_dev_pill("← routes", routes_hash, routes, "0.5rem");
   let here = html_hash_get();
-  app_g_dev_pill("⟳ refresh", here, window_reload, "7.5rem");
+  app_shared_dev_pill("⟳ refresh", here, window_reload, "7.5rem");
 }

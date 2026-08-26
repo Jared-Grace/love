@@ -3,7 +3,7 @@ import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
-import { app_g_dev_pill } from "./app_g_dev_pill.mjs";
+import { app_shared_dev_pill } from "./app_shared_dev_pill.mjs";
 export function app_g_bless_dev_entry() {
   arguments_assert(arguments, 0);
   ("The one way into the praying game's dev screens from the street: a small pill in the top");
@@ -31,5 +31,5 @@ export function app_g_bless_dev_entry() {
   function open() {
     html_hash_name_reload(index);
   }
-  app_g_dev_pill("🛠", href, open, "0.5rem");
+  app_shared_dev_pill("🛠", href, open, "0.5rem");
 }
