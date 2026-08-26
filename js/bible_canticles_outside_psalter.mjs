@@ -1,3 +1,4 @@
+import { bible_sentence_end_sample_chapter } from "./bible_sentence_end_sample_chapter.mjs";
 export function bible_canticles_outside_psalter() {
   "The passages outside the Psalter that the historic daily office sings as canticles though the text never calls them songs, each named by the office name it is sung under.";
   "★ THIS LIST RESTS ON CHURCH USE AND THE OTHER ONE RESTS ON THE TEXT, AND THAT IS WHY THEY ARE TWO FUNCTIONS RATHER THAN A FLAG ON ONE. Its companion is a measurement: every entry there carries the verse saying the passage was sung. Every entry here is contradicted by its own introduction - Hannah and Jonah prayed, Mary said, Zechariah prophesied, and the elders of Revelation are saying rather than singing. Merging them would make a choice look like a finding, and a later reader would have no way to tell which entries could be checked against the text and which could not.";
@@ -52,14 +53,14 @@ export function bible_canticles_outside_psalter() {
       office: "sung as a canticle though JON02:1 says Jonah prayed",
     },
     {
-      chapter_code: "LUK01",
+      chapter_code: bible_sentence_end_sample_chapter(),
       verse_first: 46,
       verse_last: 55,
       name: "Magnificat",
       office: "sung at evening prayer though LUK01:46 says Mary said",
     },
     {
-      chapter_code: "LUK01",
+      chapter_code: bible_sentence_end_sample_chapter(),
       verse_first: 68,
       verse_last: 79,
       name: "Benedictus",
