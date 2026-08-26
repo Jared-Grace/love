@@ -1,7 +1,6 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { app_shared_text_reader_apps } from "./app_shared_text_reader_apps.mjs";
 import { app_shared_text_reader_carried_unpicked } from "./app_shared_text_reader_carried_unpicked.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -14,8 +13,7 @@ export async function app_shared_text_reader_carried_unpicked_names() {
   let sources = [];
   for (let f_name_app of apps) {
     let read = await app_shared_text_reader_carried_unpicked(f_name_app);
-    let found = property_get(read, "found");
-    let named = list_map_property(found, "source");
+    let named = property_list_map_property(read, "found", "source");
     list_add_multiple(sources, named);
   }
   let once = list_unique(sources);
