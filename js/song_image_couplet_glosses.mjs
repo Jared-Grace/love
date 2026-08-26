@@ -201,7 +201,7 @@ export function song_image_couplet_glosses() {
         "Described. Matthew 28:2 has the angel roll back the stone, and the tomb is found empty. The stone is drawn well away from the opening so that this and couplet 21 read as two moments and not two pictures of one thing.",
     },
     25: {
-      kept: 1,
+      kept: 8,
       lyric_ref: "1 Corinthians 15:54-55, 2 Timothy 1:10, Revelation 19:12",
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",

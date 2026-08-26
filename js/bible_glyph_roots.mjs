@@ -1086,6 +1086,10 @@ export function bible_glyph_roots() {
       gloss: "not, no",
       words: [
         {
+          strong: "3762",
+          glyph: "no_entry",
+        },
+        {
           strong: "3756",
           glyph: "no_entry",
         },
