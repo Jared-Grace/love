@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { app_code_lesson_quiz_multiple_choice } from "./app_code_lesson_quiz_multiple_choice.mjs";
-import { app_code_lesson_quiz_token_select_superseded } from "./app_code_lesson_quiz_token_select_superseded.mjs";
+import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { app_code_lesson_expression_remainder_divide_item_qa_for } from "./app_code_lesson_expression_remainder_divide_item_qa_for.mjs";
 import { app_code_lesson_expression_remainder_divide_qa_for } from "./app_code_lesson_expression_remainder_divide_qa_for.mjs";
 import { list_map } from "./list_map.mjs";
@@ -37,7 +37,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
     answer_on_button: null,
     answer_count_override: null,
     answer_property: "answer",
-    on_answer: app_code_lesson_quiz_token_select_superseded,
+    on_answer: app_code_lesson_quiz_token_select,
   };
   let backwards = {
     question_label: "Formula: ",
