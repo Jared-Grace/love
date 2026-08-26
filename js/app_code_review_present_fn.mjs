@@ -7,7 +7,7 @@ import { html_clear } from "./html_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
-import { app_code_review_complete } from "./app_code_review_complete.mjs";
+import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
 import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
 import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
 import { list_size } from "./list_size.mjs";
@@ -51,7 +51,7 @@ export function app_code_review_present_fn(
         html_remove(skip_button);
       }
       storage_local_remove_context(context, key);
-      app_code_review_complete(c);
+      app_code_review_celebration(c);
       function render_continue(continue_parent) {
         let r = app_code_review_render_continue(continue_parent, go_next);
         return r;
