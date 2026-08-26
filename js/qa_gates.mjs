@@ -1,3 +1,4 @@
+import { qa_public_files_empty_gate_run } from "./qa_public_files_empty_gate_run.mjs";
 import { qa_gates_repo_lookup_reaching_gate_run } from "./qa_gates_repo_lookup_reaching_gate_run.mjs";
 import { bible_glyph_chapters_collision_marks_gate_run } from "./bible_glyph_chapters_collision_marks_gate_run.mjs";
 import { app_shared_text_reader_carried_unpicked_gate_run } from "./app_shared_text_reader_carried_unpicked_gate_run.mjs";
@@ -843,6 +844,7 @@ export function qa_gates() {
     apps_published_dev_gate_run,
     app_shared_text_reader_carried_unpicked_gate_run,
     qa_gates_repo_lookup_reaching_gate_run,
+    qa_public_files_empty_gate_run,
   ];
   return gates;
 }
