@@ -1,3 +1,4 @@
+import { ebible_upload_doors_commercial_gate_run } from "./ebible_upload_doors_commercial_gate_run.mjs";
 import { ebible_versions_english_choices_commercial_gate_run } from "./ebible_versions_english_choices_commercial_gate_run.mjs";
 import { qa_public_files_empty_gate_run } from "./qa_public_files_empty_gate_run.mjs";
 import { qa_gates_repo_lookup_reaching_gate_run } from "./qa_gates_repo_lookup_reaching_gate_run.mjs";
@@ -847,6 +848,7 @@ export function qa_gates() {
     qa_gates_repo_lookup_reaching_gate_run,
     qa_public_files_empty_gate_run,
     ebible_versions_english_choices_commercial_gate_run,
+    ebible_upload_doors_commercial_gate_run,
   ];
   return gates;
 }

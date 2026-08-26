@@ -331,7 +331,7 @@ export function bible_glyph_chapter_1jn04() {
       {
         verse_number: 12,
         words: [
-          "No",
+          "$no_entry",
           "one",
           "has",
           "ever",

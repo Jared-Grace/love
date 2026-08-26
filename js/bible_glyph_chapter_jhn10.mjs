@@ -466,7 +466,7 @@ export function bible_glyph_chapter_jhn10() {
       {
         verse_number: 18,
         words: [
-          "No",
+          "$no_entry",
           "one",
           "takes",
           "$pointing_back",
