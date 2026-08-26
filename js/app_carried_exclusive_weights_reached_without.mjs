@@ -11,6 +11,12 @@ export function app_carried_exclusive_weights_reached_without(
   a_main,
   edges,
 ) {
+  "$plain blocked";
+  "$plain a_main";
+  "$plain edges";
+  "Every name one entry point still reaches once one named function is taken out of the graph and nothing else is changed.";
+  "It is asked once for every name the bundle carries - eight hundred times over on a real page - so the import edges are gathered once by the caller and handed in rather than being read here. Reading them here would mean walking the disk eight hundred times to learn the same thing eight hundred times.";
+  "A name whose imports are not in the record handed in is treated as the edge of the walk rather than as an error, because the record holds exactly what the bundle carries and a name outside it is by definition something the page never reached.";
   arguments_assert(arguments, 3);
   let seen = {};
   let unread = [a_main];
