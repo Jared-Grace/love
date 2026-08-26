@@ -55,8 +55,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     }
     list_add(restored, file_name);
   }
-  let public_relative = folder_public();
-  let folder = await user_repo_path_combine(public_relative);
+  let folder = folder_public_absolute();
   let deleted = await folder_app_stale_delete(folder, app_name, file_names);
   let r = {
     app: app_name,

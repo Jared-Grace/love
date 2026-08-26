@@ -18,6 +18,12 @@ export function app_g_bless_overlay_player(container_map) {
   let npcs2 = property_get(r4, "npcs");
   let player2 = property_get(r4, "player");
   let world = property_get(r4, "world");
+  ("The screen-edge arrow is carried straight from where it was made to the record the");
+  ("drawing reads, and is deliberately left out of everything in between. Nothing on the way");
+  ("through has anything to say about it - it hangs on the frame rather than on the map, so");
+  ("the cone and the walking never touch it - and a value listed in a record only to be");
+  ("copied out of it again is a place for it to be dropped.");
+  let edge = property_get(r4, "edge");
   let walking = false;
   let r22 = {
     container_map,
