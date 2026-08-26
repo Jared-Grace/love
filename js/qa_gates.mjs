@@ -1,3 +1,4 @@
+import { functions_rewrite_then_read_gate_run } from "./functions_rewrite_then_read_gate_run.mjs";
 import { qa_promoted_unbuilt_linked_gate_run } from "./qa_promoted_unbuilt_linked_gate_run.mjs";
 import { app_ceb_bible_gloss_unpublished_gate_run } from "./app_ceb_bible_gloss_unpublished_gate_run.mjs";
 import { bible_glyph_negation_doubled_gate_run } from "./bible_glyph_negation_doubled_gate_run.mjs";
@@ -823,6 +824,7 @@ export function qa_gates() {
     app_original_bible_gloss_unpublished_gate_run,
     app_ceb_bible_gloss_unpublished_gate_run,
     qa_promoted_unbuilt_linked_gate_run,
+    functions_rewrite_then_read_gate_run,
   ];
   return gates;
 }
