@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
 import { app_music_references_all } from "./app_music_references_all.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
@@ -31,7 +32,7 @@ export async function app_music_references_versions_gate_run() {
   let checked = list_concat(versions, [usual]);
   let wrong = [];
   for (let version of checked) {
-    let bible_folder = property_get(version, "bible_folder");
+    let bible_folder = property_get(version, bible_folder_key());
     let name = property_get(version, "name");
     let record = list_find_property_or_null(
       usable,
