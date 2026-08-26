@@ -304,11 +304,8 @@ export function bible_glyph_chapter_exo20() {
           "Sabbath",
           "$sun",
           "and",
-          "set",
-          "it",
-          "apart",
-          "as",
-          "$sparkle.",
+          "$sparkle",
+          "it.",
         ],
       },
       {
