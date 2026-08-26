@@ -1,3 +1,8 @@
+import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
+import { html_style_padding } from "./html_style_padding.mjs";
+import { html_centered } from "./html_centered.mjs";
+import { app_shared_caption_opacity } from "./app_shared_caption_opacity.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { app_music_reference_version } from "./app_music_reference_version.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
@@ -14,7 +19,7 @@ export function app_music_reference_show(parent, reference) {
   "A button and not a link, because everything else that acts on this page is a button and a reader should not have to work out which of two shapes does something.";
   "THE WORDS ARE NOT FETCHED HERE. Drawing the song is one pass and reading its passages is another, and doing them together would leave a reader looking at a blank page. The place is made now and filled when its words come.";
   "WHOSE WORDS THEY ARE IS WRITTEN UNDER THEM, AND IT IS WRITTEN NOW. The page quotes most passages from one translation and a few from another, so a reader met by a wording they do not recognise has no way of telling a different bible from a mistake. Which translation a passage comes from is decided before anything is fetched, so the name can be put on the screen in the same pass that draws the place - it waits on nothing and cannot arrive late or not at all.";
-  ("THE PASSAGE HOLDS ITS CONTENTS OFF ITS OWN EDGES, AND THE NAME UNDER THEM IS CENTRED AND PALED. A passage is a block of quoted words with a button over it and a label under it, and run tight against its neighbours the three of them read as one long column in which nothing tells a reader where one passage stops and the next starts. An inset on every side is what draws that boundary without a rule or a box needing to be painted. The label is treated the other way about: set flush left in full black under a quotation it reads as the last line of the quotation, so centring it says plainly that it is a caption and not scripture, and the paleness says the same thing again in the one way position cannot.");
+  "THE PASSAGE HOLDS ITS CONTENTS OFF ITS OWN EDGES, AND THE NAME UNDER THEM IS CENTRED AND PALED. A passage is a block of quoted words with a button over it and a label under it, and run tight against its neighbours the three of them read as one long column in which nothing tells a reader where one passage stops and the next starts. An inset on every side is what draws that boundary without a rule or a box needing to be painted. The label is treated the other way about: set flush left in full black under a quotation it reads as the last line of the quotation, so centring it says plainly that it is a caption and not scripture, and the paleness says the same thing again in the one way position cannot.";
   arguments_assert(arguments, 2);
   let box = html_div(parent);
   let inset = app_shared_spaced_gap();
