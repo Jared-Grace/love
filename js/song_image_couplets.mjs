@@ -362,7 +362,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line the same solid black as the lead lines and everything above it one whole unbroken sheet of deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, so shallow that it is almost a straight line and only barely bows upward in the middle, ten times wider than it is tall, reaching almost to the white border on both sides, the black ground below the line one whole unbroken sheet with nothing standing on it and nothing rising out of it, and the blue sky above one whole unbroken sheet with nothing hanging in it",
+        "Night, with one straight level line of ground running right across the window from one side to the other and standing low in it, everything below that line solid black and everything above it deep cobalt blue as a night sky, and rising over that line one thin sliver of white glass, so shallow that it is almost a straight line and only barely bows upward in the middle, ten times wider than it is tall, reaching almost to the white border on both sides, the black ground below the line one whole unbroken sheet with nothing standing on it and nothing rising out of it, and the blue sky above one whole unbroken sheet with nothing hanging in it",
       symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
@@ -396,7 +396,7 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, deeper on one side than on the other, and broad straight rays of white glass falling from under it and widening as they fall, reaching almost to the bottom of the glass inside the white border, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, with deep cobalt blue between the rays and behind them, and the cloud and the rays the only things in the picture",
+        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, and broad straight rays of white glass falling from under it and widening as they fall, their feet stopping about two thirds of the way down the glass and going no lower, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, with deep cobalt blue between the rays, and the whole lower part of the window beneath the feet of the rays one plain flat sheet of deep cobalt blue running unbroken across to the white border on both sides",
       symbol_ref: "Acts 1:9, Luke 2:9, Acts 26:13",
       same_as: 0,
     },
@@ -436,7 +436,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A mountain burning at its top, one plain grey mountain standing alone with no other hill beside it, filling the lower half of the window from the white border on one side to the white border on the other, and on its summit a great mass of fire rising in tall pointed tongues as high again as the mountain below it and as wide as the whole summit, the tongues deep crimson at their roots and ruby red through most of their height, only their very tips white, and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
+        "A mountain burning at its top, one plain grey mountain standing alone with no other hill beside it, filling the lower half of the window from the white border on one side to the white border on the other, and on its summit a great mass of fire rising in tall pointed tongues as high again as the mountain below it and as wide as the whole summit, the tongues deep crimson at their roots, ruby red and orange through most of their height, and bright yellow at their tips, and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },
