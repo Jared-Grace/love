@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_glyph_chapter_draft_words } from "./bible_glyph_chapter_draft_words.mjs";
 import { bible_glyph_chapter_tagalog_verses } from "./bible_glyph_chapter_tagalog_verses.mjs";
 import { list_add } from "./list_add.mjs";
@@ -25,7 +26,7 @@ export async function bible_glyph_chapter_draft_tagalog(
   for (let row of rows) {
     let found = list_find_property_or_null(
       tagalog_verses,
-      "verse_number",
+      verse_number_key(),
       row.verse_number,
     );
     let missing = null_is(found);
