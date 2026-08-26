@@ -15,8 +15,8 @@ export function js_find_declaration_named_or_null(ast, name) {
   ("Where a name is made more than once - a rebinding in a nested scope - the first line making it is the one handed back, rather than a refusal. That is the same choice the reading makes about order everywhere else: the tree is read top down, and the first answer is the one that was true when the question was asked.");
   let vs = js_list_type(ast, "VariableDeclaration");
   function named_is(v) {
-    let node = property_get(v, "node");
-    let statements = [node];
+    let declaration = property_get(v, "node");
+    let statements = [declaration];
     let names = js_statements_declared_names_direct(statements);
     let includes = list_includes(names, name);
     return includes;
