@@ -1,10 +1,10 @@
+import { app_original_bible_gloss_unpublished_upload } from "./app_original_bible_gloss_unpublished_upload.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
 import { app_original_bible_gloss_passages } from "./app_original_bible_gloss_passages.mjs";
 import { app_original_bible_gloss_generate_upload_namespace } from "./app_original_bible_gloss_generate_upload_namespace.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_original_bible_gloss_chapter_upload_stored } from "./app_original_bible_gloss_chapter_upload_stored.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
 export async function app_original_bible_gloss_unpublished_gate_run() {
   "Gate: no chapter of original-language word explanations is finished and left sitting unpublished. Throws so the dispatcher seam exits nonzero.";
@@ -19,7 +19,7 @@ export async function app_original_bible_gloss_unpublished_gate_run() {
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",
-    app_original_bible_gloss_chapter_upload_stored.name,
+    app_original_bible_gloss_unpublished_upload.name,
   ]);
   let r = gloss_chapters_offenders_assert(walked, "original_bible", fault);
   return r;
