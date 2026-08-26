@@ -814,6 +814,7 @@ export function qa_gates() {
     functions_name_word_repeated_gate_run,
     bible_glyph_chapters_marks_unseated_gate_run,
     bible_glyph_chapters_verse_marks_underdrawn_gate_run,
+    bible_glyph_roots_collisions_gate_run,
     apps_all_main_fns_gate_run,
     apps_pages_not_app_gate_run,
     js_guard_statements_cases_gate_run,
