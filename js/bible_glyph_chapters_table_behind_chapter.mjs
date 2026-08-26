@@ -20,7 +20,7 @@ export async function bible_glyph_chapters_table_behind_chapter(
   arguments_assert(arguments, 4);
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");
-    let testament_name = bible_chapter_testament_name(chapter_code);
+    let both = await bible_glyph_chapter_rows_filed(chapter_code);
     let drawn = bible_glyph_chapter_glyph_names(chapter_code);
     let used = {};
     for (let name of drawn) {

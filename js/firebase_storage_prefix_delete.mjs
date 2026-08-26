@@ -1,10 +1,10 @@
+import { firebase_storage_delete_absent_ok } from "./firebase_storage_delete_absent_ok.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_storage_prefix_names } from "./firebase_storage_prefix_names.mjs";
 import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { firebase_storage_delete } from "./firebase_storage_delete.mjs";
 import { retry_standard } from "./retry_standard.mjs";
 import { list_map_limited_async } from "./list_map_limited_async.mjs";
 export async function firebase_storage_prefix_delete(prefix) {
@@ -29,7 +29,7 @@ export async function firebase_storage_prefix_delete(prefix) {
   });
   async function remove(name) {
     async function remove_once() {
-      await firebase_storage_delete(name);
+      await firebase_storage_delete_absent_ok(name);
     }
     await retry_standard(remove_once);
     return name;
