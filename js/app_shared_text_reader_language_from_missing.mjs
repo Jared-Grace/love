@@ -1,3 +1,4 @@
+import { app_shared_text_language_codes } from "./app_shared_text_language_codes.mjs";
 import { list_without_multiple } from "./list_without_multiple.mjs";
 import { app_shared_text_reader_language_from_key } from "./app_shared_text_reader_language_from_key.mjs";
 import { app_shared_text_reader_language_sites } from "./app_shared_text_reader_language_sites.mjs";
@@ -30,9 +31,7 @@ export async function app_shared_text_reader_language_from_missing() {
     if (unreadable) {
       continue;
     }
-    let named = object_property_names(saying);
-    let item = app_shared_text_reader_language_from_key();
-    let codes = list_without(named, item);
+    let codes = app_shared_text_language_codes(saying);
     let english = list_includes(codes, en);
     if (not(english)) {
       continue;
