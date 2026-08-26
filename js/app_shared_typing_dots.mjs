@@ -5,7 +5,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { each } from "./each.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_typing_dots(container) {
+export function app_shared_typing_dots(container) {
   "three softly pulsing dots — an IN-FICTION 'the person is gathering their words' typing indicator (NOT the technical loading spinner, which would read as 'the app is working'). staggers each dot's pulse so they ripple left-to-right";
   html_style_head(
     "@keyframes g_typing_dot { 0%, 60%, 100% { opacity: 0.25; } 30% { opacity: 1; } }",
