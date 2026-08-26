@@ -18,6 +18,7 @@ export async function bible_glyph_chapters_strong_verses(strong) {
   "A COUNT OF NOUGHT IS NOT BY ITSELF A FAULT and this hands back no verdict. English hides a negation inside cannot and inside except, and a verse that drew no mark may be right to have drawn none. What the row gives a reader is the gloss beside the count, which is what settles it.";
   "The unseated case is carried rather than skipped: a word with no picture yet has nothing to count marks of, so its count is nought for that reason instead, and the gloss is again what tells the two apart.";
   arguments_assert(arguments, 1);
+  let wanted = number_from_text(strong);
   let chapters = bible_glyph_chapters();
   let found = [];
   for (let chapter of chapters) {
