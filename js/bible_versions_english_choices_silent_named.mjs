@@ -21,7 +21,7 @@ export function bible_versions_english_choices_silent_named(usable, wordings) {
   }
   let silent = list_filter(usable, silent_is);
   function named(record) {
-    let bible_folder = property_get(record, "bible_folder");
+    let bible_folder = property_get(record, bible_folder_key());
     let name = property_get(record, "name");
     let source = bible_folder_source(bible_folder);
     let v = {
