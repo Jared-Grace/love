@@ -863,7 +863,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "the",
           "Scripture",
-          "cannot",
+          "can$no_entry",
           "be",
           "broken,",
         ],
