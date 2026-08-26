@@ -9,7 +9,7 @@ import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz(
+export function app_code_lesson_quiz_superseded(
   container_blue_light,
   qa,
   parent,

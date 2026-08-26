@@ -12,9 +12,10 @@ export async function song_god_our_savior_wordings_echoed() {
   arguments_assert(arguments, 0);
   ("Every passage this song rests on, each against the wordings really on offer for it, and each wording against how much of the sung lines resting there it says the same way - counted twice, once with the endings of words left on and once with them folded off, loudest first.");
   ("THIS IS THE READING THAT CHOSE THE TWENTY TWO TRANSLATIONS THE PAGE QUOTES, AND UNTIL NOW IT WAS NOT WRITTEN DOWN ANYWHERE. The passages and the wordings were gathered next door and committed; the counting that ranked them lived in a throwaway script, so the page recorded a hundred and one decisions the repo could not reproduce. Somebody asking later why Malachi three seventeen is quoted from the King James had the answer and no way to check it.");
-  ("BOTH READINGS ARE REPORTED AND NEITHER IS COLLAPSED INTO THE OTHER. Leaving the endings on asks whether the line and the verse use the same word; folding them off asks whether they say the same thing, and the two disagree - a line singing wash all my sin scores nothing against a verse saying he washed us from our sins. Two of the twenty two were found only on the second reading, and a single number would have hidden which reading found them.");
-  ("THE LOUDEST OF THE TWO READINGS ORDERS THE LIST AND THE PLAIN ONE BREAKS THE TIE. Folding endings can only join words that were already going to join, never separate them, so the folded count is never the smaller of the two and sorting by it puts the true winner on top whichever reading found it. Where two wordings are heard equally on both readings the order they were read in is kept, so the same question asked twice reads the same way twice.");
-  ("IT RANKS AND DOES NOT CHOOSE. Where a wording wins by one scattered word the older sounding translation is preferred, and where that still does not separate them the plainer one is - judgements a person makes by reading, which is why they are made next door where they are written down one passage at a time rather than made here in silence.");
+  ("BOTH READINGS ARE REPORTED AND NEITHER IS COLLAPSED INTO THE OTHER. Leaving the endings on asks whether the line and the verse use the same word; folding them off asks whether they say the same thing, and the two disagree - a line singing wash all my sin scores nothing at all against a verse saying he washed us from our sins. Two of the twenty two were found only on the second reading, and a single number would have hidden which reading found them.");
+  ("THE FOLDED RUN ORDERS THE LIST AND THE WORDS SHARED ANYWHERE BREAK THE TIE, WHICH IS THE ORDER THE CHOOSING ACTUALLY USED. Folding endings can only join words that were already going to join, never separate them, so the folded run is never the smaller of the two readings and sorting by it puts the strongest hearing on top whichever reading found it.");
+  ("SORTING BY THE PLAIN RUN AFTER THAT WAS TRIED AND IS WRONG, AND THE PASSAGE THAT PROVES IT IS REVELATION ONE FIVE. Nine translations tie there at one word folded and two shared; two of them - the Bible in Basic English and Young's Literal - also share the word love with the endings left on, and the King James does not, because loved folded is lov and not love. Ranked by the plain reading as the tie-break, those two stand above the King James, which is the translation actually quoted and the one the line was written from. A tie-break invented here would have reported the record as wrong when it is the tie-break that is.");
+  ("SO IT RANKS AND DOES NOT CHOOSE, AND A TIE IS LEFT LOOKING LIKE A TIE. Where several wordings are heard equally the order they were read in is kept, and which of them is quoted is settled by reading - the older sounding one first, and the plainer one where that still does not separate them. Those are judgements a person makes, which is why they are made next door and written down one passage at a time rather than made here in silence.");
   let passages = await song_god_our_savior_wordings();
   function scored(passage) {
     let reference = property_get(passage, "reference");
@@ -40,28 +41,28 @@ export async function song_god_our_savior_wordings_echoed() {
       }
       let names = property_get(wording, "names");
       let bible_folders = property_get(wording, "bible_folders");
-      let scored_wording = {
+      let v = {
         folded_run,
-        run,
         folded_shared,
+        run,
         shared,
         names,
         bible_folders,
         text,
       };
-      return scored_wording;
+      return v;
     }
     let wordings = list_map(distinct, heard);
     function ordered(one, other) {
-      let left = property_get(other, "folded_run");
-      let right = property_get(one, "folded_run");
-      let runs = subtract(left, right);
+      let other_run = property_get(other, "folded_run");
+      let one_run = property_get(one, "folded_run");
+      let runs = subtract(other_run, one_run);
       let tied = equal(runs, 0);
       if (tied) {
-        let left2 = property_get(other, "run");
-        let right2 = property_get(one, "run");
-        let plain = subtract(left2, right2);
-        return plain;
+        let other_shared = property_get(other, "folded_shared");
+        let one_shared = property_get(one, "folded_shared");
+        let shares = subtract(other_shared, one_shared);
+        return shares;
       }
       return runs;
     }
