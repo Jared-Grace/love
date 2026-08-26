@@ -22,7 +22,8 @@ export async function app_shared_text_reader_language_from_write(f_name) {
   let from_key = app_shared_text_reader_language_from_key();
   function lambda$saying(saying) {
     let named = object_property_names(saying);
-    let codes = list_without(named, from_key);
+    let item = app_shared_text_reader_language_from_key();
+    let codes = list_without(named, item);
     let english = list_includes(codes, en);
     if (not(english)) {
       return null;
