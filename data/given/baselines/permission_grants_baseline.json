@@ -33,10 +33,6 @@
    "refusals": 1
   },
   {
-   "name": "function_node_only_is",
-   "refusals": 1
-  },
-  {
    "name": "file_imports_repair",
    "refusals": 1
   },
