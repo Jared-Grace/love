@@ -1,7 +1,7 @@
+import { html_cycle_code } from "./html_cycle_code.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_code_quiz_token_run_together_parts } from "./app_code_quiz_token_run_together_parts.mjs";
 import { null_is } from "./null_is.mjs";
-import { html_spans_prose_code } from "./html_spans_prose_code.mjs";
 export function app_code_quiz_token_run_together_note_set(
   note_div,
   chosen,
@@ -20,5 +20,5 @@ export function app_code_quiz_token_run_together_note_set(
   if (quiet) {
     return;
   }
-  html_spans_prose_code(note_div, parts);
+  html_cycle_code(note_div, parts);
 }
