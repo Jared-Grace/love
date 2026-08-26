@@ -36,7 +36,7 @@ export async function app_music_references_versions_gate_run() {
     let name = property_get(version, "name");
     let record = list_find_property_or_null(
       usable,
-      "bible_folder",
+      bible_folder_key(),
       bible_folder,
     );
     let unusable = null_is(record);
