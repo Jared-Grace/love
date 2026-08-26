@@ -1,0 +1,30 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bless_view_blessed } from "./bless_view_blessed.mjs";
+import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
+import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
+import { bless_view_household_started } from "./bless_view_household_started.mjs";
+import { app_g_bless_rings } from "./app_g_bless_rings.mjs";
+export function app_g_bless_marks(glows, homes, blocks, blessed, everyone) {
+  arguments_assert(arguments, 5);
+  ("Draws everything the record has to say about the street: the lights on the people who");
+  ("have been prayed for, the houses filled in behind them, and the rings on the people left");
+  ("in a house the player has started.");
+  ("The three are said together because they are one answer read three ways, and they are");
+  ("all read from the same record on the same step. A prayer that finished a household");
+  ("lights the last face, fills the last third of the house and takes the last ring off at");
+  ("the same moment, because all three are asked after the prayer is written down.");
+  ("Every one of them is worked out over the WHOLE street rather than over what the player");
+  ("can see. A prayer said is a fact about a person and a filled house is a fact about a");
+  ("house, and neither stops being true while the player is round the corner. Drawn only");
+  ("where the player was looking, the street would go dark behind them and the map would");
+  ("forget where the work had reached - and the map is the whole of how a player knows");
+  ("where to pray next.");
+  let lit = bless_view_blessed(blessed, everyone);
+  app_g_bless_glows(glows, everyone, lit);
+  app_g_bless_homes(homes, blessed, blocks);
+  ("The ring is worked out last because it is the only one of the three that can be wrong");
+  ("about somebody already handled: it asks who is left, and who is left is decided by the");
+  ("same record the light was just read from.");
+  let remaining = bless_view_household_started(blessed, everyone);
+  app_g_bless_rings(glows, everyone, remaining);
+}
