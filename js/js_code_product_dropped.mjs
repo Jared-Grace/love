@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { js_find_body_block } from "./js_find_body_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -9,7 +10,6 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { js_return_argument_get } from "./js_return_argument_get.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
-import { equal } from "./equal.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function js_code_product_dropped(code) {
@@ -50,8 +50,7 @@ export function js_code_product_dropped(code) {
   }
   let declarator = list_first(declarators);
   let id = property_get(declarator, "id");
-  let bound = property_get(id, "name");
-  let same_is = equal(bound, name);
+  let same_is = property_equals(id, "name", name);
   if (not(same_is)) {
     return code;
   }
