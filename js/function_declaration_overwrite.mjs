@@ -3,7 +3,7 @@ import { js_unparse } from "./js_unparse.mjs";
 import { js_code_export } from "./js_code_export.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
-import { function_source_formatted_write } from "./function_source_formatted_write.mjs";
+import { function_source_formatted_overwrite } from "./function_source_formatted_write.mjs";
 export async function function_declaration_overwrite(declaration, f_name) {
   arguments_assert(arguments, 2);
   ("Writes one function written out as a tree into the repo under a name, exported, with every import it needs added, and puts it over whatever was answering to that name before.");
@@ -14,5 +14,5 @@ export async function function_declaration_overwrite(declaration, f_name) {
   let ast = js_parse(contents);
   await js_imports_missing_add_all(ast);
   let contents_import = js_unparse(ast);
-  await function_source_formatted_write(f_name, contents_import);
+  await function_source_formatted_overwrite(f_name, contents_import);
 }
