@@ -1,3 +1,4 @@
+import { verse_number_key } from "./verse_number_key.mjs";
 import { bible_glyph_chapter_tagalog_verses } from "./bible_glyph_chapter_tagalog_verses.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
@@ -26,7 +27,7 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
   for (let verse of chapter.verses) {
     let known = list_find_property_or_null(
       lines.verses,
-      "verse_number",
+      verse_number_key(),
       verse.verse_number,
     );
     let missing = null_is(known);
@@ -52,7 +53,7 @@ export function bible_glyph_chapter_rosetta_verses(chapter_code, traditions) {
     "one verse's plain Tagalog, or empty text where this chapter or this verse has none.";
     let found = list_find_property_or_null(
       verses,
-      "verse_number",
+      verse_number_key(),
       verse_number,
     );
     let none = null_is(found);
