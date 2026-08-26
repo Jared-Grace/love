@@ -145,7 +145,7 @@ export function song_image_couplet_glosses() {
         "Described. Exodus 12:7 says to strike the blood on the two side posts and on the upper door post. The lamb is not drawn here, because the blood on the doorway is what the verse puts there and it is what the couplet says; it is drawn at couplet 18, which sings these same two lines a second time.",
     },
     18: {
-      kept: 1,
+      kept: 6,
       lyric_ref: "Acts 20:28, 1 Peter 1:18-19, Exodus 12:7",
       lyric_explain:
         "The same two lines as couplet 17, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 7,
+      kept: 11,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 6,
+      kept: 9,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 4,
+      kept: 7,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
