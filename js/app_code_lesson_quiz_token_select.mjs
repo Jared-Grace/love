@@ -59,11 +59,11 @@ export function app_code_lesson_quiz_token_select(
     qa,
     answer_div,
   );
-  let r2 = app_code_lesson_quiz_token_select_chosen(r);
-  let chosen = property_get(r2, "chosen");
-  let tokens_unique = property_get(r2, "tokens_unique");
-  let variations = property_get(r2, "variations");
-  let buttons = property_get(r2, "buttons");
+  let pieces = app_code_lesson_quiz_token_select_chosen(r);
+  let chosen = property_get(pieces, "chosen");
+  let tokens_unique = property_get(pieces, "tokens_unique");
+  let variations = property_get(pieces, "variations");
+  let buttons = property_get(pieces, "buttons");
   function lambda(token) {
     let b = app_shared_button(parent, token, on_click);
     html_style_code_dark(b);
