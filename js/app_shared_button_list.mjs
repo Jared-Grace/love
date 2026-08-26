@@ -1,5 +1,5 @@
-import { list_map } from "../../love/js/list_map.mjs";
-import { app_shared_button } from "../../love/js/app_shared_button.mjs";
+import { list_map } from "./list_map.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
 export function app_shared_button_list(parent, items, item_to_text, on_click) {
   function lambda(item) {
     let text = item_to_text(item);
