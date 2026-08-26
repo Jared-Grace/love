@@ -18,6 +18,7 @@ export async function app_shared_text_reader_carried_unpicked(f_name_app) {
   ("This is the half of the door reading that was missing, and the numbers said how much was missing: of the words arriving at the doors of the app that teaches english, all but three were carried in, so a clean answer was a promise about three words. A word carried in was walked up to and could not be read, and the reading beside this one is honest about that by printing how many there were - but a number of things not looked at is not the same as looking at them.");
   ("Following one step is enough because of how the words are written here. A door is nearly always handed a plain name, and the line that makes that name is nearly always a call to the function that says the words. So the question a person would ask by hand - where did this word come from, and was anybody asked about it - is asked here instead, once per door, every time.");
   ("What it cannot follow it counts rather than passes over in silence, for the same reason the reading beside it does. A word made from something other than a call, or arriving as a parameter from a caller, is settled while the app runs; nothing written in the code says what it will be, and a reading that quietly dropped those would report a clean app whose screens it never opened.");
+  ("A name that stands where a call stands need not be a function of this repo at all - a list of buttons is handed a way of saying what each one is called, and that way arrives as a parameter, so the name written at the call site names nobody. So the answer to whether a name is one of ours is read out of the looking rather than taken as the looking itself, which is a record and would otherwise pass for a yes every time.");
   ("The trees are kept as they are read, because several doors are nearly always written into the one function and finding and parsing it again per door is the same work done over.");
   let read = await app_shared_text_reader_door_arrivals(f_name_app);
   let arrivals = property_get(read, "arrivals");
@@ -47,8 +48,9 @@ export async function app_shared_text_reader_carried_unpicked(f_name_app) {
       });
       continue;
     }
-    let live = await function_exists(source);
-    if (not(live)) {
+    let search = await function_exists(source);
+    let ours = property_get(search, "exists");
+    if (not(ours)) {
       list_add(unfollowed, {
         f_name,
         door,
