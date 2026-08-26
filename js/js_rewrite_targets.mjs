@@ -5,7 +5,7 @@ import { fn_name } from "./fn_name.mjs";
 import { functions_rewrite_seams } from "./functions_rewrite_seams.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
+import { js_find_declaration_named_or_null } from "./js_find_declaration_named.mjs";
 import { js_node_value_get } from "./js_node_value_get.mjs";
 import { js_visit_calls_named } from "./js_visit_calls_named.mjs";
 import { list_adder } from "./list_adder.mjs";
@@ -51,7 +51,7 @@ export function js_rewrite_targets(ast) {
       return null;
     }
     let local = property_get(node, "name");
-    let declaration = js_find_declaration_named(ast, local);
+    let declaration = js_find_declaration_named_or_null(ast, local);
     let declared = null_not_is(declaration);
     if (not(declared)) {
       return null;
