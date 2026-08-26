@@ -1,6 +1,7 @@
-import { path_name } from "./path_name.mjs";
-import { list_map } from "./list_map.mjs";
-import { apps_page_file_names } from "./apps_page_file_names.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { folder_public_dev } from "./folder_public_dev.mjs";
+import { apps_names_folder_generic } from "./apps_names_folder_generic.mjs";
 export async function apps_names() {
   arguments_assert(arguments, 0);
   ("The name of every app there is - read off the dev folder, because a dev build is the");
@@ -10,7 +11,9 @@ export async function apps_names() {
   ("public address in order to be admitted here; the page held no bytes, because there was");
   ("nothing to publish yet; and a tidy-up rightly deleted an address that served nothing -");
   ("which silently took the app out of this list and stopped its build from running at all.");
-  ("The published question is answered by apps_published_names now, and the two readings");
+  ("The published question is answered by ",
+    fn_name("apps_published_names"),
+    " now, and the two readings");
   ("share one body, so that they cannot drift apart.");
   let folder = folder_public_dev();
   let names = await apps_names_folder_generic(folder);
