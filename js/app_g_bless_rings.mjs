@@ -62,15 +62,9 @@ export function app_g_bless_rings(rings, everyone, remaining) {
     app_shared_game_npc_ring_set(person, ring);
   }
   each(people_all, person_ring);
-  function person_hide(person) {
-    let ring = app_shared_game_npc_ring_get(person);
-    html_visibility_hidden(ring);
-  }
-  each(people_all, person_hide);
-  let people_remaining = bless_view_people(remaining);
-  function person_show(person) {
-    let ring = app_shared_game_npc_ring_get(person);
-    html_visibility_visible(ring);
-  }
-  each(people_remaining, person_show);
+  app_g_bless_mark_visibility(
+    app_shared_game_npc_ring_get,
+    everyone,
+    remaining,
+  );
 }
