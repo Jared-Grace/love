@@ -1,5 +1,5 @@
+import { emoji_mobile } from "./emoji_mobile.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
-import { emoji_home } from "./emoji_home.mjs";
 import { window_go } from "./window_go.mjs";
 export function app_shared_all_apps_button(parent) {
   "every app can offer the way back out to the page listing all of them, without any of them writing that address down for itself: goes to the index page, which is where somebody who has finished with this app chooses the next one.";
@@ -8,7 +8,7 @@ export function app_shared_all_apps_button(parent) {
   function on_click() {
     window_go("index.html");
   }
-  let left = emoji_home();
+  let left = emoji_mobile();
   let button = app_shared_button_wide_text_combine(
     parent,
     left,
