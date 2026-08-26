@@ -1,4 +1,3 @@
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { commit_edit_kind_shape_named } from "./commit_edit_kind_shape_named.mjs";
 import { property_get } from "./property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -10,7 +9,6 @@ export async function commit_edit_prose_verb_named(commit) {
   "THAT SHAPE IS WORKED OUT NEXT DOOR AND ONLY NAMED HERE, because the same counting decides it for the values written into a record, where the answers are different words about a different thing. What is left here is a vocabulary - one word of this reading's own for each shape there is - so a shape this reading has no verb for is answered rather than fallen through.";
   "AN EDIT THAT TOUCHED CODE IS NOT ASKED ABOUT AT ALL, because the question is what a prose verb would have made outright, and an edit that also changed code was never going to be made by one command whatever its prose looked like.";
   "A VALUE CHOSEN COUNTS WITH THE CODE and not with the prose, for the same reason the code does. A number raised in a record beside a reworded paragraph is still two changes, and no one prose verb makes two changes; whether a named command exists for the value is a real question, but it is a different one and answering it here would make this bucket say something it does not mean.";
-  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   let shape = await commit_edit_kind_shape_named(commit, "prose");
   let words = {
