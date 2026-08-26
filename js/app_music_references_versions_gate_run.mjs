@@ -1,7 +1,5 @@
 import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
 import { app_music_references_all } from "./app_music_references_all.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { ebible_folder_reference_text } from "./ebible_folder_reference_text.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -63,30 +61,6 @@ export async function app_music_references_versions_gate_run() {
     });
   }
   await app_music_references_versions_faults_add(versions, rested_on, wrong);
-  for (let version of versions) {
-    let reference = property_get(version, "reference");
-    let bible_folder = property_get(version, "bible_folder");
-    let rests = list_includes(rested_on, reference);
-    if (rests) {
-      let text = await ebible_folder_reference_text(bible_folder, reference);
-      let wordless = null_is(text);
-      if (wordless) {
-        list_add(wrong, {
-          reference,
-          bible_folder,
-          fault:
-            "this bible hands over no words at this passage, so the page would draw it empty",
-        });
-      }
-      continue;
-    }
-    list_add(wrong, {
-      reference,
-      bible_folder,
-      fault:
-        "no song on this page rests on this passage, so this choice is never reached and the usual translation is shown instead",
-    });
-  }
   let f_name = fn_name("bible_versions_english_choices_usable");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
