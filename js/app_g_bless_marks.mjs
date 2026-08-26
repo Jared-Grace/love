@@ -27,4 +27,9 @@ export function app_g_bless_marks(glows, homes, blocks, blessed, everyone) {
   ("same record the light was just read from.");
   let remaining = bless_view_household_started(blessed, everyone);
   app_g_bless_rings(glows, everyone, remaining);
+  ("The same people are pointed at as well as ringed, and the two marks are drawn onto the");
+  ("same layer. A ring is on the ground and an arrow is over a head, so a crowd that hides");
+  ("one of them cannot hide the other - and which of the two a player notices first is a");
+  ("question about where they happen to be standing, not one this has to answer.");
+  app_g_bless_pointers(glows, everyone, remaining);
 }
