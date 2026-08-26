@@ -74,7 +74,6 @@ export function app_code_review_exercise(
     on_incorrect();
   }
   async function on_success() {
-    html_visibility_hidden(container_correction);
     let clean = not(failed);
     await on_correct(clean);
   }
