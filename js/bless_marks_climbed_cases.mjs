@@ -52,16 +52,16 @@ export function bless_marks_climbed_cases() {
       why: "the same building met in a scattered order still ends as a whole building, because the answer depends on who has been prayed for and not on when",
     },
     {
-      count: 60,
+      count: 45,
       stride: 1,
       climbed: {
         rung: "block",
         dark: 0,
       },
-      why: "sixty people are twenty households, five buildings, one block, and a neighbourhood wants twelve blocks",
+      why: "forty-five people are fifteen households, five buildings, one block, and a neighbourhood wants twelve blocks",
     },
     {
-      count: 60,
+      count: 45,
       stride: 7,
       climbed: {
         rung: "block",
