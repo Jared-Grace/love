@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_verse_marks_underdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_underdrawn_gate_run.mjs";
 import { functions_rewrite_then_read_gate_run } from "./functions_rewrite_then_read_gate_run.mjs";
 import { qa_promoted_unbuilt_linked_gate_run } from "./qa_promoted_unbuilt_linked_gate_run.mjs";
 import { app_ceb_bible_gloss_unpublished_gate_run } from "./app_ceb_bible_gloss_unpublished_gate_run.mjs";
@@ -810,6 +811,7 @@ export function qa_gates() {
     commits_message_path_gate_run,
     functions_name_word_repeated_gate_run,
     bible_glyph_chapters_marks_unseated_gate_run,
+    bible_glyph_chapters_verse_marks_underdrawn_gate_run,
     apps_all_main_fns_gate_run,
     apps_pages_not_app_gate_run,
     js_guard_statements_cases_gate_run,
