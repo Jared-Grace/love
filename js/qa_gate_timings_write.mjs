@@ -1,23 +1,25 @@
-import { qa_gate_timings_load_settle_wait } from "./qa_gate_timings_load_settle_wait.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { qa_snapshot_owner } from "./qa_snapshot_owner.mjs";
+import { qa_gate_timings_load_settle_wait } from "./qa_gate_timings_load_settle_wait.mjs";
+import { qa_snapshot_timed_solo_told } from "./qa_snapshot_timed_solo_told.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { lock_wait } from "./lock_wait.mjs";
+import { property_get } from "./property_get.mjs";
+import { less_than } from "./less_than.mjs";
+import { error_json } from "./error_json.mjs";
 import { add } from "./add.mjs";
 import { json_from_property_get } from "./json_from_property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { less_than } from "./less_than.mjs";
-import { qa_snapshot_timed_solo_told } from "./qa_snapshot_timed_solo_told.mjs";
+import { qa_gate_timings_run_short_is } from "./qa_gate_timings_run_short_is.mjs";
 import { qa_gate_timings_path } from "./qa_gate_timings_path.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { property_get } from "./property_get.mjs";
-import { error_json } from "./error_json.mjs";
 export async function qa_gate_timings_write() {
   "Times every gate on its own inside the frozen copy and writes down what each one took, so the shares handed out afterwards can be made even";
   "It is timed inside the copy rather than out here because that is where the suite runs. The copy is in memory and nobody may write to it, so a name's file is found once and kept, and a gate timed in the living folder is timed against a slower repo - by a different amount for each gate, which is the amount that would go into the shares as an error";
   "One gate at a time is the whole point, so this wants a machine with nothing else on it. Taken while several of us were working, the numbers are of gates waiting for processors rather than of gates, and the shares made from them would be even in waiting rather than even in work";
   "So it waits for the same lock the repo-wide gate waits for, and for the same reason rather than a new one: the heaviest thing this machine does is ask all the gates, this is that, and two of them at once make each other slow. Hoping for a quiet machine was the alternative, and the run before this one was taken at a load of thirteen and had to be thrown away";
   "Nothing watches this for going out of date, and nothing should. A gate that has grown slower since it was timed makes the shares less even, which is the state the repo lived in before any of this - so a stale record is merely worth less, never wrong, and a gate policing it would fail on every ordinary afternoon";
-  "The reading is checked for being suspiciously short before anything is written, because the timing comes back as the words a second run printed, and a run that died early prints something that still parses. A record naming a handful of gates would look like a successful measurement and would quietly hand every unmeasured gate the same average, which is the shape the dealing already falls back to and would report as though it had measured";
+  "The reading is checked for being short of the gate list before anything is written, because the timing comes back as the words a second run printed, and a run that died early prints something that still parses. A record naming part of the list would look like a successful measurement and would quietly hand every unmeasured gate the same average, which is the shape the dealing already falls back to and would report as though it had measured";
+  "★ THAT CHECK WAS A FIXED HUNDRED UNTIL 2026-08-26, AND BY THEN A HUNDRED WAS A QUARTER OF THE LIST. The record in use had been written by a run that reached about two hundred and thirty-five gates of two hundred and seventy-nine and stopped, leaving forty-three at the tail in one unbroken run - it cleared the hundred without difficulty and was believed for nine days. What the check asks now is how much of the gate list the run reached, so it cannot go blind again as the list grows";
   let who = qa_snapshot_owner();
   async function lambda() {
     await qa_gate_timings_load_settle_wait();
@@ -55,9 +57,10 @@ export async function qa_gate_timings_write() {
     taken[f_name] = milliseconds;
   }
   let gates = object_property_names(taken).length;
-  if (less_than(gates, 100)) {
+  let short = qa_gate_timings_run_short_is(gates);
+  if (short) {
     error_json({
-      hint: "far fewer gates were timed than this repo has, so the run ended early - writing this would look like a measurement and would be one of a few gates only",
+      hint: "the run named far fewer gates than the list holds, so it stopped before it reached the end - writing this would look like a measurement of every gate and would be one of the ones it got to",
       f_name: qa_gate_timings_write.name,
       gates,
     });
