@@ -55,7 +55,7 @@ export async function bible_glyph_chapters_strong_verses(strong) {
         list_add(found, {
           chapter_code,
           verse_number: row.verse_number,
-          strong,
+          strong: word.strong,
           original: word.original,
           gloss: word.gloss,
           glyph: word.glyph,
