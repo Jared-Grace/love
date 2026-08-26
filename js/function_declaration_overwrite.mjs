@@ -6,9 +6,9 @@ import { js_imports_missing_add_all } from "./js_imports_missing_add_all.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
 export async function function_declaration_overwrite(declaration, f_name) {
   arguments_assert(arguments, 2);
-  "Writes one function written out as a tree into the repo under a name, exported, with every import it needs added, and puts it over whatever was answering to that name before.";
-  "The writing half of making a function, with no question asked about whether the name is free. Its caller next door asks that question and is the whole of what that caller adds; a second caller wants the opposite answer to the same question, so the question cannot live down here.";
-  "The name is handed in rather than read off the declaration, because the caller has already read it to ask its own question about it, and reading it twice is how the two could come to disagree.";
+  ("Writes one function written out as a tree into the repo under a name, exported, with every import it needs added, and puts it over whatever was answering to that name before.");
+  ("The writing half of making a function, with no question asked about whether the name is free. Its caller next door asks that question and is the whole of what that caller adds; a second caller wants the opposite answer to the same question, so the question cannot live down here.");
+  ("The name is handed in rather than read off the declaration, because the caller has already read it to ask its own question about it, and reading it twice is how the two could come to disagree.");
   let code_declaration = js_unparse(declaration);
   let contents = js_code_export(code_declaration);
   let ast = js_parse(contents);

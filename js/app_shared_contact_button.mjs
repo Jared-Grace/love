@@ -1,3 +1,4 @@
+import { app_shared_contact_button_text } from "./app_shared_contact_button_text.mjs";
 import { app_shared_contact_overlay_open } from "./app_shared_contact_overlay_open.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -8,7 +9,8 @@ export function app_shared_contact_button(parent) {
     await app_shared_contact_overlay_open();
   }
   let left = emoji_email();
-  let label = text_combine(left, " Contact the developer");
+  let right = app_shared_contact_button_text();
+  let label = text_combine(left, right);
   ("full width, because it is only ever drawn in the foot of a page, stacked rather than beside other buttons - so the one shape it is ever drawn in is decided here once instead of by each caller remembering to widen it. anything that ever does put it in a row with other buttons is what overrides the width, and it still receives the button back to do that with");
   let button = app_shared_button_wide(parent, label, on_click);
   ("the gap that holds the whole foot of the page away from the reading above it belongs to the foot rather than to this button, which is no longer the first thing in it");

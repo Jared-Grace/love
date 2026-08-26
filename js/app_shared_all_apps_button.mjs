@@ -1,3 +1,4 @@
+import { app_shared_all_apps_button_text } from "./app_shared_all_apps_button_text.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { window_go } from "./window_go.mjs";
@@ -9,10 +10,11 @@ export function app_shared_all_apps_button(parent) {
     window_go("index.html");
   }
   let left = emoji_mobile();
+  let right = app_shared_all_apps_button_text();
   let button = app_shared_button_wide_text_combine(
     parent,
     left,
-    " All apps",
+    right,
     on_click,
   );
   return button;
