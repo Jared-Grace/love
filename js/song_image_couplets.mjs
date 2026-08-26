@@ -373,7 +373,7 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open, that mouth no longer black but filled edge to edge with plain white glass, and broad straight rays of that same white glass coming out of the mouth and widening as they go, spreading forward and upward from it across the field so that the light is shining out of the tomb into the picture, and ",
+        " standing wide open, that mouth no longer black but one whole sheet of plain white glass from edge to edge, with broad white rays of the same glass spreading out of it and widening across the field, and ",
         r5,
         ", plainly half as wide again and half as tall again as that mouth so that it could easily have covered the whole of it, standing on the ground well clear to the right of the mouth and touching nothing, the rock and the stone together drawn very large, and the ground below one plain flat pale grey",
       ]),
