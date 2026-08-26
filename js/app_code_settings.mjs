@@ -18,7 +18,7 @@ export function app_code_settings(context) {
   app_shared_screen_set_button(g, context, app_code_home, text_home);
   app_shared_font_size_buttons(g, context);
   let check = emoji_check();
-  let combined = text_combine(check, " Mark all lessons complete");
+  let combined = text_combine(check, " Mark all lessons and reviews complete");
   app_shared_screen_set_button(
     g,
     context,
@@ -26,7 +26,7 @@ export function app_code_settings(context) {
     combined,
   );
   let cross = emoji_x_red();
-  let combined2 = text_combine(cross, " Mark all lessons incomplete");
+  let combined2 = text_combine(cross, " Mark all lessons and reviews incomplete");
   app_shared_screen_set_button(
     g,
     context,
