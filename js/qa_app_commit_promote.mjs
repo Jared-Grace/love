@@ -26,8 +26,7 @@ export async function qa_app_commit_promote(search, commit) {
   let file_names = properties_get(hashes);
   for (let file_name of file_names) {
     let made = qa_snapshot_app_file_path(folder, file_name);
-    let relative = folder_public_join(file_name);
-    let sending = await user_repo_path_combine(relative);
+    let sending = folder_public_absolute_join(file_name);
     await file_copy_overwrite(made, sending);
   }
   ("A piece the last build left behind and this one did not make is taken away rather than left beside the new ones. Which extra scripts a build cuts out of an app is the build's own choice, so an older build's leftovers are not overwritten by a newer one - and left standing they make the folder answer with more pieces than the note beside it records, which refuses the next sending for something nobody did.");
