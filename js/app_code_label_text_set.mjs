@@ -1,3 +1,6 @@
+import { text_empty_is } from "./text_empty_is.mjs";
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
+import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
 export function app_code_label_text_set(div, label) {
@@ -6,12 +9,12 @@ export function app_code_label_text_set(div, label) {
   "Split out of the drawing rather than written beside it, so a label cannot be made one way and changed another - the two would drift the day either was touched.";
   let empty = text_empty_is(label);
   if (empty) {
-    "asked to say nothing, the words already standing here are kept and made invisible rather than taken away - a line with nothing in it has no height, so emptying the label would pull everything under it up by a line at the very moment the learner is looking at that part of the screen";
+    ("asked to say nothing, the words already standing here are kept and made invisible rather than taken away - a line with nothing in it has no height, so emptying the label would pull everything under it up by a line at the very moment the learner is looking at that part of the screen");
     html_visibility_hidden(div);
     return;
   }
   let capitalized = text_first_upper_to(label);
   html_text_set(div, capitalized);
-  "and back into sight, because a label that was told to say nothing once may be told something again - a lesson whose asking changes as its steps go asks that of this very function"
+  ("and back into sight, because a label that was told to say nothing once may be told something again - a lesson whose asking changes as its steps go asks that of this very function");
   html_visibility_visible(div);
 }
