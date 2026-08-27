@@ -3,7 +3,7 @@ import { firebase_hosting_ignore_missing } from "./firebase_hosting_ignore_missi
 import { firebase_json_path } from "./firebase_json_path.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function firebase_hosting_ignore_gate_run() {
-  "Gate: only the finished build may reach the public internet, so both testing stages stay out of what is sent. Read-only.";
+  "Gate: whichever testing stages have been agreed to stay off the public internet are really left out of what is sent. Read-only.";
   "The folder goes out whole. Everything sitting under it is served at an address whether anybody meant it to be or not, so the two testing stages are kept out by being named in the sending's list of what to leave behind - one line of settings, and nothing else anywhere makes it true.";
   "Written on the day the second stage was taken off the internet, 2026-08-27. Until then a half-finished build believed ready and not yet agreed to be was reachable by anybody who guessed the address, and nothing noticed. One line put back by hand, or lost to somebody merging that file, would put it back the same silent way.";
   "Measured against nothing rather than against a ratchet, and it passes on the day it was written. There is nothing here to grandfather: a stage that has already reached the public is the last thing to write down as accepted.";
