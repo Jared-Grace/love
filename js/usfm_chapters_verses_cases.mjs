@@ -277,6 +277,21 @@ export function usfm_chapters_verses_cases() {
       ],
       why: "a translation aligned word by word to the Hebrew. Three things about it are each enough on their own to ruin the verse: the pair marks are named with a hyphen, so stopping at the letters leaves a dash and a letter behind between every word; the star that closes the opening mark stands on its own away from any letters; and the marking falls between a word and its comma, which is how the comma ends up standing alone with a space either side of it",
     },
+    {
+      usfm: '\\c 1\n\\sp \\w The|x-occurrence="1" x-occurrences="1"\\w*\n\\w woman|x-occurrence="1" x-occurrences="1"\\w*\n\\q1\n\\v 1 \\w Kiss|x-occurrence="1"\\w*\n\\w me|x-occurrence="1"\\w*.\n',
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "Kiss me.",
+            },
+          ],
+        },
+      ],
+      why: "A HEADING IN AN ALIGNED BIBLE IS NOT ONE LINE, copied from the shape the Song of Songs arrives in. The aligning tool writes one word to a line, so the words of a heading come as several lines and only the first of them wears the heading mark. Read as lines the heading is one word wide, and the rest of its words stay where they fell, at the head of the verse below, reading as scripture - thirty-five headings arrived that way and each left its first word behind as the whole heading. The lines that carry on the one above are put back onto it before any heading is looked for, and what says a line carries on is that it opens with a mark that lives inside a line, or with no mark at all",
+    },
   ];
   return cases;
 }
