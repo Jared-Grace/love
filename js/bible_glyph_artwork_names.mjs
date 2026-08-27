@@ -164,6 +164,10 @@ export function bible_glyph_artwork_names() {
       asset: "Palm up hand",
     },
     {
+      glyph: "hand_sending",
+      asset: "Rightwards pushing hand",
+    },
+    {
       glyph: "hands_praying",
       asset: "Folded hands",
     },

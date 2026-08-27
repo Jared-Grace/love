@@ -198,6 +198,10 @@ export function bible_glyph_characters() {
       character: "🫴",
     },
     {
+      name: "hand_sending",
+      character: "🫱",
+    },
+    {
       name: "hands_praying",
       character: "🙏",
     },

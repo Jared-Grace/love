@@ -43,6 +43,21 @@ export function harmony_key_degrees_pop(mode) {
         distance: 0.7,
       },
       {
+        step_above: 9,
+        quality: "minor_seventh",
+        distance: 0.6,
+      },
+      {
+        step_above: 2,
+        quality: "minor_seventh",
+        distance: 0.6,
+      },
+      {
+        step_above: 4,
+        quality: "minor_seventh",
+        distance: 0.9,
+      },
+      {
         step_above: 7,
         quality: "suspended_fourth",
         distance: 1,
