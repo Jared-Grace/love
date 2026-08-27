@@ -1,3 +1,4 @@
+import { file_audio_mp3_or_wav } from "./file_audio_mp3_or_wav.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { bible_audio_folder_book_video_join } from "./bible_audio_folder_book_video_join.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
@@ -31,7 +32,8 @@ export async function ebible_chapter_videos_generate(
       if (n) {
         await image_generate(contents, joined_image);
       }
-      let joined_video = text_combine(joined, file_extension_mp4());
+      let right = file_extension_mp4();
+      let joined_video = text_combine(joined, right);
       let n2 = await file_exists_not(joined_video);
       if (n2) {
         let joined_audio = await file_audio_mp3_or_wav(joined);
