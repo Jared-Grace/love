@@ -48,6 +48,11 @@ export function app_sandbox_previews() {
     let r9 = m.typing_box_preview;
     return r9;
   }
+  async function song_image_review_load() {
+    let m = await import("./song_image_review_preview.mjs");
+    let r11 = m.song_image_review_preview;
+    return r11;
+  }
   async function code_review_load() {
     let m = await import("./app_code_review_preview.mjs");
     let r10 = m.app_code_review_preview;
