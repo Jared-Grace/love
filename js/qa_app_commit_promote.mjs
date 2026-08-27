@@ -1,3 +1,5 @@
+import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
+import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
 import { folder_public_absolute_join } from "./folder_public_absolute_join.mjs";
 import { firebase_prod_app_stale_delete } from "./firebase_prod_app_stale_delete.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
@@ -20,6 +22,7 @@ export async function qa_app_commit_promote(search, commit) {
   "The note is written last, after the pieces are actually in place, so a run that fell over partway through leaves no note claiming a build that did not finish";
   let app_name = await app_shared_name_search(search);
   app_shared_frozen_assert(app_name);
+  folder_public_root_noting_set(app_name);
   let hashes = await qa_app_commit_hashes(search, commit);
   let folder = qa_build_folder();
   let file_names = properties_get(hashes);
@@ -32,5 +35,6 @@ export async function qa_app_commit_promote(search, commit) {
   ("It happens after the new pieces are in place rather than before, so a run that fell over partway through has taken nothing away that it did not replace.");
   await firebase_prod_app_stale_delete(app_name, file_names);
   await qa_promoted_app_write(app_name, commit, hashes);
+  let hold = folder_public_root_noting_clear();
   return hashes;
 }
