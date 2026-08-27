@@ -44,7 +44,9 @@ export function bible_glyph_chapters_rosetta_lines_gate_run() {
     hint: text_combine_multiple([
       "bandless chapters draw pictures and have no Rosetta bands to open, so the key band on the page comes up empty for them - run the writer next door for each code and name the file it leaves in ",
       fn_name("bible_glyph_chapters_rosetta_lines"),
-      "; pictureless codes are band files left behind after a chapter was renamed or dropped, so stop naming them there",
+      "; the whole repair for a chapter that was just authored is one run of ",
+      fn_name("bible_glyph_chapter_bands_write"),
+      " with the code of that chapter, which writes the band, names it here, and refetches every reveal language; pictureless codes are band files left behind after a chapter was renamed or dropped, so stop naming them there",
     ]),
   });
   let r = {
