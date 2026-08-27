@@ -1,33 +1,32 @@
-import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { app_g_storage_app } from "./app_g_storage_app.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
-import { app_g_font_size } from "./app_g_font_size.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
-import { html_hide_loadable } from "./html_hide_loadable.mjs";
-import { g_icon_cross_unpositioned } from "./g_icon_cross_unpositioned.mjs";
-import { html_scroll_none } from "./html_scroll_none.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
-import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_remix_icon } from "./html_remix_icon.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { app_shared_font_size } from "./app_shared_font_size.mjs";
+import { app_shared_font_size_text } from "./app_shared_font_size_text.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
+import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
+import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_scroll_none } from "./html_scroll_none.mjs";
+import { g_icon_cross_unpositioned } from "./g_icon_cross_unpositioned.mjs";
+import { html_hide_loadable } from "./html_hide_loadable.mjs";
 export function app_g_html_initialize(context) {
   let app_fn = app_g_storage_app();
   app_shared_app_fn_set(context, app_fn);
   let root = html_mobile_default(context);
   html_remix_icon();
-  ("the game font is sized to MATCH the other apps' reading text (~20px), not run larger. the conversation chrome renders through the shared 1.2em control token, so it lands at 1.2 × this root; a 16px root puts it at ~19px — level with the reading apps' 20px rather than the 21.6px an 18px root gave. the map is px/vw/vh-based (",
+  ("the game opens at the size every other app opens at, and that size is now the one this player's own browser is set to rather than a count of pixels chosen here. it used to be 16 pixels against the reading apps' 20, so that the conversation chrome - which renders through the shared 1.2em control token - landed at about 19 and read level with a reading app's body text. with every app back on the browser's own size there is nothing left to compensate for: the base is identical everywhere, and 1.2em is a control sitting a little above body text, which is what a control is.");
+  ("the map is not sized from this at all. tiles are measured in px, vw and vh (",
     fn_name("g_img_square_size_css"),
-    "), so this only sizes text, never the tiles.");
-  ("that 16 is where the game STARTS, not a ceiling. a player who needs bigger words has the same claim on them here as a reader does in the Bible apps, and because no tile is sized from this root, growing them cannot disturb the map — see ",
-    fn_name("app_g_font_size"),
-    ".");
-  let left = app_g_font_size(context);
+    "), so growing the words moves no tile and the player's own view stays exactly where it was - which is why a player who needs bigger words has the same claim on them here as a reader does in the Bible apps.");
+  let left = app_shared_font_size(context);
+  let sized = app_shared_font_size_text(left);
   html_style_assign(root, {
-    "font-size": text_combine(left, "px"),
+    "font-size": sized,
     margin: "0",
     padding: 0,
     height: "100%",
