@@ -1,22 +1,28 @@
 import { door43_version_credit } from "./door43_version_credit.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { ebible_copyright_credit_lines } from "./ebible_copyright_credit_lines.mjs";
+import { sword_version_credit } from "./sword_version_credit.mjs";
 import { ebible_version_copyright_page_read } from "./ebible_version_copyright_page_read.mjs";
-import { ebible_version_page_url } from "./ebible_version_page_url.mjs";
-import { html_parse_find_text } from "./html_parse_find_text.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_parse_find_text } from "./html_parse_find_text.mjs";
+import { ebible_copyright_credit_lines } from "./ebible_copyright_credit_lines.mjs";
+import { ebible_version_page_url } from "./ebible_version_page_url.mjs";
 export async function ebible_version_credit(bible_folder) {
   "$plain bible_folder";
   "Everything needed to credit one translation the way its own licence asks - what it calls itself, what it is in English, the credit block it must travel with, the terms it is offered on, and where it came from.";
   "Read off the copy on disk rather than off the web, so the credit a reader is shown is the credit that came with the very text they are reading. A page fetched later could have changed under it, and then the app would be crediting a text nobody has.";
   "Opening the page and reading its terms and its own name off it is done next door, because the language reader alongside starts from exactly the same three. What is this one's own is the English description and the credit block.";
   "A translation nobody has downloaded is answered with nothing rather than refused, so a sweep over a part-finished download runs to the end instead of stopping at the first gap.";
-  "A bible from the Door43 catalogue keeps its credit beside itself rather than on a page here, and is answered from there. The shape that comes back is the same either way, so whatever credits a translation or reads its terms never has to ask where it came from.";
+  "A bible from the Door43 catalogue, and one carried as a Sword module, each keep their credit beside themselves rather than on a page here, and are answered from there. The shape that comes back is the same whichever it was, so whatever credits a translation or reads its terms never has to ask where it came from.";
   let door = door43_version_credit(bible_folder);
   let elsewhere = null_not_is(door);
   if (elsewhere) {
     return door;
+  }
+  let sword = sword_version_credit(bible_folder);
+  let packaged = null_not_is(sword);
+  if (packaged) {
+    return sword;
   }
   let page = await ebible_version_copyright_page_read(bible_folder);
   let missing = null_is(page);
