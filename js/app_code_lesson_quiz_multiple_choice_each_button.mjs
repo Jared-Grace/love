@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { app_shared_button_code_unframed } from "./app_shared_button_code_unframed.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
@@ -51,9 +52,13 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
       } else {
         ("a wrong pick disables just THIS choice (dimmed) and leaves the others live, so the learner narrows down to the answer without it being revealed; on_wrong marks the attempt so the review requeues it");
         on_wrong();
-        app_code_lesson_quiz_wrong_set(b);
+        let coded = app_code_lesson_quiz_wrong_set(b);
         html_style_set(b, "pointer-events", "none");
-        html_style_opacity(b, "0.5");
+        ("a choice drawn as a run of code is left at full strength. The red is on the code block itself there, and half of a colour over the page behind it comes out as a wash rather than as red - which reads as the block being faded out, not as the answer being wrong. A choice made of ordinary words has the red on the button, and dimming that says spent without taking the red away.");
+        let dim = not(coded);
+        if (dim) {
+          html_style_opacity(b, "0.5");
+        }
       }
     }
     let nn = null_not_is(answer_on_button);
