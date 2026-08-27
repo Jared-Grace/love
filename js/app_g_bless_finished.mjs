@@ -1,3 +1,5 @@
+import { app_g_bless_finished_bloom } from "./app_g_bless_finished_bloom.mjs";
+import { app_g_bless_finished_bloom_fade } from "./app_g_bless_finished_bloom_fade.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
@@ -42,11 +44,14 @@ export async function app_g_bless_finished(r, tiles, line) {
   await app_shared_game_player_center(middle, player_img_c, div_map);
   let squares = app_g_bless_finished_white(div_map, tiles);
   await sleep(560);
-  let glow = app_g_bless_finished_glow(div_map, tiles, middle);
+  let glow = app_g_bless_finished_glow(div_map, tiles);
   await sleep(340);
+  let bloom = app_g_bless_finished_bloom(div_map, middle);
+  await sleep(300);
+  app_g_bless_finished_bloom_fade(bloom);
   app_g_bless_finished_glow_fade(glow);
   app_g_bless_finished_white_fade(squares);
-  await sleep(780);
+  await sleep(900);
   let player = property_get(world, "player");
   function back() {
     app_shared_game_player_center(player, player_img_c, div_map);

@@ -1,3 +1,4 @@
+import { ebible_letter_accounted_gate_run } from "./ebible_letter_accounted_gate_run.mjs";
 import { ebible_letter_plain_text_gate_run } from "./ebible_letter_plain_text_gate_run.mjs";
 import { markdown_plain_text_cases_gate_run } from "./markdown_plain_text_cases_gate_run.mjs";
 import { bible_usfm_chapter_paragraphed_text_cases_gate_run } from "./bible_usfm_chapter_paragraphed_text_cases_gate_run.mjs";
