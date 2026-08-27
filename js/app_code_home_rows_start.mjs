@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
-export function app_code_home_way_marked(context) {
+export function app_code_home_rows_start(context) {
   arguments_assert(arguments, 1);
   let just_left = null;
   ("each row says whether that lesson is finished - every quiz in it answered right at least once - so a learner coming back can see where they got to instead of remembering it. The same row is what the replace app's list is made of, so the check, the pointing hand and the colours mean one thing across the apps");
