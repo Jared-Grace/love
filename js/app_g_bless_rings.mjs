@@ -1,3 +1,4 @@
+import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
@@ -21,7 +22,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
   ("shape and not only by colour - which is what makes them readable at the size a phone");
   ("draws a person at, and readable to somebody who cannot tell the two colours apart at");
   ("all.");
-  ("Its line is a tenth of a tile rather than a fixed thickness, because the map is drawn at");
+  ("Its line is about an eighth of a tile rather than a fixed thickness, because the map is drawn at");
   ("whatever size the screen has room for. Written in a fixed unit it would be a hairline on");
   ("a tablet and a band on a phone.");
   ("EVERYBODY is given a ring when the street is first drawn and praying only SHOWS one, for");
