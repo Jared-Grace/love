@@ -4,7 +4,7 @@ import { app_code_home_lesson_button } from "./app_code_home_lesson_button.mjs";
 import { app_code_home_way_marked_next } from "./app_code_home_way_marked_next.mjs";
 import { app_code_home_review_row } from "./app_code_home_review_row.mjs";
 import { app_code_home_value } from "./app_code_home_value.mjs";
-import { app_code_home_way_marked } from "./app_code_home_way_marked.mjs";
+import { app_code_home_rows_start } from "./app_code_home_rows_start.mjs";
 import { app_code_home_just_left_center } from "./app_code_home_just_left_center.mjs";
 import { app_code_lesson_complete_is } from "./app_code_lesson_complete_is.mjs";
 import { app_code_review_scope } from "./app_code_review_scope.mjs";
@@ -27,7 +27,7 @@ export async function app_code_home(context) {
   html_style_margin_y(div, value);
   let lessons = app_code_lessons();
   let current_id = storage_session_get_context(context, "lesson_id");
-  let r2 = app_code_home_way_marked(context);
+  let r2 = app_code_home_rows_start(context);
   let way_marked = property_get(r2, "way_marked");
   let complete_previous = property_get(r2, "complete_previous");
   let progress = property_get(r2, "progress");
