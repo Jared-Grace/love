@@ -1,3 +1,7 @@
+import { round } from "./round.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_chapters } from "./ebible_version_chapters.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
@@ -42,14 +46,14 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
       let ends = text_ends_with_any(trimmed, closers);
       if (ends) {
         closes = add(closes, 1);
-        if (run > longest.length) {
+        if (greater_than(run, longest.length)) {
           longest = {
             chapter_code,
             length: run,
             first_verse: run_first,
           };
         }
-        if (run > 2) {
+        if (greater_than(run, 2)) {
           list_add(runs_long, {
             chapter_code,
             first_verse: run_first,
@@ -72,14 +76,14 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
       run = add(run, 1);
     }
     each(list, verse_each);
-    if (run > longest.length) {
+    if (greater_than(run, longest.length)) {
       longest = {
         chapter_code,
         length: run,
         first_verse: run_first,
       };
     }
-    if (run > 2) {
+    if (greater_than(run, 2)) {
       list_add(runs_long, {
         chapter_code,
         first_verse: run_first,
@@ -88,13 +92,16 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
     }
   }
   each(chapters, chapter_each);
+  let left = divide(closes, verses);
+  let n = multiply(left, 1000);
+  let top = round(n);
   let report = {
     bible_folder,
     verses,
     closes,
     pauses,
     continues,
-    closes_share: Math.round((closes / verses) * 1000) / 10,
+    closes_share: divide(top, 10),
     runs_over_two: runs_long.length,
     longest,
     runs: runs_long,
