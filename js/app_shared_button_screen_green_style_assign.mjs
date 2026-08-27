@@ -9,7 +9,8 @@ export function app_shared_button_screen_green_style_assign(component) {
   "The code answer turns ONE block rather than two. The button behind it is already invisible by the time it is pressed, and painting it green now would put the frame back on at the very moment the learner is looking hardest.";
   arguments_assert(arguments, 1);
   let green = app_shared_button_background();
-  let coded = app_shared_button_verdict_color_paint(component, green);
+  ("handed in twice on purpose: this one green was tried on both a button and a block of code and it reads right on either, so there is nothing here to tell apart");
+  let coded = app_shared_button_verdict_color_paint(component, green, green);
   if (coded) {
     ("the lettering inside a code block is already white, and the button standing around it is not being looked at");
     return;
