@@ -1,11 +1,11 @@
+import { file_overwrite_buffer } from "./file_overwrite_buffer.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { midi_files_song_united } from "./midi_files_song_united.mjs";
 import { midi_song_chords_chosen } from "./midi_song_chords_chosen.mjs";
 import { midi_song_chords_bytes } from "./midi_song_chords_bytes.mjs";
-import { file_write_buffer } from "./file_write_buffer.mjs";
 import { midi_chords_chart_lines } from "./midi_chords_chart_lines.mjs";
-import { file_write } from "./file_write.mjs";
 export async function midi_chords_write(file_paths_in, file_path_out, style) {
   "reads the midi files holding a melody and a bass line, chooses a chord under every bass note, and writes both a new midi file and a chart of what it chose";
   "several files may be named, joined by commas, because an editor that exports one file per track leaves the parts split across files and each one is then a whole midi file that cannot simply be pasted onto the next";
@@ -26,7 +26,7 @@ export async function midi_chords_write(file_paths_in, file_path_out, style) {
   let lines = midi_chords_chart_lines(chosen.chosen, chosen.key, chosen.parts);
   let file_path_chart = file_path_out + ".txt";
   let contents2 = lines.join("\n");
-  await file_write(file_path_chart, contents2);
+  await file_overwrite(file_path_chart, contents2);
   let unsure = 0;
   for (let one of chosen.chosen) {
     if (equal(one.settled, false)) {
