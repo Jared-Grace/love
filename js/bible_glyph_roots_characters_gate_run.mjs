@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_group_names } from "./bible_glyph_group_names.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { property_set } from "./property_set.mjs";
@@ -51,7 +53,11 @@ export function bible_glyph_roots_characters_gate_run() {
   let none = list_empty_is(missing);
   assert_json(none, {
     missing,
-    hint: text_combine_multiple(["these roots are seated under a glyph the vocabulary has no character for, so the first chapter to use one of these words will throw rather than draw - give each glyph a character in ", fn_name("bible_glyph_characters"), ", or seat the word under a glyph that already has one there"]),
+    hint: text_combine_multiple([
+      "these roots are seated under a glyph the vocabulary has no character for, so the first chapter to use one of these words will throw rather than draw - give each glyph a character in ",
+      fn_name("bible_glyph_characters"),
+      ", or seat the word under a glyph that already has one there",
+    ]),
   });
   let r = {
     testaments: testaments.length,
