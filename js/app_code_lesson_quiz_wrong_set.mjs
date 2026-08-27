@@ -12,9 +12,11 @@ export function app_code_lesson_quiz_wrong_set(component) {
   let coded = app_shared_button_verdict_color_paint(component, color);
   if (coded) {
     ("an answer written as code has the red put on the code block itself, exactly as a right one has the green put there. The lettering in it is already white, and the button behind it was taken out of sight when the code was drawn, so an edge drawn on it now would be a red line around code and nothing more.");
-    return;
+    return coded;
   }
   html_font_color_set_white(component);
   let width = app_code_expression_chip_border_width();
   html_edge_color_set(component, color, width);
+  ("said back so a caller can tell whether what it is now looking at is a code block or a button, which decides what else it is allowed to do to it");
+  return coded;
 }
