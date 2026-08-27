@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 22,
+      kept: 26,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 25,
+      kept: 29,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 25,
+      kept: 31,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 13,
+      kept: 19,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",
@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 13,
+      kept: 19,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
