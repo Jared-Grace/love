@@ -7,7 +7,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 23,
-      note: "black was painted over the foot of the sun by hand rather than asked for in words, so the rest of this picture is exactly the one you approved and nothing else moved. The window's side borders and bottom sill were left standing and only the field inside them was covered. The rays that went downward are covered with it, so the glow now spreads upward and sideways only.",
+      note: "black was painted over the foot of the sun by hand rather than asked for in words, and the window's side borders and bottom sill were left standing so only the field inside them is covered. The picture underneath is a new draw rather than the one you saw: the yellow rule moved out of this couplet's own clause and into the palette rule where the refusal lives, and the sun came back with a plainer border and cleaner rays than the one you approved. Two of the three draws kept the yellow where one of three did before.",
     },
     {
       n: 26,
