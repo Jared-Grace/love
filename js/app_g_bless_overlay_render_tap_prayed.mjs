@@ -93,10 +93,11 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("now the panel is gone and the player is looking at the street again - and the street is");
       ("what the news is about: faces elsewhere on it just went bright, or every prayer from");
       ("here on reaches a whole household.");
-      ("Said before the person is let go and before the draw, so the line is already on screen");
-      ("as the marks change underneath it and the player sees the two as one event.");
+      ("Worked out here but SAID further down, once the street has been redrawn, because where");
+      ("it is said depends on what the prayer did. A prayer that finished a whole house off");
+      ("hands its line to the panel that celebrates the house; one that finished nothing puts");
+      ("the line up on its own.");
       let line = bless_told_after_prayer_or_null(rung_before, rung);
-      app_g_bless_notice(line);
       ("The person prayed for is let go here, before the draw, so the draw sees them already");
       ("free. Being held was only ever the time the player needed to say this prayer, and it");
       ("is said - keeping them any longer would stand somebody already blessed in front of a");
