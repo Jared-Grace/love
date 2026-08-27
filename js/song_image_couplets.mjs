@@ -373,7 +373,7 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open and filled edge to edge with one whole sheet of plain white glass so that no black shows inside it anywhere, and broad rays of white light growing straight out of that white sheet with no black line anywhere between the sheet and the rays, and reaching far out past the edges of the mouth, across the rock on both sides of it and up into the sky above it, and ",
+        " standing wide open and filled edge to edge with one whole sheet of plain white glass so that no black shows inside it anywhere, and broad rays of white light springing out of that sheet and passing over the face of the rock on both sides of the mouth and out into the sky above it, drawn in front of the rock and never behind it, the rays and the sheet one single piece of white glass with no black line where they meet, and ",
         r5,
         ", as wide across as very nearly half the whole window, so that it would hide the mouth entirely under it, arch and all, set on the ground beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),

@@ -19,7 +19,7 @@ export function midi_chords_review_lines(chosen) {
       "  " +
         place +
         ": chose " +
-        one.chord.name +
+        one.name +
         " over " +
         one.instead +
         ahead,
