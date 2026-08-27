@@ -10,6 +10,7 @@ export function bible_glyph_chapter_1jn04() {
     " is the one place the parsing happens, so no reader of this Bible ever writes a parser.");
   ("A verse is its words in order, one shorthand word per entry, and a word may hold English and glyphs together - Beloved is written as Be, the heart, and d, which draws as Be with a heart and a d. That is what lets the root stay visible through an English ending.");
   ("The reference is written out beside the code rather than worked out from it, because working it out needs the book list, the book list is downloaded, and a page that cannot say where it is until the network answers is a page that says nothing offline. It is also the thing a picture Bible will one day want to DRAW rather than spell, and a drawn reference will be authored beside the verses exactly as this one is.");
+  ("THE OUTWARD HAND ARRIVED AFTER THIS CHAPTER WAS WRITTEN AND ALL THREE SENDINGS TOOK IT. Apostello was seated for the seventeenth of John, and the ninth, the tenth and the fourteenth here are apestalken, apesteilen and apestalken. There is no pempo in this letter, which is what let the chapter be redrawn in one pass instead of a verse at a time.");
   let chapter = {
     chapter_code: "1JN04",
     reference: "1 John 4",
