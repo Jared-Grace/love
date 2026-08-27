@@ -1,8 +1,26 @@
 """Speaks a piece of text into a folder of numbered sound files.
 
 Called as `python text_to_speech.py <json_file>`, where the file holds
-{"text": ..., "path_output": ...}.  Writes `{i}.wav` and `{i}.txt` into
+{"text": ..., "path_output": ...}.  Writes `{i}.mp3` and `{i}.txt` into
 path_output, numbered from zero.
+
+THE RECORDING IS MP3 AND IT IS WRITTEN DIRECTLY, WITHOUT ffmpeg.
+libsndfile 1.2.2 is installed and lists MP3 among the formats it can
+write, so the encode happens in the same call that used to write the wav
+rather than in a second process reading the first one's output.  Measured
+on an existing 30 second reading, the wav is 1,462,844 bytes and the mp3
+is 222,120 - 6.59 times smaller, which over a whole Bible in one voice is
+12.99 GiB against 1.97 GiB.  That ratio is the reason the format changed:
+a full cast, or every voice the model has, is a disk question before it is
+a compute question.
+
+THE COMPRESSION LEVEL IS STATED AT 0.4 BECAUSE THAT IS WHAT WAS MEASURED.
+libsndfile does not document its default and passing nothing leaves it to
+a library the repo does not pin.  0.2, 0.3 and 0.4 were written and their
+sizes compared, and 0.4 alone came out byte-identical to passing nothing.
+So naming it changes no recording today and stops a library update from
+silently changing every recording tomorrow.  1.0 is not a choice - it
+throws.
 
 THE LINE BREAK IS THE SEAM AND THIS SCRIPT OBEYS IT RATHER THAN GUESSING.
 The caller joins verses with a line break on purpose, so one line becomes
@@ -45,6 +63,7 @@ VOICES_PATH = str(Path.home() / "a/user/kokoro/voices-v1.0.bin")
 VOICE = "am_adam"
 SPEED = 0.75
 PHONEME_LIMIT = 480
+COMPRESSION_LEVEL = 0.4
 
 
 def pieces_of(text):
@@ -82,6 +101,19 @@ def line_samples(g2p, kokoro, text):
     return np.concatenate(parts), rate
 
 
+def write_mp3(path, samples, rate):
+    """Writes one mono mp3 at the stated compression level."""
+    with sf.SoundFile(
+        str(path),
+        "w",
+        samplerate=rate,
+        channels=1,
+        format="MP3",
+        compression_level=COMPRESSION_LEVEL,
+    ) as f:
+        f.write(samples)
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python text_to_speech.py <json_file>")
@@ -105,7 +137,7 @@ def main():
         if samples is None:
             samples = np.zeros(int(rate / 4), dtype=np.float32)
             silent += 1
-        sf.write(str(out_dir / f"{i}.wav"), samples, rate)
+        write_mp3(out_dir / f"{i}.mp3", samples, rate)
         with open(out_dir / f"{i}.txt", "w", encoding="utf-8") as f:
             f.write(line)
 
