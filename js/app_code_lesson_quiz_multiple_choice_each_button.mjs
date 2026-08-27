@@ -58,6 +58,8 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
     let nn = null_not_is(answer_on_button);
     if (nn) {
       answer_on_button(b, quiz_choice);
+      ("asked only after the answer has been drawn, because until then the button is empty and there is nothing in it to look at. A choice drawn as a run of code takes the button's own colouring off, so the code is the thing on the line rather than a code block inside a grey one.");
+      app_shared_button_code_unframed(b);
     }
     return b;
   }
