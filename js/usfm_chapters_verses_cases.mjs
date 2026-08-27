@@ -138,6 +138,63 @@ export function usfm_chapters_verses_cases() {
       why: "a heading stands before the first verse mark and is a translator's summary rather than words of the book, so it is dropped rather than becoming a verse of its own",
     },
     {
+      usfm: "\\c 1\n\\v 1 The first words.\n\\s1 The Second Day\n\\p\n\\v 2 The second words.\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "The first words.",
+            },
+            {
+              verse_number: "2",
+              text: "The second words.",
+            },
+          ],
+        },
+      ],
+      why: "A HEADING BETWEEN TWO VERSES IS THE ONE THAT COSTS SOMETHING. It stands after a verse mark rather than before the first one, so nothing drops it, and a cut made on verse marks alone hands it to the verse above - which comes back with The Second Day on the end of its last sentence, punctuated like scripture and indistinguishable from it. Eighteen hundred verses of one bible arrived that way",
+    },
+    {
+      usfm: "\\c 1\n\\v 1 The first words.\n\\r (\\ref John 1:1|JHN 1:1\\ref*; \\ref Mark 1:1|MRK 1:1\\ref*)\n\\p\n\\v 2 The second words.\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "The first words.",
+            },
+            {
+              verse_number: "2",
+              text: "The second words.",
+            },
+          ],
+        },
+      ],
+      why: "a heading that carries marks inside itself, which is what a note of the parallel passage always is. This is why a heading is taken by its line rather than by reading up to the next mark: the next mark is inside the heading, so that reading stops in the middle of it and leaves the references standing in the verse above",
+    },
+    {
+      usfm: "\\c 1\n\\d A Psalm of David.\n\\q1\n\\v 1 The words.\n\\qa Aleph\n\\q1\n\\v 2 More words.\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "The words.",
+            },
+            {
+              verse_number: "2",
+              text: "More words.",
+            },
+          ],
+        },
+      ],
+      why: "the two headings a psalm writes - who it is by, and the letter of the alphabet the next stanza begins with. Both are marks about the poem rather than lines of it, and the letter is the one that shows the poetry marks beside it must not be swept the same way: the indent marks on either side of it carry the words of the psalm",
+    },
+    {
       usfm: "\\c 1\n\\v 1-2 Both together.\n",
       chapters: [
         {

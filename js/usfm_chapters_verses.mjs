@@ -1,23 +1,26 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
-import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_filter } from "./list_map_filter.mjs";
-import { list_skip_1 } from "./list_skip_1.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_split } from "./text_split.mjs";
-import { usfm_number_rest } from "./usfm_number_rest.mjs";
-import { usfm_verse_text } from "./usfm_verse_text.mjs";
+import { usfm_heading_lines_removed } from "./usfm_heading_lines_removed.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_skip_1 } from "./list_skip_1.mjs";
+import { usfm_number_rest } from "./usfm_number_rest.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map_filter } from "./list_map_filter.mjs";
+import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
+import { usfm_verse_text } from "./usfm_verse_text.mjs";
+import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
+import { list_map } from "./list_map.mjs";
 export function usfm_chapters_verses(usfm) {
   arguments_assert(arguments, 1);
   ("$plain usfm");
   ("One book written in usfm, cut into its chapters and each chapter into its verses.");
   ("Where every chapter and every verse begins is written into usfm as a mark of its own, so this searches for nothing and guesses at nothing. That is the whole reason a bible published this way is worth reading over one published as pages: the eBible pages have to be read twice and the two readings laid against each other, because neither of them alone says where a verse ends, and any chapter where the two disagree is shown to nobody.");
-  ("The line breaks go before anything else is done. A mark is what separates one thing from the next here, so where the lines happen to have been broken carries no meaning at all, and a verse written across three lines is one verse.");
+  ("The headings come out first, while the lines are still lines. A heading is a line in usfm and has no closing mark, so this is the only moment it can be found whole; and it has to be gone before the verses are cut, because a heading sits between one verse and the next and a cut made on verse marks alone hands it to the verse above. That is not a small matter of tidiness - it put eighteen hundred translators' summaries onto the ends of verses, inside the sentence, reading as scripture.");
+  ("The line breaks go next. A mark is what separates one thing from the next here, so where the lines happen to have been broken carries no meaning at all, and a verse written across three lines is one verse.");
   ("What stands before the first chapter mark is dropped, and inside each chapter what stands before the first verse mark is dropped with it. That is the book's own name, its heading and its running titles - true things about the book, but not words of it.");
   ("A verse left with nothing in it is dropped, by the same reading that drops one on the eBible side. A translation writes a verse it has no words for as a pair of brackets, and a reader shown a numbered blank would take it for a fault in the app rather than a fact about the translation.");
-  let flat = whitespace_normalize(usfm);
+  let unheaded = usfm_heading_lines_removed(usfm);
+  let flat = whitespace_normalize(unheaded);
   let pieces = text_split(flat, "\\c ");
   let after_first = list_skip_1(pieces);
   function lambda(piece) {
