@@ -78,6 +78,16 @@ export function app_g_bless_overlay_render_tap_prayed(
       "which is never a fixed amount - and an empty difference is exactly the case where";
       "nothing was finished and there is nothing to celebrate.";
       let lit_before = bless_blessed_tiles(blessed, blocks);
+      ("The same before-and-after is taken over the PEOPLE as well as over the ground, and for");
+      ("the same reason: a prayer names one rung and covers whoever that rung reaches, which");
+      ("is one face or a houseful or a street. Only the difference between the two pictures");
+      ("knows which of those just happened.");
+      ("It is asked over everybody rather than over who is in front of the player, because a");
+      ("prayer that reached a whole block reached the far side of it too - and a celebration");
+      ("that skipped the people round the corner would be quietly telling the player that the");
+      ("prayer stopped where their eyes did.");
+      let everyone_before = bless_view_blessed(blessed, view_everyone);
+      let people_before = bless_view_people(everyone_before);
       let place = bless_person_place(person, rung);
       bless_blessed_add(blessed, rung, place);
       ("the reach is asked for AFTER the prayer is written down, because what was just prayed");
