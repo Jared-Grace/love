@@ -12,6 +12,12 @@ Every item was checked against the downloaded files. Re-check before sending if 
 
 The record is keyed by chapter, not by item number, so items in the letter can be reordered freely.
 
+## Getting it into an email
+
+`ebible_letter.txt` next to it is the paste target. `ebible_letter_plain_text_write` generates it from the markdown; re-run that after any edit.
+
+**Paste it as plain text, not rich text.** The letter quotes markup as its evidence, and eight of those quotes hold `&#160;`. Rich-text mail can render those six characters as a space, which would show the reader something other than the page being reported. Mail clients link a bare url on their own, so nothing that matters is lost.
+
 ## On sending
 
 1. Copy `ebible_letter.md` to `notes/letters/sent/<date>.md`.
