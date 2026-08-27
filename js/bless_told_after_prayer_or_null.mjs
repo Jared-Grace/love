@@ -18,8 +18,14 @@ export function bless_told_after_prayer_or_null(rung_before, rung_now) {
   ("Told by comparing the rung BEFORE with the rung AFTER rather than by being handed a");
   ("yes or no, so the climb and the reach it climbed to are one fact read here rather than");
   ("two facts the caller has to keep agreeing with each other.");
+  ("The very top of the ladder climbs to NOTHING - there is nowhere further out than every");
+  ("person alive - so a climb is only a climb where there is a rung to name. Finishing the");
+  ("world falls through to the count instead, which is the truer line anyway: what the last");
+  ("prayer covered rather than what it unlocked, because it unlocked nothing.");
+  let finished = null_is(rung_now);
   let same = equal(rung_before, rung_now);
-  let climbed = not(same);
+  let stayed = or(same, finished);
+  let climbed = not(stayed);
   if (climbed) {
     let reach = bless_told_reach(rung_now);
     return reach;
