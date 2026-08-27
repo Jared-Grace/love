@@ -39,7 +39,6 @@ export async function app_g_bless_finished(r, tiles, line) {
   let world = property_get(r, "world");
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
-  let span = property_get(box, "span");
   await app_shared_game_player_center(middle, player_img_c, div_map);
   let squares = app_g_bless_finished_white(div_map, tiles);
   await sleep(560);
