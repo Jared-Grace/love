@@ -1,3 +1,5 @@
+import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
@@ -39,7 +41,11 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   let tiles = bless_blessed_tiles(blessed, blocks);
   let color = app_g_bless_color_blessed_home();
   let size = g_img_square_size_css();
-  let bloom = text_combine_multiple(["inset 0 0 calc((", size, ") * 0.3) rgba(255, 246, 214, 0.5)"]);
+  let bloom = text_combine_multiple([
+    "inset 0 0 calc((",
+    size,
+    ") * 0.3) rgba(255, 246, 214, 0.5)",
+  ]);
   function tile_light(tile) {
     let square = html_div(homes);
     g_img_square_style_position(square, tile, "ground_tint");
