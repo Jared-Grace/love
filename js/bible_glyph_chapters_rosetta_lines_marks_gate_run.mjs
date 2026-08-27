@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_rosetta_lines_marks_only } from "./bible_glyph_chapters_rosetta_lines_marks_only.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,12 +21,22 @@ export function bible_glyph_chapters_rosetta_lines_marks_gate_run() {
   let marks = property_get(surveyed, "marks");
   let examples = property_get(surveyed, "examples");
   let counted = not_equal(words, 0);
+  let f_name = fn_name("bible_glyph_chapters_rosetta_lines");
   assert_json(counted, {
     chapters,
-    hint: "no Rosetta band held a single word, so this gate checked nothing and would have passed for that reason - the bands are named one by one next door and either the list or every band in it has come up empty",
+    hint: text_combine_multiple([
+      "no Rosetta band held a single word, so this gate checked nothing and would have passed for that reason - the bands are named one by one in ",
+      f_name,
+      " and either that list or every band in it has come up empty",
+    ]),
   });
+  let f_name2 = fn_name("bible_glyph_chapter_rosetta_lines_write");
   list_empty_is_assert_json(found, {
-    hint: text_combine_multiple(["these words of the written bands are nothing but marks, so a reader meets a character that cannot be said out loud and cannot be told from scripture - decide for each mark whether it should be dropped by the builder or spelled out, then rebuild each chapter named here with one run of ", fn_name("bible_glyph_chapter_rosetta_lines_write"), " on its code"]),
+    hint: text_combine_multiple([
+      "these words of the written bands are nothing but marks, so a reader meets a character that cannot be said out loud and cannot be told from scripture - decide for each mark whether it should be dropped by the builder or spelled out, then rebuild each chapter named here with one run of ",
+      f_name2,
+      " on its code",
+    ]),
     marks,
     examples,
     found,

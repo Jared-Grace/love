@@ -38,7 +38,7 @@ export function bible_glyph_artwork_gate_run() {
   let none = list_empty_is(undecided);
   assert_json(none, {
     undecided,
-    hint: "these glyphs have no artwork decision - give each one the name the artwork set draws it under, or record that the set has no picture for it.",
+    hint: text_combine_multiple(["these glyphs have no artwork decision - ask ", fn_name("bible_glyph_artwork_names_search"), " what the set draws, then either record the name it draws each one under in ", fn_name("bible_glyph_artwork_names"), " or name it in ", fn_name("bible_glyph_artwork_absent"), " as one the set has no picture for"]),
   });
   let r = {
     glyphs: glyphs.length,
