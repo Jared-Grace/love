@@ -18,7 +18,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 30,
-      note: "the mountain has ridges, gullies and a broken crest instead of a grey triangle, the smoke billows in masses of plainly different sizes, and the fire runs crimson through orange to yellow over a cobalt field.",
+      note: "no lead line crosses the fire now, and the smoke is dark grey and plainly darker than the mountain. The smoke is still built of round lobes rather than ragged coils, and two of the three other draws lost the smoke altogether - it is the last thing in the clause and keeps falling off the end of it.",
     },
     {
       n: 34,
