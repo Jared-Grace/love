@@ -24,7 +24,7 @@ export function app_g_bless_pointers(pointers, everyone, remaining) {
   let color = app_g_bless_color_household_remaining();
   let size = g_img_square_size_css();
   let font_size = text_combine_multiple(["calc((", size, ") * 0.75)"]);
-  let lift = text_combine_multiple(["translateY(calc((", size, ") * -0.68))"]);
+  let lift = text_combine_multiple(["translateY(calc((", size, ") * -1.1))"]);
   let people_all = bless_view_people(everyone);
   function person_pointer(person) {
     let already = app_shared_game_npc_pointer_get(person);

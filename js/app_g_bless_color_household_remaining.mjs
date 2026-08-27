@@ -16,7 +16,7 @@ export function app_g_bless_color_household_remaining() {
   ("A ground light may stay pale, because it lies over half a building and the picture");
   ("beneath it has to stay readable. A mark is small, sits on top, and hides nothing worth");
   ("seeing - so it can afford to shout and the ground cannot.");
-  ("Nearly solid, where the ground is barely there. The ground has a whole house to say it");
+  ("Solid, where the ground is barely there. The ground has a whole house to say it");
   ("over and a picture underneath worth reading through; this is a thin line the width of a");
   ("hair, drawn over grass that runs from jungle green to snow, and at the ground colour it");
   ("simply disappeared.");
