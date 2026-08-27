@@ -1,26 +1,29 @@
-import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
-import { app_shared_color_progress_later } from "./app_shared_color_progress_later.mjs";
-import { app_shared_text_colors_on_dark_set } from "./app_shared_text_colors_on_dark_set.mjs";
-import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
 import { app_shared_button_numbered } from "./app_shared_button_numbered.mjs";
+import { property_get } from "./property_get.mjs";
+import { emoji_check } from "./emoji_check.mjs";
 import { html_span_text } from "./html_span_text.mjs";
+import { emoji_point_right } from "./emoji_point_right.mjs";
+import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_color_progress_next } from "./app_shared_color_progress_next.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
-import { emoji_point_right } from "./emoji_point_right.mjs";
-import { emoji_check } from "./emoji_check.mjs";
-import { not } from "./not.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_text_colors_on_dark_set } from "./app_shared_text_colors_on_dark_set.mjs";
+import { app_shared_color_progress_later } from "./app_shared_color_progress_later.mjs";
 export function app_shared_button_numbered_progress(
   root,
   completed,
-  completed_previous,
+  completed_all_previous,
   index,
   lambda,
 ) {
-  "a numbered list row that says where the learner is: a check and green once it is finished, a pointing hand and the strong colour on the first unfinished row whose predecessor is finished, and the quiet colour on everything else. Shared, so every app's list of things to work through reads the same way";
+  "a numbered list row that says where the learner is: a check and green once it is finished, a pointing hand and the strong colour on the first unfinished row with nothing unfinished above it, and the quiet colour on everything else. Shared, so every app's list of things to work through reads the same way";
+  "WHAT IS ASKED IS WHETHER EVERY ROW ABOVE IS FINISHED, not merely the one immediately above, and that is what makes EXACTLY ONE row in a list wear the hand: the lowest-numbered unfinished one. A learner who finished a row out of order - marked it done by hand, or worked ahead - would otherwise open a second run of pointed-at rows below it, and two rows both saying 'go here next' say neither.";
+  "It hands back the answer to carry to the NEXT row, and whether this row is the one to go to next, so that BOTH halves of that rule live here. Every list drawing these rows had been writing one of them again for itself, and a copy is free to drift: one list carried the wrong fact for years and wore two hands, and another worked the pointing out a second time beside the row that had already worked it out.";
   "It hands back everything the plain numbered button did rather than the title alone. A caller that has more to do to the row - a gap above it, holding on to it to scroll back to it later - was otherwise left unable to reach the button it had just made, and would have had to build its own row and lose all of this.";
-  let choose_this_next = not(completed) && completed_previous;
+  let choose_this_next = not(completed) && completed_all_previous;
+  let completed_all_previous_next = completed && completed_all_previous;
   let r = app_shared_button_numbered(root, index, lambda, true);
   let marker_slot = property_get(r, "marker");
   let button = property_get(r, "button");
@@ -49,5 +52,10 @@ export function app_shared_button_numbered_progress(
       html_style_background_color_set(button, later);
     }
   }
-  return r;
+  let result = {
+    ...r,
+    choose_this_next,
+    completed_all_previous_next,
+  };
+  return result;
 }
