@@ -2275,6 +2275,7 @@
       "Bash(node scripts/ai.mjs audio_offset_scan:*)",
       "Bash(node scripts/ai.mjs audio_region_balance:*)",
       "Bash(node scripts/ai.mjs video_difference_level:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_chapters_verse_marks_underdrawn_gate_run:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -4450,6 +4451,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args audio_offset_scan:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args audio_region_balance:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args video_difference_level:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapters_verse_marks_underdrawn_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -6624,6 +6626,7 @@
       "Bash(node scripts/aig.mjs audio_offset_scan:*)",
       "Bash(node scripts/aig.mjs audio_region_balance:*)",
       "Bash(node scripts/aig.mjs video_difference_level:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_chapters_verse_marks_underdrawn_gate_run:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -8798,7 +8801,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args audio_difference_level:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args audio_offset_scan:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args audio_region_balance:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args video_difference_level:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args video_difference_level:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapters_verse_marks_underdrawn_gate_run:*)"
     ],
     "defaultMode": "acceptEdits"
   },
