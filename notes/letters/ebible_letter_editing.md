@@ -10,7 +10,9 @@ So the rule is one line long: **if a reader at eBible.org should not see it, it 
 
 Every item was checked against the downloaded files. Re-check before sending if the downloads have been refreshed since.
 
-**Each item is mentioned once, ever.** `data/given/ebible_letter_accounted.json` says what has been said and what was judged no fault. `ebible_letter_unaccounted_names` and `ebible_verse_marks_gaps_unexplained` answer what neither covers; both are empty as of 2026-08-22, so the letter is the whole of what is outstanding.
+**Each item is mentioned once, ever.** `data/given/ebible_letter_accounted.json` says what has been said and what was judged no fault. `ebible_letter_unaccounted_names` and `ebible_verse_marks_gaps_unexplained` answer what neither covers; both were empty on 2026-08-27, after the letter went, so nothing is outstanding and a second letter waits on fresh downloads.
+
+That record is held by `ebible_letter_accounted_gate_run`: it must still parse as JSON, and still be laid out at the one-space width `ebible_letter_accounted_spaces` names. Both halves are failures that already happened here and neither went red anywhere.
 
 **Three of the eleven items are in no record at all**, because the record only holds chapters where the verse marks and the spoken lines disagree, and these are not that shape: item 2 (bgg Matthew with numbers and no words), item 5 (the apyNT copyright page), item 9 (engbsb 'A Psalms'). Item 1 is recorded separately, in the JSON the letter links. Anyone writing the next letter has to read this paragraph, because the record alone will offer those three again.
 
