@@ -57,9 +57,10 @@ export async function bible_glyph_chapters_language_gate_run() {
       });
     }
   }
+  let f_name = fn_name("bible_glyph_chapter_bands_write");
   let hint_short = text_combine_multiple([
     "these reveal languages are short of chapters the picture Bible has already written, so a reader of that language meets those verses with no translation band at all - the whole repair for a chapter that was just authored is one run of ",
-    fn_name("bible_glyph_chapter_bands_write"),
+    f_name,
     " with the code of that chapter, which refetches every reveal language and writes the Rosetta band beside them",
   ]);
   list_empty_is_assert_json(short, {
