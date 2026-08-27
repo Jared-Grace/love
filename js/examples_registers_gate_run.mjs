@@ -6,7 +6,7 @@ export async function examples_registers_gate_run() {
   "It is the same silence the other example gates were built against, one level up: those ask whether every example is placed and described, this asks whether everything the corpus is allowed to reach is actually reached.";
   let unexampled = await examples_registers_unexampled();
   list_empty_is_assert_json(unexampled, {
-    hint: "these are listed as addresses or verbs an example may name but no example names them, so nothing checks them — would you like to write an example for each, or take the ones that cannot be shown back off the list?",
+    hint: text_combine_multiple(["these are listed as addresses or verbs an example may name but no example names them, so nothing checks them - draft each missing example under scripts/temp and promote it with ", fn_name("example_new_from_temp"), ", or take the ones that cannot be shown back off the list"]),
   });
   let r = {
     unexampled,
