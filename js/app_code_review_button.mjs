@@ -11,7 +11,7 @@ import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs
 export function app_code_review_button(parent, label, on_click, complete) {
   "$plain complete";
   "a milestone-styled review checkpoint button, distinct from the lesson buttons - and painted as finished once the learner has been all the way through it";
-  "A finished one takes the same green a finished lesson takes and wears the same check, so one glance down the list reads the same whichever kind of row it lands on. What it does NOT keep is the white words: those are there to be read against the deep blue, and white on that green cannot be read at all.";
+  "A finished one turns green and wears the same check a finished lesson wears, so one glance down the list reads the same whichever kind of row it lands on. It is a DEEP green rather than the lesson's light one, standing to that light green exactly as its own deep blue stands to the pale blue of a lesson not yet reached - so the row keeps saying milestone while it says finished. Deep both ways means the white words stay white both ways.";
   "Both looks are chosen here rather than painted over from outside, because there is one place that knows what a review button is and a caller reaching in to repaint half of it is a caller that has to be told every time the other half changes.";
   arguments_assert(arguments, 4);
   let prefix = "Review ";
