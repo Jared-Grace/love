@@ -292,6 +292,36 @@ export function usfm_chapters_verses_cases() {
       ],
       why: "A HEADING IN AN ALIGNED BIBLE IS NOT ONE LINE, copied from the shape the Song of Songs arrives in. The aligning tool writes one word to a line, so the words of a heading come as several lines and only the first of them wears the heading mark. Read as lines the heading is one word wide, and the rest of its words stay where they fell, at the head of the verse below, reading as scripture - thirty-five headings arrived that way and each left its first word behind as the whole heading. The lines that carry on the one above are put back onto it before any heading is looked for, and what says a line carries on is that it opens with a mark that lives inside a line, or with no mark at all",
     },
+    {
+      usfm: '\\c 1\n\\v 1 \\w This|x-occurrence="1"\\w* \\w is|x-occurrence="1"\\w* \\w King|x-occurrence="1"\\w* \\w Solomon|x-occurrence="1"\\w*\\w ’|x-occurrence="1"\\w*\\w s|x-occurrence="1"\\w* \\w song|x-occurrence="1"\\w*\\zaln-e\\*.\n',
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "This is King Solomon’s song.",
+            },
+          ],
+        },
+      ],
+      why: "an aligner counts a possessive as three words, so the name, the apostrophe and the s each arrive wearing their own mark and the marking falls between them. Taking a mark out leaves a hole, and a hole between a letter and an apostrophe was never a space anybody typed - shut it, or the bible reads Solomon ’ s throughout",
+    },
+    {
+      usfm: "\\c 1\n\\v 1 ከዚያም ሳሙኤል፥”የአማሌቃውያንን አምጡልኝ“ አለ።\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "ከዚያም ሳሙኤል፥”የአማሌቃውያንን አምጡልኝ“ አለ።",
+            },
+          ],
+        },
+      ],
+      why: "THE SPACE THE TRANSLATOR TYPED STAYS. This language closes a quotation with the mark english opens one with, so a rule that shuts up the space after every opening mark eats a real space and joins two words into one. The two holes are told apart by where they came from rather than by what stands beside them: only the ones the mark removal itself made are shut, and no mark was removed anywhere in this verse",
+    },
   ];
   return cases;
 }
