@@ -5,10 +5,7 @@ import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_p_text } from "./html_p_text.mjs";
-import { app_shared_dev_overlay_context } from "./app_shared_dev_overlay_context.mjs";
-import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs";
 import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { html_scroll_tail_height } from "./html_scroll_tail_height.mjs";
 export function app_shared_dev_overlay(title_text) {
@@ -18,6 +15,8 @@ export function app_shared_dev_overlay(title_text) {
   ("that tail is a whole browser bar tall, not one line - #characters was STILL cut off at the bottom on a phone after the visible height went in. A line of breathing room only helps if the panel's own bottom is on the screen, and a height that tracks the bar cannot promise that: the bar comes and goes, and the height it is asked for is answered once. So the content carries the bar's own height as tail (",
     fn_name("html_scroll_tail_height"),
     "), and then the last row can be scrolled clear of the bar wherever the bar happens to be. On a desktop the two viewport heights are the same number, so the tail is exactly the one line it always was.");
+  ("THE PAIR OF BUTTONS THAT SIZE THE TEXT IS NOT HERE, it is one layer up in the twin that adds a status line, and where it sits was decided by MEASUREMENT rather than by taste. Put here it reaches every dev screen, and it cost the sandbox's bundle eight and a half KiB - a hundred and forty seven functions of storage, button styling and reader language - which took a page with a thirty two KiB ceiling from seven hundred bytes over to nine thousand over.");
+  ("The layer up is the right home anyway, which is what makes this a fix rather than a retreat. The screens that reach for it are the two REVIEW SHEETS, the ones somebody sits and reads for an hour. The screens that would have paid for it here are DIRECTORIES - a list of routes, a list of previews - which are looked at for as long as it takes to find the row you came for.");
   let div = html_body_div();
   html_style_assign(div, {
     position: "fixed",
@@ -44,16 +43,6 @@ export function app_shared_dev_overlay(title_text) {
     "text-align": "center",
     "font-weight": "bold",
   });
-  ("EVERY DEV SCREEN OFFERS THE PAIR OF BUTTONS THAT SIZE ITS TEXT, and it is offered here so that a bench cannot be built without it. Three settings screens in the whole repo carried this control, and a dev bench has no settings screen to put it on - so the review sheets, which are the screens somebody sits and READS for an hour, were the ones with no way to make the words bigger.");
-  ("the size is put on before the buttons are drawn, so the size chosen last time is the size the panel opens at. A control that only takes effect while it is being pressed is not a setting.");
-  let context = app_shared_dev_overlay_context();
-  app_shared_font_size_refresh(context);
-  let controls = html_div(div);
-  html_style_assign(controls, {
-    display: "flex",
-    "justify-content": "center",
-  });
-  app_shared_font_size_buttons(controls, context);
   ("the cards go in a COLUMN of their own, capped and centred, so a wide screen reads as a page down the middle instead of one card stretched the whole way across. the panel above keeps the scrolling and the background; this holds the content");
   let column = html_div(div);
   html_style_assign(column, {
