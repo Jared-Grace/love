@@ -22,7 +22,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 34,
-      note: "the sceptre is thick, has a plain round ball, and stops halfway up the throne's back. The field came back black instead of cobalt - the version before this one had the cobalt and a needle-thin sceptre.",
+      note: "no, it is not a traditional pairing - a sceptre belongs in the right hand, and a throne's own right is the left as you look at it. So it stands upright at the left of the back now rather than down the middle, and the field behind is cobalt. The band across the seat came back pale blue, which is outside the eight.",
     },
     {
       n: 36,
