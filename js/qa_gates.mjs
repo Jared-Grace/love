@@ -426,6 +426,7 @@ import { app_shared_game_map_pad_check } from "./app_shared_game_map_pad_check.m
 import { app_g_day_blocked_check } from "./app_g_day_blocked_check.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
+  let spelled = fn_name("midi_chords_recover_gate_run");
   let gates = [
     guard_gate_run,
     memory_hook_gate_run,
@@ -853,6 +854,7 @@ export function qa_gates() {
     ebible_upload_doors_commercial_gate_run,
     beats_seconds_cases_gate_run,
     ffmpeg_stats_numbers_cases_gate_run,
+    spelled,
   ];
   return gates;
 }
