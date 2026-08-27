@@ -27,6 +27,11 @@ export function g_arc_style() {
       why: "a step nobody takes aloud is a step the player takes silently or not at all, and the player is somebody who has never read the Bible. The player also cannot take it aloud: they never explain, and are not meant to - their whole utterance is the passage they chose. So the after is the only place a step can be said, and an empty after on a turn that had one is the step going missing rather than the person carrying straight on. It also keeps the connecting with somebody entitled to do it: a person granting a point has been changed by the passage, whereas a player explaining the passage has done that person's thinking for them.",
       from: "raised by the human on 1JN01, on the turn asking why a death of His would do anything about my sin, answered by 1 John 1:7 and its blood that cleanses - with an empty after. First written as a rule about a DIFFERENT WORD and corrected by the human on the spot: a different form of the same root is no step at all, so the thing being counted is inferences and not words. The two turns of the same arc that DO carry an after both already work this way - Confess. Not pay. off 1 John 1:9, and No darkness at all. off 1 John 1:5 - so the shape was there and the turn had simply skipped it.",
     },
+    {
+      rule: "A WORD THE PASSAGE OWNS IS USED IN THE PASSAGE'S SENSE AND IN NO OTHER SENSE ANYWHERE IN THE ARC. Where the everyday sense is what the person means - dark for not knowing, dark for gone silent on somebody - a different word is used for it. An idiom built on such a word is out for the same reason.",
+      why: "the turn rests on the person picking the passage's word up, and the pick-up only lands if the word means one thing. A second job for it elsewhere makes the echo read as a pun, and the reader cannot tell which sense was meant. An idiom is worse than a second sense: it carries a meaning the verse never had, and it is the first thing to break when the arc is translated.",
+      from: "found by reading the three written 1JN01 arcs against the four rules above. Dark was doing three jobs across all three people - the moral darkness of 1 John 1:5, in the dark about Him for not knowing, and go dark on me for going silent - and twice as a bare noun besides, which is the rule above it failing in the same word.",
+    },
   ];
   return rules;
 }
