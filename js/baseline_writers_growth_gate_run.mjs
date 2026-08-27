@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { baseline_writers_growth_unguarded } from "./baseline_writers_growth_unguarded.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function baseline_writers_growth_gate_run() {
@@ -6,8 +8,15 @@ export async function baseline_writers_growth_gate_run() {
   "So the check is on the shape of the family rather than on the four names: a writer added tomorrow is asked the same question without anybody remembering to add it here.";
   let offenders = await baseline_writers_growth_unguarded();
   console.log("ratchet writers that cannot refuse growth: " + offenders.length);
+  let f_name = fn_name("baseline_growth_guarded_is");
+  let f_name2 = fn_name("baseline_writers_growth_exempt");
   list_empty_is_assert_json(offenders, {
-    hint: text_combine_multiple(["each of these can record something its file did not already hold, so the ratchet turns both ways and the rewrite gets reached for at exactly the moment the gate goes red - import one of the growth asserts ", fn_name("baseline_growth_guarded_is"), " counts as a refusal and call it before writing, or, if growing really is honest here, name the writer with its reason in ", fn_name("baseline_writers_growth_exempt")]),
+    hint: text_combine_multiple([
+      "each of these can record something its file did not already hold, so the ratchet turns both ways and the rewrite gets reached for at exactly the moment the gate goes red - import one of the growth asserts ",
+      f_name,
+      " counts as a refusal and call it before writing, or, if growing really is honest here, name the writer with its reason in ",
+      f_name2,
+    ]),
     offenders,
   });
   let r = {
