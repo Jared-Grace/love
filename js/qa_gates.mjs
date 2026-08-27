@@ -857,6 +857,7 @@ export function qa_gates() {
     ffmpeg_stats_numbers_cases_gate_run,
     midi_chords_recover_gate_run,
     sword_markup_removed_cases_gate_run,
+    firebase_hosting_ignore_gate_run,
   ];
   return gates;
 }
