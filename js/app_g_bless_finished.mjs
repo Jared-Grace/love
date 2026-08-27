@@ -20,8 +20,12 @@ export async function app_g_bless_finished(r, tiles, line) {
   ("screen - a prayer at the household rung covers a house the player is standing across");
   ("the street from, and a prayer that finishes a building lights ground behind them.");
   ("Lighting something nobody is looking at is the same as not lighting it.");
-  ("Then the ground goes white, then a light opens over it and spreads away, and only as");
-  ("that light fades does the house underneath come back - now warm, and staying warm.");
+  ("Then the ground goes white, then the house lights up in its own shape and holds still");
+  ("while a soft round light opens out of it and runs off the edges of the screen. The");
+  ("shape and the spreading are two things on purpose: a lit house says WHICH house, and a");
+  ("house-shaped thing swelling would read as a rectangle being inflated rather than as a");
+  ("light. Only as all of it fades does the house underneath come back - now warm, and");
+  ("staying warm.");
   ("That last part is the whole point of the sequence rather than decoration on it. The");
   ("player is being handed a NEW thing to recognise, and the way to hand somebody a new");
   ("mark is to make them watch it arrive once. Every finished house they see after this");
