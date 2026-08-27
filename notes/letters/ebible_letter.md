@@ -10,6 +10,8 @@ The record is keyed by chapter, not by item number, so items here can be reorder
 
 **No greeting, no sign-off, no preamble.** Every line is a fault, its evidence, or a possible correction. Each heading names the versions affected, or their count where there are too many to name.
 
+**Every item says which pages it affects, and where on them.** Name the chapters where they can be named, give their count where they cannot, and link a JSON file where the count is too large to read — item 1 does that. Give the verse number too, unless the fault is a whole chapter or a superscription, which sits above verse 1 and carries no number. The test is that a reader can go straight to each page without asking us anything.
+
 **"possible correction", never "correction".** Two reasons, and the first is the weaker one: it protects the writer if the writer is the one who is wrong. The second is why it stays even when we are certain — "possible" asks what he thinks and lets him reach the answer himself, where the bare word says *this is the truth, I already know it, and disagreeing makes you wrong.* Paul writes with authority and does not hedge, so this is not absolute; it is not ours to claim here.
 
 ---
@@ -94,13 +96,15 @@ The two englxxup editions also disagree about where that material lives. `englxx
 
 Not part of this item: Proverbs 31:1–9 appearing in chapter 24. We checked, and that is the Septuagint's own order — eng-Brenton files it identically.
 
-**9. A heading reads 'A Psalms'.** engbsb.
+**9. A heading reads 'A Psalms'.** engbsb, Psalm 3.
 
 url: https://ebible.org/engbsb/PSA003.htm
 
 quote: `<div class='d'>A Psalms of David, when he fled from his son Absalom. </div>`
 
-possible correction: 'A Psalm of David', which is what the Berean Standard Bible itself reads. Forty-nine headings in the book begin 'A Psalm'. PSA000.htm says 'A Psalms' too, so the two pages agree with each other and differ from the rest of the book and from the source.
+possible correction: 'A Psalm of David', which is what the Berean Standard Bible itself reads. The book carries 116 headings; 54 of them read 'A Psalm' and this is the only one that reads 'A Psalms'. It is a superscription, above verse 1, so no verse number carries it.
+
+Two pages and no others: PSA003.htm, and https://ebible.org/engbsb/PSA000.htm, the book index, which repeats the same words and links them to `PSA003.htm#V0`. So the two agree with each other and differ from the rest of the book and from the source.
 
 **10. A verse marker is missing; the words are there, so a link to that verse lands nowhere.** 13 versions.
 
