@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 16,
+      kept: 19,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 31,
+      kept: 34,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 19,
+      kept: 21,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",

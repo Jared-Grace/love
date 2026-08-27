@@ -34,8 +34,8 @@ export async function bible_audio_verses_stale_report() {
         );
         return r;
       }
-      let report = await catch_null_async(lambda);
-      let missing = equal(report, null);
+      let chapter_report = await catch_null_async(lambda);
+      let missing = equal(chapter_report, null);
       if (missing) {
         list_add(chapters_unreadable, {
           bible_folder,
@@ -43,9 +43,9 @@ export async function bible_audio_verses_stale_report() {
         });
         return;
       }
-      let comparable = property_get(report, "comparable");
+      let comparable = property_get(chapter_report, "comparable");
       if (not(comparable)) {
-        let reason = property_get(report, "reason");
+        let reason = property_get(chapter_report, "reason");
         list_add(chapters_uncomparable, {
           bible_folder,
           chapter_code,
@@ -53,7 +53,7 @@ export async function bible_audio_verses_stale_report() {
         });
         return;
       }
-      let stale = property_get(report, "stale");
+      let stale = property_get(chapter_report, "stale");
       let count = stale.length;
       if (equal(count, 0)) {
         chapters_clean = add(chapters_clean, 1);
