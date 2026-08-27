@@ -59,7 +59,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
   }
   let folder = folder_public_absolute();
   let deleted = await folder_app_stale_delete(folder, app_name, file_names);
-  let hold = folder_public_root_noting_clear();
+  folder_public_root_noting_clear();
   let r = {
     app: app_name,
     restored,
