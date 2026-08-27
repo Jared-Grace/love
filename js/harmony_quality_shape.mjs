@@ -33,6 +33,13 @@ export function harmony_quality_shape(quality) {
     };
     return r4;
   }
+  if (equal(quality, "minor_seventh")) {
+    let r7 = {
+      steps_above: [0, 3, 7, 10],
+      suffix: "m7"
+    };
+    return r7;
+  }
   if (equal(quality, "suspended_fourth")) {
     let r5 = {
       steps_above: [0, 5, 7],
