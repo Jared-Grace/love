@@ -6,9 +6,13 @@ So the rule is one line long: **if a reader at eBible.org should not see it, it 
 
 ## State
 
+**The first letter went on 2026-08-27**, all eleven items. What actually left is `ebible_letter_sent.txt` — the letter with a short preamble added saying the faults were found by Claude Code, the "found by a free Bible reading app" line taken out, and the method note at the end dropped. `ebible_letter.md` stays the source for the next one.
+
 Every item was checked against the downloaded files. Re-check before sending if the downloads have been refreshed since.
 
 **Each item is mentioned once, ever.** `data/given/ebible_letter_accounted.json` says what has been said and what was judged no fault. `ebible_letter_unaccounted_names` and `ebible_verse_marks_gaps_unexplained` answer what neither covers; both are empty as of 2026-08-22, so the letter is the whole of what is outstanding.
+
+**Three of the eleven items are in no record at all**, because the record only holds chapters where the verse marks and the spoken lines disagree, and these are not that shape: item 2 (bgg Matthew with numbers and no words), item 5 (the apyNT copyright page), item 9 (engbsb 'A Psalms'). Item 1 is recorded separately, in the JSON the letter links. Anyone writing the next letter has to read this paragraph, because the record alone will offer those three again.
 
 The record is keyed by chapter, not by item number, so items in the letter can be reordered freely.
 
@@ -20,8 +24,8 @@ The record is keyed by chapter, not by item number, so items in the letter can b
 
 ## On sending
 
-1. Copy `ebible_letter.md` to `notes/letters/sent/<date>.md`.
-2. Change every `in the unsent draft letter` in the record to `sent <date>`.
+1. Save what actually went as `ebible_letter_sent.txt` — the sent copy, not the source, since the two differ by whatever was changed at the last moment.
+2. Run `ebible_letter_sent_mark <date>`. It turns every chapter waiting in a draft into one sent on that day, and refuses when it finds none waiting, which is what asking twice looks like.
 3. Re-run `ebible_verse_marks_displaced_letter_write` so the linked JSON matches what was sent.
 
 ## Rules the letter is written to
