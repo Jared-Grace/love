@@ -1,3 +1,5 @@
+import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
+import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
 import { folder_public_absolute } from "./folder_public_absolute.mjs";
 import { firebase_prod_app_live_sent_for_names } from "./firebase_prod_app_live_sent_for_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -34,6 +36,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     return none;
   }
   let file_names = await firebase_prod_app_live_sent_for_names(app_name, noted);
+  let hold = folder_public_root_noting_set(app_name2);
   let restored = [];
   let unchanged = [];
   let moved = [];
@@ -56,6 +59,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
   }
   let folder = folder_public_absolute();
   let deleted = await folder_app_stale_delete(folder, app_name, file_names);
+  let hold2 = folder_public_root_noting_clear();
   let r = {
     app: app_name,
     restored,
