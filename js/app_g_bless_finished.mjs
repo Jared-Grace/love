@@ -15,7 +15,7 @@ export async function app_g_bless_finished(r, tiles, line) {
   arguments_assert(arguments, 3);
   ("What the street does when a prayer finishes a whole place off: it looks at the place,");
   ("lights it, and then says what happened.");
-  ("Five moments in a fixed order, and the order is the argument. The camera goes first,");
+  ("The moments come in a fixed order, and the order is the argument. The camera goes first,");
   ("because everything after it is about a patch of ground the player may not even have on");
   ("screen - a prayer at the household rung covers a house the player is standing across");
   ("the street from, and a prayer that finishes a building lights ground behind them.");
