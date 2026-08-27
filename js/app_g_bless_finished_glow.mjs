@@ -4,7 +4,6 @@ import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_max } from "./list_max.mjs";
 import { g_z } from "./g_z.mjs";
@@ -13,10 +12,10 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { each } from "./each.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
-export function app_g_bless_finished_glow(div_map, tiles, middle) {
-  arguments_assert(arguments, 3);
+export function app_g_bless_finished_glow(div_map, tiles) {
+  arguments_assert(arguments, 2);
   ("A light in the shape of the ground that has just been prayed for: the squares of the");
-  ("house themselves come up gold and burn, rather than a circle being laid over them.");
+  ("house themselves come up gold and burn, exactly where they are.");
   ("The shape is the message. A round light says a light happened somewhere near here; the");
   ("outline of the house says THIS house, and the player has just spent their prayer on a");
   ("person who lives in it. Every square that was counted is lit and nothing else is, so");
@@ -30,17 +29,12 @@ export function app_g_bless_finished_glow(div_map, tiles, middle) {
   ("and a house would come out with bright lines ruled across the middle of it. Put on the");
   ("group, the light follows the outline of the whole patch, which is the only edge there");
   ("really is.");
-  ("It opens and then keeps opening as it goes, rather than arriving whole. A light that");
-  ("arrives at full size reads as a panel opening and a light that opens outward reads as");
-  ("something happening - and the player is being told that a prayer reached further than");
-  ("the person it was said over, which is that same shape in words.");
-  ("It grows only a little, because the shape is already the right size. Blown up the way");
-  ("a round light could be, the outline stops being the house and becomes a blot, and the");
-  ("one thing this is for is lost.");
-  ("The growth is a scale about the middle of the patch, so the browser can do it on the");
-  ("graphics card without laying the page out again. This page holds a whole street of");
-  ("moving people, and laid out again on every frame the crowd stutters while the light");
-  ("opens.");
+  ("It does NOT grow, and that is the whole correction. A house has corners, and a shape");
+  ("with corners swelling up the screen reads as a rectangle being inflated rather than as");
+  ("a light - the eye follows the straight edge and sees a panel, not a glow. The spread");
+  ("outward is real and it is wanted, but it belongs to the soft round light that opens");
+  ("beside this one, which has no edge for the eye to catch. This part simply arrives on");
+  ("the house and stays the size of the house.");
   ("It is laid on the ground layer, so people standing in the middle of it are lit from");
   ("behind and never painted over. A light that erased the people would be saying the");
   ("opposite of what this game is about.");
@@ -62,21 +56,6 @@ export function app_g_bless_finished_glow(div_map, tiles, middle) {
     ")",
   ]);
   let halo = text_combine_multiple([near, " ", far]);
-  let x = property_get(middle, "x");
-  let y = property_get(middle, "y");
-  let x_middle = add(x, 0.5);
-  let y_middle = add(y, 0.5);
-  let origin = text_combine_multiple([
-    "calc(",
-    x_middle,
-    " * (",
-    size,
-    ")) calc(",
-    y_middle,
-    " * (",
-    size,
-    "))",
-  ]);
   function tile_y(tile) {
     let row = property_get(tile, "y");
     return row;
@@ -94,10 +73,8 @@ export function app_g_bless_finished_glow(div_map, tiles, middle) {
     height: "0",
     "pointer-events": "none",
     "z-index": depth,
-    "transform-origin": origin,
     filter: halo,
     opacity: "0",
-    transform: "scale(0.6)",
     transition: "none",
   });
   function tile_square(tile) {
@@ -111,8 +88,7 @@ export function app_g_bless_finished_glow(div_map, tiles, middle) {
   each(tiles, tile_square);
   html_reflow_force(glow);
   html_style_assign(glow, {
-    transition: "transform 0.34s ease-out, opacity 0.34s ease-out",
-    transform: "scale(1.08)",
+    transition: "opacity 0.34s ease-out",
     opacity: "0.95",
   });
   return glow;
