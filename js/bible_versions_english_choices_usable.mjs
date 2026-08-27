@@ -21,11 +21,13 @@ export async function bible_versions_english_choices_usable() {
   let both = list_concat(licences, door);
   let allowed = list_filter_property(both, "commercial", true);
   let withheld = bible_versions_english_choices_withheld();
-  let withheld_folders = list_map_property(withheld, bible_folder_key());
+  let property_name = bible_folder_key();
+  let withheld_folders = list_map_property(withheld, property_name);
   function offered_is(version) {
+    let property_name2 = bible_folder_key();
     let outside = property_in_list_not(
       version,
-      bible_folder_key(),
+      property_name2,
       withheld_folders,
     );
     return outside;
