@@ -28,6 +28,7 @@ export function app_g_bless_arrow_bob(parent, degrees) {
   let bob = html_div(spin);
   html_style_assign(bob, {
     display: "inline-block",
+    "line-height": "0",
   });
   let keyframe = app_g_bless_arrow_keyframe();
   let name_animation = app_g_bless_arrow_animation_name();
