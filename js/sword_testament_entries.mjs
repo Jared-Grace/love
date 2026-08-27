@@ -5,7 +5,7 @@ import { less_than } from "./less_than.mjs";
 import { sword_index_entry } from "./sword_index_entry.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
+import { undefined_is } from "./undefined_is.mjs";
 import { sword_block_bounds } from "./sword_block_bounds.mjs";
 import { add } from "./add.mjs";
 import { bytes_inflate } from "./bytes_inflate.mjs";
@@ -32,8 +32,8 @@ export async function sword_testament_entries(module_folder, testament) {
       continue;
     }
     let block = entry.block;
-    let b = property_has(held, block);
-    if (not(b)) {
+    let missing = undefined_is(held[block]);
+    if (missing) {
       let bounds = sword_block_bounds(blocks_bytes, block);
       let sum = add(bounds.offset, bounds.compressed);
       let compressed = text_bytes.subarray(bounds.offset, sum);
