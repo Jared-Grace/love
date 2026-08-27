@@ -6,6 +6,8 @@ import { bible_verses_reading_units } from "./bible_verses_reading_units.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_last } from "./list_last.mjs";
 import { each } from "./each.mjs";
 import { percent_one_decimal } from "./percent_one_decimal.mjs";
 export async function ebible_reading_units_report(bible_folder) {
@@ -13,6 +15,7 @@ export async function ebible_reading_units_report(bible_folder) {
   "How many pieces one whole bible comes to once its verses are gathered into what a reader or a singer may stop at, how many of those pieces are a single verse untouched, and which are the largest.";
   "★ IT PRICES THE CHANGE BEFORE THE CHANGE IS MADE. Gathering verses into pieces means a recording is no longer one file to a verse, and the question that decides whether that is worth doing is how many verses it actually moves. A share of one in eight sounds like a rewrite of everything until the pieces are counted and almost nine in ten turn out to be a single verse standing exactly where it stood.";
   "★ THE LARGEST PIECE IS A COST, NOT A FAULT. A genealogy gathered correctly is one long sentence and so one long piece, which is right for a recording that must not stop in the middle of a clause and wrong for a screen that must show the piece all at once. Reporting the largest is what lets that be decided per use rather than assumed once.";
+  "★ THE FIRST AND LAST VERSE ARE WORKED OUT HERE AND NOT CARRIED BY THE PIECE. A piece names every verse it holds, so a report that wants a range takes the two ends of that list. Storing the range instead would be storing less and claiming more, because a range covers verses no piece ever named.";
   arguments_assert(arguments, 1);
   let chapters = await ebible_version_chapters(bible_folder);
   let verses = 0;
@@ -27,7 +30,8 @@ export async function ebible_reading_units_report(bible_folder) {
     let pieces = bible_verses_reading_units(list);
     units = add(units, pieces.length);
     function piece_each(piece) {
-      let held = property_get(piece, "verses");
+      let numbers = property_get(piece, "verse_numbers");
+      let held = numbers.length;
       let one = equal(held, 1);
       if (one) {
         single = add(single, 1);
@@ -37,8 +41,8 @@ export async function ebible_reading_units_report(bible_folder) {
       if (greater_than(held, 5)) {
         list_add(largest, {
           chapter_code,
-          first_verse: property_get(piece, "first_verse"),
-          last_verse: property_get(piece, "last_verse"),
+          first_verse: list_first(numbers),
+          last_verse: list_last(numbers),
           verses: held,
         });
       }
