@@ -1,7 +1,7 @@
-import { folder_user } from "./folder_user.mjs";
+import { bible_audio_root_folder } from "./bible_audio_root_folder.mjs";
 import { path_join } from "./path_join.mjs";
 export function bible_audio_folder(bible_folder, chapter_code) {
-  let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
-  let f = folder_user(folder);
+  let root = bible_audio_root_folder();
+  let f = path_join([root, bible_folder, chapter_code]);
   return f;
 }
