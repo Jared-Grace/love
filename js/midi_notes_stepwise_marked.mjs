@@ -5,7 +5,9 @@ import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 export function midi_notes_stepwise_marked(notes) {
   "puts a run of notes in time order and marks each one that is reached by a step and left by a step";
-  "a note marked that way is passing through rather than being leant on so a scorer may forgive it for not belonging to the chord";
+  "a note marked that way is passing through rather than being leant on, so a scorer may take it as saying little about which chord is underneath";
+  "a note that repeats the one before it is not marked, even though nothing moved: a note held over from the chord before is the one thing a suspension is made of, so counting it as passing would forgive the very note that names the chord";
+  "the first note and the last note are marked by what stands beside them alone, since there is nothing on the other side to be reached from or left for";
   let ordered = notes.slice();
   function notes_earliest_first(one, two) {
     let difference = subtract(one.start, two.start);
@@ -22,11 +24,11 @@ export function midi_notes_stepwise_marked(notes) {
       ? ordered[index + 1].pitch
       : note_one.pitch;
     let n = subtract(note_one.pitch, before);
-    let a = abs(n);
-    let reached = less_than_equal(a, 2);
+    let came = abs(n);
     let n2 = subtract(after, note_one.pitch);
-    let a2 = abs(n2);
-    let left = less_than_equal(a2, 2);
+    let went = abs(n2);
+    let reached = greater_than(came, 0) && less_than_equal(came, 2);
+    let left = greater_than(went, 0) && less_than_equal(went, 2);
     let stepwise = reached && left;
     marked.push({
       pitch: note_one.pitch,
