@@ -1,5 +1,3 @@
-import { bible_glyph_word_gap_extra } from "./bible_glyph_word_gap_extra.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div_text } from "./html_div_text.mjs";
