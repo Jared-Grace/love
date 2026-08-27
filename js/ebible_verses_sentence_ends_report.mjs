@@ -10,9 +10,7 @@ import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { not } from "./not.mjs";
 import { each } from "./each.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { round } from "./round.mjs";
+import { percent_one_decimal } from "./percent_one_decimal.mjs";
 export async function ebible_verses_sentence_ends_report(bible_folder) {
   "$plain bible_folder";
   "How often a verse of one bible finishes the sentence it is in, counted over every verse of it, with the longest run of verses that finish no sentence and the longest run that leaves the reader mid-clause.";
@@ -97,16 +95,13 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
     tracker_break(fragment, chapter_code);
   }
   each(chapters, chapter_each);
-  let left = divide(closes, verses);
-  let n = multiply(left, 1000);
-  let top = round(n);
   let report = {
     bible_folder,
     verses,
     closes,
     pauses,
     continues,
-    closes_share: divide(top, 10),
+    closes_share: percent_one_decimal(closes, verses),
     runs_over_two: open.runs.length,
     longest: open.longest,
     fragment_runs_over_two: fragment.runs.length,
