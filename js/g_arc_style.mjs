@@ -20,6 +20,11 @@ export function g_arc_style() {
       why: "the arcs are translated, and a line resting on something local either goes wrong in translation or has to be rewritten per language. The Bible's own setting travels because it is ancient and shared; a modern local detail does not.",
       from: "given by the human as a standing instruction while reviewing word pictures and definitions",
     },
+    {
+      rule: "Where the passage answers the person in a DIFFERENT WORD than the one they used, the after may not be left empty. The after is where the person picks the passage's own word up and sets it beside theirs. A turn whose before says death and whose passage says blood, ending on an empty after, has left the join for the reader to make silently.",
+      why: "the player never explains, and is not meant to - their whole utterance is the passage they chose. So the after is the only place a join can be said aloud, and an empty one on a turn that needed it is the join going missing rather than the person carrying straight on. It also keeps the connecting to somebody who is entitled to do it: a person granting a point has been changed by the passage, whereas a player explaining the passage has done that person's thinking for them.",
+      from: "raised by the human on 1JN01, on the turn asking why a death of His would do anything about my sin, answered by 1 John 1:7 and its blood that cleanses - with an empty after. The two turns of the same arc that DO carry an after both already work this way: Confess. Not pay. off 1 John 1:9, and No darkness at all. off 1 John 1:5. So the shape was there and the turn had simply skipped it.",
+    },
   ];
   return rules;
 }
