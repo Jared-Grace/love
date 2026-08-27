@@ -1,133 +1,22 @@
 import { equal } from "./equal.mjs";
-export function harmony_key_degrees(mode) {
+import { harmony_key_degrees_hymn } from "./harmony_key_degrees_hymn.mjs";
+import { harmony_key_degrees_pop } from "./harmony_key_degrees_pop.mjs";
+import { error } from "./error.mjs";
+export function harmony_key_degrees(mode, style) {
   "lists the chords a key offers as steps above its tonic paired with a quality and with how far outside the plain key each one sits";
   "the plain scale chords sit at zero and a borrowed or a secondary chord sits further out so the scorer prefers the plain one unless the notes insist";
-  if (equal(mode, "major")) {
-    let r = [
-      {
-        step_above: 0,
-        quality: "major",
-        distance: 0,
-      },
-      {
-        step_above: 2,
-        quality: "minor",
-        distance: 0,
-      },
-      {
-        step_above: 4,
-        quality: "minor",
-        distance: 0.3,
-      },
-      {
-        step_above: 5,
-        quality: "major",
-        distance: 0,
-      },
-      {
-        step_above: 7,
-        quality: "major",
-        distance: 0,
-      },
-      {
-        step_above: 7,
-        quality: "seventh",
-        distance: 0.3,
-      },
-      {
-        step_above: 9,
-        quality: "minor",
-        distance: 0,
-      },
-      {
-        step_above: 11,
-        quality: "diminished",
-        distance: 0.6,
-      },
-      {
-        step_above: 2,
-        quality: "major",
-        distance: 1.5,
-      },
-      {
-        step_above: 4,
-        quality: "major",
-        distance: 1.8,
-      },
-      {
-        step_above: 9,
-        quality: "major",
-        distance: 1.8,
-      },
-      {
-        step_above: 0,
-        quality: "seventh",
-        distance: 1.5,
-      },
-      {
-        step_above: 5,
-        quality: "minor",
-        distance: 2,
-      },
-    ];
+  "which vocabulary is offered is asked for rather than worked out, because the same melody and the same bass line are harmonised differently by a chorale and by a modern worship song and nothing in the notes says which one is being written";
+  if (equal(style, "hymn")) {
+    let r = harmony_key_degrees_hymn(mode);
     return r;
   }
-  let r2 = [
-    {
-      step_above: 0,
-      quality: "minor",
-      distance: 0,
-    },
-    {
-      step_above: 2,
-      quality: "diminished",
-      distance: 0.6,
-    },
-    {
-      step_above: 3,
-      quality: "major",
-      distance: 0,
-    },
-    {
-      step_above: 5,
-      quality: "minor",
-      distance: 0,
-    },
-    {
-      step_above: 7,
-      quality: "major",
-      distance: 0,
-    },
-    {
-      step_above: 7,
-      quality: "seventh",
-      distance: 0.3,
-    },
-    {
-      step_above: 7,
-      quality: "minor",
-      distance: 0.8,
-    },
-    {
-      step_above: 8,
-      quality: "major",
-      distance: 0,
-    },
-    {
-      step_above: 10,
-      quality: "major",
-      distance: 0.3,
-    },
-    {
-      step_above: 11,
-      quality: "diminished",
-      distance: 0.6,
-    },
-    {
-      step_above: 0,
-      quality: "major",
-      distance: 2,
-    },
-  ];
-  return r2;
+  if (equal(style, "pop")) {
+    let r22 = harmony_key_degrees_pop(mode);
+    return r22;
+  }
+  error(
+    "no chord vocabulary is written here under the name " +
+      style +
+      " - the ones there are are hymn and pop",
+  );
 }
