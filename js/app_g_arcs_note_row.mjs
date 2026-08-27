@@ -7,7 +7,7 @@ import { app_shared_note_box } from "./app_shared_note_box.mjs";
 export function app_g_arcs_note_row(parent, bench, nickname, number, names) {
   "$plain nickname";
   "A box to write one note in and a press for each part of the turn above it, filing what is wrong with that turn of that person's arc.";
-  ("IT IS THE ADDRESS AND NOT THE BOX. Everything a reviewer touches here - the box, the row of presses, the refusal to file an empty one, the line that says what happened - is the same wherever a note is being filed, and lives in $fn ",
+  ("IT IS THE ADDRESS AND NOT THE BOX. Everything a reviewer touches here - the box, the row of presses, the refusal to file an empty one, the line that says what happened - is the same wherever a note is being filed, and lives in ",
     fn_name("app_shared_note_box"),
     ". What is left here is the only part that is about an arc: which chapter, which person, which turn, and which store takes it.");
   ("THE TURN NUMBER IS CLOSED OVER RATHER THAN PASSED THROUGH. The box hands back the part and the words and knows nothing else, so an address it never carries is an address it cannot get wrong.");
