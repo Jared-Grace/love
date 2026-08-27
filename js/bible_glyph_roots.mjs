@@ -1110,6 +1110,16 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "apostello",
+      gloss: "send, send out",
+      words: [
+        {
+          strong: "649",
+          glyph: "hand_sending",
+        },
+      ],
+    },
+    {
       root: "allelon",
       gloss: "one another, each other",
       words: [
