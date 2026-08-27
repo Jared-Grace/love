@@ -1,3 +1,4 @@
+import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
@@ -23,7 +24,7 @@ export function app_g_bless_edge_new(container_map) {
     "z-index": g_z("tint"),
     color: color,
     "font-size": font_size,
-    filter: "drop-shadow(0 0 3px rgba(0, 0, 0, 0.65))",
+    filter: app_g_bless_mark_edge_filter(),
     transform: "translate(-50%, -50%)",
     "pointer-events": "none",
     visibility: "hidden",

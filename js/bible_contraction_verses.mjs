@@ -24,15 +24,16 @@ export async function bible_contraction_verses(bible_folder) {
       let read = await ebible_chapter_verse_texts(bible_folder, chapter_code);
       let verse_list = property_get(read, "verses");
       function verse_each(verse) {
-        let words = property_get(verse, "text").match(/[A-Za-z]+n['’]t/g);
+        let pattern = new RegExp("[A-Za-z]+n['’]t", "g");
+        let words = property_get(verse, "text").match(pattern);
         if (not(words)) {
           return;
         }
-        let number = property_get(verse, "number");
+        let verse_number = property_get(verse, "verse_number");
         let text = property_get(verse, "text");
         found.push({
           chapter_code,
-          number,
+          verse_number,
           words,
           text,
         });
