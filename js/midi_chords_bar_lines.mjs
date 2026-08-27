@@ -14,7 +14,7 @@ export function midi_chords_bar_lines(chosen) {
       row = "bar " + bar_now + " |";
     }
     let doubt = one.settled ? "" : " (or " + one.instead + "?)";
-    row = row + " " + one.chord.name + doubt;
+    row = row + " " + one.name + doubt;
   }
   if (not_equal(row, "")) {
     lines.push(row);
