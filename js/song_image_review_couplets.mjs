@@ -26,7 +26,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 36,
-      note: "a truer vine - real curves, tendrils, crimson clusters. The field behind it is still white rather than cobalt; three attempts at fixing that gave a cross, blue grapes, and a three-tier split.",
+      note: "13's vine kept and widened to fill the window, a brown cross behind it, and cobalt behind both. The lowest band came back white. Two of the four draws were good; one came back a robed figure with a halo and was thrown out.",
     },
   ];
   return couplets;
