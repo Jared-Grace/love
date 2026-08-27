@@ -15,6 +15,7 @@ export function song_image_review_notes(parent, key) {
   "IT IS THE SAME BOX THE ARCS BENCH FILES ITS NOTES IN, and that is worth more than the lines it saves. A reviewer who has filed a note against a turn of somebody's arc already knows that the box refuses to file empty, that the press is the part and never the typing, and that the line underneath says whether it landed. Two boxes that behaved almost the same would have to be learnt twice and would drift apart on the third change.";
   "THE NOTES ALREADY THERE ARE SHOWN ABOVE THE BOX, because the commonest thing a second reader does is file again what the first one already filed.";
   "IT ASKS THE STORE THROUGH THE API rather than reading the file, because this is drawn in a browser and the store is on the disk the pictures were drawn on. That is also why the notes arrive after the page does: the picture is the thing being looked at and waiting on a note list to draw it would be the wrong way round.";
+  "the notes stand under the picture rather than over it, unlike the arcs bench where they sit above the box and under the turn. A turn is words and its notes are words, so a note above the box reads on from the thing it is about; a picture is not read at all, it is looked at, and a paragraph of notes between the words and the drawing would push the drawing off the screen the words are on.";
   arguments_assert(arguments, 2);
   let holder = html_div(parent);
   html_style_margin_top(holder, "12px");
