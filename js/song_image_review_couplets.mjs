@@ -10,7 +10,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "the mouth is white glass now and the rays reach far out past it, across the rock and into the sky. The stone is much larger, though still not quite as wide as the opening, and the bands behind the rock came back purple and crimson.",
+      note: "the rays now spring out of the white inside the mouth and run on past it unbroken, and the stone is as tall as the opening is tall. The stone came back with photographic grain over it, which the style forbids everywhere in the picture.",
     },
     {
       n: 26,
