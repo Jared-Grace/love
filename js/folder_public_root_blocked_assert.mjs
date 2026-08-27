@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { folder_public_root_hold } from "./folder_public_root_hold.mjs";
-import { folder_public_root_is } from "./folder_public_root_is.mjs";
+import { folder_public_root_repo_is } from "./folder_public_root_repo_is.mjs";
 import { folder_public_root_lock_name } from "./folder_public_root_lock_name.mjs";
 import { lock_held_is } from "./lock_held_is.mjs";
 import { not } from "./not.mjs";
@@ -14,7 +14,7 @@ export async function folder_public_root_blocked_assert(file_path) {
   "Nothing outside the top of that folder is even asked about, and that is what makes this free to run on every write in the repo. Working out which folder a path sits in costs no reading at all, and only a path that lands in the one folder that matters ever goes on to ask the disk whether the block is held.";
   "A run holding the block itself is let through, because it is the one the block was taken out for. Without that the copying would be refused by its own protection.";
   arguments_assert(arguments, 1);
-  let root = folder_public_root_is(file_path);
+  let root = await folder_public_root_repo_is(file_path);
   if (not(root)) {
     return;
   }
