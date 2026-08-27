@@ -1,4 +1,4 @@
-import { app_shared_button_screen_green_code_repaint } from "./app_shared_button_screen_green_code_repaint.mjs";
+import { app_shared_code_surfaces_green_paint } from "./app_shared_code_surfaces_green_paint.mjs";
 import { app_shared_button_font_color } from "./app_shared_button_font_color.mjs";
 import { app_shared_button_background } from "./app_shared_button_background.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -9,5 +9,5 @@ export function app_shared_button_screen_green_style_assign(component) {
     "background-color": app_shared_button_background(),
     color: app_shared_button_font_color(),
   });
-  app_shared_button_screen_green_code_repaint(component);
+  app_shared_code_surfaces_green_paint(component);
 }
