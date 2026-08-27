@@ -10,7 +10,7 @@ export async function bible_audio_chapter_aligned_is(
 ) {
   "$plain bible_folder";
   "$plain chapter_code";
-  "Whether the recording of one chapter on this disk is cut so that each piece of sound holds exactly one verse.";
+  "Whether the recording of one chapter on this disk is cut so that each piece of sound says exactly the words of the reading piece it stands for.";
   "★ A MISSING NOTE ANSWERS NO, AND THAT IS A READING RATHER THAN A GUESS. The note is written by the generator every time it records a chapter, so a folder without one was filled before the cutting was made to follow verses. There is no third state to be careful about: either the recording says where its verses are, or it cannot say, and a recording that cannot say is not one anything may index.";
   "★ IT ANSWERS ABOUT ONE RECORDING AND NEVER ABOUT THE CHAPTER. Two recordings of the same chapter cut it in different places, so the question only means anything beside the sound files it is asked about. That is why the note lives in the audio folder and why this reads it from there rather than working it out from the text.";
   arguments_assert(arguments, 2);

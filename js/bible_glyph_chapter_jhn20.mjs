@@ -8,7 +8,9 @@ export function bible_glyph_chapter_jhn20() {
   "NOT YET IS A COMPOUND WORD AND GETS NO MARK, AND IT HAPPENS TWICE. The ninth verse says they did not yet know the Scripture, which is oudepo and carries its own number, and the seventeenth says I have not yet ascended to the Father, which is oupo and carries another. The root table seats nothing on either, so the no-entry sign has no seated word to stand for in either place and both are written out in letters. This is the same shape as the no longer and the no one that the collision gate found in the seventeenth of John: English spells a compound and a simple word alike, and a reader cannot be told which negation a mark came from when the word it came from is not in the table.";
   "THE TWENTY-FIFTH VERSE HOLDS THE STRONGEST DENIAL IN THE CHAPTER AND NOT ONE NEGATION MARK. Thomas says ou me pisteuso, two Greek negatives making a single emphatic never, and drawing both would set the sign beside itself so that a picture reader sees one negation undo the other and gets the opposite of what Thomas said. The same verse opens with ean me, the unless particle, and English already carries that negation inside the word unless, so a sign there would read Unless I do NOT see. Both refusals are ones this Bible has already settled elsewhere, and the verse is the place where they both come due at once.";
   "THE HANDS ARE THE ARGUMENT OF THE LAST THIRD AND THE MARK IS THE SAME ONE EVERY TIME. He showed them His hands in the twentieth verse, Thomas demands to put his own hand into the side in the twenty-fifth, and in the twenty-seventh he is told to reach out his hand and put it there. The raised hand falls in all three and the Greek is cheir in all three, so the thing Thomas asks for and the thing he is handed are visibly one thing rather than three similar ones. A translation can only say hand three times; here the reader sees the same picture come back.";
-  "THE FOLLOW GROUP FALLS ONCE, IN THE SIXTH VERSE, AND IT IS DRAWN RATHER THAN AVOIDED. Simon Peter came FOLLOWING him, akoloutheo, which this alphabet spells as the walking figure twice over. That pair is on the standing list of groups that may have to be re-seated on a bought picture, and it would have been easy to write the word out and dodge the question. It is drawn because a group nobody uses cannot be measured, and if the re-seating is approved this is one of the places that gets rewritten - which is a cheap thing to do and a poor reason to leave the chapter thinner.";
+  "THE FOLLOW GROUP WAS DRAWN IN THE SIXTH VERSE AND THEN TAKEN BACK OUT, AND THIS CHAPTER IS THE ARGUMENT AGAINST IT. Simon Peter came FOLLOWING him, akoloutheo, which this alphabet spells as the walking figure said twice. It was drawn on the reasoning that a group nobody uses cannot be measured. Then the seventeenth verse of this same chapter turned out to hold a single walking figure, where Christ tells Mary to GO to His brothers, and that is poreuomai. So one chapter would have carried the figure once meaning go and the figure twice meaning follow, eleven verses apart, and a reader who has only the pictures has no way to read the pair as anything except the single sign said again. The word is written out and the chapter is one mark thinner for it.";
+  "AND THE COLLISION GATE SAID THE SAME THING FROM THE OTHER SIDE, WITHOUT READING THE CHAPTER AT ALL. The walking figure is seated on two roots already, peripateo and poreuomai, and the sixth verse holds neither of them, so the classifier could not decide which root the mark had come from and named it. Two instruments that share no reasoning arrived at one answer: the group is not readable while the mark it is built out of is already spent. That is the first time the pair and the bare mark have stood inside one chapter, and it is evidence for re-seating the follow group on a bought picture rather than against it - the standing decision is unchanged and this is one more case for it.";
+  "THE UNDERDRAWN GATE FOUND TWO ADVERBIAL KAI AND BOTH WERE REAL. The eighth verse says the other disciple ALSO went in and the fourteenth says she turned and saw Him standing there AND YET did not know Him, and English writes the first as also and the second as but, so neither looked like the joining word to an author reading English. Both are kai and both now carry the plus sign, which is the same repair the ninth of John made for the same reason. An author draws the word they see, and English is what hides this one.";
   let chapter = {
     chapter_code: "JHN20",
     reference: "John 20",
@@ -213,7 +215,7 @@ export function bible_glyph_chapter_jhn20() {
           "the",
           "tomb",
           "first,",
-          "also",
+          "$plus",
           "went",
           "in,",
           "$plus",
@@ -347,7 +349,8 @@ export function bible_glyph_chapter_jhn20() {
           "$cross",
           "standing",
           "there,",
-          "but",
+          "$plus",
+          "yet",
           "she",
           "did",
           "$no_entry",
