@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
@@ -38,7 +40,15 @@ export function bible_glyph_artwork_gate_run() {
   let none = list_empty_is(undecided);
   assert_json(none, {
     undecided,
-    hint: text_combine_multiple(["these glyphs have no artwork decision - ask ", fn_name("bible_glyph_artwork_names_search"), " what the set draws, then either record the name it draws each one under in ", fn_name("bible_glyph_artwork_names"), " or name it in ", fn_name("bible_glyph_artwork_absent"), " as one the set has no picture for"]),
+    hint: text_combine_multiple([
+      "these glyphs have no artwork decision - ask ",
+      fn_name("bible_glyph_artwork_names_search"),
+      " what the set draws, then either record the name it draws each one under in ",
+      fn_name("bible_glyph_artwork_names"),
+      " or name it in ",
+      fn_name("bible_glyph_artwork_absent"),
+      " as one the set has no picture for",
+    ]),
   });
   let r = {
     glyphs: glyphs.length,
