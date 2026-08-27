@@ -131,7 +131,7 @@ export function bible_glyph_chapter_jhn10() {
           "they",
           "will",
           "$no_entry",
-          "$walking+walking",
+          "follow",
           "at",
           "all;",
           "in",
