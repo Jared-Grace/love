@@ -40,8 +40,14 @@ export function song_image_review_row(parent, asked) {
   html_style_line_height(said, "1.5");
   html_text_set(said, asked.note);
   let holder = html_div(row);
-  html_style_margin_top(holder, "14px");
+  html_style_assign(holder, {
+    "max-width": "320px",
+    "margin-top": "14px",
+    "margin-left": "auto",
+    "margin-right": "auto",
+  });
   let picture = song_image_audit_picture(holder, drawn, gloss.kept);
   html_img_lazy_full_block(picture);
+  song_image_review_notes(row, drawn);
   return row;
 }
