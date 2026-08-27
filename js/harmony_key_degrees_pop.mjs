@@ -1,11 +1,12 @@
+import { equal } from "./equal.mjs";
 export function harmony_key_degrees_pop(mode) {
   "the chords a key offers when the harmony is the modern worship and pop kind, as steps above the tonic paired with a quality and with how far outside the plain key each one sits";
   "the plain scale chords are the whole vocabulary here and everything that leaves the key is pushed far enough out that it takes overwhelming evidence to be chosen, which is what was asked for: no chord out of key";
   "the suspended shapes are offered on the chords that carry them in this music, because a fourth held over the root is a sound this writing reaches for constantly and reading it as a different chord altogether is the mistake that would otherwise be made";
   "they are pushed out past the plain triads all the same, so a suspended chord is only chosen where the note that would say major or minor is genuinely absent";
   "the minor here is the plain natural one, so the raised leading note and everything built on it is treated as leaving the key";
-  if (mode === "major") {
-    return [
+  if (equal(mode, "major")) {
+    let r = [
       {
         step_above: 0,
         quality: "major",
@@ -102,8 +103,9 @@ export function harmony_key_degrees_pop(mode) {
         distance: 3,
       },
     ];
+    return r;
   }
-  return [
+  let r2 = [
     {
       step_above: 0,
       quality: "minor",
@@ -180,4 +182,5 @@ export function harmony_key_degrees_pop(mode) {
       distance: 3,
     },
   ];
+  return r2;
 }
