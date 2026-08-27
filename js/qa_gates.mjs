@@ -1,3 +1,5 @@
+import { ebible_letter_plain_text_gate_run } from "./ebible_letter_plain_text_gate_run.mjs";
+import { markdown_plain_text_cases_gate_run } from "./markdown_plain_text_cases_gate_run.mjs";
 import { bible_usfm_chapter_paragraphed_text_cases_gate_run } from "./bible_usfm_chapter_paragraphed_text_cases_gate_run.mjs";
 import { sword_book_codes_canon_assert } from "./sword_book_codes_canon_assert.mjs";
 import { firebase_hosting_ignore_gate_run } from "./firebase_hosting_ignore_gate_run.mjs";
@@ -863,6 +865,9 @@ export function qa_gates() {
     firebase_hosting_ignore_gate_run,
     sword_book_codes_canon_assert,
     bible_usfm_chapter_paragraphed_text_cases_gate_run,
+    markdown_plain_text_cases_gate_run,
+    ebible_letter_plain_text_gate_run,
+    ebible_letter_accounted_gate_run,
   ];
   return gates;
 }
