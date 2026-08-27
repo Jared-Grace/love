@@ -574,6 +574,10 @@ export function bible_glyph_roots() {
       gloss: "glory",
       words: [
         {
+          strong: "1392",
+          glyph: "star",
+        },
+        {
           strong: "1391",
           glyph: "star",
         },
