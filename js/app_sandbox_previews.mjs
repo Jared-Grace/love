@@ -58,11 +58,6 @@ export function app_sandbox_previews() {
     let r10 = m.app_code_review_preview;
     return r10;
   }
-  async function bless_finished_load() {
-    let m = await import("./app_g_bless_finished_preview.mjs");
-    let r12 = m.app_g_bless_finished_preview;
-    return r12;
-  }
   let previews = {
     bless_finished: bless_finished_load,
     code_review: code_review_load,

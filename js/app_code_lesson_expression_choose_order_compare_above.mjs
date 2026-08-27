@@ -1,4 +1,3 @@
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_comparing_a_comparison_recall } from "./app_code_lesson_expression_comparing_a_comparison_recall.mjs";
 import { app_code_lesson_expression_choose_order_compare_line_apart } from "./app_code_lesson_expression_choose_order_compare_line_apart.mjs";
@@ -6,10 +5,10 @@ import { app_code_lesson_expression_choose_order_compare_run } from "./app_code_
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_choose_order_compare_intro } from "./app_code_lesson_expression_choose_order_compare_intro.mjs";
 export function app_code_lesson_expression_choose_order_compare_above(root) {
-  function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
   ("what stands above the card: the word comparison put back in front of the learner, then one line of each shape this lesson asks about worked all the way through, then the one sentence saying what is different here");
   ("The same recall, run, hinge shape as the lesson before it - because a learner arriving here has just read that shape on the screen behind them. A run laid out a second way would be read as a second thing to learn, when the only new thing on this screen is what the operators ARE.");
+  ("THE PARALLEL MARK IS ON THE RUN RATHER THAN HERE. The rows this screen shares with the arithmetic screen are the run's rows, and they moved into the run when the second shape needed them too; what is left here is the ordering of the cards, which the arithmetic screen no longer matches - it works one line where this one works two. A mark left behind would have claimed a twin that had stopped being one.");
   ("The recall card is the one the comparison lessons already share, not a copy of it. This lesson leans on the word comparison in every line it draws, and a learner who met the word two lessons ago is owed it again; a second wording of it would leave the word taught twice, differently, on screens next door to each other.");
   ("BOTH SHAPES ARE WORKED, because the card below asks about both. The bank hands out a line with the comparison on the right and a line with it on the left, turn about, and the two are read by different rules: on the right the comparison is printed inside parentheses and they decide, on the left there are none and the ordinary rule for two operators decides. Measured 2026-08-27: only the bracketed line was worked, so a learner met a line like 4 === 6 !== true having read a rule about a mark that line does not carry.");
   ("The bracketed line is worked FIRST, for the reason the first question of the bank puts that shape first: the part that may be solved first is then not the leftmost thing on the line, so a learner following the run learns to read the line rather than the position. Reversing the two would teach position on the first line they ever see and take it away on the second.");
