@@ -1,3 +1,4 @@
+import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { usfm_markers_dropped } from "./usfm_markers_dropped.mjs";
@@ -58,7 +59,7 @@ export function usfm_marker_layout(marker) {
   if (stepped) {
     depth = list_index_of(digits, last);
   }
-  let indent = 2 * depth;
+  let indent = multiply(2, depth);
   let paragraph_markers = usfm_markers_paragraph();
   let paragraph = list_includes(paragraph_markers, marker);
   let kind = ternary(paragraph, "paragraph", "line");
