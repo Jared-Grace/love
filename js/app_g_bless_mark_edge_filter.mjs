@@ -27,12 +27,12 @@ export function app_g_bless_mark_edge_filter() {
   let rim = text_combine_multiple([
     "drop-shadow(0 0 calc((",
     size,
-    ") * 0.02) rgba(0, 0, 0, 0.95))",
+    ") * 0.035) rgba(0, 0, 0, 0.98))",
   ]);
   let halo = text_combine_multiple([
     "drop-shadow(0 0 calc((",
     size,
-    ") * 0.06) rgba(255, 255, 255, 0.85))",
+    ") * 0.09) rgba(255, 255, 255, 0.9))",
   ]);
   let filter = text_combine_multiple([rim, " ", rim, " ", halo]);
   return filter;

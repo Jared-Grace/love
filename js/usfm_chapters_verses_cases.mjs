@@ -195,23 +195,23 @@ export function usfm_chapters_verses_cases() {
       why: "the two headings a psalm writes - who it is by, and the letter of the alphabet the next stanza begins with. Both are marks about the poem rather than lines of it, and the letter is the one that shows the poetry marks beside it must not be swept the same way: the indent marks on either side of it carry the words of the psalm",
     },
     {
-      usfm: "\\c 3\n\\s1 Deliver Me, O LORD!\n\\r (\\ref 2 Samuel 15:13-29|2SA 15:13-29\\ref*)\n\\d \\v 1 A Psalm of David, when he fled from his son Absalom.\n\\q1\n\\v 2 O LORD, how my foes have increased!\n",
+      usfm: "\\c 3\n\\s1 Deliver Me, O LORD!\n\\r (\\ref 2 Samuel 15:13-29|2SA 15:13-29\\ref*)\n\\d \\v 1 A Psalm of David, when he fled from his son Absalom.\n\\b \n\\q1 O LORD, how my foes have increased!\n\\q2 How many rise up against me!\n\\q1 \\v 2 Many say of me,\n",
       chapters: [
         {
           chapter_number: "3",
           verses: [
             {
               verse_number: "1",
-              text: "A Psalm of David, when he fled from his son Absalom.",
+              text: "A Psalm of David, when he fled from his son Absalom. O LORD, how my foes have increased! How many rise up against me!",
             },
             {
               verse_number: "2",
-              text: "O LORD, how my foes have increased!",
+              text: "Many say of me,",
             },
           ],
         },
       ],
-      why: "THE ONE HEADING THAT IS ALSO SCRIPTURE. A hundred and seventeen psalms print the ascription as verse one, and write it that way - the heading mark and the verse mark stand on the same line, in that order. Taking the line whole because it opens with a heading mark takes verse one of every one of those psalms with it, and nothing counts what is missing. Only the mark comes away, and the verse standing on the same line stays",
+      why: "THE ONE HEADING THAT IS ALSO SCRIPTURE, copied from Psalm 3 as the publisher writes it. A hundred and seventeen psalms print the ascription as the opening of verse one, and write it with the heading mark and the verse mark on the same line, in that order. Taking the line whole because it opens with a heading mark takes verse one of every one of those psalms with it, and nothing counts what is missing. Only the mark comes away, and the verse standing on the same line stays - and it stays open, so the poetry lines beneath it belong to it too, up to the next verse mark",
     },
     {
       usfm: "\\c 1\n\\v 1 You must not go up on steps, lest your nakedness be exposed on it.’[’’]\n",
