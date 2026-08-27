@@ -9,14 +9,16 @@ import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { json_format_to_spaces } from "./json_format_to_spaces.mjs";
+import { file_overwrite } from "./file_overwrite.mjs";
 import { list_size } from "./list_size.mjs";
 export async function ebible_letter_sent_mark(sent_on) {
   "$plain sent_on";
   "Turns every chapter the record is holding as waiting in a draft letter into one that was sent, on the day it went.";
   "The record is what stops a chapter being reported to eBible twice, and it can only do that if it says which chapters have actually left. A chapter still reading as a draft after the letter went is offered again to whoever writes the next one, and the second letter then repeats the first.";
-  "One command over the whole record rather than an edit per chapter. The last letter carried seventy-nine of them, and seventy-nine hand edits is seventy-nine chances to leave one behind - the one left behind being exactly the chapter that gets written about twice.";
+  "One command over the whole record rather than an edit per chapter. The last letter carried seventy-eight of them, and seventy-eight hand edits is seventy-eight chances to leave one behind - the one left behind being exactly the chapter that gets written about twice.";
   "It refuses when it finds nothing waiting, because that is the shape of asking twice or of asking before a letter was written, and either way the day it was given is about to be recorded against a letter that did not go.";
+  "Written back at the one space the file is already kept at rather than at whatever a plain json writer picks, because this record is read and edited by hand. A rewrite at a different width turns a change of a few lines into a diff of the whole file, and the whole file is then what a peer has to read to see what was actually decided.";
   arguments_assert(arguments, 1);
   let draft = "in the unsent draft letter";
   let sent = list_join_space(["sent", sent_on]);
@@ -39,7 +41,8 @@ export async function ebible_letter_sent_mark(sent_on) {
     draft,
     sent,
   });
-  await file_overwrite_json(path, parsed);
+  let json = json_format_to_spaces(parsed, 1);
+  await file_overwrite(path, json);
   let count = list_size(marked);
   let r = {
     sent,

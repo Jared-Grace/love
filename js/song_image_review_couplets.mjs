@@ -26,7 +26,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 36,
-      note: "13's vine kept and widened to fill the window, a brown cross behind it, and cobalt behind both. The lowest band came back white. Two of the four draws were good; one came back a robed figure with a halo and was thrown out.",
+      note: "unchanged this round - no new note was left on it, so it stands as you last saw it: 13's vine widened to fill the window, a brown cross behind it, cobalt behind both, and the lowest band still white.",
     },
   ];
   return couplets;
