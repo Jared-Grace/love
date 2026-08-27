@@ -23,7 +23,7 @@ export async function bible_audio_verses_manifest_write(
   "★ EACH ROW ANSWERS FOR ITSELF, BECAUSE A COUNT THAT MATCHES IS NOT THE SAME AS A RECORDING THAT IS RIGHT. The note used to compare two numbers and call the whole chapter aligned when they agreed, which passes a chapter whose pieces are all present and all shifted, and passes a chapter where one piece is missing and one extra. Comparing the spoken words of a piece to the words of the unit it stands for catches both, and names the piece rather than the chapter.";
   "★ A NOTE THAT DID NOT LINE UP IS STILL WRITTEN, SAYING SO. A missing note and a note saying the recording is wrong look the same to a reader who only checks whether the file is there, so the failure is recorded rather than left as an absence.";
   "★ A ROW WITH NO UNIT BEHIND IT NAMES NO VERSES AT ALL. Where the engine cut more pieces than there are units, the extra pieces hold an empty list, which is the honest answer: nothing on the disk says which verse they belong to.";
-  arguments_assert(arguments, 3);
+  "★ THE NOTE IS OVERWRITTEN RATHER THAN WRITTEN ONCE, BECAUSE IT IS A READING OF THE DISK AND NOT A RECORD OF AN EVENT. Writing it fresh threw where one already stood, which meant the same recording could never be asked the question twice - and asking a folder of old recordings whether they still line up is the whole purpose of the command-line twin. Nothing is lost by replacing it: everything in it is derived from the sound files and the chapter, so the new reading is the same reading unless one of those changed.";\n  arguments_assert(arguments, 3);
   let chunks = await bible_audio_chunk_texts(bible_folder, chapter_code);
   let rows = [];
   let unmatched = [];
