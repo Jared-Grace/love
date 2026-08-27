@@ -1,0 +1,14 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_from_code_number } from "./text_from_code_number.mjs";
+export function bible_glyph_word_separator() {
+  "The character standing between two words of this picture Bible in plain text: one em space, which is as wide as the pictures either side of it.";
+  "THE GAP IS THE ONLY PUNCTUATION THIS WRITING SYSTEM HAS. Pictures touching are one word and pictures apart are two, and there is no third device - no ring drawn round a group, no joining mark, nothing. So the whole difference between a word and two words is carried by how wide one character is, and until now that character was an ordinary space: about a quarter of an em, standing between two pictures each a full em wide. A reader was being asked to see a quarter-em gap as a separator and a nought-em gap as a join, which is a judgement about a fifth of a picture's width.";
+  "AN EM SPACE IS THE SMALLEST HONEST FIX because it makes the gap the same size as the things it separates. Two pictures with a picture's width of nothing between them read as apart at a glance; two pictures touching read as together. Nobody has to measure anything. That is the same reasoning the page already uses when it widens the gap in its layout - this is the plain text finally saying what the page says, in the one medium where no layout exists to help.";
+  "IT IS A CHARACTER AND NOT A LAYOUT RULE, which is the whole point of choosing this one. The Bible is meant to be copied out of a terminal and pasted into a message, and a width set in a stylesheet does not survive that journey while a character does. An ordinary run of spaces would not survive it either: two spaces are collapsed back into one by every browser and by most chat windows, so the widening would vanish exactly where it was needed most. The em space is not collapsed, because the rules that collapse white space name the ordinary space, the tab and the newline and stop there.";
+  "IT DOES NOT RESCUE THE SAME PICTURE TWICE OVER, and that limit is worth stating beside the fix rather than discovering later. Every other pair changes shape at the boundary, so a wider gap is all a reader needs; the same picture on both sides changes nothing at the boundary, and a reader is still being asked to count. That case has to be kept out of the vocabulary rather than spaced apart, and it is why one group was taken back out of the tenth of John.";
+  ("IT IS SPELLED AS ITS NUMBER AND NEVER AS THE CHARACTER ITSELF, for the reason ",
+    fn_name("text_from_code_number"),
+    " already gives: a character that prints as nothing looks in the source exactly like a mistyped empty word, and the ordinary space it must be told apart from is the very thing it resembles. Eight thousand one hundred and ninety five is U+2003, the em space.");
+  let r = text_from_code_number(8195);
+  return r;
+}
