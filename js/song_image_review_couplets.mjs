@@ -18,7 +18,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 30,
-      note: "the fire may be orange and yellow now, so it reads as fire rather than as red glass. The field is banded in three rather than two.",
+      note: "the mountain has ridges, gullies and a broken crest instead of a grey triangle, the smoke billows in masses of plainly different sizes, and the fire runs crimson through orange to yellow over a cobalt field.",
     },
     {
       n: 34,
