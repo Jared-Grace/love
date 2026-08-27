@@ -5,6 +5,7 @@ export function bible_usfm_chapter_paragraphed_text_cases() {
   ("What every case here guards is one sentence: nothing comes out of this that a person did not say. The marked-up file carries the translators' section titles, their notes, their parallel passage references and the publisher's own bookkeeping, all of it in the same language and the same alphabet as the scripture it surrounds. Nothing in the words themselves tells the two apart - only the mark on the line does - so a reader who loses one mark hands somebody a modern editor's sentence sitting inside a psalm, reading as a line of it.");
   ("That is a fault nobody downstream can catch. A person pasting a psalm into a slide does not have the marked-up file open beside them, and the added line is grammatical, reverent and about the passage. It looks exactly like what they asked for.");
   ("The layout is written down here too, because for poetry the layout is not decoration. Hebrew poetry says what it says by putting a line beside its answer, and a psalm run together into one paragraph has lost something the translation was carrying.");
+  ("The berean files were counted rather than guessed at: twenty-six different marks open a line anywhere in the sixty-six books, and every one of them is answered by one of the lists or by falling past the end of them. The four cases at the bottom are the ones that were falling past the end - right, but by never having been asked.");
   let cases = [
     {
       usfm: "\\c 1\n\\q1 \\v 1 A line\n\\q2 and its answer.\n",
@@ -89,6 +90,27 @@ export function bible_usfm_chapter_paragraphed_text_cases() {
       verse_numbers_shown: false,
       text: "The first words.\n\nThe second words.",
       why: "a title standing between two verses rather than above the first. Nothing about its position marks it out, and the verses on either side of it close up as though it had never been there",
+    },
+    {
+      usfm: "\\c 1\n\\q1 \\v 2 Many say of me,\n\\q2 “God will not deliver him.”\n\\qr Selah\n\\q1 \\v 3 But You, O LORD, are a shield.\n",
+      chapter_number: "1",
+      verse_numbers_shown: true,
+      text: "2 Many say of me,\n  “God will not deliver him.”\nSelah\n3 But You, O LORD, are a shield.",
+      why: "Selah is written with a mark of its own that says where it sits on the page rather than what it is, and it occurs two hundred and twenty-three times. It is in the hebrew, so it stays. Nothing here had ever said so - the mark is in none of the lists, and the word survives by falling past the end of them. That is the right answer arrived at by never being asked the question, which is what this case changes",
+    },
+    {
+      usfm: "\\c 1\n\\li1 \\v 5 The sons of Japheth:\n\\li2 Gomer, Magog, and Madai.\n",
+      chapter_number: "1",
+      verse_numbers_shown: true,
+      text: "5 The sons of Japheth:\n  Gomer, Magog, and Madai.",
+      why: "the genealogies are written as nested lists rather than as poetry or as prose, some fifteen hundred lines of them, and every name in them is scripture. They step in the same way the poetry does, because the depth is read off the digit the mark ends with and the list marks carry that digit too - so one reading covers both. This case says that was meant rather than lucky",
+    },
+    {
+      usfm: "\\c 119\n\\qa Aleph\n\\q1 \\v 1 Blessed are those whose way is blameless.\n",
+      chapter_number: "119",
+      verse_numbers_shown: false,
+      text: "Blessed are those whose way is blameless.",
+      why: "the letter names standing over the stanzas of the longest psalm are the translators writing out the hebrew alphabet the acrostic runs on. The acrostic is in the text; the letter names spelled in english are not, so they go. This is the one dropped line whose words are neither english prose nor bookkeeping, and that is exactly what makes it easy to mistake for scripture",
     },
   ];
   return cases;
