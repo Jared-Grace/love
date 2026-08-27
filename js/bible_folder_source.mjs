@@ -10,12 +10,15 @@ export function bible_folder_source(bible_folder) {
   let door = door43_version_or_null(bible_folder);
   let carried = null_not_is(door);
   if (carried) {
-    return "door43";
+    let r = "door43";
+    return r;
   }
   let sword = sword_version_or_null(bible_folder);
   let packaged = null_not_is(sword);
   if (packaged) {
-    return "sword";
+    let r2 = "sword";
+    return r2;
   }
-  return "ebible";
+  let r3 = "ebible";
+  return r3;
 }
