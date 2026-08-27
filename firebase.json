@@ -5,7 +5,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "dev/**"
+      "dev/**",
+      "latest/**"
     ],
     "redirects": [
       {
@@ -15,7 +16,7 @@
       },
       {
         "source": "/calendar",
-        "destination": "/latest/calendar.html",
+        "destination": "/calendar.html",
         "type": 302
       }
     ],
