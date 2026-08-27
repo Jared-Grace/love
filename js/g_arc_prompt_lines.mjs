@@ -8,6 +8,7 @@ import { g_arc_answer_field_lines } from "./g_arc_answer_field_lines.mjs";
 import { g_arc_answer_example } from "./g_arc_answer_example.mjs";
 import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { g_arc_style_lines } from "./g_arc_style_lines.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 export function g_arc_prompt_lines(
   reading_age,
@@ -67,15 +68,18 @@ export function g_arc_prompt_lines(
   ("What the ban was ever protecting is the people at the plants. Each of those is written by a call that never sees this one, so this person saying what another of them believes can contradict that person's own arc with nothing to catch it. Somebody the person knows who is at no plant cannot collide with anything, because no other arc knows they exist - so the ban is now spelled as the people at a plant, and household, family and friends are allowed out loud beside it.");
   ("It also asks for nothing new. The line above it already wants an answer plain to somebody who has never read the Bible, and an answer turning on one word's precise sense already fails that - so this says out loud what the fit test was already asking for.");
   ("THE UNMISTAKABLE RULE REACHES PAST PRONOUNS, and it was widened because a written line got through it. The dyer asked what she should do with what is actually MINE, and a reader could not tell what she meant - her wool, her wrongdoing, her money, the part of her life she had not handed over. Nothing there is a pronoun, so the rule as it stood had nothing to say. A phrase like that is worse than a bare pronoun rather than better: it reads as though the thing had been named somewhere, so the player goes looking back for a naming that never happened, and the plain word ACTUALLY makes it sound like a distinction they were meant to have followed.");
-  ("THE PLAYER IS NOT AN EYEWITNESS, and the line saying so is here because two written arcs already assumed otherwise. In the game somebody sent to this town tells the player the gospel before the player tells anybody, so the player is one link along a chain and not the start of it - and a person who asks the player what he looked like is asking a question the player cannot answer at all.");
-  ("The rule above it was not enough on its own. 'Nothing about the player' bans what a writer says ABOUT the player; this bans what a writer ASSUMES about them, which is a different thing and shows up in lines that never mention the player's past at all - SEEN AND TOUCHED, THAT IS A DIFFERENT KIND OF STORY reads as a person answering somebody who was there.");
-  ("It leaves the passage alone. Where the Scripture itself says WE HAVE SEEN AND OUR HANDS HAVE TOUCHED, that is the writer of the letter speaking and the person may say so - what is barred is the person putting the player inside that WE.");
+  ("THE STYLE SECTION IS RENDERED AND NOT WRITTEN HERE. Every rule in it was paid for by somebody reading a written arc and finding a fault, and until it existed each finding was mended in the one line it was found on and then cleared - so the same fault came back at full strength in the next batch and was found again by hand. The rules are gathered where they can be read as a set and dropped in here as lines, which is the same move the field list and the answer example already make: one source, so a rule cannot be changed in one place and stale in the other, with nothing to catch it because a prompt never fails.");
+  ("THE PLAYER IS NOT AN EYEWITNESS, and that rule LIVES IN THE STYLE SECTION NOW rather than in what not to write. It is here at all because two written arcs already assumed otherwise: in the game somebody sent to this town tells the player the gospel before the player tells anybody, so the player is one link along a chain and not the start of it, and a person who asks the player what he looked like is asking a question the player cannot answer at all.");
+  ("Its words went across UNCHANGED, and that was the point of moving rather than restating. What was drafted in the gathered rules was shorter and said less - it did not have the sent-here chain, the three things the person must not do, or the leave-the-passage-alone half - and a shorter restatement beside a longer original is the one way this gathering could quietly lose something.");
+  ("What it adds over the ban above it is still worth saying. 'Nothing about the player' bans what a writer says ABOUT the player; this bans what a writer ASSUMES about them, which is a different thing and shows up in lines that never mention the player's past at all - SEEN AND TOUCHED, THAT IS A DIFFERENT KIND OF STORY reads as a person answering somebody who was there. And it leaves the passage alone: where the Scripture itself says WE HAVE SEEN AND OUR HANDS HAVE TOUCHED, that is the writer of the letter speaking and the person may say so - what is barred is the person putting the player inside that WE.");
   ("The section carries its OWN blank line above and below it, and is one empty entry when there is nothing written. Written as an ordinary entry between two blank ones, an empty section would print two blank lines running - which is the shape a reader takes for a section that failed to render rather than one that was correctly left out.");
   let written_said = "";
   let written_any = text_empty_not_is(written_text);
   if (written_any) {
     written_said = list_join_newline(["", written_text, ""]);
   }
+  let style_lines = g_arc_style_lines();
+  let style = list_join_newline(style_lines);
   let json = json_format_to(profile);
   let lines = [
     "This is a Christian game about sharing the gospel.",
@@ -148,14 +152,16 @@ export function g_arc_prompt_lines(
     "",
     "Every turn follows from where this person is in their arc (consistent, on topic with the arc). Early on that is their own trouble. Later it is whatever their walk with God has brought them to since.",
     "",
+    "STYLE",
+    "Every one of these came from somebody reading an arc that was already written and finding it wanting. Each rule is followed by the reason for it, indented - so where a case turns up that no rule below names, the reasons are what you decide it by.",
+    style,
+    "",
     "WHAT NOT TO WRITE",
     "No names. The game picks names when it runs.",
     "No people at any church plants. People are generated independently and by avoiding talking about them, then all arcs are consistent.",
     "You may talk about household members, family members, friends, anyone the person knows, provided that person does not go to a church plant that is in the game.",
     "No time of day, no weather, no place.",
     "Nothing about the player - not their gender, family, marital status, past, or how long they have been here.",
-    "The player never saw Jesus. Somebody who was sent here told the player the gospel, the same way the player is telling this person now. So the person does not speak to the player as somebody who saw or heard or touched him, does not ask the player what he was like, and does not treat the player's answers as things the player watched happen.",
-    "Where a passage itself says that its writer saw and touched, that is the writer of the letter speaking, and the person may say so. What they may not do is put the player among the ones who were there.",
     "In the game, the Roman government persecutes the player eventually, but all these arcs need to be independent of that - so the arc could be during persecution or not during persecution - we don't know which when the arcs are generated, so the arc needs to be consistent with either persecution or not.",
     "So nothing about persecution* or danger*.",
     "Nothing about soldiers* unless the person is a soldier.",
