@@ -1,6 +1,6 @@
 import { app_g_arcs_depth_block } from "./app_g_arcs_depth_block.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
-import { app_g_arcs_note_pills } from "./app_g_arcs_note_pills.mjs";
+import { app_shared_note_pills } from "./app_shared_note_pills.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -68,7 +68,7 @@ export function app_g_arcs_turn_block(
   if (turned) {
     turn_field("believes", believes);
   }
-  app_g_arcs_note_pills(block, notes);
+  app_shared_note_pills(block, notes);
   let names = g_arc_answer_field_names("turn");
   app_g_arcs_note_row(block, bench, nickname, number, names);
 }
