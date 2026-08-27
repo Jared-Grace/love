@@ -373,9 +373,9 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open, nothing showing inside that mouth but one whole sheet of plain white glass from edge to edge, and the rays of white light springing out of that sheet itself, each ray at its narrowest where it stands inside the mouth and widening only once it is out past the edge of the mouth, so that every ray can be followed back to a foot inside the opening, and ",
+        " standing wide open, the inside of that mouth one whole sheet of plain white glass, and broad rays of white light springing out of that sheet and reaching far out past the edges of the mouth, across the face of the rock on both sides of it and up into the sky above it, each ray narrowest where it stands inside the mouth and widening as it goes, and ",
         r5,
-        " drawn so big that its top stands higher than the top of the mouth and its sides reach wider than the sides of the mouth, standing on the ground well clear to the right of the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
+        " drawn big enough to cover the whole opening and more, its top standing higher than the top of the mouth and its sides reaching wider than the sides of the mouth, set on the ground beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
@@ -396,7 +396,7 @@ export function song_image_couplets() {
       first: "all glory to",
       second: "the risen CHRIST",
       symbol:
-        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, and broad straight rays of white glass falling from under it and widening as they fall, their feet stopping about two thirds of the way down the glass and going no lower, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line anywhere across it, with deep cobalt blue between the rays, and the whole lower part of the window beneath the feet of the rays one plain flat sheet of deep cobalt blue running unbroken across to the white border on both sides",
+        "One great bank of cloud of white glass filling the upper part of the window, its outline nowhere straight and nowhere even, rolling in broad round lobes of plainly different sizes that push up higher in some places than others and hang down lower in some places than others, and broad straight rays of white glass falling from under it and widening as they fall, their feet stopping about two thirds of the way down the glass and going no lower, each ray one whole unbroken pane of white from the cloud down to its foot with no lead line and no bar of the window's own frame anywhere across it, every horizontal bar in the window stopping short at the edge of a ray and starting again on its far side, with deep cobalt blue between the rays, and the whole lower part of the window beneath the feet of the rays one plain flat sheet of deep cobalt blue running unbroken across to the white border on both sides",
       symbol_ref: "Acts 1:9, Luke 2:9, Acts 26:13",
       same_as: 0,
     },
@@ -436,7 +436,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A mountain burning at its top, one plain grey mountain standing alone with no other hill beside it, filling the lower half of the window from the white border on one side to the white border on the other, and standing on its summit a great mass of fire, every tongue of it rooted in the top of the mountain and rising from there in tall points as high again as the mountain below it and as wide as the whole summit, the tongues deep crimson at their roots, ruby red and orange through most of their height, and bright yellow at their tips, this fire being the one thing in this picture drawn in orange and yellow and nothing else in it taking either colour, and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
+        "A mountain burning at its top, one grey mountain standing alone with no other hill beside it, its crest uneven and broken rather than one straight sided triangle, with ridges and gullies running down its sides that divide it into faces of light grey and dark grey, filling the lower half of the window from the white border on one side to the white border on the other, and standing on its summit a great mass of fire, every tongue of it rooted in the top of the mountain and rising from there in tall points as high again as the mountain below it and as wide as the whole summit, the tongues deep crimson at their roots, ruby red and orange through most of their height, and bright yellow at their tips, this fire being the one thing in this picture drawn in orange and yellow and nothing else in it taking either colour, and out of that fire thick grey smoke in broad round lobes piled one above another going straight up and filling the whole of the window above the mountain right up to the head of the arch",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },
