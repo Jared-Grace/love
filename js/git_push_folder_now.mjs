@@ -19,6 +19,6 @@ export async function git_push_folder_now(folder) {
     folder,
     urls,
   });
-  let answered2 = await git_fetch_folder_try(folder);
+  await git_fetch_folder_try(folder);
   return reached;
 }
