@@ -14,7 +14,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "unchanged - the keeper still stands. A clause telling the window's own bars to stop where they meet a ray made it worse, so it was taken out again. I could not tell from your note which other ways 15 was closer, so this one is left for you to say.",
+      note: "your answer landed: 15's varied colours between the rays, 17's great round cloud lobes, and the blue lightened to a daytime blue for light rather than night. That lighter blue is written into this couplet's clause alone, so the other thirty-five keep the deep cobalt. The band at the feet of the rays came back brown and grey.",
     },
     {
       n: 30,
