@@ -1,0 +1,8 @@
+export function regex_usfm_continuation_line_break() {
+  "A line break in usfm standing in front of a line that is the same line carried on - not the start of anything new.";
+  "Usfm written for a person to read puts one paragraph on one line, and every mark that opens a line opens a new thing. Usfm written by an aligning tool does not: it puts one word on each line, wrapped in a word mark carrying which occurrence of that word this is, so a single heading of six words arrives as six lines and only the first of them wears the heading's mark. Read as lines, five of those six words are ordinary text and the heading is one word long.";
+  "So the lines have to be put back together before anything is asked about them, and what says a line is a carrying-on is the mark it opens with. Only the marks that live inside a line are named here - the word mark and its closing, the alignment marks, the selah mark, footnotes and cross references - together with a line opening with no mark at all, which is plain words continuing the sentence above. Every other mark in either bible is a paragraph mark or higher, and a line opening with one of those is genuinely a new line.";
+  "Naming the inside-a-line marks rather than the new-line marks is what makes a mistake here harmless. A mark left out is a line not joined, which is exactly what happens today; a mark wrongly put in would join a real line onto the one above and lose it. The verse mark and the chapter mark are the two that must never appear, and they are not marks that live inside a line, so no reading of the list can reach them.";
+  let r = /\n(?=[^\\\n]|\\\+?(?:w|zaln-[se]|qs|f|fe|x)[ *|])/g;
+  return r;
+}
