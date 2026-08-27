@@ -1,4 +1,3 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bless_told_tap() {
   arguments_assert(arguments, 0);
@@ -6,9 +5,8 @@ export function bless_told_tap() {
   ("It says the verbs and nothing about the ladder - not because the ladder is a secret,");
   ("but because NONE of it is true yet. Standing here at the start the player has one rung,");
   ("and a line about households would be about something they cannot do.");
-  ("The ladder is announced, but at the moment it changes and not before: $fn ",
-    fn_name("bless_told_reach"));
-  ("says a rung out loud as it is earned. This was the other way round once - the game said");
+  ("The ladder IS announced, but at the moment it changes and not before: a rung is said out");
+  ("loud as it is earned. This was the other way round once - the game said");
   ("nothing about reach at all, on the argument that discovering it was the whole game - and");
   ("a player reported the opposite, that praying face after face with nothing announced");
   ("reads as an endless chore. So do not restore the silence here by reasoning from this");

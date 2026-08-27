@@ -13,8 +13,7 @@ export async function qa_gate_frozen_named_run(gate_name) {
   let frozen = await qa_gate_frozen_ensure();
   let folder = property_get(frozen, "folder");
   let commit = property_get(frozen, "commit");
-  let words = ["scripts/ai.mjs", gate_name];
-  let said = await node_run_lines_whole(folder, words);
+  let said = await qa_gate_frozen_folder_run(folder, gate_name);
   let r = {
     folder,
     commit,
