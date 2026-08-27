@@ -21,5 +21,13 @@ export function app_g_bless_dev_routes(world) {
     app_g_bless_dev_crowd(world);
   }
   property_set(routes, "crowd", crowd);
+  ("The celebration screen is the one route that builds a world of its OWN rather than\n");
+  ("reporting on this one, and it is worth saying why it is still a route here. It shows an\n");
+  ("animation instead of a fact, so there is nothing about the street it could be wrong\n");
+  ("about - and it lives here rather than on the sandbox page because everything it plays\n");
+  ("is this game already: registered next door it dragged the whole street onto a page that\n");
+  ("is about eleven other things, and every change to the animation cost that page a\n");
+  ("rebuild.\n");
+  property_set(routes, "bless_finished", app_g_bless_finished_preview);
   return routes;
 }
