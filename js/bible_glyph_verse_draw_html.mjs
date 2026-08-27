@@ -1,3 +1,4 @@
+import { bible_glyph_word_separator } from "./bible_glyph_word_separator.mjs";
 import { bible_glyph_word_gap_extra } from "./bible_glyph_word_gap_extra.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { not } from "./not.mjs";
@@ -16,11 +17,15 @@ export function bible_glyph_verse_draw_html(parent, words, lookup) {
     fn_name("bible_glyph_word_gap_extra"),
     " instead, so what says two glyphs are one word is that they touch, and what says they are two words is that they do not. The reason is in that function and comes down to a gap being a mark every reader already knows and a ring being one this Bible would have to teach.");
   ("IT ALSO ENDS A DISAGREEMENT BETWEEN THE TWO DRAWERS. Plain text never could draw a ring, so it has always grouped by adjacency alone, which means a reader meeting this Bible in a terminal and again on a page was being taught two different grammars for one thing. There is now one grammar and the page simply draws it more clearly.");
+  ("THE GAP IS A WIDE CHARACTER FIRST AND A STYLE SECOND, and the order matters because of what leaves the page. A reader copies a verse out of here and pastes it into a message, and a width set in a style does not travel while a character does - so the character carried across is the em space ",
+    fn_name("bible_glyph_word_separator"),
+    " returns, the same one plain text uses, and what arrives at the other end is unambiguous with no help from this page at all. The extra width stays on top of it because a page CAN add width and plain text cannot: here the gap can be made plainly wider than a picture, which is the comparison the scheme rests on, so the two drawers agree on the character and differ only in how much better the page can do.");
   ("The space is written as a piece of text rather than left to the page's own spacing between elements, because a page collapses and re-flows the gaps between elements by its own rules and would be free to put a line break where this Bible put a word boundary - or to put none where it put a space.");
   let first = true;
   for (let word of words) {
     if (not(first)) {
-      let gap = html_span_text_content(parent, " ");
+      let text = bible_glyph_word_separator();
+      let gap = html_span_text_content(parent, text);
       let extra = bible_glyph_word_gap_extra();
       html_style_set(gap, "wordSpacing", extra);
     }

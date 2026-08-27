@@ -1,12 +1,17 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { app_g_bless_color_blessed_home } from "./app_g_bless_color_blessed_home.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_max } from "./list_max.mjs";
+import { g_z } from "./g_z.mjs";
 import { html_div } from "./html_div.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_homes(homes, blessed, blocks) {
   arguments_assert(arguments, 3);
@@ -32,16 +37,35 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   ("read as lit rather than merely tinted - a lit thing is brightest where it ends, and");
   ("without that edge the square is only a coloured patch. The squares then draw their own");
   ("quiet grid, which is the shape of the house being told in the only units this map has.");
-  ("Both lights are laid INSIDE the square and never around it, which is what stops two");
-  ("neighbours doubling up. The lights here are see-through, so anything spilling past an");
-  ("edge would land on the square next door on top of its own and paint that overlap");
-  ("brighter than either - and a finished house would come out in bands rather than in one");
-  ("colour.");
+  ("The house also throws light OUTWARDS, onto the plain ground around it, which is the");
+  ("difference between a patch of the map being coloured in and a house standing there with");
+  ("the lights on. Light that stops dead at a boundary is paint; light that carries a little");
+  ("way past it and thins out is light.");
+  ("That spill is thrown by the whole house AT ONCE rather than by each of its squares, and");
+  ("that is the only way it can be done here. These lights are see-through, so a square");
+  ("glowing on its own account would throw its glow onto the square next door on top of that");
+  ("one's own, and the pair would come out brighter than either - a finished house drawn in");
+  ("bands instead of in one colour. Asked of the whole shape, there is nothing to double:");
+  ("the inside of the house has no boundaries left to glow at, and only the outline of the");
+  ("house as a whole has any light coming off it.");
+  ("The squares are gathered under one wrapper for that reason and for no other. The wrapper");
+  ("holds no colour of its own and is placed nowhere - it is the thing the spill is asked");
+  ("of, and the squares inside it stay exactly where their own coordinates put them.");
+  ("The two lights that belong to a single square are still laid INSIDE it, for the same");
+  ("doubling reason as before. Only the one belonging to the house as a whole goes outside.");
   ("Measured as a fraction of a square rather than in fixed units, because the map is drawn");
   ("at whatever size the screen has room for: written in pixels this is a hairline on a");
   ("tablet and a smear on a phone.");
   html_clear(homes);
   let tiles = bless_blessed_tiles(blessed, blocks);
+  ("Nothing prayed for yet means nothing to draw, and it is worth leaving early rather than");
+  ("drawing an empty glowing nothing: a wrapper asked for a spill is a whole layer of the");
+  ("screen kept ready for it, and at the start of a game there is not one square to spill");
+  ("from.");
+  let none = list_empty_is(tiles);
+  if (none) {
+    return;
+  }
   let color = app_g_bless_color_blessed_home();
   let size = g_img_square_size_css();
   let bloom = text_combine_multiple([
@@ -51,8 +75,42 @@ export function app_g_bless_homes(homes, blessed, blocks) {
     size,
     ") * 0.09) rgba(255, 250, 232, 0.55)",
   ]);
+  let close = text_combine_multiple([
+    "drop-shadow(0 0 calc((",
+    size,
+    ") * 0.15) rgba(255, 228, 166, 0.72))",
+  ]);
+  let wide = text_combine_multiple([
+    "drop-shadow(0 0 calc((",
+    size,
+    ") * 0.5) rgba(255, 186, 74, 0.58))",
+  ]);
+  let spill = text_combine_multiple([close, " ", wide]);
+  ("The wrapper stands at the depth of the LOWEST of its own squares, which is where the");
+  ("last of them would have stood on its own. Gathered together they can only be at one");
+  ("depth, and taking the deepest keeps the house in front of everything it was in front of");
+  ("before - the pale light of the cone the player is looking down, most of all.");
+  function tile_y(tile) {
+    let row = property_get(tile, "y");
+    return row;
+  }
+  let rows = list_map(tiles, tile_y);
+  let y_most = list_max(rows);
+  let layer = g_z("ground_tint");
+  let depth = text_combine_multiple(["calc(", layer, " + ", y_most, ")"]);
+  let lit = html_div(homes);
+  html_style_assign(lit, {
+    position: "absolute",
+    left: "0",
+    top: "0",
+    width: "0",
+    height: "0",
+    "pointer-events": "none",
+    "z-index": depth,
+    filter: spill,
+  });
   function tile_light(tile) {
-    let square = html_div(homes);
+    let square = html_div(lit);
     g_img_square_style_position(square, tile, "ground_tint");
     html_style_assign(square, {
       background: color,
