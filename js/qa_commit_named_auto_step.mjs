@@ -1,3 +1,4 @@
+import { qa_commit_named_said_expire } from "./qa_commit_named_said_expire.mjs";
 import { log } from "./log.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_commit_named_head } from "./qa_commit_named_head.mjs";
@@ -6,6 +7,7 @@ export async function qa_commit_named_auto_step() {
   "A daemon that says nothing cannot be told apart from a daemon that has died, and the only way left to find out is to go looking at what it was supposed to have written. One line a minute is nothing to a journal and it turns the question into a reading.";
   "How long the record has gone unwritten is carried in the line beside the machine's numbers, because it is now the fourth thing that decides and a refusal is only checkable against everything that decided it. It is also the one of the four that a reader cannot recover afterwards: the counts and the load are gone the moment they are taken, but so is the age of a file that has since been rewritten.";
   "What is judged is left out of the line on purpose. It is the gates named at that commit, which is pages of it, and the daemon writes that down properly in its own record - the journal is here to say whether the daemon is awake and why it did or did not start, and those are three small words.";
+  "The record is trimmed here on the same minute, because what each gate said is kept beside what was read out of it and those sayings are nine tenths of a file that reached forty megabytes and is committed afresh every time it is written. A saying is only worth its room while the judgement it belongs to is close enough to where the repo stands to still authorise anything, so the far ones are let go and the reading they were kept to correct is left behind. It is done from the daemon rather than from the writing of a judgement, because the writing adds one commit's own entry and nothing else in the record is that run's to touch.";
   let r = await qa_commit_named_head();
   let said = {
     commit: property_get(r, "commit"),
@@ -14,5 +16,6 @@ export async function qa_commit_named_auto_step() {
     stale: property_get(r, "stale"),
   };
   log(qa_commit_named_auto_step.name, said);
+  await qa_commit_named_said_expire();
   return said;
 }
