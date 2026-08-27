@@ -14,7 +14,7 @@ export function bible_glyph_verse_draw_html(parent, words, lookup) {
     fn_name("bible_glyph_verse_draw"),
     ", because everything about what a word looks like has already been decided a level down.");
   ("THE SPACE IS THE WHOLE OF THE GROUPING MARK, and it used to be only half of it. A page drew a ring round any group of several glyphs and the space was left ordinary; the ring has been retired and the space widened by ",
-    fn_name("bible_glyph_word_gap_extra"),
+    fn_name("bible_glyph_word_separator"),
     " instead, so what says two glyphs are one word is that they touch, and what says they are two words is that they do not. The reason is in that function and comes down to a gap being a mark every reader already knows and a ring being one this Bible would have to teach.");
   ("IT ALSO ENDS A DISAGREEMENT BETWEEN THE TWO DRAWERS. Plain text never could draw a ring, so it has always grouped by adjacency alone, which means a reader meeting this Bible in a terminal and again on a page was being taught two different grammars for one thing. There is now one grammar and the page simply draws it more clearly.");
   ("THE GAP IS A WIDE CHARACTER FIRST AND A STYLE SECOND, and the order matters because of what leaves the page. A reader copies a verse out of here and pastes it into a message, and a width set in a style does not travel while a character does - so the character carried across is the em space ",
@@ -25,9 +25,7 @@ export function bible_glyph_verse_draw_html(parent, words, lookup) {
   for (let word of words) {
     if (not(first)) {
       let text = bible_glyph_word_separator();
-      let gap = html_span_text_content(parent, text);
-      let extra = bible_glyph_word_gap_extra();
-      html_style_set(gap, "wordSpacing", extra);
+      html_span_text_content(parent, text);
     }
     first = false;
     bible_glyph_word_draw_html(parent, word, lookup);
