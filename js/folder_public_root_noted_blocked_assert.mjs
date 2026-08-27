@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_public_root_repo_is } from "./folder_public_root_repo_is.mjs";
+import { folder_public_root_queue_is } from "./folder_public_root_queue_is.mjs";
 import { not } from "./not.mjs";
 import { qa_promoted_piece_app } from "./qa_promoted_piece_app.mjs";
 import { null_is } from "./null_is.mjs";
@@ -15,7 +15,7 @@ export async function folder_public_root_noted_blocked_assert(file_path) {
   "A run holding the block on that folder is turned back before ever reaching here, which is deliberate: the older way of promoting writes there under that block and keeps a record of its own, and refusing it here would stop it.";
   "Whether the path is even at the top of that folder is asked again rather than taken from whoever called, so this is safe to ask anywhere. It costs no reading to answer.";
   arguments_assert(arguments, 1);
-  let root = await folder_public_root_repo_is(file_path);
+  let root = await folder_public_root_queue_is(file_path);
   if (not(root)) {
     return;
   }
