@@ -1,3 +1,6 @@
+import { app_shared_font_size_default } from "./app_shared_font_size_default.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_document_body } from "./html_document_body.mjs";
 import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { html_viewport_height_full } from "./html_viewport_height_full.mjs";
@@ -12,6 +15,7 @@ export function html_body_div_page_dark() {
   "The two preview pages on the sandbox app opened with these same six lines each. Standing apart they drift: one gets a lighter ground or a wider margin than the other, and nothing says so, because two pages looking slightly different is not a fault anything can name.";
   "★ THE GROUND IS PAINTED ON THE BODY AS WELL AS ON THE DIV, AND THE BODY IS THE HALF THAT ACTUALLY COVERS THE PAGE. A div reaches as far as its own box, so anything wider or taller than the window - a drawing, a wide table - leaves bare white beside it the moment the page scrolls. The body's colour is different in kind: a browser spreads it across the whole canvas however far that scrolls, which is exactly the promise the name of this function makes.";
   "Widening the div to fit its contents was tried first and is the wrong shape, because a child asking for the full width of a parent that is asking to fit its children is a circle, and what a browser does with a circle is its own business rather than something to depend on.";
+  "IT OPENS AT THE SIZE EVERY OTHER APP OPENS AT, asked for by name rather than left to the browser. A page drawn on a fresh div under the body inherits nothing from the root an app screen sets its size on, so it quietly fell back to whatever the browser's own default is - about a fifth smaller than every reading page beside it, on every screen, with nothing to say why. Consistency is the whole of what is wanted here: somebody who needs it larger has zoom, and zoom works from a size the pages agree on.";
   arguments_assert(arguments, 0);
   let root = html_body_div();
   let ground = app_shared_color_page_dark();
@@ -20,6 +24,9 @@ export function html_body_div_page_dark() {
   html_font_set(root, "system-ui, sans-serif");
   let style_value = html_viewport_height_full();
   html_style_set(root, "min-height", style_value);
+  let size = app_shared_font_size_default();
+  let sized = text_combine(size, "px");
+  html_style_font_size(root, sized);
   html_style_padding(root, "16px");
   html_style_set(root, "box-sizing", "border-box");
   let body = html_document_body();
