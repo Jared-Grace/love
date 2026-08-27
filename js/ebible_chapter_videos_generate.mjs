@@ -34,7 +34,7 @@ export async function ebible_chapter_videos_generate(
       let joined_video = text_combine(joined, file_extension_mp4());
       let n2 = await file_exists_not(joined_video);
       if (n2) {
-        let joined_audio = text_combine(joined, ".wav");
+        let joined_audio = await file_audio_mp3_or_wav(joined);
         await video_generate(joined_image, joined_audio, joined_video);
       }
       la(joined_video);
