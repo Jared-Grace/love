@@ -7,7 +7,7 @@ export function bible_glyph_chapter_jhn09() {
   "THE FIRST AND LAST VERSES BOOKEND ON SIN AND THE MARK IS THE SAME ONE. The disciples open by asking who sinned; Jesus closes by telling the men who say they see that their sin remains. The bow is drawn nine times in this chapter, more than in any other written so far, and every one of them is hamartano or hamartolos. A reader who has met the mark in one of the letters meets it here as the thing the whole argument turns on.";
   "THE GOD MARK IS ON BOTH SIDES OF THE QUARREL, WHICH IS THE POINT. The Pharisees say this man is NOT from God; the man says if He were not from God He could do nothing; the parents are afraid; and in the third verse Jesus says the works of God are to be displayed in him. The same mark falls in every one of those, so the disagreement is visibly about one thing rather than about several. That is a case where drawing a word flatly, without softening what each speaker means by it, shows the shape of the argument better than an English translation does.";
   "THE NO ENTRY SIGN IS ASKED TO DO A QUESTION IN THE FORTIETH VERSE AND WAS NOT GIVEN IT. The Greek there is a question expecting the answer no - we are not blind too, are we - and there is no way to draw that with a mark that means not without saying the opposite of what the Pharisees are asking. So it is left in plain English. Leaving a mark out is allowed and is cheaper than teaching a reader a sign that lies once.";
-  "THE THIRTY-THIRD VERSE HAD THREE NEGATIONS IN THE GREEK AND IS DRAWN WITH TWO. If this man were not from God, He could do nothing - the third one is inside the word nothing, and drawing all three would put the sign next to itself in a way that reads in English as a double negative undoing itself. The two that are drawn are the two an English reader will follow, and the third stays folded into the word it lives in.";
+  "THE COLLISION GATE TOOK FOUR OF THE NEGATION MARKS BACK OUT, AND IT WAS RIGHT EVERY TIME. The sign is seated on both me and ou; the ninth, twenty seventh and thirty third verses each hold both of those words at once, so a sign standing in one of them cannot say which of the two it is. The gate offered a choice - write the word in plain English, or draw one mark per word so the two pair off - and plain English was taken in all three, because pairing off in the thirty third would have set the sign beside itself and read as a double negative undoing itself. So the sign is drawn fifteen times here and the word not is written out four times, and the four are exactly the places the interlinear cannot settle. This was found by running the gate, not by reading; the first draft of this chapter drew all four.";
   let chapter = {
     chapter_code: "JHN09",
     reference: "John 9",
@@ -220,7 +220,7 @@ export function bible_glyph_chapter_jhn09() {
           "he.",
           "Others",
           "$speech,",
-          "$no_entry,",
+          "No,",
           "but",
           "he",
           "looks",
@@ -712,7 +712,7 @@ export function bible_glyph_chapter_jhn09() {
           "$plus",
           "you",
           "did",
-          "$no_entry",
+          "not",
           "$ear.",
           "Why",
           "do",
@@ -861,12 +861,12 @@ export function bible_glyph_chapter_jhn09() {
           "this",
           "man",
           "were",
-          "$no_entry",
+          "not",
           "from",
           "$fire,",
           "He",
           "could",
-          "$no_entry",
+          "not",
           "$hammer",
           "anything.",
         ],
