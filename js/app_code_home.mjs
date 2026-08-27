@@ -42,7 +42,7 @@ export async function app_code_home(context) {
     let id = property_get(item, "id");
     let open = complete_all_previous;
     let complete = app_code_lesson_complete_is(progress, id);
-    let button = app_code_home_lesson_button(
+    let r3 = app_code_home_lesson_button(
       g,
       context,
       item,
@@ -50,7 +50,9 @@ export async function app_code_home(context) {
       complete,
       complete_all_previous,
     );
-    complete_all_previous = complete && open;
+    let button = property_get(r3, "button");
+    ("what carries on to the lesson below is read back off the row rather than worked out again here: the row has already decided it, to choose its own colour and its own pointing hand");
+    complete_all_previous = property_get(r3, "complete_all_previous_next");
     way_marked = app_code_home_way_marked_next(
       button,
       way_marked,
