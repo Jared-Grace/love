@@ -31,5 +31,5 @@ export async function folder_public_root_blocked_assert(file_path) {
     file_path,
     lock_name,
   });
-  await folder_public_root_noted_blocked_assert(file_path2);
+  await folder_public_root_noted_blocked_assert(file_path);
 }
