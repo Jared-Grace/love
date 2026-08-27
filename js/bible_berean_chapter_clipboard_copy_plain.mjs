@@ -1,0 +1,21 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_berean_chapter_paragraphed_text } from "./bible_berean_chapter_paragraphed_text.mjs";
+import { clipboard_copy } from "./clipboard_copy.mjs";
+export async function bible_berean_chapter_clipboard_copy_plain(
+  book_code,
+  chapter_number,
+) {
+  arguments_assert(arguments, 2);
+  ("$plain book_code");
+  ("$plain chapter_number");
+  ("One chapter of the Berean release put on the clipboard with no verse numbers in it, and handed back as well so that whoever asked can see what they got.");
+  ("This is the shape wanted wherever the words are going to be read or sung rather than studied - a slide, a card, a song. A number standing in the middle of a sung line is read as part of the line.");
+  ("Its numbered twin is beside it, and the two differ by one word on purpose. Everything that decides how the passage looks is settled once, in what they both call, so the two cannot come to disagree about where a line breaks.");
+  let text = await bible_berean_chapter_paragraphed_text(
+    book_code,
+    chapter_number,
+    false,
+  );
+  await clipboard_copy(text);
+  return text;
+}

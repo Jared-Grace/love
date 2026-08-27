@@ -9,7 +9,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { bible_audio_verses_manifest_path } from "./bible_audio_verses_manifest_path.mjs";
-import { file_write_json } from "./file_write_json.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function bible_audio_verses_manifest_write(
   bible_folder,
   chapter_code,
@@ -71,6 +71,6 @@ export async function bible_audio_verses_manifest_write(
     rows,
   };
   let p = bible_audio_verses_manifest_path(bible_folder, chapter_code);
-  await file_write_json(p, manifest);
+  await file_overwrite_json(p, manifest);
   return manifest;
 }
