@@ -40,7 +40,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
   ("was showing last time, and that memory is the thing that drifts away from the record.");
   let color = app_g_bless_color_household_remaining();
   let size = g_img_square_size_css();
-  let width = text_combine_multiple(["calc((", size, ") * 0.1)"]);
+  let width = text_combine_multiple(["calc((", size, ") * 0.13)"]);
   let border = text_combine_multiple([width, " dashed ", color]);
   let people_all = bless_view_people(everyone);
   function person_ring(person) {
