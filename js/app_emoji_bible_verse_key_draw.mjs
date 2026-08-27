@@ -16,8 +16,6 @@ export function app_emoji_bible_verse_key_draw(content, row) {
   "The number is spaced with the rest of the line rather than being kept out of it, because it is a number followed by a word boundary like any other and a wider gap after it reads correctly.";
   let numbered = row.verse_number + " " + row.glyphs;
   let verse = html_p_text(content, numbered);
-  let extra = bible_glyph_word_gap_extra();
-  html_style_set(verse, "wordSpacing", extra);
   let original = html_div_text(content, row.original);
   app_shared_text_deemphasized(original);
   let english = html_div_text(content, row.english);
