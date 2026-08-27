@@ -7,7 +7,7 @@ export async function baseline_writers_growth_gate_run() {
   let offenders = await baseline_writers_growth_unguarded();
   console.log("ratchet writers that cannot refuse growth: " + offenders.length);
   list_empty_is_assert_json(offenders, {
-    hint: "each of these can record something its file did not already hold, so the ratchet turns both ways and the rewrite gets reached for at exactly the moment the gate goes red - call a growth assert before writing, or, if growing really is honest here, say so beside the reason in the exempt list",
+    hint: text_combine_multiple(["each of these can record something its file did not already hold, so the ratchet turns both ways and the rewrite gets reached for at exactly the moment the gate goes red - import one of the growth asserts ", fn_name("baseline_growth_guarded_is"), " counts as a refusal and call it before writing, or, if growing really is honest here, name the writer with its reason in ", fn_name("baseline_writers_growth_exempt")]),
     offenders,
   });
   let r = {
