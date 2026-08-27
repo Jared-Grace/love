@@ -46,7 +46,6 @@ export async function ebible_reading_units_report(bible_folder) {
       }
     }
     each(pieces, piece_each);
-    return;
   }
   each(chapters, chapter_each);
   let left = divide(single, units);
