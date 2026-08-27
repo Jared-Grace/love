@@ -6,8 +6,8 @@ import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { bless_rung_before } from "./bless_rung_before.mjs";
 export function bless_place_people(rung) {
   arguments_assert(arguments, 1);
-  ("How many people a place of this size holds - three in a household, twelve in a");
-  ("building, sixty on a block.");
+  ("How many people a place of this size holds - three in a household, nine in a building,");
+  ("forty-five on a block.");
   ("Worked out by walking the ladder down rather than written anywhere, so it is the same");
   ("number the addresses are made of. A crowd is laid out by dividing a line of people up,");
   ("so how many a block holds is exactly the product of the divisions between a person and");
