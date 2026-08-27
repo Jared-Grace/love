@@ -5,7 +5,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_arcs_note_pills(parent, notes) {
+export function app_shared_note_pills(parent, notes) {
   "The notes already standing against the thing above them, each one drawn as a quiet band with the part it was filed against in front of it.";
   "THEY ARE SHOWN ABOVE THE BOX, because the commonest thing a second reader does is file again what the first one already filed. The part is shown with the words so a reader can see whether their own finding is the same one.";
   "A TURN AND A PERSON GET THE SAME BAND ON PURPOSE. A note against an occupation and a note against a line are the same kind of thing to read past, and two looks would say they were different kinds.";
