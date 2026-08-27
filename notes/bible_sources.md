@@ -433,6 +433,77 @@ Lamentations, Habakkuk 3, the Magnificat — therefore have no generated setting
 this engine, and a singing voice matched to a spoken one is a second pipeline rather
 than a flag on this one.
 
+## Carrying a Sword module — built 2026-08-27
+
+Rotherham's Emphasized Bible ships as `engroth`, the repo's third source. It exists
+for one reason no other shelf covers: Rotherham sets out to show what the Hebrew and
+Greek *emphasise*, through accents and word order that plain English cannot carry,
+so a line of a song compared against it is compared against a reading answering a
+different question from every other translation here.
+
+**The licence was settled from the module, not from the label** — the rule at the
+top of this file. `rotherham.conf` says `DistributionLicense=Public Domain`, names no
+attribution duty, no derivative limit and no royalty. The work was published in 1902
+and Rotherham died in 1910, so it is public domain by US publication date *and* by
+life+70; the electronic text is a transcription of Internet Archive scans of that
+same printed edition. That is stronger than the three CC BY-ND texts already
+shipping.
+
+**A Sword zText module is a binary format, and it is self-describing.** Three files
+per testament: `.bzv` is the verse index at 10 bytes an entry (uint32 block LE,
+uint32 start LE, uint16 size LE), `.bzs` is the block index at 12 bytes a block
+(offset, compressed size, uncompressed size), `.bzz` is concatenated zlib blocks —
+one per book, since `BlockType=BOOK`. Entries run in KJV versification order, and the
+ones that open a book or a chapter sit in the same run as the verses, each carrying
+its own `osisID`. So walking the run in order *is* the whole of finding out what is
+where, and **no 1,189-row versification table is kept** — a table would be numbers
+copied from elsewhere, and a module disagreeing with it by one would be read wrongly
+and silently.
+
+**Two format subtleties, both of which cost a verse count before they were found:**
+
+- **A closing milestone carries `osisID` too, and rides on the last verse's text
+  rather than occupying its own entry.** Openings carry `sID`; closings carry `eID`.
+  Matching on `osisID` alone eats the last verse of every chapter — exactly 1,189
+  verses, which is why the count came back short by precisely the chapter count.
+  `regex_sword_book_open` and `regex_sword_chapter_open` both use an `sID` lookahead.
+- **Where we are must be forgotten at each testament.** The two testaments are
+  separate files and each opens with a couple of entries belonging to the module
+  rather than to any book. Carrying the last chapter across filed those two as verses
+  of Malachi 4 — a count two too high and nothing else to show for it.
+
+**An empty entry is kept, never dropped.** The module holds a place for every verse
+the KJV numbering has and leaves it empty where this translation has none. A verse's
+number is where it stands in the list, so dropping the empties would rename every
+verse after each of them. The 16 empties read back as precisely the KJV-only verses:
+Matt 17:21, 18:11, 23:13; Mark 7:16, 9:44, 9:46, 11:26, 15:28; Luke 17:36, 23:17;
+John 5:4; Acts 8:37, 15:34, 24:7, 28:29; Rom 16:24.
+
+**The reader was proved structurally, not by spot check:** 66 books in canonical
+order, 1,189 chapters with every per-book count matching canon, 31,102 verses
+exactly, 0 leftover markup, and those 16 empties. Then again end-to-end through the
+shared road — fetched from CrossWire, unpacked, walked — 1,189 unique chapter codes,
+GEN01 through REV22.
+
+**How it wired in.** The same five hand-off functions the Door43 section names, plus
+`bible_versions_commercial` for the third catalogue. `sword_versions` is the
+hand-written catalogue pinned to `Version=1.7` / `SwordVersionDate=2014-01-19`, and
+`sword_version_or_null` is the one question that tells this source apart.
+`ebible_verses_upload` needed **no edit at all**: it asks `bible_verses_marked_is`,
+whose own prose had already said "a fourth that did would answer yes with nothing
+below edited" — and a Sword module does mark every verse.
+
+**The book names are paired explicitly, never zipped by position.** A module writes
+OSIS (`Gen`, `Exod`, `Song`, `Matt`, `Phlm`); everything else here writes eBible
+(`GEN`, `EXO`, `SNG`, `MAT`, `PHM`). Neither is derivable from the other. Both lists
+happen to run in the same order today, so pairing first-with-first would work — until
+one list gained a book the other lacked, at which point every book after it would be
+filed under its neighbour's name with nothing to complain about it.
+`sword_book_codes` says each pair once and `sword_book_codes_canon_assert` (in `q`)
+holds its repo half to the canonical 66.
+
+Adding a second Sword module is one entry in `sword_versions`. Nothing else.
+
 ## Worked example: the Thai KJV disagreement
 
 Indexes list `thaKJV` as public domain, on the reasoning that a translation of the
