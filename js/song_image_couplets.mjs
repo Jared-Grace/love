@@ -375,7 +375,7 @@ export function song_image_couplets() {
         r4,
         " standing wide open and filled edge to edge with one whole sheet of plain white glass so that no black shows inside it anywhere, and broad rays of white light springing out of that sheet and passing over the face of the rock on both sides of the mouth and out into the sky above it, drawn in front of the rock and never behind it, the rays and the sheet one single piece of white glass with no black line where they meet, and ",
         r5,
-        ", as wide across as very nearly half the whole window, so that it would hide the mouth entirely under it, arch and all, set on the ground beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
+        ", its foot on the ground and its top standing as high as the top of the arch of the mouth, so that it is taller than the mouth is tall and would hide the whole opening under it, set beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
