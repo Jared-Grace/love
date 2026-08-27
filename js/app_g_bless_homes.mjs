@@ -78,7 +78,7 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   let close = text_combine_multiple([
     "drop-shadow(0 0 calc((",
     size,
-    ") * 0.15) rgba(255, 228, 166, 0.72))",
+    ") * 0.15) rgba(255, 236, 190, 0.95))",
   ]);
   let wide = text_combine_multiple([
     "drop-shadow(0 0 calc((",
