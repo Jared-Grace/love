@@ -214,7 +214,7 @@ export function bible_glyph_chapter_jhn17() {
           "$plus",
           "they",
           "$hand_receiving",
-          "them,",
+          "$pointing_back,",
           "$plus",
           "they",
           "$lightbulb",
