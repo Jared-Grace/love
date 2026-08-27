@@ -20,7 +20,9 @@ The record is keyed by chapter, not by item number, so items in the letter can b
 
 ## Getting it into an email
 
-`ebible_letter.txt` next to it is the paste target. `ebible_letter_plain_text_write` generates it from the markdown; re-run that after any edit.
+`ebible_letter.txt` next to it is the paste target. `ebible_letter_plain_text_write` generates it from the markdown; re-run that after any edit. `ebible_letter_plain_text_gate_run` fails if you forget, and names the first line where the two part.
+
+`markdown_plain_text` does the conversion, and refuses rather than half-converting: it takes off `**` and backticks, and throws on any other mark it meets. So a letter that grows a heading or a link fails loudly instead of being sent with the mark showing. `markdown_plain_text_cases` pins both halves of that.
 
 **Paste it as plain text, not rich text.** The letter quotes markup as its evidence, and eight of those quotes hold `&#160;`. Rich-text mail can render those six characters as a space, which would show the reader something other than the page being reported. Mail clients link a bare url on their own, so nothing that matters is lost.
 
