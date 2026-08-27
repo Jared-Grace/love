@@ -1,3 +1,4 @@
+import { firebase_hosting_ignore_gate_run } from "./firebase_hosting_ignore_gate_run.mjs";
 import { sword_markup_removed_cases_gate_run } from "./sword_markup_removed_cases_gate_run.mjs";
 import { midi_chords_recover_gate_run } from "./midi_chords_recover_gate_run.mjs";
 import { ffmpeg_stats_numbers_cases_gate_run } from "./ffmpeg_stats_numbers_cases_gate_run.mjs";
