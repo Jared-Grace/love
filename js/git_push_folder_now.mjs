@@ -1,3 +1,4 @@
+import { git_fetch_folder_try } from "./git_fetch_folder_try.mjs";
 import { git_push_folder_url_try } from "./git_push_folder_url_try.mjs";
 import { git_push_urls } from "./git_push_urls.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
@@ -18,5 +19,6 @@ export async function git_push_folder_now(folder) {
     folder,
     urls,
   });
+  let answered2 = await git_fetch_folder_try(folder);
   return reached;
 }
