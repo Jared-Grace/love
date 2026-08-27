@@ -10,11 +10,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "the light now starts inside the mouth rather than above it, and the stone is a round disc standing clear of the opening. The mouth is still black behind the burst, and the border is a mosaic.",
+      note: "the mouth is white glass now and the rays reach far out past it, across the rock and into the sky. The stone is much larger, though still not quite as wide as the opening, and the bands behind the rock came back purple and crimson.",
     },
     {
       n: 26,
-      note: "no cross, and the cloud is properly lobed. The rays now stop short of the bottom onto one flat cobalt sheet - but one of the field's two lead lines still crosses them.",
+      note: "unchanged - the keeper still stands. A clause telling the window's own bars to stop where they meet a ray made it worse, so it was taken out again. I could not tell from your note which other ways 15 was closer, so this one is left for you to say.",
     },
     {
       n: 30,
