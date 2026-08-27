@@ -1,11 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { multiply } from "./multiply.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_remove } from "./html_remove.mjs";
-export function app_g_bless_finished_glow_fade(glow, span) {
-  arguments_assert(arguments, 2);
-  ("Lets the round light go: it keeps opening outward while it fades away, and clears");
+export function app_g_bless_finished_glow_fade(glow) {
+  arguments_assert(arguments, 1);
+  ("Lets the lit house go: it keeps spreading outward while it fades away, and clears");
   ("itself off the map once it can no longer be seen.");
   ("Still growing as it fades, rather than shrinking back or simply dimming. A light that");
   ("shrinks looks like it is being taken back, and what just happened is not being taken");
@@ -21,11 +19,9 @@ export function app_g_bless_finished_glow_fade(glow, span) {
   ("step anybody takes for the rest of the game.");
   ("The removal waits out the fade by the clock instead of watching for its end. The wait");
   ("is the fade plus a little, so a frame that runs late still finds the light there.");
-  let reach = multiply(span, 2.6);
-  let scale = text_combine_multiple(["scale(", reach, ")"]);
   html_style_assign(glow, {
     transition: "transform 0.76s ease-in, opacity 0.76s ease-in",
-    transform: scale,
+    transform: "scale(1.5)",
     opacity: "0",
   });
   function glow_remove() {
