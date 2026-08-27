@@ -7,9 +7,7 @@ import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { round } from "./round.mjs";
+import { percent_one_decimal } from "./percent_one_decimal.mjs";
 export async function ebible_reading_units_report(bible_folder) {
   "$plain bible_folder";
   "How many pieces one whole bible comes to once its verses are gathered into what a reader or a singer may stop at, how many of those pieces are a single verse untouched, and which are the largest.";
@@ -48,16 +46,13 @@ export async function ebible_reading_units_report(bible_folder) {
     each(pieces, piece_each);
   }
   each(chapters, chapter_each);
-  let left = divide(single, units);
-  let n = multiply(left, 1000);
-  let top = round(n);
   let report = {
     bible_folder,
     verses,
     units,
     single,
     gathered,
-    single_share: divide(top, 10),
+    single_share: percent_one_decimal(single, units),
     over_five: largest.length,
     largest,
   };
