@@ -59,7 +59,6 @@ export function app_sandbox_previews() {
     return r10;
   }
   let previews = {
-    bless_finished: bless_finished_load,
     code_review: code_review_load,
     spinner_preview: spinner_load,
     week_calendar: week_calendar_load,

@@ -22,7 +22,8 @@ import { app_shared_game_player_center } from "./app_shared_game_player_center.m
 import { sleep } from "./sleep.mjs";
 export async function app_g_bless_finished_preview() {
   "The praying game's celebration on its own - one household lit, and the whole run of it";
-  "played over a real street, with a button to watch it again. Open it with #bless_finished.";
+  "played over a real street, with a button to watch it again. It is a dev screen of this
+  game, reached from the tools pill on the street or by asking for #bless_finished.";
   "A real world is built and drawn with the game's own drawing rather than a grid stood in";
   "for one, because half of what is being judged here is timing against real ground: how";
   "long the view takes to arrive, how far the light spreads over a house, and whether the";
