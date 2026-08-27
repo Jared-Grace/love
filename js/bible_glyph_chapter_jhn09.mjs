@@ -34,7 +34,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 2,
         words: [
           "$plus",
-          "His",
+          "$pointing_back",
           "$learner",
           "asked",
           "$pointing_back,",
