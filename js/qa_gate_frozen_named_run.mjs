@@ -1,7 +1,7 @@
+import { qa_gate_frozen_folder_run } from "./qa_gate_frozen_folder_run.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gate_frozen_ensure } from "./qa_gate_frozen_ensure.mjs";
 import { property_get } from "./property_get.mjs";
-import { node_run_lines_whole } from "./node_run_lines_whole.mjs";
 export async function qa_gate_frozen_named_run(gate_name) {
   "$plain gate_name";
   "Runs ONE gate by name inside the frozen copy of this folder, the same copy the whole judging stands in, and hands back what it said.";
