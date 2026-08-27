@@ -51,11 +51,12 @@ export function bible_glyph_roots_characters_gate_run() {
     }
   }
   let none = list_empty_is(missing);
+  let f_name = fn_name("bible_glyph_characters");
   assert_json(none, {
     missing,
     hint: text_combine_multiple([
       "these roots are seated under a glyph the vocabulary has no character for, so the first chapter to use one of these words will throw rather than draw - give each glyph a character in ",
-      fn_name("bible_glyph_characters"),
+      f_name,
       ", or seat the word under a glyph that already has one there",
     ]),
   });

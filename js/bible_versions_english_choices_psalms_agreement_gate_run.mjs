@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_psalms_agreement } from "./bible_versions_english_choices_psalms_agreement.mjs";
@@ -18,9 +20,19 @@ export async function bible_versions_english_choices_psalms_agreement_gate_run()
   let references = property_get(measured, "references");
   let apart = property_get(measured, "apart");
   let unmeasured = property_get(measured, "unmeasured");
+  let f_name = fn_name(
+    "bible_versions_english_choices_psalms_agreement_gate_run",
+  );
+  let f_name2 = fn_name("bible_versions_english_choices_withheld");
   list_empty_is_assert_json(unmeasured, {
     references,
-    hint: "each of these translations may be shipped and was never read at these psalms, so nothing here has looked at them - a fetch that failed leaves a translation out silently, and this check cannot fail a translation it never saw; run it again, and if the same one is missing twice it cannot be read at all and belongs in the withheld list rather than on the shelf",
+    hint: text_combine_multiple([
+      "each of these translations may be shipped and was never read at these psalms, so nothing here has looked at them - a fetch that failed leaves a translation out silently, and this check cannot fail a translation it never saw; run ",
+      f_name,
+      " again, and if the same one is missing twice it cannot be read at all and belongs in ",
+      f_name2,
+      " rather than on the shelf",
+    ]),
   });
   function alone_is(record) {
     let unshared = property_equals(record, "nearest", 0);
