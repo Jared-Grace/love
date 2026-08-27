@@ -1,12 +1,15 @@
 import { fn_name } from "./fn_name.mjs";
+import { html_body_div } from "./html_body_div.mjs";
+import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_width_full } from "./html_viewport_width_full.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
-import { html_body_div } from "./html_body_div.mjs";
-import { html_p_text } from "./html_p_text.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { html_p_text } from "./html_p_text.mjs";
+import { app_shared_dev_overlay_context } from "./app_shared_dev_overlay_context.mjs";
+import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_shared_font_size_buttons } from "./app_shared_font_size_buttons.mjs";
+import { app_shared_column_max_width } from "./app_shared_column_max_width.mjs";
 import { html_scroll_tail_height } from "./html_scroll_tail_height.mjs";
 export function app_shared_dev_overlay(title_text) {
   "the full-screen panel a dev screen draws itself into: fixed over the whole viewport in the page background colour, scrolling on its own, with a bold title at the top. shared by every #route that shows a PAGE of its own rather than acting on the map, so the directory and the design reader cannot drift apart in look. BESPOKE (style object literal) — do NOT auto-canonicalize";
@@ -41,6 +44,16 @@ export function app_shared_dev_overlay(title_text) {
     "text-align": "center",
     "font-weight": "bold",
   });
+  ("EVERY DEV SCREEN OFFERS THE PAIR OF BUTTONS THAT SIZE ITS TEXT, and it is offered here so that a bench cannot be built without it. Three settings screens in the whole repo carried this control, and a dev bench has no settings screen to put it on - so the review sheets, which are the screens somebody sits and READS for an hour, were the ones with no way to make the words bigger.");
+  ("the size is put on before the buttons are drawn, so the size chosen last time is the size the panel opens at. A control that only takes effect while it is being pressed is not a setting.");
+  let context = app_shared_dev_overlay_context();
+  app_shared_font_size_refresh(context);
+  let controls = html_div(div);
+  html_style_assign(controls, {
+    display: "flex",
+    "justify-content": "center",
+  });
+  app_shared_font_size_buttons(controls, context);
   ("the cards go in a COLUMN of their own, capped and centred, so a wide screen reads as a page down the middle instead of one card stretched the whole way across. the panel above keeps the scrolling and the background; this holds the content");
   let column = html_div(div);
   html_style_assign(column, {
