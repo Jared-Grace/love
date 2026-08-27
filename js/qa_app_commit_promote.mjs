@@ -35,6 +35,6 @@ export async function qa_app_commit_promote(search, commit) {
   ("It happens after the new pieces are in place rather than before, so a run that fell over partway through has taken nothing away that it did not replace.");
   await firebase_prod_app_stale_delete(app_name, file_names);
   await qa_promoted_app_write(app_name, commit, hashes);
-  let hold = folder_public_root_noting_clear();
+  folder_public_root_noting_clear();
   return hashes;
 }
