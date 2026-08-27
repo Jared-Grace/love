@@ -1,6 +1,7 @@
 export function midi_chords_recover_cases() {
   "short lines written as a melody and a bass together with the chords a musician would name under them";
   "these were authored rather than measured so they are what the chooser is held to and every one of them is a chord a person can check by eye";
+  "the case where a fourth sits in the tune over a held bass note is recorded as the chord standing on that bass rather than as the chord the bass is the root of, because no third sounds anywhere in it, so the two notes that do sound are the whole of the evidence and naming the other one would be reading a note that is not there";
   "each case names the chord vocabulary it is written for, because the same two notes are harmonised differently by a chorale and by a modern worship song, so a case without one would be holding the chooser to whichever vocabulary happened to be the default";
   let r = [
     {
