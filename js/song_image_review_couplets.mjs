@@ -6,7 +6,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 23,
-      note: "the cross is gone and the border is white glass. The ground and the sky are each one flat pane now, and the sliver on the horizon barely bows.",
+      note: "the sliver is gone: a rising sun, yellow at its heart with orange and yellow rays, over a black ground. Your grant of yellow and orange is written into this couplet's own clause so it cannot leak into the other thirty-five. The band across the middle came back crimson rather than cobalt.",
     },
     {
       n: 24,
