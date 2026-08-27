@@ -859,6 +859,7 @@ export function qa_gates() {
     midi_chords_recover_gate_run,
     sword_markup_removed_cases_gate_run,
     firebase_hosting_ignore_gate_run,
+    sword_book_codes_canon_assert,
   ];
   return gates;
 }
