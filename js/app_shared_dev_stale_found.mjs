@@ -9,12 +9,11 @@ import { app_shared_dev_stamp_fingerprint_read } from "./app_shared_dev_stamp_fi
 import { app_shared_dev_sources_fingerprint } from "./app_shared_dev_sources_fingerprint.mjs";
 import { equal } from "./equal.mjs";
 import { each_async } from "./each_async.mjs";
-import { list_size } from "./list_size.mjs";
 export async function app_shared_dev_stale_found() {
   arguments_assert(arguments, 0);
-  ("Every app whose dev bundle no longer stands for the sources it was built from, every app holding a bundle nothing was ever recorded about, and how many bundles were opened to find that out. Read-only.");
+  ("Every app whose dev bundle no longer stands for the sources it was built from, every app holding a bundle nothing was ever recorded about, and every app whose bundle was opened at all. Read-only.");
   ("An app with no bundle on disk is passed over rather than counted against, because a page can sit in the dev folder with its script written inside it and be no bundle at all. There is then nothing that could be out of date.");
-  ("The number of bundles opened travels out beside the two lists, because both lists being empty is what a clean sweep says and also what a sweep that has stopped visiting anything says. The count is the one part of the answer that falls when the looking stops.");
+  ("THE OPENED ONES COME BACK AS A LIST AND NOT AS A NUMBER. Both fault lists being empty is what a clean sweep says and also what a sweep that has stopped visiting anything says, so what was reached has to travel out beside them - and a list can be looked at afterwards to see which apps those were, where a count can only be believed.");
   let names = await apps_names_dev();
   let opened = [];
   let stale = [];
@@ -44,9 +43,8 @@ export async function app_shared_dev_stale_found() {
     list_add(stale, a_name);
   }
   await each_async(names, look);
-  let walked = list_size(opened);
   let r = {
-    walked,
+    opened,
     stale,
     unrecorded,
   };
