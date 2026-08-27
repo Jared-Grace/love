@@ -65,6 +65,7 @@ export function app_sandbox_previews() {
     availability_editor: availability_editor_load,
     song_image_choose: song_image_choose_load,
     song_image_audit: song_image_audit_load,
+    song_image_review: song_image_review_load,
     second_takes: second_takes_load,
     dream_trace: dream_trace_load,
     dream_prison: dream_prison_load,
