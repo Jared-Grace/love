@@ -83,7 +83,7 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   let wide = text_combine_multiple([
     "drop-shadow(0 0 calc((",
     size,
-    ") * 0.5) rgba(255, 186, 74, 0.58))",
+    ") * 0.5) rgba(255, 190, 74, 0.82))",
   ]);
   let spill = text_combine_multiple([close, " ", wide]);
   ("The wrapper stands at the depth of the LOWEST of its own squares, which is where the");
