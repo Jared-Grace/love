@@ -55,6 +55,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
       border: border,
       "border-radius": "50%",
       "box-sizing": "border-box",
+      filter: app_g_bless_mark_edge_filter(),
       "pointer-events": "none",
       visibility: "hidden",
     });
