@@ -13,12 +13,12 @@ export function app_g_bless_color_blessed_home() {
   "materials, and a light that hid them would take the landmarks away in exchange for the";
   "progress - which is a poor trade, since the progress is only worth knowing about a place";
   "the player can still recognise.";
-  ("Turned up from a third of the way to half. It was fainter, and against a street of");
-  ("sand, dry grass and lamplight it was so nearly the ground already there that a player");
-  ("who was not told a house had changed did not notice one had. Half is still see-through");
-  ("enough for the doors and the roof to read, so the trade above is untouched - what was");
-  ("bought is a house that can be picked out from across the street rather than only found");
-  ("once you are standing on it.");
+  "Turned up from a third of the way to half. It was fainter, and against a street of";
+  "sand, dry grass and lamplight it was so nearly the ground already there that a player";
+  "who was not told a house had changed did not notice one had. Half is still see-through";
+  "enough for the doors and the roof to read, so the trade above is untouched - what was";
+  "bought is a house that can be picked out from across the street rather than only found";
+  "once you are standing on it.";
   let color = "rgba(255, 190, 74, 0.5)";
   return color;
 }

@@ -1,3 +1,7 @@
+import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
+import { app_g_bless_lit_new } from "./app_g_bless_lit_new.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { app_g_bless_finished } from "./app_g_bless_finished.mjs";
 import { bless_told_after_prayer_or_null } from "./bless_told_after_prayer_or_null.mjs";
 import { app_g_bless_notice } from "./app_g_bless_notice.mjs";
 import { app_g_bless_edge } from "./app_g_bless_edge.mjs";
@@ -68,11 +72,11 @@ export function app_g_bless_overlay_render_tap_prayed(
       return false;
     }
     async function amen() {
-      ("The ground already prayed for is read once before this prayer and once after it, and");
-      ("the difference is what just lit up. Read that way rather than worked out from what");
-      ("was prayed, because a prayer names one rung and finishes off whatever that completed,");
-      ("which is never a fixed amount - and an empty difference is exactly the case where");
-      ("nothing was finished and there is nothing to celebrate.");
+      "The ground already prayed for is read once before this prayer and once after it, and";
+      "the difference is what just lit up. Read that way rather than worked out from what";
+      "was prayed, because a prayer names one rung and finishes off whatever that completed,";
+      "which is never a fixed amount - and an empty difference is exactly the case where";
+      "nothing was finished and there is nothing to celebrate.";
       let lit_before = bless_blessed_tiles(blessed, blocks);
       let place = bless_person_place(person, rung);
       bless_blessed_add(blessed, rung, place);

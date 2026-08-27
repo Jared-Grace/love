@@ -12,7 +12,7 @@ export function midi_chords_held(chosen) {
     let last = held[subtract(held.length, 1)];
     let same =
       not_equal(last, undefined) &&
-      equal(last.chord.name, one.chord.name) &&
+      equal(last.name, one.name) &&
       equal(last.segment.bar, one.segment.bar);
     if (same) {
       last.segment.end = one.segment.end;
@@ -36,6 +36,7 @@ export function midi_chords_held(chosen) {
         sounding: one.segment.sounding,
       },
       chord: one.chord,
+      name: one.name,
       score: one.score,
       margin: one.margin,
       settled: one.settled,
