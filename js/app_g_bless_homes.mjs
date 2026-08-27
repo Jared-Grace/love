@@ -24,14 +24,28 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   ("way is the drawing.");
   ("It sits at the ground layer, above the tiles and below the people, so a lit house never");
   ("hides whoever is standing at its door.");
+  ("Each square also carries a soft pale bloom in the middle of it, laid INSIDE its own");
+  ("edges. A flat wash of one colour over several squares reads as a stain on the map; a");
+  ("bloom per square reads as ground that is lit, and the squares then draw their own quiet");
+  ("grid, which is the shape of the house being told in the only units this map has.");
+  ("Inside the square and not around it, which is what stops two neighbours doubling up.");
+  ("The lights here are see-through, so anything spilling past an edge would land on the");
+  ("square next door on top of its own and paint that overlap brighter than either - and a");
+  ("finished house would come out in bands rather than in one colour.");
+  ("Measured as a fraction of a square rather than in fixed units, because the map is drawn");
+  ("at whatever size the screen has room for: written in pixels this is a hairline on a");
+  ("tablet and a smear on a phone.");
   html_clear(homes);
   let tiles = bless_blessed_tiles(blessed, blocks);
   let color = app_g_bless_color_blessed_home();
+  let size = g_img_square_size_css();
+  let bloom = text_combine_multiple(["inset 0 0 calc((", size, ") * 0.3) rgba(255, 246, 214, 0.5)"]);
   function tile_light(tile) {
     let square = html_div(homes);
     g_img_square_style_position(square, tile, "ground_tint");
     html_style_assign(square, {
       background: color,
+      "box-shadow": bloom,
       "pointer-events": "none",
     });
   }

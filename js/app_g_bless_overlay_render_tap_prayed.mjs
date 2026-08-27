@@ -104,6 +104,18 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("player who has moved on to the next face.");
       hold_release(person);
       render();
+      ("Whether anything was FINISHED is asked after the draw rather than before it, because");
+      ("the draw is what puts the newly lit house on the screen at all. The celebration then");
+      ("flashes over ground that is already warm underneath, and the white coming back off it");
+      ("reveals a finished house rather than an empty square.");
+      let lit_after = bless_blessed_tiles(blessed, blocks);
+      let lit_now = app_g_bless_lit_new(lit_before, lit_after);
+      let nothing = list_empty_is(lit_now);
+      if (nothing) {
+        app_g_bless_notice(line);
+        return;
+      }
+      await app_g_bless_finished(r2, lit_now, line);
     }
     app_g_bless_pray_overlay(container_map, rung, amen);
     return true;

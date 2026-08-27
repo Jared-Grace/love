@@ -11,7 +11,7 @@ export function midi_song_chords_chosen(song, style) {
   let key = midi_notes_key(notes);
   let segments = midi_notes_chord_segments(parts, song);
   let chords = harmony_key_chords(key, style);
-  let chosen = midi_segments_chords(segments, chords);
+  let chosen = midi_segments_chords(segments, chords, key.spelling);
   let r = {
     song,
     parts,
