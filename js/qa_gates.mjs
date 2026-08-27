@@ -1,3 +1,4 @@
+import { bible_usfm_chapter_paragraphed_text_cases_gate_run } from "./bible_usfm_chapter_paragraphed_text_cases_gate_run.mjs";
 import { sword_book_codes_canon_assert } from "./sword_book_codes_canon_assert.mjs";
 import { firebase_hosting_ignore_gate_run } from "./firebase_hosting_ignore_gate_run.mjs";
 import { sword_markup_removed_cases_gate_run } from "./sword_markup_removed_cases_gate_run.mjs";
@@ -861,6 +862,7 @@ export function qa_gates() {
     sword_markup_removed_cases_gate_run,
     firebase_hosting_ignore_gate_run,
     sword_book_codes_canon_assert,
+    bible_usfm_chapter_paragraphed_text_cases_gate_run,
   ];
   return gates;
 }
