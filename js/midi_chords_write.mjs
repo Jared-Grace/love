@@ -22,7 +22,7 @@ export async function midi_chords_write(file_paths_in, file_path_out, style) {
     chosen.parts,
     chosen.chosen,
   );
-  await file_write_buffer(file_path_out, contents);
+  await file_overwrite_buffer(file_path_out, contents);
   let lines = midi_chords_chart_lines(chosen.chosen, chosen.key, chosen.parts);
   let file_path_chart = file_path_out + ".txt";
   let contents2 = lines.join("\n");
