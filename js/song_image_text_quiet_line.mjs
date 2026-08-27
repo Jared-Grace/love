@@ -1,3 +1,4 @@
+import { app_shared_caption_font_size } from "./app_shared_caption_font_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
