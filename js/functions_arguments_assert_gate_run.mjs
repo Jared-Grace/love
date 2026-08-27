@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_arguments_assert_stale } from "./functions_arguments_assert_stale.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -10,8 +12,13 @@ export async function functions_arguments_assert_gate_run() {
   ("Held at none rather than against a record of what was already here, because the sweep found none. There is nothing to grandfather and so nothing to argue about later - the first one to appear is the one that just broke.");
   ("The repair is by hand and it is one number. Whichever of the two is right, the other is a typing job, and the reading says both so nobody has to open the file to find out which.");
   let offenders = await functions_arguments_assert_stale();
+  let f_name = fn_name("functions_arguments_assert_count_repair");
   list_empty_is_assert_json(offenders, {
-    hint: "the line counting arguments says a different number from the names the function takes, so every correct call to it throws - set the number to the count of names",
+    hint: text_combine_multiple([
+      "the line counting arguments says a different number from the names the function takes, so every correct call to it throws - one run of ",
+      f_name,
+      " finds this whole set for itself and sets each number to the count of names",
+    ]),
     offenders,
   });
   let looked = list_size(offenders);
