@@ -10,11 +10,14 @@ export function bible_glyph_verse_draw(words, lookup) {
     fn_name("bible_glyph_word_draw"),
     " has already decided everything about what a word looks like. The space is doing more work here than it looks: it is the only thing separating two glyphs that are one word from two glyphs that are two words.");
   ("AND IT IS NOW THE MARK ON THE PAGE TOO. A page used to draw a ring round a group and leave the space ordinary; it draws no ring any more and widens the space instead, so this line and the page are finally saying the same thing in two thicknesses rather than two different things.");
+  ("THE SPACE IS NO LONGER AN ORDINARY ONE EITHER, and ",
+    fn_name("bible_glyph_word_separator"),
+    " holds the reason. It is an em space, as wide as the pictures either side of it, so that the plain text carries the widening the page was already doing in its layout - because plain text is the medium a reader copies out and pastes into a message, where no layout follows it.");
   let drawn = [];
   for (let word of words) {
     let text = bible_glyph_word_draw(word, lookup);
     list_add(drawn, text);
   }
-  let joined = drawn.join(" ");
+  let joined = drawn.join(bible_glyph_word_separator());
   return joined;
 }
