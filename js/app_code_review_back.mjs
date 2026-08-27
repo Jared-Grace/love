@@ -24,7 +24,13 @@ export function app_code_review_back(r2, context) {
     next_lesson = list_get(lessons, next_index);
   }
   ("the way on from a review is the next lesson the learner has NOT finished - a blue row on the home list rather than a green one - looked for from the lesson this review stands in front of and carrying on round the top of the list where everything below is done. A review sat between lessons a learner had already been through would otherwise walk them forward into work they had finished, one green lesson at a time, while the lesson they still owed sat somewhere they were never offered");
-  let unfinished = app_code_lesson_incomplete_next(context, next_index);
+  ("no lesson is named as the one being left, because a review is not a lesson - the learner arrived here from the list or from the lesson before it, and every lesson in the course is a fair place to send them on to");
+  let lesson_none = null;
+  let unfinished = app_code_lesson_incomplete_next(
+    context,
+    next_index,
+    lesson_none,
+  );
   let found = null_not_is(unfinished);
   if (found) {
     next_lesson = unfinished;
