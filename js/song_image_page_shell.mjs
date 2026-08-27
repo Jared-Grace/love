@@ -1,0 +1,31 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_style_margin } from "./html_style_margin.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { song_image_couplets_title } from "./song_image_couplets_title.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { html_div_paragraph_small } from "./html_div_paragraph_small.mjs";
+import { song_image_color_text_quiet } from "./song_image_color_text_quiet.mjs";
+export function song_image_page_shell(said) {
+  "$plain said";
+  "The top of any of the hymn's own pages: dark ground, a column held to a readable width in the middle of the screen, the hymn's name across the top and one quiet line under it saying what this particular page is for - handed back for the caller to hang its bands on.";
+  "THE ONLY THING THAT DIFFERS BETWEEN THESE PAGES IS THAT ONE LINE, which is why it is the whole of what this takes. Two pages spelling out the same eleven lines to differ in one of them is two pages that will not stay the same: whoever widens the column on the page they are working on has no reason to open the other, and the next reader meets two pages that look like the same page drawn twice, badly.";
+  "THE WIDTH IS THE AUDIT PAGE'S because every one of these pages sets a drawing beside a column of writing, and that shape needs the room for two columns rather than one.";
+  "THE SIZES ARE SHARES OF THE PAGE'S OWN. A title fixed at a count of pixels stays that size while the page around it grows, and the page it was measured against was the browser's default rather than the size these apps open at.";
+  arguments_assert(arguments, 1);
+  let root = html_body_div_page_dark();
+  html_style_set(root, "max-width", "860px");
+  html_style_margin(root, "0 auto");
+  let title = html_div(root);
+  html_style_font_size(title, "1.6em");
+  html_style_set(title, "font-weight", "700");
+  let named = song_image_couplets_title();
+  html_text_set(title, named);
+  let subtitle = html_div_paragraph_small(root);
+  let quiet = song_image_color_text_quiet();
+  html_style_set(subtitle, "color", quiet);
+  html_text_set(subtitle, said);
+  return root;
+}
