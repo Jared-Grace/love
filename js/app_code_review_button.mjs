@@ -1,7 +1,7 @@
+import { app_shared_milestone_complete_background_color } from "./app_shared_milestone_complete_background_color.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_check } from "./emoji_check.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { app_shared_color_progress_complete } from "./app_shared_color_progress_complete.mjs";
 import { app_shared_button_wide_text_combine } from "./app_shared_button_wide_text_combine.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
@@ -21,12 +21,10 @@ export function app_code_review_button(parent, label, on_click, complete) {
   }
   let b = app_shared_button_wide_text_combine(parent, prefix, label, on_click);
   html_centered(b);
-  if (complete) {
-    let done = app_shared_color_progress_complete();
-    html_style_background_color_set(b, done);
-    return b;
-  }
   let background = app_shared_milestone_background_color();
+  if (complete) {
+    background = app_shared_milestone_complete_background_color();
+  }
   html_style_background_color_set(b, background);
   let color = app_shared_button_font_color();
   html_font_color_set(b, color);

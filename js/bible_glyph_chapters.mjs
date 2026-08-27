@@ -87,6 +87,7 @@ export function bible_glyph_chapters() {
   let twentieth = bible_glyph_chapter_3jn01();
   let twenty_first = bible_glyph_chapter_jud01();
   let twenty_second = bible_glyph_chapter_jhn10();
+  let twenty_third = bible_glyph_chapter_jhn09();
   let chapters = [
     first,
     second,
