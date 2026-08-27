@@ -1,3 +1,4 @@
+import { bible_glyph_word_separator } from "./bible_glyph_word_separator.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_word_draw } from "./bible_glyph_word_draw.mjs";
 import { list_add } from "./list_add.mjs";
@@ -18,6 +19,7 @@ export function bible_glyph_verse_draw(words, lookup) {
     let text = bible_glyph_word_draw(word, lookup);
     list_add(drawn, text);
   }
-  let joined = drawn.join(bible_glyph_word_separator());
+  let r = bible_glyph_word_separator();
+  let joined = drawn.join(r);
   return joined;
 }
