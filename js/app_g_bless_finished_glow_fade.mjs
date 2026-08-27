@@ -3,14 +3,13 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_remove } from "./html_remove.mjs";
 export function app_g_bless_finished_glow_fade(glow) {
   arguments_assert(arguments, 1);
-  ("Lets the lit house go: it keeps spreading outward while it fades away, and clears");
-  ("itself off the map once it can no longer be seen.");
-  ("Still growing as it fades, rather than shrinking back or simply dimming. A light that");
-  ("shrinks looks like it is being taken back, and what just happened is not being taken");
-  ("back. Spreading out until it is gone is what a blessing carrying past the person it");
-  ("was said over looks like, and it is the same shape as the ladder this whole game");
-  ("climbs.");
-  ("Slower than the opening was. The opening is the announcement and the fade is when the");
+  ("Lets the lit house go: it dims where it stands, and clears itself off the map once it");
+  ("can no longer be seen.");
+  ("It stays the size of the house on the way out for the same reason it stayed on the way");
+  ("in - a shape with corners that swells reads as a rectangle being inflated. The");
+  ("spreading outward is carried by the soft round light instead, which has no edge to");
+  ("give the trick away.");
+  ("Slower than the arrival was. The arrival is the announcement and the fade is when the");
   ("player actually looks at the house underneath, so the fade is the part that has to");
   ("give them time.");
   ("It removes itself afterwards rather than being left lying about, because this runs");
@@ -20,8 +19,7 @@ export function app_g_bless_finished_glow_fade(glow) {
   ("The removal waits out the fade by the clock instead of watching for its end. The wait");
   ("is the fade plus a little, so a frame that runs late still finds the light there.");
   html_style_assign(glow, {
-    transition: "transform 0.76s ease-in, opacity 0.76s ease-in",
-    transform: "scale(1.5)",
+    transition: "opacity 0.76s ease-in",
     opacity: "0",
   });
   function glow_remove() {
