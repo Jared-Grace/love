@@ -234,6 +234,11 @@ itself — a `*`, a bracket, an inline gloss — are not.
   readings).
 
   Adding a second Door43 bible is one entry in `door43_versions`. Nothing else.
+- **CrossWire / Sword** — packages at
+  `https://crosswire.org/ftpmirror/pub/sword/packages/rawzip/<Module>.zip`. Each
+  module carries its own terms inside itself, in the `.conf` packed beside the text;
+  Rotherham's says `DistributionLicense=Public Domain`, with no attribution duty, no
+  derivative limit and no royalty. See "Carrying a Sword module" below.
 - **open.bible (Biblica)** — per-translation licence pages, usually CC BY-SA or
   CC BY-NC-ND. Stated clearly, but read the page: Biblica varies it by language.
 - **seven1m/open-bibles** — an index rather than a source. Useful for finding a
@@ -291,7 +296,8 @@ spelling), both CC BY-NC-ND.
 
 **Off eBible the yield in English is one text, not a catalogue.** Rotherham's
 Emphasized Bible (1902) is complete, public domain, and absent from eBible; it is
-carried as a CrossWire/Sword module. STEPBible (Tyndale House, CC BY 4.0) is
+carried as a CrossWire/Sword module, and is shipping as of 2026-08-27 under the
+folder `engroth` (see "Carrying a Sword module" below). STEPBible (Tyndale House, CC BY 4.0) is
 lexical and morphological data rather than a translation. open.bible (Biblica)
 releases mostly non-English texts. The aggregators — `seven1m/open-bibles`,
 bible-api.com, Free Use Bible API, midvash bible-data — index the same public
