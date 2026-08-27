@@ -1,21 +1,3 @@
-# Letter to eBible.org — draft, not sent
-
-Every item was checked against the downloaded files. Re-check before sending if the downloads have been refreshed since.
-
-**Each item is mentioned once, ever.** `data/given/ebible_letter_accounted.json` says what has been said and what was judged no fault. `ebible_letter_unaccounted_names` and `ebible_verse_marks_gaps_unexplained` answer what neither covers; both are empty as of 2026-08-22, so this letter is the whole of what is outstanding. On sending: copy this file to `notes/letters/sent/<date>.md`, change every `in the unsent draft letter` in that record to `sent <date>`, and re-run `ebible_verse_marks_displaced_letter_write` so the linked JSON matches what was sent.
-
-The record is keyed by chapter, not by item number, so items here can be reordered freely.
-
-**One line per paragraph, on purpose.** This is pasted into an email, and a hard-wrapped paragraph breaks in the wrong place at every window width. Do not re-wrap it.
-
-**No greeting, no sign-off, no preamble.** Every line is a fault, its evidence, or a possible correction. Each heading names the versions affected, or their count where there are too many to name.
-
-**Every item says which pages it affects, and where on them.** Name the chapters where they can be named, give their count where they cannot, and link a JSON file where the count is too large to read — item 1 does that. Give the verse number too, unless the fault is a whole chapter or a superscription, which sits above verse 1 and carries no number. The test is that a reader can go straight to each page without asking us anything.
-
-**"possible correction", never "correction".** Two reasons, and the first is the weaker one: it protects the writer if the writer is the one who is wrong. The second is why it stays even when we are certain — "possible" asks what he thinks and lets him reach the answer himself, where the bare word says *this is the truth, I already know it, and disagreeing makes you wrong.* Paul writes with authority and does not hedge, so this is not absolute; it is not ours to claim here.
-
----
-
 Subject: Eleven faults in published files — the first affects 131 versions
 
 Found by a free Bible reading app that carries 399 of your translations. No reply needed.
