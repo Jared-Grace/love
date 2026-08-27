@@ -1,3 +1,4 @@
+import { list_is_assert } from "./list_is_assert.mjs";
 import { qa_gate_frozen_ensure } from "./qa_gate_frozen_ensure.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_frozen_folder_run } from "./qa_gate_frozen_folder_run.mjs";
@@ -13,7 +14,9 @@ export async function qa_gates_frozen_names_run(gate_names) {
   "ONE GATE COMPLAINING IS AN ORDINARY FACT ABOUT THAT GATE AND NOT THE END OF THE RUN, so each is caught and its reason carried back out. Letting the first refusal travel would answer with one name and hide the rest, which is the exact failing this was built to end.";
   "IT IS SLOW ON PURPOSE AND SEQUENTIAL. Every gate is a whole node started up in the copy, because that is the only way to watch a gate reach for something that is not there rather than to reason about whether it would.";
   "THE COPY IS PUT ONCE AND EVERY GATE IN THE SET IS ASKED OF THAT ONE COPY. Putting the copy reads afresh which commit this folder is at, so a set that put one copy per gate would be a set of answers about several different commits - and with ten of us committing into the one folder that is what happens rather than a corner case. The commit is carried back out beside the answer, so the answer says which state of the code it is about.";
+  "THE SET IS A LIST AND NOT A LINE OF TEXT, which is asserted rather than assumed. A run of words joined by commas is one string, and a string walked one at a time hands back its letters - so asking for two gates from the command line quietly ran seventy-five one-letter names and answered about none of them. A letter is a name nothing answers to, so every one of them complained, and a wall of complaints reads exactly like a wall of findings.";
   arguments_assert(arguments, 1);
+  list_is_assert(gate_names);
   let frozen = await qa_gate_frozen_ensure();
   let folder = property_get(frozen, "folder");
   let commit = property_get(frozen, "commit");
