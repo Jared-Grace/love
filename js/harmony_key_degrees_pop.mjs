@@ -4,6 +4,7 @@ export function harmony_key_degrees_pop(mode) {
   "the plain scale chords are the whole vocabulary here and everything that leaves the key is pushed far enough out that it takes overwhelming evidence to be chosen, which is what was asked for: no chord out of key";
   "the suspended shapes are offered on the chords that carry them in this music, because a fourth held over the root is a sound this writing reaches for constantly and reading it as a different chord altogether is the mistake that would otherwise be made";
   "they are pushed out past the plain triads all the same, so a suspended chord is only chosen where the note that would say major or minor is genuinely absent";
+  "the minor chords are offered with a seventh on top as well, because in this music a minor chord is more often than not sounded that way, and without it a seventh sitting over the root is read as a suspension on the chord a step below, which names the chord wrongly and moves its root";
   "the minor here is the plain natural one, so the raised leading note and everything built on it is treated as leaving the key";
   if (equal(mode, "major")) {
     let r = [
@@ -150,6 +151,16 @@ export function harmony_key_degrees_pop(mode) {
       step_above: 7,
       quality: "minor",
       distance: 0.2,
+    },
+    {
+      step_above: 0,
+      quality: "minor_seventh",
+      distance: 0.6,
+    },
+    {
+      step_above: 5,
+      quality: "minor_seventh",
+      distance: 0.6,
     },
     {
       step_above: 0,
