@@ -22,7 +22,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 34,
-      note: "no, it is not a traditional pairing - a sceptre belongs in the right hand, and a throne's own right is the left as you look at it. So it stands upright at the left of the back now rather than down the middle, and the field behind is cobalt. The band across the seat came back pale blue, which is outside the eight.",
+      note: "the sceptre stands clear of the throne with a cross at its top, and the throne is raised on steps with carved points along its back. The sceptre came back slender rather than stout, and the blue behind it is shaded from dark to light rather than one flat pane.",
     },
     {
       n: 36,
