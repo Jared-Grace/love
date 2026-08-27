@@ -113,7 +113,7 @@ export function bible_glyph_chapter_jhn10() {
           "$plus",
           "$pointing_back",
           "$sheep",
-          "$walking+walking",
+          "follow",
           "him,",
           "$pointing",
           "they",
