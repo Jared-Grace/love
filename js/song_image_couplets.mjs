@@ -373,9 +373,9 @@ export function song_image_couplets() {
       second: "was raised to life",
       symbol: list_join_empty([
         r4,
-        " standing wide open, the inside of that mouth one whole sheet of plain white glass, and broad rays of white light springing out of that sheet and reaching far out past the edges of the mouth, across the face of the rock on both sides of it and up into the sky above it, each ray narrowest where it stands inside the mouth and widening as it goes, and ",
+        " standing wide open and filled edge to edge with one whole sheet of plain white glass so that no black shows inside it anywhere, and broad rays of white light springing out of that sheet and reaching far out past the edges of the mouth, across the rock on both sides of it and up into the sky above it, and ",
         r5,
-        ", big enough to cover the whole opening and more, its top standing higher than the top of the mouth and its sides reaching wider than the sides of the mouth, set on the ground beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
+        ", half again as wide across as the mouth is wide and half again as tall as the mouth is tall, big enough to cover the whole opening and more, set on the ground beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown and the sky behind the rock one plain sheet of deep cobalt blue",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
