@@ -195,6 +195,40 @@ export function usfm_chapters_verses_cases() {
       why: "the two headings a psalm writes - who it is by, and the letter of the alphabet the next stanza begins with. Both are marks about the poem rather than lines of it, and the letter is the one that shows the poetry marks beside it must not be swept the same way: the indent marks on either side of it carry the words of the psalm",
     },
     {
+      usfm: "\\c 3\n\\s1 Deliver Me, O LORD!\n\\r (\\ref 2 Samuel 15:13-29|2SA 15:13-29\\ref*)\n\\d \\v 1 A Psalm of David, when he fled from his son Absalom.\n\\q1\n\\v 2 O LORD, how my foes have increased!\n",
+      chapters: [
+        {
+          chapter_number: "3",
+          verses: [
+            {
+              verse_number: "1",
+              text: "A Psalm of David, when he fled from his son Absalom.",
+            },
+            {
+              verse_number: "2",
+              text: "O LORD, how my foes have increased!",
+            },
+          ],
+        },
+      ],
+      why: "THE ONE HEADING THAT IS ALSO SCRIPTURE. A hundred and seventeen psalms print the ascription as verse one, and write it that way - the heading mark and the verse mark stand on the same line, in that order. Taking the line whole because it opens with a heading mark takes verse one of every one of those psalms with it, and nothing counts what is missing. Only the mark comes away, and the verse standing on the same line stays",
+    },
+    {
+      usfm: "\\c 1\n\\v 1 You must not go up on steps, lest your nakedness be exposed on it.’[’’]\n",
+      chapters: [
+        {
+          chapter_number: "1",
+          verses: [
+            {
+              verse_number: "1",
+              text: "You must not go up on steps, lest your nakedness be exposed on it.’",
+            },
+          ],
+        },
+      ],
+      why: "brackets in this translation mean the words inside were supplied, and supplied words are scripture - but a bracketed quote mark is not a word. It says where a speech that was never closed would close, which is a note to a typesetter, and the publisher's own plain-text edition prints the verse without it. Left in, a reader hears square bracket apostrophe apostrophe at the end of the sentence",
+    },
+    {
       usfm: "\\c 1\n\\v 1-2 Both together.\n",
       chapters: [
         {
