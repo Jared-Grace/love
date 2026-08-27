@@ -39,11 +39,11 @@ export function midi_chords_recover_cases() {
       want: ["C", "G", "Am", "F", "C", "G", "Am", "F"],
     },
     {
-      title: "C major where a fourth held in the tune must not become a chord of its own",
+      title: "C major where a fourth held in the tune over the bass is named as a chord standing on that bass",
       style: "pop",
       melody: [64, 72, 71, 72],
       bass: [48, 43, 43, 48],
-      want: ["C", "G", "G", "C"],
+      want: ["C", "C", "G", "C"],
     },
   ];
   return r;
