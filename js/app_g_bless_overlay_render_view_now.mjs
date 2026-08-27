@@ -15,6 +15,12 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
   let homes = property_get(r, "homes");
   let blocks = property_get(r, "blocks");
   let cone_get = property_get(r, "cone_get");
+  ("The grid the world is drawn on and the picture standing for the player are carried");
+  ("through here as well. Nothing on this screen draws with them - they are what the CAMERA");
+  ("needs, and the camera is moved from inside the closure below on the rare prayer that");
+  ("finishes a whole house off. This record is the only way they can reach it.");
+  let div_map = property_get(r, "div_map");
+  let player_img_c = property_get(r, "player_img_c");
   let r2 = property_get(r, "r2");
   let world = property_get(r2, "world");
   let walking = property_get(r2, "walking");
@@ -42,6 +48,8 @@ export function app_g_bless_overlay_render_view_now(r, npcs) {
     bar,
     container_map,
     edge,
+    div_map,
+    player_img_c,
     rung,
     blessed,
     homes,

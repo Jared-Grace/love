@@ -67,7 +67,13 @@ export function app_g_bless_overlay_render_tap_prayed(
     if (not(person)) {
       return false;
     }
-    function amen() {
+    async function amen() {
+      ("The ground already prayed for is read once before this prayer and once after it, and");
+      ("the difference is what just lit up. Read that way rather than worked out from what");
+      ("was prayed, because a prayer names one rung and finishes off whatever that completed,");
+      ("which is never a fixed amount - and an empty difference is exactly the case where");
+      ("nothing was finished and there is nothing to celebrate.");
+      let lit_before = bless_blessed_tiles(blessed, blocks);
       let place = bless_person_place(person, rung);
       bless_blessed_add(blessed, rung, place);
       ("the reach is asked for AFTER the prayer is written down, because what was just prayed");
