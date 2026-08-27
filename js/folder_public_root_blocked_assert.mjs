@@ -1,3 +1,4 @@
+import { folder_public_root_noted_blocked_assert } from "./folder_public_root_noted_blocked_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { folder_public_root_hold } from "./folder_public_root_hold.mjs";
@@ -30,4 +31,5 @@ export async function folder_public_root_blocked_assert(file_path) {
     file_path,
     lock_name,
   });
+  await folder_public_root_noted_blocked_assert(file_path2);
 }
