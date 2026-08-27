@@ -7,7 +7,7 @@ import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.m
 import { list_concat } from "./list_concat.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-export async function app_shared_dev_stale_gate_run() {
+export async function app_shared_dev_stamp_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every dev bundle on disk was built out of the sources sitting beside it, rather than standing for what those sources used to say.");
   ("A STALE BUNDLE IS THE QUIETEST FAULT IN THIS REPO. It loads, it runs, it draws a page - it just draws last week's code, and every gate that reads sources stays green while it does, because the sources are right and only the built copy is behind. Somebody then tries a change on a phone, sees the old behaviour, and goes looking for the fault in code that is already correct.");
