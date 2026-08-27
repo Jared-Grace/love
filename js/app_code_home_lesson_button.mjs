@@ -20,8 +20,8 @@ export function app_code_home_lesson_button(
   "$plain complete_all_previous";
   "One lesson's button on the home screen - numbered, coloured by whether that lesson is finished and whether everything above it is, titled, spaced from the button above it, and opening that lesson when it is pressed.";
   "WHETHER EVERY LESSON ABOVE IT IS FINISHED IS HANDED IN RATHER THAN WORKED OUT HERE. It is what decides whether this button is the one to go to next, and it is carried along the run of lessons by the caller, which is the only place that knows the order they are drawn in.";
-  "It asks about EVERY lesson above rather than only the one immediately above, so that exactly one row in the whole list wears the pointing hand: the lowest-numbered lesson not yet finished. A learner who finished a later lesson out of order would otherwise open a second run of pointed-at rows below it.";
-  "It hands back the button rather than nothing, because the caller marks one of them as the way through and scrolls to the one the learner just left, and both of those need the button itself.";
+  "It hands back the answer to carry to the lesson BELOW it beside the button itself, passed straight through from the shared row that worked it out - so the rule for what carries on is read from the row that used it and never written a second time here.";
+  "It hands back the button because the caller marks one of them as the way through and scrolls to the one the learner just left, and both of those need the button itself.";
   arguments_assert(arguments, 6);
   let id = property_get(item, "id");
   async function on_click() {
@@ -39,5 +39,13 @@ export function app_code_home_lesson_button(
   html_style_margin_top(button, gap);
   let title = property_get(r, "title");
   app_code_lesson_title_render(title, item);
-  return button;
+  let complete_all_previous_next = property_get(
+    r,
+    "completed_all_previous_next",
+  );
+  let result = {
+    button,
+    complete_all_previous_next,
+  };
+  return result;
 }
