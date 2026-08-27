@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 26,
+      kept: 32,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 29,
+      kept: 38,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
