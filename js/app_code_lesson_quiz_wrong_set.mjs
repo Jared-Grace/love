@@ -1,3 +1,4 @@
+import { app_code_lesson_quiz_wrong_code_background_color } from "./app_code_lesson_quiz_wrong_code_background_color.mjs";
 import { app_shared_button_verdict_color_paint } from "./app_shared_button_verdict_color_paint.mjs";
 import { app_code_expression_chip_border_width } from "./app_code_expression_chip_border_width.mjs";
 import { app_code_lesson_quiz_wrong_background_color } from "./app_code_lesson_quiz_wrong_background_color.mjs";
@@ -9,7 +10,12 @@ export function app_code_lesson_quiz_wrong_set(component) {
   ("mark the thing a learner has just pressed as the one that cannot go: filled red, lettered white, and edged in that same red");
   ("The edge is coloured with the fill rather than left as it was. A red fill still ringed in the grey it wore a moment ago reads as the old thing with a red light shone on it; coloured through, it is one thing, and one thing is what the answer is about.");
   let color = app_code_lesson_quiz_wrong_background_color();
-  let coded = app_shared_button_verdict_color_paint(component, color);
+  let color_code = app_code_lesson_quiz_wrong_code_background_color();
+  let coded = app_shared_button_verdict_color_paint(
+    component,
+    color,
+    color_code,
+  );
   if (coded) {
     ("an answer written as code has the red put on the code block itself, exactly as a right one has the green put there. The lettering in it is already white, and the button behind it was taken out of sight when the code was drawn, so an edge drawn on it now would be a red line around code and nothing more.");
     return coded;
