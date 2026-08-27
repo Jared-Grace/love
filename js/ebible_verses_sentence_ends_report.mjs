@@ -1,14 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_chapters } from "./ebible_version_chapters.mjs";
 import { text_split_empty } from "./text_split_empty.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { add } from "./add.mjs";
+import { bible_verses_streak_new } from "./bible_verses_streak_new.mjs";
 import { property_get } from "./property_get.mjs";
+import { add } from "./add.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_ends_with_any } from "./text_ends_with_any.mjs";
+import { bible_verses_streak_break } from "./bible_verses_streak_break.mjs";
 import { not } from "./not.mjs";
+import { bible_verses_streak_step } from "./bible_verses_streak_step.mjs";
 import { each } from "./each.mjs";
 import { percent_one_decimal } from "./percent_one_decimal.mjs";
 export async function ebible_verses_sentence_ends_report(bible_folder) {
@@ -26,44 +26,8 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
   let closes = 0;
   let pauses = 0;
   let continues = 0;
-  function tracker_new() {
-    let r = {
-      run: 0,
-      first: 0,
-      longest: {
-        chapter_code: "",
-        length: 0,
-        first_verse: 0,
-      },
-      runs: [],
-    };
-    return r;
-  }
-  function tracker_break(tracker, chapter_code) {
-    if (greater_than(tracker.run, tracker.longest.length)) {
-      tracker.longest = {
-        chapter_code,
-        length: tracker.run,
-        first_verse: tracker.first,
-      };
-    }
-    if (greater_than(tracker.run, 2)) {
-      list_add(tracker.runs, {
-        chapter_code,
-        first_verse: tracker.first,
-        length: tracker.run,
-      });
-    }
-    tracker.run = 0;
-  }
-  function tracker_step(tracker, verse_number) {
-    if (equal(tracker.run, 0)) {
-      tracker.first = verse_number;
-    }
-    tracker.run = add(tracker.run, 1);
-  }
-  let open = tracker_new();
-  let fragment = tracker_new();
+  let open = bible_verses_streak_new();
+  let fragment = bible_verses_streak_new();
   function chapter_each(chapter) {
     let chapter_code = property_get(chapter, "chapter_code");
     let list = property_get(chapter, "verses");
@@ -75,24 +39,24 @@ export async function ebible_verses_sentence_ends_report(bible_folder) {
       let ends = text_ends_with_any(trimmed, closers);
       if (ends) {
         closes = add(closes, 1);
-        tracker_break(open, chapter_code);
-        tracker_break(fragment, chapter_code);
+        bible_verses_streak_break(open, chapter_code);
+        bible_verses_streak_break(fragment, chapter_code);
         return;
       }
       let paused = text_ends_with_any(trimmed, pausers);
       if (paused) {
         pauses = add(pauses, 1);
-        tracker_break(fragment, chapter_code);
+        bible_verses_streak_break(fragment, chapter_code);
       }
       if (not(paused)) {
         continues = add(continues, 1);
-        tracker_step(fragment, verse_number);
+        bible_verses_streak_step(fragment, verse_number);
       }
-      tracker_step(open, verse_number);
+      bible_verses_streak_step(open, verse_number);
     }
     each(list, verse_each);
-    tracker_break(open, chapter_code);
-    tracker_break(fragment, chapter_code);
+    bible_verses_streak_break(open, chapter_code);
+    bible_verses_streak_break(fragment, chapter_code);
   }
   each(chapters, chapter_each);
   let report = {

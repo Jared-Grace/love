@@ -39,11 +39,11 @@ export function midi_chords_recover_cases() {
       want: ["C", "G", "Am", "F", "C", "G", "Am", "F"],
     },
     {
-      title: "C major with a fourth held over the chord before it gives way",
+      title: "C major where a fourth held in the tune must not become a chord of its own",
       style: "pop",
       melody: [64, 72, 71, 72],
       bass: [48, 43, 43, 48],
-      want: ["C", "Gsus4", "G", "C"],
+      want: ["C", "G", "G", "C"],
     },
   ];
   return r;
