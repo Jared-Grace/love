@@ -1,0 +1,61 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
+import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
+import { app_g_bless_finished_white } from "./app_g_bless_finished_white.mjs";
+import { sleep } from "./sleep.mjs";
+import { app_g_bless_finished_glow } from "./app_g_bless_finished_glow.mjs";
+import { app_g_bless_finished_glow_fade } from "./app_g_bless_finished_glow_fade.mjs";
+import { app_g_bless_finished_white_fade } from "./app_g_bless_finished_white_fade.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { app_g_bless_finished_modal } from "./app_g_bless_finished_modal.mjs";
+export async function app_g_bless_finished(r, tiles, line) {
+  arguments_assert(arguments, 3);
+  ("What the street does when a prayer finishes a whole place off: it looks at the place,");
+  ("lights it, and then says what happened.");
+  ("Five moments in a fixed order, and the order is the argument. The camera goes first,");
+  ("because everything after it is about a patch of ground the player may not even have on");
+  ("screen - a prayer at the household rung covers a house the player is standing across");
+  ("the street from, and a prayer that finishes a building lights ground behind them.");
+  ("Lighting something nobody is looking at is the same as not lighting it.");
+  ("Then the ground goes white, then a light opens over it and spreads away, and only as");
+  ("that light fades does the house underneath come back - now warm, and staying warm.");
+  ("That last part is the whole point of the sequence rather than decoration on it. The");
+  ("player is being handed a NEW thing to recognise, and the way to hand somebody a new");
+  ("mark is to make them watch it arrive once. Every finished house they see after this");
+  ("one they will read without being told.");
+  ("The words come last and on a panel that waits. They used to float past the top of the");
+  ("screen while the player was looking at the middle of it, and the two rarest sentences");
+  ("in this game were being spent on something nobody read.");
+  ("Nothing is said where there is nothing to say, and the panel is simply skipped -");
+  ("praying for somebody already inside a finished house covers them and finishes nothing,");
+  ("and a panel put up to report that would be a tap charged for no news.");
+  ("The camera goes back to the player at the end. It was borrowed to show them something,");
+  ("and a camera that stayed where it was borrowed to would leave the player walking a");
+  ("street they cannot see themselves on.");
+  let container_map = property_get(r, "container_map");
+  let div_map = property_get(r, "div_map");
+  let player_img_c = property_get(r, "player_img_c");
+  let world = property_get(r, "world");
+  let box = app_g_bless_lit_box(tiles);
+  let middle = property_get(box, "middle");
+  let span = property_get(box, "span");
+  await app_shared_game_player_center(middle, player_img_c, div_map);
+  let squares = app_g_bless_finished_white(div_map, tiles);
+  await sleep(560);
+  let glow = app_g_bless_finished_glow(div_map, middle, span);
+  await sleep(340);
+  app_g_bless_finished_glow_fade(glow, span);
+  app_g_bless_finished_white_fade(squares);
+  await sleep(780);
+  let player = property_get(world, "player");
+  function back() {
+    app_shared_game_player_center(player, player_img_c, div_map);
+  }
+  let told = null_not_is(line);
+  if (told) {
+    app_g_bless_finished_modal(container_map, line, back);
+    return;
+  }
+  back();
+}
