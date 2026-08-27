@@ -22,7 +22,7 @@ Found by a free Bible reading app that carries 399 of your translations. No repl
 
 **1. Verse ids do not match the numbers they print.** 131 versions, 2,690 markers, 1,362 chapters.
 
-A marker takes the id one above the marker before it whenever its label is not a plain number. Only ranges and part-verses are affected — 1,384 and 1,168. The next plain number resets the count, so the invented ids land on real verses.
+Whenever a marker's label is not a plain number, its id is one more than the previous marker's id instead of the number it prints. Only ranges and part-verses are affected — 1,522 ranges and 1,168 part-verses. The next plain number resets the count, so the invented ids land on real verses.
 
 possible correction: take the id from the number the marker prints.
 
@@ -31,6 +31,8 @@ possible correction: take the id from the number the marker prints.
 - two markers, one id — https://ebible.org/grcbrent/JOS09.htm prints `2a 2b 2c 2d 2e 2f` as V3 to V8, then `3 4 5 6 7 8` as V3 to V8 again. 299 chapters.
 - how far it drifts — https://ebible.org/kjn/MRK14.htm prints `3-9` as `V1`, `62-64` as `V8`, `65` as `V65`.
 - your own footnote links — https://ebible.org/engerv/JOB24.htm has a back-link to `#V4` labelled `24:8`.
+
+One for whoever writes the fix: 124 of the ranges put an invisible right-to-left mark before the hyphen, like `6‏-8` on https://ebible.org/pesopcb/GEN05.htm. A pattern matching only digit-hyphen-digit would miss those.
 
 All 2,690, each with its page url and printed label: https://raw.githubusercontent.com/Jared-Grace/love/main/data/found/ebible_verse_marks_displaced_measure.json
 
@@ -92,7 +94,7 @@ quote: `href='PRO30.htm'`, and https://ebible.org/englxxup/PRO30.htm is not ther
 
 possible correction: the file, carrying the note eng-Brenton uses — 'See chapter 24 for the content of chapter 30.' eng-Brenton, which englxxup revises, keeps PRO30.htm for exactly this.
 
-The two englxxup editions also disagree about where that material lives. `englxxup_021_PRO_30_read.txt` has 33 verses beginning 'These things says the man to them that trust in God', and `englxxup_021_PRO_31_read.txt` begins at 31:1, 'My words have been spoken by God'. The HTML has no chapter 30 and PRO31.htm begins at verse 10, 'Who shall find a virtuous woman?'. eng-Brenton's two editions agree with each other: its read-aloud chapter 30 is empty and its chapter 31 begins at verse 10, matching its HTML.
+Your two englxxup editions also disagree with each other. The read-aloud has a chapter 30 of 33 verses, and its chapter 31 starts at verse 1, 'My words have been spoken by God'. The HTML has no chapter 30, and PRO31.htm starts at verse 10, 'Who shall find a virtuous woman?'. eng-Brenton's two editions agree: its read-aloud chapter 30 is empty and its chapter 31 starts at verse 10, matching its HTML.
 
 Not part of this item: Proverbs 31:1–9 appearing in chapter 24. We checked, and that is the Septuagint's own order — eng-Brenton files it identically.
 
@@ -104,11 +106,11 @@ quote: `<div class='d'>A Psalms of David, when he fled from his son Absalom. </d
 
 possible correction: 'A Psalm of David', which is what the Berean Standard Bible itself reads. The book carries 116 headings; 54 of them read 'A Psalm' and this is the only one that reads 'A Psalms'. It is a superscription, above verse 1, so no verse number carries it.
 
-Two pages and no others: PSA003.htm, and https://ebible.org/engbsb/PSA000.htm, the book index, which repeats the same words and links them to `PSA003.htm#V0`. So the two agree with each other and differ from the rest of the book and from the source.
+Two pages and no others: PSA003.htm, and https://ebible.org/engbsb/PSA000.htm, the book index, which repeats the same words and links them to `PSA003.htm#V0`.
 
-**10. A verse marker is missing; the words are there, so a link to that verse lands nowhere.** 13 versions.
+**10. A verse has words but no number, so a link to it lands nowhere.** 13 versions.
 
-Where the read-aloud edition numbers the verse correctly, the two published editions disagree and the HTML is a verse short:
+Here the read-aloud numbers the verse and the HTML does not:
 
 url: https://ebible.org/eng-lxx2012/PSA118.htm and https://ebible.org/eng-uk-lxx2012/PSA118.htm
 
@@ -177,10 +179,6 @@ Method, so you can see what was excluded rather than missed. Every chapter's ver
 
 Excluded: anything eight or more versions agreed on — which turned out to be exactly the sixteen verses the critical texts omit, Matthew 17:21, Mark 9:44, Acts 8:37 and the rest.
 
-Excluded: versions that skip whole chapters, since a gap inside Genesis 4 is the same editorial choice as having no Genesis 5 at all. Seven do this on a large scale — lit, pma, engPEV, tkr, engnna, mwf2018, nay — skipping 38 to 477 chapters each and holding about six thousand of the gaps found. That test lets missing verses go, not missing numbers, which is why dji is still listed above at 37 chapters published.
+Excluded: versions that publish a selection, since a gap inside Genesis 4 is the same editorial choice as having no Genesis 5 at all. Seven skip 38 to 477 chapters each and held about six thousand of the gaps found.
 
-Excluded: the five Septuagint editions, whose gaps are the Greek's own arrangement. englxxup skips exactly the same 299 numbers as grcbrent, the Greek it revises; eng-Brenton differs from that Greek only at 1 Samuel 17:12–31, supplied in brackets from another manuscript, and at its Nehemiah filing; eng-lxx2012 and eng-uk-lxx2012 skip the same 255 as each other.
-
-Excluded: numbering that follows a deliberate scheme, even where it reads oddly. engkjvcpb ESG10 ends with a verse numbered 1 after verse 13, which is the colophon keeping its number from 11:1 — and ESG01 begins at verse 2, the other half of that same sequence.
-
-Chapters we cannot read are passed over and picked up when a corrected download appears. At present neither Brenton edition shows Psalm 119 at all.
+Excluded: the five Septuagint editions, and anywhere else the numbering follows a deliberate scheme — the Greek's own arrangement, a relocated Addition keeping its original number.
