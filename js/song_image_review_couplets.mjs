@@ -6,7 +6,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 23,
-      note: "the sliver is gone: a rising sun, yellow at its heart with orange and yellow rays, over a black ground. Your grant of yellow and orange is written into this couplet's own clause so it cannot leak into the other thirty-five. The band across the middle came back crimson rather than cobalt.",
+      note: "the sun is white at its heart now, ringed with yellow, and its rays are yellow and orange and grow broader the further out they go. It is still about half a circle rather than less risen - every wording that lowered it lost the sun altogether. Two of the three other draws dropped the yellow entirely, the style's own no-yellow rule beating this couplet's exception, so the wording is not yet reliable.",
     },
     {
       n: 24,
