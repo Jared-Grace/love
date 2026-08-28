@@ -2,13 +2,11 @@ import { app_g_bless_camera_size_set } from "./app_g_bless_camera_size_set.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_style_variable_set } from "./html_style_variable_set.mjs";
 export function app_g_bless_camera_span(
   container_map,
   div_map,
