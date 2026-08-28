@@ -8,7 +8,7 @@ import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-export function bible_glyph_chapters_verses_ordinary_space() {
+export function bible_glyph_chapters_verses_marks_ordinary_space() {
   "Every verse of the written picture Bible whose drawn text still holds an ordinary space, with how many verses were drawn to find them.";
   "AN ORDINARY SPACE IN A DRAWN VERSE IS A LOST WORD BOUNDARY. The gap between two words is the entire punctuation of this writing system - pictures touching are one word, pictures apart are two - and the pictures either side of it are about an em wide each. An ordinary space is a quarter of that, so where one survives the reader is being asked to see a boundary a quarter the width of the things it separates, and the likeliest thing they see instead is one long word nobody wrote.";
   "IT ASKS THE DRAWN TEXT RATHER THAN THE JOINER, and that is the whole reason it is worth running. The separator is a single named character now and reading that function says nothing about the page: text is joined in more than one place, a page hands a finished line to a second view, and any of those can put a space back without touching the function that decided what the separator is. What a reader meets is the finished text, so the finished text is what gets asked.";
