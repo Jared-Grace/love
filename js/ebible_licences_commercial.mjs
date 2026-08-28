@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { ebible_licence_cc_by_nd } from "./ebible_licence_cc_by_nd.mjs";
 import { ebible_licence_gfdl } from "./ebible_licence_gfdl.mjs";
 import { ebible_licence_cc_by } from "./ebible_licence_cc_by.mjs";
@@ -9,7 +10,9 @@ export function ebible_licences_commercial() {
   "No-derivatives is allowed. It was refused here for years for a reason that belonged to non-commercial: it forbids changing a word or a mark of punctuation, and this repo glosses Bible text. But it forbids nothing about earning, and the words it freezes are kept frozen by a check at the one door a gloss is written through rather than by refusing the translation to every reader.";
   "All rights reserved is refused because nothing was granted at all - it is the only refusal left, now that the GNU documentation licence is allowed.";
   "The GNU documentation licence was refused here for a while for asking obligations nobody was set up to keep. It asks nothing this repo objects to: money may be earned, credit is owed, and a changed text goes back out on the same terms. It asks for two things share alike does not - the licence travelling beside the text and a note of what was changed - and those are owed on the Bible text alone rather than on the app around it.";
-  "Attribution is owed on three of the four named here and share alike on two of them. Those are real duties rather than concerns - they are kept by showing the credit rather than by leaving the text alone.";
+  ("Attribution is owed on four of the five named here and share alike on two of them. Those are real duties rather than concerns, and for shipping a translation they are kept by showing the credit rather than by leaving the text alone. SINGING IS THE ONE USE THAT SENTENCE DOES NOT COVER. A song built out of a share-alike text is a new work made from it, so the credit no longer settles the whole duty and the terms travel on into the song; nothing sung here is taken from a share-alike text, and ",
+    fn_name("bible_versions_sung_gate_run"),
+    " holds that rather than a reader remembering it.");
   let v = ebible_licence_public_domain();
   let v2 = ebible_licence_cc_by();
   let v3 = ebible_licence_cc_by_sa();
