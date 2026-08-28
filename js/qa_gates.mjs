@@ -1,3 +1,4 @@
+import { bible_audio_recording_bucket_cases_gate_run } from "./bible_audio_recording_bucket_cases_gate_run.mjs";
 import { bible_glyph_groups_marks_artwork_absent_gate_run } from "./bible_glyph_groups_marks_artwork_absent_gate_run.mjs";
 import { usfm_markers_removed_cases_gate_run } from "./usfm_markers_removed_cases_gate_run.mjs";
 import { app_shared_dev_stamp_gate_run } from "./app_shared_dev_stamp_gate_run.mjs";
@@ -526,6 +527,7 @@ export function qa_gates() {
     function_paths_frozen_gate_run,
     functions_unbound_gate_run,
     js_function_self_call_cases_gate_run,
+    bible_audio_recording_bucket_cases_gate_run,
     js_comment_migratable_cases_gate_run,
     js_code_comments_migrated_cases_gate_run,
     js_code_literal_key_only_cases_gate_run,
