@@ -2,7 +2,6 @@ import { bible_usfm_version_text_clipboard_copy_withheld } from "./bible_usfm_ve
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_chapter_paragraphed_text } from "./bible_usfm_version_chapter_paragraphed_text.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
 export async function bible_usfm_version_chapter_clipboard_copy_plain_whitespace_normalized(
   book_code,
   chapter_number,
@@ -24,7 +23,6 @@ export async function bible_usfm_version_chapter_clipboard_copy_plain_whitespace
     false,
   );
   let text = whitespace_normalize(paragraphed);
-  await clipboard_copy(text);
   let copied = await bible_usfm_version_text_clipboard_copy_withheld(
     text,
     version,
