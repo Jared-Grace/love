@@ -44,8 +44,8 @@ export function app_code_lesson_text_line_operand_kinds(text) {
     let spaced = text_replace_multiple_to_space(operand, brackets);
     let words = text_words(spaced);
     for (let word of words) {
-      let number_is = text_digits_is(word);
-      if (number_is) {
+      let digits_is = text_digits_is(word);
+      if (digits_is) {
         list_add_unique(found, "operand_number");
       }
       let value_is = list_includes(values, word);
