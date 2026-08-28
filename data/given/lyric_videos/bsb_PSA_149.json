@@ -1,1 +1,112 @@
-{"passage":"Psalm 149","credit":"Berean Standard Bible","duration":139.48,"width":1080,"height":1920,"font_size":150,"passage_font_size":96,"credit_font_size":64,"lines":[{"start":2,"end":8.67,"text":"Hallelujah!"},{"start":8.67,"end":15.35,"text":"Sing to the LORD a new song—"},{"start":15.35,"end":22.02,"text":"His praise in the assembly of the godly."},{"start":22.02,"end":28.7,"text":"Let Israel rejoice in their Maker;"},{"start":28.7,"end":35.37,"text":"let the children of Zion rejoice in their King."},{"start":35.37,"end":42.04,"text":"Let them praise His name with dancing,"},{"start":42.04,"end":48.72,"text":"and make music to Him with tambourine and harp."},{"start":48.72,"end":55.39,"text":"For the LORD takes pleasure in His people;"},{"start":55.39,"end":62.07,"text":"He adorns the afflicted with salvation."},{"start":62.07,"end":68.74,"text":"Let the saints exult in glory;"},{"start":68.74,"end":75.41,"text":"let them shout for joy upon their beds."},{"start":75.41,"end":82.09,"text":"May the high praises of God be in their mouths,"},{"start":82.09,"end":88.76,"text":"and a double-edged sword in their hands,"},{"start":88.76,"end":95.44,"text":"to inflict vengeance on the nations"},{"start":95.44,"end":102.11,"text":"and punishment on the peoples,"},{"start":102.11,"end":108.78,"text":"to bind their kings with chains"},{"start":108.78,"end":115.46,"text":"and their nobles with shackles of iron,"},{"start":115.46,"end":122.13,"text":"to execute the judgment written against them."},{"start":122.13,"end":128.81,"text":"This honor is for all His saints."},{"start":128.81,"end":135.48,"text":"Hallelujah!"}]}
+{
+ "passage": "Psalm 149",
+ "credit": "Berean Standard Bible",
+ "duration": 139.48,
+ "width": 1080,
+ "height": 1920,
+ "font_size": 150,
+ "passage_font_size": 96,
+ "credit_font_size": 64,
+ "lines": [
+  {
+   "start": 0,
+   "end": 13.02,
+   "text": "Hallelujah!"
+  },
+  {
+   "start": 13.07,
+   "end": 16.24,
+   "text": "Sing to the LORD a new song—"
+  },
+  {
+   "start": 16.29,
+   "end": 21.55,
+   "text": "His praise in the assembly of the godly."
+  },
+  {
+   "start": 21.6,
+   "end": 24.8,
+   "text": "Let Israel rejoice in their Maker;"
+  },
+  {
+   "start": 24.85,
+   "end": 32.31,
+   "text": "let the children of Zion rejoice in their King."
+  },
+  {
+   "start": 32.36,
+   "end": 37.33,
+   "text": "Let them praise His name with dancing,"
+  },
+  {
+   "start": 37.38,
+   "end": 42.63,
+   "text": "and make music to Him with tambourine and harp."
+  },
+  {
+   "start": 42.68,
+   "end": 45.72,
+   "text": "For the LORD takes pleasure in His people;"
+  },
+  {
+   "start": 45.77,
+   "end": 53.59,
+   "text": "He adorns the afflicted with salvation."
+  },
+  {
+   "start": 53.64,
+   "end": 58.56,
+   "text": "Let the saints exult in glory;"
+  },
+  {
+   "start": 58.61,
+   "end": 66.86,
+   "text": "let them shout for joy upon their beds."
+  },
+  {
+   "start": 66.91,
+   "end": 74,
+   "text": "May the high praises of God be in their mouths,"
+  },
+  {
+   "start": 74.05,
+   "end": 79.76,
+   "text": "and a double-edged sword in their hands,"
+  },
+  {
+   "start": 79.81,
+   "end": 83.52,
+   "text": "to inflict vengeance on the nations"
+  },
+  {
+   "start": 83.57,
+   "end": 88.95,
+   "text": "and punishment on the peoples,"
+  },
+  {
+   "start": 89,
+   "end": 93.78,
+   "text": "to bind their kings with chains"
+  },
+  {
+   "start": 93.83,
+   "end": 98.15,
+   "text": "and their nobles with shackles of iron,"
+  },
+  {
+   "start": 98.2,
+   "end": 104.51,
+   "text": "to execute the judgment written against them."
+  },
+  {
+   "start": 104.56,
+   "end": 109.21,
+   "text": "This honor is for all His saints."
+  },
+  {
+   "start": 109.26,
+   "end": 139.48,
+   "text": "Hallelujah!"
+  }
+ ]
+}
