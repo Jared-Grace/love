@@ -1,10 +1,12 @@
 {
- "reference": "Psalm 150  ·  Berean Standard Bible",
+ "passage": "Psalm 150",
+ "credit": "Berean Standard Bible",
  "duration": 104.96,
  "width": 1080,
  "height": 1920,
  "font_size": 150,
- "reference_font_size": 64,
+ "passage_font_size": 96,
+ "credit_font_size": 56,
  "lines": [
   { "start": 2.33, "end": 4.84, "text": "Hallelujah!" },
   { "start": 4.89, "end": 11.5, "text": "Praise God in His sanctuary." },
