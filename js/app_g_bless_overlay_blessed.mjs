@@ -1,3 +1,4 @@
+import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start.mjs";
 import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";

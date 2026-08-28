@@ -1,3 +1,4 @@
+import { bless_hash_street_openings } from "./bless_hash_street_openings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -8,7 +9,6 @@ import { app_shared_hash_index_prefixes_derived } from "./app_shared_hash_index_
 import { app_shared_g_dev_index_hash_name } from "./app_shared_g_dev_index_hash_name.mjs";
 import { app_g_bless_storage_app } from "./app_g_bless_storage_app.mjs";
 import { app_g_bless_dev_routes } from "./app_g_bless_dev_routes.mjs";
-import { bless_hash_street } from "./bless_hash_street.mjs";
 export function app_g_bless_dev_index(world) {
   arguments_assert(arguments, 1);
   ("The praying game's dev directory: every screen and every opening this game answers to,");
