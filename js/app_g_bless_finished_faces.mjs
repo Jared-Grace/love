@@ -61,7 +61,7 @@ export async function app_g_bless_finished_faces(
   let box = app_g_bless_lit_box(people);
   let middle = property_get(box, "middle");
   let span = property_get(box, "span");
-  ("The camera is set going from inside a plain step that hands its promise back rather");
+  ("The camera is set going from inside a step of its own that hands its arrival back rather");
   ("than being waited on here. One face is meant to light up WHILE the screen travels, so");
   ("the waiting has to be a separate decision taken further down - and a call written out");
   ("in the open in a waiting body reads as something to be waited on, both to a person and");
