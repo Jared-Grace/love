@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_english_public_domain } from "./bible_usfm_versions_english_public_domain.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +19,7 @@ export async function bible_usfm_versions_english_public_domain_download() {
   let held = [];
   let refused = [];
   for (let entry of entries) {
-    let bible_folder = property_get(entry, "bible_folder");
+    let bible_folder = property_get(entry, bible_folder_key());
     let folder = ebible_version_usfm_download_path(bible_folder);
     let unpacked = await folder_exists(folder);
     if (unpacked) {
