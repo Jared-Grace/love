@@ -7,15 +7,15 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 23,
-      note: "far more sky and far fewer rays, and the black is painted on again to cut the sun down to a shallow arc rather than half a circle. Still wrong: the rays came back as sharp spikes tapering the wrong way, wide at the sun and pointed at the tip, where you asked for the opposite - and the sky is cut into a lattice of small panes. Two of the three other draws failed outright, one losing the yellow and one drawing the ground in gold.",
+      note: "the rays are wedges now - narrow at the sun, opening steadily as they rise, broad and flat at the top - which is the shape you asked for two rounds ago and the first time it has come back right. All of them yellow and orange, the sky one unbroken cobalt pane, the ground one black pane. The sun is a sliver because black was painted over it again: six wordings have now failed to make it rise as one, so this is the human step and not the prompt. Two of the other three draws failed outright, one drawing two suns and one drawing a cross.",
     },
     {
       n: 26,
-      note: "the dark at the foot is gone. Each coloured gap now holds one colour from the cloud right down to the border, because the clause now says the lead lines change nothing where they cross a gap. The gaps run on past the cloud to the head of the arch, so there is no plain sky left above it.",
+      note: "the border is one plain white band again and the cloud is a few large lobes rather than a heap of small ones. The rays stopped converging - not by saying it louder but by giving the instruction up, since rays falling from a broad cloud narrow in perspective and six drawings refused to do otherwise. Still wrong: the sky above the cloud came back deep cobalt, where this is the one picture allowed the lighter daytime blue, and the red gap stops halfway down instead of reaching the foot.",
     },
     {
       n: 34,
-      note: "the sky above the throne is empty now, the seat has taken a violet band, and the sceptre's cross is narrower. The border came back as a row of small white panes instead of one plain band, which is a dozen extra panes in a picture allowed a dozen altogether.",
+      note: "the border came back one plain white band in all three draws. Nothing was said about the border - the clause was cut by a hundred and seventy characters instead, which is what let the rule at the far end of the style block be read at all. Empty throne, carved points along the back, green panel, violet seat, ruby steps, sceptre standing clear on the left with its cross on top, plain cobalt behind. Still wrong: the throne sits narrow in the window where its seat was asked to reach almost to the border on both sides, and a brown band stands behind the steps that nothing asked for.",
     },
   ];
   return couplets;

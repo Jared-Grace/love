@@ -178,6 +178,15 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("street, and off a square with nothing underneath it what it reveals is an empty one.");
       await app_g_bless_finished(r2, lit_now, people_now, line, render);
     }
+    ("An opening can ask for the panel to be left out, and then the tap IS the amen - the same");
+    ("thing the button would have called, called by the tap that would have put the button up.");
+    ("Nothing between them is skipped, because there is nothing between them: the panel reads");
+    ("out the prayer and waits, and everything this screen is worked on for happens after it.");
+    let skipped = app_g_bless_prayer_skipped_is();
+    if (skipped) {
+      amen();
+      return true;
+    }
     app_g_bless_pray_overlay(container_map, rung, amen);
     return true;
   }
