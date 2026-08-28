@@ -87,5 +87,5 @@ export async function app_g_bless_finished_faces(
   each(blooms, app_g_bless_finished_person_bloom_fade);
   app_g_bless_finished_people_fade(bursts);
   await sleep(820);
-  app_g_bless_camera_span_reset(container_map, div_map);
+  await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
 }
