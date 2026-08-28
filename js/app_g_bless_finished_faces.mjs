@@ -55,9 +55,10 @@ export async function app_g_bless_finished_faces(
   ("themselves, so they stay right wherever anybody walks to.");
   ("They are let go all together at the end rather than each in its own turn. They are one");
   ("prayer, and one prayer ending in installments would read as several.");
-  ("The camera is left where it is, pulled back, and putting it back is the next thing s");
-  ("job. This step knows how far out it had to stand to hold everybody; it does not know");
-  ("where the screen is wanted next, and guessing that here means moving twice.");
+  ("The camera is left where it is, pulled back, and bringing it in again belongs to");
+  ("whatever comes next. This step knows how far out it had to stand to hold everybody; it");
+  ("does not know where the screen is wanted afterwards, and guessing that here is how the");
+  ("player ends up watching two journeys when they asked for one.");
   let box = app_g_bless_lit_box(people);
   let middle = property_get(box, "middle");
   let span = property_get(box, "span");

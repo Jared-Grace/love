@@ -1,7 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
+import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
+import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_g_bless_finished_white } from "./app_g_bless_finished_white.mjs";
 import { app_g_bless_finished_glow } from "./app_g_bless_finished_glow.mjs";
@@ -10,12 +11,13 @@ import { app_g_bless_finished_bloom_fade } from "./app_g_bless_finished_bloom_fa
 import { app_g_bless_finished_glow_fade } from "./app_g_bless_finished_glow_fade.mjs";
 import { app_g_bless_finished_white_fade } from "./app_g_bless_finished_white_fade.mjs";
 export async function app_g_bless_finished_place(
+  container_map,
   div_map,
   player_img_c,
   tiles,
   ground_show,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("The house's moment. The camera goes to the patch of ground that has just been filled");
   ("in, the street is held still for a moment as it was, the house appears on the map, the");
   ("squares wash white, a light comes up out of their own shape, and a round bloom opens");
@@ -26,6 +28,14 @@ export async function app_g_bless_finished_place(
   ("build-up; shown last it is what the whole sequence was walking towards.");
   ("The camera is aimed at the middle of the ground and at nothing else. Ground holds");
   ("still, so it can be aimed at safely - which is exactly what a person cannot promise.");
+  ("Coming in close and travelling here are ONE motion. The faces before this were held on");
+  ("a screen pulled back far enough to fit all of them, so there are two things to undo: a");
+  ("distance and a place. Done one after the other the player watches the street rush in on");
+  ("wherever the last face happened to be and then slide off to the house, and the first of");
+  ("those two moves is about nothing at all. Asked together, the screen simply arrives.");
+  ("The size named is the ordinary one this game is played at, so the house is celebrated");
+  ("at the distance the street is normally read from and the player is already standing at");
+  ("the right distance when it is over.");
   ("The still moment after the camera lands and before anything lights is the whole point");
   ("of that pause, and it is not politeness. A change can only be watched happening if the");
   ("player saw what it was before: with the light starting on the same frame the travel");
@@ -53,7 +63,14 @@ export async function app_g_bless_finished_place(
   ("one thing seen three ways and a staggered ending would read as three things stopping.");
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
-  await app_shared_game_player_center(middle, player_img_c, div_map);
+  let size = app_g_bless_tile_size();
+  await app_g_bless_camera_glide(
+    container_map,
+    div_map,
+    player_img_c,
+    size,
+    middle,
+  );
   await sleep(560);
   ground_show();
   let squares = app_g_bless_finished_white(div_map, tiles);
