@@ -1,0 +1,258 @@
+{
+ "known": [
+  {
+   "name": "app_ceb_bible_gloss_passage_verses_read",
+   "shapes": [
+    "capitalised_always,looked_up,word",
+    "affixes,analysed,capitalised_always,looked_up,root,word"
+   ]
+  },
+  {
+   "name": "app_code_lesson_name_id_category_then_rewrite",
+   "shapes": [
+    "done,reason",
+    "done,renamed,swapped"
+   ]
+  },
+  {
+   "name": "bible_glyph_chapter_negations_draw",
+   "shapes": [
+    "chapter_code,drawn,left,verses",
+    "chapter_code,drawn,f_path,left,verses"
+   ]
+  },
+  {
+   "name": "ebible_languages_licences_gate_run",
+   "shapes": [
+    "checked,mounted",
+    "checked,mounted,offenders"
+   ]
+  },
+  {
+   "name": "firebase_prod_app_public_live_restore",
+   "shapes": [
+    "app,why",
+    "app,deleted,moved,restored,unchanged"
+   ]
+  },
+  {
+   "name": "function_nested_lift_skip_or_null",
+   "shapes": [
+    "nested,why",
+    "blocked,nested,why",
+    "f_name_new,nested,why"
+   ]
+  },
+  {
+   "name": "function_paths_frozen_gate_run",
+   "shapes": [
+    "checked,here",
+    "checked,frozen,here"
+   ]
+  },
+  {
+   "name": "function_span_call_existing_generic",
+   "shapes": [
+    "called_is,cut,f_name,f_name_call,why",
+    "called_is,f_name,f_name_call"
+   ]
+  },
+  {
+   "name": "function_span_cut_named",
+   "shapes": [
+    "about,address_from,address_to,why",
+    "about,address_to,f_name_new,why"
+   ]
+  },
+  {
+   "name": "function_span_cut_or_undo",
+   "shapes": [
+    "address_to,cut_is,f_name_new",
+    "address_to,cut_is,f_name_new,why"
+   ]
+  },
+  {
+   "name": "function_span_cut_skip_or_null",
+   "shapes": [
+    "about,address_from,address_to,why",
+    "about,address_to,why",
+    "about,address_to,f_name_new,why"
+   ]
+  },
+  {
+   "name": "g_sermon_groups_backup_multiple",
+   "shapes": [
+    "chapter,checked,uploaded",
+    "chapter,relative,uploaded"
+   ]
+  },
+  {
+   "name": "hook_child_decision",
+   "shapes": [
+    "decision",
+    "decision,reason"
+   ]
+  },
+  {
+   "name": "html_regenerate_stable_page",
+   "shapes": [
+    "file_path,settled,skipped",
+    "body_same,file_path,name,name_again,settled,skipped"
+   ]
+  },
+  {
+   "name": "js_literal_value_get_cases_gate_run",
+   "shapes": [
+    "value",
+    "refused"
+   ]
+  },
+  {
+   "name": "js_parse_expression_cases_gate_run",
+   "shapes": [
+    "kind",
+    "refused"
+   ]
+  },
+  {
+   "name": "js_parse_statement_cases_gate_run",
+   "shapes": [
+    "kind",
+    "refused"
+   ]
+  },
+  {
+   "name": "literals_frozen_name_add",
+   "shapes": [
+    "added,name,names",
+    "added,name,recorded"
+   ]
+  },
+  {
+   "name": "permission_grant_add_declined",
+   "shapes": [
+    "added,name,names",
+    "added,allow,blessed,name,names"
+   ]
+  },
+  {
+   "name": "permission_grant_add",
+   "shapes": [
+    "added,name,names",
+    "added,allow,name,names"
+   ]
+  },
+  {
+   "name": "permission_grant_remove",
+   "shapes": [
+    "name,names,removed",
+    "allow,name,names,removed"
+   ]
+  },
+  {
+   "name": "permission_grants_dead_remove",
+   "shapes": [
+    "dead,names",
+    "allow,dead,names"
+   ]
+  },
+  {
+   "name": "permission_replay_domains",
+   "shapes": [
+    "path,write_with,written",
+    "days,granted,open,open_count,path,written"
+   ]
+  },
+  {
+   "name": "permission_replay_rows_split",
+   "shapes": [
+    "path,write_with,written",
+    "days,path,proved,proved_alive,proved_dead,proved_grants,replay_grants,replayed_alive,replayed_dead,written"
+   ]
+  },
+  {
+   "name": "permission_rules_other_domain_add",
+   "shapes": [
+    "added,held_already,rule",
+    "added,after,rule,write_with"
+   ]
+  },
+  {
+   "name": "playwright_happy_step",
+   "shapes": [
+    "end,url",
+    "end,pressed,text,url,why"
+   ]
+  },
+  {
+   "name": "psalms_playlist_order_moves",
+   "shapes": [
+    "ordered,playlist_id,title,why",
+    "move_count,moves,ordered,playlist_id"
+   ]
+  },
+  {
+   "name": "psalms_video_description_write",
+   "shapes": [
+    "title,video_id,why,written",
+    "description_after,title,video_id,written"
+   ]
+  },
+  {
+   "name": "qa_app_commit_deploy_remembered",
+   "shapes": [
+    "app,deployed,found",
+    "app,commit,deployed,found,sent"
+   ]
+  },
+  {
+   "name": "qa_apps_commit_deploy_remembered",
+   "shapes": [
+    "deployed,prepared,skipped",
+    "deployed,prepared,published,skipped"
+   ]
+  },
+  {
+   "name": "qa_commit_at_generic",
+   "shapes": [
+    "commit,filed,kept,moved,remembered",
+    "commit,filed,kept,moved,remembered,silent"
+   ]
+  },
+  {
+   "name": "qa_commit_named_at_when_wanted",
+   "shapes": [
+    "commit,flight,judged,started",
+    "commit,flight,judged,stale,started"
+   ]
+  },
+  {
+   "name": "qa_snapshot_shard_told",
+   "shapes": [
+    "answered,failed,green,milliseconds,printed,share",
+    "failed,green,milliseconds,printed,share"
+   ]
+  },
+  {
+   "name": "wolff_owed_word_find",
+   "shapes": [
+    "by,entries,found,sites,word",
+    "by,entries,found,root,sites,word"
+   ]
+  },
+  {
+   "name": "youtube_oauth_token_save",
+   "shapes": [
+    "answer,saved",
+    "file_path,lasting,saved"
+   ]
+  },
+  {
+   "name": "youtube_video_title_write_if_titled",
+   "shapes": [
+    "title_now,titled,video_id,written",
+    "title_after,titled,video_id,written"
+   ]
+  }
+ ]
+}
