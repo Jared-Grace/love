@@ -60,6 +60,7 @@ export async function bible_audio_verses_manifest_write_all() {
     stale: stale.length,
     recut: recut.length,
     unjudged: unjudged.length,
+    nothing_recorded: empty,
     words_changed: stale,
     cut_another_way: recut,
     not_judged: unjudged,
