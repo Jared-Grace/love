@@ -1,9 +1,7 @@
+import { bible_versions_english_choices_psalms_agreement_bible_folder } from "./bible_versions_english_choices_psalms_agreement_bible_folder.mjs";
 import { bible_versions_english_choices_psalms_agreement_version } from "./bible_versions_english_choices_psalms_agreement_version.mjs";
-import { bible_versions_english_choices_psalms_agreement_passage } from "./bible_versions_english_choices_psalms_agreement_passage.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
-import { list_add } from "./list_add.mjs";
 export async function bible_versions_english_choices_psalms_agreement() {
   arguments_assert(arguments, 0);
   ("How far each English translation this repo offers a reader agrees with the others about what a psalm verse says, as the longest stretch of words it says the same way as its nearest neighbour, at its worst across a handful of psalms spread through the book.");
@@ -22,21 +20,10 @@ export async function bible_versions_english_choices_psalms_agreement() {
   ];
   let passages = await bible_versions_english_choices_references(references);
   let lowest_by_folder = {};
-  let named_by_folder = {};
-  bible_versions_english_choices_psalms_agreement_passage(
+  let apart = bible_versions_english_choices_psalms_agreement_bible_folder(
     passages,
-    named_by_folder,
     lowest_by_folder,
   );
-  let apart = [];
-  for (let bible_folder of object_property_names(lowest_by_folder)) {
-    let v = {
-      bible_folder,
-      name: named_by_folder[bible_folder],
-      nearest: lowest_by_folder[bible_folder],
-    };
-    list_add(apart, v);
-  }
   let unmeasured =
     await bible_versions_english_choices_psalms_agreement_version(
       apart,
