@@ -40,8 +40,8 @@ export async function lyric_video_bible_write(
   let stem = version + "_" + book_code + "_" + chapter_number;
   let path_subtitles = folder_gitignore_join(stem + ".ass");
   let folder_audio = await path_dirname(path_audio);
-  let file_name =
-    document.passage + " (" + document.credit + ") lyric video.mp4";
+  let shelf_mark = text_upper_to(version);
+  let file_name = document.passage + " (" + shelf_mark + ") lyric video.mp4";
   let path_output = path_join([folder_audio, file_name]);
   await lyric_video_document_write(
     path_audio,
