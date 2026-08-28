@@ -1,12 +1,19 @@
-import { app_g_bless_pointers } from "./app_g_bless_pointers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
 import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
 import { bless_view_household_started } from "./bless_view_household_started.mjs";
 import { app_g_bless_rings } from "./app_g_bless_rings.mjs";
-export function app_g_bless_marks(glows, homes, blocks, blessed, everyone) {
-  arguments_assert(arguments, 5);
+import { app_g_bless_pointers } from "./app_g_bless_pointers.mjs";
+export function app_g_bless_marks(
+  glows,
+  homes,
+  blocks,
+  blessed,
+  everyone,
+  ground,
+) {
+  arguments_assert(arguments, 6);
   ("Draws everything the record has to say about the street: the lights on the people who");
   ("have been prayed for, the houses filled in behind them, and the rings on the people left");
   ("in a house the player has started.");
@@ -22,7 +29,19 @@ export function app_g_bless_marks(glows, homes, blocks, blessed, everyone) {
   ("where to pray next.");
   let lit = bless_view_blessed(blessed, everyone);
   app_g_bless_glows(glows, everyone, lit);
-  app_g_bless_homes(homes, blessed, blocks);
+  ("The ground is the one of the three that can be asked to WAIT. A prayer that finishes a");
+  ("house lights the last resident and fills the house in at the same instant as far as the");
+  ("record is concerned, but the player is shown those one after the other - so the caller");
+  ("that is about to celebrate a face can say not yet, and put the house up afterwards.");
+  ("Waiting costs nothing and loses nothing, because the houses are never rubbed out except");
+  ("by being drawn again. Skipping the draw leaves the last one standing, which is every");
+  ("house that was already lit - and the only one missing from it is the house this very");
+  ("prayer finished.");
+  ("The faces and the rings are never held back. They are about the person just prayed for,");
+  ("and the person just prayed for is what the player is looking at.");
+  if (ground) {
+    app_g_bless_homes(homes, blessed, blocks);
+  }
   ("The ring is worked out last because it is the only one of the three that can be wrong");
   ("about somebody already handled: it asks who is left, and who is left is decided by the");
   ("same record the light was just read from.");
