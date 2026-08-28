@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { app_sandbox_previews_dream_prison_load } from "./app_sandbox_previews_dream_prison_load.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
@@ -9,41 +11,14 @@ export function app_sandbox_previews() {
     let r = m.app_sandbox_spinner_preview;
     return r;
   }
-  async function week_calendar_load() {
-    let m = await import("./week_calendar_preview.mjs");
-    let r2 = m.week_calendar_preview;
-    return r2;
-  }
-  async function availability_editor_load() {
-    let m = await import("./availability_editor_preview.mjs");
-    let r3 = m.availability_editor_preview;
-    return r3;
-  }
-  async function song_image_choose_load() {
-    let m = await import("./song_image_choose_preview.mjs");
-    let r4 = m.song_image_choose_preview;
-    return r4;
-  }
-  async function song_image_audit_load() {
-    let m = await import("./song_image_audit_preview.mjs");
-    let r5 = m.song_image_audit_preview;
-    return r5;
-  }
-  async function second_takes_load() {
-    let m = await import("./psalms_second_takes_preview.mjs");
-    let r6 = m.psalms_second_takes_preview;
-    return r6;
-  }
-  async function dream_trace_load() {
-    let m = await import("./bible_dream_trace_preview.mjs");
-    let r7 = m.bible_dream_trace_preview;
-    return r7;
-  }
-  async function dream_prison_load() {
-    let m = await import("./bible_dream_prison_trace_preview.mjs");
-    let r8 = m.bible_dream_prison_trace_preview;
-    return r8;
-  }
+  let r2 = app_sandbox_previews_dream_prison_load();
+  let dream_prison_load = property_get(r2, "dream_prison_load");
+  let dream_trace_load = property_get(r2, "dream_trace_load");
+  let second_takes_load = property_get(r2, "second_takes_load");
+  let song_image_audit_load = property_get(r2, "song_image_audit_load");
+  let song_image_choose_load = property_get(r2, "song_image_choose_load");
+  let availability_editor_load = property_get(r2, "availability_editor_load");
+  let week_calendar_load = property_get(r2, "week_calendar_load");
   async function typing_box_load() {
     let m = await import("./typing_box_preview.mjs");
     let r9 = m.typing_box_preview;
