@@ -70,6 +70,7 @@ export function app_g_bless_finished_people(div_map, people) {
       background: background,
       "pointer-events": "none",
       opacity: "0",
+      visibility: "visible",
       transform: "scale(0.7)",
       transition: "none",
     });
