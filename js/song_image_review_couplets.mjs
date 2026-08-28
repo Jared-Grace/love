@@ -7,15 +7,15 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 23,
-      note: "black was painted over the foot of the sun by hand rather than asked for in words, and the window's side borders and bottom sill were left standing so only the field inside them is covered. The picture underneath is a new draw rather than the one you saw: the yellow rule moved out of this couplet's own clause and into the palette rule where the refusal lives, and the sun came back with a plainer border and cleaner rays than the one you approved. Two of the three draws kept the yellow where one of three did before.",
+      note: "far more sky and far fewer rays, and the black is painted on again to cut the sun down to a shallow arc rather than half a circle. Still wrong: the rays came back as sharp spikes tapering the wrong way, wide at the sun and pointed at the tip, where you asked for the opposite - and the sky is cut into a lattice of small panes. Two of the three other draws failed outright, one losing the yellow and one drawing the ground in gold.",
     },
     {
       n: 26,
-      note: "the blue band at the foot is gone - the rays and the coloured gaps between them now run the whole way down to the border, so the bottom of the window is an extension of the rays. The gaps still darken below the lowest lead line instead of holding one colour top to bottom, and the sky above the cloud came back deep cobalt rather than the lighter daytime blue this couplet alone is allowed.",
+      note: "the dark at the foot is gone. Each coloured gap now holds one colour from the cloud right down to the border, because the clause now says the lead lines change nothing where they cross a gap. The gaps run on past the cloud to the head of the arch, so there is no plain sky left above it.",
     },
     {
       n: 34,
-      note: "more colour: the throne's back panel is emerald, the steps beneath it are ruby, the field behind it is cobalt, and the sceptre's cross is narrowed to two short arms. A second large cross came back floating in the sky above the throne, which nothing in the clause asks for. Two of the three other draws failed outright, one losing the cobalt and one losing the throne, so this clause is at its length limit.",
+      note: "the sky above the throne is empty now, the seat has taken a violet band, and the sceptre's cross is narrower. The border came back as a row of small white panes instead of one plain band, which is a dozen extra panes in a picture allowed a dozen altogether.",
     },
   ];
   return couplets;
