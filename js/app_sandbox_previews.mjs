@@ -58,6 +58,11 @@ export function app_sandbox_previews() {
     let r10 = m.app_code_review_preview;
     return r10;
   }
+  async function lyric_timing_load() {
+    let m = await import("./lyric_timing_preview.mjs");
+    let r12 = m.lyric_timing_preview;
+    return r12;
+  }
   let previews = {
     code_review: code_review_load,
     spinner_preview: spinner_load,
@@ -70,6 +75,7 @@ export function app_sandbox_previews() {
     dream_trace: dream_trace_load,
     dream_prison: dream_prison_load,
     typing_box: typing_box_load,
+    lyric_timing: lyric_timing_load,
   };
   return previews;
 }
