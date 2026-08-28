@@ -8,7 +8,7 @@ import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
 import { bible_glyph_text_space_wrong_positions } from "./bible_glyph_text_space_wrong_positions.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
-export function bible_glyph_chapters_verses_marks_ordinary_space() {
+export function bible_glyph_chapters_verses_space_wrong() {
   "Every verse of the written picture Bible whose drawn text puts an ordinary space between two pictures, with how many verses were drawn to find them.";
   "AN ORDINARY SPACE BETWEEN TWO PICTURES IS A LOST WORD BOUNDARY. The gap between two words is the entire punctuation of this writing system - pictures touching are one word, pictures apart are two - and the pictures either side of it are about an em wide each. An ordinary space is a quarter of that, so where one falls between two pictures the reader is being asked to see a boundary a quarter the width of the things it separates, and the likeliest thing they see instead is one long word nobody wrote.";
   ("AN ORDINARY SPACE ANYWHERE ELSE IS CORRECT AND IS WHAT MOST OF A VERSE IS MADE OF. ",
