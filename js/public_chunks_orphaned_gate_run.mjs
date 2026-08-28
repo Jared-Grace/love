@@ -18,12 +18,16 @@ export async function public_chunks_orphaned_gate_run() {
   let path = public_chunks_orphaned_baseline_path();
   let name_write = fn_name("public_chunks_orphaned_baseline_write");
   let f_name = fn_name("public_chunks_orphaned");
-  let f_name2 = fn_name("folder_chunks_orphaned_delete"); let f_name3 = fn_name("folder_public_root_noted_blocked_assert");
+  let f_name2 = fn_name("folder_chunks_orphaned_delete");
+  let f_name3 = fn_name("folder_public_root_noted_blocked_assert");
   let hint = text_combine_multiple([
     "a folder is now keeping a script nothing there sends for - ask ",
     f_name,
     " for what each one weighs, then clear that folder with ",
     f_name2,
+    ". A LEFTOVER AT THE TOP OF THE PUBLISHED FOLDER ITSELF IS REFUSED RATHER THAN REMOVED, and that refusal is right. A note says which commit each waiting app was built out of and what it came out as, so taking one of its pieces away leaves the note describing a file that is gone - which refuses the next sending for every app waiting beside it and names none of them as the cause. ",
+    f_name3,
+    " is where that refusal is made, and the way past it is to build that app again through its own promoting, never to delete the file. Measured on the twenty eighth of August: three such files stood at the top of that folder and weighed five hundred and eleven bytes between them, while the two folders no note vouches for held one and a tenth megabytes and cleared without argument.",
   ]);
   let r = await baseline_names_gate_walked_generic(
     walked,
