@@ -46,8 +46,10 @@ export async function ebible_text_to_speech_chapters(
     return job;
   }
   let jobs = list_map(plans, job_each);
+  let workers = bible_audio_speech_workers();
   await text_to_speech({
     jobs,
+    workers,
   });
   async function manifest_each(plan) {
     let chapter_code = property_get(plan, "chapter_code");
