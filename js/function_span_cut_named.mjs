@@ -27,6 +27,7 @@ export async function function_span_cut_named(
       address_from,
       address_to,
       why: "the run starts on the first line of work in the body, which is where the function keeps the things that are about itself rather than about the work - how many arguments it was called with, and the prose saying what it is for. A cut from there carries all of that away with it, so the function left behind stands with no count of its own arguments and nothing said about it, and the piece cut out is explained as though it were the whole. Would you like to start the run one line lower?",
+      f_name_new: null,
     };
     return preamble;
   }
@@ -38,6 +39,7 @@ export async function function_span_cut_named(
       address_to,
       f_name_new,
       why: "a function already answers to the name chosen for this run, and whether the two are the same work is a question for somebody reading both. Would you like to choose another name, or to call the one that is already there?",
+      address_from: null,
     };
     return spoken_for;
   }
