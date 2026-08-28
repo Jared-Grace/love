@@ -1,12 +1,8 @@
-import { equal } from "./equal.mjs";
+import { qa_gate_names_nodes_grow } from "./qa_gate_names_nodes_grow.mjs";
 import { qa_gate_hint_nodes } from "./qa_gate_hint_nodes.mjs";
-import { qa_gate_names_hinted_grow } from "./qa_gate_names_hinted_grow.mjs";
-import { function_ast_list_type_nodes } from "./function_ast_list_type_nodes.mjs";
-import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_add_unique } from "./list_add_unique.mjs";
 export async function qa_gate_names_hinted(f_name, remembered, depth) {
   "Every name in one function's body whose value ends up inside a hint - its own locals, and the things it was handed. Read-only.";
   "A sentence is rarely handed straight to the hint slot. It is built into a local, out of another local holding the spelled-out name of a repair command, and only the last of those is written at the slot - so asking whether the spelling itself sits inside a hint answers no about code that is perfectly well behaved.";
@@ -22,22 +18,6 @@ export async function qa_gate_names_hinted(f_name, remembered, depth) {
   let hinted = [];
   property_set(remembered, key, hinted);
   let hints = await qa_gate_hint_nodes(f_name, remembered, depth);
-  for (let node of hints) {
-    let identifiers = js_list_type_nodes(node, "Identifier");
-    for (let identifier of identifiers) {
-      let named = property_get(identifier, "name");
-      list_add_unique(hinted, named);
-    }
-    let type = property_get(node, "type");
-    if (equal(type, "Identifier")) {
-      let named2 = property_get(node, "name");
-      list_add_unique(hinted, named2);
-    }
-  }
-  let declarators = await function_ast_list_type_nodes(
-    f_name,
-    "VariableDeclarator",
-  );
-  qa_gate_names_hinted_grow(hinted, declarators);
+  await qa_gate_names_nodes_grow(hints, hinted, f_name);
   return hinted;
 }
