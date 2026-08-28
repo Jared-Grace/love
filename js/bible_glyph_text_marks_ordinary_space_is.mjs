@@ -1,4 +1,5 @@
 import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -12,10 +13,11 @@ export function bible_glyph_text_marks_ordinary_space_is(text, lookup) {
   ("IT READS THE FINISHED TEXT AND KNOWS NOTHING ABOUT HOW IT WAS BUILT, which is what makes it worth asking. ",
     fn_name("bible_glyph_word_pair_separator"),
     " decides the gap correctly, and a second view that re-joins a finished line, or any other hand that touches the text after it is drawn, can put an ordinary space back without going anywhere near that function.");
-  ("A PICTURE IS TOLD FROM EVERYTHING ELSE BY THE VOCABULARY ITSELF rather than by where its number falls. The obvious test - anything outside the range a keyboard types - looked exact and was not: the chapters are written with curly quotation marks, which sit in the same stretch of the numbering as several of the pictures, so a closing quote before a space before a picture was reported as two pictures side by side. The table of pictures is the only thing that knows what a picture is, so the table is what gets asked.");
+  ("A PICTURE HAS TO PASS BOTH TESTS: BE IN THE VOCABULARY, AND BE OUTSIDE WHAT A KEYBOARD TYPES. Each test alone was tried and each alone was wrong. Outside-the-keyboard alone reported the curly quotation marks the chapters are written with, which sit in the same stretch of the numbering as several pictures. In-the-vocabulary alone reported ordinary letters, because a glyph nobody has drawn a character for yet stands in the table as its own English name - so the vocabulary itself was handing back the letters of the word altar.");
   ("IT COLLECTS THE PIECES CHARACTERS ARE MADE OF, NOT THE CHARACTERS. Several of these pictures are written as a surrogate pair or carry a variation selector after them, so the piece standing beside the space is often half of a picture rather than the whole of it - and half of a picture belongs to no other picture and to nothing a chapter is written in, so recognising the half is enough.");
   arguments_assert(arguments, 2);
   let space = text_from_code_number(32);
+  let ascii_last = 127;
   let units = new Set();
   for (let character of Object.values(lookup)) {
     for (
@@ -23,18 +25,20 @@ export function bible_glyph_text_marks_ordinary_space_is(text, lookup) {
       less_than(position, character.length);
       position = position + 1
     ) {
-      let v = character.charCodeAt(position);
-      units.add(v);
+      let unit = character.charCodeAt(position);
+      if (greater_than(unit, ascii_last)) {
+        units.add(unit);
+      }
     }
   }
   let index = text.indexOf(space);
   while (greater_than_equal(index, 0)) {
     let difference = subtract(index, 1);
-    let v2 = text.charCodeAt(difference);
-    let before = units.has(v2);
+    let v = text.charCodeAt(difference);
+    let before = units.has(v);
     if (before) {
-      let v3 = text.charCodeAt(index + 1);
-      let after = units.has(v3);
+      let v2 = text.charCodeAt(index + 1);
+      let after = units.has(v2);
       if (after) {
         let between_marks = true;
         return between_marks;

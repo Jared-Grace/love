@@ -22,8 +22,6 @@ export function bible_usfm_marker_rest(line) {
   }
   let after = text_slice_from(line, 1);
   let marker = text_split_first(after, " ");
-  ("THE VERSE MARK IS NOT ONE OF THESE, and it is the one mark that opens a line and says nothing whatever about how the line is set. Two of the four bibles here open a line with it thirty-eight thousand times, and answering it as the line kind was wrong twice over: the line lost the step or the paragraph it should have inherited from the line above, and the number went out of reach of the one reader that decides whether a number is wanted, so it stood in the words whether it was asked for or not.");
-  ("So a line opening with the verse mark is answered as a line that says nothing about itself, with the mark left standing in what it carries for whoever wants the number. The berean never writes a line that way, which is why nothing was noticed until a second printing was put on the shelf.");
   let versed = equal(marker, "v");
   if (versed) {
     let verse = {
