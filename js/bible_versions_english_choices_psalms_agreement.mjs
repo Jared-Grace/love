@@ -1,8 +1,8 @@
+import { bible_versions_english_choices_psalms_agreement_ordered } from "./bible_versions_english_choices_psalms_agreement_ordered.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
 import { equal } from "./equal.mjs";
@@ -70,10 +70,11 @@ export async function bible_versions_english_choices_psalms_agreement() {
     list_add(apart, v);
   }
   function ordered(one, other) {
-    let left = property_get(one, "nearest");
-    let right = property_get(other, "nearest");
-    let gap = subtract(left, right);
-    return gap;
+    let r2 = bible_versions_english_choices_psalms_agreement_ordered(
+      one,
+      other,
+    );
+    return r2;
   }
   apart.sort(ordered);
   let usable = await bible_versions_english_choices_usable();
