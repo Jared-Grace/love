@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_recordings } from "./bible_audio_recordings.mjs";
 import { property_get } from "./property_get.mjs";
@@ -22,7 +23,7 @@ export async function bible_audio_verses_stale_report() {
   let chapters_clean = 0;
   let verses_stale = 0;
   async function recording_each(recording) {
-    let bible_folder = property_get(recording, "bible_folder");
+    let bible_folder = property_get(recording, bible_folder_key());
     let chapter_code = property_get(recording, "chapter_code");
     async function lambda() {
       let r = await bible_audio_chapter_verses_stale(
