@@ -11,15 +11,24 @@ import { app_g_bless_finished_glow_fade } from "./app_g_bless_finished_glow_fade
 import { app_g_bless_finished_white_fade } from "./app_g_bless_finished_white_fade.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_g_bless_finished_modal } from "./app_g_bless_finished_modal.mjs";
-export async function app_g_bless_finished(r, tiles, line) {
-  arguments_assert(arguments, 3);
+export async function app_g_bless_finished(r, tiles, people, line) {
+  arguments_assert(arguments, 4);
   ("What the street does when a prayer lands: it looks at every square that prayer just");
   ("changed, lights them all together, and then says what happened.");
-  ("The squares are handed in rather than worked out here, and they are not always ground.");
-  ("A prayer at the household rung fills in a house AND lights the face of everyone in it;");
-  ("a prayer over one person lights the single square that person is standing on. All of");
-  ("those arrive here as the same thing - a list of squares that just became true - so one");
-  ("prayer is one celebration, however many faces or houses it reached.");
+  ("Ground and faces arrive as two lists because they are lit two different ways, and the");
+  ("split is forced by the fact that people MOVE. A patch of ground can be lit where it");
+  ("is, because it will still be there in two seconds. A person will not: a light drawn on");
+  ("the square somebody is standing on is a light on the road they are about to leave. So");
+  ("faces are lit on the light each of them already carries, which is carried by the same");
+  ("act that carries them, and only the ground is lit as ground.");
+  ("They are still ONE celebration, run over one stretch of time, because they are one");
+  ("event - the prayer. A prayer at the household rung fills in a house AND lights every");
+  ("face in it; a prayer over one person lights that one face and no ground at all. Shown");
+  ("one after the other they would read as two things having happened.");
+  ("Either list may be empty, and neither empties this. A prayer that finished no house");
+  ("hands the ground steps nothing, and a patch of no squares washes and lights nothing -");
+  ("so the sequence runs its length around the faces alone. Whether there was anything at");
+  ("all to celebrate was settled before this was called.");
   ("The moments come in a fixed order, and the order is the argument. The camera goes first,");
   ("because everything after it is about a patch of ground the player may not even have on");
   ("screen - a prayer at the household rung covers a house the player is standing across");
