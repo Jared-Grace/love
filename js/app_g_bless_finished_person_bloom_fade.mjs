@@ -12,10 +12,12 @@ export function app_g_bless_finished_person_bloom_fade(bloom) {
   ("Slower going than coming. The arrival is the announcement; the fade is when the player");
   ("actually looks at the face underneath and sees the quiet gold that will stay on it for");
   ("the rest of the game. Only the fade can give them the time to do that.");
-  ("It stops well short of the reach a finished house has. The house runs off every edge of");
-  ("the screen and briefly makes the whole street warm; a person opens a few squares and");
-  ("lets the street stay where it is. The two sizes are the only thing telling the player");
-  ("which of the two just happened.");
+  ("It reaches the edges of the screen, because a light that stops short of them is read as");
+  ("a mark drawn around somebody rather than as something happening to the street. It is");
+  ("still the smaller of the two: a finished house opens twice this far, washes its own");
+  ("shape white underneath, and lights the ground it covers - three things at once against");
+  ("this one. What separates them is not whether the screen goes warm but how much is left");
+  ("behind when it stops.");
   ("It removes itself afterwards rather than lying about invisible, because this runs once");
   ("for every person prayed for and the game goes on as long as somebody keeps praying. A");
   ("light kept would be one more thing for the browser to carry through every step anybody");
