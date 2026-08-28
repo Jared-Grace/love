@@ -1,7 +1,7 @@
+import { list_skip } from "./list_skip.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { app_code_progress_read } from "./app_code_progress_read.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,8 +25,7 @@ export function app_code_lesson_incomplete_next(
   arguments_assert(arguments, 3);
   let lessons = app_code_lessons();
   let progress = app_code_progress_read(context);
-  let lessons_count = list_size(lessons);
-  let onwards = list_slice(lessons, index_start, lessons_count);
+  let onwards = list_skip(lessons, index_start);
   let before = list_slice(lessons, 0, index_start);
   let ordered = list_concat(onwards, before);
   function lambda(item) {
