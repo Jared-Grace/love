@@ -1,12 +1,10 @@
 import { fn_name } from "./fn_name.mjs";
-import { bible_glyph_chapters_canon_order } from "./bible_glyph_chapters_canon_order.mjs";
-import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
+import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
 import { app_emoji_bible_chapter_chosen } from "./app_emoji_bible_chapter_chosen.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -22,17 +20,19 @@ import { app_emoji_bible_key_shown_toggle } from "./app_emoji_bible_key_shown_to
 import { app_emoji_bible_key_shown_button_text } from "./app_emoji_bible_key_shown_button_text.mjs";
 import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { app_emoji_bible_chapter_body } from "./app_emoji_bible_chapter_body.mjs";
+import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 export async function app_emoji_bible(context) {
   "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and a list of every chapter written so far to reach them by.";
   "THE PAGE READS ONE CHAPTER AT A TIME AND FINDS IT BY THE SAME WORD THE BIBLE READER NEXT DOOR USES. That word is taken from the reader's own key rather than spelled again here, so a link naming a chapter opens that chapter in either app, and the day the pictures become a version somebody picks inside the reader every link anybody saved goes on working.";
   "The whole Bible used to be poured onto one page, which was right while there was one chapter and had become wrong at twenty five. A picker costs the reader a tap; a page of twenty five chapters costs them the whole scroll every time they want the second one, and costs them any way at all of sending somebody a single chapter.";
-  "THE PAGE STILL CARRIES ALL TWENTY FIVE CHAPTERS HOWEVER FEW ARE READ, and that was measured on the twenty eighth of August rather than guessed: the twenty five chapter files are four hundred and forty KiB of source inside a bundle of five hundred and thirty two, so about five sixths of what a visitor downloads is Bible they did not open. Somebody who lands on the index and reads nothing pays all of it.";
+  "THE PAGE CARRIES THE LIST OF CHAPTERS AND NOT THE CHAPTERS, which is why what is asked for here is the references and never the whole Bible. It was carrying all twenty five however few were read, and that was measured on the twenty eighth of August rather than guessed: the twenty five chapter files were four hundred and forty KiB of source inside a bundle of five hundred and thirty two, so about five sixths of what a visitor downloaded was Bible they did not open, and somebody who landed on the index and read nothing paid all of it.";
+  "THE LIST IS FIFTY SHORT WORDS STANDING IN FOR THAT, and it holds exactly what every screen short of a chapter needs - the code a link spells and the reference a person reads. The index, the bar with its arrows, and the deciding of which chapter the address names all work from those two and touch no verse, so a chapter is sent for at the one moment a chapter is actually going to be drawn.";
+  "It is already in canon order and is not sorted again here. The order is the order it is written in, and it is a gate rather than a habit that keeps it so.";
   ("It is not given a ceiling in ",
     fn_name("bundle_size_ceilings"),
-    ", and that file's own prose says why: a ceiling has to be raised on every honest growth, and this page grows by twenty KiB every time a chapter is written, which is the whole point of it. ",
+    ", and that file's own prose says why: a ceiling has to be raised on every honest growth, and this page used to grow by twenty KiB every time a chapter was written. THAT REASON HAS JUST STOPPED BEING TRUE - the page now grows by one line per chapter - so a ceiling has become affordable here for the first time, and that is a thing to decide rather than a thing done in passing. ",
     fn_name("bundle_size_step_gate_run"),
     " already watches it and refuses a tree arriving all at once, which is the thing a ceiling was ever wanted for.");
-  ("THE WAY OUT IS THE ONE THE SANDBOX TOOK - keep a way to FETCH each chapter instead of the chapter, so a visit downloads only the one the address names. It is written down here rather than done because it puts a round trip in front of the first paint, and whether a phone fetches it fast enough is answered by opening the page on one rather than by reading this.");
   ("The way out of a chapter is the bar the bible reader already teaches - an arrow to each side and the reference in the middle, which goes back to the list. The arrows are that reader's own, so a reader who has used the other app has already learned this one.");
   ("There is no language setting and there is nothing to translate, which is the entire point of the app: a reader who has never met English still meets the heart, the fire and the seed. What English is left on the page is the grammar, and that is the honest state of the project rather than a decision that has been made.");
   ("The page opens at the size the reader already chose in the bible reader next door, because a picture Bible is read the way scripture is read and a person who made the words bigger there did not mean only there. There is no size control of its own here yet, so borrowing theirs is the only size the page could honestly open at.");
@@ -48,8 +48,7 @@ export async function app_emoji_bible(context) {
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
-  let written = bible_glyph_chapters();
-  let chapters = bible_glyph_chapters_canon_order(written);
+  let chapters = bible_glyph_chapter_references();
   let chosen = app_emoji_bible_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
   if (index_shown) {
@@ -75,7 +74,12 @@ export async function app_emoji_bible(context) {
   app_shared_button(bar, key_text, lambda_key);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
-  app_emoji_bible_chapter_body(content, chapter_code, traditions, key_shown);
+  await app_emoji_bible_chapter_body(
+    content,
+    chapter_code,
+    traditions,
+    key_shown,
+  );
   app_emoji_bible_words_button(content, chapter_code);
   app_shared_footer(content);
 }
