@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -51,8 +52,7 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
     if (broken) {
       blank_line_add();
     }
-    let dropped = equal(kind, "drop");
-    let laid_out = not(dropped);
+    let laid_out = equal_not(kind, "drop");
     if (broken) {
       laid_out = false;
     }
