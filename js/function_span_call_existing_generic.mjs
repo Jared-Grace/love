@@ -67,6 +67,8 @@ export async function function_span_call_existing_generic(
     f_name,
     f_name_call,
     called_is: true,
+    why: null,
+    cut: null,
   };
   return called;
 }
