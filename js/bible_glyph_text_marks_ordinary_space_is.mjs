@@ -1,3 +1,6 @@
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_from_code_number } from "./text_from_code_number.mjs";
@@ -14,11 +17,12 @@ export function bible_glyph_text_marks_ordinary_space_is(text) {
   let space = text_from_code_number(32);
   let ascii_last = 127;
   let index = text.indexOf(space);
-  while (index >= 0) {
-    let before = text.charCodeAt(index - 1);
+  while (greater_than_equal(index, 0)) {
+    let difference = subtract(index, 1);
+    let before = text.charCodeAt(difference);
     let after = text.charCodeAt(index + 1);
-    if (before > ascii_last) {
-      if (after > ascii_last) {
+    if (greater_than(before, ascii_last)) {
+      if (greater_than(after, ascii_last)) {
         let between_marks = true;
         return between_marks;
       }

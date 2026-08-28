@@ -1,3 +1,4 @@
+import { bible_audio_recording_translation } from "./bible_audio_recording_translation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_chapter_reading_units } from "./ebible_chapter_reading_units.mjs";
 import { bible_audio_verses_manifest_write } from "./bible_audio_verses_manifest_write.mjs";
