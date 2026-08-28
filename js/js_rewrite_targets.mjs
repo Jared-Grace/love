@@ -1,3 +1,4 @@
+import { js_rewrite_targets_literal_or_null } from "./js_rewrite_targets_literal_or_null.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { js_call_first_argument_try } from "./js_call_first_argument_try.mjs";
@@ -23,20 +24,8 @@ export function js_rewrite_targets(ast) {
   ("A NAME ARRIVING AS A PARAMETER IS SILENCE RATHER THAN A COMPLAINT, and that is the honest direction. A command told at run time which function to rewrite cannot be read here at all, so naming it would be naming every call site it might ever have.");
   let seams = functions_rewrite_seams();
   let marker_fn_name = fn_name("fn_name");
-  function literal_or_null(node) {
-    let there = null_not_is(node);
-    if (not(there)) {
-      return null;
-    }
-    let literal_is = property_equals(node, "type", "Literal");
-    if (not(literal_is)) {
-      return null;
-    }
-    let value = property_get(node, "value");
-    return value;
-  }
   function spelled_or_null(node) {
-    let plain = literal_or_null(node);
+    let plain = js_rewrite_targets_literal_or_null(node);
     let plain_is = null_not_is(plain);
     if (plain_is) {
       return plain;
@@ -61,7 +50,7 @@ export function js_rewrite_targets(ast) {
       return null;
     }
     let first = js_call_first_argument_try(value_node);
-    let spelled = literal_or_null(first);
+    let spelled = js_rewrite_targets_literal_or_null(first);
     return spelled;
   }
   function collect(la) {
