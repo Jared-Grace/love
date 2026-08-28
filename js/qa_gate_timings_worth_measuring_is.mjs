@@ -28,7 +28,7 @@ export async function qa_gate_timings_worth_measuring_is() {
   }
   let timed = property_get(coverage, "timed");
   let covered = divide(timed, walkable);
-  let floor = qa_gate_timings_coverage_floor();
-  let low = less_than(covered, floor);
+  let coverage_floor = qa_gate_timings_coverage_floor();
+  let low = less_than(covered, coverage_floor);
   return low;
 }
