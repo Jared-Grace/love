@@ -1,3 +1,4 @@
+import { readFileSync } from "fs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
