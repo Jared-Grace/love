@@ -20,6 +20,7 @@ export async function g_sermon_groups_backup_multiple(chapters_comma) {
         chapter,
         uploaded: false,
         checked,
+        relative: null,
       };
       return refused;
     }
@@ -29,6 +30,7 @@ export async function g_sermon_groups_backup_multiple(chapters_comma) {
       chapter,
       uploaded: true,
       relative,
+      checked: null,
     };
     return sent;
   }

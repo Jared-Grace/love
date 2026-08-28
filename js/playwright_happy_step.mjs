@@ -28,6 +28,9 @@ export async function playwright_happy_step(page) {
     let done = {
       end: true,
       url,
+      pressed: null,
+      text: null,
+      why: null,
     };
     return done;
   }

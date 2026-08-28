@@ -19,6 +19,9 @@ export async function html_regenerate_stable_page(file_path) {
       file_path,
       settled: null,
       skipped: "frozen",
+      body_same: null,
+      name: null,
+      name_again: null,
     };
     return kept;
   }
@@ -29,6 +32,9 @@ export async function html_regenerate_stable_page(file_path) {
       file_path,
       settled: null,
       skipped: "not_generated",
+      body_same: null,
+      name: null,
+      name_again: null,
     };
     return unwritten;
   }
@@ -40,6 +46,9 @@ export async function html_regenerate_stable_page(file_path) {
       file_path,
       settled: null,
       skipped: "refused",
+      body_same: null,
+      name: null,
+      name_again: null,
     };
     return refused;
   }

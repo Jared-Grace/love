@@ -16,6 +16,8 @@ export async function qa_app_commit_deploy_remembered(search, commit_floor) {
       app: search,
       deployed: false,
       found,
+      commit: null,
+      sent: null,
     };
     return nothing;
   }

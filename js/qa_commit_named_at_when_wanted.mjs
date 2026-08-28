@@ -20,6 +20,7 @@ export async function qa_commit_named_at_when_wanted(commit) {
       started: false,
       flight: null,
       judged: remembered,
+      stale: null,
     };
     return r;
   }

@@ -41,6 +41,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
       printed,
       share: index,
       milliseconds: date_milliseconds_since(began),
+      answered: null,
     };
     let answered = qa_gate_told_answered_is(r2);
     property_set(r2, "answered", answered);

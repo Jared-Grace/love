@@ -25,6 +25,8 @@ export async function permission_rules_other_domain_add(domain) {
       rule,
       added: false,
       held_already: true,
+      after: null,
+      write_with: null,
     };
     return held;
   }
@@ -46,6 +48,7 @@ export async function permission_rules_other_domain_add(domain) {
     added: true,
     after: last,
     write_with: f_name2,
+    held_already: null,
   };
   return r;
 }

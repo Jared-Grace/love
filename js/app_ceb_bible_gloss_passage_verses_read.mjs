@@ -29,6 +29,9 @@ export function app_ceb_bible_gloss_passage_verses_read(
         word,
         capitalised_always,
         looked_up: false,
+        affixes: null,
+        analysed: null,
+        root: null,
       };
       return absent;
     }

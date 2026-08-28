@@ -32,6 +32,10 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     let none = {
       app: app_name,
       why: "nothing is being served under this name, so there is nothing to put back",
+      deleted: null,
+      moved: null,
+      restored: null,
+      unchanged: null,
     };
     return none;
   }
@@ -66,6 +70,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     unchanged,
     moved,
     deleted,
+    why: null,
   };
   return r;
 }

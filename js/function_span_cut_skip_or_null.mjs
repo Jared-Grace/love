@@ -32,6 +32,7 @@ export async function function_span_cut_skip_or_null(
       address_from,
       address_to,
       why: "the run starts on the first line of work in the body, which is where the function keeps the things that are about itself rather than about the work - how many arguments it was called with, and the prose saying what it is for. A cut from there carries all of that away with it, so the function left behind stands with no count of its own arguments and nothing said about it, and the piece cut out is explained as though it were the whole. Would you like to start the run one line lower?",
+      f_name_new: null,
     };
     return preamble;
   }
@@ -41,6 +42,8 @@ export async function function_span_cut_skip_or_null(
       about: "name",
       address_to,
       why: "the run ends on a word a pass handed out rather than one anybody chose, so a function carrying that word in its name would stand in the repo where no search for what it does could reach it. Would you like to name that line for what it holds first?",
+      address_from: null,
+      f_name_new: null,
     };
     return unnamed;
   }
@@ -50,6 +53,8 @@ export async function function_span_cut_skip_or_null(
       about: "name",
       address_to,
       why: "the run ends on a word with a number counted into it, which is how somebody writes a second one of something rather than how they say what it is, so a function named after it would say only that it was the eighteenth. Would you like to name that line for what it holds first?",
+      address_from: null,
+      f_name_new: null,
     };
     return serial;
   }
@@ -59,6 +64,8 @@ export async function function_span_cut_skip_or_null(
       about: "name",
       address_to,
       why: "the run ends on a word of one letter, which is what somebody writes when they have nothing to call a thing yet rather than what they write when they do. A function named after it would carry that emptiness into the repo under a name that reads as chosen. Would you like to name that line for what it holds first?",
+      address_from: null,
+      f_name_new: null,
     };
     return placeholder;
   }
@@ -69,6 +76,8 @@ export async function function_span_cut_skip_or_null(
       about: "name",
       address_to,
       why: "the word the run ends on is one this repo already answers to, so the name would say what the run calls on its last line rather than what the run is for. Would you like to choose the name yourself?",
+      address_from: null,
+      f_name_new: null,
     };
     return borrowed;
   }
@@ -79,6 +88,8 @@ export async function function_span_cut_skip_or_null(
       about: "name",
       address_to,
       why: "the word the run ends on is not spelled the way this repo spells names, so what the run should be called once it stands on its own is for somebody reading it to choose",
+      address_from: null,
+      f_name_new: null,
     };
     return unspelled;
   }
@@ -89,6 +100,7 @@ export async function function_span_cut_skip_or_null(
       address_to,
       f_name_new,
       why: "the word the run ends on is the word its holder is already called, so the name would say that one word twice running and the second telling would narrow nothing. Would you like to choose the name yourself?",
+      address_from: null,
     };
     return doubled;
   }
@@ -100,6 +112,7 @@ export async function function_span_cut_skip_or_null(
       address_to,
       f_name_new,
       why: "a function already answers to the name this run would take, and whether the two are the same work is a question for somebody reading both",
+      address_from: null,
     };
     return spoken_for;
   }

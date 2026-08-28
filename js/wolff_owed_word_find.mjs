@@ -21,6 +21,7 @@ export async function wolff_owed_word_find(owed) {
       by: "word",
       found: property_get(direct, "found"),
       entries: property_get(direct, "entries"),
+      root: null,
     };
     return answered;
   }
