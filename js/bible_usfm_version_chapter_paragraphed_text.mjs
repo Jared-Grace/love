@@ -8,7 +8,7 @@ export async function bible_usfm_version_chapter_paragraphed_text(
   chapter_number,
   verse_numbers_shown,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 3);
   ("$plain book_code");
   ("$plain chapter_number");
   ("$plain verse_numbers_shown");
