@@ -18,14 +18,23 @@ THE TWO CONTROLS DECIDE WHETHER THE ANSWER MEANS ANYTHING.  A verifier that said
 nothing, so each real voice is checked against itself across the two passages and
 has to come back as the same person.  A verifier that said "same speaker" to
 everything would be caught by the other control, which is every pair of real
-voices - two of which are close enough to be the hard case.  A drawn voice is
-only cleared if the verifier passes both controls first.
+voices, none of which are the same person.
 
-WHAT A CLEAR RESULT WOULD AND WOULD NOT MEAN.  Cleared here means one widely used
-verification model, at its own threshold, does not match a drawn voice to any of
-the thirteen real speakers Kokoro ships.  It does not mean no system ever could,
-and it says nothing about whoever those thirteen voices were recorded from in the
-first place.  The honest claim is the narrow one.
+THE SECOND CONTROL FAILS ON THIS MATERIAL, AND THAT IS THE FINDING RATHER THAN A
+FAULT IN THE TEST.  The model's own threshold was fitted to recordings of real
+people; thirteen voices out of one generator share a vocoder and a great deal of
+acoustic character, so the whole population sits higher than the threshold was
+built for and thirteen of the seventy eight genuinely different real pairs come
+back as one speaker.  A threshold that cannot keep two real voices apart cannot
+be quoted about a drawn one either way, so the verdict cannot be read off it.
+
+WHAT IS LEFT IS THE COMPARISON THE CONTROL PROVIDES, WHICH NEEDS NO THRESHOLD AT
+ALL.  Two real voices are already a certain distance apart in this model's
+judgement, and the question is whether a drawn voice is closer to some real
+speaker than that.  Both distances are measured here from the same recordings, so
+the claim can be checked rather than trusted, and it is the narrow one: not that
+no system could ever match a drawn voice to a real one, and nothing whatever
+about whoever the thirteen voices were recorded from in the first place.
 
 Usage:
     python kokoro_voice_verify.py
