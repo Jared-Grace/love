@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -6,8 +7,6 @@ import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
 import { bible_glyph_text_space_wrong_positions } from "./bible_glyph_text_space_wrong_positions.mjs";
-import { not } from "./not.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_glyph_chapters_verses_space_wrong() {
@@ -35,8 +34,7 @@ export function bible_glyph_chapters_verses_space_wrong() {
       let drawn = bible_glyph_verse_draw(words, lookup);
       verses_drawn = verses_drawn + 1;
       let wrong = bible_glyph_text_space_wrong_positions(drawn, lookup);
-      let b = list_empty_is(wrong);
-      let any = not(b);
+      let any = list_empty_not_is(wrong);
       if (any) {
         list_add(offenders, {
           chapter_code,
