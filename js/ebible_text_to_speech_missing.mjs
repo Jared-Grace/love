@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -8,8 +9,6 @@ import { bible_audio_root_folder } from "./bible_audio_root_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { folder_read } from "./folder_read.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_take } from "./list_take.mjs";
@@ -48,8 +47,7 @@ export async function ebible_text_to_speech_missing(
   await folder_exists_ensure(folder);
   let recorded = await folder_read(folder);
   function missing_is(chapter_code) {
-    let held = list_includes(recorded, chapter_code);
-    let absent = not(held);
+    let absent = list_includes_not(recorded, chapter_code);
     return absent;
   }
   let missing = list_filter(wanted, missing_is);
