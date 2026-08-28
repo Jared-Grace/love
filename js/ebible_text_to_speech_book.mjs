@@ -5,7 +5,7 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
   "$plain bible_folder";
   "$plain book_code";
   "Reads a whole book aloud, every chapter of it, and returns the note per chapter saying which recorded piece holds which verse.";
-  "★ THE CHAPTERS GO OVER TOGETHER RATHER THAN ONE AT A TIME, WHICH IS WHERE ALMOST ALL OF THE TIME WENT. Asking chapter by chapter started the engine again for every chapter and then spoke on a single core, so a book of fifty chapters read the weights off disk fifty times over. The list goes across in one call now and the workers keep the engine they loaded.";
+  "★ THE CHAPTERS GO OVER TOGETHER RATHER THAN ONE AT A TIME, WHICH TAKES THE LOADING OUT AND NOT MUCH ELSE YET. Asking chapter by chapter started the engine again for every chapter and then spoke on a single core, so a book of fifty chapters read the weights off disk fifty times over. The list goes across in one call now and the workers keep the engine they loaded, which measured a quarter faster over Jonah rather than the twice that was hoped for.";
   arguments_assert(arguments, 2);
   let chapter_codes = await ebible_book_code_to_chapter_codes(
     bible_folder,
