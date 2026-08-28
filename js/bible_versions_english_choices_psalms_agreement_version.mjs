@@ -11,11 +11,8 @@ export async function bible_versions_english_choices_psalms_agreement_version(
 ) {
   arguments_assert(arguments, 2);
   function ordered(one, other) {
-    let r2 = bible_versions_english_choices_psalms_agreement_ordered(
-      one,
-      other,
-    );
-    return r2;
+    let r = bible_versions_english_choices_psalms_agreement_ordered(one, other);
+    return r;
   }
   apart.sort(ordered);
   let usable = await bible_versions_english_choices_usable();
