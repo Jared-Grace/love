@@ -1,21 +1,27 @@
-import { app_g_bless_camera_size_set } from "./app_g_bless_camera_size_set.mjs";
-import { divide } from "./divide.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
+import { divide } from "./divide.mjs";
+import { less_than } from "./less_than.mjs";
+import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_bless_camera_span(
+import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
+export async function app_g_bless_camera_span(
   container_map,
   div_map,
   player_img_c,
   span,
+  focus,
 ) {
-  arguments_assert(arguments, 4);
-  ("Pulls the camera back far enough that a patch this many squares across fits on the");
-  ("screen, and leaves it alone when it already does.");
+  arguments_assert(arguments, 5);
+  ("Takes the camera to one square of the map and, on the way, pulls back far enough that a");
+  ("patch this many squares across fits on the screen. It stays where it is when what has");
+  ("to fit already does, and returns once the camera has arrived.");
+  ("Pulling back and travelling are asked for together because they are one movement to");
+  ("watch. Asked separately they were two, and the join was the thing a player noticed: the");
+  ("street changed size in a single frame and then slid.");
   ("Only ever backwards, never forwards. Something worth showing that is wider than the");
   ("screen is shown badly whatever else is done about it, so there the pull-back is the only");
   ("answer; but a thing that already fits gains nothing from being pushed closer, and a");
@@ -29,13 +35,14 @@ export function app_g_bless_camera_span(
   ("box that scrolls. That box is not the window - it can have room around the map inside it");
   ("- and squares can already have been shrunk on a narrow phone. Both are read rather than");
   ("assumed, so this is right on a phone and on a desktop without knowing which it is on.");
-  ("It writes a plain number of pixels, which is the one thing this does that the game does");
-  ("not: normally the size is written as a sum the browser redoes whenever the window");
-  ("changes. So the map stops answering to a window being resized while this is in force,");
-  ("which is why what puts it in force is also responsible for putting it back.");
-  ("It is written on the box the map sits in rather than on the page, so putting it back is");
-  ("writing the ordinary size over it in the same place, and nothing has to remember what");
-  ("the page said before.");
+  ("When nothing has to be pulled back it asks for the ordinary playing size, which is the");
+  ("size the map is already at, so the journey is a plain scroll and the squares are never");
+  ("touched. Saying the size out loud in both cases rather than branching keeps one road");
+  ("through here, and the travelling knows how to notice a size that is not moving.");
+  ("A pull-back writes a plain number of pixels, which is the one thing this does that the");
+  ("game does not: normally the size is written as a sum the browser redoes whenever the");
+  ("window changes. So the map stops answering to a window being resized while this is in");
+  ("force, which is why what puts it in force is also responsible for putting it back.");
   let container = app_shared_game_div_map_container_get(div_map);
   let container_e = html_component_element_get(container);
   let rect = html_bounding_client_rect(player_img_c);
@@ -43,8 +50,15 @@ export function app_g_bless_camera_span(
   let across = span + 4;
   let room = divide(container_e.clientWidth, across);
   let wider = less_than(room, tile_now);
+  let size = app_g_bless_tile_size();
   if (wider) {
-    let size = text_combine_multiple([room, "px"]);
-    app_g_bless_camera_size_set(container_map, div_map, size);
+    size = text_combine_multiple([room, "px"]);
   }
+  await app_g_bless_camera_glide(
+    container_map,
+    div_map,
+    player_img_c,
+    size,
+    focus,
+  );
 }
