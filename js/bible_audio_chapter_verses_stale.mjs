@@ -1,3 +1,4 @@
+import { bible_audio_recording_translation } from "./bible_audio_recording_translation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chapter_aligned_is } from "./bible_audio_chapter_aligned_is.mjs";
 import { bible_audio_chunk_texts } from "./bible_audio_chunk_texts.mjs";
@@ -21,6 +22,7 @@ export async function bible_audio_chapter_verses_stale(
   "★ THE COMPARISON IS AGAINST THE READING PIECES AND NOT AGAINST THE VERSES, BECAUSE THAT IS HOW THE SOUND WAS CUT. A piece runs forward from where the last one ended to where a reader may stop, so a chapter with one sentence spanning three verses holds one piece where a verse-by-verse comparison expects three. Comparing to verses would report every gathered piece as changed in a recording where nothing changed at all.";
   "★ A RECORDING CUT SOME OTHER WAY CANNOT BE COMPARED AT ALL, AND SAYS SO RATHER THAN REPORTING NOTHING WRONG. Piece three of such a recording holds no particular piece of the chapter, so a comparison against piece three would report a difference on every line. Reporting that it cannot be judged points at re-cutting the chapter, which is the true answer for it.";
   "★ THE SHAPE IS CHECKED AGAIN HERE RATHER THAN TAKEN FROM THE NOTE. The note was written when the recording was, and the chapter may have been revised since in a way that changes how many pieces it gathers into. Trusting the old verdict would then walk off the end of the pieces, so the count is asked of what is on disk right now and the note's verdict is only reported.";
+  "★ THE FOLDER OF RECORDINGS IS NOT ALWAYS NAMED FOR A TRANSLATION, SO ITS NAME IS RESOLVED BEFORE THE CHAPTER IS ASKED FOR. A run recorded at full speed sits in a folder called engwebu_full_speed, and asking for a translation by that name is refused, so the comparison could not be made at all for it.";
   arguments_assert(arguments, 2);
   let aligned = await bible_audio_chapter_aligned_is(
     bible_folder,
