@@ -1,3 +1,6 @@
+import { list_concat_multiple } from "./list_concat_multiple.mjs";
+import { app_g_bless_finished_people } from "./app_g_bless_finished_people.mjs";
+import { app_g_bless_finished_people_fade } from "./app_g_bless_finished_people_fade.mjs";
 import { app_g_bless_finished_bloom } from "./app_g_bless_finished_bloom.mjs";
 import { app_g_bless_finished_bloom_fade } from "./app_g_bless_finished_bloom_fade.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";

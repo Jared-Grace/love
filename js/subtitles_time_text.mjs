@@ -1,6 +1,5 @@
-import { floor } from "./floor.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { less_than } from "./less_than.mjs";
-import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 export function subtitles_time_text(seconds) {
@@ -13,12 +12,10 @@ export function subtitles_time_text(seconds) {
   if (less_than(seconds, 0)) {
     from_start = 0;
   }
-  let p = divide(from_start, 3600);
-  let hours = floor(p);
+  let hours = divide_floor(from_start, 3600);
   let right = multiply(hours, 3600);
   let after_hours = subtract(from_start, right);
-  let p2 = divide(after_hours, 60);
-  let minutes = floor(p2);
+  let minutes = divide_floor(after_hours, 60);
   let right2 = multiply(minutes, 60);
   let seconds_left = subtract(after_hours, right2);
   let seconds_text = seconds_left.toFixed(2).padStart(5, "0");
