@@ -61,7 +61,13 @@ export async function app_g_bless_finished_faces(
   let middle = property_get(box, "middle");
   let span = property_get(box, "span");
   app_g_bless_camera_span(container_map, div_map, player_img_c, span);
-  app_shared_game_player_center(middle, player_img_c, div_map);
+  let arrived = app_shared_game_player_center(middle, player_img_c, div_map);
+  let faces = list_size(people);
+  let alone = equal(faces, 1);
+  let group = not(alone);
+  if (group) {
+    await arrived;
+  }
   let bursts = [];
   let blooms = [];
   async function person_light(person) {
