@@ -187,7 +187,14 @@ export function app_g_bless_overlay_render_tap_prayed(
     ("only the celebration knows when the faces are done with. It also has to happen before");
     ("the ground celebration and not after it: that flash is white light coming back off the");
     ("street, and off a square with nothing underneath it what it reveals is an empty one.");
-    await app_g_bless_finished(r2, lit_now, people_now, line, render);
+    await app_g_bless_finished(
+      r2,
+      lit_now,
+      people_now,
+      line,
+      ground_show,
+      faces_show,
+    );
   }
   function pray_person_id(id) {
     "Prays for whoever carries this person number, wherever they are standing and whether or";
