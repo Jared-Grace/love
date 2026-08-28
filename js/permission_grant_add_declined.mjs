@@ -22,10 +22,11 @@ export async function permission_grant_add_declined(unaliased) {
   ("the rule is written before the baseline entry because the blessing reads the flagged list, and a function is only flagged once it holds a rule. Between the two writes the gate would read red, which is why they are one command and not two.");
   ("do NOT grant. It writes allow rules, and it writes the record of which refused grants were allowed to stand - the two things that have to be seen one typed name at a time.");
   let refusals = await permission_grant_refusals(unaliased);
+  let f_name = fn_name("permission_grant_add");
   list_empty_not_is_assert_json(refusals, {
     hint: text_combine_multiple([
       "this function passes the safety check, so it wants ",
-      fn_name("permission_grant_add"),
+      f_name,
       " and nothing here to record",
     ]),
     unaliased,
@@ -42,6 +43,8 @@ export async function permission_grant_add_declined(unaliased) {
       name: unaliased,
       added: false,
       names: names.length,
+      allow: null,
+      blessed: null,
     };
     return known;
   }
