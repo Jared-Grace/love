@@ -1,13 +1,9 @@
+import { bible_versions_english_choices_psalms_agreement_version } from "./bible_versions_english_choices_psalms_agreement_version.mjs";
 import { bible_versions_english_choices_psalms_agreement_passage } from "./bible_versions_english_choices_psalms_agreement_passage.mjs";
-import { bible_versions_english_choices_psalms_agreement_ordered } from "./bible_versions_english_choices_psalms_agreement_ordered.mjs";
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_versions_english_choices_references } from "./bible_versions_english_choices_references.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
 export async function bible_versions_english_choices_psalms_agreement() {
   arguments_assert(arguments, 0);
   ("How far each English translation this repo offers a reader agrees with the others about what a psalm verse says, as the longest stretch of words it says the same way as its nearest neighbour, at its worst across a handful of psalms spread through the book.");
@@ -41,25 +37,11 @@ export async function bible_versions_english_choices_psalms_agreement() {
     };
     list_add(apart, v);
   }
-  function ordered(one, other) {
-    let r2 = bible_versions_english_choices_psalms_agreement_ordered(
-      one,
-      other,
+  let unmeasured =
+    await bible_versions_english_choices_psalms_agreement_version(
+      apart,
+      lowest_by_folder,
     );
-    return r2;
-  }
-  apart.sort(ordered);
-  let usable = await bible_versions_english_choices_usable();
-  let unmeasured = [];
-  for (let version of usable) {
-    let property_name = bible_folder_key();
-    let bible_folder = property_get(version, property_name);
-    let seen = lowest_by_folder[bible_folder];
-    let unasked = equal(seen, undefined);
-    if (unasked) {
-      list_add(unmeasured, version);
-    }
-  }
   let r = {
     references,
     apart,
