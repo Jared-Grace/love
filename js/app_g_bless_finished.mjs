@@ -56,10 +56,18 @@ export async function app_g_bless_finished(r, tiles, people, line) {
   let div_map = property_get(r, "div_map");
   let player_img_c = property_get(r, "player_img_c");
   let world = property_get(r, "world");
-  let box = app_g_bless_lit_box(tiles);
+  ("The camera is aimed at the ground and the faces together, so that whichever of the two");
+  ("this prayer turned out to be about is on the screen. Aimed at the ground alone it");
+  ("would have nowhere to point on a prayer over one person, and aimed at the faces alone");
+  ("it would look past a house whose last resident had already walked round the corner.");
+  ("Where the faces are is read once, here, and not followed. A camera that chased a");
+  ("walking person would be a camera the player cannot read the street from.");
+  let aim = list_concat_multiple([tiles, people]);
+  let box = app_g_bless_lit_box(aim);
   let middle = property_get(box, "middle");
   await app_shared_game_player_center(middle, player_img_c, div_map);
   let squares = app_g_bless_finished_white(div_map, tiles);
+  let bursts = app_g_bless_finished_people(div_map, people);
   await sleep(560);
   let glow = app_g_bless_finished_glow(div_map, tiles);
   await sleep(340);
@@ -68,6 +76,7 @@ export async function app_g_bless_finished(r, tiles, people, line) {
   app_g_bless_finished_bloom_fade(bloom);
   app_g_bless_finished_glow_fade(glow);
   app_g_bless_finished_white_fade(squares);
+  app_g_bless_finished_people_fade(bursts);
   await sleep(900);
   let player = property_get(world, "player");
   function back() {
