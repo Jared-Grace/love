@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_finished_person } from "./app_g_bless_finished_person.mjs";
+import { app_g_bless_finished_faces } from "./app_g_bless_finished_faces.mjs";
 import { each_async } from "./each_async.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_g_bless_finished_place } from "./app_g_bless_finished_place.mjs";
@@ -33,7 +33,7 @@ export async function app_g_bless_finished(r, tiles, people, line) {
   let player_img_c = property_get(r, "player_img_c");
   let world = property_get(r, "world");
   async function person_moment(person) {
-    await app_g_bless_finished_person(div_map, player_img_c, person);
+    await app_g_bless_finished_faces(div_map, player_img_c, person);
   }
   await each_async(people, person_moment);
   let ground = list_empty_not_is(tiles);
