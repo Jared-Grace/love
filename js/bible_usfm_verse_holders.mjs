@@ -1,6 +1,6 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -12,8 +12,7 @@ export function bible_usfm_verse_holders(carried, words_by_version, reference) {
   let holders = [];
   for (let read of carried) {
     let version = property_get(read, "version");
-    let words_by_reference = property_get(words_by_version, version);
-    let content = property_get_or_null(words_by_reference, reference);
+    let content = property_nested_or_null(words_by_version, version, reference);
     let b = null_is(content);
     let held = not(b);
     if (held) {
