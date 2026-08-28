@@ -12,7 +12,8 @@ export async function bible_audio_verses_manifest_chapter_write(
   "★ IT GATHERS THE SAME WAY THE GENERATOR CUTS, WHICH IS WHY IT CAN JUDGE THE GENERATOR'S WORK. Both go through one place that turns a chapter into pieces, so a disagreement between the note and the sound is a fault in the recording rather than a difference of opinion about where a piece ends.";
   "★ THE ANSWER FOR EVERY CHAPTER RECORDED SO FAR IS EXPECTED TO BE NO, AND THAT IS THE POINT OF ASKING. Those were made from a chapter flattened into one string with the verse boundaries thrown away, so the engine cut them wherever its own chunking landed and no piece corresponds to a verse. A note saying ALIGNED FALSE is the evidence that they cannot be indexed, which until now was a claim rather than a measurement.";
   arguments_assert(arguments, 2);
-  let units = await ebible_chapter_reading_units(bible_folder, chapter_code);
+  let translation = await bible_audio_recording_translation(bible_folder);
+  let units = await ebible_chapter_reading_units(translation, chapter_code);
   let manifest = await bible_audio_verses_manifest_write(
     bible_folder,
     chapter_code,
