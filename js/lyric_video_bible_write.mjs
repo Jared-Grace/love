@@ -1,3 +1,4 @@
+import { text_upper_to } from "./text_upper_to.mjs";
 import { not } from "./not.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";

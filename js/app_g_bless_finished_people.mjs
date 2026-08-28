@@ -66,9 +66,9 @@ export function app_g_bless_finished_people(div_map, people) {
   html_reflow_force(div_map);
   function burst_show(burst) {
     html_style_assign(burst, {
-      transition: "opacity 0.5s ease-out, transform 0.9s ease-out",
+      transition: "opacity 0.3s ease-out, transform 0.8s ease-out",
       opacity: "1",
-      transform: "scale(2.4)",
+      transform: "scale(3)",
     });
   }
   each(bursts, burst_show);
