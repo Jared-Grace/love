@@ -77,14 +77,20 @@ export async function app_g_bless_finished_preview() {
     app_g_bless_homes(homes, empty, blocks);
     let blessed = bless_blessed_new();
     bless_blessed_add(blessed, "household", household);
-    app_g_bless_homes(homes, blessed, blocks);
     let tiles = bless_blessed_tiles(blessed, blocks);
+    ("The finished house is drawn by the celebration rather than before it, which is what the");
+    ("street itself does now - the ground goes up between the faces and the flash over them,");
+    ("so it is warm underneath the white without having turned gold too early. Here there are");
+    ("no faces to wait for, so it happens at once.");
+    function ground_show() {
+      app_g_bless_homes(homes, blessed, blocks);
+    }
     ("No faces are handed over, and this screen is about the ground on purpose. A face is lit");
     ("on the light that person already carries, and those lights are made by the drawing this");
     ("screen deliberately does not run - nobody walks here, so there is nothing for a light to");
     ("be carried by. What is being judged here is the house.");
     let nobody = [];
-    await app_g_bless_finished(r, tiles, nobody, line);
+    await app_g_bless_finished(r, tiles, nobody, line, ground_show);
   }
   let strip = html_div(cover);
   html_style_assign(strip, {
