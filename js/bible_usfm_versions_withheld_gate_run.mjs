@@ -1,11 +1,11 @@
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_years_sorted } from "./bible_usfm_versions_years_sorted.mjs";
 import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
 import { bible_versions_english_choices_withheld } from "./bible_versions_english_choices_withheld.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get } from "./property_get.mjs";
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_map } from "./list_map.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_find_property_get_or } from "./list_find_property_get_or.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
@@ -19,6 +19,7 @@ export function bible_usfm_versions_withheld_gate_run() {
   ("THIS IS THE FAULT ITSELF WRITTEN AS A CHECK, NOT A GUARD AGAINST AN IMAGINED ONE. The list of held-back translations was written first, about a bible nobody had unpacked; the shelf gained that bible later and nothing joined them up, so the repo held a warning about the Douay-Rheims and handed its psalms over anyway - the wrong psalm, in good English, with nothing said. Nothing went red, because every other check here asks whether words came back and words did come back.");
   ("It reaches the warning by a different road than the shelf does. The shelf asks one function for the reason; this walks the held-back list itself, finds the short word whose folder matches, and reads the row that came out. So the two agree only if the join is really live, and cutting the field out of the row fails here rather than passing on the strength of the very function that was cut out.");
   ("A held-back translation that is not on the shelf at all passes and is counted separately. Not having a bible is a perfectly good way of not offering it, and demanding a row for one would force the shelf to carry every translation anybody ever ruled out.");
+  ("BOTH SIDES OF THE JOIN TRAVEL OUT WITH THE VERDICT, AND THE ANSWER IS A RECORD RATHER THAN A BARE NUMBER SO THAT A READER CAN SEE WHICH SIDE EACH ONE IS. This walks two lists against each other and either of them falling to nothing leaves the check green while it watches nobody - a shelf read a new way, or a held-back list moved - and one number could only ever have shown that about one of them. The offenders are not a reading of either: their count is nothing on every run that passes.");
   let rows = bible_usfm_versions_years_sorted();
   let versions = bible_usfm_versions();
   let withheld = bible_versions_english_choices_withheld();
@@ -72,5 +73,10 @@ export function bible_usfm_versions_withheld_gate_run() {
     hint: "this bible is held back from readers and the shelf hands it over without saying why; the reason must reach the row rather than being left on the held-back list",
   });
   let checked = list_size(rows);
-  return checked;
+  let held_back = list_size(withheld);
+  let walked = {
+    checked,
+    held_back,
+  };
+  return walked;
 }
