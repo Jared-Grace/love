@@ -1,7 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_notes } from "./song_image_notes.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { song_image_notes_write } from "./song_image_notes_write.mjs";
@@ -14,8 +13,7 @@ export async function song_image_note_done(key, words) {
   arguments_assert(arguments, 2);
   let notes = await song_image_notes(key);
   function mark(one) {
-    let held = property_get(one, "note");
-    let same = equal(held, words);
+    let same = property_equals(one, "note", words);
     if (same) {
       property_set(one, "done", true);
     }
