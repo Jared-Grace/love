@@ -3,8 +3,8 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_operator_truths_wanted } from "./app_code_operator_truths_wanted.mjs";
 import { boolean_random } from "./boolean_random.mjs";
-import { ternary } from "./ternary.mjs";
 import { list_get } from "./list_get.mjs";
+import { ternary } from "./ternary.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_expression(
@@ -22,12 +22,10 @@ export function app_code_lesson_expression_choose_order_and_before_or_expression
   let outer = app_code_operator_truths_wanted(or_symbol, want_true);
   let and_left = boolean_random();
   ("the && takes one of the ||'s two sides and a plain true or false takes the other, and which of them is which is the whole of what the draw decides");
-  let on_true = list_get(outer, 0);
-  let on_false = list_get(outer, 1);
-  let and_value = ternary(and_left, on_true, on_false);
-  let on_true2 = list_get(outer, 1);
-  let on_false2 = list_get(outer, 0);
-  let far_truth = ternary(and_left, on_true2, on_false2);
+  let or_left_side = list_get(outer, 0);
+  let or_right_side = list_get(outer, 1);
+  let and_value = ternary(and_left, or_left_side, or_right_side);
+  let far_truth = ternary(and_left, or_right_side, or_left_side);
   let inner = app_code_operator_truths_wanted(and_symbol, and_value);
   let inner_left = list_get(inner, 0);
   let inner_right = list_get(inner, 1);
