@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_fetch_gate_run } from "./bible_glyph_chapter_fetch_gate_run.mjs";
 import { functions_return_key_shapes_gate_run } from "./functions_return_key_shapes_gate_run.mjs";
 import { js_ast_return_key_shapes_disagreeing_cases_gate_run } from "./js_ast_return_key_shapes_disagreeing_cases_gate_run.mjs";
 import { functions_files_unparseable_gate_run } from "./functions_files_unparseable_gate_run.mjs";
@@ -628,7 +629,8 @@ export function qa_gates() {
     bible_glyph_groups_marks_artwork_absent_gate_run,
     bible_glyph_chapters_verses_space_wrong_gate_run,
     bible_glyph_chapters_book_codes_unknown_gate_run,
-    bible_glyph_chapter_references_gate_run,$NL    bible_glyph_chapter_fetch_gate_run,
+    bible_glyph_chapter_references_gate_run,
+    bible_glyph_chapter_fetch_gate_run,
     bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
