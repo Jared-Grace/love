@@ -1,11 +1,12 @@
-import { fn_name } from "./fn_name.mjs";
 import { ebible_versions_english_full_web_family_not } from "./ebible_versions_english_full_web_family_not.mjs";
 import { ebible_versions_english_choices } from "./ebible_versions_english_choices.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { ebible_bible_folders_commercial_assert } from "./ebible_bible_folders_commercial_assert.mjs";
 import { function_dependency_path } from "./function_dependency_path.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { throws_not_async } from "./throws_not_async.mjs";
@@ -18,6 +19,7 @@ export async function ebible_versions_english_choices_commercial_gate_run() {
   "It proves the two halves a guard is made of. The check itself refuses the right text and keeps the right text, and the door that hands the list to readers actually reaches the check - a check nothing calls passes every time it is asked and protects nothing.";
   "English is the one language this app offers as many translations rather than one, so it is the one language the per-language licence question never covered. Five texts on terms that forbid shipping reached readers that way before this gate existed.";
   "A run where every complete English translation on this disk is shippable proves nothing about the refusing half and says so, rather than passing quietly.";
+  "THE DOOR AND THE CHECK ARE NAMED INSIDE THE HINT AND NOT BESIDE IT. Both are the subject of this gate rather than the fault in it - the complaint is that the wire between them has gone, and neither end did anything wrong. A red gate's words are read back afterwards for the function names in them, and an app whose bundle carries one of those names is held out of its deployment, so a name standing outside the hint is an accusation whether or not it was meant as one. The check is shared, so accusing it holds every app at once. The hint is dropped before the names are read, which is why the whole sentence goes there.";
   let all = await ebible_versions_english_full_web_family_not();
   let offered = await ebible_versions_english_choices();
   function refused_is(bible_folder) {
@@ -29,10 +31,15 @@ export async function ebible_versions_english_choices_commercial_gate_run() {
   let check = ebible_bible_folders_commercial_assert.name;
   let path = await function_dependency_path(door, check);
   let wired = null_not_is(path);
-  true_is_assert_json(wired, {
-    hint: "the door that hands the English wordings to readers no longer reaches the check that refuses a translation this repo may not ship - rewire it, or the list goes out unasked",
+  let unwired_hint = text_combine_multiple([
+    "the door that hands the English wordings to readers (",
     door,
+    ") no longer reaches the check that refuses a translation this repo may not ship (",
     check,
+    ") - rewire it, or the list goes out unasked",
+  ]);
+  true_is_assert_json(wired, {
+    hint: unwired_hint,
   });
   let permitted = ebible_folder_english();
   async function permits() {
