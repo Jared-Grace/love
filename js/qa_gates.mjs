@@ -1,3 +1,4 @@
+import { bible_usfm_versions_apart_gate_run } from "./bible_usfm_versions_apart_gate_run.mjs";
 import { app_code_lesson_telling_shapes_gate_run } from "./app_code_lesson_telling_shapes_gate_run.mjs";
 import { bible_usfm_versions_withheld_gate_run } from "./bible_usfm_versions_withheld_gate_run.mjs";
 import { bible_glyph_chapter_fetch_gate_run } from "./bible_glyph_chapter_fetch_gate_run.mjs";
