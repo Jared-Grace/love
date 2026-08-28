@@ -22,12 +22,16 @@ import { app_shared_bible_choose_chapter } from "./app_shared_bible_choose_chapt
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { html_centered } from "./html_centered.mjs";
-export async function app_shared_bible_read(context, verse_action, chapter_action) {
-  ("The whole-chapter reader, shared by every bible app, with two places an app hangs its own thing: one on each verse, and one under the last of them once the chapter is drawn.");
-  (" chapter_action");
-  ("THE CHAPTER HOOK IS HANDED THE CHAPTER RATHER THAN LEFT TO FIND IT, because by the time it runs the chapter may have been reached by following a reference the address never spelled - so the address is not a reliable answer here and the code in hand is.");
-  ("It is APPENDED after the verse hook rather than put beside it, because a caller hands its arguments over by position: an inserted one would slide the verse hook into the chapter hook's place and every app would go on calling the same names with the wrong jobs.");
-  ("Both hooks are drawn nothing by an app that wants neither, so a screen that hangs nothing here hangs a function that draws nothing rather than a special case.");
+export async function app_shared_bible_read(
+  context,
+  verse_action,
+  chapter_action,
+) {
+  "The whole-chapter reader, shared by every bible app, with two places an app hangs its own thing: one on each verse, and one under the last of them once the chapter is drawn.";
+  " chapter_action";
+  "THE CHAPTER HOOK IS HANDED THE CHAPTER RATHER THAN LEFT TO FIND IT, because by the time it runs the chapter may have been reached by following a reference the address never spelled - so the address is not a reliable answer here and the code in hand is.";
+  "It is APPENDED after the verse hook rather than put beside it, because a caller hands its arguments over by position: an inserted one would slide the verse hook into the chapter hook's place and every app would go on calling the same names with the wrong jobs.";
+  "Both hooks are drawn nothing by an app that wants neither, so a screen that hangs nothing here hangs a function that draws nothing rather than a special case.";
   let r3 = app_shared_bible_read_frame(context);
   let r6 = app_shared_bible_read_unknown_shown(r3);
   let unknown_shown = property_get(r6, "unknown_shown");
