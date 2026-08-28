@@ -113,6 +113,7 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
       drawn: 0,
       verses: [],
       left,
+      f_path: null,
     };
     return r2;
   }

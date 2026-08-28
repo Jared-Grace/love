@@ -32,6 +32,8 @@ export async function psalms_playlist_order_moves(playlist_id) {
         ordered: false,
         title,
         why: "the playlist holds a name that does not name a passage of the Psalms",
+        move_count: null,
+        moves: null,
       };
       return refused;
     }
@@ -65,6 +67,8 @@ export async function psalms_playlist_order_moves(playlist_id) {
     ordered: true,
     move_count: list_size(moves),
     moves,
+    title: null,
+    why: null,
   };
   return r;
 }

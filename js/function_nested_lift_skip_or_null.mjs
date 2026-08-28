@@ -21,6 +21,8 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
     let unnamed = {
       nested,
       why: "this piece was never given a name by anybody - a pass named it, and carried out under that name joined to its holder's it would stand in the repo as a name no search for what it does could ever reach. Would you like to name it for what it does first?",
+      blocked: null,
+      f_name_new: null,
     };
     return unnamed;
   }
@@ -30,6 +32,8 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
     let unspelled = {
       nested,
       why: "the piece inside is not named the way this repo names things, so what it should be called once it stands on its own is for somebody reading it to choose",
+      blocked: null,
+      f_name_new: null,
     };
     return unspelled;
   }
@@ -42,6 +46,7 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
       nested,
       blocked,
       why: "the piece inside reads a word the language will not let a function bind, so moving it out would have to hand that word in through a parameter list, which is the one place the word is refused",
+      f_name_new: null,
     };
     return refused;
   }
@@ -51,6 +56,7 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
       nested,
       f_name_new,
       why: "the piece inside is called the word its holder is already called, so the joined name would say that one word twice running and the second telling would narrow nothing. Would you like to name the piece for what it does first?",
+      blocked: null,
     };
     return doubled;
   }
@@ -61,6 +67,7 @@ export async function function_nested_lift_skip_or_null(f_name, nested, row) {
       nested,
       f_name_new,
       why: "a function already answers to the name this one would take, and whether the two are the same work is a question for somebody reading both",
+      blocked: null,
     };
     return spoken_for;
   }

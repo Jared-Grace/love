@@ -21,6 +21,8 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
     let missing = {
       done: false,
       reason: "no title maker",
+      renamed: null,
+      swapped: null,
     };
     return missing;
   }
@@ -35,6 +37,8 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
     let other = {
       done: false,
       reason: "the title does not open with the category",
+      renamed: null,
+      swapped: null,
     };
     return other;
   }
@@ -42,10 +46,8 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
   property_set(maker, "params", params);
   property_set(painter_body, "body", remaining);
   property_set(maker, "body", painter_body);
-  let calls = js_list_calls_named_nodes(
-    ast,
-    fn_name("app_code_lesson_name_id_generic"),
-  );
+  let f_name = fn_name("app_code_lesson_name_id_generic");
+  let calls = js_list_calls_named_nodes(ast, f_name);
   function callee_swap(call) {
     let callee = property_get(call, "callee");
     property_set(callee, "name", "app_code_lesson_name_id_category_then");
@@ -56,6 +58,7 @@ export function app_code_lesson_name_id_category_then_rewrite(ast) {
     done: true,
     swapped,
     renamed,
+    reason: null,
   };
   return done;
 }

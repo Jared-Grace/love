@@ -23,6 +23,14 @@ export async function permission_replay_rows_split() {
       path,
       written: false,
       write_with: fn_name("permission_replay_write"),
+      days: null,
+      proved: null,
+      proved_alive: null,
+      proved_dead: null,
+      proved_grants: null,
+      replay_grants: null,
+      replayed_alive: null,
+      replayed_dead: null,
     };
     return none;
   }
@@ -45,6 +53,7 @@ export async function permission_replay_rows_split() {
     proved_dead: property_get(split, "dead"),
     replayed_alive: property_get(split_replayed, "alive"),
     replayed_dead: property_get(split_replayed, "dead"),
+    write_with: null,
   };
   return r;
 }

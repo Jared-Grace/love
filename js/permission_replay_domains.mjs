@@ -25,6 +25,10 @@ export async function permission_replay_domains() {
       path,
       written: false,
       write_with: fn_name("permission_replay_write"),
+      days: null,
+      granted: null,
+      open: null,
+      open_count: null,
     };
     return none;
   }
@@ -61,6 +65,7 @@ export async function permission_replay_domains() {
     open_count,
     granted,
     open,
+    write_with: null,
   };
   return r;
 }

@@ -18,6 +18,8 @@ export async function youtube_oauth_token_save(code) {
     let refused = {
       saved: false,
       answer: token,
+      file_path: null,
+      lasting: null,
     };
     return refused;
   }
@@ -29,6 +31,7 @@ export async function youtube_oauth_token_save(code) {
     saved: true,
     lasting,
     file_path,
+    answer: null,
   };
   return r;
 }
