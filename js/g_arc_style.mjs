@@ -32,6 +32,11 @@ export function g_arc_style() {
       why: "the turn rests on the person picking the passage's word up, and the pick-up only lands if the word means one thing. A second job for it elsewhere makes the echo read as a pun, and the reader cannot tell which sense was meant. An idiom is worse than a second sense: it carries a meaning the verse never had, and it is the first thing to break when the arc is translated.",
       from: "found by reading the three written 1JN01 arcs against the four rules above. Dark was doing three jobs across all three people - the moral darkness of 1 John 1:5, in the dark about Him for not knowing, and go dark on me for going silent - and twice as a bare noun besides, which is the rule above it failing in the same word.",
     },
+    {
+      rule: "WHERE A PERSON SAYS TWO THINGS AT ONCE AND THE PASSAGE DENIES ONLY ONE OF THEM, THE ANSWER TAKES THE DENIED ONE AND LEAVES THE OTHER STANDING. A person saying they are better than they were has said something true; a person saying there is no sin left in them has said the thing 1 John 1:8 calls deceiving yourself. A line that answers the whole speech has corrected the true half too, and told the person that seeing a real change in themselves was the fault.",
+      why: "the true half is the part a reader recognises in their own life, so answering it teaches them that noticing what God has done in them is itself sin - which is the opposite of what the passage is for, and of a change Scripture calls the fruit of the Spirit rather than of ourselves. Nobody is brought to confess a real sin by being told a real mercy was imaginary. The same split holds wherever a person's speech mixes testimony with a claim: the testimony is theirs to make, and only the claim is answered.",
+      from: "raised by the human on 1JN01, Jael, where a woman's noticing her own improvement had been written as the self-deception itself. Reading the other two arcs for the same shape found it again in Shimeath, on I am past all that now - so mending the one line was already a rule that was missing.",
+    },
   ];
   return rules;
 }
