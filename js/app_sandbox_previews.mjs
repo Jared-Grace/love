@@ -1,5 +1,5 @@
 import { property_get } from "./property_get.mjs";
-import { app_sandbox_previews_dream_prison_load } from "./app_sandbox_previews_dream_prison_load.mjs";
+import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
@@ -11,29 +11,17 @@ export function app_sandbox_previews() {
     let r = m.app_sandbox_spinner_preview;
     return r;
   }
-  let r2 = app_sandbox_previews_dream_prison_load();
-  let dream_prison_load = property_get(r2, "dream_prison_load");
-  let dream_trace_load = property_get(r2, "dream_trace_load");
-  let second_takes_load = property_get(r2, "second_takes_load");
-  let song_image_audit_load = property_get(r2, "song_image_audit_load");
-  let song_image_choose_load = property_get(r2, "song_image_choose_load");
-  let availability_editor_load = property_get(r2, "availability_editor_load");
+  let r2 = app_sandbox_previews_code_review_load();
+  let code_review_load = property_get(r2, "code_review_load");
+  let song_image_review_load = property_get(r2, "song_image_review_load");
+  let typing_box_load = property_get(r2, "typing_box_load");
   let week_calendar_load = property_get(r2, "week_calendar_load");
-  async function typing_box_load() {
-    let m = await import("./typing_box_preview.mjs");
-    let r9 = m.typing_box_preview;
-    return r9;
-  }
-  async function song_image_review_load() {
-    let m = await import("./song_image_review_preview.mjs");
-    let r11 = m.song_image_review_preview;
-    return r11;
-  }
-  async function code_review_load() {
-    let m = await import("./app_code_review_preview.mjs");
-    let r10 = m.app_code_review_preview;
-    return r10;
-  }
+  let availability_editor_load = property_get(r2, "availability_editor_load");
+  let song_image_choose_load = property_get(r2, "song_image_choose_load");
+  let song_image_audit_load = property_get(r2, "song_image_audit_load");
+  let second_takes_load = property_get(r2, "second_takes_load");
+  let dream_trace_load = property_get(r2, "dream_trace_load");
+  let dream_prison_load = property_get(r2, "dream_prison_load");
   async function lyric_timing_load() {
     let r13 = await app_sandbox_previews_lyric_timing_load();
     return r13;
