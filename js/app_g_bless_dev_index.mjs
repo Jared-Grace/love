@@ -38,12 +38,5 @@ export function app_g_bless_dev_index(world) {
   let all = list_concat(names, openings);
   let prefixes = app_shared_hash_index_prefixes_derived(all);
   let app_fn = app_g_bless_storage_app();
-  ("A dev screen here REPLACES the street rather than opening beside it, so the cards go in");
-  ("the tab you are standing in and the back pill is the way out. A new tab for each would");
-  ("leave a trail of half-played streets behind, every one of them still generating a world");
-  ("nobody is looking at.");
-  let new_tab = false;
-  let settings = app_shared_hash_index_settings(app_fn, new_tab);
-  let column = app_shared_dev_overlay("Dev routes");
-  app_shared_hash_index_render(column, all, prefixes, settings);
+  app_shared_dev_index_show(all, prefixes, app_fn);
 }
