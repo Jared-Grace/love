@@ -13,8 +13,8 @@ export function bible_usfm_line_lone_marker_is(usfm_line) {
   ("A break is not one of these even though it carries no words, because a break is not asking anything of the line beneath it - it is a blank line in its own right, and joining it to what follows would close the gap the printing asked for.");
   ("Nor is a mark whose line is thrown away, because there the emptiness is beside the point: the words would go whether there were any or not, and carrying the mark down onto a verse would hand that verse the thrown-away mark's own fate.");
   let split = bible_usfm_marker_rest(usfm_line);
-  let marker = property_get(split, "marker");
-  let unmarked = text_empty_is(marker);
+  let marker_text = property_get(split, "marker");
+  let unmarked = text_empty_is(marker_text);
   if (unmarked) {
     return false;
   }
@@ -23,7 +23,7 @@ export function bible_usfm_line_lone_marker_is(usfm_line) {
   if (carries) {
     return false;
   }
-  let layout = bible_usfm_marker_layout(marker);
+  let layout = bible_usfm_marker_layout(marker_text);
   let kind = property_get(layout, "kind");
   let broken = equal(kind, "break");
   if (broken) {
