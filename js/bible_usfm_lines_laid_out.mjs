@@ -1,6 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_last } from "./list_last.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -28,8 +28,7 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
   ("A line whose words all turn out to be a footnote leaves nothing behind rather than an empty line. That happens wherever the printing hangs a note on a line of its own, and a reader would see a hole in the poem and take it for a fault.");
   let out = [];
   function blank_line_add() {
-    let size = list_size(out);
-    let opening = equal(size, 0);
+    let opening = list_size_equal(out, 0);
     if (opening) {
       return;
     }
