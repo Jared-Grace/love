@@ -32,9 +32,9 @@ export function app_g_bless_dev_index(world) {
   ("folder appears without anybody filing them.");
   let routes = app_g_bless_dev_routes(world);
   let names = properties_get(routes);
-  let word = bless_hash_street();
+  let street = bless_hash_street_openings();
   let v = app_shared_g_dev_index_hash_name();
-  let openings = [word, v];
+  let openings = list_concat(street, [v]);
   let all = list_concat(names, openings);
   let prefixes = app_shared_hash_index_prefixes_derived(all);
   let app_fn = app_g_bless_storage_app();
