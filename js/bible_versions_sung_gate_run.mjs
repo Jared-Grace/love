@@ -22,7 +22,8 @@ export async function bible_versions_sung_gate_run() {
   let free = await bible_usfm_versions_english_public_domain();
   let words = list_map_property(free, "version");
   let read_nothing = list_empty_is(words);
-  assert_json(not(read_nothing), {
+  let b = not(read_nothing);
+  assert_json(b, {
     hint: "no translation was read as public domain at all, so the licence pages were never reached and this gate is looking at nothing",
   });
   let folder = data_given_lyric_videos_folder();
@@ -39,15 +40,17 @@ export async function bible_versions_sung_gate_run() {
       });
     }
   }
-  assert_json(list_empty_is(owned), {
+  let b2 = list_empty_is(owned);
+  assert_json(b2, {
     owned,
     free: words,
     hint: "this lyric video is built on a translation nobody has read as public domain, so the song inherits whatever the translation asks for - move it onto a free wording rather than adding the name here",
   });
   let videos = list_size(files);
   let versions = list_size(words);
-  return {
+  let r = {
     videos,
     versions,
   };
+  return r;
 }
