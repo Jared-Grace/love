@@ -6,8 +6,14 @@ import { app_g_bless_finished_place } from "./app_g_bless_finished_place.mjs";
 import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_g_bless_finished_modal } from "./app_g_bless_finished_modal.mjs";
-export async function app_g_bless_finished(r, tiles, people, line) {
-  arguments_assert(arguments, 4);
+export async function app_g_bless_finished(
+  r,
+  tiles,
+  people,
+  line,
+  ground_show,
+) {
+  arguments_assert(arguments, 5);
   ("The celebration after a prayer that finished something off: every face it lit, and then");
   ("the ground it filled in.");
   ("Faces first and ground last, and each shown on its own with the camera on it. They");
@@ -43,6 +49,16 @@ export async function app_g_bless_finished(r, tiles, people, line) {
       people,
     );
   }
+  ("The newly finished house is put onto the map HERE, between the two halves, and that is");
+  ("the whole reason this is handed a way of drawing it. Drawn before the faces, the house");
+  ("turns gold while the person who finished it is still being blessed - the player is told");
+  ("the answer while they are watching the question. Drawn after the ground celebration");
+  ("instead, the white would flash over a square with nothing underneath it, and the light");
+  ("coming back off it would reveal an empty street.");
+  ("It runs whether or not any ground was finished. When none was, this is a redraw of a");
+  ("picture that has not changed, which costs a draw and buys the guarantee that the map");
+  ("and the record agree again by the time this returns.");
+  ground_show();
   let ground = list_empty_not_is(tiles);
   if (ground) {
     await app_g_bless_finished_place(div_map, player_img_c, tiles);
