@@ -1,3 +1,4 @@
+import { bible_usfm_versions_book_verses_apart_words } from "./bible_usfm_versions_book_verses_apart_words.mjs";
 import { bible_usfm_versions_book_verses_apart_compared } from "./bible_usfm_versions_book_verses_apart_compared.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
@@ -9,10 +10,6 @@ import { not } from "./not.mjs";
 import { file_read } from "./file_read.mjs";
 import { usfm_chapters_verses } from "./usfm_chapters_verses.mjs";
 import { list_add } from "./list_add.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_words_content } from "./text_words_content.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function bible_usfm_versions_book_verses_apart(book_code) {
   arguments_assert(arguments, 1);
   ("$plain book_code");
@@ -51,34 +48,11 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
   }
   let words_by_version = {};
   let references = [];
-  let references_seen = {};
-  for (let read of carried) {
-    let version = property_get(read, "version");
-    let chapters = property_get(read, "chapters");
-    let words_by_reference = {};
-    for (let chapter of chapters) {
-      let chapter_number = property_get(chapter, "chapter_number");
-      let verses = property_get(chapter, "verses");
-      for (let verse of verses) {
-        let verse_number = property_get(verse, "verse_number");
-        let text = property_get(verse, "text");
-        let reference = chapter_number + ":" + verse_number;
-        let content = text_words_content(text);
-        let wordless = list_empty_is(content);
-        if (wordless) {
-          continue;
-        }
-        words_by_reference[reference] = content;
-        let before = property_get_or_null(references_seen, reference);
-        let first = null_is(before);
-        if (first) {
-          references_seen[reference] = reference;
-          list_add(references, reference);
-        }
-      }
-    }
-    words_by_version[version] = words_by_reference;
-  }
+  bible_usfm_versions_book_verses_apart_words(
+    carried,
+    references,
+    words_by_version,
+  );
   let r = bible_usfm_versions_book_verses_apart_compared(
     references,
     carried,
