@@ -18,7 +18,10 @@ export function text_marker_gaps_closed(text) {
   ("A word broken after its own apostrophe is closed up next, and that is a second printing writing the same split a second way. Where the aligned hebrew marks the apostrophe apart from the letters on both sides of it, the aligned greek leaves the apostrophe on the word and marks only what follows - hasn, then the apostrophe, then a mark, then t - so the rule above finds no gap in front of the apostrophe, and six hundred and forty-one contractions came out with a space standing inside them.");
   ("What makes this decidable is that not one of the endings listed is a word. A closing quotation mark is followed by whatever was said next, and nobody says t or ve or ll on its own, so a gap in front of one of these was put there by the marking and never by anybody writing. The list is the whole of english contraction rather than the two endings these files happen to use, because the next translation added will split the same way.");
   let suffixes = "t|s|re|ve|ll|d|m";
-  let word_suffix = new RegExp("([A-Za-z][’'])" + gap + "(" + suffixes + ")(?![A-Za-z])", "g");
+  let word_suffix = new RegExp(
+    "([A-Za-z][’'])" + gap + "(" + suffixes + ")(?![A-Za-z])",
+    "g",
+  );
   let unsuffixed = unsplit.replace(word_suffix, "$1$2");
   let before_closing = new RegExp(gap + "(?=[,.;:!?)\\]}”’»…])", "g");
   let leftwards = unsuffixed.replace(before_closing, "");
