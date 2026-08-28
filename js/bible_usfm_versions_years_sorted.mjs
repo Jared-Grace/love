@@ -47,7 +47,6 @@ export function bible_usfm_versions_years_sorted() {
       year,
       licence,
       said,
-      withheld,
     };
     return made;
   }
