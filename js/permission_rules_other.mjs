@@ -121,6 +121,8 @@ export function permission_rules_other() {
     "WebFetch(domain:docs.bfl.ai)",
     "WebFetch(domain:ccat.sas.upenn.edu)",
     "WebFetch(domain:berean.bible)",
+    "WebFetch(domain:docs.github.com)",
+    "WebFetch(domain:neon.com)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",
