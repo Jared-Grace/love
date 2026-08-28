@@ -29,18 +29,18 @@ export async function g_arc_unreviewed_chapter(chapter_code) {
     let unread = equal(read_arc, null);
     if (unread) {
       let lines = g_arc_lines_addressed(arc);
-      let addresses = [];
+      let addresses_all = [];
       for (let line of lines) {
         let address = property_get(line, "address");
-        list_add(addresses, address);
+        list_add(addresses_all, address);
       }
-      let right = list_size(addresses);
+      let right = list_size(addresses_all);
       waiting = add(waiting, right);
       list_add(people, {
         index,
         nickname,
         read: false,
-        addresses,
+        addresses: addresses_all,
         changed: [],
       });
       continue;
