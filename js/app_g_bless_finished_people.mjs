@@ -47,6 +47,13 @@ export function app_g_bless_finished_people(div_map, people) {
   ("Made see-through and then shown, with the page measured in between. Made and shown in");
   ("one breath the browser only ever measures them once, sees lights that were always");
   ("fully there, and gives them no arrival at all.");
+  ("Shown in its own right, and it has to say so, because it hangs inside the quiet mark a");
+  ("prayed-for face keeps - and that mark is invisible until the game turns it on. Hanging");
+  ("the arrival inside the thing that remains is what keeps the two in step with somebody");
+  ("who walks, but it also meant the arrival could not be seen until what remains had been");
+  ("shown first, so the player watched the gold appear and the blue arrive afterwards, which");
+  ("is the wrong way round. Saying it here lets the blue open on a face whose gold is still");
+  ("held back, and the light that stays is then what the arrival left behind.");
   let blue = app_shared_color_blue_pale();
   let white = app_shared_color_white();
   let background = text_combine_multiple([

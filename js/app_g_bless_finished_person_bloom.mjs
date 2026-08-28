@@ -66,6 +66,7 @@ export function app_g_bless_finished_person_bloom(div_map, person) {
     "border-radius": "50%",
     "pointer-events": "none",
     opacity: "0",
+    visibility: "visible",
     transform: "scale(0.6)",
     transition: "none",
   });
