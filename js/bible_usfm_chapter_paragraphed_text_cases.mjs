@@ -140,6 +140,20 @@ export function bible_usfm_chapter_paragraphed_text_cases() {
       text: "1 First line.\n\n2 Second line.",
       why: "a break carries no words either and must not be moved down onto the verse below it. It is not asking anything of that verse - it is a blank line in its own right, and joining it to what follows would close the gap the printing asked for",
     },
+    {
+      usfm: "\\c 1\n\\p \\v 1 First.\n\\v 2 Second.\n\\v 3 Third.\n",
+      chapter_number: "1",
+      verse_numbers_shown: false,
+      text: "First.\nSecond.\nThird.",
+      why: "THE SHAPE THAT WAS SILENTLY WRONG FOR THREE BIBLES OUT OF FOUR. Prose in the world english bible and in the unfoldingWord texts opens the paragraph with the paragraph mark and then gives every further verse a line of its own beginning with the verse mark - seventy thousand lines of it. Read as the mark that says what kind of line this is, the verse mark took the number out of reach of the reader that decides whether a number is wanted, so every verse after the first stood numbered in a passage asked for without numbers",
+    },
+    {
+      usfm: "\\c 1\n\\p \\v 1 First.\n\\v 2 Second.\n\\v 3 Third.\n",
+      chapter_number: "1",
+      verse_numbers_shown: true,
+      text: "1 First.\n2 Second.\n3 Third.",
+      why: "the same prose with the numbers asked for. It looked right all along, which is exactly why nothing caught the other half: the numbers were in the words either way, and only asking for them to be gone showed which reader had put them there",
+    },
   ];
   return cases;
 }
