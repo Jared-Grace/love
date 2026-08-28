@@ -50,10 +50,14 @@ export async function app_g_bless_finished_place(
   ("the answer given while they are still being carried towards the question. Drawn any");
   ("later the white flashes over a square with nothing underneath it, and the light coming");
   ("back off it reveals an empty street.");
-  ("It is drawn and covered over within the same breath, and that is meant. What the player");
-  ("watches is the camera settling, then the ground turning white, then the white letting go");
-  ("to leave a house standing lit - so the gold arrives as the RESULT of the flash rather");
-  ("than as something that happened before it.");
+  ("It comes up over about a second rather than in one frame, and the sequence waits for it.");
+  ("A house that was plain ground on one frame and gold on the next is a change the player");
+  ("can only find afterwards; a house that rises is one they watch happen, and watching it");
+  ("happen is the whole of what this moment is for.");
+  ("So what the player sees is the camera settling, then the house coming up out of the");
+  ("ground, then the white washing over what has just arrived and letting go again to leave");
+  ("it standing there. The white is no longer what delivers the gold - it is the light");
+  ("thrown at a house that is already lit, and the three lights after it are the cheering.");
   ("Three lights rather than one, because the ground here is not one colour and no single");
   ("light reads on all of it. The wash says WHICH squares; the glow says they are lit; the");
   ("bloom is the only part that leaves the shape, and it can, because it has no edge.");
