@@ -22,10 +22,10 @@ export function bible_usfm_versions_apart_gate_run_row(
     if (not(stands)) {
       let written = not(unwritten);
       if (written) {
-        let ceiling = property_get(allowance, "apart");
+        let allowance_apart = property_get(allowance, "apart");
         let spare = {
           version,
-          allowed: ceiling,
+          allowed: allowance_apart,
           apart,
         };
         list_add(slack, spare);
