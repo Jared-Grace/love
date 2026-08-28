@@ -150,10 +150,10 @@ def start_refusal(job):
     machine that will not answer is not argued with.
     """
     deadline = job.get("deadline")
-    if deadline and time.monotonic() > deadline:
+    if deadline is not None and time.monotonic() > deadline:
         return "the time asked for is up"
     floor = job.get("memory_floor_bytes")
-    if floor:
+    if floor is not None:
         available = memory_available_bytes()
         if available is not None and available < floor:
             a = int(available / (1024 * 1024))
@@ -283,7 +283,9 @@ def main():
     workers = min(int(data.get("workers", WORKERS)), len(jobs))
     threads = max(1, (os.cpu_count() or workers) // max(1, workers))
     seconds_at_most = data.get("seconds_at_most")
-    deadline = time.monotonic() + seconds_at_most if seconds_at_most else None
+    deadline = None
+    if seconds_at_most is not None:
+        deadline = time.monotonic() + seconds_at_most
     for job in jobs:
         job["threads"] = threads
         job["deadline"] = deadline
