@@ -1,5 +1,5 @@
+import { property_equals_not } from "./property_equals_not.mjs";
 import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
-import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_list_type } from "./js_list_type.mjs";
@@ -27,8 +27,7 @@ export function app_code_lesson_source_above_text_or_null(source) {
   if (none) {
     return null;
   }
-  let type = property_get(value, "type");
-  let not_named = equal_not(type, "Identifier");
+  let not_named = property_equals_not(value, "type", "Identifier");
   if (not_named) {
     let written = js_unparse(value);
     return written;
