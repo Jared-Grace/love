@@ -12,14 +12,17 @@ export async function functions_work_size_gate_run() {
   let path = functions_work_size_baseline_path();
   let name_write = fn_name("functions_work_size_baseline_write");
   let name_reseed = fn_name("functions_work_size_baseline_reseed");
+  let name_add = fn_name("functions_work_size_baseline_add");
   ("The cut is offered first because it is nearly always the answer, and the escape is named second and by its own name. Naming only the shrinking writer here was a promise the writer could not keep - it refuses to grow the record, so a reader following the hint got a second refusal and no way forward. A hint that names no reachable next step is worse than none, because it costs a run to learn that.");
   let f_name = fn_name("function_functionize");
   let hint = text_combine_multiple([
     "these functions now hold more lines of work than one may - cut them down by giving the runs inside them their own names with ",
     f_name,
-    ", or, if the size is really the shape of what they hold rather than how they were written, record them with ",
+    ", or, if the size is really the shape of what they hold rather than how they were written, record them by name with ",
+    name_add,
+    " - which grows the record by exactly the names given, so they stand in the commit for somebody to disagree with, and leaves every other name here still failing. ",
     name_reseed,
-    " (which grows the record, so the added names stand in the commit for somebody to disagree with). ",
+    " records everything standing above the ceiling at once instead, which on a repo several people are cutting in at the same moment blesses whatever they are halfway through. ",
     name_write,
     " is the one to run after a cut - it shrinks the record and refuses to grow it",
   ]);
