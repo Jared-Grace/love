@@ -1,9 +1,8 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words_content } from "./text_words_content.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_usfm_versions_book_verses_apart_words(
   carried,
@@ -29,8 +28,7 @@ export function bible_usfm_versions_book_verses_apart_words(
           continue;
         }
         words_by_reference[reference] = content;
-        let before = property_get_or_null(references_seen, reference);
-        let first = null_is(before);
+        let first = property_null_is(references_seen, reference);
         if (first) {
           references_seen[reference] = reference;
           list_add(references, reference);
