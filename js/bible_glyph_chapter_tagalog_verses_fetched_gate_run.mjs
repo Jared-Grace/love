@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
 import { bible_glyph_chapter_tagalog_verses } from "./bible_glyph_chapter_tagalog_verses.mjs";
@@ -15,12 +16,17 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
   ("THE VERSES THEMSELVES ARE COMPARED AND NOT HOW MANY THERE ARE. Two chapters of the same length are common, and a check on the counts alone would pass a wiring that handed back a different chapter's Tagalog under the asked-for name - which is the one failure that looks right on the page.");
   ("THE NUMBER HANDED BACK IS HOW MANY CHAPTERS HAD TAGALOG TO COMPARE, not how many were asked for. A chapter nobody has translated yet is empty on both sides and agrees with itself, so counting those would let the answer stay reassuringly at twenty five while the evidence behind it fell to nothing.");
   let references = bible_glyph_chapter_references();
-  let wrong = []; let carrying = [];
+  let wrong = [];
+  let carrying = [];
   for (let chapter of references) {
     let chapter_code = chapter.chapter_code;
     let held = bible_glyph_chapter_tagalog_verses(chapter_code);
     let sent = await bible_glyph_chapter_tagalog_verses_fetched(chapter_code);
-    let carried = list_empty_not_is(held); if (carried) { list_add(carrying, chapter_code); } let same = json_equal(held, sent);
+    let carried = list_empty_not_is(held);
+    if (carried) {
+      list_add(carrying, chapter_code);
+    }
+    let same = json_equal(held, sent);
     if (same) {
       continue;
     }
