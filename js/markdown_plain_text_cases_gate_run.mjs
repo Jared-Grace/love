@@ -13,8 +13,8 @@ export function markdown_plain_text_cases_gate_run() {
   function answer(c) {
     let markdown = property_get(c, "markdown");
     function converted_get() {
-      let plain = markdown_plain_text(markdown);
-      return plain;
+      let converted = markdown_plain_text(markdown);
+      return converted;
     }
     let plain = catch_null(converted_get);
     return plain;
