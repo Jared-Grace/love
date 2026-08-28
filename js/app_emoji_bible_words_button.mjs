@@ -24,16 +24,9 @@ export function app_emoji_bible_words_button(parent, chapter_code) {
   let sign = emoji_book_open();
   let text = text_combine_middle_space(sign, "Read this chapter in words");
   function lambda() {
-    let languages_chosen = app_shared_bible_languages_chosen_get();
     let mode = app_shared_bible_mode_chapter();
     let whole = "";
-    app_shared_bible_open_generic(
-      window_open_app,
-      languages_chosen,
-      chapter_code,
-      whole,
-      mode,
-    );
+    app_shared_bible_open_hash_languages(chapter_code, whole, mode);
   }
   let component = app_shared_button(parent, text, lambda);
   app_shared_button_gap_above(component);
