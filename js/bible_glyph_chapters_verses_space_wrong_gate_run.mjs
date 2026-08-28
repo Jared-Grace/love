@@ -5,7 +5,7 @@ import { bible_glyph_chapters_verses_marks_ordinary_space } from "./bible_glyph_
 import { property_get } from "./property_get.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export function bible_glyph_chapters_verses_marks_ordinary_space_gate_run() {
+export function bible_glyph_chapters_verses_space_wrong_gate_run() {
   "Gate: no drawn verse of the picture Bible puts an ordinary space between two pictures.";
   "IT PASSES AT NOUGHT AND THERE IS NO BASELINE, because there is nothing here a tolerance could be for. A gap between two pictures is the only thing saying they are two words rather than one, and an ordinary space is a quarter the width of the pictures either side of it - so every offender is a verse a reader cannot parse. A gate that starts at nought is the only kind that can honestly refuse the first one.";
   "IT REFUSES THE ORDINARY SPACE ONLY WHERE IT IS WRONG, and it used to refuse it everywhere. That was right while every gap in a verse carried the wide separator; it is wrong now that the wide one is spent only where a pair could be misread, because most of a verse is English and English is set with ordinary spaces. A gate that condemned those would be asking for the thing it was built to prevent.";
