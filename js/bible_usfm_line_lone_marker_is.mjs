@@ -1,8 +1,8 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { not } from "./not.mjs";
 import { bible_usfm_marker_layout } from "./bible_usfm_marker_layout.mjs";
 import { equal } from "./equal.mjs";
 export function bible_usfm_line_lone_marker_is(usfm_line) {
@@ -19,8 +19,7 @@ export function bible_usfm_line_lone_marker_is(usfm_line) {
     return false;
   }
   let rest = property_get(split, "rest");
-  let b = text_empty_is(rest);
-  let carries = not(b);
+  let carries = text_empty_not_is(rest);
   if (carries) {
     return false;
   }
