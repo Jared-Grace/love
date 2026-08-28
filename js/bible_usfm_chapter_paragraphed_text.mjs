@@ -19,6 +19,7 @@ export function bible_usfm_chapter_paragraphed_text(
   ("The other reader here cuts a book into verses and throws the layout away, which is right for a reader showing one verse at a time and wrong for anybody copying a psalm out. A psalm read as nine unbroken sentences is not the psalm the page shows: the couplets and the stanza breaks are how hebrew poetry says what it says, they are written into the file as marks of their own, and keeping them costs nothing but reading marks that are already there.");
   ("The lines are put back together first, for the same reason the verse reader does it: an aligned bible writes one word to a line, so a line is not a line until this is done.");
   ("The chapter is found by its own mark. Nothing is searched for and no chapters are counted through, so a book numbering its chapters unusually still answers to the number the printing actually writes.");
+  ("Then a mark standing on a line of its own is moved down onto the verse beneath it, because two of the four bibles here write the step and the verse on separate lines and everything below reads the mark that opens a line. What comes out of that is still lines of usfm, so the reader beneath it never learns which printing it was given.");
   let joined = usfm_continuation_lines_joined(usfm);
   let lines = text_split_newline(joined);
   let chapter_lines = bible_usfm_lines_chapter_taken(lines, chapter_number);
