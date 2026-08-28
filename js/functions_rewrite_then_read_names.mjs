@@ -1,12 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_rewrite_then_read } from "./functions_rewrite_then_read.mjs";
-import { list_map_property } from "./list_map_property.mjs";
+import { functions_rewrite_then_read_names_walked } from "./functions_rewrite_then_read_names_walked.mjs";
+import { property_get } from "./property_get.mjs";
 export async function functions_rewrite_then_read_names() {
+  "The names alone of the functions that write a named function out again and then, in the same run, ask something that reads it.";
+  "The reading itself lives next door and answers this beside how many candidates it opened. A record is written from a flat list and a gate needs the count, so the narrowing is done once here rather than at each place that only wants the names.";
+  "Ask the fuller reading two doors along for the pairings themselves when a name here has to be acted on.";
   arguments_assert(arguments, 0);
-  ("The names alone of the functions that write a named function out again and then, in the same run, ask something that reads it.");
-  ("A RATCHET IS MEASURED AGAINST A FLAT LIST OF NAMES, so the pairings that say why are stripped off here rather than at the gate. They are what a reader needs in order to act, and they are exactly what must not be written into a baseline: a pairing changes whenever either side is edited, and a baseline that moved for reasons of its own would go red without anything having gone wrong.");
-  ("Ask the fuller reading next door for the pairings themselves when a name here has to be acted on.");
-  let offenders = await functions_rewrite_then_read();
-  let names = list_map_property(offenders, "f_name");
+  let told = await functions_rewrite_then_read_names_walked();
+  let names = property_get(told, "names");
   return names;
 }

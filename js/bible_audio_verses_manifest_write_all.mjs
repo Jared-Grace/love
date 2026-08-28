@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_recordings } from "./bible_audio_recordings.mjs";
 import { bible_audio_recording_manifest_row } from "./bible_audio_recording_manifest_row.mjs";
@@ -33,8 +34,7 @@ export async function bible_audio_verses_manifest_write_all() {
       list_add(unjudged, row);
       return;
     }
-    let chunks = property_get(row, "chunks");
-    let silent = equal(chunks, 0);
+    let silent = property_equals(row, "chunks", 0);
     if (silent) {
       list_add(empty, row);
       return;
