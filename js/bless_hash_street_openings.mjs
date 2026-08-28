@@ -17,6 +17,7 @@ export function bless_hash_street_openings() {
   ("silently opened the ordinary way.");
   let street = bless_hash_street();
   let household_first = bless_hash_household_first();
-  let words = [street, household_first];
+  let finished = bless_hash_household_first_finished();
+  let words = [street, household_first, finished];
   return words;
 }
