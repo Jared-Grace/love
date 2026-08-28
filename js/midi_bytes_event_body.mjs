@@ -1,6 +1,5 @@
-import { floor } from "./floor.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -9,8 +8,7 @@ export function midi_bytes_event_body(bytes, offset, status, tick) {
   "reads one midi event standing after its status byte and answers the event plus where the next one starts";
   "an event nothing here reads answers as nothing so the walk above can step past it without knowing what it was";
   let at = offset;
-  let p = divide(status, 16);
-  let left = floor(p);
+  let left = divide_floor(status, 16);
   let high = multiply(left, 16);
   let channel = modulo(status, 16);
   if (equal(status, 255)) {
