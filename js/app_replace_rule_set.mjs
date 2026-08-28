@@ -1,57 +1,57 @@
+import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
-import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
-import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
-import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
-import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
-import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
-import { list_last_property } from "./list_last_property.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { null_is } from "./null_is.mjs";
-import { list_index_of_json } from "./list_index_of_json.mjs";
-import { html_scroll_center } from "./html_scroll_center.mjs";
-import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
-import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
-import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
-import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
-import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
-import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
-import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
-import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
-import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
-import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
-import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
-import { list_add } from "./list_add.mjs";
+import { list_index_of_json } from "./list_index_of_json.mjs";
+import { equal } from "./equal.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
+import { list_shuffle } from "./list_shuffle.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
 import { list_take } from "./list_take.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
+import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
+import { null_is } from "./null_is.mjs";
+import { list_get } from "./list_get.mjs";
+import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { list_to_indices } from "./list_to_indices.mjs";
-import { equal } from "./equal.mjs";
-import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
-import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { json_equal } from "./json_equal.mjs";
-import { each } from "./each.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
 import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
-import { ternary } from "./ternary.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_disable } from "./html_disable.mjs";
+import { object_merge_set } from "./object_merge_set.mjs";
+import { list_map_index } from "./list_map_index.mjs";
+import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
+import { each_index } from "./each_index.mjs";
+import { html_div } from "./html_div.mjs";
+import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
+import { list_last_property } from "./list_last_property.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { not } from "./not.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_add } from "./list_add.mjs";
+import { html_button } from "./html_button.mjs";
+import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
+import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { html_div } from "./html_div.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
-import { not } from "./not.mjs";
-import { html_text_set_if } from "./html_text_set_if.mjs";
+import { property_exists } from "./property_exists.mjs";
+import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
+import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
+import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
+import { ternary } from "./ternary.mjs";
+import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
+import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { each_index } from "./each_index.mjs";
-import { list_map_index } from "./list_map_index.mjs";
-import { html_disable } from "./html_disable.mjs";
-import { property_get } from "./property_get.mjs";
-import { html_button } from "./html_button.mjs";
-import { list_get } from "./list_get.mjs";
-import { html_clear } from "./html_clear.mjs";
+import { html_text_set_if } from "./html_text_set_if.mjs";
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
+import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
+import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
+import { each } from "./each.mjs";
+import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_scroll_center } from "./html_scroll_center.mjs";
+import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
+import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
+import { app_shared_button } from "./app_shared_button.mjs";
+import { app_replace_rule_set_refresh_count_increase } from "./app_replace_rule_set_refresh_count_increase.mjs";
+import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_rule_set_button_rule_on_click_inner.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   let r4 = app_replace_rule_set_start_indices(context, root);
@@ -285,14 +285,7 @@ export async function app_replace_rule_set(context) {
   }
   function button_rule_on_click_inner(index) {
     let app_replace_rule_set_button_rule_on_click_inner_answer =
-      app_replace_rule_set_button_rule_on_click_inner(
-        index,
-        symbols_invalid_chosen,
-        index_selected,
-        symbol_buttons,
-        rule_buttons,
-        refresh_count_increase,
-      );
+      app_replace_rule_set_button_rule_on_click_inner(index, index_selected);
     symbols_invalid_chosen = property_get(
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "symbols_invalid_chosen",
@@ -301,5 +294,9 @@ export async function app_replace_rule_set(context) {
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "index_selected",
     );
+    ("the rows of buttons are redrawn HERE, after the chosen rule has been stored, and not by the function that worked out which rule that is. Every one of these buttons redraws itself by reading this same variable, so redrawing before the answer had been stored painted every symbol as one no rule could touch - and a symbol no rule can touch cannot be pressed, which left the game unplayable");
+    list_map_property_invoke(symbol_buttons, "refresh_sb");
+    list_map_property_invoke(rule_buttons, "refresh_rb");
+    refresh_count_increase();
   }
 }
