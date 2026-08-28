@@ -154,17 +154,22 @@ def main():
     nearest = [{"score": d["nearest_score"], "same": d["matched_any"]}
                for d in drawn_against_real]
 
-    controls_held = (
-        all(r["same"] for r in itself)
-        and not any(p["same"] for p in across)
-    )
+    closest_real_pair = across[0] if across else None
+    furthest_draw = max(nearest, key=lambda p: p["score"])
 
     print(json.dumps({
         "model": MODEL_NAME,
-        "controls_held": controls_held,
+        "same_voice_recognised":
+            all(r["same"] for r in itself),
+        "different_real_voices_kept_apart":
+            not any(p["same"] for p in across),
+        "real_pairs_the_threshold_called_one_speaker":
+            sum(1 for p in across if p["same"]),
+        "no_draw_nearer_than_the_closest_real_pair":
+            bool(closest_real_pair) and furthest_draw["score"] < closest_real_pair["score"],
         "real_voice_against_itself": scored(itself),
         "real_voice_against_another": scored(across),
-        "closest_real_pair": across[0] if across else None,
+        "closest_real_pair": closest_real_pair,
         "drawn_voice_against_itself": scored(drawn_itself),
         "drawn_voice_nearest_real": scored(nearest),
         "drawn_voices_matched_to_a_real_speaker":
