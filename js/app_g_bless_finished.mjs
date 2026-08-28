@@ -50,6 +50,7 @@ export async function app_g_bless_finished(
       div_map,
       player_img_c,
       people,
+      faces_show,
     );
   }
   ("The quiet gold that a prayed-for face keeps is put up HERE, once the arriving light on");
