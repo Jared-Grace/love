@@ -1,3 +1,4 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -5,8 +6,6 @@ import { list_flat } from "./list_flat.mjs";
 import { bible_audio_recordings } from "./bible_audio_recordings.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { bible_audio_root_folder } from "./bible_audio_root_folder.mjs";
 import { bible_audio_archive_root_folder } from "./bible_audio_archive_root_folder.mjs";
@@ -29,8 +28,7 @@ export async function bible_audio_recordings_uncanonical_archive() {
   function outside_is(recording) {
     let chapter_code = property_get(recording, "chapter_code");
     let book_code = ebible_chapter_code_to_book(chapter_code);
-    let known = list_includes(canon, book_code);
-    let outside = not(known);
+    let outside = list_includes_not(canon, book_code);
     return outside;
   }
   let unasked = list_filter(recordings, outside_is);
