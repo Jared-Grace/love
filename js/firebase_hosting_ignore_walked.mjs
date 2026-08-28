@@ -1,8 +1,8 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { firebase_json_path } from "./firebase_json_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { property_get } from "./property_get.mjs";
 import { firebase_hosting_stages_unsent } from "./firebase_hosting_stages_unsent.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -13,8 +13,7 @@ export async function firebase_hosting_ignore_walked() {
   arguments_assert(arguments, 0);
   let path = firebase_json_path();
   let data = await file_read_json(path);
-  let hosting = property_get(data, "hosting");
-  let ignore = property_get(hosting, "ignore");
+  let ignore = property_path_get_2(data, "hosting", "ignore");
   let wanted = firebase_hosting_stages_unsent();
   function firebase_hosting_ignore_walked_lambda(folder) {
     let absent = list_includes_not(ignore, folder);
