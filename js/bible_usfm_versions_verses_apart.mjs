@@ -1,3 +1,4 @@
+import { property_negative } from "./property_negative.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_codes } from "./ebible_book_codes.mjs";
@@ -9,7 +10,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_usfm_versions_verses_apart() {
@@ -79,8 +79,7 @@ export async function bible_usfm_versions_verses_apart() {
     list_add(rows, row);
   }
   function row_worst_first(row) {
-    let per_thousand = property_get(row, "per_thousand");
-    let inverted = subtract(0, per_thousand);
+    let inverted = property_negative(row, "per_thousand");
     return inverted;
   }
   let sorted = list_sort_number_mapper(rows, row_worst_first);
