@@ -27,8 +27,8 @@ export function app_g_bless_lit_box(tiles) {
   ("round. A circle wide enough for the long way is wide enough for the short way as well,");
   ("and one that split the difference would leave the ends of a long thin house dark.");
   function tile_x(tile) {
-    let x = property_get(tile, "x");
-    return x;
+    let x_value = property_get(tile, "x");
+    return x_value;
   }
   function tile_y(tile) {
     let y = property_get(tile, "y");
