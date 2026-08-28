@@ -129,25 +129,25 @@ export function app_g_bless_overlay_render_tap_prayed(
       let lit_now = app_g_bless_lit_new(lit_before, lit_after);
       let everyone_after = bless_view_blessed(blessed, view_everyone);
       let people_after = bless_view_people(everyone_after);
-      let people_now = app_g_bless_lit_new(people_before, people_after);
-      ("A person standing on ground that just lit up would otherwise be counted twice, and a");
-      ("square lit twice is not lit twice as brightly - the lights are see-through, so it comes");
-      ("out a different shade from every other square in the same celebration. The people are");
-      ("therefore kept only where they are NOT already standing in the answer, which is the");
-      ("same question the ground was just asked and so is asked with the same reader.");
-      let people_off = app_g_bless_lit_new(lit_now, people_now);
-      let squares = list_concat_multiple([lit_now, people_off]);
-      ("Ground and faces are celebrated TOGETHER, over one set of squares, rather than one");
-      ("after the other. They are one event - the prayer - and shown in turn they would read");
-      ("as two things having happened. It is also what lets a prayer over a single person be");
-      ("celebrated at all: nothing was finished, no house filled in, and the one square that");
-      ("changed is the one they are standing on.");
-      let nothing = list_empty_is(squares);
+      ("The people are told apart by WHO they are and not by where they are standing, which is");
+      ("the one place these two questions differ. Ground holds still and so a square is its own");
+      ("name; a person walks, and two readings of the street taken a breath apart can put the");
+      ("same person on two squares and two different people on one. Asked by identity there is");
+      ("nothing to go wrong, because these are the same objects both times.");
+      let people_now = list_difference(people_after, people_before);
+      ("Ground and faces are celebrated TOGETHER rather than one after the other. They are one");
+      ("event - the prayer - and shown in turn they would read as two things having happened.");
+      ("They are handed over as two lists because they are lit two different ways: ground where");
+      ("it lies, faces on the light each person carries with them. That is also what lets a");
+      ("prayer over a single person be celebrated at all - nothing was finished and no house");
+      ("filled in, and the whole of what changed is one face.");
+      let anything = list_concat_multiple([lit_now, people_now]);
+      let nothing = list_empty_is(anything);
       if (nothing) {
         app_g_bless_notice(line);
         return;
       }
-      await app_g_bless_finished(r2, squares, line);
+      await app_g_bless_finished(r2, lit_now, people_now, line);
     }
     app_g_bless_pray_overlay(container_map, rung, amen);
     return true;
