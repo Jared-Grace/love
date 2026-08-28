@@ -22,7 +22,7 @@ export function bible_glyph_verse_draw(words, lookup) {
   let first = true;
   for (let word of words) {
     if (not(first)) {
-      let separator = bible_glyph_word_pair_separator(word_before, word);
+      let separator = bible_glyph_word_pair_separator(word_before, word, lookup);
       list_add(drawn, separator);
     }
     first = false;
