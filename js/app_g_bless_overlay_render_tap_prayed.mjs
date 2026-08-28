@@ -1,8 +1,6 @@
+import { app_g_bless_overlay_render_tap_prayed_render_ground } from "./app_g_bless_overlay_render_tap_prayed_render_ground.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_marks } from "./app_g_bless_marks.mjs";
-import { app_g_bless_edge } from "./app_g_bless_edge.mjs";
-import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -44,38 +42,24 @@ export function app_g_bless_overlay_render_tap_prayed(
   let hold = property_get(r2, "hold");
   let hold_release = property_get(r2, "hold_release");
   let edge = property_get(r2, "edge");
-  function render_ground(ground) {
-    "Everything the record has to say about the street - who is lit, which houses are filled";
-    "in, who is ringed - is drawn from the record on every step rather than remembered here,";
-    "so a person covered by a prayer over their whole block lights up the moment they walk";
-    "into view without anybody having gone back to write their name down.";
-    let remaining = app_g_bless_marks(
+  function render() {
+    "A draw with the ground in it, which is every draw but one. The street is redrawn on";
+    "every step the player takes, and a step never finishes a house off - so there is";
+    "nothing to hold back and nothing for a caller to decide.";
+    app_g_bless_overlay_render_tap_prayed_render_ground(
+      true,
       glows,
       homes,
       blocks,
       blessed,
       view_everyone,
-      ground,
+      edge,
+      container_map,
+      bar,
+      cone_get,
+      hold,
+      wash,
     );
-    ("The arrow at the edge of the screen is aimed here rather than with the marks on the");
-    ("ground, because it is the one hint that is not about the street at all - it is about");
-    ("where the screen ENDS, and so it has to be worked out from the frame and the strip of");
-    ("buttons, neither of which anything drawing on the map has any business knowing about.");
-    app_g_bless_edge(edge, container_map, bar, remaining);
-    let cone = cone_get();
-    ("The draw is also where the player is noticed to have MOVED, because every player action");
-    ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");
-    ("from the outside instead, the two places that walk the player and the one that turns");
-    ("them would each have to remember to say so, and the one that forgot would be a person");
-    ("the player thought they were holding and were not.");
-    hold();
-    app_g_bless_wash(wash, cone);
-  }
-  function render() {
-    "A draw with the ground in it, which is every draw but one. The street is redrawn on";
-    "every step the player takes, and a step never finishes a house off - so there is";
-    "nothing to hold back and nothing for a caller to decide.";
-    render_ground(true);
   }
   async function person_pray(person) {
     "Saying the prayer over one person and showing everything it reached. It is the whole of";
@@ -127,7 +111,20 @@ export function app_g_bless_overlay_render_tap_prayed(
     ("it was, and the only one missing is the one that has this moment been finished.");
     ("The faces are NOT held back. That light is the prayer that was just said, and it is the");
     ("thing the player is looking at.");
-    render_ground(false);
+    app_g_bless_overlay_render_tap_prayed_render_ground(
+      false,
+      glows,
+      homes,
+      blocks,
+      blessed,
+      view_everyone,
+      edge,
+      container_map,
+      bar,
+      cone_get,
+      hold,
+      wash,
+    );
     let lit_after = bless_blessed_tiles(blessed, blocks);
     let lit_now = app_g_bless_lit_new(lit_before, lit_after);
     let everyone_after = bless_view_blessed(blessed, view_everyone);
