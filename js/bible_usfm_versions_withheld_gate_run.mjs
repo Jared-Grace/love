@@ -35,7 +35,8 @@ export function bible_usfm_versions_withheld_gate_run() {
   }
   let shelf_rows = list_map(words, shelf_row);
   function silent_or_null(entry) {
-    let bible_folder = property_get(entry, bible_folder_key());
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(entry, property_name);
     let word = list_find_property_get_or(
       shelf_rows,
       "folder",
