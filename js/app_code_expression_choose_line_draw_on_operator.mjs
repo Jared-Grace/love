@@ -117,8 +117,9 @@ export function app_code_expression_choose_line_draw_on_operator(
     }
     html_on_click(span, on_click);
   }
-  return {
+  let r = {
     pressable,
     on_operator,
   };
+  return r;
 }
