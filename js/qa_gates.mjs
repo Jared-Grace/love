@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_tagalog_verses_fetched_gate_run } from "./bible_glyph_chapter_tagalog_verses_fetched_gate_run.mjs";
 import { bible_glyph_apps_aggregate_reaching_gate_run } from "./bible_glyph_apps_aggregate_reaching_gate_run.mjs";
 import { js_ast_return_key_shapes_agree_cases_gate_run } from "./js_ast_return_key_shapes_agree_cases_gate_run.mjs";
 import { bible_usfm_versions_apart_gate_run } from "./bible_usfm_versions_apart_gate_run.mjs";
@@ -638,7 +639,8 @@ export function qa_gates() {
     bible_glyph_chapter_references_gate_run,
     bible_glyph_chapter_fetch_gate_run,
     bible_glyph_chapter_rosetta_lines_fetched_gate_run,
-    bible_glyph_apps_aggregate_reaching_gate_run,    bible_glyph_chapter_tagalog_verses_fetched_gate_run,
+    bible_glyph_apps_aggregate_reaching_gate_run,
+    bible_glyph_chapter_tagalog_verses_fetched_gate_run,
     bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
