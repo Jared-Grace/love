@@ -16,6 +16,7 @@ export function function_paths_frozen_gate_run() {
     let r = {
       checked: false,
       here,
+      frozen: null,
     };
     return r;
   }
