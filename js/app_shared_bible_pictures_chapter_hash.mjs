@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_chapter_hash_key } from "./app_shared_bible_chapter_hash_key.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_emoji_bible_chapter_hash(chapter_code) {
+export function app_shared_bible_pictures_chapter_hash(chapter_code) {
   arguments_assert(arguments, 1);
   ("The words a link carries to open one chapter of the picture Bible.");
   ("$plain chapter_code");

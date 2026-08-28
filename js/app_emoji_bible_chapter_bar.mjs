@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_previous_try } from "./list_previous_try.mjs";
 import { list_next_try } from "./list_next_try.mjs";
 import { app_emoji_bible_chapter_go } from "./app_emoji_bible_chapter_go.mjs";
-import { app_emoji_bible_chapter_hash } from "./app_emoji_bible_chapter_hash.mjs";
+import { app_shared_bible_pictures_chapter_hash } from "./app_shared_bible_pictures_chapter_hash.mjs";
 import { html_hash_name_reload } from "./html_hash_name_reload.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_button_arrow_previous_notext } from "./app_shared_button_arrow_previous_notext.mjs";
@@ -24,7 +24,7 @@ export function app_emoji_bible_chapter_bar(bar, chapters, chosen) {
     app_emoji_bible_chapter_go(next);
   }
   function on_index() {
-    let none = app_emoji_bible_chapter_hash("");
+    let none = app_shared_bible_pictures_chapter_hash("");
     html_hash_name_reload(none);
   }
   let previous_is = null_not_is(previous);
