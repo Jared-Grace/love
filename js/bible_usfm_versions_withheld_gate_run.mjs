@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_years_sorted } from "./bible_usfm_versions_years_sorted.mjs";
 import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
@@ -34,7 +35,7 @@ export function bible_usfm_versions_withheld_gate_run() {
   }
   let shelf_rows = list_map(words, shelf_row);
   function silent_or_null(entry) {
-    let bible_folder = property_get(entry, "bible_folder");
+    let bible_folder = property_get(entry, bible_folder_key());
     let word = list_find_property_get_or(
       shelf_rows,
       "folder",
