@@ -1,10 +1,10 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
 import { app_code_lesson_family_roots } from "./app_code_lesson_family_roots.mjs";
 import { list_size } from "./list_size.mjs";
 import { app_code_lesson_telling_shapes_missing } from "./app_code_lesson_telling_shapes_missing.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { ternary } from "./ternary.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_list_join_comma } from "./property_list_join_comma.mjs";
@@ -27,8 +27,7 @@ export async function app_code_lesson_telling_shapes_gate_run() {
   let offenders = [];
   let unjudged = [];
   for (let report of reports) {
-    let telling = property_get(report, "telling");
-    let blind = list_empty_is(telling);
+    let blind = property_list_empty_is(report, "telling");
     let side = ternary(blind, unjudged, offenders);
     list_add(side, report);
   }
