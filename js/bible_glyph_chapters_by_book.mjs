@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
@@ -5,8 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 export function bible_glyph_chapters_by_book(chapters) {
   arguments_assert(arguments, 1);
@@ -33,8 +32,7 @@ export function bible_glyph_chapters_by_book(chapters) {
         list_add(held, chapter);
       }
     }
-    let empty = list_empty_is(held);
-    let any = not(empty);
+    let any = list_empty_not_is(held);
     if (any) {
       let sorted = list_sort_text_property(held, "chapter_code");
       let entry = {
