@@ -42,12 +42,23 @@ export function app_g_bless_overlay_render_tap_prayed(
   let hold = property_get(r2, "hold");
   let hold_release = property_get(r2, "hold_release");
   let edge = property_get(r2, "edge");
+  ("Two things the picture is allowed to be behind the record on while a celebration runs:");
+  ("the house that prayer just filled in, and the quiet gold on the faces it just reached.");
+  ("Both are kept as STATE here rather than decided at each draw, and that is the whole");
+  ("repair. The street is redrawn on its own clock all through a celebration - every step");
+  ("every walking person takes asks for a draw - so a hold that was one skipped draw was");
+  ("undone by the next of those within a breath. A player saw the house light up while the");
+  ("camera was still travelling to it, which is the answer arriving before the question.");
+  ("Kept HERE rather than inside the draw, because a draw is asked for from everywhere and");
+  ("only the prayer knows what is being celebrated. One answer that every draw reads is one");
+  ("that no two draws can disagree about.");
+  let held_ground = false;
+  let held_people = [];
   function render() {
-    "A draw with the ground in it, which is every draw but one. The street is redrawn on";
-    "every step the player takes, and a step never finishes a house off - so there is";
-    "nothing to hold back and nothing for a caller to decide.";
+    "A draw of the street from the record, less whatever a celebration is still holding back.";
+    let ground = not(held_ground);
     app_g_bless_overlay_render_tap_prayed_render_ground(
-      true,
+      ground,
       glows,
       homes,
       blocks,
@@ -59,7 +70,22 @@ export function app_g_bless_overlay_render_tap_prayed(
       cone_get,
       hold,
       wash,
+      held_people,
     );
+  }
+  function ground_show() {
+    "Lets the finished house go up on the map. The celebration says when, and it is after";
+    "the camera has arrived and the street has been held still long enough for the player to";
+    "have seen it as it was.";
+    held_ground = false;
+    render();
+  }
+  function faces_show() {
+    "Lets the quiet gold go up on the faces just prayed for, once the arriving light on them";
+    "is over. The two marks land on the same few pixels, so shown together they read as one";
+    "mark brightening slightly rather than as a light arriving and a light left behind.";
+    held_people = [];
+    render();
   }
   async function person_pray(person) {
     "Saying the prayer over one person and showing everything it reached. It is the whole of";
