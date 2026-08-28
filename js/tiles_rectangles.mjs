@@ -1,3 +1,4 @@
+import { tiles_rectangles_row_full } from "./tiles_rectangles_row_full.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
@@ -55,19 +56,6 @@ export function tiles_rectangles(tiles) {
     left.add(key);
   }
   each(tiles, tile_note);
-  function row_full(row, x_from, width) {
-    let all = true;
-    function column_check(step) {
-      let column = add(x_from, step);
-      let key = key_of(column, row);
-      let there = left.has(key);
-      if (not(there)) {
-        all = false;
-      }
-    }
-    each_range(width, column_check);
-    return all;
-  }
   let xs = list_map(tiles, tile_x);
   let ys = list_map(tiles, tile_y);
   let x_least = list_min(xs);
@@ -96,7 +84,7 @@ export function tiles_rectangles(tiles) {
       let deeper = true;
       while (deeper) {
         let row = add(y, down);
-        deeper = row_full(row, x, across);
+        deeper = tiles_rectangles_row_full(row, x, across, key_of, left);
         if (deeper) {
           down = add(down, 1);
         }
