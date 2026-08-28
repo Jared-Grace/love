@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { property_negative } from "./property_negative.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -50,8 +51,7 @@ export async function bible_usfm_versions_verses_apart() {
         start = before;
       }
       apart_by_version[version] = add(start, 1);
-      let shown = property_get_or_null(first_by_version, version);
-      let unshown = null_is(shown);
+      let unshown = property_null_is(first_by_version, version);
       if (unshown) {
         let reference = property_get(cell, "reference");
         first_by_version[version] = book_code + " " + reference;
