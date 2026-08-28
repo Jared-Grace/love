@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -141,8 +142,8 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("it is said depends on what the prayer did. A prayer that finished a whole house off");
       ("hands its line to the panel that celebrates the house; one that finished nothing puts");
       ("the line up on its own.");
-      let told = list_size(people_now);
-      let line = bless_told_after_prayer_or_null(rung_before, rung, told);
+      let faces = list_size(people_now);
+      let line = bless_told_after_prayer_or_null(rung_before, rung, faces);
       ("Ground and faces are handed over as two lists because they are lit two different ways:");
       ("ground where it lies, faces on the light each person carries with them. That is also");
       ("what lets a prayer over a single person be celebrated at all - nothing was finished and");
