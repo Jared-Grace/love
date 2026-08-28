@@ -17,7 +17,7 @@ export function app_bible_pictures_button(parent, chapter_code) {
     " carries every verse of every drawn chapter - four hundred and forty KiB of them, measured on the twenty eighth of August - and importing it here to ask one yes or no question would hand that whole weight to every reader of the ordinary Bible, most of whom never press this. ",
     fn_name("bible_glyph_chapter_codes"),
     " answers the same question for nothing, and ",
-    fn_name("bible_glyph_chapter_codes_gate_run"),
+    fn_name("bible_glyph_chapter_references_gate_run"),
     " is what keeps the cheap answer the true one.");
   ("IT IS HANDED THE CHAPTER RATHER THAN READING ONE, because the two screens that draw it know which chapter they are showing by different routes: the verse screen has only the address, and the whole-chapter screen may have followed a reference the address never spelled. A unit that read the address itself would be right on one screen and quietly wrong on the other.");
   ("It opens beside this page rather than instead of it, for the reason ",
