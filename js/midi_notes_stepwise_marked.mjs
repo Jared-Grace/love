@@ -1,4 +1,4 @@
-import { abs } from "./abs.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -23,10 +23,8 @@ export function midi_notes_stepwise_marked(notes) {
     let after = less_than(index + 1, ordered.length)
       ? ordered[index + 1].pitch
       : note_one.pitch;
-    let n = subtract(note_one.pitch, before);
-    let came = abs(n);
-    let n2 = subtract(after, note_one.pitch);
-    let went = abs(n2);
+    let came = numbers_apart(note_one.pitch, before);
+    let went = numbers_apart(after, note_one.pitch);
     let reached = greater_than(came, 0) && less_than_equal(came, 2);
     let left = greater_than(went, 0) && less_than_equal(went, 2);
     let stepwise = reached && left;
