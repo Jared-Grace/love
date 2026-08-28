@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_versions_english_choices_licences } from "./ebible_versions_english_choices_licences.mjs";
 import { ebible_licence_public_domain } from "./ebible_licence_public_domain.mjs";
@@ -21,7 +22,7 @@ export async function bible_usfm_versions_english_public_domain() {
   }
   let free_licences = list_filter(licences, public_domain_is);
   function entry(licence_record) {
-    let bible_folder = property_get(licence_record, "bible_folder");
+    let bible_folder = property_get(licence_record, bible_folder_key());
     let name = property_get(licence_record, "name");
     let version = ebible_bible_folder_version_word(bible_folder);
     let made = {
