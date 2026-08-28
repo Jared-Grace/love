@@ -885,6 +885,7 @@ export function qa_gates() {
     app_shared_dev_stamp_gate_run,
     usfm_markers_removed_cases_gate_run,
     app_code_lesson_telling_symbols_gate_run,
+    bible_usfm_versions_years_gate_run,
   ];
   return gates;
 }
