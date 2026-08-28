@@ -1,10 +1,9 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function app_code_lesson_source_above_text_or_null(source) {
@@ -19,8 +18,7 @@ export function app_code_lesson_source_above_text_or_null(source) {
   for (let v of properties) {
     let node = property_get(v, "node");
     let key = property_get(node, "key");
-    let key_name = property_get_or_null(key, "name");
-    let above_is = equal(key_name, "above");
+    let above_is = property_get_or_null_equal(key, "name", "above");
     if (above_is) {
       value = property_get(node, "value");
     }
@@ -40,8 +38,7 @@ export function app_code_lesson_source_above_text_or_null(source) {
   for (let v of declarations) {
     let node = property_get(v, "node");
     let id = property_get(node, "id");
-    let id_name = property_get_or_null(id, "name");
-    let same = equal(id_name, name);
+    let same = property_get_or_null_equal(id, "name", name);
     if (same) {
       let written = js_unparse(node);
       return written;
