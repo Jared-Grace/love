@@ -23,7 +23,7 @@ export async function app_code_lesson_telling_symbols_missing_one(
   arguments_assert(arguments, 4);
   ("the operator symbols one lesson's question bank writes and its telling never shows, or null when the telling shows them all.");
   ("A learner is told one shape of line and then asked about another. The lesson that started this showed a bracketed comparison over on the left and asked about an unbracketed one over on the right; two more like it were found the same afternoon. A symbol is the coarsest thing that goes wrong this way and the only one a machine can hold the two halves against, so it is the thing checked: whatever the bank can write, the telling has to have shown at least once.");
-  ("The telling is the file itself plus whatever it hands the lesson maker as its above, found by looking for that handing over in its own source. Naming the telling by a suffix was tried first and was wrong twice over: this run spells one _above and one _intro, and four lessons keep their telling as a function inside the lesson file where no suffix can reach it.");
+  ("The telling is the file itself plus whatever it hands the lesson maker as its above, found by looking for that handing over in its own source. Naming the telling by a suffix was tried first and was wrong twice over: this run spells one _above and one _intro, and a hundred and eleven lessons keep their telling as a function inside the lesson file, where no suffix can reach it.");
   ("A title and a gate belong to neither half. A title holds a lesson's words and a gate holds the lines it refuses, and counting either as the bank would have the lesson answering for symbols it never asks anybody about.");
   let family = app_code_lesson_family_file_names(root, roots, names);
   let root_source = await function_read(root);
@@ -39,8 +39,8 @@ export async function app_code_lesson_telling_symbols_missing_one(
       let symbols = await app_code_lesson_source_symbols(source, source_names);
       let handed = text_combine("above: ", name);
       let tells = text_includes(root_source, handed);
-      let half = ternary(tells, telling, bank);
-      list_add_multiple(half, symbols);
+      let side = ternary(tells, telling, bank);
+      list_add_multiple(side, symbols);
     }
   }
   let missing = [];

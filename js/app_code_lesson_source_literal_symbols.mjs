@@ -1,11 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
+import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { text_size } from "./text_size.mjs";
+import { less_than } from "./less_than.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { and } from "./and.mjs";
 import { not } from "./not.mjs";
+import { and } from "./and.mjs";
 import { app_code_lesson_text_operator_symbols } from "./app_code_lesson_text_operator_symbols.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { add } from "./add.mjs";
@@ -19,7 +20,7 @@ export function app_code_lesson_source_literal_symbols(source) {
   let found = [];
   let index = 0;
   for (let piece of pieces) {
-    let left = remainder(index, 2);
+    let left = modulo(index, 2);
     let quoted = equal(left, 1);
     let a = text_size(piece);
     let short = less_than(a, 29);
