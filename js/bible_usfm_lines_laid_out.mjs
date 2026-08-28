@@ -1,8 +1,7 @@
-import { list_size_equal } from "./list_size_equal.mjs";
+import { bible_usfm_lines_laid_out_blank_line_add } from "./bible_usfm_lines_laid_out_blank_line_add.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { list_last } from "./list_last.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { usfm_spans_removed } from "./usfm_spans_removed.mjs";
@@ -27,18 +26,6 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
   ("No blank line is ever laid on top of another, and none opens the passage. A blank at the top is invisible to whoever pastes this and shifts everything they paste down by a line; two together are a gap nobody asked for. Both are cheaper to refuse as they arrive than to tidy up afterwards, because afterwards there is no longer anything to say which blank came from where.");
   ("A line whose words all turn out to be a footnote leaves nothing behind rather than an empty line. That happens wherever the printing hangs a note on a line of its own, and a reader would see a hole in the poem and take it for a fault.");
   let out = [];
-  function blank_line_add() {
-    let opening = list_size_equal(out, 0);
-    if (opening) {
-      return;
-    }
-    let last = list_last(out);
-    let already = text_empty_is(last);
-    if (already) {
-      return;
-    }
-    list_add(out, "");
-  }
   for (let usfm_line of usfm_lines) {
     let unfootnoted = usfm_spans_removed(usfm_line, "f");
     let unreferenced = usfm_spans_removed(unfootnoted, "x");
@@ -49,7 +36,7 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
     let kind = property_get(layout, "kind");
     let broken = equal(kind, "break");
     if (broken) {
-      blank_line_add();
+      bible_usfm_lines_laid_out_blank_line_add(out);
     }
     let laid_out = equal_not(kind, "drop");
     if (broken) {
@@ -67,7 +54,7 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
       if (not(silent)) {
         let paragraph = equal(kind, "paragraph");
         if (paragraph) {
-          blank_line_add();
+          bible_usfm_lines_laid_out_blank_line_add(out);
         }
         let indent = property_get(layout, "indent");
         let spaces = text_repeated(" ", indent);
