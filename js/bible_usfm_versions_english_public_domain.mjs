@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_versions_english_choices_licences } from "./ebible_versions_english_choices_licences.mjs";
 import { ebible_licence_public_domain } from "./ebible_licence_public_domain.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { ebible_bible_folder_version_word } from "./ebible_bible_folder_version_word.mjs";
 import { list_map } from "./list_map.mjs";
@@ -16,8 +16,7 @@ export async function bible_usfm_versions_english_public_domain() {
   let licences = await ebible_versions_english_choices_licences();
   let unowned = ebible_licence_public_domain();
   function public_domain_is(licence_record) {
-    let licence = property_get(licence_record, "licence");
-    let free = equal(licence, unowned);
+    let free = property_equals(licence_record, "licence", unowned);
     return free;
   }
   let free_licences = list_filter(licences, public_domain_is);
