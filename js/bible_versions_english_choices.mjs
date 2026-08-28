@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_language_en_name } from "./ebible_language_en_name.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -13,7 +14,7 @@ export function bible_versions_english_choices(versions) {
   let english = ebible_language_en_name();
   let held = list_filter_property(versions, "language_name", english);
   function bible_versions_english_choices_choice(record) {
-    let bible_folder = property_get(record, "bible_folder");
+    let bible_folder = property_get(record, bible_folder_key());
     let name = property_get(record, "name");
     let licence = property_get(record, "licence");
     let commercial = ebible_licence_commercial_is(licence);
