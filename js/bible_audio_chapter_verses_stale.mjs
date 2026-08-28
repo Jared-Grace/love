@@ -27,7 +27,8 @@ export async function bible_audio_chapter_verses_stale(
     chapter_code,
   );
   let chunks = await bible_audio_chunk_texts(bible_folder, chapter_code);
-  let units = await ebible_chapter_reading_units(bible_folder, chapter_code);
+  let translation = await bible_audio_recording_translation(bible_folder);
+  let units = await ebible_chapter_reading_units(translation, chapter_code);
   let stale = [];
   let report = {
     bible_folder,
