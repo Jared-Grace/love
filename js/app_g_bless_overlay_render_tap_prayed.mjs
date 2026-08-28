@@ -136,12 +136,15 @@ export function app_g_bless_overlay_render_tap_prayed(
       ("same person on two squares and two different people on one. Asked by identity there is");
       ("nothing to go wrong, because these are the same objects both times.");
       let people_now = list_difference(people_after, people_before);
-      ("Ground and faces are celebrated TOGETHER rather than one after the other. They are one");
-      ("event - the prayer - and shown in turn they would read as two things having happened.");
-      ("They are handed over as two lists because they are lit two different ways: ground where");
-      ("it lies, faces on the light each person carries with them. That is also what lets a");
-      ("prayer over a single person be celebrated at all - nothing was finished and no house");
-      ("filled in, and the whole of what changed is one face.");
+      ("Ground and faces are handed over as two lists because they are lit two different ways:");
+      ("ground where it lies, faces on the light each person carries with them. That is also");
+      ("what lets a prayer over a single person be celebrated at all - nothing was finished and");
+      ("no house filled in, and the whole of what changed is one face.");
+      ("They are shown in turn rather than at once, faces first. A prayer reaches a face where");
+      ("that person happens to be standing and a house where the house is, and those are rarely");
+      ("the same place - so a camera aimed at both together sits between them and shows");
+      ("neither. Which order, and how each is held on the screen, is settled where they are");
+      ("celebrated rather than here.");
       let anything = list_concat_multiple([lit_now, people_now]);
       let nothing = list_empty_is(anything);
       if (nothing) {
