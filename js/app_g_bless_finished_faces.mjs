@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,12 +6,9 @@ import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_camera_span } from "./app_g_bless_camera_span.mjs";
 import { app_g_bless_finished_people } from "./app_g_bless_finished_people.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_g_bless_finished_person_bloom } from "./app_g_bless_finished_person_bloom.mjs";
-import { list_add } from "./list_add.mjs";
 import { sleep } from "./sleep.mjs";
 import { each_async } from "./each_async.mjs";
-import { each } from "./each.mjs";
 import { app_g_bless_finished_person_bloom_fade } from "./app_g_bless_finished_person_bloom_fade.mjs";
 import { app_g_bless_finished_people_fade } from "./app_g_bless_finished_people_fade.mjs";
 export async function app_g_bless_finished_faces(
@@ -52,8 +50,9 @@ export async function app_g_bless_finished_faces(
   ("Where they are is read once, at the top, and not followed. People walk, and a camera");
   ("chasing them is a camera the street cannot be read from; the lights ride on the people");
   ("themselves, so they stay right wherever anybody walks to.");
-  ("They are let go all together at the end rather than each in its own turn. They are one");
-  ("prayer, and one prayer ending in installments would read as several.");
+  ("Each is let go after the same length of time, on the clock it started on, so they end");
+  ("one after another in the order they began. The ending is then the same shape as the");
+  ("beginning, and the whole group reads as a run of lights passing over a household.");
   ("The camera is left where it is, pulled back, and bringing it in again belongs to");
   ("whatever comes next. This step knows how far out it had to stand to hold everybody; it");
   ("does not know where the screen is wanted afterwards, and guessing that here is how the");
@@ -82,24 +81,38 @@ export async function app_g_bless_finished_faces(
   if (group) {
     await arrived;
   }
-  let bursts = [];
-  let blooms = [];
+  ("Equal LENGTH is what ending together cost, and it is why that was given up. Let go all");
+  ("at the same moment, a light that started later had less time on the screen than the one");
+  ("before it, and the last person prayed for got the shortest celebration of the three -");
+  ("a difference a player has no way of reading as anything but the last of them mattering");
+  ("least. Given the same time each, the lights end as they began, spaced out, and nobody");
+  ("gets a shorter answer for having been reached second.");
+  let gap = 300;
+  let hold = 1460;
   async function person_light(person) {
     let one = [person];
     let flares = app_g_bless_finished_people(div_map, one);
-    list_add_multiple(bursts, flares);
     let bloom = app_g_bless_finished_person_bloom(div_map, person);
-    list_add(blooms, bloom);
-    await sleep(300);
+    ("Each light carries its own ending rather than being gathered into a list and let go");
+    ("from outside. A list can only be let go at one moment, which is the very thing being");
+    ("undone here, and a light that knows when it is finished needs nobody to remember it.");
+    function light_let_go() {
+      app_g_bless_finished_person_bloom_fade(bloom);
+      app_g_bless_finished_people_fade(flares);
+    }
+    setTimeout(light_let_go, hold);
+    await sleep(gap);
   }
-  ("The lights are held at full strength for most of a second before they are let go. They");
-  ("are what the player asked for by praying, so the screen belongs to them for long enough");
-  ("to be looked at rather than merely noticed - a celebration over before the eye settles");
-  ("on it is one a player will tell you they could not see, and one did.");
+  ("The lights are held at full strength for about a second and a half before they are let");
+  ("go. They are what the player asked for by praying, so the screen belongs to them for");
+  ("long enough to be looked at rather than merely noticed - a celebration over before the");
+  ("eye settles on it is one a player will tell you they could not see, and one did.");
   await each_async(people, person_light);
-  await sleep(860);
-  each(blooms, app_g_bless_finished_person_bloom_fade);
-  app_g_bless_finished_people_fade(bursts);
+  ("The last light started one gap before this line was reached, so what remains of its own");
+  ("hold is the hold less that gap. Waiting that out here is what lets everything below go");
+  ("on knowing every light has been let go.");
+  let last = subtract(hold, gap);
+  await sleep(last);
   ("The wait here outlasts the fade rather than matching it, because the lights are not");
   ("only fading, they are being taken off the map - each on a clock of its own a little");
   ("after its fade. What comes next moves the camera, and a light still hanging on a face");
