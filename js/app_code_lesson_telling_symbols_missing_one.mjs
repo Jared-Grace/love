@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_family_file_names } from "./app_code_lesson_family_file_names.mjs";
-import { function_read } from "./function_read.mjs";
+import { repo_love_function_read } from "./repo_love_function_read.mjs";
 import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_source_symbols } from "./app_code_lesson_source_symbols.mjs";
@@ -27,14 +27,14 @@ export async function app_code_lesson_telling_symbols_missing_one(
   ("A telling that comes out with no symbols at all is left in the answer rather than dropped, because the two things it can mean are opposite. Either the lesson really shows no operator, or this could not find where its telling is - and a lesson quietly counted as clean because nothing was found to check is the one failure that would make the whole check worthless. The caller separates them and the gate says how many there are.");
   ("A title and a gate belong to neither half. A title holds a lesson's words and a gate holds the lines it refuses, and counting either as the bank would have the lesson answering for symbols it never asks anybody about.");
   let family = app_code_lesson_family_file_names(root, roots, names);
-  let root_source = await function_read(root);
+  let root_source = await repo_love_function_read(root);
   let telling = [];
   let bank = [];
   for (let name of family) {
     let aside = text_ends_with_any(name, ["_title_name_id", "_gate_run"]);
     let counted = not(aside);
     if (counted) {
-      let source = await function_read(name);
+      let source = await repo_love_function_read(name);
       let symbols = await app_code_lesson_source_symbols(source, source_names);
       let itself = equal(name, root);
       let named = text_ends_with_any(name, ["_above", "_intro"]);
