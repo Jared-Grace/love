@@ -25,20 +25,8 @@ export function app_next_bible_button(parent, run) {
   let sign = emoji_book_open();
   let text = text_combine_middle_space(sign, "Open passage in Bible");
   function lambda() {
-    let hash = html_hash_object_get();
-    ("A link names its languages by their short codes, and the reader is opened with the languages themselves - so the codes are looked up rather than handed on as they are. A code naming no language we have is dropped on the way, which is what lets a link written before a bible was retired still open.");
-    let codes = app_shared_bible_hash_to_languages_chosen(hash);
-    let languages_chosen = ebible_languages_from_codes(codes);
-    ("A link keeps the language read down the middle last, and a chosen list keeps it first, so the one turns into the other by being turned round. Handed over the way it arrived, the link out of here would name the same languages in the other order and quietly swap which one the reader reads by.");
-    list_reverse(languages_chosen);
     let mode = app_shared_bible_mode_chapter();
-    app_shared_bible_open_generic(
-      window_open_app,
-      languages_chosen,
-      chapter_code,
-      selection,
-      mode,
-    );
+    app_shared_bible_open_hash_languages(chapter_code, selection, mode);
   }
   let component = app_shared_button(parent, text, lambda);
   return component;
