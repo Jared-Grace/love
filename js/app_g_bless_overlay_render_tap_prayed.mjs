@@ -69,9 +69,9 @@ export function app_g_bless_overlay_render_tap_prayed(
     app_g_bless_wash(wash, cone);
   }
   function render() {
-    ("A draw with the ground in it, which is every draw but one. The street is redrawn on");
-    ("every step the player takes, and a step never finishes a house off - so there is");
-    ("nothing to hold back and nothing for a caller to decide.");
+    "A draw with the ground in it, which is every draw but one. The street is redrawn on";
+    "every step the player takes, and a step never finishes a house off - so there is";
+    "nothing to hold back and nothing for a caller to decide.";
     render_ground(true);
   }
   function tap_prayed(target) {
