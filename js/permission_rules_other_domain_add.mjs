@@ -1,10 +1,9 @@
+import { list_filter_last } from "./list_filter_last.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { permission_rules_other } from "./permission_rules_other.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_last } from "./list_last.mjs";
 import { js_find_declaration_named } from "./js_find_declaration_named.mjs";
 import { js_array_text_add_after } from "./js_array_text_add_after.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -33,8 +32,7 @@ export async function permission_rules_other_domain_add(domain) {
     let starts = text_starts_with(text, "WebFetch(domain:");
     return starts;
   }
-  let fetched = list_filter(texts, fetched_is);
-  let last = list_last(fetched);
+  let last = list_filter_last(texts, fetched_is);
   function lambda(ast) {
     let node = js_find_declaration_named(ast, "texts");
     let selects = [node];
