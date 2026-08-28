@@ -82,7 +82,7 @@ export function html_code(name, body) {
   let body_element = html_code_element("body", attributes_none, body_children);
   let indent2 = text_empty();
   let html_children = html_code_children([head, body_element], indent2);
-  let attributes_html = html_code_attributes_html();
+  let attributes_html = html_code_attributes_html(name);
   let html = html_code_element("html", attributes_html, html_children);
   let doctype = html_code_doctype();
   let r = text_combine_multiple([doctype, "\n", html]);
