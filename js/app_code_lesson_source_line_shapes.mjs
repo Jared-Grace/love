@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_source_code_pieces } from "./app_code_lesson_source_code_pieces.mjs";
-import { app_code_lesson_text_line_shape_or_null } from "./app_code_lesson_text_line_shape_or_null.mjs";
+import { app_code_lesson_text_line_shapes } from "./app_code_lesson_text_line_shapes.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 export function app_code_lesson_source_line_shapes(source) {
@@ -10,7 +10,7 @@ export function app_code_lesson_source_line_shapes(source) {
   let pieces = app_code_lesson_source_code_pieces(source);
   let found = [];
   for (let piece of pieces) {
-    let shape = app_code_lesson_text_line_shape_or_null(piece);
+    let shape = app_code_lesson_text_line_shapes(piece);
     let some = null_not_is(shape);
     if (some) {
       list_add_unique(found, shape);
