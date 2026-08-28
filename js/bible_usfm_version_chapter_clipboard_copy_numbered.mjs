@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_berean_chapter_paragraphed_text } from "./bible_berean_chapter_paragraphed_text.mjs";
 import { clipboard_copy } from "./clipboard_copy.mjs";
-export async function bible_berean_chapter_clipboard_copy_numbered(
+export async function bible_usfm_version_chapter_clipboard_copy_numbered(
   book_code,
   chapter_number,
 ) {
