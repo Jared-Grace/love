@@ -1,9 +1,8 @@
+import { ebible_book_code_label } from "./ebible_book_code_label.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
-import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
-import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { app_shared_bible_chapters_card } from "./app_shared_bible_chapters_card.mjs";
 export async function bible_usfm_chapters_render(
   parent,
@@ -21,8 +20,7 @@ export async function bible_usfm_chapters_render(
   html_clear(parent);
   let f_name = fn_name("bible_usfm_version_book_chapter_codes");
   let chapter_codes = await app_shared_api_named(f_name, [version, book_code]);
-  let books = ebible_books_engbsb();
-  let book_name = ebible_book_code_to_name(books, book_code);
+  let book_name = ebible_book_code_label(book_code);
   let current_chapter_code = "";
   app_shared_bible_chapters_card(
     parent,
