@@ -1,4 +1,4 @@
-import { app_bible_pictures_button } from "./app_bible_pictures_button.mjs";
+import { app_bible_pictures_bar_button } from "./app_bible_pictures_bar_button.mjs";
 import { app_bible } from "./app_bible.mjs";
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
