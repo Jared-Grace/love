@@ -32,5 +32,9 @@ export async function app_bible(context) {
     return;
   }
   ("the two readers switch via a contextual button on each verse, not a top-bar toggle");
-  await app_shared_bible_read(context, app_bible_verse_switch_button);
+  await app_shared_bible_read(
+    context,
+    app_bible_verse_switch_button,
+    app_bible_pictures_chapter_button,
+  );
 }

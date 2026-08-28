@@ -10,8 +10,7 @@ import { each } from "./each.mjs";
 export function app_g_bless_finished_white(div_map, tiles) {
   arguments_assert(arguments, 2);
   ("Washes a patch of ground white, over about two thirds of a second, and hands back the");
-  ("squares");
-  ("doing it so they can be taken away again.");
+  ("squares doing it so they can be taken away again.");
   ("White is the one colour on this map that means nothing yet. The warm light on a");
   ("finished house, the gold on a face that has been prayed for, the pale cone the player");
   ("is looking down - all three are spoken for, and a celebration painted in any of them");
