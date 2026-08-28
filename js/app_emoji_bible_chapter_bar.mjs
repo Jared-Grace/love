@@ -14,7 +14,7 @@ export function app_emoji_bible_chapter_bar(bar, chapters, chosen) {
   ("Where in the picture Bible the reader is standing, and the three ways out of it: an arrow to each neighbouring written chapter, and the reference itself, which goes back to the list.");
   ("IT IS THE BIBLE READER'S OWN BAR, built out of the same two arrows and the same button rather than out of a copy of how they look. A reader who has used the other app has already learned this one, and a change to how a bar reads there arrives here without anybody carrying it over.");
   ("AN ARROW IS DRAWN ONLY WHERE THERE IS SOMEWHERE TO GO. This list is what has been written rather than a whole canon, so its ends are real ends, and an arrow that did nothing would be the page's only lie about how much of this Bible exists.");
-  ("THE NEIGHBOURS ARE THE NEIGHBOURS IN THIS LIST AND NOT IN SCRIPTURE, which is a different reading order from the one next door and the right one here. Somebody working through what has been written wants the next written thing; somebody who wants the next chapter of a book knows its name and can ask the list for it.");
+  ("THE NEIGHBOURS ARE THE NEIGHBOURS IN THE LIST AS THE READER SEES IT, which is the order Scripture puts them in. It was the order they were written in until the list grew book headings, and then the page and the bar disagreed: the index said Deuteronomy came after Exodus and the arrow went to a letter of John, which is the page contradicting itself one tap apart. Whoever hands this list in decides the order, so there is one order and it is decided once.");
   let previous = list_previous_try(chapters, chosen);
   let next = list_next_try(chapters, chosen);
   function on_previous() {
