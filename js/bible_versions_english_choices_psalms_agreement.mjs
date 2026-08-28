@@ -33,11 +33,13 @@ export async function bible_versions_english_choices_psalms_agreement() {
   for (let passage of passages) {
     let wordings = property_get(passage, "wordings");
     for (let wording of wordings) {
-      let bible_folder = property_get(wording, bible_folder_key());
+      let property_name = bible_folder_key();
+      let bible_folder = property_get(wording, property_name);
       let text = property_get(wording, "text");
       let nearest = 0;
       for (let against of wordings) {
-        let itself = property_equals(against, bible_folder_key(), bible_folder);
+        let property_name2 = bible_folder_key();
+        let itself = property_equals(against, property_name2, bible_folder);
         if (itself) {
           continue;
         }
@@ -77,7 +79,8 @@ export async function bible_versions_english_choices_psalms_agreement() {
   let usable = await bible_versions_english_choices_usable();
   let unmeasured = [];
   for (let version of usable) {
-    let bible_folder = property_get(version, bible_folder_key());
+    let property_name3 = bible_folder_key();
+    let bible_folder = property_get(version, property_name3);
     let seen = lowest_by_folder[bible_folder];
     let unasked = equal(seen, undefined);
     if (unasked) {
