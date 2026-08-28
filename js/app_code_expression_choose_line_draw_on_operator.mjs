@@ -4,21 +4,17 @@ import { app_code_expression_operator_pressable } from "./app_code_expression_op
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { html_data_set_test_happy } from "./html_data_set_test_happy.mjs";
-import { null_is } from "./null_is.mjs";
-import { app_shared_glow_look_here } from "./app_shared_glow_look_here.mjs";
-import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
+import { app_code_expression_choose_line_press_elsewhere } from "./app_code_expression_choose_line_press_elsewhere.mjs";
+import { app_code_expression_choose_line_operator_refuse } from "./app_code_expression_choose_line_operator_refuse.mjs";
 import { each } from "./each.mjs";
 import { html_data_set_test_happy_remove } from "./html_data_set_test_happy_remove.mjs";
 import { app_code_expression_refusals_clear } from "./app_code_expression_refusals_clear.mjs";
 import { app_code_expression_chosen_set } from "./app_code_expression_chosen_set.mjs";
 import { app_code_expression_chips_settle } from "./app_code_expression_chips_settle.mjs";
 import { app_code_expression_solved } from "./app_code_expression_solved.mjs";
+import { null_is } from "./null_is.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
-import { app_code_expression_replaced_settle } from "./app_code_expression_replaced_settle.mjs";
-import { app_code_expression_choose_line_draw } from "./app_code_expression_choose_line_draw.mjs";
-import { app_code_expression_chips_rise } from "./app_code_expression_chips_rise.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { app_code_expression_choose_line_stepped_draw } from "./app_code_expression_choose_line_stepped_draw.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 export function app_code_expression_choose_line_draw_on_operator(
   rising,
@@ -30,6 +26,7 @@ export function app_code_expression_choose_line_draw_on_operator(
   on_finished,
   on_change,
 ) {
+  "THREE OF THE FOUR THINGS A PRESS CAN COME TO ARE DRAWN NEXT DOOR, and each of them is one that needs to remember nothing between presses: a press made after the line was already answered, a press made on an operator that has to wait its turn, and everything that happens once the answer has been shown. What is left here is the one thing that cannot be handed anywhere - the three things this drawing of the line has to keep hold of between one press and the next.";
   arguments_assert(arguments, 8);
   let chosen = false;
   ("whatever is waiting on the learner while the line has stopped answering, handed over by whoever put the question up - because a press made on the line after that is not a mistake about the line, it is a learner who has not found where the asking moved to");
@@ -55,23 +52,17 @@ export function app_code_expression_choose_line_draw_on_operator(
     }
     async function on_click() {
       if (chosen) {
-        ("the line has already been pressed and is waiting on an answer somewhere else, so this press is spent saying where: the question glows rather than the press being swallowed");
-        ("Swallowed, the press teaches a learner that the screen is broken - which is what a control that answers nothing means everywhere else they have ever pressed one. Answered by the real question lighting up, the same press teaches them where to look, and it costs them one glance.");
-        ("Nothing at all happens if nobody said what is waiting. A page that answers its own presses some other way is not made to invent a glow it never asked for.");
-        let waiting_is = null_is(waiting);
-        if (waiting_is) {
-          return;
-        }
-        app_shared_glow_look_here(waiting);
+        app_code_expression_choose_line_press_elsewhere(waiting);
         return;
       }
       let ready_is = list_includes(ready, node);
       if (not(ready_is)) {
-        ("an operator still holding another one underneath it: refuse just this one and leave the rest of the line as it was, so the next press is a fresh choice rather than a forced one");
-        app_code_lesson_quiz_wrong_set(span);
-        html_style_set(span, "pointer-events", "none");
-        list_add(refused, span);
-        on_wrong(node);
+        app_code_expression_choose_line_operator_refuse(
+          span,
+          refused,
+          node,
+          on_wrong,
+        );
         return;
       }
       chosen = true;
@@ -93,27 +84,17 @@ export function app_code_expression_choose_line_draw_on_operator(
       if (not(waiting_was)) {
         app_shared_glow_clear(waiting);
       }
-      ("and the settling that follows is the same on both, so nothing is asked of the answerer about what it showed - the front page flies the value down and the quiz simply writes it, and either way what is left to do is let the blue go and close the line up");
-      await app_code_expression_replaced_settle(line, node_span, node_value);
-      let stepped = app_code_expression_solved(current, node);
-      ("the shorter line goes up plain and its chips are put on afterwards, so what the learner watches is the next operator opening its room and only then becoming something to press");
-      ("Drawn chipped, the shorter line arrives with every operator already wider than the plain one that stood there a frame earlier - so the whole line jumps sideways in the frame it is drawn, and it jumps at the same moment the colour lands. The learner is shown a move they cannot follow and a change they did not ask about, together, at the one moment they are looking for what to press next.");
-      let risen = app_code_expression_choose_line_draw(
-        stepped,
-        node,
-        node_value,
+      await app_code_expression_choose_line_stepped_draw(
         line,
+        node_span,
+        node_value,
+        current,
+        node,
         on_wrong,
         on_chosen,
         on_finished,
         on_change,
       );
-      await app_code_expression_chips_rise(line, risen);
-      let more = app_code_expression_node_is(stepped);
-      if (more) {
-        return;
-      }
-      await on_finished(stepped);
     }
     html_on_click(span, on_click);
   }

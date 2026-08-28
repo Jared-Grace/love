@@ -53,16 +53,15 @@ export async function app_g_bless_finished(
       faces_show,
     );
   }
-  ("The quiet gold that a prayed-for face keeps is put up HERE, once the arriving light on");
-  ("those faces is over and gone. It is held back for exactly as long as that light lasts,");
-  ("and for one reason: both marks land on the same few pixels, so shown together the");
-  ("player meets what remains before what arrives and reads the pair as one mark brightening");
-  ("slightly. Shown in turn there is a blue arrival and then a gold that stays, which is");
-  ("what actually happened.");
-  ("Asked for whether or not there were any faces. With none there is nobody being held and");
-  ("this costs a draw of a picture that has not changed; with faces it is the only thing");
-  ("that lets them go. One line that always runs cannot be the line somebody forgot to");
-  ("reach on the path where it mattered.");
+  ("The quiet gold that a prayed-for face keeps is let go INSIDE the face celebration now,");
+  ("part way through it, so that it rises underneath the blue rather than after it. Which");
+  ("moment that is depends on how those lights are run, and that is the business of the");
+  ("half that runs them - which is why it is handed the release rather than told when.");
+  ("Asked for again here, and asked for whether or not there were any faces. With none there");
+  ("is nobody being held and this costs a draw of a picture that has not changed; with faces");
+  ("it has already happened and asks for what is already true. One line that always runs");
+  ("cannot be the line somebody forgot to reach on the path where it mattered, and that is");
+  ("worth a wasted draw.");
   faces_show();
   ("The newly finished house is put onto the map by the ground celebration rather than");
   ("here, and that is the whole reason this is handed a way of drawing it. It has to land");
