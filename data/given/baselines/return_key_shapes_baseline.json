@@ -22,13 +22,6 @@
    ]
   },
   {
-   "name": "ebible_languages_licences_gate_run",
-   "shapes": [
-    "checked,mounted",
-    "checked,mounted,offenders"
-   ]
-  },
-  {
    "name": "firebase_prod_app_public_live_restore",
    "shapes": [
     "app,why",
@@ -41,13 +34,6 @@
     "nested,why",
     "blocked,nested,why",
     "f_name_new,nested,why"
-   ]
-  },
-  {
-   "name": "function_paths_frozen_gate_run",
-   "shapes": [
-    "checked,here",
-    "checked,frozen,here"
    ]
   },
   {
@@ -119,41 +105,6 @@
    "shapes": [
     "kind",
     "refused"
-   ]
-  },
-  {
-   "name": "literals_frozen_name_add",
-   "shapes": [
-    "added,name,names",
-    "added,name,recorded"
-   ]
-  },
-  {
-   "name": "permission_grant_add_declined",
-   "shapes": [
-    "added,name,names",
-    "added,allow,blessed,name,names"
-   ]
-  },
-  {
-   "name": "permission_grant_add",
-   "shapes": [
-    "added,name,names",
-    "added,allow,name,names"
-   ]
-  },
-  {
-   "name": "permission_grant_remove",
-   "shapes": [
-    "name,names,removed",
-    "allow,name,names,removed"
-   ]
-  },
-  {
-   "name": "permission_grants_dead_remove",
-   "shapes": [
-    "dead,names",
-    "allow,dead,names"
    ]
   },
   {
