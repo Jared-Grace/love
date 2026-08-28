@@ -28,6 +28,96 @@ export function bible_usfm_versions() {
       folder: "en_ust",
       licence: "CC BY-SA 4.0",
     },
+    asv: {
+      name: "American Standard Version (1901)",
+      shelf: "ebible",
+      folder: "eng-asv",
+      licence: "",
+    },
+    asvbt: {
+      name: "American Standard Version Byzantine Text",
+      shelf: "ebible",
+      folder: "engasvbt",
+      licence: "",
+    },
+    bbe: {
+      name: "Bible in Basic English",
+      shelf: "ebible",
+      folder: "engBBE",
+      licence: "",
+    },
+    dby: {
+      name: "Darby Translation",
+      shelf: "ebible",
+      folder: "engDBY",
+      licence: "",
+    },
+    dra: {
+      name: "Douay-Rheims 1899",
+      shelf: "ebible",
+      folder: "engDRA",
+      licence: "",
+    },
+    gnv: {
+      name: "Geneva Bible 1599",
+      shelf: "ebible",
+      folder: "enggnv",
+      licence: "",
+    },
+    kjv: {
+      name: "King James Version + Apocrypha",
+      shelf: "ebible",
+      folder: "eng-kjv",
+      licence: "",
+    },
+    kjv2006: {
+      name: "King James (Authorized) Version",
+      shelf: "ebible",
+      folder: "eng-kjv2006",
+      licence: "",
+    },
+    kjvcpb: {
+      name: "KJV Cambridge Paragraph Bible",
+      shelf: "ebible",
+      folder: "engkjvcpb",
+      licence: "",
+    },
+    msb: {
+      name: "Majority Standard Bible",
+      shelf: "ebible",
+      folder: "engmsb",
+      licence: "",
+    },
+    rv: {
+      name: "Revised Version with Apocrypha (1895)",
+      shelf: "ebible",
+      folder: "eng-rv",
+      licence: "",
+    },
+    webster: {
+      name: "Noah Webster Bible",
+      shelf: "ebible",
+      folder: "engwebster",
+      licence: "",
+    },
+    wmb: {
+      name: "The World Messianic Bible",
+      shelf: "ebible",
+      folder: "engwmb",
+      licence: "",
+    },
+    wmbb: {
+      name: "The World Messianic Bible British Edition",
+      shelf: "ebible",
+      folder: "engwmbb",
+      licence: "",
+    },
+    ylt: {
+      name: "Young's Literal Translation",
+      shelf: "ebible",
+      folder: "engylt",
+      licence: "",
+    },
   };
   return versions;
 }

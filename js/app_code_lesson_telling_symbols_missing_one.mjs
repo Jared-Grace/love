@@ -32,7 +32,8 @@ export async function app_code_lesson_telling_symbols_missing_one(
   for (let name of family) {
     let itself = equal(name, root);
     let aside = text_ends_with_any(name, ["_title_name_id", "_gate_run"]);
-    let counted = not(or(itself, aside));
+    let b = or(itself, aside);
+    let counted = not(b);
     if (counted) {
       let source = await function_read(name);
       let symbols = await app_code_lesson_source_symbols(source, source_names);
