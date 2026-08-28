@@ -9,5 +9,6 @@ export function app_shared_bible_chapter_hash_get_or_empty(hash) {
   ("So the two live side by side and each page says which of them it means, the same way the plain reading of a word and the reading that will settle for nothing already sit side by side everywhere else in this repo.");
   let property_name = app_shared_bible_chapter_hash_key();
   let chapter_code = property_get_or(hash, property_name, "");
-  let u = ebible_chapter_code_normalize(chapter_code2);
+  let chapter_code_upper = ebible_chapter_code_normalize(chapter_code);
+  return chapter_code_upper;
 }
