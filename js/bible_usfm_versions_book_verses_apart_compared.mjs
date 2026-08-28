@@ -1,7 +1,7 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_verse_holders } from "./bible_usfm_verse_holders.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
@@ -30,8 +30,7 @@ export function bible_usfm_versions_book_verses_apart_compared(
       words_by_version,
       reference,
     );
-    let a = list_size(holders);
-    let enough = greater_than(a, 2);
+    let enough = list_size_greater_than(holders, 2);
     if (not(enough)) {
       continue;
     }
