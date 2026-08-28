@@ -322,6 +322,11 @@ def main():
         "spoken": len(spoken),
         "workers": workers,
         "threads_each": threads,
+        "limits": {
+            "seconds_at_most": seconds_at_most,
+            "memory_floor_bytes": data.get("memory_floor_bytes"),
+            "swap_floor_bytes": data.get("swap_floor_bytes"),
+        },
         "stopped": len(stopped),
         "stopped_why": sorted({r["stopped"] for r in stopped}),
         "not_started": [r["folder"] for r in stopped],
