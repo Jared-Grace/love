@@ -1,4 +1,6 @@
-import { html_visibility_visible } from "./html_visibility_visible.mjs";
+import { app_g_bless_glow_mark_set } from "./app_g_bless_glow_mark_set.mjs";
+import { app_g_bless_glow_mark_get } from "./app_g_bless_glow_mark_get.mjs";
+import { html_style_opacity } from "./html_style_opacity.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -40,13 +42,13 @@ export function app_g_bless_glows(glows, everyone, lit) {
   ("tile at their speed because it is not being placed at all.");
   ("Hidden rather than absent, because a light that does not exist yet cannot have been");
   ("carried.");
-  ("Hidden by being INVISIBLE and not by being undisplayed, and the difference is the whole");
-  ("bug over again. An undisplayed element has no box on the page at all, so it does not");
-  ("slide - each step simply moved it, in no time, to the square being walked to, and it sat");
-  ("there. Shown, it was therefore already at the far end of the step: exactly the fault this");
-  ("was written to cure, arrived at by the other road. Invisible, it keeps its box and its");
-  ("place in every step, and so it is mid-square when it is shown because it has been");
-  ("crossing squares all along with nobody watching.");
+  ("Hidden by being SEE-THROUGH and not by being undisplayed, and the difference is the");
+  ("whole bug over again. An undisplayed element has no box on the page at all, so it does");
+  ("not slide - each step simply moved it, in no time, to the square being walked to, and it");
+  ("sat there. Shown, it was therefore already at the far end of the step: exactly the fault");
+  ("this was written to cure, arrived at by the other road. See-through, it keeps its box");
+  ("and its place in every step, and so it is mid-square when it is shown because it has");
+  ("been crossing squares all along with nobody watching.");
   ("The breathing is started at the moment of showing rather than at the moment of making,");
   ("which is what keeps ninety unlit lights cheap: an invisible box is laid out but never");
   ("painted, so an unlit light costs a step two style writes and nothing else.");
@@ -115,12 +117,12 @@ export function app_g_bless_glows(glows, everyone, lit) {
   each(people_all, person_halo);
   let people_lit = bless_view_people(lit);
   function person_light(person) {
-    ("Shown by being faded up rather than switched on. A mark that was not there on one frame");
-    ("and fully there on the next is a mark the player finds rather than watches arrive, and");
-    ("this one lands underneath the blue light of the prayer that earned it - so it is meant");
-    ("to be seen rising through it while that light is still there.");
-    ("Asking again on a later step asks for what is already true and changes nothing, which");
-    ("is what makes it safe to ask on every one.");
+    "Shown by being faded up rather than switched on. A mark that was not there on one frame";
+    "and fully there on the next is a mark the player finds rather than watches arrive, and";
+    "this one lands underneath the blue light of the prayer that earned it - so it is meant";
+    "to be seen rising through it while that light is still there.";
+    "Asking again on a later step asks for what is already true and changes nothing, which";
+    "is what makes it safe to ask on every one.";
     let mark = app_g_bless_glow_mark_get(person);
     html_style_opacity(mark, "1");
     app_shared_game_emoji_glow_apply(mark);
