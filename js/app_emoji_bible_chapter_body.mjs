@@ -20,7 +20,7 @@ export async function app_emoji_bible_chapter_body(
   ("A verse the picture chapter has not reached yet has no key, because the key is built by matching the hand-written chapter against the downloaded interlinear verse by verse. Half-written chapters are the normal state of this work and must not stop the verses that ARE written from being read.");
   let chapter = await bible_glyph_chapter_fetched(chapter_code);
   if (key_shown) {
-    let rows = bible_glyph_chapter_rosetta_verses(chapter, traditions);
+    let rows = await bible_glyph_chapter_rosetta_verses(chapter, traditions);
     for (let row of rows) {
       app_emoji_bible_verse_key_draw(content, row);
     }
