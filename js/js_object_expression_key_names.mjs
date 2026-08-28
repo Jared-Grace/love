@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -13,8 +13,7 @@ export function js_object_expression_key_names(object_node) {
   let properties = property_get(object_node, "properties");
   let names = [];
   for (let entry of properties) {
-    let kind = property_get(entry, "type");
-    let plain = equal(kind, "Property");
+    let plain = property_equals(entry, "type", "Property");
     if (not(plain)) {
       return null;
     }
@@ -23,8 +22,7 @@ export function js_object_expression_key_names(object_node) {
       return null;
     }
     let key = property_get(entry, "key");
-    let key_kind = property_get(key, "type");
-    let named = equal(key_kind, "Identifier");
+    let named = property_equals(key, "type", "Identifier");
     if (not(named)) {
       return null;
     }
