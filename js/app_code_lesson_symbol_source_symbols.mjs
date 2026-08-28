@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
+import { null_is } from "./null_is.mjs";
 import { function_run } from "./function_run.mjs";
 import { list_is } from "./list_is.mjs";
 import { ternary } from "./ternary.mjs";
@@ -13,7 +14,7 @@ export async function app_code_lesson_symbol_source_symbols(name) {
   ("the symbols one of those functions stands for, got by RUNNING it. Reading its source instead does not answer: an operator here is often held as an object built two files away, and only the file at the bottom of that chain ever spells the symbol itself. Running it was measured against reading it - reading named four operators for a lesson that shows five, and following the names in the source instead over-reached the other way and named ten for a lesson that shows three.");
   ("A function that wants an argument, or a browser, hands back nothing rather than throwing. The name shape that got it here is a guess about what a function is for, and a guess that turns out wrong should cost the reading nothing.");
   let symbols = await catch_null_async(read);
-  let none = equal_null(symbols);
+  let none = null_is(symbols);
   if (none) {
     let empty = [];
     return empty;
