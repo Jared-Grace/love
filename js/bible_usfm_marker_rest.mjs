@@ -1,3 +1,4 @@
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { not } from "./not.mjs";
