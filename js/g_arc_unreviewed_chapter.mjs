@@ -34,7 +34,8 @@ export async function g_arc_unreviewed_chapter(chapter_code) {
         let address = property_get(line, "address");
         list_add(addresses, address);
       }
-      waiting = add(waiting, list_size(addresses));
+      let right = list_size(addresses);
+      waiting = add(waiting, right);
       list_add(people, {
         index,
         nickname,
@@ -47,7 +48,8 @@ export async function g_arc_unreviewed_chapter(chapter_code) {
     let moved = g_arc_lines_moved(read_arc, arc);
     let changed = property_get(moved, "changed");
     let addresses = g_arc_moved_addresses(moved);
-    waiting = add(waiting, list_size(addresses));
+    let right2 = list_size(addresses);
+    waiting = add(waiting, right2);
     list_add(people, {
       index,
       nickname,
