@@ -1,3 +1,11 @@
+import { machine_memory_available_bytes_or_null } from "./machine_memory_available_bytes_or_null.mjs";
+import { floor } from "./floor.mjs";
+import { math_max } from "./math_max.mjs";
+import { math_min } from "./math_min.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide } from "./divide.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bible_audio_speech_workers() {
   "How many processes read chapters aloud at the same time.";
@@ -9,17 +17,20 @@ export function bible_audio_speech_workers() {
   "★ THE RESERVE IS THREE GIGABYTES BECAUSE THAT IS LARGER THAN THE SWING THAT WAS OBSERVED. Read twice about thirty seconds apart, this machine reported 5.4 gigabytes available and then 4.3, so the figure a run starts from can be a gigabyte stale before the first chapter is spoken. A reserve smaller than the swing would let a good reading start work the machine cannot hold a minute later.";
   "★ IT ANSWERS THREE WHEN THE MACHINE WILL NOT SAY, WHICH IS THE ONLY NUMBER THAT WAS SAFE IN EVERY HOUR OBSERVED. A reading that failed must not be treated as a reading of zero, because that would refuse to record on a machine that is merely quiet about itself.";
   arguments_assert(arguments, 0);
-  let a_gigabyte = 1024 * 1024 * 1024;
-  let worker_bytes = 1.03 * a_gigabyte;
-  let reserve_bytes = 3 * a_gigabyte;
+  let left = multiply(1024, 1024);
+  let a_gigabyte = multiply(left, 1024);
+  let worker_bytes = multiply(1.03, a_gigabyte);
+  let reserve_bytes = multiply(3, a_gigabyte);
   let unread_workers = 3;
   let available = machine_memory_available_bytes_or_null();
   if (not(available)) {
     return unread_workers;
   }
-  let spare = available - reserve_bytes;
-  let fits = Math.floor(spare / worker_bytes);
+  let spare = subtract(available, reserve_bytes);
+  let p = divide(spare, worker_bytes);
+  let fits = floor(p);
   let most = 6;
-  let workers = Math.max(1, Math.min(most, fits));
+  let b = math_min(most, fits);
+  let workers = math_max(1, b);
   return workers;
 }

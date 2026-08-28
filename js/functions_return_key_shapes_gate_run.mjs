@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_return_key_shapes_disagree } from "./functions_return_key_shapes_disagree.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,8 +16,11 @@ export async function functions_return_key_shapes_gate_run() {
   let offenders = property_get(walked, "offenders");
   let path = functions_return_key_shapes_baseline_path();
   let fields = ["shapes"];
-  let hint =
-    "these functions hand back different sets of keys on different paths - make every way out spell the same words, and if a rename landed on a short-form entry the caller reading the old word was the bug";
+  let hint = text_combine_multiple([
+    "these functions hand back different sets of keys on different paths - make every way out spell the same words, and if a rename landed on a short-form entry the caller reading the old word was the bug. one command mends one of these: ",
+    fn_name("function_return_key_shapes_agree"),
+    " names in each record the keys the other records carry, each holding nothing",
+  ]);
   let name_write = fn_name("functions_return_key_shapes_baseline_write");
   let told = await baseline_entries_gate_generic(
     offenders,
