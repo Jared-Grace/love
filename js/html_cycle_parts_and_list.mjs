@@ -1,8 +1,7 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 import { each_index } from "./each_index.mjs";
 import { equal_0 } from "./equal_0.mjs";
 import { equal } from "./equal.mjs";
@@ -17,8 +16,7 @@ export function html_cycle_parts_and_list(codes) {
     fn_name("html_cycle_code"),
     " paints the even places as prose and the odd places as code, so a parts list opening with a code word would have that word painted as prose and every piece after it painted as the wrong one of the two.");
   let parts_built = [];
-  let count = list_size(codes);
-  let last_index = subtract(count, 1);
+  let last_index = list_size_subtract(codes, 1);
   each_index(codes, part_add);
   return parts_built;
   function part_add(code_word, index) {
