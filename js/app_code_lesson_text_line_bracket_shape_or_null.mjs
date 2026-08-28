@@ -1,7 +1,6 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -14,8 +13,7 @@ export function app_code_lesson_text_line_bracket_shape_or_null(text) {
   ("Two operators is what makes the question exist at all. One operator has nothing to be solved before anything else, so a bracket around it changes no answer and its presence or absence teaches nothing here.");
   ("Whether the piece is a line of code at all is asked in one place shared with every other mark read off a line, so that all of them are reading the same set of lines.");
   let written = app_code_lesson_text_operators_written(text);
-  let count = list_size(written);
-  let several = greater_than(count, 1);
+  let several = list_size_greater_than(written, 1);
   let one_only = not(several);
   if (one_only) {
     return null;
