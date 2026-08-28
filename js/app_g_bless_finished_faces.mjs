@@ -77,10 +77,14 @@ export async function app_g_bless_finished_faces(
     list_add_multiple(bursts, flares);
     let bloom = app_g_bless_finished_person_bloom(div_map, person);
     list_add(blooms, bloom);
-    await sleep(260);
+    await sleep(300);
   }
+  ("The lights are held at full strength for most of a second before they are let go. They");
+  ("are what the player asked for by praying, so the screen belongs to them for long enough");
+  ("to be looked at rather than merely noticed - a celebration over before the eye settles");
+  ("on it is one a player will tell you they could not see, and one did.");
   await each_async(people, person_light);
-  await sleep(560);
+  await sleep(860);
   each(blooms, app_g_bless_finished_person_bloom_fade);
   app_g_bless_finished_people_fade(bursts);
   await sleep(820);
