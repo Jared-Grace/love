@@ -40,6 +40,11 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("with - so the first prayer of a new game reaches exactly the person it is said over");
   let rung = "person";
   let blessed = bless_blessed_new();
+  ("A new record is empty, except when the address asked for a world part way through. That");
+  ("is asked here, at the one moment there is a record and nobody has prayed into it yet -");
+  ("later would be writing over the player's own work, and earlier there is nothing to write");
+  ("into.");
+  app_g_bless_blessed_head_start(blessed);
   let r = {
     container_map,
     world,
