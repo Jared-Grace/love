@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_recordings_empty } from "./bible_audio_recordings_empty.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,7 +15,7 @@ export async function bible_audio_recordings_empty_delete() {
   arguments_assert(arguments, 0);
   let before = await bible_audio_recordings_empty();
   function named(recording) {
-    let bible_folder = property_get(recording, "bible_folder");
+    let bible_folder = property_get(recording, bible_folder_key());
     let chapter_code = property_get(recording, "chapter_code");
     let left = add(bible_folder, "/");
     let name = add(left, chapter_code);
@@ -22,7 +23,7 @@ export async function bible_audio_recordings_empty_delete() {
   }
   let deleted = list_map(before, named);
   async function recording_each(recording) {
-    let bible_folder = property_get(recording, "bible_folder");
+    let bible_folder = property_get(recording, bible_folder_key());
     let chapter_code = property_get(recording, "chapter_code");
     let folder = bible_audio_folder(bible_folder, chapter_code);
     await folder_delete(folder);
