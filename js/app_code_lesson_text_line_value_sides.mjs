@@ -1,7 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
@@ -13,8 +12,7 @@ export function app_code_lesson_text_line_value_sides(text) {
   ("A value on the left is a different thing to read than a value on the right. Left, the learner meets the answer before the thing it answers and has to hold it while solving the rest; right, they solve first and meet the value last. A lesson that only ever shows one of the two has shown the learner one of the two reading orders.");
   ("One operator is enough for the question to exist, unlike the brackets, which need two before they change anything. false === 5 shows a value on the left as plainly as any longer line does, so counting it keeps the telling as wide as it truly is.");
   let written = app_code_lesson_text_operators_written(text);
-  let count = list_size(written);
-  let none = equal(count, 0);
+  let none = list_size_equal(written, 0);
   if (none) {
     let r = [];
     return r;
