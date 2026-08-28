@@ -1,4 +1,4 @@
-import { round } from "./round.mjs";
+import { multiply_round } from "./multiply_round.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
@@ -54,10 +54,8 @@ export async function lyric_video_document_draft(
   function lambda3(line_text, index) {
     let start = opening + multiply(share, index);
     let end = start + share;
-    let n = multiply(start, 100);
-    let top = round(n);
-    let n2 = multiply(end, 100);
-    let top2 = round(n2);
+    let top = multiply_round(start, 100);
+    let top2 = multiply_round(end, 100);
     let r2 = {
       start: divide(top, 100),
       end: divide(top2, 100),
