@@ -18,6 +18,7 @@ export async function permission_grant_add(unaliased) {
       name: unaliased,
       added: false,
       names: names.length,
+      allow: null,
     };
     return known;
   }
