@@ -1,10 +1,9 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { machine_memory_available_bytes_or_null } from "./machine_memory_available_bytes_or_null.mjs";
-import { floor } from "./floor.mjs";
 import { math_max } from "./math_max.mjs";
 import { math_min } from "./math_min.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bible_audio_speech_workers() {
@@ -27,8 +26,7 @@ export function bible_audio_speech_workers() {
     return unread_workers;
   }
   let spare = subtract(available, reserve_bytes);
-  let p = divide(spare, worker_bytes);
-  let fits = floor(p);
+  let fits = divide_floor(spare, worker_bytes);
   let most = 6;
   let b = math_min(most, fits);
   let workers = math_max(1, b);
