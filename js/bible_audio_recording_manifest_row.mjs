@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_audio_verses_manifest_chapter_write } from "./bible_audio_verses_manifest_chapter_write.mjs";
@@ -9,7 +10,7 @@ export async function bible_audio_recording_manifest_row(recording) {
   "★ EVERY ROW HAS THE SAME SHAPE, INCLUDING THE ONES THAT COULD NOT BE JUDGED. A recording whose translation is not on this disk cannot be compared to anything, and returning nothing for it would let it be counted as though it had passed. Saying so in a field keeps the three answers - lines up, does not line up, could not be asked - apart, which is the difference between a count that sums to the total and one that quietly loses a third of its subjects.";
   "★ THE COUNTS COME BACK AND THE ROWS DO NOT. A note may hold hundreds of pieces of text and a sweep over five hundred recordings would then answer with the whole of every recording, which nobody can read. How many pieces, how many units, how many did not match: that is enough to decide which chapter to open, and the note itself is on the disk beside the sound for whoever opens it.";
   arguments_assert(arguments, 1);
-  let bible_folder = property_get(recording, "bible_folder");
+  let bible_folder = property_get(recording, bible_folder_key());
   let chapter_code = property_get(recording, "chapter_code");
   async function lambda() {
     let m = await bible_audio_verses_manifest_chapter_write(
