@@ -18,7 +18,7 @@ export async function public_chunks_orphaned_gate_run() {
   let path = public_chunks_orphaned_baseline_path();
   let name_write = fn_name("public_chunks_orphaned_baseline_write");
   let f_name = fn_name("public_chunks_orphaned");
-  let f_name2 = fn_name("folder_chunks_orphaned_delete");
+  let f_name2 = fn_name("folder_chunks_orphaned_delete"); let f_name3 = fn_name("folder_public_root_noted_blocked_assert");
   let hint = text_combine_multiple([
     "a folder is now keeping a script nothing there sends for - ask ",
     f_name,
