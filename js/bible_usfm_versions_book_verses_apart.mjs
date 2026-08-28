@@ -83,7 +83,7 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
     words_by_version[version] = words_by_reference;
   }
   let apart = [];
-  let measured = 0;
+  let held_by_version = {}; let measured = 0;
   for (let reference of references) {
     let holders = [];
     for (let read of carried) {
@@ -108,7 +108,7 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
     measured = add(measured, 1);
     for (let holder of holders) {
       let version = property_get(holder, "version");
-      let content = property_get(holder, "content");
+      let content = property_get(holder, "content"); let held_before = property_get_or_null(held_by_version, version); let held_first = null_is(held_before); let held_now = 1; if (not(held_first)) { held_now = add(held_before, 1); } held_by_version[version] = held_now;
       let shares = false;
       for (let against of holders) {
         let itself = property_equals(against, "version", version);
