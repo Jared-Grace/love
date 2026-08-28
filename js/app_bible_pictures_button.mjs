@@ -7,7 +7,7 @@ import { bible_glyph_chapter_codes } from "./bible_glyph_chapter_codes.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { emoji_picture_frame } from "./emoji_picture_frame.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
-import { app_emoji_bible_chapter_hash } from "./app_emoji_bible_chapter_hash.mjs";
+import { app_shared_bible_pictures_chapter_hash } from "./app_shared_bible_pictures_chapter_hash.mjs";
 import { window_open_app } from "./window_open_app.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_bible_pictures_button(bar) {
@@ -37,7 +37,7 @@ export function app_bible_pictures_button(bar) {
     let sign = emoji_picture_frame();
     let text = text_combine_middle_space(sign, "In pictures");
     function lambda() {
-      let chapter_hash = app_emoji_bible_chapter_hash(chapter_code);
+      let chapter_hash = app_shared_bible_pictures_chapter_hash(chapter_code);
       let app_fn_name = fn_name("app_emoji_bible");
       window_open_app(app_fn_name, chapter_hash);
     }

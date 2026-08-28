@@ -5,7 +5,7 @@ import { bible_glyph_chapters_by_book } from "./bible_glyph_chapters_by_book.mjs
 import { property_get } from "./property_get.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
-import { app_emoji_bible_chapter_hash } from "./app_emoji_bible_chapter_hash.mjs";
+import { app_shared_bible_pictures_chapter_hash } from "./app_shared_bible_pictures_chapter_hash.mjs";
 import { app_shared_button_wide_link_hash_name } from "./app_shared_button_wide_link_hash_name.mjs";
 export function app_emoji_bible_chapter_index(content, chapters) {
   arguments_assert(arguments, 2);
@@ -30,7 +30,7 @@ export function app_emoji_bible_chapter_index(content, chapters) {
     for (let chapter of held) {
       let reference = property_get(chapter, "reference");
       let chapter_code = property_get(chapter, "chapter_code");
-      let hash = app_emoji_bible_chapter_hash(chapter_code);
+      let hash = app_shared_bible_pictures_chapter_hash(chapter_code);
       let button = app_shared_button_wide_link_hash_name(
         content,
         hash,
