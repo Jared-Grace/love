@@ -1,3 +1,4 @@
+import { bible_glyph_groups_marks_artwork_absent_gate_run } from "./bible_glyph_groups_marks_artwork_absent_gate_run.mjs";
 import { usfm_markers_removed_cases_gate_run } from "./usfm_markers_removed_cases_gate_run.mjs";
 import { app_shared_dev_stamp_gate_run } from "./app_shared_dev_stamp_gate_run.mjs";
 import { bible_verses_reading_units_cases_gate_run } from "./bible_verses_reading_units_cases_gate_run.mjs";
