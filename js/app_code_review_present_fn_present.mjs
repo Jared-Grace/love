@@ -4,13 +4,7 @@ import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { html_remove } from "./html_remove.mjs";
-import { storage_local_remove_context } from "./storage_local_remove_context.mjs";
-import { app_code_review_number_get } from "./app_code_review_number_get.mjs";
-import { app_code_review_complete_record } from "./app_code_review_complete_record.mjs";
-import { app_code_review_celebration } from "./app_code_review_celebration.mjs";
-import { app_code_review_render_continue } from "./app_code_review_render_continue.mjs";
-import { app_code_advance_or_no_more } from "./app_code_advance_or_no_more.mjs";
+import { app_code_review_finish_show } from "./app_code_review_finish_show.mjs";
 import { list_size } from "./list_size.mjs";
 import { add } from "./add.mjs";
 import { html_progress_bar } from "./html_progress_bar.mjs";
@@ -27,7 +21,7 @@ import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs";
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 export function app_code_review_present_fn_present(
-  r4,
+  r,
   home_button,
   progress,
   c,
@@ -41,27 +35,26 @@ export function app_code_review_present_fn_present(
   key,
   go_next,
 ) {
+  "The one call that draws the review as it stands, handed back so that answering an exercise can draw it again.";
+  "WHAT THE LAST ANSWER LEADS TO IS DRAWN NEXT DOOR, because finishing a review has nothing to do with the queue this holds - it takes controls away, writes the finish down and offers the way on, and none of that is asking what to show next.";
   arguments_assert(arguments, 13);
-  let passed = property_get(r4, "passed");
+  let passed = property_get(r, "passed");
   app_shared_button_gap_above(home_button);
   function present() {
     each([progress, c], html_clear);
     let done = list_empty_is(queue);
     if (done) {
-      each([success_container, back_button, restart_button], html_remove);
-      if (has_next) {
-        html_remove(skip_button);
-      }
-      storage_local_remove_context(context, key);
-      ("the half-answered state is thrown away and the fact that the whole thing was finished is written down in its place. Without the second half, finishing a review left no trace anywhere: the only sign of it was the screen the learner was about to walk away from, and the button they had just earned went back to looking exactly like one they had never pressed.");
-      let number = app_code_review_number_get(context);
-      app_code_review_complete_record(context, number);
-      app_code_review_celebration(c);
-      function render_continue(continue_parent) {
-        let r = app_code_review_render_continue(continue_parent, go_next);
-        return r;
-      }
-      app_code_advance_or_no_more(c, has_next, render_continue);
+      app_code_review_finish_show(
+        success_container,
+        back_button,
+        restart_button,
+        has_next,
+        skip_button,
+        context,
+        key,
+        c,
+        go_next,
+      );
       return;
     }
     let remaining = list_size(queue);
