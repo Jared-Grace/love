@@ -15,6 +15,7 @@ export function app_g_bless_overlay_render(r, npcs) {
   let view_now = property_get(r2, "view_now");
   let r4 = app_g_bless_overlay_render_tap_prayed(r2, view_now, glows, wash);
   let tap_prayed = property_get(r4, "tap_prayed");
+  let pray_person_id = property_get(r4, "pray_person_id");
   let render = property_get(r4, "render");
   let bar = property_get(r4, "bar");
   let world = property_get(r4, "world");
@@ -27,6 +28,7 @@ export function app_g_bless_overlay_render(r, npcs) {
     walking,
     render,
     tap_prayed,
+    pray_person_id,
   };
   return r3;
 }
