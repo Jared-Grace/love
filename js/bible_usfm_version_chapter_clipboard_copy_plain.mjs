@@ -12,6 +12,7 @@ export async function bible_usfm_version_chapter_clipboard_copy_plain(
   ("$plain chapter_number");
   ("One chapter of a named bible put on the clipboard with no verse numbers in it, and handed back as well so that whoever asked can see what they got.");
   ("This is the shape wanted wherever the words are going to be read or sung rather than studied - a slide, a card, a song. A number standing in the middle of a sung line is read as part of the line.");
+  ("WHY THIS BIBLE IS HELD BACK FROM READERS COMES BACK BESIDE THE WORDS, when anything is held against it. A passage meant to be sung is copied once and pasted somewhere this repo will never see again, so the moment of copying is the last moment anybody can be told anything about it at all. The shelf carries translations that hand back the wrong passage in good English, and a caller that copied one and heard nothing would have no way left of finding out.");
   ("Its numbered twin is beside it, and the two differ by one word on purpose. Everything that decides how the passage looks is settled once, in what they both call, so the two cannot come to disagree about where a line breaks.");
   let text = await bible_usfm_version_chapter_paragraphed_text(
     version,
