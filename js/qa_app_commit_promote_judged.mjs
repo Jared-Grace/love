@@ -1,7 +1,8 @@
-import { property_get } from "./property_get.mjs";
 import { qa_app_commit_gate_run_at } from "./qa_app_commit_gate_run_at.mjs";
-import { qa_app_commit_promote } from "./qa_app_commit_promote.mjs";
+import { property_get } from "./property_get.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
+import { qa_app_e2e_happy_run } from "./qa_app_e2e_happy_run.mjs";
+import { qa_app_commit_promote } from "./qa_app_commit_promote.mjs";
 export async function qa_app_commit_promote_judged(search, commit) {
   "$plain search";
   "$plain commit";
@@ -15,9 +16,13 @@ export async function qa_app_commit_promote_judged(search, commit) {
   true_is_assert_json(deployable, judged);
   let filed = property_get(judged, "filed");
   true_is_assert_json(filed, judged);
+  ("Before anything is put where the sending reads from, the app is walked the whole way through as somebody who gets every question right. Every gate there is reads code without ever opening a page, so a page that opens and cannot be used passes all of them: the replacing game drew every symbol as one no rule could touch, and so could not be played at all, for nine days with nothing red. An app with no walk of its own goes straight past.");
+  ("What is walked is the copy in the folder people are working in, and not the pieces built out of the commit just below. Those pieces are built into a folder nothing serves, so there is no page there to open. So this proves the working folder plays rather than proving the commit does - which is the weaker of the two claims, and worth nearly all of the stronger one, because a break of this kind sits in the working folder for days before anybody sends anything.");
+  let app_name = property_get(judged, "app");
+  await qa_app_e2e_happy_run(app_name);
   let hashes = await qa_app_commit_promote(search, commit);
   let r = {
-    app: property_get(judged, "app"),
+    app: app_name,
     commit,
     hashes,
   };
