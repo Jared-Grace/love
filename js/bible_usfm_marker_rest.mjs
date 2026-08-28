@@ -12,6 +12,8 @@ export function bible_usfm_marker_rest(line) {
   ("One line of usfm split into the mark that opens it and everything that mark carries.");
   ("A line's first mark is the one that says what kind of line it is - a paragraph, a step of poetry, a heading, a break - and it is the only mark on the line that means anything about layout. Every other mark on the line is about a word inside it.");
   ("A line opening with no mark at all is answered with an empty mark rather than refused, because the caller has to lay that line out too and an empty mark is exactly what it means: a line that says nothing about itself and is therefore just more of the line above.");
+  ("THE VERSE MARK IS NOT ONE OF THESE, and it is the one mark that opens a line and says nothing whatever about how the line is set. Two of the four bibles on this disk open a line with it thirty-eight thousand times, and answering it as the line kind was wrong twice over: the line lost the step or the paragraph it should have inherited from the line above, and the number went out of reach of the one reader that decides whether a number is wanted, so it stood in the words whether it was asked for or not.");
+  ("So a line opening with the verse mark is answered as a line that says nothing about itself, with the mark left standing in what it carries for whoever wants the number. The berean never writes a line that way, which is why nothing was noticed until a second printing was put on the shelf.");
   let marked = text_starts_with(line, "\\");
   if (not(marked)) {
     let unmarked = {
