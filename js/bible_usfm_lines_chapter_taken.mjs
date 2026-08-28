@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
@@ -19,8 +20,7 @@ export function bible_usfm_lines_chapter_taken(lines, chapter_number) {
   for (let line of lines) {
     let trimmed = text_trim(line);
     let split = bible_usfm_marker_rest(trimmed);
-    let marker = property_get(split, "marker");
-    let chaptered = equal(marker, "c");
+    let chaptered = property_equals(split, "marker", "c");
     if (chaptered) {
       let rest = property_get(split, "rest");
       let number = text_split_first(rest, " ");
