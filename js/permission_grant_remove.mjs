@@ -15,6 +15,7 @@ export async function permission_grant_remove(unaliased) {
       name: unaliased,
       removed: false,
       names: names.length,
+      allow: null,
     };
     return unknown;
   }
