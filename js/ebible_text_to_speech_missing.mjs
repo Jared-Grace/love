@@ -62,6 +62,8 @@ export async function ebible_text_to_speech_missing(
       chapters_recorded_now: 0,
       chapters_left: missing.length,
       manifests: [],
+      first: null,
+      last: null,
     };
     return nothing_taken;
   }
