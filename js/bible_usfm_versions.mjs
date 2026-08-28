@@ -10,6 +10,12 @@ export function bible_usfm_versions() {
       folder: "bsb_usfm",
       licence: "",
     },
+    webu: {
+      name: "World English Bible, updated",
+      shelf: "ebible",
+      folder: "engwebu",
+      licence: "",
+    },
     ult: {
       name: "unfoldingWord Literal Text",
       shelf: "door43",
