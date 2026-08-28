@@ -1,21 +1,20 @@
-import { js_function_forwarding_removed_expression } from "./js_function_forwarding_removed_expression.mjs";
-import { js_function_forwarding_removed_holder } from "./js_function_forwarding_removed_holder.mjs";
-import { js_function_forwarding_removed_name } from "./js_function_forwarding_removed_name.mjs";
-import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
-import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
-import { js_function_forwarding_removed_callee } from "./js_function_forwarding_removed_callee.mjs";
-import { js_function_answer_dropped_is } from "./js_function_answer_dropped_is.mjs";
-import { function_async_is } from "./function_async_is.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_forwarding_target } from "./js_function_forwarding_target.mjs";
 import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal_not } from "./equal_not.mjs";
-import { js_name_variable_declared_is } from "./js_name_variable_declared_is.mjs";
+import { js_function_forwarding_removed_ready } from "./js_function_forwarding_removed_ready.mjs";
 import { js_call_argument_site } from "./js_call_argument_site.mjs";
+import { js_function_forwarding_removed_callee } from "./js_function_forwarding_removed_callee.mjs";
 import { not } from "./not.mjs";
+import { js_function_forwarding_removed_sizes } from "./js_function_forwarding_removed_sizes.mjs";
+import { js_function_forwarding_removed_agreed_is } from "./js_function_forwarding_removed_agreed_is.mjs";
+import { js_function_forwarding_removed_holder } from "./js_function_forwarding_removed_holder.mjs";
+import { js_function_forwarding_removed_expression } from "./js_function_forwarding_removed_expression.mjs";
 import { object_replace } from "./object_replace.mjs";
 export async function js_function_forwarding_removed(ast, node, stack) {
   "Drops this one function when every condition for dropping it holds, and leaves the code exactly as it stands when any one of them does not.";
+  "THE CONDITIONS COME IN TWO READINGS AND THE FIRST IS ASKED NEXT DOOR. What can be asked of the function on its own - that it hands back what the one it calls hands back, that it waits if that one waits, that its name is read in exactly one other place - is settled there, and nothing back from it means leave the code alone. What is left here is the second reading: where the name is handed over, and whether that place will take the call in its stead.";
+  arguments_assert(arguments, 3);
   let target = js_function_forwarding_target(node);
   if (equal(target, null)) {
     return;
@@ -24,28 +23,8 @@ export async function js_function_forwarding_removed(ast, node, stack) {
   if (equal(id, null)) {
     return;
   }
-  ("this one hands back nothing while the one it calls hands back an answer, so they are not the same function");
-  let dropped_is = js_function_answer_dropped_is(node);
-  if (dropped_is) {
-    return;
-  }
-  ("this one waits, so it hands back a promise. the one it calls has to wait as well for the two to hand back the same kind of thing");
-  let waits_is = property_get(node, "async");
-  if (waits_is) {
-    let target_waits_is = await function_async_is(target);
-    if (not(target_waits_is)) {
-      return;
-    }
-  }
-  let r2 = js_function_forwarding_removed_name(id, ast);
-  let name = property_get(r2, "name");
-  let mentions = property_get(r2, "mentions");
-  if (equal_not(mentions, 2)) {
-    return;
-  }
-  ("a name given to a variable holds nothing until its line has run, and the place this would be handed over may sit above that line");
-  let variable_is = js_name_variable_declared_is(ast, target);
-  if (variable_is) {
+  let name = await js_function_forwarding_removed_ready(ast, node, target, id);
+  if (equal(name, null)) {
     return;
   }
   let site = js_call_argument_site(ast, name);
