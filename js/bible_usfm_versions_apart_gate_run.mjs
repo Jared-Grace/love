@@ -1,11 +1,7 @@
+import { property_get } from "./property_get.mjs";
+import { bible_usfm_versions_apart_gate_run_shelf } from "./bible_usfm_versions_apart_gate_run_shelf.mjs";
 import { bible_usfm_versions_apart_gate_run_walked } from "./bible_usfm_versions_apart_gate_run_walked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_usfm_versions_verses_apart } from "./bible_usfm_versions_verses_apart.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_usfm_versions_apart_gate_run() {
   arguments_assert(arguments, 0);
@@ -15,16 +11,10 @@ export async function bible_usfm_versions_apart_gate_run() {
   ("TWO THINGS FAIL IT, AND THE FIRST IS THE ONE IT IS FOR. A bible standing apart with no allowance written for it is a bible nobody has read at the verses where it differs - a new download, or one repackaged under the same name - and unread is exactly the state in which the wrong passage gets quoted. A bible standing apart more often than its allowance has moved under a name somebody already checked, which is the same thing wearing a face that is trusted.");
   ("STANDING APART LESS OFTEN NEVER FAILS AND IS REPORTED INSTEAD. The counting can only get better, a bible on the disk does not improve, and a check that failed on good news would teach the next person to raise the number rather than read the verse.");
   ("IT REFUSES TO PASS WITHOUT HAVING LOOKED AT ANYTHING, WHICH IS THE WAY A CHECK LIKE THIS REALLY DIES. A shelf read a new way, a folder moved, a download half unpacked: any of them leaves the sweep measuring nothing and every bible standing apart at nothing, which is indistinguishable from a clean shelf in the only number that comes out. So how many verses were measured and how many bibles were reached are asserted against the shelf itself before any allowance is consulted.");
-  let found = await bible_usfm_versions_verses_apart();
-  let verses = property_get(found, "verses");
-  let rows = property_get(found, "rows");
-  let measured_any = greater_than(verses, 0);
-  assert_json(measured_any, {
-    verses,
-    hint: "the sweep measured no verses at all, so every bible came out standing apart at nothing for want of anything to compare; the shelf on this disk is the thing to look at, not this list",
-  });
-  let versions = bible_usfm_versions();
-  let shelf = object_property_names(versions);
+  let r = await bible_usfm_versions_apart_gate_run_shelf();
+  let shelf = property_get(r, "shelf");
+  let rows = property_get(r, "rows");
+  let verses = property_get(r, "verses");
   let versions_read = list_size(rows);
   let shelf_size = list_size(shelf);
   let walked = bible_usfm_versions_apart_gate_run_walked(
