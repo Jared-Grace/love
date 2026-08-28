@@ -1,10 +1,10 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_commit_named_all } from "./qa_commit_named_all.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
 import { qa_commit_named_behind_ceiling } from "./qa_commit_named_behind_ceiling.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { git_commit_behind_count } from "./git_commit_behind_count.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -33,8 +33,7 @@ export async function qa_commit_named_said_expire() {
   for (let commit of object_property_names(remembered)) {
     let entry = property_get(remembered, commit);
     kept[commit] = entry;
-    let spoke = property_get_or_null(entry, "said");
-    let unspoken = null_is(spoke);
+    let unspoken = property_null_is(entry, "said");
     if (unspoken) {
       continue;
     }
