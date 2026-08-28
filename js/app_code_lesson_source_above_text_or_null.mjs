@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse } from "./js_parse.mjs";
 import { js_list_type } from "./js_list_type.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { js_unparse } from "./js_unparse.mjs";
 export function app_code_lesson_source_above_text_or_null(source) {
   arguments_assert(arguments, 1);
@@ -30,8 +30,7 @@ export function app_code_lesson_source_above_text_or_null(source) {
     return null;
   }
   let type = property_get(value, "type");
-  let named = equal(type, "Identifier");
-  let not_named = not(named);
+  let not_named = equal_not(type, "Identifier");
   if (not_named) {
     let written = js_unparse(value);
     return written;
