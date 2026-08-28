@@ -62,8 +62,8 @@ export function app_g_bless_finished_person_bloom(div_map, person) {
   });
   html_reflow_force(div_map);
   html_style_assign(bloom, {
-    transition: "transform 0.34s ease-out, opacity 0.34s ease-out",
-    transform: "scale(3.4)",
+    transition: "transform 0.34s ease-out 0.12s, opacity 0.34s ease-out 0.12s",
+    transform: "scale(5.5)",
     opacity: "0.95",
   });
   return bloom;
