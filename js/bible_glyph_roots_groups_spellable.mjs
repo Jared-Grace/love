@@ -16,6 +16,7 @@ export function bible_glyph_roots_groups_spellable() {
   "For each group of pictures the tables give a meaning to, the seated words that end in its first picture and the seated words that begin with its second - which together are every way that group can be spelled by standing two ordinary words side by side.";
   "IT ASKS THE QUESTION BEFORE A CHAPTER EXISTS RATHER THAN AFTER. The reading over the written chapters says how many of these misreadings have already been authored, which is the right question to gate on and the wrong one to author by: it can only ever answer about wording that is already committed, and by then the repair costs a rewrite. This answers what the SEATING makes possible, so it is knowable the day a group is seated and long before anybody writes the verse that trips it.";
   "IT IS NOT A FAULT LIST AND MUST NOT BE READ AS ONE. Every pair here is two correct words correctly seated; nothing is wrong with any of them. What the answer says is where an author has to keep two words apart, or reach for a different wording, and that is a thing to know rather than a thing to fix.";
+  "IT HELD A GATE UNTIL 2026-08-27 AND NOW HOLDS NONE. The gate refused any group whose two halves could both be reached by ordinary seated words, which is what this reading finds. It was retired when the word gap became a full picture wide, because at that width a group is separated from its neighbours by exactly the same signal every other word boundary in this Bible is separated by, and a rule that trusted the gap everywhere except here was not a rule about safety. The reading survives its gate because what it says is still true and still worth knowing before an author writes the verse.";
   "IT COUNTS BY TESTAMENT because a Strong's number belongs to one, so two words that could stand side by side have to come from the same table. Counting across the two would invent hazards nobody can write, and inventing hazards is how a warning list gets ignored.";
   "A SEATED GROUP COUNTS ON ITS OUTER MARKS, the same way a written word does. A word drawn as several pictures ends in its last one and begins with its first, and the pictures in the middle are not next to the gap at all - so a group seated on a word can spell a further group with its neighbour just as a single picture can.";
   arguments_assert(arguments, 0);
@@ -54,9 +55,9 @@ export function bible_glyph_roots_groups_spellable() {
       if (neither) {
         continue;
       }
-      let left3 = list_size(before);
+      let left = list_size(before);
       let right = list_size(after);
-      let ways = multiply(left3, right);
+      let ways = multiply(left, right);
       list_add(rows, {
         group,
         testament_name,
