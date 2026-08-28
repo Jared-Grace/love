@@ -1,3 +1,4 @@
+import { app_g_bless_prayer_skipped_is } from "./app_g_bless_prayer_skipped_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
