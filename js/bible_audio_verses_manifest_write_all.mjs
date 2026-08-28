@@ -6,7 +6,6 @@ import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 export async function bible_audio_verses_manifest_write_all() {
@@ -44,8 +43,7 @@ export async function bible_audio_verses_manifest_write_all() {
       list_add(recut, row);
       return;
     }
-    let unmatched = property_get(row, "unmatched");
-    let matches = equal(unmatched, 0);
+    let matches = property_equals(row, "unmatched", 0);
     if (matches) {
       clean = add(clean, 1);
       return;
