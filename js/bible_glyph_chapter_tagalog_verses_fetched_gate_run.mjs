@@ -15,7 +15,7 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
   ("THE VERSES THEMSELVES ARE COMPARED AND NOT HOW MANY THERE ARE. Two chapters of the same length are common, and a check on the counts alone would pass a wiring that handed back a different chapter's Tagalog under the asked-for name - which is the one failure that looks right on the page.");
   ("The count of chapters asked for travels out, because nothing wrong is also what this would say on the day its sweep stopped visiting anything.");
   let references = bible_glyph_chapter_references();
-  let wrong = [];
+  let wrong = []; let carrying = [];
   for (let chapter of references) {
     let chapter_code = chapter.chapter_code;
     let held = bible_glyph_chapter_tagalog_verses(chapter_code);
