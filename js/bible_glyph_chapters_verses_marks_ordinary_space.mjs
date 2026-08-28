@@ -32,7 +32,7 @@ export function bible_glyph_chapters_verses_marks_ordinary_space() {
       let words = property_get(verse, "words");
       let drawn = bible_glyph_verse_draw(words, lookup);
       verses_drawn = verses_drawn + 1;
-      let found = bible_glyph_text_marks_ordinary_space_is(drawn);
+      let found = bible_glyph_text_marks_ordinary_space_is(drawn, lookup);
       if (found) {
         list_add(offenders, {
           chapter_code,
