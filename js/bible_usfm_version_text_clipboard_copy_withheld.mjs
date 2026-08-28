@@ -10,6 +10,7 @@ export async function bible_usfm_version_text_clipboard_copy_withheld(
   "Writing put on the clipboard and handed back as well, and beside it the reason the bible it came from is held back from readers, where there is one.";
   "THE WRITING IS HANDED BACK AND NOT ONLY COPIED, because a clipboard cannot be read back to check. A command that copies and says nothing is indistinguishable from one that copied nothing at all.";
   "The warning travels with the copy rather than being left on a list somewhere. A passage is copied once and pasted somewhere this repo will never see again, so the moment of copying is the last moment anybody can be told anything about it at all, and the shelf carries translations that hand back the wrong passage in good English.";
+  "All three copy commands end here, so whether the warning comes back beside the words is settled once rather than three times that can come to disagree. Each of them carried its own copy of this and said so in its own account, which is exactly the arrangement where one gets a fix the other two never hear about.";
   arguments_assert(arguments, 2);
   await clipboard_copy(text);
   let withheld = bible_usfm_version_withheld_why_or_null(version);
