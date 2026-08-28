@@ -28,8 +28,8 @@ export async function bible_usfm_version_chapter_clipboard_copy_plain_whitespace
   await clipboard_copy(text);
   let withheld = bible_usfm_version_withheld_why_or_null(version);
   let copied = await bible_usfm_version_text_clipboard_copy_withheld(
-    text2,
-    version2,
+    text,
+    version,
   );
   return copied;
 }
