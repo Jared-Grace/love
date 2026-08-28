@@ -1,3 +1,4 @@
+import { app_g_bless_camera_size_set } from "./app_g_bless_camera_size_set.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
