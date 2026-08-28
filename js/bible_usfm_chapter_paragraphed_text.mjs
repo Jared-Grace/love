@@ -1,3 +1,4 @@
+import { bible_usfm_lines_lone_markers_joined } from "./bible_usfm_lines_lone_markers_joined.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { usfm_continuation_lines_joined } from "./usfm_continuation_lines_joined.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -21,7 +22,8 @@ export function bible_usfm_chapter_paragraphed_text(
   let joined = usfm_continuation_lines_joined(usfm);
   let lines = text_split_newline(joined);
   let chapter_lines = bible_usfm_lines_chapter_taken(lines, chapter_number);
-  let laid_out = bible_usfm_lines_laid_out(chapter_lines, verse_numbers_shown);
+  let usfm_lines = bible_usfm_lines_lone_markers_joined(chapter_lines);
+  let laid_out = bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown);
   let text = list_join_newline(laid_out);
   let trimmed = text_trim(text);
   return trimmed;
