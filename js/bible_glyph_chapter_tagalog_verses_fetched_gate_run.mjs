@@ -20,7 +20,7 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
     let chapter_code = chapter.chapter_code;
     let held = bible_glyph_chapter_tagalog_verses(chapter_code);
     let sent = await bible_glyph_chapter_tagalog_verses_fetched(chapter_code);
-    let same = json_equal(held, sent);
+    let carried = list_empty_not_is(held); if (carried) { list_add(carrying, chapter_code); } let same = json_equal(held, sent);
     if (same) {
       continue;
     }
