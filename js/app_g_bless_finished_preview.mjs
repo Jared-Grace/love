@@ -90,7 +90,18 @@ export async function app_g_bless_finished_preview() {
     ("screen deliberately does not run - nobody walks here, so there is nothing for a light to");
     ("be carried by. What is being judged here is the house.");
     let nobody = [];
-    await app_g_bless_finished(r, tiles, nobody, line, ground_show);
+    ("Nothing is held back on the faces here, so letting them go has nothing to do - but the");
+    ("celebration asks for it either way rather than checking, so it is given something safe");
+    ("to call.");
+    function faces_show() {}
+    await app_g_bless_finished(
+      r,
+      tiles,
+      nobody,
+      line,
+      ground_show,
+      faces_show,
+    );
   }
   let strip = html_div(cover);
   html_style_assign(strip, {
