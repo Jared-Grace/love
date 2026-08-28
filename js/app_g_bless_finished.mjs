@@ -76,9 +76,9 @@ export async function app_g_bless_finished(
     ground_show();
     ("The camera is brought back in HERE when there was no house to go to, because the face");
     ("half leaves it standing wherever it had to stand to hold everybody and no longer puts");
-    ("it back itself. When a house follows, that same journey is the house s own arrival and");
-    ("is made once; when nothing follows, there is nobody to make it and the player would be");
-    ("left looking at the street from a distance they never chose.");
+    ("it back itself. When a house follows, that same journey is how the house is arrived at,");
+    ("so it is made once; when nothing follows there is nobody to make it, and the player");
+    ("would be left looking at the street from a distance they never chose.");
     await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
   }
   let player = property_get(world, "player");
