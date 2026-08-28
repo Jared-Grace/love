@@ -41,7 +41,7 @@ export async function app_emoji_bible(context) {
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
   let written = bible_glyph_chapters();
-  let chapters = bible_glyph_chapters_canon_order(chapters2);
+  let chapters = bible_glyph_chapters_canon_order(written);
   let chosen = app_emoji_bible_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
   if (index_shown) {
