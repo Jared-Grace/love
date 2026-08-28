@@ -1,10 +1,9 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operators_arithmetic } from "./js_operators_arithmetic.mjs";
 import { js_operators_binary } from "./js_operators_binary.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { list_map } from "./list_map.mjs";
 import { js_operator_symbol } from "./js_operator_symbol.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_sort_text_size } from "./list_sort_text_size.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 export function app_code_lesson_operator_symbols_longest_first() {
@@ -14,8 +13,7 @@ export function app_code_lesson_operator_symbols_longest_first() {
   let arithmetic = js_operators_arithmetic();
   let binary = js_operators_binary();
   let both = list_concat(arithmetic, binary);
-  let symbols = list_map(both, js_operator_symbol);
-  let unique = list_unique(symbols);
+  let unique = list_map_unique(both, js_operator_symbol);
   let shortest_first = list_sort_text_size(unique);
   let longest_first = list_reverse(shortest_first);
   return longest_first;
