@@ -8,7 +8,7 @@ export async function app_bible_home(context) {
   await app_shared_bible_home_generic(
     context,
     noop,
-    app_bible_pictures_button,
+    app_bible_pictures_bar_button,
     app_bible,
     true,
   );

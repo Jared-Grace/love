@@ -26,7 +26,7 @@ export function app_g_bless_finished_white(div_map, tiles) {
   ("They are made already see-through and then shown, with the page measured in between.");
   ("Made and shown in one breath the browser only ever measures them once, sees squares");
   ("that were always fully there, and paints them with no fade at all.");
-  let seconds = "0.52s";
+  let seconds = "0.7s";
   let transition = text_combine("opacity ", seconds);
   function tile_square(tile) {
     let square = html_div(div_map);
