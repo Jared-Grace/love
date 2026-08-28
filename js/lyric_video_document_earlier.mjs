@@ -1,3 +1,6 @@
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -18,10 +21,10 @@ export async function lyric_video_document_earlier(
   let seconds = number_from_text(seconds_text);
   let document_before = await file_read_json(path_document);
   function time_earlier(time) {
-    let moved = time - seconds;
-    let held = moved < 0 ? 0 : moved;
+    let moved = subtract(time, seconds);
+    let held = less_than(moved, 0) ? 0 : moved;
     let hundredths = multiply_round(held, 100);
-    let rounded = hundredths / 100;
+    let rounded = divide(hundredths, 100);
     return rounded;
   }
   function line_earlier(line) {
