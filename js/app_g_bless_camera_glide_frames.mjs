@@ -1,9 +1,6 @@
+import { app_g_bless_camera_glide_frames_draw } from "./app_g_bless_camera_glide_frames_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_style_variable_set } from "./html_style_variable_set.mjs";
-import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
-import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
@@ -54,13 +51,6 @@ export function app_g_bless_camera_glide_frames(
   let start = null;
   function animate(settled) {
     let done = false;
-    function draw(value) {
-      let size = text_combine_multiple([value, "px"]);
-      html_style_variable_set(container_map, variable, size);
-      let target = html_scroll_center_target(focus, player_img_c, container);
-      container_e.scrollLeft = property_get(target, "left");
-      container_e.scrollTop = property_get(target, "top");
-    }
     function finish() {
       if (done) {
         return;
@@ -89,7 +79,15 @@ export function app_g_bless_camera_glide_frames(
       let span = subtract(to, from);
       let right = multiply(span, ease);
       let value = add(from, right);
-      draw(value);
+      app_g_bless_camera_glide_frames_draw(
+        value,
+        container_map,
+        variable,
+        focus,
+        player_img_c,
+        container,
+        container_e,
+      );
       if (less_than(fraction, 1)) {
         requestAnimationFrame(step);
         return;
