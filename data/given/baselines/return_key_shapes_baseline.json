@@ -246,13 +246,6 @@
     "answer,saved",
     "file_path,lasting,saved"
    ]
-  },
-  {
-   "name": "youtube_video_title_write_if_titled",
-   "shapes": [
-    "title_now,titled,video_id,written",
-    "title_after,titled,video_id,written"
-   ]
   }
  ]
 }
