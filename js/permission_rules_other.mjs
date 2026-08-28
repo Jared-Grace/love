@@ -117,6 +117,8 @@ export function permission_rules_other() {
     "WebFetch(domain:find.bible)",
     "WebFetch(domain:crosswire.org)",
     "WebFetch(domain:www.youtube.com)",
+    "WebFetch(domain:commons.wikimedia.org)",
+    "WebFetch(domain:docs.bfl.ai)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",
