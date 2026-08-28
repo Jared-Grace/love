@@ -32,6 +32,7 @@ export async function ebible_languages_licences_gate_run() {
     let r2 = {
       checked: 0,
       mounted,
+      offenders: null,
     };
     return r2;
   }
