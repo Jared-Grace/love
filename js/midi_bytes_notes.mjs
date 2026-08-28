@@ -1,9 +1,8 @@
-import { round } from "./round.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { less_than } from "./less_than.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { midi_bytes_header } from "./midi_bytes_header.mjs";
 import { midi_bytes_track_events } from "./midi_bytes_track_events.mjs";
 import { midi_events_notes } from "./midi_events_notes.mjs";
@@ -46,8 +45,7 @@ export function midi_bytes_notes(bytes) {
     });
     track_index = track_index + 1;
   }
-  let n = divide(60000000, quarter_microseconds);
-  let beats_per_minute = round(n);
+  let beats_per_minute = divide_round(60000000, quarter_microseconds);
   let r = {
     division: header.division,
     beats_per_minute,
