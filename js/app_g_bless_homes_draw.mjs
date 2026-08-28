@@ -17,6 +17,13 @@ export function app_g_bless_homes_draw(homes, tiles) {
   arguments_assert(arguments, 2);
   ("Draws a given patch of prayed-for ground into a given layer, and nothing else. What is");
   ("lit is decided by whoever calls; this is only the picture of it.");
+  ("Hands back the single wrapper everything it drew hangs from, or nothing at all when");
+  ("there was nothing to draw. That wrapper is the whole house as one thing, which is what");
+  ("a caller wanting to fade a house up has to be given: made see-through one square at a");
+  ("time the squares would show through each other along their shared walls and the house");
+  ("would come up ruled into blocks. It is also the piece carrying the depth the house");
+  ("stands at, so fading it leaves the house exactly where it belongs in the street the");
+  ("whole way in.");
   ("Split out from the reading of the record so the same house can be drawn TWICE in two");
   ("places: once on the street, where it stays, and once on a layer of its own that a");
   ("celebration fades up before handing over to the real one. Two spellings of this picture");
@@ -54,7 +61,7 @@ export function app_g_bless_homes_draw(homes, tiles) {
   ("kept ready for it, and at the start of a game there is not one square to spill from.");
   let none = list_empty_is(tiles);
   if (none) {
-    return;
+    return null;
   }
   let color = app_g_bless_color_blessed_home();
   let size = g_img_square_size_css();
@@ -118,4 +125,5 @@ export function app_g_bless_homes_draw(homes, tiles) {
     });
   }
   each(rectangles, rectangle_light);
+  return lit;
 }
