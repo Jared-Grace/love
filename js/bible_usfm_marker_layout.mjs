@@ -47,12 +47,12 @@ export function bible_usfm_marker_layout(marker_text) {
     };
     return gap;
   }
-  let digits = ["1", "2", "3", "4", "5"];
+  let depth_digits = ["1", "2", "3", "4", "5"];
   let last = text_last(marker_text);
-  let stepped = list_includes(digits, last);
+  let stepped = list_includes(depth_digits, last);
   let depth = 0;
   if (stepped) {
-    depth = list_index_of(digits, last);
+    depth = list_index_of(depth_digits, last);
   }
   let indent = multiply(2, depth);
   let paragraph_markers = bible_usfm_markers_paragraph();
