@@ -112,6 +112,34 @@ export function bible_usfm_chapter_paragraphed_text_cases() {
       text: "Blessed are those whose way is blameless.",
       why: "the letter names standing over the stanzas of the longest psalm are the translators writing out the hebrew alphabet the acrostic runs on. The acrostic is in the text; the letter names spelled in english are not, so they go. This is the one dropped line whose words are neither english prose nor bookkeeping, and that is exactly what makes it easy to mistake for scripture",
     },
+    {
+      usfm: "\\c 23\n\\q1\n\\v 1 A line\n\\q2 and its answer.\n",
+      chapter_number: "23",
+      verse_numbers_shown: false,
+      text: "A line\n  and its answer.",
+      why: "the same couplet as the first case, written the way the world english bible and the unfoldingWord texts write it - the step on a line of its own and the verse on the next. One answer for both printings is the whole point: the reader below knows nothing about either, because the lone mark is moved down onto the verse before it gets there",
+    },
+    {
+      usfm: "\\c 23\n\\q1\n\\v 1 A line\n\\q2 and its answer.\n",
+      chapter_number: "23",
+      verse_numbers_shown: true,
+      text: "1 A line\n  and its answer.",
+      why: "the number is the half that failed loudest. With the verse mark opening the line it was eaten as the mark that says what kind of line this is, so nothing was left to find when the numbers were asked for and the number stood in the words whether it was wanted or not",
+    },
+    {
+      usfm: "\\c 1\n\\p \\v 1 First.\n\\p\n\\v 2 Second.\n",
+      chapter_number: "1",
+      verse_numbers_shown: true,
+      text: "1 First.\n\n2 Second.",
+      why: "prose says nothing about its breaks except by the mark that opens the line, so a paragraph mark left standing alone is a break lost. Both printings of it come out as the same blank line",
+    },
+    {
+      usfm: "\\c 1\n\\q1 \\v 1 First line.\n\\b\n\\q1\n\\v 2 Second line.\n",
+      chapter_number: "1",
+      verse_numbers_shown: true,
+      text: "1 First line.\n\n2 Second line.",
+      why: "a break carries no words either and must not be moved down onto the verse below it. It is not asking anything of that verse - it is a blank line in its own right, and joining it to what follows would close the gap the printing asked for",
+    },
   ];
   return cases;
 }

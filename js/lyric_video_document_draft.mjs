@@ -75,7 +75,7 @@ export async function lyric_video_document_draft(
     height: 1920,
     font_size: 150,
     passage_font_size: 96,
-    credit_font_size: 72,
+    credit_font_size: 64,
     lines: lines,
   };
   await file_overwrite_json(path_document, document);
