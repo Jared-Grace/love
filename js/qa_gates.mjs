@@ -54,7 +54,7 @@ import { app_music_references_versions_gate_run } from "./app_music_references_v
 import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
 import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
 import { bible_glyph_groups_marks_repeated_gate_run } from "./bible_glyph_groups_marks_repeated_gate_run.mjs";
-import { bible_glyph_chapters_verses_ordinary_space_gate_run } from "./bible_glyph_chapters_verses_ordinary_space_gate_run.mjs";
+import { bible_glyph_chapters_verses_marks_ordinary_space_gate_run } from "./bible_glyph_chapters_verses_marks_ordinary_space_gate_run.mjs";
 import { js_statements_change_cases_gate_run } from "./js_statements_change_cases_gate_run.mjs";
 import { function_name_words_repeated_cases_gate_run } from "./function_name_words_repeated_cases_gate_run.mjs";
 import { g_profiles_balance_next_cases_gate_run } from "./g_profiles_balance_next_cases_gate_run.mjs";
@@ -615,7 +615,7 @@ export function qa_gates() {
     bible_glyph_negation_doubled_gate_run,
     bible_glyph_marks_group_misread_gate_run,
     bible_glyph_groups_marks_repeated_gate_run,
-    bible_glyph_chapters_verses_ordinary_space_gate_run,
+    bible_glyph_chapters_verses_marks_ordinary_space_gate_run,
     bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
