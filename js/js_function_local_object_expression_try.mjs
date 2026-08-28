@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function js_function_local_object_expression_try(function_node, name) {
   arguments_assert(arguments, 2);
@@ -15,13 +15,11 @@ export function js_function_local_object_expression_try(function_node, name) {
   let found = null;
   for (let one of declarators) {
     let id = property_get(one, "id");
-    let id_kind = property_get(id, "type");
-    let plain = equal(id_kind, "Identifier");
+    let plain = property_equals(id, "type", "Identifier");
     if (not(plain)) {
       continue;
     }
-    let spelled = property_get(id, "name");
-    let same = equal(spelled, name);
+    let same = property_equals(id, "name", name);
     if (not(same)) {
       continue;
     }
@@ -33,8 +31,7 @@ export function js_function_local_object_expression_try(function_node, name) {
     if (not(init)) {
       return null;
     }
-    let init_kind = property_get(init, "type");
-    let literal = equal(init_kind, "ObjectExpression");
+    let literal = property_equals(init, "type", "ObjectExpression");
     if (not(literal)) {
       return null;
     }
