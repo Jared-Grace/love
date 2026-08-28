@@ -31,9 +31,11 @@ export function lyric_timing_screen_choose(parent, version_input, chosen) {
     chosen.book_code = book_code;
     chosen.chapter_number = chapter_number;
     html_clear(panel);
-    html_text_set(button, passage_said());
+    let text = passage_said();
+    html_text_set(button, text);
   }
-  let button = app_shared_button(parent, passage_said(), on_change);
+  let text2 = passage_said();
+  let button = app_shared_button(parent, text2, on_change);
   let panel = html_div(parent);
   return button;
 }
