@@ -1,11 +1,10 @@
+import { text_ends_with_not } from "./text_ends_with_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
 import { modulo } from "./modulo.mjs";
 import { equal } from "./equal.mjs";
 import { text_size } from "./text_size.mjs";
 import { less_than } from "./less_than.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { not } from "./not.mjs";
 import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
@@ -23,8 +22,7 @@ export function app_code_lesson_source_code_pieces(source) {
     let quoted = equal(left, 1);
     let a = text_size(piece);
     let short = less_than(a, 29);
-    let module_named = text_ends_with(piece, ".mjs");
-    let right = not(module_named);
+    let right = text_ends_with_not(piece, ".mjs");
     let right2 = and(short, right);
     let take = and(quoted, right2);
     if (take) {
