@@ -5,7 +5,7 @@ import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.m
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
-import { bible_glyph_text_marks_ordinary_space_is } from "./bible_glyph_text_marks_ordinary_space_is.mjs";
+import { bible_glyph_text_space_wrong_positions } from "./bible_glyph_text_space_wrong_positions.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_glyph_chapters_verses_marks_ordinary_space() {
@@ -32,7 +32,7 @@ export function bible_glyph_chapters_verses_marks_ordinary_space() {
       let words = property_get(verse, "words");
       let drawn = bible_glyph_verse_draw(words, lookup);
       verses_drawn = verses_drawn + 1;
-      let found = bible_glyph_text_marks_ordinary_space_is(drawn, lookup);
+      let found = bible_glyph_text_space_wrong_positions(drawn, lookup);
       if (found) {
         list_add(offenders, {
           chapter_code,
