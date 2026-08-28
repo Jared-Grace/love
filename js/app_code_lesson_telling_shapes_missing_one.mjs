@@ -14,9 +14,9 @@ export async function app_code_lesson_telling_shapes_missing_one(
   names,
 ) {
   arguments_assert(arguments, 3);
-  ("the shapes of multi-operator line one lesson's question bank writes and its telling never shows, or null when the telling shows them all.");
-  ("The finer twin of the check that holds operator SYMBOLS against the telling, and the two are held against the same split of the lesson into its halves. Symbols are the coarsest thing that goes wrong this way; a shape is the next thing down, and it catches what symbols cannot: a telling and a bank writing the very same operators, one of them bracketed and the other flat.");
-  ("This is the check the reported fault actually needed. A person read lesson eighty-nine, saw false !== (3 === 3) explained and 2 !== 2 === false asked, and said so. Both lines write === and !== and nothing else, so the symbol check passes them, and the difference a learner is stuck on is the bracket the telling never took off.");
+  ("the ways of shaping a line that one lesson's question bank writes and its telling never shows, or null when the telling shows them all.");
+  ("The finer twin of the check that holds operator SYMBOLS against the telling, and the two are held against the same split of the lesson into its halves. Symbols are the coarsest thing that goes wrong this way; a shape is the next thing down, and it catches what symbols cannot: a telling and a bank writing the very same operators, one of them bracketed and the other flat, or the value on one side and then the other.");
+  ("This is the check the reported fault actually needed. A person read lesson eighty-nine, saw false !== (3 === 3) explained and 2 !== 2 === false asked, and named the two differences themselves: the brackets had gone, and the false had moved to the other side. Both lines write === and !== and nothing else, so the symbol check passes them, and the whole of what the learner is stuck on is what the symbol check cannot see.");
   ("A telling that comes out with no shapes at all is left in the answer rather than dropped, for the same reason the symbol check leaves it: a lesson counted as clean because nothing was found to check is the one failure that would make the whole check worthless. The caller separates them.");
   let sides = await app_code_lesson_family_telling_bank(root, roots, names);
   let telling_names = property_get(sides, "telling");

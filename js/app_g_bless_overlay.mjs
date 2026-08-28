@@ -1,3 +1,4 @@
+import { app_g_bless_household_first_pray } from "./app_g_bless_household_first_pray.mjs";
 import { not } from "./not.mjs";
 import { app_g_bless_dev_entry } from "./app_g_bless_dev_entry.mjs";
 import { app_g_bless_dev_if } from "./app_g_bless_dev_if.mjs";
@@ -61,6 +62,15 @@ export async function app_g_bless_overlay(container_map) {
   let skipped = or(asked, drawn);
   if (skipped) {
     begun();
+    ("One address asks for the third prayer of the first household to be said as the street");
+    ("appears, and it is said HERE, after the street has begun and never before it. What the");
+    ("prayer sets off is watched rather than counted - lights on faces, the camera pulling");
+    ("back, the ground turning - and none of that can be seen on a street that has not been");
+    ("drawn yet.");
+    ("Inside the skipped branch on purpose, because that address is one of the openings and");
+    ("an opening is exactly a visit that came past the door. Written outside, it would have");
+    ("to ask a second time whether the door was up.");
+    app_g_bless_household_first_pray(r);
     return transfer;
   }
   app_g_bless_transfer_overlay(transfer, begun);
