@@ -1,3 +1,4 @@
+import { app_g_bless_overlay_render_tap_prayed_person_id_is } from "./app_g_bless_overlay_render_tap_prayed_person_id_is.mjs";
 import { app_g_bless_overlay_render_tap_prayed_render_ground } from "./app_g_bless_overlay_render_tap_prayed_render_ground.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,7 +17,6 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_g_bless_notice } from "./app_g_bless_notice.mjs";
 import { app_g_bless_finished } from "./app_g_bless_finished.mjs";
-import { equal } from "./equal.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { not } from "./not.mjs";
 import { bless_view_person_at } from "./bless_view_person_at.mjs";
@@ -186,9 +186,8 @@ export function app_g_bless_overlay_render_tap_prayed(
     "and it is behind the same dev gate as every other opening.";
     let everyone = bless_view_people(view_everyone);
     function person_id_is(someone) {
-      let place = bless_person_place(someone, "person");
-      let is = equal(place, id);
-      return is;
+      let r3 = app_g_bless_overlay_render_tap_prayed_person_id_is(someone, id);
+      return r3;
     }
     let person = list_find_or_null(everyone, person_id_is);
     if (not(person)) {
