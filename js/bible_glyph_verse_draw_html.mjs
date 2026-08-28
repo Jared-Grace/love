@@ -24,7 +24,7 @@ export function bible_glyph_verse_draw_html(parent, words, lookup) {
   let first = true;
   for (let word of words) {
     if (not(first)) {
-      let text = bible_glyph_word_pair_separator(word_before, word);
+      let text = bible_glyph_word_pair_separator(word_before, word, lookup);
       html_span_text_content(parent, text);
     }
     first = false;
