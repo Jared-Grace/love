@@ -1,14 +1,8 @@
+import { app_code_lesson_family_telling_bank_itself } from "./app_code_lesson_family_telling_bank_itself.mjs";
 import { app_code_lesson_family_telling_bank_asked } from "./app_code_lesson_family_telling_bank_asked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_family_file_names } from "./app_code_lesson_family_file_names.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
-import { text_ends_with_any } from "./text_ends_with_any.mjs";
-import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { text_includes } from "./text_includes.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { or } from "./or.mjs";
 export async function app_code_lesson_family_telling_bank(root, roots, names) {
   arguments_assert(arguments, 3);
   ("the files of one lesson split into the two halves a learner meets them as: the TELLING, which is everything drawn on the screen before the first question, and the BANK, which is everything the questions are made out of.");
@@ -20,25 +14,12 @@ export async function app_code_lesson_family_telling_bank(root, roots, names) {
   let family = app_code_lesson_family_file_names(root, roots, names);
   let source = await repo_love_function_read(root);
   let counted = [];
-  for (let name of family) {
-    let aside = text_ends_with_any(name, ["_title_name_id", "_gate_run"]);
-    let keep = not(aside);
-    if (keep) {
-      list_add(counted, name);
-    }
-  }
-  let telling = [];
-  for (let name of counted) {
-    let itself = equal(name, root);
-    let named = text_ends_with_any(name, ["_above", "_intro"]);
-    let part = text_combine("above: ", name);
-    let handed = text_includes(source, part);
-    let right = or(named, handed);
-    let tells = or(itself, right);
-    if (tells) {
-      list_add(telling, name);
-    }
-  }
+  let telling = app_code_lesson_family_telling_bank_itself(
+    family,
+    counted,
+    root,
+    source,
+  );
   let bank = await app_code_lesson_family_telling_bank_asked(
     source,
     counted,
