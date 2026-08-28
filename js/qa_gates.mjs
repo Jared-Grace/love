@@ -624,6 +624,7 @@ export function qa_gates() {
     bible_glyph_groups_marks_artwork_absent_gate_run,
     bible_glyph_chapters_verses_space_wrong_gate_run,
     bible_glyph_chapters_book_codes_unknown_gate_run,
+    bible_glyph_chapter_codes_gate_run,
     bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
     bible_verse_end_is_cases_gate_run,
