@@ -1,7 +1,6 @@
 import { bible_usfm_version_text_clipboard_copy_withheld } from "./bible_usfm_version_text_clipboard_copy_withheld.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_chapter_paragraphed_text } from "./bible_usfm_version_chapter_paragraphed_text.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
 export async function bible_usfm_version_chapter_clipboard_copy_numbered(
   version,
   book_code,
@@ -21,7 +20,6 @@ export async function bible_usfm_version_chapter_clipboard_copy_numbered(
     chapter_number,
     true,
   );
-  await clipboard_copy(text);
   let copied = await bible_usfm_version_text_clipboard_copy_withheld(
     text,
     version,
