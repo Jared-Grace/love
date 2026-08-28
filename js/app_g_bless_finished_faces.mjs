@@ -100,6 +100,16 @@ export async function app_g_bless_finished_faces(
   await sleep(860);
   each(blooms, app_g_bless_finished_person_bloom_fade);
   app_g_bless_finished_people_fade(bursts);
-  await sleep(820);
-  await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
+  ("The wait here outlasts the fade rather than matching it, because the lights are not");
+  ("only fading, they are being taken off the map - each on a clock of its own a little");
+  ("after its fade. What comes next moves the camera, and a light still hanging on a face");
+  ("travels with that face; so a light left over does not sit quietly out of sight, it");
+  ("rides across the screen while the next thing is trying to begin. Waiting until the");
+  ("map is actually clear is what makes the two halves of this celebration two halves.");
+  await sleep(1000);
+  ("The camera is NOT put back here any more. Whatever happens next has its own place to");
+  ("be - a finished house, or the player - and it knows both where that is and how close");
+  ("in it wants to stand. Put back here first, the screen zoomed in on nothing in");
+  ("particular and then set off again for somewhere else, which is two journeys where the");
+  ("player asked for one.");
 }
