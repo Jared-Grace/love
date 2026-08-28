@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
 import { list_size } from "./list_size.mjs";
@@ -5,7 +6,6 @@ import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
 import { list_unique } from "./list_unique.mjs";
-import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
 export function app_code_lesson_text_line_operator_mix_or_null(text) {
   arguments_assert(arguments, 1);
@@ -26,8 +26,7 @@ export function app_code_lesson_text_line_operator_mix_or_null(text) {
     return null;
   }
   let unique = list_unique(written);
-  let kinds = list_size(unique);
-  let same = equal(kinds, 1);
+  let same = list_size_equal(unique, 1);
   let mix = ternary(same, "operators_same", "operators_mixed");
   return mix;
 }
