@@ -28,7 +28,7 @@ export function bible_usfm_versions_apart_allowed() {
       apart: 4,
       why: "it writes the names of families in the singular where the rest write them in the plural, so at First Chronicles twenty six verse twenty three it says for the Amramite for the Izharite where the rest say the Amramites and the Izharites - the same verse, differing by one letter on every word in it",
     },
-    dbyx: {
+    dby: {
       apart: 1,
       why: "at Acts fourteen verse seven it says announcing the glad tidings where the rest say preached the gospel - the same verse, five words long, and the two ways of saying it happen to share no word at all",
     },
