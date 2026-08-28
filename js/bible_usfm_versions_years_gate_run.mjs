@@ -1,10 +1,9 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_years_sorted } from "./bible_usfm_versions_years_sorted.mjs";
 import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
 import { bible_usfm_versions_years } from "./bible_usfm_versions_years.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -20,8 +19,7 @@ export function bible_usfm_versions_years_gate_run() {
   let years = bible_usfm_versions_years();
   let dated_words = object_property_names(years);
   function shelved_not(word) {
-    let version_record = property_get_or_null(versions, word);
-    let gone = null_is(version_record);
+    let gone = property_null_is(versions, word);
     return gone;
   }
   let stranded = list_filter(dated_words, shelved_not);
