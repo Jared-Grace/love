@@ -1,8 +1,5 @@
 {
  "known": [
-  "WebFetch(domain:docs.github.com)",
-  "WebFetch(domain:neon.com)",
-  "WebFetch(domain:jared-grace.web.app)",
   "Skill(update-config)",
   "Bash(git -C /home/j/a/backup/love/claude_memory add -A)",
   "Bash(git -C /home/j/a/backup/love/claude_memory commit -m ai)",
