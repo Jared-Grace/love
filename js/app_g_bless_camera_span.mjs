@@ -37,7 +37,6 @@ export function app_g_bless_camera_span(
   ("It is written on the box the map sits in rather than on the page, so putting it back is");
   ("writing the ordinary size over it in the same place, and nothing has to remember what");
   ("the page said before.");
-  let variable = g_img_square_size_variable();
   let container = app_shared_game_div_map_container_get(div_map);
   let container_e = html_component_element_get(container);
   let rect = html_bounding_client_rect(player_img_c);
@@ -47,6 +46,6 @@ export function app_g_bless_camera_span(
   let wider = less_than(room, tile_now);
   if (wider) {
     let size = text_combine_multiple([room, "px"]);
-    html_style_variable_set(container_map, variable, size);
+    app_g_bless_camera_size_set(container_map, div_map, size);
   }
 }
