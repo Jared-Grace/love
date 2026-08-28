@@ -1,6 +1,6 @@
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { bible_glyph_chapter_rosetta_lines_fetched } from "./bible_glyph_chapter_rosetta_lines_fetched.mjs";
-import { bible_glyph_chapter_tagalog_verses } from "./bible_glyph_chapter_tagalog_verses.mjs";
+import { bible_glyph_chapter_tagalog_verses_fetched } from "./bible_glyph_chapter_tagalog_verses_fetched.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { null_is } from "./null_is.mjs";
