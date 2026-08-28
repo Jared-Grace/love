@@ -21,7 +21,7 @@ export function text_marker_gaps_closed(text) {
   let word_suffix = new RegExp("([A-Za-z][’'])" + gap + "(" + suffixes + ")(?![A-Za-z])", "g");
   let unsuffixed = unsplit.replace(word_suffix, "$1$2");
   let before_closing = new RegExp(gap + "(?=[,.;:!?)\\]}”’»…])", "g");
-  let leftwards = unsplit.replace(before_closing, "");
+  let leftwards = unsuffixed.replace(before_closing, "");
   let after_opening = new RegExp("(?<=[“(\\[{«])" + gap, "g");
   let rightwards = leftwards.replace(after_opening, "");
   let remaining = new RegExp(gap, "g");
