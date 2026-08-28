@@ -16,8 +16,9 @@ export async function app_g_bless_finished_faces(
   div_map,
   player_img_c,
   people,
+  faces_show,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("Everybody a prayer has just reached, lit together. The camera pulls back far enough to");
   ("hold all of them and goes to the middle of them, and their lights come up one shortly");
   ("after another and then run on side by side.");
@@ -108,6 +109,17 @@ export async function app_g_bless_finished_faces(
   ("long enough to be looked at rather than merely noticed - a celebration over before the");
   ("eye settles on it is one a player will tell you they could not see, and one did.");
   await each_async(people, person_light);
+  ("The quiet gold each of these faces keeps is let go HERE, with every blue light up and");
+  ("none of them yet fading, so it rises underneath the light that earned it. It was held");
+  ("back until after all of this and then simply appeared, which put the mark that REMAINS");
+  ("in front of the player after the thing it remains from was over - the answer arriving");
+  ("in two separate pieces with a gap in between.");
+  ("Underneath, and gradually. Both marks sit on the same few pixels, and that is exactly");
+  ("why the gold may not simply switch on here: what saves it is that the two are no longer");
+  ("the same colour and no longer arrive at the same speed. The blue opens fast and leaves;");
+  ("the gold comes up slowly and stays, and by the time the blue peels away the thing under");
+  ("it has been there long enough to be read as what was left behind.");
+  faces_show();
   ("The last light started one gap before this line was reached, so what remains of its own");
   ("hold is the hold less that gap. Waiting that out here is what lets everything below go");
   ("on knowing every light has been let go.");
