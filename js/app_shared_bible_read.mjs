@@ -28,7 +28,6 @@ export async function app_shared_bible_read(
   chapter_action,
 ) {
   "The whole-chapter reader, shared by every bible app, with two places an app hangs its own thing: one on each verse, and one under the last of them once the chapter is drawn.";
-  " chapter_action";
   "THE CHAPTER HOOK IS HANDED THE CHAPTER RATHER THAN LEFT TO FIND IT, because by the time it runs the chapter may have been reached by following a reference the address never spelled - so the address is not a reliable answer here and the code in hand is.";
   "It is APPENDED after the verse hook rather than put beside it, because a caller hands its arguments over by position: an inserted one would slide the verse hook into the chapter hook's place and every app would go on calling the same names with the wrong jobs.";
   "Both hooks are drawn nothing by an app that wants neither, so a screen that hangs nothing here hangs a function that draws nothing rather than a special case.";
