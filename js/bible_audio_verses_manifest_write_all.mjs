@@ -23,38 +23,27 @@ export async function bible_audio_verses_manifest_write_all() {
   }
   let rows = await list_map_async(recordings, recording_each);
   let empty = [];
-  let clean = 0;
+  let clean = [];
   let stale = [];
   let recut = [];
   let unjudged = [];
+  let buckets = {
+    empty,
+    clean,
+    stale,
+    recut,
+    unjudged,
+  };
   function row_each(row) {
-    let judged = property_get(row, "judged");
-    if (not(judged)) {
-      list_add(unjudged, row);
-      return;
-    }
-    let silent = property_equals(row, "chunks", 0);
-    if (silent) {
-      list_add(empty, row);
-      return;
-    }
-    let lines_up = property_get(row, "aligned");
-    if (not(lines_up)) {
-      list_add(recut, row);
-      return;
-    }
-    let matches = property_equals(row, "unmatched", 0);
-    if (matches) {
-      clean = add(clean, 1);
-      return;
-    }
-    list_add(stale, row);
+    let bucket = bible_audio_recording_bucket(row);
+    let landed = property_get(buckets, bucket);
+    list_add(landed, row);
   }
   each(rows, row_each);
   let report = {
     recordings: rows.length,
     empty: empty.length,
-    clean,
+    clean: clean.length,
     stale: stale.length,
     recut: recut.length,
     unjudged: unjudged.length,
