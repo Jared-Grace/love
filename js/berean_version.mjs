@@ -14,7 +14,7 @@ export function berean_version() {
   let version = {
     bible_folder,
     printing: "3rd printing",
-    fetched: "2026-07-31",
+    fetched: "2026-08-27",
     books_count: 66,
     name: "Berean Standard Bible",
     description: "English Berean Standard Bible",
