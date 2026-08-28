@@ -79,14 +79,21 @@ recording. A Bible translation is a literary work, so the clause does not catch 
 lyric video automatically. It settles nothing in either direction.
 
 **So the rule for this repo: nothing sung uses a share-alike text.** Public domain
-carries no attribution duty, no share-alike and no derivative limit, and thirteen of
-the nineteen bibles on the usfm shelf are already public domain — WEB, KJV, ASV,
-Young's, Darby and Geneva among them. Choosing one of those removes the question
-instead of managing it, and it costs nothing, because that is where a wording meant
-to be sung was going to be picked from anyway. `bible_versions_sung_gate_run` holds
-the rule rather than a reader remembering it: every version a lyric video names must
-be public domain, and the check reads the licence off the shelf rather than off a
-list somebody keeps in step by hand.
+carries no attribution duty, no share-alike and no derivative limit, and sixteen of
+the nineteen bibles on the usfm shelf read as public domain off their publishers'
+own licence pages — Berean, KJV, ASV, Young's, Darby and Geneva among them. Only
+two are share-alike, both from unfoldingWord. So choosing a free wording removes the
+question instead of managing it, and it costs nothing, because that is where a
+wording meant to be sung was going to be picked from anyway.
+
+`bible_versions_sung_gate_run` holds the rule rather than a reader remembering
+it: every lyric video's file name begins with the short word of its translation, and
+that word must be one `bible_usfm_versions_english_public_domain` derives from
+the licence pages. **Not off the shelf's own `licence` field** — that field is a
+printed credit suffix, and it is deliberately empty for a text that asks for nothing,
+so a row somebody adds without filling it in would read exactly like a text nobody
+owns. Silence is not permission here; a translation whose page has not been read is
+unanswered, and unanswered fails.
 
 CC BY (without the share-alike) is unaffected by any of this. It asks for credit and
 nothing else, so it may be sung.
