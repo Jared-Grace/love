@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_codes } from "./ebible_book_codes.mjs";
 import { bible_usfm_versions_book_verses_apart } from "./bible_usfm_versions_book_verses_apart.mjs";
@@ -7,8 +8,6 @@ import { object_property_names } from "./object_property_names.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-import { multiply } from "./multiply.mjs";
-import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
@@ -68,8 +67,7 @@ export async function bible_usfm_versions_verses_apart() {
     if (not(never)) {
       apart = counted;
     }
-    let scaled = multiply(apart, 1000);
-    let per_thousand = divide(scaled, measured);
+    let per_thousand = multiply_divide(apart, 1000, measured);
     let first = property_get_or_null(first_by_version, version);
     let row = {
       version,
