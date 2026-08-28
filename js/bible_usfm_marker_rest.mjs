@@ -17,26 +17,26 @@ export function bible_usfm_marker_rest(line) {
   let marked = text_starts_with(line, "\\");
   if (not(marked)) {
     let unmarked = {
-      marker: "",
+      marker_text: "",
       rest: line,
     };
     return unmarked;
   }
   let after = text_slice_from(line, 1);
-  let marker = text_split_first(after, " ");
-  let versed = equal(marker, "v");
+  let marker_text = text_split_first(after, " ");
+  let versed = equal(marker_text, "v");
   if (versed) {
     let verse = {
-      marker: "",
+      marker_text: "",
       rest: line,
     };
     return verse;
   }
-  let size = text_size(marker);
+  let size = text_size(marker_text);
   let tail = text_slice_from(after, size);
   let rest = text_trim(tail);
   let both = {
-    marker,
+    marker: marker_text,
     rest,
   };
   return both;
