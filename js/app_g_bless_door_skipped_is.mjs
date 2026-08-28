@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
 import { html_hash_name_get } from "./html_hash_name_get.mjs";
-import { bless_hash_street } from "./bless_hash_street.mjs";
+import { bless_hash_street_openings } from "./bless_hash_street_openings.mjs";
+import { list_includes } from "./list_includes.mjs";
 export function app_g_bless_door_skipped_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit is being asked to open straight onto the street, past the prayer at");
@@ -16,11 +16,12 @@ export function app_g_bless_door_skipped_is() {
   ("time and no visit inherits it. A skip that stuck would be a skip a player could fall");
   ("into: the one prayer this game is built around, turned off by a setting nobody knew was");
   ("on. Typed into the address, it cannot outlive the tab it was typed in.");
-  ("It skips only the door. Every prayer over a person is still read and still waited for,");
-  ("because those are what the screen under test actually does - a way past THOSE would be a");
-  ("way of testing the game without the game.");
+  ("Any opening does it, not one particular word. What they have in common is what matters");
+  ("here - each of them hands over the real street to somebody who came to work on it - and");
+  ("a new opening that had to remember to name itself here would be an address that put the");
+  ("door back up for no reason anybody could see.");
   let name = html_hash_name_get();
-  let street = bless_hash_street();
-  let skipped = equal(name, street);
+  let openings = bless_hash_street_openings();
+  let skipped = list_includes(openings, name);
   return skipped;
 }

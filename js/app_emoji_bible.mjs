@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_canon_order } from "./bible_glyph_chapters_canon_order.mjs";
 import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
@@ -39,7 +40,8 @@ export async function app_emoji_bible(context) {
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
-  let chapters = bible_glyph_chapters();
+  let written = bible_glyph_chapters();
+  let chapters = bible_glyph_chapters_canon_order(chapters2);
   let chosen = app_emoji_bible_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
   if (index_shown) {
