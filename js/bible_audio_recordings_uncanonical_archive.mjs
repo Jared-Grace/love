@@ -44,11 +44,11 @@ export async function bible_audio_recordings_uncanonical_archive() {
     let from = path_join([root, bible_folder, chapter_code]);
     let to = path_join([into, chapter_code]);
     await file_move(from, to);
-    let moved = {
+    let put_aside = {
       bible_folder,
       chapter_code,
     };
-    return moved;
+    return put_aside;
   }
   let moved = await list_map_async(unasked, move_each);
   let kept = subtract(recordings.length, moved.length);
