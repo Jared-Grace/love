@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { sword_module_path } from "./sword_module_path.mjs";
 import { sword_module_chapters } from "./sword_module_chapters.mjs";
 import { sword_book_codes } from "./sword_book_codes.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { ebible_books_engbsb } from "./ebible_books_engbsb.mjs";
 import { each } from "./each.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_adder } from "./list_adder.mjs";
 export async function sword_version_books(sword_folder) {
@@ -27,8 +27,7 @@ export async function sword_version_books(sword_folder) {
     let known = ebible_books_engbsb();
     each(known, book);
     function book(entry) {
-      let book_code = property_get(entry, "book_code");
-      let held = list_includes(carried, book_code);
+      let held = property_in_list(entry, "book_code", carried);
       if (not(held)) {
         return;
       }
