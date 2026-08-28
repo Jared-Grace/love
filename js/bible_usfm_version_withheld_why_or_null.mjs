@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_get } from "./bible_usfm_version_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,7 +16,7 @@ export function bible_usfm_version_withheld_why_or_null(version) {
   let withheld = bible_versions_english_choices_withheld();
   let why = list_find_property_get_or(
     withheld,
-    "bible_folder",
+    bible_folder_key(),
     folder,
     "why",
     null,
