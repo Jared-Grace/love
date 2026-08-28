@@ -1,3 +1,4 @@
+import { functions_files_unparseable_gate_run } from "./functions_files_unparseable_gate_run.mjs";
 import { bible_glyph_chapter_codes_gate_run } from "./bible_glyph_chapter_codes_gate_run.mjs";
 import { bible_usfm_versions_years_gate_run } from "./bible_usfm_versions_years_gate_run.mjs";
 import { app_code_lesson_telling_symbols_gate_run } from "./app_code_lesson_telling_symbols_gate_run.mjs";
@@ -889,6 +890,7 @@ export function qa_gates() {
     usfm_markers_removed_cases_gate_run,
     app_code_lesson_telling_symbols_gate_run,
     bible_usfm_versions_years_gate_run,
+    functions_files_unparseable_gate_run,
   ];
   return gates;
 }
