@@ -2264,7 +2264,7 @@ export function permission_grant_names() {
     "bible_glyph_chapters_verse_marks_underdrawn_gate_run",
   );
   let spelled2177 = fn_name("bible_glyph_chapters_collision_marks_gate_run");
-  let spelled2178 = fn_name("bible_berean_chapter_clipboard_copy_plain");
+  let spelled2178 = fn_name("bible_usfm_version_chapter_clipboard_copy_plain");
   let spelled2179 = fn_name("bible_berean_chapter_clipboard_copy_numbered");
   let names = [
     spelled,
