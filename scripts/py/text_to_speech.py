@@ -73,6 +73,32 @@ start queueing for the same cores buy nothing and cost a copy of the
 model in memory each.  Each worker is held to a share of the cores for
 the same reason: three workers each taking all fourteen is fourteen
 cores being asked for forty two.
+
+A WORKER ASKS WHETHER IT MAY START ANOTHER CHAPTER, AND THE ANSWER IS
+READ FRESH EVERY TIME.  How many workers to run is decided once, before
+any of them starts, and on a machine shared with other work that answer
+goes stale while the run is still going.  Measured on 2026-08-28: three
+workers were sized against 7.4 gigabytes free and were still three
+workers three and a half hours later, by which time the kernel was
+killing the browser and the editor to make room.  All five of that
+machine's out-of-memory kills in three and a half days fell inside those
+three and a half hours.  So the count decided at the start is now only a
+ceiling, and each worker re-reads the machine before every chapter.
+
+THE QUESTION IS ASKED BEFORE THE FOLDER IS MADE, WHICH IS WHAT MAKES
+STOPPING SAFE.  A chapter is written piece by piece, so a worker cut off
+in the middle of one leaves a folder holding some of it - and a folder
+that exists counts as recorded, so that chapter would never be asked for
+again.  Stopping between chapters leaves nothing half written, which is
+what lets this run to a deadline and be stopped by the clock without
+losing a chapter every morning.
+
+STOPPING ENDS THE RUN RATHER THAN SLOWING IT DOWN, BECAUSE THE DISK IS
+THE RECORD.  What has been recorded is on disk and what has not is
+asked for again by looking at the disk, so a run that stops early costs
+a relaunch and nothing else.  A worker that paused instead would go on
+holding a third of a gigabyte of model weights while waiting for memory
+to free, which is the opposite of what it was asked to do.
 """
 
 import json
@@ -80,6 +106,7 @@ import multiprocessing
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -96,6 +123,43 @@ COMPRESSION_LEVEL = 0.4
 WORKERS = 3
 
 ENGINE = {}
+
+
+def memory_available_bytes():
+    """How much memory a chapter starting now could actually be given.
+
+    Nothing at all when this machine will not say, which reads as no
+    reason to stop rather than as a reason to stop: a machine that
+    cannot be measured must not be second-guessed.
+    """
+    try:
+        with open("/proc/meminfo", "r", encoding="utf-8") as f:
+            for line in f:
+                if line.startswith("MemAvailable:"):
+                    return int(line.split(":")[1].strip().split(" ")[0]) * 1024
+    except OSError:
+        return None
+    return None
+
+
+def start_refusal(job):
+    """Why this worker must not begin another chapter, or nothing if it may.
+
+    Two grounds, and the clock is asked first because it is the one that
+    is certain.  Memory is read off the machine at this moment and a
+    machine that will not answer is not argued with.
+    """
+    deadline = job.get("deadline")
+    if deadline and time.monotonic() > deadline:
+        return "the time asked for is up"
+    floor = job.get("memory_floor_bytes")
+    if floor:
+        available = memory_available_bytes()
+        if available is not None and available < floor:
+            a = int(available / (1024 * 1024))
+            f = int(floor / (1024 * 1024))
+            return f"only {a} megabytes free, under the {f} asked for"
+    return None
 
 
 def pieces_of(text):
@@ -172,8 +236,14 @@ def job_spoken(job):
     chapter must not take the other workers' finished chapters down with
     it - a run of a whole book is hours long, and the report is how the
     caller finds out which chapters need asking for again.
+
+    Whether it may start at all is asked before the folder is made, so a
+    chapter that is refused leaves no trace of having been considered.
     """
     threads, text, path_output = job["threads"], job["text"], job["path_output"]
+    refusal = start_refusal(job)
+    if refusal:
+        return {"folder": path_output, "spoken": False, "stopped": refusal}
     try:
         engine = engine_ready(threads)
         out_dir = Path(path_output)
@@ -212,8 +282,12 @@ def main():
     jobs.sort(key=lambda job: -len(job["text"]))
     workers = min(int(data.get("workers", WORKERS)), len(jobs))
     threads = max(1, (os.cpu_count() or workers) // max(1, workers))
+    seconds_at_most = data.get("seconds_at_most")
+    deadline = time.monotonic() + seconds_at_most if seconds_at_most else None
     for job in jobs:
         job["threads"] = threads
+        job["deadline"] = deadline
+        job["memory_floor_bytes"] = data.get("memory_floor_bytes")
 
     if workers < 2:
         reports = [job_spoken(job) for job in jobs]
@@ -225,12 +299,17 @@ def main():
         print(json.dumps(reports[0]))
         return
     spoken = [r for r in reports if r.get("spoken") is not False]
+    stopped = [r for r in reports if r.get("stopped")]
+    failed = [r for r in reports if r.get("spoken") is False and not r.get("stopped")]
     print(json.dumps({
         "chapters": len(reports),
         "spoken": len(spoken),
         "workers": workers,
         "threads_each": threads,
-        "failed": [r for r in reports if r.get("spoken") is False],
+        "stopped": len(stopped),
+        "stopped_why": sorted({r["stopped"] for r in stopped}),
+        "not_started": [r["folder"] for r in stopped],
+        "failed": failed,
         "reports": reports,
     }))
 
