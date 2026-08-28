@@ -23,6 +23,7 @@ export async function psalms_video_description_write(video_id) {
       written: false,
       title,
       why: "the name does not name a passage of the Psalms",
+      description_after: null,
     };
     return refused;
   }
@@ -33,6 +34,7 @@ export async function psalms_video_description_write(video_id) {
       written: false,
       title,
       why: "the words already say what the name does",
+      description_after: null,
     };
     return agreed;
   }
@@ -43,6 +45,7 @@ export async function psalms_video_description_write(video_id) {
     written: true,
     title,
     description_after,
+    why: null,
   };
   return r;
 }
