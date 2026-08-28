@@ -1,9 +1,9 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_text_split_at_operators } from "./app_code_lesson_text_split_at_operators.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
@@ -29,8 +29,7 @@ export function app_code_lesson_text_line_operand_kinds(text) {
     return r;
   }
   let split = app_code_lesson_text_split_at_operators(text);
-  let operators = property_get(split, "operators");
-  let none = list_empty_is(operators);
+  let none = property_list_empty_is(split, "operators");
   if (none) {
     let r2 = [];
     return r2;
