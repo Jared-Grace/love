@@ -27,6 +27,7 @@ export async function permission_grants_dead_remove() {
     let clean = {
       dead: [],
       names: names.length,
+      allow: null,
     };
     return clean;
   }
