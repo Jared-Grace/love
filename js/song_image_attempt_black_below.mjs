@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { song_image_drawn_path } from "./song_image_drawn_path.mjs";
 import { song_image_draw_attempt_next } from "./song_image_draw_attempt_next.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -16,7 +17,7 @@ export async function song_image_attempt_black_below(
   let next = await song_image_draw_attempt_next(number);
   let path_to = song_image_drawn_path(number, next);
   let v = String(fraction);
-  let height = 0.93 - fraction;
+  let height = subtract(0.93, fraction);
   let h = String(height);
   let box = text_combine_multiple([
     "x=iw*0.06:y=ih*",
