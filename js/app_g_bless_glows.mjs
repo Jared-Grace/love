@@ -88,19 +88,42 @@ export function app_g_bless_glows(glows, everyone, lit) {
     let halo = html_div(glows);
     g_img_square_style_position(halo, person, "ground_tint");
     html_style_assign(halo, {
+      "pointer-events": "none",
+    });
+    ("The light is an empty box that rides, and the gold is a circle drawn inside it. Two");
+    ("elements rather than one, so that the gold can come up gradually: everything that");
+    ("arrives on a prayer hangs inside this same box, and fading the box itself would fade");
+    ("the arriving blue along with the gold instead of behind it.");
+    ("The box carries no colour at all, so an unlit person is a box the browser lays out and");
+    ("never paints - which is what keeps ninety unlit lights cheap.");
+    let mark = html_div(halo);
+    html_style_assign(mark, {
+      position: "absolute",
+      left: "0",
+      top: "0",
+      width: "100%",
+      height: "100%",
       background: background,
       filter: rim,
       "pointer-events": "none",
-      visibility: "hidden",
+      opacity: "0",
+      transition: "opacity 0.8s ease-out",
     });
     app_shared_game_npc_glow_set(person, halo);
+    app_g_bless_glow_mark_set(person, mark);
   }
   each(people_all, person_halo);
   let people_lit = bless_view_people(lit);
   function person_light(person) {
-    let halo = app_shared_game_npc_glow_get(person);
-    html_visibility_visible(halo);
-    app_shared_game_emoji_glow_apply(halo);
+    ("Shown by being faded up rather than switched on. A mark that was not there on one frame");
+    ("and fully there on the next is a mark the player finds rather than watches arrive, and");
+    ("this one lands underneath the blue light of the prayer that earned it - so it is meant");
+    ("to be seen rising through it while that light is still there.");
+    ("Asking again on a later step asks for what is already true and changes nothing, which");
+    ("is what makes it safe to ask on every one.");
+    let mark = app_g_bless_glow_mark_get(person);
+    html_style_opacity(mark, "1");
+    app_shared_game_emoji_glow_apply(mark);
   }
   each(people_lit, person_light);
 }
