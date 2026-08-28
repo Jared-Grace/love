@@ -48,10 +48,10 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   ("bands instead of in one colour. Asked of the whole shape, there is nothing to double:");
   ("the inside of the house has no boundaries left to glow at, and only the outline of the");
   ("house as a whole has any light coming off it.");
-  ("The squares are gathered under one wrapper for that reason and for no other. The wrapper");
+  ("The blocks are gathered under one wrapper for that reason and for no other. The wrapper");
   ("holds no colour of its own and is placed nowhere - it is the thing the spill is asked");
-  ("of, and the squares inside it stay exactly where their own coordinates put them.");
-  ("The two lights that belong to a single square are still laid INSIDE it, for the same");
+  ("of, and the blocks inside it stay exactly where their own coordinates put them.");
+  ("The two lights that belong to a single block are still laid INSIDE it, for the same");
   ("doubling reason as before. Only the one belonging to the house as a whole goes outside.");
   ("Measured as a fraction of a square rather than in fixed units, because the map is drawn");
   ("at whatever size the screen has room for: written in pixels this is a hairline on a");
