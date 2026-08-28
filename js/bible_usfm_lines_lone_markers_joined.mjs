@@ -1,6 +1,6 @@
+import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -15,8 +15,7 @@ export function bible_usfm_lines_lone_markers_joined(chapter_lines) {
   let out = [];
   let held = "";
   for (let usfm_line of chapter_lines) {
-    let b = text_empty_is(held);
-    let holding = not(b);
+    let holding = text_empty_not_is(held);
     let folded = false;
     if (holding) {
       let opens_verse = text_starts_with(usfm_line, "\\v ");
@@ -38,8 +37,7 @@ export function bible_usfm_lines_lone_markers_joined(chapter_lines) {
       }
     }
   }
-  let b2 = text_empty_is(held);
-  let holding_last = not(b2);
+  let holding_last = text_empty_not_is(held);
   if (holding_last) {
     list_add(out, held);
   }
