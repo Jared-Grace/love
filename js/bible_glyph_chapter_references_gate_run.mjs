@@ -9,7 +9,7 @@ import { bible_glyph_chapter_codes } from "./bible_glyph_chapter_codes.mjs";
 import { list_join } from "./list_join.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function bible_glyph_chapter_codes_gate_run() {
+export function bible_glyph_chapter_references_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: the light list of picture Bible chapter codes says exactly what the chapters themselves say, in the same order.");
   ("IT GUARDS A COPY THAT EXISTS FOR A MEASURED REASON. ",

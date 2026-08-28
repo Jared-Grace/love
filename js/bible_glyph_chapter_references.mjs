@@ -8,7 +8,7 @@ export function bible_glyph_chapter_references() {
     " ALREADY KNOWS, AND THE COPY IS THE POINT. That list is built by calling each chapter, so anything importing it carries all twenty five chapters: four hundred and forty KiB of verses, measured on the twenty eighth of August. This is fifty short words, and it lets a page draw the whole way around this Bible - the list of chapters, the arrows between them, the reference in the bar - without carrying a single verse.");
   ("THE REFERENCE IS HERE AND NOT ONLY THE CODE, because the code is what a link spells and the reference is what a person reads, and every screen that offers a chapter has to show one and carry the other. Holding only the codes meant the page could say whether a chapter existed but not what to call it, and the only way to the name was the whole Bible.");
   ("A COPY DRIFTS, so ",
-    fn_name("bible_glyph_chapter_codes_gate_run"),
+    fn_name("bible_glyph_chapter_references_gate_run"),
     " holds the two together and prints the list to paste when they part. Nothing here is authored - every word of it is already spelled in a chapter file - so the gate can always say exactly what belongs.");
   ("In the order Scripture puts them, which is the order a reader meets them in and not the order they were written in. The stored order is a build log; this is the list as the page shows it, so the arrows either side of a chapter and the rows of the index agree without anybody keeping a second order in step.");
   let references = [
