@@ -45,6 +45,10 @@ export function app_g_bless_finished_person_bloom(div_map, person) {
   ("Made see-through and then shown, with the page measured in between. Made and shown in");
   ("one breath the browser measures once, sees a light that was always fully there, and");
   ("gives it no arrival at all.");
+  ("Shown in its own right, for the same reason the burst beside it is. It hangs inside the");
+  ("quiet mark a prayed-for face keeps, and that mark is invisible until the game turns it");
+  ("on - so without this the blue could not open until the gold had already been shown, and");
+  ("the player would meet what remains before what arrives.");
   let white = app_shared_color_white();
   let blue = app_shared_color_blue_pale();
   let background = text_combine_multiple([

@@ -12,8 +12,9 @@ export function app_g_bless_marks(
   blessed,
   everyone,
   ground,
+  held,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
   ("Draws everything the record has to say about the street: the lights on the people who");
   ("have been prayed for, the houses filled in behind them, and the rings on the people left");
   ("in a house the player has started.");
@@ -27,8 +28,19 @@ export function app_g_bless_marks(
   ("where the player was looking, the street would go dark behind them and the map would");
   ("forget where the work had reached - and the map is the whole of how a player knows");
   ("where to pray next.");
+  ("A few of the prayed-for may be held OUT of the gold pass, and they are named rather");
+  ("than worked out here. A prayer that has just landed is being celebrated with a light of");
+  ("its own on those very faces, and the mark they keep afterwards must not be up while");
+  ("that is still arriving - the player would meet what remains before what arrives, and on");
+  ("the same few pixels the two would read as one mark getting brighter. Who is being");
+  ("celebrated is known only where the celebration is run, so it is handed in.");
+  ("Named as PEOPLE and not as a moment in time, because the street is redrawn on its own");
+  ("clock all through a celebration - every step every walking person takes asks for this");
+  ("again. A hold that was a single skipped draw was undone by the next of those within a");
+  ("breath, which is the whole reason this is a list and not a flag.");
   let lit = bless_view_blessed(blessed, everyone);
-  app_g_bless_glows(glows, everyone, lit);
+  let shown = app_g_bless_lit_except(lit, held);
+  app_g_bless_glows(glows, everyone, shown);
   ("The ground is the one of the three that can be asked to WAIT. A prayer that finishes a");
   ("house lights the last resident and fills the house in at the same instant as far as the");
   ("record is concerned, but the player is shown those one after the other - so the caller");
