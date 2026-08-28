@@ -38,12 +38,14 @@ export function bible_usfm_versions_years_sorted() {
     }
     let year = property_get(year_record, "year");
     let said = property_get(year_record, "said");
+    let withheld = bible_usfm_version_withheld_why_or_null(word);
     let made = {
       version: word,
       name,
       year,
       licence,
       said,
+      withheld,
     };
     return made;
   }
