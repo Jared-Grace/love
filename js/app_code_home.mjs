@@ -1,3 +1,4 @@
+import { app_code_review_number_key } from "./app_code_review_number_key.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_code_home_value } from "./app_code_home_value.mjs";
 import { property_get } from "./property_get.mjs";
@@ -35,7 +36,7 @@ export async function app_code_home(context) {
   let just_left = property_get(r2, "just_left");
   let lesson_left = property_get(r2, "lesson_left");
   let review_left = property_get(r2, "review_left");
-  let review_number = property_get(r2, "review_number");
+  let review_number = property_get(r2, app_code_review_number_key());
   ("which reviews have been finished is read once for the whole list, the same way the finished lessons are, rather than once inside every row");
   let reviews_complete = app_code_reviews_complete_read(context);
   function lambda(item, index) {
