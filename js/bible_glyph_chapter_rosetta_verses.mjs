@@ -23,7 +23,7 @@ export async function bible_glyph_chapter_rosetta_verses(chapter, traditions) {
   let chapter_code = chapter.chapter_code;
   let lookup = bible_glyph_characters_lookup(traditions);
   let lines = await bible_glyph_chapter_rosetta_lines_fetched(chapter_code);
-  let tagalog_verses = bible_glyph_chapter_tagalog_verses(chapter_code);
+  let tagalog_verses = await bible_glyph_chapter_tagalog_verses_fetched(chapter_code);
   let rows = [];
   for (let verse of chapter.verses) {
     let property_name = verse_number_key();
