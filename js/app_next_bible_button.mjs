@@ -1,16 +1,11 @@
+import { app_shared_bible_open_hash_languages } from "./app_shared_bible_open_hash_languages.mjs";
 import { verses_numbers_endpoints } from "./verses_numbers_endpoints.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
 import { list_first_property } from "./list_first_property.mjs";
-import { ebible_languages_from_codes } from "./ebible_languages_from_codes.mjs";
-import { list_reverse } from "./list_reverse.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_join } from "./list_join.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
-import { app_shared_bible_open_generic } from "./app_shared_bible_open_generic.mjs";
-import { window_open_app } from "./window_open_app.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_next_bible_button(parent, run) {
   "The way from a verse somebody was sent into the bible it came out of, opened at the same place and in the same languages, with the verses that were shown here already picked out there.";
