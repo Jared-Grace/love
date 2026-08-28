@@ -11,7 +11,6 @@ import { or } from "./or.mjs";
 import { app_code_lesson_source_above_text_or_null } from "./app_code_lesson_source_above_text_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { and } from "./and.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 export async function app_code_lesson_family_telling_bank(root, roots, names) {
@@ -52,8 +51,7 @@ export async function app_code_lesson_family_telling_bank(root, roots, names) {
       let next = [];
       for (let text of front) {
         for (let name of counted) {
-          let already = list_includes(telling, name);
-          let fresh = not(already);
+          let fresh = list_includes_not(telling, name);
           let mentioned = text_includes(text, name);
           let take = and(fresh, mentioned);
           if (take) {
