@@ -1,3 +1,6 @@
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
@@ -83,5 +86,5 @@ export async function app_g_bless_finished_faces(
   each(blooms, app_g_bless_finished_person_bloom_fade);
   app_g_bless_finished_people_fade(bursts);
   await sleep(820);
-  app_g_bless_camera_span_reset(container_map);
+  app_g_bless_camera_span_reset(container_map, div_map);
 }
