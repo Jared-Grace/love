@@ -20,5 +20,10 @@ export async function bible_usfm_version_chapter_clipboard_copy_plain(
     false,
   );
   await clipboard_copy(text);
-  return text;
+  let withheld = bible_usfm_version_withheld_why_or_null(version);
+  let copied = {
+    text,
+    withheld,
+  };
+  return copied;
 }
