@@ -1,3 +1,4 @@
+import { app_code_lesson_family_telling_bank_asked } from "./app_code_lesson_family_telling_bank_asked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_family_file_names } from "./app_code_lesson_family_file_names.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
@@ -8,11 +9,6 @@ import { equal } from "./equal.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { or } from "./or.mjs";
-import { app_code_lesson_source_above_text_or_null } from "./app_code_lesson_source_above_text_or_null.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { and } from "./and.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 export async function app_code_lesson_family_telling_bank(root, roots, names) {
   arguments_assert(arguments, 3);
   ("the files of one lesson split into the two halves a learner meets them as: the TELLING, which is everything drawn on the screen before the first question, and the BANK, which is everything the questions are made out of.");
@@ -43,34 +39,11 @@ export async function app_code_lesson_family_telling_bank(root, roots, names) {
       list_add(telling, name);
     }
   }
-  let above_text = app_code_lesson_source_above_text_or_null(source);
-  let some = null_not_is(above_text);
-  if (some) {
-    let front = [above_text];
-    while (list_empty_not_is(front)) {
-      let next = [];
-      for (let text of front) {
-        for (let name of counted) {
-          let fresh = list_includes_not(telling, name);
-          let mentioned = text_includes(text, name);
-          let take = and(fresh, mentioned);
-          if (take) {
-            list_add(telling, name);
-            let reached = await repo_love_function_read(name);
-            list_add(next, reached);
-          }
-        }
-      }
-      front = next;
-    }
-  }
-  let bank = [];
-  for (let name of counted) {
-    let asked = list_includes_not(telling, name);
-    if (asked) {
-      list_add(bank, name);
-    }
-  }
+  let bank = await app_code_lesson_family_telling_bank_asked(
+    source,
+    counted,
+    telling,
+  );
   let r = {
     telling,
     bank,
