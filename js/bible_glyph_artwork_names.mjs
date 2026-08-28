@@ -383,6 +383,10 @@ export function bible_glyph_artwork_names() {
       glyph: "ruler",
       asset: "Straight ruler",
     },
+    {
+      glyph: "fear",
+      asset: "Face screaming in fear",
+    },
   ];
   return names;
 }
