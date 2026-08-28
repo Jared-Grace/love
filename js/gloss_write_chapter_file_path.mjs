@@ -9,5 +9,6 @@ export function gloss_write_chapter_file_path(chapter_code, fn) {
   let name = "gloss_" + chapter_code + extension;
   let folder = gloss_write_folder(fn);
   let path = path_join([folder, name]);
+  path_inside_folder_assert(folder, path);
   return path;
 }
