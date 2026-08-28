@@ -43,9 +43,9 @@ export function bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown) {
     let unfootnoted = usfm_spans_removed(usfm_line, "f");
     let unreferenced = usfm_spans_removed(unfootnoted, "x");
     let split = bible_usfm_marker_rest(unreferenced);
-    let marker = property_get(split, "marker");
+    let marker_text = property_get(split, "marker");
     let rest = property_get(split, "rest");
-    let layout = bible_usfm_marker_layout(marker);
+    let layout = bible_usfm_marker_layout(marker_text);
     let kind = property_get(layout, "kind");
     let broken = equal(kind, "break");
     if (broken) {
