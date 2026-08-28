@@ -4,7 +4,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_camera_span } from "./app_g_bless_camera_span.mjs";
-import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { app_g_bless_finished_people } from "./app_g_bless_finished_people.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_g_bless_finished_person_bloom } from "./app_g_bless_finished_person_bloom.mjs";
@@ -62,7 +61,13 @@ export async function app_g_bless_finished_faces(
   let box = app_g_bless_lit_box(people);
   let middle = property_get(box, "middle");
   let span = property_get(box, "span");
-  let arrived = app_g_bless_camera_span(container_map, div_map, player_img_c, span, middle);
+  let arrived = await app_g_bless_camera_span(
+    container_map,
+    div_map,
+    player_img_c,
+    span,
+    middle,
+  );
   let faces = list_size(people);
   let group = equal_not(faces, 1);
   if (group) {
