@@ -1,17 +1,17 @@
-import { week_calendar_endpoint_back_up } from "./week_calendar_endpoint_back_up.mjs";
-import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
-import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
-import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
-import { property_get } from "./property_get.mjs";
+import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_calendar_day } from "./week_calendar_day.mjs";
-import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
+import { property_get } from "./property_get.mjs";
 import { week_calendar_slot_row } from "./week_calendar_slot_row.mjs";
 import { week_calendar_record_color } from "./week_calendar_record_color.mjs";
-import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { numbers_up_to } from "./numbers_up_to.mjs";
 import { week_range_label } from "./week_range_label.mjs";
+import { app_shared_text_body } from "./app_shared_text_body.mjs";
+import { week_calendar_range_add } from "./week_calendar_range_add.mjs";
+import { week_calendar_endpoint_back_up } from "./week_calendar_endpoint_back_up.mjs";
+import { week_calendar_far_anchor_set } from "./week_calendar_far_anchor_set.mjs";
+import { week_calendar_cell_pressed } from "./week_calendar_cell_pressed.mjs";
+import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
+import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
   let days = dates;
@@ -89,10 +89,16 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       slot,
       anchor,
       range_add,
-      on_ranges,
-      ranges,
     );
     anchor = property_get(week_calendar_anchor_click_answer, "anchor");
+    ("the windows are reported HERE, and not by the function that worked out where the anchor now stands. Drawing a range rebuilds the list rather than adding to it, so the list that function was handed is not this one; reporting from in there handed out the windows from before the range was drawn.");
+    let ranges_changed = property_get(
+      week_calendar_anchor_click_answer,
+      "ranges_changed",
+    );
+    if (ranges_changed) {
+      on_ranges(ranges);
+    }
   }
   function free_click(day, slot) {
     let selected = week_calendar_selected_is(day, slot, ranges);
