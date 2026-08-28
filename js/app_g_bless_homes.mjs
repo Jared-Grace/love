@@ -1,3 +1,5 @@
+import { tiles_rectangles } from "./tiles_rectangles.mjs";
+import { g_img_rectangle_style_position } from "./g_img_rectangle_style_position.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
@@ -11,7 +13,6 @@ import { list_max } from "./list_max.mjs";
 import { g_z } from "./g_z.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_homes(homes, blessed, blocks) {
   arguments_assert(arguments, 3);
@@ -31,12 +32,11 @@ export function app_g_bless_homes(homes, blessed, blocks) {
   ("way is the drawing.");
   ("It sits at the ground layer, above the tiles and below the people, so a lit house never");
   ("hides whoever is standing at its door.");
-  ("Each square also carries a soft pale bloom in the middle of it and a brighter rim just");
-  ("inside its own edges. A flat wash of one colour over several squares reads as a stain on");
-  ("the map; a bloom per square reads as ground that is lit, and the rim is what makes it");
-  ("read as lit rather than merely tinted - a lit thing is brightest where it ends, and");
-  ("without that edge the square is only a coloured patch. The squares then draw their own");
-  ("quiet grid, which is the shape of the house being told in the only units this map has.");
+  ("Each block also carries a soft pale bloom gathered in the middle of it and a brighter rim");
+  ("just inside its own walls. A flat wash of one colour reads as a stain on the map; a bloom");
+  ("reads as ground that is lit, and the rim is what makes it read as lit rather than merely");
+  ("tinted - a lit thing is brightest where it ends, and without that edge the house is only");
+  ("a coloured patch.");
   ("The house also throws light OUTWARDS, onto the plain ground around it, which is the");
   ("difference between a patch of the map being coloured in and a house standing there with");
   ("the lights on. Light that stops dead at a boundary is paint; light that carries a little");
@@ -109,14 +109,23 @@ export function app_g_bless_homes(homes, blessed, blocks) {
     "z-index": depth,
     filter: spill,
   });
-  function tile_light(tile) {
-    let square = html_div(lit);
-    g_img_square_style_position(square, tile, "ground_tint");
-    html_style_assign(square, {
+  ("The lit ground is laid down in whole BLOCKS rather than square by square, which is what");
+  ("makes a finished house read as a building rather than as a run of tiles that happen to");
+  ("match. The inner light belongs to the block: it gathers in the middle of the house and");
+  ("brightens along the walls, and there is no seam down the middle of it because there is");
+  ("no edge there to draw one on. Drawn per square that same light was drawn into every");
+  ("shared edge as well, and a three-square household came out ruled into thirds.");
+  ("Blocks joined along a SIDE only, which is what the shape actually is - a corner touch");
+  ("is two houses meeting, not one wider one, and no rectangle can hold it anyway.");
+  let rectangles = tiles_rectangles(tiles);
+  function rectangle_light(rectangle) {
+    let block = html_div(lit);
+    g_img_rectangle_style_position(block, rectangle, "ground_tint");
+    html_style_assign(block, {
       background: color,
       "box-shadow": bloom,
       "pointer-events": "none",
     });
   }
-  each(tiles, tile_light);
+  each(rectangles, rectangle_light);
 }
