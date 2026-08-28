@@ -1,3 +1,4 @@
+import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
 import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
@@ -65,5 +66,6 @@ export async function app_emoji_bible(context) {
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
   app_emoji_bible_chapter_body(content, chapter_code, traditions, key_shown);
+  app_emoji_bible_words_button(content, chapter_code);
   app_shared_footer(content);
 }
