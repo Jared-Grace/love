@@ -13,7 +13,7 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
   ("THE ADDRESS IT SENDS TO IS A STRING AND NOTHING FOLLOWS A STRING. The fetching neighbour names its module inside an import written out as text, which is what a bundler needs in order to split the file off, and it is also what a rename walks straight past. So the day somebody renames the function holding the whole Tagalog, every other reference to it moves and that one does not - and nothing goes red, because the address is only read when a reader opens the key.");
   ("IT ASKS RATHER THAN READS, which is the only way to catch that. Reading the source for the right text would pass on a file that cannot be loaded at all; sending for each chapter and comparing what came back against what the repo holds fails on exactly the thing that would fail in a browser.");
   ("THE VERSES THEMSELVES ARE COMPARED AND NOT HOW MANY THERE ARE. Two chapters of the same length are common, and a check on the counts alone would pass a wiring that handed back a different chapter's Tagalog under the asked-for name - which is the one failure that looks right on the page.");
-  ("The count of chapters asked for travels out, because nothing wrong is also what this would say on the day its sweep stopped visiting anything.");
+  ("THE NUMBER HANDED BACK IS HOW MANY CHAPTERS HAD TAGALOG TO COMPARE, not how many were asked for. A chapter nobody has translated yet is empty on both sides and agrees with itself, so counting those would let the answer stay reassuringly at twenty five while the evidence behind it fell to nothing.");
   let references = bible_glyph_chapter_references();
   let wrong = []; let carrying = [];
   for (let chapter of references) {
@@ -37,7 +37,7 @@ export async function bible_glyph_chapter_tagalog_verses_fetched_gate_run() {
     wrong,
     hint: "the Tagalog sent for one chapter at a time is not the Tagalog the repo holds for that chapter - the written-out module address in the fetching neighbour has most likely been left behind by a rename",
   });
-  let fetched = list_size(references);
+  let fetched = list_size(carrying);
   let r = {
     fetched,
   };
