@@ -1,7 +1,6 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { firebase_storage_delete } from "./firebase_storage_delete.mjs";
 import { error_readable } from "./error_readable.mjs";
-import { text_includes } from "./text_includes.mjs";
-import { not } from "./not.mjs";
 export async function firebase_storage_delete_absent_ok(destination) {
   "$plain destination";
   "Remove one named file from storage, counting a file that is already not there as removed.";
@@ -11,8 +10,7 @@ export async function firebase_storage_delete_absent_ok(destination) {
     await firebase_storage_delete(destination);
   } catch (e) {
     let words = error_readable(e);
-    let absent = text_includes(words, "No such object");
-    let other = not(absent);
+    let other = text_includes_not(words, "No such object");
     if (other) {
       throw e;
     }
