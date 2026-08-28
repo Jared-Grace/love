@@ -50,7 +50,46 @@ that by refusing any note `CLAUDE.md` does not link.
   below.
 - Everything else named in `ebible_licences_commercial` — public domain, CC BY,
   CC BY-SA, GFDL — is allowed, with the credit and share-alike duties kept by
-  showing the credit rather than by leaving the text alone.
+  showing the credit rather than by leaving the text alone. **That sentence is
+  true for displaying a verse and false for singing one — see below.**
+
+### Share-alike: the credit is the whole duty only while nothing is adapted
+
+The line above was written about apps that put a verse on a screen unchanged, and
+for those it is right. Share-alike has two halves and they are not the same duty:
+
+- **Attribution** applies to any sharing at all, and showing the credit discharges
+  it. That is the half the line above describes.
+- **Share-alike** applies only to **adapted material**, and where it applies it
+  binds *your* contribution to that adaptation — not the app around it, not
+  anything else in the repo. Reproducing the text, or setting it beside other
+  things in a collection, is not adaptation and carries no share-alike duty.
+
+**Setting the words to a tune is where that stops being academic.** A new melody
+written to an existing text is normally a derivative of the text, so the share-alike
+duty would reach the music. A verse shown unchanged as a subtitle over artwork is
+much closer to a collection and probably would not. The two halves of one lyric
+video sit on opposite sides of that line, which is not a place to be resting on a
+judgement call.
+
+One trap, because it reads the wrong way round at speed: CC BY-SA 4.0 says material
+synched "in timed relation with a moving image" is *always* adapted material — but
+that clause is written for when the licensed work is music, a performance, or a
+recording. A Bible translation is a literary work, so the clause does not catch a
+lyric video automatically. It settles nothing in either direction.
+
+**So the rule for this repo: nothing sung uses a share-alike text.** Public domain
+carries no attribution duty, no share-alike and no derivative limit, and thirteen of
+the nineteen bibles on the usfm shelf are already public domain — WEB, KJV, ASV,
+Young's, Darby and Geneva among them. Choosing one of those removes the question
+instead of managing it, and it costs nothing, because that is where a wording meant
+to be sung was going to be picked from anyway. `bible_versions_sung_gate_run` holds
+the rule rather than a reader remembering it: every version a lyric video names must
+be public domain, and the check reads the licence off the shelf rather than off a
+list somebody keeps in step by hand.
+
+CC BY (without the share-alike) is unaffected by any of this. It asks for credit and
+nothing else, so it may be sung.
 
 ### No derivatives: settled, and what it costs
 

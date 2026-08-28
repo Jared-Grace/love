@@ -1,3 +1,5 @@
+import { app_g_bless_finished_home_arrive } from "./app_g_bless_finished_home_arrive.mjs";
+import { html_remove } from "./html_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
@@ -72,7 +74,14 @@ export async function app_g_bless_finished_place(
     middle,
   );
   await sleep(560);
+  ("The house comes up gradually, on a layer of its own, and only once it is fully up is the");
+  ("street told to show it and that layer taken away. Both in the same breath, so there is");
+  ("never a frame with two of the house on the map at once - these lights are see-through,");
+  ("and a house painted twice over itself comes out the wrong colour.");
+  let arriving = app_g_bless_finished_home_arrive(div_map, tiles);
+  await sleep(1100);
   ground_show();
+  html_remove(arriving);
   let squares = app_g_bless_finished_white(div_map, tiles);
   await sleep(720);
   let glow = app_g_bless_finished_glow(div_map, tiles);
