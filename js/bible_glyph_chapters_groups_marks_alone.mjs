@@ -1,11 +1,8 @@
+import { bible_glyph_chapters_groups_marks_alone_stored } from "./bible_glyph_chapters_groups_marks_alone_stored.mjs";
 import { bible_glyph_chapters_groups_marks_alone_group } from "./bible_glyph_chapters_groups_marks_alone_group.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_groups_vocabulary } from "./bible_glyph_groups_vocabulary.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
-import { property_get } from "./property_get.mjs";
-import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
-import { equal } from "./equal.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_glyph_chapters_groups_marks_alone() {
   "For each group of pictures the tables seat a word on: every place the written chapters draw that group, every place they draw one of its pictures on its own, and the chapters that do both.";
@@ -18,32 +15,7 @@ export function bible_glyph_chapters_groups_marks_alone() {
   let vocabulary = bible_glyph_groups_vocabulary();
   let chapters = bible_glyph_chapters();
   let entries = [];
-  for (let stored of chapters) {
-    let chapter_code = property_get(stored, "chapter_code");
-    let chapter = bible_glyph_chapter(chapter_code);
-    let verses = property_get(chapter, "verses");
-    for (let verse of verses) {
-      let verse_number = property_get(verse, "verse_number");
-      let words = property_get(verse, "words");
-      for (let word of words) {
-        let plain = equal(typeof word, "string");
-        if (plain) {
-          continue;
-        }
-        for (let part of word) {
-          let text = equal(typeof part, "string");
-          if (text) {
-            continue;
-          }
-          list_add(entries, {
-            chapter_code,
-            verse_number,
-            names: part,
-          });
-        }
-      }
-    }
-  }
+  bible_glyph_chapters_groups_marks_alone_stored(chapters, entries);
   let rows = [];
   bible_glyph_chapters_groups_marks_alone_group(vocabulary, entries, rows);
   let r = {
