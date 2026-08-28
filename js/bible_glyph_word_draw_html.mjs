@@ -1,12 +1,12 @@
-import { bible_glyph_image_draw } from "./bible_glyph_image_draw.mjs";
-import { equal } from "./equal.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { html_span } from "./html_span.mjs";
+import { equal } from "./equal.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
+import { bible_glyph_image_draw } from "./bible_glyph_image_draw.mjs";
 export function bible_glyph_word_draw_html(parent, word, lookup) {
   "$plain word";
   "$plain lookup";
@@ -15,9 +15,10 @@ export function bible_glyph_word_draw_html(parent, word, lookup) {
   ("It is the twin of ",
     fn_name("bible_glyph_word_draw"),
     ", which draws the same stored word as plain text, and the two are deliberately kept side by side rather than one replacing the other. Plain text is what a terminal, a log and a test can read, and a page is where the pictures belong. Neither one stores anything, so a verse is written once and both draw it.");
-  ("A GROUP IS HELD TOGETHER BY BEING CLOSE AND BY NOTHING ELSE, which is a change: a ring used to be drawn round it. Several glyphs standing together are ONE word - the burning heart with the cross and the dove is a single word of the Bible and not three - and what says so is that they touch while the gap to the next word is wider, set by ",
-    fn_name("bible_glyph_word_gap_extra"),
+  ("A GROUP IS HELD TOGETHER BY BEING CLOSE AND BY NOTHING ELSE, which is a change: a ring used to be drawn round it. Several glyphs standing together are ONE word - the burning heart with the cross and the dove is a single word of the Bible and not three - and what says so is that they touch while the gap to the next word is wider, written between the words as a character of its own by ",
+    fn_name("bible_glyph_word_separator"),
     ". The ring was a mark that had to be taught before the first verse; a gap is one every reader was taught by their own language.");
+  ("NOTHING HERE WIDENS ANYTHING, and that is the whole of this function's part in the grouping. A word is drawn tight and the gap that says where it ends is put in by the drawer one level up, one gap at a time, so that only the pairs that could be misread pay for it. An earlier version set the width as a style from inside here, which stopped working silently the moment the separator became a character, because the style it used widens a named list of separators that the new character is not on.");
   ("THE ONE THING THE RING DID THAT THE GAP CANNOT IS SURVIVE A LINE BREAK, so a group is still forbidden to break across lines - and that rule stopped being tidiness the moment the ring went. A group split over two lines loses the near gap the reader would have compared the far one against, and what is left on the page is glyphs at a line end and glyphs at a line start, which is exactly how two separate words look.");
   ("A GROUP OF ONE IS STILL A GROUP AND STILL GETS NOTHING DRAWN. One picture standing alone is already one word, so there is nothing to hold together and no gap inside it to be narrow.");
   ("A glyph the lookup does not carry is drawn as its NAME rather than as a blank, for the same reason the plain text twin does it: a blank hides the fault at the moment a reader meets it, and a reader who can see the name can report what is missing. It is drawn as text that is never read as markup, because a name arriving with an angle bracket in it would otherwise vanish into the page and leave the sentence looking complete.");
