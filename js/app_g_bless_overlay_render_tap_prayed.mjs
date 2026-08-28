@@ -127,30 +127,6 @@ export function app_g_bless_overlay_render_tap_prayed(
     ("is said - keeping them any longer would stand somebody already blessed in front of a");
     ("player who has moved on to the next face.");
     hold_release(person);
-    ("The draw here leaves the GROUND out, and the house this prayer finished goes up later,");
-    ("once the faces have been celebrated. As far as the record is concerned the last face");
-    ("and the filled-in house happen at the same instant, but the player watches them one");
-    ("after the other - and a house that turns gold while the person who finished it is still");
-    ("being blessed has answered the question while they are still watching it asked.");
-    ("Holding it back is safe rather than merely late. Nothing rubs a lit house out except a");
-    ("later draw, so skipping this one leaves every house that was already lit exactly where");
-    ("it was, and the only one missing is the one that has this moment been finished.");
-    ("The faces are NOT held back. That light is the prayer that was just said, and it is the");
-    ("thing the player is looking at.");
-    app_g_bless_overlay_render_tap_prayed_render_ground(
-      false,
-      glows,
-      homes,
-      blocks,
-      blessed,
-      view_everyone,
-      edge,
-      container_map,
-      bar,
-      cone_get,
-      hold,
-      wash,
-    );
     let lit_after = bless_blessed_tiles(blessed, blocks);
     let lit_now = app_g_bless_lit_new(lit_before, lit_after);
     let everyone_after = bless_view_blessed(blessed, view_everyone);
