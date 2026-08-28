@@ -1,6 +1,6 @@
+import { html_style_background } from "./html_style_background.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_overlay_container } from "./app_shared_game_overlay_container.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
 import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
 import { html_remove } from "./html_remove.mjs";
@@ -30,7 +30,7 @@ export function app_g_bless_finished_modal(container_map, line, on_dismiss) {
   ("nothing, or saying close. There is no state to leave here and nothing being agreed to");
   ("- the only thing on the other side of this button is more praying.");
   let overlay = app_shared_game_overlay_container(container_map);
-  html_style_set(overlay, "background", "rgba(255, 232, 178, 0.3)");
+  html_style_background(overlay, "rgba(255, 232, 178, 0.3)");
   let container = app_shared_game_container_player(overlay);
   app_shared_game_p_text(container, line);
   function dismiss() {

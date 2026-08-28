@@ -1,3 +1,6 @@
+import { html_style_opacity } from "./html_style_opacity.mjs";
+import { html_width_full } from "./html_width_full.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -10,11 +13,11 @@ export function lyric_timing_screen_cards(parent, on_tap) {
   ("The line already sounding sits above it and dimmed, because its whole job is to say the tapping has not drifted. It is a check, never the thing being aimed at, and printing it as boldly as the target is how somebody comes to tap the wrong one.");
   let said = html_p_text(parent, "No passage loaded.");
   let now_card = html_p_text(parent, "");
-  html_style_set(now_card, "opacity", "0.55");
+  html_style_opacity(now_card, "0.55");
   let tap_button = html_button(parent, "", on_tap);
-  html_style_set(tap_button, "width", "100%");
+  html_width_full(tap_button);
   html_style_set(tap_button, "min-height", "6em");
-  html_style_set(tap_button, "font-size", "1.4em");
+  html_style_font_size(tap_button, "1.4em");
   let cards = {
     said,
     now_card,
