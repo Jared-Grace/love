@@ -19,10 +19,14 @@ export function app_code_lesson_source_literal_symbols(source) {
   let found = [];
   let index = 0;
   for (let piece of pieces) {
-    let quoted = equal(remainder(index, 2), 1);
-    let short = less_than(text_size(piece), 29);
+    let left = remainder(index, 2);
+    let quoted = equal(left, 1);
+    let a = text_size(piece);
+    let short = less_than(a, 29);
     let module_named = text_ends_with(piece, ".mjs");
-    let take = and(quoted, and(short, not(module_named)));
+    let right = not(module_named);
+    let right2 = and(short, right);
+    let take = and(quoted, right2);
     if (take) {
       let symbols = app_code_lesson_text_operator_symbols(piece);
       list_add_multiple(found, symbols);
