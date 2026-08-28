@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,8 +25,7 @@ export function js_function_local_object_expression_try(function_node, name) {
     if (not(same)) {
       continue;
     }
-    let b = equal(found, null);
-    let held = not(b);
+    let held = equal_not(found, null);
     if (held) {
       return null;
     }
