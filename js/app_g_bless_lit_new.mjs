@@ -1,6 +1,5 @@
+import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_coordinates_index } from "./g_coordinates_index.mjs";
-import { g_coordinates_index_member_is } from "./g_coordinates_index_member_is.mjs";
 import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function app_g_bless_lit_new(before, after) {
@@ -15,8 +14,7 @@ export function app_g_bless_lit_new(before, after) {
   ("So this is also the test for whether anything happened at all. An empty answer is a");
   ("prayer that covered somebody and finished nothing, which is most of them - and that is");
   ("the whole of the rule for when the street should stop and celebrate.");
-  let index = g_coordinates_index(before);
-  let member_is = g_coordinates_index_member_is(index);
+  let member_is = g_coordinates_member_is(before);
   function fresh_is(tile) {
     let was = member_is(tile);
     let fresh = not(was);
