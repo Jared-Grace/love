@@ -31,8 +31,8 @@ export function app_g_bless_lit_box(tiles) {
     return x_value;
   }
   function tile_y(tile) {
-    let y = property_get(tile, "y");
-    return y;
+    let y_value = property_get(tile, "y");
+    return y_value;
   }
   let xs = list_map(tiles, tile_x);
   let ys = list_map(tiles, tile_y);
