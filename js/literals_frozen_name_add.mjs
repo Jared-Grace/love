@@ -33,6 +33,7 @@ export async function literals_frozen_name_add(name) {
       name,
       added: false,
       names: list_size(names),
+      recorded: null,
     };
     return known;
   }
@@ -64,6 +65,7 @@ export async function literals_frozen_name_add(name) {
     name,
     added: true,
     recorded,
+    names: null,
   };
   return report;
 }
