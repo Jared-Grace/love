@@ -52,18 +52,18 @@ export async function ebible_text_to_speech_missing(
     return absent;
   }
   let missing = list_filter(wanted, missing_is);
-  if (list_empty_is(missing)) {
-    let nothing_left = {
-      chapters_wanted: wanted.length,
-      chapters_missing: 0,
-      chapters_recorded_now: 0,
-      chapters_left: 0,
-      manifests: [],
-    };
-    return nothing_left;
-  }
   let at_most = Number(chapters_at_most);
   let taking = list_take(missing, at_most);
+  if (list_empty_is(taking)) {
+    let nothing_taken = {
+      chapters_wanted: wanted.length,
+      chapters_missing: missing.length,
+      chapters_recorded_now: 0,
+      chapters_left: missing.length,
+      manifests: [],
+    };
+    return nothing_taken;
+  }
   let joined = list_join(taking, ",");
   let manifests = await ebible_text_to_speech_chapters(bible_folder, joined);
   let left = subtract(missing.length, taking.length);
