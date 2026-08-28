@@ -14,13 +14,12 @@ import { week_calendar_anchor_click } from "./week_calendar_anchor_click.mjs";
 import { week_calendar_selected_is } from "./week_calendar_selected_is.mjs";
 export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   "weekly availability grid from midnight to midnight in 30-minute pieces across the 7 days; a chosen-windows list sits on top, then the grid; click a piece to start a range then click another piece in the same day to select every piece between them; click a selected piece to back up a step — the range collapses to a fresh anchor on its far end, ready to re-draw — then click that anchor again to clear it; reports the sorted windows to on_ranges after each change";
-  let days = dates;
   let slots = numbers_up_to(48);
   let ranges = initial_ranges;
   let anchor = null;
   let r = week_calendar_day(
     parent,
-    days,
+    dates,
     slots,
     slot_row,
     paint_record,
@@ -31,7 +30,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   let summary = property_get(r, "summary");
   let records = property_get(r, "records");
   function slot_row(slot) {
-    let r2 = week_calendar_slot_row(slot, grid, cell_pressed, records, days);
+    let r2 = week_calendar_slot_row(slot, grid, cell_pressed, records, dates);
     return r2;
   }
   function paint_record(record) {
