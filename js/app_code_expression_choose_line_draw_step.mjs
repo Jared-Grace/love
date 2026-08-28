@@ -38,8 +38,9 @@ export function app_code_expression_choose_line_draw_step(
     solved,
     value,
   };
-  return {
+  let r2 = {
     pressable,
     step,
   };
+  return r2;
 }
