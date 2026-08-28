@@ -15,8 +15,9 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground(
   cone_get,
   hold,
   wash,
+  held,
 ) {
-  arguments_assert(arguments, 12);
+  arguments_assert(arguments, 13);
   ("Everything the record has to say about the street - who is lit, which houses are filled");
   ("in, who is ringed - is drawn from the record on every step rather than remembered here,");
   ("so a person covered by a prayer over their whole block lights up the moment they walk");
@@ -28,6 +29,7 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground(
     blessed,
     view_everyone,
     ground,
+    held,
   );
   ("The arrow at the edge of the screen is aimed here rather than with the marks on the");
   ("ground, because it is the one hint that is not about the street at all - it is about");

@@ -1,17 +1,11 @@
-import { g_npc_nickname_index } from "./g_npc_nickname_index.mjs";
 import { g_arc_previous_chapter } from "./g_arc_previous_chapter.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
+import { g_npc_nickname_index } from "./g_npc_nickname_index.mjs";
 import { g_arc_chapter_person_or_null } from "./g_arc_chapter_person_or_null.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
-import { g_arc_lines_by_address } from "./g_arc_lines_by_address.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_or_null } from "./property_or_null.mjs";
-import { list_add } from "./list_add.mjs";
-import { text_words_gone_come } from "./text_words_gone_come.mjs";
-import { list_size } from "./list_size.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { equal } from "./equal.mjs";
+import { assert_json } from "./assert_json.mjs";
+import { g_arc_lines_moved } from "./g_arc_lines_moved.mjs";
+import { property_get } from "./property_get.mjs";
 export async function g_arc_revised_report(chapter_code, nickname) {
   "$plain chapter_code";
   "$plain nickname";
@@ -19,8 +13,7 @@ export async function g_arc_revised_report(chapter_code, nickname) {
   "the code is a chapter's name, like 1JN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "IT IS WHAT MAKES REVISING CHEAP ENOUGH TO DO TWICE. A revision hands back a whole arc, and a reader with only the new one has to read all of it to find out whether the rewrite helped - which costs the same as reading it the first time, so in practice it does not get read, and the loop quietly stops being checked. Given the lines that moved and nothing else, the same reader spends a minute.";
   "IT READS THE STORE AND ASKS FOR NOTHING, because both versions are already kept - the live arc and the one the writer set aside as it was replaced. A caller holding two arcs is a caller who has already done the hard part.";
-  "AN UNMOVED LINE IS LEFT OUT ENTIRELY. Printing every line with most of them marked unchanged is the whole arc again wearing a report's clothes, and the eye stops finding the few that matter.";
-  "A LINE THAT ONLY EXISTS ON ONE SIDE IS REPORTED AS ITS OWN THING. The revision rules forbid adding or dropping a turn, so a line appearing or vanishing is not a rewrite to judge - it is the one failure the rules were written against, and it must not be shown as though somebody merely chose different words.";
+  "WHAT MOVED IS COUNTED ELSEWHERE, because the same arithmetic answers what a rewrite moved and what has moved since somebody last read the arc. The pair is the only difference between those two questions, so the pair is what this picks and nothing else.";
   let previous_arcs = await g_arc_previous_chapter(chapter_code);
   let live_arcs = await g_arc_written_chapter(chapter_code);
   let wanted = await g_npc_nickname_index(nickname);
@@ -38,56 +31,14 @@ export async function g_arc_revised_report(chapter_code, nickname) {
     nickname,
     hint: "nobody by that name is written in this chapter",
   });
-  let before_lines = g_arc_lines_addressed(before_arc);
-  let after_lines = g_arc_lines_addressed(after_arc);
-  let before_by_address = g_arc_lines_by_address(before_lines);
-  let after_by_address = g_arc_lines_by_address(after_lines);
-  let changed = [];
-  let vanished = [];
-  let appeared = [];
-  for (let line of before_lines) {
-    let address = property_get(line, "address");
-    let before_text = property_get(line, "text");
-    let after_text = property_or_null(after_by_address, address);
-    let dropped = equal(after_text, null);
-    if (dropped) {
-      list_add(vanished, {
-        address,
-        text: before_text,
-      });
-      continue;
-    }
-    let same = equal(before_text, after_text);
-    if (same) {
-      continue;
-    }
-    let words = text_words_gone_come(before_text, after_text);
-    list_add(changed, {
-      address,
-      before: before_text,
-      after: after_text,
-      gone: property_get(words, "gone"),
-      come: property_get(words, "come"),
-    });
-  }
-  for (let line of after_lines) {
-    let address = property_get(line, "address");
-    let before_text = property_or_null(before_by_address, address);
-    let added = equal(before_text, null);
-    if (added) {
-      list_add(appeared, {
-        address,
-        text: property_get(line, "text"),
-      });
-    }
-  }
+  let moved = g_arc_lines_moved(before_arc, after_arc);
   let r = {
     chapter_code,
     nickname,
-    lines: list_size(after_lines),
-    changed,
-    vanished,
-    appeared,
+    lines: property_get(moved, "lines"),
+    changed: property_get(moved, "changed"),
+    vanished: property_get(moved, "vanished"),
+    appeared: property_get(moved, "appeared"),
   };
   return r;
 }
