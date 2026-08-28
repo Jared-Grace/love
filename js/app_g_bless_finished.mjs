@@ -14,8 +14,9 @@ export async function app_g_bless_finished(
   people,
   line,
   ground_show,
+  faces_show,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   ("The celebration after a prayer that finished something off: every face it lit, and then");
   ("the ground it filled in.");
   ("Faces first and ground last, and each shown on its own with the camera on it. They");
@@ -51,6 +52,17 @@ export async function app_g_bless_finished(
       people,
     );
   }
+  ("The quiet gold that a prayed-for face keeps is put up HERE, once the arriving light on");
+  ("those faces is over and gone. It is held back for exactly as long as that light lasts,");
+  ("and for one reason: both marks land on the same few pixels, so shown together the");
+  ("player meets what remains before what arrives and reads the pair as one mark brightening");
+  ("slightly. Shown in turn there is a blue arrival and then a gold that stays, which is");
+  ("what actually happened.");
+  ("Asked for whether or not there were any faces. With none there is nobody being held and");
+  ("this costs a draw of a picture that has not changed; with faces it is the only thing");
+  ("that lets them go. One line that always runs cannot be the line somebody forgot to");
+  ("reach on the path where it mattered.");
+  faces_show();
   ("The newly finished house is put onto the map by the ground celebration rather than");
   ("here, and that is the whole reason this is handed a way of drawing it. It has to land");
   ("inside a gap that only that half can see: after the camera has finished travelling to");
