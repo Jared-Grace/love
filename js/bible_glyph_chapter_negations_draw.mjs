@@ -1,18 +1,12 @@
+import { bible_glyph_chapter_negations_draw_plan } from "./bible_glyph_chapter_negations_draw_plan.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter_negations_draw_verse } from "./bible_glyph_chapter_negations_draw_verse.mjs";
-import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { add } from "./add.mjs";
-import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function bible_glyph_chapter_negations_draw(chapter_code) {
@@ -42,78 +36,9 @@ export async function bible_glyph_chapter_negations_draw(chapter_code) {
   let f_path = list_join_empty(["js/bible_glyph_chapter_", lowered, ".mjs"]);
   let text = await file_read(f_path);
   let lines = text_split_newline(text);
-  let drawn_count = 0;
-  let touched = [];
-  for (let plan of planned) {
-    let header = list_join_empty([
-      "        verse_number: ",
-      plan.verse_number,
-      ",",
-    ]);
-    let at = lines.indexOf(header);
-    let missing = equal(at, -1);
-    if (missing) {
-      list_add(left, {
-        verse_number: plan.verse_number,
-        unfound: header,
-      });
-      continue;
-    }
-    let word_lines = [];
-    let walk = at;
-    let ended = false;
-    while (not(ended)) {
-      walk = add(walk, 1);
-      let line = lines[walk];
-      let gone = equal(line, undefined);
-      if (gone) {
-        ended = true;
-        continue;
-      }
-      let trimmed = text_trim(line);
-      let closed = equal(trimmed, "],");
-      if (closed) {
-        ended = true;
-        continue;
-      }
-      let quoted = text_starts_with(trimmed, '"');
-      if (quoted) {
-        list_add(word_lines, walk);
-      }
-    }
-    let counted = list_size_equal(word_lines, 0);
-    if (counted) {
-      list_add(left, {
-        verse_number: plan.verse_number,
-        no_word_lines: true,
-      });
-      continue;
-    }
-    let places = [];
-    for (let change of plan.changes) {
-      let line_at = word_lines[change.place];
-      let absent = equal(line_at, undefined);
-      if (absent) {
-        continue;
-      }
-      let line = lines[line_at];
-      let first = line.indexOf('"');
-      let last = line.lastIndexOf('"');
-      let sum = add(first, 1);
-      let head = line.slice(0, sum);
-      let tail = line.slice(last);
-      lines[line_at] = list_join_empty([head, change.drawn, tail]);
-      drawn_count = add(drawn_count, 1);
-      list_add(places, {
-        was: change.word,
-        now: change.drawn,
-      });
-    }
-    list_add(touched, {
-      verse_number: plan.verse_number,
-      places,
-    });
-  }
+  let r4 = bible_glyph_chapter_negations_draw_plan(planned, lines, left);
+  let touched = property_get(r4, "touched");
+  let drawn_count = property_get(r4, "drawn_count");
   let after = list_join_newline(lines);
   await file_overwrite(f_path, after);
   let r = {
