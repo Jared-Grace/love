@@ -50,16 +50,29 @@ BIBLE REACHABLE.  Given {"jobs": [...]} instead of one text, this speaks
 them across several processes that each load the model once and then
 drain the list.  One chapter per process cost two things at once - the
 model was read off disk again for every chapter, and thirteen of the
-fourteen cores sat idle while one of them spoke.  Measured, one process
-records at 0.39 times real time and three at 0.85, so the Bible's 1,189
-chapters go from about 253 hours to about 116.
+fourteen cores sat idle while one of them spoke.
 
-THREE PROCESSES IS A MEASUREMENT AND NOT A GUESS, AND IT IS STATED HERE
-SO IT CAN BE RE-MEASURED.  The engine is already threaded, so processes
-past the point where they start queueing for the same cores buy nothing
-and cost a copy of the model in memory each.  Each worker is held to a
-share of the cores for the same reason: three workers each taking all
-fourteen is fourteen cores being asked for forty two.
+WHAT HAS ACTUALLY BEEN MEASURED IS 0.49 TIMES REAL TIME, AND THE FIGURE
+IS WRITTEN DOWN HERE BECAUSE THE FIRST ONE WAS A PROJECTION AND IT WAS
+WRONG.  Jonah, four chapters, produced 461 seconds of audio in 945
+seconds, with 6.96 cores busy throughout.  0.85 had been expected from a
+smaller trial and was quoted before anything was recorded end to end.
+Four chapters over three workers is mostly tail, so this number is a
+floor rather than the steady rate, and a longer book is what would
+settle it.
+
+THE LONGEST CHAPTERS ARE STARTED FIRST, WHICH IS THE WHOLE OF THE TAIL
+FIX.  Handed out in the order they were asked for, the last chapter can
+be a long one that begins only once a worker comes free, and every other
+worker then waits on it having nothing left to take.  Starting with the
+longest leaves only short chapters to land at the end.
+
+THREE PROCESSES IS A CHOICE THAT SHOULD BE RE-MEASURED AND NOT TRUSTED.
+The engine is already threaded, so processes past the point where they
+start queueing for the same cores buy nothing and cost a copy of the
+model in memory each.  Each worker is held to a share of the cores for
+the same reason: three workers each taking all fourteen is fourteen
+cores being asked for forty two.
 """
 
 import json
@@ -196,6 +209,7 @@ def main():
         data = json.loads(f.read())
 
     jobs = jobs_of(data)
+    jobs.sort(key=lambda job: -len(job["text"]))
     workers = min(int(data.get("workers", WORKERS)), len(jobs))
     threads = max(1, (os.cpu_count() or workers) // max(1, workers))
     for job in jobs:
