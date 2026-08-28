@@ -34,7 +34,7 @@ export async function youtube_video_title_write_if_titled(
     video_id,
     written: true,
     titled,
-    title_after,
+    title_now: title_after,
   };
   return r;
 }
