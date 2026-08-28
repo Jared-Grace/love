@@ -1,9 +1,9 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { path_base } from "./path_base.mjs";
 import { qa_promoted } from "./qa_promoted.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export async function qa_promoted_piece_app(file_path) {
   "$plain file_path";
@@ -16,8 +16,7 @@ export async function qa_promoted_piece_app(file_path) {
   let app_names = properties_get(promoted);
   for (let app_name of app_names) {
     let note = property_get(promoted, app_name);
-    let hashes = property_get(note, "hashes");
-    let hash = property_get_or_null(hashes, file_name);
+    let hash = property_nested_or_null(note, "hashes", file_name);
     let vouched = null_not_is(hash);
     if (vouched) {
       return app_name;
