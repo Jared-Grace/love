@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_years_sorted } from "./bible_usfm_versions_years_sorted.mjs";
 import { bible_usfm_versions } from "./bible_usfm_versions.mjs";
@@ -23,8 +24,7 @@ export function bible_usfm_versions_withheld_gate_run() {
   let withheld = bible_versions_english_choices_withheld();
   let words = object_property_names(versions);
   function shelf_row(word) {
-    let version_record = property_get(versions, word);
-    let folder = property_get(version_record, "folder");
+    let folder = property_path_get_2(versions, word, "folder");
     let made = {
       word,
       folder,
