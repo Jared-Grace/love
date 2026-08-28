@@ -33,6 +33,12 @@ export async function bible_audio_verses_manifest_write_all() {
       list_add(unjudged, row);
       return;
     }
+    let chunks = property_get(row, "chunks");
+    let silent = equal(chunks, 0);
+    if (silent) {
+      list_add(empty, row);
+      return;
+    }
     let lines_up = property_get(row, "aligned");
     if (not(lines_up)) {
       list_add(recut, row);
@@ -49,6 +55,7 @@ export async function bible_audio_verses_manifest_write_all() {
   each(rows, row_each);
   let report = {
     recordings: rows.length,
+    empty: empty.length,
     clean,
     stale: stale.length,
     recut: recut.length,
