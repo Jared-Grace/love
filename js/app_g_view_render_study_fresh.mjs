@@ -1,3 +1,4 @@
+import { app_g_view_render_study_fresh_container } from "./app_g_view_render_study_fresh_container.mjs";
 import { app_g_view_render_study_fresh_save_pending } from "./app_g_view_render_study_fresh_save_pending.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
@@ -5,8 +6,6 @@ import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_render_study_fresh_persist_cancel } from "./app_g_view_render_study_fresh_persist_cancel.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_view_render_study_close } from "./app_g_view_render_study_close.mjs";
-import { app_g_button_back } from "./app_g_button_back.mjs";
-import { app_shared_game_container } from "./app_shared_game_container.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
@@ -60,8 +59,7 @@ export function app_g_view_render_study_fresh(
     let r = await app_g_view_render_study_close(persist_cancel, overlay);
     return r;
   }
-  app_g_button_back(overlay, close);
-  let container = app_shared_game_container(overlay);
+  let container = app_g_view_render_study_fresh_container(overlay, close);
   function render_words() {
     html_clear(container);
     let bar_div = html_div(container);
