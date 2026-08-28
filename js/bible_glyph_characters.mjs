@@ -38,6 +38,9 @@ export function bible_glyph_characters() {
   "THE PLAIN RIGHT ARROW WAS REFUSED FOR A DIFFERENT REASON, which is that this vocabulary has already spent arrows on something else. The hand pointing forward, the hand pointing back and the both-ways arrow are all words that REFER, and a reader who has learned those three reads a fourth arrow as a fourth referring word rather than as a verb. A picture is only free where the reader has no prior use for its shape.";
   "AND THE DEPARTING AIRPLANE WAS REFUSED FOR THE REASON THE FOOTPRINTS COULD NOT BE REUSED. Both of those draw the GOING, and the going already has a mark - the footprints are erchomai, to come and to go. What apostello adds to the going is the SENDER, and a hand is somebody doing something to somebody, which is exactly the half a departure picture drops.";
   "PEMPO IS NOT SEATED HERE AND MUST NOT BE GIVEN THIS MARK. It is the other Greek word English also translates send, it is a different root with its own number, and five occurrences of it stand undrawn across three chapters already. One root may have many sequences; one sequence may not have many roots, so a later chapter that meets pempo leaves it in letters until it is bought its own picture, however plainly the English on the page invites the hand.";
+  "THE SCREAMING FACE IS FEAR, AND IT IS NARROWER THAN THE WORD IT CARRIES. Phobos and phobeomai are glossed fear or afraid in most of their places and awe, respect or reverent in a handful, and English keeps that same double sense inside its one word - the fear of the LORD is the same noun as the fear that runs away. A screaming face says only the second of the two. So the picture is as wide as the commoner sense and no wider, and what covers the rest is a rule for whoever writes a chapter rather than another row in this table.";
+  "WHERE THE INTERLINEAR GLOSSES THE WORD AWE OR RESPECT, WRITE IT IN ENGLISH. That costs no picture at all - every undrawn word in this Bible already stands in letters - and it puts the repair one verse at a time, where the ambiguity actually arises, instead of in a table that cannot see which sense is in front of it. The alternative was refusing the mark altogether, and that would have left the commonest word for terror in the New Testament blank in order to guard a handful of places no single picture was ever going to reach.";
+  "IT WAS ASKED FOR BY THE VERSE THAT SETS FEAR AGAINST LOVE. The eighteenth verse of the fourth chapter of the first letter of John says that perfect love drives out fear and that fear involves punishment, which is terror and nothing else, so the first place this mark is drawn is a place where its narrowness is not a compromise but the exact reading.";
   let characters = [
     {
       name: "cross",
@@ -422,6 +425,10 @@ export function bible_glyph_characters() {
     {
       name: "ruler",
       character: "📏",
+    },
+    {
+      name: "fear",
+      character: "😱",
     },
     {
       name: "altar",
