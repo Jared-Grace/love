@@ -15,7 +15,9 @@ export async function song_image_attempt_black_below(
   let next = await song_image_draw_attempt_next(number);
   let path_to = song_image_drawn_path(number, next);
   let v = String(fraction);
-  let box = text_combine_multiple(["x=0:y=ih*", v, ":w=iw:h=ih"]);
+  let height = 0.93 - fraction;
+  let h = String(height);
+  let box = text_combine_multiple(["x=iw*0.06:y=ih*", v, ":w=iw*0.88:h=ih*", h]);
   await ffmpeg_black_box_write(path_from, box, path_to);
   let made = {
     number,
