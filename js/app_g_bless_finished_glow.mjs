@@ -93,8 +93,13 @@ export function app_g_bless_finished_glow(div_map, tiles) {
   }
   each(rectangles, rectangle_lit);
   html_reflow_force(glow);
+  ("It comes up slowly enough to be watched coming up. A third of a second was long");
+  ("enough for the light to be THERE and too short for its arrival to be seen, so a player");
+  ("watching the house reported a house that had simply changed rather than a house that");
+  ("lit - and being watched lighting is the entire job of this. Eased at both ends as well");
+  ("as lengthened, because a light that starts at full speed has no beginning either.");
   html_style_assign(glow, {
-    transition: "opacity 0.34s ease-out",
+    transition: "opacity 0.9s ease-in-out",
     opacity: "0.95",
   });
   return glow;
