@@ -1,8 +1,7 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_operators_written.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
 import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -14,8 +13,7 @@ export function app_code_lesson_text_line_operator_mix_or_null(text) {
   ("Two operators is what makes the question exist at all, the same threshold the brackets are read at and for the same reason. One operator is neither repeated nor mixed with anything.");
   ("Which operators they are is not the question here - that is what the coarser check over symbols asks, and it asks it of the whole lesson rather than of one line. This asks only whether the line writes one of them or several.");
   let written = app_code_lesson_text_operators_written(text);
-  let count = list_size(written);
-  let several = greater_than(count, 1);
+  let several = list_size_greater_than(written, 1);
   let one_only = not(several);
   if (one_only) {
     return null;
