@@ -16,16 +16,16 @@ export function machine_memory_available_bytes_or_null() {
     return unread;
   }
   let lines = text.split("\n");
-  function available_is(line) {
-    let found = line.startsWith("MemAvailable:");
+  function available_is(meminfo_line) {
+    let found = meminfo_line.startsWith("MemAvailable:");
     return found;
   }
-  let line = lines.find(available_is);
-  if (not(line)) {
+  let available_line = lines.find(available_is);
+  if (not(available_line)) {
     let unnamed = null;
     return unnamed;
   }
-  let after = line.split(":")[1];
+  let after = available_line.split(":")[1];
   let counted = after.trim().split(" ")[0];
   let kilobytes = Number(counted);
   let bytes = multiply(kilobytes, 1024);

@@ -39,6 +39,7 @@ export async function qa_apps_commit_deploy_remembered(
       deployed: false,
       prepared,
       skipped,
+      published: null,
     };
     return none;
   }

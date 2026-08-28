@@ -36,6 +36,7 @@ export async function qa_commit_at_generic(commit, known, path, judge) {
       moved,
       filed: true,
       kept: remembered,
+      silent: null,
     };
     return r;
   }
