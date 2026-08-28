@@ -1,3 +1,4 @@
+import { app_code_lesson_telling_symbols_gate_run } from "./app_code_lesson_telling_symbols_gate_run.mjs";
 import { bible_glyph_chapters_book_codes_unknown_gate_run } from "./bible_glyph_chapters_book_codes_unknown_gate_run.mjs";
 import { bible_audio_recording_bucket_cases_gate_run } from "./bible_audio_recording_bucket_cases_gate_run.mjs";
 import { bible_glyph_groups_marks_artwork_absent_gate_run } from "./bible_glyph_groups_marks_artwork_absent_gate_run.mjs";
@@ -883,6 +884,7 @@ export function qa_gates() {
     bible_verses_reading_units_cases_gate_run,
     app_shared_dev_stamp_gate_run,
     usfm_markers_removed_cases_gate_run,
+    app_code_lesson_telling_symbols_gate_run,
   ];
   return gates;
 }
