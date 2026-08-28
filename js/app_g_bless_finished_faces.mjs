@@ -61,13 +61,22 @@ export async function app_g_bless_finished_faces(
   let box = app_g_bless_lit_box(people);
   let middle = property_get(box, "middle");
   let span = property_get(box, "span");
-  let arrived = await app_g_bless_camera_span(
-    container_map,
-    div_map,
-    player_img_c,
-    span,
-    middle,
-  );
+  ("The camera is set going from inside a plain step that hands its promise back rather");
+  ("than being waited on here. One face is meant to light up WHILE the screen travels, so");
+  ("the waiting has to be a separate decision taken further down - and a call written out");
+  ("in the open in a waiting body reads as something to be waited on, both to a person and");
+  ("to the pass that tidies this file.");
+  async function travel_start() {
+    let promise = await app_g_bless_camera_span(
+      container_map,
+      div_map,
+      player_img_c,
+      span,
+      middle,
+    );
+    return promise;
+  }
+  let arrived = travel_start();
   let faces = list_size(people);
   let group = equal_not(faces, 1);
   if (group) {
