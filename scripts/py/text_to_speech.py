@@ -125,8 +125,8 @@ WORKERS = 3
 ENGINE = {}
 
 
-def memory_available_bytes():
-    """How much memory a chapter starting now could actually be given.
+def meminfo_bytes(field):
+    """One figure out of what this machine says about its memory, in bytes.
 
     Nothing at all when this machine will not say, which reads as no
     reason to stop rather than as a reason to stop: a machine that
@@ -135,7 +135,7 @@ def memory_available_bytes():
     try:
         with open("/proc/meminfo", "r", encoding="utf-8") as f:
             for line in f:
-                if line.startswith("MemAvailable:"):
+                if line.startswith(f"{field}:"):
                     return int(line.split(":")[1].strip().split(" ")[0]) * 1024
     except OSError:
         return None
@@ -145,20 +145,33 @@ def memory_available_bytes():
 def start_refusal(job):
     """Why this worker must not begin another chapter, or nothing if it may.
 
-    Two grounds, and the clock is asked first because it is the one that
-    is certain.  Memory is read off the machine at this moment and a
-    machine that will not answer is not argued with.
+    Three grounds, and the clock is asked first because it is the one
+    that is certain.  Both memory figures are read off the machine at
+    this moment, and a machine that will not answer is not argued with.
+
+    MEMORY FREE AND SWAP FREE ARE TWO DIFFERENT MARKS AND THE SECOND ONE
+    IS THE ONE THAT SAW THE WALL COMING.  On the night this was written
+    the kernel killed the browser and the editor five times, and the
+    figure for available memory read seven gigabytes throughout - it
+    counts pages that can be swapped out, so it goes on reporting room
+    that only exists while there is somewhere to put them.  Swap free
+    was 382 megabytes of twenty four gigabytes at the same moment.  When
+    swap fills there is nowhere left for the kernel to go and killing
+    something is all it has, so this is the mark that has to be watched.
     """
     deadline = job.get("deadline")
     if deadline is not None and time.monotonic() > deadline:
         return "the time asked for is up"
-    floor = job.get("memory_floor_bytes")
-    if floor is not None:
-        available = memory_available_bytes()
-        if available is not None and available < floor:
-            a = int(available / (1024 * 1024))
-            f = int(floor / (1024 * 1024))
-            return f"only {a} megabytes free, under the {f} asked for"
+    for field, key in (("MemAvailable", "memory_floor_bytes"),
+                       ("SwapFree", "swap_floor_bytes")):
+        floor = job.get(key)
+        if floor is None:
+            continue
+        free = meminfo_bytes(field)
+        if free is not None and free < floor:
+            have = int(free / (1024 * 1024))
+            want = int(floor / (1024 * 1024))
+            return f"{field} is {have} megabytes, under the {want} asked for"
     return None
 
 
@@ -290,6 +303,7 @@ def main():
         job["threads"] = threads
         job["deadline"] = deadline
         job["memory_floor_bytes"] = data.get("memory_floor_bytes")
+        job["swap_floor_bytes"] = data.get("swap_floor_bytes")
 
     if workers < 2:
         reports = [job_spoken(job) for job in jobs]
