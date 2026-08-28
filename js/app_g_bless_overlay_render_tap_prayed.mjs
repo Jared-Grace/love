@@ -13,16 +13,19 @@ export function app_g_bless_overlay_render_tap_prayed(
   let cone_get = property_get(r2, "cone_get");
   let blessed = property_get(r2, "blessed");
   let homes = property_get(r2, "homes");
-  let { bar, render, pray_person_id, tap_prayed } =
-    app_g_bless_overlay_render_tap_prayed_tap_prayed(
-      r2,
-      glows,
-      homes,
-      blessed,
-      cone_get,
-      wash,
-      view_now,
-    );
+  let r3 = app_g_bless_overlay_render_tap_prayed_tap_prayed(
+    r2,
+    glows,
+    homes,
+    blessed,
+    cone_get,
+    wash,
+    view_now,
+  );
+  let tap_prayed = property_get(r3, "tap_prayed");
+  let pray_person_id = property_get(r3, "pray_person_id");
+  let render = property_get(r3, "render");
+  let bar = property_get(r3, "bar");
   let r = {
     walking,
     world,
