@@ -1,3 +1,5 @@
+import { tiles_rectangles } from "./tiles_rectangles.mjs";
+import { g_img_rectangle_style_position } from "./g_img_rectangle_style_position.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
@@ -9,7 +11,6 @@ import { list_max } from "./list_max.mjs";
 import { g_z } from "./g_z.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { each } from "./each.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 export function app_g_bless_finished_glow(div_map, tiles) {
@@ -77,15 +78,20 @@ export function app_g_bless_finished_glow(div_map, tiles) {
     opacity: "0",
     transition: "none",
   });
-  function tile_square(tile) {
-    let square = html_div(glow);
-    g_img_square_style_position(square, tile, "ground_tint");
-    html_style_assign(square, {
+  ("The house is laid down in whole blocks rather than square by square, the same way the");
+  ("quiet mark left behind afterwards is. Both are drawing the same building, and a");
+  ("celebration ruled into tiles over a mark that is not would be two different houses");
+  ("shown one after the other.");
+  let rectangles = tiles_rectangles(tiles);
+  function rectangle_lit(rectangle) {
+    let block = html_div(glow);
+    g_img_rectangle_style_position(block, rectangle, "ground_tint");
+    html_style_assign(block, {
       background: gold,
       "pointer-events": "none",
     });
   }
-  each(tiles, tile_square);
+  each(rectangles, rectangle_lit);
   html_reflow_force(glow);
   html_style_assign(glow, {
     transition: "opacity 0.34s ease-out",
