@@ -120,6 +120,7 @@ export function permission_rules_other() {
     "WebFetch(domain:commons.wikimedia.org)",
     "WebFetch(domain:docs.bfl.ai)",
     "WebFetch(domain:ccat.sas.upenn.edu)",
+    "WebFetch(domain:berean.bible)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",

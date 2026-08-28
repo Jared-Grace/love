@@ -113,6 +113,20 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "phobos",
+      gloss: "fear",
+      words: [
+        {
+          strong: "5401",
+          glyph: "fear",
+        },
+        {
+          strong: "5399",
+          glyph: "fear",
+        },
+      ],
+    },
+    {
       root: "theos",
       gloss: "God",
       words: [
