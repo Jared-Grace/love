@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
@@ -35,7 +36,7 @@ export async function bible_audio_recordings_uncanonical_archive() {
   let root = bible_audio_root_folder();
   let archive = bible_audio_archive_root_folder();
   async function move_each(recording) {
-    let bible_folder = property_get(recording, "bible_folder");
+    let bible_folder = property_get(recording, bible_folder_key());
     let chapter_code = property_get(recording, "chapter_code");
     let into = path_join([archive, bible_folder]);
     await folder_exists_ensure(into);
