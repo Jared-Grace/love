@@ -1,3 +1,4 @@
+import { usfm_markers_removed_cases_gate_run } from "./usfm_markers_removed_cases_gate_run.mjs";
 import { app_shared_dev_stamp_gate_run } from "./app_shared_dev_stamp_gate_run.mjs";
 import { bible_verses_reading_units_cases_gate_run } from "./bible_verses_reading_units_cases_gate_run.mjs";
 import { ebible_letter_accounted_gate_run } from "./ebible_letter_accounted_gate_run.mjs";
@@ -875,6 +876,7 @@ export function qa_gates() {
     ebible_letter_accounted_gate_run,
     bible_verses_reading_units_cases_gate_run,
     app_shared_dev_stamp_gate_run,
+    usfm_markers_removed_cases_gate_run,
   ];
   return gates;
 }

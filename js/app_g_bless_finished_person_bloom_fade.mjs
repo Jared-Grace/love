@@ -24,7 +24,7 @@ export function app_g_bless_finished_person_bloom_fade(bloom) {
   ("is the fade plus a little, so a frame that runs late still finds the light there.");
   html_style_assign(bloom, {
     transition: "transform 0.8s ease-in, opacity 0.8s ease-in",
-    transform: "scale(9)",
+    transform: "scale(18)",
     opacity: "0",
   });
   function bloom_remove() {
