@@ -3,10 +3,7 @@ import { app_code_lesson_text_operators_written } from "./app_code_lesson_text_o
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { digits } from "./digits.mjs";
-import { app_code_lesson_value_words } from "./app_code_lesson_value_words.mjs";
-import { text_includes_any } from "./text_includes_any.mjs";
+import { app_code_lesson_text_line_code_is } from "./app_code_lesson_text_line_code_is.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { ternary } from "./ternary.mjs";
@@ -15,7 +12,7 @@ export function app_code_lesson_text_line_bracket_shape_or_null(text) {
   ("whether a line of code with more than one operator in it is written BRACKETED or FLAT. Nothing comes back for a piece that is not such a line.");
   ("Bracketed and flat are two different things to be taught, not two ways of writing one thing. false !== (3 === 3) says which comparison is solved first; 2 !== 2 === false leaves that to the rule about working left to right, which is a rule the learner has to have been given. A lesson that only ever shows the first and then asks about the second has told nobody the thing it is asking about - the fault a person reading lesson eighty-nine reported, in those words.");
   ("Two operators is what makes the question exist at all. One operator has nothing to be solved before anything else, so a bracket around it changes no answer and its presence or absence teaches nothing here.");
-  ("A digit or a true or a false is what tells a line of code from a sentence about code. The pieces reaching this have already been cut to card length, so what is left to reject is the short sentence that spells an operator while saying something about it rather than showing it.");
+  ("Whether the piece is a line of code at all is asked in one place shared with every other mark read off a line, so that all of them are reading the same set of lines.");
   let written = app_code_lesson_text_operators_written(text);
   let count = list_size(written);
   let several = greater_than(count, 1);
@@ -23,13 +20,8 @@ export function app_code_lesson_text_line_bracket_shape_or_null(text) {
   if (one_only) {
     return null;
   }
-  let words = [];
-  let items = digits();
-  list_add_multiple(words, items);
-  let items2 = app_code_lesson_value_words();
-  list_add_multiple(words, items2);
-  let operand = text_includes_any(text, words);
-  let sentence = not(operand);
+  let code_is = app_code_lesson_text_line_code_is(text);
+  let sentence = not(code_is);
   if (sentence) {
     return null;
   }
