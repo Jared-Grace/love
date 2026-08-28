@@ -5,7 +5,7 @@ import { subtract } from "./subtract.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_from_code_number } from "./text_from_code_number.mjs";
-export function bible_glyph_text_marks_ordinary_space_is(text, lookup) {
+export function bible_glyph_text_space_wrong_positions(text, lookup) {
   "$plain text";
   "$plain lookup";
   "the text is one drawn verse of the picture Bible and the lookup is the glyph name to character table it was drawn with. Both are data to read and neither runs.";
