@@ -1,12 +1,10 @@
-import { property_equals } from "./property_equals.mjs";
+import { bible_audio_recording_bucket } from "./bible_audio_recording_bucket.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_recordings } from "./bible_audio_recordings.mjs";
 import { bible_audio_recording_manifest_row } from "./bible_audio_recording_manifest_row.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 export async function bible_audio_verses_manifest_write_all() {
   "Re-notes every recording on this disk against the current cutting rule, and says how many are cut the way it cuts, how many of those still say what their chapter says, how many are cut some other way, and how many could not be asked.";
