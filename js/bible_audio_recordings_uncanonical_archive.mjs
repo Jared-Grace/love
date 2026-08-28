@@ -36,7 +36,8 @@ export async function bible_audio_recordings_uncanonical_archive() {
   let root = bible_audio_root_folder();
   let archive = bible_audio_archive_root_folder();
   async function move_each(recording) {
-    let bible_folder = property_get(recording, bible_folder_key());
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(recording, property_name);
     let chapter_code = property_get(recording, "chapter_code");
     let into = path_join([archive, bible_folder]);
     await folder_exists_ensure(into);
