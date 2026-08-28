@@ -40,7 +40,7 @@ export function bible_usfm_versions_years() {
     },
     dra: {
       year: 1899,
-      said: "The Douay-Rheims American edition of 1899, translated from the Latin Vulgate rather than from Hebrew and Greek; its Old Testament first appeared in 1610. It numbers the psalms the Vulgate way, one behind every other bible on this shelf.",
+      said: "The Douay-Rheims American edition of 1899, translated from the Latin Vulgate rather than from Hebrew and Greek; its Old Testament first appeared in 1610.",
     },
     asv: {
       year: 1901,

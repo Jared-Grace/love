@@ -13,9 +13,10 @@ import { list_map } from "./list_map.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export function bible_usfm_versions_years_sorted() {
   arguments_assert(arguments, 0);
-  ("Every bible on the shelf as one list, oldest wording first: the short word it is asked for by, the name it is called in print, the year it was settled, the terms it is given under, and a line saying what that year is the year of.");
+  ("Every bible on the shelf as one list, oldest wording first: the short word it is asked for by, the name it is called in print, the year it was settled, the terms it is given under, a line saying what that year is the year of, and why it is held back from readers where it is.");
   ("THE LIST IS ORDERED BY YEAR BECAUSE THAT IS THE ONE THING SOMEBODY CHOOSING A WORDING IS ACTUALLY CHOOSING. The short words are meaningless as an order and the printed names sort four King James editions apart from each other; the year puts the whole shelf on the single ladder it really lies on, from the English of 1599 to the English of last year, so a line meant to be sung can be picked for how it will sound rather than for which name was recognised.");
   ("The terms are said in words rather than left as the blank the shelf writes them with. A blank there means nobody owns the text, which is the most important thing on the row for anything sung and the easiest thing in the world to read as missing.");
+  ("EVERY ROW SAYS WHETHER THAT BIBLE IS HELD BACK FROM READERS, WHICH IS A DIFFERENT QUESTION FROM WHETHER IT MAY BE SHIPPED AND IS ANSWERED IN A DIFFERENT PLACE. A translation can be complete, public domain, correctly dated and still hand back the wrong passage, and that fault is the one nothing else here can see, because the words come back and they are good words. The reason is carried in rather than repeated, so the shelf cannot come to say something milder about a bible than the list that holds it back does.");
   ("A bible on the shelf with no year written down for it stops this rather than being quietly left out. A wording nobody has dated is exactly the one a reader would most want the sentence for, and dropping it would hide from the reader the only person who could fix it.");
   let versions = bible_usfm_versions();
   let years = bible_usfm_versions_years();
