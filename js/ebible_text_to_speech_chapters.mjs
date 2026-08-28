@@ -1,3 +1,4 @@
+import { bible_audio_speech_workers } from "./bible_audio_speech_workers.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { ebible_verses } from "./ebible_verses.mjs";
