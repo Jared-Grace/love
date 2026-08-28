@@ -1,24 +1,26 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_verse_draw } from "./bible_glyph_verse_draw.mjs";
 import { bible_glyph_text_space_wrong_positions } from "./bible_glyph_text_space_wrong_positions.mjs";
+import { not } from "./not.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_glyph_chapters_verses_space_wrong() {
-  "Every verse of the written picture Bible whose drawn text puts an ordinary space between two pictures, with how many verses were drawn to find them.";
-  "AN ORDINARY SPACE BETWEEN TWO PICTURES IS A LOST WORD BOUNDARY. The gap between two words is the entire punctuation of this writing system - pictures touching are one word, pictures apart are two - and the pictures either side of it are about an em wide each. An ordinary space is a quarter of that, so where one falls between two pictures the reader is being asked to see a boundary a quarter the width of the things it separates, and the likeliest thing they see instead is one long word nobody wrote.";
-  ("AN ORDINARY SPACE ANYWHERE ELSE IS CORRECT AND IS WHAT MOST OF A VERSE IS MADE OF. ",
-    fn_name("bible_glyph_word_pair_separator"),
-    " widens only the gap that can be misread, because a letter or a comma at either edge separates the two words by itself. This reading was once a refusal of the ordinary space outright, which was right while every gap was widened and would now condemn nearly every verse in the Bible.");
-  ("IT ASKS THE DRAWN TEXT RATHER THAN THE JOINER, and that is the whole reason it is worth running. The separator is chosen in one named place now and reading that function says nothing about the page: text is joined in more than one place, a page hands a finished line to a second view, and any of those can put a space back without touching the function that decided what the separator is. What a reader meets is the finished text, so the finished text is what gets asked.");
+  arguments_assert(arguments, 0);
+  ("Every verse of the written picture Bible whose drawn text sets a gap at the wrong width, with how many verses were drawn to find them.");
+  ("THE GAP IS THE ENTIRE PUNCTUATION OF THIS WRITING SYSTEM. Pictures touching are one word and pictures apart are two, and nothing else says so - no ring round the group, no joining mark. The width of one character carries the whole difference between a word and two words, which is why a character nobody can see on a screen is worth a walk of the whole Bible.");
+  ("IT ASKS BOTH DIRECTIONS AT ONCE BECAUSE THEY ARE ONE RULE. Too narrow between two pictures and the reader meets one long word nobody wrote; too wide between two English words and a sentence reads as a list. ",
+    fn_name("bible_glyph_text_space_wrong_positions"),
+    " holds the rule, and this walks the Bible past it.");
+  ("IT ASKS THE DRAWN TEXT RATHER THAN THE JOINER, and that is the whole reason it is worth running. The separator is chosen in one named place now, and reading that function says nothing about the page: text is joined in more than one place, a page hands a finished line to a second view, and any of those can put the wrong character back without touching the function that decided what the separator is. What a reader meets is the finished text, so the finished text is what gets asked.");
   ("IT DRAWS RATHER THAN READING WHAT IS STORED, because the store holds glyph names and English words and no separator at all. The separator only exists once a verse has been drawn, which means this reading cannot be replaced by a search of the chapter files.");
   ("THE VERSE NUMBER IS NOT PART OF WHAT IS ASKED. A drawn chapter puts the number in front of each verse with an ordinary space after it, which is correct - that space separates a number from a sentence, not one word from the next - so this walks verses and never chapters, and the number never enters the text being looked at.");
-  ("IT COUNTS THE VERSES IT DREW beside the offenders, so an empty answer can be told from a walk that reached nothing. A reading that loaded no chapters would report no bad spaces anywhere, and that reads as good news while meaning that nothing was looked at.");
-  arguments_assert(arguments, 0);
+  ("IT COUNTS THE VERSES IT DREW beside the offenders, so an empty answer can be told from a walk that reached nothing. A reading that loaded no chapters would report no bad gaps anywhere, and that reads as good news while meaning that nothing was looked at.");
   let chapters = bible_glyph_chapters();
   let lookup = bible_glyph_characters_lookup("");
   let verses_drawn = 0;
@@ -32,11 +34,14 @@ export function bible_glyph_chapters_verses_space_wrong() {
       let words = property_get(verse, "words");
       let drawn = bible_glyph_verse_draw(words, lookup);
       verses_drawn = verses_drawn + 1;
-      let found = bible_glyph_text_space_wrong_positions(drawn, lookup);
-      if (found) {
+      let wrong = bible_glyph_text_space_wrong_positions(drawn, lookup);
+      let b = list_empty_is(wrong);
+      let any = not(b);
+      if (any) {
         list_add(offenders, {
           chapter_code,
           verse_number,
+          wrong,
           drawn,
         });
       }
