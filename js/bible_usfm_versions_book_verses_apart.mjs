@@ -26,7 +26,8 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
   ("AGAINST THE OTHERS RATHER THAN AGAINST A CHOSEN ONE, because choosing one bible to measure from would decide in advance whose reckoning is the right one, and the question here is which bibles stand apart from the rest, whichever rest that turns out to be. The walk stops at the first other bible that shares a word, so a verse everybody agrees about costs one comparison and only a verse where something stands apart costs the full round.");
   ("A VERSE FEWER THAN THREE BIBLES CARRY IS NOT MEASURED AT ALL. Standing apart from a single other bible is symmetric and says nothing about which of the two moved, and the answer wanted here is about a bible that differs from a settled agreement rather than about a disagreeing pair.");
   ("A verse whose words all carry no meaning of their own is left out with it. A bible writing a verse as one word the counting drops would share nothing with anybody for a reason that has nothing to do with which passage it is.");
-  ("HOW MANY VERSES EACH BIBLE WAS MEASURED AT COMES BACK BESIDE THE STANDING-APART ONES, because a bare count is not comparable between bibles. One carrying only the New Testament stands apart at fewer verses than one carrying the whole book, for a reason that has nothing to do with its numbering, and a reader handed two bare counts would read the shorter shelf as the safer bible."); ("It says where the bibles stand apart and stops there. What counts as too many is decided next door, where there is a number to fail on.");
+  ("HOW MANY VERSES EACH BIBLE WAS MEASURED AT COMES BACK BESIDE THE STANDING-APART ONES, because a bare count is not comparable between bibles. One carrying only the New Testament stands apart at fewer verses than one carrying the whole book, for a reason that has nothing to do with its numbering, and a reader handed two bare counts would read the shorter shelf as the safer bible.");
+  ("It says where the bibles stand apart and stops there. What counts as too many is decided next door, where there is a number to fail on.");
   let versions = bible_usfm_versions();
   let words = object_property_names(versions);
   let carried = [];
@@ -83,7 +84,8 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
     words_by_version[version] = words_by_reference;
   }
   let apart = [];
-  let held_by_version = {}; let measured = 0;
+  let held_by_version = {};
+  let measured = 0;
   for (let reference of references) {
     let holders = [];
     for (let read of carried) {
@@ -108,7 +110,14 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
     measured = add(measured, 1);
     for (let holder of holders) {
       let version = property_get(holder, "version");
-      let content = property_get(holder, "content"); let held_before = property_get_or_null(held_by_version, version); let held_first = null_is(held_before); let held_now = 1; if (not(held_first)) { held_now = add(held_before, 1); } held_by_version[version] = held_now;
+      let content = property_get(holder, "content");
+      let held_before = property_get_or_null(held_by_version, version);
+      let held_first = null_is(held_before);
+      let held_now = 1;
+      if (not(held_first)) {
+        held_now = add(held_before, 1);
+      }
+      held_by_version[version] = held_now;
       let shares = false;
       for (let against of holders) {
         let itself = property_equals(against, "version", version);
@@ -139,7 +148,8 @@ export async function bible_usfm_versions_book_verses_apart(book_code) {
   let r = {
     book_code,
     versions: list_size(carried),
-    verses: measured, held: held_by_version,
+    verses: measured,
+    held: held_by_version,
     apart,
   };
   return r;
