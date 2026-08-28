@@ -104,6 +104,7 @@ export function examples_groups() {
         "example_fold_refused_escape",
         "example_fold_refused_gap",
         "example_no_function_named_refused",
+        "example_path_outside_folder_refused",
       ],
     },
     {
