@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { function_read } from "./function_read.mjs";
+import { repo_love_function_read } from "./repo_love_function_read.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
@@ -16,7 +16,7 @@ export async function app_code_lesson_family_roots(names) {
   for (let name of names) {
     let lesson_named = text_starts_with(name, "app_code_lesson_");
     if (lesson_named) {
-      let source = await function_read(name);
+      let source = await repo_love_function_read(name);
       let call = text_combine(maker, "({");
       let builds = text_includes(source, call);
       let empty_handed = text_combine(name, "() {");
