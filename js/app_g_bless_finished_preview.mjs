@@ -94,14 +94,7 @@ export async function app_g_bless_finished_preview() {
     ("celebration asks for it either way rather than checking, so it is given something safe");
     ("to call.");
     function faces_show() {}
-    await app_g_bless_finished(
-      r,
-      tiles,
-      nobody,
-      line,
-      ground_show,
-      faces_show,
-    );
+    await app_g_bless_finished(r, tiles, nobody, line, ground_show, faces_show);
   }
   let strip = html_div(cover);
   html_style_assign(strip, {
