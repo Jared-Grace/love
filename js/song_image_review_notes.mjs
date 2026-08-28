@@ -25,7 +25,7 @@ export function song_image_review_notes(parent, key) {
     let f_name = fn_name("song_image_notes");
     let notes = await api_read(f_name, [key]);
     html_clear(pills);
-    app_shared_note_pills(pills, notes);
+    song_image_review_note_pills(pills, key, notes, render);
   }
   function status_set(said) {
     html_text_set(status, said);
