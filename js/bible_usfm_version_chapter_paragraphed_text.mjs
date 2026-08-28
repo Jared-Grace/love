@@ -3,7 +3,7 @@ import { berean_book_path } from "./berean_book_path.mjs";
 import { file_read } from "./file_read.mjs";
 import { bible_usfm_chapter_paragraphed_text } from "./bible_usfm_chapter_paragraphed_text.mjs";
 import { em_dashes_closed } from "./em_dashes_closed.mjs";
-export async function bible_berean_chapter_paragraphed_text(
+export async function bible_usfm_version_chapter_paragraphed_text(
   book_code,
   chapter_number,
   verse_numbers_shown,
