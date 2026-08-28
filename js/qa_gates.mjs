@@ -1,3 +1,4 @@
+import { bible_usfm_versions_years_gate_run } from "./bible_usfm_versions_years_gate_run.mjs";
 import { app_code_lesson_telling_symbols_gate_run } from "./app_code_lesson_telling_symbols_gate_run.mjs";
 import { bible_glyph_chapters_book_codes_unknown_gate_run } from "./bible_glyph_chapters_book_codes_unknown_gate_run.mjs";
 import { bible_audio_recording_bucket_cases_gate_run } from "./bible_audio_recording_bucket_cases_gate_run.mjs";
