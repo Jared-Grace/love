@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -49,19 +50,23 @@ export async function app_g_bless_finished(
       people,
     );
   }
-  ("The newly finished house is put onto the map HERE, between the two halves, and that is");
-  ("the whole reason this is handed a way of drawing it. Drawn before the faces, the house");
-  ("turns gold while the person who finished it is still being blessed - the player is told");
-  ("the answer while they are watching the question. Drawn after the ground celebration");
-  ("instead, the white would flash over a square with nothing underneath it, and the light");
-  ("coming back off it would reveal an empty street.");
-  ("It runs whether or not any ground was finished. When none was, this is a redraw of a");
-  ("picture that has not changed, which costs a draw and buys the guarantee that the map");
-  ("and the record agree again by the time this returns.");
-  ground_show();
+  ("The newly finished house is put onto the map by the ground celebration rather than");
+  ("here, and that is the whole reason this is handed a way of drawing it. It has to land");
+  ("inside a gap that only that half can see: after the camera has finished travelling to");
+  ("the house, and before the first white washes over it. Drawn out here it would turn gold");
+  ("while the camera was still carrying the player towards it, so they would arrive to find");
+  ("the answer already given.");
+  ("When no ground was finished there is no camera move and no gap, and the redraw happens");
+  ("here instead. It costs a draw of a picture that has not changed and buys the guarantee");
+  ("that the map and the record agree again by the time this returns - which is what makes");
+  ("the held-back draw safe to hold back at all.");
   let ground = list_empty_not_is(tiles);
   if (ground) {
-    await app_g_bless_finished_place(div_map, player_img_c, tiles);
+    await app_g_bless_finished_place(div_map, player_img_c, tiles, ground_show);
+  }
+  let ground_none = not(ground);
+  if (ground_none) {
+    ground_show();
   }
   let player = property_get(world, "player");
   function back() {
