@@ -1,11 +1,9 @@
+import { app_shared_bible_open_hash_languages } from "./app_shared_bible_open_hash_languages.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { emoji_book_open } from "./emoji_book_open.mjs";
 import { text_combine_middle_space } from "./text_combine_middle_space.mjs";
-import { app_shared_bible_languages_chosen_get } from "./app_shared_bible_languages_chosen_get.mjs";
 import { app_shared_bible_mode_chapter } from "./app_shared_bible_mode_chapter.mjs";
-import { app_shared_bible_open_generic } from "./app_shared_bible_open_generic.mjs";
-import { window_open_app } from "./window_open_app.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 export function app_emoji_bible_words_button(parent, chapter_code) {
