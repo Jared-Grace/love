@@ -1,35 +1,13 @@
-import { app_g_ask_what_to_do_text } from "./app_g_ask_what_to_do_text.mjs";
-import { app_g_conversation_meet } from "./app_g_conversation_meet.mjs";
+import { app_g_conversation_opening } from "./app_g_conversation_opening.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_g_conversation_turns } from "./app_g_conversation_turns.mjs";
-import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { app_g_conversation_leave } from "./app_g_conversation_leave.mjs";
+import { app_g_conversation_run_turn } from "./app_g_conversation_run_turn.mjs";
 import { app_g_conversation_render_boundary } from "./app_g_conversation_render_boundary.mjs";
 import { app_g_conversation_render_openers } from "./app_g_conversation_render_openers.mjs";
-import { app_g_conversation_pray_together } from "./app_g_conversation_pray_together.mjs";
-import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
-import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { app_g_day_talkable_is } from "./app_g_day_talkable_is.mjs";
-import { app_g_day_blocked_is } from "./app_g_day_blocked_is.mjs";
-import { app_g_discern_prevented_overlay } from "./app_g_discern_prevented_overlay.mjs";
-import { g_busy } from "./g_busy.mjs";
-import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
-import { app_g_npc_says } from "./app_g_npc_says.mjs";
-import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
-import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
-import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
-import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
-import { g_anything_else } from "./g_anything_else.mjs";
-import { g_response } from "./g_response.mjs";
+import { app_g_conversation_render_pray } from "./app_g_conversation_render_pray.mjs";
 import { app_g_sky_reset } from "./app_g_sky_reset.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_combine } from "./text_combine.mjs";
-import { emoji_pray } from "./emoji_pray.mjs";
-import { html_clear } from "./html_clear.mjs";
+import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
 export async function app_g_conversation(
   prayer,
   npc,
@@ -37,39 +15,22 @@ export async function app_g_conversation(
   overlay_close,
   div_map,
 ) {
-  let talkable = app_g_day_talkable_is(npc);
-  if (not(talkable)) {
-    let npc_says5 = g_busy();
-    app_g_npc_says(npc, overlay, npc_says5);
-    app_g_button_conversation_end(overlay, overlay_close);
+  "A whole conversation with one person: the opening that may end it before it starts, then the turns, the menu of things to talk about, and the offer to pray, each of which can hand the screen back to the others.";
+  "THE TURNS STILL TO COME ARE KEPT IN A SMALL ONE-FIELD KEEPER rather than in a plain name, because the screens below outlive this call and every one of them has to read and write the one list at the moment it actually runs.";
+  "THE FIRST DRAW READS THE PLAIN NAME AND NOT THE KEEPER, which is the same list, because nothing has had a chance to answer a turn yet.";
+  let opening = await app_g_conversation_opening(
+    prayer,
+    npc,
+    overlay,
+    overlay_close,
+  );
+  let stopped = property_get(opening, "stopped");
+  if (stopped) {
     return;
   }
-  if (app_g_day_blocked_is(npc)) {
-    await overlay_close();
-    app_g_discern_prevented_overlay(5000);
-    return;
-  }
-  let r7 = await app_g_conversation_meet(prayer, npc);
-  let meet = property_get(r7, "meet");
-  let christian = property_get(r7, "christian");
-  let greeting = property_get(r7, "greeting");
-  let pronouns = property_get(r7, "pronouns");
-  if (christian) {
-    ("a believer you meet again: greet them, and offer to PRAY TOGETHER — interceding for a fellow Christian's walk (growth, the Spirit, sharing), the believer counterpart of the unbeliever prayer. praying-with only appears once someone HAS converted; before that the conversation is about leading them to Christ, not praying alongside them.");
-    app_g_npc_says(npc, overlay, greeting);
-    let container_believer = app_shared_game_container_player(overlay);
-    let ask_believer = app_g_ask_what_to_do_text();
-    app_shared_game_p_text(container_believer, ask_believer);
-    function pray_together() {
-      let r2 = app_g_conversation_pray_together(overlay_close, pronouns);
-      return r2;
-    }
-    let pray_emoji = emoji_pray();
-    let pray_label = text_combine(pray_emoji, " Pray together");
-    app_shared_game_button_green(container_believer, pray_label, pray_together);
-    app_g_button_conversation_end(overlay, overlay_close);
-    return;
-  }
+  let meet = property_get(opening, "meet");
+  let greeting = property_get(opening, "greeting");
+  let pronouns = property_get(opening, "pronouns");
   let r = app_g_conversation_turns(npc, pronouns, div_map, overlay_close);
   let turns = property_get(r, "turns");
   let converts = property_get(r, "converts");
@@ -77,14 +38,17 @@ export async function app_g_conversation(
   let prayed = property_get(r, "prayed");
   let greeted = property_get(r, "greeted");
   let pending = property_get(r, "pending");
-  let some_prayers = property_get(r, "some_prayers");
   let steps_total = property_get(r, "steps_total");
   let steps = property_get(r, "steps");
   let close_now = property_get(r, "close_now");
   let goodbye = property_get(r, "goodbye");
+  let remaining_held = {
+    remaining,
+  };
   async function leave() {
+    let remaining_now = property_get(remaining_held, "remaining");
     let r5 = await app_g_conversation_leave(
-      remaining,
+      remaining_now,
       prayed,
       turns,
       overlay,
@@ -94,58 +58,31 @@ export async function app_g_conversation(
     return r5;
   }
   function run_turn(turn) {
-    html_clear(overlay);
-    let discern = {
-      prayed: false,
-    };
-    function keep(t) {
-      let neq = not_equal(t, turn);
-      return neq;
-    }
-    async function on_correct() {
-      ("the RIGHT verse landed: this turn is done (dropped from remaining) and the day ticks forward. before the next screen, the NPC speaks the AFTER — its warm response to the Word (the fruit), generated by ",
-        fn_name("g_response"),
-        " for this turn's after_kind — carried as the pending intro so render_openers / render_pray say it in place of the usual continue-prompt: 'npc says the after, then asks what to talk about next'. one turn per opener in the demo, so the after always leads to the menu; a multi-turn thread would instead chain into the next turn's before.");
-      remaining = list_filter(remaining, keep);
-      await app_g_conversation_advance(steps, steps_total);
-      let after_kind = property_get_or_null(turn, "after_kind");
-      if (after_kind) {
-        pending.text = g_response(after_kind);
-      }
-      app_g_conversation_render(
-        overlay,
-        remaining,
-        render_openers,
-        leave,
-        prayed,
-        render_pray,
-        converts,
-        npc,
-        goodbye,
-      );
-    }
-    let concern = property_get(turn, "concern");
-    let correct = property_get(turn, "correct");
-    let wrong = property_get(turn, "wrong");
-    app_g_turn_quiz_once(
+    app_g_conversation_run_turn(
+      turn,
       overlay,
       npc,
-      concern,
-      correct,
-      wrong,
-      on_correct,
-      discern,
+      remaining_held,
+      steps,
+      steps_total,
+      pending,
+      render_openers,
       leave,
+      prayed,
+      render_pray,
+      converts,
+      goodbye,
     );
   }
   function render_boundary(turn) {
+    let remaining_now = property_get(remaining_held, "remaining");
     let r4 = app_g_conversation_render_boundary(
       turn,
       overlay,
       npc,
       meet,
       pending,
-      remaining,
+      remaining_now,
       render_openers,
       leave,
       prayed,
@@ -156,13 +93,14 @@ export async function app_g_conversation(
     return r4;
   }
   function render_openers() {
+    let remaining_now = property_get(remaining_held, "remaining");
     let r3 = app_g_conversation_render_openers(
       greeting,
       greeted,
       pending,
       npc,
       overlay,
-      remaining,
+      remaining_now,
       render_boundary,
       steps,
       steps_total,
@@ -173,35 +111,16 @@ export async function app_g_conversation(
     return r3;
   }
   function render_pray() {
-    let npc_says = g_anything_else();
-    if (pending.text) {
-      npc_says = pending.text;
-      pending.text = null;
-    }
-    app_g_npc_says(npc, overlay, npc_says);
-    let container = app_shared_game_container_player(overlay);
-    let ask_pray = app_g_ask_what_to_do_text();
-    app_shared_game_p_text(container, ask_pray);
-    async function pray() {
-      let r6 = await app_g_conversation_pray(
-        steps,
-        steps_total,
-        prayed,
-        overlay,
-        remaining,
-        render_openers,
-        leave,
-        render_pray,
-        converts,
-        npc,
-        goodbye,
-        some_prayers,
-      );
-      return r6;
-    }
-    let left = emoji_pray();
-    let text2 = text_combine(left, " Pray");
-    app_shared_game_button_green(container, text2, pray);
+    app_g_conversation_render_pray(
+      r,
+      pending,
+      npc,
+      overlay,
+      remaining_held,
+      render_openers,
+      leave,
+      render_pray,
+    );
   }
   await app_g_sky_reset();
   app_g_conversation_render(
