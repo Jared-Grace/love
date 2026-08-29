@@ -1,36 +1,28 @@
-import { app_g_view_render_study_fresh_close } from "./app_g_view_render_study_fresh_close.mjs";
-import { app_g_view_render_study_fresh_container } from "./app_g_view_render_study_fresh_container.mjs";
-import { app_g_view_render_study_fresh_save_pending } from "./app_g_view_render_study_fresh_save_pending.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_g_view_render_study_fresh_save_pending } from "./app_g_view_render_study_fresh_save_pending.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_g_view_set } from "./app_g_view_set.mjs";
 import { app_g_view_kind_study } from "./app_g_view_kind_study.mjs";
 import { app_g_view_render_study_fresh_persist_cancel } from "./app_g_view_render_study_fresh_persist_cancel.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_g_view_render_study_fresh_close } from "./app_g_view_render_study_fresh_close.mjs";
+import { app_g_view_render_study_fresh_container } from "./app_g_view_render_study_fresh_container.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_g_view_render_study_update_bar } from "./app_g_view_render_study_update_bar.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { app_g_view_render_study_style_completed } from "./app_g_view_render_study_style_completed.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { app_g_view_render_study_render_thank_gate } from "./app_g_view_render_study_render_thank_gate.mjs";
-import { app_g_view_render_study_style_next } from "./app_g_view_render_study_style_next.mjs";
+import { app_g_view_render_study_fresh_word_tapped } from "./app_g_view_render_study_fresh_word_tapped.mjs";
 import { less_than } from "./less_than.mjs";
-import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
-import { app_shared_style_control_font_size } from "./app_shared_style_control_font_size.mjs";
-import { app_g_view_render_study_style_word } from "./app_g_view_render_study_style_word.mjs";
+import { app_g_view_render_study_fresh_word_button } from "./app_g_view_render_study_fresh_word_button.mjs";
 export function app_g_view_render_study_fresh(
   word_index,
   text,
   overlay,
   words,
 ) {
-  "The screen for learning a passage a word at a time: every word of it a button, tapped in order from where the reader left off, with a bar above showing how far through they are.";
-  "Only the word that comes next does anything when it is tapped. A tap anywhere else is ignored rather than corrected, because the point is to say the passage rather than to find words in it, and a screen that scolded would be teaching a different thing.";
-  "How far they got is written down a moment and a half after the last tap rather than on each one. Somebody working through a passage taps steadily, and a write per word would be a write per second all the way through; waiting also means that leaving the screen part-way through a word saves the same thing as leaving it between words. A tap while a write is still waiting cancels that write and starts the wait again, so what is finally stored is where they actually stopped.";
-  "Three things go back to the caller: the place to draw into, the way to draw the words again, and whether this reader has tapped nothing yet. That last one is what lets the caller tell somebody starting a passage from somebody returning to one, which is a difference the screen itself has no reason to know about.";
+  "A passage opened for study from the beginning of a session, given back as the box it stands in together with the way to draw the words into it.";
+  "DRAWING ONE WORD AND ANSWERING A PRESS ON ONE ARE BOTH DONE NEXT DOOR, so what stands here is the two things that cannot leave: the place the reading has got to, which every press moves, and the save that is waiting to happen, which every press pushes back.";
+  "THE PLACE THE READING HAS GOT TO IS READ FRESH ON EVERY PRESS AND HANDED ON BY VALUE, never closed over by a piece made earlier, because a piece made earlier would carry the place as it stood then.";
   arguments_assert(arguments, 4);
   let r = app_g_view_render_study_fresh_save_pending(word_index);
   let save_pending = property_get(r, "save_pending");
@@ -70,32 +62,30 @@ export function app_g_view_render_study_fresh(
           return;
         }
         current = i + 1;
-        app_g_view_render_study_style_completed(word_bs[i]);
-        app_g_view_render_study_update_bar(bar_div, current, words);
-        let done = greater_than_equal(current, words.length);
-        if (done) {
-          app_g_view_render_study_render_thank_gate(
-            persist_cancel,
-            container,
-            close,
-          );
-          return;
-        }
-        app_g_view_render_study_style_next(word_bs[current]);
-        persist_soon();
+        app_g_view_render_study_fresh_word_tapped(
+          i,
+          current,
+          word_bs,
+          bar_div,
+          words,
+          persist_cancel,
+          container,
+          close,
+          persist_soon,
+        );
       }
       return on_tap;
     }
     for (let i = 0; less_than(i, words.length); i++) {
       let lambda = tap(i);
-      let b = app_shared_button_inline(words_div, words[i], lambda);
-      html_style_assign(b, {
-        "padding-left": app_shared_content_edge_gap(),
-        "padding-right": app_shared_content_edge_gap(),
-        "font-size": app_shared_style_control_font_size(),
-      });
-      word_bs.push(b);
-      app_g_view_render_study_style_word(i, word_bs, current);
+      app_g_view_render_study_fresh_word_button(
+        words_div,
+        words[i],
+        i,
+        lambda,
+        word_bs,
+        current,
+      );
     }
   }
   let fresh = equal(current, 0);
