@@ -65,6 +65,10 @@ export function bible_glyph_chapter_references() {
       reference: "Luke 2",
     },
     {
+      chapter_code: "LUK07",
+      reference: "Luke 7",
+    },
+    {
       chapter_code: "JHN01",
       reference: "John 1",
     },
