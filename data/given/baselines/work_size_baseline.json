@@ -3,14 +3,10 @@
   "app_replace_rule_set",
   "app_g_verify_home",
   "app_reply",
-  "app_g_conversation",
   "bible_glyph_chapter_rosetta_lines_fetched_known",
   "bible_glyph_chapter_fetch_found",
+  "app_g_conversation",
   "app_verses_group",
-  "app_shared_bible_read",
-  "app_g_view_render_study_fresh",
-  "js_expand_generic",
-  "app_replace_rule_set_proof_show",
-  "app_g_study_lambda"
+  "app_shared_bible_read"
  ]
 }
