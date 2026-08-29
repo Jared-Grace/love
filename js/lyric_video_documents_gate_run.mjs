@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_given_lyric_videos_folder } from "./data_given_lyric_videos_folder.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
@@ -7,7 +8,6 @@ import { number_is } from "./number_is.mjs";
 import { not } from "./not.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_map_unordered_async } from "./list_map_unordered_async.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -72,8 +72,7 @@ export async function lyric_video_documents_gate_run() {
         return later;
       }
       let out_of_order = starts_above.filter(later_than_this);
-      let b = list_empty_is(out_of_order);
-      let goes_back = not(b);
+      let goes_back = list_empty_not_is(out_of_order);
       let faults_back = goes_back
         ? [
             {
