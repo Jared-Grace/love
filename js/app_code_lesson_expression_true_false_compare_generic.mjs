@@ -30,10 +30,7 @@ export function app_code_lesson_expression_true_false_compare_generic(
   let symbol = property_get(operator, "operator");
   let fn = property_get(operator, "fn");
   let name_id =
-    app_code_lesson_expression_true_false_compare_generic_title_name_id(
-      symbol,
-      rights,
-    );
+    app_code_lesson_expression_true_false_compare_generic_title_name_id(symbol);
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
     above,
