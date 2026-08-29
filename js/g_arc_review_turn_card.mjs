@@ -1,12 +1,14 @@
-import { g_arc_turn_scripture_named } from "./g_arc_turn_scripture_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { g_arc_turn_scripture_named } from "./g_arc_turn_scripture_named.mjs";
 import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
-export function g_arc_review_turn_card(entry, passages, notes, index) {
-  "One turn of a written arc gathered into everything a screen has to show for it: the number it is addressed by, what the person said, the passage the answer named with that passage's own words, the reaction, whether they came to believe there, and the notes already standing against it.";
+export function g_arc_review_turn_card(entry, passages, notes, index, moved) {
+  "One turn of a written arc gathered into everything a screen has to show for it: the number it is addressed by, what the person said, the passage the answer named with that passage's own words, the reaction, whether they came to believe there, the notes already standing against it, and whatever moved in it since it was last read.";
   "IT IS THE SAME TURN THE REVIEW PAGE PRINTS, gathered rather than written out. The page a person reads on paper and the page they read on a screen are asking one question, so the Scripture is found the same way and the number is the same number - two gatherings of a turn would let a note filed from a screen point at a different line than the same note filed from the page.";
   "THE SCRIPTURE IS ASKED FOR RATHER THAN FOUND HERE, and it is the same asking the printed page makes - which is what carries the check that a reference naming a passage nobody offered stops the reading rather than being handed on.";
-  arguments_assert(arguments, 4);
+  "WHAT MOVED ARRIVES ALREADY CUT TO THIS TURN, keyed by the field it moved in. The screen draws a field knowing its name and nothing else, so a card carrying the whole arc's differences would make every row work out its own address - and an address worked out on a screen is a second spelling of the one thing that must have only one.";
+  "AN UNMOVED TURN CARRIES AN EMPTY ONE RATHER THAN NOTHING, so a row asking what it used to say gets the same answer shape whether anything moved or not. A card that sometimes has the field and sometimes does not makes every reader of it ask twice.";
+  arguments_assert(arguments, 5);
   let number = property_get(entry, "number");
   let turn = property_get(entry, "turn");
   let conversation = property_get(entry, "conversation");
@@ -33,6 +35,7 @@ export function g_arc_review_turn_card(entry, passages, notes, index) {
     after,
     believes,
     notes: standing,
+    moved,
   };
   return r;
 }

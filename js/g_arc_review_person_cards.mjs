@@ -1,22 +1,29 @@
-import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
-import { list_size } from "./list_size.mjs";
-import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { g_arc_lines_moved } from "./g_arc_lines_moved.mjs";
+import { g_arc_moved_by_turn } from "./g_arc_moved_by_turn.mjs";
+import { list_size } from "./list_size.mjs";
+import { add } from "./add.mjs";
+import { property_or_null } from "./property_or_null.mjs";
+import { equal } from "./equal.mjs";
 import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
+import { list_add } from "./list_add.mjs";
 import { g_arc_turns_numbered } from "./g_arc_turns_numbered.mjs";
 import { g_arc_review_turn_card } from "./g_arc_review_turn_card.mjs";
-import { list_add } from "./list_add.mjs";
+import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
+import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
 export function g_arc_review_person_cards(
   entry,
   passages,
   notes,
   nickname,
   gender,
+  reviewed_arc,
 ) {
   "$plain nickname";
   "$plain gender";
-  "One written arc gathered for a reviewer: who the person is, and every turn of theirs with its Scripture and its standing notes.";
+  "One written arc gathered for a reviewer: who the person is, every turn of theirs with its Scripture and its standing notes, and what has moved in it since they last read it.";
   "THE NICKNAME TRAVELS WITH THE ARC BECAUSE FILING A NOTE ASKS FOR IT. The store addresses a person by number and the door a person files through asks for the name, so a screen holding only the number would have to turn one into the other itself.";
   "WHO THE PERSON IS COMES IN RATHER THAN BEING LOOKED UP HERE, and that is a fact about cost rather than a taste. Both their name and their gender are answered by dealing the whole cast, and dealing the cast counts every written sermon - so asking for one person, twice, once per person, read the entire sermon supply six times to draw a chapter of three. Handed in, it is read twice for the chapter however many people are in it.";
   "THE COUNT IS OF EVERY NOTE FILED AGAINST THEM AND NOT OF THE ONES DRAWN. It is there so a reviewer coming back can see which arcs they have already been through, and an arc whose notes point at turns it no longer has is exactly the one that must not read as untouched.";
@@ -24,9 +31,31 @@ export function g_arc_review_person_cards(
   "THE FIELDS ARE WALKED RATHER THAN NAMED, from the one source the writing of an arc is built from. A field renamed there is renamed here in the same breath; spelled out here, this would go on looking for a field nothing writes any more and show it empty.";
   "WHETHER THEY ARE A MAN OR A WOMAN TRAVELS WITH THEM, because the screen draws their own words in the game's colour for their gender and a screen holding only a number could not know which colour that is. It comes from the deal and never from anything worked out alongside it: the deck settled every person's gender before the arc was written, so a second opinion would disagree with the arc's own facts for about half the pool with nothing going red.";
   "WHAT KIND OF THING EACH FIELD IS TRAVELS WITH ITS VALUE, so the screen drawing it never has to know that a trouble is somebody speaking and an occupation is not. The whole field is read here rather than only its name, which is what carries the kind along; a screen deciding that for itself would be a second list of the field names, kept by hand, drifting.";
-  arguments_assert(arguments, 5);
+  "THE ARC AS IT WAS READ COMES IN, AND NOT READ IS NULL RATHER THAN AN EMPTY ARC. An arc nobody has read is not an arc that said nothing, and comparing against an empty one would mark every line of it as new - which is the whole arc shouting, on exactly the reading where none of it has been judged yet and the shouting means nothing.";
+  "NOTHING READ MEANS NOTHING MARKED, and the page says so once at the top instead. A first reading is read straight through; it is the second one that wants only the difference.";
+  arguments_assert(arguments, 6);
   let index = property_get(entry, "index");
   let arc = property_get(entry, "arc");
+  let read = not_equal(reviewed_arc, null);
+  let by_turn = {};
+  let moved_count = 0;
+  if (read) {
+    let moved = g_arc_lines_moved(reviewed_arc, arc);
+    by_turn = g_arc_moved_by_turn(arc, moved);
+    let list = property_get(moved, "changed");
+    let changed = list_size(list);
+    let list2 = property_get(moved, "vanished");
+    let vanished = list_size(list2);
+    let list3 = property_get(moved, "appeared");
+    let appeared = list_size(list3);
+    let left = add(changed, vanished);
+    moved_count = add(left, appeared);
+  }
+  let person_moved = property_or_null(by_turn, "0");
+  let untouched = equal(person_moved, null);
+  if (untouched) {
+    person_moved = {};
+  }
   let described = g_arc_answer_fields();
   let chosen_fields = property_get(described, "person");
   let fields = [];
@@ -43,7 +72,14 @@ export function g_arc_review_person_cards(
   let numbered = g_arc_turns_numbered(arc);
   let turns = [];
   for (let one of numbered) {
-    let card = g_arc_review_turn_card(one, passages, notes, index);
+    let number = property_get(one, "number");
+    let key = String(number);
+    let turn_moved = property_or_null(by_turn, key);
+    let still = equal(turn_moved, null);
+    if (still) {
+      turn_moved = {};
+    }
+    let card = g_arc_review_turn_card(one, passages, notes, index, turn_moved);
     list_add(turns, card);
   }
   let theirs = g_arc_review_notes_person(notes, index);
@@ -56,6 +92,9 @@ export function g_arc_review_person_cards(
     fields,
     notes_count,
     person_notes,
+    read,
+    moved_count,
+    person_moved,
     turns,
   };
   return r;
