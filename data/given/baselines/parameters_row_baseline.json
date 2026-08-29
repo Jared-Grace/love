@@ -1,11 +1,5 @@
 {
  "known": [
-  "app_shared_bible_read_verse_row",
-  "app_shared_bible_read_verse_here_is",
-  "app_shared_bible_read_languages_verses",
-  "app_g_conversation_run_turn",
-  "app_g_bless_overlay_render_tap_prayed_render_ground",
-  "app_code_review_present_fn_present",
   "bible_glyph_chapters_undrawn_commonest_report",
   "app_g_conversation_render_openers",
   "app_g_conversation_render_boundary",
