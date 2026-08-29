@@ -75,7 +75,8 @@ export function app_g_bless_finished_person_bloom(div_map, person) {
   });
   html_reflow_force(div_map);
   html_style_assign(bloom, {
-    transition: "transform 0.6s cubic-bezier(0.06, 0.88, 0.2, 1) 0.06s, opacity 0.4s ease-out 0.06s",
+    transition:
+      "transform 0.6s cubic-bezier(0.06, 0.88, 0.2, 1) 0.06s, opacity 0.4s ease-out 0.06s",
     transform: "scale(7.2)",
     opacity: "0.95",
   });
