@@ -60,7 +60,7 @@ export function g_arc_prompt(
   let joined9 = property_get(r2, "joined9");
   let joined = property_get(r2, "joined");
   let reached_for = words_reached_for_plain_lines();
-  let lines = g_arc_prompt_lines(
+  let lines = g_arc_prompt_lines({
     reading_age,
     reached_for,
     leader,
@@ -72,7 +72,7 @@ export function g_arc_prompt(
     joined7,
     joined9,
     joined8,
-  );
+  });
   let r = list_join_newline(lines);
   return r;
 }

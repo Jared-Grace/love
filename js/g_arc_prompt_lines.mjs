@@ -10,7 +10,7 @@ import { g_arc_catch_up_name } from "./g_arc_catch_up_name.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { g_arc_style_lines } from "./g_arc_style_lines.mjs";
 import { json_format_to } from "./json_format_to.mjs";
-export function g_arc_prompt_lines(
+export function g_arc_prompt_lines({
   reading_age,
   reached_for,
   leader,
@@ -22,8 +22,8 @@ export function g_arc_prompt_lines(
   joined7,
   joined9,
   joined8,
-) {
-  arguments_assert(arguments, 11);
+}) {
+  arguments_assert(arguments, 1);
   let joined2 = list_join_space([
     "Write every word of your answer so a child of",
     reading_age,

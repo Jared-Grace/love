@@ -1,10 +1,14 @@
-import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { entries_versus_baseline } from "./entries_versus_baseline.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { property_get } from "./property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_add } from "./list_add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { list_join_newline } from "./list_join_newline.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function baseline_entries_gate_generic(
   offenders,
   path,
@@ -26,6 +30,7 @@ export async function baseline_entries_gate_generic(
   ("quietly lets the same offense come back under cover of being already known - so");
   ("the sentence saying so is the one the flat ratchet already gives, and thirteen");
   ("gates now say it the same way.");
+  ("Both teeth are complained about in one refusal, for the reason the flat ratchet gives at length: refusing on the new names and stopping there hides the left-behind ones for as long as anything new offends, and printing them a few lines above does not reach a reader who only ever sees the message a failing gate carried out of a whole-repo run.");
   let recorded = await baseline_known_read(path);
   let change = entries_versus_baseline(offenders, recorded, fields);
   let added = property_get(change, "added");
@@ -37,16 +42,27 @@ export async function baseline_entries_gate_generic(
   ("names beside each one are already printed above, and repeating every field there");
   ("buries the list it was meant to hand over.");
   let added_names = list_map_property(added, "name");
-  list_empty_is_assert_json(added_names, {
-    hint,
-  });
   let stale_names = list_map_property(stale, "name");
-  list_empty_is_assert_json(stale_names, {
-    hint: text_combine_multiple([
+  let sentences = [];
+  let added_any_is = list_empty_not_is(added_names);
+  if (added_any_is) {
+    list_add(sentences, hint);
+  }
+  let stale_any_is = list_empty_not_is(stale_names);
+  if (stale_any_is) {
+    let hint_stale = text_combine_multiple([
       "these no longer offend - shrink the record with ",
       name_write,
       " so the same name cannot come back unnoticed",
-    ]),
+    ]);
+    list_add(sentences, hint_stale);
+  }
+  let hint_both = list_join_newline(sentences);
+  let both = list_concat(added_names, stale_names);
+  list_empty_is_assert_json(both, {
+    hint: hint_both,
+    added: added_names,
+    stale: stale_names,
   });
   let r = {
     added: 0,
