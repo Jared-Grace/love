@@ -1,8 +1,7 @@
-import { floor } from "./floor.mjs";
+import { divide_floor } from "./divide_floor.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { date_now } from "./date_now.mjs";
 import { not } from "./not.mjs";
@@ -32,7 +31,6 @@ export function bible_audio_night_seconds_left_or_null() {
   let left2 = closes.getTime();
   let right = at.getTime();
   let left = subtract(left2, right);
-  let p = divide(left, 1000);
-  let seconds = floor(p);
+  let seconds = divide_floor(left, 1000);
   return seconds;
 }
