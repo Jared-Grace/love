@@ -58,8 +58,7 @@ export async function app_g_conversation(
     return r5;
   }
   function run_turn(turn) {
-    app_g_conversation_run_turn(
-      turn,
+    app_g_conversation_run_turn(turn, {
       overlay,
       npc,
       remaining_held,
@@ -72,7 +71,7 @@ export async function app_g_conversation(
       render_pray,
       converts,
       goodbye,
-    );
+    });
   }
   function render_boundary(turn) {
     let remaining_now = property_get(remaining_held, "remaining");
