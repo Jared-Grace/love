@@ -14,7 +14,7 @@ import { list_first } from "./list_first.mjs";
 import { list_unique } from "./list_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_choose_order_three_run(root, tree) {
+export function app_code_lesson_expression_choose_order_reason_run(root, tree) {
   arguments_assert(arguments, 2);
   ("one line walked all the way down to its value, with the reason each step is the one that may go said before the step is taken: the line named first, then three rows to a step");
   ("The walk the lessons before this one read says only that one part has a value on each side. That holds on a two-operator line, where the learner can see it for themselves - the part that cannot go yet has an operator sitting inside it. On a three-operator line the second step is 5 - 2 + 4, where both the minus and the plus look ready, and the sentence would be asking the learner to believe something the screen does not show. So this lesson gives the rule instead, which is the same rule the quiz marks by.");
