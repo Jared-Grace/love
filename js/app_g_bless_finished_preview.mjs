@@ -5,9 +5,9 @@ import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
-import { html_div } from "./html_div.mjs";
-import { app_g_bless_map } from "./app_g_bless_map.mjs";
+import { app_g_bless_map_scrolling } from "./app_g_bless_map_scrolling.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_div } from "./html_div.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_first } from "./list_first.mjs";
@@ -43,13 +43,7 @@ export async function app_g_bless_finished_preview() {
     background: "black",
   });
   let world = app_g_bless_world_new();
-  let scroller = html_div(cover);
-  html_style_assign(scroller, {
-    position: "absolute",
-    inset: "0",
-    overflow: "auto",
-  });
-  let drawn = app_g_bless_map(scroller, world);
+  let drawn = app_g_bless_map_scrolling(cover, world);
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
   ("The lit ground is its own layer over the tiles, made the same way and in the same place");

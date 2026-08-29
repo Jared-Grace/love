@@ -27,7 +27,7 @@ export function html_code_error_record_script() {
     "try { var held = JSON.parse(window.localStorage.getItem(key)); ",
     "if (held && held.value && held.value.length) { list = held.value; } } catch (parse_failed) {} ",
     "var fault = (event && event.error) || (event && event.reason) || null; ",
-    'var text = "error"; ',
+    'var text = "error"; var said = ""; if (fault && fault.message) { said = String(fault.message); } else if (event && event.message) { said = String(event.message); } var trace = ""; if (fault && fault.stack) { trace = String(fault.stack); } ',
     "if (fault && fault.stack) { text = String(fault.stack); } ",
     "else if (fault && fault.message) { text = String(fault.message); } ",
     "else if (event && event.message) { text = String(event.message); } ",
