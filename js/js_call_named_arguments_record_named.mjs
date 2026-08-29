@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { js_names_chosen_indices } from "./js_names_chosen_indices.mjs";
@@ -28,8 +29,7 @@ export function js_call_named_arguments_record_named(
   let changed = 0;
   function lambda(node) {
     let args = js_call_arguments_get(node);
-    let held = list_size(args);
-    let matched = equal(held, wanted);
+    let matched = list_size_equal(args, wanted);
     if (not(matched)) {
       return;
     }
