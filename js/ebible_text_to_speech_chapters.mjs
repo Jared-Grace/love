@@ -1,3 +1,4 @@
+import { bible_audio_speech_locked_run } from "./bible_audio_speech_locked_run.mjs";
 import { bible_audio_speech_not_started } from "./bible_audio_speech_not_started.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -14,7 +15,6 @@ import { bible_audio_folder } from "./bible_audio_folder.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { text_to_speech } from "./text_to_speech.mjs";
 import { bible_audio_verses_manifest_write } from "./bible_audio_verses_manifest_write.mjs";
 export async function ebible_text_to_speech_chapters(
   bible_folder,
@@ -60,7 +60,7 @@ export async function ebible_text_to_speech_chapters(
   let seconds_at_most = bible_audio_night_seconds_left_or_null();
   let memory_floor_bytes = bible_audio_speech_memory_floor_bytes();
   let swap_floor_bytes = bible_audio_speech_swap_floor_bytes();
-  let spoken = await text_to_speech({
+  let spoken = await bible_audio_speech_locked_run({
     jobs,
     workers,
     seconds_at_most,
