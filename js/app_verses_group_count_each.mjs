@@ -1,10 +1,10 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_verses_counts_refresh } from "./app_verses_counts_refresh.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_verses_draw_fresh } from "./app_verses_draw_fresh.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { equal } from "./equal.mjs";
 import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_verses_group_count_each(
@@ -29,8 +29,7 @@ export function app_verses_group_count_each(
   }
   component = app_shared_button(card, c, on_click);
   function update() {
-    let count = property_get(verse_count_held, "verse_count");
-    let chosen = equal(count, c);
+    let chosen = property_equals(verse_count_held, "verse_count", c);
     app_shared_button_toggle_style(chosen, component);
   }
   list_add(count_updates, update);
