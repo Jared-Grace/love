@@ -1,8 +1,7 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { app_g_bless_overlay_render_tap_prayed_person_id_is } from "./app_g_bless_overlay_render_tap_prayed_person_id_is.mjs";
-import { app_g_bless_overlay_render_tap_prayed_render_ground } from "./app_g_bless_overlay_render_tap_prayed_render_ground.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
+import { app_g_bless_overlay_render_tap_prayed_render_ground } from "./app_g_bless_overlay_render_tap_prayed_render_ground.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -12,15 +11,10 @@ import { bless_rung_earned_is } from "./bless_rung_earned_is.mjs";
 import { bless_rung_after } from "./bless_rung_after.mjs";
 import { app_g_bless_lit_new } from "./app_g_bless_lit_new.mjs";
 import { list_difference } from "./list_difference.mjs";
-import { list_size } from "./list_size.mjs";
-import { bless_told_after_prayer_or_null } from "./bless_told_after_prayer_or_null.mjs";
-import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { app_g_bless_notice } from "./app_g_bless_notice.mjs";
-import { app_g_bless_finished } from "./app_g_bless_finished.mjs";
-import { list_find_or_null } from "./list_find_or_null.mjs";
-import { not } from "./not.mjs";
-import { bless_view_person_at } from "./bless_view_person_at.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { app_g_bless_overlay_render_tap_prayed_celebrate } from "./app_g_bless_overlay_render_tap_prayed_celebrate.mjs";
+import { app_g_bless_overlay_render_tap_prayed_person_id_pray } from "./app_g_bless_overlay_render_tap_prayed_person_id_pray.mjs";
+import { app_g_bless_overlay_render_tap_prayed_person_at } from "./app_g_bless_overlay_render_tap_prayed_person_at.mjs";
 import { app_g_bless_prayer_skipped_is } from "./app_g_bless_prayer_skipped_is.mjs";
 import { app_g_bless_pray_overlay } from "./app_g_bless_pray_overlay.mjs";
 export function app_g_bless_overlay_render_tap_prayed(
@@ -29,6 +23,7 @@ export function app_g_bless_overlay_render_tap_prayed(
   glows,
   wash,
 ) {
+  "THREE PIECES OF THIS ARE WRITTEN NEXT DOOR, and each of them is a piece that needs to remember nothing from one prayer to the next: who a tap landed on, praying by person number, and everything a prayer comes to once what it reached is known. What is kept here is what cannot be handed anywhere - the three things one street has to remember between one prayer and the next.";
   arguments_assert(arguments, 4);
   let walking = property_get(r2, "walking");
   let world = property_get(r2, "world");
@@ -153,79 +148,30 @@ export function app_g_bless_overlay_render_tap_prayed(
     held_ground = list_empty_not_is(lit_now);
     held_people = people_now;
     render();
-    ("What just happened is said over the STREET rather than on the prayer panel, because by");
-    ("now the panel is gone and the player is looking at the street again - and the street is");
-    ("what the news is about: faces elsewhere on it just went bright, or every prayer from");
-    ("here on reaches a whole household.");
-    ("Worked out HERE, after the faces have been counted, rather than up where the prayer was");
-    ("written down. A line that says how many people a prayer reached has to be told how many");
-    ("it reached, and the only honest source of that is the same difference the celebration");
-    ("lights - so the sentence and the faces cannot disagree. Asked earlier it could only be");
-    ("answered from the size of the rung, which is a fixed three or nine and stays three or");
-    ("nine on the prayer that lights one new face because the other two were lit last week.");
-    ("Worked out here and SAID further down, once the street has been redrawn, because where");
-    ("it is said depends on what the prayer did. A prayer that finished a whole house off");
-    ("hands its line to the panel that celebrates the house; one that finished nothing puts");
-    ("the line up on its own.");
-    let faces = list_size(people_now);
-    let line = bless_told_after_prayer_or_null(rung_before, rung, faces);
-    ("Ground and faces are handed over as two lists because they are lit two different ways:");
-    ("ground where it lies, faces on the light each person carries with them. That is also");
-    ("what lets a prayer over a single person be celebrated at all - nothing was finished and");
-    ("no house filled in, and the whole of what changed is one face.");
-    ("They are shown in turn rather than at once, faces first. A prayer reaches a face where");
-    ("that person happens to be standing and a house where the house is, and those are rarely");
-    ("the same place - so a camera aimed at both together sits between them and shows");
-    ("neither. Which order, and how each is held on the screen, is settled where they are");
-    ("celebrated rather than here.");
-    let anything = list_concat_multiple([lit_now, people_now]);
-    let nothing = list_empty_is(anything);
-    if (nothing) {
-      app_g_bless_notice(line);
-      return;
-    }
-    ("The draw that puts the finished house up is handed OVER rather than done here, because");
-    ("only the celebration knows when the faces are done with. It also has to happen before");
-    ("the ground celebration and not after it: that flash is white light coming back off the");
-    ("street, and off a square with nothing underneath it what it reveals is an empty one.");
-    await app_g_bless_finished(
+    await app_g_bless_overlay_render_tap_prayed_celebrate(
       r2,
       lit_now,
       people_now,
-      line,
+      rung_before,
+      rung,
       ground_show,
       faces_show,
     );
   }
   function pray_person_id(id) {
-    "Prays for whoever carries this person number, wherever they are standing and whether or";
-    "not the player is looking at them.";
-    "It exists for the dev openings, which set a street up in a particular state and then";
-    "want the one prayer that state was built for said straight away. A test that has to be";
-    "walked to is a test that is run less often than it should be.";
-    "It is asked by NUMBER because that is what an opening can name. A person number is";
-    "arithmetic - the third resident of the first household is a sum - while the person";
-    "object itself only exists once the street has been built.";
-    "Sight is not charged here, and that is the difference between this and a tap. A player";
-    "may only pray for somebody they can see; this is not a player, it is the address bar,";
-    "and it is behind the same dev gate as every other opening.";
-    let everyone = bless_view_people(view_everyone);
-    function person_id_is(someone) {
-      let r3 = app_g_bless_overlay_render_tap_prayed_person_id_is(someone, id);
-      return r3;
-    }
-    let person = list_find_or_null(everyone, person_id_is);
-    if (not(person)) {
-      return;
-    }
-    person_pray(person);
+    let r4 = app_g_bless_overlay_render_tap_prayed_person_id_pray(
+      id,
+      view_everyone,
+      person_pray,
+    );
+    return r4;
   }
   function tap_prayed(target) {
     "Whether the tap landed on somebody, and so became a prayer instead of a walk.";
-    let x = property_get(target, "x");
-    let y = property_get(target, "y");
-    let view = view_now();
-    let person = bless_view_person_at(view, x, y);
+    let person = app_g_bless_overlay_render_tap_prayed_person_at(
+      target,
+      view_now,
+    );
     if (not(person)) {
       return false;
     }
