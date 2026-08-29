@@ -1,10 +1,9 @@
+import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
 export function app_code_lesson_expression_divisor() {
   "identify the DIVISOR (the number you divide by) in a division a / b - the dividend a stands as the decoy; a thin lesson over the shared identify-an-operand generic";
   function make(divisor, quotient) {
@@ -36,8 +35,7 @@ export function app_code_lesson_expression_divisor() {
     function paint(parent) {
       html_span_text(parent, "Divisor");
     }
-    let left = app_code_category_operators();
-    let name_id2 = app_code_lesson_name_id_category_then(left, paint);
+    let name_id2 = app_code_lesson_name_id_operators(paint);
     return name_id2;
   }
 }
