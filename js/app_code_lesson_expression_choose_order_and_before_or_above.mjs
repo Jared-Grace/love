@@ -3,10 +3,9 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./app_code_lesson_expression_choose_order_sides_settled_tree.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
-import { app_code_lesson_expression_choose_order_truths_step_sides } from "./app_code_lesson_expression_choose_order_truths_step_sides.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_either_side } from "./app_code_lesson_expression_choose_order_and_before_or_either_side.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
-import { app_code_lesson_expression_choose_order_run_cards } from "./app_code_lesson_expression_choose_order_run_cards.mjs";
+import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
 import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_intro } from "./app_code_lesson_expression_choose_order_and_before_or_intro.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_above(
@@ -19,6 +18,8 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
   ("BOTH ENDS ARE WALKED, because the card below asks about both. Only the && leftmost was worked until now, on the reasoning that there was nowhere else the && could go - which is not so: true || false && true carries no brackets, is a line this lesson prints, and has the || standing leftmost while the && still goes first. Measured 2026-08-28, forty lines from the bank came out && leftmost twenty-two times, so a learner met the other shape on nearly half of them having read a run that only ever showed the first.");
   ("The second walk is the first one turned round: the same three truths in the other order, with the && at the other end. Different truths would leave a reader finding which of two things had changed before they could see that only one had.");
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the turning round stays visible.");
+  ("THE STEPS SAY THE RULE NOW, not that only one part has a true or a false on each side. That older sentence is not something a reader of this lesson can see: on false && true || true both the && and the || have a true or a false on each side, and the reason the && goes first is that it outranks the ||. It is also the one thing the lesson is for, so a walk that withheld it was showing the answer twice and the rule not at all.");
+  ("The rule sentence comes from the same writer the three-operator lesson's walk uses, so a learner arriving at that lesson meets the wording already read here rather than a new one. That writer reads the reason off the operators left on the line, which is why this lesson may use it and the two bracket lessons after it may not: brackets move a part to the front for a reason no list of operators holds.");
   let both = [true, false];
   let middle_truth = list_random_item(both);
   let tree_and_first =
@@ -33,22 +34,19 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
       true,
       middle_truth,
     );
-  let step_sides = app_code_lesson_expression_choose_order_truths_step_sides();
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_and_before_or_either_side();
   app_code_lesson_expression_choose_order_and_before_or_recall(root);
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_none,
     tree_and_first,
-    step_sides,
   );
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_either,
     tree_or_first,
-    step_sides,
   );
   app_code_lesson_expression_choose_order_change_card(
     root,
