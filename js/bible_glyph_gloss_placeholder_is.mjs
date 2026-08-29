@@ -1,5 +1,5 @@
 import { equal } from "./equal.mjs";
-import { or } from "./or.mjs";
+import { or_list } from "./or_list.mjs";
 export function bible_glyph_gloss_placeholder_is(gloss) {
   "$plain gloss";
   "the wording is one the interlinear printed under a word. It is text to look at and nothing that runs.";
@@ -12,8 +12,6 @@ export function bible_glyph_gloss_placeholder_is(gloss) {
   let carried = equal(gloss, "vvv");
   let unsaid = equal(gloss, "-");
   let blank = equal(gloss, "");
-  let notation = or(dots, carried);
-  let missing = or(unsaid, blank);
-  let v = or(notation, missing);
+  let v = or_list([dots, carried, unsaid, blank]);
   return v;
 }
