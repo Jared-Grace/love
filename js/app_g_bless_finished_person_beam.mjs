@@ -41,7 +41,7 @@ export function app_g_bless_finished_person_beam(person) {
   let blue = app_shared_color_blue_pale();
   let size = g_img_square_size_css();
   let background = text_combine_multiple([
-    "linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.32) 58%, ",
+    "linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 62%, rgba(255, 255, 255, 0.7) 90%, ",
     white,
     " 100%)",
   ]);
@@ -72,7 +72,7 @@ export function app_g_bless_finished_person_beam(person) {
     "border-radius": "50%",
     "pointer-events": "none",
     opacity: "0",
-    transform: "translateY(-167%)",
+    transform: "translateY(-150%)",
     transition: "none",
   });
   html_reflow_force(beam);
