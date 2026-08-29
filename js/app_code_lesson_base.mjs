@@ -1,11 +1,9 @@
-import { app_code_code_output } from "./app_code_code_output.mjs";
-import { text_replace_multiple_to } from "./text_replace_multiple_to.mjs";
-import { text_adjascent_duplicates_remove_underscore } from "./text_adjascent_duplicates_remove_underscore.mjs";
-import { list_map } from "./list_map.mjs";
-import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
-import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
-import { text_split_empty } from "./text_split_empty.mjs";
 import { property_get } from "./property_get.mjs";
+import { text_split_empty } from "./text_split_empty.mjs";
+import { html_flex_column_stretch } from "./html_flex_column_stretch.mjs";
+import { app_code_flex_gap } from "./app_code_flex_gap.mjs";
+import { app_code_code_output } from "./app_code_code_output.mjs";
+import { list_map } from "./list_map.mjs";
 export function app_code_lesson_base(
   name_id,
   above,
@@ -17,14 +15,11 @@ export function app_code_lesson_base(
   example_question_label,
   on_example_answer,
 ) {
-  let t = property_get(name_id, "id");
-  let t_underscored = text_replace_multiple_to(t, [" ", "."], "_");
-  let lesson_unique_id =
-    text_adjascent_duplicates_remove_underscore(t_underscored);
+  "★ A LESSON BUILT HERE HAS NO ID, AND THAT IS THE POINT. It used to take the id out of the name and title it was handed, lowercased and underscored - so the key a learner's finished work is written down under was a consequence of how the home screen reads. Reword a title and every learner who finished that lesson holds a key naming nothing.";
+  "The id is put on next door instead, by the one caller that holds the lesson's own function and can look the id up under that name. So the lesson leaves here without one, and a reader that got the lesson any other way finds nothing where the id should be rather than finding a plausible wrong one.";
   let lesson_name = property_get(name_id, "name");
   let lesson = {
     name: lesson_name,
-    id: lesson_unique_id,
     above,
     example_count,
     batch: function batch() {
