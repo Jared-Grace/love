@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_divisions } from "./ebible_book_divisions.mjs";
@@ -29,6 +30,7 @@ export async function ebible_text_to_speech_missing(
   "★ A FOLDER THAT EXISTS COUNTS AS RECORDED, EVEN IF WHAT IS IN IT IS NO GOOD. That is deliberate and it is a real limit: a chapter left half written by an interrupted run has a folder, so this will step over it and it will stay broken. Judging the sound instead would mean reading every recording on the disk before speaking a word. Which recordings are actually bad is a separate question with its own named answer, and repairing them is a separate job.";
   "★ ASKING FOR NONE IS HOW THE LIST IS SEEN WITHOUT RECORDING ANY OF IT. A count of zero takes nothing and reports how many are missing, which is the only way to ask this question without starting hours of work - and it is also what stops an empty list being handed on as a chapter whose name is nothing at all.";
   "★ IT MUST NOT BE RUN WHILE ANOTHER RECORDING IS IN FLIGHT. The chapter being written right now already has a folder, so it is correctly stepped over - but the two runs would then be dividing the same cores and the same memory between them, and the count of workers each of them chose was worked out as though it had the machine.";
+  "★ THE COUNT REPORTED IS WHAT WAS SPOKEN, NOT WHAT WAS ASKED FOR, BECAUSE THE RUN MAY STOP PART WAY THROUGH. Workers refuse to begin another chapter once the night is over or the machine is short of memory, so a run given twenty chapters may speak six of them. Counting the ask would say twenty were done and leave fourteen chapters missing from the number still to do, and the next run would then be reported as going backwards.";
   arguments_assert(arguments, 2);
   let divisions = ebible_book_divisions();
   let code_lists = list_map_property(divisions, "book_codes");
