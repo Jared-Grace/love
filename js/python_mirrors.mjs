@@ -1,3 +1,4 @@
+import { functions_input_taken_away } from "./functions_input_taken_away.mjs";
 import { memory_folder_spellings } from "./memory_folder_spellings.mjs";
 import { curl_read_hosts } from "./curl_read_hosts.mjs";
 import { dispatcher_scripts_claude } from "./dispatcher_scripts_claude.mjs";
@@ -61,6 +62,15 @@ export function python_mirrors() {
         ".py",
       ]),
       source: curl_read_hosts,
+    },
+    {
+      constant: "FUNCTIONS_INPUT_TAKEN_AWAY",
+      path: text_combine_multiple([
+        ".claude/hooks/",
+        functions_input_taken_away.name,
+        ".py",
+      ]),
+      source: functions_input_taken_away,
     },
   ];
   return mirrors;
