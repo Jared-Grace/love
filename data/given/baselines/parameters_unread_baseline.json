@@ -1,39 +1,9 @@
 {
  "known": [
   {
-   "name": "app_bible_verse_switch_button",
-   "unread": [
-    "chapter_code"
-   ]
-  },
-  {
-   "name": "app_code_comparison_decoys",
-   "unread": [
-    "question"
-   ]
-  },
-  {
-   "name": "app_code_lesson_quiz_choose_operand",
-   "unread": [
-    "batch_get"
-   ]
-  },
-  {
-   "name": "app_code_lesson_quiz_token_select",
-   "unread": [
-    "batch_get"
-   ]
-  },
-  {
    "name": "app_code_next",
    "unread": [
     "context"
-   ]
-  },
-  {
-   "name": "app_replace_tests_run_e2e_hinted_fn",
-   "unread": [
-    "p"
    ]
   },
   {
@@ -43,27 +13,9 @@
    ]
   },
   {
-   "name": "lambda_right",
-   "unread": [
-    "left"
-   ]
-  },
-  {
-   "name": "marker",
-   "unread": [
-    "marker_name"
-   ]
-  },
-  {
    "name": "sandbox_7",
    "unread": [
     "a"
-   ]
-  },
-  {
-   "name": "vite_config_file_name_get",
-   "unread": [
-    "format"
    ]
   }
  ]
