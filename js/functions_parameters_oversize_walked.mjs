@@ -1,8 +1,8 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_parameters_counts } from "./functions_parameters_counts.mjs";
 import { functions_parameters_ceiling } from "./functions_parameters_ceiling.mjs";
 import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export async function functions_parameters_oversize_walked() {
@@ -15,8 +15,7 @@ export async function functions_parameters_oversize_walked() {
   let ceiling = functions_parameters_ceiling();
   let over = [];
   for (let entry of counted) {
-    let count = property_get(entry, "count");
-    let above = greater_than(count, ceiling);
+    let above = property_greater_than(entry, "count", ceiling);
     if (above) {
       let name = property_get(entry, "name");
       list_add(over, name);
