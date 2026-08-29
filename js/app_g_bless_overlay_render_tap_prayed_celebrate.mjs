@@ -1,3 +1,6 @@
+import { property_get } from "./property_get.mjs";
+import { app_g_bless_input_shield } from "./app_g_bless_input_shield.mjs";
+import { html_remove } from "./html_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { bless_told_after_prayer_or_null } from "./bless_told_after_prayer_or_null.mjs";
@@ -30,6 +33,19 @@ export async function app_g_bless_overlay_render_tap_prayed_celebrate(
     app_g_bless_notice(line);
     return;
   }
+  ("Nothing the player presses is taken for the length of the celebration. A screen that is");
+  ("saying something is a screen to be watched, and a tap taken here walks them away from");
+  ("the very thing being shown - or swings the view off it halfway through a camera journey");
+  ("the game had already set going.");
+  ("It is put up HERE and not inside the celebration, because this is the one run that");
+  ("covers every way a celebration can happen and cannot end without passing the line below.");
+  ("It is also the reason the path above is left alone: a line of news put up over an");
+  ("unchanged street stops nothing and should stop nothing.");
+  ("It comes down as the panel goes up rather than when the panel is put down, because a");
+  ("panel already holds the player by itself and sits higher than this does. Held until the");
+  ("panel was dismissed, this would be a second guard nobody could see waiting on a button.");
+  let container_map = property_get(r, "container_map");
+  let shield = app_g_bless_input_shield(container_map);
   await app_g_bless_finished(
     r,
     lit_now,
@@ -38,4 +54,5 @@ export async function app_g_bless_overlay_render_tap_prayed_celebrate(
     ground_show,
     faces_show,
   );
+  html_remove(shield);
 }
