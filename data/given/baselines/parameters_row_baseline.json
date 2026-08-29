@@ -1,12 +1,5 @@
 {
  "known": [
-  "bible_glyph_chapters_undrawn_commonest_report",
-  "app_g_conversation_render_openers",
-  "app_g_conversation_render_boundary",
-  "app_g_conversation_pray",
-  "g_arc_prompt_lines",
-  "app_shared_bible_read_verse_actions",
-  "app_g_verify_view_line_lists",
   "week_calendar_cell_pressed",
   "html_checkboxes",
   "app_replace_rule_set_symbol_on_click",
