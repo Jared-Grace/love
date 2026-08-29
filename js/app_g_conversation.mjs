@@ -75,20 +75,19 @@ export async function app_g_conversation(
   }
   function render_boundary(turn) {
     let remaining_now = property_get(remaining_held, "remaining");
-    let r4 = app_g_conversation_render_boundary(
-      turn,
+    let r4 = app_g_conversation_render_boundary(turn, {
       overlay,
       npc,
       meet,
       pending,
-      remaining_now,
+      remaining: remaining_now,
       render_openers,
       leave,
       prayed,
       render_pray,
       converts,
       goodbye,
-    );
+    });
     return r4;
   }
   function render_openers() {

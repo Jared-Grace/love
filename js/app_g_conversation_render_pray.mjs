@@ -34,12 +34,12 @@ export function app_g_conversation_render_pray(
   let container = app_g_npc_says_player_ask_what_to_do(npc, overlay, npc_says);
   async function pray() {
     let remaining_now = property_get(remaining_held, "remaining");
-    let r6 = await app_g_conversation_pray(
+    let r6 = await app_g_conversation_pray({
       steps,
       steps_total,
       prayed,
       overlay,
-      remaining_now,
+      remaining: remaining_now,
       render_openers,
       leave,
       render_pray,
@@ -47,7 +47,7 @@ export function app_g_conversation_render_pray(
       npc,
       goodbye,
       some_prayers,
-    );
+    });
     return r6;
   }
   let left = emoji_pray();
