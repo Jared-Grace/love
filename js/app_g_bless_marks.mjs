@@ -1,3 +1,4 @@
+import { bless_view_finish_first } from "./bless_view_finish_first.mjs";
 import { app_g_bless_lit_except } from "./app_g_bless_lit_except.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
@@ -72,10 +73,12 @@ export function app_g_bless_marks(
   ("has to answer.");
   let next = bless_view_finish_first(blessed, remaining);
   app_g_bless_pointers(glows, everyone, next);
-  ("Who is left is handed BACK as well as drawn on, because one more thing is aimed at them");
-  ("and it is not on the map: the arrow at the edge of the screen, which hangs on the frame");
-  ("and stays put while the street slides underneath. Working the same question out a second");
-  ("time where that arrow is aimed would be two readings of one record, free to disagree on");
-  ("the step where a prayer has just landed.");
-  return remaining;
+  ("The NARROWED list is handed back, because one more thing is aimed at it and it is not on");
+  ("the map: the arrow at the edge of the screen, which hangs on the frame and stays put");
+  ("while the street slides underneath. That arrow and the arrows over heads have to name");
+  ("the same house or they are two hints disagreeing - the edge one saying walk that way and");
+  ("the map one saying pray here. Working the question out a second time where that arrow is");
+  ("aimed would be two readings of one record, free to disagree on the step where a prayer");
+  ("has just landed.");
+  return next;
 }
