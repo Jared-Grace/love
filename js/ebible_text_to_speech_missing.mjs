@@ -66,12 +66,16 @@ export async function ebible_text_to_speech_missing(
     return nothing_taken;
   }
   let joined = list_join(taking, ",");
-  let manifests = await ebible_text_to_speech_chapters(bible_folder, joined);
-  let left = subtract(missing.length, taking.length);
+  let done = await ebible_text_to_speech_chapters(bible_folder, joined);
+  let manifests = property_get(done, "manifests");
+  let not_started = property_get(done, "not_started");
+  let spoke = subtract(taking.length, not_started.length);
+  let left = subtract(missing.length, spoke);
   let report = {
     chapters_wanted: wanted.length,
     chapters_missing: missing.length,
-    chapters_recorded_now: taking.length,
+    chapters_recorded_now: spoke,
+    chapters_not_started: not_started.length,
     chapters_left: left,
     first: list_first(taking),
     last: list_last(taking),
