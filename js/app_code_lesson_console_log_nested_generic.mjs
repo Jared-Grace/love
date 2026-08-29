@@ -13,7 +13,7 @@ import { property_get } from "./property_get.mjs";
 export function app_code_lesson_console_log_nested_generic(params) {
   "a reusable console.log lesson for a NESTED expression: three numbers joined by one operator (x op y op z, which is really (x op y) op z); the caller passes the operator symbol, a word for the id, an example triple for the intro, and triples_get which returns four DISTINCT [x,y,z] triples per refill so no two examples come out the same";
   let symbol = property_get(params, "symbol");
-  let word = property_get(params, "word");
+  property_get(params, "word");
   let verb = property_get(params, "verb");
   let pair = property_get(params, "pair");
   let example_triple = property_get(params, "example_triple");
@@ -29,10 +29,8 @@ export function app_code_lesson_console_log_nested_generic(params) {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
-  let name_id = app_code_lesson_console_log_nested_generic_title_name_id(
-    symbol,
-    word,
-  );
+  let name_id =
+    app_code_lesson_console_log_nested_generic_title_name_id(symbol);
   let lesson = app_code_lesson_expression_generic({
     above,
     name_id,
