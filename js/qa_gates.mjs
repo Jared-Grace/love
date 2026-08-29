@@ -1,3 +1,4 @@
+import { app_code_lesson_id_length_gate_run } from "./app_code_lesson_id_length_gate_run.mjs";
 import { bible_versions_sung_gate_run } from "./bible_versions_sung_gate_run.mjs";
 import { bible_glyph_chapter_tagalog_verses_fetched_gate_run } from "./bible_glyph_chapter_tagalog_verses_fetched_gate_run.mjs";
 import { bible_glyph_apps_aggregate_reaching_gate_run } from "./bible_glyph_apps_aggregate_reaching_gate_run.mjs";
@@ -913,6 +914,7 @@ export function qa_gates() {
     bible_usfm_versions_apart_gate_run,
     js_ast_return_key_shapes_agree_cases_gate_run,
     bible_versions_sung_gate_run,
+    app_code_lesson_id_length_gate_run,
   ];
   return gates;
 }
