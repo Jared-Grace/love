@@ -32,8 +32,17 @@ export function app_g_bless_finished_person_beam(person) {
   ("and the thing that opens are visibly one light and not two events on the same face.");
   ("It hangs inside the light the person already carries, like everything else here, so it");
   ("is over the right person however far they have walked. Its box is one square, and this");
-  ("stands several squares tall above it - nothing clips it, because that box has no edge");
+  ("stands many squares tall above it - nothing clips it, because that box has no edge");
   ("of its own, only a place.");
+  ("It is nearly as wide as the person it lands on, and it reaches most of the way up the");
+  ("screen. A narrow shaft was read as a line drawn over the street rather than as light,");
+  ("and something coming out of the sky has to be big enough to be the largest thing in the");
+  ("picture for the moment it is falling - it is the only part of this celebration that is");
+  ("meant to come from outside the street, and a small thing arriving from far away just");
+  ("looks far away.");
+  ("It is centred over the person, so the light and the face it is for share a middle. It");
+  ("used to sit a tenth of a square right of them, which is small enough that nobody could");
+  ("name it and large enough to make the touchdown look slightly off.");
   ("It is made see-through and still, the page is measured, and only then is it set going.");
   ("Made and moved in one breath, the browser measures once and sees a light that was");
   ("always at the bottom, so there is no fall at all.");
@@ -48,7 +57,7 @@ export function app_g_bless_finished_person_beam(person) {
   let spill = text_combine_multiple([
     "drop-shadow(0 0 calc((",
     size,
-    ") * 0.32) ",
+    ") * 0.55) ",
     blue,
     ")",
   ]);
@@ -77,7 +86,7 @@ export function app_g_bless_finished_person_beam(person) {
   });
   html_reflow_force(beam);
   ("The distance is written as a share of the shaft's own height rather than in squares, so");
-  ("it is the same nine squares of sky at every size the street is drawn at. A distance in");
+  ("it is the same stretch of sky at every size the street is drawn at. A distance in");
   ("pixels would be half a screen on a phone and a hand's width on a desk.");
   html_style_assign(beam, {
     transition: travel,
