@@ -56,7 +56,7 @@ export async function ebible_text_to_speech_chapters(
   let seconds_at_most = bible_audio_night_seconds_left_or_null();
   let memory_floor_bytes = bible_audio_speech_memory_floor_bytes();
   let swap_floor_bytes = bible_audio_speech_swap_floor_bytes();
-  await text_to_speech({
+  let spoken = await text_to_speech({
     jobs,
     workers,
     seconds_at_most,
