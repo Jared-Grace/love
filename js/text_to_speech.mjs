@@ -12,7 +12,13 @@ export async function text_to_speech(args) {
     let script_name = fn_name("text_to_speech");
     let v = py_script_run_speech_cmd(script_name);
     let c = text_combine_multiple([v, " ", temp_path]);
-    await command_line(c);
+    let ran = await command_line(c);
+    let printed = property_get(ran, "stdout");
+    let lines = text_lines_working(printed);
+    let last = list_last(lines);
+    let report = json_from_try(last);
+    return report;
   }
-  await file_temp(lambda);
+  let spoken = await file_temp(lambda);
+  return spoken;
 }
