@@ -53,6 +53,16 @@ export async function app_g_bless_camera_glide(
   let container = app_shared_game_div_map_container_get(div_map);
   let container_e = html_component_element_get(container);
   let variable = g_img_square_size_variable();
+  ("The crowd is stopped where it stands BEFORE sliding is switched off, and that order is");
+  ("the whole of it. Switching sliding off does not pause a step that is under way, it");
+  ("FINISHES it: a person half way across a square arrives in one frame. Everybody walking");
+  ("is half way across a square nearly all the time, so the moment a journey begins the");
+  ("whole street jumps - which is what a player sees straight after praying. Written down");
+  ("where they have got to first, there is no step left under way for the switch to finish.");
+  ("They are asked of the map rather than handed in, so that a journey knows about the");
+  ("crowd without every caller of one having to.");
+  let crowd = app_g_bless_camera_people_get(container_map);
+  app_g_bless_people_still_start(crowd, player_img_c);
   app_g_bless_camera_still_start(container_map);
   let from = html_element_width(player_img_c);
   html_style_variable_set(container_map, variable, size);
@@ -61,6 +71,12 @@ export async function app_g_bless_camera_glide(
   let same = equal(from, to);
   if (same) {
     app_g_bless_camera_still_end(container_map);
+    ("Let go again at once when this turned out not to be a journey. Nothing here changes");
+    ("how big a square is, so nothing was ever going to jump, and a plain scroll across a");
+    ("street where everybody has stopped dead is a street that looks broken. This is the");
+    ("common case - a prayer over one person moves the camera and never resizes it - so the");
+    ("crowd carries on walking through almost every camera move the player ever sees.");
+    app_g_bless_people_still_end(crowd);
     await html_scroll_center_coordinates(focus, player_img_c, container);
     return;
   }
