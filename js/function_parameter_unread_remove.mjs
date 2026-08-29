@@ -1,18 +1,19 @@
-import { functions_name_value_use_names } from "./functions_name_value_use_names.mjs";
-import { js_function_declaration_param_name_index } from "./js_function_declaration_param_name_index.mjs";
-import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
 import { function_parameters_unread } from "./function_parameters_unread.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { js_function_declaration_param_name_index } from "./js_function_declaration_param_name_index.mjs";
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
-import { functions_call_argument_at_undroppable } from "./functions_call_argument_at_undroppable.mjs";
+import { functions_name_value_use_names } from "./functions_name_value_use_names.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { functions_call_argument_at_undroppable } from "./functions_call_argument_at_undroppable.mjs";
 import { js_call_named_argument_at_remove_curried_right_2 } from "./js_call_named_argument_at_remove_curried_right_2.mjs";
 import { functions_transform_list } from "./functions_transform_list.mjs";
 import { js_function_declaration_param_at_remove_curried_right } from "./js_function_declaration_param_at_remove_curried_right.mjs";
 import { function_transform } from "./function_transform.mjs";
+import { function_arguments_assert_count_repair } from "./function_arguments_assert_count_repair.mjs";
+import { js_declaration_unused_to_expression } from "./js_declaration_unused_to_expression.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
 import { function_auto_multiple } from "./function_auto_multiple.mjs";
 export async function function_parameter_unread_remove(f_name, parameter_name) {
@@ -60,6 +61,9 @@ export async function function_parameter_unread_remove(f_name, parameter_name) {
   let param_remove =
     js_function_declaration_param_at_remove_curried_right(index);
   await function_transform(f_name, param_remove);
+  ("the line at the head saying how many arguments there are was written once, when the function was first made to stand on its own, and taking a name off the list does not go back to it. left alone it goes on saying the old number and every correct call throws - saying the caller handed over the wrong count, which sends whoever reads it to the calling file, where nothing is wrong. a function with no such line is left with none");
+  ("this used to be somebody else's problem, because the reading in front of all this refused to look at any body that reached for arguments at all - so a function with that line was never named here in the first place. now that the reading sees past the counting line, the commonest function in the repo is reachable from here, and the count has to be put right in the same move that made it wrong");
+  await function_arguments_assert_count_repair(f_name);
   ("the argument that was being handed over was often a name computed one line earlier and read nowhere else, so taking the argument out leaves that line standing with nothing to read it. the existing pass drops it when the value was only a read, and keeps it as a bare line when computing it did work of its own");
   await functions_transform_list(f_names, js_declaration_unused_to_expression);
   let names_comma = list_join_comma(f_names);
