@@ -90,18 +90,39 @@ export async function app_g_bless_finished_faces(
   ("gets a shorter answer for having been reached second.");
   let gap = 300;
   let hold = 1460;
+  let fall = app_g_bless_finished_person_beam_ms();
   async function person_light(person) {
     let one = [person];
-    let flares = app_g_bless_finished_people(div_map, one);
-    let bloom = app_g_bless_finished_person_bloom(div_map, person);
-    ("Each light carries its own ending rather than being gathered into a list and let go");
-    ("from outside. A list can only be let go at one moment, which is the very thing being");
-    ("undone here, and a light that knows when it is finished needs nobody to remember it.");
-    function light_let_go() {
+    ("The light comes DOWN first and the burst is what it lands in, rather than the two");
+    ("starting together. Started together they are two things happening at once on one face;");
+    ("one after the other they are one thing arriving and then opening, which is the whole");
+    ("reason the fall was added.");
+    let beam = app_g_bless_finished_person_beam(person);
+    ("Everything after the fall runs on a clock of its own and is not waited on here. Waited");
+    ("on, the fall would be added to the gap between one face and the next, and a household");
+    ("would light up at whatever speed the sky happened to travel at rather than at the");
+    ("spacing chosen for it. Set going instead, the falls overlap the gaps, and the faces");
+    ("still begin one gap apart however long a fall takes.");
+    async function light_run() {
+      await sleep(fall);
+      app_g_bless_finished_person_beam_fade(beam);
+      let flares = app_g_bless_finished_people(div_map, one);
+      let bloom = app_g_bless_finished_person_bloom(div_map, person);
+      ("Each light carries its own ending rather than being gathered into a list and let go");
+      ("from outside. A list can only be let go at one moment, which is the very thing being");
+      ("undone here, and a light that knows when it is finished needs nobody to remember it.");
+      await sleep(hold);
       app_g_bless_finished_person_bloom_fade(bloom);
       app_g_bless_finished_people_fade(flares);
     }
-    setTimeout(light_let_go, hold);
+    ("It is set going through a line of its own rather than called out in the open, because");
+    ("the pass that tidies this file puts a wait in front of a bare call it finds inside a");
+    ("waiting body. That is right nearly everywhere and here it would undo the one thing");
+    ("this arrangement exists for.");
+    function light_start() {
+      light_run();
+    }
+    light_start();
     await sleep(gap);
   }
   ("The lights are held at full strength for about a second and a half before they are let");
