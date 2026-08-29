@@ -110,6 +110,10 @@ export async function app_g_bless_finished_faces(
     async function light_run() {
       await sleep(fall);
       app_g_bless_finished_person_beam_fade(beam);
+      ("The hard-edged circle is thrown at the same instant the light goes out, and it is the");
+      ("only thing here with an edge. It is what the touchdown is READ from: the soft lights");
+      ("either side of it say a face is lit, and none of them can say that anything struck.");
+      app_g_bless_finished_person_ring(person);
       let flares = app_g_bless_finished_people(div_map, one);
       let bloom = app_g_bless_finished_person_bloom(div_map, person);
       ("Each light carries its own ending rather than being gathered into a list and let go");
