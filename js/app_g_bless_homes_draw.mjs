@@ -4,10 +4,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { app_g_bless_color_blessed_home } from "./app_g_bless_color_blessed_home.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_max } from "./list_max.mjs";
-import { g_z } from "./g_z.mjs";
+import { g_tiles_ground_tint_depth } from "./g_tiles_ground_tint_depth.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { tiles_rectangles } from "./tiles_rectangles.mjs";
@@ -83,18 +80,7 @@ export function app_g_bless_homes_draw(homes, tiles) {
     ") * 0.5) rgba(255, 190, 74, 0.82))",
   ]);
   let spill = text_combine_multiple([close, " ", wide]);
-  ("The wrapper stands at the depth of the LOWEST of its own squares, which is where the");
-  ("last of them would have stood on its own. Gathered together they can only be at one");
-  ("depth, and taking the deepest keeps the house in front of everything it was in front of");
-  ("before - the pale light of the cone the player is looking down, most of all.");
-  function tile_y(tile) {
-    let row = property_get(tile, "y");
-    return row;
-  }
-  let rows = list_map(tiles, tile_y);
-  let y_most = list_max(rows);
-  let layer = g_z("ground_tint");
-  let depth = text_combine_multiple(["calc(", layer, " + ", y_most, ")"]);
+  let depth = g_tiles_ground_tint_depth(tiles);
   let lit = html_div(homes);
   html_style_assign(lit, {
     position: "absolute",
