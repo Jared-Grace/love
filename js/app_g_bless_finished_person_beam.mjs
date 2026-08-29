@@ -63,10 +63,10 @@ export function app_g_bless_finished_person_beam(person) {
   let beam = html_div(halo);
   html_style_assign(beam, {
     position: "absolute",
-    left: "40%",
+    left: "14%",
     bottom: "50%",
-    width: "40%",
-    height: "620%",
+    width: "72%",
+    height: "920%",
     background: background,
     filter: spill,
     "border-radius": "50%",
