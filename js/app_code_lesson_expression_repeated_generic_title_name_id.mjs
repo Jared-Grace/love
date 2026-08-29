@@ -5,9 +5,8 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_expression_repeated_generic_title_name_id(
   title_word,
   symbol,
-  right_word,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 2);
   ("the home title names the operator in words and then shows it");
   function paint(parent) {
     html_span_text(parent, title_word);
