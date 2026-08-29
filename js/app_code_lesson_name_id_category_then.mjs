@@ -13,6 +13,6 @@ export function app_code_lesson_name_id_category_then(rights, left, paint) {
     }
     return render;
   }
-  let name_id = app_code_lesson_name_id_generic(rights, left, title_get);
+  let name_id = app_code_lesson_name_id_generic(left, title_get);
   return name_id;
 }
