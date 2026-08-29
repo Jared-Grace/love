@@ -8,6 +8,8 @@ export function app_code_lesson_ids_short() {
   ("★ EVERY VALUE IS FROZEN, INCLUDING THE ONES THAT LOOK ORDINARY. These words are already written into learners' browsers, so a word here must never follow anything. Left plain, a value that happens to spell a function in this repo gets promoted into a reference to it by the canonicalizing pass and then quietly tracks that function's renames - which happened on the first pass over this table, to the one that reads not equal. The freeze is put on all of them rather than on the ones that collide today, because which ones collide is a fact about the rest of the repo and it changes without anybody looking here.");
   ("They are short because they are read by people in two places where length is the whole cost: the address bar of a link somebody is passing to somebody else, and a record on a learner's own device. They are not shortened past recognition - a person who has done the lesson should know which one a link names.");
   ("The shape follows the function name rather than the sentence a learner reads, so a lesson that chooses which operator to solve first opens with order, one about brackets opens with brackets, and one that gives a value a name opens with name. That grouping is what makes a hundred and thirty-three of them scannable at all.");
+  ("★ EIGHTEEN OF THEM WERE SHORTENED IN ONE PASS, AND THE MOMENT IS WHY. The longest was twenty one characters and the longest now is sixteen. That edit is free today and expensive at any later date: the shortened ids exist only in this repo and in a dev build, so nobody is holding one, while after a deploy each of these words is a key on somebody's device and moving it takes their finished work with it. So the pass was taken while it still cost nothing rather than left as tidying.");
+  ("Eleven were over the old ceiling and seven more were dragged along to keep a family reading one way. Renaming the brackets lesson on both sides of a comparison and leaving the choose-order one beside it spelled the long way would have made the group unreadable, which is worse than either spelling on its own. So both sides moved: what was both_sides is sides throughout, what was true_false is gives, and a pair of operators is named by its first one.");
   let short = {
     app_code_lesson_symbols_digits_numbered: text_frozen("digits_numbered"),
     app_code_lesson_symbols_digit_number: text_frozen("digits_in_number"),
@@ -17,9 +19,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_identifiers_letters_spaces: text_frozen("name_letters"),
     app_code_lesson_identifiers_underscores: text_frozen("name_underscores"),
     app_code_lesson_identifiers_dollar_signs: text_frozen("name_dollars"),
-    app_code_lesson_identifiers_symbol_first: text_frozen("name_symbol_first"),
+    app_code_lesson_identifiers_symbol_first: text_frozen("name_start"),
     app_code_lesson_identifiers_symbol_first_unseparated:
-      text_frozen("name_symbol_run"),
+      text_frozen("name_run"),
     app_code_lesson_operators_addition: text_frozen("add"),
     app_code_lesson_operators_subtraction: text_frozen("subtract"),
     app_code_lesson_operators_multiplication: text_frozen("multiply"),
@@ -38,14 +40,12 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_greater_than_equal: text_frozen("greater_equal"),
     app_code_lesson_expression_equals: text_frozen("equal"),
     app_code_lesson_expression_not_equal: text_frozen("not_equal"),
-    app_code_lesson_expression_number_trichotomy:
-      text_frozen("number_three_ways"),
+    app_code_lesson_expression_number_trichotomy: text_frozen("number_three"),
     app_code_lesson_expression_string_equality: text_frozen("string_equal"),
     app_code_lesson_expression_string_order: text_frozen("string_order"),
-    app_code_lesson_expression_string_trichotomy:
-      text_frozen("string_three_ways"),
+    app_code_lesson_expression_string_trichotomy: text_frozen("string_three"),
     app_code_lesson_expression_string_order_equal:
-      text_frozen("string_order_equal"),
+      text_frozen("string_order_eq"),
     app_code_lesson_expression_true_false: text_frozen("true_false"),
     app_code_lesson_expression_not: text_frozen("not"),
     app_code_lesson_expression_or: text_frozen("or"),
@@ -60,7 +60,7 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_choose_order: text_frozen("order"),
     app_code_lesson_expression_choose_order_solve: text_frozen("order_solve"),
     app_code_lesson_expression_choose_order_operators:
-      text_frozen("order_minus_divide"),
+      text_frozen("order_minus"),
     app_code_lesson_expression_plus_times: text_frozen("plus_times"),
     app_code_lesson_expression_plus_divide: text_frozen("plus_divide"),
     app_code_lesson_expression_minus_times: text_frozen("minus_times"),
@@ -69,9 +69,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_exponent: text_frozen("power"),
     app_code_lesson_expression_parentheses_arithmetic:
       text_frozen("brackets_math"),
-    app_code_lesson_expression_parentheses_minus_divide: text_frozen(
-      "brackets_minus_divide",
-    ),
+    app_code_lesson_expression_parentheses_minus_divide:
+      text_frozen("brackets_minus"),
     app_code_lesson_expression_parentheses_moved: text_frozen("brackets_moved"),
     app_code_lesson_expression_arithmetic_less_than: text_frozen("math_less"),
     app_code_lesson_functions_arithmetic: text_frozen("fn_math"),
@@ -103,11 +102,9 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_smaller: text_frozen("smaller"),
     app_code_lesson_expression_larger: text_frozen("larger"),
     app_code_lesson_expression_min_max_of_three: text_frozen("min_max_three"),
-    app_code_lesson_expression_equal_true_false:
-      text_frozen("equal_true_false"),
-    app_code_lesson_expression_not_equal_true_false: text_frozen(
-      "not_equal_true_false",
-    ),
+    app_code_lesson_expression_equal_true_false: text_frozen("equal_gives"),
+    app_code_lesson_expression_not_equal_true_false:
+      text_frozen("not_equal_gives"),
     app_code_lesson_expression_equal_number_string_true_false:
       text_frozen("equal_kinds"),
     app_code_lesson_expression_choose_order_compare:
@@ -115,39 +112,34 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_comparing_a_comparison:
       text_frozen("compare_compare"),
     app_code_lesson_expression_parentheses_one_side:
-      text_frozen("brackets_one_side"),
+      text_frozen("brackets_one"),
     app_code_lesson_expression_choose_order_three: text_frozen("order_three"),
     app_code_lesson_expression_either_first: text_frozen("either_first"),
     app_code_lesson_expression_choose_order_both_sides:
-      text_frozen("order_both_sides"),
+      text_frozen("order_sides"),
     app_code_lesson_expression_choose_order_both_sides_any_comparison:
-      text_frozen("order_both_any"),
-    app_code_lesson_expression_arithmetic_equality:
-      text_frozen("math_both_sides"),
-    app_code_lesson_expression_swapping_add: text_frozen("swap_plus_times"),
-    app_code_lesson_expression_swapping_divide:
-      text_frozen("swap_divide_power"),
+      text_frozen("order_sides_any"),
+    app_code_lesson_expression_arithmetic_equality: text_frozen("math_sides"),
+    app_code_lesson_expression_swapping_add: text_frozen("swap_plus"),
+    app_code_lesson_expression_swapping_divide: text_frozen("swap_divide"),
     app_code_lesson_expression_swapping_order: text_frozen("swap_order"),
     app_code_lesson_expression_choose_order_pair: text_frozen("order_pair"),
-    app_code_lesson_expression_parentheses_both_sides: text_frozen(
-      "brackets_both_sides",
-    ),
+    app_code_lesson_expression_parentheses_both_sides:
+      text_frozen("brackets_sides"),
     app_code_lesson_expression_swapping_equal: text_frozen("swap_equal"),
     app_code_lesson_expression_choose_order_and: text_frozen("order_and"),
     app_code_lesson_expression_comparison_and: text_frozen("and_compare"),
     app_code_lesson_expression_in_between: text_frozen("in_between"),
     app_code_lesson_expression_choose_order_or: text_frozen("order_or"),
     app_code_lesson_expression_comparison_or: text_frozen("or_compare"),
-    app_code_lesson_expression_choose_order_and_before_or: text_frozen(
-      "order_and_before_or",
-    ),
+    app_code_lesson_expression_choose_order_and_before_or:
+      text_frozen("order_and_or"),
     app_code_lesson_expression_and_before_or: text_frozen("and_or_line"),
     app_code_lesson_expression_choose_order_brackets:
       text_frozen("order_brackets"),
     app_code_lesson_expression_brackets_or: text_frozen("brackets_or"),
-    app_code_lesson_expression_choose_order_brackets_moved: text_frozen(
-      "order_brackets_moved",
-    ),
+    app_code_lesson_expression_choose_order_brackets_moved:
+      text_frozen("order_moved"),
     app_code_lesson_expression_brackets_moved: text_frozen("brackets_pair"),
     app_code_lesson_expression_not_twice: text_frozen("not_twice"),
     app_code_lesson_expression_choose_order_not: text_frozen("order_not"),
