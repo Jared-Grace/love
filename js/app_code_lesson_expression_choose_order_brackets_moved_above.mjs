@@ -5,9 +5,8 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
 import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } from "./app_code_lesson_expression_choose_order_brackets_moved_other_pair.mjs";
+import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
-import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_intro } from "./app_code_lesson_expression_choose_order_brackets_moved_intro.mjs";
 export function app_code_lesson_expression_choose_order_brackets_moved_above(
   root,
@@ -20,6 +19,7 @@ export function app_code_lesson_expression_choose_order_brackets_moved_above(
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the moving stays visible.");
   ("The two rules put back in front of the learner are the ones the lesson before it recalls, asked for from there rather than written again, because they are the same two rules and a near-copy is a thing to be compared where the same words are a thing already known.");
   ("THE WALK NAMES THE BRACKETS AS THE REASON, which is what makes the two walks say different things about the same three words. It used to say only that the bracketed part had a value on each side, which is true of both walks and so could not tell them apart at all: the whole difference the lesson is about was on the screen and never said out loud.");
+  ("ONLY THE LINES ARE THIS LESSON'S OWN. The recall card, the two walks and the closing card were written out here and again in the two lessons before it, three copies differing in nothing but which lines were handed to them, so the laying out is asked for now and what is left here is the pair of lines and the heading over the second one.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let both = [true, false];
@@ -41,19 +41,20 @@ export function app_code_lesson_expression_choose_order_brackets_moved_above(
   let heading_none = [];
   let heading_other =
     app_code_lesson_expression_choose_order_brackets_moved_other_pair();
-  app_code_lesson_expression_choose_order_brackets_recall(root);
-  app_code_lesson_expression_choose_order_reason_run(
+  let walks = [
+    {
+      heading: heading_none,
+      tree: tree_left,
+    },
+    {
+      heading: heading_other,
+      tree: tree_right,
+    },
+  ];
+  app_code_lesson_expression_choose_order_walks_above_generic(
     root,
-    heading_none,
-    tree_left,
-  );
-  app_code_lesson_expression_choose_order_reason_run(
-    root,
-    heading_other,
-    tree_right,
-  );
-  app_code_lesson_expression_choose_order_change_card(
-    root,
+    app_code_lesson_expression_choose_order_brackets_recall,
+    walks,
     app_code_lesson_expression_choose_order_brackets_moved_intro,
   );
 }
