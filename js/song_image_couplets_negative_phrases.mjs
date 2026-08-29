@@ -18,7 +18,7 @@ export function song_image_couplets_negative_phrases() {
     "never a",
     "never as",
     "instead of",
-    "and not",
+    "and not ",
     "but not",
     "no wider",
     "no taller",
