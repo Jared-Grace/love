@@ -1,6 +1,6 @@
+import { bless_hash_household_first_celebrate } from "./bless_hash_household_first_celebrate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_household_first } from "./bless_hash_household_first.mjs";
-import { bless_hash_household_first_finished } from "./bless_hash_household_first_finished.mjs";
 import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
 export function app_g_bless_household_first_is() {
   arguments_assert(arguments, 0);

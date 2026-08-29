@@ -60,10 +60,8 @@ export function app_code_lesson_expression_remainder() {
       html_span_text(parent, "Remainder");
     }
     ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
-    let built = app_code_lesson_name_id_category_then(
-      app_code_category_operators(),
-      paint,
-    );
+    let left = app_code_category_operators();
+    let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
 }
