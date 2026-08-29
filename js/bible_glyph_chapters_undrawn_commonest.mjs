@@ -34,7 +34,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   let drawn_total = property_get(r, "drawn_total");
   let words_total = property_get(r, "words_total");
   let ranked = [];
-  let report = bible_glyph_chapters_undrawn_commonest_report(
+  let report = bible_glyph_chapters_undrawn_commonest_report({
     occurrences,
     glosses,
     ranked,
@@ -47,6 +47,6 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
     filler_total,
     drawn_total,
     chapters,
-  );
+  });
   return report;
 }
