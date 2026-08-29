@@ -66,9 +66,10 @@ export async function webpack_watch() {
     let t = setTimeout(fire, 1200);
     property_set(pending, a_name, t);
   }
-  function on_change(path) {
+  async function on_change(path) {
     let f_name = path_name(path);
     let affected = webpack_watch_affected_get(f_name, app_deps, a_name_of);
+    await webpack_watch_imports_missing_log(f_name, affected);
     list_map(affected, build_schedule);
   }
   watcher.on("change", on_change).on("add", on_change);
