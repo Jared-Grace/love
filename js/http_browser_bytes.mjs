@@ -1,10 +1,10 @@
+import { error_json } from "./error_json.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { json_to } from "./json_to.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
-import { error } from "./error.mjs";
 import { retry } from "./retry.mjs";
 export async function http_browser_bytes(method, options, body, url) {
   "The browser's way of fetching an address, answering the raw bytes, giving up after a ceiling and asking again on a fresh connection when it does.";
@@ -37,8 +37,14 @@ export async function http_browser_bytes(method, options, body, url) {
     let timer = setTimeout(abort, ceiling);
     try {
       let response = await fetch(url, r);
+      ("WHAT WAS ASKED FOR AND WHAT CAME BACK ARE BOTH IN THE COMPLAINT. A refusal used to be reported as four words naming no address and no status, which is a true sentence about nothing anybody can act on - three of them arrived from a phone in a row and there was no telling a file that is not there from a file that is there and will not be handed over without signing in. The retrier writes down what each attempt said, so saying it here is what carries it the whole way out.");
       if (not(response.ok)) {
-        error_json({ hint: "the address answered and the answer was a refusal - is the file there, and is it readable without signing in?", url, status: response.status, status_text: response.statusText });
+        error_json({
+          hint: "the address answered and the answer was a refusal - is the file there, and is it readable without signing in?",
+          url,
+          status: response.status,
+          status_text: response.statusText,
+        });
       }
       let buf = await response.arrayBuffer();
       return buf;
