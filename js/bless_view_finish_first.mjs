@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -7,7 +8,6 @@ import { add } from "./add.mjs";
 import { bless_person_place } from "./bless_person_place.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { list_size } from "./list_size.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { bless_blessed_is } from "./bless_blessed_is.mjs";
 import { divide } from "./divide.mjs";
@@ -66,16 +66,14 @@ export function bless_view_finish_first(blessed, remaining) {
       let together = equal(household_other, household);
       return together;
     }
-    let housemates = list_filter(people, person_same);
-    let left_count = list_size(housemates);
+    let left_count = list_filter_size(people, person_same);
     let building = bless_person_place(person, "building");
     let households = bless_place_members("building", building);
     function household_done_is(id) {
       let done = bless_blessed_is(blessed, "household", id);
       return done;
     }
-    let finished = list_filter(households, household_done_is);
-    let done_count = list_size(finished);
+    let done_count = list_filter_size(households, household_done_is);
     let nearer = divide(done_count, spread);
     let score = subtract(left_count, nearer);
     return score;
