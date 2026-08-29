@@ -58,6 +58,7 @@ export async function ebible_text_to_speech_missing(
       chapters_wanted: wanted.length,
       chapters_missing: missing.length,
       chapters_recorded_now: 0,
+      chapters_not_started: 0,
       chapters_left: missing.length,
       manifests: [],
       first: null,
