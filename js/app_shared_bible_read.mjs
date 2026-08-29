@@ -65,14 +65,16 @@ export async function app_shared_bible_read(
   }
   let books_en = await app_shared_bible_read_books_en();
   let reference_stopped = await app_shared_bible_read_reference_stopped(
-    ref_mode,
+    {
+      ref_mode,
+      hash,
+      books_en,
+      ref_line,
+      count_status,
+    },
     content,
-    hash,
-    books_en,
-    ref_line,
     bar,
     context,
-    count_status,
   );
   if (reference_stopped) {
     return;
