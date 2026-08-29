@@ -8,7 +8,7 @@ import { list_take } from "./list_take.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { divide_round } from "./divide_round.mjs";
-export function bible_glyph_chapters_undrawn_commonest_report(
+export function bible_glyph_chapters_undrawn_commonest_report({
   occurrences,
   glosses,
   ranked,
@@ -21,8 +21,8 @@ export function bible_glyph_chapters_undrawn_commonest_report(
   filler_total,
   drawn_total,
   chapters,
-) {
-  arguments_assert(arguments, 12);
+}) {
+  arguments_assert(arguments, 1);
   for (let key of object_property_names(occurrences)) {
     let wordings = property_get(glosses, key);
     let gloss = bible_glyph_chapters_undrawn_wording_commonest(wordings);

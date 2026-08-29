@@ -30,7 +30,7 @@ export function html_code_error_record_script() {
     'var text = "error"; var said = ""; if (fault && fault.message) { said = String(fault.message); } else if (event && event.message) { said = String(event.message); } var trace = ""; if (fault && fault.stack) { trace = String(fault.stack); } ',
     'if (trace && said && trace.indexOf(said) < 0) { text = said + "\\n" + trace; } ',
     "else if (trace) { text = trace; } ",
-    "else if (event && event.message) { text = String(event.message); } ",
+    "else if (said) { text = said; } ",
     "else if (fault) { text = String(fault); } ",
     "var record = { text: text.slice(0, limit), ",
     'file: String((event && event.filename) || ""), ',
