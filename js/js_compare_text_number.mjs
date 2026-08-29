@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
@@ -14,7 +15,6 @@ import { null_is } from "./null_is.mjs";
 import { js_name_number_is } from "./js_name_number_is.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_second } from "./list_second.mjs";
 import { and } from "./and.mjs";
@@ -92,8 +92,7 @@ export function js_compare_text_number(ast) {
       return;
     }
     let args = property_get(node, "arguments");
-    let size = list_size(args);
-    let two = equal(size, 2);
+    let two = list_size_equal(args, 2);
     if (not(two)) {
       return;
     }
