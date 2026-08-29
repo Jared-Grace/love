@@ -1,10 +1,10 @@
+import { g_directions_keypad } from "./g_directions_keypad.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
 import { app_g_bless_arrow } from "./app_g_bless_arrow.mjs";
-import { g_directions } from "./g_directions.mjs";
 export function app_g_bless_arrows(bar, on_turn) {
   arguments_assert(arguments, 2);
   ("The four small buttons that turn the player to look a different way.");
@@ -39,7 +39,7 @@ export function app_g_bless_arrows(bar, on_turn) {
       "min-width": "0",
     });
   }
-  let list = g_directions();
+  let list = g_directions_keypad();
   each(list, lambda$way);
   return row;
 }
