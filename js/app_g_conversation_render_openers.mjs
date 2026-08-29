@@ -16,7 +16,7 @@ import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_label_for } from "./app_g_conversation_label_for.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_g_turn_menu } from "./app_g_turn_menu.mjs";
-export function app_g_conversation_render_openers(
+export function app_g_conversation_render_openers({
   greeting,
   greeted,
   pending,
@@ -29,8 +29,8 @@ export function app_g_conversation_render_openers(
   run_turn,
   pronouns,
   leave,
-) {
-  arguments_assert(arguments, 12);
+}) {
+  arguments_assert(arguments, 1);
   let intro = greeting;
   if (greeted.done) {
     intro = g_anything_else();

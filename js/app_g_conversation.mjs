@@ -93,20 +93,20 @@ export async function app_g_conversation(
   }
   function render_openers() {
     let remaining_now = property_get(remaining_held, "remaining");
-    let r3 = app_g_conversation_render_openers(
+    let r3 = app_g_conversation_render_openers({
       greeting,
       greeted,
       pending,
       npc,
       overlay,
-      remaining_now,
+      remaining: remaining_now,
       render_boundary,
       steps,
       steps_total,
       run_turn,
       pronouns,
       leave,
-    );
+    });
     return r3;
   }
   function render_pray() {

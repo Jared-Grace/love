@@ -8,9 +8,7 @@ import { app_code_hash_write } from "./app_code_hash_write.mjs";
 import { app_code_quiz_index_reset } from "./app_code_quiz_index_reset.mjs";
 import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
 import { app_code_button_unfinished_text } from "./app_code_button_unfinished_text.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_shared_button_wide_spaced } from "./app_shared_button_wide_spaced.mjs";
 export function app_code_lesson_quiz_button_unfinished(
   context,
   parent,
@@ -50,8 +48,6 @@ export function app_code_lesson_quiz_button_unfinished(
     await app_code_review_go_to_lesson(lesson, context);
   }
   let text = app_code_button_unfinished_text(kind);
-  let button = app_shared_button_wide(parent, text, go);
-  let value = app_shared_spaced_gap();
-  html_style_margin_top(button, value);
+  let button = app_shared_button_wide_spaced(parent, text, go);
   return button;
 }
