@@ -3,9 +3,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_chapter_paragraphed_text } from "./bible_usfm_version_chapter_paragraphed_text.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function bible_usfm_version_chapter_clipboard_copy_plain_whitespace_normalized(
+  version,
   book_code,
   chapter_number,
-  version,
 ) {
   arguments_assert(arguments, 3);
   ("$plain book_code");
