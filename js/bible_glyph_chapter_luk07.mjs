@@ -1448,9 +1448,10 @@ export function bible_glyph_chapter_luk07() {
       ],
     },
   ];
-  return {
+  let r = {
     chapter_code,
     reference,
     verses,
   };
+  return r;
 }
