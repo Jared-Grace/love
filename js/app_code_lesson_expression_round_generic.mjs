@@ -1,3 +1,4 @@
+import { text_between } from "./text_between.mjs";
 import { app_code_lesson_expression_round_generic_make } from "./app_code_lesson_expression_round_generic_make.mjs";
 import { app_code_lesson_expression_round_generic_above } from "./app_code_lesson_expression_round_generic_above.mjs";
 import { app_code_lesson_expression_round_generic_title_name_id } from "./app_code_lesson_expression_round_generic_title_name_id.mjs";
@@ -46,7 +47,9 @@ export function app_code_lesson_expression_round_generic(params) {
     if (rounds_up) {
       wrong = subtract(answer, 1);
     }
-    let r2 = [wrong];
+    ("the number as it was written is offered beside it, for the learner who reads the rounding as leaving the number where it was. it also takes away the way of passing this screen without knowing any of that: rounding DOWN answers with the whole part that is already standing in the code, so the right answer could be read straight off the question every time - and a wrong answer standing in the code just as plainly stops that. a decoy answering the same as the right answer is dropped where it stands, so the already-whole questions are left as they were.");
+    let unchanged = text_between(question, "(", ")");
+    let r2 = [wrong, unchanged];
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
