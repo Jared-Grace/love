@@ -30,7 +30,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
   let noun_upper = property_get(words, "noun_upper");
   let verb = property_get(words, "verb");
   let title_word = property_get(words, "title_word");
-  let right_word = property_get(words, "right_word");
+  property_get(words, "right_word");
   let symbol = property_get(operator, "operator");
   function batch_get() {
     "four questions - four distinct left numbers (so the written-out forms never collide), each with its own random count of 2 or 3 so the length of the written-out form varies; the ANSWER is the written-out form, not the value";
@@ -55,7 +55,6 @@ export function app_code_lesson_expression_repeated_generic(words) {
   let name_id = app_code_lesson_expression_repeated_generic_title_name_id(
     title_word,
     symbol,
-    right_word,
   );
   let example_question_label = app_code_label_code_question();
   let written_out = text_combine_multiple([
