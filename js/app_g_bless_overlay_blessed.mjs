@@ -39,6 +39,11 @@ export function app_g_bless_overlay_blessed(container_map) {
   let edge = app_g_bless_edge_new(container_map);
   ("the ladder starts at one person, and every rung above it is earned rather than begun");
   ("with - so the first prayer of a new game reaches exactly the person it is said over");
+  ("The map is told who is walking about on it, because a camera journey has to stop them");
+  ("where they stand for the length of the journey. It is said once, here, where the crowd");
+  ("and the map first exist together - and every camera move made from this map afterwards");
+  ("is covered without anything in between having to carry the crowd about.");
+  app_g_bless_camera_people_set(container_map, npcs);
   let rung = "person";
   let blessed = bless_blessed_new();
   ("A new record is empty, except when the address asked for a world part way through. That");
