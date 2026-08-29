@@ -8,6 +8,6 @@ export function app_g_bless_finished_person_beam_ms() {
   "Fast. This is the part that says the blessing came from somewhere else rather than";
   "started here, and a light lowered slowly reads as machinery. It is still long enough";
   "to be watched crossing the screen, which a flash would not be.";
-  let ms = 340;
+  let ms = 420;
   return ms;
 }
