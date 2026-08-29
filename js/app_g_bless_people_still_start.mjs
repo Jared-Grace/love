@@ -1,6 +1,5 @@
+import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_g_bless_person_still_start } from "./app_g_bless_person_still_start.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_people_still_start(people, player_img_c) {
@@ -21,8 +20,7 @@ export function app_g_bless_people_still_start(people, player_img_c) {
   ("everybody. It is one square by definition, it is measured rather than worked out so that");
   ("a phone that has already shrunk the map is read correctly, and reading it once keeps");
   ("this to a single measurement rather than one per person.");
-  let rect = html_bounding_client_rect(player_img_c);
-  let square = property_get(rect, "width");
+  let square = html_element_width(player_img_c);
   function person_still(person) {
     app_g_bless_person_still_start(person, square);
   }
