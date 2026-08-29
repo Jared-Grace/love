@@ -16,6 +16,6 @@ export function app_code_lesson_console_log_remainder_generic_title_name_id(
     let by = text_combine(" by ", divisor_text);
     html_span_text(parent, by);
   }
-  let built = app_code_lesson_name_id_operators(name_right, paint);
+  let built = app_code_lesson_name_id_operators(paint);
   return built;
 }
