@@ -19,7 +19,7 @@ export function app_code_quiz_lenient_names_walked() {
   let names = [];
   let walked = 0;
   for (let fn of fns) {
-    let lesson = fn();
+    let lesson = app_code_lesson_fn_id_set(fn);
     walked = walked + 1;
     let kept = app_code_quiz_lesson_lenient_names(lesson);
     function held(name) {
