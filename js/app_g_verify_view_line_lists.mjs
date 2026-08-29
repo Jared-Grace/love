@@ -12,7 +12,7 @@ import { html_style_flex } from "./html_style_flex.mjs";
 import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { html_on } from "./html_on.mjs";
-export function app_g_verify_view_line_lists(
+export function app_g_verify_view_line_lists({
   container,
   small_gap,
   lines,
@@ -24,8 +24,8 @@ export function app_g_verify_view_line_lists(
   highlight,
   row_comps,
   order_comps,
-) {
-  arguments_assert(arguments, 11);
+}) {
+  arguments_assert(arguments, 1);
   app_g_verify_view_label_new("BY PASSAGE ORDER", container, small_gap);
   let cov = app_g_verify_view_panel_flush(container);
   function lambda10(l, li) {

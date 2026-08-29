@@ -53,7 +53,7 @@ export async function app_g_verify_view(
     order_comps,
     tokens,
   );
-  app_g_verify_view_line_lists(
+  app_g_verify_view_line_lists({
     container,
     small_gap,
     lines,
@@ -65,7 +65,7 @@ export async function app_g_verify_view(
     highlight,
     row_comps,
     order_comps,
-  );
+  });
   app_g_verify_view_links_bar(container, small_gap, chapter_code, verse);
   app_g_verify_view_approve_bar(
     container,
