@@ -1,11 +1,9 @@
-import { tiles_rectangles_row_scan } from "./tiles_rectangles_row_scan.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_min } from "./list_min.mjs";
-import { list_max } from "./list_max.mjs";
+import { tiles_sides } from "./tiles_sides.mjs";
+import { tiles_rectangles_row_scan } from "./tiles_rectangles_row_scan.mjs";
 import { each_range_from } from "./each_range_from.mjs";
 export function tiles_rectangles(tiles) {
   arguments_assert(arguments, 1);
@@ -37,27 +35,18 @@ export function tiles_rectangles(tiles) {
     let key = text_combine_multiple([x, ",", y]);
     return key;
   }
-  function tile_x(tile) {
-    let x = property_get(tile, "x");
-    return x;
-  }
-  function tile_y(tile) {
-    let y = property_get(tile, "y");
-    return y;
-  }
   function tile_note(tile) {
-    let x = tile_x(tile);
-    let y = tile_y(tile);
+    let x = property_get(tile, "x");
+    let y = property_get(tile, "y");
     let key = key_of(x, y);
     left.add(key);
   }
   each(tiles, tile_note);
-  let xs = list_map(tiles, tile_x);
-  let ys = list_map(tiles, tile_y);
-  let x_least = list_min(xs);
-  let x_most = list_max(xs);
-  let y_least = list_min(ys);
-  let y_most = list_max(ys);
+  let sides = tiles_sides(tiles);
+  let x_least = property_get(sides, "left");
+  let x_most = property_get(sides, "right");
+  let y_least = property_get(sides, "top");
+  let y_most = property_get(sides, "bottom");
   let rectangles = [];
   function row_scan(y) {
     let r = tiles_rectangles_row_scan(

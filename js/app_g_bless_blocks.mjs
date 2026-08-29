@@ -1,19 +1,18 @@
-import { multiply_add } from "./multiply_add.mjs";
-import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { add } from "./add.mjs";
-import { divide_floor } from "./divide_floor.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_max } from "./list_max.mjs";
-import { list_size } from "./list_size.mjs";
-import { multiply } from "./multiply.mjs";
-import { property_get } from "./property_get.mjs";
-import { range_map } from "./range_map.mjs";
-import { subtract } from "./subtract.mjs";
 import { bless_block } from "./bless_block.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_concat_property } from "./list_concat_property.mjs";
+import { tiles_sides } from "./tiles_sides.mjs";
+import { add } from "./add.mjs";
 import { bless_blocks_count } from "./bless_blocks_count.mjs";
 import { bless_blocks_gap } from "./bless_blocks_gap.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply_add } from "./multiply_add.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_size } from "./list_size.mjs";
+import { divide_floor } from "./divide_floor.mjs";
+import { multiply } from "./multiply.mjs";
+import { range_map } from "./range_map.mjs";
 export function app_g_bless_blocks(rows) {
   arguments_assert(arguments, 1);
   ("Where every block goes in this world - one under another down the middle of it, with");
@@ -36,25 +35,16 @@ export function app_g_bless_blocks(rows) {
   let measured = bless_block(0, 0);
   let walls = property_get(measured, "walls");
   let tiles = list_concat_property(walls, measured, "sidewalk");
-  function x_of(tile) {
-    let tile_x = property_get(tile, "x");
-    return tile_x;
-  }
-  function y_of(tile) {
-    let tile_y = property_get(tile, "y");
-    return tile_y;
-  }
-  let xs = list_map(tiles, x_of);
-  let ys = list_map(tiles, y_of);
-  let left = list_max(xs);
-  let width = add(left, 1);
-  let left2 = list_max(ys);
-  let depth = add(left2, 1);
+  let sides = tiles_sides(tiles);
+  let right = property_get(sides, "right");
+  let width = add(right, 1);
+  let bottom = property_get(sides, "bottom");
+  let depth = add(bottom, 1);
   let count = bless_blocks_count();
   let gap = bless_blocks_gap();
   let stride = add(depth, gap);
-  let left3 = subtract(count, 1);
-  let column = multiply_add(left3, stride, depth);
+  let after_first = subtract(count, 1);
+  let column = multiply_add(after_first, stride, depth);
   let row_first = list_first(rows);
   let world_width = list_size(row_first);
   let world_depth = list_size(rows);
