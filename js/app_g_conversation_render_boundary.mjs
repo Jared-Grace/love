@@ -15,19 +15,21 @@ import { app_g_button_conversation_end } from "./app_g_button_conversation_end.m
 import { list_random_item } from "./list_random_item.mjs";
 export function app_g_conversation_render_boundary(
   turn,
-  overlay,
-  npc,
-  meet,
-  pending,
-  remaining,
-  render_openers,
-  leave,
-  prayed,
-  render_pray,
-  converts,
-  goodbye,
+  {
+    overlay,
+    npc,
+    meet,
+    pending,
+    remaining,
+    render_openers,
+    leave,
+    prayed,
+    render_pray,
+    converts,
+    goodbye,
+  },
 ) {
-  arguments_assert(arguments, 12);
+  arguments_assert(arguments, 2);
   ("a wrong opener is a BOUNDARY, not a retry: clear to a clean screen where the NPC HESITATES — a pulsing typing-dots bubble for a PAUSE (setTimeout), so the wait reads as the person gathering a kind way to say no, not a frozen screen — then they gently state the boundary and just two gracious replies appear: a humble acknowledgement that returns to the openers, or ending the conversation. the pause makes guessing slower than praying for discernment, so prayer stays the best path — while the correct opener itself is FIXED, so guessing always terminates and nobody is walled in");
   html_clear(overlay);
   app_g_npc_typing(npc, overlay);

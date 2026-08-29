@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_conversation_advance } from "./app_g_conversation_advance.mjs";
 import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
 import { app_g_pray_turn } from "./app_g_pray_turn.mjs";
-export async function app_g_conversation_pray(
+export async function app_g_conversation_pray({
   steps,
   steps_total,
   prayed,
@@ -15,8 +15,8 @@ export async function app_g_conversation_pray(
   npc,
   goodbye,
   some_prayers,
-) {
-  arguments_assert(arguments, 12);
+}) {
+  arguments_assert(arguments, 1);
   await app_g_conversation_advance(steps, steps_total);
   async function on_part() {
     await app_g_conversation_advance(steps, steps_total);
