@@ -750,6 +750,8 @@ export function qa_gates() {
     js_page_serialized_imported_names_cases_gate_run,
     functions_page_auto_borrowing_gate_run,
     js_module_state_shadowed_cases_gate_run,
+    js_compare_text_number_cases_gate_run,
+    functions_compare_text_number_gate_run,
     error_where_cases_gate_run,
     memory_index_head_separated_cases_gate_run,
     functions_module_state_shadowed_gate_run,
