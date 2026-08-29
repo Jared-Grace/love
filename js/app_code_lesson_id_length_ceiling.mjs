@@ -8,6 +8,6 @@ export function app_code_lesson_id_length_ceiling() {
   ("Raising it is the wrong move, and the reason is not the usual one. A page's byte ceiling is sometimes raised because the growth is real - a list got longer because more languages are offered. Nothing of the kind can happen to an id. An id is not the title and does not have to say what the lesson teaches; it only has to be unique and recognisable, and there is always a shorter spelling of it. A lesson that seems to need seventeen characters needs a better id, not a bigger ceiling.");
   ("It has already come down once, from twenty one, when eighteen ids were shortened in one pass. Two ids sit at the number now, the one about digits inside a number and the one about underscores in a name, and both are long because the English word is long rather than because the id says too much - so the next reader looking to take it lower should start by finding another word for those two.");
   ("It was checked that the gate reading this can actually fail rather than only pass, on this table rather than on the one before it: at fifteen it named those same two ids with their sizes and the remedy, and at sixteen it names nothing.");
-  let count = 15;
+  let count = 16;
   return count;
 }
