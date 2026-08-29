@@ -1,5 +1,6 @@
 {
  "known": [
+  "add",
   "app_a_file_system_initialize",
   "app_bible",
   "app_calendar",
@@ -11,6 +12,9 @@
   "list_empty_is",
   "list_first",
   "list_map",
+  "log",
+  "not",
+  "not_equal",
   "null_is",
   "property_get"
  ]
