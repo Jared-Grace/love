@@ -15,7 +15,7 @@ import { html_span_text } from "./html_span_text.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_pair_generic(params) {
   "a reusable bare-expression lesson mixing TWO operators (a op1 b op2 c); the arrangement flips by index parity so the two worked examples always show opposite orders (a op1 b op2 c and a op2 b op1 c) - proving precedence is about the operator, not its position; caller passes the two symbols, a word for the id, an above intro, and triples_get returning distinct [a,b,c] triples";
-  let symbol1 = property_get(params, "symbol1");
+  let symbol = property_get(params, "symbol1");
   let symbol2 = property_get(params, "symbol2");
   let word = property_get(params, "word");
   let above = property_get(params, "above");
@@ -24,10 +24,14 @@ export function app_code_lesson_expression_pair_generic(params) {
     let a = list_get(triple, 0);
     let b = list_get(triple, 1);
     let c = list_get(triple, 2);
-    let symbol1_first = equal_0(modulo(index, 2));
-    let first_op = ternary(symbol1_first, symbol1, symbol2);
-    let second_op = ternary(symbol1_first, symbol2, symbol1);
-    let parts = [text_to(a), first_op, text_to(b), second_op, text_to(c)];
+    let item = modulo(index, 2);
+    let symbol1_first = equal_0(item);
+    let first_op = ternary(symbol1_first, symbol, symbol2);
+    let second_op = ternary(symbol1_first, symbol2, symbol);
+    let t = text_to(a);
+    let t2 = text_to(b);
+    let t3 = text_to(c);
+    let parts = [t, first_op, t2, second_op, t3];
     let code = list_join(parts, " ");
     return code;
   }
@@ -38,7 +42,9 @@ export function app_code_lesson_expression_pair_generic(params) {
   }
   function decoys(question, answer) {
     "the tailored wrong answer is the LEFT-TO-RIGHT value, ignoring precedence - the classic order-of-operations mistake (2 + 3 * 4 read as (2 + 3) * 4 = 20). For same-precedence pairs it equals the real answer, so the multiple choice just drops it as a duplicate";
-    return [js_eval_left_to_right(question)];
+    let v = js_eval_left_to_right(question);
+    let r = [v];
+    return r;
   }
   let next_arg = list_iterator_refillable(refill);
   let name_id = title_name_id();
@@ -53,14 +59,12 @@ export function app_code_lesson_expression_pair_generic(params) {
   function title_name_id() {
     "the home title is <op1> <op2>, an Expressions lesson";
     function paint(parent) {
-      html_span_text_code_dark(parent, symbol1);
+      html_span_text_code_dark(parent, symbol);
       html_span_text(parent, " ");
       html_span_text_code_dark(parent, symbol2);
     }
-    let built = app_code_lesson_name_id_category_then(
-      app_code_category_expressions(),
-      paint,
-    );
+    let left = app_code_category_expressions();
+    let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
 }
