@@ -7,6 +7,8 @@ import { js_function_declaration_param_name_index } from "./js_function_declarat
 import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
 import { functions_name_value_use_names } from "./functions_name_value_use_names.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { function_calls_wrapper_handed_is } from "./function_calls_wrapper_handed_is.mjs";
+import { false_is_assert_json } from "./false_is_assert_json.mjs";
 import { functions_call_argument_at_undroppable } from "./functions_call_argument_at_undroppable.mjs";
 import { js_call_named_argument_at_remove_curried_right_2 } from "./js_call_named_argument_at_remove_curried_right_2.mjs";
 import { functions_transform_list } from "./functions_transform_list.mjs";
@@ -19,7 +21,7 @@ import { function_auto_multiple } from "./function_auto_multiple.mjs";
 export async function function_parameter_unread_remove(f_name, parameter_name) {
   "take a parameter its own body never reads off a function and off every call site in one move";
   "the repair arm of the unread-parameter gate. a parameter nothing reads makes every call site read as though handing that value over does something - one such pair sat in front of the search app looking like an english fallback that was never there. the declaration and every call are one edit because either half alone leaves calls and declaration disagreeing about how many arguments there are";
-  "three refusals stand in front of the write and each is something the repo answers rather than a guess. the parameter has to be one the body genuinely never reads, so a live parameter cannot be taken out by naming it; no file may hand the function over as a value, because then the parameter list is fixed by a call that is nowhere in sight; and every call site has to hand it a plain name or a written-out value, because anything else - a call, a spread - may be the whole reason its line was written";
+  "four refusals stand in front of the write and each is something the repo answers rather than a guess. the parameter has to be one the body genuinely never reads, so a live parameter cannot be taken out by naming it; no file may hand the function over as a value, because then the parameter list is fixed by a call that is nowhere in sight; no caller may be a wrapper standing in a slot and handing its whole list straight on, which is the same objection one hop out; and every call site has to hand it a plain name or a written-out value, because anything else - a call, a spread - may be the whole reason its line was written";
   let finding = await function_parameters_unread(f_name);
   let unread = property_get(finding, "unread");
   let listed = list_includes(unread, parameter_name);
@@ -42,6 +44,13 @@ export async function function_parameter_unread_remove(f_name, parameter_name) {
     parameter_name,
     handing,
     hint: "this function is handed over as a value, so whoever it was handed to decides how many arguments it gets and that call is nowhere in sight - the parameter list belongs to that caller and cannot be shortened from here",
+  });
+  ("the same objection, reached one hop later. the sweep in front of this stopped naming these, so nothing routine arrives here carrying one - but a name typed by hand still would, and the write it would do is the worst of the ones available: the parameter comes off, every argument after it slides one place left, and the slot goes on handing over the same number of values it always did");
+  let lifted = await function_calls_wrapper_handed_is(f_name);
+  false_is_assert_json(lifted, {
+    f_name,
+    parameter_name,
+    hint: "every caller of this is a wrapper handing on its own whole parameter list, and those wrappers are handed over as values - so this parameter list is really the slot's, one hop further in, and cannot be shortened from here",
   });
   let unsafe = await functions_call_argument_at_undroppable(
     f_names,

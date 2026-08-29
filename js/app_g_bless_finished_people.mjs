@@ -82,12 +82,19 @@ export function app_g_bless_finished_people(div_map, people) {
   }
   let bursts = list_map(people, person_burst);
   html_reflow_force(div_map);
-  ("Slower than it was, on the same report that asked for the colour. A light that is up");
-  ("and gone inside a third of a second is over before a player watching the face has");
-  ("finished registering that anything started, so it reads as a flicker rather than as an");
-  ("event - and a flicker over an already-gold face is exactly what could not be told");
-  ("apart. The spread is left slower still than the brightening, so the light is at full");
-  ("strength while it is still travelling outward.");
+  ("The brightening is kept slow enough to be seen happening. A light that is up and gone");
+  ("inside a third of a second is over before a player watching the face has finished");
+  ("registering that anything started, so it reads as a flicker rather than as an event -");
+  ("and a flicker over an already-gold face is exactly what could not be told apart.");
+  ("The spread was once left much slower than that, and it has been brought back in to");
+  ("about the length of the brightening. Opening over a second read as a light drifting");
+  ("outward, and a prayer being answered is not a drift; it is something arriving. Quick");
+  ("enough to be a burst, and still long enough that the eye follows the edge of it going");
+  ("out - which is the whole of what a burst is. It is now about as fast as the light that");
+  ("opens beneath it, so the two read as one thing opening rather than as a small fast");
+  ("light inside a large slow one.");
+  ("The colour is still at full strength while the shape is still travelling, because the");
+  ("brightening finishes first. That order is what makes the outward travel visible at all.");
   function burst_show(burst) {
     html_style_assign(burst, {
       transition:
