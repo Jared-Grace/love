@@ -24,10 +24,11 @@ export async function ebible_letter_plain_text_gate_run() {
   let generated = await ebible_letter_plain_text_generated();
   let committed = await file_read(to_path);
   let difference = text_lines_first_difference(committed, generated);
+  let f_name = fn_name("ebible_letter_plain_text_write");
   null_is_assert_json(difference, {
     hint: text_combine_multiple([
       "the pasteable plain text of the letter to eBible is not what the markdown it came from would generate - run ",
-      fn_name("ebible_letter_plain_text_write"),
+      f_name,
       ", and if the difference is one somebody typed into the plain text by hand, put it in the markdown instead",
     ]),
     from_path,
