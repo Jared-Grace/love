@@ -6,7 +6,6 @@ import { js_identifiers_referenced_names } from "./js_identifiers_referenced_nam
 import { js_special_arguments } from "./js_special_arguments.mjs";
 import { js_identifiers_referenced_named_count } from "./js_identifiers_referenced_named_count.mjs";
 import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { js_params_names_protocol } from "./js_params_names_protocol.mjs";
@@ -34,7 +33,10 @@ export async function function_parameters_unread(f_name) {
     body,
     arguments_name,
   );
-  let assert_calls = js_list_calls_named_nodes(body, arguments_assert.name);
+  let assert_calls = js_list_calls_named_nodes(
+    body,
+    fn_name("arguments_assert"),
+  );
   function assert_arguments_count(call) {
     let counted = js_identifiers_referenced_named_count(call, arguments_name);
     return counted;
