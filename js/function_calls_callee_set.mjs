@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { function_params_count } from "./function_params_count.mjs";
+import { function_parameters_count } from "./function_parameters_count.mjs";
 import { js_calls_named_sized_callee_set } from "./js_calls_named_sized_callee_set.mjs";
 import { function_transform_imports } from "./function_transform_imports.mjs";
 export async function function_calls_callee_set(
@@ -16,7 +16,7 @@ export async function function_calls_callee_set(
   ("hand over a different number and are passed over untouched.");
   ("Imports are settled by the wrapper: the new name is brought in, and the old one");
   ("is dropped if this was the last call reaching it.");
-  let count = await function_params_count(f_name_after);
+  let count = await function_parameters_count(f_name_after);
   async function lambda(ast) {
     await js_calls_named_sized_callee_set(
       ast,
