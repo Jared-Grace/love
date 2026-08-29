@@ -80,7 +80,7 @@ export async function app_shared_bible_read_verse_row(
   );
   let update = property_get(r, "update");
   let copy = property_get(r, "copy");
-  let r2 = app_shared_bible_read_verse_actions(
+  let r2 = app_shared_bible_read_verse_actions({
     content,
     verse_chapter_name,
     verse_book_name,
@@ -92,7 +92,7 @@ export async function app_shared_bible_read_verse_row(
     copy,
     verse_numbers_chosen,
     languages_chosen,
-  );
+  });
   let verse_buttons = property_get(r2, "verse_buttons");
   let actions = property_get(r2, "actions");
   function row_update() {
