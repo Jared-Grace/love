@@ -1,5 +1,3 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function js_compare_text_number_cases() {
   "Small files written out, each one saying which of its own exact comparisons holds a cut of text against a number.";
@@ -7,6 +5,7 @@ export function js_compare_text_number_cases() {
   "The first case is the one this was written for, copied in the shape it really had: a chapter cut out of a file as writing, held against a chapter handed in as a number, matching nothing and saying nothing. The second case is the same file after the repair, and must be silent.";
   "The false cases carry the edges that made earlier drafts of this reader wrong. A call whose name ends in the word number does not make a number - writing a number out makes text, and reading that as a number made this reader accuse the very function it was written to defend. A call that measures text gives a number even though its own name begins with the word text, so a name is never trusted over what it was filled from. And two cuts of text held against each other are ordinary and must not be reported.";
   "Every name written inside a case is held as fixed text, because the pass that canonicalizes this file would otherwise read a real one as a reference.";
+  let t = text_frozen("not_equal(chapter_number, number)");
   let cases = [
     {
       code: text_frozen(
@@ -40,12 +39,7 @@ export function js_compare_text_number_cases() {
       code: text_frozen(
         'export function differs(code, line) {\n  let chapter_number = text_to_number(code);\n  let number = text_split_first(line, " ");\n  let apart = not_equal(chapter_number, number);\n  return apart;\n}\n',
       ),
-      found: [
-        text_combine_multiple([
-          fn_name("not_equal"),
-          "(chapter_number, number)",
-        ]),
-      ],
+      found: [t],
       why: "the same fault written the other way round and with the other comparison - the number stands on the left and the cut of text on the right, and both orders are equally silent",
     },
   ];
