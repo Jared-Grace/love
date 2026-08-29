@@ -45,18 +45,6 @@ export async function app_g_bless_finished(
   let div_map = property_get(r, "div_map");
   let player_img_c = property_get(r, "player_img_c");
   let world = property_get(r, "world");
-  ("The whole street is held still for the length of the celebration, and everybody in it,");
-  ("not only the people being lit. The camera journeys in here switch sliding off across the");
-  ("map so that the ground and the people on it travel together - and a slide switched off");
-  ("mid-crossing does not stop, it finishes: every walker in view jumps the rest of their");
-  ("square in one frame, which the player reads as the street teleporting. Frozen first,");
-  ("each of them is already standing exactly where their picture had got to, so switching");
-  ("sliding off has nothing left to snap.");
-  ("Held for the WHOLE celebration rather than around each journey, because there are two");
-  ("journeys with the faces lighting up in between them, and a street that unfroze between");
-  ("them would take one visible jump in the middle of the very thing being watched.");
-  let npcs = property_get(world, "npcs");
-  app_g_bless_people_still_start(npcs, player_img_c);
   let faces = list_empty_not_is(people);
   if (faces) {
     await app_g_bless_finished_faces(
@@ -107,12 +95,6 @@ export async function app_g_bless_finished(
     ("would be left looking at the street from a distance they never chose.");
     await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
   }
-  ("The street is let go here, once every light is out and the camera has finished moving,");
-  ("and BEFORE the words go up rather than after them. The player reads at their own speed,");
-  ("and a street standing dead still behind a modal for as long as that takes is a street");
-  ("that looks broken. Both ways out of this pass through here, so there is no path that");
-  ("leaves the crowd frozen.");
-  app_g_bless_people_still_end(npcs);
   let player = property_get(world, "player");
   function back() {
     app_shared_game_player_center(player, player_img_c, div_map);
