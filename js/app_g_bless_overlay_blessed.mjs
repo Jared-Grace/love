@@ -1,3 +1,4 @@
+import { app_g_bless_camera_people_set } from "./app_g_bless_camera_people_set.mjs";
 import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start.mjs";
 import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -42,13 +43,18 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("and the map first exist together - and every camera move made from this map afterwards");
   ("is covered without anything in between having to carry the crowd about.");
   app_g_bless_camera_people_set(container_map, npcs);
-  let rung = "person";
   let blessed = bless_blessed_new();
   ("A new record is empty, except when the address asked for a world part way through. That");
   ("is asked here, at the one moment there is a record and nobody has prayed into it yet -");
   ("later would be writing over the player's own work, and earlier there is nothing to write");
   ("into.");
-  app_g_bless_blessed_head_start(blessed);
+  ("The rung comes back from the same place rather than being written out here. The ladder");
+  ("starts at one person and every rung above it is EARNED, so the first prayer of a new");
+  ("game reaches exactly the person it is said over - but an opening that hands over an");
+  ("already finished household has earned the one above it, and a rung spelled out here");
+  ("would have been a second opinion about that. Whatever writes the prayers in is what");
+  ("knows what they won.");
+  let rung = app_g_bless_blessed_head_start(blessed);
   let r = {
     container_map,
     world,
