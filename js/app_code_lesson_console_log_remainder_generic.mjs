@@ -22,7 +22,7 @@ export function app_code_lesson_console_log_remainder_generic(
   let percent = property_get(operator, "operator");
   let modulo_fn = property_get(operator, "fn");
   let divisor_text = text_to(divisor);
-  let name_right = text_combine(" remainder by ", divisor_text);
+  text_combine(" remainder by ", divisor_text);
   function refill() {
     let max = app_code_lesson_operators_value_max();
     let base = integer_random(0, max);
@@ -42,7 +42,6 @@ export function app_code_lesson_console_log_remainder_generic(
   let name_id = app_code_lesson_console_log_remainder_generic_title_name_id(
     percent,
     divisor_text,
-    name_right,
   );
   let params = {
     above,

@@ -6,9 +6,8 @@ import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_console_log_remainder_generic_title_name_id(
   percent,
   divisor_text,
-  name_right,
 ) {
-  arguments_assert(arguments, 3);
+  arguments_assert(arguments, 2);
   ("the home title puts the operator glyph % right after the operator name 'remainder', before the 'by <divisor>' qualifier: console.log remainder % by 2");
   function paint(parent) {
     html_span_text(parent, "Remainder ");
