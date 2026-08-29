@@ -22,22 +22,24 @@ import { app_code_review_hide_success } from "./app_code_review_hide_success.mjs
 import { app_code_review_exercise } from "./app_code_review_exercise.mjs";
 export function app_code_review_present_fn_present(
   r,
-  home_button,
-  progress,
-  c,
-  queue,
-  success_container,
-  back_button,
-  restart_button,
-  has_next,
-  skip_button,
-  context,
-  key,
-  go_next,
+  {
+    home_button,
+    progress,
+    c,
+    queue,
+    success_container,
+    back_button,
+    restart_button,
+    has_next,
+    skip_button,
+    context,
+    key,
+    go_next,
+  },
 ) {
   "The one call that draws the review as it stands, handed back so that answering an exercise can draw it again.";
   "WHAT THE LAST ANSWER LEADS TO IS DRAWN NEXT DOOR, because finishing a review has nothing to do with the queue this holds - it takes controls away, writes the finish down and offers the way on, and none of that is asking what to show next.";
-  arguments_assert(arguments, 13);
+  arguments_assert(arguments, 2);
   let passed = property_get(r, "passed");
   app_shared_button_gap_above(home_button);
   function present() {
