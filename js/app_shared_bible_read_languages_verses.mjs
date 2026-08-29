@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_read_verse_here_is } from "./app_shared_bible_read_verse_here_is.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_shared_bible_read_languages_verses(
+export async function app_shared_bible_read_languages_verses({
   context,
   chapter_code,
   verse_numbers_chosen,
@@ -15,9 +15,9 @@ export async function app_shared_bible_read_languages_verses(
   ref_line,
   hash,
   count_status,
-) {
-  arguments_assert(arguments, 13);
-  let r = await app_shared_bible_read_verse_here_is(
+}) {
+  arguments_assert(arguments, 1);
+  let r = await app_shared_bible_read_verse_here_is({
     context,
     chapter_code,
     verse_numbers_chosen,
@@ -31,7 +31,7 @@ export async function app_shared_bible_read_languages_verses(
     ref_line,
     hash,
     count_status,
-  );
+  });
   let verse_here_is = property_get(r, "verse_here_is");
   let primary_verses = property_get(r, "primary_verses");
   let show_language_names = property_get(r, "show_language_names");

@@ -41,7 +41,7 @@ export async function app_shared_bible_read_render_verse({
   }
   let verse_numbers_chosen = app_shared_bible_hash_verse_numbers(hash);
   ("The passage is remembered for this tab, so that going off to choose another one can be changed one's mind about. A chapter with nothing picked in it is remembered as itself - it is still somewhere a reader was, and coming back to it is coming back to the chapter.");
-  let r = await app_shared_bible_read_languages_verses(
+  let r = await app_shared_bible_read_languages_verses({
     context,
     chapter_code,
     verse_numbers_chosen,
@@ -55,7 +55,7 @@ export async function app_shared_bible_read_render_verse({
     ref_line,
     hash,
     count_status,
-  );
+  });
   let languages_verses = property_get(r, "languages_verses");
   let updates = property_get(r, "updates");
   let verse_rows = property_get(r, "verse_rows");
