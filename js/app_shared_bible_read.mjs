@@ -88,7 +88,7 @@ export async function app_shared_bible_read(
       chapter_code = ref_chapter;
     }
   }
-  let r = await app_shared_bible_read_render_verse(
+  let r = await app_shared_bible_read_render_verse({
     chapter_code,
     languages_chosen,
     hash,
@@ -104,7 +104,7 @@ export async function app_shared_bible_read(
     max,
     verse_action,
     t,
-  );
+  });
   let render_verse = property_get(r, "render_verse");
   let primary_verses = property_get(r, "primary_verses");
   let verse_rows = property_get(r, "verse_rows");

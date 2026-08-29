@@ -1,15 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_roots_marks_edges } from "./bible_glyph_roots_marks_edges.mjs";
 import { bible_glyph_chapters_marks_edges } from "./bible_glyph_chapters_marks_edges.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
 import { property_set } from "./property_set.mjs";
-import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
+import { bible_glyph_artwork_name_by_glyph } from "./bible_glyph_artwork_name_by_glyph.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
+import { property_get } from "./property_get.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_size } from "./list_size.mjs";
 export function bible_glyph_marks_free_for_groups() {
   "The pictures this Bible can write that no word ever ends with and no word ever begins with - the pictures a neighbouring word cannot reach at all - with what the artwork set calls each one.";
   "THIS POOL WAS ONCE THE ONLY PLACE A GROUP COULD BE SEATED AND IS NOT ANY MORE. Pictures side by side are the whole of the writing system and a group has no mark of its own, so a group of two can be spelled by accident wherever some word ends in its first picture and some word begins with its second. Nothing can put a word in front of a picture no word ends with, and nothing behind a picture no word begins with, so a group built out of this pool cannot be spelled by accident at all - and until 2026-08-27 that was a requirement rather than a comfort.";
@@ -27,12 +27,7 @@ export function bible_glyph_marks_free_for_groups() {
   for (let edge of edges) {
     property_set(edges_seen, edge, true);
   }
-  let artwork = {};
-  for (let entry of bible_glyph_artwork_names()) {
-    let glyph_name = property_get(entry, "glyph");
-    let set_name = property_get(entry, "asset");
-    property_set(artwork, glyph_name, set_name);
-  }
+  let artwork = bible_glyph_artwork_name_by_glyph();
   let characters = bible_glyph_characters();
   let free = [];
   for (let character of characters) {
