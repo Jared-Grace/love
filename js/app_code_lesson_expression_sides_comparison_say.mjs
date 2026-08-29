@@ -14,10 +14,10 @@ export function app_code_lesson_expression_sides_comparison_say(run, sides) {
     left_code,
     " and ",
     right_code,
-    " are comparisons, so they go before the ",
+    " are comparisons, so these two are solved before the ",
     outer_symbol,
   ]);
   ("the question is asked out loud before it is answered, because a learner who has only ever had one right press at a time is already looking for which of the two it is - asked, they are looking for the answer to the line below rather than for a trap");
-  html_div_cycle_code(run, ["Which one do we solve first?"]);
+  html_div_cycle_code(run, ["But which of the two comparisons do we solve first?"]);
   html_div_cycle_code(run, ["A comparison solves to the same value every time"]);
 }
