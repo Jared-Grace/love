@@ -77,7 +77,7 @@ export function app_g_bless_finished_person_beam(person) {
   });
   html_reflow_force(beam);
   ("The distance is written as a share of the shaft's own height rather than in squares, so");
-  ("it is the same five squares of sky at every size the street is drawn at. A distance in");
+  ("it is the same nine squares of sky at every size the street is drawn at. A distance in");
   ("pixels would be half a screen on a phone and a hand's width on a desk.");
   html_style_assign(beam, {
     transition: travel,

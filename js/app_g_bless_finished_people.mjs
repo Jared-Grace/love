@@ -90,7 +90,7 @@ export function app_g_bless_finished_people(div_map, people) {
   ("strength while it is still travelling outward.");
   function burst_show(burst) {
     html_style_assign(burst, {
-      transition: "opacity 0.42s ease-out, transform 1.1s ease-out",
+      transition: "opacity 0.3s ease-out, transform 1.05s cubic-bezier(0.07, 0.85, 0.22, 1)",
       opacity: "1",
       transform: "scale(3)",
     });

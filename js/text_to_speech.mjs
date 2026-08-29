@@ -25,7 +25,11 @@ export async function text_to_speech(args) {
     let printed = property_get(ran, "stdout");
     let lines = text_lines_working(printed);
     let last = list_last(lines);
-    let report = json_from_try(last);
+    function report_read() {
+      let read = json_from(last);
+      return read;
+    }
+    let report = catch_null(report_read);
     return report;
   }
   let spoken = await file_temp(lambda);
