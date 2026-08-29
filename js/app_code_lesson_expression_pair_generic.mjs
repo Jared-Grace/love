@@ -1,23 +1,23 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { list_map_index } from "./list_map_index.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
-import { list_join } from "./list_join.mjs";
-import { text_to } from "./text_to.mjs";
-import { equal_0 } from "./equal_0.mjs";
 import { modulo } from "./modulo.mjs";
+import { equal_0 } from "./equal_0.mjs";
 import { ternary } from "./ternary.mjs";
+import { text_to } from "./text_to.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_map_index } from "./list_map_index.mjs";
 import { js_eval_left_to_right } from "./js_eval_left_to_right.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_pair_generic(params) {
-  "a reusable bare-expression lesson mixing TWO operators (a op1 b op2 c); the arrangement flips by index parity so the two worked examples always show opposite orders (a op1 b op2 c and a op2 b op1 c) - proving precedence is about the operator, not its position; caller passes the two symbols, a word for the id, an above intro, and triples_get returning distinct [a,b,c] triples";
+  "a reusable bare-expression lesson mixing TWO operators (a op1 b op2 c); the arrangement flips by index parity so the two worked examples always show opposite orders (a op1 b op2 c and a op2 b op1 c) - proving precedence is about the operator, not its position; caller passes the two symbols, an above intro, and triples_get returning distinct [a,b,c] triples";
+  "A word for the id used to be taken out of what the caller hands in and then never read. The id is built from the two symbols, which is what tells one of these lessons from another, so the word had nothing left to do.";
   let symbol = property_get(params, "symbol1");
   let symbol2 = property_get(params, "symbol2");
-  let word = property_get(params, "word");
   let above = property_get(params, "above");
   let triples_get = property_get(params, "triples_get");
   function to_code(triple, index) {
