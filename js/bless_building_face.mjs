@@ -2,8 +2,10 @@ import { list_get_wrap } from "./list_get_wrap.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bless_building_face(faces, index) {
   arguments_assert(arguments, 2);
-  ("What the front of the building at this place in the row is made of, given the materials");
-  ("its own street is built from.");
+  ("What the building at this place in the row is made of, given the materials its own");
+  ("street is built from.");
+  ("It is worn by the wall behind, not by the front. The front row is doors now, one for");
+  ("each family, so there is no stretch of it left for a material to show on.");
   ("Taken in TURN rather than at random, and that is the whole of it: in turn, no two");
   ("neighbours can ever match, and the street is the same street every time the world is");
   ("made. Drawn at random, two houses side by side would sometimes come out identical -");
