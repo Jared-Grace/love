@@ -1,34 +1,29 @@
-import { list_any } from "./list_any.mjs";
-import { equal } from "./equal.mjs";
-import { and } from "./and.mjs";
-import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_max } from "./list_max.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_first } from "./list_first.mjs";
+import { equal } from "./equal.mjs";
 export function app_code_expression_step_reason(symbol, others) {
   arguments_assert(arguments, 2);
   ("The one sentence saying why this operator is the one that may be worked out next, as the pieces of a row: the operators it outranks, or the one it shares a rank with and stands to the left of, or nothing left to outrank at all.");
   ("A rule the learner can carry to the next line, rather than a fact about this one. Saying that only this part has a value on each side is true of the shape underneath the line and is not something a reader can see: shown 5 - 2 + 4, both the minus and the plus look like they have a number on each side, and the reason the minus goes first is that the two are read left to right. A telling that names what is invisible asks to be taken on trust and leaves the learner nothing to use on the next line.");
-  ("Three cases and no more, because the operators fall into two ranks. Something weaker still on the line means the rank decides; nothing weaker means the two are equals and the position decides; nothing at all left means there was never a choice.");
+  ("Three cases and no more, whatever the line holds: something ranked below this operator still on it means the rank decides; nothing below means the two are equals and the position decides; nothing left at all means there was never a choice.");
+  ("RANK DECIDES, not membership of one class. The strength test used to ask whether this operator is one of the two the repo calls strong, which is a question only about times and divide - so asked about && against ||, both fall outside that class and the answer came back that the two are equals read left to right. That is wrong, and it is the sentence the boolean lessons printed. The ranking the code printer already leans on knows the whole order, so asking it answers for every operator these lessons use. On an arithmetic line it answers exactly what the class test answered: times ranks 4 and plus ranks 3, and 4 standing above 3 is the same verdict as strong standing against not strong.");
   ("The weaker operators are named in the order the line writes them, all of them, because the rule is about this operator against every one of them - naming only the first would read as a fact about that pair.");
   let none_left = list_empty_is(others);
   if (none_left) {
     let alone = ["The ", symbol, " is the only operator left"];
     return alone;
   }
-  let strong_symbols = app_code_operators_strong();
-  function strong_is(candidate) {
-    "whether one of the other operators is solved before the others too";
-    let held = list_includes(strong_symbols, candidate);
-    return held;
-  }
-  let strong = list_includes(strong_symbols, symbol);
-  let any_strong = list_any(others, strong_is);
-  let right = not(any_strong);
-  let outranks = and(strong, right);
+  let rank = app_code_operator_rank(symbol);
+  let other_ranks = list_map(others, app_code_operator_rank);
+  let top = list_max(other_ranks);
+  let outranks = greater_than(rank, top);
   if (outranks) {
     let parts = ["The ", symbol, " is solved before the "];
     let first = true;
