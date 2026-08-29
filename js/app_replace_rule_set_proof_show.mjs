@@ -1,28 +1,25 @@
-import { app_replace_rule_set_proof_show_highlighted_is } from "./app_replace_rule_set_proof_show_highlighted_is.mjs";
+import { html_clear } from "./html_clear.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { html_centered } from "./html_centered.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
-import { app_replace_button_side } from "./app_replace_button_side.mjs";
-import { app_replace_symbol_tile_valid_if } from "./app_replace_symbol_tile_valid_if.mjs";
-import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
-import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
-import { app_replace_rule_set_proof_connector } from "./app_replace_rule_set_proof_connector.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { emoji_check } from "./emoji_check.mjs";
+import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { ternary } from "./ternary.mjs";
-import { list_last } from "./list_last.mjs";
+import { app_replace_rule_set_proof_connector } from "./app_replace_rule_set_proof_connector.mjs";
+import { app_replace_lefts_rights_style } from "./app_replace_lefts_rights_style.mjs";
+import { app_replace_rule_set_rule_background_color } from "./app_replace_rule_set_rule_background_color.mjs";
+import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text_deemphasized } from "./html_span_text_deemphasized.mjs";
+import { app_replace_rule_set_proof_show_state_row } from "./app_replace_rule_set_proof_show_state_row.mjs";
+import { app_replace_rule_set_proof_show_goal_caption } from "./app_replace_rule_set_proof_show_goal_caption.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_replace_rule_set_proof_show(parent, history) {
   "on success, show the proof as a centered rail underneath start over, and make each rule a button: choosing one highlights just the symbols it replaced (the matched left in the state above, the produced right in the state below) and the rule itself, and de-glows everything else; choosing it again clears the focus";
+  "DRAWING A LINE OF SYMBOLS AND SAYING WHERE THE PROOF ARRIVED ARE BOTH DONE NEXT DOOR, so what stands here is only the one thing that cannot leave: which rule is chosen, which every press changes and every part of the drawing reads.";
+  "THE WHOLE RAIL IS THROWN AWAY AND DRAWN AGAIN ON EVERY PRESS rather than the two lines that changed being found and touched, because a rule lights symbols in the lines on both sides of it, so working out what changed is most of the work of drawing it.";
   let selected = null;
   render();
   function render() {
@@ -62,29 +59,15 @@ export function app_replace_rule_set_proof_show(parent, history) {
         html_centered(start_caption);
         html_span_text_deemphasized(start_caption, "Start");
       }
-      let state = property_get(entry, "state");
-      let row = html_div(parent);
-      html_centered(row);
-      let symbols = app_replace_button_side(row, state);
-      function style_symbol(symbol, j) {
-        "highlighted symbols get the green solved style; the rest get the plain invalid/dark style already used in the derivation and for dimmed rules - no new style, just valid off";
-        let highlighted = app_replace_rule_set_proof_show_highlighted_is(
-          position,
-          j,
-          selected,
-          history,
-        );
-        app_replace_symbol_tile_valid_if(symbol, highlighted, true);
-      }
-      each_index(symbols, style_symbol);
+      app_replace_rule_set_proof_show_state_row(
+        parent,
+        entry,
+        position,
+        selected,
+        history,
+      );
       if (equal(entry, goal_entry)) {
-        let goal_caption = html_div(parent);
-        html_centered(goal_caption);
-        let value = app_shared_spaced_gap();
-        html_style_margin_top(goal_caption, value);
-        let e = emoji_check();
-        let goal_text = text_combine_multiple([e, " Goal"]);
-        html_span_text_deemphasized(goal_caption, goal_text);
+        app_replace_rule_set_proof_show_goal_caption(parent);
       }
     }
     each_index(history, draw);
