@@ -64,8 +64,7 @@ export async function app_shared_bible_read_render_verse({
   let verse_here_is = property_get(r, "verse_here_is");
   verse_numbers_chosen = list_filter(verse_numbers_chosen, verse_here_is);
   async function render_verse(v) {
-    let r2 = await app_shared_bible_read_verse_row(
-      v,
+    let r2 = await app_shared_bible_read_verse_row(v, {
       chapter_code,
       books_en,
       content,
@@ -81,7 +80,7 @@ export async function app_shared_bible_read_render_verse({
       t,
       languages_chosen,
       verse_rows,
-    );
+    });
     return r2;
   }
   let r3 = {

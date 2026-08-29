@@ -20,23 +20,25 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_shared_bible_read_verse_row(
   v,
-  chapter_code,
-  books_en,
-  content,
-  updates,
-  verse_numbers_chosen,
-  languages_verses,
-  dismiss_help,
-  max,
-  count_status,
-  show_language_names,
-  verse_action,
-  context,
-  t,
-  languages_chosen,
-  verse_rows,
+  {
+    chapter_code,
+    books_en,
+    content,
+    updates,
+    verse_numbers_chosen,
+    languages_verses,
+    dismiss_help,
+    max,
+    count_status,
+    show_language_names,
+    verse_action,
+    context,
+    t,
+    languages_chosen,
+    verse_rows,
+  },
 ) {
-  arguments_assert(arguments, 16);
+  arguments_assert(arguments, 2);
   let property_name = verse_number_key();
   let verse_number_v = property_get(v, property_name);
   let verse_chapter_code = property_get_or(v, "chapter_code", chapter_code);
