@@ -1,3 +1,6 @@
+import { app_g_bless_camera_people_get } from "./app_g_bless_camera_people_get.mjs";
+import { app_g_bless_people_still_start } from "./app_g_bless_people_still_start.mjs";
+import { app_g_bless_people_still_end } from "./app_g_bless_people_still_end.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
@@ -109,4 +112,10 @@ export async function app_g_bless_camera_glide(
     container_e.scrollTop = property_get(target, "top");
   }
   app_g_bless_camera_still_end(container_map);
+  ("The crowd is let go last of all, once sliding is back on. Nobody is put anywhere: each");
+  ("of them is standing where their picture had got to when the journey began, and their");
+  ("next step slides them on from there, so the street simply starts moving again. Let go");
+  ("before sliding was restored, that next step would be placed rather than walked, which");
+  ("is the very thing this pair exists to prevent.");
+  app_g_bless_people_still_end(crowd);
 }
