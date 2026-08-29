@@ -105,6 +105,7 @@ export function bible_glyph_chapters() {
   let twenty_fourth = bible_glyph_chapter_jhn17();
   let twenty_fifth = bible_glyph_chapter_jhn20();
   let twenty_sixth = bible_glyph_chapter_jhn04();
+  let twenty_seventh = bible_glyph_chapter_mrk05();
   let chapters = [
     first,
     second,
