@@ -1,16 +1,13 @@
-import { tiles_rectangles } from "./tiles_rectangles.mjs";
-import { g_img_rectangle_style_position } from "./g_img_rectangle_style_position.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_max } from "./list_max.mjs";
-import { g_z } from "./g_z.mjs";
+import { g_tiles_ground_tint_depth } from "./g_tiles_ground_tint_depth.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { tiles_rectangles } from "./tiles_rectangles.mjs";
+import { g_img_rectangle_style_position } from "./g_img_rectangle_style_position.mjs";
 import { each } from "./each.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 export function app_g_bless_finished_glow(div_map, tiles) {
@@ -57,14 +54,7 @@ export function app_g_bless_finished_glow(div_map, tiles) {
     ")",
   ]);
   let halo = text_combine_multiple([near, " ", far]);
-  function tile_y(tile) {
-    let row = property_get(tile, "y");
-    return row;
-  }
-  let rows = list_map(tiles, tile_y);
-  let y_most = list_max(rows);
-  let layer = g_z("ground_tint");
-  let depth = text_combine_multiple(["calc(", layer, " + ", y_most, ")"]);
+  let depth = g_tiles_ground_tint_depth(tiles);
   let glow = html_div(div_map);
   html_style_assign(glow, {
     position: "absolute",
