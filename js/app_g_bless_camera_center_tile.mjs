@@ -1,8 +1,7 @@
+import { html_element_width } from "./html_element_width.mjs";
+import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
-import { property_get } from "./property_get.mjs";
 import { divide } from "./divide.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
@@ -21,10 +20,8 @@ export function app_g_bless_camera_center_tile(div_map, player_img_c) {
   ("Not rounded, because rounding is a jump. Half a square is easily enough to be seen on");
   ("a phone, and a zoom that also nudged sideways by half a square would look like a");
   ("camera that could not make up its mind.");
-  let container = app_shared_game_div_map_container_get(div_map);
-  let container_e = html_component_element_get(container);
-  let rect = html_bounding_client_rect(player_img_c);
-  let tile_size = property_get(rect, "width");
+  let container_e = app_shared_game_div_map_container_element_get(div_map);
+  let tile_size = html_element_width(player_img_c);
   let half_tile = divide(tile_size, 2);
   let grid = tile_e_offset_parent();
   function tile_e_offset_parent() {
