@@ -1,9 +1,9 @@
+import { each_async } from "./each_async.mjs";
 import { js_statement_call_get } from "./js_statement_call_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { js_call_arguments_get } from "./js_call_arguments_get.mjs";
 import { js_expand_generic_lambda5 } from "./js_expand_generic_lambda5.mjs";
-import { each_index_async } from "./each_index_async.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { js_identifiers_to_names } from "./js_identifiers_to_names.mjs";
 import { js_expand_generic_declaration_renamed } from "./js_expand_generic_declaration_renamed.mjs";
@@ -27,11 +27,11 @@ export async function js_expand_generic(next, stack_, ast) {
   if (not_equal(call, null)) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
-    async function lambda5(arg, arg_index) {
+    async function lambda5(arg) {
       let r2 = await js_expand_generic_lambda5(arg, ast);
       return r2;
     }
-    await each_index_async(arguments2, lambda5);
+    await each_async(arguments2, lambda5);
     let index = list_index_of(stack_, next);
     let a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
