@@ -1,3 +1,4 @@
+import { bless_hash_household_first_celebrate } from "./bless_hash_household_first_celebrate.mjs";
 import { bless_hash_household_first_finished } from "./bless_hash_household_first_finished.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_street } from "./bless_hash_street.mjs";
