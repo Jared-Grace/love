@@ -65,13 +65,15 @@ export function html_code_error_notice(language_code) {
     button_text,
     "</button><button",
     dismiss_attribute,
-    " onclick=\"this.parentNode.style.display='none'\">",
+    " onclick=\"this.parentNode.style.display='none';app_error_closed=true\">",
     dismiss_text,
     "</button></div>",
   ]);
   let splash_id = html_loading_splash_id();
   ("the notice covers the splash and then takes it away, so the spinner cannot keep turning behind the words telling a person that the turning has stopped.");
   ("it is moved onto the DOCUMENT element the moment it is found, and held onto, because an app boots by clearing the body - which swept the notice away with everything else, and left the one thing meant to survive a failed boot as the one thing that could not. the loading overlay lives up there for the same reason.");
+  ("once it is closed it stays closed for the rest of that page, because a person who put it away said so about the page and not about the one error. a page throwing on a timer or on every drawn frame would otherwise raise it again the instant it was dismissed, which is the trap being answered here rather than a smaller version of it.");
+  ("what went wrong is still written down each time, before the closing is looked at, so putting the notice away costs the person who can fix it nothing.");
   ("the notice says nothing about what went wrong, on purpose - so what went wrong is written down beside it instead, where the person who can fix it will read it and the person waiting will never see it");
   let record_script = html_code_error_record_script();
   let code = text_combine_multiple([
