@@ -1,9 +1,9 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_versions_english_public_domain } from "./bible_usfm_versions_english_public_domain.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { not } from "./not.mjs";
 import { data_given_lyric_videos_folder } from "./data_given_lyric_videos_folder.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { text_split } from "./text_split.mjs";
@@ -21,8 +21,7 @@ export async function bible_versions_sung_gate_run() {
   arguments_assert(arguments, 0);
   let free = await bible_usfm_versions_english_public_domain();
   let words = list_map_property(free, "version");
-  let read_nothing = list_empty_is(words);
-  let b = not(read_nothing);
+  let b = list_empty_not_is(words);
   assert_json(b, {
     hint: "no translation was read as public domain at all, so the licence pages were never reached and this gate is looking at nothing",
   });
