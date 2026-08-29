@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { html_element_width } from "./html_element_width.mjs";
-import { divide } from "./divide.mjs";
-import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
+import { html_grid_tile_center_origin } from "./html_grid_tile_center_origin.mjs";
 import { property_get } from "./property_get.mjs";
+import { divide } from "./divide.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_g_bless_camera_center_tile(div_map, player_img_c) {
@@ -12,7 +12,9 @@ export function app_g_bless_camera_center_tile(div_map, player_img_c) {
   ("and not rounded to one - the answer is usually somewhere between two of them.");
   ("It is the same sum as putting a square in the middle, read the other way round. That");
   ("one is given a square and asks where the box should stand; this is given where the box");
-  ("stands and asks which square it is looking at.");
+  ("stands and asks which square it is looking at. Both are measured from the same point -");
+  ("the middle of the grid's first square - which is why that point is asked for by name");
+  ("rather than walked to twice.");
   ("It exists so a camera can change how big the squares are without appearing to travel.");
   ("Squares grow away from the corner of the grid, so a map redrawn larger slides");
   ("everything the player was looking at off towards the bottom right unless the box is");
@@ -23,20 +25,17 @@ export function app_g_bless_camera_center_tile(div_map, player_img_c) {
   ("camera that could not make up its mind.");
   let container_e = app_shared_game_div_map_container_element_get(div_map);
   let tile_size = html_element_width(player_img_c);
-  let half_tile = divide(tile_size, 2);
-  let corner = html_component_offset_parent_corner(player_img_c);
-  let grid_left = property_get(corner, "left");
-  let grid_top = property_get(corner, "top");
+  let origin = html_grid_tile_center_origin(player_img_c);
+  let origin_left = property_get(origin, "left");
+  let origin_top = property_get(origin, "top");
   let half_width = divide(container_e.clientWidth, 2);
   let middle_left = add(container_e.scrollLeft, half_width);
-  let inside_left = subtract(middle_left, grid_left);
-  let corner_left = subtract(inside_left, half_tile);
-  let x = divide(corner_left, tile_size);
+  let inside_left = subtract(middle_left, origin_left);
+  let x = divide(inside_left, tile_size);
   let half_height = divide(container_e.clientHeight, 2);
   let middle_top = add(container_e.scrollTop, half_height);
-  let inside_top = subtract(middle_top, grid_top);
-  let corner_top = subtract(inside_top, half_tile);
-  let y = divide(corner_top, tile_size);
+  let inside_top = subtract(middle_top, origin_top);
+  let y = divide(inside_top, tile_size);
   let r = {
     x,
     y,

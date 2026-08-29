@@ -2,10 +2,9 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { property_get } from "./property_get.mjs";
-import { divide } from "./divide.mjs";
-import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
+import { html_grid_tile_center_origin } from "./html_grid_tile_center_origin.mjs";
 import { multiply_add } from "./multiply_add.mjs";
-import { add } from "./add.mjs";
+import { divide } from "./divide.mjs";
 import { subtract } from "./subtract.mjs";
 export function html_scroll_center_target(
   coordinates,
@@ -26,19 +25,16 @@ export function html_scroll_center_target(
   let tile_size = html_element_width(tile_component);
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
-  let half_tile = divide(tile_size, 2);
-  ("a coordinate is counted from the GRID's own corner, which need not be the corner of what scrolls, so the grid's offset inside the scroller is measured and added rather than assumed to be nothing. the tile is positioned by the grid, so the grid is its offsetParent");
-  let corner = html_component_offset_parent_corner(tile_component);
-  let grid_left = property_get(corner, "left");
-  let grid_top = property_get(corner, "top");
-  let right = multiply_add(x, tile_size, half_tile);
-  let left3 = add(grid_left, right);
-  let right2 = divide(container_e.clientWidth, 2);
-  let left = subtract(left3, right2);
-  let right3 = multiply_add(y, tile_size, half_tile);
-  let left5 = add(grid_top, right3);
-  let right4 = divide(container_e.clientHeight, 2);
-  let top = subtract(left5, right4);
+  ("counted out from the middle of the grid's first square, which is where a coordinate of nothing points. That origin already carries the grid's own offset inside whatever scrolls, so a wrapper holding empty room around the grid is accounted for without anything here assuming it away.");
+  let origin = html_grid_tile_center_origin(tile_component);
+  let origin_left = property_get(origin, "left");
+  let origin_top = property_get(origin, "top");
+  let middle_left = multiply_add(x, tile_size, origin_left);
+  let half_width = divide(container_e.clientWidth, 2);
+  let left = subtract(middle_left, half_width);
+  let middle_top = multiply_add(y, tile_size, origin_top);
+  let half_height = divide(container_e.clientHeight, 2);
+  let top = subtract(middle_top, half_height);
   let r = {
     left,
     top,
