@@ -4617,6 +4617,74 @@ def ai_output_redirect_deny_reason(target):
     )
 
 
+# The dispatcher functions that delete their own input file once they have read
+# it, generated from js/functions_input_taken_away.mjs so a rename on that side
+# cannot leave a stale name being advised about here.
+from functions_input_taken_away import FUNCTIONS_INPUT_TAKEN_AWAY
+
+# One dispatcher statement followed by a removal, and nothing else on the line.
+# The middle excludes the operators that end a statement, so the `rm` has to be
+# chained onto THIS call rather than onto something further along.
+AI_RM_CHAIN_RE = re.compile(
+    r"^(\s*(?:[A-Za-z_][A-Za-z0-9_]*=[^\s|;&<>]+\s+)*"
+    r"node\s+scripts/ai\.mjs\s+([a-z0-9_]+)((?:\s+[^\s|;&<>]+)*))"
+    r"\s*(?:&&|;)\s*rm\s+(?:-[A-Za-z]+\s+)*([^\s|;&<>]+)\s*$"
+)
+
+
+def ai_input_taken_away_chain(command):
+    """If `command` is one of the calls that removes its own input, with a
+    removal of that same input chained onto it, return the bare call, the
+    function, and the file; else None.
+
+    The removal is redundant. These commands store every passage out of the
+    file they were handed and then delete it themselves, saying so in what they
+    return (`taken_away`), so the `rm` runs against a path that is already gone.
+    What it adds is a chain, and a chain can never inherit the standing grant
+    the bare call has - so a run that would have gone through untouched stops
+    and asks the human instead. Measured over the seven days to 2026-08-29: 704
+    such runs, every one of them a click nobody needed to make.
+
+    Sits AFTER the allow decision in main(), like the redirect floor above it,
+    which is what makes it safe rather than an argument that it is: anything
+    already approved has returned by here, so this can only turn a prompt into
+    a correction Claude can act on.
+
+    The claim that the file is already gone has to be TRUE, so it is checked
+    rather than assumed: one of the words handed to the command must appear in
+    the path being removed. That is what makes the removed file the input this
+    call was given, and not some other file the caller had a real reason to
+    delete. A `$` or a backtick means one part of the line is reading what
+    another part set, which is where a guess must fail closed."""
+    if "$" in command or "`" in command:
+        return None
+    match = AI_RM_CHAIN_RE.search(command.strip())
+    if match is None:
+        return None
+    bare, fn, rest, target = match.groups()
+    if fn not in FUNCTIONS_INPUT_TAKEN_AWAY:
+        return None
+    words = [word for word in rest.split() if not word.startswith("-")]
+    if not any(word in target for word in words):
+        return None
+    return bare.strip(), fn, target
+
+
+def ai_input_taken_away_deny_reason(bare, fn, target):
+    return (
+        f"Drop the `&& rm {target}` and run this on its own - it is already "
+        "approved, so it needs no human at all:\n"
+        f"  {bare}\n"
+        f"`{fn}` takes its own input away once every passage is stored, and "
+        "says so in what it hands back (`taken_away`). The removal you are "
+        "chaining on runs against a file that is no longer there.\n"
+        "The cost is not the failed `rm`, it is this prompt. The bare call is "
+        "granted by name and runs untouched; a chain can never inherit that "
+        "grant, whatever is in it - which is what turns a run that needed "
+        "nobody into a question for the human."
+    )
+
+
 def decide(decision, reason):
     """Emit one verdict and hand back None, so a caller writes
     `return decide("deny", why)` where it used to spell the whole envelope
@@ -4857,6 +4925,11 @@ def main():
     redirect_target = ai_output_redirect_target(command)
     if redirect_target is not None:
         return decide("deny", ai_output_redirect_deny_reason(redirect_target))
+
+    taken_away = ai_input_taken_away_chain(command)
+    if taken_away is not None:
+        bare, fn, target = taken_away
+        return decide("deny", ai_input_taken_away_deny_reason(bare, fn, target))
 
     stripped = time_subshell_stripped(command, safe_verbs, safe_exact_commands)
     if stripped is not None:
