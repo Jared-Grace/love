@@ -1,8 +1,9 @@
-import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_element_width } from "./html_element_width.mjs";
 import { property_get } from "./property_get.mjs";
 import { divide } from "./divide.mjs";
+import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
 import { multiply_add } from "./multiply_add.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
@@ -26,19 +27,10 @@ export function html_scroll_center_target(
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
   let half_tile = divide(tile_size, 2);
-  ("a coordinate is counted from the GRID's own corner, which need not be the corner of what scrolls: a wrapper may hold empty room around the grid so the outermost tile can still reach the middle of the window. so the grid's offset inside the scroller is measured and added, rather than assumed to be nothing. the tile is positioned by the grid, so the grid is its offsetParent");
-  let grid = tile_e_offset_parent();
-  function tile_e_offset_parent() {
-    let tile_e = html_component_element_get(tile_component);
-    let parent = tile_e.offsetParent;
-    return parent;
-  }
-  let grid_left = 0;
-  let grid_top = 0;
-  if (grid) {
-    grid_left = grid.offsetLeft;
-    grid_top = grid.offsetTop;
-  }
+  ("a coordinate is counted from the GRID's own corner, which need not be the corner of what scrolls, so the grid's offset inside the scroller is measured and added rather than assumed to be nothing. the tile is positioned by the grid, so the grid is its offsetParent");
+  let corner = html_component_offset_parent_corner(tile_component);
+  let grid_left = property_get(corner, "left");
+  let grid_top = property_get(corner, "top");
   let right = multiply_add(x, tile_size, half_tile);
   let left3 = add(grid_left, right);
   let right2 = divide(container_e.clientWidth, 2);
