@@ -13,6 +13,6 @@ export function app_code_lesson_expression_repeated_generic_title_name_id(
     html_span_text(parent, title_word);
     html_span_text_code_dark(parent, symbol);
   }
-  let built = app_code_lesson_name_id_operators(right_word, paint);
+  let built = app_code_lesson_name_id_operators(paint);
   return built;
 }
