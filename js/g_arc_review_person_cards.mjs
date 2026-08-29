@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -42,12 +43,9 @@ export function g_arc_review_person_cards(
   if (read) {
     let moved = g_arc_lines_moved(reviewed_arc, arc);
     by_turn = g_arc_moved_by_turn(arc, moved);
-    let list = property_get(moved, "changed");
-    let changed = list_size(list);
-    let list2 = property_get(moved, "vanished");
-    let vanished = list_size(list2);
-    let list3 = property_get(moved, "appeared");
-    let appeared = list_size(list3);
+    let changed = property_list_size(moved, "changed");
+    let vanished = property_list_size(moved, "vanished");
+    let appeared = property_list_size(moved, "appeared");
     let left = add(changed, vanished);
     moved_count = add(left, appeared);
   }
