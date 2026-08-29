@@ -1,8 +1,6 @@
+import { html_element_width } from "./html_element_width.mjs";
+import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
-import { property_get } from "./property_get.mjs";
 import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
@@ -43,10 +41,8 @@ export async function app_g_bless_camera_span(
   ("game does not: normally the size is written as a sum the browser redoes whenever the");
   ("window changes. So the map stops answering to a window being resized while this is in");
   ("force, which is why what puts it in force is also responsible for putting it back.");
-  let container = app_shared_game_div_map_container_get(div_map);
-  let container_e = html_component_element_get(container);
-  let rect = html_bounding_client_rect(player_img_c);
-  let tile_now = property_get(rect, "width");
+  let container_e = app_shared_game_div_map_container_element_get(div_map);
+  let tile_now = html_element_width(player_img_c);
   let across = span + 4;
   let room = divide(container_e.clientWidth, across);
   let wider = less_than(room, tile_now);

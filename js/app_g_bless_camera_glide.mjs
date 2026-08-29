@@ -1,9 +1,9 @@
+import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 import { app_g_bless_camera_still_start } from "./app_g_bless_camera_still_start.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
@@ -54,12 +54,10 @@ export async function app_g_bless_camera_glide(
   let container_e = html_component_element_get(container);
   let variable = g_img_square_size_variable();
   app_g_bless_camera_still_start(container_map);
-  let rect_before = html_bounding_client_rect(player_img_c);
-  let from = property_get(rect_before, "width");
+  let from = html_element_width(player_img_c);
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
-  let rect_after = html_bounding_client_rect(player_img_c);
-  let to = property_get(rect_after, "width");
+  let to = html_element_width(player_img_c);
   let same = equal(from, to);
   if (same) {
     app_g_bless_camera_still_end(container_map);

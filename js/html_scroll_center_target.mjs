@@ -1,6 +1,6 @@
+import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { divide } from "./divide.mjs";
 import { multiply_add } from "./multiply_add.mjs";
@@ -22,8 +22,7 @@ export function html_scroll_center_target(
   ("of a square as it is drawn right now, and where the grid currently sits inside the box.");
   ("Both of those move when the squares are resized.");
   let container_e = html_component_element_get(container);
-  let rect = html_bounding_client_rect(tile_component);
-  let tile_size = property_get(rect, "width");
+  let tile_size = html_element_width(tile_component);
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
   let half_tile = divide(tile_size, 2);
