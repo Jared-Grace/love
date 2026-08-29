@@ -6,8 +6,7 @@ export function app_code_lesson_expression_equal_number_string_true_false_title_
   function paint(parent) {
     html_cycle_code(parent, ["", '"1" === 1']);
   }
-  let rights = ["equal number string true false"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

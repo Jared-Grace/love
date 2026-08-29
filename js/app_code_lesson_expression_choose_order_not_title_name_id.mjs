@@ -12,8 +12,7 @@ export function app_code_lesson_expression_choose_order_not_title_name_id() {
   function paint(parent) {
     html_cycle_code(parent, ["solving inside ", symbol]);
   }
-  let rights = ["not inside"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

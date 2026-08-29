@@ -13,8 +13,7 @@ export function app_code_lesson_console_log_nested_generic_title_name_id(
     html_span_text(parent, "Nested ");
     html_span_text_code_dark(parent, symbol);
   }
-  let rights = [word];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

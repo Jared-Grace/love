@@ -20,8 +20,7 @@ export function app_code_lesson_expression_and_before_or_title_name_id() {
       " in one line",
     ]);
   }
-  let rights = ["and or one line"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -14,8 +14,7 @@ export function app_code_lesson_statement_title_name_id(words, code) {
   function paint(parent) {
     html_cycle_code(parent, [spaced, code]);
   }
-  let rights = [words];
   let left = app_code_category_statements();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

@@ -16,7 +16,6 @@ export function app_code_lesson_expression_min_max_generic_title_name_id(
     html_span_text_code_dark(parent, called_name);
   }
   let right = text_combine(noun, " of two");
-  let rights = [right];
-  let built = app_code_lesson_name_id_category_then(rights, "functions", paint);
+  let built = app_code_lesson_name_id_category_then("functions", paint);
   return built;
 }

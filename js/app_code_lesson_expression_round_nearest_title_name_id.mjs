@@ -9,7 +9,6 @@ export function app_code_lesson_expression_round_nearest_title_name_id() {
     html_span_text(parent, "Round to nearest ");
     html_span_text_code_dark(parent, "Math.round");
   }
-  let rights = ["round to nearest"];
-  let built = app_code_lesson_name_id_category_then(rights, "functions", paint);
+  let built = app_code_lesson_name_id_category_then("functions", paint);
   return built;
 }

@@ -12,8 +12,7 @@ export function app_code_lesson_expression_remainder_divide_title_name_id(
     html_span_text(parent, "Remainder by dividing ");
     html_span_text_code_dark(parent, percent);
   }
-  let rights = ["remainder by dividing"];
   let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

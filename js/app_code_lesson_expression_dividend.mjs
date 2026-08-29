@@ -1,11 +1,11 @@
+import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { text_to } from "./text_to.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
+import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
-import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
-import { text_to } from "./text_to.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_dividend() {
   "identify the DIVIDEND (the number being divided) in a division a / b - the divisor b stands as the decoy; a thin lesson over the shared identify-an-operand generic";
   function make(divisor, quotient) {
@@ -38,11 +38,8 @@ export function app_code_lesson_expression_dividend() {
     function paint(parent) {
       html_span_text(parent, "Dividend");
     }
-    let name_id2 = app_code_lesson_name_id_category_then(
-      ["dividend"],
-      app_code_category_operators(),
-      paint,
-    );
+    let left = app_code_category_operators();
+    let name_id2 = app_code_lesson_name_id_category_then(left, paint);
     return name_id2;
   }
 }

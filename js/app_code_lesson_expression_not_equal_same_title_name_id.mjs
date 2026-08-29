@@ -20,8 +20,7 @@ export function app_code_lesson_expression_not_equal_same_title_name_id() {
       bang_symbol,
     ]);
   }
-  let rights = ["not equal with not"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }
