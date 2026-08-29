@@ -1,10 +1,10 @@
+import { property_list_map_property } from "./property_list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_speech_lock_name } from "./bible_audio_speech_lock_name.mjs";
 import { text_to_speech } from "./text_to_speech.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { lock_try } from "./lock_try.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 export async function bible_audio_speech_locked_run(asked) {
   "$plain asked";
   "Speaks the chapters asked for while no other recording on this machine is under way, and when one already is, says that none of them were begun instead of speaking any of them.";
@@ -26,8 +26,7 @@ export async function bible_audio_speech_locked_run(asked) {
     let spoken = property_get(ran, "spoken");
     return spoken;
   }
-  let jobs = property_get(asked, "jobs");
-  let folders = list_map_property(jobs, "path_output");
+  let folders = property_list_map_property(asked, "jobs", "path_output");
   let refused = {
     not_started: folders,
     locked: true,
