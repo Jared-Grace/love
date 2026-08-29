@@ -1,24 +1,16 @@
 {
  "known": [
-  "app_code_expression_choose_line",
-  "app_code_lesson_quiz_token_select_superseded",
-  "app_code_review_present_fn",
-  "app_g_conversation",
-  "app_g_dev_tools_open_verify_page_visit",
-  "app_g_study_lambda",
-  "app_g_verify_home",
-  "app_g_view_render_study_fresh",
   "app_replace_rule_set",
-  "app_replace_rule_set_proof_show",
+  "app_g_verify_home",
   "app_reply",
-  "app_shared_bible_read",
-  "app_verses_group",
-  "bible_glyph_chapter_fetch_found",
+  "app_g_conversation",
   "bible_glyph_chapter_rosetta_lines_fetched_known",
-  "bible_glyph_word_parse",
+  "bible_glyph_chapter_fetch_found",
+  "app_verses_group",
+  "app_shared_bible_read",
+  "app_g_view_render_study_fresh",
   "js_expand_generic",
-  "js_function_forwarding_removed",
-  "js_repack_only_is",
-  "memory_index_hooks_compress_line_walk"
+  "app_replace_rule_set_proof_show",
+  "app_g_study_lambda"
  ]
 }
