@@ -11,7 +11,8 @@ export async function bible_audio_recording_sound_is(recording) {
   "Whether a folder of recordings has any sound in it at all.";
   "★ THE TEST IS FOR SOUND AND NOT FOR AN EMPTY FOLDER, BECAUSE THE FOLDERS THAT FAIL IT ARE NOT EMPTY. Each holds a note written about it by a sweep, and the words of the chapter beside each piece, so a folder that looks at its own file count sees files and keeps it. What makes a recording a recording is the sound, and these have none.";
   arguments_assert(arguments, 1);
-  let bible_folder = property_get(recording, bible_folder_key());
+  let property_name = bible_folder_key();
+  let bible_folder = property_get(recording, property_name);
   let chapter_code = property_get(recording, "chapter_code");
   let folder = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files(folder);

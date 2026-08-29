@@ -51,6 +51,10 @@ export function html_code_error_notice(language_code) {
     button_attribute,
     ' onclick="location.reload()">',
     button_text,
+    "</button><button",
+    dismiss_attribute,
+    " onclick=\"this.parentNode.style.display=(&quot;none&quot;)\">",
+    dismiss_text,
     "</button></div>",
   ]);
   let splash_id = html_loading_splash_id();

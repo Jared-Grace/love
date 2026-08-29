@@ -1,13 +1,6 @@
-import { bible_folder_key } from "./bible_folder_key.mjs";
+import { bible_audio_recording_sound_is } from "./bible_audio_recording_sound_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_recordings } from "./bible_audio_recordings.mjs";
-import { property_get } from "./property_get.mjs";
-import { bible_audio_folder } from "./bible_audio_folder.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
-import { text_ends_with } from "./text_ends_with.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
 export async function bible_audio_recordings_empty() {
   "Every folder of recordings on this disk that holds no sound at all.";
@@ -17,17 +10,8 @@ export async function bible_audio_recordings_empty() {
   arguments_assert(arguments, 0);
   let recordings = await bible_audio_recordings();
   async function recording_each(recording) {
-    let bible_folder = property_get(recording, bible_folder_key());
-    let chapter_code = property_get(recording, "chapter_code");
-    let folder = bible_audio_folder(bible_folder, chapter_code);
-    let files = await folder_read_files(folder);
-    function sound_is(name) {
-      let is = text_ends_with(name, ".mp3");
-      return is;
-    }
-    let sounds = list_filter(files, sound_is);
-    let silent = list_empty_is(sounds);
-    if (not(silent)) {
+    let heard = await bible_audio_recording_sound_is(recording);
+    if (heard) {
       return null;
     }
     return recording;
