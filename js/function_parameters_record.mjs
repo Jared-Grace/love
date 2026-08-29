@@ -1,0 +1,81 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { true_is_assert_json } from "./true_is_assert_json.mjs";
+import { js_function_declaration_params_names_plain } from "./js_function_declaration_params_names_plain.mjs";
+import { equal } from "./equal.mjs";
+import { data_identifiers_search_names } from "./data_identifiers_search_names.mjs";
+import { functions_name_value_use_names } from "./functions_name_value_use_names.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { functions_call_named_arity_other_names } from "./functions_call_named_arity_other_names.mjs";
+import { js_call_named_arguments_record_curried_right } from "./js_call_named_arguments_record_curried_right.mjs";
+import { functions_transform_list } from "./functions_transform_list.mjs";
+import { function_transform } from "./function_transform.mjs";
+import { js_function_declaration_params_record } from "./js_function_declaration_params_record.mjs";
+import { function_arguments_assert_count_repair } from "./function_arguments_assert_count_repair.mjs";
+import { list_join_comma } from "./list_join_comma.mjs";
+import { function_auto_multiple } from "./function_auto_multiple.mjs";
+export async function function_parameters_record(f_name) {
+  arguments_assert(arguments, 1);
+  ("Give a function one record to take in place of a long row of separate parameters, and rewrite every call in the repo to hand one over, in a single move.");
+  ("A ROW OF ARGUMENTS IS READ BY POSITION AND A RECORD IS READ BY NAME, and past a certain length position is a thing a reader has to count on their fingers. Fifteen names in a row also means every call site is fifteen words with nothing on the line saying which is which, so a pair swapped by hand goes on parsing, goes on running, and is found by whoever the wrong thing reaches. Under a record the caller writes the name beside the thing and a swap cannot be written at all.");
+  ("THE NAMES INSIDE THE FUNCTION DO NOT CHANGE, which is what makes this behaviour-preserving by reasoning rather than by trying it. The body reads the same words afterwards as before, because the record is unpacked in the parameter list under exactly the names that used to stand there.");
+  ("The declaration and every call are one move because either half alone leaves the repo disagreeing with itself about how anything arrives - and unlike a wrong count, which the line at the head of every function catches out loud, a row handed to something expecting a record arrives as one thing whose pieces are all missing, which reads as nothing having been sent.");
+  ("Four refusals stand in front of the write and each is something the repo answers rather than something guessed. There has to be more than one parameter, or the move buys nothing and only adds a wrapper. Every parameter has to be a plain name, because an unpacked one has no single word to file its thing under. No file may hand the function over as a value, because then the list belongs to a call that is nowhere in sight. And no call anywhere may hand over a different number of things, because such a call cannot be filed under names and would be left behind calling the old way.");
+  let parsed = await function_parse_declaration(f_name);
+  let declaration = property_get(parsed, "declaration");
+  let params = js_function_declaration_params_get(declaration);
+  let size = list_size(params);
+  let several = greater_than(size, 1);
+  true_is_assert_json(several, {
+    f_name,
+    size,
+    hint: "this function takes one thing or none, so gathering its parameters into a record would add a wrapper and take nothing away",
+  });
+  let names = js_function_declaration_params_names_plain(declaration);
+  let plain_size = list_size(names);
+  let all_plain = equal(size, plain_size);
+  true_is_assert_json(all_plain, {
+    f_name,
+    size,
+    names,
+    hint: "one of these parameters is not a plain name, so there is no single word to file what the caller hands over under - give it a name of its own first",
+  });
+  let f_names = await data_identifiers_search_names(f_name);
+  let handing = await functions_name_value_use_names(f_names, f_name);
+  list_empty_is_assert_json(handing, {
+    f_name,
+    handing,
+    hint: "this function is handed over as a value, so whoever it was handed to decides how it is called and that call is nowhere in sight - the shape of its arguments belongs to that caller and cannot be changed from here",
+  });
+  let other = await functions_call_named_arity_other_names(
+    f_names,
+    f_name,
+    size,
+  );
+  list_empty_is_assert_json(other, {
+    f_name,
+    size,
+    other,
+    hint: "these files call it handing over a different number of things, so there is no way to say which name each thing was meant for - put those calls right first",
+  });
+  let arguments_record = js_call_named_arguments_record_curried_right(
+    f_name,
+    names,
+  );
+  await functions_transform_list(f_names, arguments_record);
+  await function_transform(f_name, js_function_declaration_params_record);
+  ("The line at the head saying how many things arrive was written when the function was made to stand on its own, and gathering the row into a record does not go back to it. Left alone it goes on saying the old number and every correct call throws, blaming the caller for a count that is now always one.");
+  await function_arguments_assert_count_repair(f_name);
+  let names_comma = list_join_comma(f_names);
+  await function_auto_multiple(names_comma);
+  let r = {
+    f_name,
+    names,
+    files: f_names,
+  };
+  return r;
+}
