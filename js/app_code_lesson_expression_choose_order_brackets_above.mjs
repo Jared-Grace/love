@@ -4,9 +4,8 @@ import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./ap
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
+import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
-import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
 export function app_code_lesson_expression_choose_order_brackets_above(root) {
   arguments_assert(arguments, 1);
@@ -17,6 +16,7 @@ export function app_code_lesson_expression_choose_order_brackets_above(root) {
   ("The second walk is the first one turned round: the same three truths, in the other order, with the brackets at the other end. Different truths would leave a reader finding which of two things had changed before they could see that only one had.");
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the turning round stays visible.");
   ("THE WALK NAMES THE BRACKETS AS THE REASON, which is what this lesson is for. It used to say only that the bracketed part had a value on each side - true of it, and true of the part outside it too on the second step, so the sentence never said what made the order. The reason is read off the line itself now, so the screen says the marks decided on exactly the lines where they did.");
+  ("ONLY THE LINES ARE THIS LESSON'S OWN. The recall card, the two walks and the closing card were written out here and again in the two lessons either side of it, three copies differing in nothing but which lines were handed to them, so the laying out is asked for now and what is left here is the pair of lines and the heading over the second one.");
   let both = [true, false];
   let middle_truth = list_random_item(both);
   let tree_right = app_code_lesson_expression_choose_order_sides_settled_tree(
@@ -32,19 +32,20 @@ export function app_code_lesson_expression_choose_order_brackets_above(root) {
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_brackets_either_side();
-  app_code_lesson_expression_choose_order_brackets_recall(root);
-  app_code_lesson_expression_choose_order_reason_run(
+  let walks = [
+    {
+      heading: heading_none,
+      tree: tree_right,
+    },
+    {
+      heading: heading_either,
+      tree: tree_left,
+    },
+  ];
+  app_code_lesson_expression_choose_order_walks_above_generic(
     root,
-    heading_none,
-    tree_right,
-  );
-  app_code_lesson_expression_choose_order_reason_run(
-    root,
-    heading_either,
-    tree_left,
-  );
-  app_code_lesson_expression_choose_order_change_card(
-    root,
+    app_code_lesson_expression_choose_order_brackets_recall,
+    walks,
     app_code_lesson_expression_choose_order_brackets_intro,
   );
 }

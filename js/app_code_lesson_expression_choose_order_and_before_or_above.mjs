@@ -4,9 +4,8 @@ import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./ap
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_either_side } from "./app_code_lesson_expression_choose_order_and_before_or_either_side.mjs";
+import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./app_code_lesson_expression_choose_order_and_before_or_recall.mjs";
-import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_and_before_or_intro } from "./app_code_lesson_expression_choose_order_and_before_or_intro.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_above(
   root,
@@ -20,6 +19,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the turning round stays visible.");
   ("THE STEPS SAY THE RULE NOW, not that only one part has a true or a false on each side. That older sentence is not something a reader of this lesson can see: on false && true || true both the && and the || have a true or a false on each side, and the reason the && goes first is that it outranks the ||. It is also the one thing the lesson is for, so a walk that withheld it was showing the answer twice and the rule not at all.");
   ("The rule sentence comes from the same writer the three-operator lesson's walk uses, so a learner arriving at that lesson meets the wording already read here rather than a new one. That writer reads the reason off the operators left on the line, which is why this lesson may use it and the two bracket lessons after it may not: brackets move a part to the front for a reason no list of operators holds.");
+  ("ONLY THE LINES ARE THIS LESSON'S OWN. The recall card, the two walks and the closing card were written out here and again in each of the two bracket lessons, three copies differing in nothing but which lines were handed to them, so the laying out is asked for now and what is left here is the pair of lines and the heading over the second one.");
   let both = [true, false];
   let middle_truth = list_random_item(both);
   let tree_and_first =
@@ -37,19 +37,20 @@ export function app_code_lesson_expression_choose_order_and_before_or_above(
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_and_before_or_either_side();
-  app_code_lesson_expression_choose_order_and_before_or_recall(root);
-  app_code_lesson_expression_choose_order_reason_run(
+  let walks = [
+    {
+      heading: heading_none,
+      tree: tree_and_first,
+    },
+    {
+      heading: heading_either,
+      tree: tree_or_first,
+    },
+  ];
+  app_code_lesson_expression_choose_order_walks_above_generic(
     root,
-    heading_none,
-    tree_and_first,
-  );
-  app_code_lesson_expression_choose_order_reason_run(
-    root,
-    heading_either,
-    tree_or_first,
-  );
-  app_code_lesson_expression_choose_order_change_card(
-    root,
+    app_code_lesson_expression_choose_order_and_before_or_recall,
+    walks,
     app_code_lesson_expression_choose_order_and_before_or_intro,
   );
 }
