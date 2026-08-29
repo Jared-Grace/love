@@ -1,8 +1,9 @@
-import { html_element_width } from "./html_element_width.mjs";
-import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
+import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
+import { html_element_width } from "./html_element_width.mjs";
 import { divide } from "./divide.mjs";
+import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
+import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 export function app_g_bless_camera_center_tile(div_map, player_img_c) {
@@ -23,18 +24,9 @@ export function app_g_bless_camera_center_tile(div_map, player_img_c) {
   let container_e = app_shared_game_div_map_container_element_get(div_map);
   let tile_size = html_element_width(player_img_c);
   let half_tile = divide(tile_size, 2);
-  let grid = tile_e_offset_parent();
-  function tile_e_offset_parent() {
-    let tile_e = html_component_element_get(player_img_c);
-    let parent = tile_e.offsetParent;
-    return parent;
-  }
-  let grid_left = 0;
-  let grid_top = 0;
-  if (grid) {
-    grid_left = grid.offsetLeft;
-    grid_top = grid.offsetTop;
-  }
+  let corner = html_component_offset_parent_corner(player_img_c);
+  let grid_left = property_get(corner, "left");
+  let grid_top = property_get(corner, "top");
   let half_width = divide(container_e.clientWidth, 2);
   let middle_left = add(container_e.scrollLeft, half_width);
   let inside_left = subtract(middle_left, grid_left);

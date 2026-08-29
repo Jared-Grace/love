@@ -15,8 +15,10 @@ export function app_g_bless_arrows(bar, on_turn) {
   ("Kept small and side by side along the bottom, where a thumb already is. They are pressed");
   ("far more often than anything else here - a player turns several times for every walk -");
   ("so the cheapest reach on the screen is the right place for them.");
-  ("The four come from the same list the character art is drawn in, so a facing can never be");
-  ("offered that nobody can be drawn facing.");
+  ("Laid out in the order a keyboard lays them out, which is asked for by name rather than");
+  ("taken from the list the character art is drawn in. Those pictures are named in whatever");
+  ("order they are convenient to load, and hung on buttons that read down, up, right, left -");
+  ("four correct arrows in an order nobody has ever met.");
   let row = html_div(bar);
   html_style_assign(row, {
     display: "flex",
