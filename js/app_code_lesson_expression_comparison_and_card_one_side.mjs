@@ -9,12 +9,21 @@ export function app_code_lesson_expression_comparison_and_card_one_side(root) {
   ("Then we have, and we repeat the line to value it, is the frame the both-sides parentheses card uses for the same move. Two lessons doing one thing one way is worth more than each reading best on its own.");
   ("BOTH SIDES ARE WORKED, not just named. The left-hand shape used to be a sentence saying it can be on the left and then the bare line 1 < 2 && true under it, with nothing done to it - so the one screen that teaches substitution showed the substitution happening on one side only, and the quiz then asks for both. A learner who has watched a move made on the right has watched it made in one place; a card that says it also happens over here and stops is asking them to do the step themselves on the strength of a sentence.");
   ("The left-hand line uses a different comparison, and one that comes out false. Worked with the same 1 < 2 the four rows would be the four rows above with the pieces shifted along, which reads as the card repeating itself rather than as a second case - and a reader skips a block they have already read. Coming out false also settles the question the first block cannot: that what the comparison is worth is what gets put back, and not that a comparison on the side of an && makes the line true.");
+  ("THE TURN IS NAMED BEFORE IT IS TAKEN, in three rows: what was just watched, that the other side can carry one too, and the line itself standing on its own before anything is done to it. The card used to move from the last row of the first working straight into a sentence about the left side, so the four rows above it were left unlabelled - a reader who had just watched them had never been told which side they were about, and the word left arrived with no right to answer to.");
+  ("The new line is put up bare before it is worked. Every other line on this screen is named first and solved after, and a line that arrived already inside its own first step would be the one place the reader is asked to take in a new line and a move on it in the same row.");
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["For ", "true && 1 < 2", ", we solve ", "1 < 2", " before ", "&&"],
     ["", "1 < 2", " is ", "true"],
     ["Then we have ", "true && true"],
     ["And ", "true && true", " is ", "true"],
-    ["A comparison can also be on the left side of ", "&&"],
+    [
+      "We just saw a comparison (",
+      "1 < 2",
+      ") on the right side of the ",
+      "&&",
+    ],
+    ["A comparison can also be on the left side of ", "&&", ", like this:"],
+    ["", "5 < 3 && true"],
     ["For ", "5 < 3 && true", ", we solve ", "5 < 3", " before ", "&&"],
     ["", "5 < 3", " is ", "false"],
     ["Then we have ", "false && true"],
