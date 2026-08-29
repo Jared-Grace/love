@@ -15,10 +15,10 @@ export async function bible_audio_speech_locked_run(asked) {
   let lock_name = bible_audio_speech_lock_name();
   async function lambda() {
     let spoken = await text_to_speech(asked);
-    let ran = {
+    let box = {
       spoken,
     };
-    return ran;
+    return box;
   }
   let who = fn_name("bible_audio_speech_locked_run");
   let ran = await lock_try(lock_name, lambda, who);
