@@ -1,3 +1,5 @@
+import { js_compare_text_number_cases_gate_run } from "./js_compare_text_number_cases_gate_run.mjs";
+import { functions_compare_text_number_gate_run } from "./functions_compare_text_number_gate_run.mjs";
 import { app_code_lesson_id_length_gate_run } from "./app_code_lesson_id_length_gate_run.mjs";
 import { bible_versions_sung_gate_run } from "./bible_versions_sung_gate_run.mjs";
 import { bible_glyph_chapter_tagalog_verses_fetched_gate_run } from "./bible_glyph_chapter_tagalog_verses_fetched_gate_run.mjs";

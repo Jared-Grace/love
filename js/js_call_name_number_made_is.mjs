@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { or } from "./or.mjs";
+import { or_list } from "./or_list.mjs";
 export function js_call_name_number_made_is(name) {
   arguments_assert(arguments, 1);
   ("$plain name");
@@ -13,8 +13,6 @@ export function js_call_name_number_made_is(name) {
   let converted = text_ends_with(name, "_to_number");
   let parsed = text_includes(name, "parse_int");
   let parsed_fraction = text_includes(name, "parse_float");
-  let left = or(named, converted);
-  let right = or(parsed, parsed_fraction);
-  let made = or(left, right);
+  let made = or_list([named, converted, parsed, parsed_fraction]);
   return made;
 }
