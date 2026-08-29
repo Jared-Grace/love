@@ -1,3 +1,4 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -39,8 +40,7 @@ export async function python_mirror_add(f_name, constant) {
     let path_property = properties[1];
     let path_call = property_get(path_property, "value");
     let call_arguments = property_get(path_call, "arguments");
-    let pieces = list_first(call_arguments);
-    let elements_piece = property_get(pieces, "elements");
+    let elements_piece = list_first_property(call_arguments, "elements");
     let member = elements_piece[1];
     let value2 = js_identifier_expression(f_name);
     property_set(member, "object", value2);
