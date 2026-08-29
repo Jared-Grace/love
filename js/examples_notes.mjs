@@ -286,6 +286,10 @@ export function examples_notes() {
       "the same fold addressed by the line a word is really written on - a duplicated run usually sits inside a loop and the climbing twin can only ever cut the whole loop",
     example_span_call_existing_inner_refuses_different_work:
       "the same fold turned away - the two ends are taken inside the loop and the piece that comes out is still held against the whole of the named function",
+    example_path_outside_folder_refused:
+      "the guard standing under every write in the repo - a path is held against the folder it claims to be inside before anything is opened",
+    example_path_inside_folder_allowed:
+      "the same guard asked the other way round - a rejection example whose expectation is a quiet return rather than a throw and the first of those in the corpus",
   };
   return notes;
 }
