@@ -16,8 +16,7 @@ export function app_code_lesson_expression_choose_order_brackets_moved_title_nam
     let pair = text_combine(left_bracket, right_bracket);
     html_cycle_code(parent, ["moving ", pair]);
   }
-  let rights = ["brackets moved"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

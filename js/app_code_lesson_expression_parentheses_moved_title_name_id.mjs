@@ -12,8 +12,7 @@ export function app_code_lesson_expression_parentheses_moved_title_name_id() {
     let close = js_code_parenthesis_right();
     html_cycle_code(parent, ["Moving the ", open, " and ", close]);
   }
-  let rights = ["parentheses moved"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

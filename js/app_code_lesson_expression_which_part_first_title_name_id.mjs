@@ -17,8 +17,7 @@ export function app_code_lesson_expression_which_part_first_title_name_id() {
       plus,
     ]);
   }
-  let rights = ["which part is solved first"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

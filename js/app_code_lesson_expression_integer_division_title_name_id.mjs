@@ -8,8 +8,7 @@ export function app_code_lesson_expression_integer_division_title_name_id() {
   function paint(parent) {
     html_span_text(parent, "Integer division");
   }
-  let rights = ["integer division"];
   let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

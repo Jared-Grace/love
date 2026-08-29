@@ -17,6 +17,6 @@ export function app_code_lesson_name_id_words(left, rights) {
     html_span_text(parent, first_upper);
     html_span_text_multiple(parent, remaining);
   }
-  let name_id = app_code_lesson_name_id_category_then(rights, left, paint);
+  let name_id = app_code_lesson_name_id_category_then(left, paint);
   return name_id;
 }

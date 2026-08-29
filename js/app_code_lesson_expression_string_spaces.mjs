@@ -37,9 +37,7 @@ export function app_code_lesson_expression_string_spaces() {
       html_span_text(parent, "Strings with spaces ");
       app_code_string_shape(parent, 2);
     }
-    let rights = ["string", "spaces"];
     let built = app_code_lesson_name_id_category_then(
-      rights,
       app_code_category_expressions(),
       paint,
     );

@@ -30,8 +30,7 @@ export function app_code_lesson_expression_true_false() {
       html_span_text(parent, ", ");
       html_span_text_code_dark(parent, js_keyword_false());
     }
-    let rights = ["true or false"];
-    let built = app_code_lesson_name_id_category_then(rights, "values", paint);
+    let built = app_code_lesson_name_id_category_then("values", paint);
     return built;
   }
   function above(root) {

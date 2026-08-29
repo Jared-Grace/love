@@ -19,8 +19,7 @@ export function app_code_lesson_expression_number_trichotomy_title_name_id(
       greater_operator,
     ]);
   }
-  let rights = ["number", "trichotomy"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

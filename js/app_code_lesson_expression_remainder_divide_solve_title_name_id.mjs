@@ -8,8 +8,7 @@ export function app_code_lesson_expression_remainder_divide_solve_title_name_id(
   function paint(parent) {
     html_span_text(parent, "Solve the remainder formula");
   }
-  let rights = ["solve the remainder formula"];
   let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

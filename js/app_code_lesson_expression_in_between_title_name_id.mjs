@@ -8,8 +8,7 @@ export function app_code_lesson_expression_in_between_title_name_id() {
   function paint(parent) {
     html_span_text(parent, "in between");
   }
-  let rights = ["in between"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

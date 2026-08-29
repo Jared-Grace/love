@@ -17,6 +17,6 @@ export function app_code_lesson_name_id_symbol(left, rights, symbol) {
     html_span_text_code_dark(parent, symbol);
     app_code_lesson_name_id_remaining(parent, remaining);
   };
-  let name_id = app_code_lesson_name_id_category_then(rights, left, paint);
+  let name_id = app_code_lesson_name_id_category_then(left, paint);
   return name_id;
 }

@@ -9,8 +9,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_title_name
   function paint(parent) {
     html_cycle_code(parent, ["", "&&", " before ", "||"]);
   }
-  let rights = ["and before or"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

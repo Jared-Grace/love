@@ -1,3 +1,5 @@
+import { html_error_notice_dismiss_style } from "./html_error_notice_dismiss_style.mjs";
+import { app_shared_close_texts } from "./app_shared_close_texts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_error_notice_style } from "./html_error_notice_style.mjs";
 import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
@@ -33,6 +35,16 @@ export function html_code_error_notice(language_code) {
     texts_button,
     language_code,
   );
+  ("a way out stands beside the way back, because a notice offering only one control is a trap. this one is put up by ANY error the page throws, not only by a boot that died - so an app that started perfectly well and then threw once gets covered by a full screen layer, and loading again is no escape when the same throw is waiting on the next load. that was met by a person, and the only way past it was opening the browser own tools.");
+  ("closing it reveals whatever is behind, which is the working app in that case and a bare page in the case the notice was named for. a bare page a person can leave is still a better answer than a page they cannot.");
+  ("the closing is written into the markup rather than done from the script below, so it keeps working in the one case this whole notice exists for: nothing else on the page having run.");
+  let dismiss_style = html_error_notice_dismiss_style();
+  let dismiss_attribute = html_code_style_attribute(dismiss_style);
+  let texts_dismiss = app_shared_close_texts();
+  let dismiss_text = app_shared_text_in_language_code(
+    texts_dismiss,
+    language_code,
+  );
   ("said only when it is right to left, so a page in English is written exactly as it was written before there was anything to say - which is what lets a page already on disk still be read back and taken apart.");
   let rtl = text_rtl_is(message);
   let direction_attribute = text_empty();
@@ -53,7 +65,7 @@ export function html_code_error_notice(language_code) {
     button_text,
     "</button><button",
     dismiss_attribute,
-    " onclick=\"this.parentNode.style.display=(&quot;none&quot;)\">",
+    " onclick=\"this.parentNode.style.display='none'\">",
     dismiss_text,
     "</button></div>",
   ]);
