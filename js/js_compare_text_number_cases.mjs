@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function js_compare_text_number_cases() {
   "Small files written out, each one saying which of its own exact comparisons holds a cut of text against a number.";
@@ -38,7 +40,12 @@ export function js_compare_text_number_cases() {
       code: text_frozen(
         'export function differs(code, line) {\n  let chapter_number = text_to_number(code);\n  let number = text_split_first(line, " ");\n  let apart = not_equal(chapter_number, number);\n  return apart;\n}\n',
       ),
-      found: ["not_equal(chapter_number, number)"],
+      found: [
+        text_combine_multiple([
+          fn_name("not_equal"),
+          "(chapter_number, number)",
+        ]),
+      ],
       why: "the same fault written the other way round and with the other comparison - the number stands on the left and the cut of text on the right, and both orders are equally silent",
     },
   ];
