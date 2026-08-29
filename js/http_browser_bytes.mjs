@@ -38,7 +38,7 @@ export async function http_browser_bytes(method, options, body, url) {
     try {
       let response = await fetch(url, r);
       if (not(response.ok)) {
-        error("Failed to fetch file");
+        error_json({ hint: "the address answered and the answer was a refusal - is the file there, and is it readable without signing in?", url, status: response.status, status_text: response.statusText });
       }
       let buf = await response.arrayBuffer();
       return buf;

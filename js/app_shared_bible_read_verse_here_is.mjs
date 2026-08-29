@@ -16,7 +16,7 @@ import { list_map_property } from "./list_map_property.mjs";
 import { app_shared_bible_hash_field_verse } from "./app_shared_bible_hash_field_verse.mjs";
 import { app_shared_hash_fields_unknown_told_is } from "./app_shared_hash_fields_unknown_told_is.mjs";
 import { list_includes } from "./list_includes.mjs";
-export async function app_shared_bible_read_verse_here_is(
+export async function app_shared_bible_read_verse_here_is({
   context,
   chapter_code,
   verse_numbers_chosen,
@@ -30,8 +30,8 @@ export async function app_shared_bible_read_verse_here_is(
   ref_line,
   hash,
   count_status,
-) {
-  arguments_assert(arguments, 13);
+}) {
+  arguments_assert(arguments, 1);
   app_shared_bible_passage_kept_set(
     context,
     chapter_code,
