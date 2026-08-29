@@ -23,7 +23,7 @@ export function app_g_bless_overlay_render_tap_prayed_drawing(r2, glows, wash) {
   function render() {
     "A draw of the street from the record, less whatever a celebration is still holding back.";
     let ground = not(held_ground);
-    app_g_bless_overlay_render_tap_prayed_render_ground(
+    app_g_bless_overlay_render_tap_prayed_render_ground({
       ground,
       glows,
       homes,
@@ -36,8 +36,8 @@ export function app_g_bless_overlay_render_tap_prayed_drawing(r2, glows, wash) {
       cone_get,
       hold,
       wash,
-      held_people,
-    );
+      held: held_people,
+    });
   }
   function ground_show() {
     "Lets the finished house go up on the map. The celebration says when, and it is after";
