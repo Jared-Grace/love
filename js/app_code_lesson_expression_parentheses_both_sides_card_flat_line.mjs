@@ -27,7 +27,7 @@ export function app_code_lesson_expression_parentheses_both_sides_card_flat_line
   ]);
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["Then ", "false === 5", " is solved"],
-    ["A ", t, " or ", f, " is never equal to a number"],
+    ["A ", t, " or ", f, " is never equal to a number (like ", "5", ")"],
     ["So ", "false === 5", " is ", f],
     ["Replacing leaves ", "false === 3", ", which is ", f],
   ]);

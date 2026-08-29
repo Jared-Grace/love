@@ -51,14 +51,18 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ("Told only that either order works, a learner takes it on trust and cannot tell whether it goes on being true of the next line they meet. Told why, they can work it out for themselves every time after this.");
   say_why(run, sides);
   ("the permission is then said in the learner's own terms - what they would DO first, and that the problem they are solving comes out the same either way - because what they are deciding is which of the two to press and not what is true of the two parts");
+  ("Two rows, and the qualifier opens the second one. Said as a single row it ran to fourteen words past the second piece of code and wrapped on a phone, which put either way - the whole of what the row is for - alone at the end of a line the reader had already stopped reading. Broken in two, the permission is one row and the reason it is safe is the next.");
+  ("A third row saying it does not matter which one we solve first stood under these and is gone. It is the same fact a third time, and the two rows above already say it once as a permission and once as a reason - which is what a learner needs to carry it to the next line. A row that only repeats reads as though the first two had not settled it.");
   html_div_cycle_code(run, [
     "So we could solve ",
     left_code,
     " first or ",
     right_code,
-    " first, and we'll get the same answer for the problem we're solving either way",
+    " first",
   ]);
-  html_div_cycle_code(run, ["It does not matter which one we solve first"]);
+  html_div_cycle_code(run, [
+    "Either way we'll get the same answer for the problem we're solving",
+  ]);
   ("both are then simply shown coming to their values, one line each, with nothing said about order - the order question is already answered above and saying it again here would make it sound unsettled");
   let left_solved = app_code_expression_equals_text(left_code, left_text);
   html_div_cycle_code(run, ["", left_solved]);

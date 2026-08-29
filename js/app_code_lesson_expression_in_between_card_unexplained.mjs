@@ -21,11 +21,11 @@ export function app_code_lesson_expression_in_between_card_unexplained(root) {
     [
       "Some languages like JS will solve ",
       "2 < 5 < 8",
-      ", but many will call it an error",
+      ", but many will not solve it and, instead, they call it an error",
     ],
     [
       "Our goal is to teach programming in general, not the ways JS differs from other languages",
     ],
-    ["So we will not explain here what JS does with ", "2 < 5 < 8"],
+    ["So here we will not explain what JS does with ", "2 < 5 < 8"],
   ]);
 }
