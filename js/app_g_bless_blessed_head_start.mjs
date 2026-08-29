@@ -19,22 +19,37 @@ export function app_g_bless_blessed_head_start(blessed) {
   ("progress with, and with two of a household lit that person is the only one there is. So");
   ("the game's own wayfinding walks the player to the prayer this opening exists for, and");
   ("nothing has to be explained.");
-  ("Written at the PERSON rung rather than as a finished household, because a household");
-  ("that is already down as blessed is a house already gold - and the finishing is the whole");
-  ("of what this opening is for.");
-  let asked = app_g_bless_household_first_is();
+  ("Two of the three for the openings that leave the last prayer still to happen, and it is");
+  ("written at the PERSON rung rather than as a finished household - a household already");
+  ("down as blessed is a house already gold, and the finishing is the whole of what those");
+  ("two openings are for.");
+  ("All three AND the household itself for the opening that hands over the aftermath. The");
+  ("house has to be written in as well as its residents, because the street is drawn from");
+  ("the record and nothing else: with only the three people down, the ground under them is");
+  ("still plain, which is the picture from just BEFORE the celebration rather than after.");
+  let household = 0;
+  let done = app_g_bless_household_first_finished_is();
+  let two_thirds = app_g_bless_household_first_is();
+  let asked = or(done, two_thirds);
   if (not(asked)) {
     return;
   }
-  let household = 0;
   let members = bless_place_members("household", household);
   let waiting = list_last(members);
   function member_bless(member) {
+    bless_blessed_add(blessed, "person", member);
+  }
+  if (done) {
+    each(members, member_bless);
+    bless_blessed_add(blessed, "household", household);
+    return;
+  }
+  function member_bless_waiting_not(member) {
     let last = equal(member, waiting);
     if (last) {
       return;
     }
     bless_blessed_add(blessed, "person", member);
   }
-  each(members, member_bless);
+  each(members, member_bless_waiting_not);
 }
