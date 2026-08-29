@@ -1,3 +1,4 @@
+import { gigabyte_bytes } from "./gigabyte_bytes.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { machine_memory_available_bytes_or_null } from "./machine_memory_available_bytes_or_null.mjs";
 import { math_max } from "./math_max.mjs";
@@ -16,8 +17,7 @@ export function bible_audio_speech_workers() {
   "★ THE RESERVE IS THREE GIGABYTES BECAUSE THAT IS LARGER THAN THE SWING THAT WAS OBSERVED. Read twice about thirty seconds apart, this machine reported 5.4 gigabytes available and then 4.3, so the figure a run starts from can be a gigabyte stale before the first chapter is spoken. A reserve smaller than the swing would let a good reading start work the machine cannot hold a minute later.";
   "★ IT ANSWERS THREE WHEN THE MACHINE WILL NOT SAY, WHICH IS THE ONLY NUMBER THAT WAS SAFE IN EVERY HOUR OBSERVED. A reading that failed must not be treated as a reading of zero, because that would refuse to record on a machine that is merely quiet about itself.";
   arguments_assert(arguments, 0);
-  let left = multiply(1024, 1024);
-  let a_gigabyte = multiply(left, 1024);
+  let a_gigabyte = gigabyte_bytes();
   let worker_bytes = multiply(1.03, a_gigabyte);
   let reserve_bytes = multiply(3, a_gigabyte);
   let unread_workers = 3;
