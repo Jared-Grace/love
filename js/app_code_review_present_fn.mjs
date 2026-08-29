@@ -17,8 +17,7 @@ export function app_code_review_present_fn(
   let skip_button = property_get(r, "skip_button");
   let go_next = property_get(r, "go_next");
   let progress = property_get(r, "progress");
-  let present = app_code_review_present_fn_present(
-    r,
+  let present = app_code_review_present_fn_present(r, {
     home_button,
     progress,
     c,
@@ -31,6 +30,6 @@ export function app_code_review_present_fn(
     context,
     key,
     go_next,
-  );
+  });
   return present;
 }
