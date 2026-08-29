@@ -8,8 +8,10 @@ export function bless_building_shape() {
   "The alley is a single tile, and it is what stops the row being one long building. It is";
   "deliberately too narrow to be somewhere anybody goes - a gap you could walk down would";
   "be a second street, and this game has one.";
-  "Three across also gives every building a MIDDLE tile, which is where its door goes.";
-  "An even frontage would have to pick one of two tiles and would look off-centre.";
+  "Three across is also one square for each family in the building, and that is what the";
+  "front row is: three doors side by side, one per home. The width and the number of";
+  "families are the same number on purpose - it is what lets a household own a column of";
+  "the ground and a door on the street without either being worked out from the other.";
   let shape = {
     width: 3,
     depth: 2,
