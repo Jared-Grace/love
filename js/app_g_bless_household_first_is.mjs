@@ -16,8 +16,8 @@ export function app_g_bless_household_first_is() {
   ("nobody said is a lie about the player's own work. That gate is where every dev opening");
   ("is asked about, so it is spelled once and not here.");
   let word = bless_hash_household_first();
-  let finished = bless_hash_household_first_finished();
-  let words = [word, finished];
+  let celebrate = bless_hash_household_first_celebrate();
+  let words = [word, celebrate];
   let asked = app_g_bless_dev_opening_is(words);
   return asked;
 }
