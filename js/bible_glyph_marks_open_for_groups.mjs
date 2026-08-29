@@ -1,13 +1,12 @@
 import { fn_name } from "./fn_name.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_artwork_names } from "./bible_glyph_artwork_names.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
+import { bible_glyph_artwork_name_by_glyph } from "./bible_glyph_artwork_name_by_glyph.mjs";
 import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { bible_glyph_groups_vocabulary } from "./bible_glyph_groups_vocabulary.mjs";
 export function bible_glyph_marks_open_for_groups() {
@@ -22,12 +21,7 @@ export function bible_glyph_marks_open_for_groups() {
   ("WHAT THE ARTWORK SET CALLS IT TRAVELS WITH IT, because a picture with no artwork decision cannot be seated without turning a gate red. A picture the set has no name for still belongs here - it is open, and what it costs is a drawing rather than a rethink - so the missing name is reported rather than the picture being dropped.");
   ("THE GROUPS ALREADY SEATED COME BACK TOO, so that a reader choosing a pair can see what the tables have spent so far without asking a second question.");
   arguments_assert(arguments, 0);
-  let artwork = {};
-  for (let entry of bible_glyph_artwork_names()) {
-    let glyph_name = property_get(entry, "glyph");
-    let set_name = property_get(entry, "asset");
-    property_set(artwork, glyph_name, set_name);
-  }
+  let artwork = bible_glyph_artwork_name_by_glyph();
   let characters = bible_glyph_characters();
   let open = [];
   for (let character of characters) {
