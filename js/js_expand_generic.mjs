@@ -28,7 +28,7 @@ export async function js_expand_generic(next, stack_, ast) {
     let callee = property_get(call, "callee");
     let arguments2 = js_call_arguments_get(call);
     async function lambda5(arg, arg_index) {
-      let r2 = await js_expand_generic_lambda5(arg, arg_index, ast);
+      let r2 = await js_expand_generic_lambda5(arg, ast);
       return r2;
     }
     await each_index_async(arguments2, lambda5);

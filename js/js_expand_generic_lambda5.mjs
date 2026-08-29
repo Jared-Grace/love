@@ -3,8 +3,8 @@ import { js_identifier_not_is } from "./js_identifier_not_is.mjs";
 import { js_node_to_visitor } from "./js_node_to_visitor.mjs";
 import { js_node_atomize_name } from "./js_node_atomize_name.mjs";
 import { js_node_atomize } from "./js_node_atomize.mjs";
-export async function js_expand_generic_lambda5(arg, arg_index, ast) {
-  arguments_assert(arguments, 3);
+export async function js_expand_generic_lambda5(arg, ast) {
+  arguments_assert(arguments, 2);
   let jin = js_identifier_not_is(arg);
   if (jin) {
     let offset = 0;
