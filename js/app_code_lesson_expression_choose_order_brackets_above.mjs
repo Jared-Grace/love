@@ -1,14 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
-import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./app_code_lesson_expression_choose_order_sides_settled_tree.mjs";
-import { app_code_lesson_expression_choose_order_run_cards } from "./app_code_lesson_expression_choose_order_run_cards.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
-import { app_code_lesson_expression_choose_order_truths_step_sides } from "./app_code_lesson_expression_choose_order_truths_step_sides.mjs";
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
+import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
+import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lesson_expression_choose_order_brackets_above(root) {
   arguments_assert(arguments, 1);
   ("what stands above the card on the brackets lesson: the two rules being brought together, then the same line walked down twice with the brackets at one end and then the other, then the sentences saying what is new");
@@ -17,6 +16,7 @@ export function app_code_lesson_expression_choose_order_brackets_above(root) {
   ("Both sides are walked, one after the other, rather than one of them being drawn. That is what the two lessons which taught brackets already do - each says the marks may stand at either end and then works a line with them at the other end, in the same card - and a learner arriving here has read both of those screens. Drawn instead, the sentence saying they may move would stand on half the visits with nothing beside it that moves.");
   ("The second walk is the first one turned round: the same three truths, in the other order, with the brackets at the other end. Different truths would leave a reader finding which of two things had changed before they could see that only one had.");
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the turning round stays visible.");
+  ("THE WALK NAMES THE BRACKETS AS THE REASON, which is what this lesson is for. It used to say only that the bracketed part had a value on each side - true of it, and true of the part outside it too on the second step, so the sentence never said what made the order. The reason is read off the line itself now, so the screen says the marks decided on exactly the lines where they did.");
   let both = [true, false];
   let middle_truth = list_random_item(both);
   let tree_right = app_code_lesson_expression_choose_order_sides_settled_tree(
@@ -29,22 +29,19 @@ export function app_code_lesson_expression_choose_order_brackets_above(root) {
     true,
     middle_truth,
   );
-  let step_sides = app_code_lesson_expression_choose_order_truths_step_sides();
   let heading_none = [];
   let heading_either =
     app_code_lesson_expression_choose_order_brackets_either_side();
   app_code_lesson_expression_choose_order_brackets_recall(root);
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_none,
     tree_right,
-    step_sides,
   );
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_either,
     tree_left,
-    step_sides,
   );
   app_code_lesson_expression_choose_order_change_card(
     root,

@@ -1,8 +1,8 @@
-import { app_code_lesson_expression_choose_order_not_expression } from "./app_code_lesson_expression_choose_order_not_expression.mjs";
-import { app_code_lesson_expression_choose_order_not_intro } from "./app_code_lesson_expression_choose_order_not_intro.mjs";
-import { app_code_lesson_expression_choose_order_not_recall } from "./app_code_lesson_expression_choose_order_not_recall.mjs";
-import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_expression_choose_order_not_expression } from "./app_code_lesson_expression_choose_order_not_expression.mjs";
+import { app_code_lesson_expression_choose_order_steps_above_generic } from "./app_code_lesson_expression_choose_order_steps_above_generic.mjs";
+import { app_code_lesson_expression_choose_order_not_recall } from "./app_code_lesson_expression_choose_order_not_recall.mjs";
+import { app_code_lesson_expression_choose_order_not_intro } from "./app_code_lesson_expression_choose_order_not_intro.mjs";
 export function app_code_lesson_expression_choose_order_not_above(root) {
   arguments_assert(arguments, 1);
   ("what stands above the card on the press-at-a-time ! lesson: what ! comes to, then one such line taken all the way down, then the sentences saying what is new");
@@ -14,7 +14,6 @@ export function app_code_lesson_expression_choose_order_not_above(root) {
     root,
     app_code_lesson_expression_choose_order_not_recall,
     tree,
-    " has nothing left inside it, and ",
     app_code_lesson_expression_choose_order_not_intro,
   );
 }

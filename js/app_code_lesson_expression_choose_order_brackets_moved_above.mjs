@@ -4,11 +4,10 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
 import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
-import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
-import { app_code_lesson_expression_choose_order_run_cards } from "./app_code_lesson_expression_choose_order_run_cards.mjs";
-import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
-import { app_code_lesson_expression_choose_order_truths_step_sides } from "./app_code_lesson_expression_choose_order_truths_step_sides.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } from "./app_code_lesson_expression_choose_order_brackets_moved_other_pair.mjs";
+import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
+import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
+import { app_code_lesson_expression_choose_order_change_card } from "./app_code_lesson_expression_choose_order_change_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_intro } from "./app_code_lesson_expression_choose_order_brackets_moved_intro.mjs";
 export function app_code_lesson_expression_choose_order_brackets_moved_above(
   root,
@@ -20,6 +19,7 @@ export function app_code_lesson_expression_choose_order_brackets_moved_above(
   ("The false and the true at the two ends are fixed rather than drawn, because they are what makes the two walks land differently. With a true at the left end or a false at the right the brackets would change nothing wherever they went, and the screen would show a pair of marks being moved for no reason a learner could see.");
   ("The one in the middle is drawn, so the pair of lines is not the same picture on every visit, and it is drawn once for both so the moving stays visible.");
   ("The two rules put back in front of the learner are the ones the lesson before it recalls, asked for from there rather than written again, because they are the same two rules and a near-copy is a thing to be compared where the same words are a thing already known.");
+  ("THE WALK NAMES THE BRACKETS AS THE REASON, which is what makes the two walks say different things about the same three words. It used to say only that the bracketed part had a value on each side, which is true of both walks and so could not tell them apart at all: the whole difference the lesson is about was on the screen and never said out loud.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let both = [true, false];
@@ -38,22 +38,19 @@ export function app_code_lesson_expression_choose_order_brackets_moved_above(
     or_symbol,
     true,
   );
-  let step_sides = app_code_lesson_expression_choose_order_truths_step_sides();
   let heading_none = [];
   let heading_other =
     app_code_lesson_expression_choose_order_brackets_moved_other_pair();
   app_code_lesson_expression_choose_order_brackets_recall(root);
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_none,
     tree_left,
-    step_sides,
   );
-  app_code_lesson_expression_choose_order_run_cards(
+  app_code_lesson_expression_choose_order_reason_run(
     root,
     heading_other,
     tree_right,
-    step_sides,
   );
   app_code_lesson_expression_choose_order_change_card(
     root,
