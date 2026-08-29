@@ -1,10 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_anything_else } from "./g_anything_else.mjs";
-import { app_g_npc_says } from "./app_g_npc_says.mjs";
-import { app_shared_game_container_player } from "./app_shared_game_container_player.mjs";
-import { app_g_ask_what_to_do_text } from "./app_g_ask_what_to_do_text.mjs";
-import { app_shared_game_p_text } from "./app_shared_game_p_text.mjs";
+import { app_g_npc_says_player_ask_what_to_do } from "./app_g_npc_says_player_ask_what_to_do.mjs";
 import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -34,10 +31,7 @@ export function app_g_conversation_render_pray(
     npc_says = pending.text;
     pending.text = null;
   }
-  app_g_npc_says(npc, overlay, npc_says);
-  let container = app_shared_game_container_player(overlay);
-  let ask_pray = app_g_ask_what_to_do_text();
-  app_shared_game_p_text(container, ask_pray);
+  let container = app_g_npc_says_player_ask_what_to_do(npc, overlay, npc_says);
   async function pray() {
     let remaining_now = property_get(remaining_held, "remaining");
     let r6 = await app_g_conversation_pray(

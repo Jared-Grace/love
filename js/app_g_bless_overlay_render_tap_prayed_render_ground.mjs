@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_marks } from "./app_g_bless_marks.mjs";
 import { app_g_bless_edge } from "./app_g_bless_edge.mjs";
 import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
-export function app_g_bless_overlay_render_tap_prayed_render_ground(
+export function app_g_bless_overlay_render_tap_prayed_render_ground({
   ground,
   glows,
   homes,
@@ -16,8 +16,8 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground(
   hold,
   wash,
   held,
-) {
-  arguments_assert(arguments, 13);
+}) {
+  arguments_assert(arguments, 1);
   ("Everything the record has to say about the street - who is lit, which houses are filled");
   ("in, who is ringed - is drawn from the record on every step rather than remembered here,");
   ("so a person covered by a prayer over their whole block lights up the moment they walk");
