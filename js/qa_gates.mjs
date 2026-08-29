@@ -1,3 +1,4 @@
+import { functions_parameters_gate_run } from "./functions_parameters_gate_run.mjs";
 import { js_compare_text_number_cases_gate_run } from "./js_compare_text_number_cases_gate_run.mjs";
 import { functions_compare_text_number_gate_run } from "./functions_compare_text_number_gate_run.mjs";
 import { app_code_lesson_id_length_gate_run } from "./app_code_lesson_id_length_gate_run.mjs";
