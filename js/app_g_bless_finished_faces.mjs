@@ -1,3 +1,4 @@
+import { app_g_bless_finished_person_ring } from "./app_g_bless_finished_person_ring.mjs";
 import { app_g_bless_finished_person_beam_ms } from "./app_g_bless_finished_person_beam_ms.mjs";
 import { app_g_bless_finished_person_beam } from "./app_g_bless_finished_person_beam.mjs";
 import { app_g_bless_finished_person_beam_fade } from "./app_g_bless_finished_person_beam_fade.mjs";
