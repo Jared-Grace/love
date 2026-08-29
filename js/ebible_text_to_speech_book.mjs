@@ -12,6 +12,6 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
     book_code,
   );
   let joined = chapter_codes.join(",");
-  let manifests = await ebible_text_to_speech_chapters(bible_folder, joined);
-  return manifests;
+  let recorded = await ebible_text_to_speech_chapters(bible_folder, joined);
+  return recorded;
 }
