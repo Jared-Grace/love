@@ -219,6 +219,14 @@
   {
    "name": "g_sermon_pull",
    "refusals": 2
+  },
+  {
+   "name": "app_ceb_bible_gloss_write_chapter_file",
+   "refusals": 1
+  },
+  {
+   "name": "app_en_learn_bible_gloss_urdu_write_chapter_file",
+   "refusals": 1
   }
  ]
 }
