@@ -1,7 +1,6 @@
+import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
 import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -59,8 +58,7 @@ export function app_code_lesson_expression_whole_part() {
     function paint(parent) {
       html_span_text(parent, "Whole part");
     }
-    let left = app_code_category_operators();
-    let built = app_code_lesson_name_id_category_then(left, paint);
+    let built = app_code_lesson_name_id_operators(paint);
     return built;
   }
   function above(root) {
