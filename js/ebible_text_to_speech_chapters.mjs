@@ -1,6 +1,6 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { bible_audio_speech_locked_run } from "./bible_audio_speech_locked_run.mjs";
 import { bible_audio_speech_not_started } from "./bible_audio_speech_not_started.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { bible_audio_night_seconds_left_or_null } from "./bible_audio_night_seconds_left_or_null.mjs";
 import { bible_audio_speech_memory_floor_bytes } from "./bible_audio_speech_memory_floor_bytes.mjs";
@@ -79,8 +79,7 @@ export async function ebible_text_to_speech_chapters(
   }
   let not_started = bible_audio_speech_not_started(spoken);
   function started_is(plan) {
-    let path_output = property_get(plan, "path_output");
-    let began = list_includes_not(not_started, path_output);
+    let began = property_in_list_not(plan, "path_output", not_started);
     return began;
   }
   let started = list_filter(plans, started_is);
