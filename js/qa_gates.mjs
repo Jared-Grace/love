@@ -919,6 +919,7 @@ export function qa_gates() {
     js_ast_return_key_shapes_agree_cases_gate_run,
     bible_versions_sung_gate_run,
     app_code_lesson_id_length_gate_run,
+    functions_parameters_gate_run,
   ];
   return gates;
 }
