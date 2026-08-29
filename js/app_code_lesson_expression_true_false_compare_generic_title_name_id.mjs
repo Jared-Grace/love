@@ -16,6 +16,6 @@ export function app_code_lesson_expression_true_false_compare_generic_title_name
     html_cycle_code(parent, ["comparing ", t, " and ", f, " with ", symbol]);
   }
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

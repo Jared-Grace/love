@@ -59,9 +59,8 @@ export function app_code_lesson_expression_whole_part() {
     function paint(parent) {
       html_span_text(parent, "Whole part");
     }
-    let rights = ["whole part"];
     let left = app_code_category_operators();
-    let built = app_code_lesson_name_id_category_then(rights, left, paint);
+    let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
   function above(root) {

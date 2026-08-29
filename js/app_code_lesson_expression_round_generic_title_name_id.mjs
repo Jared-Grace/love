@@ -16,7 +16,6 @@ export function app_code_lesson_expression_round_generic_title_name_id(
     html_span_text_code_dark(parent, called_name);
   }
   let heading_lower = text_combine("round ", direction);
-  let rights = [heading_lower];
-  let built = app_code_lesson_name_id_category_then(rights, "functions", paint);
+  let built = app_code_lesson_name_id_category_then("functions", paint);
   return built;
 }

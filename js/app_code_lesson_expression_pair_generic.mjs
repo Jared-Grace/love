@@ -57,9 +57,7 @@ export function app_code_lesson_expression_pair_generic(params) {
       html_span_text(parent, " ");
       html_span_text_code_dark(parent, symbol2);
     }
-    let rights = [word];
     let built = app_code_lesson_name_id_category_then(
-      rights,
       app_code_category_expressions(),
       paint,
     );

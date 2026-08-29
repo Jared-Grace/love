@@ -8,8 +8,7 @@ export function app_code_lesson_expression_whole_part_both_title_name_id() {
   function paint(parent) {
     html_span_text(parent, "Whole part in one step");
   }
-  let rights = ["whole part in one step"];
   let left = app_code_category_operators();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

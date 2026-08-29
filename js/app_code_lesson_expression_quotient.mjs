@@ -1,13 +1,13 @@
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
-import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
+import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_span_text } from "./html_span_text.mjs";
+import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
 export function app_code_lesson_expression_quotient() {
   ("identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over ",
     app_code_lesson_operand_generic.name,
@@ -59,11 +59,8 @@ export function app_code_lesson_expression_quotient() {
     function paint(parent) {
       html_span_text(parent, "Quotient");
     }
-    let name_id2 = app_code_lesson_name_id_category_then(
-      ["quotient"],
-      app_code_category_operators(),
-      paint,
-    );
+    let left = app_code_category_operators();
+    let name_id2 = app_code_lesson_name_id_category_then(left, paint);
     return name_id2;
   }
 }

@@ -21,9 +21,8 @@ export function app_code_lesson_expression_swapping_divide() {
     function paint(parent) {
       html_cycle_code(parent, ["swapping ", "/", " ", "%", " ", "**"]);
     }
-    let rights = ["swapping divide power"];
     let left = app_code_category_expressions();
-    let built = app_code_lesson_name_id_category_then(rights, left, paint);
+    let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
   function above(root) {

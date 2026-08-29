@@ -8,8 +8,7 @@ export function app_code_lesson_expression_arithmetic_less_than_title_name_id() 
   function paint(parent) {
     html_span_text(parent, "arithmetic comparisons");
   }
-  let rights = ["arithmetic less than"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

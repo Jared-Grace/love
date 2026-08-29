@@ -12,8 +12,7 @@ export function app_code_lesson_expression_comparing_a_comparison_title_name_id(
     let f = js_keyword_false();
     html_cycle_code(parent, ["comparing a comparison with ", t, " or ", f]);
   }
-  let rights = ["comparing a comparison"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }

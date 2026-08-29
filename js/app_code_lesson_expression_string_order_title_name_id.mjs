@@ -10,8 +10,7 @@ export function app_code_lesson_expression_string_order_title_name_id() {
     html_span_text(parent, "Alphabetical order ");
     app_code_string_operators_shape(parent, "<", ">");
   }
-  let rights = ["string", "order"];
   let left = app_code_category_expressions();
-  let built = app_code_lesson_name_id_category_then(rights, left, paint);
+  let built = app_code_lesson_name_id_category_then(left, paint);
   return built;
 }
