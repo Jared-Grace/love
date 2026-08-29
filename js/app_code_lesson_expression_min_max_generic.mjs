@@ -1,15 +1,15 @@
-import { app_code_lesson_expression_min_max_generic_above } from "./app_code_lesson_expression_min_max_generic_above.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_lesson_expression_min_max_generic_two_numbers } from "./app_code_lesson_expression_min_max_generic_two_numbers.mjs";
+import { list_get } from "./list_get.mjs";
 import { app_code_lesson_expression_min_max_generic_code } from "./app_code_lesson_expression_min_max_generic_code.mjs";
-import { app_code_lesson_expression_min_max_generic_title_name_id } from "./app_code_lesson_expression_min_max_generic_title_name_id.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
-import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { range_map } from "./range_map.mjs";
+import { text_integers } from "./text_integers.mjs";
+import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_expression_min_max_generic_title_name_id } from "./app_code_lesson_expression_min_max_generic_title_name_id.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_integers } from "./text_integers.mjs";
-import { list_get } from "./list_get.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_code_lesson_expression_min_max_generic_above } from "./app_code_lesson_expression_min_max_generic_above.mjs";
 export function app_code_lesson_expression_min_max_generic(params) {
   "the shared body of the two two-number function lessons - Math.min (smaller of two) and Math.max (larger of two). They differ only in the function, which of the pair it picks, and the words (smaller/larger, smaller than/bigger than), all passed in params; everything else lives here once: the four questions over pairs 2..12, the forwards/backwards/unscramble labels, the worked example shown in BOTH orders (so the VALUE is clearly what is chosen, not a position), the equal-numbers case, and the home title. Only the intro's opening line differs in shape between the two, so each lesson passes it as define_render.";
   let called_name = property_get(params, "fn_name");
@@ -43,10 +43,10 @@ export function app_code_lesson_expression_min_max_generic(params) {
     return r2;
   }
   let next_arg = list_iterator_refillable(refill);
+  ("the lower-case noun is not handed to the title, which paints from the capitalised word alone - it is the labels below that are written out of it");
   let name_id = app_code_lesson_expression_min_max_generic_title_name_id(
     noun_upper,
     called_name,
-    noun,
   );
   let forwards_question_label = text_combine(noun_upper, " of two: ");
   let forwards_answer_label = text_combine(noun, " value: ");
