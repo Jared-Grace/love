@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_node_function_is } from "./js_node_function_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_get_end_1 } from "./list_get_end_1.mjs";
+import { list_last } from "./list_last.mjs";
 export function js_stack_function_enclosing(stack) {
   arguments_assert(arguments, 1);
   ("the function a line was written inside - the innermost one, where functions stand inside functions");
@@ -14,6 +14,6 @@ export function js_stack_function_enclosing(stack) {
     let none = null;
     return none;
   }
-  let enclosing = list_get_end_1(functions);
+  let enclosing = list_last(functions);
   return enclosing;
 }
