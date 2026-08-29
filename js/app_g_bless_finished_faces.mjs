@@ -1,3 +1,6 @@
+import { app_g_bless_finished_person_beam_ms } from "./app_g_bless_finished_person_beam_ms.mjs";
+import { app_g_bless_finished_person_beam } from "./app_g_bless_finished_person_beam.mjs";
+import { app_g_bless_finished_person_beam_fade } from "./app_g_bless_finished_person_beam_fade.mjs";
 import { subtract } from "./subtract.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_size } from "./list_size.mjs";
@@ -20,8 +23,9 @@ export async function app_g_bless_finished_faces(
 ) {
   arguments_assert(arguments, 5);
   ("Everybody a prayer has just reached, lit together. The camera pulls back far enough to");
-  ("hold all of them and goes to the middle of them, and their lights come up one shortly");
-  ("after another and then run on side by side.");
+  ("hold all of them and goes to the middle of them, and then a light falls out of the sky");
+  ("onto each face in turn and opens where it lands, one shortly after another, the lights");
+  ("running on side by side once they are up.");
   ("One camera move for the whole group rather than one per face. Going to each in turn made");
   ("the screen travel between people who may be streets apart, and a screen that keeps");
   ("moving is a screen nothing on it can be watched on. Held still with all of them in it,");
@@ -140,10 +144,14 @@ export async function app_g_bless_finished_faces(
   ("the same colour and no longer arrive at the same speed. The blue opens fast and leaves;");
   ("the gold comes up slowly and stays, and by the time the blue peels away the thing under");
   ("it has been there long enough to be read as what was left behind.");
+  ("The last face has not lit yet when the run above finishes - its light is still on the");
+  ("way down. Waiting out one fall here is what makes the sentence above true: by then every");
+  ("blue is up, and none of them has begun to go.");
+  await sleep(fall);
   faces_show();
-  ("The last light started one gap before this line was reached, so what remains of its own");
-  ("hold is the hold less that gap. Waiting that out here is what lets everything below go");
-  ("on knowing every light has been let go.");
+  ("The last light began one fall after the run above finished, and one gap before that. So");
+  ("what remains of its own hold is the hold less that gap. Waiting that out here is what");
+  ("lets everything below go on knowing every light has been let go.");
   let last = subtract(hold, gap);
   await sleep(last);
   ("The wait here outlasts the fade rather than matching it, because the lights are not");
