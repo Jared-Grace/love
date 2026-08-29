@@ -133,6 +133,7 @@ export function bible_glyph_chapters() {
     twenty_fourth,
     twenty_fifth,
     twenty_sixth,
+    twenty_seventh,
   ];
   return chapters;
 }
