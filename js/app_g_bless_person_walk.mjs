@@ -55,6 +55,19 @@ export function app_g_bless_person_walk(world, person) {
     "stopped walking would go on claiming the square they left for as long as they stood";
     "there - so a tap on empty ground behind them would have prayed for them.";
     bless_person_crossing_clear(person);
+    "A street held still for a celebration keeps its people where they are, and this is the";
+    "half of that which stops a NEW step being taken. Sliding is switched off across the";
+    "whole map while the camera travels, so a step begun in that window is not walked, it is";
+    "placed - the person is simply somewhere else on the next frame. Asked again after the";
+    "usual pace, so nobody is forgotten and nobody queues up a burst of steps to take when";
+    "the street is let go; they carry on from where they stand as if they had been standing";
+    "about.";
+    let free = property_null_is(person, "held_still");
+    let frozen = not(free);
+    if (frozen) {
+      setTimeout(stepped, pace);
+      return;
+    }
     let standing = property_get(person, "standing");
     let still = positive_is(standing);
     if (still) {
