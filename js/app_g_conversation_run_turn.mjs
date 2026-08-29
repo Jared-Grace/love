@@ -11,23 +11,25 @@ import { app_g_conversation_render } from "./app_g_conversation_render.mjs";
 import { app_g_turn_quiz_once } from "./app_g_turn_quiz_once.mjs";
 export function app_g_conversation_run_turn(
   turn,
-  overlay,
-  npc,
-  remaining_held,
-  steps,
-  steps_total,
-  pending,
-  render_openers,
-  leave,
-  prayed,
-  render_pray,
-  converts,
-  goodbye,
+  {
+    overlay,
+    npc,
+    remaining_held,
+    steps,
+    steps_total,
+    pending,
+    render_openers,
+    leave,
+    prayed,
+    render_pray,
+    converts,
+    goodbye,
+  },
 ) {
   "One turn of a conversation put on the screen as a quiz, together with everything that happens once the right verse lands.";
   "THE TURNS STILL TO COME ARE HELD IN A SMALL KEEPER RATHER THAN HANDED IN AS A LIST, because the right verse can land long after this was called, and this and its caller have to be looking at the same list when it does.";
   "THE NPC'S WARM ANSWER TO THE WORD IS LEFT WAITING RATHER THAN SAID HERE, so the next screen says it in place of its usual ask-again line.";
-  arguments_assert(arguments, 13);
+  arguments_assert(arguments, 2);
   html_clear(overlay);
   let discern = {
     prayed: false,
