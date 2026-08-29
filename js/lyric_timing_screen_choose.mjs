@@ -3,6 +3,7 @@ import { ebible_book_code_label } from "./ebible_book_code_label.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_clear } from "./html_clear.mjs";
+import { lyric_timing_chosen_remember } from "./lyric_timing_chosen_remember.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { bible_usfm_passage_choose } from "./bible_usfm_passage_choose.mjs";
 import { ebible_chapter_code_to_number } from "./ebible_chapter_code_to_number.mjs";
@@ -26,6 +27,7 @@ export function lyric_timing_screen_choose(
   ("Pressing the book leads on to the chapters of whatever book was pressed, because choosing a book and then not choosing a chapter leaves the passage half changed. Pressing the chapter opens the chapters alone, which is the move the row exists for.");
   ("The panel is emptied once a chapter is pressed. A picker left standing after it has been used is a screen still asking a question that has been answered.");
   ("SETTLING ON A CHAPTER IS TOLD TO WHOEVER ASKED, AND THAT IS WHAT LOADS IT. Choosing used to change the words on the buttons and nothing else, which left the screen saying two things at once: the row named the psalm just chosen and everything below it still held the one before. The press that answers the question is the press that meant it, so nothing is gained by asking for a second one - and the second one was easy to forget, at the cost of tapping a whole song into the wrong document.");
+  ("SETTLING IS ALSO WHERE THE CHOICE IS WRITTEN DOWN, so that a refresh opens on the same passage. This is the one press in the whole screen that means a passage has been decided on, and remembering it anywhere else would be remembering a passage somebody was only looking at. It is written before the loading rather than after, because loading a chapter can take a moment and can fail, and neither of those changes which passage was chosen.");
   ("Both ways in end here. Choosing a book leads on to that book's chapters and lands on this same step once one is pressed, so a passage is never settled without going through it.");
   function book_said() {
     let said = ebible_book_code_label(chosen.book_code);
@@ -46,6 +48,7 @@ export function lyric_timing_screen_choose(
     chosen.chapter_number = chapter_number;
     html_clear(panel);
     buttons_show();
+    lyric_timing_chosen_remember(chosen);
     await on_settled();
   }
   async function on_book() {
