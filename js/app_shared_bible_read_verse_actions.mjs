@@ -6,7 +6,7 @@ import { app_shared_bible_biblehub_buttons } from "./app_shared_bible_biblehub_b
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_bible_share } from "./app_shared_bible_share.mjs";
 import { html_button_share_text } from "./html_button_share_text.mjs";
-export function app_shared_bible_read_verse_actions(
+export function app_shared_bible_read_verse_actions({
   content,
   verse_chapter_name,
   verse_book_name,
@@ -18,8 +18,8 @@ export function app_shared_bible_read_verse_actions(
   copy,
   verse_numbers_chosen,
   languages_chosen,
-) {
-  arguments_assert(arguments, 11);
+}) {
+  arguments_assert(arguments, 1);
   let actions = html_div(content);
   html_centered(actions);
   html_display_none(actions);
