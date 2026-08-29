@@ -1,6 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
+import { js_record_parameter_names } from "./js_record_parameter_names.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { js_function_declaration_params_get } from "./js_function_declaration_params_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -24,9 +27,21 @@ export async function function_parameters_record(f_name) {
   ("A ROW OF ARGUMENTS IS READ BY POSITION AND A RECORD IS READ BY NAME, and past a certain length position is a thing a reader has to count on their fingers. Fifteen names in a row also means every call site is fifteen words with nothing on the line saying which is which, so a pair swapped by hand goes on parsing, goes on running, and is found by whoever the wrong thing reaches. Under a record the caller writes the name beside the thing and a swap cannot be written at all.");
   ("THE NAMES INSIDE THE FUNCTION DO NOT CHANGE, which is what makes this behaviour-preserving by reasoning rather than by trying it. The body reads the same words afterwards as before, because the record is unpacked in the parameter list under exactly the names that used to stand there.");
   ("The declaration and every call are one move because either half alone leaves the repo disagreeing with itself about how anything arrives - and unlike a wrong count, which the line at the head of every function catches out loud, a row handed to something expecting a record arrives as one thing whose pieces are all missing, which reads as nothing having been sent.");
-  ("Four refusals stand in front of the write and each is something the repo answers rather than something guessed. There has to be more than one parameter, or the move buys nothing and only adds a wrapper. Every parameter has to be a plain name, because an unpacked one has no single word to file its thing under. No file may hand the function over as a value, because then the list belongs to a call that is nowhere in sight. And no call anywhere may hand over a different number of things, because such a call cannot be filed under names and would be left behind calling the old way.");
+  ("RUNNING IT A SECOND TIME IS SAFE AND IS THE WAY BACK FROM A HALF-DONE ONE. A function already taking its record is said to be done and nothing is written; a call already handing one over is not counted as disagreeing. That is not politeness - the folder is shared and there is no undo in it, so the only recovery a move like this can offer is being run again.");
+  ("Four refusals stand in front of the write and each is something the repo answers rather than something guessed. There has to be more than one parameter, or the move buys nothing and only adds a wrapper. Every parameter has to be a plain name, because an unpacked one has no single word to file its thing under. No file may hand the function over as a value, because then the list belongs to a call that is nowhere in sight. And no call anywhere may hand over some other number of things, because such a call cannot be filed under names and would be left behind calling the old way.");
   let parsed = await function_parse_declaration(f_name);
   let declaration = property_get(parsed, "declaration");
+  let already = js_record_parameter_names(declaration);
+  let done = null_is(already);
+  if (not(done)) {
+    let r2 = {
+      f_name,
+      names: already,
+      files: [],
+      already: true,
+    };
+    return r2;
+  }
   let params = js_function_declaration_params_get(declaration);
   let size = list_size(params);
   let several = greater_than(size, 1);
@@ -54,13 +69,13 @@ export async function function_parameters_record(f_name) {
   let other = await functions_call_named_arity_other_names(
     f_names,
     f_name,
-    size,
+    names,
   );
   list_empty_is_assert_json(other, {
     f_name,
-    size,
+    names,
     other,
-    hint: "these files call it handing over a different number of things, so there is no way to say which name each thing was meant for - put those calls right first",
+    hint: "these files call it handing over some other number of things, so there is no way to say which name each thing was meant for - put those calls right first",
   });
   let arguments_record = js_call_named_arguments_record_curried_right(
     f_name,
@@ -76,6 +91,7 @@ export async function function_parameters_record(f_name) {
     f_name,
     names,
     files: f_names,
+    already: false,
   };
   return r;
 }

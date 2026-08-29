@@ -7,7 +7,7 @@ import { app_shared_bible_read_languages_verses } from "./app_shared_bible_read_
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { app_shared_bible_read_verse_row } from "./app_shared_bible_read_verse_row.mjs";
-export async function app_shared_bible_read_render_verse(
+export async function app_shared_bible_read_render_verse({
   chapter_code,
   languages_chosen,
   hash,
@@ -23,8 +23,8 @@ export async function app_shared_bible_read_render_verse(
   max,
   verse_action,
   t,
-) {
-  arguments_assert(arguments, 15);
+}) {
+  arguments_assert(arguments, 1);
   async function chapter_previous() {
     await app_shared_bible_change(
       chapter_code,
