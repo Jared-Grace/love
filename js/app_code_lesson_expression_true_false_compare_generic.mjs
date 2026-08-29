@@ -19,9 +19,8 @@ import { list_map } from "./list_map.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_code_lesson_expression_true_false_compare_generic(
   operator,
-  rights,
 ) {
-  arguments_assert(arguments, 2);
+  arguments_assert(arguments, 1);
   ("One comparison operator applied to plain true and false - the prerequisite the swapping lessons were already leaning on, because every === the learner has met so far had numbers or strings on both sides and nothing had ever compared two true/false values.");
   ("One operator a lesson rather than both together, which is what makes the examples complete rather than a sample: two true/false values can sit either side of an operator in exactly four ways, the screen holds four examples, so every screen is the whole truth of this operator and nothing is left for the learner to wonder whether they have seen.");
   ("The order is fixed rather than shuffled, and it is grouped by the answer: the two lines this operator calls true come first, then the two it calls false. A shuffled screen hides that grouping and has nothing to offer in exchange, because there are only four possibilities and every screen already carries all of them, so a fresh order is not fresh content.");
