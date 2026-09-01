@@ -1,6 +1,6 @@
+import { js_node_stopping_found_is } from "./js_node_stopping_found_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -23,56 +23,20 @@ export function js_regions_blanked_over_wait(ast) {
     "FunctionExpression",
     "ArrowFunctionExpression",
   ];
-  let emptier_names = [
-    fn_name("html_clear"),
-    fn_name("html_clear_context"),
-    fn_name("html_text_set"),
-  ];
-  function scan_here(node, decide, stop_types) {
-    if (equal(node, null)) {
-      return false;
-    }
-    let node_object_is = equal(typeof node, "object");
-    if (not(node_object_is)) {
-      return false;
-    }
-    let node_list_is = Array.isArray(node);
-    if (node_list_is) {
-      for (let item of node) {
-        if (scan_here(item, decide, stop_types)) {
-          return true;
-        }
-      }
-      return false;
-    }
-    let typed = equal(typeof node.type, "string");
-    if (not(typed)) {
-      return false;
-    }
-    let stopped = stop_types.includes(node.type);
-    if (stopped) {
-      return false;
-    }
-    if (decide(node)) {
-      return true;
-    }
-    for (let key of object_property_names(node)) {
-      let skipped = equal(key, "type");
-      if (skipped) {
-        continue;
-      }
-      if (scan_here(node[key], decide, stop_types)) {
-        return true;
-      }
-    }
-    return false;
-  }
+  let f_name = fn_name("html_clear");
+  let f_name2 = fn_name("html_clear_context");
+  let f_name3 = fn_name("html_text_set");
+  let emptier_names = [f_name, f_name2, f_name3];
   function await_here_is(statement) {
     function await_is(node) {
       let awaited = equal(node.type, "AwaitExpression");
       return awaited;
     }
-    let found = scan_here(statement, await_is, function_node_types);
+    let found = js_node_stopping_found_is(
+      statement,
+      await_is,
+      function_node_types,
+    );
     return found;
   }
   function name_here_is(statement, region, stop_types) {
@@ -84,7 +48,7 @@ export function js_regions_blanked_over_wait(ast) {
       let same = equal(node.name, region);
       return same;
     }
-    let found = scan_here(statement, named_is, stop_types);
+    let found = js_node_stopping_found_is(statement, named_is, stop_types);
     return found;
   }
   function emptied_region(statement) {
@@ -106,7 +70,8 @@ export function js_regions_blanked_over_wait(ast) {
       return null;
     }
     ("setting a word is only an emptying when the word is nothing");
-    let text_set_is = equal(call.callee.name, fn_name("html_text_set"));
+    let right = fn_name("html_text_set");
+    let text_set_is = equal(call.callee.name, right);
     if (text_set_is) {
       let second = call.arguments[1];
       let literal_is = second && equal(second.type, "Literal");
@@ -147,7 +112,7 @@ export function js_regions_blanked_over_wait(ast) {
       }
       return false;
     }
-    scan_here(statement, empties_is, function_node_types);
+    js_node_stopping_found_is(statement, empties_is, function_node_types);
     return wrapped;
   }
   function body_read(body) {
