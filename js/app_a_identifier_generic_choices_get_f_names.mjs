@@ -21,7 +21,7 @@ import { text_is_assert_json } from "./text_is_assert_json.mjs";
 import { app_a_function_on_change } from "./app_a_function_on_change.mjs";
 import { app_a_functionize_choices_add } from "./app_a_functionize_choices_add.mjs";
 import { functions_names } from "./functions_names.mjs";
-export async function app_a_identifier_generic_choices_get_f_names(
+export async function app_a_identifier_generic_choices_get_f_names({
   stack,
   o,
   name,
@@ -30,8 +30,8 @@ export async function app_a_identifier_generic_choices_get_f_names(
   c,
   choices,
   replace,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let e = list_get_end_2(stack);
   let overlay_close = property_get(o, "overlay_close");
   let overlay = property_get(o, "overlay");
