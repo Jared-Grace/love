@@ -6,7 +6,7 @@ import { positive_is } from "./positive_is.mjs";
 import { not } from "./not.mjs";
 import { app_g_conversation_render_close } from "./app_g_conversation_render_close.mjs";
 import { app_g_button_conversation_end } from "./app_g_button_conversation_end.mjs";
-export function app_g_conversation_render(
+export function app_g_conversation_render({
   overlay,
   remaining,
   render_openers,
@@ -16,8 +16,8 @@ export function app_g_conversation_render(
   converts,
   npc,
   goodbye,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   ("the openers screen ASKS what you would like to say, so its parting line is one of the answers — ",
     fn_name("app_g_turn_menu"),
     " puts it in the box with the other things you could say, and this function adds none. the pray and close screens ask something else (or nothing), so there the parting line still hangs off the OVERLAY below whatever they show.");
