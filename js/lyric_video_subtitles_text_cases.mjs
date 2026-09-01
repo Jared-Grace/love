@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function lyric_video_subtitles_text_cases() {
   arguments_assert(arguments, 0);
@@ -8,6 +9,11 @@ export function lyric_video_subtitles_text_cases() {
   ("A LINE TIMED AT ONE END ONLY IS LEFT OUT TOO, AND EACH END HAS A CASE OF ITS OWN. A beginning with no end is what a person leaves behind by stopping halfway through a line rather than between two. An end with no beginning is what a hand-corrected document leaves behind, because the two moments of a line are settled one at a time and either one of them can be the one that is missing. Half a time is not a moment whichever half it is, and one case cannot stand in for the other: a reader that asks only whether a line ends agrees with every other case here and still throws a line into the video with nothing to begin at.");
   ("THE SECOND OF THOSE TWO CASES IS HERE BECAUSE NINE WRONG READERS WERE WRITTEN OUT AND RUN AGAINST THIS CORPUS, AND ONE OF THEM WAS REFUSED BY NOTHING. It kept a line whenever the line had an end, never once asking about its beginning, and it agreed with all five cases that were here before. That is the failure a corpus cannot see from the inside: every case passed, so the corpus looked finished, while the one sentence above it claiming both ends are checked was never true of the cases themselves. A case that refuses no wrong reader is describing the code back to itself, and a claim in the prose that no case tests is an untested claim.");
   ("WHERE THE CARD IS PUT IS WRITTEN INTO EVERY EVENT HERE, WHICH IS THE ONE THING IN AN EVENT THAT IS NOT A MOMENT. It is pinned all the same, because moving a card is a change to where a line stands, and where a line stands is the whole of what this corpus refuses arguments about. It has already been changed once: the point in the middle of the frame is now stated outright instead of being asked for by naming an alignment, and this corpus went red because the events here still said what the writer used to say. That redness is the gate working - a change to placement is meant to be read by somebody rather than to slip through - but it also means these strings have to be brought forward deliberately whenever the placement is argued about again, and the reason for the change belongs in the writer's own prose rather than here.");
+  ("THE WRONG READERS ARE NO LONGER A PARAGRAPH ABOUT THE PAST. All nine are written out in data/given/red_proofs/",
+    fn_name("lyric_video_subtitles_text"),
+    ".mjs, and ",
+    fn_name("red_proofs_gate_run"),
+    " asks every one of them of every case here on each run - so a case removed later, or a reader that stops being wrong, is said out loud rather than leaving this account describing a check nobody is doing any more. The end-only reader named above is refused now, by the case that was added for it.");
   let head = {
     passage: "Psalm 148",
     credit: "Berean Standard Bible",

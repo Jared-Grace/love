@@ -205,21 +205,35 @@ def engine_ready(threads):
         return ENGINE
     os.environ["OMP_NUM_THREADS"] = str(threads)
     from kokoro_onnx import Kokoro
-    from misaki import en, espeak
 
-    # A word the dictionary does not hold has to go somewhere, and with no
-    # fallback it goes nowhere: the word is rendered as silence while the
-    # caption still shows it.  Measured over the 738 chapters recorded before
-    # this line changed, that lost 11192 words across 508 of them - almost all
-    # Hebrew proper names, so "the son of Amittai, saying" was read as "the son
-    # of saying".  The fallback sounds a name out instead of dropping it.  It is
-    # built rather than caught, so that a machine without espeak stops the night
-    # loudly instead of quietly recording another Bible with the names missing.
-    ENGINE["g2p"] = en.G2P(
-        trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
-    )
+    ENGINE["g2p"] = g2p_ready()
     ENGINE["kokoro"] = Kokoro(MODEL_PATH, VOICES_PATH)
     return ENGINE
+
+
+def g2p_ready():
+    """Builds the letters-to-sound step, with the fallback the reading needs.
+
+    A word the dictionary does not hold has to go somewhere, and with no
+    fallback it goes nowhere: the word is rendered as silence while the caption
+    still shows it.  Measured over the 738 chapters recorded before this
+    changed, that lost 11192 words across 508 of them - almost all Hebrew proper
+    names, so "the son of Amittai, saying" was read as "the son of saying".  The
+    fallback sounds a name out instead of dropping it.
+
+    It is built rather than caught, so that a machine without espeak stops the
+    night loudly instead of quietly recording another Bible with the names
+    missing.
+
+    This is a function of its own so that anything checking a chapter for
+    dropped words asks the same object the reading speaks with.  Two copies of
+    these settings would let the check pass while the reading dropped words.
+    """
+    from misaki import en, espeak
+
+    return en.G2P(
+        trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
+    )
 
 
 def line_samples(g2p, kokoro, text):
