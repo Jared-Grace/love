@@ -10,7 +10,7 @@ import { object_merge_set } from "./object_merge_set.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
-export function app_replace_rule_set_symbols_mapper(
+export function app_replace_rule_set_symbols_mapper({
   symbol,
   index,
   index_selected_held,
@@ -25,8 +25,8 @@ export function app_replace_rule_set_symbols_mapper(
   refresh,
   success_held,
   history,
-) {
-  arguments_assert(arguments, 14);
+}) {
+  arguments_assert(arguments, 1);
   let symbol_button = null;
   async function symbol_on_click() {
     let r = await app_replace_rule_set_symbols_mapper_symbol_on_click({
