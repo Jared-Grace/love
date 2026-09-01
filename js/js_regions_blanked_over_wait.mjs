@@ -36,8 +36,8 @@ export function js_regions_blanked_over_wait(ast) {
     if (not(node_object_is)) {
       return false;
     }
-    let list_is = Array.isArray(node);
-    if (list_is) {
+    let node_list_is = Array.isArray(node);
+    if (node_list_is) {
       for (let item of node) {
         if (scan_here(item, decide, stop_types)) {
           return true;
