@@ -17,6 +17,12 @@ prints one JSON line: the chapters holding a dropped word, what was dropped, and
 the totals.  It reads only; nothing is recorded or removed.  The caller spells
 the root because the layout is named on the JavaScript side, where a move is one
 edit.
+
+"sounded_out" false asks it about the reading as it was before it could sound a
+name out.  That is the one question the recording itself can no longer be asked:
+once the reading can say every word, this comes back empty for a chapter whose
+audio was made when it could not, so the chapters wanting doing again have to be
+named against the older reading rather than against what is on the disk.
 """
 
 import collections
@@ -29,6 +35,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from text_to_speech import g2p_ready  # noqa: E402
 
 UNKNOWN = "❓"
+
+
+def g2p_as_it_was():
+    """The letters-to-sound step as it was before it could sound a name out.
+
+    This is deliberately a second construction, which the check otherwise avoids
+    - it exists to ask about a reading the recorder can no longer be made to
+    perform, so there is nothing live to share it with.  The recorder's own
+    builder takes no arguments precisely so that no caller can hand it this.
+    """
+    from misaki import en
+
+    return en.G2P(trf=False, british=False, fallback=None)
 
 
 def word_is(text):
@@ -89,8 +108,9 @@ def main(args_path):
         args = json.load(fh)
     root = args["root"]
     names = chapter_names(root, args.get("chapters"))
+    sounded_out = args.get("sounded_out", True)
 
-    g2p = g2p_ready()
+    g2p = g2p_ready() if sounded_out else g2p_as_it_was()
 
     chapters = {}
     words_total = 0
@@ -109,6 +129,7 @@ def main(args_path):
 
     report = {
         "root": root,
+        "sounded_out": sounded_out,
         "chapters_read": read,
         "chapters_with_dropped_words": len(chapters),
         "words_read": words_total,
