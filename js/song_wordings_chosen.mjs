@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
@@ -5,7 +6,6 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_size } from "./list_size.mjs";
 export function song_wordings_chosen(echoed, bible_folder_usual) {
   arguments_assert(arguments, 2);
   ("$plain echoed");
@@ -54,8 +54,7 @@ export function song_wordings_chosen(echoed, bible_folder_usual) {
       list_add(unchanged, entry);
       continue;
     }
-    let left3 = list_size(winners);
-    let alone = equal(left3, 1);
+    let alone = list_size_equal(winners, 1);
     if (alone) {
       list_add(chosen, entry);
       continue;
