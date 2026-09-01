@@ -1,3 +1,4 @@
+import { app_replace_rule_set_each_rule } from "./app_replace_rule_set_each_rule.mjs";
 import { app_replace_rule_set_on_hint } from "./app_replace_rule_set_on_hint.mjs";
 import { app_replace_rule_set_symbols_mapper } from "./app_replace_rule_set_symbols_mapper.mjs";
 import { property_set } from "./property_set.mjs";
@@ -8,10 +9,6 @@ import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { list_to_indices } from "./list_to_indices.mjs";
-import { app_replace_button_rule } from "./app_replace_button_rule.mjs";
-import { html_disable } from "./html_disable.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { each_index } from "./each_index.mjs";
@@ -118,32 +115,18 @@ export async function app_replace_rule_set(context) {
     html_clear(div_rules_buttons);
     refresh_count_increase();
     function each_rule(rule, index) {
-      function button_rule_on_click() {
-        let list = property_get(start_held, "start");
-        let value7 = list_to_indices(list);
-        property_set(start_indices_held, "start_indices", value7);
-        button_rule_on_click_inner(index);
-      }
-      let rule_result = app_replace_button_rule(
+      let r7 = app_replace_rule_set_each_rule(
+        rule,
+        index,
+        start_held,
+        start_indices_held,
+        button_rule_on_click_inner,
         div_rules_buttons,
-        rule,
-        button_rule_on_click,
       );
-      let arrow = property_get(rule_result, "arrow");
-      let rights = property_get(rule_result, "rights");
-      let lefts = property_get(rule_result, "lefts");
-      let rule_button = property_get(rule_result, "b");
-      html_disable(rule_button);
-      object_merge_set(rule_button, {
-        rule,
-        lefts,
-        rights,
-        arrow,
-      });
-      return rule_button;
+      return r7;
     }
-    let list12 = property_get(rules_used_held, "rules_used");
-    let value11 = list_map_index(list12, each_rule);
+    let list = property_get(rules_used_held, "rules_used");
+    let value11 = list_map_index(list, each_rule);
     property_set(rule_buttons_held, "rule_buttons", value11);
     function rbs_each(rule_button, rule_index) {
       let success2 = property_get(success_held, "success");
