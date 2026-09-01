@@ -57,15 +57,15 @@ export function app_g_verify_view_line_lists({
     let text = property_get(l, "text");
     html_span_text(row, text);
     function lambda13() {
-      app_g_verify_view_highlight_lines(
-        [li],
+      app_g_verify_view_highlight_lines({
+        li_list: [li],
         clear_all,
         token_spans,
         highlight,
         lines,
         row_comps,
         order_comps,
-      );
+      });
     }
     html_on(row, "mouseenter", lambda13);
     html_on(row, "mouseleave", clear_all);
