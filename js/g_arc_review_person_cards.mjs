@@ -1,3 +1,4 @@
+import { g_arc_review_person_turn_cards } from "./g_arc_review_person_turn_cards.mjs";
 import { g_arc_review_person_fields } from "./g_arc_review_person_fields.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,9 +9,6 @@ import { property_list_size } from "./property_list_size.mjs";
 import { add } from "./add.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { list_add } from "./list_add.mjs";
-import { g_arc_turns_numbered } from "./g_arc_turns_numbered.mjs";
-import { g_arc_review_turn_card } from "./g_arc_review_turn_card.mjs";
 import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
 import { list_size } from "./list_size.mjs";
 import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
@@ -57,19 +55,13 @@ export function g_arc_review_person_cards(
     person_moved = {};
   }
   let fields = g_arc_review_person_fields(arc);
-  let numbered = g_arc_turns_numbered(arc);
-  let turns = [];
-  for (let one of numbered) {
-    let number = property_get(one, "number");
-    let key = String(number);
-    let turn_moved = property_or_null(by_turn, key);
-    let still = equal(turn_moved, null);
-    if (still) {
-      turn_moved = {};
-    }
-    let card = g_arc_review_turn_card(one, passages, notes, index, turn_moved);
-    list_add(turns, card);
-  }
+  let turns = g_arc_review_person_turn_cards(
+    arc,
+    by_turn,
+    passages,
+    notes,
+    index,
+  );
   let theirs = g_arc_review_notes_person(notes, index);
   let notes_count = list_size(theirs);
   let person_notes = g_arc_review_notes_turn(notes, index, 0);
