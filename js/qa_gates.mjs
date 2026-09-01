@@ -1,3 +1,4 @@
+import { baseline_growth_guarded_is_cases_gate_run } from "./baseline_growth_guarded_is_cases_gate_run.mjs";
 import { functions_parameters_gate_run } from "./functions_parameters_gate_run.mjs";
 import { js_compare_text_number_cases_gate_run } from "./js_compare_text_number_cases_gate_run.mjs";
 import { functions_compare_text_number_gate_run } from "./functions_compare_text_number_gate_run.mjs";
