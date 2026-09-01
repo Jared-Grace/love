@@ -3,7 +3,6 @@
   "app_replace_rule_set",
   "app_reply",
   "bible_glyph_chapter_rosetta_lines_fetched_known",
-  "bible_glyph_chapter_fetch_found",
-  "app_shared_bible_read"
+  "bible_glyph_chapter_fetch_found"
  ]
 }
