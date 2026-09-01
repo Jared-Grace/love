@@ -57,7 +57,7 @@ export function app_g_verify_home_render({
   );
   let open_passage = property_get(actions, "open_passage");
   let open_pending = property_get(actions, "open_pending");
-  app_g_verify_home_verse_bar(
+  app_g_verify_home_verse_bar({
     wrap,
     real_keys,
     approved_index,
@@ -66,7 +66,7 @@ export function app_g_verify_home_render({
     passages,
     pending,
     open_pending,
-  );
+  });
   let view = html_div(wrap);
   property_set(held, "view", view);
   let none = equal(passages.length, 0);
