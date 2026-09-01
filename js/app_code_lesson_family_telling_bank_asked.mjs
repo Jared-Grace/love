@@ -12,6 +12,7 @@ export async function app_code_lesson_family_telling_bank_asked(
   counted,
   telling,
 ) {
+  "Splits the functions a lesson counts on into the ones its own words already name and the ones a learner is being asked to supply, handing back that second list. It follows mentions outward rather than stopping at the first layer: a name found in the words above the lesson is read in turn and whatever that names is followed too, because a function named in something the lesson hands the learner has been told to them just as surely as one named on the page. What is left over after that walk is the bank of names the lesson is really asking for.";
   arguments_assert(arguments, 3);
   let above_text = app_code_lesson_source_above_text_or_null(source);
   let some = null_not_is(above_text);

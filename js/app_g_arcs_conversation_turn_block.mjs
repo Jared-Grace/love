@@ -6,7 +6,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
-import { app_g_arcs_field_was } from "./app_g_arcs_field_was.mjs";
+import { app_g_arcs_field_moved } from "./app_g_arcs_field_moved.mjs";
 import { app_g_arcs_turn_block } from "./app_g_arcs_turn_block.mjs";
 export function app_g_arcs_conversation_turn_block(
   card,
@@ -51,7 +51,12 @@ export function app_g_arcs_conversation_turn_block(
       );
     }
     let moved = property_get(card, "moved");
-    app_g_arcs_field_was(conversation_block, moved, catch_up_name, voice_color);
+    app_g_arcs_field_moved(
+      conversation_block,
+      moved,
+      catch_up_name,
+      voice_color,
+    );
   }
   app_g_arcs_turn_block(conversation_block, card, nickname, bench, voice_color);
   let r = {
