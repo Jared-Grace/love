@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_r } from "./app_code_lesson_quiz_r.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_has_next_step } from "./app_code_lesson_quiz_has_next_step.mjs";
-export function app_code_lesson_quiz_on_answer(
+export function app_code_lesson_quiz_on_answer({
   info,
   qa,
   container_blue_light,
@@ -11,8 +11,8 @@ export function app_code_lesson_quiz_on_answer(
   context,
   quizzes,
   refresh,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let r4 = app_code_lesson_quiz_r({
     info,
     qa,
