@@ -11,7 +11,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-export function app_g_word_pictures_word_block_attempt_block(
+export function app_g_word_pictures_word_block_attempt_block({
   drawn,
   strip,
   word,
@@ -19,8 +19,8 @@ export function app_g_word_pictures_word_block_attempt_block(
   status_working,
   status_set,
   render,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("280px is the width below which an attempt drops to its own row, and it is set just under half the overlay column rather than at a round number, because two attempts fitting side by side is the whole reason this screen exists and 320 missed it by the width of the gap. A phone is narrower than two of anything, so there it stacks - which is the right answer on a phone and not a fallback.");
   let attempt = property_get(drawn, "attempt");
   let wording = property_get(drawn, "wording");
