@@ -1,7 +1,6 @@
+import { js_flo_body } from "./js_flo_body.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_statement_find_name_body } from "./js_statement_find_name_body.mjs";
-import { js_flo } from "./js_flo.mjs";
-import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 export function js_statement_move_before_lines(ast, address, address_before) {
   arguments_assert(arguments, 3);
@@ -15,8 +14,7 @@ export function js_statement_move_before_lines(ast, address, address_before) {
   ("A word pointing at no line stops here, in the lookup, in its own words. Neither caller has to say anything about an unknown word, and neither does.");
   let moved = js_statement_find_name_body(ast, address);
   let target = js_statement_find_name_body(ast, address_before);
-  let declaration = js_flo(ast);
-  let statements = js_function_declaration_to_block_body(declaration);
+  let statements = js_flo_body(ast);
   let index_moved = list_index_of(statements, moved);
   let index_target = list_index_of(statements, target);
   let r = {
