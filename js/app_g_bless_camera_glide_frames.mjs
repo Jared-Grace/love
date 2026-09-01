@@ -79,15 +79,14 @@ export function app_g_bless_camera_glide_frames({
       let span = subtract(to, from);
       let right = multiply(span, ease);
       let value = add(from, right);
-      app_g_bless_camera_glide_frames_draw(
-        value,
+      app_g_bless_camera_glide_frames_draw(value, {
         container_map,
         variable,
         focus,
         player_img_c,
         container,
         container_e,
-      );
+      });
       if (less_than(fraction, 1)) {
         requestAnimationFrame(step);
         return;
