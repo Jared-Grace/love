@@ -144,7 +144,7 @@ export async function app_replace_rule_set(context) {
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
-      let r5 = app_replace_rule_set_symbols_mapper(
+      let r5 = app_replace_rule_set_symbols_mapper({
         symbol,
         index,
         index_selected_held,
@@ -159,7 +159,7 @@ export async function app_replace_rule_set(context) {
         refresh,
         success_held,
         history,
-      );
+      });
       return r5;
     }
     let list5 = property_get(start_held, "start");
