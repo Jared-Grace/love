@@ -9,7 +9,7 @@ import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_g_bless_camera_glide_frames(
+export function app_g_bless_camera_glide_frames({
   container_map,
   player_img_c,
   container,
@@ -18,8 +18,8 @@ export function app_g_bless_camera_glide_frames(
   from,
   to,
   token,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("Builds the running of one camera journey: every frame draws the map at a size a little");
   ("further along an eased path from where it started towards where it is going, and moves");
   ("the scrolling box to whatever standing place keeps the same square in the middle at");
