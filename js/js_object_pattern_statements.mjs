@@ -1,3 +1,5 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,7 +29,11 @@ export function js_object_pattern_statements(name_held, names, node_right) {
   let statements = [statement_held];
   function name_each(word) {
     let statement = js_parse_statement(
-      'landing = property_get(holder, "field");',
+      text_combine_multiple([
+        "landing = ",
+        fn_name("property_get"),
+        '(holder, "field");',
+      ]),
     );
     let expression = property_get(statement, "expression");
     let left = property_get(expression, "left");
