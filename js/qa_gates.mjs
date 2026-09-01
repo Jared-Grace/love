@@ -287,6 +287,7 @@ import { functions_regions_blanked_over_wait_gate_run } from "./functions_region
 import { lyric_video_subtitles_text_cases_gate_run } from "./lyric_video_subtitles_text_cases_gate_run.mjs";
 import { lyric_timing_line_tapped_cases_gate_run } from "./lyric_timing_line_tapped_cases_gate_run.mjs";
 import { lyric_timing_lag_measured_cases_gate_run } from "./lyric_timing_lag_measured_cases_gate_run.mjs";
+import { lyric_timing_lag_said_cases_gate_run } from "./lyric_timing_lag_said_cases_gate_run.mjs";
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
 import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
@@ -567,6 +568,7 @@ export function qa_gates() {
     lyric_video_subtitles_text_cases_gate_run,
     lyric_timing_line_tapped_cases_gate_run,
     lyric_timing_lag_measured_cases_gate_run,
+    lyric_timing_lag_said_cases_gate_run,
     functions_condition_bodies_empty_gate_run,
     js_regions_blanked_over_wait_cases_gate_run,
     functions_regions_blanked_over_wait_gate_run,
