@@ -4,6 +4,7 @@ import { equal } from "./equal.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_arcs_field_runs } from "./app_g_arcs_field_runs.mjs";
+import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { text_runs_changed } from "./text_runs_changed.mjs";
 export function app_g_arcs_field_pair(
@@ -13,6 +14,7 @@ export function app_g_arcs_field_pair(
   value,
   shape,
   voice_color,
+  marks,
 ) {
   "$plain name";
   "$plain value";
@@ -24,7 +26,9 @@ export function app_g_arcs_field_pair(
   "WHICH CHARACTERS DIFFER IS WORKED OUT HERE AND NOT WHERE THE MOVE WAS FOUND, because the store answers what a line used to say and the page already holds what it says now. Nothing has to be sent for it, and the same two pieces of text can be compared a second way later without anything upstream being asked to agree.";
   "A LINE WITH NO PREVIOUS WORDING AT ALL SAYS SO IN WORDS rather than being compared with nothing. Compared with an empty line every character of it comes back marked, which is true and useless: a reader would see a wholly marked line and go looking for what it used to say, and it never said anything.";
   "THE WORDS THAT WENT OUT AND CAME IN ARE NO LONGER LISTED UNDERNEATH. They were there because the page could not point at a difference and could only name one, and a list of words is what naming a difference looks like when the marks are missing. With the characters themselves marked in place the list says the same thing later, less exactly, in a fainter type.";
-  arguments_assert(arguments, 6);
+  "THE FIRST ROW OF A PAIR IS PUT ON THE LIST THE TOURING PRESS READS, and this is the only place that can put it there. Whether a field moved is answered here and nowhere above; the page as drawn says the same thing only in colour, so anything asking later would be reading marks back off a drawing instead of being told.";
+  "A LINE THAT NEVER MOVED IS ON NO LIST AT ALL, which is what keeps the tour the length of the changes rather than the length of the arc.";
+  arguments_assert(arguments, 7);
   let moved = property_or_null(moved_fields, name);
   let still = equal(moved, null);
   if (still) {
@@ -40,7 +44,15 @@ export function app_g_arcs_field_pair(
         changed: false,
       },
     ];
-    app_g_arcs_field_runs(parent, "was", missing, "aside", voice_color, true);
+    let row = app_g_arcs_field_runs(
+      parent,
+      "was",
+      missing,
+      "aside",
+      voice_color,
+      true,
+    );
+    list_add(marks, row);
   }
   let older = "";
   if (not(unwritten)) {
@@ -50,7 +62,15 @@ export function app_g_arcs_field_pair(
   let before_runs = property_get(text_runs_changed_answer, "before_runs");
   let after_runs = property_get(text_runs_changed_answer, "after_runs");
   if (not(unwritten)) {
-    app_g_arcs_field_runs(parent, "was", before_runs, shape, voice_color, true);
+    let row2 = app_g_arcs_field_runs(
+      parent,
+      "was",
+      before_runs,
+      shape,
+      voice_color,
+      true,
+    );
+    list_add(marks, row2);
   }
   app_g_arcs_field_runs(parent, name, after_runs, shape, voice_color, false);
 }
