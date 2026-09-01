@@ -8,7 +8,7 @@ import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
-export function html_scroll_animate_frames(
+export function html_scroll_animate_frames({
   r,
   element,
   token,
@@ -17,11 +17,11 @@ export function html_scroll_animate_frames(
   duration,
   from_left,
   from_top,
-) {
+}) {
   "Builds the running of one smooth scroll: every frame moves the element a little further along an eased path from where it stood towards where it is going, slow at each end and quick in the middle, and reports once when it has settled.";
   "The element carries a token saying which scroll is the current one. A scroll that finds a different token there has been overtaken by a later one, so it stops where it stands and does not jump to its own target - without that, two scrolls asked for in quick succession pull the same element in two directions.";
   "The settling is reported exactly once whatever happens: a flag makes the finishing safe to reach twice, and a timer set a little past the intended length reaches it anyway. A browser hands out no frames at all to a tab nobody is looking at, so without that timer a scroll begun and then hidden would never report, and whoever was waiting on it would wait for good.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let start = property_get(r, "start");
   function animate(settled) {
     let done = false;

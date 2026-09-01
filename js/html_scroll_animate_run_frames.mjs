@@ -12,7 +12,7 @@ export function html_scroll_animate_run_frames(
   arguments_assert(arguments, 6);
   let from_top = property_get(r, "from_top");
   let token = property_get(r, "token");
-  let animate = html_scroll_animate_frames(
+  let animate = html_scroll_animate_frames({
     r,
     element,
     token,
@@ -21,6 +21,6 @@ export function html_scroll_animate_run_frames(
     duration,
     from_left,
     from_top,
-  );
+  });
   return animate;
 }
