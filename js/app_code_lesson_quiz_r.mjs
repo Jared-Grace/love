@@ -12,7 +12,7 @@ export function app_code_lesson_quiz_r({
   refresh,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_container_success_message(
+  let r4 = app_code_lesson_quiz_container_success_message({
     info,
     qa,
     container_blue_light,
@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_r({
     context,
     quizzes,
     refresh,
-  );
+  });
   let container_success_message = property_get(r4, "container_success_message");
   let container_correction = property_get(r4, "container_correction");
   let parent_container = property_get(r4, "parent_container");
