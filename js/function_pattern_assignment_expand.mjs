@@ -1,7 +1,6 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_object_pattern_assignments_expand } from "./js_object_pattern_assignments_expand.mjs";
-import { not } from "./not.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_auto } from "./function_auto.mjs";
@@ -13,8 +12,7 @@ export async function function_pattern_assignment_expand(f_name) {
   ("It canonicalizes afterwards because the lines it writes call a function the file may never have needed before.");
   function lambda(ast) {
     let expanded = js_object_pattern_assignments_expand(ast, "record");
-    let b = list_empty_is(expanded);
-    let found = not(b);
+    let found = list_empty_not_is(expanded);
     true_is_assert_json(found, {
       f_name,
       hint: "this function takes no record apart straight into words that already stand for something, so there was nothing here to write out a line at a time",
