@@ -11,9 +11,12 @@ dropped words.  The text is handed over whole, as the reading hands it over,
 since the step uses the words either side to decide - a name that looks lost on
 its own is often fine in its sentence.
 
-Takes the path of a JSON file holding {"folder": <recording folder>}, and prints
-one JSON line: the chapters holding a dropped word, what was dropped, and the
-totals.  It reads only; nothing is recorded or removed.
+Takes the path of a JSON file holding {"root": <folder of chapter folders>},
+optionally with "chapters" naming the ones to read rather than all of them, and
+prints one JSON line: the chapters holding a dropped word, what was dropped, and
+the totals.  It reads only; nothing is recorded or removed.  The caller spells
+the root because the layout is named on the JavaScript side, where a move is one
+edit.
 """
 
 import collections
@@ -23,7 +26,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from text_to_speech import ROOT_FOLDER, g2p_ready  # noqa: E402
+from text_to_speech import g2p_ready  # noqa: E402
 
 UNKNOWN = "❓"
 
@@ -72,24 +75,32 @@ def dropped_in(g2p, texts):
     return lost, words
 
 
+def chapter_names(root, asked):
+    """The chapter folders to read - the ones named, or every one there is."""
+    if asked:
+        return list(asked)
+    return sorted(
+        n for n in os.listdir(root) if os.path.isdir(os.path.join(root, n))
+    )
+
+
 def main(args_path):
     with open(args_path, encoding="utf-8") as fh:
         args = json.load(fh)
-    bible_folder = args["folder"]
-    root = os.path.join(ROOT_FOLDER, bible_folder)
+    root = args["root"]
+    names = chapter_names(root, args.get("chapters"))
 
     g2p = g2p_ready()
 
     chapters = {}
     words_total = 0
     dropped_total = 0
-    for name in sorted(os.listdir(root)):
-        folder = os.path.join(root, name)
-        if not os.path.isdir(folder):
-            continue
-        texts = chapter_texts(folder)
+    read = 0
+    for name in names:
+        texts = chapter_texts(os.path.join(root, name))
         if not texts:
             continue
+        read += 1
         lost, words = dropped_in(g2p, texts)
         words_total += words
         if lost:
@@ -97,14 +108,8 @@ def main(args_path):
             chapters[name] = dict(lost.most_common())
 
     report = {
-        "folder": bible_folder,
-        "chapters_read": len(
-            [
-                n
-                for n in os.listdir(root)
-                if os.path.isdir(os.path.join(root, n))
-            ]
-        ),
+        "root": root,
+        "chapters_read": read,
         "chapters_with_dropped_words": len(chapters),
         "words_read": words_total,
         "words_dropped": dropped_total,
