@@ -4,7 +4,7 @@ import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
 import { noop } from "./noop.mjs";
 import { app_code_quiz_backwards_label_answer_validity } from "./app_code_quiz_backwards_label_answer_validity.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
-export function app_code_lesson_validity_base(
+export function app_code_lesson_validity_base({
   batch_get,
   name_id,
   above,
@@ -12,7 +12,7 @@ export function app_code_lesson_validity_base(
   on_question,
   example_answer_label,
   backwards_answer_on_button,
-) {
+}) {
   let quiz_label = example_answer_label;
   let example_question_label = app_code_label_code_question();
   let example_count = 2;
