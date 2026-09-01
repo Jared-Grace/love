@@ -431,6 +431,22 @@ export function bible_glyph_characters() {
       character: "😱",
     },
     {
+      name: "moon",
+      character: "🌙",
+    },
+    {
+      name: "fish",
+      character: "🐟",
+    },
+    {
+      name: "bird",
+      character: "🐦",
+    },
+    {
+      name: "tree",
+      character: "🌳",
+    },
+    {
       name: "altar",
       character: "altar",
     },
