@@ -76,6 +76,12 @@ function reader_of(options) {
         }
       }
     }
+    if (options.moments_subtracted_backwards) {
+      differences = differences.map(function (gap) {
+        let backwards = -gap;
+        return backwards;
+      });
+    }
     let heard = options.heard_counts_presses ? taps.length : differences.length;
     let sorted = differences.slice().sort(ascending);
     let any = differences.length > 0;
@@ -114,6 +120,9 @@ export const red_proof = {
     lag_zero_when_none: reader_of({ lag_zero_when_none: true }),
     no_sort: reader_of({ no_sort: true }),
     missed_derived: reader_of({ missed_derived: true }),
+    moments_subtracted_backwards: reader_of({
+      moments_subtracted_backwards: true,
+    }),
   },
   allowed: {
     no_sort:
