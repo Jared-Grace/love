@@ -1,7 +1,7 @@
+import { app_reply_cards_shortcuts_meeting_responses } from "./app_reply_cards_shortcuts_meeting_responses.mjs";
 import { app_reply_typed_get } from "./app_reply_typed_get.mjs";
 import { app_reply_copy_refresh_chosen } from "./app_reply_copy_refresh_chosen.mjs";
 import { app_reply_key_down_handle } from "./app_reply_key_down_handle.mjs";
-import { app_reply_response_button } from "./app_reply_response_button.mjs";
 import { app_reply_love_all_click } from "./app_reply_love_all_click.mjs";
 import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { property_set } from "./property_set.mjs";
@@ -12,17 +12,12 @@ import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
 import { list_filter_text_includes_not } from "./list_filter_text_includes_not.mjs";
 import { ebible_versions_english_choices_browser } from "./ebible_versions_english_choices_browser.mjs";
-import { clipboard_copy } from "./clipboard_copy.mjs";
 import { log } from "./log.mjs";
-import { list_map_existing } from "./list_map_existing.mjs";
 import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
-import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
-import { app_shared_button } from "./app_shared_button.mjs";
-import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
@@ -111,43 +106,21 @@ export async function app_reply(context) {
     responses_buttons,
     buttons_responses,
   );
-  let card3 = app_shared_container_blue(root);
-  let languages_chosen5 = property_get(
+  app_reply_cards_shortcuts_meeting_responses(
+    root,
     languages_chosen_held,
-    "languages_chosen",
-  );
-  app_reply_main_shortcuts(
-    card3,
-    languages_chosen5,
     languages,
     update,
     buttons_languages,
     buttons_responses,
+    responses,
+    responses_buttons,
+    copy_refresh,
+    typed_reset,
+    buttons_refresh,
+    visible_count_held,
+    choices,
   );
-  let card4 = app_shared_container_blue(root);
-  app_shared_text_body(card4, "4. (Optional) Meeting:");
-  async function lambda5() {
-    await clipboard_copy(
-      "If God wills: I am willing to have a meeting with you and share the word of God! I plan on sending a message to you later to choose a date and time.",
-    );
-  }
-  app_shared_button(card4, "Meeting requested", lambda5);
-  let card5 = app_shared_container_blue(root);
-  app_shared_text_body(card5, "5. (Optional) Choose any responses:");
-  function lambda9(choice) {
-    let r6 = app_reply_response_button(
-      choice,
-      responses,
-      responses_buttons,
-      copy_refresh,
-      typed_reset,
-      buttons_refresh,
-      visible_count_held,
-      card5,
-    );
-    return r6;
-  }
-  list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
     let r8 = await app_reply_copy_refresh_chosen(
       languages_chosen_held,
