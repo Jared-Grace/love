@@ -24,7 +24,7 @@ export function app_code_lesson_expression_choose_order_pair_tree_of_code(
   let second_number = list_get(numbers, 1);
   let third_number = list_get(numbers, 2);
   let fourth_number = list_get(numbers, 3);
-  let tree = app_code_lesson_expression_choose_order_pair_expression_parts(
+  let tree = app_code_lesson_expression_choose_order_pair_expression_parts({
     first_number,
     left_symbol,
     second_number,
@@ -32,6 +32,6 @@ export function app_code_lesson_expression_choose_order_pair_tree_of_code(
     third_number,
     right_symbol,
     fourth_number,
-  );
+  });
   return tree;
 }
