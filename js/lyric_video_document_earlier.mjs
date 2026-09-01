@@ -22,6 +22,8 @@ export async function lyric_video_document_earlier(
   ("Nothing is allowed to move before the start of the song. A time below zero is not a time, and a first line tapped at the very beginning has no lag to take off it - it was never a reaction to anything.");
   ("Every line keeps the moment it lets go as well as the moment it lands, so the whole document slides and nothing about how long each line is shown changes. Moving only the starts would stretch each line by the same amount it was moved, which is a second decision nobody asked for.");
   ("A LINE WITH NO TIME ON IT IS LEFT WITH NO TIME ON IT, AND THE FLOOR AT ZERO IS WHY IT HAD TO BE SAID. Taking a third of a second off nothing gives a third of a second below zero as far as arithmetic is concerned, and the floor then catches that and calls it the start of the song - so a line nobody had heard came out of a lag correction claiming to begin on the first note. A lag is a correction to a moment somebody reacted to, and a line nobody has tapped has no such moment to correct.");
+  ("EACH LINE KEEPS THE MOMENT IT WAS ACTUALLY TAPPED AT, AND THE DOCUMENT KEEPS WHAT WAS TAKEN OFF IT. This runs over the top of the document the taps were just written into, so before it there were two records of a sitting and after it there was one. The lag was the part worth being able to argue with - it is a guess about somebody's hand, and the whole point of taking it off separately was that a later disagreement could be settled against what the hand did - and it was the part being thrown away. Keeping the tapped moment costs one number a line and makes that settlement possible; without it the question cannot be reopened at all, because the only evidence of how late the person pressed has been corrected out of existence.");
+  ("Asked for a second time this still moves the document a second time, and that is left alone rather than guarded against. The command says what it does in its name, the flow that calls it calls it once over lines just written, and a guard would have to decide what a second, different lag on an already-moved document was meant to mean - which is a question for whoever asks it, not for the arithmetic.");
   let seconds = number_from_text(seconds_text);
   let document_timed = await file_read_json(path_document);
   function time_earlier(time) {
@@ -41,12 +43,15 @@ export async function lyric_video_document_earlier(
       start: time_earlier(line.start),
       end: time_earlier(line.end),
       text: line.text,
+      start_tapped: line.start,
+      end_tapped: line.end,
     };
     return moved_line;
   }
   let lines = document_timed.lines.map(line_earlier);
   object_merge_replace(document_timed, {
     lines,
+    earlier_seconds: seconds,
   });
   await file_overwrite_json(path_document, document_timed);
   let r = {
