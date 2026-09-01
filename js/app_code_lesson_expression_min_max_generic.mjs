@@ -75,7 +75,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
   });
   return lesson;
   function above(root) {
-    let r3 = app_code_lesson_expression_min_max_generic_above(
+    let r3 = app_code_lesson_expression_min_max_generic_above({
       root,
       define_render,
       choose,
@@ -84,7 +84,7 @@ export function app_code_lesson_expression_min_max_generic(params) {
       called_name,
       noun,
       short_name,
-    );
+    });
     return r3;
   }
 }

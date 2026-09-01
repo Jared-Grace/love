@@ -10,7 +10,7 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_min_max_generic_above(
+export function app_code_lesson_expression_min_max_generic_above({
   root,
   define_render,
   choose,
@@ -19,8 +19,8 @@ export function app_code_lesson_expression_min_max_generic_above(
   called_name,
   noun,
   short_name,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("the lesson-specific opening line (define_render), then the worked example in BOTH orders - the chosen number on the left and on the right - then the equal-numbers case");
   define_render(root);
   let two = app_code_lesson_expression_min_max_generic_two_numbers();
