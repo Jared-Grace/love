@@ -8,7 +8,7 @@ import { less_than_equal } from "./less_than_equal.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
-export function app_g_verify_home_verse_bar(
+export function app_g_verify_home_verse_bar({
   wrap,
   real_keys,
   approved_index,
@@ -17,9 +17,9 @@ export function app_g_verify_home_verse_bar(
   passages,
   pending,
   open_pending,
-) {
+}) {
   "The row of verse buttons under the hint, one for every passage already written plus a faded one for the verse being written right now, and a tick on each verse the reviewer has already approved. Every button is kept by verse so that whichever one is open can be lit up later without painting the row again.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let bar = html_div_centered(wrap);
   let value = app_shared_spaced_small_gap();
   html_style_margin_top(bar, value);
