@@ -1,7 +1,7 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_documents_gate_run_lines_read } from "./lyric_video_documents_gate_run_lines_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function lyric_video_documents_gate_run() {
   arguments_assert(arguments, 0);
@@ -13,8 +13,7 @@ export async function lyric_video_documents_gate_run() {
   let r2 = await lyric_video_documents_gate_run_lines_read();
   let lines_read = property_get(r2, "lines_read");
   let faults_all = property_get(r2, "faults_all");
-  let paths_json = property_get(r2, "paths_json");
-  let documents = list_size(paths_json);
+  let documents = property_list_size(r2, "paths_json");
   list_empty_is_assert_json(faults_all, {
     hint: "a lyric timing document has lines out of the order they are sung; open it on the timing desk and tap the named line again, or clear both of its moments if it was never heard - never leave one moment set and the other missing",
   });
