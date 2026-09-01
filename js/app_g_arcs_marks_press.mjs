@@ -1,3 +1,4 @@
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_g_arcs_marks_press_mark_listen } from "./app_g_arcs_marks_press_mark_listen.mjs";
 import { app_g_arcs_marks_press_strip_show } from "./app_g_arcs_marks_press_strip_show.mjs";
 import { app_g_arcs_marks_press_go } from "./app_g_arcs_marks_press_go.mjs";
@@ -141,7 +142,7 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
     border: "none",
     "font-size": "0.95rem",
     "font-weight": "bold",
-    color: "#ffffff",
+    color: app_shared_color_white(),
     "background-color": app_g_arcs_moved_color(),
     "box-shadow": "0 1px 6px rgba(0,0,0,0.35)",
     cursor: "pointer",
