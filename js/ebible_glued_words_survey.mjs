@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { ebible_folder_english } from "./ebible_folder_english.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { ebible_folder_korean } from "./ebible_folder_korean.mjs";
@@ -9,7 +10,6 @@ import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { ebible_glued_words_candidates } from "./ebible_glued_words_candidates.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_size } from "./list_size.mjs";
 export async function ebible_glued_words_survey(half_least, parts) {
   "How many words of each translation this repo reads look like a given number of its own words run together, and how many of those are never once spelled apart anywhere in that translation.";
@@ -45,8 +45,7 @@ export async function ebible_glued_words_survey(half_least, parts) {
     );
     let never_spaced = [];
     for (let candidate of candidates) {
-      let spaced = property_get(candidate, "spaced");
-      let never = equal(spaced, 0);
+      let never = property_equals(candidate, "spaced", 0);
       if (never) {
         let word = property_get(candidate, "word");
         list_add(never_spaced, word);
