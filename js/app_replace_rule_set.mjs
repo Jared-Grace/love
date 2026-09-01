@@ -56,10 +56,14 @@ import { app_replace_rule_set_button_rule_on_click_inner } from "./app_replace_r
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   let r4 = app_replace_rule_set_start_indices(context, root);
-  let start_indices = property_get(r4, "start_indices");
+  let start_indices_held = {
+    start_indices: property_get(r4, "start_indices"),
+  };
   let div_proof = property_get(r4, "div_proof");
   let history = property_get(r4, "history");
-  let start = property_get(r4, "start");
+  let start_held = {
+    start: property_get(r4, "start"),
+  };
   let resumed = property_get(r4, "resumed");
   let end = property_get(r4, "end");
   let rule_set_name = property_get(r4, "rule_set_name");
@@ -74,9 +78,10 @@ export async function app_replace_rule_set(context) {
   let goals_count = property_get(r4, "goals_count");
   let goals = property_get(r4, "goals");
   async function on_hint() {
+    let start2 = property_get(start_held, "start");
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
-      start,
+      start2,
       end,
     );
     let rule_next = property_get(second, "rule");
@@ -84,10 +89,15 @@ export async function app_replace_rule_set(context) {
     let index_symbol = property_get(second, "index");
     let right = property_get(index_selected_held, "index_selected");
     if (equal(index_rule, right)) {
-      let ceiling = list_size_half_ceil(start_indices);
-      list_shuffle(start_indices);
-      list_swap_first(start_indices, index_symbol);
-      start_indices = list_take(start_indices, ceiling);
+      let start_indices2 = property_get(start_indices_held, "start_indices");
+      let ceiling = list_size_half_ceil(start_indices2);
+      let list = property_get(start_indices_held, "start_indices");
+      list_shuffle(list);
+      let list2 = property_get(start_indices_held, "start_indices");
+      list_swap_first(list2, index_symbol);
+      let list3 = property_get(start_indices_held, "start_indices");
+      let value6 = list_take(list3, ceiling);
+      property_set(start_indices_held, "start_indices", value6);
       await refresh();
     } else {
       button_rule_on_click_inner(index_rule);
@@ -104,7 +114,9 @@ export async function app_replace_rule_set(context) {
   });
   let label_rules = property_get(r, "label_rules");
   let div_abbreviations = property_get(r, "div_abbreviations");
-  let symbols_invalid_chosen = property_get(r, "symbols_invalid_chosen");
+  let symbols_invalid_chosen_held = {
+    symbols_invalid_chosen: property_get(r, "symbols_invalid_chosen"),
+  };
   let div_rules_buttons = property_get(r, "div_rules_buttons");
   let label_symbols = property_get(r, "label_symbols");
   let div_refresh = property_get(r, "div_refresh");
@@ -129,7 +141,9 @@ export async function app_replace_rule_set(context) {
     refresh_count_increase();
     function each_rule(rule, index) {
       function button_rule_on_click() {
-        start_indices = list_to_indices(start);
+        let list4 = property_get(start_held, "start");
+        let value7 = list_to_indices(list4);
+        property_set(start_indices_held, "start_indices", value7);
         button_rule_on_click_inner(index);
       }
       let rule_result = app_replace_button_rule(
@@ -172,26 +186,37 @@ export async function app_replace_rule_set(context) {
           index_selected_held,
           "index_selected",
         );
+        let symbols_invalid_chosen2 = property_get(
+          symbols_invalid_chosen_held,
+          "symbols_invalid_chosen",
+        );
+        let start_indices3 = property_get(start_indices_held, "start_indices");
+        let start3 = property_get(start_held, "start");
         let record_start = await app_replace_rule_set_symbol_on_click(
           rules_used,
           index_selected3,
           index,
-          start,
-          symbols_invalid_chosen,
+          start3,
+          symbols_invalid_chosen2,
           symbol_buttons,
-          start_indices,
+          start_indices3,
           rule_buttons,
           duration,
           div_symbols,
         );
-        start = property_get(record_start, "start");
-        symbols_invalid_chosen = property_get(
-          record_start,
+        let value9 = property_get(record_start, "start");
+        property_set(start_held, "start", value9);
+        let value4 = property_get(record_start, "symbols_invalid_chosen");
+        property_set(
+          symbols_invalid_chosen_held,
           "symbols_invalid_chosen",
+          value4,
         );
-        start_indices = property_get(record_start, "start_indices");
+        let value8 = property_get(record_start, "start_indices");
+        property_set(start_indices_held, "start_indices", value8);
         let last_state = list_last_property(history, "state");
-        let b = json_equal(start, last_state);
+        let left = property_get(start_held, "start");
+        let b = json_equal(left, last_state);
         if (not(b)) {
           let index2 = property_get(index_selected_held, "index_selected");
           let rule_used = list_get(rules_used, index2);
@@ -199,7 +224,7 @@ export async function app_replace_rule_set(context) {
             fn_name("app_replace_rule_apply"),
             "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
           list_add(history, {
-            state: start,
+            state: property_get(start_held, "start"),
             rule: rule_used,
             index,
           });
@@ -215,26 +240,32 @@ export async function app_replace_rule_set(context) {
       object_merge_set(symbol_button, {
         refresh_sb,
       });
-      let exists = property_exists(symbols_invalid_chosen, index);
+      let object = property_get(
+        symbols_invalid_chosen_held,
+        "symbols_invalid_chosen",
+      );
+      let exists = property_exists(object, index);
       if (exists) {
         app_replace_symbol_tile_invalid(symbol_button);
       }
       return symbol_button;
       function refresh_sb() {
         let state = {
-          start_indices,
+          start_indices: property_get(start_indices_held, "start_indices"),
           index_selected: property_get(index_selected_held, "index_selected"),
           success: property_get(success_held, "success"),
         };
         app_replace_rule_set_refresh_sb(symbol_button, index, state);
       }
     }
-    symbol_buttons = list_map_index(start, symbols_mapper);
+    let list5 = property_get(start_held, "start");
+    symbol_buttons = list_map_index(list5, symbols_mapper);
     ("no success yet?");
     let b2 = property_get(success_held, "success");
     if (not(b2)) {
       ("goal satisfied?");
-      let eq = json_equal(start, end);
+      let left2 = property_get(start_held, "start");
+      let eq = json_equal(left2, end);
       if (eq) {
         property_set(success_held, "success", true);
         list_map_property_invoke(rule_buttons, "refresh_rb");
@@ -267,7 +298,8 @@ export async function app_replace_rule_set(context) {
     if (property_get(success_held, "success")) {
       html_visibility_hidden(div_symbols);
     }
-    let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
+    let start4 = property_get(start_held, "start");
+    let t = app_replace_rule_set_verify_from_try(rules_used, start4, end);
     let found = property_get(t, "found");
     if (not(found)) {
       function symbol_dead(symbol_button) {
@@ -307,10 +339,11 @@ export async function app_replace_rule_set(context) {
     let index_selected4 = property_get(index_selected_held, "index_selected");
     let app_replace_rule_set_button_rule_on_click_inner_answer =
       app_replace_rule_set_button_rule_on_click_inner(index, index_selected4);
-    symbols_invalid_chosen = property_get(
+    let value5 = property_get(
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "symbols_invalid_chosen",
     );
+    property_set(symbols_invalid_chosen_held, "symbols_invalid_chosen", value5);
     let value3 = property_get(
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "index_selected",
