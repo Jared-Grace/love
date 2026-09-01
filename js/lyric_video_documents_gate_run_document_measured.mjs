@@ -9,6 +9,7 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { list_size } from "./list_size.mjs";
 export function lyric_video_documents_gate_run_document_measured() {
+  "Builds the reading that one timed lyric document is put through: how many lines it holds, and every fault in their moments, which are a line given only one of its two moments, a line that ends before it begins, and a line that begins before one written above it.";
   arguments_assert(arguments, 0);
   async function document_measured(path_document) {
     let document_timed = await file_read_json(path_document);

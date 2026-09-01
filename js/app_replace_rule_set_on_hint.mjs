@@ -18,6 +18,7 @@ export async function app_replace_rule_set_on_hint({
   refresh,
   button_rule_on_click_inner,
 }) {
+  "What a player is given when they ask for a hint: the step the goal wants next is worked out, and if the rule they have already chosen is that step then the symbols left to choose between are cut to half with the wanted one among them, and if it is not then the right rule is chosen for them instead.";
   arguments_assert(arguments, 1);
   let start = property_get(start_held, "start");
   let second = app_replace_rule_set_verify_goal_next(rules_parsed, start, end);

@@ -10,6 +10,7 @@ export function app_shared_text_reader_language_ast_picked_declarator(
   named_objects,
   named_calls,
 ) {
+  "Sorts the names declared in a file into the two sorts the reader can follow afterwards: a name filled by a record written out where it stands, and a name filled by a plain call that is handed nothing, which is filed under the name of that call.";
   arguments_assert(arguments, 3);
   for (let declarator of declarators) {
     let named = equal(declarator.id.type, "Identifier");

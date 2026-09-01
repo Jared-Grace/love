@@ -26,6 +26,7 @@ export function app_replace_rule_set_symbols_mapper({
   success_held,
   history,
 }) {
+  "Draws one symbol of the row a player taps, with everything that symbol needs to carry: the button itself, what its tap does, the mark a test finds it by, its look, the way of redrawing itself that it carries about with it, and the wrong-choice mark if this symbol has already been chosen wrongly.";
   arguments_assert(arguments, 1);
   let symbol_button = null;
   async function symbol_on_click() {

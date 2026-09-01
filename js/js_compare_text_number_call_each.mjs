@@ -12,6 +12,7 @@ import { or } from "./or.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_compare_text_number_call_each(compares, kind_of, found) {
+  "Builds the reading that one call is put through: where a named comparison is handed exactly two plain names, and one of those names is known to hold text while the other is known to hold a number, the comparison is written out in words and kept.";
   arguments_assert(arguments, 3);
   function call_each(node) {
     let callee = property_get(node, "callee");
