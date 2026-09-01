@@ -119,9 +119,7 @@ export async function app_g_verify_view(
     value,
   );
   ("show the reviewer their own past suggestions for this verse; Load drops one back into the box to view or build on");
-  await app_g_verify_view_history_show(
-    chapter_code,
-    verse,
+  await app_g_verify_view_history_show(chapter_code, verse, {
     container,
     small_gap,
     suggest_area,
@@ -129,5 +127,5 @@ export async function app_g_verify_view(
     base_key,
     value,
     autosize,
-  );
+  });
 }
