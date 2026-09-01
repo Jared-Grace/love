@@ -23,6 +23,7 @@ export async function lyric_timing_screen_lag_on_measure({
   window_seconds,
   earlier_input,
 }) {
+  "Plays a run of clicks at odd intervals, records when each one sounded and when the listener tapped back, and works the gap between the two into the lag the screen should allow for - refusing to start a second run while one is already going.";
   arguments_assert(arguments, 1);
   if (run.running) {
     return;
