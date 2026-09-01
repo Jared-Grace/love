@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_add } from "./list_add.mjs";
-export async function app_replace_rule_set_symbols_mapper_symbol_on_click(
+export async function app_replace_rule_set_symbols_mapper_symbol_on_click({
   index_selected_held,
   symbols_invalid_chosen_held,
   start_indices_held,
@@ -21,8 +21,8 @@ export async function app_replace_rule_set_symbols_mapper_symbol_on_click(
   div_symbols,
   history,
   refresh,
-) {
-  arguments_assert(arguments, 12);
+}) {
+  arguments_assert(arguments, 1);
   let index_selected = property_get(index_selected_held, "index_selected");
   let symbols_invalid_chosen = property_get(
     symbols_invalid_chosen_held,
