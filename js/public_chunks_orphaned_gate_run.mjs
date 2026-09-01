@@ -1,6 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { public_chunks_orphaned_names_walked } from "./public_chunks_orphaned_names_walked.mjs";
 import { property_get } from "./property_get.mjs";
+import { public_chunks_orphaned_app_names } from "./public_chunks_orphaned_app_names.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_join } from "./list_join.mjs";
+import { log_console } from "./log_console.mjs";
 import { public_chunks_orphaned_baseline_path } from "./public_chunks_orphaned_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -11,10 +15,19 @@ export async function public_chunks_orphaned_gate_run() {
   "Measured against what the folders already carried rather than against zero, because the two folders that are being served still hold theirs and clearing those is a question about what people have in front of them. The development folder holds none, and a ratchet on none is a zero, so the half that churns daily is pinned without being named.";
   "A leftover is found by walking out from each whole script rather than by asking whether any neighbour mentions it. A cluster of dead files references itself, so the neighbour question called two hundred and forty-three files alive that the walk called dead.";
   "HOW MANY SCRIPTS WERE OPENED TRAVELS OUT WITH THE VERDICT. No new leftovers is what three swept folders say and also what three folders nobody is reading any more say, and a build settings edit is all it takes to move one; the count of what was walked is the only part of this answer that falls on the second.";
+  "WHOSE THE LEFTOVERS ARE IS SAID OUT LOUD BEFORE THE REFUSAL, and that line is the whole reason this was rewritten. A leftover is an address, and the reading a deployment does over a red gate is written in function names - so an address names nobody, and a gate naming nobody holds back every app there is rather than the one it is about. Measured on the first of September: three files weighing five hundred and eleven bytes between them held all thirty four apps out of a sending, and the two apps they had been cut out of were spelled inside their own file names the whole time. Said here, the same three files stop exactly those two, whose own promoting is what clears them.";
+  "It is printed rather than added to the offenders, because the two are not the same claim. An offender is a file that should not be in the folder and the record is kept of those; an app is who it belongs to. Put in the list, an app would be written into the record as a leftover and would have to be taken out again by hand once its files were gone.";
+  "Nothing is printed when nothing is wrong. A gate that passes should cost its sweep and no more, and a line naming nobody would be read back as a complaint about the word it was written with.";
   arguments_assert(arguments, 0);
   let told = await public_chunks_orphaned_names_walked();
   let walked = property_get(told, "walked");
   let offenders = property_get(told, "names");
+  let apps = public_chunks_orphaned_app_names(offenders);
+  let any = list_empty_not_is(apps);
+  if (any) {
+    let line = list_join(apps, " ");
+    log_console(line);
+  }
   let path = public_chunks_orphaned_baseline_path();
   let name_write = fn_name("public_chunks_orphaned_baseline_write");
   let f_name = fn_name("public_chunks_orphaned");
