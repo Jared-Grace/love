@@ -37,7 +37,7 @@ export async function app_g_verify_home(context) {
     refresh,
   );
   function render(chapter_shown, status_shown, chapter_state_shown) {
-    app_g_verify_home_render(
+    app_g_verify_home_render({
       chapter_shown,
       status_shown,
       chapter_state_shown,
@@ -47,7 +47,7 @@ export async function app_g_verify_home(context) {
       chapter_code,
       storage_key,
       refresh,
-    );
+    });
   }
   function poll() {
     clearTimeout(poll_timer);
