@@ -14,7 +14,7 @@ import { lyric_timing_lag_said } from "./lyric_timing_lag_said.mjs";
 import { lyric_timing_lag_enough } from "./lyric_timing_lag_enough.mjs";
 import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { html_value_set } from "./html_value_set.mjs";
-export async function lyric_timing_screen_lag_on_measure(
+export async function lyric_timing_screen_lag_on_measure({
   run,
   heard_button,
   told,
@@ -22,8 +22,8 @@ export async function lyric_timing_screen_lag_on_measure(
   seconds_of,
   window_seconds,
   earlier_input,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   if (run.running) {
     return;
   }
