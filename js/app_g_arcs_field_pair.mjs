@@ -2,6 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { app_g_arcs_kept_text } from "./app_g_arcs_kept_text.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { text_runs_changed } from "./text_runs_changed.mjs";
@@ -10,6 +12,7 @@ import { list_add } from "./list_add.mjs";
 export function app_g_arcs_field_pair({
   parent,
   moved_fields,
+  held_fields,
   name,
   value,
   shape,
@@ -29,11 +32,20 @@ export function app_g_arcs_field_pair({
   "BOTH HALVES GO ONTO THE LIST THE TOURING PRESS READS, held together as one change rather than added as two rows. A change is a comparison and the tour selects a comparison, so anything downstream that has one half and wants the other would otherwise be guessing that the row after it is the row it wants.";
   "THIS IS THE ONLY PLACE THAT CAN PUT A CHANGE ON THAT LIST. Whether a field moved is answered here and nowhere above; the page as drawn says the same thing only in colour, so anything asking later would be reading marks back off a drawing instead of being told.";
   "A LINE THAT NEVER MOVED IS ON NO LIST AT ALL, which is what keeps the tour the length of the changes rather than the length of the arc.";
+  "A LINE THAT WAS ASKED ABOUT AND KEPT SAYS SO UNDERNEATH, and that is the whole of what a reviewer filing notes in waves could not otherwise find out. Their note is cleared away by the answering whether the wording moved or not, so the next drawing of a kept line is character for character the drawing of a line nobody has ever written about - the same page, saying two opposite things with the same picture.";
+  "IT IS SAID ONLY WHERE NOTHING MOVED, because a line that moved has already answered the note by moving. Both said at once would be one sentence claiming the wording was kept sitting directly under two wordings that differ.";
+  "IT IS NOT ON THE TOURING PRESS'S LIST. The tour steps through comparisons, and this is not one: there is nothing to hold against anything, only a fact about a line that stands. Put on the list it would be a stop with both halves the same, which reads as a fault in the tour.";
   arguments_assert(arguments, 1);
   let moved = property_or_null(moved_fields, name);
   let still = equal(moved, null);
   if (still) {
     app_g_arcs_field_shaped(parent, name, value, shape, voice_color);
+    let held = property_or_null(held_fields, name);
+    let kept = not_equal(held, null);
+    if (kept) {
+      let said = app_g_arcs_kept_text();
+      app_g_arcs_field_shaped(parent, "kept", said, "aside", voice_color);
+    }
     return;
   }
   let before = property_get(moved, "before");
