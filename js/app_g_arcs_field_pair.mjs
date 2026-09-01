@@ -9,7 +9,7 @@ import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
-export function app_g_arcs_field_moved(
+export function app_g_arcs_field_pair(
   parent,
   row,
   moved_fields,
