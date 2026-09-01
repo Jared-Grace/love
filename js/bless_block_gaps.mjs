@@ -24,10 +24,12 @@ export function bless_block_gaps(x, y) {
     let at = add(x, across);
     return at;
   }
+  let storeys_cycle = property_get(measures, "storeys_cycle");
   function building_at(index) {
     let at = building_x(index);
     let families = list_get(cycle, index);
-    let building = bless_building(at, y, families);
+    let storeys = list_get(storeys_cycle, index);
+    let building = bless_building(at, y, families, storeys);
     return building;
   }
   let buildings = list_map(indexes, building_at);

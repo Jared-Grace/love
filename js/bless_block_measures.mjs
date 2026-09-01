@@ -25,11 +25,20 @@ export function bless_block_measures() {
   let sizes = bless_place_sizes();
   let count = property_get(sizes, "block");
   let cycle = bless_building_families_cycle();
-  function width_of(families) {
-    let width = multiply(families, slab);
+  let storeys_cycle = bless_building_storeys_cycle();
+  ("How wide a building is, is its families divided between its FLOORS and not its families");
+  ("laid out along the ground. A house with four families on two floors is two columns wide");
+  ("and a house with four on one floor is four, and the two hold exactly the same people. So");
+  ("the width has to be asked for with both numbers in hand; either one alone answers a");
+  ("different question.");
+  function width_at(index) {
+    let families = list_get(cycle, index);
+    let storeys = list_get(storeys_cycle, index);
+    let columns = bless_building_columns(families, storeys);
+    let width = multiply(columns, slab);
     return width;
   }
-  let widths = list_map(cycle, width_of);
+  let widths = range_map(count, width_at);
   function offset_at(index) {
     let before = list_take(widths, index);
     let across = list_sum(before);
@@ -45,6 +54,7 @@ export function bless_block_measures() {
     gap,
     count,
     cycle,
+    storeys_cycle,
     widths,
     offsets,
     span,
