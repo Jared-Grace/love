@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { app_code_lesson_expression_brackets_worked_card } from "./app_code_lesson_expression_brackets_worked_card.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } from "./app_code_lesson_expression_choose_order_brackets_moved_other_pair.mjs";
@@ -24,22 +25,27 @@ export function app_code_lesson_expression_brackets_moved_intro(root) {
     right_bracket,
     " is solved first",
   ]);
-  app_code_lesson_expression_brackets_worked_card(
-    root,
-    heading_none,
-    false,
-    true,
-    true,
-    true,
-    false,
-  );
-  app_code_lesson_expression_brackets_worked_card(
-    root,
-    heading_other,
-    false,
-    true,
-    true,
-    false,
-    true,
+  each(
+    [
+      {
+        root,
+        heading: heading_none,
+        left: false,
+        middle: true,
+        right: true,
+        brackets_left: true,
+        inner_or: false,
+      },
+      {
+        root,
+        heading: heading_other,
+        left: false,
+        middle: true,
+        right: true,
+        brackets_left: false,
+        inner_or: true,
+      },
+    ],
+    app_code_lesson_expression_brackets_worked_card,
   );
 }
