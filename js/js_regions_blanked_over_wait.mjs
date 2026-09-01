@@ -19,11 +19,10 @@ export function js_regions_blanked_over_wait(ast) {
     "FunctionExpression",
     "ArrowFunctionExpression",
   ];
-  let emptier_names = [
-    fn_name("html_clear"),
-    fn_name("html_clear_context"),
-    fn_name("html_text_set"),
-  ];
+  let f_name = fn_name("html_clear");
+  let f_name2 = fn_name("html_clear_context");
+  let f_name3 = fn_name("html_text_set");
+  let emptier_names = [f_name, f_name2, f_name3];
   function scan_here(node, decide) {
     if (equal(node, null)) {
       return false;
@@ -102,7 +101,8 @@ export function js_regions_blanked_over_wait(ast) {
       return null;
     }
     ("setting a word is only an emptying when the word is nothing");
-    let text_set_is = equal(call.callee.name, fn_name("html_text_set"));
+    let right = fn_name("html_text_set");
+    let text_set_is = equal(call.callee.name, right);
     if (text_set_is) {
       let second = call.arguments[1];
       let literal_is = second && equal(second.type, "Literal");

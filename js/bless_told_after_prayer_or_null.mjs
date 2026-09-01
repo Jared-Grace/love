@@ -22,9 +22,9 @@ export function bless_told_after_prayer_or_null(rung_before, rung_now, faces) {
   ("world falls through to the count instead, which is the truer line anyway: what the last");
   ("prayer covered rather than what it unlocked, because it unlocked nothing.");
   ("The count is the faces that actually LIT, handed in from the prayer, and never the size");
-  ("of the rung. A household rung reaches three people every time it is prayed, but two of");
-  ("those three are usually already blessed from earlier prayers, and the player watched");
-  ("exactly one face light up. Saying three there is a number the player can see is wrong,");
+  ("of the rung. A household rung reaches a whole family every time it is prayed, but most of");
+  ("them are usually already blessed from earlier prayers, and the player watched");
+  ("exactly one face light up. Saying the family size there is a number nobody saw happen,");
   ("which teaches them that the line is decoration rather than news.");
   ("Fewer than two says nothing, and that one test covers two different quiet cases. One");
   ("new face needs no sentence - the player just watched it light, and a line repeating it");
