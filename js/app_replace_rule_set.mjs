@@ -1,14 +1,8 @@
+import { app_replace_rule_set_on_hint } from "./app_replace_rule_set_on_hint.mjs";
 import { app_replace_rule_set_symbols_mapper } from "./app_replace_rule_set_symbols_mapper.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
-import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
-import { list_index_of_json } from "./list_index_of_json.mjs";
-import { equal } from "./equal.mjs";
-import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
-import { list_shuffle } from "./list_shuffle.mjs";
-import { list_swap_first } from "./list_swap_first.mjs";
-import { list_take } from "./list_take.mjs";
 import { app_replace_rule_set_label_rules } from "./app_replace_rule_set_label_rules.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_get } from "./list_get.mjs";
@@ -69,31 +63,17 @@ export async function app_replace_rule_set(context) {
   let goals_count = property_get(r4, "goals_count");
   let goals = property_get(r4, "goals");
   async function on_hint() {
-    let start2 = property_get(start_held, "start");
-    let second = app_replace_rule_set_verify_goal_next(
+    let r6 = await app_replace_rule_set_on_hint(
+      start_held,
       rules_parsed,
-      start2,
       end,
+      rules_used_held,
+      index_selected_held,
+      start_indices_held,
+      refresh,
+      button_rule_on_click_inner,
     );
-    let rule_next = property_get(second, "rule");
-    let list11 = property_get(rules_used_held, "rules_used");
-    let index_rule = list_index_of_json(list11, rule_next);
-    let index_symbol = property_get(second, "index");
-    let right = property_get(index_selected_held, "index_selected");
-    if (equal(index_rule, right)) {
-      let start_indices2 = property_get(start_indices_held, "start_indices");
-      let ceiling = list_size_half_ceil(start_indices2);
-      let list = property_get(start_indices_held, "start_indices");
-      list_shuffle(list);
-      let list2 = property_get(start_indices_held, "start_indices");
-      list_swap_first(list2, index_symbol);
-      let list3 = property_get(start_indices_held, "start_indices");
-      let value = list_take(list3, ceiling);
-      property_set(start_indices_held, "start_indices", value);
-      await refresh();
-    } else {
-      button_rule_on_click_inner(index_rule);
-    }
+    return r6;
   }
   let r = app_replace_rule_set_label_rules({
     root,
@@ -129,8 +109,8 @@ export async function app_replace_rule_set(context) {
   if (null_is(rules_used_all)) {
     property_set(rules_used_held, "rules_used", rules_parsed);
   } else {
-    let value12 = list_get(rules_used_all, goal_index);
-    property_set(rules_used_held, "rules_used", value12);
+    let value = list_get(rules_used_all, goal_index);
+    property_set(rules_used_held, "rules_used", value);
   }
   let rules_used2 = property_get(rules_used_held, "rules_used");
   app_replace_rule_set_abbreviations(rules_used2, div_abbreviations);
@@ -139,8 +119,8 @@ export async function app_replace_rule_set(context) {
     refresh_count_increase();
     function each_rule(rule, index) {
       function button_rule_on_click() {
-        let list4 = property_get(start_held, "start");
-        let value7 = list_to_indices(list4);
+        let list = property_get(start_held, "start");
+        let value7 = list_to_indices(list);
         property_set(start_indices_held, "start_indices", value7);
         button_rule_on_click_inner(index);
       }
