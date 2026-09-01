@@ -24,8 +24,8 @@ export function app_shared_bible_subset_screen_generic(
       back,
     );
   }
-  app_shared_bible_subset_sorted_choose(
-    root,
+  app_shared_bible_subset_sorted_choose({
+    container: root,
     options,
     chosen,
     name_property,
@@ -33,5 +33,5 @@ export function app_shared_bible_subset_screen_generic(
     on_change,
     choices_label,
     on_sort_change,
-  );
+  });
 }

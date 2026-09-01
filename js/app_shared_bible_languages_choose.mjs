@@ -56,14 +56,14 @@ export function app_shared_bible_languages_choose(
   }
   let choices_label = app_shared_languages_prompt_text();
   let key_property = language_code_key();
-  app_shared_bible_subset_sorted_choose(
-    content,
-    languages,
+  app_shared_bible_subset_sorted_choose({
+    container: content,
+    options: languages,
     chosen,
-    "name",
+    name_property: "name",
     key_property,
     on_change,
     choices_label,
     on_sort_change,
-  );
+  });
 }
