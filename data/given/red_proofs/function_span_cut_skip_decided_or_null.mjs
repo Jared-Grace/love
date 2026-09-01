@@ -6,7 +6,7 @@ import { text_size_1 } from "../../../js/text_size_1.mjs";
 import { function_part_name_or_null } from "../../../js/function_part_name_or_null.mjs";
 import { function_name_word_repeated_is } from "../../../js/function_name_word_repeated_is.mjs";
 
-("Sixteen wrong ways of deciding whether a run of lines should be stepped over, kept so the corpus can be asked again whether it still tells them apart.");
+("Seventeen wrong ways of deciding whether a run of lines should be stepped over, kept so the corpus can be asked again whether it still tells them apart.");
 
 ("This is the first reader proved this way that is not a checker of numbers - it hands back a reason or nothing at all, and what a caller acts on is which reason fired and which two words it names. So the wrong versions here are mostly reasons removed, reasons put in a different order, and reasons naming the wrong word, rather than arithmetic done differently.");
 
@@ -126,5 +126,8 @@ export const red_proof = {
     camel_not_spellable: reader_of({ camel_not_spellable: true }),
     never_taken: reader_of({ never_taken: true }),
   },
-  allowed: {},
+  allowed: {
+    no_handed_out:
+      "Dropping the check for a name a pass handed out turns nothing down that stays turned down, because the naming step asks that same question itself and asks it first - function_part_name_or_null opens by handing back nothing for exactly those words, before it looks at anything else. So a run that would have been stopped for that reason falls through to the reason for a word that cannot be spelled, one line further down, and arrives at the same four things said in the same order. Only the sentence saying why differs, and that sentence is deliberately not pinned. This holds for every word there is rather than for the words in these cases, so no case can close it. It stops holding the day that opening line moves or goes, or the day the sentence saying why starts being checked, and either of those wants a case here rather than this let-off.",
+  },
 };
