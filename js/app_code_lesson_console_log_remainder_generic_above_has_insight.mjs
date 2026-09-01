@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { range } from "./range.mjs";
 import { each } from "./each.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-export function app_code_lesson_console_log_remainder_generic_above_has_insight(
+export function app_code_lesson_console_log_remainder_generic_above_has_insight({
   divisor,
   intro,
   root,
@@ -13,8 +13,8 @@ export function app_code_lesson_console_log_remainder_generic_above_has_insight(
   percent,
   modulo_fn,
   insight,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r4 = app_code_lesson_console_log_remainder_generic_above_remainder_texts(
     divisor,
     intro,
