@@ -12,7 +12,7 @@ import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs
 import { app_g_verify_view_draft_drop } from "./app_g_verify_view_draft_drop.mjs";
 import { html_display_none } from "./html_display_none.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-export function app_g_verify_view_suggest_and_reviewed_bars(
+export function app_g_verify_view_suggest_and_reviewed_bars({
   container,
   small_gap,
   suggest_area,
@@ -21,8 +21,8 @@ export function app_g_verify_view_suggest_and_reviewed_bars(
   draft_key,
   base_key,
   value,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("the badge is held on an object rather than under a name of its own because two buttons share it: the one below writes it when the loop's answer comes back, and the Send button above reads it to hide a badge a fresh suggestion has superseded. A name would give each of them its own copy the moment these two halves were ever pulled apart; setting something on an object changes the one thing both are looking at, so they go on agreeing.");
   let reviewed = {};
   let suggest_bar = html_div(container);
