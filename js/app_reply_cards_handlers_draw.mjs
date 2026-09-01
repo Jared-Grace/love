@@ -77,7 +77,7 @@ export function app_reply_cards_handlers_draw(
     responses_buttons,
     buttons_responses,
   );
-  app_reply_cards_shortcuts_meeting_responses(
+  app_reply_cards_shortcuts_meeting_responses({
     root,
     languages_chosen_held,
     languages,
@@ -91,7 +91,7 @@ export function app_reply_cards_handlers_draw(
     buttons_refresh,
     visible_count_held,
     choices,
-  );
+  });
   async function copy_refresh() {
     let r8 = await app_reply_copy_refresh_chosen(
       languages_chosen_held,
