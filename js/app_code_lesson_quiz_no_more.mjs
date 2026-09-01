@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_lcli } from "./app_code_lesson_quiz_lcli.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_next_none_is } from "./app_code_lesson_next_none_is.mjs";
-export function app_code_lesson_quiz_no_more(
+export function app_code_lesson_quiz_no_more({
   info,
   qa,
   container_blue_light,
@@ -10,8 +10,8 @@ export function app_code_lesson_quiz_no_more(
   parent,
   context,
   quizzes,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r4 = app_code_lesson_quiz_lcli(
     info,
     qa,
