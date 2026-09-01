@@ -8,7 +8,7 @@ import { list_filter_index } from "./list_filter_index.mjs";
 import { js_fold_blocks } from "./js_fold_blocks.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { functions_fold_shape_forget } from "./functions_fold_shape_forget.mjs";
-export function functions_fold_sites_pairs_candidates(
+export function functions_fold_sites_pairs_candidates({
   candidates,
   block_tallies,
   x_wanted,
@@ -18,8 +18,8 @@ export function functions_fold_sites_pairs_candidates(
   x_ast,
   sites,
   x_name,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   for (let f_name of candidates) {
     try {
       let f_tallies = block_tallies[f_name];

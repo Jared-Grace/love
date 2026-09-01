@@ -56,7 +56,7 @@ export function functions_fold_sites_pairs(
     let list = x_callees.filter(lambda6);
     let x_wanted = list_tally(list);
     let x_ast = functions_fold_shape_of(x_name, shapes, entries);
-    functions_fold_sites_pairs_candidates(
+    functions_fold_sites_pairs_candidates({
       candidates,
       block_tallies,
       x_wanted,
@@ -66,7 +66,7 @@ export function functions_fold_sites_pairs(
       x_ast,
       sites,
       x_name,
-    );
+    });
   }
   return sites;
 }
