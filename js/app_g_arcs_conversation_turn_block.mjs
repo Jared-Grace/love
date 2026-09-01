@@ -5,7 +5,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { app_g_arcs_field_pair } from "./app_g_arcs_field_pair.mjs";
 import { app_g_arcs_turn_block } from "./app_g_arcs_turn_block.mjs";
 export function app_g_arcs_conversation_turn_block({
@@ -26,7 +25,7 @@ export function app_g_arcs_conversation_turn_block({
   "THE BOX IS HANDED BACK RATHER THAN KEPT, because which conversation is open outlives the turn that opened it. Every turn after this one belongs in the same box until another turn says it starts a conversation, so the answer is the state of the reading and not a thing about this card.";
   "OPENING A CONVERSATION AND DRAWING A TURN ARE ONE STEP HERE AND NOT TWO, because only the card knows which of them is wanted. Split apart, the caller would have to ask the card whether it starts a conversation, and then the same question would be answered in two places against one field.";
   "THE CATCH-UP IS MARKED FROM THE CARD THAT OPENED THE CONVERSATION, which is the same card the words themselves came off. What happened to a person between conversations belongs to no turn, so the store gives it the number of the first turn beneath it - and reading its previous wording off any other card would be reading a different conversation's account of it.";
-  "THE MARKING IS ASKED FOR ONLY WHERE THERE IS A LINE TO MARK, and that is what the drawn row being handed over settles. It used to be asked for whether or not the catch-up had been written, which was harmless only because a mark with no line to put it on drew nothing; asked for a row that was never made, it would be asked about nothing at all.";
+  "THE CATCH-UP IS DRAWN ONLY WHERE ONE WAS WRITTEN, and asking for it is one call rather than a line drawn and then a mark added to it. Between conversations most people have nothing happen to them, and an empty row carrying a label and no words reads as a catch-up somebody forgot to fill in.";
   arguments_assert(arguments, 1);
   let starting = property_get(card, "conversation_first");
   if (starting) {
@@ -43,19 +42,13 @@ export function app_g_arcs_conversation_turn_block({
     let catch_up = property_get(card, "catch_up");
     let caught_up = text_empty_not_is(catch_up);
     if (caught_up) {
-      let row = app_g_arcs_field_shaped(
-        conversation_block,
-        catch_up_name,
-        catch_up,
-        catch_up_shape,
-        voice_color,
-      );
       let moved = property_get(card, "moved");
       app_g_arcs_field_pair(
         conversation_block,
-        row,
         moved,
         catch_up_name,
+        catch_up,
+        catch_up_shape,
         voice_color,
       );
     }
