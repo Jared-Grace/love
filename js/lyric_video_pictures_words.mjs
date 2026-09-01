@@ -9,8 +9,8 @@ export function lyric_video_pictures_words(pictures) {
   ("THEY COME AFTER THE SONG SO THAT THE SONG STAYS THE SECOND INPUT HOWEVER MANY THERE ARE. What carries the sound has to be named by its number further along, and a number that moved with the count of the pictures would be a video that lost its song the first time anybody added one - silently, because a video with pictures and no sound still plays.");
   ("The path is handed over as its own word and is never joined to anything. A song and a picture are both usually called something with a space in it, and a word cannot be split back into two by what it contains.");
   function picture_words(picture) {
-    let words = ["-loop", "1", "-i", picture.path];
-    return words;
+    let words_picture = ["-loop", "1", "-i", picture.path];
+    return words_picture;
   }
   let nested = list_map(pictures, picture_words);
   let words = list_flat(nested);
