@@ -1,6 +1,5 @@
+import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { divide } from "./divide.mjs";
 import { number_is } from "./number_is.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
@@ -18,8 +17,7 @@ export function lyric_timing_lines_timed(starts, texts, duration) {
   ("A LINE ENDS WHERE THE NEXT TAPPED LINE BEGINS, WHICH IS NOT ALWAYS THE NEXT LINE. Somebody who stopped tapping partway leaves a run of untimed lines behind them, and the line before that run has to end somewhere; leaning on the line immediately after it would lean on nothing. So the search walks forward to the next line that has a beginning, and where there is none - the run reaches the end of the passage - the ordinary last-line rule applies and it runs to the end of the song.");
   let gap = 0.05;
   function seconds_rounded(seconds) {
-    let hundredths = multiply_round(seconds, 100);
-    let rounded = divide(hundredths, 100);
+    let rounded = number_hundredths_rounded(seconds);
     return rounded;
   }
   function timed_is(start) {
