@@ -1,3 +1,4 @@
+import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,6 +20,14 @@ export function app_g_bless_overlay_blessed(container_map) {
   let div_map = property_get(drawn, "div_map");
   let wash = property_get(drawn, "wash");
   let player_img_c = property_get(drawn, "player_img_c");
+  ("The doors along the street, drawn once here with the ground they stand in. A door never");
+  ("moves, is never earned and cannot be prayed for, so it is made with the map rather than");
+  ("worked out again on every step like the marks above it.");
+  ("It lies UNDER the lit houses as well as under the halos. A door is part of the building");
+  ("it is set into, so when that building lights up the door has to light up with it - and");
+  ("it only can while the light is being laid over the door rather than the door over it.");
+  let doors = html_div(div_map);
+  app_g_bless_doors_draw(doors, blocks);
   ("The layer the lit houses are drawn on, made BEFORE the glows so that it sits under");
   ("them. Both lie flat on the ground, so which one is made first is the whole of what");
   ("decides which covers the other - and a halo saying somebody has been prayed for must");
