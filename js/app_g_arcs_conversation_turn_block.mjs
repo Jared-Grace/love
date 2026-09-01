@@ -8,7 +8,7 @@ import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { app_g_arcs_field_moved } from "./app_g_arcs_field_moved.mjs";
 import { app_g_arcs_turn_block } from "./app_g_arcs_turn_block.mjs";
-export function app_g_arcs_conversation_turn_block(
+export function app_g_arcs_conversation_turn_block({
   card,
   conversation_block,
   block,
@@ -17,7 +17,7 @@ export function app_g_arcs_conversation_turn_block(
   catch_up_shape,
   nickname,
   bench,
-) {
+}) {
   "$plain voice_color";
   "$plain catch_up_name";
   "$plain catch_up_shape";
@@ -27,7 +27,7 @@ export function app_g_arcs_conversation_turn_block(
   "OPENING A CONVERSATION AND DRAWING A TURN ARE ONE STEP HERE AND NOT TWO, because only the card knows which of them is wanted. Split apart, the caller would have to ask the card whether it starts a conversation, and then the same question would be answered in two places against one field.";
   "THE CATCH-UP IS MARKED FROM THE CARD THAT OPENED THE CONVERSATION, which is the same card the words themselves came off. What happened to a person between conversations belongs to no turn, so the store gives it the number of the first turn beneath it - and reading its previous wording off any other card would be reading a different conversation's account of it.";
   "THE MARKING IS ASKED FOR ONLY WHERE THERE IS A LINE TO MARK, and that is what the drawn row being handed over settles. It used to be asked for whether or not the catch-up had been written, which was harmless only because a mark with no line to put it on drew nothing; asked for a row that was never made, it would be asked about nothing at all.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let starting = property_get(card, "conversation_first");
   if (starting) {
     conversation_block = app_g_arcs_depth_block(block, 1);
