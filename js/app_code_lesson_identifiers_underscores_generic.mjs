@@ -13,7 +13,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_identifiers_underscores_generic(
+export function app_code_lesson_identifiers_underscores_generic({
   separator_invalid_name,
   separator_invalid,
   separator_valid_name,
@@ -21,7 +21,7 @@ export function app_code_lesson_identifiers_underscores_generic(
   defines_after,
   identifier_symbols_types_adds,
   defines_invert,
-) {
+}) {
   function above(root) {
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
