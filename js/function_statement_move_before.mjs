@@ -1,9 +1,8 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_ast_body } from "./function_ast_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_statement_move_before_refusals } from "./js_statement_move_before_refusals.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { js_statement_move_before } from "./js_statement_move_before.mjs";
 import { function_transform } from "./function_transform.mjs";
 import { function_auto } from "./function_auto.mjs";
@@ -29,8 +28,7 @@ export async function function_statement_move_before(
     address,
     address_before,
   );
-  let empty_is = list_empty_is(refusals);
-  let refused = not(empty_is);
+  let refused = list_empty_not_is(refusals);
   if (refused) {
     let held = {
       moved: false,
