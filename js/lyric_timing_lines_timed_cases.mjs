@@ -115,6 +115,24 @@ export function lyric_timing_lines_timed_cases() {
       ],
       why: "a passage opened and never tapped at all comes back with nothing timed, so saving it cannot write a document claiming the whole song was heard at once",
     },
+    {
+      starts: [2.69134, 5.87211],
+      texts: ["Praise Him", "all His angels"],
+      duration: 12.3456,
+      lines: [
+        {
+          start: 2.69,
+          end: 5.82,
+          text: "Praise Him",
+        },
+        {
+          start: 5.87,
+          end: 12.35,
+          text: "all His angels",
+        },
+      ],
+      why: "moments as they actually arrive off a hand, with the digits nobody can tap to still on them, so an ending worked out from one of them and the length of the song are cut down as well as a beginning",
+    },
   ];
   return cases;
 }
