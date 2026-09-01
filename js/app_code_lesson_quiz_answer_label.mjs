@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_on_answer } from "./app_code_lesson_quiz_on_answer.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz_answer_label(
+export function app_code_lesson_quiz_answer_label({
   info,
   qa,
   container_blue_light,
@@ -10,8 +10,8 @@ export function app_code_lesson_quiz_answer_label(
   context,
   quizzes,
   refresh,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_code_lesson_quiz_on_answer({
     info,
     qa,
