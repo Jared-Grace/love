@@ -40,8 +40,8 @@ export function lyric_video_filter_text(
       fitted;
     let shown = "enable='between(t," + picture.start + "," + picture.end + ")'";
     let lay = under + fitted + "overlay=x=(W-w)/2:y=(H-h)/2:" + shown + over;
-    let steps = [fit, lay];
-    return steps;
+    let steps_picture = [fit, lay];
+    return steps_picture;
   }
   let nested = list_map_index(pictures, picture_steps);
   let steps = list_flat(nested);
