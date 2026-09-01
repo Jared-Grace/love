@@ -10,6 +10,7 @@ export function red_proof_wrong_refused(
   cases,
   expected_key,
 ) {
+  "Asks every wrong version of the reader every case the corpus writes down, and hands back which cases refused which version, together with the versions no case refused at all.";
   arguments_assert(arguments, 4);
   let refused = {};
   let unrefused = [];
