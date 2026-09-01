@@ -28,6 +28,7 @@ export function app_g_arcs_turn_block(
   "THE BOX IS THE UNIT BECAUSE THE NOTE IS FILED FROM IT. The printed page is read straight down and a turn there is three lines among hundreds; here a turn is a thing with a press on it, and everything needed to judge it has to be inside the same box as that press or the reviewer is comparing two places on a screen.";
   "THE HEADING COUNTS WHAT MOVED IN THE TURN, and that is what makes a long arc skimmable at all. The marks on the lines themselves are found only by whoever is looking at those lines; a reviewer scrolling past a turn at speed reads the heading and nothing else, so a turn that has been rewritten has to say so in the one thing that is always read.";
   "THE HEADING CHANGES COLOUR AS WELL AS WORDS, because a count is a small thing at the size a heading is drawn. The colour is caught by an eye that is moving; the count is read once the eye has stopped.";
+  "THE TWO NUMBERS IN THE HEADING ARE HELD APART BY A MARK AND NOT BY SPACE. Which turn this is and how many of its lines moved are both numbers, and a page collapses a run of spaces to one - so turn four with one line moved was drawn as turn 4 1 moved, which reads as turn forty-one.";
   "THE OPENER IS SHOWN ON EVERY TURN, which is where this parts from the printed page. There it is printed only when it changes, because a reader going straight down carries the last one they saw; a box is picked up on its own and has to say what the person was answering.";
   "THE MOMENT THEY BELIEVE IS SHOWN AND SHOWN LOUDLY, on the one turn that carries it. It is the only line of a turn that is nobody speaking, and it is the thing a reviewer is really reading for.";
   "THE NUMBER MOVED OUT OF THE LINE AND INTO A HEADING OF ITS OWN. It used to sit in front of what the person said, so the one string on the page held two unrelated facts - which turn this is, and what was spoken in it - and the words the reviewer came to read started a little further right on every card. Standing over the box it labels the whole turn, which is what it was always naming.";
@@ -53,7 +54,7 @@ export function app_g_arcs_turn_block(
   let said = text_combine_multiple(["turn ", v]);
   if (changed) {
     let counted = String(moved_count);
-    said = text_combine_multiple(["turn ", v, "   ", counted, " moved"]);
+    said = text_combine_multiple(["turn ", v, "  ·  ", counted, " moved"]);
   }
   let heading = html_div_text(block, said);
   html_style_assign(heading, {
