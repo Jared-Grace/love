@@ -3,12 +3,15 @@ export function red_proof_cases_claims_unmatched_cases() {
   arguments_assert(arguments, 0);
   ("Cases written out beside the ones a reading should pick out of them, for the reading that catches a case claiming to be the only one catching something when it catches nothing others do not.");
   ("THE WORDS HERE ARE REAL ONES. The first is the sentence that stood in a corpus for the whole of a working day saying a case sat exactly on a line the line was nowhere near, and it is here because a check nothing has ever refused is the thing this whole family of files exists to be suspicious of. It was found by a person reading a printed table, which is the way that does not happen again.");
-  ("THE THIRD IS THE ONE THAT MUST NOT BE CAUGHT, and it is why the words looked for are four and not one. It says a tap is the only record of something, which is a remark about what is in front of it rather than a claim about the other cases - and a reading that took the bare word for a claim would ask its author to reword a true sentence. Two of the four cases here are things that must be let through, because a catcher is only as good as what it declines to catch.");
+  ("THE THIRD IS THE ONE THAT MUST NOT BE CAUGHT, and it is why the words looked for are four and not one. It says a tap is the only record of something, which is a remark about what is in front of it rather than a claim about the other cases - and a reading that took the bare word for a claim would ask its author to reword a true sentence. Two of the cases here are things that must be let through, because a catcher is only as good as what it declines to catch.");
   ("A case is looked at only when it is already known to catch nothing others do not, so both lists are handed in. The first list is the cases catching nothing at all and the second the cases catching nothing alone; a claim made from either is equally false, and the same sentence is written into both to say so.");
+  ("THE LAST TWO WERE ADDED BY WRITING THE WRONG VERSIONS, NOT BY THINKING OF MORE CASES. A version that never puts the words into one case before looking at them, and a version that reads the second list before the first, were both refused by nothing at all - the sentences here happened to be written in small letters throughout, and no case had a claim standing in both lists at once. Neither gap was visible from this file; both were visible the moment something wrong was asked to get past it.");
   let false_claim =
     "Eight of ten is exactly the line, and exactly the line is over it. A version drawn at the same place but refusing to count the boundary in goes red here and nowhere else.";
   let true_claim =
     "A version asking how many were missed rather than what share was answered would write a lag into the box off two presses, and this is the only case that tells the two apart.";
+  let capital_claim =
+    "The only case here that tells those two apart is this one, and nothing else written down holds that version still.";
   let about_the_data =
     "The corrected moment has been floored at zero, so the tap is the only record of where the line was actually heard.";
   let no_claim =
@@ -46,6 +49,33 @@ export function red_proof_cases_claims_unmatched_cases() {
         },
       ],
       unmatched: [7],
+    },
+    {
+      name: "the same claim opening a sentence, so its first letter is a capital and the words are only found by a reading that puts the sentence into one case first",
+      idle: [],
+      redundant: [
+        {
+          index: 5,
+          described: capital_claim,
+        },
+      ],
+      unmatched: [5],
+    },
+    {
+      name: "a claim standing in each list at once comes back with the one that refuses nothing at all first, because that is the worse fault and the order is how it is read",
+      idle: [
+        {
+          index: 2,
+          described: false_claim,
+        },
+      ],
+      redundant: [
+        {
+          index: 9,
+          described: true_claim,
+        },
+      ],
+      unmatched: [2, 9],
     },
     {
       name: "a sentence saying a tap is the only record of something is a remark about the numbers in front of it, not a claim about the other cases, and is let through",
