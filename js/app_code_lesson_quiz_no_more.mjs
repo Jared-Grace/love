@@ -12,7 +12,7 @@ export function app_code_lesson_quiz_no_more({
   quizzes,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_lcli(
+  let r4 = app_code_lesson_quiz_lcli({
     info,
     qa,
     container_blue_light,
@@ -20,7 +20,7 @@ export function app_code_lesson_quiz_no_more({
     parent,
     context,
     quizzes,
-  );
+  });
   let qli = property_get(r4, "qli");
   let on_question = property_get(r4, "on_question");
   let answer_label = property_get(r4, "answer_label");
