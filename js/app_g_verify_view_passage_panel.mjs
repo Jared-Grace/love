@@ -57,15 +57,15 @@ export function app_g_verify_view_passage_panel({
         }
       }
       lines.forEach(lambda7);
-      app_g_verify_view_highlight_lines(
-        lis,
+      app_g_verify_view_highlight_lines({
+        li_list: lis,
         clear_all,
         token_spans,
         highlight,
         lines,
         row_comps,
         order_comps,
-      );
+      });
     }
     html_on(span, "mouseenter", lambda8);
     html_on(span, "mouseleave", clear_all);
