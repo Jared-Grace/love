@@ -164,14 +164,19 @@ export function function_span_cut_skip_decided_or_null_cases() {
       skip: null,
     },
     {
-      name: "a word already carrying its holder's whole name is taken as it stands rather than told twice",
+      name: "a word already carrying its holder's whole name takes it as it stands rather than being told it twice",
       f_name: text_frozen("app_reply"),
       address_from: text_frozen("held"),
       address_to: text_frozen("app_reply_proof"),
       opening_is: false,
       answered_to_is: false,
-      name_taken_is: false,
-      skip: null,
+      name_taken_is: true,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("app_reply_proof"),
+        f_name_new: text_frozen("app_reply_proof"),
+      },
     },
   ];
   return cases;
