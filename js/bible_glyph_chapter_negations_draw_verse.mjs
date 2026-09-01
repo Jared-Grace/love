@@ -14,6 +14,7 @@ import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_glyph_chapter_negations_draw_verse(chapter_code) {
+  "Which verses of one chapter can have their negation marks drawn in without guessing, and which cannot. A verse is planned only when the marks already drawn plus the plain words that could take one come to exactly the number the filed rows call for; every other verse is handed back as left alone, with its three counts, so the disagreement can be looked at rather than drawn over.";
   arguments_assert(arguments, 1);
   let both = await bible_glyph_chapter_rows_filed(chapter_code);
   let rows = both.rows;

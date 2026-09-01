@@ -2,6 +2,11 @@ import { fn_name } from "./fn_name.mjs";
 export function bless_place_sizes() {
   "How many of each rung fit inside the one above it - three people to a household, three";
   "households to a building, and so on up.";
+  "The household number is the only AVERAGE here and every other one is exact. A family is";
+  "two to five people, arranged so that its building still holds nine - so three is what a";
+  "family comes to on average and is the right number for working a building out with, and";
+  "the wrong number for asking who lives in one. That question goes to the function that";
+  "knows how a building shares its nine out, and this number is never the answer to it.";
   "Keyed by the CONTAINER, and the number is how many of the rung below it holds. Read";
   ("against `",
     fn_name("bless_rungs"),

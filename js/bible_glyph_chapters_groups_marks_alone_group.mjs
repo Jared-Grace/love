@@ -15,6 +15,7 @@ export function bible_glyph_chapters_groups_marks_alone_group(
   entries,
   rows,
 ) {
+  "For each group of marks that are meant to be drawn together as one, how often the whole group is drawn, how often a single one of its parts is drawn on its own, and which chapters do both. A chapter appearing in that last list is the thing worth looking at: it draws the group in one place and one of the group's own parts alone in another, so a reader meets the same mark meaning two things in one chapter.";
   arguments_assert(arguments, 3);
   for (let group of vocabulary) {
     let parts = bible_glyph_group_names(group);

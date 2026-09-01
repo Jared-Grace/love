@@ -8,6 +8,7 @@ import { text_trim } from "./text_trim.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 export function bible_glyph_chapter_negations_draw_plan(planned, lines, left) {
+  "Writes the planned negation marks into the lines of a chapter's own source file, and says what it touched. Each verse is found by its header line and each word by its place among the quoted lines beneath it, so nothing is matched on the word itself and a repeated word cannot draw the mark onto the wrong one. A verse whose header or whose word lines cannot be found is added to the list of ones left alone rather than skipped quietly.";
   arguments_assert(arguments, 3);
   let drawn_count = 0;
   let touched = [];
