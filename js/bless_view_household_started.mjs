@@ -14,7 +14,7 @@ export function bless_view_household_started(blessed, view) {
   ("Everybody in sight who has NOT been prayed for and who shares a household with somebody");
   ("who has - the people left in a house the player has started.");
   ("This is the answer to the only question the game could not be played without and never");
-  ("showed. A household is three people and finishing one earns a rung, but who those three");
+  ("showed. A household is a family of two to five and finishing one earns a rung, but who they");
   ("are is arithmetic on a hidden number, and four people in five are out walking rather");
   ("than stood at their own door - so the three are scattered down the street and look");
   ("exactly like everybody else. A player praying for six faces at random has about one");
