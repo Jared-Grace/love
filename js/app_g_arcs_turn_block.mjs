@@ -71,7 +71,15 @@ export function app_g_arcs_turn_block(
   let marks = property_get(bench, "marks");
   function turn_field(name, value) {
     let shape = g_arc_answer_field_shape("turn", name);
-    app_g_arcs_field_pair(block, moved, name, value, shape, voice_color, marks);
+    app_g_arcs_field_pair({
+      parent: block,
+      moved_fields: moved,
+      name,
+      value,
+      shape,
+      voice_color,
+      marks,
+    });
   }
   turn_field("opener", opener);
   turn_field("before", before);
