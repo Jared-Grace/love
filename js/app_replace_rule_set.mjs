@@ -1,3 +1,4 @@
+import { app_replace_rule_set_dead_end_show } from "./app_replace_rule_set_dead_end_show.mjs";
 import { app_replace_rule_set_rules_draw } from "./app_replace_rule_set_rules_draw.mjs";
 import { app_replace_rule_set_solved_show } from "./app_replace_rule_set_solved_show.mjs";
 import { app_replace_rule_set_on_hint } from "./app_replace_rule_set_on_hint.mjs";
@@ -19,11 +20,6 @@ import { null_not_is } from "./null_not_is.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { app_replace_rule_set_verify_from_try } from "./app_replace_rule_set_verify_from_try.mjs";
-import { app_replace_symbol_tile_dead } from "./app_replace_symbol_tile_dead.mjs";
-import { each } from "./each.mjs";
-import { app_shared_color_green_light } from "./app_shared_color_green_light.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
-import { html_scroll_center } from "./html_scroll_center.mjs";
 import { app_shared_button_restart_text } from "./app_shared_button_restart_text.mjs";
 import { app_replace_rule_set_on_start_over } from "./app_replace_rule_set_on_start_over.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
@@ -185,14 +181,7 @@ export async function app_replace_rule_set(context) {
     let t = app_replace_rule_set_verify_from_try(rules_parsed3, start4, end);
     let found = property_get(t, "found");
     if (not(found)) {
-      function symbol_dead(symbol_button) {
-        app_replace_symbol_tile_dead(symbol_button);
-      }
-      let list6 = property_get(symbol_buttons_held, "symbol_buttons");
-      each(list6, symbol_dead);
-      let green = app_shared_color_green_light();
-      html_style_background_color_set(start_over, green);
-      await html_scroll_center(start_over);
+      await app_replace_rule_set_dead_end_show(symbol_buttons_held, start_over);
     }
   }
   let combined = app_shared_button_restart_text("Start over");
