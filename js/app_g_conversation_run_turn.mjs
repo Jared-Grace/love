@@ -62,7 +62,7 @@ export function app_g_conversation_run_turn(
   let concern = property_get(turn, "concern");
   let correct = property_get(turn, "correct");
   let wrong = property_get(turn, "wrong");
-  app_g_turn_quiz_once(
+  app_g_turn_quiz_once({
     overlay,
     npc,
     concern,
@@ -71,5 +71,5 @@ export function app_g_conversation_run_turn(
     on_correct,
     discern,
     leave,
-  );
+  });
 }
