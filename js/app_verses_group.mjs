@@ -84,16 +84,16 @@ export async function app_verses_group(
       return;
     }
     chosen_references = references;
-    await app_verses_group_shown(
+    await app_verses_group_shown({
       verse_groups,
       groups,
-      card4,
+      card: card4,
       display_group,
       verse_count_held,
       references,
       copy_after,
       copy,
-    );
+    });
   }
   async function reroll() {
     let count = property_get(verse_count_held, "verse_count");
