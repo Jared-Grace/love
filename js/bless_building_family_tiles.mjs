@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function bless_building_column(building, index) {
+export function bless_building_family_tiles(building, index) {
   arguments_assert(arguments, 2);
   ("One household's share of a building, given as the ground it covers - a strip one tile");
   ("wide running from the front of the house to the back of it.");
