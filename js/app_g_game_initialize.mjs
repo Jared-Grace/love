@@ -1,3 +1,4 @@
+import { g_world_size } from "./g_world_size.mjs";
 import { g_player_initialize } from "./g_player_initialize.mjs";
 import { g_npcs_initialize } from "./g_npcs_initialize.mjs";
 import { g_player_img_get } from "./g_player_img_get.mjs";
