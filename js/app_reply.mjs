@@ -1,3 +1,4 @@
+import { app_reply_typed_get } from "./app_reply_typed_get.mjs";
 import { app_reply_copy_refresh_chosen } from "./app_reply_copy_refresh_chosen.mjs";
 import { app_reply_key_down_handle } from "./app_reply_key_down_handle.mjs";
 import { app_reply_response_button } from "./app_reply_response_button.mjs";
@@ -104,10 +105,7 @@ export async function app_reply(context) {
   }
   let buttons_responses = [];
   app_shared_button_copy(card2, copy_refresh);
-  let typed_get = function lambda15() {
-    let value = property_get(typed_held, "typed");
-    return value;
-  };
+  let typed_get = app_reply_typed_get(typed_held);
   let buttons_refresh = app_reply_buttons_refresh(
     typed_get,
     responses_buttons,
@@ -171,8 +169,8 @@ export async function app_reply(context) {
   log(app_reply.name, {
     buttons_responses,
   });
-  let value6 = buttons_refresh();
-  property_set(visible_count_held, "visible_count", value6);
+  let value = buttons_refresh();
+  property_set(visible_count_held, "visible_count", value);
   function typed_reset() {
     property_set(typed_held, "typed", "");
   }
