@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { bible_audio_chunk_path } from "./bible_audio_chunk_path.mjs";
 import { list_map } from "./list_map.mjs";
 import { bible_audio_folder_chapter_audio } from "./bible_audio_folder_chapter_audio.mjs";
-import { media_join_if_exists_not } from "./media_join_if_exists_not.mjs";
+import { media_join_if_stale } from "./media_join_if_stale.mjs";
 export async function bible_audio_chapter_audio_join(
   bible_folder,
   chapter_code,
@@ -23,6 +23,6 @@ export async function bible_audio_chapter_audio_join(
   }
   let paths = list_map(chunks, chunk_path);
   let path_audio = bible_audio_folder_chapter_audio(bible_folder, chapter_code);
-  await media_join_if_exists_not(path_audio, paths);
+  await media_join_if_stale(path_audio, paths);
   return path_audio;
 }
