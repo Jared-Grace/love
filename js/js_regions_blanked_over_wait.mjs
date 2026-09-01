@@ -18,7 +18,7 @@ export function js_regions_blanked_over_wait(ast) {
   ("A wait written inside a function declared here is still not waiting here, whichever kind of function it is - it is a promise to wait later, and the screen is not blank in the meantime.");
   let gaps = [];
   let declared_types = ["FunctionDeclaration"];
-  let function_types = [
+  let function_node_types = [
     "FunctionDeclaration",
     "FunctionExpression",
     "ArrowFunctionExpression",
@@ -72,7 +72,7 @@ export function js_regions_blanked_over_wait(ast) {
       let awaited = equal(node.type, "AwaitExpression");
       return awaited;
     }
-    let found = scan_here(statement, await_is, function_types);
+    let found = scan_here(statement, await_is, function_node_types);
     return found;
   }
   function name_here_is(statement, region, stop_types) {
@@ -147,7 +147,7 @@ export function js_regions_blanked_over_wait(ast) {
       }
       return false;
     }
-    scan_here(statement, empties_is, function_types);
+    scan_here(statement, empties_is, function_node_types);
     return wrapped;
   }
   function body_read(body) {
@@ -160,7 +160,7 @@ export function js_regions_blanked_over_wait(ast) {
       for (let after = index + 1; less_than(after, body.length); after++) {
         let statement = body[after];
         if (not(waited)) {
-          let held_back = name_here_is(statement, region, function_types);
+          let held_back = name_here_is(statement, region, function_node_types);
           if (held_back) {
             break;
           }
