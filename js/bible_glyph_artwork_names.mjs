@@ -387,6 +387,22 @@ export function bible_glyph_artwork_names() {
       glyph: "fear",
       asset: "Face screaming in fear",
     },
+    {
+      glyph: "moon",
+      asset: "Crescent moon",
+    },
+    {
+      glyph: "fish",
+      asset: "Fish",
+    },
+    {
+      glyph: "bird",
+      asset: "Bird",
+    },
+    {
+      glyph: "tree",
+      asset: "Deciduous tree",
+    },
   ];
   return names;
 }
