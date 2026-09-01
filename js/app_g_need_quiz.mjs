@@ -64,7 +64,7 @@ export function app_g_need_quiz(
       }
       overlay_close();
     }
-    app_g_turn_quiz_once(
+    app_g_turn_quiz_once({
       overlay,
       npc,
       concern,
@@ -72,8 +72,8 @@ export function app_g_need_quiz(
       wrong,
       on_correct,
       discern,
-      on_end,
-    );
+      leave: on_end,
+    });
   }
   turn(0);
 }
