@@ -6,7 +6,7 @@ import { app_g_conversation_pray } from "./app_g_conversation_pray.mjs";
 import { emoji_pray } from "./emoji_pray.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { app_shared_game_button_green } from "./app_shared_game_button_green.mjs";
-export function app_g_conversation_render_pray(
+export function app_g_conversation_render_pray({
   r,
   pending,
   npc,
@@ -15,11 +15,11 @@ export function app_g_conversation_render_pray(
   render_openers,
   leave,
   render_pray,
-) {
+}) {
   "The screen that offers to pray, drawn after the NPC has said whatever was left waiting for it to say.";
   "WHAT WAS WAITING IS SAID ONCE AND THEN CLEARED, so the ordinary ask-again line is what appears the next time round.";
   "THE TURNS STILL TO COME ARE READ FROM THEIR KEEPER AT THE MOMENT PRAYING HAPPENS, not when this screen was drawn, because a turn can be answered in between.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let prayed = property_get(r, "prayed");
   let converts = property_get(r, "converts");
   let goodbye = property_get(r, "goodbye");

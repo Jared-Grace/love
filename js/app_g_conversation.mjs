@@ -109,7 +109,7 @@ export async function app_g_conversation(
     return r3;
   }
   function render_pray() {
-    app_g_conversation_render_pray(
+    app_g_conversation_render_pray({
       r,
       pending,
       npc,
@@ -118,7 +118,7 @@ export async function app_g_conversation(
       render_openers,
       leave,
       render_pray,
-    );
+    });
   }
   await app_g_sky_reset();
   app_g_conversation_render({
