@@ -1,3 +1,4 @@
+import { app_g_arcs_marks_press_go } from "./app_g_arcs_marks_press_go.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -6,14 +7,8 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { property_set } from "./property_set.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_text_set } from "./html_text_set.mjs";
-import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_g_arcs_mark_current_set } from "./app_g_arcs_mark_current_set.mjs";
-import { app_g_arcs_marks_chip_current_set } from "./app_g_arcs_marks_chip_current_set.mjs";
-import { app_g_arcs_marks_place_remember } from "./app_g_arcs_marks_place_remember.mjs";
-import { modulo } from "./modulo.mjs";
-import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { each_index } from "./each_index.mjs";
@@ -91,41 +86,38 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
     html_style_set(strip, "display", how);
     html_text_set(lister, word);
   }
-  function go(number, carry) {
-    let mark = marks[number];
-    let shown = add(number, 1);
-    let v = String(shown);
-    let said = text_combine_multiple(["change ", v, " of ", counted]);
-    html_text_set(press, said);
-    let current = property_get(at, "current");
-    let ringed = not_equal(current, null);
-    if (ringed) {
-      app_g_arcs_mark_current_set(marks[current], false);
-      app_g_arcs_marks_chip_current_set(chips[current], false);
-    }
-    app_g_arcs_mark_current_set(mark, true);
-    app_g_arcs_marks_chip_current_set(chips[number], true);
-    property_set(at, "current", number);
-    app_g_arcs_marks_place_remember(sheet_code, number);
-    let after = modulo(shown, count);
-    property_set(at, "number", after);
-    if (carry) {
-      let was = property_get(mark, "was");
-      html_scroll_center_container_settled(was, panel);
-    }
-    let open = property_get(at, "open");
-    if (open) {
-      html_scroll_center_container_settled(chips[number], strip);
-    }
-  }
   function go_chosen(number) {
     strip_show(false);
-    go(number, true);
+    app_g_arcs_marks_press_go(
+      number,
+      true,
+      marks,
+      counted,
+      press,
+      at,
+      chips,
+      sheet_code,
+      count,
+      panel,
+      strip,
+    );
   }
   let chips = app_g_arcs_marks_chips(strip, count, go_chosen);
   function mark_listen(mark, number) {
     function tapped() {
-      go(number, false);
+      app_g_arcs_marks_press_go(
+        number,
+        false,
+        marks,
+        counted,
+        press,
+        at,
+        chips,
+        sheet_code,
+        count,
+        panel,
+        strip,
+      );
     }
     let was = property_get(mark, "was");
     let now = property_get(mark, "now");
@@ -146,7 +138,19 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   let lister = html_button(bar, "list", lister_press);
   function press_next() {
     let number = property_get(at, "number");
-    go(number, true);
+    app_g_arcs_marks_press_go(
+      number,
+      true,
+      marks,
+      counted,
+      press,
+      at,
+      chips,
+      sheet_code,
+      count,
+      panel,
+      strip,
+    );
   }
   let press = html_button(bar, opening, press_next);
   let dressing = {
@@ -165,7 +169,19 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   let start = app_g_arcs_marks_place_number(sheet_code, count);
   let resumed = not_equal(start, null);
   if (resumed) {
-    go(start, false);
+    app_g_arcs_marks_press_go(
+      start,
+      false,
+      marks,
+      counted,
+      press,
+      at,
+      chips,
+      sheet_code,
+      count,
+      panel,
+      strip,
+    );
   }
   return press;
 }

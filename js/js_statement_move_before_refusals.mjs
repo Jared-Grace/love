@@ -1,8 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_statement_find_name_body } from "./js_statement_find_name_body.mjs";
-import { js_flo } from "./js_flo.mjs";
-import { js_function_declaration_to_block_body } from "./js_function_declaration_to_block_body.mjs";
-import { list_index_of } from "./list_index_of.mjs";
+import { js_statement_move_before_lines } from "./js_statement_move_before_lines.mjs";
+import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -23,13 +21,11 @@ export function js_statement_move_before_refusals(
   ("IT ANSWERS WITH THE REASONS RATHER THAN THROWING, so that a caller may ask whether a move is possible without asking for it. A caller that wants the move made asks for it next door and that one stops.");
   ("A word pointing at no line is the one thing that stops here rather than being reported, and it stops one name down, where the pointing is done. That reading already refuses an unknown word in its own words and says what to try instead, so a second refusal written here would only be a worse copy of it - and there was one, until it was found to be unreachable.");
   ("ONE THING IT CANNOT DECIDE AND DOES NOT PRETEND TO: what the moved line does to the world besides binding a name. A line that draws something, sends something, or writes into something reached through a name that is bound at both places does that earlier after the move, and no reading of the two lines can tell whether the earlier is wrong. That judgment is the caller's, exactly as choosing a name is the caller's when a run of lines is cut out.");
+  ("FINDING THE TWO LINES IS DONE NEXT DOOR AND NOT HERE, because the one that makes the move has to find exactly the same two, and a lookup written out on both sides of a proof is the copy most worth removing - the whole point of this reading is that the mover acts on the lines this reading judged.");
   let refusals = [];
-  let moved = js_statement_find_name_body(ast, address);
-  let target = js_statement_find_name_body(ast, address_before);
-  let declaration = js_flo(ast);
-  let statements = js_function_declaration_to_block_body(declaration);
-  let index_moved = list_index_of(statements, moved);
-  let index_target = list_index_of(statements, target);
+  let lines = js_statement_move_before_lines(ast, address, address_before);
+  let index_moved = property_get(lines, "index_moved");
+  let index_target = property_get(lines, "index_target");
   let earlier = less_than(index_target, index_moved);
   if (not(earlier)) {
     let backwards = {
@@ -40,7 +36,9 @@ export function js_statement_move_before_refusals(
     list_add(refusals, backwards);
     return refusals;
   }
+  let statements = property_get(lines, "statements");
   let crossed = list_slice(statements, index_target, index_moved);
+  let moved = property_get(lines, "moved");
   js_statement_move_before_refusals_flow(refusals, moved, crossed);
   return refusals;
 }
