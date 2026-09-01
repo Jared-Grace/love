@@ -16,14 +16,14 @@ export async function app_en_learn_bible_gloss_urdu_generate_chapter(
   let fn = app_en_learn_bible_gloss_urdu_generate;
   let bible_folders = app_en_learn_bible_gloss_urdu_bible_folders();
   let last = "Urdu and the original language are";
-  await app_shared_gloss_bible_generate_generic(
+  await app_shared_gloss_bible_generate_generic({
     language,
     last,
     bible_folders,
     book_code,
     fn,
     chapter_code_specified,
-    text_empty,
+    passage_reference: text_empty,
     language_reader,
-  );
+  });
 }

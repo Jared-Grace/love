@@ -18,7 +18,7 @@ export async function app_ceb_bible_gloss_generate_chapter(
     let reference = app_ceb_bible_gloss_passage_roots_prompt(passage, known);
     return reference;
   }
-  await app_shared_gloss_bible_generate_generic(
+  await app_shared_gloss_bible_generate_generic({
     language,
     last,
     bible_folders,
@@ -26,6 +26,6 @@ export async function app_ceb_bible_gloss_generate_chapter(
     fn,
     chapter_code_specified,
     passage_reference,
-    "English",
-  );
+    language_reader: "English",
+  });
 }
