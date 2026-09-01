@@ -1,3 +1,4 @@
+import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_words_characters_max } from "./text_split_words_characters_max.mjs";
@@ -6,7 +7,6 @@ import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { divide } from "./divide.mjs";
 import { multiply } from "./multiply.mjs";
-import { multiply_round } from "./multiply_round.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_flat } from "./list_flat.mjs";
@@ -36,8 +36,7 @@ export function lyric_video_lines_split_characters_max(lines, characters_max) {
       let share = divide(taken, total);
       let right = multiply(span, share);
       let at = add(start, right);
-      let hundredths = multiply_round(at, 100);
-      let mark = divide(hundredths, 100);
+      let mark = number_hundredths_rounded(at);
       list_add(marks, mark);
     }
     each(parts, part_each);
