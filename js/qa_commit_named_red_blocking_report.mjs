@@ -1,11 +1,9 @@
+import { qa_commit_judged_gates_sorted } from "./qa_commit_judged_gates_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_report } from "./qa_commit_named_report.mjs";
 import { qa_commit_named_report_newest } from "./qa_commit_named_report_newest.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { qa_gates_named_listed } from "./qa_gates_named_listed.mjs";
-import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
 import { list_size } from "./list_size.mjs";
 export async function qa_commit_named_red_blocking_report() {
   arguments_assert(arguments, 0);
@@ -33,13 +31,9 @@ export async function qa_commit_named_red_blocking_report() {
   let newest = property_get(opened, "newest");
   let commit = property_get(newest, "commit");
   let entry = property_get(known, commit);
-  let green = property_get(entry, "green");
   let failed = property_get(entry, "failed");
-  let named = property_get(entry, "named");
-  let said = property_get_or_null(entry, "said");
-  let listed = qa_gates_named_listed(named, said);
   let reach_none = [];
-  let sorted = qa_app_gates_sorted(green, failed, listed, reach_none);
+  let sorted = qa_commit_judged_gates_sorted(entry, reach_none);
   let r = {
     head,
     commit,
