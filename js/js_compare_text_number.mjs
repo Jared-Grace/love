@@ -1,18 +1,11 @@
+import { js_compare_text_number_kind_of } from "./js_compare_text_number_kind_of.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { js_list_types_nodes } from "./js_list_types_nodes.mjs";
-import { js_nodes_of_types } from "./js_nodes_of_types.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
-import { js_call_name_text_cut_is } from "./js_call_name_text_cut_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { js_call_name_number_made_is } from "./js_call_name_number_made_is.mjs";
 import { each } from "./each.mjs";
-import { property_or_null } from "./property_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { js_name_number_is } from "./js_name_number_is.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_first } from "./list_first.mjs";
@@ -30,55 +23,11 @@ export function js_compare_text_number(ast) {
   ("A name nothing here binds is read for what it says of itself, and a name that says number counts as one. That is how a parameter counts, and a parameter is where the two sides usually meet: the text is cut a line above the comparison and the number arrived from somewhere else entirely.");
   ("What a call was bound to beats what its name says, in both directions. A name that says number and is filled from a cut of text is holding text whatever it is called, and this reading exists precisely because such a name was called number.");
   ("Both sides have to be plain names. A comparison written with the cutting done inside it is missed, and that is accepted: the pass that canonicalizes this repo pulls such a call out into a name of its own, so the shape barely occurs, and looking through it would mean deciding what an arbitrary expression holds.");
-  let types = ["VariableDeclarator", "CallExpression"];
-  let gathered = js_list_types_nodes(ast, types);
-  let declarators = js_nodes_of_types(gathered, ["VariableDeclarator"]);
-  let calls = js_nodes_of_types(gathered, ["CallExpression"]);
-  let kinds = {};
-  function declarator_each(node) {
-    let id = property_get(node, "id");
-    let named = js_node_type_is(id, "Identifier");
-    if (not(named)) {
-      return;
-    }
-    let init = property_get(node, "init");
-    let called = js_node_type_is(init, "CallExpression");
-    if (not(called)) {
-      return;
-    }
-    let callee = property_get(init, "callee");
-    let callee_named = js_node_type_is(callee, "Identifier");
-    if (not(callee_named)) {
-      return;
-    }
-    let bound = property_get(id, "name");
-    let callee_name = property_get(callee, "name");
-    let cut = js_call_name_text_cut_is(callee_name);
-    if (cut) {
-      property_set(kinds, bound, "text");
-      return;
-    }
-    let made = js_call_name_number_made_is(callee_name);
-    if (made) {
-      property_set(kinds, bound, "number");
-    }
-  }
-  each(declarators, declarator_each);
-  function kind_of(name) {
-    let kept = property_or_null(kinds, name);
-    let unknown = null_is(kept);
-    if (not(unknown)) {
-      return kept;
-    }
-    let numbered = js_name_number_is(name);
-    if (numbered) {
-      let r = "number";
-      return r;
-    }
-    let r2 = "";
-    return r2;
-  }
-  let compares = [equal.name, fn_name("not_equal")];
+  let r = js_compare_text_number_kind_of(ast);
+  let kind_of = property_get(r, "kind_of");
+  let calls = property_get(r, "calls");
+  let f_name = fn_name("not_equal");
+  let compares = [equal.name, f_name];
   let found = [];
   function call_each(node) {
     let callee = property_get(node, "callee");
