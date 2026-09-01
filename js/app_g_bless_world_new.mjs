@@ -1,3 +1,4 @@
+import { bless_world_size } from "./bless_world_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_shared_game_map_generate } from "./app_shared_game_map_generate.mjs";
