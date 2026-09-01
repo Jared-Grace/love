@@ -1,7 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 export function bless_place_sizes() {
-  "How many of each rung fit inside the one above it - three people to a household, three";
-  "households to a building, and so on up.";
+  "How many of each rung fit inside the one above it - three people to a household, five";
+  "buildings to a block, and so on up. The building is the exception and says so below.";
   "The household number is the only AVERAGE here and every other one is exact. A family is";
   "two to five people, arranged so that its building still holds nine - so three is what a";
   "family comes to on average and is the right number for working a building out with, and";
