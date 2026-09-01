@@ -1,9 +1,8 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type } from "./js_list_type.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { js_node_function_is } from "./js_node_function_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 export function js_list_type_nodes_outermost_function(ast, node_type) {
@@ -16,8 +15,7 @@ export function js_list_type_nodes_outermost_function(ast, node_type) {
   let outermost = [];
   for (let v of vs) {
     let stack = property_get(v, "stack");
-    let functions = list_filter(stack, js_node_function_is);
-    let depth = list_size(functions);
+    let depth = list_filter_size(stack, js_node_function_is);
     let own_is = equal(depth, 1);
     if (own_is) {
       let node = property_get(v, "node");
