@@ -2,29 +2,37 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_alias_named } from "./commits_message_alias_named.mjs";
 import { property_get } from "./property_get.mjs";
 import { commits_message_alias_baseline_path } from "./commits_message_alias_baseline_path.mjs";
-import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
+import { commits_message_alias_offenders_after_door } from "./commits_message_alias_offenders_after_door.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function commits_message_alias_baseline_write() {
-  "Rewrite the record of the commits messaged with an alias key, from what the history carries right now. For shrinking it - never for blessing a new one, which the growth check below refuses.";
-  "GROWTH IS REFUSED HERE EVEN THOUGH THE OFFENCE CANNOT BE REPAIRED, and the two facts sit together on purpose. The way a commit came to be messaged with an alias key was that the name travelled in as an argument and so never passed the door that refuses shorthand, and that door now stands in front of the by-name commit itself.";
-  "THE DOOR IS ONLY ON ONE OF THE TWO SEAMS, AND THAT WAS NOT SAID HERE BEFORE. It said instead that a new one was no longer possible to write, and on 2026-08-28 that was measured and was false: the record held five and the history carried twenty one, every one of the sixteen new ones made by the human from their own seam, where shorthand is what the seam is for and nothing passes the guard. So a new name arriving here does not say the door has come off - it ordinarily says somebody typed a short word at the keyboard they are allowed to type short words at.";
-  "WHICH LEAVES THE GATE RED WITH NOBODY ABLE TO ANSWER IT, and that is written down rather than worked around. Recording is refused here, moving the reading forward is refused by name where the reading starts, and the messages themselves are in the history and cannot be edited. Whether the human commit should carry the full name too, or whether this rule should read only the commits made from the other seam, is a decision about how somebody is allowed to work and so is theirs and not a thing to be quietly arranged for by whoever next finds the gate red.";
+  "Rewrite the record of the commits messaged with an alias key, from what the history carries right now.";
+  "A COMMIT MADE UNDER THE DOOR IS RECORDED AND ONE MADE OVER IT IS REFUSED, and that split is the whole of this. Growth used to be refused whichever it was, on the reasoning that a new name could only mean the door had come off. On 2026-08-28 that was measured and was false: the record held five and the history carried twenty one, and every one of the sixteen new ones was made by the human from their own seam, where shorthand is what the seam is for. The door stood on one seam only, so growth ordinarily meant somebody had typed a short word at the keyboard they are allowed to type short words at - and refusing it left the gate red with nobody able to answer it, because the only remedy on offer was closed against the only offenders it was for.";
+  ("THAT DEADLOCK IS OVER BECAUSE THE DOOR MOVED, not because the rule was relaxed. Every commit this repo makes is now worded in one place and a short name is spelled out there, so the seam that was producing these has stopped. The commit that did it is named in ",
+    fn_name("commits_message_alias_door_commit"),
+    ", and an offender is sorted against it rather than let through: under it the message is in the history and cannot be edited, so recording it is the only thing left to do; over it the message was worded by a door that was already shut, so it says the door was gone round and it is refused here as loudly as ever.");
+  ("The decision that this needed was the human's and was theirs to make - whether their own commit should carry the full name too - and it was made by putting the spelling out in front of both seams. Nothing here quietly arranged for it.");
+  ("The record is not a let-off waiting to be cleared. A message belongs to a commit already in the history, and the only way to change one is to write every commit after it again under a new name.");
   arguments_assert(arguments, 0);
   let told = await commits_message_alias_named();
   let known = property_get(told, "offenders");
   let path = commits_message_alias_baseline_path();
-  let f_name = fn_name("function_name_full_assert");
-  let f_name2 = fn_name("ai_git_command_generic");
+  let after = await commits_message_alias_offenders_after_door(known);
+  let f_name = fn_name("git_call_message");
+  let f_name2 = fn_name("commits_message_alias_door_commit");
   let hint = text_combine_multiple([
-    "a commit is messaged with an alias key that was not messaged with one before - a commit message cannot be changed, so recording it is the only thing left to do about the commit itself, but it must not be done until it is known how the word got past ",
+    "a commit made after the door was shut is messaged with an alias key - the spelling out in ",
     f_name,
-    " in ",
+    " stands in front of every commit this repo makes, so a name here says a commit was worded somewhere that does not pass through it. Find that way in and shut it. Do not move the place named in ",
     f_name2,
-    ", because that is the door and a new name here says it is open",
+    " forward, which hides the commit instead of accounting for it",
   ]);
-  await baseline_known_growth_assert(known, path, hint);
+  list_empty_is_assert_json(after, {
+    hint,
+    after,
+  });
   let r = await baseline_known_write(known, path);
   return r;
 }
