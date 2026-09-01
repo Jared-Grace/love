@@ -38,7 +38,9 @@ export async function app_reply(context) {
   let languages = property_get(r, "languages");
   await ebible_versions_english_choices_browser();
   let languages_chosen_default = app_shared_bible_languages_chosen_default();
-  let languages_chosen = [];
+  let languages_chosen_held = {
+    languages_chosen: [],
+  };
   languages_chosen_reset();
   let root = property_get(r, "root");
   property_get(r, "en");
@@ -56,26 +58,36 @@ export async function app_reply(context) {
   app_reply_languages_prompt(card);
   function languages_chosen_reset() {
     app_reply_languages_chosen_reset(
-      languages_chosen,
+      property_get(languages_chosen_held, "languages_chosen"),
       languages_chosen_default,
       languages,
     );
   }
   async function love() {
-    let languages_chosen_before = languages_chosen;
-    languages_chosen = [];
+    let languages_chosen_before = property_get(
+      languages_chosen_held,
+      "languages_chosen",
+    );
+    property_set(languages_chosen_held, "languages_chosen", []);
     languages_chosen_reset();
     function lambda13(language) {
-      list_add(languages_chosen, language);
+      list_add(
+        property_get(languages_chosen_held, "languages_chosen"),
+        language,
+      );
     }
     await app_reply_love(languages, lambda13);
     await update(3);
-    languages_chosen = languages_chosen_before;
+    property_set(
+      languages_chosen_held,
+      "languages_chosen",
+      languages_chosen_before,
+    );
   }
   let r3 = app_reply_visible_count(
     card,
     love,
-    languages_chosen,
+    property_get(languages_chosen_held, "languages_chosen"),
     languages,
     root,
     update,
@@ -98,7 +110,7 @@ export async function app_reply(context) {
         reference,
         reference_current,
         bible_texts,
-        languages_chosen,
+        property_get(languages_chosen_held, "languages_chosen"),
       );
     }
     await each_async(taken, reference_each);
@@ -111,7 +123,7 @@ export async function app_reply(context) {
   let card3 = app_shared_container_blue(root);
   app_reply_main_shortcuts(
     card3,
-    languages_chosen,
+    property_get(languages_chosen_held, "languages_chosen"),
     languages,
     update,
     buttons_languages,
@@ -152,7 +164,7 @@ export async function app_reply(context) {
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
     let r2 = await app_reply_copy_refresh(
-      languages_chosen,
+      property_get(languages_chosen_held, "languages_chosen"),
       responses,
       bible_texts,
     );
