@@ -1,3 +1,4 @@
+import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { bible_audio_chunk_path } from "./bible_audio_chunk_path.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chunk_texts } from "./bible_audio_chunk_texts.mjs";
@@ -5,8 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { audio_file_duration } from "./audio_file_duration.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { add } from "./add.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { divide } from "./divide.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export async function bible_audio_chapter_lines_timed(
@@ -32,8 +31,7 @@ export async function bible_audio_chapter_lines_timed(
   let marks = [0];
   function duration_each(seconds) {
     exact = add(exact, seconds);
-    let hundredths = multiply_round(exact, 100);
-    let mark = divide(hundredths, 100);
+    let mark = number_hundredths_rounded(exact);
     list_add(marks, mark);
   }
   each(durations, duration_each);
