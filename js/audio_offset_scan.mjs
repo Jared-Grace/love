@@ -1,7 +1,7 @@
 import { add } from "./add.mjs";
 import { audio_difference_level } from "./audio_difference_level.mjs";
 import { property_get } from "./property_get.mjs";
-export async function audio_offset_scan(
+export async function audio_offset_scan({
   path_a,
   seconds_a,
   path_b,
@@ -9,7 +9,7 @@ export async function audio_offset_scan(
   seconds_length,
   decibels_gain,
   seconds_offsets_comma,
-) {
+}) {
   "$plain path_a";
   "$plain seconds_a";
   "$plain path_b";
