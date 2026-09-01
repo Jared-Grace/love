@@ -4,7 +4,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_expression_round_generic_code } from "./app_code_lesson_expression_round_generic_code.mjs";
-export function app_code_lesson_expression_round_generic_above(
+export function app_code_lesson_expression_round_generic_above({
   root,
   ordinary_digits,
   extreme_digits,
@@ -15,8 +15,8 @@ export function app_code_lesson_expression_round_generic_above(
   called_name,
   preposition,
   trap_render,
-) {
-  arguments_assert(arguments, 10);
+}) {
+  arguments_assert(arguments, 1);
   ("the worked examples are randomized each visit: a decimal and its whole part for the definitions, an EXTREME decimal (leaning the other way under round-to-nearest) to show it still rounds its fixed way, and a separate already-whole number that does not change");
   let r = app_code_lesson_expression_round_generic_above_rounds(
     ordinary_digits,
