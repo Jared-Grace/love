@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_gate_throws_own_is } from "./qa_gate_throws_own_is.mjs";
 import { not } from "./not.mjs";
@@ -15,7 +16,6 @@ import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { js_node_inside_any_is } from "./js_node_inside_any_is.mjs";
 import { qa_gate_declarator_holding } from "./qa_gate_declarator_holding.mjs";
-import { list_first } from "./list_first.mjs";
 import { js_literal_value_try } from "./js_literal_value_try.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
@@ -57,8 +57,7 @@ export async function qa_gate_said_plain_leaked(f_name) {
       continue;
     }
     let bound = qa_gate_declarator_holding(call, declarators);
-    let args = property_get(call, "arguments");
-    let first = list_first(args);
+    let first = property_list_first(call, "arguments");
     let spelled = js_literal_value_try(first);
     if (equal(bound, null)) {
       list_add(leaked, {
