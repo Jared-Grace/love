@@ -11,7 +11,7 @@ export async function app_a_identifier_generic_choices_get_ast(
   replace,
 ) {
   arguments_assert(arguments, 7);
-  let r3 = await app_a_identifier_generic_choices_get_e(
+  let r3 = await app_a_identifier_generic_choices_get_e({
     a,
     o,
     name,
@@ -19,7 +19,7 @@ export async function app_a_identifier_generic_choices_get_ast(
     c,
     choices,
     replace,
-  );
+  });
   let e = property_get(r3, "e");
   let overlay_close = property_get(r3, "overlay_close");
   let context = property_get(r3, "context");

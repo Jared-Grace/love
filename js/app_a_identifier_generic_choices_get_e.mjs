@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_to_visitor_stack } from "./js_node_to_visitor_stack.mjs";
 import { app_a_identifier_generic_choices_get_f_names } from "./app_a_identifier_generic_choices_get_f_names.mjs";
-export async function app_a_identifier_generic_choices_get_e(
+export async function app_a_identifier_generic_choices_get_e({
   a,
   o,
   name,
@@ -10,8 +10,8 @@ export async function app_a_identifier_generic_choices_get_e(
   c,
   choices,
   replace,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let node = property_get(a, "node");
   let ast = property_get(a, "ast");
   let stack = js_node_to_visitor_stack(ast, node);
