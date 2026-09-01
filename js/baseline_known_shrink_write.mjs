@@ -2,8 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
-import { baseline_known_read } from "./baseline_known_read.mjs";
-import { names_versus_baseline } from "./names_versus_baseline.mjs";
+import { baseline_names_change } from "./baseline_names_change.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { baseline_known_growth_assert } from "./baseline_known_growth_assert.mjs";
@@ -16,6 +15,7 @@ export async function baseline_known_shrink_write(offenders, path) {
   ("The refusal is not lost, it is put where somebody reads it. The gate beside the record already refuses a name that offends and is not recorded, and the gate is the thing that goes red; a writer refusing as well was refusing twice and shrinking never. What has started offending is handed back rather than thrown, so a person running this still sees it and the drop still happens.");
   ("A record with no file yet is seeded with everything offending. There is nothing to take a subset of, and the first seeding is the one write allowed to record anything.");
   ("Emptying is still refused, next door. A reading that reached nothing hands over an empty list, the subset is then empty too, and the collapse assert every write goes through is what catches it - so nothing here has to know which readings can come back empty-handed.");
+  ("THE COMPARISON IS MADE ONE NAME ALONG, shared with the gate that refuses on it, and it hands the record back rather than leaving this one to open the file a second time. Two copies of the comparison would be two answers about what has newly started offending, and the whole arrangement rests on the gate refusing exactly what this one declines to bless.");
   let exists = await file_exists(path);
   let first = not(exists);
   if (first) {
@@ -27,10 +27,10 @@ export async function baseline_known_shrink_write(offenders, path) {
     };
     return r;
   }
-  let recorded = await baseline_known_read(path);
-  let change = names_versus_baseline(offenders, recorded);
-  let added = property_get(change, "added");
+  let change = await baseline_names_change(offenders, path);
+  let recorded = property_get(change, "recorded");
   let dropped = property_get(change, "stale");
+  let added = property_get(change, "added");
   let kept = list_difference(recorded, dropped);
   await baseline_known_growth_assert(
     kept,

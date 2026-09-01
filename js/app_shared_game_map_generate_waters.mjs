@@ -1,3 +1,4 @@
+import { app_shared_game_map_square_neighbours } from "./app_shared_game_map_square_neighbours.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
@@ -59,26 +60,6 @@ export function app_shared_game_map_generate_waters(rows) {
     let key = add(left, x);
     return key;
   }
-  function neighbours_of(x, y) {
-    let east = {
-      x: add(x, 1),
-      y: y,
-    };
-    let west = {
-      x: subtract(x, 1),
-      y: y,
-    };
-    let south = {
-      x: x,
-      y: add(y, 1),
-    };
-    let north = {
-      x: x,
-      y: subtract(y, 1),
-    };
-    let around = [east, west, south, north];
-    return around;
-  }
   function flood(spot) {
     let x = property_get(spot, "x");
     let y = property_get(spot, "y");
@@ -108,7 +89,7 @@ export function app_shared_game_map_generate_waters(rows) {
       edge_keys.add(key);
       list_add(edge, step);
     }
-    let around = neighbours_of(x, y);
+    let around = app_shared_game_map_square_neighbours(x, y);
     each(around, neighbour_queue);
   }
   let coordinates = g_coordinates(rows);
