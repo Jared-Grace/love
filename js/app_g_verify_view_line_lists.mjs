@@ -73,7 +73,7 @@ export function app_g_verify_view_line_lists({
   }
   order.forEach(lambda14);
   app_g_verify_view_label_new("IN SERMON ORDER", container, small_gap);
-  app_g_verify_view_lines_in_sermon_order(
+  app_g_verify_view_lines_in_sermon_order({
     container,
     small_gap,
     border,
@@ -83,5 +83,5 @@ export function app_g_verify_view_line_lists({
     lines,
     row_comps,
     order_comps,
-  );
+  });
 }

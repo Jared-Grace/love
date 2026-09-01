@@ -9,7 +9,7 @@ import { html_style_set } from "./html_style_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { html_on } from "./html_on.mjs";
-export function app_g_verify_view_lines_in_sermon_order(
+export function app_g_verify_view_lines_in_sermon_order({
   container,
   small_gap,
   border,
@@ -19,8 +19,8 @@ export function app_g_verify_view_lines_in_sermon_order(
   lines,
   row_comps,
   order_comps,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   let ord = app_g_verify_view_panel_flush(container);
   function lambda16(l, li) {
     let eq = equal(li, 0);
