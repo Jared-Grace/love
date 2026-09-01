@@ -17,15 +17,15 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
   let slots = numbers_up_to(48);
   let ranges = initial_ranges;
   let anchor = null;
-  let r = week_calendar_day(
+  let r = week_calendar_day({
     parent,
-    dates,
+    days: dates,
     slots,
     slot_row,
     paint_record,
     ranges,
     summary_line,
-  );
+  });
   let grid = property_get(r, "grid");
   let summary = property_get(r, "summary");
   let records = property_get(r, "records");
