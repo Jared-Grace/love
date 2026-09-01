@@ -12,10 +12,21 @@ export function bless_rung_word(rung) {
   ("once the world holds real units, the word should be the unit's OWN - their village,");
   ("their town, their city. That is content, not a rung, so it does not belong in the");
   ("ladder and cannot be settled before there is a world to read it from.");
+  ("A household is said as a family, and that one is not a placeholder. Household is the");
+  ("word for the rung because the rung is a PLACE - the people at one address, which is");
+  ("what the building is divided into and what the ground lights up in. Family is the word");
+  ("for the people, and the player is praying for people. Asked to pray for everyone in");
+  ("their household nobody pictures anything; asked to pray for everyone in their family");
+  ("they picture the family.");
   let settlement = equal(rung, "settlement");
   if (settlement) {
     let town = "town";
     return town;
+  }
+  let household = equal(rung, "household");
+  if (household) {
+    let family = "family";
+    return family;
   }
   return rung;
 }
