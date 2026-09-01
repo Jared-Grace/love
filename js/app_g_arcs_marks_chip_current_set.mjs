@@ -1,3 +1,4 @@
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -12,7 +13,7 @@ export function app_g_arcs_marks_chip_current_set(chip, current) {
   let ink = mark_color;
   let wash = "transparent";
   if (current) {
-    ink = "#ffffff";
+    ink = app_shared_color_white();
     wash = mark_color;
   }
   html_style_assign(chip, {
