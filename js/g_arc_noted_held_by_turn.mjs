@@ -1,7 +1,7 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_lines_addressed } from "./g_arc_lines_addressed.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -17,8 +17,7 @@ export function g_arc_noted_held_by_turn(arc, noted_addresses, moved_by_turn) {
   let by_turn = {};
   let lines = g_arc_lines_addressed(arc);
   for (let line of lines) {
-    let address = property_get(line, "address");
-    let asked = list_includes(noted_addresses, address);
+    let asked = property_in_list(line, "address", noted_addresses);
     if (not(asked)) {
       continue;
     }
