@@ -1,3 +1,4 @@
+import { urdu_glued_words_gate_run } from "./urdu_glued_words_gate_run.mjs";
 import { function_span_cut_named_skip_decided_or_null_cases_gate_run } from "./function_span_cut_named_skip_decided_or_null_cases_gate_run.mjs";
 import { function_span_cut_skip_decided_or_null_cases_gate_run } from "./function_span_cut_skip_decided_or_null_cases_gate_run.mjs";
 import { js_statement_move_before_refusals_cases_gate_run } from "./js_statement_move_before_refusals_cases_gate_run.mjs";
@@ -953,6 +954,7 @@ export function qa_gates() {
     js_statement_move_before_refusals_cases_gate_run,
     function_span_cut_skip_decided_or_null_cases_gate_run,
     function_span_cut_named_skip_decided_or_null_cases_gate_run,
+    urdu_glued_words_gate_run,
   ];
   return gates;
 }
