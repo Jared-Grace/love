@@ -54,8 +54,7 @@ export function app_search_results_render(
     return r5;
   }
   function book_card_add(book_code) {
-    let r2 = app_search_results_book_card(
-      book_code,
+    let r2 = app_search_results_book_card(book_code, {
       book_current,
       book_group_div,
       books,
@@ -63,7 +62,7 @@ export function app_search_results_render(
       result_verses_count,
       book_folds,
       book_chapter_single_expanders,
-    );
+    });
     return r2;
   }
   function each_result(vk) {
