@@ -16,14 +16,14 @@ export function app_code_code_lines_writes_out(parent, lines, value) {
   let value2 = app_code_value_logged_output();
   let output_label = app_code_label_of_code(value2);
   let code_label = app_code_label_code_question();
-  let container = app_code_code_output(
+  let container = app_code_code_output({
     parent,
     code_label,
     code,
-    app_code_code_dark_lines_comments,
+    on_code: app_code_code_dark_lines_comments,
     output_label,
-    value,
-    app_code_style_normal_text,
-  );
+    output: value,
+    on_output: app_code_style_normal_text,
+  });
   return container;
 }

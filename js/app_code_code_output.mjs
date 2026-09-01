@@ -3,7 +3,7 @@ import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
 import { app_code_example_answer_label } from "./app_code_example_answer_label.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_code_output(
+export function app_code_code_output({
   parent,
   code_label,
   code,
@@ -11,8 +11,8 @@ export function app_code_code_output(
   output_label,
   output,
   on_output,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("a program and what it wrote out, drawn as one labelled card - the shape this app shows code beside its output in, wherever it shows it");
   ("One shape for one meaning. The worked example and the boxes read before the questions start are showing the same thing: this code, and what came out of it. A learner who has read the shape once reads it again without going back to the labels, so the shape carries the meaning and every screen after the first is cheaper to read.");
   ("The card is the pair and nothing else. Asking for another example is a button beside it rather than a part of it, which is what lets a box whose code never changes wear the same card as the example whose code changes every time it is pressed.");

@@ -32,15 +32,15 @@ export function app_code_lesson_base(
           html_flex_column_stretch(parent);
           app_code_flex_gap(parent);
           ("the card is the one this app draws code beside its output in everywhere, so the worked example wears exactly what a box read before the questions wears. What the example adds is the button beside it, which is why the button is not part of the card.");
-          let container = app_code_code_output(
+          let container = app_code_code_output({
             parent,
-            example_question_label,
-            question,
-            on_question,
-            example_answer_label,
-            answer,
-            on_example_answer,
-          );
+            code_label: example_question_label,
+            code: question,
+            on_code: on_question,
+            output_label: example_answer_label,
+            output: answer,
+            on_output: on_example_answer,
+          });
           let r = {
             container,
           };
