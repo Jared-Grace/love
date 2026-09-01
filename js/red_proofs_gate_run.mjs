@@ -8,10 +8,11 @@ import { not } from "./not.mjs";
 import { json_to } from "./json_to.mjs";
 export async function red_proofs_gate_run() {
   arguments_assert(arguments, 0);
-  ("QA gate: every corpus that has been checked against wrong versions of its reader still refuses all of them, and every let-off still names a version nothing refuses.");
+  ("QA gate: every corpus that has been checked against wrong versions of its reader still refuses all of them, every let-off still names a version nothing refuses, and every case saying it is the only one catching something still is.");
   ("WHAT IT HOLDS DOWN IS A CORPUS GOING QUIETLY BLIND. A corpus is checked against wrong versions once, and from then on the paragraph saying so is the only record - so a case removed later, or a reader changed so that two of its cases now say the same thing, takes the check apart while every gate stays green. Written down as files the machine can run again, the check is not a paragraph about the past; it is asked afresh on every run.");
   ("It does not refuse a case that carries nothing. That is padding rather than a fault, and whether a case earns its place is a judgment about what a reader is for, which is the author's and not a number's. It is carried out as a report instead, beside the count, so it is in front of whoever is looking without stopping anybody.");
   ("PADDING IS COUNTED TWO WAYS AND ONLY THE FIRST IS WRITTEN OUT IN FULL. A case refusing no wrong version at all is rare and worth a line of its own. A case refusing only wrong versions some other case also refuses is common - the second count runs to a fifth of the cases here - and printing all of those would bury the first under prose nobody would read twice. The count stands in the heading and the rows are in the answer this hands back, which is where to look when the count is the question being asked.");
+  ("IT DOES REFUSE A CASE WHOSE OWN WORDS SAY IT IS THE ONLY ONE CATCHING SOMETHING WHEN IT IS NOT. That is not a judgment about whether the case earns its place - it is a sentence disagreeing with the record printed beside it, and the record is worked out before the sentence is read. Three of those were false at once in one corpus and had been read past twice, which is why this one throws where padding only reports.");
   ("Throws so the dispatcher seam exits nonzero.");
   let names = await red_proof_names();
   let reports = [];
@@ -23,7 +24,8 @@ export async function red_proofs_gate_run() {
     let clean =
       list_empty_is(checked.holes) &&
       list_empty_is(checked.exemptions_stale) &&
-      list_empty_is(checked.exemptions_unreasoned);
+      list_empty_is(checked.exemptions_unreasoned) &&
+      list_empty_is(checked.claims_unmatched);
     if (not(clean)) {
       list_add(faulted, checked);
     }
@@ -42,6 +44,14 @@ export async function red_proofs_gate_run() {
     for (let row of checked.idle) {
       console.log(
         "      refuses nothing, case " + row.index + ": " + row.described,
+      );
+    }
+    for (let row of checked.claims_unmatched) {
+      console.log(
+        "      says it is the only one catching something, and catches nothing no other case catches, case " +
+          row.index +
+          ": " +
+          row.described,
       );
     }
     for (let hole of checked.holes) {
@@ -65,7 +75,7 @@ export async function red_proofs_gate_run() {
     throw new Error(
       "red proofs gate: " +
         faulted.length +
-        " corpus with a wrong version nothing refuses, or a let-off that no longer holds — " +
+        " corpus with a wrong version nothing refuses, a let-off that no longer holds, or a case claiming to be the only one catching something it does not — " +
         json_to(object),
     );
   }
