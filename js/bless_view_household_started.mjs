@@ -15,7 +15,7 @@ export function bless_view_household_started(blessed, view) {
   ("who has - the people left in a house the player has started.");
   ("This is the answer to the only question the game could not be played without and never");
   ("showed. A household is a family of two to five and finishing one earns a rung, but who they");
-  ("is arithmetic on a hidden number, and four people in five are out walking rather");
+  ("are is arithmetic on a hidden number, and four people in five are out walking rather");
   ("than stood at their own door - so a family is scattered down the street and looks");
   ("exactly like everybody else. A player praying for six faces at random has about one");
   ("chance in fifty of finishing any house at all, which is a ladder that cannot be climbed");
@@ -25,7 +25,7 @@ export function bless_view_household_started(blessed, view) {
   ("mark and the street would read as a puzzle board rather than as a road. Shown for the");
   ("building and the block as well, the player would be handed the whole map at once and");
   ("there would be nothing left to find. Finding the first person in a house stays the");
-  ("discovery; the other two are then aimed at rather than stumbled on.");
+  ("discovery; the rest are then aimed at rather than stumbled on.");
   ("It goes out for a person the moment they are prayed for, because there is nothing left");
   ("to say about them - their own light says it. The last ring in a house therefore");
   ("disappears at the very prayer that lights the house, which is the rung being earned");
