@@ -1,3 +1,4 @@
+import { function_span_cut_skip_decided_or_null_cases_gate_run } from "./function_span_cut_skip_decided_or_null_cases_gate_run.mjs";
 import { js_statement_move_before_refusals_cases_gate_run } from "./js_statement_move_before_refusals_cases_gate_run.mjs";
 import { js_statements_function_declared_names_direct_cases_gate_run } from "./js_statements_function_declared_names_direct_cases_gate_run.mjs";
 import { red_proofs_gate_run } from "./red_proofs_gate_run.mjs";
