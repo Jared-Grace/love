@@ -23,16 +23,16 @@ export async function app_code_expression_choose_line_stepped_draw({
   arguments_assert(arguments, 1);
   await app_code_expression_replaced_settle(line, node_span, node_value);
   let stepped = app_code_expression_solved(current, node);
-  let risen = app_code_expression_choose_line_draw(
-    stepped,
-    node,
-    node_value,
+  let risen = app_code_expression_choose_line_draw({
+    current: stepped,
+    solved: node,
+    value: node_value,
     line,
     on_wrong,
     on_chosen,
     on_finished,
     on_change,
-  );
+  });
   await app_code_expression_chips_rise(line, risen);
   let more = app_code_expression_node_is(stepped);
   if (more) {

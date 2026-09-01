@@ -17,14 +17,14 @@ export function app_code_expression_choose_line(
   ("Every operator is pressable on both, including the front page. A page that only offers the right one teaches nothing about the wrong one, and a learner who has never been allowed to pick the leftmost has never found out that the leftmost is not the rule.");
   let line = html_div(parent);
   html_style_code_dark(line);
-  app_code_expression_choose_line_draw(
-    tree,
-    null,
-    null,
+  app_code_expression_choose_line_draw({
+    current: tree,
+    solved: null,
+    value: null,
     line,
     on_wrong,
     on_chosen,
     on_finished,
     on_change,
-  );
+  });
 }
