@@ -1,13 +1,13 @@
-import { urdu_text_repaired } from "./urdu_text_repaired.mjs";
-import { list_map_filter } from "./list_map_filter.mjs";
 import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
+import { property_get } from "./property_get.mjs";
+import { ebible_verses_before } from "./ebible_verses_before.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_add_first } from "./list_add_first.mjs";
-import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
-import { ebible_verses_before } from "./ebible_verses_before.mjs";
-import { property_get } from "./property_get.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
+import { ebible_bible_folder_text_repaired } from "./ebible_bible_folder_text_repaired.mjs";
+import { list_map_filter } from "./list_map_filter.mjs";
+import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
@@ -17,6 +17,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   "Both readings begin at the same page, and this one is written down rather than worked out, so it is the answer wherever they disagreed.";
   "Anything standing before the first number is kept as a verse of its own under a nought, because a chapter often opens with a title or a heading and dropping it would lose words that are in the book.";
   "A verse left with nothing in it once the empty brackets are taken out is dropped. Those are places the translation has no words for rather than verses somebody could read, and a reader shown a numbered blank would take it for a fault in the app.";
+  "What one publisher got wrong about one of their own words is put right by name, asked of the bible the chapter came from. It used to be asked of the words alone, which is the same repair pointed at every translation the archive ships: the Urdu one turns the Arabic spelling of the name of God into the Urdu word for it, and the Arabic bible here writes that name in six hundred and thirty-seven of its chapters.";
   let cut = await ebible_chapter_verse_texts(bible_folder, chapter_code);
   let before = property_get(cut, "before");
   let marked = property_get(cut, "verses");
@@ -27,7 +28,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda(item) {
     let text = property_get(item, "text");
     let normalized = whitespace_normalize(text);
-    let worded = urdu_text_repaired(normalized);
+    let worded = ebible_bible_folder_text_repaired(bible_folder, normalized);
     let number = property_get(item, "verse_number");
     let v = ebible_verse_new_text(worded, number);
     return v;
