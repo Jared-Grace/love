@@ -1,3 +1,4 @@
+import { app_reply_response_button } from "./app_reply_response_button.mjs";
 import { app_reply_love_all_click } from "./app_reply_love_all_click.mjs";
 import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { property_set } from "./property_set.mjs";
@@ -15,13 +16,11 @@ import { log } from "./log.mjs";
 import { list_map_existing } from "./list_map_existing.mjs";
 import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
-import { object_merge_set } from "./object_merge_set.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { list_add } from "./list_add.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_initialize } from "./app_reply_initialize.mjs";
@@ -129,26 +128,17 @@ export async function app_reply(context) {
   let card5 = app_shared_container_blue(root);
   app_shared_text_body(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
-    let b = null;
-    let text = property_get(choice, "text");
-    async function click() {
-      log(app_reply.name, {
-        choice,
-      });
-      let response = property_get(choice, "response");
-      list_add(responses, response);
-      list_add(responses_buttons, b);
-      await copy_refresh();
-      typed_reset();
-      let value4 = buttons_refresh();
-      property_set(visible_count_held, "visible_count", value4);
-    }
-    b = app_shared_button(card5, text, click);
-    object_merge_set(b, choice);
-    object_merge_set(b, {
-      click,
-    });
-    return b;
+    let r6 = app_reply_response_button(
+      choice,
+      responses,
+      responses_buttons,
+      copy_refresh,
+      typed_reset,
+      buttons_refresh,
+      visible_count_held,
+      card5,
+    );
+    return r6;
   }
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
