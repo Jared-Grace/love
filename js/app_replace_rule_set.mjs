@@ -65,7 +65,9 @@ export async function app_replace_rule_set(context) {
   let rule_set_name = property_get(r4, "rule_set_name");
   let rules_used = property_get(r4, "rules_used");
   let start_over = property_get(r4, "start_over");
-  let index_selected = property_get(r4, "index_selected");
+  let index_selected_held = {
+    index_selected: property_get(r4, "index_selected"),
+  };
   let rules_parsed = property_get(r4, "rules_parsed");
   let goal = property_get(r4, "goal");
   let goal_index = property_get(r4, "goal_index");
@@ -80,7 +82,8 @@ export async function app_replace_rule_set(context) {
     let rule_next = property_get(second, "rule");
     let index_rule = list_index_of_json(rules_used, rule_next);
     let index_symbol = property_get(second, "index");
-    if (equal(index_rule, index_selected)) {
+    let right = property_get(index_selected_held, "index_selected");
+    if (equal(index_rule, right)) {
       let ceiling = list_size_half_ceil(start_indices);
       list_shuffle(start_indices);
       list_swap_first(start_indices, index_symbol);
@@ -150,10 +153,11 @@ export async function app_replace_rule_set(context) {
     rule_buttons = list_map_index(rules_used, each_rule);
     function rbs_each(rule_button, rule_index) {
       let success2 = property_get(success_held, "success");
+      let index_selected2 = property_get(index_selected_held, "index_selected");
       let r3 = app_replace_rule_set_rbs_each(
         rule_button,
         rule_index,
-        index_selected,
+        index_selected2,
         success2,
       );
       return r3;
@@ -164,10 +168,14 @@ export async function app_replace_rule_set(context) {
     function symbols_mapper(symbol, index) {
       let symbol_button = null;
       async function symbol_on_click() {
+        let index_selected3 = property_get(
+          index_selected_held,
+          "index_selected",
+        );
         ({ start, symbols_invalid_chosen, start_indices } =
           await app_replace_rule_set_symbol_on_click(
             rules_used,
-            index_selected,
+            index_selected3,
             index,
             start,
             symbols_invalid_chosen,
@@ -180,7 +188,8 @@ export async function app_replace_rule_set(context) {
         let last_state = list_last_property(history, "state");
         let b = json_equal(start, last_state);
         if (not(b)) {
-          let rule_used = list_get(rules_used, index_selected);
+          let index2 = property_get(index_selected_held, "index_selected");
+          let rule_used = list_get(rules_used, index2);
           ("index is where the rule's left matched (the position passed to ",
             fn_name("app_replace_rule_apply"),
             "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
@@ -209,7 +218,7 @@ export async function app_replace_rule_set(context) {
       function refresh_sb() {
         let state = {
           start_indices,
-          index_selected,
+          index_selected: property_get(index_selected_held, "index_selected"),
           success: property_get(success_held, "success"),
         };
         app_replace_rule_set_refresh_sb(symbol_button, index, state);
@@ -240,7 +249,8 @@ export async function app_replace_rule_set(context) {
         });
         app_replace_rule_set_proof_show(div_proof, history);
       }
-      let has_selection = null_not_is(index_selected);
+      let value2 = property_get(index_selected_held, "index_selected");
+      let has_selection = null_not_is(value2);
       html_text_set_if(has_selection, "Rules:", "Choose a rule:", label_rules);
       html_text_set_if(
         has_selection,
@@ -289,16 +299,18 @@ export async function app_replace_rule_set(context) {
     );
   }
   function button_rule_on_click_inner(index) {
+    let index_selected4 = property_get(index_selected_held, "index_selected");
     let app_replace_rule_set_button_rule_on_click_inner_answer =
-      app_replace_rule_set_button_rule_on_click_inner(index, index_selected);
+      app_replace_rule_set_button_rule_on_click_inner(index, index_selected4);
     symbols_invalid_chosen = property_get(
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "symbols_invalid_chosen",
     );
-    index_selected = property_get(
+    let value3 = property_get(
       app_replace_rule_set_button_rule_on_click_inner_answer,
       "index_selected",
     );
+    property_set(index_selected_held, "index_selected", value3);
     ("the rows of buttons are redrawn HERE, after the chosen rule has been stored, and not by the function that worked out which rule that is. Every one of these buttons redraws itself by reading this same variable, so redrawing before the answer had been stored painted every symbol as one no rule could touch - and a symbol no rule can touch cannot be pressed, which left the game unplayable");
     list_map_property_invoke(symbol_buttons, "refresh_sb");
     list_map_property_invoke(rule_buttons, "refresh_rb");
