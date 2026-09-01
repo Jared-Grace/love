@@ -108,7 +108,7 @@ export async function app_g_verify_view(
     autosize();
   }
   app_shared_button(reset_bar, "Reset to current lines", reset_to_current);
-  app_g_verify_view_suggest_and_reviewed_bars(
+  app_g_verify_view_suggest_and_reviewed_bars({
     container,
     small_gap,
     suggest_area,
@@ -117,7 +117,7 @@ export async function app_g_verify_view(
     draft_key,
     base_key,
     value,
-  );
+  });
   ("show the reviewer their own past suggestions for this verse; Load drops one back into the box to view or build on");
   await app_g_verify_view_history_show(chapter_code, verse, {
     container,
