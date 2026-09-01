@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_a_identifier_generic_choices_get_e } from "./app_a_identifier_generic_choices_get_e.mjs";
 import { property_get } from "./property_get.mjs";
-export async function app_a_identifier_generic_choices_get_ast(
+export async function app_a_identifier_generic_choices_get_ast({
   a,
   o,
   name,
@@ -9,8 +9,8 @@ export async function app_a_identifier_generic_choices_get_ast(
   c,
   choices,
   replace,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r3 = await app_a_identifier_generic_choices_get_e({
     a,
     o,

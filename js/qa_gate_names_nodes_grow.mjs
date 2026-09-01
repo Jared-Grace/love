@@ -9,6 +9,7 @@ export async function qa_gate_names_nodes_grow(nodes, names, f_name) {
   "Every name written inside a given run of nodes, added to the list handed in, and then grown by whatever the lines of the function those nodes came from read.";
   "The two sides that ask this differ only in which nodes they start from - one begins at what a gate accuses, the other at what it hints - so the collecting is one piece rather than two that can come to disagree about what counts as a name.";
   "The list is handed in rather than made here, because the hinted side writes its list into the object it remembers by before the work starts, so that a function reached from inside its own hint is answered with what there is so far instead of being asked all over again forever.";
+  "The lines that fill a name are gathered two ways and both go next door together, because a value reaches a hint by being declared into something or by being handed to something that gathers it, and a reader that knew only the first called a correctly delegating gate a leak.";
   arguments_assert(arguments, 3);
   for (let node of nodes) {
     let identifiers = js_list_type_nodes(node, "Identifier");
@@ -26,5 +27,6 @@ export async function qa_gate_names_nodes_grow(nodes, names, f_name) {
     f_name,
     "VariableDeclarator",
   );
-  qa_gate_names_hinted_grow(names, declarators);
+  let calls = await function_ast_list_type_nodes(f_name, "CallExpression");
+  qa_gate_names_hinted_grow(names, declarators, calls);
 }

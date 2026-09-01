@@ -11,7 +11,7 @@ export async function git_ac_call_folder(f_name, args, folder) {
   "answer exists to make visible.";
   "The files are asked for after the add and before the commit, because that is the";
   "only moment git is holding exactly the set the commit will contain.";
-  let message = git_call_message(f_name, args);
+  let message = await git_call_message(f_name, args);
   await git_add_folder_all(folder);
   let files = await git_files_staged_folder(folder);
   let none = list_empty_is(files);
