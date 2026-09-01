@@ -1,16 +1,14 @@
+import { app_g_arcs_marks_press_mark_listen } from "./app_g_arcs_marks_press_mark_listen.mjs";
+import { app_g_arcs_marks_press_strip_show } from "./app_g_arcs_marks_press_strip_show.mjs";
 import { app_g_arcs_marks_press_go } from "./app_g_arcs_marks_press_go.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { property_set } from "./property_set.mjs";
-import { html_style_set } from "./html_style_set.mjs";
-import { html_text_set } from "./html_text_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
-import { html_on_click } from "./html_on_click.mjs";
 import { each_index } from "./each_index.mjs";
 import { not } from "./not.mjs";
 import { html_button } from "./html_button.mjs";
@@ -75,22 +73,11 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
     "background-color": "rgba(0,0,0,0.85)",
     "box-shadow": "0 1px 6px rgba(0,0,0,0.35)",
   });
-  function strip_show(open) {
-    property_set(at, "open", open);
-    let how = "none";
-    let word = "list";
-    if (open) {
-      how = "flex";
-      word = "hide";
-    }
-    html_style_set(strip, "display", how);
-    html_text_set(lister, word);
-  }
   function go_chosen(number) {
-    strip_show(false);
-    app_g_arcs_marks_press_go(
+    app_g_arcs_marks_press_strip_show(false, at, strip, lister);
+    app_g_arcs_marks_press_go({
       number,
-      true,
+      carry: true,
       marks,
       counted,
       press,
@@ -100,29 +87,24 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
       count,
       panel,
       strip,
-    );
+    });
   }
   let chips = app_g_arcs_marks_chips(strip, count, go_chosen);
   function mark_listen(mark, number) {
-    function tapped() {
-      app_g_arcs_marks_press_go(
-        number,
-        false,
-        marks,
-        counted,
-        press,
-        at,
-        chips,
-        sheet_code,
-        count,
-        panel,
-        strip,
-      );
-    }
-    let was = property_get(mark, "was");
-    let now = property_get(mark, "now");
-    html_on_click(was, tapped);
-    html_on_click(now, tapped);
+    let r = app_g_arcs_marks_press_mark_listen({
+      mark,
+      number,
+      marks,
+      counted,
+      press,
+      at,
+      chips,
+      sheet_code,
+      count,
+      panel,
+      strip,
+    });
+    return r;
   }
   each_index(marks, mark_listen);
   let bar = html_div(holder);
@@ -133,14 +115,14 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   function lister_press() {
     let open = property_get(at, "open");
     let after_open = not(open);
-    strip_show(after_open);
+    app_g_arcs_marks_press_strip_show(after_open, at, strip, lister);
   }
   let lister = html_button(bar, "list", lister_press);
   function press_next() {
     let number = property_get(at, "number");
-    app_g_arcs_marks_press_go(
+    app_g_arcs_marks_press_go({
       number,
-      true,
+      carry: true,
       marks,
       counted,
       press,
@@ -150,7 +132,7 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
       count,
       panel,
       strip,
-    );
+    });
   }
   let press = html_button(bar, opening, press_next);
   let dressing = {
@@ -169,9 +151,9 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   let start = app_g_arcs_marks_place_number(sheet_code, count);
   let resumed = not_equal(start, null);
   if (resumed) {
-    app_g_arcs_marks_press_go(
-      start,
-      false,
+    app_g_arcs_marks_press_go({
+      number: start,
+      carry: false,
       marks,
       counted,
       press,
@@ -181,7 +163,7 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
       count,
       panel,
       strip,
-    );
+    });
   }
   return press;
 }

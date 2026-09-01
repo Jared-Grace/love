@@ -10,7 +10,7 @@ import { property_set } from "./property_set.mjs";
 import { app_g_arcs_marks_place_remember } from "./app_g_arcs_marks_place_remember.mjs";
 import { modulo } from "./modulo.mjs";
 import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
-export function app_g_arcs_marks_press_go(
+export function app_g_arcs_marks_press_go({
   number,
   carry,
   marks,
@@ -22,8 +22,8 @@ export function app_g_arcs_marks_press_go(
   count,
   panel,
   strip,
-) {
-  arguments_assert(arguments, 11);
+}) {
+  arguments_assert(arguments, 1);
   let mark = marks[number];
   let shown = add(number, 1);
   let v = String(shown);
