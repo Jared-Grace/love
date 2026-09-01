@@ -6,7 +6,7 @@ import { add } from "./add.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { modulo } from "./modulo.mjs";
 import { property_set } from "./property_set.mjs";
-import { html_scroll_center_container } from "./html_scroll_center_container.mjs";
+import { html_scroll_center_container_now } from "./html_scroll_center_container_now.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
@@ -19,6 +19,7 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   "IT COMES ROUND RATHER THAN STOPPING AT THE LAST ONE. Reviewing is not one pass down the page - a fault noticed at the fortieth change is often about something seen at the third - and a press that stops dead at the end sends the reader back to scrolling for exactly the case a tour is most useful in.";
   "THE ROWS ARE COLLECTED AS THEY ARE DRAWN AND NEVER LOOKED FOR AFTERWARDS. Whether a line has moved is known at the moment its row is made, so gathering them there costs nothing; hunting the finished page for rows that look marked would be reading a drawing back to find out what had been drawn into it.";
   "IT CARRIES THE READER TO THE OLDER HALF OF A PAIR, which is the top of the two lines rather than the one that is live now. The pair is read downwards - what it said, then what it says - so landing on the second half would mean arriving in the middle of the comparison and having to look up.";
+  "IT ARRIVES AT ONCE RATHER THAN GLIDING. The smooth form of the same scroll was tried first and measured doing nothing at all on this bench - the press was asked for a place, asked the browser for it, and the panel stayed exactly where it stood - so what shipped is the form that was watched to work. It is also the better of the two on its own merits here: two changes can be ten thousand pixels apart, and gliding that distance is seconds of blur between the only two things the reader wanted to see.";
   arguments_assert(arguments, 3);
   let none = list_empty_is(marks);
   if (none) {
@@ -39,7 +40,7 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
     html_text_set(press, said);
     let after = modulo(shown, count);
     property_set(at, "number", after);
-    await html_scroll_center_container(row, panel);
+    await html_scroll_center_container_now(row, panel);
   }
   let press = html_button(parent, opening, press_next);
   html_style_assign(press, {
