@@ -16,7 +16,7 @@ import { null_is } from "./null_is.mjs";
 import { app_shared_glow_clear } from "./app_shared_glow_clear.mjs";
 import { app_code_expression_choose_line_stepped_draw } from "./app_code_expression_choose_line_stepped_draw.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-export function app_code_expression_choose_line_draw_on_operator(
+export function app_code_expression_choose_line_draw_on_operator({
   rising,
   ready,
   on_wrong,
@@ -25,9 +25,9 @@ export function app_code_expression_choose_line_draw_on_operator(
   current,
   on_finished,
   on_change,
-) {
+}) {
   "THREE OF THE FOUR THINGS A PRESS CAN COME TO ARE DRAWN NEXT DOOR, and each of them is one that needs to remember nothing between presses: a press made after the line was already answered, a press made on an operator that has to wait its turn, and everything that happens once the answer has been shown. What is left here is the one thing that cannot be handed anywhere - the three things this drawing of the line has to keep hold of between one press and the next.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let chosen = false;
   ("whatever is waiting on the learner while the line has stopped answering, handed over by whoever put the question up - because a press made on the line after that is not a mistake about the line, it is a learner who has not found where the asking moved to");
   ("Held here rather than known here. The line has no idea what a value question looks like, and the page that drew one has no idea a press was made on the line, so the one of them that can see the press is told by the one of them that can see the question.");
