@@ -13,6 +13,10 @@ export function bible_glyph_chapter_references() {
   ("In the order Scripture puts them, which is the order a reader meets them in and not the order they were written in. The stored order is a build log; this is the list as the page shows it, so the arrows either side of a chapter and the rows of the index agree without anybody keeping a second order in step.");
   let references = [
     {
+      chapter_code: "GEN01",
+      reference: "Genesis 1",
+    },
+    {
       chapter_code: "EXO20",
       reference: "Exodus 20",
     },
