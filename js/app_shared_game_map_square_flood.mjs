@@ -18,6 +18,7 @@ export function app_shared_game_map_square_flood({
   edge_keys,
   edge,
 }) {
+  "Turns one square to water and queues every dry square beside it that is not queued already, so the edge of the water is kept as it grows rather than looked for again at every step.";
   arguments_assert(arguments, 1);
   let x = property_get(spot, "x");
   let y = property_get(spot, "y");
