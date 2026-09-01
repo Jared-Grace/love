@@ -26,6 +26,7 @@ export function app_g_arcs_conversation_turn_block(
   "THE BOX IS HANDED BACK RATHER THAN KEPT, because which conversation is open outlives the turn that opened it. Every turn after this one belongs in the same box until another turn says it starts a conversation, so the answer is the state of the reading and not a thing about this card.";
   "OPENING A CONVERSATION AND DRAWING A TURN ARE ONE STEP HERE AND NOT TWO, because only the card knows which of them is wanted. Split apart, the caller would have to ask the card whether it starts a conversation, and then the same question would be answered in two places against one field.";
   "THE CATCH-UP IS MARKED FROM THE CARD THAT OPENED THE CONVERSATION, which is the same card the words themselves came off. What happened to a person between conversations belongs to no turn, so the store gives it the number of the first turn beneath it - and reading its previous wording off any other card would be reading a different conversation's account of it.";
+  "THE MARKING IS ASKED FOR ONLY WHERE THERE IS A LINE TO MARK, and that is what the drawn row being handed over settles. It used to be asked for whether or not the catch-up had been written, which was harmless only because a mark with no line to put it on drew nothing; asked for a row that was never made, it would be asked about nothing at all.";
   arguments_assert(arguments, 8);
   let starting = property_get(card, "conversation_first");
   if (starting) {
@@ -42,21 +43,22 @@ export function app_g_arcs_conversation_turn_block(
     let catch_up = property_get(card, "catch_up");
     let caught_up = text_empty_not_is(catch_up);
     if (caught_up) {
-      app_g_arcs_field_shaped(
+      let row = app_g_arcs_field_shaped(
         conversation_block,
         catch_up_name,
         catch_up,
         catch_up_shape,
         voice_color,
       );
+      let moved = property_get(card, "moved");
+      app_g_arcs_field_moved(
+        conversation_block,
+        row,
+        moved,
+        catch_up_name,
+        voice_color,
+      );
     }
-    let moved = property_get(card, "moved");
-    app_g_arcs_field_moved(
-      conversation_block,
-      moved,
-      catch_up_name,
-      voice_color,
-    );
   }
   app_g_arcs_turn_block(conversation_block, card, nickname, bench, voice_color);
   let r = {
