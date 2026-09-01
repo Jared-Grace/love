@@ -5,7 +5,7 @@ import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_run_add } from "./text_run_add.mjs";
+import { text_segment_add } from "./text_segment_add.mjs";
 import { text_common_lengths } from "./text_common_lengths.mjs";
 export function text_runs_changed(before, after) {
   "$plain before";
@@ -23,8 +23,8 @@ export function text_runs_changed(before, after) {
   let work = multiply(before_size, after_size);
   let too_long = greater_than(work, 250000);
   if (too_long) {
-    text_run_add(before_runs, before, true);
-    text_run_add(after_runs, after, true);
+    text_segment_add(before_runs, before, true);
+    text_segment_add(after_runs, after, true);
     let whole = {
       before_runs,
       after_runs,
@@ -39,8 +39,8 @@ export function text_runs_changed(before, after) {
     let after_left = less_than(j, after_size);
     let shared = before_left && after_left && equal(before[i], after[j]);
     if (shared) {
-      text_run_add(before_runs, before[i], false);
-      text_run_add(after_runs, after[j], false);
+      text_segment_add(before_runs, before[i], false);
+      text_segment_add(after_runs, after[j], false);
       i = i + 1;
       j = j + 1;
     }
@@ -51,11 +51,11 @@ export function text_runs_changed(before, after) {
         take_before = greater_than_equal(table[i + 1][j], table[i][j + 1]);
       }
       if (take_before) {
-        text_run_add(before_runs, before[i], true);
+        text_segment_add(before_runs, before[i], true);
         i = i + 1;
       }
       if (not(take_before)) {
-        text_run_add(after_runs, after[j], true);
+        text_segment_add(after_runs, after[j], true);
         j = j + 1;
       }
     }
