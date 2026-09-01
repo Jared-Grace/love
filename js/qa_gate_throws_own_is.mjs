@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { equal } from "./equal.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_includes_multiple_is } from "./text_includes_multiple_is.mjs";
@@ -8,6 +9,7 @@ export async function qa_gate_throws_own_is(f_name) {
   "Whether this gate words its own complaint, rather than handing what it found to a shared runner and letting that one do the saying. Read-only.";
   "It matters because only a gate that words its own complaint can word it badly. One that passes its offenders along has no say in how they are presented, so nothing it spells can arrive as an accusation - the runner puts what it was handed under a hint.";
   "Throwing shows up two ways here and both count: the language's own throw written out, and a call to one of the words this repo throws by. That is a short list of words rather than something worked out, and the cost of it being short is a gate that words its complaint some third way going unasked - which the record it is measured against would then have to be told about by hand.";
+  "THE LINE AT THE HEAD OF ALMOST EVERY FUNCTION SAYING HOW MANY THINGS ARRIVE IS NOT A GATE WORDING ITS COMPLAINT, AND COUNTING IT SAID YES ABOUT ALMOST EVERYTHING. It holds the word this reads for, so a gate that hands every offender it found to a shared runner was still answered yes here, and twenty-six of twenty-nine gates named as speaking their complaint badly were named on the strength of that one boilerplate line alone. What it complains about is its own caller handing it the wrong number of things, which happens before any offender has been looked for and can never name a bystander.";
   let thrown = await function_ast_list_type_nodes(f_name, "ThrowStatement");
   let throwing_is = list_empty_not_is(thrown);
   let calls = await function_ast_list_type_nodes(f_name, "CallExpression");
@@ -15,6 +17,11 @@ export async function qa_gate_throws_own_is(f_name) {
     let callee = property_get(call, "callee");
     let called = js_identifier_name_try(callee);
     if (equal(called, null)) {
+      continue;
+    }
+    let right = fn_name("arguments_assert");
+    let head_line = equal(called, right);
+    if (head_line) {
       continue;
     }
     let asserting_is = text_includes_multiple_is(called, ["assert", "error"]);
