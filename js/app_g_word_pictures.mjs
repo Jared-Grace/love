@@ -39,8 +39,7 @@ export async function app_g_word_pictures() {
     html_clear(sheet);
     let words = object_property_names(known);
     function word_block(word) {
-      let r = app_g_word_pictures_word_block(
-        word,
+      let r = app_g_word_pictures_word_block(word, {
         sheet,
         gap,
         glosses,
@@ -50,7 +49,7 @@ export async function app_g_word_pictures() {
         status_set,
         render,
         wordings,
-      );
+      });
       return r;
     }
     each(words, word_block);
