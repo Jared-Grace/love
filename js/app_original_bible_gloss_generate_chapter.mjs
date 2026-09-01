@@ -12,14 +12,14 @@ export async function app_original_bible_gloss_generate_chapter(
   let fn = app_original_bible_gloss_generate;
   let bible_folders = [bible_folder];
   let last = "English is";
-  await app_shared_gloss_bible_generate_generic(
+  await app_shared_gloss_bible_generate_generic({
     language,
     last,
     bible_folders,
     book_code,
     fn,
     chapter_code_specified,
-    text_empty,
-    "English",
-  );
+    passage_reference: text_empty,
+    language_reader: "English",
+  });
 }

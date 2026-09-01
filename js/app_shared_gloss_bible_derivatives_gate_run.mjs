@@ -29,16 +29,16 @@ export async function app_shared_gloss_bible_derivatives_gate_run() {
   let one = list_get(forbidden, 0);
   async function refuses() {
     let last = text_empty();
-    await app_shared_gloss_bible_generate_generic(
-      "Turkish",
+    await app_shared_gloss_bible_generate_generic({
+      language: "Turkish",
       last,
-      [one],
-      "MRK",
-      text_empty,
-      "MRK01",
-      text_empty,
-      "English",
-    );
+      bible_folders: [one],
+      book_code: "MRK",
+      fn: text_empty,
+      chapter_code_specified: "MRK01",
+      passage_reference: text_empty,
+      language_reader: "English",
+    });
   }
   await throws_assert_json_async(refuses, {
     hint: "the gloss door let a translation through whose words may not be altered - the check it is supposed to ask has come unwired",
