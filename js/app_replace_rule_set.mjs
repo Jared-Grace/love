@@ -1,3 +1,4 @@
+import { app_replace_rule_set_symbols_mapper } from "./app_replace_rule_set_symbols_mapper.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
@@ -21,20 +22,8 @@ import { list_map_index } from "./list_map_index.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
-import { list_last_property } from "./list_last_property.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { list_add } from "./list_add.mjs";
-import { html_button } from "./html_button.mjs";
-import { app_replace_rule_set_attribute_symbol } from "./app_replace_rule_set_attribute_symbol.mjs";
-import { html_data_set_test } from "./html_data_set_test.mjs";
-import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
-import { property_set_exists_not } from "./property_set_exists_not.mjs";
-import { property_exists } from "./property_exists.mjs";
-import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
-import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
@@ -99,8 +88,8 @@ export async function app_replace_rule_set(context) {
       let list2 = property_get(start_indices_held, "start_indices");
       list_swap_first(list2, index_symbol);
       let list3 = property_get(start_indices_held, "start_indices");
-      let value6 = list_take(list3, ceiling);
-      property_set(start_indices_held, "start_indices", value6);
+      let value = list_take(list3, ceiling);
+      property_set(start_indices_held, "start_indices", value);
       await refresh();
     } else {
       button_rule_on_click_inner(index_rule);
@@ -192,97 +181,32 @@ export async function app_replace_rule_set(context) {
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
-      let symbol_button = null;
-      async function symbol_on_click() {
-        let index_selected3 = property_get(
-          index_selected_held,
-          "index_selected",
-        );
-        let symbols_invalid_chosen2 = property_get(
-          symbols_invalid_chosen_held,
-          "symbols_invalid_chosen",
-        );
-        let start_indices3 = property_get(start_indices_held, "start_indices");
-        let start3 = property_get(start_held, "start");
-        let sbs2 = property_get(symbol_buttons_held, "symbol_buttons");
-        let rules_buttons = property_get(rule_buttons_held, "rule_buttons");
-        let rules_parsed2 = property_get(rules_used_held, "rules_used");
-        let record_start = await app_replace_rule_set_symbol_on_click(
-          rules_parsed2,
-          index_selected3,
-          index,
-          start3,
-          symbols_invalid_chosen2,
-          sbs2,
-          start_indices3,
-          rules_buttons,
-          duration,
-          div_symbols,
-        );
-        let value9 = property_get(record_start, "start");
-        property_set(start_held, "start", value9);
-        let value4 = property_get(record_start, "symbols_invalid_chosen");
-        property_set(
-          symbols_invalid_chosen_held,
-          "symbols_invalid_chosen",
-          value4,
-        );
-        let value8 = property_get(record_start, "start_indices");
-        property_set(start_indices_held, "start_indices", value8);
-        let last_state = list_last_property(history, "state");
-        let left = property_get(start_held, "start");
-        let b = json_equal(left, last_state);
-        if (not(b)) {
-          let index2 = property_get(index_selected_held, "index_selected");
-          let list13 = property_get(rules_used_held, "rules_used");
-          let rule_used = list_get(list13, index2);
-          ("index is where the rule's left matched (the position passed to ",
-            fn_name("app_replace_rule_apply"),
-            "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
-          list_add(history, {
-            state: property_get(start_held, "start"),
-            rule: rule_used,
-            index,
-          });
-        }
-        await refresh();
-      }
-      symbol_button = html_button(div_symbols, symbol, symbol_on_click);
-      let value = app_replace_rule_set_attribute_symbol(index);
-      html_data_set_test(symbol_button, value);
-      app_shared_symbol_tile_style(symbol_button);
-      property_set_exists_not(symbol_button, "index", index);
-      refresh_sb();
-      object_merge_set(symbol_button, {
-        refresh_sb,
-      });
-      let object = property_get(
+      let r5 = app_replace_rule_set_symbols_mapper(
+        symbol,
+        index,
+        index_selected_held,
         symbols_invalid_chosen_held,
-        "symbols_invalid_chosen",
+        start_indices_held,
+        start_held,
+        symbol_buttons_held,
+        rule_buttons_held,
+        rules_used_held,
+        duration,
+        div_symbols,
+        refresh,
+        success_held,
       );
-      let exists = property_exists(object, index);
-      if (exists) {
-        app_replace_symbol_tile_invalid(symbol_button);
-      }
-      return symbol_button;
-      function refresh_sb() {
-        let state = {
-          start_indices: property_get(start_indices_held, "start_indices"),
-          index_selected: property_get(index_selected_held, "index_selected"),
-          success: property_get(success_held, "success"),
-        };
-        app_replace_rule_set_refresh_sb(symbol_button, index, state);
-      }
+      return r5;
     }
     let list5 = property_get(start_held, "start");
     let value10 = list_map_index(list5, symbols_mapper);
     property_set(symbol_buttons_held, "symbol_buttons", value10);
     ("no success yet?");
-    let b2 = property_get(success_held, "success");
-    if (not(b2)) {
+    let b = property_get(success_held, "success");
+    if (not(b)) {
       ("goal satisfied?");
-      let left2 = property_get(start_held, "start");
-      let eq = json_equal(left2, end);
+      let left = property_get(start_held, "start");
+      let eq = json_equal(left, end);
       if (eq) {
         property_set(success_held, "success", true);
         let list9 = property_get(rule_buttons_held, "rule_buttons");
