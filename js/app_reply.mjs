@@ -1,6 +1,7 @@
+import { app_reply_love_all_click } from "./app_reply_love_all_click.mjs";
+import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
-import { each } from "./each.mjs";
 import { app_reply_key_down } from "./app_reply_key_down.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
@@ -15,17 +16,11 @@ import { list_map_existing } from "./list_map_existing.mjs";
 import { app_shared_bible_languages_chosen_default } from "./app_shared_bible_languages_chosen_default.mjs";
 import { app_reply_main_shortcuts } from "./app_reply_main_shortcuts.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { list_shuffle_take } from "./list_shuffle_take.mjs";
-import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "./app_reply_languages_chosen_reset.mjs";
 import { app_reply_languages_prompt } from "./app_reply_languages_prompt.mjs";
 import { app_reply_buttons_refresh } from "./app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "./html_on_keydown_body.mjs";
-import { equal } from "./equal.mjs";
-import { each_async } from "./each_async.mjs";
-import { list_clear } from "./list_clear.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
-import { app_reply_love } from "./app_reply_love.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_shared_text_body } from "./app_shared_text_body.mjs";
 import { property_get } from "./property_get.mjs";
@@ -68,23 +63,13 @@ export async function app_reply(context) {
     );
   }
   async function love() {
-    let languages_chosen_before = property_get(
+    let r5 = await app_reply_love_all_click(
       languages_chosen_held,
-      "languages_chosen",
+      languages_chosen_reset,
+      languages,
+      update,
     );
-    property_set(languages_chosen_held, "languages_chosen", []);
-    languages_chosen_reset();
-    function lambda13(language) {
-      let list = property_get(languages_chosen_held, "languages_chosen");
-      list_add(list, language);
-    }
-    await app_reply_love(languages, lambda13);
-    await update(3);
-    property_set(
-      languages_chosen_held,
-      "languages_chosen",
-      languages_chosen_before,
-    );
+    return r5;
   }
   let languages_chosen3 = property_get(
     languages_chosen_held,
@@ -104,29 +89,19 @@ export async function app_reply(context) {
   let card2 = property_get(r3, "card2");
   let buttons_languages = property_get(r3, "buttons_languages");
   async function update(verse_count) {
-    each([bible_texts, responses, responses_buttons], list_clear);
-    let e = encouragement;
-    if (equal(verse_count, 1)) {
-      e = encouragement_singles;
-    }
-    let taken = list_shuffle_take(e, verse_count);
-    let reference_current = null;
-    async function reference_each(reference) {
-      let languages_chosen4 = property_get(
-        languages_chosen_held,
-        "languages_chosen",
-      );
-      reference_current = await app_reply_verses_add(
-        reference,
-        reference_current,
-        bible_texts,
-        languages_chosen4,
-      );
-    }
-    await each_async(taken, reference_each);
-    let value3 = buttons_refresh();
-    property_set(visible_count_held, "visible_count", value3);
-    await copy_refresh();
+    let r4 = await app_reply_verses_refresh(
+      verse_count,
+      bible_texts,
+      responses,
+      responses_buttons,
+      encouragement,
+      encouragement_singles,
+      languages_chosen_held,
+      buttons_refresh,
+      visible_count_held,
+      copy_refresh,
+    );
+    return r4;
   }
   let buttons_responses = [];
   app_shared_button_copy(card2, copy_refresh);
