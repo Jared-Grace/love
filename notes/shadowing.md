@@ -8,7 +8,13 @@ Two ways to break it, one bug behind both: an inner scope rebinding a name an en
 
 ## The gate and the baseline
 
-`functions_shadowing_gate_run` (in `q`) enforces it against a shrink-only baseline of what the repo already carried, so only new hiding fails; `functions_shadowing_report` lists everything, and `functions_shadowing_baseline_write` re-writes the baseline after a cleanup (it refuses to grow it).
+`functions_shadowing_gate_run` (in `q`) enforces it against a shrink-only baseline of what the repo already carried. **Both teeth bite**: a name the baseline does not list fails, *and* a name it lists that no longer hides fails too — that second one is how the list is forced to shrink, and the remedy is `functions_shadowing_baseline_write`, not a code change. `functions_shadowing_report` lists everything, and `functions_shadowing_baseline_write` re-writes the baseline after a cleanup (it refuses to grow it).
+
+## Side-by-side reuse is legal, and that trips readers of the AST
+
+The permission in the section above is not a footnote — it is a hazard for any code that walks a function looking for *the* line that binds a name. `js_ast_declarator_init_named` took the first binding anywhere in the file and justified it in its own prose with "the shadowing gates already refuse a name bound twice". They do not: they refuse a *nested* rebinding, and two sibling scopes reusing one word is exactly what they allow. So a nested helper's `let r = []` answered for the outer function's `let r = {…}`, and `qa_gate_counted_is` called a correctly-written gate blind. Fixed 2026-09-01 with `js_list_type_nodes_outermost_function` — nodes of a kind in the file's own function and in none of the functions inside it — used for both which `return` is the function's own and which line binds the returned name.
+
+**If you are writing a reader over a parsed function, scope it.** A whole-file walk cannot tell a name in the function from the same name in a helper written inside it, and nothing will go red when it picks the wrong one.
 
 ## Clearing them is a command, not a file-at-a-time job
 
