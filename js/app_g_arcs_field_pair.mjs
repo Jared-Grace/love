@@ -1,62 +1,56 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
-import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_g_arcs_field_runs } from "./app_g_arcs_field_runs.mjs";
+import { not } from "./not.mjs";
+import { text_runs_changed } from "./text_runs_changed.mjs";
 export function app_g_arcs_field_pair(
   parent,
-  row,
   moved_fields,
   name,
+  value,
+  shape,
   voice_color,
 ) {
   "$plain name";
+  "$plain value";
+  "$plain shape";
   "$plain voice_color";
-  "The mark on a line that has moved: a bar down the side of the wording that stands now, the wording it replaced drawn underneath it, and the words that left and arrived - and nothing at all, on nothing at all, where the field has not been touched.";
-  "THE LINE THAT MOVED IS MARKED AND NOT ONLY ANNOTATED, which is the whole difference between a diff that is read and one that is not. Drawing the previous wording underneath and leaving the line above it looking exactly like every unchanged line means the only way to find the handful that moved is to read every one of them - and a reviewer skimming a fifty-line arc on a phone went straight past all fifty-one changes in it and reported seeing none. The mark goes on the thing being skimmed.";
-  "THE ROW IS HANDED IN RATHER THAN MADE HERE, because it is somebody else's row. The line that moved is drawn by whoever is drawing the field, in whatever kind that field is; this only knows which fields moved, so it is given the drawn row and marks it, and no field-drawing has to be duplicated to get a marked version of it.";
-  "AN UNTOUCHED FIELD DRAWS NOTHING AND IS MARKED WITH NOTHING. A reviewer coming back to an arc is looking for the handful of lines that moved, so every unmoved field that says so costs a line of the page and hides the ones that did move among them. Silence is the answer that makes the marked lines findable.";
-  "IT IS DRAWN UNDERNEATH AND NOT INSTEAD, because both versions are wanted at once. The question a reviewer is answering is whether the rewrite mended the fault they filed, and that cannot be judged from either version alone.";
-  "THE WORDS THAT MOVED ARE NAMED AS WELL AS THE WHOLE PREVIOUS LINE, because they are what the eye can take at a glance. On a line rewritten in the middle of a paragraph the two versions look alike and the difference is found by reading both; the words that left and arrived say it without reading either.";
-  "A REORDERING SHOWS THE OLD LINE AND NO WORDS, which is truthful rather than a gap. Moving words about changes no word, so there is nothing to name - and a reviewer seeing the previous line beside an empty account of the words knows to read the two lines for their shape rather than for their vocabulary.";
-  arguments_assert(arguments, 5);
+  "One field of a written arc drawn as whatever it is: a single plain line where nothing has moved in it, and where something has, the wording it used to carry set above the wording it carries now, both in the same shape, with only the characters that differ marked.";
+  "THE OLDER WORDING IS SET FIRST BECAUSE THAT IS THE ORDER THE CHANGE HAPPENED IN. It used to be set underneath, which asked a reader to take in the new line, then drop to the old one, then climb back to see what the difference had been - a comparison run backwards and then forwards again on every changed line of a long page.";
+  "DRAWING BOTH LINES IS ONE STEP HERE RATHER THAN TWO AT THE CALLER. It was two, and it had to be while the previous wording was set underneath, because the current line was drawn before anybody knew there was a previous one. Putting the older one first means the two are decided together, and every place that draws a field is now one call instead of a pair that could be got the wrong way round.";
+  "WHICH CHARACTERS DIFFER IS WORKED OUT HERE AND NOT WHERE THE MOVE WAS FOUND, because the store answers what a line used to say and the page already holds what it says now. Nothing has to be sent for it, and the same two pieces of text can be compared a second way later without anything upstream being asked to agree.";
+  "A LINE WITH NO PREVIOUS WORDING AT ALL SAYS SO IN WORDS rather than being compared with nothing. Compared with an empty line every character of it comes back marked, which is true and useless: a reader would see a wholly marked line and go looking for what it used to say, and it never said anything.";
+  "THE WORDS THAT WENT OUT AND CAME IN ARE NO LONGER LISTED UNDERNEATH. They were there because the page could not point at a difference and could only name one, and a list of words is what naming a difference looks like when the marks are missing. With the characters themselves marked in place the list says the same thing later, less exactly, in a fainter type.";
+  arguments_assert(arguments, 6);
   let moved = property_or_null(moved_fields, name);
   let still = equal(moved, null);
   if (still) {
+    app_g_arcs_field_shaped(parent, name, value, shape, voice_color);
     return;
   }
-  let mark_color = app_g_arcs_moved_color();
-  html_style_assign(row, {
-    "border-left": text_combine_multiple(["4px solid ", mark_color]),
-    "padding-left": "0.5rem",
-    "margin-left": "-0.15rem",
-    "background-color": "rgba(180,83,10,0.05)",
-  });
   let before = property_get(moved, "before");
-  let gone = property_get(moved, "gone");
-  let come = property_get(moved, "come");
-  let written = not_equal(before, null);
-  if (written) {
-    app_g_arcs_field_shaped(parent, "was", before, "was", voice_color);
+  let unwritten = equal(before, null);
+  if (unwritten) {
+    let missing = [
+      {
+        text: "not written",
+        changed: false,
+      },
+    ];
+    app_g_arcs_field_runs(parent, "was", missing, "aside", voice_color, true);
   }
-  let fresh = equal(before, null);
-  if (fresh) {
-    app_g_arcs_field_shaped(parent, "was", "not written", "was", voice_color);
+  let older = "";
+  if (not(unwritten)) {
+    older = before;
   }
-  let gone_said = list_join_comma_space(gone);
-  let come_said = list_join_comma_space(come);
-  let nothing_gone = list_empty_is_or_null(gone);
-  let nothing_come = list_empty_is_or_null(come);
-  let unworded = nothing_gone && nothing_come;
-  if (unworded) {
-    return;
+  let text_runs_changed_answer = text_runs_changed(older, value);
+  let before_runs = property_get(text_runs_changed_answer, "before_runs");
+  let after_runs = property_get(text_runs_changed_answer, "after_runs");
+  if (not(unwritten)) {
+    app_g_arcs_field_runs(parent, "was", before_runs, shape, voice_color, true);
   }
-  let said = text_combine_multiple(["out: ", gone_said, "   in: ", come_said]);
-  app_g_arcs_field_shaped(parent, "words", said, "aside", voice_color);
+  app_g_arcs_field_runs(parent, name, after_runs, shape, voice_color, false);
 }
