@@ -1,6 +1,6 @@
 import { urdu_glued_words_half_least } from "./urdu_glued_words_half_least.mjs";
 import { urdu_glued_words_candidates } from "./urdu_glued_words_candidates.mjs";
-import { urdu_glued_words_decided } from "./urdu_glued_words_decided.mjs";
+import { urdu_glued_words_decided_two } from "./urdu_glued_words_decided_two.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -14,7 +14,7 @@ export async function urdu_glued_words_gate_run() {
   "It asks the detector for the same set that was judged, by asking for the threshold by name rather than by typing the number here.";
   let least = urdu_glued_words_half_least();
   let candidates = await urdu_glued_words_candidates(least);
-  let decided = urdu_glued_words_decided();
+  let decided = urdu_glued_words_decided_two();
   let split = property_get(decided, "split");
   let keep = property_get(decided, "keep");
   let offenders = [];
