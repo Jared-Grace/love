@@ -8,7 +8,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { app_verses_card4_refresh } from "./app_verses_card4_refresh.mjs";
-export async function app_verses_draw_restore(
+export async function app_verses_draw_restore({
   counts,
   count_each,
   content,
@@ -16,8 +16,8 @@ export async function app_verses_draw_restore(
   copy,
   verse_groups,
   draw_restore,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   each(counts, count_each);
   let card = app_shared_container_blue(content);
   app_shared_text_body(
