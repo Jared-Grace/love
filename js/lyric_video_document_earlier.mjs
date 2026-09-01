@@ -34,8 +34,7 @@ export async function lyric_video_document_earlier(
     }
     let moved = subtract(time, seconds);
     let held = less_than(moved, 0) ? 0 : moved;
-    let hundredths = multiply_round(held, 100);
-    let rounded = divide(hundredths, 100);
+    let rounded = number_hundredths_rounded(held);
     return rounded;
   }
   function line_earlier(line) {
