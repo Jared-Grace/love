@@ -13,7 +13,7 @@ export function app_code_lesson_quiz_container_success_message({
   refresh,
 }) {
   arguments_assert(arguments, 1);
-  let r4 = app_code_lesson_quiz_no_more(
+  let r4 = app_code_lesson_quiz_no_more({
     info,
     qa,
     container_blue_light,
@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_container_success_message({
     parent,
     context,
     quizzes,
-  );
+  });
   let r = app_code_lesson_quiz_last_lesson_end(r4, context, quizzes, refresh);
   let last_lesson_end = property_get(r, "last_lesson_end");
   let on_next = property_get(r, "on_next");
