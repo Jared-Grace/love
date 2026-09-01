@@ -26,6 +26,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
   "A CONVERSATION NOW HOLDS ITS TURNS RATHER THAN STANDING IN FRONT OF THEM. The heading and the cards under it used to be laid side by side in one long run, so where a conversation ended was said by nothing at all - the next heading simply arrived. Held inside a box of its own, it ends where its box ends, and the tree the arc was written as is the tree the page is drawn as.";
   "THE THREE THINGS CHOSEN ABOUT THE PERSON ARE DRAWN IN THE SHAPE OF WHAT EACH ONE IS, and the shape travels with the field rather than being decided here. Their work is a settled fact, their trouble is the person's own voice, and their summary is somebody's description of them - three different kinds of thing, which read as three lines of one paragraph while they were all drawn alike.";
   "WHAT MOVED IN A PERSON FIELD IS MARKED THE SAME WAY AS WHAT MOVED IN A TURN, and it is worth marking for the same reason: a summary quietly rewritten changes what the whole arc claims to be about, and it is the field a reviewer is least likely to re-read.";
+  "THE DRAWN ROW IS PASSED ON TO BE MARKED rather than the mark being drawn beside it. A previous wording set underneath an unmarked line leaves the line itself looking exactly like every line that has not moved, and a reviewer skimming reads lines and not what is set under them.";
   "THE PERSON IS DRAWN IN THE GAME'S OWN COLOUR FOR THEIR GENDER, in both the shades the game keeps: the wash goes behind their name, the ink goes on their name and on every word they speak anywhere down the arc. So who is a man and who is a woman is answered by the page rather than by remembering which of these names belongs to whom, and a reviewer who has just come from the game is not asked to learn a second set of colours for the same people.";
   "THE WASH HUGS THEIR NAME RATHER THAN CROSSING THE PAGE. Laid across the whole width it was a bright band the eye went to before anything else on the screen, which is the wrong thing to be loudest on a page whose subject is the words underneath it. Held to the name it is the same shape as the bubble the game draws that person's speech in, and it says the same thing at a tenth of the volume.";
   "THE RAIL OF THEIR OWN LEVEL IS COLOURED TOO, which is what makes the answer survive scrolling. An arc is many screens long and the heading is on the first of them; the rail is beside every line of it, so the gender is still being stated at the bottom of a long conversation where the name has been off-screen for a minute.";
@@ -68,8 +69,8 @@ export function app_g_arcs_person_block(parent, person, bench) {
     let name = property_get(one, "name");
     let value = property_get(one, "value");
     let shape = property_get(one, "shape");
-    app_g_arcs_field_shaped(block, name, value, shape, voice_color);
-    app_g_arcs_field_moved(block, person_moved, name, voice_color);
+    let row = app_g_arcs_field_shaped(block, name, value, shape, voice_color);
+    app_g_arcs_field_moved(block, row, person_moved, name, voice_color);
   }
   each(fields, field_line);
   app_shared_note_pills(block, person_notes);
