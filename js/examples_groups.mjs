@@ -133,6 +133,7 @@ export function examples_groups() {
         "example_functionize_inside_a_loop",
         "example_functionize_loop_name_stays_put",
         "example_function_lift_out_of_closure",
+        "example_function_lift_shadowed_global",
       ],
     },
     {
