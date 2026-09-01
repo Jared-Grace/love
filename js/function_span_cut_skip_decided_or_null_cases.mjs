@@ -1,0 +1,178 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { text_frozen } from "./text_frozen.mjs";
+export function function_span_cut_skip_decided_or_null_cases() {
+  arguments_assert(arguments, 0);
+  ("Runs of lines written out beside the reason each one should be stepped over, or beside nothing where the cut should take it.");
+  ("Every reason the reading holds has a case here, and each case sets exactly one of them. That is what the corpus is for: a reason turned around, or taken out altogether, changes at least one of these answers between a reason and nothing at all, which no amount of running the walk over the repo could have told anybody - the walk only ever sees the runs the repo happens to hold.");
+  ("The words each run ends on are made up rather than taken from a real function, because nothing here reaches a repository. The three answers a repository would give are written down as part of the case, so a run that exists nowhere can still be asked about.");
+  ("What is checked is what the reason is about and which words it names, and not the sentence it says. Those sentences are written for a person to read and are meant to be improved; pinning them would turn every improvement into a failing gate. Two reasons here say different sentences about the same words, so the corpus cannot tell those two apart - what it can tell is that one of them fired, which is the whole of what a caller acts on.");
+  ("The holder is the same for every case so that the name a run would take can be read off it at a glance, and the names those runs would take are written out in full rather than joined together here. A corpus that works out its own expectation is a record of what the code does rather than a check on it.");
+  let cases = [
+    {
+      name: "a run starting on the first line of work is stepped over for where it starts",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("love"),
+      address_to: text_frozen("proof"),
+      opening_is: true,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("start"),
+        address_from: text_frozen("love"),
+        address_to: text_frozen("proof"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "where the run starts is asked first, so a run at the top of a body is stepped over for that rather than for the handed-out word it ends on",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("love"),
+      address_to: text_frozen("lambda"),
+      opening_is: true,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("start"),
+        address_from: text_frozen("love"),
+        address_to: text_frozen("lambda"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on the word a pass hands out to a function written without a name",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("lambda"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("lambda"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on a word with a number counted into it",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("rows2"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("rows2"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on a word of one letter",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("r"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("r"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on a word the repo already answers to",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("list_add"),
+      opening_is: false,
+      answered_to_is: true,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("list_add"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on a word this repo cannot spell a name from, because what marks its parts is neither small letters nor capitals",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("Verse_Count"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("Verse_Count"),
+        f_name_new: null,
+      },
+    },
+    {
+      name: "a run ending on the word its holder is already called, which would say that word twice running",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("reply"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("reply"),
+        f_name_new: text_frozen("app_reply_reply"),
+      },
+    },
+    {
+      name: "a run whose word is free but whose name is already spoken for",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("proof"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: true,
+      skip: {
+        about: text_frozen("name"),
+        address_from: null,
+        address_to: text_frozen("proof"),
+        f_name_new: text_frozen("app_reply_proof"),
+      },
+    },
+    {
+      name: "nothing at all when the word can carry a name and no reason stands in the way",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("proof"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: null,
+    },
+    {
+      name: "a word whose capitals say where its parts are is turned over into this repo's spelling and taken",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("verseCount"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: null,
+    },
+    {
+      name: "a word already carrying its holder's whole name is taken as it stands rather than told twice",
+      f_name: text_frozen("app_reply"),
+      address_from: text_frozen("held"),
+      address_to: text_frozen("app_reply_proof"),
+      opening_is: false,
+      answered_to_is: false,
+      name_taken_is: false,
+      skip: null,
+    },
+  ];
+  return cases;
+}
