@@ -7,7 +7,7 @@ import { app_replace_rule_set_goal_show } from "./app_replace_rule_set_goal_show
 import { app_replace_animation_duration_get } from "./app_replace_animation_duration_get.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "./app_replace_rule_sets_fns_rules_used.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-export function app_replace_rule_set_rules_used_all(
+export function app_replace_rule_set_rules_used_all({
   root,
   on_hint,
   context,
@@ -15,8 +15,8 @@ export function app_replace_rule_set_rules_used_all(
   goals_count,
   end,
   rule_set_name,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_replace_rule_set_header(
     root,
     on_hint,
