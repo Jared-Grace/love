@@ -9,8 +9,8 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
 import { g_arc_answer_field_shape } from "./g_arc_answer_field_shape.mjs";
-import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { app_g_arcs_field_pair } from "./app_g_arcs_field_pair.mjs";
+import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_shared_note_pills } from "./app_shared_note_pills.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
@@ -33,7 +33,7 @@ export function app_g_arcs_turn_block(
   "THE MOMENT THEY BELIEVE IS SHOWN AND SHOWN LOUDLY, on the one turn that carries it. It is the only line of a turn that is nobody speaking, and it is the thing a reviewer is really reading for.";
   "THE NUMBER MOVED OUT OF THE LINE AND INTO A HEADING OF ITS OWN. It used to sit in front of what the person said, so the one string on the page held two unrelated facts - which turn this is, and what was spoken in it - and the words the reviewer came to read started a little further right on every card. Standing over the box it labels the whole turn, which is what it was always naming.";
   "EVERY FIELD IS DRAWN THROUGH ONE ROW-MAKER, so a turn and a person read in the same visual language. The kinds differ - what the player opened with recedes, what the person said is voiced, the citation is a fact and the believing is a verdict - and each kind is asked for by name from the one place the fields are described, never spelled here.";
-  "THE DRAWN ROW IS PASSED STRAIGHT ON TO BE MARKED, rather than the marking being worked out twice. The row-maker knows how a field is drawn and the mover knows which fields moved, and neither can do the other's half; handing the row over is what lets a moved line be marked in the kind it was already drawn in.";
+  "A FIELD IS ASKED FOR ONCE AND COMES BACK AS ONE LINE OR AS TWO, so this place never learns that a previous wording exists or where one goes. It used to draw the line itself and then ask for it to be marked, which meant the older wording could only ever arrive after the newer one - the wrong way round for reading, and the wrong place to be deciding it.";
   "WHAT MOVED IS DRAWN UNDER THE FIELD THAT MOVED AND NOT COLLECTED AT THE FOOT OF THE TURN. A reviewer holding a rewritten line against the one it replaced needs the two of them touching; gathered into a list at the bottom, the previous wording of the third field sits four lines away from the third field, and matching them up is work the page can do instead.";
   "THE SCRIPTURE IS DRAWN LIKE A FIELD AND IS NOT ONE. Nobody writing an arc chooses it: it is fetched from the passage the reference names. It is given the same row so that it lines up under the citation it belongs to, and its own kind so that quoted Scripture is never mistaken for something the person said. It is the one row with no previous wording underneath it, because nothing anybody wrote can move it.";
   "THE PERSON'S COLOUR IS CARRIED THROUGH RATHER THAN LOOKED UP. A turn belongs to whoever the conversation belongs to, so asking whose words these are would mean asking the same question once per turn for an answer that was already settled at the top of the arc.";
@@ -70,8 +70,7 @@ export function app_g_arcs_turn_block(
   }
   function turn_field(name, value) {
     let shape = g_arc_answer_field_shape("turn", name);
-    let row = app_g_arcs_field_shaped(block, name, value, shape, voice_color);
-    app_g_arcs_field_pair(block, row, moved, name, voice_color);
+    app_g_arcs_field_pair(block, moved, name, value, shape, voice_color);
   }
   turn_field("opener", opener);
   turn_field("before", before);
