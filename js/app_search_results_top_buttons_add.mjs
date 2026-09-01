@@ -43,7 +43,7 @@ export function app_search_results_top_buttons_add(
     let more = app_search_results_expand_more_is(buttons);
     return more;
   }
-  app_search_results_top_buttons(
+  app_search_results_top_buttons({
     div_results,
     expand_all_lambda,
     collapse_all_lambda,
@@ -51,5 +51,5 @@ export function app_search_results_top_buttons_add(
     folds_expand,
     folds_collapse,
     expand_more_is,
-  );
+  });
 }
