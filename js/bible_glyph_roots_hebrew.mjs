@@ -55,6 +55,8 @@ export function bible_glyph_roots_hebrew() {
   "WHICH IS ALSO A WARNING ABOUT A GATE THAT DOES NOT EXIST YET. A gate refusing plain English on a word the table does seat would be a reasonable thing to want, and it would make this repair illegal - it would drag the picture back over Rachel and call that a fix. If it is ever built it must know about this, because the two of them cannot both be obeyed.";
   "THE VERB HALF OF A ROOT READS AS A WEAK SEAT IN THE WORDINGS AUDIT AND IS NOT ONE, and the Greek table argues that out at length so it is only named here. Hebrew does the same thing this table does everywhere - raah is to shepherd and sits with the shepherd, yadah is to give thanks and sits alone - and English conjugates a verb into a dozen wordings while a noun keeps one, so the verb's commonest wording is always the thinner number. Ask whether the row is the verb of the row above it before treating it as a finding.";
   "THE THIRTY WEAKEST ROWS WERE READ THAT WAY ON 2026-08-25 AND NOTHING NEEDED CHANGING, which is worth recording so the next reader does not run it again for the same empty answer. NINETEEN OF THE THIRTY ARE VERBS - Hebrew is verb-heavy where Greek is not, so the artifact swallows two thirds of this list against a quarter of the Greek one. Of the eleven that are left, the ones with a real rival sense were already glossed for it: nephesh is soul and life and self, har is mountain and hill country, emeth is truth and faithfulness, derek is way and road, mishpat is justice and judgment and ordinance. This table was already in the state the Greek one had to be edited into.";
+  "THE TREE, THE BIRD AND THE FISH WERE BOUGHT BY GENESIS ONE and are the first three seats here that draw a creature rather than a word about God or about people. Ets is the tree and the wood, oph is the flying creature, dag and dagah are the same fish in its two genders and take one picture between them the way chayah takes one across its two numbers. Creation is made of animals and plants and this table had been built out of the name, the gift, the glory and the fire, so the first chapter of the Bible was always going to be the one that met a part of it the covenant words never reached.";
+  "AND UPH, TO FLY, IS DELIBERATELY NOT SEATED ON THE BIRD. It stands one word away from oph and is the verb beside that noun, so seating it looks free; it is not. Genesis one verse twenty holds both, and a mark on the noun with the verb left in English is exactly what the underdrawn reading is built to catch - it would have made the verse red the moment the verb was seated. The picture is a bird and not a flight, which is the reason as well as the accident that revealed it.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
   let roots = [
     {
@@ -1054,6 +1056,40 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4886",
           glyph: "oil",
+        },
+      ],
+    },
+    {
+      root: "ets",
+      gloss: "tree, wood",
+      words: [
+        {
+          strong: "6086",
+          glyph: "tree",
+        },
+      ],
+    },
+    {
+      root: "oph",
+      gloss: "bird, flying creature",
+      words: [
+        {
+          strong: "5775",
+          glyph: "bird",
+        },
+      ],
+    },
+    {
+      root: "dag",
+      gloss: "fish",
+      words: [
+        {
+          strong: "1709",
+          glyph: "fish",
+        },
+        {
+          strong: "1710",
+          glyph: "fish",
         },
       ],
     },
