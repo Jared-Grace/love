@@ -15,8 +15,8 @@ export function bless_view_household_started(blessed, view) {
   ("who has - the people left in a house the player has started.");
   ("This is the answer to the only question the game could not be played without and never");
   ("showed. A household is a family of two to five and finishing one earns a rung, but who they");
-  ("are is arithmetic on a hidden number, and four people in five are out walking rather");
-  ("than stood at their own door - so the three are scattered down the street and look");
+  ("is arithmetic on a hidden number, and four people in five are out walking rather");
+  ("than stood at their own door - so a family is scattered down the street and looks");
   ("exactly like everybody else. A player praying for six faces at random has about one");
   ("chance in fifty of finishing any house at all, which is a ladder that cannot be climbed");
   ("on purpose.");
