@@ -56,7 +56,7 @@ export function js_fold_block(x_ast, f_ast, f_block) {
   if (escapes) {
     return null;
   }
-  js_fold_equivalent_assert(
+  js_fold_equivalent_assert({
     pattern_sigs,
     params,
     return_local,
@@ -65,7 +65,7 @@ export function js_fold_block(x_ast, f_ast, f_block) {
     output_name,
     start,
     k,
-  );
+  });
   let call_statement = js_fold_call_statement(x_name, arg_keys, output_name);
   let new_statements = js_fold_body_splice(
     f_statements,
