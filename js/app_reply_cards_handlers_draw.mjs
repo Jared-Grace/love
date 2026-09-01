@@ -55,7 +55,7 @@ export function app_reply_cards_handlers_draw(
   let card2 = property_get(r3, "card2");
   let buttons_languages = property_get(r3, "buttons_languages");
   async function update(verse_count) {
-    let r4 = await app_reply_verses_refresh(
+    let r4 = await app_reply_verses_refresh({
       verse_count,
       bible_texts,
       responses,
@@ -66,7 +66,7 @@ export function app_reply_cards_handlers_draw(
       buttons_refresh,
       visible_count_held,
       copy_refresh,
-    );
+    });
     return r4;
   }
   let buttons_responses = [];
