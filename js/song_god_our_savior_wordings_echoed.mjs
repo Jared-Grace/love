@@ -1,4 +1,4 @@
-import { song_god_our_savior_wording_echo } from "./song_god_our_savior_wording_echo.mjs";
+import { song_wording_echo } from "./song_wording_echo.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_god_our_savior_wordings } from "./song_god_our_savior_wordings.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,7 +20,7 @@ export async function song_god_our_savior_wordings_echoed() {
     let distinct = property_get(passage, "distinct");
     let lines = song_god_our_savior_reference_lines(reference);
     function heard(wording) {
-      let wording_scored = song_god_our_savior_wording_echo(wording, lines);
+      let wording_scored = song_wording_echo(wording, lines);
       return wording_scored;
     }
     let wordings = list_map(distinct, heard);

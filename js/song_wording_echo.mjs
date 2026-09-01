@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { text_words_content_echo } from "./text_words_content_echo.mjs";
 import { numbers_larger } from "./numbers_larger.mjs";
 import { text_words_content_echo_stemmed } from "./text_words_content_echo_stemmed.mjs";
-export function song_god_our_savior_wording_echo(wording, lines) {
+export function song_wording_echo(wording, lines) {
   arguments_assert(arguments, 2);
   ("$plain wording");
   ("$plain lines");
