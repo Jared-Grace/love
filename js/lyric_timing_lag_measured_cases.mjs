@@ -6,6 +6,8 @@ export function lyric_timing_lag_measured_cases() {
   ("THE MOMENTS ARE ALL QUARTERS AND EIGHTHS OF A SECOND, WHICH IS ARITHMETIC AND NOT TASTE. A machine holds a fifth of a second as very slightly more or less than a fifth, so a run built out of tenths comes back a hair away from the answer written beside it and the gate goes red over the last few digits of a number that is right. Halves and quarters are held exactly, and a corpus made of them fails only when something is actually wrong.");
   ("THE SOUNDS ARE SPACED UNEVENLY BECAUSE THEY ARE SPACED UNEVENLY IN THE ROOM. A steady beat gets answered ahead of itself: somebody who can tell when the next one is coming presses before it arrives, and the run then reports a smaller lag than that person really has, or a negative one. Uneven spacing removes the thing being anticipated, so what is left is somebody hearing a sound and reacting to it - which is what the box on the desk is for.");
   ("EVERY CASE HERE WAS CHECKED BY WRITING THE WRONG VERSIONS OUT AND SEEING WHICH CASES REFUSED THEM. Three of the first eight refused none of them, and the run that answered one press to three sounds - the fault with a whole paragraph written about it next door - was refused by none of them either. A case that no wrong version fails is not holding anything down; it is describing the code back to itself. So the wide window moved onto a press late enough to be reachable from several sounds, the stray press moved to where a sound was still waiting for an answer, and the clean run stayed because a version that subtracts the two moments the wrong way round fails it and nothing else does.");
+  ("THAT CHECK WAS THEN RUN A SECOND TIME AGAINST A WIDER SET OF WRONG VERSIONS, AND THREE OF THEM GOT THROUGH, which is the thing to understand about this kind of proof: it answers for the wrong versions somebody thought of, and nothing at all about the ones they did not. A version that let a press land on the very edge of the window and threw it away, and two versions that picked the middle off one side or the other instead of working it out, all agreed with every case that was here. Both faults are invisible for the same reason - eight runs had gone by without a press ever landing on the edge, and without the distances either side of a middle ever differing - so one run with both properties was written down and all three versions now fail it.");
+  ("TWO OF THE WIDER SET GOT THROUGH AND WERE LEFT ALONE, BECAUSE THEY ARE THE SAME WORKING-OUT IN DIFFERENT WORDS. One skips putting the presses in order, which changes nothing because a press is written down at the moment it happens and a list built that way is already in order. The other works the missed count out by taking the answered ones away from the number of sounds, instead of counting them as it goes, which is the same number because every sound is either answered or missed and there is no third thing it can be. Neither is a hole; both are arguments about what a run can look like, and either would become a hole if something ever handed this a list of presses it had not watched arrive.");
   ("A press that answers nothing and a press that answers twice each have their own case, because they are the two ways the pairing goes wrong and only one of them can be seen afterwards. A stray press that gets counted drags the middle; a press handed to two sounds reports a run as fully answered by somebody who barely answered it.");
   let cases = [
     {
@@ -95,6 +97,17 @@ export function lyric_timing_lag_measured_cases() {
         missed: 0,
       },
       why: "a press made before the first sound, while somebody was still settling, answers nothing behind it and does not take the first sound's answer away from it",
+    },
+    {
+      clicks: [1, 3],
+      taps: [1.5, 3.25],
+      window_seconds: 0.5,
+      measured: {
+        lag: 0.375,
+        heard: 2,
+        missed: 0,
+      },
+      why: "a press landing exactly on the far edge of the window is inside it, and the two distances lie either side of the middle with nothing between them - so the middle has to be worked out rather than picked off one side, and a version doing either of those goes red here and nowhere else",
     },
   ];
   return cases;
