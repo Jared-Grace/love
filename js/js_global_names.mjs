@@ -48,6 +48,7 @@ export function js_global_names() {
   let browser = [
     "AbortController",
     "Audio",
+    "AudioContext",
     "Blob",
     "CustomEvent",
     "DOMParser",
