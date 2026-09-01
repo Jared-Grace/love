@@ -3,6 +3,7 @@ import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -30,7 +31,7 @@ export function words_glued_candidates(words, bigrams, bigram_least) {
         best_after = after;
       }
     }
-    if (greater_than_or_equal(best_count, bigram_least)) {
+    if (greater_than_equal(best_count, bigram_least)) {
       let glued = property_get(words, word);
       let candidate = {
         word,
