@@ -86,7 +86,7 @@ export function app_code_lesson_expression_round_generic(params) {
   });
   return lesson;
   function above(root) {
-    let r3 = app_code_lesson_expression_round_generic_above(
+    let r3 = app_code_lesson_expression_round_generic_above({
       root,
       ordinary_digits,
       extreme_digits,
@@ -97,7 +97,7 @@ export function app_code_lesson_expression_round_generic(params) {
       called_name,
       preposition,
       trap_render,
-    );
+    });
     return r3;
   }
 }
