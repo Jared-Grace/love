@@ -27,7 +27,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda(item) {
     let text = property_get(item, "text");
     let normalized = whitespace_normalize(text);
-    let worded = urdu_allah_to_god(normalized);
+    let worded = urdu_text_repaired(normalized);
     let number = property_get(item, "verse_number");
     let v = ebible_verse_new_text(worded, number);
     return v;

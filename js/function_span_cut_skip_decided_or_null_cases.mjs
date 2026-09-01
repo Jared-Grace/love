@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 export function function_span_cut_skip_decided_or_null_cases() {
@@ -7,6 +8,11 @@ export function function_span_cut_skip_decided_or_null_cases() {
   ("The words each run ends on are made up rather than taken from a real function, because nothing here reaches a repository. The three answers a repository would give are written down as part of the case, so a run that exists nowhere can still be asked about.");
   ("What is checked is what the reason is about and which words it names, and not the sentence it says. Those sentences are written for a person to read and are meant to be improved; pinning them would turn every improvement into a failing gate. Two reasons here say different sentences about the same words, so the corpus cannot tell those two apart - what it can tell is that one of them fired, which is the whole of what a caller acts on.");
   ("The holder is the same for every case so that the name a run would take can be read off it at a glance, and the names those runs would take are written out in full rather than joined together here. A corpus that works out its own expectation is a record of what the code does rather than a check on it.");
+  ("THE WRONG VERSIONS ARE NOT A PARAGRAPH ABOUT THE PAST. Seventeen of them are written out at data/given/red_proofs/",
+    fn_name("function_span_cut_skip_decided_or_null"),
+    ".mjs and ",
+    fn_name("red_proofs_gate_run"),
+    " runs every one of them against every case here on each pass, so a case that stops telling any of them apart is reported rather than remembered. One version is let off there with its reason and the day that reason would stop holding.");
   let cases = [
     {
       name: "a run starting on the first line of work is stepped over for where it starts",
