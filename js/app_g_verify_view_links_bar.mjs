@@ -34,31 +34,31 @@ export function app_g_verify_view_links_bar(
   let links_target = multi_verse
     ? html_buttons_biblehub_verse_grid(links_bar)
     : links_bar;
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
+  html_buttons_biblehub_verse_group({
+    parent: links_target,
+    book_name: bh_book,
+    chapter_name: bh_chapter,
     verse_list,
-    "Commentary",
-    "",
-    "#commentary",
-  );
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
+    label: "Commentary",
+    folder: "",
+    ending: "#commentary",
+  });
+  html_buttons_biblehub_verse_group({
+    parent: links_target,
+    book_name: bh_book,
+    chapter_name: bh_chapter,
     verse_list,
-    "Parallel",
-    "",
-    "",
-  );
-  html_buttons_biblehub_verse_group(
-    links_target,
-    bh_book,
-    bh_chapter,
+    label: "Parallel",
+    folder: "",
+    ending: "",
+  });
+  html_buttons_biblehub_verse_group({
+    parent: links_target,
+    book_name: bh_book,
+    chapter_name: bh_chapter,
     verse_list,
-    "Interlinear",
-    "interlinear/",
-    "",
-  );
+    label: "Interlinear",
+    folder: "interlinear/",
+    ending: "",
+  });
 }
