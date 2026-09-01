@@ -1,6 +1,5 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { ebible_glued_words_candidates_multiple } from "./ebible_glued_words_candidates_multiple.mjs";
-import { list_first } from "./list_first.mjs";
-import { property_get } from "./property_get.mjs";
 export async function ebible_glued_words_candidates(
   bible_folder,
   half_least,
@@ -21,7 +20,6 @@ export async function ebible_glued_words_candidates(
     half_least,
     [parts],
   );
-  let row = list_first(answered);
-  let candidates = property_get(row, "candidates");
+  let candidates = list_first_property(answered, "candidates");
   return candidates;
 }
