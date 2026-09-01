@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { property_set } from "./property_set.mjs";
-export function ai_log_loops_ranked_run_close(
+export function ai_log_loops_ranked_run_close({
   session,
   lengths,
   previous,
@@ -17,8 +17,8 @@ export function ai_log_loops_ranked_run_close(
   spent,
   loops,
   longest,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("Shut an open run and record it, if it was ever a run at all.");
   let length = property_or_null(lengths, session);
   let missing = null_is(length);

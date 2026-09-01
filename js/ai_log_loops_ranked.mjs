@@ -45,7 +45,7 @@ export function ai_log_loops_ranked(entries) {
       }
       continue;
     }
-    ai_log_loops_ranked_run_close(
+    ai_log_loops_ranked_run_close({
       session,
       lengths,
       previous,
@@ -54,7 +54,7 @@ export function ai_log_loops_ranked(entries) {
       spent,
       loops,
       longest,
-    );
+    });
     property_set(lengths, session, 1);
     property_set(previous, session, step);
     property_set(signatures, session, signature);
@@ -63,7 +63,7 @@ export function ai_log_loops_ranked(entries) {
   ("A conversation's last run is still open when the lines end, and it is the most recent thing anybody did - so close every one of them rather than dropping the newest evidence in the file.");
   let sessions = object_property_names(lengths);
   for (let session of sessions) {
-    ai_log_loops_ranked_run_close(
+    ai_log_loops_ranked_run_close({
       session,
       lengths,
       previous,
@@ -72,7 +72,7 @@ export function ai_log_loops_ranked(entries) {
       spent,
       loops,
       longest,
-    );
+    });
   }
   let ranked = ai_log_loops_tallies_ranked(spent, loops, longest, identical);
   return ranked;
