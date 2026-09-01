@@ -10,9 +10,17 @@ Two ways to break it, one bug behind both: an inner scope rebinding a name an en
 
 `functions_shadowing_gate_run` (in `q`) enforces it against a shrink-only baseline of what the repo already carried. **Both teeth bite**: a name the baseline does not list fails, *and* a name it lists that no longer hides fails too — that second one is how the list is forced to shrink, and the remedy is `functions_shadowing_baseline_write`, not a code change. `functions_shadowing_report` lists everything, and `functions_shadowing_baseline_write` re-writes the baseline after a cleanup (it refuses to grow it).
 
-## Side-by-side reuse is legal, and that trips readers of the AST
+## Do not borrow a premise from a gate — on the working tree it has not run yet
 
-The permission in the section above is not a footnote — it is a hazard for any code that walks a function looking for *the* line that binds a name. `js_ast_declarator_init_named` took the first binding anywhere in the file and justified it in its own prose with "the shadowing gates already refuse a name bound twice". They do not: they refuse a *nested* rebinding, and two sibling scopes reusing one word is exactly what they allow. So a nested helper's `let r = []` answered for the outer function's `let r = {…}`, and `qa_gate_counted_is` called a correctly-written gate blind. Fixed 2026-09-01 with `js_list_type_nodes_outermost_function` — nodes of a kind in the file's own function and in none of the functions inside it — used for both which `return` is the function's own and which line binds the returned name.
+A reader that walks a parsed function must not justify a narrowing by naming a gate that would have refused the shape. `js_ast_declarator_init_named` took the first binding of a name anywhere in the file and defended that in its own prose with "a name bound twice in one function is a thing the shadowing gates already refuse, so there is no second one to choose between". Three things are wrong with it, in rising order of how far they reach.
+
+1. **Sibling scopes may bind one name, deliberately** — the permission in the first section above. That is not an offence, so no gate will ever take it away.
+2. **A name bound only inside a nested helper has no outer binding to compete with.** The outer function may be returning a parameter or an import. The whole-file walk finds the helper's line and hands it back, and nothing anywhere is hidden.
+3. **A gate is a ratchet run afterwards, not an invariant holding now.** An AST reader runs on the working tree, where hiding the gate *would* refuse is sitting uncommitted and unjudged.
+
+The third is what actually bit, on 2026-09-01, and it is worth being exact about because the first two are the reasons the fix is kept rather than the reason it was found. A nested `let r = []` under an outer `let r = {…}` inside `lyric_video_documents_gate_run` made `qa_gate_counted_is` call a correctly-written gate blind. That is enclosing-scope hiding, which `functions_shadowing_gate_run` **does** refuse — it simply had not been run over the file yet. So the premise was true of the repo and false of the file in front of the reader.
+
+Fixed 2026-09-01 with `js_list_type_nodes_outermost_function` — nodes of a kind in the file's own function and in none of the functions inside it — used for both which `return` is the function's own and which line binds the returned name. Verdicts moved for none of the 464 gates: the bug was a trap for the next author rather than a live miscount.
 
 **If you are writing a reader over a parsed function, scope it.** A whole-file walk cannot tell a name in the function from the same name in a helper written inside it, and nothing will go red when it picks the wrong one.
 
