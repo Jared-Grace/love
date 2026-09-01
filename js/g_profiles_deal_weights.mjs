@@ -39,7 +39,7 @@ export function g_profiles_deal_weights(
   }
   let passes = 4;
   let smallest = 0.000000000001;
-  g_profiles_deal_weights_fit(
+  g_profiles_deal_weights_fit({
     passes,
     names,
     values_by_name,
@@ -48,6 +48,6 @@ export function g_profiles_deal_weights(
     weights,
     left,
     smallest,
-  );
+  });
   return weights;
 }
