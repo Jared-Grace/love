@@ -1,3 +1,4 @@
+import { g_arc_review_person_fields } from "./g_arc_review_person_fields.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -7,7 +8,6 @@ import { property_list_size } from "./property_list_size.mjs";
 import { add } from "./add.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
-import { g_arc_answer_fields } from "./g_arc_answer_fields.mjs";
 import { list_add } from "./list_add.mjs";
 import { g_arc_turns_numbered } from "./g_arc_turns_numbered.mjs";
 import { g_arc_review_turn_card } from "./g_arc_review_turn_card.mjs";
@@ -56,19 +56,7 @@ export function g_arc_review_person_cards(
   if (untouched) {
     person_moved = {};
   }
-  let described = g_arc_answer_fields();
-  let chosen_fields = property_get(described, "person");
-  let fields = [];
-  for (let one_field of chosen_fields) {
-    let name = property_get(one_field, "name");
-    let shape = property_get(one_field, "shape");
-    let value = property_get(arc, name);
-    list_add(fields, {
-      name,
-      value,
-      shape,
-    });
-  }
+  let fields = g_arc_review_person_fields(arc);
   let numbered = g_arc_turns_numbered(arc);
   let turns = [];
   for (let one of numbered) {
