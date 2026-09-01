@@ -29,7 +29,7 @@ export async function git_ac_call_folder_files(folder, f_name, args, files) {
     return nothing;
   }
   await git_add_folder_paths(folder, changed);
-  let message = git_call_message(f_name, args);
+  let message = await git_call_message(f_name, args);
   await git_commit_folder(folder, message);
   let done = {
     folder,
