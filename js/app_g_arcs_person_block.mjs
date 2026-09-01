@@ -25,6 +25,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
   "A CONVERSATION NOW HOLDS ITS TURNS RATHER THAN STANDING IN FRONT OF THEM. The heading and the cards under it used to be laid side by side in one long run, so where a conversation ended was said by nothing at all - the next heading simply arrived. Held inside a box of its own, it ends where its box ends, and the tree the arc was written as is the tree the page is drawn as.";
   "THE THREE THINGS CHOSEN ABOUT THE PERSON ARE DRAWN IN THE SHAPE OF WHAT EACH ONE IS, and the shape travels with the field rather than being decided here. Their work is a settled fact, their trouble is the person's own voice, and their summary is somebody's description of them - three different kinds of thing, which read as three lines of one paragraph while they were all drawn alike.";
   "WHAT MOVED IN A PERSON FIELD IS MARKED THE SAME WAY AS WHAT MOVED IN A TURN, and it is worth marking for the same reason: a summary quietly rewritten changes what the whole arc claims to be about, and it is the field a reviewer is least likely to re-read.";
+  "AND A PERSON FIELD THAT WAS ASKED ABOUT AND KEPT SAYS SO THE SAME WAY A TURN LINE DOES. A note against the person is filed at turn nought and comes back at turn nought, so the only thing this place has to do is hand the kept lines down beside the moved ones; the two are drawn by one row-maker, which is what stops the person's half of the page from growing its own vocabulary for the same fact.";
   "A PERSON FIELD IS ASKED FOR IN ONE CALL WHETHER OR NOT IT HAS MOVED, and what comes back is one line or a pair of them. Drawing the line and then marking it were two calls here, which meant this place had to know that a previous wording goes underneath - and it is not the place that should know where the halves of a comparison sit.";
   "THE PERSON IS DRAWN IN THE GAME'S OWN COLOUR FOR THEIR GENDER, in both the shades the game keeps: the wash goes behind their name, the ink goes on their name and on every word they speak anywhere down the arc. So who is a man and who is a woman is answered by the page rather than by remembering which of these names belongs to whom, and a reviewer who has just come from the game is not asked to learn a second set of colours for the same people.";
   "THE WASH HUGS THEIR NAME RATHER THAN CROSSING THE PAGE. Laid across the whole width it was a bright band the eye went to before anything else on the screen, which is the wrong thing to be loudest on a page whose subject is the words underneath it. Held to the name it is the same shape as the bubble the game draws that person's speech in, and it says the same thing at a tenth of the volume.";
@@ -38,6 +39,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
   let notes_count = property_get(person, "notes_count");
   let person_notes = property_get(person, "person_notes");
   let person_moved = property_get(person, "person_moved");
+  let person_held = property_get(person, "person_held");
   let turns = property_get(person, "turns");
   let block = app_g_arcs_depth_block(parent, 0);
   let voice_color = app_g_npc_name_color(person);
@@ -72,6 +74,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
     app_g_arcs_field_pair({
       parent: block,
       moved_fields: person_moved,
+      held_fields: person_held,
       name,
       value,
       shape,
