@@ -1,20 +1,20 @@
-import { property_not } from "./property_not.mjs";
-import { app_shared_color_white } from "./app_shared_color_white.mjs";
-import { app_g_arcs_marks_press_mark_listen } from "./app_g_arcs_marks_press_mark_listen.mjs";
-import { app_g_arcs_marks_press_strip_show } from "./app_g_arcs_marks_press_strip_show.mjs";
-import { app_g_arcs_marks_press_go } from "./app_g_arcs_marks_press_go.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { property_get } from "./property_get.mjs";
-import { not_equal } from "./not_equal.mjs";
+import { app_g_arcs_marks_press_strip_show } from "./app_g_arcs_marks_press_strip_show.mjs";
+import { app_g_arcs_marks_press_go } from "./app_g_arcs_marks_press_go.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
-import { each_index } from "./each_index.mjs";
+import { property_not } from "./property_not.mjs";
 import { html_button } from "./html_button.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
+import { app_g_arcs_marks_press_mark_listen } from "./app_g_arcs_marks_press_mark_listen.mjs";
+import { each_index } from "./each_index.mjs";
 import { app_g_arcs_marks_place_number } from "./app_g_arcs_marks_place_number.mjs";
+import { not_equal } from "./not_equal.mjs";
 export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   "$plain sheet_code";
   "A tour of the moved lines standing in the corner of the arcs bench: a press that carries the reader to the next change and counts it out, a list of every change to jump straight into, a ring around both halves of whichever change is being read, and every change on the sheet answering to being tapped.";
@@ -36,6 +36,7 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   "THE LIST FOLLOWS THE TOUR AS WELL AS DRIVING IT. Ten plain next presses with the numbers open would otherwise leave the filled chip somewhere off the top of a list that had not moved, so the list is scrolled to whichever chip is current - but only while it is open, because a folded list has no size and asking a thing with no size where it sits gives a place that means nothing.";
   "THE TOUR IS PUT BACK WHERE IT WAS WHEN THE SHEET IS DRAWN AGAIN, and filing a note is what draws it again. The press is made fresh with the sheet, so a reviewer who said something about the fortieth change was handed back a press reading next change - and pressing it carried them to the first, which is the one place they were certainly not. It is filed under the sheet and read back under the sheet, so changing person still starts at the beginning.";
   "COMING BACK RINGS THE CHANGE WITHOUT FETCHING THE READER. The scroll distance is put back by the bench in the same breath, so the reader is already looking at the place they were looking at, and scrolling to it as well would move the page out from under a reader who had not moved.";
+  "THE PRESSES ARE MADE BEFORE THE CHANGES ARE LISTENED TO, and that order is load-bearing rather than tidy. Listening happens here and now, once per change, and what it hands over is a bundle holding the press itself - so with the listening first, the very first change asks for a press that has not been made yet and the whole bench dies before a word of it is drawn. Nothing about it is visible in the reading: the listening only ever uses the press later, when somebody taps, and it was written that way round while it was a closure, where naming a thing made further down is ordinary and harmless.";
   arguments_assert(arguments, 4);
   let none = list_empty_is(marks);
   if (none) {
@@ -91,23 +92,6 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
     });
   }
   let chips = app_g_arcs_marks_chips(strip, count, go_chosen);
-  function mark_listen(mark, number) {
-    let r = app_g_arcs_marks_press_mark_listen({
-      mark,
-      number,
-      marks,
-      counted,
-      press,
-      at,
-      chips,
-      sheet_code,
-      count,
-      panel,
-      strip,
-    });
-    return r;
-  }
-  each_index(marks, mark_listen);
   let bar = html_div(holder);
   html_style_assign(bar, {
     display: "flex",
@@ -148,6 +132,23 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
   };
   html_style_assign(lister, dressing);
   html_style_assign(press, dressing);
+  function mark_listen(mark, number) {
+    let r = app_g_arcs_marks_press_mark_listen({
+      mark,
+      number,
+      marks,
+      counted,
+      press,
+      at,
+      chips,
+      sheet_code,
+      count,
+      panel,
+      strip,
+    });
+    return r;
+  }
+  each_index(marks, mark_listen);
   let start = app_g_arcs_marks_place_number(sheet_code, count);
   let resumed = not_equal(start, null);
   if (resumed) {
