@@ -6,7 +6,7 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { html_subset_ordered_selected } from "./html_subset_ordered_selected.mjs";
 import { html_subset_toggle } from "./html_subset_toggle.mjs";
 import { app_shared_container_blue } from "./app_shared_container_blue.mjs";
-export function html_subset_ordered_choose(
+export function html_subset_ordered_choose({
   parent,
   options,
   chosen,
@@ -14,7 +14,7 @@ export function html_subset_ordered_choose(
   key_property,
   on_change,
   choices_label,
-) {
+}) {
   let container = html_div(parent);
   function render() {
     html_clear(container);

@@ -28,15 +28,15 @@ export function app_shared_bible_subset_sorted_choose({
       name_property,
       query,
     );
-    html_subset_ordered_choose(
-      list_div,
-      matching,
+    html_subset_ordered_choose({
+      parent: list_div,
+      options: matching,
       chosen,
       name_property,
       key_property,
       on_change,
       choices_label,
-    );
+    });
   }
   let search_text = app_shared_search_by_name_text();
   app_shared_search_render(container, search_text, on_query);
