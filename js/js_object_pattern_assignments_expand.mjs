@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_block_body_get } from "./js_block_body_get.mjs";
@@ -6,7 +7,6 @@ import { js_statement_pattern_names_or_null } from "./js_statement_pattern_names
 import { null_not_is } from "./null_not_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { add } from "./add.mjs";
-import { property_get } from "./property_get.mjs";
 import { js_object_pattern_statements } from "./js_object_pattern_statements.mjs";
 import { list_replace_multiple } from "./list_replace_multiple.mjs";
 import { list_add } from "./list_add.mjs";
@@ -31,8 +31,7 @@ export function js_object_pattern_assignments_expand(ast, name_record) {
         let first = list_first(names);
         let joined = add("_", first);
         let name_held = add(name_record, joined);
-        let expression = property_get(statement, "expression");
-        let node_right = property_get(expression, "right");
+        let node_right = property_path_get_2(statement, "expression", "right");
         let written = js_object_pattern_statements(
           name_held,
           names,
