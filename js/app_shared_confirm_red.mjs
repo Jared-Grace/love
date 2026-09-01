@@ -11,13 +11,13 @@ export function app_shared_confirm_red(
 ) {
   "the same asking with the yes painted red: for a yes that takes away work the learner has already done rather than adding to it";
   arguments_assert(arguments, 6);
-  app_shared_confirm_generic(
+  app_shared_confirm_generic({
     parent,
     context,
     screen_back,
     question,
     text_confirm,
     on_confirm,
-    app_shared_button_red,
-  );
+    button_confirm: app_shared_button_red,
+  });
 }

@@ -11,13 +11,13 @@ export function app_shared_confirm(
 ) {
   "the ordinary asking, where saying yes carries the learner forward, so the yes is the green of every other go ahead here";
   arguments_assert(arguments, 6);
-  app_shared_confirm_generic(
+  app_shared_confirm_generic({
     parent,
     context,
     screen_back,
     question,
     text_confirm,
     on_confirm,
-    app_shared_button_green,
-  );
+    button_confirm: app_shared_button_green,
+  });
 }
