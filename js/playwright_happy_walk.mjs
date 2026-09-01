@@ -1,3 +1,4 @@
+import { playwright_happy_walk_settle_ms } from "./playwright_happy_walk_settle_ms.mjs";
 import { not } from "./not.mjs";
 import { log } from "./log.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,7 +7,6 @@ import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_take_last } from "./list_take_last.mjs";
 import { list_size } from "./list_size.mjs";
-import { page_capture_settle_ms } from "./page_capture_settle_ms.mjs";
 import { playwright_happy_step } from "./playwright_happy_step.mjs";
 import { property_get } from "./property_get.mjs";
 export async function playwright_happy_walk(page, steps_max) {
@@ -17,7 +17,7 @@ export async function playwright_happy_walk(page, steps_max) {
   "Every step is kept, not just the count, because the interesting question after a red walk is what the last few screens were. The cap failure carries the tail rather than the whole trail: a walk is thousands of steps long and the beginning of it says nothing about where it got stuck.";
   arguments_assert(arguments, 2);
   let trail = [];
-  let settle = page_capture_settle_ms();
+  let settle = playwright_happy_walk_settle_ms();
   let steps = 0;
   ("a control that goes from the page between being found and being pressed is an ordinary miss, and a run of them in a row is not. One means a screen moved while it was being read; a run of them means the screen is offering something marked that cannot be pressed at all, and every one of them costs the press its whole timeout - so left alone the walk spends hours saying nothing rather than naming the screen.");
   let missed = 0;
