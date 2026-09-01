@@ -125,6 +125,7 @@ export function permission_rules_other() {
     "WebFetch(domain:docs.github.com)",
     "WebFetch(domain:neon.com)",
     "WebFetch(domain:jared-grace.web.app)",
+    "WebFetch(domain:docs.claude.com)",
     "WebSearch",
     "Edit(/tmp/claude-1000/-home-j-a-repos-love/**)",
     "Read(/tmp/claude-1000/-home-j-a-repos-love/**)",
