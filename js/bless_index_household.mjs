@@ -1,3 +1,4 @@
+import { multiply_add } from "./multiply_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -41,7 +42,6 @@ export function bless_index_household(index) {
     return past;
   }
   let position = list_filter_size(steps, passed_is);
-  let building_first = multiply(building, per_building);
-  let household = add(building_first, position);
+  let household = multiply_add(building, per_building, position);
   return household;
 }
