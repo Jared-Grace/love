@@ -13,15 +13,17 @@ import { html_on_click } from "./html_on_click.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_search_results_book_card(
   book_code,
-  book_current,
-  book_group_div,
-  books,
-  results,
-  result_verses_count,
-  book_folds,
-  book_chapter_single_expanders,
+  {
+    book_current,
+    book_group_div,
+    books,
+    results,
+    result_verses_count,
+    book_folds,
+    book_chapter_single_expanders,
+  },
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 2);
   let same = equal(book_code, book_current.book_code);
   if (same) {
     return;
