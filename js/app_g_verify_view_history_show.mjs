@@ -17,15 +17,9 @@ import { app_shared_button } from "./app_shared_button.mjs";
 export async function app_g_verify_view_history_show(
   chapter_code,
   verse,
-  container,
-  small_gap,
-  suggest_area,
-  draft_key,
-  base_key,
-  value,
-  autosize,
+  { container, small_gap, suggest_area, draft_key, base_key, value, autosize },
 ) {
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 3);
   try {
     let all = await app_shared_api({
       f_name: fn_name("g_verify_suggest_history_read"),
