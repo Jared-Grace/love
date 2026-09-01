@@ -1,3 +1,4 @@
+import { js_statements_function_declared_names_direct_cases_gate_run } from "./js_statements_function_declared_names_direct_cases_gate_run.mjs";
 import { red_proofs_gate_run } from "./red_proofs_gate_run.mjs";
 import { bible_glyph_chapters_numbered_names_gate_run } from "./bible_glyph_chapters_numbered_names_gate_run.mjs";
 import { baseline_growth_guarded_is_cases_gate_run } from "./baseline_growth_guarded_is_cases_gate_run.mjs";
@@ -945,6 +946,7 @@ export function qa_gates() {
     baseline_growth_guarded_is_cases_gate_run,
     bible_glyph_chapters_numbered_names_gate_run,
     red_proofs_gate_run,
+    js_statements_function_declared_names_direct_cases_gate_run,
   ];
   return gates;
 }
