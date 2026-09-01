@@ -52,14 +52,14 @@ export function app_g_turn_quiz_once(
     }
     return b;
   }
-  app_g_turn_quiz(
+  app_g_turn_quiz({
     overlay,
     npc,
-    concern,
-    "What would you like to say?",
+    npc_text: concern,
+    prompt: "What would you like to say?",
     build_correct,
     build_wrong,
     discern,
     leave,
-  );
+  });
 }

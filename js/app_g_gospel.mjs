@@ -90,16 +90,16 @@ export async function app_g_gospel(
       }
       overlay_close();
     }
-    app_g_turn_quiz(
+    app_g_turn_quiz({
       overlay,
       npc,
-      ob,
-      "What would you like to say?",
+      npc_text: ob,
+      prompt: "What would you like to say?",
       build_correct,
       build_wrong,
       discern,
-      on_end,
-    );
+      leave: on_end,
+    });
   } else {
     let doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, doxology);
