@@ -1,3 +1,4 @@
+import { lyric_timing_screen_lag_on_heard } from "./lyric_timing_screen_lag_on_heard.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { divide } from "./divide.mjs";
 import { performance_now } from "./performance_now.mjs";
@@ -41,10 +42,8 @@ export function lyric_timing_screen_lag(parent, earlier_input) {
     return seconds;
   }
   function on_heard() {
-    if (run.running) {
-      let v = performance_now();
-      run.taps.push(v);
-    }
+    let r = lyric_timing_screen_lag_on_heard(run);
+    return r;
   }
   async function on_measure() {
     if (run.running) {
@@ -62,8 +61,8 @@ export function lyric_timing_screen_lag(parent, earlier_input) {
     let played = 0;
     while (less_than(played, count)) {
       html_click_sound_play(run.maker);
-      let v2 = performance_now();
-      run.clicks.push(v2);
+      let v = performance_now();
+      run.clicks.push(v);
       played = played + 1;
       let gap = integer_random(1200, 2400);
       await sleep(gap);
