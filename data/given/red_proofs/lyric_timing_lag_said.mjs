@@ -38,6 +38,10 @@ function enough_of(heard, count, options) {
     let over = heard * 4 > count * 3;
     return over;
   }
+  if (options.line_at_seven_tenths) {
+    let seven = heard * 10 >= count * 7;
+    return seven;
+  }
   let three_quarters = heard * 4 >= count * 3;
   return three_quarters;
 }
