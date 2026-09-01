@@ -7,7 +7,7 @@ import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { json_to } from "./json_to.mjs";
-export function http_node_request(
+export function http_node_request({
   resolve,
   reject,
   url,
@@ -16,9 +16,9 @@ export function http_node_request(
   options,
   body,
   h,
-) {
+}) {
   "WHAT THE FAR END SAID IS PART OF THE REFUSAL, not something to be thrown away with it. The bytes are already gathered by the time the status is looked at, and a refusal answered with only an address and a number is a refusal nobody can act on: fal turning a picture down and fal being sent a body it cannot read are both four hundred and twenty two, and telling those two apart decides whether the next move is rewording the picture or fixing the code. Both were guessed at, and the reason was sitting in the bytes being dropped one line further down.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let urlObj = new URL(url);
   function lambda5(res) {
     let chunks = [];

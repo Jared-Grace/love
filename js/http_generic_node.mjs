@@ -31,7 +31,7 @@ export async function http_generic_node(url, options) {
   let h = await import(text_combine("http", h_name));
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
-    let r = http_node_request(
+    let r = http_node_request({
       resolve,
       reject,
       url,
@@ -40,7 +40,7 @@ export async function http_generic_node(url, options) {
       options,
       body,
       h,
-    );
+    });
     return r;
   }
   return buffer;
