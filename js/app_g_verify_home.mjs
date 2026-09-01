@@ -27,7 +27,7 @@ export async function app_g_verify_home(context) {
     let view = property_get(held, "view");
     return view;
   }
-  await app_g_verify_home_document(
+  await app_g_verify_home_document({
     render,
     chapter,
     status,
@@ -35,7 +35,7 @@ export async function app_g_verify_home(context) {
     view_get,
     poll,
     refresh,
-  );
+  });
   function render(chapter_shown, status_shown, chapter_state_shown) {
     app_g_verify_home_render({
       chapter_shown,
