@@ -47,7 +47,7 @@ export async function ebible_readaloud_lines_gate_run() {
     "ebible_readaloud_lines_offered_to_fetch_baseline_write",
   );
   let f_name_download = fn_name("ebible_languages_readaloud_download");
-  let differ = await ebible_readaloud_lines_record_assert(
+  let differ = await ebible_readaloud_lines_record_assert({
     f_name_download,
     f_name,
     unchecked_names,
@@ -55,7 +55,7 @@ export async function ebible_readaloud_lines_gate_run() {
     unchecked_write,
     bibles,
     unmeasured,
-  );
+  });
   ("A chapter published as a heading and nothing else is watched here rather than next door, because the two lists are told apart by what anybody can do about them. Next door names what a fetch would put right; this names what a fetch would not, and it is a separate record so that neither one can hide inside the other.");
   let heading_only_names = await ebible_readaloud_heading_only_names();
   let heading_only_path = ebible_readaloud_heading_only_baseline_path();
