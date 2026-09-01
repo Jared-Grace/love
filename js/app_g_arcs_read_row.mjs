@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -16,6 +17,8 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "THE PRESS SITS AT THE TOP WITH THE STATE IT CHANGES, not at the foot of the arc where the reading ends. An arc is many screens long, so a press at the bottom is found only by whoever scrolled the whole way; the state and the press being one thing means a reviewer who wants to know where they are and a reviewer who wants to record where they are look in the same place.";
   "THE LINE NAMES WHAT THE MARKS ARE MEASURED FROM AND NEVER ONLY THAT THERE ARE SOME. Moved since you read it, moved since your notes were answered, and moved since the last backup was taken are three different claims about the reader, and any of them said as another tells somebody something untrue about work they did or did not do.";
   "AN ARC WITH NOTHING BEHIND IT SAYS SO PLAINLY, because otherwise a page with no marks on it is read as an arc nothing has moved in. Those are opposite facts and they look identical, and the more dangerous of the two is the one where a reviewer trusts an unmarked page.";
+  "THE LINES THAT WERE ASKED ABOUT AND KEPT ARE COUNTED HERE TOO, and that count is the answer to a reviewer who files notes in waves. Answering a note clears it away whether the wording changed or not, so between two waves the arc says nothing at all about the notes of the first one - and the reader is left to decide between having been ignored and having been agreed with. The count says which.";
+  "IT IS A CLAUSE ON THE SAME SENTENCE AND NOT A LINE OF ITS OWN. What moved and what was held are two halves of one answer to the same question - what became of my notes - and set on two lines they are read as two separate facts about the arc, the second of which is easy to walk past.";
   "NOTHING MOVED IS SAID OUT LOUD RATHER THAN LEFT BLANK, which is what makes a second reading cheap. A reviewer told that nothing has moved since they read it can close the arc without reading a line of it, and that is the whole saving.";
   "THE PRESS IS OFFERED WHATEVER THE STATE IS, because the record only ever moves forward. On an arc already read it takes in what moved since; on one measured against a backup it replaces a stand-in with a real reading, and from then on the marks are about this reviewer rather than about a copy taken on some day they had no part in.";
   arguments_assert(arguments, 4);
@@ -65,6 +68,17 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   let backup_unmoved = backed_up && nothing_moved;
   if (backup_unmoved) {
     said = "not read yet, and nothing has moved since the last content backup";
+  }
+  let held_count = property_get(person, "held_count");
+  let some_held = not_equal(held_count, 0);
+  if (some_held) {
+    let counted_held = String(held_count);
+    said = text_combine_multiple([
+      said,
+      ", and ",
+      counted_held,
+      " lines you left notes on were kept word for word",
+    ]);
   }
   let row = html_div(parent);
   html_style_assign(row, {
