@@ -68,9 +68,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
     anchor = property_get(week_calendar_far_anchor_set_answer, "anchor");
   }
   function cell_pressed(day, slot) {
-    let r3 = week_calendar_cell_pressed(
-      day,
-      slot,
+    let r3 = week_calendar_cell_pressed(day, slot, {
       anchor,
       anchor_click,
       free_click,
@@ -79,7 +77,7 @@ export function week_calendar(parent, dates, initial_ranges, on_ranges) {
       summary,
       ranges,
       summary_line,
-    );
+    });
     return r3;
   }
   function anchor_click(day, slot) {
