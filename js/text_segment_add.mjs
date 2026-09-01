@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-export function text_run_add(runs, letter, changed) {
+export function text_segment_add(runs, letter, changed) {
   "$plain letter";
   "$plain changed";
   "One character added to the end of a list of runs, joined onto the run already there when it is the same kind of thing and started as a new run when it is not.";
