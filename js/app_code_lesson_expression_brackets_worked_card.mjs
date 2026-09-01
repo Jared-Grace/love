@@ -8,7 +8,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { or } from "./or.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_brackets_worked_card(
+export function app_code_lesson_expression_brackets_worked_card({
   root,
   heading,
   left,
@@ -16,8 +16,8 @@ export function app_code_lesson_expression_brackets_worked_card(
   right,
   brackets_left,
   inner_or,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("one worked card for the lessons that teach the brackets: three true or false words joined by an && and an || , with the marks round one pair or the other, carried all the way to its value");
   ("The three true or false words are asked for as plain true and false rather than as code, and both marks are worked out here rather than handed in, so a lesson says which line it wants and nothing about how the line is written or what it comes to. Every value on the card is then this one function's arithmetic, and a card cannot say a line is true while the line is false.");
   ("Both lessons the brackets are taught by show two of these cards, and before this they each built all of it themselves - the same six words looked up and the same three lines put together, twice over in two files. The words are the same words either way, so the only thing the two copies could ever do differently was drift.");
