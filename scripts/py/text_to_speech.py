@@ -205,9 +205,19 @@ def engine_ready(threads):
         return ENGINE
     os.environ["OMP_NUM_THREADS"] = str(threads)
     from kokoro_onnx import Kokoro
-    from misaki import en
+    from misaki import en, espeak
 
-    ENGINE["g2p"] = en.G2P(trf=False, british=False, fallback=None)
+    # A word the dictionary does not hold has to go somewhere, and with no
+    # fallback it goes nowhere: the word is rendered as silence while the
+    # caption still shows it.  Measured over the 738 chapters recorded before
+    # this line changed, that lost 11192 words across 508 of them - almost all
+    # Hebrew proper names, so "the son of Amittai, saying" was read as "the son
+    # of saying".  The fallback sounds a name out instead of dropping it.  It is
+    # built rather than caught, so that a machine without espeak stops the night
+    # loudly instead of quietly recording another Bible with the names missing.
+    ENGINE["g2p"] = en.G2P(
+        trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
+    )
     ENGINE["kokoro"] = Kokoro(MODEL_PATH, VOICES_PATH)
     return ENGINE
 
