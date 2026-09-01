@@ -7,7 +7,7 @@ import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { emoji_repeat_1 } from "./emoji_repeat_1.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_next(
+export function app_code_next({
   context,
   parent_more,
   more_text,
@@ -16,7 +16,7 @@ export function app_code_next(
   on_back,
   back_text,
   parent_next_back,
-) {
+}) {
   "the way-forward controls on the examples screen: a self-descriptive 'see more examples' button (its own action, no question) that refreshes the examples in place, then the primary Next button and an optional Back. more_text is the plain label for the refresh button; refresh runs it; on_next is Next; on_back/back_text are the optional back control";
   "A null refresh hides the see-more button, the same way a null on_back hides Back. A lesson whose examples are already all of them has nothing to refresh to, and a button that redraws the identical screen reads as broken rather than as complete";
   if (null_not_is(refresh)) {
