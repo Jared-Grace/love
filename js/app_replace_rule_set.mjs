@@ -172,19 +172,24 @@ export async function app_replace_rule_set(context) {
           index_selected_held,
           "index_selected",
         );
-        ({ start, symbols_invalid_chosen, start_indices } =
-          await app_replace_rule_set_symbol_on_click(
-            rules_used,
-            index_selected3,
-            index,
-            start,
-            symbols_invalid_chosen,
-            symbol_buttons,
-            start_indices,
-            rule_buttons,
-            duration,
-            div_symbols,
-          ));
+        let record_start = await app_replace_rule_set_symbol_on_click(
+          rules_used,
+          index_selected3,
+          index,
+          start,
+          symbols_invalid_chosen,
+          symbol_buttons,
+          start_indices,
+          rule_buttons,
+          duration,
+          div_symbols,
+        );
+        start = property_get(record_start, "start");
+        symbols_invalid_chosen = property_get(
+          record_start,
+          "symbols_invalid_chosen",
+        );
+        start_indices = property_get(record_start, "start_indices");
         let last_state = list_last_property(history, "state");
         let b = json_equal(start, last_state);
         if (not(b)) {

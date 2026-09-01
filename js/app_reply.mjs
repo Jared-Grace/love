@@ -1,3 +1,4 @@
+import { app_reply_copy_refresh_chosen } from "./app_reply_copy_refresh_chosen.mjs";
 import { app_reply_key_down_handle } from "./app_reply_key_down_handle.mjs";
 import { app_reply_response_button } from "./app_reply_response_button.mjs";
 import { app_reply_love_all_click } from "./app_reply_love_all_click.mjs";
@@ -5,7 +6,6 @@ import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
-import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { app_shared_button_copy } from "./app_shared_button_copy.mjs";
 import { bible_verses_uplifting } from "./bible_verses_uplifting.mjs";
@@ -142,16 +142,12 @@ export async function app_reply(context) {
   }
   list_map_existing(choices, lambda9, buttons_responses);
   async function copy_refresh() {
-    let languages_chosen6 = property_get(
+    let r8 = await app_reply_copy_refresh_chosen(
       languages_chosen_held,
-      "languages_chosen",
-    );
-    let r2 = await app_reply_copy_refresh(
-      languages_chosen6,
       responses,
       bible_texts,
     );
-    return r2;
+    return r8;
   }
   function lambda6(event) {
     let r7 = app_reply_key_down_handle(
