@@ -74,7 +74,7 @@ export function app_g_verify_home_render({
     app_g_verify_home_empty(pending, open_pending, held);
     return;
   }
-  app_g_verify_home_choose(
+  app_g_verify_home_choose({
     chapter_state_shown,
     approved_key,
     held,
@@ -83,5 +83,5 @@ export function app_g_verify_home_render({
     pending,
     open_passage,
     open_pending,
-  );
+  });
 }

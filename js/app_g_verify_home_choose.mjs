@@ -6,7 +6,7 @@ import { property_set } from "./property_set.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { equal } from "./equal.mjs";
 import { list_first } from "./list_first.mjs";
-export function app_g_verify_home_choose(
+export function app_g_verify_home_choose({
   chapter_state_shown,
   approved_key,
   held,
@@ -15,11 +15,11 @@ export function app_g_verify_home_choose(
   pending,
   open_passage,
   open_pending,
-) {
+}) {
   "Which verse the verify page opens on its own once it has drawn the list: the one just written if that is news, otherwise the one chosen last time, otherwise the first.";
   "A NEWLY WRITTEN VERSE IS ONLY JUMPED TO ONCE. The keeper remembers which one it already jumped to, so a look-again a few seconds later does not drag the reader off whatever they moved to since.";
   "A VERSE ALREADY APPROVED IS NOT NEWS, so it is not jumped to even when it is the latest one there is.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let latest = property_get(chapter_state_shown, "latest");
   let selected_key = property_get(held, "selected_key");
   let advanced_for = property_get(held, "advanced_for");
