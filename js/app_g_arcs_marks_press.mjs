@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_g_arcs_marks_press_mark_listen } from "./app_g_arcs_marks_press_mark_listen.mjs";
 import { app_g_arcs_marks_press_strip_show } from "./app_g_arcs_marks_press_strip_show.mjs";
@@ -11,7 +12,6 @@ import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
 import { each_index } from "./each_index.mjs";
-import { not } from "./not.mjs";
 import { html_button } from "./html_button.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
 import { app_g_arcs_marks_place_number } from "./app_g_arcs_marks_place_number.mjs";
@@ -114,8 +114,7 @@ export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
     gap: "0.4rem",
   });
   function lister_press() {
-    let open = property_get(at, "open");
-    let after_open = not(open);
+    let after_open = property_not(at, "open");
     app_g_arcs_marks_press_strip_show(after_open, at, strip, lister);
   }
   let lister = html_button(bar, "list", lister_press);
