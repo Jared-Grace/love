@@ -1,19 +1,11 @@
-import { app_shared_game_map_square_neighbours } from "./app_shared_game_map_square_neighbours.mjs";
+import { app_shared_game_map_square_flood } from "./app_shared_game_map_square_flood.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { multiply } from "./multiply.mjs";
 import { floor } from "./floor.mjs";
 import { g_water } from "./g_water.mjs";
-import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_set_nested } from "./list_set_nested.mjs";
-import { less_than } from "./less_than.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { or } from "./or.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
 import { g_coordinates } from "./g_coordinates.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -55,46 +47,18 @@ export function app_shared_game_map_generate_waters(rows) {
   ("A square is remembered by its number counting along the rows rather than by its two");
   ("coordinates written out, so that two squares are the same square when the numbers match.");
   ("Objects would not compare that way, and text costs a string built per square per side.");
-  function key_of(x, y) {
-    let left = multiply(y, width);
-    let key = add(left, x);
-    return key;
-  }
-  function flood(spot) {
-    let x = property_get(spot, "x");
-    let y = property_get(spot, "y");
-    list_set_nested(rows, y, x, item_water);
-    let v = key_of(x, y);
-    taken.add(v);
-    function neighbour_queue(step) {
-      let step_x = property_get(step, "x");
-      let step_y = property_get(step, "y");
-      let west_of = less_than(step_x, 0);
-      let east_of = greater_than_equal(step_x, width);
-      let north_of = less_than(step_y, 0);
-      let south_of = greater_than_equal(step_y, height);
-      let left2 = or(west_of, east_of);
-      let right = or(north_of, south_of);
-      let outside = or(left2, right);
-      if (outside) {
-        return;
-      }
-      let key = key_of(step_x, step_y);
-      let wet = taken.has(key);
-      let queued = edge_keys.has(key);
-      let known = or(wet, queued);
-      if (known) {
-        return;
-      }
-      edge_keys.add(key);
-      list_add(edge, step);
-    }
-    let around = app_shared_game_map_square_neighbours(x, y);
-    each(around, neighbour_queue);
-  }
   let coordinates = g_coordinates(rows);
   let first = list_random_item(coordinates);
-  flood(first);
+  app_shared_game_map_square_flood({
+    spot: first,
+    rows,
+    item_water,
+    width,
+    taken,
+    height,
+    edge_keys,
+    edge,
+  });
   function spread() {
     let dry = list_empty_is(edge);
     if (dry) {
@@ -102,7 +66,16 @@ export function app_shared_game_map_generate_waters(rows) {
     }
     let spot = list_random_item(edge);
     list_remove(edge, spot);
-    flood(spot);
+    app_shared_game_map_square_flood({
+      spot,
+      rows,
+      item_water,
+      width,
+      taken,
+      height,
+      edge_keys,
+      edge,
+    });
   }
   let remaining = subtract(water_count, 1);
   each_range(remaining, spread);
