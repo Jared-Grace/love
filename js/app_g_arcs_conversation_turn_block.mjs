@@ -43,6 +43,7 @@ export function app_g_arcs_conversation_turn_block({
     let caught_up = text_empty_not_is(catch_up);
     if (caught_up) {
       let moved = property_get(card, "moved");
+      let marks = property_get(bench, "marks");
       app_g_arcs_field_pair(
         conversation_block,
         moved,
@@ -50,6 +51,7 @@ export function app_g_arcs_conversation_turn_block({
         catch_up,
         catch_up_shape,
         voice_color,
+        marks,
       );
     }
   }

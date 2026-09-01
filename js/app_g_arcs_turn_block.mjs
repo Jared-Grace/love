@@ -68,9 +68,10 @@ export function app_g_arcs_turn_block(
       opacity: "1",
     });
   }
+  let marks = property_get(bench, "marks");
   function turn_field(name, value) {
     let shape = g_arc_answer_field_shape("turn", name);
-    app_g_arcs_field_pair(block, moved, name, value, shape, voice_color);
+    app_g_arcs_field_pair(block, moved, name, value, shape, voice_color, marks);
   }
   turn_field("opener", opener);
   turn_field("before", before);

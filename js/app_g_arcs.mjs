@@ -21,6 +21,7 @@ export async function app_g_arcs() {
   "THE CHAPTER IS CHOSEN FROM WHAT IS WRITTEN rather than from a name spelled into this page. One chapter has arcs today, and a page naming it would go on showing that one after a second was written, with nothing to say it was not showing everything.";
   "ONE PERSON IS ON THE SHEET AT A TIME, chosen the same way the chapter is. A chapter's arcs stacked end to end are hundreds of turns, and nothing said where one person stopped except the colour changing somewhere down a scroll - so a reviewer working through the second of three walked past the first every time the sheet was drawn again, which is on every note filed. Held to one, the sheet is the length of one arc and every screen of it is the person being read.";
   "WHAT IS CHOSEN IS ONE RECORD THE PRESSES WRITE INTO, because a press writes long after the drawing has returned, and a name handed to one would be a copy nothing else could read.";
+  "THE LIST OF MOVED ROWS IS MADE EMPTY HERE ON EVERY DRAWING, which is what makes the tour of them right rather than growing. Filing a note draws the sheet again, so a list made once at the top of the page would hold the rows of every drawing since the page opened - most of them belonging to a sheet that is no longer on the screen.";
   "IT IS A DEV SCREEN AND SHOWS NOTHING AGAINST THE DEPLOYED SITE, because the store it reads is on the machine the arcs are being written on.";
   let top = app_shared_dev_overlay_status("Arcs");
   let column = property_get(top, "column");
@@ -63,11 +64,13 @@ export async function app_g_arcs() {
       status_set("that chapter has no arcs written");
       return;
     }
+    let marks = [];
     let bench = {
       chapter_code,
       status_set,
       status_working,
       render,
+      marks,
     };
     let sheet_code = app_g_arcs_sheet_draw(
       sheet,
