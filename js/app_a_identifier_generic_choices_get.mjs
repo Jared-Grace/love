@@ -16,7 +16,7 @@ export async function app_a_identifier_generic_choices_get({
   replace,
 }) {
   arguments_assert(arguments, 1);
-  let r3 = await app_a_identifier_generic_choices_get_ast(
+  let r3 = await app_a_identifier_generic_choices_get_ast({
     a,
     o,
     name,
@@ -24,7 +24,7 @@ export async function app_a_identifier_generic_choices_get({
     c,
     choices,
     replace,
-  );
+  });
   let r4 = app_a_identifier_generic_choices_get_includes(r3, name);
   let r = app_a_identifier_generic_choices_get_choice_function_open(
     r4,

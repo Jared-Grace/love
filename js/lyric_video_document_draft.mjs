@@ -1,3 +1,4 @@
+import { lyric_video_document } from "./lyric_video_document.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { audio_file_duration } from "./audio_file_duration.mjs";
