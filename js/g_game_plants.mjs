@@ -18,6 +18,14 @@ export async function g_game_plants(chapters, pool) {
   let cursor = 0;
   let plants = [];
   let index = -1;
-  g_plants_pool_hand_out(cut, index, s, held, cursor, pool, plants);
+  g_plants_pool_hand_out({
+    cut,
+    index,
+    s,
+    held,
+    cursor,
+    pool,
+    plants,
+  });
   return plants;
 }
