@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { less_than } from "./less_than.mjs";
@@ -133,16 +134,14 @@ export function js_regions_blanked_over_wait(ast) {
   }
   function emptied_region_here(statement) {
     let plain = emptied_region(statement);
-    let b = equal(plain, null);
-    let plain_is = not(b);
+    let plain_is = equal_not(plain, null);
     if (plain_is) {
       return plain;
     }
     let wrapped = null;
     function empties_is(node) {
       let region = emptied_region(node);
-      let b2 = equal(region, null);
-      let found_is = not(b2);
+      let found_is = equal_not(region, null);
       if (found_is) {
         wrapped = region;
       }
