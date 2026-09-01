@@ -5,7 +5,7 @@ import { not } from "./not.mjs";
 import { js_call_name_text_cut_is } from "./js_call_name_text_cut_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_call_name_number_made_is } from "./js_call_name_number_made_is.mjs";
-export function js_compare_text_number_kind_of_declarator_each(kinds) {
+export function js_compare_text_number_declarator_each(kinds) {
   arguments_assert(arguments, 1);
   function declarator_each(node) {
     let id = property_get(node, "id");
