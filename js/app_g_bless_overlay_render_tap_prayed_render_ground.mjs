@@ -22,15 +22,15 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground({
   ("in, who is ringed - is drawn from the record on every step rather than remembered here,");
   ("so a person covered by a prayer over their whole block lights up the moment they walk");
   ("into view without anybody having gone back to write their name down.");
-  let remaining = app_g_bless_marks(
+  let remaining = app_g_bless_marks({
     glows,
     homes,
     blocks,
     blessed,
-    view_everyone,
+    everyone: view_everyone,
     ground,
     held,
-  );
+  });
   ("The arrow at the edge of the screen is aimed here rather than with the marks on the");
   ("ground, because it is the one hint that is not about the street at all - it is about");
   ("where the screen ENDS, and so it has to be worked out from the frame and the strip of");
