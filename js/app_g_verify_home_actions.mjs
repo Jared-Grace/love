@@ -1,3 +1,4 @@
+import { storage_session_specify_set } from "./storage_session_specify_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_set } from "./property_set.mjs";
 import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
@@ -24,7 +25,7 @@ export function app_g_verify_home_actions(
   async function open_passage(passage) {
     let key = g_sermon_passage_verses_key(passage);
     property_set(held, "selected_key", key);
-    sessionStorage.setItem(storage_key, key);
+    storage_session_specify_set(storage_key, key);
     app_g_verify_home_highlight_selected(key, verse_buttons);
     let scripture = property_get(passage, "scripture");
     let lines = property_get(passage, "lines");
