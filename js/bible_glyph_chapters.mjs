@@ -161,6 +161,7 @@ export function bible_glyph_chapters() {
     thirtieth,
     thirty_first,
     thirty_second,
+    thirty_third,
   ];
   return chapters;
 }
