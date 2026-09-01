@@ -1,7 +1,9 @@
 import { lyric_timing_lag_said } from "../../../js/lyric_timing_lag_said.mjs";
 import { lyric_timing_lag_said_cases } from "../../../js/lyric_timing_lag_said_cases.mjs";
 
-("Eleven wrong ways of telling somebody how their run of sounds went, kept so the corpus can be asked again whether it still tells them apart.");
+("Thirteen wrong ways of telling somebody how their run of sounds went, kept so the corpus can be asked again whether it still tells them apart.");
+
+("Two of the thirteen were written to answer a report rather than a suspicion. The gate says which cases are the only ones refusing anything, and five of the eight here were the only ones refusing nothing - which reads as five cases too many and is usually the opposite, a set of wrong versions too broad to tell the careful cases apart. Two of the five said in their own words what they were for, a line drawn one press further along and a rounding that keeps the nines, and no version here asked either question sharply enough to hear the answer. So the line at seven tenths and the rounding that cuts rather than goes to the nearest are written from what those two cases claim about themselves.");
 
 ("The wording is copied out here rather than borrowed from the real one, because a wrong version that fetched its sentences from the function it is meant to be wrong about would follow that function's wording wherever it went, and a version that cannot disagree is not a version at all.");
 
@@ -54,6 +56,10 @@ function seconds_of(lag, options) {
     let one = Math.round(lag * 10) / 10;
     return one;
   }
+  if (options.rounding_cut_not_nearest) {
+    let cut = Math.floor(lag * 100) / 100;
+    return cut;
+  }
   let two = Math.round(lag * 100) / 100;
   return two;
 }
@@ -99,6 +105,8 @@ export const red_proof = {
     half_share: reader_of({ half_share: true }),
     nine_tenths: reader_of({ nine_tenths: true }),
     over_the_line_strict: reader_of({ over_the_line_strict: true }),
+    line_at_seven_tenths: reader_of({ line_at_seven_tenths: true }),
+    rounding_cut_not_nearest: reader_of({ rounding_cut_not_nearest: true }),
     no_rounding: reader_of({ no_rounding: true }),
     one_place: reader_of({ one_place: true }),
     count_ten_assumed: reader_of({ count_ten_assumed: true }),
