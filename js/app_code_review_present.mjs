@@ -27,14 +27,14 @@ export function app_code_review_present(r, home_button, context) {
   };
   let restart_button = property_get(r6, "restart_button");
   let success_container = property_get(r6, "success_container");
-  let present = app_code_review_present_fn(
-    r6,
+  let present = app_code_review_present_fn({
+    r: r6,
     home_button,
     success_container,
     back_button,
     restart_button,
     has_next,
     context,
-  );
+  });
   return present;
 }
