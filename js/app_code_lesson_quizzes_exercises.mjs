@@ -17,8 +17,8 @@ export function app_code_lesson_quizzes_exercises(
   };
   function each_info(info) {
     function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz(
-        container,
+      app_code_lesson_quiz({
+        container_blue_light: container,
         qa,
         parent,
         context,
@@ -27,7 +27,7 @@ export function app_code_lesson_quizzes_exercises(
         batch_get,
         quizzes,
         next_get,
-      );
+      });
     }
     return quiz;
   }

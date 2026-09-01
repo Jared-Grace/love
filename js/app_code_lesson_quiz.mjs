@@ -10,7 +10,7 @@ import { app_code_progress_quiz_correct_record } from "./app_code_progress_quiz_
 import { app_shared_success_message } from "./app_shared_success_message.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
 import { sleep_success_color } from "./sleep_success_color.mjs";
-export function app_code_lesson_quiz(
+export function app_code_lesson_quiz({
   container_blue_light,
   qa,
   parent,
@@ -20,7 +20,7 @@ export function app_code_lesson_quiz(
   batch_get,
   quizzes,
   next_get,
-) {
+}) {
   let question_label = property_get(info, "question_label");
   let r = app_code_lesson_quiz_answer_label_set(
     info,
