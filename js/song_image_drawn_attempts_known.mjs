@@ -588,7 +588,9 @@ export function song_image_drawn_attempts_known() {
   19,
   20,
   21,
-  22
+  22,
+  23,
+  24
  ]
 };
   return r;
