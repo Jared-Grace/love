@@ -4,28 +4,33 @@ import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-export function text_segment_add(runs, letter, changed) {
-  "$plain letter";
-  "$plain changed";
-  "One character added to the end of a list of runs, joined onto the run already there when it is the same kind of thing and started as a new run when it is not.";
-  "IT JOINS RATHER THAN LISTING EVERY CHARACTER SEPARATELY, and that is the whole reason it exists. A walk over two pieces of text answers one character at a time, and a run per character would draw a line as several hundred boxes, each of which a page has to style and lay out on its own.";
-  "THE KIND OF THING IS WHETHER IT MOVED, and nothing else, so two characters that both moved join even where they moved for different reasons. A reader is being shown which stretch of a line is different, not which edit put each character there.";
-  arguments_assert(arguments, 3);
-  let size = runs.length;
+export function text_segment_add(segments, shared, before_text, after_text) {
+  "$plain shared";
+  "$plain before_text";
+  "$plain after_text";
+  "One stretch added to the end of a comparison, joined onto the stretch already there when it is the same kind of thing and started as a new one when it is not.";
+  "A STRETCH CARRIES BOTH SIDES AT ONCE rather than one side each. What the two pieces of text share is by definition the same in both, and what differs in them differs in the same place; kept as two separate lists they can be built out of step, and then the halves that are supposed to be identical are not.";
+  "IT JOINS RATHER THAN LISTING EVERY CHARACTER SEPARATELY, and that is the whole reason it exists. The walk that fills it answers one character at a time, and a stretch per character would draw a line as several hundred boxes, each of which a page has to style and lay out on its own.";
+  "THE KIND OF THING IS WHETHER IT IS SHARED, and nothing else, so two stretches that both differ join even where they differ for different reasons. A reader is being shown which part of a line is not the same, not which edit put each character there.";
+  arguments_assert(arguments, 4);
+  let size = segments.length;
   let started = greater_than(size, 0);
   if (started) {
-    let last = runs[subtract(size, 1)];
-    let last_changed = property_get(last, "changed");
-    let joins = equal(last_changed, changed);
+    let last = segments[subtract(size, 1)];
+    let last_shared = property_get(last, "shared");
+    let joins = equal(last_shared, shared);
     if (joins) {
-      let text = property_get(last, "text");
-      last.text = text + letter;
+      let before_already = property_get(last, "before_text");
+      let after_already = property_get(last, "after_text");
+      last.before_text = before_already + before_text;
+      last.after_text = after_already + after_text;
       return;
     }
   }
-  let run = {
-    text: letter,
-    changed,
+  let segment = {
+    shared,
+    before_text,
+    after_text,
   };
-  list_add(runs, run);
+  list_add(segments, segment);
 }
