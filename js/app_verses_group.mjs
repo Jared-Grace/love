@@ -43,7 +43,7 @@ export async function app_verses_group(
       verse_count_held,
     );
   }
-  let card4 = await app_verses_draw_restore(
+  let card4 = await app_verses_draw_restore({
     counts,
     count_each,
     content,
@@ -51,7 +51,7 @@ export async function app_verses_group(
     copy,
     verse_groups,
     draw_restore,
-  );
+  });
   async function draw_restore() {
     await app_verses_group_draw_restore(
       verse_count_held,
