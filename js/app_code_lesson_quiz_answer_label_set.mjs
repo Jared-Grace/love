@@ -4,7 +4,7 @@ import { app_code_lesson_quiz_parent_container } from "./app_code_lesson_quiz_pa
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_value } from "./app_code_lesson_quiz_value.mjs";
 import { app_code_lesson_quiz_on_qa_change } from "./app_code_lesson_quiz_on_qa_change.mjs";
-export function app_code_lesson_quiz_answer_label_set(
+export function app_code_lesson_quiz_answer_label_set({
   info,
   qa,
   container_blue_light,
@@ -13,8 +13,8 @@ export function app_code_lesson_quiz_answer_label_set(
   context,
   quizzes,
   refresh,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_code_lesson_quiz_container_question({
     info,
     qa,
