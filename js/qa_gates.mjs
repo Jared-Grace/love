@@ -280,6 +280,7 @@ import { js_page_serialized_import_uses_cases_gate_run } from "./js_page_seriali
 import { functions_page_auto_borrowing_gate_run } from "./functions_page_auto_borrowing_gate_run.mjs";
 import { functions_locals_unread_gate_run } from "./functions_locals_unread_gate_run.mjs";
 import { js_condition_bodies_empty_cases_gate_run } from "./js_condition_bodies_empty_cases_gate_run.mjs";
+import { functions_regions_blanked_over_wait_gate_run } from "./functions_regions_blanked_over_wait_gate_run.mjs";
 import { functions_condition_bodies_empty_gate_run } from "./functions_condition_bodies_empty_gate_run.mjs";
 import { functions_cases_ungated_gate_run } from "./functions_cases_ungated_gate_run.mjs";
 import { baselines_watched_gate_run } from "./baselines_watched_gate_run.mjs";
