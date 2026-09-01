@@ -7,6 +7,7 @@ export function bible_glyph_chapters_groups_marks_alone_stored(
   chapters,
   entries,
 ) {
+  "Every place in the stored chapters where a word is written as a list of mark names rather than as plain text, gathered up with the chapter and the verse it was found in. It walks the chapters rather than the filed rows because the names are what is being asked about, and a filed row has already turned them into one drawn thing.";
   arguments_assert(arguments, 2);
   for (let stored of chapters) {
     let chapter_code = property_get(stored, "chapter_code");

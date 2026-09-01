@@ -12,6 +12,7 @@ export function bible_usfm_versions_apart_gate_run_row(
   unread,
   risen,
 ) {
+  "Sorts every version's measured distance into the three things a ceiling can be wrong about, filling the three lists it is handed. A version standing apart with no ceiling written for it is unread; one standing further apart than its ceiling allows has risen; one standing nearer than its ceiling allows, or not apart at all, is slack. Slack is gathered as carefully as the other two because a ceiling nobody has lowered since the thing under it was fixed is a ceiling that will not catch the next fault.";
   arguments_assert(arguments, 5);
   for (let row of rows) {
     let version = property_get(row, "version");

@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_sandbox_previews_dream_prison_load } from "./app_sandbox_previews_dream_prison_load.mjs";
 import { property_get } from "./property_get.mjs";
 export function app_sandbox_previews_code_review_load() {
+  "The second slice of the sandbox registry's fetchers: it takes the seven from the slice below and adds three more. Passing the earlier seven straight on is what lets the registry ask one name for all ten, so a slice added later costs the registry one line rather than a rewrite. The name is the newest fetcher the slice ended on and not a description of the ten.";
   arguments_assert(arguments, 0);
   let r2 = app_sandbox_previews_dream_prison_load();
   let dream_prison_load = property_get(r2, "dream_prison_load");

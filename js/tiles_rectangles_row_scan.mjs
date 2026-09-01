@@ -13,6 +13,7 @@ export function tiles_rectangles_row_scan(
   x_least,
   x_most,
 ) {
+  "One pass along a single row, taking every tile still left there into the largest rectangle that starts at it. From each untaken tile it runs right for as long as tiles are there, then down for as long as the whole width beneath is there, then removes every tile it swallowed so nothing further along can claim one twice. Greedy in that order on purpose: widest-first is what makes the answer stable, since a scan going down first would cut the same shape into columns and hand back many tall thin rectangles where one wide one would do.";
   arguments_assert(arguments, 6);
   function column_scan(x) {
     let key = key_of(x, y);
