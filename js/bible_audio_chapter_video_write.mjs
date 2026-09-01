@@ -30,7 +30,12 @@ export async function bible_audio_chapter_video_write(
     bible_folder,
     chapter_code,
   );
-  let lines = await bible_audio_chapter_lines_timed(bible_folder, chapter_code);
+  let measured = await bible_audio_chapter_lines_timed(
+    bible_folder,
+    chapter_code,
+  );
+  let characters_max = lyric_video_screen_characters_max();
+  let lines = lyric_video_lines_split_characters_max(measured, characters_max);
   let version = ebible_bible_folder_version_word(bible_folder);
   let parsed = ebible_chapter_code_parse(chapter_code);
   let book_code = property_get(parsed, "book_code");
