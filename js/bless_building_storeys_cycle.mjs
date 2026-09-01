@@ -1,8 +1,5 @@
+import { bless_building_cycle_per_block_checked } from "./bless_building_cycle_per_block_checked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
-import { bless_place_sizes } from "./bless_place_sizes.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal_assert } from "./equal_assert.mjs";
 export function bless_building_storeys_cycle() {
   arguments_assert(arguments, 0);
   ("How many floors each building along a street has, read in turn - the first stands one");
@@ -27,9 +24,6 @@ export function bless_building_storeys_cycle() {
   ("the first, so every block is the same street and the part of the game that draws one");
   ("only ever knows where a building stands in the row.");
   let cycle = [1, 2, 2, 1, 2];
-  let size = list_size(cycle);
-  let sizes = bless_place_sizes();
-  let per_block = property_get(sizes, "block");
-  equal_assert(size, per_block);
-  return cycle;
+  let r = bless_building_cycle_per_block_checked(cycle);
+  return r;
 }
