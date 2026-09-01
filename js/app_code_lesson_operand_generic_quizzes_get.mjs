@@ -6,7 +6,7 @@ import { app_code_lesson_quiz_choose_operand } from "./app_code_lesson_quiz_choo
 import { app_code_quiz_correction_operand } from "./app_code_quiz_correction_operand.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_lesson_operand_generic_quizzes_get(
+export function app_code_lesson_operand_generic_quizzes_get({
   question,
   answer,
   answer_label,
@@ -14,8 +14,8 @@ export function app_code_lesson_operand_generic_quizzes_get(
   unscramble,
   example_answer_label,
   batch_get,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let forwards = {
     question_label: app_code_label_code_question(),
     on_question: html_text_set_code_dark,
