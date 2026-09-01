@@ -37,8 +37,8 @@ export async function lyric_video_documents_gate_run() {
         let r = [];
         return r;
       }
-      let half = not(started && ended);
-      if (half) {
+      let half_timed = not(started && ended);
+      if (half_timed) {
         let only_one = {
           path_document,
           index,
