@@ -9,7 +9,10 @@ import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function bless_blessed_building_tiles(blessed, building, number) {
   arguments_assert(arguments, 3);
   ("Which ground of one building should be lit - the whole of it once the building is");
-  ("finished, and one column for each household inside it that is finished so far.");
+  ("finished, and one slab for each family inside it that is finished so far. A slab is the");
+  ("share of the front one family owns, and the roof behind it, three squares across, so a");
+  ("house with two of its three families done is lit two thirds across, readable from the far");
+  ("pavement.");
   ("The finished building returns EARLY instead of adding its own ground to its households'.");
   ("The lights are see-through, so a tile carrying two of them is brighter than a tile");
   ("carrying one, and a finished house would read as a different colour from the three");
