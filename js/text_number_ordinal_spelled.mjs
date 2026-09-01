@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -76,8 +77,7 @@ export function text_number_ordinal_spelled(number) {
     return two_words;
   }
   let after_hundred = modulo(number, 100);
-  let p2 = divide(number, 100);
-  let hundreds = floor(p2);
+  let hundreds = divide_floor(number, 100);
   if (equal(after_hundred, 0)) {
     let hundred_word = text_number_spelled(hundreds);
     let round_hundred = text_combine_multiple([hundred_word, " hundredth"]);
