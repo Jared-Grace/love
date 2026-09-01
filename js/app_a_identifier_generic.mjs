@@ -9,7 +9,7 @@ export function app_a_identifier_generic(
   replace,
 ) {
   async function choices_get(o, choices) {
-    let r = await app_a_identifier_generic_choices_get(
+    let r = await app_a_identifier_generic_choices_get({
       o,
       choices,
       a,
@@ -17,7 +17,7 @@ export function app_a_identifier_generic(
       lines_multiple,
       c,
       replace,
-    );
+    });
     return r;
   }
   app_a_overlay_choices(a, span, choices_get);
