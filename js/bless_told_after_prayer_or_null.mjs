@@ -26,6 +26,9 @@ export function bless_told_after_prayer_or_null(rung_before, rung_now, faces) {
   ("them are usually already blessed from earlier prayers, and the player watched");
   ("exactly one face light up. Saying the family size there is a number nobody saw happen,");
   ("which teaches them that the line is decoration rather than news.");
+  ("The place that count is said to have covered is the reach BEFORE, which is the reach");
+  ("the prayer was actually said under. After is what the prayer earned, and a prayer never");
+  ("gets to spend what it earned by being said.");
   ("Fewer than two says nothing, and that one test covers two different quiet cases. One");
   ("new face needs no sentence - the player just watched it light, and a line repeating it");
   ("every few seconds through the opening stretch of the game teaches them to stop reading");
@@ -43,6 +46,6 @@ export function bless_told_after_prayer_or_null(rung_before, rung_now, faces) {
   if (alone) {
     return null;
   }
-  let counted = bless_told_covered(faces);
+  let counted = bless_told_covered(faces, rung_before);
   return counted;
 }
