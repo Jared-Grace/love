@@ -1,5 +1,5 @@
 import { js_compare_text_number_call_each } from "./js_compare_text_number_call_each.mjs";
-import { js_compare_text_number_kind_of } from "./js_compare_text_number_kind_of.mjs";
+import { js_compare_text_number_calls_kind_of } from "./js_compare_text_number_calls_kind_of.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,7 +14,7 @@ export function js_compare_text_number(ast) {
   ("A name nothing here binds is read for what it says of itself, and a name that says number counts as one. That is how a parameter counts, and a parameter is where the two sides usually meet: the text is cut a line above the comparison and the number arrived from somewhere else entirely.");
   ("What a call was bound to beats what its name says, in both directions. A name that says number and is filled from a cut of text is holding text whatever it is called, and this reading exists precisely because such a name was called number.");
   ("Both sides have to be plain names. A comparison written with the cutting done inside it is missed, and that is accepted: the pass that canonicalizes this repo pulls such a call out into a name of its own, so the shape barely occurs, and looking through it would mean deciding what an arbitrary expression holds.");
-  let r = js_compare_text_number_kind_of(ast);
+  let r = js_compare_text_number_calls_kind_of(ast);
   let kind_of = property_get(r, "kind_of");
   let calls = property_get(r, "calls");
   let f_name = fn_name("not_equal");
