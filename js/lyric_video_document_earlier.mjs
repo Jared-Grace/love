@@ -1,3 +1,4 @@
+import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -5,8 +6,6 @@ import { number_is } from "./number_is.mjs";
 import { not } from "./not.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { divide } from "./divide.mjs";
 import { object_merge_replace } from "./object_merge_replace.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_video_document_earlier(
