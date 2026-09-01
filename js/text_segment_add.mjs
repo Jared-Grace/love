@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -17,8 +17,7 @@ export function text_segment_add(segments, shared, before_text, after_text) {
   let started = greater_than(size, 0);
   if (started) {
     let last = segments[subtract(size, 1)];
-    let last_shared = property_get(last, "shared");
-    let joins = equal(last_shared, shared);
+    let joins = property_equals(last, "shared", shared);
     if (joins) {
       let before_already = property_get(last, "before_text");
       let after_already = property_get(last, "after_text");
