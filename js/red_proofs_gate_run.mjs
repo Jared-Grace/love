@@ -1,16 +1,17 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { red_proof_names } from "./red_proof_names.mjs";
 import { red_proof_read } from "./red_proof_read.mjs";
 import { red_proof_checked } from "./red_proof_checked.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
 import { json_to } from "./json_to.mjs";
 export async function red_proofs_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every corpus that has been checked against wrong versions of its reader still refuses all of them, and every let-off still names a version nothing refuses.");
   ("WHAT IT HOLDS DOWN IS A CORPUS GOING QUIETLY BLIND. A corpus is checked against wrong versions once, and from then on the paragraph saying so is the only record - so a case removed later, or a reader changed so that two of its cases now say the same thing, takes the check apart while every gate stays green. Written down as files the machine can run again, the check is not a paragraph about the past; it is asked afresh on every run.");
-  ("It does not refuse a case that refuses no wrong version. That is padding rather than a fault, and whether a case earns its place is a judgment about what a reader is for, which is the author's and not a number's. It is carried out as a report instead, beside the count, so it is in front of whoever is looking without stopping anybody.");
+  ("It does not refuse a case that carries nothing. That is padding rather than a fault, and whether a case earns its place is a judgment about what a reader is for, which is the author's and not a number's. It is carried out as a report instead, beside the count, so it is in front of whoever is looking without stopping anybody.");
+  ("PADDING IS COUNTED TWO WAYS AND ONLY THE FIRST IS WRITTEN OUT IN FULL. A case refusing no wrong version at all is rare and worth a line of its own. A case refusing only wrong versions some other case also refuses is common - the second count runs to a fifth of the cases here - and printing all of those would bury the first under prose nobody would read twice. The count stands in the heading and the rows are in the answer this hands back, which is where to look when the count is the question being asked.");
   ("Throws so the dispatcher seam exits nonzero.");
   let names = await red_proof_names();
   let reports = [];
@@ -34,10 +35,14 @@ export async function red_proofs_gate_run() {
         "  wrong " +
         checked.wrong_count +
         "  idle " +
-        checked.idle.length,
+        checked.idle.length +
+        "  spare " +
+        checked.redundant.length,
     );
     for (let row of checked.idle) {
-      console.log("      idle case " + row.index + ": " + row.described);
+      console.log(
+        "      refuses nothing, case " + row.index + ": " + row.described,
+      );
     }
     for (let hole of checked.holes) {
       console.log("      refused by nothing: " + hole);

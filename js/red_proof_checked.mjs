@@ -1,8 +1,9 @@
-import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { json_equal } from "./json_equal.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -10,6 +11,7 @@ export function red_proof_checked(proof) {
   arguments_assert(arguments, 1);
   ("Asks every wrong version of one reader every case that reader's corpus writes down, and reports which cases refused which wrong version.");
   ("THE POINT IS THE EMPTY ROWS, NOT THE FULL ONES. A wrong version no case refuses is a hole: the corpus agrees with it everywhere, so the claim that version breaks is a claim nothing is holding down. A case that refuses no wrong version is padding: it describes the code back to itself and would go on passing whatever the code became. Both are silent - the gate the corpus feeds is green either way - and both are what this looks for.");
+  ("A CASE THAT REFUSES NOTHING NO OTHER CASE ALSO REFUSES IS REPORTED SEPARATELY, AND IT IS THE READING THAT ACTUALLY FINDS PADDING. Asking only whether a case refuses something is too easy to satisfy: one sweeping wrong version - words dropped, records carried back out, ends crossed over - is refused by every case there is, and its presence makes every case look like it is earning its place. The sharper question is whether taking the case away would open a hole, and that is what this second list answers. A corpus said in its own prose that one of its cases caught nothing while the first reading called it busy, which is how the difference was found.");
   ("A wrong version that throws counts as refused. Throwing is a way of answering differently, and a case that makes a wrong version fall over has told the two apart just as surely as one that makes it answer wrongly.");
   ("A hole may be let off, by name, with a sentence saying why the version is the same working-out in different words rather than a version that is wrong. That sentence is a claim, so two things are checked about it: it may not be empty, and the version it lets off has to still be a hole. A let-off standing over a version some case now refuses is a let-off nobody needs, and leaving it there is how a reason written years ago comes to cover something it was never about.");
   let fn = property_get(proof, "fn");
@@ -47,22 +49,34 @@ export function red_proof_checked(proof) {
     }
   }
   let idle = [];
+  let redundant = [];
   let case_index = 0;
   for (let one of cases) {
-    let caught_any = false;
+    let caught = [];
     for (let wrong_name of wrong_names) {
       let indices = property_get(refused, wrong_name);
       if (list_includes(indices, case_index)) {
-        caught_any = true;
+        list_add(caught, wrong_name);
       }
     }
-    if (not(caught_any)) {
-      let described = property_get(one, described_key);
-      let row = {
-        index: case_index,
-        described,
-      };
+    let described = property_get(one, described_key);
+    let row = {
+      index: case_index,
+      described,
+    };
+    if (list_empty_is(caught)) {
       list_add(idle, row);
+    } else {
+      let alone = false;
+      for (let wrong_name of caught) {
+        let indices = property_get(refused, wrong_name);
+        if (equal(indices.length, 1)) {
+          alone = true;
+        }
+      }
+      if (not(alone)) {
+        list_add(redundant, row);
+      }
     }
     case_index = case_index + 1;
   }
@@ -93,6 +107,7 @@ export function red_proof_checked(proof) {
     refused,
     holes,
     idle,
+    redundant,
     exemptions_stale,
     exemptions_unreasoned,
   };
