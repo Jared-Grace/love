@@ -32,8 +32,8 @@ export function js_regions_blanked_over_wait(ast) {
     if (equal(node, null)) {
       return false;
     }
-    let object_is = equal(typeof node, "object");
-    if (not(object_is)) {
+    let node_object_is = equal(typeof node, "object");
+    if (not(node_object_is)) {
       return false;
     }
     let list_is = Array.isArray(node);
