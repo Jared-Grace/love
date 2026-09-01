@@ -62,15 +62,15 @@ export function app_g_bless_overlay_render_tap_prayed(
     let holding = list_empty_not_is(lit_now);
     hold_set(holding, people_now);
     render();
-    await app_g_bless_overlay_render_tap_prayed_celebrate(
-      r2,
+    await app_g_bless_overlay_render_tap_prayed_celebrate({
+      r: r2,
       lit_now,
       people_now,
       rung_before,
       rung,
       ground_show,
       faces_show,
-    );
+    });
   }
   function pray_person_id(id) {
     let r4 = app_g_bless_overlay_render_tap_prayed_person_id_pray(
