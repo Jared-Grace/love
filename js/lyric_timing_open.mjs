@@ -1,3 +1,4 @@
+import { list_map } from "./list_map.mjs";
 import { lyric_timing_line_tapped } from "./lyric_timing_line_tapped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
@@ -25,7 +26,7 @@ export async function lyric_timing_open(version, book_code, chapter_number) {
   let existing = await file_exists(path_document);
   if (existing) {
     let document_kept = await file_read_json(path_document);
-    let lines_tapped = document_kept.lines.map(lyric_timing_line_tapped);
+    let lines_tapped = list_map(document_kept.lines, lyric_timing_line_tapped);
     let opened = {
       path_document,
       passage: document_kept.passage,
