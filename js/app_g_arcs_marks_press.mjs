@@ -11,6 +11,7 @@ import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_mark_current_set } from "./app_g_arcs_mark_current_set.mjs";
 import { app_g_arcs_marks_chip_current_set } from "./app_g_arcs_marks_chip_current_set.mjs";
+import { app_g_arcs_marks_place_remember } from "./app_g_arcs_marks_place_remember.mjs";
 import { modulo } from "./modulo.mjs";
 import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
@@ -19,7 +20,9 @@ import { each_index } from "./each_index.mjs";
 import { not } from "./not.mjs";
 import { html_button } from "./html_button.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
-export function app_g_arcs_marks_press(parent, panel, marks) {
+import { app_g_arcs_marks_place_number } from "./app_g_arcs_marks_place_number.mjs";
+export function app_g_arcs_marks_press(parent, panel, marks, sheet_code) {
+  "$plain sheet_code";
   "A tour of the moved lines standing in the corner of the arcs bench: a press that carries the reader to the next change and counts it out, a list of every change to jump straight into, a ring around both halves of whichever change is being read, and every change on the sheet answering to being tapped.";
   "IT EXISTS BECAUSE THE MARKS ARE RARE AND THE SHEET IS LONG. One arc read here carried fifty-one moved lines spread over hundreds of turns, so the only way to see what had been rewritten was to scroll the whole arc watching for a coloured bar - and the reader who scrolls past one is told nothing at all, because a missed mark looks exactly like a stretch of arc where nothing moved.";
   "IT IS FIXED TO THE CORNER RATHER THAN SET AT THE TOP OF THE SHEET. A press that scrolls away is gone from the second screen onwards, which is every screen where the scrolling was the problem in the first place.";
@@ -37,7 +40,9 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   "THE LIST IS FOLDED AWAY UNTIL IT IS ASKED FOR. Fifty numbers standing open in the corner of a phone cover the words the tour exists to show, so the thing that is always there is the small pair of presses, and the numbers come out over the page only while somebody is choosing from them.";
   "CHOOSING A NUMBER FOLDS THE LIST BACK, because choosing is the whole reason it was opened. Left standing it would be covering the very change it had just carried the reader to, and every jump would end with the reader closing the list before they could read anything.";
   "THE LIST FOLLOWS THE TOUR AS WELL AS DRIVING IT. Ten plain next presses with the numbers open would otherwise leave the filled chip somewhere off the top of a list that had not moved, so the list is scrolled to whichever chip is current - but only while it is open, because a folded list has no size and asking a thing with no size where it sits gives a place that means nothing.";
-  arguments_assert(arguments, 3);
+  "THE TOUR IS PUT BACK WHERE IT WAS WHEN THE SHEET IS DRAWN AGAIN, and filing a note is what draws it again. The press is made fresh with the sheet, so a reviewer who said something about the fortieth change was handed back a press reading next change - and pressing it carried them to the first, which is the one place they were certainly not. It is filed under the sheet and read back under the sheet, so changing person still starts at the beginning.";
+  "COMING BACK RINGS THE CHANGE WITHOUT FETCHING THE READER. The scroll distance is put back by the bench in the same breath, so the reader is already looking at the place they were looking at, and scrolling to it as well would move the page out from under a reader who had not moved.";
+  arguments_assert(arguments, 4);
   let none = list_empty_is(marks);
   if (none) {
     return null;
@@ -101,6 +106,7 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
     app_g_arcs_mark_current_set(mark, true);
     app_g_arcs_marks_chip_current_set(chips[number], true);
     property_set(at, "current", number);
+    app_g_arcs_marks_place_remember(sheet_code, number);
     let after = modulo(shown, count);
     property_set(at, "number", after);
     if (carry) {
@@ -156,5 +162,10 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   };
   html_style_assign(lister, dressing);
   html_style_assign(press, dressing);
+  let start = app_g_arcs_marks_place_number(sheet_code, count);
+  let resumed = not_equal(start, null);
+  if (resumed) {
+    go(start, false);
+  }
   return press;
 }
