@@ -19,7 +19,7 @@ export function app_code_expression_choose_line_draw_step({
   let rising = not(stepped_from);
   let ready = app_code_expression_nodes_ready(current);
   ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");
-  let r = app_code_expression_choose_line_draw_on_operator(
+  let r = app_code_expression_choose_line_draw_on_operator({
     rising,
     ready,
     on_wrong,
@@ -28,7 +28,7 @@ export function app_code_expression_choose_line_draw_step({
     current,
     on_finished,
     on_change,
-  );
+  });
   let on_operator = property_get(r, "on_operator");
   let pressable = property_get(r, "pressable");
   app_code_expression_paint(line, current, on_operator);
