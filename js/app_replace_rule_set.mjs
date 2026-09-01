@@ -158,6 +158,7 @@ export async function app_replace_rule_set(context) {
         div_symbols,
         refresh,
         success_held,
+        history,
       );
       return r5;
     }

@@ -31,8 +31,9 @@ export function app_replace_rule_set_symbols_mapper(
   div_symbols,
   refresh,
   success_held,
+  history,
 ) {
-  arguments_assert(arguments, 13);
+  arguments_assert(arguments, 14);
   let symbol_button = null;
   async function symbol_on_click() {
     let index_selected3 = property_get(index_selected_held, "index_selected");
