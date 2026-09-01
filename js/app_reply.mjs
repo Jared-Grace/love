@@ -104,6 +104,15 @@ export async function app_reply(context) {
   }
   let buttons_responses = [];
   app_shared_button_copy(card2, copy_refresh);
+  let typed_get = function lambda15() {
+    let value = property_get(typed_held, "typed");
+    return value;
+  };
+  let buttons_refresh = app_reply_buttons_refresh(
+    typed_get,
+    responses_buttons,
+    buttons_responses,
+  );
   let card3 = app_shared_container_blue(root);
   let languages_chosen5 = property_get(
     languages_chosen_held,
@@ -159,18 +168,9 @@ export async function app_reply(context) {
     return r7;
   }
   html_on_keydown_body(lambda6);
-  let typed_get = function lambda15() {
-    let value = property_get(typed_held, "typed");
-    return value;
-  };
   log(app_reply.name, {
     buttons_responses,
   });
-  let buttons_refresh = app_reply_buttons_refresh(
-    typed_get,
-    responses_buttons,
-    buttons_responses,
-  );
   let value6 = buttons_refresh();
   property_set(visible_count_held, "visible_count", value6);
   function typed_reset() {
