@@ -31,7 +31,7 @@ export function bless_marks_climbed_cases() {
         rung: "household",
         dark: 0,
       },
-      why: "three people are one household and no more, so the third prayer finishes it and the building above it is still six people short",
+      why: "the first family is a couple, so three prayers finish it and open the next, and the building above is still six people short",
     },
     {
       count: 9,
