@@ -1,9 +1,9 @@
+import { app_reply_key_down_handle } from "./app_reply_key_down_handle.mjs";
 import { app_reply_response_button } from "./app_reply_response_button.mjs";
 import { app_reply_love_all_click } from "./app_reply_love_all_click.mjs";
 import { app_reply_verses_refresh } from "./app_reply_verses_refresh.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
-import { app_reply_key_down } from "./app_reply_key_down.mjs";
 import { app_reply_visible_count } from "./app_reply_visible_count.mjs";
 import { app_reply_copy_refresh } from "./app_reply_copy_refresh.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
@@ -154,18 +154,13 @@ export async function app_reply(context) {
     return r2;
   }
   function lambda6(event) {
-    let typed2 = property_get(typed_held, "typed");
-    let visible_count2 = property_get(visible_count_held, "visible_count");
-    let app_reply_key_down_answer = app_reply_key_down(
+    let r7 = app_reply_key_down_handle(
       event,
-      typed2,
-      visible_count2,
+      typed_held,
+      visible_count_held,
       buttons_refresh,
     );
-    let value2 = property_get(app_reply_key_down_answer, "typed");
-    property_set(typed_held, "typed", value2);
-    let value5 = property_get(app_reply_key_down_answer, "visible_count");
-    property_set(visible_count_held, "visible_count", value5);
+    return r7;
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
