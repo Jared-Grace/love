@@ -1,3 +1,4 @@
+import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { number_is } from "./number_is.mjs";
@@ -7,17 +8,23 @@ export function lyric_video_subtitles_text(document) {
   "THE TIMES ARE AUTHORED, NOT WORKED OUT HERE. Where a sung line begins is heard, not derived - a singer holds a word, an instrument plays alone for eight bars, a verse is repeated and the printed text is not. Nothing about the words on the page says any of that, so a rule that placed them would be guessing at the one thing the video exists to get right. This packs what somebody heard; it never decides it.";
   "A LINE THE DOCUMENT HAS NO TIME FOR IS LEFT OUT OF THE VIDEO RATHER THAN PLACED SOMEWHERE. It follows from the line above: where a line belongs is heard and nothing here can hear it, so there is no moment to put it at that would not be invented. Leaving it out loses a line of the psalm, which is a real loss and a visible one - the person who timed the passage watches the video and sees at once that they stopped one line early. The alternative loses the whole video quietly, because a line given a time it never had is a card standing over the singing at the wrong moment, and the worst of those times is zero, which puts it over every other line from the first frame to the last.";
   "EVERY LETTERING SIZE IS ASKED FOR, AND THE SMALLER ONES USED TO BE WORKED OUT AS A SHARE OF THE LARGER. Tying them together says they are one decision, and they are not: the words are sized to be read across a room from a phone lying on a table, the passage to be read at a glance by somebody arriving in the middle, and the translation to be findable by somebody who wants it without ever competing with the psalm. Making the words bigger through a fixed share drags all of that up with them into exactly that competition, and the only way out was to change a number that no document could see.";
+  "EVERY LINE OF LETTERING CARRIES A BLACK BORDER, AND THAT ONE IS WORKED OUT RATHER THAN ASKED FOR. It is the exception the paragraph above does not cover, because a border is not a decision about who is reading; it is a fact about the letters it runs around, and it is asked for by its own lettering size alone. The reasoning lives with the border rather than here.";
+  "THE BORDER GOES IN AHEAD OF ANYTHING FOR IT TO BE SEEN AGAINST. A frame here is black today, and a black rim on a black frame is invisible - so this changes nothing anybody can watch. It stops mattering the first time a picture stands behind the words, and at that moment the words either survive or they do not, with no chance to try the border on its own. A change that can only be judged after another change has landed is a change to make first.";
   "THE PASSAGE AND THE TRANSLATION ARE TWO LINES RATHER THAN ONE, AND THE SIZES ARE WHY. They used to be one grey line with a dot between them, which forced both to be the same size - so making the passage large enough to read at a glance would have made the translation shout, and keeping the translation quiet kept the passage unreadable. Stacked, each is sized for what it is for: the passage above and large, the translation under it and small.";
   "WHERE THE UPPER LINE SITS IS WORKED OUT AND NOT AUTHORED. It has to clear the line beneath it, so its distance from the foot follows from that line's lettering size; a document that stated both would be stating one fact twice, and the two would part company the first time somebody changed a size.";
   "The words come from the translation unchanged, down to the couplet that begins in the lower case because it is the second half of a line. Repairing that capital would be correcting the poem to look like prose.";
   "Every line is one whole card rather than a word lit up at a time. A word-by-word sweep asks the reader to watch the screen; a card asks them to read it and then listen, which is what a psalm is for.";
   "Both lines at the foot stand through the whole song in grey, quiet enough to be ignored and always there. Together they are the attribution the translation asks for, and they also answer the question a person arriving in the middle of a video actually has.";
   "The words sit at the middle of the frame rather than at the foot, because a phone is held with the lower part of the screen under a thumb and the middle is the part a person is already looking at.";
+  "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   let width = document.width;
   let height = document.height;
   let font_size = document.font_size;
   let passage_size = document.passage_font_size;
   let credit_size = document.credit_font_size;
+  let lyric_outline = lyric_video_outline_width(font_size);
+  let passage_outline = lyric_video_outline_width(passage_size);
+  let credit_outline = lyric_video_outline_width(credit_size);
   let credit_margin = 70;
   let passage_margin = credit_margin + multiply_round(credit_size, 1.5);
   let styles_format =
@@ -25,17 +32,23 @@ export function lyric_video_subtitles_text(document) {
   let lyric_style =
     "Style: Lyric,Noto Sans," +
     font_size +
-    ",&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,80,80,0,1";
+    ",&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1," +
+    lyric_outline +
+    ",0,5,80,80,0,1";
   let passage_style =
     "Style: Passage,Noto Sans," +
     passage_size +
-    ",&H00B4B4B4,&H00B4B4B4,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,2,80,80," +
+    ",&H00B4B4B4,&H00B4B4B4,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
+    passage_outline +
+    ",0,2,80,80," +
     passage_margin +
     ",1";
   let credit_style =
     "Style: Credit,Noto Sans," +
     credit_size +
-    ",&H00828282,&H00828282,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,2,80,80," +
+    ",&H00828282,&H00828282,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
+    credit_outline +
+    ",0,2,80,80," +
     credit_margin +
     ",1";
   let song_end = subtitles_time_text(document.duration);

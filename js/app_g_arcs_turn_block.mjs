@@ -7,7 +7,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { g_arc_answer_field_shape } from "./g_arc_answer_field_shape.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
-import { app_g_arcs_field_was } from "./app_g_arcs_field_was.mjs";
+import { app_g_arcs_field_moved } from "./app_g_arcs_field_moved.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_shared_note_pills } from "./app_shared_note_pills.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
@@ -52,7 +52,7 @@ export function app_g_arcs_turn_block(
   function turn_field(name, value) {
     let shape = g_arc_answer_field_shape("turn", name);
     app_g_arcs_field_shaped(block, name, value, shape, voice_color);
-    app_g_arcs_field_was(block, moved, name, voice_color);
+    app_g_arcs_field_moved(block, moved, name, voice_color);
   }
   turn_field("opener", opener);
   turn_field("before", before);
