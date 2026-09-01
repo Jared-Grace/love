@@ -6,6 +6,7 @@ export function lyric_video_subtitles_text_cases() {
   ("THE FAULT THESE HOLD DOWN SHIPPED A FINISHED VIDEO. A line the person never tapped had no time, and no time multiplied out to zero rather than to nothing, so the closing word of the psalm was written as a card beginning at the first frame and ending two and a half minutes later - standing over the middle of every other line for the whole song. It was reported as two of something and as everything being late, and it was one card.");
   ("Second zero is written down as an ordinary answer in its own case, because the repair is one character away from the wrong repair. A line genuinely sung from the first frame has a start of zero, and a guard written against the number rather than against the absence would throw that line away every time.");
   ("A line timed at one end only is left out too, and it has its own case because it is the shape a person leaves behind by stopping halfway through a line rather than between two. Half a time is not a moment.");
+  ("WHERE THE CARD IS PUT IS WRITTEN INTO EVERY EVENT HERE, WHICH IS THE ONE THING IN AN EVENT THAT IS NOT A MOMENT. It is pinned all the same, because moving a card is a change to where a line stands, and where a line stands is the whole of what this corpus refuses arguments about. It has already been changed once: the point in the middle of the frame is now stated outright instead of being asked for by naming an alignment, and this corpus went red for four days' worth of commits because the events here still said what the writer used to say. That redness is the gate working - a change to placement is meant to be read by somebody rather than to slip through - but it also means these strings have to be brought forward deliberately whenever the placement is argued about again, and the reason for the change belongs in the writer's own prose rather than here.");
   let head = {
     passage: "Psalm 148",
     credit: "Berean Standard Bible",
@@ -45,7 +46,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:02.69,0:00:05.93,Lyric,,0,0,0,,{\\fad(260,320)}Hallelujah!",
+        "Dialogue: 0,0:00:02.69,0:00:05.93,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}Hallelujah!",
       ],
       why: "the psalm that shipped wrong: the closing line nobody tapped is left out of the video altogether rather than written as a card standing over the whole song from the first frame",
     },
@@ -63,8 +64,8 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:00.00,0:00:02.45,Lyric,,0,0,0,,{\\fad(260,320)}Praise the LORD",
-        "Dialogue: 0,0:00:02.50,0:00:10.00,Lyric,,0,0,0,,{\\fad(260,320)}from the heavens",
+        "Dialogue: 0,0:00:00.00,0:00:02.45,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}Praise the LORD",
+        "Dialogue: 0,0:00:02.50,0:00:10.00,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}from the heavens",
       ],
       why: "a line genuinely sung from the first frame starts at zero and is kept, so the guard above cannot be written against the number - which is the repair one character away from the right one",
     },
@@ -87,8 +88,8 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:01.00,0:00:04.95,Lyric,,0,0,0,,{\\fad(260,320)}one",
-        "Dialogue: 0,0:00:05.00,0:00:20.00,Lyric,,0,0,0,,{\\fad(260,320)}three",
+        "Dialogue: 0,0:00:01.00,0:00:04.95,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}one",
+        "Dialogue: 0,0:00:05.00,0:00:20.00,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}three",
       ],
       why: "a line missed in the middle leaves a silence where it was rather than a placeholder, and the lines on either side keep the moments they were heard at",
     },
@@ -106,7 +107,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:05.00,0:00:09.00,Lyric,,0,0,0,,{\\fad(260,320)}sung",
+        "Dialogue: 0,0:00:05.00,0:00:09.00,Lyric,,0,0,0,,{\\pos(540,960)\\fad(260,320)}sung",
       ],
       why: "a line with a beginning and no end is left out as well, because half a time is not a moment - this is what somebody leaves behind by stopping partway through a line rather than between two",
     },
