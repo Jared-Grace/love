@@ -8,7 +8,7 @@ export function bless_block_sidewalk_y(x, y) {
   let alleys = property_get(r, "alleys");
   let walls = property_get(r, "walls");
   let buildings = property_get(r, "buildings");
-  let stride = property_get(r, "stride");
+  let span = property_get(r, "span");
   let count = property_get(r, "count");
   let gap = property_get(r, "gap");
   let depth = property_get(r, "depth");
@@ -17,7 +17,7 @@ export function bless_block_sidewalk_y(x, y) {
     alleys,
     walls,
     buildings,
-    stride,
+    span,
     count,
     gap,
     sidewalk_y,
