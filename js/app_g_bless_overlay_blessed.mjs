@@ -1,3 +1,4 @@
+import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
 import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
