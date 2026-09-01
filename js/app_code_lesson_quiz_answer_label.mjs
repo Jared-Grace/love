@@ -12,7 +12,7 @@ export function app_code_lesson_quiz_answer_label(
   refresh,
 ) {
   arguments_assert(arguments, 8);
-  let r = app_code_lesson_quiz_on_answer(
+  let r = app_code_lesson_quiz_on_answer({
     info,
     qa,
     container_blue_light,
@@ -21,7 +21,7 @@ export function app_code_lesson_quiz_answer_label(
     context,
     quizzes,
     refresh,
-  );
+  });
   let on_answer = property_get(r, "on_answer");
   let correction_render = property_get(r, "correction_render");
   let answer_property = property_get(r, "answer_property");
