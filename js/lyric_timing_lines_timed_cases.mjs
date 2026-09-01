@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function lyric_timing_lines_timed_cases() {
   arguments_assert(arguments, 0);
@@ -7,6 +8,11 @@ export function lyric_timing_lines_timed_cases() {
   ("THE MOMENTS WITH REAL DIGITS ON THEM ARE HERE BECAUSE NINE WRONG VERSIONS WERE WRITTEN OUT AND CHECKED AGAINST THESE CASES, AND ONE OF THEM WAS REFUSED BY NOTHING. Every case above was built out of tidy numbers - a second and a half, five seconds - and a version that did no rounding at all answered all of them exactly right, while the paragraph about rounding to hundredths sat in the code being enforced by no case whatever. A moment that has actually come off somebody's hand never looks like five; it looks like five point eight seven two one one. So one case carries the untidy digits on a beginning, on an ending worked out from the next beginning, and on the length of the song - which is three places the rounding has to happen and only one case to hold all three.");
   ("THAT CHECK WAS RUN AGAIN LATER AGAINST SIXTEEN WRONG VERSIONS, AND ONE MORE GOT THROUGH: the version that rounds the next beginning first and takes the sliver off afterwards, instead of taking the sliver off and rounding the result. Those two are the same sum in real arithmetic and they are not the same sum in a machine, because five hundredths is not a number a machine can hold exactly. Measured over three million moments spread across three minutes of song, they disagree on about a third of them, and what comes out of the wrong one is an ending like a hundred and seventeen point eight eight zero zero zero zero zero zero zero zero zero zero one. Nothing about that is wrong by a hundredth of a second - it is wrong by nothing anybody could hear - but it is written into a document that a person is meant to open and correct by hand, and the paragraph in the code about rounding says in as many words that such a document should not carry digits nobody can check. So the last case carries a next beginning chosen because the two orders part company on it.");
   ("THE FIRST OF THOSE TWO SWEEPS WAS ALREADY WRITTEN UP HERE AS A CHECK THIS CORPUS HAD PASSED, WHICH IS THE THING WORTH TAKING AWAY. A sweep like this answers for the wrong versions somebody thought of and says nothing whatever about the ones they did not, so a corpus that has been through one is not a corpus that is finished - it is a corpus that is finished against a list. Both of the holes found here were invisible for the same reason: every case that existed happened to share a property - tidy digits the first time, digits that survive either order of rounding the second - and a property shared by every case is exactly what a case cannot test.");
+  ("THE WRONG VERSIONS ARE NO LONGER A PARAGRAPH ABOUT THE PAST. All sixteen are written out in data/given/red_proofs/",
+    fn_name("lyric_timing_lines_timed"),
+    ".mjs, and ",
+    fn_name("red_proofs_gate_run"),
+    " asks every one of them of every case here on each run - so a case removed later, or a version that stops being wrong, is said out loud rather than leaving this account describing a check nobody is doing any more. Everything above records what was learnt from the two sweeps; the file is what makes a third one cost nothing.");
   let cases = [
     {
       starts: [2.69, null],
