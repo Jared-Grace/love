@@ -14,7 +14,7 @@ export function app_code_lesson_console_log_remainder_generic_above_closing(
   arguments_assert(arguments, 6);
   let intro = app_code_container_light_blue(root);
   let has_insight =
-    app_code_lesson_console_log_remainder_generic_above_has_insight(
+    app_code_lesson_console_log_remainder_generic_above_has_insight({
       divisor,
       intro,
       root,
@@ -22,7 +22,7 @@ export function app_code_lesson_console_log_remainder_generic_above_closing(
       percent,
       modulo_fn,
       insight,
-    );
+    });
   if (has_insight) {
     let insight_box = app_code_container_light_blue(root);
     function insight_line(line) {
