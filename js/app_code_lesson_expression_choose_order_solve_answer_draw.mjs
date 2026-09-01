@@ -19,13 +19,13 @@ export function app_code_lesson_expression_choose_order_solve_answer_draw(
     let nothing = text_empty();
     answer_label_set(nothing);
   }
-  app_code_expression_choose_order_ask(
+  app_code_expression_choose_order_ask({
     parent,
     tree,
-    answer_label_set,
+    say: answer_label_set,
     finished,
     decoys_get,
     on_wrong,
     on_success,
-  );
+  });
 }
