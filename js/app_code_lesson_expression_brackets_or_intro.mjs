@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -48,22 +49,27 @@ export function app_code_lesson_expression_brackets_or_intro(root) {
     " is normally solved before a ",
     or_symbol,
   ]);
-  app_code_lesson_expression_brackets_worked_card(
-    root,
-    heading_none,
-    false,
-    true,
-    true,
-    false,
-    true,
-  );
-  app_code_lesson_expression_brackets_worked_card(
-    root,
-    heading_either,
-    true,
-    true,
-    false,
-    true,
-    true,
+  each(
+    [
+      {
+        root,
+        heading: heading_none,
+        left: false,
+        middle: true,
+        right: true,
+        brackets_left: false,
+        inner_or: true,
+      },
+      {
+        root,
+        heading: heading_either,
+        left: true,
+        middle: true,
+        right: false,
+        brackets_left: true,
+        inner_or: true,
+      },
+    ],
+    app_code_lesson_expression_brackets_worked_card,
   );
 }
