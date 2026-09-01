@@ -15,7 +15,7 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
   ("An unknown chapter code is refused rather than answered with nothing, because a chapter whose bands have not been written yet and a chapter code that was misspelled would otherwise look identical.");
   ("IT STANDS ABOVE THE SIZE CEILING AND IS RECORDED AS STANDING THERE by ",
     fn_name("functions_work_size_baseline_add"),
-    ". Its length is the number of chapters whose bands have been written rather than the way it was written: each of the twenty five cases is one line, no two of them ever run together, and a reader holds exactly one and forgets it. Cutting it in half would give each half a name that means nothing and would still leave that reader reading all twenty five to learn which file holds a chapter. It comes back under the ceiling only by getting shorter, which happens the day a bundler can be handed a folder rather than an address at a time.");
+    ". Its length is the number of chapters whose bands have been written rather than the way it was written: each of its cases is one line, no two of them ever run together, and a reader holds exactly one and forgets it. Cutting it in half would give each half a name that means nothing and would still leave that reader reading every one of them to learn which file holds a chapter. It comes back under the ceiling only by getting shorter, which happens the day a bundler can be handed a folder rather than an address at a time.");
   let found = null;
   if (equal(chapter_code, "EXO20")) {
     let lines_module = await import(

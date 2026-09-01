@@ -1,3 +1,5 @@
+import { bless_building_shape } from "./bless_building_shape.mjs";
+import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -9,11 +11,11 @@ export function bless_building_column(building, index) {
   arguments_assert(arguments, 2);
   ("One household's share of a building, given as the ground it covers - a strip one tile");
   ("wide running from the front of the house to the back of it.");
-  ("A building is three squares across and holds three households, so the thirds fall out");
-  ("of the picture instead of having to be invented. That is worth saying out loud rather");
-  ("than leaning on quietly: if a building ever holds a number of households that is not");
-  ("its width, this is the function that stops making sense, and it should be changed");
-  ("rather than left to draw something wrong.");
+  ("A building puts one door on the street for each household living in it, so the strips");
+  ("fall out of the picture instead of having to be invented - a household owns the ground");
+  ("standing behind its own door. The doors are spaced, so the strip is found by stepping");
+  ("along the front the same distance the doors are apart rather than one square at a time,");
+  ("and the squares of wall in between belong to no household in particular.");
   ("A COLUMN rather than a single square, because a lit column reads as a part of the house");
   ("and a lit square reads as a mark hung on its wall. The player is being told how much of");
   ("this house is done, and a third of a house is a third of the shape of it.");
@@ -26,7 +28,10 @@ export function bless_building_column(building, index) {
   }
   let xs = list_map(tiles, tile_x);
   let x_west = list_min(xs);
-  let x_column = add(x_west, index);
+  let shape = bless_building_shape();
+  let stride = property_get(shape, "door_stride");
+  let across = multiply(index, stride);
+  let x_column = add(x_west, across);
   function tile_in_column(tile) {
     let within = property_equals(tile, "x", x_column);
     return within;

@@ -9,7 +9,7 @@ export function bible_glyph_chapter(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter, spelled as the chapter codes spell it. It names a chapter to look up and nothing that runs.";
   "One picture Bible chapter with every word already parsed out of the shorthand, which is the form everything downstream reads.";
-  ("IT FINDS THE CHAPTER IN THE WHOLE BIBLE, which means whoever calls it is holding all twenty five chapters whether they wanted them or not. That is right for a program running here and wrong for a page on a phone, and ",
+  ("IT FINDS THE CHAPTER IN THE WHOLE BIBLE, which means whoever calls it is holding every chapter there is whether they wanted them or not. That is right for a program running here and wrong for a page on a phone, and ",
     fn_name("bible_glyph_chapter_fetched"),
     " is the same answer reached the other way for that reason.");
   ("The parsing itself is not here. It is ",
