@@ -88,7 +88,7 @@ export async function app_g_bless_camera_glide(
   html_reflow_force(div_map);
   let claim = html_scroll_animate_start(container_e);
   let token = property_get(claim, "token");
-  let animate = app_g_bless_camera_glide_frames(
+  let animate = app_g_bless_camera_glide_frames({
     container_map,
     player_img_c,
     container,
@@ -97,7 +97,7 @@ export async function app_g_bless_camera_glide(
     from,
     to,
     token,
-  );
+  });
   let promise = new Promise(animate);
   await promise;
   html_style_variable_set(container_map, variable, size);
