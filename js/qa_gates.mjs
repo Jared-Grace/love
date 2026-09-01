@@ -949,6 +949,7 @@ export function qa_gates() {
     red_proofs_gate_run,
     js_statements_function_declared_names_direct_cases_gate_run,
     js_statement_move_before_refusals_cases_gate_run,
+    function_span_cut_skip_decided_or_null_cases_gate_run,
   ];
   return gates;
 }
