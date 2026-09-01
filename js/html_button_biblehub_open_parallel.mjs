@@ -16,13 +16,13 @@ export function html_button_biblehub_open_parallel(
     },
   };
   let text = app_shared_text_reader_language(texts);
-  html_button_biblehub_open(
+  html_button_biblehub_open({
     parent,
     book_name,
     chapter_name,
     verse_number,
-    text,
-    "",
-    "",
-  );
+    button_text: text,
+    folder: "",
+    ending: "",
+  });
 }
