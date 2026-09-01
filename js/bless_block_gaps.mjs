@@ -1,23 +1,21 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_building_shape } from "./bless_building_shape.mjs";
+import { bless_block_measures } from "./bless_block_measures.mjs";
 import { property_get } from "./property_get.mjs";
-import { bless_place_sizes } from "./bless_place_sizes.mjs";
-import { add } from "./add.mjs";
 import { range } from "./range.mjs";
 import { multiply } from "./multiply.mjs";
+import { add } from "./add.mjs";
 import { bless_building } from "./bless_building.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { subtract } from "./subtract.mjs";
 export function bless_block_gaps(x, y) {
   arguments_assert(arguments, 2);
-  let shape = bless_building_shape();
-  let width = property_get(shape, "width");
-  let depth = property_get(shape, "depth");
-  let gap = property_get(shape, "gap");
-  let sizes = bless_place_sizes();
-  let count = property_get(sizes, "block");
-  let stride = add(width, gap);
+  let measures = bless_block_measures();
+  let width = property_get(measures, "width");
+  let depth = property_get(measures, "depth");
+  let gap = property_get(measures, "gap");
+  let count = property_get(measures, "count");
+  let stride = property_get(measures, "stride");
   let indexes = range(count);
   function building_x(index) {
     let across = multiply(index, stride);
