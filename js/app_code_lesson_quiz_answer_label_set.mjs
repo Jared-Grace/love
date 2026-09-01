@@ -34,7 +34,7 @@ export function app_code_lesson_quiz_answer_label_set(
   let quiz_index = property_get(r3, "quiz_index");
   let answer_label = property_get(r3, "answer_label");
   let qli = property_get(r3, "qli");
-  let r2 = app_code_lesson_quiz_on_qa_change(
+  let r2 = app_code_lesson_quiz_on_qa_change({
     r3,
     value,
     qli,
@@ -44,7 +44,7 @@ export function app_code_lesson_quiz_answer_label_set(
     quizzes,
     refresh,
     container_success_message,
-  );
+  });
   let container_question = property_get(r2, "container_question");
   let answer_label_set = property_get(r2, "answer_label_set");
   let r5 = {
