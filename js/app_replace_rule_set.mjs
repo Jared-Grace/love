@@ -1,3 +1,4 @@
+import { app_replace_rule_set_solved_show } from "./app_replace_rule_set_solved_show.mjs";
 import { app_replace_rule_set_each_rule } from "./app_replace_rule_set_each_rule.mjs";
 import { app_replace_rule_set_on_hint } from "./app_replace_rule_set_on_hint.mjs";
 import { app_replace_rule_set_symbols_mapper } from "./app_replace_rule_set_symbols_mapper.mjs";
@@ -16,9 +17,6 @@ import { html_div } from "./html_div.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
-import { ternary } from "./ternary.mjs";
-import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
-import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_text_set_if } from "./html_text_set_if.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -173,23 +171,21 @@ export async function app_replace_rule_set(context) {
       let eq = json_equal(left, end);
       if (eq) {
         property_set(success_held, "success", true);
-        let list9 = property_get(rule_buttons_held, "rule_buttons");
-        list_map_property_invoke(list9, "refresh_rb");
-        ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");
-        let success_duration = ternary(resumed, 0, duration);
-        await app_replace_rule_set_success({
-          rule_name: rule_set_name,
+        await app_replace_rule_set_solved_show(
+          rule_buttons_held,
+          resumed,
+          duration,
+          rule_set_name,
           goal,
           context,
           goal_list_symbols,
-          sbs: property_get(symbol_buttons_held, "symbol_buttons"),
-          duration: success_duration,
+          symbol_buttons_held,
           div_below,
           goal_index,
           goals,
           history,
-        });
-        app_replace_rule_set_proof_show(div_proof, history);
+          div_proof,
+        );
       }
       let value2 = property_get(index_selected_held, "index_selected");
       let has_selection = null_not_is(value2);
