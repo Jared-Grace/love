@@ -20,7 +20,7 @@ import { app_replace_symbol_tile_valid_multiple_nested } from "./app_replace_sym
 import { storage_local_transform_empty_context } from "./storage_local_transform_empty_context.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_replace_rule_sets_data_goal } from "./app_replace_rule_sets_data_goal.mjs";
-export async function app_replace_rule_set_success(
+export async function app_replace_rule_set_success({
   rule_name,
   goal,
   context,
@@ -31,7 +31,7 @@ export async function app_replace_rule_set_success(
   goal_index,
   goals,
   history,
-) {
+}) {
   function lambda5(value) {
     let g = app_replace_rule_sets_data_goal(value, rule_name, goal);
     property_set(g, "completed", true);
