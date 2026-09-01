@@ -1,7 +1,3 @@
-import { js_rebound_names } from "./js_rebound_names.mjs";
-import { js_global_names } from "./js_global_names.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { js_list_calls_named_nodes } from "./js_list_calls_named_nodes.mjs";
@@ -11,6 +7,11 @@ import { list_add } from "./list_add.mjs";
 import { js_identifiers_named } from "./js_identifiers_named.mjs";
 import { list_difference } from "./list_difference.mjs";
 import { js_declaration_names_unbound } from "./js_declaration_names_unbound.mjs";
+import { js_module_names_reachable } from "./js_module_names_reachable.mjs";
+import { js_global_names } from "./js_global_names.mjs";
+import { js_globals_shadowed_names } from "./js_globals_shadowed_names.mjs";
+import { list_concat } from "./list_concat.mjs";
+import { js_rebound_names } from "./js_rebound_names.mjs";
 import { list_intersection } from "./list_intersection.mjs";
 export async function js_function_nested_lift_reading(ast, declaration) {
   arguments_assert(arguments, 2);
@@ -32,7 +33,11 @@ export async function js_function_nested_lift_reading(ast, declaration) {
   let reachable = await js_module_names_reachable(ast);
   ("What the language and the page supply is already there wherever the function is moved to, so it is not something the function has to be handed. Left in, every throw in a moved function grew the parameter list by the two names it threw with, and the caller then passed the language its own words back.");
   let globals = js_global_names();
-  let supplied = list_concat(reachable, globals);
+  ("One of those words stops being supplied the moment this function binds a name of its own to it. Inside these lines the word then means the local binding and the page's own is unreachable, so a moved body reading it out of thin air reads something else entirely - and nothing goes red, because the page does answer to the word, so no name is left unbound and no import is missing. Measured 2026-09-01: a list of the moves a player had made was kept under the word the page uses for the pages it has visited, and a lifted body went on adding to the page's own instead.");
+  ("Handing it over is right whichever binding the word turns out to mean, because the line left behind reads it where the function used to stand, and so passes on exactly what the function itself would have found there.");
+  let shadowed = js_globals_shadowed_names(ast);
+  let globals_free = list_difference(globals, shadowed);
+  let supplied = list_concat(reachable, globals_free);
   let closed = list_difference(unbound, supplied);
   ("Written means pointed somewhere else, and never a write that goes through a dot. The lift hands every closed-over name over as a value, so the question is which of them a parameter would fork: pointing a name somewhere else does fork it, because the parameter and the name outside stop being the same name from that write onwards, while setting something on the thing a name points at changes the one thing the caller is looking at too.");
   ("The broader reading was asked here at first, which counted a name as written when only a piece hanging off it was. That turned down a function keeping its place on an object - the very shape somebody reaches for to make a lift possible - and the wording next door already says this narrower one is the one to ask wherever a name is handed on as a value.");
