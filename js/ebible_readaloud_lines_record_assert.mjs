@@ -12,7 +12,7 @@ import { fn_name } from "./fn_name.mjs";
 import { ebible_readaloud_lines_baseline_path } from "./ebible_readaloud_lines_baseline_path.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ebible_bibles_answered_assert } from "./ebible_bibles_answered_assert.mjs";
-export async function ebible_readaloud_lines_record_assert(
+export async function ebible_readaloud_lines_record_assert({
   f_name_download,
   f_name,
   unchecked_names,
@@ -20,8 +20,8 @@ export async function ebible_readaloud_lines_record_assert(
   unchecked_write,
   bibles,
   unmeasured,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("Every list the record of reading-aloud line counts carries, held against what it ought to be - and the chapters whose counts disagree, gathered under the bible each belongs to and handed back.");
   ("Three questions rather than one, and they are together because each of the three makes the next one worth asking. Whether every bible a reader can choose has actually been read; whether the chapters found disagreeing are no more than the repo already carried; and whether every bible shipped is spoken about in the record at all. A yes to the second means nothing until the first is answered, because a record with unread bibles in it has fewer disagreements to find.");
   ("Being named in the record is not the same as having been read, and until now only the first of those was checked. A bible whose reading-aloud text never reached this machine is written down with every chapter unread and nothing disagreeing, which counts exactly like a bible read end to end and found right - so the number said three hundred and forty-seven bibles while seventy-nine of them had not had a single chapter looked at.");
@@ -43,7 +43,8 @@ export async function ebible_readaloud_lines_record_assert(
   );
   function lambda(measured) {
     let uneven = property_get(measured, "differ");
-    let bible_folder = property_get(measured, bible_folder_key());
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(measured, property_name);
     function lambda_bible_folder_name(counts) {
       let counts_named = object_merge_set(counts, {
         bible_folder,
@@ -70,7 +71,8 @@ export async function ebible_readaloud_lines_record_assert(
     ", which records the ones that come back the same rather than leaving them here to be looked at twice",
   ]);
   await baseline_names_gate_generic(names, baseline_path, hint, name_write);
-  let measured_names = list_map_property(bibles, bible_folder_key());
+  let property_name2 = bible_folder_key();
+  let measured_names = list_map_property(bibles, property_name2);
   let answered = lists_combine([measured_names, unmeasured]);
   let f_name3 = fn_name("ebible_readaloud_lines_write");
   let unasked_hint = text_combine_multiple([
