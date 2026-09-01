@@ -1,3 +1,4 @@
+import { js_variable_box_refusals_update_each } from "./js_variable_box_refusals_update_each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_equals_try } from "./property_equals_try.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
@@ -16,39 +17,9 @@ export function js_variable_box_refusals(ast, name) {
     let is = property_equals_try(node, "name", name);
     return is;
   }
-  let patterns = js_list_type_nodes(ast, "ObjectPattern");
-  function pattern_each(pattern) {
-    let properties = property_get(pattern, "properties");
-    function property_each(entry) {
-      let value = property_get(entry, "value");
-      let is = named_is(value);
-      if (is) {
-        list_add(refusals, "it is written by taking a record apart");
-      }
-    }
-    each(properties, property_each);
-  }
-  each(patterns, pattern_each);
-  let arrays = js_list_type_nodes(ast, "ArrayPattern");
-  function array_each(pattern2) {
-    let elements = property_get(pattern2, "elements");
-    function element_each(element) {
-      let is = named_is(element);
-      if (is) {
-        list_add(refusals, "it is written by taking a list apart");
-      }
-    }
-    each(elements, element_each);
-  }
-  each(arrays, array_each);
-  let updates = js_list_type_nodes(ast, "UpdateExpression");
-  function update_each(update) {
-    let argument = property_get(update, "argument");
-    let is = named_is(argument);
-    if (is) {
-      list_add(refusals, "it is counted up or down where it stands");
-    }
-  }
+  let r = js_variable_box_refusals_update_each(ast, named_is, refusals);
+  let update_each = property_get(r, "update_each");
+  let updates = property_get(r, "updates");
   each(updates, update_each);
   let kinds = [
     "FunctionDeclaration",
