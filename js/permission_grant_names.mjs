@@ -2554,6 +2554,48 @@ export function permission_grant_names() {
     "functions_calls_named_literal_argument_callee_set",
   );
   let spelled2431 = fn_name("function_calls_named_literal_argument_callee_set");
+  let spelled2432 = fn_name("folder_repo_love_js_spelled");
+  let spelled2433 = fn_name("functions_arguments_assert_count_repair");
+  let spelled2434 = fn_name("qa_promoted_commits_gone_live_restore");
+  let spelled2435 = fn_name("folder_public_root_lock_name");
+  let spelled2436 = fn_name("git_files_restore_at");
+  let spelled2437 = fn_name("function_declarations_unused_clear_multiple");
+  let spelled2438 = fn_name("app_code_quiz_leniency_baseline_path");
+  let spelled2439 = fn_name("example_files_command_args_miscounted");
+  let spelled2440 = fn_name("example_files_command_cores");
+  let spelled2441 = fn_name("functions_rewrite_seams");
+  let spelled2442 = fn_name("function_list_fn_names_add");
+  let spelled2443 = fn_name("functions_fold_pattern_dropped");
+  let spelled2444 = fn_name("functions_rewrite_then_read_baseline_path");
+  let spelled2445 = fn_name("functions_rewrite_then_read_baseline_write");
+  let spelled2446 = fn_name("berean_usfm_download_path");
+  let spelled2447 = fn_name("functions_search_family_or_null_cases_gate_run");
+  let spelled2448 = fn_name("firebase_function_chapters_uploaded");
+  let spelled2449 = fn_name("app_original_bible_gloss_unpublished_gate_run");
+  let spelled2450 = fn_name("ebible_version_storage_delete");
+  let spelled2451 = fn_name("ebible_versions_published_commercial_not");
+  let spelled2452 = fn_name("ebible_versions_english_choices_upload_path");
+  let spelled2453 = fn_name("ebible_versions_english_web_family");
+  let spelled2454 = fn_name("folder_public_absolute_join");
+  let spelled2455 = fn_name("user_repo_get");
+  let spelled2456 = fn_name("firebase_prod_file_names");
+  let spelled2457 = fn_name("qa_public_files_empty_gate_run");
+  let spelled2458 = fn_name("list_last");
+  let spelled2459 = fn_name("pages_published_baseline_path");
+  let spelled2460 = fn_name("folder_app_pointers");
+  let spelled2461 = fn_name("qa_promoted_unbuilt_linked");
+  let spelled2462 = fn_name("commits_message_path_baseline_write");
+  let spelled2463 = fn_name("qa_gate_timings_worth_measuring_is");
+  let spelled2464 = fn_name("qa_gate_timings_coverage");
+  let spelled2465 = fn_name("firebase_hosting_ignore_missing");
+  let spelled2466 = fn_name("ebible_letter_accounted_spaces");
+  let spelled2467 = fn_name("ebible_letter_plain_text_gate_run");
+  let spelled2468 = fn_name("markdown_plain_text_cases_gate_run");
+  let spelled2469 = fn_name("ebible_letter_sent_mark");
+  let spelled2470 = fn_name(
+    "bible_usfm_version_chapter_clipboard_copy_plain_whitespace_normalized",
+  );
+  let spelled2471 = fn_name("lyric_video_bible_document_path");
   let names = [
     spelled,
     spelled2,
@@ -4986,6 +5028,46 @@ export function permission_grant_names() {
     spelled2429,
     spelled2430,
     spelled2431,
+    spelled2432,
+    spelled2433,
+    spelled2434,
+    spelled2435,
+    spelled2436,
+    spelled2437,
+    spelled2438,
+    spelled2439,
+    spelled2440,
+    spelled2441,
+    spelled2442,
+    spelled2443,
+    spelled2444,
+    spelled2445,
+    spelled2446,
+    spelled2447,
+    spelled2448,
+    spelled2449,
+    spelled2450,
+    spelled2451,
+    spelled2452,
+    spelled2453,
+    spelled2454,
+    spelled2455,
+    spelled2456,
+    spelled2457,
+    spelled2458,
+    spelled2459,
+    spelled2460,
+    spelled2461,
+    spelled2462,
+    spelled2463,
+    spelled2464,
+    spelled2465,
+    spelled2466,
+    spelled2467,
+    spelled2468,
+    spelled2469,
+    spelled2470,
+    spelled2471,
   ];
   return names;
 }
