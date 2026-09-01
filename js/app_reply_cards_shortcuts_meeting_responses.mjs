@@ -7,7 +7,7 @@ import { clipboard_copy } from "./clipboard_copy.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { app_reply_response_button } from "./app_reply_response_button.mjs";
 import { list_map_existing } from "./list_map_existing.mjs";
-export function app_reply_cards_shortcuts_meeting_responses(
+export function app_reply_cards_shortcuts_meeting_responses({
   root,
   languages_chosen_held,
   languages,
@@ -21,8 +21,8 @@ export function app_reply_cards_shortcuts_meeting_responses(
   buttons_refresh,
   visible_count_held,
   choices,
-) {
-  arguments_assert(arguments, 13);
+}) {
+  arguments_assert(arguments, 1);
   let card = app_shared_container_blue(root);
   let languages_chosen = property_get(
     languages_chosen_held,
