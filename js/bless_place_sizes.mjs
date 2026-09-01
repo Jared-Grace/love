@@ -61,9 +61,12 @@ export function bless_place_sizes() {
   ("a building really is a small thing next to a block. Widening the street instead is not");
   ("available - the ground is twenty-seven tiles across and a block is already nineteen of");
   ("them.");
+  ("THE BUILDING NUMBER IS NO LONGER A COUNT. A building has two, three or four doors in it, chosen by where it stands on the street, so there is no one number of families in a building to write here. What this number is now is the NUMBERING STRIDE - the most doors any building can have, and therefore how many family numbers each building is given. A building with two doors uses the first two of its four and leaves the other two unused, which costs nothing at all, because a family is a number that gets worked out and never a row that gets stored.");
+  ("Keeping it a stride is what keeps every address a division. Which building a family belongs to is still its number divided by this, and where it sits inside that building is still the remainder - both of them the same reading as before. Numbered end to end instead, with no gaps, a family would have to be found by adding up every building before it, and a world that has to be counted through from the beginning is a world that has to be stored.");
+  ("It is the one entry here that does NOT say how many people are held below it, so the people in a building are asked for by name instead of multiplied out. Four times three is twelve and a building holds nine.");
   let sizes = {
     household: 3,
-    building: 3,
+    building: 4,
     block: 5,
     neighborhood: 12,
     district: 8,
