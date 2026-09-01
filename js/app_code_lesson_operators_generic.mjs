@@ -73,11 +73,8 @@ export function app_code_lesson_operators_generic({
     ]);
     html_div_cycle_code(c, [combined4, operator_js, combined5]);
   }
-  let name_id = app_code_lesson_name_id_symbol(
-    app_code_category_operators(),
-    [math_name],
-    operator_js,
-  );
+  let left = app_code_category_operators();
+  let name_id = app_code_lesson_name_id_symbol(left, [math_name], operator_js);
   let lesson = app_code_lesson_code_expression(batch, name_id, above);
   return lesson;
 }
