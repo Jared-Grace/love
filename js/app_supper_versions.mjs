@@ -15,14 +15,14 @@ export async function app_supper_versions(context) {
   async function back() {
     await app_shared_screen_set_home(context);
   }
-  app_shared_bible_subset_screen_generic(
+  app_shared_bible_subset_screen_generic({
     context,
     options,
     chosen,
-    "name",
-    bible_folder_key(),
+    name_property: "name",
+    key_property: bible_folder_key(),
     on_change,
-    "Versions",
+    choices_label: "Versions",
     back,
-  );
+  });
 }
