@@ -1,4 +1,4 @@
-export function urdu_glued_words_decided() {
+export function urdu_glued_words_decided_two() {
   "Every Urdu word the glued-word detector offers, ruled on one at a time: the ones that are two words with the space missing, and the ones that only look like it.";
   "The detector cannot make this call and says so. Both halves being common words is the whole of its evidence, and Urdu welds two of its own small words into a real closed word constantly, so the evidence fits an ordinary word exactly as well as it fits a defect. What settles each one is knowing the language, and a judgment is not something to recompute — it is written down here as given data.";
   "The split map is the repair: a key is spelled as its value wherever the word stands alone. The keep list carries no repair and exists only to say the word was looked at and is fine, so that a word appearing later which is in neither list is a word nobody has ruled on yet.";
