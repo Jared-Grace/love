@@ -7,7 +7,7 @@ import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
 import { bless_view_household_started } from "./bless_view_household_started.mjs";
 import { app_g_bless_rings } from "./app_g_bless_rings.mjs";
 import { app_g_bless_pointers } from "./app_g_bless_pointers.mjs";
-export function app_g_bless_marks(
+export function app_g_bless_marks({
   glows,
   homes,
   blocks,
@@ -15,8 +15,8 @@ export function app_g_bless_marks(
   everyone,
   ground,
   held,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("Draws everything the record has to say about the street: the lights on the people who");
   ("have been prayed for, the houses filled in behind them, and the rings on the people left");
   ("in a house the player has started.");
