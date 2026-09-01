@@ -1,7 +1,8 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_set_nested } from "./list_set_nested.mjs";
-import { app_shared_game_map_square_key } from "./app_shared_game_map_square_key.mjs";
+import { multiply_add } from "./multiply_add.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { or } from "./or.mjs";
@@ -19,11 +20,14 @@ export function app_shared_game_map_square_flood({
   edge,
 }) {
   "Turns one square to water and queues every dry square beside it that is not queued already, so the edge of the water is kept as it grows rather than looked for again at every step.";
+  ("A square's key is its place counted along the rows, which is the rows above it times the width with its own column added on - the shape ",
+    fn_name("multiply_add"),
+    " is named for.");
   arguments_assert(arguments, 1);
   let x = property_get(spot, "x");
   let y = property_get(spot, "y");
   list_set_nested(rows, y, x, item_water);
-  let v = app_shared_game_map_square_key(x, y, width);
+  let v = multiply_add(y, width, x);
   taken.add(v);
   function neighbour_queue(step) {
     let step_x = property_get(step, "x");
@@ -38,7 +42,7 @@ export function app_shared_game_map_square_flood({
     if (outside) {
       return;
     }
-    let key = app_shared_game_map_square_key(step_x, step_y, width);
+    let key = multiply_add(step_y, width, step_x);
     let wet = taken.has(key);
     let queued = edge_keys.has(key);
     let known = or(wet, queued);
