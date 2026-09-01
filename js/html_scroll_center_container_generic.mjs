@@ -1,31 +1,33 @@
-import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
-import { html_component_element_get } from "./html_component_element_get.mjs";
 import { html_scroll_generic_wait } from "./html_scroll_generic_wait.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { add } from "./add.mjs";
+import { html_component_element_get } from "./html_component_element_get.mjs";
+import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
+import { html_scroll_center_offset } from "./html_scroll_center_offset.mjs";
 export async function html_scroll_center_container_generic(
   component,
   behavior,
   container,
 ) {
+  "Scrolls a box until one thing drawn inside it sits in the middle of what can be seen, in both directions at once, gliding or arriving at once as the caller asks.";
+  "THE SUM IS ASKED FOR TWICE AND IS WRITTEN OUT NEITHER TIME. Across and down are the same arithmetic over a different five numbers, and it had been spelled out both ways here - so a change to the middle of a box was two edits, and getting one of them meant a box centred sideways by one rule and downwards by another.";
   let e = await html_scroll_generic_wait(component);
   let container_e = html_component_element_get(container);
   await html_request_animation_frame();
   let containerRect = container_e.getBoundingClientRect();
   let tileRect = e.getBoundingClientRect();
-  let right = subtract(tileRect.left, containerRect.left);
-  let left2 = add(container_e.scrollLeft, right);
-  let right2 = divide(container_e.clientWidth, 2);
-  let left3 = subtract(left2, right2);
-  let right3 = divide(tileRect.width, 2);
-  let scrollLeft = add(left3, right3);
-  let right4 = subtract(tileRect.top, containerRect.top);
-  let left4 = add(container_e.scrollTop, right4);
-  let right5 = divide(container_e.clientHeight, 2);
-  let left5 = subtract(left4, right5);
-  let right6 = divide(tileRect.height, 2);
-  let scrollTop = add(left5, right6);
+  let scrollLeft = html_scroll_center_offset(
+    container_e.scrollLeft,
+    tileRect.left,
+    containerRect.left,
+    container_e.clientWidth,
+    tileRect.width,
+  );
+  let scrollTop = html_scroll_center_offset(
+    container_e.scrollTop,
+    tileRect.top,
+    containerRect.top,
+    container_e.clientHeight,
+    tileRect.height,
+  );
   let s = {
     left: scrollLeft,
     top: scrollTop,
