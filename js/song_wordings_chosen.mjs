@@ -1,3 +1,4 @@
+import { property_list_includes } from "./property_list_includes.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 export function song_wordings_chosen(echoed, bible_folder_usual) {
   arguments_assert(arguments, 2);
   ("$plain echoed");
@@ -40,8 +40,11 @@ export function song_wordings_chosen(echoed, bible_folder_usual) {
         continue;
       }
       list_add(winners, wording);
-      let bible_folders = property_get(wording, "bible_folders");
-      let usual_here = list_includes(bible_folders, bible_folder_usual);
+      let usual_here = property_list_includes(
+        wording,
+        "bible_folders",
+        bible_folder_usual,
+      );
       if (usual_here) {
         usual_won = true;
       }
