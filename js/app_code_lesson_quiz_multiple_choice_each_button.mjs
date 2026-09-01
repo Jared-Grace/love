@@ -12,7 +12,7 @@ import { app_code_lesson_quiz_wrong_set } from "./app_code_lesson_quiz_wrong_set
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_opacity } from "./html_style_opacity.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-export function app_code_lesson_quiz_multiple_choice_each_button(
+export function app_code_lesson_quiz_multiple_choice_each_button({
   r,
   distractor_count,
   next_get,
@@ -20,8 +20,8 @@ export function app_code_lesson_quiz_multiple_choice_each_button(
   on_success,
   on_wrong,
   answer_on_button,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r2 = app_code_lesson_quiz_multiple_choice_answered(
     r,
     distractor_count,

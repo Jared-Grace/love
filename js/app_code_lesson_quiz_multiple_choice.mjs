@@ -14,7 +14,7 @@ export function app_code_lesson_quiz_multiple_choice(
   let r = app_code_lesson_quiz_multiple_choice_next_get(info, qa, batch_get);
   let next_get = property_get(r, "next_get");
   let distractor_count = property_get(r, "distractor_count");
-  let r2 = app_code_lesson_quiz_multiple_choice_each_button(
+  let r2 = app_code_lesson_quiz_multiple_choice_each_button({
     r,
     distractor_count,
     next_get,
@@ -22,7 +22,7 @@ export function app_code_lesson_quiz_multiple_choice(
     on_success,
     on_wrong,
     answer_on_button,
-  );
+  });
   let each_button = property_get(r2, "each_button");
   let choices = property_get(r2, "choices");
   list_map(choices, each_button);
