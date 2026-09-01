@@ -38,7 +38,8 @@ export function app_g_bless_world_new() {
   ("Every block is handed to the world as the places named so far. The ground knows a");
   ("pavement is paved; only the world knows which tiles that pavement IS and which doorstep");
   ("belongs to which building, and that is what a rung is asked against.");
-  let rows = app_shared_game_map_generate();
+  let size = bless_world_size();
+  let rows = app_shared_game_map_generate(size);
   let blocks = app_g_bless_blocks(rows);
   app_g_bless_blocks_raise(rows, blocks);
   let coordinates = g_coordinates(rows);
