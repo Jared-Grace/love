@@ -23,14 +23,14 @@ export function app_reply_cards_shortcuts_meeting_responses(
   choices,
 ) {
   arguments_assert(arguments, 13);
-  let card3 = app_shared_container_blue(root);
-  let languages_chosen5 = property_get(
+  let card = app_shared_container_blue(root);
+  let languages_chosen = property_get(
     languages_chosen_held,
     "languages_chosen",
   );
   app_reply_main_shortcuts(
-    card3,
-    languages_chosen5,
+    card,
+    languages_chosen,
     languages,
     update,
     buttons_languages,
@@ -47,7 +47,7 @@ export function app_reply_cards_shortcuts_meeting_responses(
   let card5 = app_shared_container_blue(root);
   app_shared_text_body(card5, "5. (Optional) Choose any responses:");
   function lambda9(choice) {
-    let r6 = app_reply_response_button(
+    let r = app_reply_response_button(
       choice,
       responses,
       responses_buttons,
@@ -57,7 +57,7 @@ export function app_reply_cards_shortcuts_meeting_responses(
       visible_count_held,
       card5,
     );
-    return r6;
+    return r;
   }
   list_map_existing(choices, lambda9, buttons_responses);
 }
