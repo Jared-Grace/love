@@ -1,10 +1,9 @@
+import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { lyric_timing_untimed_said } from "./lyric_timing_untimed_said.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { divide } from "./divide.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_copy_reverse } from "./list_copy_reverse.mjs";
@@ -32,8 +31,7 @@ export function lyric_timing_times_show(times, held) {
     if (untimed) {
       return null;
     }
-    let hundredths = multiply_round(start, 100);
-    let seconds = divide(hundredths, 100);
+    let seconds = number_hundredths_rounded(start);
     let text = seconds + "  " + held.texts[index];
     return text;
   }
