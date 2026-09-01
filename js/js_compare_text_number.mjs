@@ -4,7 +4,6 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-import { equal } from "./equal.mjs";
 export function js_compare_text_number(ast) {
   arguments_assert(arguments, 1);
   ("$plain ast");
@@ -18,7 +17,7 @@ export function js_compare_text_number(ast) {
   let kind_of = property_get(r, "kind_of");
   let calls = property_get(r, "calls");
   let f_name = fn_name("not_equal");
-  let compares = [equal.name, f_name];
+  let compares = [fn_name("equal"), f_name];
   let found = [];
   let call_each = js_compare_text_number_call_each(compares, kind_of, found);
   each(calls, call_each);
