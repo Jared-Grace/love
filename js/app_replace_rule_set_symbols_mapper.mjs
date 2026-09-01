@@ -1,3 +1,4 @@
+import { property_get_exists } from "./property_get_exists.mjs";
 import { app_replace_rule_set_symbols_mapper_symbol_on_click } from "./app_replace_rule_set_symbols_mapper_symbol_on_click.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +8,6 @@ import { html_data_set_test } from "./html_data_set_test.mjs";
 import { app_shared_symbol_tile_style } from "./app_shared_symbol_tile_style.mjs";
 import { property_set_exists_not } from "./property_set_exists_not.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { app_replace_symbol_tile_invalid } from "./app_replace_symbol_tile_invalid.mjs";
 import { app_replace_rule_set_refresh_sb } from "./app_replace_rule_set_refresh_sb.mjs";
 export function app_replace_rule_set_symbols_mapper({
@@ -55,11 +55,11 @@ export function app_replace_rule_set_symbols_mapper({
   object_merge_set(symbol_button, {
     refresh_sb,
   });
-  let object = property_get(
+  let exists = property_get_exists(
     symbols_invalid_chosen_held,
     "symbols_invalid_chosen",
+    index,
   );
-  let exists = property_exists(object, index);
   if (exists) {
     app_replace_symbol_tile_invalid(symbol_button);
   }
