@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { file_read } from "./file_read.mjs";
@@ -5,8 +6,6 @@ import { text_index_of_skip } from "./text_index_of_skip.mjs";
 import { text_index_of_take } from "./text_index_of_take.mjs";
 import { text_replace_once } from "./text_replace_once.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { text_size } from "./text_size.mjs";
 export async function bible_glyph_chapter_chain_spliced(
   f_name,
@@ -24,8 +23,7 @@ export async function bible_glyph_chapter_chain_spliced(
   let middle = text_index_of_take(skipped, before_text);
   let after = text_replace_once(before, middle, chain);
   await file_overwrite(f_path, after);
-  let same = equal(before, after);
-  let changed = not(same);
+  let changed = equal_not(before, after);
   let r = {
     f_name,
     size_before: text_size(middle),
