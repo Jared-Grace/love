@@ -9,7 +9,7 @@ import { html_style_gap } from "./html_style_gap.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
 import { app_shared_spaced_small_gap } from "./app_shared_spaced_small_gap.mjs";
-export function html_buttons_biblehub_verse_group(
+export function html_buttons_biblehub_verse_group({
   parent,
   book_name,
   chapter_name,
@@ -17,7 +17,7 @@ export function html_buttons_biblehub_verse_group(
   label,
   folder,
   ending,
-) {
+}) {
   ("one biblehub link kind (commentary / parallel / interlinear) for a passage. SINGLE verse: one button captioned <label> appended to parent. MULTI-verse: parent is a shared two-column GRID (see ",
     fn_name("html_buttons_biblehub_verse_grid"),
     ") — appends a right-aligned <label>: cell and a left-aligned cell of one bare verse-number button per verse, so the verse numbers of all three link-kinds line up in a column");
