@@ -1,3 +1,4 @@
+import { js_statement_emptied_region_or_null } from "./js_statement_emptied_region_or_null.mjs";
 import { js_node_stopping_found_is } from "./js_node_stopping_found_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -51,61 +52,15 @@ export function js_regions_blanked_over_wait(ast) {
     let found = js_node_stopping_found_is(statement, named_is, stop_types);
     return found;
   }
-  function emptied_region(statement) {
-    let expression_is = equal(statement.type, "ExpressionStatement");
-    if (not(expression_is)) {
-      return null;
-    }
-    let call = statement.expression;
-    let call_is = equal(call.type, "CallExpression");
-    if (not(call_is)) {
-      return null;
-    }
-    let named_is = equal(call.callee.type, "Identifier");
-    if (not(named_is)) {
-      return null;
-    }
-    let empties = emptier_names.includes(call.callee.name);
-    if (not(empties)) {
-      return null;
-    }
-    ("setting a word is only an emptying when the word is nothing");
-    let right = fn_name("html_text_set");
-    let text_set_is = equal(call.callee.name, right);
-    if (text_set_is) {
-      let second = call.arguments[1];
-      let literal_is = second && equal(second.type, "Literal");
-      let blank_is = literal_is && equal(second.value, "");
-      if (not(blank_is)) {
-        return null;
-      }
-    }
-    let first = call.arguments[0];
-    if (equal(first, undefined)) {
-      return null;
-    }
-    let identifier_is = equal(first.type, "Identifier");
-    if (identifier_is) {
-      let r = first.name;
-      return r;
-    }
-    let member_is = equal(first.type, "MemberExpression");
-    let plain_object_is = member_is && equal(first.object.type, "Identifier");
-    if (plain_object_is) {
-      let r2 = first.object.name;
-      return r2;
-    }
-    return null;
-  }
   function emptied_region_here(statement) {
-    let plain = emptied_region(statement);
+    let plain = js_statement_emptied_region_or_null(statement, emptier_names);
     let plain_is = equal_not(plain, null);
     if (plain_is) {
       return plain;
     }
     let wrapped = null;
     function empties_is(node) {
-      let region = emptied_region(node);
+      let region = js_statement_emptied_region_or_null(node, emptier_names);
       let found_is = equal_not(region, null);
       if (found_is) {
         wrapped = region;
