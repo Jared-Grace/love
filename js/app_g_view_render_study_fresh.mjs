@@ -62,8 +62,7 @@ export function app_g_view_render_study_fresh(
           return;
         }
         current = i + 1;
-        app_g_view_render_study_fresh_word_tapped(
-          i,
+        app_g_view_render_study_fresh_word_tapped(i, {
           current,
           word_bs,
           bar_div,
@@ -72,7 +71,7 @@ export function app_g_view_render_study_fresh(
           container,
           close,
           persist_soon,
-        );
+        });
       }
       return on_tap;
     }
