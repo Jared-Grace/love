@@ -11,7 +11,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
 import { app_shared_spaced_gap } from "./app_shared_spaced_gap.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
-export function app_code_lesson_quiz_on_qa_change(
+export function app_code_lesson_quiz_on_qa_change({
   r3,
   value,
   qli,
@@ -21,8 +21,8 @@ export function app_code_lesson_quiz_on_qa_change(
   quizzes,
   refresh,
   container_success_message,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   ("painting the first question is left to the caller, and this returns the pieces it needs to do it. The painter reads the answer property, the question renderer and the rest out of what comes back here, so called from in here it would run before a single one of them had been read - which is what it did, and every quiz after the first of a lesson stopped loading.");
   let correction_render = property_get(r3, "correction_render");
   let on_answer = property_get(r3, "on_answer");
