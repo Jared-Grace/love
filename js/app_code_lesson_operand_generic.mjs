@@ -43,7 +43,7 @@ export function app_code_lesson_operand_generic(params) {
     html_div_cycle_code(ask, [combined]);
   }
   function quizzes_get(question, answer) {
-    let r = app_code_lesson_operand_generic_quizzes_get(
+    let r = app_code_lesson_operand_generic_quizzes_get({
       question,
       answer,
       answer_label,
@@ -51,7 +51,7 @@ export function app_code_lesson_operand_generic(params) {
       unscramble,
       example_answer_label,
       batch_get,
-    );
+    });
     return r;
   }
   let lesson = app_code_lesson_base(
