@@ -6,26 +6,27 @@ export function baseline_growth_guarded_is_cases() {
   ("THE SWEEP NEXT DOOR COMES BACK EMPTY ON A HEALTHY REPO, WHICH IS WHY THIS EXISTS. A judgment that answers yes to everything and a judgment that is right both leave the sweep with nothing to report, and the gate beside the sweep goes green either way. The only place the difference is visible is a set of imports nobody wrote, held here beside the answer it has to come back with.");
   ("The sets are invented rather than read off real writers, for the same reason. A set taken from a writer can only ever be checked against whatever this function already says about it, and a writer whose imports change tomorrow takes its case with it.");
   ("Every case here refuses at least one wrong version. A judgment that looked for the words anywhere is failed by the near miss on the shrink writer; a judgment that asked for the ending is failed by the generic assert; a judgment that answered yes on any baseline name at all is failed by the plain write and by the empty set.");
+  let f_name = fn_name("baseline_known_read");
+  let f_name2 = fn_name("baseline_known_growth_assert");
+  let f_name3 = fn_name("baseline_known_write");
+  let f_name4 = fn_name("baseline_growth_assert_generic");
+  let f_name5 = fn_name("functions_work_size_baseline_path");
+  let f_name6 = fn_name("baseline_known_shrink_write");
+  let f_name7 = fn_name("baseline_known_read");
+  let f_name8 = fn_name("baseline_known_write");
   let cases = [
     {
-      imports: [
-        fn_name("baseline_known_read"),
-        fn_name("baseline_known_growth_assert"),
-        fn_name("baseline_known_write"),
-      ],
+      imports: [f_name, f_name2, f_name3],
       guarded: true,
       why: "the ordinary refusal: a writer that asks the shared assert whether what it is about to write holds a name the file did not",
     },
     {
-      imports: [fn_name("baseline_growth_assert_generic")],
+      imports: [f_name4],
       guarded: true,
       why: "the words are looked for anywhere inside a name rather than at its end, because the one every ratchet shares its comparison through ends in generic instead - a first draft asked for the ending and called a writer an offender while it was doing exactly the right thing",
     },
     {
-      imports: [
-        fn_name("functions_work_size_baseline_path"),
-        fn_name("baseline_known_shrink_write"),
-      ],
+      imports: [f_name5, f_name6],
       guarded: true,
       why: "a writer that hands its offenders to the shrink cannot grow the file, because the only thing that ever reaches disk there is a subset of what the file already held - growth is unrepresentable rather than refused",
     },
@@ -35,10 +36,7 @@ export function baseline_growth_guarded_is_cases() {
       why: "the shrink writer is asked for exactly, not matched by shape, so a longer name that merely starts with it is a different function and proves nothing about what it writes",
     },
     {
-      imports: [
-        fn_name("baseline_known_read"),
-        fn_name("baseline_known_write"),
-      ],
+      imports: [f_name7, f_name8],
       guarded: false,
       why: "reading the file first is not a refusal: what gets written is still whatever the writer was handed, so a name that has just started offending goes in and the ratchet is a ratchet in one direction only by luck",
     },

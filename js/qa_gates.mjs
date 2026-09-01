@@ -937,6 +937,7 @@ export function qa_gates() {
     bible_versions_sung_gate_run,
     app_code_lesson_id_length_gate_run,
     functions_parameters_gate_run,
+    baseline_growth_guarded_is_cases_gate_run,
   ];
   return gates;
 }
