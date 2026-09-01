@@ -1,6 +1,6 @@
-import { js_statement_emptied_region_or_null } from "./js_statement_emptied_region_or_null.mjs";
-import { js_node_stopping_found_is } from "./js_node_stopping_found_is.mjs";
-import { equal_not } from "./equal_not.mjs";
+import { js_statement_emptied_region_here_or_null } from "./js_statement_emptied_region_here_or_null.mjs";
+import { js_statement_name_read_here_is } from "./js_statement_name_read_here_is.mjs";
+import { js_statement_await_here_is } from "./js_statement_await_here_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -28,51 +28,13 @@ export function js_regions_blanked_over_wait(ast) {
   let f_name2 = fn_name("html_clear_context");
   let f_name3 = fn_name("html_text_set");
   let emptier_names = [f_name, f_name2, f_name3];
-  function await_here_is(statement) {
-    function await_is(node) {
-      let awaited = equal(node.type, "AwaitExpression");
-      return awaited;
-    }
-    let found = js_node_stopping_found_is(
-      statement,
-      await_is,
-      function_node_types,
-    );
-    return found;
-  }
-  function name_here_is(statement, region, stop_types) {
-    function named_is(node) {
-      let identifier_is = equal(node.type, "Identifier");
-      if (not(identifier_is)) {
-        return false;
-      }
-      let same = equal(node.name, region);
-      return same;
-    }
-    let found = js_node_stopping_found_is(statement, named_is, stop_types);
-    return found;
-  }
-  function emptied_region_here(statement) {
-    let plain = js_statement_emptied_region_or_null(statement, emptier_names);
-    let plain_is = equal_not(plain, null);
-    if (plain_is) {
-      return plain;
-    }
-    let wrapped = null;
-    function empties_is(node) {
-      let region = js_statement_emptied_region_or_null(node, emptier_names);
-      let found_is = equal_not(region, null);
-      if (found_is) {
-        wrapped = region;
-      }
-      return false;
-    }
-    js_node_stopping_found_is(statement, empties_is, function_node_types);
-    return wrapped;
-  }
   function body_read(body) {
     for (let index = 0; less_than(index, body.length); index++) {
-      let region = emptied_region_here(body[index]);
+      let region = js_statement_emptied_region_here_or_null(
+        body[index],
+        emptier_names,
+        function_node_types,
+      );
       if (equal(region, null)) {
         continue;
       }
@@ -80,14 +42,22 @@ export function js_regions_blanked_over_wait(ast) {
       for (let after = index + 1; less_than(after, body.length); after++) {
         let statement = body[after];
         if (not(waited)) {
-          let held_back = name_here_is(statement, region, function_node_types);
+          let held_back = js_statement_name_read_here_is(
+            statement,
+            region,
+            function_node_types,
+          );
           if (held_back) {
             break;
           }
-          waited = await_here_is(statement);
+          waited = js_statement_await_here_is(statement, function_node_types);
           continue;
         }
-        let refilled = name_here_is(statement, region, declared_types);
+        let refilled = js_statement_name_read_here_is(
+          statement,
+          region,
+          declared_types,
+        );
         if (not(refilled)) {
           continue;
         }
