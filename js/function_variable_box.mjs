@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -99,8 +100,7 @@ export async function function_variable_box(f_name, name) {
     each(assignments, assignment_each);
     let init = property_get(declarator, "init");
     let boxed = js_parse_expression("({ field: value })");
-    let properties = property_get(boxed, "properties");
-    let entry = list_first(properties);
+    let entry = property_list_first(boxed, "properties");
     let value5 = js_identifier_expression(name);
     property_set(entry, "key", value5);
     property_set(entry, "value", init);
