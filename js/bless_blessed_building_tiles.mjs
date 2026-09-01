@@ -3,7 +3,7 @@ import { bless_place_done_is } from "./bless_place_done_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { not } from "./not.mjs";
-import { bless_building_column } from "./bless_building_column.mjs";
+import { bless_building_family_tiles } from "./bless_building_family_tiles.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function bless_blessed_building_tiles(blessed, building, number) {
@@ -32,7 +32,7 @@ export function bless_blessed_building_tiles(blessed, building, number) {
       let none = [];
       return none;
     }
-    let column = bless_building_column(building, index);
+    let column = bless_building_family_tiles(building, index);
     return column;
   }
   let columns = list_map_index(households, household_tiles);
