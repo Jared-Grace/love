@@ -1,6 +1,6 @@
 export function bless_sidewalk_depth() {
   "How many tiles deep the pavement in front of a block is.";
-  "Four, and the number is set by the crowd rather than by taste. One tile wide, two people";
+  "Two, and the number is set by the crowd rather than by taste. One tile wide, two people";
   "walking towards each other have nowhere to go but the way they came, so every meeting";
   "ends with somebody turning round. Two is enough for two people to pass - and this street";
   "does not hold two people, it holds a block's worth, because that is what the ladder says";
@@ -27,20 +27,23 @@ export function bless_sidewalk_depth() {
   "the street wanted a few more people. It settled at three households, forty-five to a";
   "block: four tiles in seven, about one person in seven momentarily boxed in.";
   "So this number was doing what the paragraph above hoped it would, and then the street";
-  "changed under it. A building went from three squares across to five so that its doors";
-  "could stand apart and be counted, which took a block from nineteen tiles long to twenty-";
-  "nine while it went on holding the same forty-five people. Four deep then measured thirty";
-  "nine per cent occupied, which is the thin street the player had already asked to have the";
-  "crowd put back into.";
-  "Three deep puts those forty-five on eighty-seven tiles, fifty-two per cent, which is the";
-  "band that was settled on. The case made just above for four rather than three was";
-  "measured on a nineteen tile block and does not survive the block getting half as long";
-  "again; the REASONING survives it exactly, which is why this number moved and that did";
-  "not.";
-  "Not wider than it has to be. Twenty-nine long against three deep is close to ten to one";
-  "and reads as a line, and a line is what makes some people plainly walking one way and";
-  "some the other; wide enough to wander about on, it would read as a square with houses on";
-  "one side.";
-  let depth = 3;
+  "changed under it. A building went from three squares across to seven, so that every door";
+  "has wall on both sides of it and can be counted, and that took a block from nineteen";
+  "tiles long to thirty-nine while it went on holding the same forty-five people. Three deep";
+  "then measured thirty-eight per cent occupied, which is the thin street the player had";
+  "already asked to have the crowd put back into.";
+  "Two deep puts those forty-five on seventy-eight tiles, fifty-eight per cent, with about";
+  "one person in five momentarily boxed in. That is where the street stood when it was last";
+  "tuned by hand and the player said it was right: nineteen long by four deep, fifty-nine";
+  "per cent and one in six. So this is not a new setting, it is the same crowd at the same";
+  "closeness on a block twice as long.";
+  "The paragraph above ruling two deep out was measured on a block nineteen tiles long,";
+  "where two deep ran seventy-four to ninety-five per cent full. The block being twice as";
+  "long is what answers it, and not a change of mind: the depth on its own never meant";
+  "anything, the tiles per person did, and that is what was being read off it both times.";
+  "Not wider than it has to be. Thirty-nine long against two deep is twenty to one and reads";
+  "as a line, and a line is what makes some people plainly walking one way and some the";
+  "other; wide enough to wander about on, it would read as a square with houses on one side.";
+  let depth = 2;
   return depth;
 }

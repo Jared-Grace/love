@@ -1,3 +1,4 @@
+import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_start_indices } from "./app_replace_rule_set_start_indices.mjs";
 import { app_replace_rule_set_verify_goal_next } from "./app_replace_rule_set_verify_goal_next.mjs";
@@ -106,7 +107,9 @@ export async function app_replace_rule_set(context) {
   let div_refresh = property_get(r, "div_refresh");
   let goal_list_symbols = property_get(r, "goal_list_symbols");
   let div_below = property_get(r, "div_below");
-  let success = property_get(r, "success");
+  let success_held = {
+    success: property_get(r, "success"),
+  };
   let symbol_buttons = property_get(r, "symbol_buttons");
   let rule_buttons = property_get(r, "rule_buttons");
   let duration = property_get(r, "duration");
@@ -146,11 +149,12 @@ export async function app_replace_rule_set(context) {
     }
     rule_buttons = list_map_index(rules_used, each_rule);
     function rbs_each(rule_button, rule_index) {
+      let success2 = property_get(success_held, "success");
       let r3 = app_replace_rule_set_rbs_each(
         rule_button,
         rule_index,
         index_selected,
-        success,
+        success2,
       );
       return r3;
     }
@@ -206,18 +210,19 @@ export async function app_replace_rule_set(context) {
         let state = {
           start_indices,
           index_selected,
-          success,
+          success: property_get(success_held, "success"),
         };
         app_replace_rule_set_refresh_sb(symbol_button, index, state);
       }
     }
     symbol_buttons = list_map_index(start, symbols_mapper);
     ("no success yet?");
-    if (not(success)) {
+    let b2 = property_get(success_held, "success");
+    if (not(b2)) {
       ("goal satisfied?");
       let eq = json_equal(start, end);
       if (eq) {
-        success = true;
+        property_set(success_held, "success", true);
         list_map_property_invoke(rule_buttons, "refresh_rb");
         ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");
         let success_duration = ternary(resumed, 0, duration);
@@ -244,7 +249,7 @@ export async function app_replace_rule_set(context) {
         label_symbols,
       );
     }
-    if (success) {
+    if (property_get(success_held, "success")) {
       html_visibility_hidden(div_symbols);
     }
     let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
