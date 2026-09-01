@@ -41,7 +41,7 @@ export async function app_g_verify_view(
   let row_comps = property_get(r, "row_comps");
   let token_spans = property_get(r, "token_spans");
   let covered = property_get(r, "covered");
-  app_g_verify_view_passage_panel(
+  app_g_verify_view_passage_panel({
     container,
     serif,
     covered,
@@ -52,7 +52,7 @@ export async function app_g_verify_view(
     row_comps,
     order_comps,
     tokens,
-  );
+  });
   app_g_verify_view_line_lists({
     container,
     small_gap,
