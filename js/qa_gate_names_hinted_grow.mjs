@@ -7,6 +7,7 @@ import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_first_try } from "./list_first_try.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
 export function qa_gate_names_hinted_grow(hinted, declarators, calls) {
   "Grow a set of names backwards through the lines that filled them, until nothing new arrives. Changes the list it is handed.";
@@ -14,6 +15,7 @@ export function qa_gate_names_hinted_grow(hinted, declarators, calls) {
   "It goes round again after every addition rather than once down the list, because the lines are in the order somebody wrote them and a value can be built from a value declared below where the hint is written.";
   "A LINE THAT FILLS SOMETHING IS NOT ALWAYS A LINE THAT DECLARES IT. A sentence is often gathered rather than assigned - put into a list a few lines above, which is then joined and written at the hint - and a value that arrives that way was reaching the hint just as surely while being read here as never reaching it at all. That is how a gate handing its repair command to a shared runner came to be named for accusing it: the runner does put the name under a hint, by adding it to the list the hint is joined from.";
   "The thing being filled is looked for as the first thing handed over, because that is where every changing call in this repo puts it - a list added to, an object merged into, a value set on something. Whatever else the same call reads is then reaching wherever the first thing reaches.";
+  "Only a plain name counts as the thing being filled. Most calls hand over something else first - a piece of text, a number, a reaching-in - and asking one of those for a name it was never going to have stops the reading altogether rather than answering no.";
   "This can only ever call a name safe that was being called a leak, never the other way about, so a step it gets wrong loses a complaint and cannot invent one.";
   arguments_assert(arguments, 3);
   let growing = true;
@@ -44,6 +46,10 @@ export function qa_gate_names_hinted_grow(hinted, declarators, calls) {
       let args = property_get(call, "arguments");
       let filled = list_first_try(args);
       if (equal(filled, null)) {
+        continue;
+      }
+      let filled_type = property_get(filled, "type");
+      if (not_equal(filled_type, "Identifier")) {
         continue;
       }
       let filled_hinted_is = property_in_list(filled, "name", hinted);

@@ -1,12 +1,12 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_message_hand_made } from "./git_message_hand_made.mjs";
 import { equal } from "./equal.mjs";
-import { functions_names } from "./functions_names.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { not } from "./not.mjs";
 import { function_aliases } from "./function_aliases.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { functions_names } from "./functions_names.mjs";
+import { list_includes } from "./list_includes.mjs";
 export async function git_call_message(f_name, args) {
   "The message a commit carries is the command that produced it — the name that";
   "was run, then what it was run on. A log of these reads as a record of how the";
@@ -32,21 +32,27 @@ export async function git_call_message(f_name, args) {
   "key like any other, so spelled out it would become the name of whatever it reaches,";
   "and the one message the convention asks for where nothing named made the change";
   "would be the only message this ever rewrote.";
-  "A word that already names a live function is left alone too, which is the same";
-  "test the gate makes and is made here for the same reason: a name and a key are";
-  "allowed to be spelled the same, and the name is the one that is not re-pointable.";
+  "THE ORDER OF THE TWO READS IS THE WHOLE COST OF THIS. Whether a word names a live";
+  "function is a walk of every repo standing beside this one; whether it is a key is";
+  "one small table. So the table is asked first, and a word that is no key is finished";
+  "there - which is every commit a command makes. The walk is paid only by a word that";
+  "really was typed short, which is the case this exists for. Asked the other way round,";
+  "every commit in the repo would pay for that walk in order to be told nothing.";
+  "A word that is a key AND names a live function is left exactly as it came, which is";
+  "the same test the gate makes and is made here for the same reason: the name is the";
+  "half that cannot be re-pointed, so it is the half worth keeping.";
   arguments_assert(arguments, 2);
   let by_hand = git_message_hand_made();
   let spelled = f_name;
   let hand_made = equal(f_name, by_hand);
   if (not(hand_made)) {
-    let f_names = await functions_names();
-    let live = list_includes(f_names, f_name);
-    if (not(live)) {
-      let aliases = await function_aliases();
-      let target = property_or_null(aliases, f_name);
-      let free = null_is(target);
-      if (not(free)) {
+    let aliases = await function_aliases();
+    let target = property_or_null(aliases, f_name);
+    let free = null_is(target);
+    if (not(free)) {
+      let f_names = await functions_names();
+      let live = list_includes(f_names, f_name);
+      if (not(live)) {
         spelled = target;
       }
     }

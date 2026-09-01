@@ -89,15 +89,14 @@ export function app_reply_main_shortcuts(
     r_yt,
   ];
   function shortcut_each(s) {
-    let r = app_reply_main_shortcuts_shortcut_each(
-      s,
+    let r = app_reply_main_shortcuts_shortcut_each(s, {
       languages_chosen,
       languages,
       update,
       buttons_languages,
       buttons_responses,
       root,
-    );
+    });
     return r;
   }
   each(shortcuts, shortcut_each);
