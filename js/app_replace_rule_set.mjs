@@ -1,3 +1,4 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { app_replace_rule_set_dead_end_show } from "./app_replace_rule_set_dead_end_show.mjs";
 import { app_replace_rule_set_rules_draw } from "./app_replace_rule_set_rules_draw.mjs";
 import { app_replace_rule_set_solved_show } from "./app_replace_rule_set_solved_show.mjs";
@@ -13,7 +14,6 @@ import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbre
 import { html_clear } from "./html_clear.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { html_div } from "./html_div.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
 import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -143,8 +143,7 @@ export async function app_replace_rule_set(context) {
     let b = property_get(success_held, "success");
     if (not(b)) {
       ("goal satisfied?");
-      let left = property_get(start_held, "start");
-      let eq = json_equal(left, end);
+      let eq = property_equals_json(start_held, "start", end);
       if (eq) {
         property_set(success_held, "success", true);
         await app_replace_rule_set_solved_show({
