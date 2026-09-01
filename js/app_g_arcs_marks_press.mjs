@@ -9,29 +9,33 @@ import { html_text_set } from "./html_text_set.mjs";
 import { add } from "./add.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { app_g_arcs_mark_row_current_set } from "./app_g_arcs_mark_row_current_set.mjs";
+import { app_g_arcs_mark_current_set } from "./app_g_arcs_mark_current_set.mjs";
 import { app_g_arcs_marks_chip_current_set } from "./app_g_arcs_marks_chip_current_set.mjs";
 import { modulo } from "./modulo.mjs";
 import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
 import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { each_index } from "./each_index.mjs";
 import { not } from "./not.mjs";
 import { html_button } from "./html_button.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
 export function app_g_arcs_marks_press(parent, panel, marks) {
-  "A tour of the moved lines standing in the corner of the arcs bench: a press that carries the reader to the next change and counts it out, a list of every change to jump straight into, and a ring drawn around whichever row the reader has been carried to.";
+  "A tour of the moved lines standing in the corner of the arcs bench: a press that carries the reader to the next change and counts it out, a list of every change to jump straight into, a ring around both halves of whichever change is being read, and every change on the sheet answering to being tapped.";
   "IT EXISTS BECAUSE THE MARKS ARE RARE AND THE SHEET IS LONG. One arc read here carried fifty-one moved lines spread over hundreds of turns, so the only way to see what had been rewritten was to scroll the whole arc watching for a coloured bar - and the reader who scrolls past one is told nothing at all, because a missed mark looks exactly like a stretch of arc where nothing moved.";
   "IT IS FIXED TO THE CORNER RATHER THAN SET AT THE TOP OF THE SHEET. A press that scrolls away is gone from the second screen onwards, which is every screen where the scrolling was the problem in the first place.";
   "IT IS NOT DRAWN AT ALL WHERE NOTHING MOVED, because a press with nowhere to carry anybody does nothing when it is pressed - and a reader on an arc nobody has read before would press it once, get no answer, and stop believing it on the arcs where it works.";
   "IT COUNTS OUT LOUD, and that is the half that makes it worth trusting. Pressed silently it would say nothing about whether the tour had finished; saying which change this is out of how many means the reader knows they have come round to the beginning rather than working it out from the words.";
   "IT COMES ROUND RATHER THAN STOPPING AT THE LAST ONE. Reviewing is not one pass down the page - a fault noticed at the fortieth change is often about something seen at the third - and a press that stops dead at the end sends the reader back to scrolling for exactly the case a tour is most useful in.";
-  "THE ROWS ARE COLLECTED AS THEY ARE DRAWN AND NEVER LOOKED FOR AFTERWARDS. Whether a line has moved is known at the moment its row is made, so gathering them there costs nothing; hunting the finished page for rows that look marked would be reading a drawing back to find out what had been drawn into it.";
-  "IT CARRIES THE READER TO THE OLDER HALF OF A PAIR, which is the top of the two lines rather than the one that is live now. The pair is read downwards - what it said, then what it says - so landing on the second half would mean arriving in the middle of the comparison and having to look up.";
+  "THE CHANGES ARE COLLECTED AS THEY ARE DRAWN AND NEVER LOOKED FOR AFTERWARDS. Whether a line has moved is known at the moment its rows are made, so gathering them there costs nothing; hunting the finished page for rows that look marked would be reading a drawing back to find out what had been drawn into it.";
+  "IT CARRIES THE READER TO THE OLDER HALF OF A PAIR, which is the top of the two lines rather than the one that is live now. The pair is read downwards - what it said, then what it says - so centring the second half would push the first one up towards the edge of the panel.";
   "IT ARRIVES AT ONCE RATHER THAN GLIDING. The smooth form of the same scroll was tried first and measured doing nothing at all on this bench - the press was asked for a place, asked the browser for it, and the panel stayed exactly where it stood - so what shipped is the form that was watched to work. It is also the better of the two on its own merits here: two changes can be ten thousand pixels apart, and gliding that distance is seconds of blur between the only two things the reader wanted to see.";
   "THE WHOLE PRESS HAPPENS IN ONE BREATH, which is what keeps what it says and where it stands in agreement. Where the going was waited on, six quick presses finished in the wrong order and left the panel at the fiftieth change under a press reading the second - and the press is the only thing on screen claiming to know where the reader is, so a press that can lie about it is worse than no press.";
-  "THE ROW ARRIVED AT IS RINGED, because being carried somewhere is not the same as being told what to look at. A change is centred on a screen that holds several other rows, some of them moved as well, and until the arrival marked its own row the reader had to work out from the middle of the panel which line the press had meant.";
-  "EXACTLY ONE ROW IS EVER RINGED, and the old ring is taken off before the new one is put on rather than at the moment the reader leaves it. Two rings would say two places are the current one, which is worse than none - and a ring cleared on the way out cannot be cleared at all when the tour is joined by jumping.";
+  "BOTH HALVES OF THE CHANGE ARE RINGED, because being carried somewhere is not the same as being told what to look at, and what there is to look at is a comparison. A change is centred on a screen holding several other rows, some of them moved as well, and a ring around one line of the pair would point at the half that cannot be read on its own.";
+  "EXACTLY ONE CHANGE IS EVER RINGED, and the old ring is taken off before the new one is put on rather than at the moment the reader leaves it. Two rings would say two places are the current one, which is worse than none - and a ring cleared on the way out cannot be cleared at all when the tour is joined by jumping.";
+  "THE CHANGES ANSWER TO BEING TAPPED, so the tour can be joined from the page as well as from the corner. A reader scrolling normally meets a change with their eyes before the press has any idea they are there, and without this the only way to make it the current one was to walk the press round to it.";
+  "TAPPING A CHANGE DOES NOT MOVE THE PAGE. Everything else that selects one is done from the corner and has to fetch the reader, but a tap is proof they are already looking at it - and centring what somebody is reading pulls the words out from under their eyes to put them a few lines lower.";
   "THE LIST IS FOLDED AWAY UNTIL IT IS ASKED FOR. Fifty numbers standing open in the corner of a phone cover the words the tour exists to show, so the thing that is always there is the small pair of presses, and the numbers come out over the page only while somebody is choosing from them.";
-  "CHOOSING A NUMBER FOLDS THE LIST BACK, because choosing is the whole reason it was opened. Left standing it would be covering the very row it had just carried the reader to, and every jump would end with the reader closing the list before they could read anything.";
+  "CHOOSING A NUMBER FOLDS THE LIST BACK, because choosing is the whole reason it was opened. Left standing it would be covering the very change it had just carried the reader to, and every jump would end with the reader closing the list before they could read anything.";
   "THE LIST FOLLOWS THE TOUR AS WELL AS DRIVING IT. Ten plain next presses with the numbers open would otherwise leave the filled chip somewhere off the top of a list that had not moved, so the list is scrolled to whichever chip is current - but only while it is open, because a folded list has no size and asking a thing with no size where it sits gives a place that means nothing.";
   arguments_assert(arguments, 3);
   let none = list_empty_is(marks);
@@ -82,8 +86,8 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
     html_style_set(strip, "display", how);
     html_text_set(lister, word);
   }
-  function go(number) {
-    let row = marks[number];
+  function go(number, carry) {
+    let mark = marks[number];
     let shown = add(number, 1);
     let v = String(shown);
     let said = text_combine_multiple(["change ", v, " of ", counted]);
@@ -91,15 +95,18 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
     let current = property_get(at, "current");
     let ringed = not_equal(current, null);
     if (ringed) {
-      app_g_arcs_mark_row_current_set(marks[current], false);
+      app_g_arcs_mark_current_set(marks[current], false);
       app_g_arcs_marks_chip_current_set(chips[current], false);
     }
-    app_g_arcs_mark_row_current_set(row, true);
+    app_g_arcs_mark_current_set(mark, true);
     app_g_arcs_marks_chip_current_set(chips[number], true);
     property_set(at, "current", number);
     let after = modulo(shown, count);
     property_set(at, "number", after);
-    html_scroll_center_container_settled(row, panel);
+    if (carry) {
+      let was = property_get(mark, "was");
+      html_scroll_center_container_settled(was, panel);
+    }
     let open = property_get(at, "open");
     if (open) {
       html_scroll_center_container_settled(chips[number], strip);
@@ -107,9 +114,19 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   }
   function go_chosen(number) {
     strip_show(false);
-    go(number);
+    go(number, true);
   }
   let chips = app_g_arcs_marks_chips(strip, count, go_chosen);
+  function mark_listen(mark, number) {
+    function tapped() {
+      go(number, false);
+    }
+    let was = property_get(mark, "was");
+    let now = property_get(mark, "now");
+    html_on_click(was, tapped);
+    html_on_click(now, tapped);
+  }
+  each_index(marks, mark_listen);
   let bar = html_div(holder);
   html_style_assign(bar, {
     display: "flex",
@@ -123,7 +140,7 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   let lister = html_button(bar, "list", lister_press);
   function press_next() {
     let number = property_get(at, "number");
-    go(number);
+    go(number, true);
   }
   let press = html_button(bar, opening, press_next);
   let dressing = {
