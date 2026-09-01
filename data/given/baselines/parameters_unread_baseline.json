@@ -1,12 +1,6 @@
 {
  "known": [
   {
-   "name": "app_code_next",
-   "unread": [
-    "context"
-   ]
-  },
-  {
    "name": "js_list_declarations_visitors",
    "unread": [
     "lambda$v"
