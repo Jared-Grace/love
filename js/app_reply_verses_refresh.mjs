@@ -7,7 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { app_reply_verses_add } from "./app_reply_verses_add.mjs";
 import { each_async } from "./each_async.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_reply_verses_refresh(
+export async function app_reply_verses_refresh({
   verse_count,
   bible_texts,
   responses,
@@ -18,8 +18,8 @@ export async function app_reply_verses_refresh(
   buttons_refresh,
   visible_count_held,
   copy_refresh,
-) {
-  arguments_assert(arguments, 10);
+}) {
+  arguments_assert(arguments, 1);
   each([bible_texts, responses, responses_buttons], list_clear);
   let e = encouragement;
   if (equal(verse_count, 1)) {
