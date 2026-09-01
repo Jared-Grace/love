@@ -3,10 +3,10 @@ import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_arcs_field_runs } from "./app_g_arcs_field_runs.mjs";
-import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { text_runs_changed } from "./text_runs_changed.mjs";
+import { app_g_arcs_field_runs } from "./app_g_arcs_field_runs.mjs";
+import { list_add } from "./list_add.mjs";
 export function app_g_arcs_field_pair(
   parent,
   moved_fields,
@@ -26,7 +26,8 @@ export function app_g_arcs_field_pair(
   "WHICH CHARACTERS DIFFER IS WORKED OUT HERE AND NOT WHERE THE MOVE WAS FOUND, because the store answers what a line used to say and the page already holds what it says now. Nothing has to be sent for it, and the same two pieces of text can be compared a second way later without anything upstream being asked to agree.";
   "A LINE WITH NO PREVIOUS WORDING AT ALL SAYS SO IN WORDS rather than being compared with nothing. Compared with an empty line every character of it comes back marked, which is true and useless: a reader would see a wholly marked line and go looking for what it used to say, and it never said anything.";
   "THE WORDS THAT WENT OUT AND CAME IN ARE NO LONGER LISTED UNDERNEATH. They were there because the page could not point at a difference and could only name one, and a list of words is what naming a difference looks like when the marks are missing. With the characters themselves marked in place the list says the same thing later, less exactly, in a fainter type.";
-  "THE FIRST ROW OF A PAIR IS PUT ON THE LIST THE TOURING PRESS READS, and this is the only place that can put it there. Whether a field moved is answered here and nowhere above; the page as drawn says the same thing only in colour, so anything asking later would be reading marks back off a drawing instead of being told.";
+  "BOTH HALVES GO ONTO THE LIST THE TOURING PRESS READS, held together as one change rather than added as two rows. A change is a comparison and the tour selects a comparison, so anything downstream that has one half and wants the other would otherwise be guessing that the row after it is the row it wants.";
+  "THIS IS THE ONLY PLACE THAT CAN PUT A CHANGE ON THAT LIST. Whether a field moved is answered here and nowhere above; the page as drawn says the same thing only in colour, so anything asking later would be reading marks back off a drawing instead of being told.";
   "A LINE THAT NEVER MOVED IS ON NO LIST AT ALL, which is what keeps the tour the length of the changes rather than the length of the arc.";
   arguments_assert(arguments, 7);
   let moved = property_or_null(moved_fields, name);
@@ -37,23 +38,6 @@ export function app_g_arcs_field_pair(
   }
   let before = property_get(moved, "before");
   let unwritten = equal(before, null);
-  if (unwritten) {
-    let missing = [
-      {
-        text: "not written",
-        changed: false,
-      },
-    ];
-    let row = app_g_arcs_field_runs(
-      parent,
-      "was",
-      missing,
-      "aside",
-      voice_color,
-      true,
-    );
-    list_add(marks, row);
-  }
   let older = "";
   if (not(unwritten)) {
     older = before;
@@ -61,16 +45,36 @@ export function app_g_arcs_field_pair(
   let text_runs_changed_answer = text_runs_changed(older, value);
   let before_runs = property_get(text_runs_changed_answer, "before_runs");
   let after_runs = property_get(text_runs_changed_answer, "after_runs");
-  if (not(unwritten)) {
-    let row2 = app_g_arcs_field_runs(
-      parent,
-      "was",
-      before_runs,
-      shape,
-      voice_color,
-      true,
-    );
-    list_add(marks, row2);
+  let was_runs = before_runs;
+  let was_shape = shape;
+  if (unwritten) {
+    was_runs = [
+      {
+        text: "not written",
+        changed: false,
+      },
+    ];
+    was_shape = "aside";
   }
-  app_g_arcs_field_runs(parent, name, after_runs, shape, voice_color, false);
+  let was = app_g_arcs_field_runs(
+    parent,
+    "was",
+    was_runs,
+    was_shape,
+    voice_color,
+    true,
+  );
+  let now = app_g_arcs_field_runs(
+    parent,
+    name,
+    after_runs,
+    shape,
+    voice_color,
+    false,
+  );
+  let mark = {
+    was,
+    now,
+  };
+  list_add(marks, mark);
 }
