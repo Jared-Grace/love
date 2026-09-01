@@ -1,5 +1,5 @@
+import { app_replace_rule_set_rules_draw } from "./app_replace_rule_set_rules_draw.mjs";
 import { app_replace_rule_set_solved_show } from "./app_replace_rule_set_solved_show.mjs";
-import { app_replace_rule_set_each_rule } from "./app_replace_rule_set_each_rule.mjs";
 import { app_replace_rule_set_on_hint } from "./app_replace_rule_set_on_hint.mjs";
 import { app_replace_rule_set_symbols_mapper } from "./app_replace_rule_set_symbols_mapper.mjs";
 import { property_set } from "./property_set.mjs";
@@ -11,8 +11,6 @@ import { list_get } from "./list_get.mjs";
 import { app_replace_rule_set_abbreviations } from "./app_replace_rule_set_abbreviations.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { list_map_index } from "./list_map_index.mjs";
-import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
-import { each_index } from "./each_index.mjs";
 import { html_div } from "./html_div.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
@@ -110,35 +108,17 @@ export async function app_replace_rule_set(context) {
   let rules_used2 = property_get(rules_used_held, "rules_used");
   app_replace_rule_set_abbreviations(rules_used2, div_abbreviations);
   async function refresh() {
-    html_clear(div_rules_buttons);
-    refresh_count_increase();
-    function each_rule(rule, index) {
-      let r7 = app_replace_rule_set_each_rule(
-        rule,
-        index,
-        start_held,
-        start_indices_held,
-        button_rule_on_click_inner,
-        div_rules_buttons,
-      );
-      return r7;
-    }
-    let list = property_get(rules_used_held, "rules_used");
-    let value11 = list_map_index(list, each_rule);
-    property_set(rule_buttons_held, "rule_buttons", value11);
-    function rbs_each(rule_button, rule_index) {
-      let success2 = property_get(success_held, "success");
-      let index_selected2 = property_get(index_selected_held, "index_selected");
-      let r3 = app_replace_rule_set_rbs_each(
-        rule_button,
-        rule_index,
-        index_selected2,
-        success2,
-      );
-      return r3;
-    }
-    let list8 = property_get(rule_buttons_held, "rule_buttons");
-    each_index(list8, rbs_each);
+    app_replace_rule_set_rules_draw(
+      div_rules_buttons,
+      refresh_count_increase,
+      start_held,
+      start_indices_held,
+      button_rule_on_click_inner,
+      rules_used_held,
+      rule_buttons_held,
+      success_held,
+      index_selected_held,
+    );
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
@@ -160,8 +140,8 @@ export async function app_replace_rule_set(context) {
       });
       return r5;
     }
-    let list5 = property_get(start_held, "start");
-    let value10 = list_map_index(list5, symbols_mapper);
+    let list = property_get(start_held, "start");
+    let value10 = list_map_index(list, symbols_mapper);
     property_set(symbol_buttons_held, "symbol_buttons", value10);
     ("no success yet?");
     let b = property_get(success_held, "success");
