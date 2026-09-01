@@ -28,7 +28,6 @@ export async function lyric_video_document_draft(
     fn_name("lyric_video_lines_text"),
     " is asked, and it says why.");
   ("The song is left quiet at both ends. A song usually opens on a bar or two before anyone sings and closes on a chord after the last word, so the spread starts a little in and stops a little short rather than filling the whole length.");
-  ("The three lettering sizes are written out rather than left to the renderer, because a person changing one of them is the commonest thing to want next and a number in the document is the shortest way to change it.");
   let duration = await audio_file_duration(path_audio);
   let passage = await bible_usfm_version_passage_text(
     version,
