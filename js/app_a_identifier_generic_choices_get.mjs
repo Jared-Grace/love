@@ -6,7 +6,7 @@ import { app_a_identifier_generic_choices_get_lambda4 } from "./app_a_identifier
 import { app_a_identifier_generic_choices_get_lambda6 } from "./app_a_identifier_generic_choices_get_lambda6.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is_if } from "./js_node_type_is_if.mjs";
-export async function app_a_identifier_generic_choices_get(
+export async function app_a_identifier_generic_choices_get({
   o,
   choices,
   a,
@@ -14,8 +14,8 @@ export async function app_a_identifier_generic_choices_get(
   lines_multiple,
   c,
   replace,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r3 = await app_a_identifier_generic_choices_get_ast(
     a,
     o,
