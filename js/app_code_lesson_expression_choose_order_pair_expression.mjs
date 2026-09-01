@@ -44,7 +44,7 @@ export function app_code_lesson_expression_choose_order_pair_expression(
   let agree = equal(left_value, right_value);
   let wanted = equal(agree, want_true);
   let outer_symbol = ternary(wanted, same, different);
-  let tree = app_code_lesson_expression_choose_order_pair_expression_parts(
+  let tree = app_code_lesson_expression_choose_order_pair_expression_parts({
     first_number,
     left_symbol,
     second_number,
@@ -52,6 +52,6 @@ export function app_code_lesson_expression_choose_order_pair_expression(
     third_number,
     right_symbol,
     fourth_number,
-  );
+  });
   return tree;
 }
