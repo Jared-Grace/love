@@ -20,7 +20,7 @@ export function app_code_lesson_expression_round_generic_above_rounds(
   let whole_text = text_to(whole);
   let ordinary_low = list_get(ordinary_digits, 0);
   let ordinary_high = list_get(ordinary_digits, 1);
-  let r = app_code_lesson_expression_round_generic_above_term(
+  let r = app_code_lesson_expression_round_generic_above_term({
     ordinary_low,
     ordinary_high,
     whole_text,
@@ -29,7 +29,7 @@ export function app_code_lesson_expression_round_generic_above_rounds(
     rounds_up,
     root,
     metaphor_render,
-  );
+  });
   let term = property_get(r, "term");
   let define = property_get(r, "define");
   let other_whole = property_get(r, "other_whole");
