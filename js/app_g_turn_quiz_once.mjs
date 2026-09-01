@@ -5,7 +5,7 @@ import { app_g_button_wrong } from "./app_g_button_wrong.mjs";
 import { app_g_discern_prevent } from "./app_g_discern_prevent.mjs";
 import { invoke_once } from "./invoke_once.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_turn_quiz_once(
+export function app_g_turn_quiz_once({
   overlay,
   npc,
   concern,
@@ -14,7 +14,7 @@ export function app_g_turn_quiz_once(
   on_correct,
   discern,
   leave,
-) {
+}) {
   ("one need→Scripture quiz turn: the NPC voices `concern`, the player picks the on-topic `correct` {reference,text} over the off-topic `wrong`; correct → on_correct(); a wrong pick is blocked once the player prayed for discernment (",
     fn_name("app_g_discern_prevent"),
     " on the shared `discern`). answering is not the only way out — `leave` is offered as a third choice in the same box (the parting line), so ending the conversation is something you SAY here rather than a control below the box. shared by ",
