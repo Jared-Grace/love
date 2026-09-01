@@ -1,3 +1,4 @@
+import { urdu_text_repaired } from "./urdu_text_repaired.mjs";
 import { list_map_filter } from "./list_map_filter.mjs";
 import { ebible_chapter_verse_texts } from "./ebible_chapter_verse_texts.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
@@ -6,7 +7,6 @@ import { list_add_first } from "./list_add_first.mjs";
 import { ebible_verse_words_is } from "./ebible_verse_words_is.mjs";
 import { ebible_verses_before } from "./ebible_verses_before.mjs";
 import { property_get } from "./property_get.mjs";
-import { urdu_allah_to_god } from "./urdu_allah_to_god.mjs";
 import { whitespace_normalize } from "./whitespace_normalize.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   "$plain chapter_code";
