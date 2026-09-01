@@ -22,6 +22,13 @@ export function bless_place_people(rung) {
     let r = 1;
     return r;
   }
+  ("A BUILDING IS ASKED BY NAME rather than multiplied out, and it is the one rung that is. Everywhere else the number of places inside is also the count to multiply by; a building is numbered four doors wide and holds nine people behind however many of them it really has, so the product would say twelve.");
+  ("Everything above it goes back to multiplying, and that is the point of the building holding a fixed nine: the variety stops at this rung instead of travelling up the ladder.");
+  let house = equal(rung, "building");
+  if (house) {
+    let nine = bless_building_people();
+    return nine;
+  }
   let sizes = bless_place_sizes();
   let size = property_get(sizes, rung);
   let held = bless_place_people(inside);
