@@ -1,5 +1,5 @@
+import { qa_gate_call_hint_arguments_positional } from "./qa_gate_call_hint_arguments_positional.mjs";
 import { qa_gate_call_hinted_params } from "./qa_gate_call_hinted_params.mjs";
-import { list_size } from "./list_size.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { equal } from "./equal.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
@@ -26,23 +26,9 @@ export async function qa_gate_call_hint_arguments(call, remembered, depth) {
   }
   let hinted = await qa_gate_call_hinted_params(depth, called, remembered);
   let args = property_get(call, "arguments");
-  let left = list_size(args);
-  let right = list_size(params);
-  let aligned_is = equal(left, right);
-  if (aligned_is) {
-    let index = 0;
-    for (let param of params) {
-      let arg = args[index];
-      index = index + 1;
-      let hinting_is = list_includes(hinted, param);
-      if (equal(hinting_is, false)) {
-        continue;
-      }
-      list_add(hint_arguments, arg);
-    }
-  }
-  for (let arg2 of args) {
-    let properties = js_list_type_nodes(arg2, "Property");
+  qa_gate_call_hint_arguments_positional(args, params, hinted, hint_arguments);
+  for (let arg of args) {
+    let properties = js_list_type_nodes(arg, "Property");
     for (let property_node of properties) {
       let key_node = property_get(property_node, "key");
       let key_named = js_identifier_name_try(key_node);
