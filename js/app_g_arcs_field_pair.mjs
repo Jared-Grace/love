@@ -7,7 +7,7 @@ import { not } from "./not.mjs";
 import { text_runs_changed } from "./text_runs_changed.mjs";
 import { app_g_arcs_field_runs } from "./app_g_arcs_field_runs.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_g_arcs_field_pair(
+export function app_g_arcs_field_pair({
   parent,
   moved_fields,
   name,
@@ -15,7 +15,7 @@ export function app_g_arcs_field_pair(
   shape,
   voice_color,
   marks,
-) {
+}) {
   "$plain name";
   "$plain value";
   "$plain shape";
@@ -29,7 +29,7 @@ export function app_g_arcs_field_pair(
   "BOTH HALVES GO ONTO THE LIST THE TOURING PRESS READS, held together as one change rather than added as two rows. A change is a comparison and the tour selects a comparison, so anything downstream that has one half and wants the other would otherwise be guessing that the row after it is the row it wants.";
   "THIS IS THE ONLY PLACE THAT CAN PUT A CHANGE ON THAT LIST. Whether a field moved is answered here and nowhere above; the page as drawn says the same thing only in colour, so anything asking later would be reading marks back off a drawing instead of being told.";
   "A LINE THAT NEVER MOVED IS ON NO LIST AT ALL, which is what keeps the tour the length of the changes rather than the length of the arc.";
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 1);
   let moved = property_or_null(moved_fields, name);
   let still = equal(moved, null);
   if (still) {
