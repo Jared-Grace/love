@@ -501,7 +501,7 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "Deep cobalt blue glass behind everything, and standing on it one plain upright cross of brown wood reaching from low in the window almost to the head of the arch, and growing over that cross one grapevine filling the whole window, its slender brown stems winding and branching across the glass in long curves with small curled tendrils springing from them all along their length, broad emerald green vine leaves and thick clusters of deep crimson grapes growing off those stems all over the window, the vine reaching almost to the white border on every side",
+        "Deep cobalt blue glass behind everything above the lower of the two lines that run across the window, and below that line one flat sheet of violet glass running the whole way from one side to the other, and standing on that one plain upright cross of brown wood reaching from low in the window almost to the head of the arch, and growing over that cross one grapevine filling the whole window, its slender brown stems winding and branching across the glass in long curves with small curled tendrils springing from them all along their length, broad emerald green vine leaves and thick clusters of deep crimson grapes growing off those stems all over the window, the vine reaching almost to the white border on every side",
       symbol_ref: "John 15:1",
       same_as: 35,
     },
