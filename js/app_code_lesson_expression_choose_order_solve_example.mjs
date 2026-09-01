@@ -47,13 +47,13 @@ export function app_code_lesson_expression_choose_order_solve_example(
     await html_height_change_animate(head, asking, finished_say, duration);
   }
   ("the pressing is the quiz next door's pressing, out of the one place both of them read - all this page does differently is write the asking on the card instead of over a row of answers, and count nothing against a wrong press");
-  app_code_expression_choose_order_ask(
+  app_code_expression_choose_order_ask({
     parent,
     tree,
-    ask,
-    finished_grow,
+    say: ask,
+    finished: finished_grow,
     decoys_get,
-    noop,
-    noop,
-  );
+    on_wrong: noop,
+    on_success: noop,
+  });
 }

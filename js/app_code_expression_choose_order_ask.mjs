@@ -9,7 +9,7 @@ import { app_code_label_solve_next } from "./app_code_label_solve_next.mjs";
 import { app_code_label_solve_choice } from "./app_code_label_solve_choice.mjs";
 import { app_code_expression_value_choose_await } from "./app_code_expression_value_choose_await.mjs";
 import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
-export function app_code_expression_choose_order_ask(
+export function app_code_expression_choose_order_ask({
   parent,
   tree,
   say,
@@ -17,8 +17,8 @@ export function app_code_expression_choose_order_ask(
   decoys_get,
   on_wrong,
   on_success,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   ("press the operators of one line in the order they solve in, with what to do next said out loud after every press - the whole of it, for the lesson's front page and for its quiz alike");
   ("The two screens are one screen with one thing counted. Where the words are put is the only thing they differ by, so it is handed in as a place to say things rather than written twice: the front page writes them on the card, the quiz writes them over its answers. Everything else - the line, the values under it, which of the three askings is due, what a wrong press does - was written out once here.");
   ("The line and the values stand in two places set aside before either is drawn, so the buttons are always UNDER the line - built as they are needed they would land wherever the line had left off.");
