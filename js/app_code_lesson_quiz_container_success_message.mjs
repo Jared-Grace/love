@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_no_more } from "./app_code_lesson_quiz_no_more.mjs";
 import { app_code_lesson_quiz_last_lesson_end } from "./app_code_lesson_quiz_last_lesson_end.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_code_lesson_quiz_container_success_message(
+export function app_code_lesson_quiz_container_success_message({
   info,
   qa,
   container_blue_light,
@@ -11,8 +11,8 @@ export function app_code_lesson_quiz_container_success_message(
   context,
   quizzes,
   refresh,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let r4 = app_code_lesson_quiz_no_more(
     info,
     qa,
