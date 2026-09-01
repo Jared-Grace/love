@@ -25,6 +25,10 @@ export function bless_homes_ensure(people, blocks) {
   ("pavement shares its one list rather than a copy each, because it is one pavement - and");
   ("it is theirs rather than any pavement, so the crowd a prayer names is the crowd stood");
   ("in front of the player rather than one scattered over the whole world.");
+  ("The doorstep is found in two steps, because a door belongs to a family and a family sits");
+  ("inside a building. The building says which of the block's five sets of doorsteps, and the");
+  ("family says which of that building's three. Both are the remainder of a division already");
+  ("made, so neither can drift from the way addresses were handed out.");
   ("A resident's home is a list of one, their doorstep, so that both kinds answer the same");
   ("question about being near enough to home and the walking never has to ask which kind it");
   ("is moving.");
@@ -42,7 +46,10 @@ export function bless_homes_ensure(people, blocks) {
     }
     let building = property_get(places, "building");
     let within = bless_place_within("building", building);
-    let door = property_list_get(block, "doors", within);
+    let doorsteps = property_list_get(block, "doors", within);
+    let household = property_get(places, "household");
+    let within_household = bless_place_within("household", household);
+    let door = list_get(doorsteps, within_household);
     property_set(person, "home", [door]);
     property_set(person, "roam", roam_resident);
   }
