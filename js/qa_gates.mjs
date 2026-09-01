@@ -1,3 +1,4 @@
+import { red_proofs_gate_run } from "./red_proofs_gate_run.mjs";
 import { bible_glyph_chapters_numbered_names_gate_run } from "./bible_glyph_chapters_numbered_names_gate_run.mjs";
 import { baseline_growth_guarded_is_cases_gate_run } from "./baseline_growth_guarded_is_cases_gate_run.mjs";
 import { functions_parameters_gate_run } from "./functions_parameters_gate_run.mjs";
@@ -943,6 +944,7 @@ export function qa_gates() {
     functions_parameters_gate_run,
     baseline_growth_guarded_is_cases_gate_run,
     bible_glyph_chapters_numbered_names_gate_run,
+    red_proofs_gate_run,
   ];
   return gates;
 }
