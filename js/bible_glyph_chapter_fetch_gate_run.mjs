@@ -3,9 +3,10 @@ import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
 import { list_size } from "./list_size.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
+import { catch_message_async } from "./catch_message_async.mjs";
 import { bible_glyph_chapter_fetch } from "./bible_glyph_chapter_fetch.mjs";
-import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -21,6 +22,7 @@ export async function bible_glyph_chapter_fetch_gate_run() {
   ("It walks the light list rather than the chapters themselves, because the light list is what every page here believes. A chapter that exists and is missing from that list is a different fault with its own gate beside this one, and this gate would only report it twice.");
   ("EVERY MISMATCH IS COLLECTED BEFORE ANYTHING IS SAID, rather than stopping at the first. A wrong address usually arrives with its opposite - two codes swapped - and stopping at the first shows one half of a pair, which reads as a single wrong line and gets repaired into a worse state.");
   ("A CHAPTER THAT REFUSES IS COLLECTED TOO, AND THAT IS WHAT MAKES THE PROMISE ABOVE TRUE. The fetching does not answer with nothing when a code has no address - it refuses, and a refusal let out of this walk ends the walk. So the gate that says it collects everything was stopping at the first fault after all, for the commonest fault there is: measured on the first of September 2026, one missing address ended the walk on the first chapter of the list and the other thirty three were never asked.");
+  ("THE REFUSAL IS CARRIED BACK IN ITS OWN WORDS RATHER THAN COUNTED. A catch that keeps only the fact of a refusal turns every reason into the same reason, and this walk would then report a chapter file that throws halfway through reading itself as a chapter nobody wrote an address for - a repair aimed at the wrong place, told with confidence. So what the fetching said is written down beside the code, and this gate claims only that the chapter would not come.");
   ("THE OFFENDERS ARE WRITTEN UNDER list AND EACH ONE NAMES THE FUNCTION AT FAULT, which is not decoration. A red gate whose complaint names nobody cannot be shown to be about code some app does not carry, so it holds EVERY app out of a deployment. This gate was one of two doing exactly that. Naming ",
     fn_name("bible_glyph_chapter_fetch"),
     " holds out the apps that actually reach it and lets every other app past, which is the true answer rather than the safe one.");
@@ -38,16 +40,17 @@ export async function bible_glyph_chapter_fetch_gate_run() {
       let got = await bible_glyph_chapter_fetch(chapter_code);
       return got;
     }
-    let stored = await catch_null_async(chapter_sent_for);
-    let refused = null_is(stored);
-    if (refused) {
+    let answered = await catch_message_async(chapter_sent_for);
+    let came = property_get(answered, "ok");
+    if (not(came)) {
       list_add(wrong, {
         fn: f_name,
         asked_for: chapter_code,
-        refused: true,
+        refused: property_get(answered, "message"),
       });
       continue;
     }
+    let stored = property_get(answered, "value");
     let same = equal(stored.chapter_code, chapter_code);
     if (same) {
       continue;
@@ -62,9 +65,9 @@ export async function bible_glyph_chapter_fetch_gate_run() {
   assert_json(clean, {
     list: wrong,
     hint: text_combine_multiple([
-      "a chapter code in ",
+      "a chapter named in the light list would not come back as itself from ",
       f_name,
-      " is either wired to another chapter's file or has no address at all. A line saying refused is a code with nothing behind it - write the address. A line saying came_back is a code wired to that other chapter's file, so that chapter shows the wrong Scripture under the right heading - correct the address under the asked_for code",
+      ". A line with a refused on it did not come at all, and the words there are the fetching's own reason - usually a code with no address written for it, sometimes something wrong inside the chapter file. A line with a came_back on it arrived calling itself another chapter, so that code is wired to the wrong file and shows the wrong Scripture under the right heading",
     ]),
   });
   let r = {
