@@ -8,7 +8,7 @@ import { list_shuffle } from "./list_shuffle.mjs";
 import { list_swap_first } from "./list_swap_first.mjs";
 import { list_take } from "./list_take.mjs";
 import { property_set } from "./property_set.mjs";
-export async function app_replace_rule_set_on_hint(
+export async function app_replace_rule_set_on_hint({
   start_held,
   rules_parsed,
   end,
@@ -17,8 +17,8 @@ export async function app_replace_rule_set_on_hint(
   start_indices_held,
   refresh,
   button_rule_on_click_inner,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let start = property_get(start_held, "start");
   let second = app_replace_rule_set_verify_goal_next(rules_parsed, start, end);
   let rule_next = property_get(second, "rule");

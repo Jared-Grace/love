@@ -60,7 +60,7 @@ export async function app_replace_rule_set(context) {
   let goals_count = property_get(r4, "goals_count");
   let goals = property_get(r4, "goals");
   async function on_hint() {
-    let r6 = await app_replace_rule_set_on_hint(
+    let r6 = await app_replace_rule_set_on_hint({
       start_held,
       rules_parsed,
       end,
@@ -69,7 +69,7 @@ export async function app_replace_rule_set(context) {
       start_indices_held,
       refresh,
       button_rule_on_click_inner,
-    );
+    });
     return r6;
   }
   let r = app_replace_rule_set_label_rules({
