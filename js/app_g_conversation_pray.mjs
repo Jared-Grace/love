@@ -23,7 +23,7 @@ export async function app_g_conversation_pray({
   }
   function on_prayed() {
     prayed.done = true;
-    app_g_conversation_render(
+    app_g_conversation_render({
       overlay,
       remaining,
       render_openers,
@@ -33,7 +33,7 @@ export async function app_g_conversation_pray({
       converts,
       npc,
       goodbye,
-    );
+    });
   }
   app_g_pray_turn(some_prayers, on_part, on_prayed);
 }
