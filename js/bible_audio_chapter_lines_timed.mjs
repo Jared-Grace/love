@@ -1,9 +1,7 @@
+import { bible_audio_chunk_path } from "./bible_audio_chunk_path.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chunk_texts } from "./bible_audio_chunk_texts.mjs";
-import { bible_audio_folder } from "./bible_audio_folder.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { path_join } from "./path_join.mjs";
 import { audio_file_duration } from "./audio_file_duration.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { add } from "./add.mjs";
@@ -23,12 +21,9 @@ export async function bible_audio_chapter_lines_timed(
   "★ THE MARKS ARE ADDED UP UNROUNDED AND ROUNDED ONLY AS THEY ARE WRITTEN DOWN, so that a chapter of a hundred pieces does not drift half a second away from its own sound by the end. Rounding the running total each time would fold every piece's error into every mark after it.";
   arguments_assert(arguments, 2);
   let chunks = await bible_audio_chunk_texts(bible_folder, chapter_code);
-  let folder = bible_audio_folder(bible_folder, chapter_code);
   async function chunk_seconds(chunk) {
     let n = property_get(chunk, "chunk");
-    let v = String(n);
-    let name = text_combine_multiple([v, ".mp3"]);
-    let p = path_join([folder, name]);
+    let p = bible_audio_chunk_path(bible_folder, chapter_code, n);
     let seconds = await audio_file_duration(p);
     return seconds;
   }

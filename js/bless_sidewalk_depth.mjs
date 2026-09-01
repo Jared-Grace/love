@@ -41,6 +41,6 @@ export function bless_sidewalk_depth() {
   "and reads as a line, and a line is what makes some people plainly walking one way and";
   "some the other; wide enough to wander about on, it would read as a square with houses on";
   "one side.";
-  let depth = 4;
+  let depth = 3;
   return depth;
 }
