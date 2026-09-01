@@ -5,7 +5,7 @@ import { file_overwrite } from "./file_overwrite.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function videos_join(paths_videos, path_output) {
+export async function media_join(paths_videos, path_output) {
   async function lambda3(temp_path) {
     function lambda4(item) {
       let v = text_combine_multiple(["file '", item, "'"]);
