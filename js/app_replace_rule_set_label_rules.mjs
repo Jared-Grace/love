@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_replace_rule_set_rules_used_all } from "./app_replace_rule_set_rules_used_all.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_replace_rule_set_label_rules(
+export function app_replace_rule_set_label_rules({
   root,
   on_hint,
   context,
@@ -9,8 +9,8 @@ export function app_replace_rule_set_label_rules(
   goals_count,
   end,
   rule_set_name,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_replace_rule_set_rules_used_all({
     root,
     on_hint,
