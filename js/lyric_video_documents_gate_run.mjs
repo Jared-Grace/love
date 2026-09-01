@@ -21,7 +21,6 @@ export async function lyric_video_documents_gate_run() {
   ("A LINE WITH NEITHER MOMENT IS NOT A FAULT, BECAUSE IT IS THE HONEST RECORD OF A LINE NOBODY HAS HEARD YET. Somebody times half a psalm, stops, and comes back tomorrow; the untimed half has to be able to sit in the file overnight. What is a fault is a line holding one moment and not the other, which no route through the code can produce and so means a document was edited by hand into a state that renders as a card with no end or no beginning.");
   ("The check is against nothing rather than against a written-down number of known offenders, because there is no reading under which a line sung before the line above it is acceptable. A ratchet is for a fault being paid down; this one is a fault being kept out.");
   ("★ HOW MUCH WAS READ TRAVELS OUT WITH THE VERDICT, because finding no fault and reading no file are the same green word otherwise. The folder is named by one function and the documents in it are picked out by their ending, so a rename of either would leave this sweeping an empty list and saying every timing document is in order. Both numbers are carried: the documents fall to nothing if the folder moves, and the lines fall to nothing if the documents are still found but what is inside them is reached under some other name.");
-  ("The answer is bound to a name of its own rather than to the usual one, because the two nested functions below already bind that one, and the reader that looks for what a gate hands back steps from the returned name to the first line in the whole function binding it - which would be the empty list inside the innermost of them. Side-by-side scopes may reuse a name and nothing goes red, so this is not a fault being worked around; it is a name chosen to be unambiguous where an ambiguous one would silently answer for something else.");
   let folder = data_given_lyric_videos_folder();
   let paths = await folder_read_paths_async(folder);
   let paths_json = list_filter_ends_with(paths, ".json");
@@ -113,9 +112,9 @@ export async function lyric_video_documents_gate_run() {
   list_empty_is_assert_json(faults_all, {
     hint: "a lyric timing document has lines out of the order they are sung; open it on the timing desk and tap the named line again, or clear both of its moments if it was never heard - never leave one moment set and the other missing",
   });
-  let walked = {
+  let r = {
     documents,
     lines_read,
   };
-  return walked;
+  return r;
 }
