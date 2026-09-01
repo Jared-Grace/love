@@ -67,10 +67,9 @@ export async function lyric_video_documents_gate_run() {
             },
           ]
         : [];
-      let starts_above = lines
-        .slice(0, index)
-        .map(line_start)
-        .filter(number_is);
+      let above = lines.slice(0, index);
+      let starts_above_all = above.map(line_start);
+      let starts_above = list_filter(starts_above_all, number_is);
       function later_than_this(start_above) {
         let later = greater_than(start_above, start);
         return later;
