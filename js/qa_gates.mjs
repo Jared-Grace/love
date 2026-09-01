@@ -1,3 +1,4 @@
+import { js_statement_move_before_refusals_cases_gate_run } from "./js_statement_move_before_refusals_cases_gate_run.mjs";
 import { js_statements_function_declared_names_direct_cases_gate_run } from "./js_statements_function_declared_names_direct_cases_gate_run.mjs";
 import { red_proofs_gate_run } from "./red_proofs_gate_run.mjs";
 import { bible_glyph_chapters_numbered_names_gate_run } from "./bible_glyph_chapters_numbered_names_gate_run.mjs";
@@ -947,6 +948,7 @@ export function qa_gates() {
     bible_glyph_chapters_numbered_names_gate_run,
     red_proofs_gate_run,
     js_statements_function_declared_names_direct_cases_gate_run,
+    js_statement_move_before_refusals_cases_gate_run,
   ];
   return gates;
 }
