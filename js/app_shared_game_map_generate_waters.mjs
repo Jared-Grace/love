@@ -1,9 +1,9 @@
+import { multiply_floor } from "./multiply_floor.mjs";
 import { app_shared_game_map_square_flood } from "./app_shared_game_map_square_flood.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_get } from "./list_get.mjs";
 import { multiply } from "./multiply.mjs";
-import { floor } from "./floor.mjs";
 import { g_water } from "./g_water.mjs";
 import { subtract } from "./subtract.mjs";
 import { g_coordinates } from "./g_coordinates.mjs";
@@ -38,8 +38,7 @@ export function app_shared_game_map_generate_waters(rows) {
   let row_first = list_get(rows, 0);
   let width = list_size(row_first);
   let total = multiply(height, width);
-  let p = multiply(total, 0.3);
-  let water_count = floor(p);
+  let water_count = multiply_floor(total, 0.3);
   let item_water = g_water();
   let taken = new Set();
   let edge = [];
