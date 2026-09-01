@@ -7,6 +7,7 @@ export function js_statement_emptied_region_here_or_null(
   emptier_names,
   function_node_types,
 ) {
+  "The name of the part of the screen one statement empties, counting an emptying wrapped in a plain block as happening on the line that block stands on, or nothing when it empties none.";
   arguments_assert(arguments, 3);
   let plain = js_statement_emptied_region_or_null(statement, emptier_names);
   let plain_is = equal_not(plain, null);

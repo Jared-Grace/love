@@ -4,7 +4,7 @@ import { list_map_property_invoke } from "./list_map_property_invoke.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_replace_rule_set_success } from "./app_replace_rule_set_success.mjs";
 import { app_replace_rule_set_proof_show } from "./app_replace_rule_set_proof_show.mjs";
-export async function app_replace_rule_set_solved_show(
+export async function app_replace_rule_set_solved_show({
   rule_buttons_held,
   resumed,
   duration,
@@ -18,8 +18,8 @@ export async function app_replace_rule_set_solved_show(
   goals,
   history,
   div_proof,
-) {
-  arguments_assert(arguments, 13);
+}) {
+  arguments_assert(arguments, 1);
   let list = property_get(rule_buttons_held, "rule_buttons");
   list_map_property_invoke(list, "refresh_rb");
   ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");

@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 export function js_node_stopping_found_is(node, decide, stop_types) {
+  "Whether anywhere under one node there stands something the reader handed in says yes to, never looking inside a node of the kinds it was told to stop at.";
   arguments_assert(arguments, 3);
   if (equal(node, null)) {
     return false;
