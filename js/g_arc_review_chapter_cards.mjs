@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_reviewed_chapter } from "./g_arc_reviewed_chapter.mjs";
+import { g_arc_previous_chapter } from "./g_arc_previous_chapter.mjs";
 import { g_arc_backup_chapter } from "./g_arc_backup_chapter.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
 import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
@@ -19,7 +20,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
   "the code is a chapter's name, like 1JN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "IT IS ONE ANSWER BECAUSE A SCREEN ASKING THREE TIMES CAN BE ANSWERED ABOUT THREE DIFFERENT MOMENTS. The arcs, the passages they were written from and the notes standing against them are read here one after another with nothing in between; asked separately across a wire, a note filed between two of the questions arrives attached to a turn the reader is no longer looking at.";
   "THE OLDER COPIES ARE READ IN THE SAME BREATH AS THE ARC ITSELF, and that matters more here than for any of the others. They are compared against each other, so a gap between the reads is a gap in which the live arc can be rewritten - and the answer would then show a difference against a version nobody ever saw beside a version nobody has read.";
-  "THERE ARE TWO OLDER COPIES AND THE PERSON'S OWN READING WINS, which is why both are fetched before anybody is walked. The reading is the arc the reviewer actually judged; the backup is the stand-in for arcs written before there was any way to mark one read, and without it the first pass over a chapter shows nothing moved on arcs that have been rewritten line by line.";
+  "THERE ARE THREE OLDER COPIES AND THE PERSON'S OWN READING WINS, which is why all of them are fetched before anybody is walked. The reading is the arc the reviewer actually judged; the copy a revision replaced is the arc as it stood just before the notes were answered; the backup is the stand-in for arcs written before there was any way to mark one read, and without it the first pass over a chapter shows nothing moved on arcs that have been rewritten line by line. Which of the three is used is not decided here - they are handed over in one place so that the deciding is done in one place.";
   "IT READS THE STORE EVERY TIME AND CARRIES NOTHING. That is the whole reason for it: a review page built once from a file goes stale the moment the arc is revised, and a stale page is unreadable as stale - the reviewer sees a fault, reports it, and it was mended a day ago. Asked over the seam, every drawing of the page is answered by a reader started after the last write.";
   "NOTHING WRITTEN YET IS AN EMPTY LIST OF PEOPLE AND NOT A FAILURE, the same as it is for the store underneath.";
   "THE CAST IS DEALT ONCE FOR THE WHOLE CHAPTER, and that is the difference between a page and a page that never arrives. Both of the things this needs about a person - what they are called and whether they are a man or a woman - come off one deal, and a deal counts every sermon that has been written. Asked per person it was six deals for a chapter of three people, and the page died on a phone with three aborted requests and no partial drawing; asked per chapter it was still two, because the naming used to deal for itself. It is one now however many people the chapter holds.";
@@ -27,6 +28,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
   arguments_assert(arguments, 1);
   let arcs = await g_arc_written_chapter(chapter_code);
   let reviewed = await g_arc_reviewed_chapter(chapter_code);
+  let previous = await g_arc_previous_chapter(chapter_code);
   let backup = await g_arc_backup_chapter(chapter_code);
   let passages = await g_sermon_chapter_passages_chaptered(chapter_code);
   let notes = await g_arc_feedback_chapter(chapter_code);
@@ -38,7 +40,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
     let wanted = number_from_text(index);
     let nickname = list_get(nicknames, wanted);
     let gender = list_get_property(dealt, wanted, "gender");
-    let base = g_arc_review_base(reviewed, backup, wanted);
+    let base = g_arc_review_base(reviewed, previous, backup, wanted);
     let person = g_arc_review_person_cards(
       entry,
       passages,
