@@ -3,6 +3,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function js_statement_emptied_region_or_null(statement, emptier_names) {
+  "The name of the part of the screen one statement empties, or nothing when the statement empties nothing.";
   arguments_assert(arguments, 2);
   let expression_is = equal(statement.type, "ExpressionStatement");
   if (not(expression_is)) {

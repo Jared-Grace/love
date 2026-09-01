@@ -171,7 +171,7 @@ export async function app_replace_rule_set(context) {
       let eq = json_equal(left, end);
       if (eq) {
         property_set(success_held, "success", true);
-        await app_replace_rule_set_solved_show(
+        await app_replace_rule_set_solved_show({
           rule_buttons_held,
           resumed,
           duration,
@@ -185,7 +185,7 @@ export async function app_replace_rule_set(context) {
           goals,
           history,
           div_proof,
-        );
+        });
       }
       let value2 = property_get(index_selected_held, "index_selected");
       let has_selection = null_not_is(value2);
