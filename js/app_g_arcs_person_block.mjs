@@ -9,7 +9,7 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_arcs_read_row } from "./app_g_arcs_read_row.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
-import { app_g_arcs_field_was } from "./app_g_arcs_field_was.mjs";
+import { app_g_arcs_field_moved } from "./app_g_arcs_field_moved.mjs";
 import { each } from "./each.mjs";
 import { app_shared_note_pills } from "./app_shared_note_pills.mjs";
 import { g_arc_answer_field_names } from "./g_arc_answer_field_names.mjs";
@@ -69,7 +69,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
     let value = property_get(one, "value");
     let shape = property_get(one, "shape");
     app_g_arcs_field_shaped(block, name, value, shape, voice_color);
-    app_g_arcs_field_was(block, person_moved, name, voice_color);
+    app_g_arcs_field_moved(block, person_moved, name, voice_color);
   }
   each(fields, field_line);
   app_shared_note_pills(block, person_notes);

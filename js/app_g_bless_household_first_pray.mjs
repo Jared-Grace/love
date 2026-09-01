@@ -9,8 +9,8 @@ export function app_g_bless_household_first_pray(r) {
   ("Says the one prayer that finishes the first household off, when the address asked for");
   ("that, and does nothing at all otherwise.");
   ("Which person it is can be worked out rather than looked up: the first household's");
-  ("members are arithmetic, two of them were written into the record as the street was");
-  ("built, and the one left is the last of the three. So this and the head start name the");
+  ("members are arithmetic, all but one were written into the record as the street was");
+  ("built, and the one left is the last of them. So this and the head start name the");
   ("same person without either of them being told who it is.");
   ("It prays rather than taps, so the player's cone is not consulted. They are set down");
   ("outside the middle of that building and may well be facing the wrong way; a tap would");
