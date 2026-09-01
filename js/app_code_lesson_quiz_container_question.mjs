@@ -14,7 +14,7 @@ export function app_code_lesson_quiz_container_question({
   refresh,
 }) {
   arguments_assert(arguments, 1);
-  let r = app_code_lesson_quiz_answer_label(
+  let r = app_code_lesson_quiz_answer_label({
     info,
     qa,
     container_blue_light,
@@ -23,7 +23,7 @@ export function app_code_lesson_quiz_container_question({
     context,
     quizzes,
     refresh,
-  );
+  });
   let r4 = app_code_lesson_quiz_on_question(r);
   let on_question = property_get(r4, "on_question");
   let on_answer = property_get(r4, "on_answer");
