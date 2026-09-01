@@ -23,15 +23,15 @@ export function html_buttons_biblehub_verse_group({
     ") — appends a right-aligned <label>: cell and a left-aligned cell of one bare verse-number button per verse, so the verse numbers of all three link-kinds line up in a column");
   let multi = greater_than_equal(verse_list.length, 2);
   if (not(multi)) {
-    html_button_biblehub_open(
+    html_button_biblehub_open({
       parent,
       book_name,
       chapter_name,
-      verse_list[0],
-      label,
+      verse_number: verse_list[0],
+      button_text: label,
       folder,
       ending,
-    );
+    });
     return;
   }
   let caption = html_span_text(parent, label + ":");
@@ -43,15 +43,15 @@ export function html_buttons_biblehub_verse_group({
   html_style_gap(buttons_cell, gap);
   html_style_justify_self(buttons_cell, "start");
   function verse_button(verse_number) {
-    html_button_biblehub_open(
-      buttons_cell,
+    html_button_biblehub_open({
+      parent: buttons_cell,
       book_name,
       chapter_name,
       verse_number,
-      verse_number,
+      button_text: verse_number,
       folder,
       ending,
-    );
+    });
   }
   verse_list.forEach(verse_button);
 }
