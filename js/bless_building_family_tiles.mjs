@@ -1,6 +1,6 @@
+import { list_get_property } from "./list_get_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_get } from "./list_get.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { subtract } from "./subtract.mjs";
@@ -32,8 +32,7 @@ export function bless_building_family_tiles(building, index) {
   ("draw a lit stripe along the bottom of a house rather than a lit part of a house.");
   let tiles = property_get(building, "tiles");
   let doorways = property_get(building, "doorways");
-  let door = list_get(doorways, index);
-  let x_door = property_get(door, "x");
+  let x_door = list_get_property(doorways, index, "x");
   let shape = bless_building_shape();
   let slab = property_get(shape, "family_width");
   let reach = divide_floor(slab, 2);
