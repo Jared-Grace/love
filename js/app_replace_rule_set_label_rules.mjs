@@ -11,7 +11,7 @@ export function app_replace_rule_set_label_rules(
   rule_set_name,
 ) {
   arguments_assert(arguments, 7);
-  let r = app_replace_rule_set_rules_used_all(
+  let r = app_replace_rule_set_rules_used_all({
     root,
     on_hint,
     context,
@@ -19,7 +19,7 @@ export function app_replace_rule_set_label_rules(
     goals_count,
     end,
     rule_set_name,
-  );
+  });
   let rules_used_all = property_get(r, "rules_used_all");
   let refresh_count = property_get(r, "refresh_count");
   let duration = property_get(r, "duration");
