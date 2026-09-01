@@ -11,7 +11,7 @@ import { equal } from "./equal.mjs";
 export async function bible_glyph_chapters_count_stated() {
   arguments_assert(arguments, 0);
   ("What the picture Bible list says out loud about how many chapters it holds, beside how many it actually holds, and whether the two are the same.");
-  ("THE LIST TELLS THE READER ITS OWN SIZE IN WORDS - thirty two chapters today - and words do not move when a chapter is added. Everything else about a new chapter announces itself the moment somebody looks: the chapter is in the list or it is not. This one sentence can go on saying thirty two forever and nothing anywhere will look wrong.");
+  ("THE LIST TELLS THE READER ITS OWN SIZE IN WORDS AND WORDS DO NOT MOVE WHEN A CHAPTER IS ADDED. Everything else about a new chapter announces itself the moment somebody looks: the chapter is in the list or it is not. That one sentence can go on saying an old number forever and nothing anywhere will look wrong.");
   ("IT LOOKS AT THE SOURCE AND NOT AT THE RUNNING LIST, because the sentence is prose and prose is not a value anything can ask for. Reading the file back is the only way to hear what the file says, and this is the same reading a gate about prose already does elsewhere in the repo.");
   ("SPELLED WORDS ARE LOWERED BEFORE THEY ARE COMPARED, because a sentence begins with a capital and a spelling does not. Comparing them as written would fail on prose that is perfectly correct, which is the way a gate teaches everybody to ignore it.");
   ("Nothing said at all is answered as nothing rather than as a disagreement, because the two are different mistakes with different repairs - one is a sentence to correct and the other is a sentence to write.");
