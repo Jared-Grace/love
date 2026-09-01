@@ -121,7 +121,7 @@ export async function app_g_conversation(
     );
   }
   await app_g_sky_reset();
-  app_g_conversation_render(
+  app_g_conversation_render({
     overlay,
     remaining,
     render_openers,
@@ -131,5 +131,5 @@ export async function app_g_conversation(
     converts,
     npc,
     goodbye,
-  );
+  });
 }

@@ -45,7 +45,7 @@ export function app_g_conversation_render_boundary(
     function acknowledged() {
       "the NPC has just declined a topic, so the prompt waiting back at the openers must invite something ELSE — the usual continue-prompt is open half the time ('what's on your mind?'), and an open invitation from the same person who just said no reads as taking the limit back. carried as the pending intro so it replaces that prompt.";
       pending.text = g_something_else();
-      app_g_conversation_render(
+      app_g_conversation_render({
         overlay,
         remaining,
         render_openers,
@@ -55,7 +55,7 @@ export function app_g_conversation_render_boundary(
         converts,
         npc,
         goodbye,
-      );
+      });
     }
     app_shared_game_button_green(container, text, acknowledged);
     app_g_button_conversation_end(container, leave);

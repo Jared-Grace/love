@@ -47,9 +47,9 @@ export function app_g_conversation_run_turn(
     if (after_kind) {
       pending.text = g_response(after_kind);
     }
-    app_g_conversation_render(
+    app_g_conversation_render({
       overlay,
-      kept,
+      remaining: kept,
       render_openers,
       leave,
       prayed,
@@ -57,7 +57,7 @@ export function app_g_conversation_run_turn(
       converts,
       npc,
       goodbye,
-    );
+    });
   }
   let concern = property_get(turn, "concern");
   let correct = property_get(turn, "correct");
