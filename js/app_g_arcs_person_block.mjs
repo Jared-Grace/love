@@ -69,15 +69,15 @@ export function app_g_arcs_person_block(parent, person, bench) {
     let name = property_get(one, "name");
     let value = property_get(one, "value");
     let shape = property_get(one, "shape");
-    app_g_arcs_field_pair(
-      block,
-      person_moved,
+    app_g_arcs_field_pair({
+      parent: block,
+      moved_fields: person_moved,
       name,
       value,
       shape,
       voice_color,
       marks,
-    );
+    });
   }
   each(fields, field_line);
   app_shared_note_pills(block, person_notes);

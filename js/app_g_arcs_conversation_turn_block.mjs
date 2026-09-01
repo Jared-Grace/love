@@ -44,15 +44,15 @@ export function app_g_arcs_conversation_turn_block({
     if (caught_up) {
       let moved = property_get(card, "moved");
       let marks = property_get(bench, "marks");
-      app_g_arcs_field_pair(
-        conversation_block,
-        moved,
-        catch_up_name,
-        catch_up,
-        catch_up_shape,
+      app_g_arcs_field_pair({
+        parent: conversation_block,
+        moved_fields: moved,
+        name: catch_up_name,
+        value: catch_up,
+        shape: catch_up_shape,
         voice_color,
         marks,
-      );
+      });
     }
   }
   app_g_arcs_turn_block(conversation_block, card, nickname, bench, voice_color);
