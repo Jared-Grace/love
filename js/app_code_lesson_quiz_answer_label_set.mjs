@@ -15,7 +15,7 @@ export function app_code_lesson_quiz_answer_label_set(
   refresh,
 ) {
   arguments_assert(arguments, 8);
-  let r = app_code_lesson_quiz_container_question(
+  let r = app_code_lesson_quiz_container_question({
     info,
     qa,
     container_blue_light,
@@ -24,7 +24,7 @@ export function app_code_lesson_quiz_answer_label_set(
     context,
     quizzes,
     refresh,
-  );
+  });
   let r4 = app_code_lesson_quiz_parent_container(r);
   let parent_container = property_get(r4, "parent_container");
   let container_correction = property_get(r4, "container_correction");
