@@ -60,9 +60,9 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
       percent_expression,
     );
     function quiz(context, parent, container, refresh, next_get) {
-      app_code_lesson_quiz(
-        container,
-        quiz_qa,
+      app_code_lesson_quiz({
+        container_blue_light: container,
+        qa: quiz_qa,
         parent,
         context,
         refresh,
@@ -70,7 +70,7 @@ export function app_code_lesson_expression_remainder_divide_quizzes_get(
         batch_get,
         quizzes,
         next_get,
-      );
+      });
     }
     return quiz;
   }
