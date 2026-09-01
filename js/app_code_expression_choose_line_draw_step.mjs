@@ -4,7 +4,7 @@ import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_rea
 import { app_code_expression_choose_line_draw_on_operator } from "./app_code_expression_choose_line_draw_on_operator.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_paint } from "./app_code_expression_paint.mjs";
-export function app_code_expression_choose_line_draw_step(
+export function app_code_expression_choose_line_draw_step({
   stepped_from,
   current,
   on_wrong,
@@ -14,8 +14,8 @@ export function app_code_expression_choose_line_draw_step(
   on_change,
   solved,
   value,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   let rising = not(stepped_from);
   let ready = app_code_expression_nodes_ready(current);
   ("one right press ends this drawing of the line, so every other operator in it stops answering the moment one of them is chosen - the working out is under way and a second press would start a second one on top of it");

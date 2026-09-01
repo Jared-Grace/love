@@ -18,7 +18,7 @@ export function app_code_expression_choose_line_draw(
   ("a line drawn after a step is drawn plain and takes its chips afterwards, in two stages; the first drawing of all takes them at once, because there is nothing behind it for anything to have moved from");
   ("Told apart by whether a step is behind this drawing, rather than by being asked. Whoever draws the line again after a press already has to say which operator went and what it came to, and a drawing with an operator behind it is exactly a drawing something could have moved from - so the two cannot fall out of step with each other.");
   let stepped_from = null_is(solved);
-  let r = app_code_expression_choose_line_draw_step(
+  let r = app_code_expression_choose_line_draw_step({
     stepped_from,
     current,
     on_wrong,
@@ -28,7 +28,7 @@ export function app_code_expression_choose_line_draw(
     on_change,
     solved,
     value,
-  );
+  });
   let step = property_get(r, "step");
   let pressable = property_get(r, "pressable");
   on_change(step);
