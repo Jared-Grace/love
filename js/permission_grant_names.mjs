@@ -2394,6 +2394,58 @@ export function permission_grant_names() {
   let spelled2281 = fn_name(
     "bible_glyph_chapters_verse_marks_underdrawn_walked",
   );
+  let spelled2282 = fn_name("qa_commit_named_said_expire");
+  let spelled2283 = fn_name("bundles_dev_stale_build");
+  let spelled2284 = fn_name("app_code_lesson_telling_shapes_missing");
+  let spelled2285 = fn_name("bible_glyph_apps_aggregate_reaching_gate_run");
+  let spelled2286 = fn_name("qa_gates_said_plain_baseline_path");
+  let spelled2287 = fn_name("sword_versions_english_choices");
+  let spelled2288 = fn_name("app_shared_dev_stamp_gate_run");
+  let spelled2289 = fn_name("bible_verses_marked_is");
+  let spelled2290 = fn_name("sword_book_codes_canon_assert");
+  let spelled2291 = fn_name("ebible_book_codes");
+  let spelled2292 = fn_name(
+    "firebase_storage_download_json_decompress_project_jg",
+  );
+  let spelled2293 = fn_name("app_music_references_versions");
+  let spelled2294 = fn_name("app_music_bible_default_version");
+  let spelled2295 = fn_name("functions_compare_text_number_gate_run");
+  let spelled2296 = fn_name("function_return_key_shapes_agree");
+  let spelled2297 = fn_name("functions_files_unparseable_gate_run");
+  let spelled2298 = fn_name("functions_return_key_shapes_baseline_path");
+  let spelled2299 = fn_name("lyric_timing_open");
+  let spelled2300 = fn_name("lyric_video_document_earlier");
+  let spelled2301 = fn_name("lyric_video_bible_write");
+  let spelled2302 = fn_name("apps_import_relative_unguarded");
+  let spelled2303 = fn_name("public_chunks_orphaned_baseline_write");
+  let spelled2304 = fn_name("bible_versions_sung_gate_run");
+  let spelled2305 = fn_name("function_param_move_first_multiple");
+  let spelled2306 = fn_name("bible_usfm_versions_withheld_gate_run");
+  let spelled2307 = fn_name("functions_calls_named_literal_argument");
+  let spelled2308 = fn_name("functions_imports_neighbor_climbed_repair");
+  let spelled2309 = fn_name("qa_promoted_pieces_gone_forget");
+  let spelled2310 = fn_name("function_list_fn_name_add");
+  let spelled2311 = fn_name("bible_chapter_suno_sections");
+  let spelled2312 = fn_name("door43_versions_english_choices");
+  let spelled2313 = fn_name("ebible_bible_folder_commercial_not_assert");
+  let spelled2314 = fn_name("ebible_versions_english_choices");
+  let spelled2315 = fn_name("app_ceb_bible_gloss_unpublished_upload");
+  let spelled2316 = fn_name("firebase_prod_hashes_stale_apps");
+  let spelled2317 = fn_name("berean_books_path");
+  let spelled2318 = fn_name("commits_message_alias_baseline_write");
+  let spelled2319 = fn_name("scripts_temp_stale_names");
+  let spelled2320 = fn_name("ebible_letter_accounted_gate_run");
+  let spelled2321 = fn_name("ebible_letter_plain_text_write");
+  let spelled2322 = fn_name("bible_usfm_version_book_chapter_codes");
+  let spelled2323 = fn_name("qa_app_e2e_happy_fns");
+  let spelled2324 = fn_name("bible_audio_recordings_manifest_missing_write");
+  let spelled2325 = fn_name("bible_audio_recordings_uncanonical_archive");
+  let spelled2326 = fn_name("bible_audio_archive_root_folder");
+  let spelled2327 = fn_name("bible_audio_recording_bucket_cases_gate_run");
+  let spelled2328 = fn_name("bible_audio_recordings_empty_delete");
+  let spelled2329 = fn_name("bible_audio_recording_translation");
+  let spelled2330 = fn_name("bible_verses_reading_units_cases_gate_run");
+  let spelled2331 = fn_name("bible_audio_verses_stale_report");
   let names = [
     spelled,
     spelled2,
@@ -4676,6 +4728,56 @@ export function permission_grant_names() {
     spelled2279,
     spelled2280,
     spelled2281,
+    spelled2282,
+    spelled2283,
+    spelled2284,
+    spelled2285,
+    spelled2286,
+    spelled2287,
+    spelled2288,
+    spelled2289,
+    spelled2290,
+    spelled2291,
+    spelled2292,
+    spelled2293,
+    spelled2294,
+    spelled2295,
+    spelled2296,
+    spelled2297,
+    spelled2298,
+    spelled2299,
+    spelled2300,
+    spelled2301,
+    spelled2302,
+    spelled2303,
+    spelled2304,
+    spelled2305,
+    spelled2306,
+    spelled2307,
+    spelled2308,
+    spelled2309,
+    spelled2310,
+    spelled2311,
+    spelled2312,
+    spelled2313,
+    spelled2314,
+    spelled2315,
+    spelled2316,
+    spelled2317,
+    spelled2318,
+    spelled2319,
+    spelled2320,
+    spelled2321,
+    spelled2322,
+    spelled2323,
+    spelled2324,
+    spelled2325,
+    spelled2326,
+    spelled2327,
+    spelled2328,
+    spelled2329,
+    spelled2330,
+    spelled2331,
   ];
   return names;
 }
