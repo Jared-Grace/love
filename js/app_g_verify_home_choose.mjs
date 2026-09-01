@@ -1,3 +1,4 @@
+import { storage_session_specify_set } from "./storage_session_specify_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -29,7 +30,7 @@ export function app_g_verify_home_choose(
   if (news) {
     selected_key = latest;
     property_set(held, "selected_key", latest);
-    sessionStorage.setItem(storage_key, latest);
+    storage_session_specify_set(storage_key, latest);
     property_set(held, "advanced_for", latest);
   }
   let initial = null;
