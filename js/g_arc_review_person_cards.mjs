@@ -1,5 +1,3 @@
-import { g_arc_review_person_turn_cards } from "./g_arc_review_person_turn_cards.mjs";
-import { g_arc_review_person_fields } from "./g_arc_review_person_fields.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -9,6 +7,10 @@ import { property_list_size } from "./property_list_size.mjs";
 import { add } from "./add.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
+import { g_arc_noted_held_by_turn } from "./g_arc_noted_held_by_turn.mjs";
+import { g_arc_held_count } from "./g_arc_held_count.mjs";
+import { g_arc_review_person_fields } from "./g_arc_review_person_fields.mjs";
+import { g_arc_review_person_turn_cards } from "./g_arc_review_person_turn_cards.mjs";
 import { g_arc_review_notes_person } from "./g_arc_review_notes_person.mjs";
 import { list_size } from "./list_size.mjs";
 import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
@@ -19,6 +21,7 @@ export function g_arc_review_person_cards(
   nickname,
   gender,
   base,
+  asked,
 ) {
   "$plain nickname";
   "$plain gender";
@@ -32,7 +35,8 @@ export function g_arc_review_person_cards(
   "WHAT KIND OF THING EACH FIELD IS TRAVELS WITH ITS VALUE, so the screen drawing it never has to know that a trouble is somebody speaking and an occupation is not. The whole field is read here rather than only its name, which is what carries the kind along; a screen deciding that for itself would be a second list of the field names, kept by hand, drifting.";
   "THE OLDER COPY COMES IN NAMED, and no older copy at all is null rather than an empty arc. An arc with nothing behind it is not an arc that said nothing, and comparing against an empty one would mark every line of it as new - which is the whole arc shouting, on exactly the reading where none of it has been judged yet and the shouting means nothing.";
   "THE NAME FOR WHERE IT CAME FROM IS PASSED STRAIGHT OUT, because what the page must say about the moved lines depends on it. Moved since you read it and moved since the backup was taken are different claims, and a page told only that there is a difference would have to pick one of them and be wrong half the time.";
-  arguments_assert(arguments, 6);
+  "THE LINES THAT WERE ASKED ABOUT AND KEPT ARE WORKED OUT ONLY AGAINST THE COPY A REVISION REPLACED, and never against a reading or a backup. The addresses come from the one wave of notes that one revision answered, so they line up with that revision and with nothing else: against a reading taken since, they would mark a note as unanswered on a line the reader has already been shown the outcome of, and against the oldest backup they would name a wave from a day the backup knows nothing about. Both of those are the page telling somebody they were ignored when they were not.";
+  arguments_assert(arguments, 7);
   let index = property_get(entry, "index");
   let arc = property_get(entry, "arc");
   let base_arc = property_get(base, "arc");
@@ -54,10 +58,22 @@ export function g_arc_review_person_cards(
   if (untouched) {
     person_moved = {};
   }
+  let replaced = equal(base_source, "previous");
+  let held_by_turn = {};
+  if (replaced) {
+    held_by_turn = g_arc_noted_held_by_turn(arc, asked, by_turn);
+  }
+  let held_count = g_arc_held_count(held_by_turn);
+  let person_held = property_or_null(held_by_turn, "0");
+  let unasked = equal(person_held, null);
+  if (unasked) {
+    person_held = {};
+  }
   let fields = g_arc_review_person_fields(arc);
   let turns = g_arc_review_person_turn_cards(
     arc,
     by_turn,
+    held_by_turn,
     passages,
     notes,
     index,
@@ -75,6 +91,8 @@ export function g_arc_review_person_cards(
     base_source,
     moved_count,
     person_moved,
+    held_count,
+    person_held,
     turns,
   };
   return r;
