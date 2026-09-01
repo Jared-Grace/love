@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_written_chapter } from "./g_arc_written_chapter.mjs";
 import { g_arc_reviewed_chapter } from "./g_arc_reviewed_chapter.mjs";
 import { g_arc_previous_chapter } from "./g_arc_previous_chapter.mjs";
+import { g_arc_noted_chapter } from "./g_arc_noted_chapter.mjs";
 import { g_arc_backup_chapter } from "./g_arc_backup_chapter.mjs";
 import { g_sermon_chapter_passages_chaptered } from "./g_sermon_chapter_passages_chaptered.mjs";
 import { g_arc_feedback_chapter } from "./g_arc_feedback_chapter.mjs";
@@ -12,6 +13,7 @@ import { number_from_text } from "./number_from_text.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { g_arc_review_base } from "./g_arc_review_base.mjs";
+import { g_arc_noted_person } from "./g_arc_noted_person.mjs";
 import { g_arc_review_person_cards } from "./g_arc_review_person_cards.mjs";
 import { list_add } from "./list_add.mjs";
 export async function g_arc_review_chapter_cards(chapter_code) {
@@ -29,6 +31,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
   let arcs = await g_arc_written_chapter(chapter_code);
   let reviewed = await g_arc_reviewed_chapter(chapter_code);
   let previous = await g_arc_previous_chapter(chapter_code);
+  let noted = await g_arc_noted_chapter(chapter_code);
   let backup = await g_arc_backup_chapter(chapter_code);
   let passages = await g_sermon_chapter_passages_chaptered(chapter_code);
   let notes = await g_arc_feedback_chapter(chapter_code);
@@ -41,6 +44,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
     let nickname = list_get(nicknames, wanted);
     let gender = list_get_property(dealt, wanted, "gender");
     let base = g_arc_review_base(reviewed, previous, backup, wanted);
+    let asked = g_arc_noted_person(noted, wanted);
     let person = g_arc_review_person_cards(
       entry,
       passages,
@@ -48,6 +52,7 @@ export async function g_arc_review_chapter_cards(chapter_code) {
       nickname,
       gender,
       base,
+      asked,
     );
     list_add(people, person);
   }
