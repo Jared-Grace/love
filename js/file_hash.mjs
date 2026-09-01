@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { file_read_buffer } from "./file_read_buffer.mjs";
+import crypto from "crypto"; import { file_read_buffer } from "./file_read_buffer.mjs";
 export async function file_hash(file_path) {
   arguments_assert(arguments, 1);
   ("$plain file_path");
