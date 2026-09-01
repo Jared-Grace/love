@@ -29,7 +29,7 @@ export function app_replace_rule_set_symbols_mapper(
   arguments_assert(arguments, 14);
   let symbol_button = null;
   async function symbol_on_click() {
-    let r = await app_replace_rule_set_symbols_mapper_symbol_on_click(
+    let r = await app_replace_rule_set_symbols_mapper_symbol_on_click({
       index_selected_held,
       symbols_invalid_chosen_held,
       start_indices_held,
@@ -42,7 +42,7 @@ export function app_replace_rule_set_symbols_mapper(
       div_symbols,
       history,
       refresh,
-    );
+    });
     return r;
   }
   symbol_button = html_button(div_symbols, symbol, symbol_on_click);
