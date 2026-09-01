@@ -22,7 +22,7 @@ export function app_code_lesson_quiz({
   next_get,
 }) {
   let question_label = property_get(info, "question_label");
-  let r = app_code_lesson_quiz_answer_label_set(
+  let r = app_code_lesson_quiz_answer_label_set({
     info,
     qa,
     container_blue_light,
@@ -31,7 +31,7 @@ export function app_code_lesson_quiz({
     context,
     quizzes,
     refresh,
-  );
+  });
   let answer_label_set = property_get(r, "answer_label_set");
   let container_question = property_get(r, "container_question");
   let r22 = property_get(r, "r2");
