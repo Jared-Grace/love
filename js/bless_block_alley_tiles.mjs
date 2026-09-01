@@ -6,6 +6,7 @@ import { list_get } from "./list_get.mjs";
 import { add } from "./add.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 export function bless_block_alley_tiles(x, y) {
+  "Works out the alleys on one block: how many gaps there are between the buildings, and, for any one of them, the tiles it covers - which starts where its building ends and runs the width of the gap.";
   arguments_assert(arguments, 2);
   let r = bless_block_gaps(x, y);
   let gaps = property_get(r, "gaps");

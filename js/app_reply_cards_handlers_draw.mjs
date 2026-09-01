@@ -27,6 +27,7 @@ export function app_reply_cards_handlers_draw(
   typed_reset,
   choices,
 ) {
+  "Wires up one reply card: the language choices, the control for how many verses are showing, the response buttons, the copy that follows whichever languages are chosen, and the keys the page listens for - then draws it once so the card is ready before anybody touches it.";
   arguments_assert(arguments, 13);
   async function love() {
     let r = await app_reply_love_all_click(
