@@ -1,5 +1,7 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function functions_work_chain_flat_ceiling() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("The deepest a chain of lines may run and still count the function flat - three.");
   ("Three is what naming a value, gathering it, and handing it back costs: the list is made, an entry goes into it, the list is returned. A function that only writes down what it knows never needs a fourth link, so three lets a table of any length through while a body that works something out and then works on the answer does not.");
