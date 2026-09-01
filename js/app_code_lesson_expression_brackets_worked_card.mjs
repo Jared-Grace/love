@@ -53,13 +53,13 @@ export function app_code_lesson_expression_brackets_worked_card(
   let rest_anded = and(pair_value, outside);
   let rest_value = ternary(inner_or, rest_anded, rest_ored);
   let rest_word = js_true_false_word(rest_value);
-  app_code_lesson_expression_worked_card_two_operators(
+  app_code_lesson_expression_worked_card_two_operators({
     root,
     heading,
     whole,
     pair,
-    pair_word,
+    pair_value: pair_word,
     rest,
-    rest_word,
-  );
+    rest_value: rest_word,
+  });
 }
