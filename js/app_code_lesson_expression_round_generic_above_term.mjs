@@ -9,7 +9,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_span_text } from "./html_span_text.mjs";
-export function app_code_lesson_expression_round_generic_above_term(
+export function app_code_lesson_expression_round_generic_above_term({
   ordinary_low,
   ordinary_high,
   whole_text,
@@ -18,8 +18,8 @@ export function app_code_lesson_expression_round_generic_above_term(
   rounds_up,
   root,
   metaphor_render,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let digit = integer_random(ordinary_low, ordinary_high);
   let decimal = text_decimal_combine(whole_text, digit);
   let extreme_low = list_get(extreme_digits, 0);
