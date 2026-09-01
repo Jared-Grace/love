@@ -29,6 +29,10 @@ export function baseline_writers_growth_exempt() {
       why: "it is the only one here whose record is of sizes rather than of names, and a size is meant to move. What the gate beside it measures is a single step - how much one bundle grew since it was last written down - against a ceiling, so an ordinary day's growth under that ceiling is not an offense and has to be written down, or the next day's step would be measured from a number nobody has been at for a month and every bundle would go red at once for growing slowly. A bundle nobody has a size for yet is explicitly not a step either, so a page arriving must be recorded rather than refused. Refusing growth here would not tighten the ratchet, it would break the measurement the ratchet is made of",
     },
     {
+      f_name: fn_name("commits_message_alias_baseline_write"),
+      why: "its record is of commit messages already in the history, and a message cannot be edited without writing every commit after it again under a new name - so a name arriving here names a fault nobody can put right, and a list that refused it would go red and stay red. What stands in place of the refusal is narrower than a refusal and stronger: before anything is written, every offender made after the door was shut is asserted away, so growth is only ever possible for a commit worded before there was a door to go round",
+    },
+    {
       f_name: fn_name("baseline_known_write"),
       why: "the one writer every ratchet ends at, and the one the refusal itself would have to call. putting the check here would put it inside the thing it checks",
     },
