@@ -17,6 +17,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     fn_name("functions_work_size_baseline_add"),
     ". Its length is the number of chapters that have been written rather than the way it was written: each of its cases is one line, no two of them ever run together, and a reader holds exactly one and forgets it. Cutting it in half would give each half a name that means nothing and would still leave that reader reading every one of them to learn which file holds a chapter. It comes back under the ceiling only by getting shorter, which happens the day a bundler can be handed a folder rather than an address at a time.");
   let stored = null;
+  if (equal(chapter_code, "GEN01")) {
+    let chapter_module = await import("./bible_glyph_chapter_gen01.mjs");
+    stored = chapter_module.bible_glyph_chapter_gen01();
+  }
   if (equal(chapter_code, "EXO20")) {
     let chapter_module = await import("./bible_glyph_chapter_exo20.mjs");
     stored = chapter_module.bible_glyph_chapter_exo20();
