@@ -6,6 +6,7 @@ import { js_call_name_text_cut_is } from "./js_call_name_text_cut_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { js_call_name_number_made_is } from "./js_call_name_number_made_is.mjs";
 export function js_compare_text_number_declarator_each(kinds) {
+  "Builds the reading that one declared name is put through: where the name is filled by a call, the name of that call is what says whether it holds text or a number, and that verdict is written down against it.";
   arguments_assert(arguments, 1);
   function declarator_each(node) {
     let id = property_get(node, "id");
