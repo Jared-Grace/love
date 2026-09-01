@@ -1,11 +1,13 @@
+import { browser_is } from "./browser_is.mjs";
+import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
+import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { ebible_chapter_verse_numbers_for_lines } from "./ebible_chapter_verse_numbers_for_lines.mjs";
-import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
-import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
+import { list_map } from "./list_map.mjs";
+import { urdu_text_repaired } from "./urdu_text_repaired.mjs";
 import { list_map_pairs } from "./list_map_pairs.mjs";
-import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { browser_is } from "./browser_is.mjs";
+import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
@@ -38,6 +40,10 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   if (unpaired) {
     return null;
   }
-  let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
+  ("What a translation gets wrong about a particular word is put right here as well, and it has to be. There are two roads out of a downloaded bible into verses - the one that cuts a page at its verse marks, and this one, which pairs the lines of the read-aloud edition with those marks - and only the first of them was repairing anything. This is the road the app is served from: what is uploaded to storage, and so what a reader turning a page actually sees, is built from these lines. A repair that reaches only the other road is a repair nobody reads.");
+  ("The read-aloud edition carries the same fault as the page. Four of the Urdu chapters written out for reading aloud hold the same welded word the downloaded pages hold, which is what a shared publishing sweep would leave, so putting it right once in the one place both roads can call is the whole of the remedy.");
+  ("It is safe over every translation, because the repair it runs is safe over writing in any language.");
+  let repaired = list_map(filtered, urdu_text_repaired);
+  let list = list_map_pairs(repaired, verse_numbers, ebible_verse_new_text);
   return list;
 }
