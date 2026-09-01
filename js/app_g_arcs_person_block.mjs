@@ -81,7 +81,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
   let conversation_block = block;
   function turn_block(card) {
     let app_g_arcs_conversation_turn_block_answer =
-      app_g_arcs_conversation_turn_block(
+      app_g_arcs_conversation_turn_block({
         card,
         conversation_block,
         block,
@@ -90,7 +90,7 @@ export function app_g_arcs_person_block(parent, person, bench) {
         catch_up_shape,
         nickname,
         bench,
-      );
+      });
     conversation_block = property_get(
       app_g_arcs_conversation_turn_block_answer,
       "conversation_block",
