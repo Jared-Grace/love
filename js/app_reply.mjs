@@ -47,7 +47,9 @@ export async function app_reply(context) {
   let bible_texts = [];
   let responses = [];
   let responses_buttons = [];
-  let typed = null;
+  let typed_held = {
+    typed: null,
+  };
   typed_reset();
   let card = app_shared_container_blue(root);
   app_reply_languages_prompt(card);
@@ -154,16 +156,20 @@ export async function app_reply(context) {
   function lambda6(event) {
     let app_reply_key_down_answer = app_reply_key_down(
       event,
-      typed,
+      property_get(typed_held, "typed"),
       visible_count,
       buttons_refresh,
     );
-    typed = property_get(app_reply_key_down_answer, "typed");
+    property_set(
+      typed_held,
+      "typed",
+      property_get(app_reply_key_down_answer, "typed"),
+    );
     visible_count = property_get(app_reply_key_down_answer, "visible_count");
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
-    return typed;
+    return property_get(typed_held, "typed");
   };
   log(app_reply.name, {
     buttons_responses,
@@ -175,7 +181,7 @@ export async function app_reply(context) {
   );
   visible_count = buttons_refresh();
   function typed_reset() {
-    typed = "";
+    property_set(typed_held, "typed", "");
   }
   app_shared_footer(root);
 }
