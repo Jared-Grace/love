@@ -90,6 +90,9 @@ export function bible_glyph_chapters() {
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
   "A CHAPTER NAMED HERE IS HALF THE WORK AND THE OTHER HALF IS FOUR COMMANDS. A new entry owes the count in the sentence above, the light list of chapters, both of the chains that send for one chapter on its own, a Rosetta band, that band named in the register beside it, and every reveal language refetched. Not one of those is authored - every word of all of them is already spelled here or in a chapter file - which is why they are commands rather than instructions. None of that is optional and none of it is visible from this file, so it has twice been found by a gate going red rather than by anybody remembering it - and once by a person reconstructing three arguments the writer never wrote down. After adding a chapter to this list, run:";
+  fn_name("bible_glyph_chapters_count_stated_repair");
+  fn_name("bible_glyph_chapter_references_write");
+  fn_name("bible_glyph_chapter_chains_write");
   fn_name("bible_glyph_chapter_bands_write");
   let first = bible_glyph_chapter_1jn04();
   let second = bible_glyph_chapter_jhn01();

@@ -49,8 +49,8 @@ export function lyric_video_lines_split_characters_max(lines, characters_max) {
       };
       return timed;
     }
-    let timed = parts.map(part_timed);
-    return timed;
+    let timed_parts = parts.map(part_timed);
+    return timed_parts;
   }
   let grouped = list_map(lines, line_each);
   let split = list_flat(grouped);
