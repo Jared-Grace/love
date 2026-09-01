@@ -11,6 +11,7 @@ export function bible_versions_english_choices_psalms_agreement_passage(
   named_by_folder,
   lowest_by_folder,
 ) {
+  "For each translation folder, the passage where its wording stands furthest from every other translation in the sample, filling the two tables it is handed. Each wording is measured against every other wording of the same passage and keeps its nearest match; the folder then keeps the lowest of those across all passages, so what comes out is the place that translation is most alone. The lowest rather than the average on purpose: a translation is judged here by where it differs most, which an average would flatten away.";
   arguments_assert(arguments, 3);
   for (let passage of passages) {
     let wordings = property_get(passage, "wordings");

@@ -1,5 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_sandbox_previews_dream_prison_load() {
+  "The first slice of the sandbox registry's fetchers: seven ways to go and get a preview, each one naming its own file outright. It exists because the registry it feeds grew past what one body may hold, and the cut had to fall somewhere; the name is the newest fetcher the slice ended on rather than anything the seven have in common. Each fetcher names its file as a plain run of letters because the builder has to be able to read which file is wanted before it can set that file aside as a piece of its own to fetch.";
   arguments_assert(arguments, 0);
   async function week_calendar_load() {
     let m = await import("./week_calendar_preview.mjs");

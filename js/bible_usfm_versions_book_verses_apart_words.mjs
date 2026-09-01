@@ -9,6 +9,7 @@ export function bible_usfm_versions_book_verses_apart_words(
   references,
   words_by_version,
 ) {
+  "Turns the read versions of one book into words per verse per version, and fills in the list of every verse reference any of them carries. A verse with no words in it is passed over rather than recorded empty, because a version that simply does not carry that verse and a version that carries it as nothing would otherwise be indistinguishable to whatever compares them. The reference list is built as the versions are walked and each reference added once only, so the order is the order the first version to carry a verse put it in.";
   arguments_assert(arguments, 3);
   let references_seen = {};
   for (let read of carried) {

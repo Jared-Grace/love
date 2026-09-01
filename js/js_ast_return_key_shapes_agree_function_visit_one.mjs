@@ -9,6 +9,7 @@ export function js_ast_return_key_shapes_agree_function_visit_one(
   node,
   records,
 ) {
+  "Every distinct record one function hands back, and the union of the names those records are keyed by. A record met twice is counted once, because the same node reached down two paths is one record and not two disagreeing ones. The union is what the caller compares each record against: a name in the union missing from one record is the whole shape of the fault being looked for, which is a function whose answer carries a different set of names depending on which way out it took.";
   arguments_assert(arguments, 3);
   let objects = [];
   let wanted = [];
