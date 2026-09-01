@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_count_stated } from "./bible_glyph_chapters_count_stated.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { not } from "./not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function bible_glyph_chapters_count_stated_gate_run() {
   arguments_assert(arguments, 0);
@@ -14,8 +13,7 @@ export async function bible_glyph_chapters_count_stated_gate_run() {
   ("THE HINT CARRIES THE WORDS TO WRITE, because there is nothing to decide - the list knows its own length and English has one way of saying it. A gate that made somebody count would be asking for the mistake it is here to catch.");
   let stated = await bible_glyph_chapters_count_stated();
   let f_name = fn_name("bible_glyph_chapters");
-  let missing_is = equal(stated.said, null);
-  let b = not(missing_is);
+  let b = equal_not(stated.said, null);
   assert_json(b, {
     spelled: stated.spelled,
     hint: text_combine_multiple([
