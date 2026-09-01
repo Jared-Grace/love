@@ -1,0 +1,100 @@
+import { not } from "./not.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { properties_get } from "./properties_get.mjs";
+import { json_equal } from "./json_equal.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_includes } from "./list_includes.mjs";
+export function red_proof_checked(proof) {
+  arguments_assert(arguments, 1);
+  ("Asks every wrong version of one reader every case that reader's corpus writes down, and reports which cases refused which wrong version.");
+  ("THE POINT IS THE EMPTY ROWS, NOT THE FULL ONES. A wrong version no case refuses is a hole: the corpus agrees with it everywhere, so the claim that version breaks is a claim nothing is holding down. A case that refuses no wrong version is padding: it describes the code back to itself and would go on passing whatever the code became. Both are silent - the gate the corpus feeds is green either way - and both are what this looks for.");
+  ("A wrong version that throws counts as refused. Throwing is a way of answering differently, and a case that makes a wrong version fall over has told the two apart just as surely as one that makes it answer wrongly.");
+  ("A hole may be let off, by name, with a sentence saying why the version is the same working-out in different words rather than a version that is wrong. That sentence is a claim, so two things are checked about it: it may not be empty, and the version it lets off has to still be a hole. A let-off standing over a version some case now refuses is a let-off nobody needs, and leaving it there is how a reason written years ago comes to cover something it was never about.");
+  let fn = property_get(proof, "fn");
+  let cases_fn = property_get(proof, "cases");
+  let expected_key = property_get(proof, "expected");
+  let described_key = property_get(proof, "described");
+  let wrong = property_get(proof, "wrong");
+  let allowed = property_get(proof, "allowed");
+  let cases = cases_fn();
+  let wrong_names = properties_get(wrong);
+  let refused = {};
+  let unrefused = [];
+  for (let wrong_name of wrong_names) {
+    let reader = property_get(wrong, wrong_name);
+    let indices = [];
+    let index = 0;
+    for (let one of cases) {
+      let expected = property_get(one, expected_key);
+      let answered = null;
+      let threw = false;
+      try {
+        answered = reader(one);
+      } catch (e) {
+        threw = true;
+      }
+      let same = threw ? false : json_equal(answered, expected);
+      if (not(same)) {
+        list_add(indices, index);
+      }
+      index = index + 1;
+    }
+    refused[wrong_name] = indices;
+    if (list_empty_is(indices)) {
+      list_add(unrefused, wrong_name);
+    }
+  }
+  let idle = [];
+  let case_index = 0;
+  for (let one of cases) {
+    let caught_any = false;
+    for (let wrong_name of wrong_names) {
+      let indices = property_get(refused, wrong_name);
+      if (list_includes(indices, case_index)) {
+        caught_any = true;
+      }
+    }
+    if (not(caught_any)) {
+      let described = property_get(one, described_key);
+      let row = {
+        index: case_index,
+        described,
+      };
+      list_add(idle, row);
+    }
+    case_index = case_index + 1;
+  }
+  let allowed_names = properties_get(allowed);
+  let holes = [];
+  for (let wrong_name of unrefused) {
+    let b = list_includes(allowed_names, wrong_name);
+    if (not(b)) {
+      list_add(holes, wrong_name);
+    }
+  }
+  let exemptions_stale = [];
+  let exemptions_unreasoned = [];
+  for (let allowed_name of allowed_names) {
+    let b2 = list_includes(unrefused, allowed_name);
+    if (not(b2)) {
+      list_add(exemptions_stale, allowed_name);
+    }
+    let reason = property_get(allowed, allowed_name);
+    if (not(reason)) {
+      list_add(exemptions_unreasoned, allowed_name);
+    }
+  }
+  let r = {
+    fn,
+    cases_count: cases.length,
+    wrong_count: wrong_names.length,
+    refused,
+    holes,
+    idle,
+    exemptions_stale,
+    exemptions_unreasoned,
+  };
+  return r;
+}
