@@ -57,6 +57,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 33",
     },
     {
+      chapter_code: "MAT05",
+      reference: "Matthew 5",
+    },
+    {
       chapter_code: "MRK05",
       reference: "Mark 5",
     },
