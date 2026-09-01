@@ -12,14 +12,14 @@ export function app_code_lesson_operators_minus() {
   let verb = js_operator_minus_verb();
   let sign = "negative";
   let left_transform = add;
-  let r = app_code_lesson_operators_minus_generic(
+  let r = app_code_lesson_operators_minus_generic({
     operator,
     left_transform,
     operator_name,
     sign,
     verb,
     math_name,
-    digit_positive_random,
-  );
+    right_random_get: digit_positive_random,
+  });
   return r;
 }

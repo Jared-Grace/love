@@ -19,7 +19,7 @@ import { text_articled_pad_space } from "./text_articled_pad_space.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_operators_minus_generic(
+export function app_code_lesson_operators_minus_generic({
   operator,
   left_transform,
   operator_name,
@@ -27,7 +27,7 @@ export function app_code_lesson_operators_minus_generic(
   verb,
   math_name,
   right_random_get,
-) {
+}) {
   let max = app_code_lesson_operators_value_max();
   function batch_get() {
     let list = each_nested_args_range_1_list_adder(max, lambda$left$right$la);
