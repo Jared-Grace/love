@@ -16,6 +16,8 @@ export async function song_identity(file_name) {
     let unfound = {
       file_name,
       found: false,
+      bytes: null,
+      sha256: null,
     };
     return unfound;
   }
