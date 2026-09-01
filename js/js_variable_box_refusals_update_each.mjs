@@ -4,6 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export function js_variable_box_refusals_update_each(ast, named_is, refusals) {
+  "Gathers the reasons one name in a file may not be put in a box, from every record and every list taken apart there, and hands back the places a name is counted up or down where it stands together with the reading that refuses those.";
   arguments_assert(arguments, 3);
   let patterns = js_list_type_nodes(ast, "ObjectPattern");
   function pattern_each(pattern) {
