@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { property_get } from "./property_get.mjs";
@@ -29,7 +30,7 @@ export function bible_glyph_chapters_pictures_bought() {
         list_add(seen, name);
       }
     }
-    let count = list_length(bought);
+    let count = list_size(bought);
     let free_run_before = free_run;
     let none = equal(count, 0);
     if (none) {
@@ -46,7 +47,7 @@ export function bible_glyph_chapters_pictures_bought() {
     };
     list_add(rows, row);
   }
-  let glyphs = list_length(seen);
+  let glyphs = list_size(seen);
   let r = {
     chapters: rows,
     glyphs,
