@@ -12,15 +12,15 @@ export function app_code_lesson_identifiers_underscores() {
   let separator_valid_name = "underscore";
   let separator_invalid = "-";
   let separator_invalid_name = "hyphen";
-  let r = app_code_lesson_identifiers_underscores_generic(
+  let r = app_code_lesson_identifiers_underscores_generic({
     separator_invalid_name,
     separator_invalid,
     separator_valid_name,
     separator_valid,
     defines_after,
-    [],
-    true,
-  );
+    identifier_symbols_types_adds: [],
+    defines_invert: true,
+  });
   function defines_after(root) {
     let c = app_code_container_light_blue(root);
     html_div_text(c, "How they look different:");
@@ -31,23 +31,21 @@ export function app_code_lesson_identifiers_underscores() {
     });
     app_code_flex_gap(div);
     html_span_text_code_dark_centered(div, separator_invalid);
-    html_div_text(
-      div,
-      text_combine_multiple([
-        "The line of",
-        text_articled_pad_space(separator_invalid_name),
-        "is shorter and is near the middle vertically, not the bottom or the top",
-      ]),
-    );
+    let padded = text_articled_pad_space(separator_invalid_name);
+    let text = text_combine_multiple([
+      "The line of",
+      padded,
+      "is shorter and is near the middle vertically, not the bottom or the top",
+    ]);
+    html_div_text(div, text);
     html_span_text_code_dark_centered(div, separator_valid);
-    html_div_text(
-      div,
-      text_combine_multiple([
-        "The line of",
-        text_articled_pad_space(separator_valid_name),
-        "is longer and is near the bottom",
-      ]),
-    );
+    let padded2 = text_articled_pad_space(separator_valid_name);
+    let text2 = text_combine_multiple([
+      "The line of",
+      padded2,
+      "is longer and is near the bottom",
+    ]);
+    html_div_text(div, text2);
   }
   return r;
 }
