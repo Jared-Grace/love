@@ -8,14 +8,16 @@ import { each } from "./each.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 export function app_reply_main_shortcuts_shortcut_each(
   s,
-  languages_chosen,
-  languages,
-  update,
-  buttons_languages,
-  buttons_responses,
-  root,
+  {
+    languages_chosen,
+    languages,
+    update,
+    buttons_languages,
+    buttons_responses,
+    root,
+  },
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 2);
   let name = property_get(s, "name");
   let languages2 = property_get(s, "languages");
   let count = property_get(s, "count");

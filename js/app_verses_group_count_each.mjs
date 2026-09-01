@@ -9,17 +9,19 @@ import { app_shared_button_toggle_style } from "./app_shared_button_toggle_style
 import { list_add } from "./list_add.mjs";
 export function app_verses_group_count_each(
   c,
-  card,
-  count_updates,
-  count_update_invoke,
-  order,
-  references_show,
-  verse_count_held,
+  {
+    card,
+    count_updates,
+    count_update_invoke,
+    order,
+    references_show,
+    verse_count_held,
+  },
 ) {
   "One of the buttons a person picks how many verses with, drawn, and put on the list of buttons that redress themselves whenever the chosen number changes.";
   "THE CHOSEN NUMBER IS KEPT IN A RECORD HANDED IN RATHER THAN IN A NAME HERE, because every one of these buttons has to see the same number and all of them are made before any of them is pressed.";
   "PRESSING ONE REDRESSES ALL OF THEM BEFORE ASKING FOR VERSES, so the button a person just pressed looks chosen straight away rather than after the verses arrive.";
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 2);
   let component = null;
   async function on_click() {
     property_set(verse_count_held, "verse_count", c);

@@ -1,7 +1,7 @@
+import { lyric_timing_line_tapped } from "./lyric_timing_line_tapped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";
-import { number_is } from "./number_is.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { bible_usfm_version_passage_text } from "./bible_usfm_version_passage_text.mjs";
 import { bible_usfm_version_credit_text } from "./bible_usfm_version_credit_text.mjs";
@@ -23,19 +23,9 @@ export async function lyric_timing_open(version, book_code, chapter_number) {
     chapter_number,
   );
   let existing = await file_exists(path_document);
-  function line_tapped(line) {
-    let kept_start = number_is(line.start_tapped);
-    let kept_end = number_is(line.end_tapped);
-    let line_hand = {
-      start: kept_start ? line.start_tapped : line.start,
-      end: kept_end ? line.end_tapped : line.end,
-      text: line.text,
-    };
-    return line_hand;
-  }
   if (existing) {
     let document_kept = await file_read_json(path_document);
-    let lines_tapped = document_kept.lines.map(line_tapped);
+    let lines_tapped = document_kept.lines.map(lyric_timing_line_tapped);
     let opened = {
       path_document,
       passage: document_kept.passage,

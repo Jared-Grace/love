@@ -33,15 +33,14 @@ export async function app_verses_group(
     verse_count,
   };
   function count_each(c) {
-    app_verses_group_count_each(
-      c,
+    app_verses_group_count_each(c, {
       card,
       count_updates,
       count_update_invoke,
       order,
       references_show,
       verse_count_held,
-    );
+    });
   }
   let card4 = await app_verses_draw_restore({
     counts,
