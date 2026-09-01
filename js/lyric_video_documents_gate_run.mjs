@@ -39,8 +39,8 @@ export async function lyric_video_documents_gate_run() {
       let ended = number_is(end);
       let untimed = not(started) && not(ended);
       if (untimed) {
-        let r = [];
-        return r;
+        let faults_none = [];
+        return faults_none;
       }
       let half_timed = not(started && ended);
       if (half_timed) {
