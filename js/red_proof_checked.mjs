@@ -1,11 +1,9 @@
+import { red_proof_holes_exemptions } from "./red_proof_holes_exemptions.mjs";
 import { red_proof_cases_idle_redundant } from "./red_proof_cases_idle_redundant.mjs";
 import { red_proof_wrong_refused } from "./red_proof_wrong_refused.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { properties_get } from "./properties_get.mjs";
-import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_includes } from "./list_includes.mjs";
 export function red_proof_checked(proof) {
   arguments_assert(arguments, 1);
   ("Asks every wrong version of one reader every case that reader's corpus writes down, and reports which cases refused which wrong version.");
@@ -32,26 +30,10 @@ export function red_proof_checked(proof) {
   );
   let redundant = property_get(r3, "redundant");
   let idle = property_get(r3, "idle");
-  let allowed_names = properties_get(allowed);
-  let holes = [];
-  for (let wrong_name of unrefused) {
-    let b = list_includes(allowed_names, wrong_name);
-    if (not(b)) {
-      list_add(holes, wrong_name);
-    }
-  }
-  let exemptions_stale = [];
-  let exemptions_unreasoned = [];
-  for (let allowed_name of allowed_names) {
-    let b2 = list_includes(unrefused, allowed_name);
-    if (not(b2)) {
-      list_add(exemptions_stale, allowed_name);
-    }
-    let reason = property_get(allowed, allowed_name);
-    if (not(reason)) {
-      list_add(exemptions_unreasoned, allowed_name);
-    }
-  }
+  let r4 = red_proof_holes_exemptions(allowed, unrefused);
+  let exemptions_unreasoned = property_get(r4, "exemptions_unreasoned");
+  let exemptions_stale = property_get(r4, "exemptions_stale");
+  let holes = property_get(r4, "holes");
   let r = {
     fn,
     cases_count: cases.length,
