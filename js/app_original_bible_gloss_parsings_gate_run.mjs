@@ -9,7 +9,7 @@ export async function app_original_bible_gloss_parsings_gate_run() {
   let walked = await app_original_bible_gloss_parsings_exceeding_chapters();
   let r = gloss_chapters_offenders_assert(
     walked,
-    "original bible gloss",
+    "original_bible",
     "explain a word by naming a form no word of its passage carries",
   );
   return r;

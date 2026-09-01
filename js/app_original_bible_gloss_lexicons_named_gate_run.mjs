@@ -7,7 +7,7 @@ export async function app_original_bible_gloss_lexicons_named_gate_run() {
   let walked = await app_original_bible_gloss_lexicons_named_chapters();
   let r = gloss_chapters_offenders_assert(
     walked,
-    "original bible gloss",
+    "original_bible",
     "say the name of a lexicon to the reader",
   );
   return r;

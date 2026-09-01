@@ -7,7 +7,7 @@ export async function app_original_bible_gloss_placeholders_gate_run() {
   let walked = await app_original_bible_gloss_placeholders_chapters();
   let r = gloss_chapters_offenders_assert(
     walked,
-    "original bible gloss",
+    "original_bible",
     "show a marker where a word's meaning belongs",
   );
   return r;
