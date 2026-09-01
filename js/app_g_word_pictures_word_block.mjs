@@ -57,7 +57,7 @@ export function app_g_word_pictures_word_block(
   });
   let attempts = property_get(known, word);
   function attempt_block(drawn) {
-    let r = app_g_word_pictures_word_block_attempt_block(
+    let r = app_g_word_pictures_word_block_attempt_block({
       drawn,
       strip,
       word,
@@ -65,7 +65,7 @@ export function app_g_word_pictures_word_block(
       status_working,
       status_set,
       render,
-    );
+    });
     return r;
   }
   each(attempts, attempt_block);
