@@ -46,7 +46,7 @@ export function app_code_review_present_fn_present(
     each([progress, c], html_clear);
     let done = list_empty_is(queue);
     if (done) {
-      app_code_review_finish_show(
+      app_code_review_finish_show({
         success_container,
         back_button,
         restart_button,
@@ -56,7 +56,7 @@ export function app_code_review_present_fn_present(
         key,
         c,
         go_next,
-      );
+      });
       return;
     }
     let remaining = list_size(queue);
