@@ -10,7 +10,7 @@ import { multiply_round } from "./multiply_round.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-export function g_plants_pool_hand_out(
+export function g_plants_pool_hand_out({
   cut,
   index,
   s,
@@ -18,8 +18,8 @@ export function g_plants_pool_hand_out(
   cursor,
   pool,
   plants,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   for (let plant of cut) {
     index = index + 1;
     let lines = property_get(plant, "lines");
