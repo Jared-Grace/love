@@ -3,7 +3,7 @@ import { app_code_lesson_quiz_answer_label } from "./app_code_lesson_quiz_answer
 import { app_code_lesson_quiz_on_question } from "./app_code_lesson_quiz_on_question.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_on_reveal } from "./app_code_lesson_quiz_on_reveal.mjs";
-export function app_code_lesson_quiz_container_question(
+export function app_code_lesson_quiz_container_question({
   info,
   qa,
   container_blue_light,
@@ -12,8 +12,8 @@ export function app_code_lesson_quiz_container_question(
   context,
   quizzes,
   refresh,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   let r = app_code_lesson_quiz_answer_label(
     info,
     qa,
