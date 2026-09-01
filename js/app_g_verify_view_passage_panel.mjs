@@ -16,7 +16,7 @@ import { greater_than_equal } from "./greater_than_equal.mjs";
 import { app_g_verify_view_highlight_lines } from "./app_g_verify_view_highlight_lines.mjs";
 import { html_on } from "./html_on.mjs";
 import { html_span_space } from "./html_span_space.mjs";
-export function app_g_verify_view_passage_panel(
+export function app_g_verify_view_passage_panel({
   container,
   serif,
   covered,
@@ -27,8 +27,8 @@ export function app_g_verify_view_passage_panel(
   row_comps,
   order_comps,
   tokens,
-) {
-  arguments_assert(arguments, 10);
+}) {
+  arguments_assert(arguments, 1);
   let passage_panel = app_shared_container_base(container);
   html_font_set(passage_panel, serif);
   let value = app_g_verify_passage_font_size();
