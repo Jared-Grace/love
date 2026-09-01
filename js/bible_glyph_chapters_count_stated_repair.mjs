@@ -1,9 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_count_stated } from "./bible_glyph_chapters_count_stated.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { equal } from "./equal.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { not } from "./not.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { function_name_to_path_relative } from "./function_name_to_path_relative.mjs";
 import { file_read } from "./file_read.mjs";
@@ -20,8 +18,7 @@ export async function bible_glyph_chapters_count_stated_repair() {
   ("It reports whether the file moved, so a run that had nothing to do and a run that did its work are told apart. Landing a chapter says true; running it again straight away says false.");
   let stated = await bible_glyph_chapters_count_stated();
   let f_name = fn_name("bible_glyph_chapters");
-  let missing_is = equal(stated.said, null);
-  let b = not(missing_is);
+  let b = equal_not(stated.said, null);
   assert_json(b, {
     spelled: stated.spelled,
     hint: text_combine_multiple([
