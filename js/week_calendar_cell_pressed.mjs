@@ -4,16 +4,18 @@ import { week_calendar_paint } from "./week_calendar_paint.mjs";
 export function week_calendar_cell_pressed(
   day,
   slot,
-  anchor,
-  anchor_click,
-  free_click,
-  records,
-  paint_record,
-  summary,
-  ranges,
-  summary_line,
+  {
+    anchor,
+    anchor_click,
+    free_click,
+    records,
+    paint_record,
+    summary,
+    ranges,
+    summary_line,
+  },
 ) {
-  arguments_assert(arguments, 10);
+  arguments_assert(arguments, 3);
   let has_anchor = not_equal(anchor, null);
   if (has_anchor) {
     anchor_click(day, slot);
