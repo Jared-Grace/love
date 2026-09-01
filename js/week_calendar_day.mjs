@@ -6,7 +6,7 @@ import { html_div } from "./html_div.mjs";
 import { each } from "./each.mjs";
 import { week_calendar_paint } from "./week_calendar_paint.mjs";
 import { week_calendar_header_cell } from "./week_calendar_header_cell.mjs";
-export function week_calendar_day(
+export function week_calendar_day({
   parent,
   days,
   slots,
@@ -14,8 +14,8 @@ export function week_calendar_day(
   paint_record,
   ranges,
   summary_line,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let records = [];
   let root = app_shared_container_blue(parent);
   let heading = html_div_text(root, "Selected times");
