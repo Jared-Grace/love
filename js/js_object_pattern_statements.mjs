@@ -1,3 +1,4 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,8 +22,7 @@ export function js_object_pattern_statements(name_held, names, node_right) {
   ("THE ORDER IS THE WHOLE OF WHY IT IS THE SAME CODE. Taking a record apart reads its entries in the order they are written and writes each one where it says, and these lines do exactly that in exactly that order, from exactly that record. The right-hand side is not copied or read twice - the very same piece of code is moved onto the first line, so whatever it does, it still does once and still does it first.");
   ("THE RECORD NEEDS A WORD OF ITS OWN BECAUSE THE RIGHT-HAND SIDE MAY BE A CALL. Reading the entries straight off the call would run the call once per entry, which is a different program. Writing it down once and reading the entries off what was written keeps it at one.");
   let statement_held = js_parse_statement("let holder = 0;");
-  let declarations = property_get(statement_held, "declarations");
-  let declarator = list_first(declarations);
+  let declarator = property_list_first(statement_held, "declarations");
   let id = property_get(declarator, "id");
   js_node_identifier_replace(id, name_held);
   property_set(declarator, "init", node_right);
