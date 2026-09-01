@@ -1,3 +1,4 @@
+import { property_list_get } from "./property_list_get.mjs";
 import { property_equals_json } from "./property_equals_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,7 +6,6 @@ import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_sym
 import { property_set } from "./property_set.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { not } from "./not.mjs";
-import { list_get } from "./list_get.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_replace_rule_set_symbols_mapper_symbol_on_click({
@@ -55,8 +55,7 @@ export async function app_replace_rule_set_symbols_mapper_symbol_on_click({
   let b = property_equals_json(start_held, "start", last_state);
   if (not(b)) {
     let index2 = property_get(index_selected_held, "index_selected");
-    let list = property_get(rules_used_held, "rules_used");
-    let rule_used = list_get(list, index2);
+    let rule_used = property_list_get(rules_used_held, "rules_used", index2);
     ("index is where the rule's left matched (the position passed to ",
       fn_name("app_replace_rule_apply"),
       "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
