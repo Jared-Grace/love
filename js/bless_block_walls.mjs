@@ -1,10 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_block_fronts } from "./bless_block_fronts.mjs";
+import { bless_block_sidewalk_y } from "./bless_block_sidewalk_y.mjs";
 import { bless_block_sidewalk_depth } from "./bless_block_sidewalk_depth.mjs";
 import { property_get } from "./property_get.mjs";
 export function bless_block_walls(x, y) {
   arguments_assert(arguments, 2);
-  let r = bless_block_fronts(x, y);
+  ("HOW FAR THE ROW OF FRONTS REACHES used to be worked out in a step of its own, sitting between here and the sidewalk line. Buildings are no longer all one width, so there was no stride left to multiply, and the length of the row is added up once where the widths are and carried through from there. That left the step handing its record on and doing nothing else, so it is gone and the sidewalk line is read straight.");
+  let r = bless_block_sidewalk_y(x, y);
   let r2 = bless_block_sidewalk_depth(r);
   let sidewalk_depth = property_get(r2, "sidewalk_depth");
   let block_width = property_get(r2, "block_width");
