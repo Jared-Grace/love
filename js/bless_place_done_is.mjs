@@ -10,7 +10,7 @@ export function bless_place_done_is(blessed, rung, place) {
   ("it finished.");
   ("The other question about a place asks only whether its own name was said, and that is");
   ("the narrow one on purpose. This is the wider one it was left room for: done from below.");
-  ("Both are needed because a prayer names exactly one rung, and the player climbs. Three");
+  ("Both are needed because a prayer names exactly one rung, and the player climbs.");
   ("prayers over its people finish a household without the word household ever being");
   ("said; four such households finish a building the same way. Asked only for the name, the");
   ("game would decide that a building whose every last resident had been prayed for was not");
