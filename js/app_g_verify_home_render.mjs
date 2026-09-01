@@ -9,7 +9,7 @@ import { html_div } from "./html_div.mjs";
 import { equal } from "./equal.mjs";
 import { app_g_verify_home_empty } from "./app_g_verify_home_empty.mjs";
 import { app_g_verify_home_choose } from "./app_g_verify_home_choose.mjs";
-export function app_g_verify_home_render(
+export function app_g_verify_home_render({
   chapter_shown,
   status_shown,
   chapter_state_shown,
@@ -19,11 +19,11 @@ export function app_g_verify_home_render(
   chapter_code,
   storage_key,
   refresh,
-) {
+}) {
   "One whole draw of the verify page: work out what there is to show, build the column, wire what a verse does when it is pressed, put the verses along the top, and open one.";
   "THE READING PANE IS EMPTIED IN THE KEEPER BEFORE THE VERSES ARE DRAWN AND FILLED IN AFTER, because a button pressed during the draw would otherwise write into the pane from the draw before.";
   "THE VERSE BUTTONS ARE HANDED TO THE WIRING BEFORE THEY EXIST, as an empty holder the drawing of the bar fills in; that is what lets pressing one of them light the right one.";
-  arguments_assert(arguments, 9);
+  arguments_assert(arguments, 1);
   let prepared = app_g_verify_home_prepared(
     chapter_shown,
     status_shown,
