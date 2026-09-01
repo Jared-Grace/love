@@ -11,14 +11,14 @@ export function app_code_lesson_operators_multiplication() {
   let math_name = "multiplication";
   let operator_name_math = text_combine(math_name, " sign");
   let verb = js_operator_asterisk_verb();
-  let r = app_code_lesson_operators_generic(
+  let r = app_code_lesson_operators_generic({
     operator_js,
     operator_math,
     operator_name_js,
     operator_name_math,
     verb,
     math_name,
-    identity,
-  );
+    left_transform: identity,
+  });
   return r;
 }

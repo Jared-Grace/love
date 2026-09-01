@@ -8,14 +8,14 @@ export function app_code_lesson_operators_addition() {
   let operator_name = js_operator_plus_name();
   let math_name = "addition";
   let verb = js_operator_plus_verb();
-  let r = app_code_lesson_operators_generic(
-    operator,
-    operator,
-    operator_name,
-    operator_name,
+  let r = app_code_lesson_operators_generic({
+    operator_js: operator,
+    operator_math: operator,
+    operator_name_js: operator_name,
+    operator_name_math: operator_name,
     verb,
     math_name,
-    identity,
-  );
+    left_transform: identity,
+  });
   return r;
 }
