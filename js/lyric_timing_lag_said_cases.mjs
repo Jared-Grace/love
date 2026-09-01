@@ -49,7 +49,7 @@ export function lyric_timing_lag_said_cases() {
       },
       count: 10,
       said: told_eight,
-      why: "Eight of ten is exactly the line, and exactly the line is over it. A version drawn at the same place but refusing to count the boundary in goes red here and nowhere else.",
+      why: "Eight of ten is comfortably over the line, which is three quarters, and this is the run that is well past it without being complete. It rules out a version that will only speak when every sound was answered, and one that draws the line up at nine tenths. It is not the case sitting exactly on the line - three quarters of a four-sound run is, further down - and it used to say it was, which was a sentence about a different case.",
     },
     {
       measured: {
