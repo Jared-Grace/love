@@ -1,3 +1,4 @@
+import { bless_building_people } from "./bless_building_people.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { property_get } from "./property_get.mjs";
