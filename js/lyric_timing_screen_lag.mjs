@@ -34,7 +34,7 @@ export function lyric_timing_screen_lag(parent, earlier_input) {
     return r;
   }
   async function on_measure() {
-    let r2 = await lyric_timing_screen_lag_on_measure(
+    let r2 = await lyric_timing_screen_lag_on_measure({
       run,
       heard_button,
       told,
@@ -42,7 +42,7 @@ export function lyric_timing_screen_lag(parent, earlier_input) {
       seconds_of,
       window_seconds,
       earlier_input,
-    );
+    });
     return r2;
   }
   html_button(parent, "Measure my tap lag", on_measure);
