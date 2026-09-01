@@ -23,6 +23,7 @@ export function app_g_arcs_marks_press_go({
   panel,
   strip,
 }) {
+  "Carries the reader to one change, rings both halves of it, takes the ring off whichever change was current before, and files where the tour has got to.";
   arguments_assert(arguments, 1);
   let mark = marks[number];
   let shown = add(number, 1);

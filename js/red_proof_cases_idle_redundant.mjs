@@ -11,6 +11,7 @@ export function red_proof_cases_idle_redundant(
   refused,
   described_key,
 ) {
+  "Walks the cases and picks out the two kinds that earn nothing: one that refuses no wrong version at all, and one that refuses only versions some other case also refuses.";
   arguments_assert(arguments, 4);
   let idle = [];
   let redundant = [];

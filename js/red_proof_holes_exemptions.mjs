@@ -5,6 +5,7 @@ import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 export function red_proof_holes_exemptions(allowed, unrefused) {
+  "Separates the wrong versions nothing refused into the ones let off by name and the ones nobody accounted for, and reports the let-offs that carry no reason or are no longer needed.";
   arguments_assert(arguments, 2);
   let allowed_names = properties_get(allowed);
   let holes = [];
