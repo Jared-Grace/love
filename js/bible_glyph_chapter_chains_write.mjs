@@ -1,7 +1,6 @@
+import { bible_glyph_chapter_codes } from "./bible_glyph_chapter_codes.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { list_map_join_empty } from "./list_map_join_empty.mjs";
 import { bible_glyph_chapter_chain_branch_text } from "./bible_glyph_chapter_chain_branch_text.mjs";
 import { bible_glyph_chapter_chain_spliced } from "./bible_glyph_chapter_chain_spliced.mjs";
@@ -14,8 +13,7 @@ export async function bible_glyph_chapter_chains_write() {
   "THE ADDRESSES STILL ARRIVE SPELLED OUT, which is the whole reason this is safe to generate. A bundler reads the file, not this command: by the time it looks, every address is a plain run of letters sitting in the source like any other, so each chapter keeps its own separately sendable piece and nothing about what a reader downloads changes.";
   "THE ORDER IT WRITES IS SCRIPTURE'S AND THE ORDER IT FOUND WAS THE ORDER THE CHAPTERS HAPPENED TO BE AUTHORED IN, so its first run reorders both chains. That is safe by reading rather than by trying it: every branch is guarded on the chapter code being one exact word, no two branches name the same word, so at most one of them can ever run and no branch is able to see what an earlier one did. A list of independent guards has no order.";
   arguments_assert(arguments, 0);
-  let references = bible_glyph_chapter_references();
-  let chapter_codes = list_map_property(references, "chapter_code");
+  let chapter_codes = bible_glyph_chapter_codes();
   let fetch_chain = list_map_join_empty(
     chapter_codes,
     bible_glyph_chapter_chain_branch_text,
