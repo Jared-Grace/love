@@ -19,10 +19,11 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
   ("EACH STEP COMMITS ITSELF UNDER ITS OWN NAME, so the log records four real commands with their real arguments rather than one word covering the lot, and a step that a peer sweep reaches first has lost one step rather than the whole run.");
   let chapters = bible_glyph_chapters();
   let codes = list_map_property(chapters, "chapter_code");
+  let f_name = fn_name("bible_glyph_chapters");
   list_includes_assert_json(codes, chapter_code, {
     hint: text_combine_multiple([
       "this writes what a chapter owes once it is named in the list, and that chapter is not named there yet - add the import, the numbered binding and the array entry to ",
-      fn_name("bible_glyph_chapters"),
+      f_name,
       " first, then run this again",
     ]),
   });
