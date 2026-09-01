@@ -10,7 +10,7 @@ export async function app_g_verify_home_document(
   refresh,
 ) {
   arguments_assert(arguments, 7);
-  let on_visible = await app_g_verify_home_on_visible(
+  let on_visible = await app_g_verify_home_on_visible({
     render,
     chapter,
     status,
@@ -18,6 +18,6 @@ export async function app_g_verify_home_document(
     view_get,
     poll,
     refresh,
-  );
+  });
   document.addEventListener("visibilitychange", on_visible);
 }
