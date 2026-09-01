@@ -8,14 +8,14 @@ export function app_code_lesson_operators_division() {
   let operator_name = js_operator_division_name();
   let math_name = "division";
   let verb = js_operator_division_verb();
-  let r = app_code_lesson_operators_generic(
-    operator,
-    operator,
-    operator_name,
-    operator_name,
+  let r = app_code_lesson_operators_generic({
+    operator_js: operator,
+    operator_math: operator,
+    operator_name_js: operator_name,
+    operator_name_math: operator_name,
     verb,
     math_name,
-    multiply,
-  );
+    left_transform: multiply,
+  });
   return r;
 }
