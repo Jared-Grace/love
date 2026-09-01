@@ -1,14 +1,9 @@
+import { each_async } from "./each_async.mjs";
+import { log_keep } from "./log_keep.mjs";
 import { ebible_chapter_page_exists } from "./ebible_chapter_page_exists.mjs";
 import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
-import { ternary } from "./ternary.mjs";
-import { ebible_verses } from "./ebible_verses.mjs";
-import { list_any_starts_with } from "./list_any_starts_with.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { ebible_version_books_testament_apocrypha } from "./ebible_version_books_testament_apocrypha.mjs";
 import { ebible_verses_readaloud } from "./ebible_verses_readaloud.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { each_async } from "./each_async.mjs";
+import { null_is } from "./null_is.mjs";
 export async function ebible_chapters_each_verses_list(
   chapter_codes,
   bible_folder,
@@ -17,8 +12,8 @@ export async function ebible_chapters_each_verses_list(
   "Every chapter a bible names, each with its verses.";
   "Four chapters were once passed over here by name, because their pages were missing while the book index still linked them. That is a fault in a download rather than in a bible, and the remedy is to fetch the version again - hausa Daniel 14 was linked but never shipped, and ebible.org has since dropped the link. A chapter skipped by name is worse than the error it hides: the list goes stale in silence, and three of those four named versions this repo no longer ships at all.";
   "A chapter that answers with nothing is passed over here, and that is not the skipping the paragraph above refuses. That one worked from a list of names written by hand, which is what let it go stale. This one asks the chapter itself every time: a chapter is passed over only while its own two readings disagree about how many verses it has, and it comes back on its own the moment they agree. How many are being passed over is written down and gated, so the number is watched rather than forgotten.";
-  let books = await ebible_version_books_testament_apocrypha(bible_folder);
-  let mapped = list_map_property(books, "book_code");
+  "Every chapter is read the one way, by laying the lines of the read-aloud edition against the verse marks the page carries. Which way to read a chapter used to be chosen here - the marks alone for a book the version names, reading aloud for anything else - on the belief that the archive ships the canon only and nothing beside it. That belief did not hold: books outside it turn up in versions that do not name them, so the choice was answering for chapters it had no business answering for, and every chapter went the one way from then on.";
+  "The choosing was left standing above the line that overruled it, which cost more than the question it was keeping. A repair written into the other reader reached nobody for as long as it stood, because a search for who calls a reader finds this file and stops - the call is here, and only the reading of the two lines together says the call never happens. So the question is kept in words and the dead choosing is not kept at all: a question in prose asks itself of anybody reading, while a branch that cannot be taken tells every reader something untrue.";
   await each_async(chapter_codes, lambda);
   async function lambda(chapter_code) {
     log_keep(ebible_chapters_each_verses_list.name, {
@@ -32,12 +27,7 @@ export async function ebible_chapters_each_verses_list(
     if (unshipped) {
       return;
     }
-    let any = list_any_starts_with(chapter_code, mapped);
-    let ebible_verses_get = null;
-    ebible_verses_get = ternary(any, ebible_verses, ebible_verses_readaloud);
-    ("ebible website says canon only, but seems apocrypha included?");
-    ebible_verses_get = ebible_verses_readaloud;
-    let verses = await ebible_verses_get(bible_folder, chapter_code);
+    let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
     let unpaired = null_is(verses);
     if (unpaired) {
       return;
