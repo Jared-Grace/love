@@ -81,6 +81,9 @@ function reader_of(options) {
     if (!options.idle_only) {
       gathered_into(unmatched, second, options);
     }
+    if (options.empty_answered_null && unmatched.length === 0) {
+      return null;
+    }
     return unmatched;
   }
   return answer;
@@ -105,6 +108,7 @@ export const red_proof = {
     position_not_index: reader_of({ position_not_index: true }),
     all_caught: reader_of({ all_caught: true }),
     none_caught: reader_of({ none_caught: true }),
+    empty_answered_null: reader_of({ empty_answered_null: true }),
   },
   allowed: {},
 };
