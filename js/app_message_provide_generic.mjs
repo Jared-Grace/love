@@ -79,16 +79,16 @@ export function app_message_provide_generic(category, emoji, context, verse) {
     let v = equal(value_checked, yes);
     return v;
   };
-  html_checkboxes(
+  html_checkboxes({
     context,
-    app_karate_container_main,
+    container_main_get: app_karate_container_main,
     button_back,
     top_text,
     value_previous_get,
-    "agree",
+    checkbox_name: "agree",
     choices,
     on_next,
     button_next,
     valid_get,
-  );
+  });
 }

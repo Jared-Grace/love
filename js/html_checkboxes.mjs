@@ -21,7 +21,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_centered } from "./html_centered.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-export function html_checkboxes(
+export function html_checkboxes({
   context,
   container_main_get,
   button_back,
@@ -32,7 +32,7 @@ export function html_checkboxes(
   on_next,
   button_next,
   valid_get,
-) {
+}) {
   "A whole screen of tick boxes: a line of words at the top, one big box per choice with its title and the sentence under it, a way back, and a way on that only works once what is ticked is allowed.";
   "Everything about the screen that is not the choices is handed in as something to call rather than written here - where the main part of the page goes, how the back button is drawn, how the on button is drawn, what counts as allowed. That is what lets one screen serve every place in every app that asks a person to tick something, without any of them agreeing about how their pages look.";
   "The whole box is what takes the tap, not the little square inside it. A square is a hard thing to hit with a thumb, and a row that only responds in one corner reads as a screen that is not listening.";
