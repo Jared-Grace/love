@@ -1,3 +1,4 @@
+import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
@@ -53,14 +54,7 @@ export function bless_building_family_tiles(building, index) {
   let families = property_get(building, "families");
   let upstairs = subtract(families, columns);
   let ground_is = less_than(index, columns);
-  function column_get() {
-    if (ground_is) {
-      return index;
-    }
-    let above = subtract(index, columns);
-    return above;
-  }
-  let column = column_get();
+  let column = bless_building_family_column(index, columns);
   let x_door = list_get_property(doorways, column, "x");
   let y_front = list_get_property(doorways, column, "y");
   let shape = bless_building_shape();

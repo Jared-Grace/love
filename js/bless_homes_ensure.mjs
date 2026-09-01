@@ -1,3 +1,5 @@
+import { list_size } from "./list_size.mjs";
+import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { property_list_get } from "./property_list_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -27,7 +29,7 @@ export function bless_homes_ensure(people, blocks) {
   ("in front of the player rather than one scattered over the whole world.");
   ("The doorstep is found in two steps, because a door belongs to a family and a family sits");
   ("inside a building. The building says which of the block's five sets of doorsteps, and the");
-  ("family says which of that building's three. Both are the remainder of a division already");
+  ("family says which door of that building. Both are the remainder of a division already");
   ("made, so neither can drift from the way addresses were handed out.");
   ("A resident's home is a list of one, their doorstep, so that both kinds answer the same");
   ("question about being near enough to home and the walking never has to ask which kind it");
@@ -49,7 +51,12 @@ export function bless_homes_ensure(people, blocks) {
     let doorsteps = property_list_get(block, "doors", within);
     let household = property_get(places, "household");
     let within_household = bless_place_within("household", household);
-    let door = list_get(doorsteps, within_household);
+    ("A family upstairs comes out of the door of the family below them, so the doorstep is");
+    ("found by column and not by family number. A house can hold more families than it has");
+    ("doors now, and counting along the doorsteps by family walks off the end of the row.");
+    let columns = list_size(doorsteps);
+    let column = bless_building_family_column(within_household, columns);
+    let door = list_get(doorsteps, column);
     property_set(person, "home", [door]);
     property_set(person, "roam", roam_resident);
   }
