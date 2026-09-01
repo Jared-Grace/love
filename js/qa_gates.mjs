@@ -655,6 +655,7 @@ export function qa_gates() {
     bible_glyph_chapters_verses_space_wrong_gate_run,
     bible_glyph_chapters_book_codes_unknown_gate_run,
     bible_glyph_chapter_references_gate_run,
+    bible_glyph_chapters_count_stated_gate_run,
     bible_glyph_chapter_fetch_gate_run,
     bible_glyph_chapter_rosetta_lines_fetched_gate_run,
     bible_glyph_apps_aggregate_reaching_gate_run,
