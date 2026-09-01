@@ -14,18 +14,20 @@ import { html_textarea } from "./html_textarea.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 export function app_g_word_pictures_word_block(
   word,
-  sheet,
-  gap,
-  glosses,
-  chosen,
-  known,
-  status_working,
-  status_set,
-  render,
-  wordings,
+  {
+    sheet,
+    gap,
+    glosses,
+    chosen,
+    known,
+    status_working,
+    status_set,
+    render,
+    wordings,
+  },
 ) {
   "Draws one word's whole section of the word pictures page - the word, what it means, the pictures already made for it, the longer explanation, and a box and two buttons for writing and drawing another.";
-  arguments_assert(arguments, 10);
+  arguments_assert(arguments, 2);
   let block = html_div(sheet);
   html_style_assign(block, {
     "margin-top": gap,
