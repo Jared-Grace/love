@@ -1,3 +1,4 @@
+import { divide } from "./divide.mjs";
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
@@ -16,6 +17,7 @@ export function lyric_video_subtitles_text(document) {
   "Every line is one whole card rather than a word lit up at a time. A word-by-word sweep asks the reader to watch the screen; a card asks them to read it and then listen, which is what a psalm is for.";
   "Both lines at the foot stand through the whole song in grey, quiet enough to be ignored and always there. Together they are the attribution the translation asks for, and they also answer the question a person arriving in the middle of a video actually has.";
   "The words sit at the middle of the frame rather than at the foot, because a phone is held with the lower part of the screen under a thumb and the middle is the part a person is already looking at.";
+  "★ THE MIDDLE IS STATED OUTRIGHT RATHER THAN ASKED FOR BY NAMING AN ALIGNMENT, because a subtitle that is merely aligned is moved out of the way of any other subtitle standing at the same moment - and the passage and the translation stand at every moment there is. A short card never grows far enough to touch them and so never moved; a card of ten lines does, and it was shifted downwards until it began below the passage and ran off the bottom of the frame, with nothing at all in the two thirds above it. Naming the point instead is what a placed card means, and a placed card is never moved. Where the point is put is exactly where an alignment would have put it, so nothing that fitted before has moved by so much as a pixel.";
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   let width = document.width;
   let height = document.height;
@@ -51,6 +53,9 @@ export function lyric_video_subtitles_text(document) {
     ",0,2,80,80," +
     credit_margin +
     ",1";
+  let middle_x = divide(width, 2);
+  let middle_y = divide(height, 2);
+  let lyric_place = "{\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)}";
   let song_end = subtitles_time_text(document.duration);
   let passage_event =
     "Dialogue: 0,0:00:00.00," +
@@ -93,7 +98,8 @@ export function lyric_video_subtitles_text(document) {
       subtitles_time_text(line.start) +
       "," +
       subtitles_time_text(line.end) +
-      ",Lyric,,0,0,0,,{\\fad(260,320)}" +
+      ",Lyric,,0,0,0,," +
+      lyric_place +
       line.text;
     return event;
   }
