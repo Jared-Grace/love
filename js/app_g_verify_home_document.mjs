@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_verify_home_on_visible } from "./app_g_verify_home_on_visible.mjs";
-export async function app_g_verify_home_document(
+export async function app_g_verify_home_document({
   render,
   chapter,
   status,
@@ -8,8 +8,8 @@ export async function app_g_verify_home_document(
   view_get,
   poll,
   refresh,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let on_visible = await app_g_verify_home_on_visible({
     render,
     chapter,
