@@ -89,7 +89,7 @@ export async function app_replace_rule_set(context) {
       button_rule_on_click_inner(index_rule);
     }
   }
-  let r = app_replace_rule_set_label_rules(
+  let r = app_replace_rule_set_label_rules({
     root,
     on_hint,
     context,
@@ -97,7 +97,7 @@ export async function app_replace_rule_set(context) {
     goals_count,
     end,
     rule_set_name,
-  );
+  });
   let label_rules = property_get(r, "label_rules");
   let div_abbreviations = property_get(r, "div_abbreviations");
   let symbols_invalid_chosen = property_get(r, "symbols_invalid_chosen");
