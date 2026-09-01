@@ -37,8 +37,8 @@ export function lyric_video_documents_gate_run_document_measured() {
           end,
           text: line.text,
         };
-        let r2 = [only_one];
-        return r2;
+        let r = [only_one];
+        return r;
       }
       let backwards = less_than(end, start);
       let faults_backwards = backwards
