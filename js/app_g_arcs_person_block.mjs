@@ -64,11 +64,20 @@ export function app_g_arcs_person_block(parent, person, bench) {
     "border-radius": "0.3rem",
   });
   app_g_arcs_read_row(block, bench, nickname, person);
+  let marks = property_get(bench, "marks");
   function field_line(one) {
     let name = property_get(one, "name");
     let value = property_get(one, "value");
     let shape = property_get(one, "shape");
-    app_g_arcs_field_pair(block, person_moved, name, value, shape, voice_color);
+    app_g_arcs_field_pair(
+      block,
+      person_moved,
+      name,
+      value,
+      shape,
+      voice_color,
+      marks,
+    );
   }
   each(fields, field_line);
   app_shared_note_pills(block, person_notes);
