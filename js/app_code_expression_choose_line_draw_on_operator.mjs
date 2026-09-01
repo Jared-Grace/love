@@ -84,7 +84,7 @@ export function app_code_expression_choose_line_draw_on_operator(
       if (not(waiting_was)) {
         app_shared_glow_clear(waiting);
       }
-      await app_code_expression_choose_line_stepped_draw(
+      await app_code_expression_choose_line_stepped_draw({
         line,
         node_span,
         node_value,
@@ -94,7 +94,7 @@ export function app_code_expression_choose_line_draw_on_operator(
         on_chosen,
         on_finished,
         on_change,
-      );
+      });
     }
     html_on_click(span, on_click);
   }
