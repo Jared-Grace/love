@@ -8,7 +8,7 @@ import { divide } from "./divide.mjs";
 import { multiply_divide } from "./multiply_divide.mjs";
 import { multiply } from "./multiply.mjs";
 import { list_set } from "./list_set.mjs";
-export function g_profiles_deal_weights_fit(
+export function g_profiles_deal_weights_fit({
   passes,
   names,
   values_by_name,
@@ -17,8 +17,8 @@ export function g_profiles_deal_weights_fit(
   weights,
   left,
   smallest,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("Rescales the weights in place, one axis at a time, as many times over as it is told - so that every axis ends up near the share it is still owed at once.");
   ("The repeating is here rather than at the caller because a single sweep is not a meaningful answer. Rescaling the last axis unsettles the first, so a caller handed one sweep would have weights fitted to one axis and wrong on the rest, and would have to know to ask again - which is knowledge about the fitting, not about the deal.");
   ("THE VALUES ON AN AXIS ARE HANDED IN RATHER THAN READ BACK OFF THE BUCKETS. They are the same list either way, because the buckets were made by laying out exactly these values in exactly this order, and it is the order rather than the membership that has to match - the rescaling walks them. Read back off the buckets it was read four times over for every axis of every draw, which is a hundred and ninety-six readings of one unchanging list per person dealt.");
