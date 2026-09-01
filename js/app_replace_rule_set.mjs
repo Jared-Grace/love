@@ -221,18 +221,18 @@ export async function app_replace_rule_set(context) {
         list_map_property_invoke(rule_buttons, "refresh_rb");
         ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");
         let success_duration = ternary(resumed, 0, duration);
-        await app_replace_rule_set_success(
-          rule_set_name,
+        await app_replace_rule_set_success({
+          rule_name: rule_set_name,
           goal,
           context,
           goal_list_symbols,
-          symbol_buttons,
-          success_duration,
+          sbs: symbol_buttons,
+          duration: success_duration,
           div_below,
           goal_index,
           goals,
           history,
-        );
+        });
         app_replace_rule_set_proof_show(div_proof, history);
       }
       let has_selection = null_not_is(index_selected);
