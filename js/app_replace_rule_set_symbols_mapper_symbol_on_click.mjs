@@ -1,9 +1,9 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_replace_rule_set_symbol_on_click } from "./app_replace_rule_set_symbol_on_click.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -52,8 +52,7 @@ export async function app_replace_rule_set_symbols_mapper_symbol_on_click({
   let value8 = property_get(record_start, "start_indices");
   property_set(start_indices_held, "start_indices", value8);
   let last_state = list_last_property(history, "state");
-  let left = property_get(start_held, "start");
-  let b = json_equal(left, last_state);
+  let b = property_equals_json(start_held, "start", last_state);
   if (not(b)) {
     let index2 = property_get(index_selected_held, "index_selected");
     let list = property_get(rules_used_held, "rules_used");
