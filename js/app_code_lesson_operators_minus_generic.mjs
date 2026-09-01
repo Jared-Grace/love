@@ -54,36 +54,31 @@ export function app_code_lesson_operators_minus_generic({
   function above(root) {
     let combined = text_combine_right_fn(operator, right_random_get);
     let operator_name_math_articled = text_articled_pad_space(operator_name);
-    app_code_container_light_blue_cycle_code(root, [
-      text_combine_multiple([
-        "In math and JS, ",
-        operator_name_math_articled,
-        "can be used to make a number ",
-        sign,
-        ": ",
-      ]),
-      combined,
+    let combined7 = text_combine_multiple([
+      "In math and JS, ",
+      operator_name_math_articled,
+      "can be used to make a number ",
+      sign,
+      ": ",
     ]);
+    app_code_container_light_blue_cycle_code(root, [combined7, combined]);
     app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,
       verb,
     );
-    let c3 = app_code_container_light_blue(root);
-    html_div_cycle_code(c3, [
-      text_combine_multiple([
-        "However, when making a number ",
-        sign,
-        ", there is only a number on right side of the ",
-      ]),
-      operator,
-      " : ",
+    let c = app_code_container_light_blue(root);
+    let combined8 = text_combine_multiple([
+      "However, when making a number ",
+      sign,
+      ", there is only a number on right side of the ",
     ]);
+    html_div_cycle_code(c, [combined8, operator, " : "]);
     let combined2 = text_combine_right_fn(operator, right_random_get);
     let right2 = "right";
     let combined4 = text_combine(operator, right2);
-    html_div_code_multiple(c3, [combined2, combined4]);
+    html_div_code_multiple(c, [combined2, combined4]);
     let c4 = app_code_container_light_blue(root);
     html_div_cycle_code_multiple(c4, [
       ["Therefore, ", operator, " must have a value on the right side"],
