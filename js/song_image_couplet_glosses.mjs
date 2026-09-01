@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 19,
+      kept: 22,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
