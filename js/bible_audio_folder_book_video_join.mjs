@@ -1,4 +1,4 @@
-import { media_join_if_exists_not } from "./media_join_if_exists_not.mjs";
+import { media_join_if_stale } from "./media_join_if_stale.mjs";
 import { bible_audio_folder_book_video } from "./bible_audio_folder_book_video.mjs";
 export async function bible_audio_folder_book_video_join(
   bible_folder,
@@ -6,6 +6,6 @@ export async function bible_audio_folder_book_video_join(
   paths_videos,
 ) {
   let path_video = bible_audio_folder_book_video(bible_folder, chapter_code);
-  await media_join_if_exists_not(path_video, paths_videos);
+  await media_join_if_stale(path_video, paths_videos);
   return path_video;
 }
