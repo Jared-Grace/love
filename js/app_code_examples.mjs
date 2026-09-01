@@ -29,16 +29,16 @@ export function app_code_examples(context) {
   if (complete) {
     on_more = null;
   }
-  app_code_next(
+  app_code_next({
     context,
-    c,
+    parent_more: c,
     more_text,
-    on_more,
-    example_another,
+    refresh: on_more,
+    on_next: example_another,
     on_back,
     back_text,
-    root,
-  );
+    parent_next_back: root,
+  });
   if (lesson_first_not) {
     async function previous() {
       app_code_lesson_previous_set(context);
