@@ -1,3 +1,9 @@
+import { multiply } from "./multiply.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_run_add } from "./text_run_add.mjs";
 import { text_common_lengths } from "./text_common_lengths.mjs";
@@ -14,8 +20,8 @@ export function text_runs_changed(before, after) {
   let after_runs = [];
   let before_size = before.length;
   let after_size = after.length;
-  let work = before_size * after_size;
-  let too_long = work > 250000;
+  let work = multiply(before_size, after_size);
+  let too_long = greater_than(work, 250000);
   if (too_long) {
     text_run_add(before_runs, before, true);
     text_run_add(after_runs, after, true);
@@ -28,27 +34,27 @@ export function text_runs_changed(before, after) {
   let table = text_common_lengths(before, after);
   let i = 0;
   let j = 0;
-  while (i < before_size || j < after_size) {
-    let before_left = i < before_size;
-    let after_left = j < after_size;
-    let shared = before_left && after_left && before[i] === after[j];
+  while (less_than(i, before_size) || less_than(j, after_size)) {
+    let before_left = less_than(i, before_size);
+    let after_left = less_than(j, after_size);
+    let shared = before_left && after_left && equal(before[i], after[j]);
     if (shared) {
       text_run_add(before_runs, before[i], false);
       text_run_add(after_runs, after[j], false);
       i = i + 1;
       j = j + 1;
     }
-    if (!shared) {
-      let take_before = !after_left;
+    if (not(shared)) {
+      let take_before = not(after_left);
       let both_left = before_left && after_left;
       if (both_left) {
-        take_before = table[i + 1][j] >= table[i][j + 1];
+        take_before = greater_than_equal(table[i + 1][j], table[i][j + 1]);
       }
       if (take_before) {
         text_run_add(before_runs, before[i], true);
         i = i + 1;
       }
-      if (!take_before) {
+      if (not(take_before)) {
         text_run_add(after_runs, after[j], true);
         j = j + 1;
       }
