@@ -28,6 +28,14 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("it only can while the light is being laid over the door rather than the door over it.");
   let doors = html_div(div_map);
   app_g_bless_doors_draw(doors, blocks);
+  ("The upper-floor windows, on their own layer beside the doors and for all the same");
+  ("reasons. Together the two say how many homes a building holds and on which floor each");
+  ("of them lives, which is the ladder the prayer climbs drawn on the street itself.");
+  ("Separate from the doors rather than drawn with them, because they are separate things -");
+  ("a street of one-storey houses has none of these at all, and a layer that is simply");
+  ("empty is easier to read than a call that sometimes draws nothing.");
+  let windows = html_div(div_map);
+  app_g_bless_windows_draw(windows, blocks);
   ("The layer the lit houses are drawn on, made BEFORE the glows so that it sits under");
   ("them. Both lie flat on the ground, so which one is made first is the whole of what");
   ("decides which covers the other - and a halo saying somebody has been prayed for must");
