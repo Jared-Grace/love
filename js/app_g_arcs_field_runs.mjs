@@ -4,6 +4,7 @@ import { app_g_arcs_field_row } from "./app_g_arcs_field_row.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_g_arcs_mark_row_current_set } from "./app_g_arcs_mark_row_current_set.mjs";
 import { equal } from "./equal.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { each } from "./each.mjs";
@@ -25,6 +26,7 @@ export function app_g_arcs_field_runs(
   "THE MARKED STRETCHES ARE BOLD AS WELL AS COLOURED, because a colour is the one mark some readers do not get. Anybody reading this page on a bad screen, or not seeing that particular orange, still has weight and a line through the words, so the comparison never rests on the colour by itself.";
   "THE BAR IS DRAWN HERE BECAUSE EVERY ROW DRAWN AS RUNS IS HALF OF A COMPARISON, so there is no case where one is wanted without it. Asked for separately afterwards it was forgotten on whichever row was added last, and a changed line with no bar on it is indistinguishable at a skim from the lines around it that never moved.";
   "QUOTATION MARKS SIT OUTSIDE THE COMPARISON. They are the page saying somebody is speaking, not anything anybody wrote, so marking them as moved would report a change that was never made - and dropping them from a spoken line that moved would make it the only spoken line on the page not shown as speech.";
+  "THE WASH BEHIND THE ROW IS ASKED FOR RATHER THAN SPELLED, and asked for in its not-current state. A moved row is dressed a second way while the tour is standing on it, and the two shades have to be written beside each other or clearing the one restores a colour that has since moved on - so this says which state the row starts in and nothing about what either state looks like.";
   arguments_assert(arguments, 6);
   let mark_color = app_g_arcs_moved_color();
   let app_g_arcs_field_row_answer = app_g_arcs_field_row(
@@ -40,8 +42,8 @@ export function app_g_arcs_field_runs(
     "border-left": text_combine_multiple(["4px solid ", mark_color]),
     "padding-left": "0.5rem",
     "margin-left": "-0.15rem",
-    "background-color": "rgba(180,83,10,0.05)",
   });
+  app_g_arcs_mark_row_current_set(row, false);
   let spoken = equal(shape, "spoken");
   if (spoken) {
     html_span_text(written, "“");

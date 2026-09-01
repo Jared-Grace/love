@@ -1,17 +1,24 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
-import { html_text_set } from "./html_text_set.mjs";
-import { modulo } from "./modulo.mjs";
-import { property_set } from "./property_set.mjs";
-import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
-import { html_button } from "./html_button.mjs";
+import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
+import { property_set } from "./property_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+import { html_text_set } from "./html_text_set.mjs";
+import { add } from "./add.mjs";
+import { property_get } from "./property_get.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { app_g_arcs_mark_row_current_set } from "./app_g_arcs_mark_row_current_set.mjs";
+import { app_g_arcs_marks_chip_current_set } from "./app_g_arcs_marks_chip_current_set.mjs";
+import { modulo } from "./modulo.mjs";
+import { html_scroll_center_container_settled } from "./html_scroll_center_container_settled.mjs";
+import { app_g_arcs_marks_chips } from "./app_g_arcs_marks_chips.mjs";
+import { not } from "./not.mjs";
+import { html_button } from "./html_button.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
 export function app_g_arcs_marks_press(parent, panel, marks) {
-  "A press standing in the corner of the arcs bench that carries the reader to the next line which has moved, one change per press, coming back round to the first once it has been through them all.";
+  "A tour of the moved lines standing in the corner of the arcs bench: a press that carries the reader to the next change and counts it out, a list of every change to jump straight into, and a ring drawn around whichever row the reader has been carried to.";
   "IT EXISTS BECAUSE THE MARKS ARE RARE AND THE SHEET IS LONG. One arc read here carried fifty-one moved lines spread over hundreds of turns, so the only way to see what had been rewritten was to scroll the whole arc watching for a coloured bar - and the reader who scrolls past one is told nothing at all, because a missed mark looks exactly like a stretch of arc where nothing moved.";
   "IT IS FIXED TO THE CORNER RATHER THAN SET AT THE TOP OF THE SHEET. A press that scrolls away is gone from the second screen onwards, which is every screen where the scrolling was the problem in the first place.";
   "IT IS NOT DRAWN AT ALL WHERE NOTHING MOVED, because a press with nowhere to carry anybody does nothing when it is pressed - and a reader on an arc nobody has read before would press it once, get no answer, and stop believing it on the arcs where it works.";
@@ -21,6 +28,11 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   "IT CARRIES THE READER TO THE OLDER HALF OF A PAIR, which is the top of the two lines rather than the one that is live now. The pair is read downwards - what it said, then what it says - so landing on the second half would mean arriving in the middle of the comparison and having to look up.";
   "IT ARRIVES AT ONCE RATHER THAN GLIDING. The smooth form of the same scroll was tried first and measured doing nothing at all on this bench - the press was asked for a place, asked the browser for it, and the panel stayed exactly where it stood - so what shipped is the form that was watched to work. It is also the better of the two on its own merits here: two changes can be ten thousand pixels apart, and gliding that distance is seconds of blur between the only two things the reader wanted to see.";
   "THE WHOLE PRESS HAPPENS IN ONE BREATH, which is what keeps what it says and where it stands in agreement. Where the going was waited on, six quick presses finished in the wrong order and left the panel at the fiftieth change under a press reading the second - and the press is the only thing on screen claiming to know where the reader is, so a press that can lie about it is worse than no press.";
+  "THE ROW ARRIVED AT IS RINGED, because being carried somewhere is not the same as being told what to look at. A change is centred on a screen that holds several other rows, some of them moved as well, and until the arrival marked its own row the reader had to work out from the middle of the panel which line the press had meant.";
+  "EXACTLY ONE ROW IS EVER RINGED, and the old ring is taken off before the new one is put on rather than at the moment the reader leaves it. Two rings would say two places are the current one, which is worse than none - and a ring cleared on the way out cannot be cleared at all when the tour is joined by jumping.";
+  "THE LIST IS FOLDED AWAY UNTIL IT IS ASKED FOR. Fifty numbers standing open in the corner of a phone cover the words the tour exists to show, so the thing that is always there is the small pair of presses, and the numbers come out over the page only while somebody is choosing from them.";
+  "CHOOSING A NUMBER FOLDS THE LIST BACK, because choosing is the whole reason it was opened. Left standing it would be covering the very row it had just carried the reader to, and every jump would end with the reader closing the list before they could read anything.";
+  "THE LIST FOLLOWS THE TOUR AS WELL AS DRIVING IT. Ten plain next presses with the numbers open would otherwise leave the filled chip somewhere off the top of a list that had not moved, so the list is scrolled to whichever chip is current - but only while it is open, because a folded list has no size and asking a thing with no size where it sits gives a place that means nothing.";
   arguments_assert(arguments, 3);
   let none = list_empty_is(marks);
   if (none) {
@@ -31,24 +43,90 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
   let opening = text_combine_multiple(["next change  ·  ", counted]);
   let at = {
     number: 0,
+    current: null,
+    open: false,
   };
-  function press_next() {
-    let number = property_get(at, "number");
+  let holder = html_div(parent);
+  html_style_assign(holder, {
+    position: "fixed",
+    right: "1rem",
+    bottom: "1rem",
+    "z-index": "40",
+    display: "flex",
+    "flex-direction": "column",
+    "align-items": "flex-end",
+    gap: "0.4rem",
+  });
+  let strip = html_div(holder);
+  html_style_assign(strip, {
+    display: "none",
+    "flex-wrap": "wrap",
+    "justify-content": "flex-end",
+    gap: "0.25rem",
+    "max-width": "min(22rem, 86vw)",
+    "max-height": "40vh",
+    "overflow-y": "auto",
+    padding: "0.4rem",
+    "border-radius": "0.4rem",
+    "background-color": "rgba(0,0,0,0.85)",
+    "box-shadow": "0 1px 6px rgba(0,0,0,0.35)",
+  });
+  function strip_show(open) {
+    property_set(at, "open", open);
+    let how = "none";
+    let word = "list";
+    if (open) {
+      how = "flex";
+      word = "hide";
+    }
+    html_style_set(strip, "display", how);
+    html_text_set(lister, word);
+  }
+  function go(number) {
     let row = marks[number];
     let shown = add(number, 1);
     let v = String(shown);
     let said = text_combine_multiple(["change ", v, " of ", counted]);
     html_text_set(press, said);
+    let current = property_get(at, "current");
+    let ringed = not_equal(current, null);
+    if (ringed) {
+      app_g_arcs_mark_row_current_set(marks[current], false);
+      app_g_arcs_marks_chip_current_set(chips[current], false);
+    }
+    app_g_arcs_mark_row_current_set(row, true);
+    app_g_arcs_marks_chip_current_set(chips[number], true);
+    property_set(at, "current", number);
     let after = modulo(shown, count);
     property_set(at, "number", after);
     html_scroll_center_container_settled(row, panel);
+    let open = property_get(at, "open");
+    if (open) {
+      html_scroll_center_container_settled(chips[number], strip);
+    }
   }
-  let press = html_button(parent, opening, press_next);
-  html_style_assign(press, {
-    position: "fixed",
-    right: "1rem",
-    bottom: "1rem",
-    "z-index": "40",
+  function go_chosen(number) {
+    strip_show(false);
+    go(number);
+  }
+  let chips = app_g_arcs_marks_chips(strip, count, go_chosen);
+  let bar = html_div(holder);
+  html_style_assign(bar, {
+    display: "flex",
+    gap: "0.4rem",
+  });
+  function lister_press() {
+    let open = property_get(at, "open");
+    let after_open = not(open);
+    strip_show(after_open);
+  }
+  let lister = html_button(bar, "list", lister_press);
+  function press_next() {
+    let number = property_get(at, "number");
+    go(number);
+  }
+  let press = html_button(bar, opening, press_next);
+  let dressing = {
     padding: "0.55rem 0.9rem",
     "border-radius": "0.4rem",
     border: "none",
@@ -57,6 +135,9 @@ export function app_g_arcs_marks_press(parent, panel, marks) {
     color: "#ffffff",
     "background-color": app_g_arcs_moved_color(),
     "box-shadow": "0 1px 6px rgba(0,0,0,0.35)",
-  });
+    cursor: "pointer",
+  };
+  html_style_assign(lister, dressing);
+  html_style_assign(press, dressing);
   return press;
 }
