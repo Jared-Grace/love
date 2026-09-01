@@ -1,0 +1,31 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bless_building_shape } from "./bless_building_shape.mjs";
+import { property_get } from "./property_get.mjs";
+import { bless_place_sizes } from "./bless_place_sizes.mjs";
+import { add } from "./add.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
+export function bless_world_size() {
+  arguments_assert(arguments, 0);
+  ("How many tiles of ground the prayer game needs across, and the same number down.");
+  ("It is WORKED OUT from the street rather than written down, because the street is what");
+  ("has to fit on it. A building's width and how many stand in a row are both numbers that");
+  ("change when the picture of a house changes, and a size typed in here would go on being");
+  ("green while quietly cutting the end off the street - the last building would be laid");
+  ("outside the ground, or the whole block placed at a negative square.");
+  ("One spare tile at each end so the street is not flush against the water, which is the");
+  ("edge of everywhere and cannot be walked on. A player who reaches the last door should");
+  ("still have somewhere to stand beside it.");
+  let shape = bless_building_shape();
+  let width = property_get(shape, "width");
+  let gap = property_get(shape, "gap");
+  let sizes = bless_place_sizes();
+  let count = property_get(sizes, "block");
+  let stride = add(width, gap);
+  let left = multiply(count, stride);
+  let span = subtract(left, gap);
+  let margin = 1;
+  let right = multiply(2, margin);
+  let size = add(span, right);
+  return size;
+}
