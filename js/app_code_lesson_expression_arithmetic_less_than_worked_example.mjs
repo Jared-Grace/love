@@ -4,7 +4,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { ternary } from "./ternary.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_expression_arithmetic_less_than_worked_example(
+export function app_code_lesson_expression_arithmetic_less_than_worked_example({
   other,
   other_on_left,
   a_left,
@@ -14,8 +14,8 @@ export function app_code_lesson_expression_arithmetic_less_than_worked_example(
   less_than_fn,
   root,
   less_than_symbol,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   ("one worked example: the arithmetic sub-expression done first to its value, then the comparison to true or false; other_on_left puts the plain number on the left of the < (arithmetic on the right) or the reverse");
   let t = text_to(a_left);
   let t4 = text_to(a_right);

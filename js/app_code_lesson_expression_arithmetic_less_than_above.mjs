@@ -38,27 +38,27 @@ export function app_code_lesson_expression_arithmetic_less_than_above(
   html_span_text(line, ": ");
   app_code_operators_comparison_or_list(line);
   let sum = add(2, 3);
-  app_code_lesson_expression_arithmetic_less_than_worked_example(
-    9,
-    true,
-    2,
-    "+",
-    3,
-    sum,
+  app_code_lesson_expression_arithmetic_less_than_worked_example({
+    other: 9,
+    other_on_left: true,
+    a_left: 2,
+    a_symbol: "+",
+    a_right: 3,
+    a_value: sum,
     less_than_fn,
     root,
     less_than_symbol,
-  );
+  });
   let p = multiply(3, 2);
-  app_code_lesson_expression_arithmetic_less_than_worked_example(
-    7,
-    false,
-    3,
-    "*",
-    2,
-    p,
+  app_code_lesson_expression_arithmetic_less_than_worked_example({
+    other: 7,
+    other_on_left: false,
+    a_left: 3,
+    a_symbol: "*",
+    a_right: 2,
+    a_value: p,
     less_than_fn,
     root,
     less_than_symbol,
-  );
+  });
 }
