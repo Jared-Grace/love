@@ -240,6 +240,8 @@ export function examples_notes() {
       "what a cut really hands back - only the names the span binds at its own level escape it, and a loop head opened inside it binds none of them, however alike the word below looks",
     example_function_lift_out_of_closure:
       "the third shape a long function comes in, and the one a span cannot reach at all - to a span a whole closure is one statement, so what the closure reached out for has to become what it receives",
+    example_function_lift_shadowed_global:
+      "the one word a lift may not take for granted - a name the page already answers to is not bound everywhere when the function around it binds that word itself, and the moved lines then go on appending to the wrong list in a file that parses, imports and passes every gate",
     example_param_rename_carries_plain_marker:
       "moving every mention of a parameter is not the whole rename - the marker written out beside them names it too, and that one decides whether the function may be auto-approved",
     example_param_rename_refuses_a_local:
