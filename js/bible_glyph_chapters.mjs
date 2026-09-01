@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_gen01 } from "./bible_glyph_chapter_gen01.mjs";
 import { bible_glyph_chapter_luk07 } from "./bible_glyph_chapter_luk07.mjs";
 import { bible_glyph_chapter_mrk10 } from "./bible_glyph_chapter_mrk10.mjs";
 import { bible_glyph_chapter_mrk11 } from "./bible_glyph_chapter_mrk11.mjs";
@@ -87,7 +88,9 @@ export function bible_glyph_chapters() {
   "THE THIRTY FIRST IS MARK ELEVEN, AND IT IS THE FIRST CHAPTER THE SURVEY COULD NOT DECIDE ON ITS OWN. Two hundred and forty unwritten chapters of the New Testament were measured and the top sixteen shares came back bunched between forty one and thirty eight in a hundred, which is inside the noise of how one interlinear happens to gloss a word. So the number picked the shortlist and a reading picked the chapter: the undrawn words of Mark eleven are pronouns, prepositions, the marks the interlinear uses for a gap, and three place names, leaving five real words of vocabulary of which one is supplied by a translator. That reading is what actually predicts the cost, and the share is only what narrows the field to sixteen. It cost no new picture, which is eight chapters running that have cost nothing.";
   "THE THIRTY SECOND IS MARK TWELVE, AND IT IS HERE BECAUSE IT FINISHES A SCENE RATHER THAN BECAUSE IT SCORED. Mark eleven left the question about authority hanging in the temple courts, and Mark twelve is the answer given to the same men in the same place on the same day, so a reader who has just finished the eleventh needs nothing explained to walk into the twelfth. Two chapters running that hold together are worth more to a reader with no English than two unrelated chapters that each measured slightly better. Thirty nine words in a hundred were already drawable and no new picture had to be bought, which is nine chapters in a row costing nothing. It also carries the first verse in this Bible that draws nothing at all, the tenth, which is the psalm about the stone the builders rejected, and the largest stack of negations met so far, five of them in the fourteenth, none of which are drawn.";
   "THE THIRTY THIRD IS LUKE FIFTEEN, AND IT WAS TAKEN OVER THE CHAPTER THAT WOULD HAVE CONTINUED THE ONE BEFORE IT. Mark thirteen carries on from Mark twelve exactly as Mark twelve carried on from Mark eleven, and it measured thirty two words drawable in a hundred against Luke fifteen at thirty three, so the numbers said nothing. What decided it was what the two chapters are made of. Mark thirteen is the discourse about the end, and almost nothing in it is a thing a picture can be of; Luke fifteen is three stories about losing something and finding it, made of sheep, coin, son, father, pigs, ring, robe and feast. So a chapter was turned down for its genre while its score stood level, which is the first time a reading has overruled a tie here rather than broken one. It cost no new picture, which is ten chapters in a row costing nothing.";
-  "Thirty three chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
+  "THE THIRTY FOURTH IS GENESIS ONE, AND IT IS THE FIRST CHAPTER OF THE BIBLE ARRIVING THIRTY FOURTH. Every chapter before it was chosen by what the table could draw, and the first page of the Bible was never top of that reading - thirty five words drawable in a hundred, squarely mid-range, with its commonest undrawn entries being the interlinear dash and the phrase after their kind rather than a missing vocabulary. So it was taken on a different ground: a picture Bible without the chapter a stranger opens first is missing the one page everybody already knows, and its content is concrete nouns, which is the best case pictures have. That is the second time a reading has been overruled here, and the first time the reason was the reader rather than the genre.";
+  "AND IT COST FOUR PICTURES, WHICH IS THE FIRST CHAPTER TO COST ANYTHING IN ELEVEN. The fish, the bird and the tree had no mark before it, and the moon was seated beside them and goes unused, because Genesis one says the lesser light and never says moon. Ten chapters in a row costing nothing was the table paying back what the early chapters bought; a chapter that costs four is the table meeting a part of the Bible the covenant words never reached. Creation is made of animals and plants and the table was built out of the name, the gift, the glory and the fire.";
+  "Thirty four chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.";
   "THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.";
   "THEY ARE IN THE ORDER THEY WERE WRITTEN and deliberately not in the order of the Bible. The second chapter draws the grammar words and the first does not, so reading them in this order is reading the project's two lanes in the order they were tried - and a reader who meets the newer one second meets it as an answer to the older one rather than as an unexplained difference.";
   "The chapters stay one function each rather than one large one, because a chapter is what a person authors in a sitting and what a peer reviews in a sitting, and two people writing two chapters should never be editing the same file.";
@@ -126,6 +129,7 @@ export function bible_glyph_chapters() {
   let thirty_first = bible_glyph_chapter_mrk11();
   let thirty_second = bible_glyph_chapter_mrk12();
   let thirty_third = bible_glyph_chapter_luk15();
+  let thirty_fourth = bible_glyph_chapter_gen01();
   let chapters = [
     first,
     second,
@@ -160,6 +164,7 @@ export function bible_glyph_chapters() {
     thirty_first,
     thirty_second,
     thirty_third,
+    thirty_fourth,
   ];
   return chapters;
 }
