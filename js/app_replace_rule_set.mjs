@@ -67,7 +67,9 @@ export async function app_replace_rule_set(context) {
   let resumed = property_get(r4, "resumed");
   let end = property_get(r4, "end");
   let rule_set_name = property_get(r4, "rule_set_name");
-  let rules_used = property_get(r4, "rules_used");
+  let rules_used_held = {
+    rules_used: property_get(r4, "rules_used"),
+  };
   let start_over = property_get(r4, "start_over");
   let index_selected_held = {
     index_selected: property_get(r4, "index_selected"),
@@ -85,7 +87,8 @@ export async function app_replace_rule_set(context) {
       end,
     );
     let rule_next = property_get(second, "rule");
-    let index_rule = list_index_of_json(rules_used, rule_next);
+    let list11 = property_get(rules_used_held, "rules_used");
+    let index_rule = list_index_of_json(list11, rule_next);
     let index_symbol = property_get(second, "index");
     let right = property_get(index_selected_held, "index_selected");
     if (equal(index_rule, right)) {
@@ -125,17 +128,23 @@ export async function app_replace_rule_set(context) {
   let success_held = {
     success: property_get(r, "success"),
   };
-  let symbol_buttons = property_get(r, "symbol_buttons");
-  let rule_buttons = property_get(r, "rule_buttons");
+  let symbol_buttons_held = {
+    symbol_buttons: property_get(r, "symbol_buttons"),
+  };
+  let rule_buttons_held = {
+    rule_buttons: property_get(r, "rule_buttons"),
+  };
   let duration = property_get(r, "duration");
   let refresh_count = property_get(r, "refresh_count");
   let rules_used_all = property_get(r, "rules_used_all");
   if (null_is(rules_used_all)) {
-    rules_used = rules_parsed;
+    property_set(rules_used_held, "rules_used", rules_parsed);
   } else {
-    rules_used = list_get(rules_used_all, goal_index);
+    let value12 = list_get(rules_used_all, goal_index);
+    property_set(rules_used_held, "rules_used", value12);
   }
-  app_replace_rule_set_abbreviations(rules_used, div_abbreviations);
+  let rules_used2 = property_get(rules_used_held, "rules_used");
+  app_replace_rule_set_abbreviations(rules_used2, div_abbreviations);
   async function refresh() {
     html_clear(div_rules_buttons);
     refresh_count_increase();
@@ -164,7 +173,9 @@ export async function app_replace_rule_set(context) {
       });
       return rule_button;
     }
-    rule_buttons = list_map_index(rules_used, each_rule);
+    let list12 = property_get(rules_used_held, "rules_used");
+    let value11 = list_map_index(list12, each_rule);
+    property_set(rule_buttons_held, "rule_buttons", value11);
     function rbs_each(rule_button, rule_index) {
       let success2 = property_get(success_held, "success");
       let index_selected2 = property_get(index_selected_held, "index_selected");
@@ -176,7 +187,8 @@ export async function app_replace_rule_set(context) {
       );
       return r3;
     }
-    each_index(rule_buttons, rbs_each);
+    let list8 = property_get(rule_buttons_held, "rule_buttons");
+    each_index(list8, rbs_each);
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
@@ -192,15 +204,18 @@ export async function app_replace_rule_set(context) {
         );
         let start_indices3 = property_get(start_indices_held, "start_indices");
         let start3 = property_get(start_held, "start");
+        let sbs2 = property_get(symbol_buttons_held, "symbol_buttons");
+        let rules_buttons = property_get(rule_buttons_held, "rule_buttons");
+        let rules_parsed2 = property_get(rules_used_held, "rules_used");
         let record_start = await app_replace_rule_set_symbol_on_click(
-          rules_used,
+          rules_parsed2,
           index_selected3,
           index,
           start3,
           symbols_invalid_chosen2,
-          symbol_buttons,
+          sbs2,
           start_indices3,
-          rule_buttons,
+          rules_buttons,
           duration,
           div_symbols,
         );
@@ -219,7 +234,8 @@ export async function app_replace_rule_set(context) {
         let b = json_equal(left, last_state);
         if (not(b)) {
           let index2 = property_get(index_selected_held, "index_selected");
-          let rule_used = list_get(rules_used, index2);
+          let list13 = property_get(rules_used_held, "rules_used");
+          let rule_used = list_get(list13, index2);
           ("index is where the rule's left matched (the position passed to ",
             fn_name("app_replace_rule_apply"),
             "); the proof needs it to highlight exactly which symbols the rule replaced, in the state before and the state after");
@@ -259,7 +275,8 @@ export async function app_replace_rule_set(context) {
       }
     }
     let list5 = property_get(start_held, "start");
-    symbol_buttons = list_map_index(list5, symbols_mapper);
+    let value10 = list_map_index(list5, symbols_mapper);
+    property_set(symbol_buttons_held, "symbol_buttons", value10);
     ("no success yet?");
     let b2 = property_get(success_held, "success");
     if (not(b2)) {
@@ -268,7 +285,8 @@ export async function app_replace_rule_set(context) {
       let eq = json_equal(left2, end);
       if (eq) {
         property_set(success_held, "success", true);
-        list_map_property_invoke(rule_buttons, "refresh_rb");
+        let list9 = property_get(rule_buttons_held, "rule_buttons");
+        list_map_property_invoke(list9, "refresh_rb");
         ("a resumed goal snaps straight to solved (duration 0): the win animation is feedback for the act of solving, so on a refresh - where nothing was just done - it is skipped and only the message and proof appear");
         let success_duration = ternary(resumed, 0, duration);
         await app_replace_rule_set_success({
@@ -276,7 +294,7 @@ export async function app_replace_rule_set(context) {
           goal,
           context,
           goal_list_symbols,
-          sbs: symbol_buttons,
+          sbs: property_get(symbol_buttons_held, "symbol_buttons"),
           duration: success_duration,
           div_below,
           goal_index,
@@ -299,13 +317,15 @@ export async function app_replace_rule_set(context) {
       html_visibility_hidden(div_symbols);
     }
     let start4 = property_get(start_held, "start");
-    let t = app_replace_rule_set_verify_from_try(rules_used, start4, end);
+    let rules_parsed3 = property_get(rules_used_held, "rules_used");
+    let t = app_replace_rule_set_verify_from_try(rules_parsed3, start4, end);
     let found = property_get(t, "found");
     if (not(found)) {
       function symbol_dead(symbol_button) {
         app_replace_symbol_tile_dead(symbol_button);
       }
-      each(symbol_buttons, symbol_dead);
+      let list6 = property_get(symbol_buttons_held, "symbol_buttons");
+      each(list6, symbol_dead);
       let green = app_shared_color_green_light();
       html_style_background_color_set(start_over, green);
       await html_scroll_center(start_over);
@@ -350,8 +370,10 @@ export async function app_replace_rule_set(context) {
     );
     property_set(index_selected_held, "index_selected", value3);
     ("the rows of buttons are redrawn HERE, after the chosen rule has been stored, and not by the function that worked out which rule that is. Every one of these buttons redraws itself by reading this same variable, so redrawing before the answer had been stored painted every symbol as one no rule could touch - and a symbol no rule can touch cannot be pressed, which left the game unplayable");
-    list_map_property_invoke(symbol_buttons, "refresh_sb");
-    list_map_property_invoke(rule_buttons, "refresh_rb");
+    let list7 = property_get(symbol_buttons_held, "symbol_buttons");
+    list_map_property_invoke(list7, "refresh_sb");
+    let list10 = property_get(rule_buttons_held, "rule_buttons");
+    list_map_property_invoke(list10, "refresh_rb");
     refresh_count_increase();
   }
 }
