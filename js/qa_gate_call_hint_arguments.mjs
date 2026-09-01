@@ -1,12 +1,10 @@
+import { qa_gate_call_hinted_params } from "./qa_gate_call_hinted_params.mjs";
 import { list_size } from "./list_size.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { equal } from "./equal.mjs";
-import { greater_than } from "./greater_than.mjs";
-import { subtract } from "./subtract.mjs";
 import { js_identifier_name_try } from "./js_identifier_name_try.mjs";
 import { function_params_names } from "./function_params_names.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
-import { qa_gate_names_hinted } from "./qa_gate_names_hinted.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { list_add } from "./list_add.mjs";
@@ -26,22 +24,7 @@ export async function qa_gate_call_hint_arguments(call, remembered, depth) {
   if (equal(params, null)) {
     return hint_arguments;
   }
-  let hinted = ["hint"];
-  let deeper_is = greater_than(depth, 0);
-  if (deeper_is) {
-    async function lambda2() {
-      let shallower = subtract(depth, 1);
-      let inner = await qa_gate_names_hinted(called, remembered, shallower);
-      return inner;
-    }
-    let inner2 = await catch_null_async(lambda2);
-    if (equal(inner2, null)) {
-      inner2 = [];
-    }
-    for (let name of inner2) {
-      list_add(hinted, name);
-    }
-  }
+  let hinted = await qa_gate_call_hinted_params(depth, called, remembered);
   let args = property_get(call, "arguments");
   let left = list_size(args);
   let right = list_size(params);
