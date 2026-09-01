@@ -108,7 +108,7 @@ export async function app_replace_rule_set(context) {
   let rules_used2 = property_get(rules_used_held, "rules_used");
   app_replace_rule_set_abbreviations(rules_used2, div_abbreviations);
   async function refresh() {
-    app_replace_rule_set_rules_draw(
+    app_replace_rule_set_rules_draw({
       div_rules_buttons,
       refresh_count_increase,
       start_held,
@@ -118,7 +118,7 @@ export async function app_replace_rule_set(context) {
       rule_buttons_held,
       success_held,
       index_selected_held,
-    );
+    });
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {

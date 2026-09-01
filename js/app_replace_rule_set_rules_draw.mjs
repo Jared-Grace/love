@@ -6,7 +6,7 @@ import { list_map_index } from "./list_map_index.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_replace_rule_set_rbs_each } from "./app_replace_rule_set_rbs_each.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_replace_rule_set_rules_draw(
+export function app_replace_rule_set_rules_draw({
   div_rules_buttons,
   refresh_count_increase,
   start_held,
@@ -16,8 +16,8 @@ export function app_replace_rule_set_rules_draw(
   rule_buttons_held,
   success_held,
   index_selected_held,
-) {
-  arguments_assert(arguments, 9);
+}) {
+  arguments_assert(arguments, 1);
   html_clear(div_rules_buttons);
   refresh_count_increase();
   function each_rule(rule, index) {
