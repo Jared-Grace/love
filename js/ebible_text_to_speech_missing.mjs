@@ -1,3 +1,4 @@
+import { bible_audio_speech_not_started_why } from "./bible_audio_speech_not_started_why.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -61,6 +62,7 @@ export async function ebible_text_to_speech_missing(
       chapters_missing: missing.length,
       chapters_recorded_now: 0,
       chapters_not_started: 0,
+      not_started_why: [],
       chapters_left: missing.length,
       manifests: [],
       first: null,
@@ -72,6 +74,8 @@ export async function ebible_text_to_speech_missing(
   let done = await ebible_text_to_speech_chapters(bible_folder, joined);
   let manifests = property_get(done, "manifests");
   let not_started = property_get(done, "not_started");
+  let spoken = property_get(done, "spoken");
+  let not_started_why = bible_audio_speech_not_started_why(spoken);
   let spoke = subtract(taking.length, not_started.length);
   let left = subtract(missing.length, spoke);
   let report = {
@@ -79,6 +83,7 @@ export async function ebible_text_to_speech_missing(
     chapters_missing: missing.length,
     chapters_recorded_now: spoke,
     chapters_not_started: not_started.length,
+    not_started_why,
     chapters_left: left,
     first: list_first(taking),
     last: list_last(taking),
