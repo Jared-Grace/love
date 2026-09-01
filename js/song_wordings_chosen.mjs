@@ -1,8 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_first } from "./list_first.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -27,13 +27,15 @@ export function song_wordings_chosen(echoed, bible_folder_usual) {
     let winners = [];
     let usual_won = false;
     for (let wording of wordings) {
-      let left = property_get(wording, "folded_run");
-      let run_same = equal(left, folded_run);
+      let run_same = property_equals(wording, "folded_run", folded_run);
       if (not(run_same)) {
         continue;
       }
-      let left2 = property_get(wording, "folded_shared");
-      let shared_same = equal(left2, folded_shared);
+      let shared_same = property_equals(
+        wording,
+        "folded_shared",
+        folded_shared,
+      );
       if (not(shared_same)) {
         continue;
       }
