@@ -1,3 +1,4 @@
+import { smart_alert_gate_run } from "./smart_alert_gate_run.mjs";
 import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
 import { storage_rules_gate_run } from "./storage_rules_gate_run.mjs";
 import { cors_gate_run } from "./cors_gate_run.mjs";
@@ -44,6 +45,7 @@ export function qa_gates_machine() {
     memory_fn_reference_gate_run,
     memory_symbol_gate_run,
     memory_index_size_gate_run,
+    smart_alert_gate_run,
   ];
   return gates;
 }
