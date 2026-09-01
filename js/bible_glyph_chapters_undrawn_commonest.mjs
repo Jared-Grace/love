@@ -21,7 +21,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
   let originals = {};
   let testaments = {};
   let strongs = {};
-  let r = await bible_glyph_chapters_undrawn_commonest_chapter(
+  let r = await bible_glyph_chapters_undrawn_commonest_chapter({
     chapters,
     occurrences,
     glosses,
@@ -29,7 +29,7 @@ export async function bible_glyph_chapters_undrawn_commonest(count) {
     testaments,
     strongs,
     chapters_seen,
-  );
+  });
   let filler_total = property_get(r, "filler_total");
   let drawn_total = property_get(r, "drawn_total");
   let words_total = property_get(r, "words_total");
