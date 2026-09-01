@@ -67,20 +67,20 @@ export function app_code_lesson_quizzes_generic(params) {
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
       let r = function quiz(context, parent, container, refresh, next_get) {
-        app_code_lesson_quiz(
-          container,
-          {
+        app_code_lesson_quiz({
+          container_blue_light: container,
+          qa: {
             question,
             answer,
           },
           parent,
           context,
           refresh,
-          qa,
+          info: qa,
           batch_get,
           quizzes,
           next_get,
-        );
+        });
       };
       return r;
     }
