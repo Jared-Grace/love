@@ -30,15 +30,10 @@ export function bless_building_set_back(storeys) {
   ("Asked ONCE per building, when the street is laid out, and carried on the building from");
   ("then on. Asked again later it would answer differently, and the walls a player can see");
   ("would sit a square away from the walls the game thinks are there.");
-  ("A house with TWO floors takes all of its spare room at the BACK, so the row it does not fill lies in FRONT of its doors rather than behind its roof. That row is the downstairs family yard, and it is the only ground they own besides the row their door is in - without it their share of the street is one square deep, and a prayer over them lights a stripe across the pavement rather than a home. A low house needs nothing of the kind: its one family owns the whole face already, so it is free to stand anywhere in its slot and give the row an uneven front.");
   let shape = bless_building_shape();
   let depth = property_get(shape, "depth");
   let rows = add(storeys, 1);
   let spare = subtract(depth, rows);
-  let tall = greater_than(storeys, 1);
-  if (tall) {
-    return spare;
-  }
   let back = integer_random(0, spare);
   return back;
 }
