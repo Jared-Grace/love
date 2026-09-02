@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { bible_glyph_chapters_language_functions } from "./bible_glyph_chapters_language_functions.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -50,8 +51,7 @@ export async function bible_glyph_chapters_language_gate_run() {
       });
       continue;
     }
-    let written = property_get(answered, "value");
-    let had = list_map(written, property_get_chapter_code);
+    let had = property_list_map(answered, "value", property_get_chapter_code);
     let missing = list_difference(wanted, had);
     let complete = list_empty_is(missing);
     if (not(complete)) {
