@@ -1,43 +1,38 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_building_set_back_cycle } from "./bless_building_set_back_cycle.mjs";
-import { list_get } from "./list_get.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
-export function bless_building_set_back(index, storeys) {
-  arguments_assert(arguments, 2);
-  ("How many squares back from the pavement the building at this place in the row actually");
-  ("stands - what the street asks for, cut down to what this particular house has room to");
-  ("do.");
-  ("THE ASKING AND THE ROOM ARE TWO DIFFERENT FACTS AND THIS IS WHERE THEY MEET. The run of");
-  ("set-backs is a fact about the street and says nothing about how tall any building is;");
-  ("how much spare ground a building has is a fact about that building and says nothing");
-  ("about where in the row it stands. Multiplied out anywhere else, either one would have");
-  ("to know the other, and the run could no longer be read as a plain list of numbers.");
+import { integer_random } from "./integer_random.mjs";
+export function bless_building_set_back(storeys) {
+  arguments_assert(arguments, 1);
+  ("How many squares back from the pavement a building of this height stands - drawn afresh");
+  ("every time a world is made, and never more than the house has room for.");
   ("Room is the slot MINUS the house. Every building stands in the same three rows of");
   ("ground, and a house is one row of roof with one row of wall under it for each floor -");
-  ("two rows for a one-storey house and three for a two-storey one. So a low house has a");
-  ("row to spare and a tall one has none, and a tall house asked to step back is left");
-  ("standing where it was rather than pushed out through the back of its slot.");
-  ("Cut down rather than refused, because a set-back is decoration and a slot is a rule.");
-  ("Nothing about the street is wrong if a house cannot step back - it simply does not - and");
-  ("stopping the game over it would be stopping it over the arrangement of a row of");
-  ("windows. The rule that may not bend is the one that keeps every building inside its own");
-  ("three rows, and that is exactly the rule this enforces.");
-  let cycle = bless_building_set_back_cycle();
-  let wanted = list_get(cycle, index);
+  ("two rows for a one-storey house and three for a two-storey one. So a low house has a row");
+  ("to spare and a tall one has none, and a tall house is left standing where it is rather");
+  ("than pushed out through the back of its slot. The draw is over every position the house");
+  ("could take, which for a house with no room to move is only the one it is in - so nothing");
+  ("has to ask whether this building is the kind that can step back.");
+  ("A DRAW and not a run, which is the one place the street is allowed to differ from itself");
+  ("between one visit and the next. The floors and the doors may not: a building is known by");
+  ("where it stands in the row, and a record of who has been prayed for is read back through");
+  ("that, so a house that had three families yesterday and two today has lost somebody. A");
+  ("set-back moves no family and changes no count - it moves a drawing inside a slot whose");
+  ("edges do not move - so nothing that is remembered can disagree with it.");
+  ("It is what keeps a row of low houses from being a straight line. Two low buildings on a");
+  ("block both flush with the pavement draw the same edge as five of them would, and the");
+  ("street reads as one long front with doors in it rather than as houses standing side by");
+  ("side. Fixed, the same two houses would step back on every street in the world, which is");
+  ("its own kind of stamped-out; drawn, a player walking on meets a row they have not seen.");
+  ("Asked ONCE per building, when the street is laid out, and carried on the building from");
+  ("then on. Asked again later it would answer differently, and the walls a player can see");
+  ("would sit a square away from the walls the game thinks are there.");
   let shape = bless_building_shape();
   let depth = property_get(shape, "depth");
   let rows = add(storeys, 1);
   let spare = subtract(depth, rows);
-  function back_get() {
-    if (less_than(spare, wanted)) {
-      return spare;
-    }
-    return wanted;
-  }
-  let back = back_get();
+  let back = integer_random(0, spare);
   return back;
 }
