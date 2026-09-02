@@ -1,3 +1,5 @@
+import { property_get } from "./property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div } from "./html_div.mjs";
@@ -43,9 +45,11 @@ export function app_g_bless_finished_white(div_map, tiles, roof_is) {
   function tile_shown_get(tile) {
     let roof = roof_is(tile);
     if (roof) {
-      return "0.45";
+      let r = "0.45";
+      return r;
     }
-    return "1";
+    let r2 = "1";
+    return r2;
   }
   function tile_square(tile) {
     let square = html_div(div_map);

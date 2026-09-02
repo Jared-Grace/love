@@ -1,3 +1,5 @@
+import { bless_blocks_roof_tiles } from "./bless_blocks_roof_tiles.mjs";
+import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
 import { app_g_bless_camera_span_reset } from "./app_g_bless_camera_span_reset.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -73,6 +75,14 @@ export async function app_g_bless_finished(
   ("here instead. It costs a draw of a picture that has not changed and buys the guarantee");
   ("that the map and the record agree again by the time this returns - which is what makes");
   ("the held-back draw safe to hold back at all.");
+  ("The celebration is told which squares are ROOF rather than working it out from the shape");
+  ("it was handed. What arrives here is a flat list of coordinates with nothing on it saying");
+  ("which part of a house each one is, and the top row of a patch is not a safe guess for it");
+  ("- a downstairs family owns one row of front wall, and that row is the top of its own");
+  ("patch while being no part of any roof.");
+  let blocks = property_get(world, "blocks");
+  let roofs = bless_blocks_roof_tiles(blocks);
+  let roof_is = g_coordinates_member_is(roofs);
   let ground = list_empty_not_is(tiles);
   if (ground) {
     await app_g_bless_finished_place(
@@ -81,6 +91,7 @@ export async function app_g_bless_finished(
       player_img_c,
       tiles,
       ground_show,
+      roof_is,
     );
   }
   let ground_none = not(ground);
