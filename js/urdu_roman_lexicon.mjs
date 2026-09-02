@@ -1,8 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { urdu_roman_lexicon_path } from "./urdu_roman_lexicon_path.mjs";
 import { file_read_lines } from "./file_read_lines.mjs";
 import { text_split } from "./text_split.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { number_from_text } from "./number_from_text.mjs";
@@ -27,8 +27,7 @@ export async function urdu_roman_lexicon() {
   let counted = {};
   for (let line of lines) {
     let fields = text_split(line, "\t");
-    let three = equal(fields.length, 3);
-    let unusable = not(three);
+    let unusable = equal_not(fields.length, 3);
     if (unusable) {
       continue;
     }
