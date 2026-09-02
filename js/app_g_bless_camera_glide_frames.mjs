@@ -38,6 +38,11 @@ export function app_g_bless_camera_glide_frames({
   ("throw and not this loop's.");
   ("Eased at both ends, quick through the middle, which is the same curve a plain scroll");
   ("here uses. A camera that starts and stops at full speed reads as a cut.");
+  ("The pan runs on that same eased fraction as the zoom, from wherever the camera was");
+  ("standing when the journey began towards the square it was sent to. Aimed straight at");
+  ("that square instead, every frame including the first one would hold it dead centre, so");
+  ("the whole journey across the street would be over before the zoom had begun and the");
+  ("player would see a cut and then a move.");
   ("The box carries a token saying which journey is the current one. A journey that finds a");
   ("different token there has been overtaken - by a later camera move, or by an ordinary");
   ("scroll, both of which claim the token the same way - so it stops where it stands rather");
