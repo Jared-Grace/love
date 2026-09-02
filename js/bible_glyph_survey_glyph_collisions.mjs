@@ -5,6 +5,7 @@ import { bible_glyph_survey_n } from "./bible_glyph_survey_n.mjs";
 import { bible_glyph_survey_top } from "./bible_glyph_survey_top.mjs";
 import { property_get } from "./property_get.mjs";
 export async function bible_glyph_survey_glyph_collisions(testament_name) {
+  "Surveys one testament's word roots against the picture-glyphs that stand for them, and reports which glyphs are being asked to carry more than one sense, how much of the text is covered, and what is still unmapped.";
   arguments_assert(arguments, 1);
   let r = await bible_glyph_survey_roots(testament_name);
   let r2 = bible_glyph_survey_unmapped(r);

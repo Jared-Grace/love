@@ -57,7 +57,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 3,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "the",
           "poor",
@@ -75,7 +75,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 4,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "those",
           "who",
@@ -90,7 +90,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 5,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "the",
           "meek,",
@@ -105,7 +105,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 6,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "those",
           "who",
@@ -124,7 +124,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 7,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "the",
           "merciful,",
@@ -139,7 +139,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 8,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "the",
           "pure",
@@ -155,7 +155,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 9,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "the",
           "peacemakers,",
@@ -172,7 +172,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 10,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "those",
           "who",
@@ -193,7 +193,7 @@ export function bible_glyph_chapter_mat05() {
       {
         verse_number: 11,
         words: [
-          "Blessed",
+          "$gift+smile",
           "are",
           "you",
           "when",
