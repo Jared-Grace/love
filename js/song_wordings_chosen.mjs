@@ -24,14 +24,14 @@ export function song_wordings_chosen(echoed, bible_folder_usual) {
   let tied = [];
   let unchanged = [];
   let quiet = [];
-  let floor = song_wording_echo_floor();
+  let minimum = song_wording_echo_floor();
   for (let passage of echoed) {
     let reference = property_get(passage, "reference");
     let wordings = property_get(passage, "wordings");
     let loudest = list_first(wordings);
     let folded_run = property_get(loudest, "folded_run");
     let folded_shared = property_get(loudest, "folded_shared");
-    let heard = greater_than_equal(folded_run, floor);
+    let heard = greater_than_equal(folded_run, minimum);
     if (not(heard)) {
       let quiet_entry = {
         reference,
