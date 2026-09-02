@@ -1,6 +1,6 @@
+import { app_g_arcs_read_row_on_approve } from "./app_g_arcs_read_row_on_approve.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_arcs_read_row_on_read } from "./app_g_arcs_read_row_on_read.mjs";
-import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 export function app_g_arcs_read_row(parent, bench, nickname, person) {
@@ -27,15 +27,12 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   let render = property_get(r, "render");
   let row = property_get(r, "row");
   app_shared_button_inline(row, "mark read", on_read);
-  async function on_approve() {
-    let r2 = await app_g_arc_approve_worded(
-      nickname,
-      status_working,
-      chapter_code,
-      status_set,
-      render,
-    );
-    return r2;
-  }
+  let on_approve = app_g_arcs_read_row_on_approve(
+    nickname,
+    status_working,
+    chapter_code,
+    status_set,
+    render,
+  );
   app_shared_button_inline(row, "approve as worded", on_approve);
 }
