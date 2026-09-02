@@ -7,7 +7,11 @@ import { property_get } from "./property_get.mjs";
 import { process_parent_id_or_null } from "./process_parent_id_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { or } from "./or.mjs";
-export function qa_gate_runs_in_flight_row(running, shards, runs) {
+export function qa_gate_runs_in_flight_rows_sort(running, shards, runs) {
+  "Sorts every process now running through this repo's dispatcher into the shares of a whole-repo judging and the judgings themselves, adding each to the list it belongs in.";
+  "The two lists are handed in and added to rather than made here and given back, because a share and the judging that spawned it are found on the same pass: a row is read once and lands in whichever list it belongs in, and a pass that built its own two lists would have to hand back a record for the caller to take apart again.";
+  "A judging is counted by whose child a share is, not by a word in its own line, and the reasoning for that is where this is called from - it is the whole reason this walk exists and does not belong in two places.";
+  "Nothing is added twice. A judging with several shares would otherwise be counted once per share, and a machine with one judging on it would read as a machine with seven.";
   arguments_assert(arguments, 3);
   for (let row of running) {
     let words = property_text_split_space(row, "line");
