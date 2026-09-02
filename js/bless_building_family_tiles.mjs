@@ -55,7 +55,7 @@ export function bless_building_family_tiles(building, index) {
   let ground_is = less_than(index, columns);
   let column = bless_building_family_column(index, columns);
   let x_door = list_get_property(doorways, column, "x");
-  let share = bless_building_family_tiles_share(
+  let share = bless_building_family_tiles_share({
     doorways,
     column,
     building,
@@ -63,6 +63,6 @@ export function bless_building_family_tiles(building, index) {
     upstairs,
     ground_is,
     tiles,
-  );
+  });
   return share;
 }
