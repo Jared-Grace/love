@@ -1,3 +1,4 @@
+import { git_hook_commit_msg_gate_run } from "./git_hook_commit_msg_gate_run.mjs";
 import { qa_promoted_public_pieces_served_is_cases_gate_run } from "./qa_promoted_public_pieces_served_is_cases_gate_run.mjs";
 import { app_code_quiz_unscramble_other_answer_gate_run } from "./app_code_quiz_unscramble_other_answer_gate_run.mjs";
 import { app_code_happy_gate_run } from "./app_code_happy_gate_run.mjs";
@@ -967,6 +968,7 @@ export function qa_gates() {
     app_code_happy_gate_run,
     app_code_quiz_unscramble_other_answer_gate_run,
     qa_promoted_public_pieces_served_is_cases_gate_run,
+    git_hook_commit_msg_gate_run,
   ];
   return gates;
 }
