@@ -1,3 +1,4 @@
+import { bless_view_of_people } from "./bless_view_of_people.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
@@ -20,6 +21,9 @@ export function app_g_bless_overlay_render_tap_prayed_drawing(r2, glows, wash) {
   let edge = property_get(r2, "edge");
   let held_ground = false;
   let held_people = [];
+  ("A THIRD THING THE DRAW READS, and the only one that is not a hold: whoever the last prayer for discernment named. It is kept here for the same reason the other two are - the street is redrawn from everywhere and one answer that every draw reads is one no two draws can disagree about.");
+  ("It starts EMPTY, because nothing has been prayed for yet. A player who has never asked is aimed at nobody, which is exactly what the map said before this prayer existed.");
+  let discerned = bless_view_of_people([]);
   function render() {
     "A draw of the street from the record, less whatever a celebration is still holding back.";
     let ground = not(held_ground);
@@ -37,6 +41,7 @@ export function app_g_bless_overlay_render_tap_prayed_drawing(r2, glows, wash) {
       hold,
       wash,
       held: held_people,
+      discerned,
     });
   }
   function ground_show() {
@@ -59,11 +64,18 @@ export function app_g_bless_overlay_render_tap_prayed_drawing(r2, glows, wash) {
     held_ground = ground;
     held_people = people;
   }
+  function discern_set(view) {
+    "Writes down who the prayer for discernment named, and puts the arrow on them.";
+    "The draw is asked for from here, because nothing else is about to ask - the player has just read a prayer and pressed amen, and the street has not otherwise changed.";
+    discerned = view;
+    render();
+  }
   let r = {
     render,
     ground_show,
     faces_show,
     hold_set,
+    discern_set,
   };
   return r;
 }
