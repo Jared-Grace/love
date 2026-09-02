@@ -1,7 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { audio_difference_level } from "./audio_difference_level.mjs";
 import { property_get } from "./property_get.mjs";
-export async function audio_offset_scan({
+export async function audio_offset_scan(
   path_a,
   seconds_a,
   path_b,
@@ -9,7 +10,7 @@ export async function audio_offset_scan({
   seconds_length,
   decibels_gain,
   seconds_offsets_comma,
-}) {
+) {
   "$plain path_a";
   "$plain seconds_a";
   "$plain path_b";
@@ -22,6 +23,9 @@ export async function audio_offset_scan({
   "THE SHAPE OF THE ANSWER MATTERS AS MUCH AS ITS LOWEST POINT. A leftover that drops sharply at one distance and rises steeply either side means the two agree sample for sample, so they may be blended and the blend will be solid. A leftover that stays much the same across every distance tried means they never really agreed anywhere, and the lowest reading in that list is noise rather than an alignment.";
   "THE DISTANCES ARE TAKEN APART ON COMMAS ALONE AND DELIBERATELY NOT ON FULL STOPS. This repo's usual splitter forgives a full stop as a mistyped comma, which is right where the words are names - and fatal here, where every single value is a fraction written with a full stop in the middle of it. Split that way, three hundredths of a second arrives as a zero and an oh-three, and the scan is then run over numbers nobody asked for.";
   "The distance is added to the second recording's start rather than the first's, so the answer reads as how far the second one has to move.";
+  "THE SEVEN THINGS IT NEEDS ARE ASKED FOR ONE BY ONE AND NOT AS A SINGLE PARCEL, and the reason is the seam it is run from. Nothing in the repository calls this; it exists to be typed at the dispatcher, and the dispatcher hands each word of the command line over as its own argument. Taken as a parcel, the first word arrived where the parcel was expected and every one of the seven came out empty, so the only way to run it was the way it could not be run - and it failed inside ffmpeg, with two missing recordings, rather than at the door where the mistake was.";
+  "THE SAME CHANGE IS WHAT LETS IT BE GRANTED. A parcel has no parameter names to read, so the check that stands before an approval rule is written could not see what any of the seven held and refused on that ground alone - even though the function had already said, in its own words, that all seven are ordinary data. Written out one by one, the words it already wrote are the answer.";
+  arguments_assert(arguments, 7);
   let offsets_written = seconds_offsets_comma.split(",");
   let scanned = [];
   for (let offset_written of offsets_written) {
