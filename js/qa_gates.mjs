@@ -1,3 +1,4 @@
+import { qa_promoted_public_pieces_served_is_cases_gate_run } from "./qa_promoted_public_pieces_served_is_cases_gate_run.mjs";
 import { app_code_quiz_unscramble_other_answer_gate_run } from "./app_code_quiz_unscramble_other_answer_gate_run.mjs";
 import { app_code_happy_gate_run } from "./app_code_happy_gate_run.mjs";
 import { bible_glyph_chapters_prose_gate_run } from "./bible_glyph_chapters_prose_gate_run.mjs";
@@ -965,6 +966,7 @@ export function qa_gates() {
     bible_glyph_chapters_prose_gate_run,
     app_code_happy_gate_run,
     app_code_quiz_unscramble_other_answer_gate_run,
+    qa_promoted_public_pieces_served_is_cases_gate_run,
   ];
   return gates;
 }
