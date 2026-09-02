@@ -1,3 +1,4 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -15,7 +16,6 @@ import { git_folder_commits_count } from "./git_folder_commits_count.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_prefix_change } from "./text_prefix_change.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
 export async function git_history_paths_rename_rehearse(
@@ -98,8 +98,7 @@ export async function git_history_paths_rename_rehearse(
   });
   let asked = ["filter-repo", "--force"];
   for (let pair of pairs) {
-    let left = text_combine(pair.before, ":");
-    let spelled = text_combine(left, pair.after);
+    let spelled = text_combine_3(pair.before, ":", pair.after);
     list_add_multiple(asked, ["--path-rename", spelled]);
   }
   await git_folder_run(clone_folder, asked);
