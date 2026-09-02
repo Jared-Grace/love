@@ -15,12 +15,13 @@ export function urdu_glued_words_review_row(
   ("$plain verdicts");
   ("$plain sightings");
   ("$plain roman_verdicts");
-  ("One line of the review: a run-together word, what was ruled about it, how often it stands in the translation, and a verse it stands in - shown both as the publisher wrote it and as a reader now gets it - with what each of two printings of a second Urdu bible says about the same word.");
+  ("One line of the review: a run-together word, what was ruled about it, how often it stands in the translation, and a verse it stands in - shown both as the publisher wrote it and as a reader now gets it - with what each of two printings of a second Urdu bible says about the same word, and whether a published list of Urdu words calls it a word at all.");
   ("A WORD RULED ON THAT THE TRANSLATION NO LONGER USES COMES BACK WITH A COUNT OF NOUGHT AND NO VERSE. That is not a fault: the rulings are kept as they were made, and a re-fetched download may simply no longer hold the word. It is worth seeing rather than dropping, because a ruling about a word that is not there is a ruling that should be asked about.");
   ("Both spellings of the verse are carried because that is the whole of the question. Reading only the word says nothing about whether the space belongs there; reading the sentence before and after says it at once, and a reader who knows the language can answer from the two lines without knowing anything about this repo.");
   ("The two printings are carried apart rather than reconciled here, because they answer different questions and a reader is owed both. A second publisher writing the space differently can be a house habit. The same publisher's own Latin printing writing it differently cannot be, and where the two printings of the one bible disagree with each other, that disagreement is the most useful thing on the row.");
+  ("WHETHER A DICTIONARY LISTS THE WORD IS CARRIED BESIDE WHAT THE PRINTINGS DO, AND IT IS A DIFFERENT KIND OF EVIDENCE FROM EITHER. A printing tells you what one publisher does with a word. A list of words gathered from everything people write tells you whether it is a word, and a ruling that puts a space inside something everybody else writes as one word is worth a second look whatever any bible does with it.");
   ("A word the Latin printing was never asked about comes back with nothing rather than with a silence, because it was not asked. Most rulings are in that state on purpose: the Latin printing is only asked about the ones the Urdu-script printing already found something to say about.");
-  ("THE SAME SIXTEEN NAMES ARE WRITTEN OUT TWICE HERE ON PURPOSE, once for a word that is still in the translation and once for a word that is gone. A row a reader is handed has to hold every column whichever branch built it, because a missing column reads on the page as a column somebody forgot rather than as a word nobody can find.");
+  ("THE SAME SEVENTEEN NAMES ARE WRITTEN OUT TWICE HERE ON PURPOSE, once for a word that is still in the translation and once for a word that is gone. A row a reader is handed has to hold every column whichever branch built it, because a missing column reads on the page as a column somebody forgot rather than as a word nobody can find.");
   let judged = property_get(verdicts, word);
   let verdict = property_get(judged, "verdict");
   let control_glued = property_get(judged, "glued");
@@ -33,6 +34,7 @@ export function urdu_glued_words_review_row(
   let roman_spaced = null;
   let roman_glued = null;
   let roman_apart = null;
+  let roman_listed = null;
   let asked = not(unasked);
   if (asked) {
     roman_verdict = property_get(roman_judged, "verdict");
@@ -40,6 +42,7 @@ export function urdu_glued_words_review_row(
     roman_spaced = property_get(roman_judged, "roman_spaced");
     roman_glued = property_get(roman_judged, "glued");
     roman_apart = property_get(roman_judged, "apart");
+    roman_listed = property_get(roman_judged, "listed");
   }
   let seen = sightings[word];
   let unseen = not(seen);
@@ -61,6 +64,7 @@ export function urdu_glued_words_review_row(
       roman_spaced,
       roman_glued,
       roman_apart,
+      roman_listed,
     };
     return gone;
   }
@@ -86,6 +90,7 @@ export function urdu_glued_words_review_row(
     roman_spaced,
     roman_glued,
     roman_apart,
+    roman_listed,
   };
   return row;
 }
