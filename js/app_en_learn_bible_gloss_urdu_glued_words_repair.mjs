@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
@@ -11,8 +12,6 @@ import { urdu_glued_words_split } from "./urdu_glued_words_split.mjs";
 import { equal } from "./equal.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
@@ -52,8 +51,7 @@ export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
     chapter_repair,
   );
   function unsettled_is(chapter) {
-    let s = property_get(chapter, "settled");
-    let u = not(s);
+    let u = property_not(chapter, "settled");
     return u;
   }
   let unsettled = list_filter(changed, unsettled_is);
