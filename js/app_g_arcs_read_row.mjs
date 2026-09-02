@@ -21,15 +21,15 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   arguments_assert(arguments, 4);
   let base_source = property_get(person, "base_source");
   let moved_count = property_get(person, "moved_count");
-  let r3 = app_g_arcs_read_row_line(
+  let r = app_g_arcs_read_row_line(
     bench,
     moved_count,
     base_source,
     person,
     parent,
   );
-  let line = property_get(r3, "line");
-  let row = property_get(r3, "row");
-  let on_approve = app_g_arcs_read_row_on_approve(r3, line, nickname, row);
+  let line = property_get(r, "line");
+  let row = property_get(r, "row");
+  let on_approve = app_g_arcs_read_row_on_approve(r, line, nickname, row);
   app_shared_button_inline(row, "approve as worded", on_approve);
 }
