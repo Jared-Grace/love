@@ -1,10 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_drawn_url } from "./song_image_drawn_url.mjs";
 import { html_src_set } from "./html_src_set.mjs";
 import { equal } from "./equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { html_value_get } from "./html_value_get.mjs";
-import { not } from "./not.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 export function song_image_audit_picture_redraw(
   attempts,
@@ -26,8 +26,7 @@ export function song_image_audit_picture_redraw(
   let mark = equal(attempt, kept_now) ? " · kept" : "";
   html_text_set(attempt_line, of + mark);
   let typed = html_value_get(number);
-  let b = equal(typed, said);
-  let differs = not(b);
+  let differs = equal_not(typed, said);
   if (differs) {
     html_value_set(number, said);
   }
