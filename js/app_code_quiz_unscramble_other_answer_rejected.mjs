@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
@@ -10,7 +11,6 @@ import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places
 import { list_places_get } from "./list_places_get.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_places_set_copy } from "./list_places_set_copy.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is.mjs";
@@ -44,8 +44,7 @@ export function app_code_quiz_unscramble_other_answer_rejected(rounds) {
     let values = list_places_get(tokens, value_places);
     let orderings = list_permutations(values);
     let ceiling = 5040;
-    let a = list_size(orderings);
-    let too_many = greater_than(a, ceiling);
+    let too_many = list_size_greater_than(orderings, ceiling);
     if (too_many) {
       continue;
     }
