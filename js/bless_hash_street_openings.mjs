@@ -1,7 +1,7 @@
 import { bless_hash_building_first_finished } from "./bless_hash_building_first_finished.mjs";
 import { bless_hash_building_first } from "./bless_hash_building_first.mjs";
 import { bless_hash_family_first_celebrate } from "./bless_hash_family_first_celebrate.mjs";
-import { bless_hash_household_first_finished } from "./bless_hash_household_first_finished.mjs";
+import { bless_hash_family_first_finished } from "./bless_hash_family_first_finished.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_street } from "./bless_hash_street.mjs";
 import { bless_hash_household_first } from "./bless_hash_household_first.mjs";
@@ -22,7 +22,7 @@ export function bless_hash_street_openings() {
   let street = bless_hash_street();
   let household_first = bless_hash_household_first();
   let celebrate = bless_hash_family_first_celebrate();
-  let finished = bless_hash_household_first_finished();
+  let finished = bless_hash_family_first_finished();
   let building = bless_hash_building_first();
   let building_finished = bless_hash_building_first_finished();
   let words = [
