@@ -18,6 +18,7 @@ export function app_g_bless_camera_glide_frames({
   from,
   to,
   token,
+  centered,
 }) {
   arguments_assert(arguments, 1);
   ("Builds the running of one camera journey: every frame draws the map at a size a little");
@@ -76,9 +77,7 @@ export function app_g_bless_camera_glide_frames({
       let twice = multiply(2, fraction);
       let rest = subtract(3, twice);
       let ease = multiply(squared, rest);
-      let span = subtract(to, from);
-      let right = multiply(span, ease);
-      let value = add(from, right);
+      let value = number_part_way(from, to, ease);
       app_g_bless_camera_glide_frames_draw(value, {
         container_map,
         variable,
@@ -86,6 +85,8 @@ export function app_g_bless_camera_glide_frames({
         player_img_c,
         container,
         container_e,
+        centered,
+        ease,
       });
       if (less_than(fraction, 1)) {
         requestAnimationFrame(step);
