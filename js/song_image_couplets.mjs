@@ -189,7 +189,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain, each of its flat colours one deep saturated unbroken band running straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
+        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain, the band between the two lead lines flat ruby red and the band below them flat deep crimson and no other colour anywhere in the field, each band one unbroken run straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
       symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
