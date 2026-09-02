@@ -129,7 +129,7 @@ export function song_image_couplet_glosses() {
         "Described. Awake, O sword, against my shepherd is Zechariah 13:7, quoted by CHRIST of HIMSELF. The sword put away, the whole blade inside the sheath, says satisfied - which is the couplet's word and not the verse's, and it is the state rather than the act, because the act would be the sword still falling.",
     },
     16: {
-      kept: 9,
+      kept: 17,
       lyric_ref: "Galatians 3:13, Revelation 22:3, Genesis 3:17",
       lyric_explain:
         "Cursed is the ground for thy sake in Genesis, and there shall be no more curse in Revelation. The couplet stands at the point where the second undoes the first.",
