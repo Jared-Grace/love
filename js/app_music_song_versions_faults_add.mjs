@@ -13,6 +13,7 @@ export async function app_music_song_versions_faults_add(song, wrong) {
   "$plain song";
   "Adds a fault line for each passage one song quotes from some other translation that the song rests on nowhere, or that its chosen bible hands over no words at.";
   "IT IS ASKED ONE SONG AT A TIME, AND THAT IS WHAT MAKES THE FIRST OF THE TWO QUESTIONS WORTH ASKING. The choices used to be one list for the page and were checked against every passage any song named, so a choice written under the wrong song passed as long as some other song happened to sing that verse - and the song it was written under went on being served the usual wording. Asked of the song that wrote it, the same check catches that.";
+  "IT READS THE EXCEPTIONS AND NEVER THE USUAL TRANSLATION, because the two questions here have no meaning asked of the usual one. It rests on no single passage, so asking whether the song sings it is asking nothing; and it answers at every passage the song does sing, so asking whether it has words there is fetching the whole song.";
   "EVERY FAULT SAYS WHICH SONG IT IS IN. Two songs may write a choice at the same passage, and both are right; a fault line naming only the passage would send a reader looking through both lists for the one that is wrong.";
   "THE PASSAGES ARE ASKED OF EACH BIBLE TOGETHER RATHER THAN ONE AT A TIME, and that is the whole reason this is a name of its own. The reader underneath answers a list of passages several at a time, and asking it for one passage twenty-five times over turns that into twenty-five waits one after another. Measured 2026-08-26 the gate above took three and a half minutes, of which thirteen seconds were spent computing and the rest was spent waiting for one chapter at a time to come down.";
   "Twenty-five passages are seven bibles here, so seven askings answer what twenty-five were asking, and each of the seven waits on its own passages together instead of in turn.";
@@ -21,7 +22,8 @@ export async function app_music_song_versions_faults_add(song, wrong) {
   "A passage the song rests on nowhere is never asked for at all. Its choice is already wrong at that point, and asking a bible about it would only be able to add a second fault about the same line.";
   arguments_assert(arguments, 2);
   let title = property_get(song, "title");
-  let versions = song.versions();
+  let choices = song.versions();
+  let versions = property_get(choices, "exceptions");
   let rested_on = song.references();
   let asking = {};
   for (let version of versions) {
