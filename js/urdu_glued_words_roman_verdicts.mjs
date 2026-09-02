@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_urdu_control_roman } from "./ebible_folder_urdu_control_roman.mjs";
@@ -50,8 +51,7 @@ export async function urdu_glued_words_roman_verdicts() {
   }
   let verdicts = {};
   for (let word of object_property_names(script_verdicts)) {
-    let row = property_get(script_verdicts, word);
-    let spaced = property_get(row, "spaced");
+    let spaced = property_path_get_2(script_verdicts, word, "spaced");
     let solid = words_roman[word];
     let unspelled = equal(solid, undefined);
     let unproposed = equal(spaced, null);
