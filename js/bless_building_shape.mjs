@@ -17,7 +17,7 @@ export function bless_building_shape() {
   ("It was TWO while every building had one floor, and two was right then: only the front row was wall, and one row of roof was enough to say the building had a top without eating the street. A second floor needs a second band of wall to be drawn in, and it may not take the roof strip to get it - a house with no roof showing at all reads as a wall standing on the pavement rather than as a building.");
   let family_width = bless_family_width();
   let shape = {
-    depth: 3,
+    depth: 4,
     gap: 1,
     family_width: family_width,
   };
