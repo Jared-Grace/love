@@ -32,8 +32,8 @@ export function bless_view_aimed(blessed, started, discerned) {
   let named = bless_view_people(discerned);
   function person_left_is(person) {
     let prayed = bless_person_blessed_is(blessed, person);
-    let left = not(prayed);
-    return left;
+    let remaining = not(prayed);
+    return remaining;
   }
   let left = list_filter(named, person_left_is);
   let view = bless_view_of_people(left);
