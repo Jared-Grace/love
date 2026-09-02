@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { property_get } from "./property_get.mjs";
@@ -132,15 +133,13 @@ export function bless_building(x, y, families, storeys, set_back) {
     return column;
   }
   function door_is(tile) {
-    let tile_y = property_get(tile, "y");
-    let ground = equal(tile_y, y_front);
+    let ground = property_equals(tile, "y", y_front);
     let centred = column_middle_is(tile);
     let opening = and(ground, centred);
     return opening;
   }
   function window_is(tile) {
-    let tile_y = property_get(tile, "y");
-    let above = equal(tile_y, y_upper);
+    let above = property_equals(tile, "y", y_upper);
     let centred = column_middle_is(tile);
     let column = tile_column(tile);
     let lived_in = less_than(column, upstairs);
