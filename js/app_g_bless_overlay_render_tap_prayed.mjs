@@ -1,3 +1,5 @@
+import { bless_view_discerned } from "./bless_view_discerned.mjs";
+import { app_g_bless_discern } from "./app_g_bless_discern.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_overlay_render_tap_prayed_drawing } from "./app_g_bless_overlay_render_tap_prayed_drawing.mjs";
@@ -31,6 +33,16 @@ export function app_g_bless_overlay_render_tap_prayed(
   let ground_show = property_get(drawing, "ground_show");
   let faces_show = property_get(drawing, "faces_show");
   let hold_set = property_get(drawing, "hold_set");
+  let discern_set = property_get(drawing, "discern_set");
+  ("The prayer for discernment is put up HERE rather than with the turning arrows, because");
+  ("this is where the record can be read. Its answer is a person drawn from everybody who");
+  ("is left, and who is left is a question about the record - the strip of buttons knows");
+  ("only where a thumb is.");
+  function discerned_ask() {
+    let view = bless_view_discerned(blessed, view_everyone);
+    discern_set(view);
+  }
+  app_g_bless_discern(container_map, bar, discerned_ask);
   async function person_pray(person) {
     "Saying the prayer over one person and showing everything it reached. It is the whole of";
     "what praying DOES, and it is written here rather than inside the tap because a tap is";
