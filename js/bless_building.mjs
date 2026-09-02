@@ -1,4 +1,4 @@
-import { property_equals } from "./property_equals.mjs";
+import { bless_building_window_is } from "./bless_building_window_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,11 +7,7 @@ import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
-import { divide_floor } from "./divide_floor.mjs";
-import { modulo } from "./modulo.mjs";
-import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
-import { less_than } from "./less_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -113,40 +109,20 @@ export function bless_building(x, y, families, storeys, set_back) {
   let y_flush = add(y, rows_slot);
   let y_front = subtract(y_flush, set_back);
   let y_top = subtract(y_front, storeys);
-  let roof = bless_tiles_rectangle(x, y_top, width, 1);
-  let y_walls = add(y_top, 1);
-  let face = bless_tiles_rectangle(x, y_walls, width, storeys);
-  let y_upper = subtract(y_front, 1);
-  let middle = divide_floor(slab, 2);
-  let upstairs = subtract(families, columns);
-  function column_middle_is(tile) {
-    let tile_x = property_get(tile, "x");
-    let across = subtract(tile_x, x);
-    let within = modulo(across, slab);
-    let centred = equal(within, middle);
-    return centred;
-  }
-  function tile_column(tile) {
-    let tile_x = property_get(tile, "x");
-    let across = subtract(tile_x, x);
-    let column = divide_floor(across, slab);
-    return column;
-  }
-  function door_is(tile) {
-    let ground = property_equals(tile, "y", y_front);
-    let centred = column_middle_is(tile);
-    let opening = and(ground, centred);
-    return opening;
-  }
-  function window_is(tile) {
-    let above = property_equals(tile, "y", y_upper);
-    let centred = column_middle_is(tile);
-    let column = tile_column(tile);
-    let lived_in = less_than(column, upstairs);
-    let placed = and(above, centred);
-    let glazed = and(placed, lived_in);
-    return glazed;
-  }
+  let r = bless_building_window_is(
+    x,
+    y_top,
+    width,
+    storeys,
+    y_front,
+    slab,
+    families,
+    columns,
+  );
+  let window_is = property_get(r, "window_is");
+  let door_is = property_get(r, "door_is");
+  let face = property_get(r, "face");
+  let roof = property_get(r, "roof");
   let doorways = list_filter(face, door_is);
   let windows = list_filter(face, window_is);
   let walls = list_filter_not(face, door_is);
