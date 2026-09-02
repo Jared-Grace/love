@@ -3,7 +3,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { command_line_code_ignore_stdout } from "./command_line_code_ignore_stdout.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { text_includes_assert_json } from "./text_includes_assert_json.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
+import { text_trim } from "./text_trim.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
@@ -17,20 +18,23 @@ export async function smart_self_test_recent_gate_run() {
   ("A red answer is not about the code here and cannot be fixed by editing any. Either the drives are not being tested, or the daemon is down, or the log no longer goes back far enough to tell. Read which of the three it said - the message names it - and fix the machine rather than the gate.");
   ("This asks the log rather than the drive because reading a drive's own self-test history needs to be root, and a gate that needs a password is a gate that gets skipped. The daemon already writes down what it did, and a record of what happened beats reasoning about what should have.");
   ("The unit is spelled the long way and frozen. The daemon answers to a shorter alias too, and asking the log under that shorter name returns no entries at all - which reads exactly like a daemon that has never said anything. That mistake has already been made here more than once, so the working name is written down rather than remembered.");
+  ("The window is quoted with double quotes and no other kind. What runs these commands starts the program directly rather than through a shell, and splits the line itself on a rule that understands double quotes only. Single quotes are ordinary characters to it, so a window written in them arrives as three separate arguments, the command fails, and a runner told to ignore the exit code hands back an empty answer - which reads exactly like a log with nothing in it. That is this gate's own subject repeated one level down, and it was written the wrong way first.");
   let unit = text_frozen("smartmontools");
   let since = text_frozen("7 days ago");
   let command = text_combine_multiple(["systemctl is-active ", unit]);
   let active = await command_line_code_ignore_stdout(command);
-  let part = text_frozen("active");
-  text_includes_assert_json(active, part, {
+  ("Compared whole rather than looked for inside the answer. The word for a stopped daemon is the word for a running one with two letters on the front, so asking whether the reply contains the running word answers yes about a daemon that is off. It was written the containing way first, and it would have passed for exactly the failure this gate exists to notice.");
+  let left = text_trim(active);
+  let right = text_frozen("active");
+  equal_assert_json(left, right, {
     unit,
     hint: "the drive-testing daemon is not running, so nothing is ordering self-tests and its log would be quiet for that reason rather than a good one - start it before believing anything else here",
   });
   ("Asks for one entry older than the window opens. Anything at all coming back proves the record covers the whole window; nothing coming back proves only that the record is younger than the question.");
   let command2 = text_combine_multiple([
-    "journalctl --until '",
+    'journalctl --until "',
     since,
-    "' -n 1 -q --no-pager",
+    '" -n 1 -q --no-pager',
   ]);
   let older = await command_line_code_ignore_stdout(command2);
   let list = text_split_newline(older);
@@ -42,14 +46,14 @@ export async function smart_self_test_recent_gate_run() {
   let command3 = text_combine_multiple([
     "journalctl -u ",
     unit,
-    " --since '",
+    ' --since "',
     since,
-    "' --no-pager",
+    '" --no-pager',
   ]);
   let log = await command_line_code_ignore_stdout(command3);
   let mapped = text_split_newline(log);
-  let part2 = text_frozen("self-test");
-  let tests = list_filter_text_includes(mapped, part2);
+  let part = text_frozen("self-test");
+  let tests = list_filter_text_includes(mapped, part);
   list_empty_not_is_assert_json(tests, {
     unit,
     since,
