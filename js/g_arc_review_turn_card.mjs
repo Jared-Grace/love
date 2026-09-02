@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_arc_turn_scripture_named } from "./g_arc_turn_scripture_named.mjs";
+import { g_arc_turn_passage_unechoed } from "./g_arc_turn_passage_unechoed.mjs";
 import { g_arc_review_notes_turn } from "./g_arc_review_notes_turn.mjs";
 export function g_arc_review_turn_card(
   entry,
@@ -29,6 +30,7 @@ export function g_arc_review_turn_card(
   let scripture = property_get(answered, "scripture");
   let after = property_get(turn, "after");
   let believes = property_get(turn, "believes");
+  let passage_unechoed = g_arc_turn_passage_unechoed(after, scripture);
   let standing = g_arc_review_notes_turn(notes, index, number);
   let r = {
     number,
@@ -41,6 +43,7 @@ export function g_arc_review_turn_card(
     scripture,
     after,
     believes,
+    passage_unechoed,
     notes: standing,
     moved,
     held,
