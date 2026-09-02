@@ -1,6 +1,6 @@
 import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
+import { app_g_bless_color_family_remaining } from "./app_g_bless_color_family_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -21,7 +21,7 @@ export function app_g_bless_pointers(pointers, everyone, remaining) {
   ("It MOVES, and that is what makes it easier to see than a prayer already said. A blessing is a still gold light and stays one - it is a finished thing, and a finished thing has no business waving. What is still to be done is the thing nodding, so a player sweeping their eyes over a street full of gold picks out the few faces that still want something without reading the street at all.");
   ("The same warm colour as the ring, because it is the same fact. A second colour here would read as a second kind of person and send a player looking for a difference that is not there.");
   ("EVERYBODY is given an arrow when the street is first drawn and praying only SHOWS one, for the reason the lights and the rings are made that way: a person's tile names the square their step is heading for rather than the one they are on, so a mark placed at the moment it becomes true arrives ahead of them and stands waiting. An arrow made before anybody has moved is carried by their steps instead of placed by them, which is why the whole street is handed in here and not only the people to point at.");
-  let color = app_g_bless_color_household_remaining();
+  let color = app_g_bless_color_family_remaining();
   let size = g_img_square_size_css();
   let font_size = text_combine_multiple(["calc((", size, ") * 0.75)"]);
   let lift = text_combine_multiple(["translateY(calc((", size, ") * -1.1))"]);

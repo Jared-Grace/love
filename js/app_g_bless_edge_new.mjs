@@ -1,6 +1,6 @@
 import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
+import { app_g_bless_color_family_remaining } from "./app_g_bless_color_family_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
@@ -19,7 +19,7 @@ export function app_g_bless_edge_new(container_map) {
   ("out at the frame, past whatever crowd is in between, and often in a corner where the eye");
   ("is not looking. An arrow over a head is met face on and can afford to be the size of the");
   ("person it sits over; this one has to be caught at the edge of a glance.");
-  let color = app_g_bless_color_household_remaining();
+  let color = app_g_bless_color_family_remaining();
   let size = g_img_square_size_css();
   let font_size = text_combine_multiple(["calc((", size, ") * 1.2)"]);
   let outer = html_div(container_map);
