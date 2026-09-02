@@ -60,6 +60,7 @@ export function bless_building_built_on_is({
     built,
     slot,
     built_on_is,
+    y_front,
   };
   return r2;
 }
