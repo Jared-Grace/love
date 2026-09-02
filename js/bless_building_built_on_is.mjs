@@ -25,7 +25,7 @@ export function bless_building_built_on_is({
   arguments_assert(arguments, 1);
   let y_front = subtract(y_flush, set_back);
   let y_top = subtract(y_front, storeys);
-  let r = bless_building_window_is(
+  let r = bless_building_window_is({
     x,
     y_top,
     width,
@@ -34,7 +34,7 @@ export function bless_building_built_on_is({
     slab,
     families,
     columns,
-  );
+  });
   let window_is = property_get(r, "window_is");
   let door_is = property_get(r, "door_is");
   let face = property_get(r, "face");
