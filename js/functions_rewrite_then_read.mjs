@@ -1,6 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_ast_offenders_generic } from "./functions_ast_offenders_generic.mjs";
+import { functions_rewrite_fixed_targets } from "./functions_rewrite_fixed_targets.mjs";
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { js_rewrite_then_read_pairs } from "./js_rewrite_then_read_pairs.mjs";
+import { functions_ast_offenders_generic } from "./functions_ast_offenders_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_unique } from "./list_add_unique.mjs";
 import { each } from "./each.mjs";
@@ -17,13 +19,23 @@ export async function functions_rewrite_then_read() {
   "Every function that has a named function written out again and then, in the same run, calls something that reads it - each named beside the pairings that say so, and beside how many functions were opened as candidates at all.";
   "A RUN THAT HAS ALREADY LOADED A FUNCTION GOES ON HOLDING THE VERSION IT LOADED, and the file changing underneath it changes nothing about what is in hand. So a command that rewrites a function and then asks anything that reads it is answered about the repo as it was before its own edit. It does not throw and nothing goes red: it answers calmly, and the wrong answer wears the shape of the right one.";
   "IT WAS CALLED A CLASS OF ONE ONCE AND WAS NOT. A sweep in August 2026 found a single member and the reading was left to be done by hand from then on; a second arrived within days, and was found the same way the first was - from an answer that looked wrong for some other reason. Two is enough to stop reading it by hand.";
-  "TWO PASSES, BECAUSE ONE OF THE QUESTIONS IS CHEAP AND THE OTHER IS A WALK. Whether a tree rewrites anything at all is read straight off its imports; whether a callee reaches the rewritten name means walking the import graph from that callee, and doing it for every function in the repo would be a walk per function rather than a walk per candidate.";
+  "THREE PASSES NOW, BECAUSE A REWRITE IS ASKED FOR IN TWO SHAPES AND ONLY ONE OF THEM SAYS SO AT THE CALL SITE. A seam is handed the name it is about to write, so its caller can be read off its own body alone. A writer with one fixed file is called by name and empty brackets and gives nothing away, so which files it writes has to be worked out first, over the whole repo, before any caller can be read against it. That first pass is what the landing command for a picture Bible chapter needed and did not have: it called a writer of the chapter list and then a step that read the list, and every reading here said it was clean.";
+  "THE FIRST PASS IS ASSERTED TO HAVE FOUND SOMETHING RATHER THAN REPORTED. A repo with no fixed writers in it at all is not a state this repo can reach - the registers here are all edited by one - so an empty answer means the pass has stopped recognising them, and the half of this reading built on it would go quiet without a word. A count handed back beside the verdict would be a number nobody reads; the whole lesson of the defect this gate is for is that an unread number is not a check.";
+  "TWO PASSES AFTER THAT, BECAUSE ONE OF THE QUESTIONS IS CHEAP AND THE OTHER IS A WALK. Whether a tree rewrites anything at all is read straight off its imports; whether a callee reaches the rewritten name means walking the import graph from that callee, and doing it for every function in the repo would be a walk per function rather than a walk per candidate.";
   "THE WALK IS PAID FOR ONCE PER CALLEE RATHER THAN ONCE PER PAIRING. The same callee turns up under several targets and under several candidates, and its reachable set does not depend on which pairing asked.";
   "A callee whose walk cannot be worked out is dropped rather than kept. It is the quiet direction, and it is the right one here: this reading is answered against a ratchet, and a walk that failed would otherwise add a name nobody can act on and freeze it into the record.";
   "HOW MANY CANDIDATES WERE OPENED COMES BACK BESIDE THEM, because the offenders cannot say. Nothing offending is what a clean repo looks like and also what a first pass that has stopped recognising a rewrite looks like - and that pass is read off imports, so a rename of the writing atoms would empty it in one commit and leave every run after that answering clean about nothing.";
   arguments_assert(arguments, 0);
+  let writers = await functions_rewrite_fixed_targets();
+  list_empty_not_is_assert_json(writers, {
+    hint: "no function in this repo was found to rewrite a fixed named file, which cannot be true while the registers here are edited by commands that do exactly that - so the reading that finds them has stopped recognising one, and half of this gate is now answering clean about nothing",
+  });
+  function functions_rewrite_then_read_pairs_lambda(ast) {
+    let pairs = js_rewrite_then_read_pairs(ast, writers);
+    return pairs;
+  }
   let candidates = await functions_ast_offenders_generic(
-    js_rewrite_then_read_pairs,
+    functions_rewrite_then_read_pairs_lambda,
     "pairs",
   );
   let callees = [];
