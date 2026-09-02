@@ -3,8 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { g_arc_lines_moved } from "./g_arc_lines_moved.mjs";
 import { g_arc_moved_by_turn } from "./g_arc_moved_by_turn.mjs";
-import { property_list_size } from "./property_list_size.mjs";
-import { add } from "./add.mjs";
+import { g_arc_moved_count } from "./g_arc_moved_count.mjs";
 import { property_or_null } from "./property_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { g_arc_noted_held_by_turn } from "./g_arc_noted_held_by_turn.mjs";
@@ -22,6 +21,7 @@ export function g_arc_review_person_cards(
   gender,
   base,
   asked,
+  approved_arc,
 ) {
   "$plain nickname";
   "$plain gender";
@@ -36,7 +36,9 @@ export function g_arc_review_person_cards(
   "THE OLDER COPY COMES IN NAMED, and no older copy at all is null rather than an empty arc. An arc with nothing behind it is not an arc that said nothing, and comparing against an empty one would mark every line of it as new - which is the whole arc shouting, on exactly the reading where none of it has been judged yet and the shouting means nothing.";
   "THE NAME FOR WHERE IT CAME FROM IS PASSED STRAIGHT OUT, because what the page must say about the moved lines depends on it. Moved since you read it and moved since the backup was taken are different claims, and a page told only that there is a difference would have to pick one of them and be wrong half the time.";
   "THE LINES THAT WERE ASKED ABOUT AND KEPT ARE WORKED OUT ONLY AGAINST THE COPY A REVISION REPLACED, and never against a reading or a backup. The addresses come from the one wave of notes that one revision answered, so they line up with that revision and with nothing else: against a reading taken since, they would mark a note as unanswered on a line the reader has already been shown the outcome of, and against the oldest backup they would name a wave from a day the backup knows nothing about. Both of those are the page telling somebody they were ignored when they were not.";
-  arguments_assert(arguments, 7);
+  "THE APPROVED COPY COMES IN SEPARATELY FROM THE ONE THE MARKS ARE MEASURED AGAINST, and it has to, because they answer different questions. The base answers what has moved since somebody last looked; the approved copy answers what has moved since somebody last said the wording was right. Those come apart the moment an arc is read again after being passed - the marks go quiet while lines the reviewer never approved sit in it unremarked.";
+  "NO APPROVED COPY IS NULL AND NOT AN EMPTY ARC, for the same reason the base is. An arc nobody has passed has not been passed on nought lines, and compared against an empty one every line it holds would count as moved since an approval that never happened.";
+  arguments_assert(arguments, 8);
   let index = property_get(entry, "index");
   let arc = property_get(entry, "arc");
   let base_arc = property_get(base, "arc");
@@ -47,11 +49,13 @@ export function g_arc_review_person_cards(
   if (older) {
     let moved = g_arc_lines_moved(base_arc, arc);
     by_turn = g_arc_moved_by_turn(arc, moved);
-    let changed = property_list_size(moved, "changed");
-    let vanished = property_list_size(moved, "vanished");
-    let appeared = property_list_size(moved, "appeared");
-    let left = add(changed, vanished);
-    moved_count = add(left, appeared);
+    moved_count = g_arc_moved_count(moved);
+  }
+  let approved = not_equal(approved_arc, null);
+  let approved_moved_count = 0;
+  if (approved) {
+    let approved_moved = g_arc_lines_moved(approved_arc, arc);
+    approved_moved_count = g_arc_moved_count(approved_moved);
   }
   let person_moved = property_or_null(by_turn, "0");
   let untouched = equal(person_moved, null);
@@ -90,6 +94,8 @@ export function g_arc_review_person_cards(
     person_notes,
     base_source,
     moved_count,
+    approved,
+    approved_moved_count,
     person_moved,
     held_count,
     person_held,
