@@ -1,9 +1,8 @@
+import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_ast_offenders_generic } from "./functions_ast_offenders_generic.mjs";
 import { js_rewrite_targets } from "./js_rewrite_targets.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export async function functions_rewrite_fixed_targets() {
@@ -20,8 +19,7 @@ export async function functions_rewrite_fixed_targets() {
   function functions_rewrite_fixed_targets_writer_lambda(writer) {
     let f_name = property_get(writer, "f_name");
     let sites = property_get(writer, "targets");
-    let named = list_map_property(sites, "target");
-    let targets = list_unique(named);
+    let targets = list_map_property_unique(sites, "target");
     let told = {
       f_name,
       targets,
