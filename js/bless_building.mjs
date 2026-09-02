@@ -1,4 +1,4 @@
-import { bless_building_window_is } from "./bless_building_window_is.mjs";
+import { bless_building_built_on_is } from "./bless_building_built_on_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,13 +6,7 @@ import { bless_building_columns } from "./bless_building_columns.mjs";
 import { multiply } from "./multiply.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
-import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
-import { and } from "./and.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
-import { list_concat } from "./list_concat.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
 export function bless_building(x, y, families, storeys, set_back) {
   arguments_assert(arguments, 5);
   ("One building, given as its parts - the roof seen from above, the bands of front wall it");
@@ -107,35 +101,25 @@ export function bless_building(x, y, families, storeys, set_back) {
   let width = multiply(columns, slab);
   let rows_slot = subtract(depth, 1);
   let y_flush = add(y, rows_slot);
-  let y_front = subtract(y_flush, set_back);
-  let y_top = subtract(y_front, storeys);
-  let r = bless_building_window_is(
-    x,
-    y_top,
-    width,
+  let r = bless_building_built_on_is(
+    y_flush,
+    set_back,
     storeys,
-    y_front,
+    x,
+    width,
     slab,
     families,
     columns,
+    y,
+    depth,
   );
-  let window_is = property_get(r, "window_is");
-  let door_is = property_get(r, "door_is");
-  let face = property_get(r, "face");
+  let built_on_is = property_get(r, "built_on_is");
+  let slot = property_get(r, "slot");
+  let built = property_get(r, "built");
+  let walls = property_get(r, "walls");
+  let windows = property_get(r, "windows");
+  let doorways = property_get(r, "doorways");
   let roof = property_get(r, "roof");
-  let doorways = list_filter(face, door_is);
-  let windows = list_filter(face, window_is);
-  let walls = list_filter_not(face, door_is);
-  let solid = list_concat(roof, walls);
-  let built = list_concat(solid, doorways);
-  let slot = bless_tiles_rectangle(x, y, width, depth);
-  function built_on_is(tile) {
-    let tile_y = property_get(tile, "y");
-    let below = greater_than_equal(tile_y, y_top);
-    let over = less_than_equal(tile_y, y_front);
-    let within = and(below, over);
-    return within;
-  }
   let yard = list_filter_not(slot, built_on_is);
   let building = {
     roof: roof,
