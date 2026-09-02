@@ -1,14 +1,7 @@
+import { urdu_glued_words_roman_verdicts_word } from "./urdu_glued_words_roman_verdicts_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { urdu_glued_words_roman_verdicts_joined_glued } from "./urdu_glued_words_roman_verdicts_joined_glued.mjs";
-import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { text_split } from "./text_split.mjs";
-import { lists_cartesian_product } from "./lists_cartesian_product.mjs";
-import { list_map } from "./list_map.mjs";
-import { urdu_glued_words_control_verdict } from "./urdu_glued_words_control_verdict.mjs";
 export async function urdu_glued_words_roman_verdicts() {
   "What the Latin-alphabet printing of the second Urdu bible says about every ruling the Urdu-script printing of it already found something to say about, kept as the word against the spellings that were looked for, how often each side stands, and what that amounts to.";
   "It answers a question the first control cannot. When one translation writes a space and another does not, that can be two publishing houses following two habits, and no count will tell you which. Here there are not two translations: there is one translation printed in two alphabets, so a difference between the printings is a difference of typesetting and never a difference of wording. Where the Latin printing runs the pieces together, the space in the Urdu printing is a habit; where the Latin printing writes the space too, the boundary is real.";
@@ -32,51 +25,16 @@ export async function urdu_glued_words_roman_verdicts() {
   let script_verdicts = property_get(r2, "script_verdicts");
   let control = property_get(r2, "control");
   let verdicts = {};
-  for (let word of object_property_names(script_verdicts)) {
-    let spaced = property_path_get_2(script_verdicts, word, "spaced");
-    let unproposed = equal(spaced, null);
-    if (unproposed) {
-      continue;
-    }
-    let pieces = text_split(spaced, " ");
-    let choices = choices_of(pieces);
-    let unspelled = equal(choices, null);
-    if (unspelled) {
-      continue;
-    }
-    let combinations = lists_cartesian_product(choices);
-    let apart_texts = list_map(combinations, joined_apart);
-    let word_spellings = spellings_of(word);
-    let unlisted = equal(word_spellings, null);
-    let listed = not(unlisted);
-    let glued_texts = word_spellings;
-    if (unlisted) {
-      glued_texts = list_map(combinations, joined_glued);
-    }
-    let apart = occurrences(apart_texts);
-    let glued = occurrences(glued_texts);
-    let spacing_ruled = split[word];
-    let unruled = equal(spacing_ruled, undefined);
-    let spacing_wanted = not(unruled);
-    let verdict = null;
-    if (spacing_wanted) {
-      verdict = urdu_glued_words_control_verdict(apart, glued);
-    }
-    let keeping = not(spacing_wanted);
-    if (keeping) {
-      verdict = urdu_glued_words_control_verdict(glued, apart);
-    }
-    let judged = {
-      word,
-      roman: glued_texts,
-      roman_spaced: apart_texts,
-      listed,
-      glued,
-      apart,
-      verdict,
-    };
-    verdicts[word] = judged;
-  }
+  urdu_glued_words_roman_verdicts_word(
+    script_verdicts,
+    choices_of,
+    joined_apart,
+    spellings_of,
+    joined_glued,
+    occurrences,
+    split,
+    verdicts,
+  );
   let r = {
     control,
     verdicts,
