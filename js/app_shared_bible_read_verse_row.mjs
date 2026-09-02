@@ -1,7 +1,3 @@
-import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
-import { app_shared_bible_read_verse_row_cells } from "./app_shared_bible_read_verse_row_cells.mjs";
-import { app_shared_bible_read_verse_actions } from "./app_shared_bible_read_verse_actions.mjs";
-import { app_shared_bible_read_verse_row_grid } from "./app_shared_bible_read_verse_row_grid.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_get } from "./property_get.mjs";
@@ -9,9 +5,13 @@ import { property_get_or } from "./property_get_or.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { ebible_book_code_to_name } from "./ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
+import { app_shared_bible_read_verse_row_grid } from "./app_shared_bible_read_verse_row_grid.mjs";
 import { app_shared_bible_toggle_update } from "./app_shared_bible_toggle_update.mjs";
 import { app_shared_bible_read_persist_selection } from "./app_shared_bible_read_persist_selection.mjs";
 import { app_shared_bible_read_count_refresh } from "./app_shared_bible_read_count_refresh.mjs";
+import { app_shared_bible_passage_kept_set } from "./app_shared_bible_passage_kept_set.mjs";
+import { app_shared_bible_read_verse_row_cells } from "./app_shared_bible_read_verse_row_cells.mjs";
+import { app_shared_bible_read_verse_actions } from "./app_shared_bible_read_verse_actions.mjs";
 import { app_shared_bible_read_selection_last } from "./app_shared_bible_read_selection_last.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -46,6 +46,8 @@ export async function app_shared_bible_read_verse_row(
   let verse_book_name = ebible_book_code_to_name(books_en, verse_book_code);
   let verse_chapter_name = ebible_chapter_code_to_name(verse_chapter_code);
   let p = app_shared_bible_read_verse_row_grid(content, v);
+  ("nothing follows the scripture when a whole chapter is being read. A copy taken here may run over many verses, and the only things the readers put after a verse - the words of it explained one at a time - belong to a screen showing a single verse, so there is nothing here that could be put after which one.");
+  let lines_copy_extra = [];
   let r = app_shared_bible_toggle_update(
     updates,
     verse_numbers_chosen,
@@ -53,6 +55,7 @@ export async function app_shared_bible_read_verse_row(
     verse_chapter_code,
     languages_verses,
     p,
+    lines_copy_extra,
   );
   let select = property_get(r, "select");
   function select_persist() {
