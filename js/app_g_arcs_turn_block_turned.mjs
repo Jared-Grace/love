@@ -61,33 +61,33 @@ export function app_g_arcs_turn_block_turned({
     });
   }
   let marks = property_get(bench, "marks");
-  app_g_arcs_turn_field(
-    "opener",
-    opener,
+  app_g_arcs_turn_field({
+    name: "opener",
+    value: opener,
     block,
     moved,
     held,
     voice_color,
     marks,
-  );
-  app_g_arcs_turn_field(
-    "before",
-    before,
+  });
+  app_g_arcs_turn_field({
+    name: "before",
+    value: before,
     block,
     moved,
     held,
     voice_color,
     marks,
-  );
-  app_g_arcs_turn_field(
-    "reference",
-    reference,
+  });
+  app_g_arcs_turn_field({
+    name: "reference",
+    value: reference,
     block,
     moved,
     held,
     voice_color,
     marks,
-  );
+  });
   app_g_arcs_field_shaped(
     block,
     "scripture",
@@ -97,15 +97,15 @@ export function app_g_arcs_turn_block_turned({
   );
   let reacted = text_empty_not_is(after);
   if (reacted) {
-    app_g_arcs_turn_field(
-      "after",
-      after,
+    app_g_arcs_turn_field({
+      name: "after",
+      value: after,
       block,
       moved,
       held,
       voice_color,
       marks,
-    );
+    });
   }
   let turned = text_empty_not_is(believes);
   let r = {
