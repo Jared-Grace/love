@@ -64,9 +64,11 @@ export async function g_arc_review_chapter_cards(chapter_code) {
       notes,
       nickname,
       gender,
-      base,
-      asked,
-      approved_arc,
+      {
+        base,
+        asked,
+        approved_arc,
+      },
     );
     list_add(people, person);
   }
