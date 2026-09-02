@@ -30,8 +30,9 @@ export function bless_building(x, y, families, storeys, set_back) {
   ("well as along now, and how far up is another thing about this one that the row it stands");
   ("in decides rather than the picture of a house in general.");
   ("How far BACK is handed in for a third time and for the third same reason. Where in its");
-  ("slot a house stands is a fact about the row, and it arrives already cut down to what this");
-  ("building has room for, so nothing here has to check it.");
+  ("slot a house stands is drawn when the street is laid out, and it arrives already cut down");
+  ("to what this building has room for, so nothing here has to check it. It is the only thing");
+  ("about a house that differs between one visit to the street and the next.");
   ("The front divides into one COLUMN per family per floor, three squares across, and the");
   ("building is exactly those columns laid side by side. A one-storey house needs a column");
   ("for every family and is as wide as it ever was; a two-storey house needs half as many");
