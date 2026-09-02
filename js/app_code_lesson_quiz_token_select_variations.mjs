@@ -9,6 +9,8 @@ import { each } from "./each.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_code_quiz_value_dealings } from "./app_code_quiz_value_dealings.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { app_code_lesson_quiz_token_select_variations_spelled } from "./app_code_lesson_quiz_token_select_variations_spelled.mjs";
@@ -16,6 +18,7 @@ import { lists_unique } from "./lists_unique.mjs";
 export function app_code_lesson_quiz_token_select_variations(code) {
   "every accepted token ordering for the unscramble. A commutative operator (+ * === !== || &&) can keep or swap its two sides; a commutative call (Math.min / Math.max) can take its arguments in ANY order - all permutations. The accepted orderings are the cartesian product of every such node's orderings; enumerate them, restoring each node to its original after its own loop so the tree is left unchanged.";
   "IT WIDENS AND THEN NARROWS, AND THE NARROWING IS NEXT DOOR. What is left here is the widening - every road to another ordering of the same line - plus the one reading that asks whether an ordering still says what the question says. The checks that ask whether it still says it the way the question wrote it are all the same kind of check and live under one name, because a reader who wants to know what the pool holds should not have to read three filters to find out where it came from.";
+  "TWO ROADS ARRIVE BY DIFFERENT RIGHTS, AND ONLY ONE OF THEM IS ASKED WHAT IT MEANS. An ordering free to move a sign has to go on saying what the question said, because a moved sign can land on the right value while writing something else entirely. An ordering that moved only its values, into value places, keeping every sign and every bracket where the question put them, is judged instead by what the learner was actually shown - and it has to be, because the backwards unscramble shows a value and nothing more. Told the answer is true and handed the tiles of (2 > 9) === (5 === 4), a learner has nothing on the screen that picks that line out from (2 > 4) === (5 === 9); asking whether the two MEAN the same thing answers no, and marked them wrong for an answer the screen gave them no way to avoid.";
   let expression_is = js_expression_is(code);
   let tree = js_parse(code);
   function collect(la) {
@@ -51,7 +54,11 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   if (expression_is) {
     said = list_filter(codes, said_alike_is);
   }
-  let tokenised = list_map(said, app_code_quiz_tokens);
+  ("The value dealings come in AFTER that reading and not before it, because the reading is the very thing they are exempt from. They are the arrangements a learner cannot tell apart from the one the question wanted - the question's own shape with its own values handed round - and they carry their own judgment with them, made against the value the learner was shown rather than against the sentence they were not.");
+  ("They still go through the spelling checks below with everything else. A dealing keeps every tile and every bracket by construction, so it has nothing to fear from those; passing it through anyway is what keeps one place deciding how an answer must be spelled.");
+  let dealings = app_code_quiz_value_dealings(code);
+  let offered = list_concat(said, dealings);
+  let tokenised = list_map(offered, app_code_quiz_tokens);
   let variations = app_code_lesson_quiz_token_select_variations_spelled(
     tokenised,
     code,
