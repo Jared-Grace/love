@@ -809,7 +809,7 @@ export function bible_glyph_chapter_jhn20() {
           "you",
           "have",
           "$anchor.",
-          "Blessed",
+          "$gift+smile",
           "are",
           "those",
           "who",
