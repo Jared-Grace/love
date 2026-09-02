@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { g_arc_written_files_or_null } from "./g_arc_written_files_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { g_openers_arc } from "./g_openers_arc.mjs";
@@ -68,8 +69,7 @@ export async function g_arc_shared_steps_gate_run() {
       });
       continue;
     }
-    let passages = property_get(told, "value");
-    let right = list_size(passages);
+    let right = property_list_size(told, "value");
     let choices = multiply(opener_count, right);
     let written = property_get(chapter, "arcs");
     let pairs = g_arcs_shared_steps(written);
