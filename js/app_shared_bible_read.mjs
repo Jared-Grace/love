@@ -1,4 +1,5 @@
 import { app_shared_bible_read_frame } from "./app_shared_bible_read_frame.mjs";
+import { app_shared_footer_column_context } from "./app_shared_footer_column_context.mjs";
 import { app_shared_bible_read_unknown_shown } from "./app_shared_bible_read_unknown_shown.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_read_books } from "./app_shared_bible_read_books.mjs";
@@ -19,7 +20,9 @@ export async function app_shared_bible_read(
   "AN APP THAT WANTS NEITHER HANDS OVER A FUNCTION THAT DRAWS NOTHING, so there is no absence to test for here. A hook that might not be there is two shapes of caller and two paths through this, and one of them is walked by nobody and so is never found to be wrong.";
   "TWO THINGS CAN ANSWER THE PAGE BEFORE A CHAPTER IS EVER DRAWN, and each of them stops the reading here: an address naming something we do not have, and a book named with no chapter after it. A third, a reference naming no book or several chapters, is asked further in, next to the drawing it stands in for.";
   "ONCE THOSE ARE PAST, WHAT IS LEFT IS ONE CALL, and everything this had read so far goes over in a single record. That keeps the two halves separable - this one is about whether a chapter is what the page is for, the other about which chapter and how it looks - and a row of fifteen arguments, which is what the same call was before, is read by counting places rather than by reading names.";
+  "THE WAY OUT OF THE APP IS PUT DOWN BEFORE ANY OF THAT IS DECIDED, because three of the paths below stop early and a foot added at the end of the long one would be missing from the other two. This reader is an ordinary reading app rather than something a person is meant to be inside, so reaching the developer and the other apps is offered on the page rather than hidden a scroll below it; a game would rightly offer neither.";
   let r = app_shared_bible_read_frame(context);
+  app_shared_footer_column_context(context);
   let r6 = app_shared_bible_read_unknown_shown(r);
   let unknown_shown = property_get(r6, "unknown_shown");
   let hash = property_get(r6, "hash");
