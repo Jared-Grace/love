@@ -66,8 +66,8 @@ export function bless_view_discerned(blessed, everyone) {
   let people = bless_view_people(everyone);
   function person_left_is(person) {
     let prayed = bless_person_blessed_is(blessed, person);
-    let left = not(prayed);
-    return left;
+    let remaining = not(prayed);
+    return remaining;
   }
   let left = list_filter(people, person_left_is);
   let none = list_empty_is(left);
