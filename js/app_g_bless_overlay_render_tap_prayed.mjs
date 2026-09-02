@@ -1,3 +1,4 @@
+import { app_g_bless_overlay_render_tap_prayed_tap_prayed } from "./app_g_bless_overlay_render_tap_prayed_tap_prayed.mjs";
 import { bless_view_discerned } from "./bless_view_discerned.mjs";
 import { app_g_bless_discern } from "./app_g_bless_discern.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -6,10 +7,6 @@ import { app_g_bless_overlay_render_tap_prayed_drawing } from "./app_g_bless_ove
 import { app_g_bless_overlay_render_tap_prayed_prayer_said } from "./app_g_bless_overlay_render_tap_prayed_prayer_said.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_g_bless_overlay_render_tap_prayed_celebrate } from "./app_g_bless_overlay_render_tap_prayed_celebrate.mjs";
-import { app_g_bless_overlay_render_tap_prayed_person_id_pray } from "./app_g_bless_overlay_render_tap_prayed_person_id_pray.mjs";
-import { app_g_bless_overlay_render_tap_prayed_person_at } from "./app_g_bless_overlay_render_tap_prayed_person_at.mjs";
-import { not } from "./not.mjs";
-import { app_g_bless_overlay_render_tap_prayed_amen_ask } from "./app_g_bless_overlay_render_tap_prayed_amen_ask.mjs";
 export function app_g_bless_overlay_render_tap_prayed(
   r2,
   view_now,
@@ -84,29 +81,15 @@ export function app_g_bless_overlay_render_tap_prayed(
       faces_show,
     });
   }
-  function pray_person_id(id) {
-    let r4 = app_g_bless_overlay_render_tap_prayed_person_id_pray(
-      id,
-      view_everyone,
-      person_pray,
-    );
-    return r4;
-  }
-  function tap_prayed(target) {
-    "Whether the tap landed on somebody, and so became a prayer instead of a walk.";
-    let person = app_g_bless_overlay_render_tap_prayed_person_at(
-      target,
-      view_now,
-    );
-    if (not(person)) {
-      return false;
-    }
-    function amen() {
-      person_pray(person);
-    }
-    app_g_bless_overlay_render_tap_prayed_amen_ask(container_map, rung, amen);
-    return true;
-  }
+  let r3 = app_g_bless_overlay_render_tap_prayed_tap_prayed(
+    view_everyone,
+    person_pray,
+    view_now,
+    container_map,
+    rung,
+  );
+  let tap_prayed = property_get(r3, "tap_prayed");
+  let pray_person_id = property_get(r3, "pray_person_id");
   let r = {
     walking,
     world,
