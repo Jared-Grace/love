@@ -106,7 +106,6 @@ export function bless_building(x, y, families, storeys, set_back) {
     storeys: storeys,
     families: families,
     tiles: built,
-    ground: ground,
   };
   return building;
 }
