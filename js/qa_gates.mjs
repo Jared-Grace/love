@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_prose_gate_run } from "./bible_glyph_chapters_prose_gate_run.mjs";
 import { functions_gate_walk_escapes_gate_run } from "./functions_gate_walk_escapes_gate_run.mjs";
 import { red_proof_cases_claims_unmatched_cases_gate_run } from "./red_proof_cases_claims_unmatched_cases_gate_run.mjs";
 import { urdu_glued_words_gate_run } from "./urdu_glued_words_gate_run.mjs";
@@ -959,6 +960,7 @@ export function qa_gates() {
     urdu_glued_words_gate_run,
     red_proof_cases_claims_unmatched_cases_gate_run,
     functions_gate_walk_escapes_gate_run,
+    bible_glyph_chapters_prose_gate_run,
   ];
   return gates;
 }
