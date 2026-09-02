@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_looked_nearest_first } from "./qa_commit_looked_nearest_first.mjs";
 import { git_head_commit } from "./git_head_commit.mjs";
@@ -13,8 +14,10 @@ export async function qa_commit_named_report() {
   "What the record of judged commits currently holds, and how far behind the folder its freshest sound commit has fallen. Asks no gates and ships nothing, so it costs about a second.";
   "It answers the one question the per-app shipping path leaves a reader to work out by hand: can anything be sent out right now. The pieces were all there - the record says which commits were judged, git says how far each has fallen behind - and putting them together took a read of the record and one git call per entry, done by eye. That is the shape of a missing name, so here it is.";
   "How far behind is counted in commits rather than in hours, because commits are what age a judgement. Measured 2026-08-03: the freshest sound commit in the record was a day old and eight hundred and fifty eight commits back, and it is the second number that says why nothing written today could ship from it.";
-  "A commit is called sound here exactly when every gate was green for it. That is deliberately stricter than what shipping asks, since a gate red somewhere an app cannot reach does not stop that app - so a record with no sound commit at all may still have one that some particular app can ship from, and the per-app question is the one to ask next rather than this one again.";
-  "An entry naming a commit the folder no longer holds keeps its place with nothing for its distance, rather than being dropped or throwing. The record is allowed to outlive the history it names, and losing every good entry beside one forgotten name would be the worse answer.";
+  ("A commit is called sound here exactly when every gate was green for it. That is deliberately stricter than what shipping asks, since a gate red somewhere an app cannot reach does not stop that app - so a record with no sound commit at all may still have one that some particular app can ship from, and the per-app question is the one to ask next rather than this one again, and ",
+    fn_name("qa_commit_named_apps_report"),
+    " is the name that asks it.");
+  ("An entry naming a commit the folder no longer holds keeps its place with nothing for its distance, rather than being dropped or throwing. The record is allowed to outlive the history it names, and losing every good entry beside one forgotten name would be the worse answer.");
   let known = await qa_commit_named();
   let head = await git_head_commit();
   let commits = properties_get(known);

@@ -4,14 +4,15 @@ import { html_clear } from "./html_clear.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
 import { app_shared_bar_content_root } from "./app_shared_bar_content_root.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_set } from "./property_set.mjs";
 import { app_shared_content_column_pad } from "./app_shared_content_column_pad.mjs";
 import { html_flex_column_gap } from "./html_flex_column_gap.mjs";
+import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 import { html_button_copy_text } from "./html_button_copy_text.mjs";
 import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
 import { number_to_words } from "./number_to_words.mjs";
 import { text_pad_space_quote_double } from "./text_pad_space_quote_double.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_shared_bible_read_count_foot } from "./app_shared_bible_read_count_foot.mjs";
 export function app_shared_bible_read_frame(context) {
   arguments_assert(arguments, 1);
   let root = app_shared_mobile_default_font_size(context);
@@ -20,6 +21,8 @@ export function app_shared_bible_read_frame(context) {
   html_margin_0(root);
   let bc = app_shared_bar_content_root(root);
   let shell = property_get(bc, "shell");
+  ("the frame is left on the context so that the foot of the page, which is added after the screen has finished drawing and knows nothing of what the screen built, is put inside the frame instead of under the bottom edge of the window");
+  property_set(context, "shell", shell);
   let content = property_get(bc, "content");
   app_shared_content_column_pad(content);
   html_flex_column_gap(content, "0");
