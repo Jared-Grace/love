@@ -66,14 +66,14 @@ export function app_g_bless_blessed_head_start(blessed) {
   if (not(asked)) {
     return bottom;
   }
-  let members = bless_place_members("household", household);
+  let members = bless_place_members("family", household);
   let waiting = list_last(members);
   function member_bless(member) {
     bless_blessed_add(blessed, "person", member);
   }
   if (done) {
     each(members, member_bless);
-    bless_blessed_add(blessed, "household", household);
+    bless_blessed_add(blessed, "family", household);
     let climbed = bless_rung_after(bottom);
     return climbed;
   }

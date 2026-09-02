@@ -56,7 +56,7 @@ export function bless_view_finish_first(blessed, remaining) {
   let per_building = property_get(sizes, "building");
   let spread = add(per_building, 1);
   function person_household(person) {
-    let household = bless_person_place(person, "household");
+    let household = bless_person_place(person, "family");
     return household;
   }
   function person_score(person) {
@@ -70,7 +70,7 @@ export function bless_view_finish_first(blessed, remaining) {
     let building = bless_person_place(person, "building");
     let households = bless_place_members("building", building);
     function household_done_is(id) {
-      let done = bless_blessed_is(blessed, "household", id);
+      let done = bless_blessed_is(blessed, "family", id);
       return done;
     }
     let done_count = list_filter_size(households, household_done_is);

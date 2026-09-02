@@ -19,6 +19,6 @@ export function bless_hash_family_first_finished() {
   ("the house already down as blessed is already a record standing on that rung - and the");
   ("line the game would have said about it is not owed, because it is said about a CLIMB and");
   ("no climb happened here.");
-  let word = "household_first_finished";
+  let word = "family_first_finished";
   return word;
 }

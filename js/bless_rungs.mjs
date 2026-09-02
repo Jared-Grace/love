@@ -31,7 +31,7 @@ export function bless_rungs() {
   "exists: it factors the countries that carry too many states to sit under one.";
   let rungs = [
     "person",
-    "household",
+    "family",
     "building",
     "block",
     "neighborhood",

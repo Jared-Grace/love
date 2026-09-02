@@ -32,7 +32,7 @@ export function bless_places_at_index(index) {
   let places = {};
   property_set(places, "person", index);
   let household = bless_index_family(index);
-  property_set(places, "household", household);
+  property_set(places, "family", household);
   let within = household;
   function rung_place(rung) {
     let size = property_get_or_null(sizes, rung);
@@ -40,7 +40,7 @@ export function bless_places_at_index(index) {
     if (bottom) {
       return;
     }
-    let settled = equal(rung, "household");
+    let settled = equal(rung, "family");
     if (settled) {
       return;
     }

@@ -13,6 +13,6 @@ export function bless_hash_family_first_celebrate() {
   ("player to say, which is right for testing the prayer and wrong for testing what the");
   ("prayer sets off. The other hands over the street with all of it already over, which is");
   ("right for testing what the game is like AFTERWARDS and shows none of this.");
-  let word = "household_first_celebrate";
+  let word = "family_first_celebrate";
   return word;
 }
