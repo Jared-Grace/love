@@ -2,7 +2,7 @@ import { bless_hash_household_first_celebrate } from "./bless_hash_household_fir
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_household_first } from "./bless_hash_household_first.mjs";
 import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
-export function app_g_bless_household_first_is() {
+export function app_g_bless_family_first_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit asked for a world that opens with the first household two thirds");
   ("prayed for.");

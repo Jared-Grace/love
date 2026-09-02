@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_rungs } from "./bless_rungs.mjs";
 import { list_first } from "./list_first.mjs";
 import { app_g_bless_family_first_finished_is } from "./app_g_bless_family_first_finished_is.mjs";
-import { app_g_bless_household_first_is } from "./app_g_bless_household_first_is.mjs";
+import { app_g_bless_family_first_is } from "./app_g_bless_family_first_is.mjs";
 import { or } from "./or.mjs";
 import { not } from "./not.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
@@ -61,7 +61,7 @@ export function app_g_bless_blessed_head_start(blessed) {
     return climbed_building;
   }
   let done = app_g_bless_family_first_finished_is();
-  let two_thirds = app_g_bless_household_first_is();
+  let two_thirds = app_g_bless_family_first_is();
   let asked = or(done, two_thirds);
   if (not(asked)) {
     return bottom;
