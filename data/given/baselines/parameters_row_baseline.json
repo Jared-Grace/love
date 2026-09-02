@@ -1,14 +1,14 @@
 {
  "known": [
-  "app_a_identifier_generic_choices_get_lambda6",
-  "app_code_lesson_base",
-  "app_code_lesson_quiz_token_select",
-  "app_replace_rule_set_symbol_on_click",
   "app_reply_cards_handlers_draw",
-  "app_reply_response_button",
+  "app_replace_rule_set_symbol_on_click",
   "app_shared_bible_home_generic_lambda$a",
-  "audio_offset_scan",
+  "app_code_lesson_base",
+  "app_reply_response_button",
+  "app_a_identifier_generic_choices_get_lambda6",
   "g_sermon_generate_book_generic",
-  "g_sermon_generate_book_generic_prompts"
+  "g_sermon_generate_book_generic_prompts",
+  "audio_offset_scan",
+  "app_code_lesson_quiz_token_select"
  ]
 }
