@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { functions_gate_walk_escapes_names } from "./functions_gate_walk_escapes_names.mjs";
+import { functions_gate_walk_escapes_names_walked } from "./functions_gate_walk_escapes_names_walked.mjs";
 import { functions_gate_walk_escapes_baseline_path } from "./functions_gate_walk_escapes_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -9,7 +9,7 @@ export async function functions_gate_walk_escapes_gate_run() {
   "It is a gate this reading is asked about and never an ordinary function, though the same shape stands in two hundred and twenty seven of those. A sweep that stops at a file it cannot read is right to; a gate that stops at an item that refuses names nobody, and a gate naming nobody holds every app in the repo out of a deployment. The cost is what makes the rule, so the rule is drawn where the cost is.";
   "Measured against what the repo already carried rather than against zero, because the four standing here want four different repairs and one of them may turn out to be right as it is. The record only shrinks, so a gate taught to catch can never quietly go back.";
   arguments_assert(arguments, 0);
-  let offenders = await functions_gate_walk_escapes_names();
+  let offenders = await functions_gate_walk_escapes_names_walked();
   let path = functions_gate_walk_escapes_baseline_path();
   let name_write = fn_name("functions_gate_walk_escapes_baseline_write");
   let r = await baseline_names_gate_generic(
