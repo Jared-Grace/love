@@ -45,8 +45,14 @@ export function bless_building_family_tiles(building, index) {
   ("How DEEP a column runs is asked of the BUILDING and not of the picture of a house in");
   ("general. A building is one row of roof with a row of wall under it for each floor, so a");
   ("low house is two rows deep and a tall one is three, while the slot every house stands in");
-  ("is three rows whatever fills it. Measured off the slot, a low house would light a row");
-  ("behind itself that belongs to its yard rather than to anybody living there.");
+  ("is four rows whatever fills it. Measured off the slot, a low house would light rows");
+  ("behind itself that belong to its yard rather than to anybody living there.");
+  ("The list filtered is the building GROUND and not its tiles: the house plus the step of");
+  ("yard outside its doors. A downstairs family with somebody above it owns one row of wall");
+  ("and nothing else, which lights as a white strip too thin to read as part of a house, so");
+  ("the step in front of their door is counted as theirs. Filtering the tiles instead would");
+  ("hand back that strip, and filtering something wider would spread a family across the");
+  ("street.");
   let ground = property_get(building, "ground");
   let doorways = property_get(building, "doorways");
   let columns = property_get(building, "columns");
