@@ -42,8 +42,8 @@ export function bless_lit_buildings_whole(blessed, blocks, lit) {
     let buildings = property_get(block, "buildings");
     let numbers = bless_place_members("block", index);
     function building_tiles(building, at) {
-      let tiles_all = property_get(building, "tiles");
-      let inside = list_filter(tiles_all, member_is);
+      let ground_all = property_get(building, "ground");
+      let inside = list_filter(ground_all, member_is);
       let none = list_empty_is(inside);
       if (none) {
         let empty = [];
