@@ -1,5 +1,5 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
@@ -12,8 +12,7 @@ export function js_tokens_join_repeated_is(tokens) {
   "The ends of the line are not looked at. A join needs something on both sides of it to repeat, so a first or last token cannot be one, and asking would read past the list.";
   arguments_assert(arguments, 1);
   let joins = ["&&", "||"];
-  let size = list_size(tokens);
-  let last = subtract(size, 1);
+  let last = list_size_subtract(tokens, 1);
   let index = 1;
   while (less_than(index, last)) {
     let token = list_get(tokens, index);
