@@ -1,0 +1,47 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { subtract } from "./subtract.mjs";
+import { property_get } from "./property_get.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { and } from "./and.mjs";
+export function bless_building_family_tiles_tile_in_share(
+  ground_is,
+  alone_is,
+  y_top,
+  y_front,
+  x_least,
+  x_most,
+) {
+  arguments_assert(arguments, 6);
+  function y_least_get() {
+    if (ground_is) {
+      if (alone_is) {
+        return y_top;
+      }
+      return y_front;
+    }
+    return y_top;
+  }
+  function y_most_get() {
+    if (ground_is) {
+      return y_front;
+    }
+    let below = subtract(y_front, 1);
+    return below;
+  }
+  let y_least = y_least_get();
+  let y_most = y_most_get();
+  function tile_in_share(tile) {
+    let x = property_get(tile, "x");
+    let y = property_get(tile, "y");
+    let after = greater_than_equal(x, x_least);
+    let before = less_than_equal(x, x_most);
+    let below = greater_than_equal(y, y_least);
+    let over = less_than_equal(y, y_most);
+    let across = and(after, before);
+    let down = and(below, over);
+    let within = and(across, down);
+    return within;
+  }
+  return tile_in_share;
+}
