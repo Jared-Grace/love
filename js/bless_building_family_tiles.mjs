@@ -40,7 +40,7 @@ export function bless_building_family_tiles(building, index) {
   ("and the only honest place to cut it is the floor between them: the ground family owns");
   ("the wall you can see their door in, and the family upstairs owns the wall you can see");
   ("their window in and the roof above their heads.");
-  ("A column with NOBODY upstairs takes the whole depth for its one family, which is what");
+  ("A column with NOBODY upstairs takes the whole of itself for its one family, which is what");
   ("every column did before there were two floors. The odd family that forces the rounding");
   ("up lives on the ground with an empty floor over it, and giving them that floor is what");
   ("keeps the building divided exactly - left out it would be a strip belonging to nobody,");
@@ -48,6 +48,11 @@ export function bless_building_family_tiles(building, index) {
   ("The roof is never split between two families of the same column. It goes to whoever is");
   ("highest in it, because the roof is over their heads and not over anybody else's, and");
   ("because half a row is not a thing this map can draw.");
+  ("How DEEP a column runs is asked of the BUILDING and not of the picture of a house in");
+  ("general. A building is one row of roof with a row of wall under it for each floor, so a");
+  ("low house is two rows deep and a tall one is three, while the slot every house stands in");
+  ("is three rows whatever fills it. Measured off the slot, a low house would light a row");
+  ("behind itself that belongs to its yard rather than to anybody living there.");
   let tiles = property_get(building, "tiles");
   let doorways = property_get(building, "doorways");
   let columns = property_get(building, "columns");
