@@ -34,7 +34,7 @@ export function app_g_arcs_turn_block(
   let number = property_get(card, "number");
   let opener = property_get(card, "opener");
   let before = property_get(card, "before");
-  let r = app_g_arcs_turn_block_marks(
+  let r = app_g_arcs_turn_block_marks({
     card,
     parent,
     number,
@@ -42,7 +42,7 @@ export function app_g_arcs_turn_block(
     opener,
     voice_color,
     before,
-  );
+  });
   let marks = property_get(r, "marks");
   let turned = property_get(r, "turned");
   let block = property_get(r, "block");
