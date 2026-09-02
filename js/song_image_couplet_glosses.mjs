@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 56,
+      kept: 58,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 37,
+      kept: 38,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
