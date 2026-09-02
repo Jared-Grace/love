@@ -10,11 +10,14 @@ export function app_g_bless_discern(container_map, bar, on_amen) {
   ("something the player prayed for rather than something a button gave them. That is the");
   ("whole of why this is in the game: it is the one place where somebody else picks, and a");
   ("button that picked on being pressed would be a hint dressed as a prayer.");
-  ("The words are the gospel game's own discernment prayer, called and not copied. It is");
-  ("the same prayer asking the same thing - who to go to next - and the day walk it was");
-  ("written for is what this street is. Rewritten here it would be a second version of one");
-  ("prayer, free to drift into saying something slightly different from the prayer the");
-  ("player already knows.");
+  ("The words are this street's OWN discernment prayer and not the gospel game's, though");
+  ("the two ask the same question. There the player SPEAKS with whoever they are led to, so");
+  ("its petitions may say hear and say speak with; here nobody is ever spoken to and the");
+  ("answer asked for is somebody to pray FOR. Borrowing the day walk's words put a prayer");
+  ("about being heard in front of a player who had nobody to say it to.");
+  ("The shared half is still called rather than copied - the address, the asking word, the");
+  ("closing and the bow and hands are one shape both games wear, so only the verb is");
+  ("written in two places, and the verb is the whole of what each game is.");
   ("It is drawn at random from several petitions, so the prayer said on the fiftieth");
   ("asking is not word for word the prayer said on the first. A prayer that is always");
   ("identical stops being read, and the player's eye goes to the amen.");
@@ -22,7 +25,7 @@ export function app_g_bless_discern(container_map, bar, on_amen) {
   ("a person are there because that prayer never changes a word; this one changes its own");
   ("words, so it does not need them.");
   function ask() {
-    let prayer = g_prayer_discern();
+    let prayer = bless_prayer_discern();
     app_g_bless_pray_words(container_map, prayer, prayer, on_amen);
   }
   let button = app_g_bless_discern_button(bar, ask);
