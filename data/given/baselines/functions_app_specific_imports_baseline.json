@@ -12,6 +12,7 @@
   "qa_gates -> app_ceb_bible_gloss_roots_shallower_gate_run",
   "qa_gates -> app_ceb_bible_gloss_unpublished_gate_run",
   "qa_gates -> app_code_lesson_expression_which_part_first_gate_run",
+  "qa_gates -> app_code_lesson_id_length_gate_run",
   "qa_gates -> app_code_lesson_ids_gate_run",
   "qa_gates -> app_code_lesson_quiz_token_select_meaning_variations_cases_gate_run",
   "qa_gates -> app_code_lesson_telling_shapes_gate_run",
