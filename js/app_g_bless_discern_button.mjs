@@ -21,21 +21,36 @@ export function app_g_bless_discern_button(bar, on_ask) {
   ("The arrows are four of one thing and read as one control; a fifth button among them");
   ("would be pressed by a thumb aiming for a turn, and this one opens a panel and stops");
   ("the game.");
+  ("There is a GAP under the row, and the gap is what keeps the row from being read as part");
+  ("of the arrows. Two controls that touch are one control with a piece on top, and a thumb");
+  ("reaching for the up arrow lands on the edge of whatever is directly above it. The space");
+  ("is small enough that the two are plainly the same strip and large enough that they are");
+  ("plainly two things in it.");
+  ("It is printed LARGER than a button of its size would ordinarily be, because it is the");
+  ("only thing in the bar with words on it. The arrows are read as shapes at any size; this");
+  ("has to be read as a sentence, and a sentence set small in a corner is a thing a player");
+  ("skips over - which for the one control that teaches the game is the whole failure.");
   ("It says what it is in WORDS and not only in a picture. A folded-hands picture alone is");
   ("read as pray, and praying over a person is already what a tap on that person does, so");
   ("a player would reasonably take this for a second way to do the thing they can already");
   ("do. Who next is the whole question it answers, and it is short enough to print.");
+  ("WHO NEXT and not who is next, though the second is the ordinary English of the two. Who");
+  ("is next is what is asked at a counter: it presumes a queue already in order and asks");
+  ("only to be read the top of it. This game claims the opposite - that the answer is given");
+  ("rather than looked up - and the clipped form is the shape of a thought half-said, which");
+  ("is what a prayer in the middle of something actually sounds like.");
   let row = html_div(bar);
   html_style_assign(row, {
     display: "flex",
     "justify-content": "center",
+    "margin-bottom": "0.55rem",
   });
   let praying = emoji_pray();
   let label = text_combine(praying, " Who next?");
   let button = app_shared_game_button_green(row, label, on_ask);
   html_style_assign(button, {
-    padding: "0.2rem 0.9rem",
-    "font-size": "0.9rem",
+    padding: "0.3rem 1.1rem",
+    "font-size": "1.15rem",
     margin: "0",
     width: "auto",
     "min-width": "0",
