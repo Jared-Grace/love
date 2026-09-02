@@ -1,3 +1,4 @@
+import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordinates.mjs";
 import { app_g_bless_camera_people_get } from "./app_g_bless_camera_people_get.mjs";
 import { app_g_bless_people_still_start } from "./app_g_bless_people_still_start.mjs";
 import { app_g_bless_people_still_end } from "./app_g_bless_people_still_end.mjs";
@@ -27,8 +28,13 @@ export async function app_g_bless_camera_glide(
   focus,
 ) {
   arguments_assert(arguments, 5);
-  ("Travels the camera to a new square size while keeping one square in the middle of the");
-  ("screen the whole way, and returns once it has arrived.");
+  ("Travels the camera to a new square size and to a new square in the middle of the");
+  ("screen, moving both of those together, and returns once it has arrived.");
+  ("The pan is eased exactly as the zoom is. It was not: the square being aimed at was put");
+  ("dead centre on every frame including the first, so the whole journey across the street");
+  ("happened in one frame and only the size moved afterwards. A player who prayed over a");
+  ("family from a pulled-back view saw the screen snap onto the house and zoom in after,");
+  ("which is a cut followed by a move rather than the one journey they asked for.");
   ("Zoom and pan are one move here rather than two. They were two, and the seam showed: the");
   ("size jumped in a single frame and the scroll then slid smoothly to somewhere the map no");
   ("longer was, so a player watching a household get its prayer saw the street snap and");
@@ -86,6 +92,12 @@ export async function app_g_bless_camera_glide(
   let back = text_combine_multiple([from, "px"]);
   html_style_variable_set(container_map, variable, back);
   html_reflow_force(div_map);
+  ("Where the camera is standing as the journey begins is read off the box itself, and read");
+  ("as a place on the grid rather than as a scroll offset. It is read here, with the old");
+  ("size written back, so it is the place the player is actually looking at. Kept as an");
+  ("offset it would mean somewhere else by the second frame, because the squares it counts");
+  ("are about to change size underneath it.");
+  let centered = html_scroll_centered_coordinates(player_img_c, container);
   let claim = html_scroll_animate_start(container_e);
   let token = property_get(claim, "token");
   let animate = app_g_bless_camera_glide_frames({
@@ -97,6 +109,7 @@ export async function app_g_bless_camera_glide(
     from,
     to,
     token,
+    centered,
   });
   let promise = new Promise(animate);
   await promise;
