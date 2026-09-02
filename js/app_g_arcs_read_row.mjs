@@ -1,14 +1,9 @@
-import { app_g_arcs_read_row_counted_held } from "./app_g_arcs_read_row_counted_held.mjs";
+import { app_g_arcs_read_row_line } from "./app_g_arcs_read_row_line.mjs";
 import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
 import { app_g_arc_read_mark } from "./app_g_arc_read_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_arcs_lines_moved_said } from "./app_g_arcs_lines_moved_said.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 export function app_g_arcs_read_row(parent, bench, nickname, person) {
@@ -29,36 +24,19 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   arguments_assert(arguments, 4);
   let base_source = property_get(person, "base_source");
   let moved_count = property_get(person, "moved_count");
-  let chapter_code = property_get(bench, "chapter_code");
-  let status_set = property_get(bench, "status_set");
-  let status_working = property_get(bench, "status_working");
-  let render = property_get(bench, "render");
-  let said = app_g_arcs_read_row_counted_held(moved_count, base_source, person);
-  let approved = property_get(person, "approved");
-  let approved_moved_count = property_get(person, "approved_moved_count");
-  let approval_said = ", and it has not been approved yet";
-  if (approved) {
-    approval_said = ", and you approved it as it is worded now";
-    let approved_moved = not_equal(approved_moved_count, 0);
-    if (approved_moved) {
-      let counted_approved = app_g_arcs_lines_moved_said(approved_moved_count);
-      approval_said = text_combine_multiple([
-        ", and ",
-        counted_approved,
-        " since you approved it",
-      ]);
-    }
-  }
-  said = text_combine_multiple([said, approval_said]);
-  let row = html_div(parent);
-  html_style_assign(row, {
-    display: "flex",
-    "flex-wrap": "wrap",
-    "align-items": "center",
-    gap: "0.5rem",
-    "margin-top": "0.4rem",
-  });
-  let line = html_div_text(row, said);
+  let r3 = app_g_arcs_read_row_line(
+    bench,
+    moved_count,
+    base_source,
+    person,
+    parent,
+  );
+  let line = property_get(r3, "line");
+  let row = property_get(r3, "row");
+  let render = property_get(r3, "render");
+  let status_working = property_get(r3, "status_working");
+  let status_set = property_get(r3, "status_set");
+  let chapter_code = property_get(r3, "chapter_code");
   html_style_assign(line, {
     "font-size": app_shared_font_size_label(),
     opacity: "0.55",
