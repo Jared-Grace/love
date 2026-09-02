@@ -1,7 +1,7 @@
+import { property_equals } from "./property_equals.mjs";
 import { add } from "./add.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { bless_building_roof } from "./bless_building_roof.mjs";
@@ -26,8 +26,7 @@ export function bless_building_yard(families, storeys, y, set_back, x) {
   let y_front = property_get(r, "y_front");
   let step = add(y_front, 1);
   function tile_on_step_is(tile) {
-    let tile_y = property_get(tile, "y");
-    let on = equal(tile_y, step);
+    let on = property_equals(tile, "y", step);
     return on;
   }
   let front = list_filter(yard, tile_on_step_is);
