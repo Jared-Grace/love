@@ -1,3 +1,4 @@
+import { functions_gate_walk_escapes_gate_run } from "./functions_gate_walk_escapes_gate_run.mjs";
 import { red_proof_cases_claims_unmatched_cases_gate_run } from "./red_proof_cases_claims_unmatched_cases_gate_run.mjs";
 import { urdu_glued_words_gate_run } from "./urdu_glued_words_gate_run.mjs";
 import { function_span_cut_named_skip_decided_or_null_cases_gate_run } from "./function_span_cut_named_skip_decided_or_null_cases_gate_run.mjs";
@@ -957,6 +958,7 @@ export function qa_gates() {
     function_span_cut_named_skip_decided_or_null_cases_gate_run,
     urdu_glued_words_gate_run,
     red_proof_cases_claims_unmatched_cases_gate_run,
+    functions_gate_walk_escapes_gate_run,
   ];
   return gates;
 }
