@@ -1,5 +1,5 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { app_music_song_built_name } from "./app_music_song_built_name.mjs";
 import { app_music_song_verses_build } from "./app_music_song_verses_build.mjs";
 export async function app_music_song_verses_built_generic(song, built_fn) {
@@ -12,8 +12,7 @@ export async function app_music_song_verses_built_generic(song, built_fn) {
   "THE BIBLE IT IS FILED BENEATH IS THE SONG'S OWN AND NOT THE PAGE'S. Two songs no longer have to share a default, so the folder a song's copy is filed under has to come from that song or the two would be filed together the moment they disagreed - and a mixture filed under the wrong name is the one kind of stale copy nothing notices, because it reads back perfectly and is simply the other song's answer.";
   arguments_assert(arguments, 2);
   let versions = song.versions();
-  let usual = property_get(versions, "usual");
-  let bible_folder = property_get(usual, "bible_folder");
+  let bible_folder = property_path_get_2(versions, "usual", "bible_folder");
   let built_name = app_music_song_built_name(song);
   async function build() {
     let texts = await app_music_song_verses_build(song);
