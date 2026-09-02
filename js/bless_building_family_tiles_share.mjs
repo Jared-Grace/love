@@ -8,7 +8,7 @@ import { add } from "./add.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { bless_building_family_tiles_tile_in_share } from "./bless_building_family_tiles_tile_in_share.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function bless_building_family_tiles_share(
+export function bless_building_family_tiles_share({
   doorways,
   column,
   building,
@@ -16,8 +16,8 @@ export function bless_building_family_tiles_share(
   upstairs,
   ground_is,
   tiles,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let y_front = list_get_property(doorways, column, "y");
   let shape = bless_building_shape();
   let slab = property_get(shape, "family_width");
