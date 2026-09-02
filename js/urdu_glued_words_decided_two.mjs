@@ -309,6 +309,7 @@ export function urdu_glued_words_decided_two() {
     "گالے",
     "کوندی",
     "دوبھر",
+    "کرمِلی",
   ];
   let decided = {
     split,
