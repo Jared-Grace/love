@@ -289,7 +289,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn wide apart, the plain gap between them several times wider than the ring's own metal is thick and nothing lying across that gap or hiding it, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
+        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through in two separate places on opposite sides so that it lies in two loose curved pieces no longer joined to each other, each of the two breaks a plain gap several times wider than the ring's own metal is thick with nothing lying across it or hiding it, the two pieces still holding the shape of the ring they came out of, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
       symbol_ref: "Galatians 3:13, Romans 6:6, Psalm 107:14",
       same_as: 0,
     },
