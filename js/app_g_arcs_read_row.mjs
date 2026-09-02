@@ -21,6 +21,9 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "IT IS A CLAUSE ON THE SAME SENTENCE AND NOT A LINE OF ITS OWN. What moved and what was held are two halves of one answer to the same question - what became of my notes - and set on two lines they are read as two separate facts about the arc, the second of which is easy to walk past.";
   "NOTHING MOVED IS SAID OUT LOUD RATHER THAN LEFT BLANK, which is what makes a second reading cheap. A reviewer told that nothing has moved since they read it can close the arc without reading a line of it, and that is the whole saving.";
   "THE PRESS IS OFFERED WHATEVER THE STATE IS, because the record only ever moves forward. On an arc already read it takes in what moved since; on one measured against a backup it replaces a stand-in with a real reading, and from then on the marks are about this reviewer rather than about a copy taken on some day they had no part in.";
+  "THE TWO PRESSES SIT TOGETHER BECAUSE THEY ARE TWO ANSWERS TO ONE QUESTION - what is this arc's state - and the answers are not the same answer. Marking it read says a reviewer got to the end with their notes still standing; approving it says the lines they filed no note against are right as they are written. Offered on separate screens, the weaker of the two would be pressed for both, and an arc nobody had ever passed would read as finished.";
+  "THE APPROVAL IS SAID EVEN WHEN THERE IS NONE, for the same reason an arc with nothing behind it says so. An unapproved arc and an approved one with nothing moved since both draw no marks, and left unsaid the two look identical - so the page would let a reviewer close an arc nobody has ever passed believing somebody had.";
+  "IT SAYS WHAT HAS MOVED SINCE THE APPROVAL AND NOT ONLY THAT THERE WAS ONE, because an approval is about wording and wording is exactly what a revision changes. An arc approved and then revised is approved on every line but the revised ones, and a reviewer told only that it was approved would take the new lines as passed when nobody has read them.";
   arguments_assert(arguments, 4);
   let base_source = property_get(person, "base_source");
   let moved_count = property_get(person, "moved_count");
@@ -80,6 +83,22 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
       " lines you left notes on were kept word for word",
     ]);
   }
+  let approved = property_get(person, "approved");
+  let approved_moved_count = property_get(person, "approved_moved_count");
+  let approval_said = ", and it has not been approved yet";
+  if (approved) {
+    approval_said = ", and you approved it as it is worded now";
+    let approved_moved = not_equal(approved_moved_count, 0);
+    if (approved_moved) {
+      let counted_approved = String(approved_moved_count);
+      approval_said = text_combine_multiple([
+        ", and ",
+        counted_approved,
+        " lines have moved since you approved it",
+      ]);
+    }
+  }
+  said = text_combine_multiple([said, approval_said]);
   let row = html_div(parent);
   html_style_assign(row, {
     display: "flex",
@@ -112,4 +131,22 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     }
   }
   app_shared_button_inline(row, "mark read", on_read);
+  async function on_approve() {
+    let working = text_combine_multiple(["approving ", nickname, " as worded"]);
+    status_working(working);
+    try {
+      let f_name = fn_name("g_arc_approved_write");
+      await app_shared_api_named(f_name, [chapter_code, nickname]);
+      let done = text_combine_multiple([
+        nickname,
+        " is approved as worded now",
+      ]);
+      status_set(done);
+      await render();
+    } catch (failed) {
+      let missed = text_combine_multiple(["could not approve ", nickname]);
+      status_set(missed);
+    }
+  }
+  app_shared_button_inline(row, "approve as worded", on_approve);
 }
