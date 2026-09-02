@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function bless_hash_building_first_completed() {
+export function bless_hash_building_first() {
   arguments_assert(arguments, 0);
   ("The word written after the hash mark to open the praying game onto the street with the first BUILDING one prayer from finished - every family in it prayed for except the last, and the player already reaching a whole family at a time, so a single prayer completes the house.");
   ("It exists for the same reason its household neighbour does, multiplied. A building here holds two to four families and nine people between them, so reaching a finished building the ordinary way costs nine prayers said carelessly before the one worth watching. The building celebration is also the one that lights a whole house at once - every floor washed white with the roof held back darker - and that picture cannot be judged from a single family's share of a wall.");
