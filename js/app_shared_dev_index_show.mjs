@@ -1,3 +1,4 @@
+import { app_shared_dev_game_pill } from "./app_shared_dev_game_pill.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_hash_index_settings } from "./app_shared_hash_index_settings.mjs";
 import { app_shared_dev_overlay } from "./app_shared_dev_overlay.mjs";
@@ -25,4 +26,5 @@ export function app_shared_dev_index_show(all, prefixes, app_fn) {
   let settings = app_shared_hash_index_settings(app_fn, new_tab);
   let column = app_shared_dev_overlay("Dev routes");
   app_shared_hash_index_render(column, all, prefixes, settings);
+  app_shared_dev_game_pill();
 }
