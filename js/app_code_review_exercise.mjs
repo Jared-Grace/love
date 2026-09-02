@@ -1,3 +1,4 @@
+import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_above } from "./app_code_lesson_above.mjs";
@@ -74,6 +75,7 @@ export function app_code_review_exercise(
   }
   async function on_success() {
     let clean = not(failed);
+    html_data_test_quiz_correct_bump();
     await on_correct(clean);
   }
   on_answer(
