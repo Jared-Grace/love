@@ -53,7 +53,7 @@ export function bless_building_family_tiles(building, index) {
   ("the step in front of their door is counted as theirs. Filtering the tiles instead would");
   ("hand back that strip, and filtering something wider would spread a family across the");
   ("street.");
-  let ground = property_get(building, "ground");
+  let tiles = property_get(building, "tiles");
   let doorways = property_get(building, "doorways");
   let columns = property_get(building, "columns");
   let families = property_get(building, "families");
@@ -68,7 +68,7 @@ export function bless_building_family_tiles(building, index) {
     x_door,
     upstairs,
     ground_is,
-    ground,
+    tiles,
   });
   return share;
 }
