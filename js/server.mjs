@@ -35,7 +35,9 @@ export async function server() {
   ("serve the dev folder at its own name as well, so a working build keeps the address a phone already has if the folder ever stops sitting inside the published one. it is reachable today only because it happens to be in there, and that is an accident of layout rather than a decision - this mount is the decision, and it changes nothing while both are true");
   let folder_dev_resolved = await module_public_dev_resolve(import.meta);
   let v_dev = express.static(folder_dev_resolved, static_options);
-  let dev_url = text_combine(text_slash_forward(), app_shared_name_dev_text());
+  let left = text_slash_forward();
+  let right2 = app_shared_name_dev_text();
+  let dev_url = text_combine(left, right2);
   let u = server_url_api();
   async function api(req, res) {
     await server_api_generic(req, res);
