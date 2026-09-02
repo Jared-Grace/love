@@ -20,9 +20,9 @@ export async function server_static_free_port_run(lambda) {
   let express = property_get(module_express, "default");
   let app = express();
   let repos = await module_repos_resolve(import.meta);
-  let folder_public = await module_public_resolve(import.meta);
+  let folder_public_here = await module_public_resolve(import.meta);
   let v_repos = express.static(repos);
-  let v_public = express.static(folder_public);
+  let v_public = express.static(folder_public_here);
   app.use(v_repos);
   ("the public folder is served at the root as well as under its own name, because that is what this repo's own server does and it is the shape every dev page is written against - a page asking for /dev/code.js is asking for public/dev/code.js");
   app.use(v_public);
