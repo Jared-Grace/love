@@ -12,6 +12,7 @@ export function bless_building_family_tiles_tile_in_share(
   x_least,
   x_most,
 ) {
+  "Works out the band of rows one family holds in a building, and hands back the test for whether a tile falls inside their share of it.";
   arguments_assert(arguments, 6);
   function y_least_get() {
     if (ground_is) {
