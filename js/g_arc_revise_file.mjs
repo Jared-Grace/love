@@ -1,7 +1,7 @@
 import { file_read_json } from "./file_read_json.mjs";
 import { g_npc_nickname_index } from "./g_npc_nickname_index.mjs";
 import { g_arc_written_person_assert } from "./g_arc_written_person_assert.mjs";
-import { g_arc_feedback_person } from "./g_arc_feedback_person.mjs";
+import { g_arc_feedback_person_standing } from "./g_arc_feedback_person_standing.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_arc_line_address } from "./g_arc_line_address.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -33,7 +33,8 @@ export async function g_arc_revise_file(answer_path, chapter_code, nickname) {
   let answer = await file_read_json(answer_path);
   let index = await g_npc_nickname_index(nickname);
   let found = await g_arc_written_person_assert(chapter_code, index);
-  let standing = await g_arc_feedback_person(chapter_code, index);
+  ("A NOTE PUT OFF TO THE SECOND PASS IS NEITHER ASKED FOR NOR REFUSED HERE. The two checks above are all or nothing on purpose, and that rule assumes every note against a person is meant to be answered now - which stopped being true once a reviewer could queue a fault for a later pass. Left in, one queued note made every unrelated revision of that person impossible until it was answered, which is the treadmill queueing exists to avoid; taken out here, the all-or-nothing stays exactly as strict over the notes that really are waiting on this pass.");
+  let standing = await g_arc_feedback_person_standing(chapter_code, index);
   let faulted = [];
   for (let note of standing) {
     let turn = property_get(note, "turn");
