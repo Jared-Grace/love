@@ -52,7 +52,7 @@ export function bless_lit_buildings_whole(blessed, blocks, lit) {
       let number = list_get(numbers, at);
       let whole = bless_place_done_is(blessed, "building", number);
       if (whole) {
-        return tiles_all;
+        return ground_all;
       }
       return inside;
     }
