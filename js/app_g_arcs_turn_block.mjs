@@ -90,22 +90,33 @@ export function app_g_arcs_turn_block(
     });
   }
   let marks = property_get(bench, "marks");
-  function turn_field(name, value) {
-    let shape = g_arc_answer_field_shape("turn", name);
-    app_g_arcs_field_pair({
-      parent: block,
-      moved_fields: moved,
-      held_fields: held,
-      name,
-      value,
-      shape,
-      voice_color,
-      marks,
-    });
-  }
-  turn_field("opener", opener);
-  turn_field("before", before);
-  turn_field("reference", reference);
+  app_g_arcs_turn_field(
+    "opener",
+    opener,
+    block,
+    moved,
+    held,
+    voice_color,
+    marks,
+  );
+  app_g_arcs_turn_field(
+    "before",
+    before,
+    block,
+    moved,
+    held,
+    voice_color,
+    marks,
+  );
+  app_g_arcs_turn_field(
+    "reference",
+    reference,
+    block,
+    moved,
+    held,
+    voice_color,
+    marks,
+  );
   app_g_arcs_field_shaped(
     block,
     "scripture",
@@ -115,13 +126,51 @@ export function app_g_arcs_turn_block(
   );
   let reacted = text_empty_not_is(after);
   if (reacted) {
-    turn_field("after", after);
+    app_g_arcs_turn_field(
+      "after",
+      after,
+      block,
+      moved,
+      held,
+      voice_color,
+      marks,
+    );
   }
   let turned = text_empty_not_is(believes);
   if (turned) {
-    turn_field("believes", believes);
+    app_g_arcs_turn_field(
+      "believes",
+      believes,
+      block,
+      moved,
+      held,
+      voice_color,
+      marks,
+    );
   }
   app_shared_note_pills(block, notes);
   let names = g_arc_answer_field_names("turn");
   app_g_arcs_note_row(block, bench, nickname, number, names);
+}
+function app_g_arcs_turn_field(
+  name,
+  value,
+  block,
+  moved,
+  held,
+  voice_color,
+  marks,
+) {
+  arguments_assert(arguments, 7);
+  let shape = g_arc_answer_field_shape("turn", name);
+  app_g_arcs_field_pair({
+    parent: block,
+    moved_fields: moved,
+    held_fields: held,
+    name,
+    value,
+    shape,
+    voice_color,
+    marks,
+  });
 }
