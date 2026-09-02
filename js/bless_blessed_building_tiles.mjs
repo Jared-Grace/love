@@ -24,8 +24,8 @@ export function bless_blessed_building_tiles(blessed, building, number) {
   ("as three dark thirds.");
   let whole = bless_place_done_is(blessed, "building", number);
   if (whole) {
-    let ground_all = property_get(building, "ground");
-    return ground_all;
+    let tiles_all = property_get(building, "tiles");
+    return tiles_all;
   }
   let households = bless_place_members("building", number);
   function household_tiles(household, index) {
