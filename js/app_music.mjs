@@ -12,6 +12,7 @@ export async function app_music(context) {
   "The page the songs' words live on: the song the address names, or the list of songs when it names none.";
   "IT EXISTS BECAUSE A DESCRIPTION UNDER A SONG CANNOT HOLD ALL OF THIS. What a video can carry is capped, and the passages a song rests on written out run past that cap several times over - so the description names them and this page holds them, and the link between the two is what keeps a named reference from being a dead end.";
   "It borrows the reading column the bible pages stand in rather than dressing itself, because it is the same thing: a page of words somebody is going to read on a phone.";
+  "THE SONG IS HANDED TO THE THING THAT DRAWS IT, and not only the place to draw it in. A drawer needs its song's own translation choices and its song's own built file, and reaching back for those by name would mean each drawer knowing which entry of the list it is - which is the one fact it cannot be told apart from any other drawer by, and the one this already has in its hand.";
   arguments_assert(arguments, 1);
   html_reload_on_hash_change();
   let content = app_shared_reading_column(context);
@@ -25,7 +26,7 @@ export async function app_music(context) {
   }
   html_div_text_bold(content, song.title);
   app_music_home_button(content);
-  await song.show(content);
+  await song.show(content, song);
   app_music_home_button(content);
   app_shared_footer(content);
 }
