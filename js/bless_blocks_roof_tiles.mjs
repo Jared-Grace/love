@@ -1,8 +1,8 @@
+import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_map } from "./list_map.mjs";
 export function bless_blocks_roof_tiles(blocks) {
   arguments_assert(arguments, 1);
   ("Every square of ROOF on the street, gathered from every building of every block.");
@@ -14,7 +14,6 @@ export function bless_blocks_roof_tiles(blocks) {
     let here = list_concat_multiple(roofs);
     return here;
   }
-  let per_block = list_map(blocks, block_roofs);
-  let tiles = list_concat_multiple(per_block);
+  let tiles = list_map_concat_multiple(blocks, block_roofs);
   return tiles;
 }
