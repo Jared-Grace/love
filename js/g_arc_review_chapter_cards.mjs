@@ -11,6 +11,7 @@ import { g_npc_cast_dealt } from "./g_npc_cast_dealt.mjs";
 import { g_npc_cast_dealt_nicknames } from "./g_npc_cast_dealt_nicknames.mjs";
 import { property_get } from "./property_get.mjs";
 import { number_from_text } from "./number_from_text.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { g_arc_review_base } from "./g_arc_review_base.mjs";
@@ -41,6 +42,13 @@ export async function g_arc_review_chapter_cards(chapter_code) {
   let notes = await g_arc_feedback_chapter(chapter_code);
   let dealt = await g_npc_cast_dealt();
   let nicknames = g_npc_cast_dealt_nicknames(dealt);
+  ("THE PEOPLE COME BACK IN POOL ORDER AND NOT IN THE ORDER THEY WERE LAST WRITTEN. The store keeps a person by dropping their entry and adding it again, so whoever was revised most recently sits at the end of it - and the tabs across the top of the bench, which are drawn straight from this list, shuffled every time anybody answered a note. A reviewer coming back to the page found the person they were reading in a different place, and the one place it moved them to was the far end, which is where somebody who has just been revised is least likely to be looked for. Sorting on the pool's own number makes the order a fact about the chapter rather than a record of what was touched last, so it is the same on every drawing of the page.");
+  function person_pool_number(entry) {
+    let index = property_get(entry, "index");
+    let wanted = number_from_text(index);
+    return wanted;
+  }
+  list_sort_number_mapper(arcs, person_pool_number);
   let people = [];
   for (let entry of arcs) {
     let index = property_get(entry, "index");
