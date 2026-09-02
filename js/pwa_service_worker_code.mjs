@@ -3,6 +3,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 export function pwa_service_worker_code() {
   "the service worker source (a plain browser-JS string, runs in the SW context). Strategy: SHELL (html/js/etc) = network-first so online stays fresh (the code bundle is deliberately no-cache) and offline falls back to the cached copy; DATA = stale-while-revalidate so it loads instantly, refreshes in the background, and works offline — this covers both same-origin /bible/ paths and firebase storage downloads (firebasestorage.googleapis.com), which is where the bulk bible text now lives, so the verse packages stay available offline even though they are cross-origin. One versioned cache, old versions cleaned on activate. Bump CACHE_NAME to invalidate everything. The shell fetch is bounded by SHELL_TIMEOUT_MS because a captive portal or flaky signal leaves fetch pending rather than failing, which would hang the page instead of falling back to the cached copy.";
+  "v3, measured 2026-09-02: the fallback had been handing a phone one build's page and another build's bundle. A code bundle is 823 KB and is sent no-store, so it is downloaded whole on every load and a phone regularly misses the four seconds; the cached copy that answered instead was the PREVIOUS build, which asked for chunk files that the newest sending had already taken away. So the reader met a page that could not start, and when it did start it was judged by rules that had been corrected hours earlier. Bumping the name is the remedy this file names for itself, and it is only the immediate one - what falls back has to become a copy that belongs to the build asking for it.";
   let r2 = firebase_storage_host();
   let combined = text_combine_multiple([
     "  if (url.hostname === '",
@@ -10,7 +11,7 @@ export function pwa_service_worker_code() {
     "') {",
   ]);
   let lines = [
-    "var CACHE_NAME = 'love-cache-v2';",
+    "var CACHE_NAME = 'love-cache-v3';",
     "var SHELL_TIMEOUT_MS = 4000;",
     "self.addEventListener('install', function () {",
     "  self.skipWaiting();",

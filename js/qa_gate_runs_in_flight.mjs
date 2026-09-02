@@ -1,4 +1,4 @@
-import { qa_gate_runs_in_flight_row } from "./qa_gate_runs_in_flight_row.mjs";
+import { qa_gate_runs_in_flight_rows_sort } from "./qa_gate_runs_in_flight_rows_sort.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { processes_dispatcher_report } from "./processes_dispatcher_report.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -30,7 +30,7 @@ export async function qa_gate_runs_in_flight() {
   let running = await processes_dispatcher_report();
   let shards = [];
   let runs = [];
-  qa_gate_runs_in_flight_row(running, shards, runs);
+  qa_gate_runs_in_flight_rows_sort(running, shards, runs);
   let cores = await cpu_count();
   let load = machine_load_average();
   let swap = await machine_swap_free_bytes_or_null();
