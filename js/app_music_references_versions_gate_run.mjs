@@ -1,79 +1,91 @@
-import { bible_folder_key } from "./bible_folder_key.mjs";
-import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
-import { app_music_references_all } from "./app_music_references_all.mjs";
-import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_music_references_versions } from "./app_music_references_versions.mjs";
+import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
 import { app_music_bible_default_version } from "./app_music_bible_default_version.mjs";
-import { list_concat } from "./list_concat.mjs";
+import { app_music_songs } from "./app_music_songs.mjs";
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
+import { add } from "./add.mjs";
+import { list_size } from "./list_size.mjs";
+import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function app_music_references_versions_gate_run() {
-  "QA gate: every passage the music page quotes from some translation other than its usual one names a translation we may lawfully ship, calls it what that translation calls itself, names a passage a song actually rests on, and gets words back from it there.";
+  "QA gate: every passage a song on the music page quotes from some translation other than the page's usual one names a translation we may lawfully ship, calls it what that translation calls itself, names a passage that song actually rests on, and gets words back from it there.";
   "THE NAME IS A SECOND COPY, AND THIS IS WHAT KEEPS IT HONEST. The chosen translation is written down twice on purpose - once as the folder its chapters sit in, and once as the name shown to a reader - so that labelling a verse costs the page no fetch. Two copies of one fact drift, and this one would drift silently: the page would show the King James under whatever word was typed beside it, and a wrong label on a right verse looks exactly like a right label.";
   "IT ALSO ASKS WHETHER THE TRANSLATION MAY BE QUOTED AT ALL. Choosing a wording is done by reading translations side by side, and that reading includes ones we may not ship - so the way a forbidden wording gets onto the page is somebody copying the folder name of the one that read best. There is nothing about a folder name that says which of the two it was.";
   "The usual translation is checked alongside the exceptions, because it is written the same way and is the one every other passage on the page is labelled with.";
   "WHICH TRANSLATIONS MAY BE SHIPPED IS ASKED OF BOTH SHELVES. It used to ask only eBible, which was right while that was the only shelf and became silently wrong the moment a second one was added: a wording chosen out of a comparison that offered both would be refused here as unshippable, and the refusal would blame the wording rather than the question.";
-  "AN EXCEPTION IS ALSO ASKED WHETHER ANY SONG RESTS ON THAT PASSAGE AT ALL. The choice is written against the passage as a person writes one, so a space on the end or a shortened book name makes an entry that matches nothing - and matching nothing is exactly what a passage with no exception does, so the reader is shown the usual translation and the entry sits there looking decided. The whole reason an exception exists is that the usual wording is not the line being sung, so this failure serves the reader the one wording that was rejected.";
+  "EACH SONG IS CHECKED AGAINST ITS OWN PASSAGES, not against everything the page names. The choices used to be one list for the page, and the same list is now one per song, because which bible a verse is quoted from is a fact about the song rather than about the verse. Checked page-wide, a choice written under the wrong song passed whenever some other song happened to sing that verse - and the song that wrote it went on being shown the wording it had rejected.";
+  "AN EXCEPTION IS ASKED WHETHER ITS OWN SONG RESTS ON THAT PASSAGE AT ALL. The choice is written against the passage as a person writes one, so a space on the end or a shortened book name makes an entry that matches nothing - and matching nothing is exactly what a passage with no exception does, so the reader is shown the usual translation and the entry sits there looking decided. The whole reason an exception exists is that the usual wording is not the line being sung, so this failure serves the reader the one wording that was rejected.";
   "AND WHETHER THE CHOSEN TRANSLATION CARRIES THE PASSAGE. Two of the translations on offer are published a book at a time and hold fifty-six of the sixty-six, so a bible can be shippable, correctly named, and still have nothing to say at this passage. Nothing downstream raises on that: the words come back empty and the page draws that passage with none, among ninety-nine that have theirs.";
   "The two questions above are asked of the exceptions and not of the usual translation, because the usual one answers for every passage on the page and asking it about all hundred here would be building the page rather than checking it - it is a whole bible on the shelf where the exceptions are one verse each.";
   arguments_assert(arguments, 0);
   let usable = await bible_versions_english_choices_usable();
-  let versions = app_music_references_versions();
   let usual = app_music_bible_default_version();
-  let rested_on = app_music_references_all();
-  let checked = list_concat(versions, [usual]);
+  let songs = app_music_songs();
   let wrong = [];
-  for (let version of checked) {
-    let bible_folder = property_get(version, bible_folder_key());
+  function version_check(title, version) {
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(version, property_name);
     let name = property_get(version, "name");
     let record = list_find_property_or_null(
       usable,
-      bible_folder_key(),
+      property_name,
       bible_folder,
     );
     let unusable = null_is(record);
     if (unusable) {
       list_add(wrong, {
+        song: title,
         bible_folder,
         name,
         fault:
           "this bible is not one of the complete English translations we may ship and earn from",
       });
-      continue;
+      return;
     }
     let called = property_get(record, "name");
     let agrees = equal(called, name);
     if (agrees) {
-      continue;
+      return;
     }
     list_add(wrong, {
+      song: title,
       bible_folder,
       name,
       called,
       fault: "the name shown to a reader is not what this bible calls itself",
     });
   }
-  await app_music_references_versions_faults_add(versions, rested_on, wrong);
+  version_check("the whole page, as its usual bible", usual);
+  let exceptions = 0;
+  for (let song of songs) {
+    let title = property_get(song, "title");
+    let versions = song.versions();
+    let right = list_size(versions);
+    exceptions = add(exceptions, right);
+    for (let version of versions) {
+      version_check(title, version);
+    }
+    await app_music_references_versions_faults_add(song, wrong);
+  }
   let f_name = fn_name("bible_versions_english_choices_usable");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
-      "each of these choices fails in the way its own fault line says - unshippable bible, a name it does not answer to, a passage no song rests on, or a bible with no words there - and every one of them reaches a reader as an ordinary looking page; the folders and the names both come from ",
+      "each of these choices fails in the way its own fault line says - unshippable bible, a name it does not answer to, a passage its own song rests on nowhere, or a bible with no words there - and every one of them reaches a reader as an ordinary looking page; the folders and the names both come from ",
       f_name,
       ", so copy them from there rather than typing them",
     ]),
   });
   ("Says how much it looked at, because a gate that answers nothing cannot be told apart from one that did nothing.");
   let r = {
-    versions: list_size(checked),
-    exceptions: list_size(versions),
+    songs: list_size(songs),
+    exceptions: exceptions,
     wrong: 0,
   };
   return r;
