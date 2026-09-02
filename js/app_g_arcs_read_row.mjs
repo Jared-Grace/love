@@ -1,3 +1,4 @@
+import { app_g_arc_read_mark } from "./app_g_arc_read_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_arcs_lines_moved_said } from "./app_g_arcs_lines_moved_said.mjs";
@@ -116,22 +117,14 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     opacity: "0.55",
   });
   async function on_read() {
-    let working = text_combine_multiple(["recording ", nickname, " as read"]);
-    status_working(working);
-    try {
-      let f_name = fn_name("g_arc_reviewed_write");
-      await app_shared_api_named(f_name, [chapter_code, nickname]);
-      let done = text_combine_multiple([nickname, " is recorded as read"]);
-      status_set(done);
-      await render();
-    } catch (failed) {
-      let missed = text_combine_multiple([
-        "could not record ",
-        nickname,
-        " as read",
-      ]);
-      status_set(missed);
-    }
+    let r = app_g_arc_read_mark(
+      nickname,
+      status_working,
+      chapter_code,
+      status_set,
+      render,
+    );
+    return r;
   }
   app_shared_button_inline(row, "mark read", on_read);
   async function on_approve() {
