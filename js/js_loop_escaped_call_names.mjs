@@ -1,3 +1,4 @@
+import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { js_loop_shelters } from "./js_loop_shelters.mjs";
@@ -9,8 +10,6 @@ import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { js_call_name_or_null } from "./js_call_name_or_null.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter_null_not_is } from "./list_filter_null_not_is.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function js_loop_escaped_call_names(loop) {
   "$plain loop";
@@ -50,8 +49,7 @@ export function js_loop_escaped_call_names(loop) {
     }
     return called;
   }
-  let named = list_map(awaits, escaped_name_or_null);
-  let escaping = list_filter_null_not_is(named);
+  let escaping = list_map_filter_null_not_is(awaits, escaped_name_or_null);
   let once_each = list_unique(escaping);
   return once_each;
 }
