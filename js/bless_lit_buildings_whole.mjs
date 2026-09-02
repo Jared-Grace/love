@@ -36,7 +36,8 @@ export function bless_lit_buildings_whole(blessed, blocks, lit) {
   ("twice comes out the wrong colour, so a building hands over either the whole of itself or");
   ("the new part of itself, never both - and no two buildings share a square.");
   ("Ground outside a building cannot be lit at all, so nothing needs carrying over from the");
-  ("list this was given. Lighting is worked out building by building; a yard is never in it.");
+  ("list this was given. Lighting is worked out building by building, and the only yard in");
+  ("it is the step of it in front of a door, which the building counts as its own.");
   let member_is = g_coordinates_member_is(lit);
   function block_tiles(block, index) {
     let buildings = property_get(block, "buildings");
