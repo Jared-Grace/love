@@ -1,24 +1,25 @@
-import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { integer_to_try } from "./integer_to_try.mjs";
+import { list_last } from "./list_last.mjs";
+import { property_get } from "./property_get.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_last } from "./list_last.mjs";
-import { list_add } from "./list_add.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
+import { not } from "./not.mjs";
+import { list_first } from "./list_first.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
-import { integer_to_try } from "./integer_to_try.mjs";
-import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
+import { app_shared_bible_verse_block_lines } from "./app_shared_bible_verse_block_lines.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_shared_bible_copy(
   verse_numbers_chosen,
   languages_verses,
   chapter_code,
+  lines_extra,
 ) {
   list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
   let primary = list_last(languages_verses);
@@ -50,7 +51,7 @@ export async function app_shared_bible_copy(
       );
       let nn = null_not_is(verse_l);
       if (nn) {
-        ("copied text is only scripture — no language-name labels, unlike the on-screen parallel view");
+        ("copied text is only scripture - no language-name labels, unlike the on-screen parallel view");
         let text_l = property_get(verse_l, "text");
         list_add(texts, text_l);
       }
@@ -65,5 +66,8 @@ export async function app_shared_bible_copy(
     list_add_multiple(lines, block);
   }
   each(sliced, per_verse);
+  ("Whatever else the screen was showing about this passage follows the scripture, in the order the screen showed it. A reader on a gloss page has the verse in the language they are learning and a line for every word of it explained; copying gave them the english alone, so what landed on the clipboard was the one part of that screen they could already have got anywhere. What is put here is put by the screen that drew it, because only that screen knows what it drew.");
+  ("It is added once at the end rather than after each verse, because these readers show a single verse at a time and the whole-chapter reader has nothing extra to add - so there is no verse for the wrong copy of it to attach to.");
+  list_add_multiple(lines, lines_extra);
   await list_join_newline_2_copy(lines);
 }
