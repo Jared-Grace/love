@@ -59,12 +59,11 @@ export function bless_building_family_tiles(building, index) {
   let y_front = list_get_property(doorways, column, "y");
   let shape = bless_building_shape();
   let slab = property_get(shape, "family_width");
-  let depth = property_get(shape, "depth");
+  let storeys = property_get(building, "storeys");
   let reach = divide_floor(slab, 2);
   let x_least = subtract(x_door, reach);
   let x_most = add(x_door, reach);
-  let rows_back = subtract(depth, 1);
-  let y_top = subtract(y_front, rows_back);
+  let y_top = subtract(y_front, storeys);
   let alone_is = greater_than_equal(column, upstairs);
   function y_least_get() {
     if (ground_is) {
