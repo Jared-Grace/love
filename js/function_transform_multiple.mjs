@@ -4,6 +4,7 @@ export async function function_transform_multiple(
   f_name_transformer_args_comma,
   f_names_comma,
 ) {
+  "Runs one named transform over several functions at once, so a change of the same shape is made in one command rather than repeated by hand.";
   async function lambda(f_name) {
     await function_transform_single(f_name_transformer_args_comma, f_name);
   }
