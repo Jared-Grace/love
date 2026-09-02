@@ -7,6 +7,7 @@ import { not } from "./not.mjs";
 import { function_path_to_name } from "./function_path_to_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { red_proof_checked } from "./red_proof_checked.mjs";
+import { red_proof_checked_clean_print } from "./red_proof_checked_clean_print.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { json_to } from "./json_to.mjs";
 export async function red_proofs_gate_run() {
@@ -17,6 +18,7 @@ export async function red_proofs_gate_run() {
   ("PADDING IS COUNTED TWO WAYS AND ONLY THE FIRST IS WRITTEN OUT IN FULL. A case refusing no wrong version at all is rare and worth a line of its own. A case refusing only wrong versions some other case also refuses is common - the second count runs to a fifth of the cases here - and printing all of those would bury the first under prose nobody would read twice. The count stands in the heading and the rows are in the answer this hands back, which is where to look when the count is the question being asked.");
   ("IT DOES REFUSE A CASE WHOSE OWN WORDS SAY IT IS THE ONLY ONE CATCHING SOMETHING WHEN IT IS NOT. That is not a judgment about whether the case earns its place - it is a sentence disagreeing with the record printed beside it, and the record is worked out before the sentence is read. Three of those were false at once in one corpus and had been read past twice, which is why this one throws where padding only reports.");
   ("A CORPUS THAT WILL NOT READ IN IS A FAULT OF ITS OWN AND NEVER THE END OF THE WALK. The list of corpora grows with every proof written, so a torn file, a name that no longer answers, or a module that throws while loading is a thing that will happen here rather than a thing that might. Waited on plainly it would carry the file's own complaint out of this gate as though the gate had nothing to say, leaving every corpus after it unasked and no name in the answer for an app to be sorted against. Caught, it is one named corpus at fault beside all the others that were still read. The name written down is the reader's own rather than the file's, because a name carrying a dot answers to no function and so could never be sorted against what an app reaches.");
+  ("What one corpus's report looks like is printed one name along, because the whole of that run is about a single corpus and reads nothing else this is holding - and lifting it out is what brought this back under the ceiling on how many lines of work one function may carry.");
   ("Throws so the dispatcher seam exits nonzero.");
   let names = await red_proof_names();
   let reports = [];
@@ -42,47 +44,9 @@ export async function red_proofs_gate_run() {
     let proof = property_get(answered, "value");
     let checked = red_proof_checked(proof);
     list_add(reports, checked);
-    let clean =
-      list_empty_is(checked.holes) &&
-      list_empty_is(checked.exemptions_stale) &&
-      list_empty_is(checked.exemptions_unreasoned) &&
-      list_empty_is(checked.claims_unmatched);
+    let clean = red_proof_checked_clean_print(checked);
     if (not(clean)) {
       list_add(faulted, checked);
-    }
-    console.log(
-      (clean ? "pass  " : "FAIL  ") +
-        checked.fn +
-        "  cases " +
-        checked.cases_count +
-        "  wrong " +
-        checked.wrong_count +
-        "  idle " +
-        checked.idle.length +
-        "  spare " +
-        checked.redundant.length,
-    );
-    for (let row of checked.idle) {
-      console.log(
-        "      refuses nothing, case " + row.index + ": " + row.described,
-      );
-    }
-    for (let row of checked.claims_unmatched) {
-      console.log(
-        "      says it is the only one catching something, and catches nothing no other case catches, case " +
-          row.index +
-          ": " +
-          row.described,
-      );
-    }
-    for (let hole of checked.holes) {
-      console.log("      refused by nothing: " + hole);
-    }
-    for (let stale of checked.exemptions_stale) {
-      console.log("      let-off nobody needs: " + stale);
-    }
-    for (let unreasoned of checked.exemptions_unreasoned) {
-      console.log("      let-off with no reason given: " + unreasoned);
     }
   }
   console.log("\nred proofs " + reports.length + "  faulted " + faulted.length);
