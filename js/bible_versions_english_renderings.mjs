@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { bible_versions_english_choices_usable } from "./bible_versions_english_choices_usable.mjs";
@@ -61,11 +62,11 @@ export async function bible_versions_english_renderings() {
   }
   let usable = await bible_versions_english_choices_usable();
   function judged(choice) {
-    let bible_folder = property_get(choice, "bible_folder");
+    let bible_folder = property_get(choice, bible_folder_key());
     let name = property_get(choice, "name");
     let found = list_find_property_or_null(
       authored,
-      "bible_folder",
+      bible_folder_key(),
       bible_folder,
     );
     let message = text_combine_multiple([
