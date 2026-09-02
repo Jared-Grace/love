@@ -25,7 +25,8 @@ export function bless_building_family_tiles_tile_in_share(
   }
   function y_most_get() {
     if (ground_is) {
-      return y_front;
+      let step = add(y_front, 1);
+      return step;
     }
     let below = subtract(y_front, 1);
     return below;

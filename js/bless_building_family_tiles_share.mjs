@@ -15,7 +15,7 @@ export function bless_building_family_tiles_share({
   x_door,
   upstairs,
   ground_is,
-  tiles,
+  ground,
 }) {
   arguments_assert(arguments, 1);
   let y_front = list_get_property(doorways, column, "y");
@@ -35,6 +35,6 @@ export function bless_building_family_tiles_share({
     x_least,
     x_most,
   );
-  let share = list_filter(tiles, tile_in_share);
+  let share = list_filter(ground, tile_in_share);
   return share;
 }
