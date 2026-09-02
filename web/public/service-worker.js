@@ -1,4 +1,4 @@
-var CACHE_NAME = 'love-cache-v2';
+var CACHE_NAME = 'love-cache-v3';
 var SHELL_TIMEOUT_MS = 4000;
 self.addEventListener('install', function () {
   self.skipWaiting();
