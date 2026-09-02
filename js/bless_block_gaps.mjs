@@ -1,3 +1,4 @@
+import { bless_building_set_back } from "./bless_building_set_back.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_block_measures } from "./bless_block_measures.mjs";
 import { property_get } from "./property_get.mjs";
