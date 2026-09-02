@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-export function bless_household_splits(families) {
+export function bless_family_splits(families) {
   arguments_assert(arguments, 1);
   ("The ways the nine people of one building can be shared out between this many families, with nobody living alone and nobody in a family of more than five.");
   ("Families of different sizes were asked for because three, three and three everywhere is the one thing about this street a player notices is untrue. Real doors have a couple behind one and a houseful behind the next, and a game whose every family is the same size is telling the player that the number is machinery rather than a family.");
