@@ -3,7 +3,7 @@ import { app_g_bless_overlay_render_tap_prayed_person_id_pray } from "./app_g_bl
 import { app_g_bless_overlay_render_tap_prayed_person_at } from "./app_g_bless_overlay_render_tap_prayed_person_at.mjs";
 import { not } from "./not.mjs";
 import { app_g_bless_overlay_render_tap_prayed_amen_ask } from "./app_g_bless_overlay_render_tap_prayed_amen_ask.mjs";
-export function app_g_bless_overlay_render_tap_prayed_tap_prayed(
+export function app_g_bless_overlay_render_tap_prayed_pray_makers(
   view_everyone,
   person_pray,
   view_now,
