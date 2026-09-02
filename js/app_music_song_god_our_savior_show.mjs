@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_god_our_savior_sections } from "./song_god_our_savior_sections.mjs";
-import { song_god_our_savior_versions } from "./song_god_our_savior_versions.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -17,19 +16,21 @@ import { html_div_text_bold } from "./html_div_text_bold.mjs";
 import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { app_music_references_fill } from "./app_music_references_fill.mjs";
-export async function app_music_song_god_our_savior_show(parent) {
+export async function app_music_song_god_our_savior_show(parent, song) {
+  "$plain song";
   "This song's own page: every line it sings in the order it is sung, gathered under the name of the part it belongs to, each line opening to the passages of scripture it rests on.";
   "THE PASSAGES ARE FOLDED BEHIND THE LINES, so what a reader meets is the song rather than a wall of scripture, and the verses behind whichever line raised the question are one tap under it.";
   "A LINE THE SONG ONLY REPEATS IS LEFT OUT, wherever the repeat falls. The tag sings the last line of the fourth verse over again, and drawn a second time it would open onto the passages the first one already showed - so the reader is offered the same scripture twice and learns nothing from the second offer. The singing repeats it; the page does not need to.";
   "A PART WHOSE LINES HAVE ALL BEEN SUNG ALREADY IS NOT ANNOUNCED. The heading is drawn when the first line under it is drawn rather than when the part is reached, which is what stops the tag leaving a name over nothing.";
   "A PART IS NAMED CLOSE OVER ITS OWN LINES AND WELL CLEAR OF THE PART BEFORE IT. A heading starts out wearing the same generous band above it as below, which reads as a name floating between two blocks rather than belonging to either, and the reader has to work out by counting which side it goes with. It belongs to what is under it, so the room under it is cut to almost nothing and the room over it is opened up: the same total distance, spent so that the name and its first line touch. The first part named is the exception and gets no room above it at all - the room above a name is there to stand it off from the part before it, and the first one has no part before it. What it does have above it is the page top matter, which closes with a break of its own, so the opened-up band landed on top of that break and the song started further down the screen than anything else on the page.";
   "A line resting on nothing is drawn plainly rather than as a card that opens on emptiness.";
-  "THIS SONG'S OWN TRANSLATION CHOICES ARE READ ONCE HERE AND CARRIED DOWN. Which bible a passage is quoted from is a fact about the song rather than about the passage, so it is this song that has to say it - sixteen of the passages under these lines are sung by the hymn next door as well, and each of the two may want a different wording of the same verse. Read once at the top rather than looked up under every line, because it is the same answer for the whole song and a hundred lookups of one constant is a hundred chances for two of them to differ.";
+  "IT IS HANDED THE SONG IT IS DRAWING RATHER THAN NAMING IT. Which bible each passage is quoted from is a fact about the song, and the song already carries that answer for everything else that asks - so reaching for this song's list by name here would be a second way to the same fact, and two ways to one fact is one of them going stale. Being handed it also means this asks for the built file the song is filed under without having to work out which song it is.";
+  "THE TRANSLATION CHOICES ARE READ ONCE AT THE TOP AND CARRIED DOWN, rather than looked up under every line. It is the same answer for the whole song, and a hundred lookups of one constant is a hundred chances for two of them to differ.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while the passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   let sections = song_god_our_savior_sections();
-  let versions = song_god_our_savior_versions();
+  let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
   let sung = [];
   let asked_all = [];
@@ -72,5 +73,5 @@ export async function app_music_song_god_our_savior_show(parent) {
       list_add_multiple(asked_all, shown.asked_list);
     }
   }
-  await app_music_references_fill(asked_all, versions);
+  await app_music_references_fill(asked_all, song);
 }

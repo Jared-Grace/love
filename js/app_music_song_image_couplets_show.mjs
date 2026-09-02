@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
-import { song_image_couplets_versions } from "./song_image_couplets_versions.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -18,19 +17,21 @@ import { add } from "./add.mjs";
 import { song_image_emblem_caption } from "./song_image_emblem_caption.mjs";
 import { app_music_song_emblem_show } from "./app_music_song_emblem_show.mjs";
 import { app_music_references_fill } from "./app_music_references_fill.mjs";
-export async function app_music_song_image_couplets_show(parent) {
+export async function app_music_song_image_couplets_show(parent, song) {
+  "$plain song";
   "The hymn's own page: every line it sings in the order it is sung, each one opening to the passages of scripture it rests on.";
   "THE PASSAGES ARE FOLDED BEHIND THE LINES. Written out flat this song runs to some twenty thousand letters, and a reader looking for the words of one line would be scrolling past ninety passages to find them. Folded, the page is the song - and the scripture is one tap under whichever line raised the question.";
   "A LINE THE SONG ONLY REPEATS IS LEFT OUT. Written down, the same words twice in a row read as a mistake rather than as a refrain, and the second card would open onto the passages the first one already showed - so the reader is offered the same scripture twice and learns nothing from the second offer. The singing repeats it; the page does not need to.";
   "A line resting on nothing is drawn plainly rather than as a card that opens on emptiness.";
   "EVERY PICTURE THE SONG WAS GIVEN IS HERE, under the line it was drawn for, and a line that is sung twice shows both of the emblems drawn for it one after the other. The words of such a line are printed once because printing them twice reads as a mistake, but the two pictures are not one picture shown twice - they were drawn as two answers to the same line, and dropping the second would lose a picture that exists and says something the first does not.";
   "A picture carries its own passages and the line carries its own, folded separately, because they are answerable to Scripture separately. The clearest case is the line sung twice: both printings rest on the same three passages, since they are the same words, while the two emblems beside them rest on nothing in common at all.";
-  "THIS HYMN'S OWN TRANSLATION CHOICES ARE READ ONCE HERE AND CARRIED DOWN, to the lines and to the pictures alike. Which bible a passage is quoted from is a fact about the song rather than about the passage, so it is this song that has to say it - sixteen of these passages are sung by the song next door as well, and each of the two may want a different wording of the same verse.";
+  "IT IS HANDED THE SONG IT IS DRAWING RATHER THAN NAMING IT. Which bible each passage is quoted from is a fact about the song, and the song already carries that answer for everything else that asks - so reaching for this hymn's list by name here would be a second way to the same fact, and two ways to one fact is one of them going stale. Being handed it also means this asks for the built file the song is filed under without having to work out which song it is.";
+  "THE TRANSLATION CHOICES ARE READ ONCE AT THE TOP AND CARRIED DOWN, to the lines and to the pictures alike, rather than looked up under each of them. Sixteen of these passages are sung by the song next door as well, and each of the two may want a different wording of the same verse.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while ninety passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   let couplets = song_image_couplets();
-  let versions = song_image_couplets_versions();
+  let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
   let verse_shown = 0;
   let asked_all = [];
@@ -78,5 +79,5 @@ export async function app_music_song_image_couplets_show(parent) {
       list_add_multiple(asked_all, asked_emblem);
     }
   }
-  await app_music_references_fill(asked_all, versions);
+  await app_music_references_fill(asked_all, song);
 }
