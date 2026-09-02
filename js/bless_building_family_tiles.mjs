@@ -47,7 +47,7 @@ export function bless_building_family_tiles(building, index) {
   ("low house is two rows deep and a tall one is three, while the slot every house stands in");
   ("is three rows whatever fills it. Measured off the slot, a low house would light a row");
   ("behind itself that belongs to its yard rather than to anybody living there.");
-  let tiles = property_get(building, "tiles");
+  let ground = property_get(building, "ground");
   let doorways = property_get(building, "doorways");
   let columns = property_get(building, "columns");
   let families = property_get(building, "families");
@@ -62,7 +62,7 @@ export function bless_building_family_tiles(building, index) {
     x_door,
     upstairs,
     ground_is,
-    tiles,
+    ground,
   });
   return share;
 }
