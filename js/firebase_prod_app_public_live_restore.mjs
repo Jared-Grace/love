@@ -1,28 +1,30 @@
-import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
-import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
-import { folder_public_absolute } from "./folder_public_absolute.mjs";
-import { firebase_prod_app_live_sent_for_names } from "./firebase_prod_app_live_sent_for_names.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { firebase_prod_asset_disk_hash_or_null } from "./firebase_prod_asset_disk_hash_or_null.mjs";
-import { firebase_prod_asset_disk_write } from "./firebase_prod_asset_disk_write.mjs";
-import { firebase_prod_asset_download } from "./firebase_prod_asset_download.mjs";
 import { firebase_prod_hashes } from "./firebase_prod_hashes.mjs";
-import { folder_app_stale_delete } from "./folder_app_stale_delete.mjs";
-import { list_add } from "./list_add.mjs";
-import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { firebase_prod_app_live_sent_for_names } from "./firebase_prod_app_live_sent_for_names.mjs";
+import { folder_public_root_noting_set } from "./folder_public_root_noting_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { firebase_prod_asset_disk_hash_or_null } from "./firebase_prod_asset_disk_hash_or_null.mjs";
+import { equal } from "./equal.mjs";
+import { list_add } from "./list_add.mjs";
+import { firebase_prod_asset_download } from "./firebase_prod_asset_download.mjs";
+import { firebase_prod_asset_disk_write } from "./firebase_prod_asset_disk_write.mjs";
 import { text_hash } from "./text_hash.mjs";
+import { not } from "./not.mjs";
+import { folder_public_absolute } from "./folder_public_absolute.mjs";
+import { folder_app_stale_delete } from "./folder_app_stale_delete.mjs";
+import { qa_promoted_app_pieces_gone_forget } from "./qa_promoted_app_pieces_gone_forget.mjs";
+import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
 export async function firebase_prod_app_public_live_restore(app_name) {
   "$plain app_name";
-  "Puts back into the folder that gets sent, for one app, the pieces that app is being served and that its page actually sends for - and takes out the rest. Answers with what was put back, what was already right, and what was taken out.";
+  "Puts back into the folder that gets sent, for one app, the pieces that app is being served and that its page actually sends for - and takes out the rest. Answers with what was put back, what was already right, what was taken out, and what the note of waiting apps was made to forget.";
   "Afterwards that app is waiting to go out as what is already out there, less whatever its page never sends for, and some of what is already public can put nothing new on the internet any more than all of it can. That is the whole of why anybody wants this: a build that was put in the folder and never sent holds every other app's sending until somebody can account for it, and being what is already live is an account no note has to be written for.";
   "The pieces come down off the wire rather than out of the record of them. The record says which pieces there are and what they came to, which is all that is needed to know what to ask for and what to leave alone - but a record is a copy and the thing being copied here has to be the real one, or what ends up waiting is a build that merely matches a note somebody wrote.";
   "A piece already matching is left alone rather than fetched again, so asking for this twice costs almost nothing and the second answer is the proof the first one worked.";
   "A piece that comes down not matching what was written about it is still written to the disk and named separately in the answer. What is live has moved since anybody looked, and what is live is the thing being copied - so the copy is right and the record is what has fallen behind. Saying which pieces those were is how whoever asked finds out.";
   "The extra pieces go because a build is free to cut a page into scripts of its own choosing, and the ones the newest build never named are not overwritten by anything - left there they describe the page as something no build ever made. Some of them are being served, having ridden out on an earlier sending, and being served was once taken here as a reason to fetch them back - which made a circle, since what comes back rides out again and is served again. What the page sends for is asked instead, so a leftover goes whether or not it is live.";
+  "THE NOTE OF WAITING APPS IS PUT RIGHT IN THE SAME BREATH AS THE TAKING AWAY, because a piece taken out of the folder is a piece that note is still naming, and a note naming a file that is gone refuses the sending of every app waiting beside this one and names none of them as the cause. So this was handing whoever came next the exact refusal the door was opened to clear, and doing it every single time: measured the day this was written, five apps were put back and all five were then refused for pieces this had itself just taken away. Only this app's note is touched, so the change belongs in this app's own commit.";
   "An app nothing is being served under gets no answer here beyond the reason. There is nothing to copy, so the pieces waiting under that name cannot be made into a copy of anything, and whoever owns that app has to say what should happen to them.";
   arguments_assert(arguments, 1);
   let served = await firebase_prod_hashes();
@@ -33,6 +35,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
       app: app_name,
       why: "nothing is being served under this name, so there is nothing to put back",
       deleted: null,
+      forgotten: null,
       moved: null,
       restored: null,
       unchanged: null,
@@ -63,6 +66,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
   }
   let folder = folder_public_absolute();
   let deleted = await folder_app_stale_delete(folder, app_name, file_names);
+  let forgotten = await qa_promoted_app_pieces_gone_forget(app_name);
   folder_public_root_noting_clear();
   let r = {
     app: app_name,
@@ -70,6 +74,7 @@ export async function firebase_prod_app_public_live_restore(app_name) {
     unchanged,
     moved,
     deleted,
+    forgotten,
     why: null,
   };
   return r;
