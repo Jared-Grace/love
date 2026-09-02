@@ -23,7 +23,7 @@ export function app_g_bless_family_first_pray(r) {
     return;
   }
   let household = 0;
-  let members = bless_place_members("household", household);
+  let members = bless_place_members("family", household);
   let waiting = list_last(members);
   let pray_person_id = property_get(r, "pray_person_id");
   pray_person_id(waiting);

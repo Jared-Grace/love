@@ -11,6 +11,6 @@ export function bless_hash_family_first() {
   ("Nearly finished rather than finished, because what is being checked is the FINISHING -");
   ("the camera moving, the ground turning, the flash. A world opened with the house already");
   ("gold would show the result and never the thing that produces it.");
-  let word = "household_first";
+  let word = "family_first";
   return word;
 }

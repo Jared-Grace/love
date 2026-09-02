@@ -38,7 +38,7 @@ export function bless_view_family_started(blessed, view) {
   ("elsewhere.");
   let people = bless_view_people(view);
   function person_household(person) {
-    let household = bless_person_place(person, "household");
+    let household = bless_person_place(person, "family");
     return household;
   }
   let started = set_new();

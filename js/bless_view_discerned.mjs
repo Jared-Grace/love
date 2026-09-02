@@ -79,7 +79,7 @@ export function bless_view_discerned(blessed, everyone) {
     let building = bless_person_place(person, "building");
     let households = bless_place_members("building", building);
     function household_left_is(id) {
-      let done = bless_place_done_is(blessed, "household", id);
+      let done = bless_place_done_is(blessed, "family", id);
       let over = not(done);
       return over;
     }

@@ -28,7 +28,7 @@ export function bless_marks_climbed_cases() {
       count: 3,
       stride: 1,
       climbed: {
-        rung: "household",
+        rung: "family",
         dark: 0,
       },
       why: "the first family is a couple, so three prayers finish it and open the next, and the building above is still six people short",

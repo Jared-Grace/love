@@ -16,7 +16,7 @@ export function bless_place_members(rung, place) {
   ("Handing back all four would be handing back two families that nobody lives in, and every reading above this one asks whether all of a building's families are finished. Two of them permanently unfinished is a building that can never be prayed for.");
   ("Everything above stays a plain multiplication, and the reason is that a building holds nine whichever way it splits - so the variety stops at this rung instead of travelling up the ladder.");
   ("A person cannot be asked this, because nobody is inside a person. Asking anyway is a caller that has walked off the bottom of the ladder, and the missing size says so.");
-  let family = equal(rung, "household");
+  let family = equal(rung, "family");
   if (family) {
     let people = bless_family_people(place);
     return people;

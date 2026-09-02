@@ -189,7 +189,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain and quiet, each of its flat colours one unbroken band running straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
+        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain, each of its flat colours one deep saturated unbroken band running straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
       symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
@@ -289,7 +289,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through in two separate places on opposite sides so that it lies in two loose curved pieces no longer joined to each other, each of the two breaks a plain gap several times wider than the ring's own metal is thick with nothing lying across it or hiding it, the two pieces still holding the shape of the ring they came out of, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
+        "One heavy iron fetter of plain grey iron lying open, not one ring but two separate curved half-rings of that iron, each one a plain arc a little longer than a half circle, the two laid facing each other so that together they hold the shape of the ring they were broken out of, with one wide plain gap at the top between their two upper ends and a second wide plain gap at the bottom between their two lower ends, each gap several times wider than the iron itself is thick and nothing lying across either of them, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
       symbol_ref: "Galatians 3:13, Romans 6:6, Psalm 107:14",
       same_as: 0,
     },
