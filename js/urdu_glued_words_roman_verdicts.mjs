@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_urdu_control_roman } from "./ebible_folder_urdu_control_roman.mjs";
 import { ebible_version_words_searchable } from "./ebible_version_words_searchable.mjs";
@@ -67,8 +68,7 @@ export async function urdu_glued_words_roman_verdicts() {
     let glued = text_words_searchable_occurrences(searchable, solid);
     let apart = text_words_searchable_occurrences(searchable, apart_text);
     let spacing_ruled = split[word];
-    let unruled = equal(spacing_ruled, undefined);
-    let spacing_wanted = not(unruled);
+    let spacing_wanted = equal_not(spacing_ruled, undefined);
     let verdict = null;
     if (spacing_wanted) {
       verdict = urdu_glued_words_control_verdict(apart, glued);
