@@ -5,7 +5,8 @@ export function song_god_our_savior_versions() {
   "THE CHOICES BELONG TO THIS SONG AND NOT TO THE PAGE, WHICH IS WHY THEY ARE WRITTEN HERE BESIDE ITS WORDS. Two songs can rest on the same passage and want different wordings of it, because each was written against the wording its own line echoes - one may lean on a word the other never says. Sixteen passages are sung by both songs on this page, and a single list keyed by the passage alone would have let whichever song was decided first settle the other one's wording in silence.";
   "ONLY THE PASSAGES THAT DIFFER ARE WRITTEN HERE. Naming a translation for all hundred passages would mean maintaining all hundred, and ninety nine of the entries would say the same word. A passage absent from this list is not undecided - it is decided the ordinary way, by the page's usual translation.";
   "THE NAME IS WRITTEN BESIDE THE FOLDER RATHER THAN LOOKED UP. Showing a reader which translation they are reading has to cost the page nothing, and looking a name up means fetching the thing it is written on. It is kept honest by a gate instead of by care - a name that disagrees with what the translation calls itself fails the build rather than reaching a reader.";
-  "TIED IS NOT BETTER, SO A TIE LEAVES THE PASSAGE OUT. Reading two hundred wordings by eye and keeping whichever felt right would have written an entry here for nearly all of them; only the passages where some translation genuinely says more of the line than the usual one does are written down, which is twenty five of a hundred and one.";
+  "TIED IS NOT BETTER, SO A TIE LEAVES THE PASSAGE OUT. Reading two hundred wordings by eye and keeping whichever felt right would have written an entry here for nearly all of them; only the passages where some translation genuinely says more of the line than the usual one does are written down, which is twenty six of a hundred and one.";
+  "MATTHEW ONE TWENTY THREE IS THE ONE ENTRY HERE THAT ONLY THE UNFOLDINGWORD LITERAL CAN FILL. The line is the Word made flesh, of virgin's womb, and that bible is the only one on the list that says womb at all - every other English wording there says with child or pregnant. So the word the line was built on was missing from the page at the one passage it was quoting.";
   arguments_assert(arguments, 0);
   let versions = [
     {
@@ -22,6 +23,11 @@ export function song_god_our_savior_versions() {
       reference: "John 1:14",
       bible_folder: "eng-kjv2006",
       name: "King James (Authorized) Version",
+    },
+    {
+      reference: "Matthew 1:23",
+      bible_folder: "en_ult",
+      name: "unfoldingWord® Literal Text",
     },
     {
       reference: "John 1:29",
