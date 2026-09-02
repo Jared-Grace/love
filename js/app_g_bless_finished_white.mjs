@@ -1,3 +1,4 @@
+import { g_tiles_ground_tint_depth } from "./g_tiles_ground_tint_depth.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -40,6 +41,17 @@ export function app_g_bless_finished_white(div_map, tiles, roof_is) {
   ("roof comes out darker by exactly as much as it already was; a grey chosen here would be");
   ("a second opinion about what a roof looks like, free to stop matching the day the roof is");
   ("drawn in anything else.");
+  ("THE WHOLE WASH SITS AT THE DEPTH OF THE LOWEST SQUARE IT COVERS, which is the depth the");
+  ("house itself is drawn at, rather than each square standing at its own row. Depth on this");
+  ("map is how far down the screen a thing has reached, and a finished house is ONE piece");
+  ("placed at its front row - so a wash laid square by square puts every row except the front");
+  ("one behind the house it is washing. A player who finished a two storey house watched the");
+  ("ground floor turn white and the upstairs stay as it was: the upstairs white was there all");
+  ("along, underneath the house.");
+  ("Placed with the house, all of the wash is in front of all of the house, and none of it");
+  ("reaches the people - they stand a whole layer higher, and the layers are spaced so that");
+  ("no row can climb into the next one.");
+  let depth = g_tiles_ground_tint_depth(tiles);
   let seconds = "0.7s";
   let transition = text_combine("opacity ", seconds);
   function tile_shown_get(tile) {
@@ -59,6 +71,7 @@ export function app_g_bless_finished_white(div_map, tiles, roof_is) {
       "pointer-events": "none",
       opacity: "0",
       transition: transition,
+      "z-index": depth,
     });
     let shown = tile_shown_get(tile);
     let pair = {
