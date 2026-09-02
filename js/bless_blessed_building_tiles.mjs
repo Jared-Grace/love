@@ -29,7 +29,7 @@ export function bless_blessed_building_tiles(blessed, building, number) {
   }
   let households = bless_place_members("building", number);
   function household_tiles(household, index) {
-    let done = bless_place_done_is(blessed, "household", household);
+    let done = bless_place_done_is(blessed, "family", household);
     let undone = not(done);
     if (undone) {
       let none = [];

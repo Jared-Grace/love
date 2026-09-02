@@ -49,8 +49,8 @@ export function bless_homes_ensure(people, blocks) {
     let building = property_get(places, "building");
     let within = bless_place_within("building", building);
     let doorsteps = property_list_get(block, "doors", within);
-    let household = property_get(places, "household");
-    let within_household = bless_place_within("household", household);
+    let household = property_get(places, "family");
+    let within_household = bless_place_within("family", household);
     ("A family upstairs comes out of the door of the family below them, so the doorstep is");
     ("found by column and not by family number. A house can hold more families than it has");
     ("doors now, and counting along the doorsteps by family walks off the end of the row.");

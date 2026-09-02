@@ -63,14 +63,14 @@ export async function app_g_bless_finished_preview() {
   let building = list_get(buildings, 2);
   let households = bless_place_members("building", building);
   let household = list_first(households);
-  let line = bless_told_reach("household");
+  let line = bless_told_reach("family");
   async function play() {
     "The record is made afresh every time rather than undone, so watching it twice is";
     "watching the same thing twice.";
     let empty = bless_blessed_new();
     app_g_bless_homes(homes, empty, blocks);
     let blessed = bless_blessed_new();
-    bless_blessed_add(blessed, "household", household);
+    bless_blessed_add(blessed, "family", household);
     let tiles = bless_blessed_tiles(blessed, blocks);
     ("The finished house is drawn by the celebration rather than before it, which is what the");
     ("street itself does now - the ground goes up between the faces and the flash over them,");
