@@ -4,7 +4,7 @@ import { not } from "./not.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
 import { list_last } from "./list_last.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_bless_household_first_pray(r) {
+export function app_g_bless_family_first_pray(r) {
   arguments_assert(arguments, 1);
   ("Says the one prayer that finishes the first household off, when the address asked for");
   ("that, and does nothing at all otherwise.");
