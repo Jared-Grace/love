@@ -4,7 +4,7 @@ import { bless_hash_family_first_celebrate } from "./bless_hash_family_first_cel
 import { bless_hash_family_first_finished } from "./bless_hash_family_first_finished.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_street } from "./bless_hash_street.mjs";
-import { bless_hash_household_first } from "./bless_hash_household_first.mjs";
+import { bless_hash_family_first } from "./bless_hash_family_first.mjs";
 export function bless_hash_street_openings() {
   arguments_assert(arguments, 0);
   ("Every word after the hash mark that opens the praying game onto the STREET rather than");
@@ -20,7 +20,7 @@ export function bless_hash_street_openings() {
   ("place the first one is named - and the one that got missed would be an address that");
   ("silently opened the ordinary way.");
   let street = bless_hash_street();
-  let household_first = bless_hash_household_first();
+  let household_first = bless_hash_family_first();
   let celebrate = bless_hash_family_first_celebrate();
   let finished = bless_hash_family_first_finished();
   let building = bless_hash_building_first();
