@@ -1,9 +1,8 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { not } from "./not.mjs";
 import { text_words_content_echo_stemmed } from "./text_words_content_echo_stemmed.mjs";
-import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 export function g_arc_turn_passage_unechoed(after, scripture) {
   "Whether a written answer picks up nothing at all from the verse it is answering - no word that carries a meaning of its own, once the endings are folded off.";
   "$plain after";
@@ -22,7 +21,6 @@ export function g_arc_turn_passage_unechoed(after, scripture) {
     return answered_nothing;
   }
   let echo = text_words_content_echo_stemmed(after, scripture);
-  let shared = property_get(echo, "shared");
-  let none = equal(shared, 0);
+  let none = property_equals(echo, "shared", 0);
   return none;
 }
