@@ -51,15 +51,15 @@ export function app_g_arcs_turn_block(
   let notes = property_get(r, "notes");
   let believes = property_get(r, "believes");
   if (turned) {
-    app_g_arcs_turn_field(
-      "believes",
-      believes,
+    app_g_arcs_turn_field({
+      name: "believes",
+      value: believes,
       block,
       moved,
       held,
       voice_color,
       marks,
-    );
+    });
   }
   app_shared_note_pills(block, notes);
   let names = g_arc_answer_field_names("turn");
