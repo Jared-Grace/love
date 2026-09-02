@@ -50,8 +50,8 @@ export async function smart_self_test_recent_gate_run() {
     since,
     '" --no-pager',
   ]);
-  let log = await command_line_code_ignore_stdout(command3);
-  let mapped = text_split_newline(log);
+  let journal_text = await command_line_code_ignore_stdout(command3);
+  let mapped = text_split_newline(journal_text);
   let part = text_frozen("self-test");
   let tests = list_filter_text_includes(mapped, part);
   list_empty_not_is_assert_json(tests, {
