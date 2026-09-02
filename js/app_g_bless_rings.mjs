@@ -1,7 +1,7 @@
 import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_color_household_remaining } from "./app_g_bless_color_household_remaining.mjs";
+import { app_g_bless_color_family_remaining } from "./app_g_bless_color_family_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
@@ -39,7 +39,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
   ("changes being written, because unlike a light a ring GOES OUT - the person is prayed for");
   ("and it has nothing left to say. Writing only what changed would need a memory of what");
   ("was showing last time, and that memory is the thing that drifts away from the record.");
-  let color = app_g_bless_color_household_remaining();
+  let color = app_g_bless_color_family_remaining();
   let size = g_img_square_size_css();
   let width = text_combine_multiple(["calc((", size, ") * 0.13)"]);
   let border = text_combine_multiple([width, " dashed ", color]);

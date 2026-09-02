@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_g_bless_color_household_remaining() {
+export function app_g_bless_color_family_remaining() {
   arguments_assert(arguments, 0);
   ("The ring drawn under somebody who lives with a person the player has already prayed");
   ("for, and who has not been prayed for themselves.");
