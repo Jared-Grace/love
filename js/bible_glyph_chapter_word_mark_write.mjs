@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
@@ -55,8 +56,7 @@ export async function bible_glyph_chapter_word_mark_write(
     list_add(written, item);
     replaced = add(replaced, 1);
   }
-  let b = equal(replaced, 0);
-  let found = not(b);
+  let found = equal_not(replaced, 0);
   assert_json(found, {
     f_path,
     word,
