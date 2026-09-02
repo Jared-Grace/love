@@ -665,7 +665,7 @@ export function bible_glyph_chapter_luk07() {
       verse_number: 23,
       words: [
         "$plus",
-        "blessed",
+        "$gift+smile",
         "is",
         "the",
         "one",
