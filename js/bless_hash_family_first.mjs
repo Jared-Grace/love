@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function bless_hash_household_first() {
+export function bless_hash_family_first() {
   arguments_assert(arguments, 0);
   ("The word written after the hash mark to open the praying game onto the street with the");
   ("first household nearly finished - two of its three already prayed for, so one prayer");
