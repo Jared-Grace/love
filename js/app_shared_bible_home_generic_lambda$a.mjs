@@ -15,8 +15,9 @@ export async function app_shared_bible_home_generic_lambda$a(
   hash,
   content,
   lambda$a,
+  lines_copy_extra,
 ) {
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 9);
   let p_verse = property_get(r, "p_verse");
   let top = property_get(r, "top");
   let verse_current = property_get(r, "verse_current");
@@ -39,6 +40,7 @@ export async function app_shared_bible_home_generic_lambda$a(
     chapter_code,
     languages_verses,
     p_verse,
+    lines_copy_extra,
   );
   app_shared_bible_home_share_button(
     hash,
@@ -47,7 +49,7 @@ export async function app_shared_bible_home_generic_lambda$a(
     verse_number,
     bottom,
   );
-  ("the verse NUMBER is not printed above the text here: the bar already carries it as the verse-picker button, so a single-verse view would show it twice. the WHOLE-CHAPTER reader is different — it prints each verse's number inline (",
+  ("the verse NUMBER is not printed above the text here: the bar already carries it as the verse-picker button, so a single-verse view would show it twice. the WHOLE-CHAPTER reader is different - it prints each verse's number inline (",
     fn_name("app_shared_bible_read"),
     ") because that is the only place the number appears there. shared by ",
     fn_name("app_bible"),

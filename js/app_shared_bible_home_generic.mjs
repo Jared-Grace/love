@@ -39,6 +39,8 @@ export async function app_shared_bible_home_generic(
     content,
   );
   let bottom = property_get(r, "bottom");
+  ("An empty list is opened here and handed both ways: down to the copy button, which holds on to it and reads it when it is pressed, and back to whoever asked for this screen, who may put further lines in it at any time before that press. That is what lets a reading drawn after the button exists still reach the clipboard - the gloss readers draw theirs from a file they are still fetching when the button is made.");
+  let lines_copy_extra = [];
   let r2 = await app_shared_bible_home_generic_lambda$a(
     r,
     context,
@@ -48,6 +50,7 @@ export async function app_shared_bible_home_generic(
     hash,
     content,
     lambda$a,
+    lines_copy_extra,
   );
   let chapter_code = property_get(r2, "chapter_code");
   let languages_verses = property_get(r2, "languages_verses");
@@ -58,6 +61,7 @@ export async function app_shared_bible_home_generic(
   list_add_multiple(languages_verses, languages_available);
   let v = {
     bar,
+    lines_copy_extra,
   };
   return v;
 }
