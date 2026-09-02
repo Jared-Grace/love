@@ -1,4 +1,4 @@
-import { app_g_bless_household_first_celebrate_is } from "./app_g_bless_household_first_celebrate_is.mjs";
+import { app_g_bless_family_first_celebrate_is } from "./app_g_bless_family_first_celebrate_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { bless_place_members } from "./bless_place_members.mjs";
@@ -18,7 +18,7 @@ export function app_g_bless_household_first_pray(r) {
   ("Not waited on. What it sets off is half a minute of celebration, and the street is");
   ("already up behind it - so there is nothing after this that the celebration is holding");
   ("up.");
-  let asked = app_g_bless_household_first_celebrate_is();
+  let asked = app_g_bless_family_first_celebrate_is();
   if (not(asked)) {
     return;
   }
