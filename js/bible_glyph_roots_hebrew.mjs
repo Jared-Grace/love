@@ -834,6 +834,16 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
+      root: "esher",
+      gloss: "blessed",
+      words: [
+        {
+          strong: "835",
+          glyph: "gift+smile",
+        },
+      ],
+    },
+    {
       root: "adon",
       gloss: "lord, master",
       words: [
