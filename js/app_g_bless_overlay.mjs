@@ -1,4 +1,4 @@
-import { app_g_bless_household_first_pray } from "./app_g_bless_household_first_pray.mjs";
+import { app_g_bless_family_first_pray } from "./app_g_bless_family_first_pray.mjs";
 import { not } from "./not.mjs";
 import { app_g_bless_dev_entry } from "./app_g_bless_dev_entry.mjs";
 import { app_g_bless_dev_if } from "./app_g_bless_dev_if.mjs";
@@ -70,7 +70,7 @@ export async function app_g_bless_overlay(container_map) {
     ("Inside the skipped branch on purpose, because that address is one of the openings and");
     ("an opening is exactly a visit that came past the door. Written outside, it would have");
     ("to ask a second time whether the door was up.");
-    app_g_bless_household_first_pray(r);
+    app_g_bless_family_first_pray(r);
     return transfer;
   }
   app_g_bless_transfer_overlay(transfer, begun);
