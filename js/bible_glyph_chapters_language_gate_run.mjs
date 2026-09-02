@@ -3,13 +3,14 @@ import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_add } from "./list_add.mjs";
+import { list_map } from "./list_map.mjs";
+import { property_get_chapter_code } from "./property_get_chapter_code.mjs";
 import { function_run } from "./function_run.mjs";
 import { catch_message_async } from "./catch_message_async.mjs";
+import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_exists } from "./property_exists.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_difference } from "./list_difference.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
@@ -20,6 +21,7 @@ export async function bible_glyph_chapters_language_gate_run() {
   "IT REFUSES TO PASS ON AN EMPTY SET, which is the failure this kind of gate dies of. Finding the languages is a search for a sentence, and a search that stops matching answers with nothing rather than with an error - so a gate that only checked what it found would go green the moment it lost the ability to find anything, and would stay green forever. The looking is counted as well as the found.";
   "IT NAMES THE CHAPTERS RATHER THAN COUNTING THEM, because the repair is per chapter and a number does not say which. Re-running the writer for that language is the whole of the fix, and knowing it is short of one chapter rather than of fourteen says whether a chapter was authored yesterday or a language was written before half of them existed.";
   "A LANGUAGE THAT WILL NOT ANSWER IS SHORT OF EVERY CHAPTER AND NEVER THE END OF THE WALK. The set walked here is found by a search, so it grows as languages are added and nobody hands it over for review; a language function that throws while gathering is the same kind of event as a chapter being authored. Waited on plainly it carries that language's own complaint out of this gate in place of the gate's list, so every language after it goes unchecked and nothing in the answer names anybody. Caught, it is one named language at fault beside all the ones that were still counted.";
+  "WHICH CHAPTERS A LANGUAGE IS SHORT OF IS ASKED AS ONE DIFFERENCE RATHER THAN WALKED BY HAND. Two loops here built a lookup and then asked it once per wanted chapter, which is what the repo's own difference already does - and does faster, since it turns the second list into a lookup once rather than walking it per question. Lifting it out is also what brought this back under the ceiling on how many lines of work one function may carry.";
   let names = await bible_glyph_chapters_language_functions();
   ("THE SENTENCE THIS IS FOUND BY IS NAMED INSIDE THE HINT AND NEVER BESIDE IT. A failed gate's words are read back afterwards for function names, and every name found is taken as an accusation - so a name in its own field of the complaint holds an innocent function's app out of its deployment. The hint is dropped before the names are read, which is what lets a person be told where to look without anybody being blamed for it.");
   let mark = fn_name("bible_glyph_language_written_mark");
@@ -31,11 +33,7 @@ export async function bible_glyph_chapters_language_gate_run() {
     hint: hint_none,
   });
   let chapters = bible_glyph_chapters();
-  let wanted = [];
-  for (let chapter of chapters) {
-    let chapter_code = property_get(chapter, "chapter_code");
-    list_add(wanted, chapter_code);
-  }
+  let wanted = list_map(chapters, property_get_chapter_code);
   let short = [];
   for (let name of names) {
     async function language_written() {
@@ -53,18 +51,8 @@ export async function bible_glyph_chapters_language_gate_run() {
       continue;
     }
     let written = property_get(answered, "value");
-    let held = {};
-    for (let entry of written) {
-      let chapter_code = property_get(entry, "chapter_code");
-      property_set(held, chapter_code, true);
-    }
-    let missing = [];
-    for (let chapter_code of wanted) {
-      let there = property_exists(held, chapter_code);
-      if (not(there)) {
-        list_add(missing, chapter_code);
-      }
-    }
+    let had = list_map(written, property_get_chapter_code);
+    let missing = list_difference(wanted, had);
     let complete = list_empty_is(missing);
     if (not(complete)) {
       list_add(short, {
