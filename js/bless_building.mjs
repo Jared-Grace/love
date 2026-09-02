@@ -1,11 +1,7 @@
-import { bless_building_built_on_is } from "./bless_building_built_on_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { bless_building_roof } from "./bless_building_roof.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
-import { property_get } from "./property_get.mjs";
-import { bless_building_columns } from "./bless_building_columns.mjs";
-import { multiply } from "./multiply.mjs";
-import { subtract } from "./subtract.mjs";
-import { add } from "./add.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 export function bless_building(x, y, families, storeys, set_back) {
   arguments_assert(arguments, 5);
@@ -95,31 +91,15 @@ export function bless_building(x, y, families, storeys, set_back) {
   ("outside, not a way in - so `tiles` gives back every square of it for whoever needs to");
   ("know how much ground the building takes up.");
   let shape = bless_building_shape();
-  let depth = property_get(shape, "depth");
-  let slab = property_get(shape, "family_width");
-  let columns = bless_building_columns(families, storeys);
-  let width = multiply(columns, slab);
-  let rows_slot = subtract(depth, 1);
-  let y_flush = add(y, rows_slot);
-  let r = bless_building_built_on_is(
-    y_flush,
-    set_back,
-    storeys,
-    x,
-    width,
-    slab,
-    families,
-    columns,
-    y,
-    depth,
-  );
-  let built_on_is = property_get(r, "built_on_is");
-  let slot = property_get(r, "slot");
-  let built = property_get(r, "built");
-  let walls = property_get(r, "walls");
-  let windows = property_get(r, "windows");
-  let doorways = property_get(r, "doorways");
+  let r = bless_building_roof(shape, families, storeys, y, set_back, x);
   let roof = property_get(r, "roof");
+  let doorways = property_get(r, "doorways");
+  let windows = property_get(r, "windows");
+  let walls = property_get(r, "walls");
+  let built = property_get(r, "built");
+  let slot = property_get(r, "slot");
+  let built_on_is = property_get(r, "built_on_is");
+  let columns = property_get(r, "columns");
   let yard = list_filter_not(slot, built_on_is);
   let building = {
     roof: roof,
