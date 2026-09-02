@@ -5,7 +5,8 @@ import { urdu_glued_words_decided } from "./urdu_glued_words_decided.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { urdu_text_repaired } from "./urdu_text_repaired.mjs";
-import { list_add } from "./list_add.mjs";
+import { object_values_map_list } from "./object_values_map_list.mjs";
+import { list_map } from "./list_map.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function urdu_glued_words_review_rows() {
   "Every ruling anybody has made about a run-together word in the Urdu bible, laid out for somebody who reads Urdu to check: the word, what was decided about it, how many times it stands in the translation, and a verse it stands in - shown both as the publisher wrote it and as a reader now gets it.";
@@ -50,18 +51,16 @@ export async function urdu_glued_words_review_rows() {
     };
     return row;
   }
-  let split_rows = [];
-  let welded = object_keys(split);
-  for (let word of welded) {
-    let spaced = property_get(split, word);
+  function split_row(spaced, word) {
     let row = row_new(word, spaced);
-    list_add(split_rows, row);
+    return row;
   }
-  let keep_rows = [];
-  for (let word of keep) {
+  let split_rows = object_values_map_list(split, split_row);
+  function keep_row(word) {
     let row = row_new(word, null);
-    list_add(keep_rows, row);
+    return row;
   }
+  let keep_rows = list_map(keep, keep_row);
   function count_of(row) {
     let c = property_get(row, "count");
     return c;
