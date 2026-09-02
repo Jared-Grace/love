@@ -9,7 +9,7 @@ import { each } from "./each.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { bless_view_of_people } from "./bless_view_of_people.mjs";
-export function bless_view_household_started(blessed, view) {
+export function bless_view_family_started(blessed, view) {
   arguments_assert(arguments, 2);
   ("Everybody in sight who has NOT been prayed for and who shares a household with somebody");
   ("who has - the people left in a house the player has started.");
