@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_rungs } from "./bless_rungs.mjs";
 import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { property_set } from "./property_set.mjs";
-import { bless_index_household } from "./bless_index_household.mjs";
+import { bless_index_family } from "./bless_index_family.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
@@ -31,7 +31,7 @@ export function bless_places_at_index(index) {
   let sizes = bless_place_sizes();
   let places = {};
   property_set(places, "person", index);
-  let household = bless_index_household(index);
+  let household = bless_index_family(index);
   property_set(places, "household", household);
   let within = household;
   function rung_place(rung) {
