@@ -1,10 +1,7 @@
+import { app_g_arcs_read_row_on_approve } from "./app_g_arcs_read_row_on_approve.mjs";
 import { app_g_arcs_read_row_line } from "./app_g_arcs_read_row_line.mjs";
-import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
-import { app_g_arc_read_mark } from "./app_g_arc_read_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "$plain nickname";
@@ -24,43 +21,22 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   arguments_assert(arguments, 4);
   let base_source = property_get(person, "base_source");
   let moved_count = property_get(person, "moved_count");
-  let r3 = app_g_arcs_read_row_line(
+  let r = app_g_arcs_read_row_line(
     bench,
     moved_count,
     base_source,
     person,
     parent,
   );
-  let line = property_get(r3, "line");
-  let row = property_get(r3, "row");
-  let render = property_get(r3, "render");
-  let status_working = property_get(r3, "status_working");
-  let status_set = property_get(r3, "status_set");
-  let chapter_code = property_get(r3, "chapter_code");
-  html_style_assign(line, {
-    "font-size": app_shared_font_size_label(),
-    opacity: "0.55",
-  });
-  async function on_read() {
-    let r = await app_g_arc_read_mark(
-      nickname,
-      status_working,
-      chapter_code,
-      status_set,
-      render,
-    );
-    return r;
-  }
-  app_shared_button_inline(row, "mark read", on_read);
-  async function on_approve() {
-    let r2 = await app_g_arc_approve_worded(
-      nickname,
-      status_working,
-      chapter_code,
-      status_set,
-      render,
-    );
-    return r2;
-  }
+  let line = property_get(r, "line");
+  let row = property_get(r, "row");
+  let render = property_get(r, "render");
+  let on_approve = app_g_arcs_read_row_on_approve(
+    r,
+    line,
+    nickname,
+    render,
+    row,
+  );
   app_shared_button_inline(row, "approve as worded", on_approve);
 }
