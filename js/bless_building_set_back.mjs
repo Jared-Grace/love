@@ -1,4 +1,3 @@
-import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { property_get } from "./property_get.mjs";
