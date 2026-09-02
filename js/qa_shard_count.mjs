@@ -1,3 +1,4 @@
+import { divide_floor } from "./divide_floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { cpu_count } from "./cpu_count.mjs";
 import { half } from "./half.mjs";
@@ -5,7 +6,6 @@ import { floor } from "./floor.mjs";
 import { machine_memory_room_bytes_or_null } from "./machine_memory_room_bytes_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { qa_shard_memory_bytes } from "./qa_shard_memory_bytes.mjs";
-import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 export async function qa_shard_count() {
   "How many runs of the frozen copy to ask at once: half this machine's processors, or as many as there is room in memory for, whichever is fewer";
@@ -30,8 +30,7 @@ export async function qa_shard_count() {
     ("Nothing said, so nothing counted: the processor count is left standing on its own.");
   } else {
     let share_bytes = qa_shard_memory_bytes();
-    let p = divide(room_bytes, share_bytes);
-    let by_room = floor(p);
+    let by_room = divide_floor(room_bytes, share_bytes);
     let room_smaller = less_than(by_room, by_cores);
     if (room_smaller) {
       taking = by_room;
