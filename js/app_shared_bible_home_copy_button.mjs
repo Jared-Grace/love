@@ -20,12 +20,14 @@ export function app_shared_bible_home_copy_button(
   let component = app_shared_button_copy(bottom, noop);
   let v = app_shared_bible_toggle_update(
     updates,
-    verse_numbers_chosen,
+    {
+      verse_numbers_chosen,
+      chapter_code,
+      languages_verses,
+      lines_copy_extra,
+    },
     verse_number,
-    chapter_code,
-    languages_verses,
     p_verse,
-    lines_copy_extra,
   );
   let choose = property_get(v, "choose");
   html_on_click(component, choose);

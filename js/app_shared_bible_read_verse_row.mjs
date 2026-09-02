@@ -50,12 +50,14 @@ export async function app_shared_bible_read_verse_row(
   let lines_copy_extra = [];
   let r = app_shared_bible_toggle_update(
     updates,
-    verse_numbers_chosen,
+    {
+      verse_numbers_chosen,
+      chapter_code: verse_chapter_code,
+      languages_verses,
+      lines_copy_extra,
+    },
     verse_number_v,
-    verse_chapter_code,
-    languages_verses,
     p,
-    lines_copy_extra,
   );
   let select = property_get(r, "select");
   function select_persist() {
