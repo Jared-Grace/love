@@ -1,15 +1,10 @@
-import { bless_building_family_tiles_tile_in_share } from "./bless_building_family_tiles_tile_in_share.mjs";
+import { bless_building_family_tiles_share } from "./bless_building_family_tiles_share.mjs";
 import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get_property } from "./list_get_property.mjs";
-import { bless_building_shape } from "./bless_building_shape.mjs";
-import { divide_floor } from "./divide_floor.mjs";
-import { add } from "./add.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { list_filter } from "./list_filter.mjs";
 export function bless_building_family_tiles(building, index) {
   arguments_assert(arguments, 2);
   ("One family's share of a building, given as the ground it covers - the column of front");
@@ -60,23 +55,14 @@ export function bless_building_family_tiles(building, index) {
   let ground_is = less_than(index, columns);
   let column = bless_building_family_column(index, columns);
   let x_door = list_get_property(doorways, column, "x");
-  let y_front = list_get_property(doorways, column, "y");
-  let shape = bless_building_shape();
-  let slab = property_get(shape, "family_width");
-  let storeys = property_get(building, "storeys");
-  let reach = divide_floor(slab, 2);
-  let x_least = subtract(x_door, reach);
-  let x_most = add(x_door, reach);
-  let y_top = subtract(y_front, storeys);
-  let alone_is = greater_than_equal(column, upstairs);
-  let tile_in_share = bless_building_family_tiles_tile_in_share(
+  let share = bless_building_family_tiles_share(
+    doorways,
+    column,
+    building,
+    x_door,
+    upstairs,
     ground_is,
-    alone_is,
-    y_top,
-    y_front,
-    x_least,
-    x_most,
+    tiles,
   );
-  let share = list_filter(tiles, tile_in_share);
   return share;
 }
