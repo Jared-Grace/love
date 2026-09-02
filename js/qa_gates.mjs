@@ -84,7 +84,7 @@ import { app_code_lessons_order_ahead_gate_run } from "./app_code_lessons_order_
 import { functions_name_word_repeated_gate_run } from "./functions_name_word_repeated_gate_run.mjs";
 import { js_object_property_text_set_cases_gate_run } from "./js_object_property_text_set_cases_gate_run.mjs";
 import { commits_message_path_gate_run } from "./commits_message_path_gate_run.mjs";
-import { app_music_references_versions_gate_run } from "./app_music_references_versions_gate_run.mjs";
+import { app_music_songs_versions_gate_run } from "./app_music_songs_versions_gate_run.mjs";
 import { bible_glyph_marks_reserved_gate_run } from "./bible_glyph_marks_reserved_gate_run.mjs";
 import { commits_message_alias_gate_run } from "./commits_message_alias_gate_run.mjs";
 import { bible_glyph_groups_marks_repeated_gate_run } from "./bible_glyph_groups_marks_repeated_gate_run.mjs";
@@ -886,7 +886,7 @@ export function qa_gates() {
     js_dollar_choices_parameters_gate_run,
     song_god_our_savior_glosses_gate_run,
     app_music_song_references_shape_gate_run,
-    app_music_references_versions_gate_run,
+    app_music_songs_versions_gate_run,
     bible_versions_english_choices_sources_gate_run,
     bible_versions_english_choices_words_none_everywhere_gate_run,
     bible_speech_attributions_gate_run,
