@@ -32,7 +32,6 @@ export function bless_building_roof(shape, families, storeys, y, set_back, x) {
   let windows = property_get(r, "windows");
   let doorways = property_get(r, "doorways");
   let roof = property_get(r, "roof");
-  let y_front = property_get(r, "y_front");
   let r2 = {
     columns,
     built_on_is,
@@ -42,7 +41,6 @@ export function bless_building_roof(shape, families, storeys, y, set_back, x) {
     windows,
     doorways,
     roof,
-    y_front,
   };
   return r2;
 }
