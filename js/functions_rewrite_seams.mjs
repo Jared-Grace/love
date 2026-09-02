@@ -18,6 +18,7 @@ export function functions_rewrite_seams() {
   let spelled3 = fn_name("function_source_overwrite");
   let spelled4 = fn_name("function_functionize");
   let spelled5 = fn_name("function_replace");
+  let spelled6 = fn_name("bible_glyph_chapter_chain_spliced");
   let names = [
     f_name,
     f_name2,
@@ -33,6 +34,7 @@ export function functions_rewrite_seams() {
     spelled3,
     spelled4,
     spelled5,
+    spelled6,
   ];
   return names;
 }
