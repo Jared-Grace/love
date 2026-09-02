@@ -53,7 +53,13 @@ export async function app_shared_bible_home_generic(
   let languages_verses = property_get(r2, "languages_verses");
   let languages_available = property_get(r2, "languages_available");
   let verse_current = property_get(r2, "verse_current");
-  app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
+  app_shared_bible_verse_arrows(
+    context,
+    chapter_code,
+    verse_current,
+    foot,
+    content,
+  );
   html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
   let v = {
