@@ -14,13 +14,11 @@ import { app_shared_bible_verse_highlight } from "./app_shared_bible_verse_highl
 import { app_shared_bible_copy } from "./app_shared_bible_copy.mjs";
 export function app_shared_bible_toggle_update(
   updates,
-  verse_numbers_chosen,
+  { verse_numbers_chosen, chapter_code, languages_verses, lines_copy_extra },
   verse_number,
-  chapter_code,
-  languages_verses,
   component_highlighted,
-  lines_copy_extra,
 ) {
+  "The three things a verse can have done to it - picked, redrawn to show it is picked, and copied - made once for one verse and handed back as separate ways in, so a screen with a button for each and a screen with one button doing all three behave the same.";
   function select() {
     toggle();
     invoke_multiple(updates);
