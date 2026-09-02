@@ -96,12 +96,19 @@ export async function app_g_bless_camera_glide(
   let back = text_combine_multiple([from, "px"]);
   html_style_variable_set(container_map, variable, back);
   html_reflow_force(div_map);
-  ("Where the camera is standing as the journey begins is read off the box itself, and read");
-  ("as a place on the grid rather than as a scroll offset. It is read here, with the old");
-  ("size written back, so it is the place the player is actually looking at. Kept as an");
-  ("offset it would mean somewhere else by the second frame, because the squares it counts");
-  ("are about to change size underneath it.");
-  let centered = html_scroll_centered_coordinates(player_img_c, container);
+  ("THE STANDING PLACE IS PUT BACK TOO, and not only the size. Measuring how far to go");
+  ("writes the new size for a moment, and while it is written the map is a different size -");
+  ("so a browser holding a box scrolled further along than the new map is wide pulls the");
+  ("scrolling back to fit, there and then. Writing the old size again does not undo that");
+  ("pull: the map grows back and the box stays where it was dragged to. Left alone, a");
+  ("journey that zooms a long way out began by throwing the picture sideways, and the");
+  ("further out it went the further it was thrown - which is the jump this was all meant to");
+  ("remove, hiding one step upstream of the frames that were fixed.");
+  ("It is put back from the place on the grid rather than from a remembered offset, so it");
+  ("lands where the player was looking whatever the browser did in between.");
+  let standing = html_scroll_center_target(centered, player_img_c, container);
+  container_e.scrollLeft = property_get(standing, "left");
+  container_e.scrollTop = property_get(standing, "top");
   let claim = html_scroll_animate_start(container_e);
   let token = property_get(claim, "token");
   let animate = app_g_bless_camera_glide_frames({
