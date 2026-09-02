@@ -1,32 +1,36 @@
-import { html_flex_basis_0_multiple } from "./html_flex_basis_0_multiple.mjs";
-import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
-import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
+import { app_shared_rtl_is } from "./app_shared_rtl_is.mjs";
+import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
 import { app_shared_button_arrow_previous } from "./app_shared_button_arrow_previous.mjs";
 import { app_shared_button_arrow_next } from "./app_shared_button_arrow_next.mjs";
 import { html_flex_grow_1_multiple } from "./html_flex_grow_1_multiple.mjs";
+import { html_flex_basis_0_multiple } from "./html_flex_basis_0_multiple.mjs";
 export function app_shared_arrows_wide(
   parent,
   text_previous,
   text_next,
   on_previous,
   on_next,
+  middle,
 ) {
-  "A row of two wide buttons, one back and one on, filling the width between them.";
+  "A row of two wide buttons, one back and one on, filling the width between them, with room kept between the two for whatever else the caller wants standing there.";
   "Each button is handed what it says rather than told what it is moving through. A word for the thing being moved through cannot be shared by the two buttons once they are said in another language, because a language may change the word for before and after by what follows it - so what arrives here is two finished phrases and no word either of them was built from.";
   "The row is pointed the way the reader reads before either button is put in it. Back belongs at the end of the row a reader's eye starts from, and that is the right-hand end for a reader of Urdu - so the two buttons are laid down in the same order for everybody and the row itself decides which end that order starts at.";
-  arguments_assert(arguments, 5);
+  "What goes in the middle is put there by whoever asked for the row, at the moment the middle is reached, because there is no way to put a thing between two things that are already down. It gets the row itself and may add nothing at all, which is how a caller with nothing to put there says so.";
+  arguments_assert(arguments, 6);
   let row = html_div(parent);
   html_display_flex(row);
   let rtl = app_shared_rtl_is();
   html_direction_rtl_set(row, rtl);
   let l = app_shared_button_arrow_previous(row, text_previous, on_previous);
+  middle(row);
   let r = app_shared_button_arrow_next(row, text_next, on_next);
   let buttons = [l, r];
   html_flex_grow_1_multiple(buttons);
   ("the two come out the same width rather than each taking what it says plus an equal share of the rest. A row divides only what is left over, so buttons sharing it equally still differ by however much their words differ - and once the words are a translation, one of them is routinely half again as long as the other, which reads as one button being the important one.");
+  ("only the two arrows are told to share the width. Anything standing between them takes the room its own face needs and no more, so a small mark in the middle stays a small mark rather than becoming a third of the row.");
   html_flex_basis_0_multiple(buttons);
   return row;
 }
