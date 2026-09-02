@@ -1,23 +1,23 @@
 {
  "known": [
-  "add",
-  "app_a_file_system_initialize",
-  "app_bible",
-  "app_calendar",
   "app_ceb_bible_gloss_generate_upload",
-  "app_original_bible_gloss_generate_upload",
-  "app_reply",
+  "add",
   "equal",
-  "g_arc_write_upload",
-  "js_guard_statements_cases_gate_run",
-  "list_add",
-  "list_empty_is",
-  "list_first",
-  "list_map",
-  "log",
-  "not",
   "not_equal",
+  "not",
+  "log",
+  "app_original_bible_gloss_generate_upload",
+  "list_add",
+  "property_get",
+  "app_reply",
+  "js_guard_statements_cases_gate_run",
+  "app_a_file_system_initialize",
+  "list_first",
+  "g_arc_write_upload",
+  "list_map",
   "null_is",
-  "property_get"
+  "list_empty_is",
+  "app_calendar",
+  "app_bible"
  ]
 }
