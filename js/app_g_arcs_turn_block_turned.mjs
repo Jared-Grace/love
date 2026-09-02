@@ -1,3 +1,4 @@
+import { each } from "./each.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -61,33 +62,38 @@ export function app_g_arcs_turn_block_turned({
     });
   }
   let marks = property_get(bench, "marks");
-  app_g_arcs_turn_field({
-    name: "opener",
-    value: opener,
-    block,
-    moved,
-    held,
-    voice_color,
-    marks,
-  });
-  app_g_arcs_turn_field({
-    name: "before",
-    value: before,
-    block,
-    moved,
-    held,
-    voice_color,
-    marks,
-  });
-  app_g_arcs_turn_field({
-    name: "reference",
-    value: reference,
-    block,
-    moved,
-    held,
-    voice_color,
-    marks,
-  });
+  each(
+    [
+      {
+        name: "opener",
+        value: opener,
+        block,
+        moved,
+        held,
+        voice_color,
+        marks,
+      },
+      {
+        name: "before",
+        value: before,
+        block,
+        moved,
+        held,
+        voice_color,
+        marks,
+      },
+      {
+        name: "reference",
+        value: reference,
+        block,
+        moved,
+        held,
+        voice_color,
+        marks,
+      },
+    ],
+    app_g_arcs_turn_field,
+  );
   app_g_arcs_field_shaped(
     block,
     "scripture",
