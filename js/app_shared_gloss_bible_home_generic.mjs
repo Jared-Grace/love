@@ -14,9 +14,6 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
-import { app_shared_gloss_bible_home_generic_scroll } from "./app_shared_gloss_bible_home_generic_scroll.mjs";
-import { app_shared_bible_top_ask_key } from "./app_shared_bible_top_ask_key.mjs";
-import { property_set } from "./property_set.mjs";
 export async function app_shared_gloss_bible_home_generic(
   context,
   download,
@@ -63,12 +60,6 @@ export async function app_shared_gloss_bible_home_generic(
     return r;
   }
   each(explains, lambda);
-  ("the reading is closed off with a line and nothing is put after it. What was there was a button across the whole width saying go back to the top, and it could only be pressed by somebody who had already scrolled to the very bottom - which is the one place a reader who wants to go up is not.");
+  ("the reading is closed off with a line and nothing is put after it. What was there was a button across the whole width saying go back to the top, and it could only be pressed by somebody who had already scrolled to the very bottom - which is the one place a reader who wants to go up is not. The way up is a small mark held between the two arrows at the foot of the page now, always in reach, and every bible screen has it rather than only these ones.");
   html_hr(p);
-  ("so the way back to the top is left here for the row of arrows the page holds against its foot to pick up, and it is a way of doing it rather than a button, because where it is drawn is that row's business and not this screen's.");
-  async function lambda6() {
-    await app_shared_gloss_bible_home_generic_scroll(verses);
-  }
-  let key = app_shared_bible_top_ask_key();
-  property_set(context, key, lambda6);
 }
