@@ -1,6 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { processes_dispatcher_report } from "./processes_dispatcher_report.mjs";
+import { qa_gate_runs_in_flight_rows_sort } from "./qa_gate_runs_in_flight_rows_sort.mjs";
 import { machine_crowded_report } from "./machine_crowded_report.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_merge } from "./object_merge.mjs";
@@ -21,7 +22,7 @@ export async function qa_gate_runs_in_flight() {
   let running = await processes_dispatcher_report();
   let shards = [];
   let runs = [];
-  qa_gate_runs_in_flight_row(running, shards, runs);
+  qa_gate_runs_in_flight_rows_sort(running, shards, runs);
   let full = await machine_crowded_report();
   let r = {
     runs: list_size(runs),
