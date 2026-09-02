@@ -1,7 +1,7 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_wording_echo_floor } from "./song_wording_echo_floor.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
 import { property_list_includes } from "./property_list_includes.mjs";
@@ -19,8 +19,7 @@ export function song_reading_quiet_read(echoed, bible_folder_usual) {
   let read = [];
   for (let passage of echoed) {
     let wordings = property_get(passage, "wordings");
-    let loudest = list_first(wordings);
-    let folded_run = property_get(loudest, "folded_run");
+    let folded_run = list_first_property(wordings, "folded_run");
     let heard = greater_than_equal(folded_run, minimum);
     let quiet = not(heard);
     if (quiet) {
