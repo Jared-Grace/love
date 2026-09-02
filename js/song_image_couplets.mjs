@@ -259,7 +259,7 @@ export function song_image_couplets() {
       first: "in agony",
       second: "'til all was done",
       symbol:
-        "Drops of blood falling, every one of them the same ruby red glass and every one round below and drawn to a point at its top, five of them in all and every one a plainly different size, the largest low and towards the left and the smallest high and towards the right, scattered unevenly so that no two stand level and none is directly above another, the whole group leaning to the left rather than balanced across the middle and all five of them well up in the upper half of the window, each drop hanging free with nothing joined to it, and below them a plain flat band of green ground with a broad splatter of that same ruby red already lying on the ground where the drops have struck, its edge running in uneven rounded lobes and a few small separate specks of the same red thrown out beyond it to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
+        "Drops of blood falling, every one of them ruby red glass and shaded so that it reads as round rather than flat, one plain patch of white glass set high on the left of each drop where the light catches it and a band of deep crimson down its right side as its shadow, and every one round below and drawn to a point at its top, five of them in all and every one a plainly different size, the largest low and towards the left and the smallest high and towards the right, scattered unevenly so that no two stand level and none is directly above another, the whole group leaning to the left rather than balanced across the middle and all five of them well up in the upper half of the window, each drop hanging free with nothing joined to it, and below them a plain flat band of green ground with a broad splatter of that same ruby red already lying on the ground where the drops have struck, its edge running in uneven rounded lobes and a few small separate specks of the same red thrown out beyond it to both sides, and the flat field behind the drops deep cobalt blue with no hill and no mountain and nothing else in the picture at all",
       symbol_ref: "Luke 22:44",
       same_as: 0,
     },
@@ -289,7 +289,7 @@ export function song_image_couplets() {
       first: "the curse of sin",
       second: "has been undone",
       symbol:
-        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn a little apart, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
+        "One heavy iron fetter of plain grey iron lying open, a broad ring broken clean through at one side with its two ends drawn wide apart, the plain gap between them several times wider than the ring's own metal is thick and nothing lying across that gap or hiding it, and one short length of plain grey chain of a few large oval links hanging from it, drawn very large so that the ring reaches almost to the white border on both sides",
       symbol_ref: "Galatians 3:13, Romans 6:6, Psalm 107:14",
       same_as: 0,
     },
