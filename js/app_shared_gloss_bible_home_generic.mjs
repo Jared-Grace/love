@@ -1,22 +1,22 @@
+import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
+import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_last_property } from "./list_last_property.mjs";
+import { html_hr } from "./html_hr.mjs";
+import { property_list_first } from "./property_list_first.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
+import { each } from "./each.mjs";
+import { json_from_try } from "./json_from_try.mjs";
+import { html_div } from "./html_div.mjs";
 import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
+import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
 import { app_shared_gloss_bible_home_generic_scroll } from "./app_shared_gloss_bible_home_generic_scroll.mjs";
-import { property_list_first } from "./property_list_first.mjs";
-import { list_last_property } from "./list_last_property.mjs";
-import { json_from_try } from "./json_from_try.mjs";
-import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
-import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-import { emoji_arrow_up } from "./emoji_arrow_up.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_hr } from "./html_hr.mjs";
-import { each } from "./each.mjs";
-import { html_div_text } from "./html_div_text.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
+import { app_shared_bible_top_ask_key } from "./app_shared_bible_top_ask_key.mjs";
+import { property_set } from "./property_set.mjs";
 export async function app_shared_gloss_bible_home_generic(
   context,
   download,
@@ -63,11 +63,12 @@ export async function app_shared_gloss_bible_home_generic(
     return r;
   }
   each(explains, lambda);
-  ("the way back to the top sits BELOW the closing line, not above it. everything between the two lines is the reading - the verse, its wording, its words explained - and a way out standing inside that block reads as one more thing to read. under the line it lands next to the previous-verse and next-verse arrows the screen adds straight after, so a reader looking to move has one place to look rather than two.");
+  ("the reading is closed off with a line and nothing is put after it. What was there was a button across the whole width saying go back to the top, and it could only be pressed by somebody who had already scrolled to the very bottom - which is the one place a reader who wants to go up is not.");
   html_hr(p);
+  ("so the way back to the top is left here for the row of arrows the page holds against its foot to pick up, and it is a way of doing it rather than a button, because where it is drawn is that row's business and not this screen's.");
   async function lambda6() {
     await app_shared_gloss_bible_home_generic_scroll(verses);
   }
-  let text = emoji_arrow_up();
-  app_shared_button_wide(p, text, lambda6);
+  let key = app_shared_bible_top_ask_key();
+  property_set(context, key, lambda6);
 }
