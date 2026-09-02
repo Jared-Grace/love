@@ -1,4 +1,6 @@
-import { bible_glyph_chapter_codes } from "./bible_glyph_chapter_codes.mjs";
+import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
+import { bible_glyph_chapters_canon_order } from "./bible_glyph_chapters_canon_order.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_join_empty } from "./list_map_join_empty.mjs";
