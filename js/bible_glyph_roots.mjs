@@ -942,6 +942,24 @@ export function bible_glyph_roots() {
       ],
     },
     {
+      root: "makarios",
+      gloss: "blessed",
+      words: [
+        {
+          strong: "3107",
+          glyph: "gift+smile",
+        },
+        {
+          strong: "3106",
+          glyph: "gift+smile",
+        },
+        {
+          strong: "3108",
+          glyph: "gift+smile",
+        },
+      ],
+    },
+    {
       root: "kalos",
       gloss: "good, fine",
       words: [
