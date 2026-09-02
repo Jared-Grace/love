@@ -1,11 +1,9 @@
-import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_expression_is } from "./js_expression_is.mjs";
 import { not } from "./not.mjs";
-import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places_of_kind.mjs";
-import { list_places_get } from "./list_places_get.mjs";
-import { list_permutations } from "./list_permutations.mjs";
+import { app_code_quiz_value_orderings_or_null } from "./app_code_quiz_value_orderings_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_places_set_copy } from "./list_places_set_copy.mjs";
 import { list_join } from "./list_join.mjs";
 import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is.mjs";
@@ -17,22 +15,21 @@ export function app_code_quiz_value_dealings(code) {
   "This exists because the backwards unscramble shows a value and nothing else. A learner given the tiles of (2 > 9) === (5 === 4) and told the answer is true has nothing on the screen that picks that line out from (2 > 4) === (5 === 9), so both are right answers to the question that was actually put to them, and the quiz used to accept only the first. Every expression lesson in the course can draw a line with another answer as good as the one it wants, and a few of them can draw nothing else.";
   "The signs stay put, and that is the whole of the difference between this and the maker that deals the signs too. A line free to move a sign can hit the right value while saying something quite else - 1 < 9 && 3 < 9 dealt into 1 && 9 < 3 < 9 is true, and is not a comparison of two comparisons at all - so those go on being asked what they mean. A line whose values alone have moved is the same sentence about different numbers, which is the shape every one of these lessons is teaching.";
   "Only a line standing for a value is dealt at all. A statement has no value the learner was shown, so there is nothing for a dealing to agree with, and dealing it would only offer arrangements nothing could judge.";
-  "The dealing is bounded so a long line declines rather than counting out its factorial. Nothing is lost by declining: everything here is over and above the pool the other makers already fill.";
+  "The dealing is bounded so a long line declines rather than counting out its factorial, and where that bound sits is asked of the maker of orderings rather than repeated here - the checker that looks for holes in this pool begins from the same maker, so neither can walk a different set from the other. Nothing is lost by declining: everything here is over and above the pool the other makers already fill.";
   arguments_assert(arguments, 1);
   let none = [];
   let expression_is = js_expression_is(code);
   if (not(expression_is)) {
     return none;
   }
-  let tokens = app_code_quiz_tokens(code);
-  let value_places = app_code_quiz_token_places_of_kind(tokens, "value");
-  let values = list_places_get(tokens, value_places);
-  let orderings = list_permutations(values);
-  let ceiling = 5040;
-  let too_many = list_size_greater_than(orderings, ceiling);
-  if (too_many) {
+  let dealt_from = app_code_quiz_value_orderings_or_null(code);
+  let unwalkable = null_is(dealt_from);
+  if (unwalkable) {
     return none;
   }
+  let tokens = property_get(dealt_from, "tokens");
+  let value_places = property_get(dealt_from, "value_places");
+  let orderings = property_get(dealt_from, "orderings");
   let codes = [];
   function deal(ordering) {
     let dealt = list_places_set_copy(tokens, value_places, ordering);
