@@ -4,6 +4,8 @@ import { catch_null_async } from "./catch_null_async.mjs";
 import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 export async function playwright_happy_picked_press(picked, url) {
+  "press the first of the controls picked out of a screen and say what happened - the words on it, whether the press landed, and what stopped it if it did not";
+  "The FIRST of them is pressed when there are several. Several is what an answer given in order looks like - the tokens of a line being put back together - and there the order is the answer, so the earliest is the only right one to press. A screen with several unordered ways on is a screen where either would do.";
   arguments_assert(arguments, 2);
   let way = list_first(picked);
   ("the press is given seconds rather than the half-minute a press is normally allowed, because this one has just been FOUND: it was on the page a moment ago, so it is either pressable now or it has gone. Waiting out the full allowance buys nothing and costs it on every screen that moves while it is being read, which over a whole course is most of the time the walk takes.");
