@@ -132,9 +132,6 @@ export function song_image_couplets() {
   let r = song_image_tomb_rock();
   let r2 = song_image_tomb_rock();
   let r3 = song_image_tomb_stone();
-  let r4 =
-    "A great mass of plain grey rock, one unbroken mass and never blocks, bricks, courses or slabs, with the mouth of the tomb cut into it as one plain flat black opening much wider across than it is tall, its top a low shallow curve and never a tall narrow arch";
-  let r5 = song_image_tomb_stone();
   let couplets = [
     {
       n: 1,
@@ -378,10 +375,10 @@ export function song_image_couplets() {
       first: "the SON of GOD",
       second: "was raised to life",
       symbol: list_join_empty([
-        r4,
-        ", this wide low opening standing open and filled edge to edge with one whole sheet of plain white glass, a thick heavy band of black drawn all the way round that white sheet except at the places where the rays leave it, and broad rays of white light springing out of that sheet and passing over the face of the rock on both sides of the mouth and out into the sky above it, rays and sheet one single piece of white glass with no black line where they meet, and ",
-        r5,
-        ", set beside the mouth and touching nothing, the rock filling almost the whole width of the window and rising almost to the top of the glass inside the white border, the ground below one plain flat brown, and that round stone drawn very large indeed, a full half of the whole width of the window across, taller than the mouth of the tomb is tall and wider than the mouth of the tomb is wide, so large that laying it flat over the mouth would hide the mouth completely",
+        "One very great round stone of plain grey glass, smooth and unmarked, a full flat circle with its face turned to the viewer, drawn very large indeed, a full half of the whole width of the window across, standing low in the middle of the window and touching nothing",
+        ", and behind it a great mass of plain grey rock, one unbroken mass of stone, filling almost the whole width of the window, with the mouth of the tomb cut into that rock beside the stone and standing wide open, this mouth plainly smaller than the stone in both directions, shorter than the stone is tall and narrower than the stone is wide",
+        ", the mouth filled edge to edge with one whole sheet of plain white glass, a thick heavy band of black drawn all the way round that white sheet except at the places where the rays leave it",
+        ", and broad rays of white light springing out of that white sheet itself and passing over the face of the rock on both sides of the mouth, rays and sheet one single piece of white glass with no black line where they meet, the ground below one plain flat brown",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
