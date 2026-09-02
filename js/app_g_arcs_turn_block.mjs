@@ -1,3 +1,4 @@
+import { app_g_arcs_turn_field } from "./app_g_arcs_turn_field.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_arcs_depth_block } from "./app_g_arcs_depth_block.mjs";
@@ -8,8 +9,6 @@ import { html_div_text } from "./html_div_text.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { app_g_arcs_moved_color } from "./app_g_arcs_moved_color.mjs";
-import { g_arc_answer_field_shape } from "./g_arc_answer_field_shape.mjs";
-import { app_g_arcs_field_pair } from "./app_g_arcs_field_pair.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { app_shared_note_pills } from "./app_shared_note_pills.mjs";
@@ -151,26 +150,4 @@ export function app_g_arcs_turn_block(
   app_shared_note_pills(block, notes);
   let names = g_arc_answer_field_names("turn");
   app_g_arcs_note_row(block, bench, nickname, number, names);
-}
-function app_g_arcs_turn_field(
-  name,
-  value,
-  block,
-  moved,
-  held,
-  voice_color,
-  marks,
-) {
-  arguments_assert(arguments, 7);
-  let shape = g_arc_answer_field_shape("turn", name);
-  app_g_arcs_field_pair({
-    parent: block,
-    moved_fields: moved,
-    held_fields: held,
-    name,
-    value,
-    shape,
-    voice_color,
-    marks,
-  });
 }

@@ -1,10 +1,7 @@
-import { app_g_arcs_read_row_line } from "./app_g_arcs_read_row_line.mjs";
-import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
-import { app_g_arc_read_mark } from "./app_g_arc_read_mark.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
-import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
+import { app_g_arcs_read_row_on_read } from "./app_g_arcs_read_row_on_read.mjs";
+import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "$plain nickname";
@@ -22,35 +19,13 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "IT SAYS WHAT HAS MOVED SINCE THE APPROVAL AND NOT ONLY THAT THERE WAS ONE, because an approval is about wording and wording is exactly what a revision changes. An arc approved and then revised is approved on every line but the revised ones, and a reviewer told only that it was approved would take the new lines as passed when nobody has read them.";
   "THE COUNTS AGREE WITH THEIR OWN VERBS, and that is not a nicety here. A single moved line is the commonest state this bench will ever be in, because a wave of notes answered one at a time moves one line - so one lines have moved would be the sentence a reviewer read most often, and a page that cannot count to one is not trusted about what it says has changed.";
   arguments_assert(arguments, 4);
-  let base_source = property_get(person, "base_source");
-  let moved_count = property_get(person, "moved_count");
-  let r3 = app_g_arcs_read_row_line(
-    bench,
-    moved_count,
-    base_source,
-    person,
-    parent,
-  );
-  let line = property_get(r3, "line");
-  let row = property_get(r3, "row");
-  let render = property_get(r3, "render");
-  let status_working = property_get(r3, "status_working");
-  let status_set = property_get(r3, "status_set");
-  let chapter_code = property_get(r3, "chapter_code");
-  html_style_assign(line, {
-    "font-size": app_shared_font_size_label(),
-    opacity: "0.55",
-  });
-  async function on_read() {
-    let r = await app_g_arc_read_mark(
-      nickname,
-      status_working,
-      chapter_code,
-      status_set,
-      render,
-    );
-    return r;
-  }
+  let r = app_g_arcs_read_row_on_read(person, bench, parent, nickname);
+  let on_read = property_get(r, "on_read");
+  let chapter_code = property_get(r, "chapter_code");
+  let status_set = property_get(r, "status_set");
+  let status_working = property_get(r, "status_working");
+  let render = property_get(r, "render");
+  let row = property_get(r, "row");
   app_shared_button_inline(row, "mark read", on_read);
   async function on_approve() {
     let r2 = await app_g_arc_approve_worded(
