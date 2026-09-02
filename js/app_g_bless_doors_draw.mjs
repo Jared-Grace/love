@@ -25,9 +25,14 @@ export function app_g_bless_doors_draw(layer, blocks) {
   ("Every measurement is a FRACTION of a square rather than a number of pixels, for the same");
   ("reason the rest of this map is: the tile is drawn at whatever size the screen has room");
   ("for, so a door written in pixels is a keyhole on a tablet and a barn door on a phone.");
-  ("The wood underneath is left where it was. A door is made of wood, so the material is");
-  ("right, and leaving it means this draws over what is already there rather than replacing");
-  ("it - nothing about which squares are solid, or what a building is made of, changes here.");
+  ("The square underneath is now the building's own WALL. It used to be left as wood, on the");
+  ("reasoning that a door is made of wood so the material was right; a drawn door covers");
+  ("less than the whole square, so what that left was a wooden border showing around the");
+  ("edges of every door in the street. A door set into the wall reads as a way through the");
+  ("wall, which is what it is.");
+  ("Nothing about which squares are SOLID changes either way. A doorway was solid when it");
+  ("was wood and is solid now that it is brick - the way into a building here is a place a");
+  ("prayer is aimed at rather than a place anybody walks through.");
   ("The leaf is DARK and its frame is PALE, and that pairing is what makes it legible on");
   ("every street rather than on the one it was drawn against. Fronts come in pink brick,");
   ("grey stone and cream plaster, and all three are pale; a dark opening reads against all");
