@@ -4,7 +4,7 @@ import { ebible_version_words_searchable } from "./ebible_version_words_searchab
 import { urdu_glued_words_decided } from "./urdu_glued_words_decided.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_words_searchable_occurrences } from "./text_words_searchable_occurrences.mjs";
-import { urdu_glued_words_control_verdict_split } from "./urdu_glued_words_control_verdict_split.mjs";
+import { urdu_glued_words_control_verdict } from "./urdu_glued_words_control_verdict.mjs";
 import { each_object } from "./each_object.mjs";
 import { urdu_glued_words_control_verdict_keep } from "./urdu_glued_words_control_verdict_keep.mjs";
 export async function urdu_glued_words_control_verdicts() {
@@ -22,7 +22,7 @@ export async function urdu_glued_words_control_verdicts() {
   function split_verdict(spaced, word) {
     let glued = text_words_searchable_occurrences(searchable, word);
     let apart = text_words_searchable_occurrences(searchable, spaced);
-    let verdict = urdu_glued_words_control_verdict_split(glued, apart);
+    let verdict = urdu_glued_words_control_verdict(glued, apart);
     verdicts[word] = {
       word,
       spaced,
