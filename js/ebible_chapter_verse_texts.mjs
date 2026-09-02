@@ -1,16 +1,17 @@
-import { list_first } from "./list_first.mjs";
-import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { ebible_verse_split_mark } from "./ebible_verse_split_mark.mjs";
 import { html_parse_find_list_to } from "./html_parse_find_list_to.mjs";
 import { html_parse_text_set } from "./html_parse_text_set.mjs";
 import { each } from "./each.mjs";
+import { ebible_chapter_text_prepared } from "./ebible_chapter_text_prepared.mjs";
+import { property_get } from "./property_get.mjs";
+import { text_paragraph_marks_removed } from "./text_paragraph_marks_removed.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { lists_sizes_equal_assert_json } from "./lists_sizes_equal_assert_json.mjs";
-import { list_map_pairs } from "./list_map_pairs.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
+import { list_map_pairs } from "./list_map_pairs.mjs";
+import { list_first } from "./list_first.mjs";
 export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
@@ -19,6 +20,9 @@ export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
   ("Where each verse begins is written into the page, but flattening the page into words forgets it. So each verse's own mark is written over with a character no bible is written in, and the flattened chapter is then cut at that character: what lies between two marks is exactly one verse, without anything having to be searched for.");
   ("That is the difference from cutting a chapter by hunting its numbers among its words. A number can be a word of the text as easily as the mark of a verse, and the hunt has no way to tell them apart; the page's own marks are not guesses at all.");
   ("What stands before the first mark is handed back on its own, under a name of its own, because it is a heading or a title rather than a verse. Numbering it with the verses would push every one of them along by one; throwing it away would lose words that are in the book, and one reading here wants it while the other does not.");
+  ("THE PRINTER'S PARAGRAPH MARKS COME OFF THE WHOLE CHAPTER AT ONCE, BEFORE IT IS CUT, WHICH IS WHY IT IS DONE HERE AND NOT IN EACH READER THAT ASKS. This is the one place a chapter of a bible turns into the words of its verses, so a mark taken off here is off for every reader downstream - the page that quotes a verse, the cache built for reading offline, the counting that ranks translations - and a reader that had to take it off itself would be the reader that forgot to.");
+  ("Taking them off before the cut rather than after it is what covers the words standing before the first verse as well as the verses. A heading carries the publisher's marks exactly as a verse does, and it is handed back to be read like anything else.");
+  ("The cut is not disturbed by this. A verse's mark is a character no bible is written in, chosen for that reason, so nothing that removes a character bibles ARE written in can collide with it.");
   let mark = ebible_verse_split_mark();
   function lambda(d, main) {
     let list = html_parse_find_list_to(main, ".verse");
@@ -34,7 +38,8 @@ export async function ebible_chapter_verse_texts(bible_folder, chapter_code) {
   );
   let verse_numbers = property_get(prepared, "verse_numbers");
   let text = property_get(prepared, "text");
-  let split = text_split(text, mark);
+  let unmarked = text_paragraph_marks_removed(text);
+  let split = text_split(unmarked, mark);
   let skipped = list_skip(split, 1);
   lists_sizes_equal_assert_json([skipped, verse_numbers], {
     hint: "a chapter should hold one run of words for every verse its page marks",
