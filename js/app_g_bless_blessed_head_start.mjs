@@ -1,4 +1,4 @@
-import { app_g_bless_building_first_completed_is } from "./app_g_bless_building_first_completed_is.mjs";
+import { app_g_bless_building_first_is } from "./app_g_bless_building_first_is.mjs";
 import { app_g_bless_blessed_head_start_building } from "./app_g_bless_blessed_head_start_building.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_rungs } from "./bless_rungs.mjs";
@@ -49,7 +49,7 @@ export function app_g_bless_blessed_head_start(blessed) {
   let bottom = list_first(rungs);
   let household = 0;
   ("The BUILDING opening is answered first and on its own. It writes a different shape of record - whole families rather than people, and a rung already climbed - so it has nothing to share with the two below it, and folding it in would make a run of conditions where each one has to be read only to find out it does not apply.");
-  let building_first = app_g_bless_building_first_completed_is();
+  let building_first = app_g_bless_building_first_is();
   if (building_first) {
     let climbed_building = app_g_bless_blessed_head_start_building(blessed);
     return climbed_building;
