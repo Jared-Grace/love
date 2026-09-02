@@ -1,5 +1,5 @@
+import { bless_prayer_discern } from "./bless_prayer_discern.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { g_prayer_discern } from "./g_prayer_discern.mjs";
 import { app_g_bless_pray_words } from "./app_g_bless_pray_words.mjs";
 import { app_g_bless_discern_button } from "./app_g_bless_discern_button.mjs";
 export function app_g_bless_discern(container_map, bar, on_amen) {
