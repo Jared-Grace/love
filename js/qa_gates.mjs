@@ -963,6 +963,7 @@ export function qa_gates() {
     functions_gate_walk_escapes_gate_run,
     bible_glyph_chapters_prose_gate_run,
     app_code_happy_gate_run,
+    app_code_quiz_unscramble_other_answer_gate_run,
   ];
   return gates;
 }
