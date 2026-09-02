@@ -56,7 +56,7 @@ export async function ebible_text_to_speech_chapters(
     return job;
   }
   let jobs = list_map(plans, job_each);
-  let workers = bible_audio_speech_workers();
+  let workers = await bible_audio_speech_workers();
   let seconds_at_most = bible_audio_night_seconds_left_or_null();
   let memory_floor_bytes = bible_audio_speech_memory_floor_bytes();
   let swap_floor_bytes = bible_audio_speech_swap_floor_bytes();
