@@ -19,9 +19,7 @@ export function g_arc_review_person_cards(
   notes,
   nickname,
   gender,
-  base,
-  asked,
-  approved_arc,
+  { base, asked, approved_arc },
 ) {
   "$plain nickname";
   "$plain gender";
@@ -38,7 +36,7 @@ export function g_arc_review_person_cards(
   "THE LINES THAT WERE ASKED ABOUT AND KEPT ARE WORKED OUT ONLY AGAINST THE COPY A REVISION REPLACED, and never against a reading or a backup. The addresses come from the one wave of notes that one revision answered, so they line up with that revision and with nothing else: against a reading taken since, they would mark a note as unanswered on a line the reader has already been shown the outcome of, and against the oldest backup they would name a wave from a day the backup knows nothing about. Both of those are the page telling somebody they were ignored when they were not.";
   "THE APPROVED COPY COMES IN SEPARATELY FROM THE ONE THE MARKS ARE MEASURED AGAINST, and it has to, because they answer different questions. The base answers what has moved since somebody last looked; the approved copy answers what has moved since somebody last said the wording was right. Those come apart the moment an arc is read again after being passed - the marks go quiet while lines the reviewer never approved sit in it unremarked.";
   "NO APPROVED COPY IS NULL AND NOT AN EMPTY ARC, for the same reason the base is. An arc nobody has passed has not been passed on nought lines, and compared against an empty one every line it holds would count as moved since an approval that never happened.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 6);
   let index = property_get(entry, "index");
   let arc = property_get(entry, "arc");
   let base_arc = property_get(base, "arc");
