@@ -375,7 +375,7 @@ export function song_image_couplets() {
       first: "the SON of GOD",
       second: "was raised to life",
       symbol: list_join_empty([
-        "One very great round stone of plain grey glass, smooth and unmarked, a full flat circle with its face turned to the viewer, drawn very large indeed, a full half of the whole width of the window across, standing low in the middle of the window and touching nothing",
+        "One very great round stone of plain grey glass, smooth and unmarked, a full flat circle with its face turned to the viewer, drawn very large indeed, a full half of the whole width of the window across, resting on the ground at one side of the window with its lowest edge sitting on that ground",
         ", and behind it a great mass of plain grey rock, one unbroken mass of stone, filling almost the whole width of the window, with the mouth of the tomb cut into that rock beside the stone and standing wide open, this mouth plainly smaller than the stone in both directions, shorter than the stone is tall and narrower than the stone is wide",
         ", the mouth filled edge to edge with one whole sheet of plain white glass, a thick heavy band of black drawn all the way round that white sheet except at the places where the rays leave it",
         ", and broad rays of white light springing out of that white sheet itself and passing over the face of the rock on both sides of the mouth, rays and sheet one single piece of white glass with no black line where they meet, the ground below one plain flat brown",
