@@ -1,3 +1,4 @@
+import { bless_view_aimed } from "./bless_view_aimed.mjs";
 import { bless_view_finish_first } from "./bless_view_finish_first.mjs";
 import { app_g_bless_lit_except } from "./app_g_bless_lit_except.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
