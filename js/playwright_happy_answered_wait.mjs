@@ -1,11 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { playwright_happy_poll_ms } from "./playwright_happy_poll_ms.mjs";
 import { less_than } from "./less_than.mjs";
 import { playwright_quiz_correct_count } from "./playwright_quiz_correct_count.mjs";
 import { playwright_happy_answers_now } from "./playwright_happy_answers_now.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 export async function playwright_happy_answered_wait(
   page,
@@ -34,8 +33,7 @@ export async function playwright_happy_answered_wait(
       return count;
     }
     let url = page.url();
-    let same = equal(url, url_before);
-    let moved = not(same);
+    let moved = equal_not(url, url_before);
     if (moved) {
       return count;
     }
