@@ -1,3 +1,4 @@
+import { bless_building_family_tiles_tile_in_share } from "./bless_building_family_tiles_tile_in_share.mjs";
 import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -8,8 +9,6 @@ import { bless_building_shape } from "./bless_building_shape.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { add } from "./add.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { and } from "./and.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function bless_building_family_tiles(building, index) {
   arguments_assert(arguments, 2);
@@ -70,36 +69,14 @@ export function bless_building_family_tiles(building, index) {
   let x_most = add(x_door, reach);
   let y_top = subtract(y_front, storeys);
   let alone_is = greater_than_equal(column, upstairs);
-  function y_least_get() {
-    if (ground_is) {
-      if (alone_is) {
-        return y_top;
-      }
-      return y_front;
-    }
-    return y_top;
-  }
-  function y_most_get() {
-    if (ground_is) {
-      return y_front;
-    }
-    let below = subtract(y_front, 1);
-    return below;
-  }
-  let y_least = y_least_get();
-  let y_most = y_most_get();
-  function tile_in_share(tile) {
-    let x = property_get(tile, "x");
-    let y = property_get(tile, "y");
-    let after = greater_than_equal(x, x_least);
-    let before = less_than_equal(x, x_most);
-    let below = greater_than_equal(y, y_least);
-    let over = less_than_equal(y, y_most);
-    let across = and(after, before);
-    let down = and(below, over);
-    let within = and(across, down);
-    return within;
-  }
+  let tile_in_share = bless_building_family_tiles_tile_in_share(
+    ground_is,
+    alone_is,
+    y_top,
+    y_front,
+    x_least,
+    x_most,
+  );
   let share = list_filter(tiles, tile_in_share);
   return share;
 }
