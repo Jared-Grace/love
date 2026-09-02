@@ -73,6 +73,10 @@ export async function app_g_bless_camera_glide(
   let crowd = app_g_bless_camera_people_get(container_map);
   app_g_bless_people_still_start(crowd, player_img_c);
   app_g_bless_camera_still_start(container_map);
+  ("Where the camera is standing is read off the box BEFORE anything at all is written to");
+  ("it, and read as a place on the grid rather than as a scroll offset, because the squares");
+  ("it counts are about to change size underneath it.");
+  let centered = html_scroll_centered_coordinates(player_img_c, container);
   let from = html_element_width(player_img_c);
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
