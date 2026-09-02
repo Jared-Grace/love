@@ -1,12 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_textarea } from "./html_textarea.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_placeholder } from "./html_placeholder.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button } from "./app_shared_button.mjs";
 import { each } from "./each.mjs";
 export function app_shared_note_box(parent, bench, subject, names, filed) {
@@ -21,7 +22,10 @@ export function app_shared_note_box(parent, bench, subject, names, filed) {
   let status_set = property_get(bench, "status_set");
   let status_working = property_get(bench, "status_working");
   let render = property_get(bench, "render");
+  ("THE BOX SAYS WHAT IT WILL FAULT WHILE THE NOTE IS BEING TYPED, and until it did the address was said only afterwards. The subject was already known here and was spent entirely on the line reporting what had happened, which arrives one press too late to stop anything. A note box sits below everything it is about, so by the time a hand reaches it the words being faulted have scrolled off the top - and a reviewer then types from memory against an address nothing in front of them names. That is not a rare slip: it cost a note filed one turn late, answered as a fault, and a line rewritten that had never been wrong. The turn is now in the empty box, where it is read before anything is typed rather than after everything is.");
   let box = html_textarea(parent);
+  let asked = text_combine_multiple(["a note against ", subject]);
+  html_placeholder(box, asked);
   html_style_assign(box, {
     width: "100%",
     "min-height": "3rem",

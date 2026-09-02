@@ -9,7 +9,7 @@ import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { and } from "./and.mjs";
-export function bless_building_built_on_is(
+export function bless_building_built_on_is({
   y_flush,
   set_back,
   storeys,
@@ -20,9 +20,9 @@ export function bless_building_built_on_is(
   columns,
   y,
   depth,
-) {
+}) {
   "Works out where one building stands from its set back and storeys, and hands back its roof, doorways, windows, walls, footprint and the test for whether a tile falls within its height.";
-  arguments_assert(arguments, 10);
+  arguments_assert(arguments, 1);
   let y_front = subtract(y_flush, set_back);
   let y_top = subtract(y_front, storeys);
   let r = bless_building_window_is(
