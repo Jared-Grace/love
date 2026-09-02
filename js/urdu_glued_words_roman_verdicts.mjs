@@ -1,3 +1,4 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_urdu_control_roman } from "./ebible_folder_urdu_control_roman.mjs";
 import { ebible_version_words_searchable } from "./ebible_version_words_searchable.mjs";
@@ -6,7 +7,6 @@ import { urdu_roman_spellings_most } from "./urdu_roman_spellings_most.mjs";
 import { urdu_glued_words_control_verdicts } from "./urdu_glued_words_control_verdicts.mjs";
 import { property_get } from "./property_get.mjs";
 import { urdu_glued_words_decided } from "./urdu_glued_words_decided.mjs";
-import { property_exists } from "./property_exists.mjs";
 import { not } from "./not.mjs";
 import { text_words_searchable_occurrences } from "./text_words_searchable_occurrences.mjs";
 import { add } from "./add.mjs";
@@ -45,8 +45,7 @@ export async function urdu_glued_words_roman_verdicts() {
   function occurrences(phrases) {
     let total = 0;
     for (let phrase of phrases) {
-      let known = property_exists(counted, phrase);
-      let fresh = not(known);
+      let fresh = property_exists_not(counted, phrase);
       if (fresh) {
         counted[phrase] = text_words_searchable_occurrences(searchable, phrase);
       }
