@@ -1,3 +1,4 @@
+import { bless_hash_building_first_finished } from "./bless_hash_building_first_finished.mjs";
 import { bless_hash_building_first } from "./bless_hash_building_first.mjs";
 import { bless_hash_household_first_celebrate } from "./bless_hash_household_first_celebrate.mjs";
 import { bless_hash_household_first_finished } from "./bless_hash_household_first_finished.mjs";
