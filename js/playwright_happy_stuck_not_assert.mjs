@@ -13,6 +13,10 @@ export async function playwright_happy_stuck_not_assert(
   end_key,
   selector,
 ) {
+  "$plain selector";
+  "throw unless the screen in front of the walk has something marked on it to press, and say in the throw what the screen is showing instead";
+  "Being stuck is a failure and is thrown, because a screen with neither a way on nor an end is exactly what a walk exists to find: a right answer that cannot be pressed, a next that never appeared, a quiz nobody taught the app to mark. The address is thrown with it, since it is the whole of what somebody needs to go and look.";
+  "It asks about ALL of the marked controls and not the kind the caller is after, because having none of the kind asked for is an ordinary screen and not being stuck. A screen holding a question and no way out is a screen the caller answers; a screen holding neither is a screen nobody can leave.";
   arguments_assert(arguments, 4);
   let key = qa_attribute_test_happy();
   async function ways_wait() {
@@ -47,5 +51,4 @@ export async function playwright_happy_stuck_not_assert(
     errors,
     hint: "nothing on this screen is marked as the way on and nothing marks it as the end, so the walk is stuck - either the screen threw and is showing its apology, or it forgot to mark its right answer, or the answer is there and cannot be pressed",
   });
-  ("the kind wanted is asked for without waiting, because the screen has just been waited on and answered: whatever it is holding out, it is holding out now");
 }
