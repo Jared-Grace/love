@@ -19,6 +19,7 @@ export function bless_building_window_is(
   families,
   columns,
 ) {
+  "Lays out one building's roof tiles and face tiles, and hands back the two tests that say which face tile is a doorway and which is a window.";
   arguments_assert(arguments, 8);
   let roof = bless_tiles_rectangle(x, y_top, width, 1);
   let y_walls = add(y_top, 1);

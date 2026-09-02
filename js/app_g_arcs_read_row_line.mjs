@@ -14,6 +14,7 @@ export function app_g_arcs_read_row_line(
   person,
   parent,
 ) {
+  "Writes the sentence saying how a person's arc has moved and whether it is approved, draws the row it sits on, and hands back that row with the bench's own handles.";
   arguments_assert(arguments, 5);
   let chapter_code = property_get(bench, "chapter_code");
   let status_set = property_get(bench, "status_set");
