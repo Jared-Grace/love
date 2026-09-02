@@ -27,7 +27,7 @@ export function app_g_arcs_turn_block_marks(
   let moved_count = properties_size(moved);
   let held_count = properties_size(held);
   let changed = not_equal(moved_count, 0);
-  let r = app_g_arcs_turn_block_turned(
+  let r = app_g_arcs_turn_block_turned({
     held_count,
     v,
     changed,
@@ -44,7 +44,7 @@ export function app_g_arcs_turn_block_marks(
     scripture,
     after,
     believes,
-  );
+  });
   let turned = property_get(r, "turned");
   let marks = property_get(r, "marks");
   let r2 = {
