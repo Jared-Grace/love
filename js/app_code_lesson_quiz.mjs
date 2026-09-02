@@ -1,3 +1,4 @@
+import { html_data_test_quiz_correct_bump } from "./html_data_test_quiz_correct_bump.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lesson_quiz_answer_label_set } from "./app_code_lesson_quiz_answer_label_set.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
@@ -88,6 +89,7 @@ export function app_code_lesson_quiz({
     "the correct answer is written down here, at the one place that knows both which quiz of the lesson this is and how many the lesson has - the list screen shows a lesson as finished once every one of them has been answered right at least once";
     let quizzes_total = list_size(quizzes);
     app_code_progress_quiz_correct_record(context, quiz_index, quizzes_total);
+    html_data_test_quiz_correct_bump();
     html_clear(container_success_message);
     app_shared_success_message(container_success_message);
     html_visibility_visible(container_success_message);
