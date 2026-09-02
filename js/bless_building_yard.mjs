@@ -1,7 +1,3 @@
-import { property_equals } from "./property_equals.mjs";
-import { add } from "./add.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_building_shape } from "./bless_building_shape.mjs";
 import { bless_building_roof } from "./bless_building_roof.mjs";
