@@ -25,21 +25,17 @@ export async function song_wordings_decided(
   ("THE FILES ARE NAMED AFTER THE SONG AND NOT AFTER THE RUN, so a second reading of the same song lands on top of the first rather than beside it. Two songs never collide and one song never accumulates - what is on disk is always the newest answer about that song, which is the only one anybody wants.");
   ("WHICH BIBLE IS THE USUAL ONE IS HANDED IN RATHER THAN LOOKED UP, the same as it is next door. That is a fact about the page a song is shown on, and this counts words for any song on any page.");
   let echoed = await song_wordings_echoed(references, reference_lines);
-  let reading_name = text_combine_multiple([
-    "song_reading_",
-    song_name,
-    json_extension(),
-  ]);
+  let ext_j = json_extension();
+  let reading_name = text_combine_multiple(["song_reading_", song_name, ext_j]);
   let reading_path = folder_gitignore_join(reading_name);
-  await file_overwrite(reading_path, json_format_to(echoed));
+  let contents = json_format_to(echoed);
+  await file_overwrite(reading_path, contents);
   let decided = song_wordings_chosen(echoed, bible_folder_usual);
-  let file_name = text_combine_multiple([
-    "song_wordings_",
-    song_name,
-    json_extension(),
-  ]);
+  let ext_j2 = json_extension();
+  let file_name = text_combine_multiple(["song_wordings_", song_name, ext_j2]);
   let path = folder_gitignore_join(file_name);
-  await file_overwrite(path, json_format_to(decided));
+  let contents2 = json_format_to(decided);
+  await file_overwrite(path, contents2);
   let chosen = property_get(decided, "chosen");
   let tied = property_get(decided, "tied");
   let unchanged = property_get(decided, "unchanged");

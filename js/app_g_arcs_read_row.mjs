@@ -1,8 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
+import { app_g_arcs_lines_moved_said } from "./app_g_arcs_lines_moved_said.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { not_equal } from "./not_equal.mjs";
+import { word_count_pluralize } from "./word_count_pluralize.mjs";
+import { word_count_verb } from "./word_count_verb.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -24,6 +27,7 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "THE TWO PRESSES SIT TOGETHER BECAUSE THEY ARE TWO ANSWERS TO ONE QUESTION - what is this arc's state - and the answers are not the same answer. Marking it read says a reviewer got to the end with their notes still standing; approving it says the lines they filed no note against are right as they are written. Offered on separate screens, the weaker of the two would be pressed for both, and an arc nobody had ever passed would read as finished.";
   "THE APPROVAL IS SAID EVEN WHEN THERE IS NONE, for the same reason an arc with nothing behind it says so. An unapproved arc and an approved one with nothing moved since both draw no marks, and left unsaid the two look identical - so the page would let a reviewer close an arc nobody has ever passed believing somebody had.";
   "IT SAYS WHAT HAS MOVED SINCE THE APPROVAL AND NOT ONLY THAT THERE WAS ONE, because an approval is about wording and wording is exactly what a revision changes. An arc approved and then revised is approved on every line but the revised ones, and a reviewer told only that it was approved would take the new lines as passed when nobody has read them.";
+  "THE COUNTS AGREE WITH THEIR OWN VERBS, and that is not a nicety here. A single moved line is the commonest state this bench will ever be in, because a wave of notes answered one at a time moves one line - so one lines have moved would be the sentence a reviewer read most often, and a page that cannot count to one is not trusted about what it says has changed.";
   arguments_assert(arguments, 4);
   let base_source = property_get(person, "base_source");
   let moved_count = property_get(person, "moved_count");
@@ -31,17 +35,13 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   let status_set = property_get(bench, "status_set");
   let status_working = property_get(bench, "status_working");
   let render = property_get(bench, "render");
-  let counted = String(moved_count);
+  let counted = app_g_arcs_lines_moved_said(moved_count);
   let nothing_moved = equal(moved_count, 0);
   let said =
     "not read yet, and there is no older copy of it, so nothing below is marked as moved";
   let read = equal(base_source, "read");
   if (read) {
-    said = text_combine_multiple([
-      "read before, and ",
-      counted,
-      " lines have moved since",
-    ]);
+    said = text_combine_multiple(["read before, and ", counted, " since"]);
   }
   let read_unmoved = read && nothing_moved;
   if (read_unmoved) {
@@ -52,7 +52,7 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     said = text_combine_multiple([
       "not read yet, and ",
       counted,
-      " lines have moved since the notes on it were answered",
+      " since the notes on it were answered",
     ]);
   }
   let revised_unmoved = revised && nothing_moved;
@@ -65,7 +65,7 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     said = text_combine_multiple([
       "not read yet, and ",
       counted,
-      " lines have moved since the last content backup",
+      " since the last content backup",
     ]);
   }
   let backup_unmoved = backed_up && nothing_moved;
@@ -75,12 +75,15 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   let held_count = property_get(person, "held_count");
   let some_held = not_equal(held_count, 0);
   if (some_held) {
-    let counted_held = String(held_count);
+    let counted_held = word_count_pluralize(held_count, "line");
+    let held_verb = word_count_verb(held_count, "was", "were");
     said = text_combine_multiple([
       said,
       ", and ",
       counted_held,
-      " lines you left notes on were kept word for word",
+      " you left notes on ",
+      held_verb,
+      " kept word for word",
     ]);
   }
   let approved = property_get(person, "approved");
@@ -90,11 +93,11 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     approval_said = ", and you approved it as it is worded now";
     let approved_moved = not_equal(approved_moved_count, 0);
     if (approved_moved) {
-      let counted_approved = String(approved_moved_count);
+      let counted_approved = app_g_arcs_lines_moved_said(approved_moved_count);
       approval_said = text_combine_multiple([
         ", and ",
         counted_approved,
-        " lines have moved since you approved it",
+        " since you approved it",
       ]);
     }
   }
