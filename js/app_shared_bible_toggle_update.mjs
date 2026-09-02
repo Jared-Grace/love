@@ -6,8 +6,8 @@ import { app_shared_bible_chosen_max } from "./app_shared_bible_chosen_max.mjs";
 import { list_size_max_skip_replace } from "./list_size_max_skip_replace.mjs";
 import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_last_property } from "./list_last_property.mjs";
-import { list_map_property } from "./list_map_property.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { list_first_last_slice } from "./list_first_last_slice.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_verse_highlight } from "./app_shared_bible_verse_highlight.mjs";
@@ -19,6 +19,7 @@ export function app_shared_bible_toggle_update(
   chapter_code,
   languages_verses,
   component_highlighted,
+  lines_copy_extra,
 ) {
   function select() {
     toggle();
@@ -63,10 +64,12 @@ export function app_shared_bible_toggle_update(
     choose,
   };
   async function copy() {
+    "the list of further lines is read at the moment the button is pressed rather than when it was made, because the screen that fills it is drawn after the button already exists. Handed a finished list the button would carry the empty one it was born with for as long as the page is open.";
     await app_shared_bible_copy(
       verse_numbers_chosen,
       languages_verses,
       chapter_code,
+      lines_copy_extra,
     );
   }
   return r;

@@ -14,6 +14,9 @@ import { html_div } from "./html_div.mjs";
 import { app_shared_gloss_bible_generated_gloss_span } from "./app_shared_gloss_bible_generated_gloss_span.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_shared_gloss_bible_word_row } from "./app_shared_gloss_bible_word_row.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { app_shared_gloss_bible_word_row_line } from "./app_shared_gloss_bible_word_row_line.mjs";
+import { list_add } from "./list_add.mjs";
 export async function app_shared_gloss_bible_home_generic(
   context,
   download,
@@ -60,6 +63,16 @@ export async function app_shared_gloss_bible_home_generic(
     return r;
   }
   each(explains, lambda);
+  ("A reader who presses copy on this screen gets what this screen shows, not the english alone. The verse in the language being learned goes on the clipboard under the english, and under that a line for every word of it explained - which is the whole of why anybody opened this reader rather than a plain bible. Handing over only the english gave them back the one part of the page they did not come for.");
+  ("They are written into the list the screen was given rather than handed to the button, because the button was made before this passage had finished arriving. The button reads the list at the moment it is pressed, so lines put here at any time before that press are copied.");
+  let home = property_get(v, "r");
+  let lines_copy_extra = property_get(home, "lines_copy_extra");
+  list_add_multiple(lines_copy_extra, texts);
+  function lambda6(e) {
+    let line = app_shared_gloss_bible_word_row_line(e, word_property);
+    list_add(lines_copy_extra, line);
+  }
+  each(explains, lambda6);
   ("the reading is closed off with a line and nothing is put after it. What was there was a button across the whole width saying go back to the top, and it could only be pressed by somebody who had already scrolled to the very bottom - which is the one place a reader who wants to go up is not. The way up is a small mark held between the two arrows at the foot of the page now, always in reach, and every bible screen has it rather than only these ones.");
   html_hr(p);
 }

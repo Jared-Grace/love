@@ -11,8 +11,9 @@ export function app_shared_bible_home_copy_button(
   chapter_code,
   languages_verses,
   p_verse,
+  lines_copy_extra,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   ("the two lists are opened here rather than handed in, because this is the only place either of them is ever looked at. On a whole chapter the same pair is shared by every verse - one list of the verses picked and one of the things to redraw when the picking changes - so a screen showing one verse was handing in a pair only it could reach. Whoever gives the button a second verse to hold will have to hand them in again, and until then a name standing empty two functions away from its only reader was a question the reader had to answer for nothing.");
   let updates = [];
   let verse_numbers_chosen = [];
@@ -24,6 +25,7 @@ export function app_shared_bible_home_copy_button(
     chapter_code,
     languages_verses,
     p_verse,
+    lines_copy_extra,
   );
   let choose = property_get(v, "choose");
   html_on_click(component, choose);
