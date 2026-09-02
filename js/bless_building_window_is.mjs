@@ -9,7 +9,7 @@ import { equal } from "./equal.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { and } from "./and.mjs";
 import { less_than } from "./less_than.mjs";
-export function bless_building_window_is(
+export function bless_building_window_is({
   x,
   y_top,
   width,
@@ -18,9 +18,9 @@ export function bless_building_window_is(
   slab,
   families,
   columns,
-) {
+}) {
   "Lays out one building's roof tiles and face tiles, and hands back the two tests that say which face tile is a doorway and which is a window.";
-  arguments_assert(arguments, 8);
+  arguments_assert(arguments, 1);
   let roof = bless_tiles_rectangle(x, y_top, width, 1);
   let y_walls = add(y_top, 1);
   let face = bless_tiles_rectangle(x, y_walls, width, storeys);
