@@ -1,0 +1,65 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+export function urdu_roman_segments() {
+  "How each piece of a run-together Urdu word is spelled in the Latin alphabet, the way the Urdu Geo Version's Roman edition spells it, kept as the Urdu piece against the Roman one.";
+  "It is written down rather than worked out. Turning Urdu script into the Latin alphabet cannot be done by a rule: the short vowels are not written in Urdu, so the same letters are read aloud several ways and only somebody who knows the word can say which. Every line here was authored and then looked for in the Roman edition itself, so a spelling that appears nowhere in that edition never got written down.";
+  "The marks over the Latin letters are left off - a long a is written a and not with a line over it - because both sides of the comparison have their marks taken off before anything is looked for. Small letters throughout, for the same reason.";
+  "It covers the pieces of the words somebody has already ruled on and stops there. A word whose pieces are not all here gets no answer from the Roman edition rather than a guessed one, and that shows up as the Roman edition saying nothing, which is what it is.";
+  "The pieces are here rather than the whole words because the pieces repeat and the words do not. The ending that makes a verb future turns up in four of the disputed words, and writing it down once means the four cannot disagree with each other about how it is spelled.";
+  arguments_assert(arguments, 0);
+  let segments = {
+    غَیر: "ghair",
+    یہُودیوں: "yahudiyon",
+    یہُودی: "yahudi",
+    قومیں: "qaumen",
+    چھوڑ: "chhor",
+    کر: "kar",
+    ہو: "ho",
+    گا: "ga",
+    کے: "ke",
+    گی: "gi",
+    گے: "ge",
+    تُو: "tu",
+    نے: "ne",
+    کان: "kan",
+    سے: "se",
+    آرام: "aram",
+    گاہ: "gah",
+    شہر: "shahr",
+    پناہ: "panah",
+    خُوش: "khush",
+    حال: "hal",
+    پھل: "phal",
+    دار: "dar",
+    لے: "le",
+    لیں: "len",
+    سمجھ: "samajh",
+    حق: "haq",
+    آئی: "ai",
+    نہ: "na",
+    ایمان: "iman",
+    اِن: "in",
+    تباہ: "tabah",
+    سَر: "sar",
+    کا: "ka",
+    کو: "ko",
+    کی: "ki",
+    تک: "tak",
+    بھی: "bhi",
+    جا: "ja",
+    جان: "jan",
+    پر: "par",
+    دے: "de",
+    دو: "do",
+    مِل: "mil",
+    یا: "ya",
+    کھا: "kha",
+    پا: "pa",
+    جو: "jo",
+    چار: "char",
+    یہ: "yih",
+    گِر: "gir",
+    بھیڑ: "bher",
+    ہر: "har",
+  };
+  return segments;
+}
