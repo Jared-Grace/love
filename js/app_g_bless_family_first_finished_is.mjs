@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_household_first_finished } from "./bless_hash_household_first_finished.mjs";
 import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
-export function app_g_bless_household_first_finished_is() {
+export function app_g_bless_family_first_finished_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit asked for the first household already finished and already");
   ("celebrated - the street as it stands once all of that is over.");
