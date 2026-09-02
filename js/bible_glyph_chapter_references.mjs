@@ -101,6 +101,10 @@ export function bible_glyph_chapter_references() {
       reference: "John 1",
     },
     {
+      chapter_code: "JHN02",
+      reference: "John 2",
+    },
+    {
       chapter_code: "JHN03",
       reference: "John 3",
     },
