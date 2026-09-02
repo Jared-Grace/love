@@ -96,5 +96,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
     }
     each(variations, trim_semicolon);
   }
+  ("Said last, because every road above can arrive at an ordering another one already reached, and the trimming just above can make two of them one. What reads this pool is a learner's answer and two gates, and an ordering standing in it twice is the same ordering either way - so the duplicate was never anything but a longer read.");
+  variations = lists_unique(variations);
   return variations;
 }
