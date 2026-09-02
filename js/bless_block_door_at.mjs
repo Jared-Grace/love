@@ -1,3 +1,4 @@
+import { add } from "./add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -13,9 +14,15 @@ export function bless_block_door_at(r, x) {
   ("standing at its own door is the same fact the three doors say, said again by where");
   ("people are - and the two cannot disagree, because the steps are measured off the doors");
   ("themselves rather than worked out a second time.");
-  ("The step is on the PAVEMENT and not on the door, because a door here is a wall square");
-  ("and nobody stands inside a wall. It shares the door's column, so it is the square a");
-  ("person would be standing on if they had just come out.");
+  ("The step is on the GROUND and not on the door, because a door here is a wall square and");
+  ("nobody stands inside a wall. It shares the door's column, so it is the square a person");
+  ("would be standing on if they had just come out.");
+  ("It is the square one row in FRONT OF THE DOOR, rather than the pavement row. For a house");
+  ("standing flush with the pavement those are the same square, and for a house set back in");
+  ("its slot they are not: its forecourt lies between its door and the pavement, and a step");
+  ("taken on the pavement would leave the household of a set-back house standing a square");
+  ("away from the door they came out of. Measured off the door, it follows the house");
+  ("wherever the street decides to put it.");
   let sidewalk_y = property_get(r, "sidewalk_y");
   let block_width = property_get(r, "block_width");
   let sidewalk_depth = property_get(r, "sidewalk_depth");
@@ -30,9 +37,11 @@ export function bless_block_door_at(r, x) {
     let doorways = property_get(building, "doorways");
     function doorstep(doorway) {
       let at = property_get(doorway, "x");
+      let door_y = property_get(doorway, "y");
+      let ahead = add(door_y, 1);
       let step = {
         x: at,
-        y: sidewalk_y,
+        y: ahead,
       };
       return step;
     }

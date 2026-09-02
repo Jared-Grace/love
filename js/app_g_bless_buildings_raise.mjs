@@ -1,3 +1,4 @@
+import { bless_block_pavement } from "./bless_block_pavement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_tile_wall } from "./g_tile_wall.mjs";
 import { bless_block_faces } from "./bless_block_faces.mjs";
