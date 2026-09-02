@@ -10,11 +10,11 @@ import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { list_size } from "./list_size.mjs";
-import { app_music_references_versions_faults_add } from "./app_music_references_versions_faults_add.mjs";
+import { app_music_song_versions_faults_add } from "./app_music_song_versions_faults_add.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function app_music_references_versions_gate_run() {
+export async function app_music_songs_versions_gate_run() {
   "QA gate: every passage a song on the music page quotes from some translation other than the page's usual one names a translation we may lawfully ship, calls it what that translation calls itself, names a passage that song actually rests on, and gets words back from it there.";
   "THE NAME IS A SECOND COPY, AND THIS IS WHAT KEEPS IT HONEST. The chosen translation is written down twice on purpose - once as the folder its chapters sit in, and once as the name shown to a reader - so that labelling a verse costs the page no fetch. Two copies of one fact drift, and this one would drift silently: the page would show the King James under whatever word was typed beside it, and a wrong label on a right verse looks exactly like a right label.";
   "IT ALSO ASKS WHETHER THE TRANSLATION MAY BE QUOTED AT ALL. Choosing a wording is done by reading translations side by side, and that reading includes ones we may not ship - so the way a forbidden wording gets onto the page is somebody copying the folder name of the one that read best. There is nothing about a folder name that says which of the two it was.";
@@ -72,7 +72,7 @@ export async function app_music_references_versions_gate_run() {
     for (let version of versions) {
       version_check(title, version);
     }
-    await app_music_references_versions_faults_add(song, wrong);
+    await app_music_song_versions_faults_add(song, wrong);
   }
   let f_name = fn_name("bible_versions_english_choices_usable");
   list_empty_is_assert_json(wrong, {

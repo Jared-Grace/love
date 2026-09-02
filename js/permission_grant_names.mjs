@@ -2106,7 +2106,7 @@ export function permission_grant_names() {
   let spelled2021 = fn_name("bible_glyph_chapters_marks_group_misread");
   let spelled2022 = fn_name("song_god_our_savior_folder_faults");
   let spelled2023 = fn_name("song_god_our_savior_wordings");
-  let spelled2024 = fn_name("app_music_references_versions_gate_run");
+  let spelled2024 = fn_name("app_music_songs_versions_gate_run");
   let spelled2025 = fn_name("ebible_versions_english_choices_browser");
   let spelled2026 = fn_name("word_picture_chosen");
   let spelled2027 = fn_name("functions_oversize_shortened_rescues");
