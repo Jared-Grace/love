@@ -1,0 +1,30 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { bless_building_cycle_per_block_checked } from "./bless_building_cycle_per_block_checked.mjs";
+export function bless_building_set_back_cycle() {
+  arguments_assert(arguments, 0);
+  ("How far back from the pavement each building along a street stands, read in turn - the");
+  ("first one stands a square further back than its neighbours and the other four stand");
+  ("with their fronts on the pavement.");
+  ("ONLY A LOW BUILDING HAS THE ROOM TO DO IT. Every building is given the same three rows");
+  ("of ground to stand in, and a house is one row of roof plus one row of wall for each");
+  ("floor - so a two-storey house fills its three rows exactly and a one-storey house fills");
+  ("two of them and has one to spare. The spare row is what a set-back moves through: with");
+  ("no set-back it lies behind the house, and with one it lies in front, between the house");
+  ("and the pavement. A number asked for here that the building has no room for is cut down");
+  ("to what it has room for, so this run may say what it likes.");
+  ("It is here so that a row of low houses is not a straight line. Two low buildings on a");
+  ("block both flush with the pavement draw the same edge as five of them would, and the");
+  ("street reads as one long front with doors in it rather than as houses standing side by");
+  ("side. One of them stepped back puts a break in that line, and a break is what the eye");
+  ("counts buildings by.");
+  ("A repeating RUN and not a random draw, which is the same rule the door counts and the");
+  ("floors keep. The street has to be the same street on every reload, or a record of who");
+  ("has been prayed for stops meaning anything the moment the page is refreshed. The word");
+  ("for what this buys is variety and not surprise: it is varied across the row, and the");
+  ("same variety every time.");
+  ("There are exactly as many entries here as there are buildings on a block, and the");
+  ("checking of that is done for every such run in one place.");
+  let cycle = [1, 0, 0, 0, 0];
+  let r = bless_building_cycle_per_block_checked(cycle);
+  return r;
+}
