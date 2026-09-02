@@ -1,4 +1,4 @@
-import { app_g_bless_overlay_render_tap_prayed_tap_prayed } from "./app_g_bless_overlay_render_tap_prayed_tap_prayed.mjs";
+import { app_g_bless_overlay_render_tap_prayed_pray_makers } from "./app_g_bless_overlay_render_tap_prayed_pray_makers.mjs";
 import { bless_view_discerned } from "./bless_view_discerned.mjs";
 import { app_g_bless_discern } from "./app_g_bless_discern.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -81,7 +81,7 @@ export function app_g_bless_overlay_render_tap_prayed(
       faces_show,
     });
   }
-  let r3 = app_g_bless_overlay_render_tap_prayed_tap_prayed(
+  let r3 = app_g_bless_overlay_render_tap_prayed_pray_makers(
     view_everyone,
     person_pray,
     view_now,
