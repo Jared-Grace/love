@@ -12,7 +12,7 @@ import { list_take } from "./list_take.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
-export function bless_index_household(index) {
+export function bless_index_family(index) {
   arguments_assert(arguments, 1);
   ("Which family the person at this place in the line belongs to.");
   ("It is the one reading in this game that is not a division, and it is short on purpose.");
