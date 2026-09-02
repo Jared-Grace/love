@@ -15,7 +15,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 24,
-      note: "Three to look at, and they are a choice rather than a ranking - type the number into the box. 117 holds the most: the beams are coloured and they are genuinely heavier on the right than the left, the rock has thick black cracks and planes in clearly different greys so it reads as rock at a small size, the stone is shaded pale down one side and dark down the other, and the glow round it fades out with no edge. Its faults are a cropped border and a stone drawn as a many-sided polygon instead of a circle. 114 has the best rock and stone texture of all of them and keeps the arch and the white border, but its beams came out white with no colour. 111 is the one you already said is good and still has colour and border together, with thinner rock texture than these two. What has now failed across three rounds is the asymmetry: the beams keep coming back as a fan however plainly the wording asks for them to be gathered on one side, and 117 is the nearest any draw has got. 116 came back as a photograph of a window set in a plaster wall rather than a picture on black, which is the whole style breaking rather than this couplet.",
+      note: "",
     },
   ];
   return couplets;
