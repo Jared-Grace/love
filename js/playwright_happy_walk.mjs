@@ -113,6 +113,8 @@ export async function playwright_happy_walk(page, steps_max) {
       let taken = less_than(count, after);
       if (taken) {
         instances = instances + 1;
+        ("an answer that was taken is a screen getting on with it, so the count of fruitless presses starts again here - what the allowance below is watching for is a run of presses in a row that the app never acknowledges, and a review long enough to ask sixty questions is not that");
+        answers = 0;
       }
       count = after;
       ("a screen answered over and over with the count never moving is not a slow screen, it is an app that never says an answer was taken - and left to the step allowance it would be reported a whole course later as going round in a circle, which sends somebody looking at the wrong thing");
