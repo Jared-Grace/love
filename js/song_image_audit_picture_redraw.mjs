@@ -10,14 +10,12 @@ export function song_image_audit_picture_redraw(
   attempts,
   shown,
   key,
-  picture,
+  { picture, attempt_line, number },
   kept_now,
-  attempt_line,
-  number,
 ) {
   "puts the attempt now chosen on the screen: the drawing itself, the count beside it, and the number in the box that can be typed into";
   "THE BOX IS WRITTEN ONLY WHEN IT DISAGREES WITH THE ATTEMPT, and that guard is what lets it be typed in at all. Setting the value on every redraw would rewrite the box under the person using it: a first digit that happens to name a real drawing moves the picture, the redraw writes that digit back, the cursor goes to the end, and a number with a second digit in it can never be finished. Comparing first means a redraw that agrees with what was typed touches nothing.";
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 5);
   let attempt = attempts[shown];
   let src = song_image_drawn_url(key, attempt);
   html_src_set(picture, src);

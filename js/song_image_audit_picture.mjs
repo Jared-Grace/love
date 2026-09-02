@@ -54,10 +54,12 @@ export function song_image_audit_picture(parent, key, kept) {
       attempts,
       shown,
       key,
-      picture,
+      {
+        picture,
+        attempt_line,
+        number,
+      },
       kept_now,
-      attempt_line,
-      number,
     );
   }
   function moved(next) {
@@ -66,10 +68,12 @@ export function song_image_audit_picture(parent, key, kept) {
       attempts,
       shown,
       key,
-      picture,
+      {
+        picture,
+        attempt_line,
+        number,
+      },
       kept_now,
-      attempt_line,
-      number,
     );
   }
   function step(by) {
@@ -110,10 +114,12 @@ export function song_image_audit_picture(parent, key, kept) {
     attempts,
     shown,
     key,
-    picture,
+    {
+      picture,
+      attempt_line,
+      number,
+    },
     kept_now,
-    attempt_line,
-    number,
   );
   return picture;
 }
