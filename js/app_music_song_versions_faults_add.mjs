@@ -9,7 +9,7 @@ import { ebible_folder_references_texts } from "./ebible_folder_references_texts
 import { property_set } from "./property_set.mjs";
 import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-export async function app_music_references_versions_faults_add(song, wrong) {
+export async function app_music_song_versions_faults_add(song, wrong) {
   "$plain song";
   "Adds a fault line for each passage one song quotes from some other translation that the song rests on nowhere, or that its chosen bible hands over no words at.";
   "IT IS ASKED ONE SONG AT A TIME, AND THAT IS WHAT MAKES THE FIRST OF THE TWO QUESTIONS WORTH ASKING. The choices used to be one list for the page and were checked against every passage any song named, so a choice written under the wrong song passed as long as some other song happened to sing that verse - and the song it was written under went on being served the usual wording. Asked of the song that wrote it, the same check catches that.";
