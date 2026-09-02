@@ -51,6 +51,7 @@ export function app_g_arcs_turn_block(
   let notes = property_get(card, "notes");
   let moved = property_get(card, "moved");
   let held = property_get(card, "held");
+  let unechoed = property_get(card, "passage_unechoed");
   let block = app_g_arcs_depth_block(parent, 2);
   let v = String(number);
   let moved_count = properties_size(moved);
@@ -66,6 +67,10 @@ export function app_g_arcs_turn_block(
     let counted_kept = String(held_count);
     said = text_combine_multiple([said, "  ·  ", counted_kept, " kept"]);
   }
+  ("THE PASSAGE MARK IS SAID IN THE HEADING BESIDE THE OTHER TWO, because all three answer the one question a reviewer is asking of a turn before they read it - is there a reason to stop here. A mark of its own further down would be read after the line rather than before it, which is the wrong way round for something whose whole purpose is to save the reading.");
+  if (unechoed) {
+    said = text_combine_multiple([said, "  ·  nothing from the passage"]);
+  }
   let heading = html_div_text(block, said);
   html_style_assign(heading, {
     "font-size": app_shared_font_size_label(),
@@ -75,6 +80,12 @@ export function app_g_arcs_turn_block(
   if (changed) {
     html_style_assign(heading, {
       color: app_g_arcs_moved_color(),
+      opacity: "1",
+    });
+  }
+  ("IT IS BROUGHT FORWARD BUT NOT COLOURED, because the colour on this heading already means one thing - that the line has moved since the reader last saw it - and a second meaning on the same colour would leave a reviewer unable to tell which of the two a heading is telling them. Full strength on a grey heading is enough to catch an eye running down a column of faded ones.");
+  if (unechoed) {
+    html_style_assign(heading, {
       opacity: "1",
     });
   }
