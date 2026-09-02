@@ -15,6 +15,7 @@ export function app_g_bless_marks({
   everyone,
   ground,
   held,
+  discerned,
 }) {
   arguments_assert(arguments, 1);
   ("Draws everything the record has to say about the street: the lights on the people who");
@@ -71,7 +72,13 @@ export function app_g_bless_marks({
   ("head, so a crowd that hides one of them cannot hide the other - and which of the two a");
   ("player notices first is a question about where they happen to be standing, not one this");
   ("has to answer.");
-  let next = bless_view_finish_first(blessed, remaining);
+  ("An answered prayer for discernment is folded in here rather than pointed at from");
+  ("somewhere of its own, so the two hints are one hint. The arrow over a head and the");
+  ("arrow at the edge of the screen both aim at whatever comes back from this, and a");
+  ("discerned person aimed at from a second place would be a third arrow disagreeing with");
+  ("the other two.");
+  let started = bless_view_finish_first(blessed, remaining);
+  let next = bless_view_aimed(blessed, started, discerned);
   app_g_bless_pointers(glows, everyone, next);
   ("The NARROWED list is handed back, because one more thing is aimed at it and it is not on");
   ("the map: the arrow at the edge of the screen, which hangs on the frame and stays put");
