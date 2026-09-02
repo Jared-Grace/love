@@ -37,7 +37,8 @@ export function app_g_bless_overlay_render_tap_prayed_prayer_said(
   }
   hold_release(person);
   let lit_after = bless_blessed_tiles(blessed, blocks);
-  let lit_now = app_g_bless_lit_new(lit_before, lit_after);
+  let lit_fresh = app_g_bless_lit_new(lit_before, lit_after);
+  let lit_now = bless_lit_buildings_whole(blessed, blocks, lit_fresh);
   let everyone_after = bless_view_blessed(blessed, view_everyone);
   let people_after = bless_view_people(everyone_after);
   let people_now = list_difference(people_after, people_before);
