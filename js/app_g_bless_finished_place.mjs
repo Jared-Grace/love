@@ -18,8 +18,9 @@ export async function app_g_bless_finished_place(
   player_img_c,
   tiles,
   ground_show,
+  roof_is,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   ("The house's moment. The camera goes to the patch of ground that has just been filled");
   ("in, the street is held still for a moment as it was, the house appears on the map, the");
   ("squares wash white, a light comes up out of their own shape, and a round bloom opens");
