@@ -16,6 +16,7 @@ export async function urdu_glued_words_review_rows() {
   "The rulings are the exposed part of this repair and the only part a reader cannot see is wrong. The finding of the words is a machine's and can be argued with from the counts; where the space belongs is a judgment, made by somebody who does not read Urdu, and once made it goes into scripture in front of people. So it is written out to be checked rather than left as data nobody opens.";
   "Both spellings of the verse are carried because that is the whole of the question. Reading only the word says nothing about whether the space belongs there; reading the sentence before and after says it at once, and a reader who knows the language can answer from the two lines without knowing anything about this repo.";
   "The second translation is carried beside each ruling because it is evidence about the language rather than about this file, so it is the one thing here that can contradict the person who made the ruling. It is a count and not a verdict on the sentence: it says how the word is written elsewhere, and a reader still decides.";
+  "The spelling the second translation was asked about comes back beside its counts, and for a ruling to leave a word alone that spelling is one nobody wrote down: it is the spacing the detector proposed and the ruling turned down. Carrying it is what lets a reader see why a row says the second translation disagrees, rather than being told so.";
   "Ordered by how much a reader is needed rather than by how often the word stands there, which is a change from how it used to read. Both orders are about cost, and the counts are still what breaks a tie, but a reader who stops partway through now stops having read every ruling that nothing else has checked - where before they stopped having read the most common ones, which are also the ones a second translation has usually already settled.";
   "A word ruled on that the translation no longer uses comes back with a count of nought and no verse. That is not a fault: the rulings are kept as they were made, and a re-fetched download may simply no longer hold the word. It is worth seeing rather than dropping, because a ruling about a word that is not there is a ruling that should be asked about.";
   "The ordering is done in two passes, by count first and then by how much a reader is needed, because a sort that keeps equal things in the order it found them turns two passes into one order sorted by both. Building a single number standing for both would have to decide how many occurrences one contradiction is worth, and there is no such exchange rate.";
@@ -33,6 +34,7 @@ export async function urdu_glued_words_review_rows() {
     let verdict = property_get(judged, "verdict");
     let control_glued = property_get(judged, "glued");
     let control_apart = property_get(judged, "apart");
+    let control_spaced = property_get(judged, "spaced");
     let seen = sightings[word];
     let unseen = not(seen);
     if (unseen) {
@@ -47,6 +49,7 @@ export async function urdu_glued_words_review_rows() {
         verdict,
         control_glued,
         control_apart,
+        control_spaced,
       };
       return gone;
     }
@@ -66,6 +69,7 @@ export async function urdu_glued_words_review_rows() {
       verdict,
       control_glued,
       control_apart,
+      control_spaced,
     };
     return row;
   }
