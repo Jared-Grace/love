@@ -21,6 +21,7 @@ export function bless_building_built_on_is(
   y,
   depth,
 ) {
+  "Works out where one building stands from its set back and storeys, and hands back its roof, doorways, windows, walls, footprint and the test for whether a tile falls within its height.";
   arguments_assert(arguments, 10);
   let y_front = subtract(y_flush, set_back);
   let y_top = subtract(y_front, storeys);
