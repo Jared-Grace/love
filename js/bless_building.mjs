@@ -88,6 +88,12 @@ export function bless_building(x, y, families, storeys, set_back) {
   ("All of it is solid. There is no inside to any of this - a door is a place to stand");
   ("outside, not a way in - so `tiles` gives back every square of it for whoever needs to");
   ("know how much ground the building takes up.");
+  ("`ground` is a WIDER list than `tiles` and answers a different question: not what is");
+  ("solid, but what a prayer over this house is allowed to light. It is the house plus the");
+  ("step of yard outside its doors. The two are kept apart because a walker reads `tiles` as");
+  ("wall - putting the step in there would seal every door on the street - and a celebration");
+  ("reads `ground` as the patch to light, and a downstairs family with no step to its name");
+  ("owns a single row and lights up as a stripe.");
   let r = bless_building_yard(families, storeys, y, set_back, x);
   let yard = property_get(r, "yard");
   let columns = property_get(r, "columns");
@@ -96,6 +102,7 @@ export function bless_building(x, y, families, storeys, set_back) {
   let windows = property_get(r, "windows");
   let doorways = property_get(r, "doorways");
   let roof = property_get(r, "roof");
+  let ground = property_get(r, "ground");
   let building = {
     roof: roof,
     walls: walls,
@@ -106,6 +113,7 @@ export function bless_building(x, y, families, storeys, set_back) {
     storeys: storeys,
     families: families,
     tiles: built,
+    ground: ground,
   };
   return building;
 }
