@@ -15,8 +15,7 @@ export function bless_building_family_tiles_tile_in_share(
 ) {
   "Works out the band of rows one family holds in a building, and hands back the test for whether a tile falls inside their share of it.";
   arguments_assert(arguments, 6);
-  ("A family on the GROUND reaches one row PAST its doors, onto the step of yard outside them. Without it, a downstairs family with somebody living above owns the single row its door is in - one square tall and three across - which lights as a thin white strip rather than as a part of a house. The step belongs to them by the same reasoning that gives the roof to the family upstairs: it is the piece of the ground nobody else stands on.");
-  ("The row is asked for whether or not it is there. A house standing flush with the pavement has no step and the ask finds nothing, which is right - that house gives its one family the whole face already, and a family alone in its column owns every row of it from the roof down.");
+  ("A family on the GROUND stops at the row its door is in. That row is the whole of what the ground floor shows, because its ceiling is the floor above and is drawn on top of it, and a family with somebody living upstairs therefore owns exactly one row. It reads as a thin stripe when it lights, and the answer to that is in how a share is drawn, not in giving the family a row of yard outside the house to stand on.");
   function y_least_get() {
     if (ground_is) {
       if (alone_is) {
@@ -28,8 +27,7 @@ export function bless_building_family_tiles_tile_in_share(
   }
   function y_most_get() {
     if (ground_is) {
-      let step = add(y_front, 1);
-      return step;
+      return y_front;
     }
     let below = subtract(y_front, 1);
     return below;
