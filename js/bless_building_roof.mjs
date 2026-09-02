@@ -13,7 +13,7 @@ export function bless_building_roof(shape, families, storeys, y, set_back, x) {
   let width = multiply(columns, slab);
   let rows_slot = subtract(depth, 1);
   let y_flush = add(y, rows_slot);
-  let r = bless_building_built_on_is(
+  let r = bless_building_built_on_is({
     y_flush,
     set_back,
     storeys,
@@ -24,7 +24,7 @@ export function bless_building_roof(shape, families, storeys, y, set_back, x) {
     columns,
     y,
     depth,
-  );
+  });
   let built_on_is = property_get(r, "built_on_is");
   let slot = property_get(r, "slot");
   let built = property_get(r, "built");
