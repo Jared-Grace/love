@@ -1,6 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_arc_noted_write_path } from "./g_arc_noted_write_path.mjs";
 import { g_arc_noted_chapter } from "./g_arc_noted_chapter.mjs";
+import { g_arc_noted_person } from "./g_arc_noted_person.mjs";
+import { list_concat_unique } from "./list_concat_unique.mjs";
 import { property_get } from "./property_get.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -8,16 +10,20 @@ import { list_add } from "./list_add.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function g_arc_noted_write(chapter_code, index, addresses) {
-  "Keep the addresses one person's revision was asked to answer, replacing whatever was kept for that same person before, and give back the file it was written to.";
+  "Keep the addresses somebody has stopped at and asked a question about, adding to what is already kept for that person rather than standing in for it, so that a line once questioned goes on being marked on the bench long after its answer was written.";
   "$plain chapter_code";
+  "the code is a chapter's name, like 1JN01, and it names the file the whole chapter's asked addresses are kept in.";
   "$plain index";
-  "the code is a chapter's name, like 1JN01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
-  "IT IS WRITTEN BESIDE THE ARC THAT WAS REPLACED AND ANSWERS THE QUESTION THAT ONE CANNOT. The replaced arc says what a revision changed; on its own it cannot say what the revision was asked to change, so a note whose line was written back word for word leaves no trace at all - the note is cleared, the line is identical, and the reader who filed it is told nothing. Kept here, the two together say which asks were answered by a rewrite and which were answered by leaving the line alone.";
-  "IT IS REPLACED RATHER THAN ADDED TO, because it is paired with one arc and that arc is one version back. Kept as a growing list it would name lines answered two waves ago beside lines asked about now, and a reader cannot tell those apart.";
-  "REPLACING IS DONE BY DROPPING AND ADDING, the same as the arcs are, because a person may have no record here yet and a write by position cannot answer for that.";
+  "the index is which person in the chapter, counting from zero, and it is the same number the arc store files them under.";
+  "$plain addresses";
+  "each address is a turn number and a field joined by a dot, like 24.after, naming one line of one person's arc.";
+  "IT ADDS TO WHAT IS ALREADY KEPT AND NEVER STANDS IN FOR IT. What is written here is read back as the whole list of lines this person has ever been asked about, and the bench works out its held marks from that list - a line asked about and then kept word for word is a line the reviewer decided about, and the mark is what says so. A pass that wrote only its own addresses would take every earlier mark off the page at the moment it answered something unrelated, which is the same loss that used to happen to the moved marks and for the same reason: a store that is read as a history was being written as a snapshot. So an earlier pass's addresses survive a later pass, and an address asked about twice is kept once.";
+  "IT IS A RECORD OF WHAT WAS ASKED AND NOT OF WHAT WAS ANSWERED. The notes themselves are cleared once they are answered, so after a revision this is the only thing left saying which lines a reviewer had reason to stop at. That is also what makes it safe to read before revising anything: a line already on this list is a line somebody has decided about, and rewriting it would be stepping over their decision rather than doing the work.";
   arguments_assert(arguments, 3);
   let path = g_arc_noted_write_path(chapter_code);
   let people = await g_arc_noted_chapter(chapter_code);
+  let asked = g_arc_noted_person(people, index);
+  let kept = list_concat_unique(asked, addresses);
   function person_other(other) {
     let left = property_get(other, "index");
     let neq = not_equal(left, index);
@@ -26,7 +32,7 @@ export async function g_arc_noted_write(chapter_code, index, addresses) {
   let others = list_filter(people, person_other);
   list_add(others, {
     index,
-    addresses,
+    addresses: kept,
   });
   let contents = json_format_to({
     chapter_code,
