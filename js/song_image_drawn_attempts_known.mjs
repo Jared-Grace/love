@@ -415,7 +415,8 @@ export function song_image_drawn_attempts_known() {
   73,
   74,
   75,
-  76
+  76,
+  77
  ],
  "25": [
   1,
