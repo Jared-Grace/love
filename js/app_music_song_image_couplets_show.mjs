@@ -1,22 +1,23 @@
-import { list_size } from "./list_size.mjs";
-import { add } from "./add.mjs";
-import { song_image_emblem_caption } from "./song_image_emblem_caption.mjs";
-import { song_image_couplet_repeat_numbers } from "./song_image_couplet_repeat_numbers.mjs";
-import { app_music_song_emblem_show } from "./app_music_song_emblem_show.mjs";
-import { not } from "./not.mjs";
-import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
-import { html_p_text_centered } from "./html_p_text_centered.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
+import { song_image_couplets_versions } from "./song_image_couplets_versions.mjs";
+import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { html_p_text_centered } from "./html_p_text_centered.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { song_image_couplet_references } from "./song_image_couplet_references.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
+import { not } from "./not.mjs";
 import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
+import { song_image_couplet_repeat_numbers } from "./song_image_couplet_repeat_numbers.mjs";
+import { list_size } from "./list_size.mjs";
+import { add } from "./add.mjs";
+import { song_image_emblem_caption } from "./song_image_emblem_caption.mjs";
+import { app_music_song_emblem_show } from "./app_music_song_emblem_show.mjs";
 import { app_music_references_fill } from "./app_music_references_fill.mjs";
-import { not_equal } from "./not_equal.mjs";
 export async function app_music_song_image_couplets_show(parent) {
   "The hymn's own page: every line it sings in the order it is sung, each one opening to the passages of scripture it rests on.";
   "THE PASSAGES ARE FOLDED BEHIND THE LINES. Written out flat this song runs to some twenty thousand letters, and a reader looking for the words of one line would be scrolling past ninety passages to find them. Folded, the page is the song - and the scripture is one tap under whichever line raised the question.";
@@ -24,10 +25,12 @@ export async function app_music_song_image_couplets_show(parent) {
   "A line resting on nothing is drawn plainly rather than as a card that opens on emptiness.";
   "EVERY PICTURE THE SONG WAS GIVEN IS HERE, under the line it was drawn for, and a line that is sung twice shows both of the emblems drawn for it one after the other. The words of such a line are printed once because printing them twice reads as a mistake, but the two pictures are not one picture shown twice - they were drawn as two answers to the same line, and dropping the second would lose a picture that exists and says something the first does not.";
   "A picture carries its own passages and the line carries its own, folded separately, because they are answerable to Scripture separately. The clearest case is the line sung twice: both printings rest on the same three passages, since they are the same words, while the two emblems beside them rest on nothing in common at all.";
+  "THIS HYMN'S OWN TRANSLATION CHOICES ARE READ ONCE HERE AND CARRIED DOWN, to the lines and to the pictures alike. Which bible a passage is quoted from is a fact about the song rather than about the passage, so it is this song that has to say it - sixteen of these passages are sung by the song next door as well, and each of the two may want a different wording of the same verse.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while ninety passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
   arguments_assert(arguments, 1);
   let couplets = song_image_couplets();
+  let versions = song_image_couplets_versions();
   let folds = app_music_song_folds_show(parent);
   let verse_shown = 0;
   let asked_all = [];
@@ -50,7 +53,13 @@ export async function app_music_song_image_couplets_show(parent) {
       html_div_text_bold(parent, words);
     }
     if (not(unreferenced)) {
-      let shown = app_music_song_line_show(folds, parent, words, references);
+      let shown = app_music_song_line_show(
+        folds,
+        parent,
+        words,
+        references,
+        versions,
+      );
       list_add_multiple(asked_all, shown.asked_list);
     }
     let numbers = song_image_couplet_repeat_numbers(couplet.n);
@@ -64,9 +73,10 @@ export async function app_music_song_image_couplets_show(parent) {
         parent,
         number,
         caption,
+        versions,
       );
       list_add_multiple(asked_all, asked_emblem);
     }
   }
-  await app_music_references_fill(asked_all);
+  await app_music_references_fill(asked_all, versions);
 }

@@ -1,17 +1,23 @@
-import { list_add_multiple } from "./list_add_multiple.mjs";
-import { not } from "./not.mjs";
-import { html_img_lazy_full_block } from "./html_img_lazy_full_block.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_kept_url } from "./song_image_kept_url.mjs";
+import { equal } from "./equal.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_couplet_symbol_references } from "./song_image_couplet_symbol_references.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
+import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
+import { html_img_lazy_full_block } from "./html_img_lazy_full_block.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
-import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
-import { equal } from "./equal.mjs";
-export function app_music_song_emblem_show(folds, parent, n, caption) {
+export function app_music_song_emblem_show(
+  folds,
+  parent,
+  n,
+  caption,
+  versions,
+) {
   "$plain n";
   "$plain caption";
   "The picture drawn for one line of this hymn, with the passages that picture rests on folded behind it.";
@@ -19,10 +25,11 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   "HOW THE PICTURE IS DRAWN AND WHEN IT IS FETCHED ARE ASKED FOR RATHER THAN SETTLED HERE - as wide as the page allows, on its own line, arriving only when the reader is nearly at it. The reasons live where that is settled, and the page that lays these out for checking asks in the same words.";
   "The description the picture was drawn from is what a reader who cannot see it is given instead. It is already a plain account of the shape, written before the picture existed, so there is nothing to compose - and nothing else on the page says what is in the window.";
   "A line whose picture nobody has settled on yet is passed over in silence rather than left as a gap where a picture failed to load.";
+  "THE SONG'S TRANSLATION CHOICES ARE CARRIED THROUGH HERE TOO, because the passages behind a picture are quoted the same way the passages behind a line are, and by the same song. A picture is a second thing this song rests scripture on, not a second song.";
   "It hands back the places waiting for words, the same way one sung line does, because the page fetches every passage on it in one go.";
   "WHAT TO CALL THE CARD IS DECIDED BY THE CALLER, because only the caller knows whether this picture has a neighbour. A line sung once has one picture and can simply say this picture; a line sung twice has two, one under the other, and two cards both saying this picture tell a reader who cannot see them apart nothing at all about which is which.";
   "THE CARD IS DRAWN ABOVE THE PICTURE, not below it. A picture arrives late and at a height nobody knew in advance, so a card underneath one jumps down the page the moment the picture lands - and a reader reaching for the caret taps whatever slid into its place. Above the picture, the card is where it was when the reader looked at it.";
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   let url = song_image_kept_url(n);
   let unchosen = equal(url, "");
   if (unchosen) {
@@ -34,7 +41,13 @@ export function app_music_song_emblem_show(folds, parent, n, caption) {
   let unreferenced = list_empty_is(references);
   let asked_list = [];
   if (not(unreferenced)) {
-    let shown = app_music_song_line_show(folds, parent, caption, references);
+    let shown = app_music_song_line_show(
+      folds,
+      parent,
+      caption,
+      references,
+      versions,
+    );
     list_add_multiple(asked_list, shown.asked_list);
   }
   let picture = html_img(parent, url);
