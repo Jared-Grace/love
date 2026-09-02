@@ -4,7 +4,7 @@ import { app_g_arcs_depth_block } from "./app_g_arcs_depth_block.mjs";
 import { properties_size } from "./properties_size.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { app_g_arcs_turn_block_turned } from "./app_g_arcs_turn_block_turned.mjs";
-export function app_g_arcs_turn_block_marks(
+export function app_g_arcs_turn_block_marks({
   card,
   parent,
   number,
@@ -12,8 +12,8 @@ export function app_g_arcs_turn_block_marks(
   opener,
   voice_color,
   before,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let reference = property_get(card, "reference");
   let scripture = property_get(card, "scripture");
   let after = property_get(card, "after");
