@@ -1,12 +1,12 @@
-import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
-import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
-import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
-import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
+import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
+import { app_shared_bible_home_generic_unknown_shown } from "./app_shared_bible_home_generic_unknown_shown.mjs";
+import { app_shared_bible_home_generic_bottom } from "./app_shared_bible_home_generic_bottom.mjs";
+import { app_shared_bible_home_generic_lambda$a } from "./app_shared_bible_home_generic_lambda$a.mjs";
 import { app_shared_bible_verse_arrows } from "./app_shared_bible_verse_arrows.mjs";
 import { html_page_bottom_space } from "./html_page_bottom_space.mjs";
-import { app_shared_bible_chapter_set_default } from "./app_shared_bible_chapter_set_default.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_shared_bible_home_generic(
   context,
@@ -18,6 +18,7 @@ export async function app_shared_bible_home_generic(
   let r4 = app_shared_bible_home_frame(context, bar_extra);
   let bar = property_get(r4, "bar");
   let content = property_get(r4, "content");
+  let foot = property_get(r4, "foot");
   ("A passage asked for by name is answered before the page falls back on somewhere to start, because a link carrying a reference has said where to open and the falling back is for links that have not.");
   if (await app_shared_bible_home_reference_shown_is(context, content)) {
     return null;
@@ -52,7 +53,7 @@ export async function app_shared_bible_home_generic(
   let languages_verses = property_get(r2, "languages_verses");
   let languages_available = property_get(r2, "languages_available");
   let verse_current = property_get(r2, "verse_current");
-  app_shared_bible_verse_arrows(context, chapter_code, verse_current, content);
+  app_shared_bible_verse_arrows(context, chapter_code, verse_current, foot);
   html_page_bottom_space(content);
   list_add_multiple(languages_verses, languages_available);
   let v = {
