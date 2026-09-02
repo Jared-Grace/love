@@ -7,6 +7,7 @@ import { property_get } from "./property_get.mjs";
 import { text_words_any_script_pattern } from "./text_words_any_script_pattern.mjs";
 import { list_tally_add } from "./list_tally_add.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
+import { object_values_map } from "./object_values_map.mjs";
 export async function ebible_words_sightings(bible_folder) {
   "$plain bible_folder";
   "Every word one translation uses, as its publisher wrote it, with how many times it stands there and where it is first met: which chapter, which verse, and the whole of that verse's words.";
@@ -19,7 +20,7 @@ export async function ebible_words_sightings(bible_folder) {
   let books = await ebible_version_books(bible_folder);
   let chapter_codes = await ebible_books_to_chapter_codes(books, bible_folder);
   let counts = {};
-  let sightings = {};
+  let firsts = {};
   for (let chapter_code of chapter_codes) {
     let verses = await ebible_verses_readaloud_source(
       bible_folder,
@@ -40,11 +41,11 @@ export async function ebible_words_sightings(bible_folder) {
       }
       list_tally_add(counts, words);
       for (let word of words) {
-        let known = sightings[word];
+        let known = firsts[word];
         if (known) {
           continue;
         }
-        sightings[word] = {
+        firsts[word] = {
           chapter_code,
           verse_number,
           text,
@@ -52,13 +53,13 @@ export async function ebible_words_sightings(bible_folder) {
       }
     }
   }
-  let met = object_keys(sightings);
-  for (let word of met) {
-    let sighting = property_get(sightings, word);
+  function count_join(first, word) {
     let count = property_get(counts, word);
-    object_merge_set(sighting, {
+    let joined = object_merge_set(first, {
       count,
     });
+    return joined;
   }
+  let sightings = object_values_map(firsts, count_join);
   return sightings;
 }
