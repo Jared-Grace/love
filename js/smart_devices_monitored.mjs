@@ -1,12 +1,11 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { smart_unit_name } from "./smart_unit_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { command_line_code_ignore_stdout } from "./command_line_code_ignore_stdout.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
-import { list_map } from "./list_map.mjs";
 import { smart_device_key_from_line } from "./smart_device_key_from_line.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
 import { smart_device_key_present } from "./smart_device_key_present.mjs";
 export async function smart_devices_monitored() {
@@ -25,8 +24,7 @@ export async function smart_devices_monitored() {
   let text = await command_line_code_ignore_stdout(command);
   let lines = text_split_newline(text);
   let filled = list_filter_text_empty_not_is(lines);
-  let keys = list_map(filled, smart_device_key_from_line);
-  let unique = list_unique(keys);
+  let unique = list_map_unique(filled, smart_device_key_from_line);
   let present = await list_map_async_filter_null_not_is(
     unique,
     smart_device_key_present,
