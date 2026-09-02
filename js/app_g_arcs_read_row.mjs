@@ -1,3 +1,4 @@
+import { app_g_arc_approve_worded } from "./app_g_arc_approve_worded.mjs";
 import { app_g_arc_read_mark } from "./app_g_arc_read_mark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,8 +12,6 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { app_shared_font_size_label } from "./app_shared_font_size_label.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 export function app_g_arcs_read_row(parent, bench, nickname, person) {
   "$plain nickname";
@@ -117,7 +116,7 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
     opacity: "0.55",
   });
   async function on_read() {
-    let r = app_g_arc_read_mark(
+    let r = await app_g_arc_read_mark(
       nickname,
       status_working,
       chapter_code,
@@ -128,21 +127,14 @@ export function app_g_arcs_read_row(parent, bench, nickname, person) {
   }
   app_shared_button_inline(row, "mark read", on_read);
   async function on_approve() {
-    let working = text_combine_multiple(["approving ", nickname, " as worded"]);
-    status_working(working);
-    try {
-      let f_name = fn_name("g_arc_approved_write");
-      await app_shared_api_named(f_name, [chapter_code, nickname]);
-      let done = text_combine_multiple([
-        nickname,
-        " is approved as worded now",
-      ]);
-      status_set(done);
-      await render();
-    } catch (failed) {
-      let missed = text_combine_multiple(["could not approve ", nickname]);
-      status_set(missed);
-    }
+    let r2 = await app_g_arc_approve_worded(
+      nickname,
+      status_working,
+      chapter_code,
+      status_set,
+      render,
+    );
+    return r2;
   }
   app_shared_button_inline(row, "approve as worded", on_approve);
 }
