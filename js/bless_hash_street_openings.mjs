@@ -23,6 +23,14 @@ export function bless_hash_street_openings() {
   let celebrate = bless_hash_household_first_celebrate();
   let finished = bless_hash_household_first_finished();
   let building = bless_hash_building_first();
-  let words = [street, household_first, celebrate, finished, building];
+  let building_finished = bless_hash_building_first_finished();
+  let words = [
+    street,
+    household_first,
+    celebrate,
+    finished,
+    building,
+    building_finished,
+  ];
   return words;
 }
