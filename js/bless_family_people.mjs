@@ -11,7 +11,7 @@ import { list_sum } from "./list_sum.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { range_map } from "./range_map.mjs";
-export function bless_household_people(household) {
+export function bless_family_people(household) {
   arguments_assert(arguments, 1);
   ("Everybody living in one family - between two and five people, as their building's own");
   ("arrangement has it.");

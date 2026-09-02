@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-import { bless_household_people } from "./bless_household_people.mjs";
+import { bless_family_people } from "./bless_family_people.mjs";
 import { bless_place_sizes } from "./bless_place_sizes.mjs";
 import { property_get } from "./property_get.mjs";
 import { multiply } from "./multiply.mjs";
@@ -18,7 +18,7 @@ export function bless_place_members(rung, place) {
   ("A person cannot be asked this, because nobody is inside a person. Asking anyway is a caller that has walked off the bottom of the ladder, and the missing size says so.");
   let family = equal(rung, "household");
   if (family) {
-    let people = bless_household_people(place);
+    let people = bless_family_people(place);
     return people;
   }
   let sizes = bless_place_sizes();
