@@ -15,9 +15,13 @@ export function app_g_bless_edge_new(container_map) {
   ("Under the prayer being read and over everything on the street, because it is a hint: a hint must never be in the way of the thing it is hinting at, nor be buried by the crowd it is pointing past.");
   ("It is pulled back by half its own size so that the place worked out for it is the point it STANDS on rather than its top left corner. Written the other way, everything aiming it would have to know how big it was and take half of that off first, and would be wrong by that much on the day the tiles changed size.");
   ("The aim itself is not set here, because there is nothing to aim at yet. It is made invisible and stays that way until somebody has been prayed for and there is a household with people left in it.");
+  ("It is drawn BIGGER than the arrows over heads, because it is read from further away -");
+  ("out at the frame, past whatever crowd is in between, and often in a corner where the eye");
+  ("is not looking. An arrow over a head is met face on and can afford to be the size of the");
+  ("person it sits over; this one has to be caught at the edge of a glance.");
   let color = app_g_bless_color_household_remaining();
   let size = g_img_square_size_css();
-  let font_size = text_combine_multiple(["calc((", size, ") * 0.9)"]);
+  let font_size = text_combine_multiple(["calc((", size, ") * 1.2)"]);
   let outer = html_div(container_map);
   html_style_assign(outer, {
     position: "absolute",
