@@ -1,8 +1,6 @@
 import { property_get } from "./property_get.mjs";
-import { bless_building_roof } from "./bless_building_roof.mjs";
+import { bless_building_yard } from "./bless_building_yard.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_building_shape } from "./bless_building_shape.mjs";
-import { list_filter_not } from "./list_filter_not.mjs";
 export function bless_building(x, y, families, storeys, set_back) {
   arguments_assert(arguments, 5);
   ("One building, given as its parts - the roof seen from above, the bands of front wall it");
@@ -90,17 +88,14 @@ export function bless_building(x, y, families, storeys, set_back) {
   ("All of it is solid. There is no inside to any of this - a door is a place to stand");
   ("outside, not a way in - so `tiles` gives back every square of it for whoever needs to");
   ("know how much ground the building takes up.");
-  let shape = bless_building_shape();
-  let r = bless_building_roof(shape, families, storeys, y, set_back, x);
-  let roof = property_get(r, "roof");
-  let doorways = property_get(r, "doorways");
-  let windows = property_get(r, "windows");
-  let walls = property_get(r, "walls");
-  let built = property_get(r, "built");
-  let slot = property_get(r, "slot");
-  let built_on_is = property_get(r, "built_on_is");
+  let r = bless_building_yard(families, storeys, y, set_back, x);
+  let yard = property_get(r, "yard");
   let columns = property_get(r, "columns");
-  let yard = list_filter_not(slot, built_on_is);
+  let built = property_get(r, "built");
+  let walls = property_get(r, "walls");
+  let windows = property_get(r, "windows");
+  let doorways = property_get(r, "doorways");
+  let roof = property_get(r, "roof");
   let building = {
     roof: roof,
     walls: walls,
