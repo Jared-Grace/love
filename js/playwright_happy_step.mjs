@@ -1,19 +1,11 @@
+import { playwright_happy_picked_press } from "./playwright_happy_picked_press.mjs";
+import { playwright_happy_stuck_not_assert } from "./playwright_happy_stuck_not_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { qa_attribute_test_happy_end } from "./qa_attribute_test_happy_end.mjs";
 import { playwright_by_attribute_named_all_now } from "./playwright_by_attribute_named_all_now.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { qa_attribute_test_happy } from "./qa_attribute_test_happy.mjs";
-import { playwright_by_attribute_named_all } from "./playwright_by_attribute_named_all.mjs";
-import { catch_null_async } from "./catch_null_async.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { playwright_by_tag_name_text_contents_visible } from "./playwright_by_tag_name_text_contents_visible.mjs";
-import { playwright_error_records } from "./playwright_error_records.mjs";
-import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { playwright_selector_handles_now } from "./playwright_selector_handles_now.mjs";
-import { list_first } from "./list_first.mjs";
-import { catch_error_text_or_null_async } from "./catch_error_text_or_null_async.mjs";
-import { null_is } from "./null_is.mjs";
 export async function playwright_happy_step(page, selector) {
   "$plain selector";
   "take one step along the way somebody takes who is getting everything right: stop if this is the end, and otherwise press the first control the selector picks out of the ones the screen has marked";
@@ -39,40 +31,7 @@ export async function playwright_happy_step(page, selector) {
     };
     return done;
   }
-  let key = qa_attribute_test_happy();
-  async function ways_wait() {
-    let marked = await playwright_by_attribute_named_all(page, key);
-    return marked;
-  }
-  ("a wait that runs out is the same news as nothing being there, and it is caught here rather than let through, because what the waiting throws is a complaint about a selector - it names the attribute nobody wrote and not the screen that failed to write it, which is the only part anybody can go and fix");
-  let ways = [];
-  let waited = await catch_null_async(ways_wait);
-  let found = null_not_is(waited);
-  if (found) {
-    ways = waited;
-  }
-  let stuck = list_empty_is(ways);
-  let controls = [];
-  let errors = [];
-  if (stuck) {
-    ("what the screen is OFFERING goes in the report, because an address on its own says which screen it is and not which of its controls should have been the one marked - and the words on the buttons are what somebody comparing the two has to read anyway");
-    controls = await playwright_by_tag_name_text_contents_visible(
-      page,
-      "button",
-    );
-    ("and what the page WROTE DOWN goes in beside them, because the commonest way to be stuck is not a screen that forgot to mark its answer but a screen that never drew one: a fault took the app down and left the apology standing where the quiz should be. Without this the report says only that there is nothing to press, which is the true half that sends somebody looking in the wrong place.");
-    errors = await playwright_error_records(page);
-  }
-  list_empty_not_is_assert_json(ways, {
-    url,
-    key,
-    end_key,
-    selector,
-    controls,
-    errors,
-    hint: "nothing on this screen is marked as the way on and nothing marks it as the end, so the walk is stuck - either the screen threw and is showing its apology, or it forgot to mark its right answer, or the answer is there and cannot be pressed",
-  });
-  ("the kind wanted is asked for without waiting, because the screen has just been waited on and answered: whatever it is holding out, it is holding out now");
+  await playwright_happy_stuck_not_assert(page, url, end_key, selector);
   let picked = await playwright_selector_handles_now(page, selector);
   let bare = list_empty_is(picked);
   if (bare) {
@@ -86,32 +45,6 @@ export async function playwright_happy_step(page, selector) {
     };
     return nothing;
   }
-  let way = list_first(picked);
-  ("the press is given seconds rather than the half-minute a press is normally allowed, because this one has just been FOUND: it was on the page a moment ago, so it is either pressable now or it has gone. Waiting out the full allowance buys nothing and costs it on every screen that moves while it is being read, which over a whole course is most of the time the walk takes.");
-  let press_ms = 5000;
-  ("the words are read before the press rather than after it, because a press that fails still leaves the question of WHICH control failed - and a control that has gone by the time it is pressed had words a moment earlier that say which one it was");
-  async function words_read() {
-    let words = await way.textContent();
-    return words;
-  }
-  let text = await catch_null_async(words_read);
-  async function press() {
-    await way.click({
-      timeout: press_ms,
-    });
-  }
-  ("a control that has gone from the page between being found and being pressed is an ordinary miss rather than a failure, so the press is caught and the step simply says it did not land");
-  ("A screen is a moving thing: a piece the learner no longer needs is taken away, an answer settles, a line closes up. Any of those can carry off the very control this step chose, and none of them is anything wrong - the next step asks the screen again and finds whatever is standing then. Thrown instead, it would fail a walk of a course that works, and the fault it named would be a screen doing exactly what it is meant to.");
-  ("What went wrong is KEPT rather than thrown away, because the ways a press can miss are not one thing and they need different fixes: a control carried off the page is a screen that moved, a control nothing can reach is a screen drawing something on top of it, and a control that never settles is a screen still animating. The one that misses over and over is a fault, and this is the only line that says which fault it is.");
-  let why = await catch_error_text_or_null_async(press);
-  let pressed = null_is(why);
-  let step = {
-    end: false,
-    none: false,
-    url,
-    text,
-    pressed,
-    why,
-  };
-  return step;
+  let r = await playwright_happy_picked_press(picked, url);
+  return r;
 }
