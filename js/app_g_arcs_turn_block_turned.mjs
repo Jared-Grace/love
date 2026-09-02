@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { app_g_arcs_turn_field } from "./app_g_arcs_turn_field.mjs";
 import { app_g_arcs_field_shaped } from "./app_g_arcs_field_shaped.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
-export function app_g_arcs_turn_block_turned(
+export function app_g_arcs_turn_block_turned({
   held_count,
   v,
   changed,
@@ -26,8 +26,8 @@ export function app_g_arcs_turn_block_turned(
   scripture,
   after,
   believes,
-) {
-  arguments_assert(arguments, 16);
+}) {
+  arguments_assert(arguments, 1);
   let kept = not_equal(held_count, 0);
   let said = text_combine_multiple(["turn ", v]);
   if (changed) {
