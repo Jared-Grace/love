@@ -22,6 +22,7 @@ export async function urdu_glued_words_roman_verdicts() {
   "The Latin spelling of the whole word is looked up, never built out of the Latin spellings of its pieces. The vowels move when pieces join, so a built spelling would often stand nowhere in the edition, and a spelling that stands nowhere reads exactly like a publisher who writes the word with a space in it.";
   "The spelling of the spaced form is built out of the pieces, and that is sound for the opposite reason: each piece there is a whole word standing on its own, spelled the way it is spelled when it stands on its own.";
   "A word with no Latin spelling written down for it, or a proposed spacing with a piece nobody has spelled, is left out entirely rather than answered. It then has one opinion about it instead of two, which is honest, where a guessed spelling would have given it two opinions one of which was invented.";
+  "Whether a ruling asked for the space is read straight off the list of rulings rather than asked for by name, because most of the words here are not on it. Asking for a name that is not there is an error and would stop the whole reading at the first ruling to leave a word alone.";
   arguments_assert(arguments, 0);
   let control = ebible_folder_urdu_control_roman();
   let searchable = await ebible_version_words_searchable(control);
@@ -65,9 +66,9 @@ export async function urdu_glued_words_roman_verdicts() {
     }
     let glued = text_words_searchable_occurrences(searchable, solid);
     let apart = text_words_searchable_occurrences(searchable, apart_text);
-    let spacing_ruled = property_get(split, word);
-    let b = equal(spacing_ruled, undefined);
-    let spacing_wanted = not(b);
+    let spacing_ruled = split[word];
+    let unruled = equal(spacing_ruled, undefined);
+    let spacing_wanted = not(unruled);
     let verdict = null;
     if (spacing_wanted) {
       verdict = urdu_glued_words_control_verdict(apart, glued);
