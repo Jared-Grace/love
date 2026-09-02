@@ -1,4 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { equal_assert_json } from "./equal_assert_json.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_includes_assert_json } from "./list_includes_assert_json.mjs";
@@ -20,6 +23,7 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
   ("IT REFUSES A CHAPTER THE LIST DOES NOT NAME rather than running four commands that will each quietly do nothing about it. That is the one mistake this is likely to be handed - the hand edit to the list forgotten, or the code misspelled - and the four commands underneath cannot tell either of those from a chapter that simply has nothing to do.");
   ("IT SKIPS THE BAND STEP WHEN THE BAND IS ALREADY THERE, AND IT DOES NOT REFUSE THE RUN OVER IT. It used to refuse, on the reasoning that one person running all four steps who finds a band already written has landed the chapter and has nothing left to do. That stopped being true the moment several of us share one tree. On 2026-09-02 a chapter file was committed and a peer wrote its band six minutes later, before the author of the chapter had reached this command, and the run was then refused over the single step that was done while the other three were not - so the author ran those three by hand, which is the whole of what this wrapper exists to prevent. A band already present is now a step to skip and to say has been skipped.");
   ("THE OTHER THREE STEPS ARE SAFE TO RUN ON A CHAPTER THAT IS ALREADY LANDED, which is what makes skipping the right answer rather than refusing. Each of them derives what it writes from the list of chapters rather than from an argument, and each reports whether it changed anything, so a second run over a landed chapter costs a read and writes nothing. Only the band writer sends over the network and only the band writer will not write over a file that is already there.");
+  ("IT COUNTS THE CHAINS AGAINST THE LIST BEFORE IT REPORTS SUCCESS, BECAUSE THE ONE FAILURE THIS WRAPPER HAS ACTUALLY HAD WAS SILENT. On 2026-09-02 every step ran, every step said it had changed a file, and Mark eight went into the list, the light list and the bands while neither chain named it - so the chapter sat on the index and could not be opened, and what found it was a gate two days later rather than this command. The cause was that a step read a list a step before it had just rewritten, and a module is read once per process however many times it is asked for. The step underneath no longer reads that list, and this is the guard against the next step that does: the chains cover every chapter or the run stops here saying so.");
   ("EACH STEP COMMITS ITSELF UNDER ITS OWN NAME, so the log records four real commands with their real arguments rather than one word covering the lot, and a step that a peer sweep reaches first has lost one step rather than the whole run.");
   let chapters = bible_glyph_chapters();
   let codes = list_map_property(chapters, "chapter_code");
@@ -44,6 +48,11 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
     [],
   );
   let chains = await function_call_commit(bible_glyph_chapter_chains_write, []);
+  let chains_chapters = property_get(chains, "chapters");
+  let right = list_size(codes);
+  equal_assert_json(chains_chapters, right, {
+    hint: "the chains were written for a different number of chapters than the list holds, which means a step here read a file that an earlier step in this same run had already rewritten - a module is read once per process, so a step cannot see what its predecessor wrote. Find which list that step is reading and give it the chapters themselves instead, then run this again from a fresh process",
+  });
   let bands =
     "a band was written for this chapter already, so that step was skipped";
   if (fresh) {
