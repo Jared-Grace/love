@@ -30,7 +30,7 @@ export function bless_block_gaps(x, y) {
     let at = building_x(index);
     let families = list_get(cycle, index);
     let storeys = list_get(storeys_cycle, index);
-    let set_back = bless_building_set_back(index, storeys);
+    let set_back = bless_building_set_back(storeys);
     let building = bless_building(at, y, families, storeys, set_back);
     return building;
   }
