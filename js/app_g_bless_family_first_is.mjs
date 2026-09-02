@@ -1,6 +1,6 @@
 import { bless_hash_family_first_celebrate } from "./bless_hash_family_first_celebrate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_hash_household_first } from "./bless_hash_household_first.mjs";
+import { bless_hash_family_first } from "./bless_hash_family_first.mjs";
 import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
 export function app_g_bless_family_first_is() {
   arguments_assert(arguments, 0);
@@ -18,7 +18,7 @@ export function app_g_bless_family_first_is() {
   ("done themselves; this one WRITES into the record, and a record that begins with prayers");
   ("nobody said is a lie about the player's own work. That gate is where every dev opening");
   ("is asked about, so it is spelled once and not here.");
-  let word = bless_hash_household_first();
+  let word = bless_hash_family_first();
   let celebrate = bless_hash_family_first_celebrate();
   let words = [word, celebrate];
   let asked = app_g_bless_dev_opening_is(words);
