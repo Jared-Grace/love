@@ -377,8 +377,8 @@ export function song_image_couplets() {
       symbol: list_join_empty([
         "One very great round stone of plain grey glass, smooth and unmarked, a full flat circle with its face turned to the viewer, standing upright in the middle of the window and a full half of the whole width of the window across",
         ", and around it a great mass of plain grey rock whose face is one smooth unbroken sheet of grey glass, filling almost the whole width of the window, this rock rising above the stone and standing out on both sides of it so that the stone sits against the face of the rock",
-        ", and one broad unbroken band of plain white glass running all the way round the outside edge of that stone, and that band is the open mouth of the tomb itself showing past the edge of the stone, the light of it following the whole circle of the stone with the grey rock closing round the outside of the band on every side",
-        ", and broad rays of white light springing out of the outer edge of that band all the way round it and reaching outward across the face of the rock and up into the sky above it, the ground below one plain flat brown",
+        ", and one narrow unbroken line of plain white glass running all the way round the outside edge of that stone, and that line is the open mouth of the tomb itself showing past the edge of the stone, following the whole circle of the stone with the grey rock closing round the outside of it on every side",
+        ", and broad rays of white light springing out of that line all the way round the stone and reaching outward across the face of the rock and up into the sky above it, the ground below one plain flat brown",
       ]),
       symbol_ref: "Matthew 28:2",
       same_as: 0,
