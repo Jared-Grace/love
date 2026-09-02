@@ -7,6 +7,7 @@
   "app_reply_cards_handlers_draw",
   "app_reply_response_button",
   "app_shared_bible_home_generic_lambda$a",
+  "audio_offset_scan",
   "g_sermon_generate_book_generic",
   "g_sermon_generate_book_generic_prompts"
  ]
