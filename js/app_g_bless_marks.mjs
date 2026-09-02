@@ -5,7 +5,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
 import { app_g_bless_glows } from "./app_g_bless_glows.mjs";
 import { app_g_bless_homes } from "./app_g_bless_homes.mjs";
-import { bless_view_household_started } from "./bless_view_household_started.mjs";
+import { bless_view_family_started } from "./bless_view_family_started.mjs";
 import { app_g_bless_rings } from "./app_g_bless_rings.mjs";
 import { app_g_bless_pointers } from "./app_g_bless_pointers.mjs";
 export function app_g_bless_marks({
@@ -61,7 +61,7 @@ export function app_g_bless_marks({
   ("The ring is worked out last because it is the only one of the three that can be wrong");
   ("about somebody already handled: it asks who is left, and who is left is decided by the");
   ("same record the light was just read from.");
-  let remaining = bless_view_household_started(blessed, everyone);
+  let remaining = bless_view_family_started(blessed, everyone);
   app_g_bless_rings(glows, everyone, remaining);
   ("Ringed and POINTED AT are no longer the same people, and that is the whole difference");
   ("between the two marks. A ring says the player has prayed in this house before and has");
