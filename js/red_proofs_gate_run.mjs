@@ -8,8 +8,9 @@ import { function_path_to_name } from "./function_path_to_name.mjs";
 import { list_add } from "./list_add.mjs";
 import { red_proof_checked } from "./red_proof_checked.mjs";
 import { red_proof_checked_clean_print } from "./red_proof_checked_clean_print.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { json_to } from "./json_to.mjs";
+import { list_map } from "./list_map.mjs";
+import { property_get_fn } from "./property_get_fn.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function red_proofs_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: every corpus that has been checked against wrong versions of its reader still refuses all of them, every let-off still names a version nothing refuses, and every case saying it is the only one catching something still is.");
@@ -19,6 +20,7 @@ export async function red_proofs_gate_run() {
   ("IT DOES REFUSE A CASE WHOSE OWN WORDS SAY IT IS THE ONLY ONE CATCHING SOMETHING WHEN IT IS NOT. That is not a judgment about whether the case earns its place - it is a sentence disagreeing with the record printed beside it, and the record is worked out before the sentence is read. Three of those were false at once in one corpus and had been read past twice, which is why this one throws where padding only reports.");
   ("A CORPUS THAT WILL NOT READ IN IS A FAULT OF ITS OWN AND NEVER THE END OF THE WALK. The list of corpora grows with every proof written, so a torn file, a name that no longer answers, or a module that throws while loading is a thing that will happen here rather than a thing that might. Waited on plainly it would carry the file's own complaint out of this gate as though the gate had nothing to say, leaving every corpus after it unasked and no name in the answer for an app to be sorted against. Caught, it is one named corpus at fault beside all the others that were still read. The name written down is the reader's own rather than the file's, because a name carrying a dot answers to no function and so could never be sorted against what an app reaches.");
   ("What one corpus's report looks like is printed one name along, because the whole of that run is about a single corpus and reads nothing else this is holding - and lifting it out is what brought this back under the ceiling on how many lines of work one function may carry.");
+  ("THE COMPLAINT GOES THROUGH THE ASSERT FAMILY RATHER THAN BEING BUILT BY HAND, and that is the whole of why the names reach anybody. A failed gate's words are read back afterwards for the offenders it wrote down, and what the reader looks for is a record carrying them under its first name. Built by hand here, this put a bare list of names inside a sentence, which parses to no record at all - so of every gate in this repo this was the one that named nobody, and a gate naming nobody is a gate nothing can be shown to be about somewhere else, which holds EVERY app out of its deployment whether or not the fault has anything to do with that app. The sentence saying which of the four faults it is stays in the hint, where it is dropped before the names are read.");
   ("Throws so the dispatcher seam exits nonzero.");
   let names = await red_proof_names();
   let reports = [];
@@ -51,20 +53,12 @@ export async function red_proofs_gate_run() {
   }
   console.log("\nred proofs " + reports.length + "  faulted " + faulted.length);
   let wrong = faulted.concat(unreadable);
-  let b = list_empty_is(wrong);
-  if (not(b)) {
-    function lambda(f) {
-      let r2 = f.fn;
-      return r2;
-    }
-    let object = wrong.map(lambda);
-    throw new Error(
-      "red proofs gate: " +
-        wrong.length +
-        " corpus that will not read in, or with a wrong version nothing refuses, a let-off that no longer holds, or a case claiming to be the only one catching something it does not — " +
-        json_to(object),
-    );
-  }
+  let wrong_named = list_map(wrong, property_get_fn);
+  let hint =
+    "these corpora will not read in, or hold a wrong version nothing refuses, a let-off that no longer holds, or a case claiming to be the only one catching something it does not - the lines printed above say which of those each one is, and the whole repair is per corpus";
+  list_empty_is_assert_json(wrong_named, {
+    hint,
+  });
   let r = {
     reports,
   };

@@ -6,7 +6,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapters_rosetta_lines } from "./bible_glyph_chapters_rosetta_lines.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { bible_glyph_chapters_count_stated_repair } from "./bible_glyph_chapters_count_stated_repair.mjs";
@@ -45,9 +44,13 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
     [],
   );
   let chains = await function_call_commit(bible_glyph_chapter_chains_write, []);
-  let bands = await function_call_commit(bible_glyph_chapter_bands_write, [
-    chapter_code,
-  ]);
+  let bands =
+    "a band was written for this chapter already, so that step was skipped";
+  if (fresh) {
+    bands = await function_call_commit(bible_glyph_chapter_bands_write, [
+      chapter_code,
+    ]);
+  }
   let r = {
     chapter_code,
     count,
