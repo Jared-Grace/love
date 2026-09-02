@@ -16,6 +16,7 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground({
   hold,
   wash,
   held,
+  discerned,
 }) {
   arguments_assert(arguments, 1);
   ("Everything the record has to say about the street - who is lit, which houses are filled");
@@ -30,6 +31,7 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground({
     everyone: view_everyone,
     ground,
     held,
+    discerned,
   });
   ("The arrow at the edge of the screen is aimed here rather than with the marks on the");
   ("ground, because it is the one hint that is not about the street at all - it is about");
