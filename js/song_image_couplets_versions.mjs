@@ -5,6 +5,7 @@ export function song_image_couplets_versions() {
   "IT IS CHOSEN ON WHAT A TRANSLATION IS RATHER THAN ON WHAT ANY LINE ECHOES, BECAUSE IT GOVERNS THE PASSAGES WHERE NOTHING ECHOES. Sixty seven of this song's ninety three passages are retold rather than quoted, and at a retelling every translation says about as much of the line as every other - so a count taken there is a count of ties and cannot choose. What is left to choose on is what the translation is for: it renders the words of the original, it is free to hand to anybody, and a reader can understand it without help. The Berean Standard Bible is all three.";
   "WHAT IS WRITTEN BELOW ANSWERS TO THIS SONG'S OWN LINES AND NOTHING ELSE. The same passage may be quoted one way here and another way in the song next door, and that is not an inconsistency to be tidied away - the two songs echo different words of the same verse, and each is owed the wording it was written against.";
   "TWO OF THESE ARE PASSAGES THE OTHER SONG SINGS TOO, AND IT KEEPS ITS OWN USUAL BIBLE AT BOTH OF THEM. That is the whole case for these lists being separate, in the two clearest examples the page has. Luke twenty three fifty three is sung here as hewn in the rock, which is Darby word for word and which every other English bible on the list says as hewn in stone; the other song sings the same verse as his body laid inside the grave, which Darby does nothing for. Acts two twenty four is sung here as the SON of GOD was raised to life, and the Free Bible Version is the only one that says raised him back to life rather than raised him up; the other song sings Christ raised to life, the vict'ry won, which echoes too little of any of them to move. Held in one list, each of these would have had to be right for both songs or written for neither.";
+  "SIX OF THESE WERE REACHED BY READING RATHER THAN BY COUNTING, AND THE COUNT CANNOT SEE ANY OF THEM. At a passage where the sung line shares one word with every translation, the count calls the whole field level and moves on - but the word it shares is not always the word the line is made of. Mark fourteen fifty six is sung as falsely accused, and the usual bible says false witness while the Literal Text says testifying falsely, which is also the verb the original uses. First Peter two twenty three is sung as reviled, and the original repeats that word against itself - reviled, he did not revile back - which the usual bible smooths into heaped abuse and did not retaliate. Luke twenty two forty four is sung as in agony, and agony is the original's own word where the usual bible says anguish. Matthew twenty seven sixty six is sung as to seal the grave, and only the Literal Standard Version says grave rather than tomb beside sealed the stone. Matthew twenty eight six is sung as was raised to life, a passive, which the Literal Text alone keeps as he was raised up where the rest say he has risen. Acts one eleven is sung as HE will return, which is the Unlocked Literal Bible's word for what the others call come back.";
   "A PASSAGE ABSENT FROM THE EXCEPTIONS IS NOT UNDECIDED, IT IS QUIET. Nothing in the line that rests on it echoes one translation more than another, so it takes the usual one above - and that is a decision about the passage, reached by reading it, rather than a gap where nobody looked.";
   arguments_assert(arguments, 0);
   let usual = {
@@ -12,6 +13,21 @@ export function song_image_couplets_versions() {
     name: "Berean Standard Bible",
   };
   let exceptions = [
+    {
+      reference: "Mark 14:56",
+      bible_folder: "en_ult",
+      name: "unfoldingWord® Literal Text",
+    },
+    {
+      reference: "1 Peter 2:23",
+      bible_folder: "engULB",
+      name: "Unlocked Literal Bible",
+    },
+    {
+      reference: "Luke 22:44",
+      bible_folder: "engULB",
+      name: "Unlocked Literal Bible",
+    },
     {
       reference: "Matthew 27:59-60",
       bible_folder: "eng-kjv2006",
@@ -23,14 +39,29 @@ export function song_image_couplets_versions() {
       name: "Darby Translation",
     },
     {
+      reference: "Matthew 27:66",
+      bible_folder: "englsv",
+      name: "Literal Standard Version",
+    },
+    {
       reference: "Luke 24:1",
       bible_folder: "eng-asv",
       name: "American Standard Version (1901)",
     },
     {
+      reference: "Matthew 28:6",
+      bible_folder: "en_ult",
+      name: "unfoldingWord® Literal Text",
+    },
+    {
       reference: "Acts 2:24",
       bible_folder: "engfbv",
       name: "Free Bible Version",
+    },
+    {
+      reference: "Acts 1:11",
+      bible_folder: "engULB",
+      name: "Unlocked Literal Bible",
     },
   ];
   let versions = {
