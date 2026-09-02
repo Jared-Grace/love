@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { positive_is } from "./positive_is.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
-export function urdu_glued_words_control_verdict_split(glued, apart) {
+export function urdu_glued_words_control_verdict(glued, apart) {
   "$plain glued";
   "$plain apart";
   "What the second translation says about a ruling that one run of letters is two words with the space missing, given how many times that translation writes the letters run together and how many times it writes them with the space.";
