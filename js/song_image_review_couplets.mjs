@@ -12,11 +12,6 @@ export function song_image_review_couplets() {
   "WHERE TWO DRAWINGS EACH HOLD HALF OF WHAT IS WANTED AND NO DRAWING HOLDS BOTH, THE NOTE NAMES BOTH AND PUTS THE CHOICE BETWEEN THEM. That is a different thing from a round going backwards, and it wants saying differently: nothing was lost, the two halves have simply turned out to cost each other, and the reader is the only one who can say which half the picture is for. A note that names only the better-looking of the two hides that a trade was made at all.";
   "WHERE A COUNT SAID THE WORDINGS WERE SPENT AND THE NEXT ROUND SUCCEEDED, THE NOTE SAYS WHAT WAS CHANGED THAT WAS NOT A WORDING. Couplet 24 was declared settled after every rewording had failed to make the stone big enough, and it came right in the very next batch - because what changed was not the words but what the picture is of. A count being high is good evidence that no rewording will reach it and no evidence at all that nothing will, and a note that lets the first be read as the second retires a couplet that was one composition away.";
   "WHERE A FAULT WAS FIXED BY NAMING A COLOUR, THE NOTE SAYS THAT SIX DRAWINGS ALL HELD THE FIX, because that is what tells a reader the remaining faults are not the wording. A change that lands in every single draw is a change the style obeys outright, and once one is found the rest of the round is only waiting for a draw that happens to get the border right as well - which is a thing to wait for and never a thing to reword.";
-  let couplets = [
-    {
-      n: 24,
-      note: "",
-    },
-  ];
+  let couplets = [];
   return couplets;
 }
