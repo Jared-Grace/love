@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 58,
+      kept: 56,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",

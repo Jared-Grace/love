@@ -29,6 +29,7 @@ export async function qa_gate_runs_in_flight() {
   ("Nothing here can count itself. A process is only a share's parent once it has spawned shares, by which point it is judging rather than asking; and the two names looked for are neither of the names the door that asks this is started under.");
   ("★ HOW FULL THE MACHINE IS NOW ASKS WHAT IS LEFT OF THE OVERFLOW STORE AND NOT ONLY WHAT THE PROCESSORS ARE DOING, BECAUSE THE WAY THIS ACTUALLY ENDS IS A SHARE BEING KILLED. Each share was measured holding between 0.8 and 1.7 gigabytes, so seven of them is about eight, and several judgings at once take this machine to the wall. A killed share cannot say which gates it asked, which makes the whole judging unanswered, which means nothing is written down - and a record with nothing written in it is stale, which is the one condition that lets the next judging start however full the machine is. The loop feeds itself and no verdict gets filed by anything but luck.");
   ("A gigabyte of free overflow is the floor because the fall through it is not gradual. Measured 2026-09-02 this figure went from 3.8 gigabytes to 228 kilobytes while the count of processors busy barely moved, and a judging wanting eight gigabytes has no business starting anywhere near that.");
+  ("★ THE TWO REASONS THE MACHINE IS FULL TRAVEL OUT SEPARATELY AS WELL AS JOINED, BECAUSE ONE OF THEM CAN BE OVERRULED AND THE OTHER CANNOT. Busy processors make a judging slow, and slow is a price a caller is allowed to decide to pay - the rule that a stale record wants judging whatever else is happening exists exactly to let it. No overflow left makes a judging dead, and there is no caller who wants that: it does not come back late, it comes back with nothing and leaves the record as stale as it found it. A joined answer cannot tell those apart, so whoever is deciding to overrule gets both figures rather than their sum.");
   arguments_assert(arguments, 0);
   let running = await processes_dispatcher_report();
   let shards = [];
@@ -72,7 +73,7 @@ export async function qa_gate_runs_in_flight() {
   let busy = greater_than(load, cores);
   let starved = false;
   if (null_is(swap)) {
-    ("A machine that will not say how much overflow is left is not called full on that account, because a reading nobody took is not a reading of nothing.");
+    ("A machine that will not say how much overflow is left is not called starved on that account, because a reading nobody took is not a reading of nothing.");
   } else {
     starved = less_than(swap, a_gigabyte);
   }
@@ -83,6 +84,8 @@ export async function qa_gate_runs_in_flight() {
     cores,
     load,
     swap,
+    busy,
+    starved,
     crowded,
   };
   return r;
