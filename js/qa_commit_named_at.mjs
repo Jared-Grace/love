@@ -1,7 +1,7 @@
-import { qa_commit_told_judged } from "./qa_commit_told_judged.mjs";
 import { qa_commit_named } from "./qa_commit_named.mjs";
 import { qa_commit_named_path } from "./qa_commit_named_path.mjs";
 import { qa_commit_at_generic } from "./qa_commit_at_generic.mjs";
+import { qa_commit_told_judged } from "./qa_commit_told_judged.mjs";
 import { property_get } from "./property_get.mjs";
 export async function qa_commit_named_at(commit) {
   "Judges the commit you name against a frozen copy of it, and keeps which gates were red together with the functions each of them named";
@@ -19,11 +19,13 @@ export async function qa_commit_named_at(commit) {
   );
   ("Whether the judging was written down is carried out with it, because it is not the same question as whether the gates were green. A run whose gate shares did not all come back, and a run worked out beside neighbours that moved underneath it, are both handed back in full and both left out of the record on purpose - so an answer can say every gate was green while nothing about it was kept, and an asker that acts on the first half without the second acts on a verdict nobody can look up afterwards.");
   ("Which neighbours moved is carried out with the rest, because it is the reason this judging happened at all and the asker that paid for it is the one that wants it. Kept here, it would be a fact about the run held by the only reader that already knew.");
+  ("The neighbours that could not say travel out too, and they are what tells one refusal from the other. Two different things stop a judging being written down - a neighbour with work nobody has committed, and a share of the gates that stopped without complaining - and until this line they came back looking identical: not filed, and no neighbour named as having moved. Measured 2026-09-02, two judgings of a quarter of an hour each were discarded that way, and the second was diagnosed by reading three functions rather than by reading its own answer. A refusal that does not say which of its reasons fired asks whoever paid for it to go and work that out, which is the one thing it was already in a position to tell them.");
   let r = {
     commit,
     remembered: property_get(memo, "remembered"),
     moved: property_get(memo, "moved"),
     filed: property_get(memo, "filed"),
+    silent: property_get(memo, "silent"),
     judged: property_get(memo, "kept"),
   };
   return r;
