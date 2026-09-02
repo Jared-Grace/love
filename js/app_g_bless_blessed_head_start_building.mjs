@@ -25,9 +25,9 @@ export function app_g_bless_blessed_head_start_building(blessed, done) {
     bless_blessed_add(blessed, "person", person);
   }
   function family_bless(family) {
-    let people = bless_place_members("household", family);
+    let people = bless_place_members("family", family);
     each(people, person_bless);
-    bless_blessed_add(blessed, "household", family);
+    bless_blessed_add(blessed, "family", family);
   }
   function family_bless_waiting_not(family) {
     let last = equal(family, waiting);
