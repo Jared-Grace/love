@@ -66,7 +66,8 @@ export async function urdu_glued_words_roman_verdicts() {
     let glued = text_words_searchable_occurrences(searchable, solid);
     let apart = text_words_searchable_occurrences(searchable, apart_text);
     let spacing_ruled = property_get(split, word);
-    let spacing_wanted = not(equal(spacing_ruled, undefined));
+    let b = equal(spacing_ruled, undefined);
+    let spacing_wanted = not(b);
     let verdict = null;
     if (spacing_wanted) {
       verdict = urdu_glued_words_control_verdict(apart, glued);
