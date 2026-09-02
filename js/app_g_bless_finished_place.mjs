@@ -87,7 +87,7 @@ export async function app_g_bless_finished_place(
   await sleep(1100);
   ground_show();
   html_remove(arriving);
-  let squares = app_g_bless_finished_white(div_map, tiles);
+  let squares = app_g_bless_finished_white(div_map, tiles, roof_is);
   await sleep(720);
   let glow = app_g_bless_finished_glow(div_map, tiles);
   await sleep(760);
