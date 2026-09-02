@@ -1,53 +1,36 @@
 import { browser_is } from "./browser_is.mjs";
 import { ebible_verses_browser } from "./ebible_verses_browser.mjs";
-import { ebible_chapter_readaloud_lines } from "./ebible_chapter_readaloud_lines.mjs";
+import { ebible_verses_readaloud_source } from "./ebible_verses_readaloud_source.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_size } from "./list_size.mjs";
-import { ebible_chapter_verse_numbers_for_lines } from "./ebible_chapter_verse_numbers_for_lines.mjs";
+import { property_get } from "./property_get.mjs";
 import { ebible_bible_folder_text_repaired } from "./ebible_bible_folder_text_repaired.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_pairs } from "./list_map_pairs.mjs";
 import { ebible_verse_new_text } from "./ebible_verse_new_text.mjs";
+import { list_map } from "./list_map.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   "$plain chapter_code";
   "$plain bible_folder";
+  "One chapter of a bible as a reader gets it: the lines of the read-aloud edition, numbered by the marks its page carries, with everything this repo knows to be wrong with that publisher's file put right in them.";
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     return verses;
   }
-  ("The numbers are taken from the marks the source page puts at the start of each verse, rather than from cutting the chapter into verses and asking what survived. Both readings begin at the same page and one of them is exact: the marks are written down, while the cutting hunts for each number as a word among the words and can take a number belonging to the text for the mark of a verse.");
-  ("Cebuano 2 Kings 25 is where that showed. Verse 17 opens on the words eighteen cubits, so the cutting took that eighteen for the start of verse 18, left 17 with nothing in it, and dropped it as a verse the translation has no words for. Twenty-nine numbers were then laid against thirty lines and the reading fell off the end - the whole bible lost its index over one verse that begins with a number.");
-  ("The two counts were measured against each other across every chapter of three bibles - three and a half thousand chapters - and they agreed in all of them. So a line read aloud is a verse, and what reading aloud lacks is only the number, which the page has.");
-  ("Which of the page's marks to count is asked of the reading that chooses between them rather than settled here, because the reading that counts how many chapters cannot be paired has to choose the same way or the record and the app disagree about the same chapter.");
-  let filtered = await ebible_chapter_readaloud_lines(
-    bible_folder,
-    chapter_code,
-  );
-  ("A chapter that is not read aloud in this bible at all is answered for in the same way as one whose counts disagree, and for the same reason: there is no reading of it to lay against the marks its page carries. A read-aloud edition is one gift per translation and need not cover every chapter.");
-  let unread = null_is(filtered);
+  ("The cutting and the numbering are asked for next door, unrepaired, so that a reading which wants to see what the publisher actually wrote has somewhere to ask. Nothing here decides which verse is which; the only thing added on this side is the repair.");
+  ("What a translation gets wrong about a particular word is put right here, and it has to be. There are two roads out of a downloaded bible into verses - the one that cuts a page at its verse marks, and this one, which pairs the lines of the read-aloud edition with those marks - and only the first of them was repairing anything. This is the road the app is served from: what is uploaded to storage, and so what a reader turning a page actually sees, is built from these lines. A repair that reaches only the other road is a repair nobody reads.");
+  ("The read-aloud edition carries the same fault as the page. Four of the Urdu chapters written out for reading aloud hold the same welded word the downloaded pages hold, which is what a shared publishing sweep would leave, so putting it right once in the one place both roads can call is the whole of the remedy.");
+  ("Which bible the lines came from is handed over with them, and it decides. A repair belongs to one publisher's file rather than to a script, and this road reaches every translation the archive ships - so a repair asked for by shape instead of by name would reach translations it was never about.");
+  ("Nothing is answered wherever the unrepaired reading answers nothing, which is a chapter this bible does not read aloud and a chapter whose lines cannot be laid against its marks. Both are real states rather than faults, and there is nothing to repair in either of them.");
+  let source = await ebible_verses_readaloud_source(bible_folder, chapter_code);
+  let unread = null_is(source);
   if (unread) {
     return null;
   }
-  ("Nothing at all is answered for a chapter no reading of the marks can be laid against, because both of the ways of going on anyway are worse than saying nothing. Laying them against each other from the front gives every verse after the disagreement somebody else's words, and the reader has no way of telling - it reads as scripture. Stopping instead loses the whole bible over one chapter, which is what used to happen.");
-  ("Measured here rather than looked up in a list, so it cannot go stale: the lines are already in hand at this point, and a chapter that gets put right starts being answered for again with nothing else edited. What the record and its gate are for is knowing how many there are and watching that number only fall.");
-  let lines = list_size(filtered);
-  let verse_numbers = await ebible_chapter_verse_numbers_for_lines(
-    bible_folder,
-    chapter_code,
-    lines,
-  );
-  let unpaired = null_is(verse_numbers);
-  if (unpaired) {
-    return null;
+  function repair(verse) {
+    let text = property_get(verse, "text");
+    let verse_number = property_get(verse, "verse_number");
+    let put_right = ebible_bible_folder_text_repaired(bible_folder, text);
+    let v = ebible_verse_new_text(put_right, verse_number);
+    return v;
   }
-  ("What a translation gets wrong about a particular word is put right here as well, and it has to be. There are two roads out of a downloaded bible into verses - the one that cuts a page at its verse marks, and this one, which pairs the lines of the read-aloud edition with those marks - and only the first of them was repairing anything. This is the road the app is served from: what is uploaded to storage, and so what a reader turning a page actually sees, is built from these lines. A repair that reaches only the other road is a repair nobody reads.");
-  ("The read-aloud edition carries the same fault as the page. Four of the Urdu chapters written out for reading aloud hold the same welded word the downloaded pages hold, which is what a shared publishing sweep would leave, so putting it right once in the one place both roads can call is the whole of the remedy.");
-  ("Which bible the lines came from is handed over with them, and it decides. A repair belongs to one publisher's file rather than to a script, and this road reaches every translation the archive ships - so a repair asked for by shape instead of by name would reach translations it was never about.");
-  function repair(line) {
-    let put_right = ebible_bible_folder_text_repaired(bible_folder, line);
-    return put_right;
-  }
-  let repaired = list_map(filtered, repair);
-  let list = list_map_pairs(repaired, verse_numbers, ebible_verse_new_text);
+  let list = list_map(source, repair);
   return list;
 }
