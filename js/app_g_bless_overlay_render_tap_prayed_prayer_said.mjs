@@ -1,3 +1,4 @@
+import { bless_lit_buildings_whole } from "./bless_lit_buildings_whole.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_blessed_tiles } from "./bless_blessed_tiles.mjs";
 import { bless_view_blessed } from "./bless_view_blessed.mjs";
@@ -18,6 +19,7 @@ export function app_g_bless_overlay_render_tap_prayed_prayer_said(
 ) {
   "One prayer said over one person, written into the record, with everything it reached read back off the record afterwards: the ground it just lit, the faces it just reached, and the rung the player stands on once it is said.";
   "THE GROUND IS READ ONCE BEFORE THE PRAYER AND ONCE AFTER IT, and the difference is what just lit up. Read that way rather than worked out from what was prayed, because a prayer names one rung and finishes off whatever that completed, which is never a fixed amount - and an empty difference is exactly the case where nothing was finished and there is nothing to celebrate.";
+  "THE DIFFERENCE IS THEN WIDENED BACK OUT TO WHOLE BUILDINGS before it is handed on. A difference is the right answer to whether anything happened and the wrong answer to what to show. The families of a house divide its front exactly between them, so the prayer that finishes the last of them finds the rest of the house already alight and the building itself adds nothing new at all - and the raw difference would have a house celebrate its own completion with one slab of itself.";
   "THE SAME BEFORE-AND-AFTER IS TAKEN OVER THE PEOPLE, and for the same reason: a prayer names one rung and covers whoever that rung reaches, which is one face or a houseful or a street. Only the difference between the two pictures knows which of those just happened.";
   "It is asked over everybody rather than over who is in front of the player, because a prayer that reached a whole block reached the far side of it too - and a celebration that skipped the people round the corner would be quietly telling the player that the prayer stopped where their eyes did.";
   "THE PEOPLE ARE TOLD APART BY WHO THEY ARE and not by where they are standing, which is the one place these two questions differ. Ground holds still and so a square is its own name; a person walks, and two readings of the street taken a breath apart can put the same person on two squares and two different people on one. Asked by identity there is nothing to go wrong, because these are the same objects both times.";

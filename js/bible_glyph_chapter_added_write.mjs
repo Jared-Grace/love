@@ -19,7 +19,8 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
   ("THE FOUR STEPS WERE ALREADY COMMANDS AND THE ORDER WAS STILL A SENTENCE. The list of chapters says in prose which four to run and in which order, and prose is the part of an instruction that gets skipped: the sequence has twice been rediscovered by a gate going red rather than by anybody remembering it. A wrapper turns the last unwritten piece of the procedure into something that cannot be got wrong, which is the same reason each of the four stopped being a hand edit.");
   ("THE ORDER IS NOT A STYLE. The band writer sends for a chapter by name over the network and can only find one the list already names, so it has to go last; the count in the prose is read off the list and has to be repaired before anything else reports how many chapters there are. Handed the steps in any other order a person gets a green answer from three of them and a failure from the fourth that reads like the chapter being broken.");
   ("IT REFUSES A CHAPTER THE LIST DOES NOT NAME rather than running four commands that will each quietly do nothing about it. That is the one mistake this is likely to be handed - the hand edit to the list forgotten, or the code misspelled - and the four commands underneath cannot tell either of those from a chapter that simply has nothing to do.");
-  ("IT ALSO REFUSES A CHAPTER THAT ALREADY HAS ITS BANDS, and it refuses before it starts rather than after. The band writer will not write over a file that is already there, which is right - a generator overwriting hand written lines is how work disappears - but reached at the end of the run that refusal arrives minutes late, talks about a function name rather than about the chapter, and offers to have the old file deleted. Asked here it is one sentence: this chapter has already been landed.");
+  ("IT SKIPS THE BAND STEP WHEN THE BAND IS ALREADY THERE, AND IT DOES NOT REFUSE THE RUN OVER IT. It used to refuse, on the reasoning that one person running all four steps who finds a band already written has landed the chapter and has nothing left to do. That stopped being true the moment several of us share one tree. On 2026-09-02 a chapter file was committed and a peer wrote its band six minutes later, before the author of the chapter had reached this command, and the run was then refused over the single step that was done while the other three were not - so the author ran those three by hand, which is the whole of what this wrapper exists to prevent. A band already present is now a step to skip and to say has been skipped.");
+  ("THE OTHER THREE STEPS ARE SAFE TO RUN ON A CHAPTER THAT IS ALREADY LANDED, which is what makes skipping the right answer rather than refusing. Each of them derives what it writes from the list of chapters rather than from an argument, and each reports whether it changed anything, so a second run over a landed chapter costs a read and writes nothing. Only the band writer sends over the network and only the band writer will not write over a file that is already there.");
   ("EACH STEP COMMITS ITSELF UNDER ITS OWN NAME, so the log records four real commands with their real arguments rather than one word covering the lot, and a step that a peer sweep reaches first has lost one step rather than the whole run.");
   let chapters = bible_glyph_chapters();
   let codes = list_map_property(chapters, "chapter_code");
@@ -34,10 +35,6 @@ export async function bible_glyph_chapter_added_write(chapter_code) {
   let banded = bible_glyph_chapters_rosetta_lines();
   let banded_codes = list_map_property(banded, "chapter_code");
   let fresh = list_includes_not(banded_codes, chapter_code);
-  assert_json(fresh, {
-    chapter_code,
-    hint: "this chapter already has its Rosetta band, so it has been landed once already and there is nothing here left to do for it",
-  });
   await ai_git_noted();
   let count = await function_call_commit(
     bible_glyph_chapters_count_stated_repair,
