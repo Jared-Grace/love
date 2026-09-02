@@ -28,6 +28,7 @@ export function song_image_audit_picture(parent, key, kept) {
   "the arrows stop at each end instead of wrapping round, so a couplet with one attempt shows two dead arrows rather than two that appear to do something and change nothing";
   "the number can be typed into as well as arrowed to, because the arrows are a walk and a couplet with eighty attempts is not walkable. A drawing that was talked about by its number is reached by writing that number, and the box was already on the screen saying it.";
   "keep writes the attempt now on screen into the glosses file, so the choice is made in the one place where both pictures can be seen at once. Reading a number off this page and typing it into the file afterwards is the same choice made from memory, and a misread number there is a wrong picture in the film that nothing catches.";
+  "THE THREE THINGS THE REDRAW REWRITES ARE GATHERED ONCE UNDER ONE NAME. They are handed over together at three places, and written out at each of them the same three names took the same eleven lines three times over - a third of everything this function holds, saying nothing that the first of them had not already said. Gathered here they are also gathered where they are read, which is what let the redraw's row of arguments come down to five.";
   ("the picture is moved with ",
     fn_name("html_src_set"),
     " and never by writing to a src property, because everything ",
@@ -50,31 +51,11 @@ export function song_image_audit_picture(parent, key, kept) {
     await api_read(f_name, [key, attempt]);
     kept_now = attempt;
     html_text_set(keep, "keep");
-    song_image_audit_picture_redraw(
-      attempts,
-      shown,
-      key,
-      {
-        picture,
-        attempt_line,
-        number,
-      },
-      kept_now,
-    );
+    song_image_audit_picture_redraw(attempts, shown, key, redrawn, kept_now);
   }
   function moved(next) {
     shown = next;
-    song_image_audit_picture_redraw(
-      attempts,
-      shown,
-      key,
-      {
-        picture,
-        attempt_line,
-        number,
-      },
-      kept_now,
-    );
+    song_image_audit_picture_redraw(attempts, shown, key, redrawn, kept_now);
   }
   function step(by) {
     let next = shown + by;
@@ -103,6 +84,11 @@ export function song_image_audit_picture(parent, key, kept) {
   html_cursor_pointer(back);
   let number = song_image_audit_picture_number(strip, jump);
   let attempt_line = song_image_text_quiet_line(strip);
+  let redrawn = {
+    picture,
+    attempt_line,
+    number,
+  };
   let on = song_image_audit_picture_on(attempt_line, strip, on_click);
   html_style_padding(on, "4px 12px");
   html_cursor_pointer(on);
@@ -110,16 +96,6 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_padding(keep, "4px 10px");
   html_style_font_size(keep, "12px");
   html_cursor_pointer(keep);
-  song_image_audit_picture_redraw(
-    attempts,
-    shown,
-    key,
-    {
-      picture,
-      attempt_line,
-      number,
-    },
-    kept_now,
-  );
+  song_image_audit_picture_redraw(attempts, shown, key, redrawn, kept_now);
   return picture;
 }
