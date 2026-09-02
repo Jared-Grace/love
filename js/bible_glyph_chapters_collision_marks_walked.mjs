@@ -16,7 +16,7 @@ import { object_property_names } from "./object_property_names.mjs";
 import { add } from "./add.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { bible_glyph_negation_idiom_marks_expected } from "./bible_glyph_negation_idiom_marks_expected.mjs";
+import { bible_glyph_negation_idiom_closes_is } from "./bible_glyph_negation_idiom_closes_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 export async function bible_glyph_chapters_collision_marks_walked() {
@@ -114,7 +114,7 @@ export async function bible_glyph_chapters_collision_marks_walked() {
           }
         }
         let sorted = list_sort_text(distinct);
-        let wanted = bible_glyph_negation_idiom_marks_expected(strongs);
+        let wanted = bible_glyph_negation_idiom_closes_is(strongs);
         let entry = {
           chapter_code,
           verse_number,
