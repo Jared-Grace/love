@@ -1,3 +1,4 @@
+import { app_shared_dev_stamp_gate_run } from "./app_shared_dev_stamp_gate_run.mjs";
 import { smart_self_test_recent_gate_run } from "./smart_self_test_recent_gate_run.mjs";
 import { smart_alert_gate_run } from "./smart_alert_gate_run.mjs";
 import { instructions_commands_gate_run } from "./instructions_commands_gate_run.mjs";
@@ -28,6 +29,7 @@ export function qa_gates_machine() {
   "The notes were in the other list until now, which was a lie in the one direction that matters. Being in that list meant being asked inside the frozen copy, and being asked there meant the answer was kept against a commit of this repo - but the folder they actually read was the living one outside, so a verdict earned when the notes were sound could be handed back long after they had stopped being, and handed back as though the files had been looked at. A wrongly red gate wastes a few minutes; a wrongly green one is believed";
   "Being asked out here instead means the answer is never kept, which is the honest shape: it is not a fact about any commit of this repo, so no commit should be able to vouch for it. The whole-folder gate asks both halves, so nothing has stopped being checked - only stopped being remembered";
   "Two of them ask a machine that is not this one at all - the file store, over the network - and they belong here for the same reason as the rest: no copy of these files holds the answer, and the answer can change while not a line of them does. Both compare something kept here against what the store is really doing, which is the one fault every gate that reads code will call sound, correctly, while a page stays empty";
+  "One reads the bundles a person is actually being served while they work, and those are written by a build into a folder nothing tracks - so in a copy of what a commit carries there is not one of them to open, and its own guard against answering about nothing is what fires. It is right about the copy and wrong about nowhere else: out here it opens thirty and its first branch catches a real fault, a bundle written by some road that goes round the one command that leaves a record of what it was built out of.";
   let gates = [
     cors_gate_run,
     storage_rules_gate_run,
@@ -48,6 +50,7 @@ export function qa_gates_machine() {
     memory_index_size_gate_run,
     smart_alert_gate_run,
     smart_self_test_recent_gate_run,
+    app_shared_dev_stamp_gate_run,
   ];
   return gates;
 }
