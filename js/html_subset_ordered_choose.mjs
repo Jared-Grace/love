@@ -1,3 +1,5 @@
+import { html_subset_choices_max_height } from "./html_subset_choices_max_height.mjs";
+import { html_style_max_height_scroll } from "./html_style_max_height_scroll.mjs";
 import { app_shared_verses_order_prompt_text } from "./app_shared_verses_order_prompt_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -20,9 +22,11 @@ export function html_subset_ordered_choose({
     html_clear(container);
     let choices_card = app_shared_container_blue(container);
     html_div_text_bold(choices_card, choices_label);
-    let div = html_div(parent2);
+    let choices_box = html_div(choices_card);
+    let value = html_subset_choices_max_height();
+    html_style_max_height_scroll(choices_box, value);
     html_subset_toggle(
-      choices_card,
+      choices_box,
       options,
       chosen,
       name_property,
