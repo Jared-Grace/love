@@ -109,8 +109,23 @@ Thumbs.db
 # a deploy from a fresh clone would push a site missing every other app. On the
 # machine that does the deploying the files are on disk and nothing changes. If
 # it ever does happen, firebase_prod_app_public_live_restore is the way back.
+#
+# Both moved out of public/ and under web/ on 2026-09-03, the same day, so that
+# the folder people are served from holds only what is meant to be public. While
+# they were inside it, the working stage was kept off the live site by one line in
+# the sending settings naming it, and the checked stage was not named at all and
+# so was sent in full - every app's unapproved build, public. Beside it rather
+# than inside it, there is nothing to name and nothing to forget to name.
+#
+# The paths below are the folders' names today. Neither was ever in the history
+# under either name, so this move needed no rewrite; the two rules above it are
+# kept as written because that is where the files used to be, and a rule naming a
+# folder that no longer exists costs nothing while it stops an old checkout of
+# this file from recording them again.
 /public/dev/
 /public/latest/
+/web/dev/
+/web/latest/
 
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so
