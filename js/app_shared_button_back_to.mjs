@@ -1,4 +1,3 @@
-import { html_style_font_size_inherit } from "./html_style_font_size_inherit.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_button_back_to_text } from "./app_shared_button_back_to_text.mjs";
@@ -11,6 +10,5 @@ export function app_shared_button_back_to(container, destination, lambda) {
   arguments_assert(arguments, 3);
   let text = app_shared_button_back_to_text(destination);
   let button = app_shared_button_uncolored(container, text, lambda);
-  html_style_font_size_inherit(button);
   return button;
 }
