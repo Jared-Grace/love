@@ -1,6 +1,3 @@
-import { text_combine_3 } from "./text_combine_3.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split_comma } from "./text_split_comma.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -11,13 +8,18 @@ import { uuid } from "./uuid.mjs";
 import { folder_machine_temp } from "./folder_machine_temp.mjs";
 import { path_join } from "./path_join.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
+import { git_folder_head_commit } from "./git_folder_head_commit.mjs";
 import { git_head_tracked } from "./git_head_tracked.mjs";
 import { git_folder_commits_count } from "./git_folder_commits_count.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { text_prefix_change } from "./text_prefix_change.mjs";
+import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { json_equal_assert_json } from "./json_equal_assert_json.mjs";
+import { git_folder_head_tree } from "./git_folder_head_tree.mjs";
 export async function git_history_paths_rename_rehearse(
   folder,
   folders_before_text,
@@ -32,6 +34,8 @@ export async function git_history_paths_rename_rehearse(
   "The proof is the whole point of a rehearsal and it is in two halves. Every blob the commit under test holds must still be held afterwards, the same set exactly - that is what says not one byte was lost, added or altered. And every path afterwards must be the path before it with the substitution applied - that is what says each name landed where it was meant to. Neither half alone is a proof: the blobs alone would pass a rewrite that moved a file somewhere nobody asked for, and the paths alone would pass one that renamed the names correctly while changing what was under them.";
   "BOTH HALVES OF THE PROOF ARE READ OFF THE COPY, AND NEITHER OFF THE REPOSITORY THIS WAS POINTED AT. They are two readings of one commit, so they have to be readings of the SAME commit, and the only commit that is certainly still there when the second reading happens is the one inside the copy. Read the before-half off the live folder instead and the two halves stand on different commits whenever anybody commits in between - which here is constantly, because every Claude works in one shared folder on one branch. Measured 2026-09-02: a rename that was in fact perfect failed its own blob check on sixty paths out of thirty-two thousand, every one of them a peer's commit landing during the rewrite. A proof that fails when nothing is wrong teaches its reader to disbelieve it, which is worse than not having run it.";
   "Its neighbour proves a rewrite by the name of the tree alone, and that cannot be borrowed here. A rename changes the tree by design, so the same tree name on both sides would mean the rewrite had done nothing at all - the check that proves a drop is the check that would hide a rename.";
+  "WHICH COMMIT THE COPY WAS TAKEN AT IS HANDED BACK, and it is read off the copy rather than off the folder just before cloning. The accepting half throws the repository onto the copy's history, so anything committed after the copy was taken is thrown away with it - and in one shared folder on one branch that is a peer's work, silently. The accepting half refuses when this no longer matches, which turns a destroyed afternoon into a second rehearsal. Reading it off the copy is what makes the answer certain rather than nearly certain: the copy holds one commit whatever happened in the moment after the clone began.";
+  "The tree the rewrite arrived at is handed back for the same reason, so that the accepting half can prove the repository came out holding what was proved here rather than something else.";
   "The substitution is worked out here with the same prefix rule the rewrite is handed, and neither is bent to fit the other. If the two ever come to disagree about what a prefix means, this fails loudly rather than quietly renaming something nobody named.";
   "A name that matches no path is refused rather than passed over. A rename that renames nothing is a typo, and a typo let through a rehearsal has been proved safe rather than proved right. The refusal now costs one copy, because the paths it reads are the copy's - that is the price of the two halves standing on one commit, and a wasted copy is cheaper than a proof nobody believes.";
   "The copy is made on the machine's own scratch folder and never inside the repository. Making it inside was how four copies of this repository once ended up committed into it, and they were the largest thing in its history for the better part of a year.";
@@ -68,6 +72,7 @@ export async function git_history_paths_rename_rehearse(
     folder,
     clone_folder,
   ]);
+  let commit = await git_folder_head_commit(clone_folder);
   let tracked_before = await git_head_tracked(clone_folder);
   let commits_before = await git_folder_commits_count(clone_folder);
   let paths_expected = {};
@@ -113,10 +118,13 @@ export async function git_history_paths_rename_rehearse(
     clone_folder,
     pairs,
   });
+  let tree = await git_folder_head_tree(clone_folder);
   let commits_after = await git_folder_commits_count(clone_folder);
   let r = {
     clone_folder,
     pairs,
+    commit,
+    tree,
     commits_before,
     commits_after,
   };
