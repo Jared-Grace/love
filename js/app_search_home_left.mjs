@@ -25,7 +25,7 @@ export function app_search_home_left(context, hash, search) {
   let languages_chosen = ebible_languages_from_codes(language_codes);
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
-  app_shared_bible_offline_gear(bar2, content2, languages_chosen2);
+  app_shared_bible_offline_gear(bar, content, languages_chosen);
   let search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   app_shared_text_body(content, search_instructions);
