@@ -1,4 +1,4 @@
-import { folder_public_dev } from "./folder_public_dev.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
 import { list_size } from "./list_size.mjs";
 import { folder_read_files } from "./folder_read_files.mjs";
 import { functions_names_set } from "./functions_names_set.mjs";
@@ -13,7 +13,7 @@ export async function bundles_names_missing() {
   "Every built file under the dev folder that reads a name of this repo's own it never defines, answered as the file and the names it is short of, beside how many built files were read to find them.";
   "Every file rather than the entry points alone, because a lazily loaded piece is a page's boot just as much as the file naming it - it simply fails later, when the reader reaches whatever needed it.";
   "Which files exist is asked of the folder rather than written down, so a newly built app is covered the day it is built and nobody has to remember to add it here.";
-  let folder = folder_public_dev();
+  let folder = folder_web_dev();
   let files = await folder_read_files(folder);
   function built_is(name) {
     let js_is = text_ends_with(name, ".js");

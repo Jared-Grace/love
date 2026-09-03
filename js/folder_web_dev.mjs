@@ -1,6 +1,6 @@
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
-export function folder_public_dev() {
+export function folder_web_dev() {
   "The folder every app's working build is written into, said once here so that nothing";
   "else spells it.";
   "It is the folder that answers WHICH APPS EXIST. An app is a thing that has been built";

@@ -2507,7 +2507,7 @@ export function permission_grant_names() {
   let spelled2388 = fn_name("qa_gate_names_accused");
   let spelled2389 = fn_name("app_shared_carried_exclusive_weights");
   let spelled2390 = fn_name("public_chunks_orphaned_baseline_path");
-  let spelled2391 = fn_name("folder_public_dev");
+  let spelled2391 = fn_name("folder_web_dev");
   let spelled2392 = fn_name("ebible_version_books_remembered");
   let spelled2393 = fn_name("app_shared_dev_sources_fingerprint");
   let spelled2394 = fn_name("app_shared_dev_stamp_path");

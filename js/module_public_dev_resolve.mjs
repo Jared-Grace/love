@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { module_dirname } from "./module_dirname.mjs";
-import { folder_public_dev } from "./folder_public_dev.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
 import { folder_repo_relative_resolve } from "./folder_repo_relative_resolve.mjs";
 export async function module_public_dev_resolve(meta) {
   "$plain meta";
@@ -9,7 +9,7 @@ export async function module_public_dev_resolve(meta) {
   "It asks its neighbour for the walk and only names the folder, so the two of them cannot come to disagree about where this repo is.";
   arguments_assert(arguments, 1);
   let dirname = await module_dirname(meta);
-  let relative = folder_public_dev();
+  let relative = folder_web_dev();
   let result = await folder_repo_relative_resolve(dirname, relative);
   return result;
 }

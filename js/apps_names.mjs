@@ -1,6 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_public_dev } from "./folder_public_dev.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
 import { apps_names_folder_generic } from "./apps_names_folder_generic.mjs";
 export async function apps_names() {
   arguments_assert(arguments, 0);
@@ -15,7 +15,7 @@ export async function apps_names() {
     fn_name("apps_published_names"),
     " now, and the two readings");
   ("share one body, so that they cannot drift apart.");
-  let folder = folder_public_dev();
+  let folder = folder_web_dev();
   let names = await apps_names_folder_generic(folder);
   return names;
 }
