@@ -8,7 +8,7 @@ export async function webpack_dev_chunks_clean(folder, a_name) {
   "rebuild, so a byte measurement counts only the current build. Scoped by the";
   "app name: the suffix is a DOT then the name then .js, so it never matches";
   "the main entry <a_name>.js (no leading dot), another app, or a source .html";
-  "file. This replaces a raw `rm public/dev/*.<app>.js` - safe by construction,";
+  "file. This replaces a raw `rm web/public/dev/*.<app>.js` - safe by construction,";
   "so it needs no un-sandboxed rm grant.";
   let suffix = "." + a_name + ".js";
   let paths = await folder_read_files(folder);

@@ -265,15 +265,15 @@ never performs) both fail closed to a real prompt.
 A seventh exception, `is_safe_verify_html_rm`, is the same idea as
 `is_safe_claude_temp_rm` applied to a different Claude-owned location:
 file-only `rm` (same flag restriction, 'v'/'f' only) where every argument is
-an absolute path under `<repo>/public/` whose basename matches
+an absolute path under `<repo>/web/public/` whose basename matches
 `tmp_verify_<name>.html`. These are scratch files created for manual
 in-browser verification (see the `verify` skill) - they have to live under
-`public/` rather than the real /tmp scratchpad because that's the directory
+`web/public/` rather than the real /tmp scratchpad because that's the directory
 vite actually serves, but they're just as disposable as anything in the
 scratchpad once verification is done. The basename pattern is deliberately
 narrow (fixed `tmp_verify_` prefix, `.html` suffix, no `../` - same
 character-allowlist + normpath-equality checks as everywhere else in this
-file) so this can't be widened into a general "rm anything under public/"
+file) so this can't be widened into a general "rm anything under web/public/"
 capability.
 
 An eighth exception, `is_safe_git_rm_tmp`, covers `git rm <files...>`
@@ -331,7 +331,7 @@ That directory is gitignored (`/scripts/temp/`) and is the sanctioned home
 for disposable one-off scripts (see the sandboxed-node-script template,
 which only ever runs files from there), so anything directly inside it is
 as disposable as the scratchpad - no basename pattern is needed the way
-`is_safe_verify_html_rm` needs one for `public/` (which also holds real,
+`is_safe_verify_html_rm` needs one for `web/public/` (which also holds real,
 served files). Path validation reuses the same character-allowlist +
 normpath-equality + direct-child checks as everywhere else, so `../`
 traversal, a nested subdirectory, or a glob character all fail closed to a
@@ -1781,16 +1781,16 @@ def is_safe_claude_temp_cp(words):
     return all(is_safe_claude_temp_path(p) for p in paths)
 
 
-VERIFY_HTML_DIR = os.path.join(REPO_ROOT, "public") + os.sep
+VERIFY_HTML_DIR = os.path.join(REPO_ROOT, "web", "public") + os.sep
 VERIFY_HTML_BASENAME_RE = re.compile(r"^tmp_verify_[A-Za-z0-9_-]+\.html$")
 
 
 def is_safe_verify_html_path(path):
     """True iff `path` is a plain, already-normalized absolute path to a
     `tmp_verify_<name>.html` scratch file directly inside this repo's
-    `public/` directory. Same character-allowlist + normpath-equality
+    `web/public/` directory. Same character-allowlist + normpath-equality
     checks as is_safe_scratchpad_target/is_safe_claude_temp_path, plus a
-    basename pattern so this can't be widened to any file under public/."""
+    basename pattern so this can't be widened to any file under web/public/."""
     if not SAFE_SCRATCHPAD_PATH_RE.match(path):
         return False
     if not path.startswith(VERIFY_HTML_DIR):
@@ -1798,7 +1798,7 @@ def is_safe_verify_html_path(path):
     if os.path.normpath(path) != path:
         return False
     basename = os.path.basename(path)
-    # Must be a direct child of public/, not some/subdir/tmp_verify_x.html -
+    # Must be a direct child of web/public/, not some/subdir/tmp_verify_x.html -
     # startswith(VERIFY_HTML_DIR) alone doesn't rule out subdirectories.
     if os.path.join(VERIFY_HTML_DIR, basename) != path:
         return False
@@ -1809,7 +1809,7 @@ def is_safe_verify_html_rm(words):
     """Exact-shape exception for `rm`, sibling of is_safe_claude_temp_rm:
     file-only removal (same 'v'/'f'-only flag restriction) where every
     argument passes is_safe_verify_html_path. See module docstring for why
-    these files exist under public/ instead of the real scratchpad."""
+    these files exist under web/public/ instead of the real scratchpad."""
     if not words or words[0] != "rm":
         return False
     paths = []

@@ -134,9 +134,9 @@ export function permission_rules_other() {
     "Bash(mkdir -p /tmp/claude-1000/-home-j-a-repos-love/:*)",
     "Bash(rm /tmp/claude-1000/-home-j-a-repos-love/:*)",
     "Bash(mv /tmp/claude-1000/-home-j-a-repos-love/:*)",
-    "Bash(rm -f public/dev/sandbox.js public/dev/calendar.js)",
-    "Bash(rm -f public/dev/sandbox.js)",
-    "Bash(rm -f public/dev/calendar.js)",
+    "Bash(rm -f web/dev/sandbox.js web/dev/calendar.js)",
+    "Bash(rm -f web/dev/sandbox.js)",
+    "Bash(rm -f web/dev/calendar.js)",
   ];
   return texts;
 }
