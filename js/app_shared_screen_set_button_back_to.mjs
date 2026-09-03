@@ -6,10 +6,10 @@ export function app_shared_screen_set_button_back_to(
   screen_fn,
   destination,
 ) {
-  let l = app_shared_screen_set_lambda(context2, screen_fn2);
+  let l = app_shared_screen_set_lambda(context, screen_fn);
   let button = app_shared_button_back_to(
-    container2,
-    destination2,
+    container,
+    destination,
     function lambda2() {},
   );
 }
