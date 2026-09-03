@@ -1,3 +1,4 @@
+import { app_music_song_images_warm_button } from "./app_music_song_images_warm_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
@@ -33,6 +34,7 @@ export async function app_music_song_image_couplets_show(parent, song) {
   let couplets = song_image_couplets();
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
+  app_music_song_images_warm_button(parent);
   let verse_shown = 0;
   let asked_all = [];
   for (let couplet of couplets) {
