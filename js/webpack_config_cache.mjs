@@ -1,4 +1,4 @@
-import { folder_public_dev } from "./folder_public_dev.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { file_extension_js } from "./file_extension_js.mjs";
 import { text_suffix_without } from "./text_suffix_without.mjs";
@@ -12,7 +12,7 @@ export async function webpack_config_cache(folder, filename) {
   ("Everything else is refused a cache on purpose. The folders a promote reads from are written rarely and read by people, so what goes out is worth the seconds it takes to make it from the source alone, with nothing on disk able to stand in for a file.");
   ("The config file is named as a thing the cache depends on, so editing it throws away what was kept. Webpack follows that file's own imports too, which is what makes a change to any part of the config reach the cache. Without it a config edit is invisible and every later build answers from a cache built under the old rules.");
   ("That path is made absolute before it is handed over. Webpack takes a build dependency only as a full path from the root, and a path written from wherever the build happened to start is accepted without complaint and then watches nothing - the quietest way for this whole arrangement to look like it is working while the one file that must invalidate it does not.");
-  let dev = folder_public_dev();
+  let dev = folder_web_dev();
   let dev_is = text_ends_with(folder, dev);
   if (dev_is) {
     let config = folder_scripts_join_mjs("webpack.config");

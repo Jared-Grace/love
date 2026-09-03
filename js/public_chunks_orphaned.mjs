@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_public } from "./folder_public.mjs";
-import { folder_public_dev } from "./folder_public_dev.mjs";
-import { folder_public_latest } from "./folder_public_latest.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
+import { folder_web_latest } from "./folder_web_latest.mjs";
 import { folder_chunks_walked } from "./folder_chunks_walked.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -16,8 +16,8 @@ export async function public_chunks_orphaned() {
   "Nothing is removed here. What to do about a leftover under the folder that is being served is a question about what people have in front of them, so this only ever says what is there.";
   arguments_assert(arguments, 0);
   let prod = folder_public();
-  let dev = folder_public_dev();
-  let latest = folder_public_latest();
+  let dev = folder_web_dev();
+  let latest = folder_web_latest();
   let folders = [prod, dev, latest];
   async function public_chunks_orphaned_folder_lambda(folder) {
     let told = await folder_chunks_walked(folder);
