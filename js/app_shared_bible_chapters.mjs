@@ -28,11 +28,12 @@ export async function app_shared_bible_chapters(context) {
   let book_name = property_get(r, "book_name");
   let book_code = property_get(r, "book_code");
   let bar = property_get(r, "bar");
-  let button = app_shared_screen_set_button_back_to(
+  let destination = app_shared_bible_books_text();
+  app_shared_screen_set_button_back_to(
     bar,
     context,
     app_shared_bible_books,
-    app_shared_bible_books_text(),
+    destination,
   );
   ("only the chapters of this book the reader's own bibles have between them, on the same footing as the book list before it: one of the chosen bibles holding a chapter is enough to offer it, and a chapter none of them holds is left off rather than opened on nothing.");
   ("and only the chapters this app is willing to offer, on the same footing again: a chapter nobody has written this app's work for is left off rather than offered and opened on a page that cannot do what the reader came for.");
