@@ -91,12 +91,26 @@ Thumbs.db
 # recording, git_history_paths_drop takes them out of the past, and
 # git_history_heavy_absent_baseline_write shrinks the ratchet afterwards.
 #
-# /public/latest/ is deliberately NOT here, and the reason is not its size. It is
-# a deploy target — firebase sends it, the code app needs it there, and a gate
-# watches which promoted pieces are actually served. Ignoring a folder that ships
-# is a different decision from ignoring one that never leaves the machine, and it
-# wants its own sitting rather than a free ride on this one.
+# /public/latest/ was held back from the line above on 2026-09-03 and added to it
+# the same day, once the question it was waiting on had an answer. It is a deploy
+# target, so the worry was that ignoring it would stop the sending. It does not:
+# qa_app_commit_deploy builds the app out of the commit it was given and puts the
+# pieces it made into this folder, and only then sends. The folder is written by
+# the build, not read out of the commit, so tracking it never fed the sending
+# anything.
+#
+# What tracking it did feed was this gate. Every rebuild that renames a chunk
+# leaves the old name behind, and each old name over 50 KB is another offender -
+# which is how public/745.reply_local.js turned up an hour after eight others had
+# just been taken out. That is the whole reason this had to be done twice.
+#
+# The cost, so it is written down rather than discovered: a FRESH CLONE has an
+# empty latest, and the sending puts out the whole folder rather than one app, so
+# a deploy from a fresh clone would push a site missing every other app. On the
+# machine that does the deploying the files are on disk and nothing changes. If
+# it ever does happen, firebase_prod_app_public_live_restore is the way back.
 /public/dev/
+/public/latest/
 
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so
