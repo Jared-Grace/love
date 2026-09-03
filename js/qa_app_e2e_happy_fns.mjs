@@ -9,6 +9,7 @@ export function qa_app_e2e_happy_fns() {
   "Two entries today. That is not a judgment that the other apps need no walk - it is only the ones that have one, and an app missing from here is sent exactly as it was sent before any of this was written.";
   "The replacing game names its whole walk rather than the short one that stops after two sets of rules. This is the last moment before an app reaches people, and it is the moment to be thorough at: the walk takes half an hour, and half an hour spent here is spent once, where a set of rules nobody walked is played by everybody who opens the page. The short walk exists for the person waiting at a keyboard, which is not what this is.";
   "It is put here because it was needed. The game could not be played at all for nine days - every symbol was drawn as one no rule could touch - and no gate went red the whole time, because no gate opens a page. The walk that finds it in one click was sitting in the repo the entire nine days, unrun.";
+  "Each walk named here takes the stage to walk rather than naming one itself, which is what lets this list be read at the moment an app is about to go out and be pointed at the very folder that is going out. Named walks that fix a stage still exist for whoever is at a keyboard; they are not what is wanted here, because the folder somebody is working in is not the folder being sent.";
   arguments_assert(arguments, 0);
   let name = fn_name("app_code");
   let name_replace = fn_name("app_replace");
@@ -19,7 +20,7 @@ export function qa_app_e2e_happy_fns() {
     },
     {
       app_name: app_shared_name_prefix_without(name_replace),
-      happy_f_name: fn_name("app_replace_tests_run_e2e_dev"),
+      happy_f_name: fn_name("app_replace_tests_run_e2e_stage"),
     },
   ];
   return fns;
