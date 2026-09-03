@@ -20,6 +20,7 @@ export function html_subset_ordered_choose({
     html_clear(container);
     let choices_card = app_shared_container_blue(container);
     html_div_text_bold(choices_card, choices_label);
+    let div = html_div(parent2);
     html_subset_toggle(
       choices_card,
       options,
