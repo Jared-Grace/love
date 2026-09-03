@@ -68,8 +68,10 @@ Thumbs.db
 # matters more than its size.
 /data/found/findings/git_history_folder_bytes.json
 
-# NOT ignored yet, on purpose, and this is the trap to know about before adding
-# any large generated folder to this file.
+# Ignored on 2026-09-03, together with the drop that is its other half, in one
+# sitting with force-push allowed on both remotes. The trap below is why it took
+# two attempts, and is still the thing to know about before adding any large
+# generated folder to this file.
 #
 # /public/dev/ was ignored and untracked on 2026-08-15 — 21.64 MB of packed
 # history, 93% of it builds that were superseded within the hour. It was put
@@ -88,6 +90,13 @@ Thumbs.db
 # When it is done: the rules go here, git_folder_ignored_tracked_remove stops the
 # recording, git_history_paths_drop takes them out of the past, and
 # git_history_heavy_absent_baseline_write shrinks the ratchet afterwards.
+#
+# /public/latest/ is deliberately NOT here, and the reason is not its size. It is
+# a deploy target — firebase sends it, the code app needs it there, and a gate
+# watches which promoted pieces are actually served. Ignoring a folder that ships
+# is a different decision from ignoring one that never leaves the machine, and it
+# wants its own sitting rather than a free ride on this one.
+/public/dev/
 
 # Python's compiled bytecode for the bash guard. It is generated from the .py
 # files beside it and rewritten whenever python decides the cache is stale, so

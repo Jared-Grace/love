@@ -2593,6 +2593,28 @@ export function permission_grant_names() {
     "bible_usfm_version_chapter_clipboard_copy_plain_whitespace_normalized",
   );
   let spelled2468 = fn_name("lyric_video_bible_document_path");
+  let spelled2469 = fn_name("webpack_watch_imports_missing_log");
+  let spelled2470 = fn_name("bible_glyph_chapters_prose_gate_run");
+  let spelled2471 = fn_name("bible_glyph_chapter_added_write");
+  let spelled2472 = fn_name("bible_glyph_chapters_prose_baseline_write");
+  let spelled2473 = fn_name("bible_glyph_chapters_prose_missing");
+  let spelled2474 = fn_name("bible_glyph_chapter_chains_write");
+  let spelled2475 = fn_name("bible_glyph_chapter_word_mark_write");
+  let spelled2476 = fn_name("app_code_quiz_unscramble_other_answer_gate_run");
+  let spelled2477 = fn_name("baseline_writers_growth_exempt_dead");
+  let spelled2478 = fn_name("bible_glyph_chapter_references_write");
+  let spelled2479 = fn_name(
+    "bible_glyph_chapters_collision_marks_baseline_path",
+  );
+  let spelled2480 = fn_name("webpack_watch_bundle_stale_is");
+  let spelled2481 = fn_name("g_arc_feedback_person_standing");
+  let spelled2482 = fn_name(
+    "qa_promoted_public_pieces_served_is_cases_gate_run",
+  );
+  let spelled2483 = fn_name("app_code_lessons_read_through_last_fn");
+  let spelled2484 = fn_name("app_code_tests_run_e2e_happy_steps_max");
+  let spelled2485 = fn_name("song_image_notes_done");
+  let spelled2486 = fn_name("function_parameters_record_multiple");
   let names = [
     spelled,
     spelled2,
@@ -5062,6 +5084,24 @@ export function permission_grant_names() {
     spelled2466,
     spelled2467,
     spelled2468,
+    spelled2469,
+    spelled2470,
+    spelled2471,
+    spelled2472,
+    spelled2473,
+    spelled2474,
+    spelled2475,
+    spelled2476,
+    spelled2477,
+    spelled2478,
+    spelled2479,
+    spelled2480,
+    spelled2481,
+    spelled2482,
+    spelled2483,
+    spelled2484,
+    spelled2485,
+    spelled2486,
   ];
   return names;
 }
