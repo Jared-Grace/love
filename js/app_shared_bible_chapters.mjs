@@ -1,3 +1,6 @@
+import { app_shared_bible_books_text } from "./app_shared_bible_books_text.mjs";
+import { app_shared_bible_books } from "./app_shared_bible_books.mjs";
+import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_button_back_to.mjs";
 import { app_shared_bible_index_flat_offered } from "./app_shared_bible_index_flat_offered.mjs";
 import { app_shared_bible_hash_to_languages_chosen } from "./app_shared_bible_hash_to_languages_chosen.mjs";
 import { ebible_languages_to_bible_folders } from "./ebible_languages_to_bible_folders.mjs";
@@ -24,6 +27,13 @@ export async function app_shared_bible_chapters(context) {
   let content = property_get(r, "content");
   let book_name = property_get(r, "book_name");
   let book_code = property_get(r, "book_code");
+  let bar = property_get(r, "bar");
+  let button = app_shared_screen_set_button_back_to(
+    bar,
+    context,
+    app_shared_bible_books,
+    app_shared_bible_books_text(),
+  );
   ("only the chapters of this book the reader's own bibles have between them, on the same footing as the book list before it: one of the chosen bibles holding a chapter is enough to offer it, and a chapter none of them holds is left off rather than opened on nothing.");
   ("and only the chapters this app is willing to offer, on the same footing again: a chapter nobody has written this app's work for is left off rather than offered and opened on a page that cannot do what the reader came for.");
   let languages_chosen = app_shared_bible_hash_to_languages_chosen(hash);
