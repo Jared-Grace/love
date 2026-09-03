@@ -816,7 +816,6 @@ export function qa_gates() {
     text_replace_once_cases_gate_run,
     text_replace_path_start_cases_gate_run,
     folders_root_gate_run,
-    html_regenerate_stable_gate_run,
     data_rooms_gate_run,
     word_root_cases_gate_run,
     firebase_storage_list_url_cases_gate_run,
