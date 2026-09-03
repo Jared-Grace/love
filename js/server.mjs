@@ -3,7 +3,7 @@ import { server_port } from "./server_port.mjs";
 import { module_repos_resolve } from "./module_repos_resolve.mjs";
 import { server_cache_headers } from "./server_cache_headers.mjs";
 import { module_public_resolve } from "./module_public_resolve.mjs";
-import { module_public_dev_resolve } from "./module_public_dev_resolve.mjs";
+import { module_web_dev_resolve } from "./module_web_dev_resolve.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_slash_forward } from "./text_slash_forward.mjs";
 import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
@@ -34,7 +34,7 @@ export async function server() {
   let folder_public_resolved = await module_public_resolve(import.meta);
   let v_public = express.static(folder_public_resolved, static_options);
   ("serve the dev folder at its own name as well, so a working build keeps the address a phone already has if the folder ever stops sitting inside the published one. it is reachable today only because it happens to be in there, and that is an accident of layout rather than a decision - this mount is the decision, and it changes nothing while both are true");
-  let folder_dev_resolved = await module_public_dev_resolve(import.meta);
+  let folder_dev_resolved = await module_web_dev_resolve(import.meta);
   let v_dev = express.static(folder_dev_resolved, static_options);
   let left = text_slash_forward();
   let right2 = app_shared_name_dev_text();
