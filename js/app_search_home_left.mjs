@@ -1,3 +1,4 @@
+import { app_shared_bible_offline_gear } from "./app_shared_bible_offline_gear.mjs";
 import { app_shared_bar_center_content_pad } from "./app_shared_bar_center_content_pad.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -24,6 +25,7 @@ export function app_search_home_left(context, hash, search) {
   let languages_chosen = ebible_languages_from_codes(language_codes);
   property_set(context, "languages_chosen", languages_chosen);
   app_shared_bible_languages_gear(bar, content, language_codes);
+  app_shared_bible_offline_gear(bar2, content2, languages_chosen2);
   let search_instructions =
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   app_shared_text_body(content, search_instructions);
