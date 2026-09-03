@@ -1,3 +1,5 @@
+import { app_shared_bible_chapters } from "./app_shared_bible_chapters.mjs";
+import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_button_back_to.mjs";
 import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_picker_buttons_equal_width.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
@@ -24,6 +26,7 @@ export async function app_shared_bible_verses(context) {
   let r = await app_shared_bible_chapters_before(context);
   let content = property_get(r, "content");
   let book_name = property_get(r, "book_name");
+  let bar = property_get(r, "bar");
   let card = app_shared_bible_picker_card(content, book_name);
   let chapter_code = property_get(r, "chapter_code");
   let chapter_name = ebible_chapter_code_to_name(chapter_code);
@@ -41,4 +44,10 @@ export async function app_shared_bible_verses(context) {
   let property_name2 = verse_number_key();
   let current = property_get(r, property_name2);
   app_shared_bible_picker_mark_current(buttons, items, current);
+  app_shared_screen_set_button_back_to(
+    bar,
+    context,
+    app_shared_bible_chapters,
+    book_name,
+  );
 }
