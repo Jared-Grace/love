@@ -2,7 +2,6 @@ import { web_assets_storage_prefix_granted_gate_run } from "./web_assets_storage
 import { git_hook_commit_msg_gate_run } from "./git_hook_commit_msg_gate_run.mjs";
 import { qa_promoted_public_pieces_served_is_cases_gate_run } from "./qa_promoted_public_pieces_served_is_cases_gate_run.mjs";
 import { app_code_quiz_unscramble_other_answer_gate_run } from "./app_code_quiz_unscramble_other_answer_gate_run.mjs";
-import { app_code_happy_gate_run } from "./app_code_happy_gate_run.mjs";
 import { bible_glyph_chapters_prose_gate_run } from "./bible_glyph_chapters_prose_gate_run.mjs";
 import { functions_gate_walk_escapes_gate_run } from "./functions_gate_walk_escapes_gate_run.mjs";
 import { red_proof_cases_claims_unmatched_cases_gate_run } from "./red_proof_cases_claims_unmatched_cases_gate_run.mjs";

@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { smart_unit_name } from "./smart_unit_name.mjs";
 import { text_frozen } from "./text_frozen.mjs";
@@ -9,6 +10,7 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { list_filter_text_empty_not_is } from "./list_filter_text_empty_not_is.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { smart_devices_monitored } from "./smart_devices_monitored.mjs";
+import { smart_self_test_journal_lines } from "./smart_self_test_journal_lines.mjs";
 import { list_filter_text_includes } from "./list_filter_text_includes.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_add } from "./list_add.mjs";
@@ -20,6 +22,7 @@ export async function smart_self_test_recent_gate_run() {
   ("A drive reports healthy attributes whether or not it has ever been asked to read its own surface, so a monitor watching only attributes can sit for years beside a platter rotting quietly. The daemon can be told to order a self-test on a schedule, and that is the part with no feedback of its own: a schedule that never fires looks exactly like a schedule that fires and finds nothing wrong. This asks the daemon's own log whether tests are happening at all.");
   ("Four questions, and the first three are what stop the fourth being a lie. Is the daemon running - a stopped daemon orders nothing, and its log is silent for that reason rather than a good one. Does the log reach back past the start of the window - a log that was rotated away yesterday is silent about last week no matter what happened in it, and reading that silence as a verdict is reading the size of a record as the state of a drive. Which drives is the daemon actually watching - without that there is nothing to hold the evidence against. Only then does an empty list of tests mean the tests stopped.");
   ("Every watched drive has to show its own test, and this is the whole reason the question is asked per drive rather than in total. Counting tests across the machine lets one drive that is tested nightly cover for one that has never been tested at all, and the total is healthy the entire time. That is not a hypothetical: when this was first written it counted the whole machine, was green, and the solid-state drive in it had no test of any kind in its record - the spinning drive beside it was answering for both.");
+  ("The evidence is gathered from more than one unit, and which ones is a question asked elsewhere, because the daemon does not test every drive it watches. It watches the solid-state drive perfectly well and will never order a test of it, so a check that read only the daemon's log could only ever call that drive untested - permanently red about a thing no edit here can change. The drive is tested by a timer of its own instead, and the timer's log counts as evidence exactly as the daemon's does.");
   ("The window is deliberately much longer than the schedule. Short tests are ordered daily and long ones weekly, so a week of history should hold several of each; a machine that was switched off for the hour a test was due simply skips it, and that is normal rather than broken. What a week of complete silence about a drive means is that no test of it has run through any of its chances.");
   ("A red answer is not about the code here and cannot be fixed by editing any. Either some drive is not being tested, or the daemon is down, or the log no longer goes back far enough to tell. Read which of them it said - the message names the drive - and fix the machine rather than the gate.");
   ("This asks the log rather than the drives because reading a drive's own self-test history needs to be root, and a gate that needs a password is a gate that gets skipped. The daemon already writes down what it did, and a record of what happened beats reasoning about what should have.");
@@ -54,18 +57,10 @@ export async function smart_self_test_recent_gate_run() {
     unit,
     hint: "the daemon is running but is watching no drive that is still plugged into this machine, so there is nothing for it to test and its silence is about that - check what it found when it started",
   });
-  let command3 = text_combine_multiple([
-    "journalctl -u ",
-    unit,
-    ' --since "',
-    since,
-    '" --no-pager',
-  ]);
-  let journal_text = await command_line_code_ignore_stdout(command3);
-  let mapped = text_split_newline(journal_text);
+  let mapped = await smart_self_test_journal_lines(since);
   let part = text_frozen("self-test");
   let tests = list_filter_text_includes(mapped, part);
-  ("Every line the daemon writes about a drive opens with that drive's name, so the lines about tests are shared out by looking for the name in them. The last one is kept as well as the count, because a count on its own cannot be told apart from a count of the same stale line repeated.");
+  ("Every line written about a drive opens with that drive's name, so the lines about tests are shared out by looking for the name in them. The last one is kept as well as the count, because a count on its own cannot be told apart from a count of the same stale line repeated.");
   let reports = [];
   let untested = [];
   for (let device of devices) {
@@ -86,7 +81,11 @@ export async function smart_self_test_recent_gate_run() {
     since,
     untested,
     reports,
-    hint: "no self-test of these drives has started or finished in the whole window - so the schedule is not reaching them and they are being watched without ever being read; check smartd -q showtests, whether the drive's kind supports scheduled tests at all, and whether -n standby is skipping tests on a spun-down drive",
+    hint: text_combine_multiple([
+      "no self-test of these drives has started or finished in the whole window, so nothing is reaching them and they are being watched without ever being read; check that every unit named by ",
+      fn_name("smart_self_test_units"),
+      " is running and writing, that the drive's kind is one the daemon's scheduling directive reaches at all - it does not reach solid-state drives, which is why one of them is tested by a timer of its own - and whether -n standby is skipping tests on a drive that has spun down",
+    ]),
   });
   let r = {
     unit,
