@@ -7,12 +7,14 @@ import { property_get } from "./property_get.mjs";
 import { js_flo } from "./js_flo.mjs";
 import { js_function_declaration_name } from "./js_function_declaration_name.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
+import { js_imports_package_lines } from "./js_imports_package_lines.mjs";
 export async function function_temp_declaration_read(f_name) {
   arguments_assert(arguments, 1);
-  ("The one function drafted in the throwaway folder under a name, read out as a tree, together with the bare name and the file name it was found by.");
+  ("The one function drafted in the throwaway folder under a name, read out as a tree, together with the bare name, the file name it was found by, and the import lines naming things this repo does not hold.");
   ("The door out of the commands-only switch opens twice - once for a name nothing answers to yet and once for a name that already has a file - and everything before the write is the same both times. Reading the draft, insisting it holds exactly one function, and insisting that function is named after its own file are what make the door narrow, so they belong to the door rather than to either side of it.");
   ("The name written in the draft is held against the name asked for rather than trusted, because the name decides which file is written and a draft naming itself something else would put a function somewhere nobody asked for.");
   ("The file name comes back as well as the bare name, because whoever writes the function goes on to take the draft away afterwards and would otherwise spell the same two parts a second time.");
+  ("THE IMPORT LINES FOR PACKAGES COME BACK BECAUSE NOTHING ELSE CAN WORK THEM OUT AGAIN. Only the declaration is carried over from a draft, and the imports of the file that lands are worked back afterwards from the names the body reads - which finds every file in this repo and nothing outside it. So a draft bringing in a library used to promote into a file that parses, canonicalises, commits and throws the first time it is run, with nothing going red, because nothing in the checks runs it. They are read here rather than in either half, for the same reason the rest of the reading is here: both halves lose them identically.");
   let base = path_base(f_name);
   let file_name = text_combine(base, ".mjs");
   let path = path_join(["scripts", "temp", file_name]);
@@ -24,10 +26,12 @@ export async function function_temp_declaration_read(f_name) {
     hint: "the drafted function has to be named after the file holding it, so that the name asked for and the name written are the same thing",
     file_name,
   });
+  let import_lines = js_imports_package_lines(ast);
   let read = {
     base,
     file_name,
     declaration,
+    import_lines,
   };
   return read;
 }

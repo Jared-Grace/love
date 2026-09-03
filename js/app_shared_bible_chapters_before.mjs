@@ -11,6 +11,7 @@ export async function app_shared_bible_chapters_before(context) {
   let opened = await app_shared_bible_screen_content(context);
   let root = property_get(opened, "root");
   let content = property_get(opened, "content");
+  let bar = property_get(opened, "bar");
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   ("this screen is the one place a chapter is allowed to be unchosen, because choosing one is the whole reason it is on the screen. so it reads the book the way that works either way - out of the chapter's name when there is a chapter, and off the link's own word for the book when there is not");
@@ -27,6 +28,7 @@ export async function app_shared_bible_chapters_before(context) {
     content,
     verse_number,
     chapter_code,
+    bar,
   };
   return r;
 }
