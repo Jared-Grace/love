@@ -101,6 +101,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     let chapter_module = await import("./bible_glyph_chapter_luk15.mjs");
     stored = chapter_module.bible_glyph_chapter_luk15();
   }
+  if (equal(chapter_code, "LUK24")) {
+    let chapter_module = await import("./bible_glyph_chapter_luk24.mjs");
+    stored = chapter_module.bible_glyph_chapter_luk24();
+  }
   if (equal(chapter_code, "JHN01")) {
     let chapter_module = await import("./bible_glyph_chapter_jhn01.mjs");
     stored = chapter_module.bible_glyph_chapter_jhn01();
