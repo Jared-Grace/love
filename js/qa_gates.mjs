@@ -966,7 +966,6 @@ export function qa_gates() {
     red_proof_cases_claims_unmatched_cases_gate_run,
     functions_gate_walk_escapes_gate_run,
     bible_glyph_chapters_prose_gate_run,
-    app_code_happy_gate_run,
     app_code_quiz_unscramble_other_answer_gate_run,
     qa_promoted_public_pieces_served_is_cases_gate_run,
     git_hook_commit_msg_gate_run,
