@@ -1,7 +1,7 @@
 import { app_shared_language_sort_by_name } from "./app_shared_language_sort_by_name.mjs";
 import { equal } from "./equal.mjs";
 import { app_shared_text_reader_language } from "./app_shared_text_reader_language.mjs";
-export function app_shared_language_sort_label(mode) {
+export function app_shared_language_sort_action_text(mode) {
   "What the button that changes the order of the languages says, while the languages stand in the order named here.";
   "It says what pressing it will do, never what has already happened. A button wearing the name of the state it is in is read as a thing to press to get that state, so a reader who wants their alphabet presses the button already saying A to Z and is handed the other order - and the only way back is to press the same button again. Naming the act instead means the words on the button and the result of touching it are the same sentence.";
   "So the branch is on the order the list is in NOW, and what comes back is the order it would be in after. The two are opposites, which is why they read the wrong way round if this is ever skimmed as a status.";
