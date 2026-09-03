@@ -2,15 +2,15 @@ import { app_shared_button } from "./app_shared_button.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_language_sort_get } from "./app_shared_language_sort_get.mjs";
 import { app_shared_language_sort_toggle } from "./app_shared_language_sort_toggle.mjs";
-import { app_shared_language_sort_label } from "./app_shared_language_sort_label.mjs";
+import { app_shared_language_sort_action_text } from "./app_shared_language_sort_action_text.mjs";
 export function app_shared_language_sort_button(parent, on_change) {
   let mode = app_shared_language_sort_get();
-  let label = app_shared_language_sort_label(mode);
+  let label = app_shared_language_sort_action_text(mode);
   let button = null;
   function on_click() {
     app_shared_language_sort_toggle();
     let mode_next = app_shared_language_sort_get();
-    let label_next = app_shared_language_sort_label(mode_next);
+    let label_next = app_shared_language_sort_action_text(mode_next);
     html_text_set(button, label_next);
     on_change();
   }
