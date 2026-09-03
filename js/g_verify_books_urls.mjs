@@ -1,14 +1,28 @@
-import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { g_verify_loop_check } from "./g_verify_loop_check.mjs";
 import { property_get } from "./property_get.mjs";
+import { text_slash_forward } from "./text_slash_forward.mjs";
+import { app_shared_name_dev_text } from "./app_shared_name_dev_text.mjs";
 import { server_port } from "./server_port.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { g_verify_chapter_url } from "./g_verify_chapter_url.mjs";
 import { list_map } from "./list_map.mjs";
 export async function g_verify_books_urls() {
   "The approve-your-lines link for each book the sermon loop currently has in flight, as text. Points at the LOCAL DEV server, not prod: the approval app reads and writes through /api, which only the dev server serves — the prod firebase host 404s every /api call, so its g_verify shows an empty 'no verses written yet'. Seeing which passages are waiting is a different want from being taken to them, and only the second one is worth a window appearing on somebody's screen — so the list is its own answer, and the opener is a thin thing on top of it.";
+  "The address is the one the working stage is served AT rather than the place on disk it is served FROM. The two were the same string while that folder sat under the one served whole, and the day it moved the spelled-out one stopped answering. Asked for by its own name it does not care where the folder is kept, which is the whole reason the serving names it.";
+  arguments_assert(arguments, 0);
   let state = await g_verify_loop_check();
   let books = property_get(state, "books");
-  let base =
-    "http://localhost:" + server_port() + "/love/public/dev/g_verify.html";
+  let slash = text_slash_forward();
+  let dev = app_shared_name_dev_text();
+  let port = server_port();
+  let base = text_combine_multiple([
+    "http://localhost:",
+    port,
+    slash,
+    dev,
+    "/g_verify.html",
+  ]);
   function book_url(book) {
     let chapter = property_get(book, "chapter");
     let url = g_verify_chapter_url(base, chapter);
