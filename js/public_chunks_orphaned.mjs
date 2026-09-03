@@ -1,8 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_public } from "./folder_public.mjs";
 import { folder_public_dev } from "./folder_public_dev.mjs";
-import { app_shared_name_latest_text } from "./app_shared_name_latest_text.mjs";
-import { folder_public_join } from "./folder_public_join.mjs";
+import { folder_public_latest } from "./folder_public_latest.mjs";
 import { folder_chunks_walked } from "./folder_chunks_walked.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -18,8 +17,7 @@ export async function public_chunks_orphaned() {
   arguments_assert(arguments, 0);
   let prod = folder_public();
   let dev = folder_public_dev();
-  let f_path = app_shared_name_latest_text();
-  let latest = folder_public_join(f_path);
+  let latest = folder_public_latest();
   let folders = [prod, dev, latest];
   async function public_chunks_orphaned_folder_lambda(folder) {
     let told = await folder_chunks_walked(folder);
