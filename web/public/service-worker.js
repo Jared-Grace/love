@@ -1,5 +1,6 @@
-var CACHE_NAME = 'love-cache-v3';
+var CACHE_NAME = 'love-cache-v4';
 var SHELL_TIMEOUT_MS = 4000;
+var PWA_APPS = ['verses'];
 self.addEventListener('install', function () {
   self.skipWaiting();
 });
@@ -16,6 +17,22 @@ async function clean_old(key) {
     await caches.delete(key);
   }
 }
+function pwa_asset_is(pathname) {
+  var name = pathname.split('/').pop();
+  if (name === '') {
+    return true;
+  }
+  for (var i = 0; i < PWA_APPS.length; i++) {
+    var app = PWA_APPS[i];
+    if (name.indexOf(app) === 0) {
+      return true;
+    }
+    if (name.indexOf('.' + app + '.js') !== -1) {
+      return true;
+    }
+  }
+  return false;
+}
 self.addEventListener('fetch', function (event) {
   var request = event.request;
   if (request.method !== 'GET') {
@@ -31,7 +48,9 @@ self.addEventListener('fetch', function (event) {
   }
   if (url.pathname.indexOf('/bible/') === 0) {
     event.respondWith(stale_while_revalidate(request));
-  } else {
+    return;
+  }
+  if (pwa_asset_is(url.pathname)) {
     event.respondWith(network_first(request));
   }
 });
