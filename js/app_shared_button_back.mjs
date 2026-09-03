@@ -1,4 +1,3 @@
-import { html_style_font_size_inherit } from "./html_style_font_size_inherit.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export function app_shared_button_back(container, lambda) {
@@ -6,6 +5,5 @@ export function app_shared_button_back(container, lambda) {
   "The line is spelled in both twins rather than moved down into the dressing they share, because that dressing is worn by the green and the red buttons too, and taking a size off those is a change to how every screen in every app looks rather than a repair to the one thing that was out of step.";
   let text = app_shared_button_back_text();
   let button = app_shared_button_uncolored(container, text, lambda);
-  html_style_font_size_inherit(button);
   return button;
 }
