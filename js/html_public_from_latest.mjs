@@ -1,7 +1,7 @@
 import { app_shared_name_search_info } from "./app_shared_name_search_info.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_frozen_assert } from "./app_shared_frozen_assert.mjs";
-import { folder_public_latest } from "./folder_public_latest.mjs";
+import { folder_web_latest } from "./folder_web_latest.mjs";
 import { repo_path_combine } from "./repo_path_combine.mjs";
 import { folder_public } from "./folder_public.mjs";
 import { folder_app_copy_all } from "./folder_app_copy_all.mjs";
@@ -19,7 +19,7 @@ export async function html_public_from_latest(search) {
   let a_name = property_get(info, "a_name");
   app_shared_frozen_assert(a_name);
   let repo_name = property_get(info, "repo_name");
-  let latest_relative = folder_public_latest();
+  let latest_relative = folder_web_latest();
   let from_folder = repo_path_combine(repo_name, latest_relative);
   let public_relative = folder_public();
   let to_folder = repo_path_combine(repo_name, public_relative);

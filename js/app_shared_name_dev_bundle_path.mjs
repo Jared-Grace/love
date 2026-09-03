@@ -1,4 +1,4 @@
-import { folder_public_dev } from "./folder_public_dev.mjs";
+import { folder_web_dev } from "./folder_web_dev.mjs";
 import { app_shared_name_main } from "./app_shared_name_main.mjs";
 import { not } from "./not.mjs";
 import { function_name_to_path_search } from "./function_name_to_path_search.mjs";
@@ -19,7 +19,7 @@ export async function app_shared_name_dev_bundle_path(a_name) {
   }
   let repo_name = property_get(r, "repo_name");
   let file = file_name_js(a_name);
-  let dev_relative = folder_public_dev();
+  let dev_relative = folder_web_dev();
   let f_path = path_join([dev_relative, file]);
   let bundle = repo_path_combine(repo_name, f_path);
   return bundle;
