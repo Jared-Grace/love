@@ -14,7 +14,7 @@ export async function bundles_names_missing_gate_run() {
   let f_name = fn_name("webpack_build_dev");
   list_empty_is_assert_json(offenders, {
     hint: text_combine_multiple([
-      "a built file under public/dev calls a function of this repo's own that it does not carry - build that app again with ",
+      "a built file under web/public/dev calls a function of this repo's own that it does not carry - build that app again with ",
       f_name,
       " and the names should come back; if they do not, the function it is asking for has gone and its caller still names it",
     ]),
