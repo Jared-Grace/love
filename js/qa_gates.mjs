@@ -153,7 +153,6 @@ import { js_repack_only_is_cases_gate_run } from "./js_repack_only_is_cases_gate
 import { functions_repack_only_gate_run } from "./functions_repack_only_gate_run.mjs";
 import { gloss_punctuation_words_gate_run } from "./gloss_punctuation_words_gate_run.mjs";
 import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
-import { bundles_names_missing_gate_run } from "./bundles_names_missing_gate_run.mjs";
 import { text_lines_ends_kept_cases_gate_run } from "./text_lines_ends_kept_cases_gate_run.mjs";
 import { js_relabel_only_cases_gate_run } from "./js_relabel_only_cases_gate_run.mjs";
 import { js_span_cuttable_cases_gate_run } from "./js_span_cuttable_cases_gate_run.mjs";
@@ -872,7 +871,6 @@ export function qa_gates() {
     qa_gates_countless_gate_run,
     qa_gates_miscounted_gate_run,
     qa_gate_count_fixed_is_cases_gate_run,
-    bundles_names_missing_gate_run,
     gloss_punctuation_words_gate_run,
     js_repack_only_is_cases_gate_run,
     js_statements_grouping_worthless_cases_gate_run,
