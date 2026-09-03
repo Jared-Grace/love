@@ -29,7 +29,7 @@ Storage writes the slashes in a download address as `%2F`. **So there is no such
 
 The single spellings, each the one edit that moves a folder: `web_assets_folder_name` (`web/assets` — the disk side; `web_assets_storage_prefix` derives the frozen storage word from it), `web_assets_img_folder_name` (`img`), `web_assets_bible_uplifting_folder_name` (`bible/uplifting`), `web_assets_app_folder_name` (`app`).
 
-On-disk twins, for anything that *writes* an asset: `web_assets_folder()` and `web_assets_folder_join(path)` — the same piece of path that names the storage end.
+On-disk twins, for anything that *writes* an asset: `web_assets_folder()` and `web_assets_folder_join(path)` — the same piece of path that names the storage end, with the separators drawn out.
 
 ## Writing a new asset
 
