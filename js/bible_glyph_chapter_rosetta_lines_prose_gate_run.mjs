@@ -43,9 +43,10 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
     });
   }
   let writer = fn_name("bible_glyph_chapter_rosetta_lines_file_source");
+  let f_name = fn_name("bible_glyph_chapter_rosetta_lines_name");
   let hint_none = text_combine_multiple([
     "not one chapter has a band file, so this gate read nothing and would have passed for that reason - either the picture Bible has no chapters listed at all, or the naming of a band file no longer matches what is on disk. The naming is ",
-    fn_name("bible_glyph_chapter_rosetta_lines_name"),
+    f_name,
     " and the text is built by ",
     writer,
   ]);
