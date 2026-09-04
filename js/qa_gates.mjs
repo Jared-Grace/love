@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_affix_kinds_wrong_gate_run } from "./app_ceb_bible_gloss_affix_kinds_wrong_gate_run.mjs";
 import { lists_matched_indexes_cases_gate_run } from "./lists_matched_indexes_cases_gate_run.mjs";
 import { bible_pronunciations_gate_run } from "./bible_pronunciations_gate_run.mjs";
 import { apps_names_way_in_gate_run } from "./apps_names_way_in_gate_run.mjs";
