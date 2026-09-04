@@ -137,6 +137,10 @@ export function bible_glyph_chapter_references() {
       reference: "John 20",
     },
     {
+      chapter_code: "1TH01",
+      reference: "1 Thessalonians 1",
+    },
+    {
       chapter_code: "1JN01",
       reference: "1 John 1",
     },
