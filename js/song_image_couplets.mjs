@@ -346,7 +346,7 @@ export function song_image_couplets() {
         r2,
         ", and ",
         r3,
-        ", set flat against the front of the doorway directly in front of that opening and hiding the whole of it, the circle standing wholly inside the frame of the doorway and drawn as tall as it is wide, so that no part of the opening can be seen anywhere behind it or above it or beside it and the tomb is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the doorway reaching almost to the white border on both sides",
+        ", standing in front of the whole doorway and wider and taller than the doorway itself, its whole face turned square to the viewer and drawn as a full round circle exactly as tall as it is wide and never tilted and never an oval, so that only a little of the grey frame shows past its edge on each side and no part of the opening can be seen anywhere at all and the tomb is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the doorway reaching almost to the white border on both sides",
       ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,
