@@ -114,7 +114,6 @@ import soundfile as sf
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-SAID_PATH = Path(__file__).resolve().parents[2] / "data/given/speech_pronunciations.json"
 MODEL_PATH = str(Path.home() / "a/user/kokoro/kokoro-v1.0.onnx")
 VOICES_PATH = str(Path.home() / "a/user/kokoro/voices-v1.0.bin")
 VOICE = "am_adam"
@@ -258,8 +257,9 @@ def g2p_ready():
     g2p = en.G2P(
         trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
     )
-    said = json.loads(SAID_PATH.read_text(encoding="utf-8"))
-    for word, sounds in said.items():
+    from bible_pronunciations import pronunciations
+
+    for word, sounds in pronunciations().items():
         g2p.lexicon.golds[word] = sounds
     return g2p
 
