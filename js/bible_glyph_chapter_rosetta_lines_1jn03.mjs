@@ -93,7 +93,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn03() {
       {
         verse_number: 13,
         original: "Μὴ θαυμάζετε ἀδελφοί εἰ μισεῖ ὑμᾶς ὁ κόσμος",
-        english: "do not be surprised brothers if the world hates you",
+        english: "So do not be surprised brothers if the world hates you",
       },
       {
         verse_number: 14,
@@ -135,7 +135,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn03() {
         original:
           "ἐν τούτῳ γνωσόμεθα ὅτι ἐκ τῆς ἀληθείας ἐσμέν καὶ ἔμπροσθεν αὐτοῦ πείσομεν τὴν καρδίαν ἡμῶν",
         english:
-          "by this we will know that we belong to the truth and will assure our hearts in His presence",
+          "And by this we will know that we belong to the truth and will assure our hearts in His presence",
       },
       {
         verse_number: 20,
@@ -149,7 +149,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn03() {
         original:
           "Ἀγαπητοί ἐὰν ἡ καρδία μὴ καταγινώσκῃ παρρησίαν ἔχομεν πρὸς τὸν Θεόν",
         english:
-          "Beloved if hearts do not condemn us we have confidence before God",
+          "Beloved if our hearts do not condemn us we have confidence before God",
       },
       {
         verse_number: 22,
