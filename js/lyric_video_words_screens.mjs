@@ -46,13 +46,15 @@ export function lyric_video_words_screens(words, characters_max, seconds) {
   let width = 0;
   let index = 0;
   while (less_than(index, count)) {
-    let added = text_size(word_text(index));
+    let s = word_text(index);
+    let added = text_size(s);
     let gap = 0;
     let started = greater_than(index, first);
     if (started) {
       gap = 1;
     }
-    let would = add(add(width, gap), added);
+    let left = add(width, gap);
+    let would = add(left, added);
     let over = greater_than(would, characters_max);
     if (over && started) {
       let cut = break_index(first, index);
@@ -74,7 +76,8 @@ export function lyric_video_words_screens(words, characters_max, seconds) {
       if (started) {
         list_add(parts, " ");
       }
-      list_add(parts, word_text(at));
+      let item = word_text(at);
+      list_add(parts, item);
       at = add(at, 1);
     }
     let text = text_combine_multiple(parts);
@@ -94,7 +97,9 @@ export function lyric_video_words_screens(words, characters_max, seconds) {
       start = property_get(words[from], "start");
     }
     let end = seconds;
-    let more = less_than(add(order, 1), list_size(bounds));
+    let a = add(order, 1);
+    let b = list_size(bounds);
+    let more = less_than(a, b);
     if (more) {
       end = property_get(words[to], "start");
     }
