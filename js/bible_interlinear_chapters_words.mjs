@@ -1,22 +1,10 @@
-import { list_map_filter } from "./list_map_filter.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { bible_interlinear_chapters_generic } from "./bible_interlinear_chapters_generic.mjs";
 import { bible_interlinear_original_keys_find } from "./bible_interlinear_original_keys_find.mjs";
-import { bible_interlinear_word_parts } from "./bible_interlinear_word_parts.mjs";
 import { bible_interlinear_words_base } from "./bible_interlinear_words_base.mjs";
+import { bible_interlinear_word_parts } from "./bible_interlinear_word_parts.mjs";
 import { not_equal } from "./not_equal.mjs";
-("Every chapter's verses, each carrying its ORDERED PER-WORD interlinear records rather than");
-("one joined string. This is what a gloss author reads: the word, its transliteration, its");
-("parsing spelled out in English, and its Strong's number are all given, so none of them has");
-("to be generated. See notes/gloss_method.md.");
-("Only the public-domain base text comes back; words belonging to a later edition are");
-("dropped by ",
-  fn_name("bible_interlinear_words_base"),
-  " before any of them is reduced to a record.");
-("Rows with no original-language word are dropped after reduction rather than before - the");
-("tables carry English-side rows for words the translation supplies, and those have nothing");
-("to gloss, but whether a row has a word is a question about its text and not about whether");
-("the column is present, and the blank filler rows have the column and no word in it.");
+import { list_map_filter } from "./list_map_filter.mjs";
+import { bible_interlinear_rows_english_text } from "./bible_interlinear_rows_english_text.mjs";
+import { bible_interlinear_chapters_generic } from "./bible_interlinear_chapters_generic.mjs";
 export async function bible_interlinear_chapters_words() {
   function verse_parts(verse_words) {
     let keys = bible_interlinear_original_keys_find(verse_words);
@@ -31,8 +19,10 @@ export async function bible_interlinear_chapters_words() {
       return neq;
     }
     let words = list_map_filter(base, parts_of, original_present_is);
+    let english = bible_interlinear_rows_english_text(verse_words);
     let r = {
       words,
+      english,
     };
     return r;
   }
