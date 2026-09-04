@@ -1,10 +1,10 @@
-import { app_shared_error_report_prefix } from "./app_shared_error_report_prefix.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_contact_user_id_storage_key } from "./app_shared_contact_user_id_storage_key.mjs";
 import { html_error_records_storage_key } from "./html_error_records_storage_key.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { app_shared_error_report_sent_key } from "./app_shared_error_report_sent_key.mjs";
 import { storage_key_name_get } from "./storage_key_name_get.mjs";
+import { app_shared_error_report_prefix } from "./app_shared_error_report_prefix.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url_upload } from "./firebase_storage_url_upload.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -16,6 +16,8 @@ export function html_code_error_send_script() {
   "A device that has never got far enough to be given a name sends nothing. That is a first-ever visit which died before anything ran, and a report filed under no name is one nobody can answer; the record still waits in the browser and goes up under the name the next working visit hands out.";
   "It agrees with the app's own sender about what has already gone, by reading and writing the same word, so a page and an app that both notice the same fault send it once between them rather than once each.";
   "Every line is inside a catch that does nothing, and the sending's own failure is caught separately. This is the reporting of a failure and must never become one - a device with storage turned off, or with no network, should see the app it came for and nothing else.";
+  "★ EVERYTHING THIS READS IS INSIDE AN ENVELOPE, AND UNWRAPPING IT IS NOT OPTIONAL. Everything the app files on a device is written as an object with the value under one word, so what comes straight back out of the browser is never the thing itself. Read raw, the device's name came back as the whole wrapper - and a report was filed under a name made of brackets and quotation marks, beside the device's real file rather than as it. The same mistake in the word about what has already gone is quieter and worse: a wrapper never equals what it holds, so every load would send again, and writing the bare value back would leave the app's own sender unable to read what this had put there. Measured in a browser on 2026-09-04, which is the only place it shows - the shape is right in every reading made from here.";
+  "The unwrapping is written once and used by all three, rather than spelled at each reading. Two of the three were already wrong in different ways, which is what three separate spellings of one rule costs.";
   arguments_assert(arguments, 0);
   let id_key = app_shared_contact_user_id_storage_key();
   let records_key = html_error_records_storage_key();
@@ -26,21 +28,24 @@ export function html_code_error_send_script() {
   let project_url = firebase_storage_url_project_jg();
   let url_start = firebase_storage_url_upload(path, project_url);
   let code = text_combine_multiple([
+    "var app_error_stored = function (word) { ",
+    "var held = window.localStorage.getItem(word); ",
+    "if (!held) { return null; } ",
+    "var wrapper = JSON.parse(held); ",
+    "return wrapper.value; }; ",
     "var app_error_sent = false; ",
     "var app_error_send = function () { try { ",
     "if (app_error_sent) { return; } ",
-    'var id = window.localStorage.getItem("',
+    'var id = app_error_stored("',
     id_key,
     '"); ',
     "if (!id) { return; } ",
-    'var held = window.localStorage.getItem("',
+    'var list = app_error_stored("',
     records_key,
     '"); ',
-    "if (!held) { return; } ",
-    "var list = JSON.parse(held).value; ",
     "if (!list || !list.length) { return; } ",
     "var right = JSON.stringify(list); ",
-    'if (window.localStorage.getItem("',
+    'if (app_error_stored("',
     sent_key,
     '") === right) { return; } ',
     "app_error_sent = true; ",
@@ -52,7 +57,7 @@ export function html_code_error_send_script() {
     "if (!response || !response.ok) { return; } ",
     'window.localStorage.setItem("',
     sent_key,
-    '", right); }; ',
+    '", JSON.stringify({ value: right })); }; ',
     "var quiet = function () {}; ",
     "fetch(url, { method: 'POST', ",
     "headers: { 'Content-Type': 'application/json' }, ",
