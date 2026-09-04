@@ -3,10 +3,19 @@
 The reader holds a general English dictionary, and a Bible name is not general
 English.  What is not in that dictionary is sounded out letter by letter, which
 is where Boaz became BOZE, Obed became OBD, and Salmon became the fish.
-Measured over the 1190 chapters being recorded: of the 3385 capitalised words
-in them, 2722 are sounded out rather than read.
 
-BibleVox answers 2589 of those 2722.  It is a pronunciation lexicon for the
+★ THE SIZE OF THAT IS MEASURED BY THE PART THAT DOES IT, NOT BY A WORD LIST.
+Whether a word is sounded out is not a question about a dictionary key: the
+reader stems its words, so armies and Benjamites are read from arm and
+Benjamite, and it holds a word under a part of speech, so a word answered as
+one tag is still sounded out as another.  Every attempt to settle it by
+looking words up got a wrong number.  The sounding-out itself is one function
+on the reader, so it is wrapped and the whole Bible read through it, and what
+the wrapper was handed is the answer.  Over the 764679 words of engwebu:
+without this lexicon 2776 distinct words are sounded out, said 13398 times;
+with it 123 are, said 558 times.
+
+BibleVox is what mends those 2653.  It is a pronunciation lexicon for the
 Bible, MIT licensed, kept beside this file as given, notice and all.  It is
 written for a different speech engine, so its sounds are in the alphabet that
 engine reads and have to be carried across into this one, which is what the
