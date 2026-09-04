@@ -25,7 +25,7 @@ export async function urdu_glued_words_roman_verdicts() {
   let script_verdicts = property_get(r2, "script_verdicts");
   let control = property_get(r2, "control");
   let verdicts = {};
-  urdu_glued_words_roman_verdicts_word(
+  urdu_glued_words_roman_verdicts_word({
     script_verdicts,
     choices_of,
     joined_apart,
@@ -34,7 +34,7 @@ export async function urdu_glued_words_roman_verdicts() {
     occurrences,
     split,
     verdicts,
-  );
+  });
   let r = {
     control,
     verdicts,
