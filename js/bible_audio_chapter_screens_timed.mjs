@@ -1,3 +1,4 @@
+import { bible_audio_chapter_screens_timed_report } from "./bible_audio_chapter_screens_timed_report.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -64,20 +65,13 @@ export async function bible_audio_chapter_screens_timed(
     return lines;
   }
   let timed = await audio_pieces_words_timed(pieces);
-  function report_of(order) {
-    if (equal(timed, null)) {
-      return null;
-    }
-    let at = long_orders.indexOf(order);
-    if (less_than(at, 0)) {
-      return null;
-    }
-    let report = timed[at];
-    return report;
-  }
   let screens = [];
   function screens_add(line, order) {
-    let report = report_of(order);
+    let report = bible_audio_chapter_screens_timed_report(
+      order,
+      timed,
+      long_orders,
+    );
     if (equal(report, null)) {
       list_add(screens, line);
       return;
