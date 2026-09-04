@@ -263,6 +263,7 @@ export function bible_glyph_chapters() {
     fifty_fifth,
     fifty_sixth,
     fifty_seventh,
+    fifty_eighth,
   ];
   return chapters;
 }
