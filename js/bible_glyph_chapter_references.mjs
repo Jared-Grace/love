@@ -172,6 +172,10 @@ export function bible_glyph_chapter_references() {
       chapter_code: "JUD01",
       reference: "Jude",
     },
+    {
+      chapter_code: "REV01",
+      reference: "Revelation 1",
+    },
   ];
   return references;
 }
