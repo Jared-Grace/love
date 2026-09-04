@@ -1,8 +1,8 @@
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_history_get } from "./app_shared_bible_history_get.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_reference_reading } from "./app_shared_bible_reference_reading.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 export async function app_shared_bible_history_entries(context) {
   "The remembered readings with each one named the way a reader would say it - the book, the chapter, and the verses picked in it - in the language they are reading in.";
@@ -20,11 +20,14 @@ export async function app_shared_bible_history_entries(context) {
     );
     ("Which reader the line was taken down in is carried across untouched, because it is part of the reading rather than part of the naming - it is not said out loud to anybody, and it is what the opening needs. A line written before it was recorded says nothing here, and the opening answers for that.");
     let mode = property_get_or_null(entry, "mode");
+    ("The day the line was written is carried across the same way and for the same reason: it is asked for gently, because every line already on a device was written before the day was being kept, and it is left as it was found rather than spelled out here - what a date should look like is a question about the reader in front of it, and this runs once for the whole list.");
+    let opened_iso = property_get_or_null(entry, "opened_iso");
     let entry_named = {
       chapter_code,
       verse_numbers,
       reference,
       mode,
+      opened_iso,
     };
     return entry_named;
   }
