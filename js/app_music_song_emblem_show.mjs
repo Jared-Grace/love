@@ -10,6 +10,9 @@ import { list_add_multiple } from "./list_add_multiple.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_img_lazy_full_block } from "./html_img_lazy_full_block.mjs";
+import { html_style_max_width } from "./html_style_max_width.mjs";
+import { app_music_song_emblem_width } from "./app_music_song_emblem_width.mjs";
+import { html_border } from "./html_border.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 export function app_music_song_emblem_show(
   folds,
@@ -22,7 +25,8 @@ export function app_music_song_emblem_show(
   "$plain caption";
   "The picture drawn for one line of this hymn, with the passages that picture rests on folded behind it.";
   "THE PICTURE ANSWERS TO SCRIPTURE IN ITS OWN RIGHT, which is why it carries its own passages rather than borrowing the ones under the words. A reader who wonders why a broken fetter is standing beside this line can be told, in the words of the passage it was drawn from, without leaving the page.";
-  "HOW THE PICTURE IS DRAWN AND WHEN IT IS FETCHED ARE ASKED FOR RATHER THAN SETTLED HERE - as wide as the page allows, on its own line, arriving only when the reader is nearly at it. The reasons live where that is settled, and the page that lays these out for checking asks in the same words.";
+  "WHEN THE PICTURE IS FETCHED IS ASKED FOR RATHER THAN SETTLED HERE, BUT HOW LARGE IT IS DRAWN IS SETTLED HERE, because the two pages that show these drawings want different sizes and a single answer would be wrong on one of them. The page that lays them out for checking wants each one as wide as its column, since there the drawing is the thing being looked at. Here the drawing sits under a line of a hymn, and the hymn is the thing being read, so it is held to a size that leaves the page to the words.";
+  "A BLACK EDGE IS DRAWN ROUND IT. These are pale shapes on a pale page, and at full width the edge of the column answered the question of where the drawing stopped; held small, nothing does, and a picture whose boundary a reader cannot find reads as a smudge on the page rather than as a thing that was drawn.";
   "The description the picture was drawn from is what a reader who cannot see it is given instead. It is already a plain account of the shape, written before the picture existed, so there is nothing to compose - and nothing else on the page says what is in the window.";
   "A line whose picture nobody has settled on yet is passed over in silence rather than left as a gap where a picture failed to load.";
   "THE SONG'S TRANSLATION CHOICES ARE CARRIED THROUGH HERE TOO, because the passages behind a picture are quoted the same way the passages behind a line are, and by the same song. A picture is a second thing this song rests scripture on, not a second song.";
@@ -53,6 +57,9 @@ export function app_music_song_emblem_show(
   let picture = html_img(parent, url);
   html_attribute_set(picture, "alt", couplet.symbol);
   html_img_lazy_full_block(picture);
+  let value = app_music_song_emblem_width();
+  html_style_max_width(picture, value);
+  html_border(picture, "2px", "black");
   html_style_margin_top(picture, "12px");
   return asked_list;
 }
