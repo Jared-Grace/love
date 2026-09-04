@@ -193,6 +193,39 @@ def lexicon_named():
     return named
 
 
+def lexicon_ordinary():
+    """The lexicon's ordinary words, for the ones the reader has no answer for.
+
+    ★ THE HOMOGRAPH REASON FOR LEAVING THESE OUT DOES NOT REACH A WORD THE
+    READER HAS NEVER HEARD OF.  The paragraph at the top of this file refuses
+    the ordinary entries because filing one reading of bow or lead or tear
+    would fix half its occurrences and break the other half.  That argument
+    needs the word to have a second reading, and a word the general dictionary
+    does not hold at all has none - there is nothing there to break.  So these
+    are filed the way a parted half is: only where the reader had no answer,
+    which is checked in text_to_speech.g2p_ready against what it actually
+    holds.  Measured over the recorded Bible, that is what answers alamoth,
+    raca, beka, mina, onycha, cumi, sabachthani and handbreadth, every one of
+    which was being spelled out letter by letter.
+
+    Each is filed under its own spelling and under a capitalised one, because
+    the lexicon writes these lower case and a Bible writes some of them at the
+    head of a line - Alamoth in a psalm's superscription, Raca in the Sermon
+    on the Mount.  Filing both castings is safe for exactly the same reason
+    the whole set is: neither casing can take a word away from the reader,
+    because the reader had no word there to take.
+    """
+    ordinary = {}
+    for word, tag, syllables in lexicon_entries():
+        if tag in NAMED_TAGS or "-" in word or "_" in word:
+            continue
+        sounds = misaki_of(syllables)
+        if sounds is not None:
+            ordinary[word] = sounds
+            ordinary[word.capitalize()] = sounds
+    return ordinary
+
+
 def lexicon_parted():
     """The halves of the lexicon's joined names, for a Bible that writes them apart.
 
