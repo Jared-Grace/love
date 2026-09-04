@@ -77,6 +77,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 146",
     },
     {
+      chapter_code: "JER26",
+      reference: "Jeremiah 26",
+    },
+    {
       chapter_code: "EZK18",
       reference: "Ezekiel 18",
     },
