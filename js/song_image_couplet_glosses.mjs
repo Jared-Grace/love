@@ -161,7 +161,7 @@ export function song_image_couplet_glosses() {
         "Described. The burial spices are what the accounts themselves dwell on. The flask carries the burial so that the tomb is not drawn a fourth time in six couplets.",
     },
     20: {
-      kept: 8,
+      kept: 15,
       lyric_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       lyric_explain:
         "HIS own new tomb, which he had hewn out in the rock. Luke adds that it was one wherein never man before was laid, and John that it was a new sepulchre in a garden.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 114,
+      kept: 124,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 42,
+      kept: 48,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 39,
+      kept: 44,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
