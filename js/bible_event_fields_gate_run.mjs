@@ -1,21 +1,21 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { bible_event_fields } from "./bible_event_fields.mjs";
-import { bible_gathered_event_function_names } from "./bible_gathered_event_function_names.mjs";
-import { function_run } from "./function_run.mjs";
 import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { lists_equal_pair } from "./lists_equal_pair.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 import { list_map } from "./list_map.mjs";
+import { list_sort_text } from "./list_sort_text.mjs";
+import { bible_gathered_event_function_names } from "./bible_gathered_event_function_names.mjs";
+import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
+import { function_run } from "./function_run.mjs";
 import { list_map_async } from "./list_map_async.mjs";
+import { object_property_names_text_sorted } from "./object_property_names_text_sorted.mjs";
+import { lists_equal_pair } from "./lists_equal_pair.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
 import { each_pair_min } from "./each_pair_min.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { list_size } from "./list_size.mjs";
 export async function bible_event_fields_gate_run() {
   "Gate: every gathered Bible event carries exactly the fields the record declares - no field missing, and none added. Throws so the dispatcher seam exits nonzero.";
   "The record is two fields on purpose, so that gathering a chapter can only ever point at the text and never state a reading of it. A field quietly added to one chapter's events is how that guarantee is lost, and it is lost silently, because a bigger object answers every question a smaller one does.";
@@ -43,8 +43,7 @@ export async function bible_event_fields_gate_run() {
   function each_gathered(events, f_name) {
     function each_event(event) {
       counted = counted + 1;
-      let carried_names = object_property_names(event);
-      let carried = list_sort_text(carried_names);
+      let carried = object_property_names_text_sorted(event);
       let same = lists_equal_pair(carried, declared);
       if (not(same)) {
         list_add(wrong, {
@@ -58,10 +57,11 @@ export async function bible_event_fields_gate_run() {
     each(events, each_event);
   }
   each_pair_min(events_lists, f_names, each_gathered);
+  let f_name2 = fn_name("bible_event_fields");
   list_empty_is_assert_json(wrong, {
     hint: text_combine_multiple([
       "a gathered Bible event carries fields the record does not declare, or is missing one it does; the record is deliberately small, so widen it in ",
-      fn_name("bible_event_fields"),
+      f_name2,
       " on purpose or take the extra field back out",
     ]),
     declared,
