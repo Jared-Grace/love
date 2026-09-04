@@ -175,6 +175,31 @@ def start_refusal(job):
     return None
 
 
+def said_text(text):
+    """One line as it is to be read aloud, with its em dashes opened again.
+
+    ★ THIS UNDOES SOMETHING THE REPO DID ON PURPOSE, AND ONLY HERE.  The Bible
+    text arrives through em_dashes_closed, which takes the spaces out from
+    around every em dash because that is how English sets the mark.  A closed
+    dash is right for the eye and wrong for the voice: with no space in it,
+    "Satan-to" is one word, no dictionary holds it, and the reader spells it
+    out letter by letter.  Measured over the recorded Bible, that is the whole
+    of what it still gets wrong - eleven tokens, every one of them two words an
+    em dash had joined.
+
+    So the mark is opened for the reading and left closed everywhere else.
+    Doing it here rather than at the source keeps every other reader of that
+    text - the glosses, the pages, the other Bibles - exactly as it was, and
+    the opened line is what gets written down beside the sound, so the words
+    the timing is measured against are the words that were actually said.
+
+    Only a dash with something pressed against it on both sides is opened.  One
+    that already has a space on a side was never joining two words together.
+    """
+    opened = re.sub(r"(?<=\S)—(?=\S)", " — ", text)
+    return opened
+
+
 def pieces_of(text):
     """Cuts one line into runs short enough for the model, at sentence ends."""
     sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
@@ -331,7 +356,7 @@ def job_spoken(job):
         engine = engine_ready(threads)
         out_dir = Path(path_output)
         out_dir.mkdir(parents=True, exist_ok=True)
-        lines = [line.strip() for line in text.split("\n")]
+        lines = [said_text(line.strip()) for line in text.split("\n")]
         silent = 0
         for i, line in enumerate(lines):
             samples, rate = line_samples(engine["g2p"], engine["kokoro"], line)
