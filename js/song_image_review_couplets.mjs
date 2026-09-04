@@ -12,6 +12,23 @@ export function song_image_review_couplets() {
   "WHERE TWO DRAWINGS EACH HOLD HALF OF WHAT IS WANTED AND NO DRAWING HOLDS BOTH, THE NOTE NAMES BOTH AND PUTS THE CHOICE BETWEEN THEM. That is a different thing from a round going backwards, and it wants saying differently: nothing was lost, the two halves have simply turned out to cost each other, and the reader is the only one who can say which half the picture is for. A note that names only the better-looking of the two hides that a trade was made at all.";
   "WHERE A COUNT SAID THE WORDINGS WERE SPENT AND THE NEXT ROUND SUCCEEDED, THE NOTE SAYS WHAT WAS CHANGED THAT WAS NOT A WORDING. Couplet 24 was declared settled after every rewording had failed to make the stone big enough, and it came right in the very next batch - because what changed was not the words but what the picture is of. A count being high is good evidence that no rewording will reach it and no evidence at all that nothing will, and a note that lets the first be read as the second retires a couplet that was one composition away.";
   "WHERE A FAULT WAS FIXED BY NAMING A COLOUR, THE NOTE SAYS THAT SIX DRAWINGS ALL HELD THE FIX, because that is what tells a reader the remaining faults are not the wording. A change that lands in every single draw is a change the style obeys outright, and once one is found the rest of the round is only waiting for a draw that happens to get the border right as well - which is a thing to wait for and never a thing to reword.";
-  let couplets = [];
+  let couplets = [
+    {
+      n: 2,
+      note: "unchanged this round, and still open. The white band above the water is the stone edge of the window, in all thirty-six by design, and nothing this couplet asked for. The fault still to fix is the bowl, drawn from the side with a stone surface when the words ask for it flat and seen from straight above.",
+    },
+    {
+      n: 6,
+      note: "the field behind the cross is now emerald green over deep cobalt, so the brown cross has something to stand against - attempt 21 did not contrast enough. Naming both band colours outright is what fixed it, after eight draws that chose their own and kept reaching for yellow or cream. Still there: the white band round the edge is the stonework of the window and not something this couplet added.",
+    },
+    {
+      n: 11,
+      note: "the crown of thorns is now woven round the base of the horns and sits on the head. Six drawings asked for a crown placed on the head and all six left it hanging in the air; what worked was asking the thicket to catch the ram by the horns and close into the ring there, which is what Genesis 22 says. Still there: black shows through the gaps in the thicket where the style wants flat colour.",
+    },
+    {
+      n: 18,
+      note: "the halo is bright yellow with the red cross bars inside it, and the near front leg is lifted to the staff - both of the things you asked for. Still there, and this is the third round for it: the hoof rests against the staff rather than closing round it. One draw last round came back as a robed human figure holding a cup and no lamb at all, so the halo and the staff together pull the picture toward drawing Christ Himself.",
+    },
+  ];
   return couplets;
 }
