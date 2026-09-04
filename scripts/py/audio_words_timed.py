@@ -32,6 +32,16 @@ of pieces should pay the loading once.
 A word made of no letters the model knows - a number, or a mark on its own -
 cannot be placed and is reported under "dropped" rather than quietly given the
 time of its neighbour.
+
+An aligner is never given the chance to say no, and that is the danger in it.
+Handed the words of a different recording it does not object: it lays them onto
+the sound by the best path it can find and reports times that look exactly like
+right ones.  So each piece also carries a "confidence", the mean of how well each
+word's own letters matched the sound under it, and a caller that means to trust
+these times must read it.  The one case the model does refuse outright is a text
+too long for its recording to hold - there are not enough moments to spell it -
+and that comes back as no words and a "refused" line rather than as a throw, so
+that one impossible piece cannot cost a caller the whole chapter.
 """
 
 import json
@@ -79,7 +89,7 @@ def piece_timed(model, index_of, separator, rate, piece):
     """Every word of one piece with the second it begins and the second it ends."""
     spelled, dropped = words_spelled(piece["text"], index_of)
     if not spelled:
-        return {"words": [], "dropped": dropped, "seconds": 0.0}
+        return {"words": [], "dropped": dropped, "seconds": 0.0, "confidence": 0.0}
 
     targets = []
     word_of_token = []
