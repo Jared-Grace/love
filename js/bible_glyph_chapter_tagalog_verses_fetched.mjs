@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
-import { null_is } from "./null_is.mjs";
+import { bible_glyph_chapter_language_verses } from "./bible_glyph_chapter_language_verses.mjs";
 export async function bible_glyph_chapter_tagalog_verses_fetched(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter. It names a stretch of text and nothing that runs.";
@@ -14,16 +13,6 @@ export async function bible_glyph_chapter_tagalog_verses_fetched(chapter_code) {
   ("A chapter nobody has written Tagalog for answers with nothing rather than refusing, which is the same answer the held way in gives and for the same reason: a missing translation is the ordinary state of this work and must not stop a verse being read in the languages it does have.");
   let tagalog_module = await import("./bible_glyph_chapters_tagalog.mjs");
   let chapters = tagalog_module.bible_glyph_chapters_tagalog();
-  let found = list_find_property_or_null(
-    chapters,
-    "chapter_code",
-    chapter_code,
-  );
-  let missing = null_is(found);
-  if (missing) {
-    let none = [];
-    return none;
-  }
-  let verses = found.verses;
+  let verses = bible_glyph_chapter_language_verses(chapters, chapter_code);
   return verses;
 }
