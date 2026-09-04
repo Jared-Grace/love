@@ -1,9 +1,9 @@
+import { property_starts_with } from "./property_starts_with.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { js_name_object_literal_nodes } from "./js_name_object_literal_nodes.mjs";
 export function js_locale_settings_literal_nodes(ast) {
@@ -26,8 +26,7 @@ export function js_locale_settings_literal_nodes(ast) {
     if (not(plain_is)) {
       continue;
     }
-    let name = property_get(named, "name");
-    let locale_is = text_starts_with(name, "toLocale");
+    let locale_is = property_starts_with(named, "name", "toLocale");
     if (not(locale_is)) {
       continue;
     }
