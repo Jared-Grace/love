@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_credit } from "./ebible_version_credit.mjs";
 import { null_not_is_assert_json } from "./null_not_is_assert_json.mjs";
+import { ebible_bible_folder_changes } from "./ebible_bible_folder_changes.mjs";
 import { bible_glyph_language_credit_lines } from "./bible_glyph_language_credit_lines.mjs";
 import { property_get } from "./property_get.mjs";
 import { ebible_chapter_verses_storage_outcome } from "./ebible_chapter_verses_storage_outcome.mjs";
@@ -20,6 +21,7 @@ export async function bible_glyph_chapters_language_write_source(
   "Every chapter of one translation read out of storage and turned into the text of a written file holding them all, with the chapters that came back with nothing gathered separately.";
   "A CHAPTER THAT CAME BACK EMPTY IS NAMED RATHER THAN PASSED OVER IN SILENCE, because an empty answer from storage looks exactly like a chapter that has no verses, and only a person can tell those two apart.";
   "THE CREDIT IS READ BEFORE ANY OF THE TEXT IS, and a translation this machine cannot produce a credit for stops the write rather than being written uncredited. Both of the languages written before this refused were carrying a sentence saying they were public-domain bibles, and both were fetched under Creative Commons Attribution Share-Alike - a licence whose one condition is the credit. A file holding somebody's text and no attribution is the failure this is here to make impossible, and it is a failure that looks exactly like success from the outside.";
+  "WHAT WAS ALTERED IS ASKED FOR ALONGSIDE THE CREDIT, because the verses gathered below have already been through the repair on the way out of storage. Attribution and a list of changes are two separate conditions of the same licence, and a file that answers one of them and not the other has met neither.";
   arguments_assert(arguments, 6);
   let credit = await ebible_version_credit(bible_folder);
   null_not_is_assert_json(credit, {
@@ -27,7 +29,8 @@ export async function bible_glyph_chapters_language_write_source(
     bible_folder,
     written_name,
   });
-  let credit_lines = bible_glyph_language_credit_lines(credit);
+  let changes = ebible_bible_folder_changes(bible_folder);
+  let credit_lines = bible_glyph_language_credit_lines(credit, changes);
   for (let chapter of chapters) {
     let chapter_code = property_get(chapter, "chapter_code");
     let outcome = await ebible_chapter_verses_storage_outcome(
