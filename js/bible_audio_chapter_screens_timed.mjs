@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chapter_lines_timed } from "./bible_audio_chapter_lines_timed.mjs";
 import { bible_audio_chunk_texts } from "./bible_audio_chunk_texts.mjs";
@@ -83,8 +84,7 @@ export async function bible_audio_chapter_screens_timed(
     }
     let words = property_get(report, "words");
     let confidence = property_get(report, "confidence");
-    let a = list_size(words);
-    let heard = greater_than(a, 0);
+    let heard = list_size_greater_than(words, 0);
     let trusted = heard && not(less_than(confidence, least));
     if (not(trusted)) {
       list_add(screens, line);
