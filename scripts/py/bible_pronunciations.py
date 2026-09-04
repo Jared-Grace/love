@@ -98,6 +98,24 @@ CONSONANTS = {
     "zh": "ʒ",
 }
 
+PART_SYLLABLES = {
+    "chephar": 2,
+    "eglath": 2,
+    "esar": 2,
+    "ge": 1,
+    "jaare": 3,
+    "jegar": 2,
+    "jerub": 2,
+    "josheb": 2,
+    "keren": 2,
+    "kibroth": 2,
+    "lahai": 2,
+    "tahtim": 2,
+    "tiglath": 2,
+    "tilgath": 2,
+    "zaphenath": 3,
+}
+
 PRIMARY = "ˈ"
 SECONDARY = "ˌ"
 SYLLABIC = "ᵊ"
@@ -262,6 +280,20 @@ def lexicon_parted():
     the alternative for those is not a written-down answer, it is the name
     being sounded out letter by letter.
 
+    ★ WHERE NEITHER HALF IS EVER SPELLED ALONE, THE COUNT IS READ OFF THE
+    PHONES BY HAND.  Tiglath-pileser is the shape of it: the lexicon spells the
+    joined name and nothing else, so no half of it has an entry and no other
+    joined name shares a part with it, and the cutting has nothing to work
+    from.  What it does have is the sounds, and the sounds spell the letters -
+    t-ih-g then l-ae-th is Tiglath, and there are two of them.  So the counts
+    in PART_SYLLABLES are read out of the lexicon's own phones rather than
+    guessed at, and they are seeded after the lexicon's own words, so an entry
+    that does spell a part alone always wins over a hand count.  Each one pays
+    for the far side as well, because the learning pass then subtracts it:
+    Pileser, Happuch, Hattaavah, Sahadutha, Basshebeth, Haddon, Hodshi,
+    Shelishiyah, Ammoni, Oregim, Harashim, Paneah and Roi all fall out of the
+    fifteen counts below without being written down.
+
     Every joined key is a name or an Aramaic phrase - 634 of the 637 are
     tagged as proper nouns and the other three are talitha-cumi, maran-atha
     and sabach-thani - so the homograph reason for keeping to proper nouns
@@ -272,6 +304,8 @@ def lexicon_parted():
     for word, _, syllables in entries:
         if "-" not in word and "_" not in word:
             counts.setdefault(word.lower(), len(syllables))
+    for part, count in PART_SYLLABLES.items():
+        counts.setdefault(part, count)
     joined = []
     for word, _, syllables in entries:
         parts = [part for part in word.replace("_", "-").split("-") if part]
