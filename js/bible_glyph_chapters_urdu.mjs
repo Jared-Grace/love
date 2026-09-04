@@ -7,6 +7,9 @@ export function bible_glyph_chapters_urdu() {
   "Language: اردو";
   "Contributor: Biblica, Inc.";
   "The terms are Creative Commons Attribution Share-Alike.";
+  "This app does not show this translation exactly as its publisher wrote it. The file it was published in had spaces missing inside 87 words, welding two words into one, and this app puts those spaces back before you read them.";
+  "The publisher did not make these changes and does not necessarily endorse them. The original Work by its copyright holders is available for free at www.biblica.com and open.bible.";
+  "The changes are listed at https://github.com/Jared-Grace/love/blob/main/js/urdu_glued_words_decided_two.mjs.";
   "It came from https://ebible.org/urdoucv.";
   "IT IS COMMITTED RATHER THAN FETCHED because this Bible is meant to reach a phone with no network, and a reveal that needed one would fail in exactly the situation the pictures were chosen for.";
   "IT IS NOT A LINE OF PICTURES AND CANNOT BECOME ONE. A picture verse is marks interleaved into English word order, so a line of pictures in this language would have to be authored a chapter at a time exactly as the English ones were.";
