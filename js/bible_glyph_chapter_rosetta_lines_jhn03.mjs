@@ -124,7 +124,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         original:
           "ὁ πιστεύων εἰς αὐτὸν οὐ κρίνεται ὁ μὴ πιστεύων ἤδη κέκριται ὅτι μὴ πεπίστευκεν εἰς τὸ ὄνομα τοῦ μονογενοῦς Υἱοῦ τοῦ Θεοῦ",
         english:
-          "Whoever believes in Him is not condemned whoever does not believe has already been condemned because he has not believed in the name of God’s one and only Son",
+          "Whoever believes in Him is not condemned but whoever does not believe has already been condemned because he has not believed in the name of God’s one and only Son",
       },
       {
         verse_number: 19,
@@ -184,7 +184,8 @@ export function bible_glyph_chapter_rosetta_lines_jhn03() {
         verse_number: 27,
         original:
           "Ἀπεκρίθη Ἰωάννης καὶ εἶπεν Οὐ δύναται ἄνθρωπος λαμβάνειν ἐὰν μὴ ᾖ δεδομένον αὐτῷ ἐκ τοῦ οὐρανοῦ",
-        english: "John replied A man can receive is given him from heaven",
+        english:
+          "John replied A man can receive only what is given him from heaven",
       },
       {
         verse_number: 28,
