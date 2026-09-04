@@ -1,3 +1,4 @@
+import { html_scroll_body_mark } from "./html_scroll_body_mark.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { html_div } from "./html_div.mjs";
@@ -31,6 +32,7 @@ export function html_bar_content(root) {
     "overflow-y": "scroll",
     "overflow-x": "auto",
   });
+  html_scroll_body_mark(content);
   let v = {
     shell,
     bar,
