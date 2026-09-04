@@ -1,3 +1,4 @@
+import { lists_matched_indexes_cases_gate_run } from "./lists_matched_indexes_cases_gate_run.mjs";
 import { bible_pronunciations_gate_run } from "./bible_pronunciations_gate_run.mjs";
 import { apps_names_way_in_gate_run } from "./apps_names_way_in_gate_run.mjs";
 import { bible_glyph_chapter_urdu_verses_fetched_gate_run } from "./bible_glyph_chapter_urdu_verses_fetched_gate_run.mjs";
@@ -977,6 +978,7 @@ export function qa_gates() {
     bible_glyph_chapter_urdu_verses_fetched_gate_run,
     apps_names_way_in_gate_run,
     bible_pronunciations_gate_run,
+    lists_matched_indexes_cases_gate_run,
   ];
   return gates;
 }
