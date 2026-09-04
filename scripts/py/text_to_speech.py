@@ -240,13 +240,18 @@ def g2p_ready():
     misspelling on the video and hand the aligner letters that are not in the
     sound.  A dictionary entry changes only what is said.
 
-    EVERY ENTRY IS FILED TWICE, UNDER THE NAME AS WRITTEN AND UNDER ITS SMALL
-    LETTERS, BECAUSE THE TWO ARE SEPARATE ENTRIES AND ONLY ONE OF THEM IS EVER
-    LOOKED UP.  Measured: filing "pontius" alone left "Pontius Pilate" reading
-    exactly as wrongly as before, and the dictionary shipped with the model
-    holds "Herod" and "herod" as two keys of its own.  A name in this book is
-    almost always capitalised, so filing the small letters alone would mend
-    nothing at all and say nothing about it.
+    AN ENTRY IS FILED UNDER THE NAME AS WRITTEN AND UNDER THAT SPELLING ONLY,
+    WHICH IS WHAT KEEPS A NAME THAT IS ALSO AN ORDINARY WORD FROM EATING THE
+    ORDINARY WORD.  Job, Mark, Rose and Reed are names in this book and words
+    in the language, and the small-letter entry is the one the language uses.
+    Measured over the same sentence four ways: filing nothing left "Pontius
+    Pilate" wrong; filing the written spelling alone mended it; filing the
+    small letters alone mended the name standing on its own and left it wrong
+    inside the sentence, which is the shape it is always read in; filing both
+    did no more than the written spelling had already done.  The dictionary
+    shipped with the model files its own proper names exactly this way -
+    "Abraham" and "Jesus" among the curated words, their small letters among
+    the guessed ones.
     """
     from misaki import en, espeak
 
@@ -256,7 +261,6 @@ def g2p_ready():
     said = json.loads(SAID_PATH.read_text(encoding="utf-8"))
     for word, sounds in said.items():
         g2p.lexicon.golds[word] = sounds
-        g2p.lexicon.golds[word.lower()] = sounds
     return g2p
 
 
