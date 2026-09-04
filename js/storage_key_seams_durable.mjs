@@ -14,6 +14,19 @@ export function storage_key_seams_durable() {
   let f_name6 = fn_name("storage_local_name_get");
   ("The key the errors a device has hit are filed under. It belongs here because what it writes is still there after the tab closes - that is the whole point of it, since the failure worth hearing about most is the one that killed the boot, and the send can only happen on the load after. What it publishes is a frozen word rather than any live function's name, so no rename can move it; it is named here so a reading of what this repo has written onto other people's disks accounts for it.");
   let f_name7 = fn_name("html_error_records_storage_key");
-  let seams = [f_name, f_name3, f_name4, f_name5, f_name6, f_name7];
+  ("The word a device's own name is filed under, composed once and read from two places that share nothing else - the screen somebody writes in on, and the few lines baked into the page that report a boot which died. It reaches the browser's lasting store through both, so what it publishes is on the disk after the tab closes. Both halves of what it joins are frozen, so no rename can move either; it is named here for the same reason as the errors key above, which is that a reading of what this repo has put on other people's disks has to account for it whether or not a rename could ever disturb it.");
+  let f_name8 = fn_name("app_shared_contact_user_id_storage_key");
+  ("The lines baked into every page, which compose a key of their own beside the two they ask for by name. What they write goes through the browser's lasting store directly rather than through this repo's storage library - the library is fifty eight KiB and the whole point of these lines is to add nothing to a page - and a key written by hand at a plain store is exactly as published as one written through a door. It is durable for the plainest reason there is: the report it guards is sent on the load AFTER the one that died, so the word it leaves behind has to survive the tab that left it.");
+  let f_name9 = fn_name("html_code_error_send_script");
+  let seams = [
+    f_name,
+    f_name3,
+    f_name4,
+    f_name5,
+    f_name6,
+    f_name7,
+    f_name8,
+    f_name9,
+  ];
   return seams;
 }
