@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_language_credit_prefixes } from "./bible_glyph_language_credit_prefixes.mjs";
 import { bible_glyph_language_credit_attributed_is } from "./bible_glyph_language_credit_attributed_is.mjs";
@@ -32,8 +33,7 @@ export function bible_glyph_language_credit_defects(lines) {
   }
   let terms_prefix = property_get(prefixes, "terms");
   let terms = list_filter_starts_with(lines, terms_prefix);
-  let left = list_size(terms);
-  let terms_one = equal(left, 1);
+  let terms_one = list_size_equal(terms, 1);
   if (not(terms_one)) {
     list_add(
       defects,
@@ -51,15 +51,13 @@ export function bible_glyph_language_credit_defects(lines) {
   }
   let source_prefix = property_get(prefixes, "source");
   let sources = list_filter_starts_with(lines, source_prefix);
-  let left2 = list_size(sources);
-  let source_one = equal(left2, 1);
+  let source_one = list_size_equal(sources, 1);
   if (not(source_one)) {
     list_add(defects, "no single line saying where this text came from");
   }
   let edition_prefix = property_get(prefixes, "edition");
   let editions = list_filter_starts_with(lines, edition_prefix);
-  let left3 = list_size(editions);
-  let edition_one = equal(left3, 1);
+  let edition_one = list_size_equal(editions, 1);
   if (not(edition_one)) {
     list_add(
       defects,
