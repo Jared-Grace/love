@@ -6,7 +6,7 @@ import { app_emoji_bible_verse_key_band } from "./app_emoji_bible_verse_key_band
 export function app_emoji_bible_verse_key_draw(content, row, others_shown) {
   "$plain row";
   "$plain others_shown";
-  "the row holds one verse in pictures, in the language it was written in, word for word in English, and in plain Tagalog. The answer beside it says whether the bands other than the English are wanted. Both are data to draw and neither runs.";
+  "the row holds one verse in pictures, in the language it was written in, in English, and in plain Tagalog. The answer beside it says whether the bands other than the English are wanted. Both are data to draw and neither runs.";
   "Draw one Rosetta verse: the pictures, and under them the known readings a person works the pictures out from.";
   "THE ENGLISH IS THE BAND THAT IS ALWAYS HERE and the others arrive with the whole key, because a reader who asked only to see what a verse says asked for one line and not for a stack of four. Both offers land in this one function rather than in two, so the two ways of showing a verse cannot drift into looking like two different pages.";
   "The pictures are drawn at the reader's own size and the key steps back in grey underneath, because the key is a thing to glance down at rather than a thing to read. A key set as loudly as the verse would be read first, and then the pictures above it are decoration rather than the Bible.";
