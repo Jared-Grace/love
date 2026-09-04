@@ -95,6 +95,8 @@ A repeat is an opportunity, not a duplicate. The word is doing a **different job
 
 The repeat entry can be shorter than the first. It cannot be empty. This is the same principle the sermon side already runs on: `g_sermon_glosses_for_word` exists so a term defined in an earlier chapter gets a **different facet** rather than the same sentence twice.
 
+**And the `gloss` is never a marker.** `gloss_placeholder_glosses()` names three — `. . .`, `vvv`, and a bare `-` — and `app_original_bible_gloss_placeholders_gate_run` rejects all three wherever they stand, whether the payload handed them to you or you wrote one yourself. There is no carve-out for a word English folds away: an article before a proper name still gets `the`, an untranslated `οὖν` still gets `so`, an `ἐάν` folded into *anyone* still gets `if`. The reader is looking at the Greek word; telling them it means a dash tells them nothing, and the explain underneath is already where the folding gets explained. Believing otherwise costs a whole chapter at once — the gate runs per chapter, so a wrong assumption is not caught until twenty-two passages later, and `app_original_bible_gloss_placeholders_chapter_entries <CHAPTER>` is then what lists them by index for the mend loop.
+
 ## What an explain contains
 
 In this order, skipping what does not apply:
