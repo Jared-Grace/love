@@ -1,3 +1,4 @@
+import { qa_gates_run_failed_suffix } from "./qa_gates_run_failed_suffix.mjs";
 import { qa_gate_run } from "./qa_gate_run.mjs";
 import { qa_gate_message_names } from "./qa_gate_message_names.mjs";
 import { list_join_comma } from "./list_join_comma.mjs";
@@ -26,7 +27,9 @@ export async function qa_gate_confirm() {
   let any = list_empty_not_is(failed);
   if (any) {
     let listed = list_join_comma(failed);
-    throw new Error("qa gate confirmed: " + listed + " failed");
+    throw new Error(
+      "qa gate confirmed: " + listed + qa_gates_run_failed_suffix(),
+    );
   }
   console.log(
     "\nevery red gate was quiet on the second look - the frozen copy was torn, or the faults have been fixed since",
