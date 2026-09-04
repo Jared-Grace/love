@@ -1,8 +1,8 @@
 export function bible_glyph_chapter_rosetta_lines_psa029() {
-  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse word for word in English.";
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
   "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
   "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
-  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the interlinear own word-for-word column rather than a published translation.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
   let chapter = {
     chapter_code: "PSA029",
     verses: [
@@ -25,7 +25,7 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "ק֥וֹל יְהוָ֗ה עַל־ הַ֫מָּ֥יִם אֵֽל־ הַכָּב֥וֹד הִרְעִ֑ים יְ֝הוָ֗ה עַל־ מַ֥יִם רַבִּֽים׃",
         english:
-          "The voice of the LORD is over the waters the God of glory thunders the LORD is heard over waters many",
+          "The voice of the LORD is over the waters the God of glory thunders the LORD is heard over many waters",
       },
       {
         verse_number: 4,
@@ -38,14 +38,14 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "ק֣וֹל יְ֭הוָה שֹׁבֵ֣ר אֲרָזִ֑ים וַיְשַׁבֵּ֥ר יְ֝הוָ֗ה אֶת־ אַרְזֵ֥י הַלְּבָנֽוֹן׃",
         english:
-          "The voice of the LORD breaks the cedars shatters the LORD the cedars of Lebanon",
+          "The voice of the LORD breaks the cedars the LORD shatters the cedars of Lebanon",
       },
       {
         verse_number: 6,
         original:
           "וַיַּרְקִידֵ֥ם כְּמוֹ־ עֵ֑גֶל לְבָנ֥וֹן וְ֝שִׂרְיֹ֗ן כְּמ֣וֹ בֶן־ רְאֵמִֽים׃",
         english:
-          "skip like a calf He makes Lebanon and Sirion like a young wild ox",
+          "He makes Lebanon skip like a calf and Sirion like a young wild ox",
       },
       {
         verse_number: 7,
@@ -57,28 +57,28 @@ export function bible_glyph_chapter_rosetta_lines_psa029() {
         original:
           "ק֣וֹל יְ֭הוָה יָחִ֣יל מִדְבָּ֑ר יָחִ֥יל יְ֝הוָ֗ה מִדְבַּ֥ר קָדֵֽשׁ׃",
         english:
-          "The voice of the LORD shakes the wilderness shakes the LORD the Wilderness of Kadesh",
+          "The voice of the LORD shakes the wilderness the LORD shakes the Wilderness of Kadesh",
       },
       {
         verse_number: 9,
         original:
           "ק֤וֹל יְהוָ֨ה׀ יְחוֹלֵ֣ל אַיָּלוֹת֮ וַֽיֶּחֱשֹׂ֪ף יְעָ֫ר֥וֹת וּבְהֵיכָל֑וֹ כֻּ֝לּ֗וֹ אֹמֵ֥ר כָּבֽוֹד׃",
         english:
-          "The voice of the LORD twists the oaks bare and strips the forests And in His temple all cry Glory",
+          "The voice of the LORD twists the oaks and strips the forests bare And in His temple all cry Glory",
       },
       {
         verse_number: 10,
         original:
           "יְ֭הוָה לַמַּבּ֣וּל יָשָׁ֑ב וַיֵּ֥שֶׁב יְ֝הוָ֗ה מֶ֣לֶךְ לְעוֹלָֽם׃",
         english:
-          "The LORD over the flood sits enthroned is enthroned the LORD as King forever",
+          "The LORD sits enthroned over the flood the LORD is enthroned as King forever",
       },
       {
         verse_number: 11,
         original:
           "יְֽהוָ֗ה עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְהוָ֓ה׀ יְבָרֵ֖ךְ אֶת־ עַמּ֣וֹ בַשָּׁלֽוֹם׃",
         english:
-          "The LORD strength His people gives the LORD blesses His people with peace",
+          "The LORD gives His people strength the LORD blesses His people with peace",
       },
     ],
   };
