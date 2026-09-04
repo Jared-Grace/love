@@ -1,12 +1,10 @@
+import { app_shared_error_report_prefix } from "./app_shared_error_report_prefix.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_contact_user_id_storage_key } from "./app_shared_contact_user_id_storage_key.mjs";
 import { html_error_records_storage_key } from "./html_error_records_storage_key.mjs";
 import { text_frozen } from "./text_frozen.mjs";
 import { app_shared_error_report_sent_key } from "./app_shared_error_report_sent_key.mjs";
 import { storage_key_name_get } from "./storage_key_name_get.mjs";
-import { messages_firebase_path } from "./messages_firebase_path.mjs";
-import { app_shared_error_report_folder } from "./app_shared_error_report_folder.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { firebase_storage_url_project_jg } from "./firebase_storage_url_project_jg.mjs";
 import { firebase_storage_url_upload } from "./firebase_storage_url_upload.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -24,9 +22,7 @@ export function html_code_error_send_script() {
   let sender_name = text_frozen("app_shared_error_report_send");
   let sent_word = app_shared_error_report_sent_key();
   let sent_key = storage_key_name_get(sender_name, sent_word);
-  let opening = messages_firebase_path();
-  let folder = app_shared_error_report_folder();
-  let path = text_combine(opening, folder);
+  let path = app_shared_error_report_prefix();
   let project_url = firebase_storage_url_project_jg();
   let url_start = firebase_storage_url_upload(path, project_url);
   let code = text_combine_multiple([
