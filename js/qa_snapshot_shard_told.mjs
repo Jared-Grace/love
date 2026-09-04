@@ -1,10 +1,11 @@
+import { text_combine } from "./text_combine.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { node_run_lines_whole } from "./node_run_lines_whole.mjs";
 import { date_milliseconds_since } from "./date_milliseconds_since.mjs";
-import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { property_get } from "./property_get.mjs";
 import { qa_gate_failed_names } from "./qa_gate_failed_names.mjs";
+import { qa_gates_run_finished_is } from "./qa_gates_run_finished_is.mjs";
 import { qa_gate_told_answered_is } from "./qa_gate_told_answered_is.mjs";
 import { property_set } from "./property_set.mjs";
 export async function qa_snapshot_shard_told(folder, index, count) {
@@ -16,6 +17,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
   "It is timed on the complaining path too. A share that goes red is a share that was slow for some reason, and leaving its time out would drop exactly the shares somebody is trying to account for";
   "Whether the share managed to answer at all is said out loud alongside what it said, because two very different things arrive at the one catch below and until now they came back identical. One is a gate complaining, which is the answer being looked for. The other is this process stopping for a reason no gate ever mentioned - a neighbour part way through saving a file, a module that will not load, a machine with no room left - and there is then no complaint to read names out of, so the names come back empty and the share reads as red about nobody";
   "Read as a verdict, that shape is the worst thing the record can hold. It is written down under the commit, the commit then looks judged and is never judged again, and every later reader asking what is red is told nothing is. Saying here that nothing was answered is what lets the filing decline it, and the cost of declining is only that somebody asks again";
+  "Whether the run reached its own ending is read off the printing and carried out too, because naming somebody was never enough. A share can name somebody and then stop partway: the complaining gates are printed one at a time, and a process that dies in the middle of that leaves a list which is real, shorter than the truth, and identical to a whole one in every other respect. The closing summary is written once after the last name, so its absence is what says the list is short";
   let index_word = text_combine("", index);
   let count_word = text_combine("", count);
   let f_name = fn_name("qa_gate_tree_shard_run");
@@ -30,11 +32,13 @@ export async function qa_snapshot_shard_told(folder, index, count) {
       share: index,
       milliseconds: date_milliseconds_since(began),
       answered: true,
+      finished: true,
     };
     return r;
   } catch (complaint) {
     let printed = property_get(complaint, "message");
     let failed = qa_gate_failed_names(printed);
+    let finished = qa_gates_run_finished_is(printed);
     let r2 = {
       green: false,
       failed,
@@ -42,6 +46,7 @@ export async function qa_snapshot_shard_told(folder, index, count) {
       share: index,
       milliseconds: date_milliseconds_since(began),
       answered: null,
+      finished,
     };
     let answered = qa_gate_told_answered_is(r2);
     property_set(r2, "answered", answered);
