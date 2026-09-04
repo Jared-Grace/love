@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_music_song_verses_start } from "./app_music_song_verses_start.mjs";
 import { song_god_our_savior_sections } from "./song_god_our_savior_sections.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { property_get } from "./property_get.mjs";
@@ -28,7 +29,9 @@ export async function app_music_song_god_our_savior_show(parent, song) {
   "THE TRANSLATION CHOICES ARE READ ONCE AT THE TOP AND CARRIED DOWN, rather than looked up under every line. It is the same answer for the whole song, and a hundred lookups of one constant is a hundred chances for two of them to differ.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while the passages are folded away.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
+  "THE SCRIPTURE IS SET TRAVELLING BEFORE THE FIRST LINE IS DRAWN, and waited for at the end. Drawing does not stop for it, so the reader still meets the words first; what changes is that the file is on its way during the drawing rather than beginning after it, and the reader waits for the longer of the two instead of for one and then the other.";
   arguments_assert(arguments, 2);
+  let texts_asked = app_music_song_verses_start(song);
   let sections = song_god_our_savior_sections();
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
@@ -73,5 +76,5 @@ export async function app_music_song_god_our_savior_show(parent, song) {
       list_add_multiple(asked_all, shown.asked_list);
     }
   }
-  await app_music_references_fill(asked_all, song);
+  await app_music_references_fill(asked_all, song, texts_asked);
 }
