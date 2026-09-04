@@ -11,6 +11,7 @@ export function urdu_glued_words_roman_welding_endings_row(
   spaced,
   welded,
 ) {
+  "Three kinds of row are stepped over before an ending is filed, and each is a row that could only add noise: one nobody proposed a space in, one the Urdu-script printing does not plainly write apart, and one the Latin printing says nothing about at all. What is left is exactly the rows where the two printings already part company, which is the only place a joining habit can be seen.";
   arguments_assert(arguments, 3);
   for (let row of rows) {
     let spacing = property_get(row, "control_spaced");
