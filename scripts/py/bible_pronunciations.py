@@ -159,22 +159,77 @@ def misaki_of(syllables):
     return "".join(out)
 
 
-def lexicon_named():
-    """Every proper noun the given lexicon holds, said in the reader's notation."""
+def lexicon_entries():
+    """Every entry the given lexicon holds: its written word, its tag, its syllables."""
     text = LEXICON_PATH.read_text(encoding="utf-8")
-    named = {}
+    entries = []
     for word, tag, body in ENTRY.findall(text):
-        if tag not in NAMED_TAGS:
-            continue
         syllables = [
             (phones.split(), mark) for phones, mark in SYLLABLE.findall(body)
         ]
-        if not syllables:
+        if syllables:
+            entries.append((word, tag, syllables))
+    return entries
+
+
+def lexicon_named():
+    """Every proper noun the given lexicon holds, said in the reader's notation."""
+    named = {}
+    for word, tag, syllables in lexicon_entries():
+        if tag not in NAMED_TAGS:
             continue
         sounds = misaki_of(syllables)
         if sounds is not None:
             named[word] = sounds
     return named
+
+
+def lexicon_parted():
+    """The halves of the lexicon's joined names, for a Bible that writes them apart.
+
+    The lexicon writes Kibroth-hattaavah and Kadesh_Barnea joined; this Bible
+    writes them as two words, and each word is looked up on its own, so the
+    joined entry answers neither of them.
+
+    ★ A HALF IS WORKED OUT, NOT WRITTEN DOWN.  The lexicon says how the whole
+    joined name is said and where its syllables fall.  It does not say where
+    the join falls, so the cut is taken from whichever half has an entry of its
+    own: Kadesh is two syllables by itself, so the first two syllables of
+    Kadesh-barnea are Kadesh and what is left over is Barnea.  Nobody wrote
+    down that Barnea is bˈɑɹniə.  So these fill a gap and must never displace
+    an answer the reader already holds - which is where they are applied, in
+    text_to_speech.g2p_ready, and is why they are kept apart from the entries
+    that were actually written down.
+
+    Every joined key is a name or an Aramaic phrase - 634 of the 637 are
+    tagged as proper nouns and the other three are talitha-cumi, maran-atha
+    and sabach-thani - so the homograph reason for keeping to proper nouns does not
+    reach them, and the tag is not consulted.  Measured over the words this
+    Bible actually says: 59 of the 147 it still sounds out are halves like
+    these.
+    """
+    entries = lexicon_entries()
+    counts = {}
+    for word, _, syllables in entries:
+        if "-" not in word and "_" not in word:
+            counts.setdefault(word.lower(), len(syllables))
+    parted = {}
+    for word, _, syllables in entries:
+        parts = [part for part in word.replace("_", "-").split("-") if part]
+        if len(parts) != 2:
+            continue
+        head, tail = parts
+        cut = counts.get(head.lower())
+        if cut is None:
+            behind = counts.get(tail.lower())
+            cut = None if behind is None else len(syllables) - behind
+        if cut is None or cut < 1 or cut >= len(syllables):
+            continue
+        for part, syls in ((head, syllables[:cut]), (tail, syllables[cut:])):
+            sounds = misaki_of(syls)
+            if sounds is not None:
+                parted.setdefault(part.capitalize(), sounds)
+    return parted
 
 
 def pronunciations():

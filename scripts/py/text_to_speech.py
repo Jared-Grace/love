@@ -251,14 +251,28 @@ def g2p_ready():
     shipped with the model files its own proper names exactly this way -
     "Abraham" and "Jesus" among the curated words, their small letters among
     the guessed ones.
+
+    ★ THE TWO SETS ARE FILED WITH DIFFERENT AUTHORITY, AND THE ORDER IS THE
+    WHOLE OF IT.  An entry somebody wrote down overwrites whatever the reader
+    thought - that is the point of having a Bible lexicon at all, and where the
+    two disagree about a Bible name the Bible lexicon is the one that looked.
+    A half of a joined name was not written down anywhere; it was worked out by
+    subtracting the syllables of the half that has its own entry, so it is only
+    ever put where the reader had no answer.  Otherwise a derived half would
+    quietly restate common words the reader already says correctly - Havens,
+    Hill, Sea and Ghost all fall out of joined names.
     """
     from misaki import en, espeak
 
     g2p = en.G2P(
         trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
     )
-    from bible_pronunciations import pronunciations
+    from bible_pronunciations import lexicon_parted, pronunciations
 
+    known = set(g2p.lexicon.golds) | set(getattr(g2p.lexicon, "silvers", {}))
+    for word, sounds in lexicon_parted().items():
+        if word not in known:
+            g2p.lexicon.golds[word] = sounds
     for word, sounds in pronunciations().items():
         g2p.lexicon.golds[word] = sounds
     return g2p
