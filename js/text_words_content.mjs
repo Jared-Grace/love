@@ -1,11 +1,9 @@
+import { text_word_plain } from "./text_word_plain.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_words } from "./text_words.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
-
 export function text_words_content(text) {
   arguments_assert(arguments, 1);
   ("The words of a passage that carry a meaning of their own, lowercased and stripped of punctuation, with the ones that only join other words to each other left out.");
@@ -86,8 +84,7 @@ export function text_words_content(text) {
   let words = text_words(text);
   let kept = [];
   for (let word of words) {
-    let bare = text_letters_only(word);
-    let lowered = text_lower_to(bare);
+    let lowered = text_word_plain(word);
     let some = greater_than(lowered.length, 0);
     if (some) {
       let carries = list_includes_not(relations, lowered);
