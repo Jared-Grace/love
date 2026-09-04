@@ -1,5 +1,5 @@
 import { newline_windows_code } from "./newline_windows_code.mjs";
-import { openai_chat_completions } from "./openai_chat_completions.mjs";
+import { openai_off_chat_completions } from "./openai_off_chat_completions.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function g_sermon_generate_passage(passage) {
   let prompt = text_combine_multiple([
@@ -7,6 +7,6 @@ export async function g_sermon_generate_passage(passage) {
     newline_windows_code(),
     ". Follow these instructions exactly.",
   ]);
-  let sermon = await openai_chat_completions(prompt, passage);
+  let sermon = await openai_off_chat_completions(prompt, passage);
   return sermon;
 }
