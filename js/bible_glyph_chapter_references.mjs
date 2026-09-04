@@ -17,6 +17,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 1",
     },
     {
+      chapter_code: "GEN03",
+      reference: "Genesis 3",
+    },
+    {
       chapter_code: "EXO20",
       reference: "Exodus 20",
     },
