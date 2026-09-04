@@ -1,7 +1,9 @@
+import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
+import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
+import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
 import { html_clear_context } from "./html_clear_context.mjs";
-import { app_shared_mobile_default_bible_font_size } from "./app_shared_mobile_default_bible_font_size.mjs";
 import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
@@ -35,7 +37,7 @@ export async function app_emoji_bible(context) {
     " already watches it and refuses a tree arriving all at once, which is the thing a ceiling was ever wanted for.");
   ("The way out of a chapter is the bar the bible reader already teaches - an arrow to each side and the reference in the middle, which goes back to the list. The arrows are that reader's own, so a reader who has used the other app has already learned this one.");
   ("There is no language setting and there is nothing to translate, which is the entire point of the app: a reader who has never met English still meets the heart, the fire and the seed. What English is left on the page is the grammar, and that is the honest state of the project rather than a decision that has been made.");
-  ("The page opens at the size the reader already chose in the bible reader next door, because a picture Bible is read the way scripture is read and a person who made the words bigger there did not mean only there. There is no size control of its own here yet, so borrowing theirs is the only size the page could honestly open at.");
+  ("The page opens at the size the reader already chose in the bible reader next door, because a picture Bible is read the way scripture is read and a person who made the words bigger there did not mean only there. THAT IS WHERE THE PAGE STARTS AND NOT WHERE IT STAYS. The size chosen next door is written down as this page's own the first time a reader arrives, and the gear on the bar changes this page and nothing else from then on - so a reader who wants the pictures larger than the words gets that, and a page nobody has been to still opens at a size they have already agreed to.");
   ("The reader chooses how the cross is drawn, and nothing about any verse changes when they do. A verse names glyphs and never characters, so an Orthodox reader and a Western reader are reading the same stored Bible drawn two ways - which is the whole reason the vocabulary and the verses were separated in the first place.");
   ("The page is drawn again from the top when that choice changes, rather than the crosses already on the screen being hunted down and swapped. Drawing it again is one call and cannot miss one; hunting them down is a search that silently leaves behind any cross reached by a path nobody thought of.");
   ("The reader may put a KEY under every verse, and the key is where the pictures are actually taught. Under the pictures go the same verse in the language it was written in and the same verse word for word in English, and NOBODY IS TOLD WHAT ANY PICTURE MEANS anywhere on the page. A reader who knows one of the two known lines works the pictures out from it, which is how the Rosetta stone was read - and everyone who does that arrives at the same meanings, because a picture is keyed to the original word rather than to anybody's translation.");
@@ -44,7 +46,11 @@ export async function app_emoji_bible(context) {
   ("Both of the reader's two choices sit in the bar of the chapter they are reading and nowhere on the list, because neither of them changes anything a list shows. A control that does nothing where it is drawn teaches the reader it does nothing anywhere.");
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
-  let value_default = app_shared_bible_font_size(); let root = app_shared_mobile_default_font_size_generic(context, value_default);
+  let value_default = app_shared_bible_font_size();
+  let root = app_shared_mobile_default_font_size_generic(
+    context,
+    value_default,
+  );
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
@@ -53,6 +59,7 @@ export async function app_emoji_bible(context) {
   let index_shown = null_is(chosen);
   if (index_shown) {
     html_div_text_bold(bar, "The Bible in pictures");
+    app_emoji_bible_settings_button(bar, context);
     app_emoji_bible_chapter_index(content, chapters);
     app_shared_footer(content);
     return;
@@ -72,6 +79,7 @@ export async function app_emoji_bible(context) {
   }
   let key_text = app_emoji_bible_key_shown_button_text(key_shown);
   app_shared_button(bar, key_text, lambda_key);
+  app_emoji_bible_settings_button(bar, context);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
   await app_emoji_bible_chapter_body(
