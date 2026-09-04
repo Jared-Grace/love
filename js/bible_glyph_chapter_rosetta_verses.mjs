@@ -10,7 +10,7 @@ export async function bible_glyph_chapter_rosetta_verses(chapter, traditions) {
   "$plain chapter";
   "$plain traditions";
   "the chapter is one already-read chapter and the traditions are lists of glyph redrawings. Both are data to read and neither runs.";
-  "One chapter as Rosetta verses: for each verse its number, the same verse in pictures, in the language it was written in, word for word in English, and in plain Tagalog.";
+  "One chapter as Rosetta verses: for each verse its number, the same verse in pictures, in the language it was written in, in English, and in plain Tagalog.";
   "THE BANDS ARE THE WHOLE TEACHING METHOD. Nobody is told what a picture means anywhere on the page. A reader who knows any one of the lines works out the rest from it, the way the Rosetta stone was read - and every reader who does that arrives at the same meanings, because the pictures are keyed to the original word and not to anybody's translation.";
   "A BAND THE READER CANNOT READ COSTS THEM NOTHING, which is why the Tagalog is shown to everybody rather than hidden behind a language setting. The page already prints Hebrew and Greek to people who read neither; a band is not a translation of the page, it is a key somebody else is holding, and the reader simply looks down the stack until they find their own. Adding a picker would make the page ask a question before it could teach anything, and the whole design is that it asks nothing.";
   "IT IS THE TAGALOG BAND THAT MAKES THE CLAIM TESTABLE. The claim is that a stranger with no shared language can follow the marks, and while the only keys were Hebrew, Greek and English the only people who could check the answer were the people who did not need the pictures.";
