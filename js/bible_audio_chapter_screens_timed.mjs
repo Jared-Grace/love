@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chapter_lines_timed } from "./bible_audio_chapter_lines_timed.mjs";
@@ -17,7 +18,6 @@ import { audio_pieces_words_timed } from "./audio_pieces_words_timed.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
 import { lyric_video_words_screens } from "./lyric_video_words_screens.mjs";
-import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 export async function bible_audio_chapter_screens_timed(
@@ -94,8 +94,7 @@ export async function bible_audio_chapter_screens_timed(
     let start = property_get(line, "start");
     let end = property_get(line, "end");
     let cut = lyric_video_words_screens(words, room, seconds);
-    let left2 = list_size(cut);
-    let last = subtract(left2, 1);
+    let last = list_size_subtract(cut, 1);
     function screen_each(screen, at) {
       let right = property_get(screen, "start");
       let number2 = add(start, right);
