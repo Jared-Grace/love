@@ -149,7 +149,7 @@ export function song_image_couplets() {
       first: "though innocent",
       second: "condemned to die",
       symbol:
-        "One washing basin of plain grey stone seen from the side, a wide shallow bowl on a short foot, its grey one flat colour with no speckle in it, and filling it from rim to rim a wide open oval of clear blue water tilted towards the viewer so that the whole round of its surface shows as a circle, that water in two blues, three or four wavy bands of the lighter lying across the deeper, told apart by the change of blue alone with no black line anywhere inside the water, the band between the two lead lines flat emerald green and the band below them flat deep crimson so that no blue but the water stands in the window, the basin drawn as large as it can be inside the white border",
+        "One washing basin of plain grey stone seen from the side, a wide shallow bowl on a short foot, its grey one flat colour with no speckle in it, and its water a shallow ellipse of clear blue lying down inside the rim of the bowl, its far edge hidden behind the rim so that it plainly sits in the bowl and never stands above it, that water in two blues, three or four wavy bands of the lighter lying across the deeper, the band between the two lead lines flat emerald green and the band below them flat deep crimson so that no blue but the water stands in the window, the basin drawn as large as it can be inside the white border",
       symbol_ref: "Matthew 27:24",
       same_as: 0,
     },

@@ -7,6 +7,8 @@ import { lyric_video_subtitles_text_cases } from "../../../js/lyric_video_subtit
 
 ("The moments are written out here rather than borrowed from the repo's own time writer, because one of these versions is wrong about exactly that writing and a version that fetched it could not be.");
 
+("★ EVERYTHING THESE VERSIONS AGREE WITH THE WRITER ABOUT IS SPELLED OUT AGAIN HERE, AND KEEPING IT LEVEL IS THE WHOLE OF WHAT MAKES THEM PROVE ANYTHING. How far ahead of the singing a card is put up, and where on the frame it stands, are two of those. Both were once left behind when the writer moved: the card was raised out of the middle of the frame and these still said the middle, so every one of the nine was refused by every case for that alone, and the corpus was passing while telling none of them apart. A version refused for somebody else's reason is not a version anything was learned from - so when the writer changes something all nine share, it is copied across here in the same commit or the proof quietly stops being one.");
+
 function padded(value, width) {
   let text = String(value);
   while (text.length < width) {
@@ -16,7 +18,8 @@ function padded(value, width) {
 }
 
 function time_of(seconds, options) {
-  let safe = typeof seconds === "number" && isFinite(seconds) ? seconds : 0;
+  let safe =
+    typeof seconds === "number" && isFinite(seconds) ? Math.max(seconds, 0) : 0;
   let hundredths = Math.round(safe * 100);
   let whole = Math.floor(hundredths / 100);
   let rest = options.time_seconds_whole ? 0 : hundredths - whole * 100;
@@ -42,9 +45,9 @@ function place_of(options) {
     return "{\\an5\\fad(260,320)}";
   }
   if (options.no_fade) {
-    return "{\\pos(540,960)}";
+    return "{\\pos(540,829)}";
   }
-  let placed = "{\\pos(540,960)\\fad(260,320)}";
+  let placed = "{\\pos(540,829)\\fad(260,320)}";
   return placed;
 }
 
@@ -81,8 +84,9 @@ function reader_of(options) {
       if (!kept_is(line, options)) {
         continue;
       }
-      let first = options.ends_crossed ? line.end : line.start;
-      let second = options.ends_crossed ? line.start : line.end;
+      let lead = 0.4;
+      let first = (options.ends_crossed ? line.end : line.start) - lead;
+      let second = (options.ends_crossed ? line.start : line.end) - lead;
       let event =
         "Dialogue: 0," +
         time_of(first, options) +
