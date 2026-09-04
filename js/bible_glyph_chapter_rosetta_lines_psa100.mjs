@@ -1,8 +1,8 @@
 export function bible_glyph_chapter_rosetta_lines_psa100() {
-  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse word for word in English.";
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
   "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
   "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
-  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the interlinear own word-for-word column rather than a published translation.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
   let chapter = {
     chapter_code: "PSA100",
     verses: [
@@ -38,7 +38,7 @@ export function bible_glyph_chapter_rosetta_lines_psa100() {
         original:
           "כִּי־ ט֣וֹב יְ֭הֹוָה לְעוֹלָ֣ם חַסְדּ֑וֹ וְעַד־ דֹּ֥ר וָ֝דֹ֗ר אֱמוּנָתֽוֹ׃",
         english:
-          "For is good the LORD endures forever and His loving devotion continues to all generations His faithfulness",
+          "For the LORD is good and His loving devotion endures forever His faithfulness continues to all generations",
       },
     ],
   };
