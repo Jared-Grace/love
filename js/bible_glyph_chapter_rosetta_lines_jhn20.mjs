@@ -208,7 +208,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn20() {
         original:
           "Πολλὰ μὲν οὖν καὶ ἄλλα σημεῖα ἐποίησεν ὁ Ἰησοῦς ἐνώπιον τῶν μαθητῶν ἃ οὐκ ἔστιν γεγραμμένα ἐν τῷ βιβλίῳ τούτῳ",
         english:
-          "Jesus performed many other signs in the presence of disciples which are not written in this book",
+          "Jesus performed many other signs in the presence of His disciples which are not written in this book",
       },
       {
         verse_number: 31,
