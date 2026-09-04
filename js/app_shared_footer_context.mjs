@@ -1,3 +1,4 @@
+import { app_shared_footer_parent } from "./app_shared_footer_parent.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -13,7 +14,8 @@ export function app_shared_footer_context(context) {
   if (had_previous) {
     html_remove(previous);
   }
-  let footer = app_shared_footer(root);
+  let body = app_shared_footer_parent(root);
+  let footer = app_shared_footer(body);
   property_set(context, "footer", footer);
   return footer;
 }
