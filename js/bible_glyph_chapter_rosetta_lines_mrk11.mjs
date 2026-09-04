@@ -206,7 +206,7 @@ export function bible_glyph_chapter_rosetta_lines_mrk11() {
         original:
           "Καὶ διελογίζοντο πρὸς ἑαυτοὺς λέγοντες Ἐὰν εἴπωμεν Ἐξ οὐρανοῦ ἐρεῖ Διὰ τί οὖν οὐκ ἐπιστεύσατε αὐτῷ",
         english:
-          "They deliberated among themselves If we say From heaven He will ask Why then did you not believe him",
+          "They deliberated among themselves what they should answer If we say From heaven He will ask Why then did you not believe him",
       },
       {
         verse_number: 32,
