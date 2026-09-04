@@ -1,3 +1,4 @@
+import { html_style_order_last } from "./html_style_order_last.mjs";
 import { app_shared_footer_parent } from "./app_shared_footer_parent.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -16,6 +17,7 @@ export function app_shared_footer_context(context) {
   }
   let body = app_shared_footer_parent(root);
   let footer = app_shared_footer(body);
+  html_style_order_last(footer);
   property_set(context, "footer", footer);
   return footer;
 }
