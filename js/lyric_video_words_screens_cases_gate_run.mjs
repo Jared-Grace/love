@@ -9,9 +9,9 @@ export function lyric_video_words_screens_cases_gate_run() {
   let cases = lyric_video_words_screens_cases();
   function answer(c) {
     let words = property_get(c, "words");
-    let characters_max = property_get(c, "characters_max");
+    let room = property_get(c, "room");
     let seconds = property_get(c, "seconds");
-    let screens = lyric_video_words_screens(words, characters_max, seconds);
+    let screens = lyric_video_words_screens(words, room, seconds);
     return screens;
   }
   let r = cases_gate_run_generic(

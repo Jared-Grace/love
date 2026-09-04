@@ -1,6 +1,6 @@
 export function lyric_video_words_screens_cases() {
   "Recorded pieces whose words have already been placed in time, each written down beside the screens it must be cut into.";
-  "★ THE CASES ARE SET AGAINST A NARROW SCREEN RATHER THAN THE REAL ONE, so that a piece short enough to read here is still long enough to be cut. Written against the hundred and sixty-five letters a frame really holds, every case would have to be a paragraph before it split at all, and nobody could check the expected answer by eye. The count is a parameter for exactly this reason.";
+  "★ THE CASES ARE SET AGAINST A SHALLOW SCREEN RATHER THAN THE REAL ONE, so that a piece short enough to read here is still long enough to be cut. The real frame holds eleven lines, and written against that every case would have to be a paragraph before it split at all, and nobody could check the expected answer by eye. Two lines is the shallowest screen that can be cut at all, and the width is left at the real one so the wrapping being tested is the wrapping that ships.";
   "★ THE SECOND AND THIRD CASES ARE THE SAME WORDS AND THE SAME MOMENTS, DIFFERING ONLY IN THEIR PUNCTUATION, which is what makes them a measurement of the looking back rather than two unrelated examples. With the commas the screen ends after a name; without them it ends wherever the letters ran out, and the words the son of are left hanging. That second answer is not a fault - it is what there is to work with when the reader marked nothing.";
   "★ THE PHRASE IS THE ONE THE LOOKING BACK WAS MEASURED ON. A screen that fills up on a name has to reach four words back, over of and son and the, to find the comma the reader paused at. A case that reached only three would pass a shorter distance and this corpus would then agree with the fault it exists to catch.";
   let words = [
@@ -116,7 +116,11 @@ export function lyric_video_words_screens_cases() {
           end: 1.2,
         },
       ],
-      characters_max: 30,
+      room: {
+        pixels_across: 920,
+        lines_max: 2,
+        font_size: 150,
+      },
       seconds: 1.5,
       screens: [
         {
@@ -129,7 +133,11 @@ export function lyric_video_words_screens_cases() {
     },
     {
       words: words,
-      characters_max: 30,
+      room: {
+        pixels_across: 920,
+        lines_max: 2,
+        font_size: 150,
+      },
       seconds: 3,
       screens: [
         {
@@ -147,7 +155,11 @@ export function lyric_video_words_screens_cases() {
     },
     {
       words: bare,
-      characters_max: 30,
+      room: {
+        pixels_across: 920,
+        lines_max: 2,
+        font_size: 150,
+      },
       seconds: 3,
       screens: [
         {
