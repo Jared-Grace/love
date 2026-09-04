@@ -1,8 +1,7 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { song_image_kept_url } from "./song_image_kept_url.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { list_unique } from "./list_unique.mjs";
 export function song_images_kept_urls() {
@@ -15,8 +14,7 @@ export function song_images_kept_urls() {
     let url = song_image_kept_url(couplet.n);
     return url;
   }
-  let all = list_map(couplets, to_url);
-  let chosen = list_filter(all, text_empty_not_is);
+  let chosen = list_map_filter(couplets, to_url, text_empty_not_is);
   let urls = list_unique(chosen);
   return urls;
 }
