@@ -239,7 +239,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "One ram of white glass with thick curled white horns, standing side-on in profile on all four legs and caught in a dense thicket of bare brown thorn branches that rises only as high as its back, its head bent low into the thicket, and sitting round the base of its horns one closed ring of thorny branch worn as a crown, a ring with a clear round opening in the middle and the top of the ram's head showing through it, its thorns standing out all round it, and one branch running down from that ring into the thicket beneath, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "One ram of white glass with thick curled white horns, standing side-on in profile on all four legs and caught in a dense thicket of bare brown thorn branches that rises only as high as its back, its head bent low into the thicket, and one closed ring of brown thorny branch worn as a crown, resting on the very top of its head between the horns and touching the head, a ring with a clear round opening in the middle and its thorns standing out all round it, one animal only in the whole window, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -309,7 +309,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One lamb of white glass standing side-on in profile, no horns, behind its head one halo of bright yellow glass, a plain circle only a little wider than the head, with three short ruby red bars inside that circle in the shape of a cross, one bar up and one to each side, every bar ending well inside the circle's own edge and none of them reaching out past it into the window, that halo the one thing in the picture drawn in yellow, and one slender grey iron staff topped by a small plus-shaped cross, the lamb's near front leg lifted and bent so that the hoof closes round the front of the staff and grips it, the hoof plainly in front of the staff and not behind it, the staff leaning back over its shoulder with its foot on the ground in front of the lamb, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One lamb of white glass standing side-on in profile, no horns, its ears and its hooves white glass like the rest of it and nothing grey and nothing pink anywhere on the lamb itself, behind its head one halo of bright yellow glass, a plain circle only a little wider than the head, with three short ruby red bars inside that circle in the shape of a cross, one bar up and one to each side, every bar ending well inside the circle's own edge and none of them reaching out past it into the window, that halo the one thing in the picture drawn in yellow, and one slender grey iron staff topped by a small plus-shaped cross, the lamb's near front leg lifted and bent so that the hoof closes round the front of the staff and grips it, the hoof plainly in front of the staff and not behind it, the staff leaning back over its shoulder with its foot on the ground in front of the lamb, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },

@@ -23,6 +23,7 @@ export async function git_hook_commit_msg_write() {
       let skipped = {
         folder,
         installed: false,
+        path: null,
       };
       return skipped;
     }
