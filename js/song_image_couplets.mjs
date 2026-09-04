@@ -189,7 +189,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain, the band between the two lead lines flat ruby red and the band below them flat deep crimson and no other colour anywhere in the field, each band one unbroken run straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
+        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, and the field behind the cross left plain, the band between the two lead lines flat emerald green and the band below them flat deep cobalt blue and no other colour anywhere in the field, each band one unbroken run straight from one side of the window to the other with no blocks and no bricks and no panels anywhere inside it, and the left of the window matching the right",
       symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
@@ -239,7 +239,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "One dense thicket of bare brown thorn branches standing on the ground and rising only as high as a ram's back, and caught in the top of that thicket a ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head bent low into the thicket so that the branches close round its horns like a crown of thorns, and every branch of that crown running down unbroken into the thicket beneath it so that the crown and the thicket are one plant, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "One dense thicket of bare brown thorn branches standing on the ground and rising only as high as a ram's back, and caught in the top of that thicket a ram of white glass with thick curled white horns, standing side-on in profile on all four legs, its head bent low into the thicket, and sitting round the base of its horns one closed ring of thorny branch worn as a crown, plainly a ring with a clear round opening in the middle and the top of the ram's head showing through it, its thorns standing out all round it, and one branch running down from that ring unbroken into the thicket beneath so that the crown and the thicket are one plant, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
@@ -309,7 +309,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One lamb of white glass standing side-on in profile, no horns and nothing grey anywhere on it, behind its head one halo of ruby red glass, a plain circle a little wider than the head with three short white bars across it in the shape of a cross, one bar up and one to each side, and one slender grey iron staff topped by a small plus-shaped cross, carried as the church's Agnus Dei carries it, the lamb's near front leg lifted and crooked round that staff, the staff leaning well back over its shoulder with its foot on the ground in front of the lamb and its cross up behind its back, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One lamb of white glass standing side-on in profile, no horns and nothing grey anywhere on it, behind its head one halo of bright yellow glass, a plain circle a little wider than the head with three short ruby red bars across it in the shape of a cross, one bar up and one to each side, that halo the one thing in the whole picture drawn in yellow and nothing else anywhere taking that colour, and one slender grey iron staff topped by a small plus-shaped cross, carried as the church's Agnus Dei carries it, the lamb's near front leg lifted high and bent so that the staff lies in the crook of it and the hoof closes round the front of the staff and grips it, the hoof plainly in front of the staff and not behind it, the staff leaning well back over its shoulder with its foot on the ground in front of the lamb and its cross up behind its back, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
