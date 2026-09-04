@@ -49,7 +49,8 @@ export function bible_glyph_chapter_rosetta_lines_mrk10() {
         verse_number: 7,
         original:
           "Ἕνεκεν τούτου καταλείψει ἄνθρωπος τὸν πατέρα αὐτοῦ καὶ τὴν μητέρα",
-        english: "For this reason a man will leave his father and mother",
+        english:
+          "For this reason a man will leave his father and mother and be united to his wife",
       },
       {
         verse_number: 8,
