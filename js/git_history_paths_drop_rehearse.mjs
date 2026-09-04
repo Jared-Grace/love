@@ -7,12 +7,10 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { git_folder_head_tree } from "./git_folder_head_tree.mjs";
 import { git_folder_commits_count } from "./git_folder_commits_count.mjs";
-import { uuid } from "./uuid.mjs";
-import { folder_machine_temp } from "./folder_machine_temp.mjs";
-import { path_join } from "./path_join.mjs";
-import { git_folder_run } from "./git_folder_run.mjs";
+import { git_folder_clone_bare_temp } from "./git_folder_clone_bare_temp.mjs";
 import { git_folder_head_commit } from "./git_folder_head_commit.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
+import { git_folder_run } from "./git_folder_run.mjs";
 import { equal_assert_json } from "./equal_assert_json.mjs";
 export async function git_history_paths_drop_rehearse(folder, paths_text) {
   "$plain folder";
@@ -23,7 +21,7 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   "Which paths belong here is not decided here and cannot be. A folder can look like something built and be the source it was built from - stripping one such folder in rehearsal pruned fifty-three thousand commits and looked like the biggest win on offer. So the list arrives from a human who knows what each path was, and this only refuses the ones it can prove are wrong.";
   "WHICH COMMIT THE COPY WAS TAKEN AT IS HANDED BACK, and it is read off the copy rather than off the folder just before cloning. The accepting half throws the repository onto the copy's history, so anything committed after the copy was taken is thrown away with it - and in one shared folder on one branch that is a peer's work, silently. The accepting half refuses when this no longer matches, which turns a destroyed afternoon into a second rehearsal. Reading it off the copy is what makes the answer certain rather than nearly certain: the copy holds one commit whatever happened in the moment after the clone began.";
   "ITS TWO READINGS OF THE PRESENT ARE STILL TAKEN OFF THE LIVE FOLDER, and its neighbour that renames has since been written the other way round for a measured reason - a proof whose halves stand on two different commits fails when nothing is wrong, because a peer commits in between. Here that shows up as a rewrite refusing itself rather than as one being wrongly allowed, so it is a nuisance and not a hazard, and the commit handed back above is what stops the nuisance reaching as far as the accepting.";
-  "The copy is made on the machine's own scratch folder and never inside the repository. Making it inside was how four copies of this repository once ended up committed into it, and they were the largest thing in its history for the better part of a year.";
+  "Where the copy is made and why is the copying function's own business, and its reasons are written down there rather than repeated here.";
   arguments_assert(arguments, 2);
   let paths = text_split_comma(paths_text);
   let b = list_empty_not_is(paths);
@@ -43,16 +41,7 @@ export async function git_history_paths_drop_rehearse(folder, paths_text) {
   });
   let tree_before = await git_folder_head_tree(folder);
   let commits_before = await git_folder_commits_count(folder);
-  let name = await uuid();
-  let folder2 = await folder_machine_temp();
-  let clone_folder = path_join([folder2, name]);
-  await git_folder_run(folder, [
-    "clone",
-    "--no-hardlinks",
-    "--bare",
-    folder,
-    clone_folder,
-  ]);
+  let clone_folder = await git_folder_clone_bare_temp(folder);
   let commit = await git_folder_head_commit(clone_folder);
   let asked = ["filter-repo", "--force", "--invert-paths"];
   for (let path of paths) {
