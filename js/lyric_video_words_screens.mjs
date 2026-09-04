@@ -1,3 +1,5 @@
+import { lyric_video_words_break_index } from "./lyric_video_words_break_index.mjs";
+import { lyric_video_words_screen_text } from "./lyric_video_words_screen_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
@@ -5,10 +7,6 @@ import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { subtract } from "./subtract.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { lyric_video_text_lines } from "./lyric_video_text_lines.mjs";
 export function lyric_video_words_screens(words, room, seconds) {
   "$plain seconds";
@@ -26,51 +24,23 @@ export function lyric_video_words_screens(words, room, seconds) {
   let marks = [",", ";", ":", ".", "?", "!"];
   let look_back = 4;
   let count = list_size(words);
-  function word_text(order_word) {
-    let word = words[order_word];
-    let text = property_get(word, "word");
-    return text;
-  }
-  function screen_text(from, to) {
-    let parts = [];
-    let at = from;
-    while (less_than(at, to)) {
-      let started = greater_than(at, from);
-      if (started) {
-        list_add(parts, " ");
-      }
-      let item = word_text(at);
-      list_add(parts, item);
-      at = add(at, 1);
-    }
-    let text = text_combine_multiple(parts);
-    return text;
-  }
-  function break_index(opened, reached) {
-    let earliest = subtract(reached, look_back);
-    let back = subtract(reached, 1);
-    while (greater_than(back, opened) && greater_than_equal(back, earliest)) {
-      let text = word_text(back);
-      let marked = text_ends_with_any(text, marks);
-      if (marked) {
-        let after = add(back, 1);
-        return after;
-      }
-      back = subtract(back, 1);
-    }
-    return reached;
-  }
   let bounds = [];
   let first = 0;
   let index = 0;
   while (less_than(index, count)) {
     let reach = add(index, 1);
-    let candidate = screen_text(first, reach);
+    let candidate = lyric_video_words_screen_text(first, reach, words);
     let lines = lyric_video_text_lines(candidate, pixels_across, font_size);
     let over = greater_than(lines, lines_max);
     let started = greater_than(index, first);
     if (over && started) {
-      let cut = break_index(first, index);
+      let cut = lyric_video_words_break_index(
+        first,
+        index,
+        look_back,
+        words,
+        marks,
+      );
       list_add(bounds, [first, cut]);
       first = cut;
       index = cut;
@@ -102,7 +72,7 @@ export function lyric_video_words_screens(words, room, seconds) {
     let screen = {
       start: start,
       end: end,
-      text: screen_text(from, to),
+      text: lyric_video_words_screen_text(from, to, words),
     };
     list_add(screens, screen);
     order = add(order, 1);
