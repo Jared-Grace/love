@@ -29,6 +29,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 13",
     },
     {
+      chapter_code: "PSA001",
+      reference: "Psalm 1",
+    },
+    {
       chapter_code: "PSA023",
       reference: "Psalm 23",
     },
