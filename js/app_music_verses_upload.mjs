@@ -5,9 +5,11 @@ import { list_add } from "./list_add.mjs";
 export async function app_music_verses_upload() {
   "Puts the scripture behind every song on this page into storage, one file per song, and hands back where each of them went.";
   "IT IS THE ONE TO RUN BY HAND, because a person filling these in wants the page filled in and not one song of it, and a song whose file was forgotten is invisible - it works, and it works slowly.";
+  "IT FINDS ITS OWN SONGS rather than being run once per song. A set typed by whoever is running it is a set that goes stale the moment a song is added to the page, and what follows is not a failure but a song quietly working its words out a chapter at a time with nothing saying so.";
   "EACH SONG IS A FILE OF ITS OWN because a song says for itself which bible each of its passages is quoted from, and two songs here sing sixteen of the same passages. One file for the page could carry only one answer at each of those sixteen, so the song built second handed its wording to the song built first.";
   "THEY GO UP ONE AFTER ANOTHER RATHER THAN TOGETHER. Each one is already some sixty chapters coming down several at a time, so running two of them at once asks the same shelf for twice as much and finishes no sooner; and this is run by a person watching it, for whom a failure that names the song it was on is worth more than a minute.";
   "RUN IT AGAIN WHENEVER A SONG IS ADDED, whenever a song starts resting on a passage it did not name before, and whenever a passage changes which translation it is quoted from. Nothing breaks when it is not run - the page works the missing passages out for itself - so the only sign is that the page got slow again.";
+  "THE TRANSLATION CASE IS THE ONE THAT LEAVES NO MARK TO LOOK FOR, and it is why the whole page is done rather than the song somebody has in mind. A built file holds the words and not where they came from, so a passage newly pointed at another bible reads back out of the old file looking exactly as it always did - right shape, right reference, and the wording nobody chose.";
   arguments_assert(arguments, 0);
   let songs = app_music_songs();
   let destinations = [];
