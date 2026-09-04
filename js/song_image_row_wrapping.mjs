@@ -1,3 +1,4 @@
+import { html_align_items_start } from "./html_align_items_start.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_display_flex } from "./html_display_flex.mjs";
@@ -11,7 +12,7 @@ export function song_image_row_wrapping(parent) {
   let row = html_div(parent);
   html_display_flex(row);
   html_style_gap(row, "22px");
-  html_style_set(row, "align-items", "flex-start");
+  html_align_items_start(row);
   html_style_set(row, "flex-wrap", "wrap");
   return row;
 }
