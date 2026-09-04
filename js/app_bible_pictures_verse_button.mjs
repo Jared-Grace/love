@@ -1,18 +1,18 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_hash_object_get } from "./html_hash_object_get.mjs";
-import { app_shared_bible_chapter_hash_get_or_empty } from "./app_shared_bible_chapter_hash_get_or_empty.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
+import { null_is } from "./null_is.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_bible_pictures_button } from "./app_bible_pictures_button.mjs";
-export function app_bible_pictures_verse_button(bar) {
+export function app_bible_pictures_verse_button(v) {
   arguments_assert(arguments, 1);
-  ("The way into the picture Bible put in the bar of the verse screen, for whichever chapter the address names.");
-  ("IT READS THE CHAPTER OUT OF THE ADDRESS BECAUSE A BAR IS BUILT BEFORE THE SCREEN HAS WORKED OUT WHICH CHAPTER IT IS SHOWING. On a first visit the address names no chapter yet, and then this draws nothing; the screen settles, writes the chapter into the address and draws itself again, so the button arrives one moment later rather than never.");
-  ("NO GAP IS SET ABOVE IT, unlike the same button at the foot of a whole chapter. A bar is a row, and a margin on the top of one thing in a row lifts it off the line its neighbours stand on.");
-  let hash = html_hash_object_get();
-  let chapter_code = app_shared_bible_chapter_hash_get_or_empty(hash);
-  let empty = text_empty_is(chapter_code);
-  if (empty) {
+  ("The way into the picture Bible on the verse screen, standing in the row of buttons under the verse beside copy and share.");
+  ("IT STANDS IN THAT ROW RATHER THAN IN THE BAR ALONG THE TOP, because a reader wondering what else can be done with the verse in front of them looks under it, where everything else that can be done with it already is.");
+  ("IT IS HANDED WHAT THE SCREEN ANSWERED WITH RATHER THAN THE ROW ITSELF, because the screen answers with nothing at all on the ways out that stop early - a passage named by the link, an address naming no chapter - and on those there is no row to draw into and no verse to draw it for. That also settles which chapter this is without asking the address: by the time the screen has answered it has worked the chapter out and says so.");
+  ("A CHAPTER NOBODY HAS DRAWN PICTURES FOR GETS NO BUTTON. That question is asked once, next door, by the thing that draws it.");
+  let nothing_drawn = null_is(v);
+  if (nothing_drawn) {
     return;
   }
-  app_bible_pictures_button(bar, chapter_code);
+  let bottom = property_get(v, "bottom");
+  let chapter_code = property_get(v, "chapter_code");
+  app_bible_pictures_button(bottom, chapter_code);
 }
