@@ -3,7 +3,7 @@ import { app_ceb_bible_gloss_passage_roots_prompt } from "./app_ceb_bible_gloss_
 import { error } from "./error.mjs";
 import { list_single_property } from "./list_single_property.mjs";
 import { invoke_cache_file_get } from "./invoke_cache_file_get.mjs";
-import { openai_responses } from "./openai_responses.mjs";
+import { openai_off_responses } from "./openai_off_responses.mjs";
 import { invoke_cache_file_key_get } from "./invoke_cache_file_key_get.mjs";
 import { openai_responses_cache_args } from "./openai_responses_cache_args.mjs";
 import { list_get_end } from "./list_get_end.mjs";
@@ -56,7 +56,7 @@ export async function app_ceb_bible_gloss_generate_book_open() {
   let prompt_user = property_get(e, "prompt_user");
   let prompt_system2 = property_get(e, "prompt_system");
   let args = openai_responses_cache_args(prompt_system2, prompt_user);
-  let key_get = invoke_cache_file_key_get(openai_responses, args);
+  let key_get = invoke_cache_file_key_get(openai_off_responses, args);
   let k = await key_get();
   await file_open(k);
   error("todo");
