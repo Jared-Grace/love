@@ -12,7 +12,7 @@ export async function commits_message_alias_offenders_after_door(offenders) {
   "The two were refused together before, and refusing them together is what left the gate red with nobody able to answer it: the only remedy the record offered was closed against the only offenders the record was for.";
   "Which side a commit falls on is asked of the history rather than worked out from a date. A date is not what the door is, and two commits made in the same minute can sit on either side of it.";
   arguments_assert(arguments, 1);
-  let door = commits_message_alias_door_commit();
+  let door = await commits_message_alias_door_commit();
   let commits = await git_commits_subjects_since(door);
   let shas = [];
   for (let commit of commits) {
