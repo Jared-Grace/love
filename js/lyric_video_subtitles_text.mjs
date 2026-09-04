@@ -1,13 +1,11 @@
-import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
-import { lyric_video_line_size_text } from "./lyric_video_line_size_text.mjs";
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { divide } from "./divide.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide_round } from "./divide_round.mjs";
+import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
+import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { number_is } from "./number_is.mjs";
+import { subtract } from "./subtract.mjs";
+import { lyric_video_line_size_text } from "./lyric_video_line_size_text.mjs";
 export function lyric_video_subtitles_text(document) {
   "$plain document";
   "The whole subtitle file of a lyric video, written out of one authored document: the passage and the translation that stand at the foot of every frame, how long the song runs, how big the frame is, how big the three lettering sizes are, and the lines with the moment each is sung.";
@@ -26,6 +24,7 @@ export function lyric_video_subtitles_text(document) {
   "★ THE MIDDLE IS STATED OUTRIGHT RATHER THAN ASKED FOR BY NAMING AN ALIGNMENT, because a subtitle that is merely aligned is moved out of the way of any other subtitle standing at the same moment - and the passage and the translation stand at every moment there is. A short card never grows far enough to touch them and so never moved; a card of ten lines does, and it was shifted downwards until it began below the passage and ran off the bottom of the frame, with nothing at all in the two thirds above it. Naming the point instead is what a placed card means, and a placed card is never moved. Where the point is put used to be exactly where an alignment would have put it, and is not any more: it has been raised into the room above the passage line, for the reason the line above gives.";
   "★ A CARD TOO LONG FOR THE FRAME IS SET SMALLER RATHER THAN CUT IN TWO, AND THE ALTERNATIVE IS WHY. Cutting it needs a moment to cut at, and for spoken words there is none to be had: the voice model hands back sound with no times inside it, so the join could only be placed by reasoning from how long the words are and hoping the reader crossed it there. The size, by contrast, is read off the words themselves and nothing is supposed about the reading. A song never meets this, because its lines are short and were placed by ear; a chapter meets it wherever one sentence runs a long way, and the size is written into the card itself so only that card is affected and the rest of the chapter stands as it always did.";
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
+  "★ THE MARGINS, THE POINT THE CARD IS CENTRED ON AND HOW MUCH ROOM A CARD HAS ARE ALL ASKED FOR IN ONE PLACE RATHER THAN WORKED OUT HERE. Whoever cuts a chapter into cards has to know the same three things before this ever runs, and while this held its own copy of them the two answers drifted: cards were cut to a width that was never measured and drawn at one that was, and the first anybody knew of it was a card clipped off the top of the frame and standing over the passage line at the foot.";
   let width = document.width;
   let height = document.height;
   let font_size = document.font_size;
@@ -34,8 +33,11 @@ export function lyric_video_subtitles_text(document) {
   let lyric_outline = lyric_video_outline_width(font_size);
   let passage_outline = lyric_video_outline_width(passage_size);
   let credit_outline = lyric_video_outline_width(credit_size);
-  let credit_margin = 70;
-  let passage_margin = credit_margin + multiply_round(credit_size, 1.5);
+  let room = lyric_video_screen_room(document);
+  let credit_margin = room.credit_margin;
+  let passage_margin = room.passage_margin;
+  let side_margin = room.side_margin;
+  let sides = side_margin + "," + side_margin;
   let styles_format =
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding";
   let lyric_style =
@@ -43,13 +45,17 @@ export function lyric_video_subtitles_text(document) {
     font_size +
     ",&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1," +
     lyric_outline +
-    ",0,5,80,80,0,1";
+    ",0,5," +
+    sides +
+    ",0,1";
   let passage_style =
     "Style: Passage,Noto Sans," +
     passage_size +
     ",&H00B4B4B4,&H00B4B4B4,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
     passage_outline +
-    ",0,2,80,80," +
+    ",0,2," +
+    sides +
+    "," +
     passage_margin +
     ",1";
   let credit_style =
@@ -57,13 +63,13 @@ export function lyric_video_subtitles_text(document) {
     credit_size +
     ",&H00828282,&H00828282,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
     credit_outline +
-    ",0,2,80,80," +
+    ",0,2," +
+    sides +
+    "," +
     credit_margin +
     ",1";
-  let middle_x = divide(width, 2);
-  let left = subtract(height, passage_margin);
-  let passage_top = subtract(left, passage_size);
-  let middle_y = divide_round(passage_top, 2);
+  let middle_x = room.middle_x;
+  let middle_y = room.middle_y;
   let lyric_place = "\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)";
   let characters_max = lyric_video_screen_characters_max();
   let lead = lyric_video_lead_seconds();
