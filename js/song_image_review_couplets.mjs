@@ -15,7 +15,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 2,
-      note: "you said the earlier ones had something circular and the later ones needed more to show it is water, and both of those are answered here. The basin is still seen from the side, but its water is now an open oval tilted towards you, so the whole round of the surface shows as a circle, and it is drawn in two blues with wavy bands of the deeper one lying across the lighter, which is what makes it read as water rather than as a flat blue lid. The field came out clean, cobalt over emerald over deep crimson with white glass only round the outer edge. Nothing is named as still wrong in this one - if it is right, say so and it comes off the list.",
+      note: "you asked for the water in lighter colours rather than black lines, and it is lighter here: two blues with a wavy band of the paler one across the deeper, and no heavy black inside the water. Getting there cost something and it is worth naming. Asking for the whole round of the surface to show as a circle made nine drawings in a row float the water as a disc standing above the rim, which is what a side view cannot give, so the wording now asks for a shallow ellipse lying down inside the rim instead. That fixed it outright - the water sits in the bowl in every draw since - but the surface is narrower than it was, so there is less water showing than in the round ones you liked. The field is clean, cobalt over emerald over deep crimson. If the smaller surface is too small a price, say so and the round one comes back with its faults.",
     },
     {
       n: 11,
