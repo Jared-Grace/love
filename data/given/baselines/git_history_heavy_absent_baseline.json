@@ -1,17 +1,17 @@
 {
  "known": [
-  "data/data.json",
-  "data.json",
-  "public/src/kjv.mjs",
-  "public/src/sandbox.mjs",
-  "output.png",
-  "public/src/app_replace_rule_set.mjs",
   ".claude/hooks/__pycache__/bash-command-guard.cpython-313.pyc",
+  "data.json",
   "data/backups/data.2025-09-28T17-50-05-876.json",
-  "data/propmts.json",
+  "data/data.json",
   "data/prompts.json",
-  "public/src/app_reply_main.mjs",
-  "public/src/app_replace_rule_sets_fns_rules_used.mjs",
-  "public/src/app_g_main.mjs"
+  "data/propmts.json",
+  "output.png",
+  "web/public/src/app_g_main.mjs",
+  "web/public/src/app_replace_rule_set.mjs",
+  "web/public/src/app_replace_rule_sets_fns_rules_used.mjs",
+  "web/public/src/app_reply_main.mjs",
+  "web/public/src/kjv.mjs",
+  "web/public/src/sandbox.mjs"
  ]
 }
