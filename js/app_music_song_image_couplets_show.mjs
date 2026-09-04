@@ -3,7 +3,6 @@ import { song_image_couplets } from "./song_image_couplets.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { app_music_song_pictures_new } from "./app_music_song_pictures_new.mjs";
 import { app_music_song_pictures_buttons } from "./app_music_song_pictures_buttons.mjs";
-import { app_music_song_images_warm_button } from "./app_music_song_images_warm_button.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_p_text_centered } from "./html_p_text_centered.mjs";
@@ -32,6 +31,7 @@ export async function app_music_song_image_couplets_show(parent, song) {
   "THE TRANSLATION CHOICES ARE READ ONCE AT THE TOP AND CARRIED DOWN, to the lines and to the pictures alike, rather than looked up under each of them. Sixteen of these passages are sung by the song next door as well, and each of the two may want a different wording of the same verse.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while ninety passages are folded away.";
   "SHOW-ALL-PICTURES AND HIDE-ALL-PICTURES SIT THERE TOO, and the one thing they are given is made here rather than by them, because the drawings they act on are made further down this loop and do not exist yet when the buttons are drawn. What passes between them is the same thing under both names: the buttons write into it and each drawing reads it as it joins.";
+  "THERE IS NO THIRD BUTTON OFFERING TO FETCH THE PICTURES. There was, and beside show-all-pictures it read as the same offer worded differently; showing them is what fetches them now, and the count of how many have landed is said under the two buttons rather than by a button of its own.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
   arguments_assert(arguments, 2);
   let couplets = song_image_couplets();
@@ -39,7 +39,6 @@ export async function app_music_song_image_couplets_show(parent, song) {
   let folds = app_music_song_folds_show(parent);
   let pictures = app_music_song_pictures_new();
   app_music_song_pictures_buttons(parent, pictures);
-  app_music_song_images_warm_button(parent);
   let verse_shown = 0;
   let asked_all = [];
   for (let couplet of couplets) {
