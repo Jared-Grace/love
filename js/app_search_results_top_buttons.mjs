@@ -21,11 +21,13 @@ export function app_search_results_top_buttons({
   arguments_assert(arguments, 1);
   app_shared_buttons_expand_collapse(
     div_results,
-    expand_all_lambda,
-    collapse_all_lambda,
-    folds_expand,
-    folds_collapse,
-    expand_more_is,
+    {
+      expand_all_lambda,
+      collapse_all_lambda,
+      folds_expand,
+      folds_collapse,
+      expand_more_is,
+    },
     "search results",
   );
   let left = html_button_copy_text();
