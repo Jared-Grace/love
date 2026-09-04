@@ -1,3 +1,4 @@
+import { audio_words_heard_model } from "./audio_words_heard_model.mjs";
 import { numbers_apart } from "./numbers_apart.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -40,7 +41,8 @@ export async function lyric_video_document_times_measure(
     return null;
   }
   let aligned = pieces[0];
-  let words_heard = await audio_words_heard(path_audio);
+  let model = audio_words_heard_model();
+  let words_heard = await audio_words_heard(path_audio, model);
   if (equal(words_heard, null)) {
     return null;
   }
