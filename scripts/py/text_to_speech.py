@@ -114,6 +114,7 @@ import soundfile as sf
 
 sys.stdout.reconfigure(encoding="utf-8")
 
+SAID_PATH = Path(__file__).resolve().parents[2] / "data/given/speech_pronunciations.json"
 MODEL_PATH = str(Path.home() / "a/user/kokoro/kokoro-v1.0.onnx")
 VOICES_PATH = str(Path.home() / "a/user/kokoro/voices-v1.0.bin")
 VOICE = "am_adam"
@@ -228,12 +229,35 @@ def g2p_ready():
     This is a function of its own so that anything checking a chapter for
     dropped words asks the same object the reading speaks with.  Two copies of
     these settings would let the check pass while the reading dropped words.
+
+    THE NAMES THIS REPO SAYS ITSELF ARE FILED IN THE READER'S OWN DICTIONARY,
+    WHICH IS WHY THE CAPTION KEEPS SPELLING THE NAME THE WAY THE BIBLE DOES.
+    The other way to mend a mispronounced name is to hand the voice a
+    respelling - to write "Ponshus Pylut" and let the letters-to-sound step do
+    what it likes with it.  That fixes the sound and breaks two things behind
+    it: the words on the screen come from the same text, and so do the words
+    the aligner is asked to find in the recording, so a respelling would put a
+    misspelling on the video and hand the aligner letters that are not in the
+    sound.  A dictionary entry changes only what is said.
+
+    EVERY ENTRY IS FILED TWICE, UNDER THE NAME AS WRITTEN AND UNDER ITS SMALL
+    LETTERS, BECAUSE THE TWO ARE SEPARATE ENTRIES AND ONLY ONE OF THEM IS EVER
+    LOOKED UP.  Measured: filing "pontius" alone left "Pontius Pilate" reading
+    exactly as wrongly as before, and the dictionary shipped with the model
+    holds "Herod" and "herod" as two keys of its own.  A name in this book is
+    almost always capitalised, so filing the small letters alone would mend
+    nothing at all and say nothing about it.
     """
     from misaki import en, espeak
 
-    return en.G2P(
+    g2p = en.G2P(
         trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
     )
+    said = json.loads(SAID_PATH.read_text(encoding="utf-8"))
+    for word, sounds in said.items():
+        g2p.lexicon.golds[word] = sounds
+        g2p.lexicon.golds[word.lower()] = sounds
+    return g2p
 
 
 def line_samples(g2p, kokoro, text):
