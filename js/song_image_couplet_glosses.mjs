@@ -25,7 +25,7 @@ export function song_image_couplet_glosses() {
         "Described. Matthew 27:24 names the water and the washing, and the basin is the one object in that verse. What the picture adds is the overflowing, which says washing to somebody who does not know the verse.",
     },
     3: {
-      kept: 4,
+      kept: 8,
       lyric_ref: "1 Peter 2:23, Matthew 27:29-30, Isaiah 50:6, Isaiah 53:3",
       lyric_explain:
         "Peter says that when HE was reviled, HE reviled not again. Matthew has them bow the knee in mockery, spit on HIM and strike HIM; Isaiah had already given the back to the smiters and the cheek to them that plucked off the hair.",
@@ -49,7 +49,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 22,
+      kept: 27,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
@@ -57,7 +57,7 @@ export function song_image_couplet_glosses() {
         "Inherited. The bare cross standing empty is the church's own emblem and no verse describes it; the empty beams are what make it say pardon rather than execution, which is the couplet's claim.",
     },
     7: {
-      kept: 6,
+      kept: 11,
       lyric_ref: "John 3:16, Romans 5:8, John 15:13",
       lyric_explain:
         "GOD commendeth HIS love toward us in that, while we were yet sinners, CHRIST died for us. Greater love hath no man than this, and the couplet says that this is the place where the love of GOD is on view.",
@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 7,
+      kept: 9,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -81,7 +81,7 @@ export function song_image_couplet_glosses() {
         "Described, and drawn as a second emblem rather than as the first one shown twice. Couplet 8 draws the debt itself, the blank bond nailed up; this draws what the payment did, which Psalm 107:14 says as HE brake their bands in sunder and Isaiah 61:1 as the opening of the prison to them that are bound. A fetter broken clean through is one grey shape anybody reads at a glance, and it collides with nothing else in the table.",
     },
     10: {
-      kept: 5,
+      kept: 11,
       lyric_ref: "Matthew 27:46, Psalm 22:1, Matthew 27:45",
       lyric_explain:
         "My God, my God, why hast thou forsaken me is the first line of Psalm 22, cried from the cross. Matthew puts darkness over all the land from the sixth hour to the ninth.",
@@ -121,7 +121,7 @@ export function song_image_couplet_glosses() {
         "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
-      kept: 8,
+      kept: 13,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 1,
+      kept: 8,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",
@@ -281,7 +281,7 @@ export function song_image_couplet_glosses() {
         "Described. A sceptre of righteousness is the sceptre of thy kingdom, in the same verse as the throne. The throne is drawn empty because the One who sits on it may not be drawn at all.",
     },
     35: {
-      kept: 2,
+      kept: 4,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "I AM THAT I AM is the name given at the bush. Before Abraham was, I am is HIS own claim to that name, and it is the claim the whole hymn has been building towards since its title.",
