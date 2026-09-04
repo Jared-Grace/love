@@ -61,6 +61,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 138",
     },
     {
+      chapter_code: "PSA146",
+      reference: "Psalm 146",
+    },
+    {
       chapter_code: "EZK18",
       reference: "Ezekiel 18",
     },
