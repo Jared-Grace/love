@@ -180,6 +180,10 @@ export function bible_glyph_chapter_references() {
       chapter_code: "REV01",
       reference: "Revelation 1",
     },
+    {
+      chapter_code: "REV10",
+      reference: "Revelation 10",
+    },
   ];
   return references;
 }
