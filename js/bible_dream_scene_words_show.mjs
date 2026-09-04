@@ -1,3 +1,4 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { html_style_padding_bottom } from "./html_style_padding_bottom.mjs";
 import { html_style_background } from "./html_style_background.mjs";
@@ -14,7 +15,7 @@ export function bible_dream_scene_words_show(root, scene) {
   "★ THE WORDS AND THE DRAWING NEED OPPOSITE WIDTHS, WHICH IS WHY THEY ARE TWO THINGS AND NOT ONE. Reading wants a narrow measure and drawing wants all the room there is. While they shared one box the words won, and every shape came out a thumbnail with bumps too small for anything to answer.";
   "It stays put while the page scrolls under it, and it paints its own ground for that reason: a transparent bar that stays still has the drawing slide through it.";
   let column = html_div(root);
-  html_style_set(column, "max-width", "1000px");
+  html_style_max_width(column, "1000px");
   html_style_margin(column, "0 auto");
   html_style_set(column, "position", "sticky");
   html_style_set(column, "top", "0");
