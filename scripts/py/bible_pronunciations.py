@@ -102,17 +102,26 @@ def misaki_of(syllables):
     the syllable.  Putting it at the front of the syllable instead is silently
     wrong - the word still speaks, with the stress in the wrong place.
 
-    The lexicon marks a syllable stressed or unstressed and nothing between, so
-    the first stressed syllable is read as the primary one and any later
-    stressed syllable as secondary.  A word with no stressed syllable at all
-    gets its primary on the first, because the reader restresses a proper noun
-    that arrives without one and would rather be told where.
+    ★ THE LAST STRESSED SYLLABLE IS THE MAIN ONE, NOT THE FIRST.  The lexicon
+    marks a syllable stressed or unstressed and nothing between, and 1333 of
+    its 5469 proper nouns - close to a quarter - are marked stressed more than
+    once, so which of them carries the main stress is a real decision and
+    getting it backwards would misplace the stress on a quarter of every name
+    in the Bible.  It was measured rather than chosen, over the 57 such names
+    the reader's own dictionary also holds: the last mark agrees 45 times, the
+    first 7.  The five it counted as neither are Beersheba, Benoni,
+    Elephantine, Halicarnassus and Nehemiah, and all five agree on which
+    syllable is stressed and differ only in the vowels around it.  Alexander is
+    the shape of it - marked stressed on al and on an, and said al-ex-AN-der.
+    A word with no stressed syllable at all gets its main stress on the first,
+    because the reader restresses a proper noun that arrives without one and
+    would rather be told where.
     """
     stressed = [i for i, (_, mark) in enumerate(syllables) if mark == "1"]
-    first = stressed[0] if stressed else 0
+    main = stressed[-1] if stressed else 0
     out = []
     for i, (phones, mark) in enumerate(syllables):
-        if i == first:
+        if i == main:
             stress = PRIMARY
         elif mark == "1":
             stress = SECONDARY
@@ -124,7 +133,7 @@ def misaki_of(syllables):
                 if not said:
                     out.append(stress)
                     said = True
-                unstressed = mark == "0" and i != first
+                unstressed = mark == "0" and i != main
                 out.append(UNSTRESSED[phone] if unstressed and phone in UNSTRESSED else VOWELS[phone])
             elif phone in CONSONANTS:
                 out.append(CONSONANTS[phone])
