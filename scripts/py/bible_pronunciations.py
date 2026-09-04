@@ -13,11 +13,12 @@ looking words up got a wrong number.  The sounding-out itself is one function
 on the reader, so it is wrapped and the whole Bible read through it, and what
 the wrapper was handed is the answer.  Over the 764679 words of engwebu:
 without this lexicon 2776 distinct words are sounded out, said 13398 times;
-with it and the hand-written answers beside it, 53 are, said 396 times - and
-not one of those 53 is a Bible name.  42 are ordinary English the sounding-out
-gets right anyway (copied, denied, poorer, withdrew) and the other 11 are two
-words an em dash has glued into one token, which is a defect in the splitting
-rather than in the saying.
+with it and the hand-written answers beside it, and the em dashes opened by
+text_to_speech.said_text, 42 are, said 385 times.  Not one of the 42 is a
+Bible name: they are ordinary English the sounding-out gets right anyway -
+copied, denied, poorer, withdrew, comparatives and past tenses of words it
+already holds.  Every Bible name in this Bible is now read rather than spelled
+out.
 
 BibleVox is what mends those 2723.  It is a pronunciation lexicon for the
 Bible, MIT licensed, kept beside this file as given, notice and all.  It is
