@@ -160,7 +160,7 @@ export function bible_glyph_chapter_rosetta_lines_jud01() {
         original:
           "σῴζετε ἐκ πυρὸς ἁρπάζοντες οὓς δὲ ἐλεᾶτε ἐν φόβῳ μισοῦντες καὶ τὸν ἀπὸ τῆς σαρκὸς ἐσπιλωμένον χιτῶνα",
         english:
-          "save by snatching them from the fire and to still others show mercy tempered with fear hating even the clothing stained by the flesh",
+          "save others by snatching them from the fire and to still others show mercy tempered with fear hating even the clothing stained by the flesh",
       },
       {
         verse_number: 24,
