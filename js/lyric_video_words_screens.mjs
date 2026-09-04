@@ -26,8 +26,8 @@ export function lyric_video_words_screens(words, room, seconds) {
   let marks = [",", ";", ":", ".", "?", "!"];
   let look_back = 4;
   let count = list_size(words);
-  function word_text(index) {
-    let word = words[index];
+  function word_text(order_word) {
+    let word = words[order_word];
     let text = property_get(word, "word");
     return text;
   }
@@ -46,10 +46,10 @@ export function lyric_video_words_screens(words, room, seconds) {
     let text = text_combine_multiple(parts);
     return text;
   }
-  function break_index(first, reached) {
+  function break_index(opened, reached) {
     let earliest = subtract(reached, look_back);
     let back = subtract(reached, 1);
-    while (greater_than(back, first) && greater_than_equal(back, earliest)) {
+    while (greater_than(back, opened) && greater_than_equal(back, earliest)) {
       let text = word_text(back);
       let marked = text_ends_with_any(text, marks);
       if (marked) {
