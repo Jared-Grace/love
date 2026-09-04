@@ -1,3 +1,4 @@
+import { apps_names_way_in_gate_run } from "./apps_names_way_in_gate_run.mjs";
 import { bible_glyph_chapter_urdu_verses_fetched_gate_run } from "./bible_glyph_chapter_urdu_verses_fetched_gate_run.mjs";
 import { bible_glyph_chapter_rosetta_lines_prose_gate_run } from "./bible_glyph_chapter_rosetta_lines_prose_gate_run.mjs";
 import { lyric_video_words_screens_cases_gate_run } from "./lyric_video_words_screens_cases_gate_run.mjs";
@@ -973,6 +974,7 @@ export function qa_gates() {
     lyric_video_words_screens_cases_gate_run,
     bible_glyph_chapter_rosetta_lines_prose_gate_run,
     bible_glyph_chapter_urdu_verses_fetched_gate_run,
+    apps_names_way_in_gate_run,
   ];
   return gates;
 }
