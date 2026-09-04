@@ -1,10 +1,10 @@
-import { openai_cmd_py_api } from "./openai_cmd_py_api.mjs";
+import { openai_off_cmd_py_api } from "./openai_off_cmd_py_api.mjs";
 export async function openai_off_chat_completions_file(
   input_file_path,
   output_file_path,
 ) {
   let openai_script_name = "chat_completions";
-  await openai_cmd_py_api(
+  await openai_off_cmd_py_api(
     openai_script_name,
     input_file_path,
     output_file_path,
