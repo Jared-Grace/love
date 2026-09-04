@@ -201,35 +201,78 @@ def lexicon_parted():
     text_to_speech.g2p_ready, and is why they are kept apart from the entries
     that were actually written down.
 
+    ★ A HALF LEARNED FROM ONE JOINED NAME CUTS THE NEXT ONE.  En has no entry
+    of its own, so En-gedi cannot be cut - but En-rimmon can, because Rimmon
+    has one, and that says En is one syllable.  Knowing that cuts En-gedi,
+    En-gannim, En-rogel, En-hakkore and the rest.  So the cutting is run over
+    and over until it stops learning, and a count is only kept when every
+    joined name offering one offers the same number.  Measured: nothing
+    disagrees, and the second-hand cuts are worth another 16 words on top of
+    the 60 the first-hand ones give - 147 words this Bible sounds out down to
+    71.
+
+    ★ IT IS CHECKED WHERE IT DOES NOT NEED TO BE.  When both halves have their
+    own entry the cut is not needed, so the halves it works out can be held
+    against the halves the lexicon wrote down: 677 of 752 come out identical.
+    The 75 that differ differ in a vowel the joined name reduces or in a
+    stress mark, and a few in which side of the join a consonant falls on.
+    That is the size of the risk being taken on a half nobody wrote down - and
+    the alternative for those is not a written-down answer, it is the name
+    being sounded out letter by letter.
+
     Every joined key is a name or an Aramaic phrase - 634 of the 637 are
     tagged as proper nouns and the other three are talitha-cumi, maran-atha
-    and sabach-thani - so the homograph reason for keeping to proper nouns does not
-    reach them, and the tag is not consulted.  Measured over the words this
-    Bible actually says: 59 of the 147 it still sounds out are halves like
-    these.
+    and sabach-thani - so the homograph reason for keeping to proper nouns
+    does not reach them, and the tag is not consulted.
     """
     entries = lexicon_entries()
     counts = {}
     for word, _, syllables in entries:
         if "-" not in word and "_" not in word:
             counts.setdefault(word.lower(), len(syllables))
-    parted = {}
+    joined = []
     for word, _, syllables in entries:
         parts = [part for part in word.replace("_", "-").split("-") if part]
-        if len(parts) != 2:
-            continue
-        head, tail = parts
-        cut = counts.get(head.lower())
+        if len(parts) == 2:
+            joined.append((parts[0], parts[1], syllables))
+
+    while True:
+        offered = {}
+        for head, tail, syllables in joined:
+            cut = lexicon_parted_cut(counts, head, tail, len(syllables))
+            if cut is None:
+                continue
+            for part, count in ((head, cut), (tail, len(syllables) - cut)):
+                if part.lower() not in counts:
+                    offered.setdefault(part.lower(), set()).add(count)
+        learned = {
+            part: sizes.pop() for part, sizes in offered.items() if len(sizes) == 1
+        }
+        if not learned:
+            break
+        counts.update(learned)
+
+    parted = {}
+    for head, tail, syllables in joined:
+        cut = lexicon_parted_cut(counts, head, tail, len(syllables))
         if cut is None:
-            behind = counts.get(tail.lower())
-            cut = None if behind is None else len(syllables) - behind
-        if cut is None or cut < 1 or cut >= len(syllables):
             continue
         for part, syls in ((head, syllables[:cut]), (tail, syllables[cut:])):
             sounds = misaki_of(syls)
             if sounds is not None:
                 parted.setdefault(part.capitalize(), sounds)
     return parted
+
+
+def lexicon_parted_cut(counts, head, tail, total):
+    """Where a joined name's syllables divide, or nothing when neither side says."""
+    cut = counts.get(head.lower())
+    if cut is None:
+        behind = counts.get(tail.lower())
+        cut = None if behind is None else total - behind
+    if cut is None or cut < 1 or cut >= total:
+        return None
+    return cut
 
 
 def pronunciations():
