@@ -106,7 +106,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn09() {
         original:
           "Ἔλεγον οὖν ἐκ τῶν Φαρισαίων τινές Οὐκ ἔστιν οὗτος παρὰ Θεοῦ ὁ ἄνθρωπος ὅτι τὸ σάββατον οὐ τηρεῖ Ἄλλοι ἔλεγον Πῶς δύναται ἄνθρωπος ἁμαρτωλὸς τοιαῦτα σημεῖα ποιεῖν Καὶ σχίσμα ἦν ἐν αὐτοῖς",
         english:
-          "Because of this some of the Pharisees said This man is not from God for He does not keep the Sabbath others said How can a sinful man perform such signs And there was division among them",
+          "Because of this some of the Pharisees said This man is not from God for He does not keep the Sabbath But others said How can a sinful man perform such signs And there was division among them",
       },
       {
         verse_number: 17,
