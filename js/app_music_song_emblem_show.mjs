@@ -4,36 +4,46 @@ import { equal } from "./equal.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_couplet_symbol_references } from "./song_image_couplet_symbol_references.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
-import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
-import { list_add_multiple } from "./list_add_multiple.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_flex_row_gap } from "./html_flex_row_gap.mjs";
+import { html_align_items_start } from "./html_align_items_start.mjs";
+import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { html_img } from "./html_img.mjs";
 import { html_attribute_set } from "./html_attribute_set.mjs";
 import { html_img_lazy_full_block } from "./html_img_lazy_full_block.mjs";
-import { html_style_max_width } from "./html_style_max_width.mjs";
 import { app_music_song_emblem_width } from "./app_music_song_emblem_width.mjs";
+import { html_style_max_width } from "./html_style_max_width.mjs";
+import { app_music_song_emblem_border_width } from "./app_music_song_emblem_border_width.mjs";
 import { html_border } from "./html_border.mjs";
-import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { html_flex_shrink_0 } from "./html_flex_shrink_0.mjs";
+import { app_music_song_pictures_add } from "./app_music_song_pictures_add.mjs";
+import { not } from "./not.mjs";
+import { html_flex_grow_1 } from "./html_flex_grow_1.mjs";
+import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 export function app_music_song_emblem_show(
   folds,
   parent,
   n,
   caption,
   versions,
+  pictures,
 ) {
   "$plain n";
   "$plain caption";
-  "The picture drawn for one line of this hymn, with the passages that picture rests on folded behind it.";
+  "The picture drawn for one line of this hymn, with the passages that picture rests on folded beside it.";
   "THE PICTURE ANSWERS TO SCRIPTURE IN ITS OWN RIGHT, which is why it carries its own passages rather than borrowing the ones under the words. A reader who wonders why a broken fetter is standing beside this line can be told, in the words of the passage it was drawn from, without leaving the page.";
-  "WHEN THE PICTURE IS FETCHED IS ASKED FOR RATHER THAN SETTLED HERE, BUT HOW LARGE IT IS DRAWN IS SETTLED HERE, because the two pages that show these drawings want different sizes and a single answer would be wrong on one of them. The page that lays them out for checking wants each one as wide as its column, since there the drawing is the thing being looked at. Here the drawing sits under a line of a hymn, and the hymn is the thing being read, so it is held to a size that leaves the page to the words.";
+  "WHEN THE PICTURE IS FETCHED IS ASKED FOR RATHER THAN SETTLED HERE, BUT HOW LARGE IT IS DRAWN IS SETTLED HERE, because the two pages that show these drawings want different sizes and a single answer would be wrong on one of them. The page that lays them out for checking wants each one as wide as its column, since there the drawing is the thing being looked at. Here the drawing sits inside a hymn, and the hymn is the thing being read, so it is held to a size that leaves the page to the words.";
   "A BLACK EDGE IS DRAWN ROUND IT. These are pale shapes on a pale page, and at full width the edge of the column answered the question of where the drawing stopped; held small, nothing does, and a picture whose boundary a reader cannot find reads as a smudge on the page rather than as a thing that was drawn.";
   "The description the picture was drawn from is what a reader who cannot see it is given instead. It is already a plain account of the shape, written before the picture existed, so there is nothing to compose - and nothing else on the page says what is in the window.";
   "A line whose picture nobody has settled on yet is passed over in silence rather than left as a gap where a picture failed to load.";
   "THE SONG'S TRANSLATION CHOICES ARE CARRIED THROUGH HERE TOO, because the passages behind a picture are quoted the same way the passages behind a line are, and by the same song. A picture is a second thing this song rests scripture on, not a second song.";
   "It hands back the places waiting for words, the same way one sung line does, because the page fetches every passage on it in one go.";
   "WHAT TO CALL THE CARD IS DECIDED BY THE CALLER, because only the caller knows whether this picture has a neighbour. A line sung once has one picture and can simply say this picture; a line sung twice has two, one under the other, and two cards both saying this picture tell a reader who cannot see them apart nothing at all about which is which.";
-  "THE CARD IS DRAWN ABOVE THE PICTURE, not below it. A picture arrives late and at a height nobody knew in advance, so a card underneath one jumps down the page the moment the picture lands - and a reader reaching for the caret taps whatever slid into its place. Above the picture, the card is where it was when the reader looked at it.";
-  arguments_assert(arguments, 5);
+  "THE CARD IS DRAWN BESIDE THE PICTURE RATHER THAN UNDER IT. Held to a size that leaves most of the width unused, a picture stacked above its card spends a whole screen height on a shape and a caret and pushes the next sung line off the bottom; put side by side, the two together are no taller than the taller of them and the song stays readable straight down.";
+  "THE TWO ARE HELD AGAINST THE TOP OF THE ROW. A picture arrives late and at a height nobody knew in advance, and a card centred against it would be moved by the arrival - a reader reaching for the caret would tap whatever slid into its place. Held to the top, the card is where it was when the reader looked at it, whatever the picture turns out to be.";
+  "THE PICTURE KEEPS ITS WIDTH WHEN THE ROW IS TOO NARROW FOR BOTH, and the words give way instead, because words reflow and a drawing squeezed to a third of its size stops being legible at all.";
+  arguments_assert(arguments, 6);
   let url = song_image_kept_url(n);
   let unchosen = equal(url, "");
   if (unchosen) {
@@ -44,22 +54,30 @@ export function app_music_song_emblem_show(
   let references = song_image_couplet_symbol_references(n);
   let unreferenced = list_empty_is(references);
   let asked_list = [];
+  let row = html_div(parent);
+  html_flex_row_gap(row, "12px");
+  html_align_items_start(row);
+  html_style_margin_top(row, "12px");
+  let picture = html_img(row, url);
+  html_attribute_set(picture, "alt", couplet.symbol);
+  html_img_lazy_full_block(picture);
+  let width = app_music_song_emblem_width();
+  html_style_max_width(picture, width);
+  let border_width = app_music_song_emblem_border_width();
+  html_border(picture, border_width, "black");
+  html_flex_shrink_0(picture);
+  app_music_song_pictures_add(pictures, picture);
   if (not(unreferenced)) {
+    let beside = html_div(row);
+    html_flex_grow_1(beside);
     let shown = app_music_song_line_show(
       folds,
-      parent,
+      beside,
       caption,
       references,
       versions,
     );
     list_add_multiple(asked_list, shown.asked_list);
   }
-  let picture = html_img(parent, url);
-  html_attribute_set(picture, "alt", couplet.symbol);
-  html_img_lazy_full_block(picture);
-  let value = app_music_song_emblem_width();
-  html_style_max_width(picture, value);
-  html_border(picture, "2px", "black");
-  html_style_margin_top(picture, "12px");
   return asked_list;
 }
