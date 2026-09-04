@@ -1,3 +1,6 @@
+import { app_emoji_bible_english_shown_get } from "./app_emoji_bible_english_shown_get.mjs";
+import { app_emoji_bible_english_shown_toggle } from "./app_emoji_bible_english_shown_toggle.mjs";
+import { app_emoji_bible_english_shown_button_text } from "./app_emoji_bible_english_shown_button_text.mjs";
 import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
 import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
 import { app_emoji_bible_settings_button } from "./app_emoji_bible_settings_button.mjs";
@@ -43,7 +46,7 @@ export async function app_emoji_bible(context) {
   ("The reader may put a KEY under every verse, and the key is where the pictures are actually taught. Under the pictures go the same verse in the language it was written in and the same verse word for word in English, and NOBODY IS TOLD WHAT ANY PICTURE MEANS anywhere on the page. A reader who knows one of the two known lines works the pictures out from it, which is how the Rosetta stone was read - and everyone who does that arrives at the same meanings, because a picture is keyed to the original word rather than to anybody's translation.");
   ("The key opens DOWN. The picture Bible is the thing being offered, and a page that printed the English under every verse before being asked would have quietly become an English Bible with pictures over it - which is the exact failure this whole project exists to avoid.");
   ("THE VERSES ARE DRAWN AS ARTWORK RATHER THAN AS EMOJI CHARACTERS, and a reader who has been here before will see the same Bible drawn by this project instead of by their phone. The emoji are still underneath every picture and appear the moment one fails to arrive, so a glyph nobody has drawn yet costs nothing and a phone too old to know a character never has to draw it at all. That last one is not a nicety: several of these characters were added to the standard in the last few years, and the phone this Bible is for is the cheap one.");
-  ("Both of the reader's two choices sit in the bar of the chapter they are reading and nowhere on the list, because neither of them changes anything a list shows. A control that does nothing where it is drawn teaches the reader it does nothing anywhere.");
+  ("The reader's choices about a chapter sit in the bar of the chapter they are reading and nowhere on the list, because none of them changes anything a list shows. THE KEY AND THE ENGLISH ARE TWO CONTROLS AND NOT ONE: a reader who only wants to know what a verse says is not the reader who is learning what the pictures mean, and charging the first one three lines under every verse to answer a question they did not ask is how a page becomes unreadable. Asking for the English alone puts one line under each verse, and it is the same line the key would have shown, drawn by the same call - so the two views cannot drift apart. A control that does nothing where it is drawn teaches the reader it does nothing anywhere.");
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
   let value_default = app_shared_bible_font_size();
