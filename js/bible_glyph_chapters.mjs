@@ -198,6 +198,7 @@ export function bible_glyph_chapters() {
   let fifty_third = bible_glyph_chapter_gen02();
   let fifty_fourth = bible_glyph_chapter_psa097();
   let fifty_fifth = bible_glyph_chapter_psa096();
+  let fifty_sixth = bible_glyph_chapter_psa099();
   let chapters = [
     first,
     second,
