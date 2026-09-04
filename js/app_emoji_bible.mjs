@@ -79,6 +79,13 @@ export async function app_emoji_bible(context) {
   }
   let key_text = app_emoji_bible_key_shown_button_text(key_shown);
   app_shared_button(bar, key_text, lambda_key);
+  let english_shown = app_emoji_bible_english_shown_get();
+  async function lambda_english() {
+    app_emoji_bible_english_shown_toggle();
+    await app_emoji_bible(context);
+  }
+  let english_text = app_emoji_bible_english_shown_button_text(english_shown);
+  app_shared_button(bar, english_text, lambda_english);
   app_emoji_bible_settings_button(bar, context);
   let traditions = app_emoji_bible_traditions(tradition);
   let chapter_code = property_get(chosen, "chapter_code");
@@ -87,6 +94,7 @@ export async function app_emoji_bible(context) {
     chapter_code,
     traditions,
     key_shown,
+    english_shown,
   );
   app_emoji_bible_words_button(content, chapter_code);
   app_shared_footer(content);
