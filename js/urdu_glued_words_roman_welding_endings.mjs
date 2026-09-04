@@ -1,7 +1,7 @@
+import { property_get } from "./property_get.mjs";
+import { urdu_glued_words_roman_welding_endings_spaced_counts } from "./urdu_glued_words_roman_welding_endings_spaced_counts.mjs";
 import { urdu_glued_words_roman_welding_endings_ending } from "./urdu_glued_words_roman_welding_endings_ending.mjs";
-import { urdu_glued_words_roman_welding_endings_row } from "./urdu_glued_words_roman_welding_endings_row.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_tally } from "./list_tally.mjs";
 export function urdu_glued_words_roman_welding_endings(rows) {
   arguments_assert(arguments, 1);
   ("$plain rows");
@@ -11,11 +11,9 @@ export function urdu_glued_words_roman_welding_endings(rows) {
   ("★ ONLY THE WORDS THE URDU PRINTING WRITES WITH A SPACE ARE COUNTED, BECAUSE UNANIMITY ANYWHERE ELSE MEANS NOTHING. Most endings are unanimously run together for the dullest possible reason, which is that the words using them are ordinary single words and both printings say so. Counting those would call every common ending a convention. The only rows that carry information are the ones where the two printings already part company, and the question is whether they part company every single time.");
   ("An ending that only one such word uses is thrown out rather than believed. One row is not a class, and a rule read off a single case is the case wearing a rule's clothes.");
   ("★ NOTHING IS SILENCED HERE AND THAT IS DELIBERATE. Throwing the Latin printing out of these rows would leave the Urdu printing saying cut this word in two with nothing standing against it, so a mistake in this reading would not leave the text alone - it would change scripture. So the finding is handed back to be shown beside both printings, and the person who reads Urdu decides what it is worth. How many words back the ending is handed back with it for that reason: two of two and nine of nine are not the same claim.");
-  let welded = [];
-  let spaced = [];
-  urdu_glued_words_roman_welding_endings_row(rows, spaced, welded);
-  let welded_counts = list_tally(welded);
-  let spaced_counts = list_tally(spaced);
+  let r = urdu_glued_words_roman_welding_endings_spaced_counts(rows);
+  let spaced_counts = property_get(r, "spaced_counts");
+  let welded_counts = property_get(r, "welded_counts");
   let endings = {};
   urdu_glued_words_roman_welding_endings_ending(
     welded_counts,
