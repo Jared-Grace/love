@@ -37,7 +37,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "Λέγει αὐτῷ Θωμᾶς Κύριε οὐκ οἴδαμεν ποῦ ὑπάγεις πῶς δυνάμεθα τὴν ὁδὸν",
         english:
-          "Lord said Thomas we do not know where You are going so how can we the way",
+          "Lord said Thomas we do not know where You are going so how can we know the way",
       },
       {
         verse_number: 6,
@@ -51,7 +51,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn14() {
         original:
           "εἰ ἐγνώκειτέ με καὶ τὸν Πατέρα μου ἀπ’ ἄρτι γινώσκετε αὐτὸν καὶ ἑωράκατε",
         english:
-          "If you had known Me My Father From now on you do know Him and have seen",
+          "If you had known Me you would know My Father as well From now on you do know Him and have seen Him",
       },
       {
         verse_number: 8,
