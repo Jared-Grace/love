@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_type_nodes } from "./js_list_type_nodes.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export function js_name_object_literal_nodes(ast, name) {
   "$plain name";
@@ -19,8 +19,7 @@ export function js_name_object_literal_nodes(ast, name) {
     if (not(plain_is)) {
       continue;
     }
-    let bound_name = property_get(bound, "name");
-    let same_is = equal(bound_name, name);
+    let same_is = property_equals(bound, "name", name);
     if (not(same_is)) {
       continue;
     }
