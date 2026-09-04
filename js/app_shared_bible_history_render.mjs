@@ -26,7 +26,7 @@ export function app_shared_bible_history_render(
     async function on_entry() {
       await open_entry(entry);
     }
-    let div = app_shared_bible_history_entry_date_show(container, entry);
+    app_shared_bible_history_entry_date_show(container, entry);
     app_shared_button_wide(container, reference, on_entry);
   }
   each(entries, entry_button);
