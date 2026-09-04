@@ -529,6 +529,10 @@
    "size": 10426
   },
   {
+   "name": "1443.emoji_bible.js",
+   "size": 1678
+  },
+  {
    "name": "1555.emoji_bible.js",
    "size": 5003
   },
@@ -785,6 +789,10 @@
    "size": 7289
   },
   {
+   "name": "7190.emoji_bible.js",
+   "size": 2914
+  },
+  {
    "name": "7214.emoji_bible.js",
    "size": 9869
   },
@@ -922,7 +930,7 @@
   },
   {
    "name": "bible.js",
-   "size": 253872
+   "size": 253917
   },
   {
    "name": "calendar_paste.js",
@@ -946,7 +954,7 @@
   },
   {
    "name": "emoji_bible.js",
-   "size": 102159
+   "size": 102512
   },
   {
    "name": "en_learn_bible.js",
