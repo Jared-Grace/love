@@ -27,9 +27,9 @@ export async function git_history_heavy_absent_paths_closed() {
   let paths = [];
   let rounds = [];
   let asked = folder;
-  let round = 0;
+  let round_index = 0;
   let settled = false;
-  while (less_than(round, rounds_most)) {
+  while (less_than(round_index, rounds_most)) {
     let rows = await git_history_paths_absent_at_head(asked);
     let heavy = list_filter_map_property(
       rows,
@@ -39,7 +39,7 @@ export async function git_history_heavy_absent_paths_closed() {
     let named = list_without_multiple(heavy, kept);
     let fresh = list_without_multiple(named, paths);
     rounds.push({
-      round,
+      round: round_index,
       walked: list_size(rows),
       fresh,
     });
@@ -51,7 +51,7 @@ export async function git_history_heavy_absent_paths_closed() {
     let paths_text = list_join_comma(paths);
     let rehearsed = await git_history_paths_drop_rehearse(folder, paths_text);
     asked = property_get(rehearsed, "clone_folder");
-    round = add(round, 1);
+    round_index = add(round_index, 1);
   }
   true_is_assert_json(settled, rounds);
   let r = {
