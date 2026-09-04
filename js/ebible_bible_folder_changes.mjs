@@ -1,14 +1,13 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_folder_urdu } from "./ebible_folder_urdu.mjs";
-import { equal } from "./equal.mjs";
+import { ebible_bible_folder_repaired_is } from "./ebible_bible_folder_repaired_is.mjs";
+import { not } from "./not.mjs";
 import { urdu_glued_words_decided } from "./urdu_glued_words_decided.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_values_map_list } from "./object_values_map_list.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_join_space } from "./list_join_space.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function ebible_bible_folder_changes(bible_folder) {
   "$plain bible_folder";
   "What this app has altered in one publisher's bible, in words a reader is owed, or nothing at all for a bible carried exactly as it arrived.";
@@ -17,10 +16,10 @@ export function ebible_bible_folder_changes(bible_folder) {
   "The count is derived from the ruling table rather than written down beside it. A number typed into a sentence about a table is a second copy of the table's size, and the two go apart the first time somebody rules on one more word - silently, because a stale number reads exactly like a fresh one.";
   "The link goes to the ruling table itself rather than to a page describing it. The table is the list of changes the licence asks for: every spelling this app alters, its before, and its after, in one file that cannot drift from what actually runs because it is what actually runs.";
   "Every other bible is answered with nothing, which is the truth about them - they are shown exactly as their publishers wrote them, and a change notice on a text nobody changed would be a false statement about somebody else's scripture.";
+  "WHICH BIBLES THOSE ARE IS ASKED NEXT DOOR AND NOT DECIDED HERE, because the repair itself had its own copy of the same comparison. This sentence is a promise about what a reader is looking at and that function is the act the promise is about, so a bible added to one and not the other leaves a reader either reading altered scripture told it is untouched, or reading a publisher's own words under a notice saying they are not.";
   arguments_assert(arguments, 1);
-  let urdu = ebible_folder_urdu();
-  let same = equal(bible_folder, urdu);
-  if (not(same)) {
+  let repaired_is = ebible_bible_folder_repaired_is(bible_folder);
+  if (not(repaired_is)) {
     return null;
   }
   let decided = urdu_glued_words_decided();
