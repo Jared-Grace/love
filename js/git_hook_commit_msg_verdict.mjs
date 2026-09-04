@@ -19,6 +19,8 @@ export async function git_hook_commit_msg_verdict(f_path) {
     let unread = {
       refuse: false,
       reason: "there is no message file at that place to read",
+      spelled: null,
+      word: null,
     };
     return unread;
   }
