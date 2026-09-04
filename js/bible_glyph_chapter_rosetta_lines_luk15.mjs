@@ -200,7 +200,7 @@ export function bible_glyph_chapter_rosetta_lines_luk15() {
         original:
           "Ὁ δὲ ἀποκριθεὶς εἶπεν τῷ πατρὶ Ἰδοὺ τοσαῦτα ἔτη δουλεύω σοι καὶ οὐδέποτε ἐντολήν σου παρῆλθον καὶ ἐμοὶ οὐδέποτε ἔδωκας ἔριφον ἵνα μετὰ τῶν φίλων μου εὐφρανθῶ",
         english:
-          "But he answered father Look all these years I have served you and never disobeyed a commandment of yours Yet you never gave me even a young goat so I could celebrate with my friends",
+          "But he answered his father Look all these years I have served you and never disobeyed a commandment of yours Yet you never gave me even a young goat so I could celebrate with my friends",
       },
       {
         verse_number: 30,
