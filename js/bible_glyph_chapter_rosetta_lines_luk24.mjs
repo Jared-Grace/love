@@ -321,7 +321,7 @@ export function bible_glyph_chapter_rosetta_lines_luk24() {
       {
         verse_number: 48,
         original: "ὑμεῖς μάρτυρες τούτων",
-        english: "You witnesses of these things",
+        english: "You are witnesses of these things",
       },
       {
         verse_number: 49,
@@ -335,7 +335,7 @@ export function bible_glyph_chapter_rosetta_lines_luk24() {
         original:
           "Ἐξήγαγεν δὲ αὐτοὺς ἕως πρὸς Βηθανίαν καὶ ἐπάρας τὰς χεῖρας αὐτοῦ εὐλόγησεν αὐτούς",
         english:
-          "When Jesus had led them as far as Bethany He lifted up His hands and blessed them",
+          "When Jesus had led them out as far as Bethany He lifted up His hands and blessed them",
       },
       {
         verse_number: 51,
