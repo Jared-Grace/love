@@ -1,0 +1,74 @@
+import { less_than_equal } from "./less_than_equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
+import { greater_than } from "./greater_than.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
+export function lists_matched_indexes(before, after) {
+  "$plain before";
+  "$plain after";
+  "For each item of the first list, where the same item stands in the second list once the two have been laid alongside each other in order, or nothing where the second list has no partner for it.";
+  "★ IT PAIRS IN ORDER RATHER THAN BY LOOKING EACH ITEM UP, WHICH IS THE ONLY WAY A REPEATED ITEM CAN BE PAIRED CORRECTLY. A psalm says the word praise fifteen times; asking where praise occurs answers with all fifteen and settles nothing. Laying the lists alongside each other keeps every pairing in order, so the third praise can only pair with the third one heard.";
+  "★ WHAT IS MISSING FROM EITHER SIDE COSTS ONE PAIRING AND NEVER SHIFTS THE REST. A word skipped in the second list leaves nothing against its own place and the lists close up again straight after, where a reader walking both at once would be one out for the whole rest of the passage. That is the fault this exists to make impossible.";
+  "The cost of the table is the two lengths multiplied, so this is for lists of the size of a psalm and not for the words of a book.";
+  arguments_assert(arguments, 2);
+  let size_before = before.length;
+  let size_after = after.length;
+  let cost_gap = -1;
+  ("Each row holds the best score for having used that many items of each list. A row of nothing but gaps is what reaching either length without a single pairing costs.");
+  let table = [];
+  for (let i = 0; less_than_equal(i, size_before); i++) {
+    table.push(new Float64Array(size_after + 1));
+    table[i][0] = multiply(i, cost_gap);
+  }
+  for (let j = 0; less_than_equal(j, size_after); j++) {
+    table[0][j] = multiply(j, cost_gap);
+  }
+  for (let i = 1; less_than_equal(i, size_before); i++) {
+    for (let j = 1; less_than_equal(j, size_after); j++) {
+      let same = equal(before[subtract(i, 1)], after[subtract(j, 1)]) ? 1 : -1;
+      let paired = table[subtract(i, 1)][subtract(j, 1)] + same;
+      let skipped_before = table[subtract(i, 1)][j] + cost_gap;
+      let skipped_after = table[i][subtract(j, 1)] + cost_gap;
+      table[i][j] = Math.max(paired, skipped_before, skipped_after);
+    }
+  }
+  ("Walking back from the far corner says which choice each step of the best score was made of. Only a step that paired two items that were the same is reported; a step that paired two different items is the table admitting it had no better move, not a match.");
+  let indexes = [];
+  for (let i = 0; less_than(i, size_before); i++) {
+    indexes.push(null);
+  }
+  let walk_before = size_before;
+  let walk_after = size_after;
+  while (greater_than(walk_before, 0) && greater_than(walk_after, 0)) {
+    let same = equal(
+      before[subtract(walk_before, 1)],
+      after[subtract(walk_after, 1)],
+    )
+      ? 1
+      : -1;
+    if (
+      equal(
+        table[walk_before][walk_after],
+        table[subtract(walk_before, 1)][subtract(walk_after, 1)] + same,
+      )
+    ) {
+      if (equal(same, 1)) {
+        indexes[subtract(walk_before, 1)] = subtract(walk_after, 1);
+      }
+      walk_before = subtract(walk_before, 1);
+      walk_after = subtract(walk_after, 1);
+    } else if (
+      equal(
+        table[walk_before][walk_after],
+        table[subtract(walk_before, 1)][walk_after] + cost_gap,
+      )
+    ) {
+      walk_before = subtract(walk_before, 1);
+    } else {
+      walk_after = subtract(walk_after, 1);
+    }
+  }
+  return indexes;
+}
