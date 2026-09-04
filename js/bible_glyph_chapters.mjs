@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_psa146 } from "./bible_glyph_chapter_psa146.mjs";
 import { bible_glyph_chapter_psa067 } from "./bible_glyph_chapter_psa067.mjs";
 import { bible_glyph_chapter_psa134 } from "./bible_glyph_chapter_psa134.mjs";
 import { bible_glyph_chapter_psa001 } from "./bible_glyph_chapter_psa001.mjs";
@@ -117,6 +118,7 @@ export function bible_glyph_chapters() {
   ("THE FORTY FOURTH IS PSALM ONE, AND IT IS THE FIRST ENTRY CHOSEN AFTER SOMEBODY FINALLY MEASURED THE OLD TESTAMENT. Forty three chapters went in before anyone asked how the Hebrew books score against this root table, and the answer was that they score higher than the Greek ones - the best New Testament chapter left measures forty one in a hundred, and eleven Old Testament chapters beat that, the best of them by half again. Psalm one itself measures forty three and was taken ahead of six chapters that measure higher, because it is the door of the book and a person opening a psalter opens here. Four of the five grammar marks never once cross into Hebrew; the negation falls six times in six verses; and the two roads at the end are the whole psalm in one picture.");
   ("THE FORTY FIFTH IS PSALM ONE HUNDRED AND THIRTY FOUR, AND IT IS THE HIGHEST MEASURING CHAPTER IN THE WHOLE BIBLE FOR THIS ROOT TABLE. Sixty in a hundred, against a best of forty one anywhere in the New Testament. Three verses is why: it is a song of ascents, sung on the temple stairs, and a song sung while climbing has to be short. Almost every plain word left on the page is a name of a place or a person - Zion, night, ascents - and the reader who can name five marks can read the whole of it. It is the page to hand somebody first.");
   ("THE FORTY SIXTH IS PSALM SIXTY SEVEN, THE SECOND HIGHEST MEASURING CHAPTER IN THE BIBLE FOR THIS ROOT TABLE. Forty nine in a hundred, behind only the psalm entered before it. Seven verses, and the shape of it is a circle: God is asked to bless us so that the whole earth will know His way, and then the earth is asked to praise Him so that He will bless again. The word for the peoples falls five times in seven verses and gets the family mark every time. The psalm actually reaches for three different Hebrew words where English says peoples or nations, and the marks show all three apart: five get the family mark, one gets the map mark in the second verse, and the two in the fourth verse get nothing at all because that word is not seated. So plain letters sit right beside a mark that English treats as the same word. It is the clearest small example on the list of a page where the pictures know something the translation has flattened.");
+  ("THE FORTY SEVENTH IS PSALM ONE HUNDRED AND FORTY SIX, THE THIRD HIGHEST MEASURING CHAPTER IN THE BIBLE FOR THIS ROOT TABLE. Forty six in a hundred, ten verses. It is the psalm that tells you not to trust princes, because a prince stops breathing and his plans stop with him, and then lists what the LORD does instead - feeds the hungry, frees the prisoners, opens blind eyes, lifts the bent over, watches the stranger and the orphan and the widow. That list is almost entirely made of marks, which is why the page measures as high as it does. It is also the first Hebrew page on this list to carry the castle mark, in the last verse, where the reigning is said to go on forever.");
   ("Forty six chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
@@ -171,6 +173,7 @@ export function bible_glyph_chapters() {
   let forty_fourth = bible_glyph_chapter_psa001();
   let forty_fifth = bible_glyph_chapter_psa134();
   let forty_sixth = bible_glyph_chapter_psa067();
+  let forty_seventh = bible_glyph_chapter_psa146();
   let chapters = [
     first,
     second,
@@ -218,6 +221,7 @@ export function bible_glyph_chapters() {
     forty_fourth,
     forty_fifth,
     forty_sixth,
+    forty_seventh,
   ];
   return chapters;
 }
