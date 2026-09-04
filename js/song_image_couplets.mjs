@@ -346,7 +346,7 @@ export function song_image_couplets() {
         r2,
         ", and ",
         r3,
-        ", standing upright over that opening and covering the whole of it so that nothing of the opening shows at all, one flat unbroken grey circle with nothing drawn on its face and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the doorway reaching almost to the white border on both sides",
+        ", set flat against the front of the doorway directly in front of that opening and hiding the whole of it, the circle standing wholly inside the frame of the doorway and drawn as tall as it is wide, so that no part of the opening can be seen anywhere behind it or above it or beside it and the tomb is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the doorway reaching almost to the white border on both sides",
       ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,
