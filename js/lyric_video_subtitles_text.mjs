@@ -1,6 +1,8 @@
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { divide_round } from "./divide_round.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { number_is } from "./number_is.mjs";
@@ -20,8 +22,8 @@ export function lyric_video_subtitles_text(document) {
   "The words come from the translation unchanged, down to the couplet that begins in the lower case because it is the second half of a line. Repairing that capital would be correcting the poem to look like prose.";
   "Every line is one whole card rather than a word lit up at a time. A word-by-word sweep asks the reader to watch the screen; a card asks them to read it and then listen, which is what a psalm is for.";
   "Both lines at the foot stand through the whole song in grey, quiet enough to be ignored and always there. Together they are the attribution the translation asks for, and they also answer the question a person arriving in the middle of a video actually has.";
-  "The words sit at the middle of the frame rather than at the foot, because a phone is held with the lower part of the screen under a thumb and the middle is the part a person is already looking at.";
-  "★ THE MIDDLE IS STATED OUTRIGHT RATHER THAN ASKED FOR BY NAMING AN ALIGNMENT, because a subtitle that is merely aligned is moved out of the way of any other subtitle standing at the same moment - and the passage and the translation stand at every moment there is. A short card never grows far enough to touch them and so never moved; a card of ten lines does, and it was shifted downwards until it began below the passage and ran off the bottom of the frame, with nothing at all in the two thirds above it. Naming the point instead is what a placed card means, and a placed card is never moved. Where the point is put is exactly where an alignment would have put it, so nothing that fitted before has moved by so much as a pixel.";
+  "★ THE WORDS SIT AT THE MIDDLE OF THE ROOM ABOVE THE PASSAGE LINE, NOT AT THE MIDDLE OF THE FRAME, AND THE POINT IS WORKED OUT RATHER THAN AUTHORED. They sit high rather than at the foot because a phone is held with the lower part of the screen under a thumb; they sit at the middle of what is free rather than of the whole because the foot is not free - the passage and the translation stand there through every frame there is. A card centred on the frame can only grow downwards as far as that passage line, and honesty about that limit forces it to leave the same room unused above, so a third of the frame does nothing and a long card is made smaller than it had to be. The point is worked out from the sizes at the foot for the same reason the upper of those two lines is: a document that stated it as well would be stating one fact twice, and the two would part company the first time somebody changed a size.";
+  "★ THE MIDDLE IS STATED OUTRIGHT RATHER THAN ASKED FOR BY NAMING AN ALIGNMENT, because a subtitle that is merely aligned is moved out of the way of any other subtitle standing at the same moment - and the passage and the translation stand at every moment there is. A short card never grows far enough to touch them and so never moved; a card of ten lines does, and it was shifted downwards until it began below the passage and ran off the bottom of the frame, with nothing at all in the two thirds above it. Naming the point instead is what a placed card means, and a placed card is never moved. Where the point is put used to be exactly where an alignment would have put it, and is not any more: it has been raised into the room above the passage line, for the reason the line above gives.";
   "★ A CARD TOO LONG FOR THE FRAME IS SET SMALLER RATHER THAN CUT IN TWO, AND THE ALTERNATIVE IS WHY. Cutting it needs a moment to cut at, and for spoken words there is none to be had: the voice model hands back sound with no times inside it, so the join could only be placed by reasoning from how long the words are and hoping the reader crossed it there. The size, by contrast, is read off the words themselves and nothing is supposed about the reading. A song never meets this, because its lines are short and were placed by ear; a chapter meets it wherever one sentence runs a long way, and the size is written into the card itself so only that card is affected and the rest of the chapter stands as it always did.";
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   let width = document.width;
@@ -59,7 +61,9 @@ export function lyric_video_subtitles_text(document) {
     credit_margin +
     ",1";
   let middle_x = divide(width, 2);
-  let middle_y = divide(height, 2);
+  let left = subtract(height, passage_margin);
+  let passage_top = subtract(left, passage_size);
+  let middle_y = divide_round(passage_top, 2);
   let lyric_place = "\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)";
   let characters_max = lyric_video_screen_characters_max();
   let song_end = subtitles_time_text(document.duration);
