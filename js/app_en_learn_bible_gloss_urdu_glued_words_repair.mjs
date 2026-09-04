@@ -1,9 +1,5 @@
-import { property_not } from "./property_not.mjs";
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -12,6 +8,7 @@ import { urdu_glued_words_split } from "./urdu_glued_words_split.mjs";
 import { equal } from "./equal.mjs";
 import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { list_map_async_filter_null_not_is } from "./list_map_async_filter_null_not_is.mjs";
+import { property_not } from "./property_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
@@ -21,10 +18,9 @@ export async function app_en_learn_bible_gloss_urdu_glued_words_repair() {
   "It reaches every piece of text in a chapter rather than the ones named here, and that is deliberate. The English of the verse and the Greek beside it are handed to the same reading and come back untouched, because every word the reading knows is written in the Urdu script and nothing in another script can match one. Naming the fields instead would have to be kept in step with the shape of the store, and a field left off the list looks exactly like a field with nothing wrong in it.";
   "A chapter whose text does not change is not written back. That leaves the file dates telling the truth about which chapters this touched, and it is what lets the answer say how many were actually spelled wrong rather than how many were looked at.";
   "It asks again after writing. Running the reading over what was just written must change nothing further, and a chapter where it would is reported by name rather than passed over, because that is the one outcome that means the repair does not settle.";
+  "Which chapters the store holds is asked of the reading that every other sweep over a gloss store asks, rather than opened here. Reading a folder and turning its file names into chapter names is not this function's work and was written out twice, once here and once in the repair standing beside it - which is exactly the shared run a gate names.";
   let fn = app_en_learn_bible_gloss_urdu_generate;
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_repair(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let chapter = await file_read_json(path);
