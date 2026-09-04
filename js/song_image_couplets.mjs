@@ -132,6 +132,8 @@ export function song_image_couplets() {
   let r = song_image_tomb_rock();
   let r2 = song_image_tomb_rock();
   let r3 = song_image_tomb_stone();
+  let r4 = song_image_tomb_rock();
+  let r5 = song_image_tomb_stone();
   let couplets = [
     {
       n: 1,
@@ -375,9 +377,9 @@ export function song_image_couplets() {
       first: "the SON of GOD",
       second: "was raised to life",
       symbol: list_join_empty([
-        song_image_tomb_rock(),
+        r4,
         ", that opening one flat sheet of white glass standing wide open and shining, and ",
-        song_image_tomb_stone(),
+        r5,
         ", rolled fully clear of that opening and standing upright on the ground at one side of the doorway with no part of it covering the opening at all",
         ", and out of that opening six or seven broad straight beams of white glass going out past the doorway and upward, each beam one flat unbroken pane of white with a black lead line down each of its two sides, no two of them the same width and no two the same length, some of them reaching right out to the white border",
         ", nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the doorway reaching almost to the white border on both sides",
@@ -441,7 +443,7 @@ export function song_image_couplets() {
       first: "we live our lives",
       second: "in godly fear",
       symbol:
-        "A mountain burning at its top, one grey mountain standing alone with no other hill beside it, its crest uneven and broken rather than one straight sided triangle, ridges and gullies down its sides in light and dark grey, filling the lower half of the window from the white border on one side to the white border on the other, and burning on its summit a great mass of fire in tall tongues as high again as the mountain, deep crimson at their roots, ruby red through most of their height and white at their tips, the whole mass of fire one unbroken sweep of glass with no lead line anywhere across it, and out of that fire thick smoke of dark grey, darker than the mountain, billowing up in soft curling coils with ragged edges and nowhere a circle, leaning and spreading wider as they rise, filling the whole of the window above the mountain right up to the head of the arch and right out to the white border on both sides so that no plain sky is left showing anywhere above the mountain, and what little shows between the coils the very darkest cobalt blue of a sky under thick cloud and never a bright or open blue",
+        "A mountain burning at its top, one grey mountain standing alone with no other hill beside it, its crest uneven and broken rather than one straight sided triangle, its whole face one flat grey of a single colour with no shading and no texture anywhere on it, standing on the foot of the window and rising to about half its height and running from the white border on one side to the white border on the other, and burning on its summit a great mass of fire in tall tongues as high again as the mountain, deep crimson at their roots, ruby red through most of their height and white at their tips, the whole mass of fire one unbroken sweep of glass with no lead line anywhere across it, no smoke anywhere in the picture and nothing else in the window at all, the band between the two lead lines one flat sheet of violet and the band below them one flat sheet of emerald green",
       symbol_ref: "Exodus 19:18, Deuteronomy 4:11, Hebrews 12:18-21",
       same_as: 0,
     },
