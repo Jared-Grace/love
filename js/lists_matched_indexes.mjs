@@ -1,8 +1,5 @@
+import { lists_matched_indexes_same } from "./lists_matched_indexes_same.mjs";
 import { lists_matched_indexes_earlier } from "./lists_matched_indexes_earlier.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { multiply } from "./multiply.mjs";
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function lists_matched_indexes(before, after) {
@@ -18,22 +15,15 @@ export function lists_matched_indexes(before, after) {
   let cost_gap = -1;
   ("Each row holds the best score for having used that many items of each list. A row of nothing but gaps is what reaching either length without a single pairing costs.");
   let table = [];
-  for (let i = 0; less_than_equal(i, size_before); i++) {
-    table.push(new Float64Array(size_after + 1));
-    table[i][0] = multiply(i, cost_gap);
-  }
-  for (let j = 0; less_than_equal(j, size_after); j++) {
-    table[0][j] = multiply(j, cost_gap);
-  }
-  for (let i = 1; less_than_equal(i, size_before); i++) {
-    for (let j = 1; less_than_equal(j, size_after); j++) {
-      let same = equal(before[subtract(i, 1)], after[subtract(j, 1)]) ? 1 : -1;
-      let paired = table[subtract(i, 1)][subtract(j, 1)] + same;
-      let skipped_before = table[subtract(i, 1)][j] + cost_gap;
-      let skipped_after = table[i][subtract(j, 1)] + cost_gap;
-      table[i][j] = Math.max(paired, skipped_before, skipped_after);
-    }
-  }
+  lists_matched_indexes_same(
+    size_before,
+    table,
+    Float64Array,
+    size_after,
+    cost_gap,
+    before,
+    after,
+  );
   ("Walking back from the far corner says which choice each step of the best score was made of. Only a step that paired two items that were the same is reported; a step that paired two different items is the table admitting it had no better move, not a match.");
   let indexes = [];
   for (let i = 0; less_than(i, size_before); i++) {
