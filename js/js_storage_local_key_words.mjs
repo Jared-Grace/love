@@ -28,7 +28,7 @@ export function js_storage_local_key_words(ast, seams) {
     let written = js_node_word_frozen_try(word_node);
     let here = not_equal(written, null);
     if (here) {
-      add(written);
+      found_add(written);
       return;
     }
     let variable = js_identifier_name_try(word_node);
@@ -40,10 +40,10 @@ export function js_storage_local_key_words(ast, seams) {
     let word_above = js_node_word_frozen_try(source);
     let set_here = not_equal(word_above, null);
     if (set_here) {
-      add(word_above);
+      found_add(word_above);
     }
   }
-  function add(word) {
+  function found_add(word) {
     let nothing = equal(word, "");
     if (nothing) {
       return;
