@@ -139,7 +139,7 @@ export function bible_glyph_chapter_rosetta_lines_mrk08() {
         original:
           "Ὅτε τοὺς ἑπτὰ εἰς τοὺς τετρακισχιλίους πόσων σπυρίδων πληρώματα κλασμάτων ἤρατε Καὶ λέγουσιν Ἑπτά",
         english:
-          "when I broke the seven loaves for the four thousand how many basketfuls of broken pieces did you collect Seven said",
+          "And when I broke the seven loaves for the four thousand how many basketfuls of broken pieces did you collect Seven they said",
       },
       {
         verse_number: 21,
