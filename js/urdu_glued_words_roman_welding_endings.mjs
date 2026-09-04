@@ -1,11 +1,7 @@
+import { urdu_glued_words_roman_welding_endings_ending } from "./urdu_glued_words_roman_welding_endings_ending.mjs";
 import { urdu_glued_words_roman_welding_endings_row } from "./urdu_glued_words_roman_welding_endings_row.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_tally } from "./list_tally.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { property_set } from "./property_set.mjs";
 export function urdu_glued_words_roman_welding_endings(rows) {
   arguments_assert(arguments, 1);
   ("$plain rows");
@@ -21,17 +17,10 @@ export function urdu_glued_words_roman_welding_endings(rows) {
   let welded_counts = list_tally(welded);
   let spaced_counts = list_tally(spaced);
   let endings = {};
-  for (let ending of object_property_names(welded_counts)) {
-    let ever_spaced = property_get_or_null(spaced_counts, ending);
-    if (ever_spaced) {
-      continue;
-    }
-    let how_many = property_get(welded_counts, ending);
-    let alone = less_than(how_many, 2);
-    if (alone) {
-      continue;
-    }
-    property_set(endings, ending, how_many);
-  }
+  urdu_glued_words_roman_welding_endings_ending(
+    welded_counts,
+    spaced_counts,
+    endings,
+  );
   return endings;
 }
