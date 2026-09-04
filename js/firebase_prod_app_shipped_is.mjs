@@ -1,13 +1,16 @@
-import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { firebase_prod_hashes } from "./firebase_prod_hashes.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
+import { object_empty_is } from "./object_empty_is.mjs";
 import { json_equal } from "./json_equal.mjs";
 export async function firebase_prod_app_shipped_is(app_name) {
   "$plain app_name";
   "whether what is built and waiting for one app is already the thing being served - so sending it would change nothing";
   "this is the question the other apps have to answer when one app is being sent. the whole site goes up together, so sending one app republishes the rest - and an app whose waiting build is already the thing being served is carried along without anybody having to argue about whether it is sound. it was argued about when it was sent";
   "an app nothing has been written about yet answers no. nobody has looked at it, which is not the same as it matching - and of the two ways to be wrong the one to choose is the one that holds a deploy rather than the one that lets it by";
+  "AN APP WITH NOTHING WAITING ON DISK ALSO ANSWERS NO, AND THAT IS THE WHOLE REASON THIS LINE IS HERE. Nothing on disk means nothing was found under that name at all, and the comparison below is then being asked whether nothing matches nothing - to which the answer is always yes. So an app this reading cannot find anywhere reads as already sent, which is the one answer that lets a deploy past without a single one of its pieces ever having been looked at. Measured on the fourth of September: one name in the note beside this one was written as nothing at all, had been so since the second, and had been answering yes on those terms for two days.";
+  "The two ways of having nothing are worth keeping apart even though both answer no. Nothing written down is a question nobody has got to yet; nothing on disk is a question that was got to and came back with an app that is not there. The second is the one that should be looked into, because a name being asked about that names no files is either a name from somewhere this reading does not cover or a build that quietly produced nothing.";
   "neither side of this goes near a wire. both were reduced to a handful of words beforehand - one of them the last time anybody looked at what is being served - so this can be asked while everything else is held up waiting for it";
   let noted = await firebase_prod_hashes();
   let written = property_get_or_null(noted, app_name);
@@ -16,6 +19,10 @@ export async function firebase_prod_app_shipped_is(app_name) {
     return false;
   }
   let disk = await firebase_prod_app_disk_hashes(app_name);
+  let nothing_waiting = object_empty_is(disk);
+  if (nothing_waiting) {
+    return false;
+  }
   let same = json_equal(written, disk);
   return same;
 }

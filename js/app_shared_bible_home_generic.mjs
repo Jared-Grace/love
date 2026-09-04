@@ -1,4 +1,3 @@
-import { app_shared_bible_date_today_show } from "./app_shared_bible_date_today_show.mjs";
 import { app_shared_bible_home_frame } from "./app_shared_bible_home_frame.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_bible_home_reference_shown_is } from "./app_shared_bible_home_reference_shown_is.mjs";
@@ -19,7 +18,6 @@ export async function app_shared_bible_home_generic(
   let r4 = app_shared_bible_home_frame(context, bar_extra);
   let bar = property_get(r4, "bar");
   let content = property_get(r4, "content");
-  app_shared_bible_date_today_show(content);
   let foot = property_get(r4, "foot");
   ("A passage asked for by name is answered before the page falls back on somewhere to start, because a link carrying a reference has said where to open and the falling back is for links that have not.");
   if (await app_shared_bible_home_reference_shown_is(context, content)) {
