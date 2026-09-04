@@ -2,7 +2,7 @@
  "known": [
   {
    "name": "105.sandbox.js",
-   "size": 11329
+   "size": 15688
   },
   {
    "name": "138.g_bible.js",
@@ -325,6 +325,10 @@
    "size": 3831
   },
   {
+   "name": "714.emoji_bible.js",
+   "size": 1845
+  },
+  {
    "name": "723.index.js",
    "size": 14246
   },
@@ -437,6 +441,10 @@
    "size": 6925
   },
   {
+   "name": "815.emoji_bible.js",
+   "size": 1189
+  },
+  {
    "name": "817.replace.js",
    "size": 2694
   },
@@ -450,7 +458,7 @@
   },
   {
    "name": "827.sandbox.js",
-   "size": 33790
+   "size": 34090
   },
   {
    "name": "870.emoji_bible.js",
@@ -494,7 +502,7 @@
   },
   {
    "name": "984.sandbox.js",
-   "size": 636284
+   "size": 636569
   },
   {
    "name": "986.search.js",
@@ -551,6 +559,10 @@
   {
    "name": "1864.emoji_bible.js",
    "size": 10636
+  },
+  {
+   "name": "1971.emoji_bible.js",
+   "size": 2866
   },
   {
    "name": "2096.emoji_bible.js",
@@ -677,6 +689,10 @@
    "size": 5236
   },
   {
+   "name": "5125.emoji_bible.js",
+   "size": 1848
+  },
+  {
    "name": "5190.emoji_bible.js",
    "size": 5018
   },
@@ -766,7 +782,7 @@
   },
   {
    "name": "6745.emoji_bible.js",
-   "size": 250375
+   "size": 255313
   },
   {
    "name": "6830.emoji_bible.js",
@@ -841,6 +857,10 @@
    "size": 5497
   },
   {
+   "name": "8262.emoji_bible.js",
+   "size": 1782
+  },
+  {
    "name": "8305.emoji_bible.js",
    "size": 14597
   },
@@ -913,6 +933,10 @@
    "size": 13517
   },
   {
+   "name": "9656.emoji_bible.js",
+   "size": 2923
+  },
+  {
    "name": "9814.emoji_bible.js",
    "size": 9189
   },
@@ -938,7 +962,7 @@
   },
   {
    "name": "bible.js",
-   "size": 253963
+   "size": 254100
   },
   {
    "name": "calendar_paste.js",
@@ -954,7 +978,7 @@
   },
   {
    "name": "code.js",
-   "size": 825264
+   "size": 825580
   },
   {
    "name": "designs_universal.js",
@@ -962,7 +986,7 @@
   },
   {
    "name": "emoji_bible.js",
-   "size": 103171
+   "size": 104228
   },
   {
    "name": "en_learn_bible.js",
@@ -998,7 +1022,7 @@
   },
   {
    "name": "music.js",
-   "size": 166327
+   "size": 166603
   },
   {
    "name": "next.js",
