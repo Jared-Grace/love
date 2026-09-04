@@ -38,7 +38,7 @@ export function bible_glyph_chapter_rosetta_lines_1th01() {
         original:
           "ὅτι τὸ εὐαγγέλιον ἡμῶν οὐκ ἐγενήθη εἰς ὑμᾶς ἐν λόγῳ μόνον ἀλλὰ καὶ ἐν δυνάμει καὶ ἐν Πνεύματι Ἁγίῳ καὶ πληροφορίᾳ πολλῇ καθὼς οἴδατε οἷοι ἐγενήθημεν ἐν ὑμῖν δι’ ὑμᾶς",
         english:
-          "because our gospel came to you not only in word but also in power in the Holy Spirit and great conviction just as you know we lived among you for your sake",
+          "because our gospel came to you not only in word but also in power in the Holy Spirit and with great conviction just as you know we lived among you for your sake",
       },
       {
         verse_number: 6,
