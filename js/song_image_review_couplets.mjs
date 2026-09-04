@@ -15,11 +15,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 2,
-      note: "the bowl is now a flat grey ring with a flat blue disc inside it, seen from straight above, which is what the words always asked for and what seven earlier drawings would not give. What changed was not another wording of the same sentence but dropping the word bowl from the front, since that word kept summoning a solid basin. The white bar across the middle is gone as well - it was never the design, whatever was said here before: it was one of the two dividing lines drawn as a bar of white stone instead of a thin black lead line, and the style now forbids that in every picture. Still there: the ground outside the arch came out white where every other picture has black, and the ring is drawn smaller than the words ask for.",
-    },
-    {
-      n: 6,
-      note: "the field behind the cross is now emerald green over deep cobalt, so the brown cross has something to stand against - attempt 21 did not contrast enough. Naming both band colours outright is what fixed it, after eight draws that chose their own and kept reaching for yellow or cream. Still there: the white band round the edge is the stonework of the window and not something this couplet added.",
+      note: "you asked for closer to a side view and this is one: a flat grey basin on a short foot with a flat band of blue water lying across the rim, drawn straight on with no depth in it. The from-above wording that came before is gone, and going back to a side view cost nothing - the field came out clean on the first try, cobalt over emerald over deep crimson with the white glass only round the outer edge. The white bar across the middle is gone too, and it was never the design whatever was said here before: it was one of the two dividing lines drawn as a bar of white stone instead of a thin black lead line, and the style now forbids that in every picture. Nothing is named as still wrong in this one - if it is right, say so and it comes off the list.",
     },
     {
       n: 11,
