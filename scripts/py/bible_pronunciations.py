@@ -91,6 +91,7 @@ CONSONANTS = {
 
 PRIMARY = "ˈ"
 SECONDARY = "ˌ"
+SYLLABIC = "ᵊ"
 
 
 def misaki_of(syllables):
@@ -116,6 +117,13 @@ def misaki_of(syllables):
     A word with no stressed syllable at all gets its main stress on the first,
     because the reader restresses a proper noun that arrives without one and
     would rather be told where.
+
+    A syllable can be written with no vowel in it at all - Samson is s-ae-m
+    then s-n - and it is said with the nasal itself standing where the vowel
+    would be.  The reader writes that with a small raised schwa, which is how
+    its own dictionary spells person and Jerusalem, so that is what goes in.
+    Dropping such a syllable instead would leave the name a fragment, and
+    dropping the whole word would send it back to being sounded out.
     """
     stressed = [i for i, (_, mark) in enumerate(syllables) if mark == "1"]
     main = stressed[-1] if stressed else 0
@@ -127,15 +135,22 @@ def misaki_of(syllables):
             stress = SECONDARY
         else:
             stress = ""
+        reduce = mark == "0" and i != main
+        vowelless = all(phone not in VOWELS for phone in phones)
         said = False
-        for phone in phones:
+        for at, phone in enumerate(phones):
             if phone in VOWELS:
                 if not said:
                     out.append(stress)
                     said = True
-                unstressed = mark == "0" and i != main
-                out.append(UNSTRESSED[phone] if unstressed and phone in UNSTRESSED else VOWELS[phone])
+                out.append(
+                    UNSTRESSED[phone] if reduce and phone in UNSTRESSED else VOWELS[phone]
+                )
             elif phone in CONSONANTS:
+                if vowelless and at == len(phones) - 1:
+                    out.append(stress)
+                    out.append(SYLLABIC)
+                    said = True
                 out.append(CONSONANTS[phone])
             else:
                 return None
