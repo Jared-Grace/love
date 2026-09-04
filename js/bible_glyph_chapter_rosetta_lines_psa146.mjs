@@ -1,0 +1,79 @@
+export function bible_glyph_chapter_rosetta_lines_psa146() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PSA146",
+    verses: [
+      {
+        verse_number: 1,
+        original: "הַֽלְלוּ־ יָ֡הּ הַלְלִ֥י נַ֝פְשִׁ֗י אֶת־ יְהוָֽה׃",
+        english: "Hallelujah Praise the LORD O my soul",
+      },
+      {
+        verse_number: 2,
+        original:
+          "אֲהַלְלָ֣ה יְהוָ֣ה בְּחַיָּ֑י אֲזַמְּרָ֖ה לֵֽאלֹהַ֣י בְּעוֹדִֽי׃",
+        english:
+          "I will praise the LORD all my life I will sing praises to my God while I have my being",
+      },
+      {
+        verse_number: 3,
+        original:
+          "אַל־ תִּבְטְח֥וּ בִנְדִיבִ֑ים בְּבֶן־ אָדָ֓ם׀ שֶׁ֤אֵֽין ל֥וֹ תְשׁוּעָֽה׃",
+        english: "Put not your trust in princes in mortal man who cannot save",
+      },
+      {
+        verse_number: 4,
+        original:
+          "תֵּצֵ֣א ר֭וּחוֹ יָשֻׁ֣ב לְאַדְמָת֑וֹ בַּיּ֥וֹם הַ֝ה֗וּא אָבְד֥וּ עֶשְׁתֹּנֹתָֽיו׃",
+        english:
+          "When his spirit departs he returns to the ground on that very day his plans perish",
+      },
+      {
+        verse_number: 5,
+        original:
+          "אַשְׁרֵ֗י שֶׁ֤אֵ֣ל יַעֲקֹ֣ב בְּעֶזְר֑וֹ שִׂ֝בְר֗וֹ עַל־ יְהוָ֥ה אֱלֹהָֽיו׃",
+        english:
+          "Blessed is he whose help is the God of Jacob whose hope is in the LORD his God",
+      },
+      {
+        verse_number: 6,
+        original:
+          "עֹשֶׂ֤ה׀ שָׁ֘מַ֤יִם וָאָ֗רֶץ אֶת־ הַיָּ֥ם וְאֶת־ כָּל־ אֲשֶׁר־ בָּ֑ם הַשֹּׁמֵ֖ר אֱמֶ֣ת לְעוֹלָֽם׃",
+        english:
+          "the Maker of heaven and earth the sea and everything in them He remains faithful forever",
+      },
+      {
+        verse_number: 7,
+        original:
+          "עֹשֶׂ֤ה מִשְׁפָּ֨ט׀ לָעֲשׁוּקִ֗ים נֹתֵ֣ן לֶ֭חֶם לָרְעֵבִ֑ים יְ֝הוָ֗ה מַתִּ֥יר אֲסוּרִֽים׃",
+        english:
+          "He executes justice for the oppressed and gives food to the hungry The LORD sets the prisoners free",
+      },
+      {
+        verse_number: 8,
+        original:
+          "יְהוָ֤ה׀ פֹּ֘קֵ֤חַ עִוְרִ֗ים יְ֭הוָה זֹקֵ֣ף כְּפוּפִ֑ים יְ֝הוָ֗ה אֹהֵ֥ב צַדִּיקִֽים׃",
+        english:
+          "the LORD opens the eyes of the blind the LORD lifts those who are weighed down the LORD loves the righteous",
+      },
+      {
+        verse_number: 9,
+        original:
+          "יְהוָ֤ה׀ שֹׁ֘מֵ֤ר אֶת־ גֵּרִ֗ים יָת֣וֹם וְאַלְמָנָ֣ה יְעוֹדֵ֑ד וְדֶ֖רֶךְ רְשָׁעִ֣ים יְעַוֵּֽת׃",
+        english:
+          "The LORD protects foreigners He sustains the fatherless and the widow but the ways of the wicked He frustrates",
+      },
+      {
+        verse_number: 10,
+        original:
+          "יִמְלֹ֤ךְ יְהוָ֨ה׀ לְעוֹלָ֗ם אֱלֹהַ֣יִךְ צִ֭יּוֹן לְדֹ֥ר וָדֹ֗ר הַֽלְלוּ־ יָֽהּ׃",
+        english:
+          "The LORD reigns forever your God O Zion for all generations Hallelujah",
+      },
+    ],
+  };
+  return chapter;
+}
