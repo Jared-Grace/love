@@ -40,6 +40,12 @@ export function lists_matched_indexes_cases() {
       after: ["praise"],
       matched: [],
     },
+    {
+      name: "one written word sung over and over, which is what a refrain does to a document holding the line once, and which has to pair with the first time it was sung rather than the last",
+      before: ["hallelujah"],
+      after: ["hallelujah", "hallelujah", "hallelujah"],
+      matched: [0],
+    },
   ];
   return cases;
 }
