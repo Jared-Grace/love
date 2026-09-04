@@ -1,4 +1,3 @@
-import { bible_glyph_chapter_rosetta_lines_name } from "./bible_glyph_chapter_rosetta_lines_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
@@ -9,6 +8,9 @@ import { bible_interlinear_verse_original_text } from "./bible_interlinear_verse
 import { bible_interlinear_verse_gloss_text } from "./bible_interlinear_verse_gloss_text.mjs";
 import { list_add } from "./list_add.mjs";
 import { json_to } from "./json_to.mjs";
+import { bible_glyph_chapter_rosetta_lines_name } from "./bible_glyph_chapter_rosetta_lines_name.mjs";
+import { bible_glyph_chapter_rosetta_lines_prose_lines } from "./bible_glyph_chapter_rosetta_lines_prose_lines.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function bible_glyph_chapter_rosetta_lines_file_source(
   chapter_code,
 ) {
@@ -17,6 +19,7 @@ export async function bible_glyph_chapter_rosetta_lines_file_source(
   arguments_assert(arguments, 1);
   ("The whole text of one chapter's Rosetta band file, built from the downloaded interlinear beside the hand-written picture chapter, as source a person can read. It writes nothing.");
   ("IT IS SEPARATE FROM THE WRITING BECAUSE TWO COMMANDS NEED THE SAME TEXT AND MUST NOT SPELL IT TWICE. One of them lays a band file down for a chapter that has none and refuses a chapter that already has one; the other puts a corrected band over a chapter that already has one. Those two differ by which writer they end in and by nothing else, and the part they share is four paragraphs of prose stamped into the file - which is exactly the shape that drifts when somebody improves one copy.");
+  ("THE FOUR PARAGRAPHS THEMSELVES ARE NOT SPELLED HERE EITHER, for the same reason one step further out. The last of them is a claim about whose scripture this is and on what terms it may be shown, and a gate now reads the files back against it - so the writer and the gate have to be reading one text, not two that agree today.");
   ("IT KEEPS ONLY THE VERSES THE PICTURES HAVE REACHED, matching what the reader is shown, because a picture Bible chapter is half written for most of its life and a band with nothing above it teaches nobody anything.");
   ("WHAT COMES OUT DEPENDS ON THE INTERLINEAR AND ON THE READING OF ITS FILLER, so it is not fixed for all time. On 2026-08-21 the reading of filler was widened to drop the dash the tables print where the original says a word English does not say, and every band file written before that day held those dashes in its English line - which read as scripture with punctuation in it that nobody had put there. That is why the second command exists.");
   let chapter = bible_glyph_chapter(chapter_code);
@@ -54,16 +57,21 @@ export async function bible_glyph_chapter_rosetta_lines_file_source(
     chapter_json,
   ) {
     "the whole text of the file being written, as source a person can read.";
-    let head =
-      "export function " +
-      name_written +
-      "() {\n" +
-      '  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";\n' +
-      '  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";\n' +
-      '  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";\n' +
-      '  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";\n';
-    let body = "  let chapter = " + chapter_json + ";\n  return chapter;\n}\n";
-    let file_text2 = head + body;
+    let sentences = bible_glyph_chapter_rosetta_lines_prose_lines();
+    let head = text_combine_multiple([
+      "export function ",
+      name_written,
+      "() {\n",
+    ]);
+    for (let sentence of sentences) {
+      head = text_combine_multiple([head, '  "', sentence, '";\n']);
+    }
+    let body = text_combine_multiple([
+      "  let chapter = ",
+      chapter_json,
+      ";\n  return chapter;\n}\n",
+    ]);
+    let file_text2 = text_combine_multiple([head, body]);
     return file_text2;
   }
 }
