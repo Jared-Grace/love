@@ -46,6 +46,6 @@
   <script src="code.js"> 
     
   </script>
-  <script>if ('serviceWorker' in navigator) { if (location.pathname.indexOf('/dev/') !== -1) { navigator.serviceWorker.getRegistrations().then(function (registrations) { registrations.forEach(function (registration) { registration.unregister(); }); }); } }</script>
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.getRegistrations().then(function (registrations) { registrations.forEach(function (registration) { registration.unregister(); }); }); }</script>
 </body>
 </html>
