@@ -52,7 +52,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn10() {
         original:
           "Εἶπεν οὖν πάλιν ὁ Ἰησοῦς Ἀμὴν ἀμὴν λέγω ὑμῖν ὅτι ἐγώ εἰμι ἡ θύρα τῶν προβάτων",
         english:
-          "So He said again Truly truly I tell you I am the gate for the sheep",
+          "So He said to them again Truly truly I tell you I am the gate for the sheep",
       },
       {
         verse_number: 8,
@@ -210,7 +210,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn10() {
       {
         verse_number: 31,
         original: "Ἐβάστασαν πάλιν λίθους οἱ Ἰουδαῖοι ἵνα λιθάσωσιν αὐτόν",
-        english: "the Jews again picked up stones to stone Him",
+        english: "At this the Jews again picked up stones to stone Him",
       },
       {
         verse_number: 32,
