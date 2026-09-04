@@ -5,6 +5,6 @@ export function song_image_tomb_rock() {
   "IT ENDS ON THE ARCH AND THE NEGATIVES SIT IN THE MIDDLE, because every couplet using it goes on to say something about that mouth - standing clear and empty, standing wide open - and whatever this ends on is what those words attach to. Ending on the list of things the rock is not put two couplets into the drawing as slabs standing clear and empty, which is a sentence about the wrong thing and is not what either couplet meant.";
   "IT IS KEPT SHORT ON PURPOSE, and that was learned by making it long. Spelled out at full length it ran to three lines and the drawing came back photographic - mottled glass, shading, a cast shadow, and in one case the whole field replaced by red tracery with candles in it. The symbol and the style share one prompt, so every word added here is weight taken off the style, and a symbol described three times as carefully as the others is a symbol that stops looking like them. What is left is only what could not be dropped: the mass, the cut mouth, and the four words that stop it being built.";
   let r =
-    "A great mass of plain grey rock, one unbroken mass and never blocks, bricks, courses or slabs, with the mouth of the tomb cut into it as one plain flat black arch";
+    "One tomb doorway of plain grey stone standing alone and drawn very large, one thick square frame of flat grey stone and never blocks, bricks, courses or slabs, cut through the middle by one tall round topped opening";
   return r;
 }
