@@ -309,7 +309,10 @@ export function song_image_drawn_attempts_known() {
   33,
   34,
   35,
-  36
+  36,
+  37,
+  38,
+  39
  ],
  "19": [
   1,
