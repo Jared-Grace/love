@@ -207,6 +207,7 @@ export function bible_glyph_chapters() {
     forty_first,
     forty_second,
     forty_third,
+    forty_fourth,
   ];
   return chapters;
 }
