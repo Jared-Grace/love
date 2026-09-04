@@ -54,7 +54,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:02.69,0:00:05.93,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}Hallelujah!",
+        "Dialogue: 0,0:00:02.29,0:00:05.53,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}Hallelujah!",
       ],
       why: "the psalm that shipped wrong: the closing line nobody tapped is left out of the video altogether rather than written as a card standing over the whole song from the first frame",
     },
@@ -72,8 +72,8 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:00.00,0:00:02.45,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}Praise the LORD",
-        "Dialogue: 0,0:00:02.50,0:00:10.00,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}from the heavens",
+        "Dialogue: 0,0:00:00.00,0:00:02.05,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}Praise the LORD",
+        "Dialogue: 0,0:00:02.10,0:00:09.60,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}from the heavens",
       ],
       why: "a line genuinely sung from the first frame starts at zero and is kept, so the guard above cannot be written against the number - which is the repair one character away from the right one",
     },
@@ -96,8 +96,8 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:01.00,0:00:04.95,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}one",
-        "Dialogue: 0,0:00:05.00,0:00:20.00,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}three",
+        "Dialogue: 0,0:00:00.60,0:00:04.55,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}one",
+        "Dialogue: 0,0:00:04.60,0:00:19.60,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}three",
       ],
       why: "a line missed in the middle leaves a silence where it was rather than a placeholder, and the lines on either side keep the moments they were heard at",
     },
@@ -115,7 +115,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:05.00,0:00:09.00,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}sung",
+        "Dialogue: 0,0:00:04.60,0:00:08.60,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}sung",
       ],
       why: "a line with a beginning and no end is left out as well, because half a time is not a moment - this is what somebody leaves behind by stopping partway through a line rather than between two",
     },
@@ -133,7 +133,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:06.00,0:00:09.00,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}sung",
+        "Dialogue: 0,0:00:05.60,0:00:08.60,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)}sung",
       ],
       why: "an end with no beginning is left out as well, which the case above cannot show: a reader asking only whether a line ends agrees with every other case here and still writes this line into the video with no moment to begin at",
     },
@@ -162,7 +162,7 @@ export function lyric_video_subtitles_text_cases() {
         },
       ]),
       events: [
-        "Dialogue: 0,0:00:04.00,0:00:21.50,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)\\fs144}The sons of Judah: Er, Onan, and Shelah; these three were born to him by Shua's daughter, the Canaanitess. Er, Judah's firstborn, was wicked in the LORD's sight, so he killed him.",
+        "Dialogue: 0,0:00:03.60,0:00:21.10,Lyric,,0,0,0,,{\\pos(540,829)\\fad(260,320)\\fs144}The sons of Judah: Er, Onan, and Shelah; these three were born to him by Shua's daughter, the Canaanitess. Er, Judah's firstborn, was wicked in the LORD's sight, so he killed him.",
       ],
       why: "a card too long for the frame comes back as one card in smaller lettering rather than as two cards, because dividing it would need a moment nobody heard - the sound of a spoken piece arrives with no times inside it, so the join could only be reasoned from how long the words are, and a run of names is exactly where that reasoning is worst. Every other case here is short and carries no size at all, which is what says the smaller lettering is written only where it is needed",
     },
