@@ -240,7 +240,7 @@ export function song_image_couplets() {
       second: "HIS only SON",
       symbol:
         "One ram of white glass standing side-on in profile with thick curled white horns, nothing pink on it and nothing hanging below the body, behind its head one plain halo of bright yellow glass a little wider than the head with nothing inside it, and one ring of thorn worn as a crown resting on the top of its skull between the two horns, sitting there the way a crown sits on a king and never round the neck and never under the jaw, the ram caught fast in a dense thicket of bare brown thorn branches that rises to its shoulder and closes round its legs so that it plainly cannot get free, one animal only in the whole window, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson with no violet and no fourth colour anywhere in the field and no black anywhere inside the window, the ram drawn very large so that it reaches almost to the white border on both sides",
-      symbol_ref: "Genesis 22",
+      symbol_ref: "Genesis 22:13",
       same_as: 0,
     },
     {
