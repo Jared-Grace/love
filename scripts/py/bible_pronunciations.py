@@ -13,9 +13,9 @@ looking words up got a wrong number.  The sounding-out itself is one function
 on the reader, so it is wrapped and the whole Bible read through it, and what
 the wrapper was handed is the answer.  Over the 764679 words of engwebu:
 without this lexicon 2776 distinct words are sounded out, said 13398 times;
-with it 123 are, said 558 times.
+with it 85 are, said 478 times.
 
-BibleVox is what mends those 2653.  It is a pronunciation lexicon for the
+BibleVox is what mends those 2691.  It is a pronunciation lexicon for the
 Bible, MIT licensed, kept beside this file as given, notice and all.  It is
 written for a different speech engine, so its sounds are in the alphabet that
 engine reads and have to be carried across into this one, which is what the
@@ -266,10 +266,10 @@ def lexicon_parted():
     has one, and that says En is one syllable.  Knowing that cuts En-gedi,
     En-gannim, En-rogel, En-hakkore and the rest.  So the cutting is run over
     and over until it stops learning, and a count is only kept when every
-    joined name offering one offers the same number.  Measured: nothing
-    disagrees, and the second-hand cuts are worth another 16 words on top of
-    the 60 the first-hand ones give - 147 words this Bible sounds out down to
-    71.
+    joined name offering one offers the same number.  Measured over the whole
+    lexicon, nothing disagrees: no part is ever offered two different counts.
+    Measured over the recorded Bible, the cutting and the hand counts below
+    together take the words still sounded out from 112 distinct down to 85.
 
     ★ IT IS CHECKED WHERE IT DOES NOT NEED TO BE.  When both halves have their
     own entry the cut is not needed, so the halves it works out can be held
