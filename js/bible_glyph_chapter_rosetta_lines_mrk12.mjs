@@ -66,7 +66,7 @@ export function bible_glyph_chapter_rosetta_lines_mrk12() {
         original:
           "Τί ποιήσει ὁ κύριος τοῦ ἀμπελῶνος ἐλεύσεται καὶ ἀπολέσει τοὺς γεωργούς καὶ δώσει τὸν ἀμπελῶνα ἄλλοις",
         english:
-          "What will the owner of the vineyard do He will come and kill those tenants and give the vineyard to others",
+          "What then will the owner of the vineyard do He will come and kill those tenants and give the vineyard to others",
       },
       {
         verse_number: 10,
@@ -184,7 +184,7 @@ export function bible_glyph_chapter_rosetta_lines_mrk12() {
         original:
           "Περὶ δὲ τῶν νεκρῶν ὅτι ἐγείρονται οὐκ ἀνέγνωτε ἐν τῇ βίβλῳ Μωϋσέως ἐπὶ τοῦ Βάτου πῶς εἶπεν αὐτῷ ὁ Θεὸς λέγων Ἐγὼ ὁ Θεὸς Ἀβραὰμ καὶ Θεὸς Ἰσαὰκ καὶ Θεὸς Ἰακώβ",
         english:
-          "But concerning the dead rising have you not read about the burning bush in the Book of Moses how God told him I am the God of Abraham God of Isaac and God of Jacob",
+          "But concerning the dead rising have you not read about the burning bush in the Book of Moses how God told him I am the God of Abraham the God of Isaac and the God of Jacob",
       },
       {
         verse_number: 27,
