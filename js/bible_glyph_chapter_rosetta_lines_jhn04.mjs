@@ -33,7 +33,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn04() {
         original:
           "ἔρχεται οὖν εἰς πόλιν τῆς Σαμαρείας λεγομένην Συχὰρ πλησίον τοῦ χωρίου ὃ ἔδωκεν Ἰακὼβ Ἰωσὴφ τῷ υἱῷ αὐτοῦ",
         english:
-          "So He came to a town of Samaria called Sychar near the plot of ground that Jacob had given his son Joseph",
+          "So He came to a town of Samaria called Sychar near the plot of ground that Jacob had given to his son Joseph",
       },
       {
         verse_number: 6,
@@ -74,7 +74,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn04() {
         original:
           "Λέγει αὐτῷ Κύριε οὔτε ἄντλημα ἔχεις καὶ τὸ φρέαρ ἐστὶν βαθύ πόθεν οὖν ἔχεις τὸ ὕδωρ τὸ ζῶν",
         english:
-          "Sir replied You have nothing to draw with and the well is deep Where then will You get this living water",
+          "Sir the woman replied You have nothing to draw with and the well is deep Where then will You get this living water",
       },
       {
         verse_number: 12,
@@ -161,7 +161,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn04() {
         original:
           "Πνεῦμα ὁ Θεός καὶ τοὺς προσκυνοῦντας ἐν πνεύματι καὶ ἀληθείᾳ δεῖ προσκυνεῖν",
         english:
-          "God is Spirit and His worshipers must worship in spirit and in truth",
+          "God is Spirit and His worshipers must worship Him in spirit and in truth",
       },
       {
         verse_number: 25,
@@ -338,7 +338,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn04() {
         original:
           "ἤδη δὲ αὐτοῦ καταβαίνοντος οἱ δοῦλοι ὑπήντησαν αὐτῷ λέγοντες ὅτι ὁ παῖς αὐτοῦ ζῇ",
         english:
-          "And while he was still on the way servants met him with the news that his boy was alive",
+          "And while he was still on the way his servants met him with the news that his boy was alive",
       },
       {
         verse_number: 52,
@@ -352,7 +352,7 @@ export function bible_glyph_chapter_rosetta_lines_jhn04() {
         original:
           "Ἔγνω οὖν ὁ πατὴρ ὅτι ἐκείνῃ τῇ ὥρᾳ ἐν ᾗ εἶπεν αὐτῷ ὁ Ἰησοῦς Ὁ υἱός σου ζῇ καὶ ἐπίστευσεν αὐτὸς καὶ ἡ οἰκία αὐτοῦ ὅλη",
         english:
-          "Then the father realized that hour in which Jesus had told him Your son will live And he and all his household believed",
+          "Then the father realized that this was the very hour in which Jesus had told him Your son will live And he and all his household believed",
       },
       {
         verse_number: 54,
