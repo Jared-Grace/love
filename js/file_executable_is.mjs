@@ -1,6 +1,5 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function file_executable_is(file_path) {
   arguments_assert(arguments, 1);
   ("Whether a file is marked as something that can be run at all, rather than merely sat there.");
@@ -9,7 +8,6 @@ export async function file_executable_is(file_path) {
   let fs = await import("fs");
   let stat = await fs.promises.stat(file_path);
   let anyone = stat.mode & 0o111;
-  let none = equal(anyone, 0);
-  let r = not(none);
+  let r = equal_not(anyone, 0);
   return r;
 }
