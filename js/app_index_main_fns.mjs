@@ -1,9 +1,10 @@
 import { fn_name } from "./fn_name.mjs";
 export function app_index_main_fns() {
   "The apps the front page offers, each with the sentence shown under it.";
-  "THIS IS A FRONT PAGE, NOT A REGISTER OF WHAT IS NEEDED, and the difference has already misled one reading. Thirteen apps are named here; thirty-three exist. The twenty left out are not leftovers - checked 2026-08-25, every one of them is wanted. Some are infrastructure nobody browses to, some are tools for the person building this, and one is a kept address that only forwards. What they have in common is that none of them is what a visitor arriving for the first time should be shown, which is the only question this list answers.";
+  "THIS IS A FRONT PAGE, NOT A REGISTER OF WHAT IS NEEDED, and the difference has already misled one reading. Fifteen apps are named here; thirty-three existed when they were last counted, on 2026-08-25. The ones left out are not leftovers - at that count every one of them was wanted. Some are infrastructure nobody browses to, some are tools for the person building this, and one is a kept address that only forwards. What they have in common is that none of them is what a visitor arriving for the first time should be shown, which is the only question this list answers.";
   "So an app being absent here says nothing at all about whether it may go. Counting references does not help either and looks as though it does: an app named here picks up references BECAUSE it is named here, so few references and not on the front page are one fact wearing two faces, not two findings agreeing. There is no reading in the repo that separates an app somebody still uses from one nobody does - that answer is held by the person who uses them, and asking is cheaper than any measurement of it.";
   "The praying game came off this list on 2026-08-26, and it came off for a reason that says nothing about the game. Its page in the folder that gets sent had no bytes in it, so the card here was offering a first-time visitor a link that opened onto a blank screen, and had been for at least six days. A built copy of the game exists and works; only the sent one is empty. Put the line back the moment a real page is standing at that address.";
+  "The songs went on the list on 2026-09-04, and the check the praying game failed is the one they were held to first: the page in the folder that gets sent has bytes in it and the live address answers with the same bytes. A card here is a promise to somebody who has never been to the site before, and the only way to keep it is to follow the link before writing it down.";
   let r = [
     {
       app_fn: fn_name("app_bible"),
@@ -44,6 +45,10 @@ export function app_index_main_fns() {
     {
       app_fn: fn_name("app_supper"),
       text: "Bible verses and prayers for Lord's Supper",
+    },
+    {
+      app_fn: fn_name("app_music"),
+      text: "The words of the songs written for this site, with every line opening onto the Scripture it rests on, and the pictures drawn for it",
     },
     {
       app_fn: fn_name("app_examples"),
