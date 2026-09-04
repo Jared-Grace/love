@@ -239,7 +239,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "One ram of white glass with thick curled white horns, standing side-on in profile on all four legs and caught in a dense thicket of bare brown thorn branches that rises only as high as its back, its head bent low into the thicket, and one closed ring of brown thorny branch worn as a crown, resting on the very top of its head between the horns and touching the head, a ring with a clear round opening in the middle and its thorns standing out all round it, one animal only in the whole window, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "One ram of white glass with thick curled white horns, standing side-on in profile on all four legs and caught in a dense thicket of bare brown thorn branches that rises only as high as its back, its head bent low into the thicket, its horns caught fast in the branches, and where those branches wrap round the base of its horns they close into one ring of thorn worn as a crown, that ring lying against the head itself and never floating free above it, a closed ring with a clear round opening in the middle and its thorns standing out all round it, one animal only in the whole window, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22",
       same_as: 0,
     },
