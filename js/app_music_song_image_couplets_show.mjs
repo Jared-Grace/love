@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { app_music_song_verses_start } from "./app_music_song_verses_start.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
 import { app_music_song_pictures_new } from "./app_music_song_pictures_new.mjs";
@@ -33,7 +34,9 @@ export async function app_music_song_image_couplets_show(parent, song) {
   "SHOW-ALL-PICTURES AND HIDE-ALL-PICTURES SIT THERE TOO, and the one thing they are given is made here rather than by them, because the drawings they act on are made further down this loop and do not exist yet when the buttons are drawn. What passes between them is the same thing under both names: the buttons write into it and each drawing reads it as it joins.";
   "THERE IS NO THIRD BUTTON OFFERING TO FETCH THE PICTURES. There was, and beside show-all-pictures it read as the same offer worded differently; showing them is what fetches them now, and the count of how many have landed is said under the two buttons rather than by a button of its own.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
+  "THE SCRIPTURE IS SET TRAVELLING BEFORE THE FIRST LINE IS DRAWN, and waited for at the end, and on this page that matters more than on the other one. Drawing this hymn puts thirty-six pictures on the page, and every one of them is a request the browser sends before anything asked for afterwards. Asked for at the end, the scripture queued behind all thirty-six and landed sixteen seconds in; started here, it travels alongside them. Nothing waits for it here - the drawing runs straight on and the words reach the reader exactly as soon as they did before.";
   arguments_assert(arguments, 2);
+  let texts_asked = app_music_song_verses_start(song);
   let couplets = song_image_couplets();
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
@@ -86,5 +89,5 @@ export async function app_music_song_image_couplets_show(parent, song) {
       list_add_multiple(asked_all, asked_emblem);
     }
   }
-  await app_music_references_fill(asked_all, song);
+  await app_music_references_fill(asked_all, song, texts_asked);
 }
