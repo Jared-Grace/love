@@ -62,6 +62,7 @@ export async function app_shared_bible_home_generic(
   let v = {
     bar,
     lines_copy_extra,
+    bottom,
   };
   return v;
 }
