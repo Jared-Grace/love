@@ -1,5 +1,3 @@
-import { html_error_notice_dismiss_style } from "./html_error_notice_dismiss_style.mjs";
-import { app_shared_close_texts } from "./app_shared_close_texts.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_error_notice_style } from "./html_error_notice_style.mjs";
 import { html_code_style_attribute } from "./html_code_style_attribute.mjs";
@@ -7,11 +5,14 @@ import { html_error_notice_message_texts } from "./html_error_notice_message_tex
 import { app_shared_text_in_language_code } from "./app_shared_text_in_language_code.mjs";
 import { html_error_notice_button_style } from "./html_error_notice_button_style.mjs";
 import { html_error_notice_button_texts } from "./html_error_notice_button_texts.mjs";
+import { html_error_notice_dismiss_style } from "./html_error_notice_dismiss_style.mjs";
+import { app_shared_close_texts } from "./app_shared_close_texts.mjs";
 import { text_rtl_is } from "./text_rtl_is.mjs";
 import { text_empty } from "./text_empty.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_loading_splash_id } from "./html_loading_splash_id.mjs";
 import { html_code_error_record_script } from "./html_code_error_record_script.mjs";
+import { html_code_error_send_script } from "./html_code_error_send_script.mjs";
 import { html_code_element } from "./html_code_element.mjs";
 export function html_code_error_notice(language_code) {
   "$plain language_code";
@@ -75,9 +76,12 @@ export function html_code_error_notice(language_code) {
   ("once it is closed it stays closed for the rest of that page, because a person who put it away said so about the page and not about the one error. a page throwing on a timer or on every drawn frame would otherwise raise it again the instant it was dismissed, which is the trap being answered here rather than a smaller version of it.");
   ("what went wrong is still written down each time, before the closing is looked at, so putting the notice away costs the person who can fix it nothing.");
   ("the notice says nothing about what went wrong, on purpose - so what went wrong is written down beside it instead, where the person who can fix it will read it and the person waiting will never see it");
+  ("★ AND IT IS SENT FROM HERE, WHICH IS THE ONLY PLACE IT CAN BE SENT FROM WHEN THE BOOT IS WHAT DIED. Writing it down only helps if something later reads it, and until 2026-09-04 the only reader was the app's own start-up - so a device where every load died wrote ten records and sent none of them, for as long as it went on failing. The sending goes before the closing is looked at, for the same reason the writing does: what somebody chose about the notice on their screen says nothing about whether the fault should be reported.");
   let record_script = html_code_error_record_script();
+  let send_script = html_code_error_send_script();
   let code = text_combine_multiple([
     record_script,
+    send_script,
     "var app_error_box = document.getElementById('",
     id,
     "'); ",
@@ -85,6 +89,7 @@ export function html_code_error_notice(language_code) {
     "var app_error_closed = false; ",
     "var app_error_show = function (event) { ",
     "app_error_record(event); ",
+    "app_error_send(); ",
     "if (app_error_closed) { return; } ",
     "if (!app_error_box) { return; } ",
     "app_error_box.style.display = 'flex'; ",
