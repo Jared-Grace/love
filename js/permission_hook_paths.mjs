@@ -1,6 +1,5 @@
+import { list_map_property } from "./list_map_property.mjs";
 import { permission_settings_hook_commands } from "./permission_settings_hook_commands.mjs";
-import { property_get_curried_right } from "./property_get_curried_right.mjs";
-import { list_map } from "./list_map.mjs";
 import { text_split_space } from "./text_split_space.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
@@ -15,8 +14,7 @@ export async function permission_hook_paths() {
   "the commands themselves are asked for elsewhere, because a gate asking whether one particular hook is started needs exactly the same list and the two readings must not be able to disagree about what counts as a declared hook. This half is only about turning those commands into files.";
   "a word is kept when it names a file that is actually there. An extension list would be a second thing to keep in step with reality, and a hook script that does not exist cannot run either way.";
   let rows = await permission_settings_hook_commands();
-  let named = property_get_curried_right("command");
-  let commands = list_map(rows, named);
+  let commands = list_map_property(rows, "command");
   let separator = "/";
   let paths = [];
   for (let command of commands) {
