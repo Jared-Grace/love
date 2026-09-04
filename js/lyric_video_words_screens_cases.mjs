@@ -97,6 +97,83 @@ export function lyric_video_words_screens_cases() {
       end: 2.6,
     },
   ];
+  let long = [
+    {
+      word: "Amos,",
+      start: 0,
+      end: 0.5,
+    },
+    {
+      word: "the",
+      start: 0.5,
+      end: 1,
+    },
+    {
+      word: "son",
+      start: 1,
+      end: 1.5,
+    },
+    {
+      word: "of",
+      start: 1.5,
+      end: 2,
+    },
+    {
+      word: "Nahum,",
+      start: 2,
+      end: 2.5,
+    },
+    {
+      word: "the",
+      start: 2.5,
+      end: 3,
+    },
+    {
+      word: "son",
+      start: 3,
+      end: 3.5,
+    },
+    {
+      word: "of",
+      start: 3.5,
+      end: 4,
+    },
+    {
+      word: "Esli,",
+      start: 4,
+      end: 4.5,
+    },
+    {
+      word: "the",
+      start: 4.5,
+      end: 5,
+    },
+    {
+      word: "son",
+      start: 5,
+      end: 5.5,
+    },
+    {
+      word: "of",
+      start: 5.5,
+      end: 6,
+    },
+    {
+      word: "Naggai,",
+      start: 6,
+      end: 6.5,
+    },
+    {
+      word: "the",
+      start: 6.5,
+      end: 7,
+    },
+    {
+      word: "son",
+      start: 7,
+      end: 7.5,
+    },
+  ];
   let cases = [
     {
       words: [
@@ -174,6 +251,28 @@ export function lyric_video_words_screens_cases() {
         },
       ],
       why: "the same words with nothing marked, so there is no pause to find and the break falls where the letters ran out - which is what the looking back is worth exactly nothing against",
+    },
+    {
+      words: long,
+      room: {
+        pixels_across: 920,
+        lines_max: 4,
+        font_size: 150,
+      },
+      seconds: 7.5,
+      screens: [
+        {
+          start: 0,
+          end: 4.5,
+          text: "Amos, the son of Nahum, the son of Esli,",
+        },
+        {
+          start: 4.5,
+          end: 7.5,
+          text: "the son of Naggai, the son",
+        },
+      ],
+      why: "filling forward would have given the first screen all four of its lines and left the last one holding the two words that would not go on it, so the pair is folded again where it comes out three lines and two - and the fold lands on the comma after Esli, because a pause is taken over a balance wherever one fits",
     },
   ];
   return cases;
