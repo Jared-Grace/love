@@ -303,7 +303,8 @@ export function song_image_drawn_attempts_known() {
   27,
   28,
   29,
-  30
+  30,
+  31
  ],
  "19": [
   1,
