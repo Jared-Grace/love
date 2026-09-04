@@ -14,7 +14,7 @@ export async function bible_audio_repair_queue(bible_folder) {
   arguments_assert(arguments, 1);
   let root = bible_audio_root_folder();
   let folder = path_join([root, bible_folder]);
-  let commit = bible_audio_sounded_out_door_commit();
+  let commit = await bible_audio_sounded_out_door_commit();
   let before_second = await git_commit_second(commit);
   let script_name = fn_name("bible_audio_repair_queue");
   let args = {
