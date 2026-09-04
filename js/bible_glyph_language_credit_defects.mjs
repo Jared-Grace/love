@@ -1,11 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_language_credit_prefixes } from "./bible_glyph_language_credit_prefixes.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
+import { bible_glyph_language_credit_attributed_is } from "./bible_glyph_language_credit_attributed_is.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
+import { list_size } from "./list_size.mjs";
+import { equal } from "./equal.mjs";
 import { ebible_licence_words_unread } from "./ebible_licence_words_unread.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -18,9 +19,17 @@ export function bible_glyph_language_credit_defects(lines) {
   ("THE LICENCE THESE FILES CARRY ASKS FOR MORE THAN ONE THING AT ONCE, and the half that is present is what stops anybody looking for the half that is not. Both of these files carried a publisher's name, a copyright line and the name of the terms while holding text this app had altered and saying nothing about it, and the block read as finished from every angle. So each condition is asked separately here and none of them is inferred from another.");
   ("THE CHANGE NOTICE IS CHECKED IN BOTH DIRECTIONS. A repaired bible with no notice is text passed off as the publisher's own; an untouched bible carrying one is a false statement about somebody else's scripture. Neither is visible by reading the file, because a credit block is believed rather than checked.");
   ("WHICH BIBLE THIS IS COMES OFF THE FILE'S OWN EDITION LINE and is never worked out from the web address beside it. The three catalogues this app fetches from write that address three ways, and a reading that happens to hold for one of them would answer wrongly for the others in silence - saying a bible is untouched is the answer that passes.");
+  ("WHO OWNS THE WORDS IS ASKED NEXT DOOR, because it is the one condition with no sentence to look for - a publisher's own name and copyright line are different words in every file, so the question is whether that part of the block is empty rather than what it says.");
   ("NOTHING IS THROWN HERE. A gate wants every file's faults at once rather than the first file's first fault, and a caller that has to catch a complaint to carry on is a caller that will stop at one.");
   let prefixes = bible_glyph_language_credit_prefixes();
   let defects = [];
+  let attributed = bible_glyph_language_credit_attributed_is(lines);
+  if (not(attributed)) {
+    list_add(
+      defects,
+      "nobody is named as the owner of these words, which is the whole of what an attribution licence asks for",
+    );
+  }
   let terms_prefix = property_get(prefixes, "terms");
   let terms = list_filter_starts_with(lines, terms_prefix);
   let left = list_size(terms);
