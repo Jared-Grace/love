@@ -10,6 +10,8 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_empty_not_is_assert_json } from "./list_empty_not_is_assert_json.mjs";
 import { bible_glyph_chapter_rosetta_lines_prose_lines } from "./bible_glyph_chapter_rosetta_lines_prose_lines.mjs";
 import { repo_love_function_read } from "./repo_love_function_read.mjs";
+import { catch_message_async } from "./catch_message_async.mjs";
+import { property_get } from "./property_get.mjs";
 import { function_prose_lines } from "./function_prose_lines.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -23,6 +25,7 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
   ("A CHAPTER WITH NO BAND FILE AT ALL IS NOT THIS GATE'S FAULT TO REPORT, and it is already somebody's: ",
     fn_name("bible_glyph_chapter_rosetta_lines_fetched_gate_run"),
     " sends for every chapter's bands and fails on the one that will not come. Counting the absent ones here and saying so beside the verdict is enough, and it keeps two gates from naming the same repair twice.");
+  ("A FILE THAT WILL NOT BE READ IS ONE NAMED CHAPTER AND NEVER THE END OF THE WALK. A band file being absent is already handled above, but a file that is present and still refuses to open is a different event - a name that moved under this run, a tree half written by somebody else's save. Waited on plainly, the first refusal carries that reader's own complaint out of this gate in place of the chapters it had gathered, so every chapter after it goes unread and nothing in the answer names anybody. Caught, it is one named chapter whose file would not open, standing beside every chapter that was still compared.");
   ("HOW MANY FILES WERE READ COMES BACK BESIDE THE VERDICT, because finding nothing wrong is also the answer on the day the chapter list moves under this or the naming stops matching what is on disk. The verdict reads the same both times; the count is what falls to nothing when the reading breaks.");
   ("IT NEEDS NO NETWORK, NO INTERLINEAR AND NO DOWNLOADED BIBLE, so it runs in a frozen copy like every other gate: the files are read out of the frozen tree by name, and what they are compared against is spelled in this repo.");
   let references = bible_glyph_chapter_references();
@@ -57,7 +60,21 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
   let wanted = bible_glyph_chapter_rosetta_lines_prose_lines();
   let wrong = [];
   for (let band of present) {
-    let code = await repo_love_function_read(band.name);
+    async function band_file_read() {
+      let got = await repo_love_function_read(band.name);
+      return got;
+    }
+    let answered = await catch_message_async(band_file_read);
+    let came = property_get(answered, "ok");
+    if (not(came)) {
+      list_add(wrong, {
+        chapter_code: band.chapter_code,
+        fn: band.name,
+        unread: property_get(answered, "message"),
+      });
+      continue;
+    }
+    let code = property_get(answered, "value");
     let found = function_prose_lines(code);
     let same = json_equal(found, wanted);
     if (not(same)) {
@@ -75,7 +92,7 @@ export async function bible_glyph_chapter_rosetta_lines_prose_gate_run() {
     source,
     ", and the repair is to lay each named chapter's bands down again over the old ones with ",
     rewrite,
-    ". Read what each file actually says first: if the writer's wording was improved this is only stale text, but if a file says something the writer never said then it was edited by hand and the words in it are the ones to look at",
+    ". Read what each file actually says first: if the writer's wording was improved this is only stale text, but if a file says something the writer never said then it was edited by hand and the words in it are the ones to look at; a chapter carrying an unread word instead of what was found is one whose file would not open at all, and the words it refused with stand beside it",
   ]);
   list_empty_is_assert_json(wrong, {
     hint: hint_wrong,
