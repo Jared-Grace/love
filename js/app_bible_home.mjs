@@ -1,4 +1,4 @@
-import { app_bible_pictures_bar_button } from "./app_bible_pictures_bar_button.mjs";
+import { app_bible_pictures_verse_button } from "./app_bible_pictures_verse_button.mjs";
 import { app_bible } from "./app_bible.mjs";
 import { app_shared_bible_home_generic } from "./app_shared_bible_home_generic.mjs";
 import { noop } from "./noop.mjs";
@@ -8,7 +8,7 @@ export async function app_bible_home(context) {
   await app_shared_bible_home_generic(
     context,
     noop,
-    app_bible_pictures_bar_button,
+    app_bible_pictures_verse_button,
     app_bible,
     true,
   );
