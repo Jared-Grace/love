@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_derivatives_forbidden_words_least } from "./ebible_derivatives_forbidden_words_least.mjs";
 import { set_new } from "./set_new.mjs";
-import { ebible_derivatives_forbidden_bible_folders } from "./ebible_derivatives_forbidden_bible_folders.mjs";
+import { ebible_urdu_control_bible_folders } from "./ebible_urdu_control_bible_folders.mjs";
 import { ebible_version_licence } from "./ebible_version_licence.mjs";
 import { ebible_licence_derivatives_forbidden_is } from "./ebible_licence_derivatives_forbidden_is.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
@@ -18,7 +18,7 @@ export async function ebible_derivatives_forbidden_spans() {
   arguments_assert(arguments, 0);
   let words_least = ebible_derivatives_forbidden_words_least();
   let spans = set_new();
-  let bible_folders = ebible_derivatives_forbidden_bible_folders();
+  let bible_folders = ebible_urdu_control_bible_folders();
   for (let bible_folder of bible_folders) {
     let licence = await ebible_version_licence(bible_folder);
     let frozen = ebible_licence_derivatives_forbidden_is(licence);

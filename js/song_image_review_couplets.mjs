@@ -15,7 +15,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 2,
-      note: "unchanged this round, and still open. The white band above the water is the stone edge of the window, in all thirty-six by design, and nothing this couplet asked for. The fault still to fix is the bowl, drawn from the side with a stone surface when the words ask for it flat and seen from straight above.",
+      note: "the bowl is now a flat grey ring with a flat blue disc inside it, seen from straight above, which is what the words always asked for and what seven earlier drawings would not give. What changed was not another wording of the same sentence but dropping the word bowl from the front, since that word kept summoning a solid basin. The white bar across the middle is gone as well - it was never the design, whatever was said here before: it was one of the two dividing lines drawn as a bar of white stone instead of a thin black lead line, and the style now forbids that in every picture. Still there: the ground outside the arch came out white where every other picture has black, and the ring is drawn smaller than the words ask for.",
     },
     {
       n: 6,
