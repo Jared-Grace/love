@@ -1,3 +1,4 @@
+import { lyric_video_document_times_spread_is_cases_gate_run } from "./lyric_video_document_times_spread_is_cases_gate_run.mjs";
 import { psalms_song_file_chapter_take_cases_gate_run } from "./psalms_song_file_chapter_take_cases_gate_run.mjs";
 import { app_ceb_bible_gloss_affix_kinds_wrong_gate_run } from "./app_ceb_bible_gloss_affix_kinds_wrong_gate_run.mjs";
 import { lists_matched_indexes_cases_gate_run } from "./lists_matched_indexes_cases_gate_run.mjs";
@@ -983,6 +984,7 @@ export function qa_gates() {
     lists_matched_indexes_cases_gate_run,
     app_ceb_bible_gloss_affix_kinds_wrong_gate_run,
     psalms_song_file_chapter_take_cases_gate_run,
+    lyric_video_document_times_spread_is_cases_gate_run,
   ];
   return gates;
 }
