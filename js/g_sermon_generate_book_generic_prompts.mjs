@@ -3,7 +3,7 @@ import { g_sermon_generate_book_generic_prompts_prompt_get } from "./g_sermon_ge
 import { property_equals } from "./property_equals.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { log_keep } from "./log_keep.mjs";
-import { openai_chat_completions } from "./openai_chat_completions.mjs";
+import { openai_off_chat_completions } from "./openai_off_chat_completions.mjs";
 import { g_sermon_generate } from "./g_sermon_generate.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
@@ -61,7 +61,7 @@ export async function g_sermon_generate_book_generic_prompts(
       text_combine_multiple([
         g_sermon_generate,
         "sermons were originally generated using: ",
-        openai_chat_completions,
+        openai_off_chat_completions,
       ]);
       let message = text_combine_multiple([prompt_system, " ", prompt_user]);
       log_keep(g_sermon_generate_book_generic_prompts.name, message);
