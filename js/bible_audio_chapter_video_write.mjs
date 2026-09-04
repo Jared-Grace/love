@@ -1,5 +1,3 @@
-import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
-import { lyric_video_lines_split_characters_max } from "./lyric_video_lines_split_characters_max.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_chapter_audio_join } from "./bible_audio_chapter_audio_join.mjs";
 import { bible_audio_chapter_lines_timed } from "./bible_audio_chapter_lines_timed.mjs";
@@ -26,6 +24,7 @@ export async function bible_audio_chapter_video_write(
   "★ IT IS THE VERY RENDERER THE SUNG PSALMS ALREADY USE, ASKED WITH A DIFFERENT DOCUMENT. A video of words over a sound is one job whether the sound is sung or spoken, and the only thing the two kinds disagree about is where the times came from - heard, here, and spread and then corrected by hand for a song. So the difference is spent entirely on making the document, and not one line of the rendering is written twice.";
   "★ THE OLDER WAY OF MAKING THIS BUILT A PICTURE AND A LITTLE VIDEO FOR EVERY PIECE AND JOINED THEM, which is one drawing and one encoding per piece and a join on top, where this is a single pass over the whole chapter. It also could not put a line on screen without ending a video, so nothing could ever be shown behind the words or beneath them.";
   "★ THE TIMING DOCUMENT IS NOT KEPT WITH THE REPOSITORY, BECAUSE NOBODY AUTHORS IT. Every number in it was measured from the sound a moment before it was written, so a kept copy could only go stale against a chapter recorded again - and a stale copy of a derived thing is worse than no copy, because it looks exactly like a correct one. A song's document is kept for the opposite reason: a person corrected it by ear, and that work exists nowhere else.";
+  "★ EVERY CARD IS A WHOLE RECORDED PIECE, AND NOT ONE PIECE DIVIDED ACROSS SEVERAL SCREENS. A piece runs from where the last one ended to the next full stop, and it is the only run of words in a chapter whose beginning and end were both heard - each was spoken into its own file and its length simply read off it. Divide one and the moment of the join has to be invented, because the voice hands back sound and no times inside it; the only thing left to reason from is how long the words are, which supposes a reader who takes the same time over a common short word as over a name they have never seen. That supposition is exactly wrong in the places it matters most, a genealogy being every hard name and no short words at all. So the join is not made. What a long piece costs instead is more words standing on one screen at once, in smaller lettering sized to hold them, and that cost is paid in a place a person can see rather than in a number nobody can check.";
   "★ THE VIDEO IS WRITTEN WHERE THE OLDER WAY WROTE IT, so that whatever joins a book's chapters into one long video finds them exactly where it always looked.";
   arguments_assert(arguments, 2);
   let path_audio = await bible_audio_chapter_audio_join(
@@ -36,8 +35,6 @@ export async function bible_audio_chapter_video_write(
     bible_folder,
     chapter_code,
   );
-  let characters_max = lyric_video_screen_characters_max();
-  let lines = lyric_video_lines_split_characters_max(measured, characters_max);
   let version = ebible_bible_folder_version_word(bible_folder);
   let parsed = ebible_chapter_code_parse(chapter_code);
   let book_code = property_get(parsed, "book_code");
@@ -49,7 +46,7 @@ export async function bible_audio_chapter_video_write(
   );
   let credit = bible_usfm_version_credit_text(version);
   let duration = await audio_file_duration(path_audio);
-  let document = lyric_video_document(passage, credit, duration, lines);
+  let document = lyric_video_document(passage, credit, duration, measured);
   let stem = text_combine_multiple([version, "_", chapter_code]);
   let name = text_combine_multiple([stem, ".json"]);
   let path_document = folder_gitignore_join(name);

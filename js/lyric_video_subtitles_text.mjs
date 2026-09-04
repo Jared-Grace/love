@@ -1,8 +1,12 @@
-import { divide } from "./divide.mjs";
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { multiply_round } from "./multiply_round.mjs";
+import { divide } from "./divide.mjs";
+import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { number_is } from "./number_is.mjs";
+import { text_size } from "./text_size.mjs";
+import { lyric_video_line_font_size } from "./lyric_video_line_font_size.mjs";
+import { equal } from "./equal.mjs";
 export function lyric_video_subtitles_text(document) {
   "$plain document";
   "The whole subtitle file of a lyric video, written out of one authored document: the passage and the translation that stand at the foot of every frame, how long the song runs, how big the frame is, how big the three lettering sizes are, and the lines with the moment each is sung.";
@@ -18,6 +22,7 @@ export function lyric_video_subtitles_text(document) {
   "Both lines at the foot stand through the whole song in grey, quiet enough to be ignored and always there. Together they are the attribution the translation asks for, and they also answer the question a person arriving in the middle of a video actually has.";
   "The words sit at the middle of the frame rather than at the foot, because a phone is held with the lower part of the screen under a thumb and the middle is the part a person is already looking at.";
   "★ THE MIDDLE IS STATED OUTRIGHT RATHER THAN ASKED FOR BY NAMING AN ALIGNMENT, because a subtitle that is merely aligned is moved out of the way of any other subtitle standing at the same moment - and the passage and the translation stand at every moment there is. A short card never grows far enough to touch them and so never moved; a card of ten lines does, and it was shifted downwards until it began below the passage and ran off the bottom of the frame, with nothing at all in the two thirds above it. Naming the point instead is what a placed card means, and a placed card is never moved. Where the point is put is exactly where an alignment would have put it, so nothing that fitted before has moved by so much as a pixel.";
+  "★ A CARD TOO LONG FOR THE FRAME IS SET SMALLER RATHER THAN CUT IN TWO, AND THE ALTERNATIVE IS WHY. Cutting it needs a moment to cut at, and for spoken words there is none to be had: the voice model hands back sound with no times inside it, so the join could only be placed by reasoning from how long the words are and hoping the reader crossed it there. The size, by contrast, is read off the words themselves and nothing is supposed about the reading. A song never meets this, because its lines are short and were placed by ear; a chapter meets it wherever one sentence runs a long way, and the size is written into the card itself so only that card is affected and the rest of the chapter stands as it always did.";
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   let width = document.width;
   let height = document.height;
@@ -55,7 +60,8 @@ export function lyric_video_subtitles_text(document) {
     ",1";
   let middle_x = divide(width, 2);
   let middle_y = divide(height, 2);
-  let lyric_place = "{\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)}";
+  let lyric_place = "\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)";
+  let characters_max = lyric_video_screen_characters_max();
   let song_end = subtitles_time_text(document.duration);
   let passage_event =
     "Dialogue: 0,0:00:00.00," +
@@ -92,14 +98,31 @@ export function lyric_video_subtitles_text(document) {
     let r = started && ended;
     return r;
   }
+  function line_size_text(line) {
+    let characters = text_size(line.text);
+    let size = lyric_video_line_font_size(
+      font_size,
+      characters_max,
+      characters,
+    );
+    let unchanged = equal(size, font_size);
+    if (unchanged) {
+      let none = "";
+      return none;
+    }
+    let asked = "\\fs" + size;
+    return asked;
+  }
   function line_event(line) {
     let event =
       "Dialogue: 0," +
       subtitles_time_text(line.start) +
       "," +
       subtitles_time_text(line.end) +
-      ",Lyric,,0,0,0,," +
+      ",Lyric,,0,0,0,,{" +
       lyric_place +
+      line_size_text(line) +
+      "}" +
       line.text;
     return event;
   }

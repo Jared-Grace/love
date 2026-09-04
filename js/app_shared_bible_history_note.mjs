@@ -1,14 +1,15 @@
-import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_bible_session_id } from "./app_shared_bible_session_id.mjs";
-import { app_shared_bible_session_id_key } from "./app_shared_bible_session_id_key.mjs";
 import { app_shared_bible_history_get } from "./app_shared_bible_history_get.mjs";
-import { app_shared_bible_history_key } from "./app_shared_bible_history_key.mjs";
-import { app_shared_bible_history_maximum } from "./app_shared_bible_history_maximum.mjs";
+import { app_shared_bible_session_id_key } from "./app_shared_bible_session_id_key.mjs";
 import { list_filter_property_not } from "./list_filter_property_not.mjs";
+import { app_shared_bible_mode_get } from "./app_shared_bible_mode_get.mjs";
+import { date_today_iso } from "./date_today_iso.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add_first } from "./list_add_first.mjs";
+import { app_shared_bible_history_maximum } from "./app_shared_bible_history_maximum.mjs";
 import { list_take } from "./list_take.mjs";
+import { app_shared_bible_history_key } from "./app_shared_bible_history_key.mjs";
 import { storage_local_set_context } from "./storage_local_set_context.mjs";
 export function app_shared_bible_history_note(
   context,
@@ -26,10 +27,13 @@ export function app_shared_bible_history_note(
   let others = list_filter_property_not(kept, property_name, session);
   ("Which of the two readers was open is written down with the passage, because a passage on its own is not enough to put somebody back where they were. The two readers do not read a picked passage the same way: the whole-chapter one takes several verses at once, and the single-verse one takes exactly one. Handed several, it looked for a verse called five-to-nine, found none, and printed the failure over the chapter the reader had asked for.");
   let mode = app_shared_bible_mode_get();
+  ("The day is written down with the reading, because the list this line joins is a list of places one has been and the useful question about such a list is when. It is taken at the moment the line is written rather than worked out later, which is the only moment it is known - a line carries no other trace of when it was made, and the reading it points at is as old as the passage rather than as old as the visit.");
+  let opened_iso = date_today_iso();
   let entry = {
     chapter_code,
     verse_numbers,
     mode,
+    opened_iso,
   };
   property_set(entry, property_name, session);
   list_add_first(others, entry);
