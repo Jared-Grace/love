@@ -1,10 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { permission_settings_paths } from "./permission_settings_paths.mjs";
 import { file_read_try } from "./file_read_try.mjs";
 import { equal } from "./equal.mjs";
 import { json_parse_try } from "./json_parse_try.mjs";
 import { assert_json } from "./assert_json.mjs";
-import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { json_keyed_values } from "./json_keyed_values.mjs";
 import { list_add } from "./list_add.mjs";
@@ -22,8 +22,7 @@ export async function permission_settings_hook_commands() {
       continue;
     }
     let settings = json_parse_try(text);
-    let b = equal(settings, null);
-    let b2 = not(b);
+    let b2 = equal_not(settings, null);
     assert_json(b2, {
       hint: "this settings file is on disk but is not readable as settings, so everything it declares - every hook and every rule in it - is being ignored in full while its text still reads as though it were all there",
       path,
