@@ -17,7 +17,7 @@ export function song_image_couplet_glosses() {
         "Described. A false balance is abomination to the LORD, and Micah asks shall I count them pure with the wicked balances. Scripture does not say scales stood at this trial, but it does say that a rigged measure is what injustice looks like to GOD, so the tilted beam is HIS own image for the thing and not a courthouse emblem borrowed for it. The same scales come back level at couplet 29.",
     },
     2: {
-      kept: 12,
+      kept: 17,
       lyric_ref: "Luke 23:4, Matthew 27:24, 1 Peter 2:22",
       lyric_explain:
         "Pilate said outright, I find no fault in this man, and then washed his hands before the crowd saying he was innocent of HIS blood. Peter says HE did no sin, neither was guile found in HIS mouth.",
