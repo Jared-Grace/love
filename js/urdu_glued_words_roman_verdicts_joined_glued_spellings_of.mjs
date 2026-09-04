@@ -14,6 +14,7 @@ import { list_take } from "./list_take.mjs";
 export async function urdu_glued_words_roman_verdicts_joined_glued_spellings_of(
   control,
 ) {
+  "★ THE COUNTER AND THE SPELLING LOOKUP ARE MADE TOGETHER HERE BECAUSE THEY SHARE ONE OPENING OF THE PRINTING. The searchable text, the list of spellings and the cap on how many of them may be taken are each paid for once at this point rather than once per word, and the counter keeps every phrase it has already counted, so a phrase two different words both need is searched for only the first time.";
   arguments_assert(arguments, 1);
   let searchable = await ebible_version_words_searchable(control);
   let lexicon = await urdu_roman_lexicon();
