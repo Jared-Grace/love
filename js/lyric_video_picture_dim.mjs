@@ -1,0 +1,9 @@
+export function lyric_video_picture_dim() {
+  "How much of a background picture's own light a lyric video keeps once the words are laid over it: half.";
+  "★ THE PICTURE IS DARKENED BY THE RENDER AND NEVER BY THE WORDING THAT DREW IT. The look asks for a dim middle to the frame, and the very first picture drawn to that look came back with a column of white light straight down the middle - because the scene it was given was a shaft of light and the scene wins. Nothing catches that: the render succeeds, the picture is beautiful, and the words are white on white. A wording is a request and a request can be refused, so readability cannot rest on one. This is the guarantee that holds however the picture came out.";
+  "IT IS THE SAME NUMBER FOR EVERY PICTURE AND IS NEVER CHOSEN PER PICTURE. Choosing per picture means looking at each one and deciding, which is exactly the judgment that would have to be made again for every psalm and would be skipped on the day somebody was in a hurry. A single number is either right for all of them or wrong for all of them, and wrong for all of them is a thing one person notices once.";
+  "It halves rather than shading only the band the words cross. A dark band with lit picture above and below draws a horizontal edge across the frame that nothing in the picture explains, and the eye finds an edge like that faster than it finds the words. Halving the whole frame leaves the picture whole and only quieter, which is what a background is.";
+  "Half is dark enough that white lettering with a black border stands off the brightest thing a picture can contain - a white sky, a lit cloud, a shaft of light - and light enough that the picture is still plainly a picture rather than a texture. The border and this share the work: the border wins the fine edge, this wins the broad area.";
+  let dim = 0.5;
+  return dim;
+}
