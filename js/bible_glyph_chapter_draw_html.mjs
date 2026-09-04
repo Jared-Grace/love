@@ -1,3 +1,4 @@
+import { app_shared_text_deemphasized } from "./app_shared_text_deemphasized.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { html_p } from "./html_p.mjs";
@@ -23,7 +24,8 @@ export function bible_glyph_chapter_draw_html(parent, chapter, traditions) {
   for (let verse of chapter.verses) {
     let paragraph = html_p(parent);
     let numbered = verse.verse_number + " ";
-    let number = html_span_text_content(paragraph, numbered); app_shared_text_deemphasized(number);
+    let number = html_span_text_content(paragraph, numbered);
+    app_shared_text_deemphasized(number);
     let words_holder = html_span(paragraph);
     html_attribute_set(words_holder, "dir", "auto");
     bible_glyph_verse_draw_html(words_holder, verse.words, lookup);
