@@ -63,6 +63,7 @@ export async function app_shared_bible_home_generic(
     bar,
     lines_copy_extra,
     bottom,
+    chapter_code,
   };
   return v;
 }
