@@ -23,7 +23,8 @@ export function bible_glyph_language_credit_defects(lines) {
   let defects = [];
   let terms_prefix = property_get(prefixes, "terms");
   let terms = list_filter_starts_with(lines, terms_prefix);
-  let terms_one = equal(list_size(terms), 1);
+  let left = list_size(terms);
+  let terms_one = equal(left, 1);
   if (not(terms_one)) {
     list_add(
       defects,
@@ -41,13 +42,15 @@ export function bible_glyph_language_credit_defects(lines) {
   }
   let source_prefix = property_get(prefixes, "source");
   let sources = list_filter_starts_with(lines, source_prefix);
-  let source_one = equal(list_size(sources), 1);
+  let left2 = list_size(sources);
+  let source_one = equal(left2, 1);
   if (not(source_one)) {
     list_add(defects, "no single line saying where this text came from");
   }
   let edition_prefix = property_get(prefixes, "edition");
   let editions = list_filter_starts_with(lines, edition_prefix);
-  let edition_one = equal(list_size(editions), 1);
+  let left3 = list_size(editions);
+  let edition_one = equal(left3, 1);
   if (not(edition_one)) {
     list_add(
       defects,
