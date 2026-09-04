@@ -9,11 +9,13 @@ import { each } from "./each.mjs";
 import { app_shared_buttons_expand_collapse_refresh } from "./app_shared_buttons_expand_collapse_refresh.mjs";
 export function app_shared_buttons_expand_collapse(
   parent,
-  expand_all_lambda,
-  collapse_all_lambda,
-  folds_expand,
-  folds_collapse,
-  expand_more_is,
+  {
+    expand_all_lambda,
+    collapse_all_lambda,
+    folds_expand,
+    folds_collapse,
+    expand_more_is,
+  },
   what,
 ) {
   "$plain what";
@@ -24,7 +26,7 @@ export function app_shared_buttons_expand_collapse(
   "Each button is told which groups of cards it acts on, so it can switch itself off once it has nothing left to do there. They are LISTS of groups because a page's cards nest and the two buttons need not act on the same levels - the search results open sections and books, and shut only books.";
   "What each button DOES is still handed in rather than worked out from the groups, because opening everything is not always only folding: the search results fetch the verses inside the cards they have just opened, and copying everything is that same opening followed by a copy.";
   "AND BECAUSE OPENING IS NOT ONLY FOLDING, WHETHER ANYTHING IS LEFT TO OPEN IS NOT ONLY A QUESTION ABOUT THE CARDS. The page is asked that as its own question, and the opening button stays lit while either the cards or the page says there is more. Asked about the cards alone, the search results switched the button off over a page whose every card was open and whose every verse was still empty - the one moment the reader most needed to press it.";
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 3);
   let down = emoji_triangle_down();
   let expanding = text_combine(" Expand all ", what);
   let expand = app_shared_button_wide_text_combine(
