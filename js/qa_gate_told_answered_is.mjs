@@ -1,8 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_empty_is_or_null } from "./list_empty_is_or_null.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
 import { or } from "./or.mjs";
 export function qa_gate_told_answered_is(told) {
@@ -20,8 +20,7 @@ export function qa_gate_told_answered_is(told) {
   let quiet = list_empty_is_or_null(failed);
   let named_one = not(quiet);
   let finished = property_get_or_null(told, "finished");
-  let stopped_partway = equal(finished, false);
-  let right = not(stopped_partway);
+  let right = equal_not(finished, false);
   let named_all = and(named_one, right);
   let answered = or(green, named_all);
   return answered;
