@@ -44,7 +44,7 @@ export async function app_emoji_bible(context) {
   ("Both of the reader's two choices sit in the bar of the chapter they are reading and nowhere on the list, because neither of them changes anything a list shows. A control that does nothing where it is drawn teaches the reader it does nothing anywhere.");
   app_shared_app_fn_set(context, app_emoji_bible);
   html_clear_context(context);
-  let root = app_shared_mobile_default_bible_font_size(context);
+  let value_default = app_shared_bible_font_size(); let root = app_shared_mobile_default_font_size_generic(context, value_default);
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
