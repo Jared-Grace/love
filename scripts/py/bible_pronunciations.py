@@ -29,10 +29,13 @@ import json
 import re
 from pathlib import Path
 
-LEXICON_PATH = Path(__file__).resolve().parents[1] / "data/given/biblevox_lexicon.scm"
-SAID_PATH = Path(__file__).resolve().parents[1] / "data/given/speech_pronunciations.json"
+LEXICON_PATH = Path(__file__).resolve().parents[2] / "data/given/biblevox_lexicon.scm"
+SAID_PATH = Path(__file__).resolve().parents[2] / "data/given/speech_pronunciations.json"
 
-ENTRY = re.compile(r"""\(lex\.add\.entry\s*'?\(\s*"([^"]+)"\s+(\S+)\s+(.*?)\)\s*\)""", re.S)
+ENTRY = re.compile(
+    r"""\(lex\.add\.entry\s*'?\(\s*"([^"]+)"\s+(\S+)\s+(.*?)(?=\(lex\.add\.entry|\Z)""",
+    re.S,
+)
 SYLLABLE = re.compile(r"\(\s*\(([^()]*)\)\s*(\d)\s*\)")
 
 NAMED_TAGS = frozenset({"nnp", "nnps"})
