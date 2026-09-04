@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_language_credit_prefixes } from "./bible_glyph_language_credit_prefixes.mjs";
 import { property_get } from "./property_get.mjs";
@@ -48,7 +49,7 @@ export function bible_glyph_language_credit_lines(credit, changes) {
   let source_prefix = property_get(prefixes, "source");
   let where = text_combine_multiple([source_prefix, url, "."]);
   list_add(lines, where);
-  let bible_folder = property_get(credit, "bible_folder");
+  let bible_folder = property_get(credit, bible_folder_key());
   let edition_prefix = property_get(prefixes, "edition");
   let edition = text_combine_multiple([edition_prefix, bible_folder, "."]);
   list_add(lines, edition);
