@@ -3,7 +3,7 @@ import { urdu_glued_words_roman_verdicts_joined_glued_spellings_of } from "./urd
 import { property_get } from "./property_get.mjs";
 import { urdu_glued_words_roman_verdicts_joined_glued_joined_apart } from "./urdu_glued_words_roman_verdicts_joined_glued_joined_apart.mjs";
 import { list_join } from "./list_join.mjs";
-export async function urdu_glued_words_roman_verdicts_joined_glued_joined_glued(
+export async function urdu_glued_words_roman_verdicts_joined_glued_phrase(
   control,
 ) {
   arguments_assert(arguments, 1);
