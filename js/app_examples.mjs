@@ -1,3 +1,4 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { app_shared_footer } from "./app_shared_footer.mjs";
 import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
 import { html_style_background } from "./html_style_background.mjs";
@@ -6,7 +7,6 @@ import { html_style_padding } from "./html_style_padding.mjs";
 import { subtract } from "./subtract.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_font_set } from "./html_font_set.mjs";
 import { html_margin_0 } from "./html_margin_0.mjs";
@@ -39,7 +39,7 @@ export async function app_examples(context) {
   function render() {
     html_clear(root);
     let page = app_shared_container_blue(root);
-    html_style_set(page, "max-width", "62rem");
+    html_style_max_width(page, "62rem");
     html_style_margin(page, "2rem auto");
     html_style_padding(page, "2rem");
     html_font_set(page, "system-ui, sans-serif");

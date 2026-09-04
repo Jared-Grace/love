@@ -1,3 +1,4 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -16,7 +17,7 @@ export function song_image_page_shell(said) {
   "THE SIZES ARE SHARES OF THE PAGE'S OWN. A title fixed at a count of pixels stays that size while the page around it grows, and the page it was measured against was the browser's default rather than the size these apps open at.";
   arguments_assert(arguments, 1);
   let root = html_body_div_page_dark();
-  html_style_set(root, "max-width", "860px");
+  html_style_max_width(root, "860px");
   html_style_margin(root, "0 auto");
   let title = html_div(root);
   html_style_font_size(title, "1.6em");
