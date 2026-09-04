@@ -1,13 +1,11 @@
 import { app_en_learn_bible_gloss_urdu_generate } from "./app_en_learn_bible_gloss_urdu_generate.mjs";
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_passage_urdu_texts_mapped } from "./gloss_passage_urdu_texts_mapped.mjs";
 import { urdu_names_respelled } from "./urdu_names_respelled.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
+import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -21,10 +19,9 @@ export async function app_en_learn_bible_gloss_urdu_names_repair() {
   "Nothing is touched but the short Urdu standing for each English word and the longer Urdu explaining it. The verse is left alone in every chapter, because the verse is another publisher's translation and their spelling of a name is their choice rather than a fault.";
   "A chapter that changed is written back and then run through again, and the second run has to find nothing. It would find something if one ruling respelled a name into a spelling that another ruling respells again, which is a table that contradicts itself, and that is worth being told about rather than being applied twice.";
   "A chapter is repaired where it is stored and is not published by this. Sending the repaired chapters out to the reader is its own step.";
+  "Which chapters the store holds is asked of the reading that every other sweep over a gloss store asks, rather than opened here. Reading a folder and turning its file names into chapter names is not this function's work and was written out twice, once here and once in the repair standing beside it - which is exactly the shared run a gate names.";
   let fn = app_en_learn_bible_gloss_urdu_generate;
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   function chapter_map(chapter) {
     let passages = property_get(chapter, "passages");
     let touched = [];
