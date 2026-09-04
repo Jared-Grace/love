@@ -13,7 +13,7 @@ export function app_emoji_bible_words_button(parent, chapter_code) {
   ("IT COSTS NOTHING TO BUILD BECAUSE THE TWO APPS ALREADY NAME A CHAPTER THE SAME WAY. ",
     fn_name("app_shared_bible_pictures_chapter_hash"),
     " spells the reader's own key rather than one of its own, so the code being read here is already the code the reader opens at, and there is nothing to translate between them.");
-  ("IT IS NOT THE KEY UNDER EVERY VERSE AND DOES NOT REPLACE IT. The key teaches: it prints the original line and a word for word English under the pictures, so a reader works the pictures out. This is for the reader who has finished and wants to go on reading scripture, and that is the other app's whole job rather than something to grow here.");
+  ("IT IS NOT THE KEY UNDER EVERY VERSE AND DOES NOT REPLACE IT. The key teaches: it prints the original line and the English under the pictures, so a reader works the pictures out. This is for the reader who has finished and wants to go on reading scripture, and that is the other app's whole job rather than something to grow here.");
   ("It opens beside this page rather than instead of it, for the reason ",
     fn_name("app_next_bible_button"),
     " opens beside its own: the reader writes its own words into the address as it settles, so pressing back walks through the reader's arrivals and never reaches the chapter that sent you.");
