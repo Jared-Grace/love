@@ -1,7 +1,7 @@
+import { html_style_max_width } from "./html_style_max_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_g_verify_column_max_width } from "./app_g_verify_column_max_width.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { app_shared_content_edge_gap } from "./app_shared_content_edge_gap.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
@@ -22,7 +22,7 @@ export function app_g_verify_home_wrap(
   arguments_assert(arguments, 6);
   let wrap = html_div(root);
   let style_value = app_g_verify_column_max_width();
-  html_style_set(wrap, "max-width", style_value);
+  html_style_max_width(wrap, style_value);
   html_style_margin(wrap, "0 auto");
   let edge_gap = app_shared_content_edge_gap();
   html_style_padding_x(wrap, edge_gap);
