@@ -979,6 +979,7 @@ export function qa_gates() {
     apps_names_way_in_gate_run,
     bible_pronunciations_gate_run,
     lists_matched_indexes_cases_gate_run,
+    app_ceb_bible_gloss_affix_kinds_wrong_gate_run,
   ];
   return gates;
 }
