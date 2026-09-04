@@ -1,3 +1,4 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,8 +12,6 @@ import { lyric_video_disagree_seconds } from "./lyric_video_disagree_seconds.mjs
 import { less_than } from "./less_than.mjs";
 import { divide } from "./divide.mjs";
 import { multiply_round } from "./multiply_round.mjs";
-import { abs } from "./abs.mjs";
-import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function lyric_video_document_times_measure(
   path_audio,
@@ -58,8 +57,7 @@ export async function lyric_video_document_times_measure(
     let start = timed.starts[number];
     let start_heard = listened.starts[number];
     let unplaced = equal(start, null) || equal(start_heard, null);
-    let n = subtract(start, start_heard);
-    let number2 = abs(n);
+    let number2 = numbers_apart(start, start_heard);
     let top = multiply_round(number2, 1000);
     let apart = unplaced ? null : divide(top, 1000);
     let disagreed = unplaced || greater_than(apart, apart_least);
