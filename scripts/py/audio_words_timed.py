@@ -96,9 +96,21 @@ def piece_timed(model, index_of, separator, rate, piece):
         emissions, _ = model(waveform)
         emissions = torch.log_softmax(emissions, dim=-1)
 
-    aligned, scores = F.forced_align(
-        emissions, torch.tensor([targets], dtype=torch.int32), blank=0
-    )
+    seconds = round(waveform.size(1) / rate, 3)
+
+    try:
+        aligned, scores = F.forced_align(
+            emissions, torch.tensor([targets], dtype=torch.int32), blank=0
+        )
+    except RuntimeError as refusal:
+        return {
+            "words": [],
+            "dropped": dropped,
+            "seconds": seconds,
+            "confidence": 0.0,
+            "refused": str(refusal),
+        }
+
     spans = F.merge_tokens(aligned[0], scores[0].exp())
     ratio = waveform.size(1) / emissions.size(1) / rate
 
@@ -118,7 +130,8 @@ def piece_timed(model, index_of, separator, rate, piece):
     return {
         "words": words,
         "dropped": dropped,
-        "seconds": round(waveform.size(1) / rate, 3),
+        "seconds": seconds,
+        "confidence": round(sum(w["score"] for w in words) / len(words), 3),
     }
 
 
