@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_language_written_mark } from "./bible_glyph_language_written_mark.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -5,8 +6,6 @@ import { not } from "./not.mjs";
 import { bible_glyph_language_credit_prefixes } from "./bible_glyph_language_credit_prefixes.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter_starts_with } from "./list_filter_starts_with.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { subtract } from "./subtract.mjs";
@@ -25,8 +24,7 @@ export function bible_glyph_language_credit_attributed_is(lines) {
   let prefixes = bible_glyph_language_credit_prefixes();
   let terms_prefix = property_get(prefixes, "terms");
   let terms = list_filter_starts_with(lines, terms_prefix);
-  let found = list_size(terms);
-  let terms_one = equal(found, 1);
+  let terms_one = list_size_equal(terms, 1);
   if (not(terms_one)) {
     return false;
   }
