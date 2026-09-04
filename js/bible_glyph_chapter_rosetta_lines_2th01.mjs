@@ -18,7 +18,7 @@ export function bible_glyph_chapter_rosetta_lines_2th01() {
         original:
           "Χάρις ὑμῖν καὶ εἰρήνη ἀπὸ Θεοῦ Πατρὸς καὶ Κυρίου Ἰησοῦ Χριστοῦ",
         english:
-          "Grace and peace to you from God Father and the Lord Jesus Christ",
+          "Grace and peace to you from God our Father and the Lord Jesus Christ",
       },
       {
         verse_number: 3,
