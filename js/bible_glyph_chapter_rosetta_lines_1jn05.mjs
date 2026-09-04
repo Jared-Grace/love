@@ -11,7 +11,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "Πᾶς ὁ πιστεύων ὅτι Ἰησοῦς ἐστιν ὁ Χριστὸς ἐκ τοῦ Θεοῦ γεγέννηται καὶ πᾶς ὁ ἀγαπῶν τὸν γεννήσαντα ἀγαπᾷ τὸν γεγεννημένον ἐξ αὐτοῦ",
         english:
-          "Everyone who believes that Jesus is the Christ has been born of God and everyone who loves the Father loves those born of Him",
+          "Everyone who believes that Jesus is the Christ has been born of God and everyone who loves the Father also loves those born of Him",
       },
       {
         verse_number: 2,
@@ -39,7 +39,7 @@ export function bible_glyph_chapter_rosetta_lines_1jn05() {
         original:
           "Τίς ἐστιν ὁ νικῶν τὸν κόσμον εἰ μὴ ὁ πιστεύων ὅτι Ἰησοῦς ἐστιν ὁ Υἱὸς τοῦ Θεοῦ",
         english:
-          "Who overcomes the world Only he who believes that Jesus is the Son of God",
+          "Who then overcomes the world Only he who believes that Jesus is the Son of God",
       },
       {
         verse_number: 6,
