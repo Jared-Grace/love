@@ -1,3 +1,4 @@
+import { lyric_video_line_size_text } from "./lyric_video_line_size_text.mjs";
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
@@ -6,9 +7,6 @@ import { divide_round } from "./divide_round.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { number_is } from "./number_is.mjs";
-import { text_size } from "./text_size.mjs";
-import { lyric_video_line_font_size } from "./lyric_video_line_font_size.mjs";
-import { equal } from "./equal.mjs";
 export function lyric_video_subtitles_text(document) {
   "$plain document";
   "The whole subtitle file of a lyric video, written out of one authored document: the passage and the translation that stand at the foot of every frame, how long the song runs, how big the frame is, how big the three lettering sizes are, and the lines with the moment each is sung.";
@@ -102,21 +100,6 @@ export function lyric_video_subtitles_text(document) {
     let r = started && ended;
     return r;
   }
-  function line_size_text(line) {
-    let characters = text_size(line.text);
-    let size = lyric_video_line_font_size(
-      font_size,
-      characters_max,
-      characters,
-    );
-    let unchanged = equal(size, font_size);
-    if (unchanged) {
-      let none = "";
-      return none;
-    }
-    let asked = "\\fs" + size;
-    return asked;
-  }
   function line_event(line) {
     let event =
       "Dialogue: 0," +
@@ -125,7 +108,7 @@ export function lyric_video_subtitles_text(document) {
       subtitles_time_text(line.end) +
       ",Lyric,,0,0,0,,{" +
       lyric_place +
-      line_size_text(line) +
+      lyric_video_line_size_text(line, font_size, characters_max) +
       "}" +
       line.text;
     return event;
