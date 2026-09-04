@@ -203,6 +203,7 @@ export function bible_glyph_chapters() {
     fortieth,
     forty_first,
     forty_second,
+    forty_third,
   ];
   return chapters;
 }
