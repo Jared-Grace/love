@@ -3,6 +3,7 @@ import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_ends_with_any } from "./text_ends_with_any.mjs";
 import { add } from "./add.mjs";
 import { less_than } from "./less_than.mjs";
@@ -16,6 +17,7 @@ export function lyric_video_words_screens(words, characters_max, seconds) {
   "★ EVERY MOMENT HERE WAS HEARD, WHICH IS THE ONE THING THAT MAKES THE CUT ALLOWABLE AT ALL. A screen ends where the next screen's first word begins, and that second was measured in the sound by laying the known letters onto the recording. The older way of dividing a piece had to reason the moment from how long the words were, which supposes a reader who takes as long over a name they have never seen as over the word the - exactly wrong on a genealogy, which is where the dividing was most needed. So this is not a better guess than that one; it is the absence of a guess.";
   "★ THE FIRST SCREEN BEGINS AT NOTHING AND THE LAST ENDS AT THE WHOLE LENGTH, RATHER THAN AT ITS OWN FIRST AND LAST WORD. A reader draws breath before the first word and the recording runs on a little after the last, and a screen that appeared only on the first syllable and vanished on the last would blink twice per piece for no reason. Inside the piece the joins are shared: one screen's end is the next one's start, so no gap can open between them.";
   "★ IT BREAKS WHERE THE READER BREAKS, LOOKING BACK A FEW WORDS FOR A MARK. A screen filled to its last letter usually ends mid-phrase, and the words either side of that break are read as one breath, so splitting them puts half a phrase alone on a screen. Looking back at most a few words finds the comma or stop the reader actually paused at; looking back further would start throwing away most of a screen to find one, which costs more screens than the untidy break did.";
+  "★ HOW FAR BACK IT LOOKS IS THE LENGTH OF A SHORT PHRASE, AND FOUR IS ONE MORE THAN IT SEEMS. The phrase this was measured on is the son of Name, which is four words, so a screen that fills up on the name has to reach four words back to find the comma before the. Reaching only three left the son of stranded at the foot of one screen and its name at the head of the next, four times over in a single genealogy - correct by every count and wrong to read. So the distance is not a round number chosen for tidiness; it is the length of the shortest thing here that must not be split.";
   "★ THE COUNT IT FILLS TO IS OF LETTERS AND THE SPACES BETWEEN THEM, and it is the caller's business that the count handed in be the number that actually fills a screen at the size the words will be drawn at. Nothing here knows the shape of a letter, so a screen is only as right as that number is.";
   "★ A PIECE SHORT ENOUGH COMES BACK AS ONE SCREEN, UNCHANGED. That is the ordinary case by a wide margin - the middle piece of the bible is about a hundred and twenty letters against a screenful of a hundred and sixty-five - so nothing is aligned, cut or moved for most of what is read.";
   arguments_assert(arguments, 3);
@@ -30,7 +32,7 @@ export function lyric_video_words_screens(words, characters_max, seconds) {
   function break_index(first, reached) {
     let earliest = subtract(reached, look_back);
     let back = subtract(reached, 1);
-    while (greater_than(back, first) && greater_than(back, earliest)) {
+    while (greater_than(back, first) && greater_than_equal(back, earliest)) {
       let text = word_text(back);
       let marked = text_ends_with_any(text, marks);
       if (marked) {
