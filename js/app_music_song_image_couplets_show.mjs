@@ -1,7 +1,9 @@
-import { app_music_song_images_warm_button } from "./app_music_song_images_warm_button.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_image_couplets } from "./song_image_couplets.mjs";
 import { app_music_song_folds_show } from "./app_music_song_folds_show.mjs";
+import { app_music_song_pictures_new } from "./app_music_song_pictures_new.mjs";
+import { app_music_song_pictures_buttons } from "./app_music_song_pictures_buttons.mjs";
+import { app_music_song_images_warm_button } from "./app_music_song_images_warm_button.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_p_text_centered } from "./html_p_text_centered.mjs";
@@ -29,11 +31,14 @@ export async function app_music_song_image_couplets_show(parent, song) {
   "IT IS HANDED THE SONG IT IS DRAWING RATHER THAN NAMING IT. Which bible each passage is quoted from is a fact about the song, and the song already carries that answer for everything else that asks - so reaching for this hymn's list by name here would be a second way to the same fact, and two ways to one fact is one of them going stale. Being handed it also means this asks for the built file the song is filed under without having to work out which song it is.";
   "THE TRANSLATION CHOICES ARE READ ONCE AT THE TOP AND CARRIED DOWN, to the lines and to the pictures alike, rather than looked up under each of them. Sixteen of these passages are sung by the song next door as well, and each of the two may want a different wording of the same verse.";
   "Open-everything and shut-everything sit at the top, because a reader who wants to read the whole song through, or to search it with their browser's own find, cannot do either while ninety passages are folded away.";
+  "SHOW-ALL-PICTURES AND HIDE-ALL-PICTURES SIT THERE TOO, and the one thing they are given is made here rather than by them, because the drawings they act on are made further down this loop and do not exist yet when the buttons are drawn. What passes between them is the same thing under both names: the buttons write into it and each drawing reads it as it joins.";
   "The whole song is drawn before any passage is fetched, so a reader who came for the words has them at once and the passages fill in underneath.";
   arguments_assert(arguments, 2);
   let couplets = song_image_couplets();
   let versions = song.versions();
   let folds = app_music_song_folds_show(parent);
+  let pictures = app_music_song_pictures_new();
+  app_music_song_pictures_buttons(parent, pictures);
   app_music_song_images_warm_button(parent);
   let verse_shown = 0;
   let asked_all = [];
@@ -77,6 +82,7 @@ export async function app_music_song_image_couplets_show(parent, song) {
         number,
         caption,
         versions,
+        pictures,
       );
       list_add_multiple(asked_all, asked_emblem);
     }
