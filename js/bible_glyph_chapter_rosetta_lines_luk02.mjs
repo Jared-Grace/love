@@ -85,7 +85,7 @@ export function bible_glyph_chapter_rosetta_lines_luk02() {
         original:
           "καὶ τοῦτο ὑμῖν σημεῖον εὑρήσετε βρέφος ἐσπαργανωμένον καὶ κείμενον ἐν φάτνῃ",
         english:
-          "And this will be sign to you You will find a baby wrapped in swaddling cloths and lying in a manger",
+          "And this will be a sign to you You will find a baby wrapped in swaddling cloths and lying in a manger",
       },
       {
         verse_number: 13,
@@ -351,7 +351,7 @@ export function bible_glyph_chapter_rosetta_lines_luk02() {
         original:
           "Καὶ κατέβη μετ’ αὐτῶν καὶ ἦλθεν εἰς Ναζαρὲθ καὶ ἦν ὑποτασσόμενος αὐτοῖς καὶ ἡ μήτηρ αὐτοῦ διετήρει πάντα τὰ ῥήματα ἐν τῇ καρδίᾳ αὐτῆς",
         english:
-          "Then He went down to Nazareth with them and was obedient to them But His mother treasured up all things in her heart",
+          "Then He went down to Nazareth with them and was obedient to them But His mother treasured up all these things in her heart",
       },
       {
         verse_number: 52,
