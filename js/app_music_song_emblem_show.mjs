@@ -16,11 +16,11 @@ import { html_style_max_width } from "./html_style_max_width.mjs";
 import { app_music_song_emblem_border_width } from "./app_music_song_emblem_border_width.mjs";
 import { html_border } from "./html_border.mjs";
 import { html_flex_shrink_0 } from "./html_flex_shrink_0.mjs";
-import { app_music_song_pictures_add } from "./app_music_song_pictures_add.mjs";
 import { not } from "./not.mjs";
 import { html_flex_grow_1 } from "./html_flex_grow_1.mjs";
 import { app_music_song_line_show } from "./app_music_song_line_show.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
+import { app_music_song_pictures_add } from "./app_music_song_pictures_add.mjs";
 export function app_music_song_emblem_show(
   folds,
   parent,
@@ -43,6 +43,7 @@ export function app_music_song_emblem_show(
   "THE CARD IS DRAWN BESIDE THE PICTURE RATHER THAN UNDER IT. Held to a size that leaves most of the width unused, a picture stacked above its card spends a whole screen height on a shape and a caret and pushes the next sung line off the bottom; put side by side, the two together are no taller than the taller of them and the song stays readable straight down.";
   "THE TWO ARE HELD AGAINST THE TOP OF THE ROW. A picture arrives late and at a height nobody knew in advance, and a card centred against it would be moved by the arrival - a reader reaching for the caret would tap whatever slid into its place. Held to the top, the card is where it was when the reader looked at it, whatever the picture turns out to be.";
   "THE PICTURE KEEPS ITS WIDTH WHEN THE ROW IS TOO NARROW FOR BOTH, and the words give way instead, because words reflow and a drawing squeezed to a third of its size stops being legible at all.";
+  "IT IS THE ROW AND NOT THE PICTURE THAT THE HIDE BUTTON IS GIVEN, so that the card goes with the picture it belongs to. The card is captioned as the picture's - this picture, the first picture - and left on the page alone it offers to open onto the scripture behind something the reader can no longer see.";
   arguments_assert(arguments, 6);
   let url = song_image_kept_url(n);
   let unchosen = equal(url, "");
@@ -66,7 +67,6 @@ export function app_music_song_emblem_show(
   let border_width = app_music_song_emblem_border_width();
   html_border(picture, border_width, "black");
   html_flex_shrink_0(picture);
-  app_music_song_pictures_add(pictures, picture);
   if (not(unreferenced)) {
     let beside = html_div(row);
     html_flex_grow_1(beside);
@@ -79,5 +79,6 @@ export function app_music_song_emblem_show(
     );
     list_add_multiple(asked_list, shown.asked_list);
   }
+  app_music_song_pictures_add(pictures, row);
   return asked_list;
 }
