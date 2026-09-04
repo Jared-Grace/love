@@ -27,11 +27,13 @@ export function app_music_song_folds_show(parent) {
   ("opening a song is only folding - the passages are already on the page behind the cards - so once every card is open there is nothing further this page could open, and it says so with a flat no");
   let pair = app_shared_buttons_expand_collapse(
     parent,
-    expand_all,
-    collapse_all,
-    groups,
-    groups,
-    false_get,
+    {
+      expand_all_lambda: expand_all,
+      collapse_all_lambda: collapse_all,
+      folds_expand: groups,
+      folds_collapse: groups,
+      expand_more_is: false_get,
+    },
     "lyric Bible passages",
   );
   ("EVERY BUTTON DOWN THIS COLUMN KEEPS THE SAME GAP. These two carried only the hair's width a wide button keeps by default, while the way-home button above them keeps the gap this app spaces stacked buttons by - so one column of identically dressed buttons was drawn at two rhythms, the top one standing clear and the bottom two touching. Read down the page that says the pair is one thing and the button above it is another, which is the opposite of what they are.");
