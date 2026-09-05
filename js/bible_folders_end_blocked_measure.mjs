@@ -1,3 +1,4 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
@@ -33,8 +34,7 @@ export async function bible_folders_end_blocked_measure() {
     bible_folders_end_blocked_one,
   );
   function bible_folders_end_blocked_any_is(one) {
-    let blocked = property_get(one, "blocked");
-    let any = greater_than(blocked, 0);
+    let any = property_greater_than(one, "blocked", 0);
     return any;
   }
   let found = list_filter(measured, bible_folders_end_blocked_any_is);
