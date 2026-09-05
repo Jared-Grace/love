@@ -1,3 +1,4 @@
+import { bible_glyph_chapter_rut01 } from "./bible_glyph_chapter_rut01.mjs";
 import { bible_glyph_chapter_jon04 } from "./bible_glyph_chapter_jon04.mjs";
 import { bible_glyph_chapter_jon03 } from "./bible_glyph_chapter_jon03.mjs";
 import { bible_glyph_chapter_jon02 } from "./bible_glyph_chapter_jon02.mjs";
@@ -167,6 +168,7 @@ export function bible_glyph_chapters() {
   ("THE SIXTY NINTH IS THE SECOND OF JONAH, WHICH IS A PSALM SUNG INSIDE A FISH. It carries the book on in order, and it is unlike anything else on this list: the whole chapter is a prayer, stitched together out of lines that already exist in the Psalms, spoken by a man in the one place nobody prays from. The pictures find two things the English hides. The voice mark falls at each end of the prayer and nowhere in the middle, so the shape of the thing is a cry going out and an answer coming back. And three lines running say life, with two different pictures carrying it, because Hebrew has more than one word for the thing Jonah has just stopped losing.");
   ("THE SEVENTIETH IS THE THIRD OF JONAH, WHERE A WHOLE CITY TURNS AROUND IN A DAY. It carries the book on in order, and it is the one page in this Bible where repentance is drawn rather than described: the turning mark falls four times in three lines, on the city turning and on God turning, which is the argument of the chapter shown as a shape. Two more things the English hides. The evil the people do and the disaster God threatens are one Hebrew word, and the tenth verse holds both of them, so a reader sees the same picture answer itself. And the covenant name stops after the third verse, so from there on only the plain God mark ever reaches Nineveh, which is exactly what a foreign city would have known Him by.");
   ("THE SEVENTY FIRST IS THE FOURTH AND LAST OF JONAH, WHICH FINISHES THE BOOK ON THE SITE. It is the only chapter in this Bible where one mark falls four times and every single one of them is a man asking to die, so the page argues the prophet case against himself without a word of comment. The knowing mark falls twice, once for what Jonah knows about God and once for a hundred and twenty thousand people who cannot tell their right hand from their left, and the two uses face each other. And the disaster God turns away from and the discomfort Jonah suffers under the sun are one Hebrew word, so the picture that fell on Nineveh in the third chapter falls here on Jonah.");
+  ("THE SEVENTY SECOND IS THE FIRST OF RUTH, AND IT IS THE ONLY BOOK IN THIS BIBLE SO FAR THAT IS A STORY ABOUT ORDINARY PEOPLE RATHER THAN A PROPHET SPEAKING. One Hebrew word for turning back falls eleven times in twenty two lines and it is the whole shape of the chapter, because everybody in it is either going back or refusing to. The one person who refuses the word is Ruth, and the page shows that refusal by drawing the same mark around her while she stands still. Six death marks fall in the chapter and three of them are Ruth promising one, which is the strangest way anybody has ever sworn loyalty.");
   ("Seventy one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
@@ -246,6 +248,7 @@ export function bible_glyph_chapters() {
   let sixty_ninth = bible_glyph_chapter_jon02();
   let seventieth = bible_glyph_chapter_jon03();
   let seventy_first = bible_glyph_chapter_jon04();
+  let seventy_second = bible_glyph_chapter_rut01();
   let chapters = [
     first,
     second,
@@ -318,6 +321,7 @@ export function bible_glyph_chapters() {
     sixty_ninth,
     seventieth,
     seventy_first,
+    seventy_second,
   ];
   return chapters;
 }

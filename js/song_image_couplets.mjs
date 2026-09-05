@@ -342,10 +342,10 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol: list_join_empty([
-        "One great mass of plain grey rock standing alone and drawn very large, one unbroken mass and never blocks, bricks, courses or slabs, its face flat and turned square to the viewer, the rock filling the window from side to side and rising to near the top of it",
+        r2,
         ", and ",
         r3,
-        ", and that stone standing hard against the flat face of the rock and square to the viewer, its lower edge set down on the ground and its top reaching well up the face of the rock, the rock standing broadly out on both sides of it and rising high above it, one flat unbroken grey circle with nothing drawn on its face, and cut across the rock face behind it a shallow channel of darker grey running out to the left and to the right of the stone at the height of its middle, the track along which the stone was rolled, so that the grave is plainly shut, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
+        ", and that stone standing directly in front of the opening and centred upon it, square to the viewer, its lower edge set down on the ground, the top of the stone standing well above the top of the arch of the opening and each of its two sides standing well outside the matching side of the opening, so that the opening lies wholly behind the stone and the grave is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing showing round it but the grey of the rock, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
       ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,
