@@ -48,6 +48,18 @@ export async function bible_folder_chapter_sentence_end_measure(
   let unended = list_difference(read, ended_each);
   let unrecognised = list_map_unique(unended, lambda3);
   list_sort_text(unrecognised);
+  ("THE MARKS THAT ONLY HID A SENTENCE MARK ARE COUNTED APART FROM THE ONES THAT REPLACED IT, and this is the half a gate can be built on. A verse ending on a comma has not finished and never will, which is a fact about where a translator cut the verse; a verse ending on a full stop and then a closing quotation has finished and was read as though it had not, which is a fault in this repo. Written down here it needs no second reading of the same chapter to find - and that is what lets the refusing happen where the rest of the gates run, with nothing reaching the network.");
+  function bible_folder_chapter_sentence_end_blocking(verse) {
+    let text = property_get(verse, "text");
+    let blocking = bible_verse_end_blocked_or_null(text);
+    return blocking;
+  }
+  let blocking_each = list_map_filter_null_not_is(
+    unended,
+    bible_folder_chapter_sentence_end_blocking,
+  );
+  let blocked = list_unique(blocking_each);
+  list_sort_text(blocked);
   let measured = {
     bible_folder,
     chapter_code,
@@ -56,6 +68,7 @@ export async function bible_folder_chapter_sentence_end_measure(
     absent,
     unreachable,
     unrecognised,
+    blocked,
   };
   return measured;
 }
