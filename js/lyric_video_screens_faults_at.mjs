@@ -1,3 +1,4 @@
+import { property_text_split_space } from "./property_text_split_space.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { equal } from "./equal.mjs";
@@ -10,7 +11,6 @@ import { property_get } from "./property_get.mjs";
 import { lyric_video_text_lines } from "./lyric_video_text_lines.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { text_split_space } from "./text_split_space.mjs";
 import { text_sentence_ends } from "./text_sentence_ends.mjs";
 export function lyric_video_screens_faults_at(
   screens,
@@ -77,8 +77,7 @@ export function lyric_video_screens_faults_at(
         said,
       });
     }
-    let s = property_get(before, "text");
-    let words = text_split_space(s);
+    let words = property_text_split_space(before, "text");
     let word_last = words[subtract(words.length, 1)];
     let closes = text_sentence_ends(word_last);
     if (not(closes) && less_than_equal(multiply(drawn, 3), lines_max)) {
