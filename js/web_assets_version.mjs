@@ -10,6 +10,6 @@ export function web_assets_version() {
   ("It is a DATE rather than a count, so that reading it says when the art was last sent up. A count says only that it happened some number of times, which is not a question anybody asks.");
   ("Bump it in the same commit as the upload. Bumped without an upload, browsers fetch new addresses for files that never changed; uploaded without a bump, the new art sits in storage and no phone that has been here before will ever ask for it.");
   ("A SECOND UPLOAD ON THE SAME DAY NEEDS A LETTER ON THE END, and that is not a decoration. A date alone cannot tell two uploads of one day apart, so the second one leaves every phone that already fetched the first holding the older art at an address it has been told is current - the exact failure this stamp exists to prevent, arriving on the one day somebody is redrawing quickly. So the second upload of a day is 20260905b, the third 20260905c, and the date still reads as a date.");
-  let stamp = "20260905h";
+  let stamp = "20260905i";
   return stamp;
 }
