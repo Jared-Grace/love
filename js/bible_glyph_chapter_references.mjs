@@ -153,6 +153,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 36",
     },
     {
+      chapter_code: "JON01",
+      reference: "Jonah 1",
+    },
+    {
       chapter_code: "MAT05",
       reference: "Matthew 5",
     },
