@@ -32,15 +32,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "You asked twice what was wrong with 114. One thing only: its beams were white instead of every colour, which is the rainbow you had asked for. Neither fault you named in the last one is in 114 - its halo fades softly and its stone sits on the ground. Both of those were things I broke, not things 114 lacked. This one has the coloured beams and the soft halo and the stone on brown ground. The wording had asked for the ground at the very end of a long passage and it was being read past, so it now sits beside the stone.",
+      note: "You asked for orange, yellow and white and for lighter, brighter colours. The beams are now white, yellow and orange first, and the whole window reads bright. You also said the stone is oval and should be circular - that one did not land, and eight more tries all came back oval. Its height and width are now given as one measure, but there are no credits left to test it.",
     },
     {
       n: 26,
-      note: "You asked what was wrong with the one before. Nothing you had named. I replaced it on my own judgement because its wording asked for pale blue sky and the style forbids pale. But you had said its coloured rays looked good, so that trade was mine to lose. It is back to what it was.",
+      note: "You asked for brighter overall, with more orange, yellow and white. The rays are now white, yellow and orange with no two neighbours alike, and the field is emerald green over violet instead of violet over crimson. That is the whole change.",
     },
     {
       n: 30,
-      note: "You asked what was wrong with 40. Nothing, and I made it worse - I took the smoke out and flattened the mountain to a plain grey triangle, both of which you had asked against. 40 is back.",
+      note: "Yes - Hebrews 12:18 is already one of the references on this couplet, and the darkness and gloom in it is the smoke. So smoke is back in the wording: brown, above the fire, never the grey of the mountain. The picture above is still 40, which has smoke only because it was drawn before I wrongly took it out. No new drawing yet - the drawing account is out of credits.",
     },
   ];
   return couplets;
