@@ -2,8 +2,8 @@ import { bless_block_doors } from "./bless_block_doors.mjs";
 import { bless_block_walls } from "./bless_block_walls.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function bless_block(x, y) {
-  arguments_assert(arguments, 2);
+export function bless_block(x, y, block) {
+  arguments_assert(arguments, 3);
   ("One block, given as the tiles it covers - a row of buildings facing south, a pavement");
   ("running the whole length of their fronts, and the door each building opens onto.");
   ("The tile named is the north-west corner of the first building, and everything else is");
@@ -32,7 +32,7 @@ export function bless_block(x, y) {
   ("the street would open every few games with water standing between the houses. They are");
   ("also the only way through the row, so paving them is what keeps the ground north of the");
   ("block reachable from the pavement in front of it.");
-  let r = bless_block_walls(x, y);
+  let r = bless_block_walls(x, y, block);
   let walls = property_get(r, "walls");
   let r2 = bless_block_doors(r, x);
   let doors = property_get(r2, "doors");

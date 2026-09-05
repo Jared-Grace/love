@@ -3,9 +3,9 @@ import { bless_block_alley_tiles } from "./bless_block_alley_tiles.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_flat } from "./list_flat.mjs";
-export function bless_block_alleys(x, y) {
-  arguments_assert(arguments, 2);
-  let r = bless_block_alley_tiles(x, y);
+export function bless_block_alleys(x, y, block) {
+  arguments_assert(arguments, 3);
+  let r = bless_block_alley_tiles(x, y, block);
   let alley_tiles = property_get(r, "alley_tiles");
   let indexes_gap = property_get(r, "indexes_gap");
   let depth = property_get(r, "depth");
