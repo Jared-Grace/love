@@ -28,6 +28,15 @@ export function app_g_bless_world(rows, coordinates, player, npcs, blocks, vehic
   ("who is on the street, every reach of a prayer, every crowd the camera follows reads the");
   ("npcs, and a car among them would have to be skipped by each one separately. Kept apart,");
   ("no rule about people has to learn that some people are cars.");
+  ("The ROADS are the same road squares the blocks already hold, gathered into one lookup so");
+  ("that somebody about to take a step can ask whether the square in front of them is road");
+  ("without searching. Nobody out walking may step into the road, and that rule is asked once");
+  ("per person per step, which is often enough that the shape of the answer matters.");
+  ("Worked out here rather than handed in, because it is not a decision - it is the blocks");
+  ("read a second way. A caller allowed to pass its own would be allowed to pass one that");
+  ("disagreed with the blocks beside it, and the disagreement would show up as people walking");
+  ("through traffic rather than as an error.");
+  let roads = bless_blocks_road_keys(blocks);
   let world = {
     rows: rows,
     coordinates: coordinates,
@@ -35,6 +44,7 @@ export function app_g_bless_world(rows, coordinates, player, npcs, blocks, vehic
     npcs: npcs,
     blocks: blocks,
     vehicles: vehicles,
+    roads: roads,
   };
   return world;
 }
