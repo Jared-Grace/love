@@ -1,3 +1,5 @@
+import { text_slice_from } from "./text_slice_from.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_size } from "./text_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
@@ -7,7 +9,6 @@ import { text_last } from "./text_last.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
 import { null_is } from "./null_is.mjs";
 import { bible_verse_end_tail_count } from "./bible_verse_end_tail_count.mjs";
-import { text_take_end_count } from "./text_take_end_count.mjs";
 export function bible_verse_end_unrecognised_tail_or_null(text) {
   "$plain text";
   "Answers the closing words of a verse that finished on a letter or a figure rather than on any mark at all, or nothing when it finished on a mark.";
@@ -37,6 +38,7 @@ export function bible_verse_end_unrecognised_tail_or_null(text) {
   if (whole) {
     return trimmed;
   }
-  let tail = text_take_end_count(trimmed, count);
+  let start = subtract(size, count);
+  let tail = text_slice_from(trimmed, start);
   return tail;
 }
