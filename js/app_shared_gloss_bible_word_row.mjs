@@ -1,17 +1,23 @@
-import { html_text_direction_set } from "./html_text_direction_set.mjs";
-import { html_attribute_set } from "./html_attribute_set.mjs";
-import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_div } from "./html_div.mjs";
 import { property_get } from "./property_get.mjs";
+import { html_text_direction_set } from "./html_text_direction_set.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold_mild } from "./html_bold_mild.mjs";
+import { html_attribute_set } from "./html_attribute_set.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_gloss_bible_word_sound } from "./app_shared_gloss_bible_word_sound.mjs";
 import { html_span_colon_2 } from "./html_span_colon_2.mjs";
 import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
-export function app_shared_gloss_bible_word_row(e, p, word_property) {
-  arguments_assert(arguments, 3);
+export function app_shared_gloss_bible_word_row(
+  e,
+  p,
+  word_property,
+  sound_url_get,
+) {
+  arguments_assert(arguments, 4);
   html_hr(p);
   let div = html_div(p);
   let word = property_get(e, word_property);
@@ -26,6 +32,8 @@ export function app_shared_gloss_bible_word_row(e, p, word_property) {
   html_attribute_set(span, "dir", "auto");
   let color3 = app_shared_color_red();
   html_font_color_set(span, color3);
+  ("the speaker goes next to the word rather than at the end of the row, because it belongs to the word and not to the explanation of it - and a row that ran the other way would otherwise leave it stranded at the far side of two pieces of Urdu.");
+  app_shared_gloss_bible_word_sound(div, span, word, sound_url_get);
   let c = html_span_colon_2(div);
   let color = app_shared_color_gray();
   html_font_color_set(c, color);
