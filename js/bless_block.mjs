@@ -39,12 +39,12 @@ export function bless_block(x, y, block) {
   let alleys = property_get(r2, "alleys");
   let sidewalk = property_get(r2, "sidewalk");
   let buildings = property_get(r2, "buildings");
-  let block = {
+  let laid = {
     buildings: buildings,
     walls: walls,
     alleys: alleys,
     sidewalk: sidewalk,
     doors: doors,
   };
-  return block;
+  return laid;
 }
