@@ -5,6 +5,7 @@ export async function ffmpeg_crop_write(path_from, box, path_to) {
   "it writes somewhere new rather than over the picture it read, because a program that reads and writes the same file at once has already destroyed the thing it is halfway through reading. Putting the new picture back where the old one was is a separate move, done once this has finished.";
   "it says yes in advance to overwriting, because the alternative is worse than an overwrite: ffmpeg asks the question on the terminal and waits for an answer, and nothing here is ever going to answer, so a file already in the way would stop the run forever rather than fail it";
   "it says one frame and one update because a still picture handed to a tool built for film is otherwise taken for the first of a numbered series";
+  ("IT CARRIES THE CONTENT CREDENTIALS OVER, because ffmpeg keeps no chunk it has no use for and the terms these pictures are drawn under forbid dropping them. It is done here rather than asked of the caller because a caller that has to remember is a caller that forgets - measured: all three callers of these writers had, and the loss showed up nowhere, since a picture that never carried them and a picture stripped of them are the same file.");
   let quoted_from = text_combine_multiple(['"', path_from, '"']);
   let quoted_to = text_combine_multiple(['"', path_to, '"']);
   let command = text_combine_multiple([
@@ -16,5 +17,6 @@ export async function ffmpeg_crop_write(path_from, box, path_to) {
     quoted_to,
   ]);
   let ran = await command_line(command);
+  await image_content_credentials_copy(path_from, path_to);
   return ran;
 }
