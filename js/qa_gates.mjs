@@ -1,3 +1,4 @@
+import { lyric_video_hand_times_gate_run } from "./lyric_video_hand_times_gate_run.mjs";
 import { lyric_video_hearings_match_rate_gate_run } from "./lyric_video_hearings_match_rate_gate_run.mjs";
 import { gloss_word_sound_keys_gate_run } from "./gloss_word_sound_keys_gate_run.mjs";
 import { lyric_video_document_times_hand_is_cases_gate_run } from "./lyric_video_document_times_hand_is_cases_gate_run.mjs";
@@ -991,6 +992,7 @@ export function qa_gates() {
     lyric_video_document_times_hand_is_cases_gate_run,
     gloss_word_sound_keys_gate_run,
     lyric_video_hearings_match_rate_gate_run,
+    lyric_video_hand_times_gate_run,
   ];
   return gates;
 }

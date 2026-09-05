@@ -8,6 +8,7 @@ import { list_filter } from "./list_filter.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { path_join } from "./path_join.mjs";
+import { folder_delete } from "./folder_delete.mjs";
 import { text_to_speech } from "./text_to_speech.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { file_read } from "./file_read.mjs";
@@ -18,13 +19,13 @@ import { not } from "./not.mjs";
 import { file_move } from "./file_move.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { folder_delete } from "./folder_delete.mjs";
 export async function gloss_words_sound_write_generic(words, sound_fn) {
   "$plain words";
   "Speaks every word that has no recording yet into the folder that function names, one sound file per word, filed under the word rather than under its turn in the queue.";
-  "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about two and a half seconds of this machine for every second of sound it makes. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
+  "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about six seconds of this machine for every word it says. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
   "★ THE WHOLE BATCH GOES OVER IN ONE CALL BECAUSE THE ENGINE IS LOADED ONCE PER CALL. It is handed the words joined by line breaks, which is the seam it cuts on, so one line is one word is one sound file. Calling it once for each word would pay the model load - measured at eight and a half seconds - a thousand times over, and that alone would take longer than the speaking.";
   "★ A RECORDING IS FILED UNDER WHAT THE ENGINE SAYS IT SPOKE, NOT UNDER WHAT IT WAS ASKED TO SPEAK. The engine writes the words of each piece beside the sound of it, so the pairing is read back off the disk instead of being worked out from the order the words went in. Worked out from the order, one piece more or fewer than expected does not fail - it shifts every word after it onto the wrong sound, silently, in an app whose one job is telling a person how a word sounds.";
+  "★ THE WORKING FOLDER IS EMPTIED BEFORE ANYTHING IS SPOKEN, BECAUSE THE ENGINE NUMBERS ITS PIECES FROM THE BEGINNING EVERY TIME. A run that died part way through - the machine ran out of room, somebody stopped it - leaves its pieces there under numbers that the next run will write over one by one, and a sound left from the old run under a number the new run never reached would be filed against whatever word the new run's note of that number happens to name. Everything worth keeping has already been moved out of here, so there is nothing in it to lose.";
   "The engine's own report travels out with the counts, because a run it refused to start and a run that found nothing to do print the same number otherwise.";
   arguments_assert(arguments, 2);
   let folder = local_function_folder(sound_fn);
@@ -46,6 +47,7 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
     return nothing;
   }
   let pending = path_join([folder, "pending"]);
+  await folder_delete(pending);
   let text = missing.join("\n");
   let engine = await text_to_speech({
     text: text,
