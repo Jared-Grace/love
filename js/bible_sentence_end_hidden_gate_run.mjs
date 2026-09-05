@@ -11,7 +11,7 @@ import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_size } from "./list_size.mjs";
-export async function bible_sentence_end_blocked_gate_run() {
+export async function bible_sentence_end_hidden_gate_run() {
   arguments_assert(arguments, 0);
   ("Gate: no bible this repo ships has a verse whose sentence mark is hidden behind a closing mark nobody takes off.");
   ("A page that carries a reading on until the sentence ends asks each verse whether it finished one. A verse that ends on a full stop and then closes a quotation has finished, and answers no when the closing mark is one nobody here strips - so the page fetches another verse, and the reader who asked for one gets two. That was met on 2026-09-05 in Tagalog, and a sweep of the sixteen opening verses of every bible here then found fourteen more doing it, in six marks nobody had thought of.");
