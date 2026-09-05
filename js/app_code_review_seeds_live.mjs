@@ -1,8 +1,8 @@
 import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function app_code_review_seeds_live(seeds) {
   "the seeds of a saved review queue that this page can still rebuild - the ones naming a lesson it hands out";
@@ -15,9 +15,9 @@ export function app_code_review_seeds_live(seeds) {
   let lessons = app_code_lessons();
   let ids = list_map_property(lessons, "id");
   function live_is(seed) {
-    let lesson_id = property_get(seed, "lesson_id");
-    let live = list_includes(ids, lesson_id);
-    return live;
+    let item = property_get(seed, "lesson_id");
+    let known = list_includes(ids, item);
+    return known;
   }
   let live = list_filter(seeds, live_is);
   return live;
