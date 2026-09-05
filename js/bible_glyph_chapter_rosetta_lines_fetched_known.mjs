@@ -95,6 +95,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_exo20();
   }
+  if (equal(chapter_code, "EXO32")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_exo32.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_exo32();
+  }
   if (equal(chapter_code, "NUM20")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_num20.mjs"
@@ -179,6 +185,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_2ki02();
   }
+  if (equal(chapter_code, "2KI04")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_2ki04.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_2ki04();
+  }
   if (equal(chapter_code, "JOB42")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_job42.mjs"
@@ -220,6 +232,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
       "./bible_glyph_chapter_rosetta_lines_psa085.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_psa085();
+  }
+  if (equal(chapter_code, "PSA091")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_psa091.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_psa091();
   }
   if (equal(chapter_code, "PSA096")) {
     let lines_module = await import(
@@ -328,6 +346,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
       "./bible_glyph_chapter_rosetta_lines_ezk33.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_ezk33();
+  }
+  if (equal(chapter_code, "EZK34")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_ezk34.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_ezk34();
   }
   if (equal(chapter_code, "EZK36")) {
     let lines_module = await import(
