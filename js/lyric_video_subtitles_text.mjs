@@ -1,4 +1,5 @@
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
+import { lyric_video_shadow_width } from "./lyric_video_shadow_width.mjs";
 import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
@@ -13,7 +14,8 @@ export function lyric_video_subtitles_text(document) {
   "★ EVERY CARD IS PUT UP THE SAME MOMENT EARLIER THAN THE LINE IT HOLDS, WHICH IS NOT AN EXCEPTION TO THE PARAGRAPH ABOVE. That paragraph refuses to work out where a line belongs; this moves every card by one number that has nothing to do with which line it is, in the way the fade beside it is one number for every card. A reader needs a moment to take a line in, so a card arriving exactly on the first note is already late for them, and the times stay in the document exactly as they were heard. How far ahead, and why both ends of a card move rather than only its beginning, live with the number itself.";
   "A LINE THE DOCUMENT HAS NO TIME FOR IS LEFT OUT OF THE VIDEO RATHER THAN PLACED SOMEWHERE. It follows from the line above: where a line belongs is heard and nothing here can hear it, so there is no moment to put it at that would not be invented. Leaving it out loses a line of the psalm, which is a real loss and a visible one - the person who timed the passage watches the video and sees at once that they stopped one line early. The alternative loses the whole video quietly, because a line given a time it never had is a card standing over the singing at the wrong moment, and the worst of those times is zero, which puts it over every other line from the first frame to the last.";
   "EVERY LETTERING SIZE IS ASKED FOR, AND THE SMALLER ONES USED TO BE WORKED OUT AS A SHARE OF THE LARGER. Tying them together says they are one decision, and they are not: the words are sized to be read across a room from a phone lying on a table, the passage to be read at a glance by somebody arriving in the middle, and the translation to be findable by somebody who wants it without ever competing with the psalm. Making the words bigger through a fixed share drags all of that up with them into exactly that competition, and the only way out was to change a number that no document could see.";
-  "EVERY LINE OF LETTERING CARRIES A BLACK BORDER, AND THAT ONE IS WORKED OUT RATHER THAN ASKED FOR. It is the exception the paragraph above does not cover, because a border is not a decision about who is reading; it is a fact about the letters it runs around, and it is asked for by its own lettering size alone. The reasoning lives with the border rather than here.";
+  "EVERY LINE OF LETTERING CARRIES A BLACK BORDER AND A BLACK SHADOW, AND BOTH ARE WORKED OUT RATHER THAN ASKED FOR. They are the exception the paragraph above does not cover, because neither is a decision about who is reading; each is a fact about the letters it belongs to, and each is asked for by its own lettering size alone. The reasoning lives with the border and with the shadow rather than here.";
+  "★ THE BORDER AND THE SHADOW TOGETHER ARE WHY THE PICTURES ARE SHOWN AT THEIR OWN BRIGHTNESS. Every picture used to arrive halved, and that halving was the readability guarantee. It was a heavy one - it made a painting of noon look like a painting of night - and it could only be lifted by putting a guarantee somewhere else first. Here is that somewhere else: the border wins the fine edge and the shadow wins the broad area, and both hold for a picture nobody has looked at yet, which is the whole of what the halving was for.";
   "THE BORDER GOES IN AHEAD OF ANYTHING FOR IT TO BE SEEN AGAINST. A frame here is black today, and a black rim on a black frame is invisible - so this changes nothing anybody can watch. It stops mattering the first time a picture stands behind the words, and at that moment the words either survive or they do not, with no chance to try the border on its own. A change that can only be judged after another change has landed is a change to make first.";
   "THE PASSAGE AND THE TRANSLATION ARE TWO LINES RATHER THAN ONE, AND THE SIZES ARE WHY. They used to be one grey line with a dot between them, which forced both to be the same size - so making the passage large enough to read at a glance would have made the translation shout, and keeping the translation quiet kept the passage unreadable. Stacked, each is sized for what it is for: the passage above and large, the translation under it and small.";
   "WHERE THE UPPER LINE SITS IS WORKED OUT AND NOT AUTHORED. It has to clear the line beneath it, so its distance from the foot follows from that line's lettering size; a document that stated both would be stating one fact twice, and the two would part company the first time somebody changed a size.";
@@ -33,6 +35,10 @@ export function lyric_video_subtitles_text(document) {
   let lyric_outline = lyric_video_outline_width(font_size);
   let passage_outline = lyric_video_outline_width(passage_size);
   let credit_outline = lyric_video_outline_width(credit_size);
+  let lyric_shadow = lyric_video_shadow_width(font_size);
+  let passage_shadow = lyric_video_shadow_width(passage_size);
+  let credit_shadow = lyric_video_shadow_width(credit_size);
+  let shade = "&H64000000";
   let room = lyric_video_screen_room(document);
   let credit_margin = room.credit_margin;
   let passage_margin = room.passage_margin;
@@ -43,17 +49,25 @@ export function lyric_video_subtitles_text(document) {
   let lyric_style =
     "Style: Lyric,Noto Sans," +
     font_size +
-    ",&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1," +
+    ",&H00FFFFFF,&H00FFFFFF,&H00000000," +
+    shade +
+    ",-1,0,0,0,100,100,0,0,1," +
     lyric_outline +
-    ",0,5," +
+    "," +
+    lyric_shadow +
+    ",5," +
     sides +
     ",0,1";
   let passage_style =
     "Style: Passage,Noto Sans," +
     passage_size +
-    ",&H00B4B4B4,&H00B4B4B4,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
+    ",&H00B4B4B4,&H00B4B4B4,&H00000000," +
+    shade +
+    ",0,0,0,0,100,100,2,0,1," +
     passage_outline +
-    ",0,2," +
+    "," +
+    passage_shadow +
+    ",2," +
     sides +
     "," +
     passage_margin +
@@ -61,9 +75,13 @@ export function lyric_video_subtitles_text(document) {
   let credit_style =
     "Style: Credit,Noto Sans," +
     credit_size +
-    ",&H00828282,&H00828282,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1," +
+    ",&H00828282,&H00828282,&H00000000," +
+    shade +
+    ",0,0,0,0,100,100,2,0,1," +
     credit_outline +
-    ",0,2," +
+    "," +
+    credit_shadow +
+    ",2," +
     sides +
     "," +
     credit_margin +
