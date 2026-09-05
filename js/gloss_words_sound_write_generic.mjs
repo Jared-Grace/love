@@ -11,6 +11,7 @@ import { list_size } from "./list_size.mjs";
 import { path_join } from "./path_join.mjs";
 import { folder_delete } from "./folder_delete.mjs";
 import { gloss_word_sound_speed } from "./gloss_word_sound_speed.mjs";
+import { gloss_word_sound_compression_level } from "./gloss_word_sound_compression_level.mjs";
 import { text_to_speech } from "./text_to_speech.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
 import { gloss_word_sound_spoken_move } from "./gloss_word_sound_spoken_move.mjs";
@@ -20,9 +21,12 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
   "Speaks every word that has no recording yet into the folder that function names, one sound file per word, filed under the word rather than under its turn in the queue.";
   "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about four seconds of this machine for every word it says - measured over a run of 1,634 words that took an hour and three quarters. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
   "★ THE WHOLE BATCH GOES OVER IN ONE CALL BECAUSE THE ENGINE IS LOADED ONCE PER CALL. It is handed the words joined by line breaks, which is the seam it cuts on, so one line is one word is one sound file. Calling it once for each word would pay the model load - measured at eight and a half seconds - a thousand times over, and that alone would take longer than the speaking.";
-  ("★ A LONE WORD IS SPOKEN AT ITS OWN SPEED AND NOT AT A CHAPTER'S, which is the whole of why the speed is asked for here rather than left to the engine. The reasoning, the measurements and the part of it that is still unexplained are all kept next to the number, in ",
+  ("★ EVERY WAY A LONE WORD DIFFERS FROM A CHAPTER IS ASKED FOR HERE, RATHER THAN LEFT TO THE ENGINE'S OWN SETTINGS, because the engine is asked for both jobs and only the caller knows which one it is. There are three, and each keeps its reasoning next to its value: the speed in ",
     fn_name("gloss_word_sound_speed"),
-    ", so that whoever wonders whether the buttons should be slower finds them.");
+    ", how hard the file is squeezed in ",
+    fn_name("gloss_word_sound_compression_level"),
+    ", and the said-alone form below.");
+  ("★ A WORD ON A BUTTON IS ASKED FOR IN ITS SAID-ALONE FORM, WHICH IS NOT THE FORM THE PHONEMISER ANSWERS WITH BY DEFAULT. Left alone it answers with the form the word takes inside a sentence, where the words English leans on are unstressed and their vowel collapses - so \"the\" comes back as a bare schwa and is heard, correctly, as a mumble. Measured over the app's list, 32 words of 1,674 came back that way. The rule that mends them, the two words whose citation form a rule cannot derive, and why it is done in phonemes rather than here, are all in the speech engine's own said-alone step; a chapter is a sentence and asks for none of it.");
   ("★ A RECORDING IS FILED UNDER WHAT THE ENGINE SAYS IT SPOKE, NOT UNDER WHAT IT WAS ASKED TO SPEAK, which is the judgement next door in ",
     fn_name("gloss_word_sound_spoken_move"),
     " rather than here.");
@@ -52,10 +56,13 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
   await folder_delete(pending);
   let text = missing.join("\n");
   let speed = gloss_word_sound_speed();
+  let level = gloss_word_sound_compression_level();
   let engine = await text_to_speech({
     text: text,
     path_output: pending,
     speed: speed,
+    compression_level: level,
+    citation: true,
   });
   let written = await folder_read_files_exists_ensure(pending);
   function said_is(name) {
