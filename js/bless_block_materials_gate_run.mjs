@@ -1,4 +1,4 @@
-import { bless_driveway_paving } from "./bless_driveway_paving.mjs";
+import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
 import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { bless_roads } from "./bless_roads.mjs";
@@ -127,7 +127,7 @@ export function bless_block_materials_gate_run() {
     hint: "a road made of what the roofs are made of ties the top of a house to the ground in front of it",
   });
   ("The DRIVEWAY is the other material that is the same on every street, and it is checked against everything a street is built from for one reason above the rest: it crosses every band there is. A drive runs over the pavement and the grass and stops against the road, so a drive the colour of any of those is a drive that vanishes for part of its length and reappears - which reads as a broken path rather than as one thing.");
-  let paving = bless_driveway_paving();
+  let paving = bless_concrete_paving();
   let driveways = [paving];
   let driveway_solid = list_intersection(driveways, solids);
   let driveway_walkable = list_empty_is(driveway_solid);
