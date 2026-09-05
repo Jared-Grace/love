@@ -12,15 +12,11 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 4,
-      note: "Only the field changed. The two bands behind the crown were white before, and they are violet over deep crimson now, because the wording names those colours itself instead of leaving them to be chosen. The crown of thorns is as it was. The lower crimson band still has a lead line down the middle where one flat sheet was asked for.",
+      note: "Contrast, and I took your second suggestion rather than your first - the thorns now carry a light and a dark brown of their own instead of the field being lightened. That went into the rule every window is drawn from, not into this one, because you faulted three windows for it. The field behind is unchanged, so if brown on violet is still muddy the field is the next thing to move.",
     },
     {
       n: 8,
       note: "You could not tell the parchment was cancelled, because it was a blank white sheet nailed up. It is now torn clean across from the nail downward and hanging open, with the brown wood of the cross showing through the gap. The two field bands were white as well and are cobalt and crimson now.",
-    },
-    {
-      n: 11,
-      note: "New picture. The halo is a whole yellow disc now with no lead line across it, and the thicket and the coloured field both survived - the earlier draws obeyed the halo but lost one or the other every time. What fixed it was making the halo instruction shorter rather than more exact.",
     },
     {
       n: 18,
@@ -39,10 +35,6 @@ export function song_image_review_couplets() {
       note: "New picture, and this one was my own finding rather than yours. The bottom third of the window was solid black, and the cause was the word Night standing at the front of the wording, so that word is gone and the ground band is violet now. Still wrong: the sunrise came out as a half dome where the wording asks for a thin slice no taller than a tenth of its width.",
     },
     {
-      n: 24,
-      note: "Nothing was ever wrong with 114 except that its beams are all white where the wording asked for colour. It is kept, as you asked. One correction: I told you 190 was oval and it is not. I had been squashing tall pictures into squares to compare them, which made every round stone look oval - 190 is this same window with the colour in it.",
-    },
-    {
       n: 25,
       note: "The old wording described three crowns stacked one above another, which is a papal tiara, and that is what was being drawn. Revelation 19:12 says many diadems, so it is seven plain crowns standing side by side in one row now. Still wrong: they came out touching each other as one continuous band, where the wording asks for the glass of the field to show between them.",
     },
@@ -53,10 +45,6 @@ export function song_image_review_couplets() {
     {
       n: 30,
       note: "New picture, drawn from the wording with the smoke put back in. The smoke is brown and rises above the fire, and the mountain is one flat grey instead of the photographic one you saw. That is the whole change.",
-    },
-    {
-      n: 31,
-      note: "Only the field changed. It was a white band before and is violet over deep crimson now, named in the wording rather than left open. The fig branch is unchanged.",
     },
     {
       n: 32,
