@@ -81,6 +81,9 @@ export function literals_frozen_names() {
   ("Beside it, the word one tab calls itself by - which is a tab's own and dies with the tab, and would be nothing to freeze if that were all it were. It is also the field each remembered reading is marked with, so it is sitting inside the list on that disk. Renaming it would leave every reading already written down marked with a word the reader no longer looks for, and each tab would then add a second line instead of writing over its own.");
   let spelled3 = fn_name("app_shared_bible_history_key");
   let spelled45 = fn_name("app_shared_bible_session_id_key");
+  let spelled46 = fn_name(
+    "app_en_learn_bible_gloss_urdu_words_sound_upload_namespace",
+  );
   let names = [
     spelled,
     spelled2,
@@ -127,6 +130,7 @@ export function literals_frozen_names() {
     spelled44,
     spelled3,
     spelled45,
+    spelled46,
   ];
   return names;
 }
