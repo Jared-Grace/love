@@ -1,3 +1,4 @@
+import { bible_verse_end_apparatus_or_null } from "./bible_verse_end_apparatus_or_null.mjs";
 import { bible_verse_end_unrecognised_tail_or_null } from "./bible_verse_end_unrecognised_tail_or_null.mjs";
 import { bible_sentence_end_tails_kept_count } from "./bible_sentence_end_tails_kept_count.mjs";
 import { list_take } from "./list_take.mjs";
@@ -80,6 +81,19 @@ export async function bible_folder_chapter_sentence_end_measure(
   list_sort_text(tails_all);
   let count2 = bible_sentence_end_tails_kept_count();
   let tails = list_take(tails_all, count2);
+  ("THE BRACKETED SPANS ARE COUNTED APART FROM BOTH THE OTHERS, because a verse can finish its sentence and then print a cross reference behind it, and what stands in the way then is a whole span of words rather than one mark. The detector for a hidden mark cannot reach that, having to stop at the first letter it meets, so this asks the second question over the same verses that were already fetched. Written down beside the rest it says how many bibles do it, which is what decides whether taking such a span off is worth the judgement it needs.");
+  function bible_folder_chapter_sentence_end_apparatus(verse) {
+    let text = property_get(verse, "text");
+    let span = bible_verse_end_apparatus_or_null(text);
+    return span;
+  }
+  let apparatus_each = list_map_filter_null_not_is(
+    unended,
+    bible_folder_chapter_sentence_end_apparatus,
+  );
+  let apparatus_all = list_unique(apparatus_each);
+  list_sort_text(apparatus_all);
+  let apparatus = list_take(apparatus_all, count2);
   let measured = {
     bible_folder,
     chapter_code,
@@ -90,6 +104,7 @@ export async function bible_folder_chapter_sentence_end_measure(
     unrecognised,
     blocked,
     tails,
+    apparatus,
   };
   return measured;
 }
