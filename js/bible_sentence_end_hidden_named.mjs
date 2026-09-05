@@ -15,7 +15,8 @@ export function bible_sentence_end_hidden_named(rows, field) {
   }
   let found = list_filter(rows, bible_sentence_end_hidden_any_is);
   function bible_sentence_end_hidden_row_named(row) {
-    let bible_folder = property_get(row, bible_folder_key());
+    let property_name = bible_folder_key();
+    let bible_folder = property_get(row, property_name);
     let chapter_code = property_get(row, "chapter_code");
     let hidden = property_get(row, field);
     let named = {
