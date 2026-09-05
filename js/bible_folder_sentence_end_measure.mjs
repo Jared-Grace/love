@@ -35,6 +35,7 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
       unrecognised: [],
       blocked: [],
       tails: [],
+      apparatus: [],
     };
     return nothing;
   }
