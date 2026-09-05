@@ -94,7 +94,19 @@ def silent_is(phonemes):
     return phonemes is None or UNKNOWN in phonemes
 
 
-def chapter_changed(was, now):
+def sounds_remember(said, word, was, now):
+    """Keeps the first pair of soundings seen for a word, so the count can be read.
+
+    A number saying a thousand words changed cannot be judged by anybody: it says
+    nothing about whether the change is a name mended or a common word disturbed.
+    The two soundings side by side can be judged on sight, and one pair per word
+    is enough, because a word sounds the same wherever it is met.
+    """
+    if word not in said:
+        said[word] = {"was": was, "now": now}
+
+
+def chapter_changed(was, now, said):
     """What the old reading got wrong in one chapter, split by how it got it wrong.
 
     A word the old reading left silent is counted apart from a word it said with
@@ -116,6 +128,7 @@ def chapter_changed(was, now):
             dropped[word_was] += 1
         else:
             changed[word_was] += 1
+            sounds_remember(said, word_was, sounds_was, sounds_now)
     return dropped, changed
 
 
@@ -143,6 +156,7 @@ def main(args_path):
     words_dropped = 0
     words_changed = 0
     changed_words = collections.Counter()
+    said = {}
     for name in old_sound:
         folder = os.path.join(root, name)
         texts = chapter_texts(folder)
@@ -152,7 +166,9 @@ def main(args_path):
         spoken_by[was] += 1
         was_g2p = reading_of(readings, was)
         now_g2p = reading_of(readings, "now")
-        split = chapter_changed(sounds_of(was_g2p, texts), sounds_of(now_g2p, texts))
+        split = chapter_changed(
+            sounds_of(was_g2p, texts), sounds_of(now_g2p, texts), said
+        )
         if split is None:
             unreadable.append(name)
             continue
@@ -181,7 +197,10 @@ def main(args_path):
                 "words_dropped": words_dropped,
                 "words_changed": words_changed,
                 "words_changed_distinct": len(changed_words),
-                "words_changed_most": dict(changed_words.most_common(words_shown)),
+                "words_changed_most": {
+                    word: dict(said[word], times=times)
+                    for word, times in changed_words.most_common(words_shown)
+                },
                 "queue_changed_only": queue_changed_only,
             },
             ensure_ascii=False,

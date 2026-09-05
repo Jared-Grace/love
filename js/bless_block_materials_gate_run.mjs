@@ -1,3 +1,5 @@
+import { bless_block_faces } from "./bless_block_faces.mjs";
+import { range_map } from "./range_map.mjs";
 import { g_tiles_roofs } from "./g_tiles_roofs.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { g_tiles_wall_faces_groups } from "./g_tiles_wall_faces_groups.mjs";
