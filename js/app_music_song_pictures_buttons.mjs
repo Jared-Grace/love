@@ -21,6 +21,9 @@ export function app_music_song_pictures_buttons(parent, pictures) {
   "THE FIRST BUTTON IS MADE WITHOUT WORDS AND GIVEN THEM A MOMENT LATER, by the same call that decides whether it is switched on. Nothing is ever drawn wordless: the call is made before this returns and so before the page is painted.";
   "THE COUNT OF HOW MANY HAVE LANDED IS SAID UNDER THE TWO RATHER THAN INSIDE EITHER. Words that change while the reader is looking at them have moved the thing they were pointing at, and the words that report a fetch in progress are not the words that offer one.";
   "A SONG NOBODY HAS DRAWN FOR GETS NEITHER. Offering to show pictures that do not exist is an offer that does nothing, and the reader who presses it learns only that the page is broken.";
+  "IT SAYS THE PICTURES WERE DRAWN BY A MACHINE, and that is a promise kept rather than a note added. The terms these were drawn under forbid holding a machine-made picture out as a person's work, and a picture on a page with nothing said about it is held out as a person's work by default - a reader has no other thing to assume. So the sentence is owed, and it is owed whether or not anybody would have asked.";
+  "IT IS SAID ONCE, HERE, RATHER THAN UNDER EVERY DRAWING. Thirty-six copies of one sentence is thirty-six times the reading for the same fact, and a reader who has been told once does not need telling again on the same page. This is where a reader meets the whole set and decides whether to fetch it, which is the moment the fact is worth having.";
+  "IT SITS ABOVE THE COUNT AND NOT BELOW IT, because the count changes while a fetch is running and anything under it would move as it did. What is permanent goes first and what is still happening goes last.";
   arguments_assert(arguments, 2);
   let urls = song_images_kept_urls();
   let none = list_empty_is(urls);
@@ -38,6 +41,8 @@ export function app_music_song_pictures_buttons(parent, pictures) {
     on_hide,
   );
   app_shared_button_gap_above(hide);
+  let drawn_by = "These pictures were drawn by a machine, not by a person.";
+  app_shared_text_quiet(parent, drawn_by);
   let status = app_shared_text_quiet(parent, "");
   let buttons = {
     show: show,
