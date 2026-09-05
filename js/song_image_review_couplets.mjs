@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 2,
-      note: "The water is lighter colours now rather than black lines, as you asked. It cost something: asking for the whole round of the surface made nine drawings float it as a disc above the rim, so it is now a shallow ellipse lying inside the rim, and there is less water showing than in the round ones you liked. Say if that is the wrong trade.",
+      note: "This change was mine and not something you asked for, so say if you want the old one back. The bowl stood on a pedestal, which reads as a baptismal font, and the verse is Pilate washing his hands - so it sits flat on the ground now with a ewer tipped over it and pouring in. The water is still the shallow ellipse you were asked about last round. The stone still has a photographic speckle in it that does not belong in glass.",
     },
     {
       n: 4,
