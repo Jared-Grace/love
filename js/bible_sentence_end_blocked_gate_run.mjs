@@ -1,3 +1,4 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -9,7 +10,6 @@ import { list_map } from "./list_map.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_sentence_end_blocked_gate_run() {
   arguments_assert(arguments, 0);
@@ -44,8 +44,7 @@ export async function bible_sentence_end_blocked_gate_run() {
     unrecorded,
   });
   function bible_sentence_end_blocked_any_is(row) {
-    let blocked = property_get(row, "blocked");
-    let any = list_empty_not_is(blocked);
+    let any = property_list_empty_not_is(row, "blocked");
     return any;
   }
   let blocked_rows = list_filter(rows, bible_sentence_end_blocked_any_is);
