@@ -1,3 +1,5 @@
+import { text_size } from "./text_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
