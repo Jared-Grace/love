@@ -35,6 +35,12 @@ def main(args_path):
     known = golds | silvers
     answered = [w for w in words if w in known]
     unanswered = [w for w in words if w not in known]
+    said = {}
+    for word in answered:
+        if word in g2p.lexicon.golds:
+            said[word] = g2p.lexicon.golds[word]
+        else:
+            said[word] = g2p.lexicon.silvers[word]
     print(
         json.dumps(
             {
@@ -43,6 +49,7 @@ def main(args_path):
                 "reader_silvers": len(silvers),
                 "answered_already": answered,
                 "no_answer": unanswered,
+                "reader_says": said,
             },
             ensure_ascii=False,
         )
