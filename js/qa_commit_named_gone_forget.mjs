@@ -1,7 +1,6 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repos_commits_names_all } from "./repos_commits_names_all.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { qa_commit_named_forget } from "./qa_commit_named_forget.mjs";
 export async function qa_commit_named_gone_forget() {
   "Forgets every remembered judgement filed under a commit no repository here can reach any more, so that the record stops reading as though it held answers nobody is able to ask for.";
@@ -20,8 +19,7 @@ export async function qa_commit_named_gone_forget() {
   }
   function gone_lambda(entry, commit) {
     "The judgement itself is never looked at. Every other reason for disbelieving one of these is a question about the entry; this is the one that is a question about the name it is filed under, and the entry cannot answer it because the entry does not know what it is about.";
-    let here = property_get_or_null(live, commit);
-    let missing = null_is(here);
+    let missing = property_null_is(live, commit);
     return missing;
   }
   let r = await qa_commit_named_forget(gone_lambda);
