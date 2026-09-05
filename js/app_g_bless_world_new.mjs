@@ -50,6 +50,7 @@ export function app_g_bless_world_new() {
   let block_first = list_first(blocks);
   app_g_bless_player_place(player, block_first);
   let npcs = app_g_bless_people(player_img, coordinates_land, blocks, player);
-  let world = app_g_bless_world(rows, coordinates, player, npcs, blocks);
+  let vehicles = bless_vehicles_new(blocks);
+  let world = app_g_bless_world(rows, coordinates, player, npcs, blocks, vehicles);
   return world;
 }

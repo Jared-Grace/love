@@ -36,10 +36,15 @@ export function bless_block(x, y, block) {
   ("is a row of grass, then the pavement, then the road; and crossing the grass, a paved path");
   ("from every doorstep to the pavement. They are given back separately because they are made");
   ("of different things, and named together here because they are one street.");
-  ("The road is walkable and nothing drives on it. It is there because a row of houses with a");
+  ("The road is walkable and cars drive along it. It is there because a row of houses with a");
   ("pavement and nothing beyond it reads as a corridor - the pavement is the edge of the world");
   ("rather than the edge of a road. A grey band south of it says the street goes on, and it");
   ("costs the player nothing to walk across.");
+  ("The traffic is not laid here and is not part of what a block is made of. A block is");
+  ("GROUND, and every square of it is a fact about where things are that stays true whether");
+  ("anybody is standing on it or not; a car is a thing on the ground, like a person. Where the");
+  ("lanes are is read back off these road squares afterwards rather than written down twice,");
+  ("so the road can be moved or deepened here and the traffic follows it.");
   let r = bless_block_walls(x, y, block);
   let walls = property_get(r, "walls");
   let r2 = bless_block_doors(r, x);

@@ -1,3 +1,4 @@
+import { app_g_bless_vehicles_draw } from "./app_g_bless_vehicles_draw.mjs";
 import { app_shared_game_player_style } from "./app_shared_game_player_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -33,6 +34,13 @@ export function app_g_bless_map(container, world) {
   app_shared_game_div_map_style_rows(div_map, rows);
   app_shared_game_div_map_tiles_add_rows(div_map, rows);
   let wash = html_div(div_map);
+  ("the traffic goes in before the people. Two things on the same row are stacked in the");
+  ("order they were made, so a car drawn first sits behind anybody standing beside it at the");
+  ("kerb - which is what a person standing next to a car looks like from above. Everywhere");
+  ("else the row decides: the road is further out than the pavement, so a car passing is in");
+  ("front of the crowd on the footway without anything having to say so.");
+  let vehicles = property_get(world, "vehicles");
+  app_g_bless_vehicles_draw(div_map, vehicles);
   ("each person's picture is written down under who they are, because the mover that walks");
   ("them looks it up that way and by no other route - a person drawn without being");
   ("remembered is a person the crowd can never take a step for.");
