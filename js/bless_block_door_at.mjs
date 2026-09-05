@@ -60,6 +60,7 @@ export function bless_block_door_at(r, x) {
     sidewalk,
     yard,
     road,
+    road_y,
     door_at,
   };
   return r3;
