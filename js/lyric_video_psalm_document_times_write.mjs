@@ -11,6 +11,7 @@ import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_times_measure } from "./lyric_video_document_times_measure.mjs";
 import { lyric_video_hearing_record } from "./lyric_video_hearing_record.mjs";
 import { lyric_video_document_times_spread_is } from "./lyric_video_document_times_spread_is.mjs";
+import { list_map } from "./list_map.mjs";
 import { lyric_timing_lines_timed } from "./lyric_timing_lines_timed.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_video_psalm_document_times_write(version, chapter) {
@@ -24,7 +25,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
   ("★ WHAT IS WRITTEN IS THE ALIGNER'S TIMES AND NEVER THE HEARING'S. The aligner is handed the words and can only decide where they fall, which is why it placed twenty seven of thirty two lines inside a tenth of a second; the blind hearing stayed about a quarter of a second out even after its constant lead was taken off. The hearing is here to disagree, not to place, so the lines it disagrees on are handed back rather than acted on - deciding between two readings of a sung line is listening, and nothing here can listen.");
   ("THE CHAPTER IS NAMED AND THE SONG IS FOUND FROM IT, RATHER THAN THE SONG BEING NAMED. That is what makes this a command somebody can read back out of the log and run again from the same two words, where a path off one machine's download folder names nothing anywhere else and could not be replayed.");
   ("The three ways this can stop before hearing anything all answer with the same record, so the record is made in one place and only the sentence saying what stopped it is written here.");
-  ("Taking one word off every item of a list is asked for by name rather than written out, three times over, as a small function standing next to the list it is handed to.");
+  ("★ TWO OF THE THREE LISTS ARE READ BY NAME AND THE THIRD IS NOT, AND THE DIFFERENCE IS WHO WROTE THE LIST. Asking for a word by name refuses an item that does not carry it, and refusing is right where the item was built a few lines away by code that always writes the word - a song always carries its chapter, a flagged line always carries its number. The lines of the timing document came off a disk as somebody's authored file, so nothing here can promise every one of them carries its words; reading that one the lenient way keeps this command doing exactly what it did before rather than newly refusing a document it used to accept.");
   let number_chapter = Number(chapter);
   let folder_audio = folder_user_downloads_path("");
   let songs = await psalms_songs_folder_chapters(folder_audio);
@@ -92,7 +93,11 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
     };
     return worked;
   }
-  let texts = list_map_property(document.lines, "text");
+  function text_of(line) {
+    let text = line.text;
+    return text;
+  }
+  let texts = list_map(document.lines, text_of);
   let lines = lyric_timing_lines_timed(
     measured.starts,
     texts,
