@@ -1,0 +1,26 @@
+export function g_tiles_roofs() {
+  "Every picture a roof can wear - one kind per street, taken in turn.";
+  "A roof is the same on every building of one street and different from one street to";
+  "the next, and both halves of that matter. Within a street it holds still because it is";
+  "not how a player tells one house from another - the front does that, and it can only";
+  "do it while the thing behind it stays put. Between streets it moves because a roof is";
+  "the second widest thing a block is made of, after the ground it stands on.";
+  "It is a picture question and not a solidity one, and it is here rather than beside the";
+  "fronts because a roof and a front are never drawn in the same material - seen from";
+  "above a house is mostly roof with one row of wall showing, and painting the two alike";
+  "leaves an oblong of colour that reads as ground of an odd shade rather than as";
+  "something standing up.";
+  "THREE, against two kinds of pavement and two groups of front. That is deliberate and";
+  "not an accident of what was to hand: three and two share no factor, so the three";
+  "things a street is made of come back round together only every sixth block. Made three";
+  "as well, a street would be one of two streets forever however many the player walked";
+  "to, and the reach they earned would be spent walking to the same place.";
+  "Dark brown planks, dark grey slate, and red-brown clay tiles. Every one of them is";
+  "darker than every front, which is what puts an edge along the top of a wall and says";
+  "the wall is standing up.";
+  let planks = "wood_wall";
+  let slate = "basalt";
+  let clay = "cave_wall";
+  let roofs = [planks, slate, clay];
+  return roofs;
+}
