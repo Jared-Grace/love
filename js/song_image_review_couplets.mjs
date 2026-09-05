@@ -32,7 +32,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "You asked what was wrong with 114 and I answered wrongly. This window went through two designs - first the stone rolled away with light out of the open mouth, then the stone still sealing the tomb with the light coming out past it. 114 is the second one and it does what that design asks. I judged it as a failed version of the first and redrew it that way, which threw out a decision you had already made. 114 is back and so is the wording that drew it. Four more from the same words came out worse. What it still lacks is colour - the wording asks for beams of every colour and they all come out white.",
+      note: "You asked what was wrong with 114 and I answered wrongly. This window went through two designs - first the stone rolled away with light out of the open mouth, then the stone still sealing the tomb with the light coming out past it. 114 is the second one and it does what that design asks. I judged it as a failed version of the first and redrew it that way, which threw out a decision you had already made. 114 is back and so is the wording that drew it. Four more from the same words came out worse. The one real fault left was that the beams came out white every round though the wording asked for every colour, and that is fixed here. The clause had been naming white in order to refuse it, which is the surest way to get it. It now names the colours themselves at the front and never says white at all. Two beams have come out yellow, which the palette does not allow, and the red beam standing straight up reads a little like a cross.",
     },
     {
       n: 26,
