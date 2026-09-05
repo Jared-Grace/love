@@ -1,3 +1,7 @@
+import { bible_glyph_chapter_gen50 } from "./bible_glyph_chapter_gen50.mjs";
+import { bible_glyph_chapter_exo34 } from "./bible_glyph_chapter_exo34.mjs";
+import { bible_glyph_chapter_exo33 } from "./bible_glyph_chapter_exo33.mjs";
+import { bible_glyph_chapter_gen18 } from "./bible_glyph_chapter_gen18.mjs";
 import { bible_glyph_chapter_2ki04 } from "./bible_glyph_chapter_2ki04.mjs";
 import { bible_glyph_chapter_psa091 } from "./bible_glyph_chapter_psa091.mjs";
 import { bible_glyph_chapter_ezk34 } from "./bible_glyph_chapter_ezk34.mjs";
