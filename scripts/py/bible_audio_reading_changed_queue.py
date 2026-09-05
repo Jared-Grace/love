@@ -35,10 +35,12 @@ whatever happened to the tokens inside it, so that is what decides.  The words
 are lined up as well where the two agree about how many there are, and where they
 do not the piece is counted as unlined rather than guessed at.
 
-The halves are reported apart, because they cost different amounts.  The chapters
-that dropped a word are already being recorded again night after night; the rest
-are the new work this measures, and how much of it is worth doing is somebody's
-decision rather than this script's.
+The halves are reported apart, and both are named rather than merely counted.
+They cost different amounts and are worth doing in different orders - a chapter
+with a word missing outright is worse than one saying a name wrongly, so the
+dropped half is offered first - but the decision about how much to do is
+somebody's rather than this script's, and a half that is only counted cannot be
+acted on at all without asking again.
 
 Takes the path of a JSON file holding {"root": <folder of chapter folders>,
 "apostrophe_second", "dictionary_second" and "fallback_second": the seconds the
@@ -265,6 +267,7 @@ def main(args_path):
                 "chapters_said_the_same": len(same),
                 "chapters_dropped_a_word": len(queue_dropped),
                 "chapters_changed_only": len(queue_changed_only),
+                "queue_dropped": queue_dropped,
                 "pieces_changed": totals["pieces_changed"],
                 "pieces_unlined": totals["pieces_unlined"],
                 "words_dropped": totals["words_dropped"],
