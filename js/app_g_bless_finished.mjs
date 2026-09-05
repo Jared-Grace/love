@@ -119,8 +119,13 @@ export async function app_g_bless_finished(
   ("The lights may still be going while it travels, and that is allowed: holding the map");
   ("still holds movement and not light, so a journey run over the top of a fade no longer");
   ("finishes that fade in the frame it sets off.");
+  let returning = await app_g_bless_camera_span_reset(
+    container_map,
+    div_map,
+    player_img_c,
+  );
   async function back() {
-    await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
+    await returning;
     app_shared_game_player_center(player, player_img_c, div_map);
   }
   let told = null_not_is(line);
