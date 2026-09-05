@@ -1,8 +1,9 @@
-import { folder_drive_user } from "./folder_drive_user.mjs";
-import { folder_home_repo } from "./folder_home_repo.mjs";
-import { git_mirrors_folder } from "./git_mirrors_folder.mjs";
 import { folder_memory_backup } from "./folder_memory_backup.mjs";
 import { g_content_backup_folder } from "./g_content_backup_folder.mjs";
+import { git_mirrors_folder } from "./git_mirrors_folder.mjs";
+import { folder_home_repo } from "./folder_home_repo.mjs";
+import { folder_drive_user } from "./folder_drive_user.mjs";
+import { folder_secret } from "./folder_secret.mjs";
 export function folders_moved_expected() {
   "Every folder this repo keeps outside itself that has been given a new home, said as where it used to be and where it belongs now.";
   "Only the old place is written down here. The new place is asked of the function that names it, so this list cannot come to disagree with the code about where anything belongs - a folder is renamed by renaming it in one function, and the move follows from that on its own.";
@@ -55,6 +56,10 @@ export function folders_moved_expected() {
     {
       before: "/media/j/JPM/user",
       after: folder_drive_user(),
+    },
+    {
+      before: "/home/j/secret",
+      after: folder_secret(),
     },
   ];
   return expected;
