@@ -36,9 +36,7 @@ export function app_g_bless_dev_crowd_counts(world) {
   function block_tiles(block) {
     let sidewalk = property_get(block, "sidewalk");
     let with_alleys = list_concat_property(sidewalk, block, "alleys");
-    let with_yard = list_concat_property(with_alleys, block, "yard");
-    let with_paths = list_concat_property(with_yard, block, "paths");
-    let both = list_concat_property(with_paths, block, "road");
+    let both = list_concat_property(with_alleys, block, "yard");
     return both;
   }
   let tiles_each = list_map(blocks, block_tiles);
