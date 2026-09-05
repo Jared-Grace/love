@@ -1137,7 +1137,9 @@ export function song_image_drawn_attempts_known() {
   61,
   62,
   63,
-  64
+  64,
+  65,
+  66
  ],
  "35": [
   1,
@@ -1176,7 +1178,10 @@ export function song_image_drawn_attempts_known() {
   28,
   29,
   30,
-  31
+  31,
+  32,
+  33,
+  34
  ]
 };
   return r;
