@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -28,7 +29,7 @@ export async function bible_sentence_end_blocked_gate_run() {
     bible_sentence_end_blocked_unrecorded_is,
   );
   function bible_sentence_end_blocked_folder(row) {
-    let bible_folder = property_get(row, "bible_folder");
+    let bible_folder = property_get(row, bible_folder_key());
     return bible_folder;
   }
   let unrecorded = list_map(unrecorded_rows, bible_sentence_end_blocked_folder);
@@ -47,7 +48,7 @@ export async function bible_sentence_end_blocked_gate_run() {
   }
   let blocked_rows = list_filter(rows, bible_sentence_end_blocked_any_is);
   function bible_sentence_end_blocked_named(row) {
-    let bible_folder = property_get(row, "bible_folder");
+    let bible_folder = property_get(row, bible_folder_key());
     let chapter_code = property_get(row, "chapter_code");
     let blocked = property_get(row, "blocked");
     let named = {
