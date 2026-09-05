@@ -1,5 +1,7 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function song_wording_echo_floor() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("The fewest words a sung line and a verse must say the same way, one after the other, before the agreement counts as evidence that the song is quoting that wording rather than the two simply being about the same thing.");
   ("ONE WORD IN COMMON IS THE ORDINARY RESULT AND SO IT IS NOT A RESULT. Measured 2026-09-02 over both songs on the music page: of the three thousand five hundred readings taken, fifty one in every hundred came to a run of exactly one, which makes a run of one the commonest outcome there is and the thing a wording does by saying nothing in particular. A rule that lets it decide is a rule that hands the passage to whichever translation shares any word at all, and at more than half the passages of either song that is the only thing on offer.");
