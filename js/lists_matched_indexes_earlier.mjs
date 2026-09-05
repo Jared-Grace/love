@@ -4,7 +4,7 @@ import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-export function lists_matched_indexes_earlier(
+export function lists_matched_indexes_earlier({
   size_before,
   size_after,
   before,
@@ -12,8 +12,8 @@ export function lists_matched_indexes_earlier(
   table,
   indexes,
   cost_gap,
-) {
-  arguments_assert(arguments, 7);
+}) {
+  arguments_assert(arguments, 1);
   let walk_before = size_before;
   let walk_after = size_after;
   while (greater_than(walk_before, 0) && greater_than(walk_after, 0)) {

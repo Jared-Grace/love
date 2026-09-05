@@ -29,7 +29,7 @@ export function lists_matched_indexes(before, after) {
   for (let i = 0; less_than(i, size_before); i++) {
     indexes.push(null);
   }
-  lists_matched_indexes_earlier(
+  lists_matched_indexes_earlier({
     size_before,
     size_after,
     before,
@@ -37,6 +37,6 @@ export function lists_matched_indexes(before, after) {
     table,
     indexes,
     cost_gap,
-  );
+  });
   return indexes;
 }
