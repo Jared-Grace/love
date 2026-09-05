@@ -104,6 +104,21 @@ export function bible_verse_end_is_cases() {
       ends: false,
       why: "a trailing figure must never be taken off, because what it would uncover is the stop of the sentence before it and this verse has not finished one",
     },
+    {
+      text: "जकरयाह के मन में डर समा गया। (निर्ग. 30:7)",
+      ends: true,
+      why: "a cross reference printed in brackets behind the finished sentence. Taken one mark at a time this never clears, because the bracket comes off and the figure behind it does not - so the span is taken off whole once a sentence mark is uncovered by doing so. One bible of the three hundred and forty nine here does this",
+    },
+    {
+      text: "He went home. (He was tired.) Then he slept",
+      ends: false,
+      why: "the same brackets standing in the middle of a verse rather than closing it. Cutting from there would call the whole remainder a reference, so the span is only ever taken off when the verse ends on the closing bracket",
+    },
+    {
+      text: "wahay ku yidhi. (Ishaiah",
+      ends: false,
+      why: "a bracket that opens and never closes. It is left alone for the same reason, and this matters because a verse cut short in the upload looks exactly like one",
+    },
   ];
   return cases;
 }
