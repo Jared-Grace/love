@@ -33,7 +33,7 @@ export function song_image_couplet_glosses() {
         "Described in part. John 19:1 says Pilate scourged HIM, so the whip is in the text; its three cords are not, and are drawn that way because the style asks for a dozen large panes and a real scourge is many thin ones.",
     },
     4: {
-      kept: 9,
+      kept: 11,
       lyric_ref: "Matthew 27:29, John 19:2, Revelation 19:16",
       lyric_explain:
         "They plaited a crown of thorns and put it on HIS head, hailing HIM King of the Jews in mockery. The couplet answers the mockery with Revelation's own title, KING OF KINGS, written on HIS thigh.",
@@ -65,7 +65,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:33 puts two others with HIM, one on either side. The three crosses are the one arrangement the accounts give, and the middle one is drawn taller so the eye finds it first.",
     },
     8: {
-      kept: 13,
+      kept: 15,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "Blotting out the handwriting of ordinances that was against us, and took it out of the way, nailing it to HIS cross. The debt is Paul's own word for it, and the suffering is Isaiah's, wounded for our transgressions.",
@@ -161,7 +161,7 @@ export function song_image_couplet_glosses() {
         "Described. The burial spices are what the accounts themselves dwell on. The flask carries the burial so that the tomb is not drawn a fourth time in six couplets.",
     },
     20: {
-      kept: 22,
+      kept: 25,
       lyric_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       lyric_explain:
         "HIS own new tomb, which he had hewn out in the rock. Luke adds that it was one wherein never man before was laid, and John that it was a new sepulchre in a garden.",
