@@ -45,6 +45,10 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
       heard: false,
       wrote: false,
       why: "no whole singing of this chapter is on this machine",
+      confidence: null,
+      flagged: null,
+      lines: null,
+      match_rate: null,
     };
     return unsung;
   }
@@ -61,6 +65,10 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
       heard: false,
       wrote: false,
       why: "this chapter has no timing document to write into yet",
+      confidence: null,
+      flagged: null,
+      lines: null,
+      match_rate: null,
     };
     return undrafted;
   }
@@ -75,6 +83,10 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
       heard: false,
       wrote: false,
       why: "one of the two readings could not read this recording",
+      confidence: null,
+      flagged: null,
+      lines: null,
+      match_rate: null,
     };
     return unheard;
   }
@@ -123,6 +135,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
     match_rate: measured.match_rate,
     confidence: measured.confidence,
     flagged,
+    why: null,
   };
   return written;
 }
