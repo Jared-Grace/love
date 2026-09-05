@@ -1,17 +1,16 @@
-import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
-import { bless_yard_grass } from "./bless_yard_grass.mjs";
-import { bless_block_road } from "./bless_block_road.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { each_index } from "./each_index.mjs";
-import { list_concat } from "./list_concat.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_buildings_raise } from "./app_g_bless_buildings_raise.mjs";
+import { bless_yard_grass } from "./bless_yard_grass.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
-import { bless_block_pavement } from "./bless_block_pavement.mjs";
+import { bless_block_road } from "./bless_block_road.mjs";
+import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
+import { each_index } from "./each_index.mjs";
 export function app_g_bless_blocks_raise(rows, blocks) {
   arguments_assert(arguments, 2);
-  ("Builds every block into the ground - the buildings stood up, and the pavement in front");
-  ("of them and the alleys between them laid down.");
+  ("Builds every block into the ground - the buildings stood up, and the grass, the road, the");
+  ("pavement and the driveways laid down in front of them.");
   ("Each block is finished before the next is begun, which is safe here because no two of");
   ("them share a tile: they are laid in a column with open ground between, so the order");
   ("they are built in cannot change what the world comes out as.");
@@ -24,13 +23,16 @@ export function app_g_bless_blocks_raise(rows, blocks) {
   ("walks from one to the other can see they have arrived somewhere rather than gone round");
   ("in a circle. It is the cheapest thing the game can say and it says the whole design:");
   ("the reach was earned here and is worth spending there.");
-  ("Grass first, then the road, then the pavement, then the DRIVEWAYS over all of it. A drive");
-  ("crosses every band there is on its way from a door to the road, so it has to be the last");
-  ("thing laid or each band would rub out the piece of it that crossed that band, and the");
-  ("street would come out with green and tan stripes and no way off any doorstep.");
+  ("Grass first, then the road, then the POURED GROUND over both. A drive crosses the grass");
+  ("on its way from a door to the kerb, so it has to be laid after it or the lawn would rub");
+  ("out the piece of it that crossed the lawn, and the street would come out with green");
+  ("stripes across every drive and no way off any doorstep.");
+  ("The pavement and the drives are laid TOGETHER, in one go, because they are the same");
+  ("concrete. Drawn separately one of them would have had to be laid over the other, and the");
+  ("order would have been an arbitrary choice about two things that meet and match.");
   ("The GAPS between the houses are grass rather than paving, and they are laid with the");
-  ("lawn rather than with the pavement for that reason. A block is a row of houses standing");
-  ("in green with a paved line along the front of them; a paved gap made every house an end");
+  ("lawn rather than with the concrete for that reason. A block is a row of houses standing");
+  ("in green with a pale line along the front of them; a paved gap made every house an end");
   ("of a terrace instead, with the alley reading as a side street the player could turn down.");
   ("The buildings still go up before any of it. Grass, road, pavement and drives are all");
   ("ground in front of the houses and none of them reaches under one, but the raising is what");
@@ -48,10 +50,9 @@ export function app_g_bless_blocks_raise(rows, blocks) {
     app_g_bless_tiles_pave(rows, grassed, item_grass);
     let item_road = bless_block_road(index);
     app_g_bless_tiles_pave(rows, road, item_road);
-    let item_pavement = bless_block_pavement(index);
-    app_g_bless_tiles_pave(rows, sidewalk, item_pavement);
-    let item_driveway = bless_concrete_paving();
-    app_g_bless_tiles_pave(rows, paths, item_driveway);
+    let item_concrete = bless_concrete_paving();
+    let poured = list_concat(sidewalk, paths);
+    app_g_bless_tiles_pave(rows, poured, item_concrete);
   }
   each_index(blocks, block_raise);
 }
