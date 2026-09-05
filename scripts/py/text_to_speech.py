@@ -388,13 +388,25 @@ def said_alone_phonemes(word, phonemes):
     the app's list, 32 words of 1,674 come back that way - a closed class of
     function words, exactly the ones English leans on.
 
-    Two words are given their citation form outright instead, because for them
-    the reduced form differs in the *vowel* and not only in the weight, and no
-    rule reads that off the sentence form.  "the" said alone is "thuh" with
-    weight, and "with" said alone ends in an unvoiced th - a voiced one has
-    nothing to run into and is released as an audible puff, which is what the
-    report of "with-uh" was.  Both spellings are the ones a person picked by
-    ear off a page of candidates, so do not re-derive them.
+    A few words are given their citation form outright instead, because for
+    them the reduced form differs in the *vowel* and not only in the weight,
+    and no rule reads that off the sentence form.  A reduced vowel is a schwa
+    whatever it started as, so the stress rule above puts the weight back on
+    a vowel that is already the wrong one - "than" came out as a stressed
+    schwa and was heard, correctly, as "then".  "the" said alone is "thuh"
+    with weight; "with" said alone ends in an unvoiced th, because a voiced
+    one has nothing to run into and is released as an audible puff, which is
+    what the report of "with-uh" was.  Every spelling here is one a person
+    picked by ear off a page of candidates, so do not re-derive them.
+
+    ★ DO NOT PUT A FULL STOP ON THE END TO SETTLE THE PROSODY.  It was tried,
+    for a real fault - a lone syllable has nothing telling the model it is the
+    end of anything, so the pitch stays up as if more were coming.  A full
+    stop in the phoneme string does not read as an ending, it reads as a stop
+    consonant: "than." was heard as "thant" and "an." as "ant", and the same
+    word without it was heard as right.  Four of the five words it was tried
+    on came back worse.  The rising pitch is real and remains unsolved; this
+    is not the way to solve it.
     """
     said = SAID_ALONE.get(word.strip().lower())
     if said is not None:
