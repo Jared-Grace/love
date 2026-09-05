@@ -1,3 +1,7 @@
+import { bible_glyph_chapter_gen32 } from "./bible_glyph_chapter_gen32.mjs";
+import { bible_glyph_chapter_2ki02 } from "./bible_glyph_chapter_2ki02.mjs";
+import { bible_glyph_chapter_exo16 } from "./bible_glyph_chapter_exo16.mjs";
+import { bible_glyph_chapter_num21 } from "./bible_glyph_chapter_num21.mjs";
 import { bible_glyph_chapter_jol01 } from "./bible_glyph_chapter_jol01.mjs";
 import { bible_glyph_chapter_jol02 } from "./bible_glyph_chapter_jol02.mjs";
 import { bible_glyph_chapter_jol03 } from "./bible_glyph_chapter_jol03.mjs";
@@ -184,7 +188,8 @@ export function bible_glyph_chapters() {
   ("THE SEVENTY SIXTH IS OBADIAH, AND IT IS THE WHOLE BOOK. Twenty one lines, the shortest book in the Old Testament, and every one of them is aimed at one neighbouring nation that stood at the crossroads and watched Jerusalem be carried off. Registering it means a reader can now finish an entire prophet in one sitting. It is the sixth complete book on this list and the second prophet after Jonah, and where Jonah is a man refusing to warn a foreign city, this one is a foreign nation being warned and never answering back.");
   ("THE SEVENTY SEVENTH AND THE SEVENTY EIGHTH ARE THE TWO CHAPTERS OF HAGGAI, AND TOGETHER THEY FINISH A SEVENTH WHOLE BOOK. A people back from exile have rebuilt their own houses and left the house of God a ruin, and a prophet spends two short chapters asking them to look at what that has cost them. The first chapter is the rebuke and the day they went and started work. The second is what God says four weeks later, and it ends on a promise to one man. They are registered as a pair because a book of two chapters read as one is not much longer than a psalm, and half of it read alone is only the telling off.");
   ("THE SEVENTY NINTH, THE EIGHTIETH AND THE EIGHTY FIRST ARE THE THREE CHAPTERS OF JOEL, AND THEY FINISH AN EIGHTH WHOLE BOOK. A swarm of locusts eats a country bare, and a prophet reads that as a warning and asks a people to tear their hearts instead of their clothes. The middle chapter is the one Peter quotes on the day the church starts, and the last is a court scene with the nations in the dock. Three chapters is short enough that a reader can hold the whole argument at once, which is why a small book is worth finishing before a large one is begun.");
-  ("Eighty one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
+  ("Four more Old Testament pages join the list here, and each of them is on it because a famous thing in it cannot be drawn at all. Genesis 32 is where a man is given a new name and the page loses the word name four times in three lines. Second Kings 2 carries Elijah off in a whirlwind the page cannot show and draws a chariot of fire with no fire on it. Exodus 16 feeds Israel manna for forty years and draws bread instead, because manna has no seat. Numbers 21 hangs a bronze serpent on a pole and can draw neither the serpent nor the pole, which is the picture Jesus points back to in John 3. A reader who wants to know what this Bible still cannot say should start with these four.");
+  ("Eighty five chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
   ("THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.");
@@ -273,6 +278,10 @@ export function bible_glyph_chapters() {
   let seventy_ninth = bible_glyph_chapter_jol01();
   let eightieth = bible_glyph_chapter_jol02();
   let eighty_first = bible_glyph_chapter_jol03();
+  let eighty_second = bible_glyph_chapter_gen32();
+  let eighty_third = bible_glyph_chapter_2ki02();
+  let eighty_fourth = bible_glyph_chapter_exo16();
+  let eighty_fifth = bible_glyph_chapter_num21();
   let chapters = [
     first,
     second,
@@ -355,6 +364,10 @@ export function bible_glyph_chapters() {
     seventy_ninth,
     eightieth,
     eighty_first,
+    eighty_second,
+    eighty_third,
+    eighty_fourth,
+    eighty_fifth,
   ];
   return chapters;
 }
