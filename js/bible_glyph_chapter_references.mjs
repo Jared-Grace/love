@@ -169,6 +169,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 36",
     },
     {
+      chapter_code: "OBA01",
+      reference: "Obadiah 1",
+    },
+    {
       chapter_code: "JON01",
       reference: "Jonah 1",
     },
