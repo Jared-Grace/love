@@ -10,6 +10,7 @@ import { not } from "./not.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_times_measure } from "./lyric_video_document_times_measure.mjs";
 import { lyric_video_hearing_record } from "./lyric_video_hearing_record.mjs";
+import { lyric_video_transcript_record } from "./lyric_video_transcript_record.mjs";
 import { lyric_video_document_times_hand_is } from "./lyric_video_document_times_hand_is.mjs";
 import { list_map } from "./list_map.mjs";
 import { lyric_timing_lines_timed } from "./lyric_timing_lines_timed.mjs";
@@ -24,6 +25,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
   ("★ IT LEAVES A MARK SAYING THE TIMES ARE A MACHINE'S, AND WITHOUT THAT MARK THE REFUSAL ABOVE EATS ITS OWN WORK. The times go in through the very function the tapping desk writes through, down to the same twentieth of a second between lines, so a document this wrote and a document somebody sat through are identical in every number they hold. Twenty three of them were written before the mark existed and every one was thereafter defended as though a person had made it.");
   ("★ IT LISTENS AND KEEPS THE HEARING WHETHER OR NOT IT IS ALLOWED TO WRITE, AND THAT ORDER IS THE WHOLE POINT. Refusing to write was welded to refusing to listen at first, so the chapters somebody had already timed by hand - the only chapters whose right answers are known - were exactly the chapters no reading was ever recorded for, and they are the ones any question about how well the machine hears has to be settled against. Listening is also what costs the minute; declining to write it down afterwards saves nothing and throws away the minute.");
   ("★ WHERE EVERY LINE WAS PLACED IS KEPT AND NOT ONLY THE LINES THAT DISAGREED, because the disagreeing lines are a biased sample of exactly the wrong kind. How far one reading runs ahead of the other across a whole song can only be read off all of them; read off the flagged ones it is guaranteed to look large, since largeness is the reason they were flagged. Asked that way over twenty six songs, the fixed lead the flagging subtracts came out right - the extra each song wanted had a middle of three hundredths of a second.");
+  ("★ AND THE TRANSCRIBER'S WORDS ARE KEPT BESIDE THAT, BECAUSE THE SUMMARY'S WORST ANSWER IS THE ONE IT CANNOT EXPLAIN. Where a line's words went unheard the summary holds no time for it, and no time is the shape a person can do nothing with: they are told a line is unplaced and given nothing to look at. The words say what was heard there instead, they cost nothing to store, and getting them back any other way means hearing the whole recording again for twenty minutes.");
   ("★ WHAT IS WRITTEN IS THE ALIGNER'S TIMES AND NEVER THE HEARING'S. The aligner is handed the words and can only decide where they fall; the blind hearing stayed about a quarter of a second out even after its constant lead was taken off. The hearing is here to disagree, not to place, so the lines it disagrees on are handed back rather than acted on - deciding between two readings of a sung line is listening, and nothing here can listen.");
   ("THE CHAPTER IS NAMED AND THE SONG IS FOUND FROM IT, RATHER THAN THE SONG BEING NAMED. That is what makes this a command somebody can read back out of the log and run again from the same two words, where a path off one machine's download folder names nothing anywhere else and could not be replayed.");
   ("The three ways this can stop before hearing anything all answer with the same record, so the record is made in one place and only the sentence saying what stopped it is written here.");
@@ -80,6 +82,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
     flagged: measured.flagged,
   };
   await lyric_video_hearing_record(name_document, hearing);
+  await lyric_video_transcript_record(name_document, measured.transcript);
   let flagged = list_map_property(measured.flagged, "line");
   let hand = lyric_video_document_times_hand_is(document);
   if (hand) {
