@@ -1,35 +1,27 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { machine_memory_available_bytes_or_null } from "./machine_memory_available_bytes_or_null.mjs";
+import { machine_memory_room_capped_bytes_or_null } from "./machine_memory_room_capped_bytes_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { machine_swap_total_bytes_or_null } from "./machine_swap_total_bytes_or_null.mjs";
+import { machine_memory_free_bytes_or_null } from "./machine_memory_free_bytes_or_null.mjs";
 import { less_than } from "./less_than.mjs";
-import { machine_swap_free_bytes_or_null } from "./machine_swap_free_bytes_or_null.mjs";
 export async function machine_memory_room_bytes_or_null() {
   "How much room this machine honestly has for something large to start in, in bytes, or nothing at all if this machine will not say.";
-  "★ IT IS THE LESSER OF WHAT THE MACHINE SAYS IS AVAILABLE AND WHAT IS LEFT OF THE OVERFLOW STORE, AND THAT IS THE WHOLE OF WHAT IT DOES. The available figure counts pages the machine believes it could reclaim, and most of that belief is that those pages can be pushed out to the overflow store - so once there is nowhere to push them, the available figure is describing room that cannot be reached. Measured 2026-09-02 on this machine: available read fifteen and a half gigabytes while free overflow had fallen to two hundred and twenty eight kilobytes, and the next thing that happened was the kernel killing a share of a judging. Taking the lesser is what makes the pair say the true thing that neither says alone.";
-  "★ A MACHINE WITH NO OVERFLOW STORE AT ALL IS NOT AT THE WALL, AND THIS IS WHERE THAT IS DECIDED. Free overflow reads zero both when the store is exhausted and when there is no store, so the size of the store is asked as well: where there is none, the overflow reading is about nothing and the available figure stands alone. Without that question this would call every swapless machine permanently full and hand every caller the smallest answer it has forever.";
-  "★ IT ANSWERS WITH NOTHING RATHER THAN WITH A GUESS. A caller asks this to decide how much to start, and a made-up number would be worse than no number - the caller can fall back on something it knows, but it cannot tell a guess from a reading. Where the available figure is missing there is no answer at all; where only the overflow figures are missing, the available figure is still a real reading and is given.";
+  "★ IT IS THE CAPPED READING RAISED BACK UP TO WHAT IS ACTUALLY UNUSED, AND THE FLOOR IS THE PART THAT NEEDED FINDING. The cap holds the available figure down to what is left of the overflow store, which is right at the wall and wrong away from it, because free overflow is a lagging figure. Overflow is only given back when the process that owned the pages ends or the pages are touched again, so after one squeeze it stays low for as long as those processes keep running - and the cap then goes on describing a machine that has already recovered. Measured 2026-09-05 on this machine: two readings a few seconds apart had unused rise by one and a half gigabytes while free overflow moved by half a megabyte, and the capped answer was five and nine tenths gigabytes while ten and seven tenths lay unused. A number smaller than what is lying unused cannot be the room, whatever it was being cautious about.";
+  "★ THE FLOOR CANNOT OVERSTATE, WHICH IS WHY IT IS SAFE TO RAISE AN ANSWER WITH IT. Unused memory is held by nothing and is given away with nothing given up in exchange, so a caller that fits inside it cannot push the machine towards the overflow store by starting. That is the whole argument: it is not that unused is a better estimate than the cap, it is that it is not an estimate at all.";
+  "★ IT STILL SEES THE WALL, BECAUSE AT THE WALL THERE IS NOTHING UNUSED. The floor lifts an answer only on a machine with memory going spare, and a machine at the wall is exactly the one with none - the kernel holds unused down to its own watermark. So the day this was written to guard against, when free overflow had fallen to two hundred and twenty eight kilobytes and a share was killed, is a day the floor would have raised nothing.";
+  "★ IT ANSWERS WITH NOTHING RATHER THAN WITH A GUESS, and the floor is skipped rather than guessed at: where the capped reading is missing there is no answer at all, and where only the unused figure is missing the capped reading stands alone.";
   arguments_assert(arguments, 0);
-  let available = await machine_memory_available_bytes_or_null();
-  if (null_is(available)) {
+  let capped = await machine_memory_room_capped_bytes_or_null();
+  if (null_is(capped)) {
     let unread = null;
     return unread;
   }
-  let swap_total = await machine_swap_total_bytes_or_null();
-  if (null_is(swap_total)) {
-    return available;
+  let free = await machine_memory_free_bytes_or_null();
+  if (null_is(free)) {
+    return capped;
   }
-  let swapless = less_than(swap_total, 1);
-  if (swapless) {
-    return available;
+  let capped_below_free = less_than(capped, free);
+  if (capped_below_free) {
+    return free;
   }
-  let swap_free = await machine_swap_free_bytes_or_null();
-  if (null_is(swap_free)) {
-    return available;
-  }
-  let overflow_smaller = less_than(swap_free, available);
-  if (overflow_smaller) {
-    return swap_free;
-  }
-  return available;
+  return capped;
 }
