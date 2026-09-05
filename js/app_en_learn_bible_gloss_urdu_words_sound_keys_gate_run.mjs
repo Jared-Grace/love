@@ -16,7 +16,7 @@ import { not } from "./not.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export async function gloss_word_sound_keys_gate_run() {
+export async function app_en_learn_bible_gloss_urdu_words_sound_keys_gate_run() {
   "Gate: no two English words the Urdu gloss store explains may be filed under the same name for their recordings. Throws so the dispatcher seam exits nonzero.";
   ("★ THE RULE THAT MAKES THE NAME IS NOT ONE-TO-ONE, SO THIS IS THE PART THAT MAKES IT SAFE. `",
     fn_name("gloss_word_sound_key"),
