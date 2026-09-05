@@ -53,6 +53,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ruth 2",
     },
     {
+      chapter_code: "RUT03",
+      reference: "Ruth 3",
+    },
+    {
       chapter_code: "1KI03",
       reference: "1 Kings 3",
     },
