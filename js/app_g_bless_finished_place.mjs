@@ -85,11 +85,12 @@ export async function app_g_bless_finished_place(
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
   let size = app_g_bless_tile_size();
+  let closer = app_g_bless_tile_size_close();
   await app_g_bless_camera_glide(
     container_map,
     div_map,
     player_img_c,
-    size,
+    closer,
     middle,
   );
   await sleep(560);
@@ -104,15 +105,7 @@ export async function app_g_bless_finished_place(
   let squares = app_g_bless_finished_white(div_map, tiles, roof_is);
   await sleep(720);
   let glow = app_g_bless_finished_glow(div_map, tiles);
-  await sleep(300);
-  let closer = app_g_bless_tile_size_close();
-  await app_g_bless_camera_glide(
-    container_map,
-    div_map,
-    player_img_c,
-    closer,
-    middle,
-  );
+  await sleep(760);
   let bloom = app_g_bless_finished_bloom(div_map, middle);
   await sleep(300);
   app_g_bless_finished_bloom_fade(bloom);
