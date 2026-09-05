@@ -42,9 +42,15 @@ decision rather than this script's.
 
 Takes the path of a JSON file holding {"root": <folder of chapter folders>,
 "apostrophe_second", "dictionary_second" and "fallback_second": the seconds the
-three doors were made}, optionally with "words_shown" saying how many of the
-changed words to name and "chapters" naming the ones to read rather than all of
-them.  Prints one JSON line.  It reads only; nothing is recorded or removed.
+three doors were made}, optionally with "chapters" naming the ones to read
+rather than all of them.  Prints one JSON line.  It reads only; nothing is
+recorded or removed.
+
+EVERY CHANGED WORD IS NAMED, NOT THE COMMONEST FEW.  A cap was tried and was the
+wrong instrument: the words worth arguing about are not evenly spread down the
+order, and a cap decides which of them can be argued about before anybody has
+read one.  The line is long, but whatever runs this files the whole answer
+anyway, so the length costs nothing and the missing words cost a second run.
 """
 
 import collections
@@ -211,7 +217,6 @@ def main(args_path):
         args["apostrophe_second"],
     )
     newest_door = max(doors)
-    words_shown = args.get("words_shown", 60)
 
     asked = args.get("chapters")
     all_names = sorted(
@@ -267,7 +272,7 @@ def main(args_path):
                 "words_changed_distinct": len(changed_words),
                 "words_changed_most": {
                     word: dict(said[word], times=times)
-                    for word, times in changed_words.most_common(words_shown)
+                    for word, times in changed_words.most_common()
                 },
                 "queue_changed_only": queue_changed_only,
             },
