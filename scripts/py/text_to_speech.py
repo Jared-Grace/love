@@ -437,13 +437,11 @@ def job_spoken(job):
         lines = [said_text(line.strip()) for line in text.split("\n")]
         speed = job.get("speed", SPEED)
         level = job.get("compression_level", COMPRESSION_LEVEL)
-        lexicon = job.get("lexicon", {})
-        for word, sounds in lexicon.items():
-            engine["g2p"].lexicon.golds[word] = sounds
+        citation = job.get("citation", False)
         silent = 0
         for i, line in enumerate(lines):
             samples, rate = line_samples(
-                engine["g2p"], engine["kokoro"], line, speed
+                engine["g2p"], engine["kokoro"], line, speed, citation
             )
             if samples is None:
                 samples = np.zeros(int(rate / 4), dtype=np.float32)
