@@ -360,8 +360,22 @@ def pronunciations():
     """How this repo wants every word said, the hand-written answers winning.
 
     A name is filed under the spelling the Bible writes it with and under no
-    other, so a name that is also an ordinary word leaves the ordinary word
-    alone.  The reason that is enough is measured in text_to_speech.g2p_ready.
+    other.  THAT IS NOT ENOUGH TO LEAVE AN ORDINARY WORD ALONE, AND THE CLAIM
+    THAT IT WAS COST TWO WORDS.  The spelling a name is filed under is its
+    capitalised one, and an ordinary word is spelt that way too every time a
+    sentence begins with it - so the capital is no fence at all.  Measured over
+    the whole bible on the fifth of September 2026: "Put", a son of Ham named
+    six times, took the opening word of "Put on the whole armor of God" and 43
+    other sentences and said it "putt"; "Iron", a town in Joshua, took "Iron
+    sharpens iron" and said it "EYE-rahn".  Both are answered here, under the
+    ordinary word, because the ordinary use outnumbers the name several times
+    over and the name is still said close enough to read.
+
+    Those two are the whole of the collision as the lexicon stands, which was
+    checked rather than assumed.  What finds another one is
+    bible_audio_reading_changed_queue: it reads every chapter under both
+    readings, so a name installed over an ordinary word shows up there as an
+    ordinary word whose sound changed.  Run it after touching the lexicon.
     """
     said = lexicon_named()
     said.update(json.loads(SAID_PATH.read_text(encoding="utf-8")))
