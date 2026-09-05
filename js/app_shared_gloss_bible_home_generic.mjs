@@ -1,3 +1,4 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,7 +21,10 @@ export async function app_shared_gloss_bible_home_generic(
   download,
   text_use,
   app_fn,
+  sound_url_get,
 ) {
+  "The recordings arrive as a way of asking for one rather than as recordings, because which words have been recorded is a question only the app handing it in can answer, and a page whose words have none hands in nothing and shows no speakers.";
+  arguments_assert(arguments, 5);
   let generated = g_sermon_generate_book_generic_property();
   let v = await app_shared_bible_home_inner(context, download, app_fn);
   let passages = property_get(v, "passages");
@@ -57,7 +61,7 @@ export async function app_shared_gloss_bible_home_generic(
   }
   let word_property = app_shared_gloss_bible_generate_generic_word();
   function lambda(e) {
-    let r = app_shared_gloss_bible_word_row(e, p, word_property);
+    let r = app_shared_gloss_bible_word_row(e, p, word_property, sound_url_get);
     return r;
   }
   each(explains, lambda);
