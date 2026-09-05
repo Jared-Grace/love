@@ -1,5 +1,5 @@
 import { app_shared_dev_index_show } from "./app_shared_dev_index_show.mjs";
-import { bless_hash_street_openings } from "./bless_hash_street_openings.mjs";
+import { bless_hash_openings } from "./bless_hash_openings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { properties_get } from "./properties_get.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -22,7 +22,7 @@ export function app_g_bless_dev_index(world) {
   ("that leaves out the openings hides the entries anybody uses daily.");
   ("The openings come from the list that already knows them rather than being named again");
   ("here, so a new one appears on this page by existing. Typed here as well, the openings");
-  ("that skip the door and the openings a reader can find would be two lists that agree only");
+  ("this game answers to and the ones a reader can find would be two lists that agree only");
   ("as long as somebody remembers to keep them agreeing.");
   ("The folders come from what the names already say, with no typed list laid over them.");
   ("Three names is too few to group and they group into nothing, which is the right answer");
@@ -30,9 +30,9 @@ export function app_g_bless_dev_index(world) {
   ("folder appears without anybody filing them.");
   let routes = app_g_bless_dev_routes(world);
   let names = properties_get(routes);
-  let street = bless_hash_street_openings();
+  let opened = bless_hash_openings();
   let v = app_shared_g_dev_index_hash_name();
-  let openings = list_concat(street, [v]);
+  let openings = list_concat(opened, [v]);
   let all = list_concat(names, openings);
   let prefixes = app_shared_hash_index_prefixes_derived(all);
   let app_fn = app_g_bless_storage_app();
