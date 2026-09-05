@@ -21,8 +21,8 @@ export function js_node_word_frozen_try(node) {
     return plain;
   }
   let called = js_call_callee_name_try(node);
-  let marker = equal(called, fn_name("text_frozen"));
-  if (not(marker)) {
+  let marker_is = equal(called, fn_name("text_frozen"));
+  if (not(marker_is)) {
     return null;
   }
   let inside = js_call_argument_at_try(node, "1");
