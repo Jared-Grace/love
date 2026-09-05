@@ -20,7 +20,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 18,
-      note: "Rolled up, brighter, and the genitals - all three are now in the wording, but I cannot show you a new drawing. The drawing account is out of credits and every attempt today came back refused. The picture above is 47: it has the rolled scroll but five seals and the cross outside the halo. 49 had seven seals and the cross inside, and was dark, so neither one is right yet.",
+      note: "All three are in the wording now - rolled up, brighter, and the underside covered. I drew twelve more and none beat the picture above, so it is unchanged. The two closest rivals each broke the window: one had nine seals, the other a black field. This one still has five seals and the cross outside the halo.",
     },
     {
       n: 20,
