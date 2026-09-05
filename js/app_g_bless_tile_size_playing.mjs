@@ -1,4 +1,4 @@
-export function app_g_bless_tile_size() {
+export function app_g_bless_tile_size_playing() {
   "How large one tile is drawn in the praying game.";
   "Smaller than the gospel game's on purpose. That one is sized so a person is large enough";
   "to walk up to and speak with, and five tiles across a phone is plenty for that. This view";
