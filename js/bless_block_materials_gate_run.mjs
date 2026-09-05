@@ -55,6 +55,32 @@ export function bless_block_materials_gate_run() {
     paved_fronts,
     hint: "a front made of what the street is paved with disappears into the ground it stands on",
   });
+  ("A ROOF is a third thing a street is told apart by, and it is held to the same three rules the other two are. There must be at least two kinds or every block in the world is roofed alike; no kind may be named twice, or two blocks in a row wear the same roof; and no roof may be made of what its own street is fronted or paved with - a roof matching the wall under it is the oblong of flat colour the roof material exists to break up, and a roof matching the ground is a house with no top.");
+  ("The COUNT of them is not checked against the others, and the reason is worth writing down. Three roofs against two pavements is what makes a street stop repeating every second block, and that is a choice about how far a player must walk to arrive somewhere new rather than a rule about materials. A gate that pinned the two numbers together would refuse the very thing they were made unequal for.");
+  let roofs = g_tiles_roofs();
+  let roofs_count = list_size(roofs);
+  let roofs_enough = greater_than_equal(roofs_count, 2);
+  assert_json(roofs_enough, {
+    roofs_count,
+    hint: "there must be at least two kinds of roof, or every block in the world is roofed alike",
+  });
+  let roofs_apart = list_unique_is(roofs);
+  assert_json(roofs_apart, {
+    roofs,
+    hint: "no kind of roof may be named twice, or two blocks in a row are roofed the same",
+  });
+  let roofed_fronts = list_intersection(roofs, faces);
+  let roofs_seen = list_empty_is(roofed_fronts);
+  assert_json(roofs_seen, {
+    roofed_fronts,
+    hint: "a roof made of what the walls under it are made of leaves a house reading as flat ground",
+  });
+  let roofed_ground = list_intersection(roofs, pavements);
+  let roofs_standing = list_empty_is(roofed_ground);
+  assert_json(roofs_standing, {
+    roofed_ground,
+    hint: "a roof made of what the street is paved with is a house with no top on it",
+  });
   ("How much was reached goes back with the verdict. Every check above passes by finding nothing wrong, and finding nothing wrong is also what happens when the lists it asks for come back empty - a materials list renamed, or moved somewhere this no longer looks. The word said is the same one either way, and these three numbers are the only part of the answer that falls on the day the reading breaks.");
   ("Counted from what was walked rather than from what was wrong. A count of faults is nought on every run that passes, so an answer holding only that has nothing in it that could ever drop.");
   let walked = {
