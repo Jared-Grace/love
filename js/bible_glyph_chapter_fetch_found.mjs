@@ -69,6 +69,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     let chapter_module = await import("./bible_glyph_chapter_exo20.mjs");
     stored = chapter_module.bible_glyph_chapter_exo20();
   }
+  if (equal(chapter_code, "EXO32")) {
+    let chapter_module = await import("./bible_glyph_chapter_exo32.mjs");
+    stored = chapter_module.bible_glyph_chapter_exo32();
+  }
   if (equal(chapter_code, "NUM20")) {
     let chapter_module = await import("./bible_glyph_chapter_num20.mjs");
     stored = chapter_module.bible_glyph_chapter_num20();
@@ -125,6 +129,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     let chapter_module = await import("./bible_glyph_chapter_2ki02.mjs");
     stored = chapter_module.bible_glyph_chapter_2ki02();
   }
+  if (equal(chapter_code, "2KI04")) {
+    let chapter_module = await import("./bible_glyph_chapter_2ki04.mjs");
+    stored = chapter_module.bible_glyph_chapter_2ki04();
+  }
   if (equal(chapter_code, "JOB42")) {
     let chapter_module = await import("./bible_glyph_chapter_job42.mjs");
     stored = chapter_module.bible_glyph_chapter_job42();
@@ -152,6 +160,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
   if (equal(chapter_code, "PSA085")) {
     let chapter_module = await import("./bible_glyph_chapter_psa085.mjs");
     stored = chapter_module.bible_glyph_chapter_psa085();
+  }
+  if (equal(chapter_code, "PSA091")) {
+    let chapter_module = await import("./bible_glyph_chapter_psa091.mjs");
+    stored = chapter_module.bible_glyph_chapter_psa091();
   }
   if (equal(chapter_code, "PSA096")) {
     let chapter_module = await import("./bible_glyph_chapter_psa096.mjs");
@@ -224,6 +236,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
   if (equal(chapter_code, "EZK33")) {
     let chapter_module = await import("./bible_glyph_chapter_ezk33.mjs");
     stored = chapter_module.bible_glyph_chapter_ezk33();
+  }
+  if (equal(chapter_code, "EZK34")) {
+    let chapter_module = await import("./bible_glyph_chapter_ezk34.mjs");
+    stored = chapter_module.bible_glyph_chapter_ezk34();
   }
   if (equal(chapter_code, "EZK36")) {
     let chapter_module = await import("./bible_glyph_chapter_ezk36.mjs");
