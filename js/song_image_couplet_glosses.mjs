@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 63,
+      kept: 73,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -201,7 +201,7 @@ export function song_image_couplet_glosses() {
         "Described. Matthew 28:2 has the angel roll back the stone, and the tomb is found empty. The stone is drawn well away from the opening so that this and couplet 21 read as two moments and not two pictures of one thing.",
     },
     25: {
-      kept: 11,
+      kept: 18,
       lyric_ref: "1 Corinthians 15:54-55, 2 Timothy 1:10, Revelation 19:12",
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",

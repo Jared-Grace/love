@@ -20,7 +20,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 18,
-      note: "Your whole priority list is already in the wording and has been for rounds - the drawings keep disobeying it, which is not the same problem. So this time I cut the wording instead of adding to it: about a quarter is gone, including a long clause about the legs and a run of colour prohibitions. Shortening is what fixed 11. A second halo is now refused by name.",
+      note: "The picture is unchanged, because all three new draws were worse - two came back with no halo and no scroll at all. The wording now asks for the Agnus Dei and a cruciform halo by their church names instead of describing three bars, and the seven seals are asked for as four along one half and three along the other. Every draw so far gives five seals and puts the cross behind the lamb rather than inside the halo.",
     },
     {
       n: 20,
@@ -32,11 +32,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 23,
-      note: "The black ground is back, since you say it is right. Taking it out was my own call and it was wrong - I read the black band as a fault and the word Night as its cause, and removed both. Still wrong on my side: the sun comes back a half circle where the wording asks for a thin sliver.",
+      note: "The black ground is back, since you say it is right, and the window is finally stable. Two faults were doing that: the clause described a shape and never said sun or dawn, so the drawing filled the subject in from the building and gave back a chalice, a lamb and a torch; and it asked for wedges of light, a word the shared rules refuse, where rays is the word they allow. Still wrong: the sun is a half circle where the wording asks for a thin sliver.",
     },
     {
       n: 25,
-      note: "Your arrangement: three crowns in a row above and four in a row below, and no two of the seven the same - some with tall points, some short, some closed over the top. One row of seven was mine and you are right that it made them tiny. They are all still white glass, so say if the different crowns should differ in colour too.",
+      note: "Seven crowns at last, and large. Your own words did it: I had read triangle and square as rows and asked for three side by side over four side by side, which drew two crowns. Asked for as a triangle of three over a square of four it came back exactly seven. They are still all alike and all white, so say whether they should differ in shape and in colour.",
     },
     {
       n: 26,
