@@ -175,6 +175,38 @@ def start_refusal(job):
     return None
 
 
+def said_text_dashes_opened(text):
+    """One line with its em dashes opened again, and nothing else done to it.
+
+    ★ THIS UNDOES SOMETHING THE REPO DID ON PURPOSE, AND ONLY HERE.  The Bible
+    text arrives through em_dashes_closed, which takes the spaces out from
+    around every em dash because that is how English sets the mark.  A closed
+    dash is right for the eye and wrong for the voice: with no space in it,
+    "Satan-to" is one word, no dictionary holds it, and the reader spells it
+    out letter by letter.  Measured over the recorded Bible, that is the whole
+    of what it still gets wrong - eleven tokens, every one of them two words an
+    em dash had joined.
+
+    So the mark is opened for the reading and left closed everywhere else.
+    Doing it here rather than at the source keeps every other reader of that
+    text - the glosses, the pages, the other Bibles - exactly as it was, and
+    the opened line is what gets written down beside the sound, so the words
+    the timing is measured against are the words that were actually said.
+
+    Only a dash with something pressed against it on both sides is opened.  One
+    that already has a space on a side was never joining two words together.
+
+    IT IS NAMED APART FROM THE WHOLE TEXT STEP BECAUSE IT IS A TEXT STEP THIS
+    REPO ONCE READ WITH: until the fifth of September 2026 it was the whole of
+    it.  Anything asking what an older recording would have said has to hand
+    the text through exactly this and no further, and writing the same line out
+    again somewhere else would let the two answers drift while both looked
+    right.
+    """
+    opened = re.sub(r"(?<=\S)—(?=\S)", " — ", text)
+    return opened
+
+
 def said_text(text):
     """One line as it is to be read aloud, with its em dashes opened again
     and its curly apostrophes straightened.
@@ -200,25 +232,10 @@ def said_text(text):
     cannot move a recording either, because the name a recording is filed under
     writes both marks the same way.
 
-    ★ THIS UNDOES SOMETHING THE REPO DID ON PURPOSE, AND ONLY HERE.  The Bible
-    text arrives through em_dashes_closed, which takes the spaces out from
-    around every em dash because that is how English sets the mark.  A closed
-    dash is right for the eye and wrong for the voice: with no space in it,
-    "Satan-to" is one word, no dictionary holds it, and the reader spells it
-    out letter by letter.  Measured over the recorded Bible, that is the whole
-    of what it still gets wrong - eleven tokens, every one of them two words an
-    em dash had joined.
-
-    So the mark is opened for the reading and left closed everywhere else.
-    Doing it here rather than at the source keeps every other reader of that
-    text - the glosses, the pages, the other Bibles - exactly as it was, and
-    the opened line is what gets written down beside the sound, so the words
-    the timing is measured against are the words that were actually said.
-
-    Only a dash with something pressed against it on both sides is opened.  One
-    that already has a space on a side was never joining two words together.
+    The dash is opened first, by the step named for it, which is the whole of
+    what this used to do.
     """
-    opened = re.sub(r"(?<=\S)—(?=\S)", " — ", text)
+    opened = said_text_dashes_opened(text)
     straightened = opened.replace("’", "'").replace("‘", "'")
     return straightened
 
