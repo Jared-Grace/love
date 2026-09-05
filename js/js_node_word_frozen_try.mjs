@@ -1,9 +1,8 @@
+import { js_call_callee_name_equal } from "./js_call_callee_name_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_literal_value_try } from "./js_literal_value_try.mjs";
 import { not_equal } from "./not_equal.mjs";
-import { js_call_callee_name_try } from "./js_call_callee_name_try.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { js_call_argument_at_try } from "./js_call_argument_at_try.mjs";
 export function js_node_word_frozen_try(node) {
@@ -20,8 +19,7 @@ export function js_node_word_frozen_try(node) {
   if (written) {
     return plain;
   }
-  let called = js_call_callee_name_try(node);
-  let marker_is = equal(called, fn_name("text_frozen"));
+  let marker_is = js_call_callee_name_equal(node, fn_name("text_frozen"));
   if (not(marker_is)) {
     return null;
   }
