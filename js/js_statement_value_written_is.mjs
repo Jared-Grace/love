@@ -1,3 +1,4 @@
+import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -6,8 +7,6 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 import { list_single } from "./list_single.mjs";
 import { js_declare_init_get } from "./js_declare_init_get.mjs";
 import { js_literal_is } from "./js_literal_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 export function js_statement_value_written_is(statement) {
   "Whether this one line does nothing but put a name on a value written out where it stands - a number, a word, a yes or no, an empty list, an empty record.";
   "Nothing is computed and nothing is asked of anything else, so with the private names taken away the whole of what is left is the value itself. Two lines found alike here agree only that somebody wrote a zero, and a zero is not a helper.";
@@ -30,14 +29,12 @@ export function js_statement_value_written_is(statement) {
   }
   let list_node_is = js_node_type_is(init, "ArrayExpression");
   if (list_node_is) {
-    let elements = property_get(init, "elements");
-    let empty = list_empty_is(elements);
+    let empty = property_list_empty_is(init, "elements");
     return empty;
   }
   let record_is = js_node_type_is(init, "ObjectExpression");
   if (record_is) {
-    let properties = property_get(init, "properties");
-    let empty2 = list_empty_is(properties);
+    let empty2 = property_list_empty_is(init, "properties");
     return empty2;
   }
   return false;
