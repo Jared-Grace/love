@@ -1,58 +1,37 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_read_files } from "./folder_read_files.mjs";
-import { psalms_song_file_chapter_take } from "./psalms_song_file_chapter_take.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
-import { less_than } from "./less_than.mjs";
-import { list_map } from "./list_map.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { subtract } from "./subtract.mjs";
-import { path_join } from "./path_join.mjs";
+import { songs_folder_passage_takes } from "./songs_folder_passage_takes.mjs";
+import { psalms_song_file_chapter_take } from "./psalms_song_file_chapter_take.mjs";
+import { list_map } from "./list_map.mjs";
 export async function psalms_songs_folder_chapters(folder_audio) {
   arguments_assert(arguments, 1);
   ("$plain folder_audio");
   ("Every chapter of the Psalms a folder of downloaded songs holds a whole singing of, in the order of the psalter, each with the recording to work from and how many recordings of it there are.");
-  ("★ ONE RECORDING IS NAMED FOR EACH CHAPTER BECAUSE A CHAPTER HAS ONE TIMING DOCUMENT, AND THE ONE NAMED IS THE EARLIEST RATHER THAN THE BEST. The renditions of a chapter differ in length, so times tapped against one of them fit none of the others; picking is a listening decision and there is nobody here to make it. The earliest is picked because it is the only one that can be picked without pretending to have listened, and how many there are travels out beside it so that a person choosing differently knows there is something to choose.");
+  ("★ ONE RECORDING IS NAMED FOR EACH CHAPTER BECAUSE A CHAPTER HAS ONE TIMING DOCUMENT, AND WHICH ONE THAT IS IS NO LONGER DECIDED HERE. Naming the earliest take, and counting how many there are, is the same rule for a whole chapter and for a stanza, and it now lives once in the walk this hands its reading to. It used to live here as well, in a loop spelled out a second time beside the part finder's, where the two could have come to disagree about which recording a passage means without anything going red.");
+  ("What is left here is the two things that are genuinely about chapters: that a chapter is said by a number alone, so a number is what a passage is keyed by; and that the order wanted is the psalter's, which for whole chapters is just the chapters counting up.");
   ("The folder is somebody's download folder and holds far more than psalms, so what is not a whole chapter is passed over rather than reported as a fault. A song of a stanza and a song of another book are both perfectly good files that this question is simply not about.");
-  let file_names = await folder_read_files(folder_audio);
-  let chapters = {};
-  for (let file_name of file_names) {
-    let read = psalms_song_file_chapter_take(file_name);
-    if (equal(read, null)) {
-      continue;
-    }
-    let held = chapters[read.chapter];
-    if (not(held)) {
-      held = {
-        chapter: read.chapter,
-        file_name: file_name,
-        take: read.take,
-        takes: 0,
-      };
-      chapters[read.chapter] = held;
-    }
-    held.takes = held.takes + 1;
-    if (less_than(read.take, held.take)) {
-      held.file_name = file_name;
-      held.take = read.take;
-    }
+  function chapter_keyed(read) {
+    let chapter = read.chapter;
+    return chapter;
   }
-  let list = object_property_names(chapters);
-  let numbers = list_map(list, Number);
-  function lambda(one, other) {
-    let difference = subtract(one, other);
+  function chapter_before(one, other) {
+    let difference = subtract(one.read.chapter, other.read.chapter);
     return difference;
   }
-  numbers.sort(lambda);
-  function song_of(chapter) {
-    let held = chapters[chapter];
+  function song_of(passage) {
     let song = {
-      chapter: chapter,
-      path_audio: path_join([folder_audio, held.file_name]),
-      takes: held.takes,
+      chapter: passage.read.chapter,
+      path_audio: passage.path_audio,
+      takes: passage.takes,
     };
     return song;
   }
-  let songs = list_map(numbers, song_of);
+  let passages = await songs_folder_passage_takes(
+    folder_audio,
+    psalms_song_file_chapter_take,
+    chapter_keyed,
+  );
+  passages.sort(chapter_before);
+  let songs = list_map(passages, song_of);
   return songs;
 }
