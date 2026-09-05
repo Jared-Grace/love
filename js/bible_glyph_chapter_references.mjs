@@ -41,8 +41,16 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 11",
     },
     {
+      chapter_code: "GEN18",
+      reference: "Genesis 18",
+    },
+    {
       chapter_code: "GEN32",
       reference: "Genesis 32",
+    },
+    {
+      chapter_code: "GEN50",
+      reference: "Genesis 50",
     },
     {
       chapter_code: "EXO14",
@@ -67,6 +75,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EXO32",
       reference: "Exodus 32",
+    },
+    {
+      chapter_code: "EXO33",
+      reference: "Exodus 33",
+    },
+    {
+      chapter_code: "EXO34",
+      reference: "Exodus 34",
     },
     {
       chapter_code: "NUM20",
