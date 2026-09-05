@@ -1,3 +1,4 @@
+import { psalms_song_file_part_or_null_cases_gate_run } from "./psalms_song_file_part_or_null_cases_gate_run.mjs";
 import { lyric_video_caption_held_gate_run } from "./lyric_video_caption_held_gate_run.mjs";
 import { web_assets_version_stale_gate_run } from "./web_assets_version_stale_gate_run.mjs";
 import { bible_sentence_end_hidden_gate_run } from "./bible_sentence_end_hidden_gate_run.mjs";
@@ -1001,6 +1002,7 @@ export function qa_gates() {
     lyric_video_hand_times_gate_run,
     text_word_plain_canonical_cases_gate_run,
     lyric_video_caption_held_gate_run,
+    psalms_song_file_part_or_null_cases_gate_run,
   ];
   return gates;
 }
