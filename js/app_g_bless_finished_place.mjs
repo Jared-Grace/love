@@ -1,3 +1,4 @@
+import { app_g_bless_tile_size_close } from "./app_g_bless_tile_size_close.mjs";
 import { app_g_bless_finished_home_arrive } from "./app_g_bless_finished_home_arrive.mjs";
 import { html_remove } from "./html_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
