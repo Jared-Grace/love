@@ -263,6 +263,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_psa001();
   }
+  if (equal(chapter_code, "PSA008")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_psa008.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_psa008();
+  }
   if (equal(chapter_code, "PSA015")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_psa015.mjs"
@@ -407,11 +413,23 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_psa146();
   }
+  if (equal(chapter_code, "PRO01")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_pro01.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_pro01();
+  }
   if (equal(chapter_code, "PRO04")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_pro04.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_pro04();
+  }
+  if (equal(chapter_code, "PRO08")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_pro08.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_pro08();
   }
   if (equal(chapter_code, "SNG02")) {
     let lines_module = await import(
@@ -436,6 +454,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
       "./bible_glyph_chapter_rosetta_lines_isa43.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_isa43();
+  }
+  if (equal(chapter_code, "JER01")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_jer01.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_jer01();
   }
   if (equal(chapter_code, "JER17")) {
     let lines_module = await import(
@@ -485,11 +509,23 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_ezk37();
   }
+  if (equal(chapter_code, "EZK47")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_ezk47.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_ezk47();
+  }
   if (equal(chapter_code, "DAN12")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_dan12.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_dan12();
+  }
+  if (equal(chapter_code, "HOS02")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_hos02.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_hos02();
   }
   if (equal(chapter_code, "JOL01")) {
     let lines_module = await import(
@@ -508,6 +544,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
       "./bible_glyph_chapter_rosetta_lines_jol03.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_jol03();
+  }
+  if (equal(chapter_code, "AMO09")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_amo09.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_amo09();
   }
   if (equal(chapter_code, "OBA01")) {
     let lines_module = await import(
@@ -550,6 +592,12 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
       "./bible_glyph_chapter_rosetta_lines_hag02.mjs"
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_hag02();
+  }
+  if (equal(chapter_code, "ZEC03")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_zec03.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_zec03();
   }
   if (equal(chapter_code, "ZEC04")) {
     let lines_module = await import(
