@@ -85,6 +85,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 34",
     },
     {
+      chapter_code: "LEV16",
+      reference: "Leviticus 16",
+    },
+    {
       chapter_code: "NUM20",
       reference: "Numbers 20",
     },
@@ -105,8 +109,16 @@ export function bible_glyph_chapter_references() {
       reference: "Deuteronomy 30",
     },
     {
+      chapter_code: "JOS24",
+      reference: "Joshua 24",
+    },
+    {
       chapter_code: "JDG13",
       reference: "Judges 13",
+    },
+    {
+      chapter_code: "JDG16",
+      reference: "Judges 16",
     },
     {
       chapter_code: "RUT01",
@@ -169,6 +181,14 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 34",
     },
     {
+      chapter_code: "PSA042",
+      reference: "Psalm 42",
+    },
+    {
+      chapter_code: "PSA063",
+      reference: "Psalm 63",
+    },
+    {
       chapter_code: "PSA067",
       reference: "Psalm 67",
     },
@@ -213,6 +233,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 115",
     },
     {
+      chapter_code: "PSA116",
+      reference: "Psalm 116",
+    },
+    {
       chapter_code: "PSA118",
       reference: "Psalm 118",
     },
@@ -237,6 +261,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 146",
     },
     {
+      chapter_code: "SNG02",
+      reference: "Song of Songs 2",
+    },
+    {
       chapter_code: "ISA01",
       reference: "Isaiah 1",
     },
@@ -257,6 +285,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 26",
     },
     {
+      chapter_code: "EZK01",
+      reference: "Ezekiel 1",
+    },
+    {
       chapter_code: "EZK18",
       reference: "Ezekiel 18",
     },
@@ -275,6 +307,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EZK37",
       reference: "Ezekiel 37",
+    },
+    {
+      chapter_code: "DAN12",
+      reference: "Daniel 12",
     },
     {
       chapter_code: "JOL01",
