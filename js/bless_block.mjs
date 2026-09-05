@@ -32,18 +32,32 @@ export function bless_block(x, y, block) {
   ("the street would open every few games with water standing between the houses. They are");
   ("also the only way through the row, so paving them is what keeps the ground north of the");
   ("block reachable from the pavement in front of it.");
+  ("A block is now FOUR bands deep in front of its houses rather than one. Nearest the fronts");
+  ("is a row of grass, then the pavement, then the road; and crossing the grass, a paved path");
+  ("from every doorstep to the pavement. They are given back separately because they are made");
+  ("of different things, and named together here because they are one street.");
+  ("The road is walkable and nothing drives on it. It is there because a row of houses with a");
+  ("pavement and nothing beyond it reads as a corridor - the pavement is the edge of the world");
+  ("rather than the edge of a road. A grey band south of it says the street goes on, and it");
+  ("costs the player nothing to walk across.");
   let r = bless_block_walls(x, y, block);
   let walls = property_get(r, "walls");
   let r2 = bless_block_doors(r, x);
   let doors = property_get(r2, "doors");
   let alleys = property_get(r2, "alleys");
   let sidewalk = property_get(r2, "sidewalk");
+  let yard = property_get(r2, "yard");
+  let road = property_get(r2, "road");
+  let paths = property_get(r2, "paths");
   let buildings = property_get(r2, "buildings");
   let laid = {
     buildings: buildings,
     walls: walls,
     alleys: alleys,
+    yard: yard,
+    paths: paths,
     sidewalk: sidewalk,
+    road: road,
     doors: doors,
   };
   return laid;

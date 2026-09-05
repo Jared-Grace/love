@@ -1,5 +1,5 @@
+import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { bless_block_roof } from "./bless_block_roof.mjs";
-import { bless_block_pavement } from "./bless_block_pavement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_block_faces } from "./bless_block_faces.mjs";
 import { property_get } from "./property_get.mjs";
@@ -47,19 +47,25 @@ export function app_g_bless_buildings_raise(rows, buildings, block) {
   ("block's own pavement. It has to be covered by somebody: it was under a building before,");
   ("so whatever the world generated there was buried, and left alone now it comes out as");
   ("whatever the ground happened to be - which on a fresh world is as readily a lake behind");
-  ("the houses as grass. Paved, it reads as the yard or the forecourt of the house beside");
-  ("it, and it joins the alleys either side of it, which are paved in the same thing.");
+  ("the houses as grass. Grassed, it reads as the garden of the house beside it, and it joins");
+  ("the row of grass that runs along the front of the whole street, which is the same green.");
+  ("It was PAVED in the block pavement until the street grew a garden. That was right while");
+  ("the only ground in front of a house was pavement - a leftover row had to be something,");
+  ("and matching the alleys either side of it was the least it could be. Now there is grass");
+  ("to match instead, and matching the grass is what makes a set-back house read as a house");
+  ("standing further back in its own garden rather than as a house with a paved gap in front");
+  ("of it.");
   ("It is done HERE, where the building is, rather than with the rest of the block's ground.");
   ("Which row a house leaves over depends on how tall it is and how far back it stands, and");
   ("both of those are facts about the building - worked out again anywhere else, they would");
   ("be a second copy free to disagree with the first, and disagreeing quietly, since a yard");
   ("nobody paved looks like scenery until somebody walks into the water.");
   let item_roof = bless_block_roof(block);
-  let item_ground = bless_block_pavement(block);
+  let item_yard = bless_yard_grass();
   let faces = bless_block_faces(block);
   function building_raise(building, index) {
     let yard = property_get(building, "yard");
-    app_g_bless_tiles_pave(rows, yard, item_ground);
+    app_g_bless_tiles_pave(rows, yard, item_yard);
     let roof = property_get(building, "roof");
     app_g_bless_tiles_pave(rows, roof, item_roof);
     let walls = property_get(building, "walls");
