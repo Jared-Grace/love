@@ -11,10 +11,6 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
-      n: 2,
-      note: "This change was mine and not something you asked for, so say if you want the old one back. The bowl stood on a pedestal, which reads as a baptismal font, and the verse is Pilate washing his hands - so it sits flat on the ground now with a ewer tipped over it and pouring in. The water is still the shallow ellipse you were asked about last round. The stone still has a photographic speckle in it that does not belong in glass.",
-    },
-    {
       n: 4,
       note: "Only the field changed. The two bands behind the crown were white before, and they are violet over deep crimson now, because the wording names those colours itself instead of leaving them to be chosen. The crown of thorns is as it was. The lower crimson band still has a lead line down the middle where one flat sheet was asked for.",
     },
