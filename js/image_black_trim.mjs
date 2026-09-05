@@ -12,7 +12,7 @@ export async function image_black_trim(path) {
   "black is what marks the edge rather than transparency, because the frame this is shown on is black too. There is nothing for a transparent picture to reveal, so the cheaper thing that needs no alpha channel and no keying is exactly as good.";
   "a picture with no black around it is trimmed to itself, which costs one rewrite and changes nothing, so this is safe to run twice and safe to run on a picture that never needed it";
   "when nothing can be found it says so and leaves the picture alone. A picture entirely black or entirely not has no border to cut, and neither does one ffmpeg could not read; in all three the right answer is the picture as it stands.";
-  "IT CARRIES THE CONTENT CREDENTIALS ACROSS, because cutting the black off is a rewrite and ffmpeg drops every chunk it has no use for. The pictures this runs on are drawn through an API whose terms forbid removing what it embeds, so the obligation was being broken by a step that was never about credentials at all. The copy happens while both files are on disk, which is the one moment the old picture still has them.";
+  "IT CARRIES THE CONTENT CREDENTIALS ACROSS, because cutting the black off is a rewrite and ffmpeg drops every chunk it has no use for. The pictures this runs on are drawn through an API whose terms forbid removing what it embeds, so the obligation was being broken by a step that was never about credentials at all. The carrying is done by the crop writer itself rather than here, so that every picture rewrite in the repo carries them and not only this one.";
   let box = await ffmpeg_crop_box(path);
   if (equal(box, null)) {
     let untrimmed = {
@@ -24,7 +24,6 @@ export async function image_black_trim(path) {
   }
   let path_trimmed = text_combine(path, ".trimmed.png");
   await ffmpeg_crop_write(path, box, path_trimmed);
-  await image_content_credentials_copy(path, path_trimmed);
   await file_delete_if_exists(path);
   await file_move(path_trimmed, path);
   let trimmed = {
