@@ -132,8 +132,6 @@ export function song_image_couplets() {
   let r = song_image_tomb_rock();
   let r2 = song_image_tomb_rock();
   let r3 = song_image_tomb_stone();
-  let r4 = song_image_tomb_rock();
-  let r5 = song_image_tomb_stone();
   let couplets = [
     {
       n: 1,
@@ -376,14 +374,8 @@ export function song_image_couplets() {
       verse: 3,
       first: "the SON of GOD",
       second: "was raised to life",
-      symbol: list_join_empty([
-        r4,
-        ", that opening one flat sheet of white glass standing wide open and shining, and ",
-        r5,
-        ", rolled fully clear of that opening and standing upright on the ground at one side of the rock with no part of it covering the opening at all",
-        ", and out of that opening six or seven broad straight beams of white glass going out past the rock and upward, each beam one flat unbroken pane of white with a black lead line down each of its two sides, no two of them the same width and no two the same length, some of them reaching right out to the white border",
-        ", nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
-      ]),
+      symbol:
+        "One very great round stone of grey rock, its face going from a pale grey down one side to a much darker grey down the other so that it reads as a piece of rock and not as a plain circle, a flat thin disc of one unbroken piece with its whole face turned square to the viewer, standing upright with its lower edge set down on the ground and a full half of the whole width of the window across, and around it the rock of the tomb, a great cut face of rock filling almost the whole width of the window, its face broken into a few large flat planes of stone with the cracks between them drawn as thick heavy black lines and never as fine scratches, and those planes in several clearly different greys, some of them pale and some of them dark, so that it reads as rock at a glance and at a small size, rising above the stone and standing out on both sides of it so that the stone sits against the face of the rock, and a wide halo of white light all round the outside edge of that stone, which is the light of the tomb pouring out past the stone on every side of it, with no black line anywhere in that light at its inner edge or its outer edge, and the light passing by degrees from a solid white where it touches the stone through paler and paler white the further out it goes until it fades away altogether into what is behind it, so that it has no edge to it anywhere, and many beams of that light going out from the stone in every direction, no two of them the same width and no two the same length, some narrow and some very broad, some stopping short against the rock and some reaching right out to the edge of the window, and they are not spread evenly round the stone but gathered thickly on one side with wide stretches on the other where no beam falls at all, so that the left half of the window and the right half of it are plainly not alike and the whole is never a fan, some sideways across the face of the rock, some out to the left and the right, and some going straight up from the top of the rock into the sky above it, and the beams are not all white but every colour the window has: some white, some deep cobalt blue, some ruby red, some emerald green, some violet and some deep crimson, so that what comes out of the tomb is light of every kind at once, and the ground below one plain flat band of brown running clear across the whole foot of the window",
       symbol_ref: "Matthew 28:2",
       same_as: 0,
     },

@@ -15,7 +15,7 @@ export function lists_matched_indexes(before, after) {
   let cost_gap = -1;
   ("Each row holds the best score for having used that many items of each list. A row of nothing but gaps is what reaching either length without a single pairing costs.");
   let table = [];
-  lists_matched_indexes_same(
+  lists_matched_indexes_same({
     size_before,
     table,
     Float64Array,
@@ -23,7 +23,7 @@ export function lists_matched_indexes(before, after) {
     cost_gap,
     before,
     after,
-  );
+  });
   ("Walking back from the far corner says which choice each step of the best score was made of. Only a step that paired two items that were the same is reported; a step that paired two different items is the table admitting it had no better move, not a match.");
   let indexes = [];
   for (let i = 0; less_than(i, size_before); i++) {
