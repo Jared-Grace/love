@@ -62,17 +62,17 @@ export async function bible_sentence_end_blocked_gate_run() {
   }
   let blocked_named = list_map(blocked_rows, bible_sentence_end_blocked_named);
   let f_name2 = fn_name("bible_verse_trim_right");
-  list_empty_is_assert_json(blocked, {
+  list_empty_is_assert_json(blocked_named, {
     hint: text_combine_multiple([
       "these verses end a sentence and then close a quotation over it in a mark that is not taken off before the asking, so anyone reading this bible beside another is carried on into a verse whose sentence had already finished. The marks are named beside each bible: add them to ",
       f_name2,
       " - and prefer widening what is asked of Unicode there to writing another mark out by hand, because a hand-written list is what was short every time this has happened",
     ]),
-    blocked,
+    blocked: blocked_named,
   });
   let r = {
     checked: list_size(rows),
-    blocked,
+    blocked: blocked_named,
   };
   return r;
 }
