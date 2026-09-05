@@ -1,3 +1,4 @@
+import { properties_size } from "./properties_size.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +12,6 @@ import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { object_filter } from "./object_filter.mjs";
-import { properties_get } from "./properties_get.mjs";
 import { not } from "./not.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 import { assert_json } from "./assert_json.mjs";
@@ -42,8 +42,7 @@ export async function gloss_word_sound_keys_gate_run() {
     return shared;
   }
   let clashes = object_filter(by_key, shared_is);
-  let names = properties_get(clashes);
-  let count = list_size(names);
+  let count = properties_size(clashes);
   let any = greater_than(count, 0);
   let listed = [];
   if (any) {
