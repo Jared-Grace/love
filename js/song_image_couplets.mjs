@@ -312,7 +312,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One white lamb standing side-on, the Agnus Dei of church tradition, with a cruciform halo behind its head, that is a disc of bright yellow glass holding a red cross, standing on a scroll of brown parchment rolled shut and sealed. This couplet stands in heaven, so the whole window reads bright and full of light and never dark, the band between the two lead lines one flat sheet of bright orange and the band below them one flat sheet of ruby red, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One white lamb standing side-on, the Agnus Dei of church tradition and never a ram, with no horns of any kind on its head, with a cruciform halo behind its head, that is a disc of bright yellow glass holding a red cross, standing on a scroll of brown parchment rolled shut and sealed. This couplet stands in heaven, so the whole window reads bright and full of light and never dark, the band between the two lead lines one flat sheet of bright orange and the band below them one flat sheet of ruby red, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
