@@ -22,14 +22,23 @@ export function app_g_bless_dev_crowd_counts(world) {
   ("reading of what counts as a free tile would agree today and drift the day stepping");
   ("learns a new rule, and it would drift silently, because a wrong number here looks");
   ("exactly like a right one.");
-  ("Tiles are the pavement and the alleys together, which is everywhere on a block a person");
-  ("may stand. Counting only the pavement would flatter the number by the width of five");
-  ("gaps.");
+  ("Tiles are EVERY band of the block a person may stand on: the pavement, the gaps between");
+  ("the houses, the grass, the drives across it and the road. That is not a widening of the");
+  ("question, it is the same question asked of a block that grew. It used to be pavement and");
+  ("gaps because those were the only ground there was; the block now has two rows of lawn and");
+  ("two of road running its whole length, all of them walkable, and a count that stopped at");
+  ("the kerb would report a street more than twice as full as it is.");
+  ("What may be stood on is read off the WORLD by the stepping test below, so a band named");
+  ("here that turned out to be solid would show up as people unable to move rather than as a");
+  ("bigger number. The two halves of this answer are checked against each other by that.");
   let npcs = property_get(world, "npcs");
   let blocks = property_get(world, "blocks");
   function block_tiles(block) {
     let sidewalk = property_get(block, "sidewalk");
-    let both = list_concat_property(sidewalk, block, "alleys");
+    let with_alleys = list_concat_property(sidewalk, block, "alleys");
+    let with_yard = list_concat_property(with_alleys, block, "yard");
+    let with_paths = list_concat_property(with_yard, block, "paths");
+    let both = list_concat_property(with_paths, block, "road");
     return both;
   }
   let tiles_each = list_map(blocks, block_tiles);

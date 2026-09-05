@@ -23,11 +23,15 @@ export function app_g_bless_blocks_raise(rows, blocks) {
   ("walks from one to the other can see they have arrived somewhere rather than gone round");
   ("in a circle. It is the cheapest thing the game can say and it says the whole design:");
   ("the reach was earned here and is worth spending there.");
-  ("The grass goes down, then the road, then the pavement LAST, and that order is what draws");
-  ("the garden paths. A path crosses the yard, so it is laid over ground that has just been");
-  ("grassed; paved first it would be grassed over, and the street would have a strip of green");
-  ("with nothing crossing it and doorsteps opening onto a lawn.");
-  ("The buildings still go up before any of it. Grass, road and pavement are all bands of");
+  ("Grass first, then the road, then the pavement, then the DRIVEWAYS over all of it. A drive");
+  ("crosses every band there is on its way from a door to the road, so it has to be the last");
+  ("thing laid or each band would rub out the piece of it that crossed that band, and the");
+  ("street would come out with green and tan stripes and no way off any doorstep.");
+  ("The GAPS between the houses are grass rather than paving, and they are laid with the");
+  ("lawn rather than with the pavement for that reason. A block is a row of houses standing");
+  ("in green with a paved line along the front of them; a paved gap made every house an end");
+  ("of a terrace instead, with the alley reading as a side street the player could turn down.");
+  ("The buildings still go up before any of it. Grass, road, pavement and drives are all");
   ("ground in front of the houses and none of them reaches under one, but the raising is what");
   ("says which rows the houses left over, and those are grassed where the building is.");
   function block_raise(block, index) {
@@ -39,13 +43,14 @@ export function app_g_bless_blocks_raise(rows, blocks) {
     let paths = property_get(block, "paths");
     app_g_bless_buildings_raise(rows, buildings, index);
     let item_grass = bless_yard_grass();
-    app_g_bless_tiles_pave(rows, yard, item_grass);
+    let grassed = list_concat(yard, alleys);
+    app_g_bless_tiles_pave(rows, grassed, item_grass);
     let item_road = bless_block_road(index);
     app_g_bless_tiles_pave(rows, road, item_road);
-    let paved = list_concat(alleys, sidewalk);
-    let paved_all = list_concat(paved, paths);
     let item_pavement = bless_block_pavement(index);
-    app_g_bless_tiles_pave(rows, paved_all, item_pavement);
+    app_g_bless_tiles_pave(rows, sidewalk, item_pavement);
+    let item_driveway = bless_driveway_paving();
+    app_g_bless_tiles_pave(rows, paths, item_driveway);
   }
   each_index(blocks, block_raise);
 }
