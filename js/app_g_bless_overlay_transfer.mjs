@@ -1,3 +1,4 @@
+import { app_g_bless_vehicles_drive } from "./app_g_bless_vehicles_drive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_on } from "./html_on.mjs";
