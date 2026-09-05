@@ -1,4 +1,3 @@
-import { image_content_credentials_copy } from "./image_content_credentials_copy.mjs";
 import { equal } from "./equal.mjs";
 import { ffmpeg_crop_box } from "./ffmpeg_crop_box.mjs";
 import { ffmpeg_crop_write } from "./ffmpeg_crop_write.mjs";
