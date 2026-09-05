@@ -52,7 +52,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 34,
-      note: "Both are back, as you asked, and the rainbow is at last drawn as an emerald arch behind the throne rather than as the window's own border. The flames are still wrong: five, not seven. One other draw did give exactly seven, but it turned the whole window green and lost the blue arch head that all thirty-six share - say if you would rather have that one.",
+      note: "Seven flames is still not landing - this one has five. Eight draws this round: the two that did give seven both turned the whole window emerald green and put the rainbow back to being the border, which you had already ruled against. Everything else is here: the arch behind the throne, the sceptre clear of it, the blue field. Say if seven flames is worth losing the field colour for.",
     },
     {
       n: 36,
