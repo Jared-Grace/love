@@ -1,10 +1,10 @@
-import { less_than } from "./less_than.mjs";
-import { equal } from "./equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_document_words } from "./lyric_video_document_words.mjs";
-import { text_word_plain } from "./text_word_plain.mjs";
+import { text_word_plain_canonical } from "./text_word_plain_canonical.mjs";
 import { list_map } from "./list_map.mjs";
 import { lists_matched_indexes } from "./lists_matched_indexes.mjs";
+import { less_than } from "./less_than.mjs";
+import { equal } from "./equal.mjs";
 export function lyric_video_document_lines_started(
   document,
   words_read,
@@ -16,15 +16,16 @@ export function lyric_video_document_lines_started(
   "Where each line of a lyric video begins according to one reading of the recording, and how many of the document's words that reading accounted for.";
   "★ ONE READING IS EITHER KIND, WHICH IS THE WHOLE REASON THIS TAKES A LIST OF WORDS RATHER THAN A RECORDING. An aligner was handed the words and returns them all; a transcriber was handed nothing and returns what it thought it heard. Laying either against the document by the same route means the two answers are the same shape and can be set side by side, and a second route written for the second kind is a second place for them to stop being comparable.";
   "★ THE COUNT THAT COMES BACK IS THE CHECK, AND IT IS ONLY WORTH ANYTHING FOR A READING THAT COULD HAVE DISAGREED. An aligner accounts for every word by construction, so its count says nothing at all; a transcriber's count is how much of what is written was actually sung, and on a sung psalm that told the right words from a different psalm's by nine hundred and sixty eight thousandths against a hundred and ninety one.";
+  "★ BOTH SIDES ARE PUT INTO ONE SPELLING BEFORE THEY ARE COMPARED, BECAUSE A WORD SPELLED TWO WAYS WAS BEING REPORTED AS A WORD NOBODY SANG. The written side and the heard side go through the same one step, so neither can be folded in a way the other is not. Psalm one hundred and fifty says Hallelujah twice and the transcriber wrote Alleluia both times, so those two lines came back with no start at all — and no start reads as no disagreement, which is the one verdict that hides the largest errors rather than the smallest. Folded, the same two lines are two and a half and five seconds out and are handed to a person.";
   "A line whose own first word went unheard is given the first word of it that was heard, which is late rather than early. That is the safe direction: a line reported late disagrees with the aligner and is handed to a person, where one reported early could quietly agree with a wrong answer.";
   arguments_assert(arguments, 3);
   let words = lyric_video_document_words(document);
   function plain_written(entry) {
-    let r = entry.plain;
+    let r = text_word_plain_canonical(entry.plain);
     return r;
   }
   function plain_read(word) {
-    let p = text_word_plain(word.word);
+    let p = text_word_plain_canonical(word.word);
     return p;
   }
   let written = list_map(words, plain_written);
