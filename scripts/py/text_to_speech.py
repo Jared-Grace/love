@@ -509,7 +509,7 @@ def jobs_of(data):
     if "jobs" in data:
         return list(data["jobs"])
     one = {"text": data["text"], "path_output": data["path_output"]}
-    for carried in ("speed", "compression_level", "lexicon"):
+    for carried in ("speed", "compression_level", "citation"):
         if carried in data:
             one[carried] = data[carried]
     return [one]
