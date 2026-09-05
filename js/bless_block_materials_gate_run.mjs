@@ -1,3 +1,5 @@
+import { bless_yard_grass } from "./bless_yard_grass.mjs";
+import { list_concat } from "./list_concat.mjs";
 import { bless_roads } from "./bless_roads.mjs";
 import { bless_block_faces } from "./bless_block_faces.mjs";
 import { range_map } from "./range_map.mjs";
@@ -124,14 +126,16 @@ export function bless_block_materials_gate_run() {
     hint: "a road made of what the roofs are made of ties the top of a house to the ground in front of it",
   });
   ("The GRASS is the one material here that is deliberately the same on every street, so nothing about it is checked for variety. What is checked is that it is not any of the others: a yard the colour of the pavement or of the road leaves the paths crossing it invisible, a yard the colour of a front leaves a house with no bottom edge, and a yard on the list of solids fences every household inside its own garden with no error anywhere.");
-  let grasses = [bless_yard_grass()];
+  let grass = bless_yard_grass();
+  let grasses = [grass];
   let grassed_solid = list_intersection(grasses, solids);
   let grass_walkable = list_empty_is(grassed_solid);
   assert_json(grass_walkable, {
     grassed_solid,
     hint: "a yard made of a solid is a garden nobody can cross to their own front door",
   });
-  let grassed_ground = list_intersection(grasses, list_concat(pavements, roads));
+  let right = list_concat(pavements, roads);
+  let grassed_ground = list_intersection(grasses, right);
   let grass_apart = list_empty_is(grassed_ground);
   assert_json(grass_apart, {
     grassed_ground,
