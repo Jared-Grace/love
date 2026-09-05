@@ -45,6 +45,10 @@ export function bible_glyph_chapter_references() {
       reference: "Judges 13",
     },
     {
+      chapter_code: "RUT01",
+      reference: "Ruth 1",
+    },
+    {
       chapter_code: "1KI03",
       reference: "1 Kings 3",
     },
