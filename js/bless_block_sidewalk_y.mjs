@@ -12,19 +12,15 @@ export function bless_block_sidewalk_y(x, y, block) {
   let span = property_get(r, "span");
   let count = property_get(r, "count");
   let depth = property_get(r, "depth");
-  ("Where the YARD begins and where the pavement begins, which are no longer the same row. The buildings end and a strip of grass runs the whole length of the street in front of them, and the pavement starts on the far side of that.");
-  ("The yard is between them rather than beyond the pavement because that is where a front garden is: a door opens onto its own ground first and onto the public path second. Put the other way round, every household would step straight out onto a pavement and the grass would be a verge in the middle of the road.");
-  let yard_y = add(y, depth);
-  let yard_depth = bless_yard_depth();
-  let sidewalk_y = add(yard_y, yard_depth);
+  ("Where the PAVEMENT begins - the first row south of the fronts, with nothing between it and them. A door opens straight onto it, so a doorstep and the pavement are the same row for a house standing flush in its slot.");
+  ("There was a row of grass here for a few hours and it has gone below the pavement instead. Seen from the front and slightly above, a band drawn between the houses and the crowd holds the player away from the doors they came to look at; the same band drawn on the far side holds the ROAD away from them, which is what it was for.");
+  let sidewalk_y = add(y, depth);
   let r2 = {
     alleys,
     walls,
     buildings,
     span,
     count,
-    yard_y,
-    yard_depth,
     sidewalk_y,
   };
   return r2;
