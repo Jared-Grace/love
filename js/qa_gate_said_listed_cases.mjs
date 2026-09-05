@@ -1,5 +1,5 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function qa_gate_said_listed_cases() {
   "Everything a gate said while it was failing, and the offenders a reader must be able to pick out of it.";
   "This reading decides whether a red gate can be shown to be about somewhere else, and a gate that names nobody holds every app in the repo out of a deployment. So the cases that must answer with a name and the cases that must answer with nothing carry equal weight: reading too little blocks work that was never at fault, and reading a sentence as if it were a name lets a gate claim to have named somebody while naming nothing that could ever match.";
@@ -30,6 +30,16 @@ export function qa_gate_said_listed_cases() {
       ]),
       listed: [f_name2],
       why: "an offender written as a record carrying a hint beside its name - the name is a word anything can answer to, the hint is prose and must be left where it is",
+    },
+    {
+      said: '{"bandless":["JOL03"],"pictureless":[],"hint":"bandless chapters draw pictures and have no Rosetta bands to open, so the key band on the page comes up empty for them"}',
+      listed: ["JOL03"],
+      why: "a record that never uses the word list at all - the offenders stand under two names of the gate's own, and asking for a list alone read this as naming nobody and held every app in the repo out of a deployment on the strength of one unwritten chapter",
+    },
+    {
+      said: '{"list":["HAG02"],"hint":"a picture Bible chapter is on the list with no paragraph about it","json":{"added":["EXO14"],"stale":[]}}',
+      listed: ["HAG02"],
+      why: "a list is present, so nothing standing beside it is gathered from - the advice the gate carries under json holds words shaped exactly like offenders, and taking those too would accuse a chapter the gate is not complaining about",
     },
     {
       said: "8 functions hold a local that hides a name already in scope",
