@@ -61,6 +61,26 @@ export function gloss_grammar_terms() {
       term: "vocative",
       parsing: "Vocative",
     },
+    {
+      term: "singular",
+      parsing: "Singular",
+    },
+    {
+      term: "plural",
+      parsing: "Plural",
+    },
+    {
+      term: "first person",
+      parsing: "1st Person",
+    },
+    {
+      term: "second person",
+      parsing: "2nd Person",
+    },
+    {
+      term: "third person",
+      parsing: "3rd Person",
+    },
   ];
   return terms;
 }

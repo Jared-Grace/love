@@ -89,7 +89,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:45 says the sun was darkened. A sun drawn in the same solid black as the lead lines is the plainest way a window can say a sun that has stopped giving light.",
     },
     11: {
-      kept: 62,
+      kept: 64,
       lyric_ref: "John 3:16, Romans 8:32, Genesis 22:8",
       lyric_explain:
         "HE that spared not HIS own Son, but delivered HIM up for us all. Abraham had told Isaac that GOD would provide HIMSELF a lamb, and the couplet reads the giving of the SON as that promise kept.",
@@ -161,7 +161,7 @@ export function song_image_couplet_glosses() {
         "Described. The burial spices are what the accounts themselves dwell on. The flask carries the burial so that the tomb is not drawn a fourth time in six couplets.",
     },
     20: {
-      kept: 19,
+      kept: 22,
       lyric_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       lyric_explain:
         "HIS own new tomb, which he had hewn out in the rock. Luke adds that it was one wherein never man before was laid, and John that it was a new sepulchre in a garden.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 42,
+      kept: 51,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
