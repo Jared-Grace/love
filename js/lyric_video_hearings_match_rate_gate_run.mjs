@@ -14,16 +14,16 @@ export async function lyric_video_hearings_match_rate_gate_run() {
   let path_findings = lyric_video_hearings_path();
   let hearings = await file_read_json(path_findings);
   let names = object_property_names(hearings);
-  let floor = lyric_video_match_rate_floor();
+  let rate_floor = lyric_video_match_rate_floor();
   let unheard = [];
   for (let name of names) {
     let hearing = hearings[name];
-    let below = less_than(hearing.match_rate, floor);
+    let below = less_than(hearing.match_rate, rate_floor);
     if (below) {
       let one = {
         name,
         match_rate: hearing.match_rate,
-        floor,
+        floor: rate_floor,
       };
       unheard.push(one);
     }
@@ -33,7 +33,7 @@ export async function lyric_video_hearings_match_rate_gate_run() {
   });
   let r = {
     heard: names.length,
-    floor,
+    floor: rate_floor,
   };
   return r;
 }
