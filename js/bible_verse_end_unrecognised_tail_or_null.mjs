@@ -31,7 +31,7 @@ export function bible_verse_end_unrecognised_tail_or_null(text) {
   if (marked) {
     return null;
   }
-  ("A VERSE SHORTER THAN THE TAIL IS ANSWERED WHOLE, because taking more characters off the end of a text than it has is refused rather than being quietly rounded down, and a short verse is a real answer here and not an edge to be skipped.");
+  ("A VERSE SHORTER THAN THE TAIL IS ANSWERED WHOLE, and this is a guard rather than a tidiness. Where the tail begins is worked out by taking its length off the length of the verse, and in a verse shorter than the tail that comes out negative - which is not refused anywhere but read as counting back from the far end, so a short verse would quietly answer with a slice of itself measured from the wrong side. A short verse is a real answer here and not an edge to be skipped.");
   let count = bible_verse_end_tail_count();
   let size = text_size(trimmed);
   let whole = greater_than(count, size);
