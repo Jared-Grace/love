@@ -32,7 +32,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "You picked 180 for its colour and you had found the real gap: every beam was one flat colour end to end. The wording now has each beam changing colour along its own length, palest where it leaves the stone and deepening outward. This is a fresh draw with that in, and it keeps the round stone that 180 does not have. The cost is the frame - it came out square instead of arched.",
+      note: "All three are in the wording now: measured widths from a lead line up to half the stone, lighter colour throughout, and every beam tapering to a point unless it reaches the window edge. Ten more draws and the picture above is unchanged, because every one that got the beams right lost the circle and came back oval. Attempt 190 has the beams you asked for, on an oval stone. Say which of the two you would rather keep.",
     },
     {
       n: 26,
