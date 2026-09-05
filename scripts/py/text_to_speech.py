@@ -176,7 +176,29 @@ def start_refusal(job):
 
 
 def said_text(text):
-    """One line as it is to be read aloud, with its em dashes opened again.
+    """One line as it is to be read aloud, with its em dashes opened again
+    and its curly apostrophes straightened.
+
+    ★ THE CURLY APOSTROPHE MAKES THE READER DROP THE END OF A WORD, WHICH ON A
+    NEGATIVE MEANS IT SAYS THE OPPOSITE.  The Bible text spells an apostrophe
+    as U+2019, which is right on the page.  Handed to the phonemiser it is not
+    recognised as part of the word, and measured over the 26 words in the app's
+    list that hold one, 16 come back wrong: "isn't" is answered with the sounds
+    of "is", "wasn't" with "was", and "didn't", "doesn't" and "aren't" the same
+    way - the whole negative gone.  A learner tapping that button hears the
+    opposite of the word they tapped.  The rest are possessives, where the
+    ending is not dropped but spelled out as a letter: "man's" comes back as
+    "man ESS", "mother's" as "mother ESS".  The same word written with the
+    straight apostrophe is answered correctly in every one of the sixteen.
+
+    Nothing anywhere reported this.  A dropped ending is not an error to a
+    phonemiser - it answered, and what it answered was a real word.
+
+    It is straightened here, next to the dash, for the same reason the dash is:
+    this is the last place the text is a sentence before it is a sound, so the
+    page keeps the mark English sets and only the voice sees the plain one.  It
+    cannot move a recording either, because the name a recording is filed under
+    writes both marks the same way.
 
     ★ THIS UNDOES SOMETHING THE REPO DID ON PURPOSE, AND ONLY HERE.  The Bible
     text arrives through em_dashes_closed, which takes the spaces out from
@@ -197,7 +219,8 @@ def said_text(text):
     that already has a space on a side was never joining two words together.
     """
     opened = re.sub(r"(?<=\S)—(?=\S)", " — ", text)
-    return opened
+    straightened = opened.replace("’", "'").replace("‘", "'")
+    return straightened
 
 
 def pieces_of(text):
