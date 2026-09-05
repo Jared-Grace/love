@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 9,
+      kept: 11,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 61,
+      kept: 66,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",
@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 29,
+      kept: 33,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
