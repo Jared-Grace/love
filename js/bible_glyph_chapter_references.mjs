@@ -25,12 +25,24 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 3",
     },
     {
+      chapter_code: "GEN32",
+      reference: "Genesis 32",
+    },
+    {
       chapter_code: "EXO14",
       reference: "Exodus 14",
     },
     {
+      chapter_code: "EXO16",
+      reference: "Exodus 16",
+    },
+    {
       chapter_code: "EXO20",
       reference: "Exodus 20",
+    },
+    {
+      chapter_code: "NUM21",
+      reference: "Numbers 21",
     },
     {
       chapter_code: "DEU26",
@@ -67,6 +79,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "1KI13",
       reference: "1 Kings 13",
+    },
+    {
+      chapter_code: "2KI02",
+      reference: "2 Kings 2",
     },
     {
       chapter_code: "PSA001",
