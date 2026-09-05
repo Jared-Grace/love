@@ -27,12 +27,18 @@ export function bless_block_door_at(r, x) {
   let block_width = property_get(r, "block_width");
   let sidewalk_depth = property_get(r, "sidewalk_depth");
   let alleys = property_path_get_2(r, "r2", "alleys");
+  let yard_y = property_path_get_2(r, "r2", "yard_y");
+  let yard_depth = property_path_get_2(r, "r2", "yard_depth");
+  let road_y = property_path_get_2(r, "r2", "road_y");
+  let road_depth = property_path_get_2(r, "r2", "road_depth");
   let sidewalk = bless_tiles_rectangle(
     x,
     sidewalk_y,
     block_width,
     sidewalk_depth,
   );
+  let yard = bless_tiles_rectangle(x, yard_y, block_width, yard_depth);
+  let road = bless_tiles_rectangle(x, road_y, block_width, road_depth);
   function door_at(building) {
     let doorways = property_get(building, "doorways");
     function doorstep(doorway) {
@@ -48,9 +54,12 @@ export function bless_block_door_at(r, x) {
     let steps = list_map(doorways, doorstep);
     return steps;
   }
+  ("The YARD and the ROAD are given back from here alongside the pavement, because all three are the same kind of thing: a band running the whole length of the block at a row this block knows and nobody else does. Named here, whoever lays the block down lays them without having to work out where any of them starts.");
   let r3 = {
     alleys,
     sidewalk,
+    yard,
+    road,
     door_at,
   };
   return r3;
