@@ -45,9 +45,11 @@ export async function app_g_bless_finished_place(
   ("away. Asked for at the start, all of the coming in IS the arrival.");
   ("It is LEFT close at the end rather than taken back out here. What follows this is the");
   ("panel that says what the prayer did, and that panel is built to be read with the lit");
-  ("house showing through it - so the way back out belongs on the far side of it, to the");
-  ("moment the player says they are ready to carry on. Taken out here, the news arrived");
-  ("over a street that had already gone back to being ordinary.");
+  ("house showing through it, so the news has to arrive over a street that is still close");
+  ("in. Taken out here, it arrived over one that had already gone back to being ordinary.");
+  ("The way back out then sets off UNDERNEATH the panel rather than waiting for it to be");
+  ("put down, so the reading and the travelling are spent over each other and the player");
+  ("looks up from the words to a street that is already theirs again.");
   ("The still moment after the camera lands and before anything lights is the whole point");
   ("of that pause, and it is not politeness. A change can only be watched happening if the");
   ("player saw what it was before: with the light starting on the same frame the travel");
