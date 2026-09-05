@@ -28,7 +28,13 @@ export function bible_verse_end_unrecognised_tail_or_null(text) {
   if (marked) {
     return null;
   }
+  ("A VERSE SHORTER THAN THE TAIL IS ANSWERED WHOLE, because taking more characters off the end of a text than it has is refused rather than being quietly rounded down, and a short verse is a real answer here and not an edge to be skipped.");
   let count = bible_verse_end_tail_count();
+  let size = text_size(trimmed);
+  let whole = greater_than(count, size);
+  if (whole) {
+    return trimmed;
+  }
   let tail = text_take_end_count(trimmed, count);
   return tail;
 }
