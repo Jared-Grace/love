@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 4,
-      note: "Contrast, and I took your second suggestion rather than your first - the thorns now carry a light and a dark brown of their own instead of the field being lightened. That went into the rule every window is drawn from, not into this one, because you faulted three windows for it. The field behind is unchanged, so if brown on violet is still muddy the field is the next thing to move.",
+      note: "I took your second suggestion, not your first: the thorns carry a light brown over most of them and a deep brown along their edges, instead of the field being lightened. This is a new drawing made from that rule, and the crown is much larger than before. The field behind is unchanged, so if brown on violet is still muddy the field is the next thing to move.",
     },
     {
       n: 8,
