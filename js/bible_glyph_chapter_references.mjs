@@ -121,6 +121,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 138",
     },
     {
+      chapter_code: "PSA139",
+      reference: "Psalm 139",
+    },
+    {
       chapter_code: "PSA146",
       reference: "Psalm 146",
     },
