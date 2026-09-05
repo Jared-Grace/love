@@ -63,6 +63,20 @@ export async function bible_folder_chapter_sentence_end_measure(
   );
   let blocked = list_unique(blocking_each);
   list_sort_text(blocked);
+  ("A FEW OF THE CLOSING WORDS ARE KEPT FOR THE VERSES THAT ENDED ON NO MARK AT ALL, because the last character alone cannot say why. Counted 2026-09-05, fifty two of the two hundred and forty three bibles that stop short have at least one verse ending on a letter, and the one of them read by hand turned out to be finishing its sentence and then printing a cross reference in brackets behind it - so the mark was there and the reader was carried past it anyway. Reading the other fifty one meant fetching every one of those chapters a second time, which is the whole reason this is written down here instead.");
+  function bible_folder_chapter_sentence_end_tail(verse) {
+    let text = property_get(verse, "text");
+    let tail = bible_verse_end_unrecognised_tail_or_null(text);
+    return tail;
+  }
+  let tail_each = list_map_filter_null_not_is(
+    unended,
+    bible_folder_chapter_sentence_end_tail,
+  );
+  let tails_all = list_unique(tail_each);
+  list_sort_text(tails_all);
+  let count2 = bible_sentence_end_tails_kept_count();
+  let tails = list_take(tails_all, count2);
   let measured = {
     bible_folder,
     chapter_code,
@@ -72,6 +86,7 @@ export async function bible_folder_chapter_sentence_end_measure(
     unreachable,
     unrecognised,
     blocked,
+    tails,
   };
   return measured;
 }
