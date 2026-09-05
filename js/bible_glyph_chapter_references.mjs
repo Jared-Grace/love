@@ -25,6 +25,22 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 3",
     },
     {
+      chapter_code: "GEN04",
+      reference: "Genesis 4",
+    },
+    {
+      chapter_code: "GEN08",
+      reference: "Genesis 8",
+    },
+    {
+      chapter_code: "GEN09",
+      reference: "Genesis 9",
+    },
+    {
+      chapter_code: "GEN11",
+      reference: "Genesis 11",
+    },
+    {
       chapter_code: "GEN32",
       reference: "Genesis 32",
     },
@@ -33,16 +49,32 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 14",
     },
     {
+      chapter_code: "EXO15",
+      reference: "Exodus 15",
+    },
+    {
       chapter_code: "EXO16",
       reference: "Exodus 16",
+    },
+    {
+      chapter_code: "EXO17",
+      reference: "Exodus 17",
     },
     {
       chapter_code: "EXO20",
       reference: "Exodus 20",
     },
     {
+      chapter_code: "NUM20",
+      reference: "Numbers 20",
+    },
+    {
       chapter_code: "NUM21",
       reference: "Numbers 21",
+    },
+    {
+      chapter_code: "DEU08",
+      reference: "Deuteronomy 8",
     },
     {
       chapter_code: "DEU26",
@@ -73,6 +105,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ruth 4",
     },
     {
+      chapter_code: "1SA01",
+      reference: "1 Samuel 1",
+    },
+    {
       chapter_code: "1KI03",
       reference: "1 Kings 3",
     },
@@ -83,6 +119,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI02",
       reference: "2 Kings 2",
+    },
+    {
+      chapter_code: "JOB42",
+      reference: "Job 42",
     },
     {
       chapter_code: "PSA001",
