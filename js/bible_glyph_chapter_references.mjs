@@ -109,6 +109,10 @@ export function bible_glyph_chapter_references() {
       reference: "Deuteronomy 30",
     },
     {
+      chapter_code: "DEU32",
+      reference: "Deuteronomy 32",
+    },
+    {
       chapter_code: "JOS24",
       reference: "Joshua 24",
     },
@@ -155,6 +159,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI04",
       reference: "2 Kings 4",
+    },
+    {
+      chapter_code: "EZR03",
+      reference: "Ezra 3",
+    },
+    {
+      chapter_code: "NEH09",
+      reference: "Nehemiah 9",
     },
     {
       chapter_code: "JOB42",
@@ -261,6 +273,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 146",
     },
     {
+      chapter_code: "PRO04",
+      reference: "Proverbs 4",
+    },
+    {
       chapter_code: "SNG02",
       reference: "Song of Songs 2",
     },
@@ -355,6 +371,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ZEC04",
       reference: "Zechariah 4",
+    },
+    {
+      chapter_code: "ZEC12",
+      reference: "Zechariah 12",
     },
     {
       chapter_code: "MAT05",
