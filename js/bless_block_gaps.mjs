@@ -18,7 +18,7 @@ export function bless_block_gaps(x, y, block) {
   ("in the world.");
   let measures = bless_block_measures(block);
   let depth = property_get(measures, "depth");
-  let gap = property_get(measures, "gap");
+  let alley_widths = property_get(measures, "alley_widths");
   let count = property_get(measures, "count");
   let families = property_get(measures, "families");
   let widths = property_get(measures, "widths");
@@ -49,7 +49,7 @@ export function bless_block_gaps(x, y, block) {
   let gaps = subtract(count, 1);
   let r = {
     depth,
-    gap,
+    alley_widths,
     count,
     widths,
     span,
