@@ -20,8 +20,9 @@ how much of it is worth doing is somebody's decision rather than this script's.
 
 Takes the path of a JSON file holding {"root": <folder of chapter folders>,
 "before_second": <the second the door was made>}, optionally with "words_shown"
-saying how many of the changed words to name.  Prints one JSON line.  It reads
-only; nothing is recorded or removed.
+saying how many of the changed words to name and "chapters" naming the ones to
+read rather than all of them.  Prints one JSON line.  It reads only; nothing is
+recorded or removed.
 """
 
 import collections
@@ -97,9 +98,10 @@ def main(args_path):
     words_shown = args.get("words_shown", 60)
 
     asked = args.get("chapters")
-    names = sorted(n for n in os.listdir(root) if os.path.isdir(os.path.join(root, n)))
-    if asked:
-        names = [n for n in names if n in set(asked)]
+    all_names = sorted(
+        n for n in os.listdir(root) if os.path.isdir(os.path.join(root, n))
+    )
+    names = [n for n in all_names if n in set(asked)] if asked else all_names
     old_sound = [n for n in names if sound_before(os.path.join(root, n), before_second)]
 
     was_g2p = g2p_as_it_was()
@@ -134,7 +136,7 @@ def main(args_path):
             {
                 "root": root,
                 "before_second": before_second,
-                "chapters_all": len(names),
+                "chapters_all": len(all_names),
                 "chapters_sound_before_door": len(old_sound),
                 "chapters_dropped_a_word": len(queue_dropped),
                 "chapters_changed_only": len(queue_changed_only),
