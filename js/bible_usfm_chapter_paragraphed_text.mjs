@@ -1,8 +1,5 @@
-import { bible_usfm_lines_lone_markers_joined } from "./bible_usfm_lines_lone_markers_joined.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { usfm_continuation_lines_joined } from "./usfm_continuation_lines_joined.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
-import { bible_usfm_lines_chapter_taken } from "./bible_usfm_lines_chapter_taken.mjs";
+import { bible_usfm_chapter_lines } from "./bible_usfm_chapter_lines.mjs";
 import { bible_usfm_lines_laid_out } from "./bible_usfm_lines_laid_out.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -17,13 +14,8 @@ export function bible_usfm_chapter_paragraphed_text(
   ("$plain verse_numbers_shown");
   ("One chapter of a book written in usfm, laid out as plain writing a person can paste somewhere - the poetry stepped the way the printing steps it, and a blank line wherever the printing breaks the passage.");
   ("The other reader here cuts a book into verses and throws the layout away, which is right for a reader showing one verse at a time and wrong for anybody copying a psalm out. A psalm read as nine unbroken sentences is not the psalm the page shows: the couplets and the stanza breaks are how hebrew poetry says what it says, they are written into the file as marks of their own, and keeping them costs nothing but reading marks that are already there.");
-  ("The lines are put back together first, for the same reason the verse reader does it: an aligned bible writes one word to a line, so a line is not a line until this is done.");
-  ("The chapter is found by its own mark. Nothing is searched for and no chapters are counted through, so a book numbering its chapters unusually still answers to the number the printing actually writes.");
-  ("Then a mark standing on a line of its own is moved down onto the verse beneath it, because two of the four bibles here write the step and the verse on separate lines and everything below reads the mark that opens a line. What comes out of that is still lines of usfm, so the reader beneath it never learns which printing it was given.");
-  let joined = usfm_continuation_lines_joined(usfm);
-  let lines = text_split_newline(joined);
-  let chapter_lines = bible_usfm_lines_chapter_taken(lines, chapter_number);
-  let usfm_lines = bible_usfm_lines_lone_markers_joined(chapter_lines);
+  ("Getting from a whole book to the lines of one chapter is asked of the piece that does only that, because a reader cutting a passage out of a chapter needs the very same three steps and they were about to be written a second time.");
+  let usfm_lines = bible_usfm_chapter_lines(usfm, chapter_number);
   let laid_out = bible_usfm_lines_laid_out(usfm_lines, verse_numbers_shown);
   let text = list_join_newline(laid_out);
   let trimmed = text_trim(text);
