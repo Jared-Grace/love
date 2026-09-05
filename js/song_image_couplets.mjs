@@ -342,7 +342,7 @@ export function song_image_couplets() {
       first: "a stone was rolled",
       second: "to seal the grave",
       symbol: list_join_empty([
-        r2,
+        "One great mass of plain grey rock standing alone and drawn very large, one unbroken mass and never blocks, bricks, courses or slabs, its face flat and turned square to the viewer, the rock filling the window from side to side and rising to near the top of it",
         ", and ",
         r3,
         ", and the stone rolled hard up against that opening and standing taller than the opening and wider than it so that it covers the whole of it and overlaps the rock all round on every side, standing on the ground with its face turned square to the viewer, one flat unbroken grey circle with nothing drawn on its face, the whole of the mouth of the tomb hidden behind the stone and the grave plainly shut, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
