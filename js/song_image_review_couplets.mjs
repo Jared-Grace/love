@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 8,
-      note: "Same two-shade rule as 4 and 36, and this is a new drawing from it. The scroll is now plainly torn in two down the middle with the nail showing, which the one you saw never was. The field came back a hotter red than before - say if you want the deeper crimson back.",
+      note: "You asked for the nail with perspective rather than square on. It is now driven in slanting and seen from the side, so its shaft plainly goes into the wood at an angle and its head is turned partly away from you. Nothing else changed.",
     },
     {
       n: 18,
@@ -32,7 +32,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 23,
-      note: "The black ground is back, since you say it is right, and the window is finally stable. Two faults were doing that: the clause described a shape and never said sun or dawn, so the drawing filled the subject in from the building and gave back a chalice, a lamb and a torch; and it asked for wedges of light, a word the shared rules refuse, where rays is the word they allow. Still wrong: the sun is a half circle where the wording asks for a thin sliver.",
+      note: "You asked whether saying it simply and letting it fill in the details would work. It does, and this is that drawing. The wording is a third of what it was, the rays are now different widths and lean unevenly, and the ground is black. The sun still sits as a half disc rather than a sliver.",
     },
     {
       n: 25,
@@ -44,11 +44,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 30,
-      note: "Answering rather than redrawing: nothing you had asked for was wrong with 40. I replaced it on my own judgement, against two house rules - its smoke is photographic grey cloud rather than flat glass, and it has no coloured field bands. Measured against your own note it is the better picture, because it has the darkness and the gloom. Say the word and I put 40 back.",
+      note: "40 is back, as you asked. No new drawing was made and the wording is unchanged, so this is the same picture you already approved.",
     },
     {
       n: 32,
-      note: "Six broad leaves on each tree, and the river runs clear between the two of them with no water crossing a trunk or a leaf. All four new draws came back as the right subject, so the instability I warned you about last round has gone. Nothing else changed.",
+      note: "You asked for the river behind the trees. The wording now says every branch and every leaf is drawn over the top of the water, and this drawing does it - the leaves cross the river instead of stopping at it. The river is still wide and straight down the middle, so say if it should be narrower.",
     },
     {
       n: 34,
@@ -56,7 +56,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 36,
-      note: "Same two-shade rule as 4 and 8, and this drawing reads: the cross stands clear of the vine instead of being lost inside it. What bought that is a lighter field than the house rule allows. Say if you would rather have the deep field back and the cross harder to find.",
+      note: "You asked for more grape bunches. There are six now, hung all round the cross instead of two at the top, and the wording asks for more bunches than leaves. The cross still stands clear of the vine. Nothing else changed.",
     },
   ];
   return couplets;
