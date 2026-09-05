@@ -165,6 +165,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 29",
     },
     {
+      chapter_code: "PSA034",
+      reference: "Psalm 34",
+    },
+    {
       chapter_code: "PSA067",
       reference: "Psalm 67",
     },
@@ -237,6 +241,18 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 1",
     },
     {
+      chapter_code: "ISA02",
+      reference: "Isaiah 2",
+    },
+    {
+      chapter_code: "ISA43",
+      reference: "Isaiah 43",
+    },
+    {
+      chapter_code: "JER17",
+      reference: "Jeremiah 17",
+    },
+    {
       chapter_code: "JER26",
       reference: "Jeremiah 26",
     },
@@ -255,6 +271,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EZK36",
       reference: "Ezekiel 36",
+    },
+    {
+      chapter_code: "EZK37",
+      reference: "Ezekiel 37",
     },
     {
       chapter_code: "JOL01",
@@ -295,6 +315,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "HAG02",
       reference: "Haggai 2",
+    },
+    {
+      chapter_code: "ZEC04",
+      reference: "Zechariah 4",
     },
     {
       chapter_code: "MAT05",
