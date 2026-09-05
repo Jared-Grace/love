@@ -177,6 +177,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 1",
     },
     {
+      chapter_code: "PSA008",
+      reference: "Psalm 8",
+    },
+    {
       chapter_code: "PSA015",
       reference: "Psalm 15",
     },
@@ -273,8 +277,16 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 146",
     },
     {
+      chapter_code: "PRO01",
+      reference: "Proverbs 1",
+    },
+    {
       chapter_code: "PRO04",
       reference: "Proverbs 4",
+    },
+    {
+      chapter_code: "PRO08",
+      reference: "Proverbs 8",
     },
     {
       chapter_code: "SNG02",
@@ -291,6 +303,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ISA43",
       reference: "Isaiah 43",
+    },
+    {
+      chapter_code: "JER01",
+      reference: "Jeremiah 1",
     },
     {
       chapter_code: "JER17",
@@ -325,8 +341,16 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 37",
     },
     {
+      chapter_code: "EZK47",
+      reference: "Ezekiel 47",
+    },
+    {
       chapter_code: "DAN12",
       reference: "Daniel 12",
+    },
+    {
+      chapter_code: "HOS02",
+      reference: "Hosea 2",
     },
     {
       chapter_code: "JOL01",
@@ -339,6 +363,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "JOL03",
       reference: "Joel 3",
+    },
+    {
+      chapter_code: "AMO09",
+      reference: "Amos 9",
     },
     {
       chapter_code: "OBA01",
@@ -367,6 +395,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "HAG02",
       reference: "Haggai 2",
+    },
+    {
+      chapter_code: "ZEC03",
+      reference: "Zechariah 3",
     },
     {
       chapter_code: "ZEC04",
