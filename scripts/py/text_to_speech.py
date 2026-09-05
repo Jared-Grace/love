@@ -367,6 +367,7 @@ VOWELS = "ɑæɐʌɛɜɚɔɒəiɪuʊoeaAIOWYY"
 SAID_ALONE = {
     "the": "ðˈʌ",
     "with": "wɪθ",
+    "than": "ðˈæn",
 }
 
 
