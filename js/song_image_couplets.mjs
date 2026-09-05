@@ -343,9 +343,9 @@ export function song_image_couplets() {
       second: "to seal the grave",
       symbol: list_join_empty([
         r2,
-        ", and ",
+        ", and that opening covered over and hidden from sight by a stone standing in front of it, ",
         r3,
-        ", and that stone standing directly in front of the opening and centred upon it, square to the viewer, its lower edge set down on the ground, the top of the stone standing well above the top of the arch of the opening and each of its two sides standing well outside the matching side of the opening, so that the opening lies wholly behind the stone and the grave is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing showing round it but the grey of the rock, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
+        ", the stone centred on the opening, square to the viewer, its lower edge set down on the ground, the top of the stone standing well above the top of the arch of the opening and each of its two sides standing well outside the matching side of the opening, so that the opening lies wholly behind the stone and the grave is plainly shut, one flat unbroken grey circle with nothing drawn on its face and nothing showing round it but the grey of the rock, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
       ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,
