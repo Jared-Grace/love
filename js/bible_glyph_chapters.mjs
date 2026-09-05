@@ -1,3 +1,13 @@
+import { bible_glyph_chapter_gen04 } from "./bible_glyph_chapter_gen04.mjs";
+import { bible_glyph_chapter_gen08 } from "./bible_glyph_chapter_gen08.mjs";
+import { bible_glyph_chapter_gen09 } from "./bible_glyph_chapter_gen09.mjs";
+import { bible_glyph_chapter_gen11 } from "./bible_glyph_chapter_gen11.mjs";
+import { bible_glyph_chapter_exo15 } from "./bible_glyph_chapter_exo15.mjs";
+import { bible_glyph_chapter_exo17 } from "./bible_glyph_chapter_exo17.mjs";
+import { bible_glyph_chapter_num20 } from "./bible_glyph_chapter_num20.mjs";
+import { bible_glyph_chapter_deu08 } from "./bible_glyph_chapter_deu08.mjs";
+import { bible_glyph_chapter_1sa01 } from "./bible_glyph_chapter_1sa01.mjs";
+import { bible_glyph_chapter_job42 } from "./bible_glyph_chapter_job42.mjs";
 import { bible_glyph_chapter_gen32 } from "./bible_glyph_chapter_gen32.mjs";
 import { bible_glyph_chapter_2ki02 } from "./bible_glyph_chapter_2ki02.mjs";
 import { bible_glyph_chapter_exo16 } from "./bible_glyph_chapter_exo16.mjs";
@@ -283,6 +293,16 @@ export function bible_glyph_chapters() {
   let eighty_third = bible_glyph_chapter_2ki02();
   let eighty_fourth = bible_glyph_chapter_exo16();
   let eighty_fifth = bible_glyph_chapter_num21();
+  let eighty_sixth = bible_glyph_chapter_gen04();
+  let eighty_seventh = bible_glyph_chapter_gen08();
+  let eighty_eighth = bible_glyph_chapter_gen09();
+  let eighty_ninth = bible_glyph_chapter_gen11();
+  let ninetieth = bible_glyph_chapter_exo15();
+  let ninety_first = bible_glyph_chapter_exo17();
+  let ninety_second = bible_glyph_chapter_num20();
+  let ninety_third = bible_glyph_chapter_deu08();
+  let ninety_fourth = bible_glyph_chapter_1sa01();
+  let ninety_fifth = bible_glyph_chapter_job42();
   let chapters = [
     first,
     second,
@@ -369,6 +389,16 @@ export function bible_glyph_chapters() {
     eighty_third,
     eighty_fourth,
     eighty_fifth,
+    eighty_sixth,
+    eighty_seventh,
+    eighty_eighth,
+    eighty_ninth,
+    ninetieth,
+    ninety_first,
+    ninety_second,
+    ninety_third,
+    ninety_fourth,
+    ninety_fifth,
   ];
   return chapters;
 }
