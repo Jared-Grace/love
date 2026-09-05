@@ -18,6 +18,9 @@ export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   ("world the player uncovers is one already in motion rather than one that starts when they");
   ("look at it");
   app_g_bless_people_walk(world, render);
+  ("and the traffic starts with them, so the street comes to life as one street rather than");
+  ("as a pavement that moves and a road that waits");
+  app_g_bless_vehicles_drive(world, container_map);
   ("the world is built and drawn behind this before it is covered, so the first thing after the amen is a world already standing rather than a wait");
   let transfer = app_shared_game_overlay_container(container_map);
   return transfer;
