@@ -15,7 +15,7 @@ export function bless_block_alley_tiles(x, y, block) {
   let building_x = property_get(r, "building_x");
   let span = property_get(r, "span");
   let count = property_get(r, "count");
-  let gap = property_get(r, "gap");
+  let alley_widths = property_get(r, "alley_widths");
   let depth = property_get(r, "depth");
   let widths = property_get(r, "widths");
   let indexes_gap = range(gaps);
@@ -23,7 +23,8 @@ export function bless_block_alley_tiles(x, y, block) {
     let at = building_x(index);
     let width = list_get(widths, index);
     let alley_x = add(at, width);
-    let tiles = bless_tiles_rectangle(alley_x, y, gap, depth);
+    let wide = list_get(alley_widths, index);
+    let tiles = bless_tiles_rectangle(alley_x, y, wide, depth);
     return tiles;
   }
   let r2 = {
@@ -31,7 +32,6 @@ export function bless_block_alley_tiles(x, y, block) {
     buildings,
     span,
     count,
-    gap,
     depth,
     indexes_gap,
     alley_tiles,

@@ -36,7 +36,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "You were right - green and violet did not read as sky, and the cloud at the foot was mine. The field is now deep blue above and pale blue below, sky the whole way down, and the bottom band is left plain and empty. The rays stay white, yellow, red and orange. They do lean to one side rather than opening out evenly.",
+      note: "New picture. Each ray now carries its own colour unbroken from the cloud right down to the border, so nothing drops out at the foot while the lines carry on. The cloud is drawn in several panes with grey along its undersides instead of one flat white shape. There are six rays with wide sky between them rather than one warm band across the glass.",
     },
     {
       n: 30,
