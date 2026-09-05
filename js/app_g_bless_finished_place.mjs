@@ -78,10 +78,6 @@ export async function app_g_bless_finished_place(
   ("answers, made about the middle of the sequence instead of the start of it.");
   ("They are let go together and then waited out by the clock. Together, because they are");
   ("one thing seen three ways and a staggered ending would read as three things stopping.");
-  ("The pull-back at the end is possible at all only because holding the map still now");
-  ("holds movement and not light. A camera journey used to finish every fade on the map in");
-  ("the frame it set off, so a journey run while the lights were still going would have");
-  ("ended them.");
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
   let size = app_g_bless_tile_size();
