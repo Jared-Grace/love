@@ -1,8 +1,6 @@
 import { fn_name } from "./fn_name.mjs";
-import { app_code_lessons } from "./app_code_lessons.mjs";
-import { list_map_property } from "./list_map_property.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
+import { app_code_lesson_ids } from "./app_code_lesson_ids.mjs";
+import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_property_unique } from "./list_map_property_unique.mjs";
 import { app_code_review_items_by_id } from "./app_code_review_items_by_id.mjs";
@@ -10,6 +8,7 @@ import { list_first_property } from "./list_first_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
+import { property_get } from "./property_get.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_review_seeds_live(seeds) {
   "the seeds of a saved review queue that this page can still rebuild - the ones naming a lesson it hands out, and a quiz kind that lesson still has";
@@ -21,11 +20,9 @@ export function app_code_review_seeds_live(seeds) {
   ("★ BOTH HALVES OF A SEED CAN GO STALE, AND CHECKING ONLY THE LESSON LEAVES THE SAME DEAD SCREEN. A seed also names which of that lesson's quiz kinds it is, by position, and a lesson that has since lost a kind hands back a list too short to answer - which throws exactly as hard, at exactly the same moment, and looks identical to the learner.");
   ("The kinds are counted once per LESSON rather than once per seed, which is what makes the second half affordable. A queue holds one seed per lesson per kind, so counting per seed would build the same lesson's batch several times over; counted per lesson it is the same work the gathering next door does anyway at this very moment, and the gathering is what runs instead when this drops everything.");
   ("The lesson is answered first and the kinds only for what survives, so a lesson that is no longer handed out is never built to be measured.");
-  let lessons = app_code_lessons();
-  let ids = list_map_property(lessons, "id");
+  let ids = app_code_lesson_ids();
   function named_is(seed) {
-    let lesson_id = property_get(seed, "lesson_id");
-    let named = list_includes(ids, lesson_id);
+    let named = property_in_list(seed, "lesson_id", ids);
     return named;
   }
   let by_name = list_filter(seeds, named_is);
