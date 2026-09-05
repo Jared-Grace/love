@@ -1,3 +1,4 @@
+import { bible_sentence_end_blocked_gate_run } from "./bible_sentence_end_blocked_gate_run.mjs";
 import { text_word_plain_canonical_cases_gate_run } from "./text_word_plain_canonical_cases_gate_run.mjs";
 import { lyric_video_hand_times_gate_run } from "./lyric_video_hand_times_gate_run.mjs";
 import { lyric_video_hearings_match_rate_gate_run } from "./lyric_video_hearings_match_rate_gate_run.mjs";
@@ -694,6 +695,7 @@ export function qa_gates() {
     bible_glyph_chapter_tagalog_verses_fetched_gate_run,
     bible_glyph_marks_reserved_gate_run,
     bible_sentence_end_marks_gate_run,
+    bible_sentence_end_blocked_gate_run,
     bible_verse_end_is_cases_gate_run,
     bible_verse_holes_gate_run,
     bible_event_fields_gate_run,
