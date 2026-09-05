@@ -3,7 +3,7 @@ import { g_tile_door } from "./g_tile_door.mjs";
 import { g_tile_wall } from "./g_tile_wall.mjs";
 import { g_tiles_wall_faces } from "./g_tiles_wall_faces.mjs";
 export function g_tiles_walls() {
-  "Every picture a building can wear - its body, the materials its front is made of, and";
+  "Every picture a building can wear - the materials its roof is made of, the materials";
   "its door.";
   "One list, and that is the whole reason it exists. Being solid is a fact about the";
   "ground, and it is decided by the picture; so a front given a new material that this did";
