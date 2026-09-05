@@ -1,6 +1,7 @@
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 export function js_global_names() {
   "JS global value-identifiers that are never repo functions - a keyword like undefined that happens to share a file name must not be mistaken for a missing import, and a mention of Math or Promise must not be mistaken for a name nothing binds. Only value positions matter, so type-only names are not here. Kept as one flat list because every reader asks the same question of it: is this name supplied by the language or the host rather than by this file.";
+  "★ THE LANGUAGE'S OWN NAMES ARE LISTED WHOLE, WHERE THE HOST'S ARE LISTED AS THEY TURN UP. What the language supplies is a closed set that can be written down in full, so a family belongs here entire rather than a member at a time: of the eleven typed arrays only one was written down, and the day a second one was reached for the gate called it a name nothing binds. What a browser or a runtime supplies is open-ended and answers to no such list, so those two grow when something actually reaches for them.";
   let keywords = ["undefined", "NaN", "Infinity", "arguments", "globalThis"];
   let built_in = [
     "Array",
@@ -28,9 +29,19 @@ export function js_global_names() {
     "String",
     "Symbol",
     "SyntaxError",
-    "Uint8Array",
     "TypeError",
     "URIError",
+    "Uint8Array",
+    "Uint8ClampedArray",
+    "Uint16Array",
+    "Uint32Array",
+    "Int8Array",
+    "Int16Array",
+    "Int32Array",
+    "Float32Array",
+    "Float64Array",
+    "BigInt64Array",
+    "BigUint64Array",
     "WeakMap",
     "WeakRef",
     "WeakSet",
