@@ -97,6 +97,7 @@ export function bless_block_materials_gate_run() {
     faces: list_size(faces),
     pavements: pavements_count,
     roofs: roofs_count,
+    street_faces: street_faces,
   };
   return walked;
 }
