@@ -982,6 +982,7 @@ export function qa_gates() {
     qa_promoted_public_pieces_served_is_cases_gate_run,
     git_hook_commit_msg_gate_run,
     web_assets_storage_prefix_granted_gate_run,
+    web_assets_version_stale_gate_run,
     bible_glyph_chapters_language_credit_gate_run,
     lyric_video_words_screens_cases_gate_run,
     bible_glyph_chapter_rosetta_lines_prose_gate_run,
