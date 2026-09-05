@@ -1,7 +1,7 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_tiles_rectangle } from "./bless_tiles_rectangle.mjs";
 import { add } from "./add.mjs";
@@ -56,8 +56,7 @@ export function bless_building_window_is({
   }
   function window_is(tile) {
     let above = property_equals(tile, "y", y_upper);
-    let tile_x = property_get(tile, "x");
-    let lived_in = list_includes(lived_x, tile_x);
+    let lived_in = property_in_list(tile, "x", lived_x);
     let glazed = and(above, lived_in);
     return glazed;
   }
