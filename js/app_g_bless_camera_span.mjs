@@ -46,7 +46,7 @@ export async function app_g_bless_camera_span(
   let across = span + 4;
   let room = divide(container_e.clientWidth, across);
   let wider = less_than(room, tile_now);
-  let size = app_g_bless_tile_size_playing();
+  let size = app_g_bless_tile_size();
   if (wider) {
     size = text_combine_multiple([room, "px"]);
   }
