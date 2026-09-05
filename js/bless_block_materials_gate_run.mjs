@@ -82,6 +82,14 @@ export function bless_block_materials_gate_run() {
     roofed_ground,
     hint: "a roof made of what the street is paved with is a house with no top on it",
   });
+  ("Each group is also handed to the street that would use it, one for every group there is, rather than having its length measured here. A group shorter than a street runs out of materials and starts over from the beginning at a distance the player can see both ends of at once - which is the fault reported as the second house and the last house of every road wearing the same brick. The chooser a street asks already refuses that, so it is asked rather than asked again, and how many materials a street needs stays written in one place.");
+  ("Every group is asked for, and not only the ones the world reaches today. A group no block lands on is reached the day a third block is added, and a gate that watches only what is in use goes quiet exactly when the world grows.");
+  function street_faces_at(group_index) {
+    let street = bless_block_faces(group_index);
+    let street_size = list_size(street);
+    return street_size;
+  }
+  let street_faces = range_map(groups_count, street_faces_at);
   ("How much was reached goes back with the verdict. Every check above passes by finding nothing wrong, and finding nothing wrong is also what happens when the lists it asks for come back empty - a materials list renamed, or moved somewhere this no longer looks. The word said is the same one either way, and these three numbers are the only part of the answer that falls on the day the reading breaks.");
   ("Counted from what was walked rather than from what was wrong. A count of faults is nought on every run that passes, so an answer holding only that has nothing in it that could ever drop.");
   let walked = {
