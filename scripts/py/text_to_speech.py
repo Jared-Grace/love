@@ -259,8 +259,8 @@ def engine_ready(threads):
     return ENGINE
 
 
-def g2p_ready():
-    """Builds the letters-to-sound step, with the fallback the reading needs.
+def g2p_plain():
+    """The letters-to-sound step with the fallback in it and no dictionary yet.
 
     A word the dictionary does not hold has to go somewhere, and with no
     fallback it goes nowhere: the word is rendered as silence while the caption
@@ -272,6 +272,23 @@ def g2p_ready():
     It is built rather than caught, so that a machine without espeak stops the
     night loudly instead of quietly recording another Bible with the names
     missing.
+
+    IT IS NAMED APART FROM THE WHOLE READING BECAUSE IT IS A READING THIS REPO
+    ONCE SPOKE WITH, and for three days it was the only one there was: the
+    fallback arrived on the first of September 2026 and the dictionary of names
+    on the fourth.  Anything asking what a recording made in between would have
+    said has to ask this exact object, and building those settings a second time
+    somewhere else would let the two answers drift while both looked right.
+    """
+    from misaki import en, espeak
+
+    return en.G2P(
+        trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
+    )
+
+
+def g2p_ready():
+    """Builds the letters-to-sound step the reading speaks with, dictionary and all.
 
     This is a function of its own so that anything checking a chapter for
     dropped words asks the same object the reading speaks with.  Two copies of
@@ -314,11 +331,7 @@ def g2p_ready():
     quietly restate common words the reader already says correctly - Havens,
     Hill, Sea and Ghost all fall out of joined names.
     """
-    from misaki import en, espeak
-
-    g2p = en.G2P(
-        trf=False, british=False, fallback=espeak.EspeakFallback(british=False)
-    )
+    g2p = g2p_plain()
     from bible_pronunciations import lexicon_ordinary, lexicon_parted, pronunciations
 
     known = set(g2p.lexicon.golds) | set(getattr(g2p.lexicon, "silvers", {}))
@@ -361,15 +374,26 @@ def line_samples(g2p, kokoro, text, speed):
     return np.concatenate(parts), rate
 
 
-def write_mp3(path, samples, rate):
-    """Writes one mono mp3 at the stated compression level."""
+def write_mp3(path, samples, rate, level):
+    """Writes one mono mp3 at the compression level the caller asked for.
+
+    ★ THE LEVEL IS ASKED FOR RATHER THAN TAKEN FROM THE MODULE, FOR THE SAME
+    REASON THE SPEED IS: A CHAPTER AND A SINGLE WORD ARE NOT THE SAME JOB.
+    Squeezing hard is worth it for a chapter, where a whole Bible in one voice
+    is the difference between two gigabytes and three.  It is not worth it for
+    a word button: a word is half a second, and the entire vocabulary of the
+    app at the best setting is under twenty megabytes.  What the squeezing
+    takes first is the breath of a fricative, which on a button whose only job
+    is teaching a learner what a word sounds like is the part that matters -
+    a person listening to both picked the unsqueezed one.
+    """
     with sf.SoundFile(
         str(path),
         "w",
         samplerate=rate,
         channels=1,
         format="MP3",
-        compression_level=COMPRESSION_LEVEL,
+        compression_level=level,
     ) as f:
         f.write(samples)
 
@@ -395,6 +419,10 @@ def job_spoken(job):
         out_dir.mkdir(parents=True, exist_ok=True)
         lines = [said_text(line.strip()) for line in text.split("\n")]
         speed = job.get("speed", SPEED)
+        level = job.get("compression_level", COMPRESSION_LEVEL)
+        lexicon = job.get("lexicon", {})
+        for word, sounds in lexicon.items():
+            engine["g2p"].lexicon.golds[word] = sounds
         silent = 0
         for i, line in enumerate(lines):
             samples, rate = line_samples(
@@ -403,7 +431,7 @@ def job_spoken(job):
             if samples is None:
                 samples = np.zeros(int(rate / 4), dtype=np.float32)
                 silent += 1
-            write_mp3(out_dir / f"{i}.mp3", samples, rate)
+            write_mp3(out_dir / f"{i}.mp3", samples, rate, level)
             with open(out_dir / f"{i}.txt", "w", encoding="utf-8") as f:
                 f.write(line)
         return {"lines": len(lines), "silent": silent, "folder": path_output}
@@ -416,8 +444,9 @@ def jobs_of(data):
     if "jobs" in data:
         return list(data["jobs"])
     one = {"text": data["text"], "path_output": data["path_output"]}
-    if "speed" in data:
-        one["speed"] = data["speed"]
+    for carried in ("speed", "compression_level", "lexicon"):
+        if carried in data:
+            one[carried] = data[carried]
     return [one]
 
 

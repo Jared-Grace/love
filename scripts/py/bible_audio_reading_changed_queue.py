@@ -39,7 +39,24 @@ from bible_audio_words_dropped import (  # noqa: E402
     g2p_as_it_was,
     word_is,
 )
-from text_to_speech import g2p_ready  # noqa: E402
+from text_to_speech import g2p_plain, g2p_ready  # noqa: E402
+
+
+def reading_of(readings, name):
+    """One of the readings this repo has spoken with, built the first time it is asked for.
+
+    Three of them are named here and a chapter is compared against whichever one
+    was live on the day its sound was written.  They are built on demand because
+    each holds a dictionary of its own, and a run over chapters that all fall on
+    one side of a door should not pay for the other two.
+    """
+    if name not in readings:
+        readings[name] = {
+            "silent": g2p_as_it_was,
+            "sounded_out": g2p_plain,
+            "now": g2p_ready,
+        }[name]()
+    return readings[name]
 
 
 def sounds_of(g2p, texts):
