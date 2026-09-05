@@ -175,6 +175,7 @@ export function bible_glyph_chapters() {
   ("THE SEVENTY THIRD IS THE SECOND OF RUTH, AND IT IS THE CHAPTER WHERE THE ONE PICTURE THIS BIBLE CANNOT DRAW WALKS ONTO THE PAGE. Boaz is a kinsman redeemer, and there is no mark for that word, so the man the whole book turns on arrives in plain letters. What the page can show is the field: grain, hands, giving, and a foreigner being told she may stay. The chapter is registered here because it is the ordinary half of the story, and a reader who has only ever seen prophets shouting needs to see what a kind day looks like drawn out.");
   ("THE SEVENTY FOURTH IS THE THIRD OF RUTH, WHERE A WOMAN ASKS A MAN TO COVER HER AND THE WHOLE SCENE HAPPENS IN THE DARK. It is the strangest chapter in the book to draw, because almost nothing in it is said out loud and almost nothing in it is a word this Bible has a picture for. A threshing floor, a cloak, a wing, a redeemer: none of them are seated. What the page can draw is a woman, a man, night, feet, and the name of God. The chapter is registered because it is the turn of the story, and because a reader who cannot read the words still needs to see that the risk was hers.");
   ("THE SEVENTY FIFTH IS THE FOURTH OF RUTH, AND IT FINISHES THE BOOK. A man sits down at the town gate, offers the land to the nearer relative, and the deal collapses the moment the widow is named as part of it. Then Boaz buys it all. The chapter ends with a baby put into the arms of an old woman and a list of ten names that runs to David. Registering it means the whole book of Ruth is now readable in pictures from the famine to the grandson, which is the fifth complete book here after Jonah, First John, Third John and Jude, and the first one that is neither a prophet book nor a letter.");
+  ("THE SEVENTY SIXTH IS OBADIAH, AND IT IS THE WHOLE BOOK. Twenty one lines, the shortest book in the Old Testament, and every one of them is aimed at one neighbouring nation that stood at the crossroads and watched Jerusalem be carried off. Registering it means a reader can now finish an entire prophet in one sitting. It is the sixth complete book on this list and the second prophet after Jonah, and where Jonah is a man refusing to warn a foreign city, this one is a foreign nation being warned and never answering back.");
   ("Seventy five chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
@@ -258,6 +259,7 @@ export function bible_glyph_chapters() {
   let seventy_third = bible_glyph_chapter_rut02();
   let seventy_fourth = bible_glyph_chapter_rut03();
   let seventy_fifth = bible_glyph_chapter_rut04();
+  let seventy_sixth = bible_glyph_chapter_oba01();
   let chapters = [
     first,
     second,
@@ -334,6 +336,7 @@ export function bible_glyph_chapters() {
     seventy_third,
     seventy_fourth,
     seventy_fifth,
+    seventy_sixth,
   ];
   return chapters;
 }
