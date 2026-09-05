@@ -1,5 +1,7 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bless_yard_front_depth() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("How many rows of grass lie between the fronts of the houses and the pavement.");
   ("ONE. This is the front garden, and it is what pushes the pavement off the doorsteps and down into the middle of the green band.");
