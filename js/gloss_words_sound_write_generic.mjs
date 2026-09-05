@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
@@ -11,22 +12,18 @@ import { path_join } from "./path_join.mjs";
 import { folder_delete } from "./folder_delete.mjs";
 import { text_to_speech } from "./text_to_speech.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
-import { file_read } from "./file_read.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { text_replace_once } from "./text_replace_once.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { not } from "./not.mjs";
-import { file_move } from "./file_move.mjs";
-import { list_add } from "./list_add.mjs";
+import { gloss_word_sound_spoken_move } from "./gloss_word_sound_spoken_move.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 export async function gloss_words_sound_write_generic(words, sound_fn) {
   "$plain words";
   "Speaks every word that has no recording yet into the folder that function names, one sound file per word, filed under the word rather than under its turn in the queue.";
-  "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about six seconds of this machine for every word it says. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
+  "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about four seconds of this machine for every word it says - measured over a run of 1,634 words that took an hour and three quarters. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
   "★ THE WHOLE BATCH GOES OVER IN ONE CALL BECAUSE THE ENGINE IS LOADED ONCE PER CALL. It is handed the words joined by line breaks, which is the seam it cuts on, so one line is one word is one sound file. Calling it once for each word would pay the model load - measured at eight and a half seconds - a thousand times over, and that alone would take longer than the speaking.";
-  "★ A RECORDING IS FILED UNDER WHAT THE ENGINE SAYS IT SPOKE, NOT UNDER WHAT IT WAS ASKED TO SPEAK. The engine writes the words of each piece beside the sound of it, so the pairing is read back off the disk instead of being worked out from the order the words went in. Worked out from the order, one piece more or fewer than expected does not fail - it shifts every word after it onto the wrong sound, silently, in an app whose one job is telling a person how a word sounds.";
-  "★ THE WORKING FOLDER IS EMPTIED BEFORE ANYTHING IS SPOKEN, BECAUSE THE ENGINE NUMBERS ITS PIECES FROM THE BEGINNING EVERY TIME. A run that died part way through - the machine ran out of room, somebody stopped it - leaves its pieces there under numbers that the next run will write over one by one, and a sound left from the old run under a number the new run never reached would be filed against whatever word the new run's note of that number happens to name. Everything worth keeping has already been moved out of here, so there is nothing in it to lose.";
-  "The engine's own report travels out with the counts, because a run it refused to start and a run that found nothing to do print the same number otherwise.";
+  ("★ A RECORDING IS FILED UNDER WHAT THE ENGINE SAYS IT SPOKE, NOT UNDER WHAT IT WAS ASKED TO SPEAK, which is the judgement next door in ",
+    fn_name("gloss_word_sound_spoken_move"),
+    " rather than here.");
+  ("★ THE WORKING FOLDER IS EMPTIED BEFORE ANYTHING IS SPOKEN, BECAUSE THE ENGINE NUMBERS ITS PIECES FROM THE BEGINNING EVERY TIME. A run that died part way through - the machine ran out of room, somebody stopped it - leaves its pieces there under numbers that the next run will write over one by one, and a sound left from the old run under a number the new run never reached would be filed against whatever word the new run's note of that number happens to name. Everything worth keeping has already been moved out of here, so there is nothing in it to lose.");
+  ("The engine's own report travels out with the counts, because a run it refused to start and a run that found nothing to do print the same number otherwise.");
   arguments_assert(arguments, 2);
   let folder = local_function_folder(sound_fn);
   let present = await folder_read_files_exists_ensure(folder);
@@ -43,6 +40,7 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
       words: list_size(words),
       missing: 0,
       spoken: 0,
+      engine: null,
     };
     return nothing;
   }
@@ -61,26 +59,8 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
   let notes = list_filter(written, said_is);
   let filed = [];
   async function note_each(name) {
-    let note_path = path_join([pending, name]);
-    let said = await file_read(note_path);
-    let word = text_trim(said);
-    let key = gloss_word_sound_key(word);
-    let number = text_replace_once(name, ".txt", "");
-    let sound_name = text_combine_multiple([number, ".mp3"]);
-    let sound_from = path_join([pending, sound_name]);
-    let there = await file_exists(sound_from);
-    let gone = not(there);
-    if (gone) {
-      return;
-    }
-    let key_name = text_combine_multiple([key, ".mp3"]);
-    let sound_to = path_join([folder, key_name]);
-    let already = await file_exists(sound_to);
-    if (already) {
-      return;
-    }
-    await file_move(sound_from, sound_to);
-    list_add(filed, key);
+    let r2 = await gloss_word_sound_spoken_move(name, pending, folder, filed);
+    return r2;
   }
   await list_map_async(notes, note_each);
   await folder_delete(pending);
