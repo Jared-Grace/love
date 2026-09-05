@@ -1,3 +1,10 @@
+import { greater_than } from "./greater_than.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { not_equal } from "./not_equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_text_lines } from "./lyric_video_text_lines.mjs";
@@ -29,7 +36,7 @@ export function lyric_video_screens_faults_at(
   let start = property_get(screen, "start");
   let end = property_get(screen, "end");
   let drawn = lyric_video_text_lines(text, pixels_across, font_size);
-  if (drawn > lines_max) {
+  if (greater_than(drawn, lines_max)) {
     let said =
       "the words draw " + drawn + " lines where the frame holds " + lines_max;
     list_add(faults, {
@@ -38,7 +45,7 @@ export function lyric_video_screens_faults_at(
       said,
     });
   }
-  if (end <= start) {
+  if (less_than_equal(end, start)) {
     let said = "it arrives at " + start + " and leaves at " + end;
     list_add(faults, {
       at,
@@ -47,7 +54,7 @@ export function lyric_video_screens_faults_at(
     });
   }
   let bare = text_trim(text);
-  if (bare === "") {
+  if (equal(bare, "")) {
     let said = "the card is blank from " + start + " to " + end;
     list_add(faults, {
       at,
@@ -55,10 +62,10 @@ export function lyric_video_screens_faults_at(
       said,
     });
   }
-  if (at > 0) {
-    let before = screens[at - 1];
+  if (greater_than(at, 0)) {
+    let before = screens[subtract(at, 1)];
     let leaves = property_get(before, "end");
-    if (leaves !== start) {
+    if (not_equal(leaves, start)) {
       let said =
         "the card before leaves at " +
         leaves +
@@ -70,10 +77,11 @@ export function lyric_video_screens_faults_at(
         said,
       });
     }
-    let words = text_split_space(property_get(before, "text"));
-    let word_last = words[words.length - 1];
+    let s = property_get(before, "text");
+    let words = text_split_space(s);
+    let word_last = words[subtract(words.length, 1)];
     let closes = text_sentence_ends(word_last);
-    if (!closes && drawn * 3 <= lines_max) {
+    if (not(closes) && less_than_equal(multiply(drawn, 3), lines_max)) {
       let said =
         "it draws " +
         drawn +
