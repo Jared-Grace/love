@@ -1,3 +1,4 @@
+import { image_content_credentials_copy } from "./image_content_credentials_copy.mjs";
 import { ffmpeg_words_run } from "./ffmpeg_words_run.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function ffmpeg_palette_write(path_from, colors_most, path_to) {
@@ -12,7 +13,7 @@ export async function ffmpeg_palette_write(path_from, colors_most, path_to) {
   "it writes somewhere new rather than over the picture it read, because a program that reads and writes the same file at once has already destroyed the thing it is halfway through reading";
   "it says yes in advance to overwriting, because ffmpeg otherwise asks that question on the terminal and waits for an answer that is never coming";
   "it says one frame and one update because a still picture handed to a tool built for film is otherwise taken for the first of a numbered series";
-  ("IT CARRIES THE CONTENT CREDENTIALS OVER, because ffmpeg keeps no chunk it has no use for and the terms these pictures are drawn under forbid dropping them. It is done here rather than asked of the caller because a caller that has to remember is a caller that forgets - measured: all three callers of these writers had, and the loss showed up nowhere, since a picture that never carried them and a picture stripped of them are the same file.");
+  "IT CARRIES THE CONTENT CREDENTIALS OVER, because ffmpeg keeps no chunk it has no use for and the terms these pictures are drawn under forbid dropping them. It is done here rather than asked of the caller because a caller that has to remember is a caller that forgets - measured: all three callers of these writers had, and the loss showed up nowhere, since a picture that never carried them and a picture stripped of them are the same file.";
   let filters = text_combine_multiple([
     "[0:v]split[a][b];[a]palettegen=max_colors=",
     colors_most,
