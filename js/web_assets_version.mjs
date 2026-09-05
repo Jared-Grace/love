@@ -7,6 +7,6 @@ export function web_assets_version() {
   ("It is one stamp for all of the assets rather than one each, because they go up together. A single number cannot describe which files changed, and it does not need to - it is bumped by the same hand that runs the upload, and a browser refetching a picture that did not change costs one load of one small file, once.");
   ("It is a DATE rather than a count, so that reading it says when the art was last sent up. A count says only that it happened some number of times, which is not a question anybody asks.");
   ("Bump it in the same commit as the upload. Bumped without an upload, browsers fetch new addresses for files that never changed; uploaded without a bump, the new art sits in storage and no phone that has been here before will ever ask for it.");
-  let stamp = "20260901";
+  let stamp = "20260905";
   return stamp;
 }
