@@ -1,3 +1,4 @@
+import { bless_vehicles_new } from "./bless_vehicles_new.mjs";
 import { bless_world_size } from "./bless_world_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
@@ -51,6 +52,13 @@ export function app_g_bless_world_new() {
   app_g_bless_player_place(player, block_first);
   let npcs = app_g_bless_people(player_img, coordinates_land, blocks, player);
   let vehicles = bless_vehicles_new(blocks);
-  let world = app_g_bless_world(rows, coordinates, player, npcs, blocks, vehicles);
+  let world = app_g_bless_world(
+    rows,
+    coordinates,
+    player,
+    npcs,
+    blocks,
+    vehicles,
+  );
   return world;
 }
