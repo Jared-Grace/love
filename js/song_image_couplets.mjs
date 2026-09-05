@@ -388,7 +388,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "Three royal crowns of white glass worn one above another, each one a plain broad band with short upright points standing along the top of it so that it is plainly a crown and not a ring, the three stacked directly on top of one another into a single tall pile with nothing under the lowest crown, drawn very large and alone so that the pile reaches almost across the whole window",
+        "Seven royal crowns of white glass standing side by side in one straight row right across the middle of the window, each one a plain broad band with short upright points standing along the top of it so that it is plainly a crown and not a ring, all seven the same size and all of them resting level with one another on one line, each standing clear of the ones beside it with the glass of the field showing between them, the row reaching almost to the white border on both sides, the band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of violet",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
@@ -478,7 +478,7 @@ export function song_image_couplets() {
       first: "our GOD will reign",
       second: "in perfect LOVE",
       symbol:
-        "One high throne of white glass seen from straight in front against a sky of plain empty deep cobalt blue, its tall back topped by a row of carved points, its back and its seat both standing empty, raised up on a broad flight of ruby red steps, and round about the throne one rainbow of emerald green glass, one single plain curved band arching high over its back from one side to the other and no second band anywhere, with the plain empty deep cobalt blue of the sky showing above that band and below it and on both sides of it, green being the colour of that one band alone and of nothing else in the window, and standing inside the window at the foot of the steps in a row seven small flames of ruby red and white glass, seven and no more, and one ruby red sceptre standing straight up and down on the left hand side of the throne and well clear of it, a stout bar as high as the throne's back, and at its top one small plain cross whose upright reaches well below the crossing so that the part beneath is plainly longer than the two arms, one band of violet glass across the throne's seat",
+        "One high throne of white glass seen from straight in front, its tall back topped by a row of carved points, its back and its seat both standing empty, standing on a broad flight of ruby red steps drawn flat and square to the viewer so that every step is one straight band lying right across the window and each one is plainly wider than the step above it, and one ruby red sceptre standing straight up and down on the left hand side of the throne and well clear of it, a stout bar as high as the throne's back, and at its top one small plain cross whose upright reaches well below the crossing so that the part beneath is plainly longer than the two arms, the band between the two lead lines one flat sheet of deep cobalt blue and the band below them one flat sheet of violet",
       symbol_ref: "Psalm 45:6 quoted to the Son in Hebrews 1:8",
       same_as: 0,
     },
