@@ -1,3 +1,4 @@
+import { lyric_video_bible_part_document_path_cases_gate_run } from "./lyric_video_bible_part_document_path_cases_gate_run.mjs";
 import { bible_usfm_verse_end_read_cases_gate_run } from "./bible_usfm_verse_end_read_cases_gate_run.mjs";
 import { psalms_song_file_part_or_null_cases_gate_run } from "./psalms_song_file_part_or_null_cases_gate_run.mjs";
 import { lyric_video_caption_held_gate_run } from "./lyric_video_caption_held_gate_run.mjs";
@@ -1005,6 +1006,7 @@ export function qa_gates() {
     lyric_video_caption_held_gate_run,
     psalms_song_file_part_or_null_cases_gate_run,
     bible_usfm_verse_end_read_cases_gate_run,
+    lyric_video_bible_part_document_path_cases_gate_run,
   ];
   return gates;
 }
