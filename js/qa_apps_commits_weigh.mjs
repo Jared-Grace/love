@@ -4,7 +4,7 @@ import { catch_null_async } from "./catch_null_async.mjs";
 import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { qa_app_gates_sorted } from "./qa_app_gates_sorted.mjs";
+import { qa_commit_judged_gates_sorted } from "./qa_commit_judged_gates_sorted.mjs";
 import { property_list_empty_is } from "./property_list_empty_is.mjs";
 import { number_is } from "./number_is.mjs";
 import { and } from "./and.mjs";
@@ -23,6 +23,7 @@ export async function qa_apps_commits_weigh(
   arguments_assert(arguments, 6);
   ("Weighs every app against every judged commit, adding one weighed entry per app to the list of what was looked at, and naming in the other list any app whose reach could not be worked out at all.");
   ("How far back each commit stands is handed in already counted, because that is a fact about the folder rather than about the app, and counting it once per app would walk the same history over and over.");
+  ("A judged commit is read by the SAME reader a deployment reads it with, and that is the whole of what this is careful about. Read here field by field instead, the offenders a gate wrote down when it threw were never looked at - only the functions scraped out of its sentence were - so every gate that complains in a record rather than in English came back naming nobody, and a gate naming nobody is counted against every app there is. Measured 2026-09-05: four gates were in that state at the newest judged commits, between them holding the whole repo out of a deployment, while the very same record read through the shared reader placed all four somewhere else.");
   for (let app of apps_unique) {
     async function reached() {
       let names = await qa_app_reachable_names(app);
@@ -37,10 +38,7 @@ export async function qa_apps_commits_weigh(
     let able = [];
     for (let commit of commits) {
       let entry = property_get_or_null(known, commit);
-      let green = property_get_or_null(entry, "green");
-      let failed = property_get_or_null(entry, "failed");
-      let blamed = property_get_or_null(entry, "named");
-      let sorted = qa_app_gates_sorted(green, failed, blamed, reach);
+      let sorted = qa_commit_judged_gates_sorted(entry, reach);
       let clear = property_list_empty_is(sorted, "blocking");
       let distance = property_get_or_null(distances, commit);
       let placed = number_is(distance);
