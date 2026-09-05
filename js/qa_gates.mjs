@@ -1,3 +1,4 @@
+import { gloss_word_sound_keys_gate_run } from "./gloss_word_sound_keys_gate_run.mjs";
 import { lyric_video_document_times_hand_is_cases_gate_run } from "./lyric_video_document_times_hand_is_cases_gate_run.mjs";
 import { lyric_video_document_times_spread_is_cases_gate_run } from "./lyric_video_document_times_spread_is_cases_gate_run.mjs";
 import { psalms_song_file_chapter_take_cases_gate_run } from "./psalms_song_file_chapter_take_cases_gate_run.mjs";
@@ -987,6 +988,7 @@ export function qa_gates() {
     psalms_song_file_chapter_take_cases_gate_run,
     lyric_video_document_times_spread_is_cases_gate_run,
     lyric_video_document_times_hand_is_cases_gate_run,
+    gloss_word_sound_keys_gate_run,
   ];
   return gates;
 }
