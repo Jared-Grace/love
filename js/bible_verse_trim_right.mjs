@@ -1,3 +1,10 @@
+import { bible_verse_end_suffixes } from "./bible_verse_end_suffixes.mjs";
+import { text_trim } from "./text_trim.mjs";
+import { list_find_indices } from "./list_find_indices.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_last } from "./list_last.mjs";
+import { text_take } from "./text_take.mjs";
+import { not } from "./not.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { text_last } from "./text_last.mjs";
 import { text_regex_match } from "./text_regex_match.mjs";
@@ -30,5 +37,44 @@ export function bible_verse_trim_right(text) {
     return closing;
   }
   let trimmed = text_trim_right(lambda, text);
-  return trimmed;
+  ("A CROSS REFERENCE PRINTED BEHIND THE SENTENCE IS TAKEN OFF WHOLE, added 2026-09-05, and it is the same fault one layer further out. Everything above takes off single marks, which is enough while what stands between the reader and the sentence mark is punctuation. A Hindi bible here finishes its sentence and then prints where else the verse is spoken of, in brackets, so what stands in the way is a span of words and figures - and taken one character at a time that never clears, because the first figure it meets is not a mark and stops it. Counted over the sixteen opening verses of every bible here, one bible does this and it does it twice in one chapter.");
+  ("THE SPAN MUST CLOSE THE VERSE, or this would cut at a bracket standing in the middle of one and call the whole remainder a reference. That is the line between an editor writing beside the text and the text writing a parenthesis of its own, and it is the only guard needed, because cutting is undone unless a sentence mark is actually uncovered behind it.");
+  ("NOTHING A READER SEES IS CHANGED BY ANY OF THIS. What is trimmed here is only ever asked a question - has this verse finished a sentence - and the verse itself is shown as it was uploaded. So a cut that takes off more than an editor wrote costs a reading unit that ends one verse early, never a word off the page.");
+  let ends = bible_verse_end_suffixes();
+  let finished = text_ends_with_any(trimmed, ends);
+  if (finished) {
+    return trimmed;
+  }
+  let squeezed = text_trim(text);
+  let bare = text_empty_is(squeezed);
+  if (bare) {
+    return trimmed;
+  }
+  let closers2 = new RegExp("^\\p{Pe}$", "u");
+  let final = text_last(squeezed);
+  let matched2 = text_regex_match(final, closers2);
+  let bracketed = null_not_is(matched2);
+  if (not(bracketed)) {
+    return trimmed;
+  }
+  let opening = new RegExp("^\\p{Ps}$", "u");
+  function bible_verse_trim_right_opener_is(character) {
+    let matched3 = text_regex_match(character, opening);
+    let opened = null_not_is(matched3);
+    return opened;
+  }
+  let characters = text_split_empty(squeezed);
+  let indices = list_find_indices(characters, bible_verse_trim_right_opener_is);
+  let none = list_empty_is(indices);
+  if (none) {
+    return trimmed;
+  }
+  let start = list_last(indices);
+  let before = text_take(squeezed, start);
+  let cut = text_trim_right(lambda, before);
+  let revealed = text_ends_with_any(cut, ends);
+  if (not(revealed)) {
+    return trimmed;
+  }
+  return cut;
 }
