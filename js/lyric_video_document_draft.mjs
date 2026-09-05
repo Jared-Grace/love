@@ -1,15 +1,9 @@
-import { lyric_video_document } from "./lyric_video_document.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { audio_file_duration } from "./audio_file_duration.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bible_usfm_version_passage_text } from "./bible_usfm_version_passage_text.mjs";
 import { bible_usfm_version_credit_text } from "./bible_usfm_version_credit_text.mjs";
 import { lyric_video_lines_text } from "./lyric_video_lines_text.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
-import { multiply_round } from "./multiply_round.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { lyric_video_document_draft_lines } from "./lyric_video_document_draft_lines.mjs";
 export async function lyric_video_document_draft(
   version,
   book_code,
@@ -23,13 +17,13 @@ export async function lyric_video_document_draft(
   ("$plain chapter_number");
   ("$plain path_audio");
   ("$plain path_document");
-  ("Writes a first draft of the timing document a lyric video is made from: the passage in the translation asked for, one line at a time, with a start and an end for each one.");
-  ("The times it writes are a spread, not a hearing. Nothing here has listened to the song, so every line is given the same share of it. A person then corrects them by ear, which is a few minutes of nudging numbers rather than an hour of typing the psalm out and counting seconds; and the lines, the spelling, the passage, the translation's name and its terms all arrive already right, because they were read out of the translation rather than remembered.");
+  ("Writes a first draft of the timing document a lyric video is made from: a whole chapter in the translation asked for, one line at a time, with a start and an end for each one.");
   ("Where the lines break is not decided here; ",
     fn_name("lyric_video_lines_text"),
     " is asked, and it says why.");
-  ("The song is left quiet at both ends. A song usually opens on a bar or two before anyone sings and closes on a chord after the last word, so the spread starts a little in and stops a little short rather than filling the whole length.");
-  let duration = await audio_file_duration(path_audio);
+  ("How the times are spread is not decided here either; ",
+    fn_name("lyric_video_document_draft_lines"),
+    " is asked, and a part of a chapter asks the same one.");
   let passage = await bible_usfm_version_passage_text(
     version,
     book_code,
@@ -37,25 +31,12 @@ export async function lyric_video_document_draft(
   );
   let credit = bible_usfm_version_credit_text(version);
   let texts = await lyric_video_lines_text(version, book_code, chapter_number);
-  let opening = 2;
-  let closing = 4;
-  let left = subtract(duration, opening);
-  let sung = subtract(left, closing);
-  let share = divide(sung, texts.length);
-  function line_timed(line_text, index) {
-    let start = opening + multiply(share, index);
-    let end = start + share;
-    let top = multiply_round(start, 100);
-    let top2 = multiply_round(end, 100);
-    let timed = {
-      start: divide(top, 100),
-      end: divide(top2, 100),
-      text: line_text,
-    };
-    return timed;
-  }
-  let lines = texts.map(line_timed);
-  let document = lyric_video_document(passage, credit, duration, lines);
-  await file_overwrite_json(path_document, document);
+  let document = await lyric_video_document_draft_lines(
+    passage,
+    credit,
+    texts,
+    path_audio,
+    path_document,
+  );
   return document;
 }
