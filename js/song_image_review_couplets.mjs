@@ -20,7 +20,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 18,
-      note: "The picture is unchanged, because all three new draws were worse - two came back with no halo and no scroll at all. The wording now asks for the Agnus Dei and a cruciform halo by their church names instead of describing three bars, and the seven seals are asked for as four along one half and three along the other. Every draw so far gives five seals and puts the cross behind the lamb rather than inside the halo.",
+      note: "You asked for just a lamb, a scroll and the cross halo, so the seven seals are out of the wording altogether and the clause is half the length it was. The one thing I added was a ban on horns - every earlier draw gave the lamb a ram's curled horns, which is why they kept looking wrong. It now stands on the rolled scroll with the cross inside the halo.",
     },
     {
       n: 20,
