@@ -40,7 +40,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 30,
-      note: "Yes - Hebrews 12:18 is already one of the references on this couplet, and the darkness and gloom in it is the smoke. So smoke is back in the wording: brown, above the fire, never the grey of the mountain. The picture above is still 40, which has smoke only because it was drawn before I wrongly took it out. No new drawing yet - the drawing account is out of credits.",
+      note: "New picture, drawn from the wording with the smoke put back in. The smoke is brown and rises above the fire, and the mountain is one flat grey instead of the photographic one you saw. That is the whole change.",
     },
   ];
   return couplets;
