@@ -53,12 +53,12 @@ export async function app_en_learn_bible_gloss_urdu_names_repair() {
     await file_overwrite_uncached(path, after);
     let again = chapter_map(chapter);
     let settled = equal(again, 0);
-    let r = {
+    let one = {
       chapter_code,
       passages_changed,
       settled,
     };
-    return r;
+    return one;
   }
   let repaired = await list_map_async_filter_null_not_is(
     chapter_codes,
