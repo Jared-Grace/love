@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "You asked three times for the thicket to trap more. The branches now cross in front of the ram as well as behind it, lying over its chest and legs, so it is held in on every side. Nothing else changed - the halo and the thorn ring are as you accepted them.",
+      note: "Yes - traditional leading runs around a halo rather than across it, so the line should stop at the halo and pick up on its far side. That is in the wording now. The picture above is unchanged, because all four new draws obeyed the halo and lost something else: two dropped the thicket, two turned the field black. The words are right and waiting on a good draw.",
     },
     {
       n: 18,
@@ -32,11 +32,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "Circular at last, after twenty-two tries that all came back oval. What worked was describing it as the shape a compass draws, every point of its edge the same distance from the centre. The cost is the field: it is grey rock now rather than two coloured sheets, and there is no tomb mouth. Say whether the round stone is worth that.",
+      note: "You picked 180 for its colour and you had found the real gap: every beam was one flat colour end to end. The wording now has each beam changing colour along its own length, palest where it leaves the stone and deepening outward. This is a fresh draw with that in, and it keeps the round stone that 180 does not have. The cost is the frame - it came out square instead of arched.",
     },
     {
       n: 26,
-      note: "You asked for brighter overall, with more orange, yellow and white. The rays are now white, yellow and orange with no two neighbours alike, and the field is emerald green over violet instead of violet over crimson. That is the whole change.",
+      note: "You were right - green and violet did not read as sky, and the cloud at the foot was mine. The field is now deep blue above and pale blue below, sky the whole way down, and the bottom band is left plain and empty. The rays stay white, yellow, red and orange. They do lean to one side rather than opening out evenly.",
     },
     {
       n: 30,
