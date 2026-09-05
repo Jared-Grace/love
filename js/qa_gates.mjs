@@ -989,6 +989,7 @@ export function qa_gates() {
     lyric_video_document_times_spread_is_cases_gate_run,
     lyric_video_document_times_hand_is_cases_gate_run,
     gloss_word_sound_keys_gate_run,
+    lyric_video_hearings_match_rate_gate_run,
   ];
   return gates;
 }
