@@ -1,3 +1,4 @@
+import { bless_driveway_paving } from "./bless_driveway_paving.mjs";
 import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { bless_block_road } from "./bless_block_road.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
