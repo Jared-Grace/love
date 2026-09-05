@@ -161,7 +161,7 @@ export function song_image_couplet_glosses() {
         "Described. The burial spices are what the accounts themselves dwell on. The flask carries the burial so that the tomb is not drawn a fourth time in six couplets.",
     },
     20: {
-      kept: 15,
+      kept: 8,
       lyric_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       lyric_explain:
         "HIS own new tomb, which he had hewn out in the rock. Luke adds that it was one wherein never man before was laid, and John that it was a new sepulchre in a garden.",
@@ -169,7 +169,7 @@ export function song_image_couplet_glosses() {
         "Described. Hewn out in the rock is the verse, and the mouth is drawn standing empty with no stone near it so that the same doorway can be shut at couplet 21 and open again at couplet 24.",
     },
     21: {
-      kept: 53,
+      kept: 30,
       lyric_ref: "Matthew 27:60, Mark 16:4, Matthew 27:66",
       lyric_explain:
         "HE rolled a great stone to the door of the sepulchre. Mark says the stone was very great, and Matthew has them make the sepulchre sure, sealing the stone and setting a watch.",
@@ -241,7 +241,7 @@ export function song_image_couplet_glosses() {
         "Described. Thou art weighed in the balances, and art found wanting is Daniel 5:27. The scales stand upright and level here, which is the same pair that was tilted at couplet 1 and is the point of drawing them twice.",
     },
     30: {
-      kept: 44,
+      kept: 40,
       lyric_ref: "1 Peter 1:17, Hebrews 12:28, Proverbs 9:10",
       lyric_explain:
         "Pass the time of your sojourning here in fear. Let us serve GOD acceptably with reverence and godly fear, for the fear of the LORD is the beginning of wisdom.",
