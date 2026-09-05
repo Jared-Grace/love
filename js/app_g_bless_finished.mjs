@@ -97,15 +97,25 @@ export async function app_g_bless_finished(
   let ground_none = not(ground);
   if (ground_none) {
     ground_show();
-    ("The camera is brought back in HERE when there was no house to go to, because the face");
-    ("half leaves it standing wherever it had to stand to hold everybody and no longer puts");
-    ("it back itself. When a house follows, that same journey is how the house is arrived at,");
-    ("so it is made once; when nothing follows there is nobody to make it, and the player");
-    ("would be left looking at the street from a distance they never chose.");
-    await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
   }
   let player = property_get(world, "player");
-  function back() {
+  ("THE WAY BACK OUT IS PART OF LEAVING, and no part of the celebration. The ground half");
+  ("arrives close now and stays close, so the house is still burning at arms length while");
+  ("the panel over it says what the prayer did - and that panel is built to be read with");
+  ("the lit house showing through it, which it cannot be if the street has already gone");
+  ("back to being ordinary. Pressed the button, the street opens up again: the movement");
+  ("answers something the player did rather than happening at them while they read.");
+  ("One journey serves every way this can end, which is why it is asked for here and not on");
+  ("each path. A prayer that reached only faces leaves the camera pulled back far enough to");
+  ("hold all of them; a prayer that finished a house leaves it pressed in close; a prayer");
+  ("that did neither never moved it at all. Being brought back to the distance the game is");
+  ("played at is the same request in all three, and it costs one measurement and no");
+  ("movement at all when there was nothing to come back from.");
+  ("The lights may still be going while it travels, and that is allowed: holding the map");
+  ("still holds movement and not light, so a journey run over the top of a fade no longer");
+  ("finishes that fade in the frame it sets off.");
+  async function back() {
+    await app_g_bless_camera_span_reset(container_map, div_map, player_img_c);
     app_shared_game_player_center(player, player_img_c, div_map);
   }
   let told = null_not_is(line);

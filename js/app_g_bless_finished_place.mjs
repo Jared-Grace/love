@@ -4,7 +4,6 @@ import { html_remove } from "./html_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_g_bless_finished_white } from "./app_g_bless_finished_white.mjs";
@@ -80,7 +79,6 @@ export async function app_g_bless_finished_place(
   ("one thing seen three ways and a staggered ending would read as three things stopping.");
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
-  let size = app_g_bless_tile_size();
   let closer = app_g_bless_tile_size_close();
   await app_g_bless_camera_glide(
     container_map,
@@ -108,11 +106,4 @@ export async function app_g_bless_finished_place(
   app_g_bless_finished_glow_fade(glow);
   app_g_bless_finished_white_fade(squares);
   await sleep(900);
-  await app_g_bless_camera_glide(
-    container_map,
-    div_map,
-    player_img_c,
-    size,
-    middle,
-  );
 }
