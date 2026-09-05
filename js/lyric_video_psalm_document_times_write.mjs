@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
 import { psalms_songs_folder_chapters } from "./psalms_songs_folder_chapters.mjs";
-import { list_map } from "./list_map.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { equal } from "./equal.mjs";
 import { lyric_video_document_times_unheard } from "./lyric_video_document_times_unheard.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
@@ -24,22 +24,11 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
   ("★ WHAT IS WRITTEN IS THE ALIGNER'S TIMES AND NEVER THE HEARING'S. The aligner is handed the words and can only decide where they fall, which is why it placed twenty seven of thirty two lines inside a tenth of a second; the blind hearing stayed about a quarter of a second out even after its constant lead was taken off. The hearing is here to disagree, not to place, so the lines it disagrees on are handed back rather than acted on - deciding between two readings of a sung line is listening, and nothing here can listen.");
   ("THE CHAPTER IS NAMED AND THE SONG IS FOUND FROM IT, RATHER THAN THE SONG BEING NAMED. That is what makes this a command somebody can read back out of the log and run again from the same two words, where a path off one machine's download folder names nothing anywhere else and could not be replayed.");
   ("The three ways this can stop before hearing anything all answer with the same record, so the record is made in one place and only the sentence saying what stopped it is written here.");
+  ("Taking one word off every item of a list is asked for by name rather than written out, three times over, as a small function standing next to the list it is handed to.");
   let number_chapter = Number(chapter);
   let folder_audio = folder_user_downloads_path("");
   let songs = await psalms_songs_folder_chapters(folder_audio);
-  function chapter_of(song) {
-    let number = song.chapter;
-    return number;
-  }
-  function line_of(one) {
-    let number = one.line;
-    return number;
-  }
-  function text_of(line) {
-    let text = line.text;
-    return text;
-  }
-  let numbers = list_map(songs, chapter_of);
+  let numbers = list_map_property(songs, "chapter");
   let at = numbers.indexOf(number_chapter);
   if (equal(at, -1)) {
     let unsung = lyric_video_document_times_unheard(
@@ -88,7 +77,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
     flagged: measured.flagged,
   };
   await lyric_video_hearing_record(name_document, hearing);
-  let flagged = list_map(measured.flagged, line_of);
+  let flagged = list_map_property(measured.flagged, "line");
   let spread = lyric_video_document_times_spread_is(document);
   if (not(spread)) {
     let worked = {
@@ -103,7 +92,7 @@ export async function lyric_video_psalm_document_times_write(version, chapter) {
     };
     return worked;
   }
-  let texts = list_map(document.lines, text_of);
+  let texts = list_map_property(document.lines, "text");
   let lines = lyric_timing_lines_timed(
     measured.starts,
     texts,
