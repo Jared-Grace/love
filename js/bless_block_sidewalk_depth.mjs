@@ -1,3 +1,4 @@
+import { bless_yard_depth } from "./bless_yard_depth.mjs";
 import { add } from "./add.mjs";
 import { bless_road_depth } from "./bless_road_depth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
