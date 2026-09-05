@@ -18,6 +18,8 @@ export async function bible_audio_chapter_screens_timed_screens_add(
   least,
   room,
 ) {
+  "Listens to the long lines of a chapter, then hands back the screens gathered so far together with the single function that adds one more line to them.";
+  "★ A LINE IS CUT INTO SCREENS ONLY WHERE THE HEARING CAN BE TRUSTED, AND KEPT WHOLE EVERYWHERE ELSE. Cutting a line means placing its pieces by where the words were heard, so a hearing that found no words at all, or found them and is not sure of them, would place the pieces somewhere the reading never was. A line left whole is only too long; a line cut on a bad hearing is wrong.";
   arguments_assert(arguments, 4);
   let timed = await audio_pieces_words_timed(pieces);
   let screens = [];

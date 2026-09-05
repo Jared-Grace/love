@@ -12,6 +12,8 @@ export function bible_audio_chapter_screens_timed_line_each(
   bible_folder,
   chapter_code,
 ) {
+  "Works out how much room one screen has, then hands back the single function that walks a chapter's lines and gathers the ones too long to fit, each with the piece of recording it was read in.";
+  "★ ONLY THE LINES THAT DO NOT FIT ARE GATHERED, AND THEIR PLACE IN THE CHAPTER IS KEPT BESIDE THEM. A line that already fits on a screen needs no cutting, so listening to its recording again would buy nothing and cost the minute it takes; and a piece of recording handed on alone would say nothing about which line of the chapter it belongs to, which is why the line's number travels with it.";
   arguments_assert(arguments, 3);
   let sizes = lyric_video_frame_sizes();
   let room = lyric_video_screen_room(sizes);
