@@ -60,7 +60,7 @@ export async function bible_sentence_end_blocked_gate_run() {
     };
     return named;
   }
-  let blocked = list_map(blocked_rows, bible_sentence_end_blocked_named);
+  let blocked_named = list_map(blocked_rows, bible_sentence_end_blocked_named);
   let f_name2 = fn_name("bible_verse_trim_right");
   list_empty_is_assert_json(blocked, {
     hint: text_combine_multiple([
