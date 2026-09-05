@@ -251,6 +251,24 @@ export async function bible_glyph_chapter_rosetta_lines_fetched_known(
     );
     found = lines_module.bible_glyph_chapter_rosetta_lines_ezk36();
   }
+  if (equal(chapter_code, "JOL01")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_jol01.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_jol01();
+  }
+  if (equal(chapter_code, "JOL02")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_jol02.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_jol02();
+  }
+  if (equal(chapter_code, "JOL03")) {
+    let lines_module = await import(
+      "./bible_glyph_chapter_rosetta_lines_jol03.mjs"
+    );
+    found = lines_module.bible_glyph_chapter_rosetta_lines_jol03();
+  }
   if (equal(chapter_code, "OBA01")) {
     let lines_module = await import(
       "./bible_glyph_chapter_rosetta_lines_oba01.mjs"
