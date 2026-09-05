@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
+import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
 export async function app_g_bless_camera_player_return(
   container_map,
@@ -30,7 +30,7 @@ export async function app_g_bless_camera_player_return(
   ("ordinary scroll, and a scroll onto a player who is already in the middle goes nowhere,");
   ("so a prayer that moved no camera pays for a measurement and no movement at all. That");
   ("is what lets every way a celebration can end ask for this same one line.");
-  let size = app_g_bless_tile_size_playing();
+  let size = app_g_bless_tile_size();
   await app_g_bless_camera_glide(
     container_map,
     div_map,
