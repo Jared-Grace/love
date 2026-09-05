@@ -1,39 +1,56 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 export function bless_vehicle_svg(colour) {
   arguments_assert(arguments, 1);
-  ("A car seen from directly above, drawn as markup rather than fetched as a picture.");
-  ("It is a PLACEHOLDER and should be read as one. Every character in this game is a");
-  ("photograph-like sprite drawn by somebody, and there is no drawing of a car anywhere in");
-  ("the repo; rather than ship a street with nothing moving on it while waiting for one, this");
-  ("says the shape in the smallest way that reads as a car from the height the player is at.");
-  ("When real art arrives, this function is the only thing that has to go.");
-  ("Drawn as markup for one reason above the rest: nothing has to be uploaded, addressed,");
-  ("cached or version stamped. A picture is a file somewhere with a URL and a version on it, and a");
-  ("wrong one of those is a silent blank square. Markup handed straight to the element cannot");
-  ("be stale and cannot fail to load.");
-  ("Pointed EAST, and only east. A car going the other way is this drawing mirrored, which is");
-  ("one line of style where a second drawing would be a second thing to keep right. The same");
-  ("reasoning the arrow uses.");
-  ("Two squares long and one square across, which is why the box is forty by twenty. A car is");
-  ("about twice as long as it is wide seen from above, and a car exactly as long as a person");
-  ("is wide would read as a crate.");
-  ("The paint is the only thing that changes. Everything drawn on top of it - the cabin, the");
-  ("glass, the wheels - is black or white at a low opacity rather than a chosen colour, so it");
-  ("darkens a light car and lightens a dark one without any colour having to be worked out.");
+  ("The drawing of one car, in the colour asked for, seen from the SIDE.");
+  ("From the side because that is how everything else in this game is seen. A house shows");
+  ("its front and a strip of roof, a person shows their face; the view is from in front and a");
+  ("little above, never from straight overhead. A car drawn from overhead is the one thing on");
+  ("the street being looked at from somewhere else.");
+  ("It was drawn from overhead first, and the fault that came back is worth keeping because");
+  ("nothing about it was a mistake in the arithmetic. A car seen from above is a body with");
+  ("wheels sticking out at the top and the bottom of it, so the wheels sat on the two edges of");
+  ("the square and the coloured body sat in the middle between them. On the near lane the");
+  ("lower wheels land exactly on the kerb - and what that reads as, to somebody looking at it,");
+  ("is a car with its tyres on the road and the rest of it out on the grass. The car was on");
+  ("the road the whole time, measured square by square. It just was not drawn as though it");
+  ("were standing on anything.");
+  ("From the side there is nothing to read wrongly, because the wheels are at the BOTTOM. A");
+  ("thing whose wheels are at the bottom is standing on whatever is under it, the same way a");
+  ("person with feet at the bottom is standing on the pavement. That is the whole repair.");
+  ("It sits in the lower part of its square rather than filling it, which is what leaves the");
+  ("wheels a floor to stand on. Filled to the edges, the wheels would be on the line between");
+  ("two squares again and the question of which one the car is on would be open again.");
+  ("Two squares long and about three quarters of one tall, which is roughly the proportion of");
+  ("a real car and is the same scale a person is drawn at - a car is longer than a person is");
+  ("tall and not much higher than one. Drawn much taller it stops being traffic and starts");
+  ("being a bus; drawn much shorter it reads as a stone on the road.");
+  ("Pointing EAST, front to the right, and the westbound cars are the same drawing mirrored.");
+  ("One drawing for both ways is why the front is somewhere definite: the headlight at the");
+  ("front and the red lamp at the back are what say which way a car is going, and mirrored");
+  ("they swap over by themselves.");
+  ("MARKUP rather than a picture file, because there is no picture of a car anywhere in this");
+  ("repo and the game is not asking for one. Every car is the same shape in a different");
+  ("colour, which is a handful of shapes with one word changed in them, and it costs no");
+  ("request, no cache and no waiting - the street is drawn with it the moment the world is.");
+  ("Kept plain on purpose. It is looked at from a height where a square is a fifth of a phone");
+  ("screen, so a window, a wheel and a light are all that survive the size; anything finer is");
+  ("work that reaches nobody.");
   let svg = `<svg viewBox="0 0 40 20" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="7" y="0.5" width="6" height="4" rx="1.2" fill="#1a1a1a" />
-  <rect x="7" y="15.5" width="6" height="4" rx="1.2" fill="#1a1a1a" />
-  <rect x="26" y="0.5" width="6" height="4" rx="1.2" fill="#1a1a1a" />
-  <rect x="26" y="15.5" width="6" height="4" rx="1.2" fill="#1a1a1a" />
-  <rect x="1.5" y="2.5" width="37" height="15" rx="5" fill="${colour}" />
-  <rect x="1.5" y="2.5" width="37" height="15" rx="5" fill="none" stroke="rgba(0,0,0,0.35)" stroke-width="1" />
-  <rect x="10" y="4.5" width="17" height="11" rx="3" fill="rgba(0,0,0,0.28)" />
-  <rect x="24" y="5.5" width="3.5" height="9" rx="1.2" fill="rgba(190,225,245,0.85)" />
-  <rect x="9.5" y="5.5" width="3" height="9" rx="1.2" fill="rgba(190,225,245,0.6)" />
-  <rect x="35.5" y="4" width="2.5" height="3" rx="1" fill="rgba(255,250,220,0.95)" />
-  <rect x="35.5" y="13" width="2.5" height="3" rx="1" fill="rgba(255,250,220,0.95)" />
-  <rect x="2" y="4" width="2" height="3" rx="1" fill="rgba(220,60,50,0.9)" />
-  <rect x="2" y="13" width="2" height="3" rx="1" fill="rgba(220,60,50,0.9)" />
+  <ellipse cx="20" cy="19.1" rx="17.5" ry="1.1" fill="rgba(0,0,0,0.28)" />
+  <path d="M 12 10.2 L 15.6 4.3 L 26.4 4.3 L 30.2 10.2 Z" fill="${colour}" />
+  <path d="M 12 10.2 L 15.6 4.3 L 26.4 4.3 L 30.2 10.2 Z" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="0.7" />
+  <path d="M 14.4 9.4 L 16.7 5.5 L 20.3 5.5 L 20.3 9.4 Z" fill="rgba(195,228,247,0.92)" />
+  <path d="M 21.5 9.4 L 21.5 5.5 L 25.5 5.5 L 27.9 9.4 Z" fill="rgba(195,228,247,0.92)" />
+  <rect x="1.5" y="9.6" width="37" height="7.3" rx="2.6" fill="${colour}" />
+  <rect x="1.5" y="14.3" width="37" height="2.6" rx="1.3" fill="rgba(0,0,0,0.2)" />
+  <rect x="1.5" y="9.6" width="37" height="7.3" rx="2.6" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="0.7" />
+  <rect x="20.4" y="10.4" width="0.8" height="4.6" fill="rgba(0,0,0,0.28)" />
+  <rect x="35.4" y="10.8" width="2.8" height="2.3" rx="0.9" fill="rgba(255,250,220,0.95)" />
+  <rect x="1.9" y="10.8" width="2.3" height="2.3" rx="0.9" fill="rgba(220,60,50,0.95)" />
+  <circle cx="11.2" cy="16.7" r="3" fill="#191919" />
+  <circle cx="28.8" cy="16.7" r="3" fill="#191919" />
+  <circle cx="11.2" cy="16.7" r="1.2" fill="#9aa0a6" />
+  <circle cx="28.8" cy="16.7" r="1.2" fill="#9aa0a6" />
 </svg>`;
   return svg;
 }
