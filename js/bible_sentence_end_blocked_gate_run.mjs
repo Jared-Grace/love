@@ -1,9 +1,8 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -21,8 +20,7 @@ export async function bible_sentence_end_blocked_gate_run() {
   let path = bible_sentence_end_marks_path();
   let rows = await file_read_json(path);
   function bible_sentence_end_blocked_unrecorded_is(row) {
-    let blocked = property_get_or_null(row, "blocked");
-    let missing = null_is(blocked);
+    let missing = property_null_is(row, "blocked");
     return missing;
   }
   let unrecorded_rows = list_filter(
