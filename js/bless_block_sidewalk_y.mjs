@@ -1,3 +1,4 @@
+import { bless_yard_depth } from "./bless_yard_depth.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_block_alleys } from "./bless_block_alleys.mjs";
 import { property_get } from "./property_get.mjs";
