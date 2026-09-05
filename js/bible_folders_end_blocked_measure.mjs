@@ -1,3 +1,4 @@
+import { bible_folder_key } from "./bible_folder_key.mjs";
 import { property_greater_than } from "./property_greater_than.mjs";
 import { bible_sentence_end_marks_path } from "./bible_sentence_end_marks_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -21,7 +22,7 @@ export async function bible_folders_end_blocked_measure() {
   }
   let unended = list_filter(rows, bible_folders_end_blocked_unended_is);
   async function bible_folders_end_blocked_one(row) {
-    let bible_folder = property_get(row, "bible_folder");
+    let bible_folder = property_get(row, bible_folder_key());
     let chapter_code = property_get(row, "chapter_code");
     let one = await bible_folder_chapter_end_blocked_measure(
       bible_folder,
