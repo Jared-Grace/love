@@ -1,3 +1,4 @@
+import { bless_building_windows_ground } from "./bless_building_windows_ground.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_building_yard } from "./bless_building_yard.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -96,11 +97,17 @@ export function bless_building(x, y, families, storeys, set_back) {
   let windows = property_get(r, "windows");
   let doorways = property_get(r, "doorways");
   let roof = property_get(r, "roof");
+  ("The GROUND floor has windows too, drawn into the blank squares either side of its doors,");
+  ("and which of them get one is a coin thrown per square when the street is laid out. A one");
+  ("storey house is one band of wall and doors, so without this it wore no glass at all and");
+  ("read as a shed beside its two-storey neighbours.");
+  let windows_ground = bless_building_windows_ground(walls);
   let building = {
     roof: roof,
     walls: walls,
     doorways: doorways,
     windows: windows,
+    windows_ground: windows_ground,
     yard: yard,
     columns: columns,
     storeys: storeys,

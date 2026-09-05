@@ -8,8 +8,10 @@ import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_windows_draw(layer, blocks) {
   arguments_assert(arguments, 2);
-  ("Draws the windows on every upper-floor home in the street - a pair of dark panes in pale");
-  ("frames, crossed by glazing bars, hung on the wall clear of the ground.");
+  ("Draws the windows on the street - a pair of dark panes in pale frames, crossed by glazing");
+  ("bars, hung on the wall clear of the ground, for every upper-floor home; and a single one");
+  ("of the same panes in each ground-floor square that drew a window when the street was");
+  ("laid out.");
   ("It is what a SECOND STOREY looks like from above. A tall house is drawn as two bands of");
   ("wall where a low one has one, and two bands of the same brick are simply a deeper");
   ("building; nothing about them says anybody lives up there. Windows along the upper band");
@@ -131,9 +133,21 @@ export function app_g_bless_windows_draw(layer, blocks) {
     pane_draw(opening, "-17%");
     pane_draw(opening, "83%");
   }
+  function window_ground_draw(tile) {
+    "ONE pane, centred in its own square, which is what tells a ground-floor window from an upstairs one at a glance. The pair upstairs straddles the joins between the three squares a family owns, and it has to: a single window centred up there sits directly over the door below it and the column reads as one opening stacked on another. Down here there is no such clash - the door is in the middle square and a window is never in the middle square - so the window may simply sit where it is, in the middle of the wall it is let into, which is where a window in a wall is.";
+    "It is the same pane as upstairs in every other way. Two spellings of a window would be two windows free to drift apart, and the two floors of one house wearing different glass is the one difference here that would say something untrue.";
+    let opening = html_div(layer);
+    g_img_square_style_position(opening, tile, "ground_tint");
+    html_style_assign(opening, {
+      "pointer-events": "none",
+    });
+    pane_draw(opening, "33%");
+  }
   function building_draw(building) {
     let windows = property_get(building, "windows");
     each(windows, window_draw);
+    let windows_ground = property_get(building, "windows_ground");
+    each(windows_ground, window_ground_draw);
   }
   function block_draw(block) {
     let buildings = property_get(block, "buildings");
