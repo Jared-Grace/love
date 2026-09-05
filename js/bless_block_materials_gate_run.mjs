@@ -87,6 +87,7 @@ export function bless_block_materials_gate_run() {
     groups: groups_count,
     faces: list_size(faces),
     pavements: pavements_count,
+    roofs: roofs_count,
   };
   return walked;
 }
