@@ -74,12 +74,36 @@ export function bible_verse_end_is_cases() {
       ends: false,
       why: "the interlinear is the Greek as it was written, without punctuation of any kind, and it is named apart for the same reason",
     },
-    { text: "aka̱ zit shin ɗe Yohana.>>", ends: true, why: "the closing quotation mark spelled in plain letters, which seven bibles here write as two greater-than signs where others write a curly one. Nothing in any language ends a sentence on it, so taking it off can only ever uncover the mark that was already there" },
-    { text: "mogono,>>", ends: false, why: "the same bible closing a quotation over a comma - it is the mark uncovered that decides, so a quotation closing in the middle of a sentence still rightly answers no" },
-    { text: "sabi niya.»", ends: true, why: "the closing guillemet of French, which Unicode files as a closing quote beside the curly one. It is reached by asking Unicode what kind of mark this is rather than by somebody remembering to add it" },
-    { text: "sabi niya.’ ", ends: true, why: "a hair space after the closing quote. It is a space nobody can see and it is not the ordinary one, so a list holding only the ordinary one left three bibles waiting on a sentence that had already finished" },
-    { text: "sabi niya.‌", ends: true, why: "a zero width non joiner, which is drawn as nothing at all and still stood between a verse and its full stop" },
-    { text: "sabi niya. 5", ends: false, why: "a trailing figure must never be taken off, because what it would uncover is the stop of the sentence before it and this verse has not finished one" },
+    {
+      text: "aka̱ zit shin ɗe Yohana.>>",
+      ends: true,
+      why: "the closing quotation mark spelled in plain letters, which seven bibles here write as two greater-than signs where others write a curly one. Nothing in any language ends a sentence on it, so taking it off can only ever uncover the mark that was already there",
+    },
+    {
+      text: "mogono,>>",
+      ends: false,
+      why: "the same bible closing a quotation over a comma - it is the mark uncovered that decides, so a quotation closing in the middle of a sentence still rightly answers no",
+    },
+    {
+      text: "sabi niya.»",
+      ends: true,
+      why: "the closing guillemet of French, which Unicode files as a closing quote beside the curly one. It is reached by asking Unicode what kind of mark this is rather than by somebody remembering to add it",
+    },
+    {
+      text: "sabi niya.’ ",
+      ends: true,
+      why: "a hair space after the closing quote. It is a space nobody can see and it is not the ordinary one, so a list holding only the ordinary one left three bibles waiting on a sentence that had already finished",
+    },
+    {
+      text: "sabi niya.‌",
+      ends: true,
+      why: "a zero width non joiner, which is drawn as nothing at all and still stood between a verse and its full stop",
+    },
+    {
+      text: "sabi niya. 5",
+      ends: false,
+      why: "a trailing figure must never be taken off, because what it would uncover is the stop of the sentence before it and this verse has not finished one",
+    },
   ];
   return cases;
 }
