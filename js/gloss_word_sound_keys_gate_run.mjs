@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_words } from "./app_en_learn_bible_gloss_urdu_words.mjs";
@@ -37,8 +38,7 @@ export async function gloss_word_sound_keys_gate_run() {
   }
   each(words, word_each);
   function shared_is(sharers) {
-    let count = list_size(sharers);
-    let shared = greater_than(count, 1);
+    let shared = list_size_greater_than(sharers, 1);
     return shared;
   }
   let clashes = object_filter(by_key, shared_is);
