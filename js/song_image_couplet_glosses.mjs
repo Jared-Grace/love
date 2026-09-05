@@ -65,7 +65,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:33 puts two others with HIM, one on either side. The three crosses are the one arrangement the accounts give, and the middle one is drawn taller so the eye finds it first.",
     },
     8: {
-      kept: 15,
+      kept: 18,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "Blotting out the handwriting of ordinances that was against us, and took it out of the way, nailing it to HIS cross. The debt is Paul's own word for it, and the suffering is Isaiah's, wounded for our transgressions.",
