@@ -32,11 +32,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "You asked what was wrong with 114 and I answered wrongly. This window went through two designs - first the stone rolled away with light out of the open mouth, then the stone still sealing the tomb with the light coming out past it. 114 is the second one and it does what that design asks. I judged it as a failed version of the first and redrew it that way, which threw out a decision you had already made. 114 is back and so is the wording that drew it. Four more from the same words came out worse. The one real fault left was that the beams came out white every round though the wording asked for every colour, and that is fixed here. The clause had been naming white in order to refuse it, which is the surest way to get it. It now names the colours themselves at the front and never says white at all. Two beams have come out yellow, which the palette does not allow, and the red beam standing straight up reads a little like a cross.",
+      note: "You asked twice what was wrong with 114. One thing only: its beams were white instead of every colour, which is the rainbow you had asked for. Neither fault you named in the last one is in 114 - its halo fades softly and its stone sits on the ground. Both of those were things I broke, not things 114 lacked. This one has the coloured beams and the soft halo and the stone on brown ground. The wording had asked for the ground at the very end of a long passage and it was being read past, so it now sits beside the stone.",
     },
     {
       n: 26,
-      note: "You asked what was wrong with the one before. Nothing you had named. I rewrote it because it asked for pale blue sky and the window style forbids pale, so every drawing was disobeying one instruction or the other. This one has seven white rays of differing widths over violet and crimson. The old one had more colours in the rays and you had said those looked good.",
+      note: "You asked what was wrong with the one before. Nothing you had named. I replaced it on my own judgement because its wording asked for pale blue sky and the style forbids pale. But you had said its coloured rays looked good, so that trade was mine to lose. It is back to what it was.",
     },
     {
       n: 30,
