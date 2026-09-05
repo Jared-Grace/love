@@ -145,7 +145,7 @@ export function song_image_couplet_glosses() {
         "Described. Exodus 12:7 says to strike the blood on the two side posts and on the upper door post. The lamb is not drawn here, because the blood on the doorway is what the verse puts there and it is what the couplet says; it is drawn at couplet 18, which sings these same two lines a second time.",
     },
     18: {
-      kept: 42,
+      kept: 47,
       lyric_ref: "Acts 20:28, 1 Peter 1:18-19, Exodus 12:7",
       lyric_explain:
         "The same two lines as couplet 17, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
