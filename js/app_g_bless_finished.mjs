@@ -1,13 +1,13 @@
+import { noop } from "./noop.mjs";
+import { app_g_bless_camera_player_return } from "./app_g_bless_camera_player_return.mjs";
 import { bless_blocks_roof_tiles } from "./bless_blocks_roof_tiles.mjs";
 import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
-import { app_g_bless_camera_span_reset } from "./app_g_bless_camera_span_reset.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_g_bless_finished_faces } from "./app_g_bless_finished_faces.mjs";
 import { app_g_bless_finished_place } from "./app_g_bless_finished_place.mjs";
-import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_g_bless_finished_modal } from "./app_g_bless_finished_modal.mjs";
 export async function app_g_bless_finished(
@@ -107,9 +107,9 @@ export async function app_g_bless_finished(
   ("takes longer than travelling. Held back until the button was pressed, the player");
   ("pressed it and then sat through half a second of camera before the street was theirs;");
   ("set going with the panel, it is over before they look up.");
-  ("Pressing the button then only puts the player back in the middle, and it WAITS on that");
-  ("journey rather than racing it. A press that came before the camera had arrived would");
-  ("centre them and be dragged back to the house by the frames still to come.");
+  ("Pressing the button then does nothing but put the panel down. There is no camera work");
+  ("left over for it to do, so there is nothing a press can land in the middle of - which");
+  ("is why the button is handed something that does nothing rather than the way home.");
   ("One journey serves every way this can end, which is why it is asked for here and not on");
   ("each path. A prayer that reached only faces leaves the camera pulled back far enough to");
   ("hold all of them; a prayer that finished a house leaves it pressed in close; a prayer");
@@ -119,19 +119,14 @@ export async function app_g_bless_finished(
   ("The lights may still be going while it travels, and that is allowed: holding the map");
   ("still holds movement and not light, so a journey run over the top of a fade no longer");
   ("finishes that fade in the frame it sets off.");
-  let returning = await app_g_bless_camera_span_reset(
+  let told = null_not_is(line);
+  if (told) {
+    app_g_bless_finished_modal(container_map, line, noop);
+  }
+  await app_g_bless_camera_player_return(
     container_map,
     div_map,
     player_img_c,
+    player,
   );
-  async function back() {
-    await returning;
-    app_shared_game_player_center(player, player_img_c, div_map);
-  }
-  let told = null_not_is(line);
-  if (told) {
-    app_g_bless_finished_modal(container_map, line, back);
-    return;
-  }
-  back();
 }
