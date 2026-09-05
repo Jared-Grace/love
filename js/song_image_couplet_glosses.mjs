@@ -17,7 +17,7 @@ export function song_image_couplet_glosses() {
         "Described. A false balance is abomination to the LORD, and Micah asks shall I count them pure with the wicked balances. Scripture does not say scales stood at this trial, but it does say that a rigged measure is what injustice looks like to GOD, so the tilted beam is HIS own image for the thing and not a courthouse emblem borrowed for it. The same scales come back level at couplet 29.",
     },
     2: {
-      kept: 38,
+      kept: 46,
       lyric_ref: "Luke 23:4, Matthew 27:24, 1 Peter 2:22",
       lyric_explain:
         "Pilate said outright, I find no fault in this man, and then washed his hands before the crowd saying he was innocent of HIS blood. Peter says HE did no sin, neither was guile found in HIS mouth.",
@@ -33,7 +33,7 @@ export function song_image_couplet_glosses() {
         "Described in part. John 19:1 says Pilate scourged HIM, so the whip is in the text; its three cords are not, and are drawn that way because the style asks for a dozen large panes and a real scourge is many thin ones.",
     },
     4: {
-      kept: 2,
+      kept: 9,
       lyric_ref: "Matthew 27:29, John 19:2, Revelation 19:16",
       lyric_explain:
         "They plaited a crown of thorns and put it on HIS head, hailing HIM King of the Jews in mockery. The couplet answers the mockery with Revelation's own title, KING OF KINGS, written on HIS thigh.",
@@ -65,7 +65,7 @@ export function song_image_couplet_glosses() {
         "Described. Luke 23:33 puts two others with HIM, one on either side. The three crosses are the one arrangement the accounts give, and the middle one is drawn taller so the eye finds it first.",
     },
     8: {
-      kept: 6,
+      kept: 13,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "Blotting out the handwriting of ordinances that was against us, and took it out of the way, nailing it to HIS cross. The debt is Paul's own word for it, and the suffering is Isaiah's, wounded for our transgressions.",
@@ -185,7 +185,7 @@ export function song_image_couplet_glosses() {
         "Inherited. No verse describes the guard's armour. The empty helmet stands for the watch without drawing a face, and it is named grey iron so that bronze, which is the gold rule's near neighbour, cannot arrive.",
     },
     23: {
-      kept: 56,
+      kept: 63,
       lyric_ref: "Matthew 28:1, Luke 24:1, 1 Corinthians 15:4",
       lyric_explain:
         "As it began to dawn toward the first day of the week, they came to see the sepulchre. Paul's summary of the gospel says HE rose again the third day according to the Scriptures.",
@@ -201,7 +201,7 @@ export function song_image_couplet_glosses() {
         "Described. Matthew 28:2 has the angel roll back the stone, and the tomb is found empty. The stone is drawn well away from the opening so that this and couplet 21 read as two moments and not two pictures of one thing.",
     },
     25: {
-      kept: 8,
+      kept: 11,
       lyric_ref: "1 Corinthians 15:54-55, 2 Timothy 1:10, Revelation 19:12",
       lyric_explain:
         "Death is swallowed up in victory; O death, where is thy sting? HE hath abolished death, and brought life and immortality to light through the gospel.",
@@ -249,7 +249,7 @@ export function song_image_couplet_glosses() {
         "Described. The sandals are gone and the mountain has taken their place. Hebrews 12:18-21 is the passage the couplet's own verse sits in - ye are not come unto the mount that might be touched, and so terrible was the sight that Moses said I exceedingly fear and quake - and four verses later comes reverence and godly fear. Exodus 19:18 puts the mount altogether on a smoke and the LORD upon it in cloud. So the covered peak is the picture: godly fear is standing at the foot of what you may not climb.",
     },
     31: {
-      kept: 11,
+      kept: 18,
       lyric_ref: "Matthew 24:32-33, Romans 13:12, Revelation 22:20",
       lyric_explain:
         "When his branch is yet tender, and putteth forth leaves, ye know that summer is nigh: so likewise ye, when ye shall see all these things, know that it is near, even at the doors.",
@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 2,
+      kept: 9,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -273,7 +273,7 @@ export function song_image_couplet_glosses() {
         "Described as the thing wiped away rather than the wiping. A hand at a face cannot be drawn where no faces are allowed, so the tear itself is drawn, alone and large, which is what the verse is about.",
     },
     34: {
-      kept: 56,
+      kept: 61,
       lyric_ref: "Revelation 11:15, Psalm 45:6, Hebrews 1:8, 1 John 4:8",
       lyric_explain:
         "The kingdoms of this world are become the kingdoms of our Lord, and HE shall reign for ever and ever. Thy throne, O God, is for ever and ever, said of the SON in Hebrews 1:8, and GOD is love.",
@@ -289,7 +289,7 @@ export function song_image_couplet_glosses() {
         "Described. The bush burned with fire, and the bush was not consumed, and it is where I AM is spoken from. Flame not consuming names an absence, so it is drawn as red flame with the leaves whole and green inside it.",
     },
     36: {
-      kept: 22,
+      kept: 29,
       lyric_ref: "Exodus 3:14, John 8:58, Exodus 3:2",
       lyric_explain:
         "The same two lines as couplet 35, sung a second time to a different melody and closing the hymn, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
