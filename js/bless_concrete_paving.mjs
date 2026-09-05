@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function bless_driveway_paving() {
+export function bless_concrete_paving() {
   arguments_assert(arguments, 0);
   ("What the driveways of this game are laid in - the strip that runs from a front door across the pavement and the grass to the road.");
   ("CONCRETE, or the nearest thing the game has to it: a pale grey speckled surface. It was the block's own pavement until somebody looked at it and said the driveway looked like dirt, which it did - the pale pavement is a sandy tan, so a strip of it crossing a green lawn read as a path worn into the grass by people walking the same way, which is the opposite of what a driveway is. A driveway is the one part of a house that is plainly POURED, and grey is what says poured.");
