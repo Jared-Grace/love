@@ -26,19 +26,19 @@ export async function app_en_learn_bible_gloss_urdu_entries_absent() {
   async function chapter_counted(chapter_code) {
     let verses = await bible_chapter_verses(bible_folder, chapter_code);
     let sizes = list_map(verses, verse_words_size);
-    let counted = {
+    let chapter_count = {
       chapter_code,
       verses: list_size(verses),
       entries: list_sum(sizes),
     };
-    return counted;
+    return chapter_count;
   }
-  function chapter_verses(counted) {
-    let v = property_get(counted, "verses");
+  function chapter_verses(chapter_count) {
+    let v = property_get(chapter_count, "verses");
     return v;
   }
-  function chapter_entries(counted) {
-    let v = property_get(counted, "entries");
+  function chapter_entries(chapter_count) {
+    let v = property_get(chapter_count, "entries");
     return v;
   }
   let counted = await list_map_async(chapter_codes, chapter_counted);
