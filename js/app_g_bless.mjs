@@ -9,7 +9,7 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
-import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
+import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 export async function app_g_bless(context) {
   arguments_assert(arguments, 1);
@@ -22,7 +22,7 @@ export async function app_g_bless(context) {
   app_shared_game_player_style_initialize();
   let root = html_mobile_default(context);
   let variable = g_img_square_size_variable();
-  let size = app_g_bless_tile_size_playing();
+  let size = app_g_bless_tile_size();
   html_style_variable_set(root, variable, size);
   html_style_assign(root, {
     margin: "0",
