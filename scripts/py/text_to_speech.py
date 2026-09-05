@@ -387,7 +387,10 @@ def jobs_of(data):
     """The chapters this call was asked for, whether it named one or a list."""
     if "jobs" in data:
         return list(data["jobs"])
-    return [{"text": data["text"], "path_output": data["path_output"]}]
+    one = {"text": data["text"], "path_output": data["path_output"]}
+    if "speed" in data:
+        one["speed"] = data["speed"]
+    return [one]
 
 
 def main():
