@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 8,
-      note: "Contrast, by the same rule as 4 and 36 rather than by a change to this window: a thing is now drawn in a lighter shade of its own colour with a deeper shade along its edges and its inner lead lines. Brown wood on cobalt was a different hue at the same depth, which is not contrast. Nothing else about this one changed.",
+      note: "Same two-shade rule as 4 and 36, and this is a new drawing from it. The scroll is now plainly torn in two down the middle with the nail showing, which the one you saw never was. The field came back a hotter red than before - say if you want the deeper crimson back.",
     },
     {
       n: 18,
@@ -24,7 +24,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 20,
-      note: "Answering your question first: no, there was no new picture last round. I changed the wording so the opening is a third of the height of the rock and a quarter of its width, and then never ran a draw, so what you looked at was the old one. This is the first drawing made from the new wording.",
+      note: "You asked whether there was a new picture. There was not, and now there is. This is the first one drawn since the opening was given a size, and the rock stands plainly wider than the mouth on both sides with the entrance dark. Nothing else changed.",
     },
     {
       n: 21,
@@ -40,7 +40,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "Both of your asks. The sky is clear daylight blue now instead of cobalt, and it lightens as it goes down; and each beam is narrow where it meets the cloud and widens as it falls, so the spread fans instead of standing vertical. I also cut about a third of the wording away, which is what fixed 11 and is being tried on 18 as well.",
+      note: "Both of your asks went into the wording, and then all three new draws came back worse than this one - a grid of eight panels, a cross, and a fan of ten rays - so the picture is unchanged. What you are looking at already has the pale sky lightening downward and beams that widen as they fall. The wording is now a third shorter; the next draw is the test of that.",
     },
     {
       n: 30,
@@ -48,15 +48,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 32,
-      note: "Six leaves on each tree, and the river now runs clear between the two of them so that no water crosses in front of a trunk or a branch or a leaf. Nothing else changed. Worth knowing: two of the three draws last round came back as a chalice with a crown rather than a river at all, so this window is unstable and one good picture from it is luck as much as wording.",
+      note: "Six broad leaves on each tree, and the river runs clear between the two of them with no water crossing a trunk or a leaf. All four new draws came back as the right subject, so the instability I warned you about last round has gone. Nothing else changed.",
     },
     {
       n: 34,
-      note: "The emerald rainbow and the seven flames are back, as you asked. Why they went: the rainbow was being drawn as the white border of the window itself rather than as an arch behind the throne, and cutting it was easier than fixing it. It is now worded as an arch whose two ends stop on the glass well inside the border, and the seven flames stand in a row on the lowest step.",
+      note: "Both are back, as you asked, and the rainbow is at last drawn as an emerald arch behind the throne rather than as the window's own border. The flames are still wrong: five, not seven. One other draw did give exactly seven, but it turned the whole window green and lost the blue arch head that all thirty-six share - say if you would rather have that one.",
     },
     {
       n: 36,
-      note: "Contrast, by the same rule as 4 and 8 rather than by a change to this window: green leaves, brown cross and blue field were three hues all at the same depth, and a thing now carries a lighter shade of its own colour with a deeper shade along its edges. Nothing else changed. Say if it still does not read at phone size in the lyric video.",
+      note: "Same two-shade rule as 4 and 8, and this drawing reads: the cross stands clear of the vine instead of being lost inside it. What bought that is a lighter field than the house rule allows. Say if you would rather have the deep field back and the cross harder to find.",
     },
   ];
   return couplets;
