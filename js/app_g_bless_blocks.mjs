@@ -28,10 +28,17 @@ export function app_g_bless_blocks(rows) {
   ("The world is far wider than the column, which is why nothing here has to cope with a column that will not fit. Should one ever not, the halves would come out negative and the blocks would be laid partly over the ring of water the world is wrapped in - which is drawn as nothing, so the failure would be a street that visibly stops.");
   let count = bless_blocks_count();
   let gap = bless_blocks_gap();
+  ("A block is measured by its fronts, its pavement and its ROAD, and the road is what says");
+  ("how deep it is now: it is the southernmost band there is, so a measurement that stopped");
+  ("at the pavement would report a block three rows shallower than it is and stack the next");
+  ("street across the end of this one. The grass and the garden paths lie between rows that");
+  ("are already counted, so they need not be named here - but naming the deepest thing and");
+  ("the widest thing is what this has to do, and both of those are the road.");
   function measure_at(index) {
     let measured = bless_block(0, 0, index);
     let walls = property_get(measured, "walls");
-    let tiles = list_concat_property(walls, measured, "sidewalk");
+    let with_sidewalk = list_concat_property(walls, measured, "sidewalk");
+    let tiles = list_concat_property(with_sidewalk, measured, "road");
     let sides = tiles_sides(tiles);
     let right = property_get(sides, "right");
     let width = add(right, 1);
