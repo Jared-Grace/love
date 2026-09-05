@@ -24,7 +24,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 20,
-      note: "You asked whether there was a new picture. There was not, and now there is. This is the first one drawn since the opening was given a size, and the rock stands plainly wider than the mouth on both sides with the entrance dark. Nothing else changed.",
+      note: "The rock is now a lot wider and taller than the entrance, as you asked. What did it was cutting the wording, not adding to it: three clauses of proportion had made it long, and long makes it come back photographic. Still wrong - the mouth has a built stone arch ring around it, which no wording has yet removed.",
     },
     {
       n: 21,
@@ -36,11 +36,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 25,
-      note: "Seven crowns at last, and large. Your own words did it: I had read triangle and square as rows and asked for three side by side over four side by side, which drew two crowns. Asked for as a triangle of three over a square of four it came back exactly seven. They are still all alike and all white, so say whether they should differ in shape and in colour.",
+      note: "Seven crowns, and each one a different colour. Asking for no two the same drew ten of them; naming the colour of each crown by its place in the window drew exactly seven. The field came back blue rather than the crimson and violet the wording asks for, which is the price of the colour list.",
     },
     {
       n: 26,
-      note: "Both of your asks went into the wording, and then all three new draws came back worse than this one - a grid of eight panels, a cross, and a fan of ten rays - so the picture is unchanged. What you are looking at already has the pale sky lightening downward and beams that widen as they fall. The wording is now a third shorter; the next draw is the test of that.",
+      note: "The beams are narrow at the cloud and fan out as they fall, and each one now runs the whole way down in a single colour without breaking. Cutting the wording by a third and moving that rule to the front is what fixed it. The sky above the cloud is still deep blue rather than light.",
     },
     {
       n: 30,
