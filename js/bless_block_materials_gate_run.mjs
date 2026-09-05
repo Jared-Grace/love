@@ -157,8 +157,9 @@ export function bless_block_materials_gate_run() {
     grassed_solid,
     hint: "a yard made of a solid is a garden nobody can cross to their own front door",
   });
-  let right = list_concat(pavements, roads);
-  let grassed_ground = list_intersection(grasses, right);
+  let hard = list_concat(pavements, roads);
+  let hard_all = list_concat(hard, driveways);
+  let grassed_ground = list_intersection(grasses, hard_all);
   let grass_apart = list_empty_is(grassed_ground);
   assert_json(grass_apart, {
     grassed_ground,
@@ -186,6 +187,7 @@ export function bless_block_materials_gate_run() {
     pavements: pavements_count,
     roofs: roofs_count,
     roads: roads_count,
+    driveways: list_size(driveways),
     street_faces: street_faces,
   };
   return walked;
