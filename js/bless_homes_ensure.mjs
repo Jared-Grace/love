@@ -1,3 +1,4 @@
+import { list_concat } from "./list_concat.mjs";
 import { list_size } from "./list_size.mjs";
 import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { property_list_get } from "./property_list_get.mjs";
@@ -22,11 +23,19 @@ export function bless_homes_ensure(people, blocks) {
   ("only its own five doors, so the number has to be taken back down to where it sits");
   ("inside its block before a door can be found by it. Handed over whole, everybody on the");
   ("second block would be sent to a door that does not exist.");
-  ("A walker's home is the WHOLE pavement of their own block and their roam is nothing,");
-  ("which reads as 'may be anywhere along it and nowhere off it'. Everybody walking one");
-  ("pavement shares its one list rather than a copy each, because it is one pavement - and");
-  ("it is theirs rather than any pavement, so the crowd a prayer names is the crowd stood");
-  ("in front of the player rather than one scattered over the whole world.");
+  ("A walker's home is the whole FOOTWAY of their own block - the pavement and the grass on");
+  ('both sides of it - and their roam is nothing, which reads as "may be anywhere on it and');
+  ('nowhere off it". Everybody walking one block shares its one list rather than a copy each,');
+  ("because it is one footway - and it is theirs rather than any block's, so the crowd a");
+  ("prayer names is the crowd stood in front of the player rather than one scattered over");
+  ("the whole world.");
+  ("The GRASS is in it and the ROAD is not, and that is the difference between a person and");
+  ("traffic. It used to be the pavement alone, and the pavement alone was two rows deep at");
+  ("the time; when the pavement became a single row down the middle of the lawn, the same");
+  ("rule turned the whole crowd into one queue standing single file, mostly unable to move");
+  ("because the only way past anybody was through them. A footway three rows deep is a");
+  ("pavement people walk along and step onto the verge to pass on, which is what a pavement");
+  ("is. Keeping the road out is what leaves the road looking like somewhere they are not.");
   ("The doorstep is found in two steps, because a door belongs to a family and a family sits");
   ("inside a building. The building says which of the block's five sets of doorsteps, and the");
   ("family says which door of that building. Both are the remainder of a division already");
@@ -42,7 +51,9 @@ export function bless_homes_ensure(people, blocks) {
     let sidewalk = property_get(block, "sidewalk");
     let walker = property_get(person, "walker");
     if (walker) {
-      property_set(person, "home", sidewalk);
+      let yard = property_get(block, "yard");
+      let footway = list_concat(sidewalk, yard);
+      property_set(person, "home", footway);
       property_set(person, "roam", 0);
       return;
     }
