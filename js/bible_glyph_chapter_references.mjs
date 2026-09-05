@@ -189,6 +189,14 @@ export function bible_glyph_chapter_references() {
       reference: "Jonah 4",
     },
     {
+      chapter_code: "HAG01",
+      reference: "Haggai 1",
+    },
+    {
+      chapter_code: "HAG02",
+      reference: "Haggai 2",
+    },
+    {
       chapter_code: "MAT05",
       reference: "Matthew 5",
     },
