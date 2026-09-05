@@ -1,4 +1,4 @@
-import { bless_driveway_paving } from "./bless_driveway_paving.mjs";
+import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
 import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { bless_block_road } from "./bless_block_road.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -50,7 +50,7 @@ export function app_g_bless_blocks_raise(rows, blocks) {
     app_g_bless_tiles_pave(rows, road, item_road);
     let item_pavement = bless_block_pavement(index);
     app_g_bless_tiles_pave(rows, sidewalk, item_pavement);
-    let item_driveway = bless_driveway_paving();
+    let item_driveway = bless_concrete_paving();
     app_g_bless_tiles_pave(rows, paths, item_driveway);
   }
   each_index(blocks, block_raise);
