@@ -49,7 +49,7 @@ export function app_g_bless_buildings_raise(rows, buildings, block) {
   ("both of those are facts about the building - worked out again anywhere else, they would");
   ("be a second copy free to disagree with the first, and disagreeing quietly, since a yard");
   ("nobody paved looks like scenery until somebody walks into the water.");
-  let item_roof = g_tile_wall();
+  let item_roof = bless_block_roof(block);
   let item_ground = bless_block_pavement(block);
   let faces = bless_block_faces(block);
   function building_raise(building, index) {
