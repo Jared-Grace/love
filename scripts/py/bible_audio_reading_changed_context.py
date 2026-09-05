@@ -63,9 +63,10 @@ def occurrence_add(seen, word, was, now, before, after, text_moved):
     row = seen[word]
     row["times"] += 1
     row["text_moved" if text_moved else "sound_only"] += 1
-    row["after_" + ("vowel" if after[:1].lower() in "aeiou" else "other")] += 1
-    key = was + " > " + now
-    row["soundings"][key] += 1
+    beside = "vowel" if after[:1].lower() in "aeiou" else "other"
+    row["after_" + beside] += 1
+    row["soundings"][was + " > " + now] += 1
+    row["soundings_beside"][was + " > " + now + " before " + beside] += 1
     if len(row["examples"]) < EXAMPLES_KEPT:
         row["examples"].append(
             {
@@ -114,6 +115,7 @@ def word_row_new():
         "after_vowel": 0,
         "after_other": 0,
         "soundings": collections.Counter(),
+        "soundings_beside": collections.Counter(),
         "examples": [],
     }
 
@@ -158,7 +160,11 @@ def main(args_path):
                 "chapters_read": len(old_sound),
                 "pieces_unlined": unlined,
                 "words": {
-                    word: dict(row, soundings=dict(row["soundings"].most_common()))
+                    word: dict(
+                        row,
+                        soundings=dict(row["soundings"].most_common()),
+                        soundings_beside=dict(row["soundings_beside"].most_common()),
+                    )
                     for word, row in sorted(seen.items())
                 },
             },
