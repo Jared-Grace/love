@@ -28,8 +28,8 @@ export function js_statement_value_written_is(statement) {
   if (plain) {
     return true;
   }
-  let list_is = js_node_type_is(init, "ArrayExpression");
-  if (list_is) {
+  let list_node_is = js_node_type_is(init, "ArrayExpression");
+  if (list_node_is) {
     let elements = property_get(init, "elements");
     let empty = list_empty_is(elements);
     return empty;
