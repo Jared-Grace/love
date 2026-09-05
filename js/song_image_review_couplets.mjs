@@ -16,19 +16,19 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "The ram has the yellow halo you asked for twice, plain with nothing inside it - a plain circle is the church's mark for someone God set apart, and the ram is a picture of CHRIST rather than CHRIST himself. The thorn ring now sits on the head between the horns and the thicket closes round the legs. The pink shape under the belly is gone and is forbidden outright.",
+      note: "You asked three times for the thicket to trap more. The branches now cross in front of the ram as well as behind it, lying over its chest and legs, so it is held in on every side. Nothing else changed - the halo and the thorn ring are as you accepted them.",
     },
     {
       n: 18,
-      note: "You were right that it had neither, and here is why: the kept drawing was older than the wording. The scroll was written into the symbol after that picture was drawn, so it could never have had one. This one has both - yellow halo with the red cross in it, and the sealed scroll under the hooves. It has five seals and should have seven.",
+      note: "Rolled up, brighter, and the genitals - all three are now in the wording, but I cannot show you a new drawing. The drawing account is out of credits and every attempt today came back refused. The picture above is 47: it has the rolled scroll but five seals and the cross outside the halo. 49 had seven seals and the cross inside, and was dark, so neither one is right yet.",
     },
     {
       n: 20,
-      note: "You asked for stone with a dark entrance. I had made the entrance violet, which was my decision and not anything you asked for, and it was wrong. It is black now.",
+      note: "You said it read as a tower because the entrance was nearly the whole structure. The wording now holds the opening to a third of the height of the rock and a quarter of its width, so the rock stands broadly out on both sides and rises well above it. That is the only change.",
     },
     {
       n: 21,
-      note: "You asked what was wrong with the one before. Honest answer: nothing. I replaced it on my own judgement and what replaced it was a grey frame with an oval in it, which is what you saw. This is back to a mass of rock with a black mouth and the stone rolled up against it.",
+      note: "You asked for the stone to be taller than the entrance. I found why four tries failed: the wording also asked for a crescent of the black mouth to keep showing past the edge of the stone, which fights covering it, so the drawing left the mouth open. That clause is gone, and the stone wording no longer uses the word oval, which was summoning one. No new drawing yet - the drawing account is out of credits.",
     },
     {
       n: 24,
