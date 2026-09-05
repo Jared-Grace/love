@@ -32,7 +32,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "All three are in the wording now: measured widths from a lead line up to half the stone, lighter colour throughout, and every beam tapering to a point unless it reaches the window edge. Ten more draws and the picture above is unchanged, because every one that got the beams right lost the circle and came back oval. Attempt 190 has the beams you asked for, on an oval stone. Say which of the two you would rather keep.",
+      note: "Nothing was ever wrong with 114 except that its beams are all white where the wording asked for colour. It is kept, as you asked. One correction: I told you 190 was oval and it is not. I had been squashing tall pictures into squares to compare them, which made every round stone look oval - 190 is this same window with the colour in it.",
     },
     {
       n: 26,
