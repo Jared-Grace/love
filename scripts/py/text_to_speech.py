@@ -312,11 +312,16 @@ def line_samples(g2p, kokoro, text, speed):
 
     ★ THE SPEED IS ASKED FOR RATHER THAN TAKEN FROM THE MODULE, BECAUSE A
     CHAPTER AND A SINGLE WORD WANT DIFFERENT ONES.  Reading a chapter aloud
-    is slowed on purpose so a learner can follow it.  A lone word slowed the
-    same way comes apart: the model stretches the last consonant until its
-    release is heard as a vowel of its own, so "with" is heard as "with-uh"
-    and "the" as two sounds rather than one.  Same engine, same voice, and
-    the caller says which job it is.
+    is slowed on purpose so a learner can follow it; a lone word has nothing
+    to follow, so the reason does not apply and the slowing only stretches
+    it - measured, a quarter to a third longer at three quarters speed.
+    Same engine, same voice, and the caller says which job it is.
+
+    Do not read this as the cure for a word that sounds wrong.  It was
+    changed while chasing a report of "with" heard as "with-uh", and it did
+    not fix that; the better suspect turned out to be the phonemes, which
+    come back in sentence form - "the" as an unstressed schwa, "with" with a
+    voiced ending that is released audibly when no word follows it.
     """
     parts = []
     rate = 24000
