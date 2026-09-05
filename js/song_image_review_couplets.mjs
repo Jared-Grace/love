@@ -28,11 +28,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 21,
-      note: "You asked for the stone to be taller than the entrance. I found why four tries failed: the wording also asked for a crescent of the black mouth to keep showing past the edge of the stone, which fights covering it, so the drawing left the mouth open. That clause is gone, and the stone wording no longer uses the word oval, which was summoning one. No new drawing yet - the drawing account is out of credits.",
+      note: "Eighteen more tries and the stone still will not cover the mouth, so the picture is unchanged. I did find one real cause: the mouth used to sit high in the rock face while the stone stands on the ground, so it could not reach. The mouth now runs down to the ground, which fixed the shape and not the covering. The stone comes back small and low every time, and I have stopped spending on it until you say it is worth more.",
     },
     {
       n: 24,
-      note: "You asked for orange, yellow and white and for lighter, brighter colours. The beams are now white, yellow and orange first, and the whole window reads bright. You also said the stone is oval and should be circular - that one did not land, and eight more tries all came back oval. Its height and width are now given as one measure, but there are no credits left to test it.",
+      note: "Circular at last, after twenty-two tries that all came back oval. What worked was describing it as the shape a compass draws, every point of its edge the same distance from the centre. The cost is the field: it is grey rock now rather than two coloured sheets, and there is no tomb mouth. Say whether the round stone is worth that.",
     },
     {
       n: 26,
