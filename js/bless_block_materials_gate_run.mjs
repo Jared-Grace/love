@@ -1,3 +1,4 @@
+import { g_tiles_roofs } from "./g_tiles_roofs.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { g_tiles_wall_faces_groups } from "./g_tiles_wall_faces_groups.mjs";
 import { bless_pavements } from "./bless_pavements.mjs";
