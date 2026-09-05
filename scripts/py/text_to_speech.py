@@ -307,14 +307,23 @@ def g2p_ready():
     return g2p
 
 
-def line_samples(g2p, kokoro, text):
-    """Speaks one line, returning the samples and the rate."""
+def line_samples(g2p, kokoro, text, speed):
+    """Speaks one line, returning the samples and the rate.
+
+    ★ THE SPEED IS ASKED FOR RATHER THAN TAKEN FROM THE MODULE, BECAUSE A
+    CHAPTER AND A SINGLE WORD WANT DIFFERENT ONES.  Reading a chapter aloud
+    is slowed on purpose so a learner can follow it.  A lone word slowed the
+    same way comes apart: the model stretches the last consonant until its
+    release is heard as a vowel of its own, so "with" is heard as "with-uh"
+    and "the" as two sounds rather than one.  Same engine, same voice, and
+    the caller says which job it is.
+    """
     parts = []
     rate = 24000
     for run in pieces_of(text):
         phonemes, _ = g2p(run)
         samples, rate = kokoro.create(
-            phonemes, voice=VOICE, speed=SPEED, is_phonemes=True
+            phonemes, voice=VOICE, speed=speed, is_phonemes=True
         )
         parts.append(samples)
     if not parts:
@@ -357,9 +366,12 @@ def job_spoken(job):
         out_dir = Path(path_output)
         out_dir.mkdir(parents=True, exist_ok=True)
         lines = [said_text(line.strip()) for line in text.split("\n")]
+        speed = job.get("speed", SPEED)
         silent = 0
         for i, line in enumerate(lines):
-            samples, rate = line_samples(engine["g2p"], engine["kokoro"], line)
+            samples, rate = line_samples(
+                engine["g2p"], engine["kokoro"], line, speed
+            )
             if samples is None:
                 samples = np.zeros(int(rate / 4), dtype=np.float32)
                 silent += 1
