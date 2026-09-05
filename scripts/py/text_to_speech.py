@@ -360,7 +360,53 @@ def g2p_ready():
     return g2p
 
 
-def line_samples(g2p, kokoro, text, speed):
+STRESS_MARKS = "ˈˌ"
+
+VOWELS = "ɑæɐʌɛɜɚɔɒəiɪuʊoeaAIOWYY"
+
+SAID_ALONE = {
+    "the": "ðˈʌ",
+    "with": "wɪθ",
+}
+
+
+def said_alone_phonemes(word, phonemes):
+    """The same word as a person says it on its own, not inside a sentence.
+
+    ★ THE PHONEMISER ANSWERS WITH THE SENTENCE FORM, AND A BUTTON IS NOT A
+    SENTENCE.  Asked for "the" it answers a schwa with no stress on it at all,
+    which is right for "the" running into the next word and wrong for a button
+    whose whole job is to teach a learner what the word sounds like.  A reduced
+    vowel played on its own is heard as a mumble, and it was: reported as "the
+    sounds more like duh".
+
+    The rule is mechanical, which is why it can be applied to a whole
+    vocabulary rather than argued about word by word: a word said on its own is
+    stressed somewhere, so an answer carrying no stress mark anywhere is a
+    reduced form, and the stress goes before its first vowel.  Measured over
+    the app's list, 32 words of 1,674 come back that way - a closed class of
+    function words, exactly the ones English leans on.
+
+    Two words are given their citation form outright instead, because for them
+    the reduced form differs in the *vowel* and not only in the weight, and no
+    rule reads that off the sentence form.  "the" said alone is "thuh" with
+    weight, and "with" said alone ends in an unvoiced th - a voiced one has
+    nothing to run into and is released as an audible puff, which is what the
+    report of "with-uh" was.  Both spellings are the ones a person picked by
+    ear off a page of candidates, so do not re-derive them.
+    """
+    said = SAID_ALONE.get(word.strip().lower())
+    if said is not None:
+        return said
+    if any(mark in phonemes for mark in STRESS_MARKS):
+        return phonemes
+    for i, sound in enumerate(phonemes):
+        if sound in VOWELS:
+            return phonemes[:i] + "ˈ" + phonemes[i:]
+    return phonemes
+
+
+def line_samples(g2p, kokoro, text, speed, citation):
     """Speaks one line, returning the samples and the rate.
 
     ★ THE SPEED IS ASKED FOR RATHER THAN TAKEN FROM THE MODULE, BECAUSE A
@@ -374,12 +420,16 @@ def line_samples(g2p, kokoro, text, speed):
     changed while chasing a report of "with" heard as "with-uh", and it did
     not fix that; the better suspect turned out to be the phonemes, which
     come back in sentence form - "the" as an unstressed schwa, "with" with a
-    voiced ending that is released audibly when no word follows it.
+    voiced ending that is released audibly when no word follows it.  That is
+    what `citation` is for, and it is the caller's call for the same reason:
+    a chapter is a sentence and wants the sentence form, a button is not.
     """
     parts = []
     rate = 24000
     for run in pieces_of(text):
         phonemes, _ = g2p(run)
+        if citation:
+            phonemes = said_alone_phonemes(run, phonemes)
         samples, rate = kokoro.create(
             phonemes, voice=VOICE, speed=speed, is_phonemes=True
         )
