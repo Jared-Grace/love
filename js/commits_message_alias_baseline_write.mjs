@@ -1,10 +1,10 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { commits_message_alias_named } from "./commits_message_alias_named.mjs";
 import { property_get } from "./property_get.mjs";
 import { commits_message_alias_baseline_path } from "./commits_message_alias_baseline_path.mjs";
 import { commits_message_alias_offenders_after_door } from "./commits_message_alias_offenders_after_door.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { baseline_known_write } from "./baseline_known_write.mjs";
 export async function commits_message_alias_baseline_write() {
@@ -15,11 +15,13 @@ export async function commits_message_alias_baseline_write() {
     ", and an offender is sorted against it rather than let through: under it the message is in the history and cannot be edited, so recording it is the only thing left to do; over it the message was worded by a door that was already shut, so it says the door was gone round and it is refused here as loudly as ever.");
   ("The decision that this needed was the human's and was theirs to make - whether their own commit should carry the full name too - and it was made by putting the spelling out in front of both seams. Nothing here quietly arranged for it.");
   ("The record is not a let-off waiting to be cleared. A message belongs to a commit already in the history, and the only way to change one is to write every commit after it again under a new name.");
+  ("WHAT IS WRITTEN DOWN AND WHAT IS SORTED AGAINST THE DOOR ARE NOW TWO DIFFERENT READINGS OF THE SAME OFFENDER, and both come from the one walk. The record is written as the second the commit was made at, because a rewrite of this history renames every commit and on 2026-09-04 one did, killing all fifty one names at once. The sorting is asked by name, because a second cannot say which side of the door a commit fell on. So the rows go to the door and the names go to the record.");
   arguments_assert(arguments, 0);
   let told = await commits_message_alias_named();
   let known = property_get(told, "offenders");
+  let rows = property_get(told, "rows");
   let path = commits_message_alias_baseline_path();
-  let after = await commits_message_alias_offenders_after_door(known);
+  let after = await commits_message_alias_offenders_after_door(rows);
   let f_name = fn_name("git_call_message");
   let f_name2 = fn_name("commits_message_alias_door_commit");
   let hint = text_combine_multiple([
