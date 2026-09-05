@@ -68,6 +68,19 @@ export async function app_g_bless_finished_place(
   ("answers, made about the middle of the sequence instead of the start of it.");
   ("They are let go together and then waited out by the clock. Together, because they are");
   ("one thing seen three ways and a staggered ending would read as three things stopping.");
+  ("THE CAMERA PRESSES IN WHILE THE HOUSE IS BURNING, between the light coming up out of");
+  ("the ground and the bloom opening past it, and comes back out again once the three");
+  ("lights have been let go. It is a lean and not a jump, and the wait that used to sit in");
+  ("that gap is what pays for it - so every light stage keeps exactly the length it was");
+  ("given, and the half second the player spent watching nothing is spent watching the");
+  ("street come closer instead.");
+  ("It says the one thing the rest of this moment cannot. Everything else here is about the");
+  ("house; coming closer is about the PLAYER, who is brought nearer to something and then");
+  ("taken back out to the ordinary distance when it is over, so the street they carry on");
+  ("playing is the street they were playing.");
+  ("It is possible at all only because holding the map still now holds movement and not");
+  ("light. A camera journey used to finish every fade on the map in the frame it set off,");
+  ("so a journey run over the top of a celebration would have ended the celebration.");
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
   let size = app_g_bless_tile_size();
@@ -90,11 +103,26 @@ export async function app_g_bless_finished_place(
   let squares = app_g_bless_finished_white(div_map, tiles, roof_is);
   await sleep(720);
   let glow = app_g_bless_finished_glow(div_map, tiles);
-  await sleep(760);
+  await sleep(300);
+  let closer = app_g_bless_tile_size_close();
+  await app_g_bless_camera_glide(
+    container_map,
+    div_map,
+    player_img_c,
+    closer,
+    middle,
+  );
   let bloom = app_g_bless_finished_bloom(div_map, middle);
   await sleep(300);
   app_g_bless_finished_bloom_fade(bloom);
   app_g_bless_finished_glow_fade(glow);
   app_g_bless_finished_white_fade(squares);
   await sleep(900);
+  await app_g_bless_camera_glide(
+    container_map,
+    div_map,
+    player_img_c,
+    size,
+    middle,
+  );
 }
