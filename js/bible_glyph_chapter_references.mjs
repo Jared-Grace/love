@@ -65,6 +65,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 20",
     },
     {
+      chapter_code: "EXO32",
+      reference: "Exodus 32",
+    },
+    {
       chapter_code: "NUM20",
       reference: "Numbers 20",
     },
@@ -121,6 +125,10 @@ export function bible_glyph_chapter_references() {
       reference: "2 Kings 2",
     },
     {
+      chapter_code: "2KI04",
+      reference: "2 Kings 4",
+    },
+    {
       chapter_code: "JOB42",
       reference: "Job 42",
     },
@@ -147,6 +155,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "PSA085",
       reference: "Psalm 85",
+    },
+    {
+      chapter_code: "PSA091",
+      reference: "Psalm 91",
     },
     {
       chapter_code: "PSA096",
@@ -219,6 +231,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EZK33",
       reference: "Ezekiel 33",
+    },
+    {
+      chapter_code: "EZK34",
+      reference: "Ezekiel 34",
     },
     {
       chapter_code: "EZK36",
