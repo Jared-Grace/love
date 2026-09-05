@@ -125,6 +125,29 @@ export function bless_block_materials_gate_run() {
     roaded_roofs,
     hint: "a road made of what the roofs are made of ties the top of a house to the ground in front of it",
   });
+  ("The DRIVEWAY is the other material that is the same on every street, and it is checked against everything a street is built from for one reason above the rest: it crosses every band there is. A drive runs over the pavement and the grass and stops against the road, so a drive the colour of any of those is a drive that vanishes for part of its length and reappears - which reads as a broken path rather than as one thing.");
+  let driveways = [bless_driveway_paving()];
+  let driveway_solid = list_intersection(driveways, solids);
+  let driveway_walkable = list_empty_is(driveway_solid);
+  assert_json(driveway_walkable, {
+    driveway_solid,
+    hint: "a driveway made of a solid is a wall across the way out of every house on the street",
+  });
+  let driveway_ground = list_intersection(
+    driveways,
+    list_concat(pavements, roads),
+  );
+  let driveway_apart = list_empty_is(driveway_ground);
+  assert_json(driveway_apart, {
+    driveway_ground,
+    hint: "a driveway made of what the street is paved or roaded with disappears where it crosses it",
+  });
+  let driveway_fronts = list_intersection(driveways, list_concat(faces, roofs));
+  let driveway_below = list_empty_is(driveway_fronts);
+  assert_json(driveway_below, {
+    driveway_fronts,
+    hint: "a driveway made of what a house is fronted or roofed with reads as part of the house lying on the ground",
+  });
   ("The GRASS is the one material here that is deliberately the same on every street, so nothing about it is checked for variety. What is checked is that it is not any of the others: a yard the colour of the pavement or of the road leaves the paths crossing it invisible, a yard the colour of a front leaves a house with no bottom edge, and a yard on the list of solids fences every household inside its own garden with no error anywhere.");
   let grass = bless_yard_grass();
   let grasses = [grass];

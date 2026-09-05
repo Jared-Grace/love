@@ -35,7 +35,8 @@ export function app_g_bless_player_place(player, block) {
   let doorsteps = list_middle(doors);
   let door = list_middle(doorsteps);
   let depth = bless_sidewalk_depth();
-  let back = subtract(depth, 1);
+  ("One row PAST the pavement rather than at the back of it, which is the same square as long as the pavement is one row deep and would not be if it grew. The player stands on the grass with the whole pavement, the doorsteps and the fronts ahead of them; standing on the pavement itself, at one row deep, is standing on somebody else doorstep.");
+  let back = depth;
   let x = property_get(door, "x");
   let door_y = property_get(door, "y");
   let y = add(door_y, back);
