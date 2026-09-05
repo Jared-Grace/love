@@ -33,6 +33,7 @@ export async function bible_folder_sentence_end_measure(bible_folder) {
       absent: true,
       unreachable: false,
       unrecognised: [],
+      blocked: [],
     };
     return nothing;
   }

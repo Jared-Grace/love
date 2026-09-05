@@ -13,6 +13,7 @@ import { less_than } from "./less_than.mjs";
 import { numbers_apart } from "./numbers_apart.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function lyric_video_document_times_measure(
   path_audio,
@@ -20,10 +21,11 @@ export async function lyric_video_document_times_measure(
 ) {
   "$plain path_audio";
   "$plain path_document";
-  "Where every line of a song begins according to two readings of the recording that were made without reference to each other, how much of the written psalm was actually heard, the words the second reading thought it heard, and the lines the two readings do not agree about.";
+  "Where every line of a song begins according to two readings of the recording that were made without reference to each other, how much of the written psalm was actually heard, the words the second reading thought it heard, and the lines the two readings do not agree about, each with the direction it disagrees in.";
   "★ TWO READINGS ARE TAKEN BECAUSE NEITHER ONE CAN BE ASKED WHETHER IT IS RIGHT. The aligner is handed the words and lays them onto the sound whatever the sound holds, so it cannot disagree with the text; its own score is worked out by the model whose confusion is in doubt, and on singing that score came out at 0.367 for the right words against 0.25 for a different psalm's, which separates nothing. The transcriber is shown no words at all, so how much of the psalm it heard by itself is a judgement about the recording rather than about the alignment: 0.968 against 0.191 on the same pair.";
   "★ THE TIMES COME FROM THE ALIGNER AND ONLY THE VERDICT COMES FROM THE HEARING, WHICH IS WHY BOTH ARE RUN AND NEITHER IS PREFERRED OUTRIGHT. Measured against times a person had already confirmed, the aligner placed 27 of 32 lines inside a tenth of a second, and the transcriber stayed about a quarter of a second out even after its constant lead was taken off. So one is asked when and the other is asked what, and each is asked the thing it is good at.";
   "★ THE TRANSCRIBER'S OWN WORDS COME BACK AND NOT ONLY WHAT THEY IMPLY ABOUT EACH LINE, BECAUSE THE ONE ANSWER A CALLER CANNOT ACT ON IS THE ONE THIS USED TO GIVE. A line whose words went unheard is reported as no time at all, and no time at all is the shape that cannot be argued with either way - a person told a line was unplaced has nothing to look at. The words are the only thing that says what was there instead, they were already in hand, and dropping them means a caller who wants them has to hear the whole recording again.";
+  "★ HOW FAR APART THE TWO READINGS ARE DOES NOT SAY HOW MUCH HARM IS DONE, AND WHICH WAY ROUND THEY ARE DOES. A line the aligner puts early shows its words before they are sung and holds them until the next line begins, so nobody watching sees anything wrong at all; a line it puts late shows them after they have been sung, which is the one thing a person can actually catch. Both were being reported by their distance alone, and across twenty six songs that pile held 168 harmless ones beside 156 real ones. The worst early miss measured five seconds and spoils nothing; the worst late one measured thirty, on a psalm whose closing lines arrive half a minute after they are heard.";
   "★ NOTHING IS WRITTEN ANYWHERE BY THIS, AND THAT IS THE POINT OF ITS NAME. A song whose lines are all agreed is finished and a song with seven flagged lines needs a person for a few minutes, and those are different amounts of work; a command that quietly saved either one would hide which of the two it had just done.";
   "The lines handed back are the ones where the two readings are further apart than a third of a second, together with any line neither reading could place. That threshold was chosen to accuse rather than to excuse: a line flagged wrongly costs one glance, and a line cleared wrongly ships a video whose words arrive at the wrong moment with nobody left to notice.";
   arguments_assert(arguments, 2);
@@ -63,6 +65,9 @@ export async function lyric_video_document_times_measure(
     let number2 = numbers_apart(start, start_heard);
     let top = multiply_round(number2, 1000);
     let apart = unplaced ? null : divide(top, 1000);
+    let number4 = subtract(start, start_heard);
+    let top4 = multiply_round(number4, 1000);
+    let behind = unplaced ? null : divide(top4, 1000);
     let disagreed = unplaced || greater_than(apart, apart_least);
     if (disagreed) {
       let flag = {
@@ -70,6 +75,7 @@ export async function lyric_video_document_times_measure(
         start,
         start_heard,
         apart,
+        behind,
         text: document.lines[number].text,
       };
       flagged.push(flag);
