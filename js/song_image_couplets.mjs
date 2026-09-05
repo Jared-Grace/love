@@ -345,7 +345,7 @@ export function song_image_couplets() {
         r2,
         ", and ",
         r3,
-        ", that opening one flat sheet of solid black, and the stone rolled hard up against that opening and standing taller than the opening and wider than it so that it covers the whole of it and overlaps the rock all round, standing on the ground with its face turned square to the viewer, one flat unbroken grey circle with nothing drawn on its face, and a thin crescent of the black opening still showing past its edge at one side so that the mouth of the tomb can plainly be seen to be there, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
+        ", and the stone rolled hard up against that opening and standing taller than the opening and wider than it so that it covers the whole of it and overlaps the rock all round on every side, standing on the ground with its face turned square to the viewer, one flat unbroken grey circle with nothing drawn on its face, the whole of the mouth of the tomb hidden behind the stone and the grave plainly shut, nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of deep crimson, the rock reaching almost to the white border on both sides",
       ]),
       symbol_ref: "Mark 16:4",
       same_as: 0,

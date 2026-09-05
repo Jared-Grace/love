@@ -27,6 +27,11 @@ export function bible_verse_end_blocked_or_null(text) {
     if (empty) {
       return false;
     }
+    let suffixes2 = bible_verse_end_suffixes();
+    let reached = text_ends_with_any(s, suffixes2);
+    if (reached) {
+      return false;
+    }
     let last = text_last(s);
     let matched = text_regex_match(last, closers);
     let closing = null_not_is(matched);
