@@ -16,15 +16,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 8,
-      note: "You could not tell the parchment was cancelled, because it was a blank white sheet nailed up. It is now torn clean across from the nail downward and hanging open, with the brown wood of the cross showing through the gap. The two field bands were white as well and are cobalt and crimson now.",
+      note: "Contrast, by the same rule as 4 and 36 rather than by a change to this window: a thing is now drawn in a lighter shade of its own colour with a deeper shade along its edges and its inner lead lines. Brown wood on cobalt was a different hue at the same depth, which is not contrast. Nothing else about this one changed.",
     },
     {
       n: 18,
-      note: "All three are in the wording now - rolled up, brighter, and the underside covered. I drew twelve more and none beat the picture above, so it is unchanged. The two closest rivals each broke the window: one had nine seals, the other a black field. This one still has five seals and the cross outside the halo.",
+      note: "Your whole priority list is already in the wording and has been for rounds - the drawings keep disobeying it, which is not the same problem. So this time I cut the wording instead of adding to it: about a quarter is gone, including a long clause about the legs and a run of colour prohibitions. Shortening is what fixed 11. A second halo is now refused by name.",
     },
     {
       n: 20,
-      note: "You said it read as a tower because the entrance was nearly the whole structure. The wording now holds the opening to a third of the height of the rock and a quarter of its width, so the rock stands broadly out on both sides and rises well above it. That is the only change.",
+      note: "Answering your question first: no, there was no new picture last round. I changed the wording so the opening is a third of the height of the rock and a quarter of its width, and then never ran a draw, so what you looked at was the old one. This is the first drawing made from the new wording.",
     },
     {
       n: 21,
@@ -32,31 +32,31 @@ export function song_image_review_couplets() {
     },
     {
       n: 23,
-      note: "New picture, and this one was my own finding rather than yours. The bottom third of the window was solid black, and the cause was the word Night standing at the front of the wording, so that word is gone and the ground band is violet now. Still wrong: the sunrise came out as a half dome where the wording asks for a thin slice no taller than a tenth of its width.",
+      note: "The black ground is back, since you say it is right. Taking it out was my own call and it was wrong - I read the black band as a fault and the word Night as its cause, and removed both. Still wrong on my side: the sun comes back a half circle where the wording asks for a thin sliver.",
     },
     {
       n: 25,
-      note: "The old wording described three crowns stacked one above another, which is a papal tiara, and that is what was being drawn. Revelation 19:12 says many diadems, so it is seven plain crowns standing side by side in one row now. Still wrong: they came out touching each other as one continuous band, where the wording asks for the glass of the field to show between them.",
+      note: "Your arrangement: three crowns in a row above and four in a row below, and no two of the seven the same - some with tall points, some short, some closed over the top. One row of seven was mine and you are right that it made them tiny. They are all still white glass, so say if the different crowns should differ in colour too.",
     },
     {
       n: 26,
-      note: "New picture. Each ray now carries its own colour unbroken from the cloud right down to the border, so nothing drops out at the foot while the lines carry on. The cloud is drawn in several panes with grey along its undersides instead of one flat white shape. There are six rays with wide sky between them rather than one warm band across the glass.",
+      note: "Both of your asks. The sky is clear daylight blue now instead of cobalt, and it lightens as it goes down; and each beam is narrow where it meets the cloud and widens as it falls, so the spread fans instead of standing vertical. I also cut about a third of the wording away, which is what fixed 11 and is being tried on 18 as well.",
     },
     {
       n: 30,
-      note: "New picture, drawn from the wording with the smoke put back in. The smoke is brown and rises above the fire, and the mountain is one flat grey instead of the photographic one you saw. That is the whole change.",
+      note: "Answering rather than redrawing: nothing you had asked for was wrong with 40. I replaced it on my own judgement, against two house rules - its smoke is photographic grey cloud rather than flat glass, and it has no coloured field bands. Measured against your own note it is the better picture, because it has the darkness and the gloom. Say the word and I put 40 back.",
     },
     {
       n: 32,
-      note: "Only the field changed, crimson over violet, where it was white before. The river and the two trees on its banks are unchanged. Worth knowing: two of the three draws this round came back as a chalice with a crown instead of a river at all, so this one is the exception and not the average.",
+      note: "Six leaves on each tree, and the river now runs clear between the two of them so that no water crosses in front of a trunk or a branch or a leaf. Nothing else changed. Worth knowing: two of the three draws last round came back as a chalice with a crown rather than a river at all, so this window is unstable and one good picture from it is luck as much as wording.",
     },
     {
       n: 34,
-      note: "The emerald rainbow was being drawn as the white border of the window rather than as an arch behind the throne, so I cut it, and the seven flames with it. The steps are drawn flat now, each one a straight band lying right across the window and wider than the step above it, instead of receding in perspective. What is left is the throne, the steps and the sceptre.",
+      note: "The emerald rainbow and the seven flames are back, as you asked. Why they went: the rainbow was being drawn as the white border of the window itself rather than as an arch behind the throne, and cutting it was easier than fixing it. It is now worded as an arch whose two ends stop on the glass well inside the border, and the seven flames stand in a row on the lowest step.",
     },
     {
       n: 36,
-      note: "Only the field changed. The two bands are cobalt over violet now where they came out white. The cross and the vine growing over it are unchanged.",
+      note: "Contrast, by the same rule as 4 and 8 rather than by a change to this window: green leaves, brown cross and blue field were three hues all at the same depth, and a thing now carries a lighter shade of its own colour with a deeper shade along its edges. Nothing else changed. Say if it still does not read at phone size in the lyric video.",
     },
   ];
   return couplets;
