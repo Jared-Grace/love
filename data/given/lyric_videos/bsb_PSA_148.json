@@ -53,19 +53,24 @@
    "scene": "the deep open sea seen from within it, with shafts of green light falling far down into the dark and the huge dim shape of a whale passing through them",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/ocean_depths.png",
    "start": 62.71,
-   "end": 71.23
+   "end": 71.23,
+   "gamma": 1.5,
+   "contrast": 1.1
   },
   {
    "scene": "a great storm over open country, a single fork of lightning going down through black cloud, with snow and hail driving across the wind",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/storm.png",
    "start": 71.23,
-   "end": 80.87
+   "end": 80.87,
+   "gamma": 1.25
   },
   {
    "scene": "a range of high hills covered in ancient cedars, the great dark trees standing along the ridges",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/cedars.png",
    "start": 80.87,
-   "end": 85.81
+   "end": 85.81,
+   "gamma": 1.6,
+   "contrast": 1.1
   },
   {
    "scene": "a wide grassland at first light with a great flock of birds rising from it into the open sky",
@@ -89,7 +94,9 @@
    "scene": "a ram's horn trumpet resting on a great stone altar in the first light of morning, with a single shaft of dawn falling across it",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/horn_on_the_altar.png",
    "start": 132.98,
-   "end": 153.522993
+   "end": 153.522993,
+   "gamma": 1.4,
+   "contrast": 1.1
   }
  ],
  "lines": [
