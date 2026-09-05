@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "Yes - traditional leading runs around a halo rather than across it, so the line should stop at the halo and pick up on its far side. That is in the wording now. The picture above is unchanged, because all four new draws obeyed the halo and lost something else: two dropped the thicket, two turned the field black. The words are right and waiting on a good draw.",
+      note: "New picture. The halo is a whole yellow disc now with no lead line across it, and the thicket and the coloured field both survived - the earlier draws obeyed the halo but lost one or the other every time. What fixed it was making the halo instruction shorter rather than more exact.",
     },
     {
       n: 18,
