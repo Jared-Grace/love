@@ -81,6 +81,8 @@ export function literals_frozen_names() {
   ("Beside it, the word one tab calls itself by - which is a tab's own and dies with the tab, and would be nothing to freeze if that were all it were. It is also the field each remembered reading is marked with, so it is sitting inside the list on that disk. Renaming it would leave every reading already written down marked with a word the reader no longer looks for, and each tab would then add a second line instead of writing over its own.");
   let spelled3 = fn_name("app_shared_bible_history_key");
   let spelled45 = fn_name("app_shared_bible_session_id_key");
+  ("A fifth folder of the bucket kind, holding one recording of each single English word a gloss explains. Sixteen hundred of them are sitting under it already and more are going up as this is written, and a shipped page builds the same address to play one back when a reader taps the word - so it escaped on the first upload, exactly like the gloss folders above it.");
+  ("Twice now this list has been called complete and been added to afterwards, so what the entries above said about completeness being re-earned rather than reached holds a third time. What is its own is how quietly this one would fail: the address is built once per word tapped, so retyping the word breaks nothing that anybody would see - every sound button simply stops making a sound, on a page that goes on looking entirely well.");
   let spelled46 = fn_name(
     "app_en_learn_bible_gloss_urdu_words_sound_upload_namespace",
   );
