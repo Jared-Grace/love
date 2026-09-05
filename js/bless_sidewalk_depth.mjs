@@ -1,6 +1,7 @@
 export function bless_sidewalk_depth() {
   "How many tiles deep the pavement in front of a block is.";
-  "Two, and the number is set by the crowd rather than by taste. One tile wide, two people";
+  "ONE. The long run of paragraphs below is the history of this number, kept because it is the record of what was measured and when; the answer it arrives at is at the bottom, not at the top.";
+  "It was TWO, and the number was set by the crowd rather than by taste. One tile wide, two people";
   "walking towards each other have nowhere to go but the way they came, so every meeting";
   "ends with somebody turning round. Two is enough for two people to pass - and this street";
   "does not hold two people, it holds a block's worth, because that is what the ladder says";
@@ -50,6 +51,9 @@ export function bless_sidewalk_depth() {
   "Not wider than it has to be. Forty-nine long by two deep is twenty-five to one and reads";
   "as a line, and a line is what makes some people plainly walking one way and some the";
   "other; wide enough to wander about on, it would read as a square with houses on one side.";
-  let depth = 2;
+  "ONE now, and what changed is not the crowd but the GROUND. Every figure above was measured when the pavement and the alleys were the whole of what a person could stand on - so the pavement had to hold the street on its own, and one deep was ninety-two per cent full with five people in six unable to move. The block since grew a lawn two rows deep and a road two rows deep, both walkable and both running the whole length of it, and the gaps between the houses are grass rather than paving now. A block that was ninety-eight tiles of standing room is well over two hundred.";
+  "So the number that was doing the work was never this one. It was tiles per person, and this was the only lever there was on it while the pavement was the only ground. It is not any more, and a pavement one deep is what the street was asked for: a line the crowd stands along with green on the far side of it, rather than a paved strip wide enough to wander about on.";
+  "Read the paragraphs above with that in mind. None of them is wrong and none is about this street - every one of them is a measurement of a block whose ground stopped at the kerb.";
+  let depth = 1;
   return depth;
 }
