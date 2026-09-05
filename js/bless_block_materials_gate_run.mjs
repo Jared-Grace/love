@@ -1,3 +1,4 @@
+import { bless_roads } from "./bless_roads.mjs";
 import { bless_block_faces } from "./bless_block_faces.mjs";
 import { range_map } from "./range_map.mjs";
 import { g_tiles_roofs } from "./g_tiles_roofs.mjs";
@@ -84,6 +85,64 @@ export function bless_block_materials_gate_run() {
     roofed_ground,
     hint: "a roof made of what the street is paved with is a house with no top on it",
   });
+  ("The ROAD is the fourth thing, and it is the widest band of ground a street has - wider than the pavement, since it is deeper and just as long. So it is held to every rule the pavement is held to, for the same reasons: at least two of them or every block in the world is surfaced alike, none named twice or two blocks in a row are, none made of a solid or the road is a wall the player is standing on, and none matching a front, a pavement or a roof anywhere in the game.");
+  ("Matching the PAVEMENT is the one that matters most here and the only one a player would notice at a glance. The road runs directly against the pavement along its whole length, so a road and a pavement of the same material are one grey field seven rows deep with the houses floating at the top of it - and the garden paths crossing it would be the only thing left saying where the pavement was.");
+  let roads = bless_roads();
+  let roads_count = list_size(roads);
+  let roads_enough = greater_than_equal(roads_count, 2);
+  assert_json(roads_enough, {
+    roads_count,
+    hint: "there must be at least two road surfaces, or every block in the world is roaded alike",
+  });
+  let roads_apart = list_unique_is(roads);
+  assert_json(roads_apart, {
+    roads,
+    hint: "no road surface may be named twice, or two blocks in a row have the same road",
+  });
+  let roaded_solid = list_intersection(roads, solids);
+  let roads_walkable = list_empty_is(roaded_solid);
+  assert_json(roads_walkable, {
+    roaded_solid,
+    hint: "a road made of a solid is a wall across the front of every house on the street",
+  });
+  let roaded_ground = list_intersection(roads, pavements);
+  let roads_edged = list_empty_is(roaded_ground);
+  assert_json(roads_edged, {
+    roaded_ground,
+    hint: "a road made of what the street is paved with leaves no edge between the pavement and the road",
+  });
+  let roaded_fronts = list_intersection(roads, faces);
+  let roads_grounded = list_empty_is(roaded_fronts);
+  assert_json(roads_grounded, {
+    roaded_fronts,
+    hint: "a road made of what the houses are fronted with reads as the fronts lying flat on the ground",
+  });
+  let roaded_roofs = list_intersection(roads, roofs);
+  let roads_below = list_empty_is(roaded_roofs);
+  assert_json(roads_below, {
+    roaded_roofs,
+    hint: "a road made of what the roofs are made of ties the top of a house to the ground in front of it",
+  });
+  ("The GRASS is the one material here that is deliberately the same on every street, so nothing about it is checked for variety. What is checked is that it is not any of the others: a yard the colour of the pavement or of the road leaves the paths crossing it invisible, a yard the colour of a front leaves a house with no bottom edge, and a yard on the list of solids fences every household inside its own garden with no error anywhere.");
+  let grasses = [bless_yard_grass()];
+  let grassed_solid = list_intersection(grasses, solids);
+  let grass_walkable = list_empty_is(grassed_solid);
+  assert_json(grass_walkable, {
+    grassed_solid,
+    hint: "a yard made of a solid is a garden nobody can cross to their own front door",
+  });
+  let grassed_ground = list_intersection(grasses, list_concat(pavements, roads));
+  let grass_apart = list_empty_is(grassed_ground);
+  assert_json(grass_apart, {
+    grassed_ground,
+    hint: "a yard made of what the street is paved or roaded with leaves the garden paths invisible",
+  });
+  let grassed_fronts = list_intersection(grasses, faces);
+  let grass_below = list_empty_is(grassed_fronts);
+  assert_json(grass_below, {
+    grassed_fronts,
+    hint: "a yard made of what the houses are fronted with leaves a house with no bottom edge",
+  });
   ("Each group is also handed to the street that would use it, one for every group there is, rather than having its length measured here. A group shorter than a street runs out of materials and starts over from the beginning at a distance the player can see both ends of at once - which is the fault reported as the second house and the last house of every road wearing the same brick. The chooser a street asks already refuses that, so it is asked rather than asked again, and how many materials a street needs stays written in one place.");
   ("Every group is asked for, and not only the ones the world reaches today. A group no block lands on is reached the day a third block is added, and a gate that watches only what is in use goes quiet exactly when the world grows.");
   function street_faces_at(group_index) {
@@ -99,6 +158,7 @@ export function bless_block_materials_gate_run() {
     faces: list_size(faces),
     pavements: pavements_count,
     roofs: roofs_count,
+    roads: roads_count,
     street_faces: street_faces,
   };
   return walked;
