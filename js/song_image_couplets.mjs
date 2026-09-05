@@ -172,7 +172,7 @@ export function song_image_couplets() {
       first: "the KING of kings",
       second: "was crowned with thorns",
       symbol:
-        "A crown of thorns, a few thick woody thorn branches twisted into one ring, drawn very large so that the ring reaches almost to the white border on both sides and almost to the top and the bottom of it",
+        "A crown of thorns, a few thick woody thorn branches twisted into one ring, drawn very large so that the ring reaches almost to the white border on both sides and almost to the top and the bottom of it, the band between the two lead lines one flat sheet of violet and the band below them one flat sheet of deep crimson",
       symbol_ref: "Matthew 27:29",
       same_as: 0,
     },
@@ -448,7 +448,7 @@ export function song_image_couplets() {
       first: "HE's coming soon",
       second: "the day draws near",
       symbol:
-        "One young fig shoot rising from the white border at the bottom right up the window, its stem tender and slender and smooth the whole way, and broad emerald green fig leaves standing out from it on short stalks all the way up its length from near the bottom of the window to near the top, every one of them only just opened and the lowest of them reaching almost to the white border on both sides, and at the very tip of the shoot two or three closed buds not opened into leaves yet, so that from foot to tip the whole shoot carries nothing but those leaves and those buds",
+        "One young fig shoot rising from the white border at the bottom right up the window, its stem tender and slender and smooth the whole way, and broad emerald green fig leaves standing out from it on short stalks all the way up its length from near the bottom of the window to near the top, every one of them only just opened and the lowest of them reaching almost to the white border on both sides, and at the very tip of the shoot two or three closed buds not opened into leaves yet, so that from foot to tip the whole shoot carries nothing but those leaves and those buds, the band between the two lead lines one flat sheet of violet and the band below them one flat sheet of deep crimson",
       symbol_ref: "Matthew 24:32",
       same_as: 0,
     },
@@ -458,7 +458,7 @@ export function song_image_couplets() {
       first: "with no more sorrow",
       second: "no more pain",
       symbol:
-        "One wide river of blue water winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood carrying emerald green leaves standing on the bank at each side of the water",
+        "One wide river of blue water winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood carrying emerald green leaves standing on the bank at each side of the water, the band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of violet",
       symbol_ref: "Revelation 22:1-2",
       same_as: 0,
     },
