@@ -1,7 +1,7 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size_half_ceil } from "./list_size_half_ceil.mjs";
 import { boolean_random } from "./boolean_random.mjs";
-import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { list_shuffle_take } from "./list_shuffle_take.mjs";
@@ -66,8 +66,7 @@ export function bless_building_windows_ground(walls, doorways) {
     if (rounded_up) {
       return up;
     }
-    let size = list_size(doorways);
-    let down = subtract(size, up);
+    let down = list_size_subtract(doorways, up);
     return down;
   }
   let order = list_copy(doorways);
