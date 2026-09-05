@@ -1,3 +1,11 @@
+import { bible_glyph_chapter_jer01 } from "./bible_glyph_chapter_jer01.mjs";
+import { bible_glyph_chapter_ezk47 } from "./bible_glyph_chapter_ezk47.mjs";
+import { bible_glyph_chapter_psa008 } from "./bible_glyph_chapter_psa008.mjs";
+import { bible_glyph_chapter_zec03 } from "./bible_glyph_chapter_zec03.mjs";
+import { bible_glyph_chapter_pro01 } from "./bible_glyph_chapter_pro01.mjs";
+import { bible_glyph_chapter_hos02 } from "./bible_glyph_chapter_hos02.mjs";
+import { bible_glyph_chapter_amo09 } from "./bible_glyph_chapter_amo09.mjs";
+import { bible_glyph_chapter_pro08 } from "./bible_glyph_chapter_pro08.mjs";
 import { bible_glyph_chapter_pro04 } from "./bible_glyph_chapter_pro04.mjs";
 import { bible_glyph_chapter_deu32 } from "./bible_glyph_chapter_deu32.mjs";
 import { bible_glyph_chapter_neh09 } from "./bible_glyph_chapter_neh09.mjs";
@@ -233,7 +241,8 @@ export function bible_glyph_chapters() {
   ("Six more Old Testament pages join the list, and between them they turn up a kind of gap this project had not seen before. Isaiah 43 loses both name marks on I have called you by your name, and walks through a fire the page cannot draw while drawing a flame twice on the same page for God. Ezekiel 37 is the one place found so far where a collision helps rather than costs, because one Hebrew word means wind and breath and Spirit and the ninth verse holds all three of those at once. Jeremiah 17 sets a cursed man against a blessed man and loses only the curse, because the word says happens to stand in the same line. Isaiah 2 leaves the line that says the idols will completely vanish completely blank. Psalm 34 loses every mark on let us exalt his name together. And Zechariah 4 found the new thing: this collection owns a picture of a lampstand, and that picture means the Jewish people, so the one chapter genuinely about a lampstand can never use it. A picture named after an object but seated on a different sense locks that object out for good, and the star in this table, which stands for glory, is the second one found doing it.");
   ("Nine more Old Testament pages join the list, and they add three members to the fault Zechariah 4 uncovered. Judges 16 seats a lightning bolt on the word for strength and fires it seven times, so lightning itself is locked out of the whole Bible: it turns up as plain undrawn English in eight places across seven other chapters, both accounts of Sinai among them. Psalm 116 seats an anchor on believing, used in forty six chapters, and that bill falls due the day Acts 27 is drawn. Ezekiel 1 runs the same fault backwards, seating a green shoot on the root for life and then inheriting it onto the four living creatures twelve times, so a reader watches a plant carry fire and dart like lightning. Leviticus 16 holds the worst single collision found anywhere yet: one Hebrew word means both a sin and the offering given for it, so the Day of Atonement draws the disease and the cure with the same mark fourteen times. Joshua 24 puts one flame on both halves of the most famous either or in the book, and gives serving God and being a slave the same kneeling figure. Daniel 12 says understand three times and draws it none. Psalm 42 is the exact reverse of Jeremiah 17, thirteen flames and one name tag, because it opens the book of the Psalter that prefers the ordinary word for God. Psalm 63 is the first place the marks reverse a meaning outright, drawing water along a line that says there is no water. And Song of Songs 2 arrives with its two best known lines completely blank, while a dove sits unused in the picture collection and the chapter says O my dove.");
   ("Five more Old Testament pages join the list, and three of them widen the fault Zechariah 4 uncovered while two find new ones. Proverbs 4 demonstrates three of the locked out objects on a single page: the ear picture means hearing, so the one real ear in the chapter is blank; the mouth picture means speaking, so the one real mouth is blank; and the crown picture means lord, so the crown handed to the reader in the ninth line is blank. The subject of the chapter has no picture either, wisdom four times and understanding three, so the two lines that carry the whole argument are the only two completely empty lines on the page. Deuteronomy 32 names God the Rock eight times and cannot draw a rock once, sets their rock against our Rock inside one clause, and stands down half the flames the song asked for because they fall on gods that are not God. It also turns up two places where the English and the Hebrew underneath disagree, so the mark had to go rather than teach a reader something false. Nehemiah 9 loses both blessings and both names in the doxology of its fifth line, and tells the pillar of cloud and the pillar of fire twice over with no pillar, no cloud and no fire between them. Zechariah 12 gives the line about the one they pierced two marks in fifty seven words, and neither of them is the piercing. Ezra 3 is the one chapter found so far where a collision produces the right reading rather than a wrong one, because the text says nobody could tell the shouting from the weeping and the page cannot tell them apart either.");
-  ("One hundred and twenty three chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
+  ("Eight were added together at the end of this run. Jeremiah 1 is a call and a commission. Ezekiel 47 is the river from under the temple door, and it is the one chapter whose subject is a thing steadily getting bigger, drawn with a mark that has no sizes. Psalm 8 is the night sky, which loses the star and the moon and loses the name twice in the line that opens and closes it. Zechariah 3 is a courtroom with no picture for the one accusing. Proverbs 1 and Proverbs 8 are both Wisdom speaking in the street, fourteen lines in the first and thirty six in the second, and there is no drawing for wisdom and none for the woman she is; together they are the strongest case in this collection for buying one. Hosea 2 loses the name in a new way, because the word name there points at the Baals. Amos 9 loses it twice the ordinary way, once in a clause that says nothing else.");
+  ("One hundred and thirty one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
   ("THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.");
@@ -364,6 +373,14 @@ export function bible_glyph_chapters() {
   let one_hundred_and_twenty_first = bible_glyph_chapter_neh09();
   let one_hundred_and_twenty_second = bible_glyph_chapter_zec12();
   let one_hundred_and_twenty_third = bible_glyph_chapter_ezr03();
+  let one_hundred_and_twenty_fourth = bible_glyph_chapter_jer01();
+  let one_hundred_and_twenty_fifth = bible_glyph_chapter_ezk47();
+  let one_hundred_and_twenty_sixth = bible_glyph_chapter_psa008();
+  let one_hundred_and_twenty_seventh = bible_glyph_chapter_zec03();
+  let one_hundred_and_twenty_eighth = bible_glyph_chapter_pro01();
+  let one_hundred_and_twenty_ninth = bible_glyph_chapter_hos02();
+  let one_hundred_and_thirtieth = bible_glyph_chapter_amo09();
+  let one_hundred_and_thirty_first = bible_glyph_chapter_pro08();
   let chapters = [
     first,
     second,
@@ -488,6 +505,14 @@ export function bible_glyph_chapters() {
     one_hundred_and_twenty_first,
     one_hundred_and_twenty_second,
     one_hundred_and_twenty_third,
+    one_hundred_and_twenty_fourth,
+    one_hundred_and_twenty_fifth,
+    one_hundred_and_twenty_sixth,
+    one_hundred_and_twenty_seventh,
+    one_hundred_and_twenty_eighth,
+    one_hundred_and_twenty_ninth,
+    one_hundred_and_thirtieth,
+    one_hundred_and_thirty_first,
   ];
   return chapters;
 }
