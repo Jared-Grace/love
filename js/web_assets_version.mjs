@@ -1,7 +1,5 @@
-import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function web_assets_version() {
-  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("The stamp carried on the end of every asset address, changed by hand whenever the assets are sent up to storage again.");
   ("IT IS WHAT LETS A PICTURE BE KEPT FOR A YEAR AND STILL BE REPLACEABLE. Storage names a file by its path and nothing else, so the address of a picture is the same address after the picture behind it has been redrawn. A browser told to keep that address for a year would keep the old drawing for a year, on every phone that had ever loaded the page, with no way to reach it. A stamp on the end makes the new drawing a new address, which the browser has never seen and so must fetch.");

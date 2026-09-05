@@ -24,6 +24,14 @@ answer that names only the word can never say whether the rule fired rightly.
 The word before is carried too, at no cost, because a stress reduction reads off
 the phrase rather than the neighbour.
 
+★ THE SOUNDING AND THE NEIGHBOUR ARE COUNTED TOGETHER AS WELL AS APART, BECAUSE
+TWO TALLIES THAT AGREE ARE NOT A RULE.  A hundred and fifty-six thes that moved
+one way and a hundred and fifty-six thes standing before a vowel are the same
+number and need not be the same thes; read as if they were, they would report a
+rule firing perfectly while every single one of them fired backwards.  Counting
+the pair is the only form of the answer that cannot agree with itself by
+accident.
+
 Takes the path of a JSON file holding {"root", "fallback_second",
 "dictionary_second", "apostrophe_second", "words": the words to follow},
 optionally with "chapters" naming the ones to read rather than all of them.
