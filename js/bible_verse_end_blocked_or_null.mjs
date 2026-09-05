@@ -21,7 +21,7 @@ export function bible_verse_end_blocked_or_null(text) {
     return null;
   }
   let trimmed = bible_verse_trim_right(text);
-  let closers = new RegExp("^[\\p{Pe}\\p{Pf}\\p{Cf}\\p{Zs}]$", "u");
+  let closers = new RegExp("^[^\\p{L}\\p{N}]$", "u");
   function bible_verse_end_blocked_closing_is(s) {
     let empty = text_empty_is(s);
     if (empty) {
