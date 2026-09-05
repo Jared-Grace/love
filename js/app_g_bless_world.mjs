@@ -1,5 +1,13 @@
+import { bless_blocks_road_keys } from "./bless_blocks_road_keys.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_g_bless_world(rows, coordinates, player, npcs, blocks, vehicles) {
+export function app_g_bless_world(
+  rows,
+  coordinates,
+  player,
+  npcs,
+  blocks,
+  vehicles,
+) {
   arguments_assert(arguments, 6);
   ("Everything the praying game's world is: the ground as rows of tiles, the same ground as");
   ("a flat list of coordinates, where the player stands, everybody else, and the blocks");
