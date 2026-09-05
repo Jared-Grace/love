@@ -9,7 +9,6 @@ export function bless_block_alleys(x, y, block) {
   let alley_tiles = property_get(r, "alley_tiles");
   let indexes_gap = property_get(r, "indexes_gap");
   let depth = property_get(r, "depth");
-  let gap = property_get(r, "gap");
   let count = property_get(r, "count");
   let span = property_get(r, "span");
   let buildings = property_get(r, "buildings");
@@ -18,7 +17,6 @@ export function bless_block_alleys(x, y, block) {
   let alleys = list_flat(alleys_each);
   let r2 = {
     depth,
-    gap,
     count,
     span,
     buildings,
