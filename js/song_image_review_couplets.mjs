@@ -15,6 +15,14 @@ export function song_image_review_couplets() {
       note: "The water is lighter colours now rather than black lines, as you asked. It cost something: asking for the whole round of the surface made nine drawings float it as a disc above the rim, so it is now a shallow ellipse lying inside the rim, and there is less water showing than in the round ones you liked. Say if that is the wrong trade.",
     },
     {
+      n: 4,
+      note: "Only the field changed. The two bands behind the crown were white before, and they are violet over deep crimson now, because the wording names those colours itself instead of leaving them to be chosen. The crown of thorns is as it was. The lower crimson band still has a lead line down the middle where one flat sheet was asked for.",
+    },
+    {
+      n: 8,
+      note: "You could not tell the parchment was cancelled, because it was a blank white sheet nailed up. It is now torn clean across from the nail downward and hanging open, with the brown wood of the cross showing through the gap. The two field bands were white as well and are cobalt and crimson now.",
+    },
+    {
       n: 11,
       note: "New picture. The halo is a whole yellow disc now with no lead line across it, and the thicket and the coloured field both survived - the earlier draws obeyed the halo but lost one or the other every time. What fixed it was making the halo instruction shorter rather than more exact.",
     },
@@ -35,12 +43,32 @@ export function song_image_review_couplets() {
       note: "Nothing was ever wrong with 114 except that its beams are all white where the wording asked for colour. It is kept, as you asked. One correction: I told you 190 was oval and it is not. I had been squashing tall pictures into squares to compare them, which made every round stone look oval - 190 is this same window with the colour in it.",
     },
     {
+      n: 25,
+      note: "The old wording described three crowns stacked one above another, which is a papal tiara, and that is what was being drawn. Revelation 19:12 says many diadems, so it is seven plain crowns standing side by side in one row now. Still wrong: they came out touching each other as one continuous band, where the wording asks for the glass of the field to show between them.",
+    },
+    {
       n: 26,
       note: "New picture. Each ray now carries its own colour unbroken from the cloud right down to the border, so nothing drops out at the foot while the lines carry on. The cloud is drawn in several panes with grey along its undersides instead of one flat white shape. There are six rays with wide sky between them rather than one warm band across the glass.",
     },
     {
       n: 30,
       note: "New picture, drawn from the wording with the smoke put back in. The smoke is brown and rises above the fire, and the mountain is one flat grey instead of the photographic one you saw. That is the whole change.",
+    },
+    {
+      n: 31,
+      note: "Only the field changed. It was a white band before and is violet over deep crimson now, named in the wording rather than left open. The fig branch is unchanged.",
+    },
+    {
+      n: 32,
+      note: "Only the field changed, crimson over violet, where it was white before. The river and the two trees on its banks are unchanged. Worth knowing: two of the three draws this round came back as a chalice with a crown instead of a river at all, so this one is the exception and not the average.",
+    },
+    {
+      n: 34,
+      note: "The emerald rainbow was being drawn as the white border of the window rather than as an arch behind the throne, so I cut it, and the seven flames with it. The steps are drawn flat now, each one a straight band lying right across the window and wider than the step above it, instead of receding in perspective. What is left is the throne, the steps and the sceptre.",
+    },
+    {
+      n: 36,
+      note: "Only the field changed. The two bands are cobalt over violet now where they came out white. The cross and the vine growing over it are unchanged.",
     },
   ];
   return couplets;
