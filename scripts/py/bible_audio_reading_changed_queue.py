@@ -13,13 +13,25 @@ So each chapter recorded before the door is read twice - once by the reading of
 that day, once by the reading of now - and the two are set side by side word by
 word.  A word whose sounds differ is a word the recording gets wrong.
 
+THERE HAVE BEEN THREE READINGS, NOT TWO, AND A CHAPTER IS COMPARED AGAINST THE
+ONE THAT SPOKE IT.  The reading could not sound out an unknown name until the
+first of September 2026 and had no written dictionary of names until the fourth,
+so a chapter recorded between those days was spoken by a reading that drops
+nothing and still says names wrongly.  Held against the oldest reading instead,
+every one of those chapters is reported as dropping words it never dropped -
+which is the wrong fault, in the wrong chapters, and would send the count out by
+however many nights sat between the two doors.  A chapter whose pieces straddle
+a door is counted as the later reading, since that is the reading most of it was
+spoken by; there are few of those and a whole chapter is recorded in minutes.
+
 The two halves are reported apart, because they cost different amounts.  The
 chapters that dropped a word are already being recorded again night after night;
 the chapters that merely say a name wrongly are the new work this measures, and
 how much of it is worth doing is somebody's decision rather than this script's.
 
 Takes the path of a JSON file holding {"root": <folder of chapter folders>,
-"before_second": <the second the door was made>}, optionally with "words_shown"
+"dictionary_second": <the second the dictionary door was made>, "fallback_second":
+<the second the sounding-out door was made>}, optionally with "words_shown"
 saying how many of the changed words to name and "chapters" naming the ones to
 read rather than all of them.  Prints one JSON line.  It reads only; nothing is
 recorded or removed.
@@ -111,7 +123,8 @@ def main(args_path):
     with open(args_path, encoding="utf-8") as fh:
         args = json.load(fh)
     root = args["root"]
-    before_second = args["before_second"]
+    before_second = args["dictionary_second"]
+    fallback_second = args["fallback_second"]
     words_shown = args.get("words_shown", 60)
 
     asked = args.get("chapters")
@@ -121,8 +134,8 @@ def main(args_path):
     names = [n for n in all_names if n in set(asked)] if asked else all_names
     old_sound = [n for n in names if sound_before(os.path.join(root, n), before_second)]
 
-    was_g2p = g2p_as_it_was()
-    now_g2p = g2p_ready()
+    readings = {}
+    spoken_by = collections.Counter()
 
     queue_dropped = []
     queue_changed_only = []
@@ -131,9 +144,14 @@ def main(args_path):
     words_changed = 0
     changed_words = collections.Counter()
     for name in old_sound:
-        texts = chapter_texts(os.path.join(root, name))
+        folder = os.path.join(root, name)
+        texts = chapter_texts(folder)
         if not texts:
             continue
+        was = "silent" if sound_before(folder, fallback_second) else "sounded_out"
+        spoken_by[was] += 1
+        was_g2p = reading_of(readings, was)
+        now_g2p = reading_of(readings, "now")
         split = chapter_changed(sounds_of(was_g2p, texts), sounds_of(now_g2p, texts))
         if split is None:
             unreadable.append(name)
@@ -152,9 +170,11 @@ def main(args_path):
         json.dumps(
             {
                 "root": root,
-                "before_second": before_second,
+                "dictionary_second": before_second,
+                "fallback_second": fallback_second,
                 "chapters_all": len(all_names),
                 "chapters_sound_before_door": len(old_sound),
+                "chapters_by_reading_spoken": dict(spoken_by),
                 "chapters_dropped_a_word": len(queue_dropped),
                 "chapters_changed_only": len(queue_changed_only),
                 "chapters_unreadable": unreadable,
