@@ -39,6 +39,10 @@ export function song_image_review_couplets() {
       note: "Eighteen more tries and the stone still will not cover the mouth, so the picture is unchanged. I did find one real cause: the mouth used to sit high in the rock face while the stone stands on the ground, so it could not reach. The mouth now runs down to the ground, which fixed the shape and not the covering. The stone comes back small and low every time, and I have stopped spending on it until you say it is worth more.",
     },
     {
+      n: 23,
+      note: "New picture, and this one was my own finding rather than yours. The bottom third of the window was solid black, and the cause was the word Night standing at the front of the wording, so that word is gone and the ground band is violet now. Still wrong: the sunrise came out as a half dome where the wording asks for a thin slice no taller than a tenth of its width.",
+    },
+    {
       n: 24,
       note: "Nothing was ever wrong with 114 except that its beams are all white where the wording asked for colour. It is kept, as you asked. One correction: I told you 190 was oval and it is not. I had been squashing tall pictures into squares to compare them, which made every round stone look oval - 190 is this same window with the colour in it.",
     },
