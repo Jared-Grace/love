@@ -1,3 +1,5 @@
+import { bless_yard_grass } from "./bless_yard_grass.mjs";
+import { bless_block_road } from "./bless_block_road.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each_index } from "./each_index.mjs";
 import { list_concat } from "./list_concat.mjs";
@@ -21,14 +23,29 @@ export function app_g_bless_blocks_raise(rows, blocks) {
   ("walks from one to the other can see they have arrived somewhere rather than gone round");
   ("in a circle. It is the cheapest thing the game can say and it says the whole design:");
   ("the reach was earned here and is worth spending there.");
+  ("The grass goes down, then the road, then the pavement LAST, and that order is what draws");
+  ("the garden paths. A path crosses the yard, so it is laid over ground that has just been");
+  ("grassed; paved first it would be grassed over, and the street would have a strip of green");
+  ("with nothing crossing it and doorsteps opening onto a lawn.");
+  ("The buildings still go up before any of it. Grass, road and pavement are all bands of");
+  ("ground in front of the houses and none of them reaches under one, but the raising is what");
+  ("says which rows the houses left over, and those are grassed where the building is.");
   function block_raise(block, index) {
     let buildings = property_get(block, "buildings");
     let alleys = property_get(block, "alleys");
     let sidewalk = property_get(block, "sidewalk");
+    let yard = property_get(block, "yard");
+    let road = property_get(block, "road");
+    let paths = property_get(block, "paths");
     app_g_bless_buildings_raise(rows, buildings, index);
+    let item_grass = bless_yard_grass();
+    app_g_bless_tiles_pave(rows, yard, item_grass);
+    let item_road = bless_block_road(index);
+    app_g_bless_tiles_pave(rows, road, item_road);
     let paved = list_concat(alleys, sidewalk);
+    let paved_all = list_concat(paved, paths);
     let item_pavement = bless_block_pavement(index);
-    app_g_bless_tiles_pave(rows, paved, item_pavement);
+    app_g_bless_tiles_pave(rows, paved_all, item_pavement);
   }
   each_index(blocks, block_raise);
 }
