@@ -18,7 +18,9 @@
    "scene": "an immense host of small burning lights ranged in ordered ranks across the whole of a dark sky, rank behind rank into the far distance, like an army drawn up out of stars",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/host_of_lights.png",
    "start": 10.44,
-   "end": 19.24
+   "end": 19.24,
+   "gamma": 1.5,
+   "contrast": 1.15
   },
   {
    "scene": "the sun and the moon together in one sky above a dark quiet land, with the thick band of the milky way and countless stars burning between them",
@@ -36,13 +38,16 @@
    "scene": "the first light breaking over a dark formless deep, one clean edge of gold dividing the water from the sky",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/first_light.png",
    "start": 36.61,
-   "end": 45.69
+   "end": 45.69,
+   "gamma": 1.9,
+   "contrast": 1.15
   },
   {
    "scene": "an immense mountain of bare grey stone standing unmoved under a sky of slow-turning stars",
    "path": "gitignore/lyric_video_pictures/bsb_PSA_148/unmoved_mountain.png",
    "start": 45.69,
-   "end": 62.71
+   "end": 62.71,
+   "gamma": 1.25
   },
   {
    "scene": "the deep open sea seen from within it, with shafts of green light falling far down into the dark and the huge dim shape of a whale passing through them",
