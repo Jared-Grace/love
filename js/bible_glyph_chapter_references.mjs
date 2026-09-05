@@ -161,6 +161,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jonah 2",
     },
     {
+      chapter_code: "JON03",
+      reference: "Jonah 3",
+    },
+    {
       chapter_code: "MAT05",
       reference: "Matthew 5",
     },
