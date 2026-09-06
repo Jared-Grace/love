@@ -1,3 +1,4 @@
+import { list_slice_include } from "./list_slice_include.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_verse_end_read } from "./bible_usfm_verse_end_read.mjs";
 import { null_is } from "./null_is.mjs";
@@ -5,8 +6,6 @@ import { bible_usfm_lines_verse_pieces } from "./bible_usfm_lines_verse_pieces.m
 import { bible_usfm_lines_verse_piece_first } from "./bible_usfm_lines_verse_piece_first.mjs";
 import { bible_usfm_lines_verse_piece_last } from "./bible_usfm_lines_verse_piece_last.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { add } from "./add.mjs";
-import { list_slice } from "./list_slice.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { not } from "./not.mjs";
 import { list_last } from "./list_last.mjs";
@@ -47,8 +46,7 @@ export function bible_usfm_lines_verses_taken(
   if (backwards) {
     return null;
   }
-  let after = add(index_last, 1);
-  let taken = list_slice(usfm_lines, index_first, after);
+  let taken = list_slice_include(usfm_lines, index_first, index_last);
   let going = true;
   while (going) {
     let empty = list_empty_is(taken);
