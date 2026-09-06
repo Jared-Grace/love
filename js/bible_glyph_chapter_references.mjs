@@ -49,6 +49,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 32",
     },
     {
+      chapter_code: "GEN39",
+      reference: "Genesis 39",
+    },
+    {
       chapter_code: "GEN50",
       reference: "Genesis 50",
     },
@@ -87,6 +91,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "LEV16",
       reference: "Leviticus 16",
+    },
+    {
+      chapter_code: "NUM11",
+      reference: "Numbers 11",
     },
     {
       chapter_code: "NUM20",
@@ -171,6 +179,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NEH09",
       reference: "Nehemiah 9",
+    },
+    {
+      chapter_code: "EST01",
+      reference: "Esther 1",
+    },
+    {
+      chapter_code: "JOB23",
+      reference: "Job 23",
     },
     {
       chapter_code: "JOB28",
@@ -321,6 +337,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 2",
     },
     {
+      chapter_code: "ISA12",
+      reference: "Isaiah 12",
+    },
+    {
       chapter_code: "ISA43",
       reference: "Isaiah 43",
     },
@@ -331,6 +351,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "JER17",
       reference: "Jeremiah 17",
+    },
+    {
+      chapter_code: "JER23",
+      reference: "Jeremiah 23",
     },
     {
       chapter_code: "JER26",
@@ -423,6 +447,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ZEC04",
       reference: "Zechariah 4",
+    },
+    {
+      chapter_code: "ZEC08",
+      reference: "Zechariah 8",
     },
     {
       chapter_code: "ZEC12",
