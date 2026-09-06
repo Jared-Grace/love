@@ -1035,9 +1035,7 @@ export function permission_grant_names() {
   let spelled1016 = fn_name("g_profiles_value_tally");
   let spelled1017 = fn_name("firebase_storage_list");
   let spelled1018 = fn_name("ebible_version_chapters_all_upload_path");
-  let spelled1019 = fn_name(
-    "app_original_bible_gloss_generate_upload_namespace",
-  );
+  let spelled1019 = fn_name("gloss_upload_namespace_original_bible");
   let spelled1020 = fn_name("ebible_index_flats_union_cases_gate_run");
   let spelled1021 = fn_name("ebible_index_flats_upload");
   let spelled1022 = fn_name("bible_interlinear_offline_upload_overwrite");
