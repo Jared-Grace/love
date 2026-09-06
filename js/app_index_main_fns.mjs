@@ -36,11 +36,11 @@ export function app_index_main_fns() {
     },
     {
       app_fn: fn_name("app_original_bible"),
-      text: "Allows learning the ancient Greek of the Bible by reading the Bible in ancient Greek (with word defintions and explanations) - Only John 1 and 1 Peter 4 at this time",
+      text: "Allows learning the ancient Greek of the Bible by reading the Bible in ancient Greek (with word definitions and explanations) - parts of the New Testament so far",
     },
     {
       app_fn: fn_name("app_ceb_bible"),
-      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word defintions and explanations) - Only Song of Solomon, James and John 1 at this time",
+      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word definitions and explanations) - parts of the New Testament, Psalms, Proverbs and Song of Solomon so far",
     },
     {
       app_fn: fn_name("app_supper"),
