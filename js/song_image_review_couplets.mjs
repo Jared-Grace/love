@@ -12,15 +12,15 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 11,
-      note: "Yes, in front - and it already is. The yellow disc runs unbroken across the line where the blue meets the green, and that is the traditional lead: a halo is cut as part of the figure, so the background lines stop at it rather than crossing it. So nothing was changed here. The thicket you said traps well enough is untouched too.",
+      note: "You are right about 78. The wording had refused that twice by name, which is the surest way to get a thing drawn, so the refusal came out and the thicket now closes along the whole underside instead. Four fresh draws all failed: two lost the thicket altogether and two lost the ram. So 78 is still up, unchanged, until one comes back with the thicket and no fault.",
     },
     {
       n: 24,
-      note: "This is 212. A third clause came out - the one asking the rock for pale and dark greys and refusing fine scratches by name, which is what kept drawing it like a photograph. The beams are plainly different widths now, the orange runs its full length without cutting off, and the arch and the ground band came back. Still wrong: the rock face is veined rather than flat panes, and the sky above it is pale instead of deep cobalt.",
+      note: "This is 215. The rock is flat panes at last instead of a photograph, and the beams keep their different widths and their colour. Neither of your two asks landed: the white ring still has a black border and the stone still stands clear of the ground. The gradient may not be reachable at all - the style sheet sent with every one of the 36 pictures says no gradient by name, so the two are asking for opposite things.",
     },
     {
       n: 25,
-      note: "The fan is gone - that crown is now a broad band with three tall lily heads, which draws as a crown and not a broom. The yellow triangle was a fault in the drawing rather than the wording, so a redraw was all it needed. All seven are full royal makes now and much the same width. Twelve came back out of twenty-four asked for; most lost a crown or turned the bottom two gold.",
+      note: "Two of the seven use plants: one is a ring of pointed leaves, one is a band with three lily heads. Both are real crowns in tradition - the victor's wreath and the fleur-de-lis - but the wording names the plant rather than the crown, so the drawing gives back a plant. Nothing has been changed. Tell me which you want: those two named as the traditional crowns instead, or both replaced with crowns that use no plant at all.",
     },
   ];
   return couplets;
