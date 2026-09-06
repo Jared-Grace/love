@@ -1,5 +1,5 @@
+import { gloss_root_word_own_is } from "./gloss_root_word_own_is.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_map } from "./list_map.mjs";
@@ -12,9 +12,8 @@ export function gloss_explain_root_judged(word, root, explain) {
   "A claim is compared with the dash taken out of both sides, because a dictionary writes a doubled root with one where an explanation writes it without - balhin-balhin against balhinbalhin.";
   "An explanation that names a root in so many words is judged on the root it names, and only one claiming none falls back to asking whether the root stands anywhere in its wording. Asking the weaker question of every sentence is blind wherever the dictionary's root is a piece of the word itself: an explanation of luboa claiming the root luba passes, because the quoted word carries the letters of the true root lubo along with it.";
   "The judgment lives here rather than inside the sweep that first needed it, because a second sweep now asks the same question of words the first one never reached, and two spellings of one judgment would let the two disagree about what a wrong root is.";
-  let word_lower = text_lower_to(word);
-  let same = equal(root, word_lower);
-  if (same) {
+  let self_rooted = gloss_root_word_own_is(word, root);
+  if (self_rooted) {
     return null;
   }
   let explain_lower = text_lower_to(explain);
