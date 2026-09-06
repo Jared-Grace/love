@@ -30,11 +30,13 @@ export async function lyric_video_psalms_part_documents_draft(version) {
   }
   async function song_drafted(song, path_document) {
     let document = await lyric_video_part_document_draft(
-      version,
-      book_code,
-      song.chapter,
-      song.verse_first,
-      song.verse_last,
+      {
+        version,
+        book_code,
+        chapter_number: song.chapter,
+        verse_first: song.verse_first,
+        verse_last: song.verse_last,
+      },
       song.path_audio,
       path_document,
     );

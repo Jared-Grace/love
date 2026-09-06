@@ -5,15 +5,11 @@ import { bible_usfm_version_passage_verses_text } from "./bible_usfm_version_pas
 import { bible_usfm_version_credit_text } from "./bible_usfm_version_credit_text.mjs";
 import { lyric_video_document_draft_lines } from "./lyric_video_document_draft_lines.mjs";
 export async function lyric_video_part_document_draft(
-  version,
-  book_code,
-  chapter_number,
-  verse_first,
-  verse_last,
+  { version, book_code, chapter_number, verse_first, verse_last },
   path_audio,
   path_document,
 ) {
-  arguments_assert(arguments, 7);
+  arguments_assert(arguments, 3);
   ("$plain version");
   ("$plain book_code");
   ("$plain chapter_number");
