@@ -7,28 +7,36 @@ import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
+import { list_map_property } from "./list_map_property.mjs";
+import { list_filter_property } from "./list_filter_property.mjs";
 import { word_count_pluralize } from "./word_count_pluralize.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_text_content_set } from "./html_text_content_set.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_contact_message_display } from "./app_shared_contact_message_display.mjs";
+import { html_div_text_multiple } from "./html_div_text_multiple.mjs";
+import { app_shared_contact_received_text } from "./app_shared_contact_received_text.mjs";
+import { html_div_text } from "./html_div_text.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { instant_label } from "./instant_label.mjs";
-import { html_style_font_size } from "./html_style_font_size.mjs";
-import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 import { list_map } from "./list_map.mjs";
 export async function app_message_private_preview() {
-  "Reads back what people have written in the message app, on the sandbox app at hash message_private: it first brings down anything the machine has not got yet, then shows every message it holds, gathered into one thread per person.";
+  "Reads back what people have written in the message app, on the sandbox app at hash message_private: it first brings down anything the machine has not got yet, then shows every message it holds, gathered into one thread per person, each message answered underneath by whatever the reply rules would have said to it.";
   "★ IT RUNS ON THE SERVING MACHINE AND SHOWS THE ANSWER HERE, WHICH IS THE ONLY WAY THIS PAGE COULD EXIST. The messages are kept in a folder outside every repo that nothing serves and no backup reaches, so a browser cannot open one; what it can do is ask the machine serving it to run a named command and hand back what that command answered. So this works on the dev server and nowhere else, and that is deliberate rather than a limitation - a published page that could read that folder would be the exact thing the folder exists to prevent.";
   "The bringing down and the reading are asked as two commands rather than one, so the count of what arrived can be said out loud. A screen that only ever showed a list would answer the same way whether it had just fetched thirty messages or none, and how many are new is the thing somebody opening this actually came to find out.";
   "★ EACH MESSAGE IS DRAWN BY THE SAME UNIT THE MESSAGE APP DRAWS ITS OWN WITH, so this reads as a thread of received messages rather than as a report about them. Everything that makes a received message look received is decided in that one place - how wide the bubble is, which edge it hangs from, its neutral fill, and which way the letters run - so a page that copied any of those would be a second opinion about all four, and would drift the first time one of them was improved.";
-  "It is asked for as the side the OTHER person's words sit on, which is the same side the message app puts a reply to you on: what is being looked at here is everything that was sent in, so every message is incoming and none of them is yours.";
+  "The two sides are asked for the way the message app asks for them and not the other way round: what somebody sent hangs from one edge with the neutral fill on it, and what goes back to them hangs from the other. So this screen and the app the person is looking at put the same two things on the same two sides, and a reply cannot be mistaken here for a message.";
+  "★ THE REPLY UNDER EACH MESSAGE IS THE ONE THE RULES REALLY WOULD SEND, worked out by the same rule set the message app answers with, so this is a rehearsal rather than a description. The rules are a grammar - a message is walked through as characters and every rule that matches contributes what it says back - and the interesting question about a grammar is never what it does on the examples it was written from, but what it does on the whole heap of real messages nobody had in front of them when they wrote it. That is exactly what this screen is: every message ever received, each with the answer it would have got.";
+  "★ THE THREE OUTCOMES ARE SHOWN AS THREE DIFFERENT THINGS, because two of them are honest and one is a bug. Rules matched is shown plainly. No rule matched shows the standing answer the app really sends in that case, marked as standing so it is not read as a rule having fired. The rules throwing part way through is marked in red, because a message that breaks the grammar is a defect and it is worth exactly nothing to have it looking like a message nobody has written a rule for yet.";
   "★ THE MESSAGES ARE GATHERED PER PERSON, WHICH IS WHAT A THREAD IS. Read as one stream by clock, one writer's four messages sit apart from each other with other people's in between, and their mark has to be repeated on every bubble to say whose it was. Gathered, the mark is said once at the head of the thread and the bubbles under it need only their time - so the same screen carries less writing and says more, and somebody who sent the same words four times has those four sitting together where the repetition is plain instead of scattered where it is merely confusing.";
   "The gathering keeps the order the values were first met in, and what is handed to it is already newest first, so the threads come out most-recently-heard-from first without anything being sorted twice. Inside a thread the order is turned back the other way, because a conversation is read downwards from its beginning - which is the one place the newest-first rule does not hold, and it does not hold because a thread is a conversation and the page as a whole is an inbox.";
   "★ THE TIME GOES INSIDE THE BUBBLE, UNDER THE WORDS. Standing on its own between two bubbles a time belongs to whichever one the spacing suggests, and spacing is a hint rather than an answer - the reader has to measure two gaps by eye and trust the smaller one. Put inside, it is the message it names by construction, and no gap has to be read at all. It goes under rather than over the words because it can only be added after them: the drawing of a bubble sets its words as the whole of what is in it, so anything put there first would be wiped by the words arriving.";
@@ -45,24 +53,52 @@ export async function app_message_private_preview() {
   let f_missing = fn_name("app_message_download_private_missing");
   let written = await app_shared_api_named(f_missing, []);
   let count_new = list_size(written);
-  let f_records = fn_name("app_message_private_records");
+  let f_records = fn_name("app_message_private_records_replied");
   let records = await app_shared_api_named(f_records, []);
   let count = list_size(records);
   let threads = list_group_by_property(records, "who");
   let count_threads = list_size(threads);
+  let attempts = list_map_property(records, "reply");
+  let answered_all = list_filter_property(attempts, "answered", true);
+  let count_answered = list_size(answered_all);
   let counted = word_count_pluralize(count, "message");
   let counted_writers = word_count_pluralize(count_threads, "writer");
   let t = text_from_number(count_new);
+  let t_answered = text_from_number(count_answered);
   let said = text_combine_multiple([
     counted,
     " from ",
     counted_writers,
     ", ",
     t,
-    " brought down just now.",
+    " brought down just now. The rules answer ",
+    t_answered,
+    " of them.",
   ]);
   html_text_content_set(status, said);
   let gray = app_shared_color_gray_dark();
+  let red = app_shared_color_red();
+  function each_reply(record) {
+    let attempt = property_get(record, "reply");
+    let answered = property_get(attempt, "answered");
+    let mine = app_shared_contact_message_display("left", "", listed);
+    if (answered) {
+      let outputs = property_get(attempt, "outputs");
+      html_div_text_multiple(mine, outputs);
+      return mine;
+    }
+    let standing = app_shared_contact_received_text();
+    html_div_text(mine, standing);
+    let broke = property_get(attempt, "broke");
+    let said_why = broke
+      ? "the rules threw part way through this one"
+      : "no rule matched - this is the standing answer";
+    let color = broke ? red : gray;
+    let note = html_p_text(mine, said_why);
+    html_style_font_size(note, "0.7em");
+    html_font_color_set(note, color);
+    return mine;
+  }
   function each_message(record) {
     let when = property_get(record, "when");
     let message = property_get(record, "message");
@@ -76,6 +112,7 @@ export async function app_message_private_preview() {
       html_style_font_size(line, "0.7em");
       html_font_color_set(line, gray);
     }
+    each_reply(record);
     return bubble;
   }
   function each_thread(thread) {
