@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 203, drawn after two clauses were cut from the wording. The beams are different widths now and carry every colour, not white only, and none of them cuts off short. Still wrong: the rock is mottled like a photograph and the sky behind it is pale. One clause left still asks that rock for pale and dark greys, and that is the next cut if you want it.",
+      note: "This is 212. A third clause came out - the one asking the rock for pale and dark greys and refusing fine scratches by name, which is what kept drawing it like a photograph. The beams are plainly different widths now, the orange runs its full length without cutting off, and the arch and the ground band came back. Still wrong: the rock face is veined rather than flat panes, and the sky above it is pale instead of deep cobalt.",
     },
     {
       n: 25,
