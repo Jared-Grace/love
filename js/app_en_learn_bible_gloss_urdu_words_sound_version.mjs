@@ -7,6 +7,6 @@ export function app_en_learn_bible_gloss_urdu_words_sound_version() {
   "It is a date, so that reading it says when the recordings were last sent up. Bump it in the same commit as the upload - bumped without an upload, phones fetch new addresses for files that never changed; uploaded without a bump, the new recordings sit in storage and no phone that has been here before will ever ask for them.";
   "★ A LETTER FOLLOWS THE DATE WHEN THE RECORDINGS GO UP TWICE IN ONE DAY, WHICH IS NOT A RARE CASE BUT THE USUAL ONE. The reason to record again is almost always that somebody has just heard something wrong, and hearing it, saying so and fixing it all happen the same afternoon. A date alone cannot tell those two uploads apart, so the second one would reach no phone that had already fetched the first - the exact failure this stamp exists to prevent, hidden behind a stamp that looks like it was bumped.";
   arguments_assert(arguments, 0);
-  let stamp = "20260905b";
+  let stamp = "20260906";
   return stamp;
 }
