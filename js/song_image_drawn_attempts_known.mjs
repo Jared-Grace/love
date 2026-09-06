@@ -985,7 +985,13 @@ export function song_image_drawn_attempts_known() {
   52,
   53,
   54,
-  55
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61
  ],
  "26": [
   1,
