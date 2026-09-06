@@ -1,9 +1,8 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
 import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
-import { list_index_of } from "./list_index_of.mjs";
-import { add } from "./add.mjs";
 export function bible_usfm_verse_end_read(verse_end) {
   arguments_assert(arguments, 1);
   ("$plain verse_end");
@@ -31,8 +30,7 @@ export function bible_usfm_verse_end_read(verse_end) {
   if (not(known)) {
     return null;
   }
-  let index = list_index_of(letters, letter);
-  let piece = add(index, 1);
+  let piece = list_index_of_add(letters, letter, 1);
   let part = {
     number: number,
     piece: piece,
