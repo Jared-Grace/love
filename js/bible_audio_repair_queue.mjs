@@ -1,8 +1,8 @@
+import { list_concat_property } from "./list_concat_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_audio_reading_changed_queue } from "./bible_audio_reading_changed_queue.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_concat } from "./list_concat.mjs";
 export async function bible_audio_repair_queue(bible_folder) {
   "$plain bible_folder";
   "The chapters of a recorded bible whose sound needs making again, because the reading of the day it was spoken says something the reading now does not - a word left silent, or a word said differently.";
@@ -17,8 +17,7 @@ export async function bible_audio_repair_queue(bible_folder) {
     return null;
   }
   let dropped = property_get(reported, "queue_dropped");
-  let changed = property_get(reported, "queue_changed_only");
-  let queue = list_concat(dropped, changed);
+  let queue = list_concat_property(dropped, reported, "queue_changed_only");
   let wider = {
     ...reported,
     queue,
