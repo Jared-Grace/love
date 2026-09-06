@@ -12,6 +12,11 @@ import { folder_public_root_noting_set } from "./folder_public_root_noting_set.m
 import { html_public_from_latest } from "./html_public_from_latest.mjs";
 import { firebase_deploy_locked_generic } from "./firebase_deploy_locked_generic.mjs";
 import { folder_public_root_noting_clear } from "./folder_public_root_noting_clear.mjs";
+import { qa_promoted } from "./qa_promoted.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
+import { json_equal } from "./json_equal.mjs";
 import { qa_promoted_app_write } from "./qa_promoted_app_write.mjs";
 export async function qa_app_commit_promote_judged(search, commit) {
   "$plain search";
@@ -25,6 +30,8 @@ export async function qa_app_commit_promote_judged(search, commit) {
   "Reading the pieces comes between the build and the walk, and it is here rather than among the gates because a gate is judged in a copy of what a commit tracks and a build is tracked by nothing. Two checks used to ask these questions of the folder people work in; from the day that folder moved out of the served one they threw on a folder that was not there, and had measured nothing since. It is asked before the walk rather than after because the walk takes about half an hour, and a bundle short of a name fails it in a way that reads as a broken lesson rather than as a broken build.";
   "Moving up is done by the one function every way of putting an app in front of people goes through, rather than by copying here. That function writes down what it moved, and that note is what a later sending reads to refuse a folder holding anything else - so a second way in that copied for itself would be a second way to leave the note describing the build before.";
   "Which commit these pieces came out of is written down last, after they are actually in place, so a run that fell over partway through leaves no note claiming a build that did not finish.";
+  "★ IT ALSO SAYS WHETHER THIS APP CAME OUT CARRYING ANYTHING NEW. What is on disk now is held against what was written down the last time this app went out, and when the two say the same thing the answer carries a word saying so. Nobody asked that before, which is how a run could prepare eight apps and report eight successes when five of them were the same code under a newer stamp - the run looked exactly as productive either way, so the waste had nothing to show it by. It is asked before the note is written rather than after, because writing it is what destroys the thing being compared against.";
+  "★ IT IS SAID RATHER THAN ACTED ON. Being told an app changed nothing is worth having on its own, and stopping short here on the strength of it would be a much larger claim: the pieces are already standing in the folder the sending reads from, so refusing at this point would leave them there unaccounted for rather than leaving nothing behind. The saving that matters was already taken further up, where a page that would have differed by its stamp alone was left where it was.";
   arguments_assert(arguments, 2);
   let judged = await qa_app_commit_gate_run_at(search, commit);
   let deployable = property_get(judged, "deployable");
@@ -49,11 +56,20 @@ export async function qa_app_commit_promote_judged(search, commit) {
     qa_app_commit_promote_judged.name,
   );
   folder_public_root_noting_clear();
+  let promoted = await qa_promoted();
+  let note = property_get_or_null(promoted, app_name);
+  let unwritten = null_is(note);
+  let sent = {};
+  if (not(unwritten)) {
+    sent = property_get(note, "hashes");
+  }
+  let unchanged = json_equal(sent, hashes);
   await qa_promoted_app_write(app_name, commit, hashes);
   let r = {
     app: app_name,
     commit,
     hashes,
+    unchanged,
   };
   return r;
 }
