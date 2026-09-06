@@ -1,4 +1,4 @@
-import { list_concat } from "./list_concat.mjs";
+import { list_concat_property } from "./list_concat_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { bless_building_family_column } from "./bless_building_family_column.mjs";
 import { property_list_get } from "./property_list_get.mjs";
@@ -51,8 +51,7 @@ export function bless_homes_ensure(people, blocks) {
     let sidewalk = property_get(block, "sidewalk");
     let walker = property_get(person, "walker");
     if (walker) {
-      let yard = property_get(block, "yard");
-      let footway = list_concat(sidewalk, yard);
+      let footway = list_concat_property(sidewalk, block, "yard");
       property_set(person, "home", footway);
       property_set(person, "roam", 0);
       return;
