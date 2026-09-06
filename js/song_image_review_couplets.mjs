@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 230. You were right about the shadow - the wording only said the stone sat against the rock, so it was being drawn standing in front of it. It now says the stone lies flat against the mouth of the tomb and seals it shut, and the shadow is gone. The beams here came back paler than you asked for, and the white ring still has its black border.",
+      note: "This is 232. The beams were pale because the wording asked for white to be the commonest colour, so I cut that line and the colours came back strong. One of the six drew the white ring as a real gradient with no black border - the first time ever - but it threw the window frame away to do it. The black border is still here.",
     },
   ];
   return couplets;
