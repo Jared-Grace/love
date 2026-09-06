@@ -20,6 +20,7 @@ export async function js_object_properties_call_spread_set(ast, f_name) {
   ("★ THE RUN IS FOUND BY THE FUNCTION'S OWN KEYS RATHER THAN BY A LIST HANDED IN. A caller spelling the keys would be a second copy of the very thing being collapsed, and it would be the copy that rots first: a sixth key added to the function would leave the caller naming five. Asking the function what it offers means the collapse is derived from the subject, so it cannot disagree with it.");
   ("The proof that the file goes on saying what it said is the value-by-value comparison, and it is made where the run is recognised rather than here.");
   ("IT REFUSES ANYTHING BUT EXACTLY ONE RUN IN THE FILE, the same safety the single-property writer keeps: none means the caller is naming something that is not there, and two means the file says it twice and the caller cannot have meant both.");
+  ("The search names its object, its properties and its place differently from the one run it settles on, because the two live in the same body and a reader arriving at the second half has no way to tell which of them a bare name meant.");
   let imported_fn = await function_import_unalias(f_name);
   let takes = property_get(imported_fn, "length");
   let takes_none = equal(takes, 0);
@@ -32,24 +33,24 @@ export async function js_object_properties_call_spread_set(ast, f_name) {
   let keys = object_property_names(offered);
   let objects = js_list_type_nodes(ast, "ObjectExpression");
   let found = [];
-  for (let object of objects) {
-    let properties = property_get(object, "properties");
-    let count = list_size(properties);
-    let start = 0;
-    while (less_than(start, count)) {
+  for (let object_node of objects) {
+    let properties_node = property_get(object_node, "properties");
+    let count = list_size(properties_node);
+    let start_at = 0;
+    while (less_than(start_at, count)) {
       let matched = js_object_properties_offered_run_is(
-        properties,
-        start,
+        properties_node,
+        start_at,
         keys,
         offered,
       );
       if (matched) {
         list_add(found, {
-          object,
-          start,
+          object: object_node,
+          start: start_at,
         });
       }
-      start = start + 1;
+      start_at = start_at + 1;
     }
   }
   let runs = list_size(found);
