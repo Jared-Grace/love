@@ -15,10 +15,6 @@ export function song_image_review_couplets() {
       note: "You were right, and the cause was the opening words: they described a cliff face, which is a tall shape however much proportion is added after it. The rock is now said to be far broader across than it is tall, its top a low rounded ridge, reaching right across the window. The mouth still has a ring of cut stones round it, as your own example 8 does - say if you would rather it were raw rock.",
     },
     {
-      n: 23,
-      note: "The sun is a sliver here, but words did not do it - three rewordings in a row still came back with a half disc sitting on the line. This is a drawing with everything below the sun's line blacked out afterwards. The rays are bright yellow, orange and ruby now, and the wording asks that no two of them be the same width.",
-    },
-    {
       n: 25,
       note: "Yes - the bands are deep crimson above and deep cobalt below, so only one of the two is a blue. What made that obeyed was moving the clause to the front of the wording; sitting at the end it was simply not being read. Violet was tried below first and it swallowed the crimson crown, so cobalt took its place.",
     },
