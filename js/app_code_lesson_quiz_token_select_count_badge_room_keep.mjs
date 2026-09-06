@@ -1,7 +1,6 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { not } from "./not.mjs";
@@ -27,8 +26,7 @@ export function app_code_lesson_quiz_token_select_count_badge_room_keep(
   }
   let inside = app_code_lesson_quiz_token_select_count_badge_inside_percent();
   let outside = subtract(100, inside);
-  let top = multiply(width, outside);
-  let out = divide(top, 100);
+  let out = multiply_divide(width, outside, 100);
   let room = out + 3;
   let spelled = text_from_number(room);
   let value = text_combine_multiple([spelled, "px"]);
