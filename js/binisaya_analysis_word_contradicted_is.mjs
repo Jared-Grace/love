@@ -1,8 +1,7 @@
+import { equal_not } from "./equal_not.mjs";
 import { binisaya_affixes_word_rebuilt } from "./binisaya_affixes_word_rebuilt.mjs";
 import { null_is } from "./null_is.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export function binisaya_analysis_word_contradicted_is(word, root, affixes) {
   "Whether binisaya.com's breakdown of a word disagrees with the word itself: put its pieces back onto the root it names, and a different word comes out.";
   "A breakdown it cannot read is not a disagreement. Where any piece is written in the notation nobody has decoded there is no rebuilt word to compare, and this answers no - the same silence the rest of this reader keeps wherever the shorthand runs out, so an unread mark can never manufacture an accusation.";
@@ -15,7 +14,6 @@ export function binisaya_analysis_word_contradicted_is(word, root, affixes) {
   }
   let made = gloss_word_folded(built);
   let spelled = gloss_word_folded(word);
-  let same = equal(made, spelled);
-  let differs = not(same);
+  let differs = equal_not(made, spelled);
   return differs;
 }
