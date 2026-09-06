@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { add } from "./add.mjs";
@@ -28,8 +28,7 @@ export function app_g_bless_vehicle_onward(vehicle, seconds) {
   ("The slide is written after the car is put down and not before. Putting a square down");
   ("writes the whole of its transition, so the order is not a preference - reversed, the");
   ("sliding is simply thrown away and the cars go back to hopping.");
-  let direction = property_get(vehicle, "direction");
-  let east_is = equal(direction, "east");
+  let east_is = property_equals(vehicle, "direction", "east");
   let x = property_get(vehicle, "x");
   let entry = property_get(vehicle, "entry");
   let finish = property_get(vehicle, "exit");
