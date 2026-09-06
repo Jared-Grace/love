@@ -52,7 +52,7 @@ export function literals_frozen_names() {
   let spelled33 = fn_name("g_arc_generate_upload_namespace");
   ("Four more of the same four folders' kind, and adding them is what makes the bucket half of this list complete rather than a set somebody happened to get to. Two hold the glosses of a bible in two languages; two hold what a reviewer marked on a chapter, and those two are shaped like function names while naming no function at all - which they never did, and which is the whole reason they were easy to walk past.");
   ("Nothing forced these the way a second spelling forced the four above. They were spelled once each, at the line that used them, and the only thing that could still go wrong was somebody retyping the word - which reads as an ordinary edit to an ordinary line, and is the one edit this list exists to make loud. Completing the set is worth more than each entry: while any were missing, an unwatched word could not be told apart from a word nobody had reached yet.");
-  let spelled34 = fn_name("app_ceb_bible_gloss_generate_upload_namespace");
+  let spelled34 = fn_name("gloss_upload_namespace_ceb_bible");
   let spelled35 = fn_name("gloss_upload_namespace_original_bible");
   let spelled36 = fn_name("g_verify_status_namespace");
   let spelled37 = fn_name("g_verify_approval_namespace");
