@@ -133,6 +133,10 @@ export function bible_glyph_chapter_references() {
       reference: "Leviticus 16",
     },
     {
+      chapter_code: "LEV26",
+      reference: "Leviticus 26",
+    },
+    {
       chapter_code: "NUM11",
       reference: "Numbers 11",
     },
@@ -261,12 +265,24 @@ export function bible_glyph_chapter_references() {
       reference: "2 Kings 11",
     },
     {
+      chapter_code: "1CH29",
+      reference: "1 Chronicles 29",
+    },
+    {
       chapter_code: "2CH07",
       reference: "2 Chronicles 7",
     },
     {
       chapter_code: "2CH20",
       reference: "2 Chronicles 20",
+    },
+    {
+      chapter_code: "2CH34",
+      reference: "2 Chronicles 34",
+    },
+    {
+      chapter_code: "EZR01",
+      reference: "Ezra 1",
     },
     {
       chapter_code: "EZR03",
@@ -505,6 +521,10 @@ export function bible_glyph_chapter_references() {
       reference: "Ezekiel 1",
     },
     {
+      chapter_code: "EZK03",
+      reference: "Ezekiel 3",
+    },
+    {
       chapter_code: "EZK18",
       reference: "Ezekiel 18",
     },
@@ -587,6 +607,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ZEC04",
       reference: "Zechariah 4",
+    },
+    {
+      chapter_code: "ZEC05",
+      reference: "Zechariah 5",
     },
     {
       chapter_code: "ZEC08",
