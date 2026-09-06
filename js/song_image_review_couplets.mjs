@@ -16,15 +16,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 8,
-      note: "You asked for the nail with perspective rather than square on. It is now driven in slanting and seen from the side, so its shaft plainly goes into the wood at an angle and its head is turned partly away from you. Nothing else changed.",
+      note: "Partially torn, and this drawing shows why: the tear runs from the nail down to the lower edge and the sheet stands whole above it, so the nail is plainly what opened it. For contrast the two bands behind are now emerald green and clear sky blue, which the brown cross reads against. That was paid for by cutting the clause that explained the nail's angle, so check the nail is still slanting.",
     },
     {
       n: 18,
-      note: "You asked for just a lamb, a scroll and the cross halo, so the seven seals are out of the wording altogether and the clause is half the length it was. The one thing I added was a ban on horns - every earlier draw gave the lamb a ram's curled horns, which is why they kept looking wrong. It now stands on the rolled scroll with the cross inside the halo.",
+      note: "Angled bars are not okay - the church draws the cruciform halo with its bars running straight up and straight across, so the wording now names a plain red Greek cross and they are flat here. The scroll sits on emerald green now instead of brown against brown. Three drawings in a row lost the cross out of the halo and into the field before this one held it.",
     },
     {
       n: 20,
-      note: "The rock is now a lot wider and taller than the entrance, as you asked. What did it was cutting the wording, not adding to it: three clauses of proportion had made it long, and long makes it come back photographic. Still wrong - the mouth has a built stone arch ring around it, which no wording has yet removed.",
+      note: "You were right, and the cause was the opening words: they described a cliff face, which is a tall shape however much proportion is added after it. The rock is now said to be far broader across than it is tall, its top a low rounded ridge, reaching right across the window. The mouth still has a ring of cut stones round it, as your own example 8 does - say if you would rather it were raw rock.",
     },
     {
       n: 21,
@@ -32,15 +32,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 23,
-      note: "You asked whether saying it simply and letting it fill in the details would work. It does, and this is that drawing. The wording is a third of what it was, the rays are now different widths and lean unevenly, and the ground is black. The sun still sits as a half disc rather than a sliver.",
+      note: "The sun is a sliver here, but words did not do it - three rewordings in a row still came back with a half disc sitting on the line. This is a drawing with everything below the sun's line blacked out afterwards. The rays are bright yellow, orange and ruby now, and the wording asks that no two of them be the same width.",
     },
     {
       n: 25,
-      note: "Seven crowns, and each one a different colour. Asking for no two the same drew ten of them; naming the colour of each crown by its place in the window drew exactly seven. The field came back blue rather than the crimson and violet the wording asks for, which is the price of the colour list.",
+      note: "Yes - the bands are deep crimson above and deep cobalt below, so only one of the two is a blue. What made that obeyed was moving the clause to the front of the wording; sitting at the end it was simply not being read. Violet was tried below first and it swallowed the crimson crown, so cobalt took its place.",
     },
     {
       n: 26,
-      note: "The beams are narrow at the cloud and fan out as they fall, and each one now runs the whole way down in a single colour without breaking. Cutting the wording by a third and moving that rule to the front is what fixed it. The sky above the cloud is still deep blue rather than light.",
+      note: "Both are narrow at the cloud now, the beams and the gaps between them, and both widen steadily as they fall. They are said in one clause rather than two so that the pair cannot come apart again. The sky above the cloud is still deep blue rather than the lighter one you asked for.",
     },
     {
       n: 30,
@@ -48,15 +48,15 @@ export function song_image_review_couplets() {
     },
     {
       n: 32,
-      note: "You asked for the river behind the trees. The wording now says every branch and every leaf is drawn over the top of the water, and this drawing does it - the leaves cross the river instead of stopping at it. The river is still wide and straight down the middle, so say if it should be narrower.",
+      note: "The wording already said the river runs behind both trees and is never hidden by them, so saying it again was not the lever. The fault was the shape: trees at the two edges with the water down the middle leaves nothing to overlap. It now asks that the branches reach right out across the water and meet in the middle, and here they do.",
     },
     {
       n: 34,
-      note: "Seven flames is still not landing - this one has five. Eight draws this round: the two that did give seven both turned the whole window emerald green and put the rainbow back to being the border, which you had already ruled against. Everything else is here: the arch behind the throne, the sceptre clear of it, the blue field. Say if seven flames is worth losing the field colour for.",
+      note: "The flames are orange, yellow and white now, named that way in the wording. The trade-off I put to you last round turned out not to be needed: seven flames, the emerald arch, the sceptre and the cobalt field all came back together here. That was a swap and not an addition - the flames used to be told to be ruby red, and that went out to pay for it.",
     },
     {
       n: 36,
-      note: "You asked for more grape bunches. There are six now, hung all round the cross instead of two at the top, and the wording asks for more bunches than leaves. The cross still stands clear of the vine. Nothing else changed.",
+      note: "The vine now reaches right down over the lower band to the foot of the window instead of stopping short. To pay for saying that I cut the clause asking for a bunch hanging on every stem, since the bunches are already asked for by number. Nothing else changed.",
     },
   ];
   return couplets;
