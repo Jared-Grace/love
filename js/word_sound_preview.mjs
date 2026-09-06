@@ -1,11 +1,12 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { gloss_word_sound_url_cycling } from "./gloss_word_sound_url_cycling.mjs";
+import { app_en_learn_bible_gloss_urdu_words_sound_url } from "./app_en_learn_bible_gloss_urdu_words_sound_url.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_input_placeholder_wide } from "./html_input_placeholder_wide.mjs";
 import { equal } from "./equal.mjs";
-import { app_en_learn_bible_gloss_urdu_words_sound_url } from "./app_en_learn_bible_gloss_urdu_words_sound_url.mjs";
-import { html_text_content_set } from "./html_text_content_set.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_sound_url_play } from "./html_sound_url_play.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 import { html_button } from "./html_button.mjs";
@@ -15,8 +16,12 @@ export function word_sound_preview() {
   "Plays the shipped recording of any English word the gloss app can say, on the sandbox app at hash word_sound, so a word can be listened to without opening a chapter and hunting for it.";
   "★ IT PLAYS THE RECORDING THAT IS LIVE, NOT ONE MADE HERE FOR THE OCCASION. That is the whole worth of it: every earlier way of judging a word - a loose page of files written into a folder next to the code - answered whether the engine could say the word well, and the question a person actually has is whether the file a reader's phone fetches says it well. Those came apart twice: a recording mended on this machine and not sent up, and a recording sent up behind a stamp no phone would ask for. Both sound perfect in a folder and wrong on a phone.";
   "★ THE ADDRESS IS SHOWN UNDERNEATH, BECAUSE THE PLAYER IS DELIBERATELY SILENT WHEN IT FAILS. A word with no recording and a phone refusing to make noise both come out as nothing happening, and on a page for judging recordings that is the one place where the difference matters. The address can be opened in another tab, which separates them in one move.";
+  "★ IT CYCLES THE VOICES THE WAY THE READING SCREEN DOES, WHICH IS WHY THE SAME WORD PRESSED TWICE ANSWERS TWICE OVER. Judging a recording means judging the one a reader gets, and a reader gets a different person each tap; a page that always played the first of the cast would be judging a quarter of what ships. The address shown underneath carries the name, so which person just spoke can be read rather than guessed at.";
   "The word is typed rather than picked off a list. The list is thousands long and lives on the machine that records, not in the browser, and a person who came here came with a particular word in mind - the one they just heard go wrong.";
   arguments_assert(arguments, 0);
+  let sound_url_get = gloss_word_sound_url_cycling(
+    app_en_learn_bible_gloss_urdu_words_sound_url,
+  );
   let root = html_body_div();
   html_p_text(
     root,
@@ -29,7 +34,7 @@ export function word_sound_preview() {
     if (empty) {
       return;
     }
-    let url = app_en_learn_bible_gloss_urdu_words_sound_url(word);
+    let url = sound_url_get(word);
     let text = text_combine("playing: ", url);
     html_text_content_set(shown, text);
     await html_sound_url_play(url);
