@@ -15,10 +15,6 @@ export function song_image_review_couplets() {
       note: "You were right, and the cause was the opening words: they described a cliff face, which is a tall shape however much proportion is added after it. The rock is now said to be far broader across than it is tall, its top a low rounded ridge, reaching right across the window. The mouth still has a ring of cut stones round it, as your own example 8 does - say if you would rather it were raw rock.",
     },
     {
-      n: 21,
-      note: "Eighteen more tries and the stone still will not cover the mouth, so the picture is unchanged. I did find one real cause: the mouth used to sit high in the rock face while the stone stands on the ground, so it could not reach. The mouth now runs down to the ground, which fixed the shape and not the covering. The stone comes back small and low every time, and I have stopped spending on it until you say it is worth more.",
-    },
-    {
       n: 23,
       note: "The sun is a sliver here, but words did not do it - three rewordings in a row still came back with a half disc sitting on the line. This is a drawing with everything below the sun's line blacked out afterwards. The rays are bright yellow, orange and ruby now, and the wording asks that no two of them be the same width.",
     },
