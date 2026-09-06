@@ -1,22 +1,21 @@
-import { bible_verse_end_apparatus_or_null } from "./bible_verse_end_apparatus_or_null.mjs";
-import { bible_verse_end_unrecognised_tail_or_null } from "./bible_verse_end_unrecognised_tail_or_null.mjs";
-import { bible_sentence_end_tails_kept_count } from "./bible_sentence_end_tails_kept_count.mjs";
-import { list_take } from "./list_take.mjs";
-import { bible_verse_end_blocked_or_null } from "./bible_verse_end_blocked_or_null.mjs";
-import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
-import { list_unique } from "./list_unique.mjs";
+import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
 import { bible_folder_chapter_verses_outcome } from "./bible_folder_chapter_verses_outcome.mjs";
-import { list_map_unique } from "./list_map_unique.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { null_not_is } from "./null_not_is.mjs";
+import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { bible_verse_trim_right } from "./bible_verse_trim_right.mjs";
 import { text_last } from "./text_last.mjs";
 import { list_difference } from "./list_difference.mjs";
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
-import { bible_sentence_end_sample_count } from "./bible_sentence_end_sample_count.mjs";
-import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
-import { null_not_is } from "./null_not_is.mjs";
-import { list_filter } from "./list_filter.mjs";
+import { bible_verses_text_found_sorted } from "./bible_verses_text_found_sorted.mjs";
+import { bible_verse_end_blocked_or_null } from "./bible_verse_end_blocked_or_null.mjs";
+import { bible_verse_end_unrecognised_tail_or_null } from "./bible_verse_end_unrecognised_tail_or_null.mjs";
+import { bible_sentence_end_tails_kept_count } from "./bible_sentence_end_tails_kept_count.mjs";
+import { list_take } from "./list_take.mjs";
+import { bible_verse_end_apparatus_or_null } from "./bible_verse_end_apparatus_or_null.mjs";
 import { list_size } from "./list_size.mjs";
-import { property_get } from "./property_get.mjs";
 export async function bible_folder_chapter_sentence_end_measure(
   bible_folder,
   chapter_code,
@@ -55,44 +54,24 @@ export async function bible_folder_chapter_sentence_end_measure(
   let unended = list_difference(read, ended_each);
   let unrecognised = list_map_unique(unended, lambda3);
   list_sort_text(unrecognised);
+  ("THE THREE READINGS BELOW ARE THE SAME READING WITH A DIFFERENT QUESTION IN IT, so they are asked by name rather than written out three times. Each hands the verses that did not end to a reader that answers or says nothing, and gets back what was found, each thing once and in order.");
   ("THE MARKS THAT ONLY HID A SENTENCE MARK ARE COUNTED APART FROM THE ONES THAT REPLACED IT, and this is the half a gate can be built on. A verse ending on a comma has not finished and never will, which is a fact about where a translator cut the verse; a verse ending on a full stop and then a closing quotation has finished and was read as though it had not, which is a fault in this repo. Written down here it needs no second reading of the same chapter to find - and that is what lets the refusing happen where the rest of the gates run, with nothing reaching the network.");
-  function bible_folder_chapter_sentence_end_blocking(verse) {
-    let text = property_get(verse, "text");
-    let blocking = bible_verse_end_blocked_or_null(text);
-    return blocking;
-  }
-  let blocking_each = list_map_filter_null_not_is(
+  let blocked = bible_verses_text_found_sorted(
     unended,
-    bible_folder_chapter_sentence_end_blocking,
+    bible_verse_end_blocked_or_null,
   );
-  let blocked = list_unique(blocking_each);
-  list_sort_text(blocked);
   ("A FEW OF THE CLOSING WORDS ARE KEPT FOR THE VERSES THAT ENDED ON NO MARK AT ALL, because the last character alone cannot say why. Counted 2026-09-05, fifty two of the two hundred and forty three bibles that stop short have at least one verse ending on a letter, and the one of them read by hand turned out to be finishing its sentence and then printing a cross reference in brackets behind it - so the mark was there and the reader was carried past it anyway. Reading the other fifty one meant fetching every one of those chapters a second time, which is the whole reason this is written down here instead.");
-  function bible_folder_chapter_sentence_end_tail(verse) {
-    let text = property_get(verse, "text");
-    let tail = bible_verse_end_unrecognised_tail_or_null(text);
-    return tail;
-  }
-  let tail_each = list_map_filter_null_not_is(
+  let tails_all = bible_verses_text_found_sorted(
     unended,
-    bible_folder_chapter_sentence_end_tail,
+    bible_verse_end_unrecognised_tail_or_null,
   );
-  let tails_all = list_unique(tail_each);
-  list_sort_text(tails_all);
   let count2 = bible_sentence_end_tails_kept_count();
   let tails = list_take(tails_all, count2);
   ("THE BRACKETED SPANS ARE COUNTED APART FROM BOTH THE OTHERS, because a verse can finish its sentence and then print a cross reference behind it, and what stands in the way then is a whole span of words rather than one mark. The detector for a hidden mark cannot reach that, having to stop at the first letter it meets, so this asks the second question over the same verses that were already fetched. Written down beside the rest it says how many bibles do it, which is what decides whether taking such a span off is worth the judgement it needs.");
-  function bible_folder_chapter_sentence_end_apparatus(verse) {
-    let text = property_get(verse, "text");
-    let span = bible_verse_end_apparatus_or_null(text);
-    return span;
-  }
-  let apparatus_each = list_map_filter_null_not_is(
+  let apparatus_all = bible_verses_text_found_sorted(
     unended,
-    bible_folder_chapter_sentence_end_apparatus,
+    bible_verse_end_apparatus_or_null,
   );
-  let apparatus_all = list_unique(apparatus_each);
-  list_sort_text(apparatus_all);
   let apparatus = list_take(apparatus_all, count2);
   let measured = {
     bible_folder,
