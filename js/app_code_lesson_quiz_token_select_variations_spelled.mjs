@@ -5,7 +5,7 @@ import { list_filter } from "./list_filter.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
 import { js_tokens_join_repeated_is } from "./js_tokens_join_repeated_is.mjs";
-import { implied_by } from "./equal.mjs";
+import { implied_by } from "./implied_by.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
 import { each } from "./each.mjs";
