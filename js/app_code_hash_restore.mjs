@@ -1,3 +1,4 @@
+import { app_code_hash_review_restore } from "./app_code_hash_review_restore.mjs";
 import { html_hash_object_get } from "./html_hash_object_get.mjs";
 import { app_code_lesson_hash_key } from "./app_code_lesson_hash_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -29,4 +30,5 @@ export function app_code_hash_restore(context) {
     let counted = Number(quiz_index);
     storage_session_set_context(context, "quiz_index", counted);
   }
+  app_code_hash_review_restore(context, hash);
 }
