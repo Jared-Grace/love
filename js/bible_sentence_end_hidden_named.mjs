@@ -19,12 +19,12 @@ export function bible_sentence_end_hidden_named(rows, field) {
     let bible_folder = property_get(row, property_name);
     let chapter_code = property_get(row, "chapter_code");
     let hidden = property_get(row, field);
-    let named = {
+    let row_named = {
       bible_folder,
       chapter_code,
       hidden,
     };
-    return named;
+    return row_named;
   }
   let named = list_map(found, bible_sentence_end_hidden_row_named);
   return named;
