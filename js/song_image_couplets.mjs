@@ -312,7 +312,7 @@ export function song_image_couplets() {
       first: "HE paid the price",
       second: "with HIS own blood",
       symbol:
-        "One white lamb standing side-on, the Agnus Dei of church tradition and never a ram, with no horns of any kind on its head, with a cruciform halo behind its head, that is a disc of bright yellow glass holding a red cross whose one bar stands straight upright and whose other lies flat across it, standing on a scroll of brown parchment rolled shut and sealed. This couplet stands in heaven, so the whole window reads bright and full of light and never dark, the band between the two lead lines one flat sheet of bright orange and the band below them one flat sheet of emerald green, the lamb drawn very large so that it reaches almost to the white border on both sides",
+        "One white lamb standing side-on, the Agnus Dei of church tradition and never a ram, with no horns of any kind on its head, with a cruciform halo behind its head, that is a disc of bright yellow glass holding an upright red cross with a level crossbar, standing on a scroll of brown parchment rolled shut and sealed. This couplet stands in heaven, so the whole window reads bright and full of light and never dark, the band between the two lead lines one flat sheet of bright orange and the band below them one flat sheet of emerald green, the lamb drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "John 1:29, Revelation 5:9",
       same_as: 17,
     },
@@ -368,7 +368,7 @@ export function song_image_couplets() {
       first: "but on the third",
       second: "near dawn's first light",
       symbol:
-        "The beginning of a sunrise, with rays. One straight level line of ground running right across the window and standing low in it, everything below that line one unbroken pane of black glass and everything above it one unbroken pane of deep cobalt blue as the sky, and standing on that line the sun, showing only as a thin white sliver, a shallow curve of white lying flat along the line and four times as wide across as it stands tall, and rays of bright yellow and bright orange and ruby red rising from that sliver into the sky, these rays being part of the symbol and drawn in front of the field, no two of them the same width, some of them broad and some very narrow, with much more plain cobalt left showing between them than there is yellow or orange or red",
+        "The beginning of a sunrise, with rays. One straight level line of ground running right across the window and standing low in it, everything below that line one unbroken pane of black glass and everything above it one unbroken pane of deep cobalt blue as the sky, and standing on that line the sun, showing only as a thin flat white crescent, its top edge one shallow curve and its foot lying flat along the line, no deeper from that line to its top than a ray is wide, and rays of bright yellow and bright orange and ruby red rising from that sliver into the sky, these rays being part of the symbol and drawn in front of the field, no two of them the same width, some of them broad and some very narrow, with much more plain cobalt left showing between them than there is yellow or orange or red",
       symbol_ref: "Malachi 4:2, Mark 16:2, Luke 24:1",
       same_as: 0,
     },
@@ -388,7 +388,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "The band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of violet, and standing on them seven royal crowns filling the window and only seven, standing in four rows, one crown alone at the top, two side by side below it, two more side by side below those, and two more side by side at the foot, the crown at the top drawn in bright orange glass, the two below it in deep crimson and in bright yellow, the two below those in emerald green and in deep cobalt blue, and the two at the foot in ruby red and in white, each crown a plain broad band with upright points standing along the top of it so that it is plainly a crown and not a ring, no two of the seven the same shape, each one drawn as large as the room around it allows and standing clear of the ones beside it",
+        "The band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of deep cobalt blue, and standing on them seven royal crowns filling the window and only seven, standing in four rows, one crown alone at the top, two side by side below it, two more side by side below those, and two more side by side at the foot, the crown at the top drawn in bright orange glass, the two below it in white and in bright yellow, the two below those in emerald green and in deep cobalt blue, and the two at the foot in ruby red and in deep crimson, each crown a plain broad band with upright points standing along the top of it so that it is plainly a crown and not a ring, no two of the seven the same shape, each one drawn as large as the room around it allows and standing clear of the ones beside it",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
