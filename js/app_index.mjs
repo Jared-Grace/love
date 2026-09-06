@@ -4,11 +4,10 @@ import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
 import { app_index_built_card } from "./app_index_built_card.mjs";
 import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
 import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
-import { app_index_gloss_coverage } from "./app_index_gloss_coverage.mjs";
 import { app_index_main_fns } from "./app_index_main_fns.mjs";
-import { app_index_entries_coverage_applied } from "./app_index_entries_coverage_applied.mjs";
 import { app_index_generic } from "./app_index_generic.mjs";
 import { app_index_dev_g_card } from "./app_index_dev_g_card.mjs";
+import { app_index_gloss_coverage_show } from "./app_index_gloss_coverage_show.mjs";
 import { html_clear } from "./html_clear.mjs";
 export async function app_index(context) {
   app_shared_app_fn_set(context, app_index);
@@ -22,14 +21,13 @@ export async function app_index(context) {
   await app_index_dev_links_show(root);
   ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
   app_index_dev_about_card(root, lambda_about);
-  ("★ HOW FAR THE TWO LANGUAGE APPS HAVE GOT IS WAITED ON BEFORE ANY CARD IS DRAWN, so the cards are drawn once and already right. Letting them draw first and filling the numbers in afterwards would grow two sentences under a reader's finger, and every card below those two is a link to a different app - a list that reflows a moment after it appears is a list somebody taps the wrong thing in.");
-  ("What it costs is one round trip before the first card, and the store answered in under a second when it was measured. What it costs when the store cannot be reached is nothing: the count comes back as none and the cards are drawn exactly as they were written.");
-  let coverage = await app_index_gloss_coverage();
-  let entries_written = app_index_main_fns();
-  let entries = app_index_entries_coverage_applied(entries_written, coverage);
-  app_index_generic(context, entries);
+  let entries = app_index_main_fns();
+  let cards = app_index_generic(context, entries);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
+  ("★ HOW FAR THE TWO LANGUAGE APPS HAVE GOT IS ASKED LAST, WITH EVERY CARD ALREADY ON THE SCREEN, which is the opposite of the line above about the working links, and the two differ in what waiting costs. Those are drawn only on this network and only above the apps, so waiting for them holds up a part of the page nobody outside this house ever sees. This is a store somewhere else, asked by everybody who opens the site, and the browser half of fetching gives up after eight seconds and tries twice more - so drawing anything behind it risks a blank front page for half a minute in order to put a number in a sentence.");
+  ("It is last rather than started here and waited on further down, which is the shape that would have read better and does not survive: the canonical pass writes an await back in front of a call whose answer is thrown away, so a page whose ordering depended on that await being absent would be one pass away from being wrong without a word of this file changing. Being last needs no await to be absent - there is nothing after it to hold up. It never throws: what it does when the store says nothing is leave every card exactly as it was written.");
+  await app_index_gloss_coverage_show(cards);
   async function lambda_about() {
     "★ WHAT THIS OPENS IS FETCHED WHEN IT IS TAPPED AND NOT BEFORE, and that is about weight rather than about tidiness. The card above decides who ever TAPS this and settles nothing about who DOWNLOADS what it opens - a plain import is followed whether the branch is walked or not, so every reader of the public index was fetching the whole of what is promised about money, every section of it, in order never to be shown any of it.";
     "It is fetched here rather than where the card asks its question, because this is the one place that names what opens; the card is handed a way to open something and is right not to know what.";
