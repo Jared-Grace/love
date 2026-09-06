@@ -9,6 +9,7 @@ import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_null_is } from "./property_null_is.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { git_commit_behind_count } from "./git_commit_behind_count.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { or } from "./or.mjs";
@@ -57,7 +58,7 @@ export async function qa_commit_named_said_expire() {
     if (unspoken) {
       continue;
     }
-    let waiting = list_contains(standing, commit);
+    let waiting = list_includes(standing, commit);
     if (waiting) {
       continue;
     }
