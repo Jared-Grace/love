@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { git_commit_imports_missing } from "./git_commit_imports_missing.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { qa_app_commit_promote_judged } from "./qa_app_commit_promote_judged.mjs";
 import { qa_promoted_publish } from "./qa_promoted_publish.mjs";
@@ -16,8 +16,7 @@ export async function qa_app_commit_deploy(search, commit) {
   "Nothing about frozen apps is relaxed. The sending puts out the whole folder it reads from, not this app alone, so every app that must not move is still checked and still kept a copy of first. Narrowing WHICH app is judged for soundness is not the same as narrowing which apps are protected, and only the first of those was narrowed here";
   "The two halves it is made of are each their own name now, because a run that sends several apps wants the first half once per app and the second half once for all of them. Written out again here they would be a second copy of the order they go in, and the two copies would answer differently the first time either was corrected";
   let torn = await git_commit_imports_missing(commit);
-  let torn_count = property_get(torn, "count");
-  let whole = equal(torn_count, 0);
+  let whole = property_equals(torn, "count", 0);
   true_is_assert_json(whole, torn);
   let promoted = await qa_app_commit_promote_judged(search, commit);
   let published = await qa_promoted_publish();
