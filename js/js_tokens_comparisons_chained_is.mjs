@@ -13,12 +13,12 @@ export function js_tokens_comparisons_chained_is(tokens) {
   "The chain is the one shape where a repeat carries meaning: two comparisons that share an end are saying something about the thing they share, and a reader who cannot see the same word twice cannot see that they do. So all three of those parts are asked for, and a line holding only some of them is not a chain.";
   "AN OR IS NOT A CHAIN. 4 === 4 || 4 >= 5 writes the same word either side of its join and says nothing at all about it jointly - each comparison stands on its own, and the line is true if either one is. Asked as any join, this called that a chain and refused every other true arrangement of its four values, on a lesson whose subject is the or.";
   "NEITHER IS A PAIR OF PLAIN VALUES. true && true is a repeat either side of an and, and there is no comparison on either side of it for the repeated word to be the shared end of; the two words are the whole of what is being joined. Asked without the signs, this called that a chain too.";
-  "The ends of the line are not looked at. A chain needs a comparison on both sides of the join, so nothing before the third token can be one, and asking would read past the list.";
+  "THE JOINS NEAR EITHER END ARE NOT LOOKED AT, and the walk stops two words short because of it. A chain is five words wide - sign, value, join, value, sign - so a join with fewer than two words behind it, or fewer than two ahead of it, cannot be the middle of one. Walked to the last word but one, which is as far as a repeat alone needs, the reach for the sign past the join ran off the end of true || true && true and threw where a line was only being asked a question about itself.";
   arguments_assert(arguments, 1);
   let join = "&&";
   let operators = js_operators_comparison();
   let signs = list_map_property(operators, "operator");
-  let last = list_size_subtract(tokens, 1);
+  let last = list_size_subtract(tokens, 2);
   let index = 2;
   while (less_than(index, last)) {
     let token = list_get(tokens, index);
