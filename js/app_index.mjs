@@ -1,13 +1,15 @@
-import { app_index_built_card } from "./app_index_built_card.mjs";
-import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
-import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
-import { html_clear } from "./html_clear.mjs";
-import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
 import { app_shared_app_fn_set } from "./app_shared_app_fn_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_index_dev_build_card } from "./app_index_dev_build_card.mjs";
+import { app_index_built_card } from "./app_index_built_card.mjs";
+import { app_index_dev_links_show } from "./app_index_dev_links_show.mjs";
+import { app_index_dev_about_card } from "./app_index_dev_about_card.mjs";
+import { app_index_gloss_coverage } from "./app_index_gloss_coverage.mjs";
 import { app_index_main_fns } from "./app_index_main_fns.mjs";
+import { app_index_entries_coverage_applied } from "./app_index_entries_coverage_applied.mjs";
 import { app_index_generic } from "./app_index_generic.mjs";
 import { app_index_dev_g_card } from "./app_index_dev_g_card.mjs";
-import { property_get } from "./property_get.mjs";
+import { html_clear } from "./html_clear.mjs";
 export async function app_index(context) {
   app_shared_app_fn_set(context, app_index);
   let root = property_get(context, "root");
@@ -20,7 +22,11 @@ export async function app_index(context) {
   await app_index_dev_links_show(root);
   ("about sits up here with the working links rather than down among the apps, because it is the same kind of thing they are: a way in for whoever is working, shown only on this network, and worth one tap instead of the four it takes to reach the same paragraph through an app's settings.");
   app_index_dev_about_card(root, lambda_about);
-  let entries = app_index_main_fns();
+  ("★ HOW FAR THE TWO LANGUAGE APPS HAVE GOT IS WAITED ON BEFORE ANY CARD IS DRAWN, so the cards are drawn once and already right. Letting them draw first and filling the numbers in afterwards would grow two sentences under a reader's finger, and every card below those two is a link to a different app - a list that reflows a moment after it appears is a list somebody taps the wrong thing in.");
+  ("What it costs is one round trip before the first card, and the store answered in under a second when it was measured. What it costs when the store cannot be reached is nothing: the count comes back as none and the cards are drawn exactly as they were written.");
+  let coverage = await app_index_gloss_coverage();
+  let entries_written = app_index_main_fns();
+  let entries = app_index_entries_coverage_applied(entries_written, coverage);
   app_index_generic(context, entries);
   ("the dev tools card comes after the apps, not among them: it is not an app somebody came here to use, it is the way in to the game's test screens from a phone, which has no localhost to reach them from");
   app_index_dev_g_card(root);
