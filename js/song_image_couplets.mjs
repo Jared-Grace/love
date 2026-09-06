@@ -388,7 +388,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "The band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of deep cobalt blue, and standing on them seven royal crowns filling the window and only seven, the crown at the top drawn in bright orange glass, the two below it in white and in bright yellow, the two below those in emerald green and in deep cobalt blue, and the two at the foot in ruby red and in deep crimson, each crown a plain broad band with upright points standing along the top of it so that it is plainly a crown and not a ring, no two of the seven the same shape, each one drawn as large as the room around it allows and standing clear of the ones beside it",
+        "The band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of deep cobalt blue, and standing on them seven royal crowns filling the window and only seven, the crown at the top drawn in bright orange glass, the two below it in white and in bright yellow, the two below those in emerald green and in deep cobalt blue, and the two at the foot in ruby red and in deep crimson, each crown of a different make from all the others and never a plain ring, some of them a broad band with upright points standing along the top, some with arched bands rising from the band and meeting under a small cross above, and some with a raised cap of glass held inside the band, each one drawn as large as the room around it allows and standing clear of the ones beside it",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
@@ -498,7 +498,7 @@ export function song_image_couplets() {
       first: "the great I AM",
       second: song_image_couplets_title(),
       symbol:
-        "The band between the two lead lines one flat sheet of deep cobalt blue and the band below them one flat sheet of violet, and standing on that lower band one plain upright cross of brown wood reaching from low in the window almost to the head of the arch, and growing over that cross one grapevine filling the whole window, its slender brown stems winding and branching across the glass in long curves with small curled tendrils springing from them all along their length, broad emerald green vine leaves and many thick clusters of deep crimson grapes growing off those stems all over the window, more bunches of grapes than there are leaves, the vine reaching right down over the lower band to the foot of the window and almost to the white border on every side",
+        "The band between the two lead lines one flat sheet of clear sky blue and the band below them one flat sheet of a paler clear sky blue, and standing on that lower band one plain upright cross of brown wood reaching from low in the window almost to the head of the arch, and growing over that cross one grapevine filling the whole window, its slender brown stems winding and branching across the glass in long curves with small curled tendrils springing from them all along their length, broad emerald green vine leaves and many thick clusters of deep crimson grapes growing off those stems all over the window, more bunches of grapes than there are leaves, the vine reaching right down over the lower band to the foot of the window and almost to the white border on every side",
       symbol_ref: "John 15:1",
       same_as: 35,
     },
