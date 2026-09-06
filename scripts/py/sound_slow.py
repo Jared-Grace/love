@@ -47,6 +47,7 @@ import soundfile as sf
 
 SLOW = 0.6
 KEPT = 0.09
+COMPRESSION_LEVEL = 0.4
 
 
 def filtered(samples, rate, chain):
@@ -101,18 +102,28 @@ def mono(samples):
 
 
 def written(source, destination, slow, kept, level):
-    """Slows one recording into the place the slow copy belongs."""
+    """Slows one recording into the place the slow copy belongs.
+
+    ★ THE MP3 IS WRITTEN BY THE SAME WRITER THE ORDINARY RECORDINGS USE, AND
+    NOT BY ffmpeg.  ffmpeg is already loaded here for the stretching, so
+    letting it encode as well would have cost nothing to write - but it is a
+    different encoder at different settings, and a slow copy that had been
+    squeezed differently from its own ordinary recording would differ from it
+    in two ways at once.  Then a reader reporting that the slow one sounds
+    worse could be hearing the stretching or the squeezing, and there would be
+    no way to tell which from the file.
+    """
     samples, rate = sf.read(str(source), dtype="float32")
     slowed = ends_kept(mono(samples), rate, slow, kept)
-    with tempfile.TemporaryDirectory() as held:
-        plain = Path(held) / "slowed.wav"
-        sf.write(str(plain), slowed, rate, subtype="PCM_16")
-        subprocess.run(
-            ["ffmpeg", "-y", "-loglevel", "error", "-i", str(plain),
-             "-codec:a", "libmp3lame", "-compression_level", str(level),
-             str(destination)],
-            check=True,
-        )
+    with sf.SoundFile(
+        str(destination),
+        "w",
+        samplerate=rate,
+        channels=1,
+        format="MP3",
+        compression_level=level,
+    ) as handle:
+        handle.write(slowed)
     return len(slowed) / rate
 
 
@@ -147,7 +158,7 @@ def main():
     voices = given["voices"]
     slow = given.get("slow", SLOW)
     kept = given.get("kept", KEPT)
-    level = given.get("compression_level", 4)
+    level = given.get("compression_level", COMPRESSION_LEVEL)
     voices_done = []
     for voice in voices:
         done = voice_done(folder_from, folder_to, voice, slow, kept, level)
