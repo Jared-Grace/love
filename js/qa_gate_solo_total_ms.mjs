@@ -16,7 +16,7 @@ export async function qa_gate_solo_total_ms() {
     fn_name("qa_gate_timings_naming_no_gate"),
     " rather than worked out here, because the coverage reading reports the same set and the two saying different things would be worse than either.");
   let known = await qa_gate_timings_read();
-  let dead = qa_gate_timings_naming_no_gate(known);
+  let dead = await qa_gate_timings_naming_no_gate(known);
   let recorded = object_property_names(known);
   let live = list_without_multiple(recorded, dead);
   let taken = object_pick_try_values(known, live);
