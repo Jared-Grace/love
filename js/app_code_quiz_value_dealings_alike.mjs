@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_quiz_value_orderings_or_null } from "./app_code_quiz_value_orderings_or_null.mjs";
+import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealings_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_places_set_copy } from "./list_places_set_copy.mjs";
@@ -15,7 +15,7 @@ export function app_code_quiz_value_dealings_alike(code) {
   "The bound on how far to walk is the maker of orderings', so a line too long to deal declines here and both callers decline with it.";
   arguments_assert(arguments, 1);
   let none = [];
-  let dealt_from = app_code_quiz_value_orderings_or_null(code);
+  let dealt_from = app_code_quiz_tile_dealings_or_null(code);
   let unwalkable = null_is(dealt_from);
   if (unwalkable) {
     return none;
