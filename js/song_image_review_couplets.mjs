@@ -11,14 +11,6 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
-      n: 4,
-      note: "I took your second suggestion, not your first: the thorns carry a light brown over most of them and a deep brown along their edges, instead of the field being lightened. This is a new drawing made from that rule, and the crown is much larger than before. The field behind is unchanged, so if brown on violet is still muddy the field is the next thing to move.",
-    },
-    {
-      n: 8,
-      note: "Partially torn, and this drawing shows why: the tear runs from the nail down to the lower edge and the sheet stands whole above it, so the nail is plainly what opened it. For contrast the two bands behind are now emerald green and clear sky blue, which the brown cross reads against. That was paid for by cutting the clause that explained the nail's angle, so check the nail is still slanting.",
-    },
-    {
       n: 18,
       note: "Angled bars are not okay - the church draws the cruciform halo with its bars running straight up and straight across, so the wording now names a plain red Greek cross and they are flat here. The scroll sits on emerald green now instead of brown against brown. Three drawings in a row lost the cross out of the halo and into the field before this one held it.",
     },
