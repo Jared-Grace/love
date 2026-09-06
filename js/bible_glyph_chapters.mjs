@@ -414,6 +414,7 @@ export function bible_glyph_chapters() {
   let one_hundred_and_forty_fourth = bible_glyph_chapter_job23();
   let one_hundred_and_forty_fifth = bible_glyph_chapter_2ch07();
   let one_hundred_and_forty_sixth = bible_glyph_chapter_exo40();
+  let one_hundred_and_forty_seventh = bible_glyph_chapter_1sa02();
   let chapters = [
     first,
     second,
@@ -561,6 +562,7 @@ export function bible_glyph_chapters() {
     one_hundred_and_forty_fourth,
     one_hundred_and_forty_fifth,
     one_hundred_and_forty_sixth,
+    one_hundred_and_forty_seventh,
   ];
   return chapters;
 }
