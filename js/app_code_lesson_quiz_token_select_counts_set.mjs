@@ -3,8 +3,10 @@ import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_tally } from "./list_tally.mjs";
 import { list_map } from "./list_map.mjs";
+import { app_shared_spaced_frame_gap } from "./app_shared_spaced_frame_gap.mjs";
 import { list_get } from "./list_get.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { html_style_set } from "./html_style_set.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { list_max } from "./list_max.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -13,6 +15,7 @@ import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_quiz_token_select_count_badge_style } from "./app_code_lesson_quiz_token_select_count_badge_style.mjs";
+import { app_code_lesson_quiz_token_select_count_badge_room_keep } from "./app_code_lesson_quiz_token_select_count_badge_room_keep.mjs";
 import { each_index } from "./each_index.mjs";
 export function app_code_lesson_quiz_token_select_counts_set(
   tokens_unique,
@@ -27,6 +30,7 @@ export function app_code_lesson_quiz_token_select_counts_set(
   ("MEASURED, the pool does hold one tally throughout: across the fifteen hundred and twenty-one unscrambles the course can ask and the three thousand six hundred and seventy-four orders they come to, not one order spelled the line with a different count of any piece. So the simpler reading off the question would have agreed everywhere today. It is not what is done, because the thing it rests on is a measurement rather than a rule, and the pool gains roads.");
   ("THE TIMES SIGN IS PART OF WHAT IS SHOWN, and it is not decoration. A two sitting up beside a seven is how mathematics writes seven squared, and this is a course about writing expressions - the one reader who must not misread it is the only reader it is for. The badge is dressed to be unmistakable on its own, and the times sign is the second lock on the same door: times two cannot be read as a power of anything.");
   ("NOTHING IS WRITTEN ON A PIECE WANTED ONCE. That is nearly every piece, and a number beside each of them would be a number to read on every tap that told the reader nothing. The mark is there to answer a question the row cannot otherwise answer, so it appears exactly where the question arises.");
+  ("EVERY PIECE IS PUT BACK TO THE PLAIN GAP FIRST, badge or no badge. A piece carrying a badge is given a wider gap after it so the next piece clears the badge, and a piece that loses its badge on the next tap would otherwise keep that gap for the rest of the question - a hole in the row where a badge used to be. Widening is decided here every time from what is true now, so it cannot outlive what it was for.");
   ("THE PIECE IS WRITTEN OUT AGAIN FROM SCRATCH EVERY TIME rather than the number being hunted down and changed. Setting the piece's own text is what clears the mark left from the tap before, so the two cannot come apart; and a row is eight or nine buttons, so there is nothing to be saved by being cleverer than that.");
   ("The pieces and their buttons stand in the same order, because the buttons were made from the pieces one for one.");
   let size = list_size(chosen);
@@ -36,9 +40,11 @@ export function app_code_lesson_quiz_token_select_counts_set(
     return tallied;
   }
   let tallies = list_map(variations, remaining_tally);
+  let gap = app_shared_spaced_frame_gap();
   function each_button(b, index) {
     let token_each = list_get(tokens_unique, index);
     html_text_set(b, token_each);
+    html_style_set(b, "margin-right", gap);
     function count_in(tallied) {
       let n = property_get_or(tallied, token_each, 0);
       return n;
@@ -54,6 +60,7 @@ export function app_code_lesson_quiz_token_select_counts_set(
     let label = text_combine_multiple(["×", spelled]);
     let badge = html_span_text(b, label);
     app_code_lesson_quiz_token_select_count_badge_style(badge, b);
+    app_code_lesson_quiz_token_select_count_badge_room_keep(badge, b);
   }
   each_index(buttons, each_button);
 }
