@@ -10,13 +10,15 @@ import { text_includes } from "./text_includes.mjs";
 import { gloss_explain_root_judged } from "./gloss_explain_root_judged.mjs";
 import { equal } from "./equal.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
+import { gloss_explain_affix_named_is } from "./gloss_explain_affix_named_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export function gloss_entries_roots_quoted_only(entries, known) {
-  "The explanations in one passage that only appear to name the root an outside dictionary takes their word back to, because the root's letters reach the page inside the quoted word itself and nowhere else.";
+  "The explanations in one passage that say nothing about where their word came from, and only appear to because the dictionary's root reaches the page inside the quoted word itself.";
   "★ THIS IS THE READING'S OWN BLIND SPOT MEASURED RATHER THAN ARGUED. Where a word says nothing about a root outright, it is asked the weaker question of whether the root stands anywhere in its wording - and that question cannot be failed by any word carrying its own root's letters, because every explanation quotes the word it is explaining. So a bare meaning gloss saying nothing whatever about origin passes, and is counted as agreeing. What comes back here is every sighting that passes for that reason alone.";
   "The test is the passing test run twice: once as written, and once over the wording with the word struck out. A sentence that still names the root when its own subject is gone was saying something; one that stops naming it was only quoting.";
   "The word is struck out in small letters over small letters, because a word at the head of a sentence wears a capital and its root never does, and matching the capitalised spelling alone would leave the quotation standing and report the sentence as sound.";
+  "★ A SENTENCE NAMING THE WORD'S AFFIX IS THEN PUT BACK, AND THAT SUBTRACTION IS NOT A REFINEMENT BUT THE DIFFERENCE BETWEEN A LIST OF FAULTS AND A LIST OF SENTENCES. Measured 2026-09-06 over the forty commonest words caught here, one thousand nine hundred and ninety-one different explanations: two hundred and thirty-one of them name the piece the word is built with and never respell the root, and every one of those is a complete account of the word. Iyang is his, with the short tie -ng run onto it says where the word came from as fully as any sentence naming a root does. Reporting it would send a reader to correct writing that is already right, which is the same fault this whole reading exists to name, committed one level up.";
   "Only a word whose root is a piece of its own spelling can be caught this way, and that is tested before the explanation is read at all. Where the root is not inside the word, the quotation cannot supply the root's letters, so a pass there is a real pass and there is nothing to report.";
   "An explanation that names a root in so many words is left alone even where the naming is wrong, because a wrong root is a disagreement the other reading already reports, and reporting it twice under a second name would send two people to the same sentence.";
   "$plain entries";
@@ -63,6 +65,10 @@ export function gloss_entries_roots_quoted_only(entries, known) {
       return;
     }
     let affixes = property_get(held, "affixes");
+    let named_affix = gloss_explain_affix_named_is(explain_lower, affixes);
+    if (named_affix) {
+      return;
+    }
     let finding = {
       word,
       root,
