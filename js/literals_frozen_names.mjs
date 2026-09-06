@@ -86,6 +86,7 @@ export function literals_frozen_names() {
   let spelled46 = fn_name(
     "app_en_learn_bible_gloss_urdu_words_sound_upload_namespace",
   );
+  let spelled47 = fn_name("app_code_review_hash_key");
   let names = [
     spelled,
     spelled2,
@@ -133,6 +134,7 @@ export function literals_frozen_names() {
     spelled3,
     spelled45,
     spelled46,
+    spelled47,
   ];
   return names;
 }
