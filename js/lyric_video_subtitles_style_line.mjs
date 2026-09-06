@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
 import { lyric_video_shadow_width } from "./lyric_video_shadow_width.mjs";
-export function lyric_video_subtitles_style_line(
+export function lyric_video_subtitles_style_line({
   name,
   font_size,
   colour,
@@ -10,8 +10,8 @@ export function lyric_video_subtitles_style_line(
   alignment,
   sides,
   margin,
-) {
-  arguments_assert(arguments, 8);
+}) {
+  arguments_assert(arguments, 1);
   ("$plain name");
   ("$plain font_size");
   ("$plain colour");

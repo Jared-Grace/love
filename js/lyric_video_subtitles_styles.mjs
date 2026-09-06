@@ -15,36 +15,36 @@ export function lyric_video_subtitles_styles(sizes, room) {
   let sides = side_margin + "," + side_margin;
   let format =
     "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding";
-  let lyric = lyric_video_subtitles_style_line(
-    "Lyric",
+  let lyric = lyric_video_subtitles_style_line({
+    name: "Lyric",
     font_size,
-    "&H00FFFFFF",
-    -1,
-    0,
-    5,
+    colour: "&H00FFFFFF",
+    bold: -1,
+    spacing: 0,
+    alignment: 5,
     sides,
-    0,
-  );
-  let passage = lyric_video_subtitles_style_line(
-    "Passage",
-    passage_size,
-    "&H00B4B4B4",
-    0,
-    2,
-    2,
+    margin: 0,
+  });
+  let passage = lyric_video_subtitles_style_line({
+    name: "Passage",
+    font_size: passage_size,
+    colour: "&H00B4B4B4",
+    bold: 0,
+    spacing: 2,
+    alignment: 2,
     sides,
-    room.passage_margin,
-  );
-  let credit = lyric_video_subtitles_style_line(
-    "Credit",
-    credit_size,
-    "&H00828282",
-    0,
-    2,
-    2,
+    margin: room.passage_margin,
+  });
+  let credit = lyric_video_subtitles_style_line({
+    name: "Credit",
+    font_size: credit_size,
+    colour: "&H00828282",
+    bold: 0,
+    spacing: 2,
+    alignment: 2,
     sides,
-    room.credit_margin,
-  );
+    margin: room.credit_margin,
+  });
   let lines = [format, lyric, passage, credit];
   return lines;
 }
