@@ -89,6 +89,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 34",
     },
     {
+      chapter_code: "EXO40",
+      reference: "Exodus 40",
+    },
+    {
       chapter_code: "LEV16",
       reference: "Leviticus 16",
     },
@@ -171,6 +175,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI04",
       reference: "2 Kings 4",
+    },
+    {
+      chapter_code: "2CH07",
+      reference: "2 Chronicles 7",
     },
     {
       chapter_code: "EZR03",
