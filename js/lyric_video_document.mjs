@@ -1,3 +1,4 @@
+import { lyric_video_frame_sizes } from "./lyric_video_frame_sizes.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function lyric_video_document(passage, credit, duration, lines) {
   "$plain passage";
@@ -12,11 +13,7 @@ export function lyric_video_document(passage, credit, duration, lines) {
     passage,
     credit,
     duration,
-    width: 1080,
-    height: 1920,
-    font_size: 150,
-    passage_font_size: 96,
-    credit_font_size: 64,
+    ...lyric_video_frame_sizes(),
     lines,
   };
   return document;
