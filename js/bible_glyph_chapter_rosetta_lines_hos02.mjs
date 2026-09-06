@@ -1,0 +1,172 @@
+export function bible_glyph_chapter_rosetta_lines_hos02() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "HOS02",
+    verses: [
+      {
+        verse_number: 1,
+        original: "אִמְר֥וּ לַאֲחֵיכֶ֖ם עַמִּ֑י וְלַאֲחֽוֹתֵיכֶ֖ם רֻחָֽמָה׃",
+        english:
+          "Say of your brothers My people and of your sisters My loved one",
+      },
+      {
+        verse_number: 2,
+        original:
+          "רִ֤יבוּ בְאִמְּכֶם֙ רִ֔יבוּ כִּֽי־ הִיא֙ לֹ֣א אִשְׁתִּ֔י וְאָנֹכִ֖י לֹ֣א אִישָׁ֑הּ וְתָסֵ֤ר זְנוּנֶ֙יהָ֙ מִפָּנֶ֔יה וְנַאֲפוּפֶ֖יהָ מִבֵּ֥ין שָׁדֶֽיהָ׃",
+        english:
+          "Rebuke your mother rebuke her for she is not My wife and I am not her husband Let her remove the adultery from her face and the unfaithfulness from between her breasts",
+      },
+      {
+        verse_number: 3,
+        original:
+          "פֶּן־ אַפְשִׁיטֶ֣נָּה עֲרֻמָּ֔ה וְהִ֨צַּגְתִּ֔יהָ כְּי֖וֹם הִוָּֽלְדָ֑הּ וְשַׂמְתִּ֣יהָ כַמִּדְבָּ֗ר וְשַׁתִּ֙הָ֙ כְּאֶ֣רֶץ צִיָּ֔ה וַהֲמִתִּ֖יהָ בַּצָּמָֽא׃",
+        english:
+          "Otherwise I will strip her naked and expose her like the day of her birth I will make her like a desert and turn her into a parched land and I will let her die of thirst",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאֶת־ בָּנֶ֖יהָ לֹ֣א אֲרַחֵ֑ם כִּֽי־ בְנֵ֥י זְנוּנִ֖ים הֵֽמָּה׃",
+        english:
+          "I will have no compassion on her children because they are the children of adultery",
+      },
+      {
+        verse_number: 5,
+        original:
+          "כִּ֤י זָֽנְתָה֙ אִמָּ֔ם הֹבִ֖ישָׁה הֽוֹרָתָ֑ם כִּ֣י אָמְרָ֗ה אֵלְכָ֞ה אַחֲרֵ֤י מְאַהֲבַי֙ נֹתְנֵ֤י לַחְמִי֙ וּמֵימַ֔י צַמְרִ֣י וּפִשְׁתִּ֔י שַׁמְנִ֖י וְשִׁקּוּיָֽי׃",
+        english:
+          "For their mother has played the harlot and has conceived them in disgrace For she thought I will go after my lovers who give me bread and water wool and linen oil and drink",
+      },
+      {
+        verse_number: 6,
+        original:
+          "לָכֵ֛ן הִנְנִי־ שָׂ֥ךְ אֶת־ דַּרְכֵּ֖ךְ בַּסִּירִ֑ים וְגָֽדַרְתִּי֙ אֶת־ גְּדֵרָ֔הּ וּנְתִיבוֹתֶ֖יהָ לֹ֥א תִמְצָֽא׃",
+        english:
+          "Therefore behold I will hedge up her path with thorns I will enclose her with a wall so she cannot find her way",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְרִדְּפָ֤ה אֶת־ מְאַהֲבֶ֙יהָ֙ וְלֹֽא־ תַשִּׂ֣יג אֹתָ֔ם וּבִקְשָׁ֖תַם וְלֹ֣א תִמְצָ֑א וְאָמְרָ֗ה אֵלְכָ֤ה וְאָשׁ֙וּבָה֙ אֶל־ אִישִׁ֣י הָֽרִאשׁ֔וֹן כִּ֣י ט֥וֹב לִ֛י אָ֖ז מֵעָֽתָּה׃",
+        english:
+          "She will pursue her lovers but not catch them she will seek them but not find them Then she will say I will return to my first husband for then I was better off than now",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְהִיא֙ לֹ֣א יָֽדְעָ֔ה כִּ֤י אָֽנֹכִי֙ נָתַ֣תִּי לָ֔הּ הַדָּגָ֖ן וְהַתִּיר֣וֹשׁ וְהַיִּצְהָ֑ר וְכֶ֨סֶף הִרְבֵּ֥יתִי לָ֛הּ וְזָהָ֖ב עָשׂ֥וּ לַבָּֽעַל׃",
+        english:
+          "For she does not acknowledge that it was I who gave her grain new wine and oil who lavished on her silver and gold which they crafted for Baal",
+      },
+      {
+        verse_number: 9,
+        original:
+          "לָכֵ֣ן אָשׁ֔וּב וְלָקַחְתִּ֤י דְגָנִי֙ בְּעִתּ֔וֹ וְתִירוֹשִׁ֖י בְּמֽוֹעֲד֑וֹ וְהִצַּלְתִּי֙ צַמְרִ֣י וּפִשְׁתִּ֔י לְכַסּ֖וֹת אֶת־ עֶרְוָתָֽהּ׃",
+        english:
+          "Therefore I will take back My grain in its time and My new wine in its season I will take away My wool and linen which were given to cover her nakedness",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְעַתָּ֛ה אֲגַלֶּ֥ה אֶת־ נַבְלֻתָ֖הּ לְעֵינֵ֣י מְאַהֲבֶ֑יהָ וְאִ֖ישׁ לֹֽא־ יַצִּילֶ֥נָּה מִיָּדִֽי׃",
+        english:
+          "And then I will expose her lewdness in the sight of her lovers and no one will deliver her out of My hands",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהִשְׁבַּתִּי֙ כָּל־ מְשׂוֹשָׂ֔הּ חַגָּ֖הּ חָדְשָׁ֣הּ וְשַׁבַּתָּ֑הּ וְכֹ֖ל מוֹעֲדָֽהּ׃",
+        english:
+          "I will put an end to all her exultation her feasts New Moons and Sabbaths all her appointed feasts",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַהֲשִׁמֹּתִ֗י גַּפְנָהּ֙ וּתְאֵ֣נָתָ֔הּ אֲשֶׁ֣ר אָמְרָ֗ה אֶתְנָ֥ה הֵ֙מָּה֙ לִ֔י אֲשֶׁ֥ר נָֽתְנוּ־ לִ֖י מְאַֽהֲבָ֑י וְשַׂמְתִּ֣ים לְיַ֔עַר וַאֲכָלָ֖תַם חַיַּ֥ת הַשָּׂדֶֽה׃",
+        english:
+          "I will destroy her vines and fig trees which she thinks are the wages paid by her lovers So I will make them into a thicket and the beasts of the field will devour them",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וּפָקַדְתִּ֣י עָלֶ֗יהָ אֶת־ יְמֵ֤י הַבְּעָלִים֙ אֲשֶׁ֣ר תַּקְטִ֣יר לָהֶ֔ם וַתַּ֤עַד נִזְמָהּ֙ וְחֶלְיָתָ֔הּ וַתֵּ֖לֶךְ אַחֲרֵ֣י מְאַהֲבֶ֑יהָ וְאֹתִ֥י שָׁכְחָ֖ה נְאֻם־ יְהוָֽה׃פ",
+        english:
+          "I will punish her for the days of the Baals when she burned incense to them when she adorned herself with rings and jewelry and went after her lovers But Me she forgot declares the LORD",
+      },
+      {
+        verse_number: 14,
+        original:
+          "לָכֵ֗ן הִנֵּ֤ה אָֽנֹכִי֙ מְפַתֶּ֔יהָ וְהֹֽלַכְתִּ֖יהָ הַמִּדְבָּ֑ר וְדִבַּרְתִּ֖י עַל לִבָּֽהּ׃",
+        english:
+          "Therefore behold I will allure her and lead her to the wilderness and speak to her tenderly",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְנָתַ֨תִּי לָ֤הּ אֶת־ כְּרָמֶ֙יהָ֙ מִשָּׁ֔ם וְאֶת־ עֵ֥מֶק עָכ֖וֹר לְפֶ֣תַח תִּקְוָ֑ה וְעָ֤נְתָה שָּׁ֙מָּה֙ כִּימֵ֣י נְעוּרֶ֔יהָ וִּכְי֖וֹם עֲלֹתָ֥הּ מֵאֶֽרֶץ־ מִצְרָֽיִם׃ס",
+        english:
+          "There I will give back her vineyards and make the Valley of Achor into a gateway of hope There she will respond as she did in the days of her youth as in the day she came up out of Egypt",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְהָיָ֤ה בַיּוֹם־ הַהוּא֙ נְאֻם־ יְהוָ֔ה תִּקְרְאִ֖י אִישִׁ֑י וְלֹֽא־ תִקְרְאִי־ לִ֥י ע֖וֹד בַּעְלִֽי׃",
+        english:
+          "In that day declares the LORD you will call Me my Husband and no longer call Me my Master",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַהֲסִרֹתִ֛י אֶת־ שְׁמ֥וֹת הַבְּעָלִ֖ים מִפִּ֑יהָ וְלֹֽא־ יִזָּכְר֥וּ ע֖וֹד בִּשְׁמָֽם׃",
+        english:
+          "For I will remove from her lips the names of the Baals no longer will their names be invoked",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְכָרַתִּ֨י לָהֶ֤ם בְּרִית֙ בַּיּ֣וֹם הַה֔וּא עִם־ חַיַּ֤ת הַשָּׂדֶה֙ וְעִם־ ע֣וֹף הַשָּׁמַ֔יִם וְרֶ֖מֶשׂ הָֽאֲדָמָ֑ה וְקֶ֨שֶׁת וְחֶ֤רֶב וּמִלְחָמָה֙ אֶשְׁבּ֣וֹר מִן־ הָאָ֔רֶץ וְהִשְׁכַּבְתִּ֖ים לָבֶֽטַח׃",
+        english:
+          "On that day I will make a covenant for them with the beasts of the field and the birds of the air and the creatures that crawl on the ground And I will abolish bow and sword and battle in the land and will make them lie down in safety",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְאֵרַשְׂתִּ֥יךְ לִ֖י לְעוֹלָ֑ם וְאֵרַשְׂתִּ֥יךְ לִי֙ בְּצֶ֣דֶק וּבְמִשְׁפָּ֔ט וּבְחֶ֖סֶד וּֽבְרַחֲמִֽים׃",
+        english:
+          "So I will betroth you to Me forever I will betroth you in righteousness and justice in loving devotion and compassion",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְאֵרַשְׂתִּ֥יךְ לִ֖י בֶּאֱמוּנָ֑ה וְיָדַ֖עַתְּ אֶת־ יְהוָֽה׃ס",
+        english:
+          "And I will betroth you in faithfulness and you will know the LORD",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְהָיָ֣ה׀ בַּיּ֣וֹם הַה֗וּא אֶֽעֱנֶה֙ נְאֻם־ יְהוָ֔ה אֶעֱנֶ֖ה אֶת־ הַשָּׁמָ֑יִם וְהֵ֖ם יַעֲנ֥וּ אֶת־ הָאָֽרֶץ׃",
+        english:
+          "On that day I will respond declares the LORD I will respond to the heavens and they will respond to the earth",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְהָאָ֣רֶץ תַּעֲנֶ֔ה אֶת־ הַדָּגָ֖ן וְאֶת־ הַתִּיר֣וֹשׁ וְאֶת־ הַיִּצְהָ֑ר וְהֵ֖ם יַעֲנ֥וּ אֶֽת־ יִזְרְעֶֽאל׃",
+        english:
+          "And the earth will respond to the grain to the new wine and oil and they will respond to Jezreel",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וּזְרַעְתִּ֤יהָ לִּי֙ בָּאָ֔רֶץ וְרִֽחַמְתִּ֖י אֶת־ לֹ֣א רֻחָ֑מָה וְאָמַרְתִּ֤י לְלֹֽא־ עַמִּי֙ עַמִּי־ אַ֔תָּה וְה֖וּא יֹאמַ֥ר אֱלֹהָֽי׃פ",
+        english:
+          "And I will sow her as My own in the land and I will have compassion on No Compassion I will say to those called Not My People You are My people and they will say You are my God",
+      },
+    ],
+  };
+  return chapter;
+}
