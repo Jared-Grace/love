@@ -1,9 +1,8 @@
 import { g_tiles_wall_faces_groups } from "./g_tiles_wall_faces_groups.mjs";
+import { list_size_greater_than_assert_json } from "./list_size_greater_than_assert_json.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { list_flat } from "./list_flat.mjs";
-import { list_unique_is } from "./list_unique_is.mjs";
+import { list_unique_is_assert_json } from "./list_unique_is_assert_json.mjs";
 import { g_tiles_unwalkable } from "./g_tiles_unwalkable.mjs";
 import { g_tiles_roofs } from "./g_tiles_roofs.mjs";
 import { bless_block_materials_varied_count } from "./bless_block_materials_varied_count.mjs";
@@ -24,19 +23,19 @@ export function bless_block_materials_gate_run() {
   "Everything a person stands on is also checked against the SOLIDS, which is a different worry entirely. Ground here is walkable for one reason - it is simply not on the list of things nobody can stand on - so a material that happens to be on that list turns a street into a wall the player is standing in the middle of, with no error anywhere.";
   "Throws so the dispatcher seam exits nonzero.";
   let groups = g_tiles_wall_faces_groups();
+  list_size_greater_than_assert_json(
+    groups,
+    1,
+    "there must be at least two groups of front materials, or every block in the world is fronted alike",
+  );
   let groups_count = list_size(groups);
-  let groups_enough = greater_than_equal(groups_count, 2);
-  assert_json(groups_enough, {
-    groups_count,
-    hint: "there must be at least two groups of front materials, or every block in the world is fronted alike",
-  });
   ("The fronts are the one set kept in GROUPS rather than as a flat list, so the two halves of the same check land in different places: how many groups there are is asked above, and no material appearing twice is asked here of every group at once, flattened. A material repeated across two groups would pass a per-group reading and still hand two streets the same front.");
+  ("That split is also why the fronts do not go through the one call the roofs and the roads go through. That call asks both halves of a single list; here the halves are asked of two different lists, so the two shared refusals it is built from are asked here one at a time instead.");
   let faces = list_flat(groups);
-  let faces_apart = list_unique_is(faces);
-  assert_json(faces_apart, {
+  list_unique_is_assert_json(
     faces,
-    hint: "no material may appear in two groups or twice in one, or two streets can wear the same front",
-  });
+    "no material may appear in two groups or twice in one, or two streets can wear the same front",
+  );
   let solids = g_tiles_unwalkable();
   ("A ROOF is held to the same three rules a road is. There must be at least two kinds or every block in the world is roofed alike; no kind may be named twice, or two blocks in a row wear the same roof; and no roof may be made of what its own street is fronted with.");
   ("The COUNT of them is not checked against the road's, and the reason is worth writing down. Three roofs against two roads is what makes a street stop repeating every second block, and that is a choice about how far a player must walk to arrive somewhere new rather than a rule about materials. A gate that pinned the two numbers together would refuse the very thing they were made unequal for.");
