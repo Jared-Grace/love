@@ -86,6 +86,7 @@ export function literals_frozen_names() {
   let spelled46 = fn_name(
     "app_en_learn_bible_gloss_urdu_words_sound_upload_namespace",
   );
+  ("The word standing before a review in a code app link. It escaped the moment the first such link was saved or sent: the page reads this word back to decide which checkpoint to open, so retyping it would leave every saved review link opening on the first review instead - which is the exact failure the field was added to end, wearing the same face.");
   let spelled47 = fn_name("app_code_review_hash_key");
   let names = [
     spelled,
