@@ -12,31 +12,19 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 20,
-      note: "You were right, and the cause was the opening words: they described a cliff face, which is a tall shape however much proportion is added after it. The rock is now said to be far broader across than it is tall, its top a low rounded ridge, reaching right across the window. The mouth still has a ring of cut stones round it, as your own example 8 does - say if you would rather it were raw rock.",
+      note: "The red was the lower field band showing round the foot of the tomb, so it was the band that changed, not the rock: it is plain brown earth now and the tomb stands on the ground. Nothing else about the wording moved. The mouth still has its ring of cut stones, as your example 8 has.",
     },
     {
       n: 25,
-      note: "Yes - the bands are deep crimson above and deep cobalt below, so only one of the two is a blue. What made that obeyed was moving the clause to the front of the wording; sitting at the end it was simply not being read. Violet was tried below first and it swallowed the crimson crown, so cobalt took its place.",
+      note: "27 has eight crowns rather than seven and is drawn all in gold, which is barred everywhere else in the hymn, so I went for its richness and not its gold. The crowns are arched royal crowns now instead of plain spiked bands. They are still all of one make though, which is the part of your ask that has not landed.",
     },
     {
       n: 26,
-      note: "Both are narrow at the cloud now, the beams and the gaps between them, and both widen steadily as they fall. They are said in one clause rather than two so that the pair cannot come apart again. The sky above the cloud is still deep blue rather than the lighter one you asked for.",
-    },
-    {
-      n: 30,
-      note: "40 is back, as you asked. No new drawing was made and the wording is unchanged, so this is the same picture you already approved.",
-    },
-    {
-      n: 32,
-      note: "The wording already said the river runs behind both trees and is never hidden by them, so saying it again was not the lever. The fault was the shape: trees at the two edges with the water down the middle leaves nothing to overlap. It now asks that the branches reach right out across the water and meet in the middle, and here they do.",
-    },
-    {
-      n: 34,
-      note: "The flames are orange, yellow and white now, named that way in the wording. The trade-off I put to you last round turned out not to be needed: seven flames, the emerald arch, the sceptre and the cobalt field all came back together here. That was a swap and not an addition - the flames used to be told to be ruby red, and that went out to pay for it.",
+      note: "This is the closest of six new drawings to 71 - the beams and the gaps both start narrow under the cloud and open out evenly to both sides. The wording is unchanged, so the difference is the drawing and not the words. It has five beams where the wording asks for six, and the sky is still deep blue rather than light.",
     },
     {
       n: 36,
-      note: "The vine now reaches right down over the lower band to the foot of the window instead of stopping short. To pay for saying that I cut the clause asking for a bunch hanging on every stem, since the bunches are already asked for by number. Nothing else changed.",
+      note: "The two bands behind the vine were deep cobalt and violet, which is what made it all dark, so they are clear sky blue and a paler sky blue now. The green leaves, brown vine and crimson grapes all stand off that. Only the bands changed - the vine itself is worded exactly as it was in 37.",
     },
   ];
   return couplets;
