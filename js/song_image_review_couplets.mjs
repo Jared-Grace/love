@@ -12,11 +12,11 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 11,
-      note: "You are right about 78, and the wording had refused that twice by name, which is the surest way to get a thing drawn. The refusal came out and the thicket now closes along the whole underside instead. Eight fresh draws and not one is usable: the ones with a thicket paint the field black, and the ones with a clean field have no thicket at all. So 78 is still up, unchanged.",
+      note: "80 is up now, as you asked. One thing to know: its black field is not what the wording says - that still asks for emerald green between the lead lines and deep crimson below. So if 11 is ever redrawn it will come back green, not black. Say the word and I will write the black in with your reason for it.",
     },
     {
       n: 24,
-      note: "This is 223. The stone rests on the brown ground now, the rock is flat panes rather than a photograph, and the beams are wide, bright and plainly different widths. The white ring still has a black border round it and it still does not fade. Sixteen draws over two rounds and the fade has never once appeared - the style sheet sent with all 36 pictures forbids a gradient by name, so it and this couplet are asking for opposite things, and that is yours to settle.",
+      note: "This is 230. You were right about the shadow - the wording only said the stone sat against the rock, so it was being drawn standing in front of it. It now says the stone lies flat against the mouth of the tomb and seals it shut, and the shadow is gone. The beams here came back paler than you asked for, and the white ring still has its black border.",
     },
     {
       n: 25,
