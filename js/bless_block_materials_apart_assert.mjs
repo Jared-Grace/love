@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_intersection } from "./list_intersection.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { assert_json } from "./assert_json.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export function bless_block_materials_apart_assert(names, others, hint) {
   "$plain hint";
   "Refuses two lists of materials that have any material in common, saying which ones";
@@ -17,14 +16,14 @@ export function bless_block_materials_apart_assert(names, others, hint) {
   "roof matches a wall is not what is wrong when a road matches a lawn, and a reader";
   "of a red gate needs the sentence about their own case rather than the shape of the";
   "test. So the sentence comes in and nothing else does.";
-  "What was shared goes back under one name rather than under a name made for each";
-  "pair, because the sentence beside it already says which two lists met. A name per";
-  "pair was what the nine copies bought, and it is not worth nine copies.";
+  "WHAT IS LEFT HERE IS THE MEETING OF THE TWO LISTS AND NOTHING ELSE. Refusing an";
+  "empty list, and saying what was in it when it was not, is a question the repo";
+  "already answers by name, so it is asked rather than written out again; only the";
+  "step that turns two lists into one - the materials they have in common - is this";
+  "gate's own. What was shared then goes back under the name that shared refusal";
+  "gives it, because the sentence beside it already says which two lists met, and a";
+  "name made for each pair was what the nine copies bought.";
   arguments_assert(arguments, 3);
   let shared = list_intersection(names, others);
-  let apart = list_empty_is(shared);
-  assert_json(apart, {
-    shared,
-    hint,
-  });
+  list_empty_is_assert_json(shared, hint);
 }
