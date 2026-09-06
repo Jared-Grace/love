@@ -8,8 +8,8 @@ export function text_words_apostrophe_kept(t) {
   "Nothing empty comes back, so a mark standing on its own adds no word.";
   let words = text_words(t);
   function word_bare(word) {
-    let bare = text_punctuation_apostrophe_kept_removed(word);
-    return bare;
+    let stripped = text_punctuation_apostrophe_kept_removed(word);
+    return stripped;
   }
   let bare = list_map(words, word_bare);
   let said = list_filter_text_empty_not_is(bare);
