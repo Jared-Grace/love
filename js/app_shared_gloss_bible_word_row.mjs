@@ -16,8 +16,9 @@ export function app_shared_gloss_bible_word_row(
   p,
   word_property,
   sound_url_get,
+  slow_url_get,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   html_hr(p);
   let div = html_div(p);
   let word = property_get(e, word_property);
@@ -33,7 +34,13 @@ export function app_shared_gloss_bible_word_row(
   let color3 = app_shared_color_red();
   html_font_color_set(span, color3);
   ("the speaker goes next to the word rather than at the end of the row, because it belongs to the word and not to the explanation of it - and a row that ran the other way would otherwise leave it stranded at the far side of two pieces of Urdu.");
-  app_shared_gloss_bible_word_sound(div, span, word, sound_url_get);
+  app_shared_gloss_bible_word_sound(
+    div,
+    span,
+    word,
+    sound_url_get,
+    slow_url_get,
+  );
   let c = html_span_colon_2(div);
   let color = app_shared_color_gray();
   html_font_color_set(c, color);
