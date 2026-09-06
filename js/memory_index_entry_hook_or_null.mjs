@@ -1,10 +1,9 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { add } from "./add.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
@@ -25,8 +24,7 @@ export function memory_index_entry_hook_or_null(line, stem) {
     return null;
   }
   let pieces = line.split("](");
-  let left = list_size(pieces);
-  let alone = equal(left, 2);
+  let alone = list_size_equal(pieces, 2);
   if (not(alone)) {
     return null;
   }
