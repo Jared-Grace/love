@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_frozen } from "./text_frozen.mjs";
@@ -30,8 +31,7 @@ export async function qa_app_commit_shipped_names(search, commit) {
   }
   let json = said.slice(start);
   let shipped = json_parse_try(json);
-  let b2 = equal(shipped, null);
-  let read = not(b2);
+  let read = equal_not(shipped, null);
   let report = {
     search,
     commit,
