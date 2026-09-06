@@ -17,6 +17,7 @@ import { app_shared_contact_message_display } from "./app_shared_contact_message
 import { app_shared_button_uncolored_background_color } from "./app_shared_button_uncolored_background_color.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { instant_label } from "./instant_label.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
@@ -31,6 +32,7 @@ export async function app_message_private_preview() {
   "★ THE MESSAGES ARE GATHERED PER PERSON, WHICH IS WHAT A THREAD IS. Read as one stream by clock, one writer's four messages sit apart from each other with other people's in between, and their mark has to be repeated on every bubble to say whose it was. Gathered, the mark is said once at the head of the thread and the bubbles under it need only their time - so the same screen carries less writing and says more, and somebody who sent the same words four times has those four sitting together where the repetition is plain instead of scattered where it is merely confusing.";
   "The gathering keeps the order the values were first met in, and what is handed to it is already newest first, so the threads come out most-recently-heard-from first without anything being sorted twice. Inside a thread the order is turned back the other way, because a conversation is read downwards from its beginning - which is the one place the newest-first rule does not hold, and it does not hold because a thread is a conversation and the page as a whole is an inbox.";
   "★ THE TIME GOES INSIDE THE BUBBLE, UNDER THE WORDS. Standing on its own between two bubbles a time belongs to whichever one the spacing suggests, and spacing is a hint rather than an answer - the reader has to measure two gaps by eye and trust the smaller one. Put inside, it is the message it names by construction, and no gap has to be read at all. It goes under rather than over the words because it can only be added after them: the drawing of a bubble sets its words as the whole of what is in it, so anything put there first would be wiped by the words arriving.";
+  "★ THE TIME IS SAID THE WAY A PERSON SAYS ONE, NOT THE WAY THE DISK KEEPS IT. What is stored is a full instant down to the thousandth of a second, in the clock the machine that took it was keeping; what somebody reading an inbox wants is which day and roughly what time, where they are standing. So the seconds and the thousandths go, the day and the minute stay, and it is turned into the reader's own clock - which is also the difference between a line that is read at a glance and one that is skipped over.";
   "A message with no time written on it gets no line at all rather than an empty one. The older ones on the disk hold the words alone, and an empty line inside a bubble is a gap that reads as something failing to load.";
   "The count of people is said as writers rather than as people because the plural is worked out by adding an s, and persons is not what anybody would say.";
   "The words are set as text rather than as markup. They were typed by somebody else and arrive from a bucket, so anything in them that looks like a tag is shown as the characters that were typed.";
@@ -69,7 +71,8 @@ export async function app_message_private_preview() {
     html_style_background_color_set(bubble, background);
     let dated = text_empty_not_is(when);
     if (dated) {
-      let line = html_p_text(bubble, when);
+      let said_when = instant_label(when);
+      let line = html_p_text(bubble, said_when);
       html_style_font_size(line, "0.7em");
       html_font_color_set(line, gray);
     }
