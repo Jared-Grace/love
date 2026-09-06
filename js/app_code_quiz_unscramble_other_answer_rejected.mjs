@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_unscramble_codes } from "./app_code_lessons_unscramble_codes.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_quiz_tile_dealings_unpooled } from "./app_code_quiz_tile_dealings_unpooled.mjs";
+import { app_code_quiz_tile_arrangements_unpooled } from "./app_code_quiz_tile_arrangements_unpooled.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_code_quiz_unscramble_other_answer_rejected(rounds) {
@@ -15,7 +15,7 @@ export function app_code_quiz_unscramble_other_answer_rejected(rounds) {
   for (let item of asked) {
     let code = property_get(item, "code");
     let lesson = property_get(item, "lesson");
-    let unpooled = app_code_quiz_tile_dealings_unpooled(code);
+    let unpooled = app_code_quiz_tile_arrangements_unpooled(code);
     for (let written of unpooled) {
       list_add(found, {
         lesson,
