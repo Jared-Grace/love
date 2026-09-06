@@ -13,12 +13,12 @@ export async function lyric_video_document_pictures_model_bench_negative(
   "THE STEERING IS WORKED OUT ONCE AND HELD FOR THE WHOLE RUN, because it must be word for word the same in every picture. A set drawn against wording that varied would be measuring the wording rather than the model.";
   "Everything else about the run - which scenes, what size, where they land, what counts as already drawn - is the run its plain twin makes, and is written where that is said. This is the asking and the ending on the folder, and nothing more.";
   arguments_assert(arguments, 2);
-  let negative = lyric_video_picture_negative();
+  let negative_prompt = lyric_video_picture_negative();
   async function draw(prompt, width, height) {
     let sample = await fal_draw_negative(
       model,
       prompt,
-      negative,
+      negative_prompt,
       width,
       height,
     );
