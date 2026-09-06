@@ -1,0 +1,173 @@
+export function bible_glyph_chapter_rosetta_lines_ezk47() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EZK47",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְשִׁבֵנִי֮ אֶל־ פֶּ֣תַח הַבַּיִת֒ וְהִנֵּה־ מַ֣יִם יֹצְאִ֗ים מִתַּ֨חַת מִפְתַּ֤ן הַבַּ֙יִת֙ קָדִ֔ימָה כִּֽי־ פְנֵ֥י הַבַּ֖יִת קָדִ֑ים וְהַמַּ֣יִם יֹרְדִ֗ים מִתַּ֜חַת מִכֶּ֤תֶף הַבַּ֙יִת֙ הַיְמָנִ֔ית מִנֶּ֖גֶב לַמִּזְבֵּֽחַ׃",
+        english:
+          "Then the man brought me back to the entrance of the temple and I saw water flowing from under the threshold of the temple toward the east for the temple faced east The water was coming down from under the south side of the temple south of the altar",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיּוֹצִאֵנִי֮ דֶּֽרֶךְ־ שַׁ֣עַר צָפוֹנָה֒ וַיְסִבֵּ֙נִי֙ דֶּ֣רֶךְ ח֔וּץ אֶל־ שַׁ֣עַר הַח֔וּץ דֶּ֖רֶךְ הַפּוֹנֶ֣ה קָדִ֑ים וְהִנֵּה־ מַ֣יִם מְפַכִּ֔ים מִן־ הַכָּתֵ֖ף הַיְמָנִֽית׃",
+        english:
+          "Next he brought me out through the north gate and led me around the outside to the outer gate facing east and there I saw the water trickling out from the south side",
+      },
+      {
+        verse_number: 3,
+        original:
+          "בְּצֵאת־ הָאִ֥ישׁ קָדִ֖ים וְקָ֣ו בְּיָד֑וֹ וַיָּ֤מָד אֶ֙לֶף֙ בָּֽאַמָּ֔ה וַיַּעֲבִרֵ֥נִי בַמַּ֖יִם מֵ֥י אָפְסָֽיִם׃",
+        english:
+          "As the man went eastward with a measuring line in his hand he measured off a thousand cubits and led me through ankle-deep water",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיָּ֣מָד אֶ֔לֶף וַיַּעֲבִרֵ֥נִי בַמַּ֖יִם מַ֣יִם בִּרְכָּ֑יִם וַיָּ֣מָד אֶ֔לֶף וַיַּעֲבִרֵ֖נִי מֵ֥י מָתְנָֽיִם׃",
+        english:
+          "Then he measured off a thousand cubits and led me through knee-deep water Again he measured a thousand cubits and led me through waist-deep water",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיָּ֣מָד אֶ֔לֶף נַ֕חַל אֲשֶׁ֥ר לֹֽא־ אוּכַ֖ל לַעֲבֹ֑ר כִּֽי־ גָא֤וּ הַמַּ֙יִם֙ מֵ֣י שָׂ֔חוּ נַ֖חַל אֲשֶׁ֥ר לֹֽא־ יֵעָבֵֽר׃",
+        english:
+          "Once again he measured off a thousand cubits but now it was a river that I could not cross because the water had risen and was deep enough for swimming a river that could not be crossed on foot",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֹּ֥אמֶר אֵלַ֖י הֲרָאִ֣יתָ בֶן־ אָדָ֑ם וַיּוֹלִכֵ֥נִי וַיְשִׁבֵ֖נִי שְׂפַ֥ת הַנָּֽחַל׃",
+        english:
+          "Son of man do you see this he asked Then he led me back to the bank of the river",
+      },
+      {
+        verse_number: 7,
+        original:
+          "בְּשׁוּבֵ֕נִי וְהִנֵּה֙ אֶל־ שְׂפַ֣ת הַנַּ֔חַל עֵ֖ץ רַ֣ב מְאֹ֑ד מִזֶּ֖ה וּמִזֶּֽה׃",
+        english:
+          "When I arrived I saw a great number of trees along both banks of the river",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֹּ֣אמֶר אֵלַ֗י הַמַּ֤יִם הָאֵ֙לֶּה֙ יוֹצְאִ֗ים אֶל־ הַגְּלִילָה֙ הַקַּדְמוֹנָ֔ה וְיָרְד֖וּ עַל־ הָֽעֲרָבָ֑ה וּבָ֣אוּ הַיָּ֔מָּה אֶל־ הַיָּ֥מָּה הַמּֽוּצָאִ֖ים וְנִרְפְּאוּ הַמָּֽיִם׃",
+        english:
+          "And he said to me This water flows out to the eastern region and goes down into the Arabah When it empties into the Dead Sea the water there becomes fresh",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהָיָ֣ה כָל־ נֶ֣פֶשׁ חַיָּ֣ה׀ אֲ‍ֽשֶׁר־ יִשְׁרֹ֡ץ אֶ֣ל כָּל־ אֲשֶׁר֩ יָב֨וֹא שָׁ֤ם נַחֲלַ֙יִם֙ יִֽחְיֶ֔ה וְהָיָ֥ה הַדָּגָ֖ה רַבָּ֣ה מְאֹ֑ד כִּי֩ בָ֨אוּ שָׁ֜מָּה הַמַּ֣יִם הָאֵ֗לֶּה וְיֵרָֽפְאוּ֙ וָחָ֔י כֹּ֛ל אֲשֶׁר־ יָ֥בוֹא שָׁ֖מָּה הַנָּֽחַל׃",
+        english:
+          "Wherever the river flows there will be swarms of living creatures and a great number of fish because it flows there and makes the waters fresh so wherever the river flows everything will flourish",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהָיָה֩ יַעַמְדוּ עָלָ֜יו דַּוָּגִ֗ים מֵעֵ֥ין גֶּ֙דִי֙ וְעַד־ עֵ֣ין עֶגְלַ֔יִם מִשְׁט֥וֹחַ לַֽחֲרָמִ֖ים יִהְי֑וּ לְמִינָה֙ תִּהְיֶ֣ה דְגָתָ֔ם כִּדְגַ֛ת הַיָּ֥ם הַגָּד֖וֹל רַבָּ֥ה מְאֹֽד׃",
+        english:
+          "Fishermen will stand by the shore from En-gedi to En-eglaim they will spread their nets to catch fish of many kinds like the fish of the Great Sea",
+      },
+      {
+        verse_number: 11,
+        original:
+          "בִּצֹּאתוֹ וּגְבָאָ֛יו וְלֹ֥א יֵרָפְא֖וּ לְמֶ֥לַח נִתָּֽנוּ׃",
+        english:
+          "But the swamps and marshes will not become fresh they will be left for salt",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְעַל־ הַנַּ֣חַל יַעֲלֶ֣ה עַל־ שְׂפָת֣וֹ מִזֶּ֣ה׀ וּמִזֶּ֣ה׀ כָּל־ עֵֽץ־ מַ֠אֲכָל לֹא־ יִבּ֨וֹל עָלֵ֜הוּ וְלֹֽא־ יִתֹּ֣ם פִּרְי֗וֹ לָֽחֳדָשָׁיו֙ יְבַכֵּ֔ר כִּ֣י מֵימָ֔יו מִן־ הַמִּקְדָּ֖שׁ הֵ֣מָּה יֽוֹצְאִ֑ים וְהָיוּ פִרְיוֹ֙ לְמַֽאֲכָ֔ל וְעָלֵ֖הוּ לִתְרוּפָֽה׃ס",
+        english:
+          "Along both banks of the river fruit trees of all kinds will grow Their leaves will not wither and their fruit will not fail Each month they will bear fruit because the water from the sanctuary flows to them Their fruit will be used for food and their leaves for healing",
+      },
+      {
+        verse_number: 13,
+        original:
+          "כֹּ֤ה אָמַר֙ אֲדֹנָ֣י יְהוִ֔ה גֵּ֤ה גְבוּל֙ אֲשֶׁ֣ר תִּתְנַחֲל֣וּ אֶת־ הָאָ֔רֶץ לִשְׁנֵ֥י עָשָׂ֖ר שִׁבְטֵ֣י יִשְׂרָאֵ֑ל יוֹסֵ֖ף חֲבָלִֽים׃",
+        english:
+          "This is what the Lord GOD says These are the boundaries by which you are to divide the land as an inheritance among the twelve tribes of Israel Joseph shall receive two portions",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וּנְחַלְתֶּ֤ם אוֹתָהּ֙ אִ֣ישׁ כְּאָחִ֔יו אֲשֶׁ֤ר נָשָׂ֙אתִי֙ אֶת־ יָדִ֔י לְתִתָּ֖הּ לַאֲבֹֽתֵיכֶ֑ם וְנָ֨פְלָ֜ה הָאָ֧רֶץ הַזֹּ֛את לָכֶ֖ם בְּנַחֲלָֽה׃",
+        english:
+          "You are to divide it equally among them Because I swore with an uplifted hand to give it to your forefathers this land will fall to you as an inheritance",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְזֶ֖ה גְּב֣וּל הָאָ֑רֶץ לִפְאַ֨ת צָפ֜וֹנָה מִן־ הַיָּ֧ם הַגָּד֛וֹל הַדֶּ֥רֶךְ חֶתְלֹ֖ן לְב֥וֹא צְדָֽדָה׃",
+        english:
+          "This shall be the boundary of the land On the north side it will extend from the Great Sea by way of Hethlon through Lebo-hamath to Zedad",
+      },
+      {
+        verse_number: 16,
+        original:
+          "חֲמָ֤ת׀ בֵּר֙וֹתָה֙ סִבְרַ֔יִם אֲשֶׁר֙ בֵּין־ גְּב֣וּל דַּמֶּ֔שֶׂק וּבֵ֖ין גְּב֣וּל חֲמָ֑ת חָצֵר֙ הַתִּיכ֔וֹן אֲשֶׁ֖ר אֶל־ גְּב֥וּל חַוְרָֽן׃",
+        english:
+          "Berothah and Sibraim (which is on the border between Damascus and Hamath as far as Hazer-hatticon which is on the border of Hauran",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהָיָ֨ה גְב֜וּל מִן־ הַיָּ֗ם חֲצַ֤ר עֵינוֹן֙ גְּב֣וּל דַּמֶּ֔שֶׂק וְצָפ֥וֹן׀ צָפ֖וֹנָה וּגְב֣וּל חֲמָ֑ת וְאֵ֖ת פְּאַ֥ת צָפֽוֹן׃",
+        english:
+          "So the border will run from the Sea to Hazar-enan along the northern border of Damascus with the territory of Hamath to the north This will be the northern boundary",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וּפְאַ֣ת קָדִ֡ים מִבֵּ֣ין חַוְרָ֣ן וּמִבֵּין־ דַּמֶּשֶׂק֩ וּמִבֵּ֨ין הַגִּלְעָ֜ד וּמִבֵּ֨ין אֶ֤רֶץ יִשְׂרָאֵל֙ הַיַּרְדֵּ֔ן מִגְּב֛וּל עַל־ הַיָּ֥ם הַקַּדְמוֹנִ֖י תָּמֹ֑דּוּ וְאֵ֖ת פְּאַ֥ת קָדִֽימָה׃",
+        english:
+          "On the east side the border will run between Hauran and Damascus along the Jordan between Gilead and the land of Israel to the Eastern Sea and as far as Tamar This will be the eastern boundary",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וּפְאַת֙ נֶ֣גֶב תֵּימָ֔נָה מִתָּמָ֗ר עַד־ מֵי֙ מְרִיב֣וֹת קָדֵ֔שׁ נַחֲלָ֖ה אֶל־ הַיָּ֣ם הַגָּד֑וֹל וְאֵ֥ת פְּאַת־ תֵּימָ֖נָה נֶֽגְבָּה׃",
+        english:
+          "On the south side it will run from Tamar to the waters of Meribath-kadesh and along the Brook of Egypt to the Great Sea This will be the southern boundary",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וּפְאַת־ יָם֙ הַיָּ֣ם הַגָּד֔וֹל מִגְּב֕וּל עַד־ נֹ֖כַח לְב֣וֹא חֲמָ֑ת זֹ֖את פְּאַת־ יָֽם׃",
+        english:
+          "And on the west side the Great Sea will be the boundary up to a point opposite Lebo-hamath This will be the western boundary",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְחִלַּקְתֶּ֞ם אֶת־ הָאָ֧רֶץ הַזֹּ֛את לָכֶ֖ם לְשִׁבְטֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "You are to divide this land among yourselves according to the tribes of Israel",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְהָיָ֗ה תַּפִּ֣לוּ אוֹתָהּ֮ בְּנַחֲלָה֒ לָכֶ֗ם וּלְהַגֵּרִים֙ הַגָּרִ֣ים בְּתוֹכְכֶ֔ם אֲשֶׁר־ הוֹלִ֥דוּ בָנִ֖ים בְּתֽוֹכְכֶ֑ם וְהָי֣וּ לָכֶ֗ם כְּאֶזְרָח֙ בִּבְנֵ֣י יִשְׂרָאֵ֔ל אִתְּכֶם֙ יִפְּל֣וּ בְנַחֲלָ֔ה בְּת֖וֹךְ שִׁבְטֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "You shall allot it as an inheritance for yourselves and for the foreigners who dwell among you and who have children You are to treat them as native-born Israelites along with you they shall be allotted an inheritance among the tribes of Israel",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְהָיָ֣ה בַשֵּׁ֔בֶט אֲשֶׁר־ גָּ֥ר הַגֵּ֖ר אִתּ֑וֹ שָׁ֚ם תִּתְּנ֣וּ נַחֲלָת֔וֹ נְאֻ֖ם אֲדֹנָ֥י יְהוִֽה׃ס",
+        english:
+          "In whatever tribe a foreigner dwells you are to assign his inheritance there declares the Lord GOD",
+      },
+    ],
+  };
+  return chapter;
+}

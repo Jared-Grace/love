@@ -1,0 +1,80 @@
+export function bible_glyph_chapter_rosetta_lines_zec03() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "ZEC03",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיַּרְאֵ֗נִי אֶת־ יְהוֹשֻׁ֙עַ֙ הַכֹּהֵ֣ן הַגָּד֔וֹל עֹמֵ֕ד לִפְנֵ֖י מַלְאַ֣ךְ יְהוָ֑ה וְהַשָּׂטָ֛ן עֹמֵ֥ד עַל־ יְמִינ֖וֹ לְשִׂטְנֽוֹ׃",
+        english:
+          "Then the angel showed me Joshua the high priest standing before the angel of the LORD with Satan standing at his right hand to accuse him",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ הַשָּׂטָ֗ן יִגְעַ֨ר יְהוָ֤ה בְּךָ֙ הַשָּׂטָ֔ן וְיִגְעַ֤ר יְהוָה֙ בְּךָ֔ הַבֹּחֵ֖ר בִּירֽוּשָׁלִָ֑ם הֲל֧וֹא זֶ֦ה א֖וּד מֻצָּ֥ל מֵאֵֽשׁ׃",
+        english:
+          "And the LORD said to Satan The LORD rebukes you Satan Indeed, the LORD who has chosen Jerusalem rebukes you Is not this man a firebrand snatched from the fire",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וִיהוֹשֻׁ֕עַ הָיָ֥ה לָבֻ֖שׁ בְּגָדִ֣ים צוֹאִ֑ים וְעֹמֵ֖ד לִפְנֵ֥י הַמַּלְאָֽךְ׃",
+        english:
+          "Now Joshua was dressed in filthy garments as he stood before the angel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיַּ֣עַן וַיֹּ֗אמֶר אֶל־ הָעֹמְדִ֤ים לְפָנָיו֙ לֵאמֹ֔ר הָסִ֛ירוּ הַבְּגָדִ֥ים הַצֹּאִ֖ים מֵעָלָ֑יו וַיֹּ֣אמֶר אֵלָ֗יו רְאֵ֨ה הֶעֱבַ֤רְתִּי מֵעָלֶ֙יךָ֙ עֲוֺנֶ֔ךָ וְהַלְבֵּ֥שׁ אֹתְךָ֖ מַחֲלָצֽוֹת׃",
+        english:
+          "So the angel said to those standing before him Take off his filthy clothes Then he said to Joshua See I have removed your iniquity and I will clothe you with splendid robes",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וָאֹמַ֕ר יָשִׂ֛ימוּ צָנִ֥יף טָה֖וֹר עַל־ רֹאשׁ֑וֹ וַיָּשִׂימוּ֩ הַצָּנִ֨יף הַטָּה֜וֹר עַל־ רֹאשׁ֗וֹ וַיַּלְבִּשֻׁ֙הוּ֙ בְּגָדִ֔ים וּמַלְאַ֥ךְ יְהוָ֖ה עֹמֵֽד׃",
+        english:
+          "Then I said Let them put a clean turban on his head So a clean turban was placed on his head and they clothed him as the angel of the LORD stood by",
+      },
+      {
+        verse_number: 6,
+        original: "וַיָּ֙עַד֙ מַלְאַ֣ךְ יְהוָ֔ה בִּיהוֹשֻׁ֖עַ לֵאמֹֽר׃",
+        english: "Then the angel of the LORD gave this charge to Joshua",
+      },
+      {
+        verse_number: 7,
+        original:
+          "כֹּה־ אָמַ֞ר יְהוָ֣ה צְבָא֗וֹת אִם־ בִּדְרָכַ֤י תֵּלֵךְ֙ וְאִ֣ם אֶת־ מִשְׁמַרְתִּ֣י תִשְׁמֹ֔ר וְגַם־ אַתָּה֙ תָּדִ֣ין אֶת־ בֵּיתִ֔י וְגַ֖ם תִּשְׁמֹ֣ר אֶת־ חֲצֵרָ֑י וְנָתַתִּ֤י לְךָ֙ מַהְלְכִ֔ים בֵּ֥ין הָעֹמְדִ֖ים הָאֵֽלֶּה׃",
+        english:
+          "This is what the LORD of Hosts says If you walk in My ways and keep My instructions then you will govern My house and will also have charge of My courts and I will give you a place among these who are standing here",
+      },
+      {
+        verse_number: 8,
+        original:
+          "שְֽׁמַֽע־ נָ֞א יְהוֹשֻׁ֣עַ׀ הַכֹּהֵ֣ן הַגָּד֗וֹל אַתָּה֙ וְרֵעֶ֙יךָ֙ הַיֹּשְׁבִ֣ים לְפָנֶ֔יךָ כִּֽי־ אַנְשֵׁ֥י מוֹפֵ֖ת הֵ֑מָּה כִּֽי־ הִנְנִ֥י מֵבִ֛יא אֶת־ עַבְדִּ֖י צֶֽמַח׃",
+        english:
+          "Hear now O high priest Joshua you and your companions seated before you who are indeed a sign For behold I am going to bring My servant the Branch",
+      },
+      {
+        verse_number: 9,
+        original:
+          "כִּ֣י׀ הִנֵּ֣ה הָאֶ֗בֶן אֲשֶׁ֤ר נָתַ֙תִּי֙ לִפְנֵ֣י יְהוֹשֻׁ֔עַ עַל־ אֶ֥בֶן אַחַ֖ת שִׁבְעָ֣ה עֵינָ֑יִם הִנְנִ֧י מְפַתֵּ֣חַ פִּתֻּחָ֗הּ נְאֻם֙ יְהוָ֣ה צְבָא֔וֹת וּמַשְׁתִּ֛י אֶת־ עֲוֺ֥ן הָאָֽרֶץ־ הַהִ֖יא בְּי֥וֹם אֶחָֽד׃",
+        english:
+          "See the stone I have set before Joshua on that one stone are seven eyes Behold I will engrave on it an inscription declares the LORD of Hosts and I will remove the iniquity of this land in a single day",
+      },
+      {
+        verse_number: 10,
+        original:
+          "בַּיּ֣וֹם הַה֗וּא נְאֻם֙ יְהוָ֣ה צְבָא֔וֹת תִּקְרְא֖וּ אִ֣ישׁ לְרֵעֵ֑הוּ אֶל־ תַּ֥חַת גֶּ֖פֶן וְאֶל־ תַּ֥חַת תְּאֵנָֽה׃",
+        english:
+          "On that day declares the LORD of Hosts you will each invite your neighbor to sit under your own vine and fig tree",
+      },
+    ],
+  };
+  return chapter;
+}
