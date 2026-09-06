@@ -12,7 +12,7 @@ import { html_value_get } from "./html_value_get.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_map } from "./list_map.mjs";
-export function word_sound_preview() {
+export function app_sandbox_word_sound_preview() {
   "Plays the shipped recording of any English word the gloss app can say, on the sandbox app at hash word_sound, so a word can be listened to without opening a chapter and hunting for it.";
   "★ IT PLAYS THE RECORDING THAT IS LIVE, NOT ONE MADE HERE FOR THE OCCASION. That is the whole worth of it: every earlier way of judging a word - a loose page of files written into a folder next to the code - answered whether the engine could say the word well, and the question a person actually has is whether the file a reader's phone fetches says it well. Those came apart twice: a recording mended on this machine and not sent up, and a recording sent up behind a stamp no phone would ask for. Both sound perfect in a folder and wrong on a phone.";
   "★ THE ADDRESS IS SHOWN UNDERNEATH, BECAUSE THE PLAYER IS DELIBERATELY SILENT WHEN IT FAILS. A word with no recording and a phone refusing to make noise both come out as nothing happening, and on a page for judging recordings that is the one place where the difference matters. The address can be opened in another tab, which separates them in one move.";

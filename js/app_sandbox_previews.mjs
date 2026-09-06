@@ -7,6 +7,7 @@ export function app_sandbox_previews() {
   "That also stops the ratchet the byte ceiling was climbing. An eighth preview now costs a visitor who does not open it nothing at all, so the ceiling stops being raised once per registration and goes back to meaning what it says.";
   "Each entry is its own small function naming its file outright, and neither half of that is decoration. The builder has to be able to READ which file is wanted before it can set that file aside as a piece of its own to fetch; a path put together while running is a path it cannot read, and what it does with one of those is pack the whole folder in, which is the opposite of what this is for.";
   "★ THE PATH IN EACH FETCH IS SPELLED AS A SIBLING OF THIS FILE, AND A DRAFT WRITTEN ANYWHERE ELSE MUST STILL SPELL IT THAT WAY. The import lines at the top of a draft are rewritten when it is promoted; a path sitting inside a fetch is a piece of text and is not, so a draft that spelled its own folder correctly lands here spelling a folder that is not there. Nothing goes red - it is a fetch that happens when somebody opens that preview, and only then.";
+  "★ A RENAME DOES NOT FOLLOW THESE PATHS EITHER, FOR THE SAME REASON. Measured 2026-09-06: renaming a preview into its app's prefix moved the file and left the fetch below spelling the old name, which points at nothing - and nothing anywhere goes red, because the fetch only runs when a person opens that one preview. After renaming a preview, read this file and mend its entry by hand.";
   async function spinner_load() {
     let m = await import("./app_sandbox_spinner_preview.mjs");
     let r = m.app_sandbox_spinner_preview;
@@ -28,8 +29,8 @@ export function app_sandbox_previews() {
     return r13;
   }
   async function word_sound_load() {
-    let m = await import("./word_sound_preview.mjs");
-    let r14 = m.word_sound_preview;
+    let m = await import("./app_sandbox_word_sound_preview.mjs");
+    let r14 = m.app_sandbox_word_sound_preview;
     return r14;
   }
   let previews = {
