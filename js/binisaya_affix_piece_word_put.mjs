@@ -1,3 +1,4 @@
+import { text_prefix_change } from "./text_prefix_change.mjs";
 import { binisaya_affix_piece_kind } from "./binisaya_affix_piece_kind.mjs";
 import { binisaya_affix_kind_prefix } from "./binisaya_affix_kind_prefix.mjs";
 import { equal } from "./equal.mjs";
@@ -23,8 +24,7 @@ export function binisaya_affix_piece_word_put(word, piece) {
   let suffix = binisaya_affix_kind_suffix();
   let after = equal(kind, suffix);
   if (after) {
-    let tail = text_prefix_without(piece, "-");
-    let tailed = text_combine(word, tail);
+    let tailed = text_prefix_change(piece, "-", word);
     return tailed;
   }
   let letters = text_prefix_without(piece, "^");
