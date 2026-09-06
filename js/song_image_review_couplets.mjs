@@ -11,12 +11,8 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
-      n: 20,
-      note: "The size is now said as the strip of green left above the rock rather than as a height, because saying the top should come close to the arch just brought back the tall crag you turned down. The rock and the entrance are both much bigger in the window. Ten drawings for this one - most lost the entrance altogether or came back as photographs of rock.",
-    },
-    {
       n: 25,
-      note: "Two of the crowns were being drawn in the exact colours of the two bands behind them, which was my fault in the wording. The bands are violet and brown earth now, so no crown shares a colour with the glass behind it. The crowns are still all of one make, which is the part of your earlier ask that has never landed.",
+      note: "Every crown is light glass now - bright yellow, white, bright orange, sky blue and green. The three dark ones are gone, so no row is darker than another. The crowns are still all of one make; the wording asking for seven different makes has failed three rounds running, so I do not think words are the lever there.",
     },
   ];
   return couplets;
