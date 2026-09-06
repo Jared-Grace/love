@@ -18,10 +18,6 @@ export function song_image_review_couplets() {
       n: 24,
       note: "This is 230. You were right about the shadow - the wording only said the stone sat against the rock, so it was being drawn standing in front of it. It now says the stone lies flat against the mouth of the tomb and seals it shut, and the shadow is gone. The beams here came back paler than you asked for, and the white ring still has its black border.",
     },
-    {
-      n: 25,
-      note: "Two of the seven use plants: one is a ring of pointed leaves, one is a band with three lily heads. Both are real crowns in tradition - the victor's wreath and the fleur-de-lis - but the wording names the plant rather than the crown, so the drawing gives back a plant. Nothing has been changed. Tell me which you want: those two named as the traditional crowns instead, or both replaced with crowns that use no plant at all.",
-    },
   ];
   return couplets;
 }
