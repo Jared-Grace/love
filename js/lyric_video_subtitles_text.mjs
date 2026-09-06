@@ -3,6 +3,7 @@ import { lyric_video_subtitles_styles } from "./lyric_video_subtitles_styles.mjs
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
+import { lyric_video_subtitles_dialogue_line } from "./lyric_video_subtitles_dialogue_line.mjs";
 import { number_is } from "./number_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { lyric_video_line_size_text } from "./lyric_video_line_size_text.mjs";
@@ -27,6 +28,7 @@ export function lyric_video_subtitles_text(document) {
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   "★ THE MARGINS, THE POINT THE CARD IS CENTRED ON AND HOW MUCH ROOM A CARD HAS ARE ALL ASKED FOR IN ONE PLACE RATHER THAN WORKED OUT HERE. Whoever cuts a chapter into cards has to know the same three things before this ever runs, and while this held its own copy of them the two answers drifted: cards were cut to a width that was never measured and drawn at one that was, and the first anybody knew of it was a card clipped off the top of the frame and standing over the passage line at the foot.";
   "The three kinds of lettering are described somewhere else and dropped in here whole, because the line that names what a style's fields mean has to stand with them and this file only has to know where the section goes.";
+  "★ EVERY DIALOGUE LINE IN THE FILE IS WRITTEN BY ONE FUNCTION SOMEWHERE ELSE, WHILE THE LINE NAMING WHAT A DIALOGUE LINE'S FIELDS MEAN STAYS HERE, AND THAT SPLIT IS NOT THE ONE THE STYLES REFUSED. The three styles are three lines standing together in one section, so the line describing them can stand with them. The Dialogue lines cannot: one is written for every sung line and they are laid into the file as the song runs, so nothing can hold them together. What keeps them from drifting from the line above them instead is that there is exactly one place where a Dialogue line is spelled out at all, so a field added to them is added once and read against a format line that is also written once.";
   let width = document.width;
   let height = document.height;
   let font_size = document.font_size;
@@ -38,16 +40,18 @@ export function lyric_video_subtitles_text(document) {
   let characters_max = lyric_video_screen_characters_max();
   let lead = lyric_video_lead_seconds();
   let song_end = subtitles_time_text(document.duration);
-  let passage_event =
-    "Dialogue: 0,0:00:00.00," +
-    song_end +
-    ",Passage,,0,0,0,,{\\fad(900,900)}" +
-    document.passage;
-  let credit_event =
-    "Dialogue: 0,0:00:00.00," +
-    song_end +
-    ",Credit,,0,0,0,,{\\fad(900,900)}" +
-    document.credit;
+  function foot_event(style, text) {
+    let event = lyric_video_subtitles_dialogue_line({
+      start: "0:00:00.00",
+      end: song_end,
+      style,
+      effect: "\\fad(900,900)",
+      text,
+    });
+    return event;
+  }
+  let passage_event = foot_event("Passage", document.passage);
+  let credit_event = foot_event("Credit", document.credit);
   let head = [
     "[Script Info]",
     "ScriptType: v4.00+",
@@ -73,16 +77,14 @@ export function lyric_video_subtitles_text(document) {
   function line_event(line) {
     let shown_start = subtract(line.start, lead);
     let shown_end = subtract(line.end, lead);
-    let event =
-      "Dialogue: 0," +
-      subtitles_time_text(shown_start) +
-      "," +
-      subtitles_time_text(shown_end) +
-      ",Lyric,,0,0,0,,{" +
-      lyric_place +
-      lyric_video_line_size_text(line, font_size, characters_max) +
-      "}" +
-      line.text;
+    let size_text = lyric_video_line_size_text(line, font_size, characters_max);
+    let event = lyric_video_subtitles_dialogue_line({
+      start: subtitles_time_text(shown_start),
+      end: subtitles_time_text(shown_end),
+      style: "Lyric",
+      effect: lyric_place + size_text,
+      text: line.text,
+    });
     return event;
   }
   let lines_heard = document.lines.filter(line_timed_is);
