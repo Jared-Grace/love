@@ -1,3 +1,9 @@
+import { bible_glyph_chapter_deu28 } from "./bible_glyph_chapter_deu28.mjs";
+import { bible_glyph_chapter_psa145 } from "./bible_glyph_chapter_psa145.mjs";
+import { bible_glyph_chapter_deu10 } from "./bible_glyph_chapter_deu10.mjs";
+import { bible_glyph_chapter_1ki21 } from "./bible_glyph_chapter_1ki21.mjs";
+import { bible_glyph_chapter_jos03 } from "./bible_glyph_chapter_jos03.mjs";
+import { bible_glyph_chapter_num22 } from "./bible_glyph_chapter_num22.mjs";
 import { bible_glyph_chapter_ezk03 } from "./bible_glyph_chapter_ezk03.mjs";
 import { bible_glyph_chapter_zec05 } from "./bible_glyph_chapter_zec05.mjs";
 import { bible_glyph_chapter_2ch34 } from "./bible_glyph_chapter_2ch34.mjs";
@@ -307,7 +313,9 @@ export function bible_glyph_chapters() {
   ("Seven more Old Testament pages join the list, and the largest hole this collection has is now measured rather than guessed at. Genesis 41 is a chapter about a dream and there is no picture for a dream, none for a cow, none for grain, none for a stalk and none for the Nile, so four of its lines come out completely empty and three of those four are the dream itself, told and then told again. Isaiah 7 carries the most quoted verse in the Old Testament and cannot draw the virgin, the conceiving or the birth, so the line comes out as a crown, a giving hand, a son and a name tag with the woman at the centre of it invisible. Genesis 17 says covenant thirteen times and circumcision nine times and has a picture for neither, which is the whole subject of the chapter gone. Deuteronomy 34 buries Moses in the most famous unmarked grave there is and there is no grave. 2 Chronicles 20 sends singers out ahead of an army and there is no song, no singing and no praising, and its victory procession comes home with harps, lyres and trumpets that are all three blank. 1 Samuel 24 is a chapter about a cave and the corner of a robe and can draw none of the three, and its dead dog and its flea keep only a skull, while the hand that could close and does not lands eleven times, so the one thing the page can draw is the one thing the page is about. Two of these also carry good news. The anchor sits on the Hebrew root that means both believing and being upheld, so Isaiah 7 verse 9 and 2 Chronicles 20 verse 20 both put the wordplay straight into the drawing, three anchors in one sentence, which is the second and third time a shared seating has been an asset instead of a loss. And 1 Samuel 24 verse 21 is the first firing of a fault that had only been predicted: one tag draws the word name and the same tag draws the LORD, and that line holds both, so it gave up every tag it had and went from four marks to two.");
   ("Eight chapters were added together in one pass: Numbers 14, 1 Samuel 8, Deuteronomy 18, Job 3, Proverbs 2, Nehemiah 1, Psalm 130 and 2 Samuel 5. They were chosen to test the pictures against different kinds of writing rather than to fill a gap in the order, so there is a law chapter, a lament, a wisdom chapter, a prayer, a psalm and two pieces of narrative among them. Three of them showed the same fault, which is that the ear picture sits on the Hebrew word for hearing and so cannot go on a literal ear, and Psalm 130 has both words in one sentence.");
   ("Six more went on the list together, and they were put there to test one picture against itself. Ezekiel 3 eats a scroll and Zechariah 5 watches one fly, and neither chapter can draw it, because the scroll artwork is seated on the Law rather than on any object. 2 Chronicles 34 then finds the Law in a wall and draws it four times over. 1 Chronicles 29 and Ezra 1 were taken next because both are about a fortune, and between them they name gold and silver seventeen times without a picture for any of it. Leviticus 26 was taken last because it is the covenant chapter, and the covenant is the thing this Bible still cannot draw.");
-  ("One hundred and eighty five chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.");
+  "Six more Old Testament pages join the list, and they were written to test what a picture does to the page around it rather than to the line it sits on. In 1 Kings 21 the picture for blessing had to come off the word cursing twice, because the Hebrew there says bless and means the opposite, and drawing it would have put a compliment in the middle of a lynching. In the same chapter the name tag came off a wicked king name, not because that line held anything wrong, but because the same drawing stands for the LORD nine other times on the page. Numbers 22 is the answer to the first of those: there the thumb up is telling the truth and stays, so the two chapters can be read side by side. Deuteronomy 28 and Deuteronomy 10 and Psalm 145 all lose the name tag where a verse holds both the name of God and the word name, and Deuteronomy 10 loses four of them in a single line. Joshua 3 loses nothing at all, which had not happened before. Three of the six are built on the ark of the covenant, and there is no picture for it anywhere in this collection."(
+    "One hundred and ninety one chapters today, and the list is here rather than the chapters being found by name so that nothing has to guess what exists. A reader asking what this Bible contains gets an answer instead of a search.",
+  );
   ("THE FIRST IS FIRST JOHN FOUR, AND IT WAS PICKED BY READING BECAUSE THERE WAS NOTHING YET TO MEASURE WITH. The root table every later entry is measured against did not exist, so the passage was chosen for being the densest love passage in the New Testament: the one picture this whole project started from is a red heart for agape, and if a picture Bible can be read anywhere it can be read here. That is a test rather than a taste - a specimen placed where the odds are best fails informatively if it fails at all. It began at verses seven to twelve and was carried out to both ends of the chapter afterwards, and those six verses were left exactly as they were first written, because a specimen tidied to match what came later stops being evidence of anything. It leaves the grammar in English, and the entry below it is the answer to that.");
   ("THE SECOND IS THE WHOLE OF JOHN ONE, AND IT IS HERE SO THAT THE FIRST CAN BE CHECKED. One chapter proves that a passage can be drawn and cannot prove that a picture means the same thing twice, because there is nothing to hold it against. This passage shares almost nothing with first John four except its vocabulary - another subject, another kind of sentence - so a reader who learned a mark in the first entry either recognises it here or does not, and that is the first real test this project ran. It is also the first chapter to draw the grammar: the pictures for and, in and not were bought between the two, and this is the first passage authored after they existed. The older chapter was deliberately not tidied to match, because two chapters drawn the same way answer nothing while two drawn differently let a reader say which one they could actually read.");
   ("THE THIRD WAS CHOSEN BY MEASURING RATHER THAN BY READING, which is the change worth noticing about this list. The first two were picked because somebody thought they would draw well; John three was asked of the root table before a word of it was authored, and the table answered with a share and with the words it could not draw. That is repeatable by anyone, so the fourth chapter need not be a matter of taste either.");
@@ -500,6 +508,12 @@ export function bible_glyph_chapters() {
   let one_hundred_and_eighty_third = bible_glyph_chapter_1ch29();
   let one_hundred_and_eighty_fourth = bible_glyph_chapter_ezr01();
   let one_hundred_and_eighty_fifth = bible_glyph_chapter_lev26();
+  let one_hundred_and_eighty_sixth = bible_glyph_chapter_deu28();
+  let one_hundred_and_eighty_seventh = bible_glyph_chapter_psa145();
+  let one_hundred_and_eighty_eighth = bible_glyph_chapter_deu10();
+  let one_hundred_and_eighty_ninth = bible_glyph_chapter_1ki21();
+  let one_hundred_and_ninetieth = bible_glyph_chapter_jos03();
+  let one_hundred_and_ninety_first = bible_glyph_chapter_num22();
   let chapters = [
     first,
     second,
@@ -686,6 +700,12 @@ export function bible_glyph_chapters() {
     one_hundred_and_eighty_third,
     one_hundred_and_eighty_fourth,
     one_hundred_and_eighty_fifth,
+    one_hundred_and_eighty_sixth,
+    one_hundred_and_eighty_seventh,
+    one_hundred_and_eighty_eighth,
+    one_hundred_and_eighty_ninth,
+    one_hundred_and_ninetieth,
+    one_hundred_and_ninety_first,
   ];
   return chapters;
 }
