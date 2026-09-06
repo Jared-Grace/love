@@ -12,11 +12,11 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 11,
-      note: "You are right about 78. The wording had refused that twice by name, which is the surest way to get a thing drawn, so the refusal came out and the thicket now closes along the whole underside instead. Four fresh draws all failed: two lost the thicket altogether and two lost the ram. So 78 is still up, unchanged, until one comes back with the thicket and no fault.",
+      note: "You are right about 78, and the wording had refused that twice by name, which is the surest way to get a thing drawn. The refusal came out and the thicket now closes along the whole underside instead. Eight fresh draws and not one is usable: the ones with a thicket paint the field black, and the ones with a clean field have no thicket at all. So 78 is still up, unchanged.",
     },
     {
       n: 24,
-      note: "This is 215. The rock is flat panes at last instead of a photograph, and the beams keep their different widths and their colour. Neither of your two asks landed: the white ring still has a black border and the stone still stands clear of the ground. The gradient may not be reachable at all - the style sheet sent with every one of the 36 pictures says no gradient by name, so the two are asking for opposite things.",
+      note: "This is 223. The stone rests on the brown ground now, the rock is flat panes rather than a photograph, and the beams are wide, bright and plainly different widths. The white ring still has a black border round it and it still does not fade. Sixteen draws over two rounds and the fade has never once appeared - the style sheet sent with all 36 pictures forbids a gradient by name, so it and this couplet are asking for opposite things, and that is yours to settle.",
     },
     {
       n: 25,
