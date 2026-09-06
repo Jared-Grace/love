@@ -333,7 +333,7 @@ export function song_image_couplets() {
       second: "it was brand new",
       symbol: list_join_empty([
         r,
-        ", that opening one flat sheet of solid black standing completely empty with nothing at all inside it, no stone rolled anywhere in the picture and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of plain brown earth, the rock reaching almost to the white border on both sides",
+        ", that opening one flat sheet of solid black standing completely empty, no stone rolled anywhere in the picture and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of plain brown earth, the rock filling the window, reaching almost to the white border on both sides and its top standing close up under the sky at the head of the arch",
       ]),
       symbol_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       same_as: 0,
@@ -388,7 +388,7 @@ export function song_image_couplets() {
       first: "WHO conquered death",
       second: "now glorified",
       symbol:
-        "The band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of deep cobalt blue, and standing on them seven royal crowns filling the window and only seven, the crown at the top drawn in bright orange glass, the two below it in white and in bright yellow, the two below those in emerald green and in deep cobalt blue, and the two at the foot in ruby red and in deep crimson, each crown of a different make from all the others and never a plain ring, some of them a broad band with upright points standing along the top, some with arched bands rising from the band and meeting under a small cross above, and some with a raised cap of glass held inside the band, each one drawn as large as the room around it allows and standing clear of the ones beside it",
+        "The band between the two lead lines one flat sheet of violet and the band below them one flat sheet of plain brown earth, and standing on them seven royal crowns filling the window and only seven, the crown at the top drawn in bright yellow glass, the two below it in white and in bright orange, the two below those in emerald green and in ruby red, and the two at the foot in deep cobalt blue and in deep crimson, each crown of a different make from all the others and never a plain ring, some of them a broad band with upright points standing along the top, some with arched bands rising from the band and meeting under a small cross above, and some with a raised cap of glass held inside the band, each one drawn as large as the room around it allows and standing clear of the ones beside it",
       symbol_ref: "Revelation 19:12",
       same_as: 0,
     },
