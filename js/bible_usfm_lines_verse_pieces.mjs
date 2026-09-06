@@ -1,7 +1,6 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_split } from "./text_split.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_skip_1 } from "./list_skip_1.mjs";
 import { list_first } from "./list_first.mjs";
 import { usfm_number_rest } from "./usfm_number_rest.mjs";
@@ -23,8 +22,7 @@ export function bible_usfm_lines_verse_pieces(usfm_lines) {
   let piece = 0;
   for (let usfm_line of usfm_lines) {
     let pieces = text_split(usfm_line, "\\v ");
-    let size = list_size(pieces);
-    let opened = greater_than(size, 1);
+    let opened = list_size_greater_than(pieces, 1);
     if (opened) {
       let after = list_skip_1(pieces);
       let numbered = list_first(after);
