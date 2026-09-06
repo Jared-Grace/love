@@ -1,12 +1,11 @@
+import { list_index_of_add } from "./list_index_of_add.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { psalms_119_stanza_names } from "./psalms_119_stanza_names.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
-import { list_index_of } from "./list_index_of.mjs";
 import { multiply } from "./multiply.mjs";
-import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 export function psalms_119_stanza_verses_or_null(stanza_name) {
   arguments_assert(arguments, 1);
@@ -22,8 +21,7 @@ export function psalms_119_stanza_verses_or_null(stanza_name) {
   if (not(known)) {
     return null;
   }
-  let index = list_index_of(lowered, wanted);
-  let left = add(index, 1);
+  let left = list_index_of_add(lowered, wanted, 1);
   let last = multiply(left, 8);
   let first = subtract(last, 7);
   let verses = {
