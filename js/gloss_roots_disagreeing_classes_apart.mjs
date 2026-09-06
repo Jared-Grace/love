@@ -1,9 +1,9 @@
+import { gloss_finding_root_claimed_relation } from "./gloss_finding_root_claimed_relation.mjs";
 import { gloss_findings_edits_tally } from "./gloss_findings_edits_tally.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_root_claimed_nearest } from "./gloss_root_claimed_nearest.mjs";
-import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -21,7 +21,11 @@ export function gloss_roots_disagreeing_classes_apart(findings, offenders) {
       let claimed = property_get(finding, "claimed");
       let nearest = gloss_root_claimed_nearest(root, claimed);
       let claimed_nearest = property_get(nearest, "nearest");
-      let relation = gloss_root_claimed_relation(root, claimed_nearest);
+      let relation = gloss_finding_root_claimed_relation(
+        finding,
+        root,
+        claimed_nearest,
+      );
       let r1 = {
         chapter_code,
         word: property_get(finding, "word"),
