@@ -1,5 +1,5 @@
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { gloss_entries_roots_disagreeing_chained } from "./gloss_entries_roots_disagreeing.mjs";
+import { gloss_entries_roots_disagreeing_chained } from "./gloss_entries_roots_disagreeing_chained.mjs";
 export async function gloss_chapter_roots_disagreeing(chapter_code, fn, known) {
   "Every explanation in one gloss chapter that says nothing about the root an outside dictionary takes its word back to.";
   "$plain chapter_code";
