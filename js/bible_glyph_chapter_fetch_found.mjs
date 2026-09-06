@@ -233,6 +233,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
     let chapter_module = await import("./bible_glyph_chapter_job28.mjs");
     stored = chapter_module.bible_glyph_chapter_job28();
   }
+  if (equal(chapter_code, "JOB31")) {
+    let chapter_module = await import("./bible_glyph_chapter_job31.mjs");
+    stored = chapter_module.bible_glyph_chapter_job31();
+  }
   if (equal(chapter_code, "JOB42")) {
     let chapter_module = await import("./bible_glyph_chapter_job42.mjs");
     stored = chapter_module.bible_glyph_chapter_job42();
@@ -404,6 +408,10 @@ export async function bible_glyph_chapter_fetch_found(chapter_code) {
   if (equal(chapter_code, "JER26")) {
     let chapter_module = await import("./bible_glyph_chapter_jer26.mjs");
     stored = chapter_module.bible_glyph_chapter_jer26();
+  }
+  if (equal(chapter_code, "JER32")) {
+    let chapter_module = await import("./bible_glyph_chapter_jer32.mjs");
+    stored = chapter_module.bible_glyph_chapter_jer32();
   }
   if (equal(chapter_code, "EZK01")) {
     let chapter_module = await import("./bible_glyph_chapter_ezk01.mjs");
