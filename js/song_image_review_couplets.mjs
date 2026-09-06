@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "What is wrong with 114: it is grey, white and brown only, its glass is mottled like a photograph, and its beams are all one width in an even fan. Two whole clauses were cut rather than any added - one asked the stone to shade from pale to dark, which is what drew it photographic and fought your circle, and the other asked the halo to fade away with no edge, which has never once come back obeyed. Its wording was the longest in the hymn by half again and is now 452 letters shorter. Nothing else was touched.",
+      note: "This is 203, drawn after two clauses were cut from the wording. The beams are different widths now and carry every colour, not white only, and none of them cuts off short. Still wrong: the rock is mottled like a photograph and the sky behind it is pale. One clause left still asks that rock for pale and dark greys, and that is the next cut if you want it.",
     },
     {
       n: 25,
