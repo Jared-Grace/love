@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 25,
-      note: "The sizes are close now. Asking them to match made all seven the same crown, so instead the size is said as a third of the window's width and the makes stayed different. There is a stray yellow spike between the green crown and the bottom row that I could not draw out. Twenty-four drawings - the even ones kept losing either a crown or the colours.",
+      note: "The fan is gone - that crown is now a broad band with three tall lily heads, which draws as a crown and not a broom. The yellow triangle was a fault in the drawing rather than the wording, so a redraw was all it needed. All seven are full royal makes now and much the same width. Twelve came back out of twenty-four asked for; most lost a crown or turned the bottom two gold.",
     },
   ];
   return couplets;
