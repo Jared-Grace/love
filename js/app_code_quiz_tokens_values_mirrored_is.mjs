@@ -1,9 +1,8 @@
+import { integer_even_is } from "./integer_even_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places_of_kind.mjs";
 import { list_places_get } from "./list_places_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { modulo } from "./modulo.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_mirrored_is } from "./list_mirrored_is.mjs";
 export function app_code_quiz_tokens_values_mirrored_is(tokens) {
@@ -15,8 +14,7 @@ export function app_code_quiz_tokens_values_mirrored_is(tokens) {
   let places = app_code_quiz_token_places_of_kind(tokens, "value");
   let values = list_places_get(tokens, places);
   let size = list_size(values);
-  let remainder = modulo(size, 2);
-  let halved = equal(remainder, 0);
+  let halved = integer_even_is(size);
   if (not(halved)) {
     return false;
   }
