@@ -6,7 +6,7 @@ import { list_get } from "./list_get.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
-export function js_tokens_join_repeated_is(tokens) {
+export function js_tokens_comparisons_chained_is(tokens) {
   "whether a line writes the very same word immediately either side of a join, the way a chain broken in two writes its middle number twice - 1 < 2 && 2 < 3 does and 1 < 2 && 3 < 4 does not";
   "A join is asked about and not every operator, because this is about the one shape where a repeat carries meaning: two comparisons that share an end are saying something about the thing they share, and a reader who cannot see the same word twice cannot see that they do.";
   "The ends of the line are not looked at. A join needs something on both sides of it to repeat, so a first or last token cannot be one, and asking would read past the list.";
