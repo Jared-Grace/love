@@ -4,7 +4,7 @@ import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places
 import { list_places_get } from "./list_places_get.mjs";
 import { list_permutations } from "./list_permutations.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
-export function app_code_quiz_value_orderings_or_null(code) {
+export function app_code_quiz_tile_dealings_or_null(code) {
   "$plain code";
   "One line's tiles, the places among them that hold a value, and every way those values could be handed round those places - or nothing at all, when there are more ways than anybody would walk.";
   "Both makers of alternative answers begin here and they must begin identically, because one of them exists to check the other: a maker that walked a different set of orderings from the checker would report a hole that is only a disagreement about where to look.";
