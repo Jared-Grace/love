@@ -1,16 +1,17 @@
-import { property_exists_not } from "./property_exists_not.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { g_coordinates_neighbors_walkable_get } from "./g_coordinates_neighbors_walkable_get.mjs";
 import { equal_not } from "./equal_not.mjs";
+import { property_exists_not } from "./property_exists_not.mjs";
+import { and } from "./and.mjs";
 import { list_filter } from "./list_filter.mjs";
+import { app_g_bless_person_step_footway } from "./app_g_bless_person_step_footway.mjs";
 import { bless_home_reaches } from "./bless_home_reaches.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
-import { and } from "./and.mjs";
 export function app_g_bless_person_step_tiles(world, person) {
   arguments_assert(arguments, 2);
   let player = property_get(world, "player");
@@ -43,32 +44,9 @@ export function app_g_bless_person_step_tiles(world, person) {
     return clear;
   }
   let open = list_filter(neighbors, open_is);
-  ("Nobody out on the street steps into the ROAD. Cars drive along it, and a pavement that");
-  ("people wander off is a pavement that stops reading as one - the whole point of a kerb is");
-  ("that the crowd stays on one side of it.");
-  ("Taken off the choices rather than off the map, because the road is real ground and the");
-  ("player walks over it. It is the one way between the two streets, so making it solid would");
-  ("cut the world in half. What is refused here is a decision an NPC makes, and the player");
-  ("makes none of them.");
-  ("Walkers were already held to the footway by their leash and residents were not: a front");
-  ("door is four rows from the kerb and a resident may go six, so it was the people who live");
-  ("here who were standing in the traffic.");
-  ("If every way out is road the refusal is DROPPED for that step. Somebody who ended up on");
-  ("the far side of the road is otherwise walled in forever, because they are still near");
-  ("enough to home for the lost-and-far-away escape below never to fire. Letting them cross");
-  ("back is the only reading that cannot strand a person.");
-  let roads = property_get(world, "roads");
-  function road_not_is(neighbor) {
-    let tile = property_get(neighbor, "neighbor");
-    let key = g_coordinates_key(tile);
-    let off = property_exists_not(roads, key);
-    return off;
-  }
-  let footway = list_filter(open, road_not_is);
-  let walled = list_empty_is(footway);
-  if (not(walled)) {
-    open = footway;
-  }
+  ("The kerb is kept by a reading of its own, so what is left here is the one question this");
+  ("is about: of the ways a person may take, which ones keep them within reach of home.");
+  let footway = app_g_bless_person_step_footway(world, open);
   let home = property_get(person, "home");
   let roam = property_get(person, "roam");
   function home_is(neighbor) {
@@ -76,14 +54,14 @@ export function app_g_bless_person_step_tiles(world, person) {
     let close = bless_home_reaches(home, roam, tile);
     return close;
   }
-  let near = list_filter(open, home_is);
+  let near = list_filter(footway, home_is);
   let nowhere = list_empty_is(near);
   let inside = bless_home_reaches(home, roam, person);
   let strayed = not(inside);
   let lost = and(nowhere, strayed);
   let choices = near;
   if (lost) {
-    choices = open;
+    choices = footway;
   }
   let tiles = {};
   let r = {
