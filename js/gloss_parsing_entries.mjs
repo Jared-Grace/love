@@ -1,6 +1,6 @@
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 export function gloss_parsing_entries(phrases, words) {
@@ -10,7 +10,7 @@ export function gloss_parsing_entries(phrases, words) {
   ("A word the table knows but leaves without a phrase is dropped rather than refused. It is a word somebody has already looked at and decided says nothing a reader needs, which is a decision recorded in the table rather than a gap in it.");
   let entries = [];
   for (let word of words) {
-    let entry = list_find_property(phrases, "word", word);
+    let entry = list_find_property_or_null(phrases, "word", word);
     if (not(entry)) {
       return null;
     }
