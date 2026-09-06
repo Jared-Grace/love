@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_blocks_count } from "./bless_blocks_count.mjs";
 import { bless_blocks_gap } from "./bless_blocks_gap.mjs";
@@ -58,8 +59,7 @@ export function app_g_bless_blocks(rows) {
   let column = multiply_add(after_first, gap, down_all);
   let row_first = list_first(rows);
   let world_width = list_size(row_first);
-  let world_depth = list_size(rows);
-  let spare_y = subtract(world_depth, column);
+  let spare_y = list_size_subtract(rows, column);
   let top = divide_floor(spare_y, 2);
   function block_at(index) {
     let before = list_take(depths, index);
