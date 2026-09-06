@@ -1,9 +1,8 @@
+import { text_suffix_change } from "./text_suffix_change.mjs";
 import { text_prefix_change } from "./text_prefix_change.mjs";
 import { binisaya_affix_piece_kind } from "./binisaya_affix_piece_kind.mjs";
 import { binisaya_affix_kind_prefix } from "./binisaya_affix_kind_prefix.mjs";
 import { equal } from "./equal.mjs";
-import { text_suffix_without } from "./text_suffix_without.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { binisaya_affix_kind_suffix } from "./binisaya_affix_kind_suffix.mjs";
 import { text_prefix_without } from "./text_prefix_without.mjs";
 import { text_first } from "./text_first.mjs";
@@ -17,8 +16,7 @@ export function binisaya_affix_piece_word_put(word, piece) {
   let prefix = binisaya_affix_kind_prefix();
   let before = equal(kind, prefix);
   if (before) {
-    let front = text_suffix_without(piece, "-");
-    let fronted = text_combine(front, word);
+    let fronted = text_suffix_change(piece, "-", word);
     return fronted;
   }
   let suffix = binisaya_affix_kind_suffix();
