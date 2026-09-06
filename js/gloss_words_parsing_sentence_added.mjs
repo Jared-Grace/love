@@ -10,8 +10,8 @@ export function gloss_words_parsing_sentence_added(words, testament_name) {
   function word_read(word) {
     let parsing_long = property_get(word, "parsing_long");
     let sentence = gloss_parsing_sentence_testament(
-      parsing_long2,
-      testament_name2,
+      parsing_long,
+      testament_name,
     );
     if (null_is(sentence)) {
       return word;
