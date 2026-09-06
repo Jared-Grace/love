@@ -715,6 +715,7 @@ export function bible_glyph_chapters() {
     one_hundred_and_ninety_first,
     one_hundred_and_ninety_second,
     one_hundred_and_ninety_third,
+    one_hundred_and_ninety_fourth,
   ];
   return chapters;
 }
