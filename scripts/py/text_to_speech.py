@@ -364,11 +364,34 @@ STRESS_MARKS = "ˈˌ"
 
 VOWELS = "ɑæɐʌɛɜɚɔɒəiɪuʊoeaAIOWYY"
 
-SAID_ALONE = {
-    "the": "ðˈʌ",
-    "with": "wɪθ",
-    "than": "ðˈæn",
-}
+SAID_ALONE_PATH = (
+    Path(__file__).resolve().parents[2] / "data/given/speech_pronunciations_alone.json"
+)
+
+
+def said_alone():
+    """Every word this repo says differently when it is said on its own.
+
+    ★ IT IS A FILE BESIDE speech_pronunciations.json RATHER THAN A DICTIONARY
+    IN THIS SOURCE, BECAUSE THE LIST GROWS AND SOMEBODY WITHOUT PYTHON HAS TO
+    BE ABLE TO GROW IT.  Every entry here was picked by an ear off a page of
+    candidates, and that is a thing a person does again next week for the next
+    word that comes back wrong.  Asking them to edit a literal in the middle of
+    the speech engine to do it puts the whole engine at risk of a stray comma
+    for the sake of adding a word.
+
+    ★ IT IS A SECOND FILE RATHER THAN MORE ENTRIES IN THE FIRST ONE, AND THE
+    SPLIT IS THE WHOLE POINT.  speech_pronunciations.json says how a word is
+    said always, chapters included.  This one says how a word is said only when
+    it stands alone, and those are opposite answers for exactly the words in
+    here: "the" said alone is "thuh" with weight on it, and "the" put into
+    "the God of Israel" with that same weight on it is a chapter read by
+    somebody who has never seen the sentence before.  One file with both kinds
+    in it would have no way to tell them apart, so which file a new word goes
+    in is the question worth asking, and it has a plain answer - would you say
+    it that way inside a sentence too?
+    """
+    return json.loads(SAID_ALONE_PATH.read_text(encoding="utf-8"))
 
 
 def said_alone_phonemes(word, phonemes):
@@ -388,16 +411,28 @@ def said_alone_phonemes(word, phonemes):
     the app's list, 32 words of 1,674 come back that way - a closed class of
     function words, exactly the ones English leans on.
 
-    A few words are given their citation form outright instead, because for
-    them the reduced form differs in the *vowel* and not only in the weight,
-    and no rule reads that off the sentence form.  A reduced vowel is a schwa
-    whatever it started as, so the stress rule above puts the weight back on
-    a vowel that is already the wrong one - "than" came out as a stressed
-    schwa and was heard, correctly, as "then".  "the" said alone is "thuh"
-    with weight; "with" said alone ends in an unvoiced th, because a voiced
-    one has nothing to run into and is released as an audible puff, which is
-    what the report of "with-uh" was.  Every spelling here is one a person
-    picked by ear off a page of candidates, so do not re-derive them.
+    The words in said_alone() are given their citation form outright instead,
+    because for them the reduced form differs in the *vowel* and not only in
+    the weight, and no rule reads that off the sentence form.  A reduced vowel
+    is a schwa whatever it started as, so the stress rule above puts the weight
+    back on a vowel that is already the wrong one - "than" came out as a
+    stressed schwa and was heard, correctly, as "then".  Every spelling in that
+    file is one a person picked by ear off a page of candidates, so do not
+    re-derive them, and three of them will look like mistakes to somebody
+    tidying up:
+
+    "of" and "with" carry no stress mark at all, and adding one is not a
+    correction.  The rule above would have marked both; they were listened to
+    marked and unmarked and the unmarked ones won, which is why the answer is
+    taken before the rule runs rather than after it.  A voiced th at the end of
+    "with" has nothing to run into and is released as an audible puff - that
+    was the report of "with-uh" - so the unvoiced one is deliberate too.
+
+    "a" is spelled "ˈeɪ" and not "ˈA", which in this notation is the same
+    diphthong written the short way.  Both were spoken and they did not sound
+    the same, and the long spelling is the one that was picked.  Nobody knows
+    why the model treats them differently; what is known is which one a person
+    said was right.
 
     ★ DO NOT PUT A FULL STOP ON THE END TO SETTLE THE PROSODY.  It was tried,
     for a real fault - a lone syllable has nothing telling the model it is the
@@ -408,7 +443,7 @@ def said_alone_phonemes(word, phonemes):
     on came back worse.  The rising pitch is real and remains unsolved; this
     is not the way to solve it.
     """
-    said = SAID_ALONE.get(word.strip().lower())
+    said = said_alone().get(word.strip().lower())
     if said is not None:
         return said
     if any(mark in phonemes for mark in STRESS_MARKS):
@@ -419,7 +454,7 @@ def said_alone_phonemes(word, phonemes):
     return phonemes
 
 
-def line_samples(g2p, kokoro, text, speed, citation):
+def line_samples(g2p, kokoro, text, speed, citation, voice):
     """Speaks one line, returning the samples and the rate.
 
     ★ THE SPEED IS ASKED FOR RATHER THAN TAKEN FROM THE MODULE, BECAUSE A
@@ -427,7 +462,16 @@ def line_samples(g2p, kokoro, text, speed, citation):
     is slowed on purpose so a learner can follow it; a lone word has nothing
     to follow, so the reason does not apply and the slowing only stretches
     it - measured, a quarter to a third longer at three quarters speed.
-    Same engine, same voice, and the caller says which job it is.
+    Same engine, and the caller says which job it is.
+
+    ★ THE VOICE IS ASKED FOR THE SAME WAY, AND THE TWO JOBS NOW DISAGREE.
+    Four voices were listened to on the words already known to be hard, and
+    the one picked for the word buttons is not the one the chapters are
+    recorded in.  That is a real cost and it is being paid knowingly: a
+    learner who taps a word and then hears the chapter read hears two people.
+    The chapters are hours of recording and the words are minutes, so the
+    words moved first; whether the chapters follow is a decision about time,
+    not about the sound.
 
     Do not read this as the cure for a word that sounds wrong.  It was
     changed while chasing a report of "with" heard as "with-uh", and it did
@@ -444,7 +488,7 @@ def line_samples(g2p, kokoro, text, speed, citation):
         if citation:
             phonemes = said_alone_phonemes(run, phonemes)
         samples, rate = kokoro.create(
-            phonemes, voice=VOICE, speed=speed, is_phonemes=True
+            phonemes, voice=voice, speed=speed, is_phonemes=True
         )
         parts.append(samples)
     if not parts:
