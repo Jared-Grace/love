@@ -1,7 +1,6 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { binisaya_analysis_word_contradicted_is } from "./binisaya_analysis_word_contradicted_is.mjs";
 import { and } from "./and.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -14,8 +13,7 @@ export function gloss_words_rows_names_apart(rows, spelled) {
   function name_is(row) {
     let word = property_get(row, "word");
     let lower = text_lower_to(word);
-    let met = list_includes(spelled, lower);
-    let never_lower = not(met);
+    let never_lower = list_includes_not(spelled, lower);
     let root = property_get(row, "root");
     let affixes = property_get(row, "affixes");
     let contradicted = binisaya_analysis_word_contradicted_is(
