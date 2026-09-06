@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 25,
-      note: "Every crown is light glass now - bright yellow, white, bright orange, sky blue and green. The three dark ones are gone, so no row is darker than another. The crowns are still all of one make; the wording asking for seven different makes has failed three rounds running, so I do not think words are the lever there.",
+      note: "Each crown now has its own shape named for it by position, the same way its colour is. That is what landed it - the old line asking for variety sat after the colour list and was never being read. All seven are different makes and all still light glass. It cost the count: several drawings came back with eight or nine crowns, so this is one of ten.",
     },
   ];
   return couplets;
