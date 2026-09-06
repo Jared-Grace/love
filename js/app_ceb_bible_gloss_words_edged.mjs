@@ -1,3 +1,4 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_offenders_findings_by_word } from "./gloss_offenders_findings_by_word.mjs";
@@ -10,7 +11,6 @@ import { list_map } from "./list_map.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_sum } from "./list_sum.mjs";
 export async function app_ceb_bible_gloss_words_edged() {
   "Every word in the Cebuano gloss store that carries a mark from the sentence around it, named once each, set beside what the dictionary says about the same word spelled bare.";
   "This prices a blind spot rather than repairing one. Every check over these explanations asks the dictionary under the spelling the author typed, so a word wearing a quotation mark or a comma is asked for under a spelling no dictionary holds, comes back unknown, and is passed over in silence by every root and affix check there is. Nothing goes red; the word is simply never looked at.";
@@ -75,13 +75,11 @@ export async function app_ceb_bible_gloss_words_edged() {
   let refused = list_filter(labelled, refused_is);
   let unknown = list_filter(labelled, unknown_is);
   let words_total = list_size(labelled);
-  let all_sightings = list_map(labelled, row_sightings);
-  let sightings_total = list_sum(all_sightings);
+  let sightings_total = list_map_sum(labelled, row_sightings);
   let broken_down_words = list_size(broken_down);
   let refused_words = list_size(refused);
   let unknown_words = list_size(unknown);
-  let list = list_map(broken_down, row_sightings);
-  let broken_down_sightings = list_sum(list);
+  let broken_down_sightings = list_map_sum(broken_down, row_sightings);
   let r = {
     words_total,
     sightings_total,
