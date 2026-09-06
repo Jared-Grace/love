@@ -11,10 +11,6 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
-      n: 18,
-      note: "Angled bars are not okay - the church draws the cruciform halo with its bars running straight up and straight across, so the wording now names a plain red Greek cross and they are flat here. The scroll sits on emerald green now instead of brown against brown. Three drawings in a row lost the cross out of the halo and into the field before this one held it.",
-    },
-    {
       n: 20,
       note: "You were right, and the cause was the opening words: they described a cliff face, which is a tall shape however much proportion is added after it. The rock is now said to be far broader across than it is tall, its top a low rounded ridge, reaching right across the window. The mouth still has a ring of cut stones round it, as your own example 8 does - say if you would rather it were raw rock.",
     },
