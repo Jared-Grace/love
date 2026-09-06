@@ -77,6 +77,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 2",
     },
     {
+      chapter_code: "EXO04",
+      reference: "Exodus 4",
+    },
+    {
       chapter_code: "EXO14",
       reference: "Exodus 14",
     },
@@ -397,6 +401,10 @@ export function bible_glyph_chapter_references() {
       reference: "Isaiah 2",
     },
     {
+      chapter_code: "ISA11",
+      reference: "Isaiah 11",
+    },
+    {
       chapter_code: "ISA12",
       reference: "Isaiah 12",
     },
@@ -415,6 +423,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "JER17",
       reference: "Jeremiah 17",
+    },
+    {
+      chapter_code: "JER18",
+      reference: "Jeremiah 18",
     },
     {
       chapter_code: "JER23",
