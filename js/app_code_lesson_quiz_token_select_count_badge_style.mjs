@@ -1,7 +1,7 @@
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_code_lesson_quiz_token_select_count_badge_inside_percent } from "./app_code_lesson_quiz_token_select_count_badge_inside_percent.mjs";
+import { subtract } from "./subtract.mjs";
 import { text_from_number } from "./text_from_number.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_font_sans_serif_value } from "./html_font_sans_serif_value.mjs";
@@ -10,10 +10,12 @@ import { html_style_line_height } from "./html_style_line_height.mjs";
 import { html_style_padding_x } from "./html_style_padding_x.mjs";
 import { html_style_padding_y } from "./html_style_padding_y.mjs";
 import { html_border_radius } from "./html_border_radius.mjs";
-import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { html_border } from "./html_border.mjs";
 export function app_code_lesson_quiz_token_select_count_badge_style(
   badge,
   tile,
@@ -23,7 +25,8 @@ export function app_code_lesson_quiz_token_select_count_badge_style(
   ("IT HANGS OFF THE SIDE AND NOT OFF THE TOP. It was over the top right corner, and the row of pieces has the line being built sitting directly above it, so the badges were drawn over that line. Nothing above the row belongs to the row, and there is nothing to the right of a piece except the next piece - which the row is told to stand clear of. So sideways is the one direction this can go.");
   ("IT IS HUNG FROM THE PIECE'S TOP EDGE rather than centred on it, because a badge reads as a mark on a thing when it sits high on it and as a second thing standing beside it when it sits in the middle. Its top edge is put level with the piece's top edge, which is the highest it can be put, and the highest it can be put without ever reaching above the piece is the same place - so this is as high as was asked for and still cannot touch the line being built. It holds whatever the badge is made to say and however large it is made: growing it can only push it downwards.");
   ("MOST OF IT IS OUTSIDE THE BLACK. A piece is a black tile carrying one symbol of a line of code, and anything drawn inside that black is read as part of the line - a small number inside a code tile after a seven is how mathematics writes seven squared. Only a sliver of the badge lies on the tile, enough to read as fastened to it, and the rest stands off the edge on the page.");
-  ("IT IS FILLED PALE BLUE WITH BLACK LETTERING, which is the tile's own colours turned around. The tile is black with white on it and the page around is light, so a pale fill stands out against both, and no other mark in this quiz is that colour.");
+  ("IT IS FILLED WHITE WITH BLACK LETTERING, which is the furthest apart two colours can be put and so the plainest the number can be made to read. It was filled pale blue, and black on that pale blue is most of the way there but not all of it; the number is small and it is bold and it is asked to be read at arm's length on a telephone, so there was no reason to spend any of that distance on the fill being coloured.");
+  ("AND IT IS RINGED DARK BLUE, because the page behind it is very nearly white too and a white fill alone would have no edge on it. The ring is what draws the badge's outline rather than its fill, so the fill is free to be the same colour as the page and the badge still reads as a separate thing fastened to the tile. It is the one blue this quiz uses nowhere else, and being dark it also draws an edge where the badge crosses onto the black.");
   ("TAPS PASS THROUGH IT. The badge lies over the edge of a button a learner is meant to be able to press, and a press that lands on the badge is a press meant for the piece under it, so the badge is told not to catch presses at all.");
   html_style_set(tile, "position", "relative");
   html_style_set(badge, "position", "absolute");
@@ -42,10 +45,12 @@ export function app_code_lesson_quiz_token_select_count_badge_style(
   html_style_padding_x(badge, "0.3em");
   html_style_padding_y(badge, "0.16em");
   html_border_radius(badge, "999px");
-  let color_fill = app_shared_color_blue_pale();
+  let color_fill = app_shared_color_white();
   html_style_background_color_set(badge, color_fill);
   let color_lettering = app_shared_color_code_background();
   html_font_color_set(badge, color_lettering);
+  let color_edge = app_shared_color_blue_dark();
+  html_border(badge, "1.5px", color_edge);
   html_style_set(badge, "white-space", "nowrap");
   html_style_set(badge, "pointer-events", "none");
 }
