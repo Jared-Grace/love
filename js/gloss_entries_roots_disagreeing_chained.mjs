@@ -1,7 +1,6 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entries_roots_disagreeing } from "./gloss_entries_roots_disagreeing.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { gloss_word_root_chain } from "./gloss_word_root_chain.mjs";
 import { property_set } from "./property_set.mjs";
@@ -17,8 +16,7 @@ export function gloss_entries_roots_disagreeing_chained(entries, known) {
   arguments_assert(arguments, 2);
   let disagreeing = gloss_entries_roots_disagreeing(entries, known);
   function finding_chain_add(finding) {
-    let claimed = property_get(finding, "claimed");
-    let claimed_bare = list_map(claimed, gloss_word_bare);
+    let claimed_bare = property_list_map(finding, "claimed", gloss_word_bare);
     let claimed_chains = {};
     function claimed_chain_add(claimed_word) {
       let chain = gloss_word_root_chain(known, claimed_word);
