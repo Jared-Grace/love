@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { memory_note_text } from "./memory_note_text.mjs";
@@ -7,8 +8,6 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { memory_index_entry_hook_or_null } from "./memory_index_entry_hook_or_null.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { list_add } from "./list_add.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 export async function memory_index_hub_fold_entry(lines, stem) {
   arguments_assert(arguments, 2);
@@ -36,8 +35,7 @@ export async function memory_index_hub_fold_entry(lines, stem) {
       list_add(found, line);
     }
   }
-  let left = list_size(hooks);
-  let b2 = equal(left, 1);
+  let b2 = list_size_equal(hooks, 1);
   assert_json(b2, {
     fault:
       "the index does not name this note on exactly one entry that may be moved",
