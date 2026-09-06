@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_finished_unpublished } from "./gloss_chapters_finished_unpublished.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_passages } from "./app_ceb_bible_gloss_passages.mjs";
-import { app_ceb_bible_gloss_generate_upload_namespace } from "./app_ceb_bible_gloss_generate_upload_namespace.mjs";
+import { gloss_upload_namespace_ceb_bible } from "./gloss_upload_namespace_ceb_bible.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { gloss_chapters_offenders_assert } from "./gloss_chapters_offenders_assert.mjs";
 export async function app_ceb_bible_gloss_unpublished_gate_run() {
@@ -15,7 +15,7 @@ export async function app_ceb_bible_gloss_unpublished_gate_run() {
   let walked = await gloss_chapters_finished_unpublished(
     app_ceb_bible_gloss_generate,
     app_ceb_bible_gloss_passages,
-    app_ceb_bible_gloss_generate_upload_namespace,
+    gloss_upload_namespace_ceb_bible,
   );
   let fault = text_combine_multiple([
     "are explained all the way through and still unpublished - carry each one up with ",
