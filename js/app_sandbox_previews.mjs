@@ -1,3 +1,4 @@
+import { app_sandbox_previews_message_private_load } from "./app_sandbox_previews_message_private_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
@@ -47,6 +48,7 @@ export function app_sandbox_previews() {
     typing_box: typing_box_load,
     lyric_timing: lyric_timing_load,
     word_sound: word_sound_load,
+    message_private: app_sandbox_previews_message_private_load,
   };
   return previews;
 }
