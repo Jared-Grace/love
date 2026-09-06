@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 25,
-      note: "Each crown now has its own shape named for it by position, the same way its colour is. That is what landed it - the old line asking for variety sat after the colour list and was never being read. All seven are different makes and all still light glass. It cost the count: several drawings came back with eight or nine crowns, so this is one of ten.",
+      note: "The brown band is gone - the lower sheet is deep cobalt now, so the window is violet and blue all the way down and nothing in it is earth. No crown can be cobalt, so none of them blends into it. The white one at the foot is a wall crown with square points, which is a real make and not a tower. Twelve drawings; most lost crowns rather than colours this time.",
     },
   ];
   return couplets;
