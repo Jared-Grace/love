@@ -11,6 +11,14 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
+      n: 11,
+      note: "Yes, in front - and it already is. The yellow disc runs unbroken across the line where the blue meets the green, and that is the traditional lead: a halo is cut as part of the figure, so the background lines stop at it rather than crossing it. So nothing was changed here. The thicket you said traps well enough is untouched too.",
+    },
+    {
+      n: 24,
+      note: "What is wrong with 114: it is grey, white and brown only, its glass is mottled like a photograph, and its beams are all one width in an even fan. Two whole clauses were cut rather than any added - one asked the stone to shade from pale to dark, which is what drew it photographic and fought your circle, and the other asked the halo to fade away with no edge, which has never once come back obeyed. Its wording was the longest in the hymn by half again and is now 452 letters shorter. Nothing else was touched.",
+    },
+    {
       n: 25,
       note: "The fan is gone - that crown is now a broad band with three tall lily heads, which draws as a crown and not a broom. The yellow triangle was a fault in the drawing rather than the wording, so a redraw was all it needed. All seven are full royal makes now and much the same width. Twelve came back out of twenty-four asked for; most lost a crown or turned the bottom two gold.",
     },
