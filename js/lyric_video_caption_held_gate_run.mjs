@@ -1,5 +1,3 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { data_given_lyric_videos_folder } from "./data_given_lyric_videos_folder.mjs";
 import { folder_read_paths_async } from "./folder_read_paths_async.mjs";
@@ -18,6 +16,8 @@ import { list_includes } from "./list_includes.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
 export async function lyric_video_caption_held_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: no timing document leaves one caption standing on the screen while the recording sings a verse that caption does not say.");
@@ -30,7 +30,7 @@ export async function lyric_video_caption_held_gate_run() {
   let paths_json = list_filter_ends_with(paths, ".json");
   let path_findings = lyric_video_transcripts_path();
   let transcripts = await file_read_json(path_findings);
-  let floor = lyric_video_caption_unwritten_floor();
+  let unwritten_floor = lyric_video_caption_unwritten_floor();
   let allowed = lyric_video_caption_unwritten_allowed();
   let over = [];
   let paid = [];
@@ -48,7 +48,7 @@ export async function lyric_video_caption_held_gate_run() {
     let worst = lyric_video_document_caption_unwritten_worst(document, heard);
     measured = add(measured, 1);
     let known = list_includes(allowed, name);
-    let enough = greater_than_equal(worst.count, floor);
+    let enough = greater_than_equal(worst.count, unwritten_floor);
     let one = {
       name,
       line: worst.line,
@@ -66,16 +66,17 @@ export async function lyric_video_caption_held_gate_run() {
   list_empty_is_assert_json(over, {
     hint: "a caption stands on the screen while the recording sings words it does not say - read the transcript around the named line, and if a verse is genuinely sung twice, author the repeat into the document and time it from the hearing; never raise the floor to make this green",
   });
+  let f_name = fn_name("lyric_video_caption_unwritten_allowed");
   list_empty_is_assert_json(paid, {
     hint: text_combine_multiple([
       "a song listed as a known offender no longer holds the fault - take its name out of ",
-      fn_name("lyric_video_caption_unwritten_allowed"),
+      f_name,
       " so the list keeps meaning what it says",
     ]),
   });
   let r = {
     measured,
-    floor,
+    floor: unwritten_floor,
   };
   return r;
 }

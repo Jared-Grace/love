@@ -455,6 +455,13 @@ export function bible_glyph_chapters() {
   let one_hundred_and_sixty_second = bible_glyph_chapter_isa11();
   let one_hundred_and_sixty_third = bible_glyph_chapter_jer18();
   let one_hundred_and_sixty_fourth = bible_glyph_chapter_exo04();
+  let one_hundred_and_sixty_fifth = bible_glyph_chapter_gen27();
+  let one_hundred_and_sixty_sixth = bible_glyph_chapter_gen17();
+  let one_hundred_and_sixty_seventh = bible_glyph_chapter_deu34();
+  let one_hundred_and_sixty_eighth = bible_glyph_chapter_isa07();
+  let one_hundred_and_sixty_ninth = bible_glyph_chapter_1sa24();
+  let one_hundred_and_seventieth = bible_glyph_chapter_2ch20();
+  let one_hundred_and_seventy_first = bible_glyph_chapter_gen41();
   let chapters = [
     first,
     second,
@@ -620,6 +627,13 @@ export function bible_glyph_chapters() {
     one_hundred_and_sixty_second,
     one_hundred_and_sixty_third,
     one_hundred_and_sixty_fourth,
+    one_hundred_and_sixty_fifth,
+    one_hundred_and_sixty_sixth,
+    one_hundred_and_sixty_seventh,
+    one_hundred_and_sixty_eighth,
+    one_hundred_and_sixty_ninth,
+    one_hundred_and_seventieth,
+    one_hundred_and_seventy_first,
   ];
   return chapters;
 }
