@@ -390,11 +390,44 @@ def said_alone():
     in it would have no way to tell them apart, so which file a new word goes
     in is the question worth asking, and it has a plain answer - would you say
     it that way inside a sentence too?
+
+    A word's answer is either one spelling or a small table of them keyed by
+    voice, with "any" holding the one for the voices not named - see
+    said_alone_voice_spelling(), which is also where it is written down why a
+    voice ever needs its own.
     """
     return json.loads(SAID_ALONE_PATH.read_text(encoding="utf-8"))
 
 
-def said_alone_phonemes(word, phonemes):
+def said_alone_voice_spelling(said, voice):
+    """One entry from the said-alone file, for the voice about to speak it.
+
+    An entry is either a spelling, which every voice gets, or a small table of
+    spellings with "any" holding the one for the voices not named in it.  Both
+    shapes are allowed because most words need only the first, and a file a
+    person has to edit should not make them write a table to say one thing.
+
+    ★ A VOICE MAY NEED ITS OWN SPELLING, AND THAT IS A MEASUREMENT AND NOT A
+    THEORY.  The same four spellings of "the" were listened to in all four
+    voices and the answers did not agree: af_sarah wanted the stress kept on a
+    schwa, af_bella wanted no stress at all, and the two male voices were right
+    already.  Asked outright whether one spelling could serve all four, the
+    answer was that each voice needs its own.
+
+    ★ af_bella's SPELLING IS THE REDUCED ONE, WHICH LOOKS LIKE THE BUG THE
+    STRESS RULE BELOW EXISTS TO FIX.  It is not a mistake and it is not an
+    argument against the rule.  The rule is right about what a lone word
+    normally needs; her voice renders a stressed schwa as a different vowel
+    altogether - reported as "thy" - and for her the reduced form is the one
+    that is heard correctly.  A rule that is right in general still has to
+    lose to an ear on the case it is wrong about.
+    """
+    if isinstance(said, str):
+        return said
+    return said.get(voice, said.get("any"))
+
+
+def said_alone_phonemes(word, phonemes, voice):
     """The same word as a person says it on its own, not inside a sentence.
 
     ★ THE PHONEMISER ANSWERS WITH THE SENTENCE FORM, AND A BUTTON IS NOT A
@@ -445,7 +478,7 @@ def said_alone_phonemes(word, phonemes):
     """
     said = said_alone().get(word.strip().lower())
     if said is not None:
-        return said
+        return said_alone_voice_spelling(said, voice)
     if any(mark in phonemes for mark in STRESS_MARKS):
         return phonemes
     for i, sound in enumerate(phonemes):
@@ -486,7 +519,7 @@ def line_samples(g2p, kokoro, text, speed, citation, voice):
     for run in pieces_of(text):
         phonemes, _ = g2p(run)
         if citation:
-            phonemes = said_alone_phonemes(run, phonemes)
+            phonemes = said_alone_phonemes(run, phonemes, voice)
         samples, rate = kokoro.create(
             phonemes, voice=voice, speed=speed, is_phonemes=True
         )
