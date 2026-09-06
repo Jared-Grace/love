@@ -1,4 +1,4 @@
-import { app_code_comparison_symbols } from "./app_code_comparison_symbols.mjs";
+import { js_operators_comparison_symbols } from "./js_operators_comparison_symbols.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size_subtract } from "./list_size_subtract.mjs";
 import { less_than } from "./less_than.mjs";
@@ -15,7 +15,7 @@ export function js_tokens_comparisons_chained_is(tokens) {
   "THE JOINS NEAR EITHER END ARE NOT LOOKED AT, and the walk stops two words short because of it. A chain is five words wide - sign, value, join, value, sign - so a join with fewer than two words behind it, or fewer than two ahead of it, cannot be the middle of one. Walked to the last word but one, which is as far as a repeat alone needs, the reach for the sign past the join ran off the end of true || true && true and threw where a line was only being asked a question about itself.";
   arguments_assert(arguments, 1);
   let join = "&&";
-  let signs = app_code_comparison_symbols();
+  let signs = js_operators_comparison_symbols();
   let last = list_size_subtract(tokens, 2);
   let index = 2;
   while (less_than(index, last)) {
