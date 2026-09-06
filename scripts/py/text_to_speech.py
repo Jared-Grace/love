@@ -545,10 +545,11 @@ def job_spoken(job):
         speed = job.get("speed", SPEED)
         level = job.get("compression_level", COMPRESSION_LEVEL)
         citation = job.get("citation", False)
+        voice = job.get("voice", VOICE)
         silent = 0
         for i, line in enumerate(lines):
             samples, rate = line_samples(
-                engine["g2p"], engine["kokoro"], line, speed, citation
+                engine["g2p"], engine["kokoro"], line, speed, citation, voice
             )
             if samples is None:
                 samples = np.zeros(int(rate / 4), dtype=np.float32)
@@ -566,7 +567,7 @@ def jobs_of(data):
     if "jobs" in data:
         return list(data["jobs"])
     one = {"text": data["text"], "path_output": data["path_output"]}
-    for carried in ("speed", "compression_level", "citation"):
+    for carried in ("speed", "compression_level", "citation", "voice"):
         if carried in data:
             one[carried] = data[carried]
     return [one]
