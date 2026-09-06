@@ -32,6 +32,16 @@ export function bless_vehicle_svg(colour) {
   ("A tyre with road showing round it is the whole of what settled the earlier complaints. A");
   ("tyre touching the edge of a square is on the line between two squares, which is the one");
   ("place a reader cannot tell which of them the car is on.");
+  ("The bonnet and the boot SLOPE DOWN away from the cabin, which is why the top surface is");
+  ("drawn as a six-sided shape rather than as a band of even depth. Drawn even, the top of");
+  ("the car is one slab from nose to tail with a box sitting on it, and the eye reads a slab");
+  ("as a flat bed rather than as a bonnet. The depth of that band is how far a surface lies");
+  ("back from the watcher, so a band that thins towards each end IS a surface dropping away,");
+  ("said in the only terms this flattened view has.");
+  ("The bonnet is the longer slope and the boot the shorter one, because that is the shape of");
+  ("nearly every car a person has seen, and the two ends of a car being different is a second");
+  ("thing saying which way it faces - the lamps say it once, and a reader who is too far off");
+  ("to see a lamp still has the shape.");
   ("The ROOF is the same colour lightened and the lower flank the same colour darkened. Light");
   ("falls from above, so a surface facing the sky is the pale one - and doing it as a wash");
   ("over the colour rather than as a chosen palette means it works for a colour nobody has");
@@ -52,8 +62,9 @@ export function bless_vehicle_svg(colour) {
   ("size; anything finer is work that reaches nobody.");
   let svg = `<svg viewBox="0 0 40 40" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="20" cy="36.4" rx="16.5" ry="1" fill="rgba(0,0,0,0.3)" />
-  <rect x="3" y="21.8" width="34" height="6.4" rx="3.2" fill="${colour}" />
-  <rect x="3" y="21.8" width="34" height="6.4" rx="3.2" fill="rgba(255,255,255,0.26)" />
+  <polygon points="3.6,28.2 5.2,24.6 12.5,21.8 28.5,21.8 35.8,23.6 37,28.2" fill="${colour}" />
+  <polygon points="3.6,28.2 5.2,24.6 12.5,21.8 28.5,21.8 35.8,23.6 37,28.2" fill="rgba(255,255,255,0.26)" />
+  <polygon points="3.6,28.2 5.2,24.6 12.5,21.8 28.5,21.8 35.8,23.6 37,28.2" fill="none" stroke="rgba(0,0,0,0.28)" stroke-width="0.5" />
   <rect x="12.5" y="14.5" width="16" height="12" rx="2.6" fill="${colour}" />
   <rect x="12.5" y="14.5" width="16" height="4.4" rx="2.2" fill="rgba(255,255,255,0.44)" />
   <rect x="12.5" y="14.5" width="16" height="12" rx="2.6" fill="none" stroke="rgba(0,0,0,0.34)" stroke-width="0.6" />
