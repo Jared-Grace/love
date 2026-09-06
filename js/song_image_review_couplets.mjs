@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 25,
-      note: "The brown band is gone - the lower sheet is deep cobalt now, so the window is violet and blue all the way down and nothing in it is earth. No crown can be cobalt, so none of them blends into it. The white one at the foot is a wall crown with square points, which is a real make and not a tower. Twelve drawings; most lost crowns rather than colours this time.",
+      note: "The rook is gone - that crown is now a broad band with thin rays standing up all round it, so nothing in the window reads as a tower. The sizes are closer but still not equal. Asking for one size pulled hard the other way: several drawings answered it by making all seven the same crown, which undoes what you asked for last round. Fifteen drawings, then the drawing service ran out of credit.",
     },
   ];
   return couplets;
