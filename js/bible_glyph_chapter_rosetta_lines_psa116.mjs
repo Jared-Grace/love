@@ -1,0 +1,131 @@
+export function bible_glyph_chapter_rosetta_lines_psa116() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PSA116",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "אָ֭הַבְתִּי כִּֽי־ יִשְׁמַ֥ע׀ יְהוָ֑ה אֶת־ ק֝וֹלִ֗י תַּחֲנוּנָֽי׃",
+        english:
+          "I love the LORD for He has heard my voice my appeal for mercy",
+      },
+      {
+        verse_number: 2,
+        original: "כִּֽי־ הִטָּ֣ה אָזְנ֣וֹ לִ֑י וּבְיָמַ֥י אֶקְרָֽא׃",
+        english:
+          "Because He has inclined His ear to me I will call on Him as long as I live",
+      },
+      {
+        verse_number: 3,
+        original:
+          "אֲפָפ֤וּנִי׀ חֶבְלֵי־ מָ֗וֶת וּמְצָרֵ֣י שְׁא֣וֹל מְצָא֑וּנִי צָרָ֖ה וְיָג֣וֹן אֶמְצָֽא׃",
+        english:
+          "The ropes of death entangled me the anguish of Sheol overcame me I was confronted by trouble and sorrow",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וּבְשֵֽׁם־ יְהוָ֥ה אֶקְרָ֑א אָנָּ֥ה יְ֝הוָ֗ה מַלְּטָ֥ה נַפְשִֽׁי׃",
+        english: "Then I called on the name of the LORD O LORD deliver my soul",
+      },
+      {
+        verse_number: 5,
+        original: "חַנּ֣וּן יְהֹוָ֣ה וְצַדִּ֑יק וֵ֖אלֹהֵ֣ינוּ מְרַחֵֽם׃",
+        english:
+          "The LORD is gracious and righteous our God is full of compassion",
+      },
+      {
+        verse_number: 6,
+        original:
+          "שֹׁמֵ֣ר פְּתָאיִ֣ם יְהֹוָ֑ה דַּ֝לּוֹתִ֗י וְלִ֣י יְהוֹשִֽׁיעַ׃",
+        english:
+          "The LORD preserves the simplehearted I was helpless and He saved me",
+      },
+      {
+        verse_number: 7,
+        original:
+          "שׁוּבִ֣י נַ֭פְשִׁי לִמְנוּחָ֑יְכִי כִּֽי־ יְ֝הוָ֗ה גָּמַ֥ל עָלָֽיְכִי׃",
+        english:
+          "Return to your rest O my soul for the LORD has been good to you",
+      },
+      {
+        verse_number: 8,
+        original:
+          "כִּ֤י חִלַּ֥צְתָּ נַפְשִׁ֗י מִ֫מָּ֥וֶת אֶת־ עֵינִ֥י מִן־ דִּמְעָ֑ה אֶת־ רַגְלִ֥י מִדֶּֽחִי׃",
+        english:
+          "For You have delivered my soul from death my eyes from tears my feet from stumbling",
+      },
+      {
+        verse_number: 9,
+        original: "אֶ֭תְהַלֵּךְ לִפְנֵ֣י יְהוָ֑ה בְּ֝אַרְצ֗וֹת הַֽחַיִּֽים׃",
+        english: "I will walk before the LORD in the land of the living",
+      },
+      {
+        verse_number: 10,
+        original: "הֶ֭אֱמַנְתִּי כִּ֣י אֲדַבֵּ֑ר אֲ֝נִ֗י עָנִ֥יתִי מְאֹֽד׃",
+        english: "I believed therefore I said I am greatly afflicted",
+      },
+      {
+        verse_number: 11,
+        original: "אֲ֭נִי אָמַ֣רְתִּי בְחָפְזִ֑י כָּֽל־ הָאָדָ֥ם כֹּזֵֽב׃",
+        english: "In my alarm I said All men are liars",
+      },
+      {
+        verse_number: 12,
+        original: "מָֽה־ אָשִׁ֥יב לַיהוָ֑ה כָּֽל־ תַּגְמוּל֥וֹהִי עָלָֽי׃",
+        english: "How can I repay the LORD for all His goodness to me",
+      },
+      {
+        verse_number: 13,
+        original: "כּוֹס־ יְשׁוּע֥וֹת אֶשָּׂ֑א וּבְשֵׁ֖ם יְהוָ֣ה אֶקְרָֽא׃",
+        english:
+          "I will lift the cup of salvation and call on the name of the LORD",
+      },
+      {
+        verse_number: 14,
+        original:
+          "נְ֭דָרַי לַיהוָ֣ה אֲשַׁלֵּ֑ם נֶגְדָה־ נָּ֝֗א לְכָל־ עַמּֽוֹ׃",
+        english:
+          "I will fulfill my vows to the LORD in the presence of all His people",
+      },
+      {
+        verse_number: 15,
+        original: "יָ֭קָר בְּעֵינֵ֣י יְהוָ֑ה הַ֝מָּ֗וְתָה לַחֲסִידָֽיו׃",
+        english: "Precious in the sight of the LORD is the death of His saints",
+      },
+      {
+        verse_number: 16,
+        original:
+          "אָֽנָּ֣ה יְהוָה֮ כִּֽי־ אֲנִ֪י עַ֫בְדֶּ֥ךָ אֲ‍ֽנִי־ עַ֭בְדְּךָ בֶּן־ אֲמָתֶ֑ךָ פִּ֝תַּ֗חְתָּ לְמוֹסֵרָֽי׃",
+        english:
+          "Truly O LORD I am Your servant I am Your servant the son of Your maidservant You have broken my bonds",
+      },
+      {
+        verse_number: 17,
+        original:
+          "לְֽךָ־ אֶ֭זְבַּח זֶ֣בַח תּוֹדָ֑ה וּבְשֵׁ֖ם יְהוָ֣ה אֶקְרָֽא׃",
+        english:
+          "I will offer to You a sacrifice of thanksgiving and call on the name of the LORD",
+      },
+      {
+        verse_number: 18,
+        original:
+          "נְ֭דָרַי לַיהוָ֣ה אֲשַׁלֵּ֑ם נֶגְדָה־ נָּ֝֗א לְכָל־ עַמּֽוֹ׃",
+        english:
+          "I will fulfill my vows to the LORD in the presence of all His people",
+      },
+      {
+        verse_number: 19,
+        original:
+          "בְּחַצְר֤וֹת׀ בֵּ֤ית יְהוָ֗ה בְּֽת֘וֹכֵ֤כִי יְֽרוּשָׁלִָ֗ם הַֽלְלוּ־ יָֽהּ׃",
+        english:
+          "in the courts of the LORD’s house in your midst O Jerusalem Hallelujah",
+      },
+    ],
+  };
+  return chapter;
+}
