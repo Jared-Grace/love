@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_chapters_offenders_generic } from "./gloss_chapters_offenders_generic.mjs";
@@ -19,8 +19,7 @@ export async function gloss_repairs_word_write_generic(fn, word, explain) {
   let word_key = app_shared_gloss_bible_generate_generic_word();
   function entries_word_held(entries) {
     function entry_word_is(entry) {
-      let spelled = property_get(entry, word_key);
-      let same = equal(spelled, word);
+      let same = property_equals(entry, word_key, word);
       return same;
     }
     let held = list_filter(entries, entry_word_is);
