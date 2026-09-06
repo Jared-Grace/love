@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 25,
-      note: "The rook is gone - that crown is now a broad band with thin rays standing up all round it, so nothing in the window reads as a tower. The sizes are closer but still not equal. Asking for one size pulled hard the other way: several drawings answered it by making all seven the same crown, which undoes what you asked for last round. Fifteen drawings, then the drawing service ran out of credit.",
+      note: "The sizes are close now. Asking them to match made all seven the same crown, so instead the size is said as a third of the window's width and the makes stayed different. There is a stray yellow spike between the green crown and the bottom row that I could not draw out. Twenty-four drawings - the even ones kept losing either a crown or the colours.",
     },
   ];
   return couplets;
