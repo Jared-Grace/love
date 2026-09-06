@@ -41,6 +41,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 11",
     },
     {
+      chapter_code: "GEN17",
+      reference: "Genesis 17",
+    },
+    {
       chapter_code: "GEN18",
       reference: "Genesis 18",
     },
@@ -53,6 +57,10 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 24",
     },
     {
+      chapter_code: "GEN27",
+      reference: "Genesis 27",
+    },
+    {
       chapter_code: "GEN29",
       reference: "Genesis 29",
     },
@@ -63,6 +71,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "GEN39",
       reference: "Genesis 39",
+    },
+    {
+      chapter_code: "GEN41",
+      reference: "Genesis 41",
     },
     {
       chapter_code: "GEN50",
@@ -149,6 +161,10 @@ export function bible_glyph_chapter_references() {
       reference: "Deuteronomy 32",
     },
     {
+      chapter_code: "DEU34",
+      reference: "Deuteronomy 34",
+    },
+    {
       chapter_code: "JOS02",
       reference: "Joshua 2",
     },
@@ -193,6 +209,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 2",
     },
     {
+      chapter_code: "1SA24",
+      reference: "1 Samuel 24",
+    },
+    {
       chapter_code: "2SA06",
       reference: "2 Samuel 6",
     },
@@ -227,6 +247,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2CH07",
       reference: "2 Chronicles 7",
+    },
+    {
+      chapter_code: "2CH20",
+      reference: "2 Chronicles 20",
     },
     {
       chapter_code: "EZR03",
@@ -399,6 +423,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ISA02",
       reference: "Isaiah 2",
+    },
+    {
+      chapter_code: "ISA07",
+      reference: "Isaiah 7",
     },
     {
       chapter_code: "ISA11",
