@@ -1,0 +1,161 @@
+export function bible_glyph_chapter_rosetta_lines_psa034() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PSA034",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "לְדָוִ֗ד בְּשַׁנּוֹת֣וֹ אֶת־ טַ֭עְמוֹ לִפְנֵ֣י אֲבִימֶ֑לֶךְ וַֽ֝יְגָרֲשֵׁ֗הוּ וַיֵּלַֽךְ׃ אֲבָרֲכָ֣ה אֶת־ יְהוָ֣ה בְּכָל־ עֵ֑ת תָּ֝מִ֗יד תְּֽהִלָּת֥וֹ בְּפִֽי׃",
+        english:
+          "Of David when he pretended to be insane before Abimelech so that the king drove him away I will bless the LORD at all times His praise will always be on my lips",
+      },
+      {
+        verse_number: 2,
+        original:
+          "בַּ֭יהוָה תִּתְהַלֵּ֣ל נַפְשִׁ֑י יִשְׁמְע֖וּ עֲנָוִ֣ים וְיִשְׂמָֽחוּ׃",
+        english:
+          "My soul boasts in the LORD let the oppressed hear and rejoice",
+      },
+      {
+        verse_number: 3,
+        original:
+          "גַּדְּל֣וּ לַיהוָ֣ה אִתִּ֑י וּנְרוֹמְמָ֖ה שְׁמ֣וֹ יַחְדָּֽו׃",
+        english: "Magnify the LORD with me let us exalt His name together",
+      },
+      {
+        verse_number: 4,
+        original:
+          "דָּרַ֣שְׁתִּי אֶת־ יְהוָ֣ה וְעָנָ֑נִי וּמִכָּל־ מְ֝גוּרוֹתַ֗י הִצִּילָֽנִי׃",
+        english:
+          "I sought the LORD and He answered me He delivered me from all my fears",
+      },
+      {
+        verse_number: 5,
+        original:
+          "הִבִּ֣יטוּ אֵלָ֣יו וְנָהָ֑רוּ וּ֝פְנֵיהֶ֗ם אַל־ יֶחְפָּֽרוּ׃",
+        english:
+          "Those who look to Him are radiant with joy their faces shall never be ashamed",
+      },
+      {
+        verse_number: 6,
+        original:
+          "זֶ֤ה עָנִ֣י קָ֭רָא וַיהוָ֣ה שָׁמֵ֑עַ וּמִכָּל־ צָ֝רוֹתָ֗יו הוֹשִׁיעֽוֹ׃",
+        english:
+          "This poor man called out and the LORD heard him He saved him from all his troubles",
+      },
+      {
+        verse_number: 7,
+        original:
+          "חֹנֶ֤ה מַלְאַךְ־ יְהוָ֓ה סָ֘בִ֤יב לִֽירֵאָ֗יו וַֽיְחַלְּצֵֽם׃",
+        english:
+          "The angel of the LORD encamps around those who fear Him and he delivers them",
+      },
+      {
+        verse_number: 8,
+        original:
+          "טַעֲמ֣וּ וּ֭רְאוּ כִּי־ ט֣וֹב יְהוָ֑ה אַֽשְׁרֵ֥י הַ֝גֶּ֗בֶר יֶחֱסֶה־ בּֽוֹ׃",
+        english:
+          "Taste and see that the LORD is good blessed is the man who takes refuge in Him",
+      },
+      {
+        verse_number: 9,
+        original:
+          "יְר֣אוּ אֶת־ יְהוָ֣ה קְדֹשָׁ֑יו כִּי־ אֵ֥ין מַ֝חְס֗וֹר לִירֵאָֽיו׃",
+        english:
+          "Fear the LORD you His saints for those who fear Him lack nothing",
+      },
+      {
+        verse_number: 10,
+        original:
+          "כְּ֭פִירִים רָשׁ֣וּ וְרָעֵ֑בוּ וְדֹרְשֵׁ֥י יְ֝הוָ֗ה לֹא־ יַחְסְר֥וּ כָל־ טֽוֹב׃",
+        english:
+          "Young lions go lacking and hungry but those who seek the LORD lack no good thing",
+      },
+      {
+        verse_number: 11,
+        original:
+          "לְֽכוּ־ בָ֭נִים שִׁמְעוּ־ לִ֑י יִֽרְאַ֥ת יְ֝הוָ֗ה אֲלַמֶּדְכֶֽם׃",
+        english:
+          "Come children listen to me I will teach you the fear of the LORD",
+      },
+      {
+        verse_number: 12,
+        original:
+          "מִֽי־ הָ֭אִישׁ הֶחָפֵ֣ץ חַיִּ֑ים אֹהֵ֥ב יָ֝מִ֗ים לִרְא֥וֹת טֽוֹב׃",
+        english:
+          "Who is the man who delights in life who desires to see good days",
+      },
+      {
+        verse_number: 13,
+        original:
+          "נְצֹ֣ר לְשׁוֹנְךָ֣ מֵרָ֑ע וּ֝שְׂפָתֶ֗יךָ מִדַּבֵּ֥ר מִרְמָֽה׃",
+        english:
+          "Keep your tongue from evil and your lips from deceitful speech",
+      },
+      {
+        verse_number: 14,
+        original:
+          "ס֣וּר מֵ֭רָע וַעֲשֵׂה־ ט֑וֹב בַּקֵּ֖שׁ שָׁל֣וֹם וְרָדְפֵֽהוּ׃",
+        english: "Turn away from evil and do good seek peace and pursue it",
+      },
+      {
+        verse_number: 15,
+        original:
+          "עֵינֵ֣י יְ֭הוָה אֶל־ צַדִּיקִ֑ים וְ֝אָזְנָ֗יו אֶל־ שַׁוְעָתָֽם׃",
+        english:
+          "The eyes of the LORD are on the righteous and His ears are inclined to their cry",
+      },
+      {
+        verse_number: 16,
+        original:
+          "פְּנֵ֣י יְ֭הוָה בְּעֹ֣שֵׂי רָ֑ע לְהַכְרִ֖ית מֵאֶ֣רֶץ זִכְרָֽם׃",
+        english:
+          "But the face of the LORD is against those who do evil to wipe out all memory of them from the earth",
+      },
+      {
+        verse_number: 17,
+        original: "צָעֲק֣וּ וַיהוָ֣ה שָׁמֵ֑עַ וּמִכָּל־ צָ֝רוֹתָ֗ם הִצִּילָֽם׃",
+        english:
+          "The righteous cry out and the LORD hears He delivers them from all their troubles",
+      },
+      {
+        verse_number: 18,
+        original:
+          "קָר֣וֹב יְ֭הוָה לְנִשְׁבְּרֵי־ לֵ֑ב וְֽאֶת־ דַּכְּאֵי־ ר֥וּחַ יוֹשִֽׁיעַ׃",
+        english:
+          "The LORD is near to the brokenhearted He saves the contrite in spirit",
+      },
+      {
+        verse_number: 19,
+        original:
+          "רַ֭בּוֹת רָע֣וֹת צַדִּ֑יק וּ֝מִכֻּלָּ֗ם יַצִּילֶ֥נּוּ יְהוָֽה׃",
+        english:
+          "Many are the afflictions of the righteous but the LORD delivers him from them all",
+      },
+      {
+        verse_number: 20,
+        original:
+          "שֹׁמֵ֥ר כָּל־ עַצְמוֹתָ֑יו אַחַ֥ת מֵ֝הֵ֗נָּה לֹ֣א נִשְׁבָּֽרָה׃",
+        english: "He protects all his bones not one of them will be broken",
+      },
+      {
+        verse_number: 21,
+        original: "תְּמוֹתֵ֣ת רָשָׁ֣ע רָעָ֑ה וְשֹׂנְאֵ֖י צַדִּ֣יק יֶאְשָֽׁמוּ׃",
+        english:
+          "Evil will slay the wicked and the haters of the righteous will be condemned",
+      },
+      {
+        verse_number: 22,
+        original:
+          "פּוֹדֶ֣ה יְ֭הוָה נֶ֣פֶשׁ עֲבָדָ֑יו וְלֹ֥א יֶ֝אְשְׁמ֗וּ כָּֽל־ הַחֹסִ֥ים בּֽוֹ׃",
+        english:
+          "The LORD redeems His servants and none who take refuge in Him will be condemned",
+      },
+    ],
+  };
+  return chapter;
+}
