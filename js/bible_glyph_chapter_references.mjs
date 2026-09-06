@@ -229,6 +229,10 @@ export function bible_glyph_chapter_references() {
       reference: "Job 28",
     },
     {
+      chapter_code: "JOB31",
+      reference: "Job 31",
+    },
+    {
       chapter_code: "JOB42",
       reference: "Job 42",
     },
@@ -399,6 +403,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "JER26",
       reference: "Jeremiah 26",
+    },
+    {
+      chapter_code: "JER32",
+      reference: "Jeremiah 32",
     },
     {
       chapter_code: "EZK01",
