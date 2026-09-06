@@ -1,0 +1,198 @@
+export function bible_glyph_chapter_rosetta_lines_job28() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JOB28",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "כִּ֤י יֵ֣שׁ לַכֶּ֣סֶף מוֹצָ֑א וּ֝מָק֗וֹם לַזָּהָ֥ב יָזֹֽקּוּ׃",
+        english:
+          "Surely there is a mine for silver and a place where gold is refined",
+      },
+      {
+        verse_number: 2,
+        original: "בַּ֭רְזֶל מֵעָפָ֣ר יֻקָּ֑ח וְ֝אֶ֗בֶן יָצ֥וּק נְחוּשָֽׁה׃",
+        english: "Iron is taken from the earth and copper is smelted from ore",
+      },
+      {
+        verse_number: 3,
+        original:
+          "קֵ֤ץ׀ שָׂ֤ם לַחֹ֗שֶׁךְ וּֽלְכָל־ תַּ֭כְלִית ה֣וּא חוֹקֵ֑ר אֶ֖בֶן אֹ֣פֶל וְצַלְמָֽוֶת׃",
+        english:
+          "Man puts an end to the darkness he probes the farthest recesses for ore in deepest darkness",
+      },
+      {
+        verse_number: 4,
+        original:
+          "פָּ֤רַץ נַ֨חַל׀ מֵֽעִם־ גָּ֗ר הַֽנִּשְׁכָּחִ֥ים מִנִּי־ רָ֑גֶל דַּ֖לּוּ מֵאֱנ֣וֹשׁ נָֽעוּ׃",
+        english:
+          "Far from human habitation he cuts a shaft in places forgotten by the foot of man Far from men he dangles and sways",
+      },
+      {
+        verse_number: 5,
+        original:
+          "אֶ֗רֶץ מִמֶּ֥נָּה יֵֽצֵא־ לָ֑חֶם וְ֝תַחְתֶּ֗יהָ נֶהְפַּ֥ךְ כְּמוֹ־ אֵֽשׁ׃",
+        english:
+          "Food may come from the earth but from below it is transformed as by fire",
+      },
+      {
+        verse_number: 6,
+        original: "מְקוֹם־ סַפִּ֥יר אֲבָנֶ֑יהָ וְעַפְרֹ֖ת זָהָ֣ב לֽוֹ׃",
+        english:
+          "Its rocks are the source of sapphires containing flecks of gold",
+      },
+      {
+        verse_number: 7,
+        original:
+          "נָ֭תִיב לֹֽא־ יְדָ֣עוֹ עָ֑יִט וְלֹ֥א שְׁ֝זָפַ֗תּוּ עֵ֣ין אַיָּֽה׃",
+        english: "No bird of prey knows that path no falcon’s eye has seen it",
+      },
+      {
+        verse_number: 8,
+        original:
+          "לֹֽא־ הִדְרִיכֻ֥הוּ בְנֵי־ שָׁ֑חַץ לֹֽא־ עָדָ֖ה עָלָ֣יו שָֽׁחַל׃",
+        english:
+          "Proud beasts have never trodden it no lion has ever prowled over it",
+      },
+      {
+        verse_number: 9,
+        original: "בַּֽ֭חַלָּמִישׁ שָׁלַ֣ח יָד֑וֹ הָפַ֖ךְ מִשֹּׁ֣רֶשׁ הָרִֽים׃",
+        english:
+          "The miner strikes the flint he overturns mountains at their base",
+      },
+      {
+        verse_number: 10,
+        original:
+          "בַּ֭צּוּרוֹת יְאֹרִ֣ים בִּקֵּ֑עַ וְכָל־ יְ֝קָ֗ר רָאֲתָ֥ה עֵינֽוֹ׃",
+        english:
+          "He hews out channels in the rocks and his eyes spot every treasure",
+      },
+      {
+        verse_number: 11,
+        original: "מִ֭בְּכִי נְהָר֣וֹת חִבֵּ֑שׁ וְ֝תַעֲלֻמָ֗הּ יֹ֣צִא אֽוֹר׃פ",
+        english:
+          "He stops up the sources of the streams to bring what is hidden to light",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְֽ֭הַחָכְמָה מֵאַ֣יִן תִּמָּצֵ֑א וְאֵ֥י זֶ֝ה מְק֣וֹם בִּינָֽה׃",
+        english:
+          "But where can wisdom be found and where does understanding dwell",
+      },
+      {
+        verse_number: 13,
+        original:
+          "לֹא־ יָדַ֣ע אֱנ֣וֹשׁ עֶרְכָּ֑הּ וְלֹ֥א תִ֝מָּצֵ֗א בְּאֶ֣רֶץ הַֽחַיִּֽים׃",
+        english:
+          "No man can know its value nor is it found in the land of the living",
+      },
+      {
+        verse_number: 14,
+        original:
+          "תְּה֣וֹם אָ֭מַר לֹ֣א בִי־ הִ֑יא וְיָ֥ם אָ֝מַ֗ר אֵ֣ין עִמָּדִֽי׃",
+        english:
+          "The ocean depths say It is not in me while the sea declares It is not with me",
+      },
+      {
+        verse_number: 15,
+        original:
+          "לֹא־ יֻתַּ֣ן סְג֣וֹר תַּחְתֶּ֑יהָ וְלֹ֥א יִ֝שָּׁקֵ֗ל כֶּ֣סֶף מְחִירָֽהּ׃",
+        english:
+          "It cannot be bought with gold nor can its price be weighed out in silver",
+      },
+      {
+        verse_number: 16,
+        original:
+          "לֹֽא־ תְ֭סֻלֶּה בְּכֶ֣תֶם אוֹפִ֑יר בְּשֹׁ֖הַם יָקָ֣ר וְסַפִּֽיר׃",
+        english:
+          "It cannot be valued in the gold of Ophir in precious onyx or sapphire",
+      },
+      {
+        verse_number: 17,
+        original:
+          "לֹא־ יַעַרְכֶ֣נָּה זָ֭הָב וּזְכוֹכִ֑ית וּתְמ֖וּרָתָ֣הּ כְּלִי־ פָֽז׃",
+        english:
+          "Neither gold nor crystal can compare to it nor jewels of fine gold be exchanged for it",
+      },
+      {
+        verse_number: 18,
+        original:
+          "רָאמ֣וֹת וְ֭גָבִישׁ לֹ֣א יִזָּכֵ֑ר וּמֶ֥שֶׁךְ חָ֝כְמָ֗ה מִפְּנִינִֽים׃",
+        english:
+          "Coral and quartz are unworthy of mention the price of wisdom is beyond rubies",
+      },
+      {
+        verse_number: 19,
+        original:
+          "לֹֽא־ יַ֭עַרְכֶנָּה פִּטְדַת־ כּ֑וּשׁ בְּכֶ֥תֶם טָ֝ה֗וֹר לֹ֣א תְסֻלֶּֽה׃פ",
+        english:
+          "Topaz from Cush cannot compare to it nor can it be valued in pure gold",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְֽ֭הַחָכְמָה מֵאַ֣יִן תָּב֑וֹא וְאֵ֥י זֶ֝֗ה מְק֣וֹם בִּינָֽה׃",
+        english:
+          "From where then, does wisdom come and where does understanding dwell",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְֽ֭נֶעֶלְמָה מֵעֵינֵ֣י כָל־ חָ֑י וּמֵע֖וֹף הַשָּׁמַ֣יִם נִסְתָּֽרָה׃",
+        english:
+          "It is hidden from the eyes of every living thing and concealed from the birds of the air",
+      },
+      {
+        verse_number: 22,
+        original:
+          "אֲבַדּ֣וֹן וָ֭מָוֶת אָ֣מְר֑וּ בְּ֝אָזְנֵ֗ינוּ שָׁמַ֥עְנוּ שִׁמְעָֽהּ׃",
+        english: "Abaddon and Death say We have heard a rumor about it",
+      },
+      {
+        verse_number: 23,
+        original:
+          "אֱ֭לֹהִים הֵבִ֣ין דַּרְכָּ֑הּ וְ֝ה֗וּא יָדַ֥ע אֶת־ מְקוֹמָֽהּ׃",
+        english: "But God understands its way and He knows its place",
+      },
+      {
+        verse_number: 24,
+        original:
+          "כִּי־ ה֭וּא לִקְצוֹת־ הָאָ֣רֶץ יַבִּ֑יט תַּ֖חַת כָּל־ הַשָּׁמַ֣יִם יִרְאֶֽה׃",
+        english:
+          "For He looks to the ends of the earth and sees everything under the heavens",
+      },
+      {
+        verse_number: 25,
+        original:
+          "לַעֲשׂ֣וֹת לָר֣וּחַ מִשְׁקָ֑ל וּ֝מַ֗יִם תִּכֵּ֥ן בְּמִדָּֽה׃",
+        english:
+          "When God fixed the weight of the wind and measured out the waters",
+      },
+      {
+        verse_number: 26,
+        original: "בַּעֲשֹׂת֣וֹ לַמָּטָ֣ר חֹ֑ק וְ֝דֶ֗רֶךְ לַחֲזִ֥יז קֹלֽוֹת׃",
+        english:
+          "when He set a limit for the rain and a path for the thunderbolt",
+      },
+      {
+        verse_number: 27,
+        original: "אָ֣ז רָ֭אָהּ וַֽיְסַפְּרָ֑הּ הֱ֝כִינָ֗הּ וְגַם־ חֲקָרָֽהּ׃",
+        english:
+          "then He looked at wisdom and appraised it He established it and searched it out",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיֹּ֤אמֶר׀ לָֽאָדָ֗ם הֵ֤ן יִרְאַ֣ת אֲ֭דֹנָי הִ֣יא חָכְמָ֑ה וְס֖וּר מֵרָ֣ע בִּינָֽה׃ס",
+        english:
+          "And He said to man Behold the fear of the Lord that is wisdom and to turn away from evil is understanding",
+      },
+    ],
+  };
+  return chapter;
+}
