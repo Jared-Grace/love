@@ -1,8 +1,7 @@
+import { bless_hash_words_is } from "./bless_hash_words_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
 import { not } from "./not.mjs";
-import { html_hash_name_get } from "./html_hash_name_get.mjs";
-import { list_includes } from "./list_includes.mjs";
 export function app_g_bless_dev_opening_is(words) {
   arguments_assert(arguments, 1);
   ("Whether this visit was opened with one of these words after the hash mark, asked only");
@@ -20,7 +19,6 @@ export function app_g_bless_dev_opening_is(words) {
   if (not(shown)) {
     return false;
   }
-  let name = html_hash_name_get();
-  let asked = list_includes(words, name);
+  let asked = bless_hash_words_is(words);
   return asked;
 }
