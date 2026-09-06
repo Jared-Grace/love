@@ -18,14 +18,6 @@ export function song_image_review_couplets() {
       n: 25,
       note: "27 has eight crowns rather than seven and is drawn all in gold, which is barred everywhere else in the hymn, so I went for its richness and not its gold. The crowns are arched royal crowns now instead of plain spiked bands. They are still all of one make though, which is the part of your ask that has not landed.",
     },
-    {
-      n: 26,
-      note: "This is the closest of six new drawings to 71 - the beams and the gaps both start narrow under the cloud and open out evenly to both sides. The wording is unchanged, so the difference is the drawing and not the words. It has five beams where the wording asks for six, and the sky is still deep blue rather than light.",
-    },
-    {
-      n: 36,
-      note: "The two bands behind the vine were deep cobalt and violet, which is what made it all dark, so they are clear sky blue and a paler sky blue now. The green leaves, brown vine and crimson grapes all stand off that. Only the bands changed - the vine itself is worded exactly as it was in 37.",
-    },
   ];
   return couplets;
 }
