@@ -8,7 +8,7 @@ export async function fal_draw_negative(
 ) {
   "$plain model";
   "$plain prompt";
-  "$plain negative";
+  "$plain negative_prompt";
   "$plain width";
   "$plain height";
   "Draws one picture at fal from a prompt and a second set of words the drawing is steered away from, and answers where the finished picture can be fetched.";
@@ -17,7 +17,7 @@ export async function fal_draw_negative(
   "Only the ask is built here. Spelling the address, sending it and digging the picture out of the answer are the same on all three roads into fal and are done in one place.";
   let body = {
     prompt,
-    negative_prompt: negative_prompt,
+    negative_prompt,
     image_size: {
       width,
       height,
