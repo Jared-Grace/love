@@ -1,13 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { folder_current_absolute } from "./folder_current_absolute.mjs";
-import { git_folder_run } from "./git_folder_run.mjs";
-import { text_split_newline } from "./text_split_newline.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { text_empty_not_is } from "./text_empty_not_is.mjs";
+import { git_here_run_lines } from "./git_here_run_lines.mjs";
 import { set_new } from "./set_new.mjs";
-import { list_last } from "./list_last.mjs";
 import { text_split } from "./text_split.mjs";
+import { list_last } from "./list_last.mjs";
 import { set_add } from "./set_add.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -21,13 +16,10 @@ export async function git_commit_imports_missing(commit) {
   "It cost nine deployments to find one by hand. Every one of them died the same way, half an hour in, reporting the app as broken - and the app was fine. Seven chapters of the picture Bible were named by a lookup that was saved before they were written.";
   "The reading is in two passes because the exact way is far too slow and the fast way is not exact. Fifteen thousand files cannot each be fetched from the history and parsed. So a plain text scan names every file that so much as spells a relative path, which is quick and catches everything real along with a handful of impostors - code quoted inside a test's fixtures reads identically to code. Only the few files that named something absent are then fetched and parsed properly, and the impostors fall away there. Exact, and it costs a second.";
   "It is basenames that are compared rather than whole paths, because every one of these imports is a sibling and so says the same thing twice. A day when that stops being true is a day this wants rewriting rather than patching.";
+  "Both passes ask git for a list and get text back. Splitting that text into lines is asked for by name rather than written out at each pass, so the two passes cannot come to disagree about what an empty line means.";
   arguments_assert(arguments, 1);
-  let here = folder_current_absolute();
   let asked_present = ["ls-tree", "-r", "--name-only", commit, "js/"];
-  let printed_present = await git_folder_run(here, asked_present);
-  let s = text_trim(printed_present);
-  let present_lines = text_split_newline(s);
-  let present_paths = list_filter(present_lines, text_empty_not_is);
+  let present_paths = await git_here_run_lines(asked_present);
   let present = set_new();
   for (let present_path of present_paths) {
     let list = text_split(present_path, "/");
@@ -36,10 +28,7 @@ export async function git_commit_imports_missing(commit) {
   }
   let pattern = "\\./[A-Za-z0-9_]+\\.mjs";
   let asked_named = ["grep", "-o", "-E", pattern, commit, "--", "js/"];
-  let printed_named = await git_folder_run(here, asked_named);
-  let s2 = text_trim(printed_named);
-  let named_lines = text_split_newline(s2);
-  let named_rows = list_filter(named_lines, text_empty_not_is);
+  let named_rows = await git_here_run_lines(asked_named);
   let suspects = set_new();
   for (let named_row of named_rows) {
     let parts = text_split_colon(named_row);
