@@ -19,7 +19,7 @@ export async function lyric_video_document_write(
   "WHERE THE SUBTITLE FILE GOES IS ASKED FOR RATHER THAN INVENTED FROM THE VIDEO'S NAME. The tool reads that path inside an instruction whose parts are divided by colons, so a name carrying one is read as two instructions and the render fails saying something about an unknown filter. A name that is safe is the caller's to choose, and choosing it for them is how a path with a colon in it gets built without anybody deciding to.";
   "THE PICTURES COME OUT OF THE SAME DOCUMENT AS THE LINES AND THE SIZES. What is shown behind a psalm is an authored decision of exactly the kind this document already holds - which line is sung when, how large the words are, what the footer says - so it belongs beside them and not in a second file that could go missing on its own or disagree with the first.";
   let document = await file_read_json(path_document);
-  let faults = await lyric_video_document_faults_write(document, path_output);
+  await lyric_video_document_faults_write(document, path_output);
   let subtitles = lyric_video_subtitles_text(document);
   await file_overwrite(path_subtitles, subtitles);
   let pictures = lyric_video_document_pictures(document);
