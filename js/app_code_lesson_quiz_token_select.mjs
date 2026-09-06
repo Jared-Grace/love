@@ -13,7 +13,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { each } from "./each.mjs";
 import { app_shared_button_screen_green_style_assign } from "./app_shared_button_screen_green_style_assign.mjs";
 import { list_add } from "./list_add.mjs";
-import { app_code_lesson_quiz_token_select_marks_set } from "./app_code_lesson_quiz_token_select_marks_set.mjs";
+import { app_code_lesson_quiz_token_select_row_set } from "./app_code_lesson_quiz_token_select_row_set.mjs";
 import { app_code_lesson_quiz_token_select_code_show } from "./app_code_lesson_quiz_token_select_code_show.mjs";
 import { app_code_lesson_quiz_token_select_done_is } from "./app_code_lesson_quiz_token_select_done_is.mjs";
 import { sleep_seconds } from "./sleep_seconds.mjs";
@@ -69,7 +69,7 @@ export function app_code_lesson_quiz_token_select(
       app_shared_button_screen_green_style_assign(b);
       list_add(chosen, token);
       variations = variations_new;
-      app_code_lesson_quiz_token_select_marks_set(
+      app_code_lesson_quiz_token_select_row_set(
         tokens_unique,
         chosen,
         variations,
@@ -105,7 +105,7 @@ export function app_code_lesson_quiz_token_select(
     return b;
   }
   buttons = list_map(tokens_unique, lambda);
-  app_code_lesson_quiz_token_select_marks_set(
+  app_code_lesson_quiz_token_select_row_set(
     tokens_unique,
     chosen,
     variations,
