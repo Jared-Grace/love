@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_dealing_value_alike_is } from "./app_code_quiz_dealing_value_alike_is.mjs";
 import { not } from "./not.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
-import { js_tokens_join_repeated_is } from "./js_tokens_join_repeated_is.mjs";
+import { js_tokens_comparisons_chained_is } from "./js_tokens_comparisons_chained_is.mjs";
 import { implies } from "./implies.mjs";
 import { app_code_quiz_tokens_values_mirrored_is } from "./app_code_quiz_tokens_values_mirrored_is.mjs";
 export function app_code_quiz_dealing_alike_is(code, candidate) {
@@ -18,8 +18,8 @@ export function app_code_quiz_dealing_alike_is(code, candidate) {
   }
   let asked = app_code_quiz_tokens(code);
   let dealt = app_code_quiz_tokens(candidate);
-  let join_asked = js_tokens_join_repeated_is(asked);
-  let join_dealt = js_tokens_join_repeated_is(dealt);
+  let join_asked = js_tokens_comparisons_chained_is(asked);
+  let join_dealt = js_tokens_comparisons_chained_is(dealt);
   let join_alike = implies(join_asked, join_dealt);
   if (not(join_alike)) {
     return false;

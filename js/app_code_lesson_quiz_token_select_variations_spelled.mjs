@@ -4,7 +4,7 @@ import { list_tally_covers_is } from "./list_tally_covers_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { js_tokens_parenthesis_group_sizes } from "./js_tokens_parenthesis_group_sizes.mjs";
 import { lists_equal_pair } from "./lists_equal_pair.mjs";
-import { js_tokens_join_repeated_is } from "./js_tokens_join_repeated_is.mjs";
+import { js_tokens_comparisons_chained_is } from "./js_tokens_comparisons_chained_is.mjs";
 import { implied_by } from "./implied_by.mjs";
 import { list_last_is } from "./list_last_is.mjs";
 import { list_remove_last } from "./list_remove_last.mjs";
@@ -43,9 +43,9 @@ export function app_code_lesson_quiz_token_select_variations_spelled(
   kept = list_filter(kept, brackets_alike_is);
   ("A line that writes the same word either side of its join must go on writing it. Two comparisons that share an end are saying something about the thing they share, and the swap that reads both ways carries that shared word to the outside - so a middle written twice comes back as two different numbers meeting at the join. The same line by value, and no longer the line the lesson is about. This is the bracket rule standing in another place: same value, different answer to the question actually asked.");
   ("Asked of the question rather than fixed, so it binds only a line that had the repeat to begin with. Where the two comparisons share nothing, the swap is a real second right answer and is left exactly as it was - which is what the lesson before this one spends its whole length teaching.");
-  let asked_join_repeated = js_tokens_join_repeated_is(asked);
+  let asked_join_repeated = js_tokens_comparisons_chained_is(asked);
   function join_repeat_alike_is(variation) {
-    let repeated = js_tokens_join_repeated_is(variation);
+    let repeated = js_tokens_comparisons_chained_is(variation);
     let alike = implied_by(repeated, asked_join_repeated);
     return alike;
   }
