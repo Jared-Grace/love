@@ -31,7 +31,7 @@ export async function qa_gate_timings_coverage() {
   }
   let never_walked = list_filter(missing, machine_is);
   let known = await qa_gate_timings_read();
-  let naming_no_gate = qa_gate_timings_naming_no_gate(known);
+  let naming_no_gate = await qa_gate_timings_naming_no_gate(known);
   let coverage = {
     gates: all,
     timed,
