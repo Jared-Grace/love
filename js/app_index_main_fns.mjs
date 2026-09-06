@@ -5,7 +5,8 @@ export function app_index_main_fns() {
   "So an app being absent here says nothing at all about whether it may go. Counting references does not help either and looks as though it does: an app named here picks up references BECAUSE it is named here, so few references and not on the front page are one fact wearing two faces, not two findings agreeing. There is no reading in the repo that separates an app somebody still uses from one nobody does - that answer is held by the person who uses them, and asking is cheaper than any measurement of it.";
   "The praying game came off this list on 2026-08-26, and it came off for a reason that says nothing about the game. Its page in the folder that gets sent had no bytes in it, so the card here was offering a first-time visitor a link that opened onto a blank screen, and had been for at least six days. A built copy of the game exists and works; only the sent one is empty. Put the line back the moment a real page is standing at that address.";
   "The songs went on the list on 2026-09-04, and the check the praying game failed is the one they were held to first: the page in the folder that gets sent has bytes in it and the live address answers with the same bytes. A card here is a promise to somebody who has never been to the site before, and the only way to keep it is to follow the link before writing it down.";
-  "A card says how far a language has got by naming books, never by listing chapters, and it says so far rather than only. Both language cards below once listed chapters. One said John 1 and 1 Peter 4 on the day fifty-three chapters were finished, the other said Song of Solomon, James and John 1 on the day three hundred and sixty-nine were. A chapter list is written once and then rots every week somebody authors a passage, and it rots downwards, so the sentence meant to be honest about a small app is what turns a visitor away from the fullest thing on the site.";
+  "★ A CARD SAYS WHAT AN APP IS FOR AND NEVER HOW MUCH OF IT IS DONE, because how much is done is a number that changes without this file being told. Both language cards below once carried a chapter list. One said John 1 and 1 Peter 4 on a day the store held fifty-six chapters, the other said Song of Solomon, James and John 1 on a day it held four hundred and forty-eight - each written once, right for about a week, and thereafter understating the fullest thing on the site to exactly the visitor who has never seen it. The counts are now fetched from the same store a reader fetches chapters from and joined onto these cards elsewhere, so a chapter going up needs nothing edited here.";
+  "The Greek card says Greek and Hebrew because the store says so. Fifty-four of its chapters are Greek and two are Genesis, and the card had claimed Greek alone since before either of those existed. A sentence naming a language while a count beside it counts another one is worse than either half was on its own, so the moment the count became real the language had to become real too.";
   let r = [
     {
       app_fn: fn_name("app_bible"),
@@ -37,11 +38,11 @@ export function app_index_main_fns() {
     },
     {
       app_fn: fn_name("app_original_bible"),
-      text: "Allows learning the ancient Greek of the Bible by reading the Bible in ancient Greek (with word definitions and explanations) - parts of the New Testament so far",
+      text: "Allows learning the original languages of the Bible by reading it in ancient Greek and Hebrew (with word definitions and explanations)",
     },
     {
       app_fn: fn_name("app_ceb_bible"),
-      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word definitions and explanations) - parts of the New Testament, Psalms, Proverbs and Song of Solomon so far",
+      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word definitions and explanations)",
     },
     {
       app_fn: fn_name("app_supper"),
