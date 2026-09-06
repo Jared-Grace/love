@@ -1,6 +1,5 @@
-import { lyric_video_outline_width } from "./lyric_video_outline_width.mjs";
-import { lyric_video_shadow_width } from "./lyric_video_shadow_width.mjs";
 import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
+import { lyric_video_subtitles_styles } from "./lyric_video_subtitles_styles.mjs";
 import { lyric_video_screen_characters_max } from "./lyric_video_screen_characters_max.mjs";
 import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
@@ -27,65 +26,12 @@ export function lyric_video_subtitles_text(document) {
   "★ A CARD TOO LONG FOR THE FRAME IS SET SMALLER RATHER THAN CUT IN TWO, AND THE ALTERNATIVE IS WHY. Cutting it needs a moment to cut at, and for spoken words there is none to be had: the voice model hands back sound with no times inside it, so the join could only be placed by reasoning from how long the words are and hoping the reader crossed it there. The size, by contrast, is read off the words themselves and nothing is supposed about the reading. A song never meets this, because its lines are short and were placed by ear; a chapter meets it wherever one sentence runs a long way, and the size is written into the card itself so only that card is affected and the rest of the chapter stands as it always did.";
   "The borders grow with the frame along with everything else, because the head already says so once for the whole file.";
   "★ THE MARGINS, THE POINT THE CARD IS CENTRED ON AND HOW MUCH ROOM A CARD HAS ARE ALL ASKED FOR IN ONE PLACE RATHER THAN WORKED OUT HERE. Whoever cuts a chapter into cards has to know the same three things before this ever runs, and while this held its own copy of them the two answers drifted: cards were cut to a width that was never measured and drawn at one that was, and the first anybody knew of it was a card clipped off the top of the frame and standing over the passage line at the foot.";
+  "The three kinds of lettering are described somewhere else and dropped in here whole, because the line that names what a style's fields mean has to stand with them and this file only has to know where the section goes.";
   let width = document.width;
   let height = document.height;
   let font_size = document.font_size;
-  let passage_size = document.passage_font_size;
-  let credit_size = document.credit_font_size;
-  let lyric_outline = lyric_video_outline_width(font_size);
-  let passage_outline = lyric_video_outline_width(passage_size);
-  let credit_outline = lyric_video_outline_width(credit_size);
-  let lyric_shadow = lyric_video_shadow_width(font_size);
-  let passage_shadow = lyric_video_shadow_width(passage_size);
-  let credit_shadow = lyric_video_shadow_width(credit_size);
-  let shade = "&H64000000";
   let room = lyric_video_screen_room(document);
-  let credit_margin = room.credit_margin;
-  let passage_margin = room.passage_margin;
-  let side_margin = room.side_margin;
-  let sides = side_margin + "," + side_margin;
-  let styles_format =
-    "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding";
-  let lyric_style =
-    "Style: Lyric,Noto Sans," +
-    font_size +
-    ",&H00FFFFFF,&H00FFFFFF,&H00000000," +
-    shade +
-    ",-1,0,0,0,100,100,0,0,1," +
-    lyric_outline +
-    "," +
-    lyric_shadow +
-    ",5," +
-    sides +
-    ",0,1";
-  let passage_style =
-    "Style: Passage,Noto Sans," +
-    passage_size +
-    ",&H00B4B4B4,&H00B4B4B4,&H00000000," +
-    shade +
-    ",0,0,0,0,100,100,2,0,1," +
-    passage_outline +
-    "," +
-    passage_shadow +
-    ",2," +
-    sides +
-    "," +
-    passage_margin +
-    ",1";
-  let credit_style =
-    "Style: Credit,Noto Sans," +
-    credit_size +
-    ",&H00828282,&H00828282,&H00000000," +
-    shade +
-    ",0,0,0,0,100,100,2,0,1," +
-    credit_outline +
-    "," +
-    credit_shadow +
-    ",2," +
-    sides +
-    "," +
-    credit_margin +
-    ",1";
+  let styles = lyric_video_subtitles_styles(document, room);
   let middle_x = room.middle_x;
   let middle_y = room.middle_y;
   let lyric_place = "\\pos(" + middle_x + "," + middle_y + ")\\fad(260,320)";
@@ -111,10 +57,7 @@ export function lyric_video_subtitles_text(document) {
     "ScaledBorderAndShadow: yes",
     "",
     "[V4+ Styles]",
-    styles_format,
-    lyric_style,
-    passage_style,
-    credit_style,
+    ...styles,
     "",
     "[Events]",
     "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
