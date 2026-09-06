@@ -1,6 +1,6 @@
+import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { bible_interlinear_parsing_words_ranked } from "./bible_interlinear_parsing_words_ranked.mjs";
 import { gloss_parsing_phrases } from "./gloss_parsing_phrases.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
@@ -15,7 +15,7 @@ export async function gloss_parsing_words_unphrased(testament_name) {
   let unphrased = [];
   for (let row of ranked) {
     let word = property_get(row, "value");
-    let found = list_find_property(phrases, "word", word);
+    let found = list_find_property_or_null(phrases, "word", word);
     if (not(found)) {
       list_add(unphrased, row);
     }
