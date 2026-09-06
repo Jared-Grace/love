@@ -526,6 +526,7 @@ export function bible_glyph_chapters() {
   let one_hundred_and_ninety_third = bible_glyph_chapter_1ki12();
   let one_hundred_and_ninety_fourth = bible_glyph_chapter_2ki22();
   let one_hundred_and_ninety_fifth = bible_glyph_chapter_1sa15();
+  let one_hundred_and_ninety_sixth = bible_glyph_chapter_jos07();
   let chapters = [
     first,
     second,
