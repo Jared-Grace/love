@@ -2,7 +2,7 @@ import { fal_draw_body } from "./fal_draw_body.mjs";
 export async function fal_draw_negative(
   model,
   prompt,
-  negative,
+  negative_prompt,
   width,
   height,
 ) {
@@ -17,7 +17,7 @@ export async function fal_draw_negative(
   "Only the ask is built here. Spelling the address, sending it and digging the picture out of the answer are the same on all three roads into fal and are done in one place.";
   let body = {
     prompt,
-    negative_prompt: negative,
+    negative_prompt: negative_prompt,
     image_size: {
       width,
       height,
