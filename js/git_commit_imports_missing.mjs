@@ -1,8 +1,7 @@
+import { text_split_last } from "./text_split_last.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { git_here_run_lines } from "./git_here_run_lines.mjs";
 import { set_new } from "./set_new.mjs";
-import { text_split } from "./text_split.mjs";
-import { list_last } from "./list_last.mjs";
 import { set_add } from "./set_add.mjs";
 import { text_split_colon } from "./text_split_colon.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -22,8 +21,7 @@ export async function git_commit_imports_missing(commit) {
   let present_paths = await git_here_run_lines(asked_present);
   let present = set_new();
   for (let present_path of present_paths) {
-    let list = text_split(present_path, "/");
-    let present_name = list_last(list);
+    let present_name = text_split_last(present_path, "/");
     set_add(present, present_name);
   }
   let pattern = "\\./[A-Za-z0-9_]+\\.mjs";
@@ -33,8 +31,7 @@ export async function git_commit_imports_missing(commit) {
   for (let named_row of named_rows) {
     let parts = text_split_colon(named_row);
     let holder = parts[1];
-    let list2 = text_split(parts[2], "/");
-    let named = list_last(list2);
+    let named = text_split_last(parts[2], "/");
     let held = set_includes(present, named);
     if (not(held)) {
       set_add(suspects, holder);
@@ -44,8 +41,7 @@ export async function git_commit_imports_missing(commit) {
   for (let suspect of suspects) {
     let paths = await git_commit_file_imports_relative(commit, suspect);
     for (let path of paths) {
-      let list3 = text_split(path, "/");
-      let named = list_last(list3);
+      let named = text_split_last(path, "/");
       let held = set_includes(present, named);
       if (not(held)) {
         let one = {
