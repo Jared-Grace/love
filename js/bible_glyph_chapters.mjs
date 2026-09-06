@@ -1,3 +1,5 @@
+import { bible_glyph_chapter_job31 } from "./bible_glyph_chapter_job31.mjs";
+import { bible_glyph_chapter_jer32 } from "./bible_glyph_chapter_jer32.mjs";
 import { bible_glyph_chapter_pro16 } from "./bible_glyph_chapter_pro16.mjs";
 import { bible_glyph_chapter_gen29 } from "./bible_glyph_chapter_gen29.mjs";
 import { bible_glyph_chapter_exo02 } from "./bible_glyph_chapter_exo02.mjs";
