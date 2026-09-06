@@ -708,7 +708,7 @@ export function permission_grant_names() {
   let spelled701 = fn_name("functions_operators_raw_gate_run");
   let spelled702 = fn_name("functions_operators_raw_names");
   let spelled703 = fn_name("function_locals_unread");
-  let spelled704 = fn_name("qa_promoted_unjudged");
+  let spelled704 = fn_name("qa_promoted_unaccounted");
   let spelled705 = fn_name("functions_gate_run_unwired_wire");
   let spelled706 = fn_name("functions_locals_unread");
   let spelled707 = fn_name("qa_commit_named");
