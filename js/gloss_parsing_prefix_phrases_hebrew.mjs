@@ -5,11 +5,11 @@ export function gloss_parsing_prefix_phrases_hebrew() {
   let phrases = [
     {
       word: "Conjunctive waw",
-      phrase: "and",
+      phrase: "'and'",
     },
     {
       word: "Article",
-      phrase: "the",
+      phrase: "'the'",
     },
     {
       word: "Preposition",
@@ -17,19 +17,19 @@ export function gloss_parsing_prefix_phrases_hebrew() {
     },
     {
       word: "Preposition-b",
-      phrase: "in or at or with",
+      phrase: "'in' or 'at' or 'with'",
     },
     {
       word: "Preposition-k",
-      phrase: "like or as",
+      phrase: "'like' or 'as'",
     },
     {
       word: "Preposition-l",
-      phrase: "to or for",
+      phrase: "'to' or 'for'",
     },
     {
       word: "Preposition-m",
-      phrase: "from or out of",
+      phrase: "'from' or 'out of'",
     },
     {
       word: "Pronoun",
