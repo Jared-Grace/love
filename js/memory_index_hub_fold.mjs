@@ -41,7 +41,8 @@ export async function memory_index_hub_fold(hub_stem, note_stems_comma) {
     let stem_name = list_join_empty([stem, ".md"]);
     let stem_text = await memory_note_text(stem_name);
     let stem_children = memory_hub_children(stem_text);
-    assert_json(list_empty_is(stem_children), {
+    let b = list_empty_is(stem_children);
+    assert_json(b, {
       fault:
         "this note declares children of its own, and folding it would put them two hops from the index",
       stem,
@@ -56,16 +57,20 @@ export async function memory_index_hub_fold(hub_stem, note_stems_comma) {
         list_add(dropped, line);
       }
     }
-    assert_json(equal(list_size(hooks), 1), {
+    let left = list_size(hooks);
+    let b2 = equal(left, 1);
+    assert_json(b2, {
       fault:
         "the index does not name this note on exactly one entry that may be moved",
       stem,
       hooks,
     });
-    let bullet = list_join_empty(["- [[", stem, "]] — ", list_first(hooks)]);
+    let first = list_first(hooks);
+    let bullet = list_join_empty(["- [[", stem, "]] — ", first]);
     list_add(bullets, bullet);
   }
-  let written = memory_hub_children_add(hub_text, list_join_newline(bullets));
+  let lines2 = list_join_newline(bullets);
+  let written = memory_hub_children_add(hub_text, lines2);
   let folder = memory_folder();
   let hub_path = path_join([folder, hub_name]);
   await file_overwrite(hub_path, written);
@@ -79,7 +84,8 @@ export async function memory_index_hub_fold(hub_stem, note_stems_comma) {
   let index = await memory_index_lines_write_removed(lines, kept);
   await memory_index_sections_braced();
   let orphans = await memory_orphans();
-  assert_json(list_empty_is(orphans), {
+  let b3 = list_empty_is(orphans);
+  assert_json(b3, {
     fault: "a note was left unreachable by the fold",
     orphans,
   });
