@@ -940,7 +940,10 @@ export function song_image_drawn_attempts_known() {
   209,
   210,
   211,
-  212
+  212,
+  213,
+  214,
+  215
  ],
  "25": [
   1,
