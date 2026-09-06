@@ -1,10 +1,10 @@
+import { property_not } from "./property_not.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
 import { gloss_explain_root_judged } from "./gloss_explain_root_judged.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
@@ -34,8 +34,7 @@ export async function app_ceb_bible_gloss_words_edged_roots() {
       if (never_asked) {
         return;
       }
-      let analysed = property_get(held, "analysed");
-      let refused = not(analysed);
+      let refused = property_not(held, "analysed");
       if (refused) {
         return;
       }
