@@ -137,6 +137,10 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 11",
     },
     {
+      chapter_code: "NUM14",
+      reference: "Numbers 14",
+    },
+    {
       chapter_code: "NUM20",
       reference: "Numbers 20",
     },
@@ -147,6 +151,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "DEU08",
       reference: "Deuteronomy 8",
+    },
+    {
+      chapter_code: "DEU18",
+      reference: "Deuteronomy 18",
     },
     {
       chapter_code: "DEU26",
@@ -209,8 +217,16 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 2",
     },
     {
+      chapter_code: "1SA08",
+      reference: "1 Samuel 8",
+    },
+    {
       chapter_code: "1SA24",
       reference: "1 Samuel 24",
+    },
+    {
+      chapter_code: "2SA05",
+      reference: "2 Samuel 5",
     },
     {
       chapter_code: "2SA06",
@@ -257,12 +273,20 @@ export function bible_glyph_chapter_references() {
       reference: "Ezra 3",
     },
     {
+      chapter_code: "NEH01",
+      reference: "Nehemiah 1",
+    },
+    {
       chapter_code: "NEH09",
       reference: "Nehemiah 9",
     },
     {
       chapter_code: "EST01",
       reference: "Esther 1",
+    },
+    {
+      chapter_code: "JOB03",
+      reference: "Job 3",
     },
     {
       chapter_code: "JOB23",
@@ -369,6 +393,10 @@ export function bible_glyph_chapter_references() {
       reference: "Psalm 118",
     },
     {
+      chapter_code: "PSA130",
+      reference: "Psalm 130",
+    },
+    {
       chapter_code: "PSA134",
       reference: "Psalm 134",
     },
@@ -391,6 +419,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "PRO01",
       reference: "Proverbs 1",
+    },
+    {
+      chapter_code: "PRO02",
+      reference: "Proverbs 2",
     },
     {
       chapter_code: "PRO04",
