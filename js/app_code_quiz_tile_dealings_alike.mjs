@@ -7,7 +7,7 @@ import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function app_code_quiz_value_dealings_alike(code) {
+export function app_code_quiz_tile_dealings_alike(code) {
   "$plain code";
   arguments_assert(arguments, 1);
   ("Every line the unscramble's own tiles can be made to spell by handing each tile round among the places of its own kind, kept only where the line still comes out to what the learner was shown and still says it the same way - and each written line once, however many dealings happened to reach it.");

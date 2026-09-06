@@ -9,7 +9,7 @@ import { each } from "./each.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_quiz_value_dealings } from "./app_code_quiz_value_dealings.mjs";
+import { app_code_quiz_tile_dealings } from "./app_code_quiz_tile_dealings.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
@@ -56,7 +56,7 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   ("The value dealings come in AFTER that reading and not before it, because the reading is the very thing they are exempt from. They are the arrangements a learner cannot tell apart from the one the question wanted - the question's own shape with its own values handed round - and they carry their own judgment with them, made against the value the learner was shown rather than against the sentence they were not.");
   ("They still go through the spelling checks below with everything else. A dealing keeps every tile and every bracket by construction, so it has nothing to fear from those; passing it through anyway is what keeps one place deciding how an answer must be spelled.");
-  let dealings = app_code_quiz_value_dealings(code);
+  let dealings = app_code_quiz_tile_dealings(code);
   let offered = list_concat(said, dealings);
   let tokenised = list_map(offered, app_code_quiz_tokens);
   let variations = app_code_lesson_quiz_token_select_variations_spelled(
