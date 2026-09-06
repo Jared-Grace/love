@@ -1,0 +1,228 @@
+export function bible_glyph_chapter_rosetta_lines_jdg16() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JDG16",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיֵּ֥לֶךְ שִׁמְשׁ֖וֹן עַזָּ֑תָה וַיַּרְא־ שָׁם֙ אִשָּׁ֣ה זוֹנָ֔ה וַיָּבֹ֖א אֵלֶֽיהָ׃",
+        english:
+          "One day Samson went to Gaza where he saw a prostitute and went in to spend the night with her",
+      },
+      {
+        verse_number: 2,
+        original:
+          "לַֽעַזָּתִ֣ים׀ לֵאמֹ֗ר בָּ֤א שִׁמְשׁוֹן֙ הֵ֔נָּה וַיָּסֹ֛בּוּ וַיֶּאֶרְבוּ־ ל֥וֹ כָל־ הַלַּ֖יְלָה בְּשַׁ֣עַר הָעִ֑יר וַיִּתְחָרְשׁ֤וּ כָל־ הַלַּ֙יְלָה֙ לֵאמֹ֔ר עַד־ א֥וֹר הַבֹּ֖קֶר וַהֲרְגְנֻֽהוּ׃",
+        english:
+          "When the Gazites heard that Samson was there they surrounded that place and lay in wait for him all night at the city gate They were quiet throughout the night saying Let us wait until dawn then we will kill him",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּשְׁכַּ֣ב שִׁמְשׁוֹן֮ עַד־ חֲצִ֣י הַלַּיְלָה֒ וַיָּ֣קָם׀ בַּחֲצִ֣י הַלַּ֗יְלָה וַיֶּאֱחֹ֞ז בְּדַלְת֤וֹת שַֽׁעַר־ הָעִיר֙ וּבִשְׁתֵּ֣י הַמְּזוּז֔וֹת וַיִּסָּעֵם֙ עִֽם־ הַבְּרִ֔יחַ וַיָּ֖שֶׂם עַל־ כְּתֵפָ֑יו וַֽיַּעֲלֵם֙ אֶל־ רֹ֣אשׁ הָהָ֔ר אֲשֶׁ֖ר עַל־ פְּנֵ֥י חֶבְרֽוֹן׃פ",
+        english:
+          "But Samson lay there only until midnight when he got up took hold of the doors of the city gate and both gateposts and pulled them out bar and all Then he put them on his shoulders and took them to the top of the mountain overlooking Hebron",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַֽיְהִי֙ אַחֲרֵי־ כֵ֔ן וַיֶּאֱהַ֥ב אִשָּׁ֖ה בְּנַ֣חַל שֹׂרֵ֑ק וּשְׁמָ֖הּ דְּלִילָֽה׃",
+        english:
+          "Some time later Samson fell in love with a woman in the Valley of Sorek whose name was Delilah",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיַּעֲל֨וּ אֵלֶ֜יהָ סַרְנֵ֣י פְלִשְׁתִּ֗ים וַיֹּ֨אמְרוּ לָ֜הּ פַּתִּ֣י אוֹת֗וֹ וּרְאִי֙ בַּמֶּה֙ כֹּח֣וֹ גָד֔וֹל וּבַמֶּה֙ נ֣וּכַל ל֔וֹ וַאֲסַרְנֻ֖הוּ לְעַנֹּת֑וֹ וַאֲנַ֙חְנוּ֙ נִתַּן־ לָ֔ךְ אִ֕ישׁ אֶ֥לֶף וּמֵאָ֖ה כָּֽסֶף׃",
+        english:
+          "The lords of the Philistines went to her and said Entice him and find out the source of his great strength and how we can overpower him to tie him up and subdue him Then each one of us will give you eleven hundred shekels of silver",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַתֹּ֤אמֶר דְּלִילָה֙ אֶל־ שִׁמְשׁ֔וֹן הַגִּֽידָה־ נָּ֣א לִ֔י בַּמֶּ֖ה כֹּחֲךָ֣ גָד֑וֹל וּבַמֶּ֥ה תֵאָסֵ֖ר לְעַנּוֹתֶֽךָ׃",
+        english:
+          "So Delilah said to Samson Please tell me the source of your great strength and how you can be tied up and subdued",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיֹּ֤אמֶר אֵלֶ֙יהָ֙ שִׁמְשׁ֔וֹן אִם־ יַאַסְרֻ֗נִי בְּשִׁבְעָ֛ה יְתָרִ֥ים לַחִ֖ים אֲשֶׁ֣ר לֹא־ חֹרָ֑בוּ וְחָלִ֥יתִי וְהָיִ֖יתִי כְּאַחַ֥ד הָאָדָֽם׃",
+        english:
+          "Samson told her If they tie me up with seven fresh bowstrings that have not been dried I will become as weak as any other man",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיַּעֲלוּ־ לָ֞הּ סַרְנֵ֣י פְלִשְׁתִּ֗ים שִׁבְעָ֛ה יְתָרִ֥ים לַחִ֖ים אֲשֶׁ֣ר לֹא־ חֹרָ֑בוּ וַתַּאַסְרֵ֖הוּ בָּהֶֽם׃",
+        english:
+          "So the lords of the Philistines brought her seven fresh bowstrings that had not been dried and she tied him up with them",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהָאֹרֵ֗ב יֹשֵׁ֥ב לָהּ֙ בַּחֶ֔דֶר וַתֹּ֣אמֶר אֵלָ֔יו פְּלִשְׁתִּ֥ים עָלֶ֖יךָ שִׁמְשׁ֑וֹן וַיְנַתֵּק֙ אֶת־ הַיְתָרִ֔ים כַּאֲשֶׁ֨ר יִנָּתֵ֤ק פְּתִֽיל־ הַנְּעֹ֙רֶת֙ בַּהֲרִיח֣וֹ אֵ֔שׁ וְלֹ֥א נוֹדַ֖ע כֹּחֽוֹ׃",
+        english:
+          "While the men were hidden in her room she called out Samson the Philistines are here But he snapped the bowstrings like a strand of yarn seared by a flame So the source of his strength remained unknown",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַתֹּ֤אמֶר דְּלִילָה֙ אֶל־ שִׁמְשׁ֔וֹן הִנֵּה֙ הֵתַ֣לְתָּ בִּ֔י וַתְּדַבֵּ֥ר אֵלַ֖י כְּזָבִ֑ים עַתָּה֙ הַגִּֽידָה־ נָּ֣א לִ֔י בַּמֶּ֖ה תֵּאָסֵֽר׃",
+        english:
+          "Then Delilah said to Samson You have mocked me and lied to me Now please tell me how you can be tied up",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיֹּ֣אמֶר אֵלֶ֔יהָ אִם־ אָס֤וֹר יַאַסְר֙וּנִי֙ בַּעֲבֹתִ֣ים חֲדָשִׁ֔ים אֲשֶׁ֛ר לֹֽא־ נַעֲשָׂ֥ה בָהֶ֖ם מְלָאכָ֑ה וְחָלִ֥יתִי וְהָיִ֖יתִי כְּאַחַ֥ד הָאָדָֽם׃",
+        english:
+          "He replied If they tie me up with new ropes that have never been used I will become as weak as any other man",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַתִּקַּ֣ח דְּלִילָה֩ עֲבֹתִ֨ים חֲדָשִׁ֜ים וַתַּאַסְרֵ֣הוּ בָהֶ֗ם וַתֹּ֤אמֶר אֵלָיו֙ פְּלִשְׁתִּ֤ים עָלֶ֙יךָ֙ שִׁמְשׁ֔וֹן וְהָאֹרֵ֖ב יֹשֵׁ֣ב בֶּחָ֑דֶר וַֽיְנַתְּקֵ֛ם מֵעַ֥ל זְרֹעֹתָ֖יו כַּחֽוּט׃",
+        english:
+          "So Delilah took new ropes tied him up with them and called out Samson the Philistines are here But while the men were hidden in her room he snapped the ropes off his arms like they were threads",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַתֹּ֨אמֶר דְּלִילָ֜ה אֶל־ שִׁמְשׁ֗וֹן עַד־ הֵ֜נָּה הֵתַ֤לְתָּ בִּי֙ וַתְּדַבֵּ֤ר אֵלַי֙ כְּזָבִ֔ים הַגִּ֣ידָה לִּ֔י בַּמֶּ֖ה תֵּאָסֵ֑ר וַיֹּ֣אמֶר אֵלֶ֔יהָ אִם־ תַּאַרְגִ֗י אֶת־ שֶׁ֛בַע מַחְלְפ֥וֹת רֹאשִׁ֖י עִם־ הַמַּסָּֽכֶת׃",
+        english:
+          "Then Delilah said to Samson You have mocked me and lied to me all along Tell me how you can be tied up He told her If you weave the seven braids of my head into the web of a loom and tighten it with a pin, I will become as weak as any other man.",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַתִּתְקַע֙ בַּיָּתֵ֔ד וַתֹּ֣אמֶר אֵלָ֔יו פְּלִשְׁתִּ֥ים עָלֶ֖יךָ שִׁמְשׁ֑וֹן וַיִּיקַץ֙ מִשְּׁנָת֔וֹ וַיִּסַּ֛ע אֶת־ הַיְתַ֥ד הָאֶ֖רֶג וְאֶת־ הַמַּסָּֽכֶת׃",
+        english:
+          "So while he slept, Delilah took the seven braids of his hair and wove them into the web with a pin and called to him Samson the Philistines are here But he awoke from his sleep and pulled out the pin with the loom and the web",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַתֹּ֣אמֶר אֵלָ֗יו אֵ֚יךְ תֹּאמַ֣ר אֲהַבְתִּ֔יךְ וְלִבְּךָ֖ אֵ֣ין אִתִּ֑י זֶ֣ה שָׁלֹ֤שׁ פְּעָמִים֙ הֵתַ֣לְתָּ בִּ֔י וְלֹא־ הִגַּ֣דְתָּ לִּ֔י בַּמֶּ֖ה כֹּחֲךָ֥ גָדֽוֹל׃",
+        english:
+          "How can you say I love you she asked when your heart is not with me This is the third time you have mocked me and failed to reveal to me the source of your great strength",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַ֠יְהִי כִּֽי־ הֵצִ֨יקָה לּ֧וֹ בִדְבָרֶ֛יהָ כָּל־ הַיָּמִ֖ים וַתְּאַֽלֲצֵ֑הוּ וַתִּקְצַ֥ר נַפְשׁ֖וֹ לָמֽוּת׃",
+        english:
+          "Finally, after she had pressed him daily with her words and pleaded until he was sick to death",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיַּגֶּד־ לָ֣הּ אֶת־ כָּל־ לִבּ֗וֹ וַיֹּ֤אמֶר לָהּ֙ מוֹרָה֙ לֹֽא־ עָלָ֣ה עַל־ רֹאשִׁ֔י כִּֽי־ נְזִ֧יר אֱלֹהִ֛ים אֲנִ֖י מִבֶּ֣טֶן אִמִּ֑י אִם־ גֻּלַּ֙חְתִּי֙ וְסָ֣ר מִמֶּ֣נִּי כֹחִ֔י וְחָלִ֥יתִי וְהָיִ֖יתִי כְּכָל־ הָאָדָֽם׃",
+        english:
+          "Samson told her all that was in his heart My hair has never been cut because I have been a Nazirite to God from my mother’s womb If I am shaved my strength will leave me and I will become as weak as any other man",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַתֵּ֣רֶא דְלִילָ֗ה כִּֽי־ הִגִּ֣יד לָהּ֮ אֶת־ כָּל־ לִבּוֹ֒ וַתִּשְׁלַ֡ח וַתִּקְרָא֩ לְסַרְנֵ֨י פְלִשְׁתִּ֤ים לֵאמֹר֙ עֲל֣וּ הַפַּ֔עַם כִּֽי־ הִגִּ֥יד לָהּ אֶת־ כָּל־ לִבּ֑וֹ וְעָל֤וּ אֵלֶ֙יהָ֙ סַרְנֵ֣י פְלִשְׁתִּ֔ים וַיַּעֲל֥וּ הַכֶּ֖סֶף בְּיָדָֽם׃",
+        english:
+          "When Delilah realized that he had revealed to her all that was in his heart she sent this message to the lords of the Philistines Come up once more for he has revealed to me all that is in his heart Then the lords of the Philistines came to her bringing the money in their hands",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַתְּיַשְּׁנֵ֙הוּ֙ עַל־ בִּרְכֶּ֔יהָ וַתִּקְרָ֣א לָאִ֔ישׁ וַתְּגַלַּ֕ח אֶת־ שֶׁ֖בַע מַחְלְפ֣וֹת רֹאשׁ֑וֹ וַתָּ֙חֶל֙ לְעַנּוֹת֔וֹ וַיָּ֥סַר כֹּח֖וֹ מֵעָלָֽיו׃",
+        english:
+          "And having lulled him to sleep on her lap she called a man to shave off the seven braids of his head In this way she began to subdue him and his strength left him",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַתֹּ֕אמֶר פְּלִשְׁתִּ֥ים עָלֶ֖יךָ שִׁמְשׁ֑וֹן וַיִּקַ֣ץ מִשְּׁנָת֗וֹ וַיֹּ֙אמֶר֙ אֵצֵ֞א כְּפַ֤עַם בְּפַ֙עַם֙ וְאִנָּעֵ֔ר וְהוּא֙ לֹ֣א יָדַ֔ע כִּ֥י יְהוָ֖ה סָ֥ר מֵעָלָֽיו׃",
+        english:
+          "Then she called out Samson the Philistines are here When Samson awoke from his sleep he thought I will escape as I did before and shake myself free But he did not know that the LORD had departed from him",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֹּאחֲז֣וּהוּ פְלִשְׁתִּ֔ים וַֽיְנַקְּר֖וּ אֶת־ עֵינָ֑יו וַיּוֹרִ֨ידוּ אוֹת֜וֹ עַזָּ֗תָה וַיַּאַסְר֙וּהוּ֙ בַּֽנְחֻשְׁתַּ֔יִם וַיְהִ֥י טוֹחֵ֖ן בְּבֵ֥ית הָאֲסִירִים׃",
+        english:
+          "Then the Philistines seized him gouged out his eyes and brought him down to Gaza where he was bound with bronze shackles and forced to grind grain in the prison",
+      },
+      {
+        verse_number: 22,
+        original: "וַיָּ֧חֶל שְׂעַר־ רֹאשׁ֛וֹ לְצַמֵּ֖חַ כַּאֲשֶׁ֥ר גֻּלָּֽח׃פ",
+        english:
+          "However, the hair of his head began to grow back after it had been shaved",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְסַרְנֵ֣י פְלִשְׁתִּ֗ים נֶֽאֱסְפוּ֙ לִזְבֹּ֧חַ זֶֽבַח־ גָּד֛וֹל לְדָג֥וֹן אֱלֹהֵיהֶ֖ם וּלְשִׂמְחָ֑ה וַיֹּ֣אמְר֔וּ נָתַ֤ן אֱלֹהֵ֙ינוּ֙ בְּיָדֵ֔נוּ אֵ֖ת שִׁמְשׁ֥וֹן אוֹיְבֵֽינוּ׃",
+        english:
+          "Now the lords of the Philistines gathered together to offer a great sacrifice to their god Dagon They rejoiced and said Our god has delivered Samson our enemy into our hands",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיִּרְא֤וּ אֹתוֹ֙ הָעָ֔ם וַֽיְהַלְל֖וּ אֶת־ אֱלֹהֵיהֶ֑ם כִּ֣י אָמְר֗וּ נָתַ֨ן אֱלֹהֵ֤ינוּ בְיָדֵ֙נוּ֙ אֶת־ א֣וֹיְבֵ֔נוּ וְאֵת֙ מַחֲרִ֣יב אַרְצֵ֔נוּ וַאֲשֶׁ֥ר הִרְבָּ֖ה אֶת־ חֲלָלֵֽינוּ׃",
+        english:
+          "And when the people saw him they praised their god saying Our god has delivered into our hands our enemy who destroyed our land and multiplied our dead",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַֽיְהִי֙ כִּי טוֹב לִבָּ֔ם וַיֹּ֣אמְר֔וּ קִרְא֥וּ לְשִׁמְשׁ֖וֹן וִישַֽׂחֶק־ לָ֑נוּ וַיִּקְרְא֨וּ לְשִׁמְשׁ֜וֹן מִבֵּ֣ית האסירים וַיְצַחֵק֙ לִפְנֵיהֶ֔ם וַיַּעֲמִ֥ידוּ אוֹת֖וֹ בֵּ֥ין הָעַמּוּדִֽים׃",
+        english:
+          "And while their hearts were merry they said Call for Samson to entertain us So they called Samson out of the prison to entertain them And they stationed him between the pillars",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַיֹּ֨אמֶר שִׁמְשׁ֜וֹן אֶל־ הַנַּ֨עַר הַמַּחֲזִ֣יק בְּיָדוֹ֮ הַנִּ֣יחָה אוֹתִי֒ וְהֵימִשֵׁנִי אֶת־ הָֽעַמֻּדִ֔ים אֲשֶׁ֥ר הַבַּ֖יִת נָכ֣וֹן עֲלֵיהֶ֑ם וְאֶשָּׁעֵ֖ן עֲלֵיהֶֽם׃",
+        english:
+          "Samson said to the servant who held his hand Lead me where I can feel the pillars supporting the temple so I can lean against them",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְהַבַּ֗יִת מָלֵ֤א הָֽאֲנָשִׁים֙ וְהַנָּשִׁ֔ים וְשָׁ֕מָּה כֹּ֖ל סַרְנֵ֣י פְלִשְׁתִּ֑ים וְעַל־ הַגָּ֗ג כִּשְׁלֹ֤שֶׁת אֲלָפִים֙ אִ֣ישׁ וְאִשָּׁ֔ה הָרֹאִ֖ים בִּשְׂח֥וֹק שִׁמְשֽׁוֹן׃",
+        english:
+          "Now the temple was full of men and women all the lords of the Philistines were there and about three thousand men and women were on the roof watching Samson entertain them",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיִּקְרָ֥א שִׁמְשׁ֛וֹן אֶל־ יְהוָ֖ה וַיֹּאמַ֑ר אֲדֹנָ֣י יֱהֹוִ֡ה זָכְרֵ֣נִי נָא֩ וְחַזְּקֵ֨נִי נָ֜א אַ֣ךְ הַפַּ֤עַם הַזֶּה֙ הָאֱלֹהִ֔ים וְאִנָּקְמָ֧ה נְקַם־ אַחַ֛ת מִשְּׁתֵ֥י עֵינַ֖י מִפְּלִשְׁתִּֽים׃",
+        english:
+          "Then Samson called out to the LORD O Lord GOD please remember me Strengthen me O God just once more so that with one vengeful blow I may pay back the Philistines for my two eyes",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיִּלְפֹּ֨ת שִׁמְשׁ֜וֹן אֶת־ שְׁנֵ֣י׀ עַמּוּדֵ֣י הַתָּ֗וֶךְ אֲשֶׁ֤ר הַבַּ֙יִת֙ נָכ֣וֹן עֲלֵיהֶ֔ם וַיִּסָּמֵ֖ךְ עֲלֵיהֶ֑ם אֶחָ֥ד בִּימִינ֖וֹ וְאֶחָ֥ד בִּשְׂמֹאלֽוֹ׃",
+        english:
+          "And Samson reached out for the two central pillars supporting the temple Bracing himself against them with his right hand on one pillar and his left hand on the other",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיֹּ֣אמֶר שִׁמְשׁ֗וֹן תָּמ֣וֹת נַפְשִׁי֮ עִם־ פְּלִשְׁתִּים֒ וַיֵּ֣ט בְּכֹ֔חַ וַיִּפֹּ֤ל הַבַּ֙יִת֙ עַל־ הַסְּרָנִ֔ים וְעַל־ כָּל־ הָעָ֖ם אֲשֶׁר־ בּ֑וֹ וַיִּהְי֤וּ הַמֵּתִים֙ אֲשֶׁ֣ר הֵמִ֣ית בְּמוֹת֔וֹ רַבִּ֕ים מֵאֲשֶׁ֥ר הֵמִ֖ית בְּחַיָּֽיו׃",
+        english:
+          "Samson said Let me die with the Philistines Then he pushed with all his might and the temple fell on the lords and all the people in it So in his death he killed more than he had killed in his life",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיֵּרְד֨וּ אֶחָ֜יו וְכָל־ בֵּ֣ית אָבִיהוּ֮ וַיִּשְׂא֣וּ אֹתוֹ֒ וַֽיַּעֲל֣וּ׀ וַיִּקְבְּר֣וּ אוֹת֗וֹ בֵּ֤ין צָרְעָה֙ וּבֵ֣ין אֶשְׁתָּאֹ֔ל בְּקֶ֖בֶר מָנ֣וֹחַ אָבִ֑יו וְה֛וּא שָׁפַ֥ט אֶת־ יִשְׂרָאֵ֖ל עֶשְׂרִ֥ים שָׁנָֽה׃פ",
+        english:
+          "Then Samson’s brothers and his father’s family came down carried him back and buried him between Zorah and Eshtaol in the tomb of his father Manoah And he had judged Israel twenty years",
+      },
+    ],
+  };
+  return chapter;
+}
