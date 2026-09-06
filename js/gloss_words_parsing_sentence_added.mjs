@@ -6,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 export function gloss_words_parsing_sentence_added(
   words,
   testament_name,
-  testament_name,
 ) {
   "One verse's interlinear words, each given its spelled-out parsing already said as a plain English sentence.";
   "The sentence is handed over rather than composed by whoever is writing the explanation, for the same reason the parsing itself is: it is a fact about the word that the source already settled, so an author who is given it cannot contradict it, and one who is left to render it can. Turning the grammarians' shorthand into words a reader with no grammar has met is most of what an explanation of a form has to do, and it is the same work for every word carrying that form.";
