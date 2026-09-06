@@ -1,3 +1,9 @@
+import { bible_glyph_chapter_ezk03 } from "./bible_glyph_chapter_ezk03.mjs";
+import { bible_glyph_chapter_zec05 } from "./bible_glyph_chapter_zec05.mjs";
+import { bible_glyph_chapter_2ch34 } from "./bible_glyph_chapter_2ch34.mjs";
+import { bible_glyph_chapter_1ch29 } from "./bible_glyph_chapter_1ch29.mjs";
+import { bible_glyph_chapter_ezr01 } from "./bible_glyph_chapter_ezr01.mjs";
+import { bible_glyph_chapter_lev26 } from "./bible_glyph_chapter_lev26.mjs";
 import { bible_glyph_chapter_num14 } from "./bible_glyph_chapter_num14.mjs";
 import { bible_glyph_chapter_1sa08 } from "./bible_glyph_chapter_1sa08.mjs";
 import { bible_glyph_chapter_deu18 } from "./bible_glyph_chapter_deu18.mjs";
@@ -487,6 +493,12 @@ export function bible_glyph_chapters() {
   let one_hundred_and_seventy_seventh = bible_glyph_chapter_neh01();
   let one_hundred_and_seventy_eighth = bible_glyph_chapter_psa130();
   let one_hundred_and_seventy_ninth = bible_glyph_chapter_2sa05();
+  let one_hundred_and_eightieth = bible_glyph_chapter_ezk03();
+  let one_hundred_and_eighty_first = bible_glyph_chapter_zec05();
+  let one_hundred_and_eighty_second = bible_glyph_chapter_2ch34();
+  let one_hundred_and_eighty_third = bible_glyph_chapter_1ch29();
+  let one_hundred_and_eighty_fourth = bible_glyph_chapter_ezr01();
+  let one_hundred_and_eighty_fifth = bible_glyph_chapter_lev26();
   let chapters = [
     first,
     second,
@@ -667,6 +679,12 @@ export function bible_glyph_chapters() {
     one_hundred_and_seventy_seventh,
     one_hundred_and_seventy_eighth,
     one_hundred_and_seventy_ninth,
+    one_hundred_and_eightieth,
+    one_hundred_and_eighty_first,
+    one_hundred_and_eighty_second,
+    one_hundred_and_eighty_third,
+    one_hundred_and_eighty_fourth,
+    one_hundred_and_eighty_fifth,
   ];
   return chapters;
 }
