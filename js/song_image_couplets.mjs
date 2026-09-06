@@ -333,7 +333,7 @@ export function song_image_couplets() {
       second: "it was brand new",
       symbol: list_join_empty([
         r,
-        ", that opening one flat sheet of solid black standing completely empty, no stone rolled anywhere in the picture and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of plain brown earth, the rock filling the window, reaching almost to the white border on both sides and its top standing close up under the sky at the head of the arch",
+        ", that opening one flat sheet of solid black standing completely empty, no stone rolled anywhere in the picture and nothing else in the window at all, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of plain brown earth, the rock filling the window, reaching almost to the white border on both sides and drawn so large that only a narrow strip of the green band is left showing above it",
       ]),
       symbol_ref: "Matthew 27:60, Luke 23:53, John 19:41",
       same_as: 0,
