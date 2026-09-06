@@ -1,0 +1,5 @@
+export function app_en_learn_bible_gloss_urdu_words_sound_slow() {
+  "Names the place a slower reading of one English word is kept for the Urdu gloss reader, and holds no work of its own - one name decides the folder and every reader of it agrees.";
+  "★ THE SLOW READINGS ARE THEIR OWN FOLDER RATHER THAN A SECOND NAME INSIDE THE ORDINARY ONE, FOR THE REASON THE VOICES ARE FOLDERS. The only thing ever done to a whole group of these is done to the group: they are all remade when the way of slowing changes, and they are all thrown away if slowing turns out to be the wrong idea. As a folder that is one stroke. Written into the file name instead it is thousands of files picked out one at a time, and an underline already sits inside the word half of the name, so a name like isn_t_slow cannot be read back apart.";
+  "It also keeps the recorder honest. The step that speaks a word asks its folder what is missing and speaks exactly that, so a slow copy sitting beside an ordinary one would be a file the recorder has to be taught to ignore - and the day it was not taught, it would read the slow copies as words already spoken and record nothing at all.";
+}
