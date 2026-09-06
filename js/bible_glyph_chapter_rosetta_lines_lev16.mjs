@@ -1,0 +1,248 @@
+export function bible_glyph_chapter_rosetta_lines_lev16() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV16",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְדַבֵּ֤ר יְהוָה֙ אֶל־ מֹשֶׁ֔ה אַחֲרֵ֣י מ֔וֹת שְׁנֵ֖י בְּנֵ֣י אַהֲרֹ֑ן בְּקָרְבָתָ֥ם לִפְנֵי־ יְהוָ֖ה וַיָּמֻֽתוּ׃",
+        english:
+          "Now the LORD spoke to Moses after the death of two of Aaron’s sons when they approached the presence of the LORD",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה דַּבֵּר֮ אֶל־ אַהֲרֹ֣ן אָחִיךָ֒ וְאַל־ יָבֹ֤א בְכָל־ עֵת֙ אֶל־ הַקֹּ֔דֶשׁ מִבֵּ֖ית לַפָּרֹ֑כֶת אֶל־ פְּנֵ֨י הַכַּפֹּ֜רֶת אֲשֶׁ֤ר עַל־ הָאָרֹן֙ וְלֹ֣א יָמ֔וּת כִּ֚י בֶּֽעָנָ֔ן אֵרָאֶ֖ה עַל־ הַכַּפֹּֽרֶת׃",
+        english:
+          "And the LORD said to Moses Tell your brother Aaron not to enter freely into the Most Holy Place behind the veil in front of the mercy seat on the ark or else he will die because I appear in the cloud above the mercy seat",
+      },
+      {
+        verse_number: 3,
+        original:
+          "בְּזֹ֛את יָבֹ֥א אַהֲרֹ֖ן אֶל־ הַקֹּ֑דֶשׁ בְּפַ֧ר בֶּן־ בָּקָ֛ר לְחַטָּ֖את וְאַ֥יִל לְעֹלָֽה׃",
+        english:
+          "This is how Aaron is to enter the Holy Place with a young bull for a sin offering and a ram for a burnt offering",
+      },
+      {
+        verse_number: 4,
+        original:
+          "כְּתֹֽנֶת־ בַּ֨ד קֹ֜דֶשׁ יִלְבָּ֗שׁ וּמִֽכְנְסֵי־ בַד֮ יִהְי֣וּ עַל־ בְּשָׂרוֹ֒ וּבְאַבְנֵ֥ט בַּד֙ יַחְגֹּ֔ר וּבְמִצְנֶ֥פֶת בַּ֖ד יִצְנֹ֑ף בִּגְדֵי־ קֹ֣דֶשׁ הֵ֔ם וְרָחַ֥ץ בַּמַּ֛יִם אֶת־ בְּשָׂר֖וֹ וּלְבֵשָֽׁם׃",
+        english:
+          "He is to wear the sacred linen tunic with linen undergarments He must tie a linen sash around him and put on the linen turban These are holy garments and he must bathe himself with water before he wears them",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וּמֵאֵ֗ת עֲדַת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל יִקַּ֛ח שְׁנֵֽי־ שְׂעִירֵ֥י עִזִּ֖ים לְחַטָּ֑את וְאַ֥יִל אֶחָ֖ד לְעֹלָֽה׃",
+        english:
+          "And he shall take from the congregation of Israel two male goats for a sin offering and one ram for a burnt offering",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְהִקְרִ֧יב אַהֲרֹ֛ן אֶת־ פַּ֥ר הַחַטָּ֖את אֲשֶׁר־ ל֑וֹ וְכִפֶּ֥ר בַּעֲד֖וֹ וּבְעַ֥ד בֵּיתֽוֹ׃",
+        english:
+          "Aaron is to present the bull for his sin offering and make atonement for himself and his household",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְלָקַ֖ח אֶת־ שְׁנֵ֣י הַשְּׂעִירִ֑ם וְהֶעֱמִ֤יד אֹתָם֙ לִפְנֵ֣י יְהוָ֔ה פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד׃",
+        english:
+          "Then he shall take the two goats and present them before the LORD at the entrance to the Tent of Meeting",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְנָתַ֧ן אַהֲרֹ֛ן עַל־ שְׁנֵ֥י הַשְּׂעִירִ֖ם גּוֹרָל֑וֹת גּוֹרָ֤ל אֶחָד֙ לַיהוָ֔ה וְגוֹרָ֥ל אֶחָ֖ד לַעֲזָאזֵֽל׃",
+        english:
+          "After Aaron casts lots for the two goats one for the LORD and the other for the scapegoat",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהִקְרִ֤יב אַהֲרֹן֙ אֶת־ הַשָּׂעִ֔יר אֲשֶׁ֨ר עָלָ֥ה עָלָ֛יו הַגּוֹרָ֖ל לַיהוָ֑ה וְעָשָׂ֖הוּ חַטָּֽאת׃",
+        english:
+          "he shall present the goat chosen by lot for the LORD and sacrifice it as a sin offering",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהַשָּׂעִ֗יר אֲשֶׁר֩ עָלָ֨ה עָלָ֤יו הַגּוֹרָל֙ לַעֲזָאזֵ֔ל יָֽעֳמַד־ חַ֛י לִפְנֵ֥י יְהוָ֖ה לְכַפֵּ֣ר עָלָ֑יו לְשַׁלַּ֥ח אֹת֛וֹ לַעֲזָאזֵ֖ל הַמִּדְבָּֽרָה׃",
+        english:
+          "But the goat chosen by lot as the scapegoat shall be presented alive before the LORD to make atonement by sending it into the wilderness as the scapegoat",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהִקְרִ֨יב אַהֲרֹ֜ן אֶת־ פַּ֤ר הַֽחַטָּאת֙ אֲשֶׁר־ ל֔וֹ וְכִפֶּ֥ר בַּֽעֲד֖וֹ וּבְעַ֣ד בֵּית֑וֹ וְשָׁחַ֛ט אֶת־ פַּ֥ר הַֽחַטָּ֖את אֲשֶׁר־ לֽוֹ׃",
+        english:
+          "When Aaron presents the bull for his sin offering and makes atonement for himself and his household he is to slaughter the bull for his own sin offering",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְלָקַ֣ח מְלֹֽא־ הַ֠מַּחְתָּה גַּֽחֲלֵי־ אֵ֞שׁ מֵעַ֤ל הַמִּזְבֵּ֙חַ֙ מִלִּפְנֵ֣י יְהוָ֔ה וּמְלֹ֣א חָפְנָ֔יו קְטֹ֥רֶת סַמִּ֖ים דַּקָּ֑ה וְהֵבִ֖יא מִבֵּ֥ית לַפָּרֹֽכֶת׃",
+        english:
+          "Then he must take a censer full of burning coals from the altar before the LORD and two handfuls of finely ground fragrant incense and take them inside the veil",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְנָתַ֧ן אֶֽת־ הַקְּטֹ֛רֶת עַל־ הָאֵ֖שׁ לִפְנֵ֣י יְהוָ֑ה וְכִסָּ֣ה׀ עֲנַ֣ן הַקְּטֹ֗רֶת אֶת־ הַכַּפֹּ֛רֶת אֲשֶׁ֥ר עַל־ הָעֵד֖וּת וְלֹ֥א יָמֽוּת׃",
+        english:
+          "He is to put the incense on the fire before the LORD and the cloud of incense will cover the mercy seat above the Testimony so that he will not die",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְלָקַח֙ מִדַּ֣ם הַפָּ֔ר וְהִזָּ֧ה בְאֶצְבָּע֛וֹ עַל־ פְּנֵ֥י הַכַּפֹּ֖רֶת קֵ֑דְמָה וְלִפְנֵ֣י הַכַּפֹּ֗רֶת יַזֶּ֧ה שֶֽׁבַע־ פְּעָמִ֛ים מִן־ הַדָּ֖ם בְּאֶצְבָּעֽוֹ׃",
+        english:
+          "And he is to take some of the bull’s blood and sprinkle it with his finger on the east side of the mercy seat then he shall sprinkle some of it with his finger seven times before the mercy seat",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְשָׁחַ֞ט אֶת־ שְׂעִ֤יר הַֽחַטָּאת֙ אֲשֶׁ֣ר לָעָ֔ם וְהֵבִיא֙ אֶת־ דָּמ֔וֹ אֶל־ מִבֵּ֖ית לַפָּרֹ֑כֶת וְעָשָׂ֣ה אֶת־ דָּמ֗וֹ כַּאֲשֶׁ֤ר עָשָׂה֙ לְדַ֣ם הַפָּ֔ר וְהִזָּ֥ה אֹת֛וֹ עַל־ הַכַּפֹּ֖רֶת וְלִפְנֵ֥י הַכַּפֹּֽרֶת׃",
+        english:
+          "Aaron shall then slaughter the goat for the sin offering for the people and bring its blood behind the veil and with its blood he must do as he did with the bull’s blood He is to sprinkle it against the mercy seat and in front of it",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְכִפֶּ֣ר עַל־ הַקֹּ֗דֶשׁ מִטֻּמְאֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וּמִפִּשְׁעֵיהֶ֖ם לְכָל־ חַטֹּאתָ֑ם וְכֵ֤ן יַעֲשֶׂה֙ לְאֹ֣הֶל מוֹעֵ֔ד הַשֹּׁכֵ֣ן אִתָּ֔ם בְּת֖וֹךְ טֻמְאֹתָֽם׃",
+        english:
+          "So he shall make atonement for the Most Holy Place because of the impurities and rebellious acts of the Israelites in regard to all their sins He is to do the same for the Tent of Meeting which abides among them in the midst of their impurities",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְכָל־ אָדָ֞ם לֹא־ יִהְיֶ֣ה׀ בְּאֹ֣הֶל מוֹעֵ֗ד בְּבֹא֛וֹ לְכַפֵּ֥ר בַּקֹּ֖דֶשׁ עַד־ צֵאת֑וֹ וְכִפֶּ֤ר בַּעֲדוֹ֙ וּבְעַ֣ד בֵּית֔וֹ וּבְעַ֖ד כָּל־ קְהַ֥ל יִשְׂרָאֵֽל׃",
+        english:
+          "No one may be in the Tent of Meeting from the time Aaron goes in to make atonement in the Most Holy Place until he leaves after he has made atonement for himself his household and the whole assembly of Israel",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְיָצָ֗א אֶל־ הַמִּזְבֵּ֛חַ אֲשֶׁ֥ר לִפְנֵֽי־ יְהוָ֖ה וְכִפֶּ֣ר עָלָ֑יו וְלָקַ֞ח מִדַּ֤ם הַפָּר֙ וּמִדַּ֣ם הַשָּׂעִ֔יר וְנָתַ֛ן עַל־ קַרְנ֥וֹת הַמִּזְבֵּ֖חַ סָבִֽיב׃",
+        english:
+          "Then he shall go out to the altar that is before the LORD and make atonement for it He is to take some of the bull’s blood and some of the goat’s blood and put it on all the horns of the altar",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְהִזָּ֨ה עָלָ֧יו מִן־ הַדָּ֛ם בְּאֶצְבָּע֖וֹ שֶׁ֣בַע פְּעָמִ֑ים וְטִהֲר֣וֹ וְקִדְּשׁ֔וֹ מִטֻּמְאֹ֖ת בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "He is to sprinkle some of the blood on it with his finger seven times to cleanse it and consecrate it from the uncleanness of the Israelites",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְכִלָּה֙ מִכַּפֵּ֣ר אֶת־ הַקֹּ֔דֶשׁ וְאֶת־ אֹ֥הֶל מוֹעֵ֖ד וְאֶת־ הַמִּזְבֵּ֑חַ וְהִקְרִ֖יב אֶת־ הַשָּׂעִ֥יר הֶחָֽי׃",
+        english:
+          "When Aaron has finished purifying the Most Holy Place the Tent of Meeting and the altar he is to bring forward the live goat",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְסָמַ֨ךְ אַהֲרֹ֜ן אֶת־ שְׁתֵּ֣י יָדוֹ עַ֨ל רֹ֣אשׁ הַשָּׂעִיר֮ הַחַי֒ וְהִתְוַדָּ֣ה עָלָ֗יו אֶת־ כָּל־ עֲוֺנֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וְאֶת־ כָּל־ פִּשְׁעֵיהֶ֖ם לְכָל־ חַטֹּאתָ֑ם וְנָתַ֤ן אֹתָם֙ עַל־ רֹ֣אשׁ הַשָּׂעִ֔יר וְשִׁלַּ֛ח בְּיַד־ אִ֥ישׁ עִתִּ֖י הַמִּדְבָּֽרָה׃",
+        english:
+          "Then he is to lay both hands on the head of the live goat and confess over it all the iniquities and rebellious acts of the Israelites in regard to all their sins He is to put them on the goat’s head and send it away into the wilderness by the hand of a man appointed for the task",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְנָשָׂ֨א הַשָּׂעִ֥יר עָלָ֛יו אֶת־ כָּל־ עֲוֺנֹתָ֖ם אֶל־ אֶ֣רֶץ גְּזֵרָ֑ה וְשִׁלַּ֥ח אֶת־ הַשָּׂעִ֖יר בַּמִּדְבָּֽר׃",
+        english:
+          "The goat will carry on itself all their iniquities into a solitary place and the man will release it into the wilderness",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וּבָ֤א אַהֲרֹן֙ אֶל־ אֹ֣הֶל מוֹעֵ֔ד וּפָשַׁט֙ אֶת־ בִּגְדֵ֣י הַבָּ֔ד אֲשֶׁ֥ר לָבַ֖שׁ בְּבֹא֣וֹ אֶל־ הַקֹּ֑דֶשׁ וְהִנִּיחָ֖ם שָֽׁם׃",
+        english:
+          "Then Aaron is to enter the Tent of Meeting take off the linen garments he put on before entering the Most Holy Place and leave them there",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְרָחַ֨ץ אֶת־ בְּשָׂר֤וֹ בַמַּ֙יִם֙ בְּמָק֣וֹם קָד֔וֹשׁ וְלָבַ֖שׁ אֶת־ בְּגָדָ֑יו וְיָצָ֗א וְעָשָׂ֤ה אֶת־ עֹֽלָתוֹ֙ וְאֶת־ עֹלַ֣ת הָעָ֔ם וְכִפֶּ֥ר בַּעֲד֖וֹ וּבְעַ֥ד הָעָֽם׃",
+        english:
+          "He is to bathe himself with water in a holy place and put on his own clothes Then he must go out and sacrifice his burnt offering and the people’s burnt offering to make atonement for himself and for the people",
+      },
+      {
+        verse_number: 25,
+        original: "וְאֵ֛ת חֵ֥לֶב הַֽחַטָּ֖את יַקְטִ֥יר הַמִּזְבֵּֽחָה׃",
+        english: "He is also to burn the fat of the sin offering on the altar",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְהַֽמְשַׁלֵּ֤חַ אֶת־ הַשָּׂעִיר֙ לַֽעֲזָאזֵ֔ל יְכַבֵּ֣ס בְּגָדָ֔יו וְרָחַ֥ץ אֶת־ בְּשָׂר֖וֹ בַּמָּ֑יִם וְאַחֲרֵי־ כֵ֖ן יָב֥וֹא אֶל־ הַֽמַּחֲנֶֽה׃",
+        english:
+          "The man who released the goat as the scapegoat must wash his clothes and bathe himself with water afterward he may reenter the camp",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְאֵת֩ פַּ֨ר הַֽחַטָּ֜את וְאֵ֣ת׀ שְׂעִ֣יר הַֽחַטָּ֗את אֲשֶׁ֨ר הוּבָ֤א אֶת־ דָּמָם֙ לְכַפֵּ֣ר בַּקֹּ֔דֶשׁ יוֹצִ֖יא אֶל־ מִח֣וּץ לַֽמַּחֲנֶ֑ה וְשָׂרְפ֣וּ בָאֵ֔שׁ אֶת־ עֹרֹתָ֥ם וְאֶת־ בְּשָׂרָ֖ם וְאֶת־ פִּרְשָֽׁם׃",
+        english:
+          "The bull for the sin offering and the goat for the sin offering whose blood was brought into the Most Holy Place to make atonement must be taken outside the camp and their hides flesh and dung must be burned up",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וְהַשֹּׂרֵ֣ף אֹתָ֔ם יְכַבֵּ֣ס בְּגָדָ֔יו וְרָחַ֥ץ אֶת־ בְּשָׂר֖וֹ בַּמָּ֑יִם וְאַחֲרֵי־ כֵ֖ן יָב֥וֹא אֶל־ הַֽמַּחֲנֶֽה׃",
+        english:
+          "The one who burns them must wash his clothes and bathe himself with water and afterward he may reenter the camp",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וְהָיְתָ֥ה לָכֶ֖ם לְחֻקַּ֣ת עוֹלָ֑ם בַּחֹ֣דֶשׁ הַ֠שְּׁבִיעִי בֶּֽעָשׂ֨וֹר לַחֹ֜דֶשׁ תְּעַנּ֣וּ אֶת־ נַפְשֹֽׁתֵיכֶ֗ם וְכָל־ מְלָאכָה֙ לֹ֣א תַעֲשׂ֔וּ הָֽאֶזְרָ֔ח וְהַגֵּ֖ר הַגָּ֥ר בְּתוֹכְכֶֽם׃",
+        english:
+          "This is to be a permanent statute for you On the tenth day of the seventh month you shall humble yourselves and not do any work whether the native or the foreigner who resides among you",
+      },
+      {
+        verse_number: 30,
+        original:
+          "כִּֽי־ בַיּ֥וֹם הַזֶּ֛ה יְכַפֵּ֥ר עֲלֵיכֶ֖ם לְטַהֵ֣ר אֶתְכֶ֑ם מִכֹּל֙ חַטֹּ֣אתֵיכֶ֔ם לִפְנֵ֥י יְהוָ֖ה תִּטְהָֽרוּ׃",
+        english:
+          "because on this day atonement will be made for you to cleanse you and you will be clean from all your sins before the LORD",
+      },
+      {
+        verse_number: 31,
+        original:
+          "שַׁבַּ֨ת שַׁבָּת֥וֹן הִיא֙ לָכֶ֔ם וְעִנִּיתֶ֖ם אֶת־ נַפְשֹׁתֵיכֶ֑ם חֻקַּ֖ת עוֹלָֽם׃",
+        english:
+          "It is a Sabbath of complete rest for you that you may humble yourselves it is a permanent statute",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וְכִפֶּ֨ר הַכֹּהֵ֜ן אֲשֶׁר־ יִמְשַׁ֣ח אֹת֗וֹ וַאֲשֶׁ֤ר יְמַלֵּא֙ אֶת־ יָד֔וֹ לְכַהֵ֖ן תַּ֣חַת אָבִ֑יו וְלָבַ֛שׁ אֶת־ בִּגְדֵ֥י הַבָּ֖ד בִּגְדֵ֥י הַקֹּֽדֶשׁ׃",
+        english:
+          "The priest who is anointed and ordained to succeed his father as high priest shall make atonement He will put on the sacred linen garments",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וְכִפֶּר֙ אֶת־ מִקְדַּ֣שׁ הַקֹּ֔דֶשׁ וְאֶת־ אֹ֧הֶל מוֹעֵ֛ד וְאֶת־ הַמִּזְבֵּ֖חַ יְכַפֵּ֑ר וְעַ֧ל הַכֹּהֲנִ֛ים וְעַל־ כָּל־ עַ֥ם הַקָּהָ֖ל יְכַפֵּֽר׃",
+        english:
+          "and make atonement for the Most Holy Place the Tent of Meeting and the altar and for the priests and all the people of the assembly",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְהָֽיְתָה־ זֹּ֨את לָכֶ֜ם לְחֻקַּ֣ת עוֹלָ֗ם לְכַפֵּ֞ר עַל־ בְּנֵ֤י יִשְׂרָאֵל֙ מִכָּל־ חַטֹּאתָ֔ם אַחַ֖ת בַּשָּׁנָ֑ה וַיַּ֕עַשׂ כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־ מֹשֶֽׁה׃פ",
+        english:
+          "This is to be a permanent statute for you to make atonement once a year for the Israelites because of all their sins And all this was done as the LORD had commanded Moses",
+      },
+    ],
+  };
+  return chapter;
+}

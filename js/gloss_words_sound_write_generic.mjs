@@ -13,6 +13,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_size } from "./list_size.mjs";
 import { gloss_word_sound_speed } from "./gloss_word_sound_speed.mjs";
 import { gloss_word_sound_compression_level } from "./gloss_word_sound_compression_level.mjs";
+import { gloss_word_sound_voice } from "./gloss_word_sound_voice.mjs";
 import { text_to_speech } from "./text_to_speech.mjs";
 export async function gloss_words_sound_write_generic(words, sound_fn) {
   "$plain words";
@@ -22,10 +23,12 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
     fn_name("gloss_word_sound_spoken_move"),
     " passes over a note whose recording never finished and passes over a word already recorded, so the worst a killed run can leave is something this step declines to touch.");
   ("★ THE WHOLE BATCH GOES OVER IN ONE CALL BECAUSE THE ENGINE IS LOADED ONCE PER CALL. It is handed the words joined by line breaks, which is the seam it cuts on, so one line is one word is one sound file. Calling it once for each word would pay the model load - measured at eight and a half seconds - a thousand times over, and that alone would take longer than the speaking.");
-  ("★ EVERY WAY A LONE WORD DIFFERS FROM A CHAPTER IS ASKED FOR HERE, RATHER THAN LEFT TO THE ENGINE'S OWN SETTINGS, because the engine is asked for both jobs and only the caller knows which one it is. There are three, and each keeps its reasoning next to its value: the speed in ",
+  ("★ EVERY WAY A LONE WORD DIFFERS FROM A CHAPTER IS ASKED FOR HERE, RATHER THAN LEFT TO THE ENGINE'S OWN SETTINGS, because the engine is asked for both jobs and only the caller knows which one it is. There are four, and each keeps its reasoning next to its value: the speed in ",
     fn_name("gloss_word_sound_speed"),
     ", how hard the file is squeezed in ",
     fn_name("gloss_word_sound_compression_level"),
+    ", who says it in ",
+    fn_name("gloss_word_sound_voice"),
     ", and the said-alone form below.");
   ("★ A WORD ON A BUTTON IS ASKED FOR IN ITS SAID-ALONE FORM, WHICH IS NOT THE FORM THE PHONEMISER ANSWERS WITH BY DEFAULT. Left alone it answers with the form the word takes inside a sentence, where the words English leans on are unstressed and their vowel collapses - so \"the\" comes back as a bare schwa and is heard, correctly, as a mumble. Measured over the app's list, 32 words of 1,674 came back that way. The rule that mends them, the words whose citation form a rule cannot derive, and why it is done in phonemes rather than here, are all in the speech engine's own said-alone step; a chapter is a sentence and asks for none of it.");
   ("★ A RECORDING IS FILED UNDER WHAT THE ENGINE SAYS IT SPOKE, NOT UNDER WHAT IT WAS ASKED TO SPEAK, which is the judgement next door in ",
@@ -59,12 +62,14 @@ export async function gloss_words_sound_write_generic(words, sound_fn) {
   let text = missing.join("\n");
   let speed = gloss_word_sound_speed();
   let level = gloss_word_sound_compression_level();
+  let voice = gloss_word_sound_voice();
   let engine = await text_to_speech({
     text: text,
     path_output: pending,
     speed: speed,
     compression_level: level,
     citation: true,
+    voice: voice,
   });
   let filed = await gloss_words_sound_pending_file(pending, folder);
   await folder_delete(pending);
