@@ -80,7 +80,8 @@ export async function app_ceb_bible_gloss_words_edged() {
   let broken_down_words = list_size(broken_down);
   let refused_words = list_size(refused);
   let unknown_words = list_size(unknown);
-  let broken_down_sightings = list_sum(list_map(broken_down, row_sightings));
+  let list = list_map(broken_down, row_sightings);
+  let broken_down_sightings = list_sum(list);
   let r = {
     words_total,
     sightings_total,
