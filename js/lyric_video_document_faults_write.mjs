@@ -1,7 +1,7 @@
+import { lyric_video_faults_path } from "./lyric_video_faults_path.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_screen_room } from "./lyric_video_screen_room.mjs";
 import { lyric_video_screens_faults } from "./lyric_video_screens_faults.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_video_document_faults_write(document, path_output) {
   "$plain document";
@@ -15,7 +15,7 @@ export async function lyric_video_document_faults_write(document, path_output) {
   let room = lyric_video_screen_room(document);
   let lines = document.lines;
   let faults = lyric_video_screens_faults(lines, room);
-  let path_faults = text_combine_multiple([path_output, ".faults.json"]);
+  let path_faults = lyric_video_faults_path(path_output);
   await file_overwrite_json(path_faults, faults);
   return faults;
 }
