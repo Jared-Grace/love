@@ -2,9 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-import { tiles_sides } from "./tiles_sides.mjs";
+import { tiles_rows } from "./tiles_rows.mjs";
 import { tiles_rectangles_row_scan } from "./tiles_rectangles_row_scan.mjs";
-import { each_range_from } from "./each_range_from.mjs";
 export function tiles_rectangles(tiles) {
   arguments_assert(arguments, 1);
   ("A patch of ground given as loose squares, handed back as the fewest whole rectangles");
@@ -30,6 +29,8 @@ export function tiles_rectangles(tiles) {
   ("twice and nothing is left behind. The same patch always comes back the same way, which");
   ("matters because the answer is redrawn on every step and a shape that reshuffled itself");
   ("would flicker.");
+  ("The rows are asked for rather than counted out of the four edges of a box, so the line a");
+  ("scan runs along and how far it may reach arrive together on the row itself.");
   let left = new Set();
   function key_of(x, y) {
     let key = text_combine_multiple([x, ",", y]);
@@ -42,13 +43,12 @@ export function tiles_rectangles(tiles) {
     left.add(key);
   }
   each(tiles, tile_note);
-  let sides = tiles_sides(tiles);
-  let x_least = property_get(sides, "left");
-  let x_most = property_get(sides, "right");
-  let y_least = property_get(sides, "top");
-  let y_most = property_get(sides, "bottom");
+  let rows = tiles_rows(tiles);
   let rectangles = [];
-  function row_scan(y) {
+  function row_scan(row) {
+    let y = property_get(row, "y");
+    let x_least = property_get(row, "left");
+    let x_most = property_get(row, "right");
     let r = tiles_rectangles_row_scan(
       y,
       key_of,
@@ -59,6 +59,6 @@ export function tiles_rectangles(tiles) {
     );
     return r;
   }
-  each_range_from(y_least, y_most, row_scan);
+  each(rows, row_scan);
   return rectangles;
 }
