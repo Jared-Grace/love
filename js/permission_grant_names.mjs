@@ -1497,7 +1497,7 @@ export function permission_grant_names() {
   );
   let spelled1461 = fn_name("ebible_languages_commercial");
   let spelled1462 = fn_name("ebible_versions_language_code_disagreements");
-  let spelled1463 = fn_name("app_ceb_bible_gloss_generate_upload_namespace");
+  let spelled1463 = fn_name("gloss_upload_namespace_ceb_bible");
   let spelled1464 = fn_name("functions_unreachable_statements_baseline_write");
   let spelled1465 = fn_name("js_function_forwarding_cases_gate_run");
   let spelled1466 = fn_name("js_function_parameter_call_sizes_cases_gate_run");
