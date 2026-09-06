@@ -1,10 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { tiles_sides } from "./tiles_sides.mjs";
-import { subtract } from "./subtract.mjs";
-import { add } from "./add.mjs";
+import { tiles_rows } from "./tiles_rows.mjs";
 import { list_get_wrap } from "./list_get_wrap.mjs";
-import { range_map } from "./range_map.mjs";
+import { object_copy_property_set } from "./object_copy_property_set.mjs";
+import { list_map_index } from "./list_map_index.mjs";
 export function bless_block_lanes(block) {
   arguments_assert(arguments, 1);
   ("The lanes of one block road: which row each one runs along, how far it reaches either");
@@ -27,26 +26,17 @@ export function bless_block_lanes(block) {
   ("two lines of cars are not one crowd.");
   ("Taken in turn and counted round, so a road of any depth alternates rather than needing a");
   ("list as long as it is deep.");
+  ("A LANE IS A ROW WITH A DIRECTION ON IT, and that is the whole of the difference between");
+  ("the two. The rows are asked for whole rather than counted out of the edges of a box, and");
+  ("what is added here is the one thing a row does not know: which way the traffic on it goes.");
   let road = property_get(block, "road");
-  let sides = tiles_sides(road);
-  let left = property_get(sides, "left");
-  let right = property_get(sides, "right");
-  let top = property_get(sides, "top");
-  let bottom = property_get(sides, "bottom");
-  let rows_below = subtract(bottom, top);
-  let rows = add(rows_below, 1);
+  let rows = tiles_rows(road);
   let ways = ["west", "east"];
-  function lane_at(index) {
-    let y = add(top, index);
+  function lane_at(row, index) {
     let way = list_get_wrap(ways, index);
-    let lane = {
-      y: y,
-      left: left,
-      right: right,
-      direction: way,
-    };
+    let lane = object_copy_property_set(row, "direction", way);
     return lane;
   }
-  let lanes = range_map(rows, lane_at);
+  let lanes = list_map_index(rows, lane_at);
   return lanes;
 }
