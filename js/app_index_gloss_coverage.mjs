@@ -30,8 +30,8 @@ export async function app_index_gloss_coverage() {
     let app_fn = property_get(store, "app_fn");
     async function chapters_ask() {
       let f_name = namespace_fn();
-      let chapter_codes = await firebase_function_chapters_uploaded(f_name);
-      return chapter_codes;
+      let fetched = await firebase_function_chapters_uploaded(f_name);
+      return fetched;
     }
     let chapter_codes = await catch_null_async(chapters_ask);
     let count = null;
