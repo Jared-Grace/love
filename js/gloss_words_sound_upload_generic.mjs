@@ -1,37 +1,54 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
+import { gloss_word_sound_voices } from "./gloss_word_sound_voices.mjs";
 import { text_ends_with } from "./text_ends_with.mjs";
+import { gloss_word_sound_voice_folder } from "./gloss_word_sound_voice_folder.mjs";
+import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { path_join } from "./path_join.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_map } from "./list_map.mjs";
+import { each_async } from "./each_async.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
 import { file_content_type } from "./file_content_type.mjs";
 import { cache_control_asset_value } from "./cache_control_asset_value.mjs";
 import { firebase_upload_settings } from "./firebase_upload_settings.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_wait } from "./list_wait.mjs";
 import { list_chunk } from "./list_chunk.mjs";
-import { each_async } from "./each_async.mjs";
 import { list_size } from "./list_size.mjs";
 export async function gloss_words_sound_upload_generic(sound_fn, path_get) {
   "Sends every recording of a single word up to storage, so a reader's phone can fetch the one it needs.";
   "★ IT SENDS ALL OF THEM AND NOT THE NEW ONES, WHICH IS WHAT MAKES IT SAFE TO RUN AT ANY MOMENT. Writing a file that is already there leaves it as it was, so there is nothing to work out beforehand and no state that can be wrong. Working out which ones changed would need a record of what went up last time, and a record like that is wrong the first time anything happens outside it.";
+  "★ IT WALKS THE CAST RATHER THAN THE DISK, WHICH IS HOW A VOICE STOPS BEING PUBLISHED. Each person's recordings sit in a folder of their own, and the voices worth sending are the ones the app actually cycles through. Taking a name off the cast is then enough to stop publishing that person - the recordings stay on this machine, costing nothing, in case they are wanted back - whereas walking the disk would go on sending up somebody nobody can hear.";
+  "The whole set is gathered first and sent in one run of handfuls rather than a handful per voice, because the limit worth respecting is how many writes storage has open at once and that is a fact about storage, not about who is speaking.";
   "They go up a handful at a time rather than all at once, because several hundred writes opened together is how a run ends in refusals rather than in files.";
   "Each one is written in a single go rather than resumably, for the same reason the pictures are: storage otherwise opens a handshake-then-bytes-then-finish session for every file, which is the wrong shape for something a few kilobytes long, and thirty-two of those at once is what a run of them looks like here.";
   "Each is described as the sound it is rather than left as a run of bytes, because a phone shown bytes offers to save the file instead of playing it - so the recording arrives whole and still nothing is heard.";
   arguments_assert(arguments, 2);
   let folder = local_function_folder(sound_fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
+  let voices = gloss_word_sound_voices();
+  let sounds = [];
   function sound_is(name) {
     let is = text_ends_with(name, ".mp3");
     return is;
   }
-  let sounds = list_filter(file_names, sound_is);
-  async function sound_each(name) {
-    let file_path = path_join([folder, name]);
+  async function voice_each(voice) {
+    let spoken = gloss_word_sound_voice_folder(folder, voice);
+    let names = await folder_read_files_exists_ensure(spoken);
+    let said = list_filter(names, sound_is);
+    function said_each(name) {
+      let relative = path_join([voice, name]);
+      list_add(sounds, relative);
+      return relative;
+    }
+    list_map(said, said_each);
+  }
+  await each_async(voices, voice_each);
+  async function sound_each(relative) {
+    let file_path = path_join([folder, relative]);
     let buffer = await file_read_buffer(file_path);
-    let destination = path_get(name);
-    let content_type = file_content_type(name);
+    let destination = path_get(relative);
+    let content_type = file_content_type(relative);
     let cache_control = cache_control_asset_value();
     let settings = {
       contentType: content_type,
@@ -51,6 +68,7 @@ export async function gloss_words_sound_upload_generic(sound_fn, path_get) {
   let chunks = list_chunk(sounds, at_once);
   await each_async(chunks, chunk_each);
   let r = {
+    voices: list_size(voices),
     uploaded: list_size(sounds),
   };
   return r;

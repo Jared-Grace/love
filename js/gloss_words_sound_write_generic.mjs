@@ -4,6 +4,7 @@ import { local_function_folder } from "./local_function_folder.mjs";
 import { path_join } from "./path_join.mjs";
 import { gloss_words_sound_pending_file } from "./gloss_words_sound_pending_file.mjs";
 import { folder_delete } from "./folder_delete.mjs";
+import { gloss_word_sound_voice_folder } from "./gloss_word_sound_voice_folder.mjs";
 import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
 import { gloss_word_sound_file_name } from "./gloss_word_sound_file_name.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -16,9 +17,10 @@ import { text_to_speech } from "./text_to_speech.mjs";
 export async function gloss_words_sound_write_generic(words, sound_fn, voice) {
   "$plain words";
   "$plain voice";
-  "Speaks every word one named voice has no recording of yet into the folder that function names, one sound file per word, filed under the word and the voice rather than under its turn in the queue.";
+  "Speaks every word one named voice has no recording of yet into that voice's folder inside the folder the given function names, one sound file per word, filed under the word rather than under its turn in the queue.";
   "★ ONLY THE WORDS WITH NO RECORDING ARE SPOKEN, WHICH IS WHAT MAKES THIS SAFE TO RUN AGAIN. A chapter authored next month adds a few dozen words to a list of thousands, and the engine takes about four seconds of this machine for every word it says - measured over a run of 1,634 words that took an hour and three quarters. Re-speaking the whole list to add forty words would be most of an afternoon for a few minutes of work, and a run that stopped halfway would have to start over rather than carry on.";
   "★ ONE VOICE PER CALL, AND THAT IS WHAT MAKES A CAST AFFORDABLE TO FILL IN PIECES. A voice is a full pass over the vocabulary, so the four of them are eight hours rather than two. Asked for a voice already recorded this finds nothing missing and returns without loading the engine at all, so the way to add a fourth voice is to name it and run the whole thing again - the three already done cost nothing the second time.";
+  "★ WHAT IS MISSING IS ASKED OF THE VOICE'S OWN FOLDER, WHICH IS WHY ADDING A VOICE COSTS NOTHING TO WORK OUT. Every voice keeps its recordings apart, so the question here is the plain one - what has this person not said yet - and it is answered by reading one folder rather than by picking one voice's files out of a pile of everybody's.";
   ("★ WHATEVER THE LAST RUN LEFT BEHIND IS FILED BEFORE ANYTHING ELSE HAPPENS, WHICH IS WHAT MAKES A RUN THAT DIED COST NOTHING. Until this line existed the working folder was deleted here instead, so a run stopped at any point lost every word it had already spoken - measured once at 1,367 words of 1,674, all of them good, all of them thrown away by the next run's first move. Filing them first turns starting again into carrying on, because the step after this one asks the folder what is missing and the words just filed are no longer in that answer. It is safe to do blindly: ",
     fn_name("gloss_word_sound_spoken_move"),
     " passes over a note whose recording never finished and passes over a word already recorded, so the worst a killed run can leave is something this step declines to touch.");
@@ -41,9 +43,10 @@ export async function gloss_words_sound_write_generic(words, sound_fn, voice) {
   let pending = path_join([folder, "pending"]);
   let resumed = await gloss_words_sound_pending_file(pending, folder, voice);
   await folder_delete(pending);
-  let present = await folder_read_files_exists_ensure(folder);
+  let spoken = gloss_word_sound_voice_folder(folder, voice);
+  let present = await folder_read_files_exists_ensure(spoken);
   function wanted_is(word) {
-    let name = gloss_word_sound_file_name(word, voice);
+    let name = gloss_word_sound_file_name(word);
     let absent = list_includes_not(present, name);
     return absent;
   }
