@@ -145,6 +145,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 1",
     },
     {
+      chapter_code: "2SA12",
+      reference: "2 Samuel 12",
+    },
+    {
       chapter_code: "1KI03",
       reference: "1 Kings 3",
     },
@@ -167,6 +171,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NEH09",
       reference: "Nehemiah 9",
+    },
+    {
+      chapter_code: "JOB28",
+      reference: "Job 28",
     },
     {
       chapter_code: "JOB42",
@@ -207,6 +215,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "PSA067",
       reference: "Psalm 67",
+    },
+    {
+      chapter_code: "PSA073",
+      reference: "Psalm 73",
     },
     {
       chapter_code: "PSA085",
@@ -289,8 +301,16 @@ export function bible_glyph_chapter_references() {
       reference: "Proverbs 8",
     },
     {
+      chapter_code: "ECC01",
+      reference: "Ecclesiastes 1",
+    },
+    {
       chapter_code: "SNG02",
       reference: "Song of Songs 2",
+    },
+    {
+      chapter_code: "SNG08",
+      reference: "Song of Songs 8",
     },
     {
       chapter_code: "ISA01",
@@ -407,6 +427,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "ZEC12",
       reference: "Zechariah 12",
+    },
+    {
+      chapter_code: "ZEC14",
+      reference: "Zechariah 14",
     },
     {
       chapter_code: "MAT05",
