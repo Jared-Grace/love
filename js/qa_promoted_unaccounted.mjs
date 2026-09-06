@@ -9,7 +9,7 @@ import { property_get } from "./property_get.mjs";
 import { firebase_prod_app_disk_hashes } from "./firebase_prod_app_disk_hashes.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { not } from "./not.mjs";
-export async function qa_promoted_unjudged() {
+export async function qa_promoted_unaccounted() {
   "The apps whose waiting pieces would go out on the next sending without anybody having shown them to be sound, each one with what is missing";
   "Sending puts out the whole folder at once, so whoever sends sends every app that is waiting, not only the one they came to send. An app somebody built by hand or dropped in from somewhere sits there looking exactly like one that was built properly, and rides out on the next sending under somebody else's name. This is the question that tells those apart, asked about all of them at once";
   "Only the apps that would actually change are asked about. An app whose waiting pieces are already the thing being served changes nothing by going out again, and demanding an account of it would hold every sending hostage to work that was finished and argued about long ago";
