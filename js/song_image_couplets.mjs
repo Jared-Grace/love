@@ -458,7 +458,7 @@ export function song_image_couplets() {
       first: "with no more sorrow",
       second: "no more pain",
       symbol:
-        "One wide river of blue water winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood standing on the bank at each side of the water and carrying six broad emerald green leaves, six on the one tree and six on the other, the branches of both trees reaching right out across the water so that leaves from either side cross over it and meet in the middle of the window, every branch and every leaf drawn on top of the water, the water showing only in the gaps between them, the band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of violet",
+        "One wide river of the water of life in light clear blue glass, clear as crystal, winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood standing on the bank at each side of the water and carrying six broad emerald green leaves, six on the one tree and six on the other, the branches of both trees reaching right out across the water so that leaves from either side cross over it and meet in the middle of the window, every branch and every leaf drawn on top of the water, the water showing only in the gaps between them, the band between the two lead lines one flat sheet of pale violet, the pale amethyst of the twelfth foundation stone of the holy city, and the band below them one flat sheet of violet, this couplet asking for that pale field here by name, and the head of the arch above them staying deep cobalt blue",
       symbol_ref: "Revelation 22:1-2",
       same_as: 0,
     },
