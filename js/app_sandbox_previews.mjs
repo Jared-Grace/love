@@ -1,7 +1,7 @@
-import { app_sandbox_previews_message_private_load } from "./app_sandbox_previews_message_private_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
+import { app_sandbox_previews_message_private_load } from "./app_sandbox_previews_message_private_load.mjs";
 export function app_sandbox_previews() {
   "registry of sandbox previews keyed by URL-hash name: add your own file plus one entry here, then open the sandbox app with #<name> — several people can each preview a different thing on the one sandbox app at once";
   "WHAT IS KEPT HERE IS A WAY TO FETCH EACH PREVIEW RATHER THAN THE PREVIEW ITSELF, so a visit downloads the one preview the address names instead of all of them. The page has only ever shown one at a time, and until now every registration was paid for by everybody: seven previews had grown it to a hundred and forty five KiB, of which two thirds could be reached by exactly one of the seven.";
@@ -34,6 +34,11 @@ export function app_sandbox_previews() {
     let r14 = m.app_sandbox_word_sound_preview;
     return r14;
   }
+  async function lyric_video_review_load() {
+    let m = await import("./lyric_video_review_preview.mjs");
+    let r15 = m.lyric_video_review_preview;
+    return r15;
+  }
   let previews = {
     code_review: code_review_load,
     spinner_preview: spinner_load,
@@ -47,6 +52,7 @@ export function app_sandbox_previews() {
     dream_prison: dream_prison_load,
     typing_box: typing_box_load,
     lyric_timing: lyric_timing_load,
+    lyric_video_review: lyric_video_review_load,
     word_sound: word_sound_load,
     message_private: app_sandbox_previews_message_private_load,
   };
