@@ -2,7 +2,7 @@ import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_
 import { ebible_chapter_code_to_name } from "./ebible_chapter_code_to_name.mjs";
 import { app_shared_button_list_centered } from "./app_shared_button_list_centered.mjs";
 import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
-import { app_shared_bible_picker_mark_current } from "./app_shared_bible_picker_mark_current.mjs";
+import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 export function app_shared_bible_chapters_render(
   card,
   items,
@@ -25,5 +25,5 @@ export function app_shared_bible_chapters_render(
     items,
     code_to_button_text,
   );
-  app_shared_bible_picker_mark_current(buttons, items, current_chapter_code);
+  app_shared_buttons_mark_current(buttons, items, current_chapter_code);
 }
