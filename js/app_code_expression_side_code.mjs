@@ -1,5 +1,5 @@
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_expression_side_bracket_is } from "./app_code_expression_side_bracket_is.mjs";
+import { app_code_expression_side_parenthesis_is } from "./app_code_expression_side_parenthesis_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_wrap_parenthesis } from "./js_code_wrap_parenthesis.mjs";
 export function app_code_expression_side_code(side, rank_least) {
@@ -7,7 +7,7 @@ export function app_code_expression_side_code(side, rank_least) {
   ("the code for one side of an operator, gathered into brackets when the operator on that side is weaker than rank_least");
   ("The side asks for the strength it needs rather than being told whether to bracket. A side that is only a value has no operator to be weaker, so it never brackets, and one whose operator is strong enough already reads in the right order on its own.");
   let code = app_code_expression_code(side);
-  let bracket = app_code_expression_side_bracket_is(side, rank_least);
+  let bracket = app_code_expression_side_parenthesis_is(side, rank_least);
   if (bracket) {
     let wrapped = js_code_wrap_parenthesis(code);
     return wrapped;
