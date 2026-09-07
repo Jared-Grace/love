@@ -1,13 +1,15 @@
 export function bible_glyph_undrawn_wanted() {
   "The words this picture Bible wants a picture for and still has none seated under, each with the fact that is blocking it.";
   "THIS IS THE THIRD OF THREE LISTS AND IT IS THE ONLY ONE THAT RECORDS WORK RATHER THAN A DECISION. One sibling holds the words drawn as nothing because a reader loses nothing. The other holds the words no single mark can carry because the sentence and not the word decides what they are doing. Both of those are answers. This list is the question, written down, so that a word nobody has chosen a picture for stops being indistinguishable from a word somebody decided against.";
-  "IT HAS BEEN THROUGH TWO PASSES AND BOTH TIMES MOST OF THE LIST LEFT IT, WHICH IS THE POINT OF IT. Thirty three words were measured first and twenty nine of them came back clean and are seated now. Eighty five more were measured after that and fifty eight of those were seated too. Every one went the same way - counted as plain English standing in a drawn verse, then looked up in the interlinear to see what Hebrew number it answers to and what share of that number it covers. What stays in this list is what the count refused, and nothing else.";
+  "IT HAS BEEN THROUGH TWO PASSES AND BOTH TIMES MOST OF THE LIST LEFT IT, WHICH IS THE POINT OF IT. Thirty three words were measured first and twenty nine of them came back clean and are seated now. Eighty five more were measured after that and fifty eight of those were seated too. Seventy five more went through a third time and thirty seven of those were seated. Every one went the same way - counted as plain English standing in a drawn verse, then looked up in the interlinear to see what Hebrew number it answers to and what share of that number it covers. What stays in this list is what the count refused, and nothing else.";
   "THE READING THAT DECIDED EACH ONE IS NOT A JUDGMENT ABOUT THE WORD, it is a count of what the interlinear says the Hebrew number means everywhere it stands. A single wording covering nearly every place is what makes a seat honest. A number split between two unrelated wordings has two meanings under one key, and a picture on it draws one of them and lies about the other. That is why the covenant was taken at two hundred and sixty four places out of two hundred and eighty three, and why the bone was refused at ninety out of a hundred and fifteen even though ninety is the larger want.";
   "EVERY REFUSAL HERE IS A SPLIT AND NOT AN ABSENCE, which makes these harder than the words that were never looked at. The word is wanted, the Hebrew is known, and the count is in hand. What blocks each one is that the number carries a second meaning the picture would say something false about. Nobody can fix that by drawing better. It is fixed by deciding whether the two meanings should be told apart, which is a decision about the text and not about the artwork.";
   "THE PROVISIONAL PICTURE IS THE ENGLISH WORD AND IT IS DELIBERATELY NOT A SEQUENCE OF MARKS ALREADY SEATED. This was tried and written down before, for the altar and for the priest, and the reason it failed is that a composite does not read as provisional. An altar built out of meat and fire says meat God. A priest built out of a person and oil says the Messiah. A reader has no way to see that a sequence is a placeholder, so the sequence is simply read, and read as a claim the text never made. The English word claims nothing it should not, prints in both the emoji text and the drawn text, and is how the altar and the priest already ship, so nothing new had to be built for the twenty nine to become provisional.";
-  "THE QUEUE BEHIND THIS LIST IS LONGER THAN THIS LIST. A hundred and forty two different English words were found standing plain in the drawn chapters, and a hundred and eighteen of them have now been measured against the interlinear. Twenty four have not. The rest are not absent from here because they were rejected; they are absent because nobody has done the reading yet, and saying that plainly is the difference between a short list and an honest one.";
+  "THE QUEUE BEHIND THIS LIST WAS A GUESS UNTIL THE THIRD PASS COUNTED EVERY WORD. The first two passes worked from a hand written list of a hundred and forty two English words somebody had noticed. The third pass counted instead - every plain English word standing in every drawn chapter, five thousand nine hundred and forty seven of them across four hundred and fifty three chapters, ranked by how many chapters each one stands in. That ranking turned up concrete nouns nobody had noticed, and it also said something the hand written list could never have said.";
+  "WHAT IS LEFT STANDING IN PLAIN ENGLISH IS MOSTLY NOT DRAWABLE, and that is a finding rather than a complaint. The words standing in the most chapters are like and away and also and until and must and only and surely and yet - verbs and adverbs and joining words. About forty of the top hundred and thirty are concrete nouns and roughly half of those were seated or refused in this pass. The noun queue is close to empty. What is left is grammar, and grammar is a different problem from a missing picture.";
   "A THIRD OUTCOME EXISTS AND IT IS NOT A REFUSAL, and two words found it. The wife and the palace were both written into this list as refusals and both were wrong to be here, because the number each one wants is already seated under a broader picture that is telling the truth. The word for a wife is the word for a woman and the woman mark is on it. The word for a palace is the word for a house and the house mark is on it. Neither reader loses anything, so neither word is work outstanding. A gate found both of these within a minute of being written, which is the argument for the gate.";
-  "FIFTEEN WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
+  "A REFUSAL CAN ALSO BE ANSWERED BY SEATING A DIFFERENT WORD, and the grain proved it. The grain sat here refused because the number the lines were asking for is the grain offering and not the crop, so a sheaf of wheat on it would have drawn a harvest where the text has a sacrifice. That reading was right and the conclusion was too small: the offering is a thing, it is one sense in a hundred and sixty of its two hundred and three wordings, and it can hold a picture of its own. It is seated now as the grain offering, beside the burnt offering, and the entry is gone from this list because the want it recorded has been met under the name the text actually uses. The gate caught the entry the moment the seat landed, which is the second time that gate has answered a question nobody thought to ask it.";
+  "TWENTY TWO WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
   let wanted = [
     {
       gloss: "elders",
@@ -35,12 +37,76 @@ export function bible_glyph_undrawn_wanted() {
         "the Hebrew word is as much the act of governing as the person who does it, and sixty in every hundred of its wordings are the verb. The balance picture is already seated on the Hebrew word for a judgment, so a judge picture here would put two marks from the same family on two different parts of speech and leave a reader to work out which is which.",
     },
     {
-      gloss: "grain",
-      strong: "4503",
-      wordings_for: 131,
-      wordings_total: 203,
+      gloss: "face",
+      root: "panim",
+      strong: "6440",
+      wordings_for: 275,
+      wordings_total: 1840,
       because:
-        "the count is real and the word is wrong. This number is the grain offering and the gift, not the grain, so most of what looks like a want for a crop is a want for a sacrifice. The grain itself is a different number with thirty nine places, which is too few and too narrow to carry the fifty three lines that asked for it.",
+        "this is the largest want on the whole list and the Hebrew word is a preposition. Only fifteen in every hundred of its wordings say face at all, and the wording it takes most often is before. A face drawn on this number would be drawn on the word for in front of, five times out of six.",
+    },
+    {
+      gloss: "anger",
+      root: "aph",
+      strong: "639",
+      wordings_for: 191,
+      wordings_total: 243,
+      because:
+        "the word is the nose. Anger is what the nose does in this language, and the wordings that are not anger are the literal nostrils of a person or an animal. Seventy nine in every hundred would take an anger picture and the rest would take a face part, and no one mark is honest about both.",
+    },
+    {
+      gloss: "head",
+      root: "rosh",
+      strong: "7218",
+      wordings_for: 332,
+      wordings_total: 571,
+      because:
+        "the head of a body, the chief of a people, the top of a hill and the beginning of a thing are all this one word, and only fifty eight in every hundred of its wordings are the head. A head picture would be read as a body part on the four lines in ten where the text means first or foremost.",
+    },
+    {
+      gloss: "mouth",
+      root: "peh",
+      strong: "6310",
+      wordings_for: 254,
+      wordings_total: 424,
+      because:
+        "the wording this number takes most often is command. The mouth of a person, the mouth of a cave, the edge of a sword and the word that comes out of a mouth are one word here, and a mouth picture claims the body part on all of them.",
+    },
+    {
+      gloss: "iniquity",
+      root: "avon",
+      strong: "5771",
+      wordings_for: 167,
+      wordings_total: 230,
+      because:
+        "the sin, the guilt that follows it and the punishment that answers it are one word, and a reader who is handed one mark for all three loses the thing the sentence is actually saying. Seventy three in every hundred is not enough when the difference is between what a person did and what is being done to them.",
+    },
+    {
+      gloss: "wing",
+      root: "kanaph",
+      strong: "3671",
+      wordings_for: 65,
+      wordings_total: 96,
+      because:
+        "the wing of a bird, the edge of a garment, the corner of the land and the skirt a man spreads over a woman are one word. A wing picture on the corner of a field is a bird where the text has a boundary.",
+    },
+    {
+      gloss: "joy",
+      root: "samach",
+      strong: "8055",
+      wordings_for: 148,
+      wordings_total: 243,
+      because:
+        "this number is the verb, not the feeling. Its wordings are rejoice and be glad and made glad, and a picture of joy sitting where the sentence has a thing being done would read as a noun and stop the line from working.",
+    },
+    {
+      gloss: "salt",
+      root: "melach",
+      strong: "4417",
+      wordings_for: 25,
+      wordings_total: 39,
+      because:
+        "the wording it takes most often is of Salt, which is the Salt Sea, a place name. A salt picture would put a handful of salt inside the name of a lake, which is the same refusal the river got over the Euphrates.",
     },
     {
       gloss: "censer",

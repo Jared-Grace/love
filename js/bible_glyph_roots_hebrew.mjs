@@ -2501,7 +2501,8 @@ export function bible_glyph_roots_hebrew() {
     },
     {
       root: "zera",
-      gloss: "seed, and the descendants that come from a person as seed comes from a plant",
+      gloss:
+        "seed, and the descendants that come from a person as seed comes from a plant",
       words: [
         {
           strong: "2233",
