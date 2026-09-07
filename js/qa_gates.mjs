@@ -1,3 +1,4 @@
+import { gloss_root_claimed_shape_gate_run } from "./gloss_root_claimed_shape_gate_run.mjs";
 import { lyric_video_screens_faults_cases_gate_run } from "./lyric_video_screens_faults_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
@@ -1011,6 +1012,7 @@ export function qa_gates() {
     bible_usfm_verse_end_read_cases_gate_run,
     lyric_video_bible_part_document_path_cases_gate_run,
     lyric_video_screens_faults_cases_gate_run,
+    gloss_root_claimed_shape_gate_run,
   ];
   return gates;
 }
