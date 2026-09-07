@@ -3,7 +3,7 @@ import { app_shared_screen_set_button_back_to } from "./app_shared_screen_set_bu
 import { app_shared_bible_picker_card } from "./app_shared_bible_picker_card.mjs";
 import { app_shared_bible_picker_buttons_equal_width } from "./app_shared_bible_picker_buttons_equal_width.mjs";
 import { verse_number_key } from "./verse_number_key.mjs";
-import { app_shared_bible_picker_mark_current } from "./app_shared_bible_picker_mark_current.mjs";
+import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_shared_bible_picker_buttons_enlarge } from "./app_shared_bible_picker_buttons_enlarge.mjs";
@@ -43,7 +43,7 @@ export async function app_shared_bible_verses(context) {
   app_shared_bible_picker_buttons_equal_width(buttons, items, identity);
   let property_name2 = verse_number_key();
   let current = property_get(r, property_name2);
-  app_shared_bible_picker_mark_current(buttons, items, current);
+  app_shared_buttons_mark_current(buttons, items, current);
   app_shared_screen_set_button_back_to(
     bar,
     context,
