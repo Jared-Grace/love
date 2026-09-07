@@ -37,12 +37,12 @@ export async function app_ceb_bible_apostrophe_pieces_unwritten() {
         list_add(apostrophed, token);
         return;
       }
-      let words = text_punctuation_dash_kept_split(token);
+      let token_words = text_punctuation_dash_kept_split(token);
       function word_hold(word) {
         let lowered = text_lower_to(word);
         property_set(alone, lowered, true);
       }
-      each(words, word_hold);
+      each(token_words, word_hold);
     }
     each(tokens, token_read);
   }
