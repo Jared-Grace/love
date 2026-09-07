@@ -1,3 +1,4 @@
+import { gloss_offenders_names_candidates_gate_run } from "./gloss_offenders_names_candidates_gate_run.mjs";
 import { gloss_explain_name_said_gate_run } from "./gloss_explain_name_said_gate_run.mjs";
 import { gloss_word_claims_chain_collapsed_gate_run } from "./gloss_word_claims_chain_collapsed_gate_run.mjs";
 import { gloss_classes_claimed_unvouched_gate_run } from "./gloss_classes_claimed_unvouched_gate_run.mjs";
@@ -1031,6 +1032,7 @@ export function qa_gates() {
     gloss_classes_claimed_unvouched_gate_run,
     gloss_word_claims_chain_collapsed_gate_run,
     gloss_explain_name_said_gate_run,
+    gloss_offenders_names_candidates_gate_run,
   ];
   return gates;
 }
