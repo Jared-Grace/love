@@ -265,6 +265,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 15",
     },
     {
+      chapter_code: "1SA20",
+      reference: "1 Samuel 20",
+    },
+    {
       chapter_code: "1SA24",
       reference: "1 Samuel 24",
     },
@@ -289,6 +293,14 @@ export function bible_glyph_chapter_references() {
       reference: "2 Samuel 12",
     },
     {
+      chapter_code: "1KI01",
+      reference: "1 Kings 1",
+    },
+    {
+      chapter_code: "1KI02",
+      reference: "1 Kings 2",
+    },
+    {
       chapter_code: "1KI03",
       reference: "1 Kings 3",
     },
@@ -305,12 +317,20 @@ export function bible_glyph_chapter_references() {
       reference: "1 Kings 13",
     },
     {
+      chapter_code: "1KI20",
+      reference: "1 Kings 20",
+    },
+    {
       chapter_code: "1KI21",
       reference: "1 Kings 21",
     },
     {
       chapter_code: "1KI22",
       reference: "1 Kings 22",
+    },
+    {
+      chapter_code: "2KI01",
+      reference: "2 Kings 1",
     },
     {
       chapter_code: "2KI02",
@@ -323,6 +343,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI09",
       reference: "2 Kings 9",
+    },
+    {
+      chapter_code: "2KI10",
+      reference: "2 Kings 10",
     },
     {
       chapter_code: "2KI11",
