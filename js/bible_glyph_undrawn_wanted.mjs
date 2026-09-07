@@ -6,10 +6,12 @@ export function bible_glyph_undrawn_wanted() {
   "EVERY REFUSAL HERE IS A SPLIT AND NOT AN ABSENCE, which makes these harder than the words that were never looked at. The word is wanted, the Hebrew is known, and the count is in hand. What blocks each one is that the number carries a second meaning the picture would say something false about. Nobody can fix that by drawing better. It is fixed by deciding whether the two meanings should be told apart, which is a decision about the text and not about the artwork.";
   "THE PROVISIONAL PICTURE IS THE ENGLISH WORD AND IT IS DELIBERATELY NOT A SEQUENCE OF MARKS ALREADY SEATED. This was tried and written down before, for the altar and for the priest, and the reason it failed is that a composite does not read as provisional. An altar built out of meat and fire says meat God. A priest built out of a person and oil says the Messiah. A reader has no way to see that a sequence is a placeholder, so the sequence is simply read, and read as a claim the text never made. The English word claims nothing it should not, prints in both the emoji text and the drawn text, and is how the altar and the priest already ship, so nothing new had to be built for the twenty nine to become provisional.";
   "THE QUEUE BEHIND THIS LIST IS LONGER THAN THIS LIST. A hundred and forty two different English words were found standing plain in the drawn chapters, and a hundred and eighteen of them have now been measured against the interlinear. Twenty four have not. The rest are not absent from here because they were rejected; they are absent because nobody has done the reading yet, and saying that plainly is the difference between a short list and an honest one.";
-  "SEVENTEEN WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
+  "A THIRD OUTCOME EXISTS AND IT IS NOT A REFUSAL, and two words found it. The wife and the palace were both written into this list as refusals and both were wrong to be here, because the number each one wants is already seated under a broader picture that is telling the truth. The word for a wife is the word for a woman and the woman mark is on it. The word for a palace is the word for a house and the house mark is on it. Neither reader loses anything, so neither word is work outstanding. A gate found both of these within a minute of being written, which is the argument for the gate.";
+  "FIFTEEN WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
   let wanted = [
     {
       gloss: "elders",
+      root: "zaqen",
       strong: "2205",
       wordings_for: 125,
       wordings_total: 176,
@@ -63,14 +65,6 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 28,
       because:
         "this is the cleanest entry in the list and it is here anyway. Twenty six of twenty eight wordings say the ark, and it is a different object from the chest of the covenant that is now seated - it is the boat Noah builds and the basket Moses floats in. One picture over both would say the covenant travelled in a boat. It is wanted, it is measured, and what it needs is a second picture rather than a decision.",
-    },
-    {
-      gloss: "wife",
-      strong: "802",
-      wordings_for: 365,
-      wordings_total: 717,
-      because:
-        "the woman and the wife are one Hebrew word and the split is almost exactly even. Three hundred and sixty five wordings say wife and the rest say woman or women. This is the largest word in the list by a long way and the least drawable, because a wife picture drawn on every woman in the Bible marries her to somebody, and a woman picture drawn on every wife takes the marriage out. The woman mark is already seated on this number, which is the safer half of the two.",
     },
     {
       gloss: "book",
@@ -135,14 +129,6 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 97,
       because:
         "the English word is two words and only one of them is here. The rest of the people is this number, meaning the remainder. Resting from work is a different Hebrew word entirely. A single rest picture would be drawn from an English accident rather than from anything the text says, which is the one mistake this whole list exists to catch.",
-    },
-    {
-      gloss: "palace",
-      strong: "1004",
-      wordings_for: 119,
-      wordings_total: 1919,
-      because:
-        "there is no palace in this vocabulary, there is only a house with a king in it. Six in a hundred of the wordings of the ordinary word for house say palace, and they say it because a translator judged the occupant rather than because the word changed. The house mark is already seated on this number and is the honest one.",
     },
   ];
   return wanted;
