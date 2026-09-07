@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_quiz_token_select_variations } from "./app_code_lesson_quiz_token_select_variations.mjs";
 import { list_map } from "./list_map.mjs";
@@ -5,7 +6,6 @@ import { list_join_space } from "./list_join_space.mjs";
 import { app_code_quiz_tile_arrangements_or_null } from "./app_code_quiz_tile_arrangements_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { app_code_quiz_dealing_alike_is } from "./app_code_quiz_dealing_alike_is.mjs";
 import { not } from "./not.mjs";
@@ -26,8 +26,7 @@ export function app_code_quiz_tile_arrangements_unpooled(code) {
     return none;
   }
   let arrangements = property_get(laid, "arrangements");
-  let written_all = list_map(arrangements, list_join_space);
-  let written_unique = list_unique(written_all);
+  let written_unique = list_map_unique(arrangements, list_join_space);
   let rejected = [];
   for (let written of written_unique) {
     let holds = list_includes(accepted, written);
