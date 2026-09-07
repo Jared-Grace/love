@@ -454,6 +454,122 @@ export function bible_glyph_characters() {
       name: "priest",
       character: "priest",
     },
+    {
+      name: "covenant",
+      character: "covenant",
+    },
+    {
+      name: "night",
+      character: "night",
+    },
+    {
+      name: "ark",
+      character: "ark",
+    },
+    {
+      name: "morning",
+      character: "morning",
+    },
+    {
+      name: "tent",
+      character: "tent",
+    },
+    {
+      name: "gold",
+      character: "gold",
+    },
+    {
+      name: "silver",
+      character: "silver",
+    },
+    {
+      name: "wine",
+      character: "wine",
+    },
+    {
+      name: "mother",
+      character: "mother",
+    },
+    {
+      name: "wilderness",
+      character: "wilderness",
+    },
+    {
+      name: "camp",
+      character: "camp",
+    },
+    {
+      name: "foot",
+      character: "foot",
+    },
+    {
+      name: "stone",
+      character: "stone",
+    },
+    {
+      name: "throne",
+      character: "throne",
+    },
+    {
+      name: "gate",
+      character: "gate",
+    },
+    {
+      name: "valley",
+      character: "valley",
+    },
+    {
+      name: "wisdom",
+      character: "wisdom",
+    },
+    {
+      name: "chariot",
+      character: "chariot",
+    },
+    {
+      name: "horse",
+      character: "horse",
+    },
+    {
+      name: "cloud",
+      character: "cloud",
+    },
+    {
+      name: "donkey",
+      character: "donkey",
+    },
+    {
+      name: "incense",
+      character: "incense",
+    },
+    {
+      name: "wall",
+      character: "wall",
+    },
+    {
+      name: "sabbath",
+      character: "sabbath",
+    },
+    {
+      name: "lion",
+      character: "lion",
+    },
+    {
+      name: "sackcloth",
+      character: "sackcloth",
+    },
+    {
+      name: "bed",
+      character: "bed",
+    },
+    {
+      name: "mule",
+      character: "mule",
+    },
+    {
+      name: "peace",
+      character: "peace",
+    },
   ];
   return characters;
 }
