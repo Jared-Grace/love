@@ -3,7 +3,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_expression_parentheses_worked_card } from "./app_code_lesson_expression_parentheses_worked_card.mjs";
-import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_either_side } from "./app_code_lesson_expression_choose_order_parentheses_either_side.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -25,7 +25,7 @@ export function app_code_lesson_expression_parentheses_or_intro(root) {
   let right_bracket = js_code_parenthesis_right();
   let heading_none = [];
   let heading_either =
-    app_code_lesson_expression_choose_order_brackets_either_side();
+    app_code_lesson_expression_choose_order_parentheses_either_side();
   let rule_card = app_code_container_light_blue(root);
   let inside_first = app_code_parentheses_inside_before_outside("");
   html_div_cycle_code(rule_card, [

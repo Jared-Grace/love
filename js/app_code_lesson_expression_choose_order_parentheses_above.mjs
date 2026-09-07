@@ -3,7 +3,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_sides_settled_tree } from "./app_code_lesson_expression_choose_order_sides_settled_tree.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
-import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_either_side } from "./app_code_lesson_expression_choose_order_parentheses_either_side.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
 import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
@@ -33,7 +33,7 @@ export function app_code_lesson_expression_choose_order_parentheses_above(
   );
   let heading_none = [];
   let heading_either =
-    app_code_lesson_expression_choose_order_brackets_either_side();
+    app_code_lesson_expression_choose_order_parentheses_either_side();
   let walks = [
     {
       heading: heading_none,
