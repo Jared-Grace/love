@@ -3,7 +3,7 @@ import { app_code_lesson_expression_choose_order_parentheses_title_name_id } fro
 import { app_code_lesson_expression_choose_order_parentheses_questions } from "./app_code_lesson_expression_choose_order_parentheses_questions.mjs";
 import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_above } from "./app_code_lesson_expression_choose_order_parentheses_above.mjs";
-export function app_code_lesson_expression_choose_order_brackets() {
+export function app_code_lesson_expression_choose_order_parentheses() {
   arguments_assert(arguments, 0);
   ("brackets round the || of a line that also holds an && , taken a press at a time: false && (true || true) or (true || false) && true, choose the || , choose what it comes to, then choose the && and what that comes to");
   ("The lesson before it gave the two operators an order against each other. This one takes that order away again in the one way a line is allowed to: a learner who has just been told the && goes first now meets a line where it does not, and the only thing on the screen saying so is the pair of marks.");
