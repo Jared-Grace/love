@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { gloss_words_drafted_file_path } from "./gloss_words_drafted_file_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -30,8 +31,7 @@ export async function gloss_repairs_words_write_generic(fn) {
   function entries_drafted_held(entries) {
     function entry_drafted_is(entry) {
       let spelled = property_get(entry, word_key);
-      let wanted = property_get_or_null(drafted, spelled);
-      let none = null_is(wanted);
+      let none = property_null_is(drafted, spelled);
       let held = not(none);
       return held;
     }
@@ -73,8 +73,7 @@ export async function gloss_repairs_words_write_generic(fn) {
   each(offenders, offender_read);
   await file_overwrite_json(path, repairs);
   function word_missing_is(word) {
-    let counted = property_get_or_null(sightings, word);
-    let none = null_is(counted);
+    let none = property_null_is(sightings, word);
     return none;
   }
   let missing = list_filter(words, word_missing_is);
