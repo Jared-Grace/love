@@ -3,10 +3,9 @@ import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { text_regex_first_groups } from "./text_regex_first_groups.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { gloss_root_named_cebuano_shaped_is } from "./gloss_root_named_cebuano_shaped_is.mjs";
+import { gloss_explain_roots_built_named } from "./gloss_explain_roots_built_named.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
+import { gloss_explain_roots_from_named } from "./gloss_explain_roots_from_named.mjs";
 export function gloss_explain_roots_named(explain) {
   "Every root a gloss explanation names, read in any of the four wordings that can be read from the explanation alone.";
   "$plain explain";
@@ -19,7 +18,7 @@ export function gloss_explain_roots_named(explain) {
   "★ A FIFTH IS KNOWN AND IS DELIBERATELY NOT READ, BECAUSE IT CANNOT BE READ FROM THE EXPLANATION ALONE. It opens with the root instead of the word - 'Buhat' is to do. 'Gi-' tells it from the side of the deed - so the first quoted word is the root rather than the headword, and the only thing that tells the two apart is the headword, which this is not given. Reading it needs a function taking the word as well, and inventing one here by guessing which quoted word is which would turn a wrong guess into a claimed root. The strict reader counted 409 sightings of the reversed shape, so the size of what is left unread is known and small beside the 68536.";
   "The wordings are asked strictest first and the first answer is handed back whole, so nothing that was already read changes and no explanation turns one claim into two.";
   "A shape whose only answers are filtered away is passed over rather than returned empty, so the shapes after it are still asked. That is what a wrongly matched meaning should cost - the sentence goes on being read - and not a silent empty answer.";
-  "The third shape has its own function because it is the ambiguous one and the argument about it needs an address. The other two say where a word came from and mean nothing else; that one says two things are the same and the store writes it for a root and for an English meaning alike.";
+  "Each of the four wordings has its own function rather than a pattern written out here, and the reason is a reader that needs to know which one answered. Given the word as well as the sentence, the third wording can have its one wrong answer settled and the other three must not be touched; a reader telling them apart by how many roots came back would filter the wrong sentences the moment two wordings returned the same number. An address cannot be confused with a count.";
   arguments_assert(arguments, 1);
   let claimed = gloss_explain_roots_claimed(explain);
   let claimed_count = list_size(claimed);
@@ -27,12 +26,7 @@ export function gloss_explain_roots_named(explain) {
   if (not(claimed_empty)) {
     return claimed;
   }
-  let built_pattern = new RegExp(
-    "built on\\s+['‘\"]([^'’\"]+?)[,.;:!?]?['’\"]",
-    "g",
-  );
-  let built_read = text_regex_first_groups(explain, built_pattern);
-  let built = list_filter(built_read, gloss_root_named_cebuano_shaped_is);
+  let built = gloss_explain_roots_built_named(explain);
   let built_count = list_size(built);
   let built_empty = equal(built_count, 0);
   if (not(built_empty)) {
@@ -44,11 +38,6 @@ export function gloss_explain_roots_named(explain) {
   if (not(self_empty)) {
     return self_named;
   }
-  let from_pattern = new RegExp(
-    "from\\s+['‘\"]([^'’\"]+?)[,.;:!?]?['’\"]",
-    "g",
-  );
-  let from_read = text_regex_first_groups(explain, from_pattern);
-  let from_named = list_filter(from_read, gloss_root_named_cebuano_shaped_is);
+  let from_named = gloss_explain_roots_from_named(explain);
   return from_named;
 }
