@@ -1,29 +1,21 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
-import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
+import { property_get } from "./property_get.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_letters_counted } from "./bible_words_letters_counted.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
-import { add } from "./add.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { property_initialize_list } from "./property_initialize_list.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { each_async } from "./each_async.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { text_split } from "./text_split.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
+import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   "Every root an explanation states outright, filed under the least written letter it holds, with the letters put in the order the Cebuano bible itself writes them.";
@@ -33,10 +25,10 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   "Every root a sentence names is asked about and not only the first, and the sightings are carried so that a habit of writing shows as its true weight rather than as one row.";
   "Nothing is written and nothing is asked of the site.";
   arguments_assert(arguments, 0);
-  let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
-  let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explain_key = gloss_entry_explain_key();
+  let gathered = await gloss_chapters_roots_claimed_gathered(
+    app_ceb_bible_gloss_generate,
+  );
+  let by_root = property_get(gathered, "by_root");
   let bible_folder = ebible_folder_cebuano();
   let counted = await bible_words_letters_counted(bible_folder);
   let letter_rows = property_get(counted, "letters");
@@ -47,64 +39,6 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
     property_set(letter_words, letter, words);
   }
   each(letter_rows, letter_note);
-  let strict_total = 0;
-  let roots_total = 0;
-  let by_root = {};
-  function entries_pass(entries) {
-    return entries;
-  }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        return;
-      }
-      let claimed = gloss_explain_roots_claimed(explain);
-      let claimed_count = list_size(claimed);
-      let empty = equal(claimed_count, 0);
-      if (empty) {
-        return;
-      }
-      strict_total = add(strict_total, 1);
-      let word = property_get(entry, word_key);
-      function root_read(stated) {
-        roots_total = add(roots_total, 1);
-        let root = text_lower_to(stated);
-        let row = property_get_or_null(by_root, root);
-        let fresh = null_is(row);
-        if (fresh) {
-          let made = {
-            stated_root: root,
-            rarest_letter: "",
-            letter_words: 0,
-            sightings: 0,
-            words: [],
-            chapters: [],
-            explain,
-          };
-          property_set(by_root, root, made);
-          row = made;
-        }
-        let seen = property_get(row, "sightings");
-        let value = add(seen, 1);
-        property_set(row, "sightings", value);
-        let words = property_initialize_list(row, "words");
-        let item = text_lower_to(word);
-        list_add_if_not_includes(words, item);
-        let chapters = property_initialize_list(row, "chapters");
-        list_add_if_not_includes(chapters, chapter_code);
-      }
-      each(claimed, root_read);
-    }
-    each(entries, entry_read);
-  }
-  await each_async(chapter_codes, chapter_read);
   let root_names = object_property_names(by_root);
   let by_letter = {};
   function root_file(name) {
@@ -167,10 +101,10 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   }
   list_sort_number_mapper(letters, bible_words_of);
   let r = {
-    chapters: list_size(chapter_codes),
-    strict_total,
-    roots_total,
-    roots_distinct: list_size(root_names),
+    chapters: property_get(gathered, "chapters"),
+    strict_total: property_get(gathered, "entries_claiming"),
+    roots_total: property_get(gathered, "roots_total"),
+    roots_distinct: property_get(gathered, "roots_distinct"),
     letters,
   };
   return r;
