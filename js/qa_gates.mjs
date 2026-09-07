@@ -708,6 +708,7 @@ export function qa_gates() {
     bible_glyph_gate_run,
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
+    bible_glyph_undrawn_lists_gate_run,
     bible_glyph_chapters_rosetta_lines_gate_run,
     bible_glyph_chapters_rosetta_lines_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_marks_gate_run,
