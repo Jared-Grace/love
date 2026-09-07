@@ -1,4 +1,5 @@
 import { reply_proposals_stale_gate_run } from "./reply_proposals_stale_gate_run.mjs";
+import { words_dash_pieces_absent_gate_run } from "./words_dash_pieces_absent_gate_run.mjs";
 import { reply_cases_gate_run } from "./reply_cases_gate_run.mjs";
 import { bible_verses_hyphen_pieces_unwritten_gate_run } from "./bible_verses_hyphen_pieces_unwritten_gate_run.mjs";
 import { bible_verses_hyphen_words_measured_gate_run } from "./bible_verses_hyphen_words_measured_gate_run.mjs";
@@ -1047,6 +1048,7 @@ export function qa_gates() {
     bible_verses_hyphen_pieces_unwritten_gate_run,
     reply_cases_gate_run,
     reply_proposals_stale_gate_run,
+    words_dash_pieces_absent_gate_run,
   ];
   return gates;
 }
