@@ -1,12 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { bible_words_sightings_lowered } from "./bible_words_sightings_lowered.mjs";
+import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { add } from "./add.mjs";
-import { each } from "./each.mjs";
 import { multiply } from "./multiply.mjs";
 import { text_size } from "./text_size.mjs";
 import { equal } from "./equal.mjs";
@@ -17,6 +15,7 @@ import { greater_than } from "./greater_than.mjs";
 import { text_edit_distance } from "./text_edit_distance.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -27,29 +26,15 @@ export function bible_words_slips(sightings, words, times) {
   "A misprint in a published translation reads exactly like a rare word, and every reading built on top treats it as one - it gets looked up, it gets a root invented for it, and it gets explained. The one thing that separates the two is the company it keeps: a real rare word has no near neighbour, while kanabuhi stands once against kinabuhi's six hundred, and panaagi once against pinaagi's two thousand. That gap is the whole signal.";
   "The commoner neighbour has to be far commoner, not merely commoner, and how far is asked for rather than decided here. Two spellings at a similar count are a translation using both, which is a fact about the language; a thousand to one is not.";
   "★ THIS PROPOSES AND NEVER RULES. Cebuano builds words by putting letters in, so a genuine pair can sit one edit apart - hinoon beside hinuon, and both are words. What comes back is a shortlist for somebody who reads the language, carrying the verse each word was first met in so they can rule without going back to the translation for it.";
+  "Every word given is measured against the whole vocabulary, which is the plain way and the slow one. It is the right way for a handful of words to examine; a reading that wants every word in the translation at once wants an index instead.";
   "$plain sightings";
   "$plain words";
   "$plain times";
   "the first names every word the translation uses with how often, the second the words to examine, the third how many times commoner a neighbour must be to be worth showing.";
   arguments_assert(arguments, 3);
-  let counts = {};
-  let firsts = {};
-  let spellings = object_property_names(sightings);
-  function spelling_note(spelling) {
-    let lower = text_lower_to(spelling);
-    let sighting = property_get(sightings, spelling);
-    let count = property_get(sighting, "count");
-    let so_far = property_get_or_null(counts, lower);
-    let fresh = null_is(so_far);
-    if (fresh) {
-      property_set(counts, lower, count);
-      property_set(firsts, lower, sighting);
-      return;
-    }
-    let more = add(so_far, count);
-    property_set(counts, lower, more);
-  }
-  each(spellings, spelling_note);
+  let lowered = bible_words_sightings_lowered(sightings);
+  let counts = property_get(lowered, "counts");
+  let firsts = property_get(lowered, "firsts");
   let vocabulary = object_property_names(counts);
   function word_examined(word) {
     let lower = text_lower_to(word);

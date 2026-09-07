@@ -1,7 +1,7 @@
-import { list_add_multiple } from "./list_add_multiple.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
+import { html_style_overflow_wrap } from "./html_style_overflow_wrap.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -32,6 +32,7 @@ import { list_map } from "./list_map.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_message_private_preview() {
   "Reads back what people have written in the message app, on the sandbox app at hash message_private: it first brings down anything the machine has not got yet, then shows the messages the reply rules answer, or the ones they do not, gathered into one thread per person, each message answered underneath by whatever the rules would have said to it.";
   "★ IT RUNS ON THE SERVING MACHINE AND SHOWS THE ANSWER HERE, WHICH IS THE ONLY WAY THIS PAGE COULD EXIST. The messages are kept in a folder outside every repo that nothing serves and no backup reaches, so a browser cannot open one; what it can do is ask the machine serving it to run a named command and hand back what that command answered. So this works on the dev server and nowhere else, and that is deliberate rather than a limitation - a published page that could read that folder would be the exact thing the folder exists to prevent.";
@@ -40,6 +41,7 @@ export async function app_message_private_preview() {
   "★ THE MESSAGES THE RULES BROKE ON SIT WITH THE UNANSWERED ONES, because that is what the choice asks. A message the rules threw part way through has no complete reply either; the difference is that it is a defect rather than a gap, and that difference is said on the message itself in red rather than by putting it somewhere a person would have to go looking for it.";
   "Both sides are worked out once, when the messages arrive, and choosing between them redraws from what is already held. Choosing is then instant and asks the machine nothing, which is what makes it worth having two buttons rather than two addresses.";
   "The count on each button is what makes the pair worth reading before either is pressed: the two numbers together say how much of what real people send the rules actually cover, which is the one number this whole screen exists to move.";
+  "★ A WORD TOO LONG FOR THE LINE IS BROKEN RATHER THAN LET PUSH THE PAGE SIDEWAYS. People send a name, a city and a phone number typed together with no spaces in it, and one such message widens every line on the screen to match - which carries the two buttons at the top off the side of the window, where they cannot be pressed. So it is set once here, on everything, rather than on the bubbles: what widens the page is a message, and what suffers is a button somewhere else entirely.";
   "★ EACH MESSAGE IS DRAWN BY THE SAME UNIT THE MESSAGE APP DRAWS ITS OWN WITH, so this reads as a thread of received messages rather than as a report about them. Everything that makes a received message look received is decided in that one place - how wide the bubble is, which edge it hangs from, its neutral fill, and which way the letters run - so a page that copied any of those would be a second opinion about all four, and would drift the first time one of them was improved.";
   "The two sides are asked for the way the message app asks for them and not the other way round: what somebody sent hangs from one edge with the neutral fill on it, and what goes back to them hangs from the other. So this screen and the app the person is looking at put the same two things on the same two sides, and a reply cannot be mistaken here for a message.";
   "★ THE REPLY UNDER EACH MESSAGE IS THE ONE THE RULES REALLY WOULD SEND, worked out by the same rule set the message app answers with, so this is a rehearsal rather than a description. The rules are a grammar - a message is walked through as characters and every rule that matches contributes what it says back - and the interesting question about a grammar is never what it does on the examples it was written from, but what it does on the whole heap of real messages nobody had in front of them when they wrote it. That is exactly what this screen is: every message ever received, each with the answer it would have got.";
@@ -55,6 +57,7 @@ export async function app_message_private_preview() {
   arguments_assert(arguments, 0);
   let root = html_body_div();
   html_font_sans_serif_set_html();
+  html_style_overflow_wrap(root, "anywhere");
   html_p_text(root, "What people have written, kept on this machine.");
   let status = html_p_text(root, "Bringing down anything new...");
   let chooser = html_div(root);
