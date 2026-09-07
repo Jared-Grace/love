@@ -4,7 +4,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
 import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
-import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } from "./app_code_lesson_expression_choose_order_brackets_moved_other_pair.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair } from "./app_code_lesson_expression_choose_order_parentheses_and_or_other_pair.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_intro } from "./app_code_lesson_expression_choose_order_parentheses_and_or_intro.mjs";
@@ -40,7 +40,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_above
   );
   let heading_none = [];
   let heading_other =
-    app_code_lesson_expression_choose_order_brackets_moved_other_pair();
+    app_code_lesson_expression_choose_order_parentheses_and_or_other_pair();
   let walks = [
     {
       heading: heading_none,

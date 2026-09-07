@@ -1,7 +1,7 @@
 import { each } from "./each.mjs";
 import { app_code_lesson_expression_brackets_worked_card } from "./app_code_lesson_expression_brackets_worked_card.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
-import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } from "./app_code_lesson_expression_choose_order_brackets_moved_other_pair.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair } from "./app_code_lesson_expression_choose_order_parentheses_and_or_other_pair.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -17,7 +17,7 @@ export function app_code_lesson_expression_parentheses_and_or_intro(root) {
   let right_bracket = js_code_parenthesis_right();
   let heading_none = [];
   let heading_other =
-    app_code_lesson_expression_choose_order_brackets_moved_other_pair();
+    app_code_lesson_expression_choose_order_parentheses_and_or_other_pair();
   app_code_container_light_blue_cycle_code(root, [
     "Whatever is inside ",
     left_bracket,
