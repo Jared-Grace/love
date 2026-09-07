@@ -8,7 +8,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_true_false_word } from "./js_true_false_word.mjs";
 import { or } from "./or.mjs";
 import { ternary } from "./ternary.mjs";
-export function app_code_lesson_expression_brackets_worked_card({
+export function app_code_lesson_expression_parentheses_worked_card({
   root,
   heading,
   left,

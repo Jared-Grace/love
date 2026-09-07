@@ -1,5 +1,5 @@
 import { each } from "./each.mjs";
-import { app_code_lesson_expression_brackets_worked_card } from "./app_code_lesson_expression_brackets_worked_card.mjs";
+import { app_code_lesson_expression_parentheses_worked_card } from "./app_code_lesson_expression_parentheses_worked_card.mjs";
 import { app_code_container_light_blue_cycle_code } from "./app_code_container_light_blue_cycle_code.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair } from "./app_code_lesson_expression_choose_order_parentheses_and_or_other_pair.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,6 +46,6 @@ export function app_code_lesson_expression_parentheses_and_or_intro(root) {
         inner_or: true,
       },
     ],
-    app_code_lesson_expression_brackets_worked_card,
+    app_code_lesson_expression_parentheses_worked_card,
   );
 }
