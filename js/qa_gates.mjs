@@ -1,3 +1,4 @@
+import { gloss_roots_pair_dictionary_verdict_gate_run } from "./gloss_roots_pair_dictionary_verdict_gate_run.mjs";
 import { gloss_root_named_reversed_gate_run } from "./gloss_root_named_reversed_gate_run.mjs";
 import { gloss_root_named_word_spelled_in_gate_run } from "./gloss_root_named_word_spelled_in_gate_run.mjs";
 import { gloss_store_words_read_gate_run } from "./gloss_store_words_read_gate_run.mjs";
@@ -1055,6 +1056,7 @@ export function qa_gates() {
     reply_proposals_stale_gate_run,
     words_dash_pieces_absent_gate_run,
     gloss_store_words_read_gate_run,
+    gloss_roots_pair_dictionary_verdict_gate_run,
   ];
   return gates;
 }
