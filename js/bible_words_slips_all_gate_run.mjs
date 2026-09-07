@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -46,8 +47,9 @@ export function bible_words_slips_all_gate_run() {
     };
     let wrong = json_equal_not(got, expected);
     if (wrong) {
+      let f_name = fn_name("bible_words_slips_all");
       let defect =
-        text_combine_multiple([fn_name("bible_words_slips_all"), " from "]) +
+        text_combine_multiple([f_name, " from "]) +
         letters +
         " letters up answered " +
         json_text(got) +
@@ -60,8 +62,9 @@ export function bible_words_slips_all_gate_run() {
   each(askings, asking_checked);
   let failed = list_empty_not_is(defects);
   if (failed) {
+    let f_name2 = fn_name("bible_words_slips_all_gate_run");
     throw new Error(
-      text_combine_multiple([fn_name("bible_words_slips_all_gate_run"), ": "]) +
+      text_combine_multiple([f_name2, ": "]) +
         list_size(defects) +
         " of " +
         list_size(askings) +
