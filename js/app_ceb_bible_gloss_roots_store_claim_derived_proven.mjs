@@ -45,7 +45,8 @@ export async function app_ceb_bible_gloss_roots_store_claim_derived_proven() {
     let before = property_get_or_null(by_relation, relation);
     let none = null_is(before);
     let count = none ? 0 : before;
-    property_set(by_relation, relation, add(count, 1));
+    let value = add(count, 1);
+    property_set(by_relation, relation, value);
     list_add(proven, {
       word: property_get(claim, "word"),
       said: said,
