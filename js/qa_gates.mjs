@@ -1,3 +1,4 @@
+import { bible_glyph_undrawn_lists_gate_run } from "./bible_glyph_undrawn_lists_gate_run.mjs";
 import { gloss_explain_root_before_said_gate_run } from "./gloss_explain_root_before_said_gate_run.mjs";
 import { gloss_roots_pair_dictionary_verdict_gate_run } from "./gloss_roots_pair_dictionary_verdict_gate_run.mjs";
 import { gloss_root_named_reversed_gate_run } from "./gloss_root_named_reversed_gate_run.mjs";
