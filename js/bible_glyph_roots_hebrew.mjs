@@ -2113,6 +2113,422 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "oyeb",
+      gloss: "the enemy, the one who is hostile",
+      words: [
+        {
+          strong: "341",
+          glyph: "enemy",
+        },
+      ],
+    },
+    {
+      root: "zebach",
+      gloss: "a sacrifice, the animal killed and offered",
+      words: [
+        {
+          strong: "2077",
+          glyph: "sacrifice",
+        },
+      ],
+    },
+    {
+      root: "nachalah",
+      gloss: "the inheritance, the portion handed down",
+      words: [
+        {
+          strong: "5159",
+          glyph: "inheritance",
+        },
+      ],
+    },
+    {
+      root: "olah",
+      gloss: "the burnt offering, the whole animal burned",
+      words: [
+        {
+          strong: "5930",
+          glyph: "burnt_offering",
+        },
+      ],
+    },
+    {
+      root: "minchah",
+      gloss: "the grain offering, the gift brought",
+      words: [
+        {
+          strong: "4503",
+          glyph: "grain_offering",
+        },
+      ],
+    },
+    {
+      root: "qedem",
+      gloss: "the east, and what is in front, and long ago",
+      words: [
+        {
+          strong: "6921",
+          glyph: "east",
+        },
+      ],
+    },
+    {
+      root: "mizrach",
+      gloss: "the east, where the sun rises",
+      words: [
+        {
+          strong: "4217",
+          glyph: "east",
+        },
+      ],
+    },
+    {
+      root: "shemen",
+      gloss: "oil, the olive oil",
+      words: [
+        {
+          strong: "8081",
+          glyph: "oil",
+        },
+      ],
+    },
+    {
+      root: "yitshar",
+      gloss: "fresh oil, the oil of the new harvest",
+      words: [
+        {
+          strong: "3323",
+          glyph: "oil",
+        },
+      ],
+    },
+    {
+      root: "atarah",
+      gloss: "a crown",
+      words: [
+        {
+          strong: "5850",
+          glyph: "crown",
+        },
+      ],
+    },
+    {
+      root: "kokab",
+      gloss: "a star",
+      words: [
+        {
+          strong: "3556",
+          glyph: "star",
+        },
+      ],
+    },
+    {
+      root: "epher",
+      gloss: "ashes",
+      words: [
+        {
+          strong: "665",
+          glyph: "ashes",
+        },
+      ],
+    },
+    {
+      root: "magen",
+      gloss: "a shield",
+      words: [
+        {
+          strong: "4043",
+          glyph: "shield",
+        },
+      ],
+    },
+    {
+      root: "chanith",
+      gloss: "a spear",
+      words: [
+        {
+          strong: "2595",
+          glyph: "spear",
+        },
+      ],
+    },
+    {
+      root: "romach",
+      gloss: "a spear, the long thrusting one",
+      words: [
+        {
+          strong: "7420",
+          glyph: "spear",
+        },
+      ],
+    },
+    {
+      root: "ol",
+      gloss: "a yoke, the bar on the neck of an animal",
+      words: [
+        {
+          strong: "5923",
+          glyph: "yoke",
+        },
+      ],
+    },
+    {
+      root: "naal",
+      gloss: "a sandal",
+      words: [
+        {
+          strong: "5275",
+          glyph: "sandal",
+        },
+      ],
+    },
+    {
+      root: "ner",
+      gloss: "a lamp",
+      words: [
+        {
+          strong: "5216",
+          glyph: "lamp",
+        },
+      ],
+    },
+    {
+      root: "challon",
+      gloss: "a window",
+      words: [
+        {
+          strong: "2474",
+          glyph: "window",
+        },
+      ],
+    },
+    {
+      root: "nechosheth",
+      gloss: "bronze",
+      words: [
+        {
+          strong: "5178",
+          glyph: "bronze",
+        },
+        {
+          strong: "5154",
+          glyph: "bronze",
+        },
+      ],
+    },
+    {
+      root: "barzel",
+      gloss: "iron",
+      words: [
+        {
+          strong: "1270",
+          glyph: "iron",
+        },
+        {
+          strong: "6523",
+          glyph: "iron",
+        },
+      ],
+    },
+    {
+      root: "erez",
+      gloss: "a cedar",
+      words: [
+        {
+          strong: "730",
+          glyph: "cedar",
+        },
+      ],
+    },
+    {
+      root: "teenah",
+      gloss: "a fig, and the fig tree",
+      words: [
+        {
+          strong: "8384",
+          glyph: "fig",
+        },
+      ],
+    },
+    {
+      root: "chittah",
+      gloss: "wheat",
+      words: [
+        {
+          strong: "2406",
+          glyph: "wheat",
+        },
+      ],
+    },
+    {
+      root: "seorah",
+      gloss: "barley",
+      words: [
+        {
+          strong: "8184",
+          glyph: "barley",
+        },
+      ],
+    },
+    {
+      root: "soleth",
+      gloss: "fine flour",
+      words: [
+        {
+          strong: "5560",
+          glyph: "flour",
+        },
+      ],
+    },
+    {
+      root: "qemach",
+      gloss: "flour, the ground meal",
+      words: [
+        {
+          strong: "7058",
+          glyph: "flour",
+        },
+      ],
+    },
+    {
+      root: "gan",
+      gloss: "a garden, the walled planted ground",
+      words: [
+        {
+          strong: "1588",
+          glyph: "garden",
+        },
+        {
+          strong: "1593",
+          glyph: "garden",
+        },
+      ],
+    },
+    {
+      root: "tal",
+      gloss: "dew",
+      words: [
+        {
+          strong: "2919",
+          glyph: "dew",
+        },
+        {
+          strong: "2920",
+          glyph: "dew",
+        },
+      ],
+    },
+    {
+      root: "zeeb",
+      gloss: "a wolf",
+      words: [
+        {
+          strong: "2061",
+          glyph: "wolf",
+        },
+      ],
+    },
+    {
+      root: "shual",
+      gloss: "a fox, and the jackal",
+      words: [
+        {
+          strong: "7776",
+          glyph: "fox",
+        },
+      ],
+    },
+    {
+      root: "tsephardea",
+      gloss: "a frog",
+      words: [
+        {
+          strong: "6854",
+          glyph: "frog",
+        },
+      ],
+    },
+    {
+      root: "aqrab",
+      gloss: "a scorpion",
+      words: [
+        {
+          strong: "6137",
+          glyph: "scorpion",
+        },
+      ],
+    },
+    {
+      root: "maqom",
+      gloss: "a place, the spot where something stands",
+      words: [
+        {
+          strong: "4725",
+          glyph: "place",
+        },
+      ],
+    },
+    {
+      root: "sadeh",
+      gloss: "a field, and the open country outside the town",
+      words: [
+        {
+          strong: "7704",
+          glyph: "field",
+        },
+      ],
+    },
+    {
+      root: "peri",
+      gloss: "fruit, and what anything produces",
+      words: [
+        {
+          strong: "6529",
+          glyph: "fruit",
+        },
+      ],
+    },
+    {
+      root: "aphar",
+      gloss: "dust, and the dry loose ground",
+      words: [
+        {
+          strong: "6083",
+          glyph: "dust",
+        },
+      ],
+    },
+    {
+      root: "zera",
+      gloss: "seed, and the descendants that come from a person as seed comes from a plant",
+      words: [
+        {
+          strong: "2233",
+          glyph: "seed",
+        },
+      ],
+    },
+    {
+      root: "qatsir",
+      gloss: "the harvest, the reaping and what is reaped",
+      words: [
+        {
+          strong: "7105",
+          glyph: "harvest",
+        },
+      ],
+    },
+    {
+      root: "chuqqah",
+      gloss: "a statute, a thing laid down to be kept",
+      words: [
+        {
+          strong: "2708",
+          glyph: "statute",
+        },
+      ],
+    },
   ];
   return roots;
 }
