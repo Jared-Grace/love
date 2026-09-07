@@ -17,7 +17,7 @@ export function words_dash_pieces_absent(words) {
   "A reader that cuts at every dash turns one word into several. Some of what it makes is there anyway - Cebuano writes pag-ayo and also writes ayo - and the rest is not: nothing in the list spells panan, or aw, and after the cut both stand in it as words. This says which of the two each piece is, and it asks the list itself rather than a dictionary, so the answer is about the very words in front of it and cannot be out of date.";
   "★ THE LIST IS BOTH THE QUESTION AND THE ANSWER, WHICH IS WHAT LETS THIS DISAGREE. A piece counts as present only because some word in the same list spells it alone, so adding that word takes the piece off the list and taking it away puts it back. A check that instead asked somewhere else what a word is could only ever have said yes.";
   "A word is compared in small letters, because a word that only ever opens a sentence is held with a capital and is the same word as its piece.";
-  "A dash standing at either end of a word cuts nothing off, so no empty piece is reported. A word ending in one is a word with a dash between it and whatever came next, which is a different thing from a dash inside a word and is not what this counts.";
+  "A dash standing at either end of a word cuts nothing off, so no empty piece is reported. A word wearing a dash on its end is still counted among the dashed words, since it does carry one, but the nothing on the far side of that dash is not named as a piece the list is missing.";
   "$plain words";
   "it names words to read, never anything that runs.";
   let held = {};

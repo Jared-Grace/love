@@ -8,6 +8,7 @@ export function reply_proposals() {
   ("★ THE REPLIES GO OUT UNDER ONE PERSON'S NAME, SO THAT PERSON DECIDES THE WORDING BEFORE IT SHIPS AND NOT AFTER. A rule set that is edited and then shown is a rule set that has already spoken for somebody; written down here first, the change can be read on a phone, argued with, and turned down, and the code is untouched the whole time. That is the whole reason this list exists rather than a branch.");
   ("Each one records what it was measured to do rather than describing it. A proposal that says what it intends is a claim about a grammar, and a grammar is exactly the kind of thing whose behaviour cannot be read off its intention - the pieces are chosen by what matches, so a rule aimed at one message routinely lands on another.");
   ("The reply is asked for rather than written out, so a proposal cannot promise words that are no longer the words. What it is promising is that these messages start reaching the greeting that is already written, and that promise stays true when the greeting is reworded.");
+  ("★ EVERY LINE IS WRITTEN WITH ITS SIGN FIRST AND THEN THE SOURCE LINE EXACTLY AS THE FILE HOLDS IT, INDENTATION AND WRAPPING AND ALL. The gate beside this checks each unsigned line against the file, so a line tidied up while writing it out here reads as the code having moved on. That is not fussiness - it was caught doing exactly that, on a call the canonicalizing pass had broken over four lines.");
   ("The questions at the end are the ones nobody else can answer. They are kept beside the change rather than in a message, because the change is what they are about and a message is read once.");
   let greeting = reply_response_greetings();
   let said = [greeting];
@@ -16,22 +17,22 @@ export function reply_proposals() {
     fn: fn_name("app_message_reply_greeting"),
     diff: [
       text_combine_multiple([
-        "  let greeting_response = ",
+        "   let greeting_response = ",
         fn_name("reply_response_greetings"),
         "();",
       ]),
       text_combine_multiple([
-        "  let hello = ",
+        "   let hello = ",
         fn_name("reply_word_hello"),
         "();",
       ]),
       text_combine_multiple([
-        "+ let time_of_day = ",
+        "+  let time_of_day = ",
         fn_name("reply_choice"),
         '(["morning", "afternoon", "evening"]);',
       ]),
       text_combine_multiple([
-        "+ let good_time = ",
+        "+  let good_time = ",
         fn_name("reply_sequence"),
         '(["good", time_of_day]);',
       ]),
@@ -41,21 +42,24 @@ export function reply_proposals() {
         '(["hi", hello, "hey"]);',
       ]),
       text_combine_multiple([
-        "+ let hi_word = ",
+        "+  let hi_word = ",
         fn_name("reply_choice"),
         '(["hi", hello, "hey", good_time]);',
       ]),
       text_combine_multiple([
-        "  let my_dear_brother = ",
+        "   let my_dear_brother = ",
         fn_name("reply_phrase_my_dear_brother"),
         "();",
       ]),
       text_combine_multiple([
-        "  let greeting = ",
+        "   let greeting = ",
         fn_name("reply_sequence_output"),
-        "([hi_word, my_dear_brother], greeting_response);",
+        "(",
       ]),
-      "  return greeting;",
+      "     [hi_word, my_dear_brother],",
+      "     greeting_response,",
+      "   );",
+      "   return greeting;",
     ],
     cases: [
       {
