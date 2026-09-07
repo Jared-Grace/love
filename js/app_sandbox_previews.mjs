@@ -39,6 +39,11 @@ export function app_sandbox_previews() {
     let r15 = m.lyric_video_review_preview;
     return r15;
   }
+  async function reply_rules_load() {
+    let m = await import("./app_reply_rules_preview.mjs");
+    let r16 = m.app_reply_rules_preview;
+    return r16;
+  }
   let previews = {
     code_review: code_review_load,
     spinner_preview: spinner_load,
@@ -55,6 +60,7 @@ export function app_sandbox_previews() {
     lyric_video_review: lyric_video_review_load,
     word_sound: word_sound_load,
     message_private: app_sandbox_previews_message_private_load,
+    reply_rules: reply_rules_load,
   };
   return previews;
 }
