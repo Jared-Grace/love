@@ -1,243 +1,68 @@
 export function bible_glyph_undrawn_wanted() {
-  "The words this picture Bible wants a picture for and has none seated under, each with how often it is already standing as plain English in a drawn page.";
+  "The words this picture Bible wants a picture for and still has none seated under, each with the fact that is blocking it.";
   "THIS IS THE THIRD OF THREE LISTS AND IT IS THE ONLY ONE THAT RECORDS WORK RATHER THAN A DECISION. One sibling holds the words drawn as nothing because a reader loses nothing. The other holds the words no single mark can carry because the sentence and not the word decides what they are doing. Both of those are answers. This list is the question, written down, so that a word nobody has chosen a picture for stops being indistinguishable from a word somebody decided against.";
-  "WITHOUT THIS LIST THE PAGE CANNOT TELL A READER APART FROM ITSELF. A word with no seating prints as plain English, and so does a word that was deliberately left plain, and so does a word whose mark was taken off because it would have lied. Three different facts, one appearance. That is tolerable while the collection is small and it is not tolerable at two hundred chapters, because the only person who can tell them apart is whoever happened to author the page.";
-  "THE COUNT BESIDE EACH WORD IS EVIDENCE AND IT IS A FLOOR, NOT A FIGURE. It was measured by reading every drawn chapter file, taking only the verses, and counting the word where it stands as plain English. A concept the translation phrased another way is not counted at all, so the true want is larger than every number here. One of the words carries a second English sense and its number is therefore also an upper bound, which is said next to it rather than quietly corrected, because a reader who can see the ambiguity can argue with it.";
-  "THE POINT OF COUNTING IS THAT A PICTURE COSTS SOMETHING AND A LIST OF WISHES DOES NOT RANK ITSELF. A word wanted in forty five chapters and a word wanted in two are both real wants, and they are not the same purchase. Every entry here can be argued about on the evidence beside it instead of on how strongly whoever wrote it felt at the time.";
-  "THE PROVISIONAL PICTURE IS THE ENGLISH WORD AND IT IS DELIBERATELY NOT A SEQUENCE OF MARKS ALREADY SEATED. This was tried and written down before, for the altar and for the priest, and the reason it failed is that a composite does not read as provisional. An altar built out of meat and fire says meat God. A priest built out of a person and oil says the Messiah. A reader has no way to see that a sequence is a placeholder, so the sequence is simply read, and read as a claim the text never made. The English word claims nothing it should not, prints in both the emoji text and the drawn text, and is already how the altar and the priest ship today, so nothing new has to be built for any word on this list to become provisional.";
-  "NO HEBREW ROOT AND NO STRONG NUMBER IS WRITTEN HERE, ON PURPOSE. What is known is that the English word stands undrawn and how often. Which root it should be seated under is a second decision, and it is not always one root - a throne, a wall and a gate each answer to more than one Hebrew word, and choosing among them is exactly the judgment this list exists to hand over rather than to make. A number invented to make the row look complete would be worse than a blank, because a later reader could not tell it from a measured one.";
-  "THIRTY THREE WORDS, THE MOST FREQUENT STANDING IN NINETY NINE LINES AND THE LEAST FREQUENT IN FOUR. The smallest are here because a low count is not a weak case: the censer is the object the whole of the sixteenth chapter of Numbers turns on, and the mule is what settles who is king in the first chapter of First Kings.";
+  "IT HELD THIRTY THREE WORDS AND IT NOW HOLDS SEVEN, AND THE DIFFERENCE IS THE POINT OF IT. Every one of the thirty three was measured the same way - counted as plain English standing in a drawn verse, then looked up in the interlinear to see what Hebrew number it answers to and what share of that number it covers. Twenty nine came back clean and are seated now, drawing their own English word until an artwork exists. Seven did not, and those are what is left here.";
+  "THE READING THAT DECIDED EACH ONE IS NOT A JUDGMENT ABOUT THE WORD, it is a count of what the interlinear says the Hebrew number means everywhere it stands. A single wording covering nearly every place is what makes a seat honest. A number split between two unrelated wordings has two meanings under one key, and a picture on it draws one of them and lies about the other. That is why the covenant was taken at two hundred and sixty four places out of two hundred and eighty three, and why the bone was refused at ninety out of a hundred and fifteen even though ninety is the larger want.";
+  "EVERY REFUSAL HERE IS A SPLIT AND NOT AN ABSENCE, which makes these harder than the words that were never looked at. The word is wanted, the Hebrew is known, and the count is in hand. What blocks each one is that the number carries a second meaning the picture would say something false about. Nobody can fix that by drawing better. It is fixed by deciding whether the two meanings should be told apart, which is a decision about the text and not about the artwork.";
+  "THE PROVISIONAL PICTURE IS THE ENGLISH WORD AND IT IS DELIBERATELY NOT A SEQUENCE OF MARKS ALREADY SEATED. This was tried and written down before, for the altar and for the priest, and the reason it failed is that a composite does not read as provisional. An altar built out of meat and fire says meat God. A priest built out of a person and oil says the Messiah. A reader has no way to see that a sequence is a placeholder, so the sequence is simply read, and read as a claim the text never made. The English word claims nothing it should not, prints in both the emoji text and the drawn text, and is how the altar and the priest already ship, so nothing new had to be built for the twenty nine to become provisional.";
+  "THE QUEUE BEHIND THIS LIST IS LONGER THAN THIS LIST. A hundred and forty two different English words were found standing plain in the drawn chapters, and only thirty three of them have been measured against the interlinear so far. The rest are not absent from here because they were rejected; they are absent because nobody has done the reading yet, and saying that plainly is the difference between a short list and an honest one.";
+  "SEVEN WORDS, AND THE LARGEST OF THEM IS WANTED IN THIRTY SEVEN CHAPTERS.";
   let wanted = [
     {
-      gloss: "covenant",
-      lines: 99,
-      chapters: 45,
-      because:
-        "it is the most frequent undrawn word in the collection and it is the word the Old Testament is organised around. Every promise God binds himself with is one, and a reader following pictures sees the promise made and has nothing that says a promise was made.",
-    },
-    {
-      gloss: "night",
-      lines: 95,
-      chapters: 59,
-      because:
-        "it is in more chapters than any other word here, and it is almost always doing something rather than telling the time - it is when the angel passes over, when Jacob wrestles, when the army leaves. The day is drawn and its opposite is not.",
-    },
-    {
-      gloss: "ark",
-      lines: 93,
-      chapters: 19,
-      because:
-        "it is the most concentrated want in the list, ninety three lines inside nineteen chapters, because a chapter that mentions it at all is usually about it. It is also two different objects in this Bible - the box Noah builds and the box the covenant travels in - and both are undrawable today.",
-    },
-    {
-      gloss: "morning",
-      lines: 90,
-      chapters: 52,
-      because:
-        "it opens more scenes than any other word here. Rising early is how the text says somebody meant it, and the picture line loses the whole of that emphasis.",
-    },
-    {
-      gloss: "tent",
-      lines: 83,
-      chapters: 32,
-      because:
-        "it is where God is met for the entire desert period, and it is where everybody lives for it too. The house is seated and the tent is not, so a reader sees settled dwellings on a page about people who have none.",
-    },
-    {
-      gloss: "peace",
-      lines: 83,
-      chapters: 58,
-      because:
-        "it is what is asked for, greeted with, and made between kings, and it is one of the few large abstractions the collection still leaves entirely plain.",
-    },
-    {
-      gloss: "gold",
-      lines: 80,
-      chapters: 43,
-      because:
-        "it is what the tabernacle is made of, what the idol is made of, and what the tribute is paid in. The same substance carries worship and treachery, which is an argument for one picture rather than against it.",
-    },
-    {
-      gloss: "silver",
-      lines: 78,
-      chapters: 45,
-      because:
-        "it is the money of the whole Old Testament, so it is what people are bought and sold for. The quarrel in the twentieth chapter of First Kings is silver and gold and nothing else, and neither of them can be drawn.",
-    },
-    {
-      gloss: "wilderness",
-      lines: 78,
-      chapters: 41,
-      because:
-        "it is the setting of four whole books and it is where God is met most often. It is also the place the picture line most needs, because a page with no drawn setting reads as happening nowhere.",
-    },
-    {
-      gloss: "wine",
-      lines: 67,
-      chapters: 40,
-      because:
-        "it is poured out as an offering, drunk at every feast, and the thing men fall by. Bread is seated and wine is not, which splits a pair the text almost always keeps together.",
-    },
-    {
-      gloss: "mother",
-      lines: 63,
-      chapters: 43,
-      because:
-        "the father and the son are both seated and the mother is not. That is the sharpest single asymmetry in the vocabulary, and it is visible on any page that names a family.",
-    },
-    {
-      gloss: "camp",
-      lines: 62,
-      chapters: 20,
-      because:
-        "it is where the whole nation is for a generation, and it has an inside and an outside that decides who is clean, who is judged, and where the meeting happens. The distinction is load bearing and undrawable.",
-    },
-    {
       gloss: "elders",
-      lines: 60,
-      chapters: 37,
+      strong: "2205",
+      wordings_for: 125,
+      wordings_total: 176,
       because:
-        "they are who a king has to ask before he can act, and the whole turn of the twentieth chapter of First Kings is that he asks them. A reader sees a king speaking and cannot see who he is answerable to.",
-    },
-    {
-      gloss: "feet",
-      lines: 55,
-      chapters: 39,
-      because:
-        "the hand and the eye are both seated and the foot is not, and the foot is where the text puts submission, pilgrimage, and standing on holy ground.",
-    },
-    {
-      gloss: "stone",
-      lines: 54,
-      chapters: 37,
-      because:
-        "it is the altar, the memorial, the tablets and the weapon. It is also what a covenant gets written on, which makes it the physical form of the largest want on this list.",
-    },
-    {
-      gloss: "grain",
-      lines: 53,
-      chapters: 33,
-      because:
-        "it is the offering, the harvest, and the reason people move to Egypt. Bread is seated but the thing bread is made of is not, so the picture line can show the loaf and never the field.",
-    },
-    {
-      gloss: "throne",
-      lines: 51,
-      chapters: 27,
-      because:
-        "it is what the whole of the first chapter of First Kings is a quarrel over, named there twelve times, more than on any other page. Kingship is seated twice over and the seat itself is not.",
-    },
-    {
-      gloss: "judge",
-      lines: 49,
-      chapters: 32,
-      because:
-        "it is a whole book, an office, and the thing God is repeatedly said to be. The balance picture is seated on the Hebrew word for a judgment and not on the person giving one. Some of this count is the English verb rather than the office, so the number is an upper bound.",
-    },
-    {
-      gloss: "gate",
-      lines: 47,
-      chapters: 27,
-      because:
-        "it is where the elders sit, where law is done, and where a city is taken or held. It is a place of business far more often than it is a piece of carpentry.",
-    },
-    {
-      gloss: "valley",
-      lines: 43,
-      chapters: 25,
-      because:
-        "it is half the argument of the twenty eighth verse of the twentieth chapter of First Kings, where God answers the claim that he is a god of the hills and not of the valleys. The line cannot make its point without it.",
-    },
-    {
-      gloss: "wisdom",
-      lines: 43,
-      chapters: 20,
-      because:
-        "it is what a whole set of books exists to teach and what Solomon is given instead of long life. Knowing is seated and wisdom is not, and the text is careful that they are not the same thing.",
-    },
-    {
-      gloss: "chariots and horses",
-      lines: 119,
-      chapters: 35,
-      because:
-        "counted together because they are one thing in the text - the military strength a nation trusts instead of God, which is the point every time they are named. Chariots stand in thirty eight lines, chariot in twenty nine, horses in thirty one, horse in nine and horsemen in twelve.",
-    },
-    {
-      gloss: "cloud",
-      lines: 37,
-      chapters: 22,
-      because:
-        "it is how God is present and visible without being seen, over the tent, on the mountain and in front of the people. It is the nearest thing the Old Testament has to a picture of God already, and it is not one.",
-    },
-    {
-      gloss: "donkey",
-      lines: 36,
-      chapters: 15,
-      because:
-        "it is what everybody travels on, and it is the animal that speaks in the twenty second chapter of Numbers. Sheep are seated and no other beast is.",
+        "the Hebrew word is the elder of a city and the old man, and they are not the same person. A hundred and twenty five of its wordings say elder and the fifty one that are left say old. An elder picture drawn on Abraham being old and full of years says he held an office he did not hold. The old man is separately wanted, which is the shape of the fix rather than a second problem.",
     },
     {
       gloss: "bones",
-      lines: 34,
-      chapters: 22,
+      strong: "6106",
+      wordings_for: 90,
+      wordings_total: 115,
       because:
-        "they are what is carried out of Egypt, what is burned on an altar as a judgment, and the whole vision of the thirty seventh chapter of Ezekiel.",
+        "the Hebrew word is the bone and it is also the selfsame thing. On that very day is this word, and so is the same. A bone drawn in those places puts a skeleton in a sentence about a date. Ninety wantings out of a hundred and fifteen is a large majority and it is still the wrong shape, because the quarter that is left is not a rarer sense but a different one.",
     },
     {
-      gloss: "incense and censer",
-      lines: 38,
-      chapters: 20,
+      gloss: "judge",
+      strong: "8199",
+      wordings_for: 119,
+      wordings_total: 199,
       because:
-        "counted together because a censer without incense is a bowl. The sixteenth chapter of Numbers is decided entirely by who is allowed to hold one, and the censer stands in only six lines across two chapters, which is a small count carrying a whole chapter.",
+        "the Hebrew word is as much the act of governing as the person who does it, and sixty in every hundred of its wordings are the verb. The balance picture is already seated on the Hebrew word for a judgment, so a judge picture here would put two marks from the same family on two different parts of speech and leave a reader to work out which is which.",
+    },
+    {
+      gloss: "grain",
+      strong: "4503",
+      wordings_for: 131,
+      wordings_total: 203,
+      because:
+        "the count is real and the word is wrong. This number is the grain offering and the gift, not the grain, so most of what looks like a want for a crop is a want for a sacrifice. The grain itself is a different number with thirty nine places, which is too few and too narrow to carry the fifty three lines that asked for it.",
+    },
+    {
+      gloss: "censer",
+      strong: "4289",
+      wordings_for: 4,
+      wordings_total: 22,
+      because:
+        "the sixteenth chapter of Numbers is decided by who is allowed to hold one, and the Hebrew word will not carry it. Only four of its twenty two wordings say censer at all; the rest say firepan and tray. This is the clearest case in the list of a real want that the vocabulary of the text cannot supply, and drawing it anyway would name the object in places where the text is talking about a shovel.",
     },
     {
       gloss: "river",
-      lines: 32,
-      chapters: 15,
+      strong: "5104",
+      wordings_for: 67,
+      wordings_total: 114,
       because:
-        "water and sea are both seated and moving fresh water is not. The Nile, the Jordan and the four rivers of Eden are each a boundary somebody has to cross, and crossing is the point every time.",
+        "its commonest wording is not a river at all, it is the proper noun the Euphrates. A river picture seated here would be drawing a name for most of the places it appeared, and a reader would learn the mark as that particular river rather than as moving water.",
     },
     {
-      gloss: "wall",
-      lines: 30,
-      chapters: 23,
+      gloss: "ark, the second one",
+      strong: "8392",
+      wordings_for: 26,
+      wordings_total: 28,
       because:
-        "it is what a city is, so taking a city is getting through one. The wall that falls on twenty seven thousand men in the twentieth chapter of First Kings is the whole event of that line.",
-    },
-    {
-      gloss: "sabbath",
-      lines: 29,
-      chapters: 11,
-      because:
-        "it is one of the ten commandments and the sign of the covenant itself. The day is seated as an ordinary day and the holy one has no mark separating it.",
-    },
-    {
-      gloss: "lion",
-      lines: 27,
-      chapters: 16,
-      because:
-        "it is the standard picture of danger and of strength throughout, and in the thirty sixth verse of the twentieth chapter of First Kings one kills a man as a judgment, named twice in the same line and plain both times.",
-    },
-    {
-      gloss: "sackcloth",
-      lines: 20,
-      chapters: 11,
-      because:
-        "it is how mourning and repentance are shown rather than said, so it is a picture in the text already. The thirty first and thirty second verses of the twentieth chapter of First Kings put a defeated king in it and the drawn line shows nothing.",
-    },
-    {
-      gloss: "bed",
-      lines: 17,
-      chapters: 11,
-      because:
-        "a small count that carries four decisive lines. David is dying on one in the first chapter of First Kings, and Ahaziah cannot get off one through the whole of the first chapter of Second Kings, which is what the chapter is about.",
-    },
-    {
-      gloss: "mule",
-      lines: 4,
-      chapters: 2,
-      because:
-        "the smallest count in the list and one of the clearest cases. Riding the mule of the king is how it is settled which son is king in the first chapter of First Kings, so four lines decide a succession and none of them can be drawn.",
+        "this is the cleanest entry in the list and it is here anyway. Twenty six of twenty eight wordings say the ark, and it is a different object from the chest of the covenant that is now seated - it is the boat Noah builds and the basket Moses floats in. One picture over both would say the covenant travelled in a boat. It is wanted, it is measured, and what it needs is a second picture rather than a decision.",
     },
   ];
   return wanted;
