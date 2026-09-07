@@ -3,7 +3,7 @@ import { app_code_lesson_expression_parentheses_or_title_name_id } from "./app_c
 import { app_code_lesson_expression_brackets_value_generic } from "./app_code_lesson_expression_brackets_value_generic.mjs";
 import { app_code_lesson_expression_parentheses_or_intro } from "./app_code_lesson_expression_parentheses_or_intro.mjs";
 import { app_code_lesson_expression_parentheses_or_value_expression } from "./app_code_lesson_expression_parentheses_or_value_expression.mjs";
-export function app_code_lesson_expression_brackets_or() {
+export function app_code_lesson_expression_parentheses_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: false && (true || true) asked for its value, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the one the run was missing.");

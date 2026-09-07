@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_brackets_or } from "./app_code_lesson_expression_brackets_or.mjs";
+import { app_code_lesson_expression_parentheses_or } from "./app_code_lesson_expression_parentheses_or.mjs";
 export function app_code_lessons_read_through_last_fn() {
   "the last lesson handed to a learner on either page they are ever sent to - the built site, and latest: the ones written after it are finished code and have not been read through by the person handing the track to a learner yet";
   "Named for having been READ THROUGH rather than for a stage, because two stages ask it and a third does not. A name saying prod would be read as a fact about one address, and the day latest started asking the same question the name would have said the wrong thing about it - which is how thirty-two unread lessons stood reachable on latest while the cut was believed to be holding.";
@@ -7,6 +7,6 @@ export function app_code_lessons_read_through_last_fn() {
   "It is also the first place brackets are put around a comparison joined by and or or, rather than around arithmetic. So the run now ends where the two halves a learner has been taught separately - working a sum out, and reading a true-or-false line - are finally written in one line together.";
   "It sat ten lessons earlier before, at the end of the arithmetic-on-both-sides run. Those ten were read through and released together.";
   "The lesson is named by its own function rather than by a count, so it goes on meaning this lesson when lessons are put in ahead of it, and a rename follows it.";
-  let fn = app_code_lesson_expression_brackets_or;
+  let fn = app_code_lesson_expression_parentheses_or;
   return fn;
 }
