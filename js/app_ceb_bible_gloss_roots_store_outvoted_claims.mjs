@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_store_wrong_chapters } from "./app_ceb_bible_gloss_roots_store_wrong_chapters.mjs";
+import { app_ceb_bible_gloss_roots_store_outvoted_chapters } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join } from "./list_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -12,7 +12,7 @@ import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { add } from "./add.mjs";
-export async function app_ceb_bible_gloss_roots_store_wrong_claims() {
+export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
   "The chapter-by-chapter list of Cebuano gloss roots the dictionary contradicts, collapsed to the distinct claims behind it, biggest first, each carrying the chapters that make it.";
   "★ SIX HUNDRED AND EIGHTY-TWO ROWS IS A FINDING NOBODY CAN ANSWER AND SEVENTY-TWO CLAIMS IS A DECISION SOMEBODY CAN MAKE IN AN EVENING. The rows underneath are one per chapter, so a single wrong idea about one word is spread across every chapter that repeated it - halangdon taken back to halang appears fifteen times and is one thing to agree or disagree with, not fifteen. Collapsing them is not a summary that loses detail, because the chapters are carried along and the rows can still be walked; it is the same finding addressed to a reader rather than to a counter.";
   "The reading time of the person who has to say yes is the scarce thing here, and every measurement made so far has been spent describing a decision instead of making it cheap. A list ordered by how many chapters repeat a claim puts the ones worth arguing about at the top, and a claim made once sits at the bottom where a reader may stop.";
@@ -20,7 +20,7 @@ export async function app_ceb_bible_gloss_roots_store_wrong_claims() {
   "Reading them shows the disagreement does not run one way, and the name this was built under says otherwise. The dictionary gives pangit as the root of pagpangita where the store says kita, and finding is what pangita means; it gives gamhanan under gamhanang where the store said gahum, which is a form further forward rather than a root. So a row here is two sources disagreeing with a sibling chapter siding with one of them, and which one is wrong is still a reading.";
   "Nothing is written and nothing is corrected. What comes back is the same evidence, grouped.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_roots_store_wrong_chapters();
+  let measured = await app_ceb_bible_gloss_roots_store_outvoted_chapters();
   let rows = property_get(measured, "rows");
   let claims = {};
   function row_read(row) {
