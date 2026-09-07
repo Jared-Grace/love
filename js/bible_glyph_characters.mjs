@@ -570,6 +570,238 @@ export function bible_glyph_characters() {
       name: "peace",
       character: "peace",
     },
+    {
+      name: "well",
+      character: "well",
+    },
+    {
+      name: "rain",
+      character: "rain",
+    },
+    {
+      name: "rock",
+      character: "rock",
+    },
+    {
+      name: "horn",
+      character: "horn",
+    },
+    {
+      name: "trumpet",
+      character: "trumpet",
+    },
+    {
+      name: "foreigner",
+      character: "foreigner",
+    },
+    {
+      name: "camel",
+      character: "camel",
+    },
+    {
+      name: "famine",
+      character: "famine",
+    },
+    {
+      name: "spring",
+      character: "spring",
+    },
+    {
+      name: "ox",
+      character: "ox",
+    },
+    {
+      name: "vineyard",
+      character: "vineyard",
+    },
+    {
+      name: "basket",
+      character: "basket",
+    },
+    {
+      name: "poor",
+      character: "poor",
+    },
+    {
+      name: "bull",
+      character: "bull",
+    },
+    {
+      name: "lamb",
+      character: "lamb",
+    },
+    {
+      name: "tomb",
+      character: "tomb",
+    },
+    {
+      name: "honey",
+      character: "honey",
+    },
+    {
+      name: "milk",
+      character: "milk",
+    },
+    {
+      name: "cloak",
+      character: "cloak",
+    },
+    {
+      name: "plunder",
+      character: "plunder",
+    },
+    {
+      name: "dream",
+      character: "dream",
+    },
+    {
+      name: "goat",
+      character: "goat",
+    },
+    {
+      name: "ram",
+      character: "ram",
+    },
+    {
+      name: "jar",
+      character: "jar",
+    },
+    {
+      name: "song",
+      character: "song",
+    },
+    {
+      name: "olive",
+      character: "olive",
+    },
+    {
+      name: "calf",
+      character: "calf",
+    },
+    {
+      name: "grapes",
+      character: "grapes",
+    },
+    {
+      name: "sister",
+      character: "sister",
+    },
+    {
+      name: "hair",
+      character: "hair",
+    },
+    {
+      name: "thorns",
+      character: "thorns",
+    },
+    {
+      name: "girl",
+      character: "girl",
+    },
+    {
+      name: "garment",
+      character: "garment",
+    },
+    {
+      name: "veil",
+      character: "veil",
+    },
+    {
+      name: "dog",
+      character: "dog",
+    },
+    {
+      name: "queen",
+      character: "queen",
+    },
+    {
+      name: "widow",
+      character: "widow",
+    },
+    {
+      name: "arrow",
+      character: "arrow",
+    },
+    {
+      name: "dawn",
+      character: "dawn",
+    },
+    {
+      name: "cave",
+      character: "cave",
+    },
+    {
+      name: "snow",
+      character: "snow",
+    },
+    {
+      name: "snake",
+      character: "snake",
+    },
+    {
+      name: "tower",
+      character: "tower",
+    },
+    {
+      name: "cup",
+      character: "cup",
+    },
+    {
+      name: "locusts",
+      character: "locusts",
+    },
+    {
+      name: "vine",
+      character: "vine",
+    },
+    {
+      name: "ring",
+      character: "ring",
+    },
+    {
+      name: "eagle",
+      character: "eagle",
+    },
+    {
+      name: "cherub",
+      character: "cherub",
+    },
+    {
+      name: "furnace",
+      character: "furnace",
+    },
+    {
+      name: "snare",
+      character: "snare",
+    },
+    {
+      name: "harp",
+      character: "harp",
+    },
+    {
+      name: "ship",
+      character: "ship",
+    },
+    {
+      name: "beard",
+      character: "beard",
+    },
+    {
+      name: "tambourine",
+      character: "tambourine",
+    },
+    {
+      name: "raven",
+      character: "raven",
+    },
+    {
+      name: "net",
+      character: "net",
+    },
+    {
+      name: "lots",
+      character: "lots",
+    },
   ];
   return characters;
 }
