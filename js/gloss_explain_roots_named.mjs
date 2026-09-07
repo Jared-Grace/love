@@ -5,14 +5,14 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_regex_first_groups } from "./text_regex_first_groups.mjs";
 export function gloss_explain_roots_named(explain) {
-  "Every root a gloss explanation names, read in any of the three wordings the store actually uses for it.";
+  "Every root a gloss explanation names, read in any of the four wordings the store uses for it.";
   "$plain explain";
   "the explanation is the sentence a reader sees under a word. Nothing here runs it or writes it.";
-  "★ THE READER BESIDE THIS ONE ANSWERS ABOUT ONE WORDING AND WAS BEING READ AS ANSWERING ABOUT THE STORE. It matches the word root followed by a quoted word, and its own prose says so and tells a caller to fall back to a weaker test on an empty answer. Four readings built on it did not fall back, so an explanation writing it is built on 'buhat', to do, with 'gi-' in front was counted as naming no root, and the word it named was counted as unexplained.";
-  "Measured on 2026-09-07 over the 258651 entries in the store: 42484 name a root with the word root, and a further 13184 name one with built on and no other wording.";
-  "The third wording was found by reading what was still called bare after the first two were allowed for, and it is the plainest of them: the headword in quotes, is, then the root in quotes - 'Gibuhat' is 'buhat', to do, with 'gi-' in front. It is only read at the very start of the explanation, because that is the one place the first quoted word is certainly the word being explained. Later in a sentence the same shape is ordinary prose about something else.";
+  "★ THE STRICT READER BESIDE THIS ONE ANSWERS ABOUT ONE WORDING AND WAS BEING READ AS ANSWERING ABOUT THE STORE. It matches the word root followed by a quoted word, and its own prose says so and tells a caller to fall back to a weaker test on an empty answer. Four readings built on it did not fall back, so an explanation writing it is built on 'buhat', to do names exactly the same root and was counted as naming none, and the word it named was counted as unexplained there.";
+  "The store has no one way of saying it, and that is the finding rather than a detail of this function. Measured on 2026-09-07 over its 258651 entries: 42484 say the root is 'buhat', a further 13184 say built on 'buhat', and a further 10378 say 'Gibuhat' is 'buhat'. The fourth, means was done, from 'buhat', was found by reading what those three still left called bare. Each round found exactly one more, and each was only visible once the one before it had been taken out of the way.";
   "The wordings are asked strictest first and the first answer is handed back whole, so nothing that was already read changes and no explanation turns one claim into two.";
-  "Three wordings and no more, because those are the three the corpus writes. A fourth, if one is found, belongs here rather than in a caller.";
+  "The third is only read at the very start of the explanation, because that is the one place the first quoted word is certainly the word being explained. Later in a sentence the same shape is ordinary prose about something else.";
+  "Four wordings and no more, because those are the four the corpus writes. Each round of this found exactly one more, so a fifth is likelier than not, and it belongs here rather than in a caller.";
   arguments_assert(arguments, 1);
   let claimed = gloss_explain_roots_claimed(explain);
   let claimed_count = list_size(claimed);
@@ -35,5 +35,15 @@ export function gloss_explain_roots_named(explain) {
     "g",
   );
   let self_named = text_regex_first_groups(explain, self_pattern);
-  return self_named;
+  let self_count = list_size(self_named);
+  let self_empty = equal(self_count, 0);
+  if (not(self_empty)) {
+    return self_named;
+  }
+  let from_pattern = new RegExp(
+    "from\\s+['‘\"]([^'’\"]+?)[,.;:!?]?['’\"]",
+    "g",
+  );
+  let from_named = text_regex_first_groups(explain, from_pattern);
+  return from_named;
 }
