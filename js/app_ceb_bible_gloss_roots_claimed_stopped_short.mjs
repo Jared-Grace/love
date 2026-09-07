@@ -31,7 +31,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   "What tells the two apart without anybody judging Cebuano is that the dictionary itself has vouched for gugma and has never vouched for an. Vouching is the one thing in the stored dictionary that only the site could have written - a word named as some other word's root. So the reading asks nothing about morphology and only ever compares two answers the dictionary gave.";
   "Both halves have to hold. A claim the dictionary vouches for is passed over however short it is, and a claim it does not vouch for is passed over unless a longer run at the same place in the same word is vouched for. Neither half alone names anything: the first would name every root nobody has looked up, and the second would name every word built on a root.";
   "Every place the claimed root stands in the word is tried and not only the first, because a short run of letters lands in a word more than once and the occurrence that matters is not always the one at the front.";
-  "The books are counted twice over, once for every root the dictionary is silent about and once for the ones named here, because a reading that lands in three books out of thirty says something about those books only if the pool it was drawn from did not. Read one tally without the other and where the store is thin reads as where the store is wrong.";
+  "The books are counted three times over - once for every root claimed anywhere, once for the ones the dictionary is silent about, and once for the ones named here - because a reading landing in three books out of thirty says something about those books only if the two pools it was drawn from did not. A tally read on its own cannot tell where the store is wrong from where the store is thin, and the walk being narrower than anybody thought looks exactly like a clean bill of health for everything it missed.";
   "★ NOT VOUCHED IS NOT DISPROVED. The vouching map vouches and never refuses, so a root missing from it may be perfectly good Cebuano that nothing in the dictionary happens to be built from. What is named here is a claim the dictionary is silent about standing where a claim the dictionary speaks for would have fitted, which is a reason to look and not a verdict.";
   "★ THE LONGER RUN IS NOT THE REPAIR EITHER. It is one root the dictionary knows that the word holds at that place, and a word can hold more than one. The longest is named first because it is the one the letters were cut from, and the rest are named beside it so a reader can see what the choice was.";
   arguments_assert(arguments, 0);
@@ -45,6 +45,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   let by_root = property_get(gathered, "by_root");
   let roots = object_property_names(by_root);
   let unvouched_roots = 0;
+  let claimed_books = {};
   let unvouched_books = {};
   let named_books = {};
   let listed = [];
@@ -65,12 +66,13 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   }
   function root_read(root) {
     let row = property_get(by_root, root);
+    let seen_in = property_get(row, "chapters");
+    books_tally(claimed_books, seen_in);
     let spoken_for = vouched_is(root);
     if (spoken_for) {
       return;
     }
     unvouched_roots = add(unvouched_roots, 1);
-    let seen_in = property_get(row, "chapters");
     books_tally(unvouched_books, seen_in);
     let root_letters = text_size(root);
     let longer_known = [];
@@ -125,6 +127,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   let answer = {};
   property_set(answer, "chapters", chapters);
   property_set(answer, "roots_distinct", roots_distinct);
+  property_set(answer, "claimed_books", claimed_books);
   property_set(answer, "unvouched_roots", unvouched_roots);
   property_set(answer, "unvouched_books", unvouched_books);
   let value = list_size(listed);

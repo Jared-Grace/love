@@ -1429,6 +1429,216 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "beer",
+      gloss: "a well, the pit dug down to water",
+      words: [
+        {
+          strong: "875",
+          glyph: "well",
+        },
+      ],
+    },
+    {
+      root: "matar",
+      gloss: "rain",
+      words: [
+        {
+          strong: "4306",
+          glyph: "rain",
+        },
+      ],
+    },
+    {
+      root: "geshem",
+      gloss: "rain, the heavy kind",
+      words: [
+        {
+          strong: "1653",
+          glyph: "rain",
+        },
+      ],
+    },
+    {
+      root: "tsur",
+      gloss: "rock, and the Rock that God is called",
+      words: [
+        {
+          strong: "6697",
+          glyph: "rock",
+        },
+      ],
+    },
+    {
+      root: "qeren",
+      gloss: "the horn of an animal, and the horn of the altar",
+      words: [
+        {
+          strong: "7161",
+          glyph: "horn",
+        },
+      ],
+    },
+    {
+      root: "chatsotserah",
+      gloss: "the metal trumpet",
+      words: [
+        {
+          strong: "2689",
+          glyph: "trumpet",
+        },
+      ],
+    },
+    {
+      root: "shofar",
+      gloss: "the ram horn blown as a trumpet",
+      words: [
+        {
+          strong: "7782",
+          glyph: "trumpet",
+        },
+      ],
+    },
+    {
+      root: "ger",
+      gloss: "a foreigner living among the people",
+      words: [
+        {
+          strong: "1616",
+          glyph: "foreigner",
+        },
+      ],
+    },
+    {
+      root: "gamal",
+      gloss: "camel",
+      words: [
+        {
+          strong: "1581",
+          glyph: "camel",
+        },
+      ],
+    },
+    {
+      root: "raab",
+      gloss: "famine, hunger over a land",
+      words: [
+        {
+          strong: "7458",
+          glyph: "famine",
+        },
+      ],
+    },
+    {
+      root: "maayan",
+      gloss: "a spring of water",
+      words: [
+        {
+          strong: "4599",
+          glyph: "spring",
+        },
+      ],
+    },
+    {
+      root: "shor",
+      gloss: "ox",
+      words: [
+        {
+          strong: "7794",
+          glyph: "ox",
+        },
+      ],
+    },
+    {
+      root: "kerem",
+      gloss: "vineyard",
+      words: [
+        {
+          strong: "3754",
+          glyph: "vineyard",
+        },
+      ],
+    },
+    {
+      root: "sal",
+      gloss: "basket",
+      words: [
+        {
+          strong: "5536",
+          glyph: "basket",
+        },
+      ],
+    },
+    {
+      root: "ebyon",
+      gloss: "the poor, the one in need",
+      words: [
+        {
+          strong: "34",
+          glyph: "poor",
+        },
+      ],
+    },
+    {
+      root: "dal",
+      gloss: "the poor, the one with little",
+      words: [
+        {
+          strong: "1800",
+          glyph: "poor",
+        },
+      ],
+    },
+    {
+      root: "par",
+      gloss: "bull",
+      words: [
+        {
+          strong: "6499",
+          glyph: "bull",
+        },
+      ],
+    },
+    {
+      root: "kebes",
+      gloss: "lamb",
+      words: [
+        {
+          strong: "3532",
+          glyph: "lamb",
+        },
+      ],
+    },
+    {
+      root: "qeber",
+      gloss: "tomb, grave, the place of burial",
+      words: [
+        {
+          strong: "6913",
+          glyph: "tomb",
+        },
+      ],
+    },
+    {
+      root: "debash",
+      gloss: "honey",
+      words: [
+        {
+          strong: "1706",
+          glyph: "honey",
+        },
+      ],
+    },
+    {
+      root: "chalab",
+      gloss: "milk",
+      words: [
+        {
+          strong: "2461",
+          glyph: "milk",
+        },
+      ],
+    },
   ];
   return roots;
 }
