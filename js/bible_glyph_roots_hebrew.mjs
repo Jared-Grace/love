@@ -1103,6 +1103,332 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "berit",
+      gloss: "covenant, a binding promise",
+      words: [
+        {
+          strong: "1285",
+          glyph: "covenant",
+        },
+      ],
+    },
+    {
+      root: "laylah",
+      gloss: "night",
+      words: [
+        {
+          strong: "3915",
+          glyph: "night",
+        },
+      ],
+    },
+    {
+      root: "aron",
+      gloss: "the ark of the covenant, the chest it travels in",
+      words: [
+        {
+          strong: "727",
+          glyph: "ark",
+        },
+      ],
+    },
+    {
+      root: "boqer",
+      gloss: "morning",
+      words: [
+        {
+          strong: "1242",
+          glyph: "morning",
+        },
+      ],
+    },
+    {
+      root: "ohel",
+      gloss: "tent",
+      words: [
+        {
+          strong: "168",
+          glyph: "tent",
+        },
+      ],
+    },
+    {
+      root: "zahab",
+      gloss: "gold",
+      words: [
+        {
+          strong: "2091",
+          glyph: "gold",
+        },
+      ],
+    },
+    {
+      root: "keseph",
+      gloss: "silver, and the money that is made of it",
+      words: [
+        {
+          strong: "3701",
+          glyph: "silver",
+        },
+      ],
+    },
+    {
+      root: "yayin",
+      gloss: "wine",
+      words: [
+        {
+          strong: "3196",
+          glyph: "wine",
+        },
+        {
+          strong: "8492",
+          glyph: "wine",
+        },
+      ],
+    },
+    {
+      root: "em",
+      gloss: "mother",
+      words: [
+        {
+          strong: "517",
+          glyph: "mother",
+        },
+      ],
+    },
+    {
+      root: "midbar",
+      gloss: "wilderness, desert",
+      words: [
+        {
+          strong: "4057",
+          glyph: "wilderness",
+        },
+      ],
+    },
+    {
+      root: "machaneh",
+      gloss: "camp",
+      words: [
+        {
+          strong: "4264",
+          glyph: "camp",
+        },
+      ],
+    },
+    {
+      root: "regel",
+      gloss: "foot",
+      words: [
+        {
+          strong: "7272",
+          glyph: "foot",
+        },
+      ],
+    },
+    {
+      root: "eben",
+      gloss: "stone",
+      words: [
+        {
+          strong: "68",
+          glyph: "stone",
+        },
+      ],
+    },
+    {
+      root: "kisse",
+      gloss: "throne",
+      words: [
+        {
+          strong: "3678",
+          glyph: "throne",
+        },
+      ],
+    },
+    {
+      root: "shaar",
+      gloss: "gate",
+      words: [
+        {
+          strong: "8179",
+          glyph: "gate",
+        },
+      ],
+    },
+    {
+      root: "emeq",
+      gloss: "valley",
+      words: [
+        {
+          strong: "6010",
+          glyph: "valley",
+        },
+        {
+          strong: "1516",
+          glyph: "valley",
+        },
+      ],
+    },
+    {
+      root: "chokmah",
+      gloss: "wisdom",
+      words: [
+        {
+          strong: "2451",
+          glyph: "wisdom",
+        },
+      ],
+    },
+    {
+      root: "rekeb",
+      gloss: "chariot",
+      words: [
+        {
+          strong: "7393",
+          glyph: "chariot",
+        },
+        {
+          strong: "4818",
+          glyph: "chariot",
+        },
+      ],
+    },
+    {
+      root: "sus",
+      gloss: "horse",
+      words: [
+        {
+          strong: "5483",
+          glyph: "horse",
+        },
+      ],
+    },
+    {
+      root: "anan",
+      gloss: "cloud",
+      words: [
+        {
+          strong: "6051",
+          glyph: "cloud",
+        },
+        {
+          strong: "5645",
+          glyph: "cloud",
+        },
+      ],
+    },
+    {
+      root: "chamor",
+      gloss: "donkey",
+      words: [
+        {
+          strong: "2543",
+          glyph: "donkey",
+        },
+        {
+          strong: "860",
+          glyph: "donkey",
+        },
+      ],
+    },
+    {
+      root: "qetoreth",
+      gloss: "incense",
+      words: [
+        {
+          strong: "7004",
+          glyph: "incense",
+        },
+      ],
+    },
+    {
+      root: "chomah",
+      gloss: "wall",
+      words: [
+        {
+          strong: "2346",
+          glyph: "wall",
+        },
+        {
+          strong: "7023",
+          glyph: "wall",
+        },
+      ],
+    },
+    {
+      root: "shabbath",
+      gloss: "the Sabbath",
+      words: [
+        {
+          strong: "7676",
+          glyph: "sabbath",
+        },
+      ],
+    },
+    {
+      root: "ari",
+      gloss: "lion",
+      words: [
+        {
+          strong: "738",
+          glyph: "lion",
+        },
+        {
+          strong: "3715",
+          glyph: "lion",
+        },
+      ],
+    },
+    {
+      root: "saq",
+      gloss: "sackcloth",
+      words: [
+        {
+          strong: "8242",
+          glyph: "sackcloth",
+        },
+      ],
+    },
+    {
+      root: "mishkab",
+      gloss: "bed",
+      words: [
+        {
+          strong: "4904",
+          glyph: "bed",
+        },
+        {
+          strong: "4296",
+          glyph: "bed",
+        },
+      ],
+    },
+    {
+      root: "pered",
+      gloss: "mule",
+      words: [
+        {
+          strong: "6505",
+          glyph: "mule",
+        },
+        {
+          strong: "6506",
+          glyph: "mule",
+        },
+      ],
+    },
+    {
+      root: "shalom",
+      gloss: "peace, wholeness, being well",
+      words: [
+        {
+          strong: "7965",
+          glyph: "peace",
+        },
+      ],
+    },
   ];
   return roots;
 }
