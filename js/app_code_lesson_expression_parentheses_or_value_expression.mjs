@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_code_lesson_expression_choose_order_brackets_expression } from "./app_code_lesson_expression_choose_order_brackets_expression.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_expression } from "./app_code_lesson_expression_choose_order_parentheses_expression.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { boolean_random } from "./boolean_random.mjs";
@@ -17,10 +17,11 @@ export function app_code_lesson_expression_parentheses_or_value_expression(
   ("The word next to the && on the inside is left to the draw, because nothing about the point depends on it. Fixed either way the lesson would show two lines rather than four, and the pair inside the brackets would always read the same.");
   ("The true line is asked for from the pressing lesson's maker rather than drawn here, so the two lessons go on being one family of lines met twice, which is the thing that stops them looking merely alike. Only the half that carries the point is taken over.");
   if (want_true) {
-    let tree_true = app_code_lesson_expression_choose_order_brackets_expression(
-      want_true,
-      brackets_left,
-    );
+    let tree_true =
+      app_code_lesson_expression_choose_order_parentheses_expression(
+        want_true,
+        brackets_left,
+      );
     return tree_true;
   }
   let and_symbol = js_operator_and_symbol();
