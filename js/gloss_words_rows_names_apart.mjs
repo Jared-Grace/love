@@ -1,8 +1,7 @@
+import { set_includes_not } from "./set_includes_not.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { set_includes } from "./set_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_filter_not } from "./list_filter_not.mjs";
 export function gloss_words_rows_names_apart(rows, common_words) {
@@ -16,8 +15,7 @@ export function gloss_words_rows_names_apart(rows, common_words) {
   function name_is(row) {
     let word = property_get(row, "word");
     let lower = text_lower_to(word);
-    let met = set_includes(common_set, lower);
-    let never_lower = not(met);
+    let never_lower = set_includes_not(common_set, lower);
     return never_lower;
   }
   let names = list_filter(rows, name_is);
