@@ -6,7 +6,7 @@ import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_moved_title_name_id() {
   arguments_assert(arguments, 0);
-  ("the home title: moving the ( and ), an Expressions lesson. The title names the movement rather than an operator, because the operators never change in this lesson - only where the brackets sit");
+  ("the home title: moving the ( and ), an Expressions lesson. The title names the movement rather than an operator, because the operators never change in this lesson - only where the parentheses sit");
   function paint(parent) {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();

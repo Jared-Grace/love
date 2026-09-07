@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_both_sides_tree_of_code(
   arguments_assert(arguments, 1);
   ("the shape behind a line this lesson printed, worked out again from the line itself: 3 + 4 === 5 + 2 gives back the shape whose two arithmetic pieces stand either side of the comparison");
   ("The quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.");
-  ("Reading a line of this lesson's own making is safe because the lesson makes only one kind: a number, an arithmetic operator, a number, a comparison, and the same three again. Nothing is ever bracketed, so the writing is seven words with a space between each, and the same file builds it either way.");
+  ("Reading a line of this lesson's own making is safe because the lesson makes only one kind: a number, an arithmetic operator, a number, a comparison, and the same three again. Nothing is ever parenthesised, so the writing is seven words with a space between each, and the same file builds it either way.");
   ("Seven words, said out loud as an assertion, so a line of some other shape fed in here is refused where it arrives rather than being taken apart into a shape that quietly means something else.");
   let words = text_split_space(code);
   list_size_assert(words, 7);

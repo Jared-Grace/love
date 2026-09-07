@@ -54,9 +54,9 @@ export function app_code_expression_solved(item, node) {
   let right = property_get(item, "right");
   let right_new = app_code_expression_solved(right, node);
   let symbol = property_get(item, "operator");
-  let written = property_get_or(item, "bracketed", false);
+  let written = property_get_or(item, "parenthesised", false);
   if (written) {
-    ("brackets the lesson wrote survive every step, so a line the learner is working through does not quietly lose the pair it was showing them");
+    ("parentheses the lesson wrote survive every step, so a line the learner is working through does not quietly lose the pair it was showing them");
     let built_marked = app_code_expression_node_parenthesis_wrapped(
       left_new,
       symbol,

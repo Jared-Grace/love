@@ -11,7 +11,7 @@ export function app_code_lesson_expression_choose_order_parentheses_intro(
   ("the sentences that say what is different about this lesson, in a card of their own");
   ("Three sentences and no more: the parentheses can now go round a || , that puts the || first, and putting it first is a change rather than a restatement. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");
   ("That the pair may sit at either end is not said here. It is said above the second of the two lines this screen walks, where the line under it has them at the other end, which is where the two lessons that taught parentheses both say it.");
-  ("PARENTHESES, never brackets. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these brackets would be teaching a word the learner has to unlearn the first time they meet a list. The one word is used everywhere a learner can read it.");
+  ("PARENTHESES, never parentheses. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these parentheses would be teaching a word the learner has to unlearn the first time they meet a list. The one word is used everywhere a learner can read it.");
   ("Neither of the two recalled rules is said again here. This card is only ever read straight after them, and a card that repeated them would be asking the learner to check whether the words had changed.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();

@@ -10,12 +10,12 @@ export function app_code_lesson_expression_choose_order_not_pair_title_name_id()
   arguments_assert(arguments, 0);
   ("the home title: solving inside !( ), an Expressions lesson");
   ("The title paints the marks and spells the words, the same way every other lesson about a symbol does: the lesson is about the marks, and the words are only what the address is written with, where a symbol cannot go.");
-  ("The three are painted as one piece because that is the shape a learner is looking for on the home list - a ! with a bracketed thing after it, which is the whole of what this lesson's lines look like. The two lessons it stands under paint one half of it each, so the three sit together and the difference between them reads off the marks.");
+  ("The three are painted as one piece because that is the shape a learner is looking for on the home list - a ! with a parenthesised thing after it, which is the whole of what this lesson's lines look like. The two lessons it stands under paint one half of it each, so the three sit together and the difference between them reads off the marks.");
   function paint(parent) {
     let symbol = js_operator_bang_symbol();
-    let left_bracket = js_code_parenthesis_left();
-    let right_bracket = js_code_parenthesis_right();
-    let piece = text_combine_multiple([symbol, left_bracket, right_bracket]);
+    let left_parenthesis = js_code_parenthesis_left();
+    let right_parenthesis = js_code_parenthesis_right();
+    let piece = text_combine_multiple([symbol, left_parenthesis, right_parenthesis]);
     html_cycle_code(parent, ["solving inside ", piece]);
   }
   let left = app_code_category_expressions();

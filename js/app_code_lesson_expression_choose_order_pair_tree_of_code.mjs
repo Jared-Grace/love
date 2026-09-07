@@ -12,8 +12,8 @@ export function app_code_lesson_expression_choose_order_pair_tree_of_code(
   arguments_assert(arguments, 1);
   ("the shape behind a line this lesson printed, worked out again from the line itself: (3 === 5) === (5 === 3) gives back the two comparisons and the comparison between them");
   ("The quiz hands its question over as text, and a line outlives the run that built it - a review saves the line to ask again and comes back to it after the page has been loaded afresh. A shape kept beside the line it printed would have been forgotten by then, and the lesson would throw where a learner was owed a question.");
-  ("Reading a line of this lesson's own making is safe because the lesson makes only one kind: four numbers, a comparison inside each pair of brackets, and one comparison between the two pairs. The same file builds it either way, so the two cannot mean different things by the same shape.");
-  ("Seven pieces every time, and always in the same places, because the brackets travel with the numbers rather than standing apart from them: (3 and 5) are one piece each. So the three operators are the second, fourth and sixth pieces, and the four numbers are the only runs of digits on the line, in the order they are read.");
+  ("Reading a line of this lesson's own making is safe because the lesson makes only one kind: four numbers, a comparison inside each pair of parentheses, and one comparison between the two pairs. The same file builds it either way, so the two cannot mean different things by the same shape.");
+  ("Seven pieces every time, and always in the same places, because the parentheses travel with the numbers rather than standing apart from them: (3 and 5) are one piece each. So the three operators are the second, fourth and sixth pieces, and the four numbers are the only runs of digits on the line, in the order they are read.");
   let pieces = text_split_space(code);
   list_size_assert(pieces, 7);
   let left_symbol = list_get(pieces, 1);

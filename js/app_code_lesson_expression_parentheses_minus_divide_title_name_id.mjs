@@ -8,7 +8,7 @@ import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 export function app_code_lesson_expression_parentheses_minus_divide_title_name_id() {
   arguments_assert(arguments, 0);
-  ("the home title: ( and ) after a - or a /, an Expressions lesson. The outer operator is what the title names, because it is the outer operator that decides whether the brackets change the answer");
+  ("the home title: ( and ) after a - or a /, an Expressions lesson. The outer operator is what the title names, because it is the outer operator that decides whether the parentheses change the answer");
   function paint(parent) {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();

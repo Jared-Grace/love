@@ -41,7 +41,7 @@ export function app_code_lesson_expression_either_first() {
   function tree_of(qa, info) {
     "the shape behind a question, found again from the writing it was printed as - the quiz hands its question over as text, and the step-at-a-time working needs the shape it came from";
     "READ BACK RATHER THAN REMEMBERED, which is what every other lesson of this kind does and what this one used to get wrong. A line outlives the run that built it: a review keeps the writing to ask again, and comes back to it on a page loaded afresh, where a shape kept beside the line at the moment it was printed is gone. The lesson then threw at the exact moment a learner answered the question before it correctly - so the fault landed on the screen after the one that caused it, on a review of a different lesson entirely.";
-    "The general reader serves it: this lesson's lines are arithmetic with no brackets, which is the one thing that reader takes, and it hands back the same hanging the maker built - each times gathering its two numbers, the plus holding both of them.";
+    "The general reader serves it: this lesson's lines are arithmetic with no parentheses, which is the one thing that reader takes, and it hands back the same hanging the maker built - each times gathering its two numbers, the plus holding both of them.";
     let answer_property = property_get(info, "answer_property");
     let question = app_code_lesson_quiz_qa_question(qa, answer_property);
     let tree = app_code_expression_flat_tree_of_code(question);
