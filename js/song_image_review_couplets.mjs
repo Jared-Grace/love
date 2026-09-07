@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 242, and the white ring is a gradient at last with no black border. It was never the drawing: the shared style sheet forbids a gradient by name in all 36 prompts, so the halo could not be drawn as asked. You said allow it where a couplet asks, and six of six came back right. What is still wrong here is the head of the arch, which should be deep cobalt and came back grey.",
+      note: "This is 243. You were right that I judged 238 out wrongly - its glow was warm yellow and I read that as the reserved gold, but this couplet names yellow itself, so it was allowed all along. The wording now says the halo takes each beam's own colour as it passes through, and the arch head is cobalt at last. Two faults I have not fixed: the stone came back with a photographic marble grain, and the brown ground is broken into coloured panes.",
     },
   ];
   return couplets;
