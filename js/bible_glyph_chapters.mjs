@@ -1,3 +1,9 @@
+import { bible_glyph_chapter_1sa20 } from "./bible_glyph_chapter_1sa20.mjs";
+import { bible_glyph_chapter_1ki02 } from "./bible_glyph_chapter_1ki02.mjs";
+import { bible_glyph_chapter_2ki10 } from "./bible_glyph_chapter_2ki10.mjs";
+import { bible_glyph_chapter_1ki01 } from "./bible_glyph_chapter_1ki01.mjs";
+import { bible_glyph_chapter_2ki01 } from "./bible_glyph_chapter_2ki01.mjs";
+import { bible_glyph_chapter_1ki20 } from "./bible_glyph_chapter_1ki20.mjs";
 import { bible_glyph_chapter_num16 } from "./bible_glyph_chapter_num16.mjs";
 import { bible_glyph_chapter_jdg11 } from "./bible_glyph_chapter_jdg11.mjs";
 import { bible_glyph_chapter_exo18 } from "./bible_glyph_chapter_exo18.mjs";
