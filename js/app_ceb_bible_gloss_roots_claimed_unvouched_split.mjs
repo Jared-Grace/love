@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
@@ -14,8 +15,8 @@ import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { add } from "./add.mjs";
+import { property_set } from "./property_set.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { not } from "./not.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
@@ -25,10 +26,13 @@ import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_rever
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   "Every root the Cebuano gloss store names that nothing in the dictionary is built from, split by what the dictionary did when it was asked about that root and by whether the translation ever writes it as a word on its own.";
-  "Unvouched is one answer covering three different situations, and they want three different things done about them. A root the site was asked about and had nothing to say for is as close to disproved as this disk can get. A root nobody has ever asked about is a question, and the answer is a gather away. A root the site holds a real entry for is sound, and it is only here because nothing the site knows happens to be built from it.";
-  "The three come apart cleanly because a gathered answer with no breakdown in it is stored exactly like an answer about a word the site does not have. That is a defect for a reader asking whether a word exists and it is the whole signal here: the site does not refuse, so an entry with nothing in it means it was asked and it had nothing.";
+  "Unvouched is one answer covering three different situations, and they want three different things done about them. A root the site holds a full breakdown for is a root the site says is not a root, because a breakdown names what the word was built out of. A root nobody has ever asked about is a question, and the answer is a gather away. A root the site was asked about and had no breakdown for is the ordinary shape of a real root and also the shape of a word the site does not have, and those two cannot be told apart here at all.";
+  "The three come apart because a gathered answer with no breakdown in it is stored exactly like an answer about a word the site does not have - four fields with three of them empty. That sameness is what makes the middle pile ambiguous rather than damning: kamot, bulak and likod are all stored that way, and they are ordinary Cebuano roots stored that way precisely because a root is not built out of anything for the site to report.";
   "Whether the translation writes the root standing alone is asked beside all three, because a spelling a reader meets on the page is a different thing from a spelling that only exists inside longer words, and a root of the second kind cannot be checked by anybody reading the Bible.";
-  "★ THE MIDDLE PILE IS THE WORK AND THE OTHER TWO ARE NOT. Never asked is not a fault, it is an unasked question, and a real entry with nothing built on it is not a fault at all. Counting all three together as unvouched was what made this look like six hundred problems.";
+  ("★ THE PILE THE DICTIONARY ACTUALLY CONTRADICTS IS THE FULL ONE, NOT THE EMPTY ONE. Held with a breakdown means the site was asked about the claimed root and answered that it comes from something else: galingon, named here as the root of kaugalingon, is held by the site as galing plus -on. That is the store's claim refuted in the dictionary's own words, and it is the only one of the three piles where anything is refuted. It already has its own reading in ",
+    fn_name("app_ceb_bible_gloss_roots_store_claim_derived_proven"),
+    ", which found the same habit and named it, so what is here is a cross-check and not a second work list.");
+  ("★ THE EMPTY PILE IS NOT PROOF OF ANYTHING AND IT IS STILL WHERE TO LOOK. Nothing in it is refuted and a good half of it reads as ordinary vocabulary, so it must never be reported as invented roots. What earns it the looking is that every invented root has to be in it, because the site cannot have a breakdown for letters nobody ever wrote; it is the smallest pile that is certain to hold them.");
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
   let vouched = binisaya_words_known_roots_named(known);
