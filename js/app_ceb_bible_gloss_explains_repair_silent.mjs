@@ -1,3 +1,4 @@
+import { text_includes_not } from "./text_includes_not.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_repairs_file_path } from "./gloss_repairs_file_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -11,8 +12,6 @@ import { each_async } from "./each_async.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
-import { text_includes } from "./text_includes.mjs";
-import { not } from "./not.mjs";
 import { gloss_explains_repair_decided_generic } from "./gloss_explains_repair_decided_generic.mjs";
 export async function app_ceb_bible_gloss_explains_repair_silent() {
   "The Cebuano word explanations named in the repairs file put right only where the sentence already standing says nothing about the dictionary's root - leaving every sighting that already names it exactly as its author wrote it.";
@@ -55,8 +54,7 @@ export async function app_ceb_bible_gloss_explains_repair_silent() {
       return true;
     }
     let lower = text_lower_to(standing);
-    let named = text_includes(lower, root);
-    let silent = not(named);
+    let silent = text_includes_not(lower, root);
     return silent;
   }
   let r = await gloss_explains_repair_decided_generic(fn, entry_wanted_is);
