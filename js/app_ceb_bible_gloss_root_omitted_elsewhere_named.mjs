@@ -1,3 +1,4 @@
+import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { text_size } from "./text_size.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -14,7 +15,6 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
-import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -76,7 +76,7 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
         property_set(by_word, lowered, made);
         held = made;
       }
-      let claimed = gloss_explain_roots_claimed(explain);
+      let claimed = gloss_explain_roots_named(explain);
       let count = list_size(claimed);
       let empty = equal(count, 0);
       if (empty) {
