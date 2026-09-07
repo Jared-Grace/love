@@ -8,7 +8,7 @@ import { app_code_operator_shape_parenthesis_first } from "./app_code_operator_s
 import { html_cycle_code } from "./html_cycle_code.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
-export function app_code_lesson_expression_choose_order_brackets_moved_title_name_id() {
+export function app_code_lesson_expression_choose_order_parentheses_and_or_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: moving ( ) in ( && ) || , an Expressions lesson");
   ("The title paints the shape of the line as well as the pair of marks, because the pair on its own is what the three lessons around this one are about as well. Four titles naming only the marks would be four ways of writing one line, and a learner picking up where they left off would have nothing on the home list to pick from.");
