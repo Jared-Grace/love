@@ -141,6 +141,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_choose_order_brackets_moved:
       text_frozen("order_moved"),
     app_code_lesson_expression_brackets_moved: text_frozen("brackets_pair"),
+    app_code_lesson_expression_choose_order_not_twice:
+      text_frozen("order_not_twice"),
     app_code_lesson_expression_not_twice: text_frozen("not_twice"),
     app_code_lesson_expression_choose_order_not: text_frozen("order_not"),
     app_code_lesson_expression_not_comparison: text_frozen("not_compare"),
