@@ -3,7 +3,7 @@ import { and } from "./and.mjs";
 import { app_code_operator_solve_before } from "./app_code_operator_solve_before.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
-import { app_code_expression_node_bracketed } from "./app_code_expression_node_bracketed.mjs";
+import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
 import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
 import { app_code_operator_solve } from "./app_code_operator_solve.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -57,7 +57,7 @@ export function app_code_expression_solved(item, node) {
   let written = property_get_or(item, "bracketed", false);
   if (written) {
     ("brackets the lesson wrote survive every step, so a line the learner is working through does not quietly lose the pair it was showing them");
-    let built_marked = app_code_expression_node_bracketed(
+    let built_marked = app_code_expression_node_parenthesis_wrapped(
       left_new,
       symbol,
       right_new,
