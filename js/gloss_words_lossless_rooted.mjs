@@ -12,10 +12,12 @@ import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 export function gloss_words_lossless_rooted(known, priced) {
-  "The queued words a repair cannot damage, each already carrying the roots a dictionary takes it back to - the work list for an author, ready to write against.";
-  "A word is here when every sighting of it in the store is at fault, so there is no standing explanation for a repair to overwrite and the only question left is what the right sentence says. That makes this the one part of the queue that needs no permission to be wrong about: the worst a wrong sentence can do is replace a sentence that was already wrong.";
-  "The roots come with the row because the sentence cannot be written without them, and looking each word up separately afterwards is the reading this exists to save. A word the dictionary takes nowhere is kept rather than dropped, and counted apart: it still needs a sentence, and the author now knows before opening it that the dictionary will not help.";
-  "The rows are ordered by how many sightings each fixes, so an author working down the list from the top is always writing the sentence that buys the most.";
+  "The queued words a repair cannot damage, each beside whatever roots a dictionary claims for it - the safe end of the queue, and the expensive one to write.";
+  "A word is here when every sighting of it in the store is at fault, so there is no standing explanation for a repair to overwrite. That is the whole of what safe means here: it prices the damage a wrong sentence can do, and says nothing at all about how hard the right sentence is to find.";
+  "★ THE ROOTS ON THESE ROWS ARE MOSTLY INVENTED, AND THE ROW DOES NOT MARK WHICH. Of thirty-four rooted words read on the ceb store, five carried a root that belongs to them; the dictionary manufactured the other twenty-nine and marked every one analysed, the same way it manufactures a decomposition for a proper name. It answers denaryo, the Roman coin, with diriyot; hades, which is Greek, with dili, the word for not; canaan with kana. An author reading a root here as a fact will write twenty-nine wrong sentences with confidence.";
+  "That is not bad luck, and it is the reason to read this list rather than work down it. A word reaches this list by having every one of its sightings unexplained, and a sighting goes unexplained because the author found no root worth naming - which is the same fact as the dictionary having nothing true to say. So the rows that are cheapest to overwrite and the words the dictionary cannot help with are one set seen twice: loan words, proper names, bare prefixes, and misspellings in the Cebuano text itself.";
+  "A word the dictionary takes nowhere is kept rather than dropped, and counted apart. Those five rows are the honest ones - they promise nothing - and they are no harder than the twenty-nine that promise something false.";
+  "The rows are ordered by how many sightings each would mend, so the cost of an author's attention is visible even though the worth of the roots is not.";
   "Nothing is written and nothing is asked of the network. The dictionary is read as it was handed in.";
   "$plain known";
   "$plain priced";
