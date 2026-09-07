@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { app_code_lesson_expression_choose_order_tree_of_code_generic } from "./app_code_lesson_expression_choose_order_tree_of_code_generic.mjs";
-export function app_code_lesson_expression_choose_order_tree_of_code_bracket_side(
+export function app_code_lesson_expression_choose_order_tree_of_code_parenthesis_side(
   code,
   node_left,
   node_right,
