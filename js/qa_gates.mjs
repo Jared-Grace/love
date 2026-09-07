@@ -1,3 +1,4 @@
+import { reply_cases_gate_run } from "./reply_cases_gate_run.mjs";
 import { bible_verses_hyphen_pieces_unwritten_gate_run } from "./bible_verses_hyphen_pieces_unwritten_gate_run.mjs";
 import { bible_verses_hyphen_words_measured_gate_run } from "./bible_verses_hyphen_words_measured_gate_run.mjs";
 import { bible_words_slips_all_gate_run } from "./bible_words_slips_all_gate_run.mjs";
@@ -1043,6 +1044,7 @@ export function qa_gates() {
     bible_words_slips_all_gate_run,
     bible_verses_hyphen_words_measured_gate_run,
     bible_verses_hyphen_pieces_unwritten_gate_run,
+    reply_cases_gate_run,
   ];
   return gates;
 }
