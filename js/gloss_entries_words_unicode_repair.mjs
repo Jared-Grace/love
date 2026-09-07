@@ -1,3 +1,4 @@
+import { subtract } from "./subtract.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { text_unicode_normalize } from "./text_unicode_normalize.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -51,8 +52,10 @@ export function gloss_entries_words_unicode_repair(entries, written) {
       }
       let already = property_get_or_null(taken, normalized);
       let reached = null_is(already) ? 0 : already;
-      let last = list_size(spellings) - 1;
-      let past = greater_than_equal(reached, list_size(spellings));
+      let left = list_size(spellings);
+      let last = subtract(left, 1);
+      let b = list_size(spellings);
+      let past = greater_than_equal(reached, b);
       let at = past ? last : reached;
       property_set(taken, normalized, reached + 1);
       let original = list_get(spellings, at);
