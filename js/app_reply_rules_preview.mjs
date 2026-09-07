@@ -62,11 +62,11 @@ export async function app_reply_rules_preview() {
   function side_show(wanted) {
     html_clear(listed);
     if (wanted) {
-      function each(proposal) {
+      function each_shown(proposal) {
         let drawn = app_reply_rules_proposal_show(listed, proposal);
         return drawn;
       }
-      list_map(proposals, each);
+      list_map(proposals, each_shown);
     }
     if (not(wanted)) {
       app_reply_rules_corpus_show(listed, cases);
