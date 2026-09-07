@@ -7,7 +7,9 @@ import { app_code_lesson_expression_choose_order_brackets_either_side } from "./
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
 import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
-export function app_code_lesson_expression_choose_order_brackets_above(root) {
+export function app_code_lesson_expression_choose_order_parentheses_above(
+  root,
+) {
   arguments_assert(arguments, 1);
   ("what stands above the card on the brackets lesson: the two rules being brought together, then the same line walked down twice with the brackets at one end and then the other, then the sentences saying what is new");
   ("Each line run through is one the brackets change the answer of. Read the way the brackets ask it comes to false; read as though they were not there it comes to true. A run on a line where both readings agree would show the brackets being obeyed and never show what obeying them is worth.");

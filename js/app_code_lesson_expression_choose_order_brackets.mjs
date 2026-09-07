@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_brackets_title_name_id } from "./app_code_lesson_expression_choose_order_brackets_title_name_id.mjs";
 import { app_code_lesson_expression_choose_order_brackets_questions } from "./app_code_lesson_expression_choose_order_brackets_questions.mjs";
 import { app_code_lesson_expression_choose_order_boolean_generic } from "./app_code_lesson_expression_choose_order_boolean_generic.mjs";
-import { app_code_lesson_expression_choose_order_brackets_above } from "./app_code_lesson_expression_choose_order_brackets_above.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_above } from "./app_code_lesson_expression_choose_order_parentheses_above.mjs";
 export function app_code_lesson_expression_choose_order_brackets() {
   arguments_assert(arguments, 0);
   ("brackets round the || of a line that also holds an && , taken a press at a time: false && (true || true) or (true || false) && true, choose the || , choose what it comes to, then choose the && and what that comes to");
@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_brackets() {
   let bank = app_code_lesson_expression_choose_order_brackets_questions();
   let lesson = app_code_lesson_expression_choose_order_boolean_generic(
     name_id,
-    app_code_lesson_expression_choose_order_brackets_above,
+    app_code_lesson_expression_choose_order_parentheses_above,
     bank,
   );
   return lesson;
