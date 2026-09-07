@@ -1,3 +1,4 @@
+import { bible_words_slips_all_gate_run } from "./bible_words_slips_all_gate_run.mjs";
 import { bible_words_slips_gate_run } from "./bible_words_slips_gate_run.mjs";
 import { gloss_names_filter_checked_gate_run } from "./gloss_names_filter_checked_gate_run.mjs";
 import { gloss_offenders_names_candidates_gate_run } from "./gloss_offenders_names_candidates_gate_run.mjs";
