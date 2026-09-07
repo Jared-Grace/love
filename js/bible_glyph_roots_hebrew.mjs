@@ -2104,16 +2104,6 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
-      root: "megillah",
-      gloss: "scroll",
-      words: [
-        {
-          strong: "4039",
-          glyph: "scroll",
-        },
-      ],
-    },
-    {
       root: "oyeb",
       gloss: "the enemy, the one who is hostile",
       words: [
@@ -2180,46 +2170,6 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4217",
           glyph: "east",
-        },
-      ],
-    },
-    {
-      root: "shemen",
-      gloss: "oil, the olive oil",
-      words: [
-        {
-          strong: "8081",
-          glyph: "oil",
-        },
-      ],
-    },
-    {
-      root: "yitshar",
-      gloss: "fresh oil, the oil of the new harvest",
-      words: [
-        {
-          strong: "3323",
-          glyph: "oil",
-        },
-      ],
-    },
-    {
-      root: "atarah",
-      gloss: "a crown",
-      words: [
-        {
-          strong: "5850",
-          glyph: "crown",
-        },
-      ],
-    },
-    {
-      root: "kokab",
-      gloss: "a star",
-      words: [
-        {
-          strong: "3556",
-          glyph: "star",
         },
       ],
     },
