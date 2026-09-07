@@ -16,7 +16,7 @@ export async function app_ceb_bible_gloss_roots_named_derived_written() {
   "Four answers rather than two, because both halves can be words and both can fail to be. Where the translation writes both, the store picking the longer one is a choice between two real words and defensible. Where it writes only the form the store named, the dictionary has gone behind anything a reader would recognise. Where it writes only the deeper form, the store named something its own text never uses alone, and that is the sharp case. Where it writes neither, both are pieces and the entry needs a different kind of help.";
   "It proves what a reader meets and not what is historically true. A form the translation happens never to use is still a real Cebuano word, and this says only that nobody reading this bible will have met it there.";
   "Measured over the 293 named roots: the translation writes both forms alone for 154 of them, covering 2805 of the 4159 entries; it writes only the named form for 96 more, covering 826. So five entries in six are the store choosing between two words a reader meets, or standing on a word the dictionary went behind, and neither is a fault. The 952 paagi entries that made the wider count unreadable land in the first of those, because the translation writes paagi standing alone - which is the answer that was being deferred to a speaker, given by the text.";
-  "That leaves 43 named roots and 528 entries where the translation never writes the named form alone, and 21 of those 43 name a deeper form it never writes alone either. Both halves of those 21 are pieces no reader of this bible ever meets, which is not a root judgment going one way or the other but a sign the root was never read off a word at all.";
+  "That leaves 43 named roots and 528 entries where the translation never writes the named form alone, and 21 of those 43 name a deeper form it never writes alone either. Both halves of those 21 are pieces no reader of this bible ever meets. Reading them beside the words they were claimed for splits them in two, and it is not the split the count suggests: the four biggest, hibulong himuot hinumdum and pahimutang, are 100 of the 144 entries and are real stems this translation only ever writes with something attached, so they are correct and merely unwritten. The tail behind them is a different thing, the named form being a cut of the word rather than a root of it - gamhana taken from gamhanang, sagda from pasagdan, sabtan from nasabtan, imutang from nahimutangan, hitas from kahitas-an - and there the dictionary answering at all is itself a warning, because it answered galam for gamhana and hita for hitas, which are unrelated words that happen to be spelled near it.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
   let measured = await app_ceb_bible_gloss_roots_named_derived_all();
@@ -40,6 +40,7 @@ export async function app_ceb_bible_gloss_roots_named_derived_written() {
       under_it: deeper,
       entries: property_get(held, "entries"),
       words: property_get(held, "words_count"),
+      spelled: property_get(held, "words"),
     };
     if (said_written) {
       let side = deeper_written ? both : said_only;
