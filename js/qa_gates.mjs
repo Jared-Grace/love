@@ -1037,6 +1037,7 @@ export function qa_gates() {
     gloss_offenders_names_candidates_gate_run,
     gloss_names_filter_checked_gate_run,
     bible_words_slips_gate_run,
+    bible_words_slips_all_gate_run,
   ];
   return gates;
 }
