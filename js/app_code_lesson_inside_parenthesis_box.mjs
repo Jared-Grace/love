@@ -1,15 +1,16 @@
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
-import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div } from "./html_div.mjs";
-import { html_span_text } from "./html_span_text.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
-import { js_console_log_name } from "./js_console_log_name.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_style_font_size } from "./html_style_font_size.mjs";
+import { app_code_span_text_code_highlight } from "./app_code_span_text_code_highlight.mjs";
 export function app_code_lesson_inside_parenthesis_box(
   root,
   name_written,
@@ -38,14 +39,17 @@ export function app_code_lesson_inside_parenthesis_box(
   html_span_text(line_only, " ");
   html_span_text_code_dark(line_only, paren_right);
   html_span_text(line_only, " is written out:");
+  ("The line of code is drawn bigger than the writing around it, because it is the thing the two sentences either side of it are pointing at. At reading size it sits in the paragraph as one more line to get through; grown, it is the picture and the sentences are its caption, which is the order a learner should read them in. The three pieces still abut, so what grows is one black chip with a blue name in the middle of it rather than three chips that happen to be large.");
   let line_call = html_div(box_care);
+  html_style_font_size(line_call, "1.6em");
   html_span_text_code_dark(line_call, opened);
   app_code_span_text_code_highlight(line_call, name_written);
   html_span_text_code_dark(line_call, closed);
+  ("THE VALUE OF a is not written out, rather than a is not written out. The name a is written out - it is there on the line, a learner can see it - and what does not come out is what is in the cup it names. Said without those three words the sentence denies something the screen plainly shows, and a learner who notices has been given a reason to distrust the rest of the box.");
   let line_other = html_div(box_care);
   html_span_text(line_other, "The other cup ");
   html_span_text_code_dark(line_other, name_other);
-  html_span_text(line_other, " is still there, but ");
+  html_span_text(line_other, " is still there, but the value of ");
   html_span_text_code_dark(line_other, name_other);
   html_span_text(line_other, " is not written out because ");
   html_span_text_code_dark(line_other, name_other);

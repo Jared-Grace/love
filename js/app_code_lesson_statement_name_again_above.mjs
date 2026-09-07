@@ -1,17 +1,18 @@
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
-import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_code } from "./html_div_code.mjs";
+import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
+import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
+import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
+import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
-import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { html_div_code } from "./html_div_code.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { js_code_semicolon } from "./js_code_semicolon.mjs";
 export function app_code_lesson_statement_name_again_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
@@ -52,17 +53,39 @@ export function app_code_lesson_statement_name_again_above(root) {
   let logged = js_code_console_log_statement(name);
   html_div_cycle_code(box_code, ["In JS we make the cup like this"]);
   html_div_code(box_code, held);
+  ("THE CUP rather than IT. The line before it is about the cup and the line after it is about a word, so an it standing between them has two things it could be pointing at and the learner has to pick. Naming the cup costs one word and leaves nothing to pick.");
   html_div_cycle_code(box_code, [
-    "We do not make it again, so we do not write ",
+    "We do not make the cup again, so we do not write ",
     "let",
     " a second time",
   ]);
   html_div_code(box_code, again);
   html_div_cycle_code(box_code, ["Then we write out what is in the cup"]);
   app_code_code_lines_writes_out(box_code, [logged], word_after);
+  ("The last box says the order rule in the words the course already owns. A statement, and the ; that ends one, were taught long before this lesson - so the rule is stated about statements rather than about LINES, which is a word about how the program is laid out on the screen and not about the language. Two statements on one line would still happen in the order they were written, and a learner told the rule in terms of lines has been given something that is nearly true.");
+  ("The recall comes first, because the sentence under it leans on it. A learner who has to remember what a statement is while reading a rule about statements is doing two things at once, and the first of them is free to give them.");
+  ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");
+  let semicolon = js_code_semicolon();
   let box_care = app_code_container_light_blue(root);
   html_div_cycle_code(box_care, [
-    "The lines happen in the order they are written",
+    "Remember, a statement ends with ",
+    semicolon,
   ]);
-  html_div_cycle_code(box_care, ["So what comes out is whatever went in last"]);
+  html_div_cycle_code(box_care, [
+    "In JS, the ",
+    semicolon,
+    " statements happen in the order they are written",
+  ]);
+  html_div_cycle_code(box_care, [
+    "So when we set the value of ",
+    name,
+    ", then whichever value was set last is the value that ",
+    name,
+    " will have",
+  ]);
+  html_div_cycle_code(box_care, [
+    "Here we set the value of ",
+    name,
+    " twice, so the second value is used, not the first",
+  ]);
 }

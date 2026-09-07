@@ -1,18 +1,18 @@
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
-import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
-import { app_code_string_code } from "./app_code_string_code.mjs";
-import { app_code_value_line } from "./app_code_value_line.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { app_code_value_line } from "./app_code_value_line.mjs";
+import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
 export function app_code_lesson_statement_name_two_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: two cups standing side by side with different things in them, being asked about one at a time, and the same thing written as code");
@@ -25,8 +25,9 @@ export function app_code_lesson_statement_name_two_above(root) {
   let word_last = app_code_lesson_statement_name_two_word();
   let box_two = app_code_container_light_blue(root);
   html_div_cycle_code(box_two, ["You can have more than one cup"]);
+  ("TWO CUPS, and a colon before the two names. Two on its own leaves the noun to be carried down from the line above it, and the two names that follow then arrive as a list of something the sentence never said; the colon is what marks them as that list rather than as more of the same sentence.");
   html_div_cycle_code(box_two, [
-    "Suppose you had two, one called ",
+    "Suppose you had two cups: one called ",
     name_first,
     " and one called ",
     name_last,
