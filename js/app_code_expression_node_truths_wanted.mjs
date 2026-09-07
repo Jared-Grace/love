@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_left_operator_first_parenthesis_wrapped } from "./app_code_expression_node_left_operator_first_parenthesis_wrapped.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
-import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
+import { app_code_expression_node_right_operator_first_parenthesis_wrapped } from "./app_code_expression_node_right_operator_first_parenthesis_wrapped.mjs";
 import { app_code_operator_truths_wanted_nested } from "./app_code_operator_truths_wanted_nested.mjs";
 import { list_get } from "./list_get.mjs";
 import { ternary } from "./ternary.mjs";
@@ -38,7 +38,7 @@ export function app_code_expression_node_truths_wanted(
   );
   let build_right = ternary(
     bracketed,
-    app_code_expression_node_right_operator_first_bracketed,
+    app_code_expression_node_right_operator_first_parenthesis_wrapped,
     app_code_expression_node_right_operator_first,
   );
   let build = ternary(gathered_left, build_left, build_right);
