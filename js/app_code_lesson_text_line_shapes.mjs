@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { app_code_lesson_text_line_bracket_shape_or_null } from "./app_code_lesson_text_line_bracket_shape_or_null.mjs";
+import { app_code_lesson_text_line_parenthesis_shape_or_null } from "./app_code_lesson_text_line_parenthesis_shape_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { app_code_lesson_text_line_operator_mix_or_null } from "./app_code_lesson_text_line_operator_mix_or_null.mjs";
@@ -15,7 +15,8 @@ export function app_code_lesson_text_line_shapes(text) {
   ("The line is trimmed once here rather than in each reading, because they ask about its ends and a trailing space would put a value at neither.");
   let trimmed = text_trim(text);
   let found = [];
-  let bracket_shape = app_code_lesson_text_line_bracket_shape_or_null(trimmed);
+  let bracket_shape =
+    app_code_lesson_text_line_parenthesis_shape_or_null(trimmed);
   let some = null_not_is(bracket_shape);
   if (some) {
     list_add(found, bracket_shape);
