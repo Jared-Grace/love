@@ -2,46 +2,65 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
-import { text_wrap_parenthesis } from "./text_wrap_parenthesis.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
+import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
+import { app_code_highlight_color_third } from "./app_code_highlight_color_third.mjs";
+import { app_shared_color_code_background } from "./app_shared_color_code_background.mjs";
+import { html_div } from "./html_div.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_worked(
   parent,
 ) {
   "the last card of this lesson: the rewritten line taken down to its value a step at a time, in the same words every walk in this run uses - the step, the replacement, what is left, and the answer";
   "WRITTEN OUT RATHER THAN WALKED BY THE MACHINE. The walk the other lessons in this run draw takes the flat line, so its rows read !true where this lesson has just spent a card explaining !(true) - and a learner who had been shown the parentheses and then shown the same steps without them would have to work out for themselves that the two were one thing. The card that taught the rewrite is the card that has to carry it through.";
   "The rows are the walk's own wordings and in the walk's own order, so a learner arriving from the lessons behind this one is reading the shape they already know.";
+  "THE COLOURS FROM THE CARD ABOVE ARE CARRIED DOWN, and this is where they earn their keep. Each row is a piece of the line lifted out of !(!(true)) and written on its own, and once it is out of the line there is nothing left to say which piece it was: the row reading ! ( true ) could be either half. Wearing the colour it wore upstairs, it says which. A learner watches the amber ! go first and the blue one stay, which is the rule the whole lesson is about, told again without a word being spent on it.";
+  "THE FIRST TWO ROWS ARE THE SECOND ! AND CARRY AMBER, and their brackets are the inner pair, so they stay plain - the magenta belongs to the outer pair and putting it here would say these brackets were the ones the sentence upstairs named. The third row is where the outer pair finally shows: ! ( false ) is the blue ! holding the magenta brackets, which is exactly the line left after the amber step was taken out of the middle of them.";
+  "The fifth row drops the brackets and keeps the blue, because by then only one operator is left and there is nothing for a bracket to hold apart. The answer is left plain: it is a value now, not a piece of anybody's line.";
   arguments_assert(arguments, 1);
   let bang = js_operator_bang_symbol();
   let word_true = js_keyword_true();
   let word_false = js_keyword_false();
-  let right_code = text_wrap_parenthesis(word_true);
-  let not_true_parenthesised = app_code_operator_code_before(bang, right_code);
-  let right_code2 = text_wrap_parenthesis(word_false);
-  let not_false_parenthesised = app_code_operator_code_before(
-    bang,
-    right_code2,
-  );
-  let not_false = app_code_operator_code_before(bang, word_false);
-  html_div_cycle_code(parent, [
-    "So we solve ",
-    not_true_parenthesised,
-    " to get ",
-    word_false,
-  ]);
-  html_div_cycle_code(parent, [
-    "We replace ",
-    not_true_parenthesised,
-    " with ",
-    word_false,
-  ]);
-  html_div_cycle_code(parent, ["Then we have ", not_false_parenthesised]);
-  html_div_cycle_code(parent, ["The ", bang, " is the only operator left"]);
-  html_div_cycle_code(parent, [
-    "So we solve ",
-    not_false,
-    " to get ",
-    word_true,
-  ]);
-  html_div_cycle_code(parent, ["And the answer is ", word_true]);
+  let left = js_code_parenthesis_left();
+  let right = js_code_parenthesis_right();
+  let color_first = app_code_highlight_color();
+  let color_second = app_code_highlight_color_second();
+  let color_third = app_code_highlight_color_third();
+  let plain = app_shared_color_code_background();
+  let inner_texts = [bang, left, word_true, right];
+  let inner_colors = [color_second, plain, plain, plain];
+  let outer_texts = [bang, left, word_false, right];
+  let outer_colors = [color_first, color_third, plain, color_third];
+  let bare_texts = [bang, word_false];
+  let bare_colors = [color_first, plain];
+  let line_solve = html_div(parent);
+  html_span_text(line_solve, "So we solve ");
+  html_span_code_dark_colored(line_solve, inner_texts, inner_colors);
+  html_span_text(line_solve, " to get ");
+  html_span_text_code_dark(line_solve, word_false);
+  let line_replace = html_div(parent);
+  html_span_text(line_replace, "We replace ");
+  html_span_code_dark_colored(line_replace, inner_texts, inner_colors);
+  html_span_text(line_replace, " with ");
+  html_span_text_code_dark(line_replace, word_false);
+  let line_then = html_div(parent);
+  html_span_text(line_then, "Then we have ");
+  html_span_code_dark_colored(line_then, outer_texts, outer_colors);
+  let line_only = html_div(parent);
+  html_span_text(line_only, "The ");
+  html_span_text_code_background(line_only, bang, color_first);
+  html_span_text(line_only, " is the only operator left");
+  let line_last = html_div(parent);
+  html_span_text(line_last, "So we solve ");
+  html_span_code_dark_colored(line_last, bare_texts, bare_colors);
+  html_span_text(line_last, " to get ");
+  html_span_text_code_dark(line_last, word_true);
+  let line_answer = html_div(parent);
+  html_span_text(line_answer, "And the answer is ");
+  html_span_text_code_dark(line_answer, word_true);
 }
