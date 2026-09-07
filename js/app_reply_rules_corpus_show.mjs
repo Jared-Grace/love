@@ -16,7 +16,7 @@ export function app_reply_rules_corpus_show(root, cases) {
   ("The corpus is shown at all because a change is reviewed against a rule set somebody believes is working. Reviewing one change while three cases have quietly gone wrong is reviewing a thing that is not there, and the cheapest way to be wrong about that is to have never put it on the screen.");
   ("The two red lines are different faults and are said separately. One is a case that has drifted from the rules; the other is a rule that has drifted from everybody except one person. Rolled into a single warning the second would be read as the first and fixed by rewriting the case, which is the exact opposite of what it needs.");
   let red = app_shared_color_red();
-  function each(one) {
+  function each_shown(one) {
     let drawn = app_reply_rules_case_show(root, one);
     app_reply_rules_rewrite_changed_show(root, one);
     let ok = property_get(one, "ok");
@@ -34,6 +34,6 @@ export function app_reply_rules_corpus_show(root, cases) {
     html_font_color_set(line, red);
     return line;
   }
-  let all = list_map(cases, each);
+  let all = list_map(cases, each_shown);
   return all;
 }
