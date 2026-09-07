@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node_left_operator_first_bracketed } from "./app_code_expression_node_left_operator_first_bracketed.mjs";
 import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
 import { app_code_lesson_expression_choose_order_tree_of_code_bracket_side } from "./app_code_lesson_expression_choose_order_tree_of_code_bracket_side.mjs";
-export function app_code_lesson_expression_choose_order_brackets_moved_tree_of_code(
+export function app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code(
   code,
 ) {
   arguments_assert(arguments, 1);
