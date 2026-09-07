@@ -3,7 +3,7 @@ import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_code_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_tree_of_code } from "./app_code_lesson_expression_choose_order_brackets_moved_tree_of_code.mjs";
-export function app_code_lesson_expression_choose_order_brackets_moved_questions() {
+export function app_code_lesson_expression_choose_order_parentheses_and_or_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the moved brackets lesson: lines holding an && and then an || with the one pair of brackets round the first two words on some and round the last two on others, given out one a screen and worked out again from the writing they were printed as");
   ("The asking is the same asking as every other press-at-a-time lesson - one line a screen, true and false taking turns - so it is asked for rather than written out here. What differs is the maker and the reader, and they differ together, because this lesson writes brackets its neighbour would have worked out and dropped.");
