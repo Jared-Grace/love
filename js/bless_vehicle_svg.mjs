@@ -76,8 +76,8 @@ export function bless_vehicle_svg(colour) {
   <rect x="20.5" y="26.6" width="0.7" height="5.4" fill="rgba(0,0,0,0.25)" />
   <rect x="35.3" y="28.4" width="2.9" height="2.6" rx="0.9" fill="rgba(255,250,220,0.95)" />
   <rect x="1.9" y="28.4" width="2.4" height="2.6" rx="0.9" fill="rgba(220,60,50,0.95)" />
-  <circle cx="11" cy="33.4" r="2.6" fill="#191919" />
-  <circle cx="29" cy="33.4" r="2.6" fill="#191919" />
+  <circle cx="11" cy="33.4" r="2.6" fill="#1a1a1a" />
+  <circle cx="29" cy="33.4" r="2.6" fill="#1a1a1a" />
   <circle cx="11" cy="33.4" r="1.05" fill="#9aa0a6" />
   <circle cx="29" cy="33.4" r="1.05" fill="#9aa0a6" />
 </svg>`;
