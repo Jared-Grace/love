@@ -8,16 +8,16 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_intro
 ) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
-  ("Three sentences and no more: the pair may go round either half of the line, whatever they go round is solved first, and round the && they change nothing. The third is the new one - the first two the learner already has - and it is the only place in the run where a pair of brackets is allowed to be worth nothing.");
+  ("Three sentences and no more: the pair may go round either half of the line, whatever they go round is solved first, and round the && they change nothing. The third is the new one - the first two the learner already has - and it is the only place in the run where a pair of parentheses is allowed to be worth nothing.");
   ("Nothing here says the answer changes when they move. The two runs above show it changing, on the same three words, and a sentence saying so as well would be asking the learner to check the words against what they have just watched.");
   let and_symbol = js_operator_and_symbol();
-  let left_bracket = js_code_parenthesis_left();
-  let right_bracket = js_code_parenthesis_right();
+  let left_parenthesis = js_code_parenthesis_left();
+  let right_parenthesis = js_code_parenthesis_right();
   html_div_cycle_code(parent, [
     "Now ",
-    left_bracket,
+    left_parenthesis,
     " and ",
-    right_bracket,
+    right_parenthesis,
     " can go round either pair",
   ]);
   html_div_cycle_code(parent, ["Whatever they go round is solved first"]);

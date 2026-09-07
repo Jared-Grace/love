@@ -6,7 +6,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 export function app_code_quiz_dealing_value_alike_is(code, candidate) {
   "Whether a line comes out to the same value as the question it is offered as an answer to. This is the one thing every backwards unscramble asks of every learner, because the value is the one thing the screen tells them.";
-  "A learner handed the tiles of (2 > 9) === (5 === 4) and told the answer is true has been given no way at all to tell that line apart from (2 > 4) === (5 === 9) - same tiles, same brackets, same signs in the same places, and true either way. So the value has to be enough on its own to make an answer right, and anything a lesson wants on top of the value has to be something the screen also showed.";
+  "A learner handed the tiles of (2 > 9) === (5 === 4) and told the answer is true has been given no way at all to tell that line apart from (2 > 4) === (5 === 9) - same tiles, same parentheses, same signs in the same places, and true either way. So the value has to be enough on its own to make an answer right, and anything a lesson wants on top of the value has to be something the screen also showed.";
   "A question that does not come out to anything is answered no, not asked further. Nothing was shown for a learner to build towards, so there is no value for their line to agree with.";
   arguments_assert(arguments, 2);
   let asked = app_code_quiz_tokens(code);

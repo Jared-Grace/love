@@ -11,9 +11,9 @@ export function app_code_lesson_expression_parentheses_both_sides_title_name_id(
   function paint(parent) {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
-    ("the title names what is inside the brackets, which is a comparison - any of ===, !==, < or >, since ",
+    ("the title names what is inside the parentheses, which is a comparison - any of ===, !==, < or >, since ",
       fn_name("app_code_comparison_side"),
-      " draws from all four. It used to read === / !== inside ( and ) on both sides, which was wrong twice over: those two are the OUTER operator, sitting between the two bracketed groups and never in them, and the two it left out are half the operators the lesson actually shows");
+      " draws from all four. It used to read === / !== inside ( and ) on both sides, which was wrong twice over: those two are the OUTER operator, sitting between the two parenthesised groups and never in them, and the two it left out are half the operators the lesson actually shows");
     html_cycle_code(parent, [
       "a comparison inside ",
       open,
@@ -22,7 +22,7 @@ export function app_code_lesson_expression_parentheses_both_sides_title_name_id(
       " on both sides",
     ]);
   }
-  ("These words are FROZEN and must not be shortened. They build the id, and the id is the key a learner's finished-lessons record is saved under. This lesson is the last one handed to a learner on the built site, so its key is one somebody is holding right now - rewording it does not rename their tick, it loses it. Measured 2026-08-25: the built site hands out a hundred and one lessons and this is the hundred and first, so shortening this to brackets both sides was reverted the same day it was written. Every lesson after this one is free, because nobody has been handed it.");
+  ("These words are FROZEN and must not be shortened. They build the id, and the id is the key a learner's finished-lessons record is saved under. This lesson is the last one handed to a learner on the built site, so its key is one somebody is holding right now - rewording it does not rename their tick, it loses it. Measured 2026-08-25: the built site hands out a hundred and one lessons and this is the hundred and first, so shortening this to parentheses both sides was reverted the same day it was written. Every lesson after this one is free, because nobody has been handed it.");
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
   return built;

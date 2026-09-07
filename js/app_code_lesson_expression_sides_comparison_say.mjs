@@ -5,7 +5,7 @@ export function app_code_lesson_expression_sides_comparison_say(run, sides) {
   arguments_assert(arguments, 2);
   ("why the two sides of a line go first, told for a line whose two sides are comparisons: they are named as comparisons, the question is asked, and a comparison always coming to the same value is what answers it");
   ("The two sides here are usually two DIFFERENT comparisons - 2 < 5 and 3 === 3 - so there is no one operator to count two of, and the telling names what the sides ARE instead. What holds them together is the kind, so the kind is what the sentence has to reach for.");
-  ("Why they go first is said as strength - a comparison is worked out before an && - and not as brackets, because there are no brackets on this line and there is nothing on it to point at.");
+  ("Why they go first is said as strength - a comparison is worked out before an && - and not as parentheses, because there are no parentheses on this line and there is nothing on it to point at.");
   let left_code = property_get(sides, "left_code");
   let right_code = property_get(sides, "right_code");
   let outer_symbol = property_get(sides, "outer_symbol");

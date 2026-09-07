@@ -12,7 +12,7 @@ import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 export function app_code_lesson_expression_not_pair() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: !(true && false) asked for its value, with nothing to press");
-  ("Two lessons stand behind this one and it needs both. One put a ! around a whole comparison and taught the brackets; one walked a ! around a joined pair a press at a time. What is left to learn is only to hold the two steps at once, which is what every in-your-head lesson of this run is for.");
+  ("Two lessons stand behind this one and it needs both. One put a ! around a whole comparison and taught the parentheses; one walked a ! around a joined pair a press at a time. What is left to learn is only to hold the two steps at once, which is what every in-your-head lesson of this run is for.");
   ("The lines are drawn by the very same maker the pressing lesson draws its lines with, so a learner meets one family of lines twice rather than two families that merely look alike. Anything the maker is later taught to draw arrives in both lessons together, and neither can drift away from the other.");
   ("A screen holds one line that comes to true and one that comes to false, so neither answer can be reached by habit. Which operator stands inside is left to the maker, which draws it, so it does not line up with the answer.");
   ("The wrong answer offered is the opposite word, which is the only other thing a line like this can come to.");

@@ -6,7 +6,7 @@ import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_line.mjs";
 export function app_code_lesson_expression_parentheses_minus_divide_outer_divide_line() {
   arguments_assert(arguments, 0);
-  ("a / (b * c), with a built as b * c * k so the answer is the whole number k and the bracket-less value a / b * c is whole too");
+  ("a / (b * c), with a built as b * c * k so the answer is the whole number k and the parenthesis-less value a / b * c is whole too");
   let b = integer_random(2, 4);
   let c = integer_random(2, 3);
   let k = integer_random(2, 4);
