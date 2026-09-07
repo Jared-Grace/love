@@ -3,7 +3,7 @@ import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_expression_node_left_operator_first_parenthesis_wrapped } from "./app_code_expression_node_left_operator_first_parenthesis_wrapped.mjs";
-import { app_code_expression_node_right_operator_first_bracketed } from "./app_code_expression_node_right_operator_first_bracketed.mjs";
+import { app_code_expression_node_right_operator_first_parenthesis_wrapped } from "./app_code_expression_node_right_operator_first_parenthesis_wrapped.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair } from "./app_code_lesson_expression_choose_order_parentheses_and_or_other_pair.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_recall } from "./app_code_lesson_expression_choose_order_parentheses_recall.mjs";
@@ -32,13 +32,14 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_above
       or_symbol,
       true,
     );
-  let tree_right = app_code_expression_node_right_operator_first_bracketed(
-    false,
-    and_symbol,
-    middle_truth,
-    or_symbol,
-    true,
-  );
+  let tree_right =
+    app_code_expression_node_right_operator_first_parenthesis_wrapped(
+      false,
+      and_symbol,
+      middle_truth,
+      or_symbol,
+      true,
+    );
   let heading_none = [];
   let heading_other =
     app_code_lesson_expression_choose_order_parentheses_and_or_other_pair();

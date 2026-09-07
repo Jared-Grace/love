@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { app_code_expression_node_parenthesis_wrapped } from "./app_code_expression_node_parenthesis_wrapped.mjs";
-export function app_code_expression_node_right_operator_first_bracketed(
+export function app_code_expression_node_right_operator_first_parenthesis_wrapped(
   left,
   first_symbol,
   middle,
