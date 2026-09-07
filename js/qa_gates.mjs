@@ -1,3 +1,4 @@
+import { gloss_root_named_word_spelled_in_gate_run } from "./gloss_root_named_word_spelled_in_gate_run.mjs";
 import { gloss_store_words_read_gate_run } from "./gloss_store_words_read_gate_run.mjs";
 import { reply_proposals_stale_gate_run } from "./reply_proposals_stale_gate_run.mjs";
 import { words_dash_pieces_absent_gate_run } from "./words_dash_pieces_absent_gate_run.mjs";
@@ -1033,6 +1034,7 @@ export function qa_gates() {
     lyric_video_screens_faults_cases_gate_run,
     gloss_root_claimed_shape_gate_run,
     gloss_root_claimed_backing_gate_run,
+    gloss_root_named_word_spelled_in_gate_run,
     gloss_classes_backing_elsewhere_gate_run,
     binisaya_words_known_get_folded_gate_run,
     app_en_learn_bible_gloss_urdu_glosses_empty_gate_run,
