@@ -3,6 +3,7 @@ export function gloss_roots_pair_dictionary_verdict_cases() {
   "★ THE CONTRADICTION LINES ARE THE REASON THIS FILE EXISTS. Run over the whole Cebuano store the arbitration answered contradiction nought times, and a nought means one of two opposite things - that the store never contradicts itself, or that the branch which would have said so can never be reached. Nothing in the sweep's own output tells those apart, and a reader would take the happier one. These lines settle it from outside the store, so the nought can be reported as a measurement instead of as a hope.";
   "The pairs are written already folded, because folding is somebody else's work and a case that folded first would go red when the folder changed rather than when the arbitration did.";
   "A single known half is allowed to settle depth and is not allowed to settle contradiction, and both halves of that asymmetry are pinned. It is the one place where treating the dictionary's silence as an answer would be a fault rather than a caution: the dictionary saying this word comes from that one is something it knows, while the dictionary saying nothing about a word is only a record of what nobody has asked.";
+  "Two of these lines were written wanting shared and the first draft of one of them was simply wrong: both halves were taken back to a word that was itself one of the pair, which is depth and not agreement. The reading said so and the line was corrected rather than the reading. It is worth saying out loud, because a case file is usually read as the settled half of the pair and it is not - a wrong case can only ever accuse a right reading.";
   let cases = [
     {
       first: "kuptan",
@@ -69,12 +70,12 @@ export function gloss_roots_pair_dictionary_verdict_cases() {
       why: "the same one sided knowledge on the other side, since the two halves are not read by the same lines",
     },
     {
-      first: "luoy",
+      first: "giluoy",
       second: "kaluy",
       first_root: "luoy",
       second_root: "luoy",
       verdict: "shared",
-      why: "a root the dictionary takes back to itself on both halves, which must read as agreement and not as two different origins",
+      why: "both halves taken back to one word that is neither of them, which is what shared is for - the first shared line reaches it through two unlike spellings and this one through two alike ones",
     },
     {
       first: "dagko",
