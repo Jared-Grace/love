@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 267, and you are right about 260 - that many-coloured glow is the wording working. The beams are no longer an even fan: I stopped calling it a fan and gave them places instead, four bunched over the left shoulder, bare rock over the right. What is missing is the thing you praised. 260's glow took each beam's colour as it passed out; this one came back plain white, so it is a draw that missed, not words that need changing.",
+      note: "This is 260, your fallback - the extra batch did not find the glow again. Five draws: two tinted the halo faintly, one made it a flat yellow ring, one left it white, one lost the light. What 260 costs you is the window: it is cropped, so the arch runs off both sides instead of standing on black with its white band round it. Thirty draws say that glow and that arch have not yet come back in the same picture.",
     },
   ];
   return couplets;
