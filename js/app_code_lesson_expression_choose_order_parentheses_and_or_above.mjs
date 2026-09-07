@@ -8,7 +8,7 @@ import { app_code_lesson_expression_choose_order_brackets_moved_other_pair } fro
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_intro } from "./app_code_lesson_expression_choose_order_brackets_moved_intro.mjs";
-export function app_code_lesson_expression_choose_order_brackets_moved_above(
+export function app_code_lesson_expression_choose_order_parentheses_and_or_above(
   root,
 ) {
   arguments_assert(arguments, 1);
