@@ -1,3 +1,4 @@
+import { gloss_root_claimed_backing_gate_run } from "./gloss_root_claimed_backing_gate_run.mjs";
 import { gloss_root_claimed_shape_gate_run } from "./gloss_root_claimed_shape_gate_run.mjs";
 import { lyric_video_screens_faults_cases_gate_run } from "./lyric_video_screens_faults_cases_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
