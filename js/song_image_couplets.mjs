@@ -282,7 +282,7 @@ export function song_image_couplets() {
       first: "the wrath of GOD",
       second: "was satisfied",
       symbol:
-        "A sword half sheathed, standing upright with its point downward, the lower half of its blade inside a long plain brown leather sheath and the upper half of the blade standing bare above the sheath's mouth, that bare blade of grey iron wrapped along both its edges in flame of bright orange and bright yellow, the sword drawn so tall that it runs the whole height of the glass inside the white border, its one round grey pommel almost touching the white border at the top and the tip of the sheath almost touching the white border at the bottom, and above the sheath's mouth a straight crossguard of grey iron reaching almost to the white border on both sides",
+        "A sword half sheathed, standing upright with its point downward, the lower half of its blade inside a long plain brown leather sheath and the upper half of the blade standing bare above the sheath's mouth, that bare blade of grey iron wrapped along both its edges in flame of bright orange and bright yellow, the sword drawn so tall that it runs the whole height of the glass inside the white border, its one round grey pommel almost touching the white border at the top and the tip of the sheath almost touching the white border at the bottom, and at the top of the bare blade a straight crossguard of grey iron reaching almost to the white border on both sides",
       symbol_ref: "Zechariah 13:7",
       same_as: 0,
     },
