@@ -1853,6 +1853,266 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "chets",
+      gloss: "arrow",
+      words: [
+        {
+          strong: "2671",
+          glyph: "arrow",
+        },
+      ],
+    },
+    {
+      root: "shachar",
+      gloss: "dawn, the first light",
+      words: [
+        {
+          strong: "7837",
+          glyph: "dawn",
+        },
+      ],
+    },
+    {
+      root: "mearah",
+      gloss: "cave",
+      words: [
+        {
+          strong: "4631",
+          glyph: "cave",
+        },
+      ],
+    },
+    {
+      root: "sheleg",
+      gloss: "snow",
+      words: [
+        {
+          strong: "7950",
+          glyph: "snow",
+        },
+      ],
+    },
+    {
+      root: "nachash",
+      gloss: "snake, serpent",
+      words: [
+        {
+          strong: "5175",
+          glyph: "snake",
+        },
+      ],
+    },
+    {
+      root: "migdal",
+      gloss: "tower",
+      words: [
+        {
+          strong: "4026",
+          glyph: "tower",
+        },
+      ],
+    },
+    {
+      root: "kos",
+      gloss: "cup",
+      words: [
+        {
+          strong: "3563",
+          glyph: "cup",
+        },
+      ],
+    },
+    {
+      root: "arbeh",
+      gloss: "locusts",
+      words: [
+        {
+          strong: "697",
+          glyph: "locusts",
+        },
+      ],
+    },
+    {
+      root: "gephen",
+      gloss: "vine",
+      words: [
+        {
+          strong: "1612",
+          glyph: "vine",
+        },
+      ],
+    },
+    {
+      root: "tabbaath",
+      gloss: "ring, the signet worn on the hand",
+      words: [
+        {
+          strong: "2885",
+          glyph: "ring",
+        },
+      ],
+    },
+    {
+      root: "nesher",
+      gloss: "eagle",
+      words: [
+        {
+          strong: "5404",
+          glyph: "eagle",
+        },
+      ],
+    },
+    {
+      root: "kerub",
+      gloss: "cherub",
+      words: [
+        {
+          strong: "3742",
+          glyph: "cherub",
+        },
+      ],
+    },
+    {
+      root: "kur",
+      gloss: "the furnace that smelts metal",
+      words: [
+        {
+          strong: "3564",
+          glyph: "furnace",
+        },
+      ],
+    },
+    {
+      root: "attun",
+      gloss: "the furnace of fire in Babylon",
+      words: [
+        {
+          strong: "861",
+          glyph: "furnace",
+        },
+      ],
+    },
+    {
+      root: "moqesh",
+      gloss: "a snare, the thing that catches a foot",
+      words: [
+        {
+          strong: "4170",
+          glyph: "snare",
+        },
+      ],
+    },
+    {
+      root: "pach",
+      gloss: "a snare, the trap set for a bird",
+      words: [
+        {
+          strong: "6341",
+          glyph: "snare",
+        },
+      ],
+    },
+    {
+      root: "kinnor",
+      gloss: "the harp, the lyre carried in the hand",
+      words: [
+        {
+          strong: "3658",
+          glyph: "harp",
+        },
+      ],
+    },
+    {
+      root: "oniyyah",
+      gloss: "ship",
+      words: [
+        {
+          strong: "591",
+          glyph: "ship",
+        },
+      ],
+    },
+    {
+      root: "zaqan",
+      gloss: "beard",
+      words: [
+        {
+          strong: "2206",
+          glyph: "beard",
+        },
+      ],
+    },
+    {
+      root: "toph",
+      gloss: "the tambourine struck with the hand",
+      words: [
+        {
+          strong: "8596",
+          glyph: "tambourine",
+        },
+      ],
+    },
+    {
+      root: "oreb",
+      gloss: "raven",
+      words: [
+        {
+          strong: "6158",
+          glyph: "raven",
+        },
+      ],
+    },
+    {
+      root: "reshet",
+      gloss: "net, the mesh spread to catch",
+      words: [
+        {
+          strong: "7568",
+          glyph: "net",
+        },
+      ],
+    },
+    {
+      root: "goral",
+      gloss: "the lot cast, and the portion it gives",
+      words: [
+        {
+          strong: "1486",
+          glyph: "lots",
+        },
+      ],
+    },
+    {
+      root: "yonah",
+      gloss: "dove, pigeon",
+      words: [
+        {
+          strong: "3123",
+          glyph: "dove",
+        },
+      ],
+    },
+    {
+      root: "yareach",
+      gloss: "moon",
+      words: [
+        {
+          strong: "3394",
+          glyph: "moon",
+        },
+      ],
+    },
+    {
+      root: "megillah",
+      gloss: "scroll",
+      words: [
+        {
+          strong: "4039",
+          glyph: "scroll",
+        },
+      ],
+    },
   ];
   return roots;
 }
