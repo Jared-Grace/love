@@ -2,7 +2,7 @@ import { each } from "./each.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_lesson_expression_brackets_worked_card } from "./app_code_lesson_expression_brackets_worked_card.mjs";
+import { app_code_lesson_expression_parentheses_worked_card } from "./app_code_lesson_expression_parentheses_worked_card.mjs";
 import { app_code_lesson_expression_choose_order_brackets_either_side } from "./app_code_lesson_expression_choose_order_brackets_either_side.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
@@ -70,6 +70,6 @@ export function app_code_lesson_expression_parentheses_or_intro(root) {
         inner_or: true,
       },
     ],
-    app_code_lesson_expression_brackets_worked_card,
+    app_code_lesson_expression_parentheses_worked_card,
   );
 }
