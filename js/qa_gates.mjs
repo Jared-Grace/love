@@ -1,3 +1,4 @@
+import { gloss_classes_word_claims_apart_gate_run } from "./gloss_classes_word_claims_apart_gate_run.mjs";
 import { gloss_root_unwalked_cause_gate_run } from "./gloss_root_unwalked_cause_gate_run.mjs";
 import { app_en_learn_bible_gloss_urdu_glosses_empty_gate_run } from "./app_en_learn_bible_gloss_urdu_glosses_empty_gate_run.mjs";
 import { binisaya_words_known_get_folded_gate_run } from "./binisaya_words_known_get_folded_gate_run.mjs";
@@ -1023,6 +1024,7 @@ export function qa_gates() {
     binisaya_words_known_get_folded_gate_run,
     app_en_learn_bible_gloss_urdu_glosses_empty_gate_run,
     gloss_root_unwalked_cause_gate_run,
+    gloss_classes_word_claims_apart_gate_run,
   ];
   return gates;
 }
