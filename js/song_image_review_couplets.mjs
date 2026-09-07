@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 232. The beams were pale because the wording asked for white to be the commonest colour, so I cut that line and the colours came back strong. One of the six drew the white ring as a real gradient with no black border - the first time ever - but it threw the window frame away to do it. The black border is still here.",
+      note: "This is 242, and the white ring is a gradient at last with no black border. It was never the drawing: the shared style sheet forbids a gradient by name in all 36 prompts, so the halo could not be drawn as asked. You said allow it where a couplet asks, and six of six came back right. What is still wrong here is the head of the arch, which should be deep cobalt and came back grey.",
     },
   ];
   return couplets;
