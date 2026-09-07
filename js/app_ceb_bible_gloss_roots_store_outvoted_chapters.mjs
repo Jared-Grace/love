@@ -34,9 +34,7 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   "The walk over the chapters repeats the one in the reader beside it, and the two want collapsing into a single pass that hands back the words with their chapters. That is left undone rather than done badly, because the collapse changes a unit that has already been measured against and the two answers should be seen to agree first.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
   let said = {};

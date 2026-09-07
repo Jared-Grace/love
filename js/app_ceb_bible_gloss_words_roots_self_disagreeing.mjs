@@ -32,9 +32,7 @@ export async function app_ceb_bible_gloss_words_roots_self_disagreeing() {
   "Each disagreement is handed to the reader that says what kind it is, because they are not one thing and only some of them are faults. One sentence stopping at a form the other went further back through is a difference about how far to go and leaves both readers better off than silence; two roots with nothing in common is one sentence simply being wrong. Where more than two roots were named the first two are the pair read, since the count is already in the roots beside it.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
   let comparable = 0;
