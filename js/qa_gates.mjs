@@ -1,3 +1,4 @@
+import { gloss_classes_backing_elsewhere_gate_run } from "./gloss_classes_backing_elsewhere_gate_run.mjs";
 import { gloss_root_claimed_backing_gate_run } from "./gloss_root_claimed_backing_gate_run.mjs";
 import { gloss_root_claimed_shape_gate_run } from "./gloss_root_claimed_shape_gate_run.mjs";
 import { lyric_video_screens_faults_cases_gate_run } from "./lyric_video_screens_faults_cases_gate_run.mjs";
@@ -1015,6 +1016,7 @@ export function qa_gates() {
     lyric_video_screens_faults_cases_gate_run,
     gloss_root_claimed_shape_gate_run,
     gloss_root_claimed_backing_gate_run,
+    gloss_classes_backing_elsewhere_gate_run,
   ];
   return gates;
 }
