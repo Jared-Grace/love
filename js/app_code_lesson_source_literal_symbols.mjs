@@ -6,7 +6,7 @@ import { list_unique } from "./list_unique.mjs";
 export function app_code_lesson_source_literal_symbols(source) {
   arguments_assert(arguments, 1);
   ("the operator symbols a function's source SPELLS - the code it puts on a card, not the sentences it says about itself.");
-  ("Which quoted pieces count as a card rather than a sentence is decided in one place and asked for here, so the reading that asks whether a card's line is bracketed is looking at exactly the same pieces this one reads operators off.");
+  ("Which quoted pieces count as a card rather than a sentence is decided in one place and asked for here, so the reading that asks whether a card's line is parenthesised is looking at exactly the same pieces this one reads operators off.");
   let pieces = app_code_lesson_source_code_pieces(source);
   let found = [];
   for (let piece of pieces) {

@@ -11,7 +11,7 @@ export function app_code_expression_node_parentheses_is(item, node) {
   arguments_assert(arguments, 2);
   ("whether one part of an expression is written inside a pair of parentheses on the line the whole expression prints as: on false && (true || true) the || comes back yes and the && comes back no");
   ("For a telling that wants to point at the marks. A part is gathered because of what stands around it rather than because of anything it holds, so the part on its own cannot be asked - it has to be found on the line it belongs to, and the answer is about that pairing rather than about either one.");
-  ("It asks the same question the printer asks, out of the one place the printer asks it, rather than reading the printed line back for a bracket. A second reading could disagree with the line the learner is looking at, and a sentence naming marks that are not there is worse than no sentence.");
+  ("It asks the same question the printer asks, out of the one place the printer asks it, rather than reading the printed line back for a parenthesis. A second reading could disagree with the line the learner is looking at, and a sentence naming marks that are not there is worse than no sentence.");
   ("The right side is asked one rank higher than the left, which is what the printer does and for the printer's reason: an operator of the same strength on the right is worked out after this one and so has to be gathered.");
   let node_is = app_code_expression_node_is(item);
   if (not(node_is)) {

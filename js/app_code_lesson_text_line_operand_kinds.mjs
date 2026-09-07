@@ -18,9 +18,9 @@ import { and } from "./and.mjs";
 export function app_code_lesson_text_line_operand_kinds(text) {
   arguments_assert(arguments, 1);
   ("the kinds of thing a line of code puts on either side of its operators: a number, a written true or false, or a name. Nothing comes back for a piece that is not showing a line of code.");
-  ("A kind is a third thing that can go unshown, apart from the brackets and apart from which end a value sits at. 2 !== 2 === false compares a number to a number and then that answer to a value; divisor === 0 compares a name to a number. A lesson that only ever showed numbers and then asks about a name has told nobody what a name does there, and neither of the other two marks can see it.");
+  ("A kind is a third thing that can go unshown, apart from the parentheses and apart from which end a value sits at. 2 !== 2 === false compares a number to a number and then that answer to a value; divisor === 0 compares a name to a number. A lesson that only ever showed numbers and then asks about a name has told nobody what a name does there, and neither of the other two marks can see it.");
   ("One operator is enough. A kind is a property of an operand rather than of the order the operators are worked in, so a single comparison already has two of them to be right or wrong about.");
-  ("Brackets are read as spaces before the words are taken, so the call in Math.floor(14 / 4) gives up its name and its number instead of one word that is neither. Every word of an operand is read rather than the whole of it, because that is what a bracket leaves behind.");
+  ("Parentheses are read as spaces before the words are taken, so the call in Math.floor(14 / 4) gives up its name and its number instead of one word that is neither. Every word of an operand is read rather than the whole of it, because that is what a parenthesis leaves behind.");
   ("A name has to start with a letter. Anything else is left unnamed rather than called a name, which keeps a stray piece of punctuation - an operator this does not know about, most of all - from being reported as something the lesson teaches.");
   let code_is = app_code_lesson_text_line_code_is(text);
   let sentence = not(code_is);
@@ -36,12 +36,12 @@ export function app_code_lesson_text_line_operand_kinds(text) {
   }
   let left = js_code_parenthesis_left();
   let right = js_code_parenthesis_right();
-  let brackets = [left, right];
+  let parentheses = [left, right];
   let values = app_code_lesson_value_words();
   let operands = property_get(split, "operands");
   let found = [];
   for (let operand of operands) {
-    let spaced = text_replace_multiple_to_space(operand, brackets);
+    let spaced = text_replace_multiple_to_space(operand, parentheses);
     let words = text_words(spaced);
     for (let word of words) {
       let digits_is = text_digits_is(word);

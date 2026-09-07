@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_and_before_or_expression
   ("WHICH END THE && STANDS AT IS DRAWN, so the operator that goes first is not always the leftmost one on the line. Built with the && leftmost every time, as it was until now, every line the lesson ever printed could be answered by pressing the operator on the left - which is right by reading position instead of by reading the operator, and is the one habit this run of lessons is built to break.");
   ("It is drawn rather than taken in turns because the answer already alternates, one line true and the next false. An end alternating in step with that would agree with the answer every single time, which hands the learner a rule for which button to press without ever solving the line.");
   ("Written as plain trues and falses rather than as comparisons, because the one new thing here is which of the two operators goes first. A comparison on each side would be four more presses that the learner has already done twice, and the line would run past the width of a phone.");
-  ("The line prints with no brackets in it whichever end the && stands at, and none are needed: && is stronger than ||, so the && gathers its own two sides wherever it stands. A bracket written round the && would be teaching this lesson by giving it away.");
+  ("The line prints with no parentheses in it whichever end the && stands at, and none are needed: && is stronger than ||, so the && gathers its own two sides wherever it stands. A parenthesis written round the && would be teaching this lesson by giving it away.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
   let outer = app_code_operator_truths_wanted(or_symbol, want_true);

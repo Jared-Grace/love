@@ -5,7 +5,7 @@ export function app_code_lesson_name_id_operators(paint) {
   arguments_assert(arguments, 1);
   ("A lesson of the operators category, found by one word and titled by the drawing handed in.");
   ("Every operators lesson ends the same four lines: put the one word into a list on its own, ask which category this is, and hand the list, the category and the drawing over together. Only the drawing differs, so only the drawing is asked for here.");
-  ("The word is received on its own rather than as a list, because every caller has exactly one and each was writing the brackets itself.");
+  ("The word is received on its own rather than as a list, because every caller has exactly one and each was writing the parentheses itself.");
   ("What the drawing is has moved down a level: it was once a maker handing back a painter, and it is now the painter itself, with the category word written for it before it is asked for anything.");
   let left = app_code_category_operators();
   let built = app_code_lesson_name_id_category_then(left, paint);

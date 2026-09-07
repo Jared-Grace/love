@@ -8,7 +8,7 @@ export function app_code_lesson_expression_parentheses_moved_card_changes_nothin
   close,
 ) {
   arguments_assert(arguments, 5);
-  "the first brackets a learner meets that change nothing: they agree with the order the line already had, so they only make it plain";
+  "the first parentheses a learner meets that change nothing: they agree with the order the line already had, so they only make it plain";
   app_code_container_light_blue_cycle_code_multiple(root, [
     ["", "2 + (3 * 4)", " is what ", "2 + 3 * 4", " does anyway"],
     [

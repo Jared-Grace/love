@@ -19,7 +19,7 @@ export function app_code_lesson_expression_not_pair_intro(root) {
   ("Both joining marks get a line of their own. A card showing only the && one would leave a learner to work out whether the || is allowed there too, and the whole point of drawing a shape is that nothing about it has to be worked out.");
   ("The second card shows the working rather than telling any more rules. The worked line is the && one and it comes out true, because the pairing is what makes the ! worth watching: the part inside comes to false and the line does not. A line agreeing with the part inside it would show the ! doing nothing.");
   ("Every piece of the line is built from the marks rather than typed out, so the card cannot quietly say something the app would not print.");
-  ("PARENTHESES, never brackets. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these brackets would be teaching a word the learner has to unlearn the first time they meet a list.");
+  ("PARENTHESES, never parentheses. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these parentheses would be teaching a word the learner has to unlearn the first time they meet a list.");
   let symbol = js_operator_bang_symbol();
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();

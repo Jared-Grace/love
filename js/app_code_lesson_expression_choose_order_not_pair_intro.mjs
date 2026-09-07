@@ -14,7 +14,7 @@ export function app_code_lesson_expression_choose_order_not_pair_intro(parent) {
   ("Both joining marks get a line of their own, because a card showing only the && one would leave a learner to guess whether the || is allowed there too - and guessing is the one thing a card above a run must not ask for.");
   ("Then the reach and the order, in that order and as two sentences rather than one. The reach says what the ! applies to; the order says when it is applied. They are different facts, a learner can hold the first and still get the second wrong, and a single sentence carrying both lets the second slip past as though it followed from the first.");
   ("Said as what the ! applies to rather than as a rule about strength. A learner who has been told the ! is applied to the result of solving the parentheses can see for themselves why it cannot go first, and they are reading the same rule they have read on every line before this one - a part is ready when nothing is left inside it.");
-  ("PARENTHESES, never brackets. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these brackets would be teaching a word the learner has to unlearn the first time they meet a list.");
+  ("PARENTHESES, never parentheses. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these parentheses would be teaching a word the learner has to unlearn the first time they meet a list.");
   let symbol = js_operator_bang_symbol();
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
