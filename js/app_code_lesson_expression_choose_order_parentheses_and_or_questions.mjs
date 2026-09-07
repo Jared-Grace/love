@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_and_or_expression } from "./app_code_lesson_expression_choose_order_parentheses_and_or_expression.mjs";
-import { app_code_lesson_expression_choose_order_brackets_moved_tree_of_code } from "./app_code_lesson_expression_choose_order_brackets_moved_tree_of_code.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code } from "./app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_and_or_questions() {
   arguments_assert(arguments, 0);
   ("the question bank of the moved brackets lesson: lines holding an && and then an || with the one pair of brackets round the first two words on some and round the last two on others, given out one a screen and worked out again from the writing they were printed as");
@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_quest
   ("Where the brackets go is drawn rather than taken in turns, because here the answer is the operator they gather. Turned, the answer would turn with them and a learner would have the two buttons in an order - press one, then the other - which is a rule that solves nothing.");
   let bank = app_code_lesson_expression_choose_order_questions_generic(
     expression_drawn,
-    app_code_lesson_expression_choose_order_brackets_moved_tree_of_code,
+    app_code_lesson_expression_choose_order_parentheses_and_or_tree_of_code,
   );
   return bank;
   function expression_drawn(want_true) {
