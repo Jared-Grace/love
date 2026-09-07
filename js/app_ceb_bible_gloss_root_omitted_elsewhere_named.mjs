@@ -1,3 +1,7 @@
+import { text_size } from "./text_size.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -28,6 +32,9 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
   "Most of that 84 percent is right and is not what this is for. A word that is already a root has no root to give, and so has a name, a number and every small word the language is joined together with. Asking which of them ought to have had one needs Cebuano, and that is exactly the question being avoided here.";
   "So the store is asked about itself instead. Where one chapter gives a word a root and another chapter explains the same word without one, no judgment is needed to see that the second could have said more, because the first already said it. The store holds the answer and the missing entries are next to it.";
   "It is a coverage reading and not a correctness one, and the two come apart. A word may be given a root in every chapter and the root be wrong everywhere, which this cannot see; and an entry counted here may be perfectly good prose that simply did not need the origin repeated. What the count is worth is that filling one in takes no Cebuano at all - the words are already written down in the same store.";
+  "Two counts come back because the wide one cannot be read on its own. Of 258651 entries, 11423 distinct words are explained and 3313 of them are given a root somewhere and not given one elsewhere, which is 79381 entries gone without. Reading the top of that finds it is mostly not a gap at all: apan, kay, usa, mao and anak are words with no root to give, and the handful of entries that appear to name one are naming the word itself, or a piece of it two letters long. Those are the root reader misfiring, not the store owing anything.";
+  "So the narrow count asks the store what it usually does with each word instead. A word is kept when the root it was given is neither the word over again nor a scrap under four letters, and when the entries naming a root outnumber the entries that do not - the store own practice deciding, rather than a line drawn by whoever is reading. That leaves 1563 words and 8919 entries, and the top of that list has nothing in it but plainly built words: gibuhat, moabot, matarong, kinabuhi, gitawag, kamatayon, gihatag, nagsulti.";
+  "Those 8919 are the useful thing here, because filling one in needs nobody who speaks the language. The root is already written down in the same store against the same word, most often hundreds of times over.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
@@ -118,13 +125,45 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
     return count;
   }
   list_sort_number_mapper_reverse(listed, bare_of);
+  let majority = [];
+  let majority_bare = 0;
+  function majority_read(held) {
+    let word = property_get(held, "word");
+    let roots = property_get(held, "roots");
+    function root_told_is(root) {
+      let itself = equal(root, word);
+      if (itself) {
+        return false;
+      }
+      let letters = text_size(root);
+      let long = greater_than_equal(letters, 4);
+      return long;
+    }
+    let told = list_filter(roots, root_told_is);
+    let count = list_size(told);
+    let none = equal(count, 0);
+    if (none) {
+      return;
+    }
+    let rooted = property_get(held, "rooted");
+    let bare = property_get(held, "bare");
+    let usual = greater_than(rooted, bare);
+    if (not(usual)) {
+      return;
+    }
+    majority_bare = add(majority_bare, bare);
+    list_add(majority, held);
+  }
+  each(listed, majority_read);
   let r = {
     entries_seen: entries_seen,
     unexplained: unexplained,
     words_explained: list_size(words),
     words_split: list_size(listed),
     entries_fillable: bare_total,
-    listed: listed,
+    majority_words: list_size(majority),
+    majority_entries: majority_bare,
+    majority_listed: majority,
   };
   return r;
 }
