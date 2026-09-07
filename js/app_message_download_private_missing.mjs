@@ -16,8 +16,8 @@ export async function app_message_download_private_missing() {
     if (present) {
       return null;
     }
-    let written = await app_message_download_private_file(item);
-    return written;
+    let written_one = await app_message_download_private_file(item);
+    return written_one;
   }
   let written = await list_map_unordered_async_filter_null_not_is(
     files,
