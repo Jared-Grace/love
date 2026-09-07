@@ -1,8 +1,8 @@
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_nodes_ready } from "./app_code_expression_nodes_ready.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { not } from "./not.mjs";
 export function app_code_lesson_expression_choose_order_run_remains(
   run,
@@ -15,11 +15,9 @@ export function app_code_lesson_expression_choose_order_run_remains(
   let current_code = app_code_expression_code(current);
   let ready = app_code_expression_nodes_ready(current);
   let done = list_empty_is(ready);
+  ("The finishing row names the answer and stops. NOTHING IS LEFT INSIDE IT, SO THE WHOLE LINE IS was a reason followed by the answer, and by the time a learner reaches that row they have taken every step themselves and the reason is what they just did - so it is a sentence about the obvious standing in front of the one thing they came for. The row above it already said what was left; this one says what it came to.");
   if (done) {
-    html_div_cycle_code(run, [
-      "Nothing is left inside it, so the whole line is ",
-      current_code,
-    ]);
+    html_div_cycle_code(run, ["And the answer is ", current_code]);
   }
   if (not(done)) {
     html_div_cycle_code(run, ["That leaves ", current_code]);
