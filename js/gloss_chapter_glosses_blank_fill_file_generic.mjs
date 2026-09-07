@@ -4,6 +4,7 @@ import { file_read_json } from "./file_read_json.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { g_sermon_passage_verses_key } from "./g_sermon_passage_verses_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { add } from "./add.mjs";
@@ -44,7 +45,7 @@ export async function gloss_chapter_glosses_blank_fill_file_generic(
   let answered = 0;
   let verse_keys = object_property_names(authored);
   function passage_fill(passage) {
-    let verse_key = property_get(passage, "verse_key");
+    let verse_key = g_sermon_passage_verses_key(passage);
     let fills = property_get_or_null(authored, verse_key);
     if (null_is(fills)) {
       return;
