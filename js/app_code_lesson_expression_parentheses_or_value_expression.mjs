@@ -5,7 +5,7 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { boolean_random } from "./boolean_random.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
-export function app_code_lesson_expression_brackets_or_value_expression(
+export function app_code_lesson_expression_parentheses_or_value_expression(
   want_true,
   brackets_left,
 ) {
