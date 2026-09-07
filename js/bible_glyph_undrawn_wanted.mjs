@@ -1,15 +1,17 @@
 export function bible_glyph_undrawn_wanted() {
   "The words this picture Bible wants a picture for and still has none seated under, each with the fact that is blocking it.";
   "THIS IS THE THIRD OF THREE LISTS AND IT IS THE ONLY ONE THAT RECORDS WORK RATHER THAN A DECISION. One sibling holds the words drawn as nothing because a reader loses nothing. The other holds the words no single mark can carry because the sentence and not the word decides what they are doing. Both of those are answers. This list is the question, written down, so that a word nobody has chosen a picture for stops being indistinguishable from a word somebody decided against.";
-  "IT HAS BEEN THROUGH TWO PASSES AND BOTH TIMES MOST OF THE LIST LEFT IT, WHICH IS THE POINT OF IT. Thirty three words were measured first and twenty nine of them came back clean and are seated now. Eighty five more were measured after that and fifty eight of those were seated too. Seventy five more went through a third time and thirty seven of those were seated. Every one went the same way - counted as plain English standing in a drawn verse, then looked up in the interlinear to see what Hebrew number it answers to and what share of that number it covers. What stays in this list is what the count refused, and nothing else.";
+  "IT HAS BEEN THROUGH TWO PASSES AND BOTH TIMES MOST OF THE LIST LEFT IT, WHICH IS THE POINT OF IT. Thirty three words were measured first and twenty nine of them came back clean and are seated now. Eighty five more were measured after that and fifty eight of those were seated too. Seventy five more went through a third time and thirty three of those were seated, after four that had been seated came back out again. Every one went the same way - counted as plain English standing in a drawn verse, then looked up in the interlinear to see what Hebrew number it answers to and what share of that number it covers. What stays in this list is what the count refused, and nothing else.";
   "THE READING THAT DECIDED EACH ONE IS NOT A JUDGMENT ABOUT THE WORD, it is a count of what the interlinear says the Hebrew number means everywhere it stands. A single wording covering nearly every place is what makes a seat honest. A number split between two unrelated wordings has two meanings under one key, and a picture on it draws one of them and lies about the other. That is why the covenant was taken at two hundred and sixty four places out of two hundred and eighty three, and why the bone was refused at ninety out of a hundred and fifteen even though ninety is the larger want.";
   "EVERY REFUSAL HERE IS A SPLIT AND NOT AN ABSENCE, which makes these harder than the words that were never looked at. The word is wanted, the Hebrew is known, and the count is in hand. What blocks each one is that the number carries a second meaning the picture would say something false about. Nobody can fix that by drawing better. It is fixed by deciding whether the two meanings should be told apart, which is a decision about the text and not about the artwork.";
   "THE PROVISIONAL PICTURE IS THE ENGLISH WORD AND IT IS DELIBERATELY NOT A SEQUENCE OF MARKS ALREADY SEATED. This was tried and written down before, for the altar and for the priest, and the reason it failed is that a composite does not read as provisional. An altar built out of meat and fire says meat God. A priest built out of a person and oil says the Messiah. A reader has no way to see that a sequence is a placeholder, so the sequence is simply read, and read as a claim the text never made. The English word claims nothing it should not, prints in both the emoji text and the drawn text, and is how the altar and the priest already ship, so nothing new had to be built for the twenty nine to become provisional.";
   "THE QUEUE BEHIND THIS LIST WAS A GUESS UNTIL THE THIRD PASS COUNTED EVERY WORD. The first two passes worked from a hand written list of a hundred and forty two English words somebody had noticed. The third pass counted instead - every plain English word standing in every drawn chapter, five thousand nine hundred and forty seven of them across four hundred and fifty three chapters, ranked by how many chapters each one stands in. That ranking turned up concrete nouns nobody had noticed, and it also said something the hand written list could never have said.";
   "WHAT IS LEFT STANDING IN PLAIN ENGLISH IS MOSTLY NOT DRAWABLE, and that is a finding rather than a complaint. The words standing in the most chapters are like and away and also and until and must and only and surely and yet - verbs and adverbs and joining words. About forty of the top hundred and thirty are concrete nouns and roughly half of those were seated or refused in this pass. The noun queue is close to empty. What is left is grammar, and grammar is a different problem from a missing picture.";
   "A THIRD OUTCOME EXISTS AND IT IS NOT A REFUSAL, and two words found it. The wife and the palace were both written into this list as refusals and both were wrong to be here, because the number each one wants is already seated under a broader picture that is telling the truth. The word for a wife is the word for a woman and the woman mark is on it. The word for a palace is the word for a house and the house mark is on it. Neither reader loses anything, so neither word is work outstanding. A gate found both of these within a minute of being written, which is the argument for the gate.";
+  "A CLEAN COUNT IS NOT ENOUGH, BECAUSE THE MARK MAY ALREADY BE TAKEN, and this was found the hard way. Four numbers were measured, came back at ninety and a hundred in a hundred, were seated on the picture that carries their name, and every one of the four was wrong. The crown picture was already the master. The star picture was already the glory of God. The oil picture was already the anointing and so already said Messiah. The scroll picture was already the law. A glyph name says what the artwork looks like. It does not say what the mark has been made to mean, and the seat is a claim about the meaning.";
+  "NOTHING IN THE MEASURING COULD HAVE CAUGHT THAT, which is why it is written here rather than fixed quietly. The interlinear count answers whether one Hebrew number has one sense. It cannot answer whether some other Hebrew number is already wearing the picture. The gate over these lists caught one of the four, and only because one chapter happened to draw the master and stand an English crown beside it; the other three were found by reading what each picture was already seated on. So the rule is now two questions and not one - is the word one sense, and is the picture free.";
   "A REFUSAL CAN ALSO BE ANSWERED BY SEATING A DIFFERENT WORD, and the grain proved it. The grain sat here refused because the number the lines were asking for is the grain offering and not the crop, so a sheaf of wheat on it would have drawn a harvest where the text has a sacrifice. That reading was right and the conclusion was too small: the offering is a thing, it is one sense in a hundred and sixty of its two hundred and three wordings, and it can hold a picture of its own. It is seated now as the grain offering, beside the burnt offering, and the entry is gone from this list because the want it recorded has been met under the name the text actually uses. The gate caught the entry the moment the seat landed, which is the second time that gate has answered a question nobody thought to ask it.";
-  "TWENTY TWO WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
+  "TWENTY SIX WORDS, AND FIVE MORE THAT THE TEXT HAS NO WORD FOR AT ALL. A razor, a ladder, a suit of armour, a prison and a wedding were each looked for and each turned out to be a phrase rather than a word - a prison is the house of confinement and a wedding is taking a wife. Those five are not refusals and they are not work outstanding, because there is nothing there to seat a picture on. They are here so that nobody measures them a third time.";
   let wanted = [
     {
       gloss: "elders",
@@ -195,6 +197,42 @@ export function bible_glyph_undrawn_wanted() {
       wordings_total: 97,
       because:
         "the English word is two words and only one of them is here. The rest of the people is this number, meaning the remainder. Resting from work is a different Hebrew word entirely. A single rest picture would be drawn from an English accident rather than from anything the text says, which is the one mistake this whole list exists to catch.",
+    },
+    {
+      gloss: "crown",
+      root: "atarah",
+      strong: "5850",
+      wordings_for: 23,
+      wordings_total: 23,
+      because:
+        "the count is perfect and the mark is taken. The crown picture is already seated on the Hebrew word for a lord and a master, where it is not a king at all, and one chapter alone lands it twenty three times for a man the servant is speaking about. A real crown of gold drawn with that same mark would read as another master.",
+    },
+    {
+      gloss: "star",
+      root: "kokab",
+      strong: "3556",
+      wordings_for: 36,
+      wordings_total: 36,
+      because:
+        "the mark is taken by the glory of God. The star picture is seated on the Hebrew word for glory, which is a weight and a brightness and not an object in the sky. An actual star drawn with it would put the glory of God in a list of things God made.",
+    },
+    {
+      gloss: "oil",
+      root: "shemen",
+      strong: "8081",
+      wordings_for: 173,
+      wordings_total: 190,
+      because:
+        "the mark is taken by the anointing, and this is the worst of the four. The oil picture is seated on the word for the anointed one and on the verb to anoint, so it already says Messiah wherever it stands. Olive oil in a jar drawn with that mark says the Messiah is in the jar. The refusal for the priest picture on this same page was written for exactly this reason and it applies to the oil itself.",
+    },
+    {
+      gloss: "scroll",
+      root: "megillah",
+      strong: "4039",
+      wordings_for: 21,
+      wordings_total: 21,
+      because:
+        "the mark is taken by the law. The scroll picture is seated on the word for instruction and on the word for a commandment, which are what is written rather than the thing written on. A scroll Jeremiah burns drawn with that mark says he burned the law of God.",
     },
   ];
   return wanted;
