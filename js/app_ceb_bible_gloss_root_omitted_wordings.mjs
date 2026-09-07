@@ -1,3 +1,4 @@
+import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -12,7 +13,6 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
@@ -74,7 +74,7 @@ export async function app_ceb_bible_gloss_root_omitted_wordings() {
         return;
       }
       let held = property_get(by_word, lowered);
-      let claimed = gloss_explain_roots_claimed(explain);
+      let claimed = gloss_explain_roots_named(explain);
       let count = list_size(claimed);
       let empty = equal(count, 0);
       let side = empty ? "bare" : "rooted";
