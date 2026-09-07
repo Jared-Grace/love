@@ -25,7 +25,7 @@ import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
-export async function app_ceb_bible_gloss_roots_store_wrong_chapters() {
+export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   "Every chapter of the Cebuano gloss store that takes a word back to a root the dictionary on this disk contradicts, where some other chapter already takes the same word back to the root the dictionary gives.";
   "★ A COUNT OF DISAGREEMENTS IS NOT A WORK LIST AND CANNOT BE TURNED INTO ONE WITHOUT SAYING WHICH SIDE IS WRONG. The reader beside this one gathers a word's roots from the whole store and asks whether the dictionary names any of them, which answers whether the disagreement can be settled and says nothing about where the wrong sentence is. The chapter is thrown away in the gathering, and the chapter is the only thing that would let anybody act. This one keeps it.";
   "Only words the store itself already contradicts are looked at, and only where the dictionary names one of the roots that were given. Both conditions matter. A word every chapter agrees on is not evidence of anything here even if the dictionary disagrees with all of them, because then the dictionary is the outsider and that is a different question with a different answer. A word the dictionary is silent on cannot be settled at all.";
