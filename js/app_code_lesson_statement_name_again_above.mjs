@@ -86,6 +86,8 @@ export function app_code_lesson_statement_name_again_above(root) {
   html_div_cycle_code(box_care, [
     "Here we set the value of ",
     name,
-    " twice, so the second value is used, not the first",
+    " twice, so the second value of ",
+    name,
+    " is used, not the first",
   ]);
 }
