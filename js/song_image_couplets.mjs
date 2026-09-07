@@ -202,7 +202,7 @@ export function song_image_couplets() {
       first: "the LOVE of GOD",
       second: "for all to see",
       symbol:
-        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, and the tallest of the three crosses no more than a third of the height of the window",
+        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, the middle cross standing tallest and running from the crown of the hill right up to just below the head of the arch, its crossbar reaching almost to the white border on both sides",
       symbol_ref: "Luke 23:33, Matthew 27:38, Isaiah 53:12",
       same_as: 0,
     },
@@ -468,7 +468,7 @@ export function song_image_couplets() {
       first: "for every tear",
       second: "HE'll wipe away",
       symbol:
-        "One single teardrop of blue glass all of one blue throughout, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides",
+        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides",
       symbol_ref: "Revelation 21:4",
       same_as: 0,
     },
