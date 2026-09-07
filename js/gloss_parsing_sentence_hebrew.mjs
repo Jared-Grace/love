@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
@@ -36,8 +37,7 @@ export function gloss_parsing_sentence_hebrew(parsing_long) {
       if (not(entry)) {
         return false;
       }
-      let dimension = property_get(entry, "dimension");
-      let who_is = equal(dimension, "who");
+      let who_is = property_equals(entry, "dimension", "who");
       if (not(who_is)) {
         return false;
       }
@@ -68,8 +68,7 @@ export function gloss_parsing_sentence_hebrew(parsing_long) {
     if (not(entry)) {
       return null;
     }
-    let dimension = property_get(entry, "dimension");
-    let kind_is = equal(dimension, "kind");
+    let kind_is = property_equals(entry, "dimension", "kind");
     if (first_head) {
       if (not(kind_is)) {
         return null;
