@@ -3,7 +3,7 @@ import { app_code_lesson_expression_parentheses_and_or_title_name_id } from "./a
 import { app_code_lesson_expression_brackets_value_generic } from "./app_code_lesson_expression_brackets_value_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_expression } from "./app_code_lesson_expression_choose_order_brackets_moved_expression.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_code_lesson_expression_brackets_moved() {
+export function app_code_lesson_expression_parentheses_and_or() {
   arguments_assert(arguments, 0);
   ("the whole line answered in one go: (false && true) || true asked for its value, with nothing to press");
   ("The twin of the lesson that walks the same line a press at a time, and the last of the four lessons the brackets are taught by. A learner who can press the bracketed pair first has still never been asked to hold both steps at once, which is the thing they will need in front of real code.");
