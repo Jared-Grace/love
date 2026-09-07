@@ -23,6 +23,7 @@ export function gloss_root_claimed_relation_chained(
   "$plain claimed";
   "$plain claimed_chains";
   "the first names a reading already reached, the next two name words to compare, and the last holds the dictionary's own roots for each word an explanation named. None of them names anything that runs.";
+  "The walk taken from the other end is read by a sibling, which starts at the root the dictionary gave and asks whether the claim stands on that walk. Nothing calls it yet. Over the eight hundred and thirty sightings gathered so far it clears a hundred and sixty one of them by the dictionary own steps and narrows what is left to sixty three, so the deeper class going unread here is a gap somebody can close rather than a question already settled.";
   arguments_assert(arguments, 4);
   let shallower = equal(relation, "shallower");
   if (not(shallower)) {
