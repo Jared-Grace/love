@@ -1013,6 +1013,7 @@ export function qa_gates() {
     lyric_video_bible_part_document_path_cases_gate_run,
     lyric_video_screens_faults_cases_gate_run,
     gloss_root_claimed_shape_gate_run,
+    gloss_root_claimed_backing_gate_run,
   ];
   return gates;
 }
