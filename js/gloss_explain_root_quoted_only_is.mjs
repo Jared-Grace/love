@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { gloss_explain_root_judged } from "./gloss_explain_root_judged.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
 import { text_replace_to_space } from "./text_replace_to_space.mjs";
 import { gloss_explain_affix_named_is } from "./gloss_explain_affix_named_is.mjs";
 export function gloss_explain_root_quoted_only_is(
@@ -31,8 +31,7 @@ export function gloss_explain_root_quoted_only_is(
   if (not(agreed)) {
     return false;
   }
-  let kind = property_get(judged, "kind");
-  let says_nothing = equal(kind, "silent");
+  let says_nothing = property_equals(judged, "kind", "silent");
   if (not(says_nothing)) {
     return false;
   }
