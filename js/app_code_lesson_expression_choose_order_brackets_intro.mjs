@@ -7,18 +7,19 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_choose_order_brackets_intro(parent) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
-  ("Three sentences and no more: the brackets can now go round a || , that puts the || first, and putting it first is a change rather than a restatement. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");
-  ("That the pair may sit at either end is not said here. It is said above the second of the two lines this screen walks, where the line under it has them at the other end, which is where the two lessons that taught brackets both say it.");
+  ("Three sentences and no more: the parentheses can now go round a || , that puts the || first, and putting it first is a change rather than a restatement. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");
+  ("That the pair may sit at either end is not said here. It is said above the second of the two lines this screen walks, where the line under it has them at the other end, which is where the two lessons that taught parentheses both say it.");
+  ("PARENTHESES, never brackets. The marks on the line are ( and ), and in this language [ and ] are a different symbol doing a different job - so a card that called these brackets would be teaching a word the learner has to unlearn the first time they meet a list. The one word is used everywhere a learner can read it.");
   ("Neither of the two recalled rules is said again here. This card is only ever read straight after them, and a card that repeated them would be asking the learner to check whether the words had changed.");
   let and_symbol = js_operator_and_symbol();
   let or_symbol = js_operator_or_symbol();
-  let left_bracket = js_code_parenthesis_left();
-  let right_bracket = js_code_parenthesis_right();
+  let left_parenthesis = js_code_parenthesis_left();
+  let right_parenthesis = js_code_parenthesis_right();
   html_div_cycle_code(parent, [
     "Now ",
-    left_bracket,
+    left_parenthesis,
     " and ",
-    right_bracket,
+    right_parenthesis,
     " can stand around a ",
     or_symbol,
   ]);
@@ -28,5 +29,7 @@ export function app_code_lesson_expression_choose_order_brackets_intro(parent) {
     " inside them is solved before the ",
     and_symbol,
   ]);
-  html_div_cycle_code(parent, ["So the brackets change which one goes first"]);
+  html_div_cycle_code(parent, [
+    "So the parentheses change which one goes first",
+  ]);
 }
