@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_brackets_or_title_name_id } from "./app_code_lesson_expression_brackets_or_title_name_id.mjs";
 import { app_code_lesson_expression_brackets_value_generic } from "./app_code_lesson_expression_brackets_value_generic.mjs";
-import { app_code_lesson_expression_brackets_or_intro } from "./app_code_lesson_expression_brackets_or_intro.mjs";
+import { app_code_lesson_expression_parentheses_or_intro } from "./app_code_lesson_expression_parentheses_or_intro.mjs";
 import { app_code_lesson_expression_brackets_or_value_expression } from "./app_code_lesson_expression_brackets_or_value_expression.mjs";
 export function app_code_lesson_expression_brackets_or() {
   arguments_assert(arguments, 0);
@@ -13,7 +13,7 @@ export function app_code_lesson_expression_brackets_or() {
   let name_id = app_code_lesson_expression_brackets_or_title_name_id();
   let lesson = app_code_lesson_expression_brackets_value_generic(
     name_id,
-    app_code_lesson_expression_brackets_or_intro,
+    app_code_lesson_expression_parentheses_or_intro,
     app_code_lesson_expression_brackets_or_value_expression,
   );
   return lesson;
