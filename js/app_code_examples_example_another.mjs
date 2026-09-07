@@ -6,6 +6,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_example_answer_gap } from "./app_code_example_answer_gap.mjs";
 import { app_code_lesson_text_example_another } from "./app_code_lesson_text_example_another.mjs";
 import { app_code_lesson_examples_plural_is } from "./app_code_lesson_examples_plural_is.mjs";
+import { app_code_lesson_examples_complete_is } from "./app_code_lesson_examples_complete_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { html_div_text } from "./html_div_text.mjs";
@@ -25,12 +26,22 @@ export function app_code_examples_example_another(context, root) {
   app_code_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
   let plural = app_code_lesson_examples_plural_is(lesson);
+  let complete = app_code_lesson_examples_complete_is(lesson);
+  ("A lesson whose examples are every example it has says THE rather than SOME. Some names a sample, and a reader who is told they have been shown some goes looking for the rest - which is the very promise the see-more button makes and the very one such a lesson cannot keep. The word and the button are written from the one answer here, so neither can say what the other denies.");
   let root_word = "example";
   let is_a = null;
   if (plural) {
-    is_a = text_combine_multiple(["are some ", root_word, "s:"]);
+    let word_many = "are some ";
+    if (complete) {
+      word_many = "are the ";
+    }
+    is_a = text_combine_multiple([word_many, root_word, "s:"]);
   } else {
-    is_a = text_combine_multiple(["is an ", root_word, ":"]);
+    let word_one = "is an ";
+    if (complete) {
+      word_one = "is the ";
+    }
+    is_a = text_combine_multiple([word_one, root_word, ":"]);
   }
   let combined = text_combine("Here ", is_a);
   html_div_text(c, combined);
