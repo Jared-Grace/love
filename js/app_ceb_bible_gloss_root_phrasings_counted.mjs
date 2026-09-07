@@ -18,11 +18,11 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
 export async function app_ceb_bible_gloss_root_phrasings_counted() {
-  "How many explanations in the Cebuano gloss store name the word's root in the wording the strict root reader looks for, how many name one in each of the two further wordings it cannot see, and how many name none at all.";
-  "★ EVERY READING OF THIS STORE SO FAR HAS TREATED AN EMPTY ANSWER FROM THE STRICT ROOT READER AS THE STORE NAMING NO ROOT, AND THAT IS NOT WHAT AN EMPTY ANSWER MEANS. That reader matches the word root followed by a quoted word. An explanation writing it is built on 'buhat', to do, with 'gi-' in front, or writing 'Gibuhat' is 'buhat', to do, with 'gi-' in front, names exactly the same root and the same affix and comes back empty, because the word root is not in the sentence. The strict reader's own prose says a caller is meant to fall back to a weaker test on an empty answer; the readings built on it did not fall back, so they counted a difference of phrasing as a difference of content.";
-  "This is what makes the count worth having rather than the wording being a matter of taste. A reading beside this one reported 8919 entries where the store names a root for a word elsewhere and no root here, and recommended filling them in from the store's own answers. Some of those pairs are the same claim written twice, and the number here is how many.";
-  "The two loose wordings are counted separately rather than together, because they were found one at a time and a third was only visible once the second had been taken out of the way. Counting them apart is what would show a fourth.";
-  "The last bucket is an upper bound on how many name no root and not a count of them, since a wording nobody has read yet would fall into it. A sample of both the loosest bucket and the last one is handed back so a reader can see whether either is being misread.";
+  "How many explanations in the Cebuano gloss store name the word's root in the one wording the strict root reader looks for, how many name one in a wording it cannot see, and how many name none at all.";
+  "★ EVERY READING OF THIS STORE TREATED AN EMPTY ANSWER FROM THE STRICT ROOT READER AS THE STORE NAMING NO ROOT, AND THAT IS NOT WHAT AN EMPTY ANSWER MEANS. That reader matches the word root followed by a quoted word, and the store has no one way of saying it. Built on 'buhat', to do names the same root; so does 'Gibuhat' is 'buhat', to do; so does means was done, from 'buhat'. All three come back empty, because the word root is not in the sentence. The strict reader's own prose says a caller is meant to fall back on an empty answer; the readings built on it did not fall back, so they counted a difference of phrasing as a difference of content.";
+  "This is what makes the count worth having rather than the wording being a matter of taste. A reading beside this one reported 8919 entries where the store names a root for a word elsewhere and no root here, and recommended filling them in from the store's own answers. Some of those pairs are the same claim written twice, and this is how many.";
+  "How the further wordings were found is worth keeping, because it is the reason the last bucket cannot be trusted as a count. Each was found by reading what the ones before it still called bare, and each round of that found exactly one more. Nothing here says a fifth is not waiting in the same place.";
+  "So the last bucket is an upper bound on how many name no root, never a count of them. A sample of it and of the loose bucket is handed back, because a reader can settle in a glance what no count can say.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
@@ -32,9 +32,9 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
   let explained = 0;
   let worded_root = 0;
   let built_on = 0;
-  let self_is = 0;
+  let further_named = 0;
   let neither = 0;
-  let self_is_shown = [];
+  let further_shown = [];
   let neither_shown = [];
   function entries_pass(entries) {
     return entries;
@@ -69,12 +69,12 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
       let named_count = list_size(named);
       let named_empty = equal(named_count, 0);
       if (not(named_empty)) {
-        self_is = add(self_is, 1);
-        let a = list_size(self_is_shown);
-        let self_room = less_than(a, 20);
-        if (self_room) {
+        further_named = add(further_named, 1);
+        let a = list_size(further_shown);
+        let further_room = less_than(a, 20);
+        if (further_room) {
           let root = list_get(named, 0);
-          list_add(self_is_shown, {
+          list_add(further_shown, {
             root: root,
             explain: explain,
           });
@@ -96,9 +96,9 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
     explained: explained,
     worded_root: worded_root,
     built_on: built_on,
-    self_is: self_is,
+    further_named: further_named,
     neither: neither,
-    self_is_shown: self_is_shown,
+    further_shown: further_shown,
     neither_shown: neither_shown,
   };
   return r;
