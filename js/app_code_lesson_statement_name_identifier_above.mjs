@@ -1,13 +1,13 @@
-import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
-import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
 import { app_code_lesson_statement_name_identifier_word } from "./app_code_lesson_statement_name_identifier_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { app_code_value_line } from "./app_code_value_line.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { app_code_value_line } from "./app_code_value_line.mjs";
+import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
 export function app_code_lesson_statement_name_identifier_above(root) {
   arguments_assert(arguments, 1);
   ("the boxes read before the first question: the cup as it was left, the same cup called something else, the one new fact, and the same thing written as code");
@@ -30,7 +30,8 @@ export function app_code_lesson_statement_name_identifier_above(root) {
   ("the second picture is the first one with a different word written on it, and the line under it says the one thing a learner has to carry away - that nothing else about the cup moved");
   let box_any = app_code_container_light_blue(root);
   html_div_cycle_code(box_any, ["But you can call a cup whatever you like"]);
-  html_div_cycle_code(box_any, ["Suppose you called this one ", name]);
+  ("THIS CUP rather than THIS ONE. One is a word that has to be resolved before the sentence means anything, and the thing it stands for was named two boxes up; naming the cup outright costs one word and leaves nothing to resolve. It also lines the sentence up with every other line on these screens, which all say cup.");
+  html_div_cycle_code(box_any, ["Suppose you called this cup ", name]);
   app_code_lesson_cup_fruit(box_any, grapes, name);
   html_div_cycle_code(box_any, ["What is in the cup did not change"]);
   app_code_value_line(box_any, "Inside the cup: ", grapes);

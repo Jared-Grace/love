@@ -1,15 +1,15 @@
-import { list_join_empty } from "./list_join_empty.mjs";
-import { text_empty } from "./text_empty.mjs";
-import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
-import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
-import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
+import { text_empty } from "./text_empty.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
 export function app_code_lesson_statement_name_copy_above(root) {
   arguments_assert(arguments, 1);
   ("the cup boxes read before the first question: two cups got and then filled, a third cup got and then filled from one of them, and nothing taken out of anything");
@@ -87,8 +87,9 @@ export function app_code_lesson_statement_name_copy_above(root) {
     both,
   ]);
   let removed = list_join_empty(["No ", word_first, " were removed from cup "]);
+  ("A colon and THE PERSON, not a comma and THEY. The half before the colon says what did not happen and the half after says what did, and a comma joins them as though the second were more of the first - the colon marks it as the correction it is. THEY, this far down the box, has the two cups and the person all behind it to point at; the person is the one who did the fetching, and saying so costs two words and leaves nothing to work out.");
   let other = list_join_empty([
-    ", they found some other ",
+    ": the person found some other ",
     word_first,
     " to put in cup ",
   ]);

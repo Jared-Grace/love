@@ -1,15 +1,14 @@
+import { text_apostrophe_inside_word_is } from "./text_apostrophe_inside_word_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { ebible_verses_all } from "./ebible_verses_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split_space } from "./text_split_space.mjs";
-import { text_includes_any } from "./text_includes_any.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
@@ -23,17 +22,17 @@ export async function app_ceb_bible_apostrophe_pieces_unwritten() {
   "What makes this worth a measurement of its own is who was relying on it. The words this bible is written with are the only witness in the repo outside the gloss pipeline, so they are what an explanation's claim gets checked against; a witness that manufactures its own evidence clears exactly the claims nobody else can.";
   "The fault runs one way, as the hyphen one does. Nothing goes missing - a word this adds was never taken from anywhere - so a check that comes back saying a word is unwritten is still worth what it was, and every count of unwritten things made through this reading is a floor rather than an estimate.";
   "A piece also written somewhere on its own is left out, because a yes about it is not wrong.";
+  "Only an apostrophe standing inside a word counts as a join here. The same mark opens and closes quoted speech all through this translation, and counting those as joins too was measured to name three thousand apostrophed words where the translation writes about forty, each of them then handing its own dashes and pieces over to an answer about apostrophes.";
   arguments_assert(arguments, 0);
   let bible_folder = ebible_folder_cebuano();
   let verses = await ebible_verses_all(bible_folder);
-  let marks = ["'", "’"];
   let alone = {};
   let apostrophed = [];
   function verse_read(verse) {
     let text = property_get(verse, "text");
     let tokens = text_split_space(text);
     function token_read(token) {
-      let marked = text_includes_any(token, marks);
+      let marked = text_apostrophe_inside_word_is(token);
       if (marked) {
         list_add(apostrophed, token);
         return;
@@ -50,7 +49,7 @@ export async function app_ceb_bible_apostrophe_pieces_unwritten() {
   each(verses, verse_read);
   let cut_from = {};
   function apostrophed_read(token) {
-    let pieces = text_punctuation_split(token);
+    let pieces = text_punctuation_dash_kept_split(token);
     function piece_read(piece) {
       let lowered = text_lower_to(piece);
       let held = property_get_or_null(alone, lowered);
