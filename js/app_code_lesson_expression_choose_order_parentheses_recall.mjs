@@ -6,7 +6,9 @@ import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_brackets_recall(root) {
+export function app_code_lesson_expression_choose_order_parentheses_recall(
+  root,
+) {
   arguments_assert(arguments, 1);
   ("the two things put back in front of the learner before the run on the brackets lesson: that the && goes first, and what brackets do");
   ("They stand in a card of their own above the run because they are not part of it - they are what the run is about to be read with. The learner has both of them already and has never had them in the same line: the brackets were met among numbers, several lessons back, and the two operators were met with nothing bracketed at all. What is new is only the meeting.");
