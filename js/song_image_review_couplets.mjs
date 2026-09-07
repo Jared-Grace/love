@@ -14,10 +14,6 @@ export function song_image_review_couplets() {
       n: 11,
       note: "80 is up now, as you asked. One thing to know: its black field is not what the wording says - that still asks for emerald green between the lead lines and deep crimson below. So if 11 is ever redrawn it will come back green, not black. Say the word and I will write the black in with your reason for it.",
     },
-    {
-      n: 24,
-      note: "This is 260, your fallback - the extra batch did not find the glow again. Five draws: two tinted the halo faintly, one made it a flat yellow ring, one left it white, one lost the light. What 260 costs you is the window: it is cropped, so the arch runs off both sides instead of standing on black with its white band round it. Thirty draws say that glow and that arch have not yet come back in the same picture.",
-    },
   ];
   return couplets;
 }
