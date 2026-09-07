@@ -11,6 +11,7 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_code_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
@@ -20,7 +21,9 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   "the middle card of this lesson: the rule that the unary operator on the inside goes first, shown by writing the same line out a second way with parentheses around each part";
   "THE PARENTHESES SHOW THE ORDER, THEY ARE NOT PART OF THE LINE. The line the learner presses has none. This card writes it a second way, says in a line of its own that the two ways come to the same thing, and only then reads the order off the marks - which is the one reading a learner can check by looking rather than by being told.";
   "Both symbols here are the same symbol, so nothing about which operator is stronger could tell them apart. Nearness is the whole of it, and a pair of parentheses is what makes nearness something on the screen instead of something to remember.";
-  "THREE COLOURS, AND EACH ONE SAYS WHICH PART OF THE LINE A PHRASE MEANS. The word first and the outer ! are blue, the word second and the inner ! are amber, and the phrase outer parentheses and the far left and far right brackets are magenta. Every one of those phrases turns on picking one character out of a line of identical-looking characters, and the colour is what makes the picking possible without counting.";
+  "THE LINE ARRIVES PLAIN AND THE COLOURS ARE PUT ON AFTERWARDS, IN A LINE THAT SAYS SO. Two separate things are being taught here - that the line may be written with parentheses, and that the parentheses say which ! goes first - and a coloured line at the moment of the rewrite mixes them, because the learner meets the colours before they have read the line. So the rewrite is shown plain, and then one line shows the same line twice over, uncoloured beside coloured, and names what is happening: this is the same line with colours on it.";
+  "That line is also the only thing telling a learner the colours are not part of the code. Seen only in colour there is nothing to say JavaScript does not care about them; seen plain and then coloured, the difference between the two showings is exactly the part that is not code, and the learner can see it rather than be told it.";
+  "THREE COLOURS, AND EACH ONE SAYS WHICH PART OF THE LINE A PHRASE MEANS. The word first and the outer ! are blue, the word second and the inner ! are amber, and the phrase outer parentheses and the far left and far right brackets are red. Every one of those phrases turns on picking one character out of a line of identical-looking characters, and the colour is what makes the picking possible without counting.";
   "THE PHRASE OUTER PARENTHESES NEEDED IT MOST. The other two name a single character; this one names two characters that are not next to each other and have the whole rest of the line between them, so there is nothing about their position that says they are a pair. Told only in words, a learner has to build the nesting in their head before the sentence means anything - which is the very thing the sentence was supposed to teach them.";
   "The brackets are shown as characters after the phrase, as two chips with a space between and never as one chip reading them together. There is no such thing in code as an open and a close written side by side; they are two marks that stand at the two ends of something, and one chip round both would say they are a single mark - the exact misreading this card exists to undo.";
   "The ! in each sentence is coloured as well as the word. The word alone would leave the sentence pointing at a colour that is on the line above and nowhere in the sentence itself, so both halves of the pointing are put side by side and the reader is handed the whole statement in one place.";
@@ -43,9 +46,16 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   html_span_text(line_rewrite, "For example, we could rewrite ");
   html_span_text_code_dark(line_rewrite, bang_bang_true);
   html_span_text(line_rewrite, " as ");
-  app_code_lesson_expression_choose_order_not_twice_rewritten_chip(
+  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
     line_rewrite,
   );
+  let line_colors = html_div(parent);
+  html_span_text(line_colors, "We can write ");
+  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
+    line_colors,
+  );
+  html_span_text(line_colors, " with colors like this: ");
+  app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_colors);
   let line_same = html_div(parent);
   app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_same);
   html_span_text(line_same, " solves the same as ");
