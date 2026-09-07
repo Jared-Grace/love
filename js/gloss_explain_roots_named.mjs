@@ -6,6 +6,7 @@ import { not } from "./not.mjs";
 import { text_regex_first_groups } from "./text_regex_first_groups.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_root_named_one_word_is } from "./gloss_root_named_one_word_is.mjs";
+import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
 export function gloss_explain_roots_named(explain) {
   "Every root a gloss explanation names, read in any of the four wordings that can be read from the explanation alone.";
   "$plain explain";
@@ -18,7 +19,7 @@ export function gloss_explain_roots_named(explain) {
   "★ A FIFTH IS KNOWN AND IS DELIBERATELY NOT READ, BECAUSE IT CANNOT BE READ FROM THE EXPLANATION ALONE. It opens with the root instead of the word - 'Buhat' is to do. 'Gi-' tells it from the side of the deed - so the first quoted word is the root rather than the headword, and the only thing that tells the two apart is the headword, which this is not given. Reading it needs a function taking the word as well, and inventing one here by guessing which quoted word is which would turn a wrong guess into a claimed root. The strict reader counted 409 sightings of the reversed shape, so the size of what is left unread is known and small beside the 68536.";
   "The wordings are asked strictest first and the first answer is handed back whole, so nothing that was already read changes and no explanation turns one claim into two.";
   "A shape whose only answers are filtered away is passed over rather than returned empty, so the shapes after it are still asked. That is what a wrongly matched meaning should cost - the sentence goes on being read - and not a silent empty answer.";
-  "The third is only read at the very start of the explanation, because that is the one place the first quoted word is certainly the word being explained. Later in a sentence the same shape is ordinary prose about something else.";
+  "The third shape has its own function because it is the ambiguous one and the argument about it needs an address. The other two say where a word came from and mean nothing else; that one says two things are the same and the store writes it for a root and for an English meaning alike.";
   arguments_assert(arguments, 1);
   let claimed = gloss_explain_roots_claimed(explain);
   let claimed_count = list_size(claimed);
@@ -37,12 +38,7 @@ export function gloss_explain_roots_named(explain) {
   if (not(built_empty)) {
     return built;
   }
-  let self_pattern = new RegExp(
-    "^\\s*['‘\"][^'’\"]+['’\"] is ['‘\"]([^'’\"]+?)[,.;:!?]?['’\"]",
-    "g",
-  );
-  let self_read = text_regex_first_groups(explain, self_pattern);
-  let self_named = list_filter(self_read, gloss_root_named_one_word_is);
+  let self_named = gloss_explain_roots_self_named(explain);
   let self_count = list_size(self_named);
   let self_empty = equal(self_count, 0);
   if (not(self_empty)) {
