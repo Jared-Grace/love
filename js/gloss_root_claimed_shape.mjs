@@ -13,6 +13,7 @@ export function gloss_root_claimed_shape(root, claimed) {
   "$plain root";
   "$plain claimed";
   "both name words to compare - one a dictionary's, one an explanation's. Neither names anything that runs.";
+  "Run over the eighty-one classes standing apart on 2026-09-07 - two hundred and four sightings - this names sixty-five of them: fifty-six a dropped vowel, nine an accent mark, and none at all a bare exchange of two letters. The exchange is kept even so, because where it happens in this corpus it happens alongside a dropped vowel and the vowel is what answers first; a pair differing by nothing but the exchange is a shape the corpus can still produce. The hundred and thirty-nine left over are not one thing. About a fifth of them are a root somebody made up, and the rest are four more shapes this does not reach - a piece set inside the word rather than added to its end, as tinuod is written from tuod; a consonant appearing where a word is built on, as dako gives dagko and ila gives ilhan; a whole pronoun swapped for another out of the same set, as an explanation of kaniya names siya where the dictionary gives niya; and a dictionary printing its own shorthand, as da for dala. Each of those is a further rule, and each needs somebody who knows Cebuano to say it is a shape rather than a fault before it is written down here.";
   let root_folded = gloss_word_folded(root);
   let claimed_folded = gloss_word_folded(claimed);
   let word = text_accent_marks_removed(root);
