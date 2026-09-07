@@ -153,8 +153,16 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 21",
     },
     {
+      chapter_code: "NUM22",
+      reference: "Numbers 22",
+    },
+    {
       chapter_code: "DEU08",
       reference: "Deuteronomy 8",
+    },
+    {
+      chapter_code: "DEU10",
+      reference: "Deuteronomy 10",
     },
     {
       chapter_code: "DEU18",
@@ -163,6 +171,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "DEU26",
       reference: "Deuteronomy 26",
+    },
+    {
+      chapter_code: "DEU28",
+      reference: "Deuteronomy 28",
     },
     {
       chapter_code: "DEU30",
@@ -179,6 +191,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "JOS02",
       reference: "Joshua 2",
+    },
+    {
+      chapter_code: "JOS03",
+      reference: "Joshua 3",
+    },
+    {
+      chapter_code: "JOS07",
+      reference: "Joshua 7",
     },
     {
       chapter_code: "JOS24",
@@ -225,6 +245,10 @@ export function bible_glyph_chapter_references() {
       reference: "1 Samuel 8",
     },
     {
+      chapter_code: "1SA15",
+      reference: "1 Samuel 15",
+    },
+    {
       chapter_code: "1SA24",
       reference: "1 Samuel 24",
     },
@@ -235,6 +259,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2SA06",
       reference: "2 Samuel 6",
+    },
+    {
+      chapter_code: "2SA11",
+      reference: "2 Samuel 11",
     },
     {
       chapter_code: "2SA12",
@@ -249,8 +277,20 @@ export function bible_glyph_chapter_references() {
       reference: "1 Kings 8",
     },
     {
+      chapter_code: "1KI12",
+      reference: "1 Kings 12",
+    },
+    {
       chapter_code: "1KI13",
       reference: "1 Kings 13",
+    },
+    {
+      chapter_code: "1KI21",
+      reference: "1 Kings 21",
+    },
+    {
+      chapter_code: "1KI22",
+      reference: "1 Kings 22",
     },
     {
       chapter_code: "2KI02",
@@ -263,6 +303,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI11",
       reference: "2 Kings 11",
+    },
+    {
+      chapter_code: "2KI17",
+      reference: "2 Kings 17",
+    },
+    {
+      chapter_code: "2KI22",
+      reference: "2 Kings 22",
     },
     {
       chapter_code: "1CH29",
@@ -427,6 +475,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "PSA139",
       reference: "Psalm 139",
+    },
+    {
+      chapter_code: "PSA145",
+      reference: "Psalm 145",
     },
     {
       chapter_code: "PSA146",
