@@ -1639,6 +1639,220 @@ export function bible_glyph_roots_hebrew() {
         },
       ],
     },
+    {
+      root: "meil",
+      gloss: "the robe worn over everything else",
+      words: [
+        {
+          strong: "4598",
+          glyph: "cloak",
+        },
+      ],
+    },
+    {
+      root: "shalal",
+      gloss: "plunder, what is carried off after a battle",
+      words: [
+        {
+          strong: "7998",
+          glyph: "plunder",
+        },
+      ],
+    },
+    {
+      root: "chalom",
+      gloss: "a dream",
+      words: [
+        {
+          strong: "2472",
+          glyph: "dream",
+        },
+        {
+          strong: "2493",
+          glyph: "dream",
+        },
+      ],
+    },
+    {
+      root: "ez",
+      gloss: "goat",
+      words: [
+        {
+          strong: "5795",
+          glyph: "goat",
+        },
+      ],
+    },
+    {
+      root: "sair",
+      gloss: "the male goat",
+      words: [
+        {
+          strong: "8163",
+          glyph: "goat",
+        },
+      ],
+    },
+    {
+      root: "attud",
+      gloss: "the he goat that leads the flock",
+      words: [
+        {
+          strong: "6260",
+          glyph: "goat",
+        },
+      ],
+    },
+    {
+      root: "ayil",
+      gloss: "ram",
+      words: [
+        {
+          strong: "352",
+          glyph: "ram",
+        },
+      ],
+    },
+    {
+      root: "kad",
+      gloss: "the jar carried on the shoulder",
+      words: [
+        {
+          strong: "3537",
+          glyph: "jar",
+        },
+      ],
+    },
+    {
+      root: "shir",
+      gloss: "song",
+      words: [
+        {
+          strong: "7892",
+          glyph: "song",
+        },
+      ],
+    },
+    {
+      root: "zayit",
+      gloss: "olive, and the tree it grows on",
+      words: [
+        {
+          strong: "2132",
+          glyph: "olive",
+        },
+      ],
+    },
+    {
+      root: "egel",
+      gloss: "calf",
+      words: [
+        {
+          strong: "5695",
+          glyph: "calf",
+        },
+      ],
+    },
+    {
+      root: "enab",
+      gloss: "grapes",
+      words: [
+        {
+          strong: "6025",
+          glyph: "grapes",
+        },
+      ],
+    },
+    {
+      root: "achot",
+      gloss: "sister",
+      words: [
+        {
+          strong: "269",
+          glyph: "sister",
+        },
+      ],
+    },
+    {
+      root: "sear",
+      gloss: "hair",
+      words: [
+        {
+          strong: "8181",
+          glyph: "hair",
+        },
+      ],
+    },
+    {
+      root: "qots",
+      gloss: "thorns",
+      words: [
+        {
+          strong: "6975",
+          glyph: "thorns",
+        },
+      ],
+    },
+    {
+      root: "naarah",
+      gloss: "a girl, a young woman",
+      words: [
+        {
+          strong: "5291",
+          glyph: "girl",
+        },
+      ],
+    },
+    {
+      root: "beged",
+      gloss: "a garment, clothes, cloth",
+      words: [
+        {
+          strong: "899",
+          glyph: "garment",
+        },
+      ],
+    },
+    {
+      root: "paroketh",
+      gloss: "the veil hung before the most holy place",
+      words: [
+        {
+          strong: "6532",
+          glyph: "veil",
+        },
+      ],
+    },
+    {
+      root: "keleb",
+      gloss: "dog",
+      words: [
+        {
+          strong: "3611",
+          glyph: "dog",
+        },
+      ],
+    },
+    {
+      root: "malkah",
+      gloss: "queen",
+      words: [
+        {
+          strong: "4436",
+          glyph: "queen",
+        },
+      ],
+    },
+    {
+      root: "almanah",
+      gloss: "widow",
+      words: [
+        {
+          strong: "490",
+          glyph: "widow",
+        },
+      ],
+    },
   ];
   return roots;
 }
