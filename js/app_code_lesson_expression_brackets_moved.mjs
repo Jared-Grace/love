@@ -1,4 +1,4 @@
-import { app_code_lesson_expression_brackets_moved_intro } from "./app_code_lesson_expression_brackets_moved_intro.mjs";
+import { app_code_lesson_expression_parentheses_and_or_intro } from "./app_code_lesson_expression_parentheses_and_or_intro.mjs";
 import { app_code_lesson_expression_brackets_moved_title_name_id } from "./app_code_lesson_expression_brackets_moved_title_name_id.mjs";
 import { app_code_lesson_expression_brackets_value_generic } from "./app_code_lesson_expression_brackets_value_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved_expression } from "./app_code_lesson_expression_choose_order_brackets_moved_expression.mjs";
@@ -12,7 +12,7 @@ export function app_code_lesson_expression_brackets_moved() {
   let name_id = app_code_lesson_expression_brackets_moved_title_name_id();
   let lesson = app_code_lesson_expression_brackets_value_generic(
     name_id,
-    app_code_lesson_expression_brackets_moved_intro,
+    app_code_lesson_expression_parentheses_and_or_intro,
     app_code_lesson_expression_choose_order_brackets_moved_expression,
   );
   return lesson;
