@@ -45,9 +45,9 @@ export async function app_ceb_bible_gloss_root_word_apart_unshared() {
     let held = text_size(run);
     property_set(pair, "shared_run", held);
     let named = held;
-    let long_enough = greater_than(held, 2);
+    let long_enough = greater_than(held, 1);
     if (long_enough) {
-      named = "3 or more";
+      named = "2 or more";
     }
     tally(run_pairs, named, 1);
     tally(run_entries, named, entries);
