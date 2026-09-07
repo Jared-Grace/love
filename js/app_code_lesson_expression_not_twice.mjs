@@ -1,14 +1,15 @@
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_not } from "./js_code_not.mjs";
-import { app_code_category_operators } from "./app_code_category_operators.mjs";
-import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_keyword_false } from "./js_keyword_false.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
+import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
+import { app_code_category_operators } from "./app_code_category_operators.mjs";
+import { property_set } from "./property_set.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
-import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_expression_not_twice() {
   "the step from ! on a plain true or false to ! on another !: the one new idea is that the thing a ! takes can itself be a !, so the operator nests inside itself. Same operator both times, so there is no question of which one goes first - the inner ! is simply the nearer one. Nothing is bracketed, because nothing needs to be.";
   "It comes before the lesson putting a comparison under a !, and it is what makes that lesson a single step. On its own, ! around a comparison carries two new things at once - that the thing under a ! can be something which works out to true or false, and that it has to be bracketed. This lesson takes the first of those, on the smallest possible instance, leaving the bracket lesson with only the bracket.";
@@ -21,12 +22,15 @@ export function app_code_lesson_expression_not_twice() {
     return twice;
   }
   function refill() {
-    "both keywords a screen, so the return-to-the-start is seen from each end";
+    "both keywords a screen, so the return-to-the-start is seen from each end, and each keyword under ONE symbol beside itself under two, because a screen holding only the doubled form can be answered by copying the keyword out of the question without ever counting the symbols in front of it - which is the one thing this lesson is asking to be read.";
+    "These four are every line this lesson has, so they are all shown up front as its examples and the offer of another one is taken away with them.";
     let t = js_keyword_true();
+    let once_true = js_code_not(t);
     let v = not_twice_of(t);
     let f = js_keyword_false();
+    let once_false = js_code_not(f);
     let v2 = not_twice_of(f);
-    let list = [v, v2];
+    let list = [once_true, v, once_false, v2];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -35,9 +39,10 @@ export function app_code_lesson_expression_not_twice() {
     name_id_rights: ["not twice"],
     category: app_code_category_operators(),
     next_arg,
-    example_count: 2,
+    example_count: 4,
     forwards_answer_count_override: 2,
   });
+  property_set(lesson, "examples_complete", true);
   let symbol_twice = text_combine(symbol, symbol);
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol_twice);
   return lesson_symbol;
