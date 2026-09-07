@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 243. You were right that I judged 238 out wrongly - its glow was warm yellow and I read that as the reserved gold, but this couplet names yellow itself, so it was allowed all along. The wording now says the halo takes each beam's own colour as it passes through, and the arch head is cobalt at last. Two faults I have not fixed: the stone came back with a photographic marble grain, and the brown ground is broken into coloured panes.",
+      note: "This is 263. The beams are the bright shade of each colour now, as you asked, and the ground is one unbroken brown band again. The larger pane budget you approved cost eighteen draws: asking for more panes kept killing either the light or the arch, and only widening the beams got both back. The fault still here is that the beams are an even fan going upward, when the wording asks for them uneven and going out on every side.",
     },
   ];
   return couplets;
