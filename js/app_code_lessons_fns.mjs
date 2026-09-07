@@ -110,7 +110,7 @@ import { app_code_lesson_expression_and_before_or } from "./app_code_lesson_expr
 import { app_code_lesson_expression_choose_order_brackets } from "./app_code_lesson_expression_choose_order_brackets.mjs";
 import { app_code_lesson_expression_brackets_or } from "./app_code_lesson_expression_brackets_or.mjs";
 import { app_code_lesson_expression_choose_order_brackets_moved } from "./app_code_lesson_expression_choose_order_brackets_moved.mjs";
-import { app_code_lesson_expression_brackets_moved } from "./app_code_lesson_expression_brackets_moved.mjs";
+import { app_code_lesson_expression_parentheses_and_or } from "./app_code_lesson_expression_parentheses_and_or.mjs";
 import { app_code_lesson_expression_choose_order_not_twice } from "./app_code_lesson_expression_choose_order_not_twice.mjs";
 import { app_code_lesson_expression_not_twice } from "./app_code_lesson_expression_not_twice.mjs";
 import { app_code_lesson_expression_choose_order_not } from "./app_code_lesson_expression_choose_order_not.mjs";
@@ -247,7 +247,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order_brackets,
     app_code_lesson_expression_brackets_or,
     app_code_lesson_expression_choose_order_brackets_moved,
-    app_code_lesson_expression_brackets_moved,
+    app_code_lesson_expression_parentheses_and_or,
     app_code_lesson_expression_choose_order_not_twice,
     app_code_lesson_expression_not_twice,
     app_code_lesson_expression_choose_order_not,
