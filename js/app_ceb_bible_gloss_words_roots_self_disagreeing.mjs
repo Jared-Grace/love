@@ -1,10 +1,7 @@
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
