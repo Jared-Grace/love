@@ -109,6 +109,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 17",
     },
     {
+      chapter_code: "EXO18",
+      reference: "Exodus 18",
+    },
+    {
       chapter_code: "EXO20",
       reference: "Exodus 20",
     },
@@ -143,6 +147,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NUM14",
       reference: "Numbers 14",
+    },
+    {
+      chapter_code: "NUM16",
+      reference: "Numbers 16",
     },
     {
       chapter_code: "NUM20",
@@ -205,8 +213,16 @@ export function bible_glyph_chapter_references() {
       reference: "Joshua 24",
     },
     {
+      chapter_code: "JDG02",
+      reference: "Judges 2",
+    },
+    {
       chapter_code: "JDG04",
       reference: "Judges 4",
+    },
+    {
+      chapter_code: "JDG11",
+      reference: "Judges 11",
     },
     {
       chapter_code: "JDG13",
@@ -251,6 +267,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "1SA24",
       reference: "1 Samuel 24",
+    },
+    {
+      chapter_code: "1SA25",
+      reference: "1 Samuel 25",
     },
     {
       chapter_code: "2SA05",
@@ -299,6 +319,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI04",
       reference: "2 Kings 4",
+    },
+    {
+      chapter_code: "2KI09",
+      reference: "2 Kings 9",
     },
     {
       chapter_code: "2KI11",
