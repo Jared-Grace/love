@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
@@ -45,8 +46,7 @@ export async function gloss_repairs_word_write_generic(fn, word, explain) {
   let sightings = 0;
   function offender_read(offender) {
     let chapter_code = property_get(offender, "chapter_code");
-    let found = property_get(offender, "found");
-    let count = list_size(found);
+    let count = property_list_size(offender, "found");
     sightings = add(sightings, count);
     let standing = property_get_or_null(repairs, chapter_code);
     let none = null_is(standing);
