@@ -1,3 +1,4 @@
+import { json_to } from "./json_to.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -52,9 +53,9 @@ export function bible_words_slips_all_gate_run() {
         text_combine_multiple([f_name, " from "]) +
         letters +
         " letters up answered " +
-        json_text(got) +
+        json_to(got) +
         " and was expected to answer " +
-        json_text(expected);
+        json_to(expected);
       list_add(defects, defect);
       console.log(defect);
     }
