@@ -1,10 +1,9 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tile_dealings_or_null } from "./app_code_quiz_tile_dealings_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_join_space } from "./list_join_space.mjs";
-import { list_unique } from "./list_unique.mjs";
 export function app_code_lesson_quiz_token_select_shape_variations(code) {
   "$plain code";
   arguments_assert(arguments, 1);
@@ -21,7 +20,6 @@ export function app_code_lesson_quiz_token_select_shape_variations(code) {
     return none;
   }
   let dealings = property_get(laid, "dealings");
-  let codes = list_map(dealings, list_join_space);
-  let unique = list_unique(codes);
+  let unique = list_map_unique(dealings, list_join_space);
   return unique;
 }
