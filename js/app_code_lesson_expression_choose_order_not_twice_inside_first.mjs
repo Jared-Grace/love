@@ -15,14 +15,10 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   let word_true = js_keyword_true();
   let not_true = app_code_operator_code_before(bang, word_true);
   let bang_bang_true = app_code_operator_code_before(bang, not_true);
-  let not_true_parenthesised = app_code_operator_code_before(
-    bang,
-    text_wrap_parenthesis(word_true),
-  );
-  let nested = app_code_operator_code_before(
-    bang,
-    text_wrap_parenthesis(not_true_parenthesised),
-  );
+  let right_code = text_wrap_parenthesis(word_true);
+  let not_true_parenthesised = app_code_operator_code_before(bang, right_code);
+  let right_code2 = text_wrap_parenthesis(not_true_parenthesised);
+  let nested = app_code_operator_code_before(bang, right_code2);
   html_div_cycle_code(parent, ["Suppose we want to solve ", bang_bang_true]);
   html_div_cycle_code(parent, [
     "If there are multiple unary operators, the operator on the inside is solved first",
