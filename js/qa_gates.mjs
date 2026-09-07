@@ -1,3 +1,4 @@
+import { gloss_word_claims_chain_collapsed_gate_run } from "./gloss_word_claims_chain_collapsed_gate_run.mjs";
 import { gloss_classes_claimed_unvouched_gate_run } from "./gloss_classes_claimed_unvouched_gate_run.mjs";
 import { gloss_classes_word_claims_apart_gate_run } from "./gloss_classes_word_claims_apart_gate_run.mjs";
 import { gloss_root_unwalked_cause_gate_run } from "./gloss_root_unwalked_cause_gate_run.mjs";
@@ -1027,6 +1028,7 @@ export function qa_gates() {
     gloss_root_unwalked_cause_gate_run,
     gloss_classes_word_claims_apart_gate_run,
     gloss_classes_claimed_unvouched_gate_run,
+    gloss_word_claims_chain_collapsed_gate_run,
   ];
   return gates;
 }
