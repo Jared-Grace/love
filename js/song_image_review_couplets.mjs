@@ -11,8 +11,40 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   let couplets = [
     {
+      n: 6,
+      note: "Its own words were refusing blocks, panels and a second colour, and the picture came back with eight blocks - a refusal draws the thing it refuses. Those four refusals are cut, since the field clause already says the same thing positively. Nothing else about the cross changed.",
+    },
+    {
+      n: 7,
+      note: "The cap saying no cross taller than a third of the window was what made it plain. The middle cross now runs from the crown of the hill right up to just below the head of the arch. The lead line may still cross it - that rule was already in force and failed here before.",
+    },
+    {
+      n: 9,
+      note: "No wording change at all. The rule stopping lead lines at the symbol was already in force when the old one was drawn and the line crossed the spear anyway, so this is a fresh roll of the dice rather than a repair. If it crosses again the rule itself is what needs rewording.",
+    },
+    {
       n: 11,
-      note: "80 is up now, as you asked. One thing to know: its black field is not what the wording says - that still asks for emerald green between the lead lines and deep crimson below. So if 11 is ever redrawn it will come back green, not black. Say the word and I will write the black in with your reason for it.",
+      note: "Black is written into the wording now, so a redraw comes back black instead of green. Both bands are black and the head of the arch stays cobalt. The old picture was black by luck, this one is black by instruction.",
+    },
+    {
+      n: 14,
+      note: "Answering your question: no, there should be no white in the background. The rule forbidding a white or grey or pale field was written after the old picture was drawn, which is how the white got in. The wording is unchanged - only the sheet is new.",
+    },
+    {
+      n: 15,
+      note: "Flames and half sheathed, as you asked, said as a state the way 8 says a tear. Lower half of the blade inside the sheath, upper half bare above the mouth and wrapped in orange and yellow flame. The crossguard moved up to the top of the bare blade, since it can no longer sit at the sheath mouth.",
+    },
+    {
+      n: 26,
+      note: "Its own words asked for pale sky twice and the field clause was refusing it flat. Pale is now granted where a symbol names it, which was the whole cause of the sky staying deep blue. I also changed clear sky blue to pale cobalt, since clear sky blue is not one of the eight colours and so was never being honoured. Watch the two white rays - on a pale sky they may wash out.",
+    },
+    {
+      n: 32,
+      note: "Brighter is now legal, but the palette leaves almost nothing here. The field cannot take blue, brown or green because the symbol spends all three, pale red reads as pink which is refused by name, and white and grey are out. So pale violet, the amethyst of Revelation 21 verse 20, and the river lighter too, clear as crystal from Revelation 22 verse 1.",
+    },
+    {
+      n: 33,
+      note: "The tear was refusing brightness in its own words: all of one blue throughout. That is cut, so the two shade rule can reach it - lighter over most of the glass and deeper along the edges. That is the depth you suggested for the crown of thorns.",
     },
   ];
   return couplets;
