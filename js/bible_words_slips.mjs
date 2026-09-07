@@ -65,21 +65,23 @@ export function bible_words_slips(sightings, words, times) {
         return;
       }
       let other_seen = property_get(counts, other);
-      let too_rare = or(
-        less_than(other_seen, needed),
-        less_than(other_seen, times),
-      );
+      let left = less_than(other_seen, needed);
+      let right = less_than(other_seen, times);
+      let too_rare = or(left, right);
       if (too_rare) {
         return;
       }
       let other_size = text_size(other);
       let gap = subtract(mine_size, other_size);
-      let far = or(greater_than(gap, 1), less_than(gap, -1));
+      let left2 = greater_than(gap, 1);
+      let right2 = less_than(gap, -1);
+      let far = or(left2, right2);
       if (far) {
         return;
       }
       let steps = text_edit_distance(lower, other);
-      let apart = not(equal(steps, 1));
+      let b = equal(steps, 1);
+      let apart = not(b);
       if (apart) {
         return;
       }
