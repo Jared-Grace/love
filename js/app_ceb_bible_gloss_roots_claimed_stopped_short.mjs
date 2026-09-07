@@ -52,7 +52,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   function vouched_is(spelling) {
     let folded = gloss_word_folded(spelling);
     let held = property_get_or_null(vouched, folded);
-    let there = not(null_is(held));
+    let b = null_is(held);
+    let there = not(b);
     return there;
   }
   function books_tally(where, chapter_codes) {
@@ -80,7 +81,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
       let word_letters = text_size(bare);
       let at = text_index_of_from_try(bare, root, 0);
       while (not(less_than(at, 0))) {
-        let end = add(add(at, root_letters), 1);
+        let left = add(at, root_letters);
+        let end = add(left, 1);
         while (less_than_equal(end, word_letters)) {
           let longer = text_slice(bare, at, end);
           let takes = vouched_is(longer);
@@ -95,7 +97,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     }
     each(words_once, word_read);
     let found = list_unique(longer_known);
-    let any = greater_than(list_size(found), 0);
+    let a = list_size(found);
+    let any = greater_than(a, 0);
     if (not(any)) {
       return;
     }
@@ -124,7 +127,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   property_set(answer, "roots_distinct", roots_distinct);
   property_set(answer, "unvouched_roots", unvouched_roots);
   property_set(answer, "unvouched_books", unvouched_books);
-  property_set(answer, "stopped_short_roots", list_size(listed));
+  let value = list_size(listed);
+  property_set(answer, "stopped_short_roots", value);
   property_set(answer, "stopped_short_sightings", sightings_named);
   property_set(answer, "stopped_short_books", named_books);
   property_set(answer, "listed", listed);
