@@ -64,6 +64,86 @@ export function bible_glyph_undrawn_wanted() {
       because:
         "this is the cleanest entry in the list and it is here anyway. Twenty six of twenty eight wordings say the ark, and it is a different object from the chest of the covenant that is now seated - it is the boat Noah builds and the basket Moses floats in. One picture over both would say the covenant travelled in a boat. It is wanted, it is measured, and what it needs is a second picture rather than a decision.",
     },
+    {
+      gloss: "wife",
+      strong: "802",
+      wordings_for: 365,
+      wordings_total: 717,
+      because:
+        "the woman and the wife are one Hebrew word and the split is almost exactly even. Three hundred and sixty five wordings say wife and the rest say woman or women. This is the largest word in the list by a long way and the least drawable, because a wife picture drawn on every woman in the Bible marries her to somebody, and a woman picture drawn on every wife takes the marriage out. The woman mark is already seated on this number, which is the safer half of the two.",
+    },
+    {
+      gloss: "book",
+      strong: "5612",
+      wordings_for: 109,
+      wordings_total: 179,
+      because:
+        "the Hebrew word is the book, the letter and the written document all at once, and only sixty one in a hundred of its wordings say book. A book picture would draw a bound volume on the letter Jezebel sends and on the deed of purchase Jeremiah signs. The scroll is separately seated because it has its own word for the rolled thing itself, which is what most of these are.",
+    },
+    {
+      gloss: "boy",
+      strong: "5288",
+      wordings_for: 63,
+      wordings_total: 227,
+      because:
+        "the Hebrew word is the boy, the young man and the attendant, and only twenty eight in a hundred of its wordings say boy. It is the word for the servant who runs an errand as often as for a child. A boy drawn there makes a child of a soldier and a servant of a son, and the reader has no way to tell which one is meant from the mark.",
+    },
+    {
+      gloss: "temple",
+      strong: "1964",
+      wordings_for: 56,
+      wordings_total: 78,
+      because:
+        "the same Hebrew word is the temple and the palace of a king, because it means the great house and lets the context say whose. A temple picture drawn on it puts God in the throne room at Susa. The plainer word underneath it is worse rather than better - the house of the LORD is literally the house, which is already seated as house, so the temple has no word of its own in this text to be drawn on.",
+    },
+    {
+      gloss: "prostitute",
+      strong: "2181",
+      wordings_for: 50,
+      wordings_total: 89,
+      because:
+        "the word is a verb before it is a person. It is the word for being unfaithful, and the prophets use it of a whole nation far more often than of a woman. A picture of a person seated on it draws a person into every line where Israel is the one being spoken of, which is both wrong and cruel.",
+    },
+    {
+      gloss: "potter",
+      strong: "3335",
+      wordings_for: 16,
+      wordings_total: 62,
+      because:
+        "the potter is the participle of the verb to form, and the verb is what the word mostly is. Twenty six in a hundred say potter and the rest say formed or fashioned - including God forming the man out of the ground. A potter picture on those lines gives God a workshop and a wheel that the text did not put there.",
+    },
+    {
+      gloss: "leprosy",
+      strong: "6883",
+      wordings_for: 5,
+      wordings_total: 34,
+      because:
+        "the Hebrew word is not the disease the English word names. It is a spreading blemish, and the same word is used of a mark in a garment and of a stain in the wall of a house. A picture of a sick person seated on it would draw a sick person onto a wall. This one is a warning about the English as much as about the Hebrew.",
+    },
+    {
+      gloss: "pillar",
+      strong: "5982",
+      wordings_for: 64,
+      wordings_total: 104,
+      because:
+        "three different things are called a pillar in English here and they are not one word in Hebrew. This number is the post that holds up the tabernacle. A second number is the standing stone set up to mark a place, which is a religious object and sometimes an idol. The pillar of cloud and of fire is this same first number used of something that is not a post at all. One picture over all three would say the cloud was a piece of carpentry.",
+    },
+    {
+      gloss: "rest",
+      strong: "3499",
+      wordings_for: 64,
+      wordings_total: 97,
+      because:
+        "the English word is two words and only one of them is here. The rest of the people is this number, meaning the remainder. Resting from work is a different Hebrew word entirely. A single rest picture would be drawn from an English accident rather than from anything the text says, which is the one mistake this whole list exists to catch.",
+    },
+    {
+      gloss: "palace",
+      strong: "1004",
+      wordings_for: 119,
+      wordings_total: 1919,
+      because:
+        "there is no palace in this vocabulary, there is only a house with a king in it. Six in a hundred of the wordings of the ordinary word for house say palace, and they say it because a translator judged the occupant rather than because the word changed. The house mark is already seated on this number and is the honest one.",
+    },
   ];
   return wanted;
 }
