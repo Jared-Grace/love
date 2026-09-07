@@ -802,6 +802,138 @@ export function bible_glyph_characters() {
       name: "lots",
       character: "lots",
     },
+    {
+      name: "enemy",
+      character: "enemy",
+    },
+    {
+      name: "sacrifice",
+      character: "sacrifice",
+    },
+    {
+      name: "inheritance",
+      character: "inheritance",
+    },
+    {
+      name: "burnt_offering",
+      character: "burnt offering",
+    },
+    {
+      name: "grain_offering",
+      character: "grain offering",
+    },
+    {
+      name: "east",
+      character: "east",
+    },
+    {
+      name: "ashes",
+      character: "ashes",
+    },
+    {
+      name: "shield",
+      character: "shield",
+    },
+    {
+      name: "spear",
+      character: "spear",
+    },
+    {
+      name: "yoke",
+      character: "yoke",
+    },
+    {
+      name: "sandal",
+      character: "sandal",
+    },
+    {
+      name: "lamp",
+      character: "lamp",
+    },
+    {
+      name: "window",
+      character: "window",
+    },
+    {
+      name: "bronze",
+      character: "bronze",
+    },
+    {
+      name: "iron",
+      character: "iron",
+    },
+    {
+      name: "cedar",
+      character: "cedar",
+    },
+    {
+      name: "fig",
+      character: "fig",
+    },
+    {
+      name: "wheat",
+      character: "wheat",
+    },
+    {
+      name: "barley",
+      character: "barley",
+    },
+    {
+      name: "flour",
+      character: "flour",
+    },
+    {
+      name: "garden",
+      character: "garden",
+    },
+    {
+      name: "dew",
+      character: "dew",
+    },
+    {
+      name: "wolf",
+      character: "wolf",
+    },
+    {
+      name: "fox",
+      character: "fox",
+    },
+    {
+      name: "frog",
+      character: "frog",
+    },
+    {
+      name: "scorpion",
+      character: "scorpion",
+    },
+    {
+      name: "place",
+      character: "place",
+    },
+    {
+      name: "field",
+      character: "field",
+    },
+    {
+      name: "fruit",
+      character: "fruit",
+    },
+    {
+      name: "dust",
+      character: "dust",
+    },
+    {
+      name: "seed",
+      character: "seed",
+    },
+    {
+      name: "harvest",
+      character: "harvest",
+    },
+    {
+      name: "statute",
+      character: "statute",
+    },
   ];
   return characters;
 }
