@@ -1,3 +1,4 @@
+import { binisaya_words_known_get_folded_gate_run } from "./binisaya_words_known_get_folded_gate_run.mjs";
 import { gloss_classes_backing_elsewhere_gate_run } from "./gloss_classes_backing_elsewhere_gate_run.mjs";
 import { gloss_root_claimed_backing_gate_run } from "./gloss_root_claimed_backing_gate_run.mjs";
 import { gloss_root_claimed_shape_gate_run } from "./gloss_root_claimed_shape_gate_run.mjs";
@@ -1017,6 +1018,7 @@ export function qa_gates() {
     gloss_root_claimed_shape_gate_run,
     gloss_root_claimed_backing_gate_run,
     gloss_classes_backing_elsewhere_gate_run,
+    binisaya_words_known_get_folded_gate_run,
   ];
   return gates;
 }
