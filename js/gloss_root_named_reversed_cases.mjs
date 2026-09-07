@@ -1,6 +1,6 @@
 export function gloss_root_named_reversed_cases() {
   "Words paired with the text their explanation quotes first, each with the answer the reversed reading owes and why that pair is the one worth pinning.";
-  "★ EVERY REFUSAL HERE IS A REAL SIGHTING THAT THE FIRST READING COUNTED AS A ROOT, NOT AN INVENTED AWKWARD CASE. The first reading returned 6715 and the corrected one 6588, and the 127 between them are entirely the three classes written out below. A corpus of successes would have agreed with the broken reading on every single line, because the broken reading was right about the common case and wrong only in the tail.";
+  "★ EVERY REFUSAL HERE IS A REAL SIGHTING THAT THE FIRST READING COUNTED AS A ROOT, NOT AN INVENTED AWKWARD CASE. The first reading returned 6715 and the corrected one 6560, and the 155 between them are entirely the three classes written out below. A corpus of successes would have agreed with the broken reading on every single line, because the broken reading was right about the common case and wrong only in the tail.";
   "The Psalm 119 headings are kept as their own line because they say out loud what they are. Their explanations read it is not a Cebuano word, but a structural marker in the Psalm, so a reading that hands tav back as a Cebuano root has contradicted the sentence it read it out of.";
   "The three keepers are ordered from the plainest to the hardest. buhat under gibuhat is the shape at its clearest; sulat under nagsulat carries a prefix the reading has to see past; and dala under gidala is the same shape with the root spelled straight through.";
   let cases = [
@@ -26,7 +26,7 @@ export function gloss_root_named_reversed_cases() {
       word: "dios.",
       root: "dios",
       reversed: false,
-      why: "the stored word wears a full stop, so the quotation repeats the headword - 61 of the 127 miscounts were this and this alone",
+      why: "the stored word wears a full stop, so the quotation repeats the headword - 44 roots, the largest of the three classes",
     },
     {
       word: "“ang",
