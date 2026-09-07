@@ -5,7 +5,7 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_regex_first_groups } from "./text_regex_first_groups.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { gloss_root_named_one_word_is } from "./gloss_root_named_one_word_is.mjs";
+import { gloss_root_named_cebuano_shaped_is } from "./gloss_root_named_cebuano_shaped_is.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
 export function gloss_explain_roots_named(explain) {
   "Every root a gloss explanation names, read in any of the four wordings that can be read from the explanation alone.";
@@ -32,7 +32,7 @@ export function gloss_explain_roots_named(explain) {
     "g",
   );
   let built_read = text_regex_first_groups(explain, built_pattern);
-  let built = list_filter(built_read, gloss_root_named_one_word_is);
+  let built = list_filter(built_read, gloss_root_named_cebuano_shaped_is);
   let built_count = list_size(built);
   let built_empty = equal(built_count, 0);
   if (not(built_empty)) {
@@ -49,6 +49,6 @@ export function gloss_explain_roots_named(explain) {
     "g",
   );
   let from_read = text_regex_first_groups(explain, from_pattern);
-  let from_named = list_filter(from_read, gloss_root_named_one_word_is);
+  let from_named = list_filter(from_read, gloss_root_named_cebuano_shaped_is);
   return from_named;
 }
