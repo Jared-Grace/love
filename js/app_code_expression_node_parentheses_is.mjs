@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { equal } from "./equal.mjs";
-import { app_code_expression_side_bracket_is } from "./app_code_expression_side_bracket_is.mjs";
+import { app_code_expression_side_parenthesis_is } from "./app_code_expression_side_parenthesis_is.mjs";
 import { add_1 } from "./add_1.mjs";
 export function app_code_expression_node_parentheses_is(item, node) {
   arguments_assert(arguments, 2);
@@ -26,7 +26,10 @@ export function app_code_expression_node_parentheses_is(item, node) {
     ("a one-sided operator asks its single side for its own strength, which is what makes !(3 < 5) carry marks and !!true carry none");
     let acted_on_here = equal(right, node);
     if (acted_on_here) {
-      let gathered_before = app_code_expression_side_bracket_is(right, rank);
+      let gathered_before = app_code_expression_side_parenthesis_is(
+        right,
+        rank,
+      );
       return gathered_before;
     }
     let inside_before = app_code_expression_node_parentheses_is(right, node);
@@ -35,13 +38,16 @@ export function app_code_expression_node_parentheses_is(item, node) {
   let left = property_get(item, "left");
   let left_here = equal(left, node);
   if (left_here) {
-    let gathered_left = app_code_expression_side_bracket_is(left, rank);
+    let gathered_left = app_code_expression_side_parenthesis_is(left, rank);
     return gathered_left;
   }
   let right_here = equal(right, node);
   if (right_here) {
     let rank_right = add_1(rank);
-    let gathered_right = app_code_expression_side_bracket_is(right, rank_right);
+    let gathered_right = app_code_expression_side_parenthesis_is(
+      right,
+      rank_right,
+    );
     return gathered_right;
   }
   let from_left = app_code_expression_node_parentheses_is(left, node);
