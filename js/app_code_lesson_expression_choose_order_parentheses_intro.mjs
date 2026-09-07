@@ -4,7 +4,9 @@ import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_expression_choose_order_brackets_intro(parent) {
+export function app_code_lesson_expression_choose_order_parentheses_intro(
+  parent,
+) {
   arguments_assert(arguments, 1);
   ("the sentences that say what is different about this lesson, in a card of their own");
   ("Three sentences and no more: the parentheses can now go round a || , that puts the || first, and putting it first is a change rather than a restatement. The third is what stops the first two reading as a rule the learner already had - the two things being joined are both known, and only their meeting is new.");

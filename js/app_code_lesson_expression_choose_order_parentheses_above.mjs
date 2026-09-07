@@ -6,7 +6,7 @@ import { app_code_expression_node_left_operator_first } from "./app_code_express
 import { app_code_lesson_expression_choose_order_parentheses_either_side } from "./app_code_lesson_expression_choose_order_parentheses_either_side.mjs";
 import { app_code_lesson_expression_choose_order_walks_above_generic } from "./app_code_lesson_expression_choose_order_walks_above_generic.mjs";
 import { app_code_lesson_expression_choose_order_brackets_recall } from "./app_code_lesson_expression_choose_order_brackets_recall.mjs";
-import { app_code_lesson_expression_choose_order_brackets_intro } from "./app_code_lesson_expression_choose_order_brackets_intro.mjs";
+import { app_code_lesson_expression_choose_order_parentheses_intro } from "./app_code_lesson_expression_choose_order_parentheses_intro.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_above(
   root,
 ) {
@@ -48,6 +48,6 @@ export function app_code_lesson_expression_choose_order_parentheses_above(
     root,
     app_code_lesson_expression_choose_order_brackets_recall,
     walks,
-    app_code_lesson_expression_choose_order_brackets_intro,
+    app_code_lesson_expression_choose_order_parentheses_intro,
   );
 }
