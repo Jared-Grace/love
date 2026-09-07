@@ -11,7 +11,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { list_get } from "./list_get.mjs";
-import { equal } from "./equal.mjs";
+import { gloss_roots_pair_dictionary_verdict } from "./gloss_roots_pair_dictionary_verdict.mjs";
 import { list_map } from "./list_map.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -21,7 +21,7 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
   "Every Cebuano word whose explanations name two roots with nothing in common, put to the dictionary rather than to a reader's judgment: one root turning out to be the other's root, both turning out to have the same root, the two turning out to have different roots, or the dictionary having nothing to say.";
   "The reading beside this one calls a pair apart when neither root holds the other and they share no run of four letters. That test is honest about what it measures and its own prose says where it misleads: Cebuano drops the vowel out of a root's last syllable when a suffix goes on, so kupot beside kuptan and dumot beside dumtan come back apart while being the same word at two depths. Read as faults they would be a false alarm, and there is no way to tell them from a real contradiction by looking at the letters, which is exactly why this asks something that already knows.";
   "★ NOTHING TO SAY IS NOT A LET-OFF AND NOT A FAULT, AND IT IS THE LARGEST ANSWER. The gathered dictionary holds an entry only for a word somebody has already asked about, and it stores a word it has never heard of exactly as it stores a word it has no breakdown for. So a pair it cannot settle is a pair nobody has looked up yet, and counting those as clean would be as wrong as counting them as broken. They are the queue for the next gather, and they are reported as their own number so that neither mistake can be made by reading past them.";
-  "Only a pair the dictionary settles both halves of can be called a contradiction. Where it vouches for one root and not the other, the half it knows says nothing about the half it does not, and a reading that let one known half settle the pair would report the dictionary's coverage as though it were the store's correctness.";
+  "The four way judgment itself is not here. It sits on its own where a written case can be put to it, because the answer that matters most is the accusing one and this walk reaches it nought times: a nought is worth reading only while something outside the walk can still show that the branch behind it fires. Answering correctly and having stopped being able to answer at all look the same from here.";
   arguments_assert(arguments, 0);
   let reading = await app_ceb_bible_gloss_words_roots_chapters_disagreeing();
   let apart = property_get(reading, "apart");
@@ -66,28 +66,12 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
     let second_folded = root_folded(second);
     let first_root = dictionary_root_folded(first);
     let second_root = dictionary_root_folded(second);
-    let verdict = "unproved";
-    let b = null_is(first_root);
-    let first_known = not(b);
-    let b2 = null_is(second_root);
-    let second_known = not(b2);
-    let first_under_second = first_known && equal(first_root, second_folded);
-    let second_under_first = second_known && equal(second_root, first_folded);
-    let both_known = first_known && second_known;
-    let same_origin = both_known && equal(first_root, second_root);
-    if (first_under_second) {
-      verdict = "depth";
-    }
-    if (second_under_first) {
-      verdict = "depth";
-    }
-    if (same_origin) {
-      verdict = "shared";
-    }
-    let settled = first_under_second || second_under_first || same_origin;
-    if (both_known && not(settled)) {
-      verdict = "contradiction";
-    }
+    let verdict = gloss_roots_pair_dictionary_verdict(
+      first_folded,
+      second_folded,
+      first_root,
+      second_root,
+    );
     let r = {
       word,
       roots,
