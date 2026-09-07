@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 24,
-      note: "This is 263. The beams are the bright shade of each colour now, as you asked, and the ground is one unbroken brown band again. The larger pane budget you approved cost eighteen draws: asking for more panes kept killing either the light or the arch, and only widening the beams got both back. The fault still here is that the beams are an even fan going upward, when the wording asks for them uneven and going out on every side.",
+      note: "This is 267, and you are right about 260 - that many-coloured glow is the wording working. The beams are no longer an even fan: I stopped calling it a fan and gave them places instead, four bunched over the left shoulder, bare rock over the right. What is missing is the thing you praised. 260's glow took each beam's colour as it passed out; this one came back plain white, so it is a draw that missed, not words that need changing.",
     },
   ];
   return couplets;

@@ -10,8 +10,9 @@ import { gloss_classes_backing_elsewhere } from "./gloss_classes_backing_elsewhe
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_backing_queue(sample_size) {
   "The disagreements between an explanation and the dictionary, narrowed to the ones the dictionary's own walk does not account for, commonest first.";
-  "Most of these disagreements are not faults. An explanation naming a root standing further back than the dictionary stopped is right whenever the dictionary itself walks from its root to the one claimed, and it says so in its own entries. Reading that walk clears a hundred and sixty one of the eight hundred and thirty sightings gathered so far, and leaves sixty three across twenty two pairs where the claim stands somewhere the walk never reaches. That is a screen of rows rather than a pile, which is the whole point of asking the question this way round.";
-  "The three answers are reported beside the queue, because the queue on its own cannot say how much was cleared and how much was never asked. Six hundred and six sightings come back silent - the dictionary was asked about the words and never about their roots, so it has no walk to offer and no verdict either. Silence is not agreement, and a reader taking the short queue as the whole of what is wrong would be reading the unasked as the answered.";
+  "Most of these disagreements are not faults. An explanation naming a root standing further back than the dictionary stopped is right whenever the dictionary itself walks from its root to the one claimed, and it says so in its own entries. Reading that walk clears a hundred and sixty one of the eight hundred and thirty sightings gathered so far, and another forty three are not a claim about an origin at all but the dictionary's own root written with the other of the two vowels Cebuano uses for one sound. What is left is fifty sightings across nineteen pairs, where the claim stands somewhere the walk never reaches. That is a screen of rows rather than a pile, which is the whole point of asking the question this way round.";
+  "The four answers are reported beside the queue, because the queue on its own cannot say how much was cleared and how much was never asked. Five hundred and seventy six sightings come back silent - the dictionary was asked about the words and never about their roots, so it has no walk to offer and no verdict either. Silence is not agreement, and a reader taking the short queue as the whole of what is wrong would be reading the unasked as the answered.";
+  "Not all of that silence can be closed by asking again. The dictionary holds the word and carries no breakdown of it for roughly half of those sightings, and asking it a second time returns the same page - those are words somebody has to know rather than words anybody can fetch.";
   "How far the sample reached is reported beside how many classes there are, because the queue is drawn from what the sample took. Where the two numbers differ, rows were left outside and the queue is short by an unknown amount rather than complete.";
   "The dictionary is opened a second time here rather than the gathering being changed to hand it back. The gathering marks its classes its own way for its own readers, and a reading nothing has been asked to trust yet has no business altering what they already get.";
   "$plain sample_size";
@@ -26,6 +27,7 @@ export async function app_ceb_bible_gloss_roots_backing_queue(sample_size) {
   let known = await binisaya_words_known();
   let marked = gloss_classes_backing_mark(classes, known);
   let sightings = {
+    root: 0,
     backed: 0,
     elsewhere: 0,
     silent: 0,
