@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
@@ -83,10 +84,6 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
     return r;
   }
   let arbitrated = list_map(apart, row_arbitrated);
-  function row_sightings(row) {
-    let sightings = property_get(row, "sightings");
-    return sightings;
-  }
   function depth_is(row) {
     let depth = property_equals(row, "verdict", "depth");
     return depth;
@@ -113,8 +110,8 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
     shared_words: list_size(shared),
     contradiction_words: list_size(contradiction),
     unproved_words: list_size(unproved),
-    contradiction_sightings: list_map_sum(contradiction, row_sightings),
-    unproved_sightings: list_map_sum(unproved, row_sightings),
+    contradiction_sightings: list_map_sum(contradiction, gloss_row_sightings),
+    unproved_sightings: list_map_sum(unproved, gloss_row_sightings),
     contradiction,
     depth,
     shared,
