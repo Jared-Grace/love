@@ -1450,16 +1450,6 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
-      root: "geshem",
-      gloss: "rain, the heavy kind",
-      words: [
-        {
-          strong: "1653",
-          glyph: "rain",
-        },
-      ],
-    },
-    {
       root: "tsur",
       gloss: "rock, and the Rock that God is called",
       words: [
@@ -1476,16 +1466,6 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "7161",
           glyph: "horn",
-        },
-      ],
-    },
-    {
-      root: "chatsotserah",
-      gloss: "the metal trumpet",
-      words: [
-        {
-          strong: "2689",
-          glyph: "trumpet",
         },
       ],
     },
@@ -1580,16 +1560,6 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
-      root: "dal",
-      gloss: "the poor, the one with little",
-      words: [
-        {
-          strong: "1800",
-          glyph: "poor",
-        },
-      ],
-    },
-    {
       root: "par",
       gloss: "bull",
       words: [
@@ -1679,26 +1649,6 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "5795",
-          glyph: "goat",
-        },
-      ],
-    },
-    {
-      root: "sair",
-      gloss: "the male goat",
-      words: [
-        {
-          strong: "8163",
-          glyph: "goat",
-        },
-      ],
-    },
-    {
-      root: "attud",
-      gloss: "the he goat that leads the flock",
-      words: [
-        {
-          strong: "6260",
           glyph: "goat",
         },
       ],
@@ -1984,31 +1934,11 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
-      root: "attun",
-      gloss: "the furnace of fire in Babylon",
-      words: [
-        {
-          strong: "861",
-          glyph: "furnace",
-        },
-      ],
-    },
-    {
       root: "moqesh",
       gloss: "a snare, the thing that catches a foot",
       words: [
         {
           strong: "4170",
-          glyph: "snare",
-        },
-      ],
-    },
-    {
-      root: "pach",
-      gloss: "a snare, the trap set for a bird",
-      words: [
-        {
-          strong: "6341",
           glyph: "snare",
         },
       ],
@@ -2154,16 +2084,6 @@ export function bible_glyph_roots_hebrew() {
       ],
     },
     {
-      root: "qedem",
-      gloss: "the east, and what is in front, and long ago",
-      words: [
-        {
-          strong: "6921",
-          glyph: "east",
-        },
-      ],
-    },
-    {
       root: "mizrach",
       gloss: "the east, where the sun rises",
       words: [
@@ -2199,16 +2119,6 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "2595",
-          glyph: "spear",
-        },
-      ],
-    },
-    {
-      root: "romach",
-      gloss: "a spear, the long thrusting one",
-      words: [
-        {
-          strong: "7420",
           glyph: "spear",
         },
       ],
@@ -2327,16 +2237,6 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "5560",
-          glyph: "flour",
-        },
-      ],
-    },
-    {
-      root: "qemach",
-      gloss: "flour, the ground meal",
-      words: [
-        {
-          strong: "7058",
           glyph: "flour",
         },
       ],
