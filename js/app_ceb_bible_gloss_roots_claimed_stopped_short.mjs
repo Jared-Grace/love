@@ -1,18 +1,14 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
-import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
 import { each } from "./each.mjs";
+import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { text_size } from "./text_size.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -22,9 +18,12 @@ import { less_than } from "./less_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { list_add } from "./list_add.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_size } from "./list_size.mjs";
+import { greater_than } from "./greater_than.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
+import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   "Every root the Cebuano gloss store names that the dictionary has never vouched for, where a longer run of letters starting at the very same place in the very same word is one the dictionary has vouched for - so the sentence stopped short of a root that was already known, at the spot it was pointing at.";
@@ -38,13 +37,6 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   arguments_assert(arguments, 0);
   let known = await binisaya_words_known();
   let vouched = binisaya_words_known_roots_named(known);
-  let gathered = await gloss_chapters_roots_claimed_gathered(
-    app_ceb_bible_gloss_generate,
-  );
-  let chapters = property_get(gathered, "chapters");
-  let roots_distinct = property_get(gathered, "roots_distinct");
-  let by_root = property_get(gathered, "by_root");
-  let roots = object_property_names(by_root);
   let unvouched_roots = 0;
   let claimed_books = {};
   let unvouched_books = {};
@@ -65,8 +57,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     }
     each(chapter_codes, chapter_note);
   }
-  function root_read(root) {
-    let row = property_get(by_root, root);
+  function root_read(row) {
+    let root = property_get(row, "stated_root");
     let seen_in = property_get(row, "chapters");
     books_tally(claimed_books, seen_in);
     let spoken_for = vouched_is(root);
@@ -119,11 +111,15 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     };
     list_add(listed, named);
   }
-  each(roots, root_read);
+  let gathered = await gloss_chapters_roots_claimed_rows_generic(
+    app_ceb_bible_gloss_generate,
+    root_read,
+  );
   list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let answer = {};
-  property_set(answer, "chapters", chapters);
-  property_set(answer, "roots_distinct", roots_distinct);
+  property_set(answer, "chapters", property_get(gathered, "chapters"));
+  let distinct = property_get(gathered, "roots_distinct");
+  property_set(answer, "roots_distinct", distinct);
   property_set(answer, "claimed_books", claimed_books);
   property_set(answer, "unvouched_roots", unvouched_roots);
   property_set(answer, "unvouched_books", unvouched_books);
