@@ -4,8 +4,6 @@ import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_div } from "./html_div.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { list_map } from "./list_map.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";

@@ -3,8 +3,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_div } from "./html_div.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 export function app_g_bless_finished_bloom(div_map, middle) {

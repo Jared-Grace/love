@@ -6,7 +6,6 @@ import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_windows_draw(layer, blocks) {

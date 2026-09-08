@@ -13,7 +13,6 @@ import { app_shared_game_npc_glow_get } from "./app_shared_game_npc_glow_get.mjs
 import { app_shared_game_npc_glow_set } from "./app_shared_game_npc_glow_set.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
 export function app_g_bless_glows(glows, everyone, lit) {
