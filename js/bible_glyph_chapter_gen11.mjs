@@ -765,7 +765,7 @@ export function bible_glyph_chapter_gen11() {
           "$son",
           "Abram,",
           "his",
-          "grandson",
+          "$son",
           "Lot",
           "the",
           "$son",
