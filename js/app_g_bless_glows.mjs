@@ -105,7 +105,6 @@ export function app_g_bless_glows(glows, everyone, lit) {
       height: "100%",
       background: background,
       filter: rim,
-      "pointer-events": "none",
       opacity: "0",
       transition: "opacity 0.8s ease-out",
     });

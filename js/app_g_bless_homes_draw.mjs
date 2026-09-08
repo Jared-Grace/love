@@ -107,7 +107,6 @@ export function app_g_bless_homes_draw(homes, tiles) {
     html_style_assign(block, {
       background: color,
       "box-shadow": bloom,
-      "pointer-events": "none",
     });
   }
   each(rectangles, rectangle_light);

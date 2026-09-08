@@ -96,7 +96,6 @@ export function app_g_bless_windows_draw(layer, blocks) {
       height: "100%",
       transform: "translateX(-50%)",
       background: "rgba(255, 241, 214, 0.85)",
-      "pointer-events": "none",
     });
     let across = html_div(pane);
     html_style_assign(across, {
@@ -107,7 +106,6 @@ export function app_g_bless_windows_draw(layer, blocks) {
       width: "100%",
       transform: "translateY(-50%)",
       background: "rgba(255, 241, 214, 0.85)",
-      "pointer-events": "none",
     });
     let sheen = html_div(pane);
     html_style_assign(sheen, {
@@ -118,7 +116,6 @@ export function app_g_bless_windows_draw(layer, blocks) {
       height: "100%",
       background:
         "linear-gradient(150deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 55%)",
-      "pointer-events": "none",
     });
     return pane;
   }
