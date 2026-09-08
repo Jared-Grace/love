@@ -1,4 +1,4 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
+import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -27,9 +27,6 @@ import { not } from "./not.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted() {
   "The sightings of the ambiguous wording whose named root is not spelled inside its word, split again by whether the language has ever heard of that root, which is the test for whether a filter would cost anything.";
   "★ THE SPELLING MARK ALONE IS A TRADE AND THIS ASKS WHETHER THE TRADE CAN BE AVOIDED. Reading all 43 roots it flags: 19 of them are English pronouns and account for 764 sightings, and the other 24 are real Cebuano roots whose spelling shifted - dala under dad-on, dumdom under nahinumdom - and account for 35. Filtering on spelling alone would therefore buy 764 corrections at a cost of 35 losses, which is a judgment somebody has to make rather than a fault to fix.";
