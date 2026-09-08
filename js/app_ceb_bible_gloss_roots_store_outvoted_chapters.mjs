@@ -1,24 +1,20 @@
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
+import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { each } from "./each.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
@@ -28,47 +24,32 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   "Only words the store itself already contradicts are looked at, and only where the dictionary names one of the roots that were given. Both conditions matter. A word every chapter agrees on is not evidence of anything here even if the dictionary disagrees with all of them, because then the dictionary is the outsider and that is a different question with a different answer. A word the dictionary is silent on cannot be settled at all.";
   "The rows are candidates and not corrections. What is proven is that a chapter names a root while the dictionary names another and a sibling chapter agrees with the dictionary; what is not proven is that the sentence around that root says nothing else worth keeping. Nothing here is written to the store.";
   "Measured over the store: 682 entries in 150 chapters, covering 269 distinct words. By kind, 295 name a deeper root than the dictionary, 133 a shallower one, 63 a kin form, and 191 something apart. The 191 is not a fault count. Nine of them are the same word carrying an accent - tamay written as támay, buhi as buhì, kini as kiní - and six more are one root sitting inside the other once the accent is gone, dá inside dala. That leaves 176, because the folding these are compared through evens out the o against the u and the d against the r and does nothing at all about a diacritic.";
-  "The walk over the chapters repeats the one in the reader beside it, and the two want collapsing into a single pass that hands back the words with their chapters. That is left undone rather than done badly, because the collapse changes a unit that has already been measured against and the two answers should be seen to agree first.";
+  "The walk over the store is now the shared one, so what this reading and the one beside it still have in common is the gathering rather than the pass. Collapsing that as well would change a unit that has already been measured against, and it is the half where the two genuinely differ - this one keeps the chapter a sighting stood in and the other throws it away - so it stays undone on purpose.";
+  "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explain_key = gloss_entry_explain_key();
   let said = {};
-  function entries_pass(entries) {
-    return entries;
-  }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        return;
-      }
-      let claimed = gloss_explain_roots_claimed(explain);
-      let count = list_size(claimed);
-      let empty = equal(count, 0);
-      if (empty) {
-        return;
-      }
-      let word = property_get(entry, word_key);
-      let lowered = text_lower_to(word);
-      let first = list_get(claimed, 0);
-      let root = text_lower_to(first);
-      let places = property_initialize_list(said, lowered);
-      list_add(places, {
-        chapter: chapter_code,
-        root: root,
-      });
+  function entry_read(found) {
+    let chapter_code = property_get(found, "chapter_code");
+    let entry = property_get(found, "entry");
+    let claimed = property_get(found, "claimed");
+    let count = list_size(claimed);
+    let empty = equal(count, 0);
+    if (empty) {
+      return;
     }
-    each(entries, entry_read);
+    let word = property_get(entry, word_key);
+    let lowered = text_lower_to(word);
+    let first = list_get(claimed, 0);
+    let root = text_lower_to(first);
+    let places = property_initialize_list(said, lowered);
+    list_add(places, {
+      chapter: chapter_code,
+      root: root,
+    });
   }
-  await each_async(chapter_codes, chapter_read);
+  await gloss_chapters_roots_claimed_entries_generic(fn, entry_read);
   let known = await binisaya_words_known();
   let said_words = object_property_names(said);
   let rows = [];
