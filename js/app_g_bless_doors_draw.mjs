@@ -98,9 +98,6 @@ export function app_g_bless_doors_draw(layer, blocks) {
     let doorways = property_get(building, "doorways");
     each(doorways, doorway_draw);
   }
-  function block_draw(block) {
-    let buildings = property_get(block, "buildings");
-    each(buildings, building_draw);
-  }
-  each(blocks, block_draw);
+  let buildings = bless_blocks_buildings(blocks);
+  each(buildings, building_draw);
 }
