@@ -31,8 +31,8 @@ export async function app_ceb_bible_gloss_words_edged() {
     let held = binisaya_words_known_get(known, bare);
     let never_asked = null_is(held);
     if (never_asked) {
-      let unknown = "unknown";
-      return unknown;
+      let never_heard = "unknown";
+      return never_heard;
     }
     let analysed = property_get(held, "analysed");
     if (analysed) {
