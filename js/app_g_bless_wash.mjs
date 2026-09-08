@@ -32,8 +32,7 @@ export function app_g_bless_wash(wash, cone) {
   let tiles = bless_cone_tiles(cone);
   let depth = property_get(cone, "depth");
   function tile_light(tile) {
-    let square = html_div(wash);
-    g_img_square_style_position(square, tile, "ground_tint");
+    let square = g_img_square_div(wash, tile, "ground_tint");
     ("Which row of the cone the tile is in is asked of the cone's own arithmetic rather than");
     ("worked out from the two sets of coordinates here, so the drawing cannot come to");
     ("disagree with the rule about who can be seen.");

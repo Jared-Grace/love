@@ -64,8 +64,7 @@ export function app_g_bless_finished_white(div_map, tiles, roof_is) {
     return r2;
   }
   function tile_square(tile) {
-    let square = html_div(div_map);
-    g_img_square_style_position(square, tile, "ground_tint");
+    let square = g_img_square_div(div_map, tile, "ground_tint");
     html_style_assign(square, {
       background: "rgba(255, 255, 255, 0.95)",
       "pointer-events": "none",
