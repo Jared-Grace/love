@@ -425,6 +425,10 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 14",
     },
     {
+      chapter_code: "NUM15",
+      reference: "Numbers 15",
+    },
+    {
       chapter_code: "NUM16",
       reference: "Numbers 16",
     },
