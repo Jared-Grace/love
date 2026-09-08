@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_click_none } from "./html_click_none.mjs";
