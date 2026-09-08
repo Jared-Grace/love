@@ -89,8 +89,8 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
     return verdict_depth;
   }
   function shared_is(row) {
-    let shared = property_equals(row, "verdict", "shared");
-    return shared;
+    let verdict_shared = property_equals(row, "verdict", "shared");
+    return verdict_shared;
   }
   function contradiction_is(row) {
     let wrong = property_equals(row, "verdict", "contradiction");
