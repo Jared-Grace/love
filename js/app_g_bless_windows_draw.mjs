@@ -128,9 +128,7 @@ export function app_g_bless_windows_draw(layer, blocks) {
     "the same offset read from either end, which is what makes the pair even.";
     let opening = html_div(layer);
     g_img_square_style_position(opening, tile, "ground_tint");
-    html_style_assign(opening, {
-      "pointer-events": "none",
-    });
+    html_click_none(opening);
     pane_draw(opening, "-17%");
     pane_draw(opening, "83%");
   }
@@ -139,9 +137,7 @@ export function app_g_bless_windows_draw(layer, blocks) {
     "It is the same pane as upstairs in every other way. Two spellings of a window would be two windows free to drift apart, and the two floors of one house wearing different glass is the one difference here that would say something untrue.";
     let opening = html_div(layer);
     g_img_square_style_position(opening, tile, "ground_tint");
-    html_style_assign(opening, {
-      "pointer-events": "none",
-    });
+    html_click_none(opening);
     pane_draw(opening, "33%");
   }
   function building_draw(building) {
