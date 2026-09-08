@@ -12,7 +12,6 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_plain } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_plain.mjs";
-import { app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line.mjs";
 import { app_code_lesson_expression_choose_order_not_twice_rewritten_chip } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_chip.mjs";
 import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
 import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
@@ -24,7 +23,7 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   "Both symbols here are the same symbol, so nothing about which operator is stronger could tell them apart. Nearness is the whole of it, and a pair of parentheses is what makes nearness something on the screen instead of something to remember.";
   "THE LINE ARRIVES PLAIN AND THE COLOURS ARE PUT ON AFTERWARDS, IN A LINE THAT SAYS SO. Two separate things are being taught here - that the line may be written with parentheses, and that the parentheses say which ! goes first - and a coloured line at the moment of the rewrite mixes them, because the learner meets the colours before they have read the line. So the rewrite is shown plain, and then one line shows the same line twice over, uncoloured beside coloured, and names what is happening: this is the same line with colours on it.";
   "THE REWRITE IS FINISHED BEFORE ANY COLOUR ARRIVES. The claim that the parenthesised line comes to the same thing as the flat one is about the code and is true whether or not anything is coloured, so it is made and closed while the line is still plain - two plain lines, the rewrite and then the two spellings said to solve the same. Only after that does a line put colours on. Said the other way round, the first coloured line a learner ever saw would arrive in the middle of an argument about what the line means, and they would have to decide on the spot whether the colours were part of the claim.";
-  "That colours line is asked for from the one place that holds it, because the lesson after this one shows the same line again as a reminder and a reminder only works if it is the same line. What it says and why it shows the code twice over is written down there.";
+  "The colours line shows the same code twice over, uncoloured and then coloured, and that is what makes the colours readable as marks rather than as code. The difference between the two showings is exactly the part JavaScript does not care about, so the learner can see it instead of being told it. This is the only card in the run that shows it - the lesson after this one recalls the parenthesised spelling in plain black and white, because what it needs back is which ! is the nearer one, not the marks that were put on to point at it.";
   "THREE COLOURS, AND EACH ONE SAYS WHICH PART OF THE LINE A PHRASE MEANS. The word first and the outer ! are blue, the word second and the inner ! are green, and the phrase outer parentheses and the far left and far right brackets are red. Every one of those phrases turns on picking one character out of a line of identical-looking characters, and the colour is what makes the picking possible without counting.";
   "THE PHRASE OUTER PARENTHESES NEEDED IT MOST. The other two name a single character; this one names two characters that are not next to each other and have the whole rest of the line between them, so there is nothing about their position that says they are a pair. Told only in words, a learner has to build the nesting in their head before the sentence means anything - which is the very thing the sentence was supposed to teach them.";
   "The brackets are shown as characters after the phrase, as two chips with a space between and never as one chip reading them together. There is no such thing in code as an open and a close written side by side; they are two marks that stand at the two ends of something, and one chip round both would say they are a single mark - the exact misreading this card exists to undo.";
@@ -55,10 +54,13 @@ export function app_code_lesson_expression_choose_order_not_twice_inside_first(
   app_code_lesson_expression_choose_order_not_twice_rewritten_plain(line_same);
   html_span_text(line_same, " solves the same as ");
   html_span_text_code_dark(line_same, bang_bang_true);
-  app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line(
-    parent,
-    "We can write ",
+  let line_colors = html_div(parent);
+  html_span_text(line_colors, "We can write ");
+  app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
+    line_colors,
   );
+  html_span_text(line_colors, " with colors like this: ");
+  app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_colors);
   let line_show = html_div(parent);
   html_span_text(line_show, "The parentheses in ");
   app_code_lesson_expression_choose_order_not_twice_rewritten_chip(line_show);
