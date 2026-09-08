@@ -9,17 +9,14 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
+import { add } from "./add.mjs";
 import { gloss_explain_roots_named_word_given } from "./gloss_explain_roots_named_word_given.mjs";
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
+import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
@@ -57,25 +54,6 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   let rescued_sightings = 0;
   let by_root_dropped = {};
   let by_root_rescued = {};
-  function root_note(holder, root, word, explain) {
-    let row = property_get_or_null(holder, root);
-    let fresh = null_is(row);
-    if (fresh) {
-      let made = {
-        named_root: root,
-        sightings: 0,
-        words: [],
-        explain: explain,
-      };
-      property_set(holder, root, made);
-      row = made;
-    }
-    let seen = property_get(row, "sightings");
-    let value = add(seen, 1);
-    property_set(row, "sightings", value);
-    let words = property_get(row, "words");
-    list_add_if_not_includes(words, word);
-  }
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
@@ -114,12 +92,12 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
     let first = list_get(sentence, 0);
     let root = text_lower_to(first);
     dropped_sightings = add(dropped_sightings, 1);
-    root_note(by_root_dropped, root, word, explain);
+    gloss_root_row_note(by_root_dropped, root, word, explain);
     if (widened_empty) {
       return;
     }
     rescued_sightings = add(rescued_sightings, 1);
-    root_note(by_root_rescued, root, word, explain);
+    gloss_root_row_note(by_root_rescued, root, word, explain);
   }
   await gloss_chapters_roots_named_entries_generic(fn, entry_read);
   let dropped_listed = gloss_rows_ranked(by_root_dropped);
