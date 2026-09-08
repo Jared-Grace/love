@@ -21,8 +21,8 @@ export function js_function_declaration_nested_params_names(declaration) {
   let nodes = list_map(visitors, node_of);
   function inner_is(node) {
     let itself = equal(node, declaration);
-    let inner = not(itself);
-    return inner;
+    let nested = not(itself);
+    return nested;
   }
   let inner = list_filter(nodes, inner_is);
   let names = list_map_squash(inner, js_function_declaration_params_names);
