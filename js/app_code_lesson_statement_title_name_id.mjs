@@ -1,8 +1,7 @@
-import { app_code_category_statements } from "./app_code_category_statements.mjs";
-import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_cycle_code } from "./html_cycle_code.mjs";
-import { text_combine } from "./text_combine.mjs";
+import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
+import { html_span_text } from "./html_span_text.mjs";
+import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 export function app_code_lesson_statement_title_name_id(words, code) {
   arguments_assert(arguments, 2);
   ("a home title for a Statements lesson: what the lesson is about in words, and then the shape of the line it teaches");
@@ -10,11 +9,11 @@ export function app_code_lesson_statement_title_name_id(words, code) {
   ("The line is shown as well as named because the home list is read to find a lesson again rather than to meet it, and by then the line is what is remembered.");
   ("Only what is painted goes through here. The id a learner's finished lessons are stored under is built from the words, so a line may be shown, reworded or taken away without any learner losing their place.");
   ("The line a caller hands in is spelled compactly - a+b rather than a + b - and it is the one place in this course that is. Code a learner reads is spelled the way JavaScript is written everywhere else, so that what they learn here is what they meet outside and what they meet outside is readable here. A title is not read, it is recognised: it sits beside a number on a list of a hundred and twenty, and every space in it is width spent on nothing.");
-  let spaced = text_combine(words, " ");
-  function paint(parent) {
-    html_cycle_code(parent, [spaced, code]);
+  ("The line is one colour all the way across, which is what a line handed over as a string can be. A title whose line has a gap painted into it asks for the painting one instead, and this is written on top of that so the two cannot come out looking different.");
+  function paint_code(parent) {
+    let tile = html_span_code_dark_nowrap(parent);
+    html_span_text(tile, code);
   }
-  let left = app_code_category_statements();
-  let built = app_code_lesson_name_id_category_then(left, paint);
+  let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
 }
