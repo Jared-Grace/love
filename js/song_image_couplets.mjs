@@ -202,7 +202,7 @@ export function song_image_couplets() {
       first: "the LOVE of GOD",
       second: "for all to see",
       symbol:
-        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, the middle cross standing tallest and running from the crown of the hill right up into the head of the arch so that its top stands well above the upper lead line and clear of it, its crossbar reaching almost to the white border on both sides, and everything above the crown of the hill and beside it, right up to the upper lead line, one flat sheet of violet with no white glass anywhere in the window except the border itself",
+        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, the middle cross standing tallest and running from the crown of the hill right up into the head of the arch so that its top stands well above the upper lead line and clear of it, its crossbar reaching almost to the white border on both sides",
       symbol_ref: "Luke 23:33, Matthew 27:38, Isaiah 53:12",
       same_as: 0,
     },
