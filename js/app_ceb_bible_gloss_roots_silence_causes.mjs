@@ -34,8 +34,8 @@ export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   let marked = gloss_classes_backing_mark(classes, known);
   function silent_is(one_class) {
     let backing = property_get_or_null(one_class, "backing");
-    let r = equal(backing, "silent");
-    return r;
+    let answer = equal(backing, "silent");
+    return answer;
   }
   let silent = list_filter(marked, silent_is);
   let totals = {
