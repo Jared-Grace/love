@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { html_click_none } from "./html_click_none.mjs";
 import { app_g_bless_glow_mark_set } from "./app_g_bless_glow_mark_set.mjs";
 import { app_g_bless_glow_mark_get } from "./app_g_bless_glow_mark_get.mjs";
