@@ -137,7 +137,8 @@ export function song_image_drawn_attempts_known() {
   27,
   28,
   29,
-  30
+  30,
+  31
  ],
  "7": [
   1,
@@ -156,7 +157,8 @@ export function song_image_drawn_attempts_known() {
   14,
   15,
   16,
-  17
+  17,
+  18
  ],
  "8": [
   1,
@@ -195,7 +197,8 @@ export function song_image_drawn_attempts_known() {
   11,
   12,
   13,
-  14
+  14,
+  15
  ],
  "10": [
   1,
@@ -307,7 +310,8 @@ export function song_image_drawn_attempts_known() {
   94,
   95,
   96,
-  97
+  97,
+  98
  ],
  "12": [
   1,
@@ -354,7 +358,8 @@ export function song_image_drawn_attempts_known() {
   15,
   16,
   17,
-  18
+  18,
+  19
  ],
  "15": [
   1,
@@ -1048,7 +1053,8 @@ export function song_image_drawn_attempts_known() {
   277,
   278,
   279,
-  280
+  280,
+  281
  ],
  "25": [
   1,
@@ -1362,7 +1368,8 @@ export function song_image_drawn_attempts_known() {
   15,
   16,
   17,
-  18
+  18,
+  19
  ],
  "33": [
   1,
@@ -1378,7 +1385,8 @@ export function song_image_drawn_attempts_known() {
   11,
   12,
   13,
-  14
+  14,
+  15
  ],
  "34": [
   1,
