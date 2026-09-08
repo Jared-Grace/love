@@ -38,8 +38,8 @@ export async function bible_glyph_chapter_word_draw_check(
     let number = property_get(row, "verse_number");
     let seated = 0;
     let words = property_get(row, "words");
-    for (let each of words) {
-      let word_glyph = property_get(each, "glyph");
+    for (let token of words) {
+      let word_glyph = property_get(token, "glyph");
       let same = equal(word_glyph, glyph);
       if (not(same)) {
         continue;
@@ -58,18 +58,18 @@ export async function bible_glyph_chapter_word_draw_check(
     let words = property_get(verse, "words");
     let standing = 0;
     let drawn = 0;
-    for (let each of words) {
-      let spelled = text_is(each);
+    for (let token of words) {
+      let spelled = text_is(token);
       if (not(spelled)) {
         continue;
       }
       let mark = "$" + glyph;
-      let is_mark = text_starts_with(each, mark);
+      let is_mark = text_starts_with(token, mark);
       if (is_mark) {
         drawn = add(drawn, 1);
         continue;
       }
-      let letters = text_letters_only(each);
+      let letters = text_letters_only(token);
       let lowered = text_lower_to(letters);
       let hit = equal(lowered, wanted);
       if (not(hit)) {
