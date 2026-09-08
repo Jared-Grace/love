@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
@@ -119,11 +120,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     list_add(listed, named);
   }
   each(roots, root_read);
-  function sightings_of(named) {
-    let n = property_get(named, "sightings");
-    return n;
-  }
-  list_sort_number_mapper_reverse(listed, sightings_of);
+  list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let answer = {};
   property_set(answer, "chapters", chapters);
   property_set(answer, "roots_distinct", roots_distinct);
