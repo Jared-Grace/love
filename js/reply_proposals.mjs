@@ -458,6 +458,182 @@ export function reply_proposals() {
       "a contact line is read and then thrown away - nothing in the reply repeats an address back. Should it be read at all, or should a message that gives an address simply be left to the country rule beside it?",
     ],
   };
-  let proposals = [time_of_day, name_out, town_out, countries_in, street_out];
+  ("The two below are one change in two places: the first makes a written-out word forgive the ways it gets mistyped, the second makes the cheapest reading of a message win. They are separate because the first is useful on its own and the second is not, and because the first is the one with numbers in it to argue with.");
+  ("★ EVERY WORD THESE RULES WAIT FOR IS SPELLED CORRECTLY, AND ALMOST NOBODY WRITING TO THEM SPELLS EVERY WORD CORRECTLY. Today one wrong letter anywhere in a country's name means no reply at all - not a worse reply, no reply - and the person who wrote it is left thinking nobody read it. The rules cannot be told every misspelling, because misspellings are not a list; what they can be told is what a mistake looks like.");
+  ("The single place all of this hangs off is that a word longer than one letter is split into its letters and matched letter by letter. Replacing that split is the whole switch: everything above it and everything below it is untouched, and nothing else in the rules changes at all.");
+  let f_name43 = fn_name("text_is");
+  let combined42 = text_combine_multiple(["   let si = ", f_name43, "(item);"]);
+  let f_name44 = fn_name("text_size");
+  let combined43 = text_combine_multiple(["     size = ", f_name44, "(item);"]);
+  let f_name45 = fn_name("greater_than");
+  let combined44 = text_combine_multiple([
+    "     if (",
+    f_name45,
+    "(size, 1)) {",
+  ]);
+  let f_name46 = fn_name("text_split_empty");
+  let combined45 = text_combine_multiple([
+    "-      let split = ",
+    f_name46,
+    "(item);",
+  ]);
+  let f_name47 = fn_name("reply_sequence");
+  let combined46 = text_combine_multiple([
+    "-      wrapped = ",
+    f_name47,
+    "(split);",
+  ]);
+  let f_name48 = fn_name("reply_word_cost");
+  let combined47 = text_combine_multiple([
+    "+      wrapped = ",
+    f_name48,
+    "(item);",
+  ]);
+  let f_name49 = fn_name("reply_typo_costs");
+  let combined48 = text_combine_multiple([
+    "what a mistake costs, which is a ranking and not a measurement, and is yours to reorder. A neighbouring key, a doubled letter and a word spelled the way it sounds cost one each. Two letters the wrong way round cost two. A letter missing, or a letter too many, costs three. The numbers live in ",
+    f_name49,
+    " and only ever decide which of two allowed readings wins - they never decide whether a reading is allowed.",
+  ]);
+  let f_name50 = fn_name("reply_typo_budget");
+  let combined49 = text_combine_multiple([
+    "how much is forgiven, which is what actually decides. One mistake for every five letters, counted down, in ",
+    f_name50,
+    ". So usa and uk and from forgive nothing at all - form is not read as from, and that matters, because form is a real word a real sentence could mean. kenya and nigeria forgive one. philippines forgives two, and needs to.",
+  ]);
+  let f_name51 = fn_name("reply_typo_sounds");
+  let combined50 = text_combine_multiple([
+    "fourteen pairs of spellings that sound the same are forgiven as one mistake, in ",
+    f_name51,
+    ": ph and f, c and k, ck and k, s and z, x and ks, ei and ie, y and i, ou and u, each way round. filippines is not a slip of the finger - it is somebody spelling a sound correctly.",
+  ]);
+  let f_name52 = fn_name("reply_keys_nearby");
+  let combined51 = text_combine_multiple([
+    "a letter swapped for a letter nowhere near it on the keyboard is not forgiven at all, and that absence matters more than any number here. It was in the first draft, and it let kenza be read as kenya - which is not a misspelling of Kenya, it is somebody's name. Only the keys a finger can actually hit by mistake count, read off the three letter rows in ",
+    f_name52,
+    ".",
+  ]);
+  let typo_layer = {
+    title: "read a word that was mistyped, and know what the forgiving cost",
+    fn: fn_name("reply_wrap_invoke"),
+    diff: [
+      combined42,
+      "   let size = null;",
+      "   if (si) {",
+      combined43,
+      combined44,
+      combined45,
+      combined46,
+      combined47,
+      "     }",
+      "   }",
+    ],
+    cases: [
+      {
+        from: "",
+        message: "I am pastor Maria from Manila in Phillipines",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am pastor Maria from Manila in Filipines",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am pastor John from Lagos in Nigera",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am from Kejya",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am from Ugadna",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am from Zimbabwee",
+        answered: true,
+        outputs: located,
+      },
+      {
+        from: "",
+        message: "I am from Kenza",
+        answered: false,
+        outputs: [],
+      },
+      {
+        from: "",
+        message: "I am from Narnia",
+        answered: false,
+        outputs: [],
+      },
+    ],
+    decide: [
+      combined48,
+      combined49,
+      combined50,
+      combined51,
+      "a letter missing and a letter too many are forgiven once per word however long the word is, and not once every five letters like everything else. At three, a message naming the Falkland Islands was also read as naming the Aland Islands, and would have been answered as such. Those two are the only mistakes that change how long a word is; every other kind keeps the length, so no number of them can walk one word into another.",
+      "measured on the eighteen real messages already saved: nothing that is answered today stops being answered, and eight misspelled messages that get nothing back today are answered. It was measured with the four changes above already applied, because that is the shape it would ship in.",
+      "it costs time. Those eighteen messages take about four tenths of a second in total today and about eight tenths with this on, and the slowest single message goes from about a seventh of a second to about half a second. That is a reply being written, not a page being drawn, so half a second is probably not felt - but it is roughly twice the work and it is worth knowing before it is on.",
+      "of the three hundred and twenty country words, ten pairs can now be read as each other. Every one of them is the same country spelled two ways - guiana and guyana, romania and roumania and rumania, surinam and suriname, bermuda and bermudas, america and merica - so both readings give the same answer. No two different countries reach each other. Chad and Chile do not.",
+      "of the one hundred and sixteen runs of letters that appear in the real messages, none newly reads as a country that it is not.",
+    ],
+  };
+  let f_name53 = fn_name("list_first");
+  let combined52 = text_combine_multiple([
+    "-    result = ",
+    f_name53,
+    "(result);",
+  ]);
+  let f_name54 = fn_name("reply_cheapest");
+  let combined53 = text_combine_multiple([
+    "+    result = ",
+    f_name54,
+    "(result);",
+  ]);
+  let cheapest_reading = {
+    title:
+      "when a message can be read several ways, take the one that needed the least forgiving",
+    fn: fn_name("reply_messages_inner"),
+    diff: [
+      "   let possbility_start = {",
+      "     tokens,",
+      "     index: 0,",
+      "     matches: true,",
+      "+    cost: 0,",
+      "   };",
+      "   } else {",
+      combined52,
+      combined53,
+      "   }",
+      "   return result;",
+    ],
+    cases: [],
+    decide: [
+      "on its own this changes nothing, because today every reading costs nothing and the first is as cheap as the last. It only matters once the change above is on.",
+      "the reason it is needed then: the first reading found is an accident of the order the rules happen to be listed in. Without this, a message spelled perfectly could be answered by a rule that only matched it by forgiving two letters, while the rule that matched it exactly sat second in the list. With it, a reading that needs no forgiving always beats one that does, whatever order anything is written in.",
+      "it has no messages of its own to show, which is the honest thing to say about it. What it changes is which of two answers is picked when both are already possible, and no real message saved so far is read two ways.",
+    ],
+  };
+  let proposals = [
+    time_of_day,
+    name_out,
+    town_out,
+    countries_in,
+    street_out,
+    typo_layer,
+    cheapest_reading,
+  ];
   return proposals;
 }
