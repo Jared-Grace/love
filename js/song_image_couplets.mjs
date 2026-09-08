@@ -192,7 +192,7 @@ export function song_image_couplets() {
       first: "CHRIST crucified",
       second: "to pardon me",
       symbol:
-        "One single cross of plain brown wood standing alone, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, the band between the two lead lines flat emerald green and the band below them flat deep cobalt blue",
+        "One single cross of plain brown wood standing alone, its timber drawn in a lighter shade of brown throughout, this couplet asking for that lighter shade here by name, tall and upright, both its beams plain squared timber of the same even width from end to end and cut off square at all four tips, the beams bare and empty, its crossbar reaching almost to the white border on both sides and its upright running the whole height of the glass inside the white border, the band between the two lead lines flat deep crimson and the band below them flat ruby red, so that the light cross stands against a dark red field",
       symbol_ref: "1 Corinthians 1:18, Galatians 6:14",
       same_as: 0,
     },
@@ -202,7 +202,7 @@ export function song_image_couplets() {
       first: "the LOVE of GOD",
       second: "for all to see",
       symbol:
-        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, the middle cross standing tallest and running from the crown of the hill right up to just below the head of the arch, its crossbar reaching almost to the white border on both sides",
+        "Three crosses of plain brown wood standing together on the crown of a green hill, the middle one taller than the two beside it, the hill drawn very large so that it runs from the white border on the left right across to the white border on the right and rises to the middle of its height, the middle cross standing tallest and running from the crown of the hill right up into the head of the arch so that its top stands well above the upper lead line and clear of it, its crossbar reaching almost to the white border on both sides",
       symbol_ref: "Luke 23:33, Matthew 27:38, Isaiah 53:12",
       same_as: 0,
     },
@@ -242,7 +242,7 @@ export function song_image_couplets() {
       first: "the FATHER gave",
       second: "HIS only SON",
       symbol:
-        "One ram of white glass standing side-on in profile with thick curled white horns, behind its head one plain halo of bright yellow glass a little wider than the head with nothing inside it, whole and unbroken, the lead line stopping at its edge and picking up again on its far side, and one ring of thorn worn as a crown resting on the top of its skull between the two horns, sitting there the way a crown sits on a king and never round the neck and never under the jaw, the ram caught fast in a dense thicket of bare brown thorn branches that rises past its shoulder to the height of its back and closes right over its legs and across its chest and along the whole underside of its body so that the underside is hidden behind them, the branches crossing in front of the ram as well as behind it so that they lie over its fleece and hold it in on every side and it plainly cannot get free, one animal only in the whole window, the band between the two lead lines one flat sheet of black glass and the band below them one flat sheet of black glass also, this couplet asking for its field in black here by name, and the head of the arch above them staying deep cobalt blue, the ram drawn very large so that it reaches almost to the white border on both sides",
+        "One ram of white glass standing side-on in profile with thick curled white horns, behind its head one plain halo of bright yellow glass a little wider than the head with nothing inside it, whole and unbroken, the lead line stopping at its edge and picking up again on its far side, and one ring of thorn worn as a crown resting on the top of its skull between the two horns, sitting there the way a crown sits on a king and never round the neck and never under the jaw, the ram caught fast in a dense thicket of bare brown thorn branches that rises past its shoulder to the height of its back and closes right over its legs and across its chest and along the whole underside of its body so that the underside is hidden behind them, the branches crossing in front of the ram as well as behind it so that they lie over its fleece and hold it in on every side and it plainly cannot get free, one animal only in the whole window, the band between the two lead lines one flat sheet of deep crimson and the band below them one flat sheet of violet, and the head of the arch above them staying deep cobalt blue, the ram drawn very large so that it reaches almost to the white border on both sides",
       symbol_ref: "Genesis 22:13",
       same_as: 0,
     },
