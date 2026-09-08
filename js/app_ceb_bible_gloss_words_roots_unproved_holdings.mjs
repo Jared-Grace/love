@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated.mjs";
 import { property_get } from "./property_get.mjs";
@@ -94,10 +95,6 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
     let waiting = property_equals(row, "owed", "person");
     return waiting;
   }
-  function row_sightings(row) {
-    let sightings = property_get(row, "sightings");
-    return sightings;
-  }
   let accent = list_filter(owed, accent_is);
   let gather = list_filter(owed, gather_is);
   let person = list_filter(owed, person_is);
@@ -112,9 +109,9 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
     accent_words: list_size(accent),
     gather_words_count: list_size(gather),
     person_words: list_size(person),
-    accent_sightings: list_map_sum(accent, row_sightings),
-    gather_sightings: list_map_sum(gather, row_sightings),
-    person_sightings: list_map_sum(person, row_sightings),
+    accent_sightings: list_map_sum(accent, gloss_row_sightings),
+    gather_sightings: list_map_sum(gather, gloss_row_sightings),
+    person_sightings: list_map_sum(person, gloss_row_sightings),
     gather_words,
     accent,
     gather,
