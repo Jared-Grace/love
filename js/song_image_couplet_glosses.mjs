@@ -49,7 +49,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 27,
+      kept: 30,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
@@ -57,7 +57,7 @@ export function song_image_couplet_glosses() {
         "Inherited. The bare cross standing empty is the church's own emblem and no verse describes it; the empty beams are what make it say pardon rather than execution, which is the couplet's claim.",
     },
     7: {
-      kept: 11,
+      kept: 14,
       lyric_ref: "John 3:16, Romans 5:8, John 15:13",
       lyric_explain:
         "GOD commendeth HIS love toward us in that, while we were yet sinners, CHRIST died for us. Greater love hath no man than this, and the couplet says that this is the place where the love of GOD is on view.",
