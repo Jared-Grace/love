@@ -33,9 +33,9 @@ export async function app_shared_gloss_bible_home_generic(
   if (list_empty_is(passages)) {
     return;
   }
-  let first2 = list_first(passages);
-  let verses = property_get(first2, "verses");
-  let passage = property_get(first2, "passage");
+  let first = list_first(passages);
+  let verses = property_get(first, "verses");
+  let passage = property_get(first, "passage");
   let prop = "p";
   let p = list_last_property(verses, prop);
   html_hr(p);
