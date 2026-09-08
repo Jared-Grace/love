@@ -75,10 +75,12 @@ export function app_reply_rules_diff_show(root, diff) {
     let changed = property_get(entry, "changed");
     if (changed) {
       let segments = property_get(entry, "segments");
-      return app_reply_rules_diff_line_changed(block, segments);
+      let line2 = app_reply_rules_diff_line_changed(block, segments);
+      return line2;
     }
     let line = property_get(entry, "line");
-    return each_line(line);
+    let r = each_line(line);
+    return r;
   }
   let entries = diff_lines_paired(diff);
   let drawn = list_map(entries, each_entry);
