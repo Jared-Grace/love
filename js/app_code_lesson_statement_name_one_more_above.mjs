@@ -19,7 +19,7 @@ export function app_code_lesson_statement_name_one_more_above(root) {
   let box_twice = property_get(r, "box_twice");
   let twice = property_get(r, "twice");
   html_div_cycle_code(box_twice, [
-    "Say that line twice and the name goes up twice",
+    "Say that line twice and the name goes up twice:",
   ]);
   ("the four lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the two middle lines being the same line twice is the whole of what this box shows.");
   let held = js_code_let_statement(name, start);

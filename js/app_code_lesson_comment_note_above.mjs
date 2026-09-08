@@ -23,11 +23,11 @@ export function app_code_lesson_comment_note_above(root) {
   let logged = js_code_console_log_statement(added);
   let box_plain = app_code_container_light_blue(root);
   html_div_cycle_code(box_plain, [
-    "Remember, we can write out what two numbers add up to",
+    "Remember, we can write out what two numbers add up to:",
   ]);
   app_code_code_lines_writes_out(box_plain, [logged], total);
   let box_note = app_code_container_light_blue(root);
-  html_div_cycle_code(box_note, ["We can write a comment above the line"]);
+  html_div_cycle_code(box_note, ["We can write a comment above the line:"]);
   ("the comment says what the line below it does, because that is what a comment is for. A comment reading anything else would be teaching the shape and leaving the use of it to be guessed at.");
   let note = js_code_comment_line("add ten and twenty");
   app_code_code_lines_writes_out(box_note, [note, logged], total);

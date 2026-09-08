@@ -51,7 +51,7 @@ export function app_code_lesson_statement_name_again_above(root) {
   let held = js_code_let_statement(name, quoted_before);
   let again = js_code_assign_statement(name, quoted_after);
   let logged = js_code_console_log_statement(name);
-  html_div_cycle_code(box_code, ["In JS we make the cup like this"]);
+  html_div_cycle_code(box_code, ["In JS we make the cup like this:"]);
   html_div_code(box_code, held);
   ("THE CUP rather than IT. The line before it is about the cup and the line after it is about a word, so an it standing between them has two things it could be pointing at and the learner has to pick. Naming the cup costs one word and leaves nothing to pick.");
   html_div_cycle_code(box_code, [
@@ -60,7 +60,7 @@ export function app_code_lesson_statement_name_again_above(root) {
     " a second time",
   ]);
   html_div_code(box_code, again);
-  html_div_cycle_code(box_code, ["Then we write out what is in the cup"]);
+  html_div_cycle_code(box_code, ["Then we write out what is in the cup:"]);
   app_code_code_lines_writes_out(box_code, [logged], word_after);
   ("The last box says the order rule in the words the course already owns. A statement, and the ; that ends one, were taught long before this lesson - so the rule is stated about statements rather than about LINES, which is a word about how the program is laid out on the screen and not about the language. Two statements on one line would still happen in the order they were written, and a learner told the rule in terms of lines has been given something that is nearly true.");
   ("The recall comes first, because the sentence under it leans on it. A learner who has to remember what a statement is while reading a rule about statements is doing two things at once, and the first of them is free to give them.");
