@@ -12,7 +12,6 @@ import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_code_dark_colored } from "./html_span_code_dark_colored.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
-import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 export function app_code_lesson_expression_choose_order_not_twice_worked(
   parent,
 ) {
@@ -21,7 +20,8 @@ export function app_code_lesson_expression_choose_order_not_twice_worked(
   "The rows are the walk's own wordings and in the walk's own order, so a learner arriving from the lessons behind this one is reading the shape they already know.";
   "THE COLOURS FROM THE CARD ABOVE ARE CARRIED DOWN, and this is where they earn their keep. Each row is a piece of the line lifted out of !(!(true)) and written on its own, and once it is out of the line there is nothing left to say which piece it was: the row reading ! ( true ) could be either half. Wearing the colour it wore upstairs, it says which. A learner watches the green ! go first and the blue one stay, which is the rule the whole lesson is about, told again without a word being spent on it.";
   "THE FIRST TWO ROWS ARE THE SECOND ! AND CARRY GREEN, and their brackets are the inner pair, so they stay plain - the red belongs to the outer pair and putting it here would say these brackets were the ones the sentence upstairs named. The third row is where the outer pair finally shows: ! ( false ) is the blue ! holding the red brackets, which is exactly the line left after the green step was taken out of the middle of them.";
-  "The fifth row drops the brackets and keeps the blue, because by then only one operator is left and there is nothing for a bracket to hold apart. The answer is left plain: it is a value now, not a piece of anybody's line.";
+  "The fourth row drops the brackets and keeps the blue, because by then only one operator is left and there is nothing for a bracket to hold apart. The answer is left plain: it is a value now, not a piece of anybody's line.";
+  "NOTHING IS SAID ABOUT THE LAST ! BEING THE ONLY ONE LEFT. There used to be a row saying so, matching a row the machine walk drew, and it has gone from both. It is a true thing about the line and it is not a reason - the last operator was chosen over nothing, so there is nothing to explain, and a row standing where the reasons stand invites the learner to look for a rule in it.";
   arguments_assert(arguments, 1);
   let bang = js_operator_bang_symbol();
   let word_true = js_keyword_true();
@@ -51,10 +51,6 @@ export function app_code_lesson_expression_choose_order_not_twice_worked(
   let line_then = html_div(parent);
   html_span_text(line_then, "Then we have ");
   html_span_code_dark_colored(line_then, outer_texts, outer_colors);
-  let line_only = html_div(parent);
-  html_span_text(line_only, "The ");
-  html_span_text_code_background(line_only, bang, color_first);
-  html_span_text(line_only, " is the only operator left");
   let line_last = html_div(parent);
   html_span_text(line_last, "So we solve ");
   html_span_code_dark_colored(line_last, bare_texts, bare_colors);
