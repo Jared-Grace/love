@@ -81,12 +81,12 @@ export function bible_words_slips(sightings, words, times) {
       let other_seen = property_get(neighbour, "seen");
       return other_seen;
     }
-    let ranked = list_sort_number_mapper_reverse(nearer, neighbour_seen);
+    let nearer_ranked = list_sort_number_mapper_reverse(nearer, neighbour_seen);
     let first = property_get_or_null(firsts, lower);
     let row = {
       word: lower,
       seen,
-      nearer: ranked,
+      nearer: nearer_ranked,
       first,
     };
     return row;
