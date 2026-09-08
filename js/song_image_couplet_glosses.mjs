@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 9,
+      kept: 11,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
