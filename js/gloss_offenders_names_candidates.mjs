@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -98,10 +99,6 @@ export function gloss_offenders_names_candidates(offenders) {
     return row;
   }
   let rows = list_map(names, name_row);
-  function row_sightings(row) {
-    let sightings = property_get(row, "sightings");
-    return sightings;
-  }
-  let ranked = list_sort_number_mapper_reverse(rows, row_sightings);
+  let ranked = list_sort_number_mapper_reverse(rows, gloss_row_sightings);
   return ranked;
 }
