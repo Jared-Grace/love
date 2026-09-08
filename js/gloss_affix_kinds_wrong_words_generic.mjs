@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -63,10 +64,6 @@ export async function gloss_affix_kinds_wrong_words_generic(fn, known) {
     return gathered;
   }
   let gathered_all = list_map(words, word_gathered);
-  function sightings_of(gathered) {
-    let sightings = property_get(gathered, "sightings");
-    return sightings;
-  }
-  let r = list_sort_number_mapper_reverse(gathered_all, sightings_of);
+  let r = list_sort_number_mapper_reverse(gathered_all, gloss_row_sightings);
   return r;
 }
