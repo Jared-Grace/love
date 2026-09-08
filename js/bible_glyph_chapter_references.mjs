@@ -101,6 +101,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 5",
     },
     {
+      chapter_code: "EXO07",
+      reference: "Exodus 7",
+    },
+    {
       chapter_code: "EXO14",
       reference: "Exodus 14",
     },
@@ -171,6 +175,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NUM22",
       reference: "Numbers 22",
+    },
+    {
+      chapter_code: "DEU07",
+      reference: "Deuteronomy 7",
     },
     {
       chapter_code: "DEU08",
@@ -347,6 +355,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "2KI02",
       reference: "2 Kings 2",
+    },
+    {
+      chapter_code: "2KI03",
+      reference: "2 Kings 3",
     },
     {
       chapter_code: "2KI04",
@@ -609,6 +621,10 @@ export function bible_glyph_chapter_references() {
       reference: "Jeremiah 1",
     },
     {
+      chapter_code: "JER07",
+      reference: "Jeremiah 7",
+    },
+    {
       chapter_code: "JER17",
       reference: "Jeremiah 17",
     },
@@ -635,6 +651,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EZK03",
       reference: "Ezekiel 3",
+    },
+    {
+      chapter_code: "EZK11",
+      reference: "Ezekiel 11",
     },
     {
       chapter_code: "EZK18",
