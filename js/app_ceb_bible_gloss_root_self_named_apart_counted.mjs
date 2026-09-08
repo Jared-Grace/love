@@ -1,19 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
+import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { text_includes } from "./text_includes.mjs";
+import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
@@ -34,25 +31,6 @@ export async function app_ceb_bible_gloss_root_self_named_apart_counted(
   let outside = 0;
   let by_root_outside = {};
   let by_root_inside = {};
-  function root_note(holder, root, word, explain) {
-    let row = property_get_or_null(holder, root);
-    let fresh = null_is(row);
-    if (fresh) {
-      let made = {
-        named_root: root,
-        sightings: 0,
-        words: [],
-        explain: explain,
-      };
-      property_set(holder, root, made);
-      row = made;
-    }
-    let seen = property_get(row, "sightings");
-    let value = add(seen, 1);
-    property_set(row, "sightings", value);
-    let words = property_get(row, "words");
-    list_add_if_not_includes(words, word);
-  }
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
@@ -72,11 +50,11 @@ export async function app_ceb_bible_gloss_root_self_named_apart_counted(
     let held = text_includes(word_folded, root_folded);
     if (held) {
       inside = add(inside, 1);
-      root_note(by_root_inside, root, word, explain);
+      gloss_root_row_note(by_root_inside, root, word, explain);
       return;
     }
     outside = add(outside, 1);
-    root_note(by_root_outside, root, word, explain);
+    gloss_root_row_note(by_root_outside, root, word, explain);
   }
   await gloss_chapters_entries_explained_generic(fn, entry_read);
   let outside_listed = gloss_rows_ranked(by_root_outside);

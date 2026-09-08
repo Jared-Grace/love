@@ -1,17 +1,17 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
+import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
@@ -27,8 +27,15 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   let once = add(start, 1);
   let twice = add(once, 1);
   let box_sum = app_code_container_light_blue(root);
+  ("The reminder names its cups in brackets, drawn as code because that is what they are. It says a name twice over - once for the cup being filled and once for the same cup being read - and the words a name and it are the only thing telling a learner those two are the same cup. Written with the letter in place they can see it, instead of looking down at the code to work out which cup each phrase meant.");
   html_div_cycle_code(box_sum, [
-    "Remember, we can give a name to what it and another name add up to:",
+    "Remember, we can give a name (",
+    name,
+    ") to what it (",
+    name,
+    ") and another name (",
+    name_last,
+    ") add up to:",
   ]);
   ("the lines are handed over together rather than one at a time, because nothing is said between them: the box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name, number_first);

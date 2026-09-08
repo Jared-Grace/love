@@ -11,11 +11,7 @@ import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_vocabularies_word_met_is } from "./gloss_vocabularies_word_met_is.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_initialize_list } from "./property_initialize_list.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
@@ -62,25 +58,9 @@ export async function app_ceb_bible_gloss_root_named_foreign_counted(
       return;
     }
     foreign_sightings = add(foreign_sightings, 1);
-    let row = property_get_or_null(by_root, root);
-    let fresh = null_is(row);
-    if (fresh) {
-      let made = {
-        named_root: root,
-        sightings: 0,
-        words: [],
-        explain: explain,
-      };
-      property_set(by_root, root, made);
-      row = made;
-    }
-    let seen = property_get(row, "sightings");
-    let value = add(seen, 1);
-    property_set(row, "sightings", value);
     let word = property_get(entry, word_key);
-    let words = property_initialize_list(row, "words");
     let item = text_lower_to(word);
-    list_add_if_not_includes(words, item);
+    gloss_root_row_note(by_root, root, item, explain);
   }
   await gloss_chapters_roots_claimed_entries_generic(fn, entry_read);
   let listed = gloss_rows_ranked(by_root);
