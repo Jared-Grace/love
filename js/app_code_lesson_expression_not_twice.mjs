@@ -10,6 +10,7 @@ import { text_combine } from "./text_combine.mjs";
 import { app_code_lesson_symbol_set } from "./app_code_lesson_symbol_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line } from "./app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line.mjs";
 export function app_code_lesson_expression_not_twice() {
   "the step from ! on a plain true or false to ! on another !: the one new idea is that the thing a ! takes can itself be a !, so the operator nests inside itself. Same operator both times, so there is no question of which one goes first - the inner ! is simply the nearer one. Nothing is parenthesised, because nothing needs to be.";
   "It comes before the lesson putting a comparison under a !, and it is what makes that lesson a single step. On its own, ! around a comparison carries two new things at once - that the thing under a ! can be something which works out to true or false, and that it has to be parenthesised. This lesson takes the first of those, on the smallest possible instance, leaving the parenthesis lesson with only the parenthesis.";
@@ -48,6 +49,7 @@ export function app_code_lesson_expression_not_twice() {
   return lesson_symbol;
   function above(root) {
     "the rule, then the nearer ! worked out first, then the outer one, then what the pair adds up to. Worked from true, because that is the keyword the earlier ! lesson opened on.";
+    "THE PARENTHESISED SPELLING IS RECALLED BEFORE ANY SOLVING STARTS. The lesson before this one showed the same line written with parentheses and colours, and it is that spelling which says which of two identical marks is the nearer one. Without it the very next line asks the learner to solve the inner ! first with nothing on the screen saying which of the two is inner, so they take it on trust; with it they can see it. It opens with Remember because they have met it, and it is asked for from the one place that holds it so it arrives word for word as they saw it - a reminder that is worded differently is a second thing to read rather than a thing already read.";
     let true_word = js_keyword_true();
     let false_word = js_keyword_false();
     let not_true = js_code_not(true_word);
@@ -61,6 +63,10 @@ export function app_code_lesson_expression_not_twice() {
       symbol,
     ]);
     html_div_cycle_code(c, ["For example we can write ", twice_true]);
+    app_code_lesson_expression_choose_order_not_twice_rewritten_colors_line(
+      c,
+      "Remember: we can write ",
+    );
     html_div_cycle_code(c, [
       "For ",
       twice_true,
