@@ -69,7 +69,7 @@ export function app_code_lesson_statement_name_copy_kept_above(root) {
     name_first,
     " and then fill cup ",
     name_copy,
-    " from it",
+    " from it:",
   ]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   html_div_code_lines(box_code, [held, copied]);

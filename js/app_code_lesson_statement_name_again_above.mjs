@@ -57,7 +57,7 @@ export function app_code_lesson_statement_name_again_above(root) {
   html_div_cycle_code(box_code, [
     "We do not make the cup again, so we do not write ",
     "let",
-    " a second time",
+    " a second time:",
   ]);
   html_div_code(box_code, again);
   html_div_cycle_code(box_code, ["Then we write out what is in the cup:"]);
