@@ -47,13 +47,13 @@ export async function app_ceb_bible_gloss_words_edged() {
     let bare = property_get(row, "bare");
     let sightings = property_get(row, "sightings");
     let kind = row_kind(row);
-    let r = {
+    let answer = {
       word,
       bare,
       sightings,
       kind,
     };
-    return r;
+    return answer;
   }
   let labelled = list_map(rows, row_labelled);
   function broken_down_is(row) {
