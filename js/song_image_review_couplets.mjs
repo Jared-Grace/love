@@ -24,19 +24,19 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "Black is written into the wording now, so a redraw comes back black instead of green. Both bands are black and the head of the arch stays cobalt. The old picture was black by luck, this one is black by instruction.",
+      note: "The field is black by instruction now, not by luck. Everything else you asked for is still missing: no halo, no thicket trapping him, the thorns are round the neck and body rather than on the head, and the lead lines still cross the ram. The white border you named is still there because the shared sheet asks for it on every window. Say the word and I will take that border out for all thirty six.",
     },
     {
       n: 14,
-      note: "Answering your question: no, there should be no white in the background. The rule forbidding a white or grey or pale field was written after the old picture was drawn, which is how the white got in. The wording is unchanged - only the sheet is new.",
+      note: "Correcting myself: the white here was never a fault in the sheet. This couplet names white itself, as one of the veil stripes, which is the linen of Exodus 26. So the field and the veil were the same white and nothing stood out. The field is emerald green now so the veil has something to read against. Still wrong: the veil came back all red instead of four stripes, hung on a rod nobody asked for, and the field is cut into a grid.",
     },
     {
       n: 15,
-      note: "Flames and half sheathed, as you asked, said as a state the way 8 says a tear. Lower half of the blade inside the sheath, upper half bare above the mouth and wrapped in orange and yellow flame. The crossguard moved up to the top of the bare blade, since it can no longer sit at the sheath mouth.",
+      note: "More than halfway inserted, as you asked - this one is about two thirds in. The flames are along both edges of the bare blade. Still wrong: the lower half of the field came back white, which the sheet forbids. That is the same shared fault as 9 and it has not gone away entirely.",
     },
     {
       n: 26,
-      note: "Its own words asked for pale sky twice and the field clause was refusing it flat. Pale is now granted where a symbol names it, which was the whole cause of the sky staying deep blue. I also changed clear sky blue to pale cobalt, since clear sky blue is not one of the eight colours and so was never being honoured. Watch the two white rays - on a pale sky they may wash out.",
+      note: "This is the brighter, glow-y one you asked for - light sky, cloud with weight in it, rays fanning out and widening as they fall. You never saw attempt 78; it was a total failure with the wrong subject and faces in it, so I have not put it up. Still wrong: all six rays came back white. The words name yellow, orange and red among them and none of those arrived.",
     },
     {
       n: 32,
