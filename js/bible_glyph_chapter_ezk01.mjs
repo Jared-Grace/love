@@ -333,7 +333,7 @@ export function bible_glyph_chapter_ezk01() {
         verse_number: 12,
         words: [
           "$man_beard",
-          "went",
+          "$walking",
           "straight",
           "ahead.",
           "Wherever",
