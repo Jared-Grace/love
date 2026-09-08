@@ -1,17 +1,25 @@
+import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_trim_right } from "./text_trim_right.mjs";
-import { text_trim } from "./text_trim.mjs";
-import { subtract } from "./subtract.mjs";
 import { text_size } from "./text_size.mjs";
+import { text_take } from "./text_take.mjs";
+import { text_slice_from } from "./text_slice_from.mjs";
+import { equal } from "./equal.mjs";
 export function text_indent_size(line) {
   arguments_assert(arguments, 1);
-  ("How far in from the left a line of writing starts, counted in characters.");
-  ("It measures from the right-hand end inwards rather than by walking the front of the line, because the two trims already in the repo answer it between them: what is left after taking the blank off both ends, against what is left after taking it off the end only. The difference is the front.");
-  ("A line holding nothing but blanks is entirely indent by that reckoning, which is the answer that keeps it from ever being negative.");
-  let ended = text_trim_right(line);
-  let both = text_trim(line);
-  let left = text_size(ended);
-  let right = text_size(both);
-  let front = subtract(left, right);
+  ("How far in from the left a line of writing starts, counted in spaces.");
+  ("It walks the front of the line rather than subtracting two trimmed sizes, because trimming takes tabs and newlines off as well and would then count them as indent - and a tab is one character standing for several columns, so counting it as one space would be a quiet lie either way. Spaces are what this repo indents with, so spaces are what is counted.");
+  ("A line holding nothing but spaces is entirely indent by that reckoning, which is the answer that keeps it from ever being negative.");
+  let front = 0;
+  let z = text_size(line);
+  while (less_than(front, z)) {
+    let s = text_slice_from(line, front);
+    let one = text_take(s, 1);
+    let space = equal(one, " ");
+    if (not(space)) {
+      break;
+    }
+    front = front + 1;
+  }
   return front;
 }
