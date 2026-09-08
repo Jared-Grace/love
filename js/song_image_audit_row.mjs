@@ -13,7 +13,7 @@ export function song_image_audit_row(parent, couplet) {
   "the band itself is not built here. Every page of the hymn sets a drawing beside a column of writing, and the one that draws that shape holds the rule, the gap and the picture's width so the pages cannot disagree about them.";
   let key = song_image_couplet_key(couplet.n);
   let gloss = song_image_couplet_gloss(couplet.n);
-  let columns = song_image_row_picture_columns(parent, key, gloss.kept);
+  let columns = song_image_row_picture_columns(parent, key, gloss.kept, gloss.kept);
   let symbol = song_image_text_quiet_line(columns.left);
   html_style_margin_top(symbol, "10px");
   html_style_line_height(symbol, "1.5");

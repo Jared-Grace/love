@@ -1,12 +1,9 @@
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_repairs_file_path } from "./gloss_repairs_file_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { each } from "./each.mjs";
+import { gloss_repairs_words_named } from "./gloss_repairs_words_named.mjs";
 import { binisaya_word_read_cache } from "./binisaya_word_read_cache.mjs";
+import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { property_set } from "./property_set.mjs";
 import { each_async } from "./each_async.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -19,21 +16,9 @@ export async function app_ceb_bible_gloss_explains_repair_quoted_only() {
   "The test is the reading's own, asked from the same function, so a sentence this replaces is exactly a sentence that sweep names and there is no third opinion between them.";
   "A word the dictionary was never asked about is passed over rather than replaced, which is the opposite of what the narrow repair does with one. There the missing root means the reading could not have checked the sentence and the author's correction should stand; here the missing root means there was never a quotation to be fooled by, so there is nothing to put right.";
   "The dictionary is read for every word before the walk begins, because the decision is asked once per entry inside a walk that cannot wait on a read.";
+  "The words to look up come from the handover file asked for by name rather than gathered here, which is the same list the other repair over the same file works from. Two repairs disagreeing about which words were handed in would be a fault neither of them could report, and there is now one answer to that.";
   let fn = app_ceb_bible_gloss_generate;
-  let path = gloss_repairs_file_path(fn);
-  let repairs = await file_read_json(path);
-  let chapter_codes = object_property_names(repairs);
-  let met = {};
-  function chapter_read(chapter_code) {
-    let wanted = property_get(repairs, chapter_code);
-    let words = object_property_names(wanted);
-    function word_note(word) {
-      property_set(met, word, true);
-    }
-    each(words, word_note);
-  }
-  each(chapter_codes, chapter_read);
-  let words = object_property_names(met);
+  let words = await gloss_repairs_words_named(fn);
   let roots = {};
   let builds = {};
   async function word_root_read(word) {
