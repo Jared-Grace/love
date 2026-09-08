@@ -253,6 +253,26 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 26",
     },
     {
+      chapter_code: "EXO27",
+      reference: "Exodus 27",
+    },
+    {
+      chapter_code: "EXO28",
+      reference: "Exodus 28",
+    },
+    {
+      chapter_code: "EXO29",
+      reference: "Exodus 29",
+    },
+    {
+      chapter_code: "EXO30",
+      reference: "Exodus 30",
+    },
+    {
+      chapter_code: "EXO31",
+      reference: "Exodus 31",
+    },
+    {
       chapter_code: "EXO32",
       reference: "Exodus 32",
     },
