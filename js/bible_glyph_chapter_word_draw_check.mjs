@@ -7,11 +7,11 @@ import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
-import { text_is } from "./text_is.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
+import { bible_glyph_verse_glyph_counts } from "./bible_glyph_verse_glyph_counts.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
+import { text_is } from "./text_is.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -56,17 +56,18 @@ export async function bible_glyph_chapter_word_draw_check(
   for (let verse of verses) {
     let number = property_get(verse, "verse_number");
     let words = property_get(verse, "words");
+    ("A DRAWN MARK IS NOT A DOLLAR WORD BY THE TIME IT GETS HERE. The reader that parses a chapter turns one into a list holding a list holding the mark name, with whatever punctuation followed it as a further item, so asking whether a word starts with a dollar is a question no word can ever answer yes to. That was written first and it counted every mark in the chapter as nothing, which is a check that cannot disagree rather than a check that passed. The counting is asked of the reading that already does it instead, which is also the only place that knows a group of two pictures is one mark.");
+    let counts = bible_glyph_verse_glyph_counts(verse);
+    let counted = property_get_or_null(counts, glyph);
+    let never = null_is(counted);
+    let drawn = counted;
+    if (never) {
+      drawn = 0;
+    }
     let standing = 0;
-    let drawn = 0;
     for (let token of words) {
       let spelled = text_is(token);
       if (not(spelled)) {
-        continue;
-      }
-      let mark = "$" + glyph;
-      let is_mark = text_starts_with(token, mark);
-      if (is_mark) {
-        drawn = add(drawn, 1);
         continue;
       }
       let letters = text_letters_only(token);
