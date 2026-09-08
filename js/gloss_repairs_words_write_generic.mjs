@@ -62,8 +62,8 @@ export async function gloss_repairs_words_write_generic(fn) {
       let explain = property_get(drafted, spelled);
       property_set(wanted, spelled, explain);
       let counted = property_get_or_null(sightings, spelled);
-      let missing = null_is(counted);
-      let before = missing ? 0 : counted;
+      let word_missing = null_is(counted);
+      let before = word_missing ? 0 : counted;
       let after = add(before, 1);
       property_set(sightings, spelled, after);
     }
