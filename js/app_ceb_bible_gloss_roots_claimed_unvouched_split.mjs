@@ -3,10 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_written } from "./bible_words_written.mjs";
-import { list_map } from "./list_map.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { list_unique_set } from "./list_unique_set.mjs";
+import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -38,9 +35,7 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   let known = await binisaya_words_known();
   let vouched = binisaya_words_known_roots_named(known);
   let bible_folder = ebible_folder_cebuano();
-  let written = await bible_words_written(bible_folder);
-  let lowered = list_map(written, text_lower_to);
-  let vocabulary = list_unique_set(lowered);
+  let vocabulary = await bible_words_written_lowered_set(bible_folder);
   let piles = {};
   let counts = {};
   function pile_add(name, row) {
