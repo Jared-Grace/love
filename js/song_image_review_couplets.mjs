@@ -16,11 +16,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 7,
-      note: "The cap saying no cross taller than a third of the window was what made it plain. The middle cross now runs from the crown of the hill right up to just below the head of the arch. The lead line may still cross it - that rule was already in force and failed here before.",
+      note: "Both your notes are answered. There is no white and no grey anywhere in the field, and the lead lines stop at each cross instead of running through it. Nothing in this couplet changed - the fault was in the shared style sheet and it is fixed there. Still wrong: the green hill fills two of the three field bands, so they read as one band.",
     },
     {
       n: 9,
-      note: "No wording change at all. The rule stopping lead lines at the symbol was already in force when the old one was drawn and the line crossed the spear anyway, so this is a fresh roll of the dice rather than a repair. If it crosses again the rule itself is what needs rewording.",
+      note: "Answering your question: no, the background should not be white. The rule forbidding it was already there and the picture broke it anyway, which is what led me to the real cause in the shared sheet. This couplet is unchanged. Two new ones are worth arrowing between - 11 has no white at all but five bands instead of three, and 12 has a white band at the foot.",
     },
     {
       n: 11,
