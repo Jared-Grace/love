@@ -32,8 +32,8 @@ export async function gloss_repairs_words_write_generic(fn) {
     function entry_drafted_is(entry) {
       let spelled = property_get(entry, word_key);
       let none = property_null_is(drafted, spelled);
-      let held = not(none);
-      return held;
+      let kept = not(none);
+      return kept;
     }
     let held = list_filter(entries, entry_drafted_is);
     return held;
