@@ -1,4 +1,3 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -9,9 +8,9 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_map } from "./list_map.mjs";
+import { object_values } from "./object_values.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 export async function gloss_affix_kinds_wrong_words_generic(fn, known) {
   "Every distinct word in one gloss store whose explanation names a piece the dictionary gives no piece of, each with the chapters it is wrong in, commonest first.";
   "The chapter view answers which chapter to sit down with. This answers how much writing there actually is, which is a different number: the same word is wrong wherever it was met, and the store's twelve hundred wrong claims are four hundred odd words.";
@@ -58,12 +57,7 @@ export async function gloss_affix_kinds_wrong_words_generic(fn, known) {
     each(found, finding_read);
   }
   each(offenders, chapter_read);
-  let words = object_property_names(by_word);
-  function word_gathered(word) {
-    let gathered = property_get(by_word, word);
-    return gathered;
-  }
-  let gathered_all = list_map(words, word_gathered);
+  let gathered_all = object_values(by_word);
   let r = list_sort_number_mapper_reverse(gathered_all, gloss_row_sightings);
   return r;
 }
