@@ -871,7 +871,7 @@ export function bible_glyph_chapter_lev26() {
           "$son",
           "and",
           "the",
-          "flesh",
+          "$meat",
           "of",
           "your",
           "daughters.",
