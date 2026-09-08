@@ -285,6 +285,18 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 34",
     },
     {
+      chapter_code: "EXO35",
+      reference: "Exodus 35",
+    },
+    {
+      chapter_code: "EXO36",
+      reference: "Exodus 36",
+    },
+    {
+      chapter_code: "EXO37",
+      reference: "Exodus 37",
+    },
+    {
       chapter_code: "EXO40",
       reference: "Exodus 40",
     },
