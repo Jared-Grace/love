@@ -38,8 +38,8 @@ export function gloss_word_claims_chain_collapsed(known, claims) {
   each(bared, claim_keep);
   function claim_chain(bare) {
     let walked = gloss_word_root_chain(known, bare);
-    let r = list_map(walked, gloss_word_folded);
-    return r;
+    let answer = list_map(walked, gloss_word_folded);
+    return answer;
   }
   let chains = list_map(distinct, claim_chain);
   let kept = [];
