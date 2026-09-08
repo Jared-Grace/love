@@ -17,7 +17,7 @@ export async function app_ceb_bible_gloss_words_dashed_unasked() {
   "★ THE READING THAT ASKS ABOUT PIECES NOBODY WROTE IS THE SAME READING THAT NEVER ASKS ABOUT THE WHOLE WORD, AND ONLY THE FIRST HALF OF THAT HAD BEEN COUNTED. The queue finds its own list through a reader that cuts at every dash, so panan-awon reaches it as panan and awon and never as itself. Both halves get asked, the whole word never does, and the store ends up holding two answers about runs of letters this translation does not contain and none at all about the word it does.";
   "This is why the fix is not only a matter of asking less. A word counted here is an explanation the store carries that nothing outside it has ever checked, and no amount of dropping bad answers reaches one of them.";
   "The ones the translation writes standing alone are counted apart, because for those the question has a right answer waiting and nobody has gone and asked it.";
-  "The translation's vocabulary is asked for in small letters and as a set, rather than built out of the written words here, because that is one named reading of the bible and this had a hand-made copy of it. The words asked of it all hold a dash, which is why a set may stand in for what was an ordinary object: a plain object answers to the names its own kind carries, and no such name has a dash in it.";
+  "The translation's vocabulary is asked for in small letters and as a set, rather than built out of the written words here, because that is one named reading of the bible and this had a hand-made copy of it standing in the middle of it.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
   let explained = await gloss_chapters_words_dash_kept_distinct(fn);

@@ -1,8 +1,7 @@
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_written } from "./bible_words_written.mjs";
-import { list_map_lower } from "./list_map_lower.mjs";
-import { list_unique_set } from "./list_unique_set.mjs";
+import { list_lowered_set } from "./list_lowered_set.mjs";
 export async function bible_words_written_lowered_set(bible_folder) {
   "$plain bible_folder";
   "Every different word one whole bible is written with, put into small letters, as a set to ask membership of.";
@@ -11,9 +10,11 @@ export async function bible_words_written_lowered_set(bible_folder) {
     fn_name("bible_words_names_apart"),
     ", and not this.");
   ("The folder is a parameter rather than settled here, the same way the reader underneath asks for one, because which marks count as punctuation is the bible's own language's business.");
+  ("The lowering and the making of the set are ",
+    fn_name("list_lowered_set"),
+    ", because two readings keep the words as they are written for their own count and can only ask for the set afterwards. So this is what a bible's own words add to that shape and nothing else: which reader to ask, and which folder to ask it about.");
   arguments_assert(arguments, 1);
   let written = await bible_words_written(bible_folder);
-  let lowered = list_map_lower(written);
-  let vocabulary = list_unique_set(lowered);
+  let vocabulary = list_lowered_set(written);
   return vocabulary;
 }
