@@ -10,7 +10,7 @@ import { html_text_set } from "./html_text_set.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { song_image_review_note_parts } from "./song_image_review_note_parts.mjs";
 import { app_shared_note_box } from "./app_shared_note_box.mjs";
-export function song_image_review_notes(parent, key) {
+export function song_image_review_notes(parent, key, attempt_get) {
   "The notes already standing against one couplet's drawing, and under them a box to add another with one press for the part it is about.";
   "IT IS THE SAME BOX THE ARCS BENCH FILES ITS NOTES IN, and that is worth more than the lines it saves. A reviewer who has filed a note against a turn of somebody's arc already knows that the box refuses to file empty, that the press is the part and never the typing, and that the line underneath says whether it landed. Two boxes that behaved almost the same would have to be learnt twice and would drift apart on the third change.";
   "THE NOTES ALREADY THERE ARE SHOWN ABOVE THE BOX, because the commonest thing a second reader does is file again what the first one already filed.";
