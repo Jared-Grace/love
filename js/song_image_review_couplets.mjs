@@ -16,7 +16,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 7,
-      note: "Your note is answered in the words. The tall cross now runs up into the head of the arch, well above the upper lead line, so it no longer stops at the seam where red meets blue. Still wrong: the hill came back bright lime rather than emerald, and it fills two bands so they read as one.",
+      note: "Your note is answered: the tall cross now runs up into the head of the arch, well above the upper lead line, so it no longer stops at the seam. The hill is deep emerald rather than lime. That second fix was an edit and not a redraw - the three crosses, the blue and every lead line are the same pixels as before it. That is the new thing on this page and it changes what a note can buy.",
     },
     {
       n: 9,
@@ -24,19 +24,19 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "Black is out of the words - the couplet now names crimson, violet and cobalt for the three bands. The drawing ignored all three and came back black anyway, so this is the service overriding the words rather than the words being wrong. I have kept the old attempt rather than this one. The ram is still white on dark, which is the ghost you named.",
+      note: "The black is gone. Every black pane is deep crimson now, and the ram, the thorns, the crown and the halo are untouched, because this was an edit of the picture you saw rather than a fresh drawing. Answering your note: the ghost was the white ram on black, and crimson is a colour this couplet already named. The white border is still there, since the shared sheet puts one on every window.",
     },
     {
       n: 14,
-      note: "Answering your question: it does now. All four veil stripes are there - cobalt, violet, ruby and white - against the emerald field I named so that the white one would stand clear of it. Still wrong: it is hung on a rod nobody asked for, and the stripes read as ribbons rather than one cloth torn in two.",
+      note: "Answering your question: it does now. All four veil stripes are there - cobalt, violet, ruby and white - against the emerald field I named so the white one would stand clear of it. Still wrong: it hangs from a rod nobody asked for. I tried to edit the rod out and the edit ignored me, so that one needs the words changing rather than a repair.",
     },
     {
       n: 15,
-      note: "Both notes are answered. The flame is now confined to the bare blade above the mouth of the sheath, and the words say the sheath is plain leather down its whole length. The white background is gone and the field is cobalt throughout. Still wrong: the sheath is drawn far fatter than a sheath, and the field is one flat blue rather than banded.",
+      note: "Both notes are answered. The flame is on the bare blade only, and the white background is gone. I tried twice to slim the fat sheath by editing: one attempt deleted it altogether and one left the blade showing through it, and the symbol says half sheathed, so I kept the faithful one. Arrow forward to see the slim one if you would rather have it.",
     },
     {
       n: 24,
-      note: "Answering your question: 260 was the closest yet to what you described, and the one thing wrong with it was that it was not a window - no arch, no field, no lead lines, and photographic stone in colours outside the eight. I have narrowed the shared exception so that a named grant can no longer take the window itself. 279 has the arch back. I left 260 as the kept one until you choose between them.",
+      note: "Answering your question: 260 was closest to what you described, and the one thing wrong with it was that it was not a window - no arch, no field, no lead lines, and photographic stone. This one has the window back, and the stone is flat glass now because I edited it rather than drawing it again, so the rays and the glow are the same ones you saw. The signature mark in the corner is gone too.",
     },
     {
       n: 25,
@@ -52,7 +52,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 33,
-      note: "Answering your note: the white you named is not asked for anywhere in this couplet - it is the same shared fault as 9, and 9 came back clean this round. So I redrew this one without changing a word, and got something worse. The old attempt is still the kept one. This is worth one more draw rather than a wording change.",
+      note: "Correcting myself: I had the wrong picture kept, and 10 is the one you were looking at, so it is kept now. Answering your note: the white you named is not asked for anywhere in this couplet. I tried three edits to take it out and all three ate part of the teardrop instead, so it is still there. This one needs the words changing rather than a repair.",
     },
   ];
   return couplets;
