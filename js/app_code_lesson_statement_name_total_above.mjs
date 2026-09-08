@@ -42,14 +42,21 @@ export function app_code_lesson_statement_name_total_above(root) {
   html_div_code_lines(box_remember, [held_first, held_last]);
   let box_named = app_code_container_light_blue(root);
   ("the plus stands in the writing as a code chip, because it is the symbol the lesson turns on rather than a symbol merely mentioned in passing.");
+  ("Both lines name the third cup in brackets, drawn as code because that is what it is everywhere else on this screen. A name and that name are the only words a learner would otherwise have, and neither says which of the three cups is meant, so the letter is put where the sentence needs it rather than left to be found by looking back up at the code.");
   html_div_cycle_code(box_named, [
     "We can solve operators like ",
     plus,
-    " and give the solved value a name:",
+    " and give the solved value a name (",
+    name_total,
+    "):",
   ]);
   let code_total = js_code_let_statement(name_total, names_sum);
   html_div_code(box_named, code_total);
-  html_div_cycle_code(box_named, ["Then we can write that name on its own:"]);
+  html_div_cycle_code(box_named, [
+    "Then we can log out the value of that name (",
+    name_total,
+    "):",
+  ]);
   let logged = js_code_console_log_statement(name_total);
   app_code_code_lines_writes_out(box_named, [logged], total);
   ("Then rather than now, because the two lines happen one after the other and that order is the whole of what a program is. Now says only that the second line is available; then says it comes after.");

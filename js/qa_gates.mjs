@@ -1,3 +1,4 @@
+import { lyric_video_picture_scene_alternative_gate_run } from "./lyric_video_picture_scene_alternative_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1069,6 +1070,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run,
     lyric_video_picture_scene_style_conflict_gate_run,
     ebible_chapter_code_padded_cases_gate_run,
+    lyric_video_picture_scene_alternative_gate_run,
   ];
   return gates;
 }
