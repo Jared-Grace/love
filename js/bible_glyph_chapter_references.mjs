@@ -393,12 +393,32 @@ export function bible_glyph_chapter_references() {
       reference: "Leviticus 24",
     },
     {
+      chapter_code: "LEV25",
+      reference: "Leviticus 25",
+    },
+    {
       chapter_code: "LEV26",
       reference: "Leviticus 26",
     },
     {
+      chapter_code: "LEV27",
+      reference: "Leviticus 27",
+    },
+    {
+      chapter_code: "NUM09",
+      reference: "Numbers 9",
+    },
+    {
+      chapter_code: "NUM10",
+      reference: "Numbers 10",
+    },
+    {
       chapter_code: "NUM11",
       reference: "Numbers 11",
+    },
+    {
+      chapter_code: "NUM12",
+      reference: "Numbers 12",
     },
     {
       chapter_code: "NUM14",
@@ -407,6 +427,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NUM16",
       reference: "Numbers 16",
+    },
+    {
+      chapter_code: "NUM17",
+      reference: "Numbers 17",
+    },
+    {
+      chapter_code: "NUM19",
+      reference: "Numbers 19",
     },
     {
       chapter_code: "NUM20",
@@ -419,6 +447,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "NUM22",
       reference: "Numbers 22",
+    },
+    {
+      chapter_code: "NUM27",
+      reference: "Numbers 27",
+    },
+    {
+      chapter_code: "NUM35",
+      reference: "Numbers 35",
     },
     {
       chapter_code: "DEU07",
