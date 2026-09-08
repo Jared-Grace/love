@@ -1,10 +1,7 @@
 import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_size } from "./list_size.mjs";
-import { list_take } from "./list_take.mjs";
+import { app_ceb_bible_gloss_words_rows_names_apart_sample } from "./app_ceb_bible_gloss_words_rows_names_apart_sample.mjs";
 export async function app_ceb_bible_gloss_roots_silent_words(sample_size) {
   "Every Cebuano word whose explanation says nothing about the root binisaya.com takes it back to, named once each with the chapters it was met in, commonest first - with the borrowed names the dictionary only appears to have analysed set aside.";
   "This is one of the two lists to write from, and measured on 2026-09-06 it is the smaller of them: 253 words stand here against 424 naming a root the dictionary does not give. It is dated rather than left standing as a fact, because the store is authored continually and both piles move; it was written down as the larger, and may well have been when that was written. The count of sightings says how many places are wrong and nothing about how much writing there is: one word met once a verse counts as hundreds, and the words are what somebody sits down to.";
@@ -17,21 +14,9 @@ export async function app_ceb_bible_gloss_roots_silent_words(sample_size) {
   let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
   let offenders = property_get(disagreeing, "offenders");
   let found = gloss_offenders_roots_silent_words(offenders);
-  let apart = await app_ceb_bible_gloss_words_rows_names_apart(found);
-  let words = property_get(apart, "words");
-  let names = property_get(apart, "names");
-  function row_word(row) {
-    let word = property_get(row, "word");
-    return word;
-  }
-  let taken_out = list_map(names, row_word);
-  let words_total = list_size(words);
-  let count = Number(sample_size);
-  let shown = list_take(words, count);
-  let r = {
-    words_total,
-    taken_out,
-    shown,
-  };
+  let r = await app_ceb_bible_gloss_words_rows_names_apart_sample(
+    found,
+    sample_size,
+  );
   return r;
 }
