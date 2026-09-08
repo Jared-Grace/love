@@ -1,4 +1,4 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
+import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -23,9 +23,6 @@ import { property_set } from "./property_set.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_take } from "./list_take.mjs";
 export async function app_ceb_bible_gloss_root_reversed_shape_counted(
   sample_size,
@@ -115,14 +112,7 @@ export async function app_ceb_bible_gloss_root_reversed_shape_counted(
     each(entries, entry_read);
   }
   await each_async(chapter_codes, chapter_read);
-  let names = object_property_names(by_root);
-  let listed = [];
-  function name_read(name) {
-    let row = property_get(by_root, name);
-    list_add(listed, row);
-  }
-  each(names, name_read);
-  list_sort_number_mapper_reverse(listed, gloss_row_sightings);
+  let listed = gloss_rows_ranked(by_root);
   let count = Number(sample_size);
   let r = {
     bare_total: bare_total,
