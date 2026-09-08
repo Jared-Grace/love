@@ -11,50 +11,32 @@ export function song_image_review_couplets() {
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
   "THE NOTE NOW CARRIES THE ATTEMPT THAT WAS ON SCREEN WHEN IT WAS FILED, AND THAT NUMBER IS PART OF THE NOTE. Couplet 7 was asked to have its white hills recoloured and the kept drawing had no white in it anywhere; the note had been filed while the arrows were back on an older attempt. Three edits were spent on that older picture before the number was read. Read the attempt on the note before reading the fault.";
   "AN EDIT CAN RECOLOUR A REGION AND CANNOT REMOVE A THING, and that is now four failures wide rather than a guess. A rod, a set of lead lines across a veil, the same lead lines across a set of rays, and a stripe of white glass all survived instructions that named them and said to take them out; every recolouring asked for in the same round landed. So a note asking for a colour is answerable inside the picture the reader is looking at, and a note asking for something to go needs the words changing and a fresh drawing.";
+  "WHITE GLASS IS THE ONE COLOUR AN EDIT WILL NOT REPAINT, because the model reads white as the window's border and protects it. Couplet 7's two white wedges beside the hill have now survived five separate instructions that named them by shape, by position, by their neighbours and by saying in words that they were not the border; each of those five moved a coloured band instead and left the white exactly where it was. So white is not a colour to ask an edit for - it needs the words changing and a fresh drawing, the same as a removal does.";
+  "A NEW CLAUSE CAN CROWD OUT AN OLD ONE, AND THE DRAWING IS WHERE THAT SHOWS. Couplet 11 was given a clause making its three field sheets single unbroken panes, and every drawing since has come back with the field right and the thicket, the crown of thorns and the halo all gone. Nothing in the file went red; the two clauses simply compete for the same attention. When a picture starts losing a thing it used to have, suspect the clause that was added last rather than the drawing.";
   let couplets = [
     {
       n: 6,
-      note: "Yes - it is black outside the border now, and that was an edit, so the arch, the cross and all three red bands are the same pixels you saw. Worth knowing: the shared sheet already asks for black out to all four edges, so this drawing had simply disobeyed it and no rule had to change. Still wrong: the cross came out a shade more olive than brown.",
+      note: "Blue, and here is the reason. The darkness already has a window of its own - couplet 10, 'forsaken by almighty GOD', whose reference is Matthew 27:45 and whose symbol is a black sun - so drawing it black here spends it twice and leaves that one saying nothing. Black is also what all thirty-six use for outside the glass, so a black field reads as a hole rather than as a sky. Nothing on this picture changed; say the word and I will darken 6 and 7.",
     },
     {
       n: 7,
-      note: "Your note was filed on attempt 6 and the kept one is 15, which has no white in it anywhere except the border - so there are no white hills left to recolour. I spent three edits on 6 before I read the number, and all three missed the white and moved the sky instead. Nothing here changed. Arrow back and forward and tell me which of the two you want.",
-    },
-    {
-      n: 9,
-      note: "Yes - the wide white pane behind the two drops is a light sky blue now. It was an edit, so the spearhead, both drops, the dark blue panes and the green are exactly as they were. The first try also lightened the blue band and turned the border into grey stone, so this is the second one. Light blue is outside the eight colours; I changed no rule, the edit just paints it.",
+      note: "The sky question is answered on couplet 6. The white will not shift - that is five edits now, and every one moved a coloured band instead, because the model reads white as the border and guards it. So I wrote into the words that each band carries its colour right down to the hill and the only white is the border, then drew fresh. Arrow forward: the white is gone, but so are the red and violet bands, so this is not yet 6 with a fix.",
     },
     {
       n: 11,
-      note: "Both asks are right and neither landed, so the picture is unchanged. Black outside the frame and straight lead lines are both already what the shared sheet asks for, so this drawing had simply disobeyed them. I rewrote the words to say the field is three whole panes and drew three more: two came back straight-lined and black outside but with no thorns, no crown and no halo, and the third kept those and went black all over. Say if more draws are worth it, or if this one stays.",
-    },
-    {
-      n: 14,
-      note: "The white background is a light sky blue now and the veil keeps all four stripes. It was an edit, so the veil, the rod and the arch head are the same pixels. The lines across the veil I could not remove - that is the fourth removal an edit has refused, so removal looks to be outside what it can do at all. Taking them out needs the words changed and a fresh drawing.",
+      note: "Yes, and it is in the words now: the branches under the belly lie flat from chest to hind legs and none of them stands upright between them. But both draws after that lost the thicket, the crown and the halo altogether, which is the fifth draw running to do that. The clause I added last round making the field three unbroken panes looks to be crowding the thicket out. Kept is still 97 - say whether to keep drawing or to give up one of the two.",
     },
     {
       n: 15,
-      note: "Done - the fire runs the whole length of the sword now, both sides, crossguard down to the point, the way 15 had it. It was an edit of the picture you were on, so the blade, the crossguard, the sheath and the blue field are unchanged. The sheath is still there because the symbol says half sheathed.",
+      note: "It is already what your words ask - the symbol says the flame stops at the sheath's mouth, so this drawing had simply disobeyed it. An edit turned the flames blue rather than moving them, so I drew fresh twice, and both put the fire above the sheath only, exactly as you asked. Both also lost the deep blue field and came back on plain white glass. Kept is still 19; arrow forward for the two.",
     },
     {
       n: 24,
-      note: "Yes - the photographic one has the white stone arch round it now, with black outside. Nothing inside it changed: the rolled stone, the glow, every ray colour and the sky are the same pixels. This is the only window in the set that is photographic, which the shared sheet forbids everywhere else. Say whether it stays the exception or the rest come to meet it.",
-    },
-    {
-      n: 25,
-      note: "Taking your answer literally, nothing needed doing and nothing changed. The crowns already differ by shape and by the colour of the jewels in them, which is what you said made them different. I have written the exception into the shared sheet: a crown may be gold, and where several stand together they are gold and told apart by jewels from the eight colours. That is the only gold allowed anywhere outside the Scripture.",
+      note: "Yes - sunrise now, pale gold at the horizon turning through rose to apricot in the arch. It cost two rays: the red and the violet washed into the sunrise and did not come back, so this has green, blue, orange, yellow and white where 281 had all seven. The first attempt washed the whole window out and this is the second, more careful one. Arrow back for the blue-sky version if the full rainbow matters more than the hour.",
     },
     {
       n: 26,
-      note: "Not done, and the kept picture is unchanged. An unbroken ray is already asked for twice, once in this couplet and once in the shared sheet, and it is drawn across anyway. I rewrote the clause to say where the two lead lines do run rather than refusing them, and drew twice more: one came back with the fan clean but every ray white, the other kept the colours and was bricked across worse than this. Glowing rays are the bigger question - the sheet forbids shading, gradient and highlight on all thirty-six.",
-    },
-    {
-      n: 32,
-      note: "Done the second way you offered: the cross and the rays behind it are white now and nothing red is left. It was an edit, so the two trees, the river, the field and the sky are the same pixels you saw. The cross is still something the drawing invented - your words name only the river, the two trees and the pale amethyst field.",
-    },
-    {
-      n: 33,
-      note: "Done - the panes behind the teardrop are deep crimson at the top and violet at the sides, and the teardrop itself is untouched. It was an edit, which is why the drop survived this time; three earlier tries had all eaten part of it. The green at the foot and the white border are unchanged.",
+      note: "Yes, and no rule had to change - the shared sheet already lets a gradient through when a picture's own words ask for one, so the gradient is now written into this couplet: palest under the cloud, deepening to full colour at the foot. Two draws since have not delivered it, so what you are on is still 85. Worth saying plainly: 85 has more lines across the beams than 80 did, not fewer, and your note on 80 asked for none. Tell me which of the two matters more and I will chase that one.",
     },
   ];
   return couplets;

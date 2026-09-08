@@ -8,8 +8,8 @@ import { greater_than } from "./greater_than.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_bless_vehicle_place } from "./app_g_bless_vehicle_place.mjs";
 import { app_g_bless_vehicle_slide } from "./app_g_bless_vehicle_slide.mjs";
-export function app_g_bless_vehicle_onward(vehicle, seconds) {
-  arguments_assert(arguments, 2);
+export function app_g_bless_vehicle_onward(vehicle, seconds, held) {
+  arguments_assert(arguments, 3);
   ("Move one car one square along its lane, and slide it there over the time given.");
   ("A car that has run out of road appears back at the other end instead. There is no pause");
   ("before it sets off again, and there used to be one - a random wait, so that the traffic");
@@ -28,20 +28,22 @@ export function app_g_bless_vehicle_onward(vehicle, seconds) {
   ("The slide is written after the car is put down and not before. Putting a square down");
   ("writes the whole of its transition, so the order is not a preference - reversed, the");
   ("sliding is simply thrown away and the cars go back to hopping.");
-  let east_is = property_equals(vehicle, "direction", "east");
-  let x = property_get(vehicle, "x");
-  let entry = property_get(vehicle, "entry");
-  let finish = property_get(vehicle, "exit");
-  let onward = subtract(x, 1);
-  let gone = less_than(onward, finish);
-  if (east_is) {
-    onward = add(x, 1);
-    gone = greater_than(onward, finish);
+  ("HELD means the car stays exactly where it is for this step, and it is decided by whoever");
+  ("is driving the traffic rather than here. A car gives way to somebody on the crossing and");
+  ("to the car in front of it, and both of those are facts about the street rather than about");
+  ("the car - a car cannot see the street from inside itself, and asking it to would put the");
+  ("whole world into the hands of every one of them.");
+  ("A held car is not re-drawn at all. Placing it again where it already is would be a slide");
+  ("of no distance, and a slide of no distance still costs the browser an animation to");
+  ("interrupt when the next step comes - a car standing still is best said by saying nothing.");
+  if (held) {
+    return;
   }
-  let landing = onward;
+  let r = bless_vehicle_landing(vehicle);
+  let landing = property_get(r, "landing");
+  let gone = property_get(r, "gone");
   let slide = seconds;
   if (gone) {
-    landing = entry;
     slide = 0;
   }
   property_set(vehicle, "x", landing);
