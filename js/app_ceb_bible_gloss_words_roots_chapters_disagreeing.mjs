@@ -124,8 +124,8 @@ export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
   let disagreeing = list_sort_number_mapper_reverse(rows, gloss_row_sightings);
   function row_across_only_is(row) {
     let within_chapter = property_get(row, "within_chapter");
-    let across_only = not(within_chapter);
-    return across_only;
+    let outside_chapter = not(within_chapter);
+    return outside_chapter;
   }
   function row_apart_is(row) {
     let apart = property_equals(row, "relation", "apart");
