@@ -149,9 +149,6 @@ export function app_g_bless_windows_draw(layer, blocks) {
     let windows_ground = property_get(building, "windows_ground");
     each(windows_ground, window_ground_draw);
   }
-  function block_draw(block) {
-    let buildings = property_get(block, "buildings");
-    each(buildings, building_draw);
-  }
-  each(blocks, block_draw);
+  let buildings = bless_blocks_buildings(blocks);
+  each(buildings, building_draw);
 }
