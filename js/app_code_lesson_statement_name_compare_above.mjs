@@ -53,13 +53,13 @@ export function app_code_lesson_statement_name_compare_above(root) {
   html_div_cycle_code(box_remember, [
     "Remember, we can ask whether one number is smaller (",
     smaller_than,
-    ") than another",
+    ") than another:",
   ]);
   let logged_numbers = js_code_console_log_statement(numbers_compared);
   let value = js_keyword_true();
   app_code_code_lines_writes_out(box_remember, [logged_numbers], value);
   let box_names = app_code_container_light_blue(root);
-  html_div_cycle_code(box_names, ["Suppose we give two numbers names"]);
+  html_div_cycle_code(box_names, ["Suppose we give two numbers names:"]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);

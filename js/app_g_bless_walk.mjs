@@ -1,3 +1,4 @@
+import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
 import { app_shared_game_crowd_part } from "./app_shared_game_crowd_part.mjs";
@@ -35,7 +36,13 @@ export async function app_g_bless_walk(
   ("see changes with each one - the cone travels with them, and a readout that only caught");
   ("up on arrival would spend the whole walk lying.");
   let player = property_get(world, "player");
-  let path = g_coordinates_path_shortest_crowd(world, player, target);
+  ("The way is worked out over the street AS SOMEBODY ON FOOT MAY USE IT, which is the same");
+  ("street with the shut part of the road taken out. So a tap on the far pavement comes back");
+  ("as a walk along to the crossing and over it, and a tap on the road itself comes back as");
+  ("no way at all - the player cannot walk out in front of a car, because no route was ever");
+  ("drawn there for them to walk.");
+  let on_foot = bless_world_on_foot(world);
+  let path = g_coordinates_path_shortest_crowd(on_foot, player, target);
   let nowhere = list_empty_is(path);
   if (nowhere) {
     return;

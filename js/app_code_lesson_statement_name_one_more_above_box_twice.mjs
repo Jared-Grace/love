@@ -18,7 +18,7 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
   let start = property_get(r, "start");
   let name = property_get(r, "name");
   html_div_cycle_code(box_one, [
-    "The other name can be a written number instead",
+    "The other name can be a written number instead:",
   ]);
   ("lines with nothing said between them are handed over together, because they are one program - the shape the quiz and the worked example of this same lesson have always drawn a program in.");
   let held = js_code_let_statement(name, start);
@@ -30,7 +30,7 @@ export function app_code_lesson_statement_name_one_more_above_box_twice(
     more,
     " comes to ",
     once,
-    ", so this is the same line",
+    ", so this is the same line:",
   ]);
   let given_once = js_code_assign_statement(name, once);
   let logged = js_code_console_log_statement(name);

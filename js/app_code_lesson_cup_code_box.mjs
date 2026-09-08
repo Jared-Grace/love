@@ -24,7 +24,7 @@ export function app_code_lesson_cup_code_box(root, name, word) {
   ]);
   html_div_code(box_code, held);
   html_div_cycle_code(box_code, [
-    "Then we can write out whatever is inside the cup like this",
+    "Then we can write out whatever is inside the cup like this:",
   ]);
   app_code_code_lines_writes_out(box_code, [logged], word);
   return box_code;
