@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -93,14 +94,10 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
     pile_add(pile, named);
   }
   each(roots, root_read);
-  function sightings_of(named) {
-    let n = property_get(named, "sightings");
-    return n;
-  }
   let pile_names = object_property_names(piles);
   function pile_sort(name) {
     let held = property_get(piles, name);
-    list_sort_number_mapper_reverse(held, sightings_of);
+    list_sort_number_mapper_reverse(held, gloss_row_sightings);
   }
   each(pile_names, pile_sort);
   let sizes = {};
