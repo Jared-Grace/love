@@ -20,7 +20,7 @@ export function app_code_lesson_cup_code_box(root, name, word) {
     name,
     " and put ",
     quoted,
-    " in it like this",
+    " in it like this:",
   ]);
   html_div_code(box_code, held);
   html_div_cycle_code(box_code, [

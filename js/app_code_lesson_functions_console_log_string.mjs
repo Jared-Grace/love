@@ -50,7 +50,7 @@ export function app_code_lesson_functions_console_log_string() {
     let quoted = app_code_string_code(word);
     let code = js_code_console_log_statement(quoted);
     let c = app_code_container_light_blue(root);
-    html_div_cycle_code(c, ["", f_name, " can be given a string too"]);
+    html_div_cycle_code(c, ["", f_name, " can be given a string too:"]);
     html_div_code(c, code);
     app_code_writes_out_line(c, word);
     let quote = js_string_quote();

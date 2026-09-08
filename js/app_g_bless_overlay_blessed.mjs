@@ -1,3 +1,4 @@
+import { app_g_bless_crossing_draw } from "./app_g_bless_crossing_draw.mjs";
 import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
 import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -27,6 +28,12 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("It lies UNDER the lit houses as well as under the halos. A door is part of the building");
   ("it is set into, so when that building lights up the door has to light up with it - and");
   ("it only can while the light is being laid over the door rather than the door over it.");
+  ("The crossings, painted on the road before anything else is laid over it. The rule that");
+  ("keeps a walker off the road is enforced where a way is worked out, and this is the only");
+  ("place it is SHOWN - so a player who is being routed the long way round to the middle of");
+  ("the block can see why.");
+  let crossings = html_div(div_map);
+  app_g_bless_crossing_draw(crossings, blocks);
   let doors = html_div(div_map);
   app_g_bless_doors_draw(doors, blocks);
   ("The upper-floor windows, on their own layer beside the doors and for all the same");
