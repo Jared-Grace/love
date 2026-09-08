@@ -2652,6 +2652,8 @@ export function permission_grant_names() {
   let spelled2519 = fn_name("folder_public_unlisted");
   let spelled2520 = fn_name("folder_public_root_noting");
   let spelled2521 = fn_name("binisaya_words_known_get_folded_gate_run");
+  let spelled2522 = fn_name("ebible_chapter_code_padded_cases_gate_run");
+  let spelled2523 = fn_name("ebible_chapter_code_padded_assert");
   let names = [
     spelled,
     spelled2,
@@ -5174,6 +5176,8 @@ export function permission_grant_names() {
     spelled2519,
     spelled2520,
     spelled2521,
+    spelled2522,
+    spelled2523,
   ];
   return names;
 }
