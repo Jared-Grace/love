@@ -35,16 +35,24 @@ export function song_image_review_couplets() {
       note: "More than halfway inserted, as you asked - this one is about two thirds in. The flames are along both edges of the bare blade. Still wrong: the lower half of the field came back white, which the sheet forbids. That is the same shared fault as 9 and it has not gone away entirely.",
     },
     {
+      n: 24,
+      note: "This came back a total failure and I am showing it rather than hiding it. There is no window at all - no arch, no field, no lead lines - and the stone is a photograph with colours outside the eight. This couplet names a gradient and a greater pane count, so the one exception in the sheet fires here and has taken the whole window with it. The exception needs narrowing before this can be drawn again.",
+    },
+    {
+      n: 25,
+      note: "Answering your question about flowers and plants: nothing in this couplet asks for any, so anything growing in the picture arrived uninvited. I have not changed the wording or redrawn it, because your question was a question. If you want them refused outright I will say so in the words, though a refusal tends to summon the thing it refuses.",
+    },
+    {
       n: 26,
       note: "This is the brighter, glow-y one you asked for - light sky, cloud with weight in it, rays fanning out and widening as they fall. You never saw attempt 78; it was a total failure with the wrong subject and faces in it, so I have not put it up. Still wrong: all six rays came back white. The words name yellow, orange and red among them and none of those arrived.",
     },
     {
       n: 32,
-      note: "Brighter is now legal, but the palette leaves almost nothing here. The field cannot take blue, brown or green because the symbol spends all three, pale red reads as pink which is refused by name, and white and grey are out. So pale violet, the amethyst of Revelation 21 verse 20, and the river lighter too, clear as crystal from Revelation 22 verse 1.",
+      note: "Your note is answered. The river winds instead of standing like a pillar, and it is wider at the front and narrows toward the top. The field is pale amethyst, the twelfth foundation stone of Revelation 21, since the symbol already spends blue, brown and green. This is the best of the batch and I think it is done.",
     },
     {
       n: 33,
-      note: "The tear was refusing brightness in its own words: all of one blue throughout. That is cut, so the two shade rule can reach it - lighter over most of the glass and deeper along the edges. That is the depth you suggested for the crown of thorns.",
+      note: "The thick red band across the bottom is gone, so nothing is pretending to be part of the tear. Still wrong in two ways: the tear is blue on a blue field, so it barely reads, and there is white in the field again. The field needs a colour the tear does not use. Tell me which and I will name it in the words rather than leave it to chance.",
     },
   ];
   return couplets;

@@ -5,9 +5,12 @@ import { app_code_quiz_token_kind } from "./app_code_quiz_token_kind.mjs";
 import { list_join_space } from "./list_join_space.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
+import { text_words } from "./text_words.mjs";
+import { list_size } from "./list_size.mjs";
+import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { not } from "./not.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 export function app_code_quiz_tokens_group_skeletons(tokens) {
@@ -16,6 +19,7 @@ export function app_code_quiz_tokens_group_skeletons(tokens) {
   ('A TREE CANNOT ANSWER THIS, WHICH IS WHY IT IS ASKED OF THE TILES. Parsing a line throws its brackets away - (true && true) || false and true && true || false give the identical tree, and so does true && ( true ) || false. So a reader that compares trees calls all three the same line, and a learner who put the brackets round one value instead of round the and is told they matched a shape they did not write. The same goes for quotes: "world" === "shall" and " world shall " === " " are both one string compared to another, and both come out false.');
   ("An entry says the kinds of the tiles inside a pair rather than the tiles themselves, so that handing the values round inside a bracket keeps the grouping while moving the bracket itself does not. That is the line the two roads of the pool already draw between them.");
   ("Brackets are followed with a stack so a pair inside another pair is its own entry; quotes are followed by turning over, because a quote is its own opener and closer and cannot nest. A closing tile with nothing open is ignored rather than refused - a row like that will not parse, and the reader that parses is asked before this one is.");
+  ("A PAIR OF QUOTES IS COUNTED IN WORDS AND NOT IN KINDS, because the reader that cuts a line into tiles puts a whole string back together as one tile. Two word tiles moved inside one pair of quotes come back as a single tile again, so counting tiles answers one either way; the words survive that round trip and the tiles do not. Nothing is lost by asking how many rather than which, because everything inside a pair of quotes is a word as far as the kinds are concerned.");
   let opening = "(";
   let closing = ")";
   let quote = '"';
@@ -28,6 +32,15 @@ export function app_code_quiz_tokens_group_skeletons(tokens) {
     let kinds = list_map(inside, app_code_quiz_token_kind);
     let written = list_join_space(kinds);
     let entry = text_combine_multiple([mark, " ", written]);
+    list_add(skeletons, entry);
+  }
+  function record_quoted(from, to) {
+    let inside = list_slice(tokens, from, to);
+    let written = list_join_space(inside);
+    let words = text_words(written);
+    let count = list_size(words);
+    let t = text_to(count);
+    let entry = text_combine_multiple([quote, " ", t]);
     list_add(skeletons, entry);
   }
   let place = 0;
@@ -49,7 +62,7 @@ export function app_code_quiz_tokens_group_skeletons(tokens) {
     let quoted = equal(token, quote);
     if (quoted) {
       if (quote_open) {
-        record(quote, quote_at, place);
+        record_quoted(quote_at, place);
         quote_open = false;
       } else {
         quote_open = true;
