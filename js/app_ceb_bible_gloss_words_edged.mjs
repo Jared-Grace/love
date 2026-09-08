@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -55,10 +56,6 @@ export async function app_ceb_bible_gloss_words_edged() {
     return r;
   }
   let labelled = list_map(rows, row_labelled);
-  function row_sightings(row) {
-    let sightings = property_get(row, "sightings");
-    return sightings;
-  }
   function broken_down_is(row) {
     let taken_apart = property_equals(row, "kind", "broken_down");
     return taken_apart;
@@ -75,11 +72,11 @@ export async function app_ceb_bible_gloss_words_edged() {
   let refused = list_filter(labelled, refused_is);
   let unknown = list_filter(labelled, unknown_is);
   let words_total = list_size(labelled);
-  let sightings_total = list_map_sum(labelled, row_sightings);
+  let sightings_total = list_map_sum(labelled, gloss_row_sightings);
   let broken_down_words = list_size(broken_down);
   let refused_words = list_size(refused);
   let unknown_words = list_size(unknown);
-  let broken_down_sightings = list_map_sum(broken_down, row_sightings);
+  let broken_down_sightings = list_map_sum(broken_down, gloss_row_sightings);
   let r = {
     words_total,
     sightings_total,
