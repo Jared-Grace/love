@@ -56,7 +56,7 @@ export function app_code_lesson_statement_name_two_above(root) {
   let held_last = js_code_let_statement(name_last, quoted_last);
   let logged = js_code_console_log_statement(name_last);
   let box_code = app_code_container_light_blue(root);
-  html_div_cycle_code(box_code, ["In JS we make both cups like this"]);
+  html_div_cycle_code(box_code, ["In JS we make both cups like this:"]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   html_div_code_lines(box_code, [held_first, held_last]);
   html_div_cycle_code(box_code, [

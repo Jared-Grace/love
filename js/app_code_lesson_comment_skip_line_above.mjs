@@ -24,7 +24,7 @@ export function app_code_lesson_comment_skip_line_above(root) {
   let last_noted = text_combine(prefix, last_line);
   let box_both = app_code_container_light_blue(root);
   html_div_cycle_code(box_both, [
-    "Remember, two lines that write out give two answers",
+    "Remember, two lines that write out give two answers:",
   ]);
   let first_total = property_get(lines, "first_total");
   let last_total = property_get(lines, "last_total");
@@ -35,7 +35,7 @@ export function app_code_lesson_comment_skip_line_above(root) {
   html_div_cycle_code(box_last_off, [
     "We can put two slashes (",
     slashes,
-    ") in front of the second line",
+    ") in front of the second line:",
   ]);
   let value = text_to(first_total);
   app_code_code_lines_writes_out(box_last_off, [first_line, last_noted], value);
@@ -45,7 +45,7 @@ export function app_code_lesson_comment_skip_line_above(root) {
   html_div_cycle_code(box_last_off, ["Its answer is gone"]);
   let box_first_off = app_code_container_light_blue(root);
   html_div_cycle_code(box_first_off, [
-    "If we put the slashes in front of the first line instead",
+    "If we put the slashes in front of the first line instead:",
   ]);
   let value2 = text_to(last_total);
   app_code_code_lines_writes_out(

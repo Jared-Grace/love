@@ -9,12 +9,8 @@ export function app_code_code_output_explain_box(root) {
   ("Said once and never again. From the next screen on a learner has been told, and every screen after that would be spending a box on a thing they know - which is the cost the app pays everywhere else by writing Remember once and trusting it.");
   ("Not the example is said outright rather than left to be worked out from the example coming later. The whole of the confusion is a reader guessing, so a line that only implies the answer leaves the guess where it was.");
   let box = app_code_container_light_blue(root);
-  html_div_cycle_code(box, [
-    "The box above shows code and what it writes out",
-  ]);
+  html_div_cycle_code(box, ["The box above shows code and what it writes out"]);
   html_div_cycle_code(box, ["It is part of the explanation, not the example"]);
-  html_div_cycle_code(box, [
-    "The example for this lesson comes at the end",
-  ]);
+  html_div_cycle_code(box, ["The example for this lesson comes at the end"]);
   return box;
 }

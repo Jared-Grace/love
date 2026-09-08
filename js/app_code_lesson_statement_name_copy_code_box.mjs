@@ -48,7 +48,7 @@ export function app_code_lesson_statement_name_copy_code_box(
     name_first,
     " (and this does not remove it from ",
     name_first,
-    ")",
+    "):",
   ]);
   html_div_code(box_code, copied);
   html_div_cycle_code(box_code, [

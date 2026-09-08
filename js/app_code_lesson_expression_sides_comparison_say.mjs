@@ -18,6 +18,10 @@ export function app_code_lesson_expression_sides_comparison_say(run, sides) {
     outer_symbol,
   ]);
   ("the question is asked out loud before it is answered, because a learner who has only ever had one right press at a time is already looking for which of the two it is - asked, they are looking for the answer to the line below rather than for a trap");
-  html_div_cycle_code(run, ["But which of the two comparisons do we solve first?"]);
-  html_div_cycle_code(run, ["A comparison solves to the same value every time"]);
+  html_div_cycle_code(run, [
+    "But which of the two comparisons do we solve first?",
+  ]);
+  html_div_cycle_code(run, [
+    "A comparison solves to the same value every time",
+  ]);
 }
