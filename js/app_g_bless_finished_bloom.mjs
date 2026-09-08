@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { app_shared_color_gold_glow } from "./app_shared_color_gold_glow.mjs";
