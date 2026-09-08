@@ -1,11 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
@@ -14,8 +9,7 @@ import { text_includes } from "./text_includes.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
+import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { list_take } from "./list_take.mjs";
 export async function app_ceb_bible_gloss_root_named_spaced_counted(
   sample_size,
@@ -25,67 +19,51 @@ export async function app_ceb_bible_gloss_root_named_spaced_counted(
   "A space is what is asked, and it is a floor rather than a test. Cebuano roots are single words, so an answer holding a space is certainly not one; but a one-word English meaning like God or this is not caught, so the count that comes back is the smallest the fault can be and not its size.";
   "The two sides are counted apart because they are not equally suspect and a single figure would hide that. The strict wording is quoted after the word root, which is a person saying outright what they mean; the three added wordings are inferred from the shape of the sentence, and the shape is what a meaning gloss also has.";
   "Nothing is written and nothing is asked of the site.";
+  "This is the one reading that asks both readers of the same sentence, and the shared walk supplies the wide one because that is the side being priced. The narrow reader is called here rather than there, and only where the wide one already answered something, which is the order the counts depend on: an entry the wide reader is silent about is not in either total.";
   "$plain sample_size";
   "the count says how many spaced answers to print. It names nothing that runs.";
   arguments_assert(arguments, 1);
   let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
-  let explain_key = gloss_entry_explain_key();
   let named_total = 0;
   let strict_total = 0;
   let strict_spaced = 0;
   let widened_total = 0;
   let widened_spaced = 0;
   let rows = [];
-  function entries_pass(entries) {
-    return entries;
-  }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        return;
-      }
-      let named = gloss_explain_roots_named(explain);
-      let count = list_size(named);
-      let empty = equal(count, 0);
-      if (empty) {
-        return;
-      }
-      named_total = add(named_total, 1);
-      let first = list_get(named, 0);
-      let spaced = text_includes(first, " ");
-      let claimed = gloss_explain_roots_claimed(explain);
-      let claimed_count = list_size(claimed);
-      let b = equal(claimed_count, 0);
-      let strict = not(b);
-      if (strict) {
-        strict_total = add(strict_total, 1);
-        if (spaced) {
-          strict_spaced = add(strict_spaced, 1);
-        }
-        return;
-      }
-      widened_total = add(widened_total, 1);
-      if (not(spaced)) {
-        return;
-      }
-      widened_spaced = add(widened_spaced, 1);
-      let row = {
-        named_root: first,
-        explain: explain,
-      };
-      list_add(rows, row);
+  function entry_read(found) {
+    let explain = property_get(found, "explain");
+    let named = property_get(found, "named");
+    let count = list_size(named);
+    let empty = equal(count, 0);
+    if (empty) {
+      return;
     }
-    each(entries, entry_read);
+    named_total = add(named_total, 1);
+    let first = list_get(named, 0);
+    let spaced = text_includes(first, " ");
+    let claimed = gloss_explain_roots_claimed(explain);
+    let claimed_count = list_size(claimed);
+    let b = equal(claimed_count, 0);
+    let strict = not(b);
+    if (strict) {
+      strict_total = add(strict_total, 1);
+      if (spaced) {
+        strict_spaced = add(strict_spaced, 1);
+      }
+      return;
+    }
+    widened_total = add(widened_total, 1);
+    if (not(spaced)) {
+      return;
+    }
+    widened_spaced = add(widened_spaced, 1);
+    let row = {
+      named_root: first,
+      explain: explain,
+    };
+    list_add(rows, row);
   }
-  await each_async(chapter_codes, chapter_read);
+  await gloss_chapters_roots_named_entries_generic(fn, entry_read);
   let count2 = Number(sample_size);
   let shown = list_take(rows, count2);
   let r = {
