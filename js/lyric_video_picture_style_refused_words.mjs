@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_picture_style } from "./lyric_video_picture_style.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -90,7 +91,8 @@ export function lyric_video_picture_style_refused_words() {
         let words = item.toLowerCase().match(letters);
         if (words) {
           for (let word of words) {
-            if (!placing.includes(word)) {
+            let b = placing.includes(word);
+            if (not(b)) {
               refused.push(word);
             }
           }
