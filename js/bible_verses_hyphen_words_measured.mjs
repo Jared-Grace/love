@@ -128,8 +128,8 @@ export function bible_verses_hyphen_words_measured(verses) {
   function row_wholly_alone_is(row) {
     let standalone = property_get(row, "parts_standalone");
     let total = property_get(row, "parts_total");
-    let wholly = equal(standalone, total);
-    return wholly;
+    let all_standalone = equal(standalone, total);
+    return all_standalone;
   }
   let wholly = list_filter(ranked, row_wholly_alone_is);
   let list = object_property_names(plain_counts);
