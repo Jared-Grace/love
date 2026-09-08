@@ -28,7 +28,7 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   let twice = add(once, 1);
   let box_sum = app_code_container_light_blue(root);
   html_div_cycle_code(box_sum, [
-    "Remember, we can give a name what it and another name add up to:",
+    "Remember, we can give a name to what it and another name add up to:",
   ]);
   ("the lines are handed over together rather than one at a time, because nothing is said between them: the box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name, number_first);
