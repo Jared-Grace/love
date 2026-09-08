@@ -127,8 +127,7 @@ export function app_g_bless_windows_draw(layer, blocks) {
     "neighbour. A pane centred on the left join starts a sixth of a square to the left of";
     "this one and a pane centred on the right join starts a sixth before the right edge -";
     "the same offset read from either end, which is what makes the pair even.";
-    let opening = html_div(layer);
-    g_img_square_style_position(opening, tile, "ground_tint");
+    let opening = g_img_square_div(layer, tile, "ground_tint");
     html_click_none(opening);
     pane_draw(opening, "-17%");
     pane_draw(opening, "83%");
@@ -136,8 +135,7 @@ export function app_g_bless_windows_draw(layer, blocks) {
   function window_ground_draw(tile) {
     "ONE pane, centred in its own square, which is what tells a ground-floor window from an upstairs one at a glance. The pair upstairs straddles the joins between the three squares a family owns, and it has to: a single window centred up there sits directly over the door below it and the column reads as one opening stacked on another. Down here there is no such clash - the door is in the middle square and a window is never in the middle square - so the window may simply sit where it is, in the middle of the wall it is let into, which is where a window in a wall is.";
     "It is the same pane as upstairs in every other way. Two spellings of a window would be two windows free to drift apart, and the two floors of one house wearing different glass is the one difference here that would say something untrue.";
-    let opening = html_div(layer);
-    g_img_square_style_position(opening, tile, "ground_tint");
+    let opening = g_img_square_div(layer, tile, "ground_tint");
     html_click_none(opening);
     pane_draw(opening, "33%");
   }

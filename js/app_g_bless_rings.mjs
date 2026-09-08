@@ -50,8 +50,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
     if (made) {
       return;
     }
-    let ring = html_div(rings);
-    g_img_square_style_position(ring, person, "ground_tint");
+    let ring = g_img_square_div(rings, person, "ground_tint");
     html_style_assign(ring, {
       border: border,
       "border-radius": "50%",

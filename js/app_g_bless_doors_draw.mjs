@@ -67,8 +67,7 @@ export function app_g_bless_doors_draw(layer, blocks) {
   let shadow = text_combine_multiple([frame, ", ", sunk]);
   let knob_size = text_combine_multiple(["calc((", size, ") * 0.085)"]);
   function doorway_draw(tile) {
-    let opening = html_div(layer);
-    g_img_square_style_position(opening, tile, "ground_tint");
+    let opening = g_img_square_div(layer, tile, "ground_tint");
     html_click_none(opening);
     let leaf = html_div(opening);
     html_style_assign(leaf, {
