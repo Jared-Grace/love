@@ -57,7 +57,7 @@ export function song_image_couplet_glosses() {
         "Inherited. The bare cross standing empty is the church's own emblem and no verse describes it; the empty beams are what make it say pardon rather than execution, which is the couplet's claim.",
     },
     7: {
-      kept: 14,
+      kept: 15,
       lyric_ref: "John 3:16, Romans 5:8, John 15:13",
       lyric_explain:
         "GOD commendeth HIS love toward us in that, while we were yet sinners, CHRIST died for us. Greater love hath no man than this, and the couplet says that this is the place where the love of GOD is on view.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 260,
+      kept: 279,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 8,
+      kept: 10,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",
