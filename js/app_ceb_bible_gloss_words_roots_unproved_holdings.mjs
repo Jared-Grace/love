@@ -71,7 +71,7 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
     if (fetchable) {
       owed = "gather";
     }
-    let r = {
+    let answer = {
       word,
       roots,
       owed,
@@ -80,7 +80,7 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
       sightings,
       chapters,
     };
-    return r;
+    return answer;
   }
   let owed = list_map(unproved, row_owed);
   function accent_is(row) {
