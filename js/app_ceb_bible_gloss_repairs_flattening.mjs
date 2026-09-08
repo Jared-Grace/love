@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_repairs_file_path } from "./gloss_repairs_file_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
+import { gloss_repairs_read } from "./gloss_repairs_read.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
@@ -22,10 +21,10 @@ export async function app_ceb_bible_gloss_repairs_flattening() {
   "★ THE SET AT RISK AND THE SET ACTUALLY REACHED ARE DIFFERENT SIZES AND ONLY THE SECOND IS A FAULT COUNT. Seventeen in every hundred words of a chapter are explained two ways somewhere in it, which is the size of what the repair rule walks over; but the rule only ever fires on a word a correction was handed in for. Counting the first and calling it damage would price a gap by how big it is rather than by how often it goes wrong, which is the reverse of what a measurement is for.";
   "A correction naming a word the chapter does not explain at all is counted apart. It changes nothing, and the repair already reports those by name for the same reason - a mistyped word otherwise reports the same success as a repaired one.";
   "An entry carrying no explanation is passed over rather than counted as a way of explaining the word.";
+  "The handover file is asked for by name rather than found and read here, so that this reading and the two repairs it is a warning about are all looking at the same file. A reading that priced the damage of a different file from the one about to be run would be worse than no reading at all.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let path = gloss_repairs_file_path(fn);
-  let repairs = await file_read_json(path);
+  let repairs = await gloss_repairs_read(fn);
   let chapter_codes = object_property_names(repairs);
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
