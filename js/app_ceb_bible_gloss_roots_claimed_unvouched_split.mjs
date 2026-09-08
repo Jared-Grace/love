@@ -1,4 +1,3 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
@@ -8,11 +7,8 @@ import { bible_words_written } from "./bible_words_written.mjs";
 import { list_map } from "./list_map.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
-import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { property_get } from "./property_get.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -22,8 +18,12 @@ import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { not } from "./not.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { set_includes } from "./set_includes.mjs";
-import { each } from "./each.mjs";
+import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
+import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
+import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   "Every root the Cebuano gloss store names that nothing in the dictionary is built from, split by what the dictionary did when it was asked about that root and by whether the translation ever writes it as a word on its own.";
@@ -41,12 +41,6 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   let written = await bible_words_written(bible_folder);
   let lowered = list_map(written, text_lower_to);
   let vocabulary = list_unique_set(lowered);
-  let gathered = await gloss_chapters_roots_claimed_gathered(
-    app_ceb_bible_gloss_generate,
-  );
-  let roots_distinct = property_get(gathered, "roots_distinct");
-  let by_root = property_get(gathered, "by_root");
-  let roots = object_property_names(by_root);
   let piles = {};
   let counts = {};
   function pile_add(name, row) {
@@ -62,8 +56,8 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
     let value = add(was, sightings);
     property_set(counts, name, value);
   }
-  function root_read(root) {
-    let row = property_get(by_root, root);
+  function root_read(row) {
+    let root = property_get(row, "stated_root");
     let folded = gloss_word_folded(root);
     let spoken_for = property_get_or_null(vouched, folded);
     let b = null_is(spoken_for);
@@ -93,7 +87,10 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
     };
     pile_add(pile, named);
   }
-  each(roots, root_read);
+  let gathered = await gloss_chapters_roots_claimed_rows_generic(
+    app_ceb_bible_gloss_generate,
+    root_read,
+  );
   let pile_names = object_property_names(piles);
   function pile_sort(name) {
     let held = property_get(piles, name);
@@ -108,6 +105,7 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   }
   each(pile_names, size_note);
   let answer = {};
+  let roots_distinct = property_get(gathered, "roots_distinct");
   property_set(answer, "roots_distinct", roots_distinct);
   property_set(answer, "roots", sizes);
   property_set(answer, "sightings", counts);
