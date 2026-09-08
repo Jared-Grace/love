@@ -1,9 +1,6 @@
-import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_names_apart } from "./bible_words_names_apart.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,14 +15,13 @@ import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { add } from "./add.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_explain_roots_named_word_given } from "./gloss_explain_roots_named_word_given.mjs";
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
-import { each_async } from "./each_async.mjs";
+import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
+import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
 export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   sample_size,
@@ -35,13 +31,12 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   "The earlier reading of this was taken before the reader refused one letter answers, so its figures counted the English I seventy six times as a root the vocabulary would rescue. That is why it is measured again here rather than subtracted on paper. A number taken before a change is not a number about the code that runs.";
   "The dropped and the rescued are gathered by root and meant to be printed whole rather than sampled, because the whole of the argument is which side of the line the small counts fall on. Reading the top of the list was what made the first estimate of this wrong by an order of magnitude.";
   "Nothing is written and no explanation is changed. This says what a swap would do.";
+  "The shared walk already asks the sentence-only reader of every explained entry, which is the first of the three readings here, so the walk hands that answer over and only the two readers that are given the word are called here.";
   "$plain sample_size";
   "the count says how many roots to print from each list. It names nothing that runs.";
   arguments_assert(arguments, 1);
   let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explain_key = gloss_entry_explain_key();
   let bible_folder = ebible_folder_cebuano();
   let apart = await bible_words_names_apart(bible_folder);
   let common = property_get(apart, "common");
@@ -63,9 +58,6 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   let rescued_sightings = 0;
   let by_root_dropped = {};
   let by_root_rescued = {};
-  function entries_pass(entries) {
-    return entries;
-  }
   function root_note(holder, root, word, explain) {
     let row = property_get_or_null(holder, root);
     let fresh = null_is(row);
@@ -85,63 +77,52 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
     let words = property_get(row, "words");
     list_add_if_not_includes(words, word);
   }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        return;
-      }
-      let s = property_get(entry, word_key);
-      let word = text_lower_to(s);
-      let sentence = gloss_explain_roots_named(explain);
-      let sentence_count = list_size(sentence);
-      let sentence_empty = equal(sentence_count, 0);
-      if (sentence_empty) {
-        return;
-      }
-      sentence_total = add(sentence_total, 1);
-      let spelling = gloss_explain_roots_named_word_given(
-        word,
-        explain,
-        vocabulary_none,
-      );
-      let spelling_count = list_size(spelling);
-      let spelling_empty = equal(spelling_count, 0);
-      if (not(spelling_empty)) {
-        spelling_total = add(spelling_total, 1);
-      }
-      let widened = gloss_explain_roots_named_word_given(
-        word,
-        explain,
-        vocabulary,
-      );
-      let widened_count = list_size(widened);
-      let widened_empty = equal(widened_count, 0);
-      if (not(widened_empty)) {
-        vocabulary_total = add(vocabulary_total, 1);
-      }
-      if (not(spelling_empty)) {
-        return;
-      }
-      let first = list_get(sentence, 0);
-      let root = text_lower_to(first);
-      dropped_sightings = add(dropped_sightings, 1);
-      root_note(by_root_dropped, root, word, explain);
-      if (widened_empty) {
-        return;
-      }
-      rescued_sightings = add(rescued_sightings, 1);
-      root_note(by_root_rescued, root, word, explain);
+  function entry_read(found) {
+    let entry = property_get(found, "entry");
+    let explain = property_get(found, "explain");
+    let sentence = property_get(found, "named");
+    let s = property_get(entry, word_key);
+    let word = text_lower_to(s);
+    let sentence_count = list_size(sentence);
+    let sentence_empty = equal(sentence_count, 0);
+    if (sentence_empty) {
+      return;
     }
-    each(entries, entry_read);
+    sentence_total = add(sentence_total, 1);
+    let spelling = gloss_explain_roots_named_word_given(
+      word,
+      explain,
+      vocabulary_none,
+    );
+    let spelling_count = list_size(spelling);
+    let spelling_empty = equal(spelling_count, 0);
+    if (not(spelling_empty)) {
+      spelling_total = add(spelling_total, 1);
+    }
+    let widened = gloss_explain_roots_named_word_given(
+      word,
+      explain,
+      vocabulary,
+    );
+    let widened_count = list_size(widened);
+    let widened_empty = equal(widened_count, 0);
+    if (not(widened_empty)) {
+      vocabulary_total = add(vocabulary_total, 1);
+    }
+    if (not(spelling_empty)) {
+      return;
+    }
+    let first = list_get(sentence, 0);
+    let root = text_lower_to(first);
+    dropped_sightings = add(dropped_sightings, 1);
+    root_note(by_root_dropped, root, word, explain);
+    if (widened_empty) {
+      return;
+    }
+    rescued_sightings = add(rescued_sightings, 1);
+    root_note(by_root_rescued, root, word, explain);
   }
-  await each_async(chapter_codes, chapter_read);
+  await gloss_chapters_roots_named_entries_generic(fn, entry_read);
   let dropped_listed = gloss_rows_ranked(by_root_dropped);
   let rescued_listed = gloss_rows_ranked(by_root_rescued);
   let count = Number(sample_size);
