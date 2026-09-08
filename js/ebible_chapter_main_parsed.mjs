@@ -1,3 +1,4 @@
+import { ebible_chapter_code_known_assert } from "./ebible_chapter_code_known_assert.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_version_download_path_combine } from "./ebible_version_download_path_combine.mjs";
 import { html_parse_read } from "./html_parse_read.mjs";
@@ -7,7 +8,7 @@ export async function ebible_chapter_main_parsed(bible_folder, chapter_code) {
   arguments_assert(arguments, 2);
   ("a downloaded chapter opened for reading - the parser it was read with, and the one element the chapter's own text lives inside");
   ("three readers of a chapter opened with these same five lines: the one that lists what classes the page uses, the one that reads the verse numbers, and the one that reads the text. The whole root is handed back to none of them, so it stops here.");
-  ebible_chapter_code_known_assert(chapter_code2);
+  ebible_chapter_code_known_assert(chapter_code);
   let chapter_path = ebible_version_download_path_combine(
     bible_folder,
     chapter_code,
