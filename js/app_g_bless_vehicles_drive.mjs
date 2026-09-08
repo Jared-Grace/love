@@ -37,8 +37,17 @@ export function app_g_bless_vehicles_drive(world, container_map) {
   let pace = bless_vehicle_pace_ms();
   let seconds = divide(pace, 1000);
   let name = app_g_bless_camera_still_class();
+  ("Whether a car may go is asked HERE, one car at a time, and asked afresh on every step.");
+  ("The answer depends on where the player is standing and on where the other cars are, and");
+  ("both of those move; an answer worked out once when the street was built would be a car");
+  ("giving way to somebody who walked off a minute ago.");
+  ("The cars are stepped IN ORDER along the list, and each one asks about the street as it");
+  ("stands at that moment - so a car whose way is blocked stops, and the car behind it sees a");
+  ("car standing there rather than one that has already moved on. Traffic that queues comes");
+  ("out of that by itself, without anybody arranging it.");
   function vehicle_onward(vehicle) {
-    app_g_bless_vehicle_onward(vehicle, seconds);
+    let held = bless_vehicle_hold_is(vehicle, world);
+    app_g_bless_vehicle_onward(vehicle, seconds, held);
   }
   function traffic_onward() {
     setTimeout(traffic_onward, pace);
