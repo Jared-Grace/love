@@ -1,3 +1,5 @@
+import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
+import { app_g_bless_crossing_wait } from "./app_g_bless_crossing_wait.mjs";
 import { app_g_bless_refused_flash } from "./app_g_bless_refused_flash.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
@@ -80,6 +82,16 @@ export async function app_g_bless_walk(
     let from = property_get(step, "from");
     let to = property_get(step, "to");
     let direction = g_direction(from, to);
+    ("Stepping off the KERB is the one step in a walk that is paused before it is taken. The");
+    ("walker stops at the edge, looks one way and then the other, and only goes when the road");
+    ("is clear - which is the whole of what a person is taught about crossing a road, played");
+    ("rather than said.");
+    ("Asked on every step because the walk is a list of steps and nothing else knows which of");
+    ("them touches a road. It answers no almost every time and costs two lookups when it does.");
+    let stepping_out = bless_kerb_step_is(world, from, to);
+    if (stepping_out) {
+      await app_g_bless_crossing_wait(world, to, player, player_img_c);
+    }
     app_shared_game_character_face(player, player_img_c, direction);
     ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
     ("player goes on, and that person steps back into the tile being left. The gospel game's");
