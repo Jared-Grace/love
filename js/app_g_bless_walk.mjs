@@ -43,8 +43,13 @@ export async function app_g_bless_walk(
   ("drawn there for them to walk.");
   let on_foot = bless_world_on_foot(world);
   let path = g_coordinates_path_shortest_crowd(on_foot, player, target);
+  ("NO WAY AT ALL is answered out loud rather than by standing still. It happens for one");
+  ("reason far more than any other - the square tapped was the road, which is shut to people");
+  ("on foot - and a player who taps the road and sees nothing happen has been told nothing.");
+  ("The square goes red for a moment and the answer is unmistakable: not there.");
   let nowhere = list_empty_is(path);
   if (nowhere) {
+    await app_g_bless_refused_flash(div_map, target);
     return;
   }
   ("The way opens before it is walked: anybody standing on it steps aside first, a crowd");
