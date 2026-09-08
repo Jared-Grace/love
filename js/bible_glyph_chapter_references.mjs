@@ -109,6 +109,14 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 8",
     },
     {
+      chapter_code: "EXO09",
+      reference: "Exodus 9",
+    },
+    {
+      chapter_code: "EXO10",
+      reference: "Exodus 10",
+    },
+    {
       chapter_code: "EXO14",
       reference: "Exodus 14",
     },
