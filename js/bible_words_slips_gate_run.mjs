@@ -30,14 +30,14 @@ export function bible_words_slips_gate_run() {
     let first = property_get(row, "first");
     let b = null_is(first);
     let first_seen_is = not(b);
-    let named = {
+    let row_made = {
       word,
       seen,
       nearest,
       nearest_seen,
       first_seen_is,
     };
-    return named;
+    return row_made;
   }
   let named = list_map(rows, row_named);
   let got = {
