@@ -46,7 +46,7 @@ export function bible_glyph_chapter_ezr03() {
           "Jozadak",
           "and",
           "his",
-          "fellow",
+          "$brother",
           "$priest",
           "began",
           "to",
