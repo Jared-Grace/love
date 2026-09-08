@@ -1,4 +1,3 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,6 +15,7 @@ import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
   "Every Cebuano word whose two claimed roots the dictionary could not settle, split by what would actually settle it: nothing at all because the two roots are one word wearing an accent, a run of the gather because the dictionary has never been asked, or a person who knows Cebuano because it has been asked and holds no breakdown.";
   "The arbitration beside this one answers unproved for forty of sixty words and says plainly that unproved is neither a fault nor a let-off. That is true and it is where the reading stopped, and a queue of forty words with one label on it hides that its rows are owed to three different people. This splits them.";
@@ -82,7 +82,7 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
     };
     return answer;
   }
-  let owed = list_map(unproved, row_owed);
+  let owed_rows = list_map(unproved, row_owed);
   function accent_is(row) {
     let accented = property_equals(row, "owed", "accent");
     return accented;
@@ -95,9 +95,9 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
     let waiting = property_equals(row, "owed", "person");
     return waiting;
   }
-  let accent = list_filter(owed, accent_is);
-  let gather = list_filter(owed, gather_is);
-  let person = list_filter(owed, person_is);
+  let accent = list_filter(owed_rows, accent_is);
+  let gather = list_filter(owed_rows, gather_is);
+  let person = list_filter(owed_rows, person_is);
   function row_unheard(row) {
     let unheard = property_get(row, "unheard");
     return unheard;
