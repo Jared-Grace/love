@@ -25,7 +25,6 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
   let start = 7;
   let more = js_code_binary_spaced_nb(name, plus, 1);
   let once = add(start, 1);
-  let twice = add(once, 1);
   let box_sum = app_code_container_light_blue(root);
   ("The reminder names its cups in brackets, drawn as code because that is what they are. It says a name twice over - once for the cup being filled and once for the same cup being read - and the words a name and it are the only thing telling a learner those two are the same cup. Written with the letter in place they can see it, instead of looking down at the code to work out which cup each phrase meant.");
   html_div_cycle_code(box_sum, [
@@ -50,7 +49,6 @@ export function app_code_lesson_statement_name_one_more_above_box_one(root) {
     start,
     more,
     once,
-    twice,
     box_one,
   };
   return r;
