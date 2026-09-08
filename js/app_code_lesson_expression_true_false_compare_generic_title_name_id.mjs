@@ -12,7 +12,7 @@ export function app_code_lesson_expression_true_false_compare_generic_title_name
   function paint(parent) {
     let t = js_keyword_true();
     let f = js_keyword_false();
-    html_cycle_code(parent, ["comparing ", t, " and ", f, " with ", symbol]);
+    html_cycle_code(parent, ["Comparing ", t, " and ", f, " with ", symbol]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

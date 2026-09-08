@@ -10,7 +10,7 @@ export function app_code_lesson_statement_name_count_title_name_id() {
   ("the home title: counting with a name, the tenth Statements lesson, followed by the line that does it said twice");
   ("The line is shown twice and that is the whole title, because the line on its own is the lesson before this one. One copy would name that lesson again; two copies are the only thing this screen adds, and a learner who has read the screen before recognises the difference at a glance.");
   ("Only what is painted changes; the id is built from the words below.");
-  let words = "counting with a name";
+  let words = "Counting with a name";
   let name = app_code_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let more = js_code_binary(name, plus, 1);

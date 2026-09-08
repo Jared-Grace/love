@@ -8,7 +8,7 @@ export function app_code_lesson_statement_name_again_title_name_id() {
   ("the home title: giving a name a new value, the fourth Statements lesson, followed by the line nobody has written yet");
   ("The line is the whole lesson, and it is a line a learner has not seen: the same line that first gives a value a name, with the let taken off. Shown here, the difference between the two is one word, seen before the lesson is opened.");
   ("Only what is painted changes; the id is built from the words below.");
-  let words = "giving a name a new value";
+  let words = "Giving a name a new value";
   let name = app_code_lesson_statement_name_value_name();
   let any = app_code_string_any_code();
   let code = js_code_assign_statement(name, any);

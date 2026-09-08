@@ -19,7 +19,7 @@ export function app_code_lesson_expression_swapping_equal() {
   function title_name_id() {
     "the home title: swapping === and !==, an Expressions lesson";
     function paint(parent) {
-      html_cycle_code(parent, ["swapping ", "===", " and ", "!=="]);
+      html_cycle_code(parent, ["Swapping ", "===", " and ", "!=="]);
     }
     let left = app_code_category_expressions();
     let built = app_code_lesson_name_id_category_then(left, paint);

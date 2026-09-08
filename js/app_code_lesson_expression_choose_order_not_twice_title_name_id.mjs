@@ -12,7 +12,7 @@ export function app_code_lesson_expression_choose_order_not_twice_title_name_id(
   let symbol = js_operator_bang_symbol();
   let both = text_combine(symbol, symbol);
   function paint(parent) {
-    html_cycle_code(parent, ["solving inside ", both]);
+    html_cycle_code(parent, ["Solving inside ", both]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
