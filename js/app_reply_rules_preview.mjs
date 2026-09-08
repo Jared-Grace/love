@@ -1,4 +1,3 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_font_sans_serif_set_html } from "./html_font_sans_serif_set_html.mjs";
@@ -16,6 +15,7 @@ import { html_text_content_set } from "./html_text_content_set.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { app_reply_rules_proposal_show } from "./app_reply_rules_proposal_show.mjs";
 import { list_map } from "./list_map.mjs";
+import { not } from "./not.mjs";
 import { app_reply_rules_corpus_show } from "./app_reply_rules_corpus_show.mjs";
 import { app_shared_buttons_mark_current } from "./app_shared_buttons_mark_current.mjs";
 import { text_from_number } from "./text_from_number.mjs";
@@ -40,6 +40,9 @@ export async function app_reply_rules_preview() {
   let shown = await app_shared_api_named(f, []);
   let proposals = property_get(shown, "proposals");
   let cases = property_get(shown, "cases");
+  ("The verdicts already left are fetched once beside the changes and handed down, rather than each file asking after its own. A file's own asking would be a round trip for a few lines of text, repeated as many times as there are files, and every one of them would land after the page had already drawn.");
+  let f_approved = fn_name("reply_approved_all");
+  let approvals = await app_shared_api_named(f_approved, []);
   let count_proposals = list_size(proposals);
   let count_cases = list_size(cases);
   let names_ok = ["ok"];
@@ -63,7 +66,7 @@ export async function app_reply_rules_preview() {
     html_clear(listed);
     if (wanted) {
       function each_shown(proposal) {
-        let drawn = app_reply_rules_proposal_show(listed, proposal);
+        let drawn = app_reply_rules_proposal_show(listed, proposal, approvals);
         return drawn;
       }
       list_map(proposals, each_shown);

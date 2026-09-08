@@ -10,11 +10,13 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
+import { not } from "./not.mjs";
+import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
-export function app_reply_rules_proposal_show(root, proposal) {
-  arguments_assert(arguments, 2);
+export function app_reply_rules_proposal_show(root, proposal, approvals) {
+  arguments_assert(arguments, 3);
   ("One change to the reply rules laid out to be said yes or no to: what it is for, the lines it would alter, the exchanges it was measured to produce, and the questions about it that nobody else can answer.");
   ("★ THE ORDER IS THE ORDER SOMEBODY DECIDES IN, and it is not the order a change is written in. What it does comes first, because a reader who does not want it can stop there. The lines come next, because a reader who does want it has to see that it is small. The exchanges come after the lines rather than before them, because the whole reason to look at the lines is to believe the exchanges. The questions come last, because they are what is left once the change itself has been agreed to.");
   ("The name of the function is said under the title rather than in it. It is what makes the change findable afterwards, and it is not what the change is about.");
@@ -48,9 +50,14 @@ export function app_reply_rules_proposal_show(root, proposal) {
     html_font_color_set(warned, color);
     app_reply_rules_diff_show(block, unplaced);
   }
+  ("★ THE ALTERED FILE IS OFFERED NO VERDICT WHILE ANY OF ITS LINES ARE MISSING. What is drawn above in that case is the change with a piece taken out of it, and a yes recorded against it would be a yes to something nobody was shown. It is the one place on this bench where the button is withheld rather than left to the reader, because the reader cannot see what is not there.");
+  let whole_shown = not(stale);
+  if (whole_shown) {
+    app_reply_rules_approve_button(block, f_name, lines, approvals);
+  }
   let whole = property_get(proposal, "whole");
   function each_file(file) {
-    let shown = app_reply_rules_whole_show(block, file);
+    let shown = app_reply_rules_whole_show(block, file, approvals);
     return shown;
   }
   list_map(whole, each_file);
