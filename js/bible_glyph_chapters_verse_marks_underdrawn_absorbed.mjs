@@ -36,13 +36,15 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
     let glosses = [];
     for (let row of rows) {
       let number = property_get(row, "verse_number");
-      if (not(equal(number, verse_number))) {
+      let b = equal(number, verse_number);
+      if (not(b)) {
         continue;
       }
       let words = property_get(row, "words");
       for (let word of words) {
         let word_glyph = property_get(word, "glyph");
-        if (not(equal(word_glyph, glyph))) {
+        let b2 = equal(word_glyph, glyph);
+        if (not(b2)) {
           continue;
         }
         let gloss = property_get(word, "gloss");
@@ -54,7 +56,8 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
     let plain = [];
     for (let verse of verses) {
       let number = property_get(verse, "verse_number");
-      if (not(equal(number, verse_number))) {
+      let b3 = equal(number, verse_number);
+      if (not(b3)) {
         continue;
       }
       let words = property_get(verse, "words");
@@ -64,7 +67,8 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
           continue;
         }
         let letters = text_letters_only(word);
-        list_add(plain, text_lower_to(letters));
+        let item = text_lower_to(letters);
+        list_add(plain, item);
       }
     }
     let hit = bible_glyph_gloss_plain_word_hit_or_null(glosses, plain);
@@ -83,8 +87,9 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
     }
     list_add(absorbed, record);
   }
-  return {
+  let r = {
     present,
     absorbed,
   };
+  return r;
 }
