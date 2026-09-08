@@ -1,17 +1,17 @@
-import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { add } from "./add.mjs";
+import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
+import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
+import { html_div_code } from "./html_div_code.mjs";
 export function app_code_lesson_statement_name_itself_sum_above(root) {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
@@ -31,7 +31,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let name_third = app_code_lesson_statement_name_third();
   let box_total = app_code_container_light_blue(root);
   html_div_cycle_code(box_total, [
-    "Remember, we can give a name what two names add up to",
+    "Remember, we can give a name to what two names add up to:",
   ]);
   ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
@@ -41,7 +41,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let lines_total = [held_first, held_last, code_total, logged_third];
   app_code_code_lines_writes_out(box_total, lines_total, total);
   let box_again = app_code_container_light_blue(root);
-  html_div_cycle_code(box_again, ["Remember, we can give a name a new value"]);
+  html_div_cycle_code(box_again, ["Remember, we can give a name a new value:"]);
   let held_again = js_code_let_statement(name_first, number_first);
   let given_again = js_code_assign_statement(name_first, number_new);
   let logged_again = js_code_console_log_statement(name_first);
@@ -50,27 +50,39 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   html_div_cycle_code(box_again, ["The value it held before is gone"]);
   let box_itself = app_code_container_light_blue(root);
   ("the earlier line is set above the changed one so the change can be seen rather than described, which is the shape the screen before this one ended on and so the shape a learner read a moment ago.");
-  ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so a word like instead, which would put the two lines forward as swaps for each other, is the one word that must not be used here.");
+  ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so a word like instead, which would put the two lines forward as swaps for each other, is the one word that must not be used of them. The word does appear further down and is right there, because the pair it stands between is a different pair: the sum and the value the sum comes to, which really are swaps for each other, and the line before that says so.");
   html_div_cycle_code(box_itself, ["In the lesson before we wrote:"]);
   html_div_code(box_itself, code_total);
-  html_div_cycle_code(box_itself, ["We do not need a new name for the sum"]);
+  ("The third name is named in the line that says we do not need it, and the name we already have is named in the line that offers it. Both lines are about which cup is being filled, and a learner reading them without the letters has to look back up at the code to find out which cups are meant - so the letters are put where the sentence needs them, drawn as code because that is what they are everywhere else on this screen.");
   html_div_cycle_code(box_itself, [
-    "We can give it to a name we already have:",
+    "We do not need a new name (",
+    name_third,
+    ") for the sum",
+  ]);
+  html_div_cycle_code(box_itself, [
+    "We can give it to a name we already have (",
+    name_first,
+    "):",
   ]);
   let given_sum = js_code_assign_statement(name_first, names_sum);
   html_div_code(box_itself, given_sum);
   ("the total is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so a total set in plain writing would be the one number here dressed as prose.");
-  ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is one line, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
+  ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is three short ones and no side-by-side pair, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
+  ("Three short lines rather than one long one, because they are three steps and a learner is being walked down them: the sum has a value, so the sum did not have to be written, so the value could have been written in its place. Said in one line the middle step is missing and the last line arrives as a claim; said in three, each line is the reason for the one under it.");
+  html_div_cycle_code(box_itself, ["", names_sum, " solves to ", total]);
+  html_div_cycle_code(box_itself, ["So we did not have to write ", names_sum]);
   html_div_cycle_code(box_itself, [
-    "",
-    names_sum,
-    " comes to ",
+    "Instead, we could have just written ",
     total,
-    ", so this is the same line",
+    ":",
   ]);
   let given_total = js_code_assign_statement(name_first, total);
   html_div_code(box_itself, given_total);
-  html_div_cycle_code(box_itself, ["Then we can write that name on its own"]);
+  html_div_cycle_code(box_itself, [
+    "Then we can log out the value of ",
+    name_first,
+    ":",
+  ]);
   let logged_total = js_code_console_log_statement(name_first);
   app_code_code_lines_writes_out(box_itself, [logged_total], total);
 }
