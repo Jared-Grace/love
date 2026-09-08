@@ -73,7 +73,7 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
       first_root,
       second_root,
     );
-    let r = {
+    let answer = {
       word,
       roots,
       verdict,
@@ -81,7 +81,7 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
       sightings,
       chapters,
     };
-    return r;
+    return answer;
   }
   let arbitrated = list_map(apart, row_arbitrated);
   function depth_is(row) {
