@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { bless_blocks_road_shut_keys } from "./bless_blocks_road_shut_keys.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -26,8 +25,10 @@ export function bless_world_on_foot(world) {
   ("the same job should be the same shape.");
   let coordinates = property_get(world, "coordinates");
   let npcs = property_get(world, "npcs");
-  let blocks = property_get(world, "blocks");
-  let shut = bless_blocks_road_shut_keys(blocks);
+  ("The shut road is READ off the world rather than worked out here. It is settled the");
+  ("moment the street is built and never moves after that, so working it out per walk is the");
+  ("same answer bought again, and two places working it out is two places to be wrong in.");
+  let shut = property_get(world, "shut");
   function walkable_is(tile) {
     let key = g_coordinates_key(tile);
     let open = property_exists_not(shut, key);

@@ -46,7 +46,7 @@ export function app_g_bless_person_step_tiles(world, person) {
   let open = list_filter(neighbors, open_is);
   ("The kerb is kept by a reading of its own, so what is left here is the one question this");
   ("is about: of the ways a person may take, which ones keep them within reach of home.");
-  let footway = app_g_bless_person_step_footway(world, open);
+  let footway = app_g_bless_person_step_footway(world, person, open);
   let home = property_get(person, "home");
   let roam = property_get(person, "roam");
   function home_is(neighbor) {

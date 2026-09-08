@@ -1,3 +1,4 @@
+import { bless_blocks_road_shut_keys } from "./bless_blocks_road_shut_keys.mjs";
 import { bless_blocks_road_keys } from "./bless_blocks_road_keys.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_g_bless_world(
@@ -44,7 +45,17 @@ export function app_g_bless_world(
   ("read a second way. A caller allowed to pass its own would be allowed to pass one that");
   ("disagreed with the blocks beside it, and the disagreement would show up as people walking");
   ("through traffic rather than as an error.");
+  ("The SHUT road is the road with the crossings taken back out of it - every square nobody");
+  ("on foot may stand on. It is the road lookup one step further on, and it is the one the");
+  ("walking rules actually want: a crossing is road, and it is the whole point of a road");
+  ("being crossable, so a rule asked against the plain road refuses the very squares it");
+  ("should be sending people to.");
+  ("Kept BESIDE the roads rather than instead of them, because the drivers want the other");
+  ("question. A car gives way to anybody standing on the road at all, on a crossing or not,");
+  ("so it asks the plain lookup; somebody on foot asks which squares are forbidden, and that");
+  ("is this one.");
   let roads = bless_blocks_road_keys(blocks);
+  let shut = bless_blocks_road_shut_keys(blocks);
   let world = {
     rows: rows,
     coordinates: coordinates,
@@ -53,6 +64,7 @@ export function app_g_bless_world(
     blocks: blocks,
     vehicles: vehicles,
     roads: roads,
+    shut: shut,
   };
   return world;
 }
