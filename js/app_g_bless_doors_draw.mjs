@@ -1,3 +1,4 @@
+import { html_click_none } from "./html_click_none.mjs";
 import { bless_blocks_buildings } from "./bless_blocks_buildings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
