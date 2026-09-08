@@ -20,7 +20,8 @@ export function app_code_lesson_expression_not_equal_same() {
   "the derivation the curriculum promised out loud and had not kept: a !== b is the same line as !(a === b). When !== was first taught it was deliberately framed as asking whether two sides are DIFFERENT - an everyday primitive standing beside SAME - and not as the negation of ===, because that reading needs a ! around a whole comparison and there was no lesson for one. There is now, immediately before this, so the promise can be paid.";
   "The quiz matches the two forms against each other rather than asking for a value, because what is being taught is that the two spellings mean one thing. A value question would be answered correctly by a learner who never noticed they were the same line.";
   "Both truths appear across a screen: sides that are the same and sides that are different. Neither changes what the answer is - the answer is the other spelling either way - but a learner who only ever saw one would have no reason to believe the match holds generally.";
-  "ALL FOUR ARE SHOWN AS EXAMPLES, not two of them. Two things vary here and they vary independently, so two examples can only ever show one of the two apart and must leave the other looking constant. It showed two for a while and the two it showed were the two written first, which were both the direction the lesson is named for - so the swap the lesson exists to teach was the one thing a learner never saw vary, and the other direction sat behind a button as though it were more of the same rather than the other half of the point. Four is the whole of what there is to see and it is small enough to see at once.";
+  "TWO EXAMPLES, AND THEY ARE THE DIAGONAL OF THE FOUR. Two things vary here and they vary independently, so the four questions are a two by two. Examples are drawn in the order this list is written, so the two on the screen are the first two, and taking the first two of a list written a row at a time means the second thing on it never varies at all - which is how both examples came to be the direction the lesson is named for, with the other direction sitting behind a button as though it were more of the same. Written diagonally, two examples move both things at once: different sides with the one mark, then same sides with the other. The remaining two are the rest of the square and are still there behind the button for a learner who wants them.";
+  "Two rather than all four because a learner reads examples to find the pattern, not to check it. Every case shown is a case they were not asked to think about, and the two that carry both variations between them say everything the four say - the other two only repeat it with the parts swapped round.";
   "BOTH DIRECTIONS OF THE SAME SWAP ARE ASKED, not only the one the lesson is named for. Put a ! round === and you have !==; put a ! round !== and you have ===. That is one fact about what the ! does to these two marks, and asking it only one way round leaves a learner who has learned the one direction as a spelling to memorise rather than as the ! turning the mark over.";
   "It is NOT a lesson of its own, because there is no second step to take. A learner who can say that !== is !(===) already holds everything needed to say that === is !(!==); a lesson for it would be the same card with the two marks exchanged, which reads as a new thing to learn and is not one.";
   let different_symbol = js_operator_bang_double_equal_symbol();
@@ -47,14 +48,14 @@ export function app_code_lesson_expression_not_equal_same() {
       },
       {
         want_same: true,
-        swapped: false,
-      },
-      {
-        want_same: false,
         swapped: true,
       },
       {
         want_same: true,
+        swapped: false,
+      },
+      {
+        want_same: false,
         swapped: true,
       },
     ];
@@ -117,7 +118,7 @@ export function app_code_lesson_expression_not_equal_same() {
   let lesson = app_code_lesson_base(
     name_id,
     app_code_lesson_expression_not_equal_same_intro,
-    4,
+    2,
     batch_get,
     html_text_set_code_dark,
     written_with,
