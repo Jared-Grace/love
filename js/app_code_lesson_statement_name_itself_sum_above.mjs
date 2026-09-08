@@ -30,8 +30,15 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let names_sum = app_code_lesson_statement_names_added();
   let name_third = app_code_lesson_statement_name_third();
   let box_total = app_code_container_light_blue(root);
+  ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
   html_div_cycle_code(box_total, [
-    "Remember, we can give a name to what two names add up to:",
+    "Remember, we can give a name (",
+    name_third,
+    ") to what two names (",
+    name_first,
+    ", ",
+    name_last,
+    ") add up to:",
   ]);
   ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
@@ -41,16 +48,28 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
   let lines_total = [held_first, held_last, code_total, logged_third];
   app_code_code_lines_writes_out(box_total, lines_total, total);
   let box_again = app_code_container_light_blue(root);
-  html_div_cycle_code(box_again, ["Remember, we can give a name a new value:"]);
+  html_div_cycle_code(box_again, [
+    "Remember, we can give a name (",
+    name_first,
+    ") a new value (",
+    number_new,
+    "):",
+  ]);
   let held_again = js_code_let_statement(name_first, number_first);
   let given_again = js_code_assign_statement(name_first, number_new);
   let logged_again = js_code_console_log_statement(name_first);
   let lines_again = [held_again, given_again, logged_again];
   app_code_code_lines_writes_out(box_again, lines_again, number_new);
-  html_div_cycle_code(box_again, ["The value it held before is gone"]);
+  html_div_cycle_code(box_again, [
+    "The value the name (",
+    name_first,
+    ") held before (",
+    number_first,
+    ") is gone",
+  ]);
   let box_itself = app_code_container_light_blue(root);
   ("the earlier line is set above the changed one so the change can be seen rather than described, which is the shape the screen before this one ended on and so the shape a learner read a moment ago.");
-  ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so a word like instead, which would put the two lines forward as swaps for each other, is the one word that must not be used of them. The word does appear further down and is right there, because the pair it stands between is a different pair: the sum and the value the sum comes to, which really are swaps for each other, and the line before that says so.");
+  ("Neither line is said to be the other. They do different things - one makes a name and one fills a name that is already there - and the whole misreading this screen guards against is a learner taking the sum to be tied to the name for good, so the two lines are never put forward as swaps for each other. The word instead appears twice below and neither time stands between those two lines. Once it stands between two names, a new one and one we already have, which really are alternatives and the sentence is choosing between them. Once it stands between the sum and the value the sum comes to, which really are swaps, and the line above it says so.");
   html_div_cycle_code(box_itself, ["In the lesson before we wrote:"]);
   html_div_code(box_itself, code_total);
   ("The third name is named in the line that says we do not need it, and the name we already have is named in the line that offers it. Both lines are about which cup is being filled, and a learner reading them without the letters has to look back up at the code to find out which cups are meant - so the letters are put where the sentence needs them, drawn as code because that is what they are everywhere else on this screen.");
@@ -60,7 +79,7 @@ export function app_code_lesson_statement_name_itself_sum_above(root) {
     ") for the sum",
   ]);
   html_div_cycle_code(box_itself, [
-    "We can give it to a name we already have (",
+    "Instead, we can give the sum to a name we already have (",
     name_first,
     "):",
   ]);
