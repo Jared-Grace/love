@@ -367,6 +367,7 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter178 = bible_glyph_chapter_rosetta_lines_gen31();
   let chapter179 = bible_glyph_chapter_rosetta_lines_gen26();
   let chapter180 = bible_glyph_chapter_rosetta_lines_gen20();
+  let chapter181 = bible_glyph_chapter_rosetta_lines_gen30();
   let chapters = [
     chapter,
     chapter2,
@@ -548,7 +549,7 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter178,
     chapter179,
     chapter180,
-    bible_glyph_chapter_rosetta_lines_gen30(),
+    chapter181,
   ];
   return chapters;
 }
