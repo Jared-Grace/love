@@ -53,12 +53,24 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 18",
     },
     {
+      chapter_code: "GEN20",
+      reference: "Genesis 20",
+    },
+    {
       chapter_code: "GEN21",
       reference: "Genesis 21",
     },
     {
       chapter_code: "GEN24",
       reference: "Genesis 24",
+    },
+    {
+      chapter_code: "GEN25",
+      reference: "Genesis 25",
+    },
+    {
+      chapter_code: "GEN26",
+      reference: "Genesis 26",
     },
     {
       chapter_code: "GEN27",
@@ -69,12 +81,28 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 29",
     },
     {
+      chapter_code: "GEN31",
+      reference: "Genesis 31",
+    },
+    {
       chapter_code: "GEN32",
       reference: "Genesis 32",
     },
     {
+      chapter_code: "GEN33",
+      reference: "Genesis 33",
+    },
+    {
+      chapter_code: "GEN35",
+      reference: "Genesis 35",
+    },
+    {
       chapter_code: "GEN39",
       reference: "Genesis 39",
+    },
+    {
+      chapter_code: "GEN40",
+      reference: "Genesis 40",
     },
     {
       chapter_code: "GEN41",
