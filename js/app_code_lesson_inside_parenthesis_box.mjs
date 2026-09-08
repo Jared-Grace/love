@@ -4,15 +4,18 @@ import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
+import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
+import { app_code_highlight_color_second } from "./app_code_highlight_color_second.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_span_text_highlight } from "./app_code_span_text_highlight.mjs";
-import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { app_code_span_text_highlight_color } from "./app_code_span_text_highlight_color.mjs";
+import { html_span_text_code_background } from "./html_span_text_code_background.mjs";
 import { html_style_code_dark } from "./html_style_code_dark.mjs";
 import { html_style_width_fit_content } from "./html_style_width_fit_content.mjs";
-import { app_code_highlight_color } from "./app_code_highlight_color.mjs";
-import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { app_code_code_dark_parts_fill } from "./app_code_code_dark_parts_fill.mjs";
+import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
+import { html_span } from "./html_span.mjs";
 export function app_code_lesson_inside_parenthesis_box(
   root,
   name_written,
@@ -30,26 +33,31 @@ export function app_code_lesson_inside_parenthesis_box(
   let paren_left = js_code_parenthesis_left();
   let paren_right = js_code_parenthesis_right();
   let semicolon = js_code_semicolon();
-  ("The two outer pieces are written exactly as they would be typed, with no room left inside the parenthesis. A space put there to hold the name apart is dark, because it is inside the chip, so it comes out as a bar of code colour between the parenthesis and the name - which reads as something written rather than as a gap. The chips have room of their own at their edges and that is all the parting the name needs.");
-  let opened = list_join_empty([log_name, paren_left]);
-  let closed = list_join_empty([paren_right, semicolon]);
+  ("Everything is written exactly as it would be typed, with no room left inside the parenthesis. A space put there to hold the name apart is dark, because it is inside the chip, so it comes out as a bar of code colour between the parenthesis and the name - which reads as something written rather than as a gap. The chips have room of their own at their edges and that is all the parting the name needs.");
   ('The pair of parenthesis in the sentence is two chips with a plain space between them, not one chip reading "( )". There is no such thing in code as an open and a close written together; they are two characters that stand at the two ends of something, and one chip round both says they are a single mark - which is the reading this whole box exists to undo.');
+  ("TWO POINTERS AT ONCE, so both colours are on the screen and neither is decoration. The first says which name comes out, and it is worn by the word inside and by the name in the middle of the call. The second says what inside means, and it is worn by the word parenthesis and by every open and close on the screen - the loose pair in the sentence, the two standing round the name in the call, and the two inside the chips at the bottom. A learner who has been told that inside means inside those marks can then find the marks by their colour wherever they next appear.");
+  let highlight = app_code_highlight_color();
+  let marking = app_code_highlight_color_second();
   let line_only = html_div(box_care);
   html_span_text(line_only, "Only the name ");
   app_code_span_text_highlight(line_only, "inside");
-  html_span_text(line_only, " the parenthesis ");
-  html_span_text_code_dark(line_only, paren_left);
+  html_span_text(line_only, " the ");
+  app_code_span_text_highlight_color(line_only, "parenthesis", marking);
   html_span_text(line_only, " ");
-  html_span_text_code_dark(line_only, paren_right);
+  html_span_text_code_background(line_only, paren_left, marking);
+  html_span_text(line_only, " ");
+  html_span_text_code_background(line_only, paren_right, marking);
   html_span_text(line_only, " is written out:");
   let line_call = html_div(box_care);
   html_style_code_dark(line_call);
   html_style_width_fit_content(line_call);
-  html_span_text(line_call, opened);
-  let name_span = html_span_text(line_call, name_written);
-  let highlight = app_code_highlight_color();
-  html_style_background_color_set(name_span, highlight);
-  html_span_text(line_call, closed);
+  app_code_code_dark_parts_fill(line_call, [
+    [log_name, null],
+    [paren_left, marking],
+    [name_written, highlight],
+    [paren_right, marking],
+    [semicolon, null],
+  ]);
   ("THE VALUE OF a is not written out, rather than a is not written out. The name a is written out - it is there on the line, a learner can see it - and what does not come out is what is in the cup it names. Said without those three words the sentence denies something the screen plainly shows, and a learner who notices has been given a reason to distrust the rest of the box.");
   let line_other = html_div(box_care);
   html_span_text(line_other, "The other cup ");
@@ -61,8 +69,18 @@ export function app_code_lesson_inside_parenthesis_box(
   html_span_text(line_other, " is not ");
   app_code_span_text_highlight(line_other, "inside");
   html_span_text(line_other, " ");
-  html_span_text_code_dark(line_other, opened);
+  let chip_opened = html_span(line_other);
+  html_style_code_dark(chip_opened);
+  app_code_code_dark_parts_fill(chip_opened, [
+    [log_name, null],
+    [paren_left, marking],
+  ]);
   html_span_text(line_other, " and ");
-  html_span_text_code_dark(line_other, closed);
+  let chip_closed = html_span(line_other);
+  html_style_code_dark(chip_closed);
+  app_code_code_dark_parts_fill(chip_closed, [
+    [paren_right, marking],
+    [semicolon, null],
+  ]);
   return box_care;
 }
