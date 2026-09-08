@@ -6,8 +6,7 @@ import { list_empty_is } from "./list_empty_is.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last_property } from "./list_last_property.mjs";
 import { html_hr } from "./html_hr.mjs";
-import { property_list_first } from "./property_list_first.mjs";
-import { list_join_space } from "./list_join_space.mjs";
+import { gloss_passage_text_first } from "./gloss_passage_text_first.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { each } from "./each.mjs";
@@ -43,8 +42,7 @@ export async function app_shared_gloss_bible_home_generic(
   let texts = null;
   if (text_use) {
     ("A passage's wording in one bible arrives as a verse apiece, and the sentence shown to the reader is those verses joined by a space - the same joining the word rows underneath were cut by. Handing the list itself to a line of text instead let the language write the join, and the language writes a comma with no space after it, so a passage covering two verses showed the reader a comma glued to the last mark of the first one. A passage covering a single verse has a list of one and looks right, which is why it stood for a hundred chapters.");
-    let first = property_list_first(passage, "texts");
-    let joined = list_join_space(first);
+    let joined = gloss_passage_text_first(passage);
     texts = [joined];
   } else {
     texts = property_get(passage, "originals");
