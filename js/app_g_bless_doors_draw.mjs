@@ -79,7 +79,6 @@ export function app_g_bless_doors_draw(layer, blocks) {
       background: "linear-gradient(180deg, #573118 0%, #331808 100%)",
       "border-radius": "46% 46% 0 0 / 22% 22% 0 0",
       "box-shadow": shadow,
-      "pointer-events": "none",
     });
     let knob = html_div(leaf);
     html_style_assign(knob, {
@@ -90,7 +89,6 @@ export function app_g_bless_doors_draw(layer, blocks) {
       height: knob_size,
       "border-radius": "50%",
       background: "rgba(255, 216, 133, 0.95)",
-      "pointer-events": "none",
     });
   }
   function building_draw(building) {
