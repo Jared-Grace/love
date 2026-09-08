@@ -1,26 +1,23 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { add } from "./add.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_get } from "./list_get.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
+import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
+import { subtract } from "./subtract.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { not } from "./not.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { text_size } from "./text_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
@@ -36,69 +33,54 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
   "Two counts come back because the wide one cannot be read on its own. Of 258651 entries, 11423 distinct words are explained and 2378 of them are given a root somewhere and not given one elsewhere, which is 79229 entries gone without. That wide count fell by 2296 when the root reader stopped reading quoted English as a root, and the narrow count below did not move by one entry, so everything it lost belonged to a word the store never really roots. Reading the top of that finds it is mostly not a gap at all: apan, kay, usa, mao and anak are words with no root to give, and the handful of entries that appear to name one are naming the word itself, or a piece of it two letters long. Those are the root reader misfiring, not the store owing anything.";
   "So the narrow count asks the store what it usually does with each word instead. A word is kept when the root it was given is neither the word over again nor a scrap under four letters, and when the entries naming a root outnumber the entries that do not - the store own practice deciding, rather than a line drawn by whoever is reading. That leaves 1643 words and 7755 entries, and the top of that list has nothing in it but plainly built words: babaye, nag-ingon, mahitungod, miabot, mitubag, gibuhat, nakita, kalibotan.";
   "Whether filling one in is mechanical is a separate question and it is not settled. Reading the sentences for six of these words found that five of six that looked bare were the same claim in a wording the reader could not see, and only one was genuinely rootless. The rooted and the bare sentences for one word were read side by side, and where they differ it is not a clause that could be added but whole different prose - one chapter spends its sentence on the word and another spends it on what the verse is doing. So this names the entries and does not say they are a codemod.";
+  "The entries that carry no explanation at all are worked out rather than counted, because the shared walk hands over only the explained ones. Every entry seen less every entry reached is exactly the entries it passed over, and the store has none of them today.";
   "Nothing is asked of the site and nothing is written.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explain_key = gloss_entry_explain_key();
   let by_word = {};
-  let entries_seen = 0;
-  let unexplained = 0;
-  function entries_pass(entries) {
-    return entries;
-  }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      entries_seen = add(entries_seen, 1);
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        unexplained = add(unexplained, 1);
-        return;
-      }
-      let word = property_get(entry, word_key);
-      let lowered = text_lower_to(word);
-      let held = property_get_or_null(by_word, lowered);
-      let fresh = null_is(held);
-      if (fresh) {
-        let made = {
-          word: lowered,
-          roots: [],
-          rooted: 0,
-          bare: 0,
-          chapters: [],
-        };
-        property_set(by_word, lowered, made);
-        held = made;
-      }
-      let claimed = gloss_explain_roots_named(explain);
-      let count = list_size(claimed);
-      let empty = equal(count, 0);
-      if (empty) {
-        let bare = property_get(held, "bare");
-        let value = add(bare, 1);
-        property_set(held, "bare", value);
-        let chapters = property_get(held, "chapters");
-        list_add_if_not_includes(chapters, chapter_code);
-        return;
-      }
-      let rooted = property_get(held, "rooted");
-      let value2 = add(rooted, 1);
-      property_set(held, "rooted", value2);
-      let first = list_get(claimed, 0);
-      let root = text_lower_to(first);
-      let roots = property_get(held, "roots");
-      list_add_if_not_includes(roots, root);
+  let explained = 0;
+  function entry_read(found) {
+    explained = add(explained, 1);
+    let chapter_code = property_get(found, "chapter_code");
+    let entry = property_get(found, "entry");
+    let claimed = property_get(found, "named");
+    let word = property_get(entry, word_key);
+    let lowered = text_lower_to(word);
+    let held = property_get_or_null(by_word, lowered);
+    let fresh = null_is(held);
+    if (fresh) {
+      let made = {
+        word: lowered,
+        roots: [],
+        rooted: 0,
+        bare: 0,
+        chapters: [],
+      };
+      property_set(by_word, lowered, made);
+      held = made;
     }
-    each(entries, entry_read);
+    let count = list_size(claimed);
+    let empty = equal(count, 0);
+    if (empty) {
+      let bare = property_get(held, "bare");
+      let value = add(bare, 1);
+      property_set(held, "bare", value);
+      let chapters = property_get(held, "chapters");
+      list_add_if_not_includes(chapters, chapter_code);
+      return;
+    }
+    let rooted = property_get(held, "rooted");
+    let value2 = add(rooted, 1);
+    property_set(held, "rooted", value2);
+    let first = list_get(claimed, 0);
+    let root = text_lower_to(first);
+    let roots = property_get(held, "roots");
+    list_add_if_not_includes(roots, root);
   }
-  await each_async(chapter_codes, chapter_read);
+  let walked = await gloss_chapters_roots_named_entries_generic(fn, entry_read);
+  let entries_seen = property_get(walked, "entries_seen");
+  let unexplained = subtract(entries_seen, explained);
   let words = object_property_names(by_word);
   let listed = [];
   let bare_total = 0;
