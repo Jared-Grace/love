@@ -1,10 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_written } from "./bible_words_written.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { list_unique_set } from "./list_unique_set.mjs";
+import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -12,10 +8,12 @@ import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
+import { each } from "./each.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { null_is } from "./null_is.mjs";
+import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -32,14 +30,7 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
   "The bible's words and the dictionary are read before the store is walked rather than after, because the walk now carries the pricing with it and the pricing cannot ask a vocabulary that has not arrived. Neither read writes anything, so which of them goes first is a matter of what the next line needs.";
   arguments_assert(arguments, 0);
   let bible_folder = ebible_folder_cebuano();
-  let written = await bible_words_written(bible_folder);
-  let lowered = [];
-  function written_lower(word) {
-    let lower = text_lower_to(word);
-    list_add(lowered, lower);
-  }
-  each(written, written_lower);
-  let vocabulary = list_unique_set(lowered);
+  let vocabulary = await bible_words_written_lowered_set(bible_folder);
   let known = await binisaya_words_known();
   let bracketed_span = new RegExp("\\([^)]*\\)", "g");
   let listed = [];
