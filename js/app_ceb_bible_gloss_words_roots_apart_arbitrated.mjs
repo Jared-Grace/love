@@ -85,8 +85,8 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
   }
   let arbitrated = list_map(apart, row_arbitrated);
   function depth_is(row) {
-    let depth = property_equals(row, "verdict", "depth");
-    return depth;
+    let verdict_depth = property_equals(row, "verdict", "depth");
+    return verdict_depth;
   }
   function shared_is(row) {
     let shared = property_equals(row, "verdict", "shared");
