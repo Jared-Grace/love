@@ -2629,6 +2629,8 @@
       "Bash(node scripts/ai.mjs folder_public_unlisted:*)",
       "Bash(node scripts/ai.mjs folder_public_root_noting:*)",
       "Bash(node scripts/ai.mjs binisaya_words_known_get_folded_gate_run:*)",
+      "Bash(node scripts/ai.mjs ebible_chapter_code_padded_cases_gate_run:*)",
+      "Bash(node scripts/ai.mjs ebible_chapter_code_padded_assert:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5150,6 +5152,8 @@
       "Bash(node scripts/ai.mjs ai_git_command_args folder_public_unlisted:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args folder_public_root_noting:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args binisaya_words_known_get_folded_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args ebible_chapter_code_padded_cases_gate_run:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args ebible_chapter_code_padded_assert:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7670,6 +7674,8 @@
       "Bash(node scripts/aig.mjs folder_public_unlisted:*)",
       "Bash(node scripts/aig.mjs folder_public_root_noting:*)",
       "Bash(node scripts/aig.mjs binisaya_words_known_get_folded_gate_run:*)",
+      "Bash(node scripts/aig.mjs ebible_chapter_code_padded_cases_gate_run:*)",
+      "Bash(node scripts/aig.mjs ebible_chapter_code_padded_assert:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10190,7 +10196,9 @@
       "Bash(node scripts/aig.mjs ai_git_command_args app_ceb_bible_gloss_explains_repair_silent:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args folder_public_unlisted:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args folder_public_root_noting:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args binisaya_words_known_get_folded_gate_run:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args binisaya_words_known_get_folded_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_chapter_code_padded_cases_gate_run:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_chapter_code_padded_assert:*)"
     ],
     "defaultMode": "acceptEdits"
   },
