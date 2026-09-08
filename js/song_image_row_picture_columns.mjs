@@ -21,13 +21,15 @@ export function song_image_row_picture_columns(parent, key, kept) {
   html_style_padding_top(row, "22px");
   let left = html_div(row);
   html_style_set(left, "width", "260px");
-  song_image_audit_picture(left, key, kept);
+  let shown_now = song_image_audit_picture(left, key, kept);
+  let attempt_get = property_get(shown_now, "attempt_get");
   let right = html_div(row);
   html_style_flex(right, "1 1 340px");
   let columns = {
     row,
     left,
     right,
+    attempt_get,
   };
   return columns;
 }

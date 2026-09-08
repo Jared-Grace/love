@@ -25,7 +25,7 @@ export function song_image_review_row(parent, asked) {
   html_style_margin_top(said, "10px");
   html_style_line_height(said, "1.5");
   html_text_set(said, asked.note);
-  song_image_review_notes(columns.right, drawn);
+  song_image_review_notes(columns.right, drawn, columns.attempt_get);
   let r = columns.row;
   return r;
 }
