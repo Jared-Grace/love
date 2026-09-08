@@ -97,6 +97,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 4",
     },
     {
+      chapter_code: "EXO05",
+      reference: "Exodus 5",
+    },
+    {
       chapter_code: "EXO14",
       reference: "Exodus 14",
     },
@@ -259,6 +263,10 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "1SA02",
       reference: "1 Samuel 2",
+    },
+    {
+      chapter_code: "1SA07",
+      reference: "1 Samuel 7",
     },
     {
       chapter_code: "1SA08",
