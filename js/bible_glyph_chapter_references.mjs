@@ -101,6 +101,14 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 47",
     },
     {
+      chapter_code: "GEN48",
+      reference: "Genesis 48",
+    },
+    {
+      chapter_code: "GEN49",
+      reference: "Genesis 49",
+    },
+    {
       chapter_code: "GEN50",
       reference: "Genesis 50",
     },
