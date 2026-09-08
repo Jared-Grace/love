@@ -12,47 +12,47 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 6,
-      note: "Answering your note: the cross and the field are different colours now. The field is emerald green and cobalt, which is what this couplet asks for by name. The last one was pale tan, the same colour as the cross, because four exceptions in the shared style sheet had started reading as general permission. Still wrong: the wood grain on the cross is more shades than the rule allows.",
+      note: "Your wording is in the couplet now: the cross is a lighter brown and the field behind it is crimson and ruby. Nothing had to change in the shared sheet - this couplet asks for the lighter shade by name, which is the one way a picture is allowed to step outside the rules. Still wrong: the field came back as three red bands rather than two, so the crossbar sits on a seam.",
     },
     {
       n: 7,
-      note: "Both your notes are answered. There is no white and no grey anywhere in the field, and the lead lines stop at each cross instead of running through it. Nothing in this couplet changed - the fault was in the shared style sheet and it is fixed there. Still wrong: the green hill fills two of the three field bands, so they read as one band.",
+      note: "Your note is answered in the words. The tall cross now runs up into the head of the arch, well above the upper lead line, so it no longer stops at the seam where red meets blue. Still wrong: the hill came back bright lime rather than emerald, and it fills two bands so they read as one.",
     },
     {
       n: 9,
-      note: "Answering your question: no, the background should not be white. The rule forbidding it was already there and the picture broke it anyway, which is what led me to the real cause in the shared sheet. This couplet is unchanged. Two new ones are worth arrowing between - 11 has no white at all but five bands instead of three, and 12 has a white band at the foot.",
+      note: "The white bottom band is gone. I did not change this couplet - the fault was the four exceptions in the shared sheet, which are now said once at the end instead of beside each rule they qualify. Nothing else here moved, so if you liked the rest of it before, it is the same rest.",
     },
     {
       n: 11,
-      note: "The field is black by instruction now, not by luck. Everything else you asked for is still missing: no halo, no thicket trapping him, the thorns are round the neck and body rather than on the head, and the lead lines still cross the ram. The white border you named is still there because the shared sheet asks for it on every window. Say the word and I will take that border out for all thirty six.",
+      note: "Black is out of the words - the couplet now names crimson, violet and cobalt for the three bands. The drawing ignored all three and came back black anyway, so this is the service overriding the words rather than the words being wrong. I have kept the old attempt rather than this one. The ram is still white on dark, which is the ghost you named.",
     },
     {
       n: 14,
-      note: "Correcting myself: the white here was never a fault in the sheet. This couplet names white itself, as one of the veil stripes, which is the linen of Exodus 26. So the field and the veil were the same white and nothing stood out. The field is emerald green now so the veil has something to read against. Still wrong: the veil came back all red instead of four stripes, hung on a rod nobody asked for, and the field is cut into a grid.",
+      note: "Answering your question: it does now. All four veil stripes are there - cobalt, violet, ruby and white - against the emerald field I named so that the white one would stand clear of it. Still wrong: it is hung on a rod nobody asked for, and the stripes read as ribbons rather than one cloth torn in two.",
     },
     {
       n: 15,
-      note: "More than halfway inserted, as you asked - this one is about two thirds in. The flames are along both edges of the bare blade. Still wrong: the lower half of the field came back white, which the sheet forbids. That is the same shared fault as 9 and it has not gone away entirely.",
+      note: "Both notes are answered. The flame is now confined to the bare blade above the mouth of the sheath, and the words say the sheath is plain leather down its whole length. The white background is gone and the field is cobalt throughout. Still wrong: the sheath is drawn far fatter than a sheath, and the field is one flat blue rather than banded.",
     },
     {
       n: 24,
-      note: "This came back a total failure and I am showing it rather than hiding it. There is no window at all - no arch, no field, no lead lines - and the stone is a photograph with colours outside the eight. This couplet names a gradient and a greater pane count, so the one exception in the sheet fires here and has taken the whole window with it. The exception needs narrowing before this can be drawn again.",
+      note: "Answering your question: 260 was the closest yet to what you described, and the one thing wrong with it was that it was not a window - no arch, no field, no lead lines, and photographic stone in colours outside the eight. I have narrowed the shared exception so that a named grant can no longer take the window itself. 279 has the arch back. I left 260 as the kept one until you choose between them.",
     },
     {
       n: 25,
-      note: "Answering your question about flowers and plants: nothing in this couplet asks for any, so anything growing in the picture arrived uninvited. I have not changed the wording or redrawn it, because your question was a question. If you want them refused outright I will say so in the words, though a refusal tends to summon the thing it refuses.",
+      note: "Answering your question: 115 has everything you asked for - seven crowns, all different, no flowers, standing clear of the field. The one thing wrong is that every crown is gold, and gold is not among the eight colours the sheet allows, so it gets drawn as ruby or white glass instead. I have not changed the wording or redrawn it. Tell me whether gold is worth an exception and I will write one.",
     },
     {
       n: 26,
-      note: "This is the brighter, glow-y one you asked for - light sky, cloud with weight in it, rays fanning out and widening as they fall. You never saw attempt 78; it was a total failure with the wrong subject and faces in it, so I have not put it up. Still wrong: all six rays came back white. The words name yellow, orange and red among them and none of those arrived.",
+      note: "All four of your notes are answered. Six rays instead of three, five of the six carrying colour, and each one comes to a point where it meets the cloud and widens like a wedge as it falls. Still wrong: the sky is a light blue that is not among the eight colours, so the sheet ignores that word and the service picks its own.",
     },
     {
       n: 32,
-      note: "Your note is answered. The river winds instead of standing like a pillar, and it is wider at the front and narrows toward the top. The field is pale amethyst, the twelfth foundation stone of Revelation 21, since the symbol already spends blue, brown and green. This is the best of the batch and I think it is done.",
+      note: "There is no cross in this couplet at all. Its words name a river, two trees on the banks and a pale amethyst field, and nothing else - so the red cross you are describing was invented by the drawing service and there is no wording behind it to fix. I have changed nothing here. If you want a cross at the head of the river, say so and I will write one in.",
     },
     {
       n: 33,
-      note: "The thick red band across the bottom is gone, so nothing is pretending to be part of the tear. Still wrong in two ways: the tear is blue on a blue field, so it barely reads, and there is white in the field again. The field needs a colour the tear does not use. Tell me which and I will name it in the words rather than leave it to chance.",
+      note: "Answering your note: the white you named is not asked for anywhere in this couplet - it is the same shared fault as 9, and 9 came back clean this round. So I redrew this one without changing a word, and got something worse. The old attempt is still the kept one. This is worth one more draw rather than a wording change.",
     },
   ];
   return couplets;

@@ -1,10 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_common } from "./bible_words_common.mjs";
-import { list_unique_set } from "./list_unique_set.mjs";
-import { binisaya_words_known } from "./binisaya_words_known.mjs";
+import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabularies.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
@@ -18,9 +15,7 @@ import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { set_includes } from "./set_includes.mjs";
-import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
-import { not } from "./not.mjs";
+import { gloss_vocabularies_word_met_is } from "./gloss_vocabularies_word_met_is.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted() {
@@ -33,10 +28,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let bible_folder = ebible_folder_cebuano();
-  let common = await bible_words_common(bible_folder);
-  let vocabulary = list_unique_set(common);
-  let known = await binisaya_words_known();
+  let vocabularies = await app_ceb_bible_gloss_vocabularies();
   let outside = 0;
   let outside_unknown = 0;
   let outside_known = 0;
@@ -80,11 +72,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
       return;
     }
     outside = add(outside, 1);
-    let written = set_includes(vocabulary, root);
-    let value2 = binisaya_words_known_get(known, root);
-    let b = null_is(value2);
-    let looked_up = not(b);
-    let met = written || looked_up;
+    let met = gloss_vocabularies_word_met_is(vocabularies, root);
     if (met) {
       outside_known = add(outside_known, 1);
       root_note(by_root_known, root, word);
