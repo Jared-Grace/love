@@ -95,8 +95,8 @@ export function bible_words_slips(sightings, words, times) {
   function row_suspect(row) {
     let nearer = property_get(row, "nearer");
     let alone = list_empty_is(nearer);
-    let suspect = not(alone);
-    return suspect;
+    let not_alone = not(alone);
+    return not_alone;
   }
   let suspect = list_filter(rows, row_suspect);
   function row_commonest(row) {
