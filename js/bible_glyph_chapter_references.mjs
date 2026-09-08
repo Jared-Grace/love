@@ -81,6 +81,14 @@ export function bible_glyph_chapter_references() {
       reference: "Genesis 41",
     },
     {
+      chapter_code: "GEN42",
+      reference: "Genesis 42",
+    },
+    {
+      chapter_code: "GEN43",
+      reference: "Genesis 43",
+    },
+    {
       chapter_code: "GEN50",
       reference: "Genesis 50",
     },
@@ -101,6 +109,10 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 5",
     },
     {
+      chapter_code: "EXO06",
+      reference: "Exodus 6",
+    },
+    {
       chapter_code: "EXO07",
       reference: "Exodus 7",
     },
@@ -115,6 +127,14 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EXO10",
       reference: "Exodus 10",
+    },
+    {
+      chapter_code: "EXO11",
+      reference: "Exodus 11",
+    },
+    {
+      chapter_code: "EXO13",
+      reference: "Exodus 13",
     },
     {
       chapter_code: "EXO14",
@@ -139,6 +159,22 @@ export function bible_glyph_chapter_references() {
     {
       chapter_code: "EXO20",
       reference: "Exodus 20",
+    },
+    {
+      chapter_code: "EXO21",
+      reference: "Exodus 21",
+    },
+    {
+      chapter_code: "EXO22",
+      reference: "Exodus 22",
+    },
+    {
+      chapter_code: "EXO23",
+      reference: "Exodus 23",
+    },
+    {
+      chapter_code: "EXO24",
+      reference: "Exodus 24",
     },
     {
       chapter_code: "EXO32",
