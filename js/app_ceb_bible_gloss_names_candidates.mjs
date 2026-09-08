@@ -23,9 +23,9 @@ export async function app_ceb_bible_gloss_names_candidates() {
     silent: 0,
   };
   function candidate_add(row) {
-    let sightings = property_get(row, "sightings");
+    let row_sightings = property_get(row, "sightings");
     let seen = property_get(totals, "sightings");
-    let seen_more = add(seen, sightings);
+    let seen_more = add(seen, row_sightings);
     property_set(totals, "sightings", seen_more);
     let silent = property_get(row, "silent");
     let quiet = property_get(totals, "silent");
