@@ -6,6 +6,8 @@ import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
+import { text_is } from "./text_is.mjs";
+import { text_starts_with } from "./text_starts_with.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { bible_glyph_gloss_plain_word_hit_or_null } from "./bible_glyph_gloss_plain_word_hit_or_null.mjs";
@@ -62,7 +64,12 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
       }
       let words = property_get(verse, "words");
       for (let word of words) {
-        let drawn = word.startsWith("$");
+        ("A WORD THAT IS NOT TEXT IS A GROUP OF PICTURES rather than a sentence word - John one verse one carries one written as a list inside a list - so it is drawn by definition and there is nothing plain in it to match a meaning against.");
+        let spelled = text_is(word);
+        if (not(spelled)) {
+          continue;
+        }
+        let drawn = text_starts_with(word, "$");
         if (drawn) {
           continue;
         }
