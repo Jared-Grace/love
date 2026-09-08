@@ -9,7 +9,7 @@ import { each } from "./each.mjs";
 import { list_adder_unique } from "./list_adder_unique.mjs";
 import { js_code_same_meaning_is } from "./js_code_same_meaning_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_code_quiz_tile_dealings } from "./app_code_quiz_tile_dealings.mjs";
+import { app_code_quiz_tile_dealings_orderings } from "./app_code_quiz_tile_dealings_orderings.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
@@ -56,7 +56,8 @@ export function app_code_lesson_quiz_token_select_variations(code) {
   }
   ("The value dealings come in AFTER that reading and not before it, because the reading is the very thing they are exempt from. They are the arrangements a learner cannot tell apart from the one the question wanted - the question's own shape with its own values handed round - and they carry their own judgment with them, made against the value the learner was shown rather than against the sentence they were not.");
   ("They still go through the spelling checks below with everything else. A dealing keeps every tile and every parenthesis by construction, so it has nothing to fear from those; passing it through anyway is what keeps one place deciding how an answer must be spelled.");
-  let dealings = app_code_quiz_tile_dealings(code);
+  ("EVERY ORDERING IS DEALT, NOT ONLY THE QUESTION. A dealing cannot move a parenthesis and a swap cannot move a value, so an answer needing both moves was reachable by no road at all: shown true and the tiles of (true && true) || false, a learner who built true || (false && true) had exchanged the two sides of the or - which the swap half is allowed to do - and then handed the values round inside the bracket, which the dealing half is allowed to do, and was told they were wrong for doing both. Dealing what the swap half already made is what closes that, and it costs almost nothing: dealings reach the same lines from any two orderings shaped the same way, so all but one of each shape is skipped.");
+  let dealings = app_code_quiz_tile_dealings_orderings(said, code);
   let offered = list_concat(said, dealings);
   let tokenised = list_map(offered, app_code_quiz_tokens);
   let variations = app_code_lesson_quiz_token_select_variations_spelled(
