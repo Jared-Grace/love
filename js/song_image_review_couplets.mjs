@@ -12,7 +12,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 6,
-      note: "Its own words were refusing blocks, panels and a second colour, and the picture came back with eight blocks - a refusal draws the thing it refuses. Those four refusals are cut, since the field clause already says the same thing positively. Nothing else about the cross changed.",
+      note: "Answering your note: the cross and the field are different colours now. The field is emerald green and cobalt, which is what this couplet asks for by name. The last one was pale tan, the same colour as the cross, because four exceptions in the shared style sheet had started reading as general permission. Still wrong: the wood grain on the cross is more shades than the rule allows.",
     },
     {
       n: 7,
