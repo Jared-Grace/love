@@ -10,7 +10,7 @@ export function app_code_lesson_expression_comparison_or_title_name_id() {
   ("It is worded in the very words of the && one, with the symbol changed, because that is what it is the twin of. A learner reading the home list should be able to see the two of them as one pair rather than as two lessons that happen to be near each other.");
   let symbol = js_operator_or_symbol();
   function paint(parent) {
-    html_cycle_code(parent, ["comparison inside ", symbol]);
+    html_cycle_code(parent, ["Comparison inside ", symbol]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

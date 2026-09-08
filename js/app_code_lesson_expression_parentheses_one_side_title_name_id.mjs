@@ -14,7 +14,7 @@ export function app_code_lesson_expression_parentheses_one_side_title_name_id() 
     ("the title names what is inside the parentheses, which is a comparison - any of ===, !==, < or >, since ",
       fn_name("app_code_comparison_side"),
       " draws from all four. It used to read === / !== inside ( and ), which was wrong twice over: those two are the OUTER operator, sitting between the parentheses and never in them, and the two it left out are half the operators the lesson actually shows");
-    html_cycle_code(parent, ["a comparison inside ", open, " and ", close]);
+    html_cycle_code(parent, ["A comparison inside ", open, " and ", close]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

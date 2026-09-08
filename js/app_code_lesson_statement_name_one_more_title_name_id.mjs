@@ -10,7 +10,7 @@ export function app_code_lesson_statement_name_one_more_title_name_id() {
   ("The line shown is the whole lesson. The title before this one has the same name on both sides of the equals with another name beside it; here that other name is a written 1, which is the only difference between the two lines and the only thing this lesson adds.");
   ("The number is written out rather than stood in for. A stand-in would say the line works for any number, which is true and is not what this screen is about - it is about the one number that makes a name count.");
   ("Only what is painted changes; the id is built from the words below.");
-  let words = "adding one to a name";
+  let words = "Adding one to a name";
   let name = app_code_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let more = js_code_binary(name, plus, 1);

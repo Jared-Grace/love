@@ -19,7 +19,7 @@ export function app_code_lesson_expression_swapping_divide() {
   function title_name_id() {
     "the home title: swapping / % **, an Expressions lesson";
     function paint(parent) {
-      html_cycle_code(parent, ["swapping ", "/", " ", "%", " ", "**"]);
+      html_cycle_code(parent, ["Swapping ", "/", " ", "%", " ", "**"]);
     }
     let left = app_code_category_expressions();
     let built = app_code_lesson_name_id_category_then(left, paint);

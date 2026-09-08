@@ -10,7 +10,7 @@ export function app_code_lesson_expression_choose_order_not_title_name_id() {
   ("Solving INSIDE it rather than solving it, because the learner has already met what a ! comes to. What is new is that the thing under it has to be worked out before the ! itself can go.");
   let symbol = js_operator_bang_symbol();
   function paint(parent) {
-    html_cycle_code(parent, ["solving inside ", symbol]);
+    html_cycle_code(parent, ["Solving inside ", symbol]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

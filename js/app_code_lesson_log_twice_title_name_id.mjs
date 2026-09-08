@@ -17,7 +17,7 @@ export function app_code_lesson_log_twice_title_name_id() {
   ("THE GAP INSIDE THEM IS GREY, in the one grey this course paints a gap in. This is the only title on the home list showing a shape with a part left out, and until now it showed that part in the same white as the code around it - so the dots read as three characters the line actually has. The card inside the lesson about a ! around a joined pair draws its gaps in the grey, and a learner who met the two in the same session met the same idea painted two ways.");
   ("Painted rather than spelled, because a line handed over as a string is one colour all the way across. The two ends of it are still built from the marks rather than typed, so the title cannot come to say something the app would not print.");
   ("The words below are what the id is built from, so they are the one thing here that is not free to change. These were reworded once, on 2026-08-23, from two things to twice - safe only because the lesson had never been reachable in prod and had stood in latest for three days. Anything less certain than that is a decision about learners' records rather than about wording.");
-  let words = "writing out twice";
+  let words = "Writing out twice";
   ("No space before the count. Measured on a phone, the line and its count with a space between them reached nine pixels past the right edge of its own row, and without one they finish three pixels inside it - the space was the whole of the difference.");
   let left = js_console_log_name();
   let right = js_code_parenthesis_left();

@@ -11,7 +11,7 @@ export function app_code_lesson_expression_which_part_first_title_name_id() {
     let times = js_operator_asterisk_symbol();
     let plus = js_operator_plus_symbol();
     html_cycle_code(parent, [
-      "which part is solved first, like ",
+      "Which part is solved first, like ",
       times,
       " before ",
       plus,

@@ -18,7 +18,7 @@ export function app_code_lesson_expression_choose_order_parentheses_title_name_i
       or_symbol,
       and_symbol,
     );
-    html_cycle_code(parent, ["solving inside ", shape]);
+    html_cycle_code(parent, ["Solving inside ", shape]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

@@ -12,7 +12,7 @@ export function app_code_lesson_statement_name_total_title_name_id() {
   ("The line shown is the whole lesson, and what makes it that line is what is standing on the right of the equals - a sum, where every title before it has a value or a single name. The lesson before this one put a sum inside console.log; this one puts the same sum where a value goes.");
   ("Real names rather than a stand-in for a value, because the thing being given away is what two names add up to, and a stand-in would hide the two names the line is about.");
   ("Only what is painted changes; the id is built from the words below.");
-  let words = "naming what two names add up to";
+  let words = "Naming what two names add up to";
   let name_first = app_code_lesson_statement_name_value_name();
   let name_last = app_code_lesson_statement_name_two_name();
   let name_total = app_code_lesson_statement_name_third();

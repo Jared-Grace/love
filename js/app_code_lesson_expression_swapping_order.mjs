@@ -20,7 +20,7 @@ export function app_code_lesson_expression_swapping_order() {
     "the home title: swapping < > <= >=, an Expressions lesson";
     function paint(parent) {
       html_cycle_code(parent, [
-        "swapping ",
+        "Swapping ",
         "<",
         " ",
         ">",

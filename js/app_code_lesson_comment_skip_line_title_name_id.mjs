@@ -8,7 +8,7 @@ export function app_code_lesson_comment_skip_line_title_name_id() {
   ("the home title: not running a line, followed by a line that writes out with the two slashes in front of it");
   ("The line shown is the plainest line that writes out, which is the one the title before this one shows, with the slashes added. Read down the list of lessons the two titles are then the same line twice with one difference between them, which is what the screen is about.");
   ("The words say what does NOT happen rather than what does, because a learner has already met the slashes as the way to write a comment; what is new is putting them in front of a line that would have done something, and what they buy is that it does not.");
-  let words = "not running a line";
+  let words = "Not running a line";
   let logged = js_code_console_log_statement(7);
   let prefix = js_code_comment_prefix();
   let code = text_combine(prefix, logged);
