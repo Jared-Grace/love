@@ -10,6 +10,8 @@ export function reply_proposals() {
   ("Each one records what it was measured to do rather than describing it. A proposal that says what it intends is a claim about a grammar, and a grammar is exactly the kind of thing whose behaviour cannot be read off its intention - the pieces are chosen by what matches, so a rule aimed at one message routinely lands on another.");
   ("The reply is asked for rather than written out, so a proposal cannot promise words that are no longer the words. What it is promising is that these messages start reaching the greeting that is already written, and that promise stays true when the greeting is reworded.");
   ("★ EVERY LINE IS WRITTEN WITH ITS SIGN FIRST AND THEN THE SOURCE LINE EXACTLY AS THE FILE HOLDS IT, INDENTATION AND WRAPPING AND ALL. The gate beside this checks each unsigned line against the file, so a line tidied up while writing it out here reads as the code having moved on. That is not fussiness - it was caught doing exactly that, on a call the canonicalizing pass had broken over four lines.");
+  ("★ A CHANGE ALSO NAMES THE FILES THAT DO NOT EXIST YET, AND NAMES THEM RATHER THAN WRITING THEM OUT. A few signed lines in an existing function are only half of what a change to the rules really is; the other half is whole new files, and those are far too long to write out twice and would be out of date the moment either copy moved. Named, they are fetched and shown as they really are, so what is on the screen is the whole change and not the part that happened to be short enough to quote.");
+  ("The names of the new files are asked for through the naming function rather than spelled, so that renaming one carries this list along with it. A change that names a file nobody answers to any more would show nothing where the file should be, which is the same silence the whole arrangement is built to avoid.");
   ("The questions at the end are the ones nobody else can answer. They are kept beside the change rather than in a message, because the change is what they are about and a message is read once.");
   let greeting = reply_response_greetings();
   let said = [greeting];
@@ -58,6 +60,7 @@ export function reply_proposals() {
   let time_of_day = {
     title: "answer good morning, good afternoon and good evening",
     fn: fn_name("app_message_reply_greeting"),
+    whole: [],
     diff: [
       combined,
       combined2,
@@ -143,9 +146,11 @@ export function reply_proposals() {
     f_name16,
     " goes with them. Deleting it is what actually takes them out of the repository - left in place unused they are still published, just unreachable.",
   ]);
+  let f_name55 = fn_name("reply_word_any");
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
     fn: fn_name("app_message_reply_iam_titled_name"),
+    whole: [f_name55],
     diff: [
       combined9,
       combined10,
@@ -242,9 +247,11 @@ export function reply_proposals() {
     f_name28,
     " goes with them once the contact line below has stopped asking for it too.",
   ]);
+  let f_name56 = fn_name("reply_word_any");
   let town_out = {
     title: "answer somebody from a town the rules were never told about",
     fn: fn_name("app_message_reply_from_city_country"),
+    whole: [f_name56],
     diff: [
       combined17,
       combined18,
@@ -315,9 +322,13 @@ export function reply_proposals() {
     "china, korea, america, england, scotland, wales, usa, uk and drc",
     ", among others. The register would not supply those, because it is a register of identities and refuses a word that names more than one thing - it holds the People's Republic of China and holds no bare China at all. Every one of them is a word real messages actually use.",
   ]);
+  let f_name57 = fn_name("reply_countries_names");
+  let f_name58 = fn_name("reply_countries_aliases");
+  let f_name59 = fn_name("reply_countries_authored");
   let countries_in = {
     title: "know the world's countries rather than two of them",
     fn: fn_name("reply_countries"),
+    whole: [f_name57, f_name58, f_name59],
     diff: [
       '-  let v = ["kenya", "pakistan"];',
       combined28,
@@ -423,10 +434,12 @@ export function reply_proposals() {
     f_name42,
     ", which then holds nothing but one real street and is deleted. The street name itself was the only thing in it that had to be told in advance.",
   ]);
+  let f_name60 = fn_name("reply_word_any");
   let street_out = {
     title:
       "stop needing to be told somebody's street before it will read their contact line",
     fn: fn_name("app_message_reply_choices"),
+    whole: [f_name60],
     diff: [
       combined34,
       combined35,
@@ -513,9 +526,16 @@ export function reply_proposals() {
     f_name52,
     ".",
   ]);
+  let f_name61 = fn_name("reply_word_cost");
+  let f_name62 = fn_name("reply_typo_budget");
+  let f_name63 = fn_name("reply_typo_ends");
+  let f_name64 = fn_name("reply_typo_costs");
+  let f_name65 = fn_name("reply_typo_sounds");
+  let f_name66 = fn_name("reply_keys_nearby");
   let typo_layer = {
     title: "read a word that was mistyped, and know what the forgiving cost",
     fn: fn_name("reply_wrap_invoke"),
+    whole: [f_name61, f_name62, f_name63, f_name64, f_name65, f_name66],
     diff: [
       combined42,
       "   let size = null;",
@@ -602,10 +622,12 @@ export function reply_proposals() {
     f_name54,
     "(result);",
   ]);
+  let f_name67 = fn_name("reply_cheapest");
   let cheapest_reading = {
     title:
       "when a message can be read several ways, take the one that needed the least forgiving",
     fn: fn_name("reply_messages_inner"),
+    whole: [f_name67],
     diff: [
       "   let possbility_start = {",
       "     tokens,",
