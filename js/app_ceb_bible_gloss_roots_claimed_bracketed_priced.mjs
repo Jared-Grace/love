@@ -1,8 +1,4 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { property_get } from "./property_get.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written } from "./bible_words_written.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -10,7 +6,7 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { object_property_names } from "./object_property_names.mjs";
+import { property_get } from "./property_get.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { not } from "./not.mjs";
 import { add } from "./add.mjs";
@@ -20,7 +16,10 @@ import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { null_is } from "./null_is.mjs";
+import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
+import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
   "Every root an explanation states outright with a bracket in it, read both ways the bracket can be meant, with each reading put to the bible's words, to the dictionary, and to the word the root was claimed for.";
@@ -30,11 +29,8 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
   "The pricing of the accent marks beside this one came back at nothing bought, and that is the reason this is a separate reading rather than a further column there. A bracket and an accent are both a dictionary's notation leaking into a store, and that is all they have in common: the accent has one repair and this has two, the accent's repair lost a dictionary lookup and this one cannot, and a reading that answered for both would have had to average them.";
   "Spellings are folded before the word is asked, the way the rest of the gloss code folds them, so that a root and its word written with different letters for one sound still meet.";
   "Nothing is written and nothing is asked of the site.";
+  "The bible's words and the dictionary are read before the store is walked rather than after, because the walk now carries the pricing with it and the pricing cannot ask a vocabulary that has not arrived. Neither read writes anything, so which of them goes first is a matter of what the next line needs.";
   arguments_assert(arguments, 0);
-  let gathered = await gloss_chapters_roots_claimed_gathered(
-    app_ceb_bible_gloss_generate,
-  );
-  let by_root = property_get(gathered, "by_root");
   let bible_folder = ebible_folder_cebuano();
   let written = await bible_words_written(bible_folder);
   let lowered = [];
@@ -46,16 +42,15 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
   let vocabulary = list_unique_set(lowered);
   let known = await binisaya_words_known();
   let bracketed_span = new RegExp("\\([^)]*\\)", "g");
-  let root_names = object_property_names(by_root);
   let listed = [];
   let bracketed_sightings = 0;
   let kept_shown = 0;
-  function root_price(name) {
+  function root_price(row) {
+    let name = property_get(row, "stated_root");
     let opened = text_includes(name, "(");
     if (not(opened)) {
       return;
     }
-    let row = property_get(by_root, name);
     let sightings = property_get(row, "sightings");
     bracketed_sightings = add(bracketed_sightings, sightings);
     let without_open = text_replace(name, "(", "");
@@ -99,7 +94,10 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
     }
     list_add(listed, row);
   }
-  each(root_names, root_price);
+  let gathered = await gloss_chapters_roots_claimed_rows_generic(
+    app_ceb_bible_gloss_generate,
+    root_price,
+  );
   list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let r = {
     chapters: property_get(gathered, "chapters"),
