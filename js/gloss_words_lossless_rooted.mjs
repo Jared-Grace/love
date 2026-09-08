@@ -25,8 +25,8 @@ export function gloss_words_lossless_rooted(known, priced) {
   arguments_assert(arguments, 2);
   let all = property_get(priced, "priced");
   function lossless_is(row) {
-    let lossless = property_get(row, "lossless");
-    return lossless;
+    let row_lossless = property_get(row, "lossless");
+    return row_lossless;
   }
   let lossless = list_filter(all, lossless_is);
   function row_rooted(row) {
