@@ -113,6 +113,7 @@
   "brackets_or",
   "order_moved",
   "brackets_pair",
+  "order_not_twice",
   "not_twice",
   "order_not",
   "not_compare",
