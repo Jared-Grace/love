@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 11,
+      kept: 13,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -113,7 +113,7 @@ export function song_image_couplet_glosses() {
         "Described. HIS sweat was as it were great drops of blood falling down to the ground is Luke 22:44, and the drops and the ground are both in that clause. It replaced an olive press, which was the meaning of the place name rather than a thing any verse pictures - and a press of the oldest kind is a round stone in a trough, which almost nobody reads as a press even when it is drawn correctly. The two drawings of it read as a washtub. So the verse's own object is drawn instead, and the claim moves from named to described.",
     },
     14: {
-      kept: 11,
+      kept: 17,
       lyric_ref: "Luke 23:46, Mark 15:37, Matthew 27:51",
       lyric_explain:
         "Father, into thy hands I commend my spirit: and having said thus, HE gave up the ghost. Matthew puts the tearing of the veil in the same breath as the death.",
@@ -121,7 +121,7 @@ export function song_image_couplet_glosses() {
         "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
-      kept: 13,
+      kept: 16,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 74,
+      kept: 80,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
