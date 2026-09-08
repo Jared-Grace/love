@@ -1,9 +1,7 @@
 import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_common } from "./bible_words_common.mjs";
-import { gloss_words_rows_names_apart } from "./gloss_words_rows_names_apart.mjs";
+import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_take } from "./list_take.mjs";
@@ -19,9 +17,7 @@ export async function app_ceb_bible_gloss_roots_silent_words(sample_size) {
   let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
   let offenders = property_get(disagreeing, "offenders");
   let found = gloss_offenders_roots_silent_words(offenders);
-  let bible_folder = ebible_folder_cebuano();
-  let common_words = await bible_words_common(bible_folder);
-  let apart = gloss_words_rows_names_apart(found, common_words);
+  let apart = await app_ceb_bible_gloss_words_rows_names_apart(found);
   let words = property_get(apart, "words");
   let names = property_get(apart, "names");
   function row_word(row) {

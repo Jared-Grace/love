@@ -2,9 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_offenders_roots_silent_words } from "./gloss_offenders_roots_silent_words.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_common } from "./bible_words_common.mjs";
-import { gloss_words_rows_names_apart } from "./gloss_words_rows_names_apart.mjs";
+import { app_ceb_bible_gloss_words_rows_names_apart } from "./app_ceb_bible_gloss_words_rows_names_apart.mjs";
 import { gloss_names_filter_checked } from "./gloss_names_filter_checked.mjs";
 export async function app_ceb_bible_gloss_names_filter_checked() {
   "Checks the names the Cebuano queue quietly drops against the app's own sentences: which of them a written explanation actually proves is a name, which rest on the vocabulary test alone, and which proven names the test failed to drop.";
@@ -16,9 +14,7 @@ export async function app_ceb_bible_gloss_names_filter_checked() {
   let offenders = property_get(disagreeing, "offenders");
   let consulted = property_get(disagreeing, "consulted");
   let silent_words = gloss_offenders_roots_silent_words(offenders);
-  let bible_folder = ebible_folder_cebuano();
-  let common_words = await bible_words_common(bible_folder);
-  let apart = gloss_words_rows_names_apart(silent_words, common_words);
+  let apart = await app_ceb_bible_gloss_words_rows_names_apart(silent_words);
   let names_taken = property_get(apart, "names");
   let checked = gloss_names_filter_checked(offenders, names_taken);
   let taken_total = property_get(checked, "taken_total");
