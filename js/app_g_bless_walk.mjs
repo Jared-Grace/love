@@ -1,3 +1,4 @@
+import { app_g_bless_refused_flash } from "./app_g_bless_refused_flash.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
