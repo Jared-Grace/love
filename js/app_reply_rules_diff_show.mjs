@@ -14,11 +14,15 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { html_style_margin } from "./html_style_margin.mjs";
 import { not } from "./not.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_reply_rules_diff_line_changed } from "./app_reply_rules_diff_line_changed.mjs";
+import { diff_lines_paired } from "./diff_lines_paired.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_reply_rules_diff_show(root, diff) {
   arguments_assert(arguments, 2);
   ("The lines a written-down change would alter, drawn the way a difference is read: what would go, what would come, and enough of what stays either side to see where it lands.");
   ("★ THE SIGN IS THE FIRST CHARACTER AND THE REST OF THE LINE IS THE CODE UNTOUCHED, so what is on the screen lines up character for character with what is in the file. Any drawing that took the sign off and put the colour on instead would be easier to write and would lose the one thing that makes a difference checkable by eye - that the unsigned lines can be found in the file exactly as they are written here.");
+  ("A LINE THAT WAS MERELY REWORDED IS THE ONE EXCEPTION AND WEARS ITS OWN SIGN TO SAY SO. It carries both wordings at once, so its text is not to be found in either the file or the change; the sign is what warns a reader of that, which is the same job the plus and the minus are doing.");
   ("Each line is drawn as preformatted text so its indentation survives. Indentation is how a reader sees which call an argument belongs to, and a browser throws it away by default.");
   ("The colours say the same thing as the signs rather than instead of them. Somebody who cannot tell the two colours apart, or who is reading this printed, still has the signs; somebody scanning quickly has the colour. Neither is asked to carry it alone.");
   ("★ THE COLOUR IS SAID TWICE, ONCE IN THE WRITING AND ONCE BEHIND IT, AND THE ONE BEHIND IT IS WHAT ACTUALLY GETS SEEN. Coloured writing has to be read a line at a time to be noticed, because the coloured part is a few thin strokes on a wide white line - and these changes are now drawn over whole files, where the altered lines are a handful among a hundred. A tinted line is a shape, and a run of them is a block the eye lands on from across the page without reading anything.");
@@ -67,6 +71,16 @@ export function app_reply_rules_diff_show(root, diff) {
     }
     return one;
   }
-  let drawn = list_map(diff, each_line);
+  function each_entry(entry) {
+    let changed = property_get(entry, "changed");
+    if (changed) {
+      let segments = property_get(entry, "segments");
+      return app_reply_rules_diff_line_changed(block, segments);
+    }
+    let line = property_get(entry, "line");
+    return each_line(line);
+  }
+  let entries = diff_lines_paired(diff);
+  let drawn = list_map(entries, each_entry);
   return drawn;
 }

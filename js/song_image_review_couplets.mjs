@@ -26,7 +26,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 11,
-      note: "Both asks failed and the picture is unchanged. Black outside the frame is already what the shared sheet asks for, so this drawing had disobeyed it - but one edit blackened the whole field and one turned the corners yellow and blue. Two fresh draws came back worse again, one all black and one with no thorns, no crown and no halo. The curved lead lines I have not tried; say if more draws are worth it.",
+      note: "Both asks are right and neither landed, so the picture is unchanged. Black outside the frame and straight lead lines are both already what the shared sheet asks for, so this drawing had simply disobeyed them. I rewrote the words to say the field is three whole panes and drew three more: two came back straight-lined and black outside but with no thorns, no crown and no halo, and the third kept those and went black all over. Say if more draws are worth it, or if this one stays.",
     },
     {
       n: 14,
@@ -46,7 +46,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "Not done, and the kept picture is unchanged. An unbroken ray never cut by a lead line is already asked for twice, once in this couplet and once in the shared sheet, and it is drawn across anyway. One fresh draw did come back with the lines gone and its sky went black instead - arrow forward for it. Glowing rays are a bigger question: the sheet forbids shading, gradient and highlight on all thirty-six.",
+      note: "Not done, and the kept picture is unchanged. An unbroken ray is already asked for twice, once in this couplet and once in the shared sheet, and it is drawn across anyway. I rewrote the clause to say where the two lead lines do run rather than refusing them, and drew twice more: one came back with the fan clean but every ray white, the other kept the colours and was bricked across worse than this. Glowing rays are the bigger question - the sheet forbids shading, gradient and highlight on all thirty-six.",
     },
     {
       n: 32,
