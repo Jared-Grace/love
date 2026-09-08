@@ -1,3 +1,4 @@
+import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -264,6 +265,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_statement_name_total,
     app_code_lesson_statement_name_itself_sum,
     app_code_lesson_statement_name_one_more,
+    app_code_lesson_statement_name_count,
     app_code_lesson_statement_name_copy_kept,
     app_code_lesson_statement_name_compare,
     app_code_lesson_comment_note,
