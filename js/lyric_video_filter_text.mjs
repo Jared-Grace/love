@@ -1,4 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
+import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
@@ -23,12 +24,14 @@ export function lyric_video_filter_text(
   ("EVERY PICTURE IS FITTED INSIDE THE FRAME AND NEVER CROPPED TO FILL IT. Filling means throwing away whatever hangs over the edge, and what hangs over the edge of a drawn symbol is usually the symbol. Fitting leaves a margin instead, and the margin costs nothing here because these pictures are drawn on black and the ground behind them is the same black - so the edge that fitting would ordinarily show is an edge between black and black, which is no edge.");
   ("★ EVERY PICTURE IS SHOWN AT ITS OWN BRIGHTNESS, AND THAT IS A CHANGE FROM WHAT THIS USED TO DO. Every picture used to be halved on its way in, because the words are white and a picture can come back with a shaft of white light down the middle of the frame - the first one drawn did exactly that. Halving guaranteed the words could be read whatever the picture turned out to be, and it also turned every painting into a night scene: a lit cloud went grey, a sunrise went brown, and the thing the picture was of stopped being visible. The guarantee was worth keeping and the halving was not, so the guarantee moved onto the lettering, where a black border and a black shadow are drawn from the lettering's own size and hold against any picture at all.");
   ("★ A PICTURE MAY STILL BE LIFTED, BUT ONLY WHERE THE DOCUMENT SAYS SO, AND THAT IS NOT THE THING THAT WAS REMOVED. What was removed was one number standing in for a guarantee on every picture there is; what is here is somebody having looked at one painting, found it flatter or darker than the scene it was given, and written that down beside it. It is the same distinction the scene itself keeps - what is true of all these pictures is said once and elsewhere, and what is true of one of them lives with that one. A picture the document is silent about is passed through with nothing done to it at all.");
+  ("★ EVERY PICTURE COMES UP THE SAME MOMENT EARLY THE WORDS DO, AND ONLY ITS BEGINNING IS MOVED. Each card is put on the screen a fraction before the line it holds is sung, so that somebody has time to take the line in; a picture left standing on the sung moment therefore arrives after the words it belongs to, and what a watcher sees is the drawing changing late against words that changed correctly. That was watched and reported rather than reasoned about. Only the beginning is pulled back because the pictures are laid one over the next in the order they are given - a picture whose end stays where it was is simply covered by the one that follows at the moment that one begins. So the change happens early, the run stays unbroken with no black between two pictures, and the last picture still reaches the end of the song instead of letting go a fraction before it.");
   ("EACH PICTURE IS CENTRED AND THE WORDS SIT AT THE MIDDLE TOO, ON PURPOSE. The words are what the video is for, so they take the part of the frame a person is already looking at; the picture is behind them and shares it. Putting the picture anywhere else would move it out from under the words and into the corner a thumb covers.");
   ("THE SPAN IS WRITTEN IN THE TOOL'S OWN QUOTES AND NOT THE SHELL'S. Saying when a picture is shown needs two numbers and therefore a comma, and a comma is exactly what divides one step of this instruction from the next - so written plainly the second number becomes the beginning of a step that does not exist, and the render fails naming a filter nobody wrote. The quotes around it are read by the tool itself and never by a shell, which is why they survive being handed over as one word and why nothing here should be escaped a second time on the way out.");
   ("THE STEPS ARE JOINED BY THEIR NUMBERS RATHER THAN BY A RUNNING NAME. Each picture lays itself over what the picture before it left, so there is an order and something has to carry it. Counting to it from the picture's own place in the list means nothing is remembered between steps, and a step can be read on its own and still say what it stands on.");
   ("The pictures begin at the third input because the black ground is the first and the song is the second, and the song is kept ahead of them so that its number never moves.");
   let size = width + ":" + height;
   let ground = "[0:v]";
+  let lead = lyric_video_lead_seconds();
   function picture_steps(picture, index) {
     let first = equal(index, 0);
     let under = first ? ground : "[over" + subtract(index, 1) + "]";
@@ -43,7 +46,8 @@ export function lyric_video_filter_text(
       ":force_original_aspect_ratio=decrease" +
       lit +
       fitted;
-    let shown = "enable='between(t," + picture.start + "," + picture.end + ")'";
+    let ahead = subtract(picture.start, lead);
+    let shown = "enable='between(t," + ahead + "," + picture.end + ")'";
     let lay = under + fitted + "overlay=x=(W-w)/2:y=(H-h)/2:" + shown + over;
     let steps_picture = [fit, lay];
     return steps_picture;
