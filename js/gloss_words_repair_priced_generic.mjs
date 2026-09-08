@@ -55,14 +55,14 @@ export async function gloss_words_repair_priced_generic(fn, rows) {
     let used = property_get(tally, "used");
     let already_naming = subtract(used, silent);
     let lossless = equal(used, silent);
-    let priced = {
+    let priced_row = {
       word: lower,
       silent,
       used,
       already_naming,
       lossless,
     };
-    return priced;
+    return priced_row;
   }
   let priced = list_map(words, word_priced);
   function row_used(row) {
