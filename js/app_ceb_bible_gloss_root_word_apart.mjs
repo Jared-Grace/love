@@ -1,28 +1,24 @@
-import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
+import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
+import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { not } from "./not.mjs";
 import { list_join } from "./list_join.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
-import { each } from "./each.mjs";
-import { each_async } from "./each_async.mjs";
+import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_slice_count } from "./list_slice_count.mjs";
 import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function app_ceb_bible_gloss_root_word_apart() {
   "Every entry in the Cebuano gloss store whose explanation takes a word back to a root sharing nothing with it, gathered by the pair so one repeated claim counts once, beside the counts of the ordinary relations for scale.";
@@ -36,72 +32,57 @@ export async function app_ceb_bible_gloss_root_word_apart() {
   "So the reader is sound where it was built to work and wrong here, and the difference is which two things are being compared. Set two roots against each other, which is what it was written for, and neither has an affix on it, so a broken run really does mean two different words. Set a word against its root and an affix is always in the way. The same function answers honestly in one place and misleadingly in the other, and nothing about the answer says which.";
   "One row in the list is a fault of a different kind and is worth keeping in view: ayaw explained as coming from dili, forty entries of it. Neither is built from the other - they are two ways of saying no - so the explanation handed a reader a word of the same meaning where it promised the word it came from. That is the shape a real fault takes here, and finding one of it among four hundred pairs is the measure of what this check is worth as a fault list.";
   "Nothing is asked of the site and nothing is written.";
+  "The word is read off the entry with the reader that throws when it is absent, and that is this reading's own choice rather than the shared walk's: the walk hands the whole entry over precisely so that each reading keeps the reader it had.";
   arguments_assert(arguments, 0);
   let fn = app_ceb_bible_gloss_generate;
-  let chapter_codes = await gloss_chapters_stored(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
-  let explain_key = gloss_entry_explain_key();
   let counts = {};
   let apart_pairs = {};
   let named_seen = 0;
-  function entries_pass(entries) {
-    return entries;
-  }
-  async function chapter_read(chapter_code) {
-    let entries = await gloss_chapter_entries_collect_generic(
-      chapter_code,
-      fn,
-      entries_pass,
-    );
-    function entry_read(entry) {
-      let explain = property_get_or_null(entry, explain_key);
-      let none = null_is(explain);
-      if (none) {
-        return;
-      }
-      let claimed = gloss_explain_roots_claimed(explain);
-      let count = list_size(claimed);
-      let empty = equal(count, 0);
-      if (empty) {
-        return;
-      }
-      named_seen = add(named_seen, 1);
-      let word = property_get(entry, word_key);
-      let lowered = text_lower_to(word);
-      let first = list_get(claimed, 0);
-      let root = text_lower_to(first);
-      let relation = gloss_root_claimed_relation(lowered, root);
-      let held = property_get_or_null(counts, relation);
-      let unseen = null_is(held);
-      let before = unseen ? 0 : held;
-      let value = add(before, 1);
-      property_set(counts, relation, value);
-      let far = equal(relation, "apart");
-      if (not(far)) {
-        return;
-      }
-      let key = list_join([lowered, root], " ");
-      let held_pair = property_get_or_null(apart_pairs, key);
-      let fresh = null_is(held_pair);
-      if (fresh) {
-        let made = {
-          word: lowered,
-          root: root,
-          entries: 0,
-          chapters: [],
-        };
-        property_set(apart_pairs, key, made);
-        held_pair = made;
-      }
-      let left = property_get(held_pair, "entries");
-      let value2 = add(left, 1);
-      property_set(held_pair, "entries", value2);
-      let chapters = property_get(held_pair, "chapters");
-      list_add_if_not_includes(chapters, chapter_code);
+  function entry_read(found) {
+    let chapter_code = property_get(found, "chapter_code");
+    let entry = property_get(found, "entry");
+    let claimed = property_get(found, "claimed");
+    let count = list_size(claimed);
+    let empty = equal(count, 0);
+    if (empty) {
+      return;
     }
-    each(entries, entry_read);
+    named_seen = add(named_seen, 1);
+    let word = property_get(entry, word_key);
+    let lowered = text_lower_to(word);
+    let first = list_get(claimed, 0);
+    let root = text_lower_to(first);
+    let relation = gloss_root_claimed_relation(lowered, root);
+    let held = property_get_or_null(counts, relation);
+    let unseen = null_is(held);
+    let before = unseen ? 0 : held;
+    let value = add(before, 1);
+    property_set(counts, relation, value);
+    let far = equal(relation, "apart");
+    if (not(far)) {
+      return;
+    }
+    let key = list_join([lowered, root], " ");
+    let held_pair = property_get_or_null(apart_pairs, key);
+    let fresh = null_is(held_pair);
+    if (fresh) {
+      let made = {
+        word: lowered,
+        root: root,
+        entries: 0,
+        chapters: [],
+      };
+      property_set(apart_pairs, key, made);
+      held_pair = made;
+    }
+    let left = property_get(held_pair, "entries");
+    let value2 = add(left, 1);
+    property_set(held_pair, "entries", value2);
+    let chapters = property_get(held_pair, "chapters");
+    list_add_if_not_includes(chapters, chapter_code);
   }
-  await each_async(chapter_codes, chapter_read);
+  await gloss_chapters_roots_claimed_entries_generic(fn, entry_read);
   let keys = object_property_names(apart_pairs);
   let listed = [];
   function key_read(key) {
