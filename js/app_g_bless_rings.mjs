@@ -8,8 +8,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_view_people } from "./bless_view_people.mjs";
 import { app_shared_game_npc_ring_get } from "./app_shared_game_npc_ring_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { html_div } from "./html_div.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_game_npc_ring_set } from "./app_shared_game_npc_ring_set.mjs";
 import { each } from "./each.mjs";
