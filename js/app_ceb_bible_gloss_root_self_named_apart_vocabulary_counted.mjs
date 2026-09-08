@@ -117,19 +117,8 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
     each(entries, entry_read);
   }
   await each_async(chapter_codes, chapter_read);
-  function listed_of(holder) {
-    let names = object_property_names(holder);
-    let listed = [];
-    function name_read(name) {
-      let row = property_get(holder, name);
-      list_add(listed, row);
-    }
-    each(names, name_read);
-    list_sort_number_mapper_reverse(listed, gloss_row_sightings);
-    return listed;
-  }
-  let unknown_listed = listed_of(by_root_unknown);
-  let known_listed = listed_of(by_root_known);
+  let unknown_listed = gloss_rows_ranked(by_root_unknown);
+  let known_listed = gloss_rows_ranked(by_root_known);
   let r = {
     outside: outside,
     outside_unknown: outside_unknown,
