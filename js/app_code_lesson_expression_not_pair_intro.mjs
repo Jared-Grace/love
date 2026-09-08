@@ -15,6 +15,7 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div } from "./html_div.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { app_code_code_tile } from "./app_code_code_tile.mjs";
+import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
 import { app_code_lesson_expression_worked_card_not } from "./app_code_lesson_expression_worked_card_not.mjs";
 export function app_code_lesson_expression_not_pair_intro(root) {
   arguments_assert(arguments, 1);
@@ -38,13 +39,6 @@ export function app_code_lesson_expression_not_pair_intro(root) {
   let not_false = js_code_not(false_word);
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  function fill_not(host) {
-    "the shape !( ... ), with the gap grey and the punctuation around it the ordinary code white";
-    html_span_text(host, symbol);
-    html_span_text(host, left_parenthesis);
-    app_code_placeholder_dots(host);
-    html_span_text(host, right_parenthesis);
-  }
   function fill_pair_get(joining_symbol) {
     "the shape ( ... op ... ) for one of the two joining marks, with both gaps grey";
     function fill_pair(host) {
@@ -70,7 +64,7 @@ export function app_code_lesson_expression_not_pair_intro(root) {
   let row_not = html_div(card);
   html_span_text_code_dark(row_not, symbol);
   html_span_text(row_not, " can go in front of parenthesis: ");
-  app_code_code_tile(row_not, fill_not);
+  app_code_not_parenthesis_shape(row_not);
   let v = fill_pair_get(and_symbol);
   shape_row("", and_symbol, v);
   let v2 = fill_pair_get(or_symbol);
