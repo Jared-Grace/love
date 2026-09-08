@@ -1,4 +1,4 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
+import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -26,7 +26,6 @@ import { gloss_explain_roots_named_word_given } from "./gloss_explain_roots_name
 import { not } from "./not.mjs";
 import { list_get } from "./list_get.mjs";
 import { each_async } from "./each_async.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_take } from "./list_take.mjs";
 export async function app_ceb_bible_gloss_root_word_given_apart_counted(
   sample_size,
@@ -143,19 +142,8 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
     each(entries, entry_read);
   }
   await each_async(chapter_codes, chapter_read);
-  function listed_of(holder) {
-    let names = object_property_names(holder);
-    let listed = [];
-    function name_read(name) {
-      let row = property_get(holder, name);
-      list_add(listed, row);
-    }
-    each(names, name_read);
-    list_sort_number_mapper_reverse(listed, gloss_row_sightings);
-    return listed;
-  }
-  let dropped_listed = listed_of(by_root_dropped);
-  let rescued_listed = listed_of(by_root_rescued);
+  let dropped_listed = gloss_rows_ranked(by_root_dropped);
+  let rescued_listed = gloss_rows_ranked(by_root_rescued);
   let count = Number(sample_size);
   let r = {
     sentence_total: sentence_total,
