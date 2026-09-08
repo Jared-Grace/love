@@ -1,4 +1,3 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -16,12 +15,13 @@ import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { add } from "./add.mjs";
-import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { tally_number_add } from "./tally_number_add.mjs";
+import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
+import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() {
   "Every root the Cebuano gloss store names, sorted by how many different dictionary words vouch for it, so that a vouching resting on one word alone is told apart from a vouching many words agree on.";
   "Vouching was read until now as a single yes. A word the dictionary names as some other word's root was taken as proved, because nothing the app asks for can put a word in that position and only the site could have written it. That much is still true and it is why the reading exists.";
@@ -86,13 +86,6 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
     named_once = add(named_once, 1);
   }
   each(named_roots, witness_tally);
-  let gathered = await gloss_chapters_roots_claimed_gathered(
-    app_ceb_bible_gloss_generate,
-  );
-  let chapters = property_get(gathered, "chapters");
-  let roots_distinct = property_get(gathered, "roots_distinct");
-  let by_root = property_get(gathered, "by_root");
-  let roots = object_property_names(by_root);
   let poetic = ["PSA", "PRO", "SNG"];
   let roots_by_class = {};
   let claims_poetry = {};
@@ -111,8 +104,8 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
     }
     each(chapter_codes, chapter_note);
   }
-  function root_read(root) {
-    let row = property_get(by_root, root);
+  function root_read(row) {
+    let root = property_get(row, "stated_root");
     let seen_in = property_get(row, "chapters");
     let key = gloss_word_folded(root);
     let size = witness_count(key);
@@ -153,15 +146,20 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
     };
     list_add(once_listed, named);
   }
-  each(roots, root_read);
+  let gathered = await gloss_chapters_roots_claimed_rows_generic(
+    app_ceb_bible_gloss_generate,
+    root_read,
+  );
   list_sort_number_mapper_reverse(once_listed, gloss_row_sightings);
-  let answer = {};
-  property_set(answer, "chapters", chapters);
   let dictionary_named = list_size(named_roots);
+  let answer = {};
+  let value = property_get(gathered, "chapters");
+  property_set(answer, "chapters", value);
   property_set(answer, "dictionary_roots_named", dictionary_named);
   property_set(answer, "dictionary_roots_named_once", named_once);
   property_set(answer, "dictionary_roots_named_more", named_more);
-  property_set(answer, "roots_claimed", roots_distinct);
+  let value2 = property_get(gathered, "roots_distinct");
+  property_set(answer, "roots_claimed", value2);
   property_set(answer, "roots_by_class", roots_by_class);
   property_set(answer, "claims_poetry", claims_poetry);
   property_set(answer, "claims_rest", claims_rest);
