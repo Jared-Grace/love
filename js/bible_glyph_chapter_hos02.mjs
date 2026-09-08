@@ -738,7 +738,7 @@ export function bible_glyph_chapter_hos02() {
           "called",
           "$no_entry",
           "My",
-          "People,",
+          "$family,",
           "You",
           "are",
           "My",
