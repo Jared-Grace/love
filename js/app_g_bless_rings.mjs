@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
 import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
