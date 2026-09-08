@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -125,11 +126,7 @@ export async function app_ceb_bible_gloss_root_named_foreign_counted(
     list_add(listed, row);
   }
   each(root_names, root_read);
-  function sightings_of(row) {
-    let seen = property_get(row, "sightings");
-    return seen;
-  }
-  list_sort_number_mapper_reverse(listed, sightings_of);
+  list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let count2 = Number(sample_size);
   let shown = list_take(listed, count2);
   let r = {
