@@ -117,7 +117,8 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   );
   list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let answer = {};
-  property_set(answer, "chapters", property_get(gathered, "chapters"));
+  let value2 = property_get(gathered, "chapters");
+  property_set(answer, "chapters", value2);
   let distinct = property_get(gathered, "roots_distinct");
   property_set(answer, "roots_distinct", distinct);
   property_set(answer, "claimed_books", claimed_books);

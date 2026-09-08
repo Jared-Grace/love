@@ -71,8 +71,10 @@ export function app_code_lesson_expression_not_pair_intro(root) {
   html_span_text_code_dark(row_not, symbol);
   html_span_text(row_not, " can go in front of parenthesis: ");
   app_code_code_tile(row_not, fill_not);
-  shape_row("", and_symbol, fill_pair_get(and_symbol));
-  shape_row("Or ", or_symbol, fill_pair_get(or_symbol));
+  let v = fill_pair_get(and_symbol);
+  shape_row("", and_symbol, v);
+  let v2 = fill_pair_get(or_symbol);
+  shape_row("Or ", or_symbol, v2);
   app_code_lesson_expression_worked_card_not(
     root,
     whole,
