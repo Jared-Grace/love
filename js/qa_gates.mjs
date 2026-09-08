@@ -1,3 +1,4 @@
+import { ebible_chapter_code_padded_cases_gate_run } from "./ebible_chapter_code_padded_cases_gate_run.mjs";
 import { lyric_video_picture_scene_style_conflict_gate_run } from "./lyric_video_picture_scene_style_conflict_gate_run.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run.mjs";
 import { bible_glyph_undrawn_lists_gate_run } from "./bible_glyph_undrawn_lists_gate_run.mjs";
@@ -1065,6 +1066,7 @@ export function qa_gates() {
     gloss_explain_root_before_said_gate_run,
     app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run,
     lyric_video_picture_scene_style_conflict_gate_run,
+    ebible_chapter_code_padded_cases_gate_run,
   ];
   return gates;
 }
