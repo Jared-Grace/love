@@ -1,10 +1,11 @@
 import { bible_words_slips_cases } from "./bible_words_slips_cases.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_words_slips } from "./bible_words_slips.mjs";
-import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { list_map } from "./list_map.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
@@ -48,8 +49,8 @@ export function bible_words_slips_gate_run() {
   let defects = [];
   let wrong = json_equal_not(got, expected);
   if (wrong) {
-    let told = json_text_to(got);
-    let wanted = json_text_to(expected);
+    let told = json_to(got);
+    let wanted = json_to(expected);
     list_add(defects, "expected " + wanted + " but read " + told);
   }
   function defect_print(defect) {
