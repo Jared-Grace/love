@@ -68,9 +68,7 @@ export function app_g_bless_doors_draw(layer, blocks) {
   function doorway_draw(tile) {
     let opening = html_div(layer);
     g_img_square_style_position(opening, tile, "ground_tint");
-    html_style_assign(opening, {
-      "pointer-events": "none",
-    });
+    html_click_none(opening);
     let leaf = html_div(opening);
     html_style_assign(leaf, {
       position: "absolute",
