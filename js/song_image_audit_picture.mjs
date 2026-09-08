@@ -77,6 +77,15 @@ export function song_image_audit_picture(parent, key, kept) {
   html_style_padding(keep, "4px 10px");
   html_style_font_size(keep, "12px");
   html_cursor_pointer(keep);
+  function attempt_get() {
+    let at = shown_get();
+    let attempt = attempts[at];
+    return attempt;
+  }
   redraw(shown);
-  return picture;
+  let shown_now = {
+    picture,
+    attempt_get,
+  };
+  return shown_now;
 }
