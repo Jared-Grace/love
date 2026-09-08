@@ -21,8 +21,8 @@ export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
   let absent = property_get(measured, "words_absent");
   let phantom = {};
   function phantom_hold(word) {
-    let lowered = text_lower_to(word);
-    property_set(phantom, lowered, true);
+    let lowered_word = text_lower_to(word);
+    property_set(phantom, lowered_word, true);
   }
   each(absent, phantom_hold);
   let claimed = await gloss_chapters_roots_claimed_distinct(
