@@ -97,8 +97,8 @@ export async function app_ceb_bible_gloss_words_roots_apart_arbitrated() {
     return wrong;
   }
   function unproved_is(row) {
-    let unproved = property_equals(row, "verdict", "unproved");
-    return unproved;
+    let verdict_unproved = property_equals(row, "verdict", "unproved");
+    return verdict_unproved;
   }
   let depth = list_filter(arbitrated, depth_is);
   let shared = list_filter(arbitrated, shared_is);
