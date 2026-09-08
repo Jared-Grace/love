@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { g_tiles_ground_tint_depth } from "./g_tiles_ground_tint_depth.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
