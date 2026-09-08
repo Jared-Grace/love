@@ -20,6 +20,7 @@ export function app_code_lesson_expression_choose_order_reason_run(
   ("one line walked all the way down to its value, with the reason each step is the one that may go said before the step is taken: the line named first, then three rows to a step");
   ("The walk this replaced says only that one part has a value on each side. That holds on a two-operator line, where the learner can see it for themselves - the part that cannot go yet has an operator sitting inside it. On a longer line the second step is 5 - 2 + 4, where both the minus and the plus look ready, and the sentence would be asking the learner to believe something the screen does not show. So this walk gives the rule instead, which is the same rule the quiz marks by.");
   ("Three rows to a step - why, the doing, what is left - because the why is new here and a row of its own is what makes it a step of the reading rather than an aside to it. The two rows after it are the ones every walk before this one used, in the same words, so only the new row is new to read.");
+  ("A STEP WITH NOTHING TO EXPLAIN GETS TWO ROWS, AND THE WORD SO GOES WITH THE ROW IT REFERS TO. The last operator on a line was chosen over nothing, so the reason comes back empty and no why row is drawn. So we solve would then be pointing back at a row that is not there, which asks the learner to find the thing it follows from; without the why row the doing simply says itself. The one word is the whole difference, and it is decided by whether the row above was drawn rather than by counting how far down the line the walk has got - the walk cannot know that, and the reason can.");
   ("The reason is asked of the line and the part rather than worked out here, so every lesson that walks a line reads the same sentence for the same step, and so a parenthesised part is told about by its marks rather than by a rank that did not decide it.");
   ("The walk stops when the line has no operator left that may go, rather than after a counted number of steps, so the line itself says how long it is and nothing handed in can disagree with it.");
   ("A HEADING IS TAKEN: a row put above the line for a caller with something to say about this walk in particular rather than about the lesson, and no row at all when nothing is handed in. Three lessons walk two lines apiece, and the second of the two has to say how it differs from the first.");
@@ -42,13 +43,13 @@ export function app_code_lesson_expression_choose_order_reason_run(
     let step_value = app_code_expression_value(node);
     let step_text = text_to(step_value);
     let reason = app_code_expression_step_reason_of(current, node);
-    html_div_cycle_code(run, reason);
-    html_div_cycle_code(run, [
-      "So we solve ",
-      step_code,
-      " to get ",
-      step_text,
-    ]);
+    let reason_written = list_empty_not_is(reason);
+    let lead = "We solve ";
+    if (reason_written) {
+      html_div_cycle_code(run, reason);
+      lead = "So we solve ";
+    }
+    html_div_cycle_code(run, [lead, step_code, " to get ", step_text]);
     current = app_code_expression_solved(current, node);
     ready = app_code_lesson_expression_choose_order_run_remains(run, current);
   }
