@@ -28,12 +28,26 @@ export function app_g_bless_crossing_draw(layer, blocks) {
   ("It may not be TOUCHED, so a tap meant for a person standing on the crossing reaches them");
   ("and a tap meant for the ground reaches the ground.");
   ("Drawn ONCE, when the street is built. A crossing does not move and cannot be prayed for.");
+  ("There are TWO layers of paint here and the lower one is doing the harder job. The bars");
+  ("alone drew a band that did not look like the two squares it actually covers, and the");
+  ("reason is that a repeating pattern always begins with paint and always ends with the gap");
+  ("that follows the last bar. Flush on the left, short by most of a gap on the right - so a");
+  ("crossing measured exactly two squares wide read as lopsided and somewhere between one");
+  ("and two.");
+  ("A faint WASH over the whole square fixes it, because a wash has no pattern to run out of.");
+  ("Its edge is the edge of the square, so the band it makes is exactly as wide as the");
+  ("crossing is, and the bars are then decoration inside a shape that is already the right");
+  ("shape rather than the only thing saying where the shape ends.");
+  ("The bars are also CENTRED in their half of a square rather than starting at its edge,");
+  ("which spaces them evenly the whole way across: every gap between two bars is the same");
+  ("width, and the margin left at each end of the band is the same at both ends. Evenness is");
+  ("most of what a reader means by looking straight.");
   function crossing_tile_draw(tile) {
     let bars = g_img_square_div(layer, tile, "ground_tint");
     html_click_none(bars);
     html_style_assign(bars, {
       background:
-        "repeating-linear-gradient(90deg, rgba(246, 246, 238, 0.82) 0%, rgba(246, 246, 238, 0.82) 22%, rgba(246, 246, 238, 0) 22%, rgba(246, 246, 238, 0) 50%)",
+        "repeating-linear-gradient(90deg, rgba(246, 246, 238, 0) 0%, rgba(246, 246, 238, 0) 12.5%, rgba(246, 246, 238, 0.82) 12.5%, rgba(246, 246, 238, 0.82) 37.5%, rgba(246, 246, 238, 0) 37.5%, rgba(246, 246, 238, 0) 50%), linear-gradient(rgba(246, 246, 238, 0.16), rgba(246, 246, 238, 0.16))",
     });
   }
   function block_draw(block) {
