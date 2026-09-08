@@ -349,6 +349,14 @@ export function bible_glyph_chapter_references() {
       reference: "Leviticus 10",
     },
     {
+      chapter_code: "LEV11",
+      reference: "Leviticus 11",
+    },
+    {
+      chapter_code: "LEV12",
+      reference: "Leviticus 12",
+    },
+    {
       chapter_code: "LEV16",
       reference: "Leviticus 16",
     },
