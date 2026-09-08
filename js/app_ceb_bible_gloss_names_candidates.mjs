@@ -27,9 +27,9 @@ export async function app_ceb_bible_gloss_names_candidates() {
     let seen = property_get(totals, "sightings");
     let seen_more = add(seen, row_sightings);
     property_set(totals, "sightings", seen_more);
-    let silent = property_get(row, "silent");
+    let row_silent = property_get(row, "silent");
     let quiet = property_get(totals, "silent");
-    let quiet_more = add(quiet, silent);
+    let quiet_more = add(quiet, row_silent);
     property_set(totals, "silent", quiet_more);
     let declared = property_get(row, "declared");
     if (declared) {
