@@ -113,7 +113,8 @@ export function reply_proposals() {
     ],
   };
   ("The four below are one change cut along the lines of the files it lands in. Three real people's details are written into these rules today - a name, a town and a street - and each one sits in a different function, so each gets its own set of lines to read. They were measured together and the measurements below are of all four applied at once; accepting only some of them leaves one of the three still written down here.");
-  ("★ WHAT IS BEING TAKEN OUT IS SOMEBODY ELSE'S NAME AND ADDRESS OUT OF A PUBLIC REPOSITORY, AND WHAT REPLACES IT IS A RUN OF LETTERS. The rules had to be told a name before they could recognise one, so every person the rules answered was a person whose details had been published here to make it work. A run of letters recognises everybody and publishes nobody, and it is not a weakening of the rule because what decides whether a message really says where somebody is from is the country beside it, which stays a closed list.");
+  ("★ WHAT IS BEING TAKEN OUT IS SOMEBODY ELSE'S NAME AND ADDRESS OUT OF A PUBLIC REPOSITORY, AND WHAT REPLACES IT IS A DICTIONARY OF NAMES MILLIONS OF PEOPLE HAVE. The rules had to be told a name before they could recognise one, so every person the rules answered was a person whose details had been published here to make it work. A dictionary recognises a great many people and publishes nobody, because every name in it would be in it if this correspondence had never happened.");
+  ("A dictionary was chosen over the simpler thing, which was to accept any run of letters at all after a title. Any run of letters would also publish nobody, and it would recognise everybody rather than only the people whose names somebody thought to write down - but it would equally read I am pastor hungry as a name, and it would give the rules no way to tell a name from a word. The dictionary can be wrong about a person, and when it is, that person is on the list by the next commit; a rule that asks nothing can never be wrong and never be improved either.");
   let f_name9 = fn_name("reply_choices_name");
   let combined9 = text_combine_multiple(["   let response = ", f_name9, "();"]);
   let f_name10 = fn_name("reply_names");
@@ -124,11 +125,12 @@ export function reply_proposals() {
     f_name11,
     "(names);",
   ]);
-  let f_name12 = fn_name("reply_word_any");
-  let combined12 = text_combine_multiple([
+  let f_name12 = fn_name("reply_names_common");
+  let combined12 = text_combine_multiple(["+  let names = ", f_name12, "();"]);
+  let combined12b = text_combine_multiple([
     "+  let names_once_or_more = ",
-    f_name12,
-    "();",
+    f_name11,
+    "(names);",
   ]);
   let f_name13 = fn_name("reply_titles_ministry");
   let combined13 = text_combine_multiple(["   let titles = ", f_name13, "();"]);
@@ -146,7 +148,9 @@ export function reply_proposals() {
     f_name16,
     " goes with them. Deleting it is what actually takes them out of the repository - left in place unused they are still published, just unreachable.",
   ]);
-  let f_name55 = fn_name("reply_word_any");
+  let f_name55 = fn_name("reply_names_common");
+  let f_name56 = fn_name("reply_names_bible");
+  let f_name57 = fn_name("reply_names_authored");
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
     fn: fn_name("app_message_reply_iam_titled_name"),
@@ -156,6 +160,7 @@ export function reply_proposals() {
       combined10,
       combined11,
       combined12,
+      combined12b,
       combined13,
       combined14,
       combined15,
