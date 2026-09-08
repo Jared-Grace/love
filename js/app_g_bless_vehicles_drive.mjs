@@ -1,3 +1,4 @@
+import { bless_vehicle_hold_is } from "./bless_vehicle_hold_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_vehicle_pace_ms } from "./bless_vehicle_pace_ms.mjs";
