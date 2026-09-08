@@ -32,8 +32,7 @@ export function app_g_bless_pointers(pointers, everyone, remaining) {
     if (made) {
       return;
     }
-    let pointer = html_div(pointers);
-    g_img_square_style_position(pointer, person, "icon");
+    let pointer = g_img_square_div(pointers, person, "icon");
     html_style_assign(pointer, {
       display: "flex",
       "align-items": "center",

@@ -88,8 +88,7 @@ export function app_g_bless_glows(glows, everyone, lit) {
     if (made) {
       return;
     }
-    let halo = html_div(glows);
-    g_img_square_style_position(halo, person, "ground_tint");
+    let halo = g_img_square_div(glows, person, "ground_tint");
     html_click_none(halo);
     ("The light is an empty box that rides, and the gold is a circle drawn inside it. Two");
     ("elements rather than one, so that the gold can come up gradually: everything that");

@@ -34,8 +34,7 @@ export function app_g_bless_finished_bloom(div_map, middle) {
     gold,
     " 30%, rgba(255, 255, 255, 0) 70%)",
   ]);
-  let bloom = html_div(div_map);
-  g_img_square_style_position(bloom, middle, "ground_tint");
+  let bloom = g_img_square_div(div_map, middle, "ground_tint");
   html_style_assign(bloom, {
     background: background,
     "border-radius": "50%",
