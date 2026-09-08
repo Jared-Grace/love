@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_roots_claimed_gathered } from "./gloss_chapters_roots_claimed_gathered.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -99,11 +100,7 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
     list_add(listed, row);
   }
   each(root_names, root_price);
-  function sightings_of(row) {
-    let seen = property_get(row, "sightings");
-    return seen;
-  }
-  list_sort_number_mapper_reverse(listed, sightings_of);
+  list_sort_number_mapper_reverse(listed, gloss_row_sightings);
   let r = {
     chapters: property_get(gathered, "chapters"),
     roots_distinct: property_get(gathered, "roots_distinct"),
