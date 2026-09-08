@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { function_exists_assert } from "./function_exists_assert.mjs";
 import { js_call_new_expression } from "./js_call_new_expression.mjs";
 import { js_array_expression_only_elements } from "./js_array_expression_only_elements.mjs";
+import { js_declared_names } from "./js_declared_names.mjs";
 import { js_elements_names_only_assert } from "./js_elements_names_only_assert.mjs";
 import { list_add } from "./list_add.mjs";
 import { js_imports_missing_add_specified_single } from "./js_imports_missing_add_specified_single.mjs";
@@ -13,13 +14,14 @@ export async function function_list_call_add(f_name, name) {
   "The name is read as a name and refused if it is anything more, and it is checked against the functions that exist, so a register cannot come to hold a word nothing answers to - the failure that would otherwise only show up the next time somebody ran the list.";
   "It refuses a function that writes out more than one list rather than choosing between them, because a caller naming a register has exactly one list in mind and the wrong choice here is silent.";
   "IT ALSO ASKS THE LIST WHICH HALF IT WANTED, and steps back when the list is already holding names. Prose next to both halves said which was which and was still read the wrong way round, and what the mistake produced was not a wrong line but an unreadable file: a call written where a name was meant, waited for outside anything that waits, and a parser complaining about a column of a four-hundred-word line without naming the list or the command to reach for instead.";
-  "It canonicalizes afterwards and commits nothing, so the added line arrives in the shape the repo writes and lands in a commit of your own.";
+  "THE NAMES THE REGISTER BINDS FOR ITSELF GO IN WITH THE QUESTION, because without them the question cannot be answered. The canonicalizing pass lifts every call in a list out into a local, so a register holding results reads back as a column of bare words and is indistinguishable from a register holding functions until you know which of those words the file bound a line earlier. Gathering them here costs one walk of a tree already in hand.";
   arguments_assert(arguments, 2);
   await function_exists_assert(name);
   async function lambda(ast) {
     let expression = await js_call_new_expression(name, ast);
     let elements = js_array_expression_only_elements(ast);
-    js_elements_names_only_assert(elements);
+    let declared = js_declared_names(ast);
+    js_elements_names_only_assert(elements, declared);
     list_add(elements, expression);
     await js_imports_missing_add_specified_single(ast, name);
   }
