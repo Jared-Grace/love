@@ -15,9 +15,15 @@ export function app_shared_note_pill(parent, one) {
   ("A NOTE PUT OFF SAYS SO WHERE THE PART IT IS AGAINST IS SAID, in front of the words rather than after them, because the one thing a reviewer needs to know before reading a note is whether it is theirs to answer today. Said at the end it would be read after the note had already been considered, which is the reading it exists to save.");
   ("THE FLAG IS READ OFF THE NOTE AND NOTHING HERE KNOWS WHOSE NOTE IT IS. Bands are drawn for more than one kind of note and only some of those stores have any idea of a second pass; a note with nothing to say about it is drawn exactly as it always was, so a store that has never heard of putting a note off is unaffected.");
   let put_off = property_or_null(one, "deferred");
+  ("THE THING THE NOTE WAS FILED AGAINST IS SAID WITH THE PART WHEN THE NOTE CARRIES ONE. A bench whose subject can be arrowed to a different one under the same heading files notes that read alike and mean opposite things, and the number is the only thing that sorts them afterwards. It is read off the note like the other flag, so a store that never wrote one is drawn exactly as it always was.");
+  let seen = property_or_null(one, "attempt");
   let said = field;
+  if (seen) {
+    let v = String(seen);
+    said = text_combine_multiple([field, " #", v]);
+  }
   if (put_off) {
-    said = text_combine_multiple([field, " · pass two"]);
+    said = text_combine_multiple([said, " · pass two"]);
   }
   let joined = text_combine_multiple([said, " — ", words]);
   let line = html_div_text(parent, joined);

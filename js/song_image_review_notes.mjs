@@ -33,7 +33,8 @@ export function song_image_review_notes(parent, key, attempt_get) {
   }
   async function filed(field, typed) {
     let f_name = fn_name("song_image_note_add");
-    await api_read(f_name, [key, field, typed]);
+    let attempt = attempt_get();
+    await api_read(f_name, [key, field, typed, attempt]);
   }
   let bench = {
     status_set,
