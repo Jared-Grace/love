@@ -1,63 +1,18 @@
 import { gloss_chapters_affix_kinds_wrong } from "./gloss_chapters_affix_kinds_wrong.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { add } from "./add.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
-import { each } from "./each.mjs";
-import { object_values } from "./object_values.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
+import { gloss_offenders_findings_by_word } from "./gloss_offenders_findings_by_word.mjs";
 export async function gloss_affix_kinds_wrong_words_generic(fn, known) {
   "Every distinct word in one gloss store whose explanation names a piece the dictionary gives no piece of, each with the chapters it is wrong in, commonest first.";
   "The chapter view answers which chapter to sit down with. This answers how much writing there actually is, which is a different number: the same word is wrong wherever it was met, and the store's twelve hundred wrong claims are four hundred odd words.";
   "Words rather than sightings, because a word's parts do not change from one psalm to the next - the dictionary is asked about the word and knows nothing of where it was read. So one sentence written for a word is the right sentence in every chapter holding it, and writing it once is not a shortcut but the truth about the work.";
-  "The chapters are named once each and the sightings counted separately, because those are two different numbers and the file that carries a correction is keyed by chapter. A chapter named twice there is the same entry written twice.";
-  "The standing explanations are all kept rather than one being taken as typical. They differ, and a writer correcting a word wants to see what the wrong sentences had in common before deciding what the right one says.";
-  let offenders = await gloss_chapters_affix_kinds_wrong(fn, known);
-  let by_word = {};
-  function chapter_read(chapter) {
-    let chapter_code = property_get(chapter, "chapter_code");
-    let found = property_get(chapter, "found");
-    function finding_read(finding) {
-      let word = property_get(finding, "word");
-      let held = property_get_or_null(by_word, word);
-      let gathered = held;
-      if (null_is(held)) {
-        gathered = {
-          word,
-          root: property_get(finding, "root"),
-          affixes: property_get(finding, "affixes"),
-          given: property_get(finding, "given"),
-          said: property_get(finding, "said"),
-          sightings: 0,
-          chapters: [],
-          explains: [],
-        };
-        property_set(by_word, word, gathered);
-      }
-      let sightings = property_get(gathered, "sightings");
-      let value = add(sightings, 1);
-      property_set(gathered, "sightings", value);
-      let chapters = property_get(gathered, "chapters");
-      let named = list_includes(chapters, chapter_code);
-      if (not(named)) {
-        list_add(chapters, chapter_code);
-      }
-      let explain = property_get(finding, "explain");
-      let explains = property_get(gathered, "explains");
-      let seen = list_includes(explains, explain);
-      if (not(seen)) {
-        list_add(explains, explain);
-      }
-    }
-    each(found, finding_read);
+  "Every finding is kept, because this sweep only ever hands back findings of the one kind it looks for, and a reading that filtered them again would be saying there is a second kind to sort out when there is not.";
+  "The dictionary's root, its breakdown of the word, and the two lists of what each side calls the pieces all travel along, because the reader repairing one of these is choosing between them and cannot do that from the word alone.";
+  "The gathering from one row per sighting to one row per word, and the ranking that follows it, are the shared reading four other sweeps over these stores already use.";
+  function keep_is(finding) {
+    let every = true;
+    return every;
   }
-  each(offenders, chapter_read);
-  let gathered_all = object_values(by_word);
-  let r = list_sort_number_mapper_reverse(gathered_all, gloss_row_sightings);
+  let carried = ["root", "affixes", "given", "said"];
+  let offenders = await gloss_chapters_affix_kinds_wrong(fn, known);
+  let r = gloss_offenders_findings_by_word(offenders, keep_is, carried);
   return r;
 }
