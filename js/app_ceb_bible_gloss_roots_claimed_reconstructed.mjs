@@ -1,3 +1,4 @@
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -94,11 +95,7 @@ export async function app_ceb_bible_gloss_roots_claimed_reconstructed() {
     each(entries, entry_read);
   }
   await each_async(chapter_codes, chapter_read);
-  function sightings_of(row) {
-    let met = property_get(row, "sightings");
-    return met;
-  }
-  list_sort_number_mapper_reverse(rows, sightings_of);
+  list_sort_number_mapper_reverse(rows, gloss_row_sightings);
   let sightings = 0;
   function sightings_add(row) {
     let met = property_get(row, "sightings");
