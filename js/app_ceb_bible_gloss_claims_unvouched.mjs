@@ -1,10 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing_classes } from "./app_ceb_bible_gloss_roots_disagreeing_classes.mjs";
+import { app_ceb_bible_gloss_roots_disagreeing_classes_all } from "./app_ceb_bible_gloss_roots_disagreeing_classes_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
-import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
+import { list_size } from "./list_size.mjs";
 import { gloss_classes_claimed_unvouched } from "./gloss_classes_claimed_unvouched.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
@@ -18,11 +18,8 @@ export async function app_ceb_bible_gloss_claims_unvouched(sample_size) {
   "$plain sample_size";
   "how many classes to draw from, said as text as readily as as a number. It names nothing that runs.";
   arguments_assert(arguments, 1);
-  let everything = "all";
-  let gathered = await app_ceb_bible_gloss_roots_disagreeing_classes(
-    everything,
-    sample_size,
-  );
+  let gathered =
+    await app_ceb_bible_gloss_roots_disagreeing_classes_all(sample_size);
   let classes = property_get(gathered, "classes");
   let known = await binisaya_words_known();
   let vouched = binisaya_words_known_roots_named(known);
