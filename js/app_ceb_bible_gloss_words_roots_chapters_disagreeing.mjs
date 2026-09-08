@@ -128,8 +128,8 @@ export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
     return outside_chapter;
   }
   function row_apart_is(row) {
-    let apart = property_equals(row, "relation", "apart");
-    return apart;
+    let relation_apart = property_equals(row, "relation", "apart");
+    return relation_apart;
   }
   let across_only = list_filter(disagreeing, row_across_only_is);
   let apart = list_filter(across_only, row_apart_is);
