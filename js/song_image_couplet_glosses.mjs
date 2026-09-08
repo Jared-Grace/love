@@ -49,7 +49,7 @@ export function song_image_couplet_glosses() {
         "Described in part. The nails are in John 20:25. That there were three of them is church tradition rather than Scripture, which never counts them; the count is kept because it is what a viewer already reads as this.",
     },
     6: {
-      kept: 30,
+      kept: 31,
       lyric_ref: "1 Corinthians 1:23, Ephesians 1:7, Colossians 1:14",
       lyric_explain:
         "Paul says we preach CHRIST crucified, and that in HIM we have redemption through HIS blood, the forgiveness of sins. The couplet says what the cross was for rather than what happened on it.",
@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 13,
+      kept: 15,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -113,7 +113,7 @@ export function song_image_couplet_glosses() {
         "Described. HIS sweat was as it were great drops of blood falling down to the ground is Luke 22:44, and the drops and the ground are both in that clause. It replaced an olive press, which was the meaning of the place name rather than a thing any verse pictures - and a press of the oldest kind is a round stone in a trough, which almost nobody reads as a press even when it is drawn correctly. The two drawings of it read as a washtub. So the verse's own object is drawn instead, and the claim moves from named to described.",
     },
     14: {
-      kept: 17,
+      kept: 20,
       lyric_ref: "Luke 23:46, Mark 15:37, Matthew 27:51",
       lyric_explain:
         "Father, into thy hands I commend my spirit: and having said thus, HE gave up the ghost. Matthew puts the tearing of the veil in the same breath as the death.",
@@ -121,7 +121,7 @@ export function song_image_couplet_glosses() {
         "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
-      kept: 16,
+      kept: 19,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 280,
+      kept: 281,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 16,
+      kept: 19,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 10,
+      kept: 15,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",

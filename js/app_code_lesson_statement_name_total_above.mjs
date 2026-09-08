@@ -1,20 +1,20 @@
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
-import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { app_code_lesson_statement_name_third } from "./app_code_lesson_statement_name_third.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
+import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code } from "./html_div_code.mjs";
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
+import { html_div_code } from "./html_div_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 export function app_code_lesson_statement_name_total_above(root) {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 1);
@@ -33,7 +33,9 @@ export function app_code_lesson_statement_name_total_above(root) {
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
   let box_remember = app_code_container_light_blue(root);
-  html_div_cycle_code(box_remember, ["Remember, we can give a number a name"]);
+  html_div_cycle_code(box_remember, [
+    "Remember, we can give names to numbers:",
+  ]);
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
@@ -47,7 +49,7 @@ export function app_code_lesson_statement_name_total_above(root) {
   ]);
   let code_total = js_code_let_statement(name_total, names_sum);
   html_div_code(box_named, code_total);
-  html_div_cycle_code(box_named, ["Then we can write that name on its own"]);
+  html_div_cycle_code(box_named, ["Then we can write that name on its own:"]);
   let logged = js_code_console_log_statement(name_total);
   app_code_code_lines_writes_out(box_named, [logged], total);
   ("Then rather than now, because the two lines happen one after the other and that order is the whole of what a program is. Now says only that the second line is available; then says it comes after.");
