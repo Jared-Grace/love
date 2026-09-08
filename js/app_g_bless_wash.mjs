@@ -4,9 +4,7 @@ import { bless_cone_ahead_across } from "./bless_cone_ahead_across.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { g_img_square_style_position } from "./g_img_square_style_position.mjs";
 import { app_g_bless_color_looking } from "./app_g_bless_color_looking.mjs";
 import { bless_cone_tiles } from "./bless_cone_tiles.mjs";
 export function app_g_bless_wash(wash, cone) {
