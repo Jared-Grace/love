@@ -297,8 +297,28 @@ export function bible_glyph_chapter_references() {
       reference: "Exodus 37",
     },
     {
+      chapter_code: "EXO38",
+      reference: "Exodus 38",
+    },
+    {
+      chapter_code: "EXO39",
+      reference: "Exodus 39",
+    },
+    {
       chapter_code: "EXO40",
       reference: "Exodus 40",
+    },
+    {
+      chapter_code: "LEV01",
+      reference: "Leviticus 1",
+    },
+    {
+      chapter_code: "LEV02",
+      reference: "Leviticus 2",
+    },
+    {
+      chapter_code: "LEV03",
+      reference: "Leviticus 3",
     },
     {
       chapter_code: "LEV16",
