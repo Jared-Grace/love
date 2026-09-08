@@ -12,10 +12,7 @@ import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_root_named_reversed_is } from "./gloss_root_named_reversed_is.mjs";
 import { text_punctuation_edges_removed } from "./text_punctuation_edges_removed.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
+import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { list_take } from "./list_take.mjs";
@@ -73,23 +70,7 @@ export async function app_ceb_bible_gloss_root_reversed_shape_counted(
     }
     reversed = add(reversed, 1);
     let root = text_punctuation_edges_removed(token);
-    let row = property_get_or_null(by_root, root);
-    let fresh = null_is(row);
-    if (fresh) {
-      let made = {
-        named_root: root,
-        sightings: 0,
-        words: [],
-        explain: explain,
-      };
-      property_set(by_root, root, made);
-      row = made;
-    }
-    let seen = property_get(row, "sightings");
-    let value = add(seen, 1);
-    property_set(row, "sightings", value);
-    let words = property_get(row, "words");
-    list_add_if_not_includes(words, word);
+    gloss_root_row_note(by_root, root, word, explain);
   }
   await gloss_chapters_roots_named_entries_generic(fn, entry_read);
   let listed = gloss_rows_ranked(by_root);

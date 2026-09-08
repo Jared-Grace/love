@@ -79,7 +79,7 @@ export function app_code_lesson_statement_name_total_above(root) {
   html_div_cycle_code(box_same, [
     "And ",
     name_total,
-    " would be the same either way because ",
+    " would have the same value either way because ",
     equality,
   ]);
 }
