@@ -1192,7 +1192,7 @@ export function bible_glyph_chapter_jhn01() {
         words: [
           "$plus",
           "He",
-          "declared,",
+          "$speech,",
           "“$check,",
           "$check,",
           "I",
