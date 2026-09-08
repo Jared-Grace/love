@@ -19,7 +19,7 @@ import { song_image_audit_picture_number } from "./song_image_audit_picture_numb
 import { song_image_text_quiet_line } from "./song_image_text_quiet_line.mjs";
 import { song_image_audit_picture_on } from "./song_image_audit_picture_on.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
-export function song_image_audit_picture(parent, key, kept) {
+export function song_image_audit_picture(parent, key, kept, open_on) {
   "one couplet's picture with a row of controls above it - an arrow at each side, the attempt's number in a box that can be typed into, and a keep press - so every attempt that was ever drawn for that couplet can be looked at rather than only the one being kept";
   "the number under the picture is the attempt's own number and not a fresh label, because that number is already the name of the file it came from and already the number written in the table as kept. A page that lettered them a to g would be inventing a second name for a thing that has one, and the moment somebody said try b nobody could tell which file they meant.";
   "it opens on the kept attempt rather than on the first, because the kept one is what the film shows and every other one is being offered as an alternative to it. Opening on the first would make the page argue for a picture nobody chose.";
@@ -36,7 +36,8 @@ export function song_image_audit_picture(parent, key, kept) {
     " hand back is a wrapped component and not the element itself. Writing picture.src on the wrapper is accepted in silence: the property lands on the wrapper, nothing throws, no gate goes red, and the arrows move the number under the picture while the picture never changes at all - which is exactly how this was found, by a human clicking them.");
   let known = song_image_drawn_attempts_known();
   let attempts = song_image_audit_picture_attempts(key, known, kept);
-  let shown = song_image_audit_picture_shown(attempts, kept);
+  "WHICH ATTEMPT IT OPENS ON IS ASKED FOR AND IS NOT ALWAYS THE KEPT ONE. The audit page opens on the kept one because that is the picture the film shows and every other one is being offered against it. A review page is the other way round: the reader has come to look at what was drawn since, and opening on the kept one shows them the picture their last round of notes was already about. Measured 2026-09-08: nine couplets were redrawn and the page opened on the older kept one for all nine, so the notes that came back described the pictures the redraws had replaced.";
+  let shown = song_image_audit_picture_shown(attempts, open_on);
   let strip = song_image_audit_picture_strip(parent);
   let src = song_image_drawn_url(key, attempts[shown]);
   let picture = html_img(parent, src);
