@@ -9,8 +9,7 @@ import { add } from "./add.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_map } from "./list_map.mjs";
+import { object_values } from "./object_values.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export function gloss_offenders_word_explanations(offenders, word) {
   "Everything the app has ever said about one word, gathered by the wording rather than by the chapter: each explanation once, what root it claimed, and which chapters it stands in.";
@@ -68,12 +67,7 @@ export function gloss_offenders_word_explanations(offenders, word) {
     each(found, found_read);
   }
   each(offenders, offender_read);
-  let wordings = object_property_names(by_wording);
-  function wording_row(explain) {
-    let row = property_get(by_wording, explain);
-    return row;
-  }
-  let rows = list_map(wordings, wording_row);
+  let rows = object_values(by_wording);
   function row_count(row) {
     let count = property_get(row, "count");
     return count;

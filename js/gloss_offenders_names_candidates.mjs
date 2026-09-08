@@ -1,4 +1,3 @@
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -13,9 +12,9 @@ import { add } from "./add.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_explain_name_said } from "./gloss_explain_name_said.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_map } from "./list_map.mjs";
+import { object_values } from "./object_values.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 export function gloss_offenders_names_candidates(offenders) {
   "The words in the findings that are written with a capital every time they appear, each with the root the dictionary handed back and whether the app's own sentence calls the word a name: the sheet a person marks the proper names off once.";
   "A proper name has no Cebuano root, so every finding against one is the dictionary answering a question it was never asked - Cefas fetching sipa, Zenas fetching sina, Gideon fetching dili, which means not. Those findings can never be settled by reading the app's explanation, because the explanation is right. They are settled by somebody saying once that the word is a name, and that decision has to be authored and stored rather than guessed at each run.";
@@ -93,12 +92,7 @@ export function gloss_offenders_names_candidates(offenders) {
     each(found, found_read);
   }
   each(offenders, offender_read);
-  let names = object_property_names(by_word);
-  function name_row(key) {
-    let row = property_get(by_word, key);
-    return row;
-  }
-  let rows = list_map(names, name_row);
+  let rows = object_values(by_word);
   let ranked = list_sort_number_mapper_reverse(rows, gloss_row_sightings);
   return ranked;
 }
