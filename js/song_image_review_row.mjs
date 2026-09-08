@@ -1,3 +1,4 @@
+import { song_image_drawn_attempt_newest } from "./song_image_drawn_attempt_newest.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
 import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
@@ -16,9 +17,14 @@ export function song_image_review_row(parent, asked) {
   let couplet = song_image_couplet_get(asked.n);
   let gloss = song_image_couplet_gloss(asked.n);
   let drawn = song_image_couplet_key(asked.n);
-  "IT OPENS ON THE NEWEST ATTEMPT AND NOT ON THE KEPT ONE, because this page exists to look at what has been drawn since the last round of notes. Opening on the kept one showed the reader the picture their previous notes were already about, and the notes that came back were then indistinguishable from the ones they were meant to replace.";
+  ("IT OPENS ON THE NEWEST ATTEMPT AND NOT ON THE KEPT ONE, because this page exists to look at what has been drawn since the last round of notes. Opening on the kept one showed the reader the picture their previous notes were already about, and the notes that came back were then indistinguishable from the ones they were meant to replace.");
   let newest = song_image_drawn_attempt_newest(drawn);
-  let columns = song_image_row_picture_columns(parent, drawn, gloss.kept, newest);
+  let columns = song_image_row_picture_columns(
+    parent,
+    drawn,
+    gloss.kept,
+    newest,
+  );
   let head = song_image_text_quiet_line(columns.right);
   let numbers = "verse " + couplet.verse + " · couplet " + asked.n;
   html_text_set(head, numbers);
