@@ -14,7 +14,7 @@ export function app_index_main_fns() {
     },
     {
       app_fn: fn_name("app_emoji_bible"),
-      text: "Shows the Bible drawn in pictures instead of words, so a chapter can be read without knowing the language it is written in - some chapters so far",
+      text: "Shows the Bible drawn in pictures instead of words, so a chapter can be read without knowing the language it is written in",
     },
     {
       app_fn: fn_name("app_search"),
