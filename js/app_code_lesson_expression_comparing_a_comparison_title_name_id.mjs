@@ -10,7 +10,7 @@ export function app_code_lesson_expression_comparing_a_comparison_title_name_id(
   function paint(parent) {
     let t = js_keyword_true();
     let f = js_keyword_false();
-    html_cycle_code(parent, ["comparing a comparison with ", t, " or ", f]);
+    html_cycle_code(parent, ["Comparing a comparison with ", t, " or ", f]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

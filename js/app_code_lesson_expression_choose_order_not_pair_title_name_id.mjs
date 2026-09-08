@@ -16,7 +16,7 @@ export function app_code_lesson_expression_choose_order_not_pair_title_name_id()
     let left_parenthesis = js_code_parenthesis_left();
     let right_parenthesis = js_code_parenthesis_right();
     let piece = text_combine_multiple([symbol, left_parenthesis, right_parenthesis]);
-    html_cycle_code(parent, ["solving inside ", piece]);
+    html_cycle_code(parent, ["Solving inside ", piece]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

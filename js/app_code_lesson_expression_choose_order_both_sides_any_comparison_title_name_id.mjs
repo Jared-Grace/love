@@ -6,7 +6,7 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
   arguments_assert(arguments, 0);
   ("the home title: solving both sides of a line one step at a time whatever comparison stands between them, an Expressions lesson");
   function paint(parent) {
-    html_cycle_code(parent, ["solving both sides with any comparison"]);
+    html_cycle_code(parent, ["Solving both sides with any comparison"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

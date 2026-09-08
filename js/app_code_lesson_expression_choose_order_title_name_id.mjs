@@ -6,7 +6,7 @@ export function app_code_lesson_expression_choose_order_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: choosing which operator to work out first, and then the next, an Expressions lesson");
   function paint(parent) {
-    html_cycle_code(parent, ["choosing the order to solve in"]);
+    html_cycle_code(parent, ["Choosing the order to solve in"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

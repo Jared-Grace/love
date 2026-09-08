@@ -6,7 +6,7 @@ export function app_code_lesson_expression_arithmetic_less_than_title_name_id() 
   arguments_assert(arguments, 0);
   ("the home title is arithmetic comparisons, an Expressions lesson; the id string stays 'arithmetic less than' so a student's saved progress on this lesson is unchanged");
   function paint(parent) {
-    html_span_text(parent, "arithmetic comparisons");
+    html_span_text(parent, "Arithmetic comparisons");
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

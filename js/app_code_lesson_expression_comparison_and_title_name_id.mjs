@@ -6,7 +6,7 @@ export function app_code_lesson_expression_comparison_and_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: comparison inside &&, an Expressions lesson. The title paints the symbol rather than the word and, because the lesson is about the symbol - the word is only what the URL name is spelled with, where a symbol cannot go");
   function paint(parent) {
-    html_cycle_code(parent, ["comparison inside ", "&&"]);
+    html_cycle_code(parent, ["Comparison inside ", "&&"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

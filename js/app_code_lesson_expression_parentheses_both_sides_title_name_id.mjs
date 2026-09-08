@@ -15,7 +15,7 @@ export function app_code_lesson_expression_parentheses_both_sides_title_name_id(
       fn_name("app_code_comparison_side"),
       " draws from all four. It used to read === / !== inside ( and ) on both sides, which was wrong twice over: those two are the OUTER operator, sitting between the two parenthesised groups and never in them, and the two it left out are half the operators the lesson actually shows");
     html_cycle_code(parent, [
-      "a comparison inside ",
+      "A comparison inside ",
       open,
       " and ",
       close,

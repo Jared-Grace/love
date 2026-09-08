@@ -25,7 +25,7 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_title
       and_symbol,
       or_symbol,
     );
-    html_cycle_code(parent, ["moving ", pair, " in ", shape]);
+    html_cycle_code(parent, ["Moving ", pair, " in ", shape]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

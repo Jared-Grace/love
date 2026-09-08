@@ -6,7 +6,7 @@ export function app_code_lesson_expression_choose_order_both_sides_title_name_id
   arguments_assert(arguments, 0);
   ("the home title: solving a line with arithmetic on both sides of a comparison one step at a time, an Expressions lesson");
   function paint(parent) {
-    html_cycle_code(parent, ["solving both sides step by step"]);
+    html_cycle_code(parent, ["Solving both sides step by step"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
