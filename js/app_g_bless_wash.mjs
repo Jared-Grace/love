@@ -1,3 +1,4 @@
+import { g_img_square_div } from "./g_img_square_div.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_cone_ahead_across } from "./bless_cone_ahead_across.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
