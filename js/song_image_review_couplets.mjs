@@ -9,50 +9,52 @@ export function song_image_review_couplets() {
   "IF THE READER ASKED A QUESTION, THE NOTE ANSWERS IT BEFORE IT SAYS ANYTHING ELSE. Four couplets were asked what was wrong with the drawing being replaced and all four got a fresh wording instead of an answer, which is the one reply that cannot be checked - a reader who is told why is able to say no, and a reader handed a new picture can only start again. The question is also worth taking literally: on three of the four the honest answer was that nothing was wrong with it and the replacement was somebody's unasked judgement.";
   "EVERY ATTEMPT STORES THE WORDING IT WAS DRAWN FROM, IN ITS OWN JSON BESIDE THE PNG, AND THAT IS WHAT A PICTURE IS JUDGED AGAINST. Couplet 24 was called a failure for having no open tomb in it, when the symbol in force when it was drawn asked for the tomb sealed and the light coming out past the sealing stone - so it had obeyed exactly. A window whose design has been changed once will have older drawings that are faithful to the older design and newer ones faithful to the newer, and judging both against whatever is in the file today marks the faithful ones wrong. Read the attempt json first.";
   "A DRAWING KEPT FROM BEFORE A WORDING CHANGED IS NOT EVIDENCE ABOUT THAT WORDING. Couplet 18 was reported as having no halo and no scroll while its symbol asked for both, because the kept attempt predated the scroll being written in at all. Before reading a fault off a picture, check that the picture was drawn from the words now in the file.";
+  "THE NOTE NOW CARRIES THE ATTEMPT THAT WAS ON SCREEN WHEN IT WAS FILED, AND THAT NUMBER IS PART OF THE NOTE. Couplet 7 was asked to have its white hills recoloured and the kept drawing had no white in it anywhere; the note had been filed while the arrows were back on an older attempt. Three edits were spent on that older picture before the number was read. Read the attempt on the note before reading the fault.";
+  "AN EDIT CAN RECOLOUR A REGION AND CANNOT REMOVE A THING, and that is now four failures wide rather than a guess. A rod, a set of lead lines across a veil, the same lead lines across a set of rays, and a stripe of white glass all survived instructions that named them and said to take them out; every recolouring asked for in the same round landed. So a note asking for a colour is answerable inside the picture the reader is looking at, and a note asking for something to go needs the words changing and a fresh drawing.";
   let couplets = [
     {
       n: 6,
-      note: "Your wording is in the couplet now: the cross is a lighter brown and the field behind it is crimson and ruby. Nothing had to change in the shared sheet - this couplet asks for the lighter shade by name, which is the one way a picture is allowed to step outside the rules. Still wrong: the field came back as three red bands rather than two, so the crossbar sits on a seam.",
+      note: "Yes - it is black outside the border now, and that was an edit, so the arch, the cross and all three red bands are the same pixels you saw. Worth knowing: the shared sheet already asks for black out to all four edges, so this drawing had simply disobeyed it and no rule had to change. Still wrong: the cross came out a shade more olive than brown.",
     },
     {
       n: 7,
-      note: "Your note is answered: the tall cross now runs up into the head of the arch, well above the upper lead line, so it no longer stops at the seam. The hill is deep emerald rather than lime. That second fix was an edit and not a redraw - the three crosses, the blue and every lead line are the same pixels as before it. That is the new thing on this page and it changes what a note can buy.",
+      note: "Your note was filed on attempt 6 and the kept one is 15, which has no white in it anywhere except the border - so there are no white hills left to recolour. I spent three edits on 6 before I read the number, and all three missed the white and moved the sky instead. Nothing here changed. Arrow back and forward and tell me which of the two you want.",
     },
     {
       n: 9,
-      note: "The white bottom band is gone. I did not change this couplet - the fault was the four exceptions in the shared sheet, which are now said once at the end instead of beside each rule they qualify. Nothing else here moved, so if you liked the rest of it before, it is the same rest.",
+      note: "Yes - the wide white pane behind the two drops is a light sky blue now. It was an edit, so the spearhead, both drops, the dark blue panes and the green are exactly as they were. The first try also lightened the blue band and turned the border into grey stone, so this is the second one. Light blue is outside the eight colours; I changed no rule, the edit just paints it.",
     },
     {
       n: 11,
-      note: "The black is gone. Every black pane is deep crimson now, and the ram, the thorns, the crown and the halo are untouched, because this was an edit of the picture you saw rather than a fresh drawing. Answering your note: the ghost was the white ram on black, and crimson is a colour this couplet already named. The white border is still there, since the shared sheet puts one on every window.",
+      note: "Both asks failed and the picture is unchanged. Black outside the frame is already what the shared sheet asks for, so this drawing had disobeyed it - but one edit blackened the whole field and one turned the corners yellow and blue. Two fresh draws came back worse again, one all black and one with no thorns, no crown and no halo. The curved lead lines I have not tried; say if more draws are worth it.",
     },
     {
       n: 14,
-      note: "Answering your question: it does now. All four veil stripes are there - cobalt, violet, ruby and white - against the emerald field I named so the white one would stand clear of it. Still wrong: it hangs from a rod nobody asked for. I tried to edit the rod out and the edit ignored me, so that one needs the words changing rather than a repair.",
+      note: "The white background is a light sky blue now and the veil keeps all four stripes. It was an edit, so the veil, the rod and the arch head are the same pixels. The lines across the veil I could not remove - that is the fourth removal an edit has refused, so removal looks to be outside what it can do at all. Taking them out needs the words changed and a fresh drawing.",
     },
     {
       n: 15,
-      note: "Both notes are answered. The flame is on the bare blade only, and the white background is gone. I tried twice to slim the fat sheath by editing: one attempt deleted it altogether and one left the blade showing through it, and the symbol says half sheathed, so I kept the faithful one. Arrow forward to see the slim one if you would rather have it.",
+      note: "Done - the fire runs the whole length of the sword now, both sides, crossguard down to the point, the way 15 had it. It was an edit of the picture you were on, so the blade, the crossguard, the sheath and the blue field are unchanged. The sheath is still there because the symbol says half sheathed.",
     },
     {
       n: 24,
-      note: "Answering your question: 260 was closest to what you described, and the one thing wrong with it was that it was not a window - no arch, no field, no lead lines, and photographic stone. This one has the window back, and the stone is flat glass now because I edited it rather than drawing it again, so the rays and the glow are the same ones you saw. The signature mark in the corner is gone too.",
+      note: "Yes - the photographic one has the white stone arch round it now, with black outside. Nothing inside it changed: the rolled stone, the glow, every ray colour and the sky are the same pixels. This is the only window in the set that is photographic, which the shared sheet forbids everywhere else. Say whether it stays the exception or the rest come to meet it.",
     },
     {
       n: 25,
-      note: "Answering your question: 115 has everything you asked for - seven crowns, all different, no flowers, standing clear of the field. The one thing wrong is that every crown is gold, and gold is not among the eight colours the sheet allows, so it gets drawn as ruby or white glass instead. I have not changed the wording or redrawn it. Tell me whether gold is worth an exception and I will write one.",
+      note: "Taking your answer literally, nothing needed doing and nothing changed. The crowns already differ by shape and by the colour of the jewels in them, which is what you said made them different. I have written the exception into the shared sheet: a crown may be gold, and where several stand together they are gold and told apart by jewels from the eight colours. That is the only gold allowed anywhere outside the Scripture.",
     },
     {
       n: 26,
-      note: "All four of your notes are answered. Six rays instead of three, five of the six carrying colour, and each one comes to a point where it meets the cloud and widens like a wedge as it falls. Still wrong: the sky is a light blue that is not among the eight colours, so the sheet ignores that word and the service picks its own.",
+      note: "Not done, and the kept picture is unchanged. An unbroken ray never cut by a lead line is already asked for twice, once in this couplet and once in the shared sheet, and it is drawn across anyway. One fresh draw did come back with the lines gone and its sky went black instead - arrow forward for it. Glowing rays are a bigger question: the sheet forbids shading, gradient and highlight on all thirty-six.",
     },
     {
       n: 32,
-      note: "There is no cross in this couplet at all. Its words name a river, two trees on the banks and a pale amethyst field, and nothing else - so the red cross you are describing was invented by the drawing service and there is no wording behind it to fix. I have changed nothing here. If you want a cross at the head of the river, say so and I will write one in.",
+      note: "Done the second way you offered: the cross and the rays behind it are white now and nothing red is left. It was an edit, so the two trees, the river, the field and the sky are the same pixels you saw. The cross is still something the drawing invented - your words name only the river, the two trees and the pale amethyst field.",
     },
     {
       n: 33,
-      note: "Correcting myself: I had the wrong picture kept, and 10 is the one you were looking at, so it is kept now. Answering your note: the white you named is not asked for anywhere in this couplet. I tried three edits to take it out and all three ate part of the teardrop instead, so it is still there. This one needs the words changing rather than a repair.",
+      note: "Done - the panes behind the teardrop are deep crimson at the top and violet at the sides, and the teardrop itself is untouched. It was an edit, which is why the drop survived this time; three earlier tries had all eaten part of it. The green at the foot and the white border are unchanged.",
     },
   ];
   return couplets;
