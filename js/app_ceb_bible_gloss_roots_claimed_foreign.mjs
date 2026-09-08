@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_names_apart } from "./bible_words_names_apart.mjs";
-import { property_get } from "./property_get.mjs";
+import { bible_words_common } from "./bible_words_common.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
+import { property_get } from "./property_get.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { null_is } from "./null_is.mjs";
@@ -25,8 +25,7 @@ export async function app_ceb_bible_gloss_roots_claimed_foreign() {
   "The two vocabularies are read before the store is walked rather than after, because the walk now carries the reading with it and a reading cannot ask a vocabulary that has not arrived. Neither read writes anything, so which of them goes first is a matter of what the next line needs.";
   arguments_assert(arguments, 0);
   let bible_folder = ebible_folder_cebuano();
-  let apart = await bible_words_names_apart(bible_folder);
-  let common = property_get(apart, "common");
+  let common = await bible_words_common(bible_folder);
   let vocabulary = list_unique_set(common);
   let known = await binisaya_words_known();
   let listed = [];
