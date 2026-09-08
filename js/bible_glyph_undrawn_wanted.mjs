@@ -73,7 +73,7 @@ export function bible_glyph_undrawn_wanted() {
       wordings_for: 254,
       wordings_total: 424,
       because:
-        "the wording this number takes most often is command. The mouth of a person, the mouth of a cave, the edge of a sword and the word that comes out of a mouth are one word here, and a mouth picture claims the body part on all of them.",
+        "the wording this number takes most often is command. The mouth of a person, the mouth of a cave, the edge of a sword and the word that comes out of a mouth are one word here, and a mouth picture claims the body part on all of them. The mark is also already taken, which was found on the fifth chapter of Exodus and not by measuring: the mouth is what the root table gives the verb to speak, so seating peh there would put two roots on one picture, which is the one fault the alphabet may not have. Both halves of the two question rule refuse this word, and either one alone would have been enough.",
     },
     {
       gloss: "iniquity",
