@@ -149,12 +149,12 @@ export function reply_proposals() {
     " goes with them. Deleting it is what actually takes them out of the repository - left in place unused they are still published, just unreachable.",
   ]);
   let f_name55 = fn_name("reply_names_common");
-  let f_name56 = fn_name("reply_names_bible");
-  let f_name57 = fn_name("reply_names_authored");
+  let f_name_bible = fn_name("reply_names_bible");
+  let f_name_authored = fn_name("reply_names_authored");
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
     fn: fn_name("app_message_reply_iam_titled_name"),
-    whole: [f_name55],
+    whole: [f_name55, f_name_bible, f_name_authored],
     diff: [
       combined9,
       combined10,
@@ -191,7 +191,9 @@ export function reply_proposals() {
     ],
     decide: [
       combined16,
-      "a title is still required in front of the name, so evangelist Grace is recognised and a bare Grace is not. That is deliberate, because a run of letters after I am with no title matches every message ever sent. Should a bare name after I am be answered too, and if so on the strength of what beside it?",
+      "a title is still required in front of the name, so evangelist Grace is recognised and a bare Grace is not. That was deliberate while any run of letters counted as a name, because a run of letters after I am matches every message ever sent. It need not stay that way now. A dictionary does not match I am hungry, so the title could be dropped and a bare Grace answered on the strength of the dictionary alone. Should it be?",
+      "the dictionary is two thousand one hundred and sixty five names as of 2026-09-08, and it costs about a sixth of a second to read one message against it, measured on a full sentence rather than a short one. That is the whole price of the change and it is paid per message.",
+      "the list is short of somebody, always. What is wanted is a way of noticing that - a message that was answered as though it said nothing when a person plainly gave a name - because otherwise the only person who finds out is the one who got the wrong reply.",
       "the messages above are made up in the shape of real ones rather than quoted from them, because the real ones are the thing being taken out of here.",
     ],
   };
