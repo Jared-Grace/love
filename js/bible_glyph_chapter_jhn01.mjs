@@ -859,7 +859,7 @@ export function bible_glyph_chapter_jhn01() {
           "saw",
           "$pointing_back",
           "following,",
-          "$plus",
+          "and",
           "$speech",
           "to",
           "$pointing_back,",
