@@ -1,5 +1,5 @@
+import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
-import { gloss_chapter_passages_collect_generic } from "./gloss_chapter_passages_collect_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
@@ -23,15 +23,7 @@ export async function gloss_chapter_entries_explain_rewrite_generic(
   "the code is a chapter's name, like ROM15, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "The two readings are kept apart because they answer different questions. One says which entries are being talked about; the other says what should stand there instead. Folding them together would mean every entry of the store had to be handed to a reading that only a handful of them concern.";
   "An explanation that comes back the same as the one already there counts as no change, so the chapter is only written when a word really moved. That is what stops a run over an already-repaired store rewriting every file it reads and burying the next reader in a diff that says nothing.";
-  function passage_pass(passage) {
-    let one = [passage];
-    return one;
-  }
-  let read = await gloss_chapter_passages_collect_generic(
-    chapter_code,
-    fn,
-    passage_pass,
-  );
+  let read = await gloss_chapter_passages_collect_all(chapter_code, fn);
   let passages = property_get(read, "collected");
   let key = gloss_entry_explain_key();
   let changes = [];
