@@ -1,5 +1,5 @@
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
-import { gloss_chapter_place_bound_wrong } from "./gloss_chapter_place_bound_wrong.mjs";
+import { gloss_chapter_capital_claim_wrong } from "./gloss_chapter_capital_claim_wrong.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
@@ -15,7 +15,7 @@ export async function gloss_chapters_place_bound_wrong(
   "Every chapter is judged on its own and the answers are added, rather than the store being heaped into one list, because a chapter is what a reader goes down in one sitting and the fault is a sentence that is false where it stands.";
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
-    let found = await gloss_chapter_place_bound_wrong(
+    let found = await gloss_chapter_capital_claim_wrong(
       chapter_code,
       fn,
       lambda$place_bound_is,

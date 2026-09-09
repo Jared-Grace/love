@@ -1,6 +1,6 @@
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_place_bound_wrong } from "./gloss_entries_place_bound_wrong.mjs";
-export async function gloss_chapter_place_bound_wrong(
+export async function gloss_chapter_capital_claim_wrong(
   chapter_code,
   fn,
   lambda$place_bound_is,
