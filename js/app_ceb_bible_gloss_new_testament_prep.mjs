@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_bible_folder } from "./app_ceb_bible_gloss_bible_folder.mjs";
 import { words_capitalised_always } from "./words_capitalised_always.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { app_ceb_bible_gloss_new_testament_prep_counted } from "./app_ceb_bible_gloss_new_testament_prep_counted.mjs";
@@ -6,10 +7,8 @@ import { property_null_is } from "./property_null_is.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { app_ceb_bible_gloss_chapters_absent } from "./app_ceb_bible_gloss_chapters_absent.mjs";
-import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "./app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapters_bible_words_distinct } from "./gloss_chapters_bible_words_distinct.mjs";
-import { list_first } from "./list_first.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
@@ -20,8 +19,7 @@ export async function app_ceb_bible_gloss_new_testament_prep() {
   "Only one of the counts is free, and it is the words already asked about. Everything else has to be asked of a website one word at a time with a wait between, which is the only part of this measured in hours. The other three counts say what that remainder is made of - how much of it looks like names, how much of it the printed dictionary also carries - which is worth knowing while planning and is not a reason to leave any of it unasked.";
   "A word the text never once writes without a capital is taken for a name. Across this many chapters an ordinary word stands mid-sentence somewhere, so the ones left capitalised throughout are the names - a test the text answers itself, where a list of names written out here would go stale the moment a book was added.";
   "Every one of the four is only ever counted here and never dropped from the asking. The guess about names is good enough to say roughly how much of the remaining work is names, and nowhere near good enough to decide that a particular word is one and never look it up - so it says the shape of the cost and settles nothing. What will actually be asked for is the last count, which is everything not yet asked about whatever else is true of it.";
-  let bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
-  let bible_folder = list_first(bible_folders);
+  let bible_folder = app_ceb_bible_gloss_bible_folder();
   let absent = await app_ceb_bible_gloss_chapters_absent();
   let chapter_codes = property_get(absent, "chapter_codes");
   let written = await gloss_chapters_bible_words_distinct(
