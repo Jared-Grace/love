@@ -1,16 +1,9 @@
-import { app_ceb_bible_gloss_roots_silence_causes_reachable_now } from "./app_ceb_bible_gloss_roots_silence_causes_reachable_now.mjs";
+import { app_ceb_bible_gloss_roots_silence_causes_sightings } from "./app_ceb_bible_gloss_roots_silence_causes_sightings.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing_classes_all } from "./app_ceb_bible_gloss_roots_disagreeing_classes_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
-import { gloss_classes_backing_mark } from "./gloss_classes_backing_mark.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { add } from "./add.mjs";
-import { property_set } from "./property_set.mjs";
-import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   "The disagreements the dictionary said nothing about, split by why it said nothing, with the ones already answerable on this machine listed out.";
@@ -27,33 +20,17 @@ export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   let classes = property_get(gathered, "classes");
   let known = await binisaya_words_known();
   let folded_index = binisaya_words_known_folded_index(known);
-  let marked = gloss_classes_backing_mark(classes, known);
-  function silent_is(one_class) {
-    let backing = property_get_or_null(one_class, "backing");
-    let answer = equal(backing, "silent");
-    return answer;
-  }
-  let silent = list_filter(marked, silent_is);
-  let totals = {
-    silent: 0,
-  };
-  function sighting_add(one_class) {
-    let count = property_get(one_class, "count");
-    let so_far = property_get(totals, "silent");
-    let total = add(so_far, count);
-    property_set(totals, "silent", total);
-  }
-  each(silent, sighting_add);
-  let by_cause = {};
-  let r2 = app_ceb_bible_gloss_roots_silence_causes_reachable_now(
+  let r2 = app_ceb_bible_gloss_roots_silence_causes_sightings(
+    classes,
     known,
     folded_index,
-    by_cause,
-    silent,
   );
-  let reachable_now = property_get(r2, "reachable_now");
-  let classes_counted = property_get(r2, "classes_counted");
   let sightings = property_get(r2, "sightings");
+  let classes_counted = property_get(r2, "classes_counted");
+  let reachable_now = property_get(r2, "reachable_now");
+  let totals = property_get(r2, "totals");
+  let silent = property_get(r2, "silent");
+  let marked = property_get(r2, "marked");
   let classes_total = property_get(gathered, "classes_total");
   let classes_read = list_size(marked);
   let silent_classes = list_size(silent);
