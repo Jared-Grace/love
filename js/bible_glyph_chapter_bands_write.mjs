@@ -30,8 +30,7 @@ export async function bible_glyph_chapter_bands_write(chapter_code) {
     f_name,
     register,
     lines_missing,
-    tagalog,
-    urdu,
+    languages,
   };
   return report;
 }
