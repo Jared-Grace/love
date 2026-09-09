@@ -1,3 +1,4 @@
+import { function_transform_checked_done } from "./function_transform_checked_done.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,8 +19,6 @@ import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { js_statements_delete } from "./js_statements_delete.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_replace } from "./object_replace.mjs";
-import { function_transform } from "./function_transform.mjs";
-import { function_auto_checked } from "./function_auto_checked.mjs";
 export async function function_tail_shared_replace(f_name, shared_name) {
   arguments_assert(arguments, 2);
   ("Swap the copy of a shared function's body that a function ends with for a call to that function, leaving the line that hands the answer back exactly where it stands.");
@@ -98,13 +97,6 @@ export async function function_tail_shared_replace(f_name, shared_name) {
     let statement = js_parse_statement(code);
     object_replace(first, statement);
   }
-  await function_transform(f_name, edit);
-  let checked = await function_auto_checked(f_name);
-  let done = {
-    ok: true,
-    reason: "",
-    local_name: local_name,
-    checked: checked,
-  };
+  let done = await function_transform_checked_done(f_name, edit, local_name);
   return done;
 }
