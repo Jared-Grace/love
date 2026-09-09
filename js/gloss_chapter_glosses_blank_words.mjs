@@ -1,5 +1,4 @@
-import { local_function_path_json } from "./local_function_path_json.mjs";
-import { file_read_json } from "./file_read_json.mjs";
+import { gloss_chapter_known_read } from "./gloss_chapter_known_read.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -22,8 +21,7 @@ export async function gloss_chapter_glosses_blank_words(chapter_code, fn) {
   "The order is what makes the hole fillable. An author cannot be handed a word on its own, because the language being explained inflects for gender and number and the same English word is answered differently in different verses; handed the verse and the run of blanks in it, the author reads the verse and chooses. The order is also what a filler matches its answers against, so it is the answer's shape rather than a convenience.";
   "The verses come back beside the words because the author needs both and they are in the same file. Asking for the chapter's wording separately would read the same store twice and leave the two answers to be lined up by hand.";
   "Verses with nothing missing are left out rather than answered empty, because what is wanted here is the work left to do.";
-  let path = local_function_path_json(chapter_code, fn);
-  let chapter = await file_read_json(path);
+  let chapter = await gloss_chapter_known_read(chapter_code, fn);
   let passages = property_get(chapter, "passages");
   let blanks = {};
   let texts = {};
