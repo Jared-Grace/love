@@ -1,24 +1,19 @@
-import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_book_row } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_book_row.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add.mjs";
 import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_set } from "./property_set.mjs";
-import { property_get } from "./property_get.mjs";
-import { add } from "./add.mjs";
 export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read(
   by_book,
   explain_key,
 ) {
   arguments_assert(arguments, 2);
-  function entries_pass(entries) {
-    return entries;
-  }
-  let book_row =
-    app_ceb_bible_gloss_explains_depth_by_book_chapter_read_book_row(by_book);
-  function counted_add(row, key, more) {
-    let was = property_get(row, key);
-    let value = add(was, more);
-    property_set(row, key, value);
-  }
+  let r =
+    app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add(
+      by_book,
+    );
+  let counted_add = property_get(r, "counted_add");
+  let book_row = property_get(r, "book_row");
+  let entries_pass = property_get(r, "entries_pass");
   let chapter_read =
     app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read(
       book_row,
