@@ -8,6 +8,7 @@ import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
+import { or } from "./or.mjs";
 import { each } from "./each.mjs";
 import { property_set } from "./property_set.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -54,13 +55,9 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
     function word_ask(word) {
       let folded = gloss_word_folded(word);
       let holds_kept = text_includes(folded, kept_folded);
-      if (holds_kept) {
-        kept_inside = true;
-      }
+      kept_inside = or(kept_inside, holds_kept);
       let holds_dropped = text_includes(folded, dropped_folded);
-      if (holds_dropped) {
-        dropped_inside = true;
-      }
+      dropped_inside = or(dropped_inside, holds_dropped);
     }
     each(words, word_ask);
     property_set(row, "kept", kept);
