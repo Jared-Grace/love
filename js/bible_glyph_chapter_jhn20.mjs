@@ -477,7 +477,7 @@ export function bible_glyph_chapter_jhn20() {
           "Mary",
           "Magdalene",
           "$footprints",
-          "$plus",
+          "and",
           "announced",
           "to",
           "the",
