@@ -1,13 +1,8 @@
-import { app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed.mjs";
+import { app_ceb_bible_gloss_words_roots_unproved_holdings_person_is } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_person_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated.mjs";
 import { property_get } from "./property_get.mjs";
-import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { binisaya_words_known_folded_index } from "./binisaya_words_known_folded_index.mjs";
-import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_map } from "./list_map.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -22,32 +17,15 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
   "The words to fetch are handed back already lowered and deduplicated, in the shape the gather takes, so that nothing between here and there has to be typed out by hand.";
   arguments_assert(arguments, 0);
   let arbitrated = await app_ceb_bible_gloss_words_roots_apart_arbitrated();
-  let unproved = property_get(arbitrated, "unproved");
-  let known = await binisaya_words_known();
-  let folded_index = binisaya_words_known_folded_index(known);
-  function accent_free(root) {
-    let plain = text_accent_marks_removed(root);
-    let lowered = text_lower_to(plain);
-    return lowered;
-  }
-  let row_owed = app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed(
-    accent_free,
-    known,
-    folded_index,
-  );
-  let owed_rows = list_map(unproved, row_owed);
-  function accent_is(row) {
-    let accented = property_equals(row, "owed", "accent");
-    return accented;
-  }
-  function gather_is(row) {
-    let fetchable = property_equals(row, "owed", "gather");
-    return fetchable;
-  }
-  function person_is(row) {
-    let waiting = property_equals(row, "owed", "person");
-    return waiting;
-  }
+  let r2 =
+    await app_ceb_bible_gloss_words_roots_unproved_holdings_person_is(
+      arbitrated,
+    );
+  let person_is = property_get(r2, "person_is");
+  let gather_is = property_get(r2, "gather_is");
+  let accent_is = property_get(r2, "accent_is");
+  let owed_rows = property_get(r2, "owed_rows");
+  let unproved = property_get(r2, "unproved");
   let accent = list_filter(owed_rows, accent_is);
   let gather = list_filter(owed_rows, gather_is);
   let person = list_filter(owed_rows, person_is);
