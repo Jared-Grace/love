@@ -1,4 +1,3 @@
-import { song_image_drawn_attempt_newest } from "./song_image_drawn_attempt_newest.mjs";
 import { song_image_couplet_get } from "./song_image_couplet_get.mjs";
 import { song_image_couplet_gloss } from "./song_image_couplet_gloss.mjs";
 import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
@@ -17,13 +16,12 @@ export function song_image_review_row(parent, asked) {
   let couplet = song_image_couplet_get(asked.n);
   let gloss = song_image_couplet_gloss(asked.n);
   let drawn = song_image_couplet_key(asked.n);
-  ("IT OPENS ON THE NEWEST ATTEMPT AND NOT ON THE KEPT ONE, because this page exists to look at what has been drawn since the last round of notes. Opening on the kept one showed the reader the picture their previous notes were already about, and the notes that came back were then indistinguishable from the ones they were meant to replace.");
-  let newest = song_image_drawn_attempt_newest(drawn);
+  ("IT OPENS ON THE KEPT ATTEMPT, AND THE REASON IT ONCE OPENED ON THE NEWEST HAS EXPIRED. Opening on the newest was right while the kept picture was whatever had been accepted rounds ago, so that a reader would not meet the very picture their previous notes were already about. Every round now ends by choosing a kept attempt from the ones just drawn, so the kept one IS the new picture and the literal newest is usually a draw that was looked at and thrown away - twice in one round it was a window of some entirely different symbol the service handed back. A page opening on a rejected picture makes every note written beside it false, which is a worse fault than the one the newest rule was fixing.");
   let columns = song_image_row_picture_columns(
     parent,
     drawn,
     gloss.kept,
-    newest,
+    gloss.kept,
   );
   let head = song_image_text_quiet_line(columns.right);
   let numbers = "verse " + couplet.verse + " · couplet " + asked.n;
