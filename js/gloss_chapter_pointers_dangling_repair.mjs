@@ -1,4 +1,4 @@
-import { gloss_chapter_passages_collected_write } from "./gloss_chapter_pointers_dangling_repair_span_scratch.mjs";
+import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { gloss_chapter_passages_collect_generic } from "./gloss_chapter_passages_collect_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
