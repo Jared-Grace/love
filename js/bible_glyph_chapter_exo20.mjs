@@ -595,7 +595,7 @@ export function bible_glyph_chapter_exo20() {
           "an",
           "$altar",
           "of",
-          "$earth,",
+          "earth,",
           "and",
           "sacrifice",
           "on",
