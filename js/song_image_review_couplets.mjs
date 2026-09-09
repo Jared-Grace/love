@@ -33,11 +33,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "Gone - you are on 104 and no line crosses a beam anywhere in it. I capped the fan at half the window's width so the lines would have sky to run in. That is not what fixed it: the fan still fills the foot, and the drawing simply left the two field lines out altogether. So the note is answered, but by omission rather than by the change I made.",
+      note: "Both changed in the wording, neither drawn yet. The beams now ask to stay light and airy the whole way down instead of deepening to full strength at the foot, and the cloud's five or six round lobes became billows broad and low and flat along their tops. Then the drawing service ran out of credits, so 104 is the old picture. Top it up and this redraws first.",
     },
     {
       n: 9,
-      note: "One reason only, and it was your own note. In 15 a lead line runs straight down through the spear shaft, which is the first thing you ever filed against this couplet. In 16 both field lines stop at the shaft and start again past it. The price is that 16's field carries an extra green band, so if the shaft matters less to you than that, say so and I will put 15 back.",
+      note: "No - I tried it on 15 and the editor cannot do it. Asked to break the lines at the shaft it repainted the entire background into coloured scales instead, which is the sixth time it has failed to remove a thing rather than recolour one. Removing needs a fresh draw, and the drawing service ran out of credits mid-batch. You are still on 16 until it is topped up.",
     },
     {
       n: 14,
@@ -49,11 +49,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 32,
-      note: "They can be, but the honest answer is that the wedges and the cross above them were never in the wording at all. This couplet asks for a river of the water of life winding between two trees, and the drawing invented the rest. So I drew fresh rather than recolour an invention: you are on 22, with no cross and no wedges, brighter, and the head of the arch back to deep cobalt. The river still does not taper.",
+      note: "Yes, and Scripture is with you - Ezekiel 47:7 has very many trees on the one side and the other, and Revelation 22 is drawn from it. So it is now three trees in a row along each bank, six in all, still twelve leaves between them. I also made the river taper and stopped the branches reaching over the water, which is what was hiding it. Not drawn yet: the service ran out of credits.",
     },
     {
       n: 33,
-      note: "You are on 18, which is 12's pairing again - blue drop on green field. The wording had never named a field colour for this couplet, which is why every draw picked its own; it now names emerald green for both bands. The drop is also much larger than before. Still wrong: two lead lines run straight across the drop instead of stopping at it.",
+      note: "You are right that lines dividing one colour from itself are pointless, so the lower band is now violet and only the band the drop sits in stays green. For the flatness the drop's own glass now asks for a lighter blue over its face and a deeper blue along its edge. Neither is drawn - the service ran out of credits. 18 is still the old all-green one.",
     },
   ];
   return couplets;
