@@ -2,20 +2,26 @@
  "known": [
   {
    "store": "app_ceb_bible_gloss_generate",
-   "share": 538,
-   "repeated": 139029,
+   "across_share": 0,
+   "same_share": 537,
+   "across": 126,
+   "same": 138903,
    "entries": 258651
   },
   {
    "store": "app_original_bible_gloss_generate",
-   "share": 64,
-   "repeated": 4778,
-   "entries": 74151
+   "across_share": 36,
+   "same_share": 28,
+   "across": 2683,
+   "same": 2095,
+   "entries": 74314
   },
   {
    "store": "app_en_learn_bible_gloss_urdu_generate",
-   "share": 560,
-   "repeated": 61703,
+   "across_share": 160,
+   "same_share": 399,
+   "across": 17658,
+   "same": 44045,
    "entries": 110264
   }
  ]
