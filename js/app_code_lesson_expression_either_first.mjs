@@ -1,21 +1,22 @@
-import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
-import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
-import { app_code_lesson_expression_either_first_above } from "./app_code_lesson_expression_either_first_above.mjs";
-import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
-import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
+import { app_code_lesson_expression_either_first_title_name_id } from "./app_code_lesson_expression_either_first_title_name_id.mjs";
+import { app_code_lesson_expression_either_first_expression } from "./app_code_lesson_expression_either_first_expression.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
+import { app_code_expression_flat_tree_of_code } from "./app_code_expression_flat_tree_of_code.mjs";
+import { app_code_expression_choose_line } from "./app_code_expression_choose_line.mjs";
+import { noop } from "./noop.mjs";
+import { app_code_expression_chosen_pause } from "./app_code_expression_chosen_pause.mjs";
+import { app_code_label_line_to_solve } from "./app_code_label_line_to_solve.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_expression_either_first_expression_times_plus } from "./app_code_lesson_expression_either_first_expression_times_plus.mjs";
-import { app_code_lesson_expression_either_first_title_name_id } from "./app_code_lesson_expression_either_first_title_name_id.mjs";
-import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
-import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { noop } from "./noop.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_lesson_expression_either_first_above } from "./app_code_lesson_expression_either_first_above.mjs";
 export function app_code_lesson_expression_either_first() {
-  "two operators ready at the same time, and either of them may be worked out first: 2 * 3 + 4 * 5 has a times on each side of the plus, and the line lands on the same value whichever times is taken";
+  "two operators ready at the same time, and either of them may be worked out first: 2 * 3 + 4 * 5 and 2 + 3 + 4 * 5 both split into two parts, and each line lands on the same value whichever part is taken";
+  "BOTH SHAPES ARE DRAWN, NOT ONLY THE SYMMETRIC ONE. Three operators can be laid out by strength in eight ways and exactly two of them leave two operators ready: a weak operator in the middle with a strong one last. This lesson drew only the shape whose two ends are both times, which is one of the two and is the one that invites the wrong reason - a learner reading it can conclude that matching ends are what did it. The other shape has a plus and a times at the ends and the choice is just as free, which leaves only the true reason standing: the weak operator in the middle splits the line, and the strong one at the end finishes the right half without help.";
   "The one new fact. Every line up to here has had exactly one operator that could go next, so a learner has never had to make a choice that was theirs - the rule picked for them and they only had to read it. Here the rule leaves two, and the thing to learn is that leaving two is not the rule failing to say: both answers are right.";
   "It stands immediately before arithmetic on both sides of a comparison, which is the first line in the course with three operators in it and two of them ready at once. That lesson has been asking a learner to make this choice with nothing said about it, on a line that is also teaching them something else. Here the choice is met on its own, on the smallest line that can carry one.";
   "Times and plus, no comparison, because the choice is about the shape of the line and not about what the operators mean. Adding a comparison on top of it is the next lesson, and it is one step from this one.";
@@ -23,7 +24,7 @@ export function app_code_lesson_expression_either_first() {
   let name_id = app_code_lesson_expression_either_first_title_name_id();
   function item_new() {
     "a question is the line as written and its answer is what the line comes to";
-    let tree = app_code_lesson_expression_either_first_expression_times_plus();
+    let tree = app_code_lesson_expression_either_first_expression();
     let question = app_code_expression_code(tree);
     let answer = app_code_expression_value(tree);
     let item = {
@@ -41,14 +42,14 @@ export function app_code_lesson_expression_either_first() {
   function tree_of(qa, info) {
     "the shape behind a question, found again from the writing it was printed as - the quiz hands its question over as text, and the step-at-a-time working needs the shape it came from";
     "READ BACK RATHER THAN REMEMBERED, which is what every other lesson of this kind does and what this one used to get wrong. A line outlives the run that built it: a review keeps the writing to ask again, and comes back to it on a page loaded afresh, where a shape kept beside the line at the moment it was printed is gone. The lesson then threw at the exact moment a learner answered the question before it correctly - so the fault landed on the screen after the one that caused it, on a review of a different lesson entirely.";
-    "The general reader serves it: this lesson's lines are arithmetic with no parentheses, which is the one thing that reader takes, and it hands back the same hanging the maker built - each times gathering its two numbers, the plus holding both of them.";
+    "The general reader serves it: this lesson's lines are arithmetic with no parentheses, which is the one thing that reader takes, and it hands back the same hanging the maker built - each part gathering its two numbers, the last operator holding both of them.";
     let answer_property = property_get(info, "answer_property");
     let question = app_code_lesson_quiz_qa_question(qa, answer_property);
     let tree = app_code_expression_flat_tree_of_code(question);
     return tree;
   }
   function on_answer(parent, info, qa, on_success, on_wrong) {
-    "the quiz: the same line to press as the example, with nothing said about which operator to press - either of the two that are ready is accepted, and the plus is refused because it still holds a times on each side";
+    "the quiz: the same line to press as the example, with nothing said about which operator to press - either of the two that are ready is accepted, and the operator holding them is refused because it is still waiting on both";
     let tree = tree_of(qa, info);
     app_code_expression_choose_line(
       parent,

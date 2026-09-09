@@ -301,6 +301,7 @@ import { bible_glyph_chapter_deu11 } from "./bible_glyph_chapter_deu11.mjs";
 import { bible_glyph_chapter_deu04 } from "./bible_glyph_chapter_deu04.mjs";
 import { bible_glyph_chapter_deu31 } from "./bible_glyph_chapter_deu31.mjs";
 import { bible_glyph_chapter_deu33 } from "./bible_glyph_chapter_deu33.mjs";
+import { bible_glyph_chapter_deu16 } from "./bible_glyph_chapter_deu16.mjs";
 export function bible_glyph_chapters() {
   "Every picture Bible chapter written so far, given as its chapter code and its shorthand.";
   "THE FOURTH WAS MEASURED AGAINST FOUR OTHERS rather than measured alone, which is the step past what the third one did. John three was asked of the table and the answer was taken; John fourteen was picked because five candidates were asked and it came back highest, and because its gaps turned out to be grammar rather than vocabulary. A single measurement tells you whether one chapter is thin. Comparing them is what actually chooses.";
