@@ -10,7 +10,7 @@ import { list_take } from "./list_take.mjs";
 import { range_from } from "./range_from.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-export function app_code_lesson_expression_either_first_expression() {
+export function app_code_lesson_expression_either_first_expression_times_plus() {
   arguments_assert(arguments, 0);
   ("four numbers and three operators, a times on each side of a plus, built as a shape rather than typed as text so the quiz can work one operator out at a time: 2 * 3 + 4 * 5");
   ("A times on BOTH sides of the plus is what makes the choice free - both of them have a number standing on each side, so both may be worked out first, while the plus still holds a times on either side and may not. With a times on one side only there is a single operator ready and the order is forced, which is the lesson before this one.");
