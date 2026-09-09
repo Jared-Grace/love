@@ -754,7 +754,7 @@ export function bible_glyph_chapter_jos24() {
         words: [
           "Then",
           "Joshua",
-          "told",
+          "$speech",
           "them,",
           "You",
           "are",
