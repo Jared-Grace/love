@@ -987,7 +987,7 @@ export function bible_glyph_chapter_jhn09() {
           "I",
           "have",
           "$footprints",
-          "$tray_in",
+          "into",
           "this",
           "$globe,",
           "so",

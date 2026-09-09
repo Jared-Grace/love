@@ -554,7 +554,7 @@ export function bible_glyph_chapter_jhn17() {
           "those",
           "who",
           "$anchor",
-          "$tray_in",
+          "in",
           "me",
           "through",
           "their",

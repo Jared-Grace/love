@@ -233,7 +233,7 @@ export function bible_glyph_chapter_jhn01() {
           "those",
           "who",
           "$anchor$d",
-          "$tray_in",
+          "in",
           "$pointing_back’s",
           "$name_tag,",
           "He",
