@@ -1,7 +1,7 @@
+import { gloss_found_any_is } from "./gloss_found_any_is.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 export async function gloss_chapters_offenders_generic(
   fn,
   lambda_chapter_code,
@@ -19,10 +19,6 @@ export async function gloss_chapters_offenders_generic(
     return r;
   }
   let chapters = await list_map_async(chapter_codes, chapter_read);
-  function found_is(chapter) {
-    let offending = property_list_empty_not_is(chapter, "found");
-    return offending;
-  }
-  let offenders = list_filter(chapters, found_is);
+  let offenders = list_filter(chapters, gloss_found_any_is);
   return offenders;
 }
