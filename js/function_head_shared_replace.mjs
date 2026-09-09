@@ -1,3 +1,4 @@
+import { js_statements_delete } from "./js_statements_delete.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -13,7 +14,6 @@ import { list_take } from "./list_take.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
-import { js_statement_delete } from "./js_statement_delete.mjs";
 import { js_parse_statement } from "./js_parse_statement.mjs";
 import { object_replace } from "./object_replace.mjs";
 import { function_transform } from "./function_transform.mjs";
@@ -89,7 +89,7 @@ export async function function_head_shared_replace(f_name, shared_name) {
     let rest = list_skip(head, 1);
     let more_is = list_empty_not_is(rest);
     if (more_is) {
-      js_statement_delete(ast, rest);
+      js_statements_delete(ast, rest);
     }
     let statement = js_parse_statement(code);
     object_replace(first, statement);
