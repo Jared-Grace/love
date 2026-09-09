@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_repairs_flattening_entries_pass } from "./app_ceb_bible_gloss_repairs_flattening_entries_pass.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_repairs_read } from "./gloss_repairs_read.mjs";
@@ -32,9 +33,7 @@ export async function app_ceb_bible_gloss_repairs_flattening() {
   let absent = 0;
   let one_way = 0;
   let rows = [];
-  function entries_pass(entries) {
-    return entries;
-  }
+  let entries_pass = app_ceb_bible_gloss_repairs_flattening_entries_pass();
   async function chapter_read(chapter_code) {
     let entries = await gloss_chapter_entries_collect_generic(
       chapter_code,
