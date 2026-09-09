@@ -643,7 +643,7 @@ export function bible_glyph_chapter_exo23() {
           "$enemy",
           "to",
           "your",
-          "$enemy",
+          "enemies",
           "and",
           "a",
           "foe",

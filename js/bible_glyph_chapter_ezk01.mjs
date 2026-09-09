@@ -565,7 +565,7 @@ export function bible_glyph_chapter_ezk01() {
         words: [
           "When",
           "the",
-          "$sprout",
+          "creatures",
           "$walking,",
           "the",
           "wheels",
