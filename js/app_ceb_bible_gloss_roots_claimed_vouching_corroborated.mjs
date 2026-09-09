@@ -1,19 +1,12 @@
+import { app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read } from "./app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read.mjs";
 import { app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count } from "./app_ceb_bible_gloss_roots_claimed_vouching_corroborated_witness_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { not } from "./not.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { add } from "./add.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { tally_number_add } from "./tally_number_add.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -50,60 +43,17 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
   let claims_rest = {};
   let once_books = {};
   let once_listed = [];
-  function claim_note(class_name, chapter_codes) {
-    function chapter_note(code) {
-      let book = ebible_chapter_code_to_book(code);
-      let inside = list_includes(poetic, book);
-      let where = claims_rest;
-      if (inside) {
-        where = claims_poetry;
-      }
-      tally_number_add(where, class_name, 1);
-    }
-    each(chapter_codes, chapter_note);
-  }
-  function root_read(row) {
-    let root = property_get(row, "stated_root");
-    let seen_in = property_get(row, "chapters");
-    let key = gloss_word_folded(root);
-    let size = witness_count(key);
-    let class_name = "unvouched";
-    let vouched = greater_than(size, 0);
-    if (vouched) {
-      class_name = "vouched_once";
-      let many = greater_than(size, 1);
-      if (many) {
-        class_name = "vouched_corroborated";
-      }
-    }
-    tally_number_add(roots_by_class, class_name, 1);
-    claim_note(class_name, seen_in);
-    let single = greater_than(size, 0);
-    let plural = greater_than(size, 1);
-    if (not(single)) {
-      return;
-    }
-    if (plural) {
-      return;
-    }
-    let held = property_get_or_null(witnesses, key);
-    let vouching_words = list_unique(held);
-    function books_note(code) {
-      let book = ebible_chapter_code_to_book(code);
-      tally_number_add(once_books, book, 1);
-    }
-    each(seen_in, books_note);
-    let words = property_get(row, "words");
-    let named = {
-      stated_root: root,
-      sightings: property_get(row, "sightings"),
-      vouched_by: vouching_words,
-      words: list_unique(words),
-      chapters: seen_in,
-      explain: property_get(row, "explain"),
-    };
-    list_add(once_listed, named);
-  }
+  let root_read =
+    app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read(
+      poetic,
+      claims_rest,
+      claims_poetry,
+      witness_count,
+      roots_by_class,
+      witnesses,
+      once_books,
+      once_listed,
+    );
   let gathered = await gloss_chapters_roots_claimed_rows_generic(
     app_ceb_bible_gloss_generate,
     root_read,
