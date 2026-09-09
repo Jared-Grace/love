@@ -22,13 +22,15 @@ export async function lyric_video_document_pictures_model_bench_names_generic(
   "★ THE PICTURES GO BESIDE THE ACCEPTED ONES AND NEVER OVER THEM. A bench that wrote into the document's own picture folder would spend the control to run the test - and the control is thirteen pictures somebody sat and looked at, which is the expensive half of this and the half that cannot be drawn again.";
   "★ WHAT IS BEING LOOKED FOR IS NOT WHICH PICTURE IS PRETTIEST. It is whether a model holds one painted look across a whole set, and whether it puts things where the wording says to put them - a sun high on the left and a moon high on the right, a middle left deep and quiet for the lettering. No published ranking measures either, because both are properties of a series and of a placement rather than of one picture.";
   "★ HOW MANY FILES A SCENE GETS IS HANDED IN AS A WAY OF NAMING THEM, WHICH IS WHAT LETS ONE DRAW EACH AND SEVERAL TRIES EACH BE THE SAME RUN. A caller asking for one picture per scene answers with the scene's own name; a caller asking for several tries answers with that name numbered. Everything else - which scenes, what size, what counts as already drawn, what is reported - then cannot differ between the two, which is the only way the two sets can be compared to each other at all.";
+  "★ THE SIZE IS THE VIDEO'S OWN SHAPE AT A LITTLE UNDER ITS SIZE, AND IT USED TO BE NEITHER. Every one of these grounds is laid into a frame nine wide by sixteen high; the earlier size was neither that shape nor that size, being both wider in proportion and half again as many dots as the frame it was going into, so a twelfth of every picture was drawn to be thrown away and the rest was drawn at a fineness nobody would ever see. Two things were bought with that: the picture is paid for by the dot at every house that draws it, and a model asked for far more area than it was taught on is a model that starts drawing the subject twice - which is the likeliest reason a night sky asked for one moon came back with two.";
   "HOW A PICTURE IS ASKED FOR IS ALSO HANDED IN, and it is the only other thing two benches may differ in. A run that changed the scenes or the size as well would be comparing two different tests rather than two ways of drawing.";
+  "SETS DRAWN BEFORE THE SIZE WAS PUT RIGHT ARE AT THE OLD SIZE, so a new run compared against one of those is comparing the size as well as the model, and cannot settle either on its own. The way through is to draw both sides again rather than to argue about the old folder.";
   "It skips what is already on disk, so it is safe to run again and a run that stopped half way costs nothing to finish. Every draw is paid for, and the pictures sit in the ignored folder because pixels are regenerable from the scene and a repo keeps every copy of everything forever.";
   arguments_assert(arguments, 5);
   let document = await file_read_json(path_document);
   let pictures = lyric_video_document_pictures(document);
-  let width = 1152;
-  let height = 2048;
+  let width = 864;
+  let height = 1536;
   let folder = await lyric_video_picture_bench_folder(model, folder_ending);
   let drawn = [];
   let refused = [];
