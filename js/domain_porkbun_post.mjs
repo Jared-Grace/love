@@ -1,6 +1,7 @@
 import { object_property_names } from "./object_property_names.mjs";
 import { domain_porkbun_headers } from "./domain_porkbun_headers.mjs";
 import { domain_porkbun_cookie_header } from "./domain_porkbun_cookie_header.mjs";
+import { domain_fetch_retry } from "./domain_fetch_retry.mjs";
 import { domain_porkbun_cookies_update } from "./domain_porkbun_cookies_update.mjs";
 export async function domain_porkbun_post(session, path, fields) {
   "Asks Porkbun a question the way its own page asks it - a form, the cookies it gave us, and the security word echoed back - and remembers the cookies that come back, because the security word is one of them and it changes every time.";
@@ -13,7 +14,7 @@ export async function domain_porkbun_post(session, path, fields) {
   let headers = domain_porkbun_headers();
   headers["Content-Type"] = "application/x-www-form-urlencoded";
   headers["Cookie"] = domain_porkbun_cookie_header(session);
-  let response = await fetch("https://porkbun.com" + path, {
+  let response = await domain_fetch_retry("https://porkbun.com" + path, {
     method: "POST",
     headers,
     body: form.toString(),

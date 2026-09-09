@@ -7,7 +7,6 @@ import { list_take_last } from "./list_take_last.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
-import { js_statement_return_argument } from "./js_statement_return_argument.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_name } from "./property_get_name.mjs";
 import { list_take } from "./list_take.mjs";
@@ -18,8 +17,8 @@ import { js_statements_shape } from "./js_statements_shape.mjs";
 import { equal } from "./equal.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { subtract } from "./subtract.mjs";
 import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { js_statements_span_cuttable_is } from "./js_statements_span_cuttable_is.mjs";
 export function js_function_declaration_tail_shared_verdict_or_null(
   declaration,
@@ -51,7 +50,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
     let unfinished = null;
     return unfinished;
   }
-  let argument = js_statement_return_argument(last);
+  let argument = property_get(last, "argument");
   let bare_is = null_is(argument);
   if (bare_is) {
     let empty_handed = null;

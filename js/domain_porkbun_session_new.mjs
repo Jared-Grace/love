@@ -1,3 +1,4 @@
+import { domain_fetch_retry } from "./domain_fetch_retry.mjs";
 import { domain_porkbun_headers } from "./domain_porkbun_headers.mjs";
 import { domain_porkbun_cookies_update } from "./domain_porkbun_cookies_update.mjs";
 export async function domain_porkbun_session_new() {
@@ -7,9 +8,12 @@ export async function domain_porkbun_session_new() {
     cookies: {},
     csrf: "",
   };
-  let response = await fetch("https://porkbun.com/checkout/search", {
-    headers: domain_porkbun_headers(),
-  });
+  let response = await domain_fetch_retry(
+    "https://porkbun.com/checkout/search",
+    {
+      headers: domain_porkbun_headers(),
+    },
+  );
   domain_porkbun_cookies_update(session, response);
   return session;
 }
