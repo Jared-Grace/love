@@ -33,7 +33,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "Done - a fresh draw, and you are on 100 now. The white border runs the whole way round again, the fan opens outward instead of staying parallel, and the six ray colours came out in the order asked. Still wrong: the rays run off the bottom edge instead of stopping at the border.",
+      note: "Not fixed, and I would rather say so than hand you a different picture. The same lead-line move that stopped the lines cutting couplet 7's crosses made no difference here across three fresh draws. I think the reason is that your rays fill the window right down to the foot, so there is no field left for the two lines to run in. You are still on 100.",
     },
   ];
   return couplets;
