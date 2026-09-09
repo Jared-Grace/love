@@ -1,4 +1,3 @@
-import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -90,6 +89,7 @@ import { app_code_lesson_expression_equal_number_string_true_false } from "./app
 import { app_code_lesson_expression_choose_order_compare } from "./app_code_lesson_expression_choose_order_compare.mjs";
 import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_lesson_expression_comparing_a_comparison.mjs";
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
+import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
 import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
 import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
@@ -128,6 +128,7 @@ import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_
 import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
 import { app_code_lesson_statement_name_itself_sum } from "./app_code_lesson_statement_name_itself_sum.mjs";
 import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
+import { app_code_lesson_statement_name_count } from "./app_code_lesson_statement_name_count.mjs";
 import { app_code_lesson_statement_name_copy_kept } from "./app_code_lesson_statement_name_copy_kept.mjs";
 import { app_code_lesson_statement_name_compare } from "./app_code_lesson_statement_name_compare.mjs";
 import { app_code_lesson_comment_note } from "./app_code_lesson_comment_note.mjs";
@@ -227,6 +228,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order_compare,
     app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
+    app_code_lesson_expression_choose_order_same_strength,
     app_code_lesson_expression_choose_order_three,
     app_code_lesson_expression_either_first,
     app_code_lesson_expression_choose_order_both_sides,
