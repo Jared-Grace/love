@@ -620,7 +620,7 @@ export function bible_glyph_chapter_2sa06() {
           "the",
           "$family",
           "$walking,",
-          "each",
+          "$man_beard",
           "to",
           "his",
           "own",
