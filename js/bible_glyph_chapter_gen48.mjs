@@ -554,7 +554,7 @@ export function bible_glyph_chapter_gen48() {
           "Ephraim,",
           "it",
           "was",
-          "$thumbs_down",
+          "displeasing",
           "in",
           "his",
           "$eyes,",
