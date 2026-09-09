@@ -22,7 +22,7 @@ export function bible_glyph_chapter_exo22() {
           "$ox",
           "or",
           "a",
-          "$sheep",
+          "sheep",
           "and",
           "slaughters",
           "or",
@@ -41,7 +41,7 @@ export function bible_glyph_chapter_exo22() {
           "$sheep",
           "for",
           "the",
-          "$sheep.",
+          "sheep.",
         ],
       },
       {
