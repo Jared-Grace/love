@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -11,13 +12,7 @@ import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   "Every chapter of the Cebuano gloss store that takes a word back to a root the dictionary on this disk contradicts, where some other chapter already takes the same word back to the root the dictionary gives.";
   "★ A COUNT OF DISAGREEMENTS IS NOT A WORK LIST AND CANNOT BE TURNED INTO ONE WITHOUT SAYING WHICH SIDE IS WRONG. The reader beside this one gathers a word's roots from the whole store and asks whether the dictionary names any of them, which answers whether the disagreement can be settled and says nothing about where the wrong sentence is. The chapter is thrown away in the gathering, and the chapter is the only thing that would let anybody act. This one keeps it.";
@@ -54,60 +49,12 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   let said_words = object_property_names(said);
   let rows = [];
   let chapters_touched = [];
-  function word_read(word) {
-    let places = property_get(said, word);
-    let roots = [];
-    function root_hold(place) {
-      let root = property_get(place, "root");
-      list_add_if_not_includes(roots, root);
-    }
-    each(places, root_hold);
-    let ways = list_size(roots);
-    let one = equal(ways, 1);
-    if (one) {
-      return;
-    }
-    let held = property_get_or_null(known, word);
-    let none = null_is(held);
-    if (none) {
-      return;
-    }
-    let given = property_get(held, "root");
-    let bare = equal(given, "");
-    if (bare) {
-      return;
-    }
-    let folded = gloss_word_folded(given);
-    function agrees_is(root) {
-      let root_folded = gloss_word_folded(root);
-      let same = equal(root_folded, folded);
-      return same;
-    }
-    let agreeing = list_filter(roots, agrees_is);
-    let agreed = list_size(agreeing);
-    let unsupported = equal(agreed, 0);
-    if (unsupported) {
-      return;
-    }
-    function place_read(place) {
-      let root = property_get(place, "root");
-      let matches = agrees_is(root);
-      if (matches) {
-        return;
-      }
-      let chapter = property_get(place, "chapter");
-      let relation = gloss_root_claimed_relation(given, root);
-      list_add_if_not_includes(chapters_touched, chapter);
-      list_add(rows, {
-        chapter: chapter,
-        word: word,
-        said: root,
-        dictionary: given,
-        relation: relation,
-      });
-    }
-    each(places, place_read);
-  }
+  let word_read = app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
+    said,
+    known,
+    chapters_touched,
+    rows,
+  );
   each(said_words, word_read);
   let r = {
     words_claimed: list_size(said_words),
