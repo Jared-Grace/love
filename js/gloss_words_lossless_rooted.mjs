@@ -1,3 +1,4 @@
+import { gloss_word_priced_lossless_is } from "./gloss_word_priced_lossless_is.mjs";
 import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,11 +26,7 @@ export function gloss_words_lossless_rooted(known, priced) {
   "the first names a gathered dictionary to read, the second the priced queue to take the lossless rows from.";
   arguments_assert(arguments, 2);
   let all = property_get(priced, "priced");
-  function lossless_is(row) {
-    let row_lossless = property_get(row, "lossless");
-    return row_lossless;
-  }
-  let lossless = list_filter(all, lossless_is);
+  let lossless = list_filter(all, gloss_word_priced_lossless_is);
   function row_rooted(row) {
     let word = property_get(row, "word");
     let silent = property_get(row, "silent");
