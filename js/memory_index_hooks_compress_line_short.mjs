@@ -5,6 +5,9 @@ import { text_code_spans_blanked } from "./text_code_spans_blanked.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
+import { text_split } from "./text_split.mjs";
+import { list_size } from "./list_size.mjs";
+import { subtract } from "./subtract.mjs";
 import { memory_index_head_separated_is } from "./memory_index_head_separated_is.mjs";
 import { memory_index_head_tidy } from "./memory_index_head_tidy.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
@@ -17,7 +20,9 @@ export function memory_index_hooks_compress_line_short(
   dash,
 ) {
   "One line of the memory index rewritten shorter, or nothing at all when the line is to be kept exactly as it stands.";
-  "NOTHING BACK MEANS LEAVE IT ALONE, and that is one answer rather than four because the four ways a line earns its length have nothing in common except the outcome. It is a heading or a note rather than an entry. It is already short enough. It has no link in it to keep. Or what stands in front of its first link does not read as a hook that has finished, which is the one that stops a sentence being cut off mid-clause.";
+  "NOTHING BACK MEANS LEAVE IT ALONE, and that is one answer rather than five because the ways a line earns its length have nothing in common except the outcome. It is a heading or a note rather than an entry. It is already short enough. It has no link in it to keep. It carries more than one entry. Or what stands in front of its first link does not read as a hook that has finished, which is the one that stops a sentence being cut off mid-clause.";
+  "A LINE CARRYING SEVERAL ENTRIES IS REFUSED, BECAUSE THE REWRITE KEEPS ONLY WHAT STANDS BEFORE THE FIRST LINK AND EVERY ENTRY AFTER THAT POINT IS DROPPED. Measured 2026-09-09 on a grouped line of two entries: it came back holding one, and the note behind the entry that went missing would have been left on disk, reading perfectly well, with nothing in the index reaching it. Nothing about that reads as a failure - the line is shorter, which is what was asked for, and the check that shortening happened passes.";
+  "That refusal is also what makes the ceiling here the right number. The ceiling is a budget for one entry, and this compares it against the length of a whole line; the two are the same measurement only while a line is one entry, which after the refusal above is the only kind of line that reaches the comparison.";
   "A rewrite that came out no shorter is also nothing back, so a line can never grow here. That check is worth its lines because the head is tidied on the way through, and tidying can add a character as easily as remove one.";
   "Links are found with the line's written-out code blanked first, so a pair of brackets quoted inside a note about the index is not mistaken for a link into it.";
   arguments_assert(arguments, 5);
@@ -28,6 +33,13 @@ export function memory_index_hooks_compress_line_short(
   let right = and(over, linked);
   let touched = and(entry_is, right);
   if (not(touched)) {
+    return null;
+  }
+  let pieces = text_split(masked, "](");
+  let left = list_size(pieces);
+  let entries = subtract(left, 1);
+  let grouped = greater_than(entries, 1);
+  if (grouped) {
     return null;
   }
   let at = masked.indexOf(link_open);
