@@ -1,7 +1,7 @@
+import { gloss_chapter_found_counted } from "./gloss_chapter_found_counted.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { gloss_chapter_affix_kinds_wrong } from "./gloss_chapter_affix_kinds_wrong.mjs";
-import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_chapter_affix_kinds_wrong(
   chapter_code,
 ) {
@@ -15,11 +15,6 @@ export async function app_ceb_bible_gloss_chapter_affix_kinds_wrong(
     app_ceb_bible_gloss_generate,
     known,
   );
-  let count = list_size(found);
-  let r = {
-    chapter_code,
-    count,
-    found,
-  };
+  let r = gloss_chapter_found_counted(chapter_code, found);
   return r;
 }
