@@ -761,7 +761,7 @@ export function bible_glyph_chapter_jhn03() {
           "$smile",
           "is",
           "mine,",
-          "$plus",
+          "and",
           "it",
           "is",
           "now",
