@@ -57,7 +57,7 @@ export function song_image_couplet_glosses() {
         "Inherited. The bare cross standing empty is the church's own emblem and no verse describes it; the empty beams are what make it say pardon rather than execution, which is the couplet's claim.",
     },
     7: {
-      kept: 26,
+      kept: 28,
       lyric_ref: "John 3:16, Romans 5:8, John 15:13",
       lyric_explain:
         "GOD commendeth HIS love toward us in that, while we were yet sinners, CHRIST died for us. Greater love hath no man than this, and the couplet says that this is the place where the love of GOD is on view.",
