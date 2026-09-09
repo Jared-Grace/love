@@ -2,9 +2,7 @@ import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { set_includes } from "./set_includes.mjs";
-import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
-import { null_is } from "./null_is.mjs";
-import { not } from "./not.mjs";
+import { binisaya_words_known_held_is } from "./binisaya_words_known_held_is.mjs";
 export function gloss_vocabularies_word_met_is(vocabularies, word) {
   "$plain vocabularies";
   "$plain word";
@@ -22,8 +20,6 @@ export function gloss_vocabularies_word_met_is(vocabularies, word) {
     return true;
   }
   let known = property_get(vocabularies, "known");
-  let held = binisaya_words_known_get(known, word);
-  let missing = null_is(held);
-  let looked_up = not(missing);
+  let looked_up = binisaya_words_known_held_is(known, word);
   return looked_up;
 }
