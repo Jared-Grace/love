@@ -1,3 +1,4 @@
+import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_explains_repeated_kinds } from "./gloss_chapter_explains_repeated_kinds.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -24,13 +25,9 @@ export async function gloss_chapters_explains_repeated(fn) {
     let n = property_get(chapter, "across");
     return n;
   }
-  function chapter_entries_read(chapter) {
-    let n = property_get(chapter, "entries");
-    return n;
-  }
   let r = {
     chapters: list_size(chapter_codes),
-    entries: list_map_sum(chapters, chapter_entries_read),
+    entries: list_map_sum(chapters, gloss_entries_count),
     same: list_map_sum(chapters, chapter_same_read),
     across: list_map_sum(chapters, chapter_across_read),
   };
