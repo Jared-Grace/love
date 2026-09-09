@@ -1,3 +1,4 @@
+import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -46,15 +47,14 @@ export function gloss_words_lossless_rooted(known, priced) {
     return sheet;
   }
   let sheets = list_map(lossless, row_rooted);
-  function row_silent(row) {
-    let silent = property_get(row, "silent");
-    return silent;
-  }
-  let ranked = list_sort_number_mapper_reverse(sheets, row_silent);
+  let ranked = list_sort_number_mapper_reverse(
+    sheets,
+    gloss_word_priced_silent,
+  );
   let sightings_total = 0;
   let rooted_words = 0;
   function sheet_count(sheet) {
-    let silent = row_silent(sheet);
+    let silent = gloss_word_priced_silent(sheet);
     sightings_total = add(sightings_total, silent);
     let rooted = property_get(sheet, "rooted");
     if (rooted) {
