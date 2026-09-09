@@ -1,5 +1,4 @@
-import { gloss_repairs_file_path } from "./gloss_repairs_file_path.mjs";
-import { file_read_json } from "./file_read_json.mjs";
+import { gloss_repairs_read } from "./gloss_repairs_read.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -27,8 +26,7 @@ export async function gloss_explains_repair_decided_generic(
   "So the decision is handed in rather than settled here. What counts as a sighting worth replacing is a question about the store's own prose, and it differs by store and by what the reading found; the walk over the chapters is the same either way, and that walk is the only thing this owes its caller.";
   "The decision is asked in the small, sync, over the word and the sentence already standing, because it is asked once per entry inside a walk that cannot wait. Anything a decision needs looked up - a dictionary root, a list of chapters - is looked up by the caller before it hands the decision over, and closed over.";
   "A word passed over still counts as found. It was met, and the sentence written for it was simply not wanted there; reporting it missing would send a reader to correct a handover file that is perfectly right, which is the one thing the missing list exists to prevent.";
-  let path = gloss_repairs_file_path(fn);
-  let repairs = await file_read_json(path);
+  let repairs = await gloss_repairs_read(fn);
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let explain_key = gloss_entry_explain_key();
   let chapter_codes = object_property_names(repairs);
