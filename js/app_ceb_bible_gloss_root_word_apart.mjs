@@ -1,3 +1,4 @@
+import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -92,11 +93,7 @@ export async function app_ceb_bible_gloss_root_word_apart() {
     list_add(listed, held);
   }
   each(keys, key_read);
-  function entries_of(held) {
-    let count = property_get(held, "entries");
-    return count;
-  }
-  list_sort_number_mapper_reverse(listed, entries_of);
+  list_sort_number_mapper_reverse(listed, gloss_entries_count);
   let r = {
     naming_a_root: named_seen,
     relations: counts,
