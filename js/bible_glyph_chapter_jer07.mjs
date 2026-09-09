@@ -406,7 +406,7 @@ export function bible_glyph_chapter_jer07() {
           "My",
           "$name_tag,",
           "the",
-          "$house",
+          "house",
           "in",
           "which",
           "you",

@@ -661,7 +661,7 @@ export function bible_glyph_chapter_gen44() {
           "his",
           "$father,",
           "his",
-          "$father",
+          "father",
           "would",
           "$skull.",
         ],
