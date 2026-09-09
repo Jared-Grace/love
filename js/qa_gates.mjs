@@ -1,3 +1,4 @@
+import { bible_glyph_chapters_verse_marks_overdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_overdrawn_gate_run.mjs";
 import { memory_index_oversize_gate_run } from "./memory_index_oversize_gate_run.mjs";
 import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
 import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
@@ -1097,6 +1098,7 @@ export function qa_gates() {
     gloss_capital_claim_wrong_gate_run,
     memory_index_welded_gate_run,
     memory_index_oversize_gate_run,
+    bible_glyph_chapters_verse_marks_overdrawn_gate_run,
   ];
   return gates;
 }
