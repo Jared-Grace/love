@@ -1,3 +1,4 @@
+import { gloss_explains_repeated_gate_run } from "./gloss_explains_repeated_gate_run.mjs";
 import { bible_glyph_chapters_marks_doubled_gate_run } from "./bible_glyph_chapters_marks_doubled_gate_run.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_gate_run } from "./app_ceb_bible_gloss_words_explained_apart_gate_run.mjs";
 import { app_ceb_bible_gloss_words_edged_gate_run } from "./app_ceb_bible_gloss_words_edged_gate_run.mjs";
@@ -917,6 +918,7 @@ export function qa_gates() {
     git_push_urls_gate_run,
     git_history_heavy_absent_gate_run,
     gloss_back_references_gate_run,
+    gloss_explains_repeated_gate_run,
     daemons_stale_gate_run,
     g_tiles_window_axis_cases_gate_run,
     app_g_player_walk_cases_gate_run,
