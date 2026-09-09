@@ -1,3 +1,4 @@
+import { bible_usfm_lines_division_subtitles_dropped_cases_gate_run } from "./bible_usfm_lines_division_subtitles_dropped_cases_gate_run.mjs";
 import { bible_glyph_chapters_verse_marks_overdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_overdrawn_gate_run.mjs";
 import { memory_index_oversize_gate_run } from "./memory_index_oversize_gate_run.mjs";
 import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
@@ -1099,6 +1100,7 @@ export function qa_gates() {
     memory_index_welded_gate_run,
     memory_index_oversize_gate_run,
     bible_glyph_chapters_verse_marks_overdrawn_gate_run,
+    bible_usfm_lines_division_subtitles_dropped_cases_gate_run,
   ];
   return gates;
 }
