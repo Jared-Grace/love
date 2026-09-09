@@ -205,7 +205,7 @@ export function bible_glyph_chapter_jhn17() {
         words: [
           "$pointing",
           "the",
-          "$speech",
+          "words",
           "that",
           "You",
           "$hands_giving",

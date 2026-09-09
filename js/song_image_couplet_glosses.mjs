@@ -73,7 +73,7 @@ export function song_image_couplet_glosses() {
         "Described. The bond nailed to the cross is the image Colossians 2:14 uses. Blotted out is drawn as a parchment with nothing on it, which is the same fact and keeps lettering out of a picture that forbids it.",
     },
     9: {
-      kept: 15,
+      kept: 16,
       lyric_ref: "Colossians 2:14, Isaiah 53:5, Hebrews 2:10",
       lyric_explain:
         "The same two lines as couplet 8, sung a second time to a different melody, and resting on the same passages because they are the same words. What is different here is the emblem beside them, and the passages that emblem rests on are given under the symbol rather than under the lyric.",
@@ -113,7 +113,7 @@ export function song_image_couplet_glosses() {
         "Described. HIS sweat was as it were great drops of blood falling down to the ground is Luke 22:44, and the drops and the ground are both in that clause. It replaced an olive press, which was the meaning of the place name rather than a thing any verse pictures - and a press of the oldest kind is a round stone in a trough, which almost nobody reads as a press even when it is drawn correctly. The two drawings of it read as a washtub. So the verse's own object is drawn instead, and the claim moves from named to described.",
     },
     14: {
-      kept: 20,
+      kept: 21,
       lyric_ref: "Luke 23:46, Mark 15:37, Matthew 27:51",
       lyric_explain:
         "Father, into thy hands I commend my spirit: and having said thus, HE gave up the ghost. Matthew puts the tearing of the veil in the same breath as the death.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 15,
+      kept: 16,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",

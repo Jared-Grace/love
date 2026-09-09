@@ -968,7 +968,7 @@ export function bible_glyph_chapter_jhn01() {
           "looked",
           "at",
           "$pointing_back",
-          "$plus",
+          "and",
           "$speech,",
           "“You",
           "are",
