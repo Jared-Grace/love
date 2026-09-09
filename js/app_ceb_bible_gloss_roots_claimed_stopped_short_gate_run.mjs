@@ -1,5 +1,4 @@
-import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
-import { not } from "./not.mjs";
+import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_named } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_named.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -13,8 +12,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run()
   "Measured against the record rather than against zero, and not because the ones standing today are in doubt. They have been read and they are the fault this was built to find - a reduplication cut in half, a word docked of its last letters, a claim accounting for no part of the word it was made about. What has not happened is the repair, and the repair is a decision about how three books get authored rather than a line somebody changes. The ratchet is worth having before that decision rather than after it: it costs nothing to seed, and what it stops is a thirty-second arriving unnoticed while the thirty-one wait.";
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.";
   "How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.";
-  let stored = await app_ceb_bible_gloss_stored_is();
-  let unread = not(stored);
+  let unread = await app_ceb_bible_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,
