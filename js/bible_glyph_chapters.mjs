@@ -1049,6 +1049,7 @@ export function bible_glyph_chapters() {
     three_hundredth,
     three_hundred_and_first,
     three_hundred_and_second,
+    three_hundred_and_third,
   ];
   return chapters;
 }
