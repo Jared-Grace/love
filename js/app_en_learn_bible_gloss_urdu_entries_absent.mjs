@@ -1,3 +1,4 @@
+import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { app_en_learn_bible_gloss_urdu_chapters_absent } from "./app_en_learn_bible_gloss_urdu_chapters_absent.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_en_learn_bible_gloss_urdu_bible_folders } from "./app_en_learn_bible_gloss_urdu_bible_folders.mjs";
@@ -37,13 +38,9 @@ export async function app_en_learn_bible_gloss_urdu_entries_absent() {
     let v = property_get(chapter_count, "verses");
     return v;
   }
-  function chapter_entries(chapter_count) {
-    let v = property_get(chapter_count, "entries");
-    return v;
-  }
   let counted = await list_map_async(chapter_codes, chapter_counted);
   let verses_each = list_map(counted, chapter_verses);
-  let entries_each = list_map(counted, chapter_entries);
+  let entries_each = list_map(counted, gloss_entries_count);
   let r = {
     chapters: list_size(counted),
     verses: list_sum(verses_each),
