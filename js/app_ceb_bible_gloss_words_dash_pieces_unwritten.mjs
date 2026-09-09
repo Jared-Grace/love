@@ -1,5 +1,5 @@
+import { app_ceb_bible_gloss_words_dash_pieces_absent_words } from "./app_ceb_bible_gloss_words_dash_pieces_absent_words.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_words_dash_pieces_absent } from "./app_ceb_bible_gloss_words_dash_pieces_absent.mjs";
 import { property_get } from "./property_get.mjs";
 import { bible_cebuano_words_unwritten } from "./bible_cebuano_words_unwritten.mjs";
 import { list_size } from "./list_size.mjs";
@@ -9,8 +9,7 @@ export async function app_ceb_bible_gloss_words_dash_pieces_unwritten() {
   "A piece the translation does write is not thereby innocent and a piece it does not is not thereby a mistake anyone made. Cebuano roots often live only inside longer forms, so a real root can be missing here for a reason that is about the language and not about this repo. What the answer settles is narrower and harder: for a piece in this list, no source available here has ever seen it standing on its own, so any sentence calling it a word or a root is a statement with nothing behind it.";
   "The comparison against the translation, the lowering of both sides and the counting of the written words are the shared test, which the whole explained words ask in exactly the same words; what is chosen here is only which pieces to put to it.";
   arguments_assert(arguments, 0);
-  let measured = await app_ceb_bible_gloss_words_dash_pieces_absent();
-  let absent = property_get(measured, "words_absent");
+  let absent = await app_ceb_bible_gloss_words_dash_pieces_absent_words();
   let asked = await bible_cebuano_words_unwritten(absent);
   let pieces = property_get(asked, "lowered");
   let unwritten = property_get(asked, "unwritten");
