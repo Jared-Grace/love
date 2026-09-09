@@ -1,3 +1,4 @@
+import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -90,13 +91,9 @@ export async function gloss_words_repair_priced_generic(fn, rows) {
     return lossless;
   }
   let lossless_rows = list_filter(ranked, lossless_is);
-  function row_silent(row) {
-    let silent = property_get(row, "silent");
-    return silent;
-  }
   let lossless_silent = 0;
   function lossless_add(row) {
-    let mine = row_silent(row);
+    let mine = gloss_word_priced_silent(row);
     lossless_silent = add(lossless_silent, mine);
   }
   each(lossless_rows, lossless_add);
