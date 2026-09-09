@@ -40,7 +40,7 @@ export function bible_glyph_chapter_jhn03() {
           "He",
           "$footprints",
           "to",
-          "$cross",
+          "$pointing_back",
           "at",
           "night",
           "$plus",

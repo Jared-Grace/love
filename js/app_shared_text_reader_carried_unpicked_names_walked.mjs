@@ -4,8 +4,7 @@ import { app_shared_text_reader_carried_unpicked } from "./app_shared_text_reade
 import { property_list_map_property } from "./property_list_map_property.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { list_sum } from "./list_sum.mjs";
 export async function app_shared_text_reader_carried_unpicked_names_walked() {
   "Just the functions that hand words on without ever asking what language the reader reads, across every app that promised a reader language, each named once - said beside how many carried words were walked up to.";
@@ -25,8 +24,7 @@ export async function app_shared_text_reader_carried_unpicked_names_walked() {
     let unfollowed = property_get(read, "unfollowed");
     list_add_multiple(counts, [followed, unfollowed]);
   }
-  let once = list_unique(sources);
-  let names = list_sort_text(once);
+  let names = list_unique_sorted(sources);
   let walked = list_sum(counts);
   let r = {
     walked,
