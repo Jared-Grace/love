@@ -8,8 +8,7 @@ import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { text_includes } from "./text_includes.mjs";
+import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spelled_in_is.mjs";
 import { gloss_root_row_note } from "./gloss_root_row_note.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
@@ -45,9 +44,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_counted(
     let root = text_lower_to(first);
     let s = property_get(entry, word_key);
     let word = text_lower_to(s);
-    let word_folded = gloss_word_folded(word);
-    let root_folded = gloss_word_folded(root);
-    let held = text_includes(word_folded, root_folded);
+    let held = gloss_root_named_word_spelled_in_is(word, root);
     if (held) {
       inside = add(inside, 1);
       gloss_root_row_note(by_root_inside, root, word, explain);
