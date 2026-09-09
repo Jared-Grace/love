@@ -28,8 +28,8 @@ export async function gloss_chapters_capital_claim_wrong(
     return claiming_found;
   }
   function wrong_read(found) {
-    let wrong = property_get(found, "wrong");
-    return wrong;
+    let wrong_found = property_get(found, "wrong");
+    return wrong_found;
   }
   function words_read(found) {
     let words_found = property_get(found, "words");
