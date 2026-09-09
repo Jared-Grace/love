@@ -42,7 +42,7 @@ export function bible_glyph_chapter_ezk33() {
           "your",
           "$family",
           "and",
-          "tell",
+          "$speech",
           "them:",
           "Suppose",
           "I",
