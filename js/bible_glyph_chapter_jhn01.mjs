@@ -857,7 +857,7 @@ export function bible_glyph_chapter_jhn01() {
           "turned",
           "$plus",
           "saw",
-          "them",
+          "$pointing_back",
           "following,",
           "$plus",
           "$speech",
