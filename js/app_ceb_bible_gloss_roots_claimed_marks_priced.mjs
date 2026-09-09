@@ -1,6 +1,5 @@
+import { app_ceb_bible_words_written_lowered_set } from "./app_ceb_bible_words_written_lowered_set.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
-import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
@@ -27,8 +26,7 @@ export async function app_ceb_bible_gloss_roots_claimed_marks_priced() {
   "Nothing is written and nothing is asked of the site.";
   "The bible's words and the dictionary are read before the store is walked rather than after, because the walk now carries the pricing with it and the pricing cannot ask a vocabulary that has not arrived. Neither read writes anything, so which of them goes first is a matter of what the next line needs.";
   arguments_assert(arguments, 0);
-  let bible_folder = ebible_folder_cebuano();
-  let vocabulary = await bible_words_written_lowered_set(bible_folder);
+  let vocabulary = await app_ceb_bible_words_written_lowered_set();
   let known = await binisaya_words_known();
   let listed = [];
   let marked_sightings = 0;
