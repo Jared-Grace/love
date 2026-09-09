@@ -1,3 +1,4 @@
+import { bible_usfm_lines_division_subtitles_dropped } from "./bible_usfm_lines_division_subtitles_dropped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { usfm_continuation_lines_joined } from "./usfm_continuation_lines_joined.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
@@ -14,5 +15,9 @@ export function bible_usfm_chapter_lines(usfm, chapter_number) {
   let lines = text_split_newline(joined);
   let chapter_lines = bible_usfm_lines_chapter_taken(lines, chapter_number);
   let usfm_lines = bible_usfm_lines_lone_markers_joined(chapter_lines);
+  let out = bible_usfm_lines_division_subtitles_dropped(
+    usfm_lines2,
+    book_lines,
+  );
   return usfm_lines;
 }
