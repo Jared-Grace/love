@@ -55,13 +55,13 @@ export async function app_code_lesson_title_words_site(f_name, words) {
   for (let name of seen) {
     let source = await function_read(name);
     for (let needle of needles) {
-      let count = text_occurrences_count(source, needle);
-      if (count) {
+      let count_found = text_occurrences_count(source, needle);
+      if (count_found) {
         list_add(hits, {
           f_name: name,
           needle,
           words,
-          count,
+          count: count_found,
         });
         break;
       }
