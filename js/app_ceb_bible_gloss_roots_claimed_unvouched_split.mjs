@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -21,13 +22,17 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   let bible_folder = ebible_folder_cebuano();
   let vocabulary = await bible_words_written_lowered_set(bible_folder);
   let piles = {};
-  let { counts, sizes, answer, roots_distinct } =
+  let r =
     await app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct(
       piles,
       vouched,
       known,
       vocabulary,
     );
+  let roots_distinct = property_get(r, "roots_distinct");
+  let answer = property_get(r, "answer");
+  let sizes = property_get(r, "sizes");
+  let counts = property_get(r, "counts");
   property_set(answer, "roots_distinct", roots_distinct);
   property_set(answer, "roots", sizes);
   property_set(answer, "sightings", counts);
