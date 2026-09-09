@@ -20,6 +20,7 @@ export function lyric_video_picture_scenes_ask(lines_text, count) {
     "`, which is what `$fn ",
     fn_name("lyric_video_picture_scene_alternative_missing"),
     "` matches on. So a scene written to this instruction cannot fail those two gates for a reason the instruction never mentioned, and a clause added to the look tomorrow reaches the writer the same day without anybody remembering to come here. A prompt that restated the rules in its own words would be a third copy, and the copy nobody diffs.");
+  ("★ TWO RULES HERE ARE NOT READ OFF ANY LIST, AND BOTH WERE PUT IN BY WATCHING FIVE WRITERS ANSWER THE SAME PSALM. The first is that a scene may not ask for a thing with writing on it. The refused words are a check on the words of the scene, and a writer can ask for lettering without ever spelling a refused word - one asked for a basin carved with a single word worn almost smooth, which passed every gate and would have come back as the garble a drawing model makes of text. The second is the length. The instruction already said one still moment, and the writer that ignored it wrote thirty-word sentences of three and four clauses; a bound in words is the same rule said in a form a writer cannot read loosely. Both are written here rather than in a list because no gate matches on them yet, and an instruction ahead of its gates is the safe direction - the unsafe one is a gate refusing what the instruction never mentioned.");
   ("★ IT ASKS FOR THE SCENE ONLY AND NEVER THE LOOK, because `$fn ",
     fn_name("lyric_video_picture_prompt"),
     "` appends the look to whatever it is given. A writer told to include it would have it twice in the sentence handed over, and the second telling is what a drawing weighs heaviest.");
@@ -41,7 +42,7 @@ export function lyric_video_picture_scenes_ask(lines_text, count) {
       count +
       " scenes, covering the passage in order from its first line to its last.",
     "",
-    "A scene is one plain sentence saying what the picture shows. It is read as a whole and never as a list, so keep it to one still moment.",
+    "A scene is one plain sentence saying what the picture shows. It is read as a whole and never as a list, so keep it to one still moment and under twenty words. A sentence carrying three or four clauses is read as a list, and the picture comes back holding none of them.",
     "",
     "What a scene must do:",
     "- name a created thing the lines call on - what they say is made, given, laid down, gone through or waited for - and never the act of praising itself",
@@ -51,6 +52,7 @@ export function lyric_video_picture_scenes_ask(lines_text, count) {
     "",
     "What a scene must never do:",
     "- put anything at all in the place the psalm is speaking to. Nothing may stand for God, no angels as figures, and no faces. Where a line would make a single figure be read as the LORD, write the flock, the fold, the road, the crown laid down instead.",
+    "- ask for anything that has writing on it. No inscription, no carved or painted words, no open book or scroll or tablet with anything readable on it, and nothing named or titled or labelled. What is drawn is drawn, not read, and a picture asked to hold words comes back holding the shapes of letters that spell nothing. A blank tablet or a closed book is the way to say it.",
     "- use any of these words, whatever the sense of them, because the shared look refuses each one and the two halves are joined into a single sentence that would then contradict itself: " +
       list_join_comma_space(refused),
     "- describe the way it is painted. That is added afterwards and is the same for every picture. These clauses are already appended, so do not repeat any of them: " +
