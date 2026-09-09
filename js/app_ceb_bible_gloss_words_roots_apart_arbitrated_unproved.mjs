@@ -16,10 +16,11 @@ export function app_ceb_bible_gloss_words_roots_apart_arbitrated_unproved(r2) {
   let shared = list_filter(arbitrated, shared_is);
   let contradiction = list_filter(arbitrated, contradiction_is);
   let unproved = list_filter(arbitrated, unproved_is);
-  return {
+  let r = {
     depth,
     shared,
     contradiction,
     unproved,
   };
+  return r;
 }
