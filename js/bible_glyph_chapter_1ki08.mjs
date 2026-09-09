@@ -1522,7 +1522,7 @@ export function bible_glyph_chapter_1ki08() {
           "against",
           "their",
           "enemies,",
-          "wherever",
+          "$road",
           "You",
           "send",
           "them,",
