@@ -20,7 +20,7 @@ export function bible_usfm_markers_dropped_lines_allowed() {
     s2: "a section title inside a section, The Third Day in the creation account and The Bride in the song - thirty seven of the eighty are the song's speaker labels, and those are the only lines thrown away anywhere that a reader would want back, because the song is a conversation and they say who answers whom",
     r: "the bracketed list of parallel passages a printing sets under a section title, (Ruth 4:18-22; Luke 3:23-38) - a cross reference to somewhere else, never words of the passage it stands over",
     ms: "the five division titles of the psalter, BOOK I to BOOK V, which mark where the collection was joined together and are the only lines wearing this mark in the whole shelf",
-    qaz: "the twenty two hebrew letters of the acrostic in psalm one hundred and nineteen with their names beneath them, aleph and ALEPH, beth and BETH - the letter each stanza begins with, set as a label over the stanza and not sung in it",
+    qa: "the twenty two hebrew letters of the acrostic in psalm one hundred and nineteen with their names beneath them, aleph and ALEPH, beth and BETH - the letter each stanza begins with, set as a label over the stanza and not sung in it",
   };
   return allowed;
 }
