@@ -5,6 +5,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
+import { or } from "./or.mjs";
 import { each } from "./each.mjs";
 import { property_set } from "./property_set.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
@@ -34,10 +35,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
       }
       let first = equal(fewest, -1);
       let rarer = less_than(words, fewest);
-      let take = first;
-      if (rarer) {
-        take = true;
-      }
+      let take = or(first, rarer);
       if (take) {
         fewest = words;
         rarest = character;
