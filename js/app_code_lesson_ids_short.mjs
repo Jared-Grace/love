@@ -113,6 +113,8 @@ export function app_code_lesson_ids_short() {
       text_frozen("compare_compare"),
     app_code_lesson_expression_parentheses_one_side:
       text_frozen("brackets_one"),
+    app_code_lesson_expression_choose_order_same_strength:
+      text_frozen("order_same"),
     app_code_lesson_expression_choose_order_three: text_frozen("order_three"),
     app_code_lesson_expression_either_first: text_frozen("either_first"),
     app_code_lesson_expression_choose_order_both_sides:
