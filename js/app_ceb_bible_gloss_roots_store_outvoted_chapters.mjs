@@ -1,14 +1,9 @@
+import { app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read.mjs";
 import { app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { list_get } from "./list_get.mjs";
-import { property_initialize_list } from "./property_initialize_list.mjs";
-import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -25,25 +20,10 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_chapters() {
   let fn = app_ceb_bible_gloss_generate;
   let word_key = app_shared_gloss_bible_generate_generic_word();
   let said = {};
-  function entry_read(found) {
-    let chapter_code = property_get(found, "chapter_code");
-    let entry = property_get(found, "entry");
-    let claimed = property_get(found, "claimed");
-    let count = list_size(claimed);
-    let empty = equal(count, 0);
-    if (empty) {
-      return;
-    }
-    let word = property_get(entry, word_key);
-    let lowered = text_lower_to(word);
-    let first = list_get(claimed, 0);
-    let root = text_lower_to(first);
-    let places = property_initialize_list(said, lowered);
-    list_add(places, {
-      chapter: chapter_code,
-      root: root,
-    });
-  }
+  let entry_read = app_ceb_bible_gloss_roots_store_outvoted_chapters_entry_read(
+    word_key,
+    said,
+  );
   await gloss_chapters_roots_claimed_entries_generic(fn, entry_read);
   let known = await binisaya_words_known();
   let said_words = object_property_names(said);
