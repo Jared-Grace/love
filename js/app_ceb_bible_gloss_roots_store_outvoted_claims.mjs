@@ -19,8 +19,10 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
   arguments_assert(arguments, 0);
   let measured = await app_ceb_bible_gloss_roots_store_outvoted_chapters();
   let rows = property_get(measured, "rows");
-  let { keys, listed, key_read } =
-    app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows);
+  let r2 = app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows);
+  let key_read = property_get(r2, "key_read");
+  let listed = property_get(r2, "listed");
+  let keys = property_get(r2, "keys");
   each(keys, key_read);
   function count_of(claim) {
     let count = property_get(claim, "count");
@@ -33,8 +35,8 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
     let held = property_get_or_null(by_relation, relation);
     let none = null_is(held);
     let before = none ? 0 : held;
-    let value2 = add(before, 1);
-    property_set(by_relation, relation, value2);
+    let value = add(before, 1);
+    property_set(by_relation, relation, value);
   }
   each(listed, relation_count);
   let r = {
