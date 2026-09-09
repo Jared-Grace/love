@@ -238,7 +238,7 @@ export function bible_glyph_chapter_gen20() {
           "if",
           "you",
           "are",
-          "$no_entry",
+          "not",
           "$turn_back",
           "her,",
           "$lightbulb",

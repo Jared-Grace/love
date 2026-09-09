@@ -288,7 +288,7 @@ export function bible_glyph_chapter_exo10() {
           "$fire.",
           "Do",
           "you",
-          "$no_entry",
+          "not",
           "yet",
           "$lightbulb",
           "that",

@@ -1208,7 +1208,7 @@ export function bible_glyph_chapter_ezk33() {
           "$speech",
           "but",
           "do",
-          "$no_entry",
+          "not",
           "$hammer",
           "them.",
         ],
