@@ -44,9 +44,10 @@ export function app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows) {
     property_set(claim, "count", value);
     list_add(listed, claim);
   }
-  return {
+  let r = {
     keys,
     listed,
     key_read,
   };
+  return r;
 }
