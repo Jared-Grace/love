@@ -4,13 +4,15 @@ import { app_ceb_bible_gloss_roots_claimed_letters_rare } from "./app_ceb_bible_
 import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
-import { add } from "./add.mjs";
-import { each } from "./each.mjs";
+import { list_map_sum } from "./list_map_sum.mjs";
+import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { text_size } from "./text_size.mjs";
 import { or } from "./or.mjs";
 import { list_size } from "./list_size.mjs";
+import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
   "Every root an explanation states outright that is spelled with a character the Cebuano bible never writes at all, gathered under that character.";
   ("This is the bottom band of the run ",
@@ -21,6 +23,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
   ("The character number is carried because two of these cannot be told apart by looking. An accent written as one character and the same accent written as a letter followed by a separate mark read the same on a screen and are different spellings underneath, so a repair listing the letters it knows about would silently pass over the second kind.");
   ("Measured over the store on 2026-09-09: eight characters, eighteen roots, thirty six sightings, out of two thousand and ninety four distinct roots stated across forty two thousand four hundred and eighty four entries. Small on purpose - a class this cheap to test should be empty, and the reason to name it is that it is complete rather than that it is large.");
   ("★ THE BESPOKE READINGS BESIDE THIS ONE ARE ITS CASES, AND THEY WERE BUILT ONE AT A TIME BY SOMEBODY NOTICING A ROW. The accents, the brackets and the spaces each already have a reading of their own, and each was reached by reading rows until a notation showed itself. This test needed no noticing and it also finds the one character none of them looks for, a leading asterisk on a single root. That is the argument for the general test: not that it beats them on the notations already known, but that the next notation nobody has thought of is inside it already.");
+  ("The sightings under a character are added up by the named reader every other ranking here uses rather than by a loop written out again. That reader says in its own prose that it was written out fourteen times before it was given a name, and this reading made it fifteen on the day it was authored.");
   ("Nothing is written and nothing is asked of the site.");
   arguments_assert(arguments, 0);
   let read = await app_ceb_bible_gloss_roots_claimed_letters_rare();
@@ -36,12 +39,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
     }
     let character = property_get(row, "letter");
     let roots = property_get(row, "listed");
-    let sightings = 0;
-    function root_count(root_row) {
-      let seen = property_get(root_row, "sightings");
-      sightings = add(sightings, seen);
-    }
-    each(roots, root_count);
+    let sightings = list_map_sum(roots, gloss_row_sightings);
     let stripped = text_accent_marks_removed(character);
     let size = text_size(stripped);
     let emptied = equal(size, 0);
