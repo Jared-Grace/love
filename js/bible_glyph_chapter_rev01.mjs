@@ -225,7 +225,7 @@ export function bible_glyph_chapter_rev01() {
           "will",
           "$eye",
           "$pointing_back,",
-          "even",
+          "$plus",
           "those",
           "who",
           "pierced",
