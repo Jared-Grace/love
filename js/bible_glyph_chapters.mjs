@@ -745,6 +745,7 @@ export function bible_glyph_chapters() {
   let three_hundredth = bible_glyph_chapter_deu04();
   let three_hundred_and_first = bible_glyph_chapter_deu31();
   let three_hundred_and_second = bible_glyph_chapter_deu33();
+  let three_hundred_and_third = bible_glyph_chapter_deu16();
   let chapters = [
     first,
     second,
