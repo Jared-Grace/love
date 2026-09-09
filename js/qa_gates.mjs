@@ -1,3 +1,4 @@
+import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
 import { gloss_explains_repeated_gate_run } from "./gloss_explains_repeated_gate_run.mjs";
 import { bible_glyph_chapters_marks_doubled_gate_run } from "./bible_glyph_chapters_marks_doubled_gate_run.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_gate_run } from "./app_ceb_bible_gloss_words_explained_apart_gate_run.mjs";
@@ -1089,6 +1090,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_words_edged_gate_run,
     app_ceb_bible_gloss_words_explained_apart_gate_run,
     bible_glyph_chapters_marks_doubled_gate_run,
+    gloss_pointers_dangling_gate_run,
   ];
   return gates;
 }
