@@ -415,7 +415,7 @@ export function bible_glyph_chapter_jhn20() {
           "Mary.",
           "She",
           "turned",
-          "$plus",
+          "and",
           "$speech",
           "$pointing_back",
           "in",
