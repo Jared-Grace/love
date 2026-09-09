@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1jn05() {
       {
         verse_number: 20,
         words: [
-          "$plus",
+          "And",
           "we",
           "$lightbulb",
           "$pointing",
