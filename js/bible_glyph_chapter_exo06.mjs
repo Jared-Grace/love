@@ -569,7 +569,7 @@ export function bible_glyph_chapter_exo06() {
           "sister",
           "of",
           "his",
-          "$father,",
+          "father,",
           "as",
           "his",
           "$woman,",
