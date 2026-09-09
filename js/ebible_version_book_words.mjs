@@ -8,8 +8,7 @@ import { text_words_dash_apostrophe_kept } from "./text_words_dash_apostrophe_ke
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export async function ebible_version_book_words(bible_folder, book_code) {
   "$plain bible_folder";
   "$plain book_code";
@@ -42,7 +41,6 @@ export async function ebible_version_book_words(bible_folder, book_code) {
     each(verses, verse_each);
   }
   each(chosen, chapter_each);
-  let unique = list_unique(words);
-  list_sort_text(unique);
+  let unique = list_unique_sorted(words);
   return unique;
 }
