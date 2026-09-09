@@ -1,6 +1,5 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_roots_shallower } from "./app_ceb_bible_gloss_roots_shallower.mjs";
 import { app_ceb_bible_gloss_roots_shallower_baseline_path } from "./app_ceb_bible_gloss_roots_shallower_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -30,6 +29,6 @@ export async function app_ceb_bible_gloss_roots_shallower_gate_run() {
     "these explanations name a word built out of the root as though it were the root, which hands a learner a word nobody speaks - write the root the dictionary gives, or say plainly that the word named is a further layer built on it",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
