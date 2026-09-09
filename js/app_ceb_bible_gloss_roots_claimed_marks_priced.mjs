@@ -9,7 +9,9 @@ import { add } from "./add.mjs";
 import { set_includes } from "./set_includes.mjs";
 import { binisaya_words_known_held_is } from "./binisaya_words_known_held_is.mjs";
 import { property_set } from "./property_set.mjs";
+import { or } from "./or.mjs";
 import { not } from "./not.mjs";
+import { and } from "./and.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -50,18 +52,10 @@ export async function app_ceb_bible_gloss_roots_claimed_marks_priced() {
     property_set(row, "after_written", after_written);
     property_set(row, "before_known", before_known);
     property_set(row, "after_known", after_known);
-    let found_before = before_written;
-    if (before_known) {
-      found_before = true;
-    }
-    let found_after = after_written;
-    if (after_known) {
-      found_after = true;
-    }
-    let bought = not(found_before);
-    if (not(found_after)) {
-      bought = false;
-    }
+    let found_before = or(before_written, before_known);
+    let found_after = or(after_written, after_known);
+    let unfound_before = not(found_before);
+    let bought = and(unfound_before, found_after);
     property_set(row, "bought", bought);
     if (bought) {
       bought_roots = add(bought_roots, 1);
