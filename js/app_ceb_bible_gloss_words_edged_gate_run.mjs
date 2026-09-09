@@ -1,6 +1,5 @@
+import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
-import { not } from "./not.mjs";
 import { app_ceb_bible_gloss_words_edged_names } from "./app_ceb_bible_gloss_words_edged_names.mjs";
 import { app_ceb_bible_gloss_words_edged_baseline_path } from "./app_ceb_bible_gloss_words_edged_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
@@ -15,8 +14,7 @@ export async function app_ceb_bible_gloss_words_edged_gate_run() {
   "A store that is not on the disk is passed over and said so, rather than counted as clean. The store lives on a drive that is not always mounted, and every Claude in the repo runs this gate - a sweep that read nothing and called it nought would turn one unmounted drive into a record wiped for everybody.";
   "How many chapters were walked travels out beside the verdict, because finding none and reaching none are the same word otherwise.";
   arguments_assert(arguments, 0);
-  let stored = await app_ceb_bible_gloss_stored_is();
-  let unread = not(stored);
+  let unread = await app_ceb_bible_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,
