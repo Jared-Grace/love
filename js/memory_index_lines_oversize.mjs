@@ -1,7 +1,7 @@
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
-import { memory_index_line_length_ceiling } from "./memory_index_line_length_ceiling.mjs";
+import { memory_index_entry_length_ceiling } from "./memory_index_entry_length_ceiling.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -13,7 +13,7 @@ export async function memory_index_lines_oversize() {
   "Some lines deliberately hold several, separated by a middle dot, and those are not a fault - a group is how a family of notes is folded down to one line when the line budget is the tight one. Measured 2026-09-09, five lines were past the flat ceiling and every one of them was a group; the worst was 128 characters an entry against a ceiling of 200. So the flat reading condemns exactly the lines that were written to save room, which is why the entries on the line are counted first and the ceiling multiplied by them.";
   "A line carrying no link at all is not an entry and is not checked here. Headings and the two lines of reading instructions at the top are prose about the index rather than hooks into it, and they answer to the whole-file size instead.";
   let lines = await memory_index_lines();
-  let ceiling = memory_index_line_length_ceiling();
+  let ceiling = memory_index_entry_length_ceiling();
   let opener = "](";
   let oversize = [];
   for (let line of lines) {
