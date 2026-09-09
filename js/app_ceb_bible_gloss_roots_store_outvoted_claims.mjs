@@ -1,14 +1,10 @@
+import { app_ceb_bible_gloss_roots_store_outvoted_claims_relation_count } from "./app_ceb_bible_gloss_roots_store_outvoted_claims_relation_count.mjs";
 import { app_ceb_bible_gloss_roots_store_outvoted_claims_key_read } from "./app_ceb_bible_gloss_roots_store_outvoted_claims_key_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_store_outvoted_chapters } from "./app_ceb_bible_gloss_roots_store_outvoted_chapters.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { add } from "./add.mjs";
 export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
   "The chapter-by-chapter list of Cebuano gloss roots the dictionary contradicts, collapsed to the distinct claims behind it, biggest first, each carrying the chapters that make it.";
   "★ SIX HUNDRED AND EIGHTY-TWO ROWS IS A FINDING NOBODY CAN ANSWER AND SEVENTY-TWO CLAIMS IS A DECISION SOMEBODY CAN MAKE IN AN EVENING. The rows underneath are one per chapter, so a single wrong idea about one word is spread across every chapter that repeated it - halangdon taken back to halang appears fifteen times and is one thing to agree or disagree with, not fifteen. Collapsing them is not a summary that loses detail, because the chapters are carried along and the rows can still be walked; it is the same finding addressed to a reader rather than to a counter.";
@@ -23,21 +19,13 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
   let key_read = property_get(r2, "key_read");
   let listed = property_get(r2, "listed");
   let keys = property_get(r2, "keys");
-  each(keys, key_read);
-  function count_of(claim) {
-    let count = property_get(claim, "count");
-    return count;
-  }
-  list_sort_number_mapper_reverse(listed, count_of);
-  let by_relation = {};
-  function relation_count(claim) {
-    let relation = property_get(claim, "relation");
-    let held = property_get_or_null(by_relation, relation);
-    let none = null_is(held);
-    let before = none ? 0 : held;
-    let value = add(before, 1);
-    property_set(by_relation, relation, value);
-  }
+  let r3 = app_ceb_bible_gloss_roots_store_outvoted_claims_relation_count(
+    keys,
+    key_read,
+    listed,
+  );
+  let relation_count = property_get(r3, "relation_count");
+  let by_relation = property_get(r3, "by_relation");
   each(listed, relation_count);
   let r = {
     entries: list_size(rows),
