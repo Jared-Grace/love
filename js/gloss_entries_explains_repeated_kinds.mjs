@@ -22,8 +22,8 @@ export function gloss_entries_explains_repeated_kinds(entries) {
   let key = gloss_entry_explain_key();
   function explain_written_is(entry) {
     let explain = property_get_or_null(entry, key);
-    let written = null_not_is(explain);
-    return written;
+    let written_found = null_not_is(explain);
+    return written_found;
   }
   let written = list_filter(entries, explain_written_is);
   let grouped = list_group_by_property(written, key);
