@@ -1,10 +1,9 @@
-import { app_ceb_bible_gloss_words_edged_labelled } from "./app_ceb_bible_gloss_words_edged_labelled.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_ceb_bible_gloss_words_edged_unknown } from "./app_ceb_bible_gloss_words_edged_unknown.mjs";
 import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { property_equals } from "./property_equals.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_words_edged() {
   "Every word in the Cebuano gloss store that carries a mark from the sentence around it, named once each, set beside what the dictionary says about the same word spelled bare.";
@@ -13,26 +12,11 @@ export async function app_ceb_bible_gloss_words_edged() {
   let offenders = await gloss_chapters_words_edged(
     app_ceb_bible_gloss_generate,
   );
-  let carried = ["bare"];
-  let labelled = await app_ceb_bible_gloss_words_edged_labelled(
-    offenders,
-    carried,
-  );
-  function broken_down_is(row) {
-    let taken_apart = property_equals(row, "kind", "broken_down");
-    return taken_apart;
-  }
-  function refused_is(row) {
-    let said_no = property_equals(row, "kind", "refused");
-    return said_no;
-  }
-  function unknown_is(row) {
-    let never_asked = property_equals(row, "kind", "unknown");
-    return never_asked;
-  }
-  let broken_down = list_filter(labelled, broken_down_is);
-  let refused = list_filter(labelled, refused_is);
-  let unknown = list_filter(labelled, unknown_is);
+  let r2 = await app_ceb_bible_gloss_words_edged_unknown(offenders);
+  let unknown = property_get(r2, "unknown");
+  let refused = property_get(r2, "refused");
+  let broken_down = property_get(r2, "broken_down");
+  let labelled = property_get(r2, "labelled");
   let words_total = list_size(labelled);
   let sightings_total = list_map_sum(labelled, gloss_row_sightings);
   let broken_down_words = list_size(broken_down);
