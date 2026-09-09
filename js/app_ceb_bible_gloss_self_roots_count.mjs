@@ -1,4 +1,4 @@
-import { property_list_size } from "./property_list_size.mjs";
+import { gloss_chapter_found_count } from "./gloss_chapter_found_count.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { gloss_chapters_self_roots } from "./gloss_chapters_self_roots.mjs";
@@ -9,11 +9,7 @@ export async function app_ceb_bible_gloss_self_roots_count() {
   "The findings themselves are not carried back. There are potentially thousands of them and a count is what the question was, so whoever wants to read the prose asks a single chapter for it.";
   let offenders = await gloss_chapters_self_roots(app_ceb_bible_gloss_generate);
   let chapters = list_size(offenders);
-  function chapter_count(chapter) {
-    let size = property_list_size(chapter, "found");
-    return size;
-  }
-  let count = list_map_sum(offenders, chapter_count);
+  let count = list_map_sum(offenders, gloss_chapter_found_count);
   let r = {
     chapters,
     count,
