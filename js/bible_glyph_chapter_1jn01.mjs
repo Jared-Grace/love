@@ -108,7 +108,7 @@ export function bible_glyph_chapter_1jn01() {
           "so",
           "that",
           "you",
-          "also",
+          "$plus",
           "may",
           "have",
           "$handshake",
