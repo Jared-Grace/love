@@ -468,7 +468,7 @@ export function song_image_couplets() {
       first: "for every tear",
       second: "HE'll wipe away",
       symbol:
-        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides",
+        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of emerald green also, so that the whole field stands green behind the blue drop",
       symbol_ref: "Revelation 21:4",
       same_as: 0,
     },
