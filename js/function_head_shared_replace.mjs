@@ -1,0 +1,106 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { function_parse_declaration } from "./function_parse_declaration.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_function_declaration_shared_run_read_or_null } from "./js_function_declaration_shared_run_read_or_null.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_function_declaration_head_shared_verdict_or_null } from "./js_function_declaration_head_shared_verdict_or_null.mjs";
+import { not } from "./not.mjs";
+import { js_function_declaration_head_unbroken_is } from "./js_function_declaration_head_unbroken_is.mjs";
+import { js_code_let_call } from "./js_code_let_call.mjs";
+import { js_function_node_find_named_node } from "./js_function_node_find_named_node.mjs";
+import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
+import { list_take } from "./list_take.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_skip } from "./list_skip.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { js_statement_delete } from "./js_statement_delete.mjs";
+import { js_parse_statement } from "./js_parse_statement.mjs";
+import { object_replace } from "./object_replace.mjs";
+import { function_transform } from "./function_transform.mjs";
+import { function_auto_checked } from "./function_auto_checked.mjs";
+export async function function_head_shared_replace(f_name, shared_name) {
+  arguments_assert(arguments, 2);
+  ("Swap the copy of a shared function's body that a function opens with for a call to that function, keeping the name the copy gave what it made.");
+  ("The other half of the reading that finds shared openings. That one says which functions begin with the same work and stops, because naming the shared run is a judgment; here the shared run is already named and already written, so what is left is a change with a name and two real arguments rather than a judgment.");
+  ("It asks every question again rather than being told the answer. The reading that lists what can be collapsed hands back names and nothing else, and by the time a name is acted on the file behind it may have been rewritten by somebody else working in the same folder. Asking again costs one parse and is the difference between a swap that is right when it lands and a swap that was right when it was listed.");
+  ("One question is asked here that the listing does not ask: whether anything stands written in among the lines being replaced. Prose is not work, so a reading of what a function does steps over it and would report the run as ready; the swap takes the lines it was told about and would leave the paragraph behind, still written down and now describing lines that had gone. So this may refuse a function the listing offered, and never the other way about.");
+  ("It canonicalizes afterwards and does not commit. The line it writes names a function this file has never imported, so until the pass has been over it the file reads a name nothing binds, and a commit taken in that gap records a file that does not load. Committing is left to whatever is calling, so that a sweep can commit each place as it lands.");
+  let parsed_shared = await function_parse_declaration(shared_name);
+  let shared_declaration = property_get(parsed_shared, "declaration");
+  let shared =
+    js_function_declaration_shared_run_read_or_null(shared_declaration);
+  let unusable_is = null_is(shared);
+  if (unusable_is) {
+    let unusable = {
+      ok: false,
+      reason:
+        "the shared function is not a run of work ending in the handing back of one name that run made",
+    };
+    return unusable;
+  }
+  let parsed_other = await function_parse_declaration(f_name);
+  let declaration_other = property_get(parsed_other, "declaration");
+  let verdict = js_function_declaration_head_shared_verdict_or_null(
+    declaration_other,
+    shared,
+  );
+  let unrelated_is = null_is(verdict);
+  if (unrelated_is) {
+    let unrelated = {
+      ok: false,
+      reason: "it does not open with a copy of the shared function's body",
+    };
+    return unrelated;
+  }
+  let taken_is = property_get(verdict, "collapsible");
+  let refused_is = not(taken_is);
+  if (refused_is) {
+    let reason = property_get(verdict, "reason");
+    let refused = {
+      ok: false,
+      reason: reason,
+    };
+    return refused;
+  }
+  let size = property_get(shared, "size");
+  let unbroken_is = js_function_declaration_head_unbroken_is(
+    declaration_other,
+    size,
+  );
+  let broken_is = not(unbroken_is);
+  if (broken_is) {
+    let broken = {
+      ok: false,
+      reason:
+        "something else is written in among the lines being replaced, and would be left behind describing lines that had gone",
+    };
+    return broken;
+  }
+  let local_name = property_get(verdict, "local_name");
+  let params = property_get(shared, "params");
+  let awaited_is = property_get(shared_declaration, "async");
+  let code = js_code_let_call(local_name, shared_name, params, awaited_is);
+  function edit(ast) {
+    let node = js_function_node_find_named_node(ast, f_name);
+    let working =
+      js_function_declaration_statements_working_without_arguments_assert(node);
+    let head = list_take(working, size);
+    let first = list_first(head);
+    let rest = list_skip(head, 1);
+    let more_is = list_empty_not_is(rest);
+    if (more_is) {
+      js_statement_delete(ast, rest);
+    }
+    let statement = js_parse_statement(code);
+    object_replace(first, statement);
+  }
+  await function_transform(f_name, edit);
+  let checked = await function_auto_checked(f_name);
+  let done = {
+    ok: true,
+    reason: "",
+    local_name: local_name,
+    checked: checked,
+  };
+  return done;
+}
