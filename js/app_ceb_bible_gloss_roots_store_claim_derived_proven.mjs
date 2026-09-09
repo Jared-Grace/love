@@ -6,8 +6,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { property_set } from "./property_set.mjs";
-import { add } from "./add.mjs";
+import { property_count_add } from "./property_count_add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
@@ -45,11 +44,7 @@ export async function app_ceb_bible_gloss_roots_store_claim_derived_proven() {
       return;
     }
     let relation = property_get(claim, "relation");
-    let before = property_get_or_null(by_relation, relation);
-    let none = null_is(before);
-    let count = none ? 0 : before;
-    let value = add(count, 1);
-    property_set(by_relation, relation, value);
+    property_count_add(by_relation, relation, 1);
     list_add(proven, {
       word: property_get(claim, "word"),
       said: said,

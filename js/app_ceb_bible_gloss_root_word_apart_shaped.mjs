@@ -1,15 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_root_word_apart } from "./app_ceb_bible_gloss_root_word_apart.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { add } from "./add.mjs";
 import { gloss_root_claimed_shape } from "./gloss_root_claimed_shape.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
+import { property_set } from "./property_set.mjs";
+import { property_count_add } from "./property_count_add.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
+import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_root_word_apart_shaped() {
@@ -25,16 +24,6 @@ export async function app_ceb_bible_gloss_root_word_apart_shaped() {
   let shape_entries = {};
   let residue = [];
   let residue_entries = 0;
-  function tally(counts, name, value) {
-    let before = property_get_or_null(counts, name);
-    let first = null_is(before);
-    if (first) {
-      property_set(counts, name, value);
-      return;
-    }
-    let after = add(before, value);
-    property_set(counts, name, after);
-  }
   function pair_read(pair) {
     let word = property_get(pair, "word");
     let root = property_get(pair, "root");
@@ -46,8 +35,8 @@ export async function app_ceb_bible_gloss_root_word_apart_shaped() {
       named_shape = "none";
     }
     property_set(pair, "shape", named_shape);
-    tally(shape_words, named_shape, 1);
-    tally(shape_entries, named_shape, entries);
+    property_count_add(shape_words, named_shape, 1);
+    property_count_add(shape_entries, named_shape, entries);
     let unaccounted = equal(named_shape, "none");
     if (not(unaccounted)) {
       return;
