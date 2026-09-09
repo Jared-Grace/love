@@ -830,8 +830,7 @@ export function bible_glyph_chapter_jhn10() {
         verse_number: 34,
         words: [
           "$cross",
-          "$speech",
-          "to",
+          "answered",
           "$pointing_back,",
           "Is",
           "it",
