@@ -43,15 +43,11 @@ export async function gloss_chapters_explains_repeated_ranked(fn) {
     return r;
   }
   let merged = list_map(by_explain, explain_read);
-  function row_entries_read(row) {
-    let n = property_get(row, "entries");
-    return n;
-  }
-  let ranked = list_sort_number_mapper_reverse(merged, row_entries_read);
+  let ranked = list_sort_number_mapper_reverse(merged, gloss_entries_count);
   let r2 = {
     chapters: list_size(chapter_codes),
     distinct: list_size(ranked),
-    covered: list_map_sum(ranked, row_entries_read),
+    covered: list_map_sum(ranked, gloss_entries_count),
     ranked,
   };
   return r2;
