@@ -4,8 +4,7 @@ import { function_unalias_exists_not } from "./function_unalias_exists_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_chapter_rosetta_lines_write } from "./bible_glyph_chapter_rosetta_lines_write.mjs";
 import { function_list_call_add } from "./function_list_call_add.mjs";
-import { bible_glyph_chapters_tagalog_write } from "./bible_glyph_chapters_tagalog_write.mjs";
-import { bible_glyph_chapters_urdu_write } from "./bible_glyph_chapters_urdu_write.mjs";
+import { bible_glyph_chapters_languages_write } from "./bible_glyph_chapters_languages_write.mjs";
 export async function bible_glyph_chapter_bands_write(chapter_code) {
   "$plain chapter_code";
   "the code names one chapter to write the bands of. It names a stretch of text and nothing that runs.";
@@ -25,8 +24,7 @@ export async function bible_glyph_chapter_bands_write(chapter_code) {
     await bible_glyph_chapter_rosetta_lines_write(chapter_code);
     await function_list_call_add(register, f_name);
   }
-  let tagalog = await bible_glyph_chapters_tagalog_write();
-  let urdu = await bible_glyph_chapters_urdu_write();
+  let languages = await bible_glyph_chapters_languages_write();
   let report = {
     chapter_code,
     f_name,
