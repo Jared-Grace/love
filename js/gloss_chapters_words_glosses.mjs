@@ -1,7 +1,4 @@
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
@@ -19,9 +16,7 @@ export async function gloss_chapters_words_glosses(fn, words) {
   "★ ONE WALK ANSWERS FOR THE WHOLE LIST. Asking a word at a time reads every chapter again for each word, so a list of a dozen words paid a dozen readings of the same files to learn twelve answers that were all sitting in the first one.";
   "An author filling a run of blanks needs the store's answer for every blanked word at once, and the run is what makes the convention visible: a word the store has answered one way two hundred times is settled, and one it has answered two ways is a split that a fill would otherwise freeze in whichever direction it happened to guess.";
   "The words are matched in small letters, because a capital belongs to the sentence rather than to the word.";
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   let found = {};
   function word_want(word) {
     let wanted = text_lower_to(word);
