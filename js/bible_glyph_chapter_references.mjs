@@ -493,6 +493,10 @@ export function bible_glyph_chapter_references() {
       reference: "Numbers 36",
     },
     {
+      chapter_code: "DEU01",
+      reference: "Deuteronomy 1",
+    },
+    {
       chapter_code: "DEU04",
       reference: "Deuteronomy 4",
     },
