@@ -1,3 +1,6 @@
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function lyric_video_picture_bench_size(size) {
   "$plain size";
@@ -34,8 +37,13 @@ export function lyric_video_picture_bench_size(size) {
     },
   };
   let one = sizes[size];
-  if (!one) {
-    throw new Error("lyric_video_picture_bench_size: unknown size " + size);
+  if (not(one)) {
+    throw new Error(
+      text_combine_multiple([
+        fn_name("lyric_video_picture_bench_size"),
+        ": unknown size ",
+      ]) + size,
+    );
   }
   return one;
 }
