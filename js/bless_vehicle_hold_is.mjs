@@ -44,10 +44,10 @@ export function bless_vehicle_hold_is(vehicle, world) {
   let y = property_get(vehicle, "y");
   let vehicles = property_get(world, "vehicles");
   function in_landing_is(other) {
-    let at = property_get(other, "x");
+    let at_found = property_get(other, "x");
     let row = property_get(other, "y");
     let same_lane = equal(row, y);
-    let same_square = equal(at, landing);
+    let same_square = equal(at_found, landing);
     let both = and(same_lane, same_square);
     return both;
   }
