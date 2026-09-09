@@ -667,7 +667,7 @@ export function bible_glyph_chapter_gen48() {
           "you",
           "shall",
           "Israel",
-          "pronounce",
+          "$speech",
           "this",
           "$speech+thumbs_up,",
           "May",
