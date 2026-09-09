@@ -1,7 +1,7 @@
 import { baseline_known_read } from "./baseline_known_read.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_back_references_baseline_path } from "./gloss_back_references_baseline_path.mjs";
-import { gloss_back_references_counts_versus_baseline } from "./gloss_back_references_counts_versus_baseline.mjs";
+import { gloss_store_sites_versus_baseline } from "./gloss_store_sites_versus_baseline.mjs";
 import { gloss_back_references_measure } from "./gloss_back_references_measure.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
@@ -18,7 +18,7 @@ export async function gloss_back_references_gate_run() {
   let missing = property_get(measured, "missing");
   let path = gloss_back_references_baseline_path();
   let recorded = await baseline_known_read(path);
-  let change = gloss_back_references_counts_versus_baseline(counts, recorded);
+  let change = gloss_store_sites_versus_baseline(counts, recorded);
   let added = property_get(change, "added");
   list_empty_is_assert_json(added, {
     hint: "these gloss stores now point the reader further up in more places than they did - the explanations naming ‘above’ say nothing on their own, so write out what each word is instead",
