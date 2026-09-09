@@ -10,12 +10,12 @@ export async function gloss_chapters_entries_places_generic(
   "Each chapter is read on its own and the answers are joined into one list, because the place a wording has to be judged in is a verse, and a verse belongs to a chapter.";
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
-    let places = await gloss_chapter_entries_places_generic(
+    let places_found = await gloss_chapter_entries_places_generic(
       chapter_code,
       fn,
       lambda$entry_is,
     );
-    return places;
+    return places_found;
   }
   let nested = await list_map_async(chapter_codes, chapter_read);
   let places = list_flat(nested);
