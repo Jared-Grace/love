@@ -1,3 +1,4 @@
+import { gloss_relation_apart_is } from "./gloss_relation_apart_is.mjs";
 import { gloss_finding_root_claimed_relation } from "./gloss_finding_root_claimed_relation.mjs";
 import { gloss_findings_edits_tally } from "./gloss_findings_edits_tally.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -51,11 +52,7 @@ export function gloss_roots_disagreeing_classes_apart(findings, offenders) {
   let by_edits = gloss_findings_edits_tally(claiming);
   let relations = list_map_property(claiming, "relation");
   let by_relation = list_tally(relations);
-  function apart_is(finding) {
-    let standing_apart = property_equals(finding, "relation", "apart");
-    return standing_apart;
-  }
-  let apart = list_filter(claiming, apart_is);
+  let apart = list_filter(claiming, gloss_relation_apart_is);
   let r = {
     total,
     claiming,
