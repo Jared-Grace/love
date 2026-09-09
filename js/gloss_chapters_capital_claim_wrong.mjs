@@ -7,7 +7,7 @@ import { list_unique } from "./list_unique.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_size } from "./list_size.mjs";
-export async function gloss_chapters_place_bound_wrong(
+export async function gloss_chapters_capital_claim_wrong(
   fn,
   lambda$place_bound_is,
 ) {
