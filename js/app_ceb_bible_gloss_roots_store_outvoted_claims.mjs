@@ -1,3 +1,4 @@
+import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_roots_store_outvoted_claims_by_relation } from "./app_ceb_bible_gloss_roots_store_outvoted_claims_by_relation.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -10,8 +11,11 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_claims() {
   "Reading them shows the disagreement does not run one way, and the name this was first built under said otherwise - it called the chapters wrong, and was renamed to outvoted once the rows were read. The dictionary gives pangit as the root of pagpangita where the store says kita, and finding is what pangita means; it gives gamhanan under gamhanang where the store said gahum, which is a form further forward rather than a root. So a row here is two sources disagreeing with a sibling chapter siding with one of them, and which one is wrong is still a reading.";
   "Nothing is written and nothing is corrected. What comes back is the same evidence, grouped.";
   arguments_assert(arguments, 0);
-  let { rows, listed, relation_count, by_relation } =
-    await app_ceb_bible_gloss_roots_store_outvoted_claims_by_relation();
+  let r2 = await app_ceb_bible_gloss_roots_store_outvoted_claims_by_relation();
+  let by_relation = property_get(r2, "by_relation");
+  let relation_count = property_get(r2, "relation_count");
+  let listed = property_get(r2, "listed");
+  let rows = property_get(r2, "rows");
   each(listed, relation_count);
   let r = {
     entries: list_size(rows),
