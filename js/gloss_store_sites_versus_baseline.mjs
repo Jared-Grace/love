@@ -5,7 +5,7 @@ import { list_find_property_or_null } from "./list_find_property_or_null.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
-export function gloss_back_references_counts_versus_baseline(counts, recorded) {
+export function gloss_store_sites_versus_baseline(counts, recorded) {
   "What changed since the record of pointing explanations was written.";
   "added is a store carrying more of them than the record holds - the gate refuses it, because the one thing this ratchet exists to stop is a fresh generation pass writing back the pointers a repair just took out.";
   "stale is a store carrying fewer - the gate refuses that too. A count that has fallen and a record that still names the old number is slack, and slack is what lets a word that was repaired go back to pointing without anything noticing. Rewriting the record is what banks the repair.";
