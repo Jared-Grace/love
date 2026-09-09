@@ -9,10 +9,9 @@ import { add } from "./add.mjs";
 import { text_replace } from "./text_replace.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { each } from "./each.mjs";
-import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { set_includes } from "./set_includes.mjs";
-import { null_is } from "./null_is.mjs";
+import { binisaya_words_known_held_is } from "./binisaya_words_known_held_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -64,8 +63,6 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
       }
     }
     each(words, word_ask);
-    let kept_held = binisaya_words_known_get(known, kept);
-    let dropped_held = binisaya_words_known_get(known, dropped);
     property_set(row, "kept", kept);
     property_set(row, "dropped", dropped);
     property_set(row, "kept_stands_in_word", kept_inside);
@@ -74,11 +71,9 @@ export async function app_ceb_bible_gloss_roots_claimed_bracketed_priced() {
     property_set(row, "kept_written", value);
     let value2 = set_includes(vocabulary, dropped);
     property_set(row, "dropped_written", value2);
-    let b = null_is(kept_held);
-    let value3 = not(b);
+    let value3 = binisaya_words_known_held_is(known, kept);
     property_set(row, "kept_known", value3);
-    let b2 = null_is(dropped_held);
-    let value4 = not(b2);
+    let value4 = binisaya_words_known_held_is(known, dropped);
     property_set(row, "dropped_known", value4);
     if (kept_inside) {
       kept_shown = add(kept_shown, 1);
