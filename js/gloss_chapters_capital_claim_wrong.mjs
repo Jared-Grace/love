@@ -24,8 +24,8 @@ export async function gloss_chapters_capital_claim_wrong(
   }
   let founds = await list_map_async(chapter_codes, chapter_read);
   function claiming_read(found) {
-    let claiming = property_get(found, "claiming");
-    return claiming;
+    let claiming_found = property_get(found, "claiming");
+    return claiming_found;
   }
   function wrong_read(found) {
     let wrong = property_get(found, "wrong");
