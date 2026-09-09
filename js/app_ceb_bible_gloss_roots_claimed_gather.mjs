@@ -1,5 +1,5 @@
+import { app_ceb_bible_gloss_roots_disagreeing_offenders } from "./app_ceb_bible_gloss_roots_disagreeing_offenders.mjs";
 import { property_list_map_property } from "./property_list_map_property.mjs";
-import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_gather } from "./binisaya_words_gather.mjs";
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
@@ -11,8 +11,7 @@ export async function app_ceb_bible_gloss_roots_claimed_gather() {
   "Asking again costs nothing. Whatever is already held is dropped before anything is fetched, so a run that was interrupted picks up where it stopped and a run with nothing left to do says so in a second.";
   "Every reading of a disagreeing pair is gathered and not only the plainly faulty one. The dictionary knowing the word is what separates a mis-cut from a smaller reading of the same word, and that separation is worth having wherever the pairs are read - the fetching is the whole cost either way, and it is paid once.";
   arguments_assert(arguments, 0);
-  let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
-  let offenders = property_get(disagreeing, "offenders");
+  let offenders = await app_ceb_bible_gloss_roots_disagreeing_offenders();
   let counted = gloss_roots_disagreeing_classes(offenders, "all", 0);
   let selected_total = property_get(counted, "selected_total");
   let gathered = gloss_roots_disagreeing_classes(
