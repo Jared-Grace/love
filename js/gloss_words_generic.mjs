@@ -11,8 +11,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { list_size } from "./list_size.mjs";
 export async function gloss_words_generic(fn) {
   "Every different word one gloss store has explained, said once each and in small letters, together with how many explanations had to be read to find them.";
@@ -40,8 +39,7 @@ export async function gloss_words_generic(fn) {
     each(passages, passage_each);
   }
   await list_map_async(chapter_codes, chapter_each);
-  let unique = list_unique(words);
-  list_sort_text(unique);
+  let unique = list_unique_sorted(words);
   let r = {
     chapters: list_size(chapter_codes),
     entries: list_size(words),
