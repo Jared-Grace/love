@@ -25,11 +25,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 15,
-      note: "Both done, and you are on a fresh drawing. The sheath covers more of the blade and the field is cobalt right through with no white pane anywhere in it. I also put the wording back to two thirds of the blade sheathed - I had moved it to half after your earlier note about it being too closed, and this note reverses that. Still wrong: all three field bands came out the same blue so the two lead lines do not read, and the sheath tip stops short of the border.",
+      note: "Yes, and you were already on a picture that does it. The wording has always said the flame stops at the sheath's mouth where the bare blade ends, so nothing needed changing - 37, the one you are on, has the flame beginning exactly where the sheath stops. 39 was a draw I did not keep. I have left the wording alone.",
     },
     {
       n: 24,
-      note: "Yes, and this is it. 281 went to the editor with one instruction - sky blue to black, nothing else touched - so the beams, the stone, the rock face and the halo are exactly what they were. Recolouring one region is the one thing that editor does reliably, which is why this worked where five attempts to remove or lighten something failed. The pale middle beam here shows the rock through it, which is what you asked for on 285.",
+      note: "Reverted - you are back on 285. 291 was my own edit and you are right that it flattened the rock and killed the transparency, so it is off. 285 has the photographic rock, the near-black sky, and coloured beams you can see the rock through. Still wrong: the white beam is opaque, and white is the one colour the editor will not repaint, now six refusals deep.",
     },
     {
       n: 26,
