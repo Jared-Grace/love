@@ -72,10 +72,11 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
     };
     list_add(letters, row);
   }
-  return {
+  let r = {
     gathered,
     letters_used,
     letters,
     letter_read_out,
   };
+  return r;
 }
