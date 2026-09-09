@@ -648,7 +648,7 @@ export function bible_glyph_chapter_1jn03() {
           "just",
           "as",
           "He",
-          "commanded",
+          "$scroll",
           "us.",
         ],
       },
