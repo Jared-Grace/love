@@ -1,3 +1,4 @@
+import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -56,11 +57,7 @@ export async function app_ceb_bible_gloss_explains_depth_by_book() {
     list_add(listed, row);
   }
   each(books, book_finish);
-  function entries_of(row) {
-    let n = property_get(row, "entries");
-    return n;
-  }
-  list_sort_number_mapper_reverse(listed, entries_of);
+  list_sort_number_mapper_reverse(listed, gloss_entries_count);
   let answer = {};
   let value5 = list_size(chapter_codes);
   property_set(answer, "chapters", value5);
