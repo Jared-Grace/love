@@ -18,10 +18,11 @@ export async function app_ceb_bible_gloss_roots_store_outvoted_claims_by_relatio
   );
   let relation_count = property_get(r3, "relation_count");
   let by_relation = property_get(r3, "by_relation");
-  return {
+  let r = {
     rows,
     listed,
     relation_count,
     by_relation,
   };
+  return r;
 }
