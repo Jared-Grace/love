@@ -9,7 +9,6 @@ export async function gloss_chapter_explains_repeated(chapter_code, fn) {
   "How many the chapter holds in all travels out beside what was found, because the whole is the one number a caller cannot work out for itself afterwards and cannot do without: a hundred repeated words is most of a short chapter and a corner of a long one, and the ratchet over this is on the share rather than the count.";
   "A chapter nobody has authored yet answers with nothing out of nothing, so a sweep crosses the gaps without being told where they are.";
   function entries_pass(entries) {
-    "The explanations are wanted whole and unpicked, because what is being asked is how they compare with each other and a passage cannot answer that on its own.";
     return entries;
   }
   let entries = await gloss_chapter_entries_collect_generic(
