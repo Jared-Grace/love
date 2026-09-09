@@ -7,7 +7,8 @@ export function binisaya_words_known_held_is(known, word) {
   "$plain known";
   "$plain word";
   "Whether the gathered Cebuano dictionary holds an entry for one spelling.";
-  "The dictionary answers with the entry itself or with nothing, so every reading that only wants to know whether the word is in there at all has to ask for the entry, ask whether the answer is nothing, and turn that around. Eight readings wrote those three lines out, and two of them stopped at the middle line and carried the missing half instead, so the same fact was spelled two opposite ways in one folder.";
+  "The dictionary answers with the entry itself or with nothing, so a reading that only wants to know whether the word is in there at all has to ask for the entry, ask whether the answer is nothing, and turn that around. Five sites wrote those three lines out and used the entry for nothing else, and those five are the ones that now ask here.";
+  "★ ABOUT AS MANY SITES AGAIN SPELL THE SAME THREE LINES AND ARE DELIBERATELY LEFT ALONE, BECAUSE THEY GO ON TO READ THE ENTRY. Asking this beside their own lookup would put the same word to the dictionary twice to save one line, which is a slower reading and not a clearer one. What decides is never the shape of the lines but whether anything below wants what came back.";
   ("The word may arrive in either kind of letter. ",
     fn_name("binisaya_words_known_get"),
     " lowers it before it looks and falls back to the spelling as handed in, so nothing here has to lower it first and nothing here may.");
