@@ -1,10 +1,7 @@
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
 import { gloss_write_coverage_generic } from "./gloss_write_coverage_generic.mjs";
-import { list_map } from "./list_map.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
@@ -14,9 +11,7 @@ export async function gloss_chapters_write_coverage_generic(fn, passages_read) {
   "The verses already done are counted rather than listed, while the ones still waiting are named. A report is read to find out what to do next, and a chapter's finished passages are the half nobody needs spelled out.";
   "For the same reason a finished chapter is dropped from the answer entirely and only counted. A store of two hundred chapters would otherwise print two hundred entries to say a dozen of them want work, and the entries saying nothing are the ones that push the entries saying something off the end of a screen.";
   "Nothing here fails. Completeness is a report and never a gate: material is authored over weeks, so a gate over it would be red for months by design and would stop every app deploying for as long as one chapter was unfinished.";
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
     let coverage = await gloss_write_coverage_generic(
       chapter_code,
