@@ -1,3 +1,4 @@
+import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_pointers_dangling } from "./gloss_chapter_pointers_dangling.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -23,14 +24,10 @@ export async function gloss_chapters_pointers_dangling(fn, lambda$pointer_is) {
     let n = property_get(chapter, "pointing");
     return n;
   }
-  function chapter_dangling_read(chapter) {
-    let n = property_get(chapter, "dangling");
-    return n;
-  }
   let r = {
     chapters: list_size(chapter_codes),
     pointing: list_map_sum(chapters, chapter_pointing_read),
-    dangling: list_map_sum(chapters, chapter_dangling_read),
+    dangling: list_map_sum(chapters, gloss_dangling_count),
   };
   return r;
 }
