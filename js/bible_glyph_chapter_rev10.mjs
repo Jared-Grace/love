@@ -191,7 +191,7 @@ export function bible_glyph_chapter_rev10() {
           "who",
           "$sprout",
           "$hourglass",
-          "$plus",
+          "and",
           "$hourglass,",
           "who",
           "created",
