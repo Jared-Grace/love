@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_roots_claimed_stopped_short_value } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_value.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { not } from "./not.mjs";
@@ -15,9 +16,6 @@ import { list_add } from "./list_add.mjs";
 import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   "Every root the Cebuano gloss store names that the dictionary has never vouched for, where a longer run of letters starting at the very same place in the very same word is one the dictionary has vouched for - so the sentence stopped short of a root that was already known, at the spot it was pointing at.";
@@ -92,20 +90,15 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     };
     list_add(listed, named);
   }
-  let gathered = await gloss_chapters_roots_claimed_rows_generic(
-    app_ceb_bible_gloss_generate,
+  let r2 = await app_ceb_bible_gloss_roots_claimed_stopped_short_value(
     root_read,
+    listed,
+    claimed_books,
+    unvouched_roots,
+    unvouched_books,
   );
-  list_sort_number_mapper_reverse(listed, gloss_row_sightings);
-  let answer = {};
-  let value2 = property_get(gathered, "chapters");
-  property_set(answer, "chapters", value2);
-  let distinct = property_get(gathered, "roots_distinct");
-  property_set(answer, "roots_distinct", distinct);
-  property_set(answer, "claimed_books", claimed_books);
-  property_set(answer, "unvouched_roots", unvouched_roots);
-  property_set(answer, "unvouched_books", unvouched_books);
-  let value = list_size(listed);
+  let value = property_get(r2, "value");
+  let answer = property_get(r2, "answer");
   property_set(answer, "stopped_short_roots", value);
   property_set(answer, "stopped_short_sightings", sightings_named);
   property_set(answer, "stopped_short_books", named_books);
