@@ -1,12 +1,6 @@
+import { app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
-import { ebible_chapter_code_to_book } from "./ebible_chapter_code_to_book.mjs";
-import { tally_number_add } from "./tally_number_add.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
@@ -35,28 +29,15 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
   "★ NOT VOUCHED IS NOT DISPROVED. The vouching map vouches and never refuses, so a root missing from it may be perfectly good Cebuano that nothing in the dictionary happens to be built from. What is named here is a claim the dictionary is silent about standing where a claim the dictionary speaks for would have fitted, which is a reason to look and not a verdict.";
   "★ THE LONGER RUN IS NOT THE REPAIR EITHER. It is one root the dictionary knows that the word holds at that place, and a word can hold more than one. The longest is named first because it is the one the letters were cut from, and the rest are named beside it so a reader can see what the choice was.";
   arguments_assert(arguments, 0);
-  let known = await binisaya_words_known();
-  let vouched = binisaya_words_known_roots_named(known);
-  let unvouched_roots = 0;
-  let claimed_books = {};
-  let unvouched_books = {};
-  let named_books = {};
-  let listed = [];
-  let sightings_named = 0;
-  function vouched_is(spelling) {
-    let folded = gloss_word_folded(spelling);
-    let held = property_get_or_null(vouched, folded);
-    let b = null_is(held);
-    let there = not(b);
-    return there;
-  }
-  function books_tally(where, chapter_codes) {
-    function chapter_note(code) {
-      let book = ebible_chapter_code_to_book(code);
-      tally_number_add(where, book, 1);
-    }
-    each(chapter_codes, chapter_note);
-  }
+  let r = await app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally();
+  let books_tally = property_get(r, "books_tally");
+  let vouched_is = property_get(r, "vouched_is");
+  let sightings_named = property_get(r, "sightings_named");
+  let listed = property_get(r, "listed");
+  let named_books = property_get(r, "named_books");
+  let unvouched_books = property_get(r, "unvouched_books");
+  let claimed_books = property_get(r, "claimed_books");
+  let unvouched_roots = property_get(r, "unvouched_roots");
   function root_read(row) {
     let root = property_get(row, "stated_root");
     let seen_in = property_get(row, "chapters");
