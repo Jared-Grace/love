@@ -967,7 +967,7 @@ export function bible_glyph_chapter_ezk33() {
       {
         verse_number: 27,
         words: [
-          "Tell",
+          "$speech",
           "them",
           "that",
           "this",
