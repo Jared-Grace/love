@@ -397,7 +397,7 @@ export function bible_glyph_chapter_ezk18() {
           "Now",
           "suppose",
           "this",
-          "$son",
+          "son",
           "has",
           "a",
           "$son",
