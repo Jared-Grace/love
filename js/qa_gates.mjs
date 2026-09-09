@@ -1,3 +1,4 @@
+import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
 import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
 import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
 import { gloss_explains_repeated_gate_run } from "./gloss_explains_repeated_gate_run.mjs";
@@ -1093,6 +1094,7 @@ export function qa_gates() {
     bible_glyph_chapters_marks_doubled_gate_run,
     gloss_pointers_dangling_gate_run,
     gloss_capital_claim_wrong_gate_run,
+    memory_index_welded_gate_run,
   ];
   return gates;
 }
