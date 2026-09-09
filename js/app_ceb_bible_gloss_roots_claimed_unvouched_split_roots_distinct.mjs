@@ -43,10 +43,11 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_di
   each(pile_names, size_note);
   let answer = {};
   let roots_distinct = property_get(gathered, "roots_distinct");
-  return {
+  let r = {
     counts,
     sizes,
     answer,
     roots_distinct,
   };
+  return r;
 }
