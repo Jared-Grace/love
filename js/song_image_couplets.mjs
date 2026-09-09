@@ -458,7 +458,7 @@ export function song_image_couplets() {
       first: "with no more sorrow",
       second: "no more pain",
       symbol:
-        "One wide river of the water of life in light clear blue glass, clear as crystal, winding down the middle of the window from the top of it to the bottom, with one tall tree of brown wood standing on the bank at each side of the water and carrying six broad emerald green leaves, six on the one tree and six on the other, the branches of both trees reaching right out across the water so that leaves from either side cross over it and meet in the middle of the window, every branch and every leaf drawn on top of the water, the water showing only in the gaps between them, the band between the two lead lines one flat sheet of pale violet, the pale amethyst of the twelfth foundation stone of the holy city, and the band below them one flat sheet of violet, this couplet asking for that pale field here by name, and the head of the arch above them staying deep cobalt blue",
+        "One wide river of the water of life in light clear blue glass, clear as crystal, winding down the middle of the window from the top of it to the bottom, broad where it reaches the bottom and narrowing steadily as it climbs until it is only a third as wide at the top, with three tall trees of brown wood standing in a row along the bank at each side of the water, six trees in all, each of them carrying two broad emerald green leaves, the trees nearest the bottom of the window drawn tall and each tree further up drawn shorter than the one below it, and no branch and no leaf reaching out over the water anywhere, the band between the two lead lines one flat sheet of pale violet, the pale amethyst of the twelfth foundation stone of the holy city, and the band below them one flat sheet of violet, this couplet asking for that pale field here by name, and the head of the arch above them staying deep cobalt blue",
       symbol_ref: "Revelation 22:1-2",
       same_as: 0,
     },
@@ -468,7 +468,7 @@ export function song_image_couplets() {
       first: "for every tear",
       second: "HE'll wipe away",
       symbol:
-        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of emerald green also, so that the whole field stands green behind the blue drop",
+        "One single teardrop of blue glass, round below and drawn to a point above, standing alone and drawn very large with its point just below the head of the arch, its round foot near the bottom of the window, and that round foot broad enough to reach almost to the white border on both sides, the band between the two lead lines one flat sheet of emerald green and the band below them one flat sheet of violet, the drop's own glass carrying a lighter blue over the whole face of it and a deeper blue along its edge",
       symbol_ref: "Revelation 21:4",
       same_as: 0,
     },
