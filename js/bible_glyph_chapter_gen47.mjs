@@ -257,7 +257,7 @@ export function bible_glyph_chapter_gen47() {
           "$sun",
           "of",
           "the",
-          "$sun",
+          "years",
           "you",
           "have",
           "$sprout?",
