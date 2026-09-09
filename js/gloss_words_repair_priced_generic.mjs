@@ -1,3 +1,4 @@
+import { gloss_word_priced_lossless_is } from "./gloss_word_priced_lossless_is.mjs";
 import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -86,11 +87,7 @@ export async function gloss_words_repair_priced_generic(fn, rows) {
     each(["silent", "used", "already_naming"], total_add);
   }
   each(ranked, priced_add);
-  function lossless_is(row) {
-    let lossless = property_get(row, "lossless");
-    return lossless;
-  }
-  let lossless_rows = list_filter(ranked, lossless_is);
+  let lossless_rows = list_filter(ranked, gloss_word_priced_lossless_is);
   let lossless_silent = 0;
   function lossless_add(row) {
     let mine = gloss_word_priced_silent(row);
