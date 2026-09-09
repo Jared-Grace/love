@@ -8,8 +8,7 @@ import { bible_glyph_chapter_rosetta_lines_name } from "./bible_glyph_chapter_ro
 import { function_unalias_exists_not } from "./function_unalias_exists_not.mjs";
 import { bible_glyph_chapter_rosetta_lines_write } from "./bible_glyph_chapter_rosetta_lines_write.mjs";
 import { function_list_call_add } from "./function_list_call_add.mjs";
-import { bible_glyph_chapters_tagalog_write } from "./bible_glyph_chapters_tagalog_write.mjs";
-import { bible_glyph_chapters_urdu_write } from "./bible_glyph_chapters_urdu_write.mjs";
+import { bible_glyph_chapters_languages_write } from "./bible_glyph_chapters_languages_write.mjs";
 export async function bible_glyph_chapters_bands_missing_repair() {
   "Finds every picture Bible chapter whose Rosetta bands are not named beside it, writes and registers the ones that are short, then rebuilds both reveal languages once.";
   ("IT FINDS ITS OWN SET BECAUSE THE SET IS THE THING THAT KEEPS CHANGING. Picture chapters are authored in bursts - nine landed between one gate run and the next - and each one reds ",
