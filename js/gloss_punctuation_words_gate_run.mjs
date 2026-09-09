@@ -1,10 +1,10 @@
+import { gloss_found_any_is } from "./gloss_found_any_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_punctuation_words_measure } from "./gloss_punctuation_words_measure.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export async function gloss_punctuation_words_gate_run() {
   "Gate: no authored chapter in any gloss store may explain a mark as though it were a word. Throws so the dispatcher seam exits nonzero.";
@@ -16,11 +16,7 @@ export async function gloss_punctuation_words_gate_run() {
   let measured = await gloss_punctuation_words_measure();
   let counts = property_get(measured, "counts");
   let missing = property_get(measured, "missing");
-  function found_is(answer) {
-    let marked = property_list_empty_not_is(answer, "found");
-    return marked;
-  }
-  let offending = list_filter(counts, found_is);
+  let offending = list_filter(counts, gloss_found_any_is);
   let f_name = fn_name("gloss_stores_punctuation_entries_repair");
   list_empty_is_assert_json(offending, {
     hint: text_combine_multiple([
