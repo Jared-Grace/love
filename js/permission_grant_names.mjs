@@ -784,7 +784,7 @@ export function permission_grant_names() {
   let spelled773 = fn_name("g_female_img_names");
   let spelled774 = fn_name("g_male_img_names");
   let spelled775 = fn_name("literals_marked_both_ways_baseline_write");
-  let spelled776 = fn_name("memory_index_line_length_ceiling");
+  let spelled776 = fn_name("memory_index_entry_length_ceiling");
   let spelled777 = fn_name("permission_writers_gate_run");
   let spelled778 = fn_name("qa_commit_named_entry_stale_gate_run");
   let spelled779 = fn_name("webpack_build_dev");
