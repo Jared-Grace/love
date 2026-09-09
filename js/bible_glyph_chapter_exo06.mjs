@@ -566,7 +566,7 @@ export function bible_glyph_chapter_exo06() {
           "$hand_receiving",
           "Jochebed,",
           "the",
-          "$sister",
+          "sister",
           "of",
           "his",
           "$father,",
