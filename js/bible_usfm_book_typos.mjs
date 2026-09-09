@@ -3,7 +3,7 @@ export function bible_usfm_book_typos() {
   arguments_assert(arguments, 0);
   ("Every place a bible on this disk is marked up wrongly in a way that hands a reader a word the translation does not say, with the exact run of the publisher's file that is wrong, the exact run that replaces it, and the reason somebody decided it was wrong.");
   ("★ NOT ONE OF THESE IS A JUDGEMENT ABOUT WHAT THE TRANSLATION SHOULD SAY, AND THAT IS THE ONLY THING THAT MAKES A LIST LIKE THIS ALLOWABLE AT ALL. Every entry was read at the verse it names in a second, separately published edition of the same translation - eBible's own release of it, fetched by a different program from a different publisher into a different folder on this disk - and every replacement is what that edition prints, letter for letter. So none of these is this repo deciding what scripture says; each is this repo declining to hand on a fault that one release has and the other does not.");
-  ("THEY ARE ALL THE SAME TWO FAULTS. Five are a space that is not there, so two words arrive welded into one that no dictionary holds - a footnote closed straight against the next word, a colon or a comma with nothing after it. Three are three stray letters, v v v, standing in the middle of a sentence where the other edition has nothing at all; they are plainly a mark left in by whoever prepared the file, and every one of the three sits where a word was cut.");
+  ("THEY ARE THREE FAULTS AND NO MORE. Five are a space that is not there, so two words arrive welded into one that no dictionary holds - a footnote closed straight against the next word, a colon or a comma with nothing after it. Three are three stray letters, v v v, standing in the middle of a sentence where the other edition has nothing at all; they are plainly a mark left in by whoever prepared the file, and every one of the three sits where a word was cut. One is a line of scripture wearing a heading's mark, which is the only one of the three that loses words rather than adding them: everything marked as a heading is dropped unread, so a line marked wrongly is a line the reader never sees at all.");
   ("THE STRAY LETTERS WERE NOT FOUND BY THE CHECK, AND THAT IS WORTH KNOWING RATHER THAN HIDING. The sweep that sets this shelf beside the interlinear's English found the one in Luke, because there the tables were set from the Greek and had nothing answering to it. The two in Genesis and Acts it could not see, because the interlinear's English carries them too - the fault is upstream of both editions, so two roads that both start there arrive at the same wrong place. A check is blind to whatever is wrong in its own control, and the way past that is a third copy, which is what the eBible release is here.");
   ("A RUN IS SPELLED LONG ENOUGH TO STAND ALONE IN ITS BOOK, AND THAT IS CHECKED RATHER THAN TRUSTED. A short run would be found in places nobody looked at, and the mend would land in all of them; the gate beside this asks the shelf whether each run is still there exactly once, so a publisher fixing one of these upstream turns the entry red and somebody takes it out, rather than the mend quietly landing nowhere or landing twice.");
   let typos = [
@@ -48,6 +48,13 @@ export function bible_usfm_book_typos() {
       from: "the LORD,which I sent",
       to: "the LORD, which I sent",
       why: "the comma at 29:19 has no space after it, so the reading hands over lordwhich as one word, and eBible's release reads declares the LORD, which I sent to them again and again",
+    },
+    {
+      version: "bsb",
+      book_code: "HAB",
+      from: "\\mr For the choirmaster.",
+      to: "\\q2 For the choirmaster.",
+      why: "the closing line of 3:19 is marked mr, a major section reference, which is the mark a printing puts on a bracketed cross reference like the one over a psalm; everything wearing a heading mark is dropped unread, so the reading ends at He makes me walk upon the heights and the last words of the book never arrive. They are words of the book: the hebrew ends the verse with lamnatseach binginotai, and eBible's release of the same translation sets For the choirmaster. With stringed instruments. as a paragraph of the text and not as a title over anything. It is given q2, which is what the two lines above it already carry, so it stands as the answering line of the verse it ends. This is the only mr line in the whole shelf",
     },
     {
       version: "bsb",
