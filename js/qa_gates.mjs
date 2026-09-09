@@ -1,3 +1,4 @@
+import { memory_index_oversize_gate_run } from "./memory_index_oversize_gate_run.mjs";
 import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
 import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
 import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
@@ -1095,6 +1096,7 @@ export function qa_gates() {
     gloss_pointers_dangling_gate_run,
     gloss_capital_claim_wrong_gate_run,
     memory_index_welded_gate_run,
+    memory_index_oversize_gate_run,
   ];
   return gates;
 }
