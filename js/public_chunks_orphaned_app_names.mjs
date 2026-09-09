@@ -4,8 +4,7 @@ import { file_name_app_chunk_app_name_or_null } from "./file_name_app_chunk_app_
 import { null_is } from "./null_is.mjs";
 import { app_shared_name_prefixed } from "./app_shared_name_prefixed.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export function public_chunks_orphaned_app_names(f_paths) {
   "Which apps a list of leftover script files belongs to, said as the name of each app's own function.";
   "A LEFTOVER IS ALWAYS SOMEBODY'S. A build cuts a piece of one app out into a file of its own and names that file after the app it came from, so the folder is still saying whose the file is long after the build that made it has been forgotten. Read back, that turns a list of addresses into a list of apps.";
@@ -24,7 +23,6 @@ export function public_chunks_orphaned_app_names(f_paths) {
     let f_name = app_shared_name_prefixed(a_name);
     list_add(named, f_name);
   }
-  let unique = list_unique(named);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(named);
   return sorted;
 }

@@ -274,7 +274,7 @@ export function bible_glyph_chapter_1jn01() {
           "confess",
           "our",
           "$bow,",
-          "$pointing_back",
+          "He",
           "is",
           "$anchor",
           "$plus",

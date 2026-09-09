@@ -35,6 +35,26 @@ export function song_image_review_couplets() {
       n: 26,
       note: "Not fixed, and I would rather say so than hand you a different picture. The same lead-line move that stopped the lines cutting couplet 7's crosses made no difference here across three fresh draws. I think the reason is that your rays fill the window right down to the foot, so there is no field left for the two lines to run in. You are still on 100.",
     },
+    {
+      n: 9,
+      note: "Three of your four are already answered by a later drawing. There is no white field anywhere now - the shared sheet forbids one, and that took 12's white bottom and 7's white background with it. The fourth was still live: a lead line ran straight down through the spear. I moved that rule to the front of its clause in the shared sheet, and 16 breaks both field lines at the shaft.",
+    },
+    {
+      n: 14,
+      note: "Five of your six are done. The background is not white, it is emerald green - the wording always asked for green precisely so it would contrast with the veil's four colours, and the older drawing had disobeyed that. It is torn, and it carries all four colours. Still wrong: the field lines cross the veil, and the gap between the halves shows red rather than green.",
+    },
+    {
+      n: 25,
+      note: "Nothing is wrong with 115, and I should have said so long ago rather than leaving you waiting. It is already the thing you proposed - all gold, told apart by shape and by different coloured jewels. There are no flowers or plants in it either. I have changed nothing, because all three of your notes were questions the picture already answered.",
+    },
+    {
+      n: 32,
+      note: "Two of your four are already answered: the cross is white now rather than red, and the red wedges are gone. On brightness - the pale field is deliberate, the amethyst of the twelfth foundation stone in Revelation 21:20 - but only the middle band is meant to be pale and 19 made both of them pale, which is why it reads washed out. Two fresh draws came back worse than 19, so you are still on it. The river winds now but still does not taper.",
+    },
+    {
+      n: 33,
+      note: "Done, and you are on a fresh drawing. Brighter and more dramatic, as you asked, and the lead lines now stop at the teardrop and start again beyond it instead of cutting across. No white field and no red bottom border. Still wrong: five bands where there should be three, and the drop is smaller than the wording asks for.",
+    },
   ];
   return couplets;
 }
