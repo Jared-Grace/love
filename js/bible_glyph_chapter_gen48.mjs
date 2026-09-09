@@ -362,7 +362,7 @@ export function bible_glyph_chapter_gen48() {
           "them",
           "from",
           "his",
-          "$father",
+          "father",
           "knees",
           "and",
           "$bowing",
