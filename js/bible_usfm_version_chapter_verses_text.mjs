@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bible_usfm_version_book_path } from "./bible_usfm_version_book_path.mjs";
-import { file_read } from "./file_read.mjs";
+import { bible_usfm_version_book_text } from "./bible_usfm_version_book_text.mjs";
 import { bible_usfm_chapter_lines } from "./bible_usfm_chapter_lines.mjs";
 import { bible_usfm_lines_verses_taken } from "./bible_usfm_lines_verses_taken.mjs";
 import { null_is } from "./null_is.mjs";
@@ -26,8 +25,7 @@ export async function bible_usfm_version_chapter_verses_text(
   ("The ends are written the way a person writes them, a number or a number and a letter, because that is how the singings themselves are named and an address that had to be spelled some other way would be an address nobody could reach.");
   ("The verse numbers are left out for the same reason the whole-chapter reading leaves them out: this reads a passage meant to be sung or shown, and a number in the middle of a sung line is read aloud by a person following along.");
   ("The em dashes are closed on the way out, by the same reading and for the same reason the whole-chapter reader closes them: the marked-up release spaces them and the publisher's own plain-text edition does not, so the spaces are the converter's and not the printing's.");
-  let file_path = await bible_usfm_version_book_path(version, book_code);
-  let usfm = await file_read(file_path);
+  let usfm = await bible_usfm_version_book_text(version, book_code);
   let usfm_lines = bible_usfm_chapter_lines(usfm, chapter_number);
   let taken = bible_usfm_lines_verses_taken(
     usfm_lines,
