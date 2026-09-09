@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_roots_silence_causes_reachable_now } from "./app_ceb_bible_gloss_roots_silence_causes_reachable_now.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing_classes_all } from "./app_ceb_bible_gloss_roots_disagreeing_classes_all.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,12 +11,7 @@ import { list_filter } from "./list_filter.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { gloss_root_unwalked_cause } from "./gloss_root_unwalked_cause.mjs";
-import { null_is } from "./null_is.mjs";
-import { list_add } from "./list_add.mjs";
-import { object_property_names } from "./object_property_names.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   "The disagreements the dictionary said nothing about, split by why it said nothing, with the ones already answerable on this machine listed out.";
   "Four fifths of the sightings gathered end in silence, and a pile that size gets read as one thing and planned for as one thing. It is not one thing. Roughly half of it is words the dictionary has never been asked about, which closes by going and asking. Roughly the other half is words it holds and carries no breakdown of, which never closes that way at all - asking a second time fetches the same page. A plan made from the total alone spends half its effort where no effort can land.";
@@ -49,38 +45,15 @@ export async function app_ceb_bible_gloss_roots_silence_causes(sample_size) {
   }
   each(silent, sighting_add);
   let by_cause = {};
-  let sightings = {};
-  function cause_add(one_class) {
-    let root = property_get(one_class, "root");
-    let cause = gloss_root_unwalked_cause(known, folded_index, root);
-    property_set(one_class, "cause", cause);
-    let held = property_get_or_null(by_cause, cause);
-    let first = null_is(held);
-    let rows = first ? [] : held;
-    list_add(rows, one_class);
-    property_set(by_cause, cause, rows);
-    let count = property_get(one_class, "count");
-    let so_far = first ? 0 : property_get(sightings, cause);
-    let total = add(so_far, count);
-    property_set(sightings, cause, total);
-  }
-  each(silent, cause_add);
-  let causes = object_property_names(by_cause);
-  let classes_counted = {};
-  function cause_size_put(cause) {
-    let rows = property_get(by_cause, cause);
-    let size = list_size(rows);
-    property_set(classes_counted, cause, size);
-  }
-  each(causes, cause_size_put);
-  let held_otherwise = property_get_or_null(by_cause, "spelled_otherwise");
-  let none = null_is(held_otherwise);
-  let reachable = none ? [] : held_otherwise;
-  function class_count(one_class) {
-    let count = property_get(one_class, "count");
-    return count;
-  }
-  let reachable_now = list_sort_number_mapper_reverse(reachable, class_count);
+  let r2 = app_ceb_bible_gloss_roots_silence_causes_reachable_now(
+    known,
+    folded_index,
+    by_cause,
+    silent,
+  );
+  let reachable_now = property_get(r2, "reachable_now");
+  let classes_counted = property_get(r2, "classes_counted");
+  let sightings = property_get(r2, "sightings");
   let classes_total = property_get(gathered, "classes_total");
   let classes_read = list_size(marked);
   let silent_classes = list_size(silent);
