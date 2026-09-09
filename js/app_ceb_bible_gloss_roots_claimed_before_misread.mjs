@@ -1,8 +1,6 @@
+import { app_ceb_bible_gloss_roots_claimed_before_misread_folded_of } from "./app_ceb_bible_gloss_roots_claimed_before_misread_folded_of.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { gloss_word_bare } from "./gloss_word_bare.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -28,12 +26,7 @@ export async function app_ceb_bible_gloss_roots_claimed_before_misread() {
   let shaped = 0;
   let rows = [];
   let spared = [];
-  function folded_of(value) {
-    let bare = gloss_word_bare(value);
-    let lowered = text_lower_to(bare);
-    let folded = gloss_word_folded(lowered);
-    return folded;
-  }
+  let folded_of = app_ceb_bible_gloss_roots_claimed_before_misread_folded_of();
   function entry_read(found) {
     let chapter_code = property_get(found, "chapter_code");
     let entry = property_get(found, "entry");
