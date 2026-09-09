@@ -1,11 +1,10 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_names } from "./app_ceb_bible_gloss_words_explained_apart_names.mjs";
 import { app_ceb_bible_gloss_words_explained_apart_baseline_path } from "./app_ceb_bible_gloss_words_explained_apart_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_words_explained_apart_gate_run() {
   "Gate: no Cebuano gloss chapter authored from here on may explain a word one way where another chapter explains it another way. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE ONLY GATE OVER THE STORE THAT ASKS NOBODY ANYTHING. Every other reading of these explanations puts its question to binisaya.com, which means it is answerable only where the dictionary holds the word, and the dictionary is silent on four fifths of them. One word does not come from two unrelated roots, so where the app explains a word two ways it has written something wrong somewhere - and that is settled from the disk alone, with no network reached and nothing fetched.";
@@ -32,6 +31,6 @@ export async function app_ceb_bible_gloss_words_explained_apart_gate_run() {
     "this word is now explained one way in one chapter and another way in another, and no dictionary is needed to see that one of them is wrong - open both passages, keep the explanation that is right and mend the other, or bank the row if the two claims are one root read at two depths",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
