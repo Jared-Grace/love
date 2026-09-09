@@ -955,7 +955,7 @@ export function bible_glyph_chapter_1ki03() {
           "to",
           "the",
           "first",
-          "$woman,",
+          "woman,",
           "and",
           "do",
           "$no_entry",
