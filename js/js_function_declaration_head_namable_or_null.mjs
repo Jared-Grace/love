@@ -44,7 +44,8 @@ export function js_function_declaration_head_namable_or_null(
   let head = list_take(working, size);
   let tail = list_skip(working, size);
   let outputs = js_statements_span_outputs(head, tail);
-  let single_is = equal(list_size(outputs), 1);
+  let left = list_size(outputs);
+  let single_is = equal(left, 1);
   if (not(single_is)) {
     let many = null;
     return many;
