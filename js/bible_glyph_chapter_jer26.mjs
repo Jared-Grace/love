@@ -171,7 +171,7 @@ export function bible_glyph_chapter_jer26() {
           "if",
           "you",
           "do",
-          "$no_entry",
+          "not",
           "$ear",
           "to",
           "the",

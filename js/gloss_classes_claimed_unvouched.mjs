@@ -8,6 +8,7 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_class_count } from "./gloss_class_count.mjs";
 export function gloss_classes_claimed_unvouched(classes, known) {
   "The classes where the root an explanation named is a word nothing in the dictionary vouches for, most-seen first: the explanations most likely to have named something that is not a word.";
   "The dictionary answers about the claimed root with four fields, three of them empty, and writes exactly that both for a word it holds without a breakdown and for a word it has never had. So being held says only that the app asked, and an explanation naming a run of letters nobody speaks reads the same as one naming a common root.";
@@ -38,10 +39,6 @@ export function gloss_classes_claimed_unvouched(classes, known) {
     return r;
   }
   let picked = list_filter(classes, unvouched_is);
-  function class_count(one_class) {
-    let count = property_get(one_class, "count");
-    return count;
-  }
-  let ranked = list_sort_number_mapper_reverse(picked, class_count);
+  let ranked = list_sort_number_mapper_reverse(picked, gloss_class_count);
   return ranked;
 }
