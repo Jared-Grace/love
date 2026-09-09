@@ -778,7 +778,7 @@ export function bible_glyph_chapter_jhn14() {
           "$heart_organ",
           "be",
           "troubled,",
-          "$plus",
+          "and",
           "do",
           "$no_entry",
           "be",

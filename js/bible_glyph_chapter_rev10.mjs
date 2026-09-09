@@ -257,7 +257,7 @@ export function bible_glyph_chapter_rev10() {
           "He",
           "proclaimed",
           "to",
-          "$pointing_back",
+          "His",
           "$kneeling",
           "the",
           "$megaphone.",
