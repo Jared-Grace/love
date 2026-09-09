@@ -976,6 +976,10 @@ export function bible_glyph_roots_hebrew() {
           glyph: "witness",
         },
         {
+          strong: "5713",
+          glyph: "witness",
+        },
+        {
           strong: "5715",
           glyph: "witness",
         },
