@@ -10,8 +10,8 @@ export function html_component_text_runs(component) {
   ("A run is marked as code when the element it sits in, or any element it sits inside, was given a monospace font. That is the one thing every code tile in this repo does and the one thing no run of ordinary writing does, so it is what tells the two apart. It is read off the style the drawing actually set rather than named here, which is why a tile that changes its colour or its corners stays code and a piece of writing that is merely made bold does not become it.");
   ("The writing is taken from what was set rather than from both places it could have been set, because an element is given one or the other and never both - so reading the second when the first is empty adds the cases the first misses without counting anything twice.");
   let runs = [];
-  function walk(element, code_above) {
-    let font = element.style["font-family"];
+  function walk(element_found, code_above) {
+    let font = element_found.style["font-family"];
     let mono = false;
     if (font) {
       mono = text_includes(font, "monospace");
@@ -20,9 +20,9 @@ export function html_component_text_runs(component) {
     if (mono) {
       code = true;
     }
-    let writing = element.innerHTML;
+    let writing = element_found.innerHTML;
     if (not(writing)) {
-      writing = element.textContent;
+      writing = element_found.textContent;
     }
     if (writing) {
       let run = {
@@ -34,7 +34,7 @@ export function html_component_text_runs(component) {
     function walk_child(child) {
       walk(child, code);
     }
-    each(element.children, walk_child);
+    each(element_found.children, walk_child);
   }
   let element = html_component_element_get(component);
   walk(element, false);
