@@ -109,7 +109,7 @@ export function bible_glyph_chapter_deu19() {
           "flee",
           "to",
           "these",
-          "$city$s.",
+          "cities.",
         ],
       },
       {
