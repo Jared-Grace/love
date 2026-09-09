@@ -2,7 +2,6 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { equal } from "./equal.mjs";
-import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
 import { property_count_add } from "./property_count_add.mjs";
 import { property_set } from "./property_set.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
@@ -22,6 +21,7 @@ export async function bible_glyph_chapters_verse_marks_overdrawn_walked() {
   ("IT IS THE MIRROR OF THE UNDERDRAWN READING NEXT DOOR AND SHARES ITS WHOLE ARGUMENT. That one catches a seated word left in letters beside its own drawn mark; this one catches a picture put on a word the verse never seated. Same walk, same rows, same reason for scoping to one verse, and the comparison is turned around: there, drawn fewer than seated; here, drawn more.");
   ("IT COMPARES COUNTS AND NEVER POSITIONS. The authored chapter is readable English and the interlinear is word for word the original, and nothing honest lines one up against the other. What a count settles completely is that the verse drew more pictures of one mark than the original had words for it, and no arrangement of the sentence makes that anything but a picture with nothing under it.");
   ("A VERSE WITH NOUGHT SEATS IS INCLUDED AND IT IS THE LOUDEST CASE, because a mark drawn where the verse seats it not once is the whole of the two root fault: the English word carried the picture across to a root the table gives it to somebody else.");
+  ("THE FILLER ROWS COUNT AS SEATS HERE AND THEY DO NOT NEXT DOOR, AND THAT DIFFERENCE IS THE ONE PLACE THE MIRROR IS NOT A COPY. The interlinear prints a filler under a word whenever the English of the phrase carries it rather than saying it separately - dots, vvv, a dash, a blank. The underdrawn reading throws those rows away and is right to: it asks whether a seated word was left in letters, and a word English never says on its own could not have been drawn, so counting it would report a fault the author could not have avoided. This reading asks the opposite question - whether a picture was put on a root the verse never held - and for that every word the original has is a seat, however the English column rendered it. Copying the filter across turned real seats into nought and made the answer report faults that are not there. Measured on 2026-09-09 it was the whole of a fourteen fold gap against the reading next door.");
   ("HOW MUCH WAS REACHED IS COUNTED WHERE THE READING HAPPENS and travels out beside the answer, because on a good day the answer is empty and an empty answer is also what a sweep that opened nothing hands back.");
   let chapters = bible_glyph_chapters();
   let offenders = [];
@@ -36,9 +36,6 @@ export async function bible_glyph_chapters_verse_marks_overdrawn_walked() {
       for (let word of row.words) {
         let undrawn = equal(word.glyph, "");
         if (undrawn) {
-          continue;
-        }
-        if (bible_glyph_gloss_placeholder_is(word.gloss)) {
           continue;
         }
         property_count_add(counts, word.glyph, 1);

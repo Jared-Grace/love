@@ -3,8 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export function gloss_offenders_said_names(offenders, said_name_try) {
   "Every fault a sweep over a gloss store came back with, named once each however many chapters met it, and in order.";
   "A sweep hands back its offenders one chapter deep, each chapter holding the words it found fault with and each word holding the several things said about it. Getting from that to a list somebody can repair from is the same three walks every time, so the walking lives here and only the naming is handed in.";
@@ -30,7 +29,6 @@ export function gloss_offenders_said_names(offenders, said_name_try) {
     each(found, finding_read);
   }
   each(offenders, chapter_read);
-  let unique = list_unique(names);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(names);
   return sorted;
 }
