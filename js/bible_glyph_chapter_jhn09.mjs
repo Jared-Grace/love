@@ -18,7 +18,7 @@ export function bible_glyph_chapter_jhn09() {
         verse_number: 1,
         words: [
           "As",
-          "$cross",
+          "Jesus",
           "was",
           "passing",
           "by,",
