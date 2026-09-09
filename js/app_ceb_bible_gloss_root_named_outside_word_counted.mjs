@@ -8,9 +8,7 @@ import { not } from "./not.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { text_includes } from "./text_includes.mjs";
+import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spelled_in_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { list_take } from "./list_take.mjs";
@@ -52,11 +50,7 @@ export async function app_ceb_bible_gloss_root_named_outside_word_counted(
     widened_total = add(widened_total, 1);
     let first = list_get(named, 0);
     let word = property_get(entry, word_key);
-    let word2 = text_lower_to(word);
-    let word_folded = gloss_word_folded(word2);
-    let word3 = text_lower_to(first);
-    let root_folded = gloss_word_folded(word3);
-    let held = text_includes(word_folded, root_folded);
+    let held = gloss_root_named_word_spelled_in_is(word, first);
     let row = {
       word: word,
       named_root: first,
