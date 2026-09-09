@@ -204,7 +204,7 @@ export function bible_glyph_chapter_rev01() {
           "the",
           "power",
           "$hourglass",
-          "$plus",
+          "and",
           "$hourglass!",
           "$check.",
         ],
