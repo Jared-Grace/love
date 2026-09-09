@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_split } from "./text_split.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
+import { value_or_if_null } from "./value_or_if_null.mjs";
 import { equal } from "./equal.mjs";
 import { less_than } from "./less_than.mjs";
 import { or } from "./or.mjs";
@@ -28,11 +28,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
     let fewest = -1;
     function character_weigh(character) {
       let held = property_get_or_null(letter_words, character);
-      let unwritten = null_is(held);
-      let words = held;
-      if (unwritten) {
-        words = 0;
-      }
+      let words = value_or_if_null(held, 0);
       let first = equal(fewest, -1);
       let rarer = less_than(words, fewest);
       let take = or(first, rarer);
@@ -57,11 +53,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read
     let listed = property_get(by_letter, letter);
     list_sort_number_mapper_reverse(listed, gloss_row_sightings);
     let held = property_get_or_null(letter_words, letter);
-    let unwritten = null_is(held);
-    let words = held;
-    if (unwritten) {
-      words = 0;
-    }
+    let words = value_or_if_null(held, 0);
     let row = {
       letter,
       bible_words: words,

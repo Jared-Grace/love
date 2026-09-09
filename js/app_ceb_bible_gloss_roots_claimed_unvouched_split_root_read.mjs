@@ -3,10 +3,11 @@ import { property_initialize_list } from "./property_initialize_list.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
+import { value_or_if_null } from "./value_or_if_null.mjs";
 import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
+import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -22,11 +23,8 @@ export function app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
     property_initialize_list(piles, name);
     let held = property_get(piles, name);
     list_add(held, row);
-    let was = property_get_or_null(counts, name);
-    let fresh = null_is(was);
-    if (fresh) {
-      was = 0;
-    }
+    let stored = property_get_or_null(counts, name);
+    let was = value_or_if_null(stored, 0);
     let sightings = property_get(row, "sightings");
     let value = add(was, sightings);
     property_set(counts, name, value);
