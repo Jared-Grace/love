@@ -7,7 +7,7 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_unique } from "./list_unique.mjs";
-export function gloss_entries_place_bound_wrong(
+export function gloss_entries_capital_claim_wrong(
   entries,
   lambda$place_bound_is,
 ) {

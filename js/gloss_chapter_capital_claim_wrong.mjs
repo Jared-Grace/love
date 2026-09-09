@@ -1,5 +1,5 @@
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
-import { gloss_entries_place_bound_wrong } from "./gloss_entries_place_bound_wrong.mjs";
+import { gloss_entries_capital_claim_wrong } from "./gloss_entries_capital_claim_wrong.mjs";
 export async function gloss_chapter_capital_claim_wrong(
   chapter_code,
   fn,
@@ -17,6 +17,6 @@ export async function gloss_chapter_capital_claim_wrong(
     fn,
     entries_pass,
   );
-  let found = gloss_entries_place_bound_wrong(entries, lambda$place_bound_is);
+  let found = gloss_entries_capital_claim_wrong(entries, lambda$place_bound_is);
   return found;
 }
