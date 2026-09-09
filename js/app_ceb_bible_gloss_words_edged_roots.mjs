@@ -1,3 +1,4 @@
+import { gloss_finding_silent_is } from "./gloss_finding_silent_is.mjs";
 import { property_not } from "./property_not.mjs";
 import { gloss_chapters_words_edged } from "./gloss_chapters_words_edged.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -9,7 +10,6 @@ import { gloss_explain_root_judged } from "./gloss_explain_root_judged.mjs";
 import { add } from "./add.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_words_edged_roots() {
@@ -65,11 +65,7 @@ export async function app_ceb_bible_gloss_words_edged_roots() {
     each(found, finding_read);
   }
   each(offenders, chapter_read);
-  function silent_is(fault) {
-    let says_nothing = property_equals(fault, "kind", "silent");
-    return says_nothing;
-  }
-  let silent = list_filter(hidden, silent_is);
+  let silent = list_filter(hidden, gloss_finding_silent_is);
   let hidden_count = list_size(hidden);
   let silent_count = list_size(silent);
   let r = {
