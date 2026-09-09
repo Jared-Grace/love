@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo18() {
           "two",
           "$son.",
           "One",
-          "$son",
+          "son",
           "was",
           "$name_tag",
           "Gershom,",

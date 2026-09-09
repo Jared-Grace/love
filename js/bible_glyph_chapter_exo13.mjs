@@ -58,7 +58,7 @@ export function bible_glyph_chapter_exo13() {
           "this",
           "$sun,",
           "the",
-          "$sun",
+          "day",
           "you",
           "came",
           "out",
