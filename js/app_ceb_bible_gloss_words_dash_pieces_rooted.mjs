@@ -1,5 +1,4 @@
-import { app_ceb_bible_gloss_words_dash_pieces_absent } from "./app_ceb_bible_gloss_words_dash_pieces_absent.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_ceb_bible_gloss_words_dash_pieces_absent_words } from "./app_ceb_bible_gloss_words_dash_pieces_absent_words.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
@@ -17,8 +16,7 @@ export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
   "No piece can be explained under its own name, and that needs no measuring: a piece counts as absent exactly because no word the store explains is spelled that way. The root claims are the one road left open, because a root is named inside prose and does not have to be a word the store explains at all.";
   "An empty answer here is worth as much as a full one and should be reported rather than passed over. It bounds the damage: the fabrications stayed in the dictionary and never reached the page.";
   "Roots are compared in one case. A root is written in small letters and a piece cut from the head of a sentence wears a capital, so comparing them as written would miss exactly the pieces most likely to have been believed.";
-  let measured = await app_ceb_bible_gloss_words_dash_pieces_absent();
-  let absent = property_get(measured, "words_absent");
+  let absent = await app_ceb_bible_gloss_words_dash_pieces_absent_words();
   let phantom = {};
   function phantom_hold(word) {
     let lowered_word = text_lower_to(word);
