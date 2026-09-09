@@ -1,3 +1,4 @@
+import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { gloss_chapter_passages_collect_generic } from "./gloss_chapter_passages_collect_generic.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
@@ -11,8 +12,6 @@ import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_passage_entries_changed_set } from "./gloss_passage_entries_changed_set.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { json_format_to } from "./json_format_to.mjs";
-import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 export async function gloss_chapter_entries_explain_rewrite_generic(
   chapter_code,
   fn,
@@ -63,9 +62,6 @@ export async function gloss_chapter_entries_explain_rewrite_generic(
   if (none) {
     return changes;
   }
-  let object = property_get(read, "chapter");
-  let contents = json_format_to(object);
-  let file_path = property_get(read, "path");
-  await file_overwrite_uncached(file_path, contents);
+  await gloss_chapter_passages_collected_write(read);
   return changes;
 }

@@ -103,7 +103,7 @@ export function bible_glyph_chapter_deu16() {
           "with",
           "it",
           "unleavened",
-          "$bread,",
+          "bread,",
           "the",
           "$bread",
           "of",
