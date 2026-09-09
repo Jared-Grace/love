@@ -1,6 +1,5 @@
+import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_ceb_bible_gloss_stored_is } from "./app_ceb_bible_gloss_stored_is.mjs";
-import { not } from "./not.mjs";
 import { app_ceb_bible_gloss_chapters_absent } from "./app_ceb_bible_gloss_chapters_absent.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -17,8 +16,7 @@ export async function app_ceb_bible_gloss_chapters_absent_gate_run() {
   "★ THE APP IS NAMED ON THE WAY OUT AND KEPT OUT OF THE HINT, WHICH IS WHAT DECIDES HOW MUCH A RED ANSWER COSTS. What a failed gate said is read back afterwards for the function names in it, and an app whose bundle carries one of those is held out of its deployment; the hint is dropped before that reading happens. Named, this stops one app. Unnamed, a red gate belongs to nobody and holds back every app in the folder for a fault none of them has a part in.";
   "The assert every other one of these gates shares was not used, because its complaint counts offenders among the chapters it walked and these chapters are the ones it never reached. Spelled through it the sentence would read so many of so many authored chapters, of a number that is neither how many are authored nor how many are missing. A shared wording that has to be read past is worse than a sentence of one's own.";
   arguments_assert(arguments, 0);
-  let stored = await app_ceb_bible_gloss_stored_is();
-  let unread = not(stored);
+  let unread = await app_ceb_bible_gloss_stored_not_is();
   if (unread) {
     let skipped = {
       skipped: 1,
