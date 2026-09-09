@@ -5,13 +5,14 @@ import { list_map_property } from "./list_map_property.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { song_image_couplet_key } from "./song_image_couplet_key.mjs";
 import { song_image_notes } from "./song_image_notes.mjs";
-import { list_filter_property_not } from "./list_filter_property_not.mjs";
+import { list_filter_property_exclude_if_exists } from "./list_filter_property_exclude_if_exists.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export async function song_image_notes_open_unreviewed() {
   "every couplet carrying a note nobody has answered that is no longer on the review bench - the feedback that has fallen out of sight";
   "A COUPLET TAKEN OFF THE BENCH STOPS HAVING ITS NOTES CLOSED, WHICH IS THE HOLE THIS LOOKS THROUGH. Closing a round walks the bench list and marks every note on every couplet standing in it. A couplet lifted off while one of its notes was still open keeps that note open for ever, and nothing ever looks at it again - it is not shown on the bench, because it left, and it is not closed, because closing only sees the bench.";
-  "IT WAS FOUND WITH EIGHTEEN NOTES ALREADY LOST ACROSS FIVE COUPLETS, and one whole couplet whose note file had never had a single note marked answered. Nothing had gone red at any point; the notes were filed, stored and simply never read again.";
+  "IT WAS FOUND WITH TWENTY-ONE NOTES ALREADY LOST ACROSS FIVE COUPLETS, and one whole couplet whose note file had never had a single note marked answered. Nothing had gone red at any point; the notes were filed, stored and simply never read again.";
   "IT REPORTS AND DOES NOT CLOSE, WHICH IS THE WHOLE POINT. Marking the lost notes answered would clear the count and destroy the one record that they were never replied to, which is the failure itself rather than the symptom of it. What is wanted is the list, so that a person can answer them.";
+  "AN UNANSWERED NOTE CARRIES NO done KEY AT ALL, so the open ones cannot be found by asking whether that key is false. Asking for the property outright throws on the very notes this is looking for, which is why the test has to tolerate the key being absent and read absence itself as open.";
   arguments_assert(arguments, 0);
   let couplets = song_image_couplets();
   let reviewing = song_image_review_couplets();
@@ -25,7 +26,11 @@ export async function song_image_notes_open_unreviewed() {
     }
     let key = song_image_couplet_key(n);
     let notes = await song_image_notes(key);
-    let unanswered = list_filter_property_not(notes, "done");
+    let unanswered = list_filter_property_exclude_if_exists(
+      notes,
+      "done",
+      true,
+    );
     let any = list_empty_not_is(unanswered);
     if (any) {
       lost.push({
