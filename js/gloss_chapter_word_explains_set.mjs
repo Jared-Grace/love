@@ -1,7 +1,6 @@
+import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { gloss_chapter_passages_collect_generic } from "./gloss_chapter_passages_collect_generic.mjs";
-import { file_overwrite_uncached } from "./file_overwrite_uncached.mjs";
 import { gloss_passage_word_explains_set } from "./gloss_passage_word_explains_set.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 export async function gloss_chapter_word_explains_set(
@@ -32,9 +31,6 @@ export async function gloss_chapter_word_explains_set(
   if (none_changed) {
     return changes;
   }
-  let object = property_get(read, "chapter");
-  let contents = json_format_to(object);
-  let file_path = property_get(read, "path");
-  await file_overwrite_uncached(file_path, contents);
+  await gloss_chapter_passages_collected_write(read);
   return changes;
 }
