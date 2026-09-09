@@ -1,14 +1,8 @@
 export function app_en_learn_bible_gloss_urdu_explain_capital_claims() {
-  "The turns of phrase an Urdu gloss uses to say that a word wears a capital only because a verse or a sentence begins where it stands.";
-  "A capital has two quite different reasons behind it and only one of them is about the word. A name is written with a capital wherever it stands, and saying so explains the word. A verse beginning is about the place, and saying so explains nothing about the word - it is true only of that one occurrence, so the sentence cannot be carried to another one.";
-  "Both spellings of the word for 'begins' are listed, with and without the mark over the first letter, because the store holds both and a reader looking for one finds half.";
-  let clauses = [
-    "آیت شروع",
-    "آیت شُروع",
-    "جملہ شروع",
-    "جُملہ شروع",
-    "جملہ شُروع",
-    "جُملہ شُروع",
-  ];
-  return clauses;
+  "The turns of phrase an Urdu gloss uses to assert that the word in front of the reader is written with a capital letter.";
+  "The reason offered for the capital is deliberately not part of this. A capital gets two quite different reasons - the word is a name, or a verse begins here - and asking which one was given is asking about the wording. Asking only whether a capital was claimed is asking about the word, and the word either wears one or it does not.";
+  "That is what makes the reading safe to point at a store. Every entry saying one of these while the word carries no capital is false, whatever reason it went on to give and whoever wrote it, and nothing about the verse has to be read to know it.";
+  "A sentence saying the capital was there earlier and is gone now is not listed, because it asserts nothing about the word in front of the reader - it is the correct explanation of exactly this difference, and catching it would turn the reading against the writing it exists to protect.";
+  let claims = ["پہلا حرف بڑا ہے", "بڑے حرف سے لکھا جاتا ہے"];
+  return claims;
 }

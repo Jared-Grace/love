@@ -1019,7 +1019,7 @@ export function bible_glyph_chapter_jer07() {
           "$name_tag,",
           "when",
           "this",
-          "$place",
+          "place",
           "will",
           "$no_entry",
           "longer",

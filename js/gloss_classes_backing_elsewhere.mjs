@@ -2,8 +2,8 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_class_count } from "./gloss_class_count.mjs";
 export function gloss_classes_backing_elsewhere(classes) {
   "The marked classes where the dictionary took its own root apart and arrived somewhere other than the root the explanation named, most-seen first: the ones worth a person's eye.";
   "This is the queue the whole reading was for. Eight hundred and thirty sightings is a pile nobody opens, and the two answers beside this one are the two nobody needs to: backed means the dictionary itself took the next step the explanation took, and silent means the dictionary was never asked and so has said nothing that could be disagreed with. What is left is the case where the dictionary was asked, answered, and answered differently - twenty two classes and sixty three sightings when this was written, which is one screen.";
@@ -19,10 +19,6 @@ export function gloss_classes_backing_elsewhere(classes) {
     return r;
   }
   let picked = list_filter(classes, elsewhere_is);
-  function class_count(one_class) {
-    let count = property_get(one_class, "count");
-    return count;
-  }
-  let ranked = list_sort_number_mapper_reverse(picked, class_count);
+  let ranked = list_sort_number_mapper_reverse(picked, gloss_class_count);
   return ranked;
 }
