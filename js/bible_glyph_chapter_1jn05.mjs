@@ -421,7 +421,7 @@ export function bible_glyph_chapter_1jn05() {
           "$eye",
           "$pointing_back",
           "$brother",
-          "committing",
+          "$bow",
           "a",
           "$bow",
           "$no_entry",
