@@ -1,3 +1,4 @@
+import { gloss_relation_apart_is } from "./gloss_relation_apart_is.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -16,7 +17,6 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { each_async } from "./each_async.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
   "Every Cebuano word the gloss store takes back to one root in one chapter and to a different root in another chapter, each named beside the roots, the chapters that gave them, and what kind of difference it is - with the ones a single chapter already shows on its own kept apart from the ones only a reading across the whole store can see.";
@@ -71,12 +71,8 @@ export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
     );
   let row_across_only_is = property_get(r2, "row_across_only_is");
   let disagreeing = property_get(r2, "disagreeing");
-  function row_apart_is(row) {
-    let relation_apart = property_equals(row, "relation", "apart");
-    return relation_apart;
-  }
   let across_only = list_filter(disagreeing, row_across_only_is);
-  let apart = list_filter(across_only, row_apart_is);
+  let apart = list_filter(across_only, gloss_relation_apart_is);
   let words_rooted = list_size(words);
   let words_disagreeing = list_size(disagreeing);
   let words_across_only = list_size(across_only);
