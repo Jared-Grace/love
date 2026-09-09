@@ -533,8 +533,16 @@ export function bible_glyph_chapter_references() {
       reference: "Deuteronomy 30",
     },
     {
+      chapter_code: "DEU31",
+      reference: "Deuteronomy 31",
+    },
+    {
       chapter_code: "DEU32",
       reference: "Deuteronomy 32",
+    },
+    {
+      chapter_code: "DEU33",
+      reference: "Deuteronomy 33",
     },
     {
       chapter_code: "DEU34",
