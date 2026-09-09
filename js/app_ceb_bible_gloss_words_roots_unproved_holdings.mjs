@@ -1,9 +1,8 @@
-import { app_ceb_bible_gloss_words_roots_unproved_holdings_person_is } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_person_is.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard } from "./app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_apart_arbitrated } from "./app_ceb_bible_gloss_words_roots_apart_arbitrated.mjs";
-import { property_get } from "./property_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_map_concat_multiple } from "./list_map_concat_multiple.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_size } from "./list_size.mjs";
@@ -18,21 +17,14 @@ export async function app_ceb_bible_gloss_words_roots_unproved_holdings() {
   arguments_assert(arguments, 0);
   let arbitrated = await app_ceb_bible_gloss_words_roots_apart_arbitrated();
   let r2 =
-    await app_ceb_bible_gloss_words_roots_unproved_holdings_person_is(
+    await app_ceb_bible_gloss_words_roots_unproved_holdings_row_unheard(
       arbitrated,
     );
-  let person_is = property_get(r2, "person_is");
-  let gather_is = property_get(r2, "gather_is");
-  let accent_is = property_get(r2, "accent_is");
-  let owed_rows = property_get(r2, "owed_rows");
+  let row_unheard = property_get(r2, "row_unheard");
+  let person = property_get(r2, "person");
+  let gather = property_get(r2, "gather");
+  let accent = property_get(r2, "accent");
   let unproved = property_get(r2, "unproved");
-  let accent = list_filter(owed_rows, accent_is);
-  let gather = list_filter(owed_rows, gather_is);
-  let person = list_filter(owed_rows, person_is);
-  function row_unheard(row) {
-    let unheard = property_get(row, "unheard");
-    return unheard;
-  }
   let named = list_map_concat_multiple(gather, row_unheard);
   let gather_words = list_map_unique(named, text_lower_to);
   let r = {
