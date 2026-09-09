@@ -1,10 +1,8 @@
-import { app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out } from "./app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out.mjs";
+import { app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of } from "./app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_letters_counted } from "./bible_words_letters_counted.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_set } from "./property_set.mjs";
-import { each } from "./each.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   "Every root an explanation states outright, filed under the least written letter it holds, with the letters put in the order the Cebuano bible itself writes them.";
@@ -19,26 +17,13 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare() {
   let counted = await bible_words_letters_counted(bible_folder);
   let letter_rows = property_get(counted, "letters");
   let letter_words = {};
-  function letter_note(row) {
-    let letter = property_get(row, "letter");
-    let words = property_get(row, "words");
-    property_set(letter_words, letter, words);
-  }
-  each(letter_rows, letter_note);
-  let by_letter = {};
-  let r2 = await app_ceb_bible_gloss_roots_claimed_letters_rare_letter_read_out(
+  let r2 = await app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words_of(
     letter_words,
-    by_letter,
+    letter_rows,
   );
-  let letter_read_out = property_get(r2, "letter_read_out");
-  let letters = property_get(r2, "letters");
-  let letters_used = property_get(r2, "letters_used");
+  let bible_words_of = property_get(r2, "bible_words_of");
   let gathered = property_get(r2, "gathered");
-  each(letters_used, letter_read_out);
-  function bible_words_of(row) {
-    let words = property_get(row, "bible_words");
-    return words;
-  }
+  let letters = property_get(r2, "letters");
   list_sort_number_mapper(letters, bible_words_of);
   let r = {
     chapters: property_get(gathered, "chapters"),
