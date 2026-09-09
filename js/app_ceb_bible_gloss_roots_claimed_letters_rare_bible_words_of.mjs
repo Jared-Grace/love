@@ -28,9 +28,10 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_rare_bible_words
     let words = property_get(row, "bible_words");
     return words;
   }
-  return {
+  let r = {
     letters,
     gathered,
     bible_words_of,
   };
+  return r;
 }
