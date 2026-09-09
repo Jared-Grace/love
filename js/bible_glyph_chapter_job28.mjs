@@ -68,7 +68,7 @@ export function bible_glyph_chapter_job28() {
           "in",
           "the",
           "deepest",
-          "$darkness.",
+          "darkness.",
         ],
       },
       {
