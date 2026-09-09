@@ -1,4 +1,4 @@
-import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
+import { gloss_chapter_entries } from "./gloss_chapter_entries.mjs";
 import { gloss_entries_pointers_dangling } from "./gloss_entries_pointers_dangling.mjs";
 export async function gloss_chapter_pointers_dangling(
   chapter_code,
@@ -9,14 +9,7 @@ export async function gloss_chapter_pointers_dangling(
   "$plain chapter_code";
   "the code is a chapter's name, like ROM01, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "The whole chapter is gathered before anything is judged, rather than each passage being judged on its own, because the chapter is what a reader goes down in one sitting - a word explained in verse three and pointed back at in verse twenty-seven was met, whatever the passages say. Asking passage by passage would name that a pointer at nothing.";
-  function entries_pass(entries) {
-    return entries;
-  }
-  let entries = await gloss_chapter_entries_collect_generic(
-    chapter_code,
-    fn,
-    entries_pass,
-  );
+  let entries = await gloss_chapter_entries(chapter_code, fn);
   let found = gloss_entries_pointers_dangling(entries, lambda$pointer_is);
   return found;
 }
