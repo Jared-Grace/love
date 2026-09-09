@@ -18,8 +18,11 @@ export async function gloss_chapters_explains_repeated_ranked(fn) {
   "Only a few of the words travel out beside each wording. The whole list is what the store already holds and can be asked for a chapter at a time; what a reader wants here is enough to see at once whether the wording was lazy or whether the words really do share a fact.";
   let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
-    let groups = await gloss_chapter_explains_repeated_groups(chapter_code, fn);
-    return groups;
+    let groups_found = await gloss_chapter_explains_repeated_groups(
+      chapter_code,
+      fn,
+    );
+    return groups_found;
   }
   let per_chapter = await list_map_async(chapter_codes, chapter_read);
   let groups = list_flat(per_chapter);
