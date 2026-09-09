@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_roots_disagreeing } from "./app_ceb_bible_gloss_roots_disagreeing.mjs";
+import { app_ceb_bible_gloss_roots_disagreeing_offenders } from "./app_ceb_bible_gloss_roots_disagreeing_offenders.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_roots_disagreeing_classes } from "./gloss_roots_disagreeing_classes.mjs";
 import { list_map } from "./list_map.mjs";
@@ -11,8 +11,7 @@ export async function app_ceb_bible_gloss_roots_shallower() {
   "Named by the pair rather than counted, because a count cannot be refused with anything a reader can act on. One word met once a verse counts as hundreds, so the number moves whenever a chapter is authored and says nothing about whether anything got worse; the pair is the fault itself, and a pair that was not there before is the thing worth stopping.";
   "How many there are is asked for first and then asked for again with that number as the limit, because the gathering takes a count of how many to show and has no word for all of them. The slow part is the sweep across the chapters and it has already happened by then - gathering is arithmetic over a list already in hand.";
   arguments_assert(arguments, 0);
-  let disagreeing = await app_ceb_bible_gloss_roots_disagreeing();
-  let offenders = property_get(disagreeing, "offenders");
+  let offenders = await app_ceb_bible_gloss_roots_disagreeing_offenders();
   let counted = gloss_roots_disagreeing_classes(offenders, "shallower", 0);
   let selected_total = property_get(counted, "selected_total");
   let gathered = gloss_roots_disagreeing_classes(
