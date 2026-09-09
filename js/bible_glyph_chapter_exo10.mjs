@@ -663,7 +663,7 @@ export function bible_glyph_chapter_exo10() {
           "$name_tag",
           "turned",
           "the",
-          "$wind",
+          "wind",
           "into",
           "a",
           "very",
