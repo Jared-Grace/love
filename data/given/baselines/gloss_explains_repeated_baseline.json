@@ -18,16 +18,16 @@
    "across": 2683,
    "same": 2095,
    "repeated": 4778,
-   "entries": 74474
+   "entries": 74708
   },
   {
    "store": "app_en_learn_bible_gloss_urdu_generate",
    "across_share": 107,
-   "repeated_share": 556,
-   "same_share": 449,
-   "across": 11823,
-   "same": 49481,
-   "repeated": 61304,
+   "repeated_share": 555,
+   "same_share": 448,
+   "across": 11783,
+   "same": 49379,
+   "repeated": 61162,
    "entries": 110264
   }
  ]
