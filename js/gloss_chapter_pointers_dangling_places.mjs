@@ -1,4 +1,4 @@
-import { gloss_chapter_passages_collect_generic } from "./gloss_chapter_passages_collect_generic.mjs";
+import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
@@ -20,15 +20,7 @@ export async function gloss_chapter_pointers_dangling_places(
   "the code is a chapter's name, like ACT25, chosen from the Bible's own book and chapter numbering. It names a store entry and nothing that runs.";
   "The verses come back with the word because the wording that has to be written for it cannot be written without them. A word is explained by what it is doing where it stands, and a list of bare words is a list of guesses.";
   "One place is given for each word rather than one for every entry, because the pointers after the first are made true by repairing the first, so they are not separate work.";
-  function passage_pass(passage) {
-    let one = [passage];
-    return one;
-  }
-  let read = await gloss_chapter_passages_collect_generic(
-    chapter_code,
-    fn,
-    passage_pass,
-  );
+  let read = await gloss_chapter_passages_collect_all(chapter_code, fn);
   let passages = property_get(read, "collected");
   let key = gloss_entry_explain_key();
   let said = {};
