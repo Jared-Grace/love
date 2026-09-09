@@ -1,8 +1,5 @@
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,9 +16,7 @@ export async function gloss_words_generic(fn) {
   "★ SMALL LETTERS, BECAUSE A CAPITAL IS THE SENTENCE'S AND NOT THE WORD'S. The same word opening a verse and sitting inside one is one word and one sound, and keeping both spellings would record it twice and let a page miss it by asking with the wrong one. A page asking for a word here lowers it first, which is the one step this shape costs and the reason it costs nothing else.";
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is counted from the moment it is written and there is no list anywhere to keep in line.";
   arguments_assert(arguments, 1);
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   let words = [];
   async function chapter_each(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
