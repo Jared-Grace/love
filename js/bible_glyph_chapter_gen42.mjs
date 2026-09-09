@@ -1055,7 +1055,7 @@ export function bible_glyph_chapter_gen42() {
           "me",
           "of",
           "my",
-          "$son.",
+          "sons.",
           "Joseph",
           "is",
           "gone,",

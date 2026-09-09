@@ -343,7 +343,7 @@ export function bible_glyph_chapter_gen25() {
           "and",
           "thirty",
           "seven",
-          "$sun.",
+          "years.",
           "Then",
           "he",
           "breathed",

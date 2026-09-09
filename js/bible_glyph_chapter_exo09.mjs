@@ -197,7 +197,7 @@ export function bible_glyph_chapter_exo09() {
           "livestock",
           "of",
           "the",
-          "$son",
+          "sons",
           "of",
           "Israel",
           "had",
