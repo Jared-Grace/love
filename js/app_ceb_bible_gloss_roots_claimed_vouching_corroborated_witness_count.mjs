@@ -8,7 +8,7 @@ import { not } from "./not.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { property_set } from "./property_set.mjs";
+import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_unique } from "./list_unique.mjs";
@@ -39,11 +39,7 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated_wi
       return;
     }
     let key = gloss_word_folded(bare);
-    let held = property_get_or_null(witnesses, key);
-    if (null_is(held)) {
-      held = [];
-      property_set(witnesses, key, held);
-    }
+    let held = property_initialize_list(witnesses, key);
     list_add(held, spelling);
   }
   each(spellings, witness_note);
