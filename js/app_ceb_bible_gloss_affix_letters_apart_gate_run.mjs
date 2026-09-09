@@ -1,6 +1,5 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_ceb_bible_gloss_affix_letters_apart } from "./app_ceb_bible_gloss_affix_letters_apart.mjs";
 import { app_ceb_bible_gloss_affix_letters_apart_baseline_path } from "./app_ceb_bible_gloss_affix_letters_apart_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -29,6 +28,6 @@ export async function app_ceb_bible_gloss_affix_letters_apart_gate_run() {
     "these explanations quote letters for a piece of their word that stand nowhere in the dictionary's cut of it, so the piece was got from nowhere - quote the letters the dictionary gives, or leave the piece unnamed",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
