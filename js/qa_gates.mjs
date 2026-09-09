@@ -1,3 +1,4 @@
+import { bible_usfm_version_lines_dropped_gate_run } from "./bible_usfm_version_lines_dropped_gate_run.mjs";
 import { bible_usfm_reading_junk_words_gate_run } from "./bible_usfm_reading_junk_words_gate_run.mjs";
 import { text_word_junk_why_or_null_cases_gate_run } from "./text_word_junk_why_or_null_cases_gate_run.mjs";
 import { bible_usfm_book_typos_gate_run } from "./bible_usfm_book_typos_gate_run.mjs";
@@ -1109,6 +1110,7 @@ export function qa_gates() {
     bible_usfm_book_typos_gate_run,
     text_word_junk_why_or_null_cases_gate_run,
     bible_usfm_reading_junk_words_gate_run,
+    bible_usfm_version_lines_dropped_gate_run,
   ];
   return gates;
 }
