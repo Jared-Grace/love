@@ -356,7 +356,7 @@ export function bible_glyph_chapter_gen39() {
           "the",
           "$house",
           "was",
-          "inside.",
+          "$house.",
         ],
       },
       {
