@@ -1,19 +1,11 @@
-import { app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read.mjs";
+import { app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct } from "./app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
-import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { gloss_chapters_roots_claimed_rows_generic } from "./gloss_chapters_roots_claimed_rows_generic.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
-import { object_property_names } from "./object_property_names.mjs";
-import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
-import { gloss_row_sightings } from "./gloss_row_sightings.mjs";
-import { each } from "./each.mjs";
-import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   "Every root the Cebuano gloss store names that nothing in the dictionary is built from, split by what the dictionary did when it was asked about that root and by whether the translation ever writes it as a word on its own.";
   "Unvouched is one answer covering three different situations, and they want three different things done about them. A root the site holds a full breakdown for is a root the site says is not a root, because a breakdown names what the word was built out of. A root nobody has ever asked about is a question, and the answer is a gather away. A root the site was asked about and had no breakdown for is the ordinary shape of a real root and also the shape of a word the site does not have, and those two cannot be told apart here at all.";
@@ -29,33 +21,13 @@ export async function app_ceb_bible_gloss_roots_claimed_unvouched_split() {
   let bible_folder = ebible_folder_cebuano();
   let vocabulary = await bible_words_written_lowered_set(bible_folder);
   let piles = {};
-  let counts = {};
-  let root_read = app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
-    piles,
-    counts,
-    vouched,
-    known,
-    vocabulary,
-  );
-  let gathered = await gloss_chapters_roots_claimed_rows_generic(
-    app_ceb_bible_gloss_generate,
-    root_read,
-  );
-  let pile_names = object_property_names(piles);
-  function pile_sort(name) {
-    let held = property_get(piles, name);
-    list_sort_number_mapper_reverse(held, gloss_row_sightings);
-  }
-  each(pile_names, pile_sort);
-  let sizes = {};
-  function size_note(name) {
-    let held = property_get(piles, name);
-    let value = list_size(held);
-    property_set(sizes, name, value);
-  }
-  each(pile_names, size_note);
-  let answer = {};
-  let roots_distinct = property_get(gathered, "roots_distinct");
+  let { counts, sizes, answer, roots_distinct } =
+    await app_ceb_bible_gloss_roots_claimed_unvouched_split_roots_distinct(
+      piles,
+      vouched,
+      known,
+      vocabulary,
+    );
   property_set(answer, "roots_distinct", roots_distinct);
   property_set(answer, "roots", sizes);
   property_set(answer, "sightings", counts);
