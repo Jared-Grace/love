@@ -4,8 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 export async function app_ceb_bible_gloss_verse_claims_wrong_names() {
   "Every Cebuano word explanation naming a verse of its own chapter that holds nothing built on the same root, named once each by the chapter, the verses the passage covers, the word and the verse it named.";
   "The reading beside this hands its findings back a chapter deep and carries the whole sentence that made each one. A record cannot be kept in that shape: prose is rewritten every time a chapter is re-authored, so a record keyed by it would call the same fault new the first time a comma moved.";
@@ -35,7 +34,6 @@ export async function app_ceb_bible_gloss_verse_claims_wrong_names() {
     each(found, finding_read);
   }
   each(chapters, chapter_read);
-  let unique = list_unique(names);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(names);
   return sorted;
 }
