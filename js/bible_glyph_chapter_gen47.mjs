@@ -118,7 +118,7 @@ export function bible_glyph_chapter_gen47() {
           "because",
           "there",
           "is",
-          "$no_entry",
+          "no",
           "pasture",
           "for",
           "the",
@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen47() {
         words: [
           "There",
           "was",
-          "$no_entry",
+          "no",
           "$bread",
           "in",
           "all",
