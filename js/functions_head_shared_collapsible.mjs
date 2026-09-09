@@ -1,7 +1,7 @@
+import { function_shared_run_read_or_null } from "./function_shared_run_read_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
-import { js_function_declaration_shared_run_read_or_null } from "./js_function_declaration_shared_run_read_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { js_statements_referenced_names } from "./js_statements_referenced_names.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -17,9 +17,7 @@ export async function functions_head_shared_collapsible(shared_name) {
   ("This reads and reports and changes nothing, which is the whole reason it exists apart from the swap. The refusals are the part worth reading. Each one is a function that really does begin with the same work and still cannot take the call, so each is either a hazard the swap would have walked into or a rule drawn more tightly than it needed to be, and there is no way to tell those apart without looking.");
   ("The named function has to be a run of work handing back one name that run made, or there is nothing a copy of its body could be swapped for, and it has to read every name it was handed, or a call could be written with nothing to put in the gap - the line counting the arguments would then stop it the first time it ran. Both refusals are about the shared function rather than about any copy, so they are answered once and the walk is not made at all.");
   ("Its own name is skipped, since a function trivially opens with a copy of itself.");
-  let parsed = await function_parse_declaration(shared_name);
-  let declaration = property_get(parsed, "declaration");
-  let shared = js_function_declaration_shared_run_read_or_null(declaration);
+  let shared = await function_shared_run_read_or_null(shared_name);
   let unusable_is = null_is(shared);
   if (unusable_is) {
     let unusable = {
