@@ -8,6 +8,7 @@ import { list_unique } from "./list_unique.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
+import { gloss_class_count } from "./gloss_class_count.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -30,10 +31,6 @@ export function gloss_classes_word_claims_apart(classes) {
     let r = gloss_word_folded(claimed);
     return r;
   }
-  function class_count(one_class) {
-    let count = property_get(one_class, "count");
-    return count;
-  }
   function key_read(key) {
     let group = property_get(by_word, key);
     let rows = property_get(group, "classes");
@@ -43,7 +40,7 @@ export function gloss_classes_word_claims_apart(classes) {
     if (not(alone)) {
       let word = property_get(group, "word");
       let claims = list_size(distinct);
-      let counts = list_map(rows, class_count);
+      let counts = list_map(rows, gloss_class_count);
       let sightings_at_most = list_sum(counts);
       let found = {
         word,
