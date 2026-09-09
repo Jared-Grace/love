@@ -78,7 +78,7 @@ export function bible_glyph_chapter_jhn17() {
       {
         verse_number: 3,
         words: [
-          "$plus",
+          "Now",
           "this",
           "is",
           "eternal",
@@ -378,7 +378,7 @@ export function bible_glyph_chapter_jhn17() {
       {
         verse_number: 13,
         words: [
-          "$plus",
+          "But",
           "now",
           "I",
           "am",
@@ -720,7 +720,6 @@ export function bible_glyph_chapter_jhn17() {
           "$no_entry",
           "$lightbulb",
           "You,",
-          "$plus",
           "I",
           "$lightbulb",
           "You,",
