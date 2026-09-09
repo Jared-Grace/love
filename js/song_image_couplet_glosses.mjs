@@ -57,7 +57,7 @@ export function song_image_couplet_glosses() {
         "Inherited. The bare cross standing empty is the church's own emblem and no verse describes it; the empty beams are what make it say pardon rather than execution, which is the couplet's claim.",
     },
     7: {
-      kept: 31,
+      kept: 33,
       lyric_ref: "John 3:16, Romans 5:8, John 15:13",
       lyric_explain:
         "GOD commendeth HIS love toward us in that, while we were yet sinners, CHRIST died for us. Greater love hath no man than this, and the couplet says that this is the place where the love of GOD is on view.",
@@ -121,7 +121,7 @@ export function song_image_couplet_glosses() {
         "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
-      kept: 26,
+      kept: 37,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
@@ -193,7 +193,7 @@ export function song_image_couplet_glosses() {
         "Described, of HIM rather than of the morning. I am the bright and morning star is HIS own name for HIMSELF at the end of Revelation, so the couplet's dawn is drawn as the One the dawn belongs to.",
     },
     24: {
-      kept: 285,
+      kept: 291,
       lyric_ref: "Romans 1:4, Matthew 28:6, Acts 2:24",
       lyric_explain:
         "Declared to be the Son of GOD with power by the resurrection from the dead. HE is not here: for HE is risen, as HE said. GOD raised HIM up, having loosed the pains of death.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 97,
+      kept: 100,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
