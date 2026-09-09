@@ -765,7 +765,7 @@ export function bible_glyph_chapter_1ki13() {
           "have",
           "defied",
           "the",
-          "$speech",
+          "word",
           "of",
           "the",
           "$name_tag",
