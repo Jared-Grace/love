@@ -60,7 +60,7 @@ export function bible_glyph_chapter_jos24() {
           "$fire",
           "of",
           "Israel,",
-          "says:",
+          "$speech:",
           "$hourglass",
           "ago",
           "your",
