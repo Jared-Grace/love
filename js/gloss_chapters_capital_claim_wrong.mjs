@@ -32,8 +32,8 @@ export async function gloss_chapters_capital_claim_wrong(
     return wrong;
   }
   function words_read(found) {
-    let words = property_get(found, "words");
-    return words;
+    let words_found = property_get(found, "words");
+    return words_found;
   }
   function wordings_read(found) {
     let wordings = property_get(found, "wordings");
