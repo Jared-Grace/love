@@ -1,10 +1,9 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_named } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_named.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run() {
   "Gate: no Cebuano explanation may newly cut a root short of a root the dictionary knows at the very same spot in the very same word. Throws so the dispatcher seam exits nonzero.";
   "The sibling ratchet catches the explanation naming a word built out of the root as though it were the root, and it cannot see this one. Both come back from a relation reading as deeper, and deeper is usually right: gugma under higugma tells a reader more than the dictionary does. Naming kasing under kasingkasing is the same answer and the opposite thing, because kasing is not a shorter root, it is the word with half of it taken off.";
@@ -30,6 +29,6 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run()
     "these explanations hand a learner half of a word as its root, where the dictionary vouches for the whole run of letters starting at the same place - write the root out whole, or say plainly what the letters named are a part of",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
