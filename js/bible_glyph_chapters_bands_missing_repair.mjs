@@ -43,14 +43,12 @@ export async function bible_glyph_chapters_bands_missing_repair() {
       list_add(banded_codes, drawn_code);
     }
   }
-  let tagalog = await bible_glyph_chapters_tagalog_write();
-  let urdu = await bible_glyph_chapters_urdu_write();
+  let languages = await bible_glyph_chapters_languages_write();
   let report = {
     written,
     registered,
     bands_list,
-    tagalog,
-    urdu,
+    languages,
   };
   return report;
 }
