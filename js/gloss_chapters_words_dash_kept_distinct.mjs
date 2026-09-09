@@ -1,7 +1,4 @@
-import { local_function_folder } from "./local_function_folder.mjs";
-import { folder_read_files_exists_ensure } from "./folder_read_files_exists_ensure.mjs";
-import { list_map } from "./list_map.mjs";
-import { file_name_json_name } from "./file_name_json_name.mjs";
+import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_entries_collect_generic } from "./gloss_chapter_entries_collect_generic.mjs";
 import { gloss_entries_words_dash_kept } from "./gloss_entries_words_dash_kept.mjs";
 import { list_map_async } from "./list_map_async.mjs";
@@ -12,9 +9,7 @@ export async function gloss_chapters_words_dash_kept_distinct(fn) {
   "The store is read rather than a list of chapters being handed in, so a chapter authored later is counted from the moment it is written.";
   "$plain fn";
   "the function names a gloss store and is looked up for its own name only; nothing here calls it.";
-  let folder = local_function_folder(fn);
-  let file_names = await folder_read_files_exists_ensure(folder);
-  let chapter_codes = list_map(file_names, file_name_json_name);
+  let chapter_codes = await gloss_chapters_stored(fn);
   async function chapter_read(chapter_code) {
     let words = await gloss_chapter_entries_collect_generic(
       chapter_code,
