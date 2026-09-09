@@ -9,7 +9,9 @@ import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { list_size } from "./list_size.mjs";
+import { value_or_if_null } from "./value_or_if_null.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
+import { gloss_class_count } from "./gloss_class_count.mjs";
 export function app_ceb_bible_gloss_roots_silence_causes_reachable_now(
   known,
   folded_index,
@@ -42,13 +44,11 @@ export function app_ceb_bible_gloss_roots_silence_causes_reachable_now(
   }
   each(causes, cause_size_put);
   let held_otherwise = property_get_or_null(by_cause, "spelled_otherwise");
-  let none = null_is(held_otherwise);
-  let reachable = none ? [] : held_otherwise;
-  function class_count(one_class) {
-    let count = property_get(one_class, "count");
-    return count;
-  }
-  let reachable_now = list_sort_number_mapper_reverse(reachable, class_count);
+  let reachable = value_or_if_null(held_otherwise, []);
+  let reachable_now = list_sort_number_mapper_reverse(
+    reachable,
+    gloss_class_count,
+  );
   let r = {
     sightings,
     classes_counted,
