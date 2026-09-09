@@ -1,13 +1,10 @@
+import { app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note } from "./app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabularies.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
-import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
@@ -33,24 +30,8 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
   let outside_known = 0;
   let by_root_unknown = {};
   let by_root_known = {};
-  function root_note(holder, root, word) {
-    let row = property_get_or_null(holder, root);
-    let fresh = null_is(row);
-    if (fresh) {
-      let made = {
-        named_root: root,
-        sightings: 0,
-        words: [],
-      };
-      property_set(holder, root, made);
-      row = made;
-    }
-    let seen = property_get(row, "sightings");
-    let value = add(seen, 1);
-    property_set(row, "sightings", value);
-    let words = property_get(row, "words");
-    list_add_if_not_includes(words, word);
-  }
+  let root_note =
+    app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note();
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
