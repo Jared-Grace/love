@@ -1,10 +1,9 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { app_ceb_bible_gloss_affix_kinds_wrong_names } from "./app_ceb_bible_gloss_affix_kinds_wrong_names.mjs";
 import { app_ceb_bible_gloss_affix_kinds_wrong_baseline_path } from "./app_ceb_bible_gloss_affix_kinds_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_affix_kinds_wrong_gate_run() {
   "Gate: no Cebuano explanation authored from here on may call a piece of its word by a name the dictionary gives the word no piece of. Throws so the dispatcher seam exits nonzero.";
   "The record starts full and may only shrink. Twelve hundred of these were found across the Psalms, the Song and the Proverbs - an authoring era that named a prefix wherever the dictionary cut an infix - and most were repaired one authored sentence at a time. The tail that is left has no shortcut in it, so this holds what was bought while it waits.";
@@ -29,6 +28,6 @@ export async function app_ceb_bible_gloss_affix_kinds_wrong_gate_run() {
     "these explanations call a piece of their word by a name the dictionary gives the word no piece of - name only the kinds of piece the dictionary gives for that word, or name none",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
