@@ -1,3 +1,4 @@
+import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { gloss_pointers_dangling_measure } from "./gloss_pointers_dangling_measure.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_pointers_dangling_baseline_path } from "./gloss_pointers_dangling_baseline_path.mjs";
@@ -36,13 +37,9 @@ export async function gloss_pointers_dangling_gate_run() {
     ]),
     stale,
   });
-  function dangling_get(count) {
-    let dangling = property_get(count, "dangling");
-    return dangling;
-  }
   let r = {
     stores: list_size(counts),
-    dangling: list_map_sum(counts, dangling_get),
+    dangling: list_map_sum(counts, gloss_dangling_count),
     skipped: missing,
   };
   return r;
