@@ -21,7 +21,7 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 7,
-      note: "Bold now - the leading on the three crosses is as thick as the leading round the field. Nothing in the wording changed. The shared sheet already asks for leading drawn inside a shape as well as round it, so the drawing had been ignoring a rule it already had and a fresh draw was enough. Still wrong: the line between the violet and the red runs across the middle cross, and the top of the tall cross is clipped by the arch.",
+      note: "Fixed, and here is what did it. The shared sheet already said the field's lead lines stop where they meet the symbol, but it sat third in a long clause. I moved it to the front of that clause - no new words anywhere - and the next draw stopped the violet/red line dead at each cross. Still wrong: the tall cross no longer runs up into the head of the arch, its top now sits below the upper line.",
     },
     {
       n: 15,
