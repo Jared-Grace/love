@@ -71,7 +71,7 @@ export function bible_glyph_chapter_exo21() {
           "alone.",
           "If",
           "he",
-          "$footprints",
+          "comes",
           "with",
           "a",
           "$woman,",
