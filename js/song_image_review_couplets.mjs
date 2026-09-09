@@ -21,19 +21,19 @@ export function song_image_review_couplets() {
   let couplets = [
     {
       n: 7,
-      note: "Lighter, and nothing touches a crossbar now. The lower band is ruby red instead of deep crimson, and the two side crosses were shortened so their crossbars stand well above the line. Still wrong: the line still runs across all three shafts where they pass through it, and the middle cross stops short of the arch instead of running up into it.",
+      note: "Bold now - the leading on the three crosses is as thick as the leading round the field. Nothing in the wording changed. The shared sheet already asks for leading drawn inside a shape as well as round it, so the drawing had been ignoring a rule it already had and a fresh draw was enough. Still wrong: the line between the violet and the red runs across the middle cross, and the top of the tall cross is clipped by the arch.",
     },
     {
       n: 15,
-      note: "Still on 26. The sword is now asked to stand half out of the sheath instead of a third, and seven draws under that wording all failed - four lost the sheath or the flame, one filled the whole window with fire, one came back as a lampstand. The closest had the flame and the half-drawn sword both right but a white band straight across the field. The faults you named on 29 came from wording I have since taken back out, so they are not what you are looking at.",
+      note: "Both done, and you are on a fresh drawing. The sheath covers more of the blade and the field is cobalt right through with no white pane anywhere in it. I also put the wording back to two thirds of the blade sheathed - I had moved it to half after your earlier note about it being too closed, and this note reverses that. Still wrong: all three field bands came out the same blue so the two lead lines do not read, and the sheath tip stops short of the border.",
     },
     {
       n: 24,
-      note: "Not done, and I have put the wording back. I asked for the rock to show through the white beam like the others and drew five times: every one lost the white arch border and three went back to photographic rock. So you are still on 285 with its solid white beam. White glass looks to be the one thing this service will not make see-through, in a drawing or in an edit.",
+      note: "Yes, and this is it. 281 went to the editor with one instruction - sky blue to black, nothing else touched - so the beams, the stone, the rock face and the halo are exactly what they were. Recolouring one region is the one thing that editor does reliably, which is why this worked where five attempts to remove or lighten something failed. The pale middle beam here shows the rock through it, which is what you asked for on 285.",
     },
     {
       n: 26,
-      note: "Brighter, and I have moved you to 97. I cut two rules out of this couplet rather than adding any - the one making each ray a single unbroken pane, since you said the lines in 85 were fine, and a copy of a lead-line rule the shared sheet already carries. The rays came back saturated with a gradient down each one and the spacing opening the right way. Still wrong: they run off the bottom edge instead of stopping at the white border.",
+      note: "Done - a fresh draw, and you are on 100 now. The white border runs the whole way round again, the fan opens outward instead of staying parallel, and the six ray colours came out in the order asked. Still wrong: the rays run off the bottom edge instead of stopping at the border.",
     },
   ];
   return couplets;
