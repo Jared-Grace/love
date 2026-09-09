@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_words_unwritten_gate_run } from "./app_ceb_bible_gloss_words_unwritten_gate_run.mjs";
 import { app_ceb_bible_gloss_chapters_absent_gate_run } from "./app_ceb_bible_gloss_chapters_absent_gate_run.mjs";
 import { app_ceb_bible_gloss_verse_claims_wrong_gate_run } from "./app_ceb_bible_gloss_verse_claims_wrong_gate_run.mjs";
 import { app_ceb_bible_gloss_passages_respell_refused_gate_run } from "./app_ceb_bible_gloss_passages_respell_refused_gate_run.mjs";
@@ -1079,6 +1080,7 @@ export function qa_gates() {
     app_ceb_bible_gloss_passages_respell_refused_gate_run,
     app_ceb_bible_gloss_verse_claims_wrong_gate_run,
     app_ceb_bible_gloss_chapters_absent_gate_run,
+    app_ceb_bible_gloss_words_unwritten_gate_run,
   ];
   return gates;
 }
