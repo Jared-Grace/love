@@ -36,8 +36,8 @@ export async function gloss_chapters_capital_claim_wrong(
     return words_found;
   }
   function wordings_read(found) {
-    let wordings = property_get(found, "wordings");
-    return wordings;
+    let wordings_found = property_get(found, "wordings");
+    return wordings_found;
   }
   let claiming = list_map_sum(founds, claiming_read);
   let wrong = list_map_sum(founds, wrong_read);
