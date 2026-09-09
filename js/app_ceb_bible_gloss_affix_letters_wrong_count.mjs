@@ -1,3 +1,4 @@
+import { gloss_chapter_found_count } from "./gloss_chapter_found_count.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { each } from "./each.mjs";
 import { equal } from "./equal.mjs";
@@ -10,7 +11,6 @@ import { gloss_chapters_affix_letters_wrong } from "./gloss_chapters_affix_lette
 import { list_map_sum } from "./list_map_sum.mjs";
 import { list_size } from "./list_size.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_list_size } from "./property_list_size.mjs";
 export async function app_ceb_bible_gloss_affix_letters_wrong_count() {
   "How many Cebuano explanations across the whole store quote letters for a piece of their word which the dictionary gives no piece of that kind holding, and how many chapters they are spread over.";
   "This counts the faults the check on kind names cannot see. That one passes any word the dictionary does build with a piece of the kind named, however wrong the letters quoted for it are, so its number is a floor and not a total. Read the two together or neither says anything.";
@@ -25,11 +25,7 @@ export async function app_ceb_bible_gloss_affix_letters_wrong_count() {
     known,
   );
   let chapters = list_size(offenders);
-  function chapter_count(chapter) {
-    let size = property_list_size(chapter, "found");
-    return size;
-  }
-  let count = list_map_sum(offenders, chapter_count);
+  let count = list_map_sum(offenders, gloss_chapter_found_count);
   let relations = [];
   let standing = [];
   function chapter_read(chapter) {
