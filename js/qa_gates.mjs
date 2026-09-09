@@ -1,3 +1,4 @@
+import { bible_usfm_book_typos_gate_run } from "./bible_usfm_book_typos_gate_run.mjs";
 import { bible_usfm_interlinear_words_apart_gate_run } from "./bible_usfm_interlinear_words_apart_gate_run.mjs";
 import { bible_usfm_lines_division_subtitles_dropped_cases_gate_run } from "./bible_usfm_lines_division_subtitles_dropped_cases_gate_run.mjs";
 import { bible_glyph_chapters_verse_marks_overdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_overdrawn_gate_run.mjs";
@@ -1103,6 +1104,7 @@ export function qa_gates() {
     bible_glyph_chapters_verse_marks_overdrawn_gate_run,
     bible_usfm_lines_division_subtitles_dropped_cases_gate_run,
     bible_usfm_interlinear_words_apart_gate_run,
+    bible_usfm_book_typos_gate_run,
   ];
   return gates;
 }
