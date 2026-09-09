@@ -25,8 +25,8 @@ export async function gloss_store_word_wordings(fn, lambda$pointer_is) {
   let per_chapter = await list_map_async(chapter_codes, chapter_count);
   let gathered = {};
   for (let chapter of per_chapter) {
-    let words = object_property_names(chapter);
-    for (let word of words) {
+    let words_found = object_property_names(chapter);
+    for (let word of words_found) {
       let wordings = property_get(chapter, word);
       let held = property_get_or_null(gathered, word);
       let fresh = null_is(held);
