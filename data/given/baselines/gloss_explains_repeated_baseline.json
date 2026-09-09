@@ -1,0 +1,22 @@
+{
+ "known": [
+  {
+   "store": "app_ceb_bible_gloss_generate",
+   "share": 538,
+   "repeated": 139029,
+   "entries": 258651
+  },
+  {
+   "store": "app_original_bible_gloss_generate",
+   "share": 64,
+   "repeated": 4778,
+   "entries": 74151
+  },
+  {
+   "store": "app_en_learn_bible_gloss_urdu_generate",
+   "share": 560,
+   "repeated": 61703,
+   "entries": 110264
+  }
+ ]
+}
