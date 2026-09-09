@@ -1,3 +1,4 @@
+import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_explains_repeated_groups } from "./gloss_chapter_explains_repeated_groups.mjs";
 import { list_map_async } from "./list_map_async.mjs";
