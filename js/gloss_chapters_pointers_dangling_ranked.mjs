@@ -1,3 +1,4 @@
+import { gloss_dangling_count } from "./gloss_dangling_count.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_pointers_dangling } from "./gloss_chapter_pointers_dangling.mjs";
 import { property_get } from "./property_get.mjs";
@@ -32,17 +33,13 @@ export async function gloss_chapters_pointers_dangling_ranked(
     return row;
   }
   let rows = await list_map_async(chapter_codes, chapter_read);
-  function row_dangling_read(row) {
-    let dangling = property_get(row, "dangling");
-    return dangling;
-  }
   function row_dangling_any_is(row) {
     let dangling = property_get(row, "dangling");
     let any = greater_than(dangling, 0);
     return any;
   }
   let offending = list_filter(rows, row_dangling_any_is);
-  let ranked = list_sort_number_mapper_reverse(offending, row_dangling_read);
+  let ranked = list_sort_number_mapper_reverse(offending, gloss_dangling_count);
   let r = {
     chapters: list_size(chapter_codes),
     offending: list_size(ranked),
