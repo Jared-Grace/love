@@ -7,7 +7,7 @@ import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_lesson_expression_either_first_expression } from "./app_code_lesson_expression_either_first_expression.mjs";
+import { app_code_lesson_expression_either_first_expression_times_plus } from "./app_code_lesson_expression_either_first_expression_times_plus.mjs";
 import { app_code_lesson_expression_either_first_title_name_id } from "./app_code_lesson_expression_either_first_title_name_id.mjs";
 import { app_code_lesson_quiz_qa_question } from "./app_code_lesson_quiz_qa_question.mjs";
 import { app_code_lesson_quizzes_exercises } from "./app_code_lesson_quizzes_exercises.mjs";
@@ -23,7 +23,7 @@ export function app_code_lesson_expression_either_first() {
   let name_id = app_code_lesson_expression_either_first_title_name_id();
   function item_new() {
     "a question is the line as written and its answer is what the line comes to";
-    let tree = app_code_lesson_expression_either_first_expression();
+    let tree = app_code_lesson_expression_either_first_expression_times_plus();
     let question = app_code_expression_code(tree);
     let answer = app_code_expression_value(tree);
     let item = {
