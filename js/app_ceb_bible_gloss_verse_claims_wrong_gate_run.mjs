@@ -1,11 +1,10 @@
+import { app_ceb_bible_gloss_gate_told_chapters } from "./app_ceb_bible_gloss_gate_told_chapters.mjs";
 import { app_ceb_bible_gloss_stored_not_is } from "./app_ceb_bible_gloss_stored_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_verse_claims_wrong_names } from "./app_ceb_bible_gloss_verse_claims_wrong_names.mjs";
 import { app_ceb_bible_gloss_verse_claims_wrong_baseline_path } from "./app_ceb_bible_gloss_verse_claims_wrong_baseline_path.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
-import { gloss_gate_told_chapters } from "./gloss_gate_told_chapters.mjs";
-import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_verse_claims_wrong_gate_run() {
   "Gate: no Cebuano gloss explanation authored from here on may name a verse of its own chapter that holds nothing built on the same root, unless somebody has already read that sentence and banked it. Throws so the dispatcher seam exits nonzero.";
   "★ THIS IS THE ONE THING AN EXPLANATION SAYS THAT A MACHINE CAN SETTLE. Everything else in a gloss sentence is judgment - whether the meaning is right, whether the parts are named well, whether a reader will follow it. A sentence that says the word also stands in verse fifteen is checkable against verse fifteen, and the chapter holding the answer is already open. A wrong fact costs a reader more than a clumsy sentence does, so the one checkable claim is worth a gate on its own.";
@@ -32,6 +31,6 @@ export async function app_ceb_bible_gloss_verse_claims_wrong_gate_run() {
     "these explanations name a verse of their own chapter that holds no word built on the same root - open the chapter at that word and read the sentence: mend it if it claims the word stands in the verse it names, and bank it deliberately if it only says what happens there",
     name_write,
   );
-  let r = await gloss_gate_told_chapters(app_ceb_bible_gloss_generate, told);
+  let r = await app_ceb_bible_gloss_gate_told_chapters(told);
   return r;
 }
