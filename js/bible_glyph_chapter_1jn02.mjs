@@ -568,7 +568,7 @@ export function bible_glyph_chapter_1jn02() {
           "belong",
           "$tray_out",
           "us.",
-          "$pointing",
+          "For",
           "if",
           "they",
           "had",
