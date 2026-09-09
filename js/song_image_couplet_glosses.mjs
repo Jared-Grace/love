@@ -121,7 +121,7 @@ export function song_image_couplet_glosses() {
         "Described, and now in its own colours. The veil of the temple was rent in twain from the top to the bottom. From the top is the whole of it, since a tear beginning above is one no man reached, and the picture draws the direction. Exodus 26:31 says what the veil was made of - blue, and purple, and scarlet, and fine twined linen - so the cloth is drawn in upright stripes of those four and not as a plain white curtain, which is what it had been. All four are already on this film's colour list, which is why the verse could be obeyed at no cost. What the verse also puts there and the picture does not is the cherubims woven into it, left out because nothing with a face is drawn anywhere in this film.",
     },
     15: {
-      kept: 37,
+      kept: 44,
       lyric_ref: "Romans 3:25, 1 John 2:2, Isaiah 53:10, Zechariah 13:7",
       lyric_explain:
         "Set forth to be a propitiation through faith in HIS blood; HE is the propitiation for our sins. Isaiah says it pleased the LORD to bruise HIM, and Zechariah calls the sword awake against the shepherd.",
@@ -209,7 +209,7 @@ export function song_image_couplet_glosses() {
         "Described in part. On HIS head were many crowns is Revelation 19:12, and one crown is drawn rather than many, but not any longer because a count is thought unkeepable - many was tried and is attempt 2, and it came back as three white discs stacked like a snowman, because a band with nothing inside it is a hole and this hand fills holes. So the shortfall is now measured rather than assumed: many is what the verse says, one is what the glass will hold. It is white glass with ruby jewels, never gold.",
     },
     26: {
-      kept: 100,
+      kept: 104,
       lyric_ref: "Revelation 5:12-13, Romans 6:9, 1 Peter 1:21",
       lyric_explain:
         "Worthy is the Lamb that was slain to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing. CHRIST being raised from the dead dieth no more.",
@@ -257,7 +257,7 @@ export function song_image_couplet_glosses() {
         "Described. The fig branch in leaf is the sign CHRIST HIMSELF gives for knowing the time is near, and the leaves are the whole of the sign, so the picture draws the branch and nothing around it.",
     },
     32: {
-      kept: 19,
+      kept: 22,
       lyric_ref: "Revelation 21:4, Revelation 22:1-2",
       lyric_explain:
         "There shall be no more death, neither sorrow, nor crying, neither shall there be any more pain. The leaves of the tree were for the healing of the nations.",
@@ -265,7 +265,7 @@ export function song_image_couplet_glosses() {
         "Described. A pure river of water of life, and on either side of the river was there the tree of life. The trees stand on both banks because the verse puts them on both, which is the detail most pictures of it drop.",
     },
     33: {
-      kept: 16,
+      kept: 18,
       lyric_ref: "Revelation 21:4, Isaiah 25:8, Revelation 7:17",
       lyric_explain:
         "GOD shall wipe away all tears from their eyes. Isaiah had said the same, that the Lord GOD will wipe away tears from off all faces, and Revelation says it twice over.",

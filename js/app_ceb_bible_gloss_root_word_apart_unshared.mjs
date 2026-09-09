@@ -1,15 +1,14 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_root_word_apart_shaped } from "./app_ceb_bible_gloss_root_word_apart_shaped.mjs";
 import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_set } from "./property_set.mjs";
-import { add } from "./add.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { text_shared_run_longest } from "./text_shared_run_longest.mjs";
 import { text_size } from "./text_size.mjs";
+import { property_set } from "./property_set.mjs";
 import { greater_than } from "./greater_than.mjs";
+import { property_count_add } from "./property_count_add.mjs";
 import { list_add } from "./list_add.mjs";
+import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_root_word_apart_unshared() {
@@ -25,16 +24,6 @@ export async function app_ceb_bible_gloss_root_word_apart_unshared() {
   let run_entries = {};
   let unshared = [];
   let unshared_entries = 0;
-  function tally(counts, name, value) {
-    let before = property_get_or_null(counts, name);
-    let first = null_is(before);
-    if (first) {
-      property_set(counts, name, value);
-      return;
-    }
-    let after = add(before, value);
-    property_set(counts, name, after);
-  }
   function pair_read(pair) {
     let word = property_get(pair, "word");
     let root = property_get(pair, "root");
@@ -49,8 +38,8 @@ export async function app_ceb_bible_gloss_root_word_apart_unshared() {
     if (long_enough) {
       named = "2 or more";
     }
-    tally(run_pairs, named, 1);
-    tally(run_entries, named, entries);
+    property_count_add(run_pairs, named, 1);
+    property_count_add(run_entries, named, entries);
     if (long_enough) {
       return;
     }

@@ -8,11 +8,12 @@ import { add } from "./add.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
+import { property_count_add } from "./property_count_add.mjs";
+import { not } from "./not.mjs";
+import { list_join } from "./list_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { not } from "./not.mjs";
-import { list_join } from "./list_join.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { gloss_chapters_roots_claimed_entries_generic } from "./gloss_chapters_roots_claimed_entries_generic.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -54,11 +55,7 @@ export async function app_ceb_bible_gloss_root_word_apart() {
     let first = list_get(claimed, 0);
     let root = text_lower_to(first);
     let relation = gloss_root_claimed_relation(lowered, root);
-    let held = property_get_or_null(counts, relation);
-    let unseen = null_is(held);
-    let before = unseen ? 0 : held;
-    let value = add(before, 1);
-    property_set(counts, relation, value);
+    property_count_add(counts, relation, 1);
     let far = equal(relation, "apart");
     if (not(far)) {
       return;

@@ -25,7 +25,7 @@ export function song_image_review_couplets() {
     },
     {
       n: 15,
-      note: "Yes, and you were already on a picture that does it. The wording has always said the flame stops at the sheath's mouth where the bare blade ends, so nothing needed changing - 37, the one you are on, has the flame beginning exactly where the sheath stops. 39 was a draw I did not keep. I have left the wording alone.",
+      note: "Done - you are on 44 now. I swapped the wording rather than adding to it: half sheathed became mostly sheathed, two thirds became three quarters, and the flame moved from the upper third of the window to the upper quarter. 44 has only the tip of the blade standing clear of the sheath's mouth. The cost is that its field runs to three colours instead of two.",
     },
     {
       n: 24,
@@ -33,11 +33,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 26,
-      note: "Not fixed, and I would rather say so than hand you a different picture. The same lead-line move that stopped the lines cutting couplet 7's crosses made no difference here across three fresh draws. I think the reason is that your rays fill the window right down to the foot, so there is no field left for the two lines to run in. You are still on 100.",
+      note: "Gone - you are on 104 and no line crosses a beam anywhere in it. I capped the fan at half the window's width so the lines would have sky to run in. That is not what fixed it: the fan still fills the foot, and the drawing simply left the two field lines out altogether. So the note is answered, but by omission rather than by the change I made.",
     },
     {
       n: 9,
-      note: "Three of your four are already answered by a later drawing. There is no white field anywhere now - the shared sheet forbids one, and that took 12's white bottom and 7's white background with it. The fourth was still live: a lead line ran straight down through the spear. I moved that rule to the front of its clause in the shared sheet, and 16 breaks both field lines at the shaft.",
+      note: "One reason only, and it was your own note. In 15 a lead line runs straight down through the spear shaft, which is the first thing you ever filed against this couplet. In 16 both field lines stop at the shaft and start again past it. The price is that 16's field carries an extra green band, so if the shaft matters less to you than that, say so and I will put 15 back.",
     },
     {
       n: 14,
@@ -49,11 +49,11 @@ export function song_image_review_couplets() {
     },
     {
       n: 32,
-      note: "Two of your four are already answered: the cross is white now rather than red, and the red wedges are gone. On brightness - the pale field is deliberate, the amethyst of the twelfth foundation stone in Revelation 21:20 - but only the middle band is meant to be pale and 19 made both of them pale, which is why it reads washed out. Two fresh draws came back worse than 19, so you are still on it. The river winds now but still does not taper.",
+      note: "They can be, but the honest answer is that the wedges and the cross above them were never in the wording at all. This couplet asks for a river of the water of life winding between two trees, and the drawing invented the rest. So I drew fresh rather than recolour an invention: you are on 22, with no cross and no wedges, brighter, and the head of the arch back to deep cobalt. The river still does not taper.",
     },
     {
       n: 33,
-      note: "Done, and you are on a fresh drawing. Brighter and more dramatic, as you asked, and the lead lines now stop at the teardrop and start again beyond it instead of cutting across. No white field and no red bottom border. Still wrong: five bands where there should be three, and the drop is smaller than the wording asks for.",
+      note: "You are on 18, which is 12's pairing again - blue drop on green field. The wording had never named a field colour for this couplet, which is why every draw picked its own; it now names emerald green for both bands. The drop is also much larger than before. Still wrong: two lead lines run straight across the drop instead of stopping at it.",
     },
   ];
   return couplets;
