@@ -31,7 +31,7 @@ export function app_code_lesson_expression_both_sides_any_comparison() {
   function above(root) {
     "the card saying this telling is one already read, naming the lesson it came from, and then that lesson's telling itself";
     let text = app_code_lesson_same_as_message(
-      "the earlier lesson called Solving both sides with any comparison",
+      "the earlier lesson called Solve both sides with any comparison",
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_code_container_light_blue_text(root, text);
