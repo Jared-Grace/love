@@ -1,5 +1,5 @@
 import { app_code_lesson_expression_either_first_title_name_id } from "./app_code_lesson_expression_either_first_title_name_id.mjs";
-import { app_code_lesson_expression_either_first_expression } from "./app_code_lesson_expression_either_first_expression.mjs";
+import { app_code_lesson_expression_either_first_expression_times_plus } from "./app_code_lesson_expression_either_first_expression_times_plus.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
 import { app_code_expression_value } from "./app_code_expression_value.mjs";
 import { property_get } from "./property_get.mjs";
@@ -15,8 +15,10 @@ import { app_code_label_code_question } from "./app_code_label_code_question.mjs
 import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 import { app_code_lesson_expression_either_first_above } from "./app_code_lesson_expression_either_first_above.mjs";
 export function app_code_lesson_expression_either_first() {
-  "two operators ready at the same time, and either of them may be worked out first: 2 * 3 + 4 * 5 and 2 + 3 + 4 * 5 both split into two parts, and each line lands on the same value whichever part is taken";
-  "BOTH SHAPES ARE DRAWN, NOT ONLY THE SYMMETRIC ONE. Three operators can be laid out by strength in eight ways and exactly two of them leave two operators ready: a weak operator in the middle with a strong one last. This lesson drew only the shape whose two ends are both times, which is one of the two and is the one that invites the wrong reason - a learner reading it can conclude that matching ends are what did it. The other shape has a plus and a times at the ends and the choice is just as free, which leaves only the true reason standing: the weak operator in the middle splits the line, and the strong one at the end finishes the right half without help.";
+  "two operators ready at the same time, and either of them may be worked out first: 2 * 3 + 4 * 5 has a times on each side of the plus, and the line lands on the same value whichever times is taken";
+  "★ ONE SHAPE HERE, AND THE OTHER ONE IS THE LESSON AFTER THIS. Three operators can be laid out by strength in eight ways and exactly two of them leave two operators ready: a weak operator in the middle with a strong one last. Both shapes were drawn here for a while, and the second of them - two pluses then a times, 2 + 3 + 4 * 5 - is the harder one by a whole step, so it was taken back out.";
+  "WHY IT IS A WHOLE STEP HARDER, and the reason the two cannot share a lesson. On this shape a learner needs one rule, the one they have just been taught: a times goes before a plus. Both operators that are ready are times, so that single rule licenses both of them and there is nothing to reconcile. On the other shape the two rules a learner holds appear to disagree - a times goes before a plus says take the times, and pluses go left to right says take the first plus - and seeing that both are right means first seeing that 2 + 3 and 4 * 5 do not touch each other. That is an inference, and it is the one thing the lesson after this one exists to teach.";
+  "A learner is not shown the choice on a line where finding it needs a step they have not been given. Told the times comes first they would take the times, be right, and never learn that they had a choice - which is the lesson going through the motions rather than teaching.";
   "The one new fact. Every line up to here has had exactly one operator that could go next, so a learner has never had to make a choice that was theirs - the rule picked for them and they only had to read it. Here the rule leaves two, and the thing to learn is that leaving two is not the rule failing to say: both answers are right.";
   "It stands immediately before arithmetic on both sides of a comparison, which is the first line in the course with three operators in it and two of them ready at once. That lesson has been asking a learner to make this choice with nothing said about it, on a line that is also teaching them something else. Here the choice is met on its own, on the smallest line that can carry one.";
   "Times and plus, no comparison, because the choice is about the shape of the line and not about what the operators mean. Adding a comparison on top of it is the next lesson, and it is one step from this one.";
@@ -24,7 +26,7 @@ export function app_code_lesson_expression_either_first() {
   let name_id = app_code_lesson_expression_either_first_title_name_id();
   function item_new() {
     "a question is the line as written and its answer is what the line comes to";
-    let tree = app_code_lesson_expression_either_first_expression();
+    let tree = app_code_lesson_expression_either_first_expression_times_plus();
     let question = app_code_expression_code(tree);
     let answer = app_code_expression_value(tree);
     let item = {
