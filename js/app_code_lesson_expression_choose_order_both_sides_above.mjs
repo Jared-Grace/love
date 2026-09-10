@@ -16,9 +16,11 @@ export function app_code_lesson_expression_choose_order_both_sides_above(root) {
       want_true,
       outer_symbol,
     );
-  app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
-    root,
-    tree,
-    noop,
-  );
+  let line =
+    app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
+      root,
+      tree,
+      noop,
+    );
+  return line;
 }

@@ -20,9 +20,14 @@ export function app_code_above_shown_draw(root, above) {
   }
   let holder = html_div(root);
   let slot = html_div(root);
+  ("WHAT THE TELLING WORKED IS HANDED BACK, so the examples underneath can be sure not to ask about the very same line. The two are drawn independently - the telling builds its own line and the card below draws from the bank - so neither can notice the clash on its own, and a learner shown a line solved from top to bottom and then asked to solve that same line has been asked nothing. A painter with no one line to name hands back nothing, and nothing is avoided.");
   let shown = app_code_above_shown_get();
+  let line = null;
   if (shown) {
-    above(slot);
+    let drawn = above(slot);
+    if (drawn) {
+      line = drawn;
+    }
   }
   let words = app_code_above_shown_button_text(shown);
   let button = null;
@@ -36,5 +41,5 @@ export function app_code_above_shown_draw(root, above) {
     html_text_set(button, said);
   }
   button = app_shared_button_wide(holder, words, on_press);
-  return button;
+  return line;
 }

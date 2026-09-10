@@ -19,9 +19,11 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
       want_true,
       outer_symbol,
     );
-  app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
-    root,
-    tree,
-    app_code_lesson_expression_choose_order_both_sides_any_comparison_intro,
-  );
+  let line =
+    app_code_lesson_expression_choose_order_both_sides_above_arithmetic(
+      root,
+      tree,
+      app_code_lesson_expression_choose_order_both_sides_any_comparison_intro,
+    );
+  return line;
 }
