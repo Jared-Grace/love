@@ -38,12 +38,10 @@ export function app_code_lesson_expression_in_between() {
     return code;
   }
   function refill() {
-    "four examples a screen, true and false alternating";
+    "two examples a screen, one true and one false. Every line here is the same shape - a < b && b < c - so the only thing that changes from line to line is the answer, and two lines show both answers. Four lines said those same two things twice, with different numbers.";
     let v = range_true();
     let v2 = range_false();
-    let v3 = range_true();
-    let v4 = range_false();
-    let list = [v, v2, v3, v4];
+    let list = [v, v2];
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
@@ -52,7 +50,7 @@ export function app_code_lesson_expression_in_between() {
     above,
     name_id,
     next_arg,
-    example_count: 4,
+    example_count: 2,
     decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: app_code_label_value(),
