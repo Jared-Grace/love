@@ -17,7 +17,7 @@ export function app_code_lesson_expression_three_steps_strong_first_title_name_i
   let minus = js_operator_minus_symbol();
   function paint(parent) {
     html_cycle_code(parent, [
-      "Three steps in one go, ",
+      "Three steps, ",
       times,
       " ",
       divided,
