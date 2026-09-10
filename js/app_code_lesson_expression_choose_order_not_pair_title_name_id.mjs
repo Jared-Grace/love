@@ -7,9 +7,9 @@ import { html_cycle_code } from "./html_cycle_code.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 export function app_code_lesson_expression_choose_order_not_pair_title_name_id() {
   arguments_assert(arguments, 0);
-  ("the home title: solving inside !( ), an Expressions lesson");
+  ("the home title: solve ! around && or ||, an Expressions lesson");
   ("The title paints the marks and spells the words, the same way every other lesson about a symbol does: the lesson is about the marks, and the words are only what the address is written with, where a symbol cannot go.");
-  ("The three are painted as one piece because that is the shape a learner is looking for on the home list - a ! with a parenthesised thing after it, which is the whole of what this lesson's lines look like. The two lessons it stands under paint one half of it each, so the three sit together and the difference between them reads off the marks.");
+  ("It wears Solve and then the very words its all-at-once twin wears, which is how every pair in this course is spelled. It used to paint the marks !( ) as one piece; the words name what is inside them instead, so the three ! lessons read as one frame with the thing inside changed - ! around another !, ! around a comparison, ! around && or ||.");
   function paint(parent) {
     let symbol = js_operator_bang_symbol();
     let and_symbol = js_operator_and_symbol();
