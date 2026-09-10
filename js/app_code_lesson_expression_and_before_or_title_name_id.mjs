@@ -15,9 +15,8 @@ export function app_code_lesson_expression_and_before_or_title_name_id() {
     html_cycle_code(parent, [
       "",
       and_symbol,
-      " and ",
+      " before ",
       or_symbol,
-      " in one line",
     ]);
   }
   let left = app_code_category_expressions();
