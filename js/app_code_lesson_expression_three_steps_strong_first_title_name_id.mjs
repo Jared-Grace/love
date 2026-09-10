@@ -9,7 +9,7 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 export function app_code_lesson_expression_three_steps_strong_first_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: a three step line carrying an operator that has to be looked for rather than read off the left, answered in one go, an Expressions lesson");
-  ("In one go is what tells it from the lesson it is the twin of, which walks the very same lines a press at a time and is titled Solve three steps. Both lessons name the same rule because it is the same rule; what differs is whether the learner presses their way down the line or holds it.");
+  ("The missing word is what tells it from the lesson it is the twin of, which walks the very same lines a press at a time. The course names an interactive lesson Solve x and the lesson that asks the same thing all at once x, so the twin's title is this one with the verb put back on the front. Both lessons name the same rule because it is the same rule; what differs is whether the learner presses their way down the line or holds it.");
   ("Each of the four operators is set as its own piece of code rather than each pair being set as one, for the reason the twin's title gives: * / is not a thing that can be written in a line - it is two operators named side by side, and one box around them would say they were one expression.");
   let times = js_operator_asterisk_symbol();
   let divided = js_operator_division_symbol();
