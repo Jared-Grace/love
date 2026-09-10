@@ -1,3 +1,6 @@
+import { bible_usfm_markers_introduction } from "./bible_usfm_markers_introduction.mjs";
+import { bible_usfm_markers_line } from "./bible_usfm_markers_line.mjs";
+import { true_is_assert_json } from "./true_is_assert_json.mjs";
 import { multiply } from "./multiply.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
@@ -16,9 +19,9 @@ export function bible_usfm_marker_layout(marker_text) {
   ("What one usfm line mark asks of the page - whether its line is thrown away, is a break, starts a paragraph or is another line of the paragraph already running, and how far in it stands.");
   ("The step is read off the digit the mark carries rather than looked up, because that is what the digit is there for: poetry is marked q1 and q2 and list items li1 and li2, and the number says the depth in both. A table of every mark and its depth would say the same thing at greater length and go out of date the first time a printing used a deeper one.");
   ("Two spaces to the step, which is what a couplet wants and no more. Hebrew poetry is a first line and its answer, so the answer only has to be seen to be an answer; stepping it further turns a psalm into an outline.");
-  ("Nothing a person did not say survives this. Two sorts of line are thrown away and they are thrown away for one reason: the file's own bookkeeping and the printer's running heads were never anybody's words, and neither were the section titles the translators wrote over each passage. A heading is the dangerous one of the two, because it is the only thing here that is prose in the same language set in the same type - it does not announce itself as apparatus, and left in, a modern editor's summary stands inside the psalm reading as a line of it.");
-  ("The psalm ascription is named in neither list, so it falls through and is laid out as ordinary text. It is in the hebrew, and a hundred and seventeen psalms number it as verse one, so it is scripture there and the opening of the psalm everywhere else. It is the one line that looks like a heading and must not be treated as one.");
-  ("Anything unnamed is a line of text at the margin. A mark this does not know is far likelier to be a kind of paragraph than a kind of note, and guessing that way keeps words rather than losing them.");
+  ("Nothing a person did not say survives this. Three sorts of line are thrown away and they are thrown away for one reason: the file's own bookkeeping and the printer's running heads were never anybody's words, and neither were the section titles the translators wrote over each passage, neither was the introduction a publisher sets before the first chapter. A heading is the dangerous one of the three, because it is the only thing here that is prose in the same language set in the same type - it does not announce itself as apparatus, and left in, a modern editor's summary stands inside the psalm reading as a line of it.");
+  ("The psalm ascription is named among the lines of the passage rather than among the headings, though it is printed like one. It is in the hebrew, and a hundred and seventeen psalms number it as verse one, so it is scripture there and the opening of the psalm everywhere else. It is the one line that looks like a heading and must not be treated as one.");
+  ("A mark named by none of the lists stops the reading. Keeping an unknown mark as a line of text was a guess, and the guess was wrong: what came through it was not a word anybody said but a division label set over a section of the psalter, standing as the first line of a psalm with nothing to mark it as an intruder. A reading that loses a line fails loudly and a reading that gains one fails silently, so a mark this does not know is refused rather than kept, and the way through is to name it.");
   let unmarked = text_empty_is(marker_text);
   if (unmarked) {
     let plain = {
@@ -31,7 +34,10 @@ export function bible_usfm_marker_layout(marker_text) {
   let dropped = list_includes(dropped_markers, marker_text);
   let heading_markers = bible_usfm_markers_heading();
   let heading = list_includes(heading_markers, marker_text);
-  let unsaid = or(dropped, heading);
+  let introduction_markers = bible_usfm_markers_introduction();
+  let introduction = list_includes(introduction_markers, marker_text);
+  let apparatus = or(dropped, heading);
+  let unsaid = or(apparatus, introduction);
   if (unsaid) {
     let drop = {
       kind: "drop",
@@ -57,6 +63,12 @@ export function bible_usfm_marker_layout(marker_text) {
   let indent = multiply(2, depth);
   let paragraph_markers = bible_usfm_markers_paragraph();
   let paragraph = list_includes(paragraph_markers, marker_text);
+  let line_markers = bible_usfm_markers_line();
+  let lined = list_includes(line_markers, marker_text);
+  let marker_named = or(paragraph, lined);
+  true_is_assert_json(marker_named, {
+    marker_text,
+  });
   let kind = ternary(paragraph, "paragraph", "line");
   let layout = {
     kind,

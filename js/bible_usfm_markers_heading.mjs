@@ -21,7 +21,7 @@ export function bible_usfm_markers_heading() {
     "mt",
     "mt1",
     "mt2",
-    "mt3",
+    "mt3", "mt4",
     "sp",
   ];
   return markers;
