@@ -2669,6 +2669,13 @@ export function permission_grant_names() {
   let spelled2530 = fn_name(
     "app_ceb_bible_gloss_passages_respell_refused_names",
   );
+  let spelled2531 = fn_name(
+    "bible_glyph_chapters_verse_marks_overdrawn_gate_run",
+  );
+  let spelled2532 = fn_name("bible_glyph_chapters_marks_doubled_gate_run");
+  let spelled2533 = fn_name("bible_interlinear_verse_lines");
+  let spelled2534 = fn_name("ebible_verses_include");
+  let spelled2535 = fn_name("bible_usfm_version_chapter_verses_text");
   let names = [
     spelled,
     spelled2,
@@ -5200,6 +5207,11 @@ export function permission_grant_names() {
     spelled2528,
     spelled2529,
     spelled2530,
+    spelled2531,
+    spelled2532,
+    spelled2533,
+    spelled2534,
+    spelled2535,
   ];
   return names;
 }
