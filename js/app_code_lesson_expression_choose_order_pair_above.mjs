@@ -11,11 +11,12 @@ export function app_code_lesson_expression_choose_order_pair_above(root) {
   ("The run is done on a TRUE line, for the same reason the lessons beside it are: a true line is the one a learner can check against the two values they have just watched being worked out.");
   let want_true = true;
   let tree = app_code_lesson_expression_choose_order_pair_expression(want_true);
-  app_code_lesson_expression_choose_order_both_sides_above_generic(
+  let line = app_code_lesson_expression_choose_order_both_sides_above_generic(
     root,
     tree,
     app_code_lesson_expression_comparing_a_comparison_recall,
     app_code_lesson_expression_sides_parentheses_say,
     app_code_lesson_expression_choose_order_pair_intro,
   );
+  return line;
 }

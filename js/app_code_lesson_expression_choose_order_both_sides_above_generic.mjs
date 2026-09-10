@@ -75,4 +75,6 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ]);
   ("the closing sentence makes its own card, so it is handed the root - a lesson with nothing new left to say hands in a painter that draws nothing, and an empty card would still be drawn if the card were made here");
   intro(root);
+  ("The line this run was worked on is handed back, so the screen underneath can be sure not to ask about the very same line. A learner shown a line solved from top to bottom and then asked to solve that same line has been asked nothing, and the two are drawn independently here and below - so neither can notice the clash on its own.");
+  return whole_line;
 }

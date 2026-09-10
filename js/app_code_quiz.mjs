@@ -37,6 +37,7 @@ export function app_code_quiz(context) {
     on_batch_item,
     on_batch,
     true,
+    null,
   );
   function on_batch_item(container, bs, refresh_given, next_get) {
     let b = list_single(bs);

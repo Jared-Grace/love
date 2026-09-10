@@ -12,11 +12,12 @@ export function app_code_lesson_expression_choose_order_or_above(root) {
   ("It used to say the lesson before it. Two lessons now stand between the two pressing screens - the all-at-once && twin, and the in-between lesson that uses && to join two comparisons - so the screen immediately behind this one is not the one being matched. Named by what it does rather than by a place. Corrected 2026-09-10.");
   let want_true = true;
   let tree = app_code_lesson_expression_choose_order_or_expression(want_true);
-  app_code_lesson_expression_choose_order_both_sides_above_generic(
+  let line = app_code_lesson_expression_choose_order_both_sides_above_generic(
     root,
     tree,
     app_code_lesson_expression_comparing_a_comparison_recall,
     app_code_lesson_expression_sides_comparison_say,
     app_code_lesson_expression_choose_order_or_intro,
   );
+  return line;
 }
