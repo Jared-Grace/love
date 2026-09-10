@@ -4,6 +4,7 @@ export function bible_usfm_markers_dropped() {
   ("The usfm line marks whose whole line is thrown away when a passage is laid out for a person to read - the file's own bookkeeping and the translator's apparatus.");
   ("Three sorts sit here for one reason. The file heading marks say which translation this is and how it is encoded; the running heads and titles are what a printer puts at the top of a page; the parallel passage note and the chapter label are a study aid. None of them is a word of the book, and none of them is something a person copying a psalm out asked to copy.");
   ("The chapter mark itself is in the list because the caller has already used it to find the chapter. Left in, it would print the chapter's number as a line of the chapter.");
+  ("The section milestone the aligned texts carry sits here too. It is a mark a translation team writes to divide its own work rather than anything a printing shows, it carries no words at all, and it stands at the head of a line often enough that a reader told nothing about it would stop dead part way through Genesis.");
   let markers = [
     "id",
     "ide",
@@ -21,6 +22,7 @@ export function bible_usfm_markers_dropped() {
     "iex",
     "qa",
     "rem",
+    "ts\\*",
   ];
   return markers;
 }
