@@ -91,7 +91,6 @@ import { app_code_lesson_expression_comparing_a_comparison } from "./app_code_le
 import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
 import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
-import { app_code_lesson_expression_either_first } from "./app_code_lesson_expression_either_first.mjs";
 import { app_code_lesson_expression_choose_order_both_sides } from "./app_code_lesson_expression_choose_order_both_sides.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
 import { app_code_lesson_expression_arithmetic_equality } from "./app_code_lesson_expression_arithmetic_equality.mjs";
@@ -230,7 +229,6 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_parentheses_one_side,
     app_code_lesson_expression_choose_order_same_strength,
     app_code_lesson_expression_choose_order_three,
-    app_code_lesson_expression_either_first,
     app_code_lesson_expression_choose_order_both_sides,
     app_code_lesson_expression_choose_order_both_sides_any_comparison,
     app_code_lesson_expression_arithmetic_equality,
