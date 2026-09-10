@@ -41,7 +41,7 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(plus, [
       "Adding (",
       "+",
-      ") puts two amounts together, so swapping does not matter",
+      ") puts two amounts together, so swapping does not change the value",
     ]);
     html_div_cycle_code(plus, [
       "For example: ",
@@ -61,7 +61,7 @@ export function app_code_lesson_expression_swapping_add() {
     html_div_cycle_code(times, [
       "We can represent ",
       "3 * 4",
-      " as 3 rows of 4 dots",
+      " as 3 rows of 4 dots:",
     ]);
     app_code_dot_rectangle(times, 3, 4, false);
     html_div_cycle_code(times, [
@@ -71,7 +71,7 @@ export function app_code_lesson_expression_swapping_add() {
       "4 * 3",
     ]);
     html_div_cycle_code(times, [
-      "That's 4 rows of 3 dots, as you can see below",
+      "That's 4 rows of 3 dots, as you can see below:",
     ]);
     app_code_dot_rectangle(times, 3, 4, true);
     html_div_cycle_code(times, [
