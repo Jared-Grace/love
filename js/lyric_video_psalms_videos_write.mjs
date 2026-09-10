@@ -3,7 +3,9 @@ import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
 import { psalms_songs_folder_chapters } from "./psalms_songs_folder_chapters.mjs";
 import { psalms_songs_folder_parts } from "./psalms_songs_folder_parts.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
+import { lyric_video_take_document_path } from "./lyric_video_take_document_path.mjs";
 import { list_add } from "./list_add.mjs";
+import { lyric_video_song_take_named } from "./lyric_video_song_take_named.mjs";
 import { lyric_video_bible_part_document_path } from "./lyric_video_bible_part_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
@@ -12,8 +14,9 @@ import { list_size } from "./list_size.mjs";
 export async function lyric_video_psalms_videos_write(version) {
   arguments_assert(arguments, 1);
   ("$plain version");
-  ("Makes the lyric video of every psalm sung on this machine that has a timing document and no video beside it yet, or whose video is older than what it was made from, and says which those were.");
+  ("Makes the lyric video of every singing of a psalm on this machine that has a timing document and no video beside it yet, or whose video is older than what it was made from, and says which those were.");
   ("★ IT FINDS ITS OWN SET RATHER THAN BEING HANDED ONE, so it cannot drift from what is actually there. Songs arrive in the download folder in batches and documents are drafted in batches, and a list of psalms typed out at either moment is a list that is wrong by the next one. Asking the folder each time is also what makes this the one command to run after anything at all has changed - a new song, a corrected timing, a drawing that has just been made - without anybody having to work out which psalms that touched.");
+  ("★ EVERY SINGING GETS ITS OWN VIDEO, BECAUSE TWO ARRANGEMENTS OF A PSALM ARE TWO SONGS AND THE POINT OF HAVING SUNG IT TWICE IS TO HAVE BOTH. A passage used to mean one video made from the earliest recording of it, which left about a hundred recordings on this machine that nothing could reach - five arrangements of Psalm 110 among them, at lengths from a minute and a quarter to a minute and a half. Each singing has its own times, because a rendition that runs half a minute longer puts every line somewhere else, so it has its own document and its own video and neither can be made from the other's numbers.");
   ("★ WHOLE CHAPTERS AND PARTS OF CHAPTERS ARE BOTH WALKED, BECAUSE BETWEEN THEM THEY ARE EVERY PSALM SONG IN THE FOLDER. There are two readings of the folder on purpose, one answering for a song of a whole chapter and one for a song of a stanza or a half, and a walk that asked only the first would finish saying it was done with a fifth of the folder never looked at. The two differ only in how a passage is said and where its document lives, so those two things are worked out per song and the rest of the walk is written once.");
   ("★ A SONG WITH NO TIMING DOCUMENT IS REPORTED BY NAME AND NOT DRAFTED HERE. Drafting spreads the lines evenly over the song, which makes a video worth watching once and never worth publishing, and the drafting command already exists and already refuses to write over anybody's corrected times. Doing it here would quietly turn a run that makes finished videos into one that also makes unfinished ones, and the two are told apart only by watching them.");
   ("A song that cannot be rendered is set aside with what went wrong and the rest are still made. One psalm with a fault in its document is no reason for the other forty to go without videos, and stopping at the first would hide how many were actually reachable.");
@@ -24,31 +27,35 @@ export async function lyric_video_psalms_videos_write(version) {
   let wanted = [];
   for (let song of chapters) {
     let passage = "Psalm " + song.chapter;
-    let path_document = lyric_video_bible_document_path(
+    let path_passage = lyric_video_bible_document_path(
       version,
       "PSA",
       song.chapter,
     );
+    let path_document = lyric_video_take_document_path(path_passage, song.take);
     list_add(wanted, {
-      passage,
+      passage: lyric_video_song_take_named(passage, song.take),
       path_audio: song.path_audio,
       path_document,
+      take: song.take,
     });
   }
   for (let song of parts) {
     let passage =
       "Psalm " + song.chapter + ":" + song.verse_first + "-" + song.verse_last;
-    let path_document = lyric_video_bible_part_document_path(
+    let path_passage = lyric_video_bible_part_document_path(
       version,
       "PSA",
       song.chapter,
       song.verse_first,
       song.verse_last,
     );
+    let path_document = lyric_video_take_document_path(path_passage, song.take);
     list_add(wanted, {
-      passage,
+      passage: lyric_video_song_take_named(passage, song.take),
       path_audio: song.path_audio,
       path_document,
+      take: song.take,
     });
   }
   let made = [];
@@ -66,6 +73,7 @@ export async function lyric_video_psalms_videos_write(version) {
         version,
         one.path_audio,
         one.path_document,
+        one.take,
       );
       if (not(written.wrote)) {
         list_add(kept, one.passage);
