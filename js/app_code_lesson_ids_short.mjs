@@ -115,12 +115,18 @@ export function app_code_lesson_ids_short() {
       text_frozen("brackets_one"),
     app_code_lesson_expression_choose_order_same_strength:
       text_frozen("order_same"),
+    app_code_lesson_expression_three_steps_left_to_right:
+      text_frozen("three_left"),
     app_code_lesson_expression_choose_order_three: text_frozen("order_three"),
+    app_code_lesson_expression_three_steps_strong_first:
+      text_frozen("three_strong"),
     app_code_lesson_expression_choose_order_both_sides:
       text_frozen("order_sides"),
     app_code_lesson_expression_choose_order_both_sides_any_comparison:
       text_frozen("order_sides_any"),
     app_code_lesson_expression_arithmetic_equality: text_frozen("math_sides"),
+    app_code_lesson_expression_both_sides_any_comparison:
+      text_frozen("sides_any"),
     app_code_lesson_expression_swapping_add: text_frozen("swap_plus"),
     app_code_lesson_expression_swapping_divide: text_frozen("swap_divide"),
     app_code_lesson_expression_swapping_order: text_frozen("swap_order"),
