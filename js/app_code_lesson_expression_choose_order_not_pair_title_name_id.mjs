@@ -1,11 +1,10 @@
+import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
+import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
-import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_choose_order_not_pair_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: solving inside !( ), an Expressions lesson");
