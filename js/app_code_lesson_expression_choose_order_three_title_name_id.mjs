@@ -9,7 +9,7 @@ export function app_code_lesson_expression_choose_order_three_title_name_id() {
   ("It names the rule and not the answer, and those come apart on this lesson's own lines. Counted over five thousand of them, four hundred and thirty six - about one in eleven - come out with every operator the same strength, like 8 / 4 * 4 / 4, and those are solved from the left with nothing for the rule to decide. A title reading * or / first would say those lines were picked by strength when they were picked by position; a title reading * / before + - says a thing that is true of every line whether or not it has a + or a - on it to fire against.");
   ("The operators are spelled apart rather than run together, because that is how the course already writes a pair of them - + - and * / and / % ** all stand as titles of their own further back. Written */ the two would also read as the end of a comment to anyone who has met one, which is a thing to have to unlearn in the one place a learner looks to find the lesson again.");
   function paint(parent) {
-    html_cycle_code(parent, ["Solve three steps, * / before + -"]);
+    html_cycle_code(parent, ["Solve three steps, ", "* /", " before ", "+ -"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
