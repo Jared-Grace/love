@@ -1,9 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
 import { psalms_songs_folder_chapters } from "./psalms_songs_folder_chapters.mjs";
-import { lyric_video_song_take_named } from "./lyric_video_song_take_named.mjs";
+import { lyric_video_song_recording_named } from "./lyric_video_song_recording_named.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
-import { lyric_video_take_document_path } from "./lyric_video_take_document_path.mjs";
+import { lyric_video_recording_document_path } from "./lyric_video_recording_document_path.mjs";
 import { lyric_video_document_draft } from "./lyric_video_document_draft.mjs";
 import { lyric_video_songs_documents_draft } from "./lyric_video_songs_documents_draft.mjs";
 export async function lyric_video_psalms_documents_draft(version) {
@@ -19,7 +19,7 @@ export async function lyric_video_psalms_documents_draft(version) {
   let book_code = "PSA";
   function song_named(song) {
     let passage = String(song.chapter);
-    let name = lyric_video_song_take_named(passage, song.take);
+    let name = lyric_video_song_recording_named(passage, song.take);
     return name;
   }
   function song_path(song) {
@@ -28,7 +28,7 @@ export async function lyric_video_psalms_documents_draft(version) {
       book_code,
       song.chapter,
     );
-    let path = lyric_video_take_document_path(path_passage, song.take);
+    let path = lyric_video_recording_document_path(path_passage, song.take);
     return path;
   }
   async function song_drafted(song, path_document) {

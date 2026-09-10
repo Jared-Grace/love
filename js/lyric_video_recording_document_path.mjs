@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
 import { text_without_ending } from "./text_without_ending.mjs";
-export function lyric_video_take_document_path(path_document, take) {
+export function lyric_video_recording_document_path(path_document, take) {
   arguments_assert(arguments, 2);
   ("$plain path_document");
   ("$plain take");

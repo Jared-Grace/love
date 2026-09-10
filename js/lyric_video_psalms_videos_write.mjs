@@ -3,9 +3,9 @@ import { folder_user_downloads_path } from "./folder_user_downloads_path.mjs";
 import { psalms_songs_folder_chapters } from "./psalms_songs_folder_chapters.mjs";
 import { psalms_songs_folder_parts } from "./psalms_songs_folder_parts.mjs";
 import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
-import { lyric_video_take_document_path } from "./lyric_video_take_document_path.mjs";
+import { lyric_video_recording_document_path } from "./lyric_video_recording_document_path.mjs";
 import { list_add } from "./list_add.mjs";
-import { lyric_video_song_take_named } from "./lyric_video_song_take_named.mjs";
+import { lyric_video_song_recording_named } from "./lyric_video_song_recording_named.mjs";
 import { lyric_video_bible_part_document_path } from "./lyric_video_bible_part_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { not } from "./not.mjs";
@@ -32,9 +32,12 @@ export async function lyric_video_psalms_videos_write(version) {
       "PSA",
       song.chapter,
     );
-    let path_document = lyric_video_take_document_path(path_passage, song.take);
+    let path_document = lyric_video_recording_document_path(
+      path_passage,
+      song.take,
+    );
     list_add(wanted, {
-      passage: lyric_video_song_take_named(passage, song.take),
+      passage: lyric_video_song_recording_named(passage, song.take),
       path_audio: song.path_audio,
       path_document,
       take: song.take,
@@ -50,9 +53,12 @@ export async function lyric_video_psalms_videos_write(version) {
       song.verse_first,
       song.verse_last,
     );
-    let path_document = lyric_video_take_document_path(path_passage, song.take);
+    let path_document = lyric_video_recording_document_path(
+      path_passage,
+      song.take,
+    );
     list_add(wanted, {
-      passage: lyric_video_song_take_named(passage, song.take),
+      passage: lyric_video_song_recording_named(passage, song.take),
       path_audio: song.path_audio,
       path_document,
       take: song.take,
