@@ -5,7 +5,7 @@ import { list_map } from "./list_map.mjs";
 import { equal } from "./equal.mjs";
 import { lyric_video_document_times_unheard } from "./lyric_video_document_times_unheard.mjs";
 import { lyric_video_bible_part_document_path } from "./lyric_video_bible_part_document_path.mjs";
-import { lyric_video_take_document_path } from "./lyric_video_take_document_path.mjs";
+import { lyric_video_recording_document_path } from "./lyric_video_recording_document_path.mjs";
 import { path_basename } from "./path_basename.mjs";
 import { text_without_ending } from "./text_without_ending.mjs";
 import { lyric_video_document_times_heard_write } from "./lyric_video_document_times_heard_write.mjs";
@@ -70,7 +70,10 @@ export async function lyric_video_psalm_part_document_times_write(
     verse_first,
     verse_last,
   );
-  let path_document = lyric_video_take_document_path(path_passage, number_take);
+  let path_document = lyric_video_recording_document_path(
+    path_passage,
+    number_take,
+  );
   let file_name = await path_basename(path_document);
   let name_document = text_without_ending(file_name, ".json");
   let r = await lyric_video_document_times_heard_write(

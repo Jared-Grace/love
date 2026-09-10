@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
-export function lyric_video_song_take_named(passage, take) {
+export function lyric_video_song_recording_named(passage, take) {
   arguments_assert(arguments, 2);
   ("$plain passage");
   ("$plain take");
