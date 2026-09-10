@@ -5,11 +5,9 @@ import { list_map } from "./list_map.mjs";
 import { app_code_lesson_swapping_generic_pairs_wanted } from "./app_code_lesson_swapping_generic_pairs_wanted.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_code_lesson_swapping_generic_pair_code } from "./app_code_lesson_swapping_generic_pair_code.mjs";
-import { list_size } from "./list_size.mjs";
-import { add } from "./add.mjs";
-import { math_min } from "./math_min.mjs";
 import { list_interleave_pair } from "./list_interleave_pair.mjs";
-import { list_take } from "./list_take.mjs";
+import { list_size } from "./list_size.mjs";
+import { math_min } from "./math_min.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { app_code_comparison_decoys } from "./app_code_comparison_decoys.mjs";
@@ -23,17 +21,20 @@ export function app_code_lesson_swapping_generic(config) {
   let true_ops = property_get(config, "true_ops");
   let false_ops = property_get(config, "false_ops");
   let wrap = property_get(config, "wrap");
-  function expressions_all(ops, want_true) {
-    "one line for each of this outcome's operators, in an order drawn fresh each screen so the same operator does not always come first";
+  function marked_all(ops, want_true) {
+    "this outcome's operators, shuffled, each one carrying the answer its line will have";
     let shuffled = list_copy(ops);
     list_shuffle(shuffled);
-    function to_code(op) {
-      "this operator's line";
-      let code = expression(op, want_true);
-      return code;
+    function to_marked(op) {
+      "this operator and the answer wanted from it";
+      let m = {
+        op,
+        want_true,
+      };
+      return m;
     }
-    let codes = list_map(shuffled, to_code);
-    return codes;
+    let marks = list_map(shuffled, to_marked);
+    return marks;
   }
   function expression(op, want_true) {
     "a op b === b op a, the same two different numbers swapped around the operator, picked from the pairs that really land on want_true";
@@ -49,18 +50,26 @@ export function app_code_lesson_swapping_generic(config) {
     let code = app_code_lesson_swapping_generic_pair_code(op, a, b, wrap);
     return code;
   }
-  let true_count = list_size(true_ops);
-  let false_count = list_size(false_ops);
-  let taught_count = add(true_count, false_count);
+  ("The order is settled once, here, and then walked round and round for the whole lesson. A true operator and a false one are taken in turn, so any run of lines drawn from it holds both answers. Shuffled, so the lesson does not always open on the same operator.");
+  let trues = marked_all(true_ops, true);
+  let falses = marked_all(false_ops, false);
+  let cycle = list_interleave_pair(trues, falses);
+  let taught_count = list_size(cycle);
   let example_count = math_min(taught_count, 4);
   function refill() {
-    "one screenful of lines, every one of them a different operator: a true one and a false one taken in turn, so the first two lines already show that both answers happen, and drawn fresh each time so a lesson teaching more operators than fit shows a different handful on every press of the see-more button";
-    "The screen used to hold four lines whatever the lesson taught, and it filled them without ever counting what the lesson teaches. Swapping + and * teaches three operators, so the fourth line could only be one of the three said again - a learner was shown 6 - 3 === 3 - 6 and 7 - 2 === 2 - 7 and asked to tell them apart. The comparison swapping lessons teach six, and four slots held four of them, so which two went missing was decided by nothing. Now the operators set the count and four caps it: a lesson teaching fewer than four shows every one it has, and a lesson teaching more shows four different ones and keeps the rest one press away. A screen is exactly one refill, which is what stops an operator appearing twice on it - a screen made of the end of one draw and the start of the next could show the same operator either side of the join.";
-    let trues = expressions_all(true_ops, true);
-    let falses = expressions_all(false_ops, false);
-    let list = list_interleave_pair(trues, falses);
-    let screen = list_take(list, example_count);
-    return screen;
+    "the whole cycle again, one line for every operator the lesson teaches, with fresh numbers";
+    "The screen shows four of these at a time and the cycle keeps its place between screens, so a lesson teaching six goes 1234, then 5612, then 3456 - every operator comes round once a cycle, and none can be missing for long. Drawing four fresh out of six each screen would have been simpler and is what this did first, but then which two were left out was luck and an operator could sit out several screens running.";
+    "No screen can show the same operator twice, because two lines for one operator are a whole cycle apart, and a screen is never wider than a cycle. That is why the count is capped at the cycle length as well as at four.";
+    "The screen used to hold four lines whatever the lesson taught, and it filled them without ever counting what the lesson teaches. Swapping + and * teaches three operators, so the fourth line could only be one of the three said again - a learner was shown 6 - 3 === 3 - 6 and 7 - 2 === 2 - 7 and asked to tell them apart. The comparison swapping lessons teach six, and four slots held four of them, so which two went missing was decided by nothing.";
+    function to_code(m) {
+      "this operator's line for this time round";
+      let op = property_get(m, "op");
+      let want_true = property_get(m, "want_true");
+      let code = expression(op, want_true);
+      return code;
+    }
+    let codes = list_map(cycle, to_code);
+    return codes;
   }
   let next_arg = list_iterator_refillable(refill);
   let lesson = app_code_lesson_expression_generic({
