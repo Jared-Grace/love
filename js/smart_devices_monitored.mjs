@@ -1,3 +1,5 @@
+import { smart_device_key_marker } from "./smart_device_key_marker.mjs";
+import { list_filter_text_includes } from "./list_filter_text_includes.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { smart_unit_name } from "./smart_unit_name.mjs";
@@ -15,6 +17,7 @@ export async function smart_devices_monitored() {
   ("Every start the log still holds is read, not just the most recent one, and then what is no longer plugged in is dropped. Reading only the most recent start would be the tidier idea and it is the wrong one: it says nothing about a drive that was there and has gone, and it is exactly as long as whatever the log happens to still hold, so the answer would quietly change with the log's age rather than with the machine.");
   ("The filtering out is what makes the list safe to demand things of. Without it this is a list of drives the daemon has ever watched, and a removable drive that is sitting in a drawer would be held against the machine forever.");
   ("The daemon is asked to hand back only the lines that say it added something, because the whole log runs to thousands of lines about temperatures and almost none of it is about this question.");
+  ("Not every line that comes back names a drive. The system writes a boot separator into the log each time the machine restarts, and that line survives the asking and is not empty, so it reaches the reader that cuts a name out of a line - which has no name to cut and throws. Lines are kept only if they carry the word the daemon puts in front of a drive name, which is the same word that reader looks for and is asked for by name rather than spelled again here.");
   let unit = smart_unit_name();
   let command = text_combine_multiple([
     "journalctl -u ",
@@ -24,7 +27,9 @@ export async function smart_devices_monitored() {
   let text = await command_line_code_ignore_stdout(command);
   let lines = text_split_newline(text);
   let filled = list_filter_text_empty_not_is(lines);
-  let unique = list_map_unique(filled, smart_device_key_from_line);
+  let word = smart_device_key_marker();
+  let named = list_filter_text_includes(filled, word);
+  let unique = list_map_unique(named, smart_device_key_from_line);
   let present = await list_map_async_filter_null_not_is(
     unique,
     smart_device_key_present,
