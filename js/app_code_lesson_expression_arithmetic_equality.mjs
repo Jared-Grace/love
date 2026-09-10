@@ -43,8 +43,8 @@ export function app_code_lesson_expression_arithmetic_equality() {
     return example;
   }
   function refill() {
-    "four examples a screen, true and false alternating so the learner meets both outcomes each time, and no two neighbours sharing an operator pair so the set looks varied (a neighbour is regenerated until its operator key differs)";
-    let makers = [true_case, false_case, true_case, false_case];
+    "two examples a screen, one true and one false, which is the whole of what the lesson has to show: the two sides landing on the same number and the two sides landing on different ones. Four slots said the same two things twice. The two are still made with no operator pair shared, so the pair of lines does not read as one line written out again";
+    let makers = [true_case, false_case];
     let codes = [];
     let previous_key = "";
     let i = 0;
@@ -66,7 +66,7 @@ export function app_code_lesson_expression_arithmetic_equality() {
     above,
     name_id,
     next_arg,
-    example_count: 4,
+    example_count: 2,
     decoys: app_code_comparison_decoys,
     forwards_question_label: app_code_label_code_question(),
     forwards_answer_label: app_code_label_value(),
