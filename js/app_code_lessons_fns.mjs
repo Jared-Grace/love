@@ -1,3 +1,6 @@
+import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
+import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_lesson_expression_three_steps_strong_first.mjs";
+import { app_code_lesson_expression_both_sides_any_comparison } from "./app_code_lesson_expression_both_sides_any_comparison.mjs";
 import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_lesson_symbols_digit_number } from "./app_code_lesson_symbols_digit_number.mjs";
 import { app_code_lesson_symbols_digits } from "./app_code_lesson_symbols_digits.mjs";
@@ -228,10 +231,13 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_comparing_a_comparison,
     app_code_lesson_expression_parentheses_one_side,
     app_code_lesson_expression_choose_order_same_strength,
+    app_code_lesson_expression_three_steps_left_to_right,
     app_code_lesson_expression_choose_order_three,
+    app_code_lesson_expression_three_steps_strong_first,
     app_code_lesson_expression_choose_order_both_sides,
     app_code_lesson_expression_choose_order_both_sides_any_comparison,
     app_code_lesson_expression_arithmetic_equality,
+    app_code_lesson_expression_both_sides_any_comparison,
     app_code_lesson_expression_swapping_add,
     app_code_lesson_expression_swapping_divide,
     app_code_lesson_expression_swapping_order,
