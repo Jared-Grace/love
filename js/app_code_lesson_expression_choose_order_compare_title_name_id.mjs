@@ -6,7 +6,7 @@ export function app_code_lesson_expression_choose_order_compare_title_name_id() 
   arguments_assert(arguments, 0);
   ("the home title: solving a line with a comparison in it one step at a time, an Expressions lesson");
   function paint(parent) {
-    html_cycle_code(parent, ["Solving a comparison step by step"]);
+    html_cycle_code(parent, ["Solve a comparison"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
