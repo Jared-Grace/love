@@ -5,11 +5,11 @@ import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id
 export function app_code_lesson_expression_choose_order_three_title_name_id() {
   arguments_assert(arguments, 0);
   ("the home title: a three step line where the operator that goes first has to be looked for rather than read off the left, an Expressions lesson");
-  ("The title asks which one rather than naming the length, because the length is no longer what changed. The lesson before this one is also three steps long, and every operator on it is the same strength, so the learner starts at the left without looking. Here the one that is ready can be anywhere on the line, so finding it is the work.");
-  ("It asks the question instead of naming the operators, because naming them would be wrong on some of its own lines. The line maker guarantees a * or a / is present, not that a * or a / is what decides - about a line in eleven comes out with every operator the same strength, and those are solved from the left like the lesson before. A title reading * or / first would tell a learner those lines were picked by strength when they were picked by position.");
-  ("The question form is already in the course: the which-part-first lesson is titled as a question with an example beside it. So this is the second of its kind rather than a shape a learner has to take in.");
+  ("The title names the rule rather than the length, because the length is no longer what changed. The lesson before this one is also three steps long, and every operator on it is the same strength, so the learner starts at the left without looking. Here the one that goes first can be anywhere on the line, and the rule that finds it is the work.");
+  ("It names the rule and not the answer, and those come apart on this lesson's own lines. Counted over five thousand of them, four hundred and thirty six - about one in eleven - come out with every operator the same strength, like 8 / 4 * 4 / 4, and those are solved from the left with nothing for the rule to decide. A title reading * or / first would say those lines were picked by strength when they were picked by position; a title reading * / before + - says a thing that is true of every line whether or not it has a + or a - on it to fire against.");
+  ("The operators are spelled apart rather than run together, because that is how the course already writes a pair of them - + - and * / and / % ** all stand as titles of their own further back. Written */ the two would also read as the end of a comment to anyone who has met one, which is a thing to have to unlearn in the one place a learner looks to find the lesson again.");
   function paint(parent) {
-    html_cycle_code(parent, ["Three steps, which is solved first"]);
+    html_cycle_code(parent, ["Solve three steps, * / before + -"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
