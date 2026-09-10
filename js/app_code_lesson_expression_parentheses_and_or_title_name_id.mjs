@@ -7,10 +7,10 @@ import { app_code_category_expressions } from "./app_code_category_expressions.m
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 export function app_code_lesson_expression_parentheses_and_or_title_name_id() {
   arguments_assert(arguments, 0);
-  ("the home title: the value of ( && ) || , an Expressions lesson");
+  ("the home title: ( && ) || , an Expressions lesson");
   ("The title paints the shape of the line rather than the pair of marks on its own, because the pair on its own is what the three lessons around this one are about as well. Four titles naming only the marks would be four ways of writing one line, and a learner picking up where they left off would have nothing on the home list to pick from.");
   ("It carries the same shape as the pressing lesson it is the twin of, because the two draw the very same lines - the shape is what says which pair of lessons this is, and the words are what say which of the pair.");
-  ("The words are word for word the ones the other pair's whole-line lesson wears, and only the shape differs. That is the division the home list is read by: the words say what is being asked, the marks say what it is being asked about.");
+  ("It wears no words either, exactly as the other pair's whole-line lesson does, and only the shape differs. That is the division the home list is read by: Solve or no Solve says what is being asked, the marks say what it is being asked about.");
   function paint(parent) {
     let and_symbol = js_operator_and_symbol();
     let or_symbol = js_operator_or_symbol();
