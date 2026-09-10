@@ -38,10 +38,10 @@ export function app_code_lesson_expression_not_twice() {
     return list;
   }
   let next_arg = list_iterator_refillable(refill);
+  let name_id = app_code_lesson_expression_not_twice_title_name_id();
   let lesson = app_code_lesson_expression_generic({
     above,
-    name_id_rights: ["not twice"],
-    category: app_code_category_operators(),
+    name_id,
     next_arg,
     example_count: 4,
     forwards_answer_count_override: 2,
