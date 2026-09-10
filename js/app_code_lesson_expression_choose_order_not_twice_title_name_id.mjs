@@ -10,9 +10,8 @@ export function app_code_lesson_expression_choose_order_not_twice_title_name_id(
   "Solving INSIDE it rather than solving it, because the learner has already met what a ! comes to. What is new is that one of the two has to be worked out before the other can go.";
   arguments_assert(arguments, 0);
   let symbol = js_operator_bang_symbol();
-  let both = text_combine(symbol, symbol);
   function paint(parent) {
-    html_cycle_code(parent, ["Solve inside ", both]);
+    html_cycle_code(parent, ["Solve ", symbol, " around another ", symbol]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

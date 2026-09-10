@@ -16,16 +16,13 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_title
   ("Moving is still the word, because that is what the learner does and the shape only shows one of the two ends. The pair of marks is painted a second time on its own so that the thing being moved and the line it moves along are both on the row.");
   ("The two parentheses are painted together as one piece because that is what a learner is looking for on the home list - a pair, not an opening mark on its own.");
   function paint(parent) {
-    let left_parenthesis = js_code_parenthesis_left();
-    let right_parenthesis = js_code_parenthesis_right();
-    let pair = text_combine(left_parenthesis, right_parenthesis);
     let and_symbol = js_operator_and_symbol();
     let or_symbol = js_operator_or_symbol();
     let shape = app_code_operator_shape_parenthesis_first(
       and_symbol,
       or_symbol,
     );
-    html_cycle_code(parent, ["Moving ", pair, " in ", shape]);
+    html_cycle_code(parent, ["Solve ", shape]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);

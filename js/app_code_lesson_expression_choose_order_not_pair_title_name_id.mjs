@@ -13,10 +13,16 @@ export function app_code_lesson_expression_choose_order_not_pair_title_name_id()
   ("The three are painted as one piece because that is the shape a learner is looking for on the home list - a ! with a parenthesised thing after it, which is the whole of what this lesson's lines look like. The two lessons it stands under paint one half of it each, so the three sit together and the difference between them reads off the marks.");
   function paint(parent) {
     let symbol = js_operator_bang_symbol();
-    let left_parenthesis = js_code_parenthesis_left();
-    let right_parenthesis = js_code_parenthesis_right();
-    let piece = text_combine_multiple([symbol, left_parenthesis, right_parenthesis]);
-    html_cycle_code(parent, ["Solve inside ", piece]);
+    let and_symbol = js_operator_and_symbol();
+    let or_symbol = js_operator_or_symbol();
+    html_cycle_code(parent, [
+      "Solve ",
+      symbol,
+      " around ",
+      and_symbol,
+      " or ",
+      or_symbol,
+    ]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
