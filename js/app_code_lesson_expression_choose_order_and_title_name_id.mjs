@@ -7,7 +7,7 @@ export function app_code_lesson_expression_choose_order_and_title_name_id() {
   ("the home title: solving both sides of &&, an Expressions lesson");
   ("The title paints the symbol and spells the word, the same way every other && lesson does: the lesson is about the symbol, and the word is only what the address is written with, where a symbol cannot go.");
   function paint(parent) {
-    html_cycle_code(parent, ["Solving both sides of ", "&&"]);
+    html_cycle_code(parent, ["Solve both sides of ", "&&"]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
