@@ -18,7 +18,7 @@ export function app_code_lesson_expression_parentheses_and_or_title_name_id() {
       and_symbol,
       or_symbol,
     );
-    html_cycle_code(parent, ["The value of ", shape]);
+    html_cycle_code(parent, ["", shape]);
   }
   let left = app_code_category_expressions();
   let built = app_code_lesson_name_id_category_then(left, paint);
