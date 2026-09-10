@@ -22,7 +22,7 @@ export async function lyric_video_bible_write(
   "A FIRST RUN DRAFTS THE TIMES AND A SECOND RUN KEEPS THEM. Where each line begins is heard, not derived, so a first run can only spread the lines evenly over the song - which is a video worth watching once, to see the words are right, and never worth publishing. Somebody then corrects the numbers in the document this leaves behind, and running this again renders those instead of drafting over them. Redrafting a corrected document would throw away the only part of the work a command cannot do.";
   "THE VIDEO IS WRITTEN BESIDE THE SONG, WHICH IS WHERE A PERSON IS ALREADY LOOKING. Somebody who has just recorded or downloaded a song has that folder open; a video that appears somewhere inside the repo is one they have to be told how to find, and being told is the cost this exists to remove.";
   "★ WHAT THE VIDEO IS CALLED IS ASKED FOR RATHER THAN SPELLED HERE, BECAUSE THE WALK OVER THE WHOLE FOLDER HAS TO ARRIVE AT THE SAME FILE. That walk skips a psalm whose video is already there and current, and it can only find the video by its name - so a second spelling of the name here would agree until either was touched and then quietly give every psalm two videos, one made by each, with nothing red anywhere.";
-  "★ IT ASKS FOR THE FIRST SINGING, BECAUSE IT IS HANDED A CHAPTER AND NOT A RECORDING. A chapter has one plain document address, so this is the whole-chapter path and there is nowhere here for a second arrangement to live; the walk over the download folder is what reads a song's own file name and knows which singing it has. Saying so outright is better than leaving the mark off and letting somebody read the unmarked name as covering every arrangement.";
+  "★ IT ASKS UNDER THE PLAIN NAME, BECAUSE IT IS HANDED A CHAPTER AND NOT A RECORDING. A chapter has one plain document address, so this is the whole-chapter path and there is nowhere here for a second arrangement to live; what tells two singings of one passage apart is a fact about the whole set of them, and only the walk over the download folder has that set. Saying so outright is better than leaving the mark off and letting somebody read the unmarked name as covering every arrangement.";
   "The subtitle file is a workings-out and is left out of the repo. It holds nothing a person authored - every line of it is derived from the document and can be written again in a moment - so keeping it would be keeping a copy that can only go stale.";
   let path_document = lyric_video_bible_document_path(
     version,
@@ -43,11 +43,11 @@ export async function lyric_video_bible_write(
   let stem = version + "_" + book_code + "_" + chapter_number;
   let path_subtitles = folder_gitignore_join(stem + ".ass");
   let folder_audio = await path_dirname(path_audio);
-  let take_first = 0;
+  let mark_plain = "";
   let file_name = lyric_video_document_video_name(
     document,
     version,
-    take_first,
+    mark_plain,
   );
   let path_output = path_join([folder_audio, file_name]);
   await lyric_video_document_write(

@@ -9,7 +9,7 @@ export async function lyric_video_psalm_part_documents_times_write(version) {
   "$plain version";
   "Listens to every singing of a part of a psalm this machine holds, and writes each one's times into its own timing document.";
   "★ IT FINDS ITS OWN SET RATHER THAN BEING HANDED ONE, WHICH IS WHAT KEEPS IT HONEST ABOUT WHAT IS ACTUALLY THERE. A list of stanzas typed in from outside goes stale the moment a recording is added or renamed, and it goes stale silently - the run finishes, says it did everything it was asked, and the passage nobody listed is still holding the flat spread it was drafted with. Reading the folder is also the only reading that can say a part has no document yet, because that answer is about the pair and not about either file.";
-  "★ EVERY SINGING IS HEARD, NOT ONE PER PASSAGE, BECAUSE EACH ARRANGEMENT PUTS THE LINES SOMEWHERE ELSE. The stanza Qoph of Psalm 119 has five recordings, and hearing only the earliest left the other four holding the flat spread they were drafted with. Each is asked for by its chapter, its two ends and its take together, which is what names one recording.";
+  "★ EVERY SINGING IS HEARD, NOT ONE PER PASSAGE, BECAUSE EACH ARRANGEMENT PUTS THE LINES SOMEWHERE ELSE. The stanza Qoph of Psalm 119 has five recordings, and hearing only the earliest left the other four holding the flat spread they were drafted with. Each is asked for by its chapter, its two ends and its mark together, which is what names one recording - the mark rather than the number in the file name, because that numbering was the downloader's and it counted the compressed copies and the lossless ones as two separate runs.";
   "★ EACH SINGING IS COMMITTED AS IT LANDS, UNDER ITS OWN NAME AND ITS OWN FIVE WORDS. Nineteen documents rewritten and committed once at the end is a single entry that no one command can be named after, and with several hands editing this folder at once it is also nineteen files a peer's sweep can take first and file under a bare word. Committing each step shortens that window to one song, and leaves a log in which every entry is a command somebody can run again by itself.";
   "★ WHAT IS ALREADY NOTED IS SWEPT FIRST, OR THE FIRST STANZA'S COMMIT CLAIMS IT. The note of changed files is one running list with no divider in it, so anything left uncommitted when this starts would be gathered into the first part's commit and filed under a command that never touched it.";
   "It refuses nothing and skips nothing on its own account: a part somebody has already timed by ear is protected one level down, where the protection belongs, and comes back here saying so rather than being quietly left out of the count.";
@@ -21,7 +21,7 @@ export async function lyric_video_psalm_part_documents_times_write(version) {
   for (let song of songs) {
     let one = await function_call_commit(
       lyric_video_psalm_part_document_times_write,
-      [version, song.chapter, song.verse_first, song.verse_last, song.take],
+      [version, song.chapter, song.verse_first, song.verse_last, song.mark],
     );
     list_add(written, one);
   }
