@@ -19,7 +19,8 @@ import { property_get } from "./property_get.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function app_code_lesson_expression_parentheses_both_sides() {
-  "both sides a comparison, each wrapped: (3 === 5) === (5 === 3). The previous lesson put ( and ) around one comparison, where they changed nothing; here they change the answer, which is what earns them. Written flat, 3 === 5 === 5 === 3 is worked out left to right and is a different line with a different value, so the parentheses are not decoration - they are what makes the line say what it means.";
+  "both sides a comparison, each wrapped: (3 === 5) === (5 === 3). The lesson that first showed ( and ) put them around one comparison, where they changed nothing; here they change the answer, which is what earns them. Written flat, 3 === 5 === 5 === 3 is worked out left to right and is a different line with a different value, so the parentheses are not decoration - they are what makes the line say what it means.";
+  "It used to call that the previous lesson. It is twenty-two screens back now, and the screen actually before this one is the pressing twin of this very lesson. Named by what it does rather than by a place. Corrected 2026-09-10.";
   "This is the shape the swapping lesson needs, and it is taught here on its own so that swapping teaches only swapping.";
   let name_id =
     app_code_lesson_expression_parentheses_both_sides_title_name_id();
