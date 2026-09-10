@@ -2676,6 +2676,7 @@ export function permission_grant_names() {
   let spelled2533 = fn_name("bible_interlinear_verse_lines");
   let spelled2534 = fn_name("ebible_verses_include");
   let spelled2535 = fn_name("bible_usfm_version_chapter_verses_text");
+  let spelled2536 = fn_name("ebible_book_codes_new_testament_first");
   let names = [
     spelled,
     spelled2,
@@ -5212,6 +5213,7 @@ export function permission_grant_names() {
     spelled2533,
     spelled2534,
     spelled2535,
+    spelled2536,
   ];
   return names;
 }
