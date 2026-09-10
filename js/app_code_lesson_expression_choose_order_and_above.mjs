@@ -11,11 +11,12 @@ export function app_code_lesson_expression_choose_order_and_above(root) {
   ("The same run as the lessons before it, told with the two sides named as comparisons rather than as arithmetic. That is the point being made: a learner who has solved both sides of a comparison meets the same doing one level up, and a screen laid out a new way would hide the sameness that is the whole lesson.");
   let want_true = true;
   let tree = app_code_lesson_expression_choose_order_and_expression(want_true);
-  app_code_lesson_expression_choose_order_both_sides_above_generic(
+  let line = app_code_lesson_expression_choose_order_both_sides_above_generic(
     root,
     tree,
     app_code_lesson_expression_comparing_a_comparison_recall,
     app_code_lesson_expression_sides_comparison_say,
     app_code_lesson_expression_choose_order_and_intro,
   );
+  return line;
 }
