@@ -1,37 +1,39 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
-import { songs_folder_passage_takes } from "./songs_folder_passage_takes.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
+import { songs_folder_recordings } from "./songs_folder_recordings.mjs";
 import { psalms_song_file_chapter_take } from "./psalms_song_file_chapter_take.mjs";
 import { list_map } from "./list_map.mjs";
 export async function psalms_songs_folder_chapters(folder_audio) {
   arguments_assert(arguments, 1);
   ("$plain folder_audio");
-  ("Every chapter of the Psalms a folder of downloaded songs holds a whole singing of, in the order of the psalter, each with the recording to work from and how many recordings of it there are.");
-  ("★ ONE RECORDING IS NAMED FOR EACH CHAPTER BECAUSE A CHAPTER HAS ONE TIMING DOCUMENT, AND WHICH ONE THAT IS IS NO LONGER DECIDED HERE. Naming the earliest take, and counting how many there are, is the same rule for a whole chapter and for a stanza, and it now lives once in the walk this hands its reading to. It used to live here as well, in a loop spelled out a second time beside the part finder's, where the two could have come to disagree about which recording a passage means without anything going red.");
-  ("What is left here is the two things that are genuinely about chapters: that a chapter is said by a number alone, so a number is what a passage is keyed by; and that the order wanted is the psalter's, which for whole chapters is just the chapters counting up.");
+  ("Every singing of a whole chapter of the Psalms a folder of downloaded songs holds, in the order of the psalter, each with the recording it is and which take of that chapter it is.");
+  ("★ EVERY RECORDING IS A ROW, BECAUSE TWO SINGINGS OF A PSALM ARE TWO SONGS. This used to answer with one recording per chapter and a count of how many there were, which meant the count was the only trace of the others and nothing downstream could reach them: Psalm 110 is sung five times in different arrangements, and four of those had no document, no video and no name to be given one under. A row each is what lets each arrangement be timed and shown on its own terms.");
+  ("What is left here is the two things that are genuinely about chapters: that a chapter is said by a number alone, and that the order wanted is the psalter's, which for whole chapters is just the chapters counting up. Within one chapter the takes follow in the order the file names number them, so the earliest singing is still the first row of its chapter.");
   ("The folder is somebody's download folder and holds far more than psalms, so what is not a whole chapter is passed over rather than reported as a fault. A song of a stanza and a song of another book are both perfectly good files that this question is simply not about.");
-  function chapter_keyed(read) {
-    let chapter = read.chapter;
-    return chapter;
-  }
   function chapter_before(one, other) {
-    let difference = subtract(one.read.chapter, other.read.chapter);
-    return difference;
+    let chapters = subtract(one.read.chapter, other.read.chapter);
+    let same_chapter = equal(chapters, 0);
+    if (not(same_chapter)) {
+      return chapters;
+    }
+    let takes = subtract(one.read.take, other.read.take);
+    return takes;
   }
-  function song_of(passage) {
+  function song_of(recording) {
     let song = {
-      chapter: passage.read.chapter,
-      path_audio: passage.path_audio,
-      takes: passage.takes,
+      chapter: recording.read.chapter,
+      take: recording.read.take,
+      path_audio: recording.path_audio,
     };
     return song;
   }
-  let passages = await songs_folder_passage_takes(
+  let recordings = await songs_folder_recordings(
     folder_audio,
     psalms_song_file_chapter_take,
-    chapter_keyed,
   );
-  passages.sort(chapter_before);
-  let songs = list_map(passages, song_of);
+  recordings.sort(chapter_before);
+  let songs = list_map(recordings, song_of);
   return songs;
 }
