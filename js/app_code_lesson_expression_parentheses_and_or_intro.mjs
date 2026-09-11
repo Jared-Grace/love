@@ -5,8 +5,11 @@ import { app_code_lesson_expression_choose_order_parentheses_and_or_other_pair }
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-export function app_code_lesson_expression_parentheses_and_or_intro(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_parentheses_and_or_intro(
+  root,
+  context,
+) {
+  arguments_assert(arguments, 2);
   ("the three cards above the parentheses around either pair lesson: the rule in one sentence, then the same three words carried all the way to their value with the marks round the first pair and then round the second");
   ("Only the rule is said again, and it is said the way the pressing lesson said it, with nothing added about the marks being movable. That they may go round either pair was the news there; here it is something the learner has already pressed their way through.");
   ("The three words are the same on both cards and only the marks move, which is the whole claim of the lesson. Different words on the second card would leave a reader finding which of two things had changed before they could see that only one had.");
