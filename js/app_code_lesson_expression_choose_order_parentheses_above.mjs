@@ -9,8 +9,9 @@ import { app_code_lesson_expression_choose_order_parentheses_recall } from "./ap
 import { app_code_lesson_expression_choose_order_parentheses_intro } from "./app_code_lesson_expression_choose_order_parentheses_intro.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_above(
   root,
+  context,
 ) {
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what stands above the card on the parentheses lesson: the two rules being brought together, then the same line walked down twice with the parentheses at one end and then the other, then the sentences saying what is new");
   ("Each line run through is one the parentheses change the answer of. Read the way the parentheses ask it comes to false; read as though they were not there it comes to true. A run on a line where both readings agree would show the parentheses being obeyed and never show what obeying them is worth.");
   ("The parts are hung together with parentheses round the or, which is what this lesson is about and the only thing it differs by. The and-before-or lesson next door hands in the hanging the operators would have chosen on their own, and everything else on the screen is the same, so everything else is said once, next door.");

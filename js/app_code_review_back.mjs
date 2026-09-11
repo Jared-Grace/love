@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { app_code_lesson_incomplete_next } from "./app_code_lesson_incomplete_next.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
+import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
 import { app_code_review_persist } from "./app_code_review_persist.mjs";
 import { app_shared_button_back_text } from "./app_shared_button_back_text.mjs";
 export function app_code_review_back(r2, context) {
@@ -38,7 +38,7 @@ export function app_code_review_back(r2, context) {
   ("so the button is there whenever there is anywhere at all to go: an unfinished lesson anywhere in the list, or the lesson straight after this review. That is wider than the lesson after this review alone - the last review in the course used to end in nothing, even with blue rows still above it");
   has_next = null_not_is(next_lesson);
   async function go_next() {
-    await app_code_review_go_to_lesson(next_lesson, context);
+    await app_code_lesson_go(next_lesson, context);
   }
   app_code_review_persist(context, key, passed, queue);
   ("every one of the four ways off this screen stands off from the one above it by the app's own gap, the same as the buttons at the foot of a lesson - four buttons touching read as one block of text to get past rather than as four things to choose between");

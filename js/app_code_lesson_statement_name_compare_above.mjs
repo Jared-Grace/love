@@ -13,9 +13,9 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-export function app_code_lesson_statement_name_compare_above(root) {
+export function app_code_lesson_statement_name_compare_above(root, context) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the comparison a learner already knows written with two numbers, the same comparison written with two names instead, and then the same two names asked the other way round");
   ("The first box uses this lesson's own two numbers, so both of the first two boxes come out true. That is what lets a learner check the new form against the old one rather than be told it works - the answer they already know is sitting one box above the answer they are being shown.");
   ("The third box exists because only two answers are possible here. A learner who left this screen having seen true come out twice would have been given no reason to believe the line can say anything else, and the questions would then be answerable by habit.");

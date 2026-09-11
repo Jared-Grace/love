@@ -10,8 +10,8 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_cups_row_holding } from "./app_code_lesson_cups_row_holding.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { app_code_lesson_statement_name_copy_code_box } from "./app_code_lesson_statement_name_copy_code_box.mjs";
-export function app_code_lesson_statement_name_copy_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_copy_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the cup boxes read before the first question: two cups got and then filled, a third cup got and then filled from one of them, and nothing taken out of anything");
   ("Every cup is drawn empty before it is drawn full, and the two are said in two sentences. Getting a cup and putting something in it are two things a person does, and the whole lesson is about the second one happening to a cup that already exists - so a row of full cups appearing at the word suppose would be the two steps shown as one, and the one being taught is the one that got hidden.");
   ("Nothing that has already been drawn moves. Each row is the row above it with one cup changed, standing in the same place, so what a learner has to see is the only thing that is different - and a cup that shifted along would be a second difference with nothing to say.");

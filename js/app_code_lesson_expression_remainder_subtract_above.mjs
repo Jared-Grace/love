@@ -6,8 +6,11 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { js_operator_percent_sign } from "./js_operator_percent_sign.mjs";
-export function app_code_lesson_expression_remainder_subtract_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_remainder_subtract_above(
+  root,
+  context,
+) {
+  arguments_assert(arguments, 2);
   ("what a learner reads before the quiz on this lesson: subtracting the same number again and again, one step to a line, until the answer would go below zero - and then the name that act is given");
   ("Lifted out of the lesson because the lesson itself is a list of what the quiz asks and this is a screen laid out once; the two are read on different occasions and by different people, and holding them in one body meant every reader of either paid for both.");
   ("The operator symbol is asked for here rather than handed in, so the screen is answerable by its own name with nothing to set up first.");

@@ -4,8 +4,11 @@ import { app_code_lesson_expression_choose_order_compare_line_apart } from "./ap
 import { app_code_lesson_expression_choose_order_compare_run } from "./app_code_lesson_expression_choose_order_compare_run.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_expression_choose_order_compare_intro } from "./app_code_lesson_expression_choose_order_compare_intro.mjs";
-export function app_code_lesson_expression_choose_order_compare_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_choose_order_compare_above(
+  root,
+  context,
+) {
+  arguments_assert(arguments, 2);
   ("what stands above the card: the word comparison put back in front of the learner, then one line of each shape this lesson asks about worked all the way through, then the one sentence saying what is different here");
   ("The same recall, run, hinge shape as the press-at-a-time arithmetic screens - because that shape is the one every screen of this kind has worn since the first line was taken apart. A run laid out a second way would be read as a second thing to learn, when the only new thing on this screen is what the operators ARE.");
   ("It used to say the lesson before it, and add that a learner arriving here had just read that shape on the screen behind them. They had not: forty lessons of arithmetic, remainders and Math functions were put in between, and the screen behind this one hands a whole line over at once. Named by what those screens do rather than by a place. Corrected 2026-09-10.");

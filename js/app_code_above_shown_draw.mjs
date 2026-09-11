@@ -8,8 +8,8 @@ import { app_code_above_shown_toggle } from "./app_code_above_shown_toggle.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_button_wide } from "./app_shared_button_wide.mjs";
-export function app_code_above_shown_draw(root, above) {
-  arguments_assert(arguments, 2);
+export function app_code_above_shown_draw(root, above, context) {
+  arguments_assert(arguments, 3);
   ("Draw a lesson's telling at the top of its front page if this learner has asked for one, with the button that asks for it standing over the place it appears.");
   ("THE EXERCISES ARE THE LESSON AND THE TELLING IS THE BACKUP. A learner who works the examples finds the pattern in them, and that is what the lesson is for; a learner who would rather be told can ask, and is not asked again next lesson because the answer is remembered. So the telling used to be printed for everybody and is now printed for whoever wants it.");
   ("THE BUTTON SITS ABOVE WHAT IT REVEALS, so pressing it moves nothing the learner was about to press. The telling grows underneath the button and pushes the examples down; the button itself stays exactly where the finger just left it.");

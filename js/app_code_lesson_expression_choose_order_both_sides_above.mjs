@@ -3,8 +3,11 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_expression_same_symbol } from "./app_code_lesson_expression_choose_order_both_sides_expression_same_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { noop } from "./noop.mjs";
-export function app_code_lesson_expression_choose_order_both_sides_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_choose_order_both_sides_above(
+  root,
+  context,
+) {
+  arguments_assert(arguments, 2);
   ("what stands above the card on the lesson whose lines all have === in the middle: one such line worked all the way through, and nothing after it");
   ("The run is done on a TRUE line, because a true line is the one with something to say: two sides that look nothing alike landing on the same number. A false line would be worked through just as correctly and would show the learner nothing they could not have guessed from the writing.");
   ("Its line has the SAME arithmetic operator on both sides, so the run can count that operator out loud - there are two of these, which one first - which is the question the card below is about to ask. A line with two different operators can only be talked about by naming the kind they belong to, and a kind is a word the learner has to be carrying already.");

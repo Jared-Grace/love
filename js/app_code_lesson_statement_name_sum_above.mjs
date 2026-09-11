@@ -12,9 +12,9 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
-export function app_code_lesson_statement_name_sum_above(root) {
+export function app_code_lesson_statement_name_sum_above(root, context) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: two numbers added by writing the numbers themselves, and then the same two numbers added by writing the names they were given");
   ("Two things a learner already has, put next to each other, and nothing else. A sum inside console.log was the arithmetic lessons; a name holding a value was the five screens just before this one. Neither is taught again here - what is new is only that the second may stand inside the first.");
   ("The two boxes add the same two numbers and write out the same answer. That is what the second box is being read against: a learner does not have to be told the names are the same sum, because the sum they already know is standing above it with the same total under it.");

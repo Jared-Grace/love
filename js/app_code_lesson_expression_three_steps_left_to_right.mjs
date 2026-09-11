@@ -35,7 +35,7 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_code_container_light_blue_text(root, text);
-    app_code_lesson_expression_choose_order_same_strength_above(root);
+    app_code_lesson_expression_choose_order_same_strength_above(root, context);
   }
   function refill() {
     "two lines a screen, each drawn on its own so a screen can hold an adding line and a scaling one";

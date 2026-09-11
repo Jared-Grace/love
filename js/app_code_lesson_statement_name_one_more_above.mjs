@@ -7,8 +7,8 @@ import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-export function app_code_lesson_statement_name_one_more_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_one_more_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the line the screen before this one ended on, and then the same line with a written 1 where the second name was");
   ("The screen before this one put a name on both sides of the equals. Everything about how that line is read - the right side worked out first, the name filled second - was settled there, so this screen changes one thing on the right of the plus and nothing else.");
   ("The line said twice used to close this screen and is now a screen of its own, the next one. It was shown here rather than asked about, and a learner who read the second copy as doing nothing was never given a question that would tell them otherwise - which is the whole of what counting is, so it needed asking rather than showing.");

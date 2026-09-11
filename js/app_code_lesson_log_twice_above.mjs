@@ -5,8 +5,8 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
-export function app_code_lesson_log_twice_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_log_twice_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the one line a learner already knows, that line with a second one under it, and then the same two lines the other way round");
   ("The second box is the first box with a line added and nothing else changed, so there is only one thing between them that could account for the extra answer. The learner reads the first answer again in the second card, which says the line they already knew went on doing exactly what it did.");
   ("The third box is the whole point of the second. Two lines that write out could have meant the two answers appear together in no particular order, and the only way to rule that out is to show the same two lines swapped and the answers swapped with them. Said in a sentence it would have to be believed; shown, it is read off the card.");

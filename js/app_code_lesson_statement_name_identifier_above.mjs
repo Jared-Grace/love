@@ -8,8 +8,8 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
 import { app_code_value_line } from "./app_code_value_line.mjs";
 import { app_code_lesson_cup_code_box } from "./app_code_lesson_cup_code_box.mjs";
-export function app_code_lesson_statement_name_identifier_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_identifier_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the cup as it was left, the same cup called something else, the one new fact, and the same thing written as code");
   ("The cup is drawn again rather than described, because what is being changed is the writing on its side and nothing else. Two pictures of one cup with two different words on it say that in a way no sentence about names says as quickly.");
   ("What is in the cup does not change from one picture to the next, and is said out loud not to have changed. That is the whole lesson: the name is a label somebody chose, and the value is not affected by which label was chosen.");
