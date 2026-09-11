@@ -11,7 +11,7 @@ import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_operator_triple_equal_symbol } from "./js_operator_triple_equal_symbol.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_code_lesson_expression_not_comparison_intro(root) {
+export function app_code_lesson_expression_not_comparison_intro(root, context) {
   "the two cards above the ! around a comparison lesson: how far a ! applies, then the same thing shown on one instance, then the target line built a piece at a time - parentheses around the comparison, then the ! in front of them, then the finished line - and finally one worked example carried all the way to its value.";
   "Built rather than presented, so the finished shape arrives as the last step of something the reader watched happen rather than as a new thing to take on trust.";
   "It says what the ! would apply to without the parentheses and stops there. It does not say what !3 works out to, because that answer needs a number counted as true or false, which no lesson has taught and this one is not the place to teach. Naming what the ! applies to is enough to motivate the parentheses, and it is true.";
