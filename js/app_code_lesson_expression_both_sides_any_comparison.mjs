@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
 import { app_code_lesson_same_message } from "./app_code_lesson_same_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_expression } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_expression.mjs";
@@ -31,6 +32,8 @@ export function app_code_lesson_expression_both_sides_any_comparison() {
   function above(root) {
     "the card saying this telling is one already read, naming the lesson it came from, and then that lesson's telling itself";
     let text = app_code_lesson_same_message(
+      app_code_lesson_expression_both_sides_any_comparison,
+      app_code_lesson_expression_choose_order_both_sides_any_comparison,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_code_container_light_blue_text(root, text);
