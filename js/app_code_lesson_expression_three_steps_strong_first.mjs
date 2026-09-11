@@ -1,10 +1,9 @@
+import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
 import { app_code_lesson_expression_choose_order_three } from "./app_code_lesson_expression_choose_order_three.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_three_operator_count } from "./app_code_lesson_expression_choose_order_three_operator_count.mjs";
 import { app_code_expression_flat_random_strong_first } from "./app_code_expression_flat_random_strong_first.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_lesson_same_message } from "./app_code_lesson_same_message.mjs";
-import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
 import { app_code_lesson_expression_choose_order_three_above } from "./app_code_lesson_expression_choose_order_three_above.mjs";
 import { app_code_expression_flat_value_left_to_right } from "./app_code_expression_flat_value_left_to_right.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
@@ -25,14 +24,15 @@ export function app_code_lesson_expression_three_steps_strong_first() {
     let code = app_code_expression_code(tree);
     return code;
   }
-  function above(root) {
+  function above(root, context) {
     "the card saying this telling is the one already read, and then the pressing lesson's telling itself";
-    let text = app_code_lesson_same_message(
+    app_code_lesson_same_draw(
+      root,
+      context,
       app_code_lesson_expression_three_steps_strong_first,
       app_code_lesson_expression_choose_order_three,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
-    app_code_container_light_blue_text(root, text);
     app_code_lesson_expression_choose_order_three_above(root, context);
   }
   function refill() {

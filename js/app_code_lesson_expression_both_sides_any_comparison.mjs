@@ -1,9 +1,8 @@
+import { app_code_lesson_same_draw } from "./app_code_lesson_same_draw.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison.mjs";
-import { app_code_lesson_same_message } from "./app_code_lesson_same_message.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_expression } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_expression.mjs";
 import { app_code_expression_code } from "./app_code_expression_code.mjs";
-import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
 import { app_code_lesson_expression_choose_order_both_sides_any_comparison_above } from "./app_code_lesson_expression_choose_order_both_sides_any_comparison_above.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_both_sides_any_comparison_title_name_id } from "./app_code_lesson_expression_both_sides_any_comparison_title_name_id.mjs";
@@ -29,14 +28,15 @@ export function app_code_lesson_expression_both_sides_any_comparison() {
     let code = app_code_expression_code(tree);
     return code;
   }
-  function above(root) {
+  function above(root, context) {
     "the card saying this telling is one already read, naming the lesson it came from, and then that lesson's telling itself";
-    let text = app_code_lesson_same_message(
+    app_code_lesson_same_draw(
+      root,
+      context,
       app_code_lesson_expression_both_sides_any_comparison,
       app_code_lesson_expression_choose_order_both_sides_any_comparison,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
-    app_code_container_light_blue_text(root, text);
     app_code_lesson_expression_choose_order_both_sides_any_comparison_above(
       root,
       context,
