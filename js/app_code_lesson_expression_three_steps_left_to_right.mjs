@@ -1,3 +1,4 @@
+import { app_code_lesson_expression_choose_order_same_strength } from "./app_code_lesson_expression_choose_order_same_strength.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_expression_choose_order_same_strength_operator_count } from "./app_code_lesson_expression_choose_order_same_strength_operator_count.mjs";
 import { app_code_expression_flat_random_same_strength } from "./app_code_expression_flat_random_same_strength.mjs";
@@ -29,6 +30,8 @@ export function app_code_lesson_expression_three_steps_left_to_right() {
   function above(root) {
     "the card saying this telling is the one already read, and then the pressing lesson's telling itself";
     let text = app_code_lesson_same_message(
+      app_code_lesson_expression_three_steps_left_to_right,
+      app_code_lesson_expression_choose_order_same_strength,
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_code_container_light_blue_text(root, text);

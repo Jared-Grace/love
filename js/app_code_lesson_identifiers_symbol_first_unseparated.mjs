@@ -1,3 +1,4 @@
+import { app_code_lesson_identifiers_symbol_first } from "./app_code_lesson_identifiers_symbol_first.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
 import { html_display_inline_block } from "./html_display_inline_block.mjs";
@@ -29,7 +30,11 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     html_text_set_code_dark,
   );
   function above(root) {
-    let text = app_code_lesson_same_message("the symbols are not separated");
+    let text = app_code_lesson_same_message(
+      app_code_lesson_identifiers_symbol_first_unseparated,
+      app_code_lesson_identifiers_symbol_first,
+      "the symbols are not separated",
+    );
     app_code_container_light_blue_text(root, text);
     let c = app_code_container_light_blue(root);
     let batch = property_get(r, "batch");
@@ -37,12 +42,12 @@ export function app_code_lesson_identifiers_symbol_first_unseparated() {
     let question = list_first_property(b, "question");
     let split = text_split_empty(question);
     html_div_text(c, "For example, instead of: ");
-    let div3 = html_div(c);
-    let before = html_span_code_dark(div3);
+    let div = html_div(c);
+    let before = html_span_code_dark(div);
     html_display_inline_block(before);
     let lambda$item2 = app_code_symbol_separated_curried(before);
     each(split, lambda$item2);
-    html_span_text(div3, " , ");
+    html_span_text(div, " , ");
     emoji_arrow_right();
     text_pad_space("➡");
     html_div_text(c, "You will now see: ");

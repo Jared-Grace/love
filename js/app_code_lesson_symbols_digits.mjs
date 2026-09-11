@@ -1,14 +1,16 @@
-import { app_code_lesson_same_as_message } from "./app_code_lesson_same_as_message.mjs";
+import { app_code_lesson_same_message } from "./app_code_lesson_same_message.mjs";
+import { app_code_lesson_symbols_digits_numbered } from "./app_code_lesson_symbols_digits_numbered.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { app_code_container_light_blue_text } from "./app_code_container_light_blue_text.mjs";
 import { app_code_lesson_symbols_batch_digits } from "./app_code_lesson_symbols_batch_digits.mjs";
 import { app_code_lesson_symbols_counting } from "./app_code_lesson_symbols_counting.mjs";
 import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 export function app_code_lesson_symbols_digits() {
-  "It used to say the previous lesson. The lesson it repeats is the first one of the course, and a lesson about the digits inside a number was put between the two, so the screen a learner had just left was not the one being pointed at. Named by what that lesson does rather than by a place. Corrected 2026-09-10.";
+  "It used to say the previous lesson. The lesson it repeats is the first one of the course, and a lesson about the digits inside a number was put between the two, so the screen a learner had just left was not the one being pointed at. It is the one screen of the five where the words came out wrong. Repaired by naming that lesson on 2026-09-10, and the naming taken back out on 2026-09-11 - the lesson is handed over as itself now and the words are worked out from where the two of them sit, so this cannot come apart again.";
   function lambda(root) {
-    let text = app_code_lesson_same_as_message(
-      "the digits lesson that numbers each digit",
+    let text = app_code_lesson_same_message(
+      app_code_lesson_symbols_digits,
+      app_code_lesson_symbols_digits_numbered,
       "there are not numbers underneath",
     );
     app_code_container_light_blue_text(root, text);
