@@ -1,3 +1,4 @@
+import { text_apostrophe_straightened } from "./text_apostrophe_straightened.mjs";
 import { text_digit_group_comma_removed } from "./text_digit_group_comma_removed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { regex_punctuation_dash_apostrophe_kept } from "./regex_punctuation_dash_apostrophe_kept.mjs";
@@ -16,7 +17,7 @@ export function text_punctuation_dash_apostrophe_kept_split(t) {
     return stripped;
   }
   let joined = text_digit_group_comma_removed(t);
-  let straight = joined.replace(/[‘’]/g, "'");
+  let straight = text_apostrophe_straightened(joined);
   let r = regex_punctuation_dash_apostrophe_kept();
   let parts = straight.split(r);
   let trimmed = list_map(parts, edge_trim);
