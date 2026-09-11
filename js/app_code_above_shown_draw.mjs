@@ -24,7 +24,7 @@ export function app_code_above_shown_draw(root, above, context) {
   let shown = app_code_above_shown_get();
   let line = null;
   if (shown) {
-    let drawn = above(slot);
+    let drawn = above(slot, context);
     if (drawn) {
       line = drawn;
     }
@@ -35,7 +35,7 @@ export function app_code_above_shown_draw(root, above, context) {
     let next = app_code_above_shown_toggle();
     html_clear(slot);
     if (next) {
-      above(slot);
+      above(slot, context);
     }
     let said = app_code_above_shown_button_text(next);
     html_text_set(button, said);
