@@ -61,6 +61,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_choose_order_solve: text_frozen("order_solve"),
     app_code_lesson_expression_choose_order_operators:
       text_frozen("order_minus"),
+    app_code_lesson_expression_choose_order_same_strength_pair:
+      text_frozen("order_same_two"),
     app_code_lesson_expression_plus_times: text_frozen("plus_times"),
     app_code_lesson_expression_plus_divide: text_frozen("plus_divide"),
     app_code_lesson_expression_minus_times: text_frozen("minus_times"),
