@@ -14,8 +14,8 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { html_div_code } from "./html_div_code.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-export function app_code_lesson_statement_name_copy_kept_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_copy_kept_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the two cups the copying lesson left standing, then one of them emptied and refilled while the other keeps what it was given, and then the same story as one program");
   ("The cups are the ones the copying lesson ended on, holding the same word, drawn the same way. A learner is being asked what happens next to a picture they have already watched being built, so nothing before the change is new and the change is the only thing to look at.");
   ("Only the first cup changes, and the second is drawn again unchanged beside it. The whole lesson is that the second cup did not follow the first, and a cup that vanished from the row while the sentence was being read would leave that to be taken on trust.");

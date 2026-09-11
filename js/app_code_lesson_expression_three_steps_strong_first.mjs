@@ -33,7 +33,7 @@ export function app_code_lesson_expression_three_steps_strong_first() {
       "you are asked to provide the final answer, instead of solving it step by step",
     );
     app_code_container_light_blue_text(root, text);
-    app_code_lesson_expression_choose_order_three_above(root);
+    app_code_lesson_expression_choose_order_three_above(root, context);
   }
   function refill() {
     "two lines a screen, each drawn on its own so where the stronger operator falls is left to the growing rather than arranged";

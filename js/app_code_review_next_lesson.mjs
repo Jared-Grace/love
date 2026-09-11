@@ -8,7 +8,7 @@ import { app_code_lessons } from "./app_code_lessons.mjs";
 import { list_size } from "./list_size.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_get } from "./list_get.mjs";
-import { app_code_review_go_to_lesson } from "./app_code_review_go_to_lesson.mjs";
+import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
 import { less_than } from "./less_than.mjs";
 export function app_code_review_next_lesson(context, root) {
   arguments_assert(arguments, 2);
@@ -27,7 +27,7 @@ export function app_code_review_next_lesson(context, root) {
   let previous_index = subtract(number, 1);
   let previous_lesson = list_get(lessons, previous_index);
   async function go_previous() {
-    await app_code_review_go_to_lesson(previous_lesson, context);
+    await app_code_lesson_go(previous_lesson, context);
   }
   let next_index = number;
   let has_next = less_than(next_index, lessons_count);

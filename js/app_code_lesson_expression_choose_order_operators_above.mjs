@@ -15,9 +15,12 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_choose_order_operators_above(root) {
+export function app_code_lesson_expression_choose_order_operators_above(
+  root,
+  context,
+) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what stands above the card: which operators are the stronger ones put back in front of the learner, then one whole line of this lesson's own kind worked all the way through, then the one sentence saying what is different here");
   ("The same three-part shape as the lessons on either side of it - recall, run, hinge - because a learner arriving here has read that shape on the screens behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on this screen is which operators can turn up.");
   ("The recall names all four symbols in the two groups they fall into, because that pairing IS what the lesson is about. A learner who has only ever pressed times has had no reason to notice that times was being pressed for being strong rather than for being times, and this card is where the reason is said out loud before any line is read.");

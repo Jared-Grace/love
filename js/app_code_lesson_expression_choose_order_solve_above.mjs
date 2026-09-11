@@ -15,9 +15,12 @@ import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { list_first } from "./list_first.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_to } from "./text_to.mjs";
-export function app_code_lesson_expression_choose_order_solve_above(root) {
+export function app_code_lesson_expression_choose_order_solve_above(
+  root,
+  context,
+) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what the learner already knows, said above the card: the word operator, and then a whole line of the same kind worked all the way through the way the lesson before them worked it");
   ("It stands above the card rather than inside it because it is the telling, and the card is the doing. A learner who has read it once goes on pressing inside the card, and what they read stays put above the thing it was about instead of being one more line at the top of the same box.");
   ("The word operator gets a card to itself. It is the one thing here that is not a step of the run - it is a word being handed over - and standing at the head of the run it read as the first of five things that happened.");

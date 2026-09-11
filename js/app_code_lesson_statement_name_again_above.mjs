@@ -13,8 +13,8 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_code } from "./html_div_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
-export function app_code_lesson_statement_name_again_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_again_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
   ("The same cup twice over rather than two cups side by side. The lesson before put two cups next to each other and asked which one was meant; this one has to say the opposite - there is only ever one cup here, and it is the SAME cup in both pictures. Drawn side by side they would read as two, which is the answer to the wrong lesson.");
   ("The two pictures are the two lines. Everything a learner has to work out is that the second picture happened after the first, so the pictures are shown in the order the lines are written and the words between them say which came first.");
