@@ -1,3 +1,4 @@
+import { app_code_lessons_above_broken_gate_run } from "./app_code_lessons_above_broken_gate_run.mjs";
 import { ebible_version_words_spelled_gate_run } from "./ebible_version_words_spelled_gate_run.mjs";
 import { bible_usfm_markers_named_gate_run } from "./bible_usfm_markers_named_gate_run.mjs";
 import { bible_usfm_version_lines_dropped_gate_run } from "./bible_usfm_version_lines_dropped_gate_run.mjs";
@@ -1115,6 +1116,7 @@ export function qa_gates() {
     bible_usfm_version_lines_dropped_gate_run,
     bible_usfm_markers_named_gate_run,
     ebible_version_words_spelled_gate_run,
+    app_code_lessons_above_broken_gate_run,
   ];
   return gates;
 }
