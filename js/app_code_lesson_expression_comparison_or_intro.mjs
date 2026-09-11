@@ -6,8 +6,8 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_less_than_symbol } from "./js_operator_less_than_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_lesson_expression_comparison_or_intro(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_comparison_or_intro(root, context) {
+  arguments_assert(arguments, 2);
   ("the two cards above the comparison inside || lesson: what is new said in one sentence, then one line carried all the way to its value");
   ("What a comparison is, and that one can stand where a true or a false stands, is not built up again. The && twin of this lesson built it a piece at a time - one side changed, then both - and a learner arriving here has read it and has since pressed their way through the same shape with a || in the middle. All that is left to say is that the same swap is allowed here.");
   ("The worked line has one side that comes out false and still comes to true, which is the whole of what || adds and the one thing an && learner will get wrong. A line with two true sides would be answered right by the habit they already have.");

@@ -6,8 +6,8 @@ import { js_keyword_false } from "./js_keyword_false.mjs";
 import { js_keyword_true } from "./js_keyword_true.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
-export function app_code_lesson_expression_and_before_or_intro(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_and_before_or_intro(root, context) {
+  arguments_assert(arguments, 2);
   ("the two cards above the && and || in one line lesson: the rule in one sentence, then one line carried all the way to its value");
   ("Only the rule is said again, and it is said in the words the pressing lesson said it in. That the two operators can meet at all was the news there; here it is something the learner has already pressed their way through, and a card announcing it afresh would read as a second thing to learn.");
   ("What is not said again is that the other way round can give a different answer. The learner was told that where it justified the rule, and the worked line below shows it rather than saying it: the && side is false and the || saves the line anyway.");
