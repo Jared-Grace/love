@@ -10,6 +10,7 @@ export function app_code_lesson_expression_choose_order_strong_card(root) {
   ("the card naming which of the four arithmetic operators are the stronger ones, in the words every lesson that needs it says them");
   ("Two lessons put this same card in front of the learner, and they were saying it in two places in the same breath - the same four symbols fetched the same way, the same eight pieces of a sentence, character for character. Two lessons is exactly the number at which a sentence stops belonging to a lesson and starts belonging to the course.");
   ("Written twice, nothing would have broken on the day somebody improved one of them. The learner would simply have been told the pairing one way on one screen and another way on the next, and a learner who reads a near-copy stops to compare it against the one they already read - which is the cost the course can least afford to pay for nothing.");
+  ("THE CARD IS HANDED BACK, because a lesson may have a second thing to recall in the same breath - the one about parentheses has to say what the marks do straight after this, and a sentence that belongs with this one wants to stand in the card with it rather than in a card of its own under it. A caller with nothing to add ignores what comes back and is unchanged by it.");
   let times = js_operator_asterisk_symbol();
   let divided_by = js_operator_division_symbol();
   let plus = js_operator_plus_symbol();
@@ -25,4 +26,5 @@ export function app_code_lesson_expression_choose_order_strong_card(root) {
     " and ",
     minus,
   ]);
+  return recall_card;
 }
