@@ -9,8 +9,8 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-export function app_code_lesson_statement_name_count_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_count_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: the program the screen before this one ended on, and then that same program with its middle line said a second time");
   ("Two boxes and no third, because there is only one change to show. The screen before this one settled everything about how the line is read - the right side worked out first, the name filled second - so all this screen does is put the line down twice and let a learner watch the answer move by one.");
   ("The same starting number in both boxes, which is the opposite of what a reminder usually does. Everywhere else a reminder is shown with numbers of its own so that no number is both a value in one box and an answer in another; here the two boxes are meant to be the same program, and changing the starting number would hide the one thing being shown by making the two answers unrelated. So the start is held still and the answers differ by exactly one, which is the whole lesson.");

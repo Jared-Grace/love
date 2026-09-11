@@ -13,8 +13,8 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_inside_parenthesis_box } from "./app_code_lesson_inside_parenthesis_box.mjs";
-export function app_code_lesson_statement_name_two_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_statement_name_two_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: two cups standing side by side with different things in them, being asked about one at a time, and the same thing written as code");
   ("Two cups rather than one, drawn next to each other rather than one under the other, because a picture read downwards says what happened next and this has to say what is standing there at the same time.");
   ("They hold different things, and the things are pictures rather than words. Two cups holding two words would put four words on the screen and a learner would be sorting words; two cups holding two fruits can be told apart at a glance, so the only thing left to work out is which cup was asked about.");

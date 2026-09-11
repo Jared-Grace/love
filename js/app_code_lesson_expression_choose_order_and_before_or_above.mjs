@@ -9,8 +9,9 @@ import { app_code_lesson_expression_choose_order_and_before_or_recall } from "./
 import { app_code_lesson_expression_choose_order_and_before_or_intro } from "./app_code_lesson_expression_choose_order_and_before_or_intro.mjs";
 export function app_code_lesson_expression_choose_order_and_before_or_above(
   root,
+  context,
 ) {
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what stands above the card on the and-before-or lesson: what the two operators come to, then one such line taken all the way down with the && leftmost and then with the || leftmost, then the sentences saying what is new");
   ("Each line run through is one where the order changes the answer. Taken the way the lesson teaches it comes to true; taken left to right it comes to false. A run on a line where both readings agree would show the rule being followed and never show what following it is worth.");
   ("The parts are hung together by letting the operators decide, which is what this lesson is about - the && reaches for its two neighbours before the || does. The parentheses lesson next door hands in a different way of hanging them and everything else on the screen is the same, so everything else is said once, next door.");

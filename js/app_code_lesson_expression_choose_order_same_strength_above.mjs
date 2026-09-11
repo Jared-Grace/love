@@ -4,8 +4,9 @@ import { app_code_expression_flat_random_same_strength } from "./app_code_expres
 import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
 export function app_code_lesson_expression_choose_order_same_strength_above(
   root,
+  context,
 ) {
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what stands above the card: one whole line of this lesson's own kind taken all the way down, and nothing else");
   ("★ NO CARD NAMING THE STRONGER OPERATORS, WHICH IS THE ONE THING THIS TELLING DROPS. The next press-at-a-time lesson opens with that card because its lines turn on which operator is the stronger. No line here has two strengths on it, so the card would put a rule in front of a learner that nothing they are about to press uses - and a rule offered where it is not needed is read as a rule that is needed.");
   ("It used to say the lesson after it. That stopped being true when the all-at-once twin of this one was put in between the two press-at-a-time lessons, and the card is named by what it does now rather than by a place in a list, since a place is what went stale. Corrected 2026-09-10.");

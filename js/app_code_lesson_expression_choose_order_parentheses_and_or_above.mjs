@@ -10,8 +10,9 @@ import { app_code_lesson_expression_choose_order_parentheses_recall } from "./ap
 import { app_code_lesson_expression_choose_order_parentheses_and_or_intro } from "./app_code_lesson_expression_choose_order_parentheses_and_or_intro.mjs";
 export function app_code_lesson_expression_choose_order_parentheses_and_or_above(
   root,
+  context,
 ) {
-  arguments_assert(arguments, 1);
+  arguments_assert(arguments, 2);
   ("what stands above the card on the moving parentheses lesson: the two rules being brought together, then one line walked down twice with the same three words and the parentheses round the first pair and then the second, then the sentences saying what is new");
   ("The three truths are the same on both walks and only the marks move, which is the whole claim of the lesson. Different words on the second walk would leave a reader finding which of two things had changed before they could see that only one had.");
   ("The first walk is the one whose parentheses change nothing, so the learner watches the line answer the way the operators would have answered on their own, and then watches the same words come out the other way once the pair is moved. Shown the other way round, the moving pair would read as the ordinary case and the harmless one as the surprise.");

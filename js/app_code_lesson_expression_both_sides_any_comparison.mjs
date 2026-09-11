@@ -39,6 +39,7 @@ export function app_code_lesson_expression_both_sides_any_comparison() {
     app_code_container_light_blue_text(root, text);
     app_code_lesson_expression_choose_order_both_sides_any_comparison_above(
       root,
+      context,
     );
   }
   function refill() {

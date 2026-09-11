@@ -8,8 +8,8 @@ import { js_code_comment_line } from "./js_code_comment_line.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
-export function app_code_lesson_comment_note_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_comment_note_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the boxes read before the first question: a line a learner already knows, that same line with a comment written above it, and then what the two slashes are");
   ("The same line twice, and the same answer twice. That is the whole lesson - a comment changes nothing about what the program does - and it is shown by leaving everything else untouched, so there is only one thing between the two boxes that could account for anything.");
   ("The answer is what proves it rather than a sentence saying so. A learner reads the second card, finds the number they read a box ago, and has seen the fact instead of being told it.");
