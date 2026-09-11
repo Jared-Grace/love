@@ -67,6 +67,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_minus_divide: text_frozen("minus_divide"),
     app_code_lesson_expression_which_part_first: text_frozen("which_first"),
     app_code_lesson_expression_exponent: text_frozen("power"),
+    app_code_lesson_expression_choose_order_arithmetic_parentheses:
+      text_frozen("order_group_math"),
     app_code_lesson_expression_parentheses_arithmetic:
       text_frozen("brackets_math"),
     app_code_lesson_expression_parentheses_minus_divide:
