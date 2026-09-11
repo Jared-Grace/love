@@ -47,6 +47,7 @@
   "order",
   "order_solve",
   "order_minus",
+  "order_same_two",
   "plus_times",
   "plus_divide",
   "minus_times",
