@@ -1,4 +1,4 @@
-import { app_code_above_shown_draw } from "./app_code_above_shown_draw.mjs";
+import { app_code_above_draw } from "./app_code_above_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_current } from "./app_code_lesson_current.mjs";
 import { app_code_lesson_title_strip } from "./app_code_lesson_title_strip.mjs";
@@ -22,7 +22,7 @@ export function app_code_examples_example_another(context, root) {
   let lesson = app_code_lesson_current(context);
   app_code_lesson_title_strip(root, context, lesson);
   let above = property_get(lesson, "above");
-  let above_line = app_code_above_shown_draw(root, above, context);
+  let above_line = app_code_above_draw(root, above, context);
   let c = app_code_container_light_blue(root);
   app_code_example_answer_gap(c);
   let another = app_code_lesson_text_example_another(lesson);
