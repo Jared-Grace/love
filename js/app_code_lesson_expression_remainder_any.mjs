@@ -1,3 +1,4 @@
+import { app_code_uneven_dividend_between } from "./app_code_uneven_dividend_between.mjs";
 import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
 import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_expression_remainder_any_title_name_id } from "./app_code_lesson_expression_remainder_any_title_name_id.mjs";
@@ -10,7 +11,6 @@ import { multiply } from "./multiply.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { range_map } from "./range_map.mjs";
 import { add } from "./add.mjs";
 import { divide } from "./divide.mjs";
@@ -20,8 +20,8 @@ export function app_code_lesson_expression_remainder_any() {
   "practice the remainder % with a mix of divisors; the intro DEFINES the remainder via the formula (dividend - Math.floor(n / d) * d, learned in the remainder-by-dividing lessons) rather than pointing back to the 2/3/4 lessons; both the number and the divisor vary each question";
   let percent = js_operator_percent_sign();
   function make(divisor) {
-    "n % d for the given divisor, with the number from 5 to 20 so it is a real division rather than a tiny one";
-    let number = integer_random(5, 20);
+    "n % d for the given divisor, with the number from 5 to 20 so it is a real division rather than a tiny one, and never a number the divisor goes into exactly - a remainder of nought leaves a learner practising remainders nothing to work out";
+    let number = app_code_uneven_dividend_between(5, 20, divisor);
     let code = js_code_binary_spaced_nb(number, percent, divisor);
     return code;
   }
