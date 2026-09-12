@@ -89,6 +89,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_remainder_subtract: text_frozen("rem_subtract"),
     app_code_lesson_expression_round_down: text_frozen("round_down"),
     app_code_lesson_expression_integer_division: text_frozen("int_divide"),
+    app_code_lesson_expression_choose_order_integer_division:
+      text_frozen("order_int_divide"),
     app_code_lesson_expression_dividend: text_frozen("dividend"),
     app_code_lesson_expression_divisor: text_frozen("divisor"),
     app_code_lesson_expression_quotient: text_frozen("quotient"),

@@ -71,6 +71,7 @@
   "rem_subtract",
   "round_down",
   "int_divide",
+  "order_int_divide",
   "dividend",
   "divisor",
   "quotient",
