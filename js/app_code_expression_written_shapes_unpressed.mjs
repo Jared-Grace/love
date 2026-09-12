@@ -7,11 +7,11 @@ import { js_code_math_floor_name } from "./js_code_math_floor_name.mjs";
 import { app_code_expression_node_before } from "./app_code_expression_node_before.mjs";
 import { app_code_expression_node } from "./app_code_expression_node.mjs";
 import { list_add } from "./list_add.mjs";
-export function app_code_expression_written_shapes_untaught() {
+export function app_code_expression_written_shapes_unpressed() {
   arguments_assert(arguments, 0);
-  ("shapes built with the two operators this app can work out that no lesson teaches - the remainder sign and the power sign - to hold every printed line against: each one alone, each one against a times and against a plus on both sides, each one against the other, each one beside a rounding down, and a power holding a power both ways round");
+  ("shapes built with the two operators no lesson ever puts under a press - the remainder sign and the power sign - to hold every printed line against: each one alone, each one against a times and against a plus on both sides, each one against the other, each one beside a rounding down, and a power holding a power both ways round");
   ("Written out rather than crossed with every other operator, and for one reason: the numbers. A remainder can come to nought and a power can run away, and a line that came to nought over nought or to a number javascript writes with an exponent in it would be a fault in the check rather than a fault in the printer. Every line here lands on a whole number no larger than 512.");
-  ("Both of these sat outside every strength class and so took a comparison's strength by falling through. The two lines that proved it are here: the shape 14 % (4 * 2) printed as 14 % 4 * 2, and the shape (2 ** 3) ** 2 printed as 2 ** 3 ** 2. Both mean something other than what they were built from.");
+  ("Each of these has a lesson of its own, and neither lesson presses anything apart: the remainder lesson prints one line at a time and the power lesson matches a short form against its written-out form, both as flat text over a single operator. So the printer had never once been asked to write either sign, and a sign the printer is never asked about is a sign whose strength nobody notices is missing. Both sat outside every strength class and so took a comparison's strength by falling through. The two lines that proved it are here: the shape 14 % (4 * 2) printed as 14 % 4 * 2, and the shape (2 ** 3) ** 2 printed as 2 ** 3 ** 2. Both mean something other than what they were built from.");
   ("The power sign is also the only operator the app knows whose RIGHT side is worked out first, so its two nestings are here separately: one of them must keep its parentheses and the other must not, and a printer that treated the sign like every other one would get exactly one of the two wrong.");
   let remainder = js_operator_percent_symbol();
   let power = js_operator_double_asterisk_symbol();
