@@ -1,3 +1,4 @@
+import { app_code_lesson_console_log_remainder_generic_remainder_word } from "./app_code_lesson_console_log_remainder_generic_remainder_word.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
 import { multiply } from "./multiply.mjs";
@@ -15,7 +16,6 @@ import { html_div } from "./html_div.mjs";
 import { app_code_lesson_console_log_remainder_generic_remainder_chip } from "./app_code_lesson_console_log_remainder_generic_remainder_chip.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_console_log_remainder_generic_equation_with_remainder } from "./app_code_lesson_console_log_remainder_generic_equation_with_remainder.mjs";
-import { html_span_text_bold } from "./html_span_text_bold.mjs";
 export function app_code_lesson_console_log_remainder_generic_example(
   parent,
   divisor,
@@ -84,7 +84,11 @@ export function app_code_lesson_console_log_remainder_generic_example(
     definition,
     "When we divide two numbers, the left over is called the ",
   );
-  html_span_text_bold(definition, "remainder");
+  app_code_lesson_console_log_remainder_generic_remainder_word(
+    definition,
+    left,
+    divisor,
+  );
   let conclusion = html_div(parent);
   html_span_text(conclusion, "So the remainder is ");
   app_code_lesson_console_log_remainder_generic_remainder_chip(
