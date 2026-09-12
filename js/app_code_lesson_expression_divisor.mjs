@@ -1,3 +1,8 @@
+import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
+import { app_code_code_tile } from "./app_code_code_tile.mjs";
+import { js_operator_division_symbol } from "./js_operator_division_symbol.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
 import { text_to } from "./text_to.mjs";
@@ -31,9 +36,17 @@ export function app_code_lesson_expression_divisor() {
   });
   return lesson;
   function title_name_id() {
-    "the home title is console.log divisor";
+    "the home title says Naming the divisor and then shows where in a division the divisor stands: the part after the slash";
     function paint(parent) {
-      html_span_text(parent, "Divisor");
+      app_code_lesson_naming_words(parent, "divisor");
+      app_code_code_tile(parent, fill);
+    }
+    function fill(host) {
+      "the slash and then a gap, so the shape says the divisor is whatever the dividing is by";
+      let slash = js_operator_division_symbol();
+      let words = text_combine(slash, " ");
+      html_span_text(host, words);
+      app_code_placeholder_dots(host);
     }
     let name_id2 = app_code_lesson_name_id_operators(paint);
     return name_id2;

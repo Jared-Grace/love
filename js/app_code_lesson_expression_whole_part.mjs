@@ -54,9 +54,10 @@ export function app_code_lesson_expression_whole_part() {
   });
   return lesson;
   function title_name_id() {
-    "the home title is console.log whole part";
+    "the home title says Whole part from formula: this lesson hands the learner a division and asks for the formula that gives its whole part, and the lesson after it asks for the value in one step and is the plain Whole part";
+    "★ THE TWO LESSONS WERE TITLED THE WRONG WAY ROUND FOR WHAT THEY ASK. This one was Whole part and the next was Whole part in one step, so the shorter title sat on the longer job - a learner reading the home list would take the first as the whole of it and the second as an extra trick, when the first is the working out and the second is the answer. The plain name belongs to the plain question.";
     function paint(parent) {
-      html_span_text(parent, "Whole part");
+      html_span_text(parent, "Whole part from formula");
     }
     let built = app_code_lesson_name_id_operators(paint);
     return built;
