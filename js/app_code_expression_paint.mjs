@@ -1,3 +1,4 @@
+import { app_code_expression_paint_before_side } from "./app_code_expression_paint_before_side.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -30,10 +31,16 @@ export function app_code_expression_paint(parent, item, on_operator) {
   let node_span = html_span(parent);
   let before_is = app_code_expression_node_before_is(item);
   if (before_is) {
-    ("a one-sided operator is written in front of the one thing it acts on, with no space between them and no side to its left, and it asks that side for its own strength the same way the written line does");
+    ("a one-sided operator is written in front of the one thing it acts on, with no space between them and no side to its left, and how that one thing is gathered depends on how the operator is spelled");
     let operator_span_before = html_span_text(node_span, symbol);
     let acted_on = property_get(item, "right");
-    app_code_expression_paint_side(node_span, acted_on, rank, on_operator);
+    app_code_expression_paint_before_side(
+      node_span,
+      acted_on,
+      symbol,
+      rank,
+      on_operator,
+    );
     on_operator(item, operator_span_before, node_span);
     return;
   }
