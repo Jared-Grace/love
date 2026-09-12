@@ -1,3 +1,4 @@
+import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
 import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
@@ -7,7 +8,6 @@ import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { text_to } from "./text_to.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_expression_remainder() {
@@ -54,9 +54,9 @@ export function app_code_lesson_expression_remainder() {
     html_div_cycle_code(remember, ["The ", "2", " is the remainder"]);
   }
   function title_name_id() {
-    "the home title is console.log remainder";
+    "the home title says Naming the remainder, the same opening as the three lessons around it";
     function paint(parent) {
-      html_span_text(parent, "Remainder");
+      app_code_lesson_naming_words(parent, "remainder");
     }
     ("the id-source differs from the plain role word because the operator lesson Remainder % already holds operators_remainder (its rights carry a stray leading space that collapses to the same id); the visible title stays Remainder");
     let built = app_code_lesson_name_id_operators(paint);

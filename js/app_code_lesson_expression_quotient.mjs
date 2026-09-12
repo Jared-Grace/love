@@ -1,3 +1,4 @@
+import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
 import { app_code_uneven_division_code } from "./app_code_uneven_division_code.mjs";
@@ -6,7 +7,6 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_code_lesson_divisor_quotient_batch } from "./app_code_lesson_divisor_quotient_batch.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 export function app_code_lesson_expression_quotient() {
   ("identify the QUOTIENT (the whole result of dividing and rounding down) in Math.floor(a / b) === c - the dividend a and divisor b stand as decoys; a thin lesson over ",
     app_code_lesson_operand_generic.name,
@@ -54,9 +54,9 @@ export function app_code_lesson_expression_quotient() {
     html_div_cycle_code(remember, ["The ", "3", " is the quotient"]);
   }
   function title_name_id() {
-    "the home title is console.log quotient";
+    "the home title says Naming the quotient, the same opening as the three lessons around it";
     function paint(parent) {
-      html_span_text(parent, "Quotient");
+      app_code_lesson_naming_words(parent, "quotient");
     }
     let name_id2 = app_code_lesson_name_id_operators(paint);
     return name_id2;
