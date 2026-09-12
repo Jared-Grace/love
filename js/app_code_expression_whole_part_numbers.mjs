@@ -9,9 +9,10 @@ export function app_code_expression_whole_part_numbers() {
   ("The leftover is the whole reason these lines exist, so a division that came out even would leave the rounding down with nothing to do and the learner with nothing to read.");
   ("★ THE DIVISOR COMES FROM A SHORTER LIST THAN THE ONE THE LESSONS ASKING THESE LINES ALL AT ONCE DRAW FROM. Those lessons print the line and then its value, and nothing in between, so 6 costs them nothing. A line pressed one part at a time prints what is left after every press, and after the first press on 23 / 6 what is left reads Math.floor(3.8333333333333335) - which fills the line with a number the lesson is not about and that no learner can hold.");
   ("Every divisor here divides to a number that ends within two figures, so what stands after the first press is 2.5 or 3.25 or 2.4 and a learner reads it at a glance.");
+  ("A divisor of two is left out although it ends soonest of all. With this quotient it allows two lines and no more, and its leftover can only ever be one, so a learner would meet the same two lines over and over and could answer the last press of each without reading it.");
   ("The quotient is the small one the lessons around this use, so the value of the line stays inside what a learner can check in their head.");
   let quotient = integer_random(2, 3);
-  let divisor = list_random_item([2, 4, 5, 10]);
+  let divisor = list_random_item([4, 5, 10]);
   let drawn = app_code_uneven_dividend(quotient, divisor);
   let dividend = property_get(drawn, "dividend");
   let numbers = {
