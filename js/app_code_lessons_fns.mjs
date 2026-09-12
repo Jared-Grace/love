@@ -72,6 +72,7 @@ import { app_code_lesson_expression_remainder_4 } from "./app_code_lesson_expres
 import { app_code_lesson_expression_remainder_subtract } from "./app_code_lesson_expression_remainder_subtract.mjs";
 import { app_code_lesson_expression_round_down } from "./app_code_lesson_expression_round_down.mjs";
 import { app_code_lesson_expression_integer_division } from "./app_code_lesson_expression_integer_division.mjs";
+import { app_code_lesson_expression_choose_order_integer_division } from "./app_code_lesson_expression_choose_order_integer_division.mjs";
 import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
 import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
 import { app_code_lesson_expression_quotient } from "./app_code_lesson_expression_quotient.mjs";
@@ -214,6 +215,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_remainder_subtract,
     app_code_lesson_expression_round_down,
     app_code_lesson_expression_integer_division,
+    app_code_lesson_expression_choose_order_integer_division,
     app_code_lesson_expression_dividend,
     app_code_lesson_expression_divisor,
     app_code_lesson_expression_quotient,
