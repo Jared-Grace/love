@@ -26,6 +26,11 @@ export function app_code_expression_node_parentheses_is(item, node) {
     ("a one-sided operator asks its single side for its own strength, which is what makes !(3 < 5) carry marks and !!true carry none");
     let acted_on_here = equal(right, node);
     if (acted_on_here) {
+      ("an operator spelled as a name with brackets always shows them, so whatever is inside one is inside a pair whatever its own strength - this is the same answer the printer gives, read out of the same list");
+      let called = app_code_operator_called_is(symbol);
+      if (called) {
+        return called;
+      }
       let gathered_before = app_code_expression_side_parenthesis_is(
         right,
         rank,
