@@ -94,9 +94,12 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_quotient: text_frozen("quotient"),
     app_code_lesson_expression_remainder: text_frozen("remainder"),
     app_code_lesson_expression_whole_part_formula: text_frozen("whole_formula"),
+    app_code_lesson_expression_choose_order_whole_part:
+      text_frozen("order_whole"),
     app_code_lesson_expression_whole_part: text_frozen("whole"),
     app_code_lesson_expression_whole_part_both: text_frozen("whole_one_step"),
     app_code_lesson_expression_remainder_divide: text_frozen("rem_divide"),
+    app_code_lesson_expression_choose_order_remainder: text_frozen("order_rem"),
     app_code_lesson_expression_remainder_divide_solve:
       text_frozen("rem_formula"),
     app_code_lesson_expression_remainder_any: text_frozen("rem_any"),

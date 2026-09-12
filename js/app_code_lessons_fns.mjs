@@ -77,9 +77,11 @@ import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression
 import { app_code_lesson_expression_quotient } from "./app_code_lesson_expression_quotient.mjs";
 import { app_code_lesson_expression_remainder } from "./app_code_lesson_expression_remainder.mjs";
 import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
+import { app_code_lesson_expression_choose_order_whole_part } from "./app_code_lesson_expression_choose_order_whole_part.mjs";
 import { app_code_lesson_expression_whole_part } from "./app_code_lesson_expression_whole_part.mjs";
 import { app_code_lesson_expression_whole_part_both } from "./app_code_lesson_expression_whole_part_both.mjs";
 import { app_code_lesson_expression_remainder_divide } from "./app_code_lesson_expression_remainder_divide.mjs";
+import { app_code_lesson_expression_choose_order_remainder } from "./app_code_lesson_expression_choose_order_remainder.mjs";
 import { app_code_lesson_expression_remainder_divide_solve } from "./app_code_lesson_expression_remainder_divide_solve.mjs";
 import { app_code_lesson_expression_remainder_any } from "./app_code_lesson_expression_remainder_any.mjs";
 import { app_code_lesson_expression_round_up } from "./app_code_lesson_expression_round_up.mjs";
@@ -217,9 +219,11 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_quotient,
     app_code_lesson_expression_remainder,
     app_code_lesson_expression_whole_part_formula,
+    app_code_lesson_expression_choose_order_whole_part,
     app_code_lesson_expression_whole_part,
     app_code_lesson_expression_whole_part_both,
     app_code_lesson_expression_remainder_divide,
+    app_code_lesson_expression_choose_order_remainder,
     app_code_lesson_expression_remainder_divide_solve,
     app_code_lesson_expression_remainder_any,
     app_code_lesson_expression_round_up,
