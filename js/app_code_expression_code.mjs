@@ -1,16 +1,17 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
+import { not } from "./not.mjs";
+import { text_to } from "./text_to.mjs";
+import { property_get } from "./property_get.mjs";
+import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
 import { app_code_operator_code_called } from "./app_code_operator_code_called.mjs";
-import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
-import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
-import { add_1 } from "./add_1.mjs";
-import { app_code_expression_node_is } from "./app_code_expression_node_is.mjs";
-import { app_code_expression_side_code } from "./app_code_expression_side_code.mjs";
-import { app_code_operator_code } from "./app_code_operator_code.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { not } from "./not.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_to } from "./text_to.mjs";
+import { app_code_expression_side_code } from "./app_code_expression_side_code.mjs";
+import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
+import { app_code_operator_rank_least_left } from "./app_code_operator_rank_least_left.mjs";
+import { app_code_operator_rank_least_right } from "./app_code_operator_rank_least_right.mjs";
+import { app_code_operator_code } from "./app_code_operator_code.mjs";
 export function app_code_expression_code(item) {
   arguments_assert(arguments, 1);
   ("the code a learner reads for a whole expression shape: the shape for 1 + 2 * 3 prints as 1 + 2 * 3, and the shape for (1 + 2) * 3 prints with its parentheses");
@@ -21,7 +22,6 @@ export function app_code_expression_code(item) {
     return text;
   }
   let symbol = property_get(item, "operator");
-  let rank = app_code_operator_rank(symbol);
   let before_is = app_code_expression_node_before_is(item);
   if (before_is) {
     ("a one-sided operator asks its single side for its own strength rather than one above it: !!true needs no parentheses because the second ! is worked out first anyway, while !(3 < 5) does");
@@ -33,15 +33,17 @@ export function app_code_expression_code(item) {
       let code_called = app_code_operator_code_called(symbol, inside_code);
       return code_called;
     }
+    let rank = app_code_operator_rank(symbol);
     let acted_on_code = app_code_expression_side_code(acted_on, rank);
     let code_before = app_code_operator_code_before(symbol, acted_on_code);
     return code_before;
   }
+  ("each side asks for the strength it has to reach, and the two sides do not ask for the same one: the side an operator works out LAST has to be gathered when it holds an operator of equal strength, because otherwise a reader takes the line the other way round. 8 / 4 / 2 is not 8 / (4 / 2), while nothing on the left of a divide ever needs that - and a power is the other way round, so (2 ** 3) ** 2 keeps its marks and 2 ** 3 ** 2 needs none.");
+  let rank_left = app_code_operator_rank_least_left(symbol);
   let left = property_get(item, "left");
-  let left_code = app_code_expression_side_code(left, rank);
+  let left_code = app_code_expression_side_code(left, rank_left);
+  let rank_right = app_code_operator_rank_least_right(symbol);
   let right = property_get(item, "right");
-  ("the right side is parenthesised one rank sooner than the left, because an operator of the same strength on the right is worked out after this one and so has to be gathered: 8 / 4 / 2 is not 8 / (4 / 2), while 8 / 4 * 2 needs nothing on the left");
-  let rank_right = add_1(rank);
   let right_code = app_code_expression_side_code(right, rank_right);
   let code = app_code_operator_code(left_code, symbol, right_code);
   return code;
