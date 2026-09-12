@@ -24,6 +24,13 @@ export function app_code_expression_code(item) {
   if (before_is) {
     ("a one-sided operator asks its single side for its own strength rather than one above it: !!true needs no parentheses because the second ! is worked out first anyway, while !(3 < 5) does");
     let acted_on = property_get(item, "right");
+    let called = app_code_operator_called_is(symbol);
+    if (called) {
+      ("an operator spelled as a name with brackets keeps them round whatever is inside, so it is never asked whether the inside needs gathering: after the division in Math.floor(14 / 4) has been worked out the line reads Math.floor(3.5), where a gathering would have left Math.floor3.5");
+      let inside_code = app_code_expression_code(acted_on);
+      let code_called = app_code_operator_code_called(symbol, inside_code);
+      return code_called;
+    }
     let acted_on_code = app_code_expression_side_code(acted_on, rank);
     let code_before = app_code_operator_code_before(symbol, acted_on_code);
     return code_before;
