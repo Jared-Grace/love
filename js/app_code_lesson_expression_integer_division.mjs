@@ -1,3 +1,4 @@
+import { app_code_integer_division_uneven_cards } from "./app_code_integer_division_uneven_cards.mjs";
 import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
 import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
 import { app_code_lesson_expression_integer_division_title_name_id } from "./app_code_lesson_expression_integer_division_title_name_id.mjs";
@@ -58,15 +59,8 @@ export function app_code_lesson_expression_integer_division() {
   });
   return lesson;
   function above(root) {
-    let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "You know that ",
-      "Math.floor",
-      " rounds a number down",
-    ]);
-    let problem = app_code_container_light_blue(root);
-    html_div_cycle_code(problem, ["Dividing does not always come out even"]);
-    html_div_cycle_code(problem, ["For example, ", "14 / 4", " is ", "3.5"]);
+    "the two cards this screen opens with are the two the pressing screen in front of it opens with, out of the one place both read: a learner arriving here has just pressed this line apart, and the opening that set it up there is the opening that puts it back here";
+    app_code_integer_division_uneven_cards(root);
     let solution = app_code_container_light_blue(root);
     html_div_cycle_code(solution, [
       "Now we will divide, and then round down to get a whole number:",
