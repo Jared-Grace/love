@@ -21,11 +21,12 @@ export function app_code_expression_written_shapes_truths() {
   arguments_assert(arguments, 0);
   ("shapes that come out true or false to hold every printed line against: each comparison over two numbers and over a piece of arithmetic on either side, then && and || over two comparisons, one nested inside the other both ways round, a denial over a comparison, a denial of a denial, and a pair of parentheses a lesson wrote where nothing required them");
   ("Built out of the comparison list and the two joining classes rather than written out, for the same reason the arithmetic shapes are: a comparison added to the language is covered here on the day it is added.");
+  ("The comparison list asked for here is the STRENGTH class, which holds == and != as well as the six a lesson teaches. Those two are operators the app can work out and has said how strong they are, so a check that every classed operator reached a printed line cannot pass until they print - and nothing but this builds a shape holding one. A learner still meets the six only: these shapes are held against the printer, not shown to anybody.");
   ("Arithmetic on one side of a comparison and then on the other, because a comparison is weaker than everything inside it and so must never gather either side - and a printer that gathered one of them would be writing parentheses into a line the lesson never wrote.");
   ("&& inside || and || inside && are separate shapes because only one of the two needs a pair of parentheses. The strengths say && goes first, so an && holding an || has to gather it and an || holding an && must not.");
   ("The denial of a denial is here because it is the one place a one-sided operator asks its side for its own strength rather than one above it: !!true needs no parentheses, and a printer treating it like a two-sided operator would write !(!true).");
   ("The written pair of parentheses is the case where the shape carries something the strengths cannot account for. (3 !== 5) !== (2 === 2) means exactly what the line without the left pair means, so a printer writing only what is needed would drop it - and a lesson showing a learner that pair is entitled to have it stay.");
-  let comparisons = js_operators_comparison_symbols();
+  let comparisons = app_code_operators_comparing();
   let weaker = app_code_operators_weaker();
   let weakest = app_code_operators_weakest();
   let joins = list_concat(weaker, weakest);
