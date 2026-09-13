@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_book_code_label } from "./ebible_book_code_label.mjs";
-import { text_from_number } from "./text_from_number.mjs";
 import { html_text_set } from "./html_text_set.mjs";
+import { lyric_timing_chapter_said } from "./lyric_timing_chapter_said.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { lyric_timing_chosen_remember } from "./lyric_timing_chosen_remember.mjs";
 import { html_value_get } from "./html_value_get.mjs";
@@ -21,31 +21,33 @@ export function lyric_timing_screen_choose(
   ("$plain version_input");
   ("$plain chosen");
   ("$plain on_settled");
-  ("The row saying which passage is being timed, worked the way the bible readers' own row is worked: one button for the book, one for the chapter, and the list each opens drawn underneath.");
+  ("The row saying which recording is being timed, worked the way the bible readers' own row is worked: one button for the book, one for the chapter, and the list each opens drawn underneath.");
   ("THE BOOK AND THE CHAPTER ARE TWO BUTTONS AND NOT ONE. Almost every change made here is a change of chapter inside the book already chosen - a psalm, then the next psalm - and a single button spelling the whole passage sent that ordinary move through the list of sixty six books first. Two buttons put each of the two questions one press away from the person asking it, which is what the bible readers already do and what somebody arriving from one of them expects.");
   ("A BOOK CODE TYPED FROM MEMORY WAS THE ONE THING ON THIS SCREEN A PERSON COULD SIMPLY GET WRONG. Everything else here is heard or pressed; that box asked for three letters nobody knows, and a wrong three letters is not refused - it writes the times of the psalm just sung into the document of a book nobody opened.");
+  ("★ THE CHAPTER BUTTON SAYS THE VERSES AND THE TAKE AS WELL, BECAUSE THOSE ARE HALF OF WHICH FILE IS ABOUT TO BE WRITTEN. A row saying only Psalm 119 is saying the same thing for twenty two different documents, and the person reading it has no way at all of telling which. It is said here the way a report says it, so a row on the screen and a line in a run's answer can be lined up by eye.");
+  ("★ PRESSING EITHER BUTTON WIDENS THE CHOICE BACK TO THE WHOLE CHAPTER IN ITS PLAIN RECORDING. Choosing a chapter by hand is the move for a passage the song picker could not name, and carrying the last song's stanza ends or its take into it would address a document belonging to neither - a range of a different chapter, or a take of a psalm that has none. Emptying them is the only reading of that press that is true of every chapter.");
   ("Pressing the book leads on to the chapters of whatever book was pressed, because choosing a book and then not choosing a chapter leaves the passage half changed. Pressing the chapter opens the chapters alone, which is the move the row exists for.");
   ("The panel is emptied once a chapter is pressed. A picker left standing after it has been used is a screen still asking a question that has been answered.");
   ("SETTLING ON A CHAPTER IS TOLD TO WHOEVER ASKED, AND THAT IS WHAT LOADS IT. Choosing used to change the words on the buttons and nothing else, which left the screen saying two things at once: the row named the psalm just chosen and everything below it still held the one before. The press that answers the question is the press that meant it, so nothing is gained by asking for a second one - and the second one was easy to forget, at the cost of tapping a whole song into the wrong document.");
   ("SETTLING IS ALSO WHERE THE CHOICE IS WRITTEN DOWN, so that a refresh opens on the same passage. This is the one press in the whole screen that means a passage has been decided on, and remembering it anywhere else would be remembering a passage somebody was only looking at. It is written before the loading rather than after, because loading a chapter can take a moment and can fail, and neither of those changes which passage was chosen.");
   ("Both ways in end here. Choosing a book leads on to that book's chapters and lands on this same step once one is pressed, so a passage is never settled without going through it.");
+  ("Redrawing the two buttons is handed back, because the song picker settles the same choice from the other side and the row has to say what it was settled to. Without it a person chooses a song, the words below change to the stanza it sings, and the row above goes on naming whatever psalm it named before.");
   function book_said() {
     let said = ebible_book_code_label(chosen.book_code);
-    return said;
-  }
-  function chapter_said() {
-    let said = text_from_number(chosen.chapter_number);
     return said;
   }
   function buttons_show() {
     let book_text = book_said();
     html_text_set(button_book, book_text);
-    let chapter_text = chapter_said();
+    let chapter_text = lyric_timing_chapter_said(chosen);
     html_text_set(button_chapter, chapter_text);
   }
   async function on_chosen(book_code, chapter_number) {
     chosen.book_code = book_code;
     chosen.chapter_number = chapter_number;
+    chosen.verse_first = "";
+    chosen.verse_last = "";
+    chosen.mark = "";
     html_clear(panel);
     buttons_show();
     lyric_timing_chosen_remember(chosen);
@@ -76,8 +78,8 @@ export function lyric_timing_screen_choose(
   let row = html_div(parent);
   let book_text2 = book_said();
   let button_book = app_shared_button(row, book_text2, on_book);
-  let chapter_text2 = chapter_said();
+  let chapter_text2 = lyric_timing_chapter_said(chosen);
   let button_chapter = app_shared_button(row, chapter_text2, on_chapter);
   let panel = html_div(parent);
-  return row;
+  return buttons_show;
 }

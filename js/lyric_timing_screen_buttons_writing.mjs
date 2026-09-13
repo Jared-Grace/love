@@ -13,6 +13,7 @@ export function lyric_timing_screen_buttons_writing(parent, desk) {
   ("THEY ARE TWO BUTTONS AND NOT ONE. Saving is instant and rendering takes minutes, so a single button would charge the whole of a render for the cheap and ordinary act of writing down what was just heard. Somebody halfway through a song saves and walks away; somebody finished renders.");
   ("Rendering says it has started before it starts. It runs long enough that a page which sat silent would be indistinguishable from a page that had not heard the press, and the first thing an unsure person does is press again - which is how one render becomes two.");
   ("Both presses hand over the name of the song that is loaded, because both are about one particular recording: the save records which one the times were measured against, and the render reads that same file back. The name is taken at the moment of the press rather than held from earlier, so somebody who changes their mind and loads a different take is saving against the take they can hear.");
+  ("★ SAVING HANDS BACK THE DOCUMENT IT WROTE AND THE SCREEN KEEPS IT, so that rendering a passage that has just been timed for the first time renders the file the times went into. Loading is the other way a document gets named here, and before a first save there is nothing to load - so without this the two presses would disagree on exactly the sitting where it matters most.");
   async function on_save() {
     let asked = lyric_timing_screen_passage_read(desk.inputs);
     let duration = html_media_duration(desk.song.audio);
@@ -22,12 +23,17 @@ export function lyric_timing_screen_buttons_writing(parent, desk) {
       duration,
       desk.song.file_name,
     );
+    desk.path_document = path_document;
     html_text_content_set(desk.told, "Saved " + path_document);
   }
   async function on_render() {
     let asked = lyric_timing_screen_passage_read(desk.inputs);
     html_text_content_set(desk.told, "Rendering. This takes a few minutes.");
-    let said = await lyric_timing_rendered(asked, desk.song.file_name);
+    let said = await lyric_timing_rendered(
+      asked,
+      desk.song.file_name,
+      desk.path_document,
+    );
     html_text_content_set(desk.told, said);
   }
   html_button(parent, "Save the times", on_save);
