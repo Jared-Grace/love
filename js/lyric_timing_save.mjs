@@ -1,35 +1,40 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { lyric_video_bible_document_path } from "./lyric_video_bible_document_path.mjs";
+import { lyric_video_passage_recording_document_path } from "./lyric_video_passage_recording_document_path.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { bible_usfm_version_passage_text } from "./bible_usfm_version_passage_text.mjs";
+import { lyric_video_recording_passage_text } from "./lyric_video_recording_passage_text.mjs";
 import { bible_usfm_version_credit_text } from "./bible_usfm_version_credit_text.mjs";
 import { song_identity } from "./song_identity.mjs";
 import { object_merge_replace } from "./object_merge_replace.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function lyric_timing_save(
-  version,
-  book_code,
-  chapter_number,
+  { version, book_code, chapter_number, verse_first, verse_last, mark },
   duration,
   lines,
   file_name,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 4);
   ("$plain version");
   ("$plain book_code");
   ("$plain chapter_number");
+  ("$plain verse_first");
+  ("$plain verse_last");
+  ("$plain mark");
   ("$plain duration");
   ("$plain lines");
   ("$plain file_name");
-  ("Writes the times somebody has just tapped into the passage's timing document, alongside which recording they tapped along to, and hands back where it wrote them.");
-  ("WHATEVER WAS ALREADY IN THE DOCUMENT IS KEPT, AND ONLY WHAT WAS JUST HEARD IS WRITTEN OVER. This used to name the handful of fields it carried across, which was the same thing for exactly as long as the document held nothing else - and the moment it held one more, saving the times would have thrown that away without a word. Somebody who has made the words bigger, or chosen what is shown behind them, has made a judgment about the video, and a save of the times is not a place to overrule it; only where there is no document yet do the sizes come from the defaults, because then there is no judgment to keep.");
-  ("WHICH RECORDING THE TIMES BELONG TO IS WRITTEN DOWN RATHER THAN REMEMBERED. A time is a measurement against one performance and means nothing beside another, so a document holding times and no word about what they were measured against is a document nobody can check. The words themselves come off the shelf and can always be fetched again; this is the only fact in here that becomes unrecoverable the moment it is not recorded.");
-  ("The passage and the translation's name are read from the shelf rather than taken from the screen. They are facts about the translation, not about the timing, and a screen that had been left open across a rename would otherwise write yesterday's wording back over today's.");
-  let path_document = lyric_video_bible_document_path(
+  ("Writes the moments somebody has just tapped into the timing document of the recording they were tapping along to, keeping everything else that document already held.");
+  ("★ IT IS THE RECORDING THAT IS WRITTEN TO, NOT THE CHAPTER, AND GETTING THAT WRONG COST SOMEBODY THEIR TIMES SILENTLY. A chapter said on its own addresses the plain whole-chapter document, so an evening spent tapping along to the second arrangement of a psalm landed on the first arrangement's document and overwrote numbers that had been correct. Which song was playing was recorded inside the file as a note while the file itself was chosen without reference to it - the one place the answer was known was the one place it was not used. The verses and the mark now come in with the passage and decide the address, so the file written is the file the song belongs to.");
+  ("WHAT IS ALREADY IN THE DOCUMENT IS KEPT AND ONLY THE HEARD PART REPLACED. The sizes of the letters on screen, the pictures a passage has been given, and anything else somebody has set there are not facts about this sitting, and a save that wrote a fresh document would quietly undo all of them every time a line was corrected.");
+  ("A document that does not exist yet is started from the sizes alone, because those are the only part a new passage cannot do without.");
+  ("THE SONG IS IDENTIFIED RATHER THAN JUST NAMED. Two files in a downloads folder can carry one name at different times, so a name on its own cannot say which recording the numbers were measured against; its size and its fingerprint can, and they are cheap to take at the moment the file is certainly the one that was playing.");
+  let path_document = lyric_video_passage_recording_document_path(
     version,
     book_code,
     chapter_number,
+    verse_first,
+    verse_last,
+    mark,
   );
   let existing = await file_exists(path_document);
   let sizes = {
@@ -40,10 +45,12 @@ export async function lyric_timing_save(
     credit_font_size: 64,
   };
   let document_timed = existing ? await file_read_json(path_document) : sizes;
-  let passage = await bible_usfm_version_passage_text(
+  let passage = await lyric_video_recording_passage_text(
     version,
     book_code,
     chapter_number,
+    verse_first,
+    verse_last,
   );
   let credit = bible_usfm_version_credit_text(version);
   let song = await song_identity(file_name);
