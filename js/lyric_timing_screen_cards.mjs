@@ -5,8 +5,9 @@ import { html_width_full } from "./html_width_full.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { lyric_timing_screen_times } from "./lyric_timing_screen_times.mjs";
-export function lyric_timing_screen_cards(parent, on_tap) {
+export function lyric_timing_screen_cards(parent, on_tap, on_select, on_nudge) {
   "$plain parent";
+  "What picking a line and stepping its time do is handed in and kept with the cards, because the list is redrawn from many places - a tap, a load, a step back - and none of them should have to carry the two presses along to it.";
   "The four things a person looks at while timing: how far through they are, the line being sung now, a big button carrying the line that comes next, and the times already tapped.";
   "THE LINE TO TAP IS WRITTEN ON THE BUTTON RATHER THAN BESIDE IT, so that reading and pressing are one act. Somebody doing this is listening, not looking; a button saying Next asks them to hold in their head which line Next means, and that is exactly the thing the ear is busy with. A button carrying the words is pressed when those words are heard.";
   "The line already sounding sits above it and dimmed, because its whole job is to say the tapping has not drifted. It is a check, never the thing being aimed at, and printing it as boldly as the target is how somebody comes to tap the wrong one.";
@@ -24,6 +25,8 @@ export function lyric_timing_screen_cards(parent, on_tap) {
     now_card,
     tap_button,
     times,
+    on_select,
+    on_nudge,
   };
   return cards;
 }
