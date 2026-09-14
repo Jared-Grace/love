@@ -24,5 +24,5 @@ export function lyric_timing_cards_show(cards, held) {
   let ended = equal(coming, undefined);
   let ended_said = none ? "" : "All lines timed";
   html_text_set(cards.tap_button, ended ? ended_said : coming);
-  lyric_timing_times_show(cards.times, held);
+  lyric_timing_times_show(cards, held);
 }

@@ -6,6 +6,11 @@ import { lyric_timing_desk_load } from "./lyric_timing_desk_load.mjs";
 import { lyric_timing_song_chosen } from "./lyric_timing_song_chosen.mjs";
 import { lyric_timing_screen_passage } from "./lyric_timing_screen_passage.mjs";
 import { lyric_timing_screen_song } from "./lyric_timing_screen_song.mjs";
+import { lyric_timing_held_select } from "./lyric_timing_held_select.mjs";
+import { html_media_time_set } from "./html_media_time_set.mjs";
+import { html_media_play } from "./html_media_play.mjs";
+import { lyric_timing_cards_show } from "./lyric_timing_cards_show.mjs";
+import { lyric_timing_held_nudge } from "./lyric_timing_held_nudge.mjs";
 import { lyric_timing_screen_cards } from "./lyric_timing_screen_cards.mjs";
 import { lyric_timing_screen_buttons_tapping } from "./lyric_timing_screen_buttons_tapping.mjs";
 import { lyric_timing_screen_buttons_writing } from "./lyric_timing_screen_buttons_writing.mjs";
@@ -23,7 +28,7 @@ export async function lyric_timing_preview() {
   ("The step is given to the row rather than the row reaching for it, so the row stays a row of buttons about which passage and knows nothing about fetching one.");
   let root = html_body_div();
   let asked =
-    "Choose a song and the passage follows it. Then press the words on the big button as you hear them sung.";
+    "Open a song file and the passage follows it. Press the words on the big button as you hear them sung. Press any line in the list to jump there, and use - and + to move its time.";
   html_p_text(root, asked);
   let desk = {
     held: {
@@ -44,7 +49,17 @@ export async function lyric_timing_preview() {
   }
   desk.inputs = lyric_timing_screen_passage(root, on_settled);
   desk.song = lyric_timing_screen_song(root, on_song);
-  desk.cards = lyric_timing_screen_cards(root, on_tap);
+  function on_select(index) {
+    let moment = lyric_timing_held_select(desk.held, index);
+    html_media_time_set(desk.song.audio, moment);
+    html_media_play(desk.song.audio);
+    lyric_timing_cards_show(desk.cards, desk.held);
+  }
+  function on_nudge(index, seconds) {
+    lyric_timing_held_nudge(desk.held, index, seconds);
+    lyric_timing_cards_show(desk.cards, desk.held);
+  }
+  desk.cards = lyric_timing_screen_cards(root, on_tap, on_select, on_nudge);
   desk.told = html_p_text(root, "");
   lyric_timing_screen_buttons_tapping(root, desk);
   lyric_timing_screen_buttons_writing(root, desk);
