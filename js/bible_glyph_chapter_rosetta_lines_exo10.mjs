@@ -1,0 +1,212 @@
+export function bible_glyph_chapter_rosetta_lines_exo10() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EXO10",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֔ה בֹּ֖א אֶל־ פַּרְעֹ֑ה כִּֽי־ אֲנִ֞י הִכְבַּ֤דְתִּי אֶת־ לִבּוֹ֙ וְאֶת־ לֵ֣ב עֲבָדָ֔יו לְמַ֗עַן שִׁתִ֛י אֹתֹתַ֥י אֵ֖לֶּה בְּקִרְבּֽוֹ׃",
+        english:
+          "Then the LORD said to Moses Go to Pharaoh for I have hardened his heart and the hearts of his officials that I may perform these miraculous signs of Mine among them",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וּלְמַ֡עַן תְּסַפֵּר֩ בְּאָזְנֵ֨י בִנְךָ֜ וּבֶן־ בִּנְךָ֗ אֵ֣ת אֲשֶׁ֤ר הִתְעַלַּ֙לְתִּי֙ בְּמִצְרַ֔יִם וְאֶת־ אֹתֹתַ֖י אֲשֶׁר־ שַׂ֣מְתִּי בָ֑ם וִֽידַעְתֶּ֖ם כִּי־ אֲנִ֥י יְהוָֽה׃",
+        english:
+          "and that you may tell your children and grandchildren how severely I dealt with the Egyptians when I performed miraculous signs among them so that all of you may know that I am the LORD",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיָּבֹ֨א מֹשֶׁ֣ה וְאַהֲרֹן֮ אֶל־ פַּרְעֹה֒ וַיֹּאמְר֣וּ אֵלָ֗יו כֹּֽה־ אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י הָֽעִבְרִ֔ים עַד־ מָתַ֣י מֵאַ֔נְתָּ לֵעָנֹ֖ת מִפָּנָ֑י שַׁלַּ֥ח עַמִּ֖י וְיַֽעַבְדֻֽנִי׃",
+        english:
+          "So Moses and Aaron went to Pharaoh and told him This is what the LORD the God of the Hebrews says How long will you refuse to humble yourself before Me Let My people go so that they may worship Me",
+      },
+      {
+        verse_number: 4,
+        original:
+          "כִּ֛י אִם־ מָאֵ֥ן אַתָּ֖ה לְשַׁלֵּ֣חַ אֶת־ עַמִּ֑י הִנְנִ֨י מֵבִ֥יא מָחָ֛ר אַרְבֶּ֖ה בִּגְבֻלֶֽךָ׃",
+        english:
+          "But if you refuse to let My people go I will bring locusts into your territory tomorrow",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְכִסָּה֙ אֶת־ עֵ֣ין הָאָ֔רֶץ וְלֹ֥א יוּכַ֖ל לִרְאֹ֣ת אֶת־ הָאָ֑רֶץ וְאָכַ֣ל׀ אֶת־ יֶ֣תֶר הַפְּלֵטָ֗ה הַנִּשְׁאֶ֤רֶת לָכֶם֙ מִן־ הַבָּרָ֔ד וְאָכַל֙ אֶת־ כָּל־ הָעֵ֔ץ הַצֹּמֵ֥חַ לָכֶ֖ם מִן־ הַשָּׂדֶֽה׃",
+        english:
+          "They will cover the face of the land so that no one can see it They will devour whatever is left after the hail and eat every tree that grows in your fields",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וּמָלְא֨וּ בָתֶּ֜יךָ וּבָתֵּ֣י כָל־ עֲבָדֶיךָ֮ וּבָתֵּ֣י כָל־ מִצְרַיִם֒ אֲשֶׁ֨ר לֹֽא־ רָא֤וּ אֲבֹתֶ֙יךָ֙ וַאֲב֣וֹת אֲבֹתֶ֔יךָ מִיּ֗וֹם הֱיוֹתָם֙ עַל־ הָ֣אֲדָמָ֔ה עַ֖ד הַיּ֣וֹם הַזֶּ֑ה וַיִּ֥פֶן וַיֵּצֵ֖א מֵעִ֥ם פַּרְעֹֽה׃",
+        english:
+          "They will fill your houses and the houses of all your officials and every Egyptian something neither your fathers nor your grandfathers have seen since the day they came into this land Then Moses turned and left Pharaoh’s presence",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיֹּאמְרוּ֩ עַבְדֵ֨י פַרְעֹ֜ה אֵלָ֗יו עַד־ מָתַי֙ יִהְיֶ֨ה זֶ֥ה לָ֙נוּ֙ לְמוֹקֵ֔שׁ שַׁלַּח֙ אֶת־ הָ֣אֲנָשִׁ֔ים וְיַֽעַבְד֖וּ אֶת־ יְהוָ֣ה אֱלֹהֵיהֶ֑ם הֲטֶ֣רֶם תֵּדַ֔ע כִּ֥י אָבְדָ֖ה מִצְרָֽיִם׃",
+        english:
+          "Pharaoh’s officials asked him How long will this man be a snare to us Let the people go so that they may worship the LORD their God Do you not yet realize that Egypt lies in ruins",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיּוּשַׁ֞ב אֶת־ מֹשֶׁ֤ה וְאֶֽת־ אַהֲרֹן֙ אֶל־ פַּרְעֹ֔ה וַיֹּ֣אמֶר אֲלֵהֶ֔ם לְכ֥וּ עִבְד֖וּ אֶת־ יְהוָ֣ה אֱלֹהֵיכֶ֑ם מִ֥י וָמִ֖י הַהֹלְכִֽים׃",
+        english:
+          "So Moses and Aaron were brought back to Pharaoh Go worship the LORD your God he said But who exactly will be going",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֹּ֣אמֶר מֹשֶׁ֔ה בִּנְעָרֵ֥ינוּ וּבִזְקֵנֵ֖ינוּ נֵלֵ֑ךְ בְּבָנֵ֨ינוּ וּבִבְנוֹתֵ֜נוּ בְּצֹאנֵ֤נוּ וּבִבְקָרֵ֙נוּ֙ נֵלֵ֔ךְ כִּ֥י חַג־ יְהוָ֖ה לָֽנוּ׃",
+        english:
+          "We will go with our young and old Moses replied We will go with our sons and daughters and with our flocks and herds for we must hold a feast to the LORD",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֹּ֣אמֶר אֲלֵהֶ֗ם יְהִ֨י כֵ֤ן יְהוָה֙ עִמָּכֶ֔ם כַּאֲשֶׁ֛ר אֲשַׁלַּ֥ח אֶתְכֶ֖ם וְאֶֽת־ טַפְּכֶ֑ם רְא֕וּ כִּ֥י רָעָ֖ה נֶ֥גֶד פְּנֵיכֶֽם׃",
+        english:
+          "Then Pharaoh told them May the LORD be with you if I ever let you go with your little ones Clearly you are bent on evil",
+      },
+      {
+        verse_number: 11,
+        original:
+          "לֹ֣א כֵ֗ן לְכֽוּ־ נָ֤א הַגְּבָרִים֙ וְעִבְד֣וּ אֶת־ יְהוָ֔ה כִּ֥י אֹתָ֖הּ אַתֶּ֣ם מְבַקְשִׁ֑ים וַיְגָ֣רֶשׁ אֹתָ֔ם מֵאֵ֖ת פְּנֵ֥י פַרְעֹֽה׃פ",
+        english:
+          "No only the men may go and worship the LORD since that is what you have been requesting And Moses and Aaron were driven from Pharaoh’s presence",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה נְטֵ֨ה יָדְךָ֜ עַל־ אֶ֤רֶץ מִצְרַ֙יִם֙ בָּֽאַרְבֶּ֔ה וְיַ֖עַל עַל־ אֶ֣רֶץ מִצְרָ֑יִם וְיֹאכַל֙ אֶת־ כָּל־ עֵ֣שֶׂב הָאָ֔רֶץ אֵ֛ת כָּל־ אֲשֶׁ֥ר הִשְׁאִ֖יר הַבָּרָֽד׃",
+        english:
+          "Then the LORD said to Moses Stretch out your hand over the land of Egypt so that the locusts may swarm over it and devour every plant in the land everything that the hail has left behind",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיֵּ֨ט מֹשֶׁ֣ה אֶת־ מַטֵּהוּ֮ עַל־ אֶ֣רֶץ מִצְרַיִם֒ וַֽיהוָ֗ה נִהַ֤ג ר֥וּחַ קָדִים֙ בָּאָ֔רֶץ כָּל־ הַיּ֥וֹם הַה֖וּא וְכָל־ הַלָּ֑יְלָה הַבֹּ֣קֶר הָיָ֔ה וְר֙וּחַ֙ הַקָּדִ֔ים נָשָׂ֖א אֶת־ הָאַרְבֶּֽה׃",
+        english:
+          "So Moses stretched out his staff over the land of Egypt and throughout that day and night the LORD sent an east wind across the land By morning the east wind had brought the locusts",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיַּ֣עַל הָֽאַרְבֶּ֗ה עַ֚ל כָּל־ אֶ֣רֶץ מִצְרַ֔יִם וַיָּ֕נַח בְּכֹ֖ל גְּב֣וּל מִצְרָ֑יִם כָּבֵ֣ד מְאֹ֔ד לְ֠פָנָיו לֹא־ הָ֨יָה כֵ֤ן אַרְבֶּה֙ כָּמֹ֔הוּ וְאַחֲרָ֖יו לֹ֥א יִֽהְיֶה־ כֵּֽן׃",
+        english:
+          "The locusts swarmed across the land and settled over the entire territory of Egypt Never before had there been so many locusts and never again will there be",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיְכַ֞ס אֶת־ עֵ֣ין כָּל־ הָאָרֶץ֮ וַתֶּחְשַׁ֣ךְ הָאָרֶץ֒ וַיֹּ֜אכַל אֶת־ כָּל־ עֵ֣שֶׂב הָאָ֗רֶץ וְאֵת֙ כָּל־ פְּרִ֣י הָעֵ֔ץ אֲשֶׁ֥ר הוֹתִ֖יר הַבָּרָ֑ד וְלֹא־ נוֹתַ֨ר כָּל־ יֶ֧רֶק בָּעֵ֛ץ וּבְעֵ֥שֶׂב הַשָּׂדֶ֖ה בְּכָל־ אֶ֥רֶץ מִצְרָֽיִם׃",
+        english:
+          "They covered the face of all the land until it was black and they consumed all the plants on the ground and all the fruit on the trees that the hail had left behind Nothing green was left on any tree or plant in all the land of Egypt",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיְמַהֵ֣ר פַּרְעֹ֔ה לִקְרֹ֖א לְמֹשֶׁ֣ה וּֽלְאַהֲרֹ֑ן וַיֹּ֗אמֶר חָטָ֛אתִי לַיהוָ֥ה אֱלֹֽהֵיכֶ֖ם וְלָכֶֽם׃",
+        english:
+          "Pharaoh quickly summoned Moses and Aaron and said I have sinned against the LORD your God and against you",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְעַתָּ֗ה שָׂ֣א נָ֤א חַטָּאתִי֙ אַ֣ךְ הַפַּ֔עַם וְהַעְתִּ֖ירוּ לַיהוָ֣ה אֱלֹהֵיכֶ֑ם וְיָסֵר֙ מֵֽעָלַ֔י רַ֖ק אֶת־ הַמָּ֥וֶת הַזֶּֽה׃",
+        english:
+          "Now please forgive my sin once more and appeal to the LORD your God that He may remove this death from me",
+      },
+      {
+        verse_number: 18,
+        original: "וַיֵּצֵ֖א מֵעִ֣ם פַּרְעֹ֑ה וַיֶּעְתַּ֖ר אֶל־ יְהוָֽה׃",
+        english: "So Moses left Pharaoh’s presence and appealed to the LORD",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיַּהֲפֹ֨ךְ יְהוָ֤ה רֽוּחַ־ יָם֙ חָזָ֣ק מְאֹ֔ד וַיִּשָּׂא֙ אֶת־ הָ֣אַרְבֶּ֔ה וַיִּתְקָעֵ֖הוּ יָ֣מָּה סּ֑וּף לֹ֤א נִשְׁאַר֙ אַרְבֶּ֣ה אֶחָ֔ד בְּכֹ֖ל גְּב֥וּל מִצְרָֽיִם׃",
+        english:
+          "And the LORD changed the wind to a very strong west wind that carried off the locusts and blew them into the Red Sea Not a single locust remained anywhere in Egypt",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיְחַזֵּ֥ק יְהוָ֖ה אֶת־ לֵ֣ב פַּרְעֹ֑ה וְלֹ֥א שִׁלַּ֖ח אֶת־ בְּנֵ֥י יִשְׂרָאֵֽל׃פ",
+        english:
+          "But the LORD hardened Pharaoh’s heart and he would not let the Israelites go",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה נְטֵ֤ה יָֽדְךָ֙ עַל־ הַשָּׁמַ֔יִם וִ֥יהִי חֹ֖שֶׁךְ עַל־ אֶ֣רֶץ מִצְרָ֑יִם וְיָמֵ֖שׁ חֹֽשֶׁךְ׃",
+        english:
+          "Then the LORD said to Moses Stretch out your hand toward heaven so that darkness may spread over the land of Egypt a palpable darkness",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֵּ֥ט מֹשֶׁ֛ה אֶת־ יָד֖וֹ עַל־ הַשָּׁמָ֑יִם וַיְהִ֧י חֹֽשֶׁךְ־ אֲפֵלָ֛ה בְּכָל־ אֶ֥רֶץ מִצְרַ֖יִם שְׁלֹ֥שֶׁת יָמִֽים׃",
+        english:
+          "So Moses stretched out his hand toward heaven and total darkness covered all the land of Egypt for three days",
+      },
+      {
+        verse_number: 23,
+        original:
+          "לֹֽא־ רָא֞וּ אִ֣ישׁ אֶת־ אָחִ֗יו וְלֹא־ קָ֛מוּ אִ֥ישׁ מִתַּחְתָּ֖יו שְׁלֹ֣שֶׁת יָמִ֑ים וּֽלְכָל־ בְּנֵ֧י יִשְׂרָאֵ֛ל הָ֥יָה א֖וֹר בְּמוֹשְׁבֹתָֽם׃",
+        english:
+          "No one could see anyone else and for three days no one left his place Yet all the Israelites had light in their dwellings",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיִּקְרָ֨א פַרְעֹ֜ה אֶל־ מֹשֶׁ֗ה וַיֹּ֙אמֶר֙ לְכוּ֙ עִבְד֣וּ אֶת־ יְהוָ֔ה רַ֛ק צֹאנְכֶ֥ם וּבְקַרְכֶ֖ם יֻצָּ֑ג גַּֽם־ טַפְּכֶ֖ם יֵלֵ֥ךְ עִמָּכֶֽם׃",
+        english:
+          "Then Pharaoh summoned Moses and said Go worship the LORD Even your little ones may go with you only your flocks and herds must stay behind",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֹּ֣אמֶר מֹשֶׁ֔ה גַּם־ אַתָּ֛ה תִּתֵּ֥ן בְּיָדֵ֖נוּ זְבָחִ֣ים וְעֹל֑וֹת וְעָשִׂ֖ינוּ לַיהוָ֥ה אֱלֹהֵֽינוּ׃",
+        english:
+          "But Moses replied You must also provide us with sacrifices and burnt offerings to present to the LORD our God",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְגַם־ מִקְנֵ֜נוּ יֵלֵ֣ךְ עִמָּ֗נוּ לֹ֤א תִשָּׁאֵר֙ פַּרְסָ֔ה כִּ֚י מִמֶּ֣נּוּ נִקַּ֔ח לַעֲבֹ֖ד אֶת־ יְהוָ֣ה אֱלֹהֵ֑ינוּ וַאֲנַ֣חְנוּ לֹֽא־ נֵדַ֗ע מַֽה־ נַּעֲבֹד֙ אֶת־ יְהוָ֔ה עַד־ בֹּאֵ֖נוּ שָֽׁמָּה׃",
+        english:
+          "Even our livestock must go with us not a hoof will be left behind for we will need some of them to worship the LORD our God and we will not know how we are to worship the LORD until we arrive",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיְחַזֵּ֥ק יְהוָ֖ה אֶת־ לֵ֣ב פַּרְעֹ֑ה וְלֹ֥א אָבָ֖ה לְשַׁלְּחָֽם׃",
+        english:
+          "But the LORD hardened Pharaoh’s heart and he was unwilling to let them go",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיֹּֽאמֶר־ ל֥וֹ פַרְעֹ֖ה לֵ֣ךְ מֵעָלָ֑י הִשָּׁ֣מֶר לְךָ֗ אֶל־ תֹּ֙סֶף֙ רְא֣וֹת פָּנַ֔י כִּ֗י בְּי֛וֹם רְאֹתְךָ֥ פָנַ֖י תָּמֽוּת׃",
+        english:
+          "Depart from me Pharaoh said to Moses Make sure you never see my face again for on the day you see my face you will die",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיֹּ֥אמֶר מֹשֶׁ֖ה כֵּ֣ן דִּבַּ֑רְתָּ לֹא־ אֹסִ֥ף ע֖וֹד רְא֥וֹת פָּנֶֽיךָ׃פ",
+        english: "As you say Moses replied I will never see your face again",
+      },
+    ],
+  };
+  return chapter;
+}
