@@ -35,6 +35,13 @@ export function js_duplicate_elements_cases() {
       names: [],
       why: "a list of written words may perfectly well say the same thing twice and mean it - only names stand for something that gets run or read",
     },
+    {
+      code: text_frozen(
+        "let a = f();\nlet b = g();\nlet c = h();\nlet r = [a, b, a, c, b, c, a];\n",
+      ),
+      names: [],
+      why: "every name in the list is set a line or two above it, so it holds values made here rather than units registered from elsewhere - the characters of a line of code, and the colours matching them, want the same thing at more than one place",
+    },
   ];
   return cases;
 }
