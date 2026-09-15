@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_vehicle_draw } from "./app_g_bless_vehicle_draw.mjs";
+import { bless_vehicle_draw } from "./bless_vehicle_draw.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_vehicles_draw(parent, vehicles) {
   arguments_assert(arguments, 2);
@@ -9,7 +9,7 @@ export function app_g_bless_vehicles_draw(parent, vehicles) {
   ("front is decided by the order they were made in, and a car sharing a row with a person is");
   ("a car at the kerb with somebody standing beside it.");
   function vehicle_draw(vehicle) {
-    app_g_bless_vehicle_draw(parent, vehicle);
+    bless_vehicle_draw(parent, vehicle);
   }
   each(vehicles, vehicle_draw);
 }
