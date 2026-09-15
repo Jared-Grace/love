@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_not } from "./app_code_lesson_expression_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
@@ -5,7 +7,10 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_recall(root, context) {
+export function app_code_lesson_expression_choose_order_not_pair_recall(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the two things put back in front of the learner before the run on the lesson putting a ! in front of a joined pair: what the ! does, and what parentheses do");
   ("They stand in a card of their own above the run because they are not part of it - they are what the run is about to be read with. The learner has both of them already and has never had this much under the one pair of parentheses: the ! was met with a single comparison under it and the parentheses were met round two things with nothing in front of them. What is new is only the meeting.");
@@ -15,7 +20,12 @@ export function app_code_lesson_expression_choose_order_not_pair_recall(root, co
   let right_parenthesis = js_code_parenthesis_right();
   let recall_card = app_code_container_light_blue(root);
   let changes = app_code_not_changes_true_false("");
-  app_code_remember_from_lesson(recall_card, context, app_code_lesson_expression_not, changes);
+  app_code_remember_from_lesson(
+    recall_card,
+    context,
+    app_code_lesson_expression_not,
+    changes,
+  );
   let inside_first = app_code_parentheses_inside_before_outside("");
   html_div_cycle_code(recall_card, [
     "And whatever is inside ",
