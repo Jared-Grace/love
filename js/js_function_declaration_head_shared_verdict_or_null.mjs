@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
@@ -6,7 +7,6 @@ import { list_take } from "./list_take.mjs";
 import { js_function_declaration_private_names } from "./js_function_declaration_private_names.mjs";
 import { js_node_copy } from "./js_node_copy.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
 import { list_difference } from "./list_difference.mjs";
@@ -41,8 +41,7 @@ export function js_function_declaration_head_shared_verdict_or_null(
   let copied = js_node_copy(head);
   let shape = js_statements_shape(copied, private_names);
   let shared_shape = property_get(shared, "shape");
-  let same_is = equal(shape, shared_shape);
-  let apart_is = not(same_is);
+  let apart_is = equal_not(shape, shared_shape);
   if (apart_is) {
     let unrelated = null;
     return unrelated;
