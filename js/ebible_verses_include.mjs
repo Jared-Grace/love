@@ -1,4 +1,5 @@
 export function ebible_verses_include() {
+  "The USFM markers whose text is kept as part of a verse when an eBible source is read into verses.";
   let v = [
     "add",
     "bd",
