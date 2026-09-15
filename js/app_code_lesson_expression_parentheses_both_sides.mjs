@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_parentheses_one_side } from "./app_code_lesson_expression_parentheses_one_side.mjs";
 import { app_code_lesson_expression_parentheses_both_sides_card_flat_line } from "./app_code_lesson_expression_parentheses_both_sides_card_flat_line.mjs";
 import { app_code_comparison_side_wrapped } from "./app_code_comparison_side_wrapped.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
@@ -68,13 +70,12 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     let recall = app_code_container_light_blue(root);
     ("On its own is this lesson's OWN angle and is kept deliberately - it does not reach for the shared inside-before-outside sentence, which is the wrong frame here: with a parenthesis on each side, neither one is outside the other, so before what has no answer. What each parenthesis does have is that it collapses to a single true or false by itself, which is exactly what the two lines below then show.");
     ("Solve, not work it out. The track runs on solve - a childhood math word, decided in the arithmetic-both-sides lesson - and work out is nowhere else in learner-facing text. The comparison is also named rather than left as it, and it is the comparison that is solved rather than the parentheses doing the solving: parentheses do not solve anything, they say what is solved apart from the rest.");
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_parentheses_one_side, [
-      "a comparison inside ",
-      open,
-      " and ",
-      close,
-      " is solved on its own",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_parentheses_one_side,
+      ["a comparison inside ", open, " and ", close, " is solved on its own"],
+    );
     let both = app_code_container_light_blue(root);
     ("The line is posed first and then solved, which is the shape of the two screens behind this one - the comparing-a-comparison walkthrough and the choose-order-pair run both open on Suppose we want to solve and work down from it. A learner arriving here reads the third one as the same act rather than as a third way of being taught.");
     ("The card used to spend its first four rows arguing that the line was allowed to exist: each side named as a comparison, then both sides of === can be comparisons, then so we can put one on either side of another ===. That is construction, and this lesson never asks for it - the quiz hands over a finished line every time and asks what it comes to. The two rows that did solving were the last two, and they jumped from the assembled line straight to its value, hiding the one step that is actually new here: two false values compared against each other. Solving it row by row spends the card on the direction the learner is graded in, and costs two rows fewer than arguing the line into existence first.");
