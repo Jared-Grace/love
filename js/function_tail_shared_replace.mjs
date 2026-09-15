@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { function_transform_checked_done } from "./function_transform_checked_done.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
@@ -53,8 +54,7 @@ export async function function_tail_shared_replace(f_name, shared_name) {
     };
     return unrelated;
   }
-  let taken_is = property_get(verdict, "collapsible");
-  let refused_is = not(taken_is);
+  let refused_is = property_not(verdict, "collapsible");
   if (refused_is) {
     let reason = property_get(verdict, "reason");
     let refused = {
