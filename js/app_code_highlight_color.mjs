@@ -1,6 +1,8 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_color_brand_blue } from "./app_shared_color_brand_blue.mjs";
 export function app_code_highlight_color() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("the colour behind a word that is being pointed at, and behind the piece of code that word is pointing to");
   ("Two things wear it and they are the whole reason it is a function: a word in an English line and a chip in a line of code, sitting a few lines apart, and the only thing telling a learner they are the same thing is that they are the same colour. Written out twice, a later change to one would quietly break the pointing, and nothing would go red.");

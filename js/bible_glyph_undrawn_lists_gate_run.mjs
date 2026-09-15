@@ -1,4 +1,4 @@
-import { list_map_property_get } from "./list_map_property_get.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { equal } from "./equal.mjs";
