@@ -1,3 +1,8 @@
+import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
+import { text_combine } from "./text_combine.mjs";
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { equal } from "./equal.mjs";
 import { html_body_div } from "./html_body_div.mjs";
@@ -41,7 +46,7 @@ export async function app_original_bible_word_voice_trial_preview() {
   let tally = html_p_text(root, "");
   html_style_assign(tally, {
     fontSize: "0.85rem",
-    color: "#5d6874",
+    color: app_shared_color_gray_dark(),
   });
   let list = html_div(root);
   let f_name = fn_name("bible_word_voice_trial_rows");
@@ -105,8 +110,9 @@ export async function app_original_bible_word_voice_trial_preview() {
     html_clear(list);
     for (let row of s.rows) {
       let card = html_div(list);
+      let right = app_shared_color_gray_light();
       html_style_assign(card, {
-        borderTop: "1px solid #d6dce2",
+        borderTop: text_combine("1px solid ", right),
         padding: "12px 0",
         display: "grid",
         gap: "6px",
@@ -121,7 +127,7 @@ export async function app_original_bible_word_voice_trial_preview() {
       let text3 = String(row.number);
       let number = html_span_text(head, text3);
       html_style_assign(number, {
-        color: "#5d6874",
+        color: app_shared_color_gray_dark(),
         fontSize: "0.8rem",
         minWidth: "1.5rem",
       });
@@ -140,7 +146,7 @@ export async function app_original_bible_word_voice_trial_preview() {
         row.translit + " · " + gloss + " · Strong's " + row.strong,
       );
       html_style_assign(meta, {
-        color: "#5d6874",
+        color: app_shared_color_gray_dark(),
         fontSize: "0.85rem",
       });
       let controls = html_div(card);
@@ -169,8 +175,8 @@ export async function app_original_bible_word_voice_trial_preview() {
         for (let [k, b] of pick_buttons) {
           let on = equal(current, k);
           html_style_assign(b, {
-            background: on ? "#1c2530" : "",
-            color: on ? "#ffffff" : "",
+            background: on ? app_shared_color_page_dark() : "",
+            color: on ? app_shared_color_white() : "",
           });
         }
       }
@@ -212,7 +218,7 @@ export async function app_original_bible_word_voice_trial_preview() {
       }
       html_on_input(box, lambda9);
       html_style_assign(saved, {
-        color: "#5d6874",
+        color: app_shared_color_gray_dark(),
         fontSize: "0.75rem",
         minHeight: "1em",
       });
