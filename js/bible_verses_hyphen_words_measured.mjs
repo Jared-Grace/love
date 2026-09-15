@@ -1,3 +1,4 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -14,7 +15,6 @@ import { text_split_dash } from "./text_split_dash.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
 import { not } from "./not.mjs";
 import { list_map } from "./list_map.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -85,8 +85,7 @@ export function bible_verses_hyphen_words_measured(verses) {
     }
     let parts = list_map(pieces, piece_measured);
     function part_standalone_is(part) {
-      let alone = property_get(part, "alone");
-      let standalone = greater_than(alone, 0);
+      let standalone = property_greater_than(part, "alone", 0);
       return standalone;
     }
     let standing = list_filter(parts, part_standalone_is);
@@ -118,8 +117,7 @@ export function bible_verses_hyphen_words_measured(verses) {
     parts_standalone = add(parts_standalone, right2);
     let right3 = property_get(row, "count");
     sightings = add(sightings, right3);
-    let joined_count = property_get(row, "joined_count");
-    let written = greater_than(joined_count, 0);
+    let written = property_greater_than(row, "joined_count", 0);
     if (written) {
       joined_written = add(joined_written, 1);
     }
