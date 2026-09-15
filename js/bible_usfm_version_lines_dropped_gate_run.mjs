@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -12,7 +13,6 @@ import { list_add } from "./list_add.mjs";
 import { json_to } from "./json_to.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_join_comma_space } from "./list_join_comma_space.mjs";
 export async function bible_usfm_version_lines_dropped_gate_run() {
   arguments_assert(arguments, 0);
@@ -49,8 +49,7 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
         " lines were thrown away, and there are over six thousand - did the shelf move?",
     );
   }
-  let unnamed_size = list_size(unnamed);
-  let unread = greater_than(unnamed_size, 0);
+  let unread = list_size_greater_than(unnamed, 0);
   if (unread) {
     throw new Error(
       "bible usfm version lines dropped gate: the reading now throws away lines marked " +
@@ -70,8 +69,7 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
       list_add(gone, allowed_name);
     }
   }
-  let gone_size = list_size(gone);
-  let stale = greater_than(gone_size, 0);
+  let stale = list_size_greater_than(gone, 0);
   if (stale) {
     throw new Error(
       "bible usfm version lines dropped gate: nothing on the shelf wears the mark " +
