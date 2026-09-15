@@ -7,7 +7,7 @@ import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
 import { bless_block_road } from "./bless_block_road.mjs";
 import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_g_bless_blocks_raise(rows, blocks) {
+export function bless_blocks_raise(rows, blocks) {
   arguments_assert(arguments, 2);
   ("Builds every block into the ground - the buildings stood up, and the grass, the road, the");
   ("pavement and the driveways laid down in front of them.");
