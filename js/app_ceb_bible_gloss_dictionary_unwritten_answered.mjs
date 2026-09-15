@@ -1,3 +1,4 @@
+import { property_nested_or_null } from "./property_nested_or_null.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -5,8 +6,6 @@ import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written } from "./bible_words_written.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { property_get } from "./property_get.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -35,8 +34,7 @@ export async function app_ceb_bible_gloss_dictionary_unwritten_answered() {
   let unwritten_answered = 0;
   let unwritten_rows = [];
   function word_read(word) {
-    let held = property_get(known, word);
-    let root = property_get_or_null(held, "root");
+    let root = property_nested_or_null(known, word, "root");
     let missing = null_is(root);
     let bare = missing ? true : equal(root, "");
     let answered = not(bare);
