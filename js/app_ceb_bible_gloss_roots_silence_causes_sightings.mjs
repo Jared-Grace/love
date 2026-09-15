@@ -1,7 +1,6 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_classes_backing_mark } from "./gloss_classes_backing_mark.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
@@ -16,8 +15,7 @@ export function app_ceb_bible_gloss_roots_silence_causes_sightings(
   arguments_assert(arguments, 3);
   let marked = gloss_classes_backing_mark(classes, known);
   function silent_is(one_class) {
-    let backing = property_get_or_null(one_class, "backing");
-    let answer = equal(backing, "silent");
+    let answer = property_get_or_null_equal(one_class, "backing", "silent");
     return answer;
   }
   let silent = list_filter(marked, silent_is);
