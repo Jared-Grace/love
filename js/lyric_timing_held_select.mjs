@@ -1,8 +1,9 @@
-import { math_max } from "./math_max.mjs";
-import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { list_filter } from "./list_filter.mjs";
 import { number_is } from "./number_is.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
+import { subtract } from "./subtract.mjs";
+import { math_max } from "./math_max.mjs";
 export function lyric_timing_held_select(held, index) {
   arguments_assert(arguments, 2);
   ("$plain held");
@@ -12,7 +13,8 @@ export function lyric_timing_held_select(held, index) {
   ("A line with no time is played from the nearest timed line before it, because that is the last place in the song anything is known about. Where nothing before it is timed the song starts from the beginning.");
   let lead = 2;
   held.cursor = index;
-  let known = held.starts.slice(0, index + 1).filter(number_is);
+  let reached = held.starts.slice(0, index + 1);
+  let known = list_filter(reached, number_is);
   let none = list_empty_is(known);
   let before = none ? 0 : known[subtract(known.length, 1)];
   let b = subtract(before, lead);
