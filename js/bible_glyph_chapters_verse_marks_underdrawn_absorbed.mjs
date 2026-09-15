@@ -1,9 +1,9 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_verse_marks_underdrawn_roots } from "./bible_glyph_chapters_verse_marks_underdrawn_roots.mjs";
 import { property_get } from "./property_get.mjs";
 import { not } from "./not.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { text_is } from "./text_is.mjs";
@@ -37,15 +37,13 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
     let rows = property_get(filed_rows, "rows");
     let glosses = [];
     for (let row of rows) {
-      let number = property_get(row, "verse_number");
-      let b = equal(number, verse_number);
+      let b = property_equals(row, "verse_number", verse_number);
       if (not(b)) {
         continue;
       }
       let words = property_get(row, "words");
       for (let word of words) {
-        let word_glyph = property_get(word, "glyph");
-        let b2 = equal(word_glyph, glyph);
+        let b2 = property_equals(word, "glyph", glyph);
         if (not(b2)) {
           continue;
         }
@@ -57,8 +55,7 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
     let verses = property_get(parsed, "verses");
     let plain = [];
     for (let verse of verses) {
-      let number = property_get(verse, "verse_number");
-      let b3 = equal(number, verse_number);
+      let b3 = property_equals(verse, "verse_number", verse_number);
       if (not(b3)) {
         continue;
       }
