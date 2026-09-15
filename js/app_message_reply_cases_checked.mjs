@@ -5,7 +5,7 @@ import { property_get } from "./property_get.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
 import { json_equal } from "./json_equal.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-export async function reply_cases_checked() {
+export async function app_message_reply_cases_checked() {
   arguments_assert(arguments, 0);
   ("Every worked case run through the reply rules as they stand, each one carrying what it expected, what it got, and whether those are the same.");
   ("It answers rather than throws, so the same reading serves the gate that must fail on a difference and the screen that must show one. A gate is a reading plus a refusal, and putting the refusal here would mean the screen could only ask by catching a complaint.");
