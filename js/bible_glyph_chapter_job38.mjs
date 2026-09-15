@@ -258,7 +258,7 @@ export function bible_glyph_chapter_job38() {
         verse_number: 14,
         words: [
           "The",
-          "$earth",
+          "earth",
           "takes",
           "shape",
           "like",
