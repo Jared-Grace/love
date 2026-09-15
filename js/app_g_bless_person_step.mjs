@@ -1,5 +1,5 @@
 import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
-import { app_g_bless_person_slide } from "./app_g_bless_person_slide.mjs";
+import { bless_person_slide } from "./bless_person_slide.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { equal } from "./equal.mjs";
@@ -72,5 +72,5 @@ export function app_g_bless_person_step(world, person) {
   ("clock, so there is nothing to spread out.");
   let pace = property_get(person, "pace");
   let seconds = divide(pace, 1000);
-  app_g_bless_person_slide(person, seconds);
+  bless_person_slide(person, seconds);
 }
