@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +8,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { null_is } from "./null_is.mjs";
 import { gloss_explains_word_wording } from "./gloss_explains_word_wording.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
@@ -42,8 +42,7 @@ export async function gloss_chapter_pointers_dangling_repair(
         let folded = text_lower_to(word);
         let pointer = lambda$pointer_is(explain);
         if (pointer) {
-          let earlier = property_get_or_null(said, folded);
-          let alone = null_is(earlier);
+          let alone = property_null_is(said, folded);
           if (alone) {
             let wording = gloss_explains_word_wording(wordings, word);
             let held = null_not_is(wording);
