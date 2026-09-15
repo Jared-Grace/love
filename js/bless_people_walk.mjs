@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_person_walk } from "./bless_person_walk.mjs";
-import { app_g_bless_repaint_ms } from "./app_g_bless_repaint_ms.mjs";
+import { bless_repaint_ms } from "./bless_repaint_ms.mjs";
 export function bless_people_walk(world, on_move) {
   arguments_assert(arguments, 2);
   ("The crowd goes about its business for as long as the game is open - everybody set");
@@ -22,7 +22,7 @@ export function bless_people_walk(world, on_move) {
     bless_person_walk(world, person);
   }
   each(npcs, person_walk);
-  let ms = app_g_bless_repaint_ms();
+  let ms = bless_repaint_ms();
   function repainted() {
     on_move();
     setTimeout(repainted, ms);

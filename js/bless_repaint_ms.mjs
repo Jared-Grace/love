@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_g_bless_repaint_ms() {
+export function bless_repaint_ms() {
   arguments_assert(arguments, 0);
   ("How often the screen is drawn again while the crowd is walking, in thousandths of a");
   ("second.");
