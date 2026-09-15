@@ -3,7 +3,7 @@ import { bless_block_roof } from "./bless_block_roof.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_block_faces } from "./bless_block_faces.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
+import { bless_tiles_pave } from "./bless_tiles_pave.mjs";
 import { bless_building_face } from "./bless_building_face.mjs";
 import { each_index } from "./each_index.mjs";
 export function bless_buildings_raise(rows, buildings, block) {
@@ -65,14 +65,14 @@ export function bless_buildings_raise(rows, buildings, block) {
   let faces = bless_block_faces(block);
   function building_raise(building, index) {
     let yard = property_get(building, "yard");
-    app_g_bless_tiles_pave(rows, yard, item_yard);
+    bless_tiles_pave(rows, yard, item_yard);
     let roof = property_get(building, "roof");
-    app_g_bless_tiles_pave(rows, roof, item_roof);
+    bless_tiles_pave(rows, roof, item_roof);
     let walls = property_get(building, "walls");
     let item_wall = bless_building_face(faces, index);
-    app_g_bless_tiles_pave(rows, walls, item_wall);
+    bless_tiles_pave(rows, walls, item_wall);
     let doorways = property_get(building, "doorways");
-    app_g_bless_tiles_pave(rows, doorways, item_wall);
+    bless_tiles_pave(rows, doorways, item_wall);
   }
   each_index(buildings, building_raise);
 }
