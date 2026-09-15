@@ -6,12 +6,7 @@ import { app_shared_animation_sleep } from "./app_shared_animation_sleep.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_crossing_clear_is } from "./bless_crossing_clear_is.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
-export async function app_g_bless_crossing_wait(
-  world,
-  to,
-  player,
-  player_img_c,
-) {
+export async function bless_crossing_wait(world, to, player, player_img_c) {
   arguments_assert(arguments, 4);
   ("Holds the walker at the kerb: they look one way, then the other, then stand there until");
   ("the road is clear, and only then does the walk go on.");
