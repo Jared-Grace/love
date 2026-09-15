@@ -1,4 +1,4 @@
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_sightings_lowered } from "./bible_words_sightings_lowered.mjs";
@@ -92,8 +92,7 @@ export function bible_words_slips(sightings, words, times) {
   }
   let rows = list_map(words, word_examined);
   function row_suspect(row) {
-    let nearer = property_get(row, "nearer");
-    let not_alone = list_empty_not_is(nearer);
+    let not_alone = property_list_empty_not_is(row, "nearer");
     return not_alone;
   }
   let suspect = list_filter(rows, row_suspect);
