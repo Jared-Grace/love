@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -28,8 +29,7 @@ export async function app_ceb_bible_gloss_root_omitted_wordings_walked(words) {
   }
   each(words, word_start);
   function entry_read(found) {
-    let entry = property_get(found, "entry");
-    let word = property_get(entry, word_key);
+    let word = property_path_get_2(found, "entry", word_key);
     let lowered = text_lower_to(word);
     let wanted = list_includes(words, lowered);
     if (not(wanted)) {
