@@ -6,7 +6,7 @@ import { app_shared_game_tile_coordinates_get } from "./app_shared_game_tile_coo
 import { app_g_hero_evil_aimed_is } from "./app_g_hero_evil_aimed_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_hero_burn } from "./app_g_hero_burn.mjs";
-import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
+import { bless_walk } from "./bless_walk.mjs";
 export function app_g_hero_tapped(hero) {
   arguments_assert(arguments, 1);
   ("One tap, two verbs, told apart by what is standing there: the evil person is burned, and everywhere else is walked to.");
@@ -31,7 +31,7 @@ export function app_g_hero_tapped(hero) {
     if (aimed) {
       await app_g_hero_burn(hero);
     } else {
-      await app_g_bless_walk(world, target, player_img_c, div_map, render);
+      await bless_walk(world, target, player_img_c, div_map, render);
     }
     property_set(hero, "busy", false);
     render();

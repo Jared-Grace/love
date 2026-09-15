@@ -15,7 +15,7 @@ import { app_shared_game_player_center } from "./app_shared_game_player_center.m
 import { app_shared_game_player_move_animate } from "./app_shared_game_player_move_animate.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_path_steps } from "./g_path_steps.mjs";
-export async function app_g_bless_walk(
+export async function bless_walk(
   world,
   target,
   player_img_c,
