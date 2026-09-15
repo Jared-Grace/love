@@ -1,4 +1,4 @@
-import { list_size_greater_than } from "./list_size_greater_than.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,7 +13,6 @@ import { list_add } from "./list_add.mjs";
 import { json_to } from "./json_to.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_size } from "./list_size.mjs";
-import { list_join_comma_space } from "./list_join_comma_space.mjs";
 export async function bible_usfm_version_lines_dropped_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: prove that every line of the Berean shelf the reading throws away wears a mark somebody has opened and written down as carrying no words of scripture. Throws so the dispatcher seam exits nonzero.");
@@ -49,11 +48,12 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
         " lines were thrown away, and there are over six thousand - did the shelf move?",
     );
   }
+  let f_name = fn_name("bible_usfm_markers_dropped_lines_allowed");
   list_empty_is_assert_json(unnamed, {
     unnamed,
     hint: text_combine_multiple([
       "the reading now throws away lines under these marks and nobody has read them - the lines are printed above, so open them, decide whether they are words anybody said, and either mend the mark or write down beside it in ",
-      fn_name("bible_usfm_markers_dropped_lines_allowed"),
+      f_name,
       " what they are",
     ]),
   });
@@ -65,11 +65,12 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
       list_add(gone, allowed_name);
     }
   }
+  let f_name2 = fn_name("bible_usfm_markers_dropped_lines_allowed");
   list_empty_is_assert_json(gone, {
     gone,
     hint: text_combine_multiple([
       "nothing on the shelf wears these marks any more, so the sentence written beside each is describing nothing - either the shelf moved or those lines are now being read as scripture, and the line should be taken out of ",
-      fn_name("bible_usfm_markers_dropped_lines_allowed"),
+      f_name2,
       " by whoever checked which",
     ]),
   });
