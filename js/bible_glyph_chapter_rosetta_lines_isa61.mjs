@@ -1,0 +1,89 @@
+export function bible_glyph_chapter_rosetta_lines_isa61() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "ISA61",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "ר֛וּחַ אֲדֹנָ֥י יְהוִ֖ה עָלָ֑י יַ֡עַן מָשַׁח֩ יְהוָ֨ה אֹתִ֜י לְבַשֵּׂ֣ר עֲנָוִ֗ים שְׁלָחַ֙נִי֙ לַחֲבֹ֣שׁ לְנִשְׁבְּרֵי־ לֵ֔ב לִקְרֹ֤א לִשְׁבוּיִם֙ דְּר֔וֹר וְלַאֲסוּרִ֖ים פְּקַח־ קֽוֹחַ׃",
+        english:
+          "The Spirit of the Lord GOD is on Me because the LORD has anointed Me to preach good news to the poor He has sent Me to bind up the brokenhearted to proclaim liberty to the captives and freedom to the prisoners",
+      },
+      {
+        verse_number: 2,
+        original:
+          "לִקְרֹ֤א שְׁנַת־ רָצוֹן֙ לַֽיהוָ֔ה וְי֥וֹם נָקָ֖ם לֵאלֹהֵ֑ינוּ לְנַחֵ֖ם כָּל־ אֲבֵלִֽים׃",
+        english:
+          "to proclaim the year of the LORD’s favor and the day of our God’s vengeance to comfort all who mourn",
+      },
+      {
+        verse_number: 3,
+        original:
+          "לָשׂ֣וּם׀ לַאֲבֵלֵ֣י צִיּ֗וֹן לָתֵת֩ לָהֶ֨ם פְּאֵ֜ר תַּ֣חַת אֵ֗פֶר שֶׁ֤מֶן שָׂשׂוֹן֙ תַּ֣חַת אֵ֔בֶל מַעֲטֵ֣ה תְהִלָּ֔ה תַּ֖חַת ר֣וּחַ כֵּהָ֑ה וְקֹרָ֤א לָהֶם֙ אֵילֵ֣י הַצֶּ֔דֶק מַטַּ֥ע יְהוָ֖ה לְהִתְפָּאֵֽר׃",
+        english:
+          "to console the mourners in Zion to give them a crown of beauty for ashes the oil of joy for mourning and a garment of praise for a spirit of despair So they will be called oaks of righteousness the planting of the LORD that He may be glorified",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וּבָנוּ֙ חָרְב֣וֹת עוֹלָ֔ם שֹׁמְמ֥וֹת רִֽאשֹׁנִ֖ים יְקוֹמֵ֑מוּ וְחִדְּשׁוּ֙ עָ֣רֵי חֹ֔רֶב שֹׁמְמ֖וֹת דּ֥וֹר וָדֽוֹר׃",
+        english:
+          "They will rebuild the ancient ruins they will restore the places long devastated they will renew the ruined cities the desolations of many generations",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְעָמְד֣וּ זָרִ֔ים וְרָע֖וּ צֹאנְכֶ֑ם וּבְנֵ֣י נֵכָ֔ר אִכָּרֵיכֶ֖ם וְכֹרְמֵיכֶֽם׃",
+        english:
+          "Strangers will stand and feed your flocks and foreigners will be your plowmen and vinedressers",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְאַתֶּ֗ם כֹּהֲנֵ֤י יְהוָה֙ תִּקָּרֵ֔אוּ מְשָׁרְתֵ֣י אֱלֹהֵ֔ינוּ יֵאָמֵ֖ר לָכֶ֑ם חֵ֤יל גּוֹיִם֙ תֹּאכֵ֔לוּ וּבִכְבוֹדָ֖ם תִּתְיַמָּֽרוּ׃",
+        english:
+          "But you will be called the priests of the LORD they will speak of you as ministers of our God you will feed on the wealth of nations and you will boast in their riches",
+      },
+      {
+        verse_number: 7,
+        original:
+          "תַּ֤חַת בָּשְׁתְּכֶם֙ מִשְׁנֶ֔ה וּכְלִמָּ֖ה יָרֹ֣נּוּ חֶלְקָ֑ם לָכֵ֤ן בְּאַרְצָם֙ מִשְׁנֶ֣ה יִירָ֔שׁוּ שִׂמְחַ֥ת עוֹלָ֖ם תִּֽהְיֶ֥ה לָהֶֽם׃",
+        english:
+          "Instead of shame My people will have a double portion and instead of humiliation they will rejoice in their share and so they will inherit a double portion in their land and everlasting joy will be theirs",
+      },
+      {
+        verse_number: 8,
+        original:
+          "כִּ֣י אֲנִ֤י יְהוָה֙ אֹהֵ֣ב מִשְׁפָּ֔ט שֹׂנֵ֥א גָזֵ֖ל בְּעוֹלָ֑ה וְנָתַתִּ֤י פְעֻלָּתָם֙ בֶּאֱמֶ֔ת וּבְרִ֥ית עוֹלָ֖ם אֶכְר֥וֹת לָהֶֽם׃",
+        english:
+          "For I the LORD love justice I hate robbery and iniquity in My faithfulness I will give them their recompense and make an everlasting covenant with them",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְנוֹדַ֤ע בַּגּוֹיִם֙ זַרְעָ֔ם וְצֶאֱצָאֵיהֶ֖ם בְּת֣וֹךְ הָעַמִּ֑ים כָּל־ רֹֽאֵיהֶם֙ יַכִּיר֔וּם כִּ֛י הֵ֥ם זֶ֖רַע בֵּרַ֥ךְ יְהוָֽה׃ס",
+        english:
+          "Their descendants will be known among the nations and their offspring among the peoples All who see them will acknowledge that they are a people the LORD has blessed",
+      },
+      {
+        verse_number: 10,
+        original:
+          "שׂ֧וֹשׂ אָשִׂ֣ישׂ בַּֽיהוָ֗ה תָּגֵ֤ל נַפְשִׁי֙ בֵּֽאלֹהַ֔י כִּ֤י הִלְבִּישַׁ֙נִי֙ בִּגְדֵי־ יֶ֔שַׁע מְעִ֥יל צְדָקָ֖ה יְעָטָ֑נִי כֶּֽחָתָן֙ יְכַהֵ֣ן פְּאֵ֔ר וְכַכַּלָּ֖ה תַּעְדֶּ֥ה כֵלֶֽיהָ׃",
+        english:
+          "I will rejoice greatly in the LORD my soul will exult in my God for He has clothed me with garments of salvation and wrapped me in a robe of righteousness as a bridegroom wears a priestly headdress as a bride adorns herself with her jewels",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כִּ֤י כָאָ֙רֶץ֙ תּוֹצִ֣יא צִמְחָ֔הּ וּכְגַנָּ֖ה זֵרוּעֶ֣יהָ תַצְמִ֑יחַ כֵּ֣ן׀ אֲדֹנָ֣י יְהוִ֗ה יַצְמִ֤יחַ צְדָקָה֙ וּתְהִלָּ֔ה נֶ֖גֶד כָּל־ הַגּוֹיִֽם׃",
+        english:
+          "For as the earth brings forth its growth and as a garden enables seed to spring up so the Lord GOD will cause righteousness and praise to spring up before all the nations",
+      },
+    ],
+  };
+  return chapter;
+}
