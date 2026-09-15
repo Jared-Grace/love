@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -9,7 +11,10 @@ import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_expression_which_part_first_above(root, context) {
+export function app_code_lesson_expression_which_part_first_above(
+  root,
+  context,
+) {
   arguments_assert(arguments, 2);
   ("the line, then the replacement that works, then the same line with the other replacement carried through to a different answer, then the rule");
   ("One line for both cards, not two. The wrong card is only worth reading beside the right one, and a second line would let a learner file the failure under that line rather than under the choice.");
@@ -67,12 +72,12 @@ export function app_code_lesson_expression_which_part_first_above(root, context)
   let wrong_value_text = text_to(wrong_value);
   let right_card = app_code_container_light_blue(root);
   app_code_lesson_suppose_solve_line(right_card, "Suppose", whole);
-  app_code_remember_from_lesson(right_card, context, app_code_lesson_expression_choose_order, [
-    "the ",
-    strong_part,
-    " is solved first, to get ",
-    inner_text,
-  ]);
+  app_code_remember_from_lesson(
+    right_card,
+    context,
+    app_code_lesson_expression_choose_order,
+    ["the ", strong_part, " is solved first, to get ", inner_text],
+  );
   html_div_cycle_code(right_card, [
     "Then we have ",
     stood_in,
