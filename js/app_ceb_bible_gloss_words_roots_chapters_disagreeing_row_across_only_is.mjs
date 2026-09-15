@@ -1,4 +1,4 @@
-import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_row_across_only_is } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_row_across_only_is.mjs";
+import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_lambda } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_lambda.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_disagreeing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is(
@@ -14,7 +14,7 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
       words,
     );
   let row_across_only_is =
-    app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_row_across_only_is();
+    app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is_lambda();
   let r = {
     disagreeing,
     row_across_only_is,
