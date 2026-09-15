@@ -1,4 +1,4 @@
-import { app_g_bless_vehicles_draw } from "./app_g_bless_vehicles_draw.mjs";
+import { bless_vehicles_draw } from "./bless_vehicles_draw.mjs";
 import { app_shared_game_player_style } from "./app_shared_game_player_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
@@ -40,7 +40,7 @@ export function bless_map(container, world) {
   ("else the row decides: the road is further out than the pavement, so a car passing is in");
   ("front of the crowd on the footway without anything having to say so.");
   let vehicles = property_get(world, "vehicles");
-  app_g_bless_vehicles_draw(div_map, vehicles);
+  bless_vehicles_draw(div_map, vehicles);
   ("each person's picture is written down under who they are, because the mover that walks");
   ("them looks it up that way and by no other route - a person drawn without being");
   ("remembered is a person the crowd can never take a step for.");
