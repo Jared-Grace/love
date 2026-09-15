@@ -1,0 +1,310 @@
+export function bible_glyph_chapter_rosetta_lines_lev23() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV23",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "דַּבֵּ֞ר אֶל־ בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם מוֹעֲדֵ֣י יְהוָ֔ה אֲשֶׁר־ תִּקְרְא֥וּ אֹתָ֖ם מִקְרָאֵ֣י קֹ֑דֶשׁ אֵ֥לֶּה הֵ֖ם מוֹעֲדָֽי׃",
+        english:
+          "Speak to the Israelites and say to them These are My appointed feasts the feasts of the LORD that you are to proclaim as sacred assemblies",
+      },
+      {
+        verse_number: 3,
+        original:
+          "שֵׁ֣שֶׁת יָמִים֮ תֵּעָשֶׂ֣ה מְלָאכָה֒ וּבַיּ֣וֹם הַשְּׁבִיעִ֗י שַׁבַּ֤ת שַׁבָּתוֹן֙ מִקְרָא־ קֹ֔דֶשׁ כָּל־ מְלָאכָ֖ה לֹ֣א תַעֲשׂ֑וּ שַׁבָּ֥ת הִוא֙ לַֽיהוָ֔ה בְּכֹ֖ל מֽוֹשְׁבֹתֵיכֶֽם׃פ",
+        english:
+          "For six days work may be done but the seventh day is a Sabbath of complete rest a day of sacred assembly You must not do any work wherever you live it is a Sabbath to the LORD",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אֵ֚לֶּה מוֹעֲדֵ֣י יְהוָ֔ה מִקְרָאֵ֖י קֹ֑דֶשׁ אֲשֶׁר־ תִּקְרְא֥וּ אֹתָ֖ם בְּמוֹעֲדָֽם׃",
+        english:
+          "These are the LORD’s appointed feasts the sacred assemblies you are to proclaim at their appointed times",
+      },
+      {
+        verse_number: 5,
+        original:
+          "בַּחֹ֣דֶשׁ הָרִאשׁ֗וֹן בְּאַרְבָּעָ֥ה עָשָׂ֛ר לַחֹ֖דֶשׁ בֵּ֣ין הָעַרְבָּ֑יִם פֶּ֖סַח לַיהוָֽה׃",
+        english:
+          "The Passover to the LORD begins at twilight on the fourteenth day of the first month",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וּבַחֲמִשָּׁ֨ה עָשָׂ֥ר יוֹם֙ לַחֹ֣דֶשׁ הַזֶּ֔ה חַ֥ג הַמַּצּ֖וֹת לַיהוָ֑ה שִׁבְעַ֥ת יָמִ֖ים מַצּ֥וֹת תֹּאכֵֽלוּ׃",
+        english:
+          "On the fifteenth day of the same month begins the Feast of Unleavened Bread to the LORD For seven days you must eat unleavened bread",
+      },
+      {
+        verse_number: 7,
+        original:
+          "בַּיּוֹם֙ הָֽרִאשׁ֔וֹן מִקְרָא־ קֹ֖דֶשׁ יִהְיֶ֣ה לָכֶ֑ם כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֥א תַעֲשֽׂוּ׃",
+        english:
+          "On the first day you are to hold a sacred assembly you are not to do any regular work",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְהִקְרַבְתֶּ֥ם אִשֶּׁ֛ה לַיהוָ֖ה שִׁבְעַ֣ת יָמִ֑ים בַּיּ֤וֹם הַשְּׁבִיעִי֙ מִקְרָא־ קֹ֔דֶשׁ כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֥א תַעֲשֽׂוּ׃פ",
+        english:
+          "For seven days you are to present a food offering to the LORD On the seventh day there shall be a sacred assembly you must not do any regular work",
+      },
+      {
+        verse_number: 9,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 10,
+        original:
+          "דַּבֵּ֞ר אֶל־ בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם כִּֽי־ תָבֹ֣אוּ אֶל־ הָאָ֗רֶץ אֲשֶׁ֤ר אֲנִי֙ נֹתֵ֣ן לָכֶ֔ם וּקְצַרְתֶּ֖ם אֶת־ קְצִירָ֑הּ וַהֲבֵאתֶ֥ם אֶת־ עֹ֛מֶר רֵאשִׁ֥ית קְצִירְכֶ֖ם אֶל־ הַכֹּהֵֽן׃",
+        english:
+          "Speak to the Israelites and say When you enter the land that I am giving you and you reap its harvest you are to bring to the priest a sheaf of the firstfruits of your harvest",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהֵנִ֧יף אֶת־ הָעֹ֛מֶר לִפְנֵ֥י יְהוָ֖ה לִֽרְצֹנְכֶ֑ם מִֽמָּחֳרַת֙ הַשַּׁבָּ֔ת יְנִיפֶ֖נּוּ הַכֹּהֵֽן׃",
+        english:
+          "And he shall wave the sheaf before the LORD so that it may be accepted on your behalf the priest is to wave it on the day after the Sabbath",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַעֲשִׂיתֶ֕ם בְּי֥וֹם הֲנִֽיפְכֶ֖ם אֶת־ הָעֹ֑מֶר כֶּ֣בֶשׂ תָּמִ֧ים בֶּן־ שְׁנָת֛וֹ לְעֹלָ֖ה לַיהוָֽה׃",
+        english:
+          "On the day you wave the sheaf you shall offer a year-old lamb without blemish as a burnt offering to the LORD",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וּמִנְחָתוֹ֩ שְׁנֵ֨י עֶשְׂרֹנִ֜ים סֹ֣לֶת בְּלוּלָ֥ה בַשֶּׁ֛מֶן אִשֶּׁ֥ה לַיהוָ֖ה רֵ֣יחַ נִיחֹ֑חַ וְנִסְכֹּ֥ה יַ֖יִן רְבִיעִ֥ת הַהִֽין׃",
+        english:
+          "along with its grain offering of two-tenths of an ephah of fine flour mixed with oil a food offering to the LORD a pleasing aroma and its drink offering of a quarter hin of wine",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְלֶחֶם֩ וְקָלִ֨י וְכַרְמֶ֜ל לֹ֣א תֹֽאכְל֗וּ עַד־ עֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה עַ֚ד הֲבִ֣יאֲכֶ֔ם אֶת־ קָרְבַּ֖ן אֱלֹהֵיכֶ֑ם חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם בְּכֹ֖ל מֹשְׁבֹֽתֵיכֶֽם׃ס",
+        english:
+          "You must not eat any bread or roasted or new grain until the very day you have brought this offering to your God This is to be a permanent statute for the generations to come wherever you live",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וּסְפַרְתֶּ֤ם לָכֶם֙ מִמָּחֳרַ֣ת הַשַּׁבָּ֔ת מִיּוֹם֙ הֲבִ֣יאֲכֶ֔ם אֶת־ עֹ֖מֶר הַתְּנוּפָ֑ה שֶׁ֥בַע שַׁבָּת֖וֹת תְּמִימֹ֥ת תִּהְיֶֽינָה׃",
+        english:
+          "From the day after the Sabbath the day you brought the sheaf of the wave offering you are to count off seven full weeks",
+      },
+      {
+        verse_number: 16,
+        original:
+          "עַ֣ד מִֽמָּחֳרַ֤ת הַשַּׁבָּת֙ הַשְּׁבִיעִ֔ת תִּסְפְּר֖וּ חֲמִשִּׁ֣ים י֑וֹם וְהִקְרַבְתֶּ֛ם מִנְחָ֥ה חֲדָשָׁ֖ה לַיהוָֽה׃",
+        english:
+          "You shall count off fifty days until the day after the seventh Sabbath and then present an offering of new grain to the LORD",
+      },
+      {
+        verse_number: 17,
+        original:
+          "מִמּוֹשְׁבֹ֨תֵיכֶ֜ם תָּבִ֣יאּוּ׀ לֶ֣חֶם תְּנוּפָ֗ה שְׁ֚תַּיִם שְׁנֵ֣י עֶשְׂרֹנִ֔ים סֹ֣לֶת תִּהְיֶ֔ינָה חָמֵ֖ץ תֵּאָפֶ֑ינָה בִּכּוּרִ֖ים לַֽיהוָֽה׃",
+        english:
+          "Bring two loaves of bread from your dwellings as a wave offering each made from two-tenths of an ephah of fine flour baked with leaven as the firstfruits to the LORD",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְהִקְרַבְתֶּ֣ם עַל־ הַלֶּ֗חֶם שִׁבְעַ֨ת כְּבָשִׂ֤ים תְּמִימִם֙ בְּנֵ֣י שָׁנָ֔ה וּפַ֧ר בֶּן־ בָּקָ֛ר אֶחָ֖ד וְאֵילִ֣ם שְׁנָ֑יִם יִהְי֤וּ עֹלָה֙ לַֽיהוָ֔ה וּמִנְחָתָם֙ וְנִסְכֵּיהֶ֔ם אִשֵּׁ֥ה רֵֽיחַ־ נִיחֹ֖חַ לַיהוָֽה׃",
+        english:
+          "Along with the bread you are to present seven unblemished male lambs a year old one young bull and two rams They will be a burnt offering to the LORD together with their grain offerings and drink offerings a food offering a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַעֲשִׂיתֶ֛ם שְׂעִיר־ עִזִּ֥ים אֶחָ֖ד לְחַטָּ֑את וּשְׁנֵ֧י כְבָשִׂ֛ים בְּנֵ֥י שָׁנָ֖ה לְזֶ֥בַח שְׁלָמִֽים׃",
+        english:
+          "You shall also prepare one male goat as a sin offering and two male lambs a year old as a peace offering",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְהֵנִ֣יף הַכֹּהֵ֣ן׀ אֹתָ֡ם עַל֩ לֶ֨חֶם הַבִּכּוּרִ֤ים תְּנוּפָה֙ לִפְנֵ֣י יְהוָ֔ה עַל־ שְׁנֵ֖י כְּבָשִׂ֑ים קֹ֛דֶשׁ יִהְי֥וּ לַיהוָ֖ה לַכֹּהֵֽן׃",
+        english:
+          "The priest is to wave the lambs as a wave offering before the LORD together with the bread of the firstfruits The bread and the two lambs shall be holy to the LORD for the priest",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וּקְרָאתֶ֞ם בְּעֶ֣צֶם׀ הַיּ֣וֹם הַזֶּ֗ה מִֽקְרָא־ קֹ֙דֶשׁ֙ יִהְיֶ֣ה לָכֶ֔ם כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֣א תַעֲשׂ֑וּ חֻקַּ֥ת עוֹלָ֛ם בְּכָל־ מוֹשְׁבֹ֥תֵיכֶ֖ם לְדֹרֹֽתֵיכֶֽם׃",
+        english:
+          "On that same day you are to proclaim a sacred assembly and you must not do any regular work This is to be a permanent statute wherever you live for the generations to come",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וּֽבְקֻצְרְכֶ֞ם אֶת־ קְצִ֣יר אַרְצְכֶ֗ם לֹֽא־ תְכַלֶּ֞ה פְּאַ֤ת שָֽׂדְךָ֙ בְּקֻצְרֶ֔ךָ וְלֶ֥קֶט קְצִירְךָ֖ לֹ֣א תְלַקֵּ֑ט לֶֽעָנִ֤י וְלַגֵּר֙ תַּעֲזֹ֣ב אֹתָ֔ם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃ס",
+        english:
+          "When you reap the harvest of your land do not reap all the way to the edges of your field or gather the gleanings of your harvest Leave them for the poor and the foreign resident I am the LORD your God",
+      },
+      {
+        verse_number: 23,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "The LORD also said to Moses",
+      },
+      {
+        verse_number: 24,
+        original:
+          "דַּבֵּ֛ר אֶל־ בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר בַּחֹ֨דֶשׁ הַשְּׁבִיעִ֜י בְּאֶחָ֣ד לַחֹ֗דֶשׁ יִהְיֶ֤ה לָכֶם֙ שַׁבָּת֔וֹן זִכְר֥וֹן תְּרוּעָ֖ה מִקְרָא־ קֹֽדֶשׁ׃",
+        english:
+          "Speak to the Israelites and say On the first day of the seventh month you are to have a day of rest a sacred assembly announced by trumpet blasts",
+      },
+      {
+        verse_number: 25,
+        original:
+          "כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֣א תַעֲשׂ֑וּ וְהִקְרַבְתֶּ֥ם אִשֶּׁ֖ה לַיהוָֽה׃ס",
+        english:
+          "You must not do any regular work but you are to present a food offering to the LORD",
+      },
+      {
+        verse_number: 26,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Again the LORD said to Moses",
+      },
+      {
+        verse_number: 27,
+        original:
+          "אַ֡ךְ בֶּעָשׂ֣וֹר לַחֹדֶשׁ֩ הַשְּׁבִיעִ֨י הַזֶּ֜ה י֧וֹם הַכִּפֻּרִ֣ים ה֗וּא מִֽקְרָא־ קֹ֙דֶשׁ֙ יִהְיֶ֣ה לָכֶ֔ם וְעִנִּיתֶ֖ם אֶת־ נַפְשֹׁתֵיכֶ֑ם וְהִקְרַבְתֶּ֥ם אִשֶּׁ֖ה לַיהוָֽה׃",
+        english:
+          "The tenth day of this seventh month is the Day of Atonement You shall hold a sacred assembly and humble yourselves and present a food offering to the LORD",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וְכָל־ מְלָאכָה֙ לֹ֣א תַעֲשׂ֔וּ בְּעֶ֖צֶם הַיּ֣וֹם הַזֶּ֑ה כִּ֣י י֤וֹם כִּפֻּרִים֙ ה֔וּא לְכַפֵּ֣ר עֲלֵיכֶ֔ם לִפְנֵ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+        english:
+          "On this day you are not to do any work for it is the Day of Atonement when atonement is made for you before the LORD your God",
+      },
+      {
+        verse_number: 29,
+        original:
+          "כִּ֤י כָל־ הַנֶּ֙פֶשׁ֙ אֲשֶׁ֣ר לֹֽא־ תְעֻנֶּ֔ה בְּעֶ֖צֶם הַיּ֣וֹם הַזֶּ֑ה וְנִכְרְתָ֖ה מֵֽעַמֶּֽיהָ׃",
+        english:
+          "If anyone does not humble himself on this day he must be cut off from his people",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וְכָל־ הַנֶּ֗פֶשׁ אֲשֶׁ֤ר תַּעֲשֶׂה֙ כָּל־ מְלָאכָ֔ה בְּעֶ֖צֶם הַיּ֣וֹם הַזֶּ֑ה וְהַֽאֲבַדְתִּ֛י אֶת־ הַנֶּ֥פֶשׁ הַהִ֖וא מִקֶּ֥רֶב עַמָּֽהּ׃",
+        english:
+          "I will destroy from among his people anyone who does any work on this day",
+      },
+      {
+        verse_number: 31,
+        original:
+          "כָּל־ מְלָאכָ֖ה לֹ֣א תַעֲשׂ֑וּ חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם בְּכֹ֖ל מֹֽשְׁבֹֽתֵיכֶֽם׃",
+        english:
+          "You are not to do any work at all This is a permanent statute for the generations to come wherever you live",
+      },
+      {
+        verse_number: 32,
+        original:
+          "שַׁבַּ֨ת שַׁבָּת֥וֹן הוּא֙ לָכֶ֔ם וְעִנִּיתֶ֖ם אֶת־ נַפְשֹׁתֵיכֶ֑ם בְּתִשְׁעָ֤ה לַחֹ֙דֶשׁ֙ בָּעֶ֔רֶב מֵעֶ֣רֶב עַד־ עֶ֔רֶב תִּשְׁבְּת֖וּ שַׁבַּתְּכֶֽם׃פ",
+        english:
+          "It will be a Sabbath of complete rest for you and you shall humble yourselves From the evening of the ninth day of the month until the following evening you are to keep your Sabbath",
+      },
+      {
+        verse_number: 33,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 34,
+        original:
+          "דַּבֵּ֛ר אֶל־ בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר בַּחֲמִשָּׁ֨ה עָשָׂ֜ר י֗וֹם לַחֹ֤דֶשׁ הַשְּׁבִיעִי֙ הַזֶּ֔ה חַ֧ג הַסֻּכּ֛וֹת שִׁבְעַ֥ת יָמִ֖ים לַיהֹוָֽה׃",
+        english:
+          "Speak to the Israelites and say On the fifteenth day of the seventh month the Feast of Tabernacles to the LORD begins and it continues for seven days",
+      },
+      {
+        verse_number: 35,
+        original:
+          "בַּיּ֥וֹם הָרִאשׁ֖וֹן מִקְרָא־ קֹ֑דֶשׁ כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֥א תַעֲשֽׂוּ׃",
+        english:
+          "On the first day there shall be a sacred assembly You must not do any regular work",
+      },
+      {
+        verse_number: 36,
+        original:
+          "שִׁבְעַ֣ת יָמִ֔ים תַּקְרִ֥יבוּ אִשֶּׁ֖ה לַיהוָ֑ה בַּיּ֣וֹם הַשְּׁמִינִ֡י מִקְרָא־ קֹדֶשׁ֩ יִהְיֶ֨ה לָכֶ֜ם וְהִקְרַבְתֶּ֨ם אִשֶּׁ֤ה לַֽיהוָה֙ עֲצֶ֣רֶת הִ֔וא כָּל־ מְלֶ֥אכֶת עֲבֹדָ֖ה לֹ֥א תַעֲשֽׂוּ׃",
+        english:
+          "For seven days you are to present a food offering to the LORD On the eighth day you are to hold a sacred assembly and present a food offering to the LORD It is a solemn assembly you must not do any regular work",
+      },
+      {
+        verse_number: 37,
+        original:
+          "אֵ֚לֶּה מוֹעֲדֵ֣י יְהוָ֔ה אֲשֶׁר־ תִּקְרְא֥וּ אֹתָ֖ם מִקְרָאֵ֣י קֹ֑דֶשׁ לְהַקְרִ֨יב אִשֶּׁ֜ה לַיהוָ֗ה עֹלָ֧ה וּמִנְחָ֛ה זֶ֥בַח וּנְסָכִ֖ים דְּבַר־ י֥וֹם בְּיוֹמֽוֹ׃",
+        english:
+          "These are the LORD’s appointed feasts which you are to proclaim as sacred assemblies for presenting food offerings to the LORD burnt offerings and grain offerings sacrifices and drink offerings each on its designated day",
+      },
+      {
+        verse_number: 38,
+        original:
+          "מִלְּבַ֖ד שַׁבְּתֹ֣ת יְּהוָ֑ה וּמִלְּבַ֣ד מַתְּנֽוֹתֵיכֶ֗ם וּמִלְּבַ֤ד כָּל־ נִדְרֵיכֶם֙ וּמִלְּבַד֙ כָּל־ נִדְב֣וֹתֵיכֶ֔ם אֲשֶׁ֥ר תִּתְּנ֖וּ לַיהוָֽה׃",
+        english:
+          "These offerings are in addition to the offerings for the LORD’s Sabbaths and in addition to your gifts to all your vow offerings and to all the freewill offerings you give to the LORD",
+      },
+      {
+        verse_number: 39,
+        original:
+          "אַ֡ךְ בַּחֲמִשָּׁה֩ עָשָׂ֨ר י֜וֹם לַחֹ֣דֶשׁ הַשְּׁבִיעִ֗י בְּאָסְפְּכֶם֙ אֶת־ תְּבוּאַ֣ת הָאָ֔רֶץ תָּחֹ֥גּוּ אֶת־ חַג־ יְהוָ֖ה שִׁבְעַ֣ת יָמִ֑ים בַּיּ֤וֹם הָֽרִאשׁוֹן֙ שַׁבָּת֔וֹן וּבַיּ֥וֹם הַשְּׁמִינִ֖י שַׁבָּתֽוֹן׃",
+        english:
+          "On the fifteenth day of the seventh month after you have gathered the produce of the land you are to celebrate a feast to the LORD for seven days There shall be complete rest on the first day and also on the eighth day",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וּלְקַחְתֶּ֨ם לָכֶ֜ם בַּיּ֣וֹם הָרִאשׁ֗וֹן פְּרִ֨י עֵ֤ץ הָדָר֙ כַּפֹּ֣ת תְּמָרִ֔ים וַעֲנַ֥ף עֵץ־ עָבֹ֖ת וְעַרְבֵי־ נָ֑חַל וּשְׂמַחְתֶּ֗ם לִפְנֵ֛י יְהוָ֥ה אֱלֹהֵיכֶ֖ם שִׁבְעַ֥ת יָמִֽים׃",
+        english:
+          "On the first day you are to gather the fruit of majestic trees the branches of palm trees and the boughs of leafy trees and of willows of the brook And you are to rejoice before the LORD your God for seven days",
+      },
+      {
+        verse_number: 41,
+        original:
+          "וְחַגֹּתֶ֤ם אֹתוֹ֙ חַ֣ג לַֽיהוָ֔ה שִׁבְעַ֥ת יָמִ֖ים בַּשָּׁנָ֑ה חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם בַּחֹ֥דֶשׁ הַשְּׁבִיעִ֖י תָּחֹ֥גּוּ אֹתֽוֹ׃",
+        english:
+          "You are to celebrate this as a feast to the LORD for seven days each year This is a permanent statute for the generations to come you are to celebrate it in the seventh month",
+      },
+      {
+        verse_number: 42,
+        original:
+          "בַּסֻּכֹּ֥ת תֵּשְׁב֖וּ שִׁבְעַ֣ת יָמִ֑ים כָּל־ הָֽאֶזְרָח֙ בְּיִשְׂרָאֵ֔ל יֵשְׁב֖וּ בַּסֻּכֹּֽת׃",
+        english:
+          "You are to dwell in booths for seven days All the native-born of Israel must dwell in booths",
+      },
+      {
+        verse_number: 43,
+        original:
+          "לְמַעַן֮ יֵדְע֣וּ דֹרֹֽתֵיכֶם֒ כִּ֣י בַסֻּכּ֗וֹת הוֹשַׁ֙בְתִּי֙ אֶת־ בְּנֵ֣י יִשְׂרָאֵ֔ל בְּהוֹצִיאִ֥י אוֹתָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃",
+        english:
+          "so that your descendants may know that I made the Israelites dwell in booths when I brought them out of the land of Egypt I am the LORD your God",
+      },
+      {
+        verse_number: 44,
+        original:
+          "וַיְדַבֵּ֣ר מֹשֶׁ֔ה אֶת־ מֹעֲדֵ֖י יְהוָ֑ה אֶל־ בְּנֵ֖י יִשְׂרָאֵֽל׃פ",
+        english:
+          "So Moses announced to the Israelites the appointed feasts of the LORD",
+      },
+    ],
+  };
+  return chapter;
+}

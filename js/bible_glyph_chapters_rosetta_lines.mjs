@@ -1,3 +1,10 @@
+import { bible_glyph_chapter_rosetta_lines_lev27 } from "./bible_glyph_chapter_rosetta_lines_lev27.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev25 } from "./bible_glyph_chapter_rosetta_lines_lev25.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev24 } from "./bible_glyph_chapter_rosetta_lines_lev24.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev23 } from "./bible_glyph_chapter_rosetta_lines_lev23.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev22 } from "./bible_glyph_chapter_rosetta_lines_lev22.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev21 } from "./bible_glyph_chapter_rosetta_lines_lev21.mjs";
+import { bible_glyph_chapter_rosetta_lines_lev17 } from "./bible_glyph_chapter_rosetta_lines_lev17.mjs";
 import { bible_glyph_chapter_rosetta_lines_lev15 } from "./bible_glyph_chapter_rosetta_lines_lev15.mjs";
 import { bible_glyph_chapter_rosetta_lines_lev14 } from "./bible_glyph_chapter_rosetta_lines_lev14.mjs";
 import { bible_glyph_chapter_rosetta_lines_lev13 } from "./bible_glyph_chapter_rosetta_lines_lev13.mjs";
@@ -567,6 +574,13 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter278 = bible_glyph_chapter_rosetta_lines_lev12();
   let chapter279 = bible_glyph_chapter_rosetta_lines_lev13();
   let chapter280 = bible_glyph_chapter_rosetta_lines_lev14();
+  let chapter281 = bible_glyph_chapter_rosetta_lines_lev15();
+  let chapter282 = bible_glyph_chapter_rosetta_lines_lev17();
+  let chapter283 = bible_glyph_chapter_rosetta_lines_lev21();
+  let chapter284 = bible_glyph_chapter_rosetta_lines_lev22();
+  let chapter285 = bible_glyph_chapter_rosetta_lines_lev23();
+  let chapter286 = bible_glyph_chapter_rosetta_lines_lev24();
+  let chapter287 = bible_glyph_chapter_rosetta_lines_lev25();
   let chapters = [
     chapter,
     chapter2,
@@ -848,7 +862,14 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter278,
     chapter279,
     chapter280,
-    bible_glyph_chapter_rosetta_lines_lev15(),
+    chapter281,
+    chapter282,
+    chapter283,
+    chapter284,
+    chapter285,
+    chapter286,
+    chapter287,
+    bible_glyph_chapter_rosetta_lines_lev27(),
   ];
   return chapters;
 }
