@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_division_formula_recall_words } from "./app_code_division_formula_recall_words.mjs";
@@ -16,5 +18,10 @@ export function app_code_lesson_expression_choose_order_whole_part_recall(
     "whole part",
     app_code_expression_whole_part_tree,
   );
-  app_code_remember_from_lesson(recall_card, context, app_code_lesson_expression_whole_part_formula, words);
+  app_code_remember_from_lesson(
+    recall_card,
+    context,
+    app_code_lesson_expression_whole_part_formula,
+    words,
+  );
 }
