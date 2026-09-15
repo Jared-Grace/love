@@ -1,9 +1,9 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { not } from "./not.mjs";
@@ -24,8 +24,7 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
   function word_read(word) {
     let claims = property_get(rooted, word);
     let roots = list_map_unique(claims, claim_root);
-    let ways = list_size(roots);
-    let one = equal(ways, 1);
+    let one = list_size_equal(roots, 1);
     comparable = add(comparable, 1);
     if (one) {
       return;
