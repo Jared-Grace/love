@@ -1,3 +1,4 @@
+import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_skip } from "./list_skip.mjs";
@@ -77,7 +78,7 @@ export function app_code_lesson_quiz_token_select_counts_set(
     app_code_lesson_quiz_token_select_count_badge_style(badge, b);
     app_code_lesson_quiz_token_select_count_badge_room_keep(badge, b);
     if (one_only) {
-      html_style_set(badge, "visibility", "hidden");
+      html_visibility_hidden(badge);
     }
   }
   each_index(buttons, each_button);
