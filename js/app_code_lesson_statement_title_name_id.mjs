@@ -1,6 +1,6 @@
+import { html_span_text_content } from "./html_span_text_content.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_span_code_dark_nowrap } from "./html_span_code_dark_nowrap.mjs";
-import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 export function app_code_lesson_statement_title_name_id(words, code) {
   arguments_assert(arguments, 2);
@@ -12,7 +12,7 @@ export function app_code_lesson_statement_title_name_id(words, code) {
   ("The line is one colour all the way across, which is what a line handed over as a string can be. A title whose line has a gap painted into it asks for the painting one instead, and this is written on top of that so the two cannot come out looking different.");
   function paint_code(parent) {
     let tile = html_span_code_dark_nowrap(parent);
-    html_span_text(tile, code);
+    html_span_text_content(tile, code);
   }
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
