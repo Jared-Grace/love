@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { text_punctuation_dash_apostrophe_kept_split } from "./text_punctuation_dash_apostrophe_kept_split.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
@@ -8,8 +9,6 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_words_written_apostrophe_price() {
@@ -42,13 +41,11 @@ export async function app_ceb_bible_words_written_apostrophe_price() {
   let today_names = object_property_names(today);
   let both_names = object_property_names(both);
   function both_missing_is(word) {
-    let held = property_get_or_null(both, word);
-    let missing = null_is(held);
+    let missing = property_null_is(both, word);
     return missing;
   }
   function today_missing_is(word) {
-    let held = property_get_or_null(today, word);
-    let missing = null_is(held);
+    let missing = property_null_is(today, word);
     return missing;
   }
   let only_today = list_filter(today_names, both_missing_is);
