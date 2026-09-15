@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_verse_marks_underdrawn } from "./bible_glyph_chapters_verse_marks_underdrawn.mjs";
 import { property_get } from "./property_get.mjs";
@@ -25,15 +26,13 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_roots() {
     let rows = property_get(filed_rows, "rows");
     let roots = [];
     for (let row of rows) {
-      let number = property_get(row, "verse_number");
-      let same = equal(number, verse_number);
+      let same = property_equals(row, "verse_number", verse_number);
       if (not(same)) {
         continue;
       }
       let words = property_get(row, "words");
       for (let word of words) {
-        let word_glyph = property_get(word, "glyph");
-        let drawn = equal(word_glyph, glyph);
+        let drawn = property_equals(word, "glyph", glyph);
         if (not(drawn)) {
           continue;
         }
