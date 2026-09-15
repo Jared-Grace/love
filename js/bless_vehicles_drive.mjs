@@ -7,7 +7,7 @@ import { bless_camera_still_class } from "./bless_camera_still_class.mjs";
 import { bless_vehicle_onward } from "./bless_vehicle_onward.mjs";
 import { html_class_has } from "./html_class_has.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_vehicles_drive(world, container_map) {
+export function bless_vehicles_drive(world, container_map) {
   arguments_assert(arguments, 2);
   ("Set all the traffic going, and keep it going for as long as the map is on screen.");
   ("ONE clock for the whole road, and that is the change that stopped cars driving through");
