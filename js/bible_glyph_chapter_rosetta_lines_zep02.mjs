@@ -1,0 +1,113 @@
+export function bible_glyph_chapter_rosetta_lines_zep02() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "ZEP02",
+    verses: [
+      {
+        verse_number: 1,
+        original: "הִֽתְקוֹשְׁשׁ֖וּ וָק֑וֹשּׁוּ הַגּ֖וֹי לֹ֥א נִכְסָֽף׃",
+        english: "Gather yourselves gather together O shameful nation",
+      },
+      {
+        verse_number: 2,
+        original:
+          "בְּטֶ֙רֶם֙ לֶ֣דֶת חֹ֔ק כְּמֹ֖ץ עָ֣בַר י֑וֹם בְּטֶ֣רֶם׀ לֹא־ יָב֣וֹא עֲלֵיכֶ֗ם חֲרוֹן֙ אַף־ יְהוָ֔ה בְּטֶ֙רֶם֙ לֹא־ יָב֣וֹא עֲלֵיכֶ֔ם י֖וֹם אַף־ יְהוָֽה׃",
+        english:
+          "before the decree takes effect and the day passes like chaff before the burning anger of the LORD comes upon you before the Day of the LORD’s anger comes upon you",
+      },
+      {
+        verse_number: 3,
+        original:
+          "בַּקְּשׁ֤וּ אֶת־ יְהוָה֙ כָּל־ עַנְוֵ֣י הָאָ֔רֶץ אֲשֶׁ֥ר מִשְׁפָּט֖וֹ פָּעָ֑לוּ בַּקְּשׁוּ־ צֶ֙דֶק֙ בַּקְּשׁ֣וּ עֲנָוָ֔ה אוּלַי֙ תִּסָּ֣תְר֔וּ בְּי֖וֹם אַף־ יְהוָֽה׃",
+        english:
+          "Seek the LORD all you humble of the earth who carry out His justice Seek righteousness seek humility Perhaps you will be sheltered on the day of the LORD’s anger",
+      },
+      {
+        verse_number: 4,
+        original:
+          "כִּ֤י עַזָּה֙ עֲזוּבָ֣ה תִֽהְיֶ֔ה וְאַשְׁקְל֖וֹן לִשְׁמָמָ֑ה אַשְׁדּ֗וֹד בַּֽצָּהֳרַ֙יִם֙ יְגָ֣רְשׁ֔וּהָ וְעֶקְר֖וֹן תֵּעָקֵֽר׃ס",
+        english:
+          "For Gaza will be abandoned and Ashkelon left in ruins Ashdod will be driven out at noon and Ekron will be uprooted",
+      },
+      {
+        verse_number: 5,
+        original:
+          "ה֗וֹי יֹֽשְׁבֵ֛י חֶ֥בֶל הַיָּ֖ם גּ֣וֹי כְּרֵתִ֑ים דְּבַר־ יְהוָ֣ה עֲלֵיכֶ֗ם כְּנַ֙עַן֙ אֶ֣רֶץ פְּלִשְׁתִּ֔ים וְהַאֲבַדְתִּ֖יךְ מֵאֵ֥ין יוֹשֵֽׁב׃",
+        english:
+          "Woe to the dwellers of the seacoast O nation of the Cherethites The word of the LORD is against you O Canaan land of the Philistines I will destroy you and no one will be left",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְֽהָיְתָ֞ה חֶ֣בֶל הַיָּ֗ם נְוֺ֛ת כְּרֹ֥ת רֹעִ֖ים וְגִדְר֥וֹת צֹֽאן׃",
+        english:
+          "So the seacoast will become a land of pastures with wells for shepherds and folds for sheep",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְהָ֣יָה חֶ֗בֶל לִשְׁאֵרִ֛ית בֵּ֥ית יְהוּדָ֖ה עֲלֵיהֶ֣ם יִרְע֑וּן בְּבָתֵּ֣י אַשְׁקְל֗וֹן בָּעֶ֙רֶב֙ יִרְבָּצ֔וּן כִּ֧י יִפְקְדֵ֛ם יְהוָ֥ה אֱלֹהֵיהֶ֖ם וְשָׁ֥ב שְׁבוּתָם׃",
+        english:
+          "The coast will belong to the remnant of the house of Judah there they will find pasture They will lie down in the evening among the houses of Ashkelon for the LORD their God will attend to them and restore their captives",
+      },
+      {
+        verse_number: 8,
+        original:
+          "שָׁמַ֙עְתִּי֙ חֶרְפַּ֣ת מוֹאָ֔ב וְגִדּוּפֵ֖י בְּנֵ֣י עַמּ֑וֹן אֲשֶׁ֤ר חֵֽרְפוּ֙ אֶת־ עַמִּ֔י וַיַּגְדִּ֖ילוּ עַל־ גְּבוּלָֽם׃",
+        english:
+          "I have heard the reproach of Moab and the insults of the Ammonites who have taunted My people and threatened their borders",
+      },
+      {
+        verse_number: 9,
+        original:
+          "לָכֵ֣ן חַי־ אָ֡נִי נְאֻם֩ יְהוָ֨ה צְבָא֜וֹת אֱלֹהֵ֣י יִשְׂרָאֵ֗ל כִּֽי־ מוֹאָ֞ב כִּסְדֹ֤ם תִּֽהְיֶה֙ וּבְנֵ֤י עַמּוֹן֙ כַּֽעֲמֹרָ֔ה מִמְשַׁ֥ק חָר֛וּל וּמִכְרֵה־ מֶ֥לַח וּשְׁמָמָ֖ה עַד־ עוֹלָ֑ם שְׁאֵרִ֤ית עַמִּי֙ יְבָזּ֔וּם וְיֶ֥תֶר גּוֹי יִנְחָלֽוּם׃",
+        english:
+          "Therefore as surely as I live declares the LORD of Hosts the God of Israel surely Moab will be like Sodom and the Ammonites like Gomorrah a place of weeds and salt pits a perpetual wasteland The remnant of My people will plunder them the remainder of My nation will dispossess them",
+      },
+      {
+        verse_number: 10,
+        original:
+          "זֹ֥את לָהֶ֖ם תַּ֣חַת גְּאוֹנָ֑ם כִּ֤י חֵֽרְפוּ֙ וַיַּגְדִּ֔לוּ עַל־ עַ֖ם יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "This they shall have in return for their pride for taunting and mocking the people of the LORD of Hosts",
+      },
+      {
+        verse_number: 11,
+        original:
+          "נוֹרָ֤א יְהוָה֙ עֲלֵיהֶ֔ם כִּ֣י רָזָ֔ה אֵ֖ת כָּל־ אֱלֹהֵ֣י הָאָ֑רֶץ וְיִשְׁתַּֽחֲווּ־ לוֹ֙ אִ֣ישׁ מִמְּקוֹמ֔וֹ כֹּ֖ל אִיֵּ֥י הַגּוֹיִֽם׃",
+        english:
+          "The LORD will be terrifying to them when He starves all the gods of the earth Then the nations of every shore will bow in worship to Him each in its own place",
+      },
+      {
+        verse_number: 12,
+        original: "גַּם־ אַתֶּ֣ם כּוּשִׁ֔ים חַֽלְלֵ֥י חַרְבִּ֖י הֵֽמָּה׃",
+        english: "You too O Cushites will be slain by My sword",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְיֵ֤ט יָדוֹ֙ עַל־ צָפ֔וֹן וִֽיאַבֵּ֖ד אֶת־ אַשּׁ֑וּר וְיָשֵׂ֤ם אֶת־ נִֽינְוֵה֙ לִשְׁמָמָ֔ה צִיָּ֖ה כַּמִּדְבָּֽר׃",
+        english:
+          "And He will stretch out His hand against the north and destroy Assyria He will make Nineveh a desolation as dry as a desert",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְרָבְצ֨וּ בְתוֹכָ֤הּ עֲדָרִים֙ כָּל־ חַיְתוֹ־ ג֔וֹי גַּם־ קָאַת֙ גַּם־ קִפֹּ֔ד בְּכַפְתֹּרֶ֖יהָ יָלִ֑ינוּ ק֠וֹל יְשׁוֹרֵ֤ר בַּֽחַלּוֹן֙ חֹ֣רֶב בַּסַּ֔ף כִּ֥י אַרְזָ֖ה עֵרָֽה׃",
+        english:
+          "Herds will lie down in her midst creatures of every kind Both the desert owl and screech owl will roost atop her pillars Their calls will sound from the window but desolation will lie on the threshold for He will expose the beams of cedar",
+      },
+      {
+        verse_number: 15,
+        original:
+          "זֹ֠את הָעִ֤יר הָעַלִּיזָה֙ הַיּוֹשֶׁ֣בֶת לָבֶ֔טַח הָאֹֽמְרָה֙ בִּלְבָבָ֔הּ אֲנִ֖י וְאַפְסִ֣י ע֑וֹד אֵ֣יךְ׀ הָיְתָ֣ה לְשַׁמָּ֗ה מַרְבֵּץ֙ לַֽחַיָּ֔ה כֹּ֚ל עוֹבֵ֣ר עָלֶ֔יהָ יִשְׁרֹ֖ק יָנִ֥יעַ יָדֽוֹ׃ס",
+        english:
+          "This carefree city that dwells securely that thinks to herself I am it and there is none besides me what a ruin she has become a resting place for beasts Everyone who passes by her hisses and shakes his fist",
+      },
+    ],
+  };
+  return chapter;
+}

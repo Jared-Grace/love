@@ -1,5 +1,6 @@
+import { app_code_line_operator_steps } from "./app_code_line_operator_steps.mjs";
+import { add } from "./add.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
-import { add_1 } from "./add_1.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
@@ -35,7 +36,8 @@ export function app_code_line_shape(code) {
     if (not(operator_is)) {
       return;
     }
-    operators = add_1(operators);
+    let right = app_code_line_operator_steps(node);
+    operators = add(operators, right);
     ("how deep this operator sits is how many operators the walk is standing inside, itself included - the walk keeps everything it has come through, so the answer is already there to be counted rather than to be carried down by hand");
     let stack = property_get(v, "stack");
     function enclosing_is(above) {
