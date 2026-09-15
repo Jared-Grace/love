@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_swapping_add } from "./app_code_lesson_expression_swapping_add.mjs";
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
@@ -28,13 +30,12 @@ export function app_code_lesson_expression_swapping_divide() {
   function above(root, context) {
     "recall + * swap, then show /, % and ** each changing when swapped, with an everyday reason and both sides worked out";
     let recall = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_swapping_add, [
-      "",
-      "+",
-      " and ",
-      "*",
-      " keep the same value when swapped",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_swapping_add,
+      ["", "+", " and ", "*", " keep the same value when swapped"],
+    );
     html_div_cycle_code(recall, [
       "",
       "3 + 4 === 7",
@@ -89,7 +90,12 @@ export function app_code_lesson_expression_swapping_divide() {
       ") multiplies a number by itself",
     ]);
     html_div_cycle_code(power, ["", "5 ** 3", " is ", "5 * 5 * 5 === 125"]);
-    html_div_cycle_code(power, ["", "3 ** 5", " is ", "3 * 3 * 3 * 3 * 3 === 243"]);
+    html_div_cycle_code(power, [
+      "",
+      "3 ** 5",
+      " is ",
+      "3 * 3 * 3 * 3 * 3 === 243",
+    ]);
     html_div_cycle_code(power, [
       "",
       "125",
