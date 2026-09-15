@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_map } from "./bless_hash_map.mjs";
 import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
-import { app_g_bless_tile_size_map } from "./app_g_bless_tile_size_map.mjs";
+import { bless_tile_size_map } from "./bless_tile_size_map.mjs";
 import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
 export function app_g_bless_tile_size() {
   arguments_assert(arguments, 0);
@@ -25,7 +25,7 @@ export function app_g_bless_tile_size() {
   let word = bless_hash_map();
   let overview = bless_dev_opening_is([word]);
   if (overview) {
-    let far = app_g_bless_tile_size_map();
+    let far = bless_tile_size_map();
     return far;
   }
   let size = app_g_bless_tile_size_playing();
