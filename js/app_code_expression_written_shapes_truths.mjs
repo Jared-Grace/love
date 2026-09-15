@@ -1,3 +1,4 @@
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { app_code_operators_comparing } from "./app_code_operators_comparing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_weaker } from "./app_code_operators_weaker.mjs";
@@ -42,8 +43,13 @@ export function app_code_expression_written_shapes_truths() {
     "the comparison over two numbers, then with arithmetic on the left and on the right";
     let item = app_code_expression_node(14, symbol, 4);
     list_add(shapes, item);
-    let left = app_code_expression_node(14, plus, 4);
-    let arithmetic_left = app_code_expression_node(left, symbol, 2);
+    let arithmetic_left = app_code_expression_node_left_operator_first(
+      14,
+      plus,
+      4,
+      symbol,
+      2,
+    );
     list_add(shapes, arithmetic_left);
     let right = app_code_expression_node(4, minus, 1);
     let arithmetic_right = app_code_expression_node(3, symbol, right);
