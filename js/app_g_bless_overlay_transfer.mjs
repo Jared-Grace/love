@@ -1,4 +1,4 @@
-import { app_g_bless_vehicles_drive } from "./app_g_bless_vehicles_drive.mjs";
+import { bless_vehicles_drive } from "./bless_vehicles_drive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_on } from "./html_on.mjs";
@@ -21,7 +21,7 @@ export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   bless_people_walk(world, render);
   ("and the traffic starts with them, so the street comes to life as one street rather than");
   ("as a pavement that moves and a road that waits");
-  app_g_bless_vehicles_drive(world, container_map);
+  bless_vehicles_drive(world, container_map);
   ("the world is built and drawn behind this before it is covered, so the first thing after the amen is a world already standing rather than a wait");
   let transfer = app_shared_game_overlay_container(container_map);
   return transfer;
