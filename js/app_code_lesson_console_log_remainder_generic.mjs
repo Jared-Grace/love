@@ -53,7 +53,7 @@ export function app_code_lesson_console_log_remainder_generic(
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function above(root) {
+  function above(root, context) {
     let r2 = app_code_lesson_console_log_remainder_generic_above(
       root,
       divisor,
@@ -61,6 +61,7 @@ export function app_code_lesson_console_log_remainder_generic(
       percent,
       modulo_fn,
       insight,
+      context,
     );
     return r2;
   }

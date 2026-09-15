@@ -16,14 +16,14 @@ export function app_code_lesson_operators_asterisk_generic(
     operator,
     left_transform,
   );
-  function above(root) {
+  function above(root, context) {
     app_code_lesson_operators_minus_generic_container_both_sides_number(
       root,
       operator,
       left_transform,
       verb,
     );
-    app_code_lesson_operators_asterisk_generic_minus(root, operator, "");
+    app_code_lesson_operators_asterisk_generic_minus(root, operator, context);
     app_code_lesson_operators_asterisk_generic_invalid(
       root,
       operator,

@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { list_to_and_list } from "./list_to_and_list.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -13,7 +15,6 @@ import { list_concat_single } from "./list_concat_single.mjs";
 import { html_div } from "./html_div.mjs";
 import { list_between_space } from "./list_between_space.mjs";
 import { digits } from "./digits.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -32,7 +33,7 @@ export function app_code_lesson_identifiers_symbol_first() {
     above,
     app_code_symbols_separated_on_question,
   );
-  function above(root) {
+  function above(root, context) {
     let identifier_symbols_types = [
       {
         name: "letter",
@@ -61,23 +62,25 @@ export function app_code_lesson_identifiers_symbol_first() {
       identifier_symbols_types_plural,
     );
     let c2 = app_code_container_light_blue(root);
-    html_div_text(
+    let text = text_combine(
+      "identifiers can have different kinds of symbols including ",
+      identifiers_valid_anywhere,
+    );
+    app_code_remember_from_lesson(
       c2,
-      text_combine(
-        "Remember, identifiers can have different kinds of symbols including ",
-        identifiers_valid_anywhere,
-      ),
+      context,
+      app_code_lesson_identifiers_letters_spaces,
+      [text],
     );
     let ds = digits();
     let combined = list_between_space(ds);
-    let parts = list_concat_single(
-      text_combine_multiple([
-        "Identifiers can also have ",
-        word_plural("digit"),
-        ": ",
-      ]),
-      combined,
-    );
+    let p2 = word_plural("digit");
+    let single = text_combine_multiple([
+      "Identifiers can also have ",
+      p2,
+      ": ",
+    ]);
+    let parts = list_concat_single(single, combined);
     html_div_cycle_code(c2, parts);
     let c = app_code_container_light_blue(root);
     html_div_text_multiple(c, [

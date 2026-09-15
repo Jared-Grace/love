@@ -10,8 +10,9 @@ export function app_code_lesson_console_log_remainder_generic_above_closing(
   percent,
   modulo_fn,
   insight,
+  context,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
   let intro = app_code_container_light_blue(root);
   let has_insight =
     app_code_lesson_console_log_remainder_generic_above_has_insight({
@@ -22,6 +23,7 @@ export function app_code_lesson_console_log_remainder_generic_above_closing(
       percent,
       modulo_fn,
       insight,
+      context,
     });
   if (has_insight) {
     let insight_box = app_code_container_light_blue(root);

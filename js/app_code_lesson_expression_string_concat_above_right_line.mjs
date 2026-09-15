@@ -6,9 +6,10 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 export function app_code_lesson_expression_string_concat_above_right_line(
   root,
+  context,
 ) {
-  arguments_assert(arguments, 1);
-  let r = app_code_lesson_expression_string_concat_above_order(root);
+  arguments_assert(arguments, 2);
+  let r = app_code_lesson_expression_string_concat_above_order(root, context);
   let order = property_get(r, "order");
   let joined_value = property_get(r, "joined_value");
   let code_b = property_get(r, "code_b");

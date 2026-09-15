@@ -13,6 +13,7 @@ export function app_code_lesson_console_log_remainder_generic_above_has_insight(
   percent,
   modulo_fn,
   insight,
+  context,
 }) {
   arguments_assert(arguments, 1);
   let r4 = app_code_lesson_console_log_remainder_generic_above_remainder_texts(
@@ -21,6 +22,7 @@ export function app_code_lesson_console_log_remainder_generic_above_has_insight(
     root,
     divisor_text,
     percent,
+    context,
   );
   let r = app_code_lesson_console_log_remainder_generic_above_row_count(
     r4,

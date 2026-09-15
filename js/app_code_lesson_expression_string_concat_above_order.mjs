@@ -6,9 +6,9 @@ import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_bold } from "./html_bold.mjs";
-export function app_code_lesson_expression_string_concat_above_order(root) {
-  arguments_assert(arguments, 1);
-  let r = app_code_lesson_expression_string_concat_above_so_value(root);
+export function app_code_lesson_expression_string_concat_above_order(root, context) {
+  arguments_assert(arguments, 2);
+  let r = app_code_lesson_expression_string_concat_above_so_value(root, context);
   let so_value = property_get(r, "so_value");
   let code_a = property_get(r, "code_a");
   let code_b = property_get(r, "code_b");

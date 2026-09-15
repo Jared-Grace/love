@@ -25,7 +25,7 @@ export function app_g_hero_tapped(hero) {
       return;
     }
     let target = app_shared_game_tile_coordinates_get(tile);
-    let evil = property_get(hero, "evil");
+    let evil = app_g_hero_killer(hero);
     let aimed = app_g_hero_evil_aimed_is(evil, target);
     property_set(hero, "busy", true);
     if (aimed) {

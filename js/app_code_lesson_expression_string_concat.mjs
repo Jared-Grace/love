@@ -53,8 +53,8 @@ export function app_code_lesson_expression_string_concat() {
     unscramble_label: "Build the code that gives this value: ",
   });
   return lesson;
-  function above(root) {
-    let r2 = app_code_lesson_expression_string_concat_above(root);
+  function above(root, context) {
+    let r2 = app_code_lesson_expression_string_concat_above(root, context);
     return r2;
   }
 }

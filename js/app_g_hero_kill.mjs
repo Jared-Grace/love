@@ -20,9 +20,9 @@ import { not } from "./not.mjs";
 import { app_g_hero_evil_mark } from "./app_g_hero_evil_mark.mjs";
 export async function app_g_hero_kill(hero, evil, victim) {
   arguments_assert(arguments, 3);
-  ("The evil person kills the one beside them: the victim flashes red, falls and fades, and a headstone rises where they stood.");
+  ("The evil person kills the one beside them: the victim flashes red, falls and fades, and a headstone rises where they stood. Somebody new walks into the street in their place, so the crowd never thins.");
   ("The victim leaves the crowd the moment they are struck, before anything is drawn, so nobody else - the hunter, the player walking, the crowd stepping aside - can reach for somebody who is already dead.");
-  ("The headstone is part of the street rather than part of the victim, so it stays where they fell when everything they were is taken off the map.");
+  ("The headstone is part of the street rather than part of the victim, so it stays where they fell when everything they were is taken off the map. It lies on the ground layer, under the people, so anybody who walks over a grave is drawn on top of it.");
   let npcs = property_path_get_2(hero, "world", "npcs");
   let div_map = property_get(hero, "div_map");
   property_set(victim, "held_still", "dead");
@@ -65,7 +65,7 @@ export async function app_g_hero_kill(hero, evil, victim) {
     x,
     y,
   };
-  let grave = g_img_square_div(div_map, tile, "character");
+  let grave = g_img_square_div(div_map, tile, "ground_tint");
   html_click_none(grave);
   let font_size = g_img_square_size_times(0.8);
   html_style_assign(grave, {
@@ -76,9 +76,21 @@ export async function app_g_hero_kill(hero, evil, victim) {
   });
   let headstone = emoji_headstone();
   html_text_set(grave, headstone);
+  let graves = property_get(hero, "graves");
+  list_add(graves, tile);
+  let world = property_get(hero, "world");
+  bless_person_replace(world, div_map, victim, graves);
   let burning = property_get(evil, "burning");
+  let killed = property_get(evil, "killed");
   if (not(burning)) {
+    ("The first killing is what makes them the evil person the player can see: the mark, the arrow, the fire for a tap on them, and the dark power thrown at her all begin here.");
     app_g_hero_evil_mark(hero, evil);
+    property_set(evil, "killed", true);
+    if (not(killed)) {
+      app_g_hero_dark_attacks(hero, evil);
+      let render = property_get(hero, "render");
+      render();
+    }
   }
   await html_animate(
     grave,

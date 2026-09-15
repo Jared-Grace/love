@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_remainder_2 } from "./app_code_lesson_expression_remainder_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -16,18 +18,23 @@ export function app_code_lesson_console_log_remainder_generic_above_remainder_te
   root,
   divisor_text,
   percent,
+  context,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   let review = greater_than(divisor, 2);
-  let opener = "When";
+  let rest = " we divide two numbers, sometimes the numbers divide evenly";
   if (review) {
-    opener = "Remember: when";
+    let reminded = text_combine("when", rest);
+    app_code_remember_from_lesson(
+      intro,
+      context,
+      app_code_lesson_expression_remainder_2,
+      [reminded],
+    );
+  } else {
+    let first_line = text_combine("When", rest);
+    html_div_cycle_code(intro, [first_line]);
   }
-  let first_line = text_combine(
-    opener,
-    " we divide two numbers, sometimes the numbers divide evenly",
-  );
-  html_div_cycle_code(intro, [first_line]);
   html_div_cycle_code(intro, ["Other times the numbers do not divide evenly"]);
   let example_box = app_code_container_light_blue(root);
   app_code_lesson_console_log_remainder_generic_example(

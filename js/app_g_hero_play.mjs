@@ -51,6 +51,7 @@ export function app_g_hero_play(container_map) {
     edge,
     fx,
     evil: null,
+    graves: [],
     busy: false,
   };
   function render() {

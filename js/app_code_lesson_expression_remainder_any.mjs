@@ -59,12 +59,12 @@ export function app_code_lesson_expression_remainder_any() {
   object_merge(params, from2);
   let lesson = app_code_lesson_expression_generic(params);
   return lesson;
-  function above(root) {
+  function above(root, context) {
     let derive = app_code_container_light_blue(root);
-    html_div_cycle_code(derive, [
-      "For ",
+    app_code_remember_from_lesson(derive, context, app_code_lesson_expression_dividend, [
+      "for ",
       "14 / 4",
-      ", remember ",
+      ", ",
       "14",
       " is the dividend",
     ]);
