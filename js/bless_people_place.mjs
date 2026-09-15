@@ -9,7 +9,7 @@ import { set_add } from "./set_add.mjs";
 import { set_includes_not } from "./set_includes_not.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { bless_home_reaches } from "./bless_home_reaches.mjs";
-export function app_g_bless_people_place(people, coordinates_land, taken) {
+export function bless_people_place(people, coordinates_land, taken) {
   arguments_assert(arguments, 3);
   ("Set everybody down somewhere they belong - a walker anywhere along the pavement, anybody");
   ("else within a few steps of their own door - and never two people on one tile.");
