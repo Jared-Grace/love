@@ -1,11 +1,10 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { gloss_word_priced_lossless_is } from "./gloss_word_priced_lossless_is.mjs";
 import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_word_root_chain } from "./gloss_word_root_chain.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_last_or_null } from "./list_last_or_null.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -31,8 +30,7 @@ export function gloss_words_lossless_rooted(known, priced) {
     let word = property_get(row, "word");
     let silent = property_get(row, "silent");
     let chain = gloss_word_root_chain(known, word);
-    let rootless = list_empty_is(chain);
-    let rooted = not(rootless);
+    let rooted = list_empty_not_is(chain);
     let root = list_last_or_null(chain);
     let sheet = {
       word,
