@@ -1,3 +1,6 @@
+import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
