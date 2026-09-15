@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known_roots_named } from "./binisaya_words_known_roots_named.mjs";
 import { property_get } from "./property_get.mjs";
@@ -34,8 +35,7 @@ export function gloss_classes_claimed_unvouched(classes, known) {
       return false;
     }
     let key = gloss_word_folded(bare);
-    let named = property_get_or_null(vouched, key);
-    let r = null_is(named);
+    let r = property_null_is(vouched, key);
     return r;
   }
   let picked = list_filter(classes, unvouched_is);
