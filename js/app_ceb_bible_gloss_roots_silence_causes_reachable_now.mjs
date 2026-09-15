@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_root_unwalked_cause } from "./gloss_root_unwalked_cause.mjs";
@@ -8,7 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { add } from "./add.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { list_size } from "./list_size.mjs";
 import { value_or_if_null } from "./value_or_if_null.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_class_count } from "./gloss_class_count.mjs";
@@ -38,8 +38,7 @@ export function app_ceb_bible_gloss_roots_silence_causes_reachable_now(
   let causes = object_property_names(by_cause);
   let classes_counted = {};
   function cause_size_put(cause) {
-    let rows = property_get(by_cause, cause);
-    let size = list_size(rows);
+    let size = property_list_size(by_cause, cause);
     property_set(classes_counted, cause, size);
   }
   each(causes, cause_size_put);
