@@ -6,7 +6,7 @@ import { random } from "./random.mjs";
 import { bless_headings } from "./bless_headings.mjs";
 import { bless_pace_ms } from "./bless_pace_ms.mjs";
 import { bless_walker_is } from "./bless_walker_is.mjs";
-export function app_g_bless_person_new(index, genders) {
+export function bless_person_new(index, genders) {
   arguments_assert(arguments, 2);
   ("One person, made from their place in the line and nothing else - a picture, a way they");
   ("are facing, a speed of their own, whether they are out walking, and a way they are");
