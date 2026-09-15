@@ -1,11 +1,10 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_classes_by_word_folded } from "./gloss_classes_by_word_folded.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
@@ -34,8 +33,7 @@ export function gloss_classes_word_claims_apart(classes) {
   function key_read(key) {
     let group = property_get(by_word, key);
     let rows = property_get(group, "classes");
-    let claimed = list_map(rows, class_claim_folded);
-    let distinct = list_unique(claimed);
+    let distinct = list_map_unique(rows, class_claim_folded);
     let alone = list_size_equal(distinct, 1);
     if (not(alone)) {
       let word = property_get(group, "word");
