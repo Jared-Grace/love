@@ -3,7 +3,7 @@ import { html_reload_on_hash_change } from "./html_reload_on_hash_change.mjs";
 import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { html_mobile_default } from "./html_mobile_default.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
-import { app_g_bless_tile_size } from "./app_g_bless_tile_size.mjs";
+import { bless_tile_size } from "./bless_tile_size.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
@@ -16,7 +16,7 @@ export function bless_container_new(context) {
   app_shared_game_player_style_initialize();
   let root = html_mobile_default(context);
   let variable = g_img_square_size_variable();
-  let size = app_g_bless_tile_size();
+  let size = bless_tile_size();
   html_style_variable_set(root, variable, size);
   html_style_assign(root, {
     margin: "0",
