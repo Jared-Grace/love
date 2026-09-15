@@ -44,12 +44,12 @@ export function app_code_lesson_expression_comparing_a_comparison() {
     let list = [v, v2];
     return list;
   }
-  function above(root) {
+  function above(root, context) {
     "first what the word comparison names, then the line the whole screen is here to solve, then that line worked out, then a second line worked out the same way";
     "The line comes second, before anything that solves it, because the screen used to prove its lemmas first and only then name the theorem: a learner met a comparison results in true or false, and then we can replace 3 === 5 with false, with nowhere to put either - the line those two facts were FOR had not been shown yet. Asked first, each line after it is heard as an answer, and the second walkthrough was already written this way round, so the screen now asks in one voice rather than two";
     "The replacing rule used to have a card to itself, standing between the line and the first walkthrough - and the walkthrough then opened by supposing that very line again. So the screen said Suppose we want to solve 3 === 5 === false, said a rule, and said Suppose we want to solve 3 === 5 === false. A learner met the sentence twice and had to check nothing had changed. The rule and the first walkthrough are one card now: the line is put up once at the top, and the card under it takes that line all the way down to its answer.";
     "An idea card used to stand between the line and the replacing rule: seven rows climbing from 1 < 2 is true up to so anywhere true or false can be used, we can use a comparison. It argued the line was LEGAL - a comparison may stand where a plain true or false stands - which is the opposite direction from the one that solves it, and it argued it on 1 < 2 and true === true, neither of which is the line on the screen. Nothing in this lesson or its quiz ever runs that direction: the learner is handed a line and asked for its value, every time, and the replacing card with the two walkthroughs carries that the whole way. So the longest explanation on the screen was answering a question the screen never asks, and a learner reading down it met a second line being taken apart before the first one had been. It is gone; the learner now reaches a worked line four rows sooner. What makes the line legal is learned by working it, not by reading a derivation of it";
-    app_code_lesson_expression_comparing_a_comparison_recall(root);
+    app_code_lesson_expression_comparing_a_comparison_recall(root, context);
     let same = js_operator_triple_equal();
     let goal = app_code_container_light_blue(root);
     let goal_line = app_code_lesson_expression_comparing_a_comparison_line(

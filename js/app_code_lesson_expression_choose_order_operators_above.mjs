@@ -26,7 +26,7 @@ export function app_code_lesson_expression_choose_order_operators_above(
   ("The recall names all four symbols in the two groups they fall into, because that pairing IS what the lesson is about. A learner who has only ever pressed times has had no reason to notice that times was being pressed for being strong rather than for being times, and this card is where the reason is said out loud before any line is read.");
   ("The stronger operator is put on the RIGHT of the line, for the reason the first question of the bank puts it there: the part that may be solved first is then not the leftmost thing on the line, so a learner following the run learns to read the operators rather than the position.");
   ("Every piece of the telling comes from that one line - which part cannot go yet, which part goes first, what it comes to, what is left, and what that comes to. Numbers borrowed from nowhere in particular would be five things to take on trust; one line worked from top to bottom is a run a learner can follow.");
-  app_code_lesson_expression_choose_order_strong_card(root);
+  app_code_lesson_expression_choose_order_strong_card(root, context);
   let strong_right = true;
   let tree =
     app_code_lesson_expression_choose_order_operators_expression(strong_right);

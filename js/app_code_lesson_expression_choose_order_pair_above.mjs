@@ -20,6 +20,7 @@ export function app_code_lesson_expression_choose_order_pair_above(
     app_code_lesson_expression_comparing_a_comparison_recall,
     app_code_lesson_expression_sides_parentheses_say,
     app_code_lesson_expression_choose_order_pair_intro,
+    context,
   );
   return line;
 }

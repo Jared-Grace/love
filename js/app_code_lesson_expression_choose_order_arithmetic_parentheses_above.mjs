@@ -43,5 +43,6 @@ export function app_code_lesson_expression_choose_order_arithmetic_parentheses_a
     app_code_lesson_expression_choose_order_arithmetic_parentheses_recall,
     walks,
     app_code_lesson_expression_choose_order_arithmetic_parentheses_intro,
+    context,
   );
 }

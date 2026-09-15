@@ -25,6 +25,7 @@ export function app_code_lesson_expression_choose_order_both_sides_any_compariso
       root,
       tree,
       app_code_lesson_expression_choose_order_both_sides_any_comparison_intro,
+      context,
     );
   return line;
 }

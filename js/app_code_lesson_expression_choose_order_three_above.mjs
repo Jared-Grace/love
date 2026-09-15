@@ -16,6 +16,6 @@ export function app_code_lesson_expression_choose_order_three_above(
   let count = app_code_lesson_expression_choose_order_three_operator_count();
   let tree = app_code_expression_flat_random_strong_first(count);
   let heading_none = [];
-  app_code_lesson_expression_choose_order_three_recall(root);
+  app_code_lesson_expression_choose_order_three_recall(root, context);
   app_code_lesson_expression_choose_order_reason_run(root, heading_none, tree);
 }
