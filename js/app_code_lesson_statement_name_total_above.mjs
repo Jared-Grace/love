@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_sum } from "./app_code_lesson_statement_name_sum.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -33,9 +35,12 @@ export function app_code_lesson_statement_name_total_above(root, context) {
   let total = add(number_first, number_last);
   let names_sum = app_code_lesson_statement_names_added();
   let box_remember = app_code_container_light_blue(root);
-  html_div_cycle_code(box_remember, [
-    "Remember, we can give names to numbers:",
-  ]);
+  app_code_remember_from_lesson(
+    box_remember,
+    context,
+    app_code_lesson_statement_name_sum,
+    ["we can give names to numbers:"],
+  );
   ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
