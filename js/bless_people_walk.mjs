@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_person_walk } from "./app_g_bless_person_walk.mjs";
+import { bless_person_walk } from "./bless_person_walk.mjs";
 import { app_g_bless_repaint_ms } from "./app_g_bless_repaint_ms.mjs";
 export function bless_people_walk(world, on_move) {
   arguments_assert(arguments, 2);
@@ -19,7 +19,7 @@ export function bless_people_walk(world, on_move) {
   ("now - a readout left alone would go on counting a crowd that has walked out of it.");
   let npcs = property_get(world, "npcs");
   function person_walk(person) {
-    app_g_bless_person_walk(world, person);
+    bless_person_walk(world, person);
   }
   each(npcs, person_walk);
   let ms = app_g_bless_repaint_ms();

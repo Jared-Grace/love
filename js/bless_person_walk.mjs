@@ -13,7 +13,7 @@ import { bless_still_wait_ms } from "./bless_still_wait_ms.mjs";
 import { bless_person_step } from "./bless_person_step.mjs";
 import { bless_person_crossing_clear } from "./bless_person_crossing_clear.mjs";
 import { bless_person_turn } from "./bless_person_turn.mjs";
-export function app_g_bless_person_walk(world, person) {
+export function bless_person_walk(world, person) {
   arguments_assert(arguments, 2);
   ("One person goes about their business for as long as the game is open - walking, or");
   ("standing about looking around, and turn about between the two.");
