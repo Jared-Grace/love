@@ -1,3 +1,4 @@
+import { text_word_plain } from "./text_word_plain.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
@@ -12,7 +13,6 @@ import { bible_glyph_verse_glyph_counts } from "./bible_glyph_verse_glyph_counts
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { text_is } from "./text_is.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_add } from "./list_add.mjs";
@@ -70,8 +70,7 @@ export async function bible_glyph_chapter_word_draw_check(
       if (not(spelled)) {
         continue;
       }
-      let letters = text_letters_only(token);
-      let lowered = text_lower_to(letters);
+      let lowered = text_word_plain(token);
       let hit = equal(lowered, wanted);
       if (not(hit)) {
         continue;

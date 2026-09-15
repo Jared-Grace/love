@@ -23,7 +23,7 @@ export function words_dash_pieces_absent_gate_run() {
     );
   }
   let r = {
-    checked: 1,
+    words: list_size(words),
     defects: 0,
   };
   return r;
