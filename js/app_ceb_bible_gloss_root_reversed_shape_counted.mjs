@@ -1,10 +1,10 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { add } from "./add.mjs";
 import { text_regex_first_groups } from "./text_regex_first_groups.mjs";
@@ -46,15 +46,13 @@ export async function app_ceb_bible_gloss_root_reversed_shape_counted(
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
     let named = property_get(found, "named");
-    let named_count = list_size(named);
-    let named_empty = equal(named_count, 0);
+    let named_empty = list_size_equal(named, 0);
     if (not(named_empty)) {
       return;
     }
     bare_total = add(bare_total, 1);
     let opening = text_regex_first_groups(explain, opening_pattern);
-    let opening_count = list_size(opening);
-    let opening_none = equal(opening_count, 0);
+    let opening_none = list_size_equal(opening, 0);
     if (opening_none) {
       return;
     }
