@@ -1,8 +1,8 @@
+import { property_exists_not } from "./property_exists_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_exists } from "./property_exists.mjs";
-import { not } from "./not.mjs";
 import { and } from "./and.mjs";
 export function bless_kerb_step_is(world, from, to) {
   arguments_assert(arguments, 3);
@@ -19,8 +19,7 @@ export function bless_kerb_step_is(world, from, to) {
   let key = g_coordinates_key(to);
   let onto_road = property_exists(roads, key);
   let key_from = g_coordinates_key(from);
-  let from_road = property_exists(roads, key_from);
-  let from_pavement = not(from_road);
+  let from_pavement = property_exists_not(roads, key_from);
   let stepping_out = and(onto_road, from_pavement);
   return stepping_out;
 }
