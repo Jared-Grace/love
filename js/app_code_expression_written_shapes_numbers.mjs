@@ -1,3 +1,4 @@
+import { app_code_expression_node_right_operator_first } from "./app_code_expression_node_right_operator_first.mjs";
 import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
@@ -47,12 +48,13 @@ export function app_code_expression_written_shapes_numbers() {
         third_number,
       );
       list_add(shapes, deep_left);
-      let right = app_code_expression_node(
+      let deep_right = app_code_expression_node_right_operator_first(
+        left_number,
+        symbol,
         right_number,
         symbol_inner,
         third_number,
       );
-      let deep_right = app_code_expression_node(left_number, symbol, right);
       list_add(shapes, deep_right);
     }
     each(arithmetic, inner);
