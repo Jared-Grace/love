@@ -1,3 +1,6 @@
+import { not_equal } from "./not_equal.mjs";
+import { multiply } from "./multiply.mjs";
+import { not } from "./not.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
 import { hebrew_cantillation_strip } from "./hebrew_cantillation_strip.mjs";
 import { path_join } from "./path_join.mjs";
@@ -23,12 +26,13 @@ export async function bible_words_google_text_to_speech_trial(
         /[.,;·:?!\s]/g,
         "",
       );
-      if (form !== "" && !forms.includes(form)) {
+      if (not_equal(form, "") && not(forms.includes(form))) {
         forms.push(form);
       }
     }
   }
-  let chosen = forms.slice(0, Number(count));
+  let v = Number(count);
+  let chosen = forms.slice(0, v);
   let voices = voice_names.split(",");
   let listed = [];
   for (let [index, text] of chosen.entries()) {
@@ -42,11 +46,17 @@ export async function bible_words_google_text_to_speech_trial(
       await google_text_to_speech_file(voice_name, text, file_path);
     }
   }
-  await file_overwrite_json(path_join([folder, "words.json"]), listed);
-  let characters = listed.reduce((sum, item) => sum + item.characters, 0);
-  return {
+  let file_path2 = path_join([folder, "words.json"]);
+  await file_overwrite_json(file_path2, listed);
+  function lambda(sum, item) {
+    let r = sum + item.characters;
+    return r;
+  }
+  let characters = listed.reduce(lambda, 0);
+  let r2 = {
     words: listed.length,
-    requests: listed.length * voices.length,
-    characters_sent: characters * voices.length,
+    requests: multiply(listed.length, voices.length),
+    characters_sent: multiply(characters, voices.length),
   };
+  return r2;
 }
