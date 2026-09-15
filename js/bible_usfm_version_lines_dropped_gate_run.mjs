@@ -49,18 +49,14 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
         " lines were thrown away, and there are over six thousand - did the shelf move?",
     );
   }
-  let unread = list_size_greater_than(unnamed, 0);
-  if (unread) {
-    throw new Error(
-      "bible usfm version lines dropped gate: the reading now throws away lines marked " +
-        list_join_comma_space(unnamed) +
-        text_combine_multiple([
-          " and nobody has read them - the lines are printed above, so open them, decide whether they are words anybody said, and either mend the mark or write down beside it in ",
-          fn_name("bible_usfm_markers_dropped_lines_allowed"),
-          " what they are",
-        ]),
-    );
-  }
+  list_empty_is_assert_json(unnamed, {
+    unnamed,
+    hint: text_combine_multiple([
+      "the reading now throws away lines under these marks and nobody has read them - the lines are printed above, so open them, decide whether they are words anybody said, and either mend the mark or write down beside it in ",
+      fn_name("bible_usfm_markers_dropped_lines_allowed"),
+      " what they are",
+    ]),
+  });
   let allowed_names = object_property_names(allowed);
   let gone = [];
   for (let allowed_name of allowed_names) {
@@ -69,18 +65,14 @@ export async function bible_usfm_version_lines_dropped_gate_run() {
       list_add(gone, allowed_name);
     }
   }
-  let stale = list_size_greater_than(gone, 0);
-  if (stale) {
-    throw new Error(
-      "bible usfm version lines dropped gate: nothing on the shelf wears the mark " +
-        list_join_comma_space(gone) +
-        text_combine_multiple([
-          " any more, so the sentence written beside it is describing nothing - either the shelf moved or those lines are now being read as scripture, and the line should be taken out of ",
-          fn_name("bible_usfm_markers_dropped_lines_allowed"),
-          " by whoever checked which",
-        ]),
-    );
-  }
+  list_empty_is_assert_json(gone, {
+    gone,
+    hint: text_combine_multiple([
+      "nothing on the shelf wears these marks any more, so the sentence written beside each is describing nothing - either the shelf moved or those lines are now being read as scripture, and the line should be taken out of ",
+      fn_name("bible_usfm_markers_dropped_lines_allowed"),
+      " by whoever checked which",
+    ]),
+  });
   let marks = list_size(marker_texts);
   console.log("marks thrown away: " + marks + "   lines: " + dropped);
   let r = {
