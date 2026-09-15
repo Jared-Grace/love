@@ -1,0 +1,271 @@
+export function bible_glyph_chapter_rosetta_lines_2ch20() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "2CH20",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְהִ֣י אַֽחֲרֵיכֵ֡ן בָּ֣אוּ בְנֵי־ מוֹאָב֩ וּבְנֵ֨י עַמּ֜וֹן וְעִמָּהֶ֧ם׀ מֵֽהָעַמּוֹנִ֛ים עַל־ יְהוֹשָׁפָ֖ט לַמִּלְחָמָֽה׃",
+        english:
+          "After this the Moabites and Ammonites together with some of the Meunites came to make war against Jehoshaphat",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיָּבֹ֗אוּ וַיַּגִּ֤ידוּ לִֽיהוֹשָׁפָט֙ לֵאמֹ֔ר בָּ֣א עָלֶ֜יךָ הָמ֥וֹן רָ֛ב מֵעֵ֥בֶר לַיָּ֖ם מֵאֲרָ֑ם וְהִנָּם֙ בְּחַֽצְצ֣וֹן תָּמָ֔ר הִ֖יא עֵ֥ין גֶּֽדִי׃",
+        english:
+          "Then some men came and told Jehoshaphat A vast army is coming against you from Edom from beyond the Sea they are already in Hazazon-tamar (that is En-gedi",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּרָ֕א וַיִּתֵּ֧ן יְהוֹשָׁפָ֛ט אֶת־ פָּנָ֖יו לִדְר֣וֹשׁ לַיהוָ֑ה וַיִּקְרָא־ צ֖וֹם עַל־ כָּל־ יְהוּדָֽה׃",
+        english:
+          "Jehoshaphat was alarmed and set his face to seek the LORD And he proclaimed a fast throughout Judah",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיִּקָּבְצ֣וּ יְהוּדָ֔ה לְבַקֵּ֖שׁ מֵֽיְהוָ֑ה גַּ֚ם מִכָּל־ עָרֵ֣י יְהוּדָ֔ה בָּ֖אוּ לְבַקֵּ֥שׁ אֶת־ יְהוָֽה׃",
+        english:
+          "So the people of Judah gathered to seek the LORD and indeed they came from all the cities of Judah to seek Him",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיַּעֲמֹ֣ד יְהוֹשָׁפָ֗ט בִּקְהַ֧ל יְהוּדָ֛ה וִירוּשָׁלִַ֖ם בְּבֵ֣ית יְהוָ֑ה לִפְנֵ֖י הֶחָצֵ֥ר הַחֲדָשָֽׁה׃",
+        english:
+          "Then Jehoshaphat stood in the assembly of Judah and Jerusalem in the house of the LORD in front of the new courtyard",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֹּאמַ֗ר יְהוָ֞ה אֱלֹהֵ֤י אֲבֹתֵ֙ינוּ֙ הֲלֹ֨א אַתָּֽה־ ה֤וּא אֱלֹהִים֙ בַּשָּׁמַ֔יִם וְאַתָּ֣ה מוֹשֵׁ֔ל בְּכֹ֖ל מַמְלְכ֣וֹת הַגּוֹיִ֑ם וּבְיָדְךָ֙ כֹּ֣חַ וּגְבוּרָ֔ה וְאֵ֥ין עִמְּךָ֖ לְהִתְיַצֵּֽב׃",
+        english:
+          "and said O LORD God of our fathers are You not the God who is in heaven and do You not rule over all the kingdoms of the nations Power and might are in Your hand and no one can stand against You",
+      },
+      {
+        verse_number: 7,
+        original:
+          "הֲלֹ֣א׀ אַתָּ֣ה אֱלֹהֵ֗ינוּ הוֹרַ֙שְׁתָּ֙ אֶת־ יֹשְׁבֵי֙ הָאָ֣רֶץ הַזֹּ֔את מִלִּפְנֵ֖י עַמְּךָ֣ יִשְׂרָאֵ֑ל וַֽתִּתְּנָ֗הּ לְזֶ֛רַע אַבְרָהָ֥ם אֹֽהַבְךָ֖ לְעוֹלָֽם׃",
+        english:
+          "Our God did You not drive out the inhabitants of this land before Your people Israel and give it forever to the descendants of Abraham Your friend",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֵּשְׁב֖וּ־ בָ֑הּ וַיִּבְנ֨וּ לְךָ֧׀ בָּ֛הּ מִקְדָּ֖שׁ לְשִׁמְךָ֥ לֵאמֹֽר׃",
+        english:
+          "They have lived in the land and have built in it a sanctuary for Your Name saying",
+      },
+      {
+        verse_number: 9,
+        original:
+          "אִם־ תָּב֨וֹא עָלֵ֜ינוּ רָעָ֗ה חֶרֶב֮ שְׁפוֹט֮ וְדֶ֣בֶר וְרָעָב֒ נַֽעַמְדָ֞ה לִפְנֵ֨י הַבַּ֤יִת הַזֶּה֙ וּלְפָנֶ֔יךָ כִּ֥י שִׁמְךָ֖ בַּבַּ֣יִת הַזֶּ֑ה וְנִזְעַ֥ק אֵלֶ֛יךָ מִצָּרָתֵ֖נוּ וְתִשְׁמַ֥ע וְתוֹשִֽׁיעַ׃",
+        english:
+          "If disaster comes upon us whether sword or judgment plague or famine we will stand before this temple and before You for Your Name is in this temple We will cry out to You in our distress and You will hear us and save us",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְעַתָּ֡ה הִנֵּה֩ בְנֵֽי־ עַמּ֨וֹן וּמוֹאָ֜ב וְהַר־ שֵׂעִ֗יר אֲ֠שֶׁר לֹֽא־ נָתַ֤תָּה לְיִשְׂרָאֵל֙ לָב֣וֹא בָהֶ֔ם בְּבֹאָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם כִּ֛י סָ֥רוּ מֵעֲלֵיהֶ֖ם וְלֹ֥א הִשְׁמִידֽוּם׃",
+        english:
+          "And now here are the men of Ammon Moab and Mount Seir whom You did not let Israel invade when they came out of the land of Egypt So Israel turned away from them and did not destroy them",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהִ֨נֵּה־ הֵ֔ם גֹּמְלִ֖ים עָלֵ֑ינוּ לָבוֹא֙ לְגָ֣רְשֵׁ֔נוּ מִיְּרֻשָּׁתְךָ֖ אֲשֶׁ֥ר הֽוֹרַשְׁתָּֽנוּ׃",
+        english:
+          "See how they are repaying us by coming to drive us out of the possession that You gave us as an inheritance",
+      },
+      {
+        verse_number: 12,
+        original:
+          "אֱלֹהֵ֙ינוּ֙ הֲלֹ֣א תִשְׁפָּט־ בָּ֔ם כִּ֣י אֵ֥ין בָּ֙נוּ֙ כֹּ֔חַ לִ֠פְנֵי הֶהָמ֥וֹן הָרָ֛ב הַזֶּ֖ה הַבָּ֣א עָלֵ֑ינוּ וַאֲנַ֗חְנוּ לֹ֤א נֵדַע֙ מַֽה־ נַּעֲשֶׂ֔ה כִּ֥י עָלֶ֖יךָ עֵינֵֽינוּ׃",
+        english:
+          "Our God will You not judge them For we are powerless before this vast army that comes against us We do not know what to do but our eyes are upon You",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְכָ֨ל־ יְהוּדָ֔ה עֹמְדִ֖ים לִפְנֵ֣י יְהוָ֑ה גַּם־ טַפָּ֖ם נְשֵׁיהֶ֥ם וּבְנֵיהֶֽם׃פ",
+        english:
+          "Meanwhile all the men of Judah with their wives and children and little ones were standing before the LORD",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְיַחֲזִיאֵ֡ל בֶּן־ זְכַרְיָ֡הוּ בֶּן־ בְּ֠נָיָה בֶּן־ יְעִיאֵ֧ל בֶּן־ מַתַּנְיָ֛ה הַלֵּוִ֖י מִן־ בְּנֵ֣י אָסָ֑ף הָיְתָ֤ה עָלָיו֙ ר֣וּחַ יְהוָ֔ה בְּת֖וֹךְ הַקָּהָֽל׃",
+        english:
+          "Then the Spirit of the LORD came upon Jahaziel son of Zechariah the son of Benaiah the son of Jeiel the son of Mattaniah a Levite from Asaph’s descendants as he stood in the midst of the assembly",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיֹּ֗אמֶר הַקְשִׁ֤יבוּ כָל־ יְהוּדָה֙ וְיֹשְׁבֵ֣י יְרוּשָׁלִַ֔ם וְהַמֶּ֖לֶךְ יְהוֹשָׁפָ֑ט כֹּֽה־ אָמַ֨ר יְהוָ֜ה לָכֶ֗ם אַ֠תֶּם אַל־ תִּֽירְא֤וּ וְאַל־ תֵּחַ֙תּוּ֙ מִפְּנֵ֨י הֶהָמ֤וֹן הָרָב֙ הַזֶּ֔ה כִּ֣י לֹ֥א לָכֶ֛ם הַמִּלְחָמָ֖ה כִּ֥י לֵאלֹהִֽים׃",
+        english:
+          "And he said Listen all you people of Judah and Jerusalem Listen, King Jehoshaphat This is what the LORD says Do not be afraid or discouraged because of this vast army for the battle does not belong to you but to God",
+      },
+      {
+        verse_number: 16,
+        original:
+          "מָחָר֙ רְד֣וּ עֲלֵיהֶ֔ם הִנָּ֥ם עֹלִ֖ים בְּמַעֲלֵ֣ה הַצִּ֑יץ וּמְצָאתֶ֤ם אֹתָם֙ בְּס֣וֹף הַנַּ֔חַל פְּנֵ֖י מִדְבַּ֥ר יְרוּאֵֽל׃",
+        english:
+          "Tomorrow you are to march down against them You will see them coming up the Ascent of Ziz and you will find them at the end of the valley facing the Wilderness of Jeruel",
+      },
+      {
+        verse_number: 17,
+        original:
+          "לֹ֥א לָכֶ֖ם לְהִלָּחֵ֣ם בָּזֹ֑את הִתְיַצְּב֣וּ עִמְד֡וּ וּרְא֣וּ אֶת־ יְשׁוּעַת֩ יְהוָ֨ה עִמָּכֶ֜ם יְהוּדָ֣ה וִֽירוּשָׁלִַ֗ם אַל־ תִּֽירְאוּ֙ וְאַל־ תֵּחַ֔תּוּ מָחָר֙ צְא֣וּ לִפְנֵיהֶ֔ם וַיהוָ֖ה עִמָּכֶֽם׃",
+        english:
+          "You need not fight this battle Take up your positions stand firm and see the salvation of the LORD on your behalf O Judah and Jerusalem Do not be afraid or discouraged Go out and face them tomorrow for the LORD is with you",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיִּקֹּ֧ד יְהוֹשָׁפָ֛ט אַפַּ֖יִם אָ֑רְצָה וְכָל־ יְהוּדָ֞ה וְיֹשְׁבֵ֣י יְרוּשָׁלִַ֗ם נָֽפְלוּ֙ לִפְנֵ֣י יְהוָ֔ה לְהִֽשְׁתַּחֲוֺ֖ת לַיהוָֽה׃",
+        english:
+          "Then Jehoshaphat bowed facedown and all the people of Judah and Jerusalem fell down before the LORD to worship Him",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיָּקֻ֧מוּ הַלְוִיִּ֛ם מִן־ בְּנֵ֥י הַקְּהָתִ֖ים וּמִן־ בְּנֵ֣י הַקָּרְחִ֑ים לְהַלֵּ֗ל לַיהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל בְּק֥וֹל גָּד֖וֹל לְמָֽעְלָה׃",
+        english:
+          "And the Levites from the Kohathites and Korahites stood up to praise the LORD the God of Israel shouting in a very loud voice",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיַּשְׁכִּ֣ימוּ בַבֹּ֔קֶר וַיֵּצְא֖וּ לְמִדְבַּ֣ר תְּק֑וֹעַ וּבְצֵאתָ֞ם עָמַ֣ד יְהוֹשָׁפָ֗ט וַיֹּ֙אמֶר֙ שְׁמָע֗וּנִי יְהוּדָה֙ וְיֹשְׁבֵ֣י יְרוּשָׁלִַ֔ם הַאֲמִ֜ינוּ בַּיהוָ֤ה אֱלֹהֵיכֶם֙ וְתֵ֣אָמֵ֔נוּ הַאֲמִ֥ינוּ בִנְבִיאָ֖יו וְהַצְלִֽיחוּ׃",
+        english:
+          "Early in the morning they got up and left for the Wilderness of Tekoa As they set out Jehoshaphat stood up and said Hear me O people of Judah and Jerusalem Believe in the LORD your God and you will be upheld believe in His prophets and you will succeed",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּוָּעַץ֙ אֶל־ הָעָ֔ם וַיַּעֲמֵ֤ד מְשֹֽׁרֲרִים֙ לַיהוָ֔ה וּֽמְהַֽלְלִ֖ים לְהַדְרַת־ קֹ֑דֶשׁ בְּצֵאת֙ לִפְנֵ֣י הֶֽחָל֔וּץ וְאֹֽמְרִים֙ הוֹד֣וּ לַיהוָ֔ה כִּ֥י לְעוֹלָ֖ם חַסְדּֽוֹ׃",
+        english:
+          "Then Jehoshaphat consulted with the people and appointed those who would sing to the LORD and praise the splendor of His holiness As they went out before the army they were singing Give thanks to the LORD for His loving devotion endures forever",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וּבְעֵת֩ הֵחֵ֨לּוּ בְרִנָּ֜ה וּתְהִלָּ֗ה נָתַ֣ן יְהוָ֣ה׀ מְ֠אָֽרְבִים עַל־ בְּנֵ֨י עַמּ֜וֹן מוֹאָ֧ב וְהַר־ שֵׂעִ֛יר הַבָּאִ֥ים לִֽיהוּדָ֖ה וַיִּנָּגֵֽפוּ׃",
+        english:
+          "The moment they began their shouts and praises the LORD set ambushes against the men of Ammon Moab and Mount Seir who had come against Judah and they were defeated",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַ֠יַּֽעַמְדוּ בְּנֵ֨י עַמּ֧וֹן וּמוֹאָ֛ב עַל־ יֹשְׁבֵ֥י הַר־ שֵׂעִ֖יר לְהַחֲרִ֣ים וּלְהַשְׁמִ֑יד וּכְכַלּוֹתָם֙ בְּיוֹשְׁבֵ֣י שֵׂעִ֔יר עָזְר֥וּ אִישׁ־ בְּרֵעֵ֖הוּ לְמַשְׁחִֽית׃",
+        english:
+          "The Ammonites and Moabites rose up against the inhabitants of Mount Seir devoting them to destruction And when they had finished off the inhabitants of Seir they helped to destroy one another",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וִֽיהוּדָ֛ה בָּ֥א עַל־ הַמִּצְפֶּ֖ה לַמִּדְבָּ֑ר וַיִּפְנוּ֙ אֶל־ הֶ֣הָמ֔וֹן וְהִנָּ֧ם פְּגָרִ֛ים נֹפְלִ֥ים אַ֖רְצָה וְאֵ֥ין פְּלֵיטָֽה׃",
+        english:
+          "When the men of Judah came to a place overlooking the wilderness they looked for the vast army but there were only corpses lying on the ground no one had escaped",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיָּבֹ֨א יְהוֹשָׁפָ֣ט וְעַמּוֹ֮ לָבֹ֣ז אֶת־ שְׁלָלָם֒ וַיִּמְצְאוּ֩ בָהֶ֨ם לָרֹ֜ב וּרְכ֤וּשׁ וּפְגָרִים֙ וּכְלֵ֣י חֲמֻד֔וֹת וַיְנַצְּל֥וּ לָהֶ֖ם לְאֵ֣ין מַשָּׂ֑א וַיִּֽהְי֞וּ יָמִ֧ים שְׁלוֹשָׁ֛ה בֹּזְזִ֥ים אֶת־ הַשָּׁלָ֖ל כִּ֥י רַב־ הֽוּא׃",
+        english:
+          "Then Jehoshaphat and his people went to carry off the plunder and they found on the bodies an abundance of goods and valuables more than they could carry away They were gathering the plunder for three days because there was so much",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וּבַיּ֣וֹם הָרְבִעִ֗י נִקְהֲלוּ֙ לְעֵ֣מֶק בְּרָכָ֔ה כִּי־ שָׁ֖ם בֵּרֲכ֣וּ אֶת־ יְהוָ֑ה עַל־ כֵּ֡ן קָֽרְא֞וּ אֶת־ שֵׁ֨ם הַמָּק֥וֹם הַה֛וּא עֵ֥מֶק בְּרָכָ֖ה עַד־ הַיּֽוֹם׃",
+        english:
+          "On the fourth day they assembled in the Valley of Beracah where they blessed the LORD Therefore that place is called the Valley of Beracah to this day",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַ֠יָּשֻׁבוּ כָּל־ אִ֨ישׁ יְהוּדָ֤ה וִֽירוּשָׁלִַ֙ם֙ וִֽיהוֹשָׁפָ֣ט בְּרֹאשָׁ֔ם לָשׁ֥וּב אֶל־ יְרוּשָׁלִַ֖ם בְּשִׂמְחָ֑ה כִּֽי־ שִׂמְּחָ֥ם יְהוָ֖ה מֵֽאוֹיְבֵיהֶֽם׃",
+        english:
+          "Then all the men of Judah and Jerusalem with Jehoshaphat at their head returned joyfully to Jerusalem for the LORD had made them rejoice over their enemies",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיָּבֹ֙אוּ֙ יְר֣וּשָׁלִַ֔ם בִּנְבָלִ֥ים וּבְכִנֹּר֖וֹת וּבַחֲצֹצְר֑וֹת אֶל־ בֵּ֖ית יְהוָֽה׃",
+        english:
+          "So they entered Jerusalem and went into the house of the LORD with harps lyres and trumpets",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיְהִי֙ פַּ֣חַד אֱלֹהִ֔ים עַ֖ל כָּל־ מַמְלְכ֣וֹת הָאֲרָצ֑וֹת בְּשָׁמְעָ֕ם כִּ֚י נִלְחַ֣ם יְהוָ֔ה עִ֖ם אוֹיְבֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "And the fear of God came upon all the kingdoms of the lands when they heard that the LORD had fought against the enemies of Israel",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַתִּשְׁקֹ֖ט מַלְכ֣וּת יְהוֹשָׁפָ֑ט וַיָּ֧נַֽח ל֦וֹ אֱלֹהָ֖יו מִסָּבִֽיב׃פ",
+        english:
+          "Then Jehoshaphat’s kingdom was at peace for his God had given him rest on every side",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיִּמְלֹ֥ךְ יְהוֹשָׁפָ֖ט עַל־ יְהוּדָ֑ה בֶּן־ שְׁלֹשִׁים֩ וְחָמֵ֨שׁ שָׁנָ֜ה בְּמָלְכ֗וֹ וְעֶשְׂרִ֨ים וְחָמֵ֤שׁ שָׁנָה֙ מָלַ֣ךְ בִּֽירוּשָׁלִַ֔ם וְשֵׁ֣ם אִמּ֔וֹ עֲזוּבָ֖ה בַּת־ שִׁלְחִֽי׃",
+        english:
+          "So Jehoshaphat reigned over Judah He was thirty-five years old when he became king and he reigned in Jerusalem twenty-five years His mother’s name was Azubah daughter of Shilhi",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיֵּ֗לֶךְ בְּדֶ֛רֶךְ אָבִ֥יו אָסָ֖א וְלֹא־ סָ֣ר מִמֶּ֑נָּה לַעֲשׂ֥וֹת הַיָּשָׁ֖ר בְּעֵינֵ֥י יְהוָֽה׃",
+        english:
+          "And Jehoshaphat walked in the way of his father Asa and did not turn away from it he did what was right in the eyes of the LORD",
+      },
+      {
+        verse_number: 33,
+        original:
+          "אַ֥ךְ הַבָּמ֖וֹת לֹא־ סָ֑רוּ וְע֤וֹד הָעָם֙ לֹא־ הֵכִ֣ינוּ לְבָבָ֔ם לֵאלֹהֵ֖י אֲבֹתֵיהֶֽם׃",
+        english:
+          "The high places however were not removed the people had not yet set their hearts on the God of their fathers",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְיֶ֙תֶר֙ דִּבְרֵ֣י יְהוֹשָׁפָ֔ט הָרִאשֹׁנִ֖ים וְהָאַחֲרֹנִ֑ים הִנָּ֣ם כְּתוּבִ֗ים בְּדִבְרֵי֙ יֵה֣וּא בֶן־ חֲנָ֔נִי אֲשֶׁ֣ר הֹֽעֲלָ֔ה עַל־ סֵ֖פֶר מַלְכֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "As for the rest of the acts of Jehoshaphat from beginning to end they are indeed written in the Chronicles of Jehu son of Hanani which are recorded in the Book of the Kings of Israel",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וְאַחֲרֵיכֵ֗ן אֶתְחַבַּר֙ יְהוֹשָׁפָ֣ט מֶֽלֶךְ־ יְהוּדָ֔ה עִ֖ם אֲחַזְיָ֣ה מֶֽלֶךְ־ יִשְׂרָאֵ֑ל ה֖וּא הִרְשִׁ֥יעַ לַעֲשֽׂוֹת׃",
+        english:
+          "Later Jehoshaphat king of Judah made an alliance with Ahaziah king of Israel who acted wickedly",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיְחַבְּרֵ֣הוּ עִמּ֔וֹ לַעֲשׂ֥וֹת אֳנִיּ֖וֹת לָלֶ֣כֶת תַּרְשִׁ֑ישׁ וַיַּעֲשׂ֥וּ אֳנִיּ֖וֹת בְּעֶצְי֥וֹן גָּֽבֶר׃",
+        english:
+          "They agreed to make ships to go to Tarshish and these were built in Ezion-geber",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וַיִּתְנַבֵּ֞א אֱלִיעֶ֤זֶר בֶּן־ דֹּדָוָ֙הוּ֙ מִמָּ֣רֵשָׁ֔ה עַל־ יְהוֹשָׁפָ֖ט לֵאמֹ֑ר כְּהִֽתְחַבֶּרְךָ֣ עִם־ אֲחַזְיָ֗הוּ פָּרַ֤ץ יְהוָה֙ אֶֽת־ מַעֲשֶׂ֔יךָ וַיִּשָּׁבְר֣וּ אֳנִיּ֔וֹת וְלֹ֥א עָצְר֖וּ לָלֶ֥כֶת אֶל־ תַּרְשִֽׁישׁ׃",
+        english:
+          "Then Eliezer son of Dodavahu of Mareshah prophesied against Jehoshaphat saying Because you have allied yourself with Ahaziah the LORD has destroyed your works So the ships were wrecked and were unable to sail to Tarshish",
+      },
+    ],
+  };
+  return chapter;
+}
