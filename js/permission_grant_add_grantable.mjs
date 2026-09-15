@@ -11,6 +11,7 @@ export async function permission_grant_add_grantable() {
   "★ A HANDED LINE THAT IS LONG IS A LINE THAT ARRIVES BROKEN. Nine names comma-joined is a line long enough that pasting it into a terminal can land a real newline in the middle of it, which runs half a command; the fault has already been met and it is a fault of length alone, so the fix is a command with nothing in it to be long.";
   "It is not allow-listed and must not become so, for the same reason the single-name adder is not: a command that writes allow rules is exactly the command a human should see and approve by hand. What this removes is the typing, never the approving - and the sentence at the start of the session still names every function before the human runs anything.";
   "The refusal check is not repeated here. It runs per name inside the adder, before anything is written, so a name that must never hold a standing approval stops the whole batch there rather than being let through by a caller that thought it had already asked.";
+  "It writes Claude's own allow rules, so do NOT grant it a standing approval.";
   arguments_assert(arguments, 0);
   let reading = await permission_replay_reading();
   let written = property_get(reading, "written");
