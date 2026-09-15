@@ -1,3 +1,4 @@
+import { html_element_width } from "./html_element_width.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { html_pixels_text } from "./html_pixels_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_animate_start } from "./html_animate_start.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
 import { app_g_hero_sprite } from "./app_g_hero_sprite.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -99,8 +99,7 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
       iterations: 10,
     },
   );
-  let rect = html_bounding_client_rect(evil_img);
-  let width = property_get(rect, "width");
+  let width = html_element_width(evil_img);
   let fire = emoji_fire();
   let pillar = app_g_hero_sprite(fx, point, fire, 1);
   html_style_set(
