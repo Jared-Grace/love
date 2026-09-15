@@ -1,3 +1,4 @@
+import { catch_error_text_collect_async } from "./catch_error_text_collect_async.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,19 +24,27 @@ export async function bible_usfm_book_typos_gate_run() {
     let version = property_get(typo, "version");
     let book_code = property_get(typo, "book_code");
     let from = property_get(typo, "from");
-    let file_path = await bible_usfm_version_book_path(version, book_code);
-    let usfm = await file_read(file_path);
-    let count = text_occurrences_count(usfm, from);
-    let once = equal(count, 1);
-    if (once) {
-      continue;
-    }
-    list_add(faults, {
+    let described = {
       version,
       book_code,
       from,
-      count,
-    });
+    };
+    async function place_count() {
+      let file_path = await bible_usfm_version_book_path(version, book_code);
+      let usfm = await file_read(file_path);
+      let count = text_occurrences_count(usfm, from);
+      let once = equal(count, 1);
+      if (once) {
+        return;
+      }
+      list_add(faults, {
+        version,
+        book_code,
+        from,
+        count,
+      });
+    }
+    await catch_error_text_collect_async(faults, described, place_count);
   }
   let fault_count = faults.length;
   for (let fault of faults) {
@@ -47,10 +56,11 @@ export async function bible_usfm_book_typos_gate_run() {
   );
   let clean = equal(fault_count, 0);
   if (not(clean)) {
+    let f_name = fn_name("bible_usfm_book_typos");
     error_json({
       hint: text_combine_multiple([
         "a mend in ",
-        fn_name("bible_usfm_book_typos"),
+        f_name,
         " names a run of the publisher's file that is not there exactly once. None means the publisher has put it right and the entry should be deleted; more than one means the run must be spelled out longer to name the single place",
       ]),
       faults,
