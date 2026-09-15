@@ -1,11 +1,10 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { app_code_lesson_expression_repeated_generic_lefts } from "./app_code_lesson_expression_repeated_generic_lefts.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
@@ -75,8 +74,7 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let chosen_lefts = list_map(examples, chosen_left_of);
     function left_free_is(left) {
       "a left number none of the chosen examples has taken";
-      let taken = list_includes(chosen_lefts, left);
-      let free = not(taken);
+      let free = list_includes_not(chosen_lefts, left);
       return free;
     }
     let lefts = app_code_lesson_expression_repeated_generic_lefts();
