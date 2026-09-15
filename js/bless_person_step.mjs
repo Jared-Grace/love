@@ -8,7 +8,7 @@ import { property_set } from "./property_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
-export function app_g_bless_person_step(world, person) {
+export function bless_person_step(world, person) {
   arguments_assert(arguments, 2);
   ("One person takes one step - onward if they can, round whoever is in the way if they");
   ("cannot, back the way they came if there is nowhere else, and nowhere at all when they");
