@@ -1,0 +1,188 @@
+export function bible_glyph_chapter_rosetta_lines_num08() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM08",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "דַּבֵּר֙ אֶֽל־ אַהֲרֹ֔ן וְאָמַרְתָּ֖ אֵלָ֑יו בְּהַעֲלֹֽתְךָ֙ אֶת־ הַנֵּרֹ֔ת אֶל־ מוּל֙ פְּנֵ֣י הַמְּנוֹרָ֔ה יָאִ֖ירוּ שִׁבְעַ֥ת הַנֵּרֽוֹת׃",
+        english:
+          "Speak to Aaron and tell him When you set up the seven lamps they are to light the area in front of the lampstand",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיַּ֤עַשׂ כֵּן֙ אַהֲרֹ֔ן אֶל־ מוּל֙ פְּנֵ֣י הַמְּנוֹרָ֔ה הֶעֱלָ֖ה נֵרֹתֶ֑יהָ כַּֽאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־ מֹשֶֽׁה׃",
+        english:
+          "And Aaron did so he set up the lamps facing toward the front of the lampstand just as the LORD had commanded Moses",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְזֶ֨ה מַעֲשֵׂ֤ה הַמְּנֹרָה֙ מִקְשָׁ֣ה זָהָ֔ב עַד־ יְרֵכָ֥הּ עַד־ פִּרְחָ֖הּ מִקְשָׁ֣ה הִ֑וא כַּמַּרְאֶ֗ה אֲשֶׁ֨ר הֶרְאָ֤ה יְהוָה֙ אֶת־ מֹשֶׁ֔ה כֵּ֥ן עָשָׂ֖ה אֶת־ הַמְּנֹרָֽה׃פ",
+        english:
+          "This is how the lampstand was constructed it was made of hammered gold from its base to its blossoms fashioned according to the pattern the LORD had shown Moses",
+      },
+      {
+        verse_number: 5,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Again the LORD spoke to Moses saying",
+      },
+      {
+        verse_number: 6,
+        original:
+          "קַ֚ח אֶת־ הַלְוִיִּ֔ם מִתּ֖וֹךְ בְּנֵ֣י יִשְׂרָאֵ֑ל וְטִהַרְתָּ֖ אֹתָֽם׃",
+        english:
+          "Take the Levites from among the Israelites and make them ceremonially clean",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְכֹֽה־ תַעֲשֶׂ֤ה לָהֶם֙ לְטַֽהֲרָ֔ם הַזֵּ֥ה עֲלֵיהֶ֖ם מֵ֣י חַטָּ֑את וְהֶעֱבִ֤ירוּ תַ֙עַר֙ עַל־ כָּל־ בְּשָׂרָ֔ם וְכִבְּס֥וּ בִגְדֵיהֶ֖ם וְהִטֶּהָֽרוּ׃",
+        english:
+          "This is what you must do to cleanse them Sprinkle them with the water of purification Have them shave their whole bodies and wash their clothes and so purify themselves",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְלָֽקְחוּ֙ פַּ֣ר בֶּן־ בָּקָ֔ר וּמִנְחָת֔וֹ סֹ֖לֶת בְּלוּלָ֣ה בַשָּׁ֑מֶן וּפַר־ שֵׁנִ֥י בֶן־ בָּקָ֖ר תִּקַּ֥ח לְחַטָּֽאת׃",
+        english:
+          "Then have them take a young bull with its grain offering of fine flour mixed with oil and you are to take a second young bull for a sin offering",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהִקְרַבְתָּ֙ אֶת־ הַלְוִיִּ֔ם לִפְנֵ֖י אֹ֣הֶל מוֹעֵ֑ד וְהִ֨קְהַלְתָּ֔ אֶֽת־ כָּל־ עֲדַ֖ת בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Bring the Levites before the Tent of Meeting and assemble the whole congregation of Israel",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהִקְרַבְתָּ֥ אֶת־ הַלְוִיִּ֖ם לִפְנֵ֣י יְהוָ֑ה וְסָמְכ֧וּ בְנֵי־ יִשְׂרָאֵ֛ל אֶת־ יְדֵיהֶ֖ם עַל־ הַלְוִיִּֽם׃",
+        english:
+          "You are to present the Levites before the LORD and have the Israelites lay their hands upon them",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהֵנִיף֩ אַהֲרֹ֨ן אֶת־ הַלְוִיִּ֤ם תְּנוּפָה֙ לִפְנֵ֣י יְהוָ֔ה מֵאֵ֖ת בְּנֵ֣י יִשְׂרָאֵ֑ל וְהָי֕וּ לַעֲבֹ֖ד אֶת־ עֲבֹדַ֥ת יְהוָֽה׃",
+        english:
+          "Aaron is to present the Levites before the LORD as a wave offering from the sons of Israel so that they may perform the service of the LORD",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהַלְוִיִּם֙ יִסְמְכ֣וּ אֶת־ יְדֵיהֶ֔ם עַ֖ל רֹ֣אשׁ הַפָּרִ֑ים וַ֠עֲשֵׂה אֶת־ הָאֶחָ֨ד חַטָּ֜את וְאֶת־ הָאֶחָ֤ד עֹלָה֙ לַֽיהוָ֔ה לְכַפֵּ֖ר עַל־ הַלְוִיִּֽם׃",
+        english:
+          "And the Levites are to lay their hands on the heads of the bulls and offer to the LORD one as a sin offering and the other as a burnt offering to make atonement for the Levites",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְהַֽעֲמַדְתָּ֙ אֶת־ הַלְוִיִּ֔ם לִפְנֵ֥י אַהֲרֹ֖ן וְלִפְנֵ֣י בָנָ֑יו וְהֵנַפְתָּ֥ אֹתָ֛ם תְּנוּפָ֖ה לַֽיהוָֽה׃",
+        english:
+          "You are to have the Levites stand before Aaron and his sons and then present them before the LORD as a wave offering",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְהִבְדַּלְתָּ֙ אֶת־ הַלְוִיִּ֔ם מִתּ֖וֹךְ בְּנֵ֣י יִשְׂרָאֵ֑ל וְהָ֥יוּ לִ֖י הַלְוִיִּֽם׃",
+        english:
+          "In this way you shall separate the Levites from the rest of the Israelites and the Levites will belong to Me",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְאַֽחֲרֵי־ כֵן֙ יָבֹ֣אוּ הַלְוִיִּ֔ם לַעֲבֹ֖ד אֶת־ אֹ֣הֶל מוֹעֵ֑ד וְטִֽהַרְתָּ֣ אֹתָ֔ם וְהֵנַפְתָּ֥ אֹתָ֖ם תְּנוּפָֽה׃",
+        english:
+          "After you have cleansed them and presented them as a wave offering they may come to serve at the Tent of Meeting",
+      },
+      {
+        verse_number: 16,
+        original:
+          "כִּי֩ נְתֻנִ֨ים נְתֻנִ֥ים הֵ֙מָּה֙ לִ֔י מִתּ֖וֹךְ בְּנֵ֣י יִשְׂרָאֵ֑ל תַּחַת֩ פִּטְרַ֨ת כָּל־ רֶ֜חֶם בְּכ֥וֹר כֹּל֙ מִבְּנֵ֣י יִשְׂרָאֵ֔ל לָקַ֥חְתִּי אֹתָ֖ם לִֽי׃",
+        english:
+          "For the Levites have been wholly given to Me from among the sons of Israel I have taken them for Myself in place of all who come first from the womb the firstborn of all the sons of Israel",
+      },
+      {
+        verse_number: 17,
+        original:
+          "כִּ֣י לִ֤י כָל־ בְּכוֹר֙ בִּבְנֵ֣י יִשְׂרָאֵ֔ל בָּאָדָ֖ם וּבַבְּהֵמָ֑ה בְּי֗וֹם הַכֹּתִ֤י כָל־ בְּכוֹר֙ בְּאֶ֣רֶץ מִצְרַ֔יִם הִקְדַּ֥שְׁתִּי אֹתָ֖ם לִֽי׃",
+        english:
+          "For every firstborn male in Israel is Mine both man and beast I set them apart for Myself on the day I struck down all the firstborn in the land of Egypt",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וָאֶקַּח֙ אֶת־ הַלְוִיִּ֔ם תַּ֥חַת כָּל־ בְּכ֖וֹר בִּבְנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "But I have taken the Levites in place of all the firstborn among the sons of Israel",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וָאֶתְּנָ֨ה אֶת־ הַלְוִיִּ֜ם נְתֻנִ֣ים׀ לְאַהֲרֹ֣ן וּלְבָנָ֗יו מִתּוֹךְ֮ בְּנֵ֣י יִשְׂרָאֵל֒ לַעֲבֹ֞ד אֶת־ עֲבֹדַ֤ת בְּנֵֽי־ יִשְׂרָאֵל֙ בְּאֹ֣הֶל מוֹעֵ֔ד וּלְכַפֵּ֖ר עַל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וְלֹ֨א יִהְיֶ֜ה בִּבְנֵ֤י יִשְׂרָאֵל֙ נֶ֔גֶף בְּגֶ֥שֶׁת בְּנֵֽי־ יִשְׂרָאֵ֖ל אֶל־ הַקֹּֽדֶשׁ׃",
+        english:
+          "And I have given the Levites as a gift to Aaron and his sons from among the Israelites to perform the service for the Israelites at the Tent of Meeting and to make atonement on their behalf so that no plague will come against the Israelites when they approach the sanctuary",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיַּ֨עַשׂ מֹשֶׁ֧ה וְאַהֲרֹ֛ן וְכָל־ עֲדַ֥ת בְּנֵי־ יִשְׂרָאֵ֖ל לַלְוִיִּ֑ם כְּ֠כֹל אֲשֶׁר־ צִוָּ֨ה יְהוָ֤ה אֶת־ מֹשֶׁה֙ לַלְוִיִּ֔ם כֵּן־ עָשׂ֥וּ לָהֶ֖ם בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "So Moses Aaron and the whole congregation of Israel did with the Levites everything that the LORD had commanded Moses they should do",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּֽתְחַטְּא֣וּ הַלְוִיִּ֗ם וַֽיְכַבְּסוּ֙ בִּגְדֵיהֶ֔ם וַיָּ֨נֶף אַהֲרֹ֥ן אֹתָ֛ם תְּנוּפָ֖ה לִפְנֵ֣י יְהוָ֑ה וַיְכַפֵּ֧ר עֲלֵיהֶ֛ם אַהֲרֹ֖ן לְטַהֲרָֽם׃",
+        english:
+          "The Levites purified themselves and washed their clothes and Aaron presented them as a wave offering before the LORD Aaron also made atonement for them to cleanse them",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְאַחֲרֵי־ כֵ֞ן בָּ֣אוּ הַלְוִיִּ֗ם לַעֲבֹ֤ד אֶת־ עֲבֹֽדָתָם֙ בְּאֹ֣הֶל מוֹעֵ֔ד לִפְנֵ֥י אַהֲרֹ֖ן וְלִפְנֵ֣י בָנָ֑יו כַּאֲשֶׁר֩ צִוָּ֨ה יְהוָ֤ה אֶת־ מֹשֶׁה֙ עַל־ הַלְוִיִּ֔ם כֵּ֖ן עָשׂ֥וּ לָהֶֽם׃ס",
+        english:
+          "After that the Levites came to perform their service at the Tent of Meeting in the presence of Aaron and his sons Thus they did with the Levites just as the LORD had commanded Moses",
+      },
+      {
+        verse_number: 23,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 24,
+        original:
+          "זֹ֖את אֲשֶׁ֣ר לַלְוִיִּ֑ם מִבֶּן֩ חָמֵ֨שׁ וְעֶשְׂרִ֤ים שָׁנָה֙ וָמַ֔עְלָה יָבוֹא֙ לִצְבֹ֣א צָבָ֔א בַּעֲבֹדַ֖ת אֹ֥הֶל מוֹעֵֽד׃",
+        english:
+          "This applies to the Levites Men twenty-five years of age or older shall enter to perform the service in the work at the Tent of Meeting",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וּמִבֶּן֙ חֲמִשִּׁ֣ים שָׁנָ֔ה יָשׁ֖וּב מִצְּבָ֣א הָעֲבֹדָ֑ה וְלֹ֥א יַעֲבֹ֖ד עֽוֹד׃",
+        english:
+          "But at the age of fifty they must retire from performing the work and no longer serve",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְשֵׁרֵ֨ת אֶת־ אֶחָ֜יו בְּאֹ֤הֶל מוֹעֵד֙ לִשְׁמֹ֣ר מִשְׁמֶ֔רֶת וַעֲבֹדָ֖ה לֹ֣א יַעֲבֹ֑ד כָּ֛כָה תַּעֲשֶׂ֥ה לַלְוִיִּ֖ם בְּמִשְׁמְרֹתָֽם׃פ",
+        english:
+          "After that, they may assist their brothers in fulfilling their duties at the Tent of Meeting but they themselves are not to do the work This is how you are to assign responsibilities to the Levites",
+      },
+    ],
+  };
+  return chapter;
+}
