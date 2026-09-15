@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_identifier_name } from "./app_code_lesson_statement_name_identifier_name.mjs";
@@ -19,9 +21,12 @@ export function app_code_lesson_statement_name_identifier_above(root, context) {
   let word = app_code_lesson_statement_name_identifier_word();
   let grapes = app_code_lesson_statement_name_value_word();
   let box_before = app_code_container_light_blue(root);
-  html_div_cycle_code(box_before, [
-    "Remember, a variable has a name, and holds one value",
-  ]);
+  app_code_remember_from_lesson(
+    box_before,
+    context,
+    app_code_lesson_statement_name_value,
+    ["a variable has a name, and holds one value"],
+  );
   html_div_cycle_code(box_before, [
     "So far every cup has been called ",
     name_before,

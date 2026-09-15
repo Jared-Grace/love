@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_copy } from "./app_code_lesson_statement_name_copy.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -26,12 +28,12 @@ export function app_code_lesson_statement_name_copy_kept_above(root, context) {
   let word_first = app_code_lesson_statement_name_value_word();
   let word_last = app_code_lesson_statement_name_two_word();
   let box_have = app_code_container_light_blue(root);
-  html_div_cycle_code(box_have, [
-    "Remember, we gave cup ",
-    name_copy,
-    " whatever was in cup ",
-    name_first,
-  ]);
+  app_code_remember_from_lesson(
+    box_have,
+    context,
+    app_code_lesson_statement_name_copy,
+    ["we gave cup ", name_copy, " whatever was in cup ", name_first],
+  );
   app_code_lesson_cups_row_holding(box_have, [
     [word_first, name_first],
     [word_first, name_copy],

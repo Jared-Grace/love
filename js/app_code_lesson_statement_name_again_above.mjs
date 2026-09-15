@@ -1,3 +1,6 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
+import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
@@ -24,7 +27,12 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   let word_after = app_code_lesson_statement_name_two_word();
   let box_before = app_code_container_light_blue(root);
   let has = list_join_empty([" has ", word_before, " in it"]);
-  html_div_cycle_code(box_before, ["Remember, the cup called ", name, has]);
+  app_code_remember_from_lesson(
+    box_before,
+    context,
+    app_code_lesson_statement_name_value,
+    ["the cup called ", name, has],
+  );
   app_code_lesson_cup_fruit(box_before, word_before, name);
   let box_after = app_code_container_light_blue(root);
   let swap = list_join_empty([
@@ -67,10 +75,12 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");
   let semicolon = js_code_semicolon();
   let box_care = app_code_container_light_blue(root);
-  html_div_cycle_code(box_care, [
-    "Remember, a statement ends with ",
-    semicolon,
-  ]);
+  app_code_remember_from_lesson(
+    box_care,
+    context,
+    app_code_lesson_functions_console_log_statement,
+    ["a statement ends with ", semicolon],
+  );
   html_div_cycle_code(box_care, [
     "In JS, the ",
     semicolon,
