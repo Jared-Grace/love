@@ -1,3 +1,4 @@
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -33,7 +34,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   let f_name = property_get(proposal, "fn");
   let named = text_combine_multiple(["in ", f_name]);
   let under = html_p_text(block, named);
-  html_style_font_size(under, "0.75em");
+  html_style_font_size(under, app_reply_rules_font_size_small());
   html_font_color_set(under, gray);
   let lines = property_get(proposal, "lines");
   app_reply_rules_diff_show(block, lines);
