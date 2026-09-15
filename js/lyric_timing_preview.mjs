@@ -52,7 +52,6 @@ export async function lyric_timing_preview() {
   desk.inputs = lyric_timing_screen_passage(root, on_settled);
   desk.song = lyric_timing_screen_song(root, on_song);
   function on_select(index) {
-    desk.following = false;
     let moment = lyric_timing_held_select(desk.held, index);
     html_media_time_set(desk.song.audio, moment);
     html_media_play(desk.song.audio);
