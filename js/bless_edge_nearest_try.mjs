@@ -9,7 +9,7 @@ import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { list_first } from "./list_first.mjs";
-export function app_g_bless_edge_nearest_try(remaining, box) {
+export function bless_edge_nearest_try(remaining, box) {
   arguments_assert(arguments, 2);
   ("Where on the screen the CLOSEST of the people still to pray for is standing - or nothing at all, when there are none of them left to find.");
   ("The closest one, because an arrow can only point one way and the nearest is the one the player reaches soonest. Sent to the furthest, or to whoever happens to come first in a list, a player would walk past three doors on the way to a fourth for no reason they could see.");
