@@ -1,6 +1,5 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_class_count } from "./gloss_class_count.mjs";
@@ -14,8 +13,7 @@ export function gloss_classes_backing_elsewhere(classes) {
   "it names classes already carrying the reading of the dictionary's walk. It names nothing that runs.";
   arguments_assert(arguments, 1);
   function elsewhere_is(one_class) {
-    let backing = property_get_or_null(one_class, "backing");
-    let r = equal(backing, "elsewhere");
+    let r = property_get_or_null_equal(one_class, "backing", "elsewhere");
     return r;
   }
   let picked = list_filter(classes, elsewhere_is);
