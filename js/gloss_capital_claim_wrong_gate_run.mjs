@@ -1,6 +1,6 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { gloss_capital_claim_wrong_measure } from "./gloss_capital_claim_wrong_measure.mjs";
 import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
@@ -18,8 +18,7 @@ export async function gloss_capital_claim_wrong_gate_run() {
   let counts = property_get(measured, "counts");
   let missing = property_get(measured, "missing");
   function wrong_is(count) {
-    let wrong = property_get(count, "wrong");
-    let any = greater_than(wrong, 0);
+    let any = property_greater_than(count, "wrong", 0);
     return any;
   }
   let offenders = list_filter(counts, wrong_is);
