@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_family_first_celebrate } from "./bless_hash_family_first_celebrate.mjs";
-import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
+import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 export function app_g_bless_family_first_celebrate_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit asked for the first household to be finished off by the game itself,");
@@ -11,6 +11,6 @@ export function app_g_bless_family_first_celebrate_is() {
   ("to play.");
   let word = bless_hash_family_first_celebrate();
   let words = [word];
-  let asked = app_g_bless_dev_opening_is(words);
+  let asked = bless_dev_opening_is(words);
   return asked;
 }

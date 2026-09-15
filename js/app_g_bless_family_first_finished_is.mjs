@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_family_first_finished } from "./bless_hash_family_first_finished.mjs";
-import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
+import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 export function app_g_bless_family_first_finished_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit asked for the first household already finished and already");
@@ -11,6 +11,6 @@ export function app_g_bless_family_first_finished_is() {
   ("faces over plain ground is the moment BEFORE the celebration, not the moment after it.");
   let word = bless_hash_family_first_finished();
   let words = [word];
-  let asked = app_g_bless_dev_opening_is(words);
+  let asked = bless_dev_opening_is(words);
   return asked;
 }
