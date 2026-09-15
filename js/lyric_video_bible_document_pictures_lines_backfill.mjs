@@ -45,6 +45,8 @@ export async function lyric_video_bible_document_pictures_lines_backfill(
       written: false,
       unplaced: [],
       why: "this passage has no lyric video document yet",
+      seconds_lead: null,
+      lines_found: null,
     };
     return undrafted;
   }
@@ -58,6 +60,8 @@ export async function lyric_video_bible_document_pictures_lines_backfill(
       written: false,
       unplaced: [],
       why: "this document asks for no pictures",
+      seconds_lead: null,
+      lines_found: null,
     };
     return bare;
   }
@@ -95,6 +99,7 @@ export async function lyric_video_bible_document_pictures_lines_backfill(
       seconds_lead: lead,
       unplaced,
       why: "these pictures begin at a second that is no line's start once the lead is taken off",
+      lines_found: null,
     };
     return unfinished;
   }

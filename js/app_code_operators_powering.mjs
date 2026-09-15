@@ -1,3 +1,4 @@
+import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_double_asterisk_symbol } from "./js_operator_double_asterisk_symbol.mjs";
 export function app_code_operators_powering() {
