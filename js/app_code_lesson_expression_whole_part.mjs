@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_whole_part_formula } from "./app_code_lesson_expression_whole_part_formula.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_division_dividend } from "./app_code_division_dividend.mjs";
 import { app_code_division_divisor } from "./app_code_division_divisor.mjs";
@@ -64,12 +66,12 @@ export function app_code_lesson_expression_whole_part() {
   }
   function above(root, context) {
     let recall = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_whole_part_formula, [
-      "the whole part of ",
-      "14 / 4",
-      " is ",
-      "Math.floor(14 / 4) * 4",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_whole_part_formula,
+      ["the whole part of ", "14 / 4", " is ", "Math.floor(14 / 4) * 4"],
+    );
     let evaluating = app_code_container_light_blue(root);
     html_div_cycle_code(evaluating, ["Solve the formula one step at a time:"]);
     html_div_cycle_code(evaluating, ["", "Math.floor(14 / 4)", " is ", "3"]);
