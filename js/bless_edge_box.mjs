@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { subtract } from "./subtract.mjs";
-export function app_g_bless_edge_box(container_map, bar) {
+export function bless_edge_box(container_map, bar) {
   arguments_assert(arguments, 2);
   ("The part of the screen an arrow pointing off the map is allowed to stand in: the whole map, less the strip of buttons along the bottom - with the middle of what is left worked out as well, since that is the point every direction is measured from.");
   ("The buttons are taken off because they are DRAWN OVER the map rather than beside it, so the map's own box runs on underneath them. An arrow that used the map's box would sit on top of the turn arrows a thumb is reaching for, and the one thing a player must never have to do is hunt for a button underneath a hint.");

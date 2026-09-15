@@ -3,7 +3,7 @@ import { app_g_bless_edge_stand } from "./app_g_bless_edge_stand.mjs";
 import { app_g_bless_edge_degrees } from "./app_g_bless_edge_degrees.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_edge_box } from "./app_g_bless_edge_box.mjs";
+import { bless_edge_box } from "./bless_edge_box.mjs";
 import { app_g_bless_edge_nearest_try } from "./app_g_bless_edge_nearest_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
@@ -19,7 +19,7 @@ export function app_g_bless_edge(edge, container_map, bar, remaining) {
   ("Where it stands is the target's own place on the screen, pulled back inside the box until it fits. That is not the point where a line from the middle would cross the edge, and it is deliberately not: it is far simpler, it lands on the same side and near enough the same place, and it has the property that matters - walk towards it and you close on the person.");
   let outer = property_get(edge, "outer");
   let spin = property_get(edge, "spin");
-  let box = app_g_bless_edge_box(container_map, bar);
+  let box = bless_edge_box(container_map, bar);
   let point = app_g_bless_edge_nearest_try(remaining, box);
   let nobody = null_is(point);
   if (nobody) {
