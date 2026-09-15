@@ -41,8 +41,8 @@ export async function lyric_timing_song_found(version, file_name) {
       path_audio: song.path_audio,
     });
   }
-  function song_named_is(row) {
-    let same = equal(row.path_audio, path_audio);
+  function song_named_is(candidate) {
+    let same = equal(candidate.path_audio, path_audio);
     return same;
   }
   let row = list_find_or_null(rows, song_named_is);
