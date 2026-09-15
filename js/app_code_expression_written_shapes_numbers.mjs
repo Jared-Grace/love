@@ -1,3 +1,4 @@
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_operators_strong } from "./app_code_operators_strong.mjs";
 import { app_code_operators_weak } from "./app_code_operators_weak.mjs";
@@ -38,12 +39,13 @@ export function app_code_expression_written_shapes_numbers() {
   function pair(symbol) {
     "two operators, the deeper one on the left and then the same pair the other way round";
     function inner(symbol_inner) {
-      let left = app_code_expression_node(
+      let deep_left = app_code_expression_node_left_operator_first(
         left_number,
         symbol_inner,
         right_number,
+        symbol,
+        third_number,
       );
-      let deep_left = app_code_expression_node(left, symbol, third_number);
       list_add(shapes, deep_left);
       let right = app_code_expression_node(
         right_number,
