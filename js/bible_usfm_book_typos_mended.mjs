@@ -1,6 +1,6 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_book_typos } from "./bible_usfm_book_typos.mjs";
-import { equal } from "./equal.mjs";
 import { property_get } from "./property_get.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
@@ -17,10 +17,8 @@ export function bible_usfm_book_typos_mended(usfm, version, book_code) {
   let mended = usfm;
   let typos = bible_usfm_book_typos();
   for (let typo of typos) {
-    let left = property_get(typo, "version");
-    let same_version = equal(left, version);
-    let left2 = property_get(typo, "book_code");
-    let same_book = equal(left2, book_code);
+    let same_version = property_equals(typo, "version", version);
+    let same_book = property_equals(typo, "book_code", book_code);
     let mine = and(same_version, same_book);
     if (not(mine)) {
       continue;
