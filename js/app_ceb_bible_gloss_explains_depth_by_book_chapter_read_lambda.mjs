@@ -10,7 +10,7 @@ import { list_size } from "./list_size.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { gloss_explain_affixes_claimed } from "./gloss_explain_affixes_claimed.mjs";
 import { each } from "./each.mjs";
-export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read(
+export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read_lambda(
   book_row,
   counted_add,
   entries_pass,
