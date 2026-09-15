@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { youtube_api_get } from "./youtube_api_get.mjs";
 import { property_get } from "./property_get.mjs";
@@ -16,8 +17,11 @@ export async function youtube_channels_mine() {
   let channels = [];
   for (let item of items) {
     let snippet = property_get(item, "snippet");
-    let content_details = property_get(item, "contentDetails");
-    let related = property_get(content_details, "relatedPlaylists");
+    let related = property_path_get_2(
+      item,
+      "contentDetails",
+      "relatedPlaylists",
+    );
     let entry = {
       channel_id: property_get(item, "id"),
       title: property_get(snippet, "title"),
