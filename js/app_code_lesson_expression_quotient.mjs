@@ -1,3 +1,6 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_dividend } from "./app_code_lesson_expression_dividend.mjs";
+import { app_code_lesson_expression_divisor } from "./app_code_lesson_expression_divisor.mjs";
 import { app_code_lesson_naming_words } from "./app_code_lesson_naming_words.mjs";
 import { app_code_lesson_name_id_operators } from "./app_code_lesson_name_id_operators.mjs";
 import { app_code_lesson_operand_generic } from "./app_code_lesson_operand_generic.mjs";
@@ -48,8 +51,18 @@ export function app_code_lesson_expression_quotient() {
     "remind all three roles at once, since the quotient question Math.floor(14 / 4) === 3 shows the dividend, divisor and quotient together";
     let remember = app_code_container_light_blue(root);
     html_div_cycle_code(remember, ["", "Math.floor(14 / 4) === 3"]);
-    app_code_remember_from_lesson(remember, context, app_code_lesson_expression_dividend, ["the ", "14", " is the dividend"]);
-    app_code_remember_from_lesson(remember, context, app_code_lesson_expression_divisor, ["the ", "4", " is the divisor"]);
+    app_code_remember_from_lesson(
+      remember,
+      context,
+      app_code_lesson_expression_dividend,
+      ["the ", "14", " is the dividend"],
+    );
+    app_code_remember_from_lesson(
+      remember,
+      context,
+      app_code_lesson_expression_divisor,
+      ["the ", "4", " is the divisor"],
+    );
     html_div_cycle_code(remember, ["The ", "3", " is the quotient"]);
   }
   function title_name_id() {
