@@ -67,7 +67,8 @@ export function lyric_timing_times_show(cards, held) {
       cards.on_select(index);
     }
     html_on_click(said, on_select);
-    let sounding = equal(index, subtract(held.cursor, 1));
+    let right2 = subtract(held.cursor, 1);
+    let sounding = equal(index, right2);
     if (sounding) {
       html_style_background_color_set(row, "#fff0a0");
       marked = row;
