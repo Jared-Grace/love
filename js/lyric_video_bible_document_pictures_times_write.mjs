@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { equal } from "./equal.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
 import { less_than } from "./less_than.mjs";
@@ -79,8 +80,7 @@ export async function lyric_video_bible_document_pictures_times_write(
       list_add(unauthored, picture);
     }
   }
-  let b = list_empty_is(unauthored);
-  let missing = not(b);
+  let missing = list_empty_not_is(unauthored);
   if (missing) {
     let unfinished = {
       path_document,
