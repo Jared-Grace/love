@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
@@ -7,8 +8,6 @@ import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_empty_is } from "./text_empty_is.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -41,8 +40,7 @@ export function words_dash_pieces_absent(words) {
       if (nothing) {
         return;
       }
-      let spelled = property_get_or_null(held, piece);
-      let b = null_is(spelled);
+      let b = property_null_is(held, piece);
       let present = not(b);
       if (present) {
         return;
