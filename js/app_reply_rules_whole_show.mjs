@@ -19,7 +19,8 @@ export function app_reply_rules_whole_show(root, file, approvals) {
   let said = text_combine_multiple(["new file ", name]);
   let head = html_p_text(root, said);
   html_style_margin_top(head, "1.2em");
-  html_style_font_size(head, app_reply_rules_font_size_small());
+  let value = app_reply_rules_font_size_small();
+  html_style_font_size(head, value);
   let color = app_shared_color_gray_dark();
   html_font_color_set(head, color);
   app_reply_rules_diff_show(root, lines);
