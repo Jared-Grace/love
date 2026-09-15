@@ -8,7 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_doors_draw(layer, blocks) {
+export function bless_doors_draw(layer, blocks) {
   arguments_assert(arguments, 2);
   ("Draws a door on every doorway in the street - a panelled leaf in a pale frame, with a");
   ("handle, standing on the ground and set into the wall around it.");
