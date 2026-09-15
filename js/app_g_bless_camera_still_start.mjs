@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_camera_still_class } from "./app_g_bless_camera_still_class.mjs";
+import { bless_camera_still_class } from "./bless_camera_still_class.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { html_class_add } from "./html_class_add.mjs";
@@ -34,7 +34,7 @@ export function app_g_bless_camera_still_start(container_map) {
   ("Naming the one thing that may still run says the rule as it was always meant - hold the");
   ("street still, let the light through - and anything drawn on this map later inherits that");
   ("agreement without being told about it, which is what the blanket was for.");
-  let name = app_g_bless_camera_still_class();
+  let name = bless_camera_still_class();
   let selector = text_combine_multiple([".", name, ", .", name, " *"]);
   let css = text_combine_multiple([
     selector,
