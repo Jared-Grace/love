@@ -24,8 +24,9 @@ export function app_code_lesson_operators_dot_missing() {
     ]);
     let example_get = app_code_lesson_operators_dot_numbers_example(operator);
     let common = app_code_lesson_operators_dot_numbers_both_sides_text_common();
+    let common_trimmed = text_trim(common);
     let sides = text_combine(
-      common,
+      common_trimmed,
       " on both the left and right sides of the ",
     );
     let card = app_code_container_light_blue(root);
