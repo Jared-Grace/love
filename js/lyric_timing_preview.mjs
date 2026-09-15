@@ -12,6 +12,7 @@ import { html_media_play } from "./html_media_play.mjs";
 import { lyric_timing_cards_show } from "./lyric_timing_cards_show.mjs";
 import { lyric_timing_held_nudge } from "./lyric_timing_held_nudge.mjs";
 import { lyric_timing_screen_cards } from "./lyric_timing_screen_cards.mjs";
+import { lyric_timing_screen_follow } from "./lyric_timing_screen_follow.mjs";
 import { lyric_timing_screen_buttons_tapping } from "./lyric_timing_screen_buttons_tapping.mjs";
 import { lyric_timing_screen_buttons_writing } from "./lyric_timing_screen_buttons_writing.mjs";
 export async function lyric_timing_preview() {
@@ -50,6 +51,7 @@ export async function lyric_timing_preview() {
   desk.inputs = lyric_timing_screen_passage(root, on_settled);
   desk.song = lyric_timing_screen_song(root, on_song);
   function on_select(index) {
+    desk.following = false;
     let moment = lyric_timing_held_select(desk.held, index);
     html_media_time_set(desk.song.audio, moment);
     html_media_play(desk.song.audio);
@@ -60,6 +62,7 @@ export async function lyric_timing_preview() {
     lyric_timing_cards_show(desk.cards, desk.held);
   }
   desk.cards = lyric_timing_screen_cards(root, on_tap, on_select, on_nudge);
+  lyric_timing_screen_follow(desk);
   desk.told = html_p_text(root, "");
   lyric_timing_screen_buttons_tapping(root, desk);
   lyric_timing_screen_buttons_writing(root, desk);
