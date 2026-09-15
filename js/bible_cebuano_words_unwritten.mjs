@@ -1,11 +1,10 @@
+import { set_includes_not } from "./set_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written } from "./bible_words_written.mjs";
 import { list_lowered_set } from "./list_lowered_set.mjs";
-import { set_includes } from "./set_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function bible_cebuano_words_unwritten(words) {
@@ -23,8 +22,7 @@ export async function bible_cebuano_words_unwritten(words) {
   let written = await bible_words_written(bible_folder);
   let spelled = list_lowered_set(written);
   function unwritten_is(word) {
-    let there = set_includes(spelled, word);
-    let none = not(there);
+    let none = set_includes_not(spelled, word);
     return none;
   }
   let unwritten = list_filter(lowered, unwritten_is);
