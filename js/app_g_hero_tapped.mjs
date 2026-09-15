@@ -1,3 +1,4 @@
+import { app_g_hero_killer } from "./app_g_hero_killer.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_game_event_target_closest_tile } from "./app_shared_game_event_target_closest_tile.mjs";
