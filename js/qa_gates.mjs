@@ -549,7 +549,7 @@ import { bible_words_slips_gate_run } from "./bible_words_slips_gate_run.mjs";
 import { bible_words_slips_all_gate_run } from "./bible_words_slips_all_gate_run.mjs";
 import { bible_verses_hyphen_words_measured_gate_run } from "./bible_verses_hyphen_words_measured_gate_run.mjs";
 import { bible_verses_hyphen_pieces_unwritten_gate_run } from "./bible_verses_hyphen_pieces_unwritten_gate_run.mjs";
-import { reply_cases_gate_run } from "./reply_cases_gate_run.mjs";
+import { app_message_reply_cases_gate_run } from "./app_message_reply_cases_gate_run.mjs";
 import { reply_proposals_stale_gate_run } from "./reply_proposals_stale_gate_run.mjs";
 import { words_dash_pieces_absent_gate_run } from "./words_dash_pieces_absent_gate_run.mjs";
 import { gloss_store_words_read_gate_run } from "./gloss_store_words_read_gate_run.mjs";
@@ -1088,7 +1088,7 @@ export function qa_gates() {
     bible_words_slips_all_gate_run,
     bible_verses_hyphen_words_measured_gate_run,
     bible_verses_hyphen_pieces_unwritten_gate_run,
-    reply_cases_gate_run,
+    app_message_reply_cases_gate_run,
     reply_proposals_stale_gate_run,
     words_dash_pieces_absent_gate_run,
     gloss_store_words_read_gate_run,
