@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_value } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_value.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_books_tally.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -13,8 +14,6 @@ import { less_than } from "./less_than.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
 import { text_slice } from "./text_slice.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { property_set } from "./property_set.mjs";
 export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
@@ -71,8 +70,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short() {
     }
     each(words_once, word_read);
     let found = list_unique(longer_known);
-    let a = list_size(found);
-    let any = greater_than(a, 0);
+    let any = list_size_greater_than(found, 0);
     if (not(any)) {
       return;
     }
