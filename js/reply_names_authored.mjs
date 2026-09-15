@@ -1,7 +1,6 @@
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 export function reply_names_authored() {
   "The given names people in this correspondence actually go by that no book in the repo could supply, written down by hand so that a real person saying their own name is recognised as having said one.";
   "★ A NAME IS ON THIS LIST BECAUSE MILLIONS OF PEOPLE HAVE IT, NEVER BECAUSE ONE CORRESPONDENT DOES. That is the whole rule, and it is what makes the file safe to publish. A list built from who has written in is a list of who has written in, however it is dressed up - it would name real people in a public repository, and it would grow every time somebody new was refused. A list built from what is common names nobody: every entry here would be on it if this correspondence had never happened.";
@@ -356,7 +355,6 @@ export function reply_names_authored() {
   ("The last group is the ordinary stock of given names across the same countries plus the Philippines, India and Pakistan - saints' names, colonial-era names, Spanish forms of biblical names that the biblical list does not carry, and the names people simply call their children now.");
   let groups = [virtues, arabic, african, modern];
   let all = list_concat_multiple(groups);
-  let unique = list_unique(all);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(all);
   return sorted;
 }
