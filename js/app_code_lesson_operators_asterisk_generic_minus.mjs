@@ -1,4 +1,5 @@
-import { text_first_upper_to } from "./text_first_upper_to.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_operators_minus } from "./app_code_lesson_operators_minus.mjs";
 import { html_div_code_multiple } from "./html_div_code_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { digit_positive_random } from "./digit_positive_random.mjs";
@@ -18,10 +19,10 @@ export function app_code_lesson_operators_asterisk_generic_minus(
     minus,
     " it's possible to have a number only on the right and not on the left: ",
   ]);
-  let combined2 = text_combine_right_fn(minus, digit_positive_random);
+  let combined = text_combine_right_fn(minus, digit_positive_random);
   let right = "right";
   let combined4 = text_combine(minus, right);
-  html_div_code_multiple(c, [combined2, combined4]);
+  html_div_code_multiple(c, [combined, combined4]);
   html_div_cycle_code(c, [
     "However JS does not have something like this for ",
     operator,
