@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
@@ -10,7 +11,6 @@ import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { null_is } from "./null_is.mjs";
 import { add } from "./add.mjs";
@@ -53,8 +53,7 @@ export function gloss_word_claims_chain_collapsed(known, claims) {
     let under = null;
     let other = 0;
     while (less_than(other, size)) {
-      let b = equal(other, index);
-      let apart = not(b);
+      let apart = equal_not(other, index);
       if (apart) {
         let theirs = list_get(chains, other);
         let below = list_includes(theirs, key);
