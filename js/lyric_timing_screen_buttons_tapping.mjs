@@ -19,7 +19,6 @@ export function lyric_timing_screen_buttons_tapping(parent, desk) {
     await lyric_timing_desk_load(desk);
   }
   function on_back() {
-    desk.following = false;
     let start = lyric_timing_held_back(desk.held);
     let known = number_is(start);
     if (known) {
