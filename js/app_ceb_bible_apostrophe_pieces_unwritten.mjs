@@ -1,9 +1,8 @@
+import { property_text_split_space } from "./property_text_split_space.mjs";
 import { property_null_is } from "./property_null_is.mjs";
 import { app_ceb_bible_verses_all } from "./app_ceb_bible_verses_all.mjs";
 import { text_apostrophe_inside_word_is } from "./text_apostrophe_inside_word_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
-import { text_split_space } from "./text_split_space.mjs";
 import { list_add } from "./list_add.mjs";
 import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_split.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -26,8 +25,7 @@ export async function app_ceb_bible_apostrophe_pieces_unwritten() {
   let alone = {};
   let apostrophed = [];
   function verse_read(verse) {
-    let text = property_get(verse, "text");
-    let tokens = text_split_space(text);
+    let tokens = property_text_split_space(verse, "text");
     function token_read(token) {
       let marked = text_apostrophe_inside_word_is(token);
       if (marked) {
