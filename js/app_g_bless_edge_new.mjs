@@ -6,7 +6,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_z } from "./g_z.mjs";
-import { app_g_bless_arrow_bob } from "./app_g_bless_arrow_bob.mjs";
+import { bless_arrow_bob } from "./bless_arrow_bob.mjs";
 export function app_g_bless_edge_new(container_map) {
   arguments_assert(arguments, 1);
   ("The one arrow that lives at the edge of the screen and leans towards whoever is left to pray for out beyond it - made once, when the street is built, and aimed again on every move afterwards.");
@@ -33,7 +33,7 @@ export function app_g_bless_edge_new(container_map) {
     "pointer-events": "none",
     visibility: "hidden",
   });
-  let spin = app_g_bless_arrow_bob(outer, 0);
+  let spin = bless_arrow_bob(outer, 0);
   let edge = {
     outer,
     spin,

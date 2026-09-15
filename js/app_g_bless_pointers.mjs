@@ -8,7 +8,7 @@ import { bless_view_people } from "./bless_view_people.mjs";
 import { app_shared_game_npc_pointer_get } from "./app_shared_game_npc_pointer_get.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_bless_arrow_bob } from "./app_g_bless_arrow_bob.mjs";
+import { bless_arrow_bob } from "./bless_arrow_bob.mjs";
 import { app_shared_game_npc_pointer_set } from "./app_shared_game_npc_pointer_set.mjs";
 import { each } from "./each.mjs";
 import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
@@ -43,7 +43,7 @@ export function app_g_bless_pointers(pointers, everyone, remaining) {
       "pointer-events": "none",
       visibility: "hidden",
     });
-    app_g_bless_arrow_bob(pointer, 90);
+    bless_arrow_bob(pointer, 90);
     app_shared_game_npc_pointer_set(person, pointer);
   }
   each(people_all, person_pointer);
