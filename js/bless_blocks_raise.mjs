@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { bless_buildings_raise } from "./bless_buildings_raise.mjs";
 import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { list_concat } from "./list_concat.mjs";
-import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
+import { bless_tiles_pave } from "./bless_tiles_pave.mjs";
 import { bless_block_road } from "./bless_block_road.mjs";
 import { bless_concrete_paving } from "./bless_concrete_paving.mjs";
 import { each_index } from "./each_index.mjs";
@@ -47,12 +47,12 @@ export function bless_blocks_raise(rows, blocks) {
     bless_buildings_raise(rows, buildings, index);
     let item_grass = bless_yard_grass();
     let grassed = list_concat(yard, alleys);
-    app_g_bless_tiles_pave(rows, grassed, item_grass);
+    bless_tiles_pave(rows, grassed, item_grass);
     let item_road = bless_block_road(index);
-    app_g_bless_tiles_pave(rows, road, item_road);
+    bless_tiles_pave(rows, road, item_road);
     let item_concrete = bless_concrete_paving();
     let poured = list_concat(sidewalk, paths);
-    app_g_bless_tiles_pave(rows, poured, item_concrete);
+    bless_tiles_pave(rows, poured, item_concrete);
   }
   each_index(blocks, block_raise);
 }

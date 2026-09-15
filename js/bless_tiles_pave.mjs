@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { each } from "./each.mjs";
 import { list_set_nested_y_x } from "./list_set_nested_y_x.mjs";
-export function app_g_bless_tiles_pave(rows, tiles, item) {
+export function bless_tiles_pave(rows, tiles, item) {
   arguments_assert(arguments, 3);
   ("Writes one kind of ground into a world at the tiles named - pavement where a pavement");
   ("goes, wall where a building stands.");
