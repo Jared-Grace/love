@@ -1,4 +1,4 @@
-import { app_g_bless_edge_seen_is } from "./app_g_bless_edge_seen_is.mjs";
+import { bless_edge_seen_is } from "./bless_edge_seen_is.mjs";
 import { app_g_bless_edge_stand } from "./app_g_bless_edge_stand.mjs";
 import { bless_edge_degrees } from "./bless_edge_degrees.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -26,7 +26,7 @@ export function app_g_bless_edge(edge, container_map, bar, remaining) {
     html_visibility_hidden(outer);
     return;
   }
-  let seen = app_g_bless_edge_seen_is(box, point);
+  let seen = bless_edge_seen_is(box, point);
   if (seen) {
     html_visibility_hidden(outer);
     return;
