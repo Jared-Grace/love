@@ -1,11 +1,10 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add_1 } from "./add_1.mjs";
 import { subtract } from "./subtract.mjs";
 import { add } from "./add.mjs";
 import { range_map } from "./range_map.mjs";
 import { modulo } from "./modulo.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_uneven_dividend_between(least, most, divisor) {
@@ -22,8 +21,7 @@ export function app_code_uneven_dividend_between(least, most, divisor) {
   let numbers = range_map(count, number_of);
   function uneven_is(number) {
     let leftover = modulo(number, divisor);
-    let even = equal(leftover, 0);
-    let uneven = not(even);
+    let uneven = equal_not(leftover, 0);
     return uneven;
   }
   let uneven = list_filter(numbers, uneven_is);
