@@ -2,7 +2,7 @@ import { bless_vehicle_landing } from "./bless_vehicle_landing.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
-import { app_g_bless_vehicle_place } from "./app_g_bless_vehicle_place.mjs";
+import { bless_vehicle_place } from "./bless_vehicle_place.mjs";
 import { app_g_bless_vehicle_slide } from "./app_g_bless_vehicle_slide.mjs";
 export function bless_vehicle_onward(vehicle, seconds, held) {
   arguments_assert(arguments, 3);
@@ -43,6 +43,6 @@ export function bless_vehicle_onward(vehicle, seconds, held) {
     slide = 0;
   }
   property_set(vehicle, "x", landing);
-  app_g_bless_vehicle_place(vehicle);
+  bless_vehicle_place(vehicle);
   app_g_bless_vehicle_slide(vehicle, slide);
 }
