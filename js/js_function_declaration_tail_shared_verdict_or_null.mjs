@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
@@ -14,7 +15,6 @@ import { js_function_declaration_personal_names } from "./js_function_declaratio
 import { list_difference } from "./list_difference.mjs";
 import { js_node_copy } from "./js_node_copy.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
-import { equal } from "./equal.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { list_size } from "./list_size.mjs";
@@ -70,8 +70,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
   let copied = js_node_copy(doing_run);
   let shape = js_statements_shape(copied, private_names);
   let shared_shape = property_get(shared, "shape");
-  let same_is = equal(shape, shared_shape);
-  let apart_is = not(same_is);
+  let apart_is = equal_not(shape, shared_shape);
   if (apart_is) {
     let unrelated = null;
     return unrelated;
@@ -79,8 +78,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
   let made_names = js_statements_declared_names_direct(doing_run);
   let answer_place = property_get(shared, "answer_place");
   let local_name = list_get_or_null(made_names, answer_place);
-  let answered_is = equal(returned_name, local_name);
-  let hands_back_other_is = not(answered_is);
+  let hands_back_other_is = equal_not(returned_name, local_name);
   if (hands_back_other_is) {
     let elsewhere = {
       collapsible: false,
