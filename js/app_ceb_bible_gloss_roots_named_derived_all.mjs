@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -93,8 +94,7 @@ export async function app_ceb_bible_gloss_roots_named_derived_all() {
   let listed = [];
   function root_read(name) {
     let held = property_get(by_root, name);
-    let list = property_get(held, "words");
-    let value2 = list_size(list);
+    let value2 = property_list_size(held, "words");
     property_set(held, "words_count", value2);
     list_add(listed, held);
   }
