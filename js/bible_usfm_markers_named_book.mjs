@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_book_markers } from "./bible_usfm_book_markers.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -31,8 +32,7 @@ export function bible_usfm_markers_named_book(
   let verdict = lambda_throws(lambda);
   let refused = property_get(verdict, "throws");
   if (refused) {
-    let error_thrown = property_get(verdict, "result");
-    let refusal = property_get(error_thrown, "message");
+    let refusal = property_path_get_2(verdict, "result", "message");
     let row = {
       version,
       book_code,
