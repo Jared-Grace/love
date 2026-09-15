@@ -1,0 +1,89 @@
+export function bible_glyph_chapter_rosetta_lines_psa046() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PSA046",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "לַמְנַצֵּ֥חַ לִבְנֵי־ קֹ֑רַח עַֽל־ עֲלָמ֥וֹת שִֽׁיר׃ אֱלֹהִ֣ים לָ֭נוּ מַחֲסֶ֣ה וָעֹ֑ז עֶזְרָ֥ה בְ֝צָר֗וֹת נִמְצָ֥א מְאֹֽד׃",
+        english:
+          "For the choirmaster Of the sons of Korah According to Alamoth A song God is our refuge and strength an ever-present help in times of trouble",
+      },
+      {
+        verse_number: 2,
+        original:
+          "עַל־ כֵּ֣ן לֹא־ נִ֭ירָא בְּהָמִ֣יר אָ֑רֶץ וּבְמ֥וֹט הָ֝רִ֗ים בְּלֵ֣ב יַמִּֽים׃",
+        english:
+          "Therefore we will not fear though the earth is transformed and the mountains are toppled into the depths of the seas",
+      },
+      {
+        verse_number: 3,
+        original:
+          "יֶהֱמ֣וּ יֶחְמְר֣וּ מֵימָ֑יו יִֽרְעֲשֽׁוּ־ הָרִ֖ים בְּגַאֲוָת֣וֹ סֶֽלָה׃",
+        english:
+          "though their waters roar and foam and the mountains quake in the surge Selah",
+      },
+      {
+        verse_number: 4,
+        original:
+          "נָהָ֗ר פְּלָגָ֗יו יְשַׂמְּח֥וּ עִיר־ אֱלֹהִ֑ים קְ֝דֹ֗שׁ מִשְׁכְּנֵ֥י עֶלְיֽוֹן׃",
+        english:
+          "There is a river whose streams delight the city of God the holy place where the Most High dwells",
+      },
+      {
+        verse_number: 5,
+        original:
+          "אֱלֹהִ֣ים בְּ֭קִרְבָּהּ בַּל־ תִּמּ֑וֹט יַעְזְרֶ֥הָ אֱ֝לֹהִ֗ים לִפְנ֥וֹת בֹּֽקֶר׃",
+        english:
+          "God is within her she will not be moved God will help her when morning dawns",
+      },
+      {
+        verse_number: 6,
+        original:
+          "הָמ֣וּ ג֭וֹיִם מָ֣טוּ מַמְלָכ֑וֹת נָתַ֥ן בְּ֝קוֹל֗וֹ תָּמ֥וּג אָֽרֶץ׃",
+        english:
+          "Nations rage kingdoms crumble the earth melts when He lifts His voice",
+      },
+      {
+        verse_number: 7,
+        original:
+          "יְהוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־ לָ֝נוּ אֱלֹהֵ֖י יַעֲקֹ֣ב סֶֽלָה׃",
+        english:
+          "The LORD of Hosts is with us the God of Jacob is our fortress Selah",
+      },
+      {
+        verse_number: 8,
+        original:
+          "לְֽכוּ־ חֲ֭זוּ מִפְעֲל֣וֹת יְהוָ֑ה אֲשֶׁר־ שָׂ֖ם שַׁמּ֣וֹת בָּאָֽרֶץ׃",
+        english:
+          "Come see the works of the LORD who brings devastation upon the earth",
+      },
+      {
+        verse_number: 9,
+        original:
+          "מַשְׁבִּ֥ית מִלְחָמוֹת֮ עַד־ קְצֵ֪ה הָ֫אָ֥רֶץ קֶ֣שֶׁת יְ֭שַׁבֵּר וְקִצֵּ֣ץ חֲנִ֑ית עֲ֝גָל֗וֹת יִשְׂרֹ֥ף בָּאֵֽשׁ׃",
+        english:
+          "He makes wars to cease throughout the earth He breaks the bow and shatters the spear He burns the shields in the fire",
+      },
+      {
+        verse_number: 10,
+        original:
+          "הַרְפּ֣וּ וּ֭דְעוּ כִּי־ אָנֹכִ֣י אֱלֹהִ֑ים אָר֥וּם בַּ֝גּוֹיִ֗ם אָר֥וּם בָּאָֽרֶץ׃",
+        english:
+          "Be still and know that I am God I will be exalted among the nations I will be exalted over the earth",
+      },
+      {
+        verse_number: 11,
+        original:
+          "יְהוָ֣ה צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־ לָ֝נוּ אֱלֹהֵ֖י יַעֲקֹ֣ב סֶֽלָה׃",
+        english:
+          "The LORD of Hosts is with us the God of Jacob is our fortress Selah",
+      },
+    ],
+  };
+  return chapter;
+}
