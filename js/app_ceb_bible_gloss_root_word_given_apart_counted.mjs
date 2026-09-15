@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary } from "./app_ceb_bible_gloss_root_word_given_apart_counted_vocabulary.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -6,7 +7,6 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { list_unique_set } from "./list_unique_set.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_named_word_given } from "./gloss_explain_roots_named_word_given.mjs";
 import { not } from "./not.mjs";
@@ -45,8 +45,7 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
     let sentence = property_get(found, "named");
     let s = property_get(entry, word_key);
     let word = text_lower_to(s);
-    let sentence_count = list_size(sentence);
-    let sentence_empty = equal(sentence_count, 0);
+    let sentence_empty = list_size_equal(sentence, 0);
     if (sentence_empty) {
       return;
     }
@@ -56,8 +55,7 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
       explain,
       vocabulary_none,
     );
-    let spelling_count = list_size(spelling);
-    let spelling_empty = equal(spelling_count, 0);
+    let spelling_empty = list_size_equal(spelling, 0);
     if (not(spelling_empty)) {
       spelling_total = add(spelling_total, 1);
     }
@@ -66,8 +64,7 @@ export async function app_ceb_bible_gloss_root_word_given_apart_counted(
       explain,
       vocabulary,
     );
-    let widened_count = list_size(widened);
-    let widened_empty = equal(widened_count, 0);
+    let widened_empty = list_size_equal(widened, 0);
     if (not(widened_empty)) {
       vocabulary_total = add(vocabulary_total, 1);
     }
