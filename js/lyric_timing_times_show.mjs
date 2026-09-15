@@ -1,3 +1,4 @@
+import { app_shared_color_gold_text_light } from "./app_shared_color_gold_text_light.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { lyric_timing_untimed_said } from "./lyric_timing_untimed_said.mjs";
 import { null_is } from "./null_is.mjs";
@@ -72,7 +73,8 @@ export function lyric_timing_times_show(cards, held) {
     let right2 = subtract(held.heard, 1);
     let sounding = equal(index, right2);
     if (sounding) {
-      html_style_background_color_set(row, "#fff0a0");
+      let background = app_shared_color_gold_text_light();
+      html_style_background_color_set(row, background);
       marked = row;
     }
     let waiting = equal(index, held.cursor);
