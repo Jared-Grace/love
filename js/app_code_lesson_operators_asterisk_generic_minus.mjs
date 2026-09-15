@@ -9,13 +9,12 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 export function app_code_lesson_operators_asterisk_generic_minus(
   root,
   operator,
-  text_before,
+  context,
 ) {
   let c = app_code_container_light_blue(root);
   let minus = js_operator_minus_symbol();
-  let t = text_first_upper_to(text_combine(text_before, "remember, for "));
-  html_div_cycle_code(c, [
-    t,
+  app_code_remember_from_lesson(c, context, app_code_lesson_operators_minus, [
+    "for ",
     minus,
     " it's possible to have a number only on the right and not on the left: ",
   ]);

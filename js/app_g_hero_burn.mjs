@@ -16,7 +16,7 @@ export async function app_g_hero_burn(hero) {
   arguments_assert(arguments, 1);
   ("The player stops the evil person with fire, in five acts: she gathers the fire, throws it, it strikes, it engulfs them, and they are burned to ash.");
   ("They stop hunting the moment the fire is called, not when it lands, so the one the fireball was aimed at is still standing there when it arrives.");
-  ("Once it is over nobody is evil, and a little while later somebody else in the crowd turns.");
+  ("Once it is over nobody is evil, and a little while later somebody else in the crowd turns. Somebody new walks into the street in the place of the one burned, so the crowd never thins.");
   let evil = property_get(hero, "evil");
   let fx = property_get(hero, "fx");
   let player_img_c = property_get(hero, "player_img_c");
@@ -32,6 +32,10 @@ export async function app_g_hero_burn(hero) {
   await app_g_hero_engulf(hero, to, evil_img);
   await app_g_hero_ash(hero, to, evil);
   list_remove_if_exists(npcs, evil);
+  let world = property_get(hero, "world");
+  let div_map = property_get(hero, "div_map");
+  let graves = property_get(hero, "graves");
+  bless_person_replace(world, div_map, evil, graves);
   property_set(hero, "evil", null);
   render();
   function spawned() {

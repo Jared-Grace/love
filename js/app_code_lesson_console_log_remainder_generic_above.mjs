@@ -10,8 +10,9 @@ export function app_code_lesson_console_log_remainder_generic_above(
   percent,
   modulo_fn,
   insight,
+  context,
 ) {
-  arguments_assert(arguments, 6);
+  arguments_assert(arguments, 7);
   let r = app_code_lesson_console_log_remainder_generic_above_alternates(
     root,
     divisor,
@@ -19,6 +20,7 @@ export function app_code_lesson_console_log_remainder_generic_above(
     percent,
     modulo_fn,
     insight,
+    context,
   );
   let alternates = property_get(r, "alternates");
   let closing_line = property_get(r, "closing_line");
