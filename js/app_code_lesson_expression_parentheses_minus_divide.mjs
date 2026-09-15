@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_choose_order_plus_minus } from "./app_code_lesson_expression_choose_order_plus_minus.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_outer_divide_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_divide_line.mjs";
 import { app_code_lesson_expression_parentheses_minus_divide_outer_minus_line } from "./app_code_lesson_expression_parentheses_minus_divide_outer_minus_line.mjs";
@@ -50,13 +52,12 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_choose_order_plus_minus, [
-      "",
-      plus,
-      " and ",
-      minus,
-      " are solved left to right",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_choose_order_plus_minus,
+      ["", plus, " and ", minus, " are solved left to right"],
+    );
     html_div_cycle_code(recall, ["So ", "12 - 3 + 4", " is ", "13"]);
     let changed = app_code_container_light_blue(root);
     html_div_cycle_code(changed, [
