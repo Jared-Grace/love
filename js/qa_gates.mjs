@@ -804,6 +804,7 @@ export function qa_gates() {
     examples_registers_gate_run,
     functions_selects_unsafe_gate_run,
     color_near_miss_gate_run,
+    color_palette_outside_gate_run,
     functions_shadowing_operator_gate_run,
     functions_native_callback_gate_run,
     functions_shadowing_function_gate_run,
