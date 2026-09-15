@@ -1,4 +1,4 @@
-import { app_g_bless_container_new } from "./app_g_bless_container_new.mjs";
+import { bless_container_new } from "./bless_container_new.mjs";
 import { app_g_bless_overlay_loaded } from "./app_g_bless_overlay_loaded.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export async function app_g_bless(context) {
@@ -8,6 +8,6 @@ export async function app_g_bless(context) {
   ("there is a world to walk about in and no saving, so a refresh begins a new one. what is here is the loop: look somewhere, see who is there, pray for them, and walk until somebody else is in front of you");
   ("the zoom is set once here, at the top, before anything is drawn. every tile, person and icon is sized and placed from that one variable, so setting it on the page means the whole map is drawn to this game's camera rather than the gospel game's - without either game having to know the other exists");
   ("the animations the map's own pieces name are put on the page here, before any of them is drawn. they are named as plain CSS by whatever uses them, so a page that never asks for them shows a player with no glow at all and says nothing about it - which is a screen that looks merely wrong rather than broken");
-  let container = app_g_bless_container_new(context);
+  let container = bless_container_new(context);
   await app_g_bless_overlay_loaded(container);
 }

@@ -10,7 +10,7 @@ import { html_style_overflow_hidden } from "./html_style_overflow_hidden.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_viewport_height_visible } from "./html_viewport_height_visible.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-export function app_g_bless_container_new(context) {
+export function bless_container_new(context) {
   arguments_assert(arguments, 1);
   html_reload_on_hash_change();
   app_shared_game_player_style_initialize();
