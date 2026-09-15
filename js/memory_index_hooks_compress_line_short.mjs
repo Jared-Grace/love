@@ -1,4 +1,4 @@
-import { list_size_subtract } from "./list_size_subtract.mjs";
+import { text_occurrences_count } from "./text_occurrences_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -6,7 +6,6 @@ import { text_code_spans_blanked } from "./text_code_spans_blanked.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
-import { text_split } from "./text_split.mjs";
 import { memory_index_head_separated_is } from "./memory_index_head_separated_is.mjs";
 import { memory_index_head_tidy } from "./memory_index_head_tidy.mjs";
 import { memory_wikilink_tokens } from "./memory_wikilink_tokens.mjs";
@@ -34,8 +33,7 @@ export function memory_index_hooks_compress_line_short(
   if (not(touched)) {
     return null;
   }
-  let pieces = text_split(masked, "](");
-  let entries = list_size_subtract(pieces, 1);
+  let entries = text_occurrences_count(masked, "](");
   let grouped = greater_than(entries, 1);
   if (grouped) {
     return null;
