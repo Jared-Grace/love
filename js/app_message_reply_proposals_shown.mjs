@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { reply_records_by_key } from "./reply_records_by_key.mjs";
+import { app_message_reply_records_by_key } from "./app_message_reply_records_by_key.mjs";
 import { reply_proposals } from "./reply_proposals.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
@@ -18,7 +18,7 @@ export async function app_message_reply_proposals_shown() {
   ("★ THE FILES THAT DO NOT EXIST YET ARE THE HALF THAT USED TO REACH NOBODY. A change to these rules is usually a few lines in a function that is already there and several whole new files beside it, and only the few lines were ever shown - so what was being said yes or no to was the smaller and less consequential half. They are fetched by the names the change gives and drawn as lines it brings, which is what they are.");
   ("Lines the change names and its file no longer holds come through separately rather than being quietly dropped, so a change that has gone stale says so on the screen instead of drawing as though it still applied.");
   ("The corpus comes through checked rather than raw, so a case that has quietly stopped doing what it was written to do shows on the same screen as the change being proposed. A change is reviewed against a rule set somebody believes is working, and the cheapest way to be wrong about that is to have never looked.");
-  let by_key = await reply_records_by_key();
+  let by_key = await app_message_reply_records_by_key();
   let proposals = await reply_proposals();
   let checked = await app_message_reply_cases_checked();
   function each_case(one) {
