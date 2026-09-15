@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_ceb_bible_gloss_roots_store_disagreeing_known } from "./app_ceb_bible_gloss_roots_store_disagreeing_known.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -14,7 +15,6 @@ import { null_is } from "./null_is.mjs";
 import { add } from "./add.mjs";
 import { not } from "./not.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 export async function app_ceb_bible_gloss_roots_store_disagreeing() {
@@ -62,8 +62,7 @@ export async function app_ceb_bible_gloss_roots_store_disagreeing() {
         let same = equal(named_folded, folded);
         return same;
       }
-      let hits = list_filter(roots, matches_is);
-      let hit_count = list_size(hits);
+      let hit_count = list_filter_size(roots, matches_is);
       let found = equal_not(hit_count, 0);
       if (found) {
         settled = add(settled, 1);
