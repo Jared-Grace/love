@@ -1,3 +1,4 @@
+import { app_code_expression_node_left_operator_first } from "./app_code_expression_node_left_operator_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_percent_symbol } from "./js_operator_percent_symbol.mjs";
 import { js_operator_double_asterisk_symbol } from "./js_operator_double_asterisk_symbol.mjs";
@@ -29,8 +30,13 @@ export function app_code_expression_written_shapes_unpressed() {
   list_add(shapes, under_times);
   let under_plus = app_code_expression_node(2, plus, alone);
   list_add(shapes, under_plus);
-  let plus_inside = app_code_expression_node(2, plus, 14);
-  let over_plus = app_code_expression_node(plus_inside, remainder, 4);
+  let over_plus = app_code_expression_node_left_operator_first(
+    2,
+    plus,
+    14,
+    remainder,
+    4,
+  );
   list_add(shapes, over_plus);
   let rounded_left = app_code_expression_node(rounded, remainder, 2);
   list_add(shapes, rounded_left);
