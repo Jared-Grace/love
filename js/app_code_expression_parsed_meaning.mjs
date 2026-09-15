@@ -29,8 +29,8 @@ export function app_code_expression_parsed_meaning(node) {
     let acted_on_literal_is = js_node_type_is(acted_on, "Literal");
     if (minus_is && acted_on_literal_is) {
       ("a minus standing in front of a plain number is part of how that number is spelled and not an operator anybody presses, so it is kept with the number");
-      let negative = js_unparse(node);
-      return negative;
+      let negative_spelled = js_unparse(node);
+      return negative_spelled;
     }
     let inside = app_code_expression_parsed_meaning(acted_on);
     let one_sided = text_combine_multiple([symbol, "(", inside, ")"]);
