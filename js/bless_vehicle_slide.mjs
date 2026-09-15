@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-export function app_g_bless_vehicle_slide(vehicle, seconds) {
+export function bless_vehicle_slide(vehicle, seconds) {
   arguments_assert(arguments, 2);
   ("Say how a car travels between the square it was on and the square it is going to: at a");
   ("steady speed, over the time given, and sideways only.");
