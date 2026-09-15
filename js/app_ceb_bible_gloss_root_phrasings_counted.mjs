@@ -1,14 +1,13 @@
+import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
-import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_chapters_entries_explained_generic } from "./gloss_chapters_entries_explained_generic.mjs";
@@ -47,8 +46,7 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
     let named_empty = list_size_equal(named, 0);
     if (not(named_empty)) {
       further_named = add(further_named, 1);
-      let a = list_size(further_shown);
-      let further_room = less_than(a, 20);
+      let further_room = list_size_less_than_value(further_shown, 20);
       if (further_room) {
         let root = list_get(named, 0);
         list_add(further_shown, {
@@ -59,8 +57,7 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
       return;
     }
     neither = add(neither, 1);
-    let a2 = list_size(neither_shown);
-    let room = less_than(a2, 20);
+    let room = list_size_less_than_value(neither_shown, 20);
     if (room) {
       list_add(neither_shown, explain);
     }
