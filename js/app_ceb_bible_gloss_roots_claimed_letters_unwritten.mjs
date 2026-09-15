@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_letters_rare } from "./app_ceb_bible_gloss_roots_claimed_letters_rare.mjs";
@@ -43,8 +44,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
     let stripped = text_accent_marks_removed(character);
     let size = text_size(stripped);
     let emptied = equal(size, 0);
-    let same = equal(stripped, character);
-    let changed = not(same);
+    let changed = equal_not(stripped, character);
     let accented = or(emptied, changed);
     let spaced = equal(character, " ");
     let code_point = character.codePointAt(0);
