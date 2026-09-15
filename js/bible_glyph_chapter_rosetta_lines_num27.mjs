@@ -1,0 +1,166 @@
+export function bible_glyph_chapter_rosetta_lines_num27() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM27",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַתִּקְרַ֜בְנָה בְּנ֣וֹת צְלָפְחָ֗ד בֶּן־ חֵ֤פֶר בֶּן־ גִּלְעָד֙ בֶּן־ מָכִ֣יר בֶּן־ מְנַשֶּׁ֔ה לְמִשְׁפְּחֹ֖ת מְנַשֶּׁ֣ה בֶן־ יוֹסֵ֑ף וְאֵ֙לֶּה֙ שְׁמ֣וֹת בְּנֹתָ֔יו מַחְלָ֣ה נֹעָ֔ה וְחָגְלָ֥ה וּמִלְכָּ֖ה וְתִרְצָֽה׃",
+        english:
+          "Now the daughters of Zelophehad son of Hepher the son of Gilead the son of Machir the son of Manasseh belonged to the clans of Manasseh son of Joseph These were the names of his daughters Mahlah Noah Hoglah Milcah and Tirzah They approached",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַֽתַּעֲמֹ֜דְנָה לִפְנֵ֣י מֹשֶׁ֗ה וְלִפְנֵי֙ אֶלְעָזָ֣ר הַכֹּהֵ֔ן וְלִפְנֵ֥י הַנְּשִׂיאִ֖ם וְכָל־ הָעֵדָ֑ה פֶּ֥תַח אֹֽהֶל־ מוֹעֵ֖ד לֵאמֹֽר׃",
+        english:
+          "the entrance to the Tent of Meeting stood before Moses Eleazar the priest the leaders and the whole congregation and said",
+      },
+      {
+        verse_number: 3,
+        original:
+          "אָבִינוּ֮ מֵ֣ת בַּמִּדְבָּר֒ וְה֨וּא לֹא־ הָיָ֜ה בְּת֣וֹךְ הָעֵדָ֗ה הַנּוֹעָדִ֛ים עַל־ יְהוָ֖ה בַּעֲדַת־ קֹ֑רַח כִּֽי־ בְחֶטְא֣וֹ מֵ֔ת וּבָנִ֖ים לֹא־ הָ֥יוּ לֽוֹ׃",
+        english:
+          "Our father died in the wilderness but he was not among the followers of Korah who gathered together against the LORD Instead he died because of his own sin and he had no sons",
+      },
+      {
+        verse_number: 4,
+        original:
+          "לָ֣מָּה יִגָּרַ֤ע שֵׁם־ אָבִ֙ינוּ֙ מִתּ֣וֹךְ מִשְׁפַּחְתּ֔וֹ כִּ֛י אֵ֥ין ל֖וֹ בֵּ֑ן תְּנָה־ לָּ֣נוּ אֲחֻזָּ֔ה בְּת֖וֹךְ אֲחֵ֥י אָבִֽינוּ׃",
+        english:
+          "Why should the name of our father disappear from his clan because he had no sons Give us property among our father’s brothers",
+      },
+      {
+        verse_number: 5,
+        original: "וַיַּקְרֵ֥ב מֹשֶׁ֛ה אֶת־ מִשְׁפָּטָ֖ן לִפְנֵ֥י יְהוָֽה׃ס",
+        english: "So Moses brought their case before the LORD",
+      },
+      {
+        verse_number: 6,
+        original: "וַיֹּ֥אמֶר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "and the LORD answered him",
+      },
+      {
+        verse_number: 7,
+        original:
+          "כֵּ֗ן בְּנ֣וֹת צְלָפְחָד֮ דֹּבְרֹת֒ נָתֹ֨ן תִּתֵּ֤ן לָהֶם֙ אֲחֻזַּ֣ת נַחֲלָ֔ה בְּת֖וֹךְ אֲחֵ֣י אֲבִיהֶ֑ם וְהַֽעֲבַרְתָּ֛ אֶת־ נַחֲלַ֥ת אֲבִיהֶ֖ן לָהֶֽן׃",
+        english:
+          "The daughters of Zelophehad speak correctly You certainly must give them property as an inheritance among their father’s brothers and transfer their father’s inheritance to them",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְאֶל־ בְּנֵ֥י יִשְׂרָאֵ֖ל תְּדַבֵּ֣ר לֵאמֹ֑ר אִ֣ישׁ כִּֽי־ יָמ֗וּת וּבֵן֙ אֵ֣ין ל֔וֹ וְהַֽעֲבַרְתֶּ֥ם אֶת־ נַחֲלָת֖וֹ לְבִתּֽוֹ׃",
+        english:
+          "Furthermore you shall say to the Israelites If a man dies and leaves no son you are to transfer his inheritance to his daughter",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְאִם־ אֵ֥ין ל֖וֹ בַּ֑ת וּנְתַתֶּ֥ם אֶת־ נַחֲלָת֖וֹ לְאֶחָיו׃",
+        english: "If he has no daughter give his inheritance to his brothers",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְאִם־ אֵ֥ין ל֖וֹ אַחִ֑ים וּנְתַתֶּ֥ם אֶת־ נַחֲלָת֖וֹ לַאֲחֵ֥י אָבִֽיו׃",
+        english:
+          "If he has no brothers give his inheritance to his father’s brothers",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְאִם־ אֵ֣ין אַחִים֮ לְאָבִיו֒ וּנְתַתֶּ֣ם אֶת־ נַחֲלָת֗וֹ לִשְׁאֵר֞וֹ הַקָּרֹ֥ב אֵלָ֛יו מִמִּשְׁפַּחְתּ֖וֹ וְיָרַ֣שׁ אֹתָ֑הּ וְֽהָ֨יְתָ֜ה לִבְנֵ֤י יִשְׂרָאֵל֙ לְחֻקַּ֣ת מִשְׁפָּ֔ט כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־ מֹשֶֽׁה׃ס",
+        english:
+          "And if his father has no brothers give his inheritance to the next of kin from his clan that he may take possession of it This is to be a statutory ordinance for the Israelites as the LORD has commanded Moses",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֔ה עֲלֵ֛ה אֶל־ הַ֥ר הָעֲבָרִ֖ים הַזֶּ֑ה וּרְאֵה֙ אֶת־ הָאָ֔רֶץ אֲשֶׁ֥ר נָתַ֖תִּי לִבְנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Then the LORD said to Moses Go up this mountain of the Abarim range and see the land that I have given the Israelites",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְרָאִ֣יתָה אֹתָ֔הּ וְנֶאֱסַפְתָּ֥ אֶל־ עַמֶּ֖יךָ גַּם־ אָ֑תָּה כַּאֲשֶׁ֥ר נֶאֱסַ֖ף אַהֲרֹ֥ן אָחִֽיךָ׃",
+        english:
+          "After you have seen it you too will be gathered to your people as your brother Aaron was",
+      },
+      {
+        verse_number: 14,
+        original:
+          "כַּאֲשֶׁר֩ מְרִיתֶ֨ם פִּ֜י בְּמִדְבַּר־ צִ֗ן בִּמְרִיבַת֙ הָֽעֵדָ֔ה לְהַקְדִּישֵׁ֥נִי בַמַּ֖יִם לְעֵינֵיהֶ֑ם הֵ֛ם מֵֽי־ מְרִיבַ֥ת קָדֵ֖שׁ מִדְבַּר־ צִֽן׃פ",
+        english:
+          "for when the congregation contended in the Wilderness of Zin both of you rebelled against My command to show My holiness in their sight regarding the waters Those were the waters of Meribah in Kadesh in the Wilderness of Zin",
+      },
+      {
+        verse_number: 15,
+        original: "וַיְדַבֵּ֣ר מֹשֶׁ֔ה אֶל־ יְהוָ֖ה לֵאמֹֽר׃",
+        english: "So Moses appealed to the LORD",
+      },
+      {
+        verse_number: 16,
+        original:
+          "יִפְקֹ֣ד יְהוָ֔ה אֱלֹהֵ֥י הָרוּחֹ֖ת לְכָל־ בָּשָׂ֑ר אִ֖ישׁ עַל־ הָעֵדָֽה׃",
+        english:
+          "May the LORD the God of the spirits of all flesh appoint a man over the congregation",
+      },
+      {
+        verse_number: 17,
+        original:
+          "אֲשֶׁר־ יֵצֵ֣א לִפְנֵיהֶ֗ם וַאֲשֶׁ֤ר יָבֹא֙ לִפְנֵיהֶ֔ם וַאֲשֶׁ֥ר יוֹצִיאֵ֖ם וַאֲשֶׁ֣ר יְבִיאֵ֑ם וְלֹ֤א תִהְיֶה֙ עֲדַ֣ת יְהוָ֔ה כַּצֹּ֕אן אֲשֶׁ֥ר אֵין־ לָהֶ֖ם רֹעֶֽה׃",
+        english:
+          "who will go out and come in before them and who will lead them out and bring them in so that the congregation of the LORD will not be like sheep without a shepherd",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה קַח־ לְךָ֙ אֶת־ יְהוֹשֻׁ֣עַ בִּן־ נ֔וּן אִ֖ישׁ אֲשֶׁר־ ר֣וּחַ בּ֑וֹ וְסָמַכְתָּ֥ אֶת־ יָדְךָ֖ עָלָֽיו׃",
+        english:
+          "And the LORD replied to Moses Take Joshua son of Nun a man with the Spirit in him and lay your hands on him",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְהַֽעֲמַדְתָּ֣ אֹת֗וֹ לִפְנֵי֙ אֶלְעָזָ֣ר הַכֹּהֵ֔ן וְלִפְנֵ֖י כָּל־ הָעֵדָ֑ה וְצִוִּיתָ֥ה אֹת֖וֹ לְעֵינֵיהֶֽם׃",
+        english:
+          "Have him stand before Eleazar the priest and the whole congregation and commission him in their sight",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְנָתַתָּ֥ה מֵהֽוֹדְךָ֖ עָלָ֑יו לְמַ֣עַן יִשְׁמְע֔וּ כָּל־ עֲדַ֖ת בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Confer on him some of your authority so that the whole congregation of Israel will obey him",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְלִפְנֵ֨י אֶלְעָזָ֤ר הַכֹּהֵן֙ יַעֲמֹ֔ד וְשָׁ֥אַל ל֛וֹ בְּמִשְׁפַּ֥ט הָאוּרִ֖ים לִפְנֵ֣י יְהוָ֑ה עַל־ פִּ֨יו יֵצְא֜וּ וְעַל־ פִּ֣יו יָבֹ֗אוּ ה֛וּא וְכָל־ בְּנֵי־ יִשְׂרָאֵ֥ל אִתּ֖וֹ וְכָל־ הָעֵדָֽה׃",
+        english:
+          "He shall stand before Eleazar the priest who will seek counsel for him before the LORD by the judgment of the Urim At his command he and all the Israelites with him the entire congregation will go out and come in",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיַּ֣עַשׂ מֹשֶׁ֔ה כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֹת֑וֹ וַיִּקַּ֣ח אֶת־ יְהוֹשֻׁ֗עַ וַיַּֽעֲמִדֵ֙הוּ֙ לִפְנֵי֙ אֶלְעָזָ֣ר הַכֹּהֵ֔ן וְלִפְנֵ֖י כָּל־ הָעֵדָֽה׃",
+        english:
+          "Moses did as the LORD had commanded him He took Joshua had him stand before Eleazar the priest and the whole congregation",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיִּסְמֹ֧ךְ אֶת־ יָדָ֛יו עָלָ֖יו וַיְצַוֵּ֑הוּ כַּאֲשֶׁ֛ר דִּבֶּ֥ר יְהוָ֖ה בְּיַד־ מֹשֶֽׁה׃פ",
+        english:
+          "and laid his hands on him and commissioned him as the LORD had instructed through Moses",
+      },
+    ],
+  };
+  return chapter;
+}
