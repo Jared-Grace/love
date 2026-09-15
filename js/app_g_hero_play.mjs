@@ -1,12 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_player_img_female_get } from "./g_player_img_female_get.mjs";
-import { bless_world_new } from "./bless_world_new.mjs";
+import { bless_street_new } from "./bless_street_new.mjs";
 import { property_get } from "./property_get.mjs";
-import { bless_map_scrolling } from "./bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
-import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
-import { bless_doors_draw } from "./bless_doors_draw.mjs";
-import { bless_windows_draw } from "./bless_windows_draw.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { bless_edge_new } from "./bless_edge_new.mjs";
 import { app_g_hero_evil_color } from "./app_g_hero_evil_color.mjs";
@@ -16,10 +12,7 @@ import { bless_camera_people_set } from "./bless_camera_people_set.mjs";
 import { app_g_hero_edge } from "./app_g_hero_edge.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_hero_tapped } from "./app_g_hero_tapped.mjs";
-import { html_on } from "./html_on.mjs";
-import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
-import { bless_people_walk } from "./bless_people_walk.mjs";
-import { bless_vehicles_drive } from "./bless_vehicles_drive.mjs";
+import { bless_street_start } from "./bless_street_start.mjs";
 import { app_g_hero_evil_spawn } from "./app_g_hero_evil_spawn.mjs";
 export function app_g_hero_play(container_map) {
   arguments_assert(arguments, 1);
@@ -27,19 +20,13 @@ export function app_g_hero_play(container_map) {
   ("The edge arrow is the praying game's own, recoloured to the red an evil person wears, so a player who cannot see the killer still knows which way to run.");
   ("The arrow measures the screen above a bar of buttons. This game has no buttons, so it is handed a bar with no height at all and measures the whole screen.");
   let player_img = g_player_img_female_get();
-  let world = bless_world_new(player_img);
-  let player = property_get(world, "player");
-  let npcs = property_get(world, "npcs");
-  let blocks = property_get(world, "blocks");
-  let drawn = bless_map_scrolling(container_map, world);
+  let street = bless_street_new(container_map, player_img);
+  let drawn = property_get(street, "drawn");
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
-  let crossings = html_div(div_map);
-  bless_crossing_draw(crossings, blocks);
-  let doors = html_div(div_map);
-  bless_doors_draw(doors, blocks);
-  let windows = html_div(div_map);
-  bless_windows_draw(windows, blocks);
+  let world = property_get(street, "world");
+  let player = property_get(world, "player");
+  let npcs = property_get(world, "npcs");
   let bar = html_div(container_map);
   html_style_assign(bar, {
     position: "absolute",
@@ -71,11 +58,14 @@ export function app_g_hero_play(container_map) {
   }
   property_set(hero, "render", render);
   let tapped = app_g_hero_tapped(hero);
-  html_on(div_map, "click", tapped);
-  render();
-  app_shared_game_player_center(player, player_img_c, div_map);
-  bless_people_walk(world, render);
-  bless_vehicles_drive(world, container_map);
+  bless_street_start(
+    container_map,
+    world,
+    div_map,
+    player_img_c,
+    tapped,
+    render,
+  );
   app_g_hero_evil_spawn(hero);
   return hero;
 }
