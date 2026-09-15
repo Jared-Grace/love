@@ -3,7 +3,7 @@ import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { property_get } from "./property_get.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply } from "./multiply.mjs";
-import { app_g_bless_edge_inside } from "./app_g_bless_edge_inside.mjs";
+import { bless_edge_inside } from "./bless_edge_inside.mjs";
 export function app_g_bless_edge_stand(outer, box, point) {
   arguments_assert(arguments, 3);
   ("Where on the glass the edge arrow has to stand to be pointing at somebody off the screen: their own place, pulled back inside the box far enough that the whole arrow still fits, and then a little further.");
@@ -16,6 +16,6 @@ export function app_g_bless_edge_stand(outer, box, point) {
   let tall = property_get(rect_arrow, "height");
   let longer = math_max(wide, tall);
   let pad = multiply(longer, 0.66);
-  let stand = app_g_bless_edge_inside(box, point, pad);
+  let stand = bless_edge_inside(box, point, pad);
   return stand;
 }
