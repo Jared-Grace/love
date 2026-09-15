@@ -17,6 +17,7 @@ export function apps_all_main_fns() {
     fn_name("app_g"),
     fn_name("app_g_bible"),
     fn_name("app_g_bless"),
+    fn_name("app_g_hero"),
     fn_name("app_g_verify"),
     fn_name("app_index"),
     fn_name("app_karate"),
