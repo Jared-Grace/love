@@ -1,0 +1,165 @@
+export function bible_glyph_chapter_rosetta_lines_1sa08() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "1SA08",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְהִ֕י כַּאֲשֶׁ֥ר זָקֵ֖ן שְׁמוּאֵ֑ל וַיָּ֧שֶׂם אֶת־ בָּנָ֛יו שֹׁפְטִ֖ים לְיִשְׂרָאֵֽל׃",
+        english:
+          "When Samuel grew old he appointed his sons as judges over Israel",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיְהִ֞י שֶׁם־ בְּנ֤וֹ הַבְּכוֹר֙ יוֹאֵ֔ל וְשֵׁ֥ם מִשְׁנֵ֖הוּ אֲבִיָּ֑ה שֹׁפְטִ֖ים בִּבְאֵ֥ר שָֽׁבַע׃",
+        english:
+          "The name of his firstborn son was Joel and the name of his second was Abijah They were judges in Beersheba",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְלֹֽא־ הָלְכ֤וּ בָנָיו֙ בְּדַרְכּוֹ וַיִּטּ֖וּ אַחֲרֵ֣י הַבָּ֑צַע וַיִּ֨קְחוּ־ שֹׁ֔חַד וַיַּטּ֖וּ מִשְׁפָּֽט׃פ",
+        english:
+          "But his sons did not walk in his ways they turned aside toward dishonest gain accepting bribes and perverting justice",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיִּֽתְקַבְּצ֔וּ כֹּ֖ל זִקְנֵ֣י יִשְׂרָאֵ֑ל וַיָּבֹ֥אוּ אֶל־ שְׁמוּאֵ֖ל הָרָמָֽתָה׃",
+        english:
+          "So all the elders of Israel gathered together and came to Samuel at Ramah",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּאמְר֣וּ אֵלָ֗יו הִנֵּה֙ אַתָּ֣ה זָקַ֔נְתָּ וּבָנֶ֕יךָ לֹ֥א הָלְכ֖וּ בִּדְרָכֶ֑יךָ עַתָּ֗ה שִֽׂימָה־ לָּ֥נוּ מֶ֛לֶךְ לְשָׁפְטֵ֖נוּ כְּכָל־ הַגּוֹיִֽם׃",
+        english:
+          "Look they said you are old and your sons do not walk in your ways Now appoint a king to judge us like all the other nations",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֵּ֤רַע הַדָּבָר֙ בְּעֵינֵ֣י שְׁמוּאֵ֔ל כַּאֲשֶׁ֣ר אָמְר֔וּ תְּנָה־ לָּ֥נוּ מֶ֖לֶךְ לְשָׁפְטֵ֑נוּ וַיִּתְפַּלֵּ֥ל שְׁמוּאֵ֖ל אֶל־ יְהוָֽה׃פ",
+        english:
+          "But when they said Give us a king to judge us their demand was displeasing in the sight of Samuel so he prayed to the LORD",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ שְׁמוּאֵ֔ל שְׁמַע֙ בְּק֣וֹל הָעָ֔ם לְכֹ֥ל אֲשֶׁר־ יֹאמְר֖וּ אֵלֶ֑יךָ כִּ֣י לֹ֤א אֹֽתְךָ֙ מָאָ֔סוּ כִּֽי־ אֹתִ֥י מָאֲס֖וּ מִמְּלֹ֥ךְ עֲלֵיהֶֽם׃",
+        english:
+          "And the LORD said to Samuel Listen to the voice of the people in all that they say to you For it is not you they have rejected but they have rejected Me as their king",
+      },
+      {
+        verse_number: 8,
+        original:
+          "כְּכָֽל־ הַמַּעֲשִׂ֣ים אֲשֶׁר־ עָשׂ֗וּ מִיּוֹם֩ הַעֲלֹתִ֨י אֹתָ֤ם מִמִּצְרַ֙יִם֙ וְעַד־ הַיּ֣וֹם הַזֶּ֔ה וַיַּ֣עַזְבֻ֔נִי וַיַּעַבְד֖וּ אֱלֹהִ֣ים אֲחֵרִ֑ים כֵּ֛ן הֵ֥מָּה עֹשִׂ֖ים גַּם־ לָֽךְ׃",
+        english:
+          "Just as they have done from the day I brought them up out of Egypt until this day forsaking Me and serving other gods so they are doing to you",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְעַתָּ֖ה שְׁמַ֣ע בְּקוֹלָ֑ם אַ֗ךְ כִּֽי־ הָעֵ֤ד תָּעִיד֙ בָּהֶ֔ם וְהִגַּדְתָּ֣ לָהֶ֔ם מִשְׁפַּ֣ט הַמֶּ֔לֶךְ אֲשֶׁ֥ר יִמְלֹ֖ךְ עֲלֵיהֶֽם׃ס",
+        english:
+          "Now listen to their voice but you must solemnly warn them and show them the manner of the king who will reign over them",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֹּ֣אמֶר שְׁמוּאֵ֔ל אֵ֖ת כָּל־ דִּבְרֵ֣י יְהוָ֑ה אֶל־ הָעָ֕ם הַשֹּׁאֲלִ֥ים מֵאִתּ֖וֹ מֶֽלֶךְ׃ס",
+        english:
+          "So Samuel spoke all the words of the LORD to the people who were asking him for a king",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיֹּ֕אמֶר זֶ֗ה יִֽהְיֶה֙ מִשְׁפַּ֣ט הַמֶּ֔לֶךְ אֲשֶׁ֥ר יִמְלֹ֖ךְ עֲלֵיכֶ֑ם אֶת־ בְּנֵיכֶ֣ם יִקָּ֗ח וְשָׂ֥ם לוֹ֙ בְּמֶרְכַּבְתּ֣וֹ וּבְפָרָשָׁ֔יו וְרָצ֖וּ לִפְנֵ֥י מֶרְכַּבְתּֽוֹ׃",
+        english:
+          "He said This will be the manner of the king who will reign over you He will take your sons and appoint them to serve his own chariots and horses and to run in front of his chariots",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְלָשׂ֣וּם ל֔וֹ שָׂרֵ֥י אֲלָפִ֖ים וְשָׂרֵ֣י חֲמִשִּׁ֑ים וְלַחֲרֹ֤שׁ חֲרִישׁוֹ֙ וְלִקְצֹ֣ר קְצִיר֔וֹ וְלַעֲשׂ֥וֹת כְּלֵֽי־ מִלְחַמְתּ֖וֹ וּכְלֵ֥י רִכְבּֽוֹ׃",
+        english:
+          "He will appoint some for himself as commanders of thousands and of fifties and others to plow his ground to reap his harvest and to make his weapons of war and equipment for his chariots",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְאֶת־ בְּנוֹתֵיכֶ֖ם יִקָּ֑ח לְרַקָּח֥וֹת וּלְטַבָּח֖וֹת וּלְאֹפֽוֹת׃",
+        english:
+          "And he will take your daughters to be perfumers cooks and bakers",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאֶת־ שְׂ֠דֽוֹתֵיכֶם וְאֶת־ כַּרְמֵיכֶ֧ם וְזֵיתֵיכֶ֛ם הַטּוֹבִ֖ים יִקָּ֑ח וְנָתַ֖ן לַעֲבָדָֽיו׃",
+        english:
+          "He will take the best of your fields and vineyards and olive groves and give them to his servants",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְזַרְעֵיכֶ֥ם וְכַרְמֵיכֶ֖ם יַעְשֹׂ֑ר וְנָתַ֥ן לְסָרִיסָ֖יו וְלַעֲבָדָֽיו׃",
+        english:
+          "He will take a tenth of your grain and grape harvest and give it to his officials and servants",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְאֶת־ עַבְדֵיכֶם֩ וְֽאֶת־ שִׁפְח֨וֹתֵיכֶ֜ם וְאֶת־ בַּחוּרֵיכֶ֧ם הַטּוֹבִ֛ים וְאֶת־ חֲמוֹרֵיכֶ֖ם יִקָּ֑ח וְעָשָׂ֖ה לִמְלַאכְתּֽוֹ׃",
+        english:
+          "And he will take your menservants and maidservants and your best cattle and donkeys and put them to his own use",
+      },
+      {
+        verse_number: 17,
+        original: "צֹאנְכֶ֖ם יַעְשֹׂ֑ר וְאַתֶּ֖ם תִּֽהְיוּ־ ל֥וֹ לַעֲבָדִֽים׃",
+        english:
+          "He will take a tenth of your flocks and you yourselves will become his slaves",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וּזְעַקְתֶּם֙ בַּיּ֣וֹם הַה֔וּא מִלִּפְנֵ֣י מַלְכְּכֶ֔ם אֲשֶׁ֥ר בְּחַרְתֶּ֖ם לָכֶ֑ם וְלֹֽא־ יַעֲנֶ֧ה יְהוָ֛ה אֶתְכֶ֖ם בַּיּ֥וֹם הַהֽוּא׃",
+        english:
+          "When that day comes you will beg for relief from the king you have chosen but the LORD will not answer you on that day",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיְמָאֲנ֣וּ הָעָ֔ם לִשְׁמֹ֖עַ בְּק֣וֹל שְׁמוּאֵ֑ל וַיֹּאמְר֣וּ לֹּ֔א כִּ֥י אִם־ מֶ֖לֶךְ יִֽהְיֶ֥ה עָלֵֽינוּ׃",
+        english:
+          "Nevertheless the people refused to listen to Samuel No they said We must have a king over us",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְהָיִ֥ינוּ גַם־ אֲנַ֖חְנוּ כְּכָל־ הַגּוֹיִ֑ם וּשְׁפָטָ֤נוּ מַלְכֵּ֙נוּ֙ וְיָצָ֣א לְפָנֵ֔ינוּ וְנִלְחַ֖ם אֶת־ מִלְחֲמֹתֵֽנוּ׃",
+        english:
+          "Then we will be like all the other nations with a king to judge us to go out before us and to fight our battles",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּשְׁמַ֣ע שְׁמוּאֵ֔ל אֵ֖ת כָּל־ דִּבְרֵ֣י הָעָ֑ם וַֽיְדַבְּרֵ֖ם בְּאָזְנֵ֥י יְהוָֽה׃פ",
+        english:
+          "Samuel listened to all the words of the people and repeated them in the hearing of the LORD",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֤ה אֶל־ שְׁמוּאֵל֙ שְׁמַ֣ע בְּקוֹלָ֔ם וְהִמְלַכְתָּ֥ לָהֶ֖ם מֶ֑לֶךְ וַיֹּ֤אמֶר שְׁמוּאֵל֙ אֶל־ אַנְשֵׁ֣י יִשְׂרָאֵ֔ל לְכ֖וּ אִ֥ישׁ לְעִירֽוֹ׃פ",
+        english:
+          "Listen to their voice the LORD said to Samuel Appoint a king for them Then Samuel told the men of Israel Everyone must go back to his city",
+      },
+    ],
+  };
+  return chapter;
+}
