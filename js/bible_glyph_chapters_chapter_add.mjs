@@ -25,6 +25,7 @@ export async function bible_glyph_chapters_chapter_add(chapter_code) {
       chapter_code,
       chapter_fn_name,
       added: false,
+      ordinal: null,
     };
     return already;
   }

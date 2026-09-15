@@ -1,3 +1,5 @@
+import { list_map_property_get } from "./list_map_property_get.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -84,9 +86,12 @@ export function bible_glyph_undrawn_lists_gate_run() {
       }
     }
   }
+  let list2 = list_map_property_get(lists, "fn");
   list_empty_is_assert_json(clashes, {
     clashes,
-    hint: "these Strong's numbers are listed as undrawn twice, which records two different decisions about one word - keep the entry in the list whose test the word actually meets and delete the other; the lists are " + list_join_comma_space(list_map_property_get(lists, "fn")),
+    hint:
+      "these Strong's numbers are listed as undrawn twice, which records two different decisions about one word - keep the entry in the list whose test the word actually meets and delete the other; the lists are " +
+      list_join_comma_space(list2),
   });
   let table_name = fn_name("bible_glyph_roots_hebrew");
   list_empty_is_assert_json(drawn, {
