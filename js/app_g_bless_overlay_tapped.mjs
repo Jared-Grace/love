@@ -4,7 +4,7 @@ import { app_g_bless_arrows } from "./app_g_bless_arrows.mjs";
 import { app_shared_game_event_target_closest_tile } from "./app_shared_game_event_target_closest_tile.mjs";
 import { not } from "./not.mjs";
 import { app_shared_game_tile_coordinates_get } from "./app_shared_game_tile_coordinates_get.mjs";
-import { app_g_bless_walk } from "./app_g_bless_walk.mjs";
+import { bless_walk } from "./bless_walk.mjs";
 export function app_g_bless_overlay_tapped(r) {
   arguments_assert(arguments, 1);
   let turned = property_get(r, "turned");
@@ -36,7 +36,7 @@ export function app_g_bless_overlay_tapped(r) {
       return;
     }
     walking = true;
-    await app_g_bless_walk(world, target, player_img_c, div_map, render);
+    await bless_walk(world, target, player_img_c, div_map, render);
     walking = false;
     render();
   }
