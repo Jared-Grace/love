@@ -1,0 +1,137 @@
+export function bible_glyph_chapter_rosetta_lines_2ki01() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "2KI01",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיִּפְשַׁ֤ע מוֹאָב֙ בְּיִשְׂרָאֵ֔ל אַחֲרֵ֖י מ֥וֹת אַחְאָֽב׃",
+        english: "After the death of Ahab Moab rebelled against Israel",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיִּפֹּ֨ל אֲחַזְיָ֜ה בְּעַ֣ד הַשְּׂבָכָ֗ה בַּעֲלִיָּת֛וֹ אֲשֶׁ֥ר בְּשֹׁמְר֖וֹן וַיָּ֑חַל וַיִּשְׁלַ֣ח מַלְאָכִ֔ים וַיֹּ֤אמֶר אֲלֵהֶם֙ לְכ֣וּ דִרְשׁ֗וּ בְּבַ֤עַל זְבוּב֙ אֱלֹהֵ֣י עֶקְר֔וֹן אִם־ אֶחְיֶ֖ה מֵחֳלִ֥י זֶֽה׃ס",
+        english:
+          "Now Ahaziah had fallen through the lattice of his upper room in Samaria and injured himself So he sent messengers and instructed them Go inquire of Baal-zebub the god of Ekron whether I will recover from this injury",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וּמַלְאַ֣ךְ יְהוָ֗ה דִּבֶּר֙ אֶל־ אֵלִיָּ֣ה הַתִּשְׁבִּ֔י ק֣וּם עֲלֵ֔ה לִקְרַ֖את מַלְאֲכֵ֣י מֶֽלֶךְ־ שֹׁמְר֑וֹן וְדַבֵּ֣ר אֲלֵהֶ֔ם הַֽמִבְּלִ֤י אֵין־ אֱלֹהִים֙ בְּיִשְׂרָאֵ֔ל אַתֶּם֙ הֹֽלְכִ֔ים לִדְרֹ֕שׁ בְּבַ֥עַל זְב֖וּב אֱלֹהֵ֥י עֶקְרֽוֹן׃",
+        english:
+          "But the angel of the LORD said to Elijah the Tishbite Go up to meet the messengers of the king of Samaria and ask them Is it because there is no God in Israel that you are on your way to inquire of Baal-zebub the god of Ekron",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְלָכֵן֙ כֹּֽה־ אָמַ֣ר יְהוָ֔ה הַמִּטָּ֞ה אֲשֶׁר־ עָלִ֥יתָ שָּׁ֛ם לֹֽא־ תֵרֵ֥ד מִמֶּ֖נָּה כִּ֣י מ֣וֹת תָּמ֑וּת וַיֵּ֖לֶךְ אֵלִיָּֽה׃",
+        english:
+          "Therefore this is what the LORD says You will not get up from the bed on which you are lying You will surely die So Elijah departed",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיָּשׁ֥וּבוּ הַמַּלְאָכִ֖ים אֵלָ֑יו וַיֹּ֥אמֶר אֲלֵיהֶ֖ם מַה־ זֶּ֥ה שַׁבְתֶּֽם׃",
+        english:
+          "When the messengers returned to the king he asked them Why have you returned",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֹּאמְר֨וּ אֵלָ֜יו אִ֣ישׁ׀ עָלָ֣ה לִקְרָאתֵ֗נוּ וַיֹּ֣אמֶר אֵלֵינוּ֮ לְכ֣וּ שׁוּבוּ֮ אֶל־ הַמֶּ֣לֶךְ אֲשֶׁר־ שָׁלַ֣ח אֶתְכֶם֒ וְדִבַּרְתֶּ֣ם אֵלָ֗יו כֹּ֚ה אָמַ֣ר יְהוָ֔ה הַֽמִבְּלִ֤י אֵין־ אֱלֹהִים֙ בְּיִשְׂרָאֵ֔ל אַתָּ֣ה שֹׁלֵ֔חַ לִדְרֹ֕שׁ בְּבַ֥עַל זְב֖וּב אֱלֹהֵ֣י עֶקְר֑וֹן לָ֠כֵן הַמִּטָּ֞ה אֲשֶׁר־ עָלִ֥יתָ שָּׁ֛ם לֹֽא־ תֵרֵ֥ד מִמֶּ֖נָּה כִּֽי־ מ֥וֹת תָּמֽוּת׃",
+        english:
+          "They replied A man came up to meet us and said Go back to the king who sent you and tell him that this is what the LORD says Is it because there is no God in Israel that you are sending these men to inquire of Baal-zebub the god of Ekron Therefore you will not get up from the bed on which you are lying You will surely die",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיְדַבֵּ֣ר אֲלֵהֶ֔ם מֶ֚ה מִשְׁפַּ֣ט הָאִ֔ישׁ אֲשֶׁ֥ר עָלָ֖ה לִקְרַאתְכֶ֑ם וַיְדַבֵּ֣ר אֲלֵיכֶ֔ם אֶת־ הַדְּבָרִ֖ים הָאֵֽלֶּה׃",
+        english:
+          "The king asked them What sort of man came up to meet you and spoke these words to you",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֹּאמְר֣וּ אֵלָ֗יו אִ֚ישׁ בַּ֣עַל שֵׂעָ֔ר וְאֵז֥וֹר ע֖וֹר אָז֣וּר בְּמָתְנָ֑יו וַיֹּאמַ֕ר אֵלִיָּ֥ה הַתִּשְׁבִּ֖י הֽוּא׃",
+        english:
+          "He was a hairy man they answered with a leather belt around his waist It was Elijah the Tishbite said the king",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיִּשְׁלַ֥ח אֵלָ֛יו שַׂר־ חֲמִשִּׁ֖ים וַחֲמִשָּׁ֑יו וַיַּ֣עַל אֵלָ֗יו וְהִנֵּה֙ יֹשֵׁב֙ עַל־ רֹ֣אשׁ הָהָ֔ר וַיְדַבֵּ֣ר אֵלָ֔יו אִ֚ישׁ הָֽאֱלֹהִ֔ים הַמֶּ֥לֶךְ דִּבֶּ֖ר רֵֽדָה׃",
+        english:
+          "Then King Ahaziah sent to Elijah a captain with his company of fifty men So the captain went up to Elijah who was sitting on top of a hill and said to him Man of God the king declares Come down",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיַּעֲנֶ֣ה אֵלִיָּ֗הוּ וַיְדַבֵּר֮ אֶל־ שַׂ֣ר הַחֲמִשִּׁים֒ וְאִם־ אִ֤ישׁ אֱלֹהִים֙ אָ֔נִי תֵּ֤רֶד אֵשׁ֙ מִן־ הַשָּׁמַ֔יִם וְתֹאכַ֥ל אֹתְךָ֖ וְאֶת־ חֲמִשֶּׁ֑יךָ וַתֵּ֤רֶד אֵשׁ֙ מִן־ הַשָּׁמַ֔יִם וַתֹּ֥אכַל אֹת֖וֹ וְאֶת־ חֲמִשָּֽׁיו׃",
+        english:
+          "Elijah answered the captain If I am a man of God may fire come down from heaven and consume you and your fifty men And fire came down from heaven and consumed the captain and his fifty men",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיָּ֜שָׁב וַיִּשְׁלַ֥ח אֵלָ֛יו שַׂר־ חֲמִשִּׁ֥ים אַחֵ֖ר וַחֲמִשָּׁ֑יו וַיַּ֙עַן֙ וַיְדַבֵּ֣ר אֵלָ֔יו אִ֚ישׁ הָאֱלֹהִ֔ים כֹּֽה־ אָמַ֥ר הַמֶּ֖לֶךְ מְהֵרָ֥ה רֵֽדָה׃",
+        english:
+          "So the king sent to Elijah another captain with his fifty men And the captain said to Elijah Man of God the king declares Come down at once",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיַּ֣עַן אֵלִיָּה֮ וַיְדַבֵּ֣ר אֲלֵיהֶם֒ אִם־ אִ֤ישׁ הָֽאֱלֹהִים֙ אָ֔נִי תֵּ֤רֶד אֵשׁ֙ מִן־ הַשָּׁמַ֔יִם וְתֹאכַ֥ל אֹתְךָ֖ וְאֶת־ חֲמִשֶּׁ֑יךָ וַתֵּ֤רֶד אֵשׁ־ אֱלֹהִים֙ מִן־ הַשָּׁמַ֔יִם וַתֹּ֥אכַל אֹת֖וֹ וְאֶת־ חֲמִשָּֽׁיו׃",
+        english:
+          "Again Elijah replied If I am a man of God may fire come down from heaven and consume you and your fifty men And the fire of God came down from heaven and consumed the captain and his fifty men",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיָּ֗שָׁב וַיִּשְׁלַ֛ח שַׂר־ חֲמִשִּׁ֥ים שְׁלִשִׁ֖ים וַחֲמִשָּׁ֑יו וַיַּ֡עַל וַיָּבֹא֩ שַׂר־ הַחֲמִשִּׁ֨ים הַשְּׁלִישִׁ֜י וַיִּכְרַ֥ע עַל־ בִּרְכָּ֣יו׀ לְנֶ֣גֶד אֵלִיָּ֗הוּ וַיִּתְחַנֵּ֤ן אֵלָיו֙ וַיְדַבֵּ֣ר אֵלָ֔יו אִ֚ישׁ הָֽאֱלֹהִ֔ים תִּֽיקַר־ נָ֣א נַפְשִׁ֗י וְנֶ֨פֶשׁ עֲבָדֶ֥יךָֽ אֵ֛לֶּה חֲמִשִּׁ֖ים בְּעֵינֶֽיךָ׃",
+        english:
+          "So the king sent a third captain with his fifty men And the third captain went up fell on his knees before Elijah and begged him Man of God may my life and the lives of these fifty servants of yours please be precious in your sight",
+      },
+      {
+        verse_number: 14,
+        original:
+          "הִ֠נֵּה יָ֤רְדָה אֵשׁ֙ מִן־ הַשָּׁמַ֔יִם וַ֠תֹּאכַל אֶת־ שְׁנֵ֞י שָׂרֵ֧י הַחֲמִשִּׁ֛ים הָרִאשֹׁנִ֖ים וְאֶת־ חֲמִשֵּׁיהֶ֑ם וְעַתָּ֕ה תִּיקַ֥ר נַפְשִׁ֖י בְּעֵינֶֽיךָ׃ס",
+        english:
+          "Behold fire has come down from heaven and consumed the first two captains of fifty with all their men But now may my life be precious in your sight",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיְדַבֵּ֞ר מַלְאַ֤ךְ יְהוָה֙ אֶל־ אֵ֣לִיָּ֔הוּ רֵ֣ד אוֹת֔וֹ אַל־ תִּירָ֖א מִפָּנָ֑יו וַיָּ֛קָם וַיֵּ֥רֶד אוֹת֖וֹ אֶל־ הַמֶּֽלֶךְ׃",
+        english:
+          "Then the angel of the LORD said to Elijah Go down with him Do not be afraid of him So Elijah got up and went down with him to the king",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיְדַבֵּ֨ר אֵלָ֜יו כֹּֽה־ אָמַ֣ר יְהוָ֗ה יַ֜עַן אֲשֶׁר־ שָׁלַ֣חְתָּ מַלְאָכִים֮ לִדְרֹשׁ֮ בְּבַ֣עַל זְבוּב֮ אֱלֹהֵ֣י עֶקְרוֹן֒ הַֽמִבְּלִ֤י אֵין־ אֱלֹהִים֙ בְּיִשְׂרָאֵ֔ל לִדְרֹ֖שׁ בִּדְבָר֑וֹ לָ֠כֵן הַמִּטָּ֞ה אֲשֶׁר־ עָלִ֥יתָ שָּׁ֛ם לֹֽא־ תֵרֵ֥ד מִמֶּ֖נָּה כִּֽי־ מ֥וֹת תָּמֽוּת׃",
+        english:
+          "And Elijah said to King Ahaziah This is what the LORD says Is there really no God in Israel for you to inquire of His word Is that why you have sent messengers to inquire of Baal-zebub the god of Ekron Therefore you will not get up from the bed on which you are lying You will surely die",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיָּ֜מָת כִּדְבַ֥ר יְהוָ֣ה׀ אֲשֶׁר־ דִּבֶּ֣ר אֵלִיָּ֗הוּ וַיִּמְלֹ֤ךְ יְהוֹרָם֙ תַּחְתָּ֔יו פ בִּשְׁנַ֣ת שְׁתַּ֔יִם לִיהוֹרָ֥ם בֶּן־ יְהוֹשָׁפָ֖ט מֶ֣לֶךְ יְהוּדָ֑ה כִּ֛י לֹֽא־ הָ֥יָה ל֖וֹ בֵּֽן׃",
+        english:
+          "So Ahaziah died according to the word of the LORD that Elijah had spoken And since he had no son Jehoram succeeded him in the second year of the reign of Jehoram son of Jehoshaphat over Judah",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְיֶ֛תֶר דִּבְרֵ֥י אֲחַזְיָ֖הוּ אֲשֶׁ֣ר עָשָׂ֑ה הֲלֽוֹא־ הֵ֣מָּה כְתוּבִ֗ים עַל־ סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יִשְׂרָאֵֽל׃פ",
+        english:
+          "As for the rest of the acts of Ahaziah along with his accomplishments are they not written in the Book of the Chronicles of the Kings of Israel",
+      },
+    ],
+  };
+  return chapter;
+}

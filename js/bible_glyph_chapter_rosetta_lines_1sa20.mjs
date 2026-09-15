@@ -1,0 +1,306 @@
+export function bible_glyph_chapter_rosetta_lines_1sa20() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "1SA20",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיִּבְרַ֣ח דָּוִ֔ד מִנֹּוִות בָּרָמָ֑ה וַיָּבֹ֞א וַיֹּ֣אמֶר׀ לִפְנֵ֣י יְהוֹנָתָ֗ן מֶ֤ה עָשִׂ֙יתִי֙ מֶֽה־ עֲוֺנִ֤י וּמֶֽה־ חַטָּאתִי֙ לִפְנֵ֣י אָבִ֔יךָ כִּ֥י מְבַקֵּ֖שׁ אֶת־ נַפְשִֽׁי׃",
+        english:
+          "Then David fled from Naioth in Ramah He came to Jonathan and asked What have I done What is my iniquity How have I sinned against your father that he wants to take my life",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֹּ֨אמֶר ל֣וֹ חָלִילָה֮ לֹ֣א תָמוּת֒ הִנֵּ֡ה לוֹ־ עָשָׂה אָבִ֜י דָּבָ֣ר גָּד֗וֹל א֚וֹ דָּבָ֣ר קָטֹ֔ן וְלֹ֥א יִגְלֶ֖ה אֶת־ אָזְנִ֑י וּמַדּוּעַ֩ יַסְתִּ֨יר אָבִ֥י מִמֶּ֛נִּי אֶת־ הַדָּבָ֥ר הַזֶּ֖ה אֵ֥ין זֹֽאת׃",
+        english:
+          "Far from it Jonathan replied You will not die Indeed my father does nothing great or small without telling me So why would he hide this matter from me This cannot be true",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּשָּׁבַ֨ע ע֜וֹד דָּוִ֗ד וַיֹּ֙אמֶר֙ יָדֹ֨עַ יָדַ֜ע אָבִ֗יךָ כִּֽי־ מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ וַיֹּ֛אמֶר אַל־ יֵֽדַע־ זֹ֥את יְהוֹנָתָ֖ן פֶּן־ יֵֽעָצֵ֑ב וְאוּלָ֗ם חַי־ יְהוָה֙ וְחֵ֣י נַפְשֶׁ֔ךָ כִּ֣י כְפֶ֔שַׂע בֵּינִ֖י וּבֵ֥ין הַמָּֽוֶת׃",
+        english:
+          "But David again vowed Your father knows very well that I have found favor in your eyes and he has said Jonathan must not know of this or he will be grieved As surely as the LORD lives and as you yourself live there is but a step between me and death",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיֹּ֥אמֶר יְהוֹנָתָ֖ן אֶל־ דָּוִ֑ד מַה־ תֹּאמַ֥ר נַפְשְׁךָ֖ וְאֶֽעֱשֶׂה־ לָּֽךְ׃פ",
+        english:
+          "Then Jonathan said to David Whatever you desire I will do for you",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּ֨אמֶר דָּוִ֜ד אֶל־ יְהוֹנָתָ֗ן הִֽנֵּה־ חֹ֙דֶשׁ֙ מָחָ֔ר וְאָנֹכִ֛י יָשֹׁב־ אֵשֵׁ֥ב עִם־ הַמֶּ֖לֶךְ לֶאֱכ֑וֹל וְשִׁלַּחְתַּ֙נִי֙ וְנִסְתַּרְתִּ֣י בַשָּׂדֶ֔ה עַ֖ד הָעֶ֥רֶב הַשְּׁלִשִֽׁית׃",
+        english:
+          "So David told him Look tomorrow is the New Moon and I am supposed to dine with the king Instead, let me go and hide in the field until the third evening from now",
+      },
+      {
+        verse_number: 6,
+        original:
+          "אִם־ פָּקֹ֥ד יִפְקְדֵ֖נִי אָבִ֑יךָ וְאָמַרְתָּ֗ נִשְׁאֹל֩ נִשְׁאַ֨ל מִמֶּ֤נִּי דָוִד֙ לָרוּץ֙ בֵּֽית־ לֶ֣חֶם עִיר֔וֹ כִּ֣י זֶ֧בַח הַיָּמִ֛ים שָׁ֖ם לְכָל־ הַמִּשְׁפָּחָֽה׃",
+        english:
+          "If your father misses me at all tell him David urgently requested my permission to hurry to Bethlehem his hometown because there is an annual sacrifice for his whole clan",
+      },
+      {
+        verse_number: 7,
+        original:
+          "אִם־ כֹּ֥ה יֹאמַ֛ר ט֖וֹב שָׁל֣וֹם לְעַבְדֶּ֑ךָ וְאִם־ חָרֹ֤ה יֶֽחֱרֶה֙ ל֔וֹ דַּ֕ע כִּֽי־ כָלְתָ֥ה הָרָעָ֖ה מֵעִמּֽוֹ׃",
+        english:
+          "If he says Good then your servant is safe but if he is enraged you will know he has evil intentions",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְעָשִׂ֤יתָ חֶ֙סֶד֙ עַל־ עַבְדֶּ֔ךָ כִּ֚י בִּבְרִ֣ית יְהוָ֔ה הֵבֵ֥אתָ אֶֽת־ עַבְדְּךָ֖ עִמָּ֑ךְ וְאִם־ יֶשׁ־ בִּ֤י עָוֺן֙ הֲמִיתֵ֣נִי אַ֔תָּה וְעַד־ אָבִ֖יךָ לָמָּה־ זֶּ֥ה תְבִיאֵֽנִי׃פ",
+        english:
+          "Therefore show kindness to your servant for you have brought me into a covenant with you before the LORD If there is iniquity in me then kill me yourself why should you bring me to your father",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֹּ֥אמֶר יְהוֹנָתָ֖ן חָלִ֣ילָה לָּ֑ךְ כִּ֣י׀ אִם־ יָדֹ֣עַ אֵדַ֗ע כִּֽי־ כָלְתָ֨ה הָרָעָ֜ה מֵעִ֤ם אָבִי֙ לָב֣וֹא עָלֶ֔יךָ וְלֹ֥א אֹתָ֖הּ אַגִּ֥יד לָֽךְ׃ס",
+        english:
+          "Never Jonathan replied If I ever found out that my father had evil intentions against you would I not tell you",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֹּ֤אמֶר דָּוִד֙ אֶל־ יְה֣וֹנָתָ֔ן מִ֖י יַגִּ֣יד לִ֑י א֛וֹ מַה־ יַּעַנְךָ֥ אָבִ֖יךָ קָשָֽׁה׃ס",
+        english:
+          "Then David asked Jonathan Who will tell me if your father answers you harshly",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיֹּ֤אמֶר יְהֽוֹנָתָן֙ אֶל־ דָּוִ֔ד לְכָ֖ה וְנֵצֵ֣א הַשָּׂדֶ֑ה וַיֵּצְא֥וּ שְׁנֵיהֶ֖ם הַשָּׂדֶֽה׃ס",
+        english:
+          "Come he replied let us go out to the field So the two of them went out into the field",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֹּ֨אמֶר יְהוֹנָתָ֜ן אֶל־ דָּוִ֗ד יְהוָ֞ה אֱלֹהֵ֤י יִשְׂרָאֵל֙ כִּֽי־ אֶחְקֹ֣ר אֶת־ אָבִ֗י כָּעֵ֤ת׀ מָחָר֙ הַשְּׁלִשִׁ֔ית וְהִנֵּה־ ט֖וֹב אֶל־ דָּוִ֑ד וְלֹֽא־ אָז֙ אֶשְׁלַ֣ח אֵלֶ֔יךָ וְגָלִ֖יתִי אֶת־ אָזְנֶֽךָ׃",
+        english:
+          "and Jonathan said By the LORD the God of Israel I will sound out my father by this time tomorrow or the next day If he is favorable toward you will I not send for you and tell you",
+      },
+      {
+        verse_number: 13,
+        original:
+          "כֹּֽה־ יַעֲשֶׂה֩ יְהוָ֨ה לִֽיהוֹנָתָ֜ן וְכֹ֣ה יֹסִ֗יף כִּֽי־ יֵיטִ֨ב אֶל־ אָבִ֤י אֶת־ הָֽרָעָה֙ עָלֶ֔יךָ וְגָלִ֙יתִי֙ אֶת־ אָזְנֶ֔ךָ וְשִׁלַּחְתִּ֖יךָ וְהָלַכְתָּ֣ לְשָׁל֑וֹם וִיהִ֤י יְהוָה֙ עִמָּ֔ךְ כַּאֲשֶׁ֥ר הָיָ֖ה עִם־ אָבִֽי׃",
+        english:
+          "But if my father intends to bring evil on you then may the LORD punish me and ever so severely if I do not tell you and send you on your way in safety May the LORD be with you just as He has been with my father",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְלֹ֖א אִם־ עוֹדֶ֣נִּי חָ֑י וְלֹֽא־ תַעֲשֶׂ֧ה עִמָּדִ֛י חֶ֥סֶד יְהוָ֖ה וְלֹ֥א אָמֽוּת׃",
+        english:
+          "And as long as I live treat me with the LORD’s loving devotion that I may not die",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְלֹֽא־ תַכְרִ֧ת אֶֽת־ חַסְדְּךָ֛ מֵעִ֥ם בֵּיתִ֖י עַד־ עוֹלָ֑ם וְלֹ֗א בְּהַכְרִ֤ת יְהוָה֙ אֶת־ אֹיְבֵ֣י דָוִ֔ד אִ֕ישׁ מֵעַ֖ל פְּנֵ֥י הָאֲדָמָֽה׃",
+        english:
+          "and do not ever cut off your loving devotion from my household not even when the LORD cuts off every one of David’s enemies from the face of the earth",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיִּכְרֹ֥ת יְהוֹנָתָ֖ן עִם־ בֵּ֣ית דָּוִ֑ד וּבִקֵּ֣שׁ יְהוָ֔ה מִיַּ֖ד אֹיְבֵ֥י דָוִֽד׃",
+        english:
+          "So Jonathan made a covenant with the house of David saying May the LORD hold David’s enemies accountable",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיּ֤וֹסֶף יְהֽוֹנָתָן֙ לְהַשְׁבִּ֣יעַ אֶת־ דָּוִ֔ד בְּאַהֲבָת֖וֹ אֹת֑וֹ כִּֽי־ אַהֲבַ֥ת נַפְשׁ֖וֹ אֲהֵבֽוֹ׃ס",
+        english:
+          "And Jonathan had David reaffirm his vow out of love for him for Jonathan loved David as he loved himself",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֹּֽאמֶר־ ל֥וֹ יְהוֹנָתָ֖ן מָחָ֣ר חֹ֑דֶשׁ וְנִפְקַ֕דְתָּ כִּ֥י יִפָּקֵ֖ד מוֹשָׁבֶֽךָ׃",
+        english:
+          "Then Jonathan said to David Tomorrow is the New Moon and you will be missed because your seat will be empty",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְשִׁלַּשְׁתָּ֙ תֵּרֵ֣ד מְאֹ֔ד וּבָאתָ֙ אֶל־ הַמָּק֔וֹם אֲשֶׁר־ נִסְתַּ֥רְתָּ שָּׁ֖ם בְּי֣וֹם הַֽמַּעֲשֶׂ֑ה וְיָ֣שַׁבְתָּ֔ אֵ֖צֶל הָאֶ֥בֶן הָאָֽזֶל׃",
+        english:
+          "When you have stayed three days hurry down to the place you hid on the day this trouble began and remain beside the stone Ezel",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַאֲנִ֕י שְׁלֹ֥שֶׁת הַחִצִּ֖ים צִדָּ֣ה אוֹרֶ֑ה לְשַֽׁלַּֽח־ לִ֖י לְמַטָּרָֽה׃",
+        english:
+          "I will shoot three arrows to the side of it as if I were aiming at a target",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְהִנֵּה֙ אֶשְׁלַ֣ח אֶת־ הַנַּ֔עַר לֵ֖ךְ מְצָ֣א אֶת־ הַחִצִּ֑ים אִם־ אָמֹר֩ אֹמַ֨ר לַנַּ֜עַר הִנֵּ֥ה הַחִצִּ֣ים׀ מִמְּךָ֣ וָהֵ֗נָּה קָחֶ֧נּוּ׀ וָבֹ֛אָה כִּֽי־ שָׁל֥וֹם לְךָ֛ וְאֵ֥ין דָּבָ֖ר חַי־ יְהוָֽה׃",
+        english:
+          "Then I will send a boy and say Go find the arrows Now, if I expressly say to him Look the arrows are on this side of you bring them then come because as surely as the LORD lives it is safe for you and there is no danger",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְאִם־ כֹּ֤ה אֹמַר֙ לָעֶ֔לֶם הִנֵּ֥ה הַחִצִּ֖ים מִמְּךָ֣ וָהָ֑לְאָה לֵ֕ךְ כִּ֥י שִֽׁלַּחֲךָ֖ יְהוָֽה׃",
+        english:
+          "But if I say to the young man Look the arrows are beyond you then you must go for the LORD has sent you away",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְהַ֨דָּבָ֔ר אֲשֶׁ֥ר דִּבַּ֖רְנוּ אֲנִ֣י וָאָ֑תָּה הִנֵּ֧ה יְהוָ֛ה בֵּינִ֥י וּבֵינְךָ֖ עַד־ עוֹלָֽם׃ס",
+        english:
+          "And as for the matter you and I have discussed the LORD is a witness between you and me forever",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיִּסָּתֵ֥ר דָּוִ֖ד בַּשָּׂדֶ֑ה וַיְהִ֣י הַחֹ֔דֶשׁ וַיֵּ֧שֶׁב הַמֶּ֛לֶךְ עַל הַלֶּ֖חֶם לֶאֱכֽוֹל׃",
+        english:
+          "So David hid in the field and when the New Moon had come the king sat down to eat",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֵּ֣שֶׁב הַ֠מֶּלֶךְ עַל־ מ֨וֹשָׁב֜וֹ כְּפַ֣עַם׀ בְּפַ֗עַם אֶל־ מוֹשַׁב֙ הַקִּ֔יר וַיָּ֙קָם֙ יְה֣וֹנָתָ֔ן וַיֵּ֥שֶׁב אַבְנֵ֖ר מִצַּ֣ד שָׁא֑וּל וַיִּפָּקֵ֖ד מְק֥וֹם דָּוִֽד׃",
+        english:
+          "He sat in his usual place by the wall opposite Jonathan and beside Abner but David’s place was empty",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְלֹֽא־ דִבֶּ֥ר שָׁא֛וּל מְא֖וּמָה בַּיּ֣וֹם הַה֑וּא כִּ֤י אָמַר֙ מִקְרֶ֣ה ה֔וּא בִּלְתִּ֥י טָה֛וֹר ה֖וּא כִּֽי־ לֹ֥א טָהֽוֹר׃ס",
+        english:
+          "Saul said nothing that day because he thought Something has happened to David to make him ceremonially unclean surely he is unclean",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיְהִ֗י מִֽמָּחֳרַ֤ת הַחֹ֙דֶשׁ֙ הַשֵּׁנִ֔י וַיִּפָּקֵ֖ד מְק֣וֹם דָּוִ֑דס וַיֹּ֤אמֶר שָׁאוּל֙ אֶל־ יְהוֹנָתָ֣ן בְּנ֔וֹ מַדּ֜וּעַ לֹא־ בָ֧א בֶן־ יִשַׁ֛י גַּם־ תְּמ֥וֹל גַּם־ הַיּ֖וֹם אֶל־ הַלָּֽחֶם׃",
+        english:
+          "But on the day after the New Moon the second day David’s place was still empty and Saul asked his son Jonathan Why hasn’t the son of Jesse come to the meal either yesterday or today",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיַּ֥עַן יְהוֹנָתָ֖ן אֶת־ שָׁא֑וּל נִשְׁאֹ֨ל נִשְׁאַ֥ל דָּוִ֛ד מֵעִמָּדִ֖י עַד־ בֵּ֥ית לָֽחֶם׃",
+        english:
+          "Jonathan answered David urgently requested my permission to go to Bethlehem",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיֹּ֡אמֶר שַׁלְּחֵ֣נִי נָ֡א כִּ֣י זֶבַח֩ מִשְׁפָּחָ֨ה לָ֜נוּ בָּעִ֗יר וְה֤וּא צִוָּֽה־ לִי֙ אָחִ֔י וְעַתָּ֗ה אִם־ מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ אִמָּ֥לְטָה נָּ֖א וְאֶרְאֶ֣ה אֶת־ אֶחָ֑י עַל־ כֵּ֣ן לֹא־ בָ֔א אֶל־ שֻׁלְחַ֖ן הַמֶּֽלֶךְ׃ס",
+        english:
+          "saying Please let me go because our clan is holding a sacrifice in the city and my brother has told me to be there So now if I have found favor in your eyes please let me go and see my brothers That is why he has not come to the king’s table",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיִּֽחַר־ אַ֤ף שָׁאוּל֙ בִּיה֣וֹנָתָ֔ן וַיֹּ֣אמֶר ל֔וֹ בֶּֽן־ נַעֲוַ֖ת הַמַּרְדּ֑וּת הֲל֣וֹא יָדַ֗עְתִּי כִּֽי־ בֹחֵ֤ר אַתָּה֙ לְבֶן־ יִשַׁ֔י לְבָ֨שְׁתְּךָ֔ וּלְבֹ֖שֶׁת עֶרְוַ֥ת אִמֶּֽךָ׃",
+        english:
+          "Then Saul’s anger burned against Jonathan and he said to him You son of a perverse and rebellious woman Do I not know that you have chosen the son of Jesse to your own shame and to the shame of the mother who bore you",
+      },
+      {
+        verse_number: 31,
+        original:
+          "כִּ֣י כָל־ הַיָּמִ֗ים אֲשֶׁ֤ר בֶּן־ יִשַׁי֙ חַ֣י עַל־ הָאֲדָמָ֔ה לֹ֥א תִכּ֖וֹן אַתָּ֣ה וּמַלְכוּתֶ֑ךָ וְעַתָּ֗ה שְׁלַ֨ח וְקַ֤ח אֹתוֹ֙ אֵלַ֔י כִּ֥י בֶן־ מָ֖וֶת הֽוּא׃ס",
+        english:
+          "For as long as the son of Jesse lives on this earth neither you nor your kingdom shall be established Now send for him and bring him to me for he must surely die",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיַּ֙עַן֙ יְה֣וֹנָתָ֔ן אֶת־ שָׁא֖וּל אָבִ֑יו וַיֹּ֧אמֶר אֵלָ֛יו לָ֥מָּה יוּמַ֖ת מֶ֥ה עָשָֽׂה׃",
+        english:
+          "Why must he be put to death Jonathan replied What has he done",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַיָּ֨טֶל שָׁא֧וּל אֶֽת־ הַחֲנִ֛ית עָלָ֖יו לְהַכֹּת֑וֹ וַיֵּ֙דַע֙ יְה֣וֹנָתָ֔ן כִּֽי־ כָ֥לָה הִ֛יא מֵעִ֥ם אָבִ֖יו לְהָמִ֥ית אֶת־ דָּוִֽד׃ס",
+        english:
+          "Then Saul hurled his spear at Jonathan to kill him So Jonathan knew that his father was determined to kill David",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיָּ֧קָם יְהוֹנָתָ֛ן מֵעִ֥ם הַשֻּׁלְחָ֖ן בָּחֳרִי־ אָ֑ף וְלֹא־ אָכַ֞ל בְּיוֹם־ הַחֹ֤דֶשׁ הַשֵּׁנִי֙ לֶ֔חֶם כִּ֤י נֶעְצַב֙ אֶל־ דָּוִ֔ד כִּ֥י הִכְלִמ֖וֹ אָבִֽיו׃ס",
+        english:
+          "Jonathan got up from the table in fierce anger and did not eat any food that second day of the month for he was grieved by his father’s shameful treatment of David",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וַיְהִ֣י בַבֹּ֔קֶר וַיֵּצֵ֧א יְהוֹנָתָ֛ן הַשָּׂדֶ֖ה לְמוֹעֵ֣ד דָּוִ֑ד וְנַ֥עַר קָטֹ֖ן עִמּֽוֹ׃",
+        english:
+          "In the morning Jonathan went out to the field for the appointment with David and a small boy was with him",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיֹּ֣אמֶר לְנַעֲר֔וֹ רֻ֗ץ מְצָ֥א נָא֙ אֶת־ הַ֣חִצִּ֔ים אֲשֶׁ֥ר אָנֹכִ֖י מוֹרֶ֑ה הַנַּ֣עַר רָ֔ץ וְהֽוּא־ יָרָ֥ה הַחֵ֖צִי לְהַעֲבִרֽוֹ׃",
+        english:
+          "He said to the boy Run and find the arrows I shoot And as the boy ran Jonathan shot an arrow beyond him",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וַיָּבֹ֤א הַנַּ֙עַר֙ עַד־ מְק֣וֹם הַחֵ֔צִי אֲשֶׁ֥ר יָרָ֖ה יְהוֹנָתָ֑ן וַיִּקְרָ֨א יְהוֹנָתָ֜ן אַחֲרֵ֤י הַנַּ֙עַר֙ וַיֹּ֔אמֶר הֲל֥וֹא הַחֵ֖צִי מִמְּךָ֥ וָהָֽלְאָה׃",
+        english:
+          "When the boy reached the place where Jonathan’s arrow had fallen Jonathan called to him Isn’t the arrow beyond you",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וַיִּקְרָ֤א יְהֽוֹנָתָן֙ אַחֲרֵ֣י הַנַּ֔עַר מְהֵרָ֥ה ח֖וּשָׁה אַֽל־ תַּעֲמֹ֑ד וַיְלַקֵּ֞ט נַ֤עַר יְהֽוֹנָתָן֙ אֶת־ הַחֵצִי וַיָּבֹ֖א אֶל־ אֲדֹנָֽיו׃",
+        english:
+          "Then Jonathan cried out Hurry Make haste Do not delay So the boy picked up the arrow and returned to his master",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וְהַנַּ֖עַר לֹֽא־ יָדַ֣ע מְא֑וּמָה אַ֤ךְ יְהֽוֹנָתָן֙ וְדָוִ֔ד יָדְע֖וּ אֶת־ הַדָּבָֽר׃",
+        english:
+          "But the boy did not know anything only Jonathan and David knew the arrangement",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וַיִּתֵּ֤ן יְהֽוֹנָתָן֙ אֶת־ כֵּלָ֔יו אֶל־ הַנַּ֖עַר אֲשֶׁר־ ל֑וֹ וַיֹּ֣אמֶר ל֔וֹ לֵ֖ךְ הָבֵ֥יא הָעִֽיר׃",
+        english:
+          "Then Jonathan gave his equipment to the boy and said Go take it back to the city",
+      },
+      {
+        verse_number: 41,
+        original:
+          "הַנַּעַר֮ בָּא֒ וְדָוִ֗ד קָ֚ם מֵאֵ֣צֶל הַנֶּ֔גֶב וַיִּפֹּ֨ל לְאַפָּ֥יו אַ֛רְצָה וַיִּשְׁתַּ֖חוּ שָׁלֹ֣שׁ פְּעָמִ֑ים וַֽיִּשְּׁק֣וּ׀ אִ֣ישׁ אֶת־ רֵעֵ֗הוּ וַיִּבְכּוּ֙ אִ֣ישׁ אֶת־ רֵעֵ֔הוּ עַד־ דָּוִ֖ד הִגְדִּֽיל׃",
+        english:
+          "When the young man had gone David got up from the south side of the stone fell facedown and bowed three times Then he and Jonathan kissed each other and wept together though David wept more",
+      },
+      {
+        verse_number: 42,
+        original:
+          "וַיֹּ֧אמֶר יְהוֹנָתָ֛ן לְדָוִ֖ד לֵ֣ךְ לְשָׁל֑וֹם אֲשֶׁר֩ נִשְׁבַּ֨עְנוּ שְׁנֵ֜ינוּ אֲנַ֗חְנוּ בְּשֵׁ֤ם יְהוָה֙ לֵאמֹ֔ר יְהוָ֞ה יִֽהְיֶ֣ה׀ בֵּינִ֣י וּבֵינֶ֗ךָ וּבֵ֥ין זַרְעִ֛י וּבֵ֥ין זַרְעֲךָ֖ עַד־ עוֹלָֽם׃פ וַיָּ֖קָם וַיֵּלַ֑ךְ וִיהוֹנָתָ֖ן בָּ֥א הָעִֽיר׃",
+        english:
+          "And Jonathan said to David Go in peace for the two of us have sworn in the name of the LORD saying May the LORD be a witness between you and me and between your descendants and mine forever Then David got up and departed and Jonathan went back into the city",
+      },
+    ],
+  };
+  return chapter;
+}
