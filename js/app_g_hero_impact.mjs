@@ -1,7 +1,7 @@
+import { html_pixels_point_text } from "./html_pixels_point_text.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_pixels_text } from "./html_pixels_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_animate_remove } from "./html_animate_remove.mjs";
