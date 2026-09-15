@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_bless_map } from "./app_g_bless_map.mjs";
+import { bless_map } from "./bless_map.mjs";
 export function bless_map_scrolling(container, world) {
   arguments_assert(arguments, 2);
   ("Draws the praying game's street inside a box of its own that fills the container and scrolls, and hands back everything the drawing made.");
@@ -13,6 +13,6 @@ export function bless_map_scrolling(container, world) {
     inset: "0",
     overflow: "auto",
   });
-  let drawn = app_g_bless_map(scroller, world);
+  let drawn = bless_map(scroller, world);
   return drawn;
 }
