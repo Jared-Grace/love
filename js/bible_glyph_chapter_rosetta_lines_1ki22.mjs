@@ -1,0 +1,378 @@
+export function bible_glyph_chapter_rosetta_lines_1ki22() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "1KI22",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיֵּשְׁב֖וּ שָׁלֹ֣שׁ שָׁנִ֑ים אֵ֚ין מִלְחָמָ֔ה בֵּ֥ין אֲרָ֖ם וּבֵ֥ין יִשְׂרָאֵֽל׃פ",
+        english: "Then three years passed without war between Aram and Israel",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיְהִ֖י בַּשָּׁנָ֣ה הַשְּׁלִישִׁ֑ית וַיֵּ֛רֶד יְהוֹשָׁפָ֥ט מֶֽלֶךְ־ יְהוּדָ֖ה אֶל־ מֶ֥לֶךְ יִשְׂרָאֵֽל׃",
+        english:
+          "However in the third year Jehoshaphat king of Judah went down to visit the king of Israel",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיֹּ֤אמֶר מֶֽלֶךְ־ יִשְׂרָאֵל֙ אֶל־ עֲבָדָ֔יו הַיְדַעְתֶּ֕ם כִּֽי־ לָ֖נוּ רָמֹ֣ת גִּלְעָ֑ד וַאֲנַ֣חְנוּ מַחְשִׁ֔ים מִקַּ֣חַת אֹתָ֔הּ מִיַּ֖ד מֶ֥לֶךְ אֲרָֽם׃",
+        english:
+          "who said to his servants Do you not know that Ramoth-gilead is ours but we have failed to take it from the hand of the king of Aram",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיֹּ֙אמֶר֙ אֶל־ יְה֣וֹשָׁפָ֔ט הֲתֵלֵ֥ךְ אִתִּ֛י לַמִּלְחָמָ֖ה רָמֹ֣ת גִּלְעָ֑ד וַיֹּ֤אמֶר יְהֽוֹשָׁפָט֙ אֶל־ מֶ֣לֶךְ יִשְׂרָאֵ֔ל כָּמ֧וֹנִי כָמ֛וֹךָ כְּעַמִּ֥י כְעַמֶּ֖ךָ כְּסוּסַ֥י כְּסוּסֶֽיךָ׃",
+        english:
+          "So he asked Jehoshaphat Will you go with me to fight against Ramoth-gilead Jehoshaphat answered the king of Israel I am as you are my people are your people and my horses are your horses",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּ֥אמֶר יְהוֹשָׁפָ֖ט אֶל־ מֶ֣לֶךְ יִשְׂרָאֵ֑ל דְּרָשׁ־ נָ֥א כַיּ֖וֹם אֶת־ דְּבַ֥ר יְהוָֽה׃",
+        english:
+          "But Jehoshaphat also said to the king of Israel Please inquire first for the word of the LORD",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיִּקְבֹּ֨ץ מֶֽלֶךְ־ יִשְׂרָאֵ֥ל אֶֽת־ הַנְּבִיאִים֮ כְּאַרְבַּ֣ע מֵא֣וֹת אִישׁ֒ וַיֹּ֣אמֶר אֲלֵהֶ֗ם הַאֵלֵ֞ךְ עַל־ רָמֹ֥ת גִּלְעָ֛ד לַמִּלְחָמָ֖ה אִם־ אֶחְדָּ֑ל וַיֹּאמְר֣וּ עֲלֵ֔ה וְיִתֵּ֥ן אֲדֹנָ֖י בְּיַ֥ד הַמֶּֽלֶךְ׃",
+        english:
+          "So the king of Israel assembled the prophets about four hundred men and asked them Should I go to war against Ramoth-gilead or should I refrain Go up they replied and the Lord will deliver it into the hand of the king",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיֹּ֙אמֶר֙ יְה֣וֹשָׁפָ֔ט הַאֵ֨ין פֹּ֥ה נָבִ֛יא לַיהוָ֖ה ע֑וֹד וְנִדְרְשָׁ֖ה מֵאוֹתֽוֹ׃",
+        english:
+          "But Jehoshaphat asked Is there not still a prophet of the LORD here of whom we can inquire",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֹּ֣אמֶר מֶֽלֶךְ־ יִשְׂרָאֵ֣ל׀ אֶֽל־ יְהוֹשָׁפָ֡ט ע֣וֹד אִישׁ־ אֶחָ֡ד לִדְרֹשׁ֩ אֶת־ יְהוָ֨ה מֵאֹת֜וֹ וַאֲנִ֣י שְׂנֵאתִ֗יו כִּ֠י לֹֽא־ יִתְנַבֵּ֨א עָלַ֥י טוֹב֙ כִּ֣י אִם־ רָ֔ע מִיכָ֖יְהוּ בֶּן־ יִמְלָ֑ה וַיֹּ֙אמֶר֙ יְה֣וֹשָׁפָ֔ט אַל־ יֹאמַ֥ר הַמֶּ֖לֶךְ כֵּֽן׃",
+        english:
+          "The king of Israel answered There is still one man through whom we can inquire of the LORD but I hate him because he never prophesies anything good for me but only bad He is Micaiah son of Imlah The king should not say that Jehoshaphat replied",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיִּקְרָא֙ מֶ֣לֶךְ יִשְׂרָאֵ֔ל אֶל־ סָרִ֖יס אֶחָ֑ד וַיֹּ֕אמֶר מַהֲרָ֖ה מִיכָ֥יְהוּ בֶן־ יִמְלָֽה׃",
+        english:
+          "So the king of Israel called one of his officials and said Bring Micaiah son of Imlah at once",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וּמֶ֣לֶךְ יִשְׂרָאֵ֡ל וִֽיהוֹשָׁפָ֣ט מֶֽלֶךְ־ יְהוּדָ֡ה יֹשְׁבִים֩ אִ֨ישׁ עַל־ כִּסְא֜וֹ מְלֻבָּשִׁ֤ים בְּגָדִים֙ בְּגֹ֔רֶן פֶּ֖תַח שַׁ֣עַר שֹׁמְר֑וֹן וְכָ֨ל־ הַנְּבִיאִ֔ים מִֽתְנַבְּאִ֖ים לִפְנֵיהֶֽם׃",
+        english:
+          "Dressed in royal attire the king of Israel and Jehoshaphat king of Judah were sitting on their thrones at the threshing floor by the entrance of the gate of Samaria with all the prophets prophesying before them",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיַּ֥עַשׂ ל֛וֹ צִדְקִיָּ֥ה בֶֽן־ כְּנַעֲנָ֖ה קַרְנֵ֣י בַרְזֶ֑ל וַיֹּ֙אמֶר֙ כֹּֽה־ אָמַ֣ר יְהוָ֔ה בְּאֵ֛לֶּה תְּנַגַּ֥ח אֶת־ אֲרָ֖ם עַד־ כַּלֹּתָֽם׃",
+        english:
+          "Now Zedekiah son of Chenaanah had made for himself iron horns and declared This is what the LORD says With these you shall gore the Arameans until they are finished off",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְכָל־ הַנְּבִאִ֔ים נִבְּאִ֥ים כֵּ֖ן לֵאמֹ֑ר עֲלֵ֞ה רָמֹ֤ת גִּלְעָד֙ וְהַצְלַ֔ח וְנָתַ֥ן יְהוָ֖ה בְּיַ֥ד הַמֶּֽלֶךְ׃",
+        english:
+          "And all the prophets were prophesying the same saying Go up to Ramoth-gilead and triumph for the LORD will deliver it into the hand of the king",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְהַמַּלְאָ֞ךְ אֲשֶׁר־ הָלַ֣ךְ׀ לִקְרֹ֣א מִיכָ֗יְהוּ דִּבֶּ֤ר אֵלָיו֙ לֵאמֹ֔ר הִנֵּה־ נָ֞א דִּבְרֵ֧י הַנְּבִיאִ֛ים פֶּֽה־ אֶחָ֥ד ט֖וֹב אֶל־ הַמֶּ֑לֶךְ יְהִֽי־ נָ֣א דִבְרֶיךָ כִּדְבַ֛ר אַחַ֥ד מֵהֶ֖ם וְדִבַּ֥רְתָּ טּֽוֹב׃",
+        english:
+          "Then the messenger who had gone to call Micaiah instructed him Behold now with one accord the words of the prophets are favorable to the king So please let your words be like theirs and speak favorably",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיֹּ֖אמֶר מִיכָ֑יְהוּ חַי־ יְהוָ֕ה כִּ֠י אֶת־ אֲשֶׁ֨ר יֹאמַ֧ר יְהוָ֛ה אֵלַ֖י אֹת֥וֹ אֲדַבֵּֽר׃",
+        english:
+          "But Micaiah said As surely as the LORD lives I will speak whatever the LORD tells me",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיָּבוֹא֮ אֶל־ הַמֶּלֶךְ֒ וַיֹּ֨אמֶר הַמֶּ֜לֶךְ אֵלָ֗יו מִיכָ֙יְהוּ֙ הֲנֵלֵ֞ךְ אֶל־ רָמֹ֥ת גִּלְעָ֛ד לַמִּלְחָמָ֖ה אִם־ נֶחְדָּ֑ל וַיֹּ֤אמֶר אֵלָיו֙ עֲלֵ֣ה וְהַצְלַ֔ח וְנָתַ֥ן יְהוָ֖ה בְּיַ֥ד הַמֶּֽלֶךְ׃",
+        english:
+          "When Micaiah arrived the king asked him Micaiah should we go to war against Ramoth-gilead or should we refrain Go up and triumph Micaiah replied for the LORD will deliver it into the hand of the king",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיֹּ֤אמֶר אֵלָיו֙ הַמֶּ֔לֶךְ עַד־ כַּמֶּ֥ה פְעָמִ֖ים אֲנִ֣י מַשְׁבִּעֶ֑ךָ אֲ֠שֶׁר לֹֽא־ תְדַבֵּ֥ר אֵלַ֛י רַק־ אֱמֶ֖ת בְּשֵׁ֥ם יְהוָֽה׃",
+        english:
+          "But the king said to him How many times must I make you swear not to tell me anything but the truth in the name of the LORD",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיֹּ֗אמֶר רָאִ֤יתִי אֶת־ כָּל־ יִשְׂרָאֵל֙ נְפֹצִ֣ים אֶל־ הֶהָרִ֔ים כַּצֹּ֕אן אֲשֶׁ֥ר אֵין־ לָהֶ֖ם רֹעֶ֑ה וַיֹּ֤אמֶר יְהוָה֙ לֹֽא־ אֲדֹנִ֣ים לָאֵ֔לֶּה יָשׁ֥וּבוּ אִישׁ־ לְבֵית֖וֹ בְּשָׁלֽוֹם׃",
+        english:
+          "So Micaiah declared I saw all Israel scattered on the hills like sheep without a shepherd And the LORD said These people have no master let each one return home in peace",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֹּ֥אמֶר מֶֽלֶךְ־ יִשְׂרָאֵ֖ל אֶל־ יְהוֹשָׁפָ֑ט הֲלוֹא֙ אָמַ֣רְתִּי אֵלֶ֔יךָ לֽוֹא־ יִתְנַבֵּ֥א עָלַ֛י ט֖וֹב כִּ֥י אִם־ רָֽע׃",
+        english:
+          "Then the king of Israel said to Jehoshaphat Did I not tell you that he never prophesies good for me but only bad",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיֹּ֕אמֶר לָכֵ֖ן שְׁמַ֣ע דְּבַר־ יְהוָ֑ה רָאִ֤יתִי אֶת־ יְהוָה֙ יֹשֵׁ֣ב עַל־ כִּסְא֔וֹ וְכָל־ צְבָ֤א הַשָּׁמַ֙יִם֙ עֹמֵ֣ד עָלָ֔יו מִימִינ֖וֹ וּמִשְּׂמֹאלֽוֹ׃",
+        english:
+          "Micaiah continued Therefore hear the word of the LORD I saw the LORD sitting on His throne and all the host of heaven standing by Him on His right and on His left",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיֹּ֣אמֶר יְהוָ֗ה מִ֤י יְפַתֶּה֙ אֶת־ אַחְאָ֔ב וְיַ֕עַל וְיִפֹּ֖ל בְּרָמֹ֣ת גִּלְעָ֑ד וַיֹּ֤אמֶר זֶה֙ בְּכֹ֔ה וְזֶ֥ה אֹמֵ֖ר בְּכֹֽה׃",
+        english:
+          "And the LORD said Who will entice Ahab to march up and fall at Ramoth-gilead And one suggested this and another that",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֵּצֵ֣א הָר֗וּחַ וַֽיַּעֲמֹד֙ לִפְנֵ֣י יְהוָ֔ה וַיֹּ֖אמֶר אֲנִ֣י אֲפַתֶּ֑נּוּ וַיֹּ֧אמֶר יְהוָ֛ה אֵלָ֖יו בַּמָּֽה׃",
+        english:
+          "Then a spirit came forward stood before the LORD and said I will entice him By what means asked the LORD",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֹּ֗אמֶר אֵצֵא֙ וְהָיִ֙יתִי֙ ר֣וּחַ שֶׁ֔קֶר בְּפִ֖י כָּל־ נְבִיאָ֑יו וַיֹּ֗אמֶר תְּפַתֶּה֙ וְגַם־ תּוּכָ֔ל צֵ֖א וַעֲשֵׂה־ כֵֽן׃",
+        english:
+          "And he replied I will go out and be a lying spirit in the mouths of all his prophets You will surely entice him and prevail said the LORD Go and do it",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְעַתָּ֗ה הִנֵּ֨ה נָתַ֤ן יְהוָה֙ ר֣וּחַ שֶׁ֔קֶר בְּפִ֖י כָּל־ נְבִיאֶ֣יךָ אֵ֑לֶּה וַֽיהוָ֔ה דִּבֶּ֥ר עָלֶ֖יךָ רָעָֽה׃",
+        english:
+          "So you see the LORD has put a lying spirit in the mouths of all these prophets of yours and the LORD has pronounced disaster against you",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיִּגַּשׁ֙ צִדְקִיָּ֣הוּ בֶֽן־ כְּנַעֲנָ֔ה וַיַּכֶּ֥ה אֶת־ מִיכָ֖יְהוּ עַל־ הַלֶּ֑חִי וַיֹּ֕אמֶר אֵי־ זֶ֨ה עָבַ֧ר רֽוּחַ־ יְהוָ֛ה מֵאִתִּ֖י לְדַבֵּ֥ר אוֹתָֽךְ׃",
+        english:
+          "Then Zedekiah son of Chenaanah went up struck Micaiah in the face and demanded Which way did the Spirit of the LORD go when He departed from me to speak with you",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֹּ֣אמֶר מִיכָ֔יְהוּ הִנְּךָ֥ רֹאֶ֖ה בַּיּ֣וֹם הַה֑וּא אֲשֶׁ֥ר תָּבֹ֛א חֶ֥דֶר בְּחֶ֖דֶר לְהֵחָבֵֽה׃",
+        english:
+          "Micaiah replied You will soon see on that day when you go and hide in an inner room",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַיֹּ֙אמֶר֙ מֶ֣לֶךְ יִשְׂרָאֵ֔ל קַ֚ח אֶת־ מִיכָ֔יְהוּ וַהֲשִׁיבֵ֖הוּ אֶל־ אָמֹ֣ן שַׂר־ הָעִ֑יר וְאֶל־ יוֹאָ֖שׁ בֶּן־ הַמֶּֽלֶךְ׃",
+        english:
+          "And the king of Israel declared Take Micaiah and return him to Amon the governor of the city and to Joash the king’s son",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְאָמַרְתָּ֗ כֹּ֚ה אָמַ֣ר הַמֶּ֔לֶךְ שִׂ֥ימוּ אֶת־ זֶ֖ה בֵּ֣ית הַכֶּ֑לֶא וְהַאֲכִילֻ֨הוּ לֶ֤חֶם לַ֙חַץ֙ וּמַ֣יִם לַ֔חַץ עַ֖ד בֹּאִ֥י בְשָׁלֽוֹם׃",
+        english:
+          "and tell them that this is what the king says Put this man in prison and feed him only bread and water until I return safely",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיֹּ֣אמֶר מִיכָ֔יְהוּ אִם־ שׁ֤וֹב תָּשׁוּב֙ בְּשָׁל֔וֹם לֹֽא־ דִבֶּ֥ר יְהוָ֖ה בִּ֑י וַיֹּ֕אמֶר שִׁמְע֖וּ עַמִּ֥ים כֻּלָּֽם׃",
+        english:
+          "But Micaiah replied If you ever return safely the LORD has not spoken through me Then he added Take heed all you people",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיַּ֧עַל מֶֽלֶךְ־ יִשְׂרָאֵ֛ל וְיהוֹשָׁפָ֥ט מֶֽלֶךְ־ יְהוּדָ֖ה רָמֹ֥ת גִּלְעָֽד׃",
+        english:
+          "So the king of Israel and Jehoshaphat king of Judah went up to Ramoth-gilead",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיֹּאמֶר֩ מֶ֨לֶךְ יִשְׂרָאֵ֜ל אֶל־ יְהוֹשָׁפָ֗ט הִתְחַפֵּשׂ֙ וָבֹ֣א בַמִּלְחָמָ֔ה וְאַתָּ֖ה לְבַ֣שׁ בְּגָדֶ֑יךָ וַיִּתְחַפֵּשׂ֙ מֶ֣לֶךְ יִשְׂרָאֵ֔ל וַיָּב֖וֹא בַּמִּלְחָמָֽה׃",
+        english:
+          "And the king of Israel said to Jehoshaphat I will disguise myself and go into battle but you wear your royal robes So the king of Israel disguised himself and went into battle",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וּמֶ֣לֶךְ אֲרָ֡ם צִוָּ֣ה אֶת־ שָׂרֵי֩ הָרֶ֨כֶב אֲשֶׁר־ ל֜וֹ שְׁלֹשִׁ֤ים וּשְׁנַ֙יִם֙ לֵאמֹ֔ר לֹ֚א תִּלָּ֣חֲמ֔וּ אֶת־ קָטֹ֖ן וְאֶת־ גָּד֑וֹל כִּ֛י אִֽם־ אֶת־ מֶ֥לֶךְ יִשְׂרָאֵ֖ל לְבַדּֽוֹ׃",
+        english:
+          "Now the king of Aram had ordered his thirty-two chariot commanders Do not fight with anyone small or great except the king of Israel",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיְהִ֡י כִּרְאוֹת֩ שָׂרֵ֨י הָרֶ֜כֶב אֶת־ יְהוֹשָׁפָ֗ט וְהֵ֤מָּה אָֽמְרוּ֙ אַ֣ךְ מֶֽלֶךְ־ יִשְׂרָאֵ֣ל ה֔וּא וַיָּסֻ֥רוּ עָלָ֖יו לְהִלָּחֵ֑ם וַיִּזְעַ֖ק יְהוֹשָׁפָֽט׃",
+        english:
+          "When the chariot commanders saw Jehoshaphat they said Surely this is the king of Israel So they turned to fight against him but Jehoshaphat cried out",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַיְהִ֗י כִּרְאוֹת֙ שָׂרֵ֣י הָרֶ֔כֶב כִּֽי־ לֹא־ מֶ֥לֶךְ יִשְׂרָאֵ֖ל ה֑וּא וַיָּשׁ֖וּבוּ מֵאַחֲרָֽיו׃",
+        english:
+          "And when the chariot commanders saw that he was not the king of Israel they turned back from pursuing him",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְאִ֗ישׁ מָשַׁ֤ךְ בַּקֶּ֙שֶׁת֙ לְתֻמּ֔וֹ וַיַּכֶּה֙ אֶת־ מֶ֣לֶךְ יִשְׂרָאֵ֔ל בֵּ֥ין הַדְּבָקִ֖ים וּבֵ֣ין הַשִּׁרְיָ֑ן וַיֹּ֣אמֶר לְרַכָּב֗וֹ הֲפֹ֥ךְ יָדְךָ֛ וְהוֹצִיאֵ֥נִי מִן־ הַֽמַּחֲנֶ֖ה כִּ֥י הָחֳלֵֽיתִי׃",
+        english:
+          "However, a certain man drew his bow without taking special aim and he struck the king of Israel between the joints of his armor So the king said to his charioteer Turn around and take me out of the battle for I am badly wounded",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וַתַּעֲלֶ֤ה הַמִּלְחָמָה֙ בַּיּ֣וֹם הַה֔וּא וְהַמֶּ֗לֶךְ הָיָ֧ה מָעֳמָ֛ד בַּמֶּרְכָּבָ֖ה נֹ֣כַח אֲרָ֑ם וַיָּ֣מָת בָּעֶ֔רֶב וַיִּ֥צֶק דַּֽם־ הַמַּכָּ֖ה אֶל־ חֵ֥יק הָרָֽכֶב׃",
+        english:
+          "The battle raged throughout that day and the king was propped up in his chariot facing the Arameans And the blood from his wound ran out onto the floor of the chariot and that evening he died",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיַּעֲבֹ֤ר הָרִנָּה֙ בַּֽמַּחֲנֶ֔ה כְּבֹ֥א הַשֶּׁ֖מֶשׁ לֵאמֹ֑ר אִ֥ישׁ אֶל־ עִיר֖וֹ וְאִ֥ישׁ אֶל־ אַרְצֽוֹ׃",
+        english:
+          "As the sun was setting the cry rang out in the army Every man to his own city and every man to his own land",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וַיָּ֣מָת הַמֶּ֔לֶךְ וַיָּב֖וֹא שֹׁמְר֑וֹן וַיִּקְבְּר֥וּ אֶת־ הַמֶּ֖לֶךְ בְּשֹׁמְרֽוֹן׃",
+        english:
+          "So the king died and was brought to Samaria where they buried him",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וַיִּשְׁטֹ֨ף אֶת־ הָרֶ֜כֶב עַ֣ל׀ בְּרֵכַ֣ת שֹׁמְר֗וֹן וַיָּלֹ֤קּוּ הַכְּלָבִים֙ אֶת־ דָּמ֔וֹ וְהַזֹּנ֖וֹת רָחָ֑צוּ כִּדְבַ֥ר יְהוָ֖ה אֲשֶׁ֥ר דִּבֵּֽר׃",
+        english:
+          "And the chariot was washed at the pool of Samaria where the prostitutes bathed and the dogs licked up Ahab’s blood according to the word that the LORD had spoken",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וְיֶתֶר֩ דִּבְרֵ֨י אַחְאָ֜ב וְכָל־ אֲשֶׁ֣ר עָשָׂ֗ה וּבֵ֤ית הַשֵּׁן֙ אֲשֶׁ֣ר בָּנָ֔ה וְכָל־ הֶעָרִ֖ים אֲשֶׁ֣ר בָּנָ֑ה הֲלֽוֹא־ הֵ֣ם כְּתוּבִ֗ים עַל־ סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "As for the rest of the acts of Ahab along with all his accomplishments and the ivory palace and all the cities he built are they not written in the Book of the Chronicles of the Kings of Israel",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וַיִּשְׁכַּ֥ב אַחְאָ֖ב עִם־ אֲבֹתָ֑יו וַיִּמְלֹ֛ךְ אֲחַזְיָ֥הוּ בְנ֖וֹ תַּחְתָּֽיו׃פ",
+        english:
+          "And Ahab rested with his fathers and his son Ahaziah reigned in his place",
+      },
+      {
+        verse_number: 41,
+        original:
+          "וִיהֽוֹשָׁפָט֙ בֶּן־ אָסָ֔א מָלַ֖ךְ עַל־ יְהוּדָ֑ה בִּשְׁנַ֣ת אַרְבַּ֔ע לְאַחְאָ֖ב מֶ֥לֶךְ יִשְׂרָאֵֽל׃",
+        english:
+          "In the fourth year of Ahab’s reign over Israel Jehoshaphat son of Asa became king of Judah",
+      },
+      {
+        verse_number: 42,
+        original:
+          "יְהוֹשָׁפָ֗ט בֶּן־ שְׁלֹשִׁ֨ים וְחָמֵ֤שׁ שָׁנָה֙ בְּמָלְכ֔וֹ וְעֶשְׂרִ֤ים וְחָמֵשׁ֙ שָׁנָ֔ה מָלַ֖ךְ בִּירוּשָׁלִָ֑ם וְשֵׁ֣ם אִמּ֔וֹ עֲזוּבָ֖ה בַּת־ שִׁלְחִֽי׃",
+        english:
+          "Jehoshaphat was thirty-five years old when he became king and he reigned in Jerusalem twenty-five years His mother’s name was Azubah daughter of Shilhi",
+      },
+      {
+        verse_number: 43,
+        original:
+          "וַיֵּ֗לֶךְ בְּכָל־ דֶּ֛רֶךְ אָסָ֥א אָבִ֖יו לֹא־ סָ֣ר מִמֶּ֑נּוּ לַעֲשׂ֥וֹת הַיָּשָׁ֖ר בְּעֵינֵ֥י יְהוָֽה׃ אַ֥ךְ הַבָּמ֖וֹת לֹֽא־ סָ֑רוּ ע֥וֹד הָעָ֛ם מְזַבְּחִ֥ים וּֽמְקַטְּרִ֖ים בַּבָּמֽוֹת׃",
+        english:
+          "And Jehoshaphat walked in all the ways of his father Asa he did not turn away from them but did what was right in the eyes of the LORD The high places however were not removed the people still sacrificed and burned incense on the high places",
+      },
+      {
+        verse_number: 44,
+        original: "וַיַּשְׁלֵ֥ם יְהוֹשָׁפָ֖ט עִם־ מֶ֥לֶךְ יִשְׂרָאֵֽל׃",
+        english: "Jehoshaphat also made peace with the king of Israel",
+      },
+      {
+        verse_number: 45,
+        original:
+          "וְיֶ֨תֶר דִּבְרֵ֧י יְהוֹשָׁפָ֛ט וּגְבוּרָת֥וֹ אֲשֶׁר־ עָשָׂ֖ה וַאֲשֶׁ֣ר נִלְחָ֑ם הֲלֹֽא־ הֵ֣ם כְּתוּבִ֗ים עַל־ סֵ֛פֶר דִּבְרֵ֥י הַיָּמִ֖ים לְמַלְכֵ֥י יְהוּדָֽה׃",
+        english:
+          "As for the rest of the acts of Jehoshaphat along with the might he exercised and how he waged war are they not written in the Book of the Chronicles of the Kings of Judah",
+      },
+      {
+        verse_number: 46,
+        original:
+          "וְיֶ֙תֶר֙ הַקָּדֵ֔שׁ אֲשֶׁ֣ר נִשְׁאַ֔ר בִּימֵ֖י אָסָ֣א אָבִ֑יו בִּעֵ֖ר מִן־ הָאָֽרֶץ׃",
+        english:
+          "He banished from the land the male shrine prostitutes who remained from the days of his father Asa",
+      },
+      {
+        verse_number: 47,
+        original: "וּמֶ֥לֶךְ אֵ֛ין בֶּאֱד֖וֹם נִצָּ֥ב מֶֽלֶךְ׃",
+        english: "And there was no king in Edom a deputy served as king",
+      },
+      {
+        verse_number: 48,
+        original:
+          "יְהוֹשָׁפָ֡ט עָשָׂר אֳנִיּ֨וֹת תַּרְשִׁ֜ישׁ לָלֶ֧כֶת אוֹפִ֛ירָה לַזָּהָ֖ב וְלֹ֣א הָלָ֑ךְ כִּֽי־ נִשְׁבְּרָה אֳנִיּ֖וֹת בְּעֶצְי֥וֹן גָּֽבֶר׃",
+        english:
+          "Jehoshaphat built ships of Tarshish to go to Ophir for gold but they never set sail because they were wrecked at Ezion-geber",
+      },
+      {
+        verse_number: 49,
+        original:
+          "אָ֠ז אָמַ֞ר אֲחַזְיָ֤הוּ בֶן־ אַחְאָב֙ אֶל־ יְה֣וֹשָׁפָ֔ט יֵלְכ֧וּ עֲבָדַ֛י עִם־ עֲבָדֶ֖יךָ בָּאֳנִיּ֑וֹת וְלֹ֥א אָבָ֖ה יְהוֹשָׁפָֽט׃",
+        english:
+          "At that time Ahaziah son of Ahab said to Jehoshaphat Let my servants sail with your servants but Jehoshaphat refused",
+      },
+      {
+        verse_number: 50,
+        original:
+          "וַיִּשְׁכַּ֤ב יְהֽוֹשָׁפָט֙ עִם־ אֲבֹתָ֔יו וַיִּקָּבֵר֙ עִם־ אֲבֹתָ֔יו בְּעִ֖יר דָּוִ֣ד אָבִ֑יו וַיִּמְלֹ֛ךְ יְהוֹרָ֥ם בְּנ֖וֹ תַּחְתָּֽיו׃ס",
+        english:
+          "And Jehoshaphat rested with his fathers and was buried with them in the city of his father David And his son Jehoram reigned in his place",
+      },
+      {
+        verse_number: 51,
+        original:
+          "אֲחַזְיָ֣הוּ בֶן־ אַחְאָ֗ב מָלַ֤ךְ עַל־ יִשְׂרָאֵל֙ בְּשֹׁ֣מְר֔וֹן בִּשְׁנַת֙ שְׁבַ֣ע עֶשְׂרֵ֔ה לִיהוֹשָׁפָ֖ט מֶ֣לֶךְ יְהוּדָ֑ה וַיִּמְלֹ֥ךְ עַל־ יִשְׂרָאֵ֖ל שְׁנָתָֽיִם׃",
+        english:
+          "In the seventeenth year of Jehoshaphat’s reign over Judah Ahaziah son of Ahab became king of Israel and he reigned in Samaria two years",
+      },
+      {
+        verse_number: 52,
+        original:
+          "וַיַּ֥עַשׂ הָרַ֖ע בְּעֵינֵ֣י יְהוָ֑ה וַיֵּ֗לֶךְ בְּדֶ֤רֶךְ אָבִיו֙ וּבְדֶ֣רֶךְ אִמּ֔וֹ וּבְדֶ֙רֶךְ֙ יָרָבְעָ֣ם בֶּן־ נְבָ֔ט אֲשֶׁ֥ר הֶחֱטִ֖יא אֶת־ יִשְׂרָאֵֽל׃",
+        english:
+          "And he did evil in the sight of the LORD and walked in the ways of his father and mother and of Jeroboam son of Nebat who had caused Israel to sin",
+      },
+      {
+        verse_number: 53,
+        original:
+          "וַֽיַּעֲבֹד֙ אֶת־ הַבַּ֔עַל וַיִּֽשְׁתַּחֲוֶ֖ה ל֑וֹ וַיַּכְעֵ֗ס אֶת־ יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל כְּכֹ֥ל אֲשֶׁר־ עָשָׂ֖ה אָבִֽיו׃",
+        english:
+          "Ahaziah served and worshiped Baal provoking the LORD the God of Israel, to anger just as his father had done",
+      },
+    ],
+  };
+  return chapter;
+}
