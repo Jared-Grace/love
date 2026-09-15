@@ -1,7 +1,7 @@
+import { property_not } from "./property_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_passages_verse_claims_all } from "./gloss_passages_verse_claims_all.mjs";
 import { property_get } from "./property_get.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map } from "./list_map.mjs";
 export function gloss_passages_verse_claims_wrong(
@@ -24,8 +24,7 @@ export function gloss_passages_verse_claims_wrong(
     word_key_read,
   );
   function held_not_is(claim) {
-    let held = property_get(claim, "held");
-    let wrong = not(held);
+    let wrong = property_not(claim, "held");
     return wrong;
   }
   let kept = list_filter(all, held_not_is);
