@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_world_size } from "./bless_world_size.mjs";
 import { add } from "./add.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_bless_tile_size_map() {
+export function bless_tile_size_map() {
   arguments_assert(arguments, 0);
   ("How large one tile is drawn when the whole world is being shown at once instead of the");
   ("stretch of street in front of the player.");
