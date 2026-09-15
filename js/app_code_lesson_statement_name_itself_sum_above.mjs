@@ -1,3 +1,6 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_total } from "./app_code_lesson_statement_name_total.mjs";
+import { app_code_lesson_statement_name_again } from "./app_code_lesson_statement_name_again.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
@@ -31,15 +34,20 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let name_third = app_code_lesson_statement_name_third();
   let box_total = app_code_container_light_blue(root);
   ("Every reminder names its cups in brackets as well, not just the box the lesson turns on. A reminder is read fastest of all - a learner is checking that they already know it rather than working it out - and a sentence made only of the words a name and two names makes them look down at the code to find out which cups it is talking about, which is slower than reading the letters in place.");
-  html_div_cycle_code(box_total, [
-    "Remember, we can give a name (",
-    name_third,
-    ") to what two names (",
-    name_first,
-    ", ",
-    name_last,
-    ") add up to:",
-  ]);
+  app_code_remember_from_lesson(
+    box_total,
+    context,
+    app_code_lesson_statement_name_total,
+    [
+      "we can give a name (",
+      name_third,
+      ") to what two names (",
+      name_first,
+      ", ",
+      name_last,
+      ") add up to:",
+    ],
+  );
   ("each box's lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   let held_first = js_code_let_statement(name_first, number_first);
   let held_last = js_code_let_statement(name_last, number_last);
@@ -48,13 +56,12 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   let lines_total = [held_first, held_last, code_total, logged_third];
   app_code_code_lines_writes_out(box_total, lines_total, total);
   let box_again = app_code_container_light_blue(root);
-  html_div_cycle_code(box_again, [
-    "Remember, we can give a name (",
-    name_first,
-    ") a new value (",
-    number_new,
-    "):",
-  ]);
+  app_code_remember_from_lesson(
+    box_again,
+    context,
+    app_code_lesson_statement_name_again,
+    ["we can give a name (", name_first, ") a new value (", number_new, "):"],
+  );
   let held_again = js_code_let_statement(name_first, number_first);
   let given_again = js_code_assign_statement(name_first, number_new);
   let logged_again = js_code_console_log_statement(name_first);

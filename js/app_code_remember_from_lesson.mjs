@@ -38,7 +38,11 @@ export function app_code_remember_from_lesson(
   }
   let div = html_div(parent);
   html_span_text_content(div, "Remember, from lesson ");
-  app_shared_button_inline(div, number, on_click);
+  let button = app_shared_button_inline(div, number, on_click);
+  ("the comma that follows the number sits against it, the way it would against a number written as plain writing, so the gap the button keeps on its right is taken away");
+  html_style_assign(button, {
+    "margin-right": "0",
+  });
   let first = list_first(parts);
   let rest = list_skip(parts, 1);
   let opening = text_combine_multiple([", ", first]);

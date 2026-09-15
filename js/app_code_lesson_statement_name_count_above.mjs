@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -25,13 +27,12 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   let grown = js_code_assign_statement(name, more);
   let logged = js_code_console_log_statement(name);
   let box_once = app_code_container_light_blue(root);
-  html_div_cycle_code(box_once, [
-    "Remember, we can give a name (",
-    name,
-    ") one more than it holds (",
-    more,
-    "):",
-  ]);
+  app_code_remember_from_lesson(
+    box_once,
+    context,
+    app_code_lesson_statement_name_one_more,
+    ["we can give a name (", name, ") one more than it holds (", more, "):"],
+  );
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   app_code_code_lines_writes_out(box_once, [held, grown, logged], once);
   let box_twice = app_code_container_light_blue(root);

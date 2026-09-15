@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_one_more_above(root, context) {
   ("The screen before this one put a name on both sides of the equals. Everything about how that line is read - the right side worked out first, the name filled second - was settled there, so this screen changes one thing on the right of the plus and nothing else.");
   ("The line said twice used to close this screen and is now a screen of its own, the next one. It was shown here rather than asked about, and a learner who read the second copy as doing nothing was never given a question that would tell them otherwise - which is the whole of what counting is, so it needed asking rather than showing.");
   ("The reminder's numbers and this screen's numbers have none in common, so no number on the screen is both a value in one box and an answer in another. A learner checking a box against the one above it would otherwise find the same number in two places and have to work out which it was.");
-  let r = app_code_lesson_statement_name_one_more_above_box_one(root);
+  let r = app_code_lesson_statement_name_one_more_above_box_one(root, context);
   let box_one = property_get(r, "box_one");
   let name = property_get(r, "name");
   let start = property_get(r, "start");

@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
@@ -32,11 +34,12 @@ export function app_code_lesson_statement_name_sum_above(root, context) {
   let names_sum = app_code_lesson_statement_names_added();
   ("the plus is a part of its own, so it comes out dressed as code. The parts alternate between plain writing and code all the way along, and a symbol standing in an odd place is what makes a symbol callout - the same device the Operators lessons name their symbol with. Named as plain writing it would only be repeating what the line below it already shows.");
   let box_remember = app_code_container_light_blue(root);
-  html_div_cycle_code(box_remember, [
-    "Remember, we can add (",
-    plus,
-    ") two numbers together by their value:",
-  ]);
+  app_code_remember_from_lesson(
+    box_remember,
+    context,
+    app_code_lesson_functions_console_log_arithmetic,
+    ["we can add (", plus, ") two numbers together by their value:"],
+  );
   let logged_numbers = js_code_console_log_statement(numbers_sum);
   app_code_code_lines_writes_out(box_remember, [logged_numbers], total);
   let box_names = app_code_container_light_blue(root);
