@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -37,8 +38,7 @@ export async function app_ceb_bible_gloss_root_named_foreign_counted(
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
-    let claimed = property_get(found, "claimed");
-    let claimed_count = list_size(claimed);
+    let claimed_count = property_list_size(found, "claimed");
     let strict = equal_not(claimed_count, 0);
     if (strict) {
       return;
