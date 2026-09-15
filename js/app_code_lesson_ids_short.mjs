@@ -75,9 +75,17 @@ export function app_code_lesson_ids_short() {
       text_frozen("order_minus"),
     app_code_lesson_expression_choose_order_same_strength_pair:
       text_frozen("order_same_two"),
+    app_code_lesson_expression_choose_order_plus_times:
+      text_frozen("order_plus_mul"),
     app_code_lesson_expression_plus_times: text_frozen("plus_times"),
+    app_code_lesson_expression_choose_order_plus_divide:
+      text_frozen("order_plus_div"),
     app_code_lesson_expression_plus_divide: text_frozen("plus_divide"),
+    app_code_lesson_expression_choose_order_minus_times:
+      text_frozen("order_minus_mul"),
     app_code_lesson_expression_minus_times: text_frozen("minus_times"),
+    app_code_lesson_expression_choose_order_minus_divide:
+      text_frozen("order_minus_div"),
     app_code_lesson_expression_minus_divide: text_frozen("minus_divide"),
     app_code_lesson_expression_which_part_first: text_frozen("which_first"),
     app_code_lesson_expression_exponent: text_frozen("power"),

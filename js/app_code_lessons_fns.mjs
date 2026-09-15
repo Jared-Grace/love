@@ -1,3 +1,7 @@
+import { app_code_lesson_expression_choose_order_plus_times } from "./app_code_lesson_expression_choose_order_plus_times.mjs";
+import { app_code_lesson_expression_choose_order_plus_divide } from "./app_code_lesson_expression_choose_order_plus_divide.mjs";
+import { app_code_lesson_expression_choose_order_minus_times } from "./app_code_lesson_expression_choose_order_minus_times.mjs";
+import { app_code_lesson_expression_choose_order_minus_divide } from "./app_code_lesson_expression_choose_order_minus_divide.mjs";
 import { app_code_lesson_expression_choose_order_nested_add } from "./app_code_lesson_expression_choose_order_nested_add.mjs";
 import { app_code_lesson_expression_choose_order_nested_subtract } from "./app_code_lesson_expression_choose_order_nested_subtract.mjs";
 import { app_code_lesson_expression_choose_order_nested_multiply } from "./app_code_lesson_expression_choose_order_nested_multiply.mjs";
@@ -204,9 +208,13 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_choose_order_solve,
     app_code_lesson_expression_choose_order_operators,
     app_code_lesson_expression_choose_order_same_strength_pair,
+    app_code_lesson_expression_choose_order_plus_times,
     app_code_lesson_expression_plus_times,
+    app_code_lesson_expression_choose_order_plus_divide,
     app_code_lesson_expression_plus_divide,
+    app_code_lesson_expression_choose_order_minus_times,
     app_code_lesson_expression_minus_times,
+    app_code_lesson_expression_choose_order_minus_divide,
     app_code_lesson_expression_minus_divide,
     app_code_lesson_expression_which_part_first,
     app_code_lesson_expression_exponent,
