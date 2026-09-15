@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_remainder_divide } from "./app_code_lesson_expression_remainder_divide.mjs";
 import { app_code_lesson_expression_remainder_divide_solve_title_name_id } from "./app_code_lesson_expression_remainder_divide_solve_title_name_id.mjs";
 import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { list_shuffle_take_map } from "./list_shuffle_take_map.mjs";
@@ -67,12 +69,12 @@ export function app_code_lesson_expression_remainder_divide_solve() {
   return lesson;
   function above(root, context) {
     let recall = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_remainder_divide, [
-      "the remainder of ",
-      "14 / 4",
-      " is ",
-      "14 - Math.floor(14 / 4) * 4",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_remainder_divide,
+      ["the remainder of ", "14 / 4", " is ", "14 - Math.floor(14 / 4) * 4"],
+    );
     let solving = app_code_container_light_blue(root);
     html_div_cycle_code(solving, ["Solve the formula one step at a time:"]);
     html_div_cycle_code(solving, ["", "14 / 4", " is ", "3.5"]);
