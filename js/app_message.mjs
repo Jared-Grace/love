@@ -1,3 +1,4 @@
+import { property_not } from "./property_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { object_merge_set } from "./object_merge_set.mjs";
 import { app_shared_font_size_refresh } from "./app_shared_font_size_refresh.mjs";
@@ -19,7 +20,6 @@ import { app_karate_screen_input_validate } from "./app_karate_screen_input_vali
 import { html_value_get } from "./html_value_get.mjs";
 import { html_value_set } from "./html_value_set.mjs";
 import { reply_attempt } from "./reply_attempt.mjs";
-import { not } from "./not.mjs";
 import { app_shared_contact_send } from "./app_shared_contact_send.mjs";
 import { app_message_messages_get } from "./app_message_messages_get.mjs";
 import { list_add } from "./list_add.mjs";
@@ -58,8 +58,7 @@ export async function app_message(context) {
     let message = html_value_get(textarea);
     html_value_set(textarea, "");
     let attempt = await reply_attempt(message, start);
-    let answered = property_get(attempt, "answered");
-    let ei = not(answered);
+    let ei = property_not(attempt, "answered");
     if (ei) {
       ("no canned reply matched, so this is something for the developer to read — send it to the inbox, which records the page it was written from");
       await app_shared_contact_send(message);
