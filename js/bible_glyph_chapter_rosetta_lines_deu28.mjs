@@ -1,0 +1,477 @@
+export function bible_glyph_chapter_rosetta_lines_deu28() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "DEU28",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וְהָיָ֗ה אִם־ שָׁמ֤וֹעַ תִּשְׁמַע֙ בְּקוֹל֙ יְהוָ֣ה אֱלֹהֶ֔יךָ לִשְׁמֹ֤ר לַעֲשׂוֹת֙ אֶת־ כָּל־ מִצְוֺתָ֔יו אֲשֶׁ֛ר אָנֹכִ֥י מְצַוְּךָ֖ הַיּ֑וֹם וּנְתָ֨נְךָ֜ יְהוָ֤ה אֱלֹהֶ֙יךָ֙ עֶלְי֔וֹן עַ֖ל כָּל־ גּוֹיֵ֥י הָאָֽרֶץ׃",
+        english:
+          "Now if you faithfully obey the voice of the LORD your God and are careful to follow all His commandments I am giving you today the LORD your God will set you high above all the nations of the earth",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וּבָ֧אוּ עָלֶ֛יךָ כָּל־ הַבְּרָכ֥וֹת הָאֵ֖לֶּה וְהִשִּׂיגֻ֑ךָ כִּ֣י תִשְׁמַ֔ע בְּק֖וֹל יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+        english:
+          "And all these blessings will come upon you and overtake you if you will obey the voice of the LORD your God",
+      },
+      {
+        verse_number: 3,
+        original: "בָּר֥וּךְ אַתָּ֖ה בָּעִ֑יר וּבָר֥וּךְ אַתָּ֖ה בַּשָּׂדֶֽה׃",
+        english: "You will be blessed in the city and blessed in the country",
+      },
+      {
+        verse_number: 4,
+        original:
+          "בָּר֧וּךְ פְּרִֽי־ בִטְנְךָ֛ וּפְרִ֥י אַדְמָתְךָ֖ וּפְרִ֣י בְהֶמְתֶּ֑ךָ שְׁגַ֥ר אֲלָפֶ֖יךָ וְעַשְׁתְּר֥וֹת צֹאנֶֽךָ׃",
+        english:
+          "The fruit of your womb will be blessed as well as the produce of your land and the offspring of your livestock the calves of your herds and the lambs of your flocks",
+      },
+      {
+        verse_number: 5,
+        original: "בָּר֥וּךְ טַנְאֲךָ֖ וּמִשְׁאַרְתֶּֽךָ׃",
+        english: "Your basket and kneading bowl will be blessed",
+      },
+      {
+        verse_number: 6,
+        original:
+          "בָּר֥וּךְ אַתָּ֖ה בְּבֹאֶ֑ךָ וּבָר֥וּךְ אַתָּ֖ה בְּצֵאתֶֽךָ׃",
+        english:
+          "You will be blessed when you come in and blessed when you go out",
+      },
+      {
+        verse_number: 7,
+        original:
+          "יִתֵּ֨ן יְהוָ֤ה אֶת־ אֹיְבֶ֙יךָ֙ הַקָּמִ֣ים עָלֶ֔יךָ נִגָּפִ֖ים לְפָנֶ֑יךָ בְּדֶ֤רֶךְ אֶחָד֙ יֵצְא֣וּ אֵלֶ֔יךָ וּבְשִׁבְעָ֥ה דְרָכִ֖ים יָנ֥וּסוּ לְפָנֶֽיךָ׃",
+        english:
+          "The LORD will cause the enemies who rise up against you to be defeated before you They will march out against you in one direction but flee from you in seven",
+      },
+      {
+        verse_number: 8,
+        original:
+          "יְצַ֨ו יְהוָ֤ה אִתְּךָ֙ אֶת־ הַבְּרָכָ֔ה בַּאֲסָמֶ֕יךָ וּבְכֹ֖ל מִשְׁלַ֣ח יָדֶ֑ךָ וּבֵ֣רַכְךָ֔ בָּאָ֕רֶץ אֲשֶׁר־ יְהוָ֥ה אֱלֹהֶ֖יךָ נֹתֵ֥ן לָֽךְ׃",
+        english:
+          "The LORD will decree a blessing on your barns and on everything to which you put your hand the LORD your God will bless you in the land He is giving you",
+      },
+      {
+        verse_number: 9,
+        original:
+          "יְקִֽימְךָ֨ יְהוָ֥ה לוֹ֙ לְעַ֣ם קָד֔וֹשׁ כַּאֲשֶׁ֖ר נִֽשְׁבַּֽע־ לָ֑ךְ כִּ֣י תִשְׁמֹ֗ר אֶת־ מִצְוֺת֙ יְהוָ֣ה אֱלֹהֶ֔יךָ וְהָלַכְתָּ֖ בִּדְרָכָֽיו׃",
+        english:
+          "The LORD will establish you as His holy people just as He has sworn to you if you keep the commandments of the LORD your God and walk in His ways",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְרָאוּ֙ כָּל־ עַמֵּ֣י הָאָ֔רֶץ כִּ֛י שֵׁ֥ם יְהוָ֖ה נִקְרָ֣א עָלֶ֑יךָ וְיָֽרְא֖וּ מִמֶּֽךָּ׃",
+        english:
+          "Then all the peoples of the earth will see that you are called by the name of the LORD and they will stand in awe of you",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהוֹתִֽרְךָ֤ יְהוָה֙ לְטוֹבָ֔ה בִּפְרִ֧י בִטְנְךָ֛ וּבִפְרִ֥י בְהַמְתְּךָ֖ וּבִפְרִ֣י אַדְמָתֶ֑ךָ עַ֚ל הָאֲדָמָ֔ה אֲשֶׁ֨ר נִשְׁבַּ֧ע יְהוָ֛ה לַאֲבֹתֶ֖יךָ לָ֥תֶת לָֽךְ׃",
+        english:
+          "The LORD will make you prosper abundantly in the fruit of your womb the offspring of your livestock and the produce of your land in the land that the LORD swore to your fathers to give you",
+      },
+      {
+        verse_number: 12,
+        original:
+          "יִפְתַּ֣ח יְהוָ֣ה׀ לְ֠ךָ אֶת־ אוֹצָר֨וֹ הַטּ֜וֹב אֶת־ הַשָּׁמַ֗יִם לָתֵ֤ת מְטַֽר־ אַרְצְךָ֙ בְּעִתּ֔וֹ וּלְבָרֵ֕ךְ אֵ֖ת כָּל־ מַעֲשֵׂ֣ה יָדֶ֑ךָ וְהִלְוִ֙יתָ֙ גּוֹיִ֣ם רַבִּ֔ים וְאַתָּ֖ה לֹ֥א תִלְוֶֽה׃",
+        english:
+          "The LORD will open the heavens His abundant storehouse to send rain on your land in season and to bless all the work of your hands You will lend to many nations but borrow from none",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וּנְתָֽנְךָ֨ יְהוָ֤ה לְרֹאשׁ֙ וְלֹ֣א לְזָנָ֔ב וְהָיִ֙יתָ֙ רַ֣ק לְמַ֔עְלָה וְלֹ֥א תִהְיֶ֖ה לְמָ֑טָּה כִּֽי־ תִשְׁמַ֞ע אֶל־ מִצְוֺ֣ת׀ יְהוָ֣ה אֱלֹהֶ֗יךָ אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם לִשְׁמֹ֥ר וְלַעֲשֽׂוֹת׃",
+        english:
+          "The LORD will make you the head and not the tail you will only move upward and never downward if you hear and carefully follow the commandments of the LORD your God which I am giving you today",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְלֹ֣א תָס֗וּר מִכָּל־ הַדְּבָרִים֙ אֲשֶׁ֨ר אָנֹכִ֜י מְצַוֶּ֥ה אֶתְכֶ֛ם הַיּ֖וֹם יָמִ֣ין וּשְׂמֹ֑אול לָלֶ֗כֶת אַחֲרֵ֛י אֱלֹהִ֥ים אֲחֵרִ֖ים לְעָבְדָֽם׃ס",
+        english:
+          "Do not turn aside to the right or to the left from any of the words I command you today and do not go after other gods to serve them",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְהָיָ֗ה אִם־ לֹ֤א תִשְׁמַע֙ בְּקוֹל֙ יְהוָ֣ה אֱלֹהֶ֔יךָ לִשְׁמֹ֤ר לַעֲשׂוֹת֙ אֶת־ כָּל־ מִצְוֺתָ֣יו וְחֻקֹּתָ֔יו אֲשֶׁ֛ר אָנֹכִ֥י מְצַוְּךָ֖ הַיּ֑וֹם וּבָ֧אוּ עָלֶ֛יךָ כָּל־ הַקְּלָל֥וֹת הָאֵ֖לֶּה וְהִשִּׂיגֽוּךָ׃",
+        english:
+          "If, however you do not obey the LORD your God by carefully following all His commandments and statutes I am giving you today all these curses will come upon you and overtake you",
+      },
+      {
+        verse_number: 16,
+        original: "אָר֥וּר אַתָּ֖ה בָּעִ֑יר וְאָר֥וּר אַתָּ֖ה בַּשָּׂדֶֽה׃",
+        english: "You will be cursed in the city and cursed in the country",
+      },
+      {
+        verse_number: 17,
+        original: "אָר֥וּר טַנְאֲךָ֖ וּמִשְׁאַרְתֶּֽךָ׃",
+        english: "Your basket and kneading bowl will be cursed",
+      },
+      {
+        verse_number: 18,
+        original:
+          "אָר֥וּר פְּרִֽי־ בִטְנְךָ֖ וּפְרִ֣י אַדְמָתֶ֑ךָ שְׁגַ֥ר אֲלָפֶ֖יךָ וְעַשְׁתְּר֥וֹת צֹאנֶֽךָ׃",
+        english:
+          "The fruit of your womb will be cursed as well as the produce of your land the calves of your herds and the lambs of your flocks",
+      },
+      {
+        verse_number: 19,
+        original: "אָר֥וּר אַתָּ֖ה בְּבֹאֶ֑ךָ וְאָר֥וּר אַתָּ֖ה בְּצֵאתֶֽךָ׃",
+        english:
+          "You will be cursed when you come in and cursed when you go out",
+      },
+      {
+        verse_number: 20,
+        original:
+          "יְשַׁלַּ֣ח יְהוָ֣ה׀ בְּ֠ךָ אֶת־ הַמְּאֵרָ֤ה אֶת־ הַמְּהוּמָה֙ וְאֶת־ הַמִּגְעֶ֔רֶת בְּכָל־ מִשְׁלַ֥ח יָדְךָ֖ אֲשֶׁ֣ר תַּעֲשֶׂ֑ה עַ֣ד הִשָּֽׁמֶדְךָ֤ וְעַד־ אֲבָדְךָ֙ מַהֵ֔ר מִפְּנֵ֛י רֹ֥עַ מַֽעֲלָלֶ֖יךָ אֲשֶׁ֥ר עֲזַבְתָּֽנִי׃",
+        english:
+          "The LORD will send curses upon you confusion and reproof in all to which you put your hand until you are destroyed and quickly perish because of the wickedness you have committed in forsaking Him",
+      },
+      {
+        verse_number: 21,
+        original:
+          "יַדְבֵּ֧ק יְהוָ֛ה בְּךָ֖ אֶת־ הַדָּ֑בֶר עַ֚ד כַּלֹּת֣וֹ אֹֽתְךָ֔ מֵעַל֙ הָֽאֲדָמָ֔ה אֲשֶׁר־ אַתָּ֥ה בָא־ שָׁ֖מָּה לְרִשְׁתָּֽהּ׃",
+        english:
+          "The LORD will make the plague cling to you until He has exterminated you from the land that you are entering to possess",
+      },
+      {
+        verse_number: 22,
+        original:
+          "יַכְּכָ֣ה יְ֠הוָה בַּשַּׁחֶ֨פֶת וּבַקַּדַּ֜חַת וּבַדַּלֶּ֗קֶת וּבַֽחַרְחֻר֙ וּבַחֶ֔רֶב וּבַשִּׁדָּפ֖וֹן וּבַיֵּרָק֑וֹן וּרְדָפ֖וּךָ עַ֥ד אָבְדֶֽךָ׃",
+        english:
+          "The LORD will strike you with wasting disease with fever and inflammation with scorching heat and drought and with blight and mildew these will pursue you until you perish",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְהָי֥וּ שָׁמֶ֛יךָ אֲשֶׁ֥ר עַל־ רֹאשְׁךָ֖ נְחֹ֑שֶׁת וְהָאָ֥רֶץ אֲשֶׁר־ תַּחְתֶּ֖יךָ בַּרְזֶֽל׃",
+        english:
+          "The sky over your head will be bronze and the earth beneath you iron",
+      },
+      {
+        verse_number: 24,
+        original:
+          "יִתֵּ֧ן יְהוָ֛ה אֶת־ מְטַ֥ר אַרְצְךָ֖ אָבָ֣ק וְעָפָ֑ר מִן־ הַשָּׁמַ֙יִם֙ יֵרֵ֣ד עָלֶ֔יךָ עַ֖ד הִשָּׁמְדָֽךְ׃",
+        english:
+          "The LORD will turn the rain of your land into dust and powder it will descend on you from the sky until you are destroyed",
+      },
+      {
+        verse_number: 25,
+        original:
+          "יִתֶּנְךָ֨ יְהוָ֥ה׀ נִגָּף֮ לִפְנֵ֣י אֹיְבֶיךָ֒ בְּדֶ֤רֶךְ אֶחָד֙ תֵּצֵ֣א אֵלָ֔יו וּבְשִׁבְעָ֥ה דְרָכִ֖ים תָּנ֣וּס לְפָנָ֑יו וְהָיִ֣יתָ לְזַעֲוָ֔ה לְכֹ֖ל מַמְלְכ֥וֹת הָאָֽרֶץ׃",
+        english:
+          "The LORD will cause you to be defeated before your enemies You will march out against them in one direction but flee from them in seven You will be an object of horror to all the kingdoms of the earth",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְהָיְתָ֤ה נִבְלָֽתְךָ֙ לְמַאֲכָ֔ל לְכָל־ ע֥וֹף הַשָּׁמַ֖יִם וּלְבֶהֱמַ֣ת הָאָ֑רֶץ וְאֵ֖ין מַחֲרִֽיד׃",
+        english:
+          "Your corpses will be food for all the birds of the air and beasts of the earth with no one to scare them away",
+      },
+      {
+        verse_number: 27,
+        original:
+          "יַכְּכָ֨ה יְהוָ֜ה בִּשְׁחִ֤ין מִצְרַ֙יִם֙ וּבָעֳפָלִים וּבַגָּרָ֖ב וּבֶחָ֑רֶס אֲשֶׁ֥ר לֹא־ תוּכַ֖ל לְהֵרָפֵֽא׃",
+        english:
+          "The LORD will afflict you with the boils of Egypt with tumors and scabs and itch from which you cannot be cured",
+      },
+      {
+        verse_number: 28,
+        original:
+          "יַכְּכָ֣ה יְהוָ֔ה בְּשִׁגָּע֖וֹן וּבְעִוָּר֑וֹן וּבְתִמְה֖וֹן לֵבָֽב׃",
+        english:
+          "The LORD will afflict you with madness blindness and confusion of mind",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וְהָיִ֜יתָ מְמַשֵּׁ֣שׁ בַּֽצָּהֳרַ֗יִם כַּאֲשֶׁ֨ר יְמַשֵּׁ֤שׁ הָעִוֵּר֙ בָּאֲפֵלָ֔ה וְלֹ֥א תַצְלִ֖יחַ אֶת־ דְּרָכֶ֑יךָ וְהָיִ֜יתָ אַ֣ךְ עָשׁ֧וּק וְגָז֛וּל כָּל־ הַיָּמִ֖ים וְאֵ֥ין מוֹשִֽׁיעַ׃",
+        english:
+          "and at noon you will grope about like a blind man in the darkness You will not prosper in your ways Day after day you will be oppressed and plundered with no one to save you",
+      },
+      {
+        verse_number: 30,
+        original:
+          "אִשָּׁ֣ה תְאָרֵ֗שׂ וְאִ֤ישׁ אַחֵר֙ יִשְׁגָּלֶנָּה בַּ֥יִת תִּבְנֶ֖ה וְלֹא־ תֵשֵׁ֣ב בּ֑וֹ כֶּ֥רֶם תִּטַּ֖ע וְלֹ֥א תְחַלְּלֶּֽנּוּ׃",
+        english:
+          "You will be pledged in marriage to a woman but another man will violate her You will build a house but will not live in it You will plant a vineyard but will not enjoy its fruit",
+      },
+      {
+        verse_number: 31,
+        original:
+          "שׁוֹרְךָ֞ טָב֣וּחַ לְעֵינֶ֗יךָ וְלֹ֣א תֹאכַל֮ מִמֶּנּוּ֒ חֲמֹֽרְךָ֙ גָּז֣וּל מִלְּפָנֶ֔יךָ וְלֹ֥א יָשׁ֖וּב לָ֑ךְ צֹֽאנְךָ֙ נְתֻנ֣וֹת לְאֹיְבֶ֔יךָ וְאֵ֥ין לְךָ֖ מוֹשִֽׁיעַ׃",
+        english:
+          "Your ox will be slaughtered before your eyes but you will not eat any of it Your donkey will be taken away and not returned to you Your flock will be given to your enemies and no one will save you",
+      },
+      {
+        verse_number: 32,
+        original:
+          "בָּנֶ֨יךָ וּבְנֹתֶ֜יךָ נְתֻנִ֨ים לְעַ֤ם אַחֵר֙ וְעֵינֶ֣יךָ רֹא֔וֹת וְכָל֥וֹת אֲלֵיהֶ֖ם כָּל־ הַיּ֑וֹם וְאֵ֥ין לְאֵ֖ל יָדֶֽךָ׃",
+        english:
+          "Your sons and daughters will be given to another nation while your eyes grow weary looking for them day after day with no power in your hand",
+      },
+      {
+        verse_number: 33,
+        original:
+          "פְּרִ֤י אַדְמָֽתְךָ֙ וְכָל־ יְגִ֣יעֲךָ֔ יֹאכַ֥ל עַ֖ם אֲשֶׁ֣ר לֹא־ יָדָ֑עְתָּ וְהָיִ֗יתָ רַ֛ק עָשׁ֥וּק וְרָצ֖וּץ כָּל־ הַיָּמִֽים׃",
+        english:
+          "A people you do not know will eat the produce of your land and of all your toil All your days you will be oppressed and crushed",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְהָיִ֖יתָ מְשֻׁגָּ֑ע מִמַּרְאֵ֥ה עֵינֶ֖יךָ אֲשֶׁ֥ר תִּרְאֶֽה׃",
+        english: "You will be driven mad by the sights you see",
+      },
+      {
+        verse_number: 35,
+        original:
+          "יַכְּכָ֨ה יְהוָ֜ה בִּשְׁחִ֣ין רָ֗ע עַל־ הַבִּרְכַּ֙יִם֙ וְעַל־ הַשֹּׁקַ֔יִם אֲשֶׁ֥ר לֹא־ תוּכַ֖ל לְהֵרָפֵ֑א מִכַּ֥ף רַגְלְךָ֖ וְעַ֥ד קָדְקֳדֶֽךָ׃",
+        english:
+          "The LORD will afflict you with painful incurable boils on your knees and thighs from the soles of your feet to the top of your head",
+      },
+      {
+        verse_number: 36,
+        original:
+          "יוֹלֵ֨ךְ יְהוָ֜ה אֹֽתְךָ֗ וְאֶֽת־ מַלְכְּךָ֙ אֲשֶׁ֣ר תָּקִ֣ים עָלֶ֔יךָ אֶל־ גּ֕וֹי אֲשֶׁ֥ר לֹא־ יָדַ֖עְתָּ אַתָּ֣ה וַאֲבֹתֶ֑יךָ וְעָבַ֥דְתָּ שָּׁ֛ם אֱלֹהִ֥ים אֲחֵרִ֖ים עֵ֥ץ וָאָֽבֶן׃",
+        english:
+          "The LORD will bring you and the king you appoint to a nation neither you nor your fathers have known and there you will worship other gods gods of wood and stone",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וְהָיִ֣יתָ לְשַׁמָּ֔ה לְמָשָׁ֖ל וְלִשְׁנִינָ֑ה בְּכֹל֙ הָֽעַמִּ֔ים אֲשֶׁר־ יְנַהֶגְךָ֥ יְהוָ֖ה שָֽׁמָּה׃",
+        english:
+          "You will become an object of horror scorn and ridicule among all the nations to which the LORD will drive you",
+      },
+      {
+        verse_number: 38,
+        original:
+          "זֶ֥רַע רַ֖ב תּוֹצִ֣יא הַשָּׂדֶ֑ה וּמְעַ֣ט תֶּאֱסֹ֔ף כִּ֥י יַחְסְלֶ֖נּוּ הָאַרְבֶּֽה׃",
+        english:
+          "You will sow much seed in the field but harvest little because the locusts will consume it",
+      },
+      {
+        verse_number: 39,
+        original:
+          "כְּרָמִ֥ים תִּטַּ֖ע וְעָבָ֑דְתָּ וְיַ֤יִן לֹֽא־ תִשְׁתֶּה֙ וְלֹ֣א תֶאֱגֹ֔ר כִּ֥י תֹאכְלֶ֖נּוּ הַתֹּלָֽעַת׃",
+        english:
+          "You will plant and cultivate vineyards but will neither drink the wine nor gather the grapes because worms will eat them",
+      },
+      {
+        verse_number: 40,
+        original:
+          "זֵיתִ֛ים יִהְי֥וּ לְךָ֖ בְּכָל־ גְּבוּלֶ֑ךָ וְשֶׁ֙מֶן֙ לֹ֣א תָס֔וּךְ כִּ֥י יִשַּׁ֖ל זֵיתֶֽךָ׃",
+        english:
+          "You will have olive trees throughout your territory but will never anoint yourself with oil because the olives will drop off",
+      },
+      {
+        verse_number: 41,
+        original:
+          "בָּנִ֥ים וּבָנ֖וֹת תּוֹלִ֑יד וְלֹא־ יִהְי֣וּ לָ֔ךְ כִּ֥י יֵלְכ֖וּ בַּשֶּֽׁבִי׃",
+        english:
+          "You will father sons and daughters but they will not remain yours because they will go into captivity",
+      },
+      {
+        verse_number: 42,
+        original: "כָּל־ עֵצְךָ֖ וּפְרִ֣י אַדְמָתֶ֑ךָ יְיָרֵ֖שׁ הַצְּלָצַֽל׃",
+        english:
+          "Swarms of locusts will consume all your trees and the produce of your land",
+      },
+      {
+        verse_number: 43,
+        original:
+          "הַגֵּר֙ אֲשֶׁ֣ר בְּקִרְבְּךָ֔ יַעֲלֶ֥ה עָלֶ֖יךָ מַ֣עְלָה מָּ֑עְלָה וְאַתָּ֥ה תֵרֵ֖ד מַ֥טָּה מָּֽטָּה׃",
+        english:
+          "The foreigner living among you will rise higher and higher above you while you sink down lower and lower",
+      },
+      {
+        verse_number: 44,
+        original:
+          "ה֣וּא יַלְוְךָ֔ וְאַתָּ֖ה לֹ֣א תַלְוֶ֑נּוּ ה֚וּא יִהְיֶ֣ה לְרֹ֔אשׁ וְאַתָּ֖ה תִּֽהְיֶ֥ה לְזָנָֽב׃",
+        english:
+          "He will lend to you but you will not lend to him He will be the head and you will be the tail",
+      },
+      {
+        verse_number: 45,
+        original:
+          "וּבָ֨אוּ עָלֶ֜יךָ כָּל־ הַקְּלָל֣וֹת הָאֵ֗לֶּה וּרְדָפ֙וּךָ֙ וְהִשִּׂיג֔וּךָ עַ֖ד הִשָּֽׁמְדָ֑ךְ כִּי־ לֹ֣א שָׁמַ֗עְתָּ בְּקוֹל֙ יְהוָ֣ה אֱלֹהֶ֔יךָ לִשְׁמֹ֛ר מִצְוֺתָ֥יו וְחֻקֹּתָ֖יו אֲשֶׁ֥ר צִוָּֽךְ׃",
+        english:
+          "All these curses will come upon you They will pursue you and overtake you until you are destroyed since you did not obey the LORD your God and keep the commandments and statutes He gave you",
+      },
+      {
+        verse_number: 46,
+        original:
+          "וְהָי֣וּ בְךָ֔ לְא֖וֹת וּלְמוֹפֵ֑ת וּֽבְזַרְעֲךָ֖ עַד־ עוֹלָֽם׃",
+        english:
+          "These curses will be a sign and a wonder upon you and your descendants forever",
+      },
+      {
+        verse_number: 47,
+        original:
+          "תַּ֗חַת אֲשֶׁ֤ר לֹא־ עָבַ֙דְתָּ֙ אֶת־ יְהוָ֣ה אֱלֹהֶ֔יךָ בְּשִׂמְחָ֖ה וּבְט֣וּב לֵבָ֑ב מֵרֹ֖ב כֹּֽל׃",
+        english:
+          "Because you did not serve the LORD your God with joy and gladness of heart in all your abundance",
+      },
+      {
+        verse_number: 48,
+        original:
+          "וְעָבַדְתָּ֣ אֶת־ אֹיְבֶ֗יךָ אֲשֶׁ֨ר יְשַׁלְּחֶ֤נּוּ יְהוָה֙ בָּ֔ךְ בְּרָעָ֧ב וּבְצָמָ֛א וּבְעֵירֹ֖ם וּבְחֹ֣סֶר כֹּ֑ל וְנָתַ֞ן עֹ֤ל בַּרְזֶל֙ עַל־ צַוָּארֶ֔ךָ עַ֥ד הִשְׁמִיד֖וֹ אֹתָֽךְ׃",
+        english:
+          "you will serve your enemies the LORD will send against you in famine thirst nakedness and destitution He will place an iron yoke on your neck until He has destroyed you",
+      },
+      {
+        verse_number: 49,
+        original:
+          "יִשָּׂ֣א יְהוָה֩ עָלֶ֨יךָ גּ֤וֹי מֵרָחוֹק֙ מִקְצֵ֣ה הָאָ֔רֶץ כַּאֲשֶׁ֥ר יִדְאֶ֖ה הַנָּ֑שֶׁר גּ֕וֹי אֲשֶׁ֥ר לֹא־ תִשְׁמַ֖ע לְשֹׁנֽוֹ׃",
+        english:
+          "The LORD will bring a nation from afar from the ends of the earth to swoop down upon you like an eagle a nation whose language you will not understand",
+      },
+      {
+        verse_number: 50,
+        original:
+          "גּ֖וֹי עַ֣ז פָּנִ֑ים אֲשֶׁ֨ר לֹא־ יִשָּׂ֤א פָנִים֙ לְזָקֵ֔ן וְנַ֖עַר לֹ֥א יָחֹֽן׃",
+        english:
+          "a ruthless nation with no respect for the old and no pity for the young",
+      },
+      {
+        verse_number: 51,
+        original:
+          "וְ֠אָכַל פְּרִ֨י בְהֶמְתְּךָ֥ וּפְרִֽי־ אַדְמָתְךָ֮ עַ֣ד הִשָּֽׁמְדָךְ֒ אֲשֶׁ֨ר לֹֽא־ יַשְׁאִ֜יר לְךָ֗ דָּגָן֙ תִּיר֣וֹשׁ וְיִצְהָ֔ר שְׁגַ֥ר אֲלָפֶ֖יךָ וְעַשְׁתְּרֹ֣ת צֹאנֶ֑ךָ עַ֥ד הַאֲבִיד֖וֹ אֹתָֽךְ׃",
+        english:
+          "They will eat the offspring of your livestock and the produce of your land until you are destroyed They will leave you no grain or new wine or oil no calves of your herds or lambs of your flocks until they have caused you to perish",
+      },
+      {
+        verse_number: 52,
+        original:
+          "וְהֵצַ֨ר לְךָ֜ בְּכָל־ שְׁעָרֶ֗יךָ עַ֣ד רֶ֤דֶת חֹמֹתֶ֙יךָ֙ הַגְּבֹה֣וֹת וְהַבְּצֻר֔וֹת אֲשֶׁ֥ר אַתָּ֛ה בֹּטֵ֥חַ בָּהֵ֖ן בְּכָל־ אַרְצֶ֑ךָ וְהֵצַ֤ר לְךָ֙ בְּכָל־ שְׁעָרֶ֔יךָ בְּכָ֨ל־ אַרְצְךָ֔ אֲשֶׁ֥ר נָתַ֛ן יְהוָ֥ה אֱלֹהֶ֖יךָ לָֽךְ׃",
+        english:
+          "They will besiege all the cities throughout your land until the high and fortified walls in which you trust have fallen They will besiege all your cities throughout the land that the LORD your God has given you",
+      },
+      {
+        verse_number: 53,
+        original:
+          "וְאָכַלְתָּ֣ פְרִֽי־ בִטְנְךָ֗ בְּשַׂ֤ר בָּנֶ֙יךָ֙ וּבְנֹתֶ֔יךָ אֲשֶׁ֥ר נָֽתַן־ לְךָ֖ יְהוָ֣ה אֱלֹהֶ֑יךָ בְּמָצוֹר֙ וּבְמָצ֔וֹק אֲשֶׁר־ יָצִ֥יק לְךָ֖ אֹיְבֶֽךָ׃",
+        english:
+          "Then you will eat the fruit of your womb the flesh of the sons and daughters whom the LORD your God has given you in the siege and distress that your enemy will inflict on you",
+      },
+      {
+        verse_number: 54,
+        original:
+          "הָאִישׁ֙ הָרַ֣ךְ בְּךָ֔ וְהֶעָנֹ֖ג מְאֹ֑ד תֵּרַ֨ע עֵינ֤וֹ בְאָחִיו֙ וּבְאֵ֣שֶׁת חֵיק֔וֹ וּבְיֶ֥תֶר בָּנָ֖יו אֲשֶׁ֥ר יוֹתִֽיר׃",
+        english:
+          "The most gentle and refined man among you will begrudge his brother the wife he embraces and the rest of his children who have survived",
+      },
+      {
+        verse_number: 55,
+        original:
+          "מִתֵּ֣ת׀ לְאַחַ֣ד מֵהֶ֗ם מִבְּשַׂ֤ר בָּנָיו֙ אֲשֶׁ֣ר יֹאכֵ֔ל מִבְּלִ֥י הִשְׁאִֽיר־ ל֖וֹ כֹּ֑ל בְּמָצוֹר֙ וּבְמָצ֔וֹק אֲשֶׁ֨ר יָצִ֥יק לְךָ֛ אֹיִבְךָ֖ בְּכָל־ שְׁעָרֶֽיךָ׃",
+        english:
+          "refusing to share with any of them the flesh of his children he will eat because he has nothing left in the siege and distress that your enemy will inflict on you within all your gates",
+      },
+      {
+        verse_number: 56,
+        original:
+          "הָרַכָּ֨ה בְךָ֜ וְהָעֲנֻגָּ֗ה אֲשֶׁ֨ר לֹא־ נִסְּתָ֤ה כַף־ רַגְלָהּ֙ הַצֵּ֣ג עַל־ הָאָ֔רֶץ מֵהִתְעַנֵּ֖ג וּמֵרֹ֑ךְ תֵּרַ֤ע עֵינָהּ֙ בְּאִ֣ישׁ חֵיקָ֔הּ וּבִבְנָ֖הּ וּבְבִתָּֽהּ׃",
+        english:
+          "The most gentle and refined woman among you so gentle and refined she would not venture to set the sole of her foot on the ground will begrudge the husband she embraces and her son and daughter",
+      },
+      {
+        verse_number: 57,
+        original:
+          "וּֽבְשִׁלְיָתָ֞הּ הַיּוֹצֵ֣ת׀ מִבֵּ֣ין רַגְלֶ֗יהָ וּבְבָנֶ֙יהָ֙ אֲשֶׁ֣ר תֵּלֵ֔ד כִּֽי־ תֹאכְלֵ֥ם בְּחֹֽסֶר־ כֹּ֖ל בַּסָּ֑תֶר בְּמָצוֹר֙ וּבְמָצ֔וֹק אֲשֶׁ֨ר יָצִ֥יק לְךָ֛ אֹיִבְךָ֖ בִּשְׁעָרֶֽיךָ׃",
+        english:
+          "the afterbirth that comes from between her legs and the children she bears because she will secretly eat them for lack of anything else in the siege and distress that your enemy will inflict on you within your gates",
+      },
+      {
+        verse_number: 58,
+        original:
+          "אִם־ לֹ֨א תִשְׁמֹ֜ר לַעֲשׂ֗וֹת אֶת־ כָּל־ דִּבְרֵי֙ הַתּוֹרָ֣ה הַזֹּ֔את הַכְּתוּבִ֖ים בַּסֵּ֣פֶר הַזֶּ֑ה לְ֠יִרְאָה אֶת־ הַשֵּׁ֞ם הַנִּכְבָּ֤ד וְהַנּוֹרָא֙ הַזֶּ֔ה אֵ֖ת יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+        english:
+          "If you are not careful to observe all the words of this law which are written in this book that you may fear this glorious and awesome name the LORD your God",
+      },
+      {
+        verse_number: 59,
+        original:
+          "וְהִפְלָ֤א יְהוָה֙ אֶת־ מַכֹּ֣תְךָ֔ וְאֵ֖ת מַכּ֣וֹת זַרְעֶ֑ךָ מַכּ֤וֹת גְּדֹלוֹת֙ וְנֶ֣אֱמָנ֔וֹת וָחֳלָיִ֥ם רָעִ֖ים וְנֶאֱמָנִֽים׃",
+        english:
+          "He will bring upon you and your descendants extraordinary disasters severe and lasting plagues and terrible and chronic sicknesses",
+      },
+      {
+        verse_number: 60,
+        original:
+          "וְהֵשִׁ֣יב בְּךָ֗ אֵ֚ת כָּל־ מַדְוֵ֣ה מִצְרַ֔יִם אֲשֶׁ֥ר יָגֹ֖רְתָּ מִפְּנֵיהֶ֑ם וְדָבְק֖וּ בָּֽךְ׃",
+        english:
+          "He will afflict you again with all the diseases you dreaded in Egypt and they will cling to you",
+      },
+      {
+        verse_number: 61,
+        original:
+          "גַּ֤ם כָּל־ חֳלִי֙ וְכָל־ מַכָּ֔ה אֲשֶׁר֙ לֹ֣א כָת֔וּב בְּסֵ֖פֶר הַתּוֹרָ֣ה הַזֹּ֑את יַעְלֵ֤ם יְהוָה֙ עָלֶ֔יךָ עַ֖ד הִשָּׁמְדָֽךְ׃",
+        english:
+          "The LORD will also bring upon you every sickness and plague not recorded in this Book of the Law until you are destroyed",
+      },
+      {
+        verse_number: 62,
+        original:
+          "וְנִשְׁאַרְתֶּם֙ בִּמְתֵ֣י מְעָ֔ט תַּ֚חַת אֲשֶׁ֣ר הֱיִיתֶ֔ם כְּכוֹכְבֵ֥י הַשָּׁמַ֖יִם לָרֹ֑ב כִּי־ לֹ֣א שָׁמַ֔עְתָּ בְּק֖וֹל יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+        english:
+          "You who were as numerous as the stars in the sky will be left few in number because you would not obey the voice of the LORD your God",
+      },
+      {
+        verse_number: 63,
+        original:
+          "וְ֠הָיָה כַּאֲשֶׁר־ שָׂ֨שׂ יְהוָ֜ה עֲלֵיכֶ֗ם לְהֵיטִ֣יב אֶתְכֶם֮ וּלְהַרְבּ֣וֹת אֶתְכֶם֒ כֵּ֣ן יָשִׂ֤ישׂ יְהוָה֙ עֲלֵיכֶ֔ם לְהַאֲבִ֥יד אֶתְכֶ֖ם וּלְהַשְׁמִ֣יד אֶתְכֶ֑ם וְנִסַּחְתֶּם֙ מֵעַ֣ל הָֽאֲדָמָ֔ה אֲשֶׁר־ אַתָּ֥ה בָא־ שָׁ֖מָּה לְרִשְׁתָּֽהּ׃",
+        english:
+          "Just as it pleased the LORD to make you prosper and multiply so also it will please Him to annihilate you and destroy you And you will be uprooted from the land you are entering to possess",
+      },
+      {
+        verse_number: 64,
+        original:
+          "וֶהֱפִֽיצְךָ֤ יְהוָה֙ בְּכָל־ הָ֣עַמִּ֔ים מִקְצֵ֥ה הָאָ֖רֶץ וְעַד־ קְצֵ֣ה הָאָ֑רֶץ וְעָבַ֨דְתָּ שָּׁ֜ם אֱלֹהִ֣ים אֲחֵרִ֗ים אֲשֶׁ֧ר לֹא־ יָדַ֛עְתָּ אַתָּ֥ה וַאֲבֹתֶ֖יךָ עֵ֥ץ וָאָֽבֶן׃",
+        english:
+          "Then the LORD will scatter you among all the nations from one end of the earth to the other and there you will worship other gods gods of wood and stone which neither you nor your fathers have known",
+      },
+      {
+        verse_number: 65,
+        original:
+          "וּבַגּוֹיִ֤ם הָהֵם֙ לֹ֣א תַרְגִּ֔יעַ וְלֹא־ יִהְיֶ֥ה מָנ֖וֹחַ לְכַף־ רַגְלֶ֑ךָ וְנָתַן֩ יְהוָ֨ה לְךָ֥ שָׁם֙ לֵ֣ב רַגָּ֔ז וְכִלְי֥וֹן עֵינַ֖יִם וְדַֽאֲב֥וֹן נָֽפֶשׁ׃",
+        english:
+          "Among those nations you will find no repose not even a resting place for the sole of your foot There the LORD will give you a trembling heart failing eyes and a despairing soul",
+      },
+      {
+        verse_number: 66,
+        original:
+          "וְהָי֣וּ חַיֶּ֔יךָ תְּלֻאִ֥ים לְךָ֖ מִנֶּ֑גֶד וּפָֽחַדְתָּ֙ לַ֣יְלָה וְיוֹמָ֔ם וְלֹ֥א תַאֲמִ֖ין בְּחַיֶּֽיךָ׃",
+        english:
+          "So your life will hang in doubt before you and you will be afraid night and day never certain of survival",
+      },
+      {
+        verse_number: 67,
+        original:
+          "בַּבֹּ֤קֶר תֹּאמַר֙ מִֽי־ יִתֵּ֣ן עֶ֔רֶב וּבָעֶ֥רֶב תֹּאמַ֖ר מִֽי־ יִתֵּ֣ן בֹּ֑קֶר מִפַּ֤חַד לְבָֽבְךָ֙ אֲשֶׁ֣ר תִּפְחָ֔ד וּמִמַּרְאֵ֥ה עֵינֶ֖יךָ אֲשֶׁ֥ר תִּרְאֶֽה׃",
+        english:
+          "In the morning you will say If only it were evening and in the evening you will say If only it were morning because of the dread in your hearts of the terrifying sights you will see",
+      },
+      {
+        verse_number: 68,
+        original:
+          "וֶֽהֱשִֽׁיבְךָ֨ יְהוָ֥ה׀ מִצְרַיִם֮ בָּאֳנִיּוֹת֒ בַּדֶּ֙רֶךְ֙ אֲשֶׁ֣ר אָמַ֣רְתִּֽי לְךָ֔ לֹא־ תֹסִ֥יף ע֖וֹד לִרְאֹתָ֑הּ וְהִתְמַכַּרְתֶּ֨ם שָׁ֧ם לְאֹיְבֶ֛יךָ לַעֲבָדִ֥ים וְלִשְׁפָח֖וֹת וְאֵ֥ין קֹנֶֽה׃ס",
+        english:
+          "The LORD will return you to Egypt in ships by a route that I said you should never see again There you will sell yourselves to your enemies as male and female slaves but no one will buy you",
+      },
+    ],
+  };
+  return chapter;
+}
