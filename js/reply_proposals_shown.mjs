@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_records_by_key } from "./reply_records_by_key.mjs";
 import { reply_proposals } from "./reply_proposals.mjs";
-import { reply_cases_checked } from "./reply_cases_checked.mjs";
+import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
 import { list_map } from "./list_map.mjs";
@@ -20,7 +20,7 @@ export async function reply_proposals_shown() {
   ("The corpus comes through checked rather than raw, so a case that has quietly stopped doing what it was written to do shows on the same screen as the change being proposed. A change is reviewed against a rule set somebody believes is working, and the cheapest way to be wrong about that is to have never looked.");
   let by_key = await reply_records_by_key();
   let proposals = await reply_proposals();
-  let checked = await reply_cases_checked();
+  let checked = await app_message_reply_cases_checked();
   function each_case(one) {
     let from = property_get(one, "from");
     let found = reply_case_real_or_null(by_key, from);
