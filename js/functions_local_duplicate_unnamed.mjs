@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { repo_love_functions_names } from "./repo_love_functions_names.mjs";
@@ -18,8 +19,6 @@ import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 export async function functions_local_duplicate_unnamed(least) {
@@ -87,8 +86,7 @@ export async function functions_local_duplicate_unnamed(least) {
       continue;
     }
     let sites = property_get(by_key, key);
-    let holders = list_map(sites, site_holder);
-    let distinct = list_unique(holders);
+    let distinct = list_map_unique(sites, site_holder);
     let functions = list_size(distinct);
     let few = less_than(functions, least);
     if (few) {
