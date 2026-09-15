@@ -48,8 +48,8 @@ export function app_code_lesson_expression_which_part_first() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function above(root) {
-    let r2 = app_code_lesson_expression_which_part_first_above(root);
+  function above(root, context) {
+    let r2 = app_code_lesson_expression_which_part_first_above(root, context);
     return r2;
   }
 }

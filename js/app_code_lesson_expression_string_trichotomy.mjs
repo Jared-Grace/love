@@ -102,10 +102,7 @@ export function app_code_lesson_expression_string_trichotomy() {
     ]);
     let dictionary = app_code_container_light_blue(root);
     app_code_remember_from_lesson(dictionary, context, app_code_lesson_expression_string_order, [
-      [
-        "text",
-        "strings are compared in alphabetical order, the order they appear in the dictionary",
-      ],
+      "strings are compared in alphabetical order, the order they appear in the dictionary",
     ]);
     app_code_prose_code_line(dictionary, [
       ["code", '"grace"'],
