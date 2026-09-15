@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_identifiers_letters_spaces } from "./app_code_lesson_identifiers_letters_spaces.mjs";
 import { app_code_lesson_identifiers_underscores_generic_batch_get } from "./app_code_lesson_identifiers_underscores_generic_batch_get.mjs";
 import { app_code_symbols_separated_on_question } from "./app_code_symbols_separated_on_question.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
@@ -9,7 +11,6 @@ import { list_to_text_and_list } from "./list_to_text_and_list.mjs";
 import { app_code_lesson_identifiers_valid } from "./app_code_lesson_identifiers_valid.mjs";
 import { app_code_lesson_name_id_symbol } from "./app_code_lesson_name_id_symbol.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { app_code_lesson_underscores_define_symbol } from "./app_code_lesson_underscores_define_symbol.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -22,7 +23,7 @@ export function app_code_lesson_identifiers_underscores_generic({
   identifier_symbols_types_adds,
   defines_invert,
 }) {
-  function above(root) {
+  function above(root, context) {
     let c = app_code_container_light_blue(root);
     let defines = [define_valid, define_invalid];
     if (defines_invert) {
@@ -35,10 +36,15 @@ export function app_code_lesson_identifiers_underscores_generic({
     list_add_multiple(identifier_symbols_types, identifier_symbols_types_adds);
     let right = list_to_text_and_list(identifier_symbols_types);
     let text = text_combine(
-      "Remember, identifiers can have different kinds of symbols including ",
+      "identifiers can have different kinds of symbols including ",
       right,
     );
-    html_div_text(c2, text);
+    app_code_remember_from_lesson(
+      c2,
+      context,
+      app_code_lesson_identifiers_letters_spaces,
+      [text],
+    );
     let p = word_plural(separator_valid_name);
     let combined = text_combine_multiple([
       "Identifiers can also have ",
