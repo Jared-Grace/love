@@ -1,3 +1,8 @@
+import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
+import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
+import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
+import { app_code_lesson_expression_choose_order_swapping_divide } from "./app_code_lesson_expression_choose_order_swapping_divide.mjs";
+import { app_code_lesson_expression_choose_order_in_between } from "./app_code_lesson_expression_choose_order_in_between.mjs";
 import { app_code_lesson_expression_choose_order_plus_times } from "./app_code_lesson_expression_choose_order_plus_times.mjs";
 import { app_code_lesson_expression_choose_order_plus_divide } from "./app_code_lesson_expression_choose_order_plus_divide.mjs";
 import { app_code_lesson_expression_choose_order_minus_times } from "./app_code_lesson_expression_choose_order_minus_times.mjs";
@@ -220,8 +225,10 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_exponent,
     app_code_lesson_expression_choose_order_arithmetic_parentheses,
     app_code_lesson_expression_parentheses_arithmetic,
+    app_code_lesson_expression_choose_order_parentheses_minus_divide,
     app_code_lesson_expression_parentheses_minus_divide,
     app_code_lesson_expression_parentheses_moved,
+    app_code_lesson_expression_choose_order_arithmetic_less_than,
     app_code_lesson_expression_arithmetic_less_than,
     app_code_lesson_functions_arithmetic,
     app_code_lesson_functions_invalid,
@@ -277,7 +284,9 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_arithmetic_equality,
     app_code_lesson_expression_choose_order_both_sides_any_comparison,
     app_code_lesson_expression_both_sides_any_comparison,
+    app_code_lesson_expression_choose_order_swapping_add,
     app_code_lesson_expression_swapping_add,
+    app_code_lesson_expression_choose_order_swapping_divide,
     app_code_lesson_expression_swapping_divide,
     app_code_lesson_expression_swapping_order,
     app_code_lesson_expression_choose_order_pair,
@@ -285,6 +294,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_swapping_equal,
     app_code_lesson_expression_choose_order_and,
     app_code_lesson_expression_comparison_and,
+    app_code_lesson_expression_choose_order_in_between,
     app_code_lesson_expression_in_between,
     app_code_lesson_expression_choose_order_or,
     app_code_lesson_expression_comparison_or,
