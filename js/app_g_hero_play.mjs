@@ -4,7 +4,7 @@ import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_map_scrolling } from "./app_g_bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
-import { app_g_bless_crossing_draw } from "./app_g_bless_crossing_draw.mjs";
+import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
 import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
 import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
@@ -35,7 +35,7 @@ export function app_g_hero_play(container_map) {
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
   let crossings = html_div(div_map);
-  app_g_bless_crossing_draw(crossings, blocks);
+  bless_crossing_draw(crossings, blocks);
   let doors = html_div(div_map);
   app_g_bless_doors_draw(doors, blocks);
   let windows = html_div(div_map);

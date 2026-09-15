@@ -5,7 +5,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_road_crossing } from "./bless_road_crossing.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_crossing_draw(layer, blocks) {
+export function bless_crossing_draw(layer, blocks) {
   arguments_assert(arguments, 2);
   ("Paints the crossings on the street - a band of white bars laid over the road at the");
   ("middle of every block, where a person on foot may walk over.");
