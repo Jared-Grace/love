@@ -1,9 +1,9 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_index_of } from "./list_index_of.mjs";
 import { list_last } from "./list_last.mjs";
 import { subtract } from "./subtract.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 export function js_statements_adjacent_in_is(body, statements) {
   arguments_assert(arguments, 2);
@@ -15,8 +15,7 @@ export function js_statements_adjacent_in_is(body, statements) {
   let last = list_last(statements);
   let at_last = list_index_of(body, last);
   let span = subtract(at_last, at_first);
-  let count = list_size(statements);
-  let expected = subtract(count, 1);
+  let expected = list_size_subtract(statements, 1);
   let adjacent_is = equal(span, expected);
   return adjacent_is;
 }
