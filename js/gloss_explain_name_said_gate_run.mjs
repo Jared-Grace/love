@@ -38,7 +38,7 @@ export function gloss_explain_name_said_gate_run() {
     );
   }
   let r = {
-    checked: size,
+    cases: size,
     defects: 0,
   };
   return r;
