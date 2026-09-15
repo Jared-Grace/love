@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -33,8 +34,7 @@ export async function app_ceb_bible_gloss_roots_claimed_letters_unwritten() {
   let roots_total = 0;
   let sightings_total = 0;
   function letter_ask(row) {
-    let bible_words = property_get(row, "bible_words");
-    let unwritten = equal(bible_words, 0);
+    let unwritten = property_equals(row, "bible_words", 0);
     if (not(unwritten)) {
       return;
     }
