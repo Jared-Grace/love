@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
@@ -43,8 +44,7 @@ export async function app_ceb_bible_gloss_root_named_spaced_counted(
     let spaced = text_includes(first, " ");
     let claimed = gloss_explain_roots_claimed(explain);
     let claimed_count = list_size(claimed);
-    let b = equal(claimed_count, 0);
-    let strict = not(b);
+    let strict = equal_not(claimed_count, 0);
     if (strict) {
       strict_total = add(strict_total, 1);
       if (spaced) {
