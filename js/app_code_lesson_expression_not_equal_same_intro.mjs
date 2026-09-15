@@ -9,7 +9,7 @@ import { js_code_not_parenthesis_wrapped } from "./js_code_not_parenthesis_wrapp
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
-export function app_code_lesson_expression_not_equal_same_intro(root) {
+export function app_code_lesson_expression_not_equal_same_intro(root, context) {
   "the two cards above the lesson matching a !== against a ! around an ===: first what each of the two comparison symbols asks, and that one therefore gives the opposite answer to the other; then, on a second card, what a ! does spelled out on true and false themselves before it is called an opposite - so the word opposite is earned in both halves before the two spellings are put together.";
   ("It stands in its own file for the same reason as ",
     fn_name("app_code_lesson_expression_not_comparison_intro"),

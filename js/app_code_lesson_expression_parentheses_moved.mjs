@@ -62,7 +62,7 @@ export function app_code_lesson_expression_parentheses_moved() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function above(root) {
+  function above(root, context) {
     "the two placements worked out side by side on the same numbers, then what that means, then the placement that changes nothing";
     let plus = js_operator_plus_symbol();
     let times = js_operator_asterisk_symbol();
@@ -72,6 +72,7 @@ export function app_code_lesson_expression_parentheses_moved() {
       root,
       open,
       close,
+      context,
     );
     app_code_lesson_expression_parentheses_moved_card_worked(root);
     app_code_lesson_expression_parentheses_moved_card_different_answer(
