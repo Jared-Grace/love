@@ -1,0 +1,103 @@
+export function bible_glyph_chapter_rosetta_lines_num36() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM36",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַֽיִּקְרְב֞וּ רָאשֵׁ֣י הָֽאָב֗וֹת לְמִשְׁפַּ֤חַת בְּנֵֽי־ גִלְעָד֙ בֶּן־ מָכִ֣יר בֶּן־ מְנַשֶּׁ֔ה מִֽמִּשְׁפְּחֹ֖ת בְּנֵ֣י יוֹסֵ֑ף וַֽיְדַבְּר֞וּ לִפְנֵ֤י מֹשֶׁה֙ וְלִפְנֵ֣י הַנְּשִׂאִ֔ים רָאשֵׁ֥י אָב֖וֹת לִבְנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Now the family heads of the clan of Gilead son of Machir son of Manasseh one of the clans of Joseph approached Moses and the leaders who were the heads of the Israelite families and addressed them",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֹּאמְר֗וּ אֶת־ אֲדֹנִי֙ צִוָּ֣ה יְהוָ֔ה לָתֵ֨ת אֶת־ הָאָ֧רֶץ בְּנַחֲלָ֛ה בְּגוֹרָ֖ל לִבְנֵ֣י יִשְׂרָאֵ֑ל וַֽאדֹנִי֙ צֻוָּ֣ה בַֽיהוָ֔ה לָתֵ֗ת אֶֽת־ נַחֲלַ֛ת צְלָפְחָ֥ד אָחִ֖ינוּ לִבְנֹתָֽיו׃",
+        english:
+          "saying When the LORD commanded my lord to give the land as an inheritance to the Israelites by lot He also commanded him to give the inheritance of our brother Zelophehad to his daughters",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְ֠הָיוּ לְאֶחָ֞ד מִבְּנֵ֨י שִׁבְטֵ֥י בְנֵֽי־ יִשְׂרָאֵל֮ לְנָשִׁים֒ וְנִגְרְעָ֤ה נַחֲלָתָן֙ מִנַּחֲלַ֣ת אֲבֹתֵ֔ינוּ וְנוֹסַ֕ף עַ֚ל נַחֲלַ֣ת הַמַּטֶּ֔ה אֲשֶׁ֥ר תִּהְיֶ֖ינָה לָהֶ֑ם וּמִגֹּרַ֥ל נַחֲלָתֵ֖נוּ יִגָּרֵֽעַ׃",
+        english:
+          "But if they marry any of the men from the other tribes of Israel their inheritance will be withdrawn from the portion of our fathers and added to the tribe into which they marry So our allotted inheritance would be taken away",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאִם־ יִהְיֶ֣ה הַיֹּבֵל֮ לִבְנֵ֣י יִשְׂרָאֵל֒ וְנֽוֹסְפָה֙ נַחֲלָתָ֔ן עַ֚ל נַחֲלַ֣ת הַמַּטֶּ֔ה אֲשֶׁ֥ר תִּהְיֶ֖ינָה לָהֶ֑ם וּמִֽנַּחֲלַת֙ מַטֵּ֣ה אֲבֹתֵ֔ינוּ יִגָּרַ֖ע נַחֲלָתָֽן׃",
+        english:
+          "And when the Jubilee for the Israelites comes their inheritance will be added to the tribe into which they marry and taken away from the tribe of our fathers",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיְצַ֤ו מֹשֶׁה֙ אֶת־ בְּנֵ֣י יִשְׂרָאֵ֔ל עַל־ פִּ֥י יְהוָ֖ה לֵאמֹ֑ר כֵּ֛ן מַטֵּ֥ה בְנֵֽי־ יוֹסֵ֖ף דֹּבְרִֽים׃",
+        english:
+          "So at the word of the LORD Moses commanded the Israelites The tribe of the sons of Joseph speaks correctly",
+      },
+      {
+        verse_number: 6,
+        original:
+          "זֶ֣ה הַדָּבָ֞ר אֲשֶׁר־ צִוָּ֣ה יְהוָ֗ה לִבְנ֤וֹת צְלָפְחָד֙ לֵאמֹ֔ר לַטּ֥וֹב בְּעֵינֵיהֶ֖ם תִּהְיֶ֣ינָה לְנָשִׁ֑ים אַ֗ךְ לְמִשְׁפַּ֛חַת מַטֵּ֥ה אֲבִיהֶ֖ם תִּהְיֶ֥ינָה לְנָשִֽׁים׃",
+        english:
+          "This is what the LORD has commanded concerning the daughters of Zelophehad They may marry anyone they please provided they marry within a clan of the tribe of their father",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְלֹֽא־ תִסֹּ֤ב נַחֲלָה֙ לִבְנֵ֣י יִשְׂרָאֵ֔ל מִמַּטֶּ֖ה אֶל־ מַטֶּ֑ה כִּ֣י אִ֗ישׁ בְּנַחֲלַת֙ מַטֵּ֣ה אֲבֹתָ֔יו יִדְבְּק֖וּ בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "No inheritance in Israel may be transferred from tribe to tribe because each of the Israelites is to retain the inheritance of the tribe of his fathers",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְכָל־ בַּ֞ת יֹרֶ֣שֶׁת נַחֲלָ֗ה מִמַּטּוֹת֮ בְּנֵ֣י יִשְׂרָאֵל֒ לְאֶחָ֗ד מִמִּשְׁפַּ֛חַת מַטֵּ֥ה אָבִ֖יהָ תִּהְיֶ֣ה לְאִשָּׁ֑ה לְמַ֗עַן יִֽירְשׁוּ֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אִ֖ישׁ נַחֲלַ֥ת אֲבֹתָֽיו׃",
+        english:
+          "Every daughter who possesses an inheritance from any Israelite tribe must marry within a clan of the tribe of her father so that every Israelite will possess the inheritance of his fathers",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְלֹֽא־ תִסֹּ֧ב נַחֲלָ֛ה מִמַּטֶּ֖ה לְמַטֶּ֣ה אַחֵ֑ר כִּי־ אִישׁ֙ בְּנַ֣חֲלָת֔וֹ יִדְבְּק֕וּ מַטּ֖וֹת בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "No inheritance may be transferred from one tribe to another for each tribe of Israel must retain its inheritance",
+      },
+      {
+        verse_number: 10,
+        original:
+          "כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־ מֹשֶׁ֑ה כֵּ֥ן עָשׂ֖וּ בְּנ֥וֹת צְלָפְחָֽד׃",
+        english:
+          "So the daughters of Zelophehad did as the LORD had commanded Moses",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַתִּהְיֶ֜ינָה מַחְלָ֣ה תִרְצָ֗ה וְחָגְלָ֧ה וּמִלְכָּ֛ה וְנֹעָ֖ה בְּנ֣וֹת צְלָפְחָ֑ד לִבְנֵ֥י דֹדֵיהֶ֖ן לְנָשִֽׁים׃",
+        english:
+          "Mahlah Tirzah Hoglah Milcah and Noah the daughters of Zelophehad were married to cousins on their father’s side",
+      },
+      {
+        verse_number: 12,
+        original:
+          "מִֽמִּשְׁפְּחֹ֛ת בְּנֵֽי־ מְנַשֶּׁ֥ה בֶן־ יוֹסֵ֖ף הָי֣וּ לְנָשִׁ֑ים וַתְּהִי֙ נַחֲלָתָ֔ן עַל־ מַטֵּ֖ה מִשְׁפַּ֥חַת אֲבִיהֶֽן׃",
+        english:
+          "They married within the clans of the descendants of Manasseh son of Joseph and their inheritance remained within the tribe of their father’s clan",
+      },
+      {
+        verse_number: 13,
+        original:
+          "אֵ֣לֶּה הַמִּצְוֺ֞ת וְהַמִּשְׁפָּטִ֗ים אֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה בְּיַד־ מֹשֶׁ֖ה אֶל־ בְּנֵ֣י יִשְׂרָאֵ֑ל בְּעַֽרְבֹ֣ת מוֹאָ֔ב עַ֖ל יַרְדֵּ֥ן יְרֵחֽוֹ׃",
+        english:
+          "These are the commandments and ordinances that the LORD gave the Israelites through Moses on the plains of Moab by the Jordan across from Jericho",
+      },
+    ],
+  };
+  return chapter;
+}

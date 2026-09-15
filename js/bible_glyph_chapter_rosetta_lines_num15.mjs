@@ -1,0 +1,291 @@
+export function bible_glyph_chapter_rosetta_lines_num15() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM15",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "דַּבֵּר֙ אֶל־ בְּנֵ֣י יִשְׂרָאֵ֔ל וְאָמַרְתָּ֖ אֲלֵהֶ֑ם כִּ֣י תָבֹ֗אוּ אֶל־ אֶ֙רֶץ֙ מוֹשְׁבֹ֣תֵיכֶ֔ם אֲשֶׁ֥ר אֲנִ֖י נֹתֵ֥ן לָכֶֽם׃",
+        english:
+          "Speak to the Israelites and tell them After you enter the land that I am giving you as a home",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַעֲשִׂיתֶ֨ם אִשֶּׁ֤ה לַֽיהוָה֙ עֹלָ֣ה אוֹ־ זֶ֔בַח לְפַלֵּא־ נֶ֙דֶר֙ א֣וֹ בִנְדָבָ֔ה א֖וֹ בְּמֹעֲדֵיכֶ֑ם לַעֲשׂ֞וֹת רֵ֤יחַ נִיחֹ֙חַ֙ לַֽיהוָ֔ה מִן־ הַבָּקָ֖ר א֥וֹ מִן־ הַצֹּֽאן׃",
+        english:
+          "and you present a food offering to the LORD from the herd or flock to produce a pleasing aroma to the LORD either a burnt offering or a sacrifice for a special vow or freewill offering or appointed feast",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְהִקְרִ֛יב הַמַּקְרִ֥יב קָרְבָּנ֖וֹ לַֽיהוָ֑ה מִנְחָה֙ סֹ֣לֶת עִשָּׂר֔וֹן בָּל֕וּל בִּרְבִעִ֥ית הַהִ֖ין שָֽׁמֶן׃",
+        english:
+          "then the one presenting his offering to the LORD shall also present a grain offering of a tenth of an ephah of fine flour mixed with a quarter hin of olive oil",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְיַ֤יִן לַנֶּ֙סֶךְ֙ רְבִיעִ֣ית הַהִ֔ין תַּעֲשֶׂ֥ה עַל־ הָעֹלָ֖ה א֣וֹ לַזָּ֑בַח לַכֶּ֖בֶשׂ הָאֶחָֽד׃",
+        english:
+          "With the burnt offering or sacrifice of each lamb you are to prepare a quarter hin of wine as a drink offering",
+      },
+      {
+        verse_number: 6,
+        original:
+          "א֤וֹ לָאַ֙יִל֙ תַּעֲשֶׂ֣ה מִנְחָ֔ה סֹ֖לֶת שְׁנֵ֣י עֶשְׂרֹנִ֑ים בְּלוּלָ֥ה בַשֶּׁ֖מֶן שְׁלִשִׁ֥ית הַהִֽין׃",
+        english:
+          "With a ram you are to prepare a grain offering of two-tenths of an ephah of fine flour mixed with a third of a hin of olive oil",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְיַ֥יִן לַנֶּ֖סֶךְ שְׁלִשִׁ֣ית הַהִ֑ין תַּקְרִ֥יב רֵֽיחַ־ נִיחֹ֖חַ לַיהוָֽה׃",
+        english:
+          "and a third of a hin of wine as a drink offering a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְכִֽי־ תַעֲשֶׂ֥ה בֶן־ בָּקָ֖ר עֹלָ֣ה אוֹ־ זָ֑בַח לְפַלֵּא־ נֶ֥דֶר אֽוֹ־ שְׁלָמִ֖ים לַֽיהוָֽה׃",
+        english:
+          "When you prepare a young bull as a burnt offering or sacrifice to fulfill a vow or as a peace offering to the LORD",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהִקְרִ֤יב עַל־ בֶּן־ הַבָּקָר֙ מִנְחָ֔ה סֹ֖לֶת שְׁלֹשָׁ֣ה עֶשְׂרֹנִ֑ים בָּל֥וּל בַּשֶּׁ֖מֶן חֲצִ֥י הַהִֽין׃",
+        english:
+          "present with the bull a grain offering of three-tenths of an ephah of fine flour mixed with half a hin of olive oil",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְיַ֛יִן תַּקְרִ֥יב לַנֶּ֖סֶךְ חֲצִ֣י הַהִ֑ין אִשֵּׁ֥ה רֵֽיחַ־ נִיחֹ֖חַ לַיהוָֽה׃",
+        english:
+          "Also present half a hin of wine as a drink offering It is a food offering a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כָּ֣כָה יֵעָשֶׂ֗ה לַשּׁוֹר֙ הָֽאֶחָ֔ד א֖וֹ לָאַ֣יִל הָאֶחָ֑ד אֽוֹ־ לַשֶּׂ֥ה בַכְּבָשִׂ֖ים א֥וֹ בָעִזִּֽים׃",
+        english: "This is to be done for each bull ram lamb or goat",
+      },
+      {
+        verse_number: 12,
+        original:
+          "כַּמִּסְפָּ֖ר אֲשֶׁ֣ר תַּעֲשׂ֑וּ כָּ֛כָה תַּעֲשׂ֥וּ לָאֶחָ֖ד כְּמִסְפָּרָֽם׃",
+        english: "This is how you must prepare each one no matter how many",
+      },
+      {
+        verse_number: 13,
+        original:
+          "כָּל־ הָאֶזְרָ֥ח יַעֲשֶׂה־ כָּ֖כָה אֶת־ אֵ֑לֶּה לְהַקְרִ֛יב אִשֵּׁ֥ה רֵֽיחַ־ נִיחֹ֖חַ לַֽיהוָֽה׃",
+        english:
+          "Everyone who is native-born shall prepare these things in this way when he presents a food offering as a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְכִֽי־ יָגוּר֩ אִתְּכֶ֨ם גֵּ֜ר א֤וֹ אֲשֶֽׁר־ בְּתֽוֹכְכֶם֙ לְדֹרֹ֣תֵיכֶ֔ם וְעָשָׂ֛ה אִשֵּׁ֥ה רֵֽיחַ־ נִיחֹ֖חַ לַיהוָ֑ה כַּאֲשֶׁ֥ר תַּעֲשׂ֖וּ כֵּ֥ן יַעֲשֶֽׂה׃",
+        english:
+          "And for the generations to come if a foreigner residing with you or someone else among you wants to prepare a food offering as a pleasing aroma to the LORD he is to do exactly as you do",
+      },
+      {
+        verse_number: 15,
+        original:
+          "הַקָּהָ֕ל חֻקָּ֥ה אַחַ֛ת לָכֶ֖ם וְלַגֵּ֣ר הַגָּ֑ר חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם כָּכֶ֛ם כַּגֵּ֥ר יִהְיֶ֖ה לִפְנֵ֥י יְהוָֽה׃",
+        english:
+          "The assembly is to have the same statute both for you and for the foreign resident it is a permanent statute for the generations to come You and the foreigner shall be the same before the LORD",
+      },
+      {
+        verse_number: 16,
+        original:
+          "תּוֹרָ֥ה אַחַ֛ת וּמִשְׁפָּ֥ט אֶחָ֖ד יִהְיֶ֣ה לָכֶ֑ם וְלַגֵּ֖ר הַגָּ֥ר אִתְּכֶֽם׃פ",
+        english:
+          "The same law and the same ordinance will apply both to you and to the foreigner residing with you",
+      },
+      {
+        verse_number: 17,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 18,
+        original:
+          "דַּבֵּר֙ אֶל־ בְּנֵ֣י יִשְׂרָאֵ֔ל וְאָמַרְתָּ֖ אֲלֵהֶ֑ם בְּבֹֽאֲכֶם֙ אֶל־ הָאָ֔רֶץ אֲשֶׁ֥ר אֲנִ֛י מֵבִ֥יא אֶתְכֶ֖ם שָֽׁמָּה׃",
+        english:
+          "Speak to the Israelites and tell them When you enter the land to which I am bringing you",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְהָיָ֕ה בַּאֲכָלְכֶ֖ם מִלֶּ֣חֶם הָאָ֑רֶץ תָּרִ֥ימוּ תְרוּמָ֖ה לַיהוָֽה׃",
+        english:
+          "and you eat the food of the land you shall lift up an offering to the LORD",
+      },
+      {
+        verse_number: 20,
+        original:
+          "רֵאשִׁית֙ עֲרִסֹ֣תֵכֶ֔ם חַלָּ֖ה תָּרִ֣ימוּ תְרוּמָ֑ה כִּתְרוּמַ֣ת גֹּ֔רֶן כֵּ֖ן תָּרִ֥ימוּ אֹתָֽהּ׃",
+        english:
+          "From the first of your dough you are to lift up a cake as a contribution offer it just like an offering from the threshing floor",
+      },
+      {
+        verse_number: 21,
+        original:
+          "מֵרֵאשִׁית֙ עֲרִסֹ֣תֵיכֶ֔ם תִּתְּנ֥וּ לַיהוָ֖ה תְּרוּמָ֑ה לְדֹרֹ֖תֵיכֶֽם׃ס",
+        english:
+          "Throughout your generations you are to give the LORD an offering from the first of your dough",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְכִ֣י תִשְׁגּ֔וּ וְלֹ֣א תַעֲשׂ֔וּ אֵ֥ת כָּל־ הַמִּצְוֺ֖ת הָאֵ֑לֶּה אֲשֶׁר־ דִּבֶּ֥ר יְהוָ֖ה אֶל־ מֹשֶֽׁה׃",
+        english:
+          "Now if you stray unintentionally and do not obey all these commandments that the LORD has spoken to Moses",
+      },
+      {
+        verse_number: 23,
+        original:
+          "אֵת֩ כָּל־ אֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֲלֵיכֶ֖ם בְּיַד־ מֹשֶׁ֑ה מִן־ הַיּ֞וֹם אֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה וָהָ֖לְאָה לְדֹרֹתֵיכֶֽם׃",
+        english:
+          "all that the LORD has commanded you through Moses from the day the LORD gave them and continuing through the generations to come",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְהָיָ֗ה אִ֣ם מֵעֵינֵ֣י הָעֵדָה֮ נֶעֶשְׂתָ֣ה לִשְׁגָגָה֒ וְעָשׂ֣וּ כָל־ הָעֵדָ֡ה פַּ֣ר בֶּן־ בָּקָר֩ אֶחָ֨ד לְעֹלָ֜ה לְרֵ֤יחַ נִיחֹ֙חַ֙ לַֽיהוָ֔ה וּמִנְחָת֥וֹ וְנִסְכּ֖וֹ כַּמִּשְׁפָּ֑ט וּשְׂעִיר־ עִזִּ֥ים אֶחָ֖ד לְחַטָּֽת׃",
+        english:
+          "and if it was done unintentionally without the knowledge of the congregation then the whole congregation is to prepare one young bull as a burnt offering a pleasing aroma to the LORD with its grain offering and drink offering according to the regulation and one male goat as a sin offering",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְכִפֶּ֣ר הַכֹּהֵ֗ן עַֽל־ כָּל־ עֲדַ֛ת בְּנֵ֥י יִשְׂרָאֵ֖ל וְנִסְלַ֣ח לָהֶ֑ם כִּֽי־ שְׁגָגָ֣ה הִ֔וא וְהֵם֩ הֵבִ֨יאוּ אֶת־ קָרְבָּנָ֜ם אִשֶּׁ֣ה לַֽיהוָ֗ה וְחַטָּאתָ֛ם לִפְנֵ֥י יְהוָ֖ה עַל־ שִׁגְגָתָֽם׃",
+        english:
+          "The priest is to make atonement for the whole congregation of Israel so that they may be forgiven for the sin was unintentional and they have brought to the LORD a food offering and a sin offering presented before the LORD for their unintentional sin",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְנִסְלַ֗ח לְכָל־ עֲדַת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וְלַגֵּ֖ר הַגָּ֣ר בְּתוֹכָ֑ם כִּ֥י לְכָל־ הָעָ֖ם בִּשְׁגָגָֽה׃ס",
+        english:
+          "Then the whole congregation of Israel and the foreigners residing among them will be forgiven since it happened to all the people unintentionally",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְאִם־ נֶ֥פֶשׁ אַחַ֖ת תֶּחֱטָ֣א בִשְׁגָגָ֑ה וְהִקְרִ֛יבָה עֵ֥ז בַּת־ שְׁנָתָ֖הּ לְחַטָּֽאת׃",
+        english:
+          "Also, if one person sins unintentionally he is to present a year-old female goat as a sin offering",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וְכִפֶּ֣ר הַכֹּהֵ֗ן עַל־ הַנֶּ֧פֶשׁ הַשֹּׁגֶ֛גֶת בְּחֶטְאָ֥ה בִשְׁגָגָ֖ה לִפְנֵ֣י יְהוָ֑ה לְכַפֵּ֥ר עָלָ֖יו וְנִסְלַ֥ח לֽוֹ׃",
+        english:
+          "And the priest shall make atonement before the LORD on behalf of the person who erred by sinning unintentionally and when atonement has been made for him he will be forgiven",
+      },
+      {
+        verse_number: 29,
+        original:
+          "הָֽאֶזְרָח֙ בִּבְנֵ֣י יִשְׂרָאֵ֔ל וְלַגֵּ֖ר הַגָּ֣ר בְּתוֹכָ֑ם תּוֹרָ֤ה אַחַת֙ יִהְיֶ֣ה לָכֶ֔ם לָעֹשֶׂ֖ה בִּשְׁגָגָֽה׃",
+        english:
+          "You shall have the same law for the one who acts in error whether he is a native-born Israelite or a foreigner residing among you",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וְהַנֶּ֜פֶשׁ אֲשֶֽׁר־ תַּעֲשֶׂ֣ה׀ בְּיָ֣ד רָמָ֗ה מִן־ הָֽאֶזְרָח֙ וּמִן־ הַגֵּ֔ר אֶת־ יְהוָ֖ה ה֣וּא מְגַדֵּ֑ף וְנִכְרְתָ֛ה הַנֶּ֥פֶשׁ הַהִ֖וא מִקֶּ֥רֶב עַמָּֽהּ׃",
+        english:
+          "But the person who sins defiantly whether a native or foreigner blasphemes the LORD That person shall be cut off from among his people",
+      },
+      {
+        verse_number: 31,
+        original:
+          "כִּ֤י דְבַר־ יְהוָה֙ בָּזָ֔ה וְאֶת־ מִצְוָת֖וֹ הֵפַ֑ר הִכָּרֵ֧ת׀ תִּכָּרֵ֛ת הַנֶּ֥פֶשׁ הַהִ֖וא עֲוֺנָ֥ה בָֽהּ׃פ",
+        english:
+          "He shall certainly be cut off because he has despised the word of the LORD and broken His commandment his guilt remains on him",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיִּהְי֥וּ בְנֵֽי־ יִשְׂרָאֵ֖ל בַּמִּדְבָּ֑ר וַֽיִּמְצְא֗וּ אִ֛ישׁ מְקֹשֵׁ֥שׁ עֵצִ֖ים בְּי֥וֹם הַשַּׁבָּֽת׃",
+        english:
+          "While the Israelites were in the wilderness a man was found gathering wood on the Sabbath day",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַיַּקְרִ֣יבוּ אֹת֔וֹ הַמֹּצְאִ֥ים אֹת֖וֹ מְקֹשֵׁ֣שׁ עֵצִ֑ים אֶל־ מֹשֶׁה֙ וְאֶֽל־ אַהֲרֹ֔ן וְאֶ֖ל כָּל־ הָעֵדָֽה׃",
+        english:
+          "Those who found the man gathering wood brought him to Moses Aaron and the whole congregation",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיַּנִּ֥יחוּ אֹת֖וֹ בַּמִּשְׁמָ֑ר כִּ֚י לֹ֣א פֹרַ֔שׁ מַה־ יֵּעָשֶׂ֖ה לֽוֹ׃ס",
+        english:
+          "and because it had not been declared what should be done to him they placed him in custody",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֔ה מ֥וֹת יוּמַ֖ת הָאִ֑ישׁ רָג֨וֹם אֹת֤וֹ בָֽאֲבָנִים֙ כָּל־ הָ֣עֵדָ֔ה מִח֖וּץ לַֽמַּחֲנֶֽה׃",
+        english:
+          "And the LORD said to Moses The man must surely be put to death The whole congregation is to stone him outside the camp",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיֹּצִ֨יאוּ אֹת֜וֹ כָּל־ הָעֵדָ֗ה אֶל־ מִחוּץ֙ לַֽמַּחֲנֶ֔ה וַיִּרְגְּמ֥וּ אֹת֛וֹ בָּאֲבָנִ֖ים וַיָּמֹ֑ת כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶת־ מֹשֶֽׁה׃פ",
+        english:
+          "So the whole congregation took the man outside the camp and stoned him to death as the LORD had commanded Moses",
+      },
+      {
+        verse_number: 37,
+        original: "וַיֹּ֥אמֶר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 38,
+        original:
+          "דַּבֵּ֞ר אֶל־ בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם וְעָשׂ֨וּ לָהֶ֥ם צִיצִ֛ת עַל־ כַּנְפֵ֥י בִגְדֵיהֶ֖ם לְדֹרֹתָ֑ם וְנָֽתְנ֛וּ עַל־ צִיצִ֥ת הַכָּנָ֖ף פְּתִ֥יל תְּכֵֽלֶת׃",
+        english:
+          "Speak to the Israelites and tell them that throughout the generations to come they are to make for themselves tassels for the corners of their garments with a blue cord on each tassel",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וְהָיָ֣ה לָכֶם֮ לְצִיצִת֒ וּרְאִיתֶ֣ם אֹת֗וֹ וּזְכַרְתֶּם֙ אֶת־ כָּל־ מִצְוֺ֣ת יְהוָ֔ה וַעֲשִׂיתֶ֖ם אֹתָ֑ם וְלֹֽא־ תָתֻ֜רוּ אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵֽינֵיכֶ֔ם אֲשֶׁר־ אַתֶּ֥ם זֹנִ֖ים אַחֲרֵיהֶֽם׃",
+        english:
+          "These will serve as tassels for you to look at so that you may remember all the commandments of the LORD that you may obey them and not prostitute yourselves by following your own heart and your own eyes",
+      },
+      {
+        verse_number: 40,
+        original:
+          "לְמַ֣עַן תִּזְכְּר֔וּ וַעֲשִׂיתֶ֖ם אֶת־ כָּל־ מִצְוֺתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים לֵֽאלֹהֵיכֶֽם׃",
+        english:
+          "Then you will remember and obey all My commandments and you will be holy to your God",
+      },
+      {
+        verse_number: 41,
+        original:
+          "אֲנִ֞י יְהוָ֣ה אֱלֹֽהֵיכֶ֗ם אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִ֑ים אֲנִ֖י יְהוָ֥ה אֱלֹהֵיכֶֽם׃פ",
+        english:
+          "I am the LORD your God who brought you out of the land of Egypt to be your God I am the LORD your God",
+      },
+    ],
+  };
+  return chapter;
+}
