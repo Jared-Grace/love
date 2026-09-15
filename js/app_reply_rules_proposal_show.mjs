@@ -34,7 +34,8 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   let f_name = property_get(proposal, "fn");
   let named = text_combine_multiple(["in ", f_name]);
   let under = html_p_text(block, named);
-  html_style_font_size(under, app_reply_rules_font_size_small());
+  let value = app_reply_rules_font_size_small();
+  html_style_font_size(under, value);
   html_font_color_set(under, gray);
   let lines = property_get(proposal, "lines");
   app_reply_rules_diff_show(block, lines);
