@@ -1,3 +1,4 @@
+import { list_size } from "./list_size.mjs";
 import { json_to } from "./json_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_names_filter_checked_cases } from "./gloss_names_filter_checked_cases.mjs";

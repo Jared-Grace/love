@@ -53,7 +53,7 @@ export function gloss_root_claimed_backing_gate_run() {
     );
   }
   let r = {
-    checked: size,
+    cases: size,
     defects: 0,
   };
   return r;

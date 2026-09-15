@@ -52,7 +52,7 @@ export function gloss_root_named_reversed_gate_run() {
     );
   }
   let r = {
-    checked: size,
+    cases: size,
     defects: 0,
   };
   return r;
