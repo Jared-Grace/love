@@ -1,3 +1,4 @@
+import { list_map_sum } from "./list_map_sum.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_classes_by_word_folded } from "./gloss_classes_by_word_folded.mjs";
 import { object_property_names } from "./object_property_names.mjs";
@@ -9,7 +10,6 @@ import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { list_size } from "./list_size.mjs";
 import { gloss_class_count } from "./gloss_class_count.mjs";
-import { list_sum } from "./list_sum.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
@@ -40,8 +40,7 @@ export function gloss_classes_word_claims_apart(classes) {
     if (not(alone)) {
       let word = property_get(group, "word");
       let claims = list_size(distinct);
-      let counts = list_map(rows, gloss_class_count);
-      let sightings_at_most = list_sum(counts);
+      let sightings_at_most = list_map_sum(rows, gloss_class_count);
       let found = {
         word,
         claims,
