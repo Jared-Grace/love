@@ -3,7 +3,7 @@ import { bless_view_people } from "./bless_view_people.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { app_g_bless_person_point } from "./app_g_bless_person_point.mjs";
+import { bless_person_point } from "./bless_person_point.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { add } from "./add.mjs";
@@ -24,7 +24,7 @@ export function bless_edge_nearest_try(remaining, box) {
   }
   let x = property_get(box, "x");
   let y = property_get(box, "y");
-  let points = list_map(people, app_g_bless_person_point);
+  let points = list_map(people, bless_person_point);
   function point_distance(point) {
     let left = property_get(point, "x");
     let right = subtract(left, x);
