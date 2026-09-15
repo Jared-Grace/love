@@ -1,6 +1,6 @@
 import { property_get } from "./property_get.mjs";
 import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_counted_add.mjs";
-import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read.mjs";
+import { app_ceb_bible_gloss_explains_depth_by_book_chapter_read_lambda } from "./app_ceb_bible_gloss_explains_depth_by_book_chapter_read_lambda.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read(
   by_book,
@@ -15,7 +15,7 @@ export function app_ceb_bible_gloss_explains_depth_by_book_chapter_read(
   let book_row = property_get(r, "book_row");
   let entries_pass = property_get(r, "entries_pass");
   let chapter_read =
-    app_ceb_bible_gloss_explains_depth_by_book_chapter_read_chapter_read(
+    app_ceb_bible_gloss_explains_depth_by_book_chapter_read_lambda(
       book_row,
       counted_add,
       entries_pass,
