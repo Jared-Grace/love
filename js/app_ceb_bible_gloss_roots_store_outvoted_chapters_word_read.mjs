@@ -1,9 +1,9 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
@@ -25,8 +25,7 @@ export function app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
       list_add_if_not_includes(roots, root);
     }
     each(places, root_hold);
-    let ways = list_size(roots);
-    let one = equal(ways, 1);
+    let one = list_size_equal(roots, 1);
     if (one) {
       return;
     }
