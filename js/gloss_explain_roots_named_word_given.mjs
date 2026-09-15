@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { gloss_root_named_reversed_is } from "./gloss_root_named_reversed_is.mjs";
 import { gloss_explain_roots_opening_named } from "./gloss_explain_roots_opening_named.mjs";
@@ -5,8 +6,6 @@ import { list_map } from "./list_map.mjs";
 import { text_punctuation_edges_removed } from "./text_punctuation_edges_removed.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { gloss_explain_roots_built_named } from "./gloss_explain_roots_built_named.mjs";
 import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spelled_in_is.mjs";
@@ -33,14 +32,12 @@ export function gloss_explain_roots_named_word_given(word, explain, known) {
   ("it is a set of words some vocabulary has met, read only for membership.");
   arguments_assert(arguments, 3);
   let claimed = gloss_explain_roots_claimed(explain);
-  let claimed_count = list_size(claimed);
-  let claimed_empty = equal(claimed_count, 0);
+  let claimed_empty = list_size_equal(claimed, 0);
   if (not(claimed_empty)) {
     return claimed;
   }
   let built = gloss_explain_roots_built_named(explain);
-  let built_count = list_size(built);
-  let built_empty = equal(built_count, 0);
+  let built_empty = list_size_equal(built, 0);
   if (not(built_empty)) {
     return built;
   }
@@ -55,14 +52,12 @@ export function gloss_explain_roots_named_word_given(word, explain, known) {
   }
   let self_named = gloss_explain_roots_self_named(explain);
   let self_kept = list_filter(self_named, root_kept_is);
-  let self_count = list_size(self_kept);
-  let self_empty = equal(self_count, 0);
+  let self_empty = list_size_equal(self_kept, 0);
   if (not(self_empty)) {
     return self_kept;
   }
   let from_named = gloss_explain_roots_from_named(explain);
-  let from_count = list_size(from_named);
-  let from_empty = equal(from_count, 0);
+  let from_empty = list_size_equal(from_named, 0);
   if (not(from_empty)) {
     return from_named;
   }
