@@ -1,11 +1,10 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_explains_text_passages } from "./gloss_chapter_explains_text_passages.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sum } from "./list_sum.mjs";
 import { list_map_async } from "./list_map_async.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function gloss_chapters_explains_text_count(fn, text) {
   "Every chapter in one gloss store whose word explanations say a named piece of text, each named with how many passages and how many explanations say it, and how many chapters were read to find them.";
@@ -29,8 +28,7 @@ export async function gloss_chapters_explains_text_count(fn, text) {
   }
   let chapters = await list_map_async(chapter_codes, chapter_read);
   function saying_is(chapter) {
-    let count = property_get(chapter, "count");
-    let some = greater_than(count, 0);
+    let some = property_greater_than(chapter, "count", 0);
     return some;
   }
   let saying = list_filter(chapters, saying_is);
