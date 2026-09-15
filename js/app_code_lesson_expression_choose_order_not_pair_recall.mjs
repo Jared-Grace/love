@@ -5,8 +5,8 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_not_changes_true_false } from "./app_code_not_changes_true_false.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
-export function app_code_lesson_expression_choose_order_not_pair_recall(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_choose_order_not_pair_recall(root, context) {
+  arguments_assert(arguments, 2);
   ("the two things put back in front of the learner before the run on the lesson putting a ! in front of a joined pair: what the ! does, and what parentheses do");
   ("They stand in a card of their own above the run because they are not part of it - they are what the run is about to be read with. The learner has both of them already and has never had this much under the one pair of parentheses: the ! was met with a single comparison under it and the parentheses were met round two things with nothing in front of them. What is new is only the meeting.");
   ("Both are recalled in the very words the lessons that taught them used, asked for from the places that hold them, because a learner recognises a sentence they have already read in the second it takes and stops to compare a near-copy against it.");
@@ -14,8 +14,8 @@ export function app_code_lesson_expression_choose_order_not_pair_recall(root) {
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
   let recall_card = app_code_container_light_blue(root);
-  let changes = app_code_not_changes_true_false("Remember: ");
-  html_div_cycle_code(recall_card, changes);
+  let changes = app_code_not_changes_true_false("");
+  app_code_remember_from_lesson(recall_card, context, app_code_lesson_expression_not, changes);
   let inside_first = app_code_parentheses_inside_before_outside("");
   html_div_cycle_code(recall_card, [
     "And whatever is inside ",
