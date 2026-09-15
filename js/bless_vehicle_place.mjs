@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_img_square_style_position_only } from "./g_img_square_style_position_only.mjs";
-export function app_g_bless_vehicle_place(vehicle) {
+export function bless_vehicle_place(vehicle) {
   arguments_assert(arguments, 1);
   ("Put a car where its record says it is.");
   ("The one place a car moves through, so that where a car IS and where it is DRAWN cannot");
