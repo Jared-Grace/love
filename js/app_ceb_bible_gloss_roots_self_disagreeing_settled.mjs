@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_words_roots_self_disagreeing } from "./app_ceb_bible_gloss_words_roots_self_disagreeing.mjs";
 import { property_get } from "./property_get.mjs";
@@ -7,7 +8,6 @@ import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { equal } from "./equal.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 import { each } from "./each.mjs";
 export async function app_ceb_bible_gloss_roots_self_disagreeing_settled() {
@@ -43,8 +43,7 @@ export async function app_ceb_bible_gloss_roots_self_disagreeing_settled() {
       let same = equal(named_folded, folded);
       return same;
     }
-    let hits = list_filter(claimed, matches_is);
-    let count = list_size(hits);
+    let count = list_filter_size(claimed, matches_is);
     let missed = equal(count, 0);
     let told = {
       chapter: property_get(row, "chapter"),
