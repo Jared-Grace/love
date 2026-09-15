@@ -1,27 +1,21 @@
-import { bless_vehicles_drive } from "./bless_vehicles_drive.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { html_on } from "./html_on.mjs";
-import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
-import { bless_people_walk } from "./bless_people_walk.mjs";
+import { bless_street_start } from "./bless_street_start.mjs";
 import { app_shared_game_overlay_container } from "./app_shared_game_overlay_container.mjs";
 export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   arguments_assert(arguments, 3);
-  let player = property_get(r, "player");
   let render = property_get(r, "render");
-  let player_img_c = property_get(r, "player_img_c");
-  let div_map = property_get(r, "div_map");
   let world = property_get(r, "world");
-  html_on(div_map, "click", tapped);
-  render();
-  app_shared_game_player_center(player, player_img_c, div_map);
-  ("the crowd is set walking before the prayer goes up rather than after the amen, so the");
-  ("world the player uncovers is one already in motion rather than one that starts when they");
-  ("look at it");
-  bless_people_walk(world, render);
-  ("and the traffic starts with them, so the street comes to life as one street rather than");
-  ("as a pavement that moves and a road that waits");
-  bless_vehicles_drive(world, container_map);
+  let div_map = property_get(r, "div_map");
+  let player_img_c = property_get(r, "player_img_c");
+  bless_street_start(
+    container_map,
+    world,
+    div_map,
+    player_img_c,
+    tapped,
+    render,
+  );
   ("the world is built and drawn behind this before it is covered, so the first thing after the amen is a world already standing rather than a wait");
   let transfer = app_shared_game_overlay_container(container_map);
   return transfer;
