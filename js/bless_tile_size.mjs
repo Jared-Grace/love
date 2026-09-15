@@ -3,7 +3,7 @@ import { bless_hash_map } from "./bless_hash_map.mjs";
 import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 import { bless_tile_size_map } from "./bless_tile_size_map.mjs";
 import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
-export function app_g_bless_tile_size() {
+export function bless_tile_size() {
   arguments_assert(arguments, 0);
   ("How large one tile is drawn in the praying game on this visit - the stretch of street in");
   ("front of the player ordinarily, and the whole world at once when the address asked for");
