@@ -3,7 +3,7 @@ import { app_g_bless_person_step_ways_open } from "./app_g_bless_person_step_way
 import { property_get } from "./property_get.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
 import { not } from "./not.mjs";
-export function app_g_bless_person_step_boxed(world, person) {
+export function bless_person_step_boxed(world, person) {
   arguments_assert(arguments, 2);
   let r = app_g_bless_person_step_ways_open(world, person);
   let ways_open = property_get(r, "ways_open");
