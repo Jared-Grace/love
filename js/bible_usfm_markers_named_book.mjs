@@ -25,8 +25,8 @@ export function bible_usfm_markers_named_book(
   function lambda() {
     let found = bible_usfm_book_markers(usfm);
     list_add_multiple(markers, found);
-    for (let marker of found) {
-      bible_usfm_marker_layout(marker);
+    for (let marker_found of found) {
+      bible_usfm_marker_layout(marker_found);
     }
   }
   let verdict = lambda_throws(lambda);
