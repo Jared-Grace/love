@@ -3,7 +3,7 @@ import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
 import { bless_windows_draw } from "./bless_windows_draw.mjs";
 import { bless_doors_draw } from "./bless_doors_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
+import { bless_world_new } from "./bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_map_scrolling } from "./bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
@@ -16,7 +16,7 @@ import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start
 export function app_g_bless_overlay_blessed(container_map) {
   arguments_assert(arguments, 1);
   let player_img = g_player_img_get();
-  let world = app_g_bless_world_new(player_img);
+  let world = bless_world_new(player_img);
   let player = property_get(world, "player");
   let npcs = property_get(world, "npcs");
   let blocks = property_get(world, "blocks");
