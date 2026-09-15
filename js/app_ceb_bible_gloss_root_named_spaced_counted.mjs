@@ -1,9 +1,9 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_includes } from "./text_includes.mjs";
@@ -34,8 +34,7 @@ export async function app_ceb_bible_gloss_root_named_spaced_counted(
   function entry_read(found) {
     let explain = property_get(found, "explain");
     let named = property_get(found, "named");
-    let count = list_size(named);
-    let empty = equal(count, 0);
+    let empty = list_size_equal(named, 0);
     if (empty) {
       return;
     }
