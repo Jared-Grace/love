@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_sightings_lowered } from "./bible_words_sightings_lowered.mjs";
@@ -14,12 +15,10 @@ import { less_than } from "./less_than.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_edit_distance } from "./text_edit_distance.mjs";
-import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export function bible_words_slips(sightings, words, times) {
@@ -94,8 +93,7 @@ export function bible_words_slips(sightings, words, times) {
   let rows = list_map(words, word_examined);
   function row_suspect(row) {
     let nearer = property_get(row, "nearer");
-    let alone = list_empty_is(nearer);
-    let not_alone = not(alone);
+    let not_alone = list_empty_not_is(nearer);
     return not_alone;
   }
   let suspect = list_filter(rows, row_suspect);
