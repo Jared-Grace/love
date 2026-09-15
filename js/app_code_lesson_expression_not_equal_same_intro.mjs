@@ -51,8 +51,8 @@ export function app_code_lesson_expression_not_equal_same_intro(root, context) {
     false_word,
     " are opposites",
   ]);
-  let changes = app_code_not_changes_true_false("Remember: a ");
-  html_div_cycle_code(joins, changes);
+  let changes = app_code_not_changes_true_false("a ");
+  app_code_remember_from_lesson(joins, context, app_code_lesson_expression_not, changes);
   html_div_cycle_code(joins, [
     "So, ",
     bang_symbol,

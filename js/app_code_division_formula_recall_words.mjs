@@ -19,7 +19,7 @@ export function app_code_division_formula_recall_words(what, tree_of) {
   let division_code = app_code_expression_code(division);
   let formula = tree_of(dividend, divisor);
   let formula_code = app_code_expression_code(formula);
-  let lead = text_combine_multiple(["Remember, the ", what, " of "]);
+  let lead = text_combine_multiple(["the ", what, " of "]);
   let words = [lead, division_code, " is ", formula_code];
   return words;
 }
