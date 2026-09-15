@@ -62,10 +62,10 @@ export function app_code_lesson_expression_whole_part() {
     let built = app_code_lesson_name_id_operators(paint);
     return built;
   }
-  function above(root) {
+  function above(root, context) {
     let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "Remember, the whole part of ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_whole_part_formula, [
+      "the whole part of ",
       "14 / 4",
       " is ",
       "Math.floor(14 / 4) * 4",

@@ -65,10 +65,10 @@ export function app_code_lesson_expression_remainder_divide_solve() {
       "Build the remainder formula that produces the solved value: ",
   });
   return lesson;
-  function above(root) {
+  function above(root, context) {
     let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "Remember, the remainder of ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_remainder_divide, [
+      "the remainder of ",
       "14 / 4",
       " is ",
       "14 - Math.floor(14 / 4) * 4",
