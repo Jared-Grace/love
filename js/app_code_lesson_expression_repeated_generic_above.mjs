@@ -70,7 +70,7 @@ export function app_code_lesson_expression_repeated_generic_above(
   html_span_text(likewise, "Likewise ");
   app_code_lesson_expression_repeated_generic_expanded_counted(
     likewise,
-    3,
+    5,
     left_two,
     count_two,
     4,
@@ -79,7 +79,7 @@ export function app_code_lesson_expression_repeated_generic_above(
   html_span_text(likewise, " is ");
   app_code_lesson_expression_repeated_generic_short_form(
     likewise,
-    3,
+    5,
     4,
     left_two,
     count_two,
