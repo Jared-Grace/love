@@ -1,0 +1,89 @@
+export function bible_glyph_chapter_rosetta_lines_neh01() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NEH01",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "דִּבְרֵ֥י נְחֶמְיָ֖ה בֶּן־ חֲכַלְיָ֑ה וַיְהִ֤י בְחֹֽדֶשׁ־ כִּסְלֵו שְׁנַ֣ת עֶשְׂרִ֔ים וַאֲנִ֥י הָיִ֖יתִי בְּשׁוּשַׁ֥ן הַבִּירָֽה׃",
+        english:
+          "These are the words of Nehemiah son of Hacaliah In the month of Chislev in the twentieth year while I was in the citadel of Susa",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיָּבֹ֨א חֲנָ֜נִי אֶחָ֧ד מֵאַחַ֛י ה֥וּא וַאֲנָשִׁ֖ים מִֽיהוּדָ֑ה וָאֶשְׁאָלֵ֞ם עַל־ הַיְּהוּדִ֧ים הַפְּלֵיטָ֛ה אֲשֶֽׁר־ נִשְׁאֲר֥וּ מִן־ הַשֶּׁ֖בִי וְעַל־ יְרוּשָׁלִָֽם׃",
+        english:
+          "Hanani one of my brothers arrived with men from Judah So I questioned them about the remnant of the Jews who had survived the exile and also about Jerusalem",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיֹּאמְרוּ֮ לִי֒ הַֽנִּשְׁאָרִ֞ים אֲשֶֽׁר־ נִשְׁאֲר֤וּ מִן־ הַשְּׁבִי֙ שָׁ֣ם בַּמְּדִינָ֔ה בְּרָעָ֥ה גְדֹלָ֖ה וּבְחֶרְפָּ֑ה וְחוֹמַ֤ת יְרוּשָׁלִַ֙ם֙ מְפֹרָ֔צֶת וּשְׁעָרֶ֖יהָ נִצְּת֥וּ בָאֵֽשׁ׃",
+        english:
+          "And they told me The remnant who survived the exile are there in the province in great trouble and disgrace The wall of Jerusalem is broken down and its gates have been burned with fire",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיְהִ֞י כְּשָׁמְעִ֣י׀ אֶת־ הַדְּבָרִ֣ים הָאֵ֗לֶּה יָשַׁ֙בְתִּי֙ וָֽאֶבְכֶּ֔ה וָאֶתְאַבְּלָ֖ה יָמִ֑ים וָֽאֱהִ֥י צָם֙ וּמִתְפַּלֵּ֔ל לִפְנֵ֖י אֱלֹהֵ֥י הַשָּׁמָֽיִם׃",
+        english:
+          "When I heard these words I sat down and wept I mourned for days fasting and praying before the God of heaven",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וָאֹמַ֗ר אָֽנָּ֤א יְהוָה֙ אֱלֹהֵ֣י הַשָּׁמַ֔יִם הָאֵ֥ל הַגָּד֖וֹל וְהַנּוֹרָ֑א שֹׁמֵ֤ר הַבְּרִית֙ וָחֶ֔סֶד לְאֹהֲבָ֖יו וּלְשֹׁמְרֵ֥י מִצְוֺתָֽיו׃",
+        english:
+          "Then I said O LORD God of heaven the great and awesome God who keeps His covenant of loving devotion with those who love Him and keep His commandments",
+      },
+      {
+        verse_number: 6,
+        original:
+          "תְּהִ֣י נָ֣א אָזְנְךָֽ־ קַשֶּׁ֣בֶת וְֽעֵינֶ֪יךָ פְתֻוּח֟וֹת לִשְׁמֹ֣עַ אֶל־ תְּפִלַּ֣ת עַבְדְּךָ֡ אֲשֶׁ֣ר אָנֹכִי֩ מִתְפַּלֵּ֨ל לְפָנֶ֤יךָ הַיּוֹם֙ יוֹמָ֣ם וָלַ֔יְלָה עַל־ בְּנֵ֥י יִשְׂרָאֵ֖ל עֲבָדֶ֑יךָ וּמִתְוַדֶּ֗ה עַל־ חַטֹּ֤אות בְּנֵֽי־ יִשְׂרָאֵל֙ אֲשֶׁ֣ר חָטָ֣אנוּ לָ֔ךְ וַאֲנִ֥י וּבֵית־ אָבִ֖י חָטָֽאנוּ׃",
+        english:
+          "let Your eyes be open and Your ears attentive to hear the prayer that I Your servant now pray before You day and night for Your servants the Israelites I confess the sins that we Israelites have committed against You Both I and my father’s house have sinned",
+      },
+      {
+        verse_number: 7,
+        original:
+          "חֲבֹ֖ל חָבַ֣לְנוּ לָ֑ךְ וְלֹא־ שָׁמַ֣רְנוּ אֶת־ הַמִּצְוֺ֗ת וְאֶת־ הַֽחֻקִּים֙ וְאֶת־ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֥ר צִוִּ֖יתָ אֶת־ מֹשֶׁ֥ה עַבְדֶּֽךָ׃",
+        english:
+          "We have behaved corruptly against You and have not kept the commandments statutes and ordinances that You gave Your servant Moses",
+      },
+      {
+        verse_number: 8,
+        original:
+          "זְכָר־ נָא֙ אֶת־ הַדָּבָ֔ר אֲשֶׁ֥ר צִוִּ֛יתָ אֶת־ מֹשֶׁ֥ה עַבְדְּךָ֖ לֵאמֹ֑ר אַתֶּ֣ם תִּמְעָ֔לוּ אֲנִ֕י אָפִ֥יץ אֶתְכֶ֖ם בָּעַמִּֽים׃",
+        english:
+          "Remember I pray the word that You commanded Your servant Moses when You said If you are unfaithful I will scatter you among the nations",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְשַׁבְתֶּ֣ם אֵלַ֔י וּשְׁמַרְתֶּם֙ מִצְוֺתַ֔י וַעֲשִׂיתֶ֖ם אֹתָ֑ם אִם־ יִהְיֶ֨ה נִֽדַּחֲכֶ֜ם בִּקְצֵ֤ה הַשָּׁמַ֙יִם֙ מִשָּׁ֣ם אֲקַבְּצֵ֔ם וַהֲבוֹאֹתִים אֶל־ הַמָּק֔וֹם אֲשֶׁ֣ר בָּחַ֔רְתִּי לְשַׁכֵּ֥ן אֶת־ שְׁמִ֖י שָֽׁם׃",
+        english:
+          "but if you return to Me and keep and practice My commandments then even if your exiles have been banished to the farthest horizon I will gather them from there and bring them to the place I have chosen as a dwelling for My Name",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהֵ֥ם עֲבָדֶ֖יךָ וְעַמֶּ֑ךָ אֲשֶׁ֤ר פָּדִ֙יתָ֙ בְּכֹחֲךָ֣ הַגָּד֔וֹל וּבְיָדְךָ֖ הַחֲזָקָֽה׃",
+        english:
+          "They are Your servants and Your people You redeemed them by Your great power and mighty hand",
+      },
+      {
+        verse_number: 11,
+        original:
+          "אָנָּ֣א אֲדֹנָ֗י תְּהִ֣י נָ֣א אָזְנְךָֽ־ קַ֠שֶּׁבֶת אֶל־ תְּפִלַּ֨ת עַבְדְּךָ֜ וְאֶל־ תְּפִלַּ֣ת עֲבָדֶ֗יךָ הַֽחֲפֵצִים֙ לְיִרְאָ֣ה אֶת־ שְׁמֶ֔ךָ וְהַצְלִֽיחָה־ נָּ֤א לְעַבְדְּךָ֙ הַיּ֔וֹם וּתְנֵ֣הוּ לְרַחֲמִ֔ים לִפְנֵ֖י הָאִ֣ישׁ הַזֶּ֑ה וַאֲנִ֛י הָיִ֥יתִי מַשְׁקֶ֖ה לַמֶּֽלֶךְ׃פ",
+        english:
+          "O Lord may Your ear be attentive to my prayer and to the prayers of Your servants who delight to revere Your name Give Your servant success this day I pray and grant him mercy in the sight of this man At that time I was the cupbearer to the king",
+      },
+    ],
+  };
+  return chapter;
+}
