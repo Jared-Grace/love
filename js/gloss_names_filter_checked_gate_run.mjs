@@ -56,7 +56,7 @@ export function gloss_names_filter_checked_gate_run() {
     );
   }
   let r = {
-    checked: 1,
+    offenders: list_size(offenders),
     defects: 0,
   };
   return r;
