@@ -1,3 +1,4 @@
+import { each_range_async } from "./each_range_async.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -8,7 +9,6 @@ import { property_get } from "./property_get.mjs";
 import { app_g_hero_translate_text } from "./app_g_hero_translate_text.mjs";
 import { html_animate_start } from "./html_animate_start.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { range } from "./range.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_g_hero_fx_point } from "./app_g_hero_fx_point.mjs";
 import { random_range } from "./random_range.mjs";
@@ -51,8 +51,7 @@ export async function app_g_hero_fireball(fx, from, to) {
   );
   let count = 16;
   let gap = divide(duration, count);
-  let drops = range(count);
-  for (let drop of drops) {
+  async function drop_next() {
     await sleep(gap);
     let here = app_g_hero_fx_point(fx, ball);
     let size = random_range(0.4, 0.9);
@@ -79,5 +78,6 @@ export async function app_g_hero_fireball(fx, from, to) {
       },
     );
   }
+  await each_range_async(count, drop_next);
   html_remove(ball);
 }

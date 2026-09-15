@@ -18,6 +18,8 @@ export function app_shared_descriptions() {
       "The Bible written with pictures in place of its words, so a verse can be met without first knowing the language it was written in. A key under each verse shows the original words and the English beside them, and leaves the pictures for you to work out.",
     g_bless:
       "A game where you walk a street, turn to look at the people around you, and pray a blessing over everyone you can see.",
+    g_hero:
+      "A game where you walk a busy street as a young woman while one person at a time turns evil and hunts the others. Find them and tap them to burn them up with fire.",
     music:
       "The words of the sung songs, line by line, with what each line means and the passages of Scripture it rests on written out underneath.",
     privacy_policy:

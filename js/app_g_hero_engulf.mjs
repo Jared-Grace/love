@@ -1,3 +1,4 @@
+import { each_range_async } from "./each_range_async.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -11,7 +12,6 @@ import { emoji_fire } from "./emoji_fire.mjs";
 import { app_g_hero_sprite } from "./app_g_hero_sprite.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { html_animate_remove } from "./html_animate_remove.mjs";
-import { range } from "./range.mjs";
 import { app_g_hero_flame } from "./app_g_hero_flame.mjs";
 import { sleep } from "./sleep.mjs";
 export async function app_g_hero_engulf(hero, point, evil_img) {
@@ -142,11 +142,11 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
   );
   let count = 28;
   let gap = divide(duration, count);
-  let flames = range(count);
-  for (let flame of flames) {
+  async function flame_next() {
     app_g_hero_flame(fx, point, width);
     await sleep(gap);
   }
+  await each_range_async(count, flame_next);
   html_animate_remove(
     dark,
     [
