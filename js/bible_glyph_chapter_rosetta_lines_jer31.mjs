@@ -1,0 +1,292 @@
+export function bible_glyph_chapter_rosetta_lines_jer31() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JER31",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "בָּעֵ֤ת הַהִיא֙ נְאֻם־ יְהוָ֔ה אֶֽהְיֶה֙ לֵֽאלֹהִ֔ים לְכֹ֖ל מִשְׁפְּח֣וֹת יִשְׂרָאֵ֑ל וְהֵ֖מָּה יִֽהְיוּ־ לִ֥י לְעָֽם׃ס",
+        english:
+          "At that time declares the LORD I will be the God of all the families of Israel and they will be My people",
+      },
+      {
+        verse_number: 2,
+        original:
+          "כֹּ֚ה אָמַ֣ר יְהוָ֔ה מָצָ֥א חֵן֙ בַּמִּדְבָּ֔ר עַ֖ם שְׂרִ֣ידֵי חָ֑רֶב הָל֥וֹךְ לְהַרְגִּיע֖וֹ יִשְׂרָאֵֽל׃",
+        english:
+          "This is what the LORD says The people who survived the sword found favor in the wilderness when Israel went to find rest",
+      },
+      {
+        verse_number: 3,
+        original:
+          "מֵרָח֕וֹק יְהוָ֖ה נִרְאָ֣ה לִ֑י וְאַהֲבַ֤ת עוֹלָם֙ אֲהַבְתִּ֔יךְ עַל־ כֵּ֖ן מְשַׁכְתִּ֥יךְ חָֽסֶד׃",
+        english:
+          "The LORD appeared to us in the past, saying I have loved you with an everlasting love therefore I have drawn you with loving devotion",
+      },
+      {
+        verse_number: 4,
+        original:
+          "ע֤וֹד אֶבְנֵךְ֙ וְֽנִבְנֵ֔ית בְּתוּלַ֖ת יִשְׂרָאֵ֑ל ע֚וֹד תַּעְדִּ֣י תֻפַּ֔יִךְ וְיָצָ֖את בִּמְח֥וֹל מְשַׂחֲקִֽים׃",
+        english:
+          "Again I will build you and you will be rebuilt O Virgin Israel Again you will take up your tambourines and go out in joyful dancing",
+      },
+      {
+        verse_number: 5,
+        original:
+          "ע֚וֹד תִּטְּעִ֣י כְרָמִ֔ים בְּהָרֵ֖י שֹֽׁמְר֑וֹן נָטְע֥וּ נֹטְעִ֖ים וְחִלֵּֽלוּ׃",
+        english:
+          "Again you will plant vineyards on the hills of Samaria the farmers will plant and enjoy the fruit",
+      },
+      {
+        verse_number: 6,
+        original:
+          "כִּ֣י יֶשׁ־ י֔וֹם קָרְא֥וּ נֹצְרִ֖ים בְּהַ֣ר אֶפְרָ֑יִם ק֚וּמוּ וְנַעֲלֶ֣ה צִיּ֔וֹן אֶל־ יְהוָ֖ה אֱלֹהֵֽינוּ׃פ",
+        english:
+          "For there will be a day when watchmen will call out on the hills of Ephraim Arise let us go up to Zion to the LORD our God",
+      },
+      {
+        verse_number: 7,
+        original:
+          "כִּי־ כֹ֣ה׀ אָמַ֣ר יְהוָ֗ה רָנּ֤וּ לְיַֽעֲקֹב֙ שִׂמְחָ֔ה וְצַהֲל֖וּ בְּרֹ֣אשׁ הַגּוֹיִ֑ם הַשְׁמִ֤יעוּ הַֽלְלוּ֙ וְאִמְר֔וּ הוֹשַׁ֤ע יְהוָה֙ אֶֽת־ עַמְּךָ֔ אֵ֖ת שְׁאֵרִ֥ית יִשְׂרָאֵֽל׃",
+        english:
+          "For this is what the LORD says Sing with joy for Jacob shout for the foremost of the nations Make your praises heard and say O LORD save Your people the remnant of Israel",
+      },
+      {
+        verse_number: 8,
+        original:
+          "הִנְנִי֩ מֵבִ֨יא אוֹתָ֜ם מֵאֶ֣רֶץ צָפ֗וֹן וְקִבַּצְתִּים֮ מִיַּרְכְּתֵי־ אָרֶץ֒ בָּ֚ם עִוֵּ֣ר וּפִסֵּ֔חַ הָרָ֥ה וְיֹלֶ֖דֶת יַחְדָּ֑ו קָהָ֥ל גָּד֖וֹל יָשׁ֥וּבוּ הֵֽנָּה׃",
+        english:
+          "Behold I will bring them from the land of the north and gather them from the farthest parts of the earth including the blind and the lame expectant mothers and women in labor They will return as a great assembly",
+      },
+      {
+        verse_number: 9,
+        original:
+          "בִּבְכִ֣י יָבֹ֗אוּ וּֽבְתַחֲנוּנִים֮ אֽוֹבִילֵם֒ אֽוֹלִיכֵם֙ אֶל־ נַ֣חֲלֵי מַ֔יִם בְּדֶ֣רֶךְ יָשָׁ֔ר לֹ֥א יִכָּשְׁל֖וּ בָּ֑הּ כִּֽי־ הָיִ֤יתִי לְיִשְׂרָאֵל֙ לְאָ֔ב וְאֶפְרַ֖יִם בְּכֹ֥רִי הֽוּא׃ס",
+        english:
+          "They will come with weeping and by their supplication I will lead them I will make them walk beside streams of waters on a level path where they will not stumble For I am Israel’s Father and Ephraim is My firstborn",
+      },
+      {
+        verse_number: 10,
+        original:
+          "שִׁמְע֤וּ דְבַר־ יְהוָה֙ גּוֹיִ֔ם וְהַגִּ֥ידוּ בָאִיִּ֖ים מִמֶּרְחָ֑ק וְאִמְר֗וּ מְזָרֵ֤ה יִשְׂרָאֵל֙ יְקַבְּצֶ֔נּוּ וּשְׁמָר֖וֹ כְּרֹעֶ֥ה עֶדְרֽוֹ׃",
+        english:
+          "Hear O nations the word of the LORD and proclaim it in distant coastlands The One who scattered Israel will gather them and keep them as a shepherd keeps his flock",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כִּֽי־ פָדָ֥ה יְהוָ֖ה אֶֽת־ יַעֲקֹ֑ב וּגְאָל֕וֹ מִיַּ֖ד חָזָ֥ק מִמֶּֽנּוּ׃",
+        english:
+          "For the LORD has ransomed Jacob and redeemed him from the hand that had overpowered him",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וּבָאוּ֮ וְרִנְּנ֣וּ בִמְרוֹם־ צִיּוֹן֒ וְנָהֲר֞וּ אֶל־ ט֣וּב יְהוָ֗ה עַל־ דָּגָן֙ וְעַל־ תִּירֹ֣שׁ וְעַל־ יִצְהָ֔ר וְעַל־ בְּנֵי־ צֹ֖אן וּבָקָ֑ר וְהָיְתָ֤ה נַפְשָׁם֙ כְּגַ֣ן רָוֶ֔ה וְלֹא־ יוֹסִ֥יפוּ לְדַאֲבָ֖ה עֽוֹד׃",
+        english:
+          "They will come and shout for joy on the heights of Zion they will be radiant over the bounty of the LORD the grain new wine and oil and the young of the flocks and herds Their life will be like a well-watered garden and never again will they languish",
+      },
+      {
+        verse_number: 13,
+        original:
+          "אָ֣ז תִּשְׂמַ֤ח בְּתוּלָה֙ בְּמָח֔וֹל וּבַחֻרִ֥ים וּזְקֵנִ֖ים יַחְדָּ֑ו וְהָפַכְתִּ֨י אֶבְלָ֤ם לְשָׂשׂוֹן֙ וְנִ֣חַמְתִּ֔ים וְשִׂמַּחְתִּ֖ים מִיגוֹנָֽם׃",
+        english:
+          "Then the maidens will rejoice with dancing young men and old as well I will turn their mourning into joy and give them comfort and joy for their sorrow",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְרִוֵּיתִ֛י נֶ֥פֶשׁ הַכֹּהֲנִ֖ים דָּ֑שֶׁן וְעַמִּ֛י אֶת־ טוּבִ֥י יִשְׂבָּ֖עוּ נְאֻם־ יְהוָֽה׃ס",
+        english:
+          "I will fill the souls of the priests abundantly and will fill My people with My goodness declares the LORD",
+      },
+      {
+        verse_number: 15,
+        original:
+          "כֹּ֣ה׀ אָמַ֣ר יְהוָ֗ה ק֣וֹל בְּרָמָ֤ה נִשְׁמָע֙ נְהִי֙ בְּכִ֣י תַמְרוּרִ֔ים רָחֵ֖ל מְבַכָּ֣ה עַל־ בָּנֶ֑יהָ מֵאֲנָ֛ה לְהִנָּחֵ֥ם עַל־ בָּנֶ֖יהָ כִּ֥י אֵינֶֽנּוּ׃ס",
+        english:
+          "This is what the LORD says A voice is heard in Ramah mourning and great weeping Rachel weeping for her children and refusing to be comforted because they are no more",
+      },
+      {
+        verse_number: 16,
+        original:
+          "כֹּ֣ה׀ אָמַ֣ר יְהוָ֗ה מִנְעִ֤י קוֹלֵךְ֙ מִבֶּ֔כִי וְעֵינַ֖יִךְ מִדִּמְעָ֑ה כִּי֩ יֵ֨שׁ שָׂכָ֤ר לִפְעֻלָּתֵךְ֙ נְאֻם־ יְהוָ֔ה וְשָׁ֖בוּ מֵאֶ֥רֶץ אוֹיֵֽב׃",
+        english:
+          "This is what the LORD says Keep your voice from weeping and your eyes from tears for the reward for your work will come declares the LORD Then your children will return from the land of the enemy",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְיֵשׁ־ תִּקְוָ֥ה לְאַחֲרִיתֵ֖ךְ נְאֻם־ יְהוָ֑ה וְשָׁ֥בוּ בָנִ֖ים לִגְבוּלָֽם׃ס",
+        english:
+          "So there is hope for your future declares the LORD and your children will return to their own land",
+      },
+      {
+        verse_number: 18,
+        original:
+          "שָׁמ֣וֹעַ שָׁמַ֗עְתִּי אֶפְרַ֙יִם֙ מִתְנוֹדֵ֔ד יִסַּרְתַּ֙נִי֙ וָֽאִוָּסֵ֔ר כְּעֵ֖גֶל לֹ֣א לֻמָּ֑ד הֲשִׁיבֵ֣נִי וְאָשׁ֔וּבָה כִּ֥י אַתָּ֖ה יְהוָ֥ה אֱלֹהָֽי׃",
+        english:
+          "I have surely heard Ephraim’s moaning You disciplined me severely like an untrained calf Restore me that I may return for You are the LORD my God",
+      },
+      {
+        verse_number: 19,
+        original:
+          "כִּֽי־ אַחֲרֵ֤י שׁוּבִי֙ נִחַ֔מְתִּי וְאַֽחֲרֵי֙ הִוָּ֣דְעִ֔י סָפַ֖קְתִּי עַל־ יָרֵ֑ךְ בֹּ֚שְׁתִּי וְגַם־ נִכְלַ֔מְתִּי כִּ֥י נָשָׂ֖אתִי חֶרְפַּ֥ת נְעוּרָֽי׃",
+        english:
+          "After I returned I repented and after I was instructed I struck my thigh in grief I was ashamed and humiliated because I bore the disgrace of my youth",
+      },
+      {
+        verse_number: 20,
+        original:
+          "הֲבֵן֩ יַקִּ֨יר לִ֜י אֶפְרַ֗יִם אִ֚ם יֶ֣לֶד שַׁעֲשֻׁעִ֔ים כִּֽי־ מִדֵּ֤י דַבְּרִי֙ בּ֔וֹ זָכֹ֥ר אֶזְכְּרֶ֖נּוּ ע֑וֹד עַל־ כֵּ֗ן הָמ֤וּ מֵעַי֙ ל֔וֹ רַחֵ֥ם אֲ‍ֽרַחֲמֶ֖נּוּ נְאֻם־ יְהוָֽה׃ס",
+        english:
+          "Is not Ephraim a precious son to Me a delightful child Though I often speak against him I still remember him Therefore My heart yearns for him I have great compassion for him declares the LORD",
+      },
+      {
+        verse_number: 21,
+        original:
+          "הַצִּ֧יבִי לָ֣ךְ צִיֻּנִ֗ים שִׂ֤מִי לָךְ֙ תַּמְרוּרִ֔ים שִׁ֣תִי לִבֵּ֔ךְ לַֽמְסִלָּ֖ה דֶּ֣רֶךְ הָלָכְתִּי שׁ֚וּבִי בְּתוּלַ֣ת יִשְׂרָאֵ֔ל שֻׁ֖בִי אֶל־ עָרַ֥יִךְ אֵֽלֶּה׃",
+        english:
+          "Set up the road markers put up the signposts Keep the highway in mind the road you have traveled Return O Virgin Israel return to these cities of yours",
+      },
+      {
+        verse_number: 22,
+        original:
+          "עַד־ מָתַי֙ תִּתְחַמָּקִ֔ין הַבַּ֖ת הַשּֽׁוֹבֵבָ֑ה כִּֽי־ בָרָ֨א יְהוָ֤ה חֲדָשָׁה֙ בָּאָ֔רֶץ נְקֵבָ֖ה תְּס֥וֹבֵֽב גָּֽבֶר׃ס",
+        english:
+          "How long will you wander O faithless daughter For the LORD has created a new thing in the land a woman will shelter a man",
+      },
+      {
+        verse_number: 23,
+        original:
+          "כֹּֽה־ אָמַ֞ר יְהוָ֤ה צְבָאוֹת֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל ע֣וֹד יֹאמְר֞וּ אֶת־ הַדָּבָ֣ר הַזֶּ֗ה בְּאֶ֤רֶץ יְהוּדָה֙ וּבְעָרָ֔יו בְּשׁוּבִ֖י אֶת־ שְׁבוּתָ֑ם יְבָרֶכְךָ֧ יְהוָ֛ה נְוֵה־ צֶ֖דֶק הַ֥ר הַקֹּֽדֶשׁ׃",
+        english:
+          "This is what the LORD of Hosts the God of Israel says When I restore them from captivity they will once again speak this word in the land of Judah and in its cities May the LORD bless you O righteous dwelling place O holy mountain",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְיָ֥שְׁבוּ בָ֛הּ יְהוּדָ֥ה וְכָל־ עָרָ֖יו יַחְדָּ֑ו אִכָּרִ֕ים וְנָסְע֖וּ בַּעֵֽדֶר׃",
+        english:
+          "And Judah and all its cities will dwell together in the land the farmers and those who move with the flocks",
+      },
+      {
+        verse_number: 25,
+        original:
+          "כִּ֥י הִרְוֵ֖יתִי נֶ֣פֶשׁ עֲיֵפָ֑ה וְכָל־ נֶ֥פֶשׁ דָּאֲבָ֖ה מִלֵּֽאתִי׃",
+        english:
+          "for I will refresh the weary soul and replenish all who are weak",
+      },
+      {
+        verse_number: 26,
+        original:
+          "עַל־ זֹ֖את הֱקִיצֹ֣תִי וָאֶרְאֶ֑ה וּשְׁנָתִ֖י עָ֥רְבָה לִּֽי׃ס",
+        english:
+          "At this I awoke and looked around My sleep had been most pleasant to me",
+      },
+      {
+        verse_number: 27,
+        original:
+          "הִנֵּ֛ה יָמִ֥ים בָּאִ֖ים נְאֻם־ יְהוָ֑ה וְזָרַעְתִּ֗י אֶת־ בֵּ֤ית יִשְׂרָאֵל֙ וְאֶת־ בֵּ֣ית יְהוּדָ֔ה זֶ֥רַע אָדָ֖ם וְזֶ֥רַע בְּהֵמָֽה׃",
+        english:
+          "The days are coming declares the LORD when I will sow the house of Israel and the house of Judah with the seed of man and of beast",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וְהָיָ֞ה כַּאֲשֶׁ֧ר שָׁקַ֣דְתִּי עֲלֵיהֶ֗ם לִנְת֧וֹשׁ וְלִנְת֛וֹץ וְלַהֲרֹ֖ס וּלְהַאֲבִ֣יד וּלְהָרֵ֑עַ כֵּ֣ן אֶשְׁקֹ֧ד עֲלֵיהֶ֛ם לִבְנ֥וֹת וְלִנְט֖וֹעַ נְאֻם־ יְהוָֽה׃",
+        english:
+          "Just as I watched over them to uproot and tear down to demolish destroy and bring disaster so I will watch over them to build and to plant declares the LORD",
+      },
+      {
+        verse_number: 29,
+        original:
+          "בַּיָּמִ֣ים הָהֵ֔ם לֹא־ יֹאמְר֣וּ ע֔וֹד אָב֖וֹת אָ֣כְלוּ בֹ֑סֶר וְשִׁנֵּ֥י בָנִ֖ים תִּקְהֶֽינָה׃",
+        english:
+          "In those days it will no longer be said The fathers have eaten sour grapes and the teeth of the children are set on edge",
+      },
+      {
+        verse_number: 30,
+        original:
+          "כִּ֛י אִם־ אִ֥ישׁ בַּעֲוֺנ֖וֹ יָמ֑וּת כָּל־ הָֽאָדָ֛ם הָאֹכֵ֥ל הַבֹּ֖סֶר תִּקְהֶ֥ינָה שִׁנָּֽיו׃ס",
+        english:
+          "Instead each will die for his own iniquity If anyone eats the sour grapes his own teeth will be set on edge",
+      },
+      {
+        verse_number: 31,
+        original:
+          "הִנֵּ֛ה יָמִ֥ים בָּאִ֖ים נְאֻם־ יְהוָ֑ה וְכָרַתִּ֗י אֶת־ בֵּ֧ית יִשְׂרָאֵ֛ל וְאֶת־ בֵּ֥ית יְהוּדָ֖ה בְּרִ֥ית חֲדָשָֽׁה׃",
+        english:
+          "Behold the days are coming declares the LORD when I will make a new covenant with the house of Israel and with the house of Judah",
+      },
+      {
+        verse_number: 32,
+        original:
+          "לֹ֣א כַבְּרִ֗ית אֲשֶׁ֤ר כָּרַ֙תִּי֙ אֶת־ אֲבוֹתָ֔ם בְּיוֹם֙ הֶחֱזִיקִ֣י בְיָדָ֔ם לְהוֹצִיאָ֖ם מֵאֶ֖רֶץ מִצְרָ֑יִם אֲשֶׁר־ הֵ֜מָּה הֵפֵ֣רוּ אֶת־ בְּרִיתִ֗י וְאָנֹכִ֛י בָּעַ֥לְתִּי בָ֖ם נְאֻם־ יְהוָֽה׃",
+        english:
+          "It will not be like the covenant I made with their fathers when I took them by the hand to lead them out of the land of Egypt a covenant they broke though I was a husband to them declares the LORD",
+      },
+      {
+        verse_number: 33,
+        original:
+          "כִּ֣י זֹ֣את הַבְּרִ֡ית אֲשֶׁ֣ר אֶכְרֹת֩ אֶת־ בֵּ֨ית יִשְׂרָאֵ֜ל אַחֲרֵ֨י הַיָּמִ֤ים הָהֵם֙ נְאֻם־ יְהוָ֔ה נָתַ֤תִּי אֶת־ תּֽוֹרָתִי֙ בְּקִרְבָּ֔ם וְעַל־ לִבָּ֖ם אֶכְתֲּבֶ֑נָּה וְהָיִ֤יתִי לָהֶם֙ לֵֽאלֹהִ֔ים וְהֵ֖מָּה יִֽהְיוּ־ לִ֥י לְעָֽם׃",
+        english:
+          "But this is the covenant I will make with the house of Israel after those days declares the LORD I will put My law in their minds and inscribe it on their hearts And I will be their God and they will be My people",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְלֹ֧א יְלַמְּד֣וּ ע֗וֹד אִ֣ישׁ אֶת־ רֵעֵ֜הוּ וְאִ֤ישׁ אֶת־ אָחִיו֙ לֵאמֹ֔ר דְּע֖וּ אֶת־ יְהוָ֑ה כִּֽי־ כוּלָּם֩ יֵדְע֨וּ אוֹתִ֜י לְמִקְטַנָּ֤ם וְעַד־ גְּדוֹלָם֙ נְאֻם־ יְהוָ֔ה כִּ֤י אֶסְלַח֙ לַֽעֲוֺנָ֔ם וּלְחַטָּאתָ֖ם לֹ֥א אֶזְכָּר־ עֽוֹד׃ס",
+        english:
+          "No longer will each man teach his neighbor or his brother saying Know the LORD because they will all know Me from the least of them to the greatest declares the LORD For I will forgive their iniquities and will remember their sins no more",
+      },
+      {
+        verse_number: 35,
+        original:
+          "כֹּ֣ה׀ אָמַ֣ר יְהוָ֗ה נֹתֵ֥ן שֶׁ֙מֶשׁ֙ לְא֣וֹר יוֹמָ֔ם חֻקֹּ֛ת יָרֵ֥חַ וְכוֹכָבִ֖ים לְא֣וֹר לָ֑יְלָה רֹגַ֤ע הַיָּם֙ וַיֶּהֱמ֣וּ גַלָּ֔יו יְהוָ֥ה צְבָא֖וֹת שְׁמֽוֹ׃",
+        english:
+          "Thus says the LORD who gives the sun for light by day who sets in order the moon and stars for light by night who stirs up the sea so that its waves roar the LORD of Hosts is His name",
+      },
+      {
+        verse_number: 36,
+        original:
+          "אִם־ יָמֻ֜שׁוּ הַחֻקִּ֥ים הָאֵ֛לֶּה מִלְּפָנַ֖י נְאֻם־ יְהוָ֑ה גַּם֩ זֶ֨רַע יִשְׂרָאֵ֜ל יִשְׁבְּת֗וּ מִֽהְי֥וֹת גּ֛וֹי לְפָנַ֖י כָּל־ הַיָּמִֽים׃ס",
+        english:
+          "Only if this fixed order departed from My presence declares the LORD would Israel’s descendants ever cease to be a nation before Me",
+      },
+      {
+        verse_number: 37,
+        original:
+          "כֹּ֣ה׀ אָמַ֣ר יְהוָ֗ה אִם־ יִמַּ֤דּוּ שָׁמַ֙יִם֙ מִלְמַ֔עְלָה וְיֵחָקְר֥וּ מֽוֹסְדֵי־ אֶ֖רֶץ לְמָ֑טָּה גַּם־ אֲנִ֞י אֶמְאַ֨ס בְּכָל־ זֶ֧רַע יִשְׂרָאֵ֛ל עַֽל־ כָּל־ אֲשֶׁ֥ר עָשׂ֖וּ נְאֻם־ יְהוָֽה׃ס",
+        english:
+          "This is what the LORD says Only if the heavens above could be measured and the foundations of the earth below searched out would I reject all of Israel’s descendants because of all they have done declares the LORD",
+      },
+      {
+        verse_number: 38,
+        original:
+          "הִנֵּ֛ה יָמִ֥יםִָּ֖ נְאֻם־ יְהוָ֑ה וְנִבְנְתָ֤ה הָעִיר֙ לַֽיהוָ֔ה מִמִּגְדַּ֥ל חֲנַנְאֵ֖ל שַׁ֥עַר הַפִּנָּֽה׃",
+        english:
+          "The days are coming declares the LORD when this city will be rebuilt for Me from the tower of Hananel to the Corner Gate",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וְיָצָ֨א ע֜וֹד קְוֵה הַמִּדָּה֙ נֶגְדּ֔וֹ עַ֖ל גִּבְעַ֣ת גָּרֵ֑ב וְנָסַ֖ב גֹּעָֽתָה׃",
+        english:
+          "The measuring line will once again stretch out straight to the hill of Gareb and then turn toward Goah",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וְכָל־ הָעֵ֣מֶק הַפְּגָרִ֣ים׀ וְהַדֶּ֡שֶׁן וְכָֽל־ הַשְּׁרֵמוֹת עַד־ נַ֨חַל קִדְר֜וֹן עַד־ פִּנַּ֨ת שַׁ֤עַר הַסּוּסִים֙ מִזְרָ֔חָה קֹ֖דֶשׁ לַֽיהוָ֑ה לֹֽא־ יִנָּתֵ֧שׁ וְֽלֹא־ יֵהָרֵ֛ס ע֖וֹד לְעוֹלָֽם׃ס",
+        english:
+          "The whole valley of the dead bodies and ashes and all the fields as far as the Kidron Valley to the corner of the Horse Gate to the east will be holy to the LORD It will never again be uprooted or demolished",
+      },
+    ],
+  };
+  return chapter;
+}

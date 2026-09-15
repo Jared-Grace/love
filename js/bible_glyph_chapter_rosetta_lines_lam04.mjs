@@ -1,0 +1,166 @@
+export function bible_glyph_chapter_rosetta_lines_lam04() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LAM04",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "אֵיכָה֙ יוּעַ֣ם זָהָ֔ב יִשְׁנֶ֖א הַכֶּ֣תֶם הַטּ֑וֹב תִּשְׁתַּפֵּ֙כְנָה֙ אַבְנֵי־ קֹ֔דֶשׁ בְּרֹ֖אשׁ כָּל־ חוּצֽוֹת׃ס",
+        english:
+          "How the gold has become tarnished the pure gold has become dull The gems of the temple lie scattered on every street corner",
+      },
+      {
+        verse_number: 2,
+        original:
+          "בְּנֵ֤י צִיּוֹן֙ הַיְקָרִ֔ים הַמְסֻלָּאִ֖ים בַּפָּ֑ז אֵיכָ֤ה נֶחְשְׁבוּ֙ לְנִבְלֵי־ חֶ֔רֶשׂ מַעֲשֵׂ֖ה יְדֵ֥י יוֹצֵֽר׃ס",
+        english:
+          "How the precious sons of Zion once worth their weight in pure gold are now esteemed as jars of clay the work of a potter’s hands",
+      },
+      {
+        verse_number: 3,
+        original:
+          "גַּם־ תַּנִּין חָ֣לְצוּ שַׁ֔ד הֵינִ֖יקוּ גּוּרֵיהֶ֑ן בַּת־ עַמִּ֣י לְאַכְזָ֔ר כִּי עֵנִים בַּמִּדְבָּֽר׃ס",
+        english:
+          "Even jackals offer their breasts to nurse their young but the daughter of my people has become cruel like an ostrich in the wilderness",
+      },
+      {
+        verse_number: 4,
+        original:
+          "דָּבַ֨ק לְשׁ֥וֹן יוֹנֵ֛ק אֶל־ חכּ֖וֹ בַּצָּמָ֑א עֽוֹלָלִים֙ שָׁ֣אֲלוּ לֶ֔חֶם פֹּרֵ֖שׂ אֵ֥ין לָהֶֽם׃ס",
+        english:
+          "The nursing infant’s tongue clings in thirst to the roof of his mouth Little children beg for bread but no one gives them any",
+      },
+      {
+        verse_number: 5,
+        original:
+          "הָאֹֽכְלִים֙ לְמַ֣עֲדַנִּ֔ים נָשַׁ֖מּוּ בַּחוּצ֑וֹת הָאֱמֻנִים֙ עֲלֵ֣י תוֹלָ֔ע חִבְּק֖וּ אַשְׁפַּתּֽוֹת׃ס",
+        english:
+          "Those who once ate delicacies are destitute in the streets those brought up in crimson huddle in ash heaps",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיִּגְדַּל֙ עֲוֺ֣ן בַּת־ עַמִּ֔י מֵֽחַטַּ֖את סְדֹ֑ם הַֽהֲפוּכָ֣ה כְמוֹ־ רָ֔גַע וְלֹא־ חָ֥לוּ בָ֖הּ יָדָֽיִם׃ס",
+        english:
+          "The punishment of the daughter of my people is greater than that of Sodom which was overthrown in an instant without a hand turned to help her",
+      },
+      {
+        verse_number: 7,
+        original:
+          "זַכּ֤וּ נְזִירֶ֙יהָ֙ מִשֶּׁ֔לֶג צַח֖וּ מֵחָלָ֑ב אָ֤דְמוּ עֶ֙צֶם֙ מִפְּנִינִ֔ים סַפִּ֖יר גִּזְרָתָֽם׃ס",
+        english:
+          "Her dignitaries were brighter than snow whiter than milk their bodies were more ruddy than rubies their appearance like sapphires",
+      },
+      {
+        verse_number: 8,
+        original:
+          "חָשַׁ֤ךְ מִשְּׁחוֹר֙ תָּֽאֳרָ֔ם לֹ֥א נִכְּר֖וּ בַּחוּצ֑וֹת צָפַ֤ד עוֹרָם֙ עַל־ עַצְמָ֔ם יָבֵ֖שׁ הָיָ֥ה כָעֵֽץ׃ס",
+        english:
+          "But now their appearance is blacker than soot they are not recognized in the streets Their skin has shriveled on their bones it has become as dry as a stick",
+      },
+      {
+        verse_number: 9,
+        original:
+          "טוֹבִ֤ים הָיוּ֙ חַלְלֵי־ חֶ֔רֶב מֵֽחַלְלֵ֖י רָעָ֑ב שֶׁ֣הֵ֤ם יָז֙וּבוּ֙ מְדֻקָּרִ֔ים מִתְּנוּבֹ֖ת שָׂדָֽי׃ס",
+        english:
+          "Those slain by the sword are better off than those who die of hunger who waste away pierced with pain because the fields lack produce",
+      },
+      {
+        verse_number: 10,
+        original:
+          "יְדֵ֗י נָשִׁים֙ רַחֲמָ֣נִיּ֔וֹת בִּשְּׁל֖וּ יַלְדֵיהֶ֑ן הָי֤וּ לְבָרוֹת֙ לָ֔מוֹ בְּשֶׁ֖בֶר בַּת־ עַמִּֽי׃ס",
+        english:
+          "The hands of compassionate women have cooked their own children who became their food in the destruction of the daughter of my people",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כִּלָּ֤ה יְהוָה֙ אֶת־ חֲמָת֔וֹ שָׁפַ֖ךְ חֲר֣וֹן אַפּ֑וֹ וַיַּצֶּת־ אֵ֣שׁ בְּצִיּ֔וֹן וַתֹּ֖אכַל יְסוֹדֹתֶֽיהָ׃ס",
+        english:
+          "The LORD has exhausted His wrath He has poured out His fierce anger He has kindled a fire in Zion and it has consumed her foundations",
+      },
+      {
+        verse_number: 12,
+        original:
+          "לֹ֤א הֶאֱמִ֙ינוּ֙ מַלְכֵי־ אֶ֔רֶץ וְכֹל יֹשְׁבֵ֣י תֵבֵ֑ל כִּ֤י יָבֹא֙ צַ֣ר וְאוֹיֵ֔ב בְּשַׁעֲרֵ֖י יְרוּשָׁלִָֽם׃ס",
+        english:
+          "The kings of the earth did not believe nor any people of the world that an enemy or a foe could enter the gates of Jerusalem",
+      },
+      {
+        verse_number: 13,
+        original:
+          "מֵֽחַטֹּ֣את נְבִיאֶ֔יהָ עֲוֺנ֖וֹת כֹּהֲנֶ֑יהָ הַשֹּׁפְכִ֥ים בְּקִרְבָּ֖הּ דַּ֥ם צַדִּיקִֽים׃ס",
+        english:
+          "But this was for the sins of her prophets and the guilt of her priests who shed the blood of the righteous in her midst",
+      },
+      {
+        verse_number: 14,
+        original:
+          "נָע֤וּ עִוְרִים֙ בַּֽחוּצ֔וֹת נְגֹֽאֲל֖וּ בַּדָּ֑ם בְּלֹ֣א יֽוּכְל֔וּ יִגְּע֖וּ בִּלְבֻשֵׁיהֶֽם׃ס",
+        english:
+          "They wandered blind in the streets defiled by this blood so that no one dared to touch their garments",
+      },
+      {
+        verse_number: 15,
+        original:
+          "ס֣וּרוּ טָמֵ֞א קָ֣רְאוּ לָ֗מוֹ ס֤וּרוּ ס֙וּרוּ֙ אַל־ תִּגָּ֔עוּ כִּ֥י נָצ֖וּ גַּם־ נָ֑עוּ אָֽמְרוּ֙ בַּגּוֹיִ֔ם לֹ֥א יוֹסִ֖יפוּ לָגֽוּר׃ס",
+        english:
+          "Go away Unclean men shouted at them Away away Do not touch us So they fled and wandered Among the nations it was said They can stay here no longer",
+      },
+      {
+        verse_number: 16,
+        original:
+          "פְּנֵ֤י יְהוָה֙ חִלְּקָ֔ם לֹ֥א יוֹסִ֖יף לְהַבִּיטָ֑ם פְּנֵ֤י כֹהֲנִים֙ לֹ֣א נָשָׂ֔אוּ זְקֵנִים לֹ֥א חָנָֽנוּ׃ס",
+        english:
+          "The presence of the LORD has scattered them He regards them no more The priests are shown no honor the elders find no favor",
+      },
+      {
+        verse_number: 17,
+        original:
+          "עוֹדֵינָה תִּכְלֶ֣ינָה עֵינֵ֔ינוּ אֶל־ עֶזְרָתֵ֖נוּ הָ֑בֶל בְּצִפִּיָּתֵ֣נוּ צִפִּ֔ינוּ אֶל־ גּ֖וֹי לֹ֥א יוֹשִֽׁעַ׃ס",
+        english:
+          "All the while our eyes were failing as we looked in vain for help We watched from our towers for a nation that could not save us",
+      },
+      {
+        verse_number: 18,
+        original:
+          "צָד֣וּ צְעָדֵ֔ינוּ מִלֶּ֖כֶת בִּרְחֹבֹתֵ֑ינוּ קָרַ֥ב קִצֵּ֛ינוּ מָלְא֥וּ יָמֵ֖ינוּ כִּי־ בָ֥א קִצֵּֽינוּ׃ס",
+        english:
+          "They stalked our every step so that we could not walk in our streets Our end drew near our time ran out for our end had come",
+      },
+      {
+        verse_number: 19,
+        original:
+          "קַלִּ֤ים הָיוּ֙ רֹדְפֵ֔ינוּ מִנִּשְׁרֵ֖י שָׁמָ֑יִם עַל־ הֶהָרִ֣ים דְּלָקֻ֔נוּ בַּמִּדְבָּ֖ר אָ֥רְבוּ לָֽנוּ׃ס",
+        english:
+          "Those who chased us were swifter than the eagles in the sky they pursued us over the mountains and ambushed us in the wilderness",
+      },
+      {
+        verse_number: 20,
+        original:
+          "ר֤וּחַ אַפֵּ֙ינוּ֙ מְשִׁ֣יחַ יְהוָ֔ה נִלְכַּ֖ד בִּשְׁחִיתוֹתָ֑ם אֲשֶׁ֣ר אָמַ֔רְנוּ בְּצִלּ֖וֹ נִֽחְיֶ֥ה בַגּוֹיִֽם׃ס",
+        english:
+          "The LORD’s anointed the breath of our life was captured in their pits We had said of him Under his shadow we will live among the nations",
+      },
+      {
+        verse_number: 21,
+        original:
+          "שִׂ֤ישִׂי וְשִׂמְחִי֙ בַּת־ אֱד֔וֹם יוֹשַׁבְתִּי בְּאֶ֣רֶץ ע֑וּץ גַּם־ עָלַ֙יִךְ֙ תַּעֲבָר־ כּ֔וֹס תִּשְׁכְּרִ֖י וְתִתְעָרִֽי׃ס",
+        english:
+          "So rejoice and be glad O Daughter of Edom you who dwell in the land of Uz Yet the cup will pass to you as well you will get drunk and expose yourself",
+      },
+      {
+        verse_number: 22,
+        original:
+          "תַּם־ עֲוֺנֵךְ֙ בַּת־ צִיּ֔וֹן לֹ֥א יוֹסִ֖יף לְהַגְלוֹתֵ֑ךְ פָּקַ֤ד עֲוֺנֵךְ֙ בַּת־ אֱד֔וֹם גִּלָּ֖ה עַל־ חַטֹּאתָֽיִךְ׃פ",
+        english:
+          "O Daughter of Zion your punishment is complete He will not prolong your exile But He will punish your iniquity O Daughter of Edom He will expose your sins",
+      },
+    ],
+  };
+  return chapter;
+}
