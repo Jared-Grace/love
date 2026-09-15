@@ -1,0 +1,89 @@
+export function bible_glyph_chapter_rosetta_lines_ezr01() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EZR01",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וּבִשְׁנַ֣ת אַחַ֗ת לְכ֙וֹרֶשׁ֙ מֶ֣לֶךְ פָּרַ֔ס לִכְל֥וֹת דְּבַר־ יְהוָ֖ה מִפִּ֣י יִרְמְיָ֑ה הֵעִ֣יר יְהוָ֗ה אֶת־ ר֙וּחַ֙ כֹּ֣רֶשׁ מֶֽלֶךְ־ פָּרַ֔ס וַיַּֽעֲבֶר־ קוֹל֙ בְּכָל־ מַלְכוּת֔וֹ וְגַם־ בְּמִכְתָּ֖ב לֵאמֹֽר׃",
+        english:
+          "In the first year of Cyrus king of Persia to fulfill the word of the LORD spoken through Jeremiah the LORD stirred the spirit of Cyrus king of Persia to send a proclamation throughout his kingdom and to put it in writing as follows",
+      },
+      {
+        verse_number: 2,
+        original:
+          "כֹּ֣ה אָמַ֗ר כֹּ֚רֶשׁ מֶ֣לֶךְ פָּרַ֔ס כֹּ֚ל מַמְלְכ֣וֹת הָאָ֔רֶץ נָ֣תַן לִ֔י יְהוָ֖ה אֱלֹהֵ֣י הַשָּׁמָ֑יִם וְהֽוּא־ פָקַ֤ד עָלַי֙ לִבְנֽוֹת־ ל֣וֹ בַ֔יִת בִּירוּשָׁלִַ֖ם אֲשֶׁ֥ר בִּֽיהוּדָֽה׃",
+        english:
+          "This is what Cyrus king of Persia says The LORD the God of heaven who has given me all the kingdoms of the earth has appointed me to build a house for Him at Jerusalem in Judah",
+      },
+      {
+        verse_number: 3,
+        original:
+          "מִֽי־ בָכֶ֣ם מִכָּל־ עַמּ֗וֹ יְהִ֤י אֱלֹהָיו֙ עִמּ֔וֹ וְיַ֕עַל לִירוּשָׁלִַ֖ם אֲשֶׁ֣ר בִּיהוּדָ֑ה וְיִ֗בֶן אֶת־ בֵּ֤ית יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל ה֥וּא הָאֱלֹהִ֖ים אֲשֶׁ֥ר בִּירוּשָׁלִָֽם׃",
+        english:
+          "Whoever among you belongs to His people may his God be with him and may he go to Jerusalem in Judah and build the house of the LORD the God of Israel He is the God who is in Jerusalem",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְכָל־ הַנִּשְׁאָ֗ר מִֽכָּל־ הַמְּקֹמוֹת֮ אֲשֶׁ֣ר ה֣וּא גָֽר־ שָׁם֒ יְנַשְּׂא֙וּהוּ֙ אַנְשֵׁ֣י מְקֹמ֔וֹ בְּכֶ֥סֶף וּבְזָהָ֖ב וּבִרְכ֣וּשׁ וּבִבְהֵמָ֑ה עִם־ הַ֨נְּדָבָ֔ה לְבֵ֥ית הָאֱלֹהִ֖ים אֲשֶׁ֥ר בִּירוּשָׁלִָֽם׃",
+        english:
+          "And let every survivor wherever he lives be assisted by the men of that region with silver gold goods and livestock along with a freewill offering for the house of God in Jerusalem",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיָּק֜וּמוּ רָאשֵׁ֣י הָאָב֗וֹת לִֽיהוּדָה֙ וּבִנְיָמִ֔ן וְהַכֹּהֲנִ֖ים וְהַלְוִיִּ֑ם לְכֹ֨ל הֵעִ֤יר הָאֱלֹהִים֙ אֶת־ רוּח֔וֹ לַעֲל֣וֹת לִבְנ֔וֹת אֶת־ בֵּ֥ית יְהוָ֖ה אֲשֶׁ֥ר בִּירוּשָׁלִָֽם׃",
+        english:
+          "So the family heads of Judah and Benjamin along with the priests and Levites everyone whose spirit God had stirred prepared to go up and rebuild the house of the LORD in Jerusalem",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְכָל־ סְבִיבֹֽתֵיהֶם֙ חִזְּק֣וּ בִֽידֵיהֶ֔ם בִּכְלֵי־ כֶ֧סֶף בַּזָּהָ֛ב בָּרְכ֥וּשׁ וּבַבְּהֵמָ֖ה וּבַמִּגְדָּנ֑וֹת לְבַ֖ד עַל־ כָּל־ הִתְנַדֵּֽב׃ס",
+        english:
+          "And all their neighbors supported them with articles of silver and gold with goods and livestock and with valuables in addition to all their freewill offerings",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְהַמֶּ֣לֶךְ כּ֔וֹרֶשׁ הוֹצִ֖יא אֶת־ כְּלֵ֣י בֵית־ יְהוָ֑ה אֲשֶׁ֨ר הוֹצִ֤יא נְבֽוּכַדְנֶצַּר֙ מִיר֣וּשָׁלִַ֔ם וַֽיִּתְּנֵ֖ם בְּבֵ֥ית אֱלֹהָֽיו׃",
+        english:
+          "King Cyrus also brought out the articles belonging to the house of the LORD that Nebuchadnezzar had carried away from Jerusalem and placed in the temple of his gods",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיּֽוֹצִיאֵ֗ם כּ֚וֹרֶשׁ מֶ֣לֶךְ פָּרַ֔ס עַל־ יַ֖ד מִתְרְדָ֣ת הַגִּזְבָּ֑ר וַֽיִּסְפְּרֵם֙ לְשֵׁשְׁבַּצַּ֔ר הַנָּשִׂ֖יא לִיהוּדָֽה׃",
+        english:
+          "Cyrus king of Persia had them brought out by the hand of Mithredath the treasurer who counted them out to Sheshbazzar the prince of Judah",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְאֵ֖לֶּה מִסְפָּרָ֑ם אֲגַרְטְלֵ֨י זָהָ֜ב שְׁלֹשִׁ֗ים אֲגַרְטְלֵי־ כֶ֙סֶף֙ אָ֔לֶף מַחֲלָפִ֖ים תִּשְׁעָ֥ה וְעֶשְׂרִֽים׃ס",
+        english:
+          "This was the inventory 30 gold dishes 1,000 silver dishes 29 silver utensils",
+      },
+      {
+        verse_number: 10,
+        original:
+          "כְּפוֹרֵ֤י זָהָב֙ שְׁלֹשִׁ֔ים כְּפ֤וֹרֵי כֶ֙סֶף֙ מִשְׁנִ֔ים אַרְבַּ֥ע מֵא֖וֹת וַעֲשָׂרָ֑ה כֵּלִ֥ים אֲחֵרִ֖ים אָֽלֶף׃ס",
+        english:
+          "30 gold bowls 410 matching silver bowls and 1,000 other articles",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כָּל־ כֵּלִים֙ לַזָּהָ֣ב וְלַכֶּ֔סֶף חֲמֵ֥שֶׁת אֲלָפִ֖ים וְאַרְבַּ֣ע מֵא֑וֹת הַכֹּ֞ל הֶעֱלָ֣ה שֵׁשְׁבַּצַּ֗ר עִ֚ם הֵעָל֣וֹת הַגּוֹלָ֔ה מִבָּבֶ֖ל לִירוּשָׁלִָֽם׃פ",
+        english:
+          "In all, there were 5400 gold and silver articles Sheshbazzar brought all these along when the exiles went up from Babylon to Jerusalem",
+      },
+    ],
+  };
+  return chapter;
+}
