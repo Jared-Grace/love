@@ -1,3 +1,4 @@
+import { emoji_fire } from "./emoji_fire.mjs";
 import { emoji_mobile } from "./emoji_mobile.mjs";
 import { emoji_music_notes } from "./emoji_music_notes.mjs";
 import { emoji_wine } from "./emoji_wine.mjs";
@@ -55,6 +56,10 @@ export function app_index_emojis() {
     {
       app_fn: fn_name("app_g"),
       emoji: emoji_cross(),
+    },
+    {
+      app_fn: fn_name("app_g_hero"),
+      emoji: emoji_fire(),
     },
     {
       app_fn: fn_name("app_g_bless"),
