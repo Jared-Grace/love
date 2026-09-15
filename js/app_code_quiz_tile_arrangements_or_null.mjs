@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_quiz_tokens } from "./app_code_quiz_tokens.mjs";
 import { app_code_quiz_token_places_of_kind } from "./app_code_quiz_token_places_of_kind.mjs";
@@ -43,8 +44,7 @@ export function app_code_quiz_tile_arrangements_or_null(code) {
   each(layouts, lay);
   let held_places = app_code_quiz_token_places_of_kind(tokens, "placed");
   let nothing_held = list_empty_is(held_places);
-  let all_count = list_size(tokens);
-  let all_too_many = greater_than(all_count, ceiling);
+  let all_too_many = list_size_greater_than(tokens, ceiling);
   let wide_road = not(nothing_held) && not(all_too_many);
   if (wide_road) {
     let all_layouts = list_permutations(tokens);
