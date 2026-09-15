@@ -10,7 +10,7 @@ import { greater_than } from "./greater_than.mjs";
 export function app_code_line_operator_steps(node) {
   arguments_assert(arguments, 1);
   ("How many steps of working out one operator asks for: one, except a power whose exponent is a whole number written on the line, which asks for one multiplication fewer than the exponent.");
-  ("A power looks like one step and is not. 3 ** 4 means 3 * 3 * 3 * 3, so working it out is three multiplications, and a learner meets it as that. Counting it as one operator put it level with a single +, which let the order of the course say a power could come before a line of three multiplications it stands for.");
+  ("A power looks like one step and is not. 5 ** 4 means 5 * 5 * 5 * 5, so working it out is three multiplications, and a learner meets it as that. Counting it as one operator put it level with a single +, which let the order of the course say a power could come before a line of three multiplications it stands for.");
   ("An exponent that is a name, or a line of its own, or a fraction, has no number of multiplications to read off, so it counts as the one step it looks like. So does an exponent of one or less: there is still the operator to read, even when there is nothing to multiply.");
   let one = 1;
   let operator = property_get(node, "operator");
