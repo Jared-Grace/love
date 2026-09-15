@@ -86,7 +86,7 @@ export function bible_glyph_undrawn_lists_gate_run() {
       }
     }
   }
-  let list2 = list_map_property_get(lists, "fn");
+  let list2 = list_map_property(lists, "fn");
   list_empty_is_assert_json(clashes, {
     clashes,
     hint:
