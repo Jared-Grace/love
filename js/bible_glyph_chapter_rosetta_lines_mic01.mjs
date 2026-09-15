@@ -1,0 +1,124 @@
+export function bible_glyph_chapter_rosetta_lines_mic01() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "MIC01",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "דְּבַר־ יְהוָ֣ה׀ אֲשֶׁ֣ר הָיָ֗ה אֶל־ מִיכָה֙ הַמֹּ֣רַשְׁתִּ֔י בִּימֵ֥י יוֹתָ֛ם אָחָ֥ז יְחִזְקִיָּ֖ה מַלְכֵ֣י יְהוּדָ֑ה אֲשֶׁר־ חָזָ֥ה עַל־ שֹׁמְר֖וֹן וִירֽוּשָׁלִָֽם׃",
+        english:
+          "This is the word of the LORD that came to Micah the Moreshite in the days of Jotham Ahaz and Hezekiah kings of Judah what he saw regarding Samaria and Jerusalem",
+      },
+      {
+        verse_number: 2,
+        original:
+          "שִׁמְעוּ֙ עַמִּ֣ים כֻּלָּ֔ם הַקְשִׁ֖יבִי אֶ֣רֶץ וּמְלֹאָ֑הּ וִיהִי֩ אֲדֹנָ֨י יְהוִ֤ה בָּכֶם֙ לְעֵ֔ד אֲדֹנָ֖י מֵהֵיכַ֥ל קָדְשֽׁוֹ׃",
+        english:
+          "Hear O peoples all of you listen O earth and everyone in it May the Lord GOD bear witness against you the Lord from His holy temple",
+      },
+      {
+        verse_number: 3,
+        original:
+          "כִּֽי־ הִנֵּ֥ה יְהוָ֖ה יֹצֵ֣א מִמְּקוֹמ֑וֹ וְיָרַ֥ד וְדָרַ֖ךְ עַל־ בָּמוֹתֵי אָֽרֶץ׃",
+        english:
+          "For behold the LORD comes forth from His dwelling place He will come down and tread on the high places of the earth",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְנָמַ֤סּוּ הֶֽהָרִים֙ תַּחְתָּ֔יו וְהָעֲמָקִ֖ים יִתְבַּקָּ֑עוּ כַּדּוֹנַג֙ מִפְּנֵ֣י הָאֵ֔שׁ כְּמַ֖יִם מֻגָּרִ֥ים בְּמוֹרָֽד׃",
+        english:
+          "The mountains will melt beneath Him and the valleys will split apart like wax before the fire like water rushing down a slope",
+      },
+      {
+        verse_number: 5,
+        original:
+          "בְּפֶ֤שַׁע יַֽעֲקֹב֙ כָּל־ זֹ֔את וּבְחַטֹּ֖אות בֵּ֣ית יִשְׂרָאֵ֑ל מִֽי־ פֶ֣שַׁע יַעֲקֹ֗ב הֲלוֹא֙ שֹֽׁמְר֔וֹן וּמִי֙ בָּמ֣וֹת יְהוּדָ֔ה הֲל֖וֹא יְרוּשָׁלִָֽם׃",
+        english:
+          "All this is for the transgression of Jacob and the sins of the house of Israel What is the transgression of Jacob Is it not Samaria And what is the high place of Judah Is it not Jerusalem",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְשַׂמְתִּ֥י שֹׁמְר֛וֹן לְעִ֥י הַשָּׂדֶ֖ה לְמַטָּ֣עֵי כָ֑רֶם וְהִגַּרְתִּ֤י לַגַּי֙ אֲבָנֶ֔יהָ וִיסֹדֶ֖יהָ אֲגַלֶּֽה׃",
+        english:
+          "Therefore I will make Samaria a heap of rubble in the open field a planting area for a vineyard I will pour her stones into the valley and expose her foundations",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְכָל־ פְּסִילֶ֣יהָ יֻכַּ֗תּוּ וְכָל־ אֶתְנַנֶּ֙יהָ֙ יִשָּׂרְפ֣וּ בָאֵ֔שׁ וְכָל־ עֲצַבֶּ֖יהָ אָשִׂ֣ים שְׁמָמָ֑ה כִּ֠י מֵאֶתְנַ֤ן זוֹנָה֙ קִבָּ֔צָה וְעַד־ אֶתְנַ֥ן זוֹנָ֖ה יָשֽׁוּבוּ׃",
+        english:
+          "All her carved images will be smashed to pieces all her wages will be burned in the fire and I will destroy all her idols Since she collected the wages of a prostitute they will be used again on a prostitute",
+      },
+      {
+        verse_number: 8,
+        original:
+          "עַל־ זֹאת֙ אֶסְפְּדָ֣ה וְאֵילִ֔ילָה אֵילְכָ֥ה שֵׁילָל וְעָר֑וֹם אֶעֱשֶׂ֤ה מִסְפֵּד֙ כַּתַּנִּ֔ים וְאֵ֖בֶל כִּבְנ֥וֹת יַעֲנָֽה׃",
+        english:
+          "Because of this I will lament and wail I will walk barefoot and naked I will howl like a jackal and mourn like an ostrich",
+      },
+      {
+        verse_number: 9,
+        original:
+          "כִּ֥י אֲנוּשָׁ֖ה מַכּוֹתֶ֑יהָ כִּי־ בָ֙אָה֙ עַד־ יְהוּדָ֔ה נָגַ֛ע עַד־ שַׁ֥עַר עַמִּ֖י עַד־ יְרוּשָׁלִָֽם׃",
+        english:
+          "For her wound is incurable it has reached even Judah it has approached the gate of my people as far as Jerusalem itself",
+      },
+      {
+        verse_number: 10,
+        original:
+          "בְּגַת֙ אַל־ תַּגִּ֔ידוּ בָּכ֖וֹ אַל־ תִּבְכּ֑וּ בְּבֵ֣ית לְעַפְרָ֔ה עָפָ֖ר הִתְפַּלָּשְׁתִּי׃",
+        english:
+          "Do not tell it in Gath do not weep at all Roll in the dust in Beth-leaphrah",
+      },
+      {
+        verse_number: 11,
+        original:
+          "עִבְרִ֥י לָכֶ֛ם יוֹשֶׁ֥בֶת שָׁפִ֖יר עֶרְיָה־ בֹ֑שֶׁת לֹ֤א יָֽצְאָה֙ יוֹשֶׁ֣בֶת צַֽאֲנָ֔ן מִסְפַּד֙ בֵּ֣ית הָאֵ֔צֶל יִקַּ֥ח מִכֶּ֖ם עֶמְדָּתֽוֹ׃",
+        english:
+          "Depart in shameful nakedness O dwellers of Shaphir The dwellers of Zaanan will not come out Beth-ezel is in mourning its support is taken from you",
+      },
+      {
+        verse_number: 12,
+        original:
+          "כִּֽי־ חָ֥לָֽה לְט֖וֹב יוֹשֶׁ֣בֶת מָר֑וֹת כִּֽי־ יָ֤רַד רָע֙ מֵאֵ֣ת יְהוָ֔ה לְשַׁ֖עַר יְרוּשָׁלִָֽם׃",
+        english:
+          "For the dwellers of Maroth pined for good but calamity came down from the LORD even to the gate of Jerusalem",
+      },
+      {
+        verse_number: 13,
+        original:
+          "רְתֹ֧ם הַמֶּרְכָּבָ֛ה לָרֶ֖כֶשׁ יוֹשֶׁ֣בֶת לָכִ֑ישׁ רֵאשִׁ֨ית חַטָּ֥את הִיא֙ לְבַת־ צִיּ֔וֹן כִּי־ בָ֥ךְ נִמְצְא֖וּ פִּשְׁעֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Harness your chariot horses O dweller of Lachish You were the beginning of sin to the Daughter of Zion for the transgressions of Israel were found in you",
+      },
+      {
+        verse_number: 14,
+        original:
+          "לָכֵן֙ תִּתְּנִ֣י שִׁלּוּחִ֔ים עַ֖ל מוֹרֶ֣שֶׁת גַּ֑ת בָּתֵּ֤י אַכְזִיב֙ לְאַכְזָ֔ב לְמַלְכֵ֖י יִשְׂרָאֵֽל׃",
+        english:
+          "Therefore send farewell gifts to Moresheth-gath the houses of Achzib will prove deceptive to the kings of Israel",
+      },
+      {
+        verse_number: 15,
+        original:
+          "עֹ֗ד הַיֹּרֵשׁ֙ אָ֣בִי לָ֔ךְ יוֹשֶׁ֖בֶת מָֽרֵשָׁ֑ה עַד־ עֲדֻּלָּ֥ם יָב֖וֹא כְּב֥וֹד יִשְׂרָאֵֽל׃",
+        english:
+          "I will again bring a conqueror against you O dweller of Mareshah The glory of Israel will come to Adullam",
+      },
+      {
+        verse_number: 16,
+        original:
+          "קָרְחִ֣י וָגֹ֔זִּי עַל־ בְּנֵ֖י תַּעֲנוּגָ֑יִךְ הַרְחִ֤בִי קָרְחָתֵךְ֙ כַּנֶּ֔שֶׁר כִּ֥י גָל֖וּ מִמֵּֽךְ׃ס",
+        english:
+          "Shave yourselves bald and cut off your hair in mourning for your precious children make yourselves as bald as an eagle for they will go from you into exile",
+      },
+    ],
+  };
+  return chapter;
+}

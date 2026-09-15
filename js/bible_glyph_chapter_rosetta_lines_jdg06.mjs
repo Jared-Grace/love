@@ -1,0 +1,292 @@
+export function bible_glyph_chapter_rosetta_lines_jdg06() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JDG06",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיַּעֲשׂ֧וּ בְנֵי־ יִשְׂרָאֵ֛ל הָרַ֖ע בְּעֵינֵ֣י יְהוָ֑ה וַיִּתְּנֵ֧ם יְהוָ֛ה בְּיַד־ מִדְיָ֖ן שֶׁ֥בַע שָׁנִֽים׃",
+        english:
+          "Again the Israelites did evil in the sight of the LORD so He delivered them into the hand of Midian for seven years",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַתָּ֥עָז יַד־ מִדְיָ֖ן עַל־ יִשְׂרָאֵ֑ל מִפְּנֵ֨י מִדְיָ֜ן עָשֽׂוּ לָהֶ֣ם׀ בְּנֵ֣י יִשְׂרָאֵ֗ל אֶת־ הַמִּנְהָרוֹת֙ אֲשֶׁ֣ר בֶּֽהָרִ֔ים וְאֶת־ הַמְּעָר֖וֹת וְאֶת־ הַמְּצָדֽוֹת׃",
+        english:
+          "and the hand of Midian prevailed against Israel Because of the Midianites the Israelites prepared shelters for themselves in the mountains caves and strongholds",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְהָיָ֖ה אִם־ זָרַ֣ע יִשְׂרָאֵ֑ל וְעָלָ֨ה מִדְיָ֧ן וַֽעֲמָלֵ֛ק וּבְנֵי־ קֶ֖דֶם וְעָל֥וּ עָלָֽיו׃",
+        english:
+          "Whenever the Israelites planted their crops the Midianites Amalekites and other people of the east would come up and invade them",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיַּחֲנ֣וּ עֲלֵיהֶ֗ם וַיַּשְׁחִ֙יתוּ֙ אֶת־ יְב֣וּל הָאָ֔רֶץ עַד־ בּוֹאֲךָ֖ עַזָּ֑ה וְלֹֽא־ יַשְׁאִ֤ירוּ מִֽחְיָה֙ בְּיִשְׂרָאֵ֔ל וְשֶׂ֥ה וָשׁ֖וֹר וַחֲמֽוֹר׃",
+        english:
+          "encamping against them as far as Gaza and destroying the produce of the land They left Israel with no sustenance neither sheep nor oxen nor donkeys",
+      },
+      {
+        verse_number: 5,
+        original:
+          "כִּ֡י הֵם֩ וּמִקְנֵיהֶ֨ם יַעֲל֜וּ וְאָהֳלֵיהֶ֗ם יָבֹאוּ כְדֵֽי־ אַרְבֶּה֙ לָרֹ֔ב וְלָהֶ֥ם וְלִגְמַלֵּיהֶ֖ם אֵ֣ין מִסְפָּ֑ר וַיָּבֹ֥אוּ בָאָ֖רֶץ לְשַׁחֲתָֽהּ׃",
+        english:
+          "For the Midianites came with their livestock and their tents like a great swarm of locusts They and their camels were innumerable and they entered the land to ravage it",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיִּדַּ֧ל יִשְׂרָאֵ֛ל מְאֹ֖ד מִפְּנֵ֣י מִדְיָ֑ן וַיִּזְעֲק֥וּ בְנֵֽי־ יִשְׂרָאֵ֖ל אֶל־ יְהוָֽה׃פ",
+        english:
+          "Israel was greatly impoverished by Midian and the Israelites cried out to the LORD",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיְהִ֕י כִּֽי־ זָעֲק֥וּ בְנֵֽי־ יִשְׂרָאֵ֖ל אֶל־ יְהוָ֑ה עַ֖ל אֹד֥וֹת מִדְיָֽן׃",
+        english:
+          "Now when the Israelites cried out to the LORD because of Midian",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיִּשְׁלַ֧ח יְהוָ֛ה אִ֥ישׁ נָבִ֖יא אֶל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וַיֹּ֨אמֶר לָהֶ֜ם כֹּה־ אָמַ֥ר יְהוָ֣ה׀ אֱלֹהֵ֣י יִשְׂרָאֵ֗ל אָנֹכִ֞י הֶעֱלֵ֤יתִי אֶתְכֶם֙ מִמִּצְרַ֔יִם וָאֹצִ֥יא אֶתְכֶ֖ם מִבֵּ֥ית עֲבָדִֽים׃",
+        english:
+          "He sent them a prophet who told them This is what the LORD the God of Israel says I brought you up out of Egypt out of the house of slavery",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וָאַצִּ֤ל אֶתְכֶם֙ מִיַּ֣ד מִצְרַ֔יִם וּמִיַּ֖ד כָּל־ לֹחֲצֵיכֶ֑ם וָאֲגָרֵ֤שׁ אוֹתָם֙ מִפְּנֵיכֶ֔ם וָאֶתְּנָ֥ה לָכֶ֖ם אֶת־ אַרְצָֽם׃",
+        english:
+          "I delivered you out of the hands of Egypt and all your oppressors I drove them out before you and gave you their land",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וָאֹמְרָ֣ה לָכֶ֗ם אֲנִי֙ יְהוָ֣ה אֱלֹהֵיכֶ֔ם לֹ֤א תִֽירְאוּ֙ אֶת־ אֱלֹהֵ֣י הָאֱמֹרִ֔י אֲשֶׁ֥ר אַתֶּ֖ם יוֹשְׁבִ֣ים בְּאַרְצָ֑ם וְלֹ֥א שְׁמַעְתֶּ֖ם בְּקוֹלִֽי׃פ",
+        english:
+          "And I said to you I am the LORD your God You must not fear the gods of the Amorites in whose land you dwell But you did not obey Me",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיָּבֹ֞א מַלְאַ֣ךְ יְהוָ֗ה וַיֵּ֙שֶׁב֙ תַּ֤חַת הָֽאֵלָה֙ אֲשֶׁ֣ר בְּעָפְרָ֔ה אֲשֶׁ֥ר לְיוֹאָ֖שׁ אֲבִ֣י הָֽעֶזְרִ֑י וְגִדְע֣וֹן בְּנ֗וֹ חֹבֵ֤ט חִטִּים֙ בַּגַּ֔ת לְהָנִ֖יס מִפְּנֵ֥י מִדְיָֽן׃",
+        english:
+          "Then the angel of the LORD came and sat down under the oak in Ophrah that belonged to Joash the Abiezrite where his son Gideon was threshing wheat in a winepress to hide it from the Midianites",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֵּרָ֥א אֵלָ֖יו מַלְּאַ֣ךְ יְהוָ֑ה וַיֹּ֣אמֶר אֵלָ֔יו יְהוָ֥ה עִמְּךָ֖ גִּבּ֥וֹר הֶחָֽיִל׃",
+        english:
+          "And the angel of the LORD appeared to Gideon and said The LORD is with you O mighty man of valor",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיֹּ֨אמֶר אֵלָ֤יו גִּדְעוֹן֙ בִּ֣י אֲדֹנִ֔י וְיֵ֤שׁ יְהוָה֙ עִמָּ֔נוּ וְלָ֥מָּה מְצָאַ֖תְנוּ כָּל־ זֹ֑את וְאַיֵּ֣ה כָֽל־ נִפְלְאֹתָ֡יו אֲשֶׁר֩ סִפְּרוּ־ לָ֨נוּ אֲבוֹתֵ֜ינוּ לֵאמֹ֗ר הֲלֹ֤א מִמִּצְרַ֙יִם֙ הֶעֱלָ֣נוּ יְהוָ֔ה וְעַתָּה֙ נְטָשָׁ֣נוּ יְהוָ֔ה וַֽיִּתְּנֵ֖נוּ בְּכַף־ מִדְיָֽן׃",
+        english:
+          "Please my Lord Gideon replied if the LORD is with us why has all this happened to us And where are all His wonders of which our fathers told us saying Has not the LORD brought us up out of Egypt But now the LORD has forsaken us and delivered us into the hand of Midian",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיִּ֤פֶן אֵלָיו֙ יְהוָ֔ה וַיֹּ֗אמֶר לֵ֚ךְ בְּכֹחֲךָ֣ זֶ֔ה וְהוֹשַׁעְתָּ֥ אֶת־ יִשְׂרָאֵ֖ל מִכַּ֣ף מִדְיָ֑ן הֲלֹ֖א שְׁלַחְתִּֽיךָ׃",
+        english:
+          "The LORD turned to him and said Go in the strength you have and save Israel from the hand of Midian Am I not sending you",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיֹּ֤אמֶר אֵלָיו֙ בִּ֣י אֲדֹנָ֔י בַּמָּ֥ה אוֹשִׁ֖יעַ אֶת־ יִשְׂרָאֵ֑ל הִנֵּ֤ה אַלְפִּי֙ הַדַּ֣ל בִּמְנַשֶּׁ֔ה וְאָנֹכִ֥י הַצָּעִ֖יר בְּבֵ֥ית אָבִֽי׃",
+        english:
+          "Please my Lord Gideon replied how can I save Israel Indeed my clan is the weakest in Manasseh and I am the youngest in my father’s house",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיֹּ֤אמֶר אֵלָיו֙ יְהוָ֔ה כִּ֥י אֶהְיֶ֖ה עִמָּ֑ךְ וְהִכִּיתָ֥ אֶת־ מִדְיָ֖ן כְּאִ֥ישׁ אֶחָֽד׃",
+        english:
+          "Surely I will be with you the LORD replied and you will strike down all the Midianites as one man",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיֹּ֣אמֶר אֵלָ֔יו אִם־ נָ֛א מָצָ֥אתִי חֵ֖ן בְּעֵינֶ֑יךָ וְעָשִׂ֤יתָ לִּי֙ א֔וֹת שָׁאַתָּ֖ה מְדַבֵּ֥ר עִמִּֽי׃",
+        english:
+          "Gideon answered If I have found favor in Your sight give me a sign that it is You speaking with me",
+      },
+      {
+        verse_number: 18,
+        original:
+          "אַל־ נָ֨א תָמֻ֤שׁ מִזֶּה֙ עַד־ בֹּאִ֣י אֵלֶ֔יךָ וְהֹֽצֵאתִי֙ אֶת־ מִנְחָתִ֔י וְהִנַּחְתִּ֖י לְפָנֶ֑יךָ וַיֹּאמַ֕ר אָנֹכִ֥י אֵשֵׁ֖ב עַ֥ד שׁוּבֶֽךָ׃",
+        english:
+          "Please do not depart from this place until I return to You Let me bring my offering and set it before You And the LORD said I will stay until you return",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְגִדְע֣וֹן בָּ֗א וַיַּ֤עַשׂ גְּדִֽי־ עִזִּים֙ וְאֵיפַת־ קֶ֣מַח מַצּ֔וֹת הַבָּשָׂר֙ שָׂ֣ם בַּסַּ֔ל וְהַמָּרַ֖ק שָׂ֣ם בַּפָּר֑וּר וַיּוֹצֵ֥א אֵלָ֛יו אֶל־ תַּ֥חַת הָאֵלָ֖ה וַיַּגַּֽשׁ׃ס",
+        english:
+          "So Gideon went in and prepared a young goat and unleavened bread and an ephah of flour He placed the meat in a basket and the broth in a pot and brought them out to present to Him under the oak",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיֹּ֨אמֶר אֵלָ֜יו מַלְאַ֣ךְ הָאֱלֹהִ֗ים קַ֣ח אֶת־ הַבָּשָׂ֤ר וְאֶת־ הַמַּצּוֹת֙ וְהַנַּח֙ אֶל־ הַסֶּ֣לַע הַלָּ֔ז וְאֶת־ הַמָּרַ֖ק שְׁפ֑וֹךְ וַיַּ֖עַשׂ כֵּֽן׃",
+        english:
+          "And the angel of God said to him Take the meat and the unleavened bread lay them on this rock and pour out the broth And Gideon did so",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּשְׁלַ֞ח מַלְאַ֣ךְ יְהוָ֗ה אֶת־ קְצֵ֤ה הַמִּשְׁעֶ֙נֶת֙ אֲשֶׁ֣ר בְּיָד֔וֹ וַיִּגַּ֥ע בַּבָּשָׂ֖ר וּבַמַּצּ֑וֹת וַתַּ֨עַל הָאֵ֜שׁ מִן־ הַצּ֗וּר וַתֹּ֤אכַל אֶת־ הַבָּשָׂר֙ וְאֶת־ הַמַּצּ֔וֹת וּמַלְאַ֣ךְ יְהוָ֔ה הָלַ֖ךְ מֵעֵינָֽיו׃",
+        english:
+          "Then the angel of the LORD extended the tip of the staff that was in his hand and touched the meat and the unleavened bread And fire flared from the rock and consumed the meat and the unleavened bread Then the angel of the LORD vanished from his sight",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיַּ֣רְא גִּדְע֔וֹן כִּֽי־ מַלְאַ֥ךְ יְהוָ֖ה ה֑וּאס וַיֹּ֣אמֶר גִּדְע֗וֹן אֲהָהּ֙ אֲדֹנָ֣י יְהוִ֔ה כִּֽי־ עַל־ כֵּ֤ן רָאִ֙יתִי֙ מַלְאַ֣ךְ יְהוָ֔ה פָּנִ֖ים אֶל־ פָּנִֽים׃",
+        english:
+          "When Gideon realized that it was the angel of the LORD he said Oh no Lord GOD I have seen the angel of the LORD face to face",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיֹּ֨אמֶר ל֧וֹ יְהוָ֛ה שָׁל֥וֹם לְךָ֖ אַל־ תִּירָ֑א לֹ֖א תָּמֽוּת׃",
+        english:
+          "But the LORD said to him Peace be with you Do not be afraid for you will not die",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיִּבֶן֩ שָׁ֨ם גִּדְע֤וֹן מִזְבֵּ֙חַ֙ לַֽיהוָ֔ה וַיִּקְרָא־ ל֥וֹ יְהוָ֖ה שָׁל֑וֹם עַ֚ד הַיּ֣וֹם הַזֶּ֔ה עוֹדֶ֕נּוּ בְּעָפְרָ֖ת אֲבִ֥י הָעֶזְרִֽי׃פ",
+        english:
+          "So Gideon built an altar to the LORD there and called it The LORD Is Peace To this day it stands in Ophrah of the Abiezrites",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיְהִי֮ בַּלַּ֣יְלָה הַהוּא֒ וַיֹּ֧אמֶר ל֣וֹ יְהוָ֗ה קַ֤ח אֶת־ פַּר־ הַשּׁוֹר֙ אֲשֶׁ֣ר לְאָבִ֔יךָ וּפַ֥ר הַשֵּׁנִ֖י שֶׁ֣בַע שָׁנִ֑ים וְהָרַסְתָּ֗ אֶת־ מִזְבַּ֤ח הַבַּ֙עַל֙ אֲשֶׁ֣ר לְאָבִ֔יךָ וְאֶת־ הָאֲשֵׁרָ֥ה אֲשֶׁר־ עָלָ֖יו תִּכְרֹֽת׃",
+        english:
+          "On that very night the LORD said to Gideon Take your father’s young bull and a second bull seven years old tear down your father’s altar to Baal and cut down the Asherah pole beside it",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וּבָנִ֨יתָ מִזְבֵּ֜חַ לַיהוָ֣ה אֱלֹהֶ֗יךָ עַ֣ל רֹ֧אשׁ הַמָּע֛וֹז הַזֶּ֖ה בַּמַּֽעֲרָכָ֑ה וְלָֽקַחְתָּ֙ אֶת־ הַפָּ֣ר הַשֵּׁנִ֔י וְהַעֲלִ֣יתָ עוֹלָ֔ה בַּעֲצֵ֥י הָאֲשֵׁרָ֖ה אֲשֶׁ֥ר תִּכְרֹֽת׃",
+        english:
+          "Then build a proper altar to the LORD your God on the top of this stronghold And with the wood of the Asherah pole you cut down take the second bull and offer it as a burnt offering",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיִּקַּ֨ח גִּדְע֜וֹן עֲשָׂרָ֤ה אֲנָשִׁים֙ מֵֽעֲבָדָ֔יו וַיַּ֕עַשׂ כַּאֲשֶׁ֛ר דִּבֶּ֥ר אֵלָ֖יו יְהוָ֑ה וַיְהִ֡י כַּאֲשֶׁ֣ר יָרֵא֩ אֶת־ בֵּ֨ית אָבִ֜יו וְאֶת־ אַנְשֵׁ֥י הָעִ֛יר מֵעֲשׂ֥וֹת יוֹמָ֖ם וַיַּ֥עַשׂ לָֽיְלָה׃",
+        english:
+          "So Gideon took ten of his servants and did as the LORD had told him But because he was too afraid of his father’s household and the men of the city he did it by night rather than in the daytime",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיַּשְׁכִּ֜ימוּ אַנְשֵׁ֤י הָעִיר֙ בַּבֹּ֔קֶר וְהִנֵּ֤ה נֻתַּץ֙ מִזְבַּ֣ח הַבַּ֔עַל וְהָאֲשֵׁרָ֥ה אֲשֶׁר־ עָלָ֖יו כֹּרָ֑תָה וְאֵת֙ הַפָּ֣ר הַשֵּׁנִ֔י הֹֽעֲלָ֔ה עַל־ הַמִּזְבֵּ֖חַ הַבָּנֽוּי׃",
+        english:
+          "When the men of the city got up in the morning there was Baal’s altar torn down with the Asherah pole cut down beside it and the second bull offered up on the newly built altar",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיֹּֽאמְרוּ֙ אִ֣ישׁ אֶל־ רֵעֵ֔הוּ מִ֥י עָשָׂ֖ה הַדָּבָ֣ר הַזֶּ֑ה וַֽיִּדְרְשׁוּ֙ וַיְבַקְשׁ֔וּ וַיֹּ֣אמְר֔וּ גִּדְעוֹן֙ בֶּן־ יוֹאָ֔שׁ עָשָׂ֖ה הַדָּבָ֥ר הַזֶּֽה׃",
+        english:
+          "Who did this they said to one another And after they had investigated thoroughly they were told Gideon son of Joash did it",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיֹּ֨אמְר֜וּ אַנְשֵׁ֤י הָעִיר֙ אֶל־ יוֹאָ֔שׁ הוֹצֵ֥א אֶת־ בִּנְךָ֖ וְיָמֹ֑ת כִּ֤י נָתַץ֙ אֶת־ מִזְבַּ֣ח הַבַּ֔עַל וְכִ֥י כָרַ֖ת הָאֲשֵׁרָ֥ה אֲשֶׁר־ עָלָֽיו׃",
+        english:
+          "Then the men of the city said to Joash Bring out your son He must die because he has torn down Baal’s altar and cut down the Asherah pole beside it",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיֹּ֣אמֶר יוֹאָ֡שׁ לְכֹל֩ אֲשֶׁר־ עָמְד֨וּ עָלָ֜יו הַאַתֶּ֣ם׀ תְּרִיב֣וּן לַבַּ֗עַל אִם־ אַתֶּם֙ תּוֹשִׁיע֣וּן אוֹת֔וֹ אֲשֶׁ֨ר יָרִ֥יב ל֛וֹ יוּמַ֖ת עַד־ הַבֹּ֑קֶר אִם־ אֱלֹהִ֥ים הוּא֙ יָ֣רֶב ל֔וֹ כִּ֥י נָתַ֖ץ אֶֽת־ מִזְבְּחֽוֹ׃",
+        english:
+          "But Joash said to all who stood against him Are you contending for Baal Are you trying to save him Whoever pleads his case will be put to death by morning If Baal is a god let him contend for himself with the one who has torn down his altar",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיִּקְרָא־ ל֥וֹ בַיּוֹם־ הַה֖וּא יְרֻבַּ֣עַל לֵאמֹ֑ר יָ֤רֶב בּוֹ֙ הַבַּ֔עַל כִּ֥י נָתַ֖ץ אֶֽת־ מִזְבְּחֽוֹ׃פ",
+        english:
+          "So on that day Gideon was called Jerubbaal that is to say Let Baal contend with him because he had torn down Baal’s altar",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וְכָל־ מִדְיָ֧ן וַעֲמָלֵ֛ק וּבְנֵי־ קֶ֖דֶם נֶאֶסְפ֣וּ יַחְדָּ֑ו וַיַּעַבְר֥וּ וַֽיַּחֲנ֖וּ בְּעֵ֥מֶק יִזְרְעֶֽאל׃",
+        english:
+          "Then all the Midianites Amalekites and other people of the east gathered together crossed over the Jordan and camped in the Valley of Jezreel",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְר֣וּחַ יְהוָ֔ה לָבְשָׁ֖ה אֶת־ גִּדְע֑וֹן וַיִּתְקַע֙ בַּשּׁוֹפָ֔ר וַיִזָּעֵ֥ק אֲבִיעֶ֖זֶר אַחֲרָֽיו׃",
+        english:
+          "So the Spirit of the LORD came upon Gideon who blew the ram’s horn and rallied the Abiezrites behind him",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וּמַלְאָכִים֙ שָׁלַ֣ח בְּכָל־ מְנַשֶּׁ֔ה וַיִזָּעֵ֥ק גַּם־ ה֖וּא אַחֲרָ֑יו וּמַלְאָכִ֣ים שָׁלַ֗ח בְּאָשֵׁ֤ר וּבִזְבֻלוּן֙ וּבְנַפְתָּלִ֔י וַֽיַּעֲל֖וּ לִקְרָאתָֽם׃",
+        english:
+          "Calling them to arms Gideon sent messengers throughout Manasseh as well as Asher Zebulun and Naphtali so that they came up to meet him",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיֹּ֥אמֶר גִּדְע֖וֹן אֶל־ הָאֱלֹהִ֑ים אִם־ יֶשְׁךָ֞ מוֹשִׁ֧יעַ בְּיָדִ֛י אֶת־ יִשְׂרָאֵ֖ל כַּאֲשֶׁ֥ר דִּבַּֽרְתָּ׃",
+        english:
+          "Then Gideon said to God If You are going to save Israel by my hand as You have said",
+      },
+      {
+        verse_number: 37,
+        original:
+          "הִנֵּ֣ה אָנֹכִ֗י מַצִּ֛יג אֶת־ גִּזַּ֥ת הַצֶּ֖מֶר בַּגֹּ֑רֶן אִ֡ם טַל֩ יִהְיֶ֨ה עַֽל־ הַגִּזָּ֜ה לְבַדָּ֗הּ וְעַל־ כָּל־ הָאָ֙רֶץ֙ חֹ֔רֶב וְיָדַעְתִּ֗י כִּֽי־ תוֹשִׁ֧יעַ בְּיָדִ֛י אֶת־ יִשְׂרָאֵ֖ל כַּאֲשֶׁ֥ר דִּבַּֽרְתָּ׃",
+        english:
+          "then behold I will place a fleece of wool on the threshing floor If there is dew only on the fleece and all the ground is dry then I will know that You are going to save Israel by my hand as You have said",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וַיְהִי־ כֵ֕ן וַיַּשְׁכֵּם֙ מִֽמָּחֳרָ֔ת וַיָּ֖זַר אֶת־ הַגִּזָּ֑ה וַיִּ֤מֶץ טַל֙ מִן־ הַגִּזָּ֔ה מְל֥וֹא הַסֵּ֖פֶל מָֽיִם׃",
+        english:
+          "And that is what happened When Gideon arose the next morning he squeezed the fleece and wrung out the dew a bowlful of water",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וַיֹּ֤אמֶר גִּדְעוֹן֙ אֶל־ הָ֣אֱלֹהִ֔ים אַל־ יִ֤חַר אַפְּךָ֙ בִּ֔י וַאֲדַבְּרָ֖ה אַ֣ךְ הַפָּ֑עַם אֲנַסֶּ֤ה נָּא־ רַק־ הַפַּ֙עַם֙ בַּגִּזָּ֔ה יְהִי־ נָ֨א חֹ֤רֶב אֶל־ הַגִּזָּה֙ לְבַדָּ֔הּ וְעַל־ כָּל־ הָאָ֖רֶץ יִֽהְיֶה־ טָּֽל׃",
+        english:
+          "Then Gideon said to God Do not be angry with me let me speak one more time Please allow me one more test with the fleece This time let it be dry and the ground covered with dew",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וַיַּ֧עַשׂ אֱלֹהִ֛ים כֵּ֖ן בַּלַּ֣יְלָה הַה֑וּא וַיְהִי־ חֹ֤רֶב אֶל־ הַגִּזָּה֙ לְבַדָּ֔הּ וְעַל־ כָּל־ הָאָ֖רֶץ הָ֥יָה טָֽל׃פ",
+        english:
+          "And that night God did so Only the fleece was dry and dew covered the ground",
+      },
+    ],
+  };
+  return chapter;
+}

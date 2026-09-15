@@ -1,0 +1,201 @@
+export function bible_glyph_chapter_rosetta_lines_jos06() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JOS06",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וִֽירִיחוֹ֙ סֹגֶ֣רֶת וּמְסֻגֶּ֔רֶת מִפְּנֵ֖י בְּנֵ֣י יִשְׂרָאֵ֑ל אֵ֥ין יוֹצֵ֖א וְאֵ֥ין בָּֽא׃ס",
+        english:
+          "Now Jericho was tightly shut up because of the Israelites No one went out and no one came in",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ יְהוֹשֻׁ֔עַ רְאֵה֙ נָתַ֣תִּי בְיָֽדְךָ֔ אֶת־ יְרִיח֖וֹ וְאֶת־ מַלְכָּ֑הּ גִּבּוֹרֵ֖י הֶחָֽיִל׃",
+        english:
+          "And the LORD said to Joshua Behold I have delivered Jericho into your hand along with its king and its mighty men of valor",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְסַבֹּתֶ֣ם אֶת־ הָעִ֗יר כֹּ֚ל אַנְשֵׁ֣י הַמִּלְחָמָ֔ה הַקֵּ֥יף אֶת־ הָעִ֖יר פַּ֣עַם אֶחָ֑ת כֹּ֥ה תַעֲשֶׂ֖ה שֵׁ֥שֶׁת יָמִֽים׃",
+        english:
+          "March around the city with all the men of war circling the city one time Do this for six days",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְשִׁבְעָ֣ה כֹהֲנִ֡ים יִשְׂאוּ֩ שִׁבְעָ֨ה שׁוֹפְר֤וֹת הַיּֽוֹבְלִים֙ לִפְנֵ֣י הָאָר֔וֹן וּבַיּוֹם֙ הַשְּׁבִיעִ֔י תָּסֹ֥בּוּ אֶת־ הָעִ֖יר שֶׁ֣בַע פְּעָמִ֑ים וְהַכֹּ֣הֲנִ֔ים יִתְקְע֖וּ בַּשּׁוֹפָרֽוֹת׃",
+        english:
+          "Have seven priests carry seven rams’ horns in front of the ark Then on the seventh day march around the city seven times while the priests blow the horns",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְהָיָ֞ה בִּמְשֹׁ֣ךְ׀ בְּקֶ֣רֶן הַיּוֹבֵ֗ל בְּשָׁמְעֲכֶם אֶת־ ק֣וֹל הַשּׁוֹפָ֔ר יָרִ֥יעוּ כָל־ הָעָ֖ם תְּרוּעָ֣ה גְדוֹלָ֑ה וְנָ֨פְלָ֜ה חוֹמַ֤ת הָעִיר֙ תַּחְתֶּ֔יהָ וְעָל֥וּ הָעָ֖ם אִ֥ישׁ נֶגְדּֽוֹ׃",
+        english:
+          "And when there is a long blast of the ram’s horn and you hear its sound have all the people give a mighty shout Then the wall of the city will collapse and all your people will charge straight into the city",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיִּקְרָ֞א יְהוֹשֻׁ֤עַ בִּן־ נוּן֙ אֶל־ הַכֹּ֣הֲנִ֔ים וַיֹּ֣אמֶר אֲלֵהֶ֔ם שְׂא֖וּ אֶת־ אֲר֣וֹן הַבְּרִ֑ית וְשִׁבְעָ֣ה כֹֽהֲנִ֗ים יִשְׂאוּ֙ שִׁבְעָ֤ה שֽׁוֹפְרוֹת֙ יוֹבְלִ֔ים לִפְנֵ֖י אֲר֥וֹן יְהוָֽה׃",
+        english:
+          "So Joshua son of Nun summoned the priests and said Take up the ark of the covenant and have seven priests carry seven rams’ horns in front of the ark of the LORD",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיֹּאמְרוּ אֶל־ הָעָ֔ם עִבְר֖וּ וְסֹ֣בּוּ אֶת־ הָעִ֑יר וְהֶ֣חָל֔וּץ יַעֲבֹ֕ר לִפְנֵ֖י אֲר֥וֹן יְהוָֽה׃",
+        english:
+          "And he told the people Advance and march around the city with the armed troops going ahead of the ark of the LORD",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיְהִ֗י כֶּאֱמֹ֣ר יְהוֹשֻׁעַ֮ אֶל־ הָעָם֒ וְשִׁבְעָ֣ה הַכֹּהֲנִ֡ים נֹשְׂאִים֩ שִׁבְעָ֨ה שׁוֹפְר֤וֹת הַיּֽוֹבְלִים֙ לִפְנֵ֣י יְהוָ֔ה עָבְר֕וּ וְתָקְע֖וּ בַּשּֽׁוֹפָר֑וֹת וַֽאֲרוֹן֙ בְּרִ֣ית יְהוָ֔ה הֹלֵ֖ךְ אַחֲרֵיהֶֽם׃",
+        english:
+          "After Joshua had spoken to the people seven priests carrying seven rams’ horns before the LORD advanced and blew the horns and the ark of the covenant of the LORD followed them",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהֶחָל֣וּץ הֹלֵ֔ךְ לִפְנֵי֙ הַכֹּ֣הֲנִ֔ים תָּקְעוּ הַשּֽׁוֹפָר֑וֹת וְהַֽמְאַסֵּ֗ף הֹלֵךְ֙ אַחֲרֵ֣י הָאָר֔וֹן הָל֖וֹךְ וְתָק֥וֹעַ בַּשּׁוֹפָרֽוֹת׃",
+        english:
+          "While the horns continued to sound the armed troops marched ahead of the priests who blew the horns and the rear guard followed the ark",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְאֶת־ הָעָם֩ צִוָּ֨ה יְהוֹשֻׁ֜עַ לֵאמֹ֗ר לֹ֤א תָרִ֙יעוּ֙ וְלֹֽא־ תַשְׁמִ֣יעוּ אֶת־ קוֹלְכֶ֔ם וְלֹא־ יֵצֵ֥א מִפִּיכֶ֖ם דָּבָ֑ר עַ֠ד י֣וֹם אָמְרִ֧י אֲלֵיכֶ֛ם הָרִ֖יעוּ וַהֲרִיעֹתֶֽם׃",
+        english:
+          "But Joshua had commanded the people Do not give a battle cry or let your voice be heard do not let one word come out of your mouth until the day I tell you to shout Then you are to shout",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיַּסֵּ֤ב אֲרוֹן־ יְהוָה֙ אֶת־ הָעִ֔יר הַקֵּ֖ף פַּ֣עַם אֶחָ֑ת וַיָּבֹ֙אוּ֙ הַֽמַּחֲנֶ֔ה וַיָּלִ֖ינוּ בַּֽמַּחֲנֶֽה׃פ",
+        english:
+          "So he had the ark of the LORD carried around the city circling it once And the people returned to the camp and spent the night there",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיַּשְׁכֵּ֥ם יְהוֹשֻׁ֖עַ בַּבֹּ֑קֶר וַיִּשְׂא֥וּ הַכֹּהֲנִ֖ים אֶת־ אֲר֥וֹן יְהוָֽה׃",
+        english:
+          "Joshua got up early the next morning and the priests took the ark of the LORD",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְשִׁבְעָ֣ה הַכֹּהֲנִ֡ים נֹשְׂאִים֩ שִׁבְעָ֨ה שׁוֹפְר֜וֹת הַיֹּבְלִ֗ים לִפְנֵי֙ אֲר֣וֹן יְהוָ֔ה הֹלְכִ֣ים הָל֔וֹךְ וְתָקְע֖וּ בַּשּׁוֹפָר֑וֹת וְהֶחָלוּץ֙ הֹלֵ֣ךְ לִפְנֵיהֶ֔ם וְהַֽמְאַסֵּ֗ף הֹלֵךְ֙ אַֽחֲרֵי֙ אֲר֣וֹן יְהוָ֔ה הוֹלֵךְ וְתָק֥וֹעַ בַּשּׁוֹפָרֽוֹת׃",
+        english:
+          "And the seven priests carrying seven rams’ horns kept marching ahead of the ark of the LORD and blowing the horns The armed troops went in front of them and the rear guard followed the ark of the LORD while the horns kept sounding",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיָּסֹ֨בּוּ אֶת־ הָעִ֜יר בַּיּ֤וֹם הַשֵּׁנִי֙ פַּ֣עַם אַחַ֔ת וַיָּשֻׁ֖בוּ הַֽמַּחֲנֶ֑ה כֹּ֥ה עָשׂ֖וּ שֵׁ֥שֶׁת יָמִֽים׃",
+        english:
+          "So on the second day they marched around the city once and returned to the camp They did this for six days",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיְהִ֣י׀ בַּיּ֣וֹם הַשְּׁבִיעִ֗י וַיַּשְׁכִּ֙מוּ֙ כַּעֲל֣וֹת הַשַּׁ֔חַר וַיָּסֹ֧בּוּ אֶת־ הָעִ֛יר כַּמִּשְׁפָּ֥ט הַזֶּ֖ה שֶׁ֣בַע פְּעָמִ֑ים רַ֚ק בַּיּ֣וֹם הַה֔וּא סָבְב֥וּ אֶת־ הָעִ֖יר שֶׁ֥בַע פְּעָמִֽים׃",
+        english:
+          "Then on the seventh day they got up at dawn and marched around the city seven times in the same manner That was the only day they circled the city seven times",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיְהִי֙ בַּפַּ֣עַם הַשְּׁבִיעִ֔ית תָּקְע֥וּ הַכֹּהֲנִ֖ים בַּשּׁוֹפָר֑וֹת וַיֹּ֨אמֶר יְהוֹשֻׁ֤עַ אֶל־ הָעָם֙ הָרִ֔יעוּ כִּֽי־ נָתַ֧ן יְהוָ֛ה לָכֶ֖ם אֶת־ הָעִֽיר׃",
+        english:
+          "After the seventh time around the priests blew the horns and Joshua commanded the people Shout For the LORD has given you the city",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהָיְתָ֨ה הָעִ֥יר חֵ֛רֶם הִ֥יא וְכָל־ אֲשֶׁר־ בָּ֖הּ לַֽיהוָ֑ה רַק֩ רָחָ֨ב הַזּוֹנָ֜ה תִּֽחְיֶ֗ה הִ֚יא וְכָל־ אֲשֶׁ֣ר אִתָּ֣הּ בַּבַּ֔יִת כִּ֣י הֶחְבְּאַ֔תָה אֶת־ הַמַּלְאָכִ֖ים אֲשֶׁ֥ר שָׁלָֽחְנוּ׃",
+        english:
+          "Now the city and everything in it must be devoted to the LORD for destruction Only Rahab the prostitute and all those with her in her house will live because she hid the spies we sent",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְרַק־ אַתֶּם֙ שִׁמְר֣וּ מִן־ הַחֵ֔רֶם פֶּֽן־ תַּחֲרִ֖ימוּ וּלְקַחְתֶּ֣ם מִן־ הַחֵ֑רֶם וְשַׂמְתֶּ֞ם אֶת־ מַחֲנֵ֤ה יִשְׂרָאֵל֙ לְחֵ֔רֶם וַעֲכַרְתֶּ֖ם אוֹתֽוֹ׃",
+        english:
+          "But keep away from the things devoted to destruction lest you yourself be set apart for destruction If you take any of these you will set apart the camp of Israel for destruction and bring disaster upon it",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְכֹ֣ל׀ כֶּ֣סֶף וְזָהָ֗ב וּכְלֵ֤י נְחֹ֙שֶׁת֙ וּבַרְזֶ֔ל קֹ֥דֶשׁ ה֖וּא לַֽיהוָ֑ה אוֹצַ֥ר יְהוָ֖ה יָבֽוֹא׃",
+        english:
+          "For all the silver and gold and all the articles of bronze and iron are holy to the LORD they must go into His treasury",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיָּ֣רַע הָעָ֔ם וַֽיִּתְקְע֖וּ בַּשֹּֽׁפָר֑וֹת וַיְהִי֩ כִשְׁמֹ֨עַ הָעָ֜ם אֶת־ ק֣וֹל הַשּׁוֹפָ֗ר וַיָּרִ֤יעוּ הָעָם֙ תְּרוּעָ֣ה גְדוֹלָ֔ה וַתִּפֹּ֨ל הַֽחוֹמָ֜ה תַּחְתֶּ֗יהָ וַיַּ֨עַל הָעָ֤ם הָעִ֙ירָה֙ אִ֣ישׁ נֶגְדּ֔וֹ וַֽיִּלְכְּד֖וּ אֶת־ הָעִֽיר׃",
+        english:
+          "So when the rams’ horns sounded the people shouted When they heard the blast of the horn the people gave a great shout and the wall collapsed Then all the people charged straight into the city and captured it",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַֽיַּחֲרִ֙ימוּ֙ אֶת־ כָּל־ אֲשֶׁ֣ר בָּעִ֔יר מֵאִישׁ֙ וְעַד־ אִשָּׁ֔ה מִנַּ֖עַר וְעַד־ זָקֵ֑ן וְעַ֨ד שׁ֥וֹר וָשֶׂ֛ה וַחֲמ֖וֹר לְפִי־ חָֽרֶב׃",
+        english:
+          "With the edge of the sword they devoted to destruction everything in the city man and woman young and old oxen sheep and donkeys",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְלִשְׁנַ֨יִם הָאֲנָשִׁ֜ים הַֽמְרַגְּלִ֤ים אֶת־ הָאָ֙רֶץ֙ אָמַ֣ר יְהוֹשֻׁ֔עַ בֹּ֖אוּ בֵּית־ הָאִשָּׁ֣ה הַזּוֹנָ֑ה וְהוֹצִ֨יאוּ מִשָּׁ֤ם אֶת־ הָֽאִשָּׁה֙ וְאֶת־ כָּל־ אֲשֶׁר־ לָ֔הּ כַּאֲשֶׁ֥ר נִשְׁבַּעְתֶּ֖ם לָֽהּ׃",
+        english:
+          "Meanwhile, Joshua told the two men who had spied out the land Go into the house of the prostitute and bring out the woman and all who are with her just as you promised her",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיָּבֹ֜אוּ הַנְּעָרִ֣ים הַֽמְרַגְּלִ֗ים וַיֹּצִ֡יאוּ אֶת־ רָ֠חָב וְאֶת־ אָבִ֨יהָ וְאֶת־ אִמָּ֤הּ וְאֶת־ אַחֶ֙יהָ֙ וְאֶת־ כָּל־ אֲשֶׁר־ לָ֔הּ וְאֵ֥ת כָּל־ מִשְׁפְּחוֹתֶ֖יהָ הוֹצִ֑יאוּ וַיַּ֨נִּיח֔וּם מִח֖וּץ לְמַחֲנֵ֥ה יִשְׂרָאֵֽל׃",
+        english:
+          "So the young spies went in and brought out Rahab her father and mother and brothers and all who belonged to her They brought out her whole family and settled them outside the camp of Israel",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְהָעִ֛יר שָׂרְפ֥וּ בָאֵ֖שׁ וְכָל־ אֲשֶׁר־ בָּ֑הּ רַ֣ק׀ הַכֶּ֣סֶף וְהַזָּהָ֗ב וּכְלֵ֤י הַנְּחֹ֙שֶׁת֙ וְהַבַּרְזֶ֔ל נָתְנ֖וּ אוֹצַ֥ר בֵּית־ יְהוָֽה׃",
+        english:
+          "Then the Israelites burned up the city and everything in it However they put the silver and gold and articles of bronze and iron into the treasury of the LORD’s house",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְֽאֶת־ רָחָ֣ב הַ֠זּוֹנָה וְאֶת־ בֵּ֨ית אָבִ֤יהָ וְאֶת־ כָּל־ אֲשֶׁר־ לָהּ֙ הֶחֱיָ֣ה יְהוֹשֻׁ֔עַ וַתֵּ֙שֶׁב֙ בְּקֶ֣רֶב יִשְׂרָאֵ֔ל עַ֖ד הַיּ֣וֹם הַזֶּ֑ה כִּ֤י הֶחְבִּ֙יאָה֙ אֶת־ הַמַּלְאָכִ֔ים אֲשֶׁר־ שָׁלַ֥ח יְהוֹשֻׁ֖עַ לְרַגֵּ֥ל אֶת־ יְרִיחֽוֹ׃פ",
+        english:
+          "And Joshua spared Rahab the prostitute with her father’s household and all who belonged to her because she hid the men Joshua had sent to spy out Jericho So she has lived among the Israelites to this day",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַיַּשְׁבַּ֣ע יְהוֹשֻׁ֔עַ בָּעֵ֥ת הַהִ֖יא לֵאמֹ֑ר אָר֨וּר הָאִ֜ישׁ לִפְנֵ֣י יְהוָ֗ה אֲשֶׁ֤ר יָקוּם֙ וּבָנָ֞ה אֶת־ הָעִ֤יר הַזֹּאת֙ אֶת־ יְרִיח֔וֹ בִּבְכֹר֣וֹ יְיַסְּדֶ֔נָּה וּבִצְעִיר֖וֹ יַצִּ֥יב דְּלָתֶֽיהָ׃",
+        english:
+          "At that time Joshua invoked this solemn oath Cursed before the LORD is the man who rises up and rebuilds this city Jericho at the cost of his firstborn he will lay its foundations at the cost of his youngest he will set up its gates",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיְהִ֥י יְהוָ֖ה אֶת־ יְהוֹשֻׁ֑עַ וַיְהִ֥י שָׁמְע֖וֹ בְּכָל־ הָאָֽרֶץ׃",
+        english:
+          "So the LORD was with Joshua and his fame spread throughout the land",
+      },
+    ],
+  };
+  return chapter;
+}

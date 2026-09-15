@@ -1,0 +1,290 @@
+export function bible_glyph_chapter_rosetta_lines_job38() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JOB38",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיַּֽעַן־ יְהוָ֣ה אֶת־ אִ֭יּוֹב מִנ הַסְּעָרָה וַיֹּאמַֽר׃",
+        english: "Then the LORD answered Job out of the whirlwind and said",
+      },
+      {
+        verse_number: 2,
+        original: "מִ֤י זֶ֨ה׀ מַחְשִׁ֖יךְ עֵצָ֥ה בְמִלִּ֗ין בְּֽלִי־ דָֽעַת׃",
+        english:
+          "Who is this who obscures My counsel by words without knowledge",
+      },
+      {
+        verse_number: 3,
+        original:
+          "אֱזָר־ נָ֣א כְגֶ֣בֶר חֲלָצֶ֑יךָ וְ֝אֶשְׁאָלְךָ֗ וְהוֹדִיעֵֽנִי׃",
+        english:
+          "Now brace yourself like a man I will question you and you shall inform Me",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אֵיפֹ֣ה הָ֭יִיתָ בְּיָסְדִי־ אָ֑רֶץ הַ֝גֵּ֗ד אִם־ יָדַ֥עְתָּ בִינָֽה׃",
+        english:
+          "Where were you when I laid the foundations of the earth Tell Me if you have understanding",
+      },
+      {
+        verse_number: 5,
+        original:
+          "מִי־ שָׂ֣ם מְ֭מַדֶּיהָ כִּ֣י תֵדָ֑ע א֤וֹ מִֽי־ נָטָ֖ה עָלֶ֣יהָ קָּֽו׃",
+        english:
+          "Who fixed its measurements Surely you know Or who stretched a measuring line across it",
+      },
+      {
+        verse_number: 6,
+        original:
+          "עַל־ מָ֭ה אֲדָנֶ֣יהָ הָטְבָּ֑עוּ א֥וֹ מִֽי־ יָ֝רָ֗ה אֶ֣בֶן פִּנָּתָֽהּ׃",
+        english: "On what were its foundations set or who laid its cornerstone",
+      },
+      {
+        verse_number: 7,
+        original:
+          "בְּרָן־ יַ֭חַד כּ֣וֹכְבֵי בֹ֑קֶר וַ֝יָּרִ֗יעוּ כָּל־ בְּנֵ֥י אֱלֹהִֽים׃",
+        english:
+          "while the morning stars sang together and all the sons of God shouted for joy",
+      },
+      {
+        verse_number: 8,
+        original: "וַיָּ֣סֶךְ בִּדְלָתַ֣יִם יָ֑ם בְּ֝גִיח֗וֹ מֵרֶ֥חֶם יֵצֵֽא׃",
+        english:
+          "Who enclosed the sea behind doors when it burst forth from the womb",
+      },
+      {
+        verse_number: 9,
+        original: "בְּשׂוּמִ֣י עָנָ֣ן לְבֻשׁ֑וֹ וַ֝עֲרָפֶ֗ל חֲתֻלָּתֽוֹ׃",
+        english:
+          "when I made the clouds its garment and thick darkness its blanket",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וָאֶשְׁבֹּ֣ר עָלָ֣יו חֻקִּ֑י וָֽ֝אָשִׂ֗ים בְּרִ֣יחַ וּדְלָתָֽיִם׃",
+        english:
+          "when I fixed its boundaries and set in place its bars and doors",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וָאֹמַ֗ר עַד־ פֹּ֣ה תָ֭בוֹא וְלֹ֣א תֹסִ֑יף וּפֹ֥א־ יָ֝שִׁ֗ית בִּגְא֥וֹן גַּלֶּֽיךָ׃",
+        english:
+          "and I declared You may come this far but no farther here your proud waves must stop",
+      },
+      {
+        verse_number: 12,
+        original:
+          "הְֽ֭מִיָּמֶיךָ צִוִּ֣יתָ בֹּ֑קֶר יִדַּעְתָּה שַׁחַר מְקֹמֽוֹ׃",
+        english:
+          "In your days have you commanded the morning or assigned the dawn its place",
+      },
+      {
+        verse_number: 13,
+        original:
+          "לֶ֭אֱחֹז בְּכַנְפ֣וֹת הָאָ֑רֶץ וְיִנָּעֲר֖וּ רְשָׁעִ֣ים מִמֶּֽנָּה׃",
+        english:
+          "that it might spread to the ends of the earth and shake the wicked out of it",
+      },
+      {
+        verse_number: 14,
+        original:
+          "תִּ֭תְהַפֵּךְ כְּחֹ֣מֶר חוֹתָ֑ם וְ֝יִֽתְיַצְּב֗וּ כְּמ֣וֹ לְבֽוּשׁ׃",
+        english:
+          "The earth takes shape like clay under a seal its hills stand out like the folds of a garment",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְיִמָּנַ֣ע מֵרְשָׁעִ֣ים אוֹרָ֑ם וּזְר֥וֹעַ רָ֝מָ֗ה תִּשָּׁבֵֽר׃",
+        english:
+          "Light is withheld from the wicked and their upraised arm is broken",
+      },
+      {
+        verse_number: 16,
+        original:
+          "הֲ֭בָאתָ עַד־ נִבְכֵי־ יָ֑ם וּבְחֵ֥קֶר תְּ֝ה֗וֹם הִתְהַלָּֽכְתָּ׃",
+        english:
+          "Have you journeyed to the vents of the sea or walked in the trenches of the deep",
+      },
+      {
+        verse_number: 17,
+        original:
+          "הֲנִגְל֣וּ לְ֭ךָ שַׁעֲרֵי־ מָ֑וֶת וְשַׁעֲרֵ֖י צַלְמָ֣וֶת תִּרְאֶֽה׃",
+        english:
+          "Have the gates of death been revealed to you Have you seen the gates of the shadow of death",
+      },
+      {
+        verse_number: 18,
+        original:
+          "הִ֭תְבֹּנַנְתָּ עַד־ רַחֲבֵי־ אָ֑רֶץ הַ֝גֵּ֗ד אִם־ יָדַ֥עְתָּ כֻלָּֽהּ׃",
+        english:
+          "Have you surveyed the extent of the earth Tell Me if you know all this",
+      },
+      {
+        verse_number: 19,
+        original:
+          "אֵי־ זֶ֣ה הַ֭דֶּרֶךְ יִשְׁכָּן־ א֑וֹר וְ֝חֹ֗שֶׁךְ אֵי־ זֶ֥ה מְקֹמֽוֹ׃",
+        english:
+          "Where is the way to the home of light Do you know where darkness resides",
+      },
+      {
+        verse_number: 20,
+        original:
+          "כִּ֣י תִ֭קָּחֶנּוּ אֶל־ גְּבוּל֑וֹ וְכִֽי־ תָ֝בִ֗ין נְתִיב֥וֹת בֵּיתֽוֹ׃",
+        english:
+          "so you can lead it back to its border Do you know the paths to its home",
+      },
+      {
+        verse_number: 21,
+        original:
+          "יָ֭דַעְתָּ כִּי־ אָ֣ז תִּוָּלֵ֑ד וּמִסְפַּ֖ר יָמֶ֣יךָ רַבִּֽים׃",
+        english:
+          "Surely you know for you were already born And the number of your days is great",
+      },
+      {
+        verse_number: 22,
+        original:
+          "הֲ֭בָאתָ אֶל־ אֹצְר֣וֹת שָׁ֑לֶג וְאֹצְר֖וֹת בָּרָ֣ד תִּרְאֶֽה׃",
+        english:
+          "Have you entered the storehouses of snow or observed the storehouses of hail",
+      },
+      {
+        verse_number: 23,
+        original:
+          "אֲשֶׁר־ חָשַׂ֥כְתִּי לְעֶת־ צָ֑ר לְי֥וֹם קְ֝רָ֗ב וּמִלְחָמָֽה׃",
+        english:
+          "which I hold in reserve for times of trouble for the day of war and battle",
+      },
+      {
+        verse_number: 24,
+        original:
+          "אֵי־ זֶ֣ה הַ֭דֶּרֶךְ יֵחָ֣לֶק א֑וֹר יָפֵ֖ץ קָדִ֣ים עֲלֵי־ אָֽרֶץ׃",
+        english:
+          "In which direction is the lightning dispersed or the east wind scattered over the earth",
+      },
+      {
+        verse_number: 25,
+        original:
+          "מִֽי־ פִלַּ֣ג לַשֶּׁ֣טֶף תְּעָלָ֑ה וְ֝דֶ֗רֶךְ לַחֲזִ֥יז קֹלֽוֹת׃",
+        english:
+          "Who cuts a channel for the flood or clears a path for the thunderbolt",
+      },
+      {
+        verse_number: 26,
+        original:
+          "לְ֭הַמְטִיר עַל־ אֶ֣רֶץ לֹא־ אִ֑ישׁ מִ֝דְבָּ֗ר לֹא־ אָדָ֥ם בּֽוֹ׃",
+        english:
+          "to bring rain on a barren land on a desert where no man lives",
+      },
+      {
+        verse_number: 27,
+        original:
+          "לְהַשְׂבִּ֣יעַ שֹׁ֭אָה וּמְשֹׁאָ֑ה וּ֝לְהַצְמִ֗יחַ מֹ֣צָא דֶֽשֶׁא׃",
+        english:
+          "to satisfy the parched wasteland and make it sprout with tender grass",
+      },
+      {
+        verse_number: 28,
+        original: "הֲיֵשׁ־ לַמָּטָ֥ר אָ֑ב א֥וֹ מִי־ ה֝וֹלִ֗יד אֶגְלֵי־ טָֽל׃",
+        english:
+          "Does the rain have a father Who has begotten the drops of dew",
+      },
+      {
+        verse_number: 29,
+        original:
+          "מִבֶּ֣טֶן מִ֭י יָצָ֣א הַקָּ֑רַח וּכְפֹ֥ר שָׁ֝מַיִם מִ֣י יְלָדֽוֹ׃",
+        english:
+          "From whose womb does the ice emerge Who gives birth to the frost from heaven",
+      },
+      {
+        verse_number: 30,
+        original:
+          "כָּ֭אֶבֶן מַ֣יִם יִתְחַבָּ֑אוּ וּפְנֵ֥י תְ֝ה֗וֹם יִתְלַכָּֽדוּ׃",
+        english:
+          "when the waters become hard as stone and the surface of the deep is frozen",
+      },
+      {
+        verse_number: 31,
+        original:
+          "הַֽ֭תְקַשֵּׁר מַעֲדַנּ֣וֹת כִּימָ֑ה אֽוֹ־ מֹשְׁכ֖וֹת כְּסִ֣יל תְּפַתֵּֽחַ׃",
+        english:
+          "Can you bind the chains of the Pleiades or loosen the belt of Orion",
+      },
+      {
+        verse_number: 32,
+        original:
+          "הֲתֹצִ֣יא מַזָּר֣וֹת בְּעִתּ֑וֹ וְ֝עַ֗יִשׁ עַל־ בָּנֶ֥יהָ תַנְחֵֽם׃",
+        english:
+          "Can you bring forth the constellations in their seasons or lead out the Bear and her cubs",
+      },
+      {
+        verse_number: 33,
+        original:
+          "הֲ֭יָדַעְתָּ חֻקּ֣וֹת שָׁמָ֑יִם אִם־ תָּשִׂ֖ים מִשְׁטָר֣וֹ בָאָֽרֶץ׃",
+        english:
+          "Do you know the laws of the heavens Can you set their dominion over the earth",
+      },
+      {
+        verse_number: 34,
+        original: "הֲתָרִ֣ים לָעָ֣ב קוֹלֶ֑ךָ וְֽשִׁפְעַת־ מַ֥יִם תְּכַסֶּֽךָּ׃",
+        english:
+          "Can you command the clouds so that a flood of water covers you",
+      },
+      {
+        verse_number: 35,
+        original:
+          "הַֽתְשַׁלַּ֣ח בְּרָקִ֣ים וְיֵלֵ֑כוּ וְיֹאמְר֖וּ לְךָ֣ הִנֵּֽנוּ׃",
+        english:
+          "Can you send the lightning bolts on their way Do they report to you Here we are",
+      },
+      {
+        verse_number: 36,
+        original:
+          "מִי־ שָׁ֭ת בַּטֻּח֣וֹת חָכְמָ֑ה א֤וֹ מִֽי־ נָתַ֖ן לַשֶּׂ֣כְוִי בִינָֽה׃",
+        english:
+          "Who has put wisdom in the heart or given understanding to the mind",
+      },
+      {
+        verse_number: 37,
+        original:
+          "מִֽי־ יְסַפֵּ֣ר שְׁחָקִ֣ים בְּחָכְמָ֑ה וְנִבְלֵ֥י שָׁ֝מַ֗יִם מִ֣י יַשְׁכִּֽיב׃",
+        english:
+          "Who has the wisdom to count the clouds Or who can tilt the water jars of the heavens",
+      },
+      {
+        verse_number: 38,
+        original: "בְּצֶ֣קֶת עָ֭פָר לַמּוּצָ֑ק וּרְגָבִ֥ים יְדֻבָּֽקוּ׃",
+        english:
+          "when the dust hardens into a mass and the clods of earth stick together",
+      },
+      {
+        verse_number: 39,
+        original:
+          "הֲתָצ֣וּד לְלָבִ֣יא טָ֑רֶף וְחַיַּ֖ת כְּפִירִ֣ים תְּמַלֵּֽא׃",
+        english:
+          "Can you hunt the prey for a lioness or satisfy the hunger of young lions",
+      },
+      {
+        verse_number: 40,
+        original:
+          "כִּי־ יָשֹׁ֥חוּ בַמְּעוֹנ֑וֹת יֵשְׁב֖וּ בַסֻּכָּ֣ה לְמוֹ־ אָֽרֶב׃",
+        english:
+          "when they crouch in their dens and lie in wait in the thicket",
+      },
+      {
+        verse_number: 41,
+        original:
+          "מִ֤י יָכִ֥ין לָעֹרֵ֗ב צֵ֫יד֥וֹ כִּֽי־ יְלָדוֹ אֶל־ אֵ֣ל יְשַׁוֵּ֑עוּ יִ֝תְע֗וּ לִבְלִי־ אֹֽכֶל׃",
+        english:
+          "Who provides food for the raven when its young cry out to God as they wander about for lack of food",
+      },
+    ],
+  };
+  return chapter;
+}
