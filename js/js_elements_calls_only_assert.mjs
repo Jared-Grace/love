@@ -1,6 +1,5 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { js_call_is } from "./js_call_is.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
@@ -19,8 +18,7 @@ export function js_elements_calls_only_assert(elements, declared) {
   "An item counts as a result three ways, and the third is the one that matters. A call is one. A call being waited for is one. And a bare word the function bound a line earlier is one, because the pass that canonicalizes this repo lifts every call in a list out into a local of its own, so a register that plainly holds results reads back as a column of bare words. Only a word from somewhere else - an import, a parameter - reads as a function being named.";
   "A list with nothing in it is let through, and so is a list holding a mixture. Neither is evidence, and a refusal drawn from no evidence stops work that was right.";
   arguments_assert(arguments, 2);
-  let empty = list_empty_is(elements);
-  let held = not(empty);
+  let held = list_empty_not_is(elements);
   if (held) {
     function element_result_is(element) {
       let call = js_call_is(element);
