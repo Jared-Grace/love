@@ -10,7 +10,9 @@ export async function reply_proposals_stale_gate_run() {
     stale,
     hint: "a proposal says these lines are in the code as it stands and they are not - read the function as it is now, work the change out again against it, and write the proposal again from that",
   });
+  let proposals = await reply_proposals();
   let r = {
+    proposals: list_size(proposals),
     stale: 0,
   };
   return r;
