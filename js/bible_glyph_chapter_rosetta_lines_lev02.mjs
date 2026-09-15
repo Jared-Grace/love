@@ -1,0 +1,123 @@
+export function bible_glyph_chapter_rosetta_lines_lev02() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV02",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וְנֶ֗פֶשׁ כִּֽי־ תַקְרִ֞יב קָרְבַּ֤ן מִנְחָה֙ לַֽיהוָ֔ה סֹ֖לֶת יִהְיֶ֣ה קָרְבָּנ֑וֹ וְיָצַ֤ק עָלֶ֙יהָ֙ שֶׁ֔מֶן וְנָתַ֥ן עָלֶ֖יהָ לְבֹנָֽה׃",
+        english:
+          "When anyone brings a grain offering to the LORD his offering must consist of fine flour He is to pour olive oil on it put frankincense on it",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וֶֽהֱבִיאָ֗הּ אֶל־ בְּנֵ֣י אַהֲרֹן֮ הַכֹּהֲנִים֒ וְקָמַ֨ץ מִשָּׁ֜ם מְלֹ֣א קֻמְצ֗וֹ מִסָּלְתָּהּ֙ וּמִשַּׁמְנָ֔הּ עַ֖ל כָּל־ לְבֹנָתָ֑הּ וְהִקְטִ֨יר הַכֹּהֵ֜ן אֶת־ אַזְכָּרָתָהּ֙ הַמִּזְבֵּ֔חָה אִשֵּׁ֛ה רֵ֥יחַ נִיחֹ֖חַ לַיהוָֽה׃",
+        english:
+          "and bring it to Aaron’s sons the priests The priest shall take a handful of the flour and oil together with all the frankincense and burn this as a memorial portion on the altar a food offering a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְהַנּוֹתֶ֙רֶת֙ מִן־ הַמִּנְחָ֔ה לְאַהֲרֹ֖ן וּלְבָנָ֑יו קֹ֥דֶשׁ קָֽדָשִׁ֖ים מֵאִשֵּׁ֥י יְהוָֽה׃ס",
+        english:
+          "The remainder of the grain offering shall belong to Aaron and his sons it is a most holy part of the food offerings to the LORD",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְכִ֥י תַקְרִ֛ב קָרְבַּ֥ן מִנְחָ֖ה מַאֲפֵ֣ה תַנּ֑וּר סֹ֣לֶת חַלּ֤וֹת מַצֹּת֙ בְּלוּלֹ֣ת בַּשֶּׁ֔מֶן וּרְקִיקֵ֥י מַצּ֖וֹת מְשֻׁחִ֥ים בַּשָּֽׁמֶן׃ס",
+        english:
+          "Now if you bring an offering of grain baked in an oven it must consist of fine flour either unleavened cakes mixed with oil or unleavened wafers coated with oil",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְאִם־ מִנְחָ֥ה עַל־ הַֽמַּחֲבַ֖ת קָרְבָּנֶ֑ךָ סֹ֛לֶת בְּלוּלָ֥ה בַשֶּׁ֖מֶן מַצָּ֥ה תִהְיֶֽה׃",
+        english:
+          "If your offering is a grain offering prepared on a griddle it must be unleavened bread made of fine flour mixed with oil",
+      },
+      {
+        verse_number: 6,
+        original:
+          "פָּת֤וֹת אֹתָהּ֙ פִּתִּ֔ים וְיָצַקְתָּ֥ עָלֶ֖יהָ שָׁ֑מֶן מִנְחָ֖ה הִֽוא׃ס",
+        english: "Crumble it and pour oil on it it is a grain offering",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְאִם־ מִנְחַ֥ת מַרְחֶ֖שֶׁת קָרְבָּנֶ֑ךָ סֹ֥לֶת בַּשֶּׁ֖מֶן תֵּעָשֶֽׂה׃",
+        english:
+          "If your offering is a grain offering cooked in a pan it must consist of fine flour with oil",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְהֵבֵאתָ֣ אֶת־ הַמִּנְחָ֗ה אֲשֶׁ֧ר יֵעָשֶׂ֛ה מֵאֵ֖לֶּה לַיהוָ֑ה וְהִקְרִיבָהּ֙ אֶל־ הַכֹּהֵ֔ן וְהִגִּישָׁ֖הּ אֶל־ הַמִּזְבֵּֽחַ׃",
+        english:
+          "When you bring to the LORD the grain offering made in any of these ways it is to be presented to the priest and he shall take it to the altar",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהֵרִ֨ים הַכֹּהֵ֤ן מִן־ הַמִּנְחָה֙ אֶת־ אַזְכָּ֣רָתָ֔הּ וְהִקְטִ֖יר הַמִּזְבֵּ֑חָה אִשֵּׁ֛ה רֵ֥יחַ נִיחֹ֖חַ לַיהוָֽה׃",
+        english:
+          "The priest is to remove the memorial portion from the grain offering and burn it on the altar as a food offering a pleasing aroma to the LORD",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהַנּוֹתֶ֙רֶת֙ מִן־ הַמִּנְחָ֔ה לְאַהֲרֹ֖ן וּלְבָנָ֑יו קֹ֥דֶשׁ קָֽדָשִׁ֖ים מֵאִשֵּׁ֥י יְהוָֽה׃",
+        english:
+          "But the remainder of the grain offering shall belong to Aaron and his sons it is a most holy part of the food offerings to the LORD",
+      },
+      {
+        verse_number: 11,
+        original:
+          "כָּל־ הַמִּנְחָ֗ה אֲשֶׁ֤ר תַּקְרִ֙יבוּ֙ לַיהוָ֔ה לֹ֥א תֵעָשֶׂ֖ה חָמֵ֑ץ כִּ֤י כָל־ שְׂאֹר֙ וְכָל־ דְּבַ֔שׁ לֹֽא־ תַקְטִ֧ירוּ מִמֶּ֛נּוּ אִשֶּׁ֖ה לַֽיהוָֽה׃",
+        english:
+          "No grain offering that you present to the LORD may be made with leaven for you are not to burn any leaven or honey as a food offering to the LORD",
+      },
+      {
+        verse_number: 12,
+        original:
+          "קָרְבַּ֥ן רֵאשִׁ֛ית תַּקְרִ֥יבוּ אֹתָ֖ם לַיהוָ֑ה וְאֶל־ הַמִּזְבֵּ֥חַ לֹא־ יַעֲל֖וּ לְרֵ֥יחַ נִיחֹֽחַ׃",
+        english:
+          "You may bring them to the LORD as an offering of firstfruits but they must not go up on the altar as a pleasing aroma",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְכָל־ קָרְבַּ֣ן מִנְחָתְךָ֮ בַּמֶּ֣לַח תִּמְלָח֒ וְלֹ֣א תַשְׁבִּ֗ית מֶ֚לַח בְּרִ֣ית אֱלֹהֶ֔יךָ מֵעַ֖ל מִנְחָתֶ֑ךָ עַ֥ל כָּל־ קָרְבָּנְךָ֖ תַּקְרִ֥יב מֶֽלַח׃ס",
+        english:
+          "And you shall season each of your grain offerings with salt You must not leave the salt of the covenant of your God out of your grain offering you are to add salt to each of your offerings",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאִם־ תַּקְרִ֛יב מִנְחַ֥ת בִּכּוּרִ֖ים לַיהוָ֑ה אָבִ֞יב קָל֤וּי בָּאֵשׁ֙ גֶּ֣רֶשׂ כַּרְמֶ֔ל תַּקְרִ֕יב אֵ֖ת מִנְחַ֥ת בִּכּוּרֶֽיךָ׃",
+        english:
+          "If you bring a grain offering of firstfruits to the LORD you shall offer crushed heads of new grain roasted on the fire",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְנָתַתָּ֤ עָלֶ֙יהָ֙ שֶׁ֔מֶן וְשַׂמְתָּ֥ עָלֶ֖יהָ לְבֹנָ֑ה מִנְחָ֖ה הִֽוא׃",
+        english:
+          "And you are to put oil and frankincense on it it is a grain offering",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְהִקְטִ֨יר הַכֹּהֵ֜ן אֶת־ אַזְכָּרָתָ֗הּ מִגִּרְשָׂהּ֙ וּמִשַּׁמְנָ֔הּ עַ֖ל כָּל־ לְבֹנָתָ֑הּ אִשֶּׁ֖ה לַיהוָֽה׃פ",
+        english:
+          "The priest shall then burn the memorial portion of the crushed grain and the oil together with all its frankincense as a food offering to the LORD",
+      },
+    ],
+  };
+  return chapter;
+}

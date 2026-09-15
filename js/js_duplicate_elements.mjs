@@ -16,6 +16,18 @@ export function js_duplicate_elements(ast, size) {
   "Only names are compared, never written words or numbers - a register of names stands for things that get run or read, so holding one twice is always a mistake, while a list of words or numbers may perfectly well say the same thing twice and mean it.";
   let duplicates = [];
   let vs = js_list_type(ast, "ArrayExpression");
+  let locals = [];
+  let declarators = js_list_type(ast, "VariableDeclarator");
+  for (let d of declarators) {
+    let id = property_path_get_2(d, "node", "id");
+    if (js_identifier_is(id)) {
+      list_add(locals, id.name);
+    }
+  }
+  function local_is(name) {
+    let r = list_includes(locals, name);
+    return r;
+  }
   for (let v of vs) {
     let elements = property_path_get_2(v, "node", "elements");
     ("A short list is passed over, and that is what tells a register apart from a handful of things written side by side. A run of the same name twice is ordinary in the small: a padding written either side of a word, a cycle stepping through nothing and then something and then nothing again, the same reading handed to both halves of a pair. None of those is a register and none of them is wrong.");
@@ -33,6 +45,11 @@ export function js_duplicate_elements(ast, size) {
     let doing_nothing = fn_name("noop");
     let positional = list_includes(names, doing_nothing);
     if (positional) {
+      continue;
+    }
+    ("A list made only of names this file sets itself is passed over too, and that is what tells a register apart from a line spelled out a piece at a time. A register names units that live somewhere else and get run or read from there; a name set a few lines up holds a value made here - a character, a colour - and a line of code such as ! ( ! ( true ) ) wants the same character at two places of it, with a matching list of colours wanting the same colour at two places too. Measured 2026-09-15: those two lists were the whole of what this check found.");
+    let all_local = list_all(names, local_is);
+    if (all_local) {
       continue;
     }
     let seen = [];
