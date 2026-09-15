@@ -1,12 +1,11 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { binisaya_words_known_get } from "./binisaya_words_known_get.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { list_map } from "./list_map.mjs";
 import { gloss_word_bare } from "./gloss_word_bare.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_first } from "./list_first.mjs";
 export function binisaya_words_known_get_folded(known, folded_index, word) {
@@ -32,8 +31,7 @@ export function binisaya_words_known_get_folded(known, folded_index, word) {
   if (none) {
     return null;
   }
-  let bare = list_map(spellings, gloss_word_bare);
-  let distinct = list_unique(bare);
+  let distinct = list_map_unique(spellings, gloss_word_bare);
   let alone = list_size_equal(distinct, 1);
   if (not(alone)) {
     return null;
