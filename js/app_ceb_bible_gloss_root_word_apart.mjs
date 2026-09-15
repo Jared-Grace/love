@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -45,8 +46,7 @@ export async function app_ceb_bible_gloss_root_word_apart() {
     let chapter_code = property_get(found, "chapter_code");
     let entry = property_get(found, "entry");
     let claimed = property_get(found, "claimed");
-    let count = list_size(claimed);
-    let empty = equal(count, 0);
+    let empty = list_size_equal(claimed, 0);
     if (empty) {
       return;
     }
