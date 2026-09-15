@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -38,8 +39,7 @@ export async function app_ceb_bible_gloss_roots_claimed_outside_word_priced() {
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let claimed = property_get(found, "claimed");
-    let claimed_count = list_size(claimed);
-    let empty = equal(claimed_count, 0);
+    let empty = list_size_equal(claimed, 0);
     if (empty) {
       return;
     }
