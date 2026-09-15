@@ -28,7 +28,7 @@
   "app_g_bless_finished_white.mjs",
   "app_g_bless_glows.mjs",
   "bless_mark_edge_filter.mjs",
-  "app_g_bless_refused_flash.mjs",
+  "bless_refused_flash.mjs",
   "app_g_day_guide_keyframe.mjs",
   "app_g_message_overlay.mjs",
   "app_g_npc_color.mjs",

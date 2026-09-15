@@ -5,7 +5,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { app_shared_animation_sleep } from "./app_shared_animation_sleep.mjs";
 import { html_remove } from "./html_remove.mjs";
-export async function app_g_bless_refused_flash(div_map, target) {
+export async function bless_refused_flash(div_map, target) {
   arguments_assert(arguments, 2);
   ("Flashes one square RED for a moment, to say that the player may not go there.");
   ("It exists because a refusal that says nothing is indistinguishable from a broken tap. The");
