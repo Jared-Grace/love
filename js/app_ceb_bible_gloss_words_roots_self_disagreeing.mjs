@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_size } from "./list_size.mjs";
@@ -25,8 +26,7 @@ export async function app_ceb_bible_gloss_words_roots_self_disagreeing() {
   let comparable = 0;
   let rows = [];
   function word_read(chapter_code, word, sentences) {
-    let ways = list_size(sentences);
-    let one = equal(ways, 1);
+    let one = list_size_equal(sentences, 1);
     if (one) {
       return;
     }
@@ -34,8 +34,7 @@ export async function app_ceb_bible_gloss_words_roots_self_disagreeing() {
     let claims = 0;
     function sentence_read(sentence) {
       let claimed = gloss_explain_roots_claimed(sentence);
-      let count = list_size(claimed);
-      let empty = equal(count, 0);
+      let empty = list_size_equal(claimed, 0);
       if (empty) {
         return;
       }
