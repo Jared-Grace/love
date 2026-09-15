@@ -44,7 +44,7 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
   let once_books = {};
   let once_listed = [];
   let root_read =
-    app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read(
+    app_ceb_bible_gloss_roots_claimed_vouching_corroborated_root_read({
       poetic,
       claims_rest,
       claims_poetry,
@@ -53,7 +53,7 @@ export async function app_ceb_bible_gloss_roots_claimed_vouching_corroborated() 
       witnesses,
       once_books,
       once_listed,
-    );
+    });
   let gathered = await gloss_chapters_roots_claimed_rows_generic(
     app_ceb_bible_gloss_generate,
     root_read,
