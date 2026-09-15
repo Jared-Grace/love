@@ -1,0 +1,129 @@
+export function bible_glyph_chapter_rosetta_lines_mal02() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "MAL02",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וְעַתָּ֗ה אֲלֵיכֶ֛ם הַמִּצְוָ֥ה הַזֹּ֖את הַכֹּהֲנִֽים׃",
+        english: "And now this decree is for you O priests",
+      },
+      {
+        verse_number: 2,
+        original:
+          "אִם־ לֹ֣א תִשְׁמְע֡וּ וְאִם־ לֹא֩ תָשִׂ֨ימוּ עַל־ לֵ֜ב לָתֵ֧ת כָּב֣וֹד לִשְׁמִ֗י אָמַר֙ יְהוָ֣ה צְבָא֔וֹת וְשִׁלַּחְתִּ֤י בָכֶם֙ אֶת־ הַמְּאֵרָ֔ה וְאָרוֹתִ֖י אֶת־ בִּרְכֽוֹתֵיכֶ֑ם וְגַם֙ אָרוֹתִ֔יהָ כִּ֥י אֵינְכֶ֖ם שָׂמִ֥ים עַל־ לֵֽב׃",
+        english:
+          "If you do not listen and if you do not take it to heart to honor My name says the LORD of Hosts I will send a curse among you and I will curse your blessings Yes I have already begun to curse them because you are not taking it to heart",
+      },
+      {
+        verse_number: 3,
+        original:
+          "הִנְנִ֨י גֹעֵ֤ר לָכֶם֙ אֶת־ הַזֶּ֔רַע וְזֵרִ֤יתִי פֶ֙רֶשׁ֙ עַל־ פְּנֵיכֶ֔ם פֶּ֖רֶשׁ חַגֵּיכֶ֑ם וְנָשָׂ֥א אֶתְכֶ֖ם אֵלָֽיו׃",
+        english:
+          "Behold I will rebuke your descendants and I will spread dung on your faces the waste from your feasts and you will be carried off with it",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וִֽידַעְתֶּ֕ם כִּ֚י שִׁלַּ֣חְתִּי אֲלֵיכֶ֔ם אֵ֖ת הַמִּצְוָ֣ה הַזֹּ֑את לִֽהְי֤וֹת בְּרִיתִי֙ אֶת־ לֵוִ֔י אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "Then you will know that I have sent you this commandment so that My covenant with Levi may continue says the LORD of Hosts",
+      },
+      {
+        verse_number: 5,
+        original:
+          "בְּרִיתִ֣י׀ הָיְתָ֣ה אִתּ֗וֹ הַֽחַיִּים֙ וְהַ֨שָּׁל֔וֹם וָאֶתְּנֵֽם־ ל֥וֹ מוֹרָ֖א וַיִּֽירָאֵ֑נִי וּמִפְּנֵ֥י שְׁמִ֖י נִחַ֥ת הֽוּא׃",
+        english:
+          "My covenant with him was one of life and peace which I gave to him it called for reverence and he revered Me and stood in awe of My name",
+      },
+      {
+        verse_number: 6,
+        original:
+          "תּוֹרַ֤ת אֱמֶת֙ הָיְתָ֣ה בְּפִ֔יהוּ וְעַוְלָ֖ה לֹא־ נִמְצָ֣א בִשְׂפָתָ֑יו בְּשָׁל֤וֹם וּבְמִישׁוֹר֙ הָלַ֣ךְ אִתִּ֔י וְרַבִּ֖ים הֵשִׁ֥יב מֵעָוֺֽן׃",
+        english:
+          "True instruction was in his mouth and nothing false was found on his lips He walked with Me in peace and uprightness and he turned many from iniquity",
+      },
+      {
+        verse_number: 7,
+        original:
+          "כִּֽי־ שִׂפְתֵ֤י כֹהֵן֙ יִשְׁמְרוּ־ דַ֔עַת וְתוֹרָ֖ה יְבַקְשׁ֣וּ מִפִּ֑יהוּ כִּ֛י מַלְאַ֥ךְ יְהוָֽה־ צְבָא֖וֹת הֽוּא׃",
+        english:
+          "For the lips of a priest should preserve knowledge and people should seek instruction from his mouth because he is the messenger of the LORD of Hosts",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְאַתֶּם֙ סַרְתֶּ֣ם מִן־ הַדֶּ֔רֶךְ הִכְשַׁלְתֶּ֥ם רַבִּ֖ים בַּתּוֹרָ֑ה שִֽׁחַתֶּם֙ בְּרִ֣ית הַלֵּוִ֔י אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "But you have departed from the way and your instruction has caused many to stumble You have violated the covenant of Levi says the LORD of Hosts",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְגַם־ אֲנִ֞י נָתַ֧תִּי אֶתְכֶ֛ם נִבְזִ֥ים וּשְׁפָלִ֖ים לְכָל־ הָעָ֑ם כְּפִ֗י אֲשֶׁ֤ר אֵֽינְכֶם֙ שֹׁמְרִ֣ים אֶת־ דְּרָכַ֔י וְנֹשְׂאִ֥ים פָּנִ֖ים בַּתּוֹרָֽה׃פ",
+        english:
+          "So I in turn have made you despised and humiliated before all the people because you have not kept My ways but have shown partiality in matters of the law",
+      },
+      {
+        verse_number: 10,
+        original:
+          "הֲל֨וֹא אָ֤ב אֶחָד֙ לְכֻלָּ֔נוּ הֲל֛וֹא אֵ֥ל אֶֽחָ֖ד בְּרָאָ֑נוּ מַדּ֗וּעַ נִבְגַּד֙ אִ֣ישׁ בְּאָחִ֔יו לְחַלֵּ֖ל בְּרִ֥ית אֲבֹתֵֽינוּ׃",
+        english:
+          "Do we not all have one Father Did not one God create us Why then do we break faith with one another so as to profane the covenant of our fathers",
+      },
+      {
+        verse_number: 11,
+        original:
+          "בָּגְדָ֣ה יְהוּדָ֔ה וְתוֹעֵבָ֛ה נֶעֶשְׂתָ֥ה בְיִשְׂרָאֵ֖ל וּבִירֽוּשָׁלִָ֑ם כִּ֣י׀ חִלֵּ֣ל יְהוּדָ֗ה קֹ֤דֶשׁ יְהוָה֙ אֲשֶׁ֣ר אָהֵ֔ב וּבָעַ֖ל בַּת־ אֵ֥ל נֵכָֽר׃",
+        english:
+          "Judah has broken faith an abomination has been committed in Israel and in Jerusalem For Judah has profaned the LORD’s beloved sanctuary by marrying the daughter of a foreign god",
+      },
+      {
+        verse_number: 12,
+        original:
+          "יַכְרֵ֨ת יְהוָ֜ה לָאִ֨ישׁ אֲשֶׁ֤ר יַעֲשֶׂ֙נָּה֙ עֵ֣ר וְעֹנֶ֔ה מֵאָהֳלֵ֖י יַֽעֲקֹ֑ב וּמַגִּ֣ישׁ מִנְחָ֔ה לַֽיהוָ֖ה צְבָאֽוֹת׃פ",
+        english:
+          "As for the man who does this may the LORD cut off from the tents of Jacob everyone who is awake and aware even if he brings an offering to the LORD of Hosts",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְזֹאת֙ שֵׁנִ֣ית תַּֽעֲשׂ֔וּ כַּסּ֤וֹת דִּמְעָה֙ אֶת־ מִזְבַּ֣ח יְהוָ֔ה בְּכִ֖י וַֽאֲנָקָ֑ה מֵאֵ֣ין ע֗וֹד פְּנוֹת֙ אֶל־ הַמִּנְחָ֔ה וְלָקַ֥חַת רָצ֖וֹן מִיֶּדְכֶֽם׃",
+        english:
+          "And this is another thing you do You cover the altar of the LORD with tears with weeping and groaning because He no longer regards your offerings or receives them gladly from your hands",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַאֲמַרְתֶּ֖ם עַל־ מָ֑ה עַ֡ל כִּי־ יְהוָה֩ הֵעִ֨יד בֵּינְךָ֜ וּבֵ֣ין׀ אֵ֣שֶׁת נְעוּרֶ֗יךָ אֲשֶׁ֤ר אַתָּה֙ בָּגַ֣דְתָּה בָּ֔הּ וְהִ֥יא חֲבֶרְתְּךָ֖ וְאֵ֥שֶׁת בְּרִיתֶֽךָ׃",
+        english:
+          "Yet you ask Why It is because the LORD has been a witness between you and the wife of your youth against whom you have broken faith though she is your companion and your wife by covenant",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְלֹא־ אֶחָ֣ד עָשָׂ֗ה וּשְׁאָ֥ר ר֙וּחַ֙ ל֔וֹ וּמָה֙ הָֽאֶחָ֔ד מְבַקֵּ֖שׁ זֶ֣רַע אֱלֹהִ֑ים וְנִשְׁמַרְתֶּם֙ בְּר֣וּחֲכֶ֔ם וּבְאֵ֥שֶׁת נְעוּרֶ֖יךָ אַל־ יִבְגֹּֽד׃",
+        english:
+          "Has not the LORD made them one having a portion of the Spirit And why one Because He seeks godly offspring So guard yourselves in your spirit and do not break faith with the wife of your youth",
+      },
+      {
+        verse_number: 16,
+        original:
+          "כִּֽי־ שָׂנֵ֣א שַׁלַּ֗ח אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל וְכִסָּ֤ה חָמָס֙ עַל־ לְבוּשׁ֔וֹ אָמַ֖ר יְהוָ֣ה צְבָא֑וֹת וְנִשְׁמַרְתֶּ֥ם בְּרוּחֲכֶ֖ם וְלֹ֥א תִבְגֹּֽדוּ׃ס",
+        english:
+          "For I hate divorce says the LORD the God of Israel He who divorces his wife covers his garment with violence says the LORD of Hosts So guard yourselves in your spirit and do not break faith",
+      },
+      {
+        verse_number: 17,
+        original:
+          "הוֹגַעְתֶּ֤ם יְהוָה֙ בְּדִבְרֵיכֶ֔ם וַאֲמַרְתֶּ֖ם בַּמָּ֣ה הוֹגָ֑עְנוּ בֶּאֱמָרְכֶ֗ם כָּל־ עֹ֨שֵׂה רָ֜ע ט֣וֹב׀ בְּעֵינֵ֣י יְהוָ֗ה וּבָהֶם֙ ה֣וּא חָפֵ֔ץ א֥וֹ אַיֵּ֖ה אֱלֹהֵ֥י הַמִּשְׁפָּֽט׃",
+        english:
+          "You have wearied the LORD with your words yet you ask How have we wearied Him By saying All who do evil are good in the sight of the LORD and in them He delights or Where is the God of justice",
+      },
+    ],
+  };
+  return chapter;
+}

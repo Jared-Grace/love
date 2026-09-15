@@ -1,0 +1,138 @@
+export function bible_glyph_chapter_rosetta_lines_mal03() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "MAL03",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "הִנְנִ֤י שֹׁלֵחַ֙ מַלְאָכִ֔י וּפִנָּה־ דֶ֖רֶךְ לְפָנָ֑י וּפִתְאֹם֩ יָב֨וֹא אֶל־ הֵיכָל֜וֹ הָאָד֣וֹן׀ אֲשֶׁר־ אַתֶּ֣ם מְבַקְשִׁ֗ים וּמַלְאַ֨ךְ הַבְּרִ֜ית אֲשֶׁר־ אַתֶּ֤ם חֲפֵצִים֙ הִנֵּה־ בָ֔א אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "Behold I will send My messenger who will prepare the way before Me Then the Lord whom you seek will suddenly come to His temple the Messenger of the covenant in whom you delight see He is coming says the LORD of Hosts",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וּמִ֤י מְכַלְכֵּל֙ אֶת־ י֣וֹם בּוֹא֔וֹ וּמִ֥י הָעֹמֵ֖ד בְּהֵרָֽאוֹת֑וֹ כִּֽי־ הוּא֙ כְּאֵ֣שׁ מְצָרֵ֔ף וּכְבֹרִ֖ית מְכַבְּסִֽים׃",
+        english:
+          "But who can endure the day of His coming And who can stand when He appears For He will be like a refiner’s fire like a launderer’s soap",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְיָשַׁ֨ב מְצָרֵ֤ף וּמְטַהֵר֙ כֶּ֔סֶף וְטִהַ֤ר אֶת־ בְּנֵֽי־ לֵוִי֙ וְזִקַּ֣ק אֹתָ֔ם כַּזָּהָ֖ב וְכַכָּ֑סֶף וְהָיוּ֙ לַֽיהוָ֔ה מַגִּישֵׁ֥י מִנְחָ֖ה בִּצְדָקָֽה׃",
+        english:
+          "And He will sit as a refiner and purifier of silver He will purify the sons of Levi and refine them like gold and silver Then they will present offerings to the LORD in righteousness",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְעָֽרְבָה֙ לַֽיהוָ֔ה מִנְחַ֥ת יְהוּדָ֖ה וִירֽוּשָׁלִָ֑ם כִּימֵ֣י עוֹלָ֔ם וּכְשָׁנִ֖ים קַדְמֹנִיּֽוֹת׃",
+        english:
+          "Then the offerings of Judah and Jerusalem will please the LORD as in days of old and years gone by",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְקָרַבְתִּ֣י אֲלֵיכֶם֮ לַמִּשְׁפָּט֒ וְהָיִ֣יתִי׀ עֵ֣ד מְמַהֵ֗ר בַּֽמְכַשְּׁפִים֙ וּבַמְנָ֣אֲפִ֔ים וּבַנִּשְׁבָּעִ֖ים לַשָּׁ֑קֶר וּבְעֹשְׁקֵ֣י שְׂכַר־ שָׂ֠כִיר אַלְמָנָ֨ה וְיָת֤וֹם וּמַטֵּי־ גֵר֙ וְלֹ֣א יְרֵא֔וּנִי אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "Then I will draw near to you for judgment And I will be a swift witness against sorcerers and adulterers and perjurers against oppressors of the widowed and fatherless and against those who defraud laborers of their wages and deny justice to the foreigner but do not fear Me says the LORD of Hosts",
+      },
+      {
+        verse_number: 6,
+        original:
+          "כִּ֛י אֲנִ֥י יְהוָ֖ה לֹ֣א שָׁנִ֑יתִי וְאַתֶּ֥ם בְּנֵֽי־ יַעֲקֹ֖ב לֹ֥א כְלִיתֶֽם׃",
+        english:
+          "Because I the LORD do not change you descendants of Jacob have not been destroyed",
+      },
+      {
+        verse_number: 7,
+        original:
+          "לְמִימֵ֨י אֲבֹתֵיכֶ֜ם סַרְתֶּ֤ם מֵֽחֻקַּי֙ וְלֹ֣א שְׁמַרְתֶּ֔ם שׁ֤וּבוּ אֵלַי֙ וְאָשׁ֣וּבָה אֲלֵיכֶ֔ם אָמַ֖ר יְהוָ֣ה צְבָא֑וֹת וַאֲמַרְתֶּ֖ם בַּמֶּ֥ה נָשֽׁוּב׃",
+        english:
+          "Yet from the days of your fathers you have turned away from My statutes and have not kept them Return to Me and I will return to you says the LORD of Hosts But you ask How can we return",
+      },
+      {
+        verse_number: 8,
+        original:
+          "הֲיִקְבַּ֨ע אָדָ֜ם אֱלֹהִ֗ים כִּ֤י אַתֶּם֙ קֹבְעִ֣ים אֹתִ֔י וַאֲמַרְתֶּ֖ם בַּמֶּ֣ה קְבַעֲנ֑וּךָ הַֽמַּעֲשֵׂ֖ר וְהַתְּרוּמָֽה׃",
+        english:
+          "Will a man rob God Yet you are robbing Me But you ask How do we rob You In tithes and offerings",
+      },
+      {
+        verse_number: 9,
+        original:
+          "בַּמְּאֵרָה֙ אַתֶּ֣ם נֵֽאָרִ֔ים וְאֹתִ֖י אַתֶּ֣ם קֹבְעִ֑ים הַגּ֖וֹי כֻּלּֽוֹ׃",
+        english:
+          "You are cursed with a curse yet you the whole nation are still robbing Me",
+      },
+      {
+        verse_number: 10,
+        original:
+          "הָבִ֨יאוּ אֶת־ כָּל־ הַֽמַּעֲשֵׂ֜ר אֶל־ בֵּ֣ית הָאוֹצָ֗ר וִיהִ֥י טֶ֙רֶף֙ בְּבֵיתִ֔י וּבְחָנ֤וּנִי נָא֙ בָּזֹ֔את אָמַ֖ר יְהוָ֣ה צְבָא֑וֹת אִם־ לֹ֧א אֶפְתַּ֣ח לָכֶ֗ם אֵ֚ת אֲרֻבּ֣וֹת הַשָּׁמַ֔יִם וַהֲרִיקֹתִ֥י לָכֶ֛ם בְּרָכָ֖ה עַד־ בְּלִי־ דָֽי׃",
+        english:
+          "Bring the full tithe into the storehouse so that there may be food in My house Test Me in this says the LORD of Hosts See if I will not open the windows of heaven and pour out for you blessing without measure",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְגָעַרְתִּ֤י לָכֶם֙ בָּֽאֹכֵ֔ל וְלֹֽא־ יַשְׁחִ֥ת לָכֶ֖ם אֶת־ פְּרִ֣י הָאֲדָמָ֑ה וְלֹא־ תְשַׁכֵּ֨ל לָכֶ֤ם הַגֶּ֙פֶן֙ בַּשָּׂדֶ֔ה אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "I will rebuke the devourer for you so that it will not destroy the fruits of your land and the vine in your field will not fail to produce fruit says the LORD of Hosts",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְאִשְּׁר֥וּ אֶתְכֶ֖ם כָּל־ הַגּוֹיִ֑ם כִּֽי־ תִהְי֤וּ אַתֶּם֙ אֶ֣רֶץ חֵ֔פֶץ אָמַ֖ר יְהוָ֥ה צְבָאֽוֹת׃ס",
+        english:
+          "Then all the nations will call you blessed for you will be a land of delight says the LORD of Hosts",
+      },
+      {
+        verse_number: 13,
+        original:
+          "חָזְק֥וּ עָלַ֛י דִּבְרֵיכֶ֖ם אָמַ֣ר יְהוָ֑ה וַאֲמַרְתֶּ֕ם מַה־ נִּדְבַּ֖רְנוּ עָלֶֽיךָ׃",
+        english:
+          "Your words against Me have been harsh says the LORD Yet you ask What have we spoken against You",
+      },
+      {
+        verse_number: 14,
+        original:
+          "אֲמַרְתֶּ֕ם שָׁ֖וְא עֲבֹ֣ד אֱלֹהִ֑ים וּמַה־ בֶּ֗צַע כִּ֤י שָׁמַ֙רְנוּ֙ מִשְׁמַרְתּ֔וֹ וְכִ֤י הָלַ֙כְנוּ֙ קְדֹ֣רַנִּ֔ית מִפְּנֵ֖י יְהוָ֥ה צְבָאֽוֹת׃",
+        english:
+          "You have said It is futile to serve God What have we gained by keeping His requirements and walking mournfully before the LORD of Hosts",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְעַתָּ֕ה אֲנַ֖חְנוּ מְאַשְּׁרִ֣ים זֵדִ֑ים גַּם־ נִבְנוּ֙ עֹשֵׂ֣י רִשְׁעָ֔ה גַּ֧ם בָּחֲנ֛וּ אֱלֹהִ֖ים וַיִּמָּלֵֽטוּ׃",
+        english:
+          "So now we call the arrogant blessed Not only do evildoers prosper they even test God and escape",
+      },
+      {
+        verse_number: 16,
+        original:
+          "אָ֧ז נִדְבְּר֛וּ יִרְאֵ֥י יְהוָ֖ה אִ֣ישׁ אֶת־ רֵעֵ֑הוּ וַיַּקְשֵׁ֤ב יְהוָה֙ וַיִּשְׁמָ֔ע וַ֠יִּכָּתֵב סֵ֣פֶר זִכָּר֤וֹן לְפָנָיו֙ לְיִרְאֵ֣י יְהוָ֔ה וּלְחֹשְׁבֵ֖י שְׁמֽוֹ׃",
+        english:
+          "At that time those who feared the LORD spoke with one another and the LORD listened and heard them So a scroll of remembrance was written before Him regarding those who feared the LORD and honored His name",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהָ֣יוּ לִ֗י אָמַר֙ יְהוָ֣ה צְבָא֔וֹת לַיּ֕וֹם אֲשֶׁ֥ר אֲנִ֖י עֹשֶׂ֣ה סְגֻלָּ֑ה וְחָמַלְתִּ֣י עֲלֵיהֶ֔ם כַּֽאֲשֶׁר֙ יַחְמֹ֣ל אִ֔ישׁ עַל־ בְּנ֖וֹ הָעֹבֵ֥ד אֹתֽוֹ׃",
+        english:
+          "They will be Mine says the LORD of Hosts on the day when I prepare My treasured possession And I will spare them as a man spares his own son who serves him",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְשַׁבְתֶּם֙ וּרְאִיתֶ֔ם בֵּ֥ין צַדִּ֖יק לְרָשָׁ֑ע בֵּ֚ין עֹבֵ֣ד אֱלֹהִ֔ים לַאֲשֶׁ֖ר לֹ֥א עֲבָדֽוֹ׃ס",
+        english:
+          "So you will again distinguish between the righteous and the wicked between those who serve God and those who do not",
+      },
+    ],
+  };
+  return chapter;
+}
