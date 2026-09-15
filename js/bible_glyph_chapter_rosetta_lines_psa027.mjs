@@ -1,0 +1,106 @@
+export function bible_glyph_chapter_rosetta_lines_psa027() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PSA027",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "לְדָוִ֨ד׀ יְהוָ֤ה׀ אוֹרִ֣י וְ֭יִשְׁעִי מִמִּ֣י אִירָ֑א יְהוָ֥ה מָֽעוֹז־ חַ֝יַּ֗י מִמִּ֥י אֶפְחָֽד׃",
+        english:
+          "Of David The LORD is my light and my salvation whom shall I fear The LORD is the stronghold of my life whom shall I dread",
+      },
+      {
+        verse_number: 2,
+        original:
+          "בִּקְרֹ֤ב עָלַ֨י׀ מְרֵעִים֮ לֶאֱכֹ֪ל אֶת־ בְּשָׂ֫רִ֥י צָרַ֣י וְאֹיְבַ֣י לִ֑י הֵ֖מָּה כָשְׁל֣וּ וְנָפָֽלוּ׃",
+        english:
+          "When the wicked came upon me to devour my flesh my enemies and foes stumbled and fell",
+      },
+      {
+        verse_number: 3,
+        original:
+          "אִם־ תַּחֲנֶ֬ה עָלַ֨י׀ מַחֲנֶה֮ לֹֽא־ יִירָ֪א לִ֫בִּ֥י אִם־ תָּק֣וּם עָ֭לַי מִלְחָמָ֑ה בְּ֝זֹ֗את אֲנִ֣י בוֹטֵֽחַ׃",
+        english:
+          "Though an army encamps around me my heart will not fear though a war breaks out against me I will keep my trust",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אַחַ֤ת׀ שָׁאַ֣לְתִּי מֵֽאֵת־ יְהוָה֮ אוֹתָ֪הּ אֲבַ֫קֵּ֥שׁ שִׁבְתִּ֣י בְּבֵית־ יְ֭הוָה כָּל־ יְמֵ֣י חַיַּ֑י לַחֲז֥וֹת בְּנֹֽעַם־ יְ֝הוָ֗ה וּלְבַקֵּ֥ר בְּהֵיכָלֽוֹ׃",
+        english:
+          "One thing I have asked of the LORD this is what I desire to dwell in the house of the LORD all the days of my life to gaze on the beauty of the LORD and seek Him in His temple",
+      },
+      {
+        verse_number: 5,
+        original:
+          "כִּ֤י יִצְפְּנֵ֨נִי׀ בְּסֻכֹּה֮ בְּי֪וֹם רָ֫עָ֥ה יַ֭סְתִּרֵנִי בְּסֵ֣תֶר אָהֳל֑וֹ בְּ֝צ֗וּר יְרוֹמְמֵֽנִי׃",
+        english:
+          "For in the day of trouble He will hide me in His shelter He will conceal me under the cover of His tent He will set me high upon a rock",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְעַתָּ֨ה יָר֪וּם רֹאשִׁ֡י עַ֤ל אֹֽיְבַ֬י סְֽבִיבוֹתַ֗י וְאֶזְבְּחָ֣ה בְ֭אָהֳלוֹ זִבְחֵ֣י תְרוּעָ֑ה אָשִׁ֥ירָה וַ֝אֲזַמְּרָ֗ה לַיהוָֽה׃",
+        english:
+          "Then my head will be held high above my enemies around me At His tabernacle I will offer sacrifices with shouts of joy I will sing and make music to the LORD",
+      },
+      {
+        verse_number: 7,
+        original: "שְׁמַע־ יְהוָ֖ה קוֹלִ֥י אֶקְרָ֗א וְחָנֵּ֥נִי וַעֲנֵֽנִי׃",
+        english: "Hear O LORD my voice when I call be merciful and answer me",
+      },
+      {
+        verse_number: 8,
+        original:
+          "לְךָ֤׀ אָמַ֣ר לִ֭בִּי בַּקְּשׁ֣וּ פָנָ֑י אֶת־ פָּנֶ֖יךָ יְהוָ֣ה אֲבַקֵּֽשׁ׃",
+        english: "My heart said Seek His face Your face O LORD I will seek",
+      },
+      {
+        verse_number: 9,
+        original:
+          "אַל־ תַּסְתֵּ֬ר פָּנֶ֨יךָ׀ מִמֶּנִּי֮ אַֽל־ תַּט־ בְּאַ֗ף עַ֫בְדֶּ֥ךָ עֶזְרָתִ֥י הָיִ֑יתָ אַֽל־ תִּטְּשֵׁ֥נִי וְאַל־ תַּֽ֝עַזְבֵ֗נִי אֱלֹהֵ֥י יִשְׁעִֽי׃",
+        english:
+          "Hide not Your face from me nor turn away Your servant in anger You have been my helper do not leave me or forsake me O God of my salvation",
+      },
+      {
+        verse_number: 10,
+        original: "כִּי־ אָבִ֣י וְאִמִּ֣י עֲזָב֑וּנִי וַֽיהוָ֣ה יַֽאַסְפֵֽנִי׃",
+        english:
+          "Though my father and mother forsake me the LORD will receive me",
+      },
+      {
+        verse_number: 11,
+        original:
+          "ה֤וֹרֵ֥נִי יְהוָ֗ה דַּ֫רְכֶּ֥ךָ וּ֭נְחֵנִי בְּאֹ֣רַח מִישׁ֑וֹר לְ֝מַ֗עַן שׁוֹרְרָֽי׃",
+        english:
+          "Teach me Your way O LORD and lead me on a level path because of my oppressors",
+      },
+      {
+        verse_number: 12,
+        original:
+          "אַֽל־ תִּ֭תְּנֵנִי בְּנֶ֣פֶשׁ צָרָ֑י כִּ֥י קָֽמוּ־ בִ֥י עֵֽדֵי־ שֶׁ֝֗קֶר וִיפֵ֥חַ חָמָֽס׃",
+        english:
+          "Do not hand me over to the will of my foes for false witnesses rise up against me breathing out violence",
+      },
+      {
+        verse_number: 13,
+        original:
+          "לׅׄוּלֵׅׄ֗אׅׄ הֶ֭אֱמַנְתִּי לִרְא֥וֹת בְּֽטוּב־ יְהוָ֗ה בְּאֶ֣רֶץ חַיִּֽים׃",
+        english:
+          "Still I am certain to see the goodness of the LORD in the land of the living",
+      },
+      {
+        verse_number: 14,
+        original:
+          "קַוֵּ֗ה אֶל־ יְה֫וָ֥ה חֲ֭זַק וְיַאֲמֵ֣ץ לִבֶּ֑ךָ וְ֝קַוֵּ֗ה אֶל־ יְהוָֽה׃",
+        english:
+          "Wait patiently for the LORD be strong and courageous Wait patiently for the LORD",
+      },
+    ],
+  };
+  return chapter;
+}
