@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_map } from "./bless_hash_map.mjs";
-import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
+import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 import { app_g_bless_tile_size_map } from "./app_g_bless_tile_size_map.mjs";
 import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
 export function app_g_bless_tile_size() {
@@ -23,7 +23,7 @@ export function app_g_bless_tile_size() {
   ("they stand and still walks, prays and is answered; the street is simply drawn small");
   ("enough to be seen whole, which is what a flat map calls being far off.");
   let word = bless_hash_map();
-  let overview = app_g_bless_dev_opening_is([word]);
+  let overview = bless_dev_opening_is([word]);
   if (overview) {
     let far = app_g_bless_tile_size_map();
     return far;

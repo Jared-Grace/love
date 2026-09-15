@@ -2,7 +2,7 @@ import { bless_hash_words_is } from "./bless_hash_words_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_dev_shown_is } from "./app_shared_dev_shown_is.mjs";
 import { not } from "./not.mjs";
-export function app_g_bless_dev_opening_is(words) {
+export function bless_dev_opening_is(words) {
   arguments_assert(arguments, 1);
   ("Whether this visit was opened with one of these words after the hash mark, asked only");
   ("where the dev tools are on offer at all.");
