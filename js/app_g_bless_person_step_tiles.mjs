@@ -9,7 +9,7 @@ import { equal_not } from "./equal_not.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { and } from "./and.mjs";
 import { list_filter } from "./list_filter.mjs";
-import { app_g_bless_person_step_footway } from "./app_g_bless_person_step_footway.mjs";
+import { bless_person_step_footway } from "./bless_person_step_footway.mjs";
 import { bless_home_reaches } from "./bless_home_reaches.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 export function app_g_bless_person_step_tiles(world, person) {
@@ -46,7 +46,7 @@ export function app_g_bless_person_step_tiles(world, person) {
   let open = list_filter(neighbors, open_is);
   ("The kerb is kept by a reading of its own, so what is left here is the one question this");
   ("is about: of the ways a person may take, which ones keep them within reach of home.");
-  let footway = app_g_bless_person_step_footway(world, person, open);
+  let footway = bless_person_step_footway(world, person, open);
   let home = property_get(person, "home");
   let roam = property_get(person, "roam");
   function home_is(neighbor) {

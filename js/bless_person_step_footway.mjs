@@ -4,7 +4,7 @@ import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_g_bless_person_step_footway(world, person, open) {
+export function bless_person_step_footway(world, person, open) {
   arguments_assert(arguments, 3);
   ("The ways out of a tile that do not step into the road, out of the ways that were open.");
   ("Nobody out on the street steps into the ROAD. Cars drive along it, and a pavement that");
