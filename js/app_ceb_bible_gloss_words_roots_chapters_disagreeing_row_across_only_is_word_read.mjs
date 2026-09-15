@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
@@ -10,7 +11,6 @@ import { not } from "./not.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_add } from "./list_add.mjs";
@@ -49,8 +49,7 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
       let split = greater_than(kinds, 1);
       return split;
     }
-    let chapters_split = list_filter(chapters, chapter_split_is);
-    let split_count = list_size(chapters_split);
+    let split_count = list_filter_size(chapters, chapter_split_is);
     let within_chapter = greater_than(split_count, 0);
     let first_root = list_get(roots, 0);
     let second_root = list_get(roots, 1);
