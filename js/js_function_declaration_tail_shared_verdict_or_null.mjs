@@ -1,3 +1,4 @@
+import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { js_function_declaration_statements_working_without_arguments_assert } f
 import { list_size_less_than_value } from "./list_size_less_than_value.mjs";
 import { list_take_last } from "./list_take_last.mjs";
 import { list_last } from "./list_last.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
 import { not } from "./not.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_get_name } from "./property_get_name.mjs";
@@ -44,8 +44,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
   }
   let ending = list_take_last(working, span);
   let last = list_last(ending);
-  let handing_back_is = js_node_type_is(last, "ReturnStatement");
-  let stops_elsewhere_is = not(handing_back_is);
+  let stops_elsewhere_is = js_node_type_not_is(last, "ReturnStatement");
   if (stops_elsewhere_is) {
     let unfinished = null;
     return unfinished;
@@ -56,8 +55,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
     let empty_handed = null;
     return empty_handed;
   }
-  let named_is = js_node_type_is(argument, "Identifier");
-  let unnamed_is = not(named_is);
+  let unnamed_is = js_node_type_not_is(argument, "Identifier");
   if (unnamed_is) {
     let worked_out_late = null;
     return worked_out_late;
