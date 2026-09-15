@@ -1,8 +1,8 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
 import { text_split_dash } from "./text_split_dash.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
@@ -31,8 +31,7 @@ export function words_dash_pieces_absent(words) {
   function word_read(word) {
     let lowered = text_lower_to(word);
     let pieces = text_split_dash(lowered);
-    let a = list_size(pieces);
-    let several = greater_than(a, 1);
+    let several = list_size_greater_than(pieces, 1);
     if (not(several)) {
       return;
     }
