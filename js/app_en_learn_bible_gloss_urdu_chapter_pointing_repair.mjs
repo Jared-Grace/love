@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { null_is } from "./null_is.mjs";
@@ -6,7 +7,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { gloss_explain_back_reference_is } from "./gloss_explain_back_reference_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_meaning_parts } from "./app_en_learn_bible_gloss_urdu_explain_meaning_parts.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_en_learn_bible_gloss_urdu_pointing_explain_fresh } from "./app_en_learn_bible_gloss_urdu_pointing_explain_fresh.mjs";
 import { gloss_chapter_entries_explain_rewrite_generic } from "./gloss_chapter_entries_explain_rewrite_generic.mjs";
@@ -37,8 +37,7 @@ export async function app_en_learn_bible_gloss_urdu_chapter_pointing_repair(
     let pointing = gloss_explain_back_reference_is(explain);
     if (not(pointing)) {
       let parts = app_en_learn_bible_gloss_urdu_explain_meaning_parts(explain);
-      let b = list_empty_is(parts);
-      let lendable = not(b);
+      let lendable = list_empty_not_is(parts);
       if (lendable) {
         property_set(latest, word, explain);
       }
