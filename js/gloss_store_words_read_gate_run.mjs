@@ -6,7 +6,6 @@ import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
 import { list_sort_text_property } from "./list_sort_text_property.mjs";
 import { json_equal_not } from "./json_equal_not.mjs";
-import { log } from "./log.mjs";
 import { json_to } from "./json_to.mjs";
 import { error } from "./error.mjs";
 import { list_size } from "./list_size.mjs";
@@ -36,8 +35,10 @@ export function gloss_store_words_read_gate_run() {
   };
   let differs = json_equal_not(got, expected);
   if (differs) {
-    log(json_to(got));
-    log(json_to(expected));
+    let json = json_to(got);
+    console.log(json);
+    let json2 = json_to(expected);
+    console.log(json2);
     error("gloss store word readers disagree with the cases");
   }
   let r = {
