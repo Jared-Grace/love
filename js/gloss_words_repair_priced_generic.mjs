@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { gloss_word_priced_lossless_is } from "./gloss_word_priced_lossless_is.mjs";
 import { gloss_word_priced_silent } from "./gloss_word_priced_silent.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -51,10 +52,8 @@ export async function gloss_words_repair_priced_generic(fn, rows) {
   let chapters = property_get(asked, "chapters");
   let tallies = property_get(asked, "words");
   function word_priced(lower) {
-    let held = property_get(by_word, lower);
-    let silent = property_get(held, "silent");
-    let tally = property_get(tallies, lower);
-    let used = property_get(tally, "used");
+    let silent = property_path_get_2(by_word, lower, "silent");
+    let used = property_path_get_2(tallies, lower, "used");
     let already_naming = subtract(used, silent);
     let lossless = equal(used, silent);
     let priced_row = {
