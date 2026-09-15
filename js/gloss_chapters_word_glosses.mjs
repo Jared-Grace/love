@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_chapters_words_glosses } from "./gloss_chapters_words_glosses.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,8 +12,7 @@ export async function gloss_chapters_word_glosses(fn, word) {
   let lowered = text_lower_to(word);
   let asked = [word];
   let many = await gloss_chapters_words_glosses(fn, asked);
-  let words = property_get(many, "words");
-  let found = property_get(words, lowered);
+  let found = property_path_get_2(many, "words", lowered);
   let r = {
     chapters: property_get(many, "chapters"),
     used: property_get(found, "used"),
