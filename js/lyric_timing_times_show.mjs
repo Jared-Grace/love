@@ -1,6 +1,3 @@
-import { html_align_items_center } from "./html_align_items_center.mjs";
-import { subtract } from "./subtract.mjs";
-import { divide } from "./divide.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { lyric_timing_untimed_said } from "./lyric_timing_untimed_said.mjs";
 import { null_is } from "./null_is.mjs";
@@ -8,6 +5,7 @@ import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_row_gap } from "./html_flex_row_gap.mjs";
+import { html_align_items_center } from "./html_align_items_center.mjs";
 import { number_is } from "./number_is.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_disabled_set } from "./html_disabled_set.mjs";
@@ -16,9 +14,11 @@ import { html_span_text } from "./html_span_text.mjs";
 import { html_flex_grow_1 } from "./html_flex_grow_1.mjs";
 import { html_on_click } from "./html_on_click.mjs";
 import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
+import { divide } from "./divide.mjs";
 export function lyric_timing_times_show(cards, held) {
   "$plain cards";
   "$plain held";
@@ -30,7 +30,7 @@ export function lyric_timing_times_show(cards, held) {
   "WHAT IS MISSING IS SAID AT THE TOP, BECAUSE A LIST OF WHAT IS THERE CANNOT ANSWER IT. Every row here is a line that was tapped, so a passage with one line missing and a passage with none missing differ only by a row that is not there - and nobody counts thirty-one rows to find out. That is exactly how the closing Hallelujah of Psalm a hundred and forty-eight went out in a video with no time of its own: the screen had no way of mentioning it, and the first thing that did was the finished file.";
   "The sentence goes above the times rather than below them, and this is the one place in the room where a line may appear above something. Everything above the big button moves the button when it changes and the button is found by a thumb; this box is already below it, so a row arriving at the top of the box moves only older times, which are being read rather than pressed.";
   "★ EVERY LINE OF THE PASSAGE HAS A ROW, IN THE ORDER IT IS SUNG, AND PRESSING A ROW PICKS THAT LINE. Getting to a later line used to mean dragging the player and hoping to land just before it, or tapping through every line on the way; a list of the lines is already a list of places to go, so it answers that with one press. That is also why the rows run in the order of the song rather than newest first - somebody looking for line twelve counts down, not up.";
-  "The line the big button is waiting for is marked and kept in the middle of the box, which is what the newest-first order used to do for a tap: the row that matters is the one in view, without anybody scrolling to it.";
+  "★ THE LINE BEING SUNG IS MARKED IN YELLOW AND THE LINE THE BIG BUTTON IS WAITING FOR IN GREY. Marking only the waiting line put the yellow one line ahead of the singer, which reads as the list being wrong while a song plays over times already recorded - the eye matches the bright row to the voice, not to the button. The sung line is kept in the middle of the box, or the waiting line before anything has been sung, so the row that matters is in view without anybody scrolling to it.";
   "EACH TIMED ROW CARRIES A STEP EARLIER AND A STEP LATER. A line that is a tenth out is fixed there and then, beside the number being fixed, rather than by stepping back and trying to hit it better by hand.";
   let times = cards.times;
   html_clear(times);
@@ -67,10 +67,17 @@ export function lyric_timing_times_show(cards, held) {
       cards.on_select(index);
     }
     html_on_click(said, on_select);
-    let current = equal(index, held.cursor);
-    if (current) {
+    let sounding = equal(index, subtract(held.cursor, 1));
+    if (sounding) {
       html_style_background_color_set(row, "#fff0a0");
       marked = row;
+    }
+    let waiting = equal(index, held.cursor);
+    if (waiting) {
+      html_style_background_color_set(row, "#e8e8e8");
+      if (null_is(marked)) {
+        marked = row;
+      }
     }
   }
   each_index(held.texts, row_add);
