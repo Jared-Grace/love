@@ -1,3 +1,4 @@
+import { list_index_past_end_is } from "./list_index_past_end_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { text_unicode_normalize } from "./text_unicode_normalize.mjs";
@@ -11,7 +12,6 @@ import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
 import { list_get } from "./list_get.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { equal } from "./equal.mjs";
 import { text_replace } from "./text_replace.mjs";
 export function gloss_entries_words_unicode_repair(entries, written) {
@@ -54,8 +54,7 @@ export function gloss_entries_words_unicode_repair(entries, written) {
       let reached = null_is(already) ? 0 : already;
       let left = list_size(spellings);
       let last = subtract(left, 1);
-      let b = list_size(spellings);
-      let past = greater_than_equal(reached, b);
+      let past = list_index_past_end_is(spellings, reached);
       let at = past ? last : reached;
       property_set(taken, normalized, reached + 1);
       let original = list_get(spellings, at);
