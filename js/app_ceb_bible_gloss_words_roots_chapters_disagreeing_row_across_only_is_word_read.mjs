@@ -1,3 +1,4 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
@@ -41,8 +42,7 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
         list_add_if_not_includes(inside, root);
       }
       each(claims, claim_read);
-      let kinds = list_size(inside);
-      let split = greater_than(kinds, 1);
+      let split = list_size_greater_than(inside, 1);
       return split;
     }
     let split_count = list_filter_size(chapters, chapter_split_is);
