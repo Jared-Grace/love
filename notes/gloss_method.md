@@ -112,6 +112,16 @@ On etymology: it is the best tool in the box and the easiest to fake. **Never in
 - **The English descendant is still yours to supply, and it is still the half that can be wrong.** `derivation` says where the Greek word came from; it does not say which English word shares the root. `ἀρχή` → archaeology is yours to assert. If no English descendant would be recognised, say nothing — do not reach for a distant or folk connection to fill the slot.
 - **A wrong etymology is worse than none**, because the reader will remember it. Where `derivation` is absent, "its origin is uncertain" is a real and honest answer.
 
+## Simplest words
+
+**Every explain and every gloss is written as simply as it can be while staying true.** The human asked for this outright on 2026-09-15, for explanations and for translations alike. The test for each entry: **could a ten-year-old follow it on a first read?** If not, say it again in plainer words.
+
+- **Everyday words over exact-sounding ones.** "Shows there is more than one" over "makes what it marks many". "Prophecy" over "oracle".
+- **Short sentences, one idea each.** Split a sentence with a comma-chain in it.
+- **Say what the word does for the reader,** not what category it belongs to. A category name still gets defined in the same sentence (see above).
+- **A gloss is a translation too.** Pick the word a child would use for it, and override the dataset's gloss when it is the rarer word.
+- **Simpler never means false.** The parsing still may not be contradicted, and a true detail that matters is kept and said plainly rather than dropped.
+
 ## Minimum additional meaning
 
 Every explain has one point. Whatever it says beyond that point is additional meaning, and additional meaning can usually be dropped.
