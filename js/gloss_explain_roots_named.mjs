@@ -1,7 +1,6 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { gloss_explain_roots_built_named } from "./gloss_explain_roots_built_named.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
@@ -21,20 +20,17 @@ export function gloss_explain_roots_named(explain) {
   "Each of the four wordings has its own function rather than a pattern written out here, and the reason is a reader that needs to know which one answered. Given the word as well as the sentence, the third wording can have its one wrong answer settled and the other three must not be touched; a reader telling them apart by how many roots came back would filter the wrong sentences the moment two wordings returned the same number. An address cannot be confused with a count.";
   arguments_assert(arguments, 1);
   let claimed = gloss_explain_roots_claimed(explain);
-  let claimed_count = list_size(claimed);
-  let claimed_empty = equal(claimed_count, 0);
+  let claimed_empty = list_size_equal(claimed, 0);
   if (not(claimed_empty)) {
     return claimed;
   }
   let built = gloss_explain_roots_built_named(explain);
-  let built_count = list_size(built);
-  let built_empty = equal(built_count, 0);
+  let built_empty = list_size_equal(built, 0);
   if (not(built_empty)) {
     return built;
   }
   let self_named = gloss_explain_roots_self_named(explain);
-  let self_count = list_size(self_named);
-  let self_empty = equal(self_count, 0);
+  let self_empty = list_size_equal(self_named, 0);
   if (not(self_empty)) {
     return self_named;
   }
