@@ -8,7 +8,7 @@ import { each } from "./each.mjs";
 import { bless_walk_ways } from "./bless_walk_ways.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_filter } from "./list_filter.mjs";
-export function app_g_bless_person_step_ways_open(world, person) {
+export function bless_person_step_ways_open(world, person) {
   arguments_assert(arguments, 2);
   let r = bless_person_step_tiles(world, person);
   let tiles = property_get(r, "tiles");
