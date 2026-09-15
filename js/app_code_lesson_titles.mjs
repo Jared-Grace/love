@@ -1,10 +1,10 @@
+import { list_map_join_empty } from "./list_map_join_empty.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_component_offscreen } from "./html_component_offscreen.mjs";
 import { html_component_text_runs } from "./html_component_text_runs.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_join_empty } from "./list_join_empty.mjs";
 export function app_code_lesson_titles() {
   arguments_assert(arguments, 0);
   ("every lesson's home title, drawn off-screen and read back: the lesson's own name, the whole title as one piece of writing, and the runs it was made of with the code ones marked");
@@ -21,8 +21,7 @@ export function app_code_lesson_titles() {
       let text = property_get(run, "text");
       return text;
     }
-    let texts = list_map(runs, text_of);
-    let title = list_join_empty(texts);
+    let title = list_map_join_empty(runs, text_of);
     let read = {
       fn: lesson_fn.name,
       title,
