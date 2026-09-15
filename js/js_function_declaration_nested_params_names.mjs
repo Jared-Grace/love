@@ -1,9 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_list_function_nodes_visitors } from "./js_list_function_nodes_visitors.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_map } from "./list_map.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_squash } from "./list_map_squash.mjs";
 import { js_function_declaration_params_names } from "./js_function_declaration_params_names.mjs";
@@ -20,8 +19,7 @@ export function js_function_declaration_nested_params_names(declaration) {
   }
   let nodes = list_map(visitors, node_of);
   function inner_is(node) {
-    let itself = equal(node, declaration);
-    let nested = not(itself);
+    let nested = equal_not(node, declaration);
     return nested;
   }
   let inner = list_filter(nodes, inner_is);
