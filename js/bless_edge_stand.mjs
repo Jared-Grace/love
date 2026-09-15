@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { math_max } from "./math_max.mjs";
 import { multiply } from "./multiply.mjs";
 import { bless_edge_inside } from "./bless_edge_inside.mjs";
-export function app_g_bless_edge_stand(outer, box, point) {
+export function bless_edge_stand(outer, box, point) {
   arguments_assert(arguments, 3);
   ("Where on the glass the edge arrow has to stand to be pointing at somebody off the screen: their own place, pulled back inside the box far enough that the whole arrow still fits, and then a little further.");
   ("The amount it is held back by is measured off the arrow ITSELF rather than guessed, so all of it stays on the glass at whatever size the tiles are being drawn at today. Guessed, it is right on one phone.");
