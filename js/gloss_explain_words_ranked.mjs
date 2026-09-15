@@ -1,3 +1,4 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
@@ -11,7 +12,6 @@ import { list_map_async } from "./list_map_async.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { list_group_by_property } from "./list_group_by_property.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { gloss_entries_count } from "./gloss_entries_count.mjs";
@@ -55,8 +55,7 @@ export async function gloss_explain_words_ranked(fn, explain) {
   function word_read(gathering) {
     let word = property_get(gathering, "key");
     let items = property_get(gathering, "items");
-    let codes = list_map(items, row_chapter_read);
-    let spread = list_unique(codes);
+    let spread = list_map_unique(items, row_chapter_read);
     let r = {
       word,
       entries: list_size(items),
