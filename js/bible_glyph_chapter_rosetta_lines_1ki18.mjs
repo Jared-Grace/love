@@ -1,0 +1,331 @@
+export function bible_glyph_chapter_rosetta_lines_1ki18() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "1KI18",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְהִי֙ יָמִ֣ים רַבִּ֔ים וּדְבַר־ יְהוָ֗ה הָיָה֙ אֶל־ אֵ֣לִיָּ֔הוּ בַּשָּׁנָ֥ה הַשְּׁלִישִׁ֖ית לֵאמֹ֑ר לֵ֚ךְ הֵרָאֵ֣ה אֶל־ אַחְאָ֔ב וְאֶתְּנָ֥ה מָטָ֖ר עַל־ פְּנֵ֥י הָאֲדָמָֽה׃",
+        english:
+          "After a long time in the third year of the drought the word of the LORD came to Elijah Go and present yourself to Ahab and I will send rain upon the face of the earth",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיֵּ֙לֶךְ֙ אֵֽלִיָּ֔הוּ לְהֵרָא֖וֹת אֶל־ אַחְאָ֑ב וְהָרָעָ֖ב חָזָ֥ק בְּשֹׁמְרֽוֹן׃",
+        english:
+          "So Elijah went to present himself to Ahab The famine was severe in Samaria",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּקְרָ֣א אַחְאָ֔ב אֶל־ עֹבַדְיָ֖הוּ אֲשֶׁ֣ר עַל־ הַבָּ֑יִת וְעֹבַדְיָ֗הוּ הָיָ֥ה יָרֵ֛א אֶת־ יְהוָ֖ה מְאֹֽד׃",
+        english:
+          "and Ahab summoned Obadiah who was in charge of the palace Now Obadiah greatly feared the LORD",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיְהִי֙ בְּהַכְרִ֣ית אִיזֶ֔בֶל אֵ֖ת נְבִיאֵ֣י יְהוָ֑ה וַיִּקַּ֨ח עֹבַדְיָ֜הוּ מֵאָ֣ה נְבִאִ֗ים וַֽיַּחְבִּיאֵ֞ם חֲמִשִּׁ֥ים אִישׁ֙ בַּמְּעָרָ֔ה וְכִלְכְּלָ֖ם לֶ֥חֶם וָמָֽיִם׃",
+        english:
+          "for when Jezebel had slaughtered the prophets of the LORD Obadiah had taken a hundred prophets and hidden them fifty men per cave providing them with food and water",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּ֤אמֶר אַחְאָב֙ אֶל־ עֹ֣בַדְיָ֔הוּ לֵ֤ךְ בָּאָ֙רֶץ֙ אֶל־ כָּל־ מַעְיְנֵ֣י הַמַּ֔יִם וְאֶ֖ל כָּל־ הַנְּחָלִ֑ים אוּלַ֣י׀ נִמְצָ֣א חָצִ֗יר וּנְחַיֶּה֙ ס֣וּס וָפֶ֔רֶד וְל֥וֹא נַכְרִ֖ית מֵהַבְּהֵמָֽה׃",
+        english:
+          "Then Ahab said to Obadiah Go throughout the land to every spring and every valley Perhaps we will find grass to keep the horses and mules alive so that we will not have to destroy any livestock",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַֽיְחַלְּק֥וּ לָהֶ֛ם אֶת־ הָאָ֖רֶץ לַֽעֲבָר־ בָּ֑הּ אַחְאָ֞ב הָלַ֨ךְ בְּדֶ֤רֶךְ אֶחָד֙ לְבַדּ֔וֹ וְעֹֽבַדְיָ֛הוּ הָלַ֥ךְ בְּדֶרֶךְ־ אֶחָ֖ד לְבַדּֽוֹ׃",
+        english:
+          "So they divided the land to explore Ahab went one way by himself and Obadiah went the other way by himself",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיְהִ֤י עֹבַדְיָ֙הוּ֙ בַּדֶּ֔רֶךְ וְהִנֵּ֥ה אֵלִיָּ֖הוּ לִקְרָאת֑וֹ וַיַּכִּרֵ֙הוּ֙ וַיִּפֹּ֣ל עַל־ פָּנָ֔יו וַיֹּ֕אמֶר הַאַתָּ֥ה זֶ֖ה אֲדֹנִ֥י אֵלִיָּֽהוּ׃",
+        english:
+          "Now as Obadiah went on his way Elijah suddenly met him When Obadiah recognized him he fell facedown and said Is it you my lord Elijah",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֹּ֥אמֶר ל֖וֹ אָ֑נִי לֵ֛ךְ אֱמֹ֥ר לַאדֹנֶ֖יךָ הִנֵּ֥ה אֵלִיָּֽהוּ׃",
+        english: "It is I he answered Go tell your master Elijah is here",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֹּ֖אמֶר מֶ֣ה חָטָ֑אתִי כִּֽי־ אַתָּ֞ה נֹתֵ֧ן אֶֽת־ עַבְדְּךָ֛ בְּיַד־ אַחְאָ֖ב לַהֲמִיתֵֽנִי׃",
+        english:
+          "But Obadiah replied How have I sinned that you are handing your servant over to Ahab to put me to death",
+      },
+      {
+        verse_number: 10,
+        original:
+          "חַ֣י׀ יְהוָ֣ה אֱלֹהֶ֗יךָ אִם־ יֶשׁ־ גּ֤וֹי וּמַמְלָכָה֙ אֲ֠שֶׁר לֹֽא־ שָׁלַ֨ח אֲדֹנִ֥י שָׁם֙ לְבַקֶּשְׁךָ֔ וְאָמְר֖וּ אָ֑יִן וְהִשְׁבִּ֤יעַ אֶת־ הַמַּמְלָכָה֙ וְאֶת־ הַגּ֔וֹי כִּ֖י לֹ֥א יִמְצָאֶֽכָּה׃",
+        english:
+          "As surely as the LORD your God lives there is no nation or kingdom where my lord has not sent someone to search for you When they said He is not here he made that kingdom or nation swear that they had not found you",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְעַתָּ֖ה אַתָּ֣ה אֹמֵ֑ר לֵ֛ךְ אֱמֹ֥ר לַאדֹנֶ֖יךָ הִנֵּ֥ה אֵלִיָּֽהוּ׃",
+        english: "And now you say Go tell your master that Elijah is here",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהָיָ֞ה אֲנִ֣י׀ אֵלֵ֣ךְ מֵאִתָּ֗ךְ וְר֨וּחַ יְהוָ֤ה׀ יִֽשָּׂאֲךָ֙ עַ֚ל אֲשֶׁ֣ר לֹֽא־ אֵדָ֔ע וּבָ֨אתִי לְהַגִּ֧יד לְאַחְאָ֛ב וְלֹ֥א יִֽמְצָאֲךָ֖ וַהֲרָגָ֑נִי וְעַבְדְּךָ֛ יָרֵ֥א אֶת־ יְהוָ֖ה מִנְּעֻרָֽי׃",
+        english:
+          "I do not know where the Spirit of the LORD may carry you off when I leave you Then when I go and tell Ahab and he does not find you he will kill me But I, your servant have feared the LORD from my youth",
+      },
+      {
+        verse_number: 13,
+        original:
+          "הֲלֹֽא־ הֻגַּ֤ד לַֽאדֹנִי֙ אֵ֣ת אֲשֶׁר־ עָשִׂ֔יתִי בַּהֲרֹ֣ג אִיזֶ֔בֶל אֵ֖ת נְבִיאֵ֣י יְהוָ֑ה וָאַחְבִּא֩ מִנְּבִיאֵ֨י יְהוָ֜ה מֵ֣אָה אִ֗ישׁ חֲמִשִּׁ֨ים חֲמִשִּׁ֥ים אִישׁ֙ בַּמְּעָרָ֔ה וָאֲכַלְכְּלֵ֖ם לֶ֥חֶם וָמָֽיִם׃",
+        english:
+          "Was it not reported to my lord what I did when Jezebel slaughtered the prophets of the LORD I hid a hundred prophets of the LORD fifty men per cave and I provided them with food and water",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְעַתָּה֙ אַתָּ֣ה אֹמֵ֔ר לֵ֛ךְ אֱמֹ֥ר לַֽאדֹנֶ֖יךָ הִנֵּ֣ה אֵלִיָּ֑הוּ וַהֲרָגָֽנִי׃ס",
+        english:
+          "And now you say Go tell your lord that Elijah is here He will kill me",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיֹּ֙אמֶר֙ אֵֽלִיָּ֔הוּ חַ֚י יְהוָ֣ה צְבָא֔וֹת אֲשֶׁ֥ר עָמַ֖דְתִּי לְפָנָ֑יו כִּ֥י הַיּ֖וֹם אֵרָאֶ֥ה אֵלָֽיו׃",
+        english:
+          "Then Elijah said As surely as the LORD of Hosts lives before whom I stand I will present myself to Ahab today",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיֵּ֧לֶךְ עֹבַדְיָ֛הוּ לִקְרַ֥את אַחְאָ֖ב וַיַּגֶּד־ ל֑וֹ וַיֵּ֥לֶךְ אַחְאָ֖ב לִקְרַ֥את אֵלִיָּֽהוּ׃",
+        english: "So Obadiah went to inform Ahab who went to meet Elijah",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיְהִ֛י כִּרְא֥וֹת אַחְאָ֖ב אֶת־ אֵלִיָּ֑הוּ וַיֹּ֤אמֶר אַחְאָב֙ אֵלָ֔יו הַאַתָּ֥ה זֶ֖ה עֹכֵ֥ר יִשְׂרָאֵֽל׃",
+        english:
+          "When Ahab saw Elijah he said to him Is that you O troubler of Israel",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֹּ֗אמֶר לֹ֤א עָכַ֙רְתִּי֙ אֶת־ יִשְׂרָאֵ֔ל כִּ֥י אִם־ אַתָּ֖ה וּבֵ֣ית אָבִ֑יךָ בַּֽעֲזָבְכֶם֙ אֶת־ מִצְוֺ֣ת יְהוָ֔ה וַתֵּ֖לֶךְ אַחֲרֵ֥י הַבְּעָלִֽים׃",
+        english:
+          "I have not troubled Israel Elijah replied but you and your father’s house have for you have forsaken the commandments of the LORD and have followed the Baals",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְעַתָּ֗ה שְׁלַ֨ח קְבֹ֥ץ אֵלַ֛י אֶת־ כָּל־ יִשְׂרָאֵ֖ל אֶל־ הַ֣ר הַכַּרְמֶ֑ל וְאֶת־ נְבִיאֵ֨י הַבַּ֜עַל אַרְבַּ֧ע מֵא֣וֹת וַחֲמִשִּׁ֗ים וּנְבִיאֵ֤י הָֽאֲשֵׁרָה֙ אַרְבַּ֣ע מֵא֔וֹת אֹכְלֵ֖י שֻׁלְחַ֥ן אִיזָֽבֶל׃",
+        english:
+          "Now summon all Israel to meet me on Mount Carmel along with the four hundred and fifty prophets of Baal and the four hundred prophets of Asherah who eat at Jezebel’s table",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיִּשְׁלַ֥ח אַחְאָ֖ב בְּכָל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וַיִּקְבֹּ֥ץ אֶת־ הַנְּבִיאִ֖ים אֶל־ הַ֥ר הַכַּרְמֶֽל׃",
+        english:
+          "So Ahab summoned all the Israelites and assembled the prophets on Mount Carmel",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּגַּ֨שׁ אֵלִיָּ֜הוּ אֶל־ כָּל־ הָעָ֗ם וַיֹּ֙אמֶר֙ עַד־ מָתַ֞י אַתֶּ֣ם פֹּסְחִים֮ עַל־ שְׁתֵּ֣י הַסְּעִפִּים֒ אִם־ יְהוָ֤ה הָֽאֱלֹהִים֙ לְכ֣וּ אַחֲרָ֔יו וְאִם־ הַבַּ֖עַל לְכ֣וּ אַחֲרָ֑יו וְלֹֽא־ עָנ֥וּ הָעָ֛ם אֹת֖וֹ דָּבָֽר׃",
+        english:
+          "Then Elijah approached all the people and said How long will you waver between two opinions If the LORD is God follow Him But if Baal is God follow him But the people did not answer a word",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֹּ֤אמֶר אֵלִיָּ֙הוּ֙ אֶל־ הָעָ֔ם אֲנִ֞י נוֹתַ֧רְתִּי נָבִ֛יא לַיהוָ֖ה לְבַדִּ֑י וּנְבִיאֵ֣י הַבַּ֔עַל אַרְבַּע־ מֵא֥וֹת וַחֲמִשִּׁ֖ים אִֽישׁ׃",
+        english:
+          "Then Elijah said to the people I am the only remaining prophet of the LORD but Baal has four hundred and fifty prophets",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְיִתְּנוּ־ לָ֜נוּ שְׁנַ֣יִם פָּרִ֗ים וְיִבְחֲר֣וּ לָהֶם֩ הַפָּ֨ר הָאֶחָ֜ד וִֽינַתְּחֻ֗הוּ וְיָשִׂ֙ימוּ֙ עַל־ הָ֣עֵצִ֔ים וְאֵ֖שׁ לֹ֣א יָשִׂ֑ימוּ וַאֲנִ֞י אֶעֱשֶׂ֣ה׀ אֶת־ הַפָּ֣ר הָאֶחָ֗ד וְנָֽתַתִּי֙ עַל־ הָ֣עֵצִ֔ים וְאֵ֖שׁ לֹ֥א אָשִֽׂים׃",
+        english:
+          "Get two bulls for us Let the prophets of Baal choose one bull for themselves cut it into pieces and place it on the wood but not light the fire And I will prepare the other bull and place it on the wood but not light the fire",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וּקְרָאתֶ֞ם בְּשֵׁ֣ם אֱלֹֽהֵיכֶ֗ם וַֽאֲנִי֙ אֶקְרָ֣א בְשֵׁם־ יְהוָ֔ה וְהָיָ֧ה הָאֱלֹהִ֛ים אֲשֶׁר־ יַעֲנֶ֥ה בָאֵ֖שׁ ה֣וּא הָאֱלֹהִ֑ים וַיַּ֧עַן כָּל־ הָעָ֛ם וַיֹּאמְר֖וּ ט֥וֹב הַדָּבָֽר׃",
+        english:
+          "Then you may call on the name of your god and I will call on the name of the LORD The God who answers by fire He is God And all the people answered What you say is good",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֹּ֨אמֶר אֵלִיָּ֜הוּ לִנְבִיאֵ֣י הַבַּ֗עַל בַּחֲר֨וּ לָכֶ֜ם הַפָּ֤ר הָֽאֶחָד֙ וַעֲשׂ֣וּ רִאשֹׁנָ֔ה כִּ֥י אַתֶּ֖ם הָרַבִּ֑ים וְקִרְאוּ֙ בְּשֵׁ֣ם אֱלֹהֵיכֶ֔ם וְאֵ֖שׁ לֹ֥א תָשִֽׂימוּ׃",
+        english:
+          "Then Elijah said to the prophets of Baal Since you are so numerous choose for yourselves one bull and prepare it first Then call on the name of your god but do not light the fire",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַ֠יִּקְחוּ אֶת־ הַפָּ֨ר אֲשֶׁר־ נָתַ֣ן לָהֶם֮ וַֽיַּעֲשׂוּ֒ וַיִּקְרְא֣וּ בְשֵׁם־ הַ֠בַּעַל מֵהַבֹּ֨קֶר וְעַד־ הַצָּהֳרַ֤יִם לֵאמֹר֙ הַבַּ֣עַל עֲנֵ֔נוּ וְאֵ֥ין ק֖וֹל וְאֵ֣ין עֹנֶ֑ה וַֽיְפַסְּח֔וּ עַל־ הַמִּזְבֵּ֖חַ אֲשֶׁ֥ר עָשָֽׂה׃",
+        english:
+          "And they took the bull that was given them prepared it and called on the name of Baal from morning until noon shouting O Baal answer us But there was no sound and no one answered as they leaped around the altar they had made",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיְהִ֨י בַֽצָּהֳרַ֜יִם וַיְהַתֵּ֧ל בָּהֶ֣ם אֵלִיָּ֗הוּ וַיֹּ֙אמֶר֙ קִרְא֤וּ בְקוֹל־ גָּדוֹל֙ כִּֽי־ אֱלֹהִ֣ים ה֔וּא כִּ֣י שִׂ֧יחַ וְכִֽי־ שִׂ֛יג ל֖וֹ וְכִֽי־ דֶ֣רֶךְ ל֑וֹ אוּלַ֛י יָשֵׁ֥ן ה֖וּא וְיִקָֽץ׃",
+        english:
+          "At noon Elijah began to taunt them saying Shout louder for he is a god Perhaps he is deep in thought or occupied or on a journey Perhaps he is sleeping and must be awakened",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַֽיִּקְרְאוּ֙ בְּק֣וֹל גָּד֔וֹל וַיִּתְגֹּֽדְדוּ֙ כְּמִשְׁפָּטָ֔ם בַּחֲרָב֖וֹת וּבָֽרְמָחִ֑ים עַד־ שְׁפָךְ־ דָּ֖ם עֲלֵיהֶֽם׃",
+        english:
+          "So they shouted louder and cut themselves with knives and lances as was their custom until the blood gushed over them",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַֽיְהִי֙ כַּעֲבֹ֣ר הַֽצָּהֳרַ֔יִם וַיִּֽתְנַבְּא֔וּ עַ֖ד לַעֲל֣וֹת הַמִּנְחָ֑ה וְאֵֽין־ ק֥וֹל וְאֵין־ עֹנֶ֖ה וְאֵ֥ין קָֽשֶׁב׃",
+        english:
+          "Midday passed and they kept on raving until the time of the evening sacrifice But there was no response no one answered no one paid attention",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיֹּ֨אמֶר אֵלִיָּ֤הוּ לְכָל־ הָעָם֙ גְּשׁ֣וּ אֵלַ֔י וַיִּגְּשׁ֥וּ כָל־ הָעָ֖ם אֵלָ֑יו וַיְרַפֵּ֛א אֶת־ מִזְבַּ֥ח יְהוָ֖ה הֶהָרֽוּס׃",
+        english:
+          "Then Elijah said to all the people Come near to me So all the people approached him and he repaired the altar of the LORD that had been torn down",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיִּקַּ֣ח אֵלִיָּ֗הוּ שְׁתֵּ֤ים עֶשְׂרֵה֙ אֲבָנִ֔ים כְּמִסְפַּ֖ר שִׁבְטֵ֣י בְנֵֽי־ יַעֲקֹ֑ב אֲשֶׁר֩ הָיָ֨ה דְבַר־ יְהוָ֤ה אֵלָיו֙ לֵאמֹ֔ר יִשְׂרָאֵ֖ל יִהְיֶ֥ה שְׁמֶֽךָ׃",
+        english:
+          "And Elijah took twelve stones one for each tribe of the sons of Jacob to whom the word of the LORD had come and said Israel shall be your name",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיִּבְנֶ֧ה אֶת־ הָאֲבָנִ֛ים מִזְבֵּ֖חַ בְּשֵׁ֣ם יְהוָ֑ה וַיַּ֣עַשׂ תְּעָלָ֗ה כְּבֵית֙ סָאתַ֣יִם זֶ֔רַע סָבִ֖יב לַמִּזְבֵּֽחַ׃",
+        english:
+          "And with the stones Elijah built an altar in the name of the LORD Then he dug a trench around the altar large enough to hold two seahs of seed",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַֽיַּעֲרֹ֖ךְ אֶת־ הָֽעֵצִ֑ים וַיְנַתַּח֙ אֶת־ הַפָּ֔ר וַיָּ֖שֶׂם עַל־ הָעֵצִֽים׃",
+        english:
+          "Next, he arranged the wood cut up the bull placed it on the wood",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיֹּ֗אמֶר מִלְא֨וּ אַרְבָּעָ֤ה כַדִּים֙ מַ֔יִם וְיִֽצְק֥וּ עַל־ הָעֹלָ֖ה וְעַל־ הָעֵצִ֑ים וַיֹּ֤אמֶר שְׁנוּ֙ וַיִּשְׁנ֔וּ וַיֹּ֥אמֶר שַׁלֵּ֖שׁוּ וַיְשַׁלֵּֽשׁוּ׃",
+        english:
+          "and said Fill four waterpots and pour the water on the offering and on the wood Do it a second time he said and they did it a second time Do it a third time he said and they did it a third time",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וַיֵּלְכ֣וּ הַמַּ֔יִם סָבִ֖יב לַמִּזְבֵּ֑חַ וְגַ֥ם אֶת־ הַתְּעָלָ֖ה מִלֵּא־ מָֽיִם׃",
+        english:
+          "So the water ran down around the altar and even filled the trench",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיְהִ֣י׀ בַּעֲל֣וֹת הַמִּנְחָ֗ה וַיִּגַּ֞שׁ אֵלִיָּ֣הוּ הַנָּבִיא֮ וַיֹּאמַר֒ יְהוָ֗ה אֱלֹהֵי֙ אַבְרָהָם֙ יִצְחָ֣ק וְיִשְׂרָאֵ֔ל הַיּ֣וֹם יִוָּדַ֗ע כִּֽי־ אַתָּ֧ה אֱלֹהִ֛ים בְּיִשְׂרָאֵ֖ל וַאֲנִ֣י עַבְדֶּ֑ךָ וּבְדִבְרֶיךָ עָשִׂ֔יתִי אֵ֥ת כָּל־ הַדְּבָרִ֖ים הָאֵֽלֶּה׃",
+        english:
+          "At the time of the evening sacrifice Elijah the prophet approached the altar and said O LORD God of Abraham Isaac and Israel let it be known this day that You are God in Israel and that I am Your servant and have done all these things at Your command",
+      },
+      {
+        verse_number: 37,
+        original:
+          "עֲנֵ֤נִי יְהוָה֙ עֲנֵ֔נִי וְיֵֽדְעוּ֙ הָעָ֣ם הַזֶּ֔ה כִּֽי־ אַתָּ֥ה יְהוָ֖ה הָאֱלֹהִ֑ים וְאַתָּ֛ה הֲסִבֹּ֥תָ אֶת־ לִבָּ֖ם אֲחֹרַנִּֽית׃",
+        english:
+          "Answer me O LORD Answer me so that this people will know that You the LORD are God and that You have turned their hearts back again",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וַתִּפֹּ֣ל אֵשׁ־ יְהוָ֗ה וַתֹּ֤אכַל אֶת־ הָֽעֹלָה֙ וְאֶת־ הָ֣עֵצִ֔ים וְאֶת־ הָאֲבָנִ֖ים וְאֶת־ הֶעָפָ֑ר וְאֶת־ הַמַּ֥יִם אֲשֶׁר־ בַּתְּעָלָ֖ה לִחֵֽכָה׃",
+        english:
+          "Then the fire of the LORD fell and consumed the sacrifice the wood the stones and the dust and it licked up the water in the trench",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וַיַּרְא֙ כָּל־ הָעָ֔ם וַֽיִּפְּל֖וּ עַל־ פְּנֵיהֶ֑ם וַיֹּ֣אמְר֔וּ יְהוָה֙ ה֣וּא הָאֱלֹהִ֔ים יְהוָ֖ה ה֥וּא הָאֱלֹהִֽים׃",
+        english:
+          "When all the people saw this they fell facedown and said The LORD He is God The LORD He is God",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וַיֹּאמֶר֩ אֵלִיָּ֨הוּ לָהֶ֜ם תִּפְשׂ֣וּ׀ אֶת־ נְבִיאֵ֣י הַבַּ֗עַל אִ֛ישׁ אַל־ יִמָּלֵ֥ט מֵהֶ֖ם וַֽיִּתְפְּשׂ֑וּם וַיּוֹרִדֵ֤ם אֵלִיָּ֙הוּ֙ אֶל־ נַ֣חַל קִישׁ֔וֹן וַיִּשְׁחָטֵ֖ם שָֽׁם׃",
+        english:
+          "Then Elijah ordered them Seize the prophets of Baal Do not let a single one escape So they seized them and Elijah brought them down to the Kishon Valley and slaughtered them there",
+      },
+      {
+        verse_number: 41,
+        original:
+          "וַיֹּ֤אמֶר אֵלִיָּ֙הוּ֙ לְאַחְאָ֔ב עֲלֵ֖ה אֱכֹ֣ל וּשְׁתֵ֑ה כִּי־ ק֖וֹל הֲמ֥וֹן הַגָּֽשֶׁם׃",
+        english:
+          "And Elijah said to Ahab Go up eat and drink for there is the sound of a heavy rain",
+      },
+      {
+        verse_number: 42,
+        original:
+          "וַיַּעֲלֶ֥ה אַחְאָ֖ב לֶאֱכֹ֣ל וְלִשְׁתּ֑וֹת וְאֵ֨לִיָּ֜הוּ עָלָ֨ה אֶל־ רֹ֤אשׁ הַכַּרְמֶל֙ וַיִּגְהַ֣ר אַ֔רְצָה וַיָּ֥שֶׂם פָּנָ֖יו בֵּ֥ין בְּרָכוֹ׃",
+        english:
+          "So Ahab went up to eat and drink But Elijah climbed to the summit of Carmel bent down on the ground and put his face between his knees",
+      },
+      {
+        verse_number: 43,
+        original:
+          "וַיֹּ֣אמֶר אֶֽל־ נַעֲר֗וֹ עֲלֵֽה־ נָא֙ הַבֵּ֣ט דֶּֽרֶךְ־ יָ֔ם וַיַּ֙עַל֙ וַיַּבֵּ֔ט וַיֹּ֖אמֶר אֵ֣ין מְא֑וּמָה וַיֹּ֕אמֶר שֻׁ֖ב שֶׁ֥בַע פְּעָמִֽים׃",
+        english:
+          "Go and look toward the sea he said to his servant So the servant went and looked and he said There is nothing there Seven times Elijah said Go back",
+      },
+      {
+        verse_number: 44,
+        original:
+          "וַֽיְהִי֙ בַּשְּׁבִעִ֔ית וַיֹּ֗אמֶר הִנֵּה־ עָ֛ב קְטַנָּ֥ה כְּכַף־ אִ֖ישׁ עֹלָ֣ה מִיָּ֑ם וַיֹּ֗אמֶר עֲלֵ֨ה אֱמֹ֤ר אֶל־ אַחְאָב֙ אֱסֹ֣ר וָרֵ֔ד וְלֹ֥א יַעַצָרְכָ֖ה הַגָּֽשֶׁם׃",
+        english:
+          "On the seventh time the servant reported There is a cloud as small as a man’s hand rising from the sea And Elijah replied Go and tell Ahab Prepare your chariot and go down before the rain stops you",
+      },
+      {
+        verse_number: 45,
+        original:
+          "וַיְהִ֣י׀ עַד־ כֹּ֣ה וְעַד־ כֹּ֗ה וְהַשָּׁמַ֙יִם֙ הִֽתְקַדְּרוּ֙ עָבִ֣ים וְר֔וּחַ וַיְהִ֖י גֶּ֣שֶׁם גָּד֑וֹל וַיִּרְכַּ֥ב אַחְאָ֖ב וַיֵּ֥לֶךְ יִזְרְעֶֽאלָה׃",
+        english:
+          "Meanwhile the sky grew dark with clouds and wind and a heavy rain began to fall So Ahab rode away and went to Jezreel",
+      },
+      {
+        verse_number: 46,
+        original:
+          "וְיַד־ יְהוָ֗ה הָֽיְתָה֙ אֶל־ אֵ֣לִיָּ֔הוּ וַיְשַׁנֵּ֖ס מָתְנָ֑יו וַיָּ֙רָץ֙ לִפְנֵ֣י אַחְאָ֔ב עַד־ בֹּאֲכָ֖ה יִזְרְעֶֽאלָה׃",
+        english:
+          "And the hand of the LORD came upon Elijah and he tucked his cloak into his belt and ran ahead of Ahab all the way to Jezreel",
+      },
+    ],
+  };
+  return chapter;
+}
