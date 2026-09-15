@@ -7,7 +7,7 @@ import { bless_arrow_animation_name } from "./bless_arrow_animation_name.mjs";
 import { html_style_animation_alternate_apply } from "./html_style_animation_alternate_apply.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_arrow_svg } from "./app_shared_arrow_svg.mjs";
-export function app_g_bless_arrow_bob(parent, degrees) {
+export function bless_arrow_bob(parent, degrees) {
   arguments_assert(arguments, 2);
   ("One nodding arrow, aimed so many degrees clockwise from due east, hung inside whatever is handed in - and the wrapper that holds its AIM is what comes back, so a caller who has to re-aim it later has the one element to turn.");
   ("Two wrappers around one drawing, and the split is the whole point. The outer one is turned and nothing else; the inner one nods and nothing else. An element has a single transform, so a thing that both turns and moves has to write both into one text in the right order - and every re-aiming would then have to rebuild the movement too, which restarts it. Split, the aim can change on every step of the game while the nod carries straight on.");
