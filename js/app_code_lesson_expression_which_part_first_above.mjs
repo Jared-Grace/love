@@ -9,8 +9,8 @@ import { add } from "./add.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_lesson_suppose_solve_line } from "./app_code_lesson_suppose_solve_line.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-export function app_code_lesson_expression_which_part_first_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_which_part_first_above(root, context) {
+  arguments_assert(arguments, 2);
   ("the line, then the replacement that works, then the same line with the other replacement carried through to a different answer, then the rule");
   ("One line for both cards, not two. The wrong card is only worth reading beside the right one, and a second line would let a learner file the failure under that line rather than under the choice.");
   ("1 + 2 * 4 because the two parts differ in every way that matters to the reader: the numbers are all different, the two operators are different, and the two answers - 9 and 12 - are far enough apart that nobody can wonder whether they misread a digit.");
@@ -67,8 +67,8 @@ export function app_code_lesson_expression_which_part_first_above(root) {
   let wrong_value_text = text_to(wrong_value);
   let right_card = app_code_container_light_blue(root);
   app_code_lesson_suppose_solve_line(right_card, "Suppose", whole);
-  html_div_cycle_code(right_card, [
-    "Remember: the ",
+  app_code_remember_from_lesson(right_card, context, app_code_lesson_expression_choose_order, [
+    "the ",
     strong_part,
     " is solved first, to get ",
     inner_text,

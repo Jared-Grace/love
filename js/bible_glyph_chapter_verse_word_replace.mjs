@@ -1,13 +1,13 @@
-import { json_to } from "./json_to.mjs";
-import { equal } from "./equal.mjs";
-import { less_than } from "./less_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_combine_3 } from "./text_combine_3.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
 import { text_trim } from "./text_trim.mjs";
+import { equal } from "./equal.mjs";
+import { less_than } from "./less_than.mjs";
 import { error } from "./error.mjs";
+import { json_to } from "./json_to.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { file_overwrite } from "./file_overwrite.mjs";
 export async function bible_glyph_chapter_verse_word_replace(
@@ -75,9 +75,9 @@ export async function bible_glyph_chapter_verse_word_replace(
       seen,
     });
   }
-  let line = lines[found];
+  let found_line = lines[found];
   let json = json_to(to);
-  lines[found] = line.replace(bare, json);
+  lines[found] = found_line.replace(bare, json);
   let after = list_join_newline(lines);
   await file_overwrite(f_path, after);
   let r = {
