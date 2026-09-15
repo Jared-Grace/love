@@ -1,0 +1,248 @@
+export function bible_glyph_chapter_rosetta_lines_jer07() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "JER07",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "הַדָּבָר֙ אֲשֶׁ֣ר הָיָ֣ה אֶֽל־ יִרְמְיָ֔הוּ מֵאֵ֥ת יְהוָ֖ה לֵאמֹֽר׃",
+        english: "This is the word that came to Jeremiah from the LORD saying",
+      },
+      {
+        verse_number: 2,
+        original:
+          "עֲמֹ֗ד בְּשַׁ֙עַר֙ בֵּ֣ית יְהוָ֔ה וְקָרָ֣אתָ שָּׁ֔ם אֶת־ הַדָּבָ֖ר הַזֶּ֑ה וְאָמַרְתָּ֞ שִׁמְע֣וּ דְבַר־ יְהוָ֗ה כָּל־ יְהוּדָה֙ הַבָּאִים֙ בַּשְּׁעָרִ֣ים הָאֵ֔לֶּה לְהִֽשְׁתַּחֲוֺ֖ת לַיהוָֽה׃ס",
+        english:
+          "Stand in the gate of the house of the LORD and proclaim this message Hear the word of the LORD all you people of Judah who enter through these gates to worship the LORD",
+      },
+      {
+        verse_number: 3,
+        original:
+          "כֹּֽה־ אָמַ֞ר יְהוָ֤ה צְבָאוֹת֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל הֵיטִ֥יבוּ דַרְכֵיכֶ֖ם וּמַֽעַלְלֵיכֶ֑ם וַאֲשַׁכְּנָ֣ה אֶתְכֶ֔ם בַּמָּק֥וֹם הַזֶּֽה׃",
+        english:
+          "Thus says the LORD of Hosts the God of Israel Correct your ways and deeds and I will let you live in this place",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אַל־ תִּבְטְח֣וּ לָכֶ֔ם אֶל־ דִּבְרֵ֥י הַשֶּׁ֖קֶר לֵאמֹ֑ר הֵיכַ֤ל יְהוָה֙ הֵיכַ֣ל יְהוָ֔ה הֵיכַ֥ל יְהוָ֖ה הֵֽמָּה׃",
+        english:
+          "Do not trust in deceptive words saying This is the temple of the LORD the temple of the LORD the temple of the LORD",
+      },
+      {
+        verse_number: 5,
+        original:
+          "כִּ֤י אִם־ הֵיטֵיב֙ תֵּיטִ֔יבוּ אֶת־ דַּרְכֵיכֶ֖ם וְאֶת־ מַֽעַלְלֵיכֶ֑ם אִם־ עָשׂ֤וֹ תַֽעֲשׂוּ֙ מִשְׁפָּ֔ט בֵּ֥ין אִ֖ישׁ וּבֵ֥ין רֵעֵֽהוּ׃",
+        english:
+          "For if you really correct your ways and deeds if you act justly toward one another",
+      },
+      {
+        verse_number: 6,
+        original:
+          "גֵּ֣ר יָת֤וֹם וְאַלְמָנָה֙ לֹ֣א תַֽעֲשֹׁ֔קוּ וְדָ֣ם נָקִ֔י אַֽל־ תִּשְׁפְּכ֖וּ בַּמָּק֣וֹם הַזֶּ֑ה וְאַחֲרֵ֨י אֱלֹהִ֧ים אֲחֵרִ֛ים לֹ֥א תֵלְכ֖וּ לְרַ֥ע לָכֶֽם׃",
+        english:
+          "if you no longer oppress the foreigner and the fatherless and the widow and if you no longer shed innocent blood in this place or follow other gods to your own harm",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְשִׁכַּנְתִּ֤י אֶתְכֶם֙ בַּמָּק֣וֹם הַזֶּ֔ה בָּאָ֕רֶץ אֲשֶׁ֥ר נָתַ֖תִּי לַאֲבֽוֹתֵיכֶ֑ם לְמִן־ עוֹלָ֖ם וְעַד־ עוֹלָֽם׃",
+        english:
+          "then I will let you live in this place in the land that I gave to your fathers forever and ever",
+      },
+      {
+        verse_number: 8,
+        original:
+          "הִנֵּ֤ה אַתֶּם֙ בֹּטְחִ֣ים לָכֶ֔ם עַל־ דִּבְרֵ֖י הַשָּׁ֑קֶר לְבִלְתִּ֖י הוֹעִֽיל׃",
+        english: "But look you keep trusting in deceptive words to no avail",
+      },
+      {
+        verse_number: 9,
+        original:
+          "הֲגָנֹ֤ב׀ רָצֹ֙חַ֙ וְֽנָאֹ֔ף וְהִשָּׁבֵ֥עַ לַשֶּׁ֖קֶר וְקַטֵּ֣ר לַבָּ֑עַל וְהָלֹ֗ךְ אַחֲרֵ֛י אֱלֹהִ֥ים אֲחֵרִ֖ים אֲשֶׁ֥ר לֹֽא־ יְדַעְתֶּֽם׃",
+        english:
+          "Will you steal and murder commit adultery and perjury burn incense to Baal and follow other gods that you have not known",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וּבָאתֶ֞ם וַעֲמַדְתֶּ֣ם לְפָנַ֗י בַּבַּ֤יִת הַזֶּה֙ אֲשֶׁ֣ר נִקְרָא־ שְׁמִ֣י עָלָ֔יו וַאֲמַרְתֶּ֖ם נִצַּ֑לְנוּ לְמַ֣עַן עֲשׂ֔וֹת אֵ֥ת כָּל־ הַתּוֹעֵב֖וֹת הָאֵֽלֶּה׃",
+        english:
+          "and then come and stand before Me in this house which bears My Name and say We are delivered so we can continue with all these abominations",
+      },
+      {
+        verse_number: 11,
+        original:
+          "הַמְעָרַ֣ת פָּרִצִ֗ים הָיָ֨ה הַבַּ֧יִת הַזֶּ֛ה אֲשֶׁר־ נִקְרָֽא־ שְׁמִ֥י עָלָ֖יו בְּעֵינֵיכֶ֑ם גַּ֧ם אָנֹכִ֛י הִנֵּ֥ה רָאִ֖יתִי נְאֻם־ יְהוָֽה׃ס",
+        english:
+          "Has this house which bears My Name become a den of robbers in your sight Yes I too have seen it declares the LORD",
+      },
+      {
+        verse_number: 12,
+        original:
+          "כִּ֣י לְכוּ־ נָ֗א אֶל־ מְקוֹמִי֙ אֲשֶׁ֣ר בְּשִׁיל֔וֹ אֲשֶׁ֨ר שִׁכַּ֧נְתִּֽי שְׁמִ֛י שָׁ֖ם בָּרִֽאשׁוֹנָ֑ה וּרְאוּ֙ אֵ֣ת אֲשֶׁר־ עָשִׂ֣יתִי ל֔וֹ מִפְּנֵ֕י רָעַ֖ת עַמִּ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "But go now to the place in Shiloh where I first made a dwelling for My Name and see what I did to it because of the wickedness of My people Israel",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְעַתָּ֗ה יַ֧עַן עֲשׂוֹתְכֶ֛ם אֶת־ כָּל־ הַמַּֽעֲשִׂ֥ים הָאֵ֖לֶּה נְאֻם־ יְהוָ֑ה וָאֲדַבֵּ֨ר אֲלֵיכֶ֜ם הַשְׁכֵּ֤ם וְדַבֵּר֙ וְלֹ֣א שְׁמַעְתֶּ֔ם וָאֶקְרָ֥א אֶתְכֶ֖ם וְלֹ֥א עֲנִיתֶֽם׃",
+        english:
+          "And now because you have done all these things declares the LORD and because I have spoken to you again and again but you would not listen and I have called to you but you would not answer",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְעָשִׂ֜יתִי לַבַּ֣יִת׀ אֲשֶׁ֧ר נִֽקְרָא־ שְׁמִ֣י עָלָ֗יו אֲשֶׁ֤ר אַתֶּם֙ בֹּטְחִ֣ים בּ֔וֹ וְלַ֨מָּק֔וֹם אֲשֶׁר־ נָתַ֥תִּי לָכֶ֖ם וְלַאֲבֽוֹתֵיכֶ֑ם כַּאֲשֶׁ֥ר עָשִׂ֖יתִי לְשִׁלֽוֹ׃",
+        english:
+          "therefore what I did to Shiloh I will now do to the house that bears My Name the house in which you trust the place that I gave to you and your fathers",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְהִשְׁלַכְתִּ֥י אֶתְכֶ֖ם מֵעַ֣ל פָּנָ֑י כַּאֲשֶׁ֤ר הִשְׁלַ֙כְתִּי֙ אֶת־ כָּל־ אֲחֵיכֶ֔ם אֵ֖ת כָּל־ זֶ֥רַע אֶפְרָֽיִם׃ס",
+        english:
+          "And I will cast you out of My presence just as I have cast out all your brothers all the descendants of Ephraim",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְאַתָּ֞ה אַל־ תִּתְפַּלֵּ֣ל׀ בְּעַד־ הָעָ֣ם הַזֶּ֗ה וְאַל־ תִּשָּׂ֧א בַעֲדָ֛ם רִנָּ֥ה וּתְפִלָּ֖ה וְאַל־ תִּפְגַּע־ בִּ֑י כִּי־ אֵינֶ֥נִּי שֹׁמֵ֖עַ אֹתָֽךְ׃",
+        english:
+          "As for you do not pray for these people do not offer a plea or petition on their behalf and do not beg Me for I will not listen to you",
+      },
+      {
+        verse_number: 17,
+        original:
+          "הַֽאֵינְךָ֣ רֹאֶ֔ה מָ֛ה הֵ֥מָּה עֹשִׂ֖ים בְּעָרֵ֣י יְהוּדָ֑ה וּבְחֻצ֖וֹת יְרוּשָׁלִָֽם׃",
+        english:
+          "Do you not see what they are doing in the cities of Judah and in the streets of Jerusalem",
+      },
+      {
+        verse_number: 18,
+        original:
+          "הַבָּנִ֞ים מְלַקְּטִ֣ים עֵצִ֗ים וְהָֽאָבוֹת֙ מְבַעֲרִ֣ים אֶת־ הָאֵ֔שׁ וְהַנָּשִׁ֖ים לָשׁ֣וֹת בָּצֵ֑ק לַעֲשׂ֨וֹת כַּוָּנִ֜ים לִמְלֶ֣כֶת הַשָּׁמַ֗יִם וְהַסֵּ֤ךְ נְסָכִים֙ לֵאלֹהִ֣ים אֲחֵרִ֔ים לְמַ֖עַן הַכְעִסֵֽנִי׃",
+        english:
+          "The sons gather wood the fathers light the fire and the women knead the dough to make cakes for the Queen of Heaven they pour out drink offerings to other gods to provoke Me to anger",
+      },
+      {
+        verse_number: 19,
+        original:
+          "הַאֹתִ֛י הֵ֥ם מַכְעִסִ֖ים נְאֻם־ יְהוָ֑ה הֲל֣וֹא אֹתָ֔ם לְמַ֖עַן בֹּ֥שֶׁת פְּנֵיהֶֽם׃ס",
+        english:
+          "But am I the One they are provoking declares the LORD Is it not themselves they spite to their own shame",
+      },
+      {
+        verse_number: 20,
+        original:
+          "לָכֵ֞ן כֹּה־ אָמַ֣ר׀ אֲדֹנָ֣י יְהֹוִ֗ה הִנֵּ֨ה אַפִּ֤י וַֽחֲמָתִי֙ נִתֶּ֙כֶת֙ אֶל־ הַמָּק֣וֹם הַזֶּ֔ה עַל־ הָֽאָדָם֙ וְעַל־ הַבְּהֵמָ֔ה וְעַל־ עֵ֥ץ הַשָּׂדֶ֖ה וְעַל־ פְּרִ֣י הָֽאֲדָמָ֑ה וּבָעֲרָ֖ה וְלֹ֥א תִכְבֶּֽה׃ס",
+        english:
+          "Therefore this is what the Lord GOD says Behold My anger and My fury will be poured out on this place on man and beast on the trees of the field and the produce of the land and it will burn and not be extinguished",
+      },
+      {
+        verse_number: 21,
+        original:
+          "כֹּ֥ה אָמַ֛ר יְהוָ֥ה צְבָא֖וֹת אֱלֹהֵ֣י יִשְׂרָאֵ֑ל עֹלוֹתֵיכֶ֛ם סְפ֥וּ עַל־ זִבְחֵיכֶ֖ם וְאִכְל֥וּ בָשָֽׂר׃",
+        english:
+          "This is what the LORD of Hosts the God of Israel says Add your burnt offerings to your other sacrifices and eat the meat yourselves",
+      },
+      {
+        verse_number: 22,
+        original:
+          "כִּ֠י לֹֽא־ דִבַּ֤רְתִּי אֶת־ אֲבֽוֹתֵיכֶם֙ וְלֹ֣א צִוִּיתִ֔ים בְּי֛וֹם הוֹצִיא אוֹתָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם עַל־ דִּבְרֵ֥י עוֹלָ֖ה וָזָֽבַח׃",
+        english:
+          "For when I brought your fathers out of the land of Egypt I did not merely command them about burnt offerings and sacrifices",
+      },
+      {
+        verse_number: 23,
+        original:
+          "כִּ֣י אִֽם־ אֶת־ הַדָּבָ֣ר הַ֠זֶּה צִוִּ֨יתִי אוֹתָ֤ם לֵאמֹר֙ שִׁמְע֣וּ בְקוֹלִ֔י וְהָיִ֤יתִי לָכֶם֙ לֵֽאלֹהִ֔ים וְאַתֶּ֖ם תִּֽהְיוּ־ לִ֣י לְעָ֑ם וַהֲלַכְתֶּ֗ם בְּכָל־ הַדֶּ֙רֶךְ֙ אֲשֶׁ֣ר אֲצַוֶּ֣ה אֶתְכֶ֔ם לְמַ֖עַן יִיטַ֥ב לָכֶֽם׃",
+        english:
+          "but this is what I commanded them Obey Me and I will be your God and you will be My people You must walk in all the ways I have commanded you so that it may go well with you",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְלֹ֤א שָֽׁמְעוּ֙ וְלֹֽא־ הִטּ֣וּ אֶת־ אָזְנָ֔ם וַיֵּֽלְכוּ֙ בְּמֹ֣עֵצ֔וֹת בִּשְׁרִר֖וּת לִבָּ֣ם הָרָ֑ע וַיִּהְי֥וּ לְאָח֖וֹר וְלֹ֥א לְפָנִֽים׃",
+        english:
+          "Yet they did not listen or incline their ear but they followed the stubborn inclinations of their own evil hearts They went backward and not forward",
+      },
+      {
+        verse_number: 25,
+        original:
+          "לְמִן־ הַיּ֗וֹם אֲשֶׁ֨ר יָצְא֤וּ אֲבֽוֹתֵיכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם עַ֖ד הַיּ֣וֹם הַזֶּ֑ה וָאֶשְׁלַ֤ח אֲלֵיכֶם֙ אֶת־ כָּל־ עֲבָדַ֣י הַנְּבִיאִ֔ים י֖וֹם הַשְׁכֵּ֥ם וְשָׁלֹֽחַ׃",
+        english:
+          "From the day your fathers came out of the land of Egypt until this day I have sent you all My servants the prophets again and again",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְל֤וֹא שָׁמְעוּ֙ אֵלַ֔י וְלֹ֥א הִטּ֖וּ אֶת־ אָזְנָ֑ם וַיַּקְשׁוּ֙ אֶת־ עָרְפָּ֔ם הֵרֵ֖עוּ מֵאֲבוֹתָֽם׃",
+        english:
+          "Yet they would not listen to Me or incline their ear but they stiffened their necks and did more evil than their fathers",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְדִבַּרְתָּ֤ אֲלֵיהֶם֙ אֶת־ כָּל־ הַדְּבָרִ֣ים הָאֵ֔לֶּה וְלֹ֥א יִשְׁמְע֖וּ אֵלֶ֑יךָ וְקָרָ֥אתָ אֲלֵיהֶ֖ם וְלֹ֥א יַעֲנֽוּכָה׃",
+        english:
+          "When you tell them all these things they will not listen to you When you call to them they will not answer",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וְאָמַרְתָּ֣ אֲלֵיהֶ֗ם זֶ֤ה הַגּוֹי֙ אֲשֶׁ֣ר לֽוֹא־ שָׁמְע֗וּ בְּקוֹל֙ יְהוָ֣ה אֱלֹהָ֔יו וְלֹ֥א לָקְח֖וּ מוּסָ֑ר אָֽבְדָה֙ הָֽאֱמוּנָ֔ה וְנִכְרְתָ֖ה מִפִּיהֶֽם׃ס",
+        english:
+          "Therefore you must say to them This is the nation that would not listen to the voice of the LORD their God and would not receive correction Truth has perished it has disappeared from their lips",
+      },
+      {
+        verse_number: 29,
+        original:
+          "גָּזִּ֤י נִזְרֵךְ֙ וְֽהַשְׁלִ֔יכִי וּשְׂאִ֥י עַל־ שְׁפָיִ֖ם קִינָ֑ה כִּ֚י מָאַ֣ס יְהוָ֔ה וַיִּטֹּ֖שׁ אֶת־ דּ֥וֹר עֶבְרָתֽוֹ׃",
+        english:
+          "Cut off your hair and throw it away Raise up a lamentation on the barren heights for the LORD has rejected and forsaken the generation of His wrath",
+      },
+      {
+        verse_number: 30,
+        original:
+          "כִּֽי־ עָשׂ֨וּ בְנֵי־ יְהוּדָ֥ה הָרַ֛ע בְּעֵינַ֖י נְאֻום־ יְהוָ֑ה שָׂ֣מוּ שִׁקּֽוּצֵיהֶ֗ם בַּבַּ֛יִת אֲשֶׁר־ נִקְרָא־ שְׁמִ֥י עָלָ֖יו לְטַמְּאֽוֹ׃",
+        english:
+          "For the people of Judah have done evil in My sight declares the LORD They have set up their abominations in the house that bears My Name and so have defiled it",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וּבָנ֞וּ בָּמ֣וֹת הַתֹּ֗פֶת אֲשֶׁר֙ בְּגֵ֣יא בֶן־ הִנֹּ֔ם לִשְׂרֹ֛ף אֶת־ בְּנֵיהֶ֥ם וְאֶת־ בְּנֹתֵיהֶ֖ם בָּאֵ֑שׁ אֲשֶׁר֙ לֹ֣א צִוִּ֔יתִי וְלֹ֥א עָלְתָ֖ה עַל־ לִבִּֽי׃ס",
+        english:
+          "They have built the high places of Topheth in the Valley of Ben-hinnom so they could burn their sons and daughters in the fire something I never commanded nor did it even enter My mind",
+      },
+      {
+        verse_number: 32,
+        original:
+          "לָכֵ֞ן הִנֵּֽה־ יָמִ֤ים בָּאִים֙ נְאֻם־ יְהוָ֔ה וְלֹא־ יֵאָמֵ֨ר ע֤וֹד הַתֹּ֙פֶת֙ וְגֵ֣יא בֶן־ הִנֹּ֔ם כִּ֖י אִם־ גֵּ֣יא הַהֲרֵגָ֑ה וְקָבְר֥וּ בְתֹ֖פֶת מֵאֵ֥ין מָקֽוֹם׃",
+        english:
+          "So behold the days are coming declares the LORD when this place will no longer be called Topheth and the Valley of Ben-hinnom but the Valley of Slaughter For they will bury the dead in Topheth until there is no more room",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וְֽהָ֨יְתָ֜ה נִבְלַ֨ת הָעָ֤ם הַזֶּה֙ לְמַֽאֲכָ֔ל לְע֥וֹף הַשָּׁמַ֖יִם וּלְבֶהֱמַ֣ת הָאָ֑רֶץ וְאֵ֖ין מַחֲרִֽיד׃",
+        english:
+          "The corpses of this people will become food for the birds of the air and the beasts of the earth and there will be no one to scare them away",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וְהִשְׁבַּתִּ֣י׀ מֵעָרֵ֣י יְהוּדָ֗ה וּמֵֽחֻצוֹת֙ יְר֣וּשָׁלִַ֔ם ק֤וֹל שָׂשׂוֹן֙ וְק֣וֹל שִׂמְחָ֔ה ק֥וֹל חָתָ֖ן וְק֣וֹל כַּלָּ֑ה כִּ֥י לְחָרְבָּ֖ה תִּהְיֶ֥ה הָאָֽרֶץ׃",
+        english:
+          "I will remove from the cities of Judah and the streets of Jerusalem the sounds of joy and gladness and the voices of the bride and bridegroom for the land will become a wasteland",
+      },
+    ],
+  };
+  return chapter;
+}
