@@ -8,7 +8,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_windows_draw(layer, blocks) {
+export function bless_windows_draw(layer, blocks) {
   arguments_assert(arguments, 2);
   ("Draws the windows on the street - a pair of dark panes in pale frames, crossed by glazing");
   ("bars, hung on the wall clear of the ground, for every upper-floor home; and a single one");
