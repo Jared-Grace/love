@@ -1,3 +1,4 @@
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -18,7 +19,7 @@ export function app_reply_rules_whole_show(root, file, approvals) {
   let said = text_combine_multiple(["new file ", name]);
   let head = html_p_text(root, said);
   html_style_margin_top(head, "1.2em");
-  html_style_font_size(head, "0.75em");
+  html_style_font_size(head, app_reply_rules_font_size_small());
   let color = app_shared_color_gray_dark();
   html_font_color_set(head, color);
   app_reply_rules_diff_show(root, lines);

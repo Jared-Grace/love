@@ -21,7 +21,12 @@ export async function functions_fold_repair() {
       let x = property_get(site, "x");
       let f = property_get(site, "f");
       let args = [x, f];
-      let result = await function_call_commit(function_fold, args);
+      "A fold whose own check refuses throws rather than answering nothing, and one refusal must not end the run for every site after it. What refused is still in what the last pass found, so it is reported as remaining rather than lost.";
+      async function fold_commit() {
+        let folded_one = await function_call_commit(function_fold, args);
+        return folded_one;
+      }
+      let result = await catch_null_async(fold_commit);
       let done = null_not_is(result);
       if (done) {
         list_add(folded, args);

@@ -292,6 +292,8 @@ export function examples_notes() {
       "the guard standing under every write in the repo - a path is held against the folder it claims to be inside before anything is opened",
     example_path_inside_folder_allowed:
       "the same guard asked the other way round - a rejection example whose expectation is a quiet return rather than a throw and the first of those in the corpus",
+    example_call_add_after_prose:
+      "the same call-adder aimed below a function's own account — the place a call belongs when the summary must stay on top",
   };
   return notes;
 }
