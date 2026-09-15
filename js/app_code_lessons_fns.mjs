@@ -1,3 +1,9 @@
+import { app_code_lesson_expression_choose_order_nested_add } from "./app_code_lesson_expression_choose_order_nested_add.mjs";
+import { app_code_lesson_expression_choose_order_nested_subtract } from "./app_code_lesson_expression_choose_order_nested_subtract.mjs";
+import { app_code_lesson_expression_choose_order_nested_multiply } from "./app_code_lesson_expression_choose_order_nested_multiply.mjs";
+import { app_code_lesson_expression_choose_order_nested_divide } from "./app_code_lesson_expression_choose_order_nested_divide.mjs";
+import { app_code_lesson_expression_choose_order_plus_minus } from "./app_code_lesson_expression_choose_order_plus_minus.mjs";
+import { app_code_lesson_expression_choose_order_times_divide } from "./app_code_lesson_expression_choose_order_times_divide.mjs";
 import { app_code_lesson_expression_three_steps_left_to_right } from "./app_code_lesson_expression_three_steps_left_to_right.mjs";
 import { app_code_lesson_expression_three_steps_strong_first } from "./app_code_lesson_expression_three_steps_strong_first.mjs";
 import { app_code_lesson_expression_both_sides_any_comparison } from "./app_code_lesson_expression_both_sides_any_comparison.mjs";
@@ -181,12 +187,18 @@ export function app_code_lessons_fns() {
     app_code_lesson_expression_not,
     app_code_lesson_expression_or,
     app_code_lesson_expression_and,
+    app_code_lesson_expression_choose_order_nested_add,
     app_code_lesson_expression_nested_add,
+    app_code_lesson_expression_choose_order_nested_subtract,
     app_code_lesson_expression_nested_subtract,
     app_code_lesson_expression_multiply,
+    app_code_lesson_expression_choose_order_nested_multiply,
     app_code_lesson_expression_nested_multiply,
+    app_code_lesson_expression_choose_order_nested_divide,
     app_code_lesson_expression_nested_divide,
+    app_code_lesson_expression_choose_order_plus_minus,
     app_code_lesson_expression_plus_minus,
+    app_code_lesson_expression_choose_order_times_divide,
     app_code_lesson_expression_times_divide,
     app_code_lesson_expression_choose_order,
     app_code_lesson_expression_choose_order_solve,
