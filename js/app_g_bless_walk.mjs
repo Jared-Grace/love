@@ -1,5 +1,5 @@
 import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
-import { app_g_bless_crossing_wait } from "./app_g_bless_crossing_wait.mjs";
+import { bless_crossing_wait } from "./bless_crossing_wait.mjs";
 import { app_g_bless_refused_flash } from "./app_g_bless_refused_flash.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
@@ -90,7 +90,7 @@ export async function app_g_bless_walk(
     ("them touches a road. It answers no almost every time and costs two lookups when it does.");
     let stepping_out = bless_kerb_step_is(world, from, to);
     if (stepping_out) {
-      await app_g_bless_crossing_wait(world, to, player, player_img_c);
+      await bless_crossing_wait(world, to, player, player_img_c);
     }
     app_shared_game_character_face(player, player_img_c, direction);
     ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
