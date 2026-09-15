@@ -3,7 +3,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_style_rotate_degrees_set } from "./html_style_rotate_degrees_set.mjs";
 import { app_g_bless_arrow_keyframe } from "./app_g_bless_arrow_keyframe.mjs";
-import { app_g_bless_arrow_animation_name } from "./app_g_bless_arrow_animation_name.mjs";
+import { bless_arrow_animation_name } from "./bless_arrow_animation_name.mjs";
 import { html_style_animation_alternate_apply } from "./html_style_animation_alternate_apply.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { app_shared_arrow_svg } from "./app_shared_arrow_svg.mjs";
@@ -31,7 +31,7 @@ export function app_g_bless_arrow_bob(parent, degrees) {
     "line-height": "0",
   });
   let keyframe = app_g_bless_arrow_keyframe();
-  let name_animation = app_g_bless_arrow_animation_name();
+  let name_animation = bless_arrow_animation_name();
   html_style_animation_alternate_apply(bob, keyframe, name_animation);
   let text = app_shared_arrow_svg(0);
   html_text_set(bob, text);
