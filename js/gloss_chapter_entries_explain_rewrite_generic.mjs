@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { gloss_chapter_passages_collected_write } from "./gloss_chapter_passages_collected_write.mjs";
 import { property_get } from "./property_get.mjs";
@@ -5,8 +6,6 @@ import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { list_add } from "./list_add.mjs";
@@ -37,8 +36,7 @@ export async function gloss_chapter_entries_explain_rewrite_generic(
         let fresh = lambda$explain_new(entry);
         let held = null_not_is(fresh);
         if (held) {
-          let same = equal(fresh, explain);
-          let changed = not(same);
+          let changed = equal_not(fresh, explain);
           if (changed) {
             property_set(entry, key, fresh);
             let word = gloss_entry_word_read(entry);
