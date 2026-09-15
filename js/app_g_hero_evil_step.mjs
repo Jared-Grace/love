@@ -1,32 +1,27 @@
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_hero_evil_pace_ms } from "./app_g_hero_evil_pace_ms.mjs";
 import { app_g_hero_evil_pause_ms } from "./app_g_hero_evil_pause_ms.mjs";
 import { bless_person_crossing_clear } from "./bless_person_crossing_clear.mjs";
-import { app_g_hero_victim_nearest } from "./app_g_hero_victim_nearest.mjs";
-import { null_is } from "./null_is.mjs";
-import { g_distance_taxicab } from "./g_distance_taxicab.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { app_g_hero_kill } from "./app_g_hero_kill.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { g_world_without_npcs } from "./g_world_without_npcs.mjs";
-import { g_coordinates_path_shortest } from "./g_coordinates_path_shortest.mjs";
-import { list_size } from "./list_size.mjs";
-import { less_than } from "./less_than.mjs";
+import { app_g_hero_hunt_path } from "./app_g_hero_hunt_path.mjs";
+import { null_is } from "./null_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { g_distance_0 } from "./g_distance_0.mjs";
 import { bless_person_tile_is } from "./bless_person_tile_is.mjs";
 import { list_find_or_null } from "./list_find_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
+import { app_g_hero_kill } from "./app_g_hero_kill.mjs";
 import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
-import { divide } from "./divide.mjs";
 import { app_g_bless_person_slide } from "./app_g_bless_person_slide.mjs";
 export async function app_g_hero_evil_step(hero, evil) {
   arguments_assert(arguments, 2);
   ("One step of the hunt, handing back how long to wait before the next.");
-  ("The nearest person is the one hunted, asked again every step, because the crowd keeps walking and whoever was nearest a moment ago may not be now.");
-  ("The way there is worked out over the street with the crowd taken out of it, and only the next square of it is used. If somebody is standing on that square, they are the one killed - the hunter does not step round a person, it goes through them.");
+  ("The nearest person the hunter can reach is the one hunted, asked again every step, because the crowd keeps walking and whoever was nearest a moment ago may not be now.");
+  ("The way there is worked out over the street with the crowd taken out of it, and only the next square of it is used. If somebody is standing on that square, they are the one killed - the hunter does not step round a person, it goes through them. Standing beside the one hunted is the same case, because their own square is the next one on the way.");
   ("The player is never killed. A hunter whose next square is the player's simply waits.");
   let world = property_get(hero, "world");
   let npcs = property_get(world, "npcs");
@@ -34,22 +29,10 @@ export async function app_g_hero_evil_step(hero, evil) {
   let pace = app_g_hero_evil_pace_ms();
   let pause = app_g_hero_evil_pause_ms();
   bless_person_crossing_clear(evil);
-  let victim = app_g_hero_victim_nearest(npcs, evil);
-  if (null_is(victim)) {
-    return pace;
-  }
-  let apart = g_distance_taxicab(evil, victim);
-  let adjacent = less_than_equal(apart, 1);
-  if (adjacent) {
-    await app_g_hero_kill(hero, evil, victim);
-    return pause;
-  }
   let on_foot = bless_world_on_foot(world);
   let alone = g_world_without_npcs(on_foot);
-  let path = g_coordinates_path_shortest(alone, evil, victim);
-  let size = list_size(path);
-  let stuck = less_than(size, 2);
-  if (stuck) {
+  let path = app_g_hero_hunt_path(alone, npcs, evil);
+  if (null_is(path)) {
     return pace;
   }
   let to = list_second(path);
