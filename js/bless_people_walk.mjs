@@ -3,7 +3,7 @@ import { each } from "./each.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_bless_person_walk } from "./app_g_bless_person_walk.mjs";
 import { app_g_bless_repaint_ms } from "./app_g_bless_repaint_ms.mjs";
-export function app_g_bless_people_walk(world, on_move) {
+export function bless_people_walk(world, on_move) {
   arguments_assert(arguments, 2);
   ("The crowd goes about its business for as long as the game is open - everybody set");
   ("walking on their own, and the screen drawn again on its own steady beat.");
