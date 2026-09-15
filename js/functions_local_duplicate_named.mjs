@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { property_get } from "./property_get.mjs";
@@ -51,8 +52,7 @@ export async function functions_local_duplicate_named(f_name_shared) {
         continue;
       }
       let params = js_function_declaration_params_names(inner);
-      let count = list_size(params);
-      let fits = equal(count, arity);
+      let fits = list_size_equal(params, arity);
       if (not(fits)) {
         continue;
       }
