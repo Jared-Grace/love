@@ -5,9 +5,10 @@ import { folder_public_join } from "./folder_public_join.mjs";
 "(app_examples_main) can fetch it at runtime.";
 export async function examples_data_write() {
   let json = await examples_data_json();
-  let out = folder_public_join("examples_data.json");
-  let out_dev = folder_public_join("dev/examples_data.json");
-  await file_overwrite(out, json);
-  await file_overwrite(out_dev, json);
+  let paths = examples_data_paths();
+  for (let path of paths) {
+    await file_overwrite(path, json);
+  }
+  let out = list_first(paths);
   return out;
 }

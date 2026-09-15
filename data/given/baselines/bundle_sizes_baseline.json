@@ -1,16 +1,16 @@
 {
  "known": [
   {
-   "name": "31.emoji_bible.js",
-   "size": 17891
-  },
-  {
-   "name": "105.sandbox.js",
-   "size": 10925
+   "name": "70.sandbox.js",
+   "size": 10297
   },
   {
    "name": "138.g_bible.js",
    "size": 2548
+  },
+  {
+   "name": "146.sandbox.js",
+   "size": 10173
   },
   {
    "name": "158.a.js",
@@ -25,24 +25,36 @@
    "size": 16366
   },
   {
+   "name": "167.emoji_bible.js",
+   "size": 6045
+  },
+  {
    "name": "190.reply_local.js",
-   "size": 9162
+   "size": 9182
   },
   {
    "name": "190.reply.js",
-   "size": 9162
+   "size": 9182
   },
   {
-   "name": "201.emoji_bible.js",
-   "size": 10102
+   "name": "240.sandbox.js",
+   "size": 12412
   },
   {
    "name": "283.a.js",
    "size": 321760
   },
   {
-   "name": "320.emoji_bible.js",
-   "size": 8012
+   "name": "297.emoji_bible.js",
+   "size": 3377
+  },
+  {
+   "name": "308.sandbox.js",
+   "size": 16250
+  },
+  {
+   "name": "317.sandbox.js",
+   "size": 699970
   },
   {
    "name": "330.sandbox.js",
@@ -53,12 +65,24 @@
    "size": 3052
   },
   {
+   "name": "351.sandbox.js",
+   "size": 3599
+  },
+  {
    "name": "357.music.js",
-   "size": 10163
+   "size": 10183
+  },
+  {
+   "name": "371.sandbox.js",
+   "size": 36787
   },
   {
    "name": "381.sandbox.js",
-   "size": 1591
+   "size": 1598
+  },
+  {
+   "name": "391.sandbox.js",
+   "size": 40270
   },
   {
    "name": "397.a.js",
@@ -113,16 +137,20 @@
    "size": 7940
   },
   {
+   "name": "437.sandbox.js",
+   "size": 6828
+  },
+  {
    "name": "447.sandbox.js",
    "size": 9532
   },
   {
-   "name": "480.emoji_bible.js",
-   "size": 6901
+   "name": "448.sandbox.js",
+   "size": 20510
   },
   {
-   "name": "498.emoji_bible.js",
-   "size": 6918
+   "name": "477.index.js",
+   "size": 15226
   },
   {
    "name": "502.bible.js",
@@ -153,8 +181,16 @@
    "size": 8015
   },
   {
+   "name": "510.sandbox.js",
+   "size": 11730
+  },
+  {
    "name": "517.sandbox.js",
    "size": 2611
+  },
+  {
+   "name": "527.emoji_bible.js",
+   "size": 4186
   },
   {
    "name": "529.calendar.js",
@@ -162,27 +198,27 @@
   },
   {
    "name": "539.privacy_policy.js",
-   "size": 18587
+   "size": 18607
   },
   {
    "name": "554.sandbox.js",
    "size": 23175
   },
   {
+   "name": "567.index.js",
+   "size": 4210
+  },
+  {
    "name": "574.calendar_paste.js",
-   "size": 17127
+   "size": 17147
   },
   {
    "name": "576.autopray.js",
-   "size": 10739
+   "size": 10759
   },
   {
    "name": "586.apps_all.js",
-   "size": 3912
-  },
-  {
-   "name": "586.index.js",
-   "size": 3912
+   "size": 3932
   },
   {
    "name": "586.sandbox.js",
@@ -193,12 +229,12 @@
    "size": 11718
   },
   {
-   "name": "597.sandbox.js",
-   "size": 33700
-  },
-  {
    "name": "599.sandbox.js",
    "size": 11750
+  },
+  {
+   "name": "615.sandbox.js",
+   "size": 11962
   },
   {
    "name": "619.index.js",
@@ -207,14 +243,6 @@
   {
    "name": "620.sandbox.js",
    "size": 9095
-  },
-  {
-   "name": "660.sandbox.js",
-   "size": 28653
-  },
-  {
-   "name": "677.emoji_bible.js",
-   "size": 3613
   },
   {
    "name": "682.a.js",
@@ -321,12 +349,12 @@
    "size": 56464
   },
   {
-   "name": "697.emoji_bible.js",
-   "size": 8244
+   "name": "695.sandbox.js",
+   "size": 12309
   },
   {
-   "name": "697.sandbox.js",
-   "size": 9060
+   "name": "697.emoji_bible.js",
+   "size": 8244
   },
   {
    "name": "708.code.js",
@@ -334,7 +362,7 @@
   },
   {
    "name": "712.g_verify.js",
-   "size": 3831
+   "size": 3851
   },
   {
    "name": "714.emoji_bible.js",
@@ -345,12 +373,8 @@
    "size": 14246
   },
   {
-   "name": "733.emoji_bible.js",
-   "size": 13813
-  },
-  {
-   "name": "735.emoji_bible.js",
-   "size": 3116
+   "name": "744.sandbox.js",
+   "size": 6487
   },
   {
    "name": "745.a.js",
@@ -358,7 +382,7 @@
   },
   {
    "name": "747.emoji_bible.js",
-   "size": 3206
+   "size": 14228
   },
   {
    "name": "758.a.js",
@@ -366,7 +390,7 @@
   },
   {
    "name": "758.autopray.js",
-   "size": 4183
+   "size": 4203
   },
   {
    "name": "758.bible.js",
@@ -374,7 +398,7 @@
   },
   {
    "name": "758.calendar_paste.js",
-   "size": 4452
+   "size": 4472
   },
   {
    "name": "758.calendar.js",
@@ -402,7 +426,7 @@
   },
   {
    "name": "758.music.js",
-   "size": 4148
+   "size": 4168
   },
   {
    "name": "758.next.js",
@@ -414,15 +438,15 @@
   },
   {
    "name": "758.privacy_policy.js",
-   "size": 4892
+   "size": 4912
   },
   {
    "name": "758.reply_local.js",
-   "size": 3088
+   "size": 3108
   },
   {
    "name": "758.reply.js",
-   "size": 3088
+   "size": 3108
   },
   {
    "name": "758.search.js",
@@ -445,44 +469,20 @@
    "size": 8970
   },
   {
-   "name": "782.emoji_bible.js",
-   "size": 4619
-  },
-  {
    "name": "795.sandbox.js",
    "size": 6925
-  },
-  {
-   "name": "815.emoji_bible.js",
-   "size": 1189
   },
   {
    "name": "817.replace.js",
    "size": 2694
   },
   {
-   "name": "817.sandbox.js",
-   "size": 6278
-  },
-  {
    "name": "825.sandbox.js",
    "size": 16981
   },
   {
-   "name": "827.sandbox.js",
-   "size": 40413
-  },
-  {
-   "name": "870.emoji_bible.js",
-   "size": 8585
-  },
-  {
    "name": "892.sandbox.js",
-   "size": 26813
-  },
-  {
-   "name": "897.emoji_bible.js",
-   "size": 5663
+   "size": 28146
   },
   {
    "name": "897.sandbox.js",
@@ -494,11 +494,7 @@
   },
   {
    "name": "910.designs_universal.js",
-   "size": 4874
-  },
-  {
-   "name": "914.emoji_bible.js",
-   "size": 5933
+   "size": 4893
   },
   {
    "name": "925.sandbox.js",
@@ -509,36 +505,8 @@
    "size": 225
   },
   {
-   "name": "964.sandbox.js",
-   "size": 16570
-  },
-  {
-   "name": "984.sandbox.js",
-   "size": 637004
-  },
-  {
    "name": "986.search.js",
    "size": 7686
-  },
-  {
-   "name": "1061.emoji_bible.js",
-   "size": 17077
-  },
-  {
-   "name": "1128.emoji_bible.js",
-   "size": 6157
-  },
-  {
-   "name": "1220.emoji_bible.js",
-   "size": 4211
-  },
-  {
-   "name": "1252.emoji_bible.js",
-   "size": 9356
-  },
-  {
-   "name": "1298.emoji_bible.js",
-   "size": 6109
   },
   {
    "name": "1355.emoji_bible.js",
@@ -549,532 +517,2052 @@
    "size": 2045
   },
   {
-   "name": "1401.emoji_bible.js",
-   "size": 10426
+   "name": "1829.emoji_bible.js",
+   "size": 5930
   },
   {
-   "name": "1443.emoji_bible.js",
-   "size": 1678
+   "name": "1869.emoji_bible.js",
+   "size": 3391
   },
   {
-   "name": "1468.emoji_bible.js",
-   "size": 11756
+   "name": "2050.emoji_bible.js",
+   "size": 12231
   },
   {
-   "name": "1555.emoji_bible.js",
-   "size": 5003
+   "name": "2299.emoji_bible.js",
+   "size": 13977
   },
   {
-   "name": "1557.emoji_bible.js",
-   "size": 9198
+   "name": "2491.emoji_bible.js",
+   "size": 6084
   },
   {
-   "name": "1599.emoji_bible.js",
-   "size": 6138
+   "name": "3073.emoji_bible.js",
+   "size": 15849
   },
   {
-   "name": "1649.emoji_bible.js",
-   "size": 7363
+   "name": "3263.emoji_bible.js",
+   "size": 15781
   },
   {
-   "name": "1749.emoji_bible.js",
-   "size": 16217
+   "name": "3393.emoji_bible.js",
+   "size": 3594
   },
   {
-   "name": "1766.emoji_bible.js",
-   "size": 11459
-  },
-  {
-   "name": "1864.emoji_bible.js",
-   "size": 10636
-  },
-  {
-   "name": "1971.emoji_bible.js",
-   "size": 2866
-  },
-  {
-   "name": "2096.emoji_bible.js",
-   "size": 1055
-  },
-  {
-   "name": "2215.emoji_bible.js",
-   "size": 4323
-  },
-  {
-   "name": "2231.emoji_bible.js",
-   "size": 4329
-  },
-  {
-   "name": "2479.emoji_bible.js",
-   "size": 2430
-  },
-  {
-   "name": "2501.emoji_bible.js",
-   "size": 6804
-  },
-  {
-   "name": "2549.emoji_bible.js",
-   "size": 5568
-  },
-  {
-   "name": "2557.emoji_bible.js",
-   "size": 5176
-  },
-  {
-   "name": "2663.emoji_bible.js",
-   "size": 5083
-  },
-  {
-   "name": "2692.emoji_bible.js",
-   "size": 2965
-  },
-  {
-   "name": "2923.emoji_bible.js",
-   "size": 18288
-  },
-  {
-   "name": "2973.emoji_bible.js",
-   "size": 10733
-  },
-  {
-   "name": "2993.emoji_bible.js",
-   "size": 3882
-  },
-  {
-   "name": "3046.emoji_bible.js",
-   "size": 7957
-  },
-  {
-   "name": "3066.emoji_bible.js",
-   "size": 1894
-  },
-  {
-   "name": "3260.emoji_bible.js",
-   "size": 4322
-  },
-  {
-   "name": "3301.emoji_bible.js",
-   "size": 8823
-  },
-  {
-   "name": "3321.emoji_bible.js",
-   "size": 9251
-  },
-  {
-   "name": "3413.emoji_bible.js",
-   "size": 6322
-  },
-  {
-   "name": "3453.emoji_bible.js",
-   "size": 7326
-  },
-  {
-   "name": "3538.emoji_bible.js",
-   "size": 6423
-  },
-  {
-   "name": "3618.emoji_bible.js",
-   "size": 1784
-  },
-  {
-   "name": "3623.emoji_bible.js",
-   "size": 8411
-  },
-  {
-   "name": "3697.emoji_bible.js",
-   "size": 16397
-  },
-  {
-   "name": "3729.emoji_bible.js",
-   "size": 722
-  },
-  {
-   "name": "3771.emoji_bible.js",
-   "size": 2541
-  },
-  {
-   "name": "3853.emoji_bible.js",
-   "size": 9942
-  },
-  {
-   "name": "3938.emoji_bible.js",
-   "size": 9969
-  },
-  {
-   "name": "3950.emoji_bible.js",
-   "size": 7257
+   "name": "3569.emoji_bible.js",
+   "size": 19021
   },
   {
    "name": "4062.emoji_bible.js",
    "size": 9008
   },
   {
-   "name": "4165.emoji_bible.js",
-   "size": 1656
+   "name": "4161.emoji_bible.js",
+   "size": 11980
   },
   {
-   "name": "4252.emoji_bible.js",
-   "size": 2021
+   "name": "4813.emoji_bible.js",
+   "size": 5099
   },
   {
-   "name": "4415.emoji_bible.js",
-   "size": 11402
+   "name": "4997.emoji_bible.js",
+   "size": 3810
   },
   {
-   "name": "4514.emoji_bible.js",
-   "size": 11785
-  },
-  {
-   "name": "4548.emoji_bible.js",
-   "size": 6746
-  },
-  {
-   "name": "4630.emoji_bible.js",
-   "size": 5482
-  },
-  {
-   "name": "4708.emoji_bible.js",
-   "size": 9568
-  },
-  {
-   "name": "4877.emoji_bible.js",
-   "size": 2389
-  },
-  {
-   "name": "4966.emoji_bible.js",
-   "size": 17768
-  },
-  {
-   "name": "4984.emoji_bible.js",
-   "size": 1384
-  },
-  {
-   "name": "4986.emoji_bible.js",
-   "size": 2746
-  },
-  {
-   "name": "5043.emoji_bible.js",
-   "size": 5271
+   "name": "5060.emoji_bible.js",
+   "size": 10673
   },
   {
    "name": "5117.emoji_bible.js",
    "size": 5236
   },
   {
-   "name": "5125.emoji_bible.js",
-   "size": 1848
-  },
-  {
    "name": "5190.emoji_bible.js",
    "size": 5018
   },
   {
-   "name": "5352.emoji_bible.js",
-   "size": 8004
+   "name": "5451.emoji_bible.js",
+   "size": 1881
   },
   {
-   "name": "5419.emoji_bible.js",
-   "size": 2980
-  },
-  {
-   "name": "5427.emoji_bible.js",
-   "size": 8205
-  },
-  {
-   "name": "5434.emoji_bible.js",
-   "size": 15662
-  },
-  {
-   "name": "5489.emoji_bible.js",
-   "size": 2254
-  },
-  {
-   "name": "5568.emoji_bible.js",
-   "size": 7056
-  },
-  {
-   "name": "5588.emoji_bible.js",
-   "size": 6935
-  },
-  {
-   "name": "5602.emoji_bible.js",
-   "size": 4434
-  },
-  {
-   "name": "5609.emoji_bible.js",
-   "size": 11356
-  },
-  {
-   "name": "5682.emoji_bible.js",
-   "size": 56471
-  },
-  {
-   "name": "5744.emoji_bible.js",
-   "size": 13976
-  },
-  {
-   "name": "5758.emoji_bible.js",
-   "size": 3102
-  },
-  {
-   "name": "5768.emoji_bible.js",
-   "size": 8183
-  },
-  {
-   "name": "5773.emoji_bible.js",
-   "size": 1972
-  },
-  {
-   "name": "5795.emoji_bible.js",
-   "size": 6595
-  },
-  {
-   "name": "5823.emoji_bible.js",
-   "size": 12554
-  },
-  {
-   "name": "5932.emoji_bible.js",
-   "size": 2968
+   "name": "5524.emoji_bible.js",
+   "size": 4661
   },
   {
    "name": "5955.emoji_bible.js",
    "size": 12754
   },
   {
-   "name": "6112.emoji_bible.js",
-   "size": 1096
-  },
-  {
-   "name": "6259.emoji_bible.js",
-   "size": 13612
-  },
-  {
-   "name": "6300.emoji_bible.js",
-   "size": 2253
-  },
-  {
-   "name": "6473.emoji_bible.js",
-   "size": 4342
-  },
-  {
-   "name": "6551.emoji_bible.js",
-   "size": 16392
-  },
-  {
-   "name": "6628.emoji_bible.js",
-   "size": 3745
+   "name": "6607.emoji_bible.js",
+   "size": 2920
   },
   {
    "name": "6649.emoji_bible.js",
-   "size": 2987
+   "size": 3965
   },
   {
-   "name": "6745.emoji_bible.js",
-   "size": 319964
+   "name": "6759.emoji_bible.js",
+   "size": 5713
   },
   {
-   "name": "6830.emoji_bible.js",
-   "size": 9791
+   "name": "6787.emoji_bible.js",
+   "size": 4465
   },
   {
-   "name": "6898.emoji_bible.js",
-   "size": 7803
+   "name": "6824.emoji_bible.js",
+   "size": 5558
   },
   {
-   "name": "7040.emoji_bible.js",
-   "size": 11242
+   "name": "7085.emoji_bible.js",
+   "size": 6875
   },
   {
-   "name": "7051.emoji_bible.js",
-   "size": 5543
+   "name": "7558.emoji_bible.js",
+   "size": 7702
   },
   {
-   "name": "7064.emoji_bible.js",
-   "size": 1258
+   "name": "7655.emoji_bible.js",
+   "size": 2568
   },
   {
-   "name": "7076.emoji_bible.js",
-   "size": 9816
+   "name": "7716.emoji_bible.js",
+   "size": 16920
   },
   {
-   "name": "7180.emoji_bible.js",
-   "size": 7289
-  },
-  {
-   "name": "7190.emoji_bible.js",
-   "size": 2914
-  },
-  {
-   "name": "7214.emoji_bible.js",
-   "size": 9869
-  },
-  {
-   "name": "7255.emoji_bible.js",
-   "size": 3299
-  },
-  {
-   "name": "7271.emoji_bible.js",
-   "size": 2728
-  },
-  {
-   "name": "7368.emoji_bible.js",
-   "size": 17854
-  },
-  {
-   "name": "7389.emoji_bible.js",
-   "size": 2096
-  },
-  {
-   "name": "7444.emoji_bible.js",
-   "size": 5512
-  },
-  {
-   "name": "7664.emoji_bible.js",
-   "size": 3398
-  },
-  {
-   "name": "7829.emoji_bible.js",
-   "size": 14105
-  },
-  {
-   "name": "7835.emoji_bible.js",
-   "size": 12614
+   "name": "7744.emoji_bible.js",
+   "size": 10186
   },
   {
    "name": "7922.emoji_bible.js",
    "size": 2789
   },
   {
-   "name": "7939.emoji_bible.js",
-   "size": 13672
-  },
-  {
    "name": "7968.emoji_bible.js",
    "size": 9818
   },
   {
-   "name": "8056.emoji_bible.js",
-   "size": 2874
-  },
-  {
-   "name": "8180.emoji_bible.js",
-   "size": 8321
+   "name": "8064.emoji_bible.js",
+   "size": 3475
   },
   {
    "name": "8204.emoji_bible.js",
    "size": 5497
   },
   {
-   "name": "8262.emoji_bible.js",
-   "size": 1782
+   "name": "8579.emoji_bible.js",
+   "size": 14935
   },
   {
-   "name": "8305.emoji_bible.js",
-   "size": 14597
-  },
-  {
-   "name": "8363.emoji_bible.js",
-   "size": 5845
-  },
-  {
-   "name": "8427.emoji_bible.js",
-   "size": 3463
-  },
-  {
-   "name": "8673.emoji_bible.js",
-   "size": 1751
-  },
-  {
-   "name": "8702.emoji_bible.js",
-   "size": 17058
-  },
-  {
-   "name": "8719.emoji_bible.js",
-   "size": 4536
-  },
-  {
-   "name": "8743.emoji_bible.js",
-   "size": 15431
-  },
-  {
-   "name": "8844.emoji_bible.js",
-   "size": 9507
+   "name": "8583.emoji_bible.js",
+   "size": 6621
   },
   {
    "name": "8860.emoji_bible.js",
    "size": 11331
   },
   {
-   "name": "8907.emoji_bible.js",
-   "size": 9948
-  },
-  {
-   "name": "9024.emoji_bible.js",
-   "size": 1294
+   "name": "9028.emoji_bible.js",
+   "size": 17706
   },
   {
    "name": "9055.emoji_bible.js",
    "size": 10862
   },
   {
-   "name": "9063.emoji_bible.js",
-   "size": 4872
+   "name": "9062.emoji_bible.js",
+   "size": 8168
   },
   {
-   "name": "9064.emoji_bible.js",
-   "size": 9797
-  },
-  {
-   "name": "9129.emoji_bible.js",
-   "size": 5082
-  },
-  {
-   "name": "9221.emoji_bible.js",
-   "size": 6974
+   "name": "9314.emoji_bible.js",
+   "size": 10921
   },
   {
    "name": "9417.emoji_bible.js",
    "size": 1657
   },
   {
-   "name": "9507.emoji_bible.js",
-   "size": 5249
+   "name": "9430.emoji_bible.js",
+   "size": 7187
   },
   {
-   "name": "9606.emoji_bible.js",
-   "size": 13313
+   "name": "9519.emoji_bible.js",
+   "size": 6624
   },
   {
-   "name": "9652.emoji_bible.js",
-   "size": 13517
+   "name": "9620.emoji_bible.js",
+   "size": 9809
   },
   {
-   "name": "9656.emoji_bible.js",
-   "size": 2923
+   "name": "9637.emoji_bible.js",
+   "size": 11416
   },
   {
-   "name": "9723.emoji_bible.js",
-   "size": 11573
+   "name": "9915.emoji_bible.js",
+   "size": 8517
   },
   {
-   "name": "9814.emoji_bible.js",
-   "size": 9189
+   "name": "9980.emoji_bible.js",
+   "size": 10767
   },
   {
-   "name": "9859.emoji_bible.js",
-   "size": 18478
+   "name": "10242.emoji_bible.js",
+   "size": 7681
   },
   {
-   "name": "9957.emoji_bible.js",
-   "size": 2152
+   "name": "10313.emoji_bible.js",
+   "size": 4794
+  },
+  {
+   "name": "10636.emoji_bible.js",
+   "size": 5094
+  },
+  {
+   "name": "10664.emoji_bible.js",
+   "size": 2900
+  },
+  {
+   "name": "10667.emoji_bible.js",
+   "size": 10420
+  },
+  {
+   "name": "10715.emoji_bible.js",
+   "size": 16531
+  },
+  {
+   "name": "10743.emoji_bible.js",
+   "size": 7840
+  },
+  {
+   "name": "10852.emoji_bible.js",
+   "size": 4350
+  },
+  {
+   "name": "11298.emoji_bible.js",
+   "size": 6111
+  },
+  {
+   "name": "11392.emoji_bible.js",
+   "size": 8582
+  },
+  {
+   "name": "11401.emoji_bible.js",
+   "size": 10428
+  },
+  {
+   "name": "11517.emoji_bible.js",
+   "size": 14975
+  },
+  {
+   "name": "11970.emoji_bible.js",
+   "size": 9028
+  },
+  {
+   "name": "12397.emoji_bible.js",
+   "size": 5611
+  },
+  {
+   "name": "12557.emoji_bible.js",
+   "size": 5178
+  },
+  {
+   "name": "12575.emoji_bible.js",
+   "size": 10312
+  },
+  {
+   "name": "12663.emoji_bible.js",
+   "size": 5085
+  },
+  {
+   "name": "12676.emoji_bible.js",
+   "size": 7565
+  },
+  {
+   "name": "12765.emoji_bible.js",
+   "size": 5496
+  },
+  {
+   "name": "12789.emoji_bible.js",
+   "size": 19144
+  },
+  {
+   "name": "12802.emoji_bible.js",
+   "size": 7031
+  },
+  {
+   "name": "12993.emoji_bible.js",
+   "size": 3884
+  },
+  {
+   "name": "13066.emoji_bible.js",
+   "size": 1896
+  },
+  {
+   "name": "13453.emoji_bible.js",
+   "size": 7328
+  },
+  {
+   "name": "13658.emoji_bible.js",
+   "size": 9946
+  },
+  {
+   "name": "13729.emoji_bible.js",
+   "size": 724
+  },
+  {
+   "name": "13799.emoji_bible.js",
+   "size": 5862
+  },
+  {
+   "name": "14277.emoji_bible.js",
+   "size": 9298
+  },
+  {
+   "name": "14312.emoji_bible.js",
+   "size": 21121
+  },
+  {
+   "name": "14443.emoji_bible.js",
+   "size": 16494
+  },
+  {
+   "name": "14533.emoji_bible.js",
+   "size": 10843
+  },
+  {
+   "name": "14613.emoji_bible.js",
+   "size": 6704
+  },
+  {
+   "name": "15123.emoji_bible.js",
+   "size": 12839
+  },
+  {
+   "name": "15427.emoji_bible.js",
+   "size": 8207
+  },
+  {
+   "name": "15428.emoji_bible.js",
+   "size": 4011
+  },
+  {
+   "name": "15443.emoji_bible.js",
+   "size": 4734
+  },
+  {
+   "name": "15584.emoji_bible.js",
+   "size": 6050
+  },
+  {
+   "name": "15672.emoji_bible.js",
+   "size": 4819
+  },
+  {
+   "name": "16258.emoji_bible.js",
+   "size": 10588
+  },
+  {
+   "name": "16453.emoji_bible.js",
+   "size": 11445
+  },
+  {
+   "name": "16473.emoji_bible.js",
+   "size": 4344
+  },
+  {
+   "name": "16551.emoji_bible.js",
+   "size": 16394
+  },
+  {
+   "name": "16628.emoji_bible.js",
+   "size": 3747
+  },
+  {
+   "name": "16800.emoji_bible.js",
+   "size": 10290
+  },
+  {
+   "name": "17076.emoji_bible.js",
+   "size": 9818
+  },
+  {
+   "name": "17235.emoji_bible.js",
+   "size": 15905
+  },
+  {
+   "name": "17271.emoji_bible.js",
+   "size": 2730
+  },
+  {
+   "name": "17444.emoji_bible.js",
+   "size": 5514
+  },
+  {
+   "name": "17563.emoji_bible.js",
+   "size": 5738
+  },
+  {
+   "name": "17664.emoji_bible.js",
+   "size": 3400
+  },
+  {
+   "name": "18465.emoji_bible.js",
+   "size": 10730
+  },
+  {
+   "name": "18918.emoji_bible.js",
+   "size": 3712
+  },
+  {
+   "name": "19063.emoji_bible.js",
+   "size": 4866
+  },
+  {
+   "name": "19129.emoji_bible.js",
+   "size": 5083
+  },
+  {
+   "name": "19190.emoji_bible.js",
+   "size": 20494
+  },
+  {
+   "name": "19343.emoji_bible.js",
+   "size": 5468
+  },
+  {
+   "name": "19399.emoji_bible.js",
+   "size": 9055
+  },
+  {
+   "name": "19606.emoji_bible.js",
+   "size": 13315
+  },
+  {
+   "name": "19760.emoji_bible.js",
+   "size": 7852
+  },
+  {
+   "name": "20015.emoji_bible.js",
+   "size": 8607
+  },
+  {
+   "name": "20314.emoji_bible.js",
+   "size": 5082
+  },
+  {
+   "name": "20468.emoji_bible.js",
+   "size": 11749
+  },
+  {
+   "name": "20498.emoji_bible.js",
+   "size": 6922
+  },
+  {
+   "name": "20782.emoji_bible.js",
+   "size": 4622
+  },
+  {
+   "name": "20870.emoji_bible.js",
+   "size": 8589
+  },
+  {
+   "name": "21069.emoji_bible.js",
+   "size": 3849
+  },
+  {
+   "name": "21205.emoji_bible.js",
+   "size": 8367
+  },
+  {
+   "name": "21567.emoji_bible.js",
+   "size": 11519
+  },
+  {
+   "name": "21621.emoji_bible.js",
+   "size": 7545
+  },
+  {
+   "name": "21649.emoji_bible.js",
+   "size": 7364
+  },
+  {
+   "name": "22231.emoji_bible.js",
+   "size": 4331
+  },
+  {
+   "name": "22533.emoji_bible.js",
+   "size": 8692
+  },
+  {
+   "name": "22600.emoji_bible.js",
+   "size": 5734
+  },
+  {
+   "name": "22634.emoji_bible.js",
+   "size": 15932
+  },
+  {
+   "name": "22685.emoji_bible.js",
+   "size": 4943
+  },
+  {
+   "name": "22694.emoji_bible.js",
+   "size": 5990
+  },
+  {
+   "name": "23454.emoji_bible.js",
+   "size": 7666
+  },
+  {
+   "name": "23493.emoji_bible.js",
+   "size": 3144
+  },
+  {
+   "name": "23623.emoji_bible.js",
+   "size": 8413
+  },
+  {
+   "name": "23853.emoji_bible.js",
+   "size": 9944
+  },
+  {
+   "name": "24252.emoji_bible.js",
+   "size": 2023
+  },
+  {
+   "name": "24338.emoji_bible.js",
+   "size": 5928
+  },
+  {
+   "name": "24702.emoji_bible.js",
+   "size": 8204
+  },
+  {
+   "name": "24878.emoji_bible.js",
+   "size": 5293
+  },
+  {
+   "name": "24959.emoji_bible.js",
+   "size": 16479
+  },
+  {
+   "name": "25047.emoji_bible.js",
+   "size": 7043
+  },
+  {
+   "name": "25063.emoji_bible.js",
+   "size": 2550
+  },
+  {
+   "name": "25758.emoji_bible.js",
+   "size": 3158
+  },
+  {
+   "name": "25773.emoji_bible.js",
+   "size": 1974
+  },
+  {
+   "name": "25795.emoji_bible.js",
+   "size": 6597
+  },
+  {
+   "name": "25932.emoji_bible.js",
+   "size": 2970
+  },
+  {
+   "name": "26319.emoji_bible.js",
+   "size": 5083
+  },
+  {
+   "name": "26321.emoji_bible.js",
+   "size": 4917
+  },
+  {
+   "name": "26714.emoji_bible.js",
+   "size": 8924
+  },
+  {
+   "name": "26919.emoji_bible.js",
+   "size": 8909
+  },
+  {
+   "name": "27214.emoji_bible.js",
+   "size": 9871
+  },
+  {
+   "name": "27574.emoji_bible.js",
+   "size": 10642
+  },
+  {
+   "name": "27829.emoji_bible.js",
+   "size": 14107
+  },
+  {
+   "name": "28262.emoji_bible.js",
+   "size": 1784
+  },
+  {
+   "name": "28305.emoji_bible.js",
+   "size": 14599
+  },
+  {
+   "name": "28844.emoji_bible.js",
+   "size": 9509
+  },
+  {
+   "name": "29024.emoji_bible.js",
+   "size": 1296
+  },
+  {
+   "name": "29113.emoji_bible.js",
+   "size": 12218
+  },
+  {
+   "name": "29161.emoji_bible.js",
+   "size": 11476
+  },
+  {
+   "name": "29260.emoji_bible.js",
+   "size": 8568
+  },
+  {
+   "name": "29507.emoji_bible.js",
+   "size": 5250
+  },
+  {
+   "name": "29628.emoji_bible.js",
+   "size": 7136
+  },
+  {
+   "name": "29644.emoji_bible.js",
+   "size": 2765
+  },
+  {
+   "name": "29656.emoji_bible.js",
+   "size": 2925
+  },
+  {
+   "name": "29830.emoji_bible.js",
+   "size": 19579
+  },
+  {
+   "name": "30122.emoji_bible.js",
+   "size": 5560
+  },
+  {
+   "name": "30324.emoji_bible.js",
+   "size": 8894
+  },
+  {
+   "name": "30514.emoji_bible.js",
+   "size": 6367
+  },
+  {
+   "name": "30690.emoji_bible.js",
+   "size": 5471
+  },
+  {
+   "name": "30747.emoji_bible.js",
+   "size": 3210
+  },
+  {
+   "name": "31258.emoji_bible.js",
+   "size": 5055
+  },
+  {
+   "name": "31357.emoji_bible.js",
+   "size": 6232
+  },
+  {
+   "name": "31555.emoji_bible.js",
+   "size": 5005
+  },
+  {
+   "name": "31864.emoji_bible.js",
+   "size": 10638
+  },
+  {
+   "name": "31943.emoji_bible.js",
+   "size": 4859
+  },
+  {
+   "name": "32098.emoji_bible.js",
+   "size": 22300
+  },
+  {
+   "name": "32699.emoji_bible.js",
+   "size": 15084
+  },
+  {
+   "name": "32923.emoji_bible.js",
+   "size": 18290
+  },
+  {
+   "name": "33033.emoji_bible.js",
+   "size": 7723
+  },
+  {
+   "name": "33500.emoji_bible.js",
+   "size": 8404
+  },
+  {
+   "name": "33566.emoji_bible.js",
+   "size": 10999
+  },
+  {
+   "name": "33665.emoji_bible.js",
+   "size": 3420
+  },
+  {
+   "name": "33697.emoji_bible.js",
+   "size": 16399
+  },
+  {
+   "name": "33992.emoji_bible.js",
+   "size": 7524
+  },
+  {
+   "name": "34415.emoji_bible.js",
+   "size": 11404
+  },
+  {
+   "name": "34468.emoji_bible.js",
+   "size": 11984
+  },
+  {
+   "name": "34630.emoji_bible.js",
+   "size": 5484
+  },
+  {
+   "name": "34708.emoji_bible.js",
+   "size": 9570
+  },
+  {
+   "name": "34953.emoji_bible.js",
+   "size": 6797
+  },
+  {
+   "name": "34966.emoji_bible.js",
+   "size": 17770
+  },
+  {
+   "name": "34984.emoji_bible.js",
+   "size": 1386
+  },
+  {
+   "name": "34986.emoji_bible.js",
+   "size": 2748
+  },
+  {
+   "name": "35094.emoji_bible.js",
+   "size": 8070
+  },
+  {
+   "name": "35120.emoji_bible.js",
+   "size": 7625
+  },
+  {
+   "name": "35387.emoji_bible.js",
+   "size": 10980
+  },
+  {
+   "name": "35602.emoji_bible.js",
+   "size": 4436
+  },
+  {
+   "name": "35823.emoji_bible.js",
+   "size": 12556
+  },
+  {
+   "name": "35826.emoji_bible.js",
+   "size": 14254
+  },
+  {
+   "name": "35914.emoji_bible.js",
+   "size": 7322
+  },
+  {
+   "name": "36540.emoji_bible.js",
+   "size": 3679
+  },
+  {
+   "name": "36745.emoji_bible.js",
+   "size": 1636758
+  },
+  {
+   "name": "36830.emoji_bible.js",
+   "size": 9793
+  },
+  {
+   "name": "36892.emoji_bible.js",
+   "size": 2275
+  },
+  {
+   "name": "37040.emoji_bible.js",
+   "size": 11244
+  },
+  {
+   "name": "37064.emoji_bible.js",
+   "size": 1260
+  },
+  {
+   "name": "37107.emoji_bible.js",
+   "size": 11022
+  },
+  {
+   "name": "37939.emoji_bible.js",
+   "size": 13674
+  },
+  {
+   "name": "38056.emoji_bible.js",
+   "size": 2876
+  },
+  {
+   "name": "38220.emoji_bible.js",
+   "size": 7872
+  },
+  {
+   "name": "38363.emoji_bible.js",
+   "size": 5845
+  },
+  {
+   "name": "38619.emoji_bible.js",
+   "size": 2659
+  },
+  {
+   "name": "38927.emoji_bible.js",
+   "size": 10221
+  },
+  {
+   "name": "39073.emoji_bible.js",
+   "size": 6040
+  },
+  {
+   "name": "39652.emoji_bible.js",
+   "size": 13519
+  },
+  {
+   "name": "39814.emoji_bible.js",
+   "size": 9191
+  },
+  {
+   "name": "39870.emoji_bible.js",
+   "size": 18193
+  },
+  {
+   "name": "40157.emoji_bible.js",
+   "size": 4449
+  },
+  {
+   "name": "40182.emoji_bible.js",
+   "size": 7228
+  },
+  {
+   "name": "40333.emoji_bible.js",
+   "size": 8249
+  },
+  {
+   "name": "40480.emoji_bible.js",
+   "size": 9516
+  },
+  {
+   "name": "40629.emoji_bible.js",
+   "size": 5612
+  },
+  {
+   "name": "40883.emoji_bible.js",
+   "size": 5349
+  },
+  {
+   "name": "40900.emoji_bible.js",
+   "size": 10308
+  },
+  {
+   "name": "40924.emoji_bible.js",
+   "size": 5488
+  },
+  {
+   "name": "40999.emoji_bible.js",
+   "size": 3354
+  },
+  {
+   "name": "41008.emoji_bible.js",
+   "size": 11157
+  },
+  {
+   "name": "41061.emoji_bible.js",
+   "size": 17079
+  },
+  {
+   "name": "41162.emoji_bible.js",
+   "size": 6830
+  },
+  {
+   "name": "41252.emoji_bible.js",
+   "size": 9358
+  },
+  {
+   "name": "41407.emoji_bible.js",
+   "size": 6830
+  },
+  {
+   "name": "41599.emoji_bible.js",
+   "size": 6120
+  },
+  {
+   "name": "41620.emoji_bible.js",
+   "size": 3734
+  },
+  {
+   "name": "41762.emoji_bible.js",
+   "size": 13296
+  },
+  {
+   "name": "41971.emoji_bible.js",
+   "size": 2868
+  },
+  {
+   "name": "42078.emoji_bible.js",
+   "size": 5813
+  },
+  {
+   "name": "42173.emoji_bible.js",
+   "size": 4377
+  },
+  {
+   "name": "42692.emoji_bible.js",
+   "size": 2963
+  },
+  {
+   "name": "42736.emoji_bible.js",
+   "size": 12145
+  },
+  {
+   "name": "43230.emoji_bible.js",
+   "size": 9234
+  },
+  {
+   "name": "43240.emoji_bible.js",
+   "size": 7193
+  },
+  {
+   "name": "43260.emoji_bible.js",
+   "size": 4324
+  },
+  {
+   "name": "43321.emoji_bible.js",
+   "size": 9253
+  },
+  {
+   "name": "43413.emoji_bible.js",
+   "size": 6324
+  },
+  {
+   "name": "43478.emoji_bible.js",
+   "size": 9825
+  },
+  {
+   "name": "43771.emoji_bible.js",
+   "size": 2532
+  },
+  {
+   "name": "44114.emoji_bible.js",
+   "size": 7296
+  },
+  {
+   "name": "44310.emoji_bible.js",
+   "size": 5884
+  },
+  {
+   "name": "44430.emoji_bible.js",
+   "size": 7124
+  },
+  {
+   "name": "45125.emoji_bible.js",
+   "size": 1850
+  },
+  {
+   "name": "45320.emoji_bible.js",
+   "size": 8051
+  },
+  {
+   "name": "45419.emoji_bible.js",
+   "size": 2982
+  },
+  {
+   "name": "45434.emoji_bible.js",
+   "size": 15664
+  },
+  {
+   "name": "45513.emoji_bible.js",
+   "size": 2935
+  },
+  {
+   "name": "45609.emoji_bible.js",
+   "size": 11358
+  },
+  {
+   "name": "45616.emoji_bible.js",
+   "size": 8220
+  },
+  {
+   "name": "45692.emoji_bible.js",
+   "size": 8133
+  },
+  {
+   "name": "45768.emoji_bible.js",
+   "size": 8147
+  },
+  {
+   "name": "45905.emoji_bible.js",
+   "size": 11829
+  },
+  {
+   "name": "46045.emoji_bible.js",
+   "size": 4489
+  },
+  {
+   "name": "46300.emoji_bible.js",
+   "size": 2255
+  },
+  {
+   "name": "46774.emoji_bible.js",
+   "size": 10749
+  },
+  {
+   "name": "46898.emoji_bible.js",
+   "size": 7805
+  },
+  {
+   "name": "46925.emoji_bible.js",
+   "size": 10218
+  },
+  {
+   "name": "46968.emoji_bible.js",
+   "size": 8498
+  },
+  {
+   "name": "47232.emoji_bible.js",
+   "size": 8532
+  },
+  {
+   "name": "47389.emoji_bible.js",
+   "size": 2098
+  },
+  {
+   "name": "47867.emoji_bible.js",
+   "size": 5990
+  },
+  {
+   "name": "48212.emoji_bible.js",
+   "size": 16251
+  },
+  {
+   "name": "48424.emoji_bible.js",
+   "size": 11024
+  },
+  {
+   "name": "48670.emoji_bible.js",
+   "size": 5658
+  },
+  {
+   "name": "49036.emoji_bible.js",
+   "size": 6223
+  },
+  {
+   "name": "49105.emoji_bible.js",
+   "size": 12748
+  },
+  {
+   "name": "49505.emoji_bible.js",
+   "size": 5782
+  },
+  {
+   "name": "49617.emoji_bible.js",
+   "size": 7159
+  },
+  {
+   "name": "49832.emoji_bible.js",
+   "size": 2908
+  },
+  {
+   "name": "49859.emoji_bible.js",
+   "size": 18480
+  },
+  {
+   "name": "49888.emoji_bible.js",
+   "size": 8066
+  },
+  {
+   "name": "50201.emoji_bible.js",
+   "size": 10106
+  },
+  {
+   "name": "50456.emoji_bible.js",
+   "size": 11230
+  },
+  {
+   "name": "50480.emoji_bible.js",
+   "size": 6905
+  },
+  {
+   "name": "50541.emoji_bible.js",
+   "size": 10968
+  },
+  {
+   "name": "50569.emoji_bible.js",
+   "size": 5418
+  },
+  {
+   "name": "50896.emoji_bible.js",
+   "size": 3487
+  },
+  {
+   "name": "51050.emoji_bible.js",
+   "size": 10636
+  },
+  {
+   "name": "51165.emoji_bible.js",
+   "size": 10250
+  },
+  {
+   "name": "51220.emoji_bible.js",
+   "size": 4213
+  },
+  {
+   "name": "51373.emoji_bible.js",
+   "size": 5655
+  },
+  {
+   "name": "51443.emoji_bible.js",
+   "size": 1680
+  },
+  {
+   "name": "51722.emoji_bible.js",
+   "size": 7464
+  },
+  {
+   "name": "51749.emoji_bible.js",
+   "size": 16219
+  },
+  {
+   "name": "51772.emoji_bible.js",
+   "size": 6353
+  },
+  {
+   "name": "52152.emoji_bible.js",
+   "size": 12855
+  },
+  {
+   "name": "52215.emoji_bible.js",
+   "size": 4325
+  },
+  {
+   "name": "52906.emoji_bible.js",
+   "size": 3331
+  },
+  {
+   "name": "53560.emoji_bible.js",
+   "size": 6865
+  },
+  {
+   "name": "53944.emoji_bible.js",
+   "size": 4113
+  },
+  {
+   "name": "53974.emoji_bible.js",
+   "size": 5729
+  },
+  {
+   "name": "54597.emoji_bible.js",
+   "size": 13334
+  },
+  {
+   "name": "54831.emoji_bible.js",
+   "size": 6991
+  },
+  {
+   "name": "54853.emoji_bible.js",
+   "size": 5150
+  },
+  {
+   "name": "54950.emoji_bible.js",
+   "size": 6640
+  },
+  {
+   "name": "55376.emoji_bible.js",
+   "size": 3858
+  },
+  {
+   "name": "55548.emoji_bible.js",
+   "size": 3744
+  },
+  {
+   "name": "55595.emoji_bible.js",
+   "size": 5335
+  },
+  {
+   "name": "55701.emoji_bible.js",
+   "size": 8509
+  },
+  {
+   "name": "55818.emoji_bible.js",
+   "size": 7118
+  },
+  {
+   "name": "55837.emoji_bible.js",
+   "size": 12350
+  },
+  {
+   "name": "56022.emoji_bible.js",
+   "size": 12700
+  },
+  {
+   "name": "56915.emoji_bible.js",
+   "size": 6390
+  },
+  {
+   "name": "57028.emoji_bible.js",
+   "size": 11845
+  },
+  {
+   "name": "57460.emoji_bible.js",
+   "size": 7759
+  },
+  {
+   "name": "57744.emoji_bible.js",
+   "size": 8764
+  },
+  {
+   "name": "57835.emoji_bible.js",
+   "size": 12616
+  },
+  {
+   "name": "58095.emoji_bible.js",
+   "size": 9577
+  },
+  {
+   "name": "58634.emoji_bible.js",
+   "size": 6238
+  },
+  {
+   "name": "58673.emoji_bible.js",
+   "size": 1753
+  },
+  {
+   "name": "58687.emoji_bible.js",
+   "size": 9620
+  },
+  {
+   "name": "58769.emoji_bible.js",
+   "size": 14903
+  },
+  {
+   "name": "58781.emoji_bible.js",
+   "size": 7074
+  },
+  {
+   "name": "59164.emoji_bible.js",
+   "size": 5924
+  },
+  {
+   "name": "60031.emoji_bible.js",
+   "size": 17897
+  },
+  {
+   "name": "60444.emoji_bible.js",
+   "size": 8375
+  },
+  {
+   "name": "60677.emoji_bible.js",
+   "size": 3617
+  },
+  {
+   "name": "60897.emoji_bible.js",
+   "size": 5665
+  },
+  {
+   "name": "61239.emoji_bible.js",
+   "size": 15707
+  },
+  {
+   "name": "61559.emoji_bible.js",
+   "size": 4839
+  },
+  {
+   "name": "61766.emoji_bible.js",
+   "size": 11461
+  },
+  {
+   "name": "61821.emoji_bible.js",
+   "size": 6011
+  },
+  {
+   "name": "62187.emoji_bible.js",
+   "size": 6511
+  },
+  {
+   "name": "62303.emoji_bible.js",
+   "size": 4156
+  },
+  {
+   "name": "62432.emoji_bible.js",
+   "size": 5820
+  },
+  {
+   "name": "62517.emoji_bible.js",
+   "size": 7478
+  },
+  {
+   "name": "62553.emoji_bible.js",
+   "size": 4884
+  },
+  {
+   "name": "62684.emoji_bible.js",
+   "size": 21915
+  },
+  {
+   "name": "62856.emoji_bible.js",
+   "size": 4036
+  },
+  {
+   "name": "63019.emoji_bible.js",
+   "size": 8540
+  },
+  {
+   "name": "63278.emoji_bible.js",
+   "size": 7558
+  },
+  {
+   "name": "63950.emoji_bible.js",
+   "size": 7259
+  },
+  {
+   "name": "63983.emoji_bible.js",
+   "size": 10423
+  },
+  {
+   "name": "64058.emoji_bible.js",
+   "size": 7654
+  },
+  {
+   "name": "64165.emoji_bible.js",
+   "size": 1658
+  },
+  {
+   "name": "64436.emoji_bible.js",
+   "size": 10452
+  },
+  {
+   "name": "64468.emoji_bible.js",
+   "size": 8790
+  },
+  {
+   "name": "64504.emoji_bible.js",
+   "size": 6900
+  },
+  {
+   "name": "64843.emoji_bible.js",
+   "size": 9154
+  },
+  {
+   "name": "64854.emoji_bible.js",
+   "size": 6357
+  },
+  {
+   "name": "64993.emoji_bible.js",
+   "size": 3873
+  },
+  {
+   "name": "65465.emoji_bible.js",
+   "size": 2757
+  },
+  {
+   "name": "65489.emoji_bible.js",
+   "size": 2256
+  },
+  {
+   "name": "65568.emoji_bible.js",
+   "size": 7050
+  },
+  {
+   "name": "65570.emoji_bible.js",
+   "size": 3857
+  },
+  {
+   "name": "65682.emoji_bible.js",
+   "size": 8825
+  },
+  {
+   "name": "65744.emoji_bible.js",
+   "size": 13978
+  },
+  {
+   "name": "65776.emoji_bible.js",
+   "size": 9816
+  },
+  {
+   "name": "65957.emoji_bible.js",
+   "size": 10143
+  },
+  {
+   "name": "66259.emoji_bible.js",
+   "size": 1389
+  },
+  {
+   "name": "66314.emoji_bible.js",
+   "size": 8023
+  },
+  {
+   "name": "66434.emoji_bible.js",
+   "size": 9006
+  },
+  {
+   "name": "66595.emoji_bible.js",
+   "size": 11652
+  },
+  {
+   "name": "66849.emoji_bible.js",
+   "size": 4313
+  },
+  {
+   "name": "67051.emoji_bible.js",
+   "size": 5544
+  },
+  {
+   "name": "67180.emoji_bible.js",
+   "size": 7293
+  },
+  {
+   "name": "67255.emoji_bible.js",
+   "size": 3277
+  },
+  {
+   "name": "67515.emoji_bible.js",
+   "size": 3067
+  },
+  {
+   "name": "67898.emoji_bible.js",
+   "size": 9836
+  },
+  {
+   "name": "68007.emoji_bible.js",
+   "size": 8307
+  },
+  {
+   "name": "68702.emoji_bible.js",
+   "size": 17060
+  },
+  {
+   "name": "68895.emoji_bible.js",
+   "size": 6632
+  },
+  {
+   "name": "68899.emoji_bible.js",
+   "size": 4316
+  },
+  {
+   "name": "68907.emoji_bible.js",
+   "size": 9950
+  },
+  {
+   "name": "69061.emoji_bible.js",
+   "size": 7219
+  },
+  {
+   "name": "69221.emoji_bible.js",
+   "size": 6972
+  },
+  {
+   "name": "69783.emoji_bible.js",
+   "size": 11098
+  },
+  {
+   "name": "69850.emoji_bible.js",
+   "size": 17244
+  },
+  {
+   "name": "69945.emoji_bible.js",
+   "size": 7222
+  },
+  {
+   "name": "69970.emoji_bible.js",
+   "size": 6964
+  },
+  {
+   "name": "70210.emoji_bible.js",
+   "size": 15765
+  },
+  {
+   "name": "70635.emoji_bible.js",
+   "size": 12669
+  },
+  {
+   "name": "70733.emoji_bible.js",
+   "size": 13817
+  },
+  {
+   "name": "70808.emoji_bible.js",
+   "size": 3862
+  },
+  {
+   "name": "70914.emoji_bible.js",
+   "size": 5937
+  },
+  {
+   "name": "71114.emoji_bible.js",
+   "size": 5623
+  },
+  {
+   "name": "71261.emoji_bible.js",
+   "size": 5773
+  },
+  {
+   "name": "71468.emoji_bible.js",
+   "size": 11758
+  },
+  {
+   "name": "71780.emoji_bible.js",
+   "size": 10235
+  },
+  {
+   "name": "72097.emoji_bible.js",
+   "size": 5913
+  },
+  {
+   "name": "72313.emoji_bible.js",
+   "size": 6921
+  },
+  {
+   "name": "72544.emoji_bible.js",
+   "size": 5657
+  },
+  {
+   "name": "72914.emoji_bible.js",
+   "size": 6312
+  },
+  {
+   "name": "73004.emoji_bible.js",
+   "size": 5371
+  },
+  {
+   "name": "73378.emoji_bible.js",
+   "size": 5274
+  },
+  {
+   "name": "73497.emoji_bible.js",
+   "size": 8363
+  },
+  {
+   "name": "73508.emoji_bible.js",
+   "size": 12259
+  },
+  {
+   "name": "73544.emoji_bible.js",
+   "size": 4523
+  },
+  {
+   "name": "73938.emoji_bible.js",
+   "size": 9971
+  },
+  {
+   "name": "73994.emoji_bible.js",
+   "size": 16899
+  },
+  {
+   "name": "74152.emoji_bible.js",
+   "size": 2595
+  },
+  {
+   "name": "74314.emoji_bible.js",
+   "size": 7432
+  },
+  {
+   "name": "74350.emoji_bible.js",
+   "size": 5934
+  },
+  {
+   "name": "74514.emoji_bible.js",
+   "size": 11787
+  },
+  {
+   "name": "74996.emoji_bible.js",
+   "size": 10278
+  },
+  {
+   "name": "75208.emoji_bible.js",
+   "size": 5983
+  },
+  {
+   "name": "75287.emoji_bible.js",
+   "size": 12491
+  },
+  {
+   "name": "75352.emoji_bible.js",
+   "size": 8006
+  },
+  {
+   "name": "75682.emoji_bible.js",
+   "size": 56488
+  },
+  {
+   "name": "75738.emoji_bible.js",
+   "size": 5655
+  },
+  {
+   "name": "76150.emoji_bible.js",
+   "size": 2629
+  },
+  {
+   "name": "76259.emoji_bible.js",
+   "size": 13614
+  },
+  {
+   "name": "76453.emoji_bible.js",
+   "size": 4737
+  },
+  {
+   "name": "76947.emoji_bible.js",
+   "size": 3287
+  },
+  {
+   "name": "77190.emoji_bible.js",
+   "size": 2916
+  },
+  {
+   "name": "77299.emoji_bible.js",
+   "size": 5460
+  },
+  {
+   "name": "77368.emoji_bible.js",
+   "size": 17856
+  },
+  {
+   "name": "77777.emoji_bible.js",
+   "size": 14038
+  },
+  {
+   "name": "78368.emoji_bible.js",
+   "size": 4407
+  },
+  {
+   "name": "78386.emoji_bible.js",
+   "size": 6977
+  },
+  {
+   "name": "78427.emoji_bible.js",
+   "size": 3465
+  },
+  {
+   "name": "78683.emoji_bible.js",
+   "size": 3952
+  },
+  {
+   "name": "79094.emoji_bible.js",
+   "size": 4995
+  },
+  {
+   "name": "79153.emoji_bible.js",
+   "size": 10648
+  },
+  {
+   "name": "79310.emoji_bible.js",
+   "size": 13096
+  },
+  {
+   "name": "79514.emoji_bible.js",
+   "size": 10654
+  },
+  {
+   "name": "79596.emoji_bible.js",
+   "size": 5823
+  },
+  {
+   "name": "79670.emoji_bible.js",
+   "size": 16731
+  },
+  {
+   "name": "79957.emoji_bible.js",
+   "size": 2154
+  },
+  {
+   "name": "80320.emoji_bible.js",
+   "size": 8016
+  },
+  {
+   "name": "80604.emoji_bible.js",
+   "size": 7749
+  },
+  {
+   "name": "80674.emoji_bible.js",
+   "size": 14670
+  },
+  {
+   "name": "80735.emoji_bible.js",
+   "size": 3120
+  },
+  {
+   "name": "80815.emoji_bible.js",
+   "size": 1193
+  },
+  {
+   "name": "80993.emoji_bible.js",
+   "size": 10707
+  },
+  {
+   "name": "81345.emoji_bible.js",
+   "size": 13409
+  },
+  {
+   "name": "81543.emoji_bible.js",
+   "size": 4722
+  },
+  {
+   "name": "81754.emoji_bible.js",
+   "size": 4716
+  },
+  {
+   "name": "82096.emoji_bible.js",
+   "size": 1057
+  },
+  {
+   "name": "82498.emoji_bible.js",
+   "size": 10106
+  },
+  {
+   "name": "82973.emoji_bible.js",
+   "size": 10735
+  },
+  {
+   "name": "83123.emoji_bible.js",
+   "size": 7737
+  },
+  {
+   "name": "83253.emoji_bible.js",
+   "size": 6706
+  },
+  {
+   "name": "83760.emoji_bible.js",
+   "size": 9315
+  },
+  {
+   "name": "83979.emoji_bible.js",
+   "size": 6584
+  },
+  {
+   "name": "84161.emoji_bible.js",
+   "size": 5386
+  },
+  {
+   "name": "84597.emoji_bible.js",
+   "size": 13854
+  },
+  {
+   "name": "84877.emoji_bible.js",
+   "size": 2391
+  },
+  {
+   "name": "85043.emoji_bible.js",
+   "size": 5273
+  },
+  {
+   "name": "85155.emoji_bible.js",
+   "size": 5194
+  },
+  {
+   "name": "85239.emoji_bible.js",
+   "size": 6953
+  },
+  {
+   "name": "86267.emoji_bible.js",
+   "size": 3780
+  },
+  {
+   "name": "86291.emoji_bible.js",
+   "size": 7911
+  },
+  {
+   "name": "86544.emoji_bible.js",
+   "size": 8018
+  },
+  {
+   "name": "86588.emoji_bible.js",
+   "size": 4228
+  },
+  {
+   "name": "86884.emoji_bible.js",
+   "size": 1986
+  },
+  {
+   "name": "86939.emoji_bible.js",
+   "size": 2821
+  },
+  {
+   "name": "87003.emoji_bible.js",
+   "size": 5065
+  },
+  {
+   "name": "87486.emoji_bible.js",
+   "size": 3484
+  },
+  {
+   "name": "88407.emoji_bible.js",
+   "size": 5826
+  },
+  {
+   "name": "88428.emoji_bible.js",
+   "size": 3194
+  },
+  {
+   "name": "88719.emoji_bible.js",
+   "size": 4538
+  },
+  {
+   "name": "88743.emoji_bible.js",
+   "size": 15531
+  },
+  {
+   "name": "88840.emoji_bible.js",
+   "size": 9761
+  },
+  {
+   "name": "88880.emoji_bible.js",
+   "size": 7404
+  },
+  {
+   "name": "88974.emoji_bible.js",
+   "size": 13120
+  },
+  {
+   "name": "89064.emoji_bible.js",
+   "size": 9799
+  },
+  {
+   "name": "89071.emoji_bible.js",
+   "size": 5628
+  },
+  {
+   "name": "89230.emoji_bible.js",
+   "size": 4295
+  },
+  {
+   "name": "89453.emoji_bible.js",
+   "size": 15341
+  },
+  {
+   "name": "89723.emoji_bible.js",
+   "size": 11575
+  },
+  {
+   "name": "89773.emoji_bible.js",
+   "size": 7587
+  },
+  {
+   "name": "89797.emoji_bible.js",
+   "size": 10079
+  },
+  {
+   "name": "89874.emoji_bible.js",
+   "size": 14466
+  },
+  {
+   "name": "89932.emoji_bible.js",
+   "size": 15529
+  },
+  {
+   "name": "90414.emoji_bible.js",
+   "size": 6980
+  },
+  {
+   "name": "90470.emoji_bible.js",
+   "size": 8662
+  },
+  {
+   "name": "90713.emoji_bible.js",
+   "size": 5495
+  },
+  {
+   "name": "90934.emoji_bible.js",
+   "size": 13379
+  },
+  {
+   "name": "91128.emoji_bible.js",
+   "size": 6159
+  },
+  {
+   "name": "91139.emoji_bible.js",
+   "size": 18943
+  },
+  {
+   "name": "91249.emoji_bible.js",
+   "size": 1607
+  },
+  {
+   "name": "91543.emoji_bible.js",
+   "size": 3090
+  },
+  {
+   "name": "91654.emoji_bible.js",
+   "size": 11370
+  },
+  {
+   "name": "92261.emoji_bible.js",
+   "size": 20710
+  },
+  {
+   "name": "92479.emoji_bible.js",
+   "size": 2432
+  },
+  {
+   "name": "92501.emoji_bible.js",
+   "size": 6806
+  },
+  {
+   "name": "92549.emoji_bible.js",
+   "size": 5570
+  },
+  {
+   "name": "92552.emoji_bible.js",
+   "size": 4634
+  },
+  {
+   "name": "92590.emoji_bible.js",
+   "size": 4365
+  },
+  {
+   "name": "92985.emoji_bible.js",
+   "size": 8950
+  },
+  {
+   "name": "93046.emoji_bible.js",
+   "size": 7952
+  },
+  {
+   "name": "93049.emoji_bible.js",
+   "size": 10345
+  },
+  {
+   "name": "93350.emoji_bible.js",
+   "size": 7380
+  },
+  {
+   "name": "93538.emoji_bible.js",
+   "size": 6425
+  },
+  {
+   "name": "93618.emoji_bible.js",
+   "size": 1786
+  },
+  {
+   "name": "93938.emoji_bible.js",
+   "size": 9197
+  },
+  {
+   "name": "93948.emoji_bible.js",
+   "size": 6177
+  },
+  {
+   "name": "94238.emoji_bible.js",
+   "size": 9859
+  },
+  {
+   "name": "94548.emoji_bible.js",
+   "size": 6741
+  },
+  {
+   "name": "94930.emoji_bible.js",
+   "size": 5467
+  },
+  {
+   "name": "95588.emoji_bible.js",
+   "size": 6881
+  },
+  {
+   "name": "95621.emoji_bible.js",
+   "size": 6872
+  },
+  {
+   "name": "96092.emoji_bible.js",
+   "size": 6616
+  },
+  {
+   "name": "96112.emoji_bible.js",
+   "size": 1098
+  },
+  {
+   "name": "96208.emoji_bible.js",
+   "size": 12293
+  },
+  {
+   "name": "96459.emoji_bible.js",
+   "size": 8435
+  },
+  {
+   "name": "96649.emoji_bible.js",
+   "size": 2989
+  },
+  {
+   "name": "96896.emoji_bible.js",
+   "size": 6728
+  },
+  {
+   "name": "97055.emoji_bible.js",
+   "size": 14456
+  },
+  {
+   "name": "97223.emoji_bible.js",
+   "size": 11947
+  },
+  {
+   "name": "97559.emoji_bible.js",
+   "size": 1937
+  },
+  {
+   "name": "97681.emoji_bible.js",
+   "size": 13616
+  },
+  {
+   "name": "97723.emoji_bible.js",
+   "size": 7060
+  },
+  {
+   "name": "98180.emoji_bible.js",
+   "size": 8319
+  },
+  {
+   "name": "98562.emoji_bible.js",
+   "size": 4007
+  },
+  {
+   "name": "98810.emoji_bible.js",
+   "size": 6401
+  },
+  {
+   "name": "98929.emoji_bible.js",
+   "size": 5626
+  },
+  {
+   "name": "99032.emoji_bible.js",
+   "size": 10223
+  },
+  {
+   "name": "99129.emoji_bible.js",
+   "size": 10302
+  },
+  {
+   "name": "99446.emoji_bible.js",
+   "size": 10321
+  },
+  {
+   "name": "99501.emoji_bible.js",
+   "size": 1352
   },
   {
    "name": "a.js",
-   "size": 428998
+   "size": 429028
   },
   {
    "name": "apps_all.js",
-   "size": 29969
+   "size": 30048
   },
   {
    "name": "autopray.js",
@@ -1082,23 +2570,23 @@
   },
   {
    "name": "bible.js",
-   "size": 254762
+   "size": 265715
   },
   {
    "name": "calendar_paste.js",
-   "size": 116829
+   "size": 116839
   },
   {
    "name": "calendar.js",
-   "size": 214929
+   "size": 214949
   },
   {
    "name": "ceb_bible.js",
-   "size": 233369
+   "size": 233776
   },
   {
    "name": "code.js",
-   "size": 826024
+   "size": 882703
   },
   {
    "name": "designs_universal.js",
@@ -1106,23 +2594,23 @@
   },
   {
    "name": "emoji_bible.js",
-   "size": 109461
+   "size": 180455
   },
   {
    "name": "en_learn_bible.js",
-   "size": 234964
+   "size": 238041
   },
   {
    "name": "examples.js",
-   "size": 171080
+   "size": 171131
   },
   {
    "name": "g_bible.js",
-   "size": 374815
+   "size": 374895
   },
   {
    "name": "g_bless.js",
-   "size": 183259
+   "size": 194319
   },
   {
    "name": "g_verify.js",
@@ -1130,27 +2618,27 @@
   },
   {
    "name": "g.js",
-   "size": 323181
+   "size": 323476
   },
   {
    "name": "index.js",
-   "size": 39465
+   "size": 42294
   },
   {
    "name": "message.js",
-   "size": 116714
+   "size": 116022
   },
   {
    "name": "music.js",
-   "size": 170377
+   "size": 172848
   },
   {
    "name": "next.js",
-   "size": 155324
+   "size": 156349
   },
   {
    "name": "original_bible.js",
-   "size": 233446
+   "size": 233853
   },
   {
    "name": "privacy_policy.js",
@@ -1162,35 +2650,35 @@
   },
   {
    "name": "replace.js",
-   "size": 181036
+   "size": 181066
   },
   {
    "name": "reply_local.js",
-   "size": 153362
+   "size": 153372
   },
   {
    "name": "reply.js",
-   "size": 151547
+   "size": 151557
   },
   {
    "name": "sandbox.js",
-   "size": 23668
+   "size": 24890
   },
   {
    "name": "search.js",
-   "size": 159848
+   "size": 159933
   },
   {
    "name": "supper_tl.js",
-   "size": 128515
+   "size": 128535
   },
   {
    "name": "supper.js",
-   "size": 128269
+   "size": 128289
   },
   {
    "name": "verses.js",
-   "size": 144438
+   "size": 144513
   }
  ]
 }
