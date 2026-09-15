@@ -1,3 +1,4 @@
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { js_node_type_not_is } from "./js_node_type_not_is.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -17,8 +18,6 @@ import { js_node_copy } from "./js_node_copy.mjs";
 import { js_statements_shape } from "./js_statements_shape.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
 import { list_get_or_null } from "./list_get_or_null.mjs";
-import { list_size } from "./list_size.mjs";
-import { subtract } from "./subtract.mjs";
 import { js_statements_span_cuttable_is } from "./js_statements_span_cuttable_is.mjs";
 export function js_function_declaration_tail_shared_verdict_or_null(
   declaration,
@@ -86,8 +85,7 @@ export function js_function_declaration_tail_shared_verdict_or_null(
     };
     return elsewhere;
   }
-  let left = list_size(working);
-  let above_count = subtract(left, span);
+  let above_count = list_size_subtract(working, span);
   let above = list_take(working, above_count);
   let below = [last];
   let cuttable_is = js_statements_span_cuttable_is(above, doing_run, below);
