@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { g_player_img_female_get } from "./g_player_img_female_get.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_map_scrolling } from "./app_g_bless_map_scrolling.mjs";
+import { bless_map_scrolling } from "./bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
 import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
 import { bless_doors_draw } from "./bless_doors_draw.mjs";
@@ -31,7 +31,7 @@ export function app_g_hero_play(container_map) {
   let player = property_get(world, "player");
   let npcs = property_get(world, "npcs");
   let blocks = property_get(world, "blocks");
-  let drawn = app_g_bless_map_scrolling(container_map, world);
+  let drawn = bless_map_scrolling(container_map, world);
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
   let crossings = html_div(div_map);
