@@ -1,0 +1,142 @@
+export function bible_glyph_chapter_rosetta_lines_lev05() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV05",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וְנֶ֣פֶשׁ כִּֽי־ תֶחֱטָ֗א וְשָֽׁמְעָה֙ ק֣וֹל אָלָ֔ה וְה֣וּא עֵ֔ד א֥וֹ רָאָ֖ה א֣וֹ יָדָ֑ע אִם־ ל֥וֹא יַגִּ֖יד וְנָשָׂ֥א עֲוֺנֽוֹ׃",
+        english:
+          "If someone sins by failing to testify when he hears a public charge about something he has witnessed whether he has seen it or learned of it he shall bear the iniquity",
+      },
+      {
+        verse_number: 2,
+        original:
+          "א֣וֹ נֶ֗פֶשׁ אֲשֶׁ֣ר תִּגַּע֮ בְּכָל־ דָּבָ֣ר טָמֵא֒ אוֹ֩ בְנִבְלַ֨ת חַיָּ֜ה טְמֵאָ֗ה א֤וֹ בְּנִבְלַת֙ בְּהֵמָ֣ה טְמֵאָ֔ה א֕וֹ בְּנִבְלַ֖ת שֶׁ֣רֶץ טָמֵ֑א וְנֶעְלַ֣ם מִמֶּ֔נּוּ וְה֥וּא טָמֵ֖א וְאָשֵֽׁם׃",
+        english:
+          "Or if a person touches anything unclean whether the carcass of any unclean wild animal or livestock or crawling creature even if he is unaware of it he is unclean and guilty",
+      },
+      {
+        verse_number: 3,
+        original:
+          "א֣וֹ כִ֤י יִגַּע֙ בְּטֻמְאַ֣ת אָדָ֔ם לְכֹל֙ טֻמְאָת֔וֹ אֲשֶׁ֥ר יִטְמָ֖א בָּ֑הּ וְנֶעְלַ֣ם מִמֶּ֔נּוּ וְה֥וּא יָדַ֖ע וְאָשֵֽׁם׃",
+        english:
+          "Or if he touches human uncleanness anything by which one becomes unclean even if he is unaware of it when he realizes it he is guilty",
+      },
+      {
+        verse_number: 4,
+        original:
+          "א֣וֹ נֶ֡פֶשׁ כִּ֣י תִשָּׁבַע֩ לְבַטֵּ֨א בִשְׂפָתַ֜יִם לְהָרַ֣ע׀ א֣וֹ לְהֵיטִ֗יב לְ֠כֹל אֲשֶׁ֨ר יְבַטֵּ֧א הָאָדָ֛ם בִּשְׁבֻעָ֖ה וְנֶעְלַ֣ם מִמֶּ֑נּוּ וְהוּא־ יָדַ֥ע וְאָשֵׁ֖ם לְאַחַ֥ת מֵאֵֽלֶּה׃",
+        english:
+          "Or if someone swears thoughtlessly with his lips to do anything good or evil in whatever matter a man may rashly pronounce an oath even if he is unaware of it when he realizes it he is guilty in the matter",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְהָיָ֥ה כִֽי־ יֶאְשַׁ֖ם לְאַחַ֣ת מֵאֵ֑לֶּה וְהִ֨תְוַדָּ֔ה אֲשֶׁ֥ר חָטָ֖א עָלֶֽיהָ׃",
+        english:
+          "If someone incurs guilt in one of these ways he must confess the sin he has committed",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְהֵבִ֣יא אֶת־ אֲשָׁמ֣וֹ לַיהוָ֡ה עַ֣ל חַטָּאתוֹ֩ אֲשֶׁ֨ר חָטָ֜א נְקֵבָ֨ה מִן־ הַצֹּ֥אן כִּשְׂבָּ֛ה אֽוֹ־ שְׂעִירַ֥ת עִזִּ֖ים לְחַטָּ֑את וְכִפֶּ֥ר עָלָ֛יו הַכֹּהֵ֖ן מֵחַטָּאתֽוֹ׃",
+        english:
+          "and he must bring his guilt offering to the LORD for the sin he has committed a female lamb or goat from the flock as a sin offering And the priest will make atonement for him concerning his sin",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְאִם־ לֹ֨א תַגִּ֣יע יָדוֹ֮ דֵּ֣י שֶׂה֒ וְהֵבִ֨יא אֶת־ אֲשָׁמ֜וֹ אֲשֶׁ֣ר חָטָ֗א שְׁתֵּ֥י תֹרִ֛ים אֽוֹ־ שְׁנֵ֥י בְנֵֽי־ יוֹנָ֖ה לַֽיהוָ֑ה אֶחָ֥ד לְחַטָּ֖את וְאֶחָ֥ד לְעֹלָֽה׃",
+        english:
+          "If, however he cannot afford a lamb he may bring to the LORD as restitution for his sin two turtledoves or two young pigeons one as a sin offering and the other as a burnt offering",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְהֵבִ֤יא אֹתָם֙ אֶל־ הַכֹּהֵ֔ן וְהִקְרִ֛יב אֶת־ אֲשֶׁ֥ר לַחַטָּ֖את רִאשׁוֹנָ֑ה וּמָלַ֧ק אֶת־ רֹאשׁ֛וֹ מִמּ֥וּל עָרְפּ֖וֹ וְלֹ֥א יַבְדִּֽיל׃",
+        english:
+          "He is to bring them to the priest who shall first present the one for the sin offering He is to twist its head at the front of its neck without severing it",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְהִזָּ֞ה מִדַּ֤ם הַחַטָּאת֙ עַל־ קִ֣יר הַמִּזְבֵּ֔חַ וְהַנִּשְׁאָ֣ר בַּדָּ֔ם יִמָּצֵ֖ה אֶל־ יְס֣וֹד הַמִּזְבֵּ֑חַ חַטָּ֖את הֽוּא׃",
+        english:
+          "then he is to sprinkle some of the blood of the sin offering on the side of the altar while the rest of the blood is drained out at the base of the altar It is a sin offering",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְאֶת־ הַשֵּׁנִ֛י יַעֲשֶׂ֥ה עֹלָ֖ה כַּמִּשְׁפָּ֑ט וְכִפֶּ֨ר עָלָ֧יו הַכֹּהֵ֛ן מֵחַטָּאת֥וֹ אֲשֶׁר־ חָטָ֖א וְנִסְלַ֥ח לֽוֹ׃ס",
+        english:
+          "And the priest must prepare the second bird as a burnt offering according to the ordinance In this way the priest will make atonement for him for the sin he has committed and he will be forgiven",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְאִם־ לֹא֩ תַשִּׂ֨יג יָד֜וֹ לִשְׁתֵּ֣י תֹרִ֗ים אוֹ֮ לִשְׁנֵ֣י בְנֵי־ יוֹנָה֒ וְהֵבִ֨יא אֶת־ קָרְבָּנ֜וֹ אֲשֶׁ֣ר חָטָ֗א עֲשִׂירִ֧ת הָאֵפָ֛ה סֹ֖לֶת לְחַטָּ֑את לֹא־ יָשִׂ֨ים עָלֶ֜יהָ שֶׁ֗מֶן וְלֹא־ יִתֵּ֤ן עָלֶ֙יהָ֙ לְבֹנָ֔ה כִּ֥י חַטָּ֖את הִֽיא׃",
+        english:
+          "But if he cannot afford two turtledoves or two young pigeons he may bring a tenth of an ephah of fine flour as a sin offering He must not put olive oil or frankincense on it because it is a sin offering",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וֶהֱבִיאָהּ֮ אֶל־ הַכֹּהֵן֒ וְקָמַ֣ץ הַכֹּהֵ֣ן׀ מִ֠מֶּנָּה מְל֨וֹא קֻמְצ֜וֹ אֶת־ אַזְכָּרָתָה֙ וְהִקְטִ֣יר הַמִּזְבֵּ֔חָה עַ֖ל אִשֵּׁ֣י יְהוָ֑ה חַטָּ֖את הִֽוא׃",
+        english:
+          "He is to bring it to the priest who shall take a handful from it as a memorial portion and burn it on the altar atop the food offerings to the LORD it is a sin offering",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְכִפֶּר֩ עָלָ֨יו הַכֹּהֵ֜ן עַל־ חַטָּאת֧וֹ אֲשֶׁר־ חָטָ֛א מֵֽאַחַ֥ת מֵאֵ֖לֶּה וְנִסְלַ֣ח ל֑וֹ וְהָיְתָ֥ה לַכֹּהֵ֖ן כַּמִּנְחָֽה׃ס",
+        english:
+          "In this way the priest will make atonement for him for any of these sins he has committed and he will be forgiven The remainder will belong to the priest like the grain offering",
+      },
+      {
+        verse_number: 14,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 15,
+        original:
+          "נֶ֚פֶשׁ כִּֽי־ תִמְעֹ֣ל מַ֔עַל וְחָֽטְאָה֙ בִּשְׁגָגָ֔ה מִקָּדְשֵׁ֖י יְהוָ֑ה וְהֵבִיא֩ אֶת־ אֲשָׁמ֨וֹ לַֽיהוָ֜ה אַ֧יִל תָּמִ֣ים מִן־ הַצֹּ֗אן בְּעֶרְכְּךָ֛ כֶּֽסֶף־ שְׁקָלִ֥ים בְּשֶֽׁקֶל־ הַקֹּ֖דֶשׁ לְאָשָֽׁם׃",
+        english:
+          "If someone acts unfaithfully and sins unintentionally against any of the LORD’s holy things he must bring his guilt offering to the LORD an unblemished ram from the flock of proper value in silver shekels according to the sanctuary shekel it is a guilt offering",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְאֵ֣ת אֲשֶׁר֩ חָטָ֨א מִן־ הַקֹּ֜דֶשׁ יְשַׁלֵּ֗ם וְאֶת־ חֲמִֽישִׁתוֹ֙ יוֹסֵ֣ף עָלָ֔יו וְנָתַ֥ן אֹת֖וֹ לַכֹּהֵ֑ן וְהַכֹּהֵ֗ן יְכַפֵּ֥ר עָלָ֛יו בְּאֵ֥יל הָאָשָׁ֖ם וְנִסְלַ֥ח לֽוֹ׃פ",
+        english:
+          "Regarding any holy thing he has harmed he must make restitution by adding a fifth of its value to it and giving it to the priest who will make atonement on his behalf with the ram as a guilt offering and he will be forgiven",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְאִם־ נֶ֙פֶשׁ֙ כִּ֣י תֶֽחֱטָ֔א וְעָֽשְׂתָ֗ה אַחַת֙ מִכָּל־ מִצְוֺ֣ת יְהוָ֔ה אֲשֶׁ֖ר לֹ֣א תֵעָשֶׂ֑ינָה וְלֹֽא־ יָדַ֥ע וְאָשֵׁ֖ם וְנָשָׂ֥א עֲוֺנֽוֹ׃",
+        english:
+          "If someone sins and violates any of the LORD’s commandments even though he was unaware he is guilty and shall bear his punishment",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְ֠הֵבִיא אַ֣יִל תָּמִ֧ים מִן־ הַצֹּ֛אן בְּעֶרְכְּךָ֥ לְאָשָׁ֖ם אֶל־ הַכֹּהֵ֑ן וְכִפֶּר֩ עָלָ֨יו הַכֹּהֵ֜ן עַ֣ל שִׁגְגָת֧וֹ אֲשֶׁר־ שָׁגָ֛ג וְה֥וּא לֹֽא־ יָדַ֖ע וְנִסְלַ֥ח לֽוֹ׃",
+        english:
+          "He is to bring to the priest an unblemished ram of proper value from the flock as a guilt offering Then the priest will make atonement on his behalf for the wrong he has committed in ignorance and he will be forgiven",
+      },
+      {
+        verse_number: 19,
+        original: "אָשָׁ֖ם ה֑וּא אָשֹׁ֥ם אָשַׁ֖ם לַיהוָֽה׃פ",
+        english:
+          "It is a guilt offering he was certainly guilty before the LORD",
+      },
+    ],
+  };
+  return chapter;
+}
