@@ -85,14 +85,12 @@ export function bible_glyph_undrawn_lists_gate_run() {
       }
     }
   }
-  let no_clash = list_empty_is(clashes);
-  assert_json(no_clash, {
+  list_empty_is_assert_json(clashes, {
     clashes,
     hint: "these Strong's numbers are listed as undrawn twice, which records two different decisions about one word - keep the entry in the list whose test the word actually meets and delete the other",
   });
-  let none_drawn = list_empty_is(drawn);
   let table_name = fn_name("bible_glyph_roots_hebrew");
-  assert_json(none_drawn, {
+  list_empty_is_assert_json(drawn, {
     drawn,
     hint: text_combine_multiple([
       "these Strong's numbers are listed as undrawn and a root table has already seated a picture on them, so the list is telling a reader something that stopped being true - delete the entry, or take the seat out of ",
