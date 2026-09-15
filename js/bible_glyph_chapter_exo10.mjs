@@ -58,7 +58,7 @@ export function bible_glyph_chapter_exo10() {
           "recount",
           "in",
           "the",
-          "$ear",
+          "ear",
           "of",
           "your",
           "$son,",
