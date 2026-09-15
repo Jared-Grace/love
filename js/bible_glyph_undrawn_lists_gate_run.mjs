@@ -1,3 +1,4 @@
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { bible_glyph_undrawn_wanted } from "./bible_glyph_undrawn_wanted.mjs";
@@ -10,8 +11,6 @@ import { property_set } from "./property_set.mjs";
 import { add } from "./add.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { assert_json } from "./assert_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 export function bible_glyph_undrawn_lists_gate_run() {

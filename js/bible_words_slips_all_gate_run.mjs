@@ -1,5 +1,5 @@
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 import { json_to } from "./json_to.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
