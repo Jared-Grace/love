@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { reply_case_key } from "./reply_case_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { property_set } from "./property_set.mjs";
-export async function reply_records_by_key() {
+export async function app_message_reply_records_by_key() {
   arguments_assert(arguments, 0);
   ("Every message on this machine's disk, each one filed under the short word that stands for it, so a written-down case can find the message it was drawn from.");
   ("★ THE CASES AND THE MESSAGES CAN ONLY MEET ON THIS MACHINE. A case is public and carries a rewritten message and the key; the real message is private and never leaves the folder it sits in. The key is what lets the two be laid side by side here without either of them having to hold the other.");
