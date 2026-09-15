@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -19,8 +20,7 @@ export async function app_g_hero_burn(hero) {
   let evil = property_get(hero, "evil");
   let fx = property_get(hero, "fx");
   let player_img_c = property_get(hero, "player_img_c");
-  let world = property_get(hero, "world");
-  let npcs = property_get(world, "npcs");
+  let npcs = property_path_get_2(hero, "world", "npcs");
   let render = property_get(hero, "render");
   property_set(evil, "burning", true);
   let evil_img = app_shared_game_npc_img_get(evil);
