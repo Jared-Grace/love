@@ -2,7 +2,7 @@ import { g_player_img_get } from "./g_player_img_get.mjs";
 import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
-import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
+import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
@@ -35,7 +35,7 @@ export async function app_g_bless_finished_preview() {
   app_shared_game_player_style_initialize();
   let cover = html_body_div();
   let variable = g_img_square_size_variable();
-  let tile_size = app_g_bless_tile_size_playing();
+  let tile_size = bless_tile_size_playing();
   html_style_variable_set(cover, variable, tile_size);
   html_style_assign(cover, {
     position: "fixed",
