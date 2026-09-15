@@ -17,6 +17,6 @@ export function app_next_url_onward_link(parent, url) {
   let a = html_a_href_text(row, url, url);
   html_attribute_set(a, "target", "_blank");
   ("A link is one long word with no spaces in it, and a phone is narrow. Left to the ordinary rules it would run off the side and push the whole page sideways with it, so it is allowed to break wherever it has to.");
-  html_style_set(a, "overflow-wrap", "anywhere");
+  html_style_overflow_wrap(a, "anywhere");
   return a;
 }
