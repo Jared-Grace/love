@@ -1,0 +1,302 @@
+export function bible_glyph_chapter_rosetta_lines_num32() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM32",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וּמִקְנֶ֣ה׀ רַ֗ב הָיָ֞ה לִבְנֵ֧י רְאוּבֵ֛ן וְלִבְנֵי־ גָ֖ד עָצ֣וּם מְאֹ֑ד וַיִּרְא֞וּ אֶת־ אֶ֤רֶץ יַעְזֵר֙ וְאֶת־ אֶ֣רֶץ גִּלְעָ֔ד וְהִנֵּ֥ה הַמָּק֖וֹם מְק֥וֹם מִקְנֶֽה׃",
+        english:
+          "Now the Reubenites and Gadites who had very large herds and flocks surveyed the lands of Jazer and Gilead and they saw that the region was suitable for livestock",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיָּבֹ֥אוּ בְנֵֽי־ גָ֖ד וּבְנֵ֣י רְאוּבֵ֑ן וַיֹּאמְר֤וּ אֶל־ מֹשֶׁה֙ וְאֶל־ אֶלְעָזָ֣ר הַכֹּהֵ֔ן וְאֶל־ נְשִׂיאֵ֥י הָעֵדָ֖ה לֵאמֹֽר׃",
+        english:
+          "So the Gadites and Reubenites came to Moses Eleazar the priest and the leaders of the congregation and said",
+      },
+      {
+        verse_number: 3,
+        original:
+          "עֲטָר֤וֹת וְדִיבֹן֙ וְיַעְזֵ֣ר וְנִמְרָ֔ה וְחֶשְׁבּ֖וֹן וְאֶלְעָלֵ֑ה וּשְׂבָ֥ם וּנְב֖וֹ וּבְעֹֽן׃",
+        english:
+          "Ataroth Dibon Jazer Nimrah Heshbon Elealeh Sebam Nebo and Beon",
+      },
+      {
+        verse_number: 4,
+        original:
+          "הָאָ֗רֶץ אֲשֶׁ֨ר הִכָּ֤ה יְהוָה֙ לִפְנֵי֙ עֲדַ֣ת יִשְׂרָאֵ֔ל אֶ֥רֶץ מִקְנֶ֖ה הִ֑וא וְלַֽעֲבָדֶ֖יךָ מִקְנֶֽה׃ס",
+        english:
+          "which the LORD conquered before the congregation of Israel are suitable for livestock and your servants have livestock",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּאמְר֗וּ אִם־ מָצָ֤אנוּ חֵן֙ בְּעֵינֶ֔יךָ יֻתַּ֞ן אֶת־ הָאָ֧רֶץ הַזֹּ֛את לַעֲבָדֶ֖יךָ לַאֲחֻזָּ֑ה אַל־ תַּעֲבִרֵ֖נוּ אֶת־ הַיַּרְדֵּֽן׃",
+        english:
+          "If we have found favor in your sight they said let this land be given to your servants as a possession Do not make us cross the Jordan",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֹּ֣אמֶר מֹשֶׁ֔ה לִבְנֵי־ גָ֖ד וְלִבְנֵ֣י רְאוּבֵ֑ן הַאַֽחֵיכֶ֗ם יָבֹ֙אוּ֙ לַמִּלְחָמָ֔ה וְאַתֶּ֖ם תֵּ֥שְׁבוּ פֹֽה׃",
+        english:
+          "But Moses asked the Gadites and Reubenites Shall your brothers go to war while you sit here",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְלָ֣מָּה תְנוּאוּן אֶת־ לֵ֖ב בְּנֵ֣י יִשְׂרָאֵ֑ל מֵֽעֲבֹר֙ אֶל־ הָאָ֔רֶץ אֲשֶׁר־ נָתַ֥ן לָהֶ֖ם יְהוָֽה׃",
+        english:
+          "Why are you discouraging the Israelites from crossing into the land that the LORD has given them",
+      },
+      {
+        verse_number: 8,
+        original:
+          "כֹּ֥ה עָשׂ֖וּ אֲבֹתֵיכֶ֑ם בְּשָׁלְחִ֥י אֹתָ֛ם מִקָּדֵ֥שׁ בַּרְנֵ֖עַ לִרְא֥וֹת אֶת־ הָאָֽרֶץ׃",
+        english:
+          "This is what your fathers did when I sent them from Kadesh-barnea to inspect the land",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַֽיַּעֲל֞וּ עַד־ נַ֣חַל אֶשְׁכּ֗וֹל וַיִּרְאוּ֙ אֶת־ הָאָ֔רֶץ וַיָּנִ֕יאוּ אֶת־ לֵ֖ב בְּנֵ֣י יִשְׂרָאֵ֑ל לְבִלְתִּי־ בֹא֙ אֶל־ הָאָ֔רֶץ אֲשֶׁר־ נָתַ֥ן לָהֶ֖ם יְהוָֽה׃",
+        english:
+          "For when your fathers went up to the Valley of Eshcol and saw the land they discouraged the Israelites from entering the land that the LORD had given them",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיִּֽחַר־ אַ֥ף יְהוָ֖ה בַּיּ֣וֹם הַה֑וּא וַיִּשָּׁבַ֖ע לֵאמֹֽר׃",
+        english:
+          "So the anger of the LORD was kindled that day and He swore an oath saying",
+      },
+      {
+        verse_number: 11,
+        original:
+          "אִם־ יִרְא֨וּ הָאֲנָשִׁ֜ים הָעֹלִ֣ים מִמִּצְרַ֗יִם מִבֶּ֨ן עֶשְׂרִ֤ים שָׁנָה֙ וָמַ֔עְלָה אֵ֚ת הָאֲדָמָ֔ה אֲשֶׁ֥ר נִשְׁבַּ֛עְתִּי לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹ֑ב כִּ֥י לֹא־ מִלְא֖וּ אַחֲרָֽי׃",
+        english:
+          "Because they did not follow Me wholeheartedly not one of the men twenty years of age or older who came out of Egypt will see the land that I swore to give Abraham Isaac and Jacob",
+      },
+      {
+        verse_number: 12,
+        original:
+          "בִּלְתִּ֞י כָּלֵ֤ב בֶּן־ יְפֻנֶּה֙ הַקְּנִזִּ֔י וִיהוֹשֻׁ֖עַ בִּן־ נ֑וּן כִּ֥י מִלְא֖וּ אַחֲרֵ֥י יְהוָֽה׃",
+        english:
+          "not one except Caleb son of Jephunneh the Kenizzite and Joshua son of Nun because they did follow the LORD wholeheartedly",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיִּֽחַר־ אַ֤ף יְהוָה֙ בְּיִשְׂרָאֵ֔ל וַיְנִעֵם֙ בַּמִּדְבָּ֔ר אַרְבָּעִ֖ים שָׁנָ֑ה עַד־ תֹּם֙ כָּל־ הַדּ֔וֹר הָעֹשֶׂ֥ה הָרַ֖ע בְּעֵינֵ֥י יְהוָֽה׃",
+        english:
+          "The anger of the LORD burned against Israel and He made them wander in the wilderness forty years until the whole generation who had done evil in His sight was gone",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְהִנֵּ֣ה קַמְתֶּ֗ם תַּ֚חַת אֲבֹ֣תֵיכֶ֔ם תַּרְבּ֖וּת אֲנָשִׁ֣ים חַטָּאִ֑ים לִסְפּ֣וֹת ע֗וֹד עַ֛ל חֲר֥וֹן אַף־ יְהוָ֖ה אֶל־ יִשְׂרָאֵֽל׃",
+        english:
+          "Now behold you, a brood of sinners have risen up in place of your fathers to further stoke the burning anger of the LORD against Israel",
+      },
+      {
+        verse_number: 15,
+        original:
+          "כִּ֤י תְשׁוּבֻן֙ מֵֽאַחֲרָ֔יו וְיָסַ֣ף ע֔וֹד לְהַנִּיח֖וֹ בַּמִּדְבָּ֑ר וְשִֽׁחַתֶּ֖ם לְכָל־ הָעָ֥ם הַזֶּֽה׃ס",
+        english:
+          "For if you turn away from following Him He will once again leave this people in the wilderness and you will be the cause of their destruction",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיִּגְּשׁ֤וּ אֵלָיו֙ וַ֣יֹּאמְר֔וּ גִּדְרֹ֥ת צֹ֛אן נִבְנֶ֥ה לְמִקְנֵ֖נוּ פֹּ֑ה וְעָרִ֖ים לְטַפֵּֽנוּ׃",
+        english:
+          "Then the Gadites and Reubenites approached Moses and said We want to build sheepfolds here for our livestock and cities for our little ones",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַאֲנַ֜חְנוּ נֵחָלֵ֣ץ חֻשִׁ֗ים לִפְנֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל עַ֛ד אֲשֶׁ֥ר אִם־ הֲבִֽיאֹנֻ֖ם אֶל־ מְקוֹמָ֑ם וְיָשַׁ֤ב טַפֵּ֙נוּ֙ בְּעָרֵ֣י הַמִּבְצָ֔ר מִפְּנֵ֖י יֹשְׁבֵ֥י הָאָֽרֶץ׃",
+        english:
+          "But we will arm ourselves and be ready to go ahead of the Israelites until we have brought them into their place Meanwhile, our little ones will remain in the fortified cities for protection from the inhabitants of the land",
+      },
+      {
+        verse_number: 18,
+        original:
+          "לֹ֥א נָשׁ֖וּב אֶל־ בָּתֵּ֑ינוּ עַ֗ד הִתְנַחֵל֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אִ֖ישׁ נַחֲלָתֽוֹ׃",
+        english:
+          "We will not return to our homes until every Israelite has taken possession of his inheritance",
+      },
+      {
+        verse_number: 19,
+        original:
+          "כִּ֣י לֹ֤א נִנְחַל֙ אִתָּ֔ם מֵעֵ֥בֶר לַיַּרְדֵּ֖ן וָהָ֑לְאָה כִּ֣י בָ֤אָה נַחֲלָתֵ֙נוּ֙ אֵלֵ֔ינוּ מֵעֵ֥בֶר הַיַּרְדֵּ֖ן מִזְרָֽחָה׃פ",
+        english:
+          "Yet we will not have an inheritance with them across the Jordan and beyond because our inheritance has come to us on the east side of the Jordan",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיֹּ֤אמֶר אֲלֵיהֶם֙ מֹשֶׁ֔ה אִֽם־ תַּעֲשׂ֖וּן אֶת־ הַדָּבָ֣ר הַזֶּ֑ה אִם־ תֵּחָֽלְצ֛וּ לִפְנֵ֥י יְהוָ֖ה לַמִּלְחָמָֽה׃",
+        english:
+          "Moses replied If you will do this if you will arm yourselves before the LORD for battle",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְעָבַ֨ר לָכֶ֧ם כָּל־ חָל֛וּץ אֶת־ הַיַּרְדֵּ֖ן לִפְנֵ֣י יְהוָ֑ה עַ֧ד הוֹרִישׁ֛וֹ אֶת־ אֹיְבָ֖יו מִפָּנָֽיו׃",
+        english:
+          "and if every one of your armed men crosses the Jordan before the LORD until He has driven His enemies out before Him",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְנִכְבְּשָׁ֨ה הָאָ֜רֶץ לִפְנֵ֤י יְהוָה֙ וְאַחַ֣ר תָּשֻׁ֔בוּ וִהְיִיתֶ֧ם נְקִיִּ֛ים מֵיְהוָ֖ה וּמִיִּשְׂרָאֵ֑ל וְ֠הָיְתָה הָאָ֨רֶץ הַזֹּ֥את לָכֶ֛ם לַאֲחֻזָּ֖ה לִפְנֵ֥י יְהוָֽה׃",
+        english:
+          "then when the land is subdued before the LORD you may return and be free of obligation to the LORD and to Israel And this land will belong to you as a possession before the LORD",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְאִם־ לֹ֤א תַעֲשׂוּן֙ כֵּ֔ן הִנֵּ֥ה חֲטָאתֶ֖ם לַיהוָ֑ה וּדְעוּ֙ חַטַּאתְכֶ֔ם אֲשֶׁ֥ר תִּמְצָ֖א אֶתְכֶֽם׃",
+        english:
+          "But if you do not do this you will certainly sin against the LORD and be assured that your sin will find you out",
+      },
+      {
+        verse_number: 24,
+        original:
+          "בְּנֽוּ־ לָכֶ֤ם עָרִים֙ לְטַפְּכֶ֔ם וּגְדֵרֹ֖ת לְצֹנַאֲכֶ֑ם וְהַיֹּצֵ֥א מִפִּיכֶ֖ם תַּעֲשֽׂוּ׃",
+        english:
+          "Build cities for your little ones and folds for your flocks but do what you have promised",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֹּ֤אמֶר בְּנֵי־ גָד֙ וּבְנֵ֣י רְאוּבֵ֔ן אֶל־ מֹשֶׁ֖ה לֵאמֹ֑ר עֲבָדֶ֣יךָ יַעֲשׂ֔וּ כַּאֲשֶׁ֥ר אֲדֹנִ֖י מְצַוֶּֽה׃",
+        english:
+          "The Gadites and Reubenites said to Moses Your servants will do just as our lord commands",
+      },
+      {
+        verse_number: 26,
+        original:
+          "טַפֵּ֣נוּ נָשֵׁ֔ינוּ מִקְנֵ֖נוּ וְכָל־ בְּהֶמְתֵּ֑נוּ יִֽהְיוּ־ שָׁ֖ם בְּעָרֵ֥י הַגִּלְעָֽד׃",
+        english:
+          "Our children our wives our livestock and all our animals will remain here in the cities of Gilead",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַעֲבָדֶ֨יךָ יַֽעַבְר֜וּ כָּל־ חֲל֥וּץ צָבָ֛א לִפְנֵ֥י יְהוָ֖ה לַמִּלְחָמָ֑ה כַּאֲשֶׁ֥ר אֲדֹנִ֖י דֹּבֵֽר׃",
+        english:
+          "But your servants are equipped for war and every man will cross over to the battle before the LORD just as our lord says",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיְצַ֤ו לָהֶם֙ מֹשֶׁ֔ה אֵ֚ת אֶלְעָזָ֣ר הַכֹּהֵ֔ן וְאֵ֖ת יְהוֹשֻׁ֣עַ בִּן־ נ֑וּן וְאֶת־ רָאשֵׁ֛י אֲב֥וֹת הַמַּטּ֖וֹת לִבְנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "So Moses gave orders about them to Eleazar the priest to Joshua son of Nun and to the family leaders of the tribes of Israel",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיֹּ֨אמֶר מֹשֶׁ֜ה אֲלֵהֶ֗ם אִם־ יַעַבְר֣וּ בְנֵי־ גָ֣ד וּבְנֵי־ רְאוּבֵ֣ן׀ אִ֠תְּכֶם אֶֽת־ הַיַּרְדֵּ֞ן כָּל־ חָל֤וּץ לַמִּלְחָמָה֙ לִפְנֵ֣י יְהוָ֔ה וְנִכְבְּשָׁ֥ה הָאָ֖רֶץ לִפְנֵיכֶ֑ם וּנְתַתֶּ֥ם לָהֶ֛ם אֶת־ אֶ֥רֶץ הַגִּלְעָ֖ד לַאֲחֻזָּֽה׃",
+        english:
+          "And Moses said to them If the Gadites and Reubenites cross the Jordan with you with every man armed for battle before the LORD and the land is subdued before you then you are to give them the land of Gilead as a possession",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וְאִם־ לֹ֧א יַֽעַבְר֛וּ חֲלוּצִ֖ים אִתְּכֶ֑ם וְנֹֽאחֲז֥וּ בְתֹכְכֶ֖ם בְּאֶ֥רֶץ כְּנָֽעַן׃",
+        english:
+          "But if they do not arm themselves and go across with you then they must accept their possession among you in the land of Canaan",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיַּֽעֲנ֧וּ בְנֵי־ גָ֛ד וּבְנֵ֥י רְאוּבֵ֖ן לֵאמֹ֑ר אֵת֩ אֲשֶׁ֨ר דִּבֶּ֧ר יְהוָ֛ה אֶל־ עֲבָדֶ֖יךָ כֵּ֥ן נַעֲשֶֽׂה׃",
+        english:
+          "The Gadites and Reubenites replied As the LORD has spoken to your servants so we will do",
+      },
+      {
+        verse_number: 32,
+        original:
+          "נַ֣חְנוּ נַעֲבֹ֧ר חֲלוּצִ֛ים לִפְנֵ֥י יְהוָ֖ה אֶ֣רֶץ כְּנָ֑עַן וְאִתָּ֙נוּ֙ אֲחֻזַּ֣ת נַחֲלָתֵ֔נוּ מֵעֵ֖בֶר לַיַּרְדֵּֽן׃",
+        english:
+          "We will cross over into the land of Canaan armed before the LORD that we may have our inheritance on this side of the Jordan",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַיִּתֵּ֣ן לָהֶ֣ם׀ מֹשֶׁ֡ה לִבְנֵי־ גָד֩ וְלִבְנֵ֨י רְאוּבֵ֜ן וְלַחֲצִ֣י׀ שֵׁ֣בֶט׀ מְנַשֶּׁ֣ה בֶן־ יוֹסֵ֗ף אֶת־ מַמְלֶ֙כֶת֙ סִיחֹן֙ מֶ֣לֶךְ הָֽאֱמֹרִ֔י וְאֶת־ מַמְלֶ֔כֶת ע֖וֹג מֶ֣לֶךְ הַבָּשָׁ֑ן הָאָ֗רֶץ לְעָרֶ֙יהָ֙ בִּגְבֻלֹ֔ת עָרֵ֥י הָאָ֖רֶץ סָבִֽיב׃",
+        english:
+          "So Moses gave to the Gadites to the Reubenites and to the half-tribe of Manasseh son of Joseph the kingdom of Sihon king of the Amorites and the kingdom of Og king of Bashan the land including its cities and the territory surrounding them",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיִּבְנ֣וּ בְנֵי־ גָ֔ד אֶת־ דִּיבֹ֖ן וְאֶת־ עֲטָרֹ֑ת וְאֵ֖ת עֲרֹעֵֽר׃",
+        english: "And the Gadites built up Dibon Ataroth Aroer",
+      },
+      {
+        verse_number: 35,
+        original: "וְאֶת־ עַטְרֹ֥ת שׁוֹפָ֛ן וְאֶת־ יַעְזֵ֖ר וְיָגְבֳּהָֽה׃",
+        english: "Atroth-shophan Jazer Jogbehah",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וְאֶת־ בֵּ֥ית נִמְרָ֖ה וְאֶת־ בֵּ֣ית הָרָ֑ן עָרֵ֥י מִבְצָ֖ר וְגִדְרֹ֥ת צֹֽאן׃",
+        english:
+          "Beth-nimrah and Beth-haran as fortified cities and they built folds for their flocks",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וּבְנֵ֤י רְאוּבֵן֙ בָּנ֔וּ אֶת־ חֶשְׁבּ֖וֹן וְאֶת־ אֶלְעָלֵ֑א וְאֵ֖ת קִרְיָתָֽיִם׃",
+        english: "The Reubenites built up Heshbon Elealeh Kiriathaim",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וְאֶת־ נְב֞וֹ וְאֶת־ בַּ֧עַל מְע֛וֹן מֽוּסַבֹּ֥ת שֵׁ֖ם וְאֶת־ שִׂבְמָ֑ה וַיִּקְרְא֣וּ בְשֵׁמֹ֔ת אֶת־ שְׁמ֥וֹת הֶעָרִ֖ים אֲשֶׁ֥ר בָּנֽוּ׃",
+        english:
+          "as well as Nebo and Baal-meon (whose names were changed and Sibmah And they renamed the cities they rebuilt",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וַיֵּ֨לְכ֜וּ בְּנֵ֨י מָכִ֧יר בֶּן־ מְנַשֶּׁ֛ה גִּלְעָ֖דָה וַֽיִּלְכְּדֻ֑הָ וַיּ֖וֹרֶשׁ אֶת־ הָאֱמֹרִ֥י אֲשֶׁר־ בָּֽהּ׃",
+        english:
+          "The descendants of Machir son of Manasseh went to Gilead captured it and drove out the Amorites who were there",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וַיִּתֵּ֤ן מֹשֶׁה֙ אֶת־ הַגִּלְעָ֔ד לְמָכִ֖יר בֶּן־ מְנַשֶּׁ֑ה וַיֵּ֖שֶׁב בָּֽהּ׃",
+        english:
+          "So Moses gave Gilead to the clan of Machir son of Manasseh and they settled there",
+      },
+      {
+        verse_number: 41,
+        original:
+          "וְיָאִ֤יר בֶּן־ מְנַשֶּׁה֙ הָלַ֔ךְ וַיִּלְכֹּ֖ד אֶת־ חַוֺּתֵיהֶ֑ם וַיִּקְרָ֥א אֶתְהֶ֖ן חַוֺּ֥ת יָאִֽיר׃",
+        english:
+          "Jair a descendant of Manasseh went and captured their villages and called them Havvoth-jair",
+      },
+      {
+        verse_number: 42,
+        original:
+          "וְנֹ֣בַח הָלַ֔ךְ וַיִּלְכֹּ֥ד אֶת־ קְנָ֖ת וְאֶת־ בְּנֹתֶ֑יהָ וַיִּקְרָ֧א לָ֦ה נֹ֖בַח בִּשְׁמֽוֹ׃פ",
+        english:
+          "And Nobah went and captured Kenath and its villages and called it Nobah after his own name",
+      },
+    ],
+  };
+  return chapter;
+}
