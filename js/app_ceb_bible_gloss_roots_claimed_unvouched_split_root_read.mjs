@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { property_get } from "./property_get.mjs";
@@ -32,8 +33,7 @@ export function app_ceb_bible_gloss_roots_claimed_unvouched_split_root_read(
   function root_read(row) {
     let root = property_get(row, "stated_root");
     let folded = gloss_word_folded(root);
-    let spoken_for = property_get_or_null(vouched, folded);
-    let b = null_is(spoken_for);
+    let b = property_null_is(vouched, folded);
     let stands = not(b);
     if (stands) {
       return;
