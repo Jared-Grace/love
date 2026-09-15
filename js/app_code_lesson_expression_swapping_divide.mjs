@@ -88,13 +88,13 @@ export function app_code_lesson_expression_swapping_divide() {
       "**",
       ") multiplies a number by itself",
     ]);
-    html_div_cycle_code(power, ["", "2 ** 3", " is ", "2 * 2 * 2 === 8"]);
-    html_div_cycle_code(power, ["", "3 ** 2", " is ", "3 * 3 === 9"]);
+    html_div_cycle_code(power, ["", "5 ** 3", " is ", "5 * 5 * 5 === 125"]);
+    html_div_cycle_code(power, ["", "3 ** 5", " is ", "3 * 3 * 3 * 3 * 3 === 243"]);
     html_div_cycle_code(power, [
       "",
-      "8",
+      "125",
       " and ",
-      "9",
+      "243",
       " are different, so we cannot always swap the numbers around ",
       "**",
     ]);
