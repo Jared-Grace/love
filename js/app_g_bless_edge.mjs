@@ -1,5 +1,5 @@
 import { bless_edge_seen_is } from "./bless_edge_seen_is.mjs";
-import { app_g_bless_edge_stand } from "./app_g_bless_edge_stand.mjs";
+import { bless_edge_stand } from "./bless_edge_stand.mjs";
 import { bless_edge_degrees } from "./bless_edge_degrees.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,7 +31,7 @@ export function app_g_bless_edge(edge, container_map, bar, remaining) {
     html_visibility_hidden(outer);
     return;
   }
-  let stand = app_g_bless_edge_stand(outer, box, point);
+  let stand = bless_edge_stand(outer, box, point);
   let degrees = bless_edge_degrees(box, point);
   html_style_rotate_degrees_set(spin, degrees);
   let box_left = property_get(box, "left");
