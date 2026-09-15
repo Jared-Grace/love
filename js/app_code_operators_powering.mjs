@@ -1,6 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_double_asterisk_symbol } from "./js_operator_double_asterisk_symbol.mjs";
 export function app_code_operators_powering() {
+  function_duplicate_kind_parallel();
   arguments_assert(arguments, 0);
   ("the operators javascript works out at the strength of a power, by their symbols: **");
   ("A class of its own above the times and the divide, because javascript works a power out first: 2 ** 3 * 4 is (2 ** 3) * 4. Given a times' strength it would print without the parentheses that say which side it holds, and given a comparison's strength - which is what it had, by falling through every class there was - it printed a line that meant something else entirely.");
