@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { property_get } from "./property_get.mjs";
@@ -31,8 +32,7 @@ export async function bible_glyph_chapter_mark_verse_counts(
     let seated = 0;
     let words = property_get(row, "words");
     for (let token of words) {
-      let word_glyph = property_get(token, "glyph");
-      let same = equal(word_glyph, glyph);
+      let same = property_equals(token, "glyph", glyph);
       if (not(same)) {
         continue;
       }
