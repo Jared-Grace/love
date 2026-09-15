@@ -1,3 +1,4 @@
+import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -20,11 +21,9 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
   let fx = property_get(hero, "fx");
   let x = property_get(point, "x");
   let y = property_get(point, "y");
-  let at = text_combine_multiple([
-    html_pixels_text(x),
-    " ",
-    html_pixels_text(y),
-  ]);
+  let text = html_pixels_text(x);
+  let text2 = html_pixels_text(y);
+  let at = text_combine_multiple([text, " ", text2]);
   let dark = html_div(fx);
   html_style_assign(dark, {
     position: "absolute",
@@ -143,7 +142,7 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
     },
   );
   let count = 28;
-  let gap = duration / count;
+  let gap = divide(duration, count);
   let flames = range(count);
   for (let flame of flames) {
     app_g_hero_flame(fx, point, width);
