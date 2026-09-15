@@ -1,3 +1,4 @@
+import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_replace } from "./bless_person_replace.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -36,7 +37,8 @@ export async function app_g_hero_burn(hero) {
   let world = property_get(hero, "world");
   let div_map = property_get(hero, "div_map");
   let graves = property_get(hero, "graves");
-  bless_person_replace(world, div_map, evil, graves);
+  let neighbour = list_random_item(npcs);
+  bless_person_replace(world, div_map, neighbour, graves);
   property_set(hero, "evil", null);
   render();
   function spawned() {
