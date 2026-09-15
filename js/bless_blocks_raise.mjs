@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_buildings_raise } from "./app_g_bless_buildings_raise.mjs";
+import { bless_buildings_raise } from "./bless_buildings_raise.mjs";
 import { bless_yard_grass } from "./bless_yard_grass.mjs";
 import { list_concat } from "./list_concat.mjs";
 import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
@@ -44,7 +44,7 @@ export function bless_blocks_raise(rows, blocks) {
     let yard = property_get(block, "yard");
     let road = property_get(block, "road");
     let paths = property_get(block, "paths");
-    app_g_bless_buildings_raise(rows, buildings, index);
+    bless_buildings_raise(rows, buildings, index);
     let item_grass = bless_yard_grass();
     let grassed = list_concat(yard, alleys);
     app_g_bless_tiles_pave(rows, grassed, item_grass);
