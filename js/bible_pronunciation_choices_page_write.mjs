@@ -1,3 +1,12 @@
+import { app_shared_color_white } from "./app_shared_color_white.mjs";
+import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
+import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
+import { app_shared_color_page_background } from "./app_shared_color_page_background.mjs";
+import { app_shared_color_blue_dark } from "./app_shared_color_blue_dark.mjs";
+import { app_shared_color_gray } from "./app_shared_color_gray.mjs";
+import { app_shared_color_blue_pale } from "./app_shared_color_blue_pale.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { folder_web_dev } from "./folder_web_dev.mjs";
 import { path_join } from "./path_join.mjs";
@@ -44,6 +53,60 @@ export async function bible_pronunciation_choices_page_write() {
     return section;
   }
   let sections = list_map(choices, lambda);
+  let color = app_shared_color_white();
+  let r = app_shared_color_page_dark();
+  let c = app_shared_color_gray_dark();
+  let combined = text_combine_multiple([
+    "  :root { --ground:",
+    color,
+    "; --ink:",
+    r,
+    "; --quiet:",
+    c,
+    ";",
+  ]);
+  let c2 = app_shared_color_gray_light();
+  let c3 = app_shared_color_page_background();
+  let c4 = app_shared_color_blue_dark();
+  let combined2 = text_combine_multiple([
+    "          --line:",
+    c2,
+    "; --card:",
+    c3,
+    "; --accent:",
+    c4,
+    "; }",
+  ]);
+  let r2 = app_shared_color_page_dark();
+  let c5 = app_shared_color_gray_light();
+  let combined3 = text_combine_multiple([
+    '    :root:not([data-theme="light"]) { --ground:',
+    r2,
+    "; --ink:",
+    c5,
+    ";",
+  ]);
+  let c6 = app_shared_color_gray();
+  let c7 = app_shared_color_gray_dark();
+  let r3 = app_shared_color_page_dark();
+  let c8 = app_shared_color_blue_pale();
+  let combined4 = text_combine_multiple([
+    "      --quiet:",
+    c6,
+    "; --line:",
+    c7,
+    "; --card:",
+    r3,
+    "; --accent:",
+    c8,
+    "; } }",
+  ]);
+  let color2 = app_shared_color_white();
+  let combined5 = text_combine_multiple([
+    "    color:",
+    color2,
+    "; font-weight:700; }",
+  ]);
   let head = list_join(
     [
       "<!doctype html>",
@@ -53,11 +116,11 @@ export async function bible_pronunciation_choices_page_write() {
       '<meta name="viewport" content="width=device-width, initial-scale=1">',
       "<title>A or B?</title>",
       "<style>",
-      "  :root { --ground:#ffffff; --ink:#16181d; --quiet:#5d6470;",
-      "          --line:#dfe3ea; --card:#f6f8fb; --accent:#1f5f8b; }",
+      combined,
+      combined2,
       "  @media (prefers-color-scheme: dark) {",
-      '    :root:not([data-theme="light"]) { --ground:#14161a; --ink:#eef1f5;',
-      "      --quiet:#98a1ae; --line:#2b3038; --card:#1c1f25; --accent:#6fb3dc; } }",
+      combined3,
+      combined4,
       "  * { box-sizing: border-box; }",
       "  body { margin:0; padding:20px 16px 64px; background:var(--ground);",
       '    color:var(--ink); font:17px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }',
@@ -71,7 +134,7 @@ export async function bible_pronunciation_choices_page_write() {
       "    margin-bottom:10px; }",
       "  .tag { flex:0 0 auto; width:34px; height:34px; display:grid;",
       "    place-items:center; border-radius:50%; background:var(--accent);",
-      "    color:#fff; font-weight:700; }",
+      combined5,
       "  .what { flex:1 1 auto; min-width:0; }",
       "  .what b { display:block; font-size:17px; }",
       "  .what span { color:var(--quiet); font-size:14px; }",
