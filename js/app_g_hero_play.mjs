@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_player_img_female_get } from "./g_player_img_female_get.mjs";
-import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
+import { bless_world_new } from "./bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_map_scrolling } from "./bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
@@ -27,7 +27,7 @@ export function app_g_hero_play(container_map) {
   ("The edge arrow is the praying game's own, recoloured to the red an evil person wears, so a player who cannot see the killer still knows which way to run.");
   ("The arrow measures the screen above a bar of buttons. This game has no buttons, so it is handed a bar with no height at all and measures the whole screen.");
   let player_img = g_player_img_female_get();
-  let world = app_g_bless_world_new(player_img);
+  let world = bless_world_new(player_img);
   let player = property_get(world, "player");
   let npcs = property_get(world, "npcs");
   let blocks = property_get(world, "blocks");
