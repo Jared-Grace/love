@@ -845,7 +845,7 @@ export function bible_glyph_chapter_exo12() {
           "When",
           "your",
           "$son",
-          "$mouth",
+          "$speech",
           "you,",
           "What",
           "does",
