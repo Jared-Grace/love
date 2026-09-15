@@ -1,0 +1,353 @@
+export function bible_glyph_chapter_rosetta_lines_deu04() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "DEU04",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וְעַתָּ֣ה יִשְׂרָאֵ֗ל שְׁמַ֤ע אֶל־ הַֽחֻקִּים֙ וְאֶל־ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֧ר אָֽנֹכִ֛י מְלַמֵּ֥ד אֶתְכֶ֖ם לַעֲשׂ֑וֹת לְמַ֣עַן תִּֽחְי֗וּ וּבָאתֶם֙ וִֽירִשְׁתֶּ֣ם אֶת־ הָאָ֔רֶץ אֲשֶׁ֧ר יְהוָ֛ה אֱלֹהֵ֥י אֲבֹתֵיכֶ֖ם נֹתֵ֥ן לָכֶֽם׃",
+        english:
+          "Hear now O Israel the statutes and ordinances I am teaching you to follow so that you may live and may enter and take possession of the land that the LORD the God of your fathers is giving you",
+      },
+      {
+        verse_number: 2,
+        original:
+          "לֹ֣א תֹסִ֗פוּ עַל־ הַדָּבָר֙ אֲשֶׁ֤ר אָנֹכִי֙ מְצַוֶּ֣ה אֶתְכֶ֔ם וְלֹ֥א תִגְרְע֖וּ מִמֶּ֑נּוּ לִשְׁמֹ֗ר אֶת־ מִצְוֺת֙ יְהוָ֣ה אֱלֹֽהֵיכֶ֔ם אֲשֶׁ֥ר אָנֹכִ֖י מְצַוֶּ֥ה אֶתְכֶֽם׃",
+        english:
+          "You must not add to or subtract from what I command you so that you may keep the commandments of the LORD your God that I am giving you",
+      },
+      {
+        verse_number: 3,
+        original:
+          "עֵֽינֵיכֶם֙ הָֽרֹאֹ֔ת אֵ֛ת אֲשֶׁר־ עָשָׂ֥ה יְהוָ֖ה בְּבַ֣עַל פְּע֑וֹר כִּ֣י כָל־ הָאִ֗ישׁ אֲשֶׁ֤ר הָלַךְ֙ אַחֲרֵ֣י בַֽעַל־ פְּע֔וֹר הִשְׁמִיד֛וֹ יְהוָ֥ה אֱלֹהֶ֖יךָ מִקִּרְבֶּֽךָ׃",
+        english:
+          "Your eyes have seen what the LORD did at Baal-peor for the LORD your God destroyed from among you all who followed Baal of Peor",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאַתֶּם֙ הַדְּבֵקִ֔ים בַּיהוָ֖ה אֱלֹהֵיכֶ֑ם חַיִּ֥ים כֻּלְּכֶ֖ם הַיּֽוֹם׃",
+        english:
+          "But you who held fast to the LORD your God are alive to this day every one of you",
+      },
+      {
+        verse_number: 5,
+        original:
+          "רְאֵ֣ה׀ לִמַּ֣דְתִּי אֶתְכֶ֗ם חֻקִּים֙ וּמִשְׁפָּטִ֔ים כַּאֲשֶׁ֥ר צִוַּ֖נִי יְהוָ֣ה אֱלֹהָ֑י לַעֲשׂ֣וֹת כֵּ֔ן בְּקֶ֣רֶב הָאָ֔רֶץ אֲשֶׁ֥ר אַתֶּ֛ם בָּאִ֥ים שָׁ֖מָּה לְרִשְׁתָּֽהּ׃",
+        english:
+          "See I have taught you statutes and ordinances just as the LORD my God has commanded me so that you may follow them in the land that you are about to enter and possess",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וּשְׁמַרְתֶּם֮ וַעֲשִׂיתֶם֒ כִּ֣י הִ֤וא חָכְמַתְכֶם֙ וּבִ֣ינַתְכֶ֔ם לְעֵינֵ֖י הָעַמִּ֑ים אֲשֶׁ֣ר יִשְׁמְע֗וּן אֵ֚ת כָּל־ הַחֻקִּ֣ים הָאֵ֔לֶּה וְאָמְר֗וּ רַ֚ק עַם־ חָכָ֣ם וְנָב֔וֹן הַגּ֥וֹי הַגָּד֖וֹל הַזֶּֽה׃",
+        english:
+          "Observe them carefully for this will show your wisdom and understanding in the sight of the peoples who will hear of all these statutes and say Surely this great nation is a wise and understanding people",
+      },
+      {
+        verse_number: 7,
+        original:
+          "כִּ֚י מִי־ ג֣וֹי גָּד֔וֹל אֲשֶׁר־ ל֥וֹ אֱלֹהִ֖ים קְרֹבִ֣ים אֵלָ֑יו כַּיהוָ֣ה אֱלֹהֵ֔ינוּ בְּכָּל־ קָרְאֵ֖נוּ אֵלָֽיו׃",
+        english:
+          "For what nation is great enough to have a god as near to them as the LORD our God is to us whenever we call on Him",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וּמִי֙ גּ֣וֹי גָּד֔וֹל אֲשֶׁר־ ל֛וֹ חֻקִּ֥ים וּמִשְׁפָּטִ֖ים צַדִּיקִ֑ם כְּכֹל֙ הַתּוֹרָ֣ה הַזֹּ֔את אֲשֶׁ֧ר אָנֹכִ֛י נֹתֵ֥ן לִפְנֵיכֶ֖ם הַיּֽוֹם׃",
+        english:
+          "And what nation is great enough to have righteous statutes and ordinances like this entire law I set before you today",
+      },
+      {
+        verse_number: 9,
+        original:
+          "רַ֡ק הִשָּׁ֣מֶר לְךָ֩ וּשְׁמֹ֨ר נַפְשְׁךָ֜ מְאֹ֗ד פֶּן־ תִּשְׁכַּ֨ח אֶת־ הַדְּבָרִ֜ים אֲשֶׁר־ רָא֣וּ עֵינֶ֗יךָ וּפֶן־ יָס֙וּרוּ֙ מִלְּבָ֣בְךָ֔ כֹּ֖ל יְמֵ֣י חַיֶּ֑יךָ וְהוֹדַעְתָּ֥ם לְבָנֶ֖יךָ וְלִבְנֵ֥י בָנֶֽיךָ׃",
+        english:
+          "Only be on your guard and diligently watch yourselves so that you do not forget the things your eyes have seen and so that they do not slip from your heart as long as you live Teach them to your children and grandchildren",
+      },
+      {
+        verse_number: 10,
+        original:
+          "י֗וֹם אֲשֶׁ֨ר עָמַ֜דְתָּ לִפְנֵ֨י יְהוָ֣ה אֱלֹהֶיךָ֮ בְּחֹרֵב֒ בֶּאֱמֹ֨ר יְהוָ֜ה אֵלַ֗י הַקְהֶל־ לִי֙ אֶת־ הָעָ֔ם וְאַשְׁמִעֵ֖ם אֶת־ דְּבָרָ֑י אֲשֶׁ֨ר יִלְמְד֜וּן לְיִרְאָ֣ה אֹתִ֗י כָּל־ הַיָּמִים֙ אֲשֶׁ֨ר הֵ֤ם חַיִּים֙ עַל־ הָ֣אֲדָמָ֔ה וְאֶת־ בְּנֵיהֶ֖ם יְלַמֵּדֽוּן׃",
+        english:
+          "The day you stood before the LORD your God at Horeb the LORD said to me Gather the people before Me to hear My words so that they may learn to fear Me all the days they live on the earth and that they may teach them to their children",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַתִּקְרְב֥וּן וַתַּֽעַמְד֖וּן תַּ֣חַת הָהָ֑ר וְהָהָ֞ר בֹּעֵ֤ר בָּאֵשׁ֙ עַד־ לֵ֣ב הַשָּׁמַ֔יִם חֹ֖שֶׁךְ עָנָ֥ן וַעֲרָפֶֽל׃",
+        english:
+          "You came near and stood at the base of the mountain a mountain blazing with fire to the heavens with black clouds and deep darkness",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיְדַבֵּ֧ר יְהוָ֛ה אֲלֵיכֶ֖ם מִתּ֣וֹךְ הָאֵ֑שׁ ק֤וֹל דְּבָרִים֙ אַתֶּ֣ם שֹׁמְעִ֔ים וּתְמוּנָ֛ה אֵינְכֶ֥ם רֹאִ֖ים זוּלָתִ֥י קֽוֹל׃",
+        english:
+          "And the LORD spoke to you out of the fire You heard the sound of the words but saw no form there was only a voice",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיַּגֵּ֨ד לָכֶ֜ם אֶת־ בְּרִית֗וֹ אֲשֶׁ֨ר צִוָּ֤ה אֶתְכֶם֙ לַעֲשׂ֔וֹת עֲשֶׂ֖רֶת הַדְּבָרִ֑ים וַֽיִּכְתְּבֵ֔ם עַל־ שְׁנֵ֖י לֻח֥וֹת אֲבָנִֽים׃",
+        english:
+          "He declared to you His covenant which He commanded you to follow the Ten Commandments that He wrote on two tablets of stone",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאֹתִ֞י צִוָּ֤ה יְהוָה֙ בָּעֵ֣ת הַהִ֔וא לְלַמֵּ֣ד אֶתְכֶ֔ם חֻקִּ֖ים וּמִשְׁפָּטִ֑ים לַעֲשֹׂתְכֶ֣ם אֹתָ֔ם בָּאָ֕רֶץ אֲשֶׁ֥ר אַתֶּ֛ם עֹבְרִ֥ים שָׁ֖מָּה לְרִשְׁתָּֽהּ׃",
+        english:
+          "At that time the LORD commanded me to teach you the statutes and ordinances you are to follow in the land that you are crossing the Jordan to possess",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְנִשְׁמַרְתֶּ֥ם מְאֹ֖ד לְנַפְשֹׁתֵיכֶ֑ם כִּ֣י לֹ֤א רְאִיתֶם֙ כָּל־ תְּמוּנָ֔ה בְּי֗וֹם דִּבֶּ֨ר יְהוָ֧ה אֲלֵיכֶ֛ם בְּחֹרֵ֖ב מִתּ֥וֹךְ הָאֵֽשׁ׃",
+        english:
+          "So since you saw no form of any kind on the day the LORD spoke to you out of the fire at Horeb be careful",
+      },
+      {
+        verse_number: 16,
+        original:
+          "פֶּ֨ן־ תַּשְׁחִת֔וּן וַעֲשִׂיתֶ֥ם לָכֶ֛ם פֶּ֖סֶל תְּמוּנַ֣ת כָּל־ סָ֑מֶל תַּבְנִ֥ית זָכָ֖ר א֥וֹ נְקֵבָֽה׃",
+        english:
+          "that you do not act corruptly and make an idol for yourselves of any form or shape whether in the likeness of a male or female",
+      },
+      {
+        verse_number: 17,
+        original:
+          "תַּבְנִ֕ית כָּל־ בְּהֵמָ֖ה אֲשֶׁ֣ר בָּאָ֑רֶץ תַּבְנִית֙ כָּל־ צִפּ֣וֹר כָּנָ֔ף אֲשֶׁ֥ר תָּע֖וּף בַּשָּׁמָֽיִם׃",
+        english:
+          "of any beast that is on the earth or bird that flies in the air",
+      },
+      {
+        verse_number: 18,
+        original:
+          "תַּבְנִ֕ית כָּל־ רֹמֵ֖שׂ בָּאֲדָמָ֑ה תַּבְנִ֛ית כָּל־ דָּגָ֥ה אֲשֶׁר־ בַּמַּ֖יִם מִתַּ֥חַת לָאָֽרֶץ׃",
+        english:
+          "or of any creature that crawls on the ground or fish that is in the waters below",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וּפֶן־ תִּשָּׂ֨א עֵינֶ֜יךָ הַשָּׁמַ֗יְמָה וְֽ֠רָאִיתָ אֶת־ הַשֶּׁ֨מֶשׁ וְאֶת־ הַיָּרֵ֜חַ וְאֶת־ הַכּֽוֹכָבִ֗ים כֹּ֚ל צְבָ֣א הַשָּׁמַ֔יִם וְנִדַּחְתָּ֛ וְהִשְׁתַּחֲוִ֥יתָ לָהֶ֖ם וַעֲבַדְתָּ֑ם אֲשֶׁ֨ר חָלַ֜ק יְהוָ֤ה אֱלֹהֶ֙יךָ֙ אֹתָ֔ם לְכֹל֙ הָֽעַמִּ֔ים תַּ֖חַת כָּל־ הַשָּׁמָֽיִם׃",
+        english:
+          "When you look to the heavens and see the sun and moon and stars all the host of heaven do not be enticed to bow down and worship what the LORD your God has apportioned to all the nations under heaven",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְאֶתְכֶם֙ לָקַ֣ח יְהוָ֔ה וַיּוֹצִ֥א אֶתְכֶ֛ם מִכּ֥וּר הַבַּרְזֶ֖ל מִמִּצְרָ֑יִם לִהְי֥וֹת ל֛וֹ לְעַ֥ם נַחֲלָ֖ה כַּיּ֥וֹם הַזֶּֽה׃",
+        english:
+          "Yet the LORD has taken you and brought you out of the iron furnace out of Egypt to be the people of His inheritance as you are today",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַֽיהוָ֥ה הִתְאַנֶּף־ בִּ֖י עַל־ דִּבְרֵיכֶ֑ם וַיִּשָּׁבַ֗ע לְבִלְתִּ֤י עָבְרִי֙ אֶת־ הַיַּרְדֵּ֔ן וּלְבִלְתִּי־ בֹא֙ אֶל־ הָאָ֣רֶץ הַטּוֹבָ֔ה אֲשֶׁר֙ יְהוָ֣ה אֱלֹהֶ֔יךָ נֹתֵ֥ן לְךָ֖ נַחֲלָֽה׃",
+        english:
+          "The LORD, however was angry with me on account of you and He swore that I would not cross the Jordan to enter the good land that the LORD your God is giving you as an inheritance",
+      },
+      {
+        verse_number: 22,
+        original:
+          "כִּ֣י אָנֹכִ֥י מֵת֙ בָּאָ֣רֶץ הַזֹּ֔את אֵינֶ֥נִּי עֹבֵ֖ר אֶת־ הַיַּרְדֵּ֑ן וְאַתֶּם֙ עֹֽבְרִ֔ים וִֽירִשְׁתֶּ֕ם אֶת־ הָאָ֥רֶץ הַטּוֹבָ֖ה הַזֹּֽאת׃",
+        english:
+          "For I will not be crossing the Jordan because I must die in this land But you shall cross over and take possession of that good land",
+      },
+      {
+        verse_number: 23,
+        original:
+          "הִשָּׁמְר֣וּ לָכֶ֗ם פֶּֽן־ תִּשְׁכְּחוּ֙ אֶת־ בְּרִ֤ית יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם אֲשֶׁ֥ר כָּרַ֖ת עִמָּכֶ֑ם וַעֲשִׂיתֶ֨ם לָכֶ֥ם פֶּ֙סֶל֙ תְּמ֣וּנַת כֹּ֔ל אֲשֶׁ֥ר צִוְּךָ֖ יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+        english:
+          "Be careful that you do not forget the covenant of the LORD your God that He made with you do not make an idol for yourselves in the form of anything He has forbidden you",
+      },
+      {
+        verse_number: 24,
+        original:
+          "כִּ֚י יְהוָ֣ה אֱלֹהֶ֔יךָ אֵ֥שׁ אֹכְלָ֖ה ה֑וּא אֵ֖ל קַנָּֽא׃פ",
+        english: "For the LORD your God is a consuming fire a jealous God",
+      },
+      {
+        verse_number: 25,
+        original:
+          "כִּֽי־ תוֹלִ֤יד בָּנִים֙ וּבְנֵ֣י בָנִ֔ים וְנוֹשַׁנְתֶּ֖ם בָּאָ֑רֶץ וְהִשְׁחַתֶּ֗ם וַעֲשִׂ֤יתֶם פֶּ֙סֶל֙ תְּמ֣וּנַת כֹּ֔ל וַעֲשִׂיתֶ֥ם הָרַ֛ע בְּעֵינֵ֥י יְהוָֽה־ אֱלֹהֶ֖יךָ לְהַכְעִיסֽוֹ׃",
+        english:
+          "After you have children and grandchildren and you have been in the land a long time if you then act corruptly and make an idol of any form doing evil in the sight of the LORD your God and provoking Him to anger",
+      },
+      {
+        verse_number: 26,
+        original:
+          "הַעִידֹתִי֩ בָכֶ֨ם הַיּ֜וֹם אֶת־ הַשָּׁמַ֣יִם וְאֶת־ הָאָ֗רֶץ כִּֽי־ אָבֹ֣ד תֹּאבֵדוּן֮ מַהֵר֒ מֵעַ֣ל הָאָ֔רֶץ אֲשֶׁ֨ר אַתֶּ֜ם עֹבְרִ֧ים אֶת־ הַיַּרְדֵּ֛ן שָׁ֖מָּה לְרִשְׁתָּ֑הּ לֹֽא־ תַאֲרִיכֻ֤ן יָמִים֙ עָלֶ֔יהָ כִּ֥י הִשָּׁמֵ֖ד תִּשָּׁמֵדֽוּן׃",
+        english:
+          "I call heaven and earth as witnesses against you this day that you will quickly perish from the land that you are crossing the Jordan to possess You will not live long upon it but will be utterly destroyed",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְהֵפִ֧יץ יְהוָ֛ה אֶתְכֶ֖ם בָּעַמִּ֑ים וְנִשְׁאַרְתֶּם֙ מְתֵ֣י מִסְפָּ֔ר בַּגּוֹיִ֕ם אֲשֶׁ֨ר יְנַהֵ֧ג יְהוָ֛ה אֶתְכֶ֖ם שָֽׁמָּה׃",
+        english:
+          "Then the LORD will scatter you among the peoples and only a few of you will survive among the nations to which the LORD will drive you",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַעֲבַדְתֶּם־ שָׁ֣ם אֱלֹהִ֔ים מַעֲשֵׂ֖ה יְדֵ֣י אָדָ֑ם עֵ֣ץ וָאֶ֔בֶן אֲשֶׁ֤ר לֹֽא־ יִרְאוּן֙ וְלֹ֣א יִשְׁמְע֔וּן וְלֹ֥א יֹֽאכְל֖וּן וְלֹ֥א יְרִיחֻֽן׃",
+        english:
+          "And there you will serve man-made gods of wood and stone which cannot see or hear or eat or smell",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וּבִקַּשְׁתֶּ֥ם מִשָּׁ֛ם אֶת־ יְהוָ֥ה אֱלֹהֶ֖יךָ וּמָצָ֑אתָ כִּ֣י תִדְרְשֶׁ֔נּוּ בְּכָל־ לְבָבְךָ֖ וּבְכָל־ נַפְשֶֽׁךָ׃",
+        english:
+          "But if from there you will seek the LORD your God you will find Him if you seek Him with all your heart and with all your soul",
+      },
+      {
+        verse_number: 30,
+        original:
+          "בַּצַּ֣ר לְךָ֔ וּמְצָא֕וּךָ כֹּ֖ל הַדְּבָרִ֣ים הָאֵ֑לֶּה בְּאַחֲרִית֙ הַיָּמִ֔ים וְשַׁבְתָּ֙ עַד־ יְהוָ֣ה אֱלֹהֶ֔יךָ וְשָׁמַעְתָּ֖ בְּקֹלֽוֹ׃",
+        english:
+          "When you are in distress and all these things have happened to you then in later days you will return to the LORD your God and listen to His voice",
+      },
+      {
+        verse_number: 31,
+        original:
+          "כִּ֣י אֵ֤ל רַחוּם֙ יְהוָ֣ה אֱלֹהֶ֔יךָ לֹ֥א יַרְפְּךָ֖ וְלֹ֣א יַשְׁחִיתֶ֑ךָ וְלֹ֤א יִשְׁכַּח֙ אֶת־ בְּרִ֣ית אֲבֹתֶ֔יךָ אֲשֶׁ֥ר נִשְׁבַּ֖ע לָהֶֽם׃",
+        english:
+          "For the LORD your God is a merciful God He will not abandon you or destroy you or forget the covenant with your fathers which He swore to them by oath",
+      },
+      {
+        verse_number: 32,
+        original:
+          "כִּ֣י שְׁאַל־ נָא֩ לְיָמִ֨ים רִֽאשֹׁנִ֜ים אֲשֶׁר־ הָי֣וּ לְפָנֶ֗יךָ לְמִן־ הַיּוֹם֙ אֲשֶׁר֩ בָּרָ֨א אֱלֹהִ֤ים׀ אָדָם֙ עַל־ הָאָ֔רֶץ וּלְמִקְצֵ֥ה הַשָּׁמַ֖יִם וְעַד־ קְצֵ֣ה הַשָּׁמָ֑יִם הֲנִֽהְיָ֗ה כַּדָּבָ֤ר הַגָּדוֹל֙ הַזֶּ֔ה א֖וֹ הֲנִשְׁמַ֥ע כָּמֹֽהוּ׃",
+        english:
+          "Indeed ask now from one end of the heavens to the other about the days that long preceded you from the day that God created man on earth Has anything as great as this ever happened or been reported",
+      },
+      {
+        verse_number: 33,
+        original:
+          "הֲשָׁ֣מַֽע עָם֩ ק֨וֹל אֱלֹהִ֜ים מְדַבֵּ֧ר מִתּוֹךְ־ הָאֵ֛שׁ כַּאֲשֶׁר־ שָׁמַ֥עְתָּ אַתָּ֖ה וַיֶּֽחִי׃",
+        english:
+          "Has a people ever heard the voice of God speaking out of the fire as you have and lived",
+      },
+      {
+        verse_number: 34,
+        original:
+          "א֣וֹ׀ הֲנִסָּ֣ה אֱלֹהִ֗ים לָ֠בוֹא לָקַ֨חַת ל֣וֹ גוֹי֮ מִקֶּ֣רֶב גּוֹי֒ בְּמַסֹּת֩ בְּאֹתֹ֨ת וּבְמוֹפְתִ֜ים וּבְמִלְחָמָ֗ה וּבְיָ֤ד חֲזָקָה֙ וּבִזְר֣וֹעַ נְטוּיָ֔ה וּבְמוֹרָאִ֖ים גְּדֹלִ֑ים כְּ֠כֹל אֲשֶׁר־ עָשָׂ֨ה לָכֶ֜ם יְהוָ֧ה אֱלֹהֵיכֶ֛ם בְּמִצְרַ֖יִם לְעֵינֶֽיךָ׃",
+        english:
+          "Or has any god tried to take as his own a nation out of another nation by trials signs wonders and war by a strong hand and an outstretched arm and by great terrors as the LORD your God did for you in Egypt before your eyes",
+      },
+      {
+        verse_number: 35,
+        original:
+          "אַתָּה֙ הָרְאֵ֣תָ לָדַ֔עַת כִּ֥י יְהוָ֖ה ה֣וּא הָאֱלֹהִ֑ים אֵ֥ין ע֖וֹד מִלְבַדּֽוֹ׃",
+        english:
+          "You were shown these things so that you would know that the LORD is God there is no other besides Him",
+      },
+      {
+        verse_number: 36,
+        original:
+          "מִן־ הַשָּׁמַ֛יִם הִשְׁמִֽיעֲךָ֥ אֶת־ קֹל֖וֹ לְיַסְּרֶ֑ךָּ וְעַל־ הָאָ֗רֶץ הֶרְאֲךָ֙ אֶת־ אִשּׁ֣וֹ הַגְּדוֹלָ֔ה וּדְבָרָ֥יו שָׁמַ֖עְתָּ מִתּ֥וֹךְ הָאֵֽשׁ׃",
+        english:
+          "He let you hear His voice from heaven to discipline you and on earth He showed you His great fire and you heard His words out of the fire",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וְתַ֗חַת כִּ֤י אָהַב֙ אֶת־ אֲבֹתֶ֔יךָ וַיִּבְחַ֥ר בְּזַרְע֖וֹ אַחֲרָ֑יו וַיּוֹצִֽאֲךָ֧ בְּפָנָ֛יו בְּכֹח֥וֹ הַגָּדֹ֖ל מִמִּצְרָֽיִם׃",
+        english:
+          "Because He loved your fathers He chose their descendants after them and brought you out of Egypt by His presence and great power",
+      },
+      {
+        verse_number: 38,
+        original:
+          "לְהוֹרִ֗ישׁ גּוֹיִ֛ם גְּדֹלִ֧ים וַעֲצֻמִ֛ים מִמְּךָ֖ מִפָּנֶ֑יךָ לַהֲבִֽיאֲךָ֗ לָֽתֶת־ לְךָ֧ אֶת־ אַרְצָ֛ם נַחֲלָ֖ה כַּיּ֥וֹם הַזֶּֽה׃",
+        english:
+          "to drive out before you nations greater and mightier than you and to bring you into their land and give it to you for your inheritance as it is this day",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וְיָדַעְתָּ֣ הַיּ֗וֹם וַהֲשֵׁבֹתָ֮ אֶל־ לְבָבֶךָ֒ כִּ֤י יְהוָה֙ ה֣וּא הָֽאֱלֹהִ֔ים בַּשָּׁמַ֣יִם מִמַּ֔עַל וְעַל־ הָאָ֖רֶץ מִתָּ֑חַת אֵ֖ין עֽוֹד׃",
+        english:
+          "Know therefore this day and take to heart that the LORD is God in heaven above and on the earth below there is no other",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וְשָׁמַרְתָּ֞ אֶת־ חֻקָּ֣יו וְאֶת־ מִצְוֺתָ֗יו אֲשֶׁ֨ר אָנֹכִ֤י מְצַוְּךָ֙ הַיּ֔וֹם אֲשֶׁר֙ יִיטַ֣ב לְךָ֔ וּלְבָנֶ֖יךָ אַחֲרֶ֑יךָ וּלְמַ֨עַן תַּאֲרִ֤יךְ יָמִים֙ עַל־ הַ֣אֲדָמָ֔ה אֲשֶׁ֨ר יְהוָ֧ה אֱלֹהֶ֛יךָ נֹתֵ֥ן לְךָ֖ כָּל־ הַיָּמִֽים׃פ",
+        english:
+          "Keep His statutes and commandments which I am giving you today so that you and your children after you may prosper and that you may live long in the land that the LORD your God is giving you for all time",
+      },
+      {
+        verse_number: 41,
+        original:
+          "אָ֣ז יַבְדִּ֤יל מֹשֶׁה֙ שָׁלֹ֣שׁ עָרִ֔ים בְּעֵ֖בֶר הַיַּרְדֵּ֑ן מִזְרְחָ֖ה שָֽׁמֶשׁ׃",
+        english:
+          "Then Moses set aside three cities across the Jordan to the east",
+      },
+      {
+        verse_number: 42,
+        original:
+          "לָנֻ֨ס שָׁ֜מָּה רוֹצֵ֗חַ אֲשֶׁ֨ר יִרְצַ֤ח אֶת־ רֵעֵ֙הוּ֙ בִּבְלִי־ דַ֔עַת וְה֛וּא לֹא־ שֹׂנֵ֥א ל֖וֹ מִתְּמ֣וֹל שִׁלְשׁ֑וֹם וְנָ֗ס אֶל־ אַחַ֛ת מִן־ הֶעָרִ֥ים הָאֵ֖ל וָחָֽי׃",
+        english:
+          "to which a manslayer could flee after killing his neighbor unintentionally without prior malice To save one’s own life he could flee to one of these cities",
+      },
+      {
+        verse_number: 43,
+        original:
+          "אֶת־ בֶּ֧צֶר בַּמִּדְבָּ֛ר בְּאֶ֥רֶץ הַמִּישֹׁ֖ר לָרֻֽאוּבֵנִ֑י וְאֶת־ רָאמֹ֤ת בַּגִּלְעָד֙ לַגָּדִ֔י וְאֶת־ גּוֹלָ֥ן בַּבָּשָׁ֖ן לַֽמְנַשִּֽׁי׃",
+        english:
+          "Bezer in the wilderness on the plateau belonging to the Reubenites Ramoth in Gilead belonging to the Gadites or Golan in Bashan belonging to the Manassites",
+      },
+      {
+        verse_number: 44,
+        original:
+          "וְזֹ֖את הַתּוֹרָ֑ה אֲשֶׁר־ שָׂ֣ם מֹשֶׁ֔ה לִפְנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english: "This is the law that Moses set before the Israelites",
+      },
+      {
+        verse_number: 45,
+        original:
+          "אֵ֚לֶּה הָֽעֵדֹ֔ת וְהַֽחֻקִּ֖ים וְהַמִּשְׁפָּטִ֑ים אֲשֶׁ֨ר דִּבֶּ֤ר מֹשֶׁה֙ אֶל־ בְּנֵ֣י יִשְׂרָאֵ֔ל בְּצֵאתָ֖ם מִמִּצְרָֽיִם׃",
+        english:
+          "These are the testimonies statutes and ordinances that Moses proclaimed to them after they had come out of Egypt",
+      },
+      {
+        verse_number: 46,
+        original:
+          "בְּעֵ֨בֶר הַיַּרְדֵּ֜ן בַּגַּ֗יְא מ֚וּל בֵּ֣ית פְּע֔וֹר בְּאֶ֗רֶץ סִיחֹן֙ מֶ֣לֶךְ הָֽאֱמֹרִ֔י אֲשֶׁ֥ר יוֹשֵׁ֖ב בְּחֶשְׁבּ֑וֹן אֲשֶׁ֨ר הִכָּ֤ה מֹשֶׁה֙ וּבְנֵֽי יִשְׂרָאֵ֔ל בְּצֵאתָ֖ם מִמִּצְרָֽיִם׃",
+        english:
+          "while they were in the valley across the Jordan facing Beth-peor in the land of Sihon king of the Amorites who lived in Heshbon and was defeated by Moses and the Israelites after they had come out of Egypt",
+      },
+      {
+        verse_number: 47,
+        original:
+          "וַיִּֽירְשׁ֨וּ אֶת־ אַרְצ֜וֹ וְאֶת־ אֶ֣רֶץ׀ ע֣וֹג מֶֽלֶךְ־ הַבָּשָׁ֗ן שְׁנֵי֙ מַלְכֵ֣י הָֽאֱמֹרִ֔י אֲשֶׁ֖ר בְּעֵ֣בֶר הַיַּרְדֵּ֑ן מִזְרַ֖ח שָֽׁמֶשׁ׃",
+        english:
+          "They took possession of the land belonging to Sihon and to Og king of Bashan the two Amorite kings across the Jordan to the east",
+      },
+      {
+        verse_number: 48,
+        original:
+          "מֵעֲרֹעֵ֞ר אֲשֶׁ֨ר עַל־ שְׂפַת־ נַ֧חַל אַרְנֹ֛ן וְעַד־ הַ֥ר שִׂיאֹ֖ן ה֥וּא חֶרְמֽוֹן׃",
+        english:
+          "extending from Aroer on the rim of the Arnon Valley as far as Mount Siyon (that is Hermon",
+      },
+      {
+        verse_number: 49,
+        original:
+          "וְכָל־ הָ֨עֲרָבָ֜ה עֵ֤בֶר הַיַּרְדֵּן֙ מִזְרָ֔חָה וְעַ֖ד יָ֣ם הָעֲרָבָ֑ה תַּ֖חַת אַשְׁדֹּ֥ת הַפִּסְגָּֽה׃פ",
+        english:
+          "including all the Arabah on the east side of the Jordan and as far as the Sea of the Arabah below the slopes of Pisgah",
+      },
+    ],
+  };
+  return chapter;
+}
