@@ -74,8 +74,8 @@ export function app_code_lesson_expression_repeated_generic(words) {
     let chosen_lefts = list_map(examples, chosen_left_of);
     function left_free_is(left) {
       "a left number none of the chosen examples has taken";
-      let free = list_includes_not(chosen_lefts, left);
-      return free;
+      let left_untaken = list_includes_not(chosen_lefts, left);
+      return left_untaken;
     }
     let lefts = app_code_lesson_expression_repeated_generic_lefts();
     let free = list_filter(lefts, left_free_is);
