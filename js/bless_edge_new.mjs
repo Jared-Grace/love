@@ -7,7 +7,7 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { g_z } from "./g_z.mjs";
 import { bless_arrow_bob } from "./bless_arrow_bob.mjs";
-export function app_g_bless_edge_new(container_map) {
+export function bless_edge_new(container_map) {
   arguments_assert(arguments, 1);
   ("The one arrow that lives at the edge of the screen and leans towards whoever is left to pray for out beyond it - made once, when the street is built, and aimed again on every move afterwards.");
   ("ONE of them, not one per person. Everybody still to pray for already wears an arrow of their own over their head, and those are for reading a crowd that is in front of you. This is for the other question, the one a marked crowd cannot answer: there is nobody left in sight, so which way do I walk. Several of these at once would be several answers to a question with one useful answer.");

@@ -8,7 +8,7 @@ import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
 import { bless_doors_draw } from "./bless_doors_draw.mjs";
 import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
+import { bless_edge_new } from "./bless_edge_new.mjs";
 import { app_g_hero_evil_color } from "./app_g_hero_evil_color.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_g_hero_fx_layer } from "./app_g_hero_fx_layer.mjs";
@@ -48,7 +48,7 @@ export function app_g_hero_play(container_map) {
     bottom: "0",
     height: "0",
   });
-  let edge = app_g_bless_edge_new(container_map);
+  let edge = bless_edge_new(container_map);
   let outer = property_get(edge, "outer");
   let color = app_g_hero_evil_color();
   html_style_set(outer, "color", color);

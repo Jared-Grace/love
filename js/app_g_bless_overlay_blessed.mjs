@@ -9,7 +9,7 @@ import { app_g_bless_map_scrolling } from "./app_g_bless_map_scrolling.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
 import { app_g_bless_told } from "./app_g_bless_told.mjs";
-import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
+import { bless_edge_new } from "./bless_edge_new.mjs";
 import { bless_camera_people_set } from "./bless_camera_people_set.mjs";
 import { bless_blessed_new } from "./bless_blessed_new.mjs";
 import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start.mjs";
@@ -57,7 +57,7 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("The arrow that leans off the edge of the screen towards the next person to pray for. It");
   ("is made here, once, with the frame it hangs on - and made AFTER the buttons so that a");
   ("hint can never end up underneath the thing a thumb is reaching for.");
-  let edge = app_g_bless_edge_new(container_map);
+  let edge = bless_edge_new(container_map);
   ("The map is told who is walking about on it, because a camera journey has to stop them");
   ("where they stand for the length of the journey. It is said once, here, where the crowd");
   ("and the map first exist together - and every camera move made from this map afterwards");
