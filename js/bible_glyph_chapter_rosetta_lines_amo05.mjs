@@ -1,0 +1,200 @@
+export function bible_glyph_chapter_rosetta_lines_amo05() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "AMO05",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "שִׁמְע֞וּ אֶת־ הַדָּבָ֣ר הַזֶּ֗ה אֲשֶׁ֨ר אָנֹכִ֜י נֹשֵׂ֧א עֲלֵיכֶ֛ם קִינָ֖ה בֵּ֥ית יִשְׂרָאֵֽל׃",
+        english:
+          "Hear this word O house of Israel this lamentation I take up against you",
+      },
+      {
+        verse_number: 2,
+        original:
+          "נָֽפְלָה֙ לֹֽא־ תוֹסִ֣יף ק֔וּם בְּתוּלַ֖ת יִשְׂרָאֵ֑ל נִטְּשָׁ֥ה עַל־ אַדְמָתָ֖הּ אֵ֥ין מְקִימָֽהּ׃",
+        english:
+          "Fallen is Virgin Israel never to rise again She lies abandoned on her land with no one to raise her up",
+      },
+      {
+        verse_number: 3,
+        original:
+          "כִּ֣י כֹ֤ה אָמַר֙ אֲדֹנָ֣י יְהוִ֔ה הָעִ֛יר הַיֹּצֵ֥את אֶ֖לֶף תַּשְׁאִ֣יר מֵאָ֑ה וְהַיּוֹצֵ֥את מֵאָ֛ה תַּשְׁאִ֥יר עֲשָׂרָ֖ה לְבֵ֥ית יִשְׂרָאֵֽל׃ס",
+        english:
+          "This is what the Lord GOD says The city that marches out a thousand strong will have but a hundred left and the one that marches out a hundred strong will have but ten left in the house of Israel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "כִּ֣י כֹ֥ה אָמַ֛ר יְהוָ֖ה לְבֵ֣ית יִשְׂרָאֵ֑ל דִּרְשׁ֖וּנִי וִֽחְיֽוּ׃",
+        english:
+          "For this is what the LORD says to the house of Israel Seek Me and live",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְאַֽל־ תִּדְרְשׁוּ֙ בֵּֽית־ אֵ֔ל וְהַגִּלְגָּל֙ לֹ֣א תָבֹ֔אוּ וּבְאֵ֥ר שֶׁ֖בַע לֹ֣א תַעֲבֹ֑רוּ כִּ֤י הַגִּלְגָּל֙ גָּלֹ֣ה יִגְלֶ֔ה וּבֵֽית־ אֵ֖ל יִהְיֶ֥ה לְאָֽוֶן׃",
+        english:
+          "Do not seek Bethel or go to Gilgal do not journey to Beersheba for Gilgal will surely go into exile and Bethel will come to nothing",
+      },
+      {
+        verse_number: 6,
+        original:
+          "דִּרְשׁ֥וּ אֶת־ יְהוָ֖ה וִֽחְי֑וּ פֶּן־ יִצְלַ֤ח כָּאֵשׁ֙ בֵּ֣ית יוֹסֵ֔ף וְאָכְלָ֥ה וְאֵין־ מְכַבֶּ֖ה לְבֵֽית־ אֵֽל׃",
+        english:
+          "Seek the LORD and live or He will sweep like fire through the house of Joseph it will devour everything with no one at Bethel to extinguish it",
+      },
+      {
+        verse_number: 7,
+        original:
+          "הַהֹפְכִ֥ים לְלַעֲנָ֖ה מִשְׁפָּ֑ט וּצְדָקָ֖ה לָאָ֥רֶץ הִנִּֽיחוּ׃",
+        english:
+          "There are those who turn justice into wormwood and cast righteousness to the ground",
+      },
+      {
+        verse_number: 8,
+        original:
+          "עֹשֵׂ֨ה כִימָ֜ה וּכְסִ֗יל וְהֹפֵ֤ךְ לַבֹּ֙קֶר֙ צַלְמָ֔וֶת וְי֖וֹם לַ֣יְלָה הֶחְשִׁ֑יךְ הַקּוֹרֵ֣א לְמֵֽי־ הַיָּ֗ם וַֽיִּשְׁפְּכֵ֛ם עַל־ פְּנֵ֥י הָאָ֖רֶץ יְהוָ֥ה שְׁמֽוֹ׃ס",
+        english:
+          "He who made the Pleiades and Orion who turns darkness into dawn and darkens day into night who summons the waters of the sea and pours them over the face of the earth the LORD is His name",
+      },
+      {
+        verse_number: 9,
+        original: "הַמַּבְלִ֥יג שֹׁ֖ד עַל־ עָ֑ז וְשֹׁ֖ד עַל־ מִבְצָ֥ר יָבֽוֹא׃",
+        english:
+          "He flashes destruction on the strong so that fury comes upon the stronghold",
+      },
+      {
+        verse_number: 10,
+        original:
+          "שָׂנְא֥וּ בַשַּׁ֖עַר מוֹכִ֑יחַ וְדֹבֵ֥ר תָּמִ֖ים יְתָעֵֽבוּ׃",
+        english:
+          "There are those who hate the one who reproves in the gate and despise him who speaks with integrity",
+      },
+      {
+        verse_number: 11,
+        original:
+          "לָ֠כֵן יַ֣עַן בּוֹשַׁסְכֶ֞ם עַל־ דָּ֗ל וּמַשְׂאַת־ בַּר֙ תִּקְח֣וּ מִמֶּ֔נּוּ בָּתֵּ֥י גָזִ֛ית בְּנִיתֶ֖ם וְלֹא־ תֵ֣שְׁבוּ בָ֑ם כַּרְמֵי־ חֶ֣מֶד נְטַעְתֶּ֔ם וְלֹ֥א תִשְׁתּ֖וּ אֶת־ יֵינָֽם׃",
+        english:
+          "Therefore because you trample on the poor and exact from him a tax of grain you will never live in the stone houses you have built you will never drink the wine from the lush vineyards you have planted",
+      },
+      {
+        verse_number: 12,
+        original:
+          "כִּ֤י יָדַ֙עְתִּי֙ רַבִּ֣ים פִּשְׁעֵיכֶ֔ם וַעֲצֻמִ֖ים חַטֹּֽאתֵיכֶ֑ם צֹרְרֵ֤י צַדִּיק֙ לֹ֣קְחֵי כֹ֔פֶר וְאֶבְיוֹנִ֖ים בַּשַּׁ֥עַר הִטּֽוּ׃",
+        english:
+          "For I know that your transgressions are many and your sins are numerous You oppress the righteous by taking bribes you deprive the poor of justice in the gate",
+      },
+      {
+        verse_number: 13,
+        original:
+          "לָכֵ֗ן הַמַּשְׂכִּ֛יל בָּעֵ֥ת הַהִ֖יא יִדֹּ֑ם כִּ֛י עֵ֥ת רָעָ֖ה הִֽיא׃",
+        english:
+          "Therefore the prudent keep silent in such times for the days are evil",
+      },
+      {
+        verse_number: 14,
+        original:
+          "דִּרְשׁוּ־ ט֥וֹב וְאַל־ רָ֖ע לְמַ֣עַן תִּֽחְי֑וּ וִיהִי־ כֵ֞ן יְהוָ֧ה אֱלֹהֵֽי־ צְבָא֛וֹת אִתְּכֶ֖ם כַּאֲשֶׁ֥ר אֲמַרְתֶּֽם׃",
+        english:
+          "Seek good not evil so that you may live And the LORD the God of Hosts will be with you as you have claimed",
+      },
+      {
+        verse_number: 15,
+        original:
+          "שִׂנְאוּ־ רָע֙ וְאֶ֣הֱבוּ ט֔וֹב וְהַצִּ֥יגוּ בַשַּׁ֖עַר מִשְׁפָּ֑ט אוּלַ֗י יֶֽחֱנַ֛ן יְהוָ֥ה אֱלֹהֵֽי־ צְבָא֖וֹת שְׁאֵרִ֥ית יוֹסֵֽף׃ס",
+        english:
+          "Hate evil and love good establish justice in the gate Perhaps the LORD the God of Hosts will be gracious to the remnant of Joseph",
+      },
+      {
+        verse_number: 16,
+        original:
+          "לָ֠כֵן כֹּֽה־ אָמַ֨ר יְהוָ֜ה אֱלֹהֵ֤י צְבָאוֹת֙ אֲדֹנָ֔י בְּכָל־ רְחֹב֣וֹת מִסְפֵּ֔ד וּבְכָל־ חוּצ֖וֹת יֹאמְר֣וּ הוֹ־ ה֑וֹ וְקָרְא֤וּ אִכָּר֙ אֶל־ אֵ֔בֶל וּמִסְפֵּ֖ד אֶל־ י֥וֹדְעֵי נֶֽהִי׃",
+        english:
+          "Therefore this is what the LORD the God of Hosts the Lord says There will be wailing in all the public squares and cries of Alas Alas in all the streets The farmer will be summoned to mourn and the mourners to wail",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וּבְכָל־ כְּרָמִ֖ים מִסְפֵּ֑ד כִּֽי־ אֶעֱבֹ֥ר בְּקִרְבְּךָ֖ אָמַ֥ר יְהוָֽה׃ס",
+        english:
+          "There will be wailing in all the vineyards for I will pass through your midst says the LORD",
+      },
+      {
+        verse_number: 18,
+        original:
+          "ה֥וֹי הַמִּתְאַוִּ֖ים אֶת־ י֣וֹם יְהוָ֑ה לָמָּה־ זֶּ֥ה לָכֶ֛ם י֥וֹם יְהוָ֖ה הוּא־ חֹ֥שֶׁךְ וְלֹא־ אֽוֹר׃",
+        english:
+          "Woe to you who long for the Day of the LORD What will the Day of the LORD be for you It will be darkness and not light",
+      },
+      {
+        verse_number: 19,
+        original:
+          "כַּאֲשֶׁ֨ר יָנ֥וּס אִישׁ֙ מִפְּנֵ֣י הָאֲרִ֔י וּפְגָע֖וֹ הַדֹּ֑ב וּבָ֣א הַבַּ֔יִת וְסָמַ֤ךְ יָדוֹ֙ עַל־ הַקִּ֔יר וּנְשָׁכ֖וֹ הַנָּחָֽשׁ׃",
+        english:
+          "It will be like a man who flees from a lion only to encounter a bear or who enters his house and rests his hand against the wall only to be bitten by a snake",
+      },
+      {
+        verse_number: 20,
+        original:
+          "הֲלֹא־ חֹ֛שֶׁךְ י֥וֹם יְהוָ֖ה וְלֹא־ א֑וֹר וְאָפֵ֖ל וְלֹא־ נֹ֥גַֽהּ לֽוֹ׃",
+        english:
+          "Will not the Day of the LORD be darkness and not light even gloom with no brightness in it",
+      },
+      {
+        verse_number: 21,
+        original:
+          "שָׂנֵ֥אתִי מָאַ֖סְתִּי חַגֵּיכֶ֑ם וְלֹ֥א אָרִ֖יחַ בְּעַצְּרֹֽתֵיכֶֽם׃",
+        english:
+          "I hate I despise your feasts I cannot stand the stench of your solemn assemblies",
+      },
+      {
+        verse_number: 22,
+        original:
+          "כִּ֣י אִם־ תַּעֲלוּ־ לִ֥י עֹל֛וֹת וּמִנְחֹתֵיכֶ֖ם לֹ֣א אֶרְצֶ֑ה וְשֶׁ֥לֶם מְרִיאֵיכֶ֖ם לֹ֥א אַבִּֽיט׃",
+        english:
+          "Even though you offer Me burnt offerings and grain offerings I will not accept them for your peace offerings of fattened cattle I will have no regard",
+      },
+      {
+        verse_number: 23,
+        original:
+          "הָסֵ֥ר מֵעָלַ֖י הֲמ֣וֹן שִׁרֶ֑יךָ וְזִמְרַ֥ת נְבָלֶ֖יךָ לֹ֥א אֶשְׁמָֽע׃",
+        english:
+          "Take away from Me the noise of your songs I will not listen to the music of your harps",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְיִגַּ֥ל כַּמַּ֖יִם מִשְׁפָּ֑ט וּצְדָקָ֖ה כְּנַ֥חַל אֵיתָֽן׃",
+        english:
+          "But let justice roll on like a river and righteousness like an ever-flowing stream",
+      },
+      {
+        verse_number: 25,
+        original:
+          "הַזְּבָחִ֨ים וּמִנְחָ֜ה הִֽגַּשְׁתֶּם־ לִ֧י בַמִּדְבָּ֛ר אַרְבָּעִ֥ים שָׁנָ֖ה בֵּ֥ית יִשְׂרָאֵֽל׃",
+        english:
+          "Did you bring Me sacrifices and offerings forty years in the wilderness O house of Israel",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וּנְשָׂאתֶ֗ם אֵ֚ת סִכּ֣וּת מַלְכְּכֶ֔ם וְאֵ֖ת כִּיּ֣וּן צַלְמֵיכֶ֑ם כּוֹכַב֙ אֱלֹ֣הֵיכֶ֔ם אֲשֶׁ֥ר עֲשִׂיתֶ֖ם לָכֶֽם׃",
+        english:
+          "You have taken along Sakkuth your king and Kaiwan your star god the idols you made for yourselves",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְהִגְלֵיתִ֥י אֶתְכֶ֖ם מֵהָ֣לְאָה לְדַמָּ֑שֶׂק אָמַ֛ר יְהוָ֥ה אֱלֹהֵֽי־ צְבָא֖וֹת שְׁמֽוֹ׃פ",
+        english:
+          "Therefore I will send you into exile beyond Damascus says the LORD whose name is the God of Hosts",
+      },
+    ],
+  };
+  return chapter;
+}

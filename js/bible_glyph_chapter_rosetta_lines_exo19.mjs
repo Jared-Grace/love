@@ -1,0 +1,185 @@
+export function bible_glyph_chapter_rosetta_lines_exo19() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EXO19",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "בַּחֹ֙דֶשׁ֙ הַשְּׁלִישִׁ֔י לְצֵ֥את בְּנֵי־ יִשְׂרָאֵ֖ל מֵאֶ֣רֶץ מִצְרָ֑יִם בַּיּ֣וֹם הַזֶּ֔ה בָּ֖אוּ מִדְבַּ֥ר סִינָֽי׃",
+        english:
+          "In the third month on the same day of the month that the Israelites had left the land of Egypt they came to the Wilderness of Sinai",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיִּסְע֣וּ מֵרְפִידִ֗ים וַיָּבֹ֙אוּ֙ מִדְבַּ֣ר סִינַ֔י וַֽיַּחֲנ֖וּ בַּמִּדְבָּ֑ר וַיִּֽחַן־ שָׁ֥ם יִשְׂרָאֵ֖ל נֶ֥גֶד הָהָֽר׃",
+        english:
+          "After they had set out from Rephidim they entered the Wilderness of Sinai and Israel camped there in front of the mountain",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וּמֹשֶׁ֥ה עָלָ֖ה אֶל־ הָאֱלֹהִ֑ים וַיִּקְרָ֨א אֵלָ֤יו יְהוָה֙ מִן־ הָהָ֣ר לֵאמֹ֔ר כֹּ֤ה תֹאמַר֙ לְבֵ֣ית יַעֲקֹ֔ב וְתַגֵּ֖יד לִבְנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Then Moses went up to God and the LORD called to him from the mountain This is what you are to tell the house of Jacob and explain to the sons of Israel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אַתֶּ֣ם רְאִיתֶ֔ם אֲשֶׁ֥ר עָשִׂ֖יתִי לְמִצְרָ֑יִם וָאֶשָּׂ֤א אֶתְכֶם֙ עַל־ כַּנְפֵ֣י נְשָׁרִ֔ים וָאָבִ֥א אֶתְכֶ֖ם אֵלָֽי׃",
+        english:
+          "You have seen for yourselves what I did to Egypt and how I carried you on eagles’ wings and brought you to Myself",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְעַתָּ֗ה אִם־ שָׁמ֤וֹעַ תִּשְׁמְעוּ֙ בְּקֹלִ֔י וּשְׁמַרְתֶּ֖ם אֶת־ בְּרִיתִ֑י וִהְיִ֨יתֶם לִ֤י סְגֻלָּה֙ מִכָּל־ הָ֣עַמִּ֔ים כִּי־ לִ֖י כָּל־ הָאָֽרֶץ׃",
+        english:
+          "Now if you will indeed obey My voice and keep My covenant you will be My treasured possession out of all the nations for the whole earth is Mine",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְאַתֶּ֧ם תִּהְיוּ־ לִ֛י מַמְלֶ֥כֶת כֹּהֲנִ֖ים וְג֣וֹי קָד֑וֹשׁ אֵ֚לֶּה הַדְּבָרִ֔ים אֲשֶׁ֥ר תְּדַבֵּ֖ר אֶל־ בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "And unto Me you shall be a kingdom of priests and a holy nation These are the words that you are to speak to the Israelites",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיָּבֹ֣א מֹשֶׁ֔ה וַיִּקְרָ֖א לְזִקְנֵ֣י הָעָ֑ם וַיָּ֣שֶׂם לִפְנֵיהֶ֗ם אֵ֚ת כָּל־ הַדְּבָרִ֣ים הָאֵ֔לֶּה אֲשֶׁ֥ר צִוָּ֖הוּ יְהוָֽה׃",
+        english:
+          "So Moses went back and summoned the elders of the people and set before them all these words that the LORD had commanded him",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיַּעֲנ֨וּ כָל־ הָעָ֤ם יַחְדָּו֙ וַיֹּ֣אמְר֔וּ כֹּ֛ל אֲשֶׁר־ דִּבֶּ֥ר יְהוָ֖ה נַעֲשֶׂ֑ה וַיָּ֧שֶׁב מֹשֶׁ֛ה אֶת־ דִּבְרֵ֥י הָעָ֖ם אֶל־ יְהוָֽה׃",
+        english:
+          "And all the people answered together We will do everything that the LORD has spoken So Moses brought their words back to the LORD",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֜ה אֶל־ מֹשֶׁ֗ה הִנֵּ֨ה אָנֹכִ֜י בָּ֣א אֵלֶיךָ֮ בְּעַ֣ב הֶֽעָנָן֒ בַּעֲב֞וּר יִשְׁמַ֤ע הָעָם֙ בְּדַבְּרִ֣י עִמָּ֔ךְ וְגַם־ בְּךָ֖ יַאֲמִ֣ינוּ לְעוֹלָ֑ם וַיַּגֵּ֥ד מֹשֶׁ֛ה אֶת־ דִּבְרֵ֥י הָעָ֖ם אֶל־ יְהוָֽה׃",
+        english:
+          "The LORD said to Moses Behold I will come to you in a dense cloud so that the people will hear when I speak with you and they will always put their trust in you And Moses relayed to the LORD what the people had said",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֹּ֨אמֶר יְהוָ֤ה אֶל־ מֹשֶׁה֙ לֵ֣ךְ אֶל־ הָעָ֔ם וְקִדַּשְׁתָּ֥ם הַיּ֖וֹם וּמָחָ֑ר וְכִבְּס֖וּ שִׂמְלֹתָֽם׃",
+        english:
+          "Then the LORD said to Moses Go to the people and consecrate them today and tomorrow They must wash their clothes",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהָי֥וּ נְכֹנִ֖ים לַיּ֣וֹם הַשְּׁלִישִׁ֑י כִּ֣י׀ בַּיּ֣וֹם הַשְּׁלִישִׁ֗י יֵרֵ֧ד יְהוָ֛ה לְעֵינֵ֥י כָל־ הָעָ֖ם עַל־ הַ֥ר סִינָֽי׃",
+        english:
+          "and be prepared by the third day for on the third day the LORD will come down on Mount Sinai in the sight of all the people",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהִגְבַּלְתָּ֤ אֶת־ הָעָם֙ סָבִ֣יב לֵאמֹ֔ר הִשָּׁמְר֥וּ לָכֶ֛ם עֲל֥וֹת בָּהָ֖ר וּנְגֹ֣עַ בְּקָצֵ֑הוּ כָּל־ הַנֹּגֵ֥עַ בָּהָ֖ר מ֥וֹת יוּמָֽת׃",
+        english:
+          "And you are to set up a boundary for the people around the mountain and tell them Be careful not to go up on the mountain or touch its base Whoever touches the mountain shall surely be put to death",
+      },
+      {
+        verse_number: 13,
+        original:
+          "לֹא־ תִגַּ֨ע בּ֜וֹ יָ֗ד כִּֽי־ סָק֤וֹל יִסָּקֵל֙ אוֹ־ יָרֹ֣ה יִיָּרֶ֔ה אִם־ בְּהֵמָ֥ה אִם־ אִ֖ישׁ לֹ֣א יִחְיֶ֑ה בִּמְשֹׁךְ֙ הַיֹּבֵ֔ל הֵ֖מָּה יַעֲל֥וּ בָהָֽר׃",
+        english:
+          "No hand shall touch him but he shall surely be stoned or shot with arrows whether man or beast he must not live Only when the ram’s horn sounds a long blast may they approach the mountain",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיֵּ֧רֶד מֹשֶׁ֛ה מִן־ הָהָ֖ר אֶל־ הָעָ֑ם וַיְקַדֵּשׁ֙ אֶת־ הָעָ֔ם וַֽיְכַבְּס֖וּ שִׂמְלֹתָֽם׃",
+        english:
+          "When Moses came down from the mountain to the people he consecrated them and they washed their clothes",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיֹּ֙אמֶר֙ אֶל־ הָעָ֔ם הֱי֥וּ נְכֹנִ֖ים לִשְׁלֹ֣שֶׁת יָמִ֑ים אַֽל־ תִּגְּשׁ֖וּ אֶל־ אִשָּֽׁה׃",
+        english:
+          "Be prepared for the third day he said to the people Do not draw near to a woman",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיְהִי֩ בַיּ֨וֹם הַשְּׁלִישִׁ֜י בִּֽהְיֹ֣ת הַבֹּ֗קֶר וַיְהִי֩ קֹלֹ֨ת וּבְרָקִ֜ים וְעָנָ֤ן כָּבֵד֙ עַל־ הָהָ֔ר וְקֹ֥ל שֹׁפָ֖ר חָזָ֣ק מְאֹ֑ד וַיֶּחֱרַ֥ד כָּל־ הָעָ֖ם אֲשֶׁ֥ר בַּֽמַּחֲנֶֽה׃",
+        english:
+          "On the third day when morning came there was thunder and lightning A thick cloud was upon the mountain and a very loud blast of the ram’s horn went out so that all the people in the camp trembled",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיּוֹצֵ֨א מֹשֶׁ֧ה אֶת־ הָעָ֛ם לִקְרַ֥את הָֽאֱלֹהִ֖ים מִן־ הַֽמַּחֲנֶ֑ה וַיִּֽתְיַצְּב֖וּ בְּתַחְתִּ֥ית הָהָֽר׃",
+        english:
+          "Then Moses brought the people out of the camp to meet with God and they stood at the foot of the mountain",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְהַ֤ר סִינַי֙ עָשַׁ֣ן כֻּלּ֔וֹ מִ֠פְּנֵי אֲשֶׁ֨ר יָרַ֥ד עָלָ֛יו יְהוָ֖ה בָּאֵ֑שׁ וַיַּ֤עַל עֲשָׁנוֹ֙ כְּעֶ֣שֶׁן הַכִּבְשָׁ֔ן וַיֶּחֱרַ֥ד כָּל־ הָהָ֖ר מְאֹֽד׃",
+        english:
+          "Mount Sinai was completely enveloped in smoke because the LORD had descended on it in fire And the smoke rose like the smoke of a furnace and the whole mountain quaked violently",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיְהִי֙ ק֣וֹל הַשּׁוֹפָ֔ר הוֹלֵ֖ךְ וְחָזֵ֣ק מְאֹ֑ד מֹשֶׁ֣ה יְדַבֵּ֔ר וְהָאֱלֹהִ֖ים יַעֲנֶ֥נּוּ בְקֽוֹל׃",
+        english:
+          "And as the sound of the ram’s horn grew louder and louder Moses spoke and God answered him in the thunder",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיֵּ֧רֶד יְהוָ֛ה עַל־ הַ֥ר סִינַ֖י אֶל־ רֹ֣אשׁ הָהָ֑ר וַיִּקְרָ֨א יְהוָ֧ה לְמֹשֶׁ֛ה אֶל־ רֹ֥אשׁ הָהָ֖ר וַיַּ֥עַל מֹשֶֽׁה׃",
+        english:
+          "The LORD descended to the top of Mount Sinai and called Moses to the summit So Moses went up",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֔ה רֵ֖ד הָעֵ֣ד בָּעָ֑ם פֶּן־ יֶהֶרְס֤וּ אֶל־ יְהוָה֙ לִרְא֔וֹת וְנָפַ֥ל מִמֶּ֖נּוּ רָֽב׃",
+        english:
+          "and the LORD said to him Go down and warn the people not to break through to see the LORD lest many of them perish",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְגַ֧ם הַכֹּהֲנִ֛ים הַנִּגָּשִׁ֥ים אֶל־ יְהוָ֖ה יִתְקַדָּ֑שׁוּ פֶּן־ יִפְרֹ֥ץ בָּהֶ֖ם יְהוָֽה׃",
+        english:
+          "Even the priests who approach the LORD must consecrate themselves or the LORD will break out against them",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיֹּ֤אמֶר מֹשֶׁה֙ אֶל־ יְהוָ֔ה לֹא־ יוּכַ֣ל הָעָ֔ם לַעֲלֹ֖ת אֶל־ הַ֣ר סִינָ֑י כִּֽי־ אַתָּ֞ה הַעֵדֹ֤תָה בָּ֙נוּ֙ לֵאמֹ֔ר הַגְבֵּ֥ל אֶת־ הָהָ֖ר וְקִדַּשְׁתּֽוֹ׃",
+        english:
+          "But Moses said to the LORD The people cannot come up Mount Sinai for You solemnly warned us Put a boundary around the mountain and set it apart as holy",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיֹּ֨אמֶר אֵלָ֤יו יְהוָה֙ לֶךְ־ רֵ֔ד וְעָלִ֥יתָ אַתָּ֖ה וְאַהֲרֹ֣ן עִמָּ֑ךְ וְהַכֹּהֲנִ֣ים וְהָעָ֗ם אַל־ יֶֽהֶרְס֛וּ לַעֲלֹ֥ת אֶל־ יְהוָ֖ה פֶּן־ יִפְרָץ־ בָּֽם׃",
+        english:
+          "And the LORD replied Go down and bring Aaron with you But the priests and the people must not break through to come up to the LORD or He will break out against them",
+      },
+      {
+        verse_number: 25,
+        original: "וַיֵּ֥רֶד מֹשֶׁ֖ה אֶל־ הָעָ֑ם וַיֹּ֖אמֶר אֲלֵהֶֽם׃ס",
+        english: "So Moses went down to the people and spoke to them",
+      },
+    ],
+  };
+  return chapter;
+}

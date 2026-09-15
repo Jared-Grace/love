@@ -1,0 +1,157 @@
+export function bible_glyph_chapter_rosetta_lines_dan01() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "DAN01",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "בִּשְׁנַ֣ת שָׁל֔וֹשׁ לְמַלְכ֖וּת יְהוֹיָקִ֣ים מֶֽלֶךְ־ יְהוּדָ֑ה בָּ֣א נְבוּכַדְנֶאצַּ֧ר מֶֽלֶךְ־ בָּבֶ֛ל יְרוּשָׁלִַ֖ם וַיָּ֥צַר עָלֶֽיהָ׃",
+        english:
+          "In the third year of the reign of Jehoiakim king of Judah Nebuchadnezzar king of Babylon came to Jerusalem and besieged it",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַיִּתֵּן֩ אֲדֹנָ֨י בְּיָד֜וֹ אֶת־ יְהוֹיָקִ֣ים מֶֽלֶךְ־ יְהוּדָ֗ה וּמִקְצָת֙ כְּלֵ֣י בֵית־ הָֽאֱלֹהִ֔ים וַיְבִיאֵ֥ם אֶֽרֶץ־ שִׁנְעָ֖ר בֵּ֣ית אֱלֹהָ֑יו וְאֶת־ הַכֵּלִ֣ים הֵבִ֔יא בֵּ֖ית אוֹצַ֥ר אֱלֹהָֽיו׃",
+        english:
+          "And the Lord delivered into his hand Jehoiakim king of Judah along with some of the articles from the house of God He carried these off to the land of Shinar to the house of his god where he put them in the treasury of his god",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיֹּ֣אמֶר הַמֶּ֔לֶךְ לְאַשְׁפְּנַ֖ז רַ֣ב סָרִיסָ֑יו לְהָבִ֞יא מִבְּנֵ֧י יִשְׂרָאֵ֛ל וּמִזֶּ֥רַע הַמְּלוּכָ֖ה וּמִן־ הַֽפַּרְתְּמִֽים׃",
+        english:
+          "Then the king ordered Ashpenaz the chief of his court officials to bring in some Israelites from the royal family and the nobility",
+      },
+      {
+        verse_number: 4,
+        original:
+          "יְלָדִ֣ים אֲשֶׁ֣ר אֵֽין־ בָּהֶ֣ם כָּל־ מְאוּם וְטוֹבֵ֨י מַרְאֶ֜ה וּמַשְׂכִּילִ֣ים בְּכָל־ חָכְמָ֗ה וְיֹ֤דְעֵי דַ֙עַת֙ וּמְבִינֵ֣י מַדָּ֔ע וַאֲשֶׁר֙ כֹּ֣חַ בָּהֶ֔ם לַעֲמֹ֖ד בְּהֵיכַ֣ל הַמֶּ֑לֶךְ וּֽלֲלַמְּדָ֥ם סֵ֖פֶר וּלְשׁ֥וֹן כַּשְׂדִּֽים׃",
+        english:
+          "young men without blemish handsome gifted in all wisdom knowledgeable quick to understand and qualified to serve in the king’s palace and to teach them the language and literature of the Chaldeans",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיְמַן֩ לָהֶ֨ם הַמֶּ֜לֶךְ דְּבַר־ י֣וֹם בְּיוֹמ֗וֹ מִפַּת־ בַּ֤ג הַמֶּ֙לֶךְ֙ וּמִיֵּ֣ין מִשְׁתָּ֔יו וּֽלְגַדְּלָ֖ם שָׁנִ֣ים שָׁל֑וֹשׁ וּמִ֨קְצָתָ֔ם יַֽעַמְד֖וּ לִפְנֵ֥י הַמֶּֽלֶךְ׃",
+        english:
+          "The king assigned them daily provisions of the royal food and wine They were to be trained for three years after which they were to enter the king’s service",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיְהִ֥י בָהֶ֖ם מִבְּנֵ֣י יְהוּדָ֑ה דָּנִיֵּ֣אל חֲנַנְיָ֔ה מִֽישָׁאֵ֖ל וַעֲזַרְיָֽה׃",
+        english:
+          "Among these young men were some from Judah Daniel Hananiah Mishael and Azariah",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיָּ֧שֶׂם לָהֶ֛ם שַׂ֥ר הַסָּרִיסִ֖ים שֵׁמ֑וֹת וַיָּ֨שֶׂם לְדָֽנִיֵּ֜אל בֵּ֣לְטְשַׁאצַּ֗ר וְלַֽחֲנַנְיָה֙ שַׁדְרַ֔ךְ וּלְמִֽישָׁאֵ֣ל מֵישַׁ֔ךְ וְלַעֲזַרְיָ֖ה עֲבֵ֥ד נְגֽוֹ׃",
+        english:
+          "The chief official gave them new names To Daniel he gave the name Belteshazzar to Hananiah Shadrach to Mishael Meshach and to Azariah Abednego",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיָּ֤שֶׂם דָּנִיֵּאל֙ עַל־ לִבּ֔וֹ אֲשֶׁ֧ר לֹֽא־ יִתְגָּאַ֛ל בְּפַתְבַּ֥ג הַמֶּ֖לֶךְ וּבְיֵ֣ין מִשְׁתָּ֑יו וַיְבַקֵּשׁ֙ מִשַּׂ֣ר הַסָּרִיסִ֔ים אֲשֶׁ֖ר לֹ֥א יִתְגָּאָֽל׃",
+        english:
+          "But Daniel made up his mind that he would not defile himself with the king’s food or wine So he asked the chief official for permission not to defile himself",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיִּתֵּ֤ן הָֽאֱלֹהִים֙ אֶת־ דָּ֣נִיֵּ֔אל לְחֶ֖סֶד וּֽלְרַחֲמִ֑ים לִפְנֵ֖י שַׂ֥ר הַסָּרִיסִֽים׃",
+        english:
+          "Now God had granted Daniel favor and compassion from the chief official",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֹּ֜אמֶר שַׂ֤ר הַסָּרִיסִים֙ לְדָ֣נִיֵּ֔אל יָרֵ֤א אֲנִי֙ אֶת־ אֲדֹנִ֣י הַמֶּ֔לֶךְ אֲשֶׁ֣ר מִנָּ֔ה אֶת־ מַאֲכַלְכֶ֖ם וְאֶת־ מִשְׁתֵּיכֶ֑ם אֲשֶׁ֡ר לָמָּה֩ יִרְאֶ֨ה אֶת־ פְּנֵיכֶ֜ם זֹֽעֲפִ֗ים מִן־ הַיְלָדִים֙ אֲשֶׁ֣ר כְּגִֽילְכֶ֔ם וְחִיַּבְתֶּ֥ם אֶת־ רֹאשִׁ֖י לַמֶּֽלֶךְ׃",
+        english:
+          "but he said to Daniel I fear my lord the king who has assigned your food and drink For why should he see your faces looking thinner than those of the other young men your age You would endanger my head before the king",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיֹּ֥אמֶר דָּנִיֵּ֖אל אֶל־ הַמֶּלְצַ֑ר אֲשֶׁ֤ר מִנָּה֙ שַׂ֣ר הַסָּֽרִיסִ֔ים עַל־ דָּנִיֵּ֣אל חֲנַנְיָ֔ה מִֽישָׁאֵ֖ל וַעֲזַרְיָֽה׃",
+        english:
+          "Then Daniel said to the steward whom the chief official had appointed over Daniel Hananiah Mishael and Azariah",
+      },
+      {
+        verse_number: 12,
+        original:
+          "נַס־ נָ֥א אֶת־ עֲבָדֶ֖יךָ יָמִ֣ים עֲשָׂרָ֑ה וְיִתְּנוּ־ לָ֜נוּ מִן־ הַזֵּרֹעִ֛ים וְנֹאכְלָ֖ה וּמַ֥יִם וְנִשְׁתֶּֽה׃",
+        english:
+          "Please test your servants for ten days Let us be given only vegetables to eat and water to drink",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְיֵרָא֤וּ לְפָנֶ֙יךָ֙ מַרְאֵ֔ינוּ וּמַרְאֵה֙ הַיְלָדִ֔ים הָאֹ֣כְלִ֔ים אֵ֖ת פַּתְבַּ֣ג הַמֶּ֑לֶךְ וְכַאֲשֶׁ֣ר תִּרְאֵ֔ה עֲשֵׂ֖ה עִם־ עֲבָדֶֽיךָ׃",
+        english:
+          "Then compare our appearances with those of the young men who are eating the royal food and deal with your servants according to what you see",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיִּשְׁמַ֥ע לָהֶ֖ם לַדָּבָ֣ר הַזֶּ֑ה וַיְנַסֵּ֖ם יָמִ֥ים עֲשָׂרָֽה׃",
+        english: "So he consented to this and tested them for ten days",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וּמִקְצָת֙ יָמִ֣ים עֲשָׂרָ֔ה נִרְאָ֤ה מַרְאֵיהֶם֙ ט֔וֹב וּבְרִיאֵ֖י בָּשָׂ֑ר מִן־ כָּל־ הַיְלָדִ֔ים הָאֹ֣כְלִ֔ים אֵ֖ת פַּתְבַּ֥ג הַמֶּֽלֶךְ׃",
+        english:
+          "And at the end of ten days they looked healthier and better nourished than all the young men who were eating the king’s food",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיְהִ֣י הַמֶּלְצַ֗ר נֹשֵׂא֙ אֶת־ פַּתְבָּגָ֔ם וְיֵ֖ין מִשְׁתֵּיהֶ֑ם וְנֹתֵ֥ן לָהֶ֖ם זֵרְעֹנִֽים׃",
+        english:
+          "So the steward continued to withhold their choice food and the wine they were to drink and he gave them vegetables instead",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהַיְלָדִ֤ים הָאֵ֙לֶּה֙ אַרְבַּעְתָּ֔ם נָתַ֨ן לָהֶ֧ם הָֽאֱלֹהִ֛ים מַדָּ֥ע וְהַשְׂכֵּ֖ל בְּכָל־ סֵ֣פֶר וְחָכְמָ֑ה וְדָנִיֵּ֣אל הֵבִ֔ין בְּכָל־ חָז֖וֹן וַחֲלֹמֽוֹת׃",
+        english:
+          "To these four young men God gave knowledge and understanding in every kind of literature and wisdom And Daniel had insight into all kinds of visions and dreams",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וּלְמִקְצָת֙ הַיָּמִ֔ים אֲשֶׁר־ אָמַ֥ר הַמֶּ֖לֶךְ לַהֲבִיאָ֑ם וַיְבִיאֵם֙ שַׂ֣ר הַסָּרִיסִ֔ים לִפְנֵ֖י נְבֻכַדְנֶצַּֽר׃",
+        english:
+          "Now at the end of the time specified by the king the chief official presented them to Nebuchadnezzar",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיְדַבֵּ֣ר אִתָּם֮ הַמֶּלֶךְ֒ וְלֹ֤א נִמְצָא֙ מִכֻּלָּ֔ם כְּדָנִיֵּ֣אל חֲנַנְיָ֔ה מִֽישָׁאֵ֖ל וַעֲזַרְיָ֑ה וַיַּֽעַמְד֖וּ לִפְנֵ֥י הַמֶּֽלֶךְ׃",
+        english:
+          "And the king spoke with them and among all the young men he found no one equal to Daniel Hananiah Mishael and Azariah So they entered the king’s service",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְכֹ֗ל דְּבַר֙ חָכְמַ֣ת בִּינָ֔ה אֲשֶׁר־ בִּקֵּ֥שׁ מֵהֶ֖ם הַמֶּ֑לֶךְ וַֽיִּמְצָאֵ֞ם עֶ֣שֶׂר יָד֗וֹת עַ֤ל כָּל־ הַֽחַרְטֻמִּים֙ הָֽאַשָּׁפִ֔ים אֲשֶׁ֖ר בְּכָל־ מַלְכוּתֽוֹ׃",
+        english:
+          "In every matter of wisdom and understanding about which the king consulted them he found them ten times better than all the magicians and enchanters in his entire kingdom",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַֽיְהִי֙ דָּֽנִיֵּ֔אל עַד־ שְׁנַ֥ת אַחַ֖ת לְכ֥וֹרֶשׁ הַמֶּֽלֶךְ׃פ",
+        english: "And Daniel remained there until the first year of King Cyrus",
+      },
+    ],
+  };
+  return chapter;
+}

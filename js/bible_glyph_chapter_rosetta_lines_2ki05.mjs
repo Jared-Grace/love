@@ -1,0 +1,201 @@
+export function bible_glyph_chapter_rosetta_lines_2ki05() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "2KI05",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וְ֠נַעֲמָן שַׂר־ צְבָ֨א מֶֽלֶךְ־ אֲרָ֜ם הָיָ֣ה אִישׁ֩ גָּד֨וֹל לִפְנֵ֤י אֲדֹנָיו֙ וּנְשֻׂ֣א פָנִ֔ים כִּֽי־ ב֛וֹ נָֽתַן־ יְהוָ֥ה תְּשׁוּעָ֖ה לַאֲרָ֑ם וְהָאִ֗ישׁ הָיָ֛ה גִּבּ֥וֹר חַ֖יִל מְצֹרָֽע׃",
+        english:
+          "Now Naaman the commander of the army of the king of Aram was a great man in his master’s sight and highly regarded for through him the LORD had given victory to Aram And he was a mighty man of valor but he was a leper",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַאֲרָם֙ יָצְא֣וּ גְדוּדִ֔ים וַיִּשְׁבּ֛וּ מֵאֶ֥רֶץ יִשְׂרָאֵ֖ל נַעֲרָ֣ה קְטַנָּ֑ה וַתְּהִ֕י לִפְנֵ֖י אֵ֥שֶׁת נַעֲמָֽן׃",
+        english:
+          "At this time the Arameans had gone out in bands and had taken a young girl from the land of Israel and she was serving Naaman’s wife",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַתֹּ֙אמֶר֙ אֶל־ גְּבִרְתָּ֔הּ אַחֲלֵ֣י אֲדֹנִ֔י לִפְנֵ֥י הַנָּבִ֖יא אֲשֶׁ֣ר בְּשֹׁמְר֑וֹן אָ֛ז יֶאֱסֹ֥ף אֹת֖וֹ מִצָּרַעְתּֽוֹ׃",
+        english:
+          "She said to her mistress If only my master would go to the prophet who is in Samaria he would cure him of his leprosy",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיָּבֹ֕א וַיַּגֵּ֥ד לַאדֹנָ֖יו לֵאמֹ֑ר כָּזֹ֤את וְכָזֹאת֙ דִּבְּרָ֣ה הַֽנַּעֲרָ֔ה אֲשֶׁ֖ר מֵאֶ֥רֶץ יִשְׂרָאֵֽל׃",
+        english:
+          "And Naaman went and told his master what the girl from the land of Israel had said",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיֹּ֤אמֶר מֶֽלֶךְ־ אֲרָם֙ לֶךְ־ בֹּ֔א וְאֶשְׁלְחָ֥ה סֵ֖פֶר אֶל־ מֶ֣לֶךְ יִשְׂרָאֵ֑ל וַיֵּלֶךְ֩ וַיִּקַּ֨ח בְּיָד֜וֹ עֶ֣שֶׂר כִּכְּרֵי־ כֶ֗סֶף וְשֵׁ֤שֶׁת אֲלָפִים֙ זָהָ֔ב וְעֶ֖שֶׂר חֲלִיפ֥וֹת בְּגָדִֽים׃",
+        english:
+          "Go now said the king of Aram and I will send you with a letter to the king of Israel So Naaman departed taking with him ten talents of silver six thousand shekels of gold and ten sets of clothing",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיָּבֵ֣א הַסֵּ֔פֶר אֶל־ מֶ֥לֶךְ יִשְׂרָאֵ֖ל לֵאמֹ֑ר וְעַתָּ֗ה כְּב֨וֹא הַסֵּ֤פֶר הַזֶּה֙ אֵלֶ֔יךָ הִנֵּ֨ה שָׁלַ֤חְתִּי אֵלֶ֙יךָ֙ אֶת־ נַעֲמָ֣ן עַבְדִּ֔י וַאֲסַפְתּ֖וֹ מִצָּרַעְתּֽוֹ׃",
+        english:
+          "And the letter that he took to the king of Israel stated With this letter I am sending my servant Naaman so that you may cure him of his leprosy",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיְהִ֡י כִּקְרֹא֩ מֶֽלֶךְ־ יִשְׂרָאֵ֨ל אֶת־ הַסֵּ֜פֶר וַיִּקְרַ֣ע בְּגָדָ֗יו וַיֹּ֙אמֶר֙ הַאֱלֹהִ֥ים אָ֙נִי֙ לְהָמִ֣ית וּֽלְהַחֲי֔וֹת כִּֽי־ זֶה֙ שֹׁלֵ֣חַ אֵלַ֔י לֶאֱסֹ֥ף אִ֖ישׁ מִצָּֽרַעְתּ֑וֹ כִּ֤י אַךְ־ דְּעֽוּ־ נָא֙ וּרְא֔וּ כִּֽי־ מִתְאַנֶּ֥ה ה֖וּא לִֽי׃",
+        english:
+          "When the king of Israel read the letter he tore his clothes and asked Am I God killing and giving life that this man expects me to cure a leper Surely you can see that he is seeking a quarrel with me",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיְהִ֞י כִּשְׁמֹ֣עַ׀ אֱלִישָׁ֣ע אִישׁ־ הָאֱלֹהִ֗ים כִּֽי־ קָרַ֤ע מֶֽלֶךְ־ יִשְׂרָאֵל֙ אֶת־ בְּגָדָ֔יו וַיִּשְׁלַח֙ אֶל־ הַמֶּ֣לֶךְ לֵאמֹ֔ר לָ֥מָּה קָרַ֖עְתָּ בְּגָדֶ֑יךָ יָבֹֽא־ נָ֣א אֵלַ֔י וְיֵדַ֕ע כִּ֛י יֵ֥שׁ נָבִ֖יא בְּיִשְׂרָאֵֽל׃",
+        english:
+          "Now when Elisha the man of God heard that the king of Israel had torn his clothes he sent a message to the king Why have you torn your clothes Please let the man come to me and he will know that there is a prophet in Israel",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיָּבֹ֥א נַעֲמָ֖ן בְּסוּסוֹ וּבְרִכְבּ֑וֹ וַיַּעֲמֹ֥ד פֶּֽתַח־ הַבַּ֖יִת לֶאֱלִישָֽׁע׃",
+        english:
+          "So Naaman came with his horses and chariots and stood at the door of Elisha’s house",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיִּשְׁלַ֥ח אֵלָ֛יו אֱלִישָׁ֖ע מַלְאָ֣ךְ לֵאמֹ֑ר הָל֗וֹךְ וְרָחַצְתָּ֤ שֶֽׁבַע־ פְּעָמִים֙ בַּיַּרְדֵּ֔ן וְיָשֹׁ֧ב בְּשָׂרְךָ֛ לְךָ֖ וּטְהָֽר׃",
+        english:
+          "Then Elisha sent him a messenger who said Go and wash yourself seven times in the Jordan and your flesh will be restored and you will be clean",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַיִּקְצֹ֥ף נַעֲמָ֖ן וַיֵּלַ֑ךְ וַיֹּאמֶר֩ הִנֵּ֨ה אָמַ֜רְתִּי אֵלַ֣י׀ יֵצֵ֣א יָצ֗וֹא וְעָמַד֙ וְקָרָא֙ בְּשֵׁם־ יְהוָ֣ה אֱלֹהָ֔יו וְהֵנִ֥יף יָד֛וֹ אֶל־ הַמָּק֖וֹם וְאָסַ֥ף הַמְּצֹרָֽע׃",
+        english:
+          "But Naaman went away angry saying I thought that he would surely come out stand and call on the name of the LORD his God and wave his hand over the spot to cure my leprosy",
+      },
+      {
+        verse_number: 12,
+        original:
+          "הֲלֹ֡א טוֹב֩ אֲבָנָה וּפַרְפַּ֜ר נַהֲר֣וֹת דַּמֶּ֗שֶׂק מִכֹּל֙ מֵימֵ֣י יִשְׂרָאֵ֔ל הֲלֹֽא־ אֶרְחַ֥ץ בָּהֶ֖ם וְטָהָ֑רְתִּי וַיִּ֖פֶן וַיֵּ֥לֶךְ בְּחֵמָֽה׃",
+        english:
+          "Are not the Abanah and Pharpar the rivers of Damascus better than all the waters of Israel Could I not have washed in them and been cleansed So he turned and went away in a rage",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיִּגְּשׁ֣וּ עֲבָדָיו֮ וַיְדַבְּר֣וּ אֵלָיו֒ וַיֹּאמְר֗וּ אָבִי֙ דָּבָ֣ר גָּד֗וֹל הַנָּבִ֛יא דִּבֶּ֥ר אֵלֶ֖יךָ הֲל֣וֹא תַעֲשֶׂ֑ה וְאַ֛ף כִּֽי־ אָמַ֥ר אֵלֶ֖יךָ רְחַ֥ץ וּטְהָֽר׃",
+        english:
+          "Naaman’s servants, however approached him and said My father if the prophet had told you to do some great thing would you not have done it How much more, then when he tells you Wash and be cleansed",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיֵּ֗רֶד וַיִּטְבֹּ֤ל בַּיַּרְדֵּן֙ שֶׁ֣בַע פְּעָמִ֔ים כִּדְבַ֖ר אִ֣ישׁ הָאֱלֹהִ֑ים וַיָּ֣שָׁב בְּשָׂר֗וֹ כִּבְשַׂ֛ר נַ֥עַר קָטֹ֖ן וַיִּטְהָֽר׃",
+        english:
+          "So Naaman went down and dipped himself in the Jordan seven times according to the word of the man of God and his flesh was restored and became like that of a little child and he was clean",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיָּשָׁב֩ אֶל־ אִ֨ישׁ הָאֱלֹהִ֜ים ה֣וּא וְכָֽל־ מַחֲנֵ֗הוּ וַיָּבֹא֮ וַיַּעֲמֹ֣ד לְפָנָיו֒ וַיֹּ֗אמֶר הִנֵּה־ נָ֤א יָדַ֙עְתִּי֙ כִּ֣י אֵ֤ין אֱלֹהִים֙ בְּכָל־ הָאָ֔רֶץ כִּ֖י אִם־ בְּיִשְׂרָאֵ֑ל וְעַתָּ֛ה קַח־ נָ֥א בְרָכָ֖ה מֵאֵ֥ת עַבְדֶּֽךָ׃",
+        english:
+          "Then Naaman and all his attendants went back to the man of God stood before him and declared Now I know for sure that there is no God in all the earth except in Israel So please accept a gift from your servant",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיֹּ֕אמֶר חַי־ יְהוָ֛ה אֲשֶׁר־ עָמַ֥דְתִּי לְפָנָ֖יו אִם־ אֶקָּ֑ח וַיִּפְצַר־ בּ֥וֹ לָקַ֖חַת וַיְמָאֵֽן׃",
+        english:
+          "But Elisha replied As surely as the LORD lives before whom I stand I will not accept it And although Naaman urged him to accept it he refused",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיֹּאמֶר֮ נַעֲמָן֒ וָלֹ֕א יֻתַּן־ נָ֣א לְעַבְדְּךָ֔ מַשָּׂ֥א צֶֽמֶד־ פְּרָדִ֖ים אֲדָמָ֑ה כִּ֡י לֽוֹא־ יַעֲשֶׂה֩ ע֨וֹד עַבְדְּךָ֜ עֹלָ֤ה וָזֶ֙בַח֙ לֵאלֹהִ֣ים אֲחֵרִ֔ים כִּ֖י אִם־ לַיהוָֽה׃",
+        english:
+          "If you will not said Naaman please let me, your servant, be given as much soil as a pair of mules can carry For your servant will never again make a burnt offering or a sacrifice to any other god but the LORD",
+      },
+      {
+        verse_number: 18,
+        original:
+          "לַדָּבָ֣ר הַזֶּ֔ה יִסְלַ֥ח יְהוָ֖ה לְעַבְדֶּ֑ךָ בְּב֣וֹא אֲדֹנִ֣י בֵית־ רִמּוֹן֩ לְהִשְׁתַּחֲוֺ֨ת שָׁ֜מָּה וְה֣וּא׀ נִשְׁעָ֣ן עַל־ יָדִ֗י וְהִֽשְׁתַּחֲוֵ֙יתִי֙ בֵּ֣ית רִמֹּ֔ן בְּהִשְׁתַּחֲוָיָ֙תִי֙ בֵּ֣ית רִמֹּ֔ן יִסְלַח־ נא יְהוָ֥ה לְעַבְדְּךָ֖ בַּדָּבָ֥ר הַזֶּֽה׃",
+        english:
+          "Yet may the LORD forgive your servant this one thing When my master goes into the temple of Rimmon to worship there and he leans on my arm and I bow down in the temple of Rimmon may the LORD forgive your servant in this matter",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיֹּ֥אמֶר ל֖וֹ לֵ֣ךְ לְשָׁל֑וֹם וַיֵּ֥לֶךְ מֵאִתּ֖וֹ כִּבְרַת־ אָֽרֶץ׃ס",
+        english:
+          "Go in peace said Elisha But after Naaman had traveled a short distance",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיֹּ֣אמֶר גֵּיחֲזִ֗י נַעַר֮ אֱלִישָׁ֣ע אִישׁ־ הָאֱלֹהִים֒ הִנֵּ֣ה׀ חָשַׂ֣ךְ אֲדֹנִ֗י אֶֽת־ נַעֲמָ֤ן הָֽאֲרַמִּי֙ הַזֶּ֔ה מִקַּ֥חַת מִיָּד֖וֹ אֵ֣ת אֲשֶׁר־ הֵבִ֑יא חַי־ יְהוָה֙ כִּֽי־ אִם־ רַ֣צְתִּי אַחֲרָ֔יו וְלָקַחְתִּ֥י מֵאִתּ֖וֹ מְאֽוּמָה׃",
+        english:
+          "Gehazi the servant of Elisha the man of God said Look my master has spared this Aramean Naaman by not accepting what he brought As surely as the LORD lives I will run after him and get something from him",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּרְדֹּ֥ף גֵּיחֲזִ֖י אַחֲרֵ֣י נַֽעֲמָ֑ן וַיִּרְאֶ֤ה נַֽעֲמָן֙ רָ֣ץ אַחֲרָ֔יו וַיִּפֹּ֞ל מֵעַ֧ל הַמֶּרְכָּבָ֛ה לִקְרָאת֖וֹ וַיֹּ֥אמֶר הֲשָׁלֽוֹם׃",
+        english:
+          "So Gehazi pursued Naaman And when Naaman saw him running toward him he got down from the chariot to meet him and asked Is everything all right",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֹּ֣אמֶר׀ שָׁל֗וֹם אֲדֹנִי֮ שְׁלָחַ֣נִי לֵאמֹר֒ הִנֵּ֣ה עַתָּ֡ה זֶ֠ה בָּ֣אוּ אֵלַ֧י שְׁנֵֽי־ נְעָרִ֛ים מֵהַ֥ר אֶפְרַ֖יִם מִבְּנֵ֣י הַנְּבִיאִ֑ים תְּנָה־ נָּ֤א לָהֶם֙ כִּכַּר־ כֶּ֔סֶף וּשְׁתֵּ֖י חֲלִפ֥וֹת בְּגָדִֽים׃",
+        english:
+          "Everything is all right Gehazi replied My master has sent me to say Look two young men from the sons of the prophets have just now come to me from the hill country of Ephraim Please give them a talent of silver and two sets of clothing",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיֹּ֣אמֶר נַעֲמָ֔ן הוֹאֵ֖ל קַ֣ח כִּכָּרָ֑יִם וַיִּפְרָץ־ בּ֗וֹ וַיָּצַר֩ כִּכְּרַ֨יִם כֶּ֜סֶף בִּשְׁנֵ֣י חֲרִטִ֗ים וּשְׁתֵּי֙ חֲלִפ֣וֹת בְּגָדִ֔ים וַיִּתֵּן֙ אֶל־ שְׁנֵ֣י נְעָרָ֔יו וַיִּשְׂא֖וּ לְפָנָֽיו׃",
+        english:
+          "But Naaman insisted Please take two talents And he urged Gehazi to accept them Then he tied up two talents of silver in two bags along with two sets of clothing and gave them to two of his servants who carried them ahead of Gehazi",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וַיָּבֹא֙ אֶל־ הָעֹ֔פֶל וַיִּקַּ֥ח מִיָּדָ֖ם וַיִּפְקֹ֣ד בַּבָּ֑יִת וַיְשַׁלַּ֥ח אֶת־ הָאֲנָשִׁ֖ים וַיֵּלֵֽכוּ׃",
+        english:
+          "When Gehazi came to the hill he took the gifts from the servants and stored them in the house Then he dismissed the men and they departed",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְהוּא־ בָא֙ וַיַּעֲמֹ֣ד אֶל־ אֲדֹנָ֔יו וַיֹּ֤אמֶר אֵלָיו֙ אֱלִישָׁ֔ע מֵאָן גֵּחֲזִ֑י וַיֹּ֕אמֶר לֹֽא־ הָלַ֥ךְ עַבְדְּךָ֖ אָ֥נֶה וָאָֽנָה׃",
+        english:
+          "When Gehazi went in and stood before his master Elisha asked him Gehazi where have you been Your servant did not go anywhere he replied",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַיֹּ֤אמֶר אֵלָיו֙ לֹא־ לִבִּ֣י הָלַ֔ךְ כַּאֲשֶׁ֧ר הָֽפַךְ־ אִ֛ישׁ מֵעַ֥ל מֶרְכַּבְתּ֖וֹ לִקְרָאתֶ֑ךָ הַעֵ֞ת לָקַ֤חַת אֶת־ הַכֶּ֙סֶף֙ וְלָקַ֣חַת בְּגָדִ֔ים וְזֵיתִ֤ים וּכְרָמִים֙ וְצֹ֣אן וּבָקָ֔ר וַעֲבָדִ֖ים וּשְׁפָחֽוֹת׃",
+        english:
+          "But Elisha questioned him Did not my spirit go with you when the man got down from his chariot to meet you Is this the time to accept money and clothing olive groves and vineyards sheep and oxen menservants and maidservants",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְצָרַ֤עַת נַֽעֲמָן֙ תִּֽדְבַּק־ בְּךָ֔ וּֽבְזַרְעֲךָ לְעוֹלָ֑ם וַיֵּצֵ֥א מִלְּפָנָ֖יו מְצֹרָ֥ע כַּשָּֽׁלֶג׃ס",
+        english:
+          "Therefore, the leprosy of Naaman will cling to you and your descendants forever And as Gehazi left his presence he was leprous as white as snow",
+      },
+    ],
+  };
+  return chapter;
+}
