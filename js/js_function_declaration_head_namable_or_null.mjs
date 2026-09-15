@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_function_declaration_statements_working_without_arguments_assert } from "./js_function_declaration_statements_working_without_arguments_assert.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
@@ -6,8 +7,6 @@ import { js_function_declaration_head_unbroken_is } from "./js_function_declarat
 import { list_take } from "./list_take.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { js_statements_span_outputs } from "./js_statements_span_outputs.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_last } from "./list_last.mjs";
 import { js_statements_declared_names_direct } from "./js_statements_declared_names_direct.mjs";
@@ -44,8 +43,7 @@ export function js_function_declaration_head_namable_or_null(
   let head = list_take(working, size);
   let tail = list_skip(working, size);
   let outputs = js_statements_span_outputs(head, tail);
-  let left = list_size(outputs);
-  let single_is = equal(left, 1);
+  let single_is = list_size_equal(outputs, 1);
   if (not(single_is)) {
     let many = null;
     return many;
