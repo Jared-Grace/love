@@ -1,3 +1,4 @@
+import { html_align_items_center } from "./html_align_items_center.mjs";
 import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { html_clear } from "./html_clear.mjs";
@@ -7,7 +8,6 @@ import { not } from "./not.mjs";
 import { html_div_text } from "./html_div_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_flex_row_gap } from "./html_flex_row_gap.mjs";
-import { html_style_set } from "./html_style_set.mjs";
 import { number_is } from "./number_is.mjs";
 import { html_button } from "./html_button.mjs";
 import { html_disabled_set } from "./html_disabled_set.mjs";
@@ -45,7 +45,7 @@ export function lyric_timing_times_show(cards, held) {
   function row_add(text, index) {
     let row = html_div(times);
     html_flex_row_gap(row, "0.4em");
-    html_style_set(row, "align-items", "center");
+    html_align_items_center(row);
     let start = held.starts[index];
     let timed = number_is(start);
     function on_earlier() {
