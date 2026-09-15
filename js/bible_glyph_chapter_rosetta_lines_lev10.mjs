@@ -1,0 +1,148 @@
+export function bible_glyph_chapter_rosetta_lines_lev10() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV10",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיִּקְח֣וּ בְנֵֽי־ אַ֠הֲרֹן נָדָ֨ב וַאֲבִיה֜וּא אִ֣ישׁ מַחְתָּת֗וֹ וַיִּתְּנ֤וּ בָהֵן֙ אֵ֔שׁ וַיָּשִׂ֥ימוּ עָלֶ֖יהָ קְטֹ֑רֶת וַיַּקְרִ֜בוּ לִפְנֵ֤י יְהוָה֙ אֵ֣שׁ זָרָ֔ה אֲשֶׁ֧ר לֹ֦א צִוָּ֖ה אֹתָֽם׃",
+        english:
+          "Now Aaron’s sons Nadab and Abihu took their censers put fire in them and added incense and offered unauthorized fire before the LORD contrary to His command",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וַתֵּ֥צֵא אֵ֛שׁ מִלִּפְנֵ֥י יְהוָ֖ה וַתֹּ֣אכַל אוֹתָ֑ם וַיָּמֻ֖תוּ לִפְנֵ֥י יְהוָֽה׃",
+        english:
+          "So fire came out from the presence of the LORD and consumed them and they died in the presence of the LORD",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶֽל־ אַהֲרֹ֗ן הוּא֩ אֲשֶׁר־ דִּבֶּ֨ר יְהוָ֤ה׀ לֵאמֹר֙ בִּקְרֹבַ֣י אֶקָּדֵ֔שׁ וְעַל־ פְּנֵ֥י כָל־ הָעָ֖ם אֶכָּבֵ֑ד וַיִּדֹּ֖ם אַהֲרֹֽן׃",
+        english:
+          "Then Moses said to Aaron This is what the LORD meant when He said To those who come near Me I will show My holiness and in the sight of all the people I will reveal My glory But Aaron remained silent",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וַיִּקְרָ֣א מֹשֶׁ֗ה אֶל־ מִֽישָׁאֵל֙ וְאֶ֣ל אֶלְצָפָ֔ן בְּנֵ֥י עֻזִּיאֵ֖ל דֹּ֣ד אַהֲרֹ֑ן וַיֹּ֣אמֶר אֲלֵהֶ֗ם קִ֠רְב֞וּ שְׂא֤וּ אֶת־ אֲחֵיכֶם֙ מֵאֵ֣ת פְּנֵי־ הַקֹּ֔דֶשׁ אֶל־ מִח֖וּץ לַֽמַּחֲנֶֽה׃",
+        english:
+          "Moses summoned Mishael and Elzaphan sons of Aaron’s uncle Uzziel and said to them Come here carry the bodies of your cousins outside the camp away from the front of the sanctuary",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַֽיִּקְרְב֗וּ וַיִּשָּׂאֻם֙ בְּכֻתֳּנֹתָ֔ם אֶל־ מִח֖וּץ לַֽמַּחֲנֶ֑ה כַּאֲשֶׁ֖ר דִּבֶּ֥ר מֹשֶֽׁה׃",
+        english:
+          "So they came forward and carried them still in their tunics outside the camp as Moses had directed",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֹּ֣אמֶר מֹשֶׁ֣ה אֶֽל־ אַהֲרֹ֡ן וּלְאֶלְעָזָר֩ וּלְאִֽיתָמָ֨ר׀ בָּנָ֜יו רָֽאשֵׁיכֶ֥ם אַל־ תִּפְרָ֣עוּ׀ וּבִגְדֵיכֶ֤ם לֹֽא־ תִפְרֹ֙מוּ֙ וְלֹ֣א תָמֻ֔תוּ וְעַ֥ל כָּל־ הָעֵדָ֖ה יִקְצֹ֑ף וַאֲחֵיכֶם֙ כָּל־ בֵּ֣ית יִשְׂרָאֵ֔ל יִבְכּוּ֙ אֶת־ הַשְּׂרֵפָ֔ה אֲשֶׁ֖ר שָׂרַ֥ף יְהוָֽה׃",
+        english:
+          "Then Moses said to Aaron and his sons Eleazar and Ithamar Do not let your hair become disheveled and do not tear your garments or else you will die and the LORD will be angry with the whole congregation But your brothers the whole house of Israel may mourn on account of the fire that the LORD has ignited",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וּמִפֶּתַח֩ אֹ֨הֶל מוֹעֵ֜ד לֹ֤א תֵֽצְאוּ֙ פֶּן־ תָּמֻ֔תוּ כִּי־ שֶׁ֛מֶן מִשְׁחַ֥ת יְהוָ֖ה עֲלֵיכֶ֑ם וַֽיַּעֲשׂ֖וּ כִּדְבַ֥ר מֹשֶֽׁה׃פ",
+        english:
+          "You shall not go outside the entrance to the Tent of Meeting or you will die for the LORD’s anointing oil is on you So they did as Moses instructed",
+      },
+      {
+        verse_number: 8,
+        original: "וַיְדַבֵּ֣ר יְהוָ֔ה אֶֽל־ אַהֲרֹ֖ן לֵאמֹֽר׃",
+        english: "Then the LORD said to Aaron",
+      },
+      {
+        verse_number: 9,
+        original:
+          "יַ֣יִן וְשֵׁכָ֞ר אַל־ תֵּ֣שְׁתְּ׀ אַתָּ֣ה׀ וּבָנֶ֣יךָ אִתָּ֗ךְ בְּבֹאֲכֶ֛ם אֶל־ אֹ֥הֶל מוֹעֵ֖ד וְלֹ֣א תָמֻ֑תוּ חֻקַּ֥ת עוֹלָ֖ם לְדֹרֹתֵיכֶֽם׃",
+        english:
+          "You and your sons are not to drink wine or strong drink when you enter the Tent of Meeting or else you will die this is a permanent statute for the generations to come",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וּֽלֲהַבְדִּ֔יל בֵּ֥ין הַקֹּ֖דֶשׁ וּבֵ֣ין הַחֹ֑ל וּבֵ֥ין הַטָּמֵ֖א וּבֵ֥ין הַטָּהֽוֹר׃",
+        english:
+          "You must distinguish between the holy and the common between the clean and the unclean",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וּלְהוֹרֹ֖ת אֶת־ בְּנֵ֣י יִשְׂרָאֵ֑ל אֵ֚ת כָּל־ הַ֣חֻקִּ֔ים אֲשֶׁ֨ר דִּבֶּ֧ר יְהוָ֛ה אֲלֵיהֶ֖ם בְּיַד־ מֹשֶֽׁה׃פ",
+        english:
+          "so that you may teach the Israelites all the statutes that the LORD has given them through Moses",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיְדַבֵּ֨ר מֹשֶׁ֜ה אֶֽל־ אַהֲרֹ֗ן וְאֶ֣ל אֶ֠לְעָזָר וְאֶל־ אִ֨יתָמָ֥ר׀ בָּנָיו֮ הַנּֽוֹתָרִים֒ קְח֣וּ אֶת־ הַמִּנְחָ֗ה הַנּוֹתֶ֙רֶת֙ מֵאִשֵּׁ֣י יְהוָ֔ה וְאִכְל֥וּהָ מַצּ֖וֹת אֵ֣צֶל הַמִּזְבֵּ֑חַ כִּ֛י קֹ֥דֶשׁ קָֽדָשִׁ֖ים הִֽוא׃",
+        english:
+          "And Moses said to Aaron and his remaining sons Eleazar and Ithamar Take the grain offering that remains from the food offerings to the LORD and eat it without leaven beside the altar because it is most holy",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַאֲכַלְתֶּ֤ם אֹתָהּ֙ בְּמָק֣וֹם קָדֹ֔שׁ כִּ֣י חָקְךָ֤ וְחָק־ בָּנֶ֙יךָ֙ הִ֔וא מֵאִשֵּׁ֖י יְהוָ֑ה כִּי־ כֵ֖ן צֻוֵּֽיתִי׃",
+        english:
+          "You shall eat it in a holy place because it is your share and your sons’ share of the food offerings to the LORD for this is what I have been commanded",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאֵת֩ חֲזֵ֨ה הַתְּנוּפָ֜ה וְאֵ֣ת׀ שׁ֣וֹק הַתְּרוּמָ֗ה תֹּֽאכְלוּ֙ בְּמָק֣וֹם טָה֔וֹר אַתָּ֕ה וּבָנֶ֥יךָ וּבְנֹתֶ֖יךָ אִתָּ֑ךְ כִּֽי־ חָקְךָ֤ וְחָק־ בָּנֶ֙יךָ֙ נִתְּנ֔וּ מִזִּבְחֵ֥י שַׁלְמֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "And you and your sons and daughters may eat the breast of the wave offering and the thigh of the contribution in a ceremonially clean place because these portions have been assigned to you and your children from the peace offerings of the sons of Israel",
+      },
+      {
+        verse_number: 15,
+        original:
+          "שׁ֣וֹק הַתְּרוּמָ֞ה וַחֲזֵ֣ה הַתְּנוּפָ֗ה עַ֣ל אִשֵּׁ֤י הַחֲלָבִים֙ יָבִ֔יאוּ לְהָנִ֥יף תְּנוּפָ֖ה לִפְנֵ֣י יְהוָ֑ה וְהָיָ֨ה לְךָ֜ וּלְבָנֶ֤יךָ אִתְּךָ֙ לְחָק־ עוֹלָ֔ם כַּאֲשֶׁ֖ר צִוָּ֥ה יְהוָֽה׃",
+        english:
+          "They are to bring the thigh of the contribution and the breast of the wave offering together with the fat portions of the food offerings to wave as a wave offering before the LORD It will belong permanently to you and your children as the LORD has commanded",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְאֵ֣ת׀ שְׂעִ֣יר הַֽחַטָּ֗את דָּרֹ֥שׁ דָּרַ֛שׁ מֹשֶׁ֖ה וְהִנֵּ֣ה שֹׂרָ֑ף וַ֠יִּקְצֹף עַל־ אֶלְעָזָ֤ר וְעַל־ אִֽיתָמָר֙ בְּנֵ֣י אַהֲרֹ֔ן הַנּוֹתָרִ֖ם לֵאמֹֽר׃",
+        english:
+          "Later Moses searched carefully for the goat of the sin offering and behold it had been burned up He was angry with Eleazar and Ithamar Aaron’s remaining sons and asked",
+      },
+      {
+        verse_number: 17,
+        original:
+          "מַדּ֗וּעַ לֹֽא־ אֲכַלְתֶּ֤ם אֶת־ הַֽחַטָּאת֙ בִּמְק֣וֹם הַקֹּ֔דֶשׁ כִּ֛י קֹ֥דֶשׁ קָֽדָשִׁ֖ים הִ֑וא וְאֹתָ֣הּ׀ נָתַ֣ן לָכֶ֗ם לָשֵׂאת֙ אֶת־ עֲוֺ֣ן הָעֵדָ֔ה לְכַפֵּ֥ר עֲלֵיהֶ֖ם לִפְנֵ֥י יְהוָֽה׃",
+        english:
+          "Why didn’t you eat the sin offering in the holy place For it is most holy it was given to you to take away the guilt of the congregation by making atonement for them before the LORD",
+      },
+      {
+        verse_number: 18,
+        original:
+          "הֵ֚ן לֹא־ הוּבָ֣א אֶת־ דָּמָ֔הּ אֶל־ הַקֹּ֖דֶשׁ פְּנִ֑ימָה אָכ֨וֹל תֹּאכְל֥וּ אֹתָ֛הּ בַּקֹּ֖דֶשׁ כַּאֲשֶׁ֥ר צִוֵּֽיתִי׃",
+        english:
+          "Since its blood was not brought inside the holy place you should have eaten it in the sanctuary area as I commanded",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיְדַבֵּ֨ר אַהֲרֹ֜ן אֶל־ מֹשֶׁ֗ה הֵ֣ן הַ֠יּוֹם הִקְרִ֨יבוּ אֶת־ חַטָּאתָ֤ם וְאֶת־ עֹֽלָתָם֙ לִפְנֵ֣י יְהוָ֔ה וַתִּקְרֶ֥אנָה אֹתִ֖י כָּאֵ֑לֶּה וְאָכַ֤לְתִּי חַטָּאת֙ הַיּ֔וֹם הַיִּיטַ֖ב בְּעֵינֵ֥י יְהוָֽה׃",
+        english:
+          "But Aaron replied to Moses Behold this very day they presented their sin offering and their burnt offering before the LORD Since these things have happened to me if I had eaten the sin offering today would it have been acceptable in the sight of the LORD",
+      },
+      {
+        verse_number: 20,
+        original: "וַיִּשְׁמַ֣ע מֹשֶׁ֔ה וַיִּיטַ֖ב בְּעֵינָֽיו׃פ",
+        english: "And when Moses heard this explanation he was satisfied",
+      },
+    ],
+  };
+  return chapter;
+}
