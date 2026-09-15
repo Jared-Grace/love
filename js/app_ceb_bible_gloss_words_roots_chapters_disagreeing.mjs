@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_relation_apart_is } from "./gloss_relation_apart_is.mjs";
 import { app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is } from "./app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_only_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -8,7 +9,6 @@ import { gloss_entries_words_named } from "./gloss_entries_words_named.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { add } from "./add.mjs";
@@ -39,8 +39,7 @@ export async function app_ceb_bible_gloss_words_roots_chapters_disagreeing() {
       let explain = property_get(entry, "explain");
       let bare = property_get(entry, "bare");
       let claimed = gloss_explain_roots_claimed(explain);
-      let count = list_size(claimed);
-      let silent = equal(count, 0);
+      let silent = list_size_equal(claimed, 0);
       if (silent) {
         return;
       }
