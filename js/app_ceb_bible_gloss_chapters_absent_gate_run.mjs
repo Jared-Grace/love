@@ -20,6 +20,8 @@ export async function app_ceb_bible_gloss_chapters_absent_gate_run() {
   if (unread) {
     let skipped = {
       skipped: 1,
+      absent: null,
+      chapters: null,
     };
     return skipped;
   }
@@ -45,6 +47,7 @@ export async function app_ceb_bible_gloss_chapters_absent_gate_run() {
   let r = {
     chapters,
     absent,
+    skipped: null,
   };
   return r;
 }
