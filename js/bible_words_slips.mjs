@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_sightings_lowered } from "./bible_words_sightings_lowered.mjs";
 import { property_get } from "./property_get.mjs";
@@ -65,8 +66,7 @@ export function bible_words_slips(sightings, words, times) {
         return;
       }
       let steps = text_edit_distance(lower, other);
-      let b = equal(steps, 1);
-      let apart = not(b);
+      let apart = equal_not(steps, 1);
       if (apart) {
         return;
       }
