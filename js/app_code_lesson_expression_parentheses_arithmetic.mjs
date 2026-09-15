@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_choose_order } from "./app_code_lesson_expression_choose_order.mjs";
 import { app_code_lesson_expression_parentheses_arithmetic_title_name_id } from "./app_code_lesson_expression_parentheses_arithmetic_title_name_id.mjs";
 import { list_iterator_refillable } from "./list_iterator_refillable.mjs";
 import { app_code_lesson_expression_generic } from "./app_code_lesson_expression_generic.mjs";
@@ -45,13 +47,12 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_choose_order, [
-      "",
-      "1 + 2 * 3",
-      " does the ",
-      times,
-      " first",
-    ]);
+    app_code_remember_from_lesson(
+      recall,
+      context,
+      app_code_lesson_expression_choose_order,
+      ["", "1 + 2 * 3", " does the ", times, " first"],
+    );
     html_div_cycle_code(recall, ["So ", "1 + 2 * 3", " is ", "7"]);
     html_div_cycle_code(recall, [
       "But what if we want to do the ",
