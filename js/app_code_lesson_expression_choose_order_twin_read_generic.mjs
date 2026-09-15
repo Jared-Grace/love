@@ -1,6 +1,6 @@
+import { list_first_property } from "./list_first_property.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { app_code_lesson_expression_choose_order_questions_generic } from "./app_code_lesson_expression_choose_order_questions_generic.mjs";
 import { app_code_lesson_expression_choose_order_reason_run } from "./app_code_lesson_expression_choose_order_reason_run.mjs";
 import { html_cycle_code } from "./html_cycle_code.mjs";
@@ -25,8 +25,7 @@ export function app_code_lesson_expression_choose_order_twin_read_generic(
   function tree_new() {
     "one line out of the twin, read back into the shape it was printed from";
     let items = twin_batch();
-    let item = list_first(items);
-    let code = property_get(item, "question");
+    let code = list_first_property(items, "question");
     let tree = tree_of_code(code);
     return tree;
   }
