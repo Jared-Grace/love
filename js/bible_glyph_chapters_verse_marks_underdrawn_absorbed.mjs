@@ -1,3 +1,4 @@
+import { text_word_plain } from "./text_word_plain.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters_verse_marks_underdrawn_roots } from "./bible_glyph_chapters_verse_marks_underdrawn_roots.mjs";
@@ -8,8 +9,6 @@ import { list_add } from "./list_add.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { text_is } from "./text_is.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
 import { bible_glyph_gloss_plain_word_hit_or_null } from "./bible_glyph_gloss_plain_word_hit_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
@@ -70,8 +69,7 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_absorbed() {
         if (drawn) {
           continue;
         }
-        let letters = text_letters_only(word);
-        let item = text_lower_to(letters);
+        let item = text_word_plain(word);
         list_add(plain, item);
       }
     }
