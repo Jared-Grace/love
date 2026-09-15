@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_and } from "./app_code_lesson_expression_and.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_and_symbol } from "./js_operator_and_symbol.mjs";
 import { js_operator_or_symbol } from "./js_operator_or_symbol.mjs";
@@ -16,14 +18,19 @@ export function app_code_lesson_expression_choose_order_and_before_or_recall(
   let or_symbol = js_operator_or_symbol();
   let true_word = js_keyword_true();
   let recall_card = app_code_container_light_blue(root);
-  app_code_remember_from_lesson(recall_card, context, app_code_lesson_expression_and, [
-    "",
-    and_symbol,
-    " is ",
-    true_word,
-    " only when both sides are ",
-    true_word,
-  ]);
+  app_code_remember_from_lesson(
+    recall_card,
+    context,
+    app_code_lesson_expression_and,
+    [
+      "",
+      and_symbol,
+      " is ",
+      true_word,
+      " only when both sides are ",
+      true_word,
+    ],
+  );
   html_div_cycle_code(recall_card, [
     "And ",
     or_symbol,
