@@ -1,3 +1,4 @@
+import { catch_null_async } from "./catch_null_async.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { ai_git_noted } from "./ai_git_noted.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
@@ -21,7 +22,7 @@ export async function functions_fold_repair() {
       let x = property_get(site, "x");
       let f = property_get(site, "f");
       let args = [x, f];
-      "A fold whose own check refuses throws rather than answering nothing, and one refusal must not end the run for every site after it. What refused is still in what the last pass found, so it is reported as remaining rather than lost.";
+      ("A fold whose own check refuses throws rather than answering nothing, and one refusal must not end the run for every site after it. What refused is still in what the last pass found, so it is reported as remaining rather than lost.");
       async function fold_commit() {
         let folded_one = await function_call_commit(function_fold, args);
         return folded_one;
