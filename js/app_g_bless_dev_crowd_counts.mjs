@@ -7,7 +7,7 @@ import { list_map } from "./list_map.mjs";
 import { list_flat } from "./list_flat.mjs";
 import { divide_round } from "./divide_round.mjs";
 import { multiply } from "./multiply.mjs";
-import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
+import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
 export function app_g_bless_dev_crowd_counts(world) {
   arguments_assert(arguments, 1);
   ("How crowded the street actually is right now: how many people are out, how many tiles");
@@ -45,7 +45,7 @@ export function app_g_bless_dev_crowd_counts(world) {
   let tiles_each = list_map(blocks, block_tiles);
   let tiles = list_flat(tiles_each);
   function stuck_is(person) {
-    let r = app_g_bless_person_step_boxed(world, person);
+    let r = bless_person_step_boxed(world, person);
     let boxed = property_get(r, "boxed");
     return boxed;
   }
