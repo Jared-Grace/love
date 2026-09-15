@@ -1,0 +1,117 @@
+export function bible_glyph_chapter_rosetta_lines_mic05() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "MIC05",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "עַתָּה֙ תִּתְגֹּדְדִ֣י בַת־ גְּד֔וּד מָצ֖וֹר שָׂ֣ם עָלֵ֑ינוּ בַּשֵּׁ֙בֶט֙ יַכּ֣וּ עַֽל־ הַלְּחִ֔י אֵ֖ת שֹׁפֵ֥ט יִשְׂרָאֵֽל׃ס",
+        english:
+          "Now O daughter of troops mobilize your troops for a siege is laid against us With a rod they will strike the cheek of the judge of Israel",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וְאַתָּ֞ה בֵּֽית־ לֶ֣חֶם אֶפְרָ֗תָה צָעִיר֙ לִֽהְיוֹת֙ בְּאַלְפֵ֣י יְהוּדָ֔ה מִמְּךָ֙ לִ֣י יֵצֵ֔א לִֽהְי֥וֹת מוֹשֵׁ֖ל בְּיִשְׂרָאֵ֑ל וּמוֹצָאֹתָ֥יו מִקֶּ֖דֶם מִימֵ֥י עוֹלָֽם׃",
+        english:
+          "But you Bethlehem Ephrathah who are small among the clans of Judah out of you will come forth for Me One to be ruler over Israel One whose origins are of old from the days of eternity",
+      },
+      {
+        verse_number: 3,
+        original:
+          "לָכֵ֣ן יִתְּנֵ֔ם עַד־ עֵ֥ת יוֹלֵדָ֖ה יָלָ֑דָה וְיֶ֣תֶר אֶחָ֔יו יְשׁוּב֖וּן עַל־ בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Therefore Israel will be abandoned until she who is in labor has given birth then the rest of His brothers will return to the children of Israel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְעָמַ֗ד וְרָעָה֙ בְּעֹ֣ז יְהוָ֔ה בִּגְא֕וֹן שֵׁ֖ם יְהוָ֣ה אֱלֹהָ֑יו וְיָשָׁ֕בוּ כִּֽי־ עַתָּ֥ה יִגְדַּ֖ל עַד־ אַפְסֵי־ אָֽרֶץ׃",
+        english:
+          "He will stand and shepherd His flock in the strength of the LORD in the majestic name of the LORD His God And they will dwell securely for then His greatness will extend to the ends of the earth",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְהָיָ֥ה זֶ֖ה שָׁל֑וֹם אַשּׁ֣וּר׀ כִּֽי־ יָב֣וֹא בְאַרְצֵ֗נוּ וְכִ֤י יִדְרֹךְ֙ בְּאַרְמְנֹתֵ֔ינוּ וַהֲקֵמֹ֤נוּ עָלָיו֙ שִׁבְעָ֣ה רֹעִ֔ים וּשְׁמֹנָ֖ה נְסִיכֵ֥י אָדָֽם׃",
+        english:
+          "And He will be our peace when Assyria invades our land and tramples our citadels We will raise against it seven shepherds even eight leaders of men",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְרָע֞וּ אֶת־ אֶ֤רֶץ אַשּׁוּר֙ בַּחֶ֔רֶב וְאֶת־ אֶ֥רֶץ נִמְרֹ֖ד בִּפְתָחֶ֑יהָ וְהִצִּיל֙ מֵֽאַשּׁ֔וּר כִּֽי־ יָב֣וֹא בְאַרְצֵ֔נוּ וְכִ֥י יִדְרֹ֖ךְ בִּגְבוּלֵֽנוּ׃ס",
+        english:
+          "And they will rule the land of Assyria with the sword and the land of Nimrod with the blade drawn So He will deliver us when Assyria invades our land and marches into our borders",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְהָיָ֣ה׀ שְׁאֵרִ֣ית יַעֲקֹ֗ב בְּקֶ֙רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּטַל֙ מֵאֵ֣ת יְהוָ֔ה כִּרְבִיבִ֖ים עֲלֵי־ עֵ֑שֶׂב אֲשֶׁ֤ר לֹֽא־ יְקַוֶּה֙ לְאִ֔ישׁ וְלֹ֥א יְיַחֵ֖ל לִבְנֵ֥י אָדָֽם׃",
+        english:
+          "Then the remnant of Jacob will be in the midst of many peoples like dew from the LORD like showers on the grass which do not wait for man or linger for mankind",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְהָיָה֩ שְׁאֵרִ֨ית יַעֲקֹ֜ב בַּגּוֹיִ֗ם בְּקֶ֙רֶב֙ עַמִּ֣ים רַבִּ֔ים כְּאַרְיֵה֙ בְּבַהֲמ֣וֹת יַ֔עַר כִּכְפִ֖יר בְּעֶדְרֵי צֹ֑אן אֲשֶׁ֧ר אִם עָבַ֛ר וְרָמַ֥ס וְטָרַ֖ף וְאֵ֥ין מַצִּֽיל׃",
+        english:
+          "Then the remnant of Jacob will be among the nations in the midst of many peoples like a lion among the beasts of the forest like a young lion among flocks of sheep which tramples and tears as it passes through with no one to rescue them",
+      },
+      {
+        verse_number: 9,
+        original:
+          "תָּרֹ֥ם יָדְךָ֖ עַל־ צָרֶ֑יךָ וְכָל־ אֹיְבֶ֖יךָ יִכָּרֵֽתוּ׃פ",
+        english:
+          "Your hand will be lifted over your foes and all your enemies will be cut off",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְהָיָ֤ה בַיּוֹם־ הַהוּא֙ נְאֻם־ יְהוָ֔ה וְהִכְרַתִּ֥י סוּסֶ֖יךָ מִקִּרְבֶּ֑ךָ וְהַאֲבַדְתִּ֖י מַרְכְּבֹתֶֽיךָ׃",
+        english:
+          "In that day declares the LORD I will remove your horses from among you and wreck your chariots",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְהִכְרַתִּ֖י עָרֵ֣י אַרְצֶ֑ךָ וְהָרַסְתִּ֖י כָּל־ מִבְצָרֶֽיךָ׃",
+        english:
+          "I will remove the cities of your land and tear down all your strongholds",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהִכְרַתִּ֥י כְשָׁפִ֖ים מִיָּדֶ֑ךָ וּֽמְעוֹנְנִ֖ים לֹ֥א יִֽהְיוּ־ לָֽךְ׃",
+        english:
+          "I will cut the sorceries from your hand and you will have no fortune-tellers",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְהִכְרַתִּ֧י פְסִילֶ֛יךָ וּמַצֵּבוֹתֶ֖יךָ מִקִּרְבֶּ֑ךָ וְלֹֽא־ תִשְׁתַּחֲוֶ֥ה ע֖וֹד לְמַעֲשֵׂ֥ה יָדֶֽיךָ׃",
+        english:
+          "I will also cut off the carved images and sacred pillars from among you so that you will no longer bow down to the work of your own hands",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְנָתַשְׁתִּ֥י אֲשֵׁירֶ֖יךָ מִקִּרְבֶּ֑ךָ וְהִשְׁמַדְתִּ֖י עָרֶֽיךָ׃",
+        english:
+          "I will root out the Asherah poles from your midst and demolish your cities",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְעָשִׂ֜יתִי בְּאַ֧ף וּבְחֵמָ֛ה נָקָ֖ם אֶת־ הַגּוֹיִ֑ם אֲשֶׁ֖ר לֹ֥א שָׁמֵֽעוּ׃ס",
+        english:
+          "I will take vengeance in anger and wrath upon the nations that have not obeyed Me",
+      },
+    ],
+  };
+  return chapter;
+}
