@@ -11,6 +11,9 @@ export function lyric_timing_desk_clear(desk) {
   desk.held.texts = [];
   desk.held.starts = [];
   desk.held.cursor = 0;
+  desk.held.heard = 0;
+  ("A passage loaded afresh is a new sitting, so the button goes back to following the song until the first tap, whatever the last passage was left doing.");
+  desk.following = true;
   lyric_timing_cards_show(desk.cards, desk.held);
   html_text_content_set(desk.told, "");
 }

@@ -17,7 +17,7 @@ export function lyric_timing_cards_show(cards, held) {
   let none = list_empty_is(held.texts);
   let counted = "Line " + (done + 1) + " of " + total;
   html_text_content_set(cards.said, none ? "No passage loaded." : counted);
-  let sounding = held.texts[subtract(done, 1)];
+  let sounding = held.texts[subtract(held.heard, 1)];
   let started_not = equal(sounding, undefined);
   html_text_content_set(cards.now_card, started_not ? "" : sounding);
   let coming = held.texts[done];

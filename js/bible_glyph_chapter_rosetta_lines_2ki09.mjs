@@ -1,0 +1,269 @@
+export function bible_glyph_chapter_rosetta_lines_2ki09() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "2KI09",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וֶאֱלִישָׁע֙ הַנָּבִ֔יא קָרָ֕א לְאַחַ֖ד מִבְּנֵ֣י הַנְּבִיאִ֑ים וַיֹּ֨אמֶר ל֜וֹ חֲגֹ֣ר מָתְנֶ֗יךָ וְ֠קַח פַּ֣ךְ הַשֶּׁ֤מֶן הַזֶּה֙ בְּיָדֶ֔ךָ וְלֵ֖ךְ רָמֹ֥ת גִּלְעָֽד׃",
+        english:
+          "Now Elisha the prophet summoned one of the sons of the prophets and said to him Tuck your cloak under your belt take this flask of oil and go to Ramoth-gilead",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וּבָ֖אתָ שָׁ֑מָּה וּרְאֵֽה־ שָׁ֠ם יֵה֨וּא בֶן־ יְהוֹשָׁפָ֜ט בֶּן־ נִמְשִׁ֗י וּבָ֙אתָ֙ וַהֲקֵֽמֹתוֹ֙ מִתּ֣וֹך אֶחָ֔יו וְהֵבֵיאתָ֥ אֹת֖וֹ חֶ֥דֶר בְּחָֽדֶר׃",
+        english:
+          "When you arrive look for Jehu son of Jehoshaphat the son of Nimshi Go in get him away from his companions and take him to an inner room",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְלָקַחְתָּ֤ פַךְ־ הַשֶּׁ֙מֶן֙ וְיָצַקְתָּ֣ עַל־ רֹאשׁ֔וֹ וְאָֽמַרְתָּ֙ כֹּֽה־ אָמַ֣ר יְהוָ֔ה מְשַׁחְתִּ֥יךָֽ לְמֶ֖לֶךְ אֶל־ יִשְׂרָאֵ֑ל וּפָתַחְתָּ֥ הַדֶּ֛לֶת וְנַ֖סְתָּה וְלֹ֥א תְחַכֶּֽה׃",
+        english:
+          "Then take the flask of oil pour it on his head and declare This is what the LORD says I anoint you king over Israel Then open the door and run Do not delay",
+      },
+      {
+        verse_number: 4,
+        original: "וַיֵּ֧לֶךְ הַנַּ֛עַר הַנַּ֥עַר הַנָּבִ֖יא רָמֹ֥ת גִּלְעָֽד׃",
+        english: "So the young prophet went to Ramoth-gilead",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וַיָּבֹ֗א וְהִנֵּ֨ה שָׂרֵ֤י הַחַ֙יִל֙ יֹֽשְׁבִ֔ים וַיֹּ֕אמֶר דָּבָ֥ר לִ֛י אֵלֶ֖יךָ הַשָּׂ֑ר וַיֹּ֤אמֶר יֵהוּא֙ אֶל־ מִ֣י מִכֻּלָּ֔נוּ וַיֹּ֖אמֶר אֵלֶ֥יךָ הַשָּֽׂר׃",
+        english:
+          "and when he arrived the army commanders were sitting there I have a message for you commander he said For which of us asked Jehu For you commander he replied",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיָּ֙קָם֙ וַיָּבֹ֣א הַבַּ֔יְתָה וַיִּצֹ֥ק הַשֶּׁ֖מֶן אֶל־ רֹאשׁ֑וֹ וַיֹּ֣אמֶר ל֗וֹ כֹּֽה־ אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל מְשַׁחְתִּ֧יךָֽ לְמֶ֛לֶךְ אֶל־ עַ֥ם יְהוָ֖ה אֶל־ יִשְׂרָאֵֽל׃",
+        english:
+          "So Jehu got up and went into the house where the young prophet poured the oil on his head and declared This is what the LORD the God of Israel says I anoint you king over the LORD’s people Israel",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְהִ֨כִּיתָ֔ה אֶת־ בֵּ֥ית אַחְאָ֖ב אֲדֹנֶ֑יךָ וְנִקַּמְתִּ֞י דְּמֵ֣י׀ עֲבָדַ֣י הַנְּבִיאִ֗ים וּדְמֵ֛י כָּל־ עַבְדֵ֥י יְהוָ֖ה מִיַּ֥ד אִיזָֽבֶל׃",
+        english:
+          "And you are to strike down the house of your master Ahab so that I may avenge the blood of My servants the prophets and the blood of all the servants of the LORD shed by the hand of Jezebel",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְאָבַ֖ד כָּל־ בֵּ֣ית אַחְאָ֑ב וְהִכְרַתִּ֤י לְאַחְאָב֙ מַשְׁתִּ֣ין בְּקִ֔יר וְעָצ֥וּר וְעָז֖וּב בְּיִשְׂרָאֵֽל׃",
+        english:
+          "The whole house of Ahab will perish and I will cut off from Ahab every male both slave and free in Israel",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְנָֽתַתִּי֙ אֶת־ בֵּ֣ית אַחְאָ֔ב כְּבֵ֖ית יָרָבְעָ֣ם בֶּן־ נְבָ֑ט וּכְבֵ֖ית בַּעְשָׁ֥א בֶן־ אֲחִיָּֽה׃",
+        english:
+          "I will make the house of Ahab like the houses of Jeroboam son of Nebat and Baasha son of Ahijah",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְאֶת־ אִיזֶ֜בֶל יֹאכְל֧וּ הַכְּלָבִ֛ים בְּחֵ֥לֶק יִזְרְעֶ֖אל וְאֵ֣ין קֹבֵ֑ר וַיִּפְתַּ֥ח הַדֶּ֖לֶת וַיָּנֹֽס׃",
+        english:
+          "And on the plot of ground at Jezreel the dogs will devour Jezebel and there will be no one to bury her Then the young prophet opened the door and ran",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְיֵה֗וּא יָצָא֙ אֶל־ עַבְדֵ֣י אֲדֹנָ֔יו וַיֹּ֤אמֶר לוֹ֙ הֲשָׁל֔וֹם מַדּ֛וּעַ בָּֽא־ הַמְשֻׁגָּ֥ע הַזֶּ֖ה אֵלֶ֑יךָ וַיֹּ֣אמֶר אֲלֵיהֶ֔ם אַתֶּ֛ם יְדַעְתֶּ֥ם אֶת־ הָאִ֖ישׁ וְאֶת־ שִׂיחֽוֹ׃",
+        english:
+          "When Jehu went out to the servants of his master they asked Is everything all right Why did this madman come to you You know his kind and their babble he replied",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֹּאמְר֣וּ שֶׁ֔קֶר הַגֶּד־ נָ֖א לָ֑נוּ וַיֹּ֗אמֶר כָּזֹ֤את וְכָזֹאת֙ אָמַ֤ר אֵלַי֙ לֵאמֹ֔ר כֹּ֚ה אָמַ֣ר יְהוָ֔ה מְשַׁחְתִּ֥יךָֽ לְמֶ֖לֶךְ אֶל־ יִשְׂרָאֵֽל׃",
+        english:
+          "That is a lie they said Tell us now So Jehu answered He talked to me about this and that saying This is what the LORD says I anoint you king over Israel",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַֽיְמַהֲר֗וּ וַיִּקְחוּ֙ אִ֣ישׁ בִּגְד֔וֹ וַיָּשִׂ֥ימוּ תַחְתָּ֖יו אֶל־ גֶּ֣רֶם הַֽמַּעֲל֑וֹת וַֽיִּתְקְעוּ֙ בַּשּׁוֹפָ֔ר וַיֹּאמְר֖וּ מָלַ֥ךְ יֵהֽוּא׃",
+        english:
+          "Quickly each man took his garment and put it under Jehu on the bare steps Then they blew the ram’s horn and proclaimed Jehu is king",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וַיִּתְקַשֵּׁ֗ר יֵה֛וּא בֶּן־ יְהוֹשָׁפָ֥ט בֶּן־ נִמְשִׁ֖י אֶל־ יוֹרָ֑ם וְיוֹרָם֩ הָיָ֨ה שֹׁמֵ֜ר בְּרָמֹ֣ת גִּלְעָ֗ד ה֚וּא וְכָל־ יִשְׂרָאֵ֔ל מִפְּנֵ֥י חֲזָאֵ֖ל מֶֽלֶךְ־ אֲרָֽם׃",
+        english:
+          "Thus Jehu son of Jehoshaphat the son of Nimshi conspired against Joram Now Joram and all Israel had been defending Ramoth-gilead against Hazael king of Aram",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיָּשָׁב֩ יְהוֹרָ֨ם הַמֶּ֜לֶךְ לְהִתְרַפֵּ֣א בִיְזְרְעֶ֗אל מִן־ הַמַּכִּים֙ אֲשֶׁ֣ר יַכֻּ֣הוּ אֲרַמִּ֔ים בְּהִלָּ֣חֲמ֔וֹ אֶת־ חֲזָאֵ֖ל מֶ֣לֶךְ אֲרָ֑ם וַיֹּ֤אמֶר יֵהוּא֙ אִם־ יֵ֣שׁ נַפְשְׁכֶ֔ם אַל־ יֵצֵ֤א פָלִיט֙ מִן־ הָעִ֔יר לָלֶ֖כֶת לַגִּיד בְּיִזְרְעֶֽאל׃",
+        english:
+          "but King Joram had returned to Jezreel to recover from the wounds he had suffered at the hands of the Arameans in the battle against Hazael their king So Jehu said If you commanders wish to make me king then do not let anyone escape from the city to go and tell it in Jezreel",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וַיִּרְכַּ֤ב יֵהוּא֙ וַיֵּ֣לֶךְ יִזְרְעֶ֔אלָה כִּ֥י יוֹרָ֖ם שֹׁכֵ֣ב שָׁ֑מָּה וַֽאֲחַזְיָה֙ מֶ֣לֶךְ יְהוּדָ֔ה יָרַ֖ד לִרְא֥וֹת אֶת־ יוֹרָֽם׃",
+        english:
+          "Then Jehu got into his chariot and went to Jezreel because Joram was laid up there And Ahaziah king of Judah had gone down to see him",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְהַצֹּפֶה֩ עֹמֵ֨ד עַֽל־ הַמִּגְדָּ֜ל בְּיִזְרְעֶ֗אל וַיַּ֞רְא אֶת־ שִׁפְעַ֤ת יֵהוּא֙ בְּבֹא֔וֹ וַיֹּ֕אמֶר שִׁפְעַ֖ת אֲנִ֣י רֹאֶ֑ה וַיֹּ֣אמֶר יְהוֹרָ֗ם קַ֥ח רַכָּ֛ב וּֽשְׁלַ֥ח לִקְרָאתָ֖ם וְיֹאמַ֥ר הֲשָׁלֽוֹם׃",
+        english:
+          "Now the watchman standing on the tower in Jezreel saw Jehu’s troops approaching and he called out I see a company of troops Choose a rider Joram commanded Send him out to meet them and ask Have you come in peace",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֵּלֶךְ֩ רֹכֵ֨ב הַסּ֜וּס לִקְרָאת֗וֹ וַיֹּ֙אמֶר֙ כֹּֽה־ אָמַ֤ר הַמֶּ֙לֶךְ֙ הֲשָׁל֔וֹם וַיֹּ֧אמֶר יֵה֛וּא מַה־ לְּךָ֥ וּלְשָׁל֖וֹם סֹ֣ב אֶֽל־ אַחֲרָ֑י וַיַּגֵּ֤ד הַצֹּפֶה֙ לֵאמֹ֔ר בָּֽא־ הַמַּלְאָ֥ךְ עַד־ הֵ֖ם וְלֹֽא־ שָֽׁב׃",
+        english:
+          "So a horseman rode off to meet Jehu and said This is what the king asks Have you come in peace What do you know about peace Jehu replied Fall in behind me And the watchman reported The messenger reached them but he is not coming back",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיִּשְׁלַ֗ח רֹכֵ֣ב סוּס֮ שֵׁנִי֒ וַיָּבֹ֣א אֲלֵהֶ֔ם וַיֹּ֛אמֶר כֹּֽה־ אָמַ֥ר הַמֶּ֖לֶךְ שָׁל֑וֹם וַיֹּ֧אמֶר יֵה֛וּא מַה־ לְּךָ֥ וּלְשָׁל֖וֹם סֹ֥ב אֶֽל־ אַחֲרָֽי׃",
+        english:
+          "So the king sent out a second horseman who went to them and said This is what the king asks Have you come in peace What do you know about peace Jehu replied Fall in behind me",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיַּגֵּ֤ד הַצֹּפֶה֙ לֵאמֹ֔ר בָּ֥א עַד־ אֲלֵיהֶ֖ם וְלֹֽא־ שָׁ֑ב וְהַמִּנְהָ֗ג כְּמִנְהַג֙ יֵה֣וּא בֶן־ נִמְשִׁ֔י כִּ֥י בְשִׁגָּע֖וֹן יִנְהָֽג׃",
+        english:
+          "Again the watchman reported He reached them but he is not coming back And the charioteer is driving like Jehu son of Nimshi he is driving like a madman",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיֹּ֤אמֶר יְהוֹרָם֙ אֱסֹ֔ר וַיֶּאְסֹ֖ר רִכְבּ֑וֹ וַיֵּצֵ֣א יְהוֹרָ֣ם מֶֽלֶךְ־ יִ֠שְׂרָאֵל וַאֲחַזְיָ֨הוּ מֶֽלֶךְ־ יְהוּדָ֜ה אִ֣ישׁ בְּרִכְבּ֗וֹ וַיֵּֽצְאוּ֙ לִקְרַ֣את יֵה֔וּא וַיִּמְצָאֻ֔הוּ בְּחֶלְקַ֖ת נָב֥וֹת הַיִּזְרְעֵאלִֽי׃",
+        english:
+          "Harness Joram shouted and they harnessed his chariot Then Joram king of Israel and Ahaziah king of Judah set out each in his own chariot and met Jehu on the property of Naboth the Jezreelite",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיְהִ֗י כִּרְא֤וֹת יְהוֹרָם֙ אֶת־ יֵה֔וּא וַיֹּ֖אמֶר הֲשָׁל֣וֹם יֵה֑וּא וַיֹּ֙אמֶר֙ מָ֣ה הַשָּׁל֔וֹם עַד־ זְנוּנֵ֞י אִיזֶ֧בֶל אִמְּךָ֛ וּכְשָׁפֶ֖יהָ הָרַבִּֽים׃",
+        english:
+          "When Joram saw Jehu he asked Have you come in peace Jehu How can there be peace he replied as long as the idolatry and witchcraft of your mother Jezebel abound",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיַּהֲפֹ֧ךְ יְהוֹרָ֛ם יָדָ֖יו וַיָּנֹ֑ס וַיֹּ֥אמֶר אֶל־ אֲחַזְיָ֖הוּ מִרְמָ֥ה אֲחַזְיָֽה׃",
+        english:
+          "Joram turned around and fled calling out to Ahaziah Treachery Ahaziah",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְיֵה֞וּא מִלֵּ֧א יָד֣וֹ בַקֶּ֗שֶׁת וַיַּ֤ךְ אֶת־ יְהוֹרָם֙ בֵּ֣ין זְרֹעָ֔יו וַיֵּצֵ֥א הַחֵ֖צִי מִלִּבּ֑וֹ וַיִּכְרַ֖ע בְּרִכְבּֽוֹ׃",
+        english:
+          "Then Jehu drew his bow and shot Joram between the shoulders The arrow pierced his heart and he slumped down in his chariot",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיֹּ֗אמֶר אֶל־ בִּדְקַר֙ שְׁלֹשָׁה שָׂ֚א הַשְׁלִכֵ֔הוּ בְּחֶלְקַ֕ת שְׂדֵ֖ה נָב֣וֹת הַיִּזְרְעֵאלִ֑י כִּֽי־ זְכֹ֞ר אֲנִ֣י וָאַ֗תָּה אֵ֣ת רֹכְבִ֤ים צְמָדִים֙ אַֽחֲרֵי֙ אַחְאָ֣ב אָבִ֔יו וַֽיהוָה֙ נָשָׂ֣א עָלָ֔יו אֶת־ הַמַּשָּׂ֖א הַזֶּֽה׃",
+        english:
+          "And Jehu said to Bidkar his officer Pick him up and throw him into the field of Naboth the Jezreelite For remember that when you and I were riding together behind his father Ahab the LORD lifted up this burden against him",
+      },
+      {
+        verse_number: 26,
+        original:
+          "אִם־ לֹ֡א אֶת־ דְּמֵ֣י נָבוֹת֩ וְאֶת־ דְּמֵ֨י בָנָ֜יו רָאִ֤יתִי אֶ֙מֶשׁ֙ נְאֻם־ יְהוָ֔ה וְשִׁלַּמְתִּ֥י לְךָ֛ בַּחֶלְקָ֥ה הַזֹּ֖את נְאֻם־ יְהוָ֑ה וְעַתָּ֗ה שָׂ֧א הַשְׁלִכֵ֛הוּ בַּחֶלְקָ֖ה כִּדְבַ֥ר יְהוָֽה׃",
+        english:
+          "As surely as I saw the blood of Naboth and the blood of his sons yesterday declares the LORD so will I repay you on this plot of ground declares the LORD Now then according to the word of the LORD pick him up and throw him on the plot of ground",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַאֲחַזְיָ֤ה מֶֽלֶךְ־ יְהוּדָה֙ רָאָ֔ה וַיָּ֕נָס דֶּ֖רֶךְ בֵּ֣ית הַגָּ֑ן וַיִּרְדֹּ֨ף אַחֲרָ֜יו יֵה֗וּא וַ֠יֹּאמֶר גַּם־ אֹת֞וֹ הַכֻּ֣הוּ אֶל־ הַמֶּרְכָּבָ֗ה בְּמַֽעֲלֵה־ גוּר֙ אֲשֶׁ֣ר אֶֽת־ יִבְלְעָ֔ם וַיָּ֥נָס מְגִדּ֖וֹ וַיָּ֥מָת שָֽׁם׃",
+        english:
+          "When King Ahaziah of Judah saw this he fled up the road toward Beth-haggan And Jehu pursued him shouting Shoot him too So they shot Ahaziah in his chariot on the Ascent of Gur near Ibleam and he fled to Megiddo and died there",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיַּרְכִּ֧בוּ אֹת֛וֹ עֲבָדָ֖יו יְרוּשָׁלְָ֑מָה וַיִּקְבְּר֨וּ אֹת֧וֹ בִקְבֻרָת֛וֹ עִם־ אֲבֹתָ֖יו בְּעִ֥יר דָּוִֽד׃פ",
+        english:
+          "Then his servants carried him by chariot to Jerusalem and buried him with his fathers in his tomb in the City of David",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וּבִשְׁנַת֙ אַחַ֣ת עֶשְׂרֵ֣ה שָׁנָ֔ה לְיוֹרָ֖ם בֶּן־ אַחְאָ֑ב מָלַ֥ךְ אֲחַזְיָ֖ה עַל־ יְהוּדָֽה׃",
+        english:
+          "In the eleventh year of Joram son of Ahab Ahaziah had become king over Judah",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיָּב֥וֹא יֵה֖וּא יִזְרְעֶ֑אלָה וְאִיזֶ֣בֶל שָׁמְעָ֗ה וַתָּ֨שֶׂם בַּפּ֤וּךְ עֵינֶ֙יהָ֙ וַתֵּ֣יטֶב אֶת־ רֹאשָׁ֔הּ וַתַּשְׁקֵ֖ף בְּעַ֥ד הַחַלּֽוֹן׃",
+        english:
+          "Now when Jehu arrived in Jezreel Jezebel heard of it So she painted her eyes adorned her head and looked down from a window",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וְיֵה֖וּא בָּ֣א בַשָּׁ֑עַר וַתֹּ֣אמֶר הֲשָׁל֔וֹם זִמְרִ֖י הֹרֵ֥ג אֲדֹנָֽיו׃",
+        english:
+          "And as Jehu entered the gate she asked Have you come in peace O Zimri murderer of your master",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיִּשָּׂ֤א פָנָיו֙ אֶל־ הַ֣חַלּ֔וֹן וַיֹּ֕אמֶר מִ֥י אִתִּ֖י מִ֑י וַיַּשְׁקִ֣יפוּ אֵלָ֔יו שְׁנַ֥יִם שְׁלֹשָׁ֖ה סָרִיסִֽים׃",
+        english:
+          "He looked up at the window and called out Who is on my side Who And two or three eunuchs looked down at him",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַיֹּ֥אמֶר שִׁמְטֻהוּ וַֽיִּשְׁמְט֑וּהָ וַיִּ֨ז מִדָּמָ֧הּ אֶל־ הַקִּ֛יר וְאֶל־ הַסּוּסִ֖ים וַֽיִּרְמְסֶֽנָּה׃",
+        english:
+          "Throw her down yelled Jehu So they threw her down and her blood splattered on the wall and on the horses as they trampled her underfoot",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיָּבֹ֖א וַיֹּ֣אכַל וַיֵּ֑שְׁתְּ וַיֹּ֗אמֶר פִּקְדוּ־ נָ֞א אֶת־ הָאֲרוּרָ֤ה הַזֹּאת֙ וְקִבְר֔וּהָ כִּ֥י בַת־ מֶ֖לֶךְ הִֽיא׃",
+        english:
+          "Then Jehu went in and ate and drank Take care of this cursed woman he said and bury her for she was the daughter of a king",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וַיֵּלְכ֖וּ לְקָבְרָ֑הּ וְלֹא־ מָ֣צְאוּ בָ֗הּ כִּ֧י אִם־ הַגֻּלְגֹּ֛לֶת וְהָרַגְלַ֖יִם וְכַפּ֥וֹת הַיָּדָֽיִם׃",
+        english:
+          "But when they went out to bury her they found nothing but her skull her feet and the palms of her hands",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַיָּשֻׁבוּ֮ וַיַּגִּ֣ידוּ לוֹ֒ וַיֹּ֙אמֶר֙ דְּבַר־ יְהוָ֣ה ה֔וּא אֲשֶׁ֣ר דִּבֶּ֗ר בְּיַד־ עַבְדּ֛וֹ אֵלִיָּ֥הוּ הַתִּשְׁבִּ֖י לֵאמֹ֑ר בְּחֵ֣לֶק יִזְרְעֶ֔אל יֹאכְל֥וּ הַכְּלָבִ֖ים אֶת־ בְּשַׂ֥ר אִיזָֽבֶל׃",
+        english:
+          "So they went back and told Jehu who replied This is the word of the LORD which He spoke through His servant Elijah the Tishbite On the plot of ground at Jezreel the dogs will devour the flesh of Jezebel",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וְהָיָת נִבְלַ֣ת אִיזֶ֗בֶל כְּדֹ֛מֶן עַל־ פְּנֵ֥י הַשָּׂדֶ֖ה בְּחֵ֣לֶק יִזְרְעֶ֑אל אֲשֶׁ֥ר לֹֽא־ יֹאמְר֖וּ זֹ֥את אִיזָֽבֶל׃פ",
+        english:
+          "And Jezebel’s body will lie like dung in the field on the plot of ground at Jezreel so that no one can say This is Jezebel",
+      },
+    ],
+  };
+  return chapter;
+}
