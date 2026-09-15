@@ -27,6 +27,7 @@ export function app_ceb_bible_gloss_words_roots_unproved_holdings_row_owed(
         unheard: [],
         sightings,
         chapters,
+        holdings: null,
       };
       return accented;
     }
