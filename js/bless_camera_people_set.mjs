@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
-export function app_g_bless_camera_people_set(container_map, people) {
+export function bless_camera_people_set(container_map, people) {
   arguments_assert(arguments, 2);
   ("Tells the map who is walking about on it, so that a camera journey can hold them still");
   ("while it travels.");

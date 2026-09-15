@@ -10,7 +10,7 @@ import { html_div } from "./html_div.mjs";
 import { app_g_bless_bar } from "./app_g_bless_bar.mjs";
 import { app_g_bless_told } from "./app_g_bless_told.mjs";
 import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
-import { app_g_bless_camera_people_set } from "./app_g_bless_camera_people_set.mjs";
+import { bless_camera_people_set } from "./bless_camera_people_set.mjs";
 import { bless_blessed_new } from "./bless_blessed_new.mjs";
 import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start.mjs";
 export function app_g_bless_overlay_blessed(container_map) {
@@ -62,7 +62,7 @@ export function app_g_bless_overlay_blessed(container_map) {
   ("where they stand for the length of the journey. It is said once, here, where the crowd");
   ("and the map first exist together - and every camera move made from this map afterwards");
   ("is covered without anything in between having to carry the crowd about.");
-  app_g_bless_camera_people_set(container_map, npcs);
+  bless_camera_people_set(container_map, npcs);
   let blessed = bless_blessed_new();
   ("A new record is empty, except when the address asked for a world part way through. That");
   ("is asked here, at the one moment there is a record and nobody has prayed into it yet -");
