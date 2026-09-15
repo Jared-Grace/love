@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { app_ceb_bible_verses_all } from "./app_ceb_bible_verses_all.mjs";
 import { text_apostrophe_inside_word_is } from "./text_apostrophe_inside_word_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -8,8 +9,6 @@ import { text_punctuation_dash_kept_split } from "./text_punctuation_dash_kept_s
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
 import { each } from "./each.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -50,8 +49,7 @@ export async function app_ceb_bible_apostrophe_pieces_unwritten() {
     let pieces = text_punctuation_dash_kept_split(token);
     function piece_read(piece) {
       let lowered = text_lower_to(piece);
-      let held = property_get_or_null(alone, lowered);
-      let unwritten = null_is(held);
+      let unwritten = property_null_is(alone, lowered);
       if (not(unwritten)) {
         return;
       }
