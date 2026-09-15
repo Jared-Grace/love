@@ -7,7 +7,7 @@ import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { g_genders_without_img } from "./g_genders_without_img.mjs";
 import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
 import { app_g_bless_people_count } from "./app_g_bless_people_count.mjs";
-import { app_g_bless_people_place } from "./app_g_bless_people_place.mjs";
+import { bless_people_place } from "./bless_people_place.mjs";
 import { app_g_bless_person_new } from "./app_g_bless_person_new.mjs";
 import { bless_homes_ensure } from "./bless_homes_ensure.mjs";
 import { bless_places_ensure } from "./bless_places_ensure.mjs";
@@ -50,7 +50,7 @@ export function app_g_bless_people(
   let taken = set_new();
   let key_player = g_coordinates_key(player);
   set_add(taken, key_player);
-  app_g_bless_people_place(people, coordinates_land, taken);
+  bless_people_place(people, coordinates_land, taken);
   g_npcs_ids_ensure(people);
   return people;
 }
