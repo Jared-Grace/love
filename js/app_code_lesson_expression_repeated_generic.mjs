@@ -1,9 +1,11 @@
+import { list_random_item } from "./list_random_item.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_get } from "./list_get.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { app_code_lesson_expression_repeated_generic_expanded_code } from "./app_code_lesson_expression_repeated_generic_expanded_code.mjs";
-import { integer_random } from "./integer_random.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_code_lesson_expression_repeated_generic_lefts } from "./app_code_lesson_expression_repeated_generic_lefts.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -59,7 +61,14 @@ export function app_code_lesson_expression_repeated_generic(words) {
   }
   function pair_drawn(left) {
     "a question on a left number the chosen examples did not use, with its own count of 2 or 3 so the length of the written-out form varies";
-    let count = integer_random(2, 3);
+    "never a count equal to the left number: 2 ** 2 is 4 and so are 2 * 2 and 2 + 2, so that line cannot show what the shorthand means";
+    function count_other_is(candidate) {
+      let b = equal(candidate, left);
+      let other = not(b);
+      return other;
+    }
+    let counts = list_filter([2, 3], count_other_is);
+    let count = list_random_item(counts);
     let chosen = [left, count];
     let pair = pair_of(chosen);
     return pair;
