@@ -21,8 +21,8 @@ export function app_code_uneven_dividend_between(least, most, divisor) {
   let numbers = range_map(count, number_of);
   function uneven_is(number) {
     let leftover = modulo(number, divisor);
-    let uneven = equal_not(leftover, 0);
-    return uneven;
+    let odd = equal_not(leftover, 0);
+    return odd;
   }
   let uneven = list_filter(numbers, uneven_is);
   let drawn = list_random_item(uneven);
