@@ -1,10 +1,9 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_entries } from "./gloss_chapter_entries.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { equal } from "./equal.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { list_map } from "./list_map.mjs";
@@ -29,8 +28,7 @@ export async function gloss_explain_words_ranked(fn, explain) {
   async function chapter_read(chapter_code) {
     let entries = await gloss_chapter_entries(chapter_code, fn);
     function entry_wanted_is(entry) {
-      let wording = property_get_or_null(entry, key);
-      let same = equal(wording, explain);
+      let same = property_get_or_null_equal(entry, key, explain);
       return same;
     }
     let wanted = list_filter(entries, entry_wanted_is);
