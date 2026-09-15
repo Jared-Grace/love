@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_vehicle_draw } from "./bless_vehicle_draw.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_vehicles_draw(parent, vehicles) {
+export function bless_vehicles_draw(parent, vehicles) {
   arguments_assert(arguments, 2);
   ("Make the picture of every car in the world.");
   ("Drawn BEFORE the people are, so that a car and a person on the same row fall the way a");
