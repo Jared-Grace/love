@@ -203,6 +203,10 @@
   {
    "name": "g_sermon_pull",
    "refusals": 2
+  },
+  {
+   "name": "lyric_timing_open",
+   "refusals": 1
   }
  ]
 }

@@ -13,8 +13,8 @@ import { number_hundredths_rounded } from "./number_hundredths_rounded.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { html_flex_grow_1 } from "./html_flex_grow_1.mjs";
 import { html_on_click } from "./html_on_click.mjs";
-import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
+import { equal } from "./equal.mjs";
 import { html_style_background_color_set } from "./html_style_background_color_set.mjs";
 import { each_index } from "./each_index.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
@@ -40,6 +40,8 @@ export function lyric_timing_times_show(cards, held) {
   if (some_untimed) {
     html_div_text(times, untimed_said);
   }
+  ("THE COLOURS ARE SAID IN WORDS ABOVE THE ROWS, because a coloured row explains nothing on its own - the first person to use this could not tell what yellow and grey meant.");
+  html_div_text(times, "Yellow: being sung now. Grey: next line to tap.");
   let step = 0.1;
   let marked = null;
   function row_add(text, index) {
@@ -67,7 +69,7 @@ export function lyric_timing_times_show(cards, held) {
       cards.on_select(index);
     }
     html_on_click(said, on_select);
-    let right2 = subtract(held.cursor, 1);
+    let right2 = subtract(held.heard, 1);
     let sounding = equal(index, right2);
     if (sounding) {
       html_style_background_color_set(row, "#fff0a0");

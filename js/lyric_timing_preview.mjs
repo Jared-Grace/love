@@ -36,6 +36,7 @@ export async function lyric_timing_preview() {
       texts: [],
       starts: [],
       cursor: 0,
+      heard: 0,
     },
     path_document: "",
   };

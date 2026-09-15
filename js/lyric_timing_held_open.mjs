@@ -17,4 +17,5 @@ export function lyric_timing_held_open(held, opened) {
   held.texts = opened.lines.map(line_text);
   held.starts = opened.lines.map(line_start);
   held.cursor = 0;
+  held.heard = 0;
 }
