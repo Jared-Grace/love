@@ -1,3 +1,4 @@
+import { list_random_item } from "./list_random_item.mjs";
 import { list_add } from "./list_add.mjs";
 import { bless_person_replace } from "./bless_person_replace.mjs";
 import { app_g_hero_dark_attacks } from "./app_g_hero_dark_attacks.mjs";
@@ -82,7 +83,9 @@ export async function app_g_hero_kill(hero, evil, victim) {
   let graves = property_get(hero, "graves");
   list_add(graves, tile);
   let world = property_get(hero, "world");
-  bless_person_replace(world, div_map, victim, graves);
+  ("The newcomer moves in beside somebody picked from the whole crowd, not beside the one killed, so the street refills everywhere and the killer is not handed a queue of victims walking home to the spot where they stand.");
+  let neighbour = list_random_item(npcs);
+  bless_person_replace(world, div_map, neighbour, graves);
   let burning = property_get(evil, "burning");
   let killed = property_get(evil, "killed");
   if (not(burning)) {

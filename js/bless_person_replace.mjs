@@ -5,8 +5,8 @@ import { list_size } from "./list_size.mjs";
 import { bless_person_new } from "./bless_person_new.mjs";
 import { property_set } from "./property_set.mjs";
 import { set_new } from "./set_new.mjs";
-import { set_add } from "./set_add.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
+import { set_add } from "./set_add.mjs";
 import { each } from "./each.mjs";
 import { g_npc_id } from "./g_npc_id.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
@@ -17,10 +17,10 @@ import { app_shared_game_npc_img_set } from "./app_shared_game_npc_img_set.mjs";
 import { html_animate_start } from "./html_animate_start.mjs";
 import { list_add } from "./list_add.mjs";
 import { bless_person_walk } from "./bless_person_walk.mjs";
-export function bless_person_replace(world, div_map, gone, blocked) {
+export function bless_person_replace(world, div_map, neighbour, blocked) {
   arguments_assert(arguments, 4);
   ("Somebody new joins the street in the place of somebody who has left it, so the crowd stays the size it was made.");
-  ("They take over the one who left's address and home, so they are set down among the same neighbours and walk the same stretch of street. Who they look like, how fast they walk and whether they are out walking at all are their own, made fresh, so nobody reads them as the one who left come back.");
+  ("They move in beside the neighbour they are handed - the same address, the same home, the same stretch of street - and are set down near that door. The caller chooses the neighbour: somebody who has left is the wrong one to copy when what emptied the street is still standing there, because every newcomer would walk straight back into it. Who they look like, how fast they walk and whether they are out walking at all are their own, made fresh.");
   ("They are kept off every square somebody is standing on, every square named in the blocked list, and every square that is already somebody's id. An id is the square a person first stood on and it is what their picture is filed under, so a newcomer set down on a square an older person started from would be handed that person's picture.");
   ("They fade in rather than appear, and start walking straight away like everybody else.");
   let player = property_get(world, "player");
@@ -30,24 +30,24 @@ export function bless_person_replace(world, div_map, gone, blocked) {
   let genders = g_genders_without_img(player_img);
   let index = list_size(npcs);
   let person = bless_person_new(index, genders);
-  let value = property_get(gone, "places");
-  property_set(person, "places", value);
-  let value2 = property_get(gone, "home");
-  property_set(person, "home", value2);
-  let value3 = property_get(gone, "roam");
-  property_set(person, "roam", value3);
+  let places = property_get(neighbour, "places");
+  property_set(person, "places", places);
+  let home = property_get(neighbour, "home");
+  property_set(person, "home", home);
+  let roam = property_get(neighbour, "roam");
+  property_set(person, "roam", roam);
   let taken = set_new();
-  let item = g_coordinates_key(player);
-  set_add(taken, item);
+  let key = g_coordinates_key(player);
+  set_add(taken, key);
   function tile_take(tile) {
-    let item2 = g_coordinates_key(tile);
-    set_add(taken, item2);
+    let tile_key = g_coordinates_key(tile);
+    set_add(taken, tile_key);
   }
   each(blocked, tile_take);
   function npc_take(npc) {
     tile_take(npc);
-    let item3 = g_npc_id(npc);
-    set_add(taken, item3);
+    let id = g_npc_id(npc);
+    set_add(taken, id);
   }
   each(npcs, npc_take);
   let land = g_coordinates_land_reachable_get(coordinates);
