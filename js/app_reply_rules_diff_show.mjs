@@ -30,7 +30,8 @@ export function app_reply_rules_diff_show(root, diff) {
   ("The tint behind a line is far fainter than the writing on it, because the two are doing opposite jobs. The writing has to be read and so needs all the contrast it can get against what is behind it; the background only has to be noticed, and a background strong enough to be read would take that contrast away from the thing that needs it.");
   ("Lines the change leaves alone are given no background at all rather than a third colour. There are far more of them than of anything else, and a page where every line is on a tint is a page with no tints on it.");
   let block = html_div(root);
-  html_style_font_size(block, app_reply_rules_font_size_small());
+  let value = app_reply_rules_font_size_small();
+  html_style_font_size(block, value);
   html_style_overflow_wrap(block, "anywhere");
   let green = app_shared_color_green_deep();
   let red = app_shared_color_red();
