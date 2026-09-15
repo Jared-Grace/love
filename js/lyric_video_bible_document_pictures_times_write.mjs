@@ -50,6 +50,7 @@ export async function lyric_video_bible_document_pictures_times_write(
       written: false,
       unauthored: [],
       why: "this passage has no lyric video document yet",
+      seconds_lead: null,
     };
     return undrafted;
   }
@@ -63,6 +64,7 @@ export async function lyric_video_bible_document_pictures_times_write(
       written: false,
       unauthored: [],
       why: "this document asks for no pictures",
+      seconds_lead: null,
     };
     return bare;
   }
@@ -88,6 +90,7 @@ export async function lyric_video_bible_document_pictures_times_write(
       written: false,
       unauthored,
       why: "every picture needs a name and the number of the line it comes up on",
+      seconds_lead: null,
     };
     return unfinished;
   }
