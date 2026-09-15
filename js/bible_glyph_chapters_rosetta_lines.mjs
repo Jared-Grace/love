@@ -1,3 +1,21 @@
+import { bible_glyph_chapter_rosetta_lines_exo19 } from "./bible_glyph_chapter_rosetta_lines_exo19.mjs";
+import { bible_glyph_chapter_rosetta_lines_exo12 } from "./bible_glyph_chapter_rosetta_lines_exo12.mjs";
+import { bible_glyph_chapter_rosetta_lines_exo03 } from "./bible_glyph_chapter_rosetta_lines_exo03.mjs";
+import { bible_glyph_chapter_rosetta_lines_est04 } from "./bible_glyph_chapter_rosetta_lines_est04.mjs";
+import { bible_glyph_chapter_rosetta_lines_ecc12 } from "./bible_glyph_chapter_rosetta_lines_ecc12.mjs";
+import { bible_glyph_chapter_rosetta_lines_ecc03 } from "./bible_glyph_chapter_rosetta_lines_ecc03.mjs";
+import { bible_glyph_chapter_rosetta_lines_deu06 } from "./bible_glyph_chapter_rosetta_lines_deu06.mjs";
+import { bible_glyph_chapter_rosetta_lines_deu05 } from "./bible_glyph_chapter_rosetta_lines_deu05.mjs";
+import { bible_glyph_chapter_rosetta_lines_dan09 } from "./bible_glyph_chapter_rosetta_lines_dan09.mjs";
+import { bible_glyph_chapter_rosetta_lines_dan01 } from "./bible_glyph_chapter_rosetta_lines_dan01.mjs";
+import { bible_glyph_chapter_rosetta_lines_amo05 } from "./bible_glyph_chapter_rosetta_lines_amo05.mjs";
+import { bible_glyph_chapter_rosetta_lines_2sa07 } from "./bible_glyph_chapter_rosetta_lines_2sa07.mjs";
+import { bible_glyph_chapter_rosetta_lines_2ki06 } from "./bible_glyph_chapter_rosetta_lines_2ki06.mjs";
+import { bible_glyph_chapter_rosetta_lines_2ki05 } from "./bible_glyph_chapter_rosetta_lines_2ki05.mjs";
+import { bible_glyph_chapter_rosetta_lines_2ch06 } from "./bible_glyph_chapter_rosetta_lines_2ch06.mjs";
+import { bible_glyph_chapter_rosetta_lines_1sa17 } from "./bible_glyph_chapter_rosetta_lines_1sa17.mjs";
+import { bible_glyph_chapter_rosetta_lines_1sa16 } from "./bible_glyph_chapter_rosetta_lines_1sa16.mjs";
+import { bible_glyph_chapter_rosetta_lines_1sa03 } from "./bible_glyph_chapter_rosetta_lines_1sa03.mjs";
 import { bible_glyph_chapter_rosetta_lines_1ki19 } from "./bible_glyph_chapter_rosetta_lines_1ki19.mjs";
 import { bible_glyph_chapter_rosetta_lines_1ki18 } from "./bible_glyph_chapter_rosetta_lines_1ki18.mjs";
 import { bible_glyph_chapter_rosetta_lines_1ki17 } from "./bible_glyph_chapter_rosetta_lines_1ki17.mjs";
@@ -633,6 +651,24 @@ export function bible_glyph_chapters_rosetta_lines() {
   let chapter311 = bible_glyph_chapter_rosetta_lines_isa49();
   let chapter312 = bible_glyph_chapter_rosetta_lines_1ki17();
   let chapter313 = bible_glyph_chapter_rosetta_lines_1ki18();
+  let chapter314 = bible_glyph_chapter_rosetta_lines_1ki19();
+  let chapter315 = bible_glyph_chapter_rosetta_lines_1sa03();
+  let chapter316 = bible_glyph_chapter_rosetta_lines_1sa16();
+  let chapter317 = bible_glyph_chapter_rosetta_lines_1sa17();
+  let chapter318 = bible_glyph_chapter_rosetta_lines_2ch06();
+  let chapter319 = bible_glyph_chapter_rosetta_lines_2ki05();
+  let chapter320 = bible_glyph_chapter_rosetta_lines_2ki06();
+  let chapter321 = bible_glyph_chapter_rosetta_lines_2sa07();
+  let chapter322 = bible_glyph_chapter_rosetta_lines_amo05();
+  let chapter323 = bible_glyph_chapter_rosetta_lines_dan01();
+  let chapter324 = bible_glyph_chapter_rosetta_lines_dan09();
+  let chapter325 = bible_glyph_chapter_rosetta_lines_deu05();
+  let chapter326 = bible_glyph_chapter_rosetta_lines_deu06();
+  let chapter327 = bible_glyph_chapter_rosetta_lines_ecc03();
+  let chapter328 = bible_glyph_chapter_rosetta_lines_ecc12();
+  let chapter329 = bible_glyph_chapter_rosetta_lines_est04();
+  let chapter330 = bible_glyph_chapter_rosetta_lines_exo03();
+  let chapter331 = bible_glyph_chapter_rosetta_lines_exo12();
   let chapters = [
     chapter,
     chapter2,
@@ -947,7 +983,25 @@ export function bible_glyph_chapters_rosetta_lines() {
     chapter311,
     chapter312,
     chapter313,
-    bible_glyph_chapter_rosetta_lines_1ki19(),
+    chapter314,
+    chapter315,
+    chapter316,
+    chapter317,
+    chapter318,
+    chapter319,
+    chapter320,
+    chapter321,
+    chapter322,
+    chapter323,
+    chapter324,
+    chapter325,
+    chapter326,
+    chapter327,
+    chapter328,
+    chapter329,
+    chapter330,
+    chapter331,
+    bible_glyph_chapter_rosetta_lines_exo19(),
   ];
   return chapters;
 }

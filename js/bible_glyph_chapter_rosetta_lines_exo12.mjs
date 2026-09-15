@@ -1,0 +1,365 @@
+export function bible_glyph_chapter_rosetta_lines_exo12() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "EXO12",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֣ה וְאֶֽל־ אַהֲרֹ֔ן בְּאֶ֥רֶץ מִצְרַ֖יִם לֵאמֹֽר׃",
+        english: "Now the LORD said to Moses and Aaron in the land of Egypt",
+      },
+      {
+        verse_number: 2,
+        original:
+          "הַחֹ֧דֶשׁ הַזֶּ֛ה לָכֶ֖ם רֹ֣אשׁ חֳדָשִׁ֑ים רִאשׁ֥וֹן הוּא֙ לָכֶ֔ם לְחָדְשֵׁ֖י הַשָּׁנָֽה׃",
+        english:
+          "This month is the beginning of months for you it shall be the first month of your year",
+      },
+      {
+        verse_number: 3,
+        original:
+          "דַּבְּר֗וּ אֶֽל־ כָּל־ עֲדַ֤ת יִשְׂרָאֵל֙ לֵאמֹ֔ר בֶּעָשֹׂ֖ר לַחֹ֣דֶשׁ הַזֶּ֑ה וְיִקְח֣וּ לָהֶ֗ם אִ֛ישׁ שֶׂ֥ה לְבֵית־ אָבֹ֖ת שֶׂ֥ה לַבָּֽיִת׃",
+        english:
+          "Tell the whole congregation of Israel that on the tenth day of this month each man must select a lamb for his family one per household",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאִם־ יִמְעַ֣ט הַבַּיִת֮ מִהְיֹ֣ת מִשֶּׂה֒ וְלָקַ֣ח ה֗וּא וּשְׁכֵנ֛וֹ הַקָּרֹ֥ב אֶל־ בֵּית֖וֹ בְּמִכְסַ֣ת נְפָשֹׁ֑ת אִ֚ישׁ לְפִ֣י אָכְל֔וֹ תָּכֹ֖סּוּ עַל־ הַשֶּֽׂה׃",
+        english:
+          "If the household is too small for a whole lamb they are to share with the nearest neighbor based on the number of people and apportion the lamb accordingly",
+      },
+      {
+        verse_number: 5,
+        original:
+          "שֶׂ֥ה תָמִ֛ים זָכָ֥ר בֶּן־ שָׁנָ֖ה יִהְיֶ֣ה לָכֶ֑ם מִן־ הַכְּבָשִׂ֥ים וּמִן־ הָעִזִּ֖ים תִּקָּֽחוּ׃",
+        english:
+          "Your lamb must be an unblemished year-old male and you may take it from the sheep or the goats",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְהָיָ֤ה לָכֶם֙ לְמִשְׁמֶ֔רֶת עַ֣ד אַרְבָּעָ֥ה עָשָׂ֛ר י֖וֹם לַחֹ֣דֶשׁ הַזֶּ֑ה וְשָׁחֲט֣וּ אֹת֗וֹ כֹּ֛ל קְהַ֥ל עֲדַֽת־ יִשְׂרָאֵ֖ל בֵּ֥ין הָעַרְבָּֽיִם׃",
+        english:
+          "You must keep it until the fourteenth day of the month when the whole assembly of the congregation of Israel will slaughter the animals at twilight",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְלָֽקְחוּ֙ מִן־ הַדָּ֔ם וְנָֽתְנ֛וּ עַל־ שְׁתֵּ֥י הַמְּזוּזֹ֖ת וְעַל־ הַמַּשְׁק֑וֹף עַ֚ל הַבָּ֣תִּ֔ים אֲשֶׁר־ יֹאכְל֥וּ אֹת֖וֹ בָּהֶֽם׃",
+        english:
+          "They are to take some of the blood and put it on the sides and tops of the doorframes of the houses where they eat the lambs",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְאָכְל֥וּ אֶת־ הַבָּשָׂ֖ר בַּלַּ֣יְלָה הַזֶּ֑ה צְלִי־ אֵ֣שׁ וּמַצּ֔וֹת עַל־ מְרֹרִ֖ים יֹאכְלֻֽהוּ׃",
+        english:
+          "They are to eat the meat that night roasted over the fire along with unleavened bread and bitter herbs",
+      },
+      {
+        verse_number: 9,
+        original:
+          "אַל־ תֹּאכְל֤וּ מִמֶּ֙נּוּ֙ נָ֔א וּבָשֵׁ֥ל מְבֻשָּׁ֖ל בַּמָּ֑יִם כִּ֣י אִם־ צְלִי־ אֵ֔שׁ רֹאשׁ֥וֹ עַל־ כְּרָעָ֖יו וְעַל־ קִרְבּֽוֹ׃",
+        english:
+          "Do not eat any of the meat raw or cooked in boiling water but only roasted over the fire its head and legs and inner parts",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְלֹא־ תוֹתִ֥ירוּ מִמֶּ֖נּוּ עַד־ בֹּ֑קֶר וְהַנֹּתָ֥ר מִמֶּ֛נּוּ עַד־ בֹּ֖קֶר בָּאֵ֥שׁ תִּשְׂרֹֽפוּ׃",
+        english:
+          "Do not leave any of it until morning before the morning you must burn up any part that is left over",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְכָכָה֮ תֹּאכְל֣וּ אֹתוֹ֒ מָתְנֵיכֶ֣ם חֲגֻרִ֔ים נַֽעֲלֵיכֶם֙ בְּרַגְלֵיכֶ֔ם וּמַקֶּלְכֶ֖ם בְּיֶדְכֶ֑ם וַאֲכַלְתֶּ֤ם אֹתוֹ֙ בְּחִפָּז֔וֹן פֶּ֥סַח ה֖וּא לַיהוָֽה׃",
+        english:
+          "This is how you are to eat it You must be fully dressed for travel with your sandals on your feet and your staff in your hand You are to eat in haste it is the LORD’s Passover",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְעָבַרְתִּ֣י בְאֶֽרֶץ־ מִצְרַיִם֮ בַּלַּ֣יְלָה הַזֶּה֒ וְהִכֵּיתִ֤י כָל־ בְּכוֹר֙ בְּאֶ֣רֶץ מִצְרַ֔יִם מֵאָדָ֖ם וְעַד־ בְּהֵמָ֑ה וּבְכָל־ אֱלֹהֵ֥י מִצְרַ֛יִם אֶֽעֱשֶׂ֥ה שְׁפָטִ֖ים אֲנִ֥י יְהוָֽה׃",
+        english:
+          "On that night I will pass through the land of Egypt and strike down every firstborn male both man and beast and I will execute judgment against all the gods of Egypt I am the LORD",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְהָיָה֩ הַדָּ֨ם לָכֶ֜ם לְאֹ֗ת עַ֤ל הַבָּתִּים֙ אֲשֶׁ֣ר אַתֶּ֣ם שָׁ֔ם וְרָאִ֙יתִי֙ אֶת־ הַדָּ֔ם וּפָסַחְתִּ֖י עֲלֵכֶ֑ם וְלֹֽא־ יִֽהְיֶ֨ה בָכֶ֥ם נֶ֙גֶף֙ לְמַשְׁחִ֔ית בְּהַכֹּתִ֖י בְּאֶ֥רֶץ מִצְרָֽיִם׃",
+        english:
+          "The blood on the houses where you are staying will be a sign when I see the blood I will pass over you No plague will fall on you to destroy you when I strike the land of Egypt",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְהָיָה֩ הַיּ֨וֹם הַזֶּ֤ה לָכֶם֙ לְזִכָּר֔וֹן וְחַגֹּתֶ֥ם אֹת֖וֹ חַ֣ג לַֽיהוָ֑ה לְדֹרֹ֣תֵיכֶ֔ם חֻקַּ֥ת עוֹלָ֖ם תְּחָגֻּֽהוּ׃",
+        english:
+          "And this day will be a memorial for you and you are to celebrate it as a feast to the LORD as a permanent statute for the generations to come",
+      },
+      {
+        verse_number: 15,
+        original:
+          "שִׁבְעַ֤ת יָמִים֙ מַצּ֣וֹת תֹּאכֵ֔לוּ אַ֚ךְ בַּיּ֣וֹם הָרִאשׁ֔וֹן תַּשְׁבִּ֥יתוּ שְּׂאֹ֖ר מִבָּתֵּיכֶ֑ם כִּ֣י׀ כָּל־ אֹכֵ֣ל חָמֵ֗ץ וְנִכְרְתָ֞ה הַנֶּ֤פֶשׁ הַהִוא֙ מִיִּשְׂרָאֵ֔ל מִיּ֥וֹם הָרִאשֹׁ֖ן עַד־ י֥וֹם הַשְּׁבִעִֽי׃",
+        english:
+          "For seven days you must eat unleavened bread On the first day you are to remove the leaven from your houses Whoever eats anything leavened from the first day through the seventh must be cut off from Israel",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וּבַיּ֤וֹם הָרִאשׁוֹן֙ מִקְרָא־ קֹ֔דֶשׁ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י מִקְרָא־ קֹ֖דֶשׁ יִהְיֶ֣ה לָכֶ֑ם כָּל־ מְלָאכָה֙ לֹא־ יֵעָשֶׂ֣ה בָהֶ֔ם אַ֚ךְ אֲשֶׁ֣ר יֵאָכֵ֣ל לְכָל־ נֶ֔פֶשׁ ה֥וּא לְבַדּ֖וֹ יֵעָשֶׂ֥ה לָכֶֽם׃",
+        english:
+          "On the first day you are to hold a sacred assembly and another on the seventh day You must not do any work on those days except to prepare the meals that is all you may do",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וּשְׁמַרְתֶּם֮ אֶת־ הַמַּצּוֹת֒ כִּ֗י בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה הוֹצֵ֥אתִי אֶת־ צִבְאוֹתֵיכֶ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם וּשְׁמַרְתֶּ֞ם אֶת־ הַיּ֥וֹם הַזֶּ֛ה לְדֹרֹתֵיכֶ֖ם חֻקַּ֥ת עוֹלָֽם׃",
+        english:
+          "So you are to keep the Feast of Unleavened Bread for on this very day I brought your divisions out of the land of Egypt You must keep this day as a permanent statute for the generations to come",
+      },
+      {
+        verse_number: 18,
+        original:
+          "בָּרִאשֹׁ֡ן בְּאַרְבָּעָה֩ עָשָׂ֨ר י֤וֹם לַחֹ֙דֶשׁ֙ בָּעֶ֔רֶב תֹּאכְל֖וּ מַצֹּ֑ת עַ֠ד י֣וֹם הָאֶחָ֧ד וְעֶשְׂרִ֛ים לַחֹ֖דֶשׁ בָּעָֽרֶב׃",
+        english:
+          "In the first month you are to eat unleavened bread from the evening of the fourteenth day until the evening of the twenty-first day",
+      },
+      {
+        verse_number: 19,
+        original:
+          "שִׁבְעַ֣ת יָמִ֔ים שְׂאֹ֕ר לֹ֥א יִמָּצֵ֖א בְּבָתֵּיכֶ֑ם כִּ֣י׀ כָּל־ אֹכֵ֣ל מַחְמֶ֗צֶת וְנִכְרְתָ֞ה הַנֶּ֤פֶשׁ הַהִוא֙ מֵעֲדַ֣ת יִשְׂרָאֵ֔ל בַּגֵּ֖ר וּבְאֶזְרַ֥ח הָאָֽרֶץ׃",
+        english:
+          "For seven days there must be no leaven found in your houses If anyone eats something leavened that person whether a foreigner or native of the land must be cut off from the congregation of Israel",
+      },
+      {
+        verse_number: 20,
+        original:
+          "כָּל־ מַחְמֶ֖צֶת לֹ֣א תֹאכֵ֑לוּ בְּכֹל֙ מוֹשְׁבֹ֣תֵיכֶ֔ם תֹּאכְל֖וּ מַצּֽוֹת׃פ",
+        english:
+          "You are not to eat anything leavened eat unleavened bread in all your homes",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיִּקְרָ֥א מֹשֶׁ֛ה לְכָל־ זִקְנֵ֥י יִשְׂרָאֵ֖ל וַיֹּ֣אמֶר אֲלֵהֶ֑ם מִֽשְׁכ֗וּ וּקְח֨וּ לָכֶ֥ם צֹ֛אן לְמִשְׁפְּחֹתֵיכֶ֖ם וְשַׁחֲט֥וּ הַפָּֽסַח׃",
+        english:
+          "Then Moses summoned all the elders of Israel and told them Go at once and select for yourselves a lamb for each family and slaughter the Passover lamb",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וּלְקַחְתֶּ֞ם אֲגֻדַּ֣ת אֵז֗וֹב וּטְבַלְתֶּם֮ בַּדָּ֣ם אֲשֶׁר־ בַּסַּף֒ וְהִגַּעְתֶּ֤ם אֶל־ הַמַּשְׁקוֹף֙ וְאֶל־ שְׁתֵּ֣י הַמְּזוּזֹ֔ת מִן־ הַדָּ֖ם אֲשֶׁ֣ר בַּסָּ֑ף וְאַתֶּ֗ם לֹ֥א תֵצְא֛וּ אִ֥ישׁ מִפֶּֽתַח־ בֵּית֖וֹ עַד־ בֹּֽקֶר׃",
+        english:
+          "Take a cluster of hyssop dip it into the blood in the basin and brush the blood on the top and sides of the doorframe None of you shall go out the door of his house until morning",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְעָבַ֣ר יְהוָה֮ לִנְגֹּ֣ף אֶת־ מִצְרַיִם֒ וְרָאָ֤ה אֶת־ הַדָּם֙ עַל־ הַמַּשְׁק֔וֹף וְעַ֖ל שְׁתֵּ֣י הַמְּזוּזֹ֑ת וּפָסַ֤ח יְהוָה֙ עַל־ הַפֶּ֔תַח וְלֹ֤א יִתֵּן֙ הַמַּשְׁחִ֔ית לָבֹ֥א אֶל־ בָּתֵּיכֶ֖ם לִנְגֹּֽף׃",
+        english:
+          "When the LORD passes through to strike down the Egyptians He will see the blood on the top and sides of the doorframe and will pass over that doorway so He will not allow the destroyer to enter your houses and strike you down",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וּשְׁמַרְתֶּ֖ם אֶת־ הַדָּבָ֣ר הַזֶּ֑ה לְחָק־ לְךָ֥ וּלְבָנֶ֖יךָ עַד־ עוֹלָֽם׃",
+        english:
+          "And you are to keep this command as a permanent statute for you and your descendants",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְהָיָ֞ה כִּֽי־ תָבֹ֣אוּ אֶל־ הָאָ֗רֶץ אֲשֶׁ֨ר יִתֵּ֧ן יְהוָ֛ה לָכֶ֖ם כַּאֲשֶׁ֣ר דִּבֵּ֑ר וּשְׁמַרְתֶּ֖ם אֶת־ הָעֲבֹדָ֥ה הַזֹּֽאת׃",
+        english:
+          "When you enter the land that the LORD will give you as He promised you are to keep this service",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וְהָיָ֕ה כִּֽי־ יֹאמְר֥וּ אֲלֵיכֶ֖ם בְּנֵיכֶ֑ם מָ֛ה הָעֲבֹדָ֥ה הַזֹּ֖את לָכֶֽם׃",
+        english:
+          "When your children ask you What does this service mean to you",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַאֲמַרְתֶּ֡ם זֶֽבַח־ פֶּ֨סַח ה֜וּא לַֽיהוָ֗ה אֲשֶׁ֣ר פָּ֠סַח עַל־ בָּתֵּ֤י בְנֵֽי־ יִשְׂרָאֵל֙ בְּמִצְרַ֔יִם בְּנָגְפּ֥וֹ אֶת־ מִצְרַ֖יִם וְאֶת־ בָּתֵּ֣ינוּ הִצִּ֑יל וַיִּקֹּ֥ד הָעָ֖ם וַיִּֽשְׁתַּחֲוּֽוּ׃",
+        english:
+          "you are to reply It is the Passover sacrifice to the LORD who passed over the houses of the Israelites in Egypt when He struck down the Egyptians and spared our homes Then the people bowed down and worshiped",
+      },
+      {
+        verse_number: 28,
+        original:
+          "וַיֵּלְכ֥וּ וַיַּֽעֲשׂ֖וּ בְּנֵ֣י יִשְׂרָאֵ֑ל כַּאֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֶת־ מֹשֶׁ֥ה וְאַהֲרֹ֖ן כֵּ֥ן עָשֽׂוּ׃ס",
+        english:
+          "And the Israelites went and did just what the LORD had commanded Moses and Aaron",
+      },
+      {
+        verse_number: 29,
+        original:
+          "וַיְהִ֣י׀ בַּחֲצִ֣י הַלַּ֗יְלָה וַֽיהוָה֮ הִכָּ֣ה כָל־ בְּכוֹר֮ בְּאֶ֣רֶץ מִצְרַיִם֒ מִבְּכֹ֤ר פַּרְעֹה֙ הַיֹּשֵׁ֣ב עַל־ כִּסְא֔וֹ עַ֚ד בְּכ֣וֹר הַשְּׁבִ֔י אֲשֶׁ֖ר בְּבֵ֣ית הַבּ֑וֹר וְכֹ֖ל בְּכ֥וֹר בְּהֵמָֽה׃",
+        english:
+          "Now at midnight the LORD struck down every firstborn male in the land of Egypt from the firstborn of Pharaoh who sat on his throne to the firstborn of the prisoner in the dungeon as well as all the firstborn among the livestock",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיָּ֨קָם פַּרְעֹ֜ה לַ֗יְלָה ה֤וּא וְכָל־ עֲבָדָיו֙ וְכָל־ מִצְרַ֔יִם וַתְּהִ֛י צְעָקָ֥ה גְדֹלָ֖ה בְּמִצְרָ֑יִם כִּֽי־ אֵ֣ין בַּ֔יִת אֲשֶׁ֥ר אֵֽין־ שָׁ֖ם מֵֽת׃",
+        english:
+          "During the night Pharaoh got up he and all his officials and all the Egyptians and there was loud wailing in Egypt for there was no house without someone dead",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וַיִּקְרָא֩ לְמֹשֶׁ֨ה וּֽלְאַהֲרֹ֜ן לַ֗יְלָה וַיֹּ֙אמֶר֙ ק֤וּמוּ צְּאוּ֙ מִתּ֣וֹךְ עַמִּ֔י גַּם־ אַתֶּ֖ם גַּם־ בְּנֵ֣י יִשְׂרָאֵ֑ל וּלְכ֛וּ עִבְד֥וּ אֶת־ יְהוָ֖ה כְּדַבֶּרְכֶֽם׃",
+        english:
+          "Then Pharaoh summoned Moses and Aaron by night and said Get up leave my people both you and the Israelites Go worship the LORD as you have requested",
+      },
+      {
+        verse_number: 32,
+        original:
+          "גַּם־ צֹאנְכֶ֨ם גַּם־ בְּקַרְכֶ֥ם קְח֛וּ כַּאֲשֶׁ֥ר דִּבַּרְתֶּ֖ם וָלֵ֑כוּ וּבֵֽרַכְתֶּ֖ם גַּם־ אֹתִֽי׃",
+        english:
+          "Take your flocks and herds as well just as you have said and depart And bless me also",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וַתֶּחֱזַ֤ק מִצְרַ֙יִם֙ עַל־ הָעָ֔ם לְמַהֵ֖ר לְשַׁלְּחָ֣ם מִן־ הָאָ֑רֶץ כִּ֥י אָמְר֖וּ כֻּלָּ֥נוּ מֵתִֽים׃",
+        english:
+          "And in order to send them out of the land quickly the Egyptians urged the people on For otherwise they said we are all going to die",
+      },
+      {
+        verse_number: 34,
+        original:
+          "וַיִּשָּׂ֥א הָעָ֛ם אֶת־ בְּצֵק֖וֹ טֶ֣רֶם יֶחְמָ֑ץ מִשְׁאֲרֹתָ֛ם צְרֻרֹ֥ת בְּשִׂמְלֹתָ֖ם עַל־ שִׁכְמָֽם׃",
+        english:
+          "So the people took their dough before it was leavened carrying it on their shoulders in kneading bowls wrapped in clothing",
+      },
+      {
+        verse_number: 35,
+        original:
+          "וּבְנֵי־ יִשְׂרָאֵ֥ל עָשׂ֖וּ כִּדְבַ֣ר מֹשֶׁ֑ה וַֽיִּשְׁאֲלוּ֙ מִמִּצְרַ֔יִם כְּלֵי־ כֶ֛סֶף וּכְלֵ֥י זָהָ֖ב וּשְׂמָלֹֽת׃",
+        english:
+          "Furthermore, the Israelites acted on Moses’ word and asked the Egyptians for articles of silver and gold and for clothing",
+      },
+      {
+        verse_number: 36,
+        original:
+          "וַֽיהוָ֞ה נָתַ֨ן אֶת־ חֵ֥ן הָעָ֛ם בְּעֵינֵ֥י מִצְרַ֖יִם וַיַּשְׁאִל֑וּם וַֽיְנַצְּל֖וּ אֶת־ מִצְרָֽיִם׃פ",
+        english:
+          "And the LORD gave the people such favor in the sight of the Egyptians that they granted their request In this way they plundered the Egyptians",
+      },
+      {
+        verse_number: 37,
+        original:
+          "וַיִּסְע֧וּ בְנֵֽי־ יִשְׂרָאֵ֛ל מֵרַעְמְסֵ֖ס סֻכֹּ֑תָה כְּשֵׁשׁ־ מֵא֨וֹת אֶ֧לֶף רַגְלִ֛י הַגְּבָרִ֖ים לְבַ֥ד מִטָּֽף׃",
+        english:
+          "The Israelites journeyed from Rameses to Succoth with about 600,000 men on foot besides women and children",
+      },
+      {
+        verse_number: 38,
+        original:
+          "וְגַם־ עֵ֥רֶב רַ֖ב עָלָ֣ה אִתָּ֑ם וְצֹ֣אן וּבָקָ֔ר מִקְנֶ֖ה כָּבֵ֥ד מְאֹֽד׃",
+        english:
+          "And a mixed multitude also went up with them along with great droves of livestock both flocks and herds",
+      },
+      {
+        verse_number: 39,
+        original:
+          "וַיֹּאפ֨וּ אֶת־ הַבָּצֵ֜ק אֲשֶׁ֨ר הוֹצִ֧יאוּ מִמִּצְרַ֛יִם עֻגֹ֥ת מַצּ֖וֹת כִּ֣י לֹ֣א חָמֵ֑ץ כִּֽי־ גֹרְשׁ֣וּ מִמִּצְרַ֗יִם וְלֹ֤א יָֽכְלוּ֙ לְהִתְמַהְמֵ֔הַּ וְגַם־ צֵדָ֖ה לֹא־ עָשׂ֥וּ לָהֶֽם׃",
+        english:
+          "Since their dough had no leaven the people baked what they had brought out of Egypt into unleavened loaves For when they had been driven out of Egypt they could not delay and had not prepared any provisions for themselves",
+      },
+      {
+        verse_number: 40,
+        original:
+          "וּמוֹשַׁב֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אֲשֶׁ֥ר יָשְׁב֖וּ בְּמִצְרָ֑יִם שְׁלֹשִׁ֣ים שָׁנָ֔ה וְאַרְבַּ֥ע מֵא֖וֹת שָׁנָֽה׃",
+        english:
+          "Now the duration of the Israelites’ stay in Egypt was 430 years",
+      },
+      {
+        verse_number: 41,
+        original:
+          "וַיְהִ֗י מִקֵּץ֙ שְׁלֹשִׁ֣ים שָׁנָ֔ה וְאַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה וַיְהִ֗י בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה יָֽצְא֛וּ כָּל־ צִבְא֥וֹת יְהוָ֖ה מֵאֶ֥רֶץ מִצְרָֽיִם׃",
+        english:
+          "At the end of the 430 years to the very day all the LORD’s divisions went out of the land of Egypt",
+      },
+      {
+        verse_number: 42,
+        original:
+          "לֵ֣יל שִׁמֻּרִ֥ים הוּא֙ לַֽיהוָ֔ה לְהוֹצִיאָ֖ם מֵאֶ֣רֶץ מִצְרָ֑יִם הֽוּא־ הַלַּ֤יְלָה הַזֶּה֙ לַֽיהוָ֔ה שִׁמֻּרִ֛ים לְכָל־ בְּנֵ֥י יִשְׂרָאֵ֖ל לְדֹרֹתָֽם׃פ",
+        english:
+          "Because the LORD kept a vigil that night to bring them out of the land of Egypt this same night is to be a vigil to the LORD to be observed by all the Israelites for the generations to come",
+      },
+      {
+        verse_number: 43,
+        original:
+          "וַיֹּ֤אמֶר יְהוָה֙ אֶל־ מֹשֶׁ֣ה וְאַהֲרֹ֔ן זֹ֖את חֻקַּ֣ת הַפָּ֑סַח כָּל־ בֶּן־ נֵכָ֖ר לֹא־ יֹ֥אכַל בּֽוֹ׃",
+        english:
+          "And the LORD said to Moses and Aaron This is the statute of the Passover No foreigner is to eat of it",
+      },
+      {
+        verse_number: 44,
+        original:
+          "וְכָל־ עֶ֥בֶד אִ֖ישׁ מִקְנַת־ כָּ֑סֶף וּמַלְתָּ֣ה אֹת֔וֹ אָ֖ז יֹ֥אכַל בּֽוֹ׃",
+        english:
+          "But any slave who has been purchased may eat of it after you have circumcised him",
+      },
+      {
+        verse_number: 45,
+        original: "תּוֹשָׁ֥ב וְשָׂכִ֖יר לֹא־ יֹ֥אכַל־ בּֽוֹ׃",
+        english:
+          "A temporary resident or hired hand shall not eat the Passover",
+      },
+      {
+        verse_number: 46,
+        original:
+          "בְּבַ֤יִת אֶחָד֙ יֵאָכֵ֔ל לֹא־ תוֹצִ֧יא מִן־ הַבַּ֛יִת מִן־ הַבָּשָׂ֖ר ח֑וּצָה וְעֶ֖צֶם לֹ֥א תִשְׁבְּרוּ־ בֽוֹ׃",
+        english:
+          "It must be eaten inside one house You are not to take any of the meat outside the house and you may not break any of the bones",
+      },
+      {
+        verse_number: 47,
+        original: "כָּל־ עֲדַ֥ת יִשְׂרָאֵ֖ל יַעֲשׂ֥וּ אֹתֽוֹ׃",
+        english: "The whole congregation of Israel must celebrate it",
+      },
+      {
+        verse_number: 48,
+        original:
+          "וְכִֽי־ יָג֨וּר אִתְּךָ֜ גֵּ֗ר וְעָ֣שָׂה פֶסַח֮ לַיהוָה֒ הִמּ֧וֹל ל֣וֹ כָל־ זָכָ֗ר וְאָז֙ יִקְרַ֣ב לַעֲשֹׂת֔וֹ וְהָיָ֖ה כְּאֶזְרַ֣ח הָאָ֑רֶץ וְכָל־ עָרֵ֖ל לֹֽא־ יֹ֥אכַל בּֽוֹ׃",
+        english:
+          "If a foreigner resides with you and wants to celebrate the LORD’s Passover all the males in the household must be circumcised then he may come near to celebrate it and he shall be like a native of the land But no uncircumcised man may eat of it",
+      },
+      {
+        verse_number: 49,
+        original:
+          "תּוֹרָ֣ה אַחַ֔ת יִהְיֶ֖ה לָֽאֶזְרָ֑ח וְלַגֵּ֖ר הַגָּ֥ר בְּתוֹכְכֶֽם׃",
+        english:
+          "The same law shall apply to both the native and the foreigner who resides among you",
+      },
+      {
+        verse_number: 50,
+        original:
+          "וַיַּֽעֲשׂ֖וּ כָּל־ בְּנֵ֣י יִשְׂרָאֵ֑ל כַּאֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֶת־ מֹשֶׁ֥ה וְאֶֽת־ אַהֲרֹ֖ן כֵּ֥ן עָשֽׂוּ׃ס",
+        english:
+          "Then all the Israelites did this they did just as the LORD had commanded Moses and Aaron",
+      },
+      {
+        verse_number: 51,
+        original:
+          "וַיְהִ֕י בְּעֶ֖צֶם הַיּ֣וֹם הַזֶּ֑ה הוֹצִ֨יא יְהוָ֜ה אֶת־ בְּנֵ֧י יִשְׂרָאֵ֛ל מֵאֶ֥רֶץ מִצְרַ֖יִם עַל־ צִבְאֹתָֽם׃פ",
+        english:
+          "And on that very day the LORD brought the Israelites out of the land of Egypt by their divisions",
+      },
+    ],
+  };
+  return chapter;
+}
