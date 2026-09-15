@@ -1,3 +1,7 @@
+import { folder_user_root } from "./folder_user_root.mjs";
+import { path_directory } from "./path_directory.mjs";
+import { path_join } from "./path_join.mjs";
+import { text_combine } from "./text_combine.mjs";
 export function py_exe_picture_name() {
   "The python that finishes pictures, ending in a space so a script name follows straight on the end of it.";
   "It is its own python for the same reason the speaking one is: the picture stack is heavy, and keeping it apart from the repo's shared python means an install for one cannot break the other. It sits outside the repo so no peer's commit of the whole tree can sweep it into the public repository.";

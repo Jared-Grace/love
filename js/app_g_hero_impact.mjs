@@ -17,11 +17,7 @@ export function app_g_hero_impact(hero, point) {
   ("Nothing here is waited for. The flash and the rings clear themselves away, and the engulfing begins while they are still spreading, so the strike and the burning read as one blow.");
   let fx = property_get(hero, "fx");
   let container_map = property_get(hero, "container_map");
-  let x = property_get(point, "x");
-  let y = property_get(point, "y");
-  let text = html_pixels_text(x);
-  let text2 = html_pixels_text(y);
-  let at = text_combine_multiple([text, " ", text2]);
+  let at = html_pixels_point_text(point);
   let flash = html_div(fx);
   html_style_assign(flash, {
     position: "absolute",

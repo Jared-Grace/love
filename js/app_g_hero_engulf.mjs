@@ -19,11 +19,7 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
   ("The fire takes hold: the street darkens around the evil person, flames leap up all over them one after another, and they writhe as they glow white, then orange, then black.");
   ("The darkness is what makes the fire bright. The same flames over an ordinary daylight street read as a decoration; with everything else pushed back into shadow they are the only thing on the screen.");
   let fx = property_get(hero, "fx");
-  let x = property_get(point, "x");
-  let y = property_get(point, "y");
-  let text = html_pixels_text(x);
-  let text2 = html_pixels_text(y);
-  let at = text_combine_multiple([text, " ", text2]);
+  let at = html_pixels_point_text(point);
   let dark = html_div(fx);
   html_style_assign(dark, {
     position: "absolute",
