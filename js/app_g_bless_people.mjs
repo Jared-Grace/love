@@ -8,7 +8,7 @@ import { g_genders_without_img } from "./g_genders_without_img.mjs";
 import { g_npcs_ids_ensure } from "./g_npcs_ids_ensure.mjs";
 import { app_g_bless_people_count } from "./app_g_bless_people_count.mjs";
 import { bless_people_place } from "./bless_people_place.mjs";
-import { app_g_bless_person_new } from "./app_g_bless_person_new.mjs";
+import { bless_person_new } from "./bless_person_new.mjs";
 import { bless_homes_ensure } from "./bless_homes_ensure.mjs";
 import { bless_places_ensure } from "./bless_places_ensure.mjs";
 export function app_g_bless_people(
@@ -41,7 +41,7 @@ export function app_g_bless_people(
   let count = app_g_bless_people_count();
   let indexes = range(count);
   function person_new(index) {
-    let person = app_g_bless_person_new(index, genders);
+    let person = bless_person_new(index, genders);
     return person;
   }
   let people = list_map(indexes, person_new);
