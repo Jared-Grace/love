@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { app_ceb_bible_gloss_roots_store_disagreeing_known } from "./app_ceb_bible_gloss_roots_store_disagreeing_known.mjs";
@@ -40,8 +41,7 @@ export async function app_ceb_bible_gloss_roots_store_disagreeing() {
   let silent = 0;
   function word_read(word) {
     let roots = property_get(said, word);
-    let ways = list_size(roots);
-    let one = equal(ways, 1);
+    let one = list_size_equal(roots, 1);
     if (one) {
       return;
     }
