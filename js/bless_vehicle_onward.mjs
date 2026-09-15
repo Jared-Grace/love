@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { bless_vehicle_place } from "./bless_vehicle_place.mjs";
-import { app_g_bless_vehicle_slide } from "./app_g_bless_vehicle_slide.mjs";
+import { bless_vehicle_slide } from "./bless_vehicle_slide.mjs";
 export function bless_vehicle_onward(vehicle, seconds, held) {
   arguments_assert(arguments, 3);
   ("Move one car one square along its lane, and slide it there over the time given.");
@@ -44,5 +44,5 @@ export function bless_vehicle_onward(vehicle, seconds, held) {
   }
   property_set(vehicle, "x", landing);
   bless_vehicle_place(vehicle);
-  app_g_bless_vehicle_slide(vehicle, slide);
+  bless_vehicle_slide(vehicle, slide);
 }
