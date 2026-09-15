@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
@@ -7,7 +8,6 @@ import { equal } from "./equal.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { gloss_word_folded } from "./gloss_word_folded.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
@@ -46,8 +46,7 @@ export function app_ceb_bible_gloss_roots_store_outvoted_chapters_word_read(
       let same = equal(root_folded, folded);
       return same;
     }
-    let agreeing = list_filter(roots, agrees_is);
-    let agreed = list_size(agreeing);
+    let agreed = list_filter_size(roots, agrees_is);
     let unsupported = equal(agreed, 0);
     if (unsupported) {
       return;
