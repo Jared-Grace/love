@@ -1,0 +1,183 @@
+export function bible_glyph_chapter_rosetta_lines_2sa05() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "2SA05",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיָּבֹ֜אוּ כָּל־ שִׁבְטֵ֧י יִשְׂרָאֵ֛ל אֶל־ דָּוִ֖ד חֶבְר֑וֹנָה וַיֹּאמְר֣וּ לֵאמֹ֔ר הִנְנ֛וּ עַצְמְךָ֥ וּֽבְשָׂרְךָ֖ אֲנָֽחְנוּ׃",
+        english:
+          "Then all the tribes of Israel came to David at Hebron and said Here we are your own flesh and blood",
+      },
+      {
+        verse_number: 2,
+        original:
+          "גַּם־ אֶתְמ֣וֹל גַּם־ שִׁלְשׁ֗וֹם בִּהְי֨וֹת שָׁא֥וּל מֶ֙לֶךְ֙ עָלֵ֔ינוּ אַתָּ֗ה הָיִיתָה מוֹצִיא וְהַמֵּבִי אֶת־ יִשְׂרָאֵ֑ל וַיֹּ֨אמֶר יְהוָ֜ה לְךָ֗ אַתָּ֨ה תִרְעֶ֤ה אֶת־ עַמִּי֙ אֶת־ יִשְׂרָאֵ֔ל וְאַתָּ֛ה תִּהְיֶ֥ה לְנָגִ֖יד עַל־ יִשְׂרָאֵֽל׃",
+        english:
+          "Even in times past while Saul was king over us you were the one who led Israel out and brought them back And to you the LORD said You will shepherd My people Israel and you will be ruler over them",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַ֠יָּבֹאוּ כָּל־ זִקְנֵ֨י יִשְׂרָאֵ֤ל אֶל־ הַמֶּ֙לֶךְ֙ חֶבְר֔וֹנָה וַיִּכְרֹ֣ת לָהֶם֩ הַמֶּ֨לֶךְ דָּוִ֥ד בְּרִ֛ית בְּחֶבְר֖וֹן לִפְנֵ֣י יְהוָ֑ה וַיִּמְשְׁח֧וּ אֶת־ דָּוִ֛ד לְמֶ֖לֶךְ עַל־ יִשְׂרָאֵֽל׃פ",
+        english:
+          "So all the elders of Israel came to the king at Hebron where King David made with them a covenant before the LORD And they anointed him king over Israel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "בֶּן־ שְׁלֹשִׁ֥ים שָׁנָ֛ה דָּוִ֖ד בְּמָלְכ֑וֹ אַרְבָּעִ֥ים שָׁנָ֖ה מָלָֽךְ׃",
+        english:
+          "David was thirty years old when he became king and he reigned forty years",
+      },
+      {
+        verse_number: 5,
+        original:
+          "בְּחֶבְרוֹן֙ מָלַ֣ךְ עַל־ יְהוּדָ֔ה שֶׁ֥בַע שָׁנִ֖ים וְשִׁשָּׁ֣ה חֳדָשִׁ֑ים וּבִירוּשָׁלִַ֣ם מָלַ֗ךְ שְׁלֹשִׁ֤ים וְשָׁלֹשׁ֙ שָׁנָ֔ה עַ֥ל כָּל־ יִשְׂרָאֵ֖ל וִיהוּדָֽה׃",
+        english:
+          "In Hebron he reigned over Judah seven years and six months and in Jerusalem he reigned thirty-three years over all Israel and Judah",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וַיֵּ֨לֶךְ הַמֶּ֤לֶךְ וַֽאֲנָשָׁיו֙ יְר֣וּשָׁלִַ֔ם אֶל־ הַיְבֻסִ֖י יוֹשֵׁ֣ב הָאָ֑רֶץ וַיֹּ֨אמֶר לְדָוִ֤ד לֵאמֹר֙ לֹא־ תָב֣וֹא הֵ֔נָּה כִּ֣י אִם־ הֱסִֽירְךָ֗ הַעִוְרִ֤ים וְהַפִּסְחִים֙ לֵאמֹ֔ר לֹֽא־ יָב֥וֹא דָוִ֖ד הֵֽנָּה׃",
+        english:
+          "Now the king and his men marched to Jerusalem against the Jebusites who inhabited the land The Jebusites said to David You will never get in here Even the blind and lame can repel you For they thought David cannot get in here",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַיִּלְכֹּ֣ד דָּוִ֔ד אֵ֖ת מְצֻדַ֣ת צִיּ֑וֹן הִ֖יא עִ֥יר דָּוִֽד׃",
+        english:
+          "Nevertheless David captured the fortress of Zion that is the City of David",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וַיֹּ֨אמֶר דָּוִ֜ד בַּיּ֣וֹם הַה֗וּא כָּל־ מַכֵּ֤ה יְבֻסִי֙ וְיִגַּ֣ע בַּצִּנּ֔וֹר וְאֶת־ הַפִּסְחִים֙ וְאֶת־ הַ֣עִוְרִ֔ים שָׂנְאוּ נֶ֣פֶשׁ דָּוִ֑ד עַל־ כֵּן֙ יֹֽאמְר֔וּ עִוֵּ֣ר וּפִסֵּ֔חַ לֹ֥א יָב֖וֹא אֶל־ הַבָּֽיִת׃",
+        english:
+          "On that day he said Whoever attacks the Jebusites must use the water shaft to reach the lame and blind who are despised by David That is why it is said The blind and the lame will never enter the palace",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֵּ֤שֶׁב דָּוִד֙ בַּמְּצֻדָ֔ה וַיִּקְרָא־ לָ֖הּ עִ֣יר דָּוִ֑ד וַיִּ֤בֶן דָּוִד֙ סָבִ֔יב מִן־ הַמִּלּ֖וֹא וָבָֽיְתָה׃",
+        english:
+          "So David took up residence in the fortress and called it the City of David He built it up all the way around from the supporting terraces inward",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וַיֵּ֥לֶךְ דָּוִ֖ד הָל֣וֹךְ וְגָד֑וֹל וַיהוָ֛ה אֱלֹהֵ֥י צְבָא֖וֹת עִמּֽוֹ׃פ",
+        english:
+          "And David became greater and greater for the LORD God of Hosts was with him",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וַ֠יִּשְׁלַח חִירָ֨ם מֶֽלֶךְ־ צֹ֥ר מַלְאָכִים֮ אֶל־ דָּוִד֒ וַעֲצֵ֣י אֲרָזִ֔ים וְחָרָשֵׁ֣י עֵ֔ץ וְחָֽרָשֵׁ֖י אֶ֣בֶן קִ֑יר וַיִּבְנֽוּ־ בַ֖יִת לְדָוִֽד׃",
+        english:
+          "Now Hiram king of Tyre sent envoys to David along with cedar logs carpenters and stonemasons and they built a palace for David",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וַיֵּ֣דַע דָּוִ֔ד כִּֽי־ הֱכִינ֧וֹ יְהוָ֛ה לְמֶ֖לֶךְ עַל־ יִשְׂרָאֵ֑ל וְכִי֙ נִשֵּׂ֣א מַמְלַכְתּ֔וֹ בַּעֲב֖וּר עַמּ֥וֹ יִשְׂרָאֵֽל׃ס",
+        english:
+          "And David realized that the LORD had established him as king over Israel and had exalted his kingdom for the sake of His people Israel",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וַיִּקַּח֩ דָּוִ֨ד ע֜וֹד פִּֽלַגְשִׁ֤ים וְנָשִׁים֙ מִיר֣וּשָׁלִַ֔ם אַחֲרֵ֖י בֹּא֣וֹ מֵחֶבְר֑וֹן וַיִּוָּ֥לְדּוּ ע֛וֹד לְדָוִ֖ד בָּנִ֥ים וּבָנֽוֹת׃",
+        english:
+          "After he had arrived from Hebron David took more concubines and wives from Jerusalem and more sons and daughters were born to him",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאֵ֗לֶּה שְׁמ֛וֹת הַיִּלֹּדִ֥ים ל֖וֹ בִּירוּשָׁלִָ֑ם שַׁמּ֣וּעַ וְשׁוֹבָ֔ב וְנָתָ֖ן וּשְׁלֹמֹֽה׃",
+        english:
+          "These are the names of the children born to him in Jerusalem Shammua Shobab Nathan Solomon",
+      },
+      {
+        verse_number: 15,
+        original: "וְיִבְחָ֥ר וֶאֱלִישׁ֖וּעַ וְנֶ֥פֶג וְיָפִֽיעַ׃",
+        english: "Ibhar Elishua Nepheg Japhia",
+      },
+      {
+        verse_number: 16,
+        original: "וֶאֱלִישָׁמָ֥ע וְאֶלְיָדָ֖ע וֶאֱלִיפָֽלֶט׃פ",
+        english: "Elishama Eliada and Eliphelet",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיִּשְׁמְע֣וּ פְלִשְׁתִּ֗ים כִּי־ מָשְׁח֨וּ אֶת־ דָּוִ֤ד לְמֶ֙לֶךְ֙ עַל־ יִשְׂרָאֵ֔ל וַיַּעֲל֥וּ כָל־ פְּלִשְׁתִּ֖ים לְבַקֵּ֣שׁ אֶת־ דָּוִ֑ד וַיִּשְׁמַ֣ע דָּוִ֔ד וַיֵּ֖רֶד אֶל־ הַמְּצוּדָֽה׃",
+        english:
+          "When the Philistines heard that David had been anointed king over Israel they all went in search of him but David learned of this and went down to the stronghold",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וּפְלִשְׁתִּ֖ים בָּ֑אוּ וַיִּנָּטְשׁ֖וּ בְּעֵ֥מֶק רְפָאִֽים׃",
+        english:
+          "Now the Philistines had come and spread out in the Valley of Rephaim",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיִּשְׁאַ֨ל דָּוִ֤ד בַּֽיהוָה֙ לֵאמֹ֔ר הַאֶֽעֱלֶה֙ אֶל־ פְּלִשְׁתִּ֔ים הֲתִתְּנֵ֖ם בְּיָדִ֑י וַיֹּ֨אמֶר יְהוָ֤ה אֶל־ דָּוִד֙ עֲלֵ֔ה כִּֽי־ נָתֹ֥ן אֶתֵּ֛ן אֶת־ הַפְּלִשְׁתִּ֖ים בְּיָדֶֽךָ׃",
+        english:
+          "So David inquired of the LORD Should I go up against the Philistines Will You deliver them into my hand Go up replied the LORD for I will surely deliver the Philistines into your hand",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וַיָּבֹ֨א דָוִ֥ד בְּבַֽעַל־ פְּרָצִים֮ וַיַּכֵּ֣ם שָׁ֣ם דָּוִד֒ וַיֹּ֕אמֶר פָּרַ֨ץ יְהוָ֧ה אֶת־ אֹיְבַ֛י לְפָנַ֖י כְּפֶ֣רֶץ מָ֑יִם עַל־ כֵּ֗ן קָרָ֛א שֵֽׁם־ הַמָּק֥וֹם הַה֖וּא בַּ֥עַל פְּרָצִֽים׃",
+        english:
+          "So David went to Baal-perazim where he defeated the Philistines and said Like a bursting flood the LORD has burst out against my enemies before me So he called that place Baal-perazim",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַיַּעַזְבוּ־ שָׁ֖ם אֶת־ עֲצַבֵּיהֶ֑ם וַיִּשָּׂאֵ֥ם דָּוִ֖ד וַאֲנָשָֽׁיו׃פ",
+        english:
+          "There the Philistines abandoned their idols and David and his men carried them away",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיֹּסִ֥פוּ ע֛וֹד פְּלִשְׁתִּ֖ים לַֽעֲל֑וֹת וַיִּנָּֽטְשׁ֖וּ בְּעֵ֥מֶק רְפָאִֽים׃",
+        english:
+          "Once again the Philistines came up and spread out in the Valley of Rephaim",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיִּשְׁאַ֤ל דָּוִד֙ בַּֽיהוָ֔ה וַיֹּ֖אמֶר לֹ֣א תַעֲלֶ֑ה הָסֵב֙ אֶל־ אַ֣חֲרֵיהֶ֔ם וּבָ֥אתָ לָהֶ֖ם מִמּ֥וּל בְּכָאִֽים׃",
+        english:
+          "So David inquired of the LORD who answered Do not march straight up but circle around behind them and attack them in front of the balsam trees",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וִ֠יהִי בְּשָׁמְעֲךָ אֶת־ ק֧וֹל צְעָדָ֛ה בְּרָאשֵׁ֥י הַבְּכָאִ֖ים אָ֣ז תֶּחֱרָ֑ץ כִּ֣י אָ֗ז יָצָ֤א יְהוָה֙ לְפָנֶ֔יךָ לְהַכּ֖וֹת בְּמַחֲנֵ֥ה פְלִשְׁתִּֽים׃",
+        english:
+          "As soon as you hear the sound of marching in the tops of the balsam trees move quickly because this will mean that the LORD has gone out before you to strike the camp of the Philistines",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וַיַּ֤עַשׂ דָּוִד֙ כֵּ֔ן כַּאֲשֶׁ֥ר צִוָּ֖הוּ יְהוָ֑ה וַיַּךְ֙ אֶת־ פְּלִשְׁתִּ֔ים מִגֶּ֖בַע עַד־ בֹּאֲךָ֥ גָֽזֶר׃פ",
+        english:
+          "So David did as the LORD had commanded him and he struck down the Philistines all the way from Gibeon to Gezer",
+      },
+    ],
+  };
+  return chapter;
+}
