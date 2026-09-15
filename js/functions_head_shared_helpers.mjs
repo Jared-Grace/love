@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { number_text_equal_is } from "./number_text_equal_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { functions_head_duplicates } from "./functions_head_duplicates.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { function_parse_declaration } from "./function_parse_declaration.mjs";
 import { js_function_declaration_shared_run_read_or_null } from "./js_function_declaration_shared_run_read_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 export async function functions_head_shared_helpers(size) {
@@ -31,8 +31,7 @@ export async function functions_head_shared_helpers(size) {
       if (unusable_is) {
         continue;
       }
-      let run = property_get(shared, "run");
-      let run_size = list_size(run);
+      let run_size = property_list_size(shared, "run");
       let whole_is = number_text_equal_is(run_size, size);
       if (whole_is) {
         list_add(helpers, f_name);
