@@ -15,7 +15,7 @@ export function app_code_line_shape(code) {
   arguments_assert(arguments, 1);
   ("How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.");
   ("The lessons at the front of the course hand out words rather than lines - For God so, TheWorld, God-so-loved - and several of those read in as code even so, because a hyphen between two words is a subtraction and the word in between two others is an operator JS knows. A line is counted here only when reading it in finds a written-out value on it: a number, a piece of text in quotes, a true or a false. That is what every lesson about solving a line has and no lesson about how names are spelled has.");
-  ("Nothing is said about which operators they are. Two lines carrying the same count are the same size to a learner holding them in their head, and which two operators those are is a question the lesson itself answers. The one exception is a power, which is counted as the multiplications it stands for, because 3 ** 4 is worked out as three of them.");
+  ("Nothing is said about which operators they are. Two lines carrying the same count are the same size to a learner holding them in their head, and which two operators those are is a question the lesson itself answers. The one exception is a power, which is counted as the multiplications it stands for, because 5 ** 4 is worked out as three of them.");
   let ast = js_parse_try(code);
   let unread = null_is(ast);
   if (unread) {
