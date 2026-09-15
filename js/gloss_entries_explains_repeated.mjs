@@ -1,9 +1,8 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { list_map_filter_null_not_is } from "./list_map_filter_null_not_is.mjs";
 import { list_tally_ranked } from "./list_tally_ranked.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 export function gloss_entries_explains_repeated(entries) {
   "Every explanation among a run of word explanations that some other word in the same run was given word for word, commonest first, each named beside how many words were handed it.";
@@ -18,8 +17,7 @@ export function gloss_entries_explains_repeated(entries) {
   let explains = list_map_filter_null_not_is(entries, explain_read);
   let ranked = list_tally_ranked(explains);
   function shared_is(row) {
-    let count = property_get(row, "count");
-    let more_than_once = greater_than(count, 1);
+    let more_than_once = property_greater_than(row, "count", 1);
     return more_than_once;
   }
   let repeated = list_filter(ranked, shared_is);
