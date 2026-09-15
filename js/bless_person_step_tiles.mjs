@@ -12,7 +12,7 @@ import { list_filter } from "./list_filter.mjs";
 import { bless_person_step_footway } from "./bless_person_step_footway.mjs";
 import { bless_home_reaches } from "./bless_home_reaches.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-export function app_g_bless_person_step_tiles(world, person) {
+export function bless_person_step_tiles(world, person) {
   arguments_assert(arguments, 2);
   let player = property_get(world, "player");
   let taken = g_coordinates_key(player);
