@@ -67,7 +67,7 @@ export function app_code_lesson_expression_string_order_equal() {
     forwards_answer_count_override: 2,
   });
   return lesson;
-  function above(root) {
+  function above(root, context) {
     "three teach boxes then the refreshable examples. Box 1 recalls that the learner already compared strings with < and >, and that when two strings are equal both are false. Box 2 teaches <= and >= DIFFERENTIALLY - each is the same as the < or > they already know, with the one change named at the point it happens: where the strict operator is false (the two strings equal), this one is true instead. Naming both the before value (false) and the after value (true) inline is what makes the delta line self-contained, on top of the recall box's general premise. Box 3 restates the same fact POSITIVELY - <= means comes-before-or-equal, >= means comes-after-or-equal. Two framings of one small addition on purpose: different learners latch onto different explanations, and a simple labelled line is cheap to skim past for anyone who already got it. What is avoided is the earlier version's re-definition of every case from scratch, which buried the one new thing. No worked examples here: the four refreshable examples below demonstrate the cases.";
     let recall = app_code_container_light_blue(root);
     app_code_prose_code_line(recall, [
@@ -76,13 +76,13 @@ export function app_code_lesson_expression_string_order_equal() {
       ["text", " and "],
       ["code", ">"],
     ]);
-    app_code_prose_code_line(recall, [
-      ["text", "Remember, when two strings are equal, "],
-      ["code", "<"],
-      ["text", " and "],
-      ["code", ">"],
-      ["text", " are both "],
-      ["code", "false"],
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_string_trichotomy, [
+      "when two strings are equal, ",
+      "<",
+      " and ",
+      ">",
+      " are both ",
+      "false",
     ]);
     let addition = app_code_container_light_blue(root);
     app_code_prose_code_line(addition, [

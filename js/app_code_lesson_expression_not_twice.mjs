@@ -51,7 +51,7 @@ export function app_code_lesson_expression_not_twice() {
   let symbol_twice = text_combine(symbol, symbol);
   let lesson_symbol = app_code_lesson_symbol_set(lesson, symbol_twice);
   return lesson_symbol;
-  function above(root) {
+  function above(root, context) {
     "the rule, then the nearer ! worked out first, then the outer one, then what the pair adds up to. Worked from true, because that is the keyword the earlier ! lesson opened on.";
     "THE PARENTHESISED SPELLING IS RECALLED BEFORE ANY SOLVING STARTS. The lesson before this one showed the same line written with parentheses, and it is that spelling which says which of two identical marks is the nearer one. Without it the very next line asks the learner to solve the inner ! first with nothing on the screen saying which of the two is inner, so they take it on trust; with it they can see it. It opens with Remember because they have met it.";
     "RECALLED IN PLAIN BLACK AND WHITE, NOT IN THE COLOURS IT WAS TAUGHT IN. The colours were marks put on the line to let sentences point at one of two identical symbols, and there are no such sentences on this card. Brought back here they would be the one thing on the screen a learner could not account for, and accounting for them would cost more than the line is being brought back for.";
@@ -68,10 +68,11 @@ export function app_code_lesson_expression_not_twice() {
       symbol,
     ]);
     html_div_cycle_code(c, ["For example we can write ", twice_true]);
-    let line_remember = html_div(c);
-    html_span_text(line_remember, "Remember: we can write ");
-    html_span_text_code_dark(line_remember, twice_true);
-    html_span_text(line_remember, " as ");
+    let line_remember = app_code_remember_from_lesson(c, context, app_code_lesson_expression_choose_order_not_twice, [
+      "we can write ",
+      twice_true,
+      " as ",
+    ]);
     app_code_lesson_expression_choose_order_not_twice_rewritten_plain(
       line_remember,
     );
