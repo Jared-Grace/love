@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 import { app_code_lesson_swapping_same_numbers_line } from "./app_code_lesson_swapping_same_numbers_line.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
@@ -37,13 +39,12 @@ export function app_code_lesson_expression_swapping_order() {
   function above(root, context) {
     "show that ordering comparisons flip when swapped, with the reason: if 2 < 3 is true then 3 < 2 is false, because the bigger number would now be the smaller one. + and * are recalled as the swappers";
     let intro = app_code_container_light_blue(root);
-    app_code_remember_from_lesson(intro, context, app_code_lesson_expression_less_than, [
-      "",
-      "<",
-      " and ",
-      ">",
-      " ask which number is smaller or bigger",
-    ]);
+    app_code_remember_from_lesson(
+      intro,
+      context,
+      app_code_lesson_expression_less_than,
+      ["", "<", " and ", ">", " ask which number is smaller or bigger"],
+    );
     let less = app_code_container_light_blue(root);
     html_div_cycle_code(less, [
       "",
