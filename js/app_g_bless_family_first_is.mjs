@@ -1,7 +1,7 @@
 import { bless_hash_family_first_celebrate } from "./bless_hash_family_first_celebrate.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_family_first } from "./bless_hash_family_first.mjs";
-import { app_g_bless_dev_opening_is } from "./app_g_bless_dev_opening_is.mjs";
+import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 export function app_g_bless_family_first_is() {
   arguments_assert(arguments, 0);
   ("Whether this visit asked for a world that opens with the first household two thirds");
@@ -21,6 +21,6 @@ export function app_g_bless_family_first_is() {
   let word = bless_hash_family_first();
   let celebrate = bless_hash_family_first_celebrate();
   let words = [word, celebrate];
-  let asked = app_g_bless_dev_opening_is(words);
+  let asked = bless_dev_opening_is(words);
   return asked;
 }
