@@ -1,3 +1,7 @@
+import { js_colors_written_screen } from "./js_colors_written_screen.mjs";
+import { property_get } from "./property_get.mjs";
+import { list_size } from "./list_size.mjs";
+import { object_property_names } from "./object_property_names.mjs";
 import { colors_palette_outside_files } from "./colors_palette_outside_files.mjs";
 import { color_palette_outside_baseline_path } from "./color_palette_outside_baseline_path.mjs";
 import { baseline_names_gate_generic } from "./baseline_names_gate_generic.mjs";
@@ -13,5 +17,14 @@ export async function color_palette_outside_gate_run() {
     "these files spell a screen colour of their own — ask an app_shared_color_ function for it, adding one to the palette if none fits",
     name_write,
   );
-  return result;
+  let written = await js_colors_written_screen();
+  let spellings = object_property_names(written);
+  let added = property_get(result, "added");
+  let stale = property_get(result, "stale");
+  let r = {
+    spellings: list_size(spellings),
+    added,
+    stale,
+  };
+  return r;
 }
