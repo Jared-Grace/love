@@ -1,8 +1,8 @@
+import { equal_not } from "./equal_not.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
 import { text_includes_any } from "./text_includes_any.mjs";
 import { not } from "./not.mjs";
-import { equal } from "./equal.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join } from "./list_join.mjs";
@@ -26,8 +26,7 @@ export function gloss_explain_claim_sentences_stripped(
     let claimed = text_includes_any(sentence, claims);
     let keep = not(claimed);
     if (keep) {
-      let blank = equal(sentence, "");
-      let content = not(blank);
+      let content = equal_not(sentence, "");
       if (content) {
         list_add(kept, piece);
       }
