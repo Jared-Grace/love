@@ -1,9 +1,9 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_meaning_parts } from "./app_en_learn_bible_gloss_urdu_explain_meaning_parts.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is } from "./app_en_learn_bible_gloss_urdu_explain_occurrence_bound_is.mjs";
 import { app_en_learn_bible_gloss_urdu_pointing_cores } from "./app_en_learn_bible_gloss_urdu_pointing_cores.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { list_any } from "./list_any.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_sentences } from "./app_en_learn_bible_gloss_urdu_explain_sentences.mjs";
@@ -32,8 +32,7 @@ export function app_en_learn_bible_gloss_urdu_pointing_explain_fresh(
   }
   let cores = app_en_learn_bible_gloss_urdu_pointing_cores();
   function core_not_is(part) {
-    let known = list_includes(cores, part);
-    let said = not(known);
+    let said = list_includes_not(cores, part);
     return said;
   }
   let says_something = list_any(borrowed, core_not_is);
