@@ -17,7 +17,7 @@ import { bless_person_tile_is } from "./bless_person_tile_is.mjs";
 import { app_g_hero_kill } from "./app_g_hero_kill.mjs";
 import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
-import { app_g_bless_person_slide } from "./app_g_bless_person_slide.mjs";
+import { bless_person_slide } from "./bless_person_slide.mjs";
 export async function app_g_hero_evil_step(hero, evil) {
   arguments_assert(arguments, 2);
   ("One step of the hunt, handing back how long to wait before the next.");
@@ -57,6 +57,6 @@ export async function app_g_hero_evil_step(hero, evil) {
   bless_person_crossing_set(evil);
   app_shared_game_npc_move(evil, to, 0);
   let seconds = divide(pace, 1000);
-  app_g_bless_person_slide(evil, seconds);
+  bless_person_slide(evil, seconds);
   return pace;
 }

@@ -4,7 +4,7 @@ import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs
 import { g_img_square_style_transition_seconds } from "./g_img_square_style_transition_seconds.mjs";
 import { g_img_square_style_transition_timing } from "./g_img_square_style_transition_timing.mjs";
 import { bless_step_timing } from "./bless_step_timing.mjs";
-export function app_g_bless_person_slide(person, seconds) {
+export function bless_person_slide(person, seconds) {
   arguments_assert(arguments, 2);
   ("How long this person's step takes to cross the tile - said for them, and not taken");
   ("from the one length the map gives every square.");
