@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { app_ceb_bible_gloss_words_dash_pieces_absent_words } from "./app_ceb_bible_gloss_words_dash_pieces_absent_words.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { property_set } from "./property_set.mjs";
@@ -5,9 +6,7 @@ import { each } from "./each.mjs";
 import { gloss_chapters_roots_claimed_distinct } from "./gloss_chapters_roots_claimed_distinct.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
 import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
@@ -28,8 +27,7 @@ export async function app_ceb_bible_gloss_words_dash_pieces_rooted() {
   );
   let lowered = list_map_unique(claimed, text_lower_to);
   function phantom_is(root) {
-    let held = property_get_or_null(phantom, root);
-    let b = null_is(held);
+    let b = property_null_is(phantom, root);
     let there = not(b);
     return there;
   }
