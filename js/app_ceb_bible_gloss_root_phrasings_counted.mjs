@@ -1,10 +1,10 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_claimed } from "./gloss_explain_roots_claimed.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
@@ -33,8 +33,7 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
     let explain = property_get(found, "explain");
     explained = add(explained, 1);
     let claimed = gloss_explain_roots_claimed(explain);
-    let claimed_count = list_size(claimed);
-    let claimed_empty = equal(claimed_count, 0);
+    let claimed_empty = list_size_equal(claimed, 0);
     if (not(claimed_empty)) {
       worded_root = add(worded_root, 1);
       return;
@@ -45,8 +44,7 @@ export async function app_ceb_bible_gloss_root_phrasings_counted() {
       return;
     }
     let named = gloss_explain_roots_named(explain);
-    let named_count = list_size(named);
-    let named_empty = equal(named_count, 0);
+    let named_empty = list_size_equal(named, 0);
     if (not(named_empty)) {
       further_named = add(further_named, 1);
       let a = list_size(further_shown);
