@@ -10,7 +10,7 @@ import { app_shared_game_div_map_tiles_add_rows } from "./app_shared_game_div_ma
 import { app_shared_game_map_room_new } from "./app_shared_game_map_room_new.mjs";
 import { app_shared_game_npc_img_set } from "./app_shared_game_npc_img_set.mjs";
 import { g_character_img } from "./g_character_img.mjs";
-export function app_g_bless_map(container, world) {
+export function bless_map(container, world) {
   arguments_assert(arguments, 2);
   ("The whole world drawn full screen, the way the gospel game draws its own: a room of open");
   ("water, the grid of tiles inside it, everybody standing where they stand, and the player");
