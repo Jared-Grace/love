@@ -1,3 +1,4 @@
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_names_men } from "./bible_names_men.mjs";
 import { bible_names_women } from "./bible_names_women.mjs";
@@ -8,8 +9,6 @@ import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_size } from "./text_size.mjs";
 import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 export function reply_names_bible() {
   "Every name of a person in the Bible, written the way somebody typing a message would write it: all in small letters, one spelling each, and only the ones that are a single plain word.";
   "★ IT PUBLISHES NOBODY, AND THAT IS THE WHOLE REASON IT IS THE FIRST SOURCE REACHED FOR. A list of the names the people writing in actually have is that list of people, put in a public repository, and it grows by one real person every time somebody new writes. These names have been in print for two thousand years, and a person recognised by one of them is recognised by a word that millions of people share.";
@@ -36,7 +35,6 @@ export function reply_names_bible() {
     }
     list_add(names, lower);
   }
-  let unique = list_unique(names);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(names);
   return sorted;
 }
