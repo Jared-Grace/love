@@ -1,9 +1,9 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { gloss_chapters_stored } from "./gloss_chapters_stored.mjs";
 import { gloss_chapter_pointers_dangling_repair } from "./gloss_chapter_pointers_dangling_repair.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_map_async } from "./list_map_async.mjs";
 import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_map_sum } from "./list_map_sum.mjs";
 export async function gloss_pointers_dangling_repair_wordings(
@@ -32,8 +32,7 @@ export async function gloss_pointers_dangling_repair_wordings(
   }
   let chapters = await list_map_async(chapter_codes, chapter_repair);
   function moved_is(chapter) {
-    let words = property_get(chapter, "words");
-    let moved = greater_than(words, 0);
+    let moved = property_greater_than(chapter, "words", 0);
     return moved;
   }
   function words_read(chapter) {
