@@ -367,6 +367,7 @@ import { bible_glyph_chapter_jos06 } from "./bible_glyph_chapter_jos06.mjs";
 import { bible_glyph_chapter_lam01 } from "./bible_glyph_chapter_lam01.mjs";
 import { bible_glyph_chapter_lam02 } from "./bible_glyph_chapter_lam02.mjs";
 import { bible_glyph_chapter_lam03 } from "./bible_glyph_chapter_lam03.mjs";
+import { bible_glyph_chapter_lam04 } from "./bible_glyph_chapter_lam04.mjs";
 export function bible_glyph_chapters() {
   "Every picture Bible chapter written so far, given as its chapter code and its shorthand.";
   "THE FOURTH WAS MEASURED AGAINST FOUR OTHERS rather than measured alone, which is the step past what the third one did. John three was asked of the table and the answer was taken; John fourteen was picked because five candidates were asked and it came back highest, and because its gaps turned out to be grammar rather than vocabulary. A single measurement tells you whether one chapter is thin. Comparing them is what actually chooses.";
@@ -875,6 +876,7 @@ export function bible_glyph_chapters() {
   let three_hundred_and_sixty_fifth = bible_glyph_chapter_lam01();
   let three_hundred_and_sixty_sixth = bible_glyph_chapter_lam02();
   let three_hundred_and_sixty_seventh = bible_glyph_chapter_lam03();
+  let three_hundred_and_sixty_eighth = bible_glyph_chapter_lam04();
   let chapters = [
     first,
     second,
@@ -1243,6 +1245,7 @@ export function bible_glyph_chapters() {
     three_hundred_and_sixty_fifth,
     three_hundred_and_sixty_sixth,
     three_hundred_and_sixty_seventh,
+    three_hundred_and_sixty_eighth,
   ];
   return chapters;
 }
