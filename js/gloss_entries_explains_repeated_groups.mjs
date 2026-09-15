@@ -1,3 +1,4 @@
+import { property_list_map } from "./property_list_map.mjs";
 import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -27,8 +28,7 @@ export function gloss_entries_explains_repeated_groups(entries) {
   let repeated = list_filter(grouped, group_shared_is);
   function group_read(group) {
     let explain = property_get(group, "key");
-    let items = property_get(group, "items");
-    let words = list_map(items, gloss_entry_word_read);
+    let words = property_list_map(group, "items", gloss_entry_word_read);
     let r = {
       explain,
       words,
