@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained } from "./app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplained.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { add } from "./add.mjs";
@@ -13,7 +14,6 @@ import { each } from "./each.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { text_size } from "./text_size.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { greater_than } from "./greater_than.mjs";
 export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
   "Every word the Cebuano gloss store takes back to a root in one place and leaves without one in another, gathered by the word, with the roots it did name and the count of entries that went without.";
@@ -73,8 +73,7 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named() {
       let long = greater_than_equal(letters, 4);
       return long;
     }
-    let told = list_filter(roots, root_told_is);
-    let count = list_size(told);
+    let count = list_filter_size(roots, root_told_is);
     let none = equal(count, 0);
     if (none) {
       return;
