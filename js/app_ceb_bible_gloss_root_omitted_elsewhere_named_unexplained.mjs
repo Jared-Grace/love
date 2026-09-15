@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -7,8 +8,6 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { list_get } from "./list_get.mjs";
 import { gloss_chapters_roots_named_entries_generic } from "./gloss_chapters_roots_named_entries_generic.mjs";
@@ -39,8 +38,7 @@ export async function app_ceb_bible_gloss_root_omitted_elsewhere_named_unexplain
       property_set(by_word, lowered, made);
       held = made;
     }
-    let count = list_size(claimed);
-    let empty = equal(count, 0);
+    let empty = list_size_equal(claimed, 0);
     if (empty) {
       let bare = property_get(held, "bare");
       let value = add(bare, 1);
