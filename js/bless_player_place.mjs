@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { list_middle } from "./list_middle.mjs";
 import { list_first_property } from "./list_first_property.mjs";
 import { property_set } from "./property_set.mjs";
-export function app_g_bless_player_place(player, block) {
+export function bless_player_place(player, block) {
   arguments_assert(arguments, 2);
   ("Stands the player on the pavement outside the middle door of the middle building of a");
   ("block, looking at it.");
