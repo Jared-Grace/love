@@ -19,7 +19,7 @@ import { app_g_hero_tapped } from "./app_g_hero_tapped.mjs";
 import { html_on } from "./html_on.mjs";
 import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { bless_people_walk } from "./bless_people_walk.mjs";
-import { app_g_bless_vehicles_drive } from "./app_g_bless_vehicles_drive.mjs";
+import { bless_vehicles_drive } from "./bless_vehicles_drive.mjs";
 import { app_g_hero_evil_spawn } from "./app_g_hero_evil_spawn.mjs";
 export function app_g_hero_play(container_map) {
   arguments_assert(arguments, 1);
@@ -75,7 +75,7 @@ export function app_g_hero_play(container_map) {
   render();
   app_shared_game_player_center(player, player_img_c, div_map);
   bless_people_walk(world, render);
-  app_g_bless_vehicles_drive(world, container_map);
+  bless_vehicles_drive(world, container_map);
   app_g_hero_evil_spawn(hero);
   return hero;
 }
