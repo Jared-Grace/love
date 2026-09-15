@@ -1,4 +1,4 @@
-import { app_g_bless_cover_lift } from "./app_g_bless_cover_lift.mjs";
+import { bless_cover_lift } from "./bless_cover_lift.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_cover } from "./app_g_bless_cover.mjs";
 import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
@@ -23,6 +23,6 @@ export async function app_g_bless_overlay_loaded(container_map) {
   ("outcome than a game with one square missing from it.");
   let cover = app_g_bless_cover();
   let transfer = await app_g_bless_overlay(container_map);
-  await app_g_bless_cover_lift(container_map, cover);
+  await bless_cover_lift(container_map, cover);
   return transfer;
 }
