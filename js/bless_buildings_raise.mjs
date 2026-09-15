@@ -6,7 +6,7 @@ import { property_get } from "./property_get.mjs";
 import { app_g_bless_tiles_pave } from "./app_g_bless_tiles_pave.mjs";
 import { bless_building_face } from "./bless_building_face.mjs";
 import { each_index } from "./each_index.mjs";
-export function app_g_bless_buildings_raise(rows, buildings, block) {
+export function bless_buildings_raise(rows, buildings, block) {
   arguments_assert(arguments, 3);
   ("Writes a whole row of buildings into the ground - each one roofed the same, walled in");
   ("its own material, and the doorways along the front of it left in that same material for");
