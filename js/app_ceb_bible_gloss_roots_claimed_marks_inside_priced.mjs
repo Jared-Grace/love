@@ -1,8 +1,8 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
@@ -37,8 +37,7 @@ export async function app_ceb_bible_gloss_roots_claimed_marks_inside_priced() {
   function entry_read(found) {
     let entry = property_get(found, "entry");
     let claimed = property_get(found, "claimed");
-    let claimed_count = list_size(claimed);
-    let empty = equal(claimed_count, 0);
+    let empty = list_size_equal(claimed, 0);
     if (empty) {
       return;
     }
