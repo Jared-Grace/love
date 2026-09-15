@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_on } from "./html_on.mjs";
 import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
-import { app_g_bless_people_walk } from "./app_g_bless_people_walk.mjs";
+import { bless_people_walk } from "./bless_people_walk.mjs";
 import { app_shared_game_overlay_container } from "./app_shared_game_overlay_container.mjs";
 export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   arguments_assert(arguments, 3);
@@ -18,7 +18,7 @@ export function app_g_bless_overlay_transfer(r, tapped, container_map) {
   ("the crowd is set walking before the prayer goes up rather than after the amen, so the");
   ("world the player uncovers is one already in motion rather than one that starts when they");
   ("look at it");
-  app_g_bless_people_walk(world, render);
+  bless_people_walk(world, render);
   ("and the traffic starts with them, so the street comes to life as one street rather than");
   ("as a pavement that moves and a road that waits");
   app_g_bless_vehicles_drive(world, container_map);
