@@ -1,10 +1,10 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { add } from "./add.mjs";
-import { null_is } from "./null_is.mjs";
 import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
@@ -31,8 +31,7 @@ export function gloss_entries_pointers_dangling(entries, lambda$pointer_is) {
       let pointer = lambda$pointer_is(explain);
       if (pointer) {
         pointing = add(pointing, 1);
-        let earlier = property_get_or_null(said, folded);
-        let alone = null_is(earlier);
+        let alone = property_null_is(said, folded);
         if (alone) {
           dangling = add(dangling, 1);
           list_add(words, folded);
