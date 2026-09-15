@@ -259,7 +259,7 @@ export function bible_glyph_chapter_isa35() {
           "be",
           "there,",
           "and",
-          "$no_entry",
+          "no",
           "vicious",
           "$sprout",
           "will",
