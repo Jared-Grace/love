@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { subtract } from "./subtract.mjs";
 import { gloss_chapters_roots_quoted_only } from "./gloss_chapters_roots_quoted_only.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -5,7 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
@@ -30,8 +30,7 @@ export async function app_ceb_bible_gloss_quoted_only_rooted_named(
     sightings = add(sightings, 1);
     let explain = property_get(finding, "explain");
     let named = gloss_explain_roots_named(explain);
-    let count = list_size(named);
-    let none = equal(count, 0);
+    let none = list_size_equal(named, 0);
     if (none) {
       return;
     }
