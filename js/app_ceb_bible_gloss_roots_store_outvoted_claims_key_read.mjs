@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_join } from "./list_join.mjs";
@@ -7,7 +8,6 @@ import { property_set } from "./property_set.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { list_size } from "./list_size.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows) {
   arguments_assert(arguments, 1);
@@ -39,8 +39,7 @@ export function app_ceb_bible_gloss_roots_store_outvoted_claims_key_read(rows) {
   let listed = [];
   function key_read(key) {
     let claim = property_get(claims, key);
-    let chapters = property_get(claim, "chapters");
-    let value = list_size(chapters);
+    let value = property_list_size(claim, "chapters");
     property_set(claim, "count", value);
     list_add(listed, claim);
   }
