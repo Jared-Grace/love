@@ -1,0 +1,192 @@
+export function bible_glyph_chapter_rosetta_lines_num06() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM06",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "דַּבֵּר֙ אֶל־ בְּנֵ֣י יִשְׂרָאֵ֔ל וְאָמַרְתָּ֖ אֲלֵהֶ֑ם אִ֣ישׁ אֽוֹ־ אִשָּׁ֗ה כִּ֤י יַפְלִא֙ לִנְדֹּר֙ נֶ֣דֶר נָזִ֔יר לְהַזִּ֖יר לַֽיהוָֽה׃",
+        english:
+          "Speak to the Israelites and tell them that if a man or woman makes a special vow the vow of a Nazirite to separate himself to the LORD",
+      },
+      {
+        verse_number: 3,
+        original:
+          "מִיַּ֤יִן וְשֵׁכָר֙ יַזִּ֔יר חֹ֥מֶץ יַ֛יִן וְחֹ֥מֶץ שֵׁכָ֖ר לֹ֣א יִשְׁתֶּ֑ה וְכָל־ מִשְׁרַ֤ת עֲנָבִים֙ לֹ֣א יִשְׁתֶּ֔ה וַעֲנָבִ֛ים לַחִ֥ים וִיבֵשִׁ֖ים לֹ֥א יֹאכֵֽל׃",
+        english:
+          "he is to abstain from wine and strong drink He must not drink vinegar made from wine or strong drink and he must not drink any grape juice or eat fresh grapes or raisins",
+      },
+      {
+        verse_number: 4,
+        original:
+          "כֹּ֖ל יְמֵ֣י נִזְר֑וֹ מִכֹּל֩ אֲשֶׁ֨ר יֵעָשֶׂ֜ה מִגֶּ֣פֶן הַיַּ֗יִן מֵחַרְצַנִּ֛ים וְעַד־ זָ֖ג לֹ֥א יֹאכֵֽל׃",
+        english:
+          "All the days of his separation he is not to eat anything that comes from the grapevine not even the seeds or skins",
+      },
+      {
+        verse_number: 5,
+        original:
+          "כָּל־ יְמֵי֙ נֶ֣דֶר נִזְר֔וֹ תַּ֖עַר לֹא־ יַעֲבֹ֣ר עַל־ רֹאשׁ֑וֹ עַד־ מְלֹ֨את הַיָּמִ֜ם אֲשֶׁר־ יַזִּ֤יר לַיהוָה֙ קָדֹ֣שׁ יִהְיֶ֔ה גַּדֵּ֥ל פֶּ֖רַע שְׂעַ֥ר רֹאשֽׁוֹ׃",
+        english:
+          "For the entire period of his vow of separation no razor shall touch his head He must be holy until the time of his separation to the LORD is complete he must let the hair of his head grow long",
+      },
+      {
+        verse_number: 6,
+        original:
+          "כָּל־ יְמֵ֥י הַזִּיר֖וֹ לַיהוָ֑ה עַל־ נֶ֥פֶשׁ מֵ֖ת לֹ֥א יָבֹֽא׃",
+        english:
+          "Throughout the days of his separation to the LORD he must not go near a dead body",
+      },
+      {
+        verse_number: 7,
+        original:
+          "לְאָבִ֣יו וּלְאִמּ֗וֹ לְאָחִיו֙ וּלְאַ֣חֹת֔וֹ לֹא־ יִטַּמָּ֥א לָהֶ֖ם בְּמֹתָ֑ם כִּ֛י נֵ֥זֶר אֱלֹהָ֖יו עַל־ רֹאשֽׁוֹ׃",
+        english:
+          "Even if his father or mother or brother or sister should die he is not to defile himself because the symbol of consecration to his God is upon his head",
+      },
+      {
+        verse_number: 8,
+        original: "כֹּ֖ל יְמֵ֣י נִזְר֑וֹ קָדֹ֥שׁ ה֖וּא לַֽיהוָֽה׃",
+        english: "Throughout the time of his separation he is holy to the LORD",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְכִֽי־ יָמ֨וּת מֵ֤ת עָלָיו֙ בְּפֶ֣תַע פִּתְאֹ֔ם וְטִמֵּ֖א רֹ֣אשׁ נִזְר֑וֹ וְגִלַּ֤ח רֹאשׁוֹ֙ בְּי֣וֹם טָהֳרָת֔וֹ בַּיּ֥וֹם הַשְּׁבִיעִ֖י יְגַלְּחֶֽנּוּ׃",
+        english:
+          "If someone suddenly dies in his presence and defiles his consecrated head of hair he must shave his head on the day of his cleansing the seventh day",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וּבַיּ֣וֹם הַשְּׁמִינִ֗י יָבִא֙ שְׁתֵּ֣י תֹרִ֔ים א֥וֹ שְׁנֵ֖י בְּנֵ֣י יוֹנָ֑ה אֶל־ הַכֹּהֵ֔ן אֶל־ פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד׃",
+        english:
+          "On the eighth day he must bring two turtledoves or two young pigeons to the priest at the entrance to the Tent of Meeting",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְעָשָׂ֣ה הַכֹּהֵ֗ן אֶחָ֤ד לְחַטָּאת֙ וְאֶחָ֣ד לְעֹלָ֔ה וְכִפֶּ֣ר עָלָ֔יו מֵאֲשֶׁ֥ר חָטָ֖א עַל־ הַנָּ֑פֶשׁ וְקִדַּ֥שׁ אֶת־ רֹאשׁ֖וֹ בַּיּ֥וֹם הַהֽוּא׃",
+        english:
+          "And the priest is to offer one as a sin offering and the other as a burnt offering to make atonement for him because he has sinned by being in the presence of the dead body On that day he must consecrate his head again",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהִזִּ֤יר לַֽיהוָה֙ אֶת־ יְמֵ֣י נִזְר֔וֹ וְהֵבִ֛יא כֶּ֥בֶשׂ בֶּן־ שְׁנָת֖וֹ לְאָשָׁ֑ם וְהַיָּמִ֤ים הָרִאשֹׁנִים֙ יִפְּל֔וּ כִּ֥י טָמֵ֖א נִזְרֽוֹ׃",
+        english:
+          "He must rededicate his time of separation to the LORD and bring a year-old male lamb as a guilt offering But the preceding days shall not be counted because his separation was defiled",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְזֹ֥את תּוֹרַ֖ת הַנָּזִ֑יר בְּי֗וֹם מְלֹאת֙ יְמֵ֣י נִזְר֔וֹ יָבִ֣יא אֹת֔וֹ אֶל־ פֶּ֖תַח אֹ֥הֶל מוֹעֵֽד׃",
+        english:
+          "Now this is the law of the Nazirite when his time of separation is complete He must be brought to the entrance to the Tent of Meeting",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְהִקְרִ֣יב אֶת־ קָרְבָּנ֣וֹ לַיהוָ֡ה כֶּבֶשׂ֩ בֶּן־ שְׁנָת֨וֹ תָמִ֤ים אֶחָד֙ לְעֹלָ֔ה וְכַבְשָׂ֨ה אַחַ֧ת בַּת־ שְׁנָתָ֛הּ תְּמִימָ֖ה לְחַטָּ֑את וְאַֽיִל־ אֶחָ֥ד תָּמִ֖ים לִשְׁלָמִֽים׃",
+        english:
+          "and he is to present an offering to the LORD of an unblemished year-old male lamb as a burnt offering an unblemished year-old female lamb as a sin offering and an unblemished ram as a peace offering",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְסַ֣ל מַצּ֗וֹת סֹ֤לֶת חַלֹּת֙ בְּלוּלֹ֣ת בַּשֶּׁ֔מֶן וּרְקִיקֵ֥י מַצּ֖וֹת מְשֻׁחִ֣ים בַּשָּׁ֑מֶן וּמִנְחָתָ֖ם וְנִסְכֵּיהֶֽם׃",
+        english:
+          "together with their grain offerings and drink offerings and a basket of unleavened cakes made from fine flour mixed with oil and unleavened wafers coated with oil",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְהִקְרִ֥יב הַכֹּהֵ֖ן לִפְנֵ֣י יְהוָ֑ה וְעָשָׂ֥ה אֶת־ חַטָּאת֖וֹ וְאֶת־ עֹלָתֽוֹ׃",
+        english:
+          "The priest is to present all these before the LORD and make the sin offering and the burnt offering",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וְאֶת־ הָאַ֜יִל יַעֲשֶׂ֨ה זֶ֤בַח שְׁלָמִים֙ לַֽיהוָ֔ה עַ֖ל סַ֣ל הַמַּצּ֑וֹת וְעָשָׂה֙ הַכֹּהֵ֔ן אֶת־ מִנְחָת֖וֹ וְאֶת־ נִסְכּֽוֹ׃",
+        english:
+          "He shall also offer the ram as a peace offering to the LORD along with the basket of unleavened bread And the priest is to offer the accompanying grain offering and drink offering",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְגִלַּ֣ח הַנָּזִ֗יר פֶּ֛תַח אֹ֥הֶל מוֹעֵ֖ד אֶת־ רֹ֣אשׁ נִזְר֑וֹ וְלָקַ֗ח אֶת־ שְׂעַר֙ רֹ֣אשׁ נִזְר֔וֹ וְנָתַן֙ עַל־ הָאֵ֔שׁ אֲשֶׁר־ תַּ֖חַת זֶ֥בַח הַשְּׁלָמִֽים׃",
+        english:
+          "Then at the entrance to the Tent of Meeting the Nazirite is to shave his consecrated head take the hair and put it on the fire under the peace offering",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְלָקַ֨ח הַכֹּהֵ֜ן אֶת־ הַזְּרֹ֣עַ בְּשֵׁלָה֮ מִן־ הָאַיִל֒ וְֽחַלַּ֨ת מַצָּ֤ה אַחַת֙ מִן־ הַסַּ֔ל וּרְקִ֥יק מַצָּ֖ה אֶחָ֑ד וְנָתַן֙ עַל־ כַּפֵּ֣י הַנָּזִ֔יר אַחַ֖ר הִֽתְגַּלְּח֥וֹ אֶת־ נִזְרֽוֹ׃",
+        english:
+          "And the priest is to take the boiled shoulder from the ram one unleavened cake from the basket and one unleavened wafer and put them into the hands of the Nazirite who has just shaved the hair of his consecration",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְהֵנִיף֩ אוֹתָ֨ם הַכֹּהֵ֥ן׀ תְּנוּפָה֮ לִפְנֵ֣י יְהוָה֒ קֹ֤דֶשׁ הוּא֙ לַכֹּהֵ֔ן עַ֚ל חֲזֵ֣ה הַתְּנוּפָ֔ה וְעַ֖ל שׁ֣וֹק הַתְּרוּמָ֑ה וְאַחַ֛ר יִשְׁתֶּ֥ה הַנָּזִ֖יר יָֽיִן׃",
+        english:
+          "The priest shall then wave them as a wave offering before the LORD This is a holy portion for the priest in addition to the breast of the wave offering and the thigh that was presented After that the Nazirite may drink wine",
+      },
+      {
+        verse_number: 21,
+        original:
+          "זֹ֣את תּוֹרַ֣ת הַנָּזִיר֮ אֲשֶׁ֣ר יִדֹּר֒ קָרְבָּנ֤וֹ לַֽיהוָה֙ עַל־ נִזְר֔וֹ מִלְּבַ֖ד אֲשֶׁר־ תַּשִּׂ֣יג יָד֑וֹ כְּפִ֤י נִדְרוֹ֙ אֲשֶׁ֣ר יִדֹּ֔ר כֵּ֣ן יַעֲשֶׂ֔ה עַ֖ל תּוֹרַ֥ת נִזְרֽוֹ׃פ",
+        english:
+          "This is the law of the Nazirite who vows his offering to the LORD for his separation in addition to whatever else he can afford he must fulfill whatever vow he makes according to the law of his separation",
+      },
+      {
+        verse_number: 22,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 23,
+        original:
+          "דַּבֵּ֤ר אֶֽל־ אַהֲרֹן֙ וְאֶל־ בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרֲכ֖וּ אֶת־ בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃ס",
+        english:
+          "Tell Aaron and his sons This is how you are to bless the Israelites Say to them",
+      },
+      {
+        verse_number: 24,
+        original: "יְבָרֶכְךָ֥ יְהוָ֖ה וְיִשְׁמְרֶֽךָ׃ס",
+        english: "May the LORD bless you and keep you",
+      },
+      {
+        verse_number: 25,
+        original: "יָאֵ֨ר יְהוָ֧ה׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ס",
+        english:
+          "may the LORD cause His face to shine upon you and be gracious to you",
+      },
+      {
+        verse_number: 26,
+        original:
+          "יִשָּׂ֨א יְהוָ֤ה׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ס",
+        english:
+          "may the LORD lift up His countenance toward you and give you peace",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְשָׂמ֥וּ אֶת־ שְׁמִ֖י עַל־ בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרֲכֵֽם׃פ",
+        english:
+          "So they shall put My name on the Israelites and I will bless them",
+      },
+    ],
+  };
+  return chapter;
+}

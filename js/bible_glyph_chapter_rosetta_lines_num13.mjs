@@ -1,0 +1,219 @@
+export function bible_glyph_chapter_rosetta_lines_num13() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "NUM13",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "And the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "שְׁלַח־ לְךָ֣ אֲנָשִׁ֗ים וְיָתֻ֙רוּ֙ אֶת־ אֶ֣רֶץ כְּנַ֔עַן אֲשֶׁר־ אֲנִ֥י נֹתֵ֖ן לִבְנֵ֣י יִשְׂרָאֵ֑ל אִ֣ישׁ אֶחָד֩ אִ֨ישׁ אֶחָ֜ד לְמַטֵּ֤ה אֲבֹתָיו֙ תִּשְׁלָ֔חוּ כֹּ֖ל נָשִׂ֥יא בָהֶֽם׃",
+        english:
+          "Send out for yourself men to spy out the land of Canaan which I am giving to the Israelites From each of their fathers’ tribes send one man who is a leader among them",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּשְׁלַ֨ח אֹתָ֥ם מֹשֶׁ֛ה מִמִּדְבַּ֥ר פָּארָ֖ן עַל־ פִּ֣י יְהוָ֑ה כֻּלָּ֣ם אֲנָשִׁ֔ים רָאשֵׁ֥י בְנֵֽי־ יִשְׂרָאֵ֖ל הֵֽמָּה׃",
+        english:
+          "So at the command of the LORD Moses sent them out from the Wilderness of Paran All the men were leaders of the Israelites",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאֵ֖לֶּה שְׁמוֹתָ֑ם לְמַטֵּ֣ה רְאוּבֵ֔ן שַׁמּ֖וּעַ בֶּן־ זַכּֽוּר׃",
+        english:
+          "and these were their names From the tribe of Reuben Shammua son of Zaccur",
+      },
+      {
+        verse_number: 5,
+        original: "לְמַטֵּ֣ה שִׁמְע֔וֹן שָׁפָ֖ט בֶּן־ חוֹרִֽי׃",
+        english: "from the tribe of Simeon Shaphat son of Hori",
+      },
+      {
+        verse_number: 6,
+        original: "לְמַטֵּ֣ה יְהוּדָ֔ה כָּלֵ֖ב בֶּן־ יְפֻנֶּֽה׃",
+        english: "from the tribe of Judah Caleb son of Jephunneh",
+      },
+      {
+        verse_number: 7,
+        original: "לְמַטֵּ֣ה יִשָּׂשכָ֔ר יִגְאָ֖ל בֶּן־ יוֹסֵֽף׃",
+        english: "from the tribe of Issachar Igal son of Joseph",
+      },
+      {
+        verse_number: 8,
+        original: "לְמַטֵּ֥ה אֶפְרָ֖יִם הוֹשֵׁ֥עַ בִּן־ נֽוּן׃",
+        english: "from the tribe of Ephraim Hoshea son of Nun",
+      },
+      {
+        verse_number: 9,
+        original: "לְמַטֵּ֣ה בִנְיָמִ֔ן פַּלְטִ֖י בֶּן־ רָפֽוּא׃",
+        english: "from the tribe of Benjamin Palti son of Raphu",
+      },
+      {
+        verse_number: 10,
+        original: "לְמַטֵּ֣ה זְבוּלֻ֔ן גַּדִּיאֵ֖ל בֶּן־ סוֹדִֽי׃",
+        english: "from the tribe of Zebulun Gaddiel son of Sodi",
+      },
+      {
+        verse_number: 11,
+        original:
+          "לְמַטֵּ֥ה יוֹסֵ֖ף לְמַטֵּ֣ה מְנַשֶּׁ֑ה גַּדִּ֖י בֶּן־ סוּסִֽי׃",
+        english:
+          "from the tribe of Manasseh a tribe of Joseph Gaddi son of Susi",
+      },
+      {
+        verse_number: 12,
+        original: "לְמַטֵּ֣ה דָ֔ן עַמִּיאֵ֖ל בֶּן־ גְּמַלִּֽי׃",
+        english: "from the tribe of Dan Ammiel son of Gemalli",
+      },
+      {
+        verse_number: 13,
+        original: "לְמַטֵּ֣ה אָשֵׁ֔ר סְת֖וּר בֶּן־ מִיכָאֵֽל׃",
+        english: "from the tribe of Asher Sethur son of Michael",
+      },
+      {
+        verse_number: 14,
+        original: "לְמַטֵּ֣ה נַפְתָּלִ֔י נַחְבִּ֖י בֶּן־ וָפְסִֽי׃",
+        english: "from the tribe of Naphtali Nahbi son of Vophsi",
+      },
+      {
+        verse_number: 15,
+        original: "לְמַטֵּ֣ה גָ֔ד גְּאוּאֵ֖ל בֶּן־ מָכִֽי׃",
+        english: "and from the tribe of Gad Geuel son of Machi",
+      },
+      {
+        verse_number: 16,
+        original:
+          "אֵ֚לֶּה שְׁמ֣וֹת הָֽאֲנָשִׁ֔ים אֲשֶׁר־ שָׁלַ֥ח מֹשֶׁ֖ה לָת֣וּר אֶת־ הָאָ֑רֶץ וַיִּקְרָ֥א מֹשֶׁ֛ה לְהוֹשֵׁ֥עַ בִּן־ נ֖וּן יְהוֹשֻֽׁעַ׃",
+        english:
+          "These were the names of the men Moses sent to spy out the land and Moses gave to Hoshea son of Nun the name Joshua",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיִּשְׁלַ֤ח אֹתָם֙ מֹשֶׁ֔ה לָת֖וּר אֶת־ אֶ֣רֶץ כְּנָ֑עַן וַיֹּ֣אמֶר אֲלֵהֶ֗ם עֲל֥וּ זֶה֙ בַּנֶּ֔גֶב וַעֲלִיתֶ֖ם אֶת־ הָהָֽר׃",
+        english:
+          "When Moses sent them to spy out the land of Canaan he told them Go up through the Negev and into the hill country",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וּרְאִיתֶ֥ם אֶת־ הָאָ֖רֶץ מַה־ הִ֑וא וְאֶת־ הָעָם֙ הַיֹּשֵׁ֣ב עָלֶ֔יהָ הֶחָזָ֥ק הוּא֙ הֲרָפֶ֔ה הַמְעַ֥ט ה֖וּא אִם־ רָֽב׃",
+        english:
+          "See what the land is like and whether its people are strong or weak few or many",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וּמָ֣ה הָאָ֗רֶץ אֲשֶׁר־ הוּא֙ יֹשֵׁ֣ב בָּ֔הּ הֲטוֹבָ֥ה הִ֖וא אִם־ רָעָ֑ה וּמָ֣ה הֶֽעָרִ֗ים אֲשֶׁר־ הוּא֙ יוֹשֵׁ֣ב בָּהֵ֔נָּה הַבְּמַֽחֲנִ֖ים אִ֥ם בְּמִבְצָרִֽים׃",
+        english:
+          "Is the land where they live good or bad Are the cities where they dwell open camps or fortifications",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וּמָ֣ה הָ֠אָרֶץ הַשְּׁמֵנָ֨ה הִ֜וא אִם־ רָזָ֗ה הֲיֵֽשׁ־ בָּ֥הּ עֵץ֙ אִם־ אַ֔יִן וְהִ֨תְחַזַּקְתֶּ֔ם וּלְקַחְתֶּ֖ם מִפְּרִ֣י הָאָ֑רֶץ וְהַ֨יָּמִ֔ים יְמֵ֖י בִּכּוּרֵ֥י עֲנָבִֽים׃",
+        english:
+          "Is the soil fertile or unproductive Are there trees in it or not Be courageous and bring back some of the fruit of the land It was the season for the first ripe grapes",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וַֽיַּעֲל֖וּ וַיָּתֻ֣רוּ אֶת־ הָאָ֑רֶץ מִמִּדְבַּר־ צִ֥ן עַד־ רְחֹ֖ב לְבֹ֥א חֲמָֽת׃",
+        english:
+          "So they went up and spied out the land from the Wilderness of Zin as far as Rehob toward Lebo-hamath",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיַּעֲל֣וּ בַנֶּגֶב֮ וַיָּבֹ֣א עַד־ חֶבְרוֹן֒ וְשָׁ֤ם אֲחִימַן֙ שֵׁשַׁ֣י וְתַלְמַ֔י יְלִידֵ֖י הָעֲנָ֑ק וְחֶבְר֗וֹן שֶׁ֤בַע שָׁנִים֙ נִבְנְתָ֔ה לִפְנֵ֖י צֹ֥עַן מִצְרָֽיִם׃",
+        english:
+          "They went up through the Negev and came to Hebron where Ahiman Sheshai and Talmai the descendants of Anak dwelled It had been built seven years before Zoan in Egypt",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיָּבֹ֜אוּ עַד־ נַ֣חַל אֶשְׁכֹּ֗ל וַיִּכְרְת֨וּ מִשָּׁ֤ם זְמוֹרָה֙ וְאֶשְׁכּ֤וֹל עֲנָבִים֙ אֶחָ֔ד וַיִּשָּׂאֻ֥הוּ בַמּ֖וֹט בִּשְׁנָ֑יִם וּמִן־ הָרִמֹּנִ֖ים וּמִן־ הַתְּאֵנִֽים׃",
+        english:
+          "When they came to the Valley of Eshcol they cut down a branch with a single cluster of grapes which they carried on a pole between two men They also took some pomegranates and figs",
+      },
+      {
+        verse_number: 24,
+        original:
+          "לַמָּק֣וֹם הַה֔וּא קָרָ֖א נַ֣חַל אֶשְׁכּ֑וֹל עַ֚ל אֹד֣וֹת הָֽאֶשְׁכּ֔וֹל אֲשֶׁר־ כָּרְת֥וּ מִשָּׁ֖ם בְּנֵ֥י יִשְׂרָאֵֽל׃",
+        english:
+          "Because of the cluster of grapes the Israelites cut there that place was called the Valley of Eshcol",
+      },
+      {
+        verse_number: 25,
+        original: "וַיָּשֻׁ֖בוּ מִתּ֣וּר הָאָ֑רֶץ מִקֵּ֖ץ אַרְבָּעִ֥ים יֽוֹם׃",
+        english: "After forty days the men returned from spying out the land",
+      },
+      {
+        verse_number: 26,
+        original:
+          "וַיֵּלְכ֡וּ וַיָּבֹאוּ֩ אֶל־ מֹשֶׁ֨ה וְאֶֽל־ אַהֲרֹ֜ן וְאֶל־ כָּל־ עֲדַ֧ת בְּנֵֽי־ יִשְׂרָאֵ֛ל אֶל־ מִדְבַּ֥ר פָּארָ֖ן קָדֵ֑שָׁה וַיָּשִׁ֨יבוּ אוֹתָ֤ם דָּבָר֙ וְאֶת־ כָּל־ הָ֣עֵדָ֔ה וַיַּרְא֖וּם אֶת־ פְּרִ֥י הָאָֽרֶץ׃",
+        english:
+          "and they went back to Moses Aaron and the whole congregation of Israel in the Wilderness of Paran at Kadesh They brought back a report for the whole congregation and showed them the fruit of the land",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וַיְסַפְּרוּ־ לוֹ֙ וַיֹּ֣אמְר֔וּ בָּ֕אנוּ אֶל־ הָאָ֖רֶץ אֲשֶׁ֣ר שְׁלַחְתָּ֑נוּ וְ֠גַם זָבַ֨ת חָלָ֥ב וּדְבַ֛שׁ הִ֖וא וְזֶה־ פִּרְיָֽהּ׃",
+        english:
+          "And they gave this account to Moses We went into the land to which you sent us and indeed it is flowing with milk and honey Here is some of its fruit",
+      },
+      {
+        verse_number: 28,
+        original:
+          "אֶ֚פֶס כִּֽי־ עַ֣ז הָעָ֔ם הַיֹּשֵׁ֖ב בָּאָ֑רֶץ וְהֶֽעָרִ֗ים בְּצֻר֤וֹת גְּדֹלֹת֙ מְאֹ֔ד וְגַם־ יְלִדֵ֥י הָֽעֲנָ֖ק רָאִ֥ינוּ שָֽׁם׃",
+        english:
+          "Nevertheless the people living in the land are strong and the cities are large and fortified We even saw the descendants of Anak there",
+      },
+      {
+        verse_number: 29,
+        original:
+          "עֲמָלֵ֥ק יוֹשֵׁ֖ב בְּאֶ֣רֶץ הַנֶּ֑גֶב וְ֠הַֽחִתִּי וְהַיְבוּסִ֤י וְהָֽאֱמֹרִי֙ יוֹשֵׁ֣ב בָּהָ֔ר וְהַֽכְּנַעֲנִי֙ יֹשֵׁ֣ב עַל־ הַיָּ֔ם וְעַ֖ל יַ֥ד הַיַּרְדֵּֽן׃",
+        english:
+          "The Amalekites live in the land of the Negev the Hittites Jebusites and Amorites live in the hill country and the Canaanites live by the sea and along the Jordan",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וַיַּ֧הַס כָּלֵ֛ב אֶת־ הָעָ֖ם אֶל־ מֹשֶׁ֑ה וַיֹּ֗אמֶר עָלֹ֤ה נַעֲלֶה֙ וְיָרַ֣שְׁנוּ אֹתָ֔הּ כִּֽי־ יָכ֥וֹל נוּכַ֖ל לָֽהּ׃",
+        english:
+          "Then Caleb quieted the people before Moses and said We must go up and take possession of the land for we can certainly conquer it",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וְהָ֨אֲנָשִׁ֜ים אֲשֶׁר־ עָל֤וּ עִמּוֹ֙ אָֽמְר֔וּ לֹ֥א נוּכַ֖ל לַעֲל֣וֹת אֶל־ הָעָ֑ם כִּֽי־ חָזָ֥ק ה֖וּא מִמֶּֽנּוּ׃",
+        english:
+          "But the men who had gone up with him replied We cannot go up against the people for they are stronger than we are",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וַיּוֹצִ֜יאוּ דִּבַּ֤ת הָאָ֙רֶץ֙ אֲשֶׁ֣ר תָּר֣וּ אֹתָ֔הּ אֶל־ בְּנֵ֥י יִשְׂרָאֵ֖ל לֵאמֹ֑ר הָאָ֡רֶץ אֲשֶׁר֩ עָבַ֨רְנוּ בָ֜הּ לָת֣וּר אֹתָ֗הּ אֶ֣רֶץ אֹכֶ֤לֶת יוֹשְׁבֶ֙יהָ֙ הִ֔וא וְכָל־ הָעָ֛ם אֲשֶׁר־ רָאִ֥ינוּ בְתוֹכָ֖הּ אַנְשֵׁ֥י מִדּֽוֹת׃",
+        english:
+          "So they gave the Israelites a bad report about the land that they had spied out The land we explored devours its inhabitants and all the people we saw there are great in stature",
+      },
+      {
+        verse_number: 33,
+        original:
+          "וְשָׁ֣ם רָאִ֗ינוּ אֶת־ הַנְּפִילִ֛ים בְּנֵ֥י עֲנָ֖ק מִן־ הַנְּפִלִ֑ים וַנְּהִ֤י בְעֵינֵ֙ינוּ֙ כַּֽחֲגָבִ֔ים וְכֵ֥ן הָיִ֖ינוּ בְּעֵינֵיהֶֽם׃",
+        english:
+          "We even saw the Nephilim there the descendants of Anak that come from the Nephilim We seemed like grasshoppers in our own sight and we must have seemed the same to them",
+      },
+    ],
+  };
+  return chapter;
+}
