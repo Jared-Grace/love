@@ -12,7 +12,7 @@ import { app_g_bless_edge_new } from "./app_g_bless_edge_new.mjs";
 import { app_g_hero_evil_color } from "./app_g_hero_evil_color.mjs";
 import { html_style_set } from "./html_style_set.mjs";
 import { app_g_hero_fx_layer } from "./app_g_hero_fx_layer.mjs";
-import { app_g_bless_camera_people_set } from "./app_g_bless_camera_people_set.mjs";
+import { bless_camera_people_set } from "./bless_camera_people_set.mjs";
 import { app_g_hero_edge } from "./app_g_hero_edge.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_hero_tapped } from "./app_g_hero_tapped.mjs";
@@ -53,7 +53,7 @@ export function app_g_hero_play(container_map) {
   let color = app_g_hero_evil_color();
   html_style_set(outer, "color", color);
   let fx = app_g_hero_fx_layer(container_map);
-  app_g_bless_camera_people_set(container_map, npcs);
+  bless_camera_people_set(container_map, npcs);
   let hero = {
     container_map,
     world,
