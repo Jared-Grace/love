@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { app_ceb_bible_gloss_roots_store_disagreeing_known } from "./app_ceb_bible_gloss_roots_store_disagreeing_known.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -63,8 +64,7 @@ export async function app_ceb_bible_gloss_roots_store_disagreeing() {
       }
       let hits = list_filter(roots, matches_is);
       let hit_count = list_size(hits);
-      let b = equal(hit_count, 0);
-      let found = not(b);
+      let found = equal_not(hit_count, 0);
       if (found) {
         settled = add(settled, 1);
       }
