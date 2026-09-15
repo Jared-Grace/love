@@ -3,7 +3,7 @@ import { app_message_reply_cases_checked } from "./app_message_reply_cases_check
 import { list_filter_property } from "./list_filter_property.mjs";
 import { list_size } from "./list_size.mjs";
 import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
-export async function reply_cases_gate_run() {
+export async function app_message_reply_cases_gate_run() {
   arguments_assert(arguments, 0);
   ("QA gate: the reply rules still say to each worked message what the corpus records them saying. Throws so the dispatcher seam exits nonzero.");
   ("★ WHAT THIS GUARDS IS SOMEBODY ELSE'S WORDS GOING OUT UNDER ONE PERSON'S NAME. Every reply the rules make is sent as if that person wrote it, and the rules are a grammar - a new rule anywhere in it can quietly change what an old message gets back, because the pieces are chosen by what matches rather than by what was aimed at. Written down, an old reply changing is a failure here rather than something a stranger reads first.");
