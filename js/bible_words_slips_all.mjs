@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_words_sightings_lowered } from "./bible_words_sightings_lowered.mjs";
 import { property_get } from "./property_get.mjs";
@@ -19,7 +20,6 @@ import { or } from "./or.mjs";
 import { subtract } from "./subtract.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { text_edit_distance } from "./text_edit_distance.mjs";
-import { not } from "./not.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_sort_number_mapper_reverse } from "./list_sort_number_mapper_reverse.mjs";
 import { list_size } from "./list_size.mjs";
@@ -104,8 +104,7 @@ export function bible_words_slips_all(sightings, times, letters) {
         return;
       }
       let steps = text_edit_distance(word, other);
-      let b = equal(steps, 1);
-      let apart = not(b);
+      let apart = equal_not(steps, 1);
       if (apart) {
         return;
       }
