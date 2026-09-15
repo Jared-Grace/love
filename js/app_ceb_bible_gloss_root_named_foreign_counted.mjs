@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
@@ -5,7 +6,6 @@ import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabula
 import { property_get } from "./property_get.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { gloss_explain_roots_named } from "./gloss_explain_roots_named.mjs";
 import { add } from "./add.mjs";
 import { list_get } from "./list_get.mjs";
@@ -39,8 +39,7 @@ export async function app_ceb_bible_gloss_root_named_foreign_counted(
     let explain = property_get(found, "explain");
     let claimed = property_get(found, "claimed");
     let claimed_count = list_size(claimed);
-    let b = equal(claimed_count, 0);
-    let strict = not(b);
+    let strict = equal_not(claimed_count, 0);
     if (strict) {
       return;
     }
