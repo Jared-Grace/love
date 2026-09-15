@@ -7,14 +7,14 @@ import { html_span_text_code_dark } from "./html_span_text_code_dark.mjs";
 import { html_bold } from "./html_bold.mjs";
 import { app_code_row_flex_center } from "./app_code_row_flex_center.mjs";
 import { app_code_arrow } from "./app_code_arrow.mjs";
-export function app_code_lesson_expression_whole_part_formula_above(root) {
-  arguments_assert(arguments, 1);
+export function app_code_lesson_expression_whole_part_formula_above(root, context) {
+  arguments_assert(arguments, 2);
   let setup = app_code_container_light_blue(root);
   html_div_cycle_code(setup, ["Suppose we are dividing two numbers:"]);
   html_div_cycle_code(setup, ["", "14 / 4"]);
-  html_div_cycle_code(setup, ["Remember, ", "4", " is the divisor"]);
-  html_div_cycle_code(setup, [
-    "And remember, ",
+  app_code_remember_from_lesson(setup, context, app_code_lesson_expression_divisor, ["", "4", " is the divisor"]);
+  app_code_remember_from_lesson(setup, context, app_code_lesson_expression_quotient, [
+    "",
     "Math.floor(14 / 4)",
     " is the quotient",
   ]);

@@ -21,7 +21,7 @@ export function app_code_lesson_operand_generic(params) {
   let example_question_label = app_code_label_code_question();
   let answer_label = text_combine_multiple(["Choose the ", role, ": "]);
   let example_answer_label = text_combine_multiple(["The ", role, " is: "]);
-  function above(root) {
+  function above(root, context) {
     "define the role with the term bolded, then a RANDOM worked example from the same generator as the quiz, then the ask";
     let intro = app_code_container_light_blue(root);
     app_code_lesson_bold_term(intro, define_prose, role);
@@ -33,7 +33,7 @@ export function app_code_lesson_operand_generic(params) {
     html_div_cycle_code(intro, ["In ", sample_question, middle, sample_answer]);
     if (above_more) {
       ("an optional extra block after the definition (the quotient lesson uses it to remind all three roles, since its question shows the dividend, divisor and quotient at once)");
-      above_more(root);
+      above_more(root, context);
     }
     let ask = app_code_container_light_blue(root);
     let combined = text_combine_multiple([

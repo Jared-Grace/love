@@ -120,8 +120,8 @@ export function app_code_lesson_expression_whole_part_formula() {
     example_answer,
   );
   return lesson;
-  function above(root) {
-    let r3 = app_code_lesson_expression_whole_part_formula_above(root);
+  function above(root, context) {
+    let r3 = app_code_lesson_expression_whole_part_formula_above(root, context);
     return r3;
   }
 }
