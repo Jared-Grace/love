@@ -1,9 +1,8 @@
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { reply_names_bible } from "./reply_names_bible.mjs";
 import { reply_names_authored } from "./reply_names_authored.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
-import { list_unique } from "./list_unique.mjs";
-import { list_sort_text } from "./list_sort_text.mjs";
 export function reply_names_common() {
   "Every given name the parser is willing to recognise as a name, in one sorted list with nothing said twice.";
   ("★ IT IS A JOIN AND NOTHING ELSE, SO THE SOURCES STAY WHERE THEY ARE. Each source answers a different question and is checked a different way: ",
@@ -17,7 +16,6 @@ export function reply_names_common() {
   let authored = reply_names_authored();
   let sources = [bible, authored];
   let all = list_concat_multiple(sources);
-  let unique = list_unique(all);
-  let sorted = list_sort_text(unique);
+  let sorted = list_unique_sorted(all);
   return sorted;
 }
