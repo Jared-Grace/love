@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note } from "./app_ceb_bible_gloss_root_self_named_apart_vocabulary_counted_root_note.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_generate } from "./app_ceb_bible_gloss_generate.mjs";
@@ -6,8 +7,6 @@ import { app_ceb_bible_gloss_vocabularies } from "./app_ceb_bible_gloss_vocabula
 import { property_get } from "./property_get.mjs";
 import { add } from "./add.mjs";
 import { gloss_explain_roots_self_named } from "./gloss_explain_roots_self_named.mjs";
-import { list_size } from "./list_size.mjs";
-import { equal } from "./equal.mjs";
 import { list_get } from "./list_get.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { gloss_root_named_word_spelled_in_is } from "./gloss_root_named_word_spelled_in_is.mjs";
@@ -36,8 +35,7 @@ export async function app_ceb_bible_gloss_root_self_named_apart_vocabulary_count
     let entry = property_get(found, "entry");
     let explain = property_get(found, "explain");
     let named = gloss_explain_roots_self_named(explain);
-    let count = list_size(named);
-    let empty = equal(count, 0);
+    let empty = list_size_equal(named, 0);
     if (empty) {
       return;
     }
