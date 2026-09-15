@@ -1,0 +1,249 @@
+export function bible_glyph_chapter_rosetta_lines_pro03() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "PRO03",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "בְּ֭נִי תּוֹרָתִ֣י אַל־ תִּשְׁכָּ֑ח וּ֝מִצְוֺתַ֗י יִצֹּ֥ר לִבֶּֽךָ׃",
+        english:
+          "My son do not forget my teaching but let your heart keep my commandments",
+      },
+      {
+        verse_number: 2,
+        original:
+          "כִּ֤י אֹ֣רֶךְ יָ֭מִים וּשְׁנ֣וֹת חַיִּ֑ים וְ֝שָׁל֗וֹם יוֹסִ֥יפוּ לָֽךְ׃",
+        english:
+          "for they will add length to your days years and peace to your life",
+      },
+      {
+        verse_number: 3,
+        original:
+          "חֶ֥סֶד וֶאֱמֶ֗ת אַֽל־ יַעַ֫זְבֻ֥ךָ קָשְׁרֵ֥ם עַל־ גַּרְגְּרוֹתֶ֑יךָ כָּ֝תְבֵ֗ם עַל־ ל֥וּחַ לִבֶּֽךָ׃",
+        english:
+          "Never let loving devotion or faithfulness leave you bind them around your neck write them on the tablet of your heart",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וּמְצָא־ חֵ֖ן וְשֵֽׂכֶל־ ט֑וֹב בְּעֵינֵ֖י אֱלֹהִ֣ים וְאָדָֽם׃פ",
+        english:
+          "Then you will find favor and high regard in the sight of God and man",
+      },
+      {
+        verse_number: 5,
+        original:
+          "בְּטַ֣ח אֶל־ יְ֭הוָה בְּכָל־ לִבֶּ֑ךָ וְאֶל־ בִּֽ֝ינָתְךָ֗ אַל־ תִּשָּׁעֵֽן׃",
+        english:
+          "Trust in the LORD with all your heart and lean not on your own understanding",
+      },
+      {
+        verse_number: 6,
+        original:
+          "בְּכָל־ דְּרָכֶ֥יךָ דָעֵ֑הוּ וְ֝ה֗וּא יְיַשֵּׁ֥ר אֹֽרְחֹתֶֽיךָ׃",
+        english:
+          "in all your ways acknowledge Him and He will make your paths straight",
+      },
+      {
+        verse_number: 7,
+        original:
+          "אַל־ תְּהִ֣י חָכָ֣ם בְּעֵינֶ֑יךָ יְרָ֥א אֶת־ יְ֝הוָ֗ה וְס֣וּר מֵרָֽע׃",
+        english:
+          "Be not wise in your own eyes fear the LORD and turn away from evil",
+      },
+      {
+        verse_number: 8,
+        original: "רִ֭פְאוּת תְּהִ֣י לְשָׁרֶּ֑ךָ וְ֝שִׁקּ֗וּי לְעַצְמוֹתֶֽיךָ׃",
+        english:
+          "This will bring healing to your body and refreshment to your bones",
+      },
+      {
+        verse_number: 9,
+        original:
+          "כַּבֵּ֣ד אֶת־ יְ֭הוָה מֵהוֹנֶ֑ךָ וּ֝מֵרֵאשִׁ֗ית כָּל־ תְּבוּאָתֶֽךָ׃",
+        english:
+          "Honor the LORD with your wealth and with the firstfruits of all your crops",
+      },
+      {
+        verse_number: 10,
+        original:
+          "וְיִמָּלְא֣וּ אֲסָמֶ֣יךָ שָׂבָ֑ע וְ֝תִיר֗וֹשׁ יְקָבֶ֥יךָ יִפְרֹֽצוּ׃פ",
+        english:
+          "then your barns will be filled with plenty and your vats will overflow with new wine",
+      },
+      {
+        verse_number: 11,
+        original:
+          "מוּסַ֣ר יְ֭הוָה בְּנִ֣י אַל־ תִּמְאָ֑ס וְאַל־ תָּ֝קֹ֗ץ בְּתוֹכַחְתּֽוֹ׃",
+        english:
+          "My son do not reject the discipline of the LORD and do not loathe His rebuke",
+      },
+      {
+        verse_number: 12,
+        original:
+          "כִּ֤י אֶ֥ת אֲשֶׁ֣ר יֶאֱהַ֣ב יְהוָ֣ה יוֹכִ֑יחַ וּ֝כְאָ֗ב אֶת־ בֵּ֥ן יִרְצֶֽה׃",
+        english:
+          "for the LORD disciplines the one He loves as does a father the son in whom he delights",
+      },
+      {
+        verse_number: 13,
+        original:
+          "אַשְׁרֵ֣י אָ֭דָם מָצָ֣א חָכְמָ֑ה וְ֝אָדָ֗ם יָפִ֥יק תְּבוּנָֽה׃",
+        english:
+          "Blessed is the man who finds wisdom the man who acquires understanding",
+      },
+      {
+        verse_number: 14,
+        original:
+          "כִּ֤י ט֣וֹב סַ֭חְרָהּ מִסְּחַר־ כָּ֑סֶף וּ֝מֵחָר֗וּץ תְּבוּאָתָֽהּ׃",
+        english:
+          "for she is more profitable than silver and her gain is better than fine gold",
+      },
+      {
+        verse_number: 15,
+        original:
+          "יְקָ֣רָה הִ֭יא מִפְּנִיִּים וְכָל־ חֲ֝פָצֶ֗יךָ לֹ֣א יִֽשְׁווּ־ בָֽהּ׃",
+        english:
+          "She is more precious than rubies nothing you desire compares with her",
+      },
+      {
+        verse_number: 16,
+        original:
+          "אֹ֣רֶךְ יָ֭מִים בִּֽימִינָ֑הּ בִּ֝שְׂמֹאולָ֗הּ עֹ֣שֶׁר וְכָבֽוֹד׃",
+        english:
+          "Long life is in her right hand in her left hand are riches and honor",
+      },
+      {
+        verse_number: 17,
+        original:
+          "דְּרָכֶ֥יהָ דַרְכֵי־ נֹ֑עַם וְֽכָל־ נְתִ֖יבוֹתֶ֣יהָ שָׁלֽוֹם׃",
+        english: "All her ways are pleasant and all her paths are peaceful",
+      },
+      {
+        verse_number: 18,
+        original:
+          "עֵץ־ חַיִּ֣ים הִ֭יא לַמַּחֲזִיקִ֣ים בָּ֑הּ וְֽתֹמְכֶ֥יהָ מְאֻשָּֽׁר׃פ",
+        english:
+          "She is a tree of life to those who embrace her and those who lay hold of her are blessed",
+      },
+      {
+        verse_number: 19,
+        original:
+          "יְֽהוָ֗ה בְּחָכְמָ֥ה יָֽסַד־ אָ֑רֶץ כּוֹנֵ֥ן שָׁ֝מַ֗יִם בִּתְבוּנָֽה׃",
+        english:
+          "The LORD founded the earth by wisdom and established the heavens by understanding",
+      },
+      {
+        verse_number: 20,
+        original:
+          "בְּ֭דַעְתּוֹ תְּהוֹמ֣וֹת נִבְקָ֑עוּ וּ֝שְׁחָקִ֗ים יִרְעֲפוּ־ טָֽל׃",
+        english:
+          "By His knowledge the watery depths were broken open and the clouds dripped with dew",
+      },
+      {
+        verse_number: 21,
+        original:
+          "בְּ֭נִי אַל־ יָלֻ֣זוּ מֵעֵינֶ֑יךָ נְצֹ֥ר תֻּ֝שִׁיָּ֗ה וּמְזִמָּֽה׃",
+        english:
+          "My son do not lose sight of this Preserve sound judgment and discernment",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְיִֽהְי֣וּ חַיִּ֣ים לְנַפְשֶׁ֑ךָ וְ֝חֵ֗ן לְגַרְגְּרֹתֶֽיךָ׃",
+        english: "They will be life to your soul and adornment to your neck",
+      },
+      {
+        verse_number: 23,
+        original:
+          "אָ֤ז תֵּלֵ֣ךְ לָבֶ֣טַח דַּרְכֶּ֑ךָ וְ֝רַגְלְךָ֗ לֹ֣א תִגּֽוֹף׃",
+        english:
+          "Then you will go on your way in safety and your foot will not stumble",
+      },
+      {
+        verse_number: 24,
+        original:
+          "אִם־ תִּשְׁכַּ֥ב לֹֽא־ תִפְחָ֑ד וְ֝שָׁכַבְתָּ֗ וְֽעָרְבָ֥ה שְׁנָתֶֽךָ׃",
+        english:
+          "When you lie down you will not be afraid when you rest your sleep will be sweet",
+      },
+      {
+        verse_number: 25,
+        original:
+          "אַל־ תִּ֭ירָא מִפַּ֣חַד פִּתְאֹ֑ם וּמִשֹּׁאַ֥ת רְ֝שָׁעִ֗ים כִּ֣י תָבֹֽא׃",
+        english:
+          "Do not fear sudden danger or the ruin that overtakes the wicked",
+      },
+      {
+        verse_number: 26,
+        original:
+          "כִּֽי־ יְ֭הוָה יִהְיֶ֣ה בְכִסְלֶ֑ךָ וְשָׁמַ֖ר רַגְלְךָ֣ מִלָּֽכֶד׃",
+        english:
+          "for the LORD will be your confidence and will keep your foot from the snare",
+      },
+      {
+        verse_number: 27,
+        original:
+          "אַל־ תִּמְנַע־ ט֥וֹב מִבְּעָלָ֑יו בִּהְי֨וֹת לְאֵ֖ל יָדֶיךָ לַעֲשֽׂוֹת׃",
+        english:
+          "Do not withhold good from the deserving when it is within your power to act",
+      },
+      {
+        verse_number: 28,
+        original:
+          "אַל־ תֹּ֘אמַ֤ר לְרֵעֶיךָ לֵ֣ךְ וָ֭שׁוּב וּמָחָ֥ר אֶתֵּ֗ן וְיֵ֣שׁ אִתָּֽךְ׃",
+        english:
+          "Do not tell your neighbor Come back tomorrow and I will provide when you already have the means",
+      },
+      {
+        verse_number: 29,
+        original:
+          "אַל־ תַּחֲרֹ֣שׁ עַל־ רֵעֲךָ֣ רָעָ֑ה וְהֽוּא־ יוֹשֵׁ֖ב לָבֶ֣טַח אִתָּֽךְ׃",
+        english:
+          "Do not devise evil against your neighbor for he trustfully dwells beside you",
+      },
+      {
+        verse_number: 30,
+        original:
+          "אַל־ תָּרוֹב עִם־ אָדָ֣ם חִנָּ֑ם אִם־ לֹ֖א גְמָלְךָ֣ רָעָֽה׃",
+        english:
+          "Do not accuse a man without cause when he has done you no harm",
+      },
+      {
+        verse_number: 31,
+        original:
+          "אַל־ תְּ֭קַנֵּא בְּאִ֣ישׁ חָמָ֑ס וְאַל־ תִּ֝בְחַ֗ר בְּכָל־ דְּרָכָֽיו׃",
+        english: "Do not envy a violent man or choose any of his ways",
+      },
+      {
+        verse_number: 32,
+        original: "כִּ֤י תוֹעֲבַ֣ת יְהוָ֣ה נָל֑וֹז וְֽאֶת־ יְשָׁרִ֥ים סוֹדֽוֹ׃",
+        english:
+          "for the LORD detests the perverse but He is a friend to the upright",
+      },
+      {
+        verse_number: 33,
+        original:
+          "מְאֵרַ֣ת יְ֭הוָה בְּבֵ֣ית רָשָׁ֑ע וּנְוֵ֖ה צַדִּיקִ֣ים יְבָרֵֽךְ׃",
+        english:
+          "The curse of the LORD is on the house of the wicked but He blesses the home of the righteous",
+      },
+      {
+        verse_number: 34,
+        original: "אִם־ לַלֵּצִ֥ים הֽוּא־ יָלִ֑יץ וְלַעֲנִיִּים יִתֶּן־ חֵֽן׃",
+        english: "He mocks the mockers but gives grace to the humble",
+      },
+      {
+        verse_number: 35,
+        original:
+          "כָּ֭בוֹד חֲכָמִ֣ים יִנְחָ֑לוּ וּ֝כְסִילִ֗ים מֵרִ֥ים קָלֽוֹן׃פ",
+        english: "The wise will inherit honor but fools are held up to shame",
+      },
+    ],
+  };
+  return chapter;
+}
