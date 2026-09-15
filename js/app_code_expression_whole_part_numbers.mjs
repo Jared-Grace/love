@@ -1,8 +1,7 @@
+import { app_code_uneven_dividend_only } from "./app_code_uneven_dividend_only.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { integer_random } from "./integer_random.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_code_uneven_dividend } from "./app_code_uneven_dividend.mjs";
-import { property_get } from "./property_get.mjs";
 export function app_code_expression_whole_part_numbers() {
   arguments_assert(arguments, 0);
   ("two numbers to divide on a line that rounds the division down, drawn so the division never comes out even and never runs on past two figures after the point: 17 and 5, or 9 and 4");
@@ -13,8 +12,7 @@ export function app_code_expression_whole_part_numbers() {
   ("The quotient is the small one the lessons around this use, so the value of the line stays inside what a learner can check in their head.");
   let quotient = integer_random(2, 3);
   let divisor = list_random_item([4, 5, 10]);
-  let drawn = app_code_uneven_dividend(quotient, divisor);
-  let dividend = property_get(drawn, "dividend");
+  let dividend = app_code_uneven_dividend_only(quotient, divisor);
   let numbers = {
     dividend,
     divisor,
