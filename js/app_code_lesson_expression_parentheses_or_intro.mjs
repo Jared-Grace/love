@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_choose_order_arithmetic_parentheses } from "./app_code_lesson_expression_choose_order_arithmetic_parentheses.mjs";
 import { each } from "./each.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_parentheses_inside_before_outside } from "./app_code_parentheses_inside_before_outside.mjs";
@@ -28,13 +30,18 @@ export function app_code_lesson_expression_parentheses_or_intro(root, context) {
     app_code_lesson_expression_choose_order_parentheses_either_side();
   let rule_card = app_code_container_light_blue(root);
   let inside_first = app_code_parentheses_inside_before_outside("");
-  app_code_remember_from_lesson(rule_card, context, app_code_lesson_expression_choose_order_arithmetic_parentheses, [
-    "whatever is inside ",
-    left_parenthesis,
-    " and ",
-    right_parenthesis,
-    inside_first,
-  ]);
+  app_code_remember_from_lesson(
+    rule_card,
+    context,
+    app_code_lesson_expression_choose_order_arithmetic_parentheses,
+    [
+      "whatever is inside ",
+      left_parenthesis,
+      " and ",
+      right_parenthesis,
+      inside_first,
+    ],
+  );
   html_div_cycle_code(rule_card, [
     "So a ",
     or_symbol,
