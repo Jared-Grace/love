@@ -9,8 +9,8 @@ export async function bible_word_voice_trial_rows() {
       label: "Hebrew · Genesis 1",
       chapter_code: "GEN01",
       voices: [
-        ["he-IL-Wavenet-D", "WaveNet"],
-        ["he-IL-Chirp3-HD-Achird", "Chirp 3 HD"],
+        ["he-IL-Wavenet-D", "WaveNet (male)", "wavenet"],
+        ["he-IL-Chirp3-HD-Achird", "Chirp (male)", "chirp"],
       ],
       rtl: true,
     },
@@ -19,8 +19,9 @@ export async function bible_word_voice_trial_rows() {
       label: "Greek · John 1",
       chapter_code: "JHN01",
       voices: [
-        ["el-GR-Wavenet-B", "WaveNet"],
-        ["el-GR-Chirp3-HD-Achird", "Chirp 3 HD"],
+        ["el-GR-Wavenet-B", "WaveNet (female)", "wavenet"],
+        ["el-GR-Chirp3-HD-Achernar", "Chirp (female)", "chirp_female"],
+        ["el-GR-Chirp3-HD-Achird", "Chirp (male)", "chirp"],
       ],
       rtl: false,
     },
@@ -32,10 +33,11 @@ export async function bible_word_voice_trial_rows() {
       25,
     );
     function lambda2(w, index) {
-      function lambda([name, label]) {
+      function lambda([name, label, pick]) {
         let r = {
           name,
           label,
+          pick,
           url:
             "/love/gitignore/bible_word_voice_trial/" +
             s.key +

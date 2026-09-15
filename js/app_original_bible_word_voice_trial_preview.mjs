@@ -81,12 +81,15 @@ export async function app_original_bible_word_voice_trial_preview() {
         let r4 = picks.filter(lambda3).length;
         return r4;
       };
+      function lambda12(voice) {
+        let r10 = voice.label + " " + count(voice.pick);
+        return r10;
+      }
+      let counted = s.rows[0].voices.map(lambda12).join(" · ");
       let r5 =
         s.label +
-        ": WaveNet " +
-        count("wavenet") +
-        " · Chirp " +
-        count("chirp") +
+        ": " +
+        counted +
         " · same " +
         count("same") +
         " · " +
@@ -164,11 +167,11 @@ export async function app_original_bible_word_voice_trial_preview() {
         html_button(controls, "▶ " + voice.label, lambda6);
       }
       let saved = html_span_text(card, "");
-      let picks = [
-        ["wavenet", "WaveNet better"],
-        ["chirp", "Chirp better"],
-        ["same", "Same"],
-      ];
+      function lambda11(voice) {
+        let r9 = [voice.pick, voice.label + " best"];
+        return r9;
+      }
+      let picks = [...row.voices.map(lambda11), ["same", "Same"]];
       let pick_buttons = [];
       function picks_render() {
         let current = review_of(row.id).pick;
@@ -233,7 +236,7 @@ export async function app_original_bible_word_voice_trial_preview() {
   }
   html_p_text(
     root,
-    "Both Hebrew voices are male. Google has only a female WaveNet voice for Greek, so the Greek pair is female against male.",
+    "Both Hebrew voices are male. Google has only a female WaveNet voice for Greek, so Greek also has a female Chirp voice to compare it with fairly.",
   );
   tally_render();
   set_render(sets[0]);
