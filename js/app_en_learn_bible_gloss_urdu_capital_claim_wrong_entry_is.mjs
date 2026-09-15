@@ -1,10 +1,9 @@
+import { text_lower_is } from "./text_lower_is.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
 import { app_en_learn_bible_gloss_urdu_explain_capital_claim_is } from "./app_en_learn_bible_gloss_urdu_explain_capital_claim_is.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
-import { text_lower_to } from "./text_lower_to.mjs";
-import { equal } from "./equal.mjs";
 export function app_en_learn_bible_gloss_urdu_capital_claim_wrong_entry_is(
   entry,
 ) {
@@ -18,8 +17,7 @@ export function app_en_learn_bible_gloss_urdu_capital_claim_wrong_entry_is(
       app_en_learn_bible_gloss_urdu_explain_capital_claim_is(explain);
     if (claimed) {
       let word = gloss_entry_word_read(entry);
-      let folded = text_lower_to(word);
-      let plain = equal(word, folded);
+      let plain = text_lower_is(word);
       return plain;
     }
   }
