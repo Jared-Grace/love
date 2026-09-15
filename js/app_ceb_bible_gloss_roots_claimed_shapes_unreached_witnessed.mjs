@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_shapes_priced } from "./app_ceb_bible_gloss_roots_claimed_shapes_priced.mjs";
 import { property_get } from "./property_get.mjs";
@@ -75,8 +76,7 @@ export async function app_ceb_bible_gloss_roots_claimed_shapes_unreached_witness
         if (not(inside)) {
           let reaching = gloss_root_shapes_reaching(other_folded, root_bare);
           let reaching_count = list_size(reaching);
-          let b = equal(reaching_count, 0);
-          let reached = not(b);
+          let reached = equal_not(reaching_count, 0);
           if (reached) {
             shaped = add(shaped, 1);
           }
