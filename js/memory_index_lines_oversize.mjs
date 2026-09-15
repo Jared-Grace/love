@@ -1,4 +1,4 @@
-import { subtract } from "./subtract.mjs";
+import { list_size_subtract } from "./list_size_subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
 import { memory_index_entry_length_ceiling } from "./memory_index_entry_length_ceiling.mjs";
@@ -18,8 +18,7 @@ export async function memory_index_lines_oversize() {
   let oversize = [];
   for (let line of lines) {
     let pieces = text_split(line, opener);
-    let count = list_size(pieces);
-    let entries = subtract(count, 1);
+    let entries = list_size_subtract(pieces, 1);
     let carries = greater_than(entries, 0);
     if (carries) {
       let characters = text_size(line);
