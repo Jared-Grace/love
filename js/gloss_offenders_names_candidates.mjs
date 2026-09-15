@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { gloss_rows_ranked } from "./gloss_rows_ranked.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +11,6 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { property_set } from "./property_set.mjs";
 import { add } from "./add.mjs";
-import { equal } from "./equal.mjs";
 import { gloss_explain_name_said } from "./gloss_explain_name_said.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 export function gloss_offenders_names_candidates(offenders) {
@@ -62,8 +62,7 @@ export function gloss_offenders_names_candidates(offenders) {
         let sightings = property_get(held, "sightings");
         let seen_more = add(sightings, 1);
         property_set(held, "sightings", seen_more);
-        let kind = property_get(row, "kind");
-        let quiet = equal(kind, "silent");
+        let quiet = property_equals(row, "kind", "silent");
         if (quiet) {
           let silent = property_get(held, "silent");
           let silent_more = add(silent, 1);
