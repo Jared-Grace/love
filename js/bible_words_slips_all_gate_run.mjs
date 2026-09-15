@@ -61,17 +61,10 @@ export function bible_words_slips_all_gate_run() {
     }
   }
   each(askings, asking_checked);
-  let failed = list_empty_not_is(defects);
-  if (failed) {
-    let f_name2 = fn_name("bible_words_slips_all_gate_run");
-    throw new Error(
-      text_combine_multiple([f_name2, ": "]) +
-        list_size(defects) +
-        " of " +
-        list_size(askings) +
-        " askings answered differently",
-    );
-  }
+  list_empty_is_assert_json(defects, {
+    defects,
+    hint: "these askings of the whole-translation slip reading answered differently than the corpus - read each answer beside what was expected, then mend the reading or the corpus, whichever is wrong",
+  });
   let answer = {
     checked: list_size(askings),
     defects: list_size(defects),

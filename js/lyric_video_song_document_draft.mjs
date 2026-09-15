@@ -1,9 +1,8 @@
+import { list_map_filter } from "./list_map_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read } from "./file_read.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { list_map } from "./list_map.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { text_empty_not_is } from "./text_empty_not_is.mjs";
 import { lyric_video_document_draft_lines } from "./lyric_video_document_draft_lines.mjs";
 export async function lyric_video_song_document_draft(
@@ -24,8 +23,7 @@ export async function lyric_video_song_document_draft(
   ("It is the Psalms' drafting step with the passage lookup taken off the front: the spread, the sizes and the document's shape are the same function, so a song document is timed, pictured and rendered by exactly the commands a psalm is.");
   let text = await file_read(path_lyrics);
   let rows = text_split_newline(text);
-  let trimmed = list_map(rows, text_trim);
-  let texts = list_filter(trimmed, text_empty_not_is);
+  let texts = list_map_filter(rows, text_trim, text_empty_not_is);
   let document = await lyric_video_document_draft_lines(
     title,
     credit,
