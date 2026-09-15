@@ -24,6 +24,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above(
       root,
       tree,
       noop,
+      context,
     );
   return line;
 }

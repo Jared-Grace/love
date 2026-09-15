@@ -19,7 +19,7 @@ export function app_code_lesson_expression_choose_order_compare_above(
   ("The two runs come to different answers, true and then false, because two worked lines both landing on true is a pattern a learner can read off two examples and the card below breaks it on the very first question.");
   ("Every piece of each telling comes from that one line - which part cannot go yet, which part goes first, what it comes to, what is left, and what that comes to. Numbers borrowed from nowhere in particular would be five things to take on trust; one line worked from top to bottom is a run a learner can follow.");
   ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
-  app_code_lesson_expression_comparing_a_comparison_recall(root);
+  app_code_lesson_expression_comparing_a_comparison_recall(root, context);
   let gathered = app_code_lesson_expression_choose_order_compare_line_apart(
     true,
     false,

@@ -60,5 +60,6 @@ export function app_code_lesson_expression_choose_order_parentheses_and_or_above
     app_code_lesson_expression_choose_order_parentheses_recall,
     walks,
     app_code_lesson_expression_choose_order_parentheses_and_or_intro,
+    context,
   );
 }

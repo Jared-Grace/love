@@ -5,7 +5,7 @@ import { app_code_lesson_expression_choose_order_whole_part_recall } from "./app
 import { app_code_lesson_expression_choose_order_whole_part_intro } from "./app_code_lesson_expression_choose_order_whole_part_intro.mjs";
 export function app_code_lesson_expression_choose_order_whole_part_above(
   root,
-  context_unused,
+  context,
 ) {
   arguments_assert(arguments, 2);
   ("what stands above the card on this lesson: the formula put back in front of the learner, then a line of this lesson's own kind walked all the way down to its value with the reason for each step, then the sentence saying what is new");
@@ -25,5 +25,6 @@ export function app_code_lesson_expression_choose_order_whole_part_above(
     app_code_lesson_expression_choose_order_whole_part_recall,
     walks,
     app_code_lesson_expression_choose_order_whole_part_intro,
+    context,
   );
 }

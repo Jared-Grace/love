@@ -5,8 +5,9 @@ export function app_code_lesson_expression_choose_order_steps_above_generic(
   recall,
   tree,
   intro,
+  context,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("what stands above the card on a lesson whose line is taken down one operator at a time: the thing to remember first, then the one line handed in walked all the way to its value, then the one sentence saying what is different here");
   ("The same three-part shape - recall, run, hinge - as every step-at-a-time lesson around it, because a learner arriving here has read that shape on the screens behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on the screen is what the line is allowed to hold.");
   ("What a part needs on each side used to be handed in, because the shape could not read it off the line and an arithmetic line wants a number there where a line of true and false wants one of those two. Nothing is handed in now: the walk gives the rule that decided the step instead of saying what the part had beside it, and that rule is read off the line itself. So the one thing this shape could not work out for itself turned out to be a thing it did not need to say.");
@@ -24,5 +25,6 @@ export function app_code_lesson_expression_choose_order_steps_above_generic(
     recall,
     walks,
     intro,
+    context,
   );
 }

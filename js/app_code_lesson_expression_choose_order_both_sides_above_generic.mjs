@@ -16,9 +16,10 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   recall,
   say_why,
   intro,
+  context,
 ) {
   function_duplicate_kind_parallel();
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 6);
   ("what stands above the card: whatever the lesson wants recalled first, then the one whole line handed in worked all the way through, then whatever one sentence the lesson has left to say");
   ("The same three-part shape as the step-at-a-time lessons before it - recall, run, hinge - because a learner arriving here has read that shape on every screen of this kind behind them. A run laid out a new way would be read as a new thing to learn, when the only new thing on these screens is what one line is allowed to hold.");
   ("The line is handed in, because the lessons built on this run differ in what stands in the middle of it and in little else. Everything that follows - what each side comes to, what is left when both are done, and what that comes to - is read off the line rather than written out.");
@@ -27,7 +28,7 @@ export function app_code_lesson_expression_choose_order_both_sides_above_generic
   ("The run says why the two sides go first, then asks which of the two goes first, and then answers it: the left one. A learner who has only ever had one right press at a time meets one right press here too - what is new on this screen is that the line has two parts and both of them get solved, not that the order has loosened.");
   ("Every piece of the telling comes from that one line - both sides, what each comes to, what is left when both are done, and what that comes to. Numbers borrowed from nowhere in particular would be things to take on trust; one line worked from top to bottom is a run a learner can follow.");
   ("the recall makes its own card, so it is handed the root rather than a card to stand inside - a card within a card draws a second border around one line and reads as a note pinned to a screen rather than as one of its cards");
-  recall(root);
+  recall(root, context);
   let whole_line = app_code_expression_code(tree);
   let sides = app_code_expression_sides_read(tree);
   let left_code = property_get(sides, "left_code");
