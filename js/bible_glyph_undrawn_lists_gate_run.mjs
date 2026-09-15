@@ -86,7 +86,7 @@ export function bible_glyph_undrawn_lists_gate_run() {
   }
   list_empty_is_assert_json(clashes, {
     clashes,
-    hint: "these Strong's numbers are listed as undrawn twice, which records two different decisions about one word - keep the entry in the list whose test the word actually meets and delete the other",
+    hint: "these Strong's numbers are listed as undrawn twice, which records two different decisions about one word - keep the entry in the list whose test the word actually meets and delete the other; the lists are " + list_join_comma_space(list_map_property_get(lists, "fn")),
   });
   let table_name = fn_name("bible_glyph_roots_hebrew");
   list_empty_is_assert_json(drawn, {
