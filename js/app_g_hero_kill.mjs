@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
@@ -22,8 +23,7 @@ export async function app_g_hero_kill(hero, evil, victim) {
   ("The evil person kills the one beside them: the victim flashes red, falls and fades, and a headstone rises where they stood.");
   ("The victim leaves the crowd the moment they are struck, before anything is drawn, so nobody else - the hunter, the player walking, the crowd stepping aside - can reach for somebody who is already dead.");
   ("The headstone is part of the street rather than part of the victim, so it stays where they fell when everything they were is taken off the map.");
-  let world = property_get(hero, "world");
-  let npcs = property_get(world, "npcs");
+  let npcs = property_path_get_2(hero, "world", "npcs");
   let div_map = property_get(hero, "div_map");
   property_set(victim, "held_still", "dead");
   list_remove(npcs, victim);
