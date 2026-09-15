@@ -1,7 +1,7 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_verses_hyphen_words_measured } from "./bible_verses_hyphen_words_measured.mjs";
 import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { property_initialize_list } from "./property_initialize_list.mjs";
 import { list_add_if_not_includes } from "./list_add_if_not_includes.mjs";
 import { each } from "./each.mjs";
@@ -22,8 +22,7 @@ export function bible_verses_hyphen_pieces_unwritten(verses) {
     let word = property_get(row, "word");
     let parts = property_get(row, "parts");
     function part_read(part) {
-      let alone = property_get(part, "alone");
-      let written = greater_than(alone, 0);
+      let written = property_greater_than(part, "alone", 0);
       if (written) {
         return;
       }
