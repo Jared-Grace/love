@@ -19,7 +19,7 @@
   "app_g_arcs_marks_press.mjs",
   "app_g_arcs_moved_color.mjs",
   "app_g_bless_color_blessed_home.mjs",
-  "app_g_bless_color_family_remaining.mjs",
+  "bless_color_family_remaining.mjs",
   "app_g_bless_finished_bloom.mjs",
   "app_g_bless_finished_modal.mjs",
   "app_g_bless_finished_people.mjs",
