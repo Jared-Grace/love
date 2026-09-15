@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_hash_map } from "./bless_hash_map.mjs";
 import { bless_dev_opening_is } from "./bless_dev_opening_is.mjs";
 import { bless_tile_size_map } from "./bless_tile_size_map.mjs";
-import { app_g_bless_tile_size_playing } from "./app_g_bless_tile_size_playing.mjs";
+import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
 export function app_g_bless_tile_size() {
   arguments_assert(arguments, 0);
   ("How large one tile is drawn in the praying game on this visit - the stretch of street in");
@@ -28,6 +28,6 @@ export function app_g_bless_tile_size() {
     let far = bless_tile_size_map();
     return far;
   }
-  let size = app_g_bless_tile_size_playing();
+  let size = bless_tile_size_playing();
   return size;
 }
