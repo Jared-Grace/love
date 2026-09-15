@@ -1,3 +1,5 @@
+import { js_operator_asterisk_symbol } from "./js_operator_asterisk_symbol.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { app_code_category_expressions } from "./app_code_category_expressions.mjs";
 import { app_code_lesson_name_id_category_then } from "./app_code_lesson_name_id_category_then.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
