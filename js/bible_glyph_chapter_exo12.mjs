@@ -862,7 +862,7 @@ export function bible_glyph_chapter_exo12() {
           "you",
           "are",
           "to",
-          "$mouth,",
+          "$speech,",
           "It",
           "is",
           "the",
