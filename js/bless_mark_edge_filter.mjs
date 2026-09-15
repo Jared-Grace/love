@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-export function app_g_bless_mark_edge_filter() {
+export function bless_mark_edge_filter() {
   arguments_assert(arguments, 0);
   ("The edge put around a mark that says who to pray for next, so that the mark is visible");
   ("on every colour of ground this map is built from.");
