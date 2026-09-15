@@ -1,7 +1,7 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_ceb_bible_gloss_roots_claimed_stopped_short } from "./app_ceb_bible_gloss_roots_claimed_stopped_short.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
@@ -15,8 +15,7 @@ export async function app_ceb_bible_gloss_roots_claimed_stopped_short_named() {
   let listed = property_get(read, "listed");
   function row_named(row) {
     let claimed = property_get(row, "stated_root");
-    let longer = property_get(row, "known_longer");
-    let whole = list_first(longer);
+    let whole = property_list_first(row, "known_longer");
     let named = text_combine_multiple([claimed, " cut from ", whole]);
     return named;
   }
