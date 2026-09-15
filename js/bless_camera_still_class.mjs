@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function app_g_bless_camera_still_class() {
+export function bless_camera_still_class() {
   arguments_assert(arguments, 0);
   ("The class the map wears for the single frame in which it is resized: while it is on,");
   ("nothing inside the map slides anywhere, though a light on it may still fade.");

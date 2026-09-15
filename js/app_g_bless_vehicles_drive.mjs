@@ -3,7 +3,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_vehicle_pace_ms } from "./bless_vehicle_pace_ms.mjs";
 import { divide } from "./divide.mjs";
-import { app_g_bless_camera_still_class } from "./app_g_bless_camera_still_class.mjs";
+import { bless_camera_still_class } from "./bless_camera_still_class.mjs";
 import { app_g_bless_vehicle_onward } from "./app_g_bless_vehicle_onward.mjs";
 import { html_class_has } from "./html_class_has.mjs";
 import { each } from "./each.mjs";
@@ -37,7 +37,7 @@ export function app_g_bless_vehicles_drive(world, container_map) {
   let vehicles = property_get(world, "vehicles");
   let pace = bless_vehicle_pace_ms();
   let seconds = divide(pace, 1000);
-  let name = app_g_bless_camera_still_class();
+  let name = bless_camera_still_class();
   ("Whether a car may go is asked HERE, one car at a time, and asked afresh on every step.");
   ("The answer depends on where the player is standing and on where the other cars are, and");
   ("both of those move; an answer worked out once when the street was built would be a car");
