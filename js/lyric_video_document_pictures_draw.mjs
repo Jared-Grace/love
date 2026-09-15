@@ -1,3 +1,4 @@
+import { py_exe_picture_name } from "./py_exe_picture_name.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { lyric_video_document_pictures } from "./lyric_video_document_pictures.mjs";
 import { lyric_video_picture_negative } from "./lyric_video_picture_negative.mjs";
@@ -77,7 +78,8 @@ export async function lyric_video_document_pictures_draw(path_document) {
   for (let folder of folders) {
     await folder_exists_ensure(folder);
     let command =
-      "/home/j/a/venv/picture/bin/python scripts/py/picture_ground_finish.py " +
+      py_exe_picture_name() +
+      "scripts/py/picture_ground_finish.py " +
       folder +
       "_raw " +
       folder +
