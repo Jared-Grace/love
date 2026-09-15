@@ -5,7 +5,7 @@ import { text_to } from "./text_to.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_expression_node_before_is } from "./app_code_expression_node_before_is.mjs";
 import { app_code_operator_called_is } from "./app_code_operator_called_is.mjs";
-import { app_code_operator_code_called } from "./app_code_operator_code_called.mjs";
+import { js_code_called } from "./js_code_called.mjs";
 import { app_code_operator_rank } from "./app_code_operator_rank.mjs";
 import { app_code_expression_side_code } from "./app_code_expression_side_code.mjs";
 import { app_code_operator_code_before } from "./app_code_operator_code_before.mjs";
@@ -30,7 +30,7 @@ export function app_code_expression_code(item) {
     if (called) {
       ("an operator spelled as a name with brackets keeps them round whatever is inside, so it is never asked whether the inside needs gathering: after the division in Math.floor(14 / 4) has been worked out the line reads Math.floor(3.5), where a gathering would have left Math.floor3.5");
       let inside_code = app_code_expression_code(acted_on);
-      let code_called = app_code_operator_code_called(symbol, inside_code);
+      let code_called = js_code_called(symbol, inside_code);
       return code_called;
     }
     let rank = app_code_operator_rank(symbol);
