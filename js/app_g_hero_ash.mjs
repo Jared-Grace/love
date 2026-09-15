@@ -1,7 +1,7 @@
+import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
-import { html_bounding_client_rect } from "./html_bounding_client_rect.mjs";
 import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs";
 import { range } from "./range.mjs";
 import { app_g_hero_ember } from "./app_g_hero_ember.mjs";
@@ -20,8 +20,7 @@ export async function app_g_hero_ash(hero, point, evil) {
   let fx = property_get(hero, "fx");
   let div_map = property_get(hero, "div_map");
   let evil_img = app_shared_game_npc_img_get(evil);
-  let rect = html_bounding_client_rect(evil_img);
-  let width = property_get(rect, "width");
+  let width = html_element_width(evil_img);
   let elements = app_shared_game_npc_elements(evil);
   let embers = range(22);
   function ember_burst(index) {
