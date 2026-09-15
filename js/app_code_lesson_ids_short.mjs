@@ -93,9 +93,13 @@ export function app_code_lesson_ids_short() {
       text_frozen("order_group_math"),
     app_code_lesson_expression_parentheses_arithmetic:
       text_frozen("brackets_math"),
+    app_code_lesson_expression_choose_order_parentheses_minus_divide:
+      text_frozen("order_brk_minus"),
     app_code_lesson_expression_parentheses_minus_divide:
       text_frozen("brackets_minus"),
     app_code_lesson_expression_parentheses_moved: text_frozen("brackets_moved"),
+    app_code_lesson_expression_choose_order_arithmetic_less_than:
+      text_frozen("order_math_less"),
     app_code_lesson_expression_arithmetic_less_than: text_frozen("math_less"),
     app_code_lesson_functions_arithmetic: text_frozen("fn_math"),
     app_code_lesson_functions_invalid: text_frozen("fn_invalid"),
@@ -156,7 +160,11 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_arithmetic_equality: text_frozen("math_sides"),
     app_code_lesson_expression_both_sides_any_comparison:
       text_frozen("sides_any"),
+    app_code_lesson_expression_choose_order_swapping_add:
+      text_frozen("order_swap_plus"),
     app_code_lesson_expression_swapping_add: text_frozen("swap_plus"),
+    app_code_lesson_expression_choose_order_swapping_divide:
+      text_frozen("order_swap_div"),
     app_code_lesson_expression_swapping_divide: text_frozen("swap_divide"),
     app_code_lesson_expression_swapping_order: text_frozen("swap_order"),
     app_code_lesson_expression_choose_order_pair: text_frozen("order_pair"),
@@ -165,6 +173,8 @@ export function app_code_lesson_ids_short() {
     app_code_lesson_expression_swapping_equal: text_frozen("swap_equal"),
     app_code_lesson_expression_choose_order_and: text_frozen("order_and"),
     app_code_lesson_expression_comparison_and: text_frozen("and_compare"),
+    app_code_lesson_expression_choose_order_in_between:
+      text_frozen("order_in_between"),
     app_code_lesson_expression_in_between: text_frozen("in_between"),
     app_code_lesson_expression_choose_order_or: text_frozen("order_or"),
     app_code_lesson_expression_comparison_or: text_frozen("or_compare"),
