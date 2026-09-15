@@ -1,5 +1,5 @@
 import { g_img_square_div } from "./g_img_square_div.mjs";
-import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
+import { bless_mark_edge_filter } from "./bless_mark_edge_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_color_family_remaining } from "./bless_color_family_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
@@ -39,7 +39,7 @@ export function app_g_bless_pointers(pointers, everyone, remaining) {
       color: color,
       "font-size": font_size,
       transform: lift,
-      filter: app_g_bless_mark_edge_filter(),
+      filter: bless_mark_edge_filter(),
       "pointer-events": "none",
       visibility: "hidden",
     });

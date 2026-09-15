@@ -1,5 +1,5 @@
 import { g_img_square_div } from "./g_img_square_div.mjs";
-import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
+import { bless_mark_edge_filter } from "./bless_mark_edge_filter.mjs";
 import { app_g_bless_mark_visibility } from "./app_g_bless_mark_visibility.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_color_family_remaining } from "./bless_color_family_remaining.mjs";
@@ -54,7 +54,7 @@ export function app_g_bless_rings(rings, everyone, remaining) {
       border: border,
       "border-radius": "50%",
       "box-sizing": "border-box",
-      filter: app_g_bless_mark_edge_filter(),
+      filter: bless_mark_edge_filter(),
       "pointer-events": "none",
       visibility: "hidden",
     });

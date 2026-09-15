@@ -27,7 +27,7 @@
   "app_g_bless_finished_person_bloom.mjs",
   "app_g_bless_finished_white.mjs",
   "app_g_bless_glows.mjs",
-  "app_g_bless_mark_edge_filter.mjs",
+  "bless_mark_edge_filter.mjs",
   "app_g_bless_refused_flash.mjs",
   "app_g_day_guide_keyframe.mjs",
   "app_g_message_overlay.mjs",

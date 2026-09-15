@@ -1,4 +1,4 @@
-import { app_g_bless_mark_edge_filter } from "./app_g_bless_mark_edge_filter.mjs";
+import { bless_mark_edge_filter } from "./bless_mark_edge_filter.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_color_family_remaining } from "./bless_color_family_remaining.mjs";
 import { g_img_square_size_css } from "./g_img_square_size_css.mjs";
@@ -28,7 +28,7 @@ export function bless_edge_new(container_map) {
     "z-index": g_z("tint"),
     color: color,
     "font-size": font_size,
-    filter: app_g_bless_mark_edge_filter(),
+    filter: bless_mark_edge_filter(),
     transform: "translate(-50%, -50%)",
     "pointer-events": "none",
     visibility: "hidden",
