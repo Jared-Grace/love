@@ -1,3 +1,4 @@
+import { property_null_is } from "./property_null_is.mjs";
 import { app_ceb_bible_gloss_words_dash_kept_distinct } from "./app_ceb_bible_gloss_words_dash_kept_distinct.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
@@ -5,8 +6,6 @@ import { text_lower_to } from "./text_lower_to.mjs";
 import { text_includes } from "./text_includes.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { binisaya_words_known } from "./binisaya_words_known.mjs";
-import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { ebible_folder_cebuano } from "./ebible_folder_cebuano.mjs";
 import { bible_words_written_lowered_set } from "./bible_words_written_lowered_set.mjs";
 import { set_includes } from "./set_includes.mjs";
@@ -27,8 +26,7 @@ export async function app_ceb_bible_gloss_words_dashed_unasked() {
   let dashed = list_filter(lowered, dashed_is);
   let known = await binisaya_words_known();
   function unasked_is(word) {
-    let held = property_get_or_null(known, word);
-    let none = null_is(held);
+    let none = property_null_is(known, word);
     return none;
   }
   let unasked = list_filter(dashed, unasked_is);
