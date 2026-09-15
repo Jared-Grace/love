@@ -1,6 +1,6 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { app_ceb_bible_gloss_roots_disagreeing_offenders } from "./app_ceb_bible_gloss_roots_disagreeing_offenders.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { gloss_roots_disagreeing_classes_claimed_total } from "./gloss_roots_disagreeing_classes_claimed_total.mjs";
 import { gloss_classes_word_claims_apart } from "./gloss_classes_word_claims_apart.mjs";
 import { list_map_property } from "./list_map_property.mjs";
@@ -17,8 +17,7 @@ export async function app_ceb_bible_gloss_words_explained_apart_names() {
     findings,
     offenders,
   );
-  let r = property_get(counted, "r4");
-  let classes = property_get(r, "classes");
+  let classes = property_path_get_2(counted, "r4", "classes");
   let apart = gloss_classes_word_claims_apart(classes);
   let spelled_all = list_map_property(apart, "word");
   let sorted = list_unique_sorted(spelled_all);
