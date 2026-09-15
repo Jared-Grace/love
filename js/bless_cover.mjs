@@ -4,7 +4,7 @@ import { app_shared_color_page_dark } from "./app_shared_color_page_dark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_loading_spinner } from "./html_loading_spinner.mjs";
-export function app_g_bless_cover() {
+export function bless_cover() {
   arguments_assert(arguments, 0);
   ("The sheet this game waits behind while its street is still arriving, with the same");
   ("spinner turning on it that every other screen here waits behind.");
