@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { list_map_unique } from "./list_map_unique.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -10,7 +11,6 @@ import { greater_than } from "./greater_than.mjs";
 import { list_map } from "./list_map.mjs";
 import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
-import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
 import { not } from "./not.mjs";
 export function gloss_entries_explains_repeated_kinds(entries) {
@@ -36,8 +36,7 @@ export function gloss_entries_explains_repeated_kinds(entries) {
     if (shared) {
       let words = list_map(items, gloss_entry_word_read);
       let distinct = list_map_unique(words, text_lower_to);
-      let spread = list_size(distinct);
-      let one_word = equal(spread, 1);
+      let one_word = list_size_equal(distinct, 1);
       if (one_word) {
         same = add(same, size);
       }
