@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_slice } from "./list_slice.mjs";
 import { list_map } from "./list_map.mjs";
@@ -9,8 +10,6 @@ import { text_words } from "./text_words.mjs";
 import { list_size } from "./list_size.mjs";
 import { text_to } from "./text_to.mjs";
 import { equal } from "./equal.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_pop } from "./list_pop.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 export function app_code_quiz_tokens_group_skeletons(tokens) {
@@ -52,8 +51,7 @@ export function app_code_quiz_tokens_group_skeletons(tokens) {
     }
     let closes = equal(token, closing);
     if (closes) {
-      let b = list_empty_is(opened_at);
-      let waiting = not(b);
+      let waiting = list_empty_not_is(opened_at);
       if (waiting) {
         let from = list_pop(opened_at);
         record(opening, from, place);
