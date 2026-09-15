@@ -1,7 +1,7 @@
 import { g_player_img_get } from "./g_player_img_get.mjs";
 import { bless_crossing_draw } from "./bless_crossing_draw.mjs";
 import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
-import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
+import { bless_doors_draw } from "./bless_doors_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
 import { property_get } from "./property_get.mjs";
@@ -37,7 +37,7 @@ export function app_g_bless_overlay_blessed(container_map) {
   let crossings = html_div(div_map);
   bless_crossing_draw(crossings, blocks);
   let doors = html_div(div_map);
-  app_g_bless_doors_draw(doors, blocks);
+  bless_doors_draw(doors, blocks);
   ("The upper-floor windows, on their own layer beside the doors and for all the same");
   ("reasons. Together the two say how many homes a building holds and on which floor each");
   ("of them lives, which is the ladder the prayer climbs drawn on the street itself.");
