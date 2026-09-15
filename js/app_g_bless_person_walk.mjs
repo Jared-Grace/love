@@ -12,7 +12,7 @@ import { bless_still_turns } from "./bless_still_turns.mjs";
 import { bless_still_wait_ms } from "./bless_still_wait_ms.mjs";
 import { bless_person_step } from "./bless_person_step.mjs";
 import { bless_person_crossing_clear } from "./bless_person_crossing_clear.mjs";
-import { app_g_bless_person_turn } from "./app_g_bless_person_turn.mjs";
+import { bless_person_turn } from "./bless_person_turn.mjs";
 export function app_g_bless_person_walk(world, person) {
   arguments_assert(arguments, 2);
   ("One person goes about their business for as long as the game is open - walking, or");
@@ -73,7 +73,7 @@ export function app_g_bless_person_walk(world, person) {
     let standing = property_get(person, "standing");
     let still = positive_is(standing);
     if (still) {
-      app_g_bless_person_turn(person);
+      bless_person_turn(person);
       property_subtract_1(person, "standing");
       let held = random();
       let wait = bless_still_wait_ms(pace, held);
