@@ -1,9 +1,10 @@
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { not } from "./not.mjs";
+import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { file_read } from "./file_read.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than } from "./less_than.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
-import { file_read } from "./file_read.mjs";
 import { error } from "./error.mjs";
 import { text_number_ordinal_spelled_underscore } from "./text_number_ordinal_spelled_underscore.mjs";
 import { text_replace_once } from "./text_replace_once.mjs";
@@ -14,13 +15,15 @@ export async function bible_glyph_chapters_chapter_add(chapter_code) {
   "IT COUNTS THE BINDINGS RATHER THAN BEING TOLD THE NUMBER, so the name it writes cannot disagree with what is already there. Handing the ordinal in would let a caller skip one or repeat one, and a repeated let is a silent overwrite rather than an error.";
   "THE LOCAL HOLDING THE CHAPTER NAME MAY NOT BE CALLED fn underscore name, and that is worth saying because the first draft was. The canonicalising pass expands a literal naming a repo function into a call to that name, so a local wearing the same word turns those expansions into a string being called, and the file throws on its second line. The shadowing gate lists that word for exactly this reason.";
   "Naming a chapter that is already named changes nothing and says so, so it is safe to run twice.";
+  "ALREADY NAMED MEANS BOUND, NOT MERELY IMPORTED. The test used to be whether the chapter's name appeared anywhere in the file, and an import on its own passes that. Isaiah twenty six was left that way on 2026-09-09 - imported, never bound, never in the array - so it was on no page and every later run of this command said it was already done. A half-landed chapter now gets the two edits it is missing, and its import is not written a second time.";
   arguments_assert(arguments, 1);
   let short_name = chapter_code.toLowerCase();
   let chapter_fn_name = "bible_glyph_chapter_" + short_name;
   let f_name = fn_name("bible_glyph_chapters");
   let f_path = text_combine_multiple(["js/", f_name, ".mjs"]);
   let before = await file_read(f_path);
-  if (before.includes(chapter_fn_name)) {
+  let bound = " = " + chapter_fn_name + "();";
+  if (before.includes(bound)) {
     let already = {
       chapter_code,
       chapter_fn_name,
@@ -41,11 +44,15 @@ export async function bible_glyph_chapters_chapter_add(chapter_code) {
     "import { " + chapter_fn_name + ' } from "./' + chapter_fn_name + '.mjs";';
   let f_name2 = fn_name("bible_glyph_chapters");
   let opener = text_combine_multiple(["export function ", f_name2, "() {"]);
-  let with_import = text_replace_once(
-    before,
-    opener,
-    import_line + "\n" + opener,
-  );
+  let with_import = before;
+  let b = before.includes(import_line);
+  if (not(b)) {
+    with_import = text_replace_once(
+      before,
+      opener,
+      import_line + "\n" + opener,
+    );
+  }
   let array_opener = "  let chapters = [";
   let binding_line = "  let " + ordinal + " = " + chapter_fn_name + "();";
   let with_binding = text_replace_once(
