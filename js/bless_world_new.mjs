@@ -11,7 +11,7 @@ import { bless_blocks_raise } from "./bless_blocks_raise.mjs";
 import { app_g_bless_people } from "./app_g_bless_people.mjs";
 import { bless_player_place } from "./bless_player_place.mjs";
 import { app_g_bless_world } from "./app_g_bless_world.mjs";
-export function app_g_bless_world_new(player_img) {
+export function bless_world_new(player_img) {
   arguments_assert(arguments, 1);
   ("A fresh world to walk about in - ground, a column of blocks built into it, a player");
   ("standing on the first of them, and a crowd living along all of them.");

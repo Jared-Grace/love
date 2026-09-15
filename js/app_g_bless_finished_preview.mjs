@@ -5,7 +5,7 @@ import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 import { bless_tile_size_playing } from "./bless_tile_size_playing.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
-import { app_g_bless_world_new } from "./app_g_bless_world_new.mjs";
+import { bless_world_new } from "./bless_world_new.mjs";
 import { bless_map_scrolling } from "./bless_map_scrolling.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -44,7 +44,7 @@ export async function app_g_bless_finished_preview() {
     background: "black",
   });
   let player_img = g_player_img_get();
-  let world = app_g_bless_world_new(player_img);
+  let world = bless_world_new(player_img);
   let drawn = bless_map_scrolling(cover, world);
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
