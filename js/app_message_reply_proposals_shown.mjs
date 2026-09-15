@@ -9,7 +9,7 @@ import { function_read } from "./function_read.mjs";
 import { reply_proposal_diff_whole } from "./reply_proposal_diff_whole.mjs";
 import { reply_proposal_whole_added } from "./reply_proposal_whole_added.mjs";
 import { list_add } from "./list_add.mjs";
-export async function reply_proposals_shown() {
+export async function app_message_reply_proposals_shown() {
   arguments_assert(arguments, 0);
   ("Everything a person needs in front of them to say yes or no to a change to the reply rules: the lines it would change, the rewritten messages it was measured on with what they would then get, the real messages those were drawn from with what they get now, and the whole worked corpus in the same shape underneath.");
   ("★ THE JOIN IS DONE HERE AND NOT ON THE PAGE, because the two halves cannot both reach the browser by themselves. The real messages sit in a folder outside every repo; the cases sit in the public one; the word joining them is worked out by hashing, which is a thing the machine does and the page does not. Handed over already joined, the page has nothing left to line up and so has no way of lining it up wrongly.");
