@@ -1,6 +1,6 @@
 import { bless_cover_lift } from "./bless_cover_lift.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_cover } from "./app_g_bless_cover.mjs";
+import { bless_cover } from "./bless_cover.mjs";
 import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
 export async function app_g_bless_overlay_loaded(container_map) {
   arguments_assert(arguments, 1);
@@ -21,7 +21,7 @@ export async function app_g_bless_overlay_loaded(container_map) {
   ("Each picture carries its own short patience underneath, so one that never arrives holds");
   ("the street up by that much and no longer - a game that will not start at all is a worse");
   ("outcome than a game with one square missing from it.");
-  let cover = app_g_bless_cover();
+  let cover = bless_cover();
   let transfer = await app_g_bless_overlay(container_map);
   await bless_cover_lift(container_map, cover);
   return transfer;
