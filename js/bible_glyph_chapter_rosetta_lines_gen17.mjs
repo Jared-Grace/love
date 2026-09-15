@@ -1,0 +1,197 @@
+export function bible_glyph_chapter_rosetta_lines_gen17() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "GEN17",
+    verses: [
+      {
+        verse_number: 1,
+        original:
+          "וַיְהִ֣י אַבְרָ֔ם בֶּן־ תִּשְׁעִ֥ים שָׁנָ֖ה וְתֵ֣שַׁע שָׁנִ֑ים וַיֵּרָ֨א יְהוָ֜ה אֶל־ אַבְרָ֗ם וַיֹּ֤אמֶר אֵלָיו֙ אֲנִי־ אֵ֣ל שַׁדַּ֔י הִתְהַלֵּ֥ךְ לְפָנַ֖י וֶהְיֵ֥ה תָמִֽים׃",
+        english:
+          "When Abram was ninety-nine years old the LORD appeared to him and said I am God Almighty Walk before Me and be blameless",
+      },
+      {
+        verse_number: 2,
+        original:
+          "וְאֶתְּנָ֥ה בְרִיתִ֖י בֵּינִ֣י וּבֵינֶ֑ךָ וְאַרְבֶּ֥ה אוֹתְךָ֖ בִּמְאֹ֥ד מְאֹֽד׃",
+        english:
+          "I will establish My covenant between Me and you and I will multiply you exceedingly",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וַיִּפֹּ֥ל אַבְרָ֖ם עַל־ פָּנָ֑יו וַיְדַבֵּ֥ר אִתּ֛וֹ אֱלֹהִ֖ים לֵאמֹֽר׃",
+        english: "Then Abram fell facedown and God said to him",
+      },
+      {
+        verse_number: 4,
+        original:
+          "אֲנִ֕י הִנֵּ֥ה בְרִיתִ֖י אִתָּ֑ךְ וְהָיִ֕יתָ לְאַ֖ב הֲמ֥וֹן גּוֹיִֽם׃",
+        english:
+          "As for Me this is My covenant with you You will be the father of many nations",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְלֹא־ יִקָּרֵ֥א ע֛וֹד אֶת־ שִׁמְךָ֖ אַבְרָ֑ם וְהָיָ֤ה שִׁמְךָ֙ אַבְרָהָ֔ם כִּ֛י אַב־ הֲמ֥וֹן גּוֹיִ֖ם נְתַתִּֽיךָ׃",
+        english:
+          "No longer will you be called Abram but your name will be Abraham for I have made you a father of many nations",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְהִפְרֵתִ֤י אֹֽתְךָ֙ בִּמְאֹ֣ד מְאֹ֔ד וּנְתַתִּ֖יךָ לְגוֹיִ֑ם וּמְלָכִ֖ים מִמְּךָ֥ יֵצֵֽאוּ׃",
+        english:
+          "I will make you exceedingly fruitful I will make nations of you and kings will descend from you",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וַהֲקִמֹתִ֨י אֶת־ בְּרִיתִ֜י בֵּינִ֣י וּבֵינֶ֗ךָ וּבֵ֨ין זַרְעֲךָ֧ אַחֲרֶ֛יךָ לְדֹרֹתָ֖ם לִבְרִ֣ית עוֹלָ֑ם לִהְי֤וֹת לְךָ֙ לֵֽאלֹהִ֔ים וּֽלְזַרְעֲךָ֖ אַחֲרֶֽיךָ׃",
+        english:
+          "I will establish My covenant as an everlasting covenant between Me and you and your descendants after you to be your God and the God of your descendants after you",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְנָתַתִּ֣י לְ֠ךָ וּלְזַרְעֲךָ֨ אַחֲרֶ֜יךָ אֵ֣ת׀ אֶ֣רֶץ מְגֻרֶ֗יךָ אֵ֚ת כָּל־ אֶ֣רֶץ כְּנַ֔עַן לַאֲחֻזַּ֖ת עוֹלָ֑ם וְהָיִ֥יתִי לָהֶ֖ם לֵאלֹהִֽים׃",
+        english:
+          "And to you and your descendants I will give the land where you are residing all the land of Canaan as an eternal possession and I will be their God",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וַיֹּ֤אמֶר אֱלֹהִים֙ אֶל־ אַבְרָהָ֔ם וְאַתָּ֖ה אֶת־ בְּרִיתִ֣י תִשְׁמֹ֑ר אַתָּ֛ה וְזַרְעֲךָ֥ אַֽחֲרֶ֖יךָ לְדֹרֹתָֽם׃",
+        english:
+          "God also said to Abraham You must keep My covenant you and your descendants in the generations after you",
+      },
+      {
+        verse_number: 10,
+        original:
+          "זֹ֣את בְּרִיתִ֞י אֲשֶׁ֣ר תִּשְׁמְר֗וּ בֵּינִי֙ וּבֵ֣ינֵיכֶ֔ם וּבֵ֥ין זַרְעֲךָ֖ אַחֲרֶ֑יךָ הִמּ֥וֹל לָכֶ֖ם כָּל־ זָכָֽר׃",
+        english:
+          "This is My covenant with you and your descendants after you which you are to keep Every male among you must be circumcised",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וּנְמַלְתֶּ֕ם אֵ֖ת בְּשַׂ֣ר עָרְלַתְכֶ֑ם וְהָיָה֙ לְא֣וֹת בְּרִ֔ית בֵּינִ֖י וּבֵינֵיכֶֽם׃",
+        english:
+          "You are to circumcise the flesh of your foreskin and this will be a sign of the covenant between Me and you",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וּבֶן־ שְׁמֹנַ֣ת יָמִ֗ים יִמּ֥וֹל לָכֶ֛ם כָּל־ זָכָ֖ר לְדֹרֹתֵיכֶ֑ם יְלִ֣יד בָּ֔יִת וּמִקְנַת־ כֶּ֙סֶף֙ מִכֹּ֣ל בֶּן־ נֵכָ֔ר אֲשֶׁ֛ר לֹ֥א מִֽזַּרְעֲךָ֖ הֽוּא׃",
+        english:
+          "Generation after generation every male must be circumcised when he is eight days old including those born in your household and those purchased from a foreigner even those who are not your offspring",
+      },
+      {
+        verse_number: 13,
+        original:
+          "הִמּ֧וֹל׀ יִמּ֛וֹל יְלִ֥יד בֵּֽיתְךָ֖ וּמִקְנַ֣ת כַּסְפֶּ֑ךָ וְהָיְתָ֧ה בְרִיתִ֛י בִּבְשַׂרְכֶ֖ם לִבְרִ֥ית עוֹלָֽם׃",
+        english:
+          "Whether they are born in your household or purchased they must be circumcised My covenant in your flesh will be an everlasting covenant",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְעָרֵ֣ל׀ זָכָ֗ר אֲשֶׁ֤ר לֹֽא־ יִמּוֹל֙ אֶת־ בְּשַׂ֣ר עָרְלָת֔וֹ וְנִכְרְתָ֛ה הַנֶּ֥פֶשׁ הַהִ֖וא מֵעַמֶּ֑יהָ אֶת־ בְּרִיתִ֖י הֵפַֽר׃ס",
+        english:
+          "But if any male is not circumcised he will be cut off from his people he has broken My covenant",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וַיֹּ֤אמֶר אֱלֹהִים֙ אֶל־ אַבְרָהָ֔ם שָׂרַ֣י אִשְׁתְּךָ֔ לֹא־ תִקְרָ֥א אֶת־ שְׁמָ֖הּ שָׂרָ֑י כִּ֥י שָׂרָ֖ה שְׁמָֽהּ׃",
+        english:
+          "Then God said to Abraham As for Sarai your wife do not call her Sarai for her name is to be Sarah",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וּבֵרַכְתִּ֣י אֹתָ֔הּ וְגַ֨ם נָתַ֧תִּי מִמֶּ֛נָּה לְךָ֖ בֵּ֑ן וּבֵֽרַכְתִּ֙יהָ֙ וְהָֽיְתָ֣ה לְגוֹיִ֔ם מַלְכֵ֥י עַמִּ֖ים מִמֶּ֥נָּה יִהְיֽוּ׃",
+        english:
+          "And I will bless her and will surely give you a son by her I will bless her and she will be the mother of nations kings of peoples will descend from her",
+      },
+      {
+        verse_number: 17,
+        original:
+          "וַיִּפֹּ֧ל אַבְרָהָ֛ם עַל־ פָּנָ֖יו וַיִּצְחָ֑ק וַיֹּ֣אמֶר בְּלִבּ֗וֹ הַלְּבֶ֤ן מֵאָֽה־ שָׁנָה֙ יִוָּלֵ֔ד וְאִ֨ם־ שָׂרָ֔ה הֲבַת־ תִּשְׁעִ֥ים שָׁנָ֖ה תֵּלֵֽד׃",
+        english:
+          "Abraham fell facedown Then he laughed and said to himself Can a child be born to a man who is a hundred years old Can Sarah give birth at the age of ninety",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וַיֹּ֥אמֶר אַבְרָהָ֖ם אֶל־ הָֽאֱלֹהִ֑ים ל֥וּ יִשְׁמָעֵ֖אל יִחְיֶ֥ה לְפָנֶֽיךָ׃",
+        english:
+          "And Abraham said to God O that Ishmael might live under Your blessing",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וַיֹּ֣אמֶר אֱלֹהִ֗ים אֲבָל֙ שָׂרָ֣ה אִשְׁתְּךָ֗ יֹלֶ֤דֶת לְךָ֙ בֵּ֔ן וְקָרָ֥אתָ אֶת־ שְׁמ֖וֹ יִצְחָ֑ק וַהֲקִמֹתִ֨י אֶת־ בְּרִיתִ֥י אִתּ֛וֹ לִבְרִ֥ית עוֹלָ֖ם לְזַרְע֥וֹ אַחֲרָֽיו׃",
+        english:
+          "But God replied Your wife Sarah will indeed bear you a son and you are to name him Isaac I will establish My covenant with him as an everlasting covenant for his descendants after him",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וּֽלְיִשְׁמָעֵ֘אל שְׁמַעְתִּיךָ֒ הִנֵּ֣ה׀ בֵּרַ֣כְתִּי אֹת֗וֹ וְהִפְרֵיתִ֥י אֹת֛וֹ וְהִרְבֵּיתִ֥י אֹת֖וֹ בִּמְאֹ֣ד מְאֹ֑ד שְׁנֵים־ עָשָׂ֤ר נְשִׂיאִם֙ יוֹלִ֔יד וּנְתַתִּ֖יו לְג֥וֹי גָּדֽוֹל׃",
+        english:
+          "As for Ishmael I have heard you and I will surely bless him I will make him fruitful and multiply him greatly He will become the father of twelve rulers and I will make him into a great nation",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְאֶת־ בְּרִיתִ֖י אָקִ֣ים אֶת־ יִצְחָ֑ק אֲשֶׁר֩ תֵּלֵ֨ד לְךָ֤ שָׂרָה֙ לַמּוֹעֵ֣ד הַזֶּ֔ה בַּשָּׁנָ֖ה הָאַחֶֽרֶת׃",
+        english:
+          "But I will establish My covenant with Isaac whom Sarah will bear to you at this time next year",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וַיְכַ֖ל לְדַבֵּ֣ר אִתּ֑וֹ וַיַּ֣עַל אֱלֹהִ֔ים מֵעַ֖ל אַבְרָהָֽם׃",
+        english:
+          "When He had finished speaking with Abraham God went up from him",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וַיִּקַּ֨ח אַבְרָהָ֜ם אֶת־ יִשְׁמָעֵ֣אל בְּנ֗וֹ וְאֵ֨ת כָּל־ יְלִידֵ֤י בֵיתוֹ֙ וְאֵת֙ כָּל־ מִקְנַ֣ת כַּסְפּ֔וֹ כָּל־ זָכָ֕ר בְּאַנְשֵׁ֖י בֵּ֣ית אַבְרָהָ֑ם וַיָּ֜מָל אֶת־ בְּשַׂ֣ר עָרְלָתָ֗ם בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה כַּאֲשֶׁ֛ר דִּבֶּ֥ר אִתּ֖וֹ אֱלֹהִֽים׃",
+        english:
+          "On that very day Abraham took his son Ishmael and all those born in his household or purchased with his money every male among the members of Abraham’s household and he circumcised them just as God had told him",
+      },
+      {
+        verse_number: 24,
+        original:
+          "וְאַ֨בְרָהָ֔ם בֶּן־ תִּשְׁעִ֥ים וָתֵ֖שַׁע שָׁנָ֑ה בְּהִמֹּל֖וֹ בְּשַׂ֥ר עָרְלָתֽוֹ׃",
+        english: "So Abraham was ninety-nine years old when he was circumcised",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְיִשְׁמָעֵ֣אל בְּנ֔וֹ בֶּן־ שְׁלֹ֥שׁ עֶשְׂרֵ֖ה שָׁנָ֑ה בְּהִ֨מֹּל֔וֹ אֵ֖ת בְּשַׂ֥ר עָרְלָתֽוֹ׃",
+        english: "and his son Ishmael was thirteen",
+      },
+      {
+        verse_number: 26,
+        original:
+          "בְּעֶ֙צֶם֙ הַיּ֣וֹם הַזֶּ֔ה נִמּ֖וֹל אַבְרָהָ֑ם וְיִשְׁמָעֵ֖אל בְּנֽוֹ׃",
+        english: "Abraham and his son Ishmael were circumcised on the same day",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְכָל־ אַנְשֵׁ֤י בֵיתוֹ֙ יְלִ֣יד בָּ֔יִת וּמִקְנַת־ כֶּ֖סֶף מֵאֵ֣ת בֶּן־ נֵכָ֑ר נִמֹּ֖לוּ אִתּֽוֹ׃פ",
+        english:
+          "And all the men of Abraham’s household both servants born in his household and those purchased from foreigners were circumcised with him",
+      },
+    ],
+  };
+  return chapter;
+}
