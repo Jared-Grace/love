@@ -510,7 +510,7 @@ export function bible_glyph_chapter_isa58() {
           "honor",
           "it",
           "by",
-          "$no_entry",
+          "not",
           "$hammer",
           "your",
           "own",
