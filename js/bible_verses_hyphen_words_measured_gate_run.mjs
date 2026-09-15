@@ -16,23 +16,24 @@ export function bible_verses_hyphen_words_measured_gate_run() {
   let expected = property_get(c, "expected");
   let got = bible_verses_hyphen_words_measured(verses);
   let wrong = json_equal_not(got, expected);
+  let defects = [];
   if (wrong) {
-    let f_name = fn_name("bible_verses_hyphen_words_measured");
-    let defect =
-      text_combine_multiple([f_name, " answered "]) +
-      json_to(got) +
-      " and was expected to answer " +
-      json_to(expected);
-    console.log(defect);
-    let f_name2 = fn_name("bible_verses_hyphen_words_measured_gate_run");
-    let combined = text_combine_multiple([
-      f_name2,
-      ": the hyphen reading answered differently",
-    ]);
-    throw new Error(combined);
+    list_add(defects, {
+      got,
+      expected,
+    });
   }
+  let f_name = fn_name("bible_verses_hyphen_words_measured");
+  list_empty_is_assert_json(defects, {
+    defects,
+    hint: text_combine_multiple([
+      "the hyphen reading answered differently than its corpus - read got beside expected, then mend ",
+      f_name,
+      " or the corpus, whichever is wrong",
+    ]),
+  });
   let answer = {
-    checked: 1,
+    verses: list_size(verses),
     defects: 0,
   };
   return answer;
