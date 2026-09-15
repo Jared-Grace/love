@@ -13,7 +13,7 @@ import { equal } from "./equal.mjs";
 import { html_click_none } from "./html_click_none.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_bless_vehicle_place } from "./app_g_bless_vehicle_place.mjs";
-export function app_g_bless_vehicle_draw(parent, vehicle) {
+export function bless_vehicle_draw(parent, vehicle) {
   arguments_assert(arguments, 2);
   ("Make the picture of one car on the map and hand it to the car.");
   ("It is a DIV holding markup rather than a picture, because there is no picture of a car in");
