@@ -4,7 +4,7 @@ import { bless_edge_degrees } from "./bless_edge_degrees.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_edge_box } from "./bless_edge_box.mjs";
-import { app_g_bless_edge_nearest_try } from "./app_g_bless_edge_nearest_try.mjs";
+import { bless_edge_nearest_try } from "./bless_edge_nearest_try.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_visibility_hidden } from "./html_visibility_hidden.mjs";
 import { subtract } from "./subtract.mjs";
@@ -20,7 +20,7 @@ export function app_g_bless_edge(edge, container_map, bar, remaining) {
   let outer = property_get(edge, "outer");
   let spin = property_get(edge, "spin");
   let box = bless_edge_box(container_map, bar);
-  let point = app_g_bless_edge_nearest_try(remaining, box);
+  let point = bless_edge_nearest_try(remaining, box);
   let nobody = null_is(point);
   if (nobody) {
     html_visibility_hidden(outer);
