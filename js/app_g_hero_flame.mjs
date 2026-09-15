@@ -1,3 +1,6 @@
+import { divide } from "./divide.mjs";
+import { multiply } from "./multiply.mjs";
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { emoji_fire } from "./emoji_fire.mjs";
 import { random_range } from "./random_range.mjs";
@@ -12,15 +15,19 @@ export function app_g_hero_flame(fx, point, width) {
   let fire = emoji_fire();
   let size = random_range(0.6, 1.6);
   let flame = app_g_hero_sprite(fx, point, fire, size);
-  let reach = width / 2;
+  let reach = divide(width, 2);
   let ox = random_range(-reach, reach);
-  let oy = random_range(-reach, reach * 0.6);
+  let largest = multiply(reach, 0.6);
+  let oy = random_range(-reach, largest);
   let start = app_g_hero_translate_text(ox, oy);
-  let flare = app_g_hero_translate_text(ox, oy - width * 0.3);
-  let gone = app_g_hero_translate_text(
-    ox * 0.4,
-    oy - width * random_range(1, 1.8),
-  );
+  let right = multiply(width, 0.3);
+  let y = subtract(oy, right);
+  let flare = app_g_hero_translate_text(ox, y);
+  let x = multiply(ox, 0.4);
+  let right2 = random_range(1, 1.8);
+  let right3 = multiply(width, right2);
+  let y2 = subtract(oy, right3);
+  let gone = app_g_hero_translate_text(x, y2);
   let duration = random_range(700, 1200);
   html_animate_remove(
     flame,
