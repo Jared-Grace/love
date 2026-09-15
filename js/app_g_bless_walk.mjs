@@ -1,6 +1,6 @@
 import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
 import { bless_crossing_wait } from "./bless_crossing_wait.mjs";
-import { app_g_bless_refused_flash } from "./app_g_bless_refused_flash.mjs";
+import { bless_refused_flash } from "./bless_refused_flash.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
 import { g_coordinates_index } from "./g_coordinates_index.mjs";
@@ -52,7 +52,7 @@ export async function app_g_bless_walk(
   ("The square goes red for a moment and the answer is unmistakable: not there.");
   let nowhere = list_empty_is(path);
   if (nowhere) {
-    await app_g_bless_refused_flash(div_map, target);
+    await bless_refused_flash(div_map, target);
     return;
   }
   ("The way opens before it is walked: anybody standing on it steps aside first, a crowd");
