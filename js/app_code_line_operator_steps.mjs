@@ -24,12 +24,12 @@ export function app_code_line_operator_steps(node) {
   if (not(written_is)) {
     return one;
   }
-  let exponent = property_get(right, "value");
-  let whole_is = integer_is(exponent);
+  let exponent_written = property_get(right, "value");
+  let whole_is = integer_is(exponent_written);
   if (not(whole_is)) {
     return one;
   }
-  let multiplications = subtract_1(exponent);
+  let multiplications = subtract_1(exponent_written);
   let more_is = greater_than(multiplications, one);
   if (not(more_is)) {
     return one;
