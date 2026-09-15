@@ -353,7 +353,7 @@ export function bible_glyph_chapter_1sa16() {
           "these",
           "all",
           "the",
-          "$son",
+          "sons",
           "you",
           "have?",
           "There",
