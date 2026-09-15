@@ -59,7 +59,7 @@ export function gloss_classes_backing_elsewhere_gate_run() {
     );
   }
   let r = {
-    checked: size,
+    cases: size,
     defects: 0,
   };
   return r;
