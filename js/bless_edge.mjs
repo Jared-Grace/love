@@ -12,7 +12,7 @@ import { html_style_rotate_degrees_set } from "./html_style_rotate_degrees_set.m
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_pixels_text } from "./html_pixels_text.mjs";
 import { html_visibility_visible } from "./html_visibility_visible.mjs";
-export function app_g_bless_edge(edge, container_map, bar, remaining) {
+export function bless_edge(edge, container_map, bar, remaining) {
   arguments_assert(arguments, 4);
   ("Aims the screen-edge arrow at the nearest person still to pray for and shows it - unless that person is already in view, or there is nobody left, in which case it is put away.");
   ("Put away the moment the person can be SEEN, because from then on the arrow over their head is the better answer to the same question and two answers at once is one too many. An edge arrow left up while its target is on the screen also reads as pointing at something else entirely, somewhere further out.");

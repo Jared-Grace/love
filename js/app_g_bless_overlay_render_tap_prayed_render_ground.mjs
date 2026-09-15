@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_marks } from "./app_g_bless_marks.mjs";
-import { app_g_bless_edge } from "./app_g_bless_edge.mjs";
+import { bless_edge } from "./bless_edge.mjs";
 import { app_g_bless_wash } from "./app_g_bless_wash.mjs";
 export function app_g_bless_overlay_render_tap_prayed_render_ground({
   ground,
@@ -37,7 +37,7 @@ export function app_g_bless_overlay_render_tap_prayed_render_ground({
   ("ground, because it is the one hint that is not about the street at all - it is about");
   ("where the screen ENDS, and so it has to be worked out from the frame and the strip of");
   ("buttons, neither of which anything drawing on the map has any business knowing about.");
-  app_g_bless_edge(edge, container_map, bar, remaining);
+  bless_edge(edge, container_map, bar, remaining);
   let cone = cone_get();
   ("The draw is also where the player is noticed to have MOVED, because every player action");
   ("ends in one - a step, a turn, a prayer - and the hold reads the cone to tell which. Told");
