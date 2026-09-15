@@ -38,15 +38,15 @@ export function app_code_lesson_expression_parentheses_arithmetic() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function above(root) {
+  function above(root, context) {
     "the rule they already have, then the parentheses overriding it, then the same group on the other side of the * and with the other operator inside it, then the rule in one line";
     let plus = js_operator_plus_symbol();
     let times = js_operator_asterisk_symbol();
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "Remember: ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_choose_order, [
+      "",
       "1 + 2 * 3",
       " does the ",
       times,

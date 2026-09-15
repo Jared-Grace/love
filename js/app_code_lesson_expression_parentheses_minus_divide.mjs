@@ -40,7 +40,7 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
     let list = [v, v2, v3, v4];
     return list;
   }
-  function above(root) {
+  function above(root, context) {
     "the left-to-right rule they already have, then parentheses overriding it after a -, then the same thing after a /, then the rule in one line";
     "The closing card says the inside-before-outside sentence WORD-IDENTICALLY, from the one function every parentheses lesson shares. It once said the thing only this lesson can say - that the parentheses beat working left to right - on the grounds that a restatement is only worth a card when it comes from somewhere new. That angle was withdrawn because it was not true: before working left to right is a claim about EVERY operator, and ** runs right to left, so the card taught a rule that would later have to be unlearned. Inside-before-outside holds whichever way an operator runs. The near-copy worry it was avoiding does not apply to a sentence repeated exactly - that is the case a learner recognises and passes over in a second, which is what a recall should cost.";
     "Nothing here says strength or stronger. That word is ours, not the learner's - it appears in these docstrings and nowhere on a screen. What the plus-minus lesson actually told them is whichever one comes first, we do first, and what the precedence lessons told them is we always do * before +, even if * appears later. A card that leans on strength would be leaning on a word never defined.";
@@ -50,8 +50,8 @@ export function app_code_lesson_expression_parentheses_minus_divide() {
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "Remember: ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_choose_order_plus_minus, [
+      "",
       plus,
       " and ",
       minus,

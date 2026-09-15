@@ -25,11 +25,11 @@ export function app_code_lesson_expression_swapping_divide() {
     let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
-  function above(root) {
+  function above(root, context) {
     "recall + * swap, then show /, % and ** each changing when swapped, with an everyday reason and both sides worked out";
     let recall = app_code_container_light_blue(root);
-    html_div_cycle_code(recall, [
-      "Remember: ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_swapping_add, [
+      "",
       "+",
       " and ",
       "*",

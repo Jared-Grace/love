@@ -34,11 +34,11 @@ export function app_code_lesson_expression_swapping_order() {
     let built = app_code_lesson_name_id_category_then(left, paint);
     return built;
   }
-  function above(root) {
+  function above(root, context) {
     "show that ordering comparisons flip when swapped, with the reason: if 2 < 3 is true then 3 < 2 is false, because the bigger number would now be the smaller one. + and * are recalled as the swappers";
     let intro = app_code_container_light_blue(root);
-    html_div_cycle_code(intro, [
-      "Remember: ",
+    app_code_remember_from_lesson(intro, context, app_code_lesson_expression_less_than, [
+      "",
       "<",
       " and ",
       ">",

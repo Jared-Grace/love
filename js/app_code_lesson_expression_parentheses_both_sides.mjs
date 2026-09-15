@@ -61,15 +61,15 @@ export function app_code_lesson_expression_parentheses_both_sides() {
     let list = [v, v2];
     return list;
   }
-  function above(root) {
+  function above(root, context) {
     "recall what ( and ) do, then the line posed and solved a side at a time, then why the parentheses are needed here when they were not needed before";
     let open = js_code_parenthesis_left();
     let close = js_code_parenthesis_right();
     let recall = app_code_container_light_blue(root);
     ("On its own is this lesson's OWN angle and is kept deliberately - it does not reach for the shared inside-before-outside sentence, which is the wrong frame here: with a parenthesis on each side, neither one is outside the other, so before what has no answer. What each parenthesis does have is that it collapses to a single true or false by itself, which is exactly what the two lines below then show.");
     ("Solve, not work it out. The track runs on solve - a childhood math word, decided in the arithmetic-both-sides lesson - and work out is nowhere else in learner-facing text. The comparison is also named rather than left as it, and it is the comparison that is solved rather than the parentheses doing the solving: parentheses do not solve anything, they say what is solved apart from the rest.");
-    html_div_cycle_code(recall, [
-      "Remember: a comparison inside ",
+    app_code_remember_from_lesson(recall, context, app_code_lesson_expression_parentheses_one_side, [
+      "a comparison inside ",
       open,
       " and ",
       close,
