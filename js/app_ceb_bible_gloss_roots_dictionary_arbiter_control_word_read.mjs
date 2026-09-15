@@ -1,3 +1,4 @@
+import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -8,7 +9,6 @@ import { add } from "./add.mjs";
 import { property_set } from "./property_set.mjs";
 import { gloss_root_claimed_relation } from "./gloss_root_claimed_relation.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read(
   said,
@@ -44,8 +44,7 @@ export function app_ceb_bible_gloss_roots_dictionary_arbiter_control_word_read(
       let is = equal(relation, "apart");
       return is;
     }
-    let aparts = list_filter(relations, apart_is);
-    let apart_count = list_size(aparts);
+    let apart_count = list_filter_size(relations, apart_is);
     let all_apart = equal(apart_count, ways);
     if (all_apart) {
       let left2 = property_get(side, "apart");
