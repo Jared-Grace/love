@@ -1,10 +1,10 @@
+import { html_pixels_point_text } from "./html_pixels_point_text.mjs";
 import { each_range_async } from "./each_range_async.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_pixels_text } from "./html_pixels_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_animate_start } from "./html_animate_start.mjs";
