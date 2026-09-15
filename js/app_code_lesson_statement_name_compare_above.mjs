@@ -1,3 +1,5 @@
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_expression_less_than } from "./app_code_lesson_expression_less_than.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { html_div_code_lines } from "./html_div_code_lines.mjs";
@@ -50,11 +52,16 @@ export function app_code_lesson_statement_name_compare_above(root, context) {
     number_first,
   ]);
   let box_remember = app_code_container_light_blue(root);
-  html_div_cycle_code(box_remember, [
-    "Remember, we can ask whether one number is smaller (",
-    smaller_than,
-    ") than another:",
-  ]);
+  app_code_remember_from_lesson(
+    box_remember,
+    context,
+    app_code_lesson_expression_less_than,
+    [
+      "we can ask whether one number is smaller (",
+      smaller_than,
+      ") than another:",
+    ],
+  );
   let logged_numbers = js_code_console_log_statement(numbers_compared);
   let value = js_keyword_true();
   app_code_code_lines_writes_out(box_remember, [logged_numbers], value);
