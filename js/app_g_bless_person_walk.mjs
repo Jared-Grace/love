@@ -10,7 +10,7 @@ import { random } from "./random.mjs";
 import { bless_pause_is } from "./bless_pause_is.mjs";
 import { bless_still_turns } from "./bless_still_turns.mjs";
 import { bless_still_wait_ms } from "./bless_still_wait_ms.mjs";
-import { app_g_bless_person_step } from "./app_g_bless_person_step.mjs";
+import { bless_person_step } from "./bless_person_step.mjs";
 import { bless_person_crossing_clear } from "./bless_person_crossing_clear.mjs";
 import { app_g_bless_person_turn } from "./app_g_bless_person_turn.mjs";
 export function app_g_bless_person_walk(world, person) {
@@ -89,7 +89,7 @@ export function app_g_bless_person_walk(world, person) {
       stepped();
       return;
     }
-    app_g_bless_person_step(world, person);
+    bless_person_step(world, person);
     setTimeout(stepped, pace);
   }
   let left = random();
