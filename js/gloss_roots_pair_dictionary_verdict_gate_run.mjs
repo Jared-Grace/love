@@ -88,7 +88,7 @@ export function gloss_roots_pair_dictionary_verdict_gate_run() {
     );
   }
   let r = {
-    checked: size,
+    cases: size,
     defects: 0,
   };
   return r;

@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_buffer } from "./file_read_buffer.mjs";
 import { property_get } from "./property_get.mjs";
@@ -27,10 +28,8 @@ export async function youtube_video_upload(
   let video = await youtube_video_upload_bytes(session_url, bytes);
   let video_id = property_get(video, "id");
   let address = youtube_video_address(video_id);
-  let snippet = property_get(video, "snippet");
-  let title_after = property_get(snippet, "title");
-  let status = property_get(video, "status");
-  let privacy_after = property_get(status, "privacyStatus");
+  let title_after = property_path_get_2(video, "snippet", "title");
+  let privacy_after = property_path_get_2(video, "status", "privacyStatus");
   let r = {
     video_id: video_id,
     address: address,
