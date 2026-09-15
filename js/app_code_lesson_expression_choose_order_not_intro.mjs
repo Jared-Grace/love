@@ -1,8 +1,8 @@
+import { text_combine_3 } from "./text_combine_3.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_operator_bang_symbol } from "./js_operator_bang_symbol.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_not_parenthesis_shape } from "./app_code_not_parenthesis_shape.mjs";
 export function app_code_lesson_expression_choose_order_not_intro(parent) {
@@ -15,8 +15,7 @@ export function app_code_lesson_expression_choose_order_not_intro(parent) {
   let symbol = js_operator_bang_symbol();
   let left_parenthesis = js_code_parenthesis_left();
   let right_parenthesis = js_code_parenthesis_right();
-  let opened = text_combine(left_parenthesis, " ");
-  let marks = text_combine(opened, right_parenthesis);
+  let marks = text_combine_3(left_parenthesis, " ", right_parenthesis);
   let row_shape = html_div_cycle_code(parent, [
     "",
     symbol,
