@@ -1,8 +1,7 @@
+import { list_map_unique } from "./list_map_unique.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_unique } from "./list_unique.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
 import { add } from "./add.mjs";
@@ -24,16 +23,14 @@ export function app_ceb_bible_gloss_words_roots_chapters_disagreeing_row_across_
   let comparable = 0;
   function word_read(word) {
     let claims = property_get(rooted, word);
-    let named_all = list_map(claims, claim_root);
-    let roots = list_unique(named_all);
+    let roots = list_map_unique(claims, claim_root);
     let ways = list_size(roots);
     let one = equal(ways, 1);
     comparable = add(comparable, 1);
     if (one) {
       return;
     }
-    let chapters_all = list_map(claims, claim_chapter);
-    let chapters = list_unique(chapters_all);
+    let chapters = list_map_unique(claims, claim_chapter);
     function chapter_split_is(chapter_code) {
       let inside = [];
       function claim_read(claim) {
