@@ -30,8 +30,8 @@ export function app_sandbox_previews() {
     return r13;
   }
   async function word_sound_load() {
-    let m = await import("./app_sandbox_word_sound_preview.mjs");
-    let r14 = m.app_sandbox_word_sound_preview;
+    let m = await import("./app_en_learn_bible_word_sound_preview.mjs");
+    let r14 = m.app_en_learn_bible_word_sound_preview;
     return r14;
   }
   async function lyric_video_review_load() {
