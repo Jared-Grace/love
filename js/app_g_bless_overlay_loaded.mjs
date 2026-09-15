@@ -1,10 +1,7 @@
+import { app_g_bless_cover_lift } from "./app_g_bless_cover_lift.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_cover } from "./app_g_bless_cover.mjs";
 import { app_g_bless_overlay } from "./app_g_bless_overlay.mjs";
-import { html_imgs_load_wait } from "./html_imgs_load_wait.mjs";
-import { html_style_opacity } from "./html_style_opacity.mjs";
-import { sleep } from "./sleep.mjs";
-import { html_remove } from "./html_remove.mjs";
 export async function app_g_bless_overlay_loaded(container_map) {
   arguments_assert(arguments, 1);
   ("The whole game, put up behind a cover that only comes away once every picture on the");
@@ -26,9 +23,6 @@ export async function app_g_bless_overlay_loaded(container_map) {
   ("outcome than a game with one square missing from it.");
   let cover = app_g_bless_cover();
   let transfer = await app_g_bless_overlay(container_map);
-  await html_imgs_load_wait(container_map);
-  html_style_opacity(cover, "0");
-  await sleep(150);
-  html_remove(cover);
+  await app_g_bless_cover_lift(container_map, cover);
   return transfer;
 }
