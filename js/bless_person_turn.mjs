@@ -5,7 +5,7 @@ import { list_without } from "./list_without.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
-export function app_g_bless_person_turn(person) {
+export function bless_person_turn(person) {
   arguments_assert(arguments, 1);
   ("Somebody looks another way without going anywhere - the whole of what standing about");
   ("outside your own front door consists of.");
