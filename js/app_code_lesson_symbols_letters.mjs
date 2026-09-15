@@ -16,7 +16,7 @@ import { app_code_lesson_name_id } from "./app_code_lesson_name_id.mjs";
 import { ternary } from "./ternary.mjs";
 import { text_upper_to } from "./text_upper_to.mjs";
 export function app_code_lesson_symbols_letters() {
-  function lambda(root) {
+  function lambda(root, context) {
     let c = app_code_container_light_blue(root);
     let div = html_div(c);
     html_span_text(div, "In English, there are 26 letters in the alphabet: ");
@@ -38,7 +38,7 @@ export function app_code_lesson_symbols_letters() {
     let alphabet_upper = list_alphabet_upper();
     html_text_characters_numbered(div5, alphabet_upper);
     let container2 = app_code_container_light_blue(root);
-    html_div_text(container2, "Remember, numbers are examples of symbols");
+    app_code_remember_from_lesson(container2, context, app_code_lesson_symbols_digits, ["numbers are examples of symbols"]);
     html_div_text(
       container2,
       "Also, both uppercase and lowercase letters are examples of symbols",

@@ -44,13 +44,12 @@ export function app_code_lesson_expression_remainder() {
     unscramble: true,
   });
   return lesson;
-  function remember_roles(root) {
+  function remember_roles(root, context) {
     "remind all three roles at once, since the remainder question 17 % 5 === 2 shows the dividend, divisor and remainder together";
     let remember = app_code_container_light_blue(root);
     html_div_cycle_code(remember, ["", "17 % 5 === 2"]);
-    html_div_cycle_code(remember, ["Remember:"]);
-    html_div_cycle_code(remember, ["The ", "17", " is the dividend"]);
-    html_div_cycle_code(remember, ["The ", "5", " is the divisor"]);
+    app_code_remember_from_lesson(remember, context, app_code_lesson_expression_dividend, ["the ", "17", " is the dividend"]);
+    app_code_remember_from_lesson(remember, context, app_code_lesson_expression_divisor, ["the ", "5", " is the divisor"]);
     html_div_cycle_code(remember, ["The ", "2", " is the remainder"]);
   }
   function title_name_id() {
