@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_books } from "./bible_usfm_version_books.mjs";
 import { property_get } from "./property_get.mjs";
@@ -6,7 +7,6 @@ import { text_split_newline } from "./text_split_newline.mjs";
 import { usfm_spans_removed } from "./usfm_spans_removed.mjs";
 import { bible_usfm_marker_rest } from "./bible_usfm_marker_rest.mjs";
 import { bible_usfm_marker_layout } from "./bible_usfm_marker_layout.mjs";
-import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { usfm_markers_removed } from "./usfm_markers_removed.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -36,8 +36,7 @@ export async function bible_usfm_version_lines_dropped(version) {
       let marker_text = property_get(split, "marker");
       let rest = property_get(split, "rest");
       let layout = bible_usfm_marker_layout(marker_text);
-      let kind = property_get(layout, "kind");
-      let dropped = equal(kind, "drop");
+      let dropped = property_equals(layout, "kind", "drop");
       if (not(dropped)) {
         continue;
       }
