@@ -40,11 +40,12 @@ export async function app_g_bless_crossing_wait(
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
   let tries = 40;
-  for (let attempt of range(tries)) {
+  while (greater_than(tries, 0)) {
     let clear = bless_crossing_clear_is(world, at);
     if (clear) {
       return;
     }
     await app_shared_animation_sleep_quick();
+    tries = subtract(tries, 1);
   }
 }
