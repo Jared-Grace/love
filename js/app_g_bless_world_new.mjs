@@ -9,7 +9,7 @@ import { g_player_initialize } from "./g_player_initialize.mjs";
 import { bless_blocks } from "./bless_blocks.mjs";
 import { bless_blocks_raise } from "./bless_blocks_raise.mjs";
 import { app_g_bless_people } from "./app_g_bless_people.mjs";
-import { app_g_bless_player_place } from "./app_g_bless_player_place.mjs";
+import { bless_player_place } from "./bless_player_place.mjs";
 import { app_g_bless_world } from "./app_g_bless_world.mjs";
 export function app_g_bless_world_new(player_img) {
   arguments_assert(arguments, 1);
@@ -47,7 +47,7 @@ export function app_g_bless_world_new(player_img) {
   let coordinates_land = g_coordinates_land_reachable_get(coordinates);
   let player = g_player_initialize(player_img, coordinates_land);
   let block_first = list_first(blocks);
-  app_g_bless_player_place(player, block_first);
+  bless_player_place(player, block_first);
   let npcs = app_g_bless_people(player_img, coordinates_land, blocks, player);
   let vehicles = bless_vehicles_new(blocks);
   let world = app_g_bless_world(
