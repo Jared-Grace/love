@@ -1,3 +1,6 @@
+import { list_filter } from "./list_filter.mjs";
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
+import { list_first } from "./list_first.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -11,8 +14,6 @@ import { null_is } from "./null_is.mjs";
 import { list_second } from "./list_second.mjs";
 import { g_distance_0 } from "./g_distance_0.mjs";
 import { bless_person_tile_is } from "./bless_person_tile_is.mjs";
-import { list_find_or_null } from "./list_find_or_null.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_g_hero_kill } from "./app_g_hero_kill.mjs";
 import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
@@ -46,8 +47,10 @@ export async function app_g_hero_evil_step(hero, evil) {
     let here = bless_person_tile_is(person, x, y);
     return here;
   }
-  let blocker = list_find_or_null(npcs, standing_is);
-  if (null_not_is(blocker)) {
+  let blockers = list_filter(npcs, standing_is);
+  if (list_empty_not_is(blockers)) {
+    ("Two people can answer for one square at once - one standing on it and one stepping across onto it - so the first of them is the one killed.");
+    let blocker = list_first(blockers);
     await app_g_hero_kill(hero, evil, blocker);
     return pause;
   }

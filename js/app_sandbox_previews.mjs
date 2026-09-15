@@ -44,6 +44,11 @@ export function app_sandbox_previews() {
     let r16 = m.app_reply_rules_preview;
     return r16;
   }
+  async function bible_word_voice_trial_load() {
+    let m = await import("./app_original_bible_word_voice_trial_preview.mjs");
+    let r17 = m.app_original_bible_word_voice_trial_preview;
+    return r17;
+  }
   let previews = {
     code_review: code_review_load,
     spinner_preview: spinner_load,
@@ -61,6 +66,7 @@ export function app_sandbox_previews() {
     word_sound: word_sound_load,
     message_private: app_sandbox_previews_message_private_load,
     reply_rules: reply_rules_load,
+    bible_word_voice_trial: bible_word_voice_trial_load,
   };
   return previews;
 }
