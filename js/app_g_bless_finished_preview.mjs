@@ -1,3 +1,4 @@
+import { g_player_img_get } from "./g_player_img_get.mjs";
 import { app_shared_game_player_style_initialize } from "./app_shared_game_player_style_initialize.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
@@ -42,7 +43,8 @@ export async function app_g_bless_finished_preview() {
     overflow: "hidden",
     background: "black",
   });
-  let world = app_g_bless_world_new();
+  let player_img = g_player_img_get();
+  let world = app_g_bless_world_new(player_img);
   let drawn = app_g_bless_map_scrolling(cover, world);
   let div_map = property_get(drawn, "div_map");
   let player_img_c = property_get(drawn, "player_img_c");
