@@ -1,3 +1,4 @@
+import { g_player_img_get } from "./g_player_img_get.mjs";
 import { app_g_bless_crossing_draw } from "./app_g_bless_crossing_draw.mjs";
 import { app_g_bless_windows_draw } from "./app_g_bless_windows_draw.mjs";
 import { app_g_bless_doors_draw } from "./app_g_bless_doors_draw.mjs";
@@ -14,7 +15,8 @@ import { bless_blessed_new } from "./bless_blessed_new.mjs";
 import { app_g_bless_blessed_head_start } from "./app_g_bless_blessed_head_start.mjs";
 export function app_g_bless_overlay_blessed(container_map) {
   arguments_assert(arguments, 1);
-  let world = app_g_bless_world_new();
+  let player_img = g_player_img_get();
+  let world = app_g_bless_world_new(player_img);
   let player = property_get(world, "player");
   let npcs = property_get(world, "npcs");
   let blocks = property_get(world, "blocks");

@@ -5,15 +5,14 @@ import { list_first } from "./list_first.mjs";
 import { app_shared_game_map_generate } from "./app_shared_game_map_generate.mjs";
 import { g_coordinates } from "./g_coordinates.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
-import { g_player_img_get } from "./g_player_img_get.mjs";
 import { g_player_initialize } from "./g_player_initialize.mjs";
 import { app_g_bless_blocks } from "./app_g_bless_blocks.mjs";
 import { app_g_bless_blocks_raise } from "./app_g_bless_blocks_raise.mjs";
 import { app_g_bless_people } from "./app_g_bless_people.mjs";
 import { app_g_bless_player_place } from "./app_g_bless_player_place.mjs";
 import { app_g_bless_world } from "./app_g_bless_world.mjs";
-export function app_g_bless_world_new() {
-  arguments_assert(arguments, 0);
+export function app_g_bless_world_new(player_img) {
+  arguments_assert(arguments, 1);
   ("A fresh world to walk about in - ground, a column of blocks built into it, a player");
   ("standing on the first of them, and a crowd living along all of them.");
   ("Nearly every step of it is the gospel game's own generator. The ground it makes, the way");
@@ -46,7 +45,6 @@ export function app_g_bless_world_new() {
   app_g_bless_blocks_raise(rows, blocks);
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_reachable_get(coordinates);
-  let player_img = g_player_img_get();
   let player = g_player_initialize(player_img, coordinates_land);
   let block_first = list_first(blocks);
   app_g_bless_player_place(player, block_first);
