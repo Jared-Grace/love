@@ -1,3 +1,4 @@
+import { text_trim } from "./text_trim.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_operators_dot_numbers } from "./app_code_lesson_operators_dot_numbers.mjs";
