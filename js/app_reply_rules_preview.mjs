@@ -36,7 +36,7 @@ export async function app_reply_rules_preview() {
   let status = html_p_text(root, "Reading...");
   let chooser = html_div(root);
   let listed = html_div(root);
-  let f = fn_name("reply_proposals_shown");
+  let f = fn_name("app_message_reply_proposals_shown");
   let shown = await app_shared_api_named(f, []);
   let proposals = property_get(shown, "proposals");
   let cases = property_get(shown, "cases");
