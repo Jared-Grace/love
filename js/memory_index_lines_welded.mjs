@@ -1,7 +1,7 @@
+import { list_size_greater_than } from "./list_size_greater_than.mjs";
 import { memory_index_lines } from "./memory_index_lines.mjs";
 import { text_split } from "./text_split.mjs";
 import { list_size } from "./list_size.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export async function memory_index_lines_welded() {
   "The index lines that carry a second entry opener, which is always two entries joined into one line with the newline between them lost.";
@@ -12,8 +12,7 @@ export async function memory_index_lines_welded() {
   let welded = [];
   for (let line of lines) {
     let pieces = text_split(line, opener);
-    let count = list_size(pieces);
-    let joined = greater_than(count, 2);
+    let joined = list_size_greater_than(pieces, 2);
     if (joined) {
       list_add(welded, line);
     }
