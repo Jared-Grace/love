@@ -1,3 +1,4 @@
+import { bless_person_replace } from "./bless_person_replace.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
