@@ -1,0 +1,248 @@
+export function bible_glyph_chapter_rosetta_lines_lev27() {
+  "One chapter of the picture Bible as its two known Rosetta bands: each verse in the language it was written in, and the same verse in English.";
+  "THIS FILE IS WRITTEN BY A COMMAND AND NOT BY HAND. It is the interlinear read once, at authoring time, for the verses the hand-written picture chapter has reached.";
+  "IT IS COMMITTED RATHER THAN FETCHED because the browser is the one place these lines are read and the thing that builds them cannot run there. Authored Bible text already lives as committed functions here, and this is authored Bible text.";
+  "Both bands are text anybody may be shown: the original is the public-domain base text, and the English is the Berean wording, which this repo already publishes as one of its own translations and reads as public domain off the publisher own licence page. The English stands in English order, because the column it is built from is that translation cut into chunks and hung on the original words - chunks that straddle the words they hang on, so read in the original order they come out as neither language.";
+  let chapter = {
+    chapter_code: "LEV27",
+    verses: [
+      {
+        verse_number: 1,
+        original: "וַיְדַבֵּ֥ר יְהוָ֖ה אֶל־ מֹשֶׁ֥ה לֵּאמֹֽר׃",
+        english: "Then the LORD said to Moses",
+      },
+      {
+        verse_number: 2,
+        original:
+          "דַּבֵּ֞ר אֶל־ בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם אִ֕ישׁ כִּ֥י יַפְלִ֖א נֶ֑דֶר בְּעֶרְכְּךָ֥ נְפָשֹׁ֖ת לַֽיהוָֽה׃",
+        english:
+          "Speak to the Israelites and say to them When someone makes a special vow to the LORD involving the value of persons",
+      },
+      {
+        verse_number: 3,
+        original:
+          "וְהָיָ֤ה עֶרְכְּךָ֙ הַזָּכָ֔ר מִבֶּן֙ עֶשְׂרִ֣ים שָׁנָ֔ה וְעַ֖ד בֶּן־ שִׁשִּׁ֣ים שָׁנָ֑ה וְהָיָ֣ה עֶרְכְּךָ֗ חֲמִשִּׁ֛ים שֶׁ֥קֶל כֶּ֖סֶף בְּשֶׁ֥קֶל הַקֹּֽדֶשׁ׃",
+        english:
+          "if the valuation concerns a male from twenty to sixty years of age then your valuation shall be fifty shekels of silver according to the sanctuary shekel",
+      },
+      {
+        verse_number: 4,
+        original:
+          "וְאִם־ נְקֵבָ֖ה הִ֑וא וְהָיָ֥ה עֶרְכְּךָ֖ שְׁלֹשִׁ֥ים שָֽׁקֶל׃",
+        english:
+          "Or if it is a female then your valuation shall be thirty shekels",
+      },
+      {
+        verse_number: 5,
+        original:
+          "וְאִ֨ם מִבֶּן־ חָמֵ֜שׁ שָׁנִ֗ים וְעַד֙ בֶּן־ עֶשְׂרִ֣ים שָׁנָ֔ה וְהָיָ֧ה עֶרְכְּךָ֛ הַזָּכָ֖ר עֶשְׂרִ֣ים שְׁקָלִ֑ים וְלַנְּקֵבָ֖ה עֲשֶׂ֥רֶת שְׁקָלִֽים׃",
+        english:
+          "And if the person is from five to twenty years of age then your valuation for the male shall be twenty shekels and for the female ten shekels",
+      },
+      {
+        verse_number: 6,
+        original:
+          "וְאִ֣ם מִבֶּן־ חֹ֗דֶשׁ וְעַד֙ בֶּן־ חָמֵ֣שׁ שָׁנִ֔ים וְהָיָ֤ה עֶרְכְּךָ֙ הַזָּכָ֔ר חֲמִשָּׁ֥ה שְׁקָלִ֖ים כָּ֑סֶף וְלַנְּקֵבָ֣ה עֶרְכְּךָ֔ שְׁלֹ֥שֶׁת שְׁקָלִ֖ים כָּֽסֶף׃",
+        english:
+          "Now if the person is from one month to five years of age then your valuation for the male shall be five shekels of silver and for the female three shekels of silver",
+      },
+      {
+        verse_number: 7,
+        original:
+          "וְ֠אִם מִבֶּן־ שִׁשִּׁ֨ים שָׁנָ֤ה וָמַ֙עְלָה֙ אִם־ זָכָ֔ר וְהָיָ֣ה עֶרְכְּךָ֔ חֲמִשָּׁ֥ה עָשָׂ֖ר שָׁ֑קֶל וְלַנְּקֵבָ֖ה עֲשָׂרָ֥ה שְׁקָלִֽים׃",
+        english:
+          "And if the person is sixty years of age or older then your valuation shall be fifteen shekels for the male and ten shekels for the female",
+      },
+      {
+        verse_number: 8,
+        original:
+          "וְאִם־ מָ֥ךְ הוּא֙ מֵֽעֶרְכֶּ֔ךָ וְהֶֽעֱמִידוֹ֙ לִפְנֵ֣י הַכֹּהֵ֔ן וְהֶעֱרִ֥יךְ אֹת֖וֹ הַכֹּהֵ֑ן עַל־ פִּ֗י אֲשֶׁ֤ר תַּשִּׂיג֙ יַ֣ד הַנֹּדֵ֔ר יַעֲרִיכֶ֖נּוּ הַכֹּהֵֽן׃ס",
+        english:
+          "But if the one making the vow is too poor to pay the valuation he is to present the person before the priest who shall set the value according to what the one making the vow can afford",
+      },
+      {
+        verse_number: 9,
+        original:
+          "וְאִם־ בְּהֵמָ֔ה אֲשֶׁ֨ר יַקְרִ֧יבוּ מִמֶּ֛נָּה קָרְבָּ֖ן לַֽיהוָ֑ה כֹּל֩ אֲשֶׁ֨ר יִתֵּ֥ן מִמֶּ֛נּוּ לַיהוָ֖ה יִֽהְיֶה־ קֹּֽדֶשׁ׃",
+        english:
+          "If he vows an animal that may be brought as an offering to the LORD any such animal given to the LORD shall be holy",
+      },
+      {
+        verse_number: 10,
+        original:
+          "לֹ֣א יַחֲלִיפֶ֗נּוּ וְלֹֽא־ יָמִ֥יר אֹת֛וֹ ט֥וֹב בְּרָ֖ע אוֹ־ רַ֣ע בְּט֑וֹב וְאִם־ הָמֵ֨ר יָמִ֤יר בְּהֵמָה֙ בִּבְהֵמָ֔ה וְהָֽיָה־ ה֥וּא וּתְמוּרָת֖וֹ יִֽהְיֶה־ קֹּֽדֶשׁ׃",
+        english:
+          "He must not replace it or exchange it either good for bad or bad for good But if he does substitute one animal for another both that animal and its substitute will be holy",
+      },
+      {
+        verse_number: 11,
+        original:
+          "וְאִם֙ כָּל־ בְּהֵמָ֣ה טְמֵאָ֔ה אֲ֠שֶׁר לֹא־ יַקְרִ֧יבוּ מִמֶּ֛נָּה קָרְבָּ֖ן לַֽיהוָ֑ה וְהֶֽעֱמִ֥יד אֶת־ הַבְּהֵמָ֖ה לִפְנֵ֥י הַכֹּהֵֽן׃",
+        english:
+          "But if the vow involves any of the unclean animals that may not be brought as an offering to the LORD the animal must be presented before the priest",
+      },
+      {
+        verse_number: 12,
+        original:
+          "וְהֶעֱרִ֤יךְ הַכֹּהֵן֙ אֹתָ֔הּ בֵּ֥ין ט֖וֹב וּבֵ֣ין רָ֑ע כְּעֶרְכְּךָ֥ הַכֹּהֵ֖ן כֵּ֥ן יִהְיֶֽה׃",
+        english:
+          "The priest shall set its value whether high or low as the priest values it the price will be set",
+      },
+      {
+        verse_number: 13,
+        original:
+          "וְאִם־ גָּאֹ֖ל יִגְאָלֶ֑נָּה וְיָסַ֥ף חֲמִישִׁת֖וֹ עַל־ עֶרְכֶּֽךָ׃",
+        english:
+          "If, however, the owner decides to redeem the animal he must add a fifth to its value",
+      },
+      {
+        verse_number: 14,
+        original:
+          "וְאִ֗ישׁ כִּֽי־ יַקְדִּ֨שׁ אֶת־ בֵּית֥וֹ קֹ֙דֶשׁ֙ לַֽיהוָ֔ה וְהֶעֱרִיכוֹ֙ הַכֹּהֵ֔ן בֵּ֥ין ט֖וֹב וּבֵ֣ין רָ֑ע כַּאֲשֶׁ֨ר יַעֲרִ֥יךְ אֹת֛וֹ הַכֹּהֵ֖ן כֵּ֥ן יָקֽוּם׃",
+        english:
+          "Now if a man consecrates his house as holy to the LORD then the priest shall value it either as good or bad The price will stand just as the priest values it",
+      },
+      {
+        verse_number: 15,
+        original:
+          "וְאִ֨ם־ הַמַּקְדִּ֔ישׁ יִגְאַ֖ל אֶת־ בֵּית֑וֹ וְ֠יָסַף חֲמִישִׁ֧ית כֶּֽסֶף־ עֶרְכְּךָ֛ עָלָ֖יו וְהָ֥יָה לֽוֹ׃",
+        english:
+          "But if he who consecrated his house redeems it he must add a fifth to the assessed value and it will belong to him",
+      },
+      {
+        verse_number: 16,
+        original:
+          "וְאִ֣ם׀ מִשְּׂדֵ֣ה אֲחֻזָּת֗וֹ יַקְדִּ֥ישׁ אִישׁ֙ לַֽיהוָ֔ה וְהָיָ֥ה עֶרְכְּךָ֖ לְפִ֣י זַרְע֑וֹ זֶ֚רַע חֹ֣מֶר שְׂעֹרִ֔ים בַּחֲמִשִּׁ֖ים שֶׁ֥קֶל כָּֽסֶף׃",
+        english:
+          "If a man consecrates to the LORD a parcel of his land then your valuation shall be proportional to the seed required for it fifty shekels of silver for every homer of barley seed",
+      },
+      {
+        verse_number: 17,
+        original:
+          "אִם־ מִשְּׁנַ֥ת הַיֹּבֵ֖ל יַקְדִּ֣ישׁ שָׂדֵ֑הוּ כְּעֶרְכְּךָ֖ יָקֽוּם׃",
+        english:
+          "If he consecrates his field during the Year of Jubilee the price will stand according to your valuation",
+      },
+      {
+        verse_number: 18,
+        original:
+          "וְאִם־ אַחַ֣ר הַיֹּבֵל֮ יַקְדִּ֣ישׁ שָׂדֵהוּ֒ וְחִשַּׁב־ ל֨וֹ הַכֹּהֵ֜ן אֶת־ הַכֶּ֗סֶף עַל־ פִּ֤י הַשָּׁנִים֙ הַנּ֣וֹתָרֹ֔ת עַ֖ד שְׁנַ֣ת הַיֹּבֵ֑ל וְנִגְרַ֖ע מֵֽעֶרְכֶּֽךָ׃",
+        english:
+          "But if he consecrates his field after the Jubilee the priest is to calculate the price in proportion to the years left until the next Year of Jubilee so that your valuation will be reduced",
+      },
+      {
+        verse_number: 19,
+        original:
+          "וְאִם־ גָּאֹ֤ל יִגְאַל֙ אֶת־ הַשָּׂדֶ֔ה הַמַּקְדִּ֖ישׁ אֹת֑וֹ וְ֠יָסַף חֲמִשִׁ֧ית כֶּֽסֶף־ עֶרְכְּךָ֛ עָלָ֖יו וְקָ֥ם לֽוֹ׃",
+        english:
+          "And if the one who consecrated the field decides to redeem it he must add a fifth to the assessed value and it shall belong to him",
+      },
+      {
+        verse_number: 20,
+        original:
+          "וְאִם־ לֹ֤א יִגְאַל֙ אֶת־ הַשָּׂדֶ֔ה וְאִם־ מָכַ֥ר אֶת־ הַשָּׂדֶ֖ה לְאִ֣ישׁ אַחֵ֑ר לֹ֥א יִגָּאֵ֖ל עֽוֹד׃",
+        english:
+          "If, however he does not redeem the field or if he has sold it to another man it may no longer be redeemed",
+      },
+      {
+        verse_number: 21,
+        original:
+          "וְהָיָ֨ה הַשָּׂדֶ֜ה בְּצֵאת֣וֹ בַיֹּבֵ֗ל קֹ֛דֶשׁ לַֽיהוָ֖ה כִּשְׂדֵ֣ה הַחֵ֑רֶם לַכֹּהֵ֖ן תִּהְיֶ֥ה אֲחֻזָּתֽוֹ׃",
+        english:
+          "When the field is released in the Jubilee it will become holy like a field devoted to the LORD it becomes the property of the priests",
+      },
+      {
+        verse_number: 22,
+        original:
+          "וְאִם֙ אֶת־ שְׂדֵ֣ה מִקְנָת֔וֹ אֲשֶׁ֕ר לֹ֖א מִשְּׂדֵ֣ה אֲחֻזָּת֑וֹ יַקְדִּ֖ישׁ לַֽיהוָֽה׃",
+        english:
+          "Now if a man consecrates to the LORD a field he has purchased which is not a part of his own property",
+      },
+      {
+        verse_number: 23,
+        original:
+          "וְחִשַּׁב־ ל֣וֹ הַכֹּהֵ֗ן אֵ֚ת מִכְסַ֣ת הָֽעֶרְכְּךָ֔ עַ֖ד שְׁנַ֣ת הַיֹּבֵ֑ל וְנָתַ֤ן אֶת־ הָעֶרְכְּךָ֙ בַּיּ֣וֹם הַה֔וּא קֹ֖דֶשׁ לַיהוָֽה׃",
+        english:
+          "then the priest shall calculate for him the value up to the Year of Jubilee and the man shall pay the assessed value on that day as a sacred offering to the LORD",
+      },
+      {
+        verse_number: 24,
+        original:
+          "בִּשְׁנַ֤ת הַיּוֹבֵל֙ יָשׁ֣וּב הַשָּׂדֶ֔ה לַאֲשֶׁ֥ר קָנָ֖הוּ מֵאִתּ֑וֹ לַאֲשֶׁר־ ל֖וֹ אֲחֻזַּ֥ת הָאָֽרֶץ׃",
+        english:
+          "In the Year of Jubilee the field shall return to the one from whom it was bought the original owner of the land",
+      },
+      {
+        verse_number: 25,
+        original:
+          "וְכָל־ עֶרְכְּךָ֔ יִהְיֶ֖ה בְּשֶׁ֣קֶל הַקֹּ֑דֶשׁ עֶשְׂרִ֥ים גֵּרָ֖ה יִהְיֶ֥ה הַשָּֽׁקֶל׃ס",
+        english:
+          "Every valuation will be according to the sanctuary shekel twenty gerahs to the shekel",
+      },
+      {
+        verse_number: 26,
+        original:
+          "אַךְ־ בְּכ֞וֹר אֲשֶׁר־ יְבֻכַּ֤ר לַֽיהוָה֙ בִּבְהֵמָ֔ה לֹֽא־ יַקְדִּ֥ישׁ אִ֖ישׁ אֹת֑וֹ אִם־ שׁ֣וֹר אִם־ שֶׂ֔ה לַֽיהוָ֖ה הֽוּא׃",
+        english:
+          "But no one may consecrate a firstborn of the livestock because a firstborn belongs to the LORD Whether it is an ox or a sheep it is the LORD’s",
+      },
+      {
+        verse_number: 27,
+        original:
+          "וְאִ֨ם בַּבְּהֵמָ֤ה הַטְּמֵאָה֙ וּפָדָ֣ה בְעֶרְכֶּ֔ךָ וְיָסַ֥ף חֲמִשִׁת֖וֹ עָלָ֑יו וְאִם־ לֹ֥א יִגָּאֵ֖ל וְנִמְכַּ֥ר בְּעֶרְכֶּֽךָ׃",
+        english:
+          "But if it is among the unclean animals then he may redeem it according to your valuation and add a fifth of its value If it is not redeemed then it shall be sold according to your valuation",
+      },
+      {
+        verse_number: 28,
+        original:
+          "אַךְ־ כָּל־ חֵ֡רֶם אֲשֶׁ֣ר יַחֲרִם֩ אִ֨ישׁ לַֽיהוָ֜ה מִכָּל־ אֲשֶׁר־ ל֗וֹ מֵאָדָ֤ם וּבְהֵמָה֙ וּמִשְּׂדֵ֣ה אֲחֻזָּת֔וֹ לֹ֥א יִמָּכֵ֖ר וְלֹ֣א יִגָּאֵ֑ל כָּל־ חֵ֕רֶם קֹֽדֶשׁ־ קָֽדָשִׁ֥ים ה֖וּא לַיהוָֽה׃",
+        english:
+          "Nothing that a man sets apart to the LORD from all he owns whether a man an animal or his inherited land can be sold or redeemed everything so devoted is most holy to the LORD",
+      },
+      {
+        verse_number: 29,
+        original:
+          "כָּל־ חֵ֗רֶם אֲשֶׁ֧ר יָחֳרַ֛ם מִן־ הָאָדָ֖ם לֹ֣א יִפָּדֶ֑ה מ֖וֹת יוּמָֽת׃",
+        english:
+          "No person set apart for destruction may be ransomed he must surely be put to death",
+      },
+      {
+        verse_number: 30,
+        original:
+          "וְכָל־ מַעְשַׂ֨ר הָאָ֜רֶץ מִזֶּ֤רַע הָאָ֙רֶץ֙ מִפְּרִ֣י הָעֵ֔ץ לַיהוָ֖ה ה֑וּא קֹ֖דֶשׁ לַֽיהוָֽה׃",
+        english:
+          "Thus any tithe from the land whether from the seed of the land or the fruit of the trees belongs to the LORD it is holy to the LORD",
+      },
+      {
+        verse_number: 31,
+        original:
+          "וְאִם־ גָּאֹ֥ל יִגְאַ֛ל אִ֖ישׁ מִמַּֽעַשְׂר֑וֹ חֲמִשִׁית֖וֹ יֹסֵ֥ף עָלָֽיו׃",
+        english:
+          "If a man wishes to redeem part of his tithe he must add a fifth to its value",
+      },
+      {
+        verse_number: 32,
+        original:
+          "וְכָל־ מַעְשַׂ֤ר בָּקָר֙ וָצֹ֔אן כֹּ֥ל אֲשֶׁר־ יַעֲבֹ֖ר תַּ֣חַת הַשָּׁ֑בֶט הָֽעֲשִׂירִ֕י יִֽהְיֶה־ קֹּ֖דֶשׁ לַֽיהוָֽה׃",
+        english:
+          "Every tenth animal from the herd or flock that passes under the shepherd’s rod will be holy to the LORD",
+      },
+      {
+        verse_number: 33,
+        original:
+          "לֹ֧א יְבַקֵּ֛ר בֵּֽין־ ט֥וֹב לָרַ֖ע וְלֹ֣א יְמִירֶ֑נּוּ וְאִם־ הָמֵ֣ר יְמִירֶ֔נּוּ וְהָֽיָה־ ה֧וּא וּתְמוּרָת֛וֹ יִֽהְיֶה־ קֹ֖דֶשׁ לֹ֥א יִגָּאֵֽל׃",
+        english:
+          "He must not inspect whether it is good or bad and he shall not make any substitution But if he does make a substitution both the animal and its substitute shall become holy they cannot be redeemed",
+      },
+      {
+        verse_number: 34,
+        original:
+          "אֵ֣לֶּה הַמִּצְוֺ֗ת אֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֶת־ מֹשֶׁ֖ה אֶל־ בְּנֵ֣י יִשְׂרָאֵ֑ל בְּהַ֖ר סִינָֽי׃",
+        english:
+          "These are the commandments that the LORD gave to Moses for the Israelites on Mount Sinai",
+      },
+    ],
+  };
+  return chapter;
+}
