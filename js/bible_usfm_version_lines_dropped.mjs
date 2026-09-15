@@ -1,3 +1,4 @@
+import { property_list_size } from "./property_list_size.mjs";
 import { property_equals } from "./property_equals.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_usfm_version_books } from "./bible_usfm_version_books.mjs";
@@ -15,7 +16,6 @@ import { property_exists } from "./property_exists.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { object_property_names } from "./object_property_names.mjs";
-import { list_size } from "./list_size.mjs";
 export async function bible_usfm_version_lines_dropped(version) {
   arguments_assert(arguments, 1);
   ("$plain version");
@@ -61,8 +61,7 @@ export async function bible_usfm_version_lines_dropped(version) {
   let counts = {};
   let marker_texts = object_property_names(markers);
   for (let marker_text of marker_texts) {
-    let lines = property_get(markers, marker_text);
-    let count = list_size(lines);
+    let count = property_list_size(markers, marker_text);
     property_set(counts, marker_text, count);
   }
   let r = {
