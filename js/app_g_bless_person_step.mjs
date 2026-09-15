@@ -1,4 +1,4 @@
-import { app_g_bless_person_step_boxed } from "./app_g_bless_person_step_boxed.mjs";
+import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
 import { bless_person_slide } from "./bless_person_slide.mjs";
 import { divide } from "./divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -41,7 +41,7 @@ export function app_g_bless_person_step(world, person) {
   ("person can only have got there by being set down there when their doorstep was full -");
   ("and held to a rule they already break, they would never take a step again. Loose, they");
   ("wander until they meet the street they belong to, and are kept from then on.");
-  let r = app_g_bless_person_step_boxed(world, person);
+  let r = bless_person_step_boxed(world, person);
   let boxed = property_get(r, "boxed");
   let way = property_get(r, "way");
   let tiles = property_get(r, "tiles");
