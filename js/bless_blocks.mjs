@@ -17,7 +17,7 @@ import { list_size } from "./list_size.mjs";
 import { divide_floor } from "./divide_floor.mjs";
 import { list_take } from "./list_take.mjs";
 import { list_get } from "./list_get.mjs";
-export function app_g_bless_blocks(rows) {
+export function bless_blocks(rows) {
   arguments_assert(arguments, 1);
   ("Where every block goes in this world - one under another down the middle of it, with open ground between them.");
   ("The middle rather than a corner, because the world is generated fresh each time and the blocks are the only landmarks in it. Laid at an edge they would be blocks most players never found, and the journey between them would run along the water.");

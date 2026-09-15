@@ -6,7 +6,7 @@ import { app_shared_game_map_generate } from "./app_shared_game_map_generate.mjs
 import { g_coordinates } from "./g_coordinates.mjs";
 import { g_coordinates_land_reachable_get } from "./g_coordinates_land_reachable_get.mjs";
 import { g_player_initialize } from "./g_player_initialize.mjs";
-import { app_g_bless_blocks } from "./app_g_bless_blocks.mjs";
+import { bless_blocks } from "./bless_blocks.mjs";
 import { bless_blocks_raise } from "./bless_blocks_raise.mjs";
 import { app_g_bless_people } from "./app_g_bless_people.mjs";
 import { app_g_bless_player_place } from "./app_g_bless_player_place.mjs";
@@ -41,7 +41,7 @@ export function app_g_bless_world_new(player_img) {
   ("belongs to which building, and that is what a rung is asked against.");
   let size = bless_world_size();
   let rows = app_shared_game_map_generate(size);
-  let blocks = app_g_bless_blocks(rows);
+  let blocks = bless_blocks(rows);
   bless_blocks_raise(rows, blocks);
   let coordinates = g_coordinates(rows);
   let coordinates_land = g_coordinates_land_reachable_get(coordinates);
