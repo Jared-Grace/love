@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { bless_vehicle_pace_ms } from "./bless_vehicle_pace_ms.mjs";
 import { divide } from "./divide.mjs";
 import { bless_camera_still_class } from "./bless_camera_still_class.mjs";
-import { app_g_bless_vehicle_onward } from "./app_g_bless_vehicle_onward.mjs";
+import { bless_vehicle_onward } from "./bless_vehicle_onward.mjs";
 import { html_class_has } from "./html_class_has.mjs";
 import { each } from "./each.mjs";
 export function app_g_bless_vehicles_drive(world, container_map) {
@@ -48,7 +48,7 @@ export function app_g_bless_vehicles_drive(world, container_map) {
   ("out of that by itself, without anybody arranging it.");
   function vehicle_onward(vehicle) {
     let held = bless_vehicle_hold_is(vehicle, world);
-    app_g_bless_vehicle_onward(vehicle, seconds, held);
+    bless_vehicle_onward(vehicle, seconds, held);
   }
   function traffic_onward() {
     setTimeout(traffic_onward, pace);

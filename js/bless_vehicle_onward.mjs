@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_g_bless_vehicle_place } from "./app_g_bless_vehicle_place.mjs";
 import { app_g_bless_vehicle_slide } from "./app_g_bless_vehicle_slide.mjs";
-export function app_g_bless_vehicle_onward(vehicle, seconds, held) {
+export function bless_vehicle_onward(vehicle, seconds, held) {
   arguments_assert(arguments, 3);
   ("Move one car one square along its lane, and slide it there over the time given.");
   ("A car that has run out of road appears back at the other end instead. There is no pause");
