@@ -1,6 +1,5 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_all_is } from "./list_all_is.mjs";
 import { js_identifier_is } from "./js_identifier_is.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
@@ -15,8 +14,7 @@ export function js_elements_names_only_assert(elements, declared) {
   "A list with nothing in it is let through, and so is a list holding a mixture. Neither is evidence, and a refusal drawn from no evidence stops work that was right.";
   "A NAME THE FUNCTION BOUND FOR ITSELF IS NOT EVIDENCE EITHER, AND THAT IS THE THIRD LET THROUGH. The pass that canonicalizes this repo lifts every call in a list out into a local of its own, so a register that plainly holds results reads back as a column of bare words. Read as a list of functions, it refused the one command the register needed, and it would have refused it for every register the pass has ever been over. What separates the two is not the shape of the word but where the word came from - a list of gates names functions it imports, a lifted list names locals it bound a line earlier - so the names the function declares are handed in alongside, and a name found among them is let through.";
   arguments_assert(arguments, 2);
-  let empty = list_empty_is(elements);
-  let held = not(empty);
+  let held = list_empty_not_is(elements);
   if (held) {
     let names_only = list_all_is(elements, js_identifier_is);
     if (names_only) {
