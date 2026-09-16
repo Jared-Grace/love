@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_g_bless_camera_still_start } from "./app_g_bless_camera_still_start.mjs";
+import { bless_camera_still_start } from "./bless_camera_still_start.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
@@ -17,7 +17,7 @@ export function app_g_bless_camera_size_set(container_map, div_map, size) {
   ("time the rule is gone and every person slides after all.");
   ("This is the instant version. A camera that travels between two sizes holds the same");
   ("rule on across every frame of the journey instead, so it does not go through here.");
-  app_g_bless_camera_still_start(container_map);
+  bless_camera_still_start(container_map);
   let variable = g_img_square_size_variable();
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
