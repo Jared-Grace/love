@@ -24,9 +24,15 @@ export async function app_g_hero_dark_attack(hero, evil) {
   let player_img_c = property_get(hero, "player_img_c");
   let evil_img = app_shared_game_npc_img_get(evil);
   app_g_hero_face_off(hero, evil);
+  ("The killer is held where they stand for the whole of the throw, and let go again");
+  ("afterwards. Gathering, throwing and watching it break takes well over a second, and the");
+  ("hunt is a separate thing that kept stepping them along through all of it: the player saw");
+  ("somebody turn to face her, throw, and walk off in the middle of doing it.");
+  property_set(evil, "clash", true);
   await app_g_hero_dark_gather(evil_img);
   let burning = property_get(evil, "burning");
   if (burning) {
+    property_set(evil, "clash", false);
     return;
   }
   let from = app_g_hero_fx_point(fx, evil_img);
@@ -84,4 +90,5 @@ export async function app_g_hero_dark_attack(hero, evil) {
       easing: "ease-out",
     },
   );
+  property_set(evil, "clash", false);
 }
