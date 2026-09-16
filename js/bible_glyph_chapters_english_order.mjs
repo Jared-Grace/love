@@ -20,7 +20,8 @@ export async function bible_glyph_chapters_english_order() {
     let chapter_code = property_get(chapter, "chapter_code");
     let reading = await bible_glyph_chapter_english_order(chapter_code);
     verses_read = verses_read + property_get(reading, "verses_read");
-    list_add_multiple(offenders, property_get(reading, "offenders"));
+    let items = property_get(reading, "offenders");
+    list_add_multiple(offenders, items);
   }
   let r = {
     chapters: list_size(chapters),
