@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join_space } from "./list_join_space.mjs";
+import { lyric_video_document_piece } from "./lyric_video_document_piece.mjs";
 import { audio_pieces_words_timed } from "./audio_pieces_words_timed.mjs";
 import { catch_null_async } from "./catch_null_async.mjs";
 import { equal } from "./equal.mjs";
@@ -29,15 +28,7 @@ export async function lyric_video_document_times_measure(
   "Both figures handed back are rounded to the thousandth, which is a tenth of the shortest thing anybody can hear and far finer than either reading is accurate to; the digits below it are the arithmetic's, not the recording's.";
   arguments_assert(arguments, 2);
   let document = await file_read_json(path_document);
-  function line_text(line) {
-    let text = line.text;
-    return text;
-  }
-  let texts = list_map(document.lines, line_text);
-  let piece = {
-    audio: path_audio,
-    text: list_join_space(texts),
-  };
+  let piece = lyric_video_document_piece(path_audio, document);
   async function aligner_read() {
     let read = await audio_pieces_words_timed([piece]);
     return read;
