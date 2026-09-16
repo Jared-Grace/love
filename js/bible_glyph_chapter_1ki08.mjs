@@ -1285,7 +1285,7 @@ export function bible_glyph_chapter_1ki08() {
           "enemy",
           "besieges",
           "them",
-          "in",
+          "$earth",
           "their",
           "cities,",
           "whatever",
