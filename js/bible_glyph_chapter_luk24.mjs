@@ -80,7 +80,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 4,
         words: [
           "$plus",
-          "while",
+          "$tray_in",
           "$pointing_back",
           "were",
           "puzzling",
