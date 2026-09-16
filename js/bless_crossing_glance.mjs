@@ -29,7 +29,19 @@ export async function bless_crossing_glance(
   ("It is a plain slide and never a journey, because how close the camera is has already been");
   ("decided by whoever brought it in, and re-deciding it on every glance would have the");
   ("street breathing in and out for as long as the traffic lasted.");
-  app_shared_game_character_face(player, player_img_c, facing);
+  ("She turns her HEAD up the lane without turning her back on the road. The picture used is");
+  ("the half-way one - crossing south and looking west is south-west - which is a person");
+  ("glancing over their shoulder rather than a person who has changed their mind about where");
+  ("they are going. Squared fully round to the lane, a walker at a kerb reads as having set");
+  ("off along the pavement instead, and the two looks read as two turns rather than as one");
+  ("check made twice.");
+  ("The art for it was already there. Eight facings are drawn for every character and the");
+  ("game walked on four, so the diagonals had been drawn, shipped and never shown.");
+  ("The camera still slides along the LANE and not half way. What is being checked is the");
+  ("lane, and the screen is the thing actually showing it - so the head is the half measure");
+  ("here and the camera is not.");
+  let look = g_direction_between(toward, facing);
+  app_shared_game_character_face(player, player_img_c, look);
   let step = g_direction_step(facing);
   let tiles = bless_crossing_look_ahead_tiles();
   let both = {
