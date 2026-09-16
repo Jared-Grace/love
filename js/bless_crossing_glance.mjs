@@ -1,3 +1,4 @@
+import { g_direction_between } from "./g_direction_between.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction_step } from "./g_direction_step.mjs";
