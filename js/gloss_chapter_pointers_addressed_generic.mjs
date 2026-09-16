@@ -1,9 +1,9 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
 import { gloss_entry_same_as_key } from "./gloss_entry_same_as_key.mjs";
 import { number_from_text } from "./number_from_text.mjs";
-import { list_first } from "./list_first.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -33,8 +33,7 @@ export async function gloss_chapter_pointers_addressed_generic(
   let said = {};
   let changes = [];
   for (let passage of passages) {
-    let verse_numbers = property_get(passage, "verse_numbers");
-    let text = list_first(verse_numbers);
+    let text = property_list_first(passage, "verse_numbers");
     let verse = number_from_text(text);
     let entries = gloss_passage_entries(passage);
     let moved = [];
