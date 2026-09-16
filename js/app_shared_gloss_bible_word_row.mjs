@@ -1,3 +1,4 @@
+import { app_shared_gloss_bible_word_translit } from "./app_shared_gloss_bible_word_translit.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_hr } from "./html_hr.mjs";
 import { html_div } from "./html_div.mjs";
@@ -45,6 +46,7 @@ export function app_shared_gloss_bible_word_row(
   html_font_color_set(span, color3);
   ("the word answers a press too, and gets nothing to answer with on a page that has no recordings - so it is offered the saying rather than told to listen, and a wordless page leaves it as plain text.");
   html_on_click_when(span, play);
+  app_shared_gloss_bible_word_translit(e, div, play);
   let c = html_span_colon_2(div);
   let color = app_shared_color_gray();
   html_font_color_set(c, color);
