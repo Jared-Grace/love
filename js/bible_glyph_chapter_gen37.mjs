@@ -309,7 +309,7 @@ export function bible_glyph_chapter_gen37() {
           "$brother",
           "and",
           "I",
-          "actually",
+          "$footprints",
           "$footprints",
           "and",
           "$bowing",
