@@ -1,3 +1,4 @@
+import { multiply_divide } from "./multiply_divide.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { xml_tags_attributes } from "./xml_tags_attributes.mjs";
 import { list_size } from "./list_size.mjs";
@@ -6,7 +7,6 @@ import { equal } from "./equal.mjs";
 import { error } from "./error.mjs";
 import { list_single } from "./list_single.mjs";
 import { divide } from "./divide.mjs";
-import { multiply } from "./multiply.mjs";
 export function ardour_session_tick_seconds(text) {
   "$plain text";
   "How many seconds one beat tick lasts in an Ardour session, read off its tempo, given the text of the session file.";
@@ -32,7 +32,6 @@ export function ardour_session_tick_seconds(text) {
   let note_seconds = divide(60, bottom);
   let bottom2 = Number(tempo["note-type"]);
   let quarters_per_note = divide(4, bottom2);
-  let quarter_seconds = multiply(note_seconds, quarters_per_note);
-  let seconds = divide(quarter_seconds, 1920);
+  let seconds = multiply_divide(note_seconds, quarters_per_note, 1920);
   return seconds;
 }
