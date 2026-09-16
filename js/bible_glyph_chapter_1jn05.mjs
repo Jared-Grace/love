@@ -226,7 +226,7 @@ export function bible_glyph_chapter_1jn05() {
           "$witness",
           "of",
           "$fire,",
-          "that",
+          "$pointing",
           "He",
           "has",
           "$witness",
