@@ -809,7 +809,7 @@ export function bible_glyph_chapter_lev19() {
           "her",
           "a",
           "prostitute,",
-          "or",
+          "$no_entry",
           "the",
           "$earth",
           "will",
