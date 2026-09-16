@@ -1,7 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_join_space } from "./list_join_space.mjs";
+import { lyric_video_document_piece } from "./lyric_video_document_piece.mjs";
 import { audio_pieces_words_timed } from "./audio_pieces_words_timed.mjs";
 export async function lyric_video_document_words_timed(
   path_audio,
@@ -14,15 +13,7 @@ export async function lyric_video_document_words_timed(
   "Nothing is written anywhere by this. The confidence comes back with the words, because an aligner handed the wrong song still answers with times that look right.";
   arguments_assert(arguments, 2);
   let document = await file_read_json(path_document);
-  function line_text(line) {
-    let text = line.text;
-    return text;
-  }
-  let texts = list_map(document.lines, line_text);
-  let piece = {
-    audio: path_audio,
-    text: list_join_space(texts),
-  };
+  let piece = lyric_video_document_piece(path_audio, document);
   let pieces = await audio_pieces_words_timed([piece]);
   let aligned = pieces[0];
   return aligned;
