@@ -11,8 +11,9 @@ export async function bless_crossing_glance(
   player_img_c,
   facing,
   div_map,
+  toward,
 ) {
-  arguments_assert(arguments, 4);
+  arguments_assert(arguments, 5);
   ("One look up the road: the walker turns their head that way and the screen slides that way");
   ("with them, so that what they are looking at is what is being shown.");
   ("The head and the camera are ONE act, said once, rather than two things kept in step by");
