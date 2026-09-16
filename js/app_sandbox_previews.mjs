@@ -64,7 +64,7 @@ export function app_sandbox_previews() {
     typing_box: typing_box_load,
     lyric_timing: lyric_timing_load,
     lyric_video_review: lyric_video_review_load,
-    lyric_video_song_review: app_sandbox_previews_lyric_video_song_review_load,
+    lyric_video_song_review: app_sandbox_previews_lyric_video_song_review_load, lyric_video_pictures_review: app_sandbox_previews_lyric_video_pictures_review_load,
     word_sound: word_sound_load,
     message_private: app_sandbox_previews_message_private_load,
     reply_rules: reply_rules_load,
