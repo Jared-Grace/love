@@ -1,3 +1,4 @@
+import { bless_crossing_barred_is } from "./bless_crossing_barred_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bless_vehicle_landing } from "./bless_vehicle_landing.mjs";
