@@ -1,3 +1,7 @@
+import { text_is } from "./text_is.mjs";
+import { and } from "./and.mjs";
+import { js_node_is } from "./js_node_is.mjs";
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -11,6 +15,13 @@ export function app_code_line_part_is(whole, part) {
   ("Whether one piece of code is, word for word, a piece standing inside another - 1 * 6 inside 6 + 1 * 6.");
   ("The pieces are the ones the parser finds, not any run of letters that happens to match, so a piece is a piece of the line's own making. The whole line counts as a piece of itself, which is the cautious answer wherever two sides are the same.");
   ("This is what tells a lesson asking which part is worked out first from one matching two ways of writing the same thing. The first answers with a part of what it showed; the second answers with a rewriting of the whole of it.");
+  ("an exercise may answer with something that is not written text at all, and nothing that is not text is a piece of a line.");
+  let whole_written = text_is(whole);
+  let part_written = text_is(part);
+  let both_written = and(whole_written, part_written);
+  if (not(both_written)) {
+    return false;
+  }
   let ast = js_parse_try(whole);
   let unread = null_is(ast);
   if (unread) {
@@ -21,6 +32,10 @@ export function app_code_line_part_is(whole, part) {
   function on_visit(v) {
     "one piece of the line, answered for if it is written exactly as the piece being looked for";
     let node = property_get(v, "node");
+    let node_is = js_node_is(node);
+    if (not(node_is)) {
+      return;
+    }
     let from = property_get(node, "start");
     let to = property_get(node, "end");
     let written = text_slice(whole, from, to);

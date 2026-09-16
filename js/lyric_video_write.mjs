@@ -1,3 +1,4 @@
+import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
 import { audio_file_duration } from "./audio_file_duration.mjs";
 import { lyric_video_filter_text } from "./lyric_video_filter_text.mjs";
 import { lyric_video_pictures_words } from "./lyric_video_pictures_words.mjs";
@@ -26,7 +27,8 @@ export async function lyric_video_write(
   "The instruction goes over as a list of words rather than as a line of text. The picture instruction carries brackets, semicolons, quotes and an equals sign, and a line of text holding those cannot be split back into words safely, so it would be unsendable. The song's path is a word in that same list for the plainer reason that a song is usually called something with a space in it.";
   let duration = await audio_file_duration(path_audio);
   let size = width + "x" + height;
-  let color = "color=c=black:s=" + size + ":r=30";
+  let color =
+    "color=c=black:s=" + size + ":r=" + lyric_video_frames_per_second();
   let filter = lyric_video_filter_text(pictures, width, height, path_subtitles);
   let opened = lyric_video_pictures_words(pictures);
   let fade = lyric_video_audio_fade_seconds();
