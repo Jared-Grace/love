@@ -1214,7 +1214,7 @@ export function bible_glyph_chapter_1ki22() {
           "where",
           "they",
           "buried",
-          "him.",
+          "$king.",
         ],
       },
       {
