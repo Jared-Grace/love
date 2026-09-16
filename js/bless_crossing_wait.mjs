@@ -1,3 +1,4 @@
+import { and } from "./and.mjs";
 import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_crossing_glance } from "./bless_crossing_glance.mjs";
@@ -63,8 +64,8 @@ export async function bless_crossing_wait(
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
-  ("She waits for a REAL gap first - nothing bearing down for eight squares - because that is what waiting for traffic looks like, and it is the only version of this that teaches anything. Once she has spent that patience, the question relaxes to the one that merely has to be true: is the band beside her empty right now. Traffic dense enough never to leave an eight-square gap would otherwise leave her standing on the kerb for the rest of the game.");
-  ("The relaxed question is the one the CLAIM needs answered, and no more than that. It says a vehicle can be shut out of the band without being shut INSIDE it, which is the only thing that could go wrong at the moment she steps out.");
+  ("She waits for a REAL gap first - nothing bearing down for eight squares - because that is what waiting for traffic looks like, and it is the only version of this that teaches anything. Once she has spent that patience, only the second half of the question survives. Traffic dense enough never to leave an eight-square gap would otherwise leave her standing on the kerb for the rest of the game.");
+  ("The band beside her must be empty in BOTH cases, never only in the relaxed one. Waiting for a gap in the oncoming traffic says nothing at all about the car that has just gone past her, because that car is travelling away and counts as no threat - yet it is still drawn halfway across the square behind it, so she would step out alongside something plainly still in the crossing. That was the reported fault: she began walking while a car was still a little in the walkway.");
   let tries = 120;
   let patience = 40;
   let glance = bless_crossing_glance_tries();
@@ -72,7 +73,8 @@ export async function bless_crossing_wait(
     let patient = greater_than(patience, 0);
     let clear = bless_crossing_column_clear_is(world, to);
     if (patient) {
-      clear = bless_crossing_clear_is(world, to);
+      let gap = bless_crossing_clear_is(world, to);
+      clear = and(clear, gap);
     }
     if (clear) {
       return;
