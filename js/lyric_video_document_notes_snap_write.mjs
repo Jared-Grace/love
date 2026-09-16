@@ -1,6 +1,6 @@
+import { numbers_apart } from "./numbers_apart.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { fn_name } from "./fn_name.mjs";
-import { abs } from "./abs.mjs";
 import { floor } from "./floor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -79,8 +79,7 @@ export async function lyric_video_document_notes_snap_write(path_document) {
   let shifts = [];
   function word_place(word, index) {
     let start = placed[index];
-    let n = subtract(start, word.start);
-    let screens = abs(n);
+    let screens = numbers_apart(start, word.start);
     shifts.push(screens);
     word.start = start;
     if (less_than(word.end, start)) {
