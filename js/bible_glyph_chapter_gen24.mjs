@@ -1864,7 +1864,7 @@ export function bible_glyph_chapter_gen24() {
           "had",
           "just",
           "$footprints",
-          "$footprints",
+          "from",
           "Beer-lahai-roi,",
           "for",
           "he",

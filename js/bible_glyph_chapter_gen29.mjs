@@ -510,7 +510,7 @@ export function bible_glyph_chapter_gen29() {
           "her",
           "to",
           "you",
-          "$hands_giving",
+          "than",
           "to",
           "another",
           "man.",
