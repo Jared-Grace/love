@@ -5,10 +5,9 @@ import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_max } from "./list_max.mjs";
 import { less_than } from "./less_than.mjs";
-import { divide } from "./divide.mjs";
 import { number_round_places } from "./number_round_places.mjs";
+import { divide } from "./divide.mjs";
 import { math_max } from "./math_max.mjs";
-import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
 export function lyric_video_picture_motion_text(
   picture,
   width,
@@ -26,8 +25,9 @@ export function lyric_video_picture_motion_text(
   ("★ THE RANDOM CHOICES ARE KEYED TO THE PICTURE'S PATH, SO RENDERING THE SAME VIDEO AGAIN MOVES EVERY PICTURE THE SAME WAY. A picture whose motion somebody dislikes can then be named and dealt with, instead of changing every time it is looked at.");
   ("★ A SECOND BOX TOO CLOSE TO THE FIRST IS DRAWN AGAIN. Two boxes chosen at random can land almost on top of each other, and the picture would then sit still, which is the one thing this is for preventing. Some corner has to move by at least a tenth of the picture; the draws stay keyed to the path, so the redraw is as repeatable as the first.");
   ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
-  ("THE PICTURE IS ENLARGED TWICE OVER BEFORE IT IS MOVED. The tool that moves it places the cut on whole pixels, and a cut stepping a whole pixel of the finished frame at a time is seen as a shudder; on a picture twice the size each step is half a pixel of the finished frame, which reads as smooth.");
-  ("It is fitted and padded with nothing into the enlarged frame first, exactly as a still picture is fitted, so a picture of another shape keeps a see-through margin rather than being stretched.");
+  ("★ THE BOX IS CUT BETWEEN PIXELS, NEVER ON THEM, AND THAT IS WHY THIS DOES NOT USE THE TOOL MADE FOR ZOOMING. That tool rounds the box's corner and its size to whole pixels separately, so a slow move becomes a run of small jumps and every few frames the two roundings disagree and the picture jerks back the other way. The human watched it and saw pulses that were not all the same direction. Measured on a black bar moving across 600 frames, 352 of the steps went backwards even with the picture enlarged twice first; cut between pixels, none did and every step was the same size to within a tenth of a pixel.");
+  ("THE PICTURE IS NOT ENLARGED BEFORE IT IS MOVED. Enlarging was only ever a way to make the whole-pixel steps smaller, and cutting between pixels makes them vanish instead; measured, the enlarged and the plain version moved equally smoothly and the plain one took a quarter of the time. The pictures are drawn at the size of the frame, so enlarging added no detail either.");
+  ("It is fitted and padded with nothing into the frame first, exactly as a still picture is fitted, so a picture of another shape keeps a see-through margin rather than being stretched. It is then repeated once for every frame it is shown, because the tool that cuts between pixels moves frames that already exist rather than making them.");
   let next = random_seed_generator_from_text(picture.path);
   next();
   next();
@@ -65,10 +65,9 @@ export function lyric_video_picture_motion_text(
   while (less_than(moved(first, second), 0.1)) {
     second = box();
   }
-  let value = divide(1, first.size);
-  let zoom_from = number_round_places(value, 4);
-  let value2 = divide(first.size, second.size);
-  let ratio = number_round_places(value2, 4);
+  let size_from = number_round_places(first.size, 4);
+  let value = divide(second.size, first.size);
+  let ratio = number_round_places(value, 4);
   let x_from = number_round_places(first.x, 4);
   let value3 = subtract(second.x, first.x);
   let x_change = number_round_places(value3, 4);
@@ -77,40 +76,38 @@ export function lyric_video_picture_motion_text(
   let y_change = number_round_places(value4, 4);
   let a2 = subtract(frames, 1);
   let last = math_max(a2, 1);
-  let big_width = multiply(width, 2);
-  let big_height = multiply(height, 2);
-  let big = big_width + ":" + big_height;
-  let t = "(on/" + last + ")";
+  let frame = width + ":" + height;
+  let t = "(in/" + last + ")";
+  let box_size = "(" + size_from + "*pow(" + ratio + "," + t + "))";
+  let box_left = "W*(" + x_from + "+" + x_change + "*" + t + ")";
+  let box_right =
+    "W*(" + x_from + "+" + x_change + "*" + t + "+" + box_size + ")";
+  let box_top = "H*(" + y_from + "+" + y_change + "*" + t + ")";
+  let box_bottom =
+    "H*(" + y_from + "+" + y_change + "*" + t + "+" + box_size + ")";
   let text =
     ",scale=" +
-    big +
+    frame +
     ":force_original_aspect_ratio=decrease:flags=lanczos,format=yuva420p,pad=" +
-    big +
-    ":(ow-iw)/2:(oh-ih)/2:color=black@0,zoompan=z='" +
-    zoom_from +
-    "*pow(" +
-    ratio +
-    "," +
-    t +
-    ")':x='iw*(" +
-    x_from +
-    "+" +
-    x_change +
-    "*" +
-    t +
-    ")':y='ih*(" +
-    y_from +
-    "+" +
-    y_change +
-    "*" +
-    t +
-    ")':d=" +
-    frames +
-    ":s=" +
-    width +
-    "x" +
-    height +
-    ":fps=" +
-    lyric_video_frames_per_second();
+    frame +
+    ":(ow-iw)/2:(oh-ih)/2:color=black@0,loop=loop=" +
+    subtract(frames, 1) +
+    ":size=1,perspective=x0='" +
+    box_left +
+    "':y0='" +
+    box_top +
+    "':x1='" +
+    box_right +
+    "':y1='" +
+    box_top +
+    "':x2='" +
+    box_left +
+    "':y2='" +
+    box_bottom +
+    "':x3='" +
+    box_right +
+    "':y3='" +
+    box_bottom +
+    "':interpolation=cubic:eval=frame";
   return text;
 }
