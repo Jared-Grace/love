@@ -1,14 +1,16 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_vehicle_landing } from "./bless_vehicle_landing.mjs";
 import { property_get } from "./property_get.mjs";
+import { property_equals } from "./property_equals.mjs";
 import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
 import { list_any } from "./list_any.mjs";
-import { property_equals } from "./property_equals.mjs";
 import { g_coordinates_key } from "./g_coordinates_key.mjs";
 import { property_exists_not } from "./property_exists_not.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
+import { subtract } from "./subtract.mjs";
 import { greater_than_equal } from "./greater_than_equal.mjs";
+import { bless_vehicle_give_way_tiles } from "./bless_vehicle_give_way_tiles.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
 export function bless_vehicle_hold_is(vehicle, world) {
   arguments_assert(arguments, 2);
   ("Whether one car must STAY WHERE IT IS this step - because somebody is walking on the road");
@@ -18,12 +20,22 @@ export function bless_vehicle_hold_is(vehicle, world) {
   ("kept off the walker by this. Only one of those was in place, and a rule that binds the");
   ("weaker party alone is not a law, it is a hazard - the crossing would have been paint over");
   ("a place a car still drove through people.");
-  ("It stops for somebody ANYWHERE AHEAD on the road, in either lane, rather than only for");
-  ("the square it is about to enter. A car that brakes at the last moment has already failed;");
-  ("what a driver approaching a crossing actually does is slow from a distance because there");
-  ("is a person on it. And either lane counts, because a person halfway over is about to be");
-  ("in the other one - waiting only for the lane they have already reached would mean timing");
-  ("the run at them.");
+  ("It stops for somebody ahead on the road in EITHER LANE, rather than only for the square");
+  ("it is about to enter. A car that brakes at the last moment has already failed; what a");
+  ("driver approaching a crossing actually does is slow because there is a person on it. And");
+  ("either lane counts, because a person halfway over is about to be in the other one -");
+  ("waiting only for the lane they have already reached would mean timing the run at them.");
+  ("It stops for them within a DISTANCE rather than at any distance whatever, and that");
+  ("distance is `bless_vehicle_give_way_tiles`. Giving way up the whole lane made the street");
+  ("read backwards: the walker looked both ways, stepped out, and every car behind them froze");
+  ("until they were over, so what anybody watching saw was traffic waiting on a walker and");
+  ("never a walker waiting on traffic. Played against the real rules a car stopped in every");
+  ("one of seventy-two crossings; bounded, it stopped in none of them, because a walker who");
+  ("waited for their gap is already clear of the cars that would have had to brake.");
+  ("The bound costs no safety at all. A car still refuses to move into a square with somebody");
+  ("in it, so it stops nearer rather than sooner - and somebody standing in the road, or");
+  ("crossing away from the crossing, is still given way to, because the car reaches that");
+  ("distance and then holds.");
   ("Behind it, it stops for nobody. A car that has passed the crossing is no danger to");
   ("anybody still on it, and holding the whole lane until the road empties would leave a");
   ("street where nothing moves whenever the player is out walking.");
@@ -63,9 +75,13 @@ export function bless_vehicle_hold_is(vehicle, world) {
     return false;
   }
   let at = property_get(player, "x");
-  let coming = less_than_equal(at, landing);
+  let gap = subtract(landing, at);
   if (east_is) {
-    coming = greater_than_equal(at, landing);
+    gap = subtract(at, landing);
   }
-  return coming;
+  let coming = greater_than_equal(gap, 0);
+  let reach = bless_vehicle_give_way_tiles();
+  let near = less_than_equal(gap, reach);
+  let both = and(coming, near);
+  return both;
 }
