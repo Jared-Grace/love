@@ -9,8 +9,6 @@ import { range } from "./range.mjs";
 import { app_g_hero_ember } from "./app_g_hero_ember.mjs";
 import { each } from "./each.mjs";
 import { app_g_hero_smoke } from "./app_g_hero_smoke.mjs";
-import { g_img_square_div } from "./g_img_square_div.mjs";
-import { html_click_none } from "./html_click_none.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_animate_remove } from "./html_animate_remove.mjs";
 import { html_animate } from "./html_animate.mjs";
