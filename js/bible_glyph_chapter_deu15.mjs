@@ -225,7 +225,7 @@ export function bible_glyph_chapter_deu15() {
           "harden",
           "your",
           "$heart_organ",
-          "or",
+          "$no_entry",
           "shut",
           "your",
           "$hand",
