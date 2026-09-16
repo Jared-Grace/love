@@ -1,11 +1,14 @@
-import { math_max } from "./math_max.mjs";
-import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
-import { lyric_video_picture_fade_seconds } from "./lyric_video_picture_fade_seconds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { equal } from "./equal.mjs";
 import { subtract } from "./subtract.mjs";
+import { math_max } from "./math_max.mjs";
+import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
+import { lyric_video_picture_fade_seconds } from "./lyric_video_picture_fade_seconds.mjs";
 import { add } from "./add.mjs";
+import { multiply_floor } from "./multiply_floor.mjs";
+import { ceil } from "./ceil.mjs";
+import { multiply } from "./multiply.mjs";
 import { lyric_video_picture_light_text } from "./lyric_video_picture_light_text.mjs";
 import { list_map_index } from "./list_map_index.mjs";
 import { list_flat } from "./list_flat.mjs";
@@ -30,7 +33,9 @@ export function lyric_video_filter_text(
   ("★ EVERY PICTURE COMES UP THE SAME MOMENT EARLY THE WORDS DO, AND ONLY ITS BEGINNING IS MOVED. Each card is put on the screen a fraction before the line it holds is sung, so that somebody has time to take the line in; a picture left standing on the sung moment therefore arrives after the words it belongs to, and what a watcher sees is the drawing changing late against words that changed correctly. That was watched and reported rather than reasoned about. Only the beginning is pulled back because the pictures are laid one over the next in the order they are given - a picture whose end stays where it was is simply covered by the one that follows at the moment that one begins. So the change happens early, the run stays unbroken with no black between two pictures, and the last picture still reaches the end of the song instead of letting go a fraction before it.");
   ("★ THE EARLY MOMENT IS NOT LET BACK PAST THE START OF THE SONG. The first picture of a song usually begins on its first note, so reaching back by the lead asks for a moment before the song has begun - and while the instruction that decides when a picture is shown reads that as simply always, the one that fades a picture in refuses it outright and the whole render stops before a frame is drawn. It is pulled up to the start here because this is where the moment is spelled out, and a moment is only ever allowed or disallowed by whatever has to read it.");
   ("★ A PICTURE COMES UP THROUGH THE ONE BEFORE IT RATHER THAN REPLACING IT AT A STROKE. Laid straight on, a picture arrives whole on a single frame, and what a watcher sees at every change is a jolt that has nothing to do with the song. Instead the arriving picture is brought up from nothing while the one before it is still underneath at full strength, so for that moment both are seen at once, less of the old and more of the new. Only the arriving one is faded, and that is what makes one number enough: taking the old one down as well would empty both in the middle of the crossing and show the black ground through the gap.");
-  ("★ THE FADE IS WHY A PICTURE IS BROUGHT UP TO THE RATE OF THE VIDEO, AND WHY THE ONE BEFORE IT IS HELD ON PAST ITS END. A still is handed over one frame a second because fitting it is the expensive part and a still has nothing to say between frames - but a fade has something different to say on every frame, and asked of a stream carrying one a second it can only step once a second, which is a flicker rather than a fade. The frames are therefore multiplied after the fitting and never before, so what the slow handing over bought is untouched. And the lead already leaves two neighbours on the screen together, but only for as long as the lead is: a fade longer than that would run out of anything to cross from and come up out of black, so every picture is held past its end by the difference. What is held is wholly covered by the time the fade is done, so nothing is shown that was not shown before.");
+  ("★ THE FADE IS WHY A PICTURE IS REPEATED AT THE RATE OF THE VIDEO, AND WHY THE ONE BEFORE IT IS HELD ON PAST ITS END. A fade has something different to say on every frame, so a picture stepping once a second would flicker rather than fade. The picture is fitted once, and only the fitted frame is repeated, so fitting stays the cheap part.");
+  ("★ A PICTURE IS REPEATED ONLY FROM JUST BEFORE IT IS SHOWN TO JUST AFTER IT IS COVERED, NEVER FOR THE WHOLE SONG. Repeated from the start of the song, every picture made thirty full frames a second at once, and those frames piled up waiting for the moment the picture was shown. The fourteen pictures of Agape took eighteen and a half gigabytes in twenty seconds, the machine killed the render, and what was left was a video that would not play. Repeated only while it can be seen, the same fourteen take under a gigabyte, and the frames drawn were checked to be the same frames, one by one, across a crossing. The first and last repeat are counted in the video's own frames, so every repeat lands on a moment the video actually draws.");
+  ("And the lead already leaves two neighbours on the screen together, but only for as long as the lead is: a fade longer than that would run out of anything to cross from and come up out of black, so every picture is held past its end by the difference. What is held is wholly covered by the time the fade is done, so nothing is shown that was not shown before.");
   ("EACH PICTURE IS CENTRED AND THE WORDS SIT AT THE MIDDLE TOO, ON PURPOSE. The words are what the video is for, so they take the part of the frame a person is already looking at; the picture is behind them and shares it. Putting the picture anywhere else would move it out from under the words and into the corner a thumb covers.");
   ("THE SPAN IS WRITTEN IN THE TOOL'S OWN QUOTES AND NOT THE SHELL'S. Saying when a picture is shown needs two numbers and therefore a comma, and a comma is exactly what divides one step of this instruction from the next - so written plainly the second number becomes the beginning of a step that does not exist, and the render fails naming a filter nobody wrote. The quotes around it are read by the tool itself and never by a shell, which is why they survive being handed over as one word and why nothing here should be escaped a second time on the way out.");
   ("THE STEPS ARE JOINED BY THEIR NUMBERS RATHER THAN BY A RUNNING NAME. Each picture lays itself over what the picture before it left, so there is an order and something has to carry it. Counting to it from the picture's own place in the list means nothing is remembered between steps, and a step can be read on its own and still say what it stands on.");
@@ -45,9 +50,20 @@ export function lyric_video_filter_text(
     let rate = lyric_video_frames_per_second();
     let span = lyric_video_picture_fade_seconds();
     let crossed = add(ahead, span);
+    let right = subtract(span, lead);
+    let held = add(picture.end, right);
+    let frame_first = multiply_floor(ahead, rate);
+    let p = multiply(held, rate);
+    let left = ceil(p);
+    let frame_last = add(left, 1);
+    let repeats = subtract(frame_last, frame_first);
     let rising =
-      ",format=yuva420p,fps=" +
+      ",format=yuva420p,loop=loop=" +
+      repeats +
+      ":size=1:start=0,settb=1/" +
       rate +
+      ",setpts=N+" +
+      frame_first +
       ",fade=t=in:st=" +
       ahead +
       ":d=" +
@@ -70,8 +86,6 @@ export function lyric_video_filter_text(
       lit +
       rising +
       fitted;
-    let right = subtract(span, lead);
-    let held = add(picture.end, right);
     let shown = "enable='between(t," + ahead + "," + held + ")'";
     let lay = under + fitted + "overlay=x=(W-w)/2:y=(H-h)/2:" + shown + over;
     let steps_picture = [fit, lay];

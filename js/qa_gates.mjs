@@ -427,7 +427,6 @@ import { bible_storage_empty_gate_run } from "./bible_storage_empty_gate_run.mjs
 import { bible_search_built_path_gate_run } from "./bible_search_built_path_gate_run.mjs";
 import { app_code_quiz_leniency_gate_run } from "./app_code_quiz_leniency_gate_run.mjs";
 import { app_code_lessons_read_through_last_gate_run } from "./app_code_lessons_read_through_last_gate_run.mjs";
-import { app_code_lessons_order_ahead_gate_run } from "./app_code_lessons_order_ahead_gate_run.mjs";
 import { app_shared_text_reader_language_gate_run } from "./app_shared_text_reader_language_gate_run.mjs";
 import { app_shared_text_reader_untranslated_gate_run } from "./app_shared_text_reader_untranslated_gate_run.mjs";
 import { js_dollar_choices_parameters_gate_run } from "./js_dollar_choices_parameters_gate_run.mjs";
@@ -966,7 +965,6 @@ export function qa_gates() {
     bible_search_built_path_gate_run,
     app_code_quiz_leniency_gate_run,
     app_code_lessons_read_through_last_gate_run,
-    app_code_lessons_order_ahead_gate_run,
     app_shared_text_reader_language_gate_run,
     app_shared_text_reader_untranslated_gate_run,
     js_dollar_choices_parameters_gate_run,

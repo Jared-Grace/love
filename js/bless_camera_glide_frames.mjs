@@ -1,5 +1,3 @@
-import { number_part_way } from "./number_part_way.mjs";
-import { bless_camera_glide_frames_draw } from "./bless_camera_glide_frames_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -8,50 +6,54 @@ import { subtract } from "./subtract.mjs";
 import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
+import { number_part_way } from "./number_part_way.mjs";
+import { bless_camera_glide_frames_draw } from "./bless_camera_glide_frames_draw.mjs";
 import { less_than } from "./less_than.mjs";
 export function bless_camera_glide_frames({
-  container_map,
-  player_img_c,
   container,
-  focus,
-  variable,
+  map_c,
+  reach_start,
+  reach_end,
   from,
   to,
   token,
-  centered,
 }) {
   arguments_assert(arguments, 1);
   ("Builds the running of one camera journey: every frame draws the map at a size a little");
-  ("further along an eased path from where it started towards where it is going, and moves");
-  ("the scrolling box to whatever standing place keeps the same square in the middle at");
-  ("that size. It reports once when it has settled.");
-  ("The size and the scroll are moved together on the same frame, and that is the whole");
-  ("reason this is one loop rather than a resize and a scroll running side by side. Where");
-  ("the box has to stand to hold a square in the middle depends on how big the squares are;");
-  ("a scroll aimed at an answer worked out before the resize is aimed at where that square");
-  ("USED to be, so the picture slides while it zooms and the player sees a camera that");
-  ("misses.");
-  ("Sliding is off for the whole journey, switched off by the caller. The reason is the");
-  ("same one an instant resize has - a person is placed in squares and told to walk to any");
-  ("new place, so a size that moves would set the whole street walking - but here it holds");
-  ("for hundreds of frames instead of one, which is why the switch is somebody else's to");
-  ("throw and not this loop's.");
-  ("Eased at both ends, quick through the middle, which is the same curve a plain scroll");
-  ("here uses. A camera that starts and stops at full speed reads as a cut.");
+  ("further along an eased path from where it started towards where it is going, shifted to");
+  ("whatever place keeps the same square in the middle at that size. It reports once when it");
+  ("has settled.");
+  ("The size and the shift are worked out together on the same frame, and that is the whole");
+  ("reason this is one loop rather than a resize and a scroll running side by side. Where the");
+  ("map has to be drawn to hold a square in the middle depends on how big the squares are; a");
+  ("move aimed at an answer worked out before the resize is aimed at where that square USED to");
+  ("be, so the picture slides while it zooms and the player sees a camera that misses.");
+  ("Everything the frames need is worked out ONCE, before the first of them, and handed in.");
+  ("The sums are all about where a square sits, and where a square sits is a thing the page");
+  ("has to lay the whole street out to answer; asked every frame it cost about twice a frame's");
+  ("worth of time on a laptop and the zoom arrived in lurches. Asked once it costs that same");
+  ("lay-out once, before anything is moving and where nobody can see it.");
+  ("Sliding is off for the whole journey, switched off by the caller. The reason is the same");
+  ("one an instant resize has - a person is placed in squares and told to walk to any new");
+  ("place, so a size that moves would set the whole street walking - but here it holds for");
+  ("hundreds of frames instead of one, which is why the switch is somebody else's to throw and");
+  ("not this loop's.");
+  ("Eased at both ends, quick through the middle, which is the same curve a plain scroll here");
+  ("uses. A camera that starts and stops at full speed reads as a cut.");
   ("The pan runs on that same eased fraction as the zoom, from wherever the camera was");
-  ("standing when the journey began towards the square it was sent to. Aimed straight at");
-  ("that square instead, every frame including the first one would hold it dead centre, so");
-  ("the whole journey across the street would be over before the zoom had begun and the");
-  ("player would see a cut and then a move.");
+  ("standing when the journey began towards the square it was sent to. Aimed straight at that");
+  ("square instead, every frame including the first one would hold it dead centre, so the");
+  ("whole journey across the street would be over before the zoom had begun and the player");
+  ("would see a cut and then a move.");
   ("The box carries a token saying which journey is the current one. A journey that finds a");
   ("different token there has been overtaken - by a later camera move, or by an ordinary");
   ("scroll, both of which claim the token the same way - so it stops where it stands rather");
   ("than dragging the box back to its own destination.");
   ("The settling is reported exactly once whatever happens: a flag makes finishing safe to");
   ("reach twice, and a timer set a little past the intended length reaches it anyway. A");
-  ("browser hands out no frames at all to a tab nobody is looking at, so without that timer");
-  ("a journey begun and then hidden would never report and whoever was waiting on it would");
-  ("wait for good.");
+  ("browser hands out no frames at all to a tab nobody is looking at, so without that timer a");
+  ("journey begun and then hidden would never report and whoever was waiting on it would wait");
+  ("for good.");
   let container_e = html_component_element_get(container);
   let duration = 460;
   let start = null;
@@ -84,13 +86,10 @@ export function bless_camera_glide_frames({
       let ease = multiply(squared, rest);
       let value = number_part_way(from, to, ease);
       bless_camera_glide_frames_draw(value, {
-        container_map,
-        variable,
-        focus,
-        player_img_c,
-        container,
-        container_e,
-        centered,
+        map_c,
+        from,
+        reach_start,
+        reach_end,
         ease,
       });
       if (less_than(fraction, 1)) {
