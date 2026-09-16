@@ -141,7 +141,7 @@ export function bible_glyph_chapter_1jn03() {
       {
         verse_number: 5,
         words: [
-          "But",
+          "$plus",
           "you",
           "$lightbulb",
           "$pointing",
