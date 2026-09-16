@@ -1,3 +1,4 @@
+import { bless_crossing_pause } from "./bless_crossing_pause.mjs";
 import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
 import { bless_crossing_wait } from "./bless_crossing_wait.mjs";
 import { bless_refused_flash } from "./bless_refused_flash.mjs";
