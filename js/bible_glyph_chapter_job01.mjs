@@ -675,7 +675,7 @@ export function bible_glyph_chapter_job01() {
           "did",
           "$no_entry",
           "$bow",
-          "or",
+          "$no_entry",
           "$hands_giving",
           "$fire",
           "with",
