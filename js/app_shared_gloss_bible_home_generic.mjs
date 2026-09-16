@@ -1,4 +1,4 @@
-import { gloss_entries_same_as_followed } from "./gloss_entries_same_as_followed.mjs";
+import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
 import { app_shared_bible_home_inner } from "./app_shared_bible_home_inner.mjs";
@@ -57,9 +57,10 @@ export async function app_shared_gloss_bible_home_generic(
   let explains_written = json_from_try(explains_json);
   let downloaded = property_get(v, "downloaded");
   let chapter_passages = property_get(downloaded, "passages");
-  let explains = gloss_entries_same_as_followed(
+  let explains = gloss_passage_entries_pointers_filled(
     explains_written,
     chapter_passages,
+    passage,
   );
   if (false) {
     let div3 = html_div(p);
