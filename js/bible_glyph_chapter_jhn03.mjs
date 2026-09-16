@@ -653,7 +653,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 26,
         words: [
-          "So",
+          "$plus",
           "they",
           "$footprints",
           "to",
