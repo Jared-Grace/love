@@ -1,3 +1,4 @@
+import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
 import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_unlisted_gate_run.mjs";
 import { app_code_expression_written_gate_run } from "./app_code_expression_written_gate_run.mjs";
@@ -1123,6 +1124,7 @@ export function qa_gates() {
     ebible_version_words_spelled_gate_run,
     app_code_lessons_above_broken_gate_run,
     bible_glyph_chapters_unlisted_gate_run,
+    gloss_same_as_gate_run,
   ];
   return gates;
 }
