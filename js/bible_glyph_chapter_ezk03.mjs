@@ -264,7 +264,7 @@ export function bible_glyph_chapter_ezk03() {
           "afraid",
           "of",
           "them",
-          "or",
+          "$no_entry",
           "dismayed",
           "at",
           "their",
