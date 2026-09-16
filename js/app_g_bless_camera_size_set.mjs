@@ -3,7 +3,7 @@ import { app_g_bless_camera_still_start } from "./app_g_bless_camera_still_start
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
-import { app_g_bless_camera_still_end } from "./app_g_bless_camera_still_end.mjs";
+import { bless_camera_still_end } from "./bless_camera_still_end.mjs";
 export function app_g_bless_camera_size_set(container_map, div_map, size) {
   arguments_assert(arguments, 3);
   ("Redraws the map at a new square size in one step, with everybody standing on it");
@@ -21,5 +21,5 @@ export function app_g_bless_camera_size_set(container_map, div_map, size) {
   let variable = g_img_square_size_variable();
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
-  app_g_bless_camera_still_end(container_map);
+  bless_camera_still_end(container_map);
 }
