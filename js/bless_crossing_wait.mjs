@@ -55,11 +55,25 @@ export async function bless_crossing_wait(
   ("out stops the traffic instead of being hurt by it. The bound therefore cannot cause an");
   ("accident; all it can do is stop the game freezing if the traffic somehow never leaves a");
   ("gap. Waiting for ever is the one outcome that would be worse than crossing.");
-  let facing = "west";
-  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  ("She turns to FACE THE ROAD before she looks up it. A walker arrives at a kerb pointed");
+  ("whichever way the last step left her, which is often along the pavement or straight away");
+  ("from the road, and glancing up a lane from there is a person turning their head at");
+  ("nothing. Squaring up to the crossing first is what makes the two looks afterwards read as");
+  ("looks - it says what she is about to do, and the looks then say she is checking it is");
+  ("safe.");
+  ("It is also what the glances are measured FROM. Each one is drawn half way between the");
+  ("road and the lane, so the road has to be somewhere she is actually pointed or the half");
+  ("way facing is half way between the lane and a direction she abandoned two steps ago.");
+  let toward = g_direction(player, to);
+  app_shared_game_character_face(player, player_img_c, toward);
+  await app_shared_animation_sleep_quick();
+  ("Which lane to look up is WORKED OUT from the way she is crossing rather than named. A");
+  ("road is crossed at right angles to itself, so the crossing already says it.");
+  let facing = g_direction_across(toward);
+  await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
   await app_shared_animation_sleep_quick();
   facing = g_direction_opposite(facing);
-  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
   await app_shared_animation_sleep_quick();
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
@@ -84,7 +98,7 @@ export async function bless_crossing_wait(
     let due = less_than_equal(glance, 0);
     if (due) {
       facing = g_direction_opposite(facing);
-      await bless_crossing_glance(player, player_img_c, facing, div_map);
+      await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
       glance = bless_crossing_glance_tries();
     }
     await app_shared_animation_sleep_quick();
