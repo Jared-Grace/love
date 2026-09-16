@@ -1,5 +1,4 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { property_get } from "./property_get.mjs";
 import { g_img_square_div } from "./g_img_square_div.mjs";
 import { html_click_none } from "./html_click_none.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -29,13 +28,8 @@ export function app_g_hero_fire_anchor(div_map, person) {
   ("the ankles.");
   ("Taps go straight through. A square that swallowed them would take the tap that walks the");
   ("player away from the thing burning in front of her.");
-  let x = property_get(person, "x");
-  let y = property_get(person, "y");
-  let tile = {
-    x,
-    y,
-  };
-  let anchor = g_img_square_div(div_map, tile, "raised");
+  ("The PERSON is handed over as the square, the same way the marks under a praying street are placed. A person carries the x and the y a square is named by, and the placing reads nothing else, so copying the pair out bought nothing.");
+  let anchor = g_img_square_div(div_map, person, "raised");
   html_click_none(anchor);
   html_style_set(anchor, "overflow", "visible");
   return anchor;
