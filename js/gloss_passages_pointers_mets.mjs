@@ -1,6 +1,5 @@
+import { property_list_first } from "./property_list_first.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { property_get } from "./property_get.mjs";
-import { list_first } from "./list_first.mjs";
 import { number_from_text } from "./number_from_text.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -19,8 +18,7 @@ export function gloss_passages_pointers_mets(passages, lambda$pointer_is) {
   let said = {};
   let mets = [];
   for (let passage of passages) {
-    let verse_numbers = property_get(passage, "verse_numbers");
-    let text = list_first(verse_numbers);
+    let text = property_list_first(passage, "verse_numbers");
     let verse = number_from_text(text);
     let entries = gloss_passage_entries(passage);
     for (let entry of entries) {
