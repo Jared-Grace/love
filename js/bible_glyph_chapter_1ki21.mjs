@@ -1008,7 +1008,7 @@ export function bible_glyph_chapter_1ki21() {
           "I",
           "will",
           "$footprints",
-          "it",
+          "$thumbs_down",
           "upon",
           "his",
           "$house.",
