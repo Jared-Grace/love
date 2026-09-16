@@ -298,7 +298,7 @@ export function bible_glyph_chapter_gen06() {
           "sight",
           "of",
           "$fire,",
-          "and",
+          "$earth",
           "full",
           "of",
           "violence.",
