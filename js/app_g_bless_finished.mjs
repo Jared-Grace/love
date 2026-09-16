@@ -1,5 +1,5 @@
 import { noop } from "./noop.mjs";
-import { app_g_bless_camera_player_return } from "./app_g_bless_camera_player_return.mjs";
+import { bless_camera_player_return } from "./bless_camera_player_return.mjs";
 import { bless_blocks_roof_tiles } from "./bless_blocks_roof_tiles.mjs";
 import { g_coordinates_member_is } from "./g_coordinates_member_is.mjs";
 import { not } from "./not.mjs";
@@ -123,7 +123,7 @@ export async function app_g_bless_finished(
   if (told) {
     app_g_bless_finished_modal(container_map, line, noop);
   }
-  await app_g_bless_camera_player_return(
+  await bless_camera_player_return(
     container_map,
     div_map,
     player_img_c,
