@@ -1,3 +1,4 @@
+import { bless_vehicle_length_tiles } from "./bless_vehicle_length_tiles.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -62,7 +63,8 @@ export function bless_vehicle_draw(parent, vehicle) {
   let drawing = bless_vehicle_svg(colour);
   html_text_set(element, drawing);
   let size = g_img_square_size_css();
-  let along = text_combine_multiple(["calc(2 * (", size, "))"]);
+  let length = bless_vehicle_length_tiles();
+  let along = text_combine_multiple(["calc(", length, " * (", size, "))"]);
   let across = text_combine_multiple(["calc(2 * (", size, "))"]);
   let lift = text_combine_multiple(["calc(-1 * (", size, "))"]);
   html_style_assign(element, {
