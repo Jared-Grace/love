@@ -1,3 +1,4 @@
+import { property_path_get_2 } from "./property_path_get_2.mjs";
 import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { g_sermon_generate_book_generic_property } from "./g_sermon_generate_book_generic_property.mjs";
@@ -55,8 +56,7 @@ export async function app_shared_gloss_bible_home_generic(
   each(texts, lambda5);
   let explains_json = property_get(passage, generated);
   let explains_written = json_from_try(explains_json);
-  let downloaded = property_get(v, "downloaded");
-  let chapter_passages = property_get(downloaded, "passages");
+  let chapter_passages = property_path_get_2(v, "downloaded", "passages");
   let explains = gloss_passage_entries_pointers_filled(
     explains_written,
     chapter_passages,
