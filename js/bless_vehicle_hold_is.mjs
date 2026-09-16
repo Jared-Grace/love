@@ -1,5 +1,5 @@
-import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { bless_vehicle_landing } from "./bless_vehicle_landing.mjs";
 import { property_get } from "./property_get.mjs";
 import { property_equals } from "./property_equals.mjs";
@@ -14,13 +14,18 @@ import { bless_vehicle_give_way_tiles } from "./bless_vehicle_give_way_tiles.mjs
 import { less_than_equal } from "./less_than_equal.mjs";
 export function bless_vehicle_hold_is(vehicle, world) {
   arguments_assert(arguments, 2);
-  ("Whether one car must STAY WHERE IT IS this step - because somebody is walking on the road");
-  ("in front of it, or because the square it would move into already has a car in it.");
+  ("Whether one car must STAY WHERE IT IS this step - because somebody is standing in the");
+  ("square it would move into, because somebody is walking on the road in front of it, or");
+  ("because the square it would move into already has a car in it.");
   ("Giving way to somebody on the crossing is the driver's half of the same law the walker");
   ("keeps. The walker is kept out of the traffic by having no route through it; the driver is");
   ("kept off the walker by this. Only one of those was in place, and a rule that binds the");
   ("weaker party alone is not a law, it is a hazard - the crossing would have been paint over");
   ("a place a car still drove through people.");
+  ("NOT MOVING ONTO SOMEBODY is asked first and on its own, and it is the one part of this");
+  ("that holds no matter what else is true. Everything below it is about a car deciding how");
+  ("to drive; this is about the square being taken, and a square with somebody in it is not");
+  ("a square to drive into whatever the reason.");
   ("It stops for somebody ahead on the road in EITHER LANE, rather than only for the square");
   ("it is about to enter. A car that brakes at the last moment has already failed; what a");
   ("driver approaching a crossing actually does is slow because there is a person on it. And");
@@ -47,15 +52,17 @@ export function bless_vehicle_hold_is(vehicle, world) {
   ("Cars used to be spaced out along the lane and all moved at once, so they could never");
   ("meet; giving way breaks that, and two cars in one square is the thing this whole");
   ("arrangement was supposed to look better than.");
-  ("A car re-entering at the far end holds for nothing. It is not stepping onward, it is the");
-  ("same car being used again from the beginning of the lane, and the beginning of a lane is");
-  ("nowhere near the middle of the block where the crossing is.");
+  ("A car re-entering at the far end gives way to NOBODY AHEAD, because there is no ahead:");
+  ("it is not stepping onward, it is the same car being used again from the beginning of the");
+  ("lane, and the distance from there to anybody is not a distance it is about to close.");
+  ("It still may not land on somebody, and it used to. The re-entry was excused from every");
+  ("check on the grounds that a lane begins nowhere near the crossing - true of the painted");
+  ("crossing, and not true at all of the player, who may step into the road at any square of");
+  ("it including the one a car is about to reappear in. Played against the real rules that is");
+  ("the whole of what was left of cars and people sharing a square.");
   let r = bless_vehicle_landing(vehicle);
   let landing = property_get(r, "landing");
   let gone = property_get(r, "gone");
-  if (gone) {
-    return false;
-  }
   let y = property_get(vehicle, "y");
   let vehicles = property_get(world, "vehicles");
   function in_landing_is(other) {
@@ -69,15 +76,24 @@ export function bless_vehicle_hold_is(vehicle, world) {
   if (queued) {
     return true;
   }
+  let player = property_get(world, "player");
+  let at = property_get(player, "x");
+  let stood_on = equal(at, landing);
+  let same_row = property_equals(player, "y", y);
+  let onto_player = and(stood_on, same_row);
+  if (onto_player) {
+    return true;
+  }
+  if (gone) {
+    return false;
+  }
   let east_is = property_equals(vehicle, "direction", "east");
   let roads = property_get(world, "roads");
-  let player = property_get(world, "player");
   let key = g_coordinates_key(player);
   let off_road = property_exists_not(roads, key);
   if (off_road) {
     return false;
   }
-  let at = property_get(player, "x");
   let gap = subtract(landing, at);
   if (east_is) {
     gap = subtract(at, landing);
