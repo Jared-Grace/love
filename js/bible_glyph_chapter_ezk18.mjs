@@ -169,7 +169,7 @@ export function bible_glyph_chapter_ezk18() {
           "his",
           "neighbor’s",
           "$woman",
-          "or",
+          "$no_entry",
           "approach",
           "a",
           "$woman",
