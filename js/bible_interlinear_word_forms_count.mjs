@@ -1,3 +1,4 @@
+import { hebrew_cantillation_strip } from "./hebrew_cantillation_strip.mjs";
 import { object_property_names } from "./object_property_names.mjs";
 import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
@@ -11,10 +12,8 @@ export async function bible_interlinear_word_forms_count() {
   for (let code of object_property_names(chapters)) {
     for (let verse of chapters[code]) {
       for (let w of verse.words) {
-        let form = hebrew_cantillation_strip(String(w.original)).replace(
-          /[.,;·:?!\s]/g,
-          "",
-        );
+        let word = String(w.original);
+        let form = hebrew_cantillation_strip(word).replace(/[.,;·:?!\s]/g, "");
         if (equal(form, "")) {
           continue;
         }
