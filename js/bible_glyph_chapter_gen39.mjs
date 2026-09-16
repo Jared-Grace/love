@@ -87,7 +87,7 @@ export function bible_glyph_chapter_gen39() {
           "was",
           "with",
           "him",
-          "$name_tag",
+          "and",
           "made",
           "him",
           "prosper",
