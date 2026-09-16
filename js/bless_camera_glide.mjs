@@ -147,16 +147,19 @@ export async function bless_camera_glide(
   let corner_top = property_get(corner, "top");
   let half_width = divide(container_e.clientWidth, 2);
   let half_height = divide(container_e.clientHeight, 2);
+  let left2 = add(scroll_left, half_width);
+  let left3 = add(scroll_top, half_height);
   let reach_start = {
-    left: subtract(add(scroll_left, half_width), corner_left),
-    top: subtract(add(scroll_top, half_height), corner_top),
+    left: subtract(left2, corner_left),
+    top: subtract(left3, corner_top),
   };
+  let left4 = property_get(arriving, "left");
+  let left5 = add(left4, half_width);
+  let left6 = property_get(arriving, "top");
+  let left7 = add(left6, half_height);
   let reach_end = {
-    left: subtract(
-      add(property_get(arriving, "left"), half_width),
-      corner_left,
-    ),
-    top: subtract(add(property_get(arriving, "top"), half_height), corner_top),
+    left: subtract(left5, corner_left),
+    top: subtract(left7, corner_top),
   };
   ("The scale is drawn on the thing the squares are POSITIONED by, which is the one element");
   ("every coordinate on this map is already counted from. Drawn on the wrapper outside it the");
