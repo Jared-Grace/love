@@ -1,8 +1,7 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { gloss_entry_same_as_read } from "./gloss_entry_same_as_read.mjs";
 import { null_is } from "./null_is.mjs";
 import { gloss_passages_same_as_explains } from "./gloss_passages_same_as_explains.mjs";
-import { equal } from "./equal.mjs";
-import { list_size } from "./list_size.mjs";
 import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
@@ -22,8 +21,7 @@ export function gloss_entries_same_as_followed(entries, passages) {
       return entry;
     }
     let explains = gloss_passages_same_as_explains(passages, pointer);
-    let left = list_size(explains);
-    let settled = equal(left, 1);
+    let settled = list_size_equal(explains, 1);
     if (not(settled)) {
       return entry;
     }
