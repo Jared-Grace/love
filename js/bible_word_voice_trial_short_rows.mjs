@@ -8,6 +8,9 @@ export function bible_word_voice_trial_short_rows() {
     ["twice", "ὃ ὃ", "the word said twice"],
     ["pair", "ὃ ἡ", "two one-letter words together"],
     ["phrase", "ὃ λόγος", "the word joined to the word after it"],
+    ["article_phrase", "ὁ λόγος", "the plain article joined to its word"],
+    ["plain_phrase", "ο λόγος", "the same, with the accent mark taken off"],
+    ["plain_life", "η ζωή", "another article joined to its word"],
   ];
   function lambda([key, text, meta], index) {
     let r = {
