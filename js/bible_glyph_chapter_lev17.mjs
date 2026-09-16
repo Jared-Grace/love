@@ -234,7 +234,6 @@ export function bible_glyph_chapter_lev17() {
           "Therefore",
           "$speech",
           "$son,",
-          "None",
           "$person_other",
           "of you",
           "$no_entry",
