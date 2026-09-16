@@ -2677,6 +2677,7 @@ export function permission_grant_names() {
   let spelled2534 = fn_name("ebible_verses_include");
   let spelled2535 = fn_name("bible_usfm_version_chapter_verses_text");
   let spelled2536 = fn_name("ebible_book_codes_new_testament_first");
+  let spelled2537 = fn_name("bible_glyph_chapter_verse_text_write");
   let names = [
     spelled,
     spelled2,
@@ -5214,6 +5215,7 @@ export function permission_grant_names() {
     spelled2534,
     spelled2535,
     spelled2536,
+    spelled2537,
   ];
   return names;
 }
