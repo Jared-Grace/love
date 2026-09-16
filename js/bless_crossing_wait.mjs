@@ -62,13 +62,21 @@ export async function bless_crossing_wait(
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
-  let tries = 40;
+  ("She waits for a REAL gap first - nothing bearing down for eight squares - because that is what waiting for traffic looks like, and it is the only version of this that teaches anything. Once she has spent that patience, the question relaxes to the one that merely has to be true: is the band beside her empty right now. Traffic dense enough never to leave an eight-square gap would otherwise leave her standing on the kerb for the rest of the game.");
+  ("The relaxed question is the one the CLAIM needs answered, and no more than that. It says a vehicle can be shut out of the band without being shut INSIDE it, which is the only thing that could go wrong at the moment she steps out.");
+  let tries = 120;
+  let patience = 40;
   let glance = bless_crossing_glance_tries();
   while (greater_than(tries, 0)) {
-    let clear = bless_crossing_clear_is(world, to);
+    let patient = greater_than(patience, 0);
+    let clear = bless_crossing_column_clear_is(world, to);
+    if (patient) {
+      clear = bless_crossing_clear_is(world, to);
+    }
     if (clear) {
       return;
     }
+    patience = subtract(patience, 1);
     glance = subtract(glance, 1);
     let due = less_than_equal(glance, 0);
     if (due) {
