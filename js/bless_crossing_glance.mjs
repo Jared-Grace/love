@@ -41,8 +41,22 @@ export async function bless_crossing_glance(
   ("The camera still slides along the LANE and not half way. What is being checked is the");
   ("lane, and the screen is the thing actually showing it - so the head is the half measure");
   ("here and the camera is not.");
+  ("The turn goes THROUGH the half-way picture rather than stopping at it. Stopping there was");
+  ("tried, and the human reported that the walker did not turn at all. The art says why: at");
+  ("the size a character is drawn, south-west is a front view leaning slightly, near enough to");
+  ("south that a head turn reads as nothing having happened, while west is a clean profile");
+  ("that cannot be mistaken for anything else. The half-way facing is a good picture of a");
+  ("GLANCE and a bad picture of a CHANGE, and what has to be legible at a kerb is the change.");
+  ("So it is used as the frame BETWEEN the two, which is what a half-way picture is for. The");
+  ("walker turns, is caught mid-turn, and ends squared up the lane where a player can see");
+  ("which way she is looking.");
+  ("It costs no time. The hold that used to sit AFTER each look now sits in the middle of the");
+  ("turn, so the same half second buys a turn that can be read instead of a pause held on a");
+  ("picture that could not be.");
   let look = g_direction_between(toward, facing);
   app_shared_game_character_face(player, player_img_c, look);
+  await app_shared_animation_sleep_quick();
+  app_shared_game_character_face(player, player_img_c, facing);
   let step = g_direction_step(facing);
   let tiles = bless_crossing_look_ahead_tiles();
   let both = {
