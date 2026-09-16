@@ -1,3 +1,4 @@
+import { app_g_hero_fx_settled } from "./app_g_hero_fx_settled.mjs";
 import { app_g_hero_face_off } from "./app_g_hero_face_off.mjs";
 import { app_g_hero_taller } from "./app_g_hero_taller.mjs";
 import { app_g_hero_clash } from "./app_g_hero_clash.mjs";
