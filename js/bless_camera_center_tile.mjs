@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { html_scroll_centered_coordinates_element } from "./html_scroll_centered_coordinates_element.mjs";
-export function app_g_bless_camera_center_tile(div_map, player_img_c) {
+export function bless_camera_center_tile(div_map, player_img_c) {
   arguments_assert(arguments, 2);
   ("Which square of the map is in the middle of the screen right now, counted in squares");
   ("and not rounded to one - the answer is usually somewhere between two of them.");
