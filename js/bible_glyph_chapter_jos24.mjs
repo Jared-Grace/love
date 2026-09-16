@@ -81,7 +81,7 @@ export function bible_glyph_chapter_jos24() {
           "they",
           "$kneeling",
           "other",
-          "gods.",
+          "$fire.",
         ],
       },
       {
