@@ -279,7 +279,7 @@ export function bible_glyph_chapter_ezk33() {
           "$mouth",
           "to",
           "dissuade",
-          "him",
+          "$thumbs_down",
           "from",
           "his",
           "$road,",
