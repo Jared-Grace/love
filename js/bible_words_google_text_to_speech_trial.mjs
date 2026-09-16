@@ -1,3 +1,5 @@
+import { fn_name } from "./fn_name.mjs";
+import { greek_word_speech_text } from "./greek_word_speech_text.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { multiply } from "./multiply.mjs";
 import { not } from "./not.mjs";
@@ -18,6 +20,9 @@ export async function bible_words_google_text_to_speech_trial(
   "Google voice names, one comma-joined word. They pick voices and nothing that runs.";
   "Says the first distinct words of one chapter, one request per word, with each voice given, so the voices can be compared by ear and the account's character count read back against what was sent.";
   "Writes <folder>/<index>_<voice>.mp3 for each word and voice, and words.json listing each word and its character count.";
+  ("A GREEK VOICE IS HANDED THE WORD THROUGH ",
+    fn_name("greek_word_speech_text"),
+    ", because a Greek word of one letter is otherwise named rather than said; every other language is handed the word as the chapter spells it.");
   let verses = await bible_interlinear_chapter_words(chapter_code);
   let forms = [];
   for (let verse of verses) {
@@ -43,7 +48,9 @@ export async function bible_words_google_text_to_speech_trial(
     });
     for (let voice_name of voices) {
       let file_path = path_join([folder, index + "_" + voice_name + ".mp3"]);
-      await google_text_to_speech_file(voice_name, text, file_path);
+      let greek = voice_name.startsWith("el-");
+      let spoken = greek ? greek_word_speech_text(text) : text;
+      await google_text_to_speech_file(voice_name, spoken, file_path);
     }
   }
   let file_path2 = path_join([folder, "words.json"]);
