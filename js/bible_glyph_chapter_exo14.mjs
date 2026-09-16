@@ -648,7 +648,7 @@ export function bible_glyph_chapter_exo14() {
           "$wind",
           "that",
           "turned",
-          "it",
+          "$sea",
           "into",
           "dry",
           "land.",
