@@ -1,6 +1,6 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-export function html_element_width_layout(element) {
+export function html_element_width_layout(component) {
   arguments_assert(arguments, 1);
   ("How wide the page has LAID an element out, in pixels, ignoring any transform drawn on top");
   ("of it.");
@@ -13,6 +13,8 @@ export function html_element_width_layout(element) {
   ("and only the chain of them is wrong. So reach for this one whenever the measurement is");
   ("going to be MULTIPLIED, and for the plain one when it is going to be compared against");
   ("something else on the screen.");
-  let width = property_get(element, "offsetWidth");
+  ("A COMPONENT is handed in, not a bare element, because this is the twin of `html_element_width` and everything that measures in this repo passes the wrapper. Read straight off the wrapper it asks for a width the wrapper does not have, and the whole page dies on the first measurement.");
+  let e = html_component_element_get(component);
+  let width = property_get(e, "offsetWidth");
   return width;
 }
