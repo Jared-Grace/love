@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_includes } from "./list_includes.mjs";
@@ -24,7 +25,7 @@ export function app_code_lessons_stretched(shapes) {
       return n;
     }
     let fresh = list_filter(kinds, unseen_is);
-    let started_is = list_empty_is_not(fresh);
+    let started_is = list_empty_not_is(fresh);
     if (started_is) {
       stretch = add_1(stretch);
     }
