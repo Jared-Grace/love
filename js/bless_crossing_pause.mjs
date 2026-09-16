@@ -35,8 +35,16 @@ export async function bless_crossing_pause(
   ("much road is left.");
   let factor = bless_camera_close_factor();
   await bless_camera_close(div_map, player_img_c, player, factor);
-  await bless_crossing_wait(world, to, player, player_img_c, div_map);
-  ("The road is CLAIMED the instant the waiting ends and before the camera pulls back, so that not one tick passes between deciding to go and the traffic being told. The camera is a third of a second of animation; at this street's pace a vehicle moves two squares in that time, and those are exactly the two squares she is about to walk into.");
-  bless_crossing_claim(world, to);
-  await bless_camera_player_return(div_map, player_img_c, player);
+  ("The way back out is GUARDED for the same reason the opening of it is paired with it at");
+  ("all: this function owns the close-up, and a wait that throws would hand back a camera");
+  ("left leaning on a kerb for the rest of the game. The road is not claimed on that path -");
+  ("claiming it would stop the traffic for somebody who is not crossing - so the guard holds");
+  ("the camera and nothing else.");
+  try {
+    await bless_crossing_wait(world, to, player, player_img_c, div_map);
+    ("The road is CLAIMED the instant the waiting ends and before the camera pulls back, so that not one tick passes between deciding to go and the traffic being told. The camera is a third of a second of animation; at this street's pace a vehicle moves two squares in that time, and those are exactly the two squares she is about to walk into.");
+    bless_crossing_claim(world, to);
+  } finally {
+    await bless_camera_player_return(div_map, player_img_c, player);
+  }
 }
