@@ -1,3 +1,4 @@
+import { app_g_hero_clash } from "./app_g_hero_clash.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_replace } from "./bless_person_replace.mjs";
 import { property_path_get_2 } from "./property_path_get_2.mjs";
@@ -7,7 +8,6 @@ import { property_set } from "./property_set.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { app_g_hero_burn_charge } from "./app_g_hero_burn_charge.mjs";
 import { app_g_hero_fx_point } from "./app_g_hero_fx_point.mjs";
-import { app_g_hero_fireball } from "./app_g_hero_fireball.mjs";
 import { app_g_hero_impact } from "./app_g_hero_impact.mjs";
 import { app_g_hero_engulf } from "./app_g_hero_engulf.mjs";
 import { app_g_hero_ash } from "./app_g_hero_ash.mjs";
@@ -29,7 +29,7 @@ export async function app_g_hero_burn(hero) {
   await app_g_hero_burn_charge(player_img_c);
   let from = app_g_hero_fx_point(fx, player_img_c);
   let to = app_g_hero_fx_point(fx, evil_img);
-  await app_g_hero_fireball(fx, from, to);
+  await app_g_hero_clash(hero, evil_img, from, to);
   app_g_hero_impact(hero, to);
   await app_g_hero_engulf(hero, to, evil_img);
   await app_g_hero_ash(hero, to, evil);

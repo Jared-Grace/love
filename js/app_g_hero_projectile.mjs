@@ -1,3 +1,4 @@
+import { app_g_hero_projectile_ms } from "./app_g_hero_projectile_ms.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_hero_sprite } from "./app_g_hero_sprite.mjs";
 import { html_style_set } from "./html_style_set.mjs";
@@ -26,7 +27,7 @@ export async function app_g_hero_projectile(fx, from, to, text, glow) {
   let right2 = property_get(from, "y");
   let dy = subtract(left2, right2);
   let travel = app_g_hero_translate_text(dx, dy);
-  let duration = 650;
+  let duration = app_g_hero_projectile_ms();
   html_animate_start(
     ball,
     [
