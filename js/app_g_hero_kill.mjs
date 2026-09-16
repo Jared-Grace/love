@@ -26,7 +26,7 @@ export async function app_g_hero_kill(hero, evil, victim) {
   arguments_assert(arguments, 3);
   ("The evil person kills the one beside them: the victim flashes red, falls and fades, and a headstone rises where they stood. Somebody new walks into the street in their place, so the crowd never thins.");
   ("The victim leaves the crowd the moment they are struck, before anything is drawn, so nobody else - the hunter, the player walking, the crowd stepping aside - can reach for somebody who is already dead.");
-  ("The headstone is part of the street rather than part of the victim, so it stays where they fell when everything they were is taken off the map. It lies on the ground layer, under the people, so anybody who walks over a grave is drawn on top of it.");
+  ("The headstone is part of the street rather than part of the victim, so it stays where they fell when everything they were is taken off the map.");
   let npcs = property_path_get_2(hero, "world", "npcs");
   let div_map = property_get(hero, "div_map");
   property_set(victim, "held_still", "dead");
