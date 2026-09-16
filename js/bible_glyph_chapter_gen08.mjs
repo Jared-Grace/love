@@ -579,7 +579,7 @@ export function bible_glyph_chapter_gen08() {
           "the",
           "pleasing",
           "aroma,",
-          "He",
+          "$name_tag",
           "$speech",
           "in",
           "His",
