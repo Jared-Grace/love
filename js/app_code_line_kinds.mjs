@@ -1,3 +1,4 @@
+import { js_call_callee_name_dotted_try } from "./js_call_callee_name_dotted_try.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -16,6 +17,7 @@ export function app_code_line_kinds(code) {
   arguments_assert(arguments, 1);
   ("Every kind of thing written on one line of code, named once each: the sort of each piece, the sign carried by each operator, and whether a value written out is writing or a yes-or-no.");
   ("What a learner meets on a line is not only how much working out it asks for but what is on it that they have never seen. A first console.log carries one call and no operators at all, and it is the hardest line in the course on the day it arrives.");
+  ("The name a call reaches is kept for the same reason the sign on an operator is kept: Math.abs and Math.floor are both one call standing on one line, and a learner meeting the second has met something meeting the first did not teach.");
   ("The signs are kept apart from the sorts because two lines of the same sort are not the same lesson - a plus and a percent are both one operator standing on one line, and meeting the second teaches something meeting the first did not.");
   ("Text that does not read as code has no kinds, which is nothing rather than none: a word like TheWorld is not a line and nothing should be concluded from it.");
   let kinds = [];
@@ -46,6 +48,12 @@ export function app_code_line_kinds(code) {
     if (not(signed)) {
       let combined = text_combine_multiple([type, " ", operator]);
       keep(combined);
+    }
+    let called = js_call_callee_name_dotted_try(node);
+    let unnamed = null_is(called);
+    if (not(unnamed)) {
+      let reached = text_combine_multiple(["Call ", called]);
+      keep(reached);
     }
     let writing_is = js_literal_text_is(node);
     if (writing_is) {
