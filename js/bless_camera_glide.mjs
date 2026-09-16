@@ -12,7 +12,7 @@ import { property_get } from "./property_get.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { equal } from "./equal.mjs";
-import { app_g_bless_camera_still_end } from "./app_g_bless_camera_still_end.mjs";
+import { bless_camera_still_end } from "./bless_camera_still_end.mjs";
 import { html_scroll_center_coordinates } from "./html_scroll_center_coordinates.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_scroll_animate_start } from "./html_scroll_animate_start.mjs";
@@ -83,7 +83,7 @@ export async function bless_camera_glide(
   let to = html_element_width(player_img_c);
   let same = equal(from, to);
   if (same) {
-    app_g_bless_camera_still_end(container_map);
+    bless_camera_still_end(container_map);
     ("Let go again at once when this turned out not to be a journey. Nothing here changes");
     ("how big a square is, so nothing was ever going to jump, and a plain scroll across a");
     ("street where everybody has stopped dead is a street that looks broken. This is the");
@@ -135,7 +135,7 @@ export async function bless_camera_glide(
     container_e.scrollLeft = property_get(target, "left");
     container_e.scrollTop = property_get(target, "top");
   }
-  app_g_bless_camera_still_end(container_map);
+  bless_camera_still_end(container_map);
   ("The crowd is let go last of all, once sliding is back on. Nobody is put anywhere: each");
   ("of them is standing where their picture had got to when the journey began, and their");
   ("next step slides them on from there, so the street simply starts moving again. Let go");
