@@ -1,5 +1,5 @@
+import { html_body_div_page_dark } from "./html_body_div_page_dark.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { app_shared_text_quiet } from "./app_shared_text_quiet.mjs";
@@ -22,7 +22,7 @@ export async function lyric_video_pictures_review_preview() {
   "THE CHAPTERS ARE OFFERED AS BUTTONS RATHER THAN TYPED. The names are exact and there are a few dozen of them, and a typed name one letter out says the chapter has no pictures, which reads as a fault in the drawing rather than in the typing.";
   "IT NEEDS NO RECORDING AND NO RENDER. A fault found here costs one redraw, and the same fault found after rendering costs the render as well - so the cheap order is to read the pictures before anything is made out of them.";
   arguments_assert(arguments, 0);
-  let root = html_body_div();
+  let root = html_body_div_page_dark();
   let asked =
     "Choose a chapter. Every background picture in its document is written out below in the order it is shown: the words sung over it, the drawing, and the prose it was drawn from. Whatever you write goes against that picture.";
   html_p_text(root, asked);
