@@ -31,9 +31,11 @@ export function lyric_video_line_words_text(line, lead) {
       done = next.start;
     }
     let on = moment(word.start);
-    let on_from = moment(subtract(word.start, fade_in));
+    let difference = subtract(word.start, fade_in);
+    let on_from = moment(difference);
     let off = moment(done);
-    let off_until = moment(add(done, fade_out));
+    let sum = add(done, fade_out);
+    let off_until = moment(sum);
     let red = "\\t(" + on_from + "," + on + ",\\1c&H0000FF&)";
     let white = "\\t(" + off + "," + off_until + ",\\1c&HFFFFFF&)";
     let text = "{\\1c&HFFFFFF&" + red + white + "}" + word.text;
