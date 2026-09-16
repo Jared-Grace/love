@@ -50,11 +50,10 @@ export async function bless_crossing_pause(
     ("Then she looks FORWARD, holds for a moment, and only then steps off. Two looks down the road and a straight walk out of them reads as somebody checking a box: the head is still turned along the lane at the instant the foot moves, so the last thing the player sees her do is step sideways into a road she is not looking at.");
     ("Facing the way she is about to go is the part of crossing that was missing. Look both ways, THEN look where you are going - and the holding is what makes it a decision rather than a twitch on the way past.");
     ("The camera does NOT slide forward for this look, though it does for the two before it. A glance down a lane is worth a camera move because the lane is the thing being checked and a few pixels of a head cannot say it. This look is followed straight away by the street opening out - a far bigger movement, aimed at exactly where she is going - so a forward slide in front of it would be a small camera move immediately overwritten by a large one, and it was what kept the opening-out waiting.");
-    ("The hold is the SHORT one. All it has to do is let the turn register before she moves, and that is a beat rather than a wait: given the full while she reads as having second thoughts, and a crossing she has already spent several seconds earning starts to feel like being kept.");
+    ("There is no HOLD here any more, and there does not need to be one. The opening-out on the way through the guard below takes about half a second and she stands facing the road for the whole of it, so the pause the eye reads is the street growing around somebody who has already decided - which is the same picture a written-in wait was drawing, paid for twice. Waits either side of it were measured as too long twice running; this one is the one that was free to remove, because something else was already doing its job.");
     ("It comes AFTER the road is claimed, and must. The claim is what stops the traffic, and this pause is time a car would otherwise spend driving into the squares she is about to cross - so claiming first is what makes this a pause rather than a risk.");
     let forward = g_direction(player, to);
     app_shared_game_character_face(player, player_img_c, forward);
-    await app_shared_animation_sleep_quick();
   } finally {
     await bless_camera_player_return(div_map, player_img_c, player);
   }
