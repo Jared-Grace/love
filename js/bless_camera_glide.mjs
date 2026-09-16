@@ -7,7 +7,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
-import { app_g_bless_camera_still_start } from "./app_g_bless_camera_still_start.mjs";
+import { bless_camera_still_start } from "./bless_camera_still_start.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
@@ -72,7 +72,7 @@ export async function bless_camera_glide(
   ("crowd without every caller of one having to.");
   let crowd = bless_camera_people_get(container_map);
   app_g_bless_people_still_start(crowd, player_img_c);
-  app_g_bless_camera_still_start(container_map);
+  bless_camera_still_start(container_map);
   ("Where the camera is standing is read off the box BEFORE anything at all is written to");
   ("it, and read as a place on the grid rather than as a scroll offset, because the squares");
   ("it counts are about to change size underneath it.");
