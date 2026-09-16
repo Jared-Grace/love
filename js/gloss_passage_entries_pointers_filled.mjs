@@ -1,6 +1,6 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_not_is } from "./null_not_is.mjs";
@@ -29,8 +29,7 @@ export function gloss_passage_entries_pointers_filled(
   let key = gloss_entry_explain_key();
   let said = {};
   for (let chapter_passage of passages) {
-    let verse_numbers = property_get(chapter_passage, "verse_numbers");
-    let here = json_equal(verse_numbers, wanted);
+    let here = property_equals_json(chapter_passage, "verse_numbers", wanted);
     let read = gloss_passage_entries(chapter_passage);
     let walked = read;
     if (here) {
