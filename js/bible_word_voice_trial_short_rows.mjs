@@ -9,19 +9,23 @@ export function bible_word_voice_trial_short_rows() {
     ["pair", "ὃ ἡ", "two one-letter words together"],
     ["phrase", "ὃ λόγος", "the word joined to the word after it"],
   ];
-  let rows = tried.map(([key, text, meta], index) => ({
-    id: "test-" + key,
-    number: index + 1,
-    text,
-    meta,
-    voices: [
-      {
-        name: "el-GR-Wavenet-B",
-        label: "WaveNet",
-        pick: "wavenet",
-        url: "/love/gitignore/bible_word_voice_trial/test/" + key + ".mp3",
-      },
-    ],
-  }));
+  function lambda([key, text, meta], index) {
+    let r = {
+      id: "test-" + key,
+      number: index + 1,
+      text,
+      meta,
+      voices: [
+        {
+          name: "el-GR-Wavenet-B",
+          label: "WaveNet",
+          pick: "wavenet",
+          url: "/love/gitignore/bible_word_voice_trial/test/" + key + ".mp3",
+        },
+      ],
+    };
+    return r;
+  }
+  let rows = tried.map(lambda);
   return rows;
 }
