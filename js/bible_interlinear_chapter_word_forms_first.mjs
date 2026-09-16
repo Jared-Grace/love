@@ -1,6 +1,4 @@
-import { equal } from "./equal.mjs";
-import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
-import { hebrew_cantillation_strip } from "./hebrew_cantillation_strip.mjs";
+import { bible_interlinear_chapter_word_forms } from "./bible_interlinear_chapter_word_forms.mjs";
 export async function bible_interlinear_chapter_word_forms_first(
   chapter_code,
   count,
@@ -9,27 +7,7 @@ export async function bible_interlinear_chapter_word_forms_first(
   "$plain count";
   "The first different spoken forms of one chapter, each with the interlinear record of where it first appears: the form, its transliteration, its gloss and its Strong's number.";
   "A form is the word with its chanting marks and its punctuation removed, so the same word read with two different accents is one form, which is what saying a single word needs.";
-  let verses = await bible_interlinear_chapter_words(chapter_code);
-  let seen = new Set();
-  let forms = [];
-  for (let verse of verses) {
-    for (let w of verse.words) {
-      let text = hebrew_cantillation_strip(w.original).replace(
-        /[.,;·:?!\s]/g,
-        "",
-      );
-      if (equal(text, "") || seen.has(text)) {
-        continue;
-      }
-      seen.add(text);
-      forms.push({
-        text,
-        translit: w.translit,
-        gloss: w.gloss,
-        strong: w.strong,
-      });
-    }
-  }
+  let forms = await bible_interlinear_chapter_word_forms(chapter_code);
   let v = Number(count);
   let chosen = forms.slice(0, v);
   return chosen;
