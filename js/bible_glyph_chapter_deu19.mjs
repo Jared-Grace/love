@@ -25,7 +25,7 @@ export function bible_glyph_chapter_deu19() {
           "$map",
           "whose",
           "$earth",
-          "He",
+          "$name_tag",
           "is",
           "$hands_giving",
           "you,",
