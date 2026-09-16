@@ -301,7 +301,6 @@ export function bible_glyph_chapter_lev22() {
           "eat",
           "the",
           "$sparkle.",
-          "Neither",
           "the",
           "guest",
           "of",
