@@ -1,3 +1,6 @@
+import { app_code_line_kinds } from "./app_code_line_kinds.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { add_1 } from "./add_1.mjs";
@@ -10,7 +13,8 @@ import { greater_than } from "./greater_than.mjs";
 import { list_add } from "./list_add.mjs";
 export function app_code_lessons_shapes(rounds) {
   arguments_assert(arguments, 1);
-  ("Every lesson in the order it is learned, beside the hardest line it can hand out: how many operators stand on that line, how deep they sit, and the line itself.");
+  ("Every lesson in the order it is learned, beside the hardest line it can hand out: how many operators stand on that line, how deep they sit, the line itself, and every kind of thing the lesson writes.");
+  ("The kinds are what tells one part of the course from the next. A lesson carrying a kind no lesson before it carried is starting something, and the lessons after it are learning that rather than carrying on with what came before.");
   ("The hardest rather than the usual, because a lesson is as hard as the worst thing it can ask. A learner who meets the one three-operator line a two-operator lesson can reach has met a three-operator line, and an average would have hidden it.");
   ("A lesson that hands out no code at all is kept in the list and marked, rather than left out of it, so that a reading of the order still has every lesson in its own place and can say which places it passed over.");
   ("Every lesson here, rather than the run the built site shows, because the order is a fact about the course as written and a reading of it should not change with what has been released.");
@@ -50,6 +54,7 @@ export function app_code_lessons_shapes(rounds) {
         depth = line_depth;
       }
     }
+    let kinds = list_unique_sorted(kinds_all);
     list_add(shapes, {
       place,
       id,
@@ -57,6 +62,7 @@ export function app_code_lessons_shapes(rounds) {
       operators,
       depth,
       hardest,
+      kinds,
     });
   }
   return shapes;
