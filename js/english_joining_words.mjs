@@ -98,6 +98,7 @@ export function english_joining_words() {
     "well",
     "very",
     "such",
+    "than",
   ];
   return r;
 }
