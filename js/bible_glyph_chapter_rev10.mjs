@@ -186,7 +186,7 @@ export function bible_glyph_chapter_rev10() {
           "$plus",
           "he",
           "swore",
-          "by",
+          "$tray_in",
           "Him",
           "who",
           "$sprout",
