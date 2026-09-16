@@ -192,7 +192,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "Egyptians",
           "pursued",
-          "them",
+          "$father",
           "with",
           "chariots",
           "and",
