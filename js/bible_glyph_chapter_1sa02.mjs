@@ -352,7 +352,7 @@ export function bible_glyph_chapter_1sa02() {
           "Eli",
           "were",
           "wicked",
-          "men;",
+          "$son;",
           "they",
           "had",
           "$no_entry",
