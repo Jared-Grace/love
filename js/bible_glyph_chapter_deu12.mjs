@@ -717,7 +717,7 @@ export function bible_glyph_chapter_deu12() {
           "herd",
           "or",
           "$sheep",
-          "He",
+          "$name_tag",
           "has",
           "$hands_giving",
           "you,",
