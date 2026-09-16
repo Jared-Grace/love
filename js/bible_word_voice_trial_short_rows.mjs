@@ -11,6 +11,10 @@ export function bible_word_voice_trial_short_rows() {
     ["article_phrase", "ὁ λόγος", "the plain article joined to its word"],
     ["plain_phrase", "ο λόγος", "the same, with the accent mark taken off"],
     ["plain_life", "η ζωή", "another article joined to its word"],
+    ["cut_alone_dot", "ο.", "modern spelling, on its own, with a full stop"],
+    ["cut_dot", "ο. λόγος", "modern, a full stop, then a word"],
+    ["cut_life", "η. ζωή", "the other letter, the same way"],
+    ["cut_thrice", "ο ο ο", "modern, said three times over"],
   ];
   function lambda([key, text, meta], index) {
     let r = {
