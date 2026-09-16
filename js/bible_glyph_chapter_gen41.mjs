@@ -1252,7 +1252,7 @@ export function bible_glyph_chapter_gen41() {
           "$hands_giving",
           "him",
           "Asenath,",
-          "daughter",
+          "$woman",
           "of",
           "Potiphera,",
           "$priest",
