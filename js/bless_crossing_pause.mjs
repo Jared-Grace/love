@@ -1,3 +1,4 @@
+import { bless_crossing_claim } from "./bless_crossing_claim.mjs";
 import { bless_camera_close_factor } from "./bless_camera_close_factor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_camera_close } from "./bless_camera_close.mjs";
