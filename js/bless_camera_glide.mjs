@@ -90,113 +90,131 @@ export async function bless_camera_glide(
   let crowd = bless_camera_people_get(container_map);
   bless_people_still_start(crowd, player_img_c);
   bless_camera_still_start(container_map);
-  let centered = html_scroll_centered_coordinates(player_img_c, container);
-  let from = html_element_width_layout(player_img_c);
-  html_style_variable_set(container_map, variable, size);
-  html_reflow_force(div_map);
-  let to = html_element_width_layout(player_img_c);
-  let same = equal(from, to);
-  if (same) {
+  ("EVERYTHING FROM HERE IS GUARDED, because the letting go is the one step that may never");
+  ("be missed. Holding the street still is done by putting a class on the map and marking");
+  ("every person held, and both of those last until somebody takes them off - so a journey");
+  ("that throws anywhere in the middle leaves a street where the traffic never takes another");
+  ("step and nobody ever walks again. Nothing reports it. The player sees a game that has");
+  ("frozen, and the throw that caused it happened seconds earlier somewhere they cannot see.");
+  ("A crossing is where this bites, because a crossing is two journeys with a wait between");
+  ("them and the wait is measuring a moving street on a real phone. This function already");
+  ("said the release was never optional; it was optional, and the word for a rule with a way");
+  ("round it is a preference.");
+  try {
+    let centered = html_scroll_centered_coordinates(player_img_c, container);
+    let from = html_element_width_layout(player_img_c);
+    html_style_variable_set(container_map, variable, size);
+    html_reflow_force(div_map);
+    let to = html_element_width_layout(player_img_c);
+    let same = equal(from, to);
+    if (same) {
+      bless_camera_still_end(container_map);
+      ("Let go again at once when this turned out not to be a journey. Nothing here changes");
+      ("how big a square is, so nothing was ever going to jump, and a plain scroll across a");
+      ("street where everybody has stopped dead is a street that looks broken. This is the");
+      ("common case - a prayer over one person moves the camera and never resizes it - so the");
+      ("crowd carries on walking through almost every camera move the player ever sees.");
+      bless_people_still_end(crowd);
+      await html_scroll_center_coordinates(focus, player_img_c, container);
+      return;
+    }
+    let back = text_combine_multiple([from, "px"]);
+    html_style_variable_set(container_map, variable, back);
+    html_reflow_force(div_map);
+    ("THE STANDING PLACE IS PUT BACK TOO, and not only the size. Measuring how far to go");
+    ("writes the new size for a moment, and while it is written the map is a different size -");
+    ("so a browser holding a box scrolled further along than the new map is wide pulls the");
+    ("scrolling back to fit, there and then. Writing the old size again does not undo that");
+    ("pull: the map grows back and the box stays where it was dragged to. Left alone, a");
+    ("journey that zooms a long way out began by throwing the picture sideways, and the");
+    ("further out it went the further it was thrown - which is the jump this was all meant to");
+    ("remove, hiding one step upstream of the frames that were fixed.");
+    ("It is put back from the place on the grid rather than from a remembered offset, so it");
+    ("lands where the player was looking whatever the browser did in between.");
+    let standing = html_scroll_center_target(centered, player_img_c, container);
+    let scroll_left = property_get(standing, "left");
+    let scroll_top = property_get(standing, "top");
+    container_e.scrollLeft = scroll_left;
+    container_e.scrollTop = scroll_top;
+    let claim = html_scroll_animate_start(container_e);
+    let token = property_get(claim, "token");
+    ("That standing place is then FIXED for the whole journey, and the frames travel by drawing");
+    ("the map somewhere else instead of by scrolling the box. Scrolling would be free, but");
+    ("where to scroll to is a sum about how big a square is drawn, and asking it is what cost");
+    ("the journey its smoothness.");
+    ("Both ends of the pan are asked here, while the squares are still the size they started");
+    ("at. The answer for the far end is not where the box will finally stand - the squares will");
+    ("be a different size by then - but it does not need to be: the two are in proportion, so a");
+    ("reach measured at the starting size and multiplied by how much bigger this frame is comes");
+    ("out at the same place. That proportion is the whole reason this may be asked once.");
+    ("A reach is counted from the corner the grid is drawn out of, and NOT from the corner of");
+    ("the box that scrolls. A wrapper holds blank room around the grid so that an outermost");
+    ("square can still be brought to the middle of the window, and that room does not grow when");
+    ("the squares do - so a distance holding it inside grows by more than it should, and the map");
+    ("drifts further off the further it has zoomed.");
+    let arriving = html_scroll_center_target(focus, player_img_c, container);
+    let corner = html_component_offset_parent_corner(player_img_c);
+    let corner_left = property_get(corner, "left");
+    let corner_top = property_get(corner, "top");
+    let half_width = divide(container_e.clientWidth, 2);
+    let half_height = divide(container_e.clientHeight, 2);
+    let middle_left = add(scroll_left, half_width);
+    let middle_top = add(scroll_top, half_height);
+    let reach_start = {
+      left: subtract(middle_left, corner_left),
+      top: subtract(middle_top, corner_top),
+    };
+    let arriving_left = property_get(arriving, "left");
+    let arriving_top = property_get(arriving, "top");
+    let arriving_middle_left = add(arriving_left, half_width);
+    let arriving_middle_top = add(arriving_top, half_height);
+    let reach_end = {
+      left: subtract(arriving_middle_left, corner_left),
+      top: subtract(arriving_middle_top, corner_top),
+    };
+    ("The scale is drawn on the thing the squares are POSITIONED by, which is the one element");
+    ("every coordinate on this map is already counted from. Drawn on the wrapper outside it the");
+    ("blank room would scale too; drawn on anything inside it, only part of the street would.");
+    let map_c = html_component_offset_parent(player_img_c);
+    let animate = bless_camera_glide_frames({
+      container,
+      map_c,
+      reach_start,
+      reach_end,
+      from,
+      to,
+      token,
+    });
+    let promise = new Promise(animate);
+    await promise;
+    ("The drawn-on scale comes off BEFORE the real size is written, and before anything else is");
+    ("measured. Left on, the two would multiply and the map would be drawn at nearly twice the");
+    ("size it just arrived at; and every sum below about where to stand would answer about the");
+    ("picture rather than about the street.");
+    html_scale_translate_clear(map_c);
+    html_style_variable_set(container_map, variable, size);
+    html_reflow_force(div_map);
+    ("The last placing is skipped when something else has taken the camera over. It would be");
+    ("one frame of this journey's destination in the middle of somebody else's, and the map");
+    ("belongs to whoever claimed it last.");
+    let taken = not_equal(container_e.scroll_animation_token, token);
+    if (not(taken)) {
+      let target = html_scroll_center_target(focus, player_img_c, container);
+      container_e.scrollLeft = property_get(target, "left");
+      container_e.scrollTop = property_get(target, "top");
+    }
+  } finally {
+    ("Reached by every way out of this - arriving, being overtaken, returning early because");
+    ("nothing was going to resize, and throwing. Letting go twice costs nothing: taking a class");
+    ("off a map that has not got it and forgetting a mark nobody is wearing are both nothing at");
+    ("all, which is what lets the early return let go where it wants to and still come through");
+    ("here.");
     bless_camera_still_end(container_map);
-    ("Let go again at once when this turned out not to be a journey. Nothing here changes");
-    ("how big a square is, so nothing was ever going to jump, and a plain scroll across a");
-    ("street where everybody has stopped dead is a street that looks broken. This is the");
-    ("common case - a prayer over one person moves the camera and never resizes it - so the");
-    ("crowd carries on walking through almost every camera move the player ever sees.");
+    ("The crowd is let go last of all, once sliding is back on. Nobody is put anywhere: each");
+    ("of them is standing where their picture had got to when the journey began, and their");
+    ("next step slides them on from there, so the street simply starts moving again. Let go");
+    ("before sliding was restored, that next step would be placed rather than walked, which");
+    ("is the very thing this pair exists to prevent.");
     bless_people_still_end(crowd);
-    await html_scroll_center_coordinates(focus, player_img_c, container);
-    return;
   }
-  let back = text_combine_multiple([from, "px"]);
-  html_style_variable_set(container_map, variable, back);
-  html_reflow_force(div_map);
-  ("THE STANDING PLACE IS PUT BACK TOO, and not only the size. Measuring how far to go");
-  ("writes the new size for a moment, and while it is written the map is a different size -");
-  ("so a browser holding a box scrolled further along than the new map is wide pulls the");
-  ("scrolling back to fit, there and then. Writing the old size again does not undo that");
-  ("pull: the map grows back and the box stays where it was dragged to. Left alone, a");
-  ("journey that zooms a long way out began by throwing the picture sideways, and the");
-  ("further out it went the further it was thrown - which is the jump this was all meant to");
-  ("remove, hiding one step upstream of the frames that were fixed.");
-  ("It is put back from the place on the grid rather than from a remembered offset, so it");
-  ("lands where the player was looking whatever the browser did in between.");
-  let standing = html_scroll_center_target(centered, player_img_c, container);
-  let scroll_left = property_get(standing, "left");
-  let scroll_top = property_get(standing, "top");
-  container_e.scrollLeft = scroll_left;
-  container_e.scrollTop = scroll_top;
-  let claim = html_scroll_animate_start(container_e);
-  let token = property_get(claim, "token");
-  ("That standing place is then FIXED for the whole journey, and the frames travel by drawing");
-  ("the map somewhere else instead of by scrolling the box. Scrolling would be free, but");
-  ("where to scroll to is a sum about how big a square is drawn, and asking it is what cost");
-  ("the journey its smoothness.");
-  ("Both ends of the pan are asked here, while the squares are still the size they started");
-  ("at. The answer for the far end is not where the box will finally stand - the squares will");
-  ("be a different size by then - but it does not need to be: the two are in proportion, so a");
-  ("reach measured at the starting size and multiplied by how much bigger this frame is comes");
-  ("out at the same place. That proportion is the whole reason this may be asked once.");
-  ("A reach is counted from the corner the grid is drawn out of, and NOT from the corner of");
-  ("the box that scrolls. A wrapper holds blank room around the grid so that an outermost");
-  ("square can still be brought to the middle of the window, and that room does not grow when");
-  ("the squares do - so a distance holding it inside grows by more than it should, and the map");
-  ("drifts further off the further it has zoomed.");
-  let arriving = html_scroll_center_target(focus, player_img_c, container);
-  let corner = html_component_offset_parent_corner(player_img_c);
-  let corner_left = property_get(corner, "left");
-  let corner_top = property_get(corner, "top");
-  let half_width = divide(container_e.clientWidth, 2);
-  let half_height = divide(container_e.clientHeight, 2);
-  let middle_left = add(scroll_left, half_width);
-  let middle_top = add(scroll_top, half_height);
-  let reach_start = {
-    left: subtract(middle_left, corner_left),
-    top: subtract(middle_top, corner_top),
-  };
-  let arriving_left = property_get(arriving, "left");
-  let arriving_top = property_get(arriving, "top");
-  let arriving_middle_left = add(arriving_left, half_width);
-  let arriving_middle_top = add(arriving_top, half_height);
-  let reach_end = {
-    left: subtract(arriving_middle_left, corner_left),
-    top: subtract(arriving_middle_top, corner_top),
-  };
-  ("The scale is drawn on the thing the squares are POSITIONED by, which is the one element");
-  ("every coordinate on this map is already counted from. Drawn on the wrapper outside it the");
-  ("blank room would scale too; drawn on anything inside it, only part of the street would.");
-  let map_c = html_component_offset_parent(player_img_c);
-  let animate = bless_camera_glide_frames({
-    container,
-    map_c,
-    reach_start,
-    reach_end,
-    from,
-    to,
-    token,
-  });
-  let promise = new Promise(animate);
-  await promise;
-  ("The drawn-on scale comes off BEFORE the real size is written, and before anything else is");
-  ("measured. Left on, the two would multiply and the map would be drawn at nearly twice the");
-  ("size it just arrived at; and every sum below about where to stand would answer about the");
-  ("picture rather than about the street.");
-  html_scale_translate_clear(map_c);
-  html_style_variable_set(container_map, variable, size);
-  html_reflow_force(div_map);
-  ("The last placing is skipped when something else has taken the camera over. It would be");
-  ("one frame of this journey's destination in the middle of somebody else's, and the map");
-  ("belongs to whoever claimed it last.");
-  let taken = not_equal(container_e.scroll_animation_token, token);
-  if (not(taken)) {
-    let target = html_scroll_center_target(focus, player_img_c, container);
-    container_e.scrollLeft = property_get(target, "left");
-    container_e.scrollTop = property_get(target, "top");
-  }
-  bless_camera_still_end(container_map);
-  ("The crowd is let go last of all, once sliding is back on. Nobody is put anywhere: each");
-  ("of them is standing where their picture had got to when the journey began, and their");
-  ("next step slides them on from there, so the street simply starts moving again. Let go");
-  ("before sliding was restored, that next step would be placed rather than walked, which");
-  ("is the very thing this pair exists to prevent.");
-  bless_people_still_end(crowd);
 }
