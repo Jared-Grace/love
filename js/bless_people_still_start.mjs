@@ -20,7 +20,7 @@ export function bless_people_still_start(people, player_img_c) {
   ("everybody. It is one square by definition, it is measured rather than worked out so that");
   ("a phone that has already shrunk the map is read correctly, and reading it once keeps");
   ("this to a single measurement rather than one per person.");
-  let square = html_element_width(player_img_c);
+  let square = html_element_width_layout(player_img_c);
   function person_still(person) {
     app_g_bless_person_still_start(person, square);
   }

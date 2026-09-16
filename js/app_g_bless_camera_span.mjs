@@ -42,7 +42,7 @@ export async function app_g_bless_camera_span(
   ("window changes. So the map stops answering to a window being resized while this is in");
   ("force, which is why what puts it in force is also responsible for putting it back.");
   let container_e = app_shared_game_div_map_container_element_get(div_map);
-  let tile_now = html_element_width(player_img_c);
+  let tile_now = html_element_width_layout(player_img_c);
   let across = span + 4;
   let room = divide(container_e.clientWidth, across);
   let wider = less_than(room, tile_now);
