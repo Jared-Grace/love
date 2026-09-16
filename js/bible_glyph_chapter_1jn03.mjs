@@ -664,7 +664,7 @@ export function bible_glyph_chapter_1jn03() {
           "$tray_in",
           "$pointing_back,",
           "$plus",
-          "God",
+          "$pointing_back",
           "$tray_in",
           "$pointing_back.",
           "$plus",
