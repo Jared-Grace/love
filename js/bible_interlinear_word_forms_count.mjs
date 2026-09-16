@@ -11,7 +11,10 @@ export async function bible_interlinear_word_forms_count() {
   for (let code of object_property_names(chapters)) {
     for (let verse of chapters[code]) {
       for (let w of verse.words) {
-        let form = String(w.original).replace(/[.,;·:?!\s]/g, "");
+        let form = hebrew_cantillation_strip(String(w.original)).replace(
+          /[.,;·:?!\s]/g,
+          "",
+        );
         if (equal(form, "")) {
           continue;
         }
