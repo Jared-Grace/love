@@ -1,0 +1,42 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { property_get } from "./property_get.mjs";
+import { g_img_square_div } from "./g_img_square_div.mjs";
+import { html_click_none } from "./html_click_none.mjs";
+import { html_style_set } from "./html_style_set.mjs";
+export function app_g_hero_fire_anchor(div_map, person) {
+  arguments_assert(arguments, 2);
+  ("A box over the square somebody is standing on, IN THE STREET, for the fire that burns");
+  ("them to be drawn inside.");
+  ("The fire sheet lies over the SCREEN, which is right for a fireball because a fireball");
+  ("crosses the screen rather than the squares. It is wrong for everything after the fire");
+  ("lands. The burning, the smoke and the ash belong to the person, and the person is in the");
+  ("street - so drawn on the screen they are drawn at the place on it where he happened to be");
+  ("standing when the fire struck, and they stay there. The burning lasts about three seconds");
+  ("and the camera re-centres on the player at every step she takes, so a player who walks");
+  ("while he burns watches him slide out from under his own fire.");
+  ("Drawn in the street instead, nothing has to follow anything. The box is placed on a");
+  ("square the way a person is placed on a square, so it moves when the street moves, scrolls");
+  ("when the street scrolls and grows when the street grows, and the browser does all of it.");
+  ("An effect that has to be TOLD where its subject went is an effect that will one day be");
+  ("told late; an effect standing in the same place as its subject cannot be told wrong.");
+  ("It is on the RAISED layer and not the ground one, which is what separates it from the");
+  ("scorch mark left afterwards. A scorch is under the crowd because people walk over it; a");
+  ("flame is over them, because a flame that people walked in front of would not read as");
+  ("fire at all.");
+  ("Nothing is clipped to the square. The box says WHERE, and says nothing about how far the");
+  ("fire may reach - a pillar of flame stands several squares high and the smoke leaves the");
+  ("street altogether, so a box that kept its children inside it would cut the fire off at");
+  ("the ankles.");
+  ("Taps go straight through. A square that swallowed them would take the tap that walks the");
+  ("player away from the thing burning in front of her.");
+  let x = property_get(person, "x");
+  let y = property_get(person, "y");
+  let tile = {
+    x,
+    y,
+  };
+  let anchor = g_img_square_div(div_map, tile, "raised");
+  html_click_none(anchor);
+  html_style_set(anchor, "overflow", "visible");
+  return anchor;
+}

@@ -14,7 +14,7 @@ import { html_style_assign } from "./html_style_assign.mjs";
 import { html_animate_remove } from "./html_animate_remove.mjs";
 import { html_animate } from "./html_animate.mjs";
 import { html_remove } from "./html_remove.mjs";
-export async function app_g_hero_ash(hero, point, evil) {
+export async function app_g_hero_ash(hero, evil, sheet) {
   arguments_assert(arguments, 3);
   ("The end of the burning: what is left of the evil person crumbles down into nothing, embers burst outward, smoke rises, and a scorch mark is left on the ground that slowly fades.");
   ("Everything the person was made of is taken off the map afterwards - their picture and the devil's face over them - so nothing of them is left standing on the street.");
@@ -23,14 +23,27 @@ export async function app_g_hero_ash(hero, point, evil) {
   let evil_img = app_shared_game_npc_img_get(evil);
   let width = html_element_width(evil_img);
   let elements = app_shared_game_npc_elements(evil);
+  ("THE EMBERS AND THE SMOKE ARE DRAWN IN THE STREET, in the same box the flames were, and");
+  ("for the same reason: they belong to the person who burned, and he is standing on a square");
+  ("rather than on the screen. The smoke is the worst of the four to get wrong because it is");
+  ("the longest lived - it is still rising after everything else has gone, so it is the piece");
+  ("most likely to be left hanging over ground the camera has walked away from.");
+  ("Where it drifts TO is still its own business. Standing in the right place is not the same");
+  ("as standing still, and a puff of smoke is supposed to leave the square it rose from.");
+  let square = html_element_width(sheet);
+  let half = divide(square, 2);
+  let spot = {
+    x: half,
+    y: half,
+  };
   let embers = range(22);
   function ember_burst(index) {
-    app_g_hero_ember(fx, point, width, index);
+    app_g_hero_ember(sheet, spot, width, index);
   }
   each(embers, ember_burst);
   let puffs = range(7);
   function puff_rise(index) {
-    app_g_hero_smoke(fx, point, width, index);
+    app_g_hero_smoke(sheet, spot, width, index);
   }
   each(puffs, puff_rise);
   let scorch = app_g_hero_ground_div(div_map, evil);
