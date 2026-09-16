@@ -5,7 +5,7 @@ import { divide } from "./divide.mjs";
 import { less_than } from "./less_than.mjs";
 import { bless_tile_size } from "./bless_tile_size.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
+import { bless_camera_glide } from "./bless_camera_glide.mjs";
 export async function app_g_bless_camera_span(
   container_map,
   div_map,
@@ -50,11 +50,5 @@ export async function app_g_bless_camera_span(
   if (wider) {
     size = text_combine_multiple([room, "px"]);
   }
-  await app_g_bless_camera_glide(
-    container_map,
-    div_map,
-    player_img_c,
-    size,
-    focus,
-  );
+  await bless_camera_glide(container_map, div_map, player_img_c, size, focus);
 }

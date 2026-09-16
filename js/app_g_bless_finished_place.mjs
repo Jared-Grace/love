@@ -4,7 +4,7 @@ import { html_remove } from "./html_remove.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_lit_box } from "./app_g_bless_lit_box.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_g_bless_camera_glide } from "./app_g_bless_camera_glide.mjs";
+import { bless_camera_glide } from "./bless_camera_glide.mjs";
 import { sleep } from "./sleep.mjs";
 import { app_g_bless_finished_white } from "./app_g_bless_finished_white.mjs";
 import { app_g_bless_finished_glow } from "./app_g_bless_finished_glow.mjs";
@@ -82,7 +82,7 @@ export async function app_g_bless_finished_place(
   let box = app_g_bless_lit_box(tiles);
   let middle = property_get(box, "middle");
   let closer = app_g_bless_tile_size_close();
-  await app_g_bless_camera_glide(
+  await bless_camera_glide(
     container_map,
     div_map,
     player_img_c,
