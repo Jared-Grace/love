@@ -106,7 +106,12 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ("A box makes one point, and this is a second one. The box above says which name the sum may be given to; this one says that the sum could have been a plain number all along. A learner who only wants the first point can stop at the end of the box above it, which they cannot do when the two run on inside one box.");
   let box_value = app_code_container_light_blue(root);
   html_div_cycle_code(box_value, ["", names_sum, " solves to ", total]);
-  html_div_cycle_code(box_value, ["So we did not have to write ", names_sum]);
+  html_div_cycle_code(box_value, [
+    "So we did not have to write ",
+    names_sum,
+    ":",
+  ]);
+  html_div_code(box_value, given_sum);
   html_div_cycle_code(box_value, [
     "Instead, we could have just written ",
     total,
