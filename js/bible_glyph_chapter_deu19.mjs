@@ -285,7 +285,7 @@ export function bible_glyph_chapter_deu19() {
           "$earth",
           "He",
           "$mouth",
-          "them,",
+          "$father,",
         ],
       },
       {
