@@ -721,7 +721,7 @@ export function bible_glyph_chapter_deu29() {
           "sulfur",
           "and",
           "salt,",
-          "$no_entry",
+          "unsown",
           "and",
           "unproductive,",
           "with",

@@ -27,6 +27,8 @@ export function app_code_lessons_shapes(rounds) {
     let depth = 0;
     let hardest = null;
     let code = false;
+    ("what is on this lesson that a learner may never have seen, gathered from every line it asks to be worked out");
+    let kinds_all = [];
     for (let line of lines) {
       let shape = app_code_line_shape(line);
       let unread = null_is(shape);
@@ -34,6 +36,8 @@ export function app_code_lessons_shapes(rounds) {
         continue;
       }
       code = true;
+      let line_kinds = app_code_line_kinds(line);
+      list_add_multiple(kinds_all, line_kinds);
       let line_operators = property_get(shape, "operators");
       let harder = greater_than(line_operators, operators);
       if (harder) {
