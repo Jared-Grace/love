@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
@@ -59,8 +60,7 @@ export async function bible_glyph_chapter_verse_text_write(
     }
     list_add(words, word);
   }
-  let left2 = list_size(words);
-  let none = equal(left2, 0);
+  let none = list_size_equal(words, 0);
   if (none) {
     error({
       hint: "the verse handed in has no words in it",
