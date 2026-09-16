@@ -191,7 +191,7 @@ export function bible_glyph_chapter_ezk47() {
           "$water",
           "had",
           "risen",
-          "and",
+          "$water",
           "was",
           "deep",
           "enough",
