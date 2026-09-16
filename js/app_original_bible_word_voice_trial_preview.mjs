@@ -98,7 +98,11 @@ export async function app_original_bible_word_voice_trial_preview() {
         s.rows.length;
       return r5;
     }
-    let lines = sets.map(lambda5);
+    function lambda13(s) {
+      let judged = s.rows[0].voices.length > 1;
+      return judged;
+    }
+    let lines = sets.filter(lambda13).map(lambda5);
     let text2 = lines.join("   |   ");
     html_text_set(tally, text2);
   }
@@ -143,11 +147,7 @@ export async function app_original_bible_word_voice_trial_preview() {
       if (s.rtl) {
         html_attribute_set(word, "dir", "rtl");
       }
-      let gloss = equal(row.gloss, "-") ? "(untranslated marker)" : row.gloss;
-      let meta = html_span_text(
-        head,
-        row.translit + " · " + gloss + " · Strong's " + row.strong,
-      );
+      let meta = html_span_text(head, row.meta);
       html_style_assign(meta, {
         color: app_shared_color_gray_dark(),
         fontSize: "0.85rem",
