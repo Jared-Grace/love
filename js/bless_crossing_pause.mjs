@@ -32,6 +32,6 @@ export async function bless_crossing_pause(
   ("the far kerb, the camera would be doing the one thing a crossing must not do: hiding how");
   ("much road is left.");
   await bless_camera_close(div_map, player_img_c, player);
-  await bless_crossing_wait(world, to, player, player_img_c);
+  await bless_crossing_wait(world, to, player, player_img_c, div_map);
   await bless_camera_player_return(div_map, player_img_c, player);
 }
