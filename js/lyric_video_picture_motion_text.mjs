@@ -25,7 +25,7 @@ export function lyric_video_picture_motion_text(
   ("★ THE BOX IN BETWEEN STAYS INSIDE THE PICTURE TOO. Its corner moves in a straight line and its size changes by the same ratio every frame, so zooming looks steady instead of rushing at one end. A size changing by ratio is never larger than one changing by equal steps between the same two sizes, and a box with equal steps stays inside because both ends do - so the box actually used, being no larger, stays inside as well.");
   ("★ THE RANDOM CHOICES ARE KEYED TO THE PICTURE'S PATH, SO RENDERING THE SAME VIDEO AGAIN MOVES EVERY PICTURE THE SAME WAY. A picture whose motion somebody dislikes can then be named and dealt with, instead of changing every time it is looked at.");
   ("★ A SECOND BOX TOO CLOSE TO THE FIRST IS DRAWN AGAIN. Two boxes chosen at random can land almost on top of each other, and the picture would then sit still, which is the one thing this is for preventing. Some corner has to move by at least a tenth of the picture; the draws stay keyed to the path, so the redraw is as repeatable as the first.");
-  ("A BOX IS NEVER SMALLER THAN THREE FIFTHS OF THE PICTURE ACROSS, so the closest view is under twice as near as the whole and a picture is never zoomed until it turns to mush.");
+  ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
   ("THE PICTURE IS ENLARGED TWICE OVER BEFORE IT IS MOVED. The tool that moves it places the cut on whole pixels, and a cut stepping a whole pixel of the finished frame at a time is seen as a shudder; on a picture twice the size each step is half a pixel of the finished frame, which reads as smooth.");
   ("It is fitted and padded with nothing into the enlarged frame first, exactly as a still picture is fitted, so a picture of another shape keeps a see-through margin rather than being stretched.");
   let next = random_seed_generator_from_text(picture.path);
@@ -33,8 +33,8 @@ export function lyric_video_picture_motion_text(
   next();
   function box() {
     let left = next();
-    let right = multiply(left, 0.4);
-    let size = add(0.6, right);
+    let right = multiply(left, 0.35);
+    let size = add(0.5, right);
     let room = subtract(1, size);
     let left2 = next();
     let x = multiply(left2, room);
