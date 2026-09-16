@@ -193,7 +193,7 @@ export function bible_glyph_chapter_1jn01() {
           "$handshake",
           "with",
           "$pointing_back",
-          "yet",
+          "$plus",
           "$walking",
           "$tray_in",
           "the",
