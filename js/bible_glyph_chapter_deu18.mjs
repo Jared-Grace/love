@@ -648,7 +648,7 @@ export function bible_glyph_chapter_deu18() {
           "come",
           "to",
           "pass",
-          "or",
+          "$no_entry",
           "$footprints",
           "true,",
           "that",
