@@ -1376,7 +1376,7 @@ export function bible_glyph_chapter_deu01() {
           "to",
           "your",
           "$voice",
-          "or",
+          "$no_entry",
           "give",
           "ear",
           "to",
