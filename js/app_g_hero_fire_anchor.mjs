@@ -10,9 +10,11 @@ export function app_g_hero_fire_anchor(div_map, person) {
   ("crosses the screen rather than the squares. It is wrong for everything after the fire");
   ("lands. The burning, the smoke and the ash belong to the person, and the person is in the");
   ("street - so drawn on the screen they are drawn at the place on it where he happened to be");
-  ("standing when the fire struck, and they stay there. The burning lasts about three seconds");
-  ("and the camera re-centres on the player at every step she takes, so a player who walks");
-  ("while he burns watches him slide out from under his own fire.");
+  ("standing when the fire struck, and they stay there.");
+  ("As the game reads today nothing moves during a burn - the player is held by the tap that");
+  ("started it and he is held by the stopped hunt - so this is not the repair of a fault that");
+  ("was seen. It is the removal of a thing that has to STAY true in two other files for the");
+  ("picture here to be right, which is a debt the fire cannot see and cannot check.");
   ("Drawn in the street instead, nothing has to follow anything. The box is placed on a");
   ("square the way a person is placed on a square, so it moves when the street moves, scrolls");
   ("when the street scrolls and grows when the street grows, and the browser does all of it.");
