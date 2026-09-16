@@ -3,7 +3,7 @@ import { bless_camera_still_class } from "./bless_camera_still_class.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_style_head } from "./html_style_head.mjs";
 import { html_class_add } from "./html_class_add.mjs";
-export function app_g_bless_camera_still_start(container_map) {
+export function bless_camera_still_start(container_map) {
   arguments_assert(arguments, 1);
   ("Switches off sliding for everything on the map, so that whatever is placed next is");
   ("placed exactly rather than walked to.");
