@@ -1,3 +1,6 @@
+import { app_code_lessons_stretched } from "./app_code_lessons_stretched.mjs";
+import { equal } from "./equal.mjs";
+import { not } from "./not.mjs";
 import { list_get_property } from "./list_get_property.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_lessons_shapes } from "./app_code_lessons_shapes.mjs";
@@ -16,7 +19,8 @@ export function app_code_lessons_order_ahead(rounds) {
   ("A learner meets the course in one order, so a lesson that asks for three operators held at once, followed by dozens that ask for two, has moved the hard part of the curve to the wrong place. The count is how far out of place it is: one later lesson being simpler is a new operator being introduced gently, and sixty is a lesson that belongs much further on.");
   ("Nothing here says the order is wrong. A lesson may sit above what follows it on purpose - a new idea is often taught on a small line after a big one - so this hands over the list and the reasons stay with whoever reads it. What it can say is where to look, and it puts the furthest out of place at the top.");
   ("The lessons that hand out no code are passed over rather than counted as nothing, because the front of the course teaches how symbols and names are spelled, and a lesson with no line on it is not a simple line.");
-  let shapes = app_code_lessons_shapes(rounds);
+  let measured = app_code_lessons_shapes(rounds);
+  let shapes = app_code_lessons_stretched(measured);
   function code_is(shape) {
     let code = property_get(shape, "code");
     return code;
@@ -27,8 +31,15 @@ export function app_code_lessons_order_ahead(rounds) {
   for (let i = 0; less_than(i, count); i++) {
     let shape = list_get(solving, i);
     let operators = property_get(shape, "operators");
+    let stretch = property_get(shape, "stretch");
     let later_simpler = 0;
     for (let j = add_1(i); less_than(j, count); j++) {
+      ("only a lesson in the same stretch can say this one is out of place. A lesson past the next fresh start is at the beginning of something else, so its short line says nothing about how hard this one was.");
+      let later_stretch = list_get_property(solving, j, "stretch");
+      let same_stretch = equal(later_stretch, stretch);
+      if (not(same_stretch)) {
+        continue;
+      }
       let later_operators = list_get_property(solving, j, "operators");
       let simpler = less_than(later_operators, operators);
       if (simpler) {
