@@ -20,7 +20,7 @@ import { bless_camera_glide_frames } from "./bless_camera_glide_frames.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
-export async function app_g_bless_camera_glide(
+export async function bless_camera_glide(
   container_map,
   div_map,
   player_img_c,
