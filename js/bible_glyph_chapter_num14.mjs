@@ -1331,7 +1331,7 @@ export function bible_glyph_chapter_num14() {
           "from",
           "the",
           "$name_tag,",
-          "He",
+          "$name_tag",
           "will",
           "$no_entry",
           "be",
