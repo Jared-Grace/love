@@ -1,3 +1,6 @@
+import { g_direction } from "./g_direction.mjs";
+import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
+import { g_direction_across } from "./g_direction_across.mjs";
 import { and } from "./and.mjs";
 import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -98,7 +101,13 @@ export async function bless_crossing_wait(
     let due = less_than_equal(glance, 0);
     if (due) {
       facing = g_direction_opposite(facing);
-      await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
+      await bless_crossing_glance(
+        player,
+        player_img_c,
+        facing,
+        div_map,
+        toward,
+      );
       glance = bless_crossing_glance_tries();
     }
     await app_shared_animation_sleep_quick();
