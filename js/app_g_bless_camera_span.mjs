@@ -1,3 +1,4 @@
+import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { app_shared_game_div_map_container_element_get } from "./app_shared_game_div_map_container_element_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
