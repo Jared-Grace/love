@@ -8,12 +8,13 @@ import { null_is } from "./null_is.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
 import { list_includes } from "./list_includes.mjs";
 import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
+import { text_is } from "./text_is.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { bible_glyph_chapter_verse_word_replace } from "./bible_glyph_chapter_verse_word_replace.mjs";
 export async function bible_glyph_chapters_negation_carried_draw() {
@@ -21,6 +22,7 @@ export async function bible_glyph_chapters_negation_carried_draw() {
   "HEBREW NEGATES EVERY CLAUSE AND ENGLISH NEGATES THE FIRST ONE. You must not defraud your neighbour or rob him is two negative clauses in the original - lo and velo, two words, each seated on the negation mark - and the translation carries the second one on the word or. So the verse draws one mark, the interlinear seats two, and the word left standing in plain letters is not a missing word at all but a negation wearing a conjunction.";
   "THAT IS A WHOLE CLASS OF THE UNDERDRAWN READING AND IT REPAIRS THE SAME WAY EVERY TIME, which is why this is a command rather than a morning of typing. The reading next door names the chapter, the verse and the mark; what it cannot say is which English word to draw on, because it compares counts and never positions. Here the position is decided by the interlinear itself: the leftover row is glossed or, and the verse holds exactly that many ors.";
   "IT REFUSES EVERY VERSE WHERE THE COUNTS DO NOT LINE UP EXACTLY, and the refusals are the answer as much as the repairs are. One leftover row and two plain ors is a choice between two words, and a choice is a person's. A leftover row glossed anything but or is a different fault wearing the same report line - a word genuinely left out, or a negation swallowed into unsown - and drawing a mark on a guess would file that fault away as fixed.";
+  "ONLY THE PLAIN WORDS OF A VERSE ARE LOOKED AT, because a parsed verse holds two kinds of thing - the English a person typed, and the picture groups the shorthand turned into objects - and asking a group for its letters is asking a thing that has none.";
   "EACH VERSE COMMITS ITSELF under the name of the one entry it changed, because a run of independent repairs that commits once at the end loses every one of their names to a single sweep.";
   arguments_assert(arguments, 0);
   let carrying_words = ["or", "nor"];
@@ -80,10 +82,14 @@ export async function bible_glyph_chapters_negation_carried_draw() {
     }
     let entries = [];
     for (let entry of verse.words) {
+      let plain = text_is(entry);
+      if (not(plain)) {
+        continue;
+      }
       let t2 = text_lower_to(entry);
-      let bare = text_letters_only(t2);
-      let carries = list_includes(carrying_words, bare);
-      if (carries) {
+      let bare2 = text_letters_only(t2);
+      let carries2 = list_includes(carrying_words, bare2);
+      if (carries2) {
         list_add(entries, entry);
       }
     }
