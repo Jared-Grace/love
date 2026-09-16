@@ -1,3 +1,4 @@
+import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_vehicle_landing } from "./bless_vehicle_landing.mjs";
 import { property_get } from "./property_get.mjs";
@@ -26,7 +27,9 @@ export function bless_vehicle_hold_is(vehicle, world) {
   ("either lane counts, because a person halfway over is about to be in the other one -");
   ("waiting only for the lane they have already reached would mean timing the run at them.");
   ("It stops for them within a DISTANCE rather than at any distance whatever, and that");
-  ("distance is `bless_vehicle_give_way_tiles`. Giving way up the whole lane made the street");
+  ("distance is `",
+    fn_name("bless_vehicle_give_way_tiles"),
+    "`. Giving way up the whole lane made the street");
   ("read backwards: the walker looked both ways, stepped out, and every car behind them froze");
   ("until they were over, so what anybody watching saw was traffic waiting on a walker and");
   ("never a walker waiting on traffic. Played against the real rules a car stopped in every");
