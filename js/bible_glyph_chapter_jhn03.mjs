@@ -278,7 +278,7 @@ export function bible_glyph_chapter_jhn03() {
           "we",
           "have",
           "$eye$n,",
-          "and",
+          "$plus",
           "yet",
           "you",
           "do",
