@@ -7,6 +7,6 @@ export function hebrew_translit_voice_spelling(translit) {
   "★ IT RESPELLS AT DRAWING TIME AND NEVER TOUCHES THE STORE, because what is stored came from the interlinear and stays answerable to it - and because a voice can be changed, whereas a store rewritten in a voice's image cannot be changed back.";
   "More letters belong here: the stored spelling also marks sounds this voice does not make. They are added as a listener reports them, one at a time, rather than guessed in a batch nobody has heard.";
   arguments_assert(arguments, 1);
-  let said = translit.replaceAll("w", "v");
+  let joined = translit.replaceAll("ō·w", "ō"); let held = joined.replaceAll("ōw", "ō"); let said = held.replaceAll("w", "v");
   return said;
 }
