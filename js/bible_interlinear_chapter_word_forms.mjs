@@ -1,5 +1,5 @@
+import { bible_word_form } from "./bible_word_form.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
-import { hebrew_cantillation_strip } from "./hebrew_cantillation_strip.mjs";
 import { equal } from "./equal.mjs";
 export async function bible_interlinear_chapter_word_forms(chapter_code) {
   "$plain chapter_code";
@@ -11,10 +11,7 @@ export async function bible_interlinear_chapter_word_forms(chapter_code) {
   let forms = [];
   for (let verse of verses) {
     for (let w of verse.words) {
-      let text = hebrew_cantillation_strip(w.original).replace(
-        /[.,;·:?!\s]/g,
-        "",
-      );
+      let text = bible_word_form(w.original);
       if (equal(text, "") || seen.has(text)) {
         continue;
       }
