@@ -1,21 +1,23 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_parse_try } from "./js_parse_try.mjs";
+import { null_is } from "./null_is.mjs";
+import { js_node_types_operator } from "./js_node_types_operator.mjs";
+import { property_get } from "./property_get.mjs";
+import { js_node_type_is } from "./js_node_type_is.mjs";
+import { js_node_types_is } from "./js_node_types_is.mjs";
+import { not } from "./not.mjs";
 import { app_code_line_operator_steps } from "./app_code_line_operator_steps.mjs";
 import { add } from "./add.mjs";
 import { list_filter_size } from "./list_filter_size.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { greater_than } from "./greater_than.mjs";
-import { js_node_type_is } from "./js_node_type_is.mjs";
-import { js_node_types_is } from "./js_node_types_is.mjs";
-import { js_node_types_operator } from "./js_node_types_operator.mjs";
-import { js_parse_try } from "./js_parse_try.mjs";
 import { js_visit } from "./js_visit.mjs";
-import { not } from "./not.mjs";
-import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_line_swap_mirrored_is } from "./app_code_line_swap_mirrored_is.mjs";
 export function app_code_line_shape(code) {
   arguments_assert(arguments, 1);
   ("How much working out one line asks of a learner: how many operators stand on it, and how deep the deepest of them sits inside the others. Nothing at all when the text is not a line of code.");
   ("The lessons at the front of the course hand out words rather than lines - For God so, TheWorld, God-so-loved - and several of those read in as code even so, because a hyphen between two words is a subtraction and the word in between two others is an operator JS knows. A line is counted here only when reading it in finds a written-out value on it: a number, a piece of text in quotes, a true or a false. That is what every lesson about solving a line has and no lesson about how names are spelled has.");
   ("Nothing is said about which operators they are. Two lines carrying the same count are the same size to a learner holding them in their head, and which two operators those are is a question the lesson itself answers. The one exception is a power, which is counted as the multiplications it stands for, because 5 ** 4 is worked out as three of them.");
+  ("What stands on the line is counted, except where the line does not ask for it to be worked out at all. A comparison of the same two things turned round is answered by remembering whether that sign swaps, never by working either side out, so it is priced as the one comparison it asks and the signs inside it are passed over.");
   let ast = js_parse_try(code);
   let unread = null_is(ast);
   if (unread) {
@@ -53,6 +55,12 @@ export function app_code_line_shape(code) {
   js_visit(ast, on_visit);
   if (not(value_written)) {
     return null;
+  }
+  ("asked after the walk rather than instead of it, because a line with no written-out value on it is not a line of code here however it is shaped, and that is the walk's answer to give");
+  let turned = app_code_line_swap_mirrored_is(code);
+  if (turned) {
+    operators = 1;
+    depth = 1;
   }
   let shape = {
     operators,
