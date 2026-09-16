@@ -1,5 +1,5 @@
+import { gloss_words_bare_split } from "./gloss_words_bare_split.mjs";
 import { app_shared_gloss_bible_generate_generic_word } from "./app_shared_gloss_bible_generate_generic_word.mjs";
-import { text_punctuation_split } from "./text_punctuation_split.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { property_get } from "./property_get.mjs";
 import { each } from "./each.mjs";
@@ -10,7 +10,7 @@ export function gloss_entries_words_bare(entries) {
   let bare = [];
   function entry_read(entry) {
     let word = property_get(entry, word_key);
-    let bares = text_punctuation_split(word);
+    let bares = gloss_words_bare_split(word);
     list_add_multiple(bare, bares);
   }
   each(entries, entry_read);
