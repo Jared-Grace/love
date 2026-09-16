@@ -1,4 +1,4 @@
-import { abs } from "./abs.mjs";
+import { numbers_apart } from "./numbers_apart.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_size } from "./list_size.mjs";
 import { less_than } from "./less_than.mjs";
@@ -39,8 +39,7 @@ export function numbers_nearest_in_order(targets, candidates) {
     let best = Infinity;
     let best_at = -1;
     for (let j = 0; less_than(j, count_candidates); j++) {
-      let n = subtract(candidates[j], targets[i]);
-      let distance = abs(n);
+      let distance = numbers_apart(candidates[j], targets[i]);
       if (equal(i, 0)) {
         row[j] = distance;
         continue;
