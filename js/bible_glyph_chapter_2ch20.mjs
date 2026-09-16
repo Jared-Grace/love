@@ -650,7 +650,7 @@ export function bible_glyph_chapter_2ch20() {
           "$name_tag",
           "to",
           "$bowing",
-          "Him.",
+          "$name_tag.",
         ],
       },
       {
