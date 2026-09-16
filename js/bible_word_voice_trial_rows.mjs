@@ -52,7 +52,8 @@ export async function bible_word_voice_trial_rows() {
       let r2 = {
         id: s.key + "-" + index,
         number: index + 1,
-        ...w,
+        text: w.text,
+        meta: w.translit + " · " + w.gloss + " · Strong's " + w.strong,
         voices: s.voices.map(lambda),
       };
       return r2;
@@ -65,5 +66,11 @@ export async function bible_word_voice_trial_rows() {
       rows,
     });
   }
+  result.push({
+    key: "test",
+    label: "Short-word tests",
+    rtl: false,
+    rows: bible_word_voice_trial_short_rows(),
+  });
   return result;
 }
