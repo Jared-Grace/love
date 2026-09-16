@@ -1,3 +1,4 @@
+import { app_g_hero_face_off } from "./app_g_hero_face_off.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
@@ -22,6 +23,7 @@ export async function app_g_hero_dark_attack(hero, evil) {
   let fx = property_get(hero, "fx");
   let player_img_c = property_get(hero, "player_img_c");
   let evil_img = app_shared_game_npc_img_get(evil);
+  app_g_hero_face_off(hero, evil);
   await app_g_hero_dark_gather(evil_img);
   let burning = property_get(evil, "burning");
   if (burning) {

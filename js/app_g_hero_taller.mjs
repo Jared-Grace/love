@@ -1,3 +1,4 @@
+import { app_g_hero_grow_close_factor } from "./app_g_hero_grow_close_factor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_g_hero_tall } from "./app_g_hero_tall.mjs";
@@ -40,7 +41,8 @@ export async function app_g_hero_taller(hero) {
   let more = add(slain, 1);
   property_set(hero, "slain", more);
   let tall = app_g_hero_tall(more);
-  await bless_camera_close(div_map, player_img_c, player);
+  let factor = app_g_hero_grow_close_factor();
+  await bless_camera_close(div_map, player_img_c, player, factor);
   ("Grown from the feet, and said here as well as in the height itself because the height is");
   ("written over and over and this is true once.");
   html_style_set(player_img_c, "transform-origin", "bottom center");

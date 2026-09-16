@@ -1,12 +1,10 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_element_width } from "./html_element_width.mjs";
-import { bless_camera_close_factor } from "./bless_camera_close_factor.mjs";
 import { multiply } from "./multiply.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { bless_camera_map_get } from "./bless_camera_map_get.mjs";
 import { bless_camera_glide } from "./bless_camera_glide.mjs";
-export async function bless_camera_close(div_map, player_img_c, focus) {
-  arguments_assert(arguments, 3);
+export async function bless_camera_close(div_map, player_img_c, focus, factor) {
+  arguments_assert(arguments, 4);
   ("Brings the camera in close on one square and stays there, so that something small enough");
   ("to be missed at playing distance can be watched happening. Returns once it has arrived.");
   ("Something that changes a person rather than the street is invisible at the distance this");
@@ -14,14 +12,26 @@ export async function bless_camera_close(div_map, player_img_c, focus) {
   ("than she did a moment ago - both are a few pixels of a figure the height of a thumbnail,");
   ("and a player who is not already looking for them will never know they happened. Moving");
   ("the camera is what says LOOK AT THIS, and it says it about whatever is in the middle.");
+  ("HOW CLOSE is the caller's to choose rather than this one's, because it is decided by what");
+  ("is being looked at and only the caller knows that. A wait at a kerb may not come in past");
+  ("the point where the road leaves the screen, because the road is the thing being watched;");
+  ("a player growing taller has nothing around her worth keeping, so that close-up may go as");
+  ("far in as it likes. One number serving both would have to be the smaller of the two, and");
+  ("the growth it was meant to show would go back to being invisible.");
   ("How close is asked from the size the map is at NOW rather than from the size the game");
   ("plays at. The two are usually the same and are not always - a camera already pulled back");
   ("over a crowd would be thrown past the ordinary distance instead of leaning in from where");
   ("the player is actually looking.");
+  ("It is a MULTIPLE of that size rather than a number of squares to fit across the screen,");
+  ("and that is the whole of why it behaves the same on a phone and on a laptop. A close-up");
+  ("written as squares-across is a different amount of zoom on every screen: the same rule");
+  ("that barely leans in on a narrow phone throws a wide laptop five times closer, because");
+  ("the ordinary view already fits far more on a wide screen. Written as a multiple, what");
+  ("moves is the same everywhere - whatever you could see, you now see this much less of,");
+  ("this much larger.");
   ("The way back out is a separate call on purpose, because how long to stay is the caller's");
   ("question and never this one's. A wait at a kerb lasts as long as the traffic does.");
-  let tile_now = html_element_width(player_img_c);
-  let factor = bless_camera_close_factor();
+  ("The size is read from how the player is LAID OUT rather than from how she is drawn, because she carries a permanent scale that grows with every victory. Measured as drawn, each close-up would be taken through the last one and the camera would end up nearer on a tenth victory than on a first, for no reason anybody chose.");  let tile_now = html_element_width_layout(player_img_c);
   let near = multiply(tile_now, factor);
   let size = text_combine_multiple([near, "px"]);
   let container_map = bless_camera_map_get(div_map);

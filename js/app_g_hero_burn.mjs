@@ -1,3 +1,4 @@
+import { app_g_hero_face_off } from "./app_g_hero_face_off.mjs";
 import { app_g_hero_taller } from "./app_g_hero_taller.mjs";
 import { app_g_hero_clash } from "./app_g_hero_clash.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -25,6 +26,7 @@ export async function app_g_hero_burn(hero) {
   let player_img_c = property_get(hero, "player_img_c");
   let npcs = property_path_get_2(hero, "world", "npcs");
   let render = property_get(hero, "render");
+  app_g_hero_face_off(hero, evil);
   property_set(evil, "burning", true);
   let evil_img = app_shared_game_npc_img_get(evil);
   await app_g_hero_burn_charge(hero);

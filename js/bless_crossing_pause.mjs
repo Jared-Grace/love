@@ -1,3 +1,4 @@
+import { bless_camera_close_factor } from "./bless_camera_close_factor.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_camera_close } from "./bless_camera_close.mjs";
 import { bless_crossing_wait } from "./bless_crossing_wait.mjs";
@@ -31,7 +32,8 @@ export async function bless_crossing_pause(
   ("so the walker steps off as the street opens around them. Held close until they reached");
   ("the far kerb, the camera would be doing the one thing a crossing must not do: hiding how");
   ("much road is left.");
-  await bless_camera_close(div_map, player_img_c, player);
+  let factor = bless_camera_close_factor();
+  await bless_camera_close(div_map, player_img_c, player, factor);
   await bless_crossing_wait(world, to, player, player_img_c, div_map);
   await bless_camera_player_return(div_map, player_img_c, player);
 }
