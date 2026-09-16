@@ -978,7 +978,7 @@ export function bible_glyph_chapter_jdg11() {
           "If",
           "You",
           "will",
-          "indeed",
+          "$hands_giving",
           "$hands_giving",
           "the",
           "$son",
