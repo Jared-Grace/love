@@ -736,7 +736,7 @@ export function bible_glyph_chapter_2sa12() {
           "wept,",
           "but",
           "when",
-          "he",
+          "$child",
           "$skull",
           "you",
           "got",
