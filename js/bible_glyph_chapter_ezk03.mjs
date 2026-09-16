@@ -544,7 +544,7 @@ export function bible_glyph_chapter_ezk03() {
           "$no_entry",
           "warn",
           "him",
-          "or",
+          "$no_entry",
           "$mouth",
           "out",
           "to",
