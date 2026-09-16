@@ -306,6 +306,7 @@ export function bible_glyph_chapter_num30() {
           "nothing",
           "to",
           "her",
+          "and",
           "$no_entry",
           "prohibit",
           "her,",

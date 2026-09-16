@@ -14,6 +14,6 @@ export function bless_crossing_look_tiles() {
   ("waiting is the least interesting thing this game can ask anybody to watch. The cars give");
   ("way to somebody already on the crossing, so this number decides how POLITE the crossing");
   ("looks and not whether it is safe - safety is settled on the driver's side.");
-  let tiles = 4;
+  let tiles = 8;
   return tiles;
 }
