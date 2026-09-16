@@ -26,6 +26,13 @@ export async function bible_word_voice_trial_rows() {
       ],
       rtl: false,
     },
+    {
+      key: "grc_fix",
+      label: "Greek · new spelling",
+      chapter_code: "JHN01",
+      voices: [["el-GR-Wavenet-B", "WaveNet (female)", "wavenet"]],
+      rtl: false,
+    },
   ];
   let result = [];
   for (let s of sets) {
