@@ -17,6 +17,7 @@ export function app_g_hero_evil_spawn(hero) {
   let evil = list_random_item(npcs);
   property_set(evil, "held_still", "evil");
   property_set(evil, "burning", false);
+  property_set(evil, "clash", false);
   property_set(evil, "killed", false);
   property_set(hero, "evil", evil);
   app_g_hero_evil_hunt(hero, evil);
