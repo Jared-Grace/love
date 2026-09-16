@@ -2678,6 +2678,27 @@ export function permission_grant_names() {
   let spelled2535 = fn_name("bible_usfm_version_chapter_verses_text");
   let spelled2536 = fn_name("ebible_book_codes_new_testament_first");
   let spelled2537 = fn_name("bible_glyph_chapter_verse_text_write");
+  let spelled2538 = fn_name("bible_glyph_chapter_verse_word_replace");
+  let spelled2539 = fn_name("app_code_lessons_above_broken_gate_run");
+  let spelled2540 = fn_name("bible_glyph_chapter_verse_word_remove");
+  let spelled2541 = fn_name(
+    "bible_glyph_chapters_verse_marks_underdrawn_absorbed",
+  );
+  let spelled2542 = fn_name("bible_glyph_chapters_chapter_add");
+  let spelled2543 = fn_name("app_code_lessons_above_broken");
+  let spelled2544 = fn_name("bible_glyph_chapters_gloss_column_walked");
+  let spelled2545 = fn_name("bible_glyph_chapter_verse_word_insert");
+  let spelled2546 = fn_name("bible_glyph_chapters_negation_carried_draw");
+  let spelled2547 = fn_name(
+    "bible_glyph_chapters_verse_marks_overdrawn_baseline_write",
+  );
+  let spelled2548 = fn_name("bible_glyph_chapters_unlisted_gate_run");
+  let spelled2549 = fn_name("bible_glyph_chapters_unlisted_add");
+  let spelled2550 = fn_name("bible_glyph_chapters_unlisted");
+  let spelled2551 = fn_name("folder_secret");
+  let spelled2552 = fn_name("app_code_expression_written_gate_run");
+  let spelled2553 = fn_name("app_en_learn_bible_gloss_urdu_passages_reworded");
+  let spelled2554 = fn_name("lyric_video_song_document_draft");
   let names = [
     spelled,
     spelled2,
@@ -5216,6 +5237,23 @@ export function permission_grant_names() {
     spelled2535,
     spelled2536,
     spelled2537,
+    spelled2538,
+    spelled2539,
+    spelled2540,
+    spelled2541,
+    spelled2542,
+    spelled2543,
+    spelled2544,
+    spelled2545,
+    spelled2546,
+    spelled2547,
+    spelled2548,
+    spelled2549,
+    spelled2550,
+    spelled2551,
+    spelled2552,
+    spelled2553,
+    spelled2554,
   ];
   return names;
 }
