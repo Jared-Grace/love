@@ -1071,7 +1071,7 @@ export function bible_glyph_chapter_2ki06() {
           "ahead,",
           "but",
           "before",
-          "he",
+          "$angel",
           "$footprints,",
           "Elisha",
           "$speech",
