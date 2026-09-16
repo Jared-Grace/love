@@ -30,7 +30,7 @@ export function bible_glyph_chapter_rev10() {
           "in",
           "a",
           "cloud,",
-          "with",
+          "$plus",
           "a",
           "rainbow",
           "above",
