@@ -44,6 +44,13 @@ export async function bless_crossing_pause(
     await bless_crossing_wait(world, to, player, player_img_c, div_map);
     ("The road is CLAIMED the instant the waiting ends and before the camera pulls back, so that not one tick passes between deciding to go and the traffic being told. The camera is a third of a second of animation; at this street's pace a vehicle moves two squares in that time, and those are exactly the two squares she is about to walk into.");
     bless_crossing_claim(world, to);
+    ("Then she looks FORWARD, holds for a moment, and only then steps off. Two looks down the road and a straight walk out of them reads as somebody checking a box: the head is still turned along the lane at the instant the foot moves, so the last thing the player sees her do is step sideways into a road she is not looking at.");
+    ("Facing the way she is about to go is the part of crossing that was missing. Look both ways, THEN look where you are going - and the holding is what makes it a decision rather than a twitch on the way past.");
+    ("It is asked as a GLANCE, which is the same act as the two that came before it - the head and the camera turned together - so the road ahead is shown by the same means the lanes were. A third look that turned only the head would be the one in the sequence the player could not see.");
+    ("It comes AFTER the road is claimed, and must. The claim is what stops the traffic, and this pause is time a car would otherwise spend driving into the squares she is about to cross - so claiming first is what makes this a pause rather than a risk.");
+    let forward = g_direction(player, to);
+    await bless_crossing_glance(player, player_img_c, forward, div_map);
+    await app_shared_animation_sleep();
   } finally {
     await bless_camera_player_return(div_map, player_img_c, player);
   }
