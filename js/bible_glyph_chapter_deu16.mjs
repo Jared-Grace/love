@@ -388,7 +388,7 @@ export function bible_glyph_chapter_deu16() {
           "in",
           "the",
           "$place",
-          "He",
+          "$name_tag",
           "will",
           "choose",
           "as",
