@@ -13,14 +13,7 @@ export function bible_glyph_chapter_lev14() {
     verses: [
       {
         verse_number: 1,
-        words: [
-          "Then",
-          "$name_tag",
-          "$mouth",
-          "to",
-          "Moses,",
-          "$speech:",
-        ],
+        words: ["Then", "$name_tag", "$mouth", "to", "Moses,", "$speech:"],
       },
       {
         verse_number: 2,
@@ -1302,11 +1295,8 @@ export function bible_glyph_chapter_lev14() {
           "the",
           "mildew",
           "on",
-          "the",
+          "its",
           "$wall",
-          "of",
-          "the",
-          "$house",
           "consists",
           "of",
           "green",
