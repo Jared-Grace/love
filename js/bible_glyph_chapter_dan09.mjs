@@ -732,7 +732,7 @@ export function bible_glyph_chapter_dan09() {
           "my",
           "$fire",
           "concerning",
-          "His",
+          "$fire",
           "$sparkle",
           "$mountain",
           "-",
