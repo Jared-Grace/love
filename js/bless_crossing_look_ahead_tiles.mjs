@@ -3,15 +3,18 @@ export function bless_crossing_look_ahead_tiles() {
   arguments_assert(arguments, 0);
   ("How far up the road the camera leans when the walker turns their head that way, counted");
   ("in squares.");
-  ("It is the distance that puts the road the walker is looking at in the middle of the");
-  ("screen while leaving the walker themselves plainly on it. Centred on the walker, both");
-  ("directions look identical and a turned head is a few pixels nobody reads; centred far");
-  ("enough up the road to lose the walker, the screen is looking at traffic on its own");
-  ("behalf and the player has stopped being shown a person deciding something.");
-  ("Three squares is about a third of what the close view holds, so the walker sits off to");
-  ("one side and the road they are watching fills the rest. It also stays well inside the");
-  ("distance they are actually checking, so the car they are waiting for comes into the");
-  ("picture before it matters rather than arriving from off the edge.");
-  let tiles = 3;
+  ("It is the distance that puts more of the road the walker is looking at on the screen");
+  ("while leaving the walker themselves near the middle of it. Centred on the walker exactly,");
+  ("both directions look identical and a turned head is a few pixels nobody reads; leaned far");
+  ("enough to push the walker off to the edge, the screen has stopped being a person looking");
+  ("at a road and become a camera that jumps from one side to the other.");
+  ("ONE square, because this lean is measured against the CLOSE view and not the walking");
+  ("one. The kerb zoom holds only about six squares across, so half the screen is barely");
+  ("three - and a lean of three squares therefore lands the walker on the very edge, which");
+  ("is what it looked like. One square moves them about a third of the way out: plainly to");
+  ("one side, plainly still on the screen.");
+  ("So this number cannot be read on its own. It is a fraction of whatever the close view");
+  ("holds, and anything that brings the camera nearer makes the same number lean further.");
+  let tiles = 1;
   return tiles;
 }
