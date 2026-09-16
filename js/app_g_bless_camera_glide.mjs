@@ -16,7 +16,7 @@ import { app_g_bless_camera_still_end } from "./app_g_bless_camera_still_end.mjs
 import { html_scroll_center_coordinates } from "./html_scroll_center_coordinates.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_scroll_animate_start } from "./html_scroll_animate_start.mjs";
-import { app_g_bless_camera_glide_frames } from "./app_g_bless_camera_glide_frames.mjs";
+import { bless_camera_glide_frames } from "./bless_camera_glide_frames.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
 import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
@@ -111,7 +111,7 @@ export async function app_g_bless_camera_glide(
   container_e.scrollTop = property_get(standing, "top");
   let claim = html_scroll_animate_start(container_e);
   let token = property_get(claim, "token");
-  let animate = app_g_bless_camera_glide_frames({
+  let animate = bless_camera_glide_frames({
     container_map,
     player_img_c,
     container,
