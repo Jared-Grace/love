@@ -1,6 +1,5 @@
 import { bless_crossing_pause } from "./bless_crossing_pause.mjs";
 import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
-import { bless_crossing_wait } from "./bless_crossing_wait.mjs";
 import { bless_refused_flash } from "./bless_refused_flash.mjs";
 import { bless_world_on_foot } from "./bless_world_on_foot.mjs";
 import { app_shared_game_player_npc_swap_if } from "./app_shared_game_player_npc_swap_if.mjs";
