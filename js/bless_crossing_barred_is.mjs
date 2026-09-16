@@ -1,3 +1,4 @@
+import { bless_crossing_clearance_tiles } from "./bless_crossing_clearance_tiles.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { null_is } from "./null_is.mjs";
@@ -18,6 +19,7 @@ export function bless_crossing_barred_is(world, vehicle, landing) {
     return false;
   }
   let row = property_get(vehicle, "y");
-  let barred = bless_crossing_within_is(crossing, row, landing);
+  let tiles = bless_crossing_clearance_tiles();
+  let barred = bless_crossing_within_is(crossing, row, landing, tiles);
   return barred;
 }

@@ -1,3 +1,4 @@
+import { bless_crossing_step_out_tiles } from "./bless_crossing_step_out_tiles.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { bless_crossing_within_is } from "./bless_crossing_within_is.mjs";
@@ -19,7 +20,8 @@ export function bless_crossing_column_clear_is(world, to) {
   function inside_is(vehicle) {
     let row = property_get(vehicle, "y");
     let at = property_get(vehicle, "x");
-    let inside = bless_crossing_within_is(to, row, at);
+    let tiles = bless_crossing_step_out_tiles();
+    let inside = bless_crossing_within_is(to, row, at, tiles);
     return inside;
   }
   let occupied = list_any(vehicles, inside_is);
