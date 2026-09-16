@@ -157,7 +157,7 @@ export function bible_glyph_chapter_rev10() {
       {
         verse_number: 5,
         words: [
-          "Then",
+          "$plus",
           "the",
           "$angel",
           "I",
