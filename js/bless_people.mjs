@@ -1,3 +1,5 @@
+import { bless_blocks_road_keys } from "./bless_blocks_road_keys.mjs";
+import { bless_coordinates_footway } from "./bless_coordinates_footway.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_map } from "./list_map.mjs";
 import { range } from "./range.mjs";
