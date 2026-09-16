@@ -1,3 +1,4 @@
+import { greater_than } from "./greater_than.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -99,7 +100,7 @@ export async function app_original_bible_word_voice_trial_preview() {
       return r5;
     }
     function lambda13(s) {
-      let judged = s.rows[0].voices.length > 1;
+      let judged = greater_than(s.rows[0].voices.length, 1);
       return judged;
     }
     let lines = sets.filter(lambda13).map(lambda5);
@@ -171,7 +172,8 @@ export async function app_original_bible_word_voice_trial_preview() {
         let r9 = [voice.pick, voice.label + " best"];
         return r9;
       }
-      let picks = [...row.voices.map(lambda11), ["same", "Same"]];
+      let judged = greater_than(row.voices.length, 1);
+      let picks = judged ? [...row.voices.map(lambda11), ["same", "Same"]] : [];
       let pick_buttons = [];
       function picks_render() {
         let current = review_of(row.id).pick;
