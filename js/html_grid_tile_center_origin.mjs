@@ -1,3 +1,4 @@
+import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
 import { html_element_width } from "./html_element_width.mjs";
