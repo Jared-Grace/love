@@ -92,7 +92,7 @@ export function bible_glyph_chapter_exo24() {
           "all",
           "the",
           "$scales,",
-          "they",
+          "$family",
           "all",
           "responded",
           "with",
