@@ -130,7 +130,7 @@ export function bible_glyph_chapter_rev10() {
           "it",
           "in",
           "writing.",
-          "But",
+          "$plus",
           "I",
           "$ear",
           "a",
