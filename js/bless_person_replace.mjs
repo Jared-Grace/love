@@ -1,3 +1,4 @@
+import { bless_coordinates_footway } from "./bless_coordinates_footway.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { g_genders_without_img } from "./g_genders_without_img.mjs";
