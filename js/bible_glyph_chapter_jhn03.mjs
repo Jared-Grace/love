@@ -593,7 +593,7 @@ export function bible_glyph_chapter_jhn03() {
           "Now",
           "John",
           "was",
-          "also",
+          "$plus",
           "baptizing",
           "$tray_in",
           "Aenon",
