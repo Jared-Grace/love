@@ -918,7 +918,7 @@ export function bible_glyph_chapter_isa49() {
           "wine.",
           "Then",
           "all",
-          "mankind",
+          "$meat",
           "will",
           "$lightbulb",
           "that",
