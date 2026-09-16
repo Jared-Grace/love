@@ -1,7 +1,7 @@
 import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordinates.mjs";
 import { bless_camera_people_get } from "./bless_camera_people_get.mjs";
 import { app_g_bless_people_still_start } from "./app_g_bless_people_still_start.mjs";
-import { app_g_bless_people_still_end } from "./app_g_bless_people_still_end.mjs";
+import { bless_people_still_end } from "./bless_people_still_end.mjs";
 import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
@@ -89,7 +89,7 @@ export async function bless_camera_glide(
     ("street where everybody has stopped dead is a street that looks broken. This is the");
     ("common case - a prayer over one person moves the camera and never resizes it - so the");
     ("crowd carries on walking through almost every camera move the player ever sees.");
-    app_g_bless_people_still_end(crowd);
+    bless_people_still_end(crowd);
     await html_scroll_center_coordinates(focus, player_img_c, container);
     return;
   }
@@ -141,5 +141,5 @@ export async function bless_camera_glide(
   ("next step slides them on from there, so the street simply starts moving again. Let go");
   ("before sliding was restored, that next step would be placed rather than walked, which");
   ("is the very thing this pair exists to prevent.");
-  app_g_bless_people_still_end(crowd);
+  bless_people_still_end(crowd);
 }

@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_delete_if_exists } from "./property_delete_if_exists.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_people_still_end(people) {
+export function bless_people_still_end(people) {
   arguments_assert(arguments, 1);
   ("Gives the street back its walking, after it was held still so that a celebration could");
   ("be watched.");
