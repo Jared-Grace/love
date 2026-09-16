@@ -2,7 +2,7 @@ import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_bless_person_still_start } from "./app_g_bless_person_still_start.mjs";
 import { each } from "./each.mjs";
-export function app_g_bless_people_still_start(people, player_img_c) {
+export function bless_people_still_start(people, player_img_c) {
   arguments_assert(arguments, 2);
   ("Holds the whole street still, each person exactly where their picture has got to, for");
   ("as long as a celebration lasts.");
