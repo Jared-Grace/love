@@ -235,7 +235,7 @@ export function bible_glyph_chapter_2ki01() {
           "Baal",
           "zebub,",
           "the",
-          "god",
+          "$fire",
           "of",
           "Ekron?",
           "Therefore",
