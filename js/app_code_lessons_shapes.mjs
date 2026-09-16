@@ -3,7 +3,7 @@ import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { add_1 } from "./add_1.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_code_lesson_lines } from "./app_code_lesson_lines.mjs";
+import { app_code_lesson_lines_solved } from "./app_code_lesson_lines_solved.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -22,7 +22,7 @@ export function app_code_lessons_shapes(rounds) {
     place = add_1(place);
     let lesson = app_code_lesson_fn_id_set(fn);
     let id = property_get(lesson, "id");
-    let lines = app_code_lesson_lines(lesson, rounds);
+    let lines = app_code_lesson_lines_solved(lesson, rounds);
     let operators = 0;
     let depth = 0;
     let hardest = null;
