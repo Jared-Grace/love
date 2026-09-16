@@ -185,6 +185,20 @@ export async function bless_camera_glide(
       to,
       token,
     });
+    ("THE STREET IS LET GO FOR THE JOURNEY ITSELF, and held again only for the arrival.");
+    ("Holding it still is a rule about LAYOUT: a change of square size moves every landing on");
+    ("the grid at once, so everybody would set off walking to a place they are already standing");
+    ("on. The frames below change no layout at all - they write one drawn-on scale and nothing");
+    ("else, and the squares stay the size they started at until the last write. There is");
+    ("nothing here for the hold to prevent. It is left over from the journey that really did");
+    ("write a new size every frame, and it outlived the reason it was written for.");
+    ("What it cost is the whole of what a crossing is for. The traffic clock reads that class");
+    ("every tick and SKIPS its step, so every car stood still for the length of both journeys -");
+    ("and a crossing is two journeys with the camera deliberately brought in close on the road,");
+    ("because the one thing worth seeing is the traffic she is waiting for. The one thing the");
+    ("player is looking at is the one thing that stopped.");
+    bless_camera_still_end(container_map);
+    bless_people_still_end(crowd);
     let promise = new Promise(animate);
     await promise;
     ("The drawn-on scale comes off BEFORE the real size is written, and before anything else is");
@@ -192,6 +206,21 @@ export async function bless_camera_glide(
     ("size it just arrived at; and every sum below about where to stand would answer about the");
     ("picture rather than about the street.");
     html_scale_translate_clear(map_c);
+    ("HELD AGAIN for the arrival, which is the one instant in the whole journey where a layout");
+    ("really does change. The real size is written on the line below and that moves every");
+    ("landing on the grid at once, so without this the street would set off walking to where it");
+    ("already stands - the jump the hold was written for, at the single frame that has it.");
+    ("The crowd is asked for AGAIN rather than reused. The street has been walking for the");
+    ("length of a journey while this was let go, so somebody may have left it and somebody new");
+    ("may have joined, and the list taken before the journey is a list of who was there then.");
+    ("Letting go the same list twice costs nothing, which is what lets the guard below finish");
+    ("whichever list it is holding.");
+    ("It is measured AFTER the drawn-on scale has come off, because holding a person still");
+    ("writes down where their picture has got to, and a measurement taken while the scale is");
+    ("still on answers about the picture rather than about the street.");
+    crowd = bless_camera_people_get(container_map);
+    bless_people_still_start(crowd, player_img_c);
+    bless_camera_still_start(container_map);
     html_style_variable_set(container_map, variable, size);
     html_reflow_force(div_map);
     ("The last placing is skipped when something else has taken the camera over. It would be");
