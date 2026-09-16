@@ -5,6 +5,7 @@ import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { subtitles_time_text } from "./subtitles_time_text.mjs";
 import { lyric_video_subtitles_dialogue_line } from "./lyric_video_subtitles_dialogue_line.mjs";
 import { number_is } from "./number_is.mjs";
+import { lyric_video_line_words_text } from "./lyric_video_line_words_text.mjs";
 import { subtract } from "./subtract.mjs";
 import { lyric_video_line_size_text } from "./lyric_video_line_size_text.mjs";
 export function lyric_video_subtitles_text(document) {
@@ -12,6 +13,7 @@ export function lyric_video_subtitles_text(document) {
   "The whole subtitle file of a lyric video, written out of one authored document: the passage and the translation that stand at the foot of every frame, how long the song runs, how big the frame is, how big the three lettering sizes are, and the lines with the moment each is sung.";
   "THE TIMES ARE AUTHORED, NOT WORKED OUT HERE. Where a sung line begins is heard, not derived - a singer holds a word, an instrument plays alone for eight bars, a verse is repeated and the printed text is not. Nothing about the words on the page says any of that, so a rule that placed them would be guessing at the one thing the video exists to get right. This packs what somebody heard; it never decides it.";
   "★ EVERY CARD IS PUT UP THE SAME MOMENT EARLIER THAN THE LINE IT HOLDS, WHICH IS NOT AN EXCEPTION TO THE PARAGRAPH ABOVE. That paragraph refuses to work out where a line belongs; this moves every card by one number that has nothing to do with which line it is, in the way the fade beside it is one number for every card. A reader needs a moment to take a line in, so a card arriving exactly on the first note is already late for them, and the times stay in the document exactly as they were heard. How far ahead, and why both ends of a card move rather than only its beginning, live with the number itself.";
+  "★ A LINE THAT CARRIES ITS WORDS' TIMES HAS EACH WORD TURN RED WHILE IT IS SUNG, AND A LINE WITHOUT THEM IS WRITTEN PLAIN. The word times are written into the document by a separate command, so a song nobody asked that of looks exactly as it did; the colour is counted from the heard moment of each word, not from the card's early arrival.";
   "A LINE THE DOCUMENT HAS NO TIME FOR IS LEFT OUT OF THE VIDEO RATHER THAN PLACED SOMEWHERE. It follows from the line above: where a line belongs is heard and nothing here can hear it, so there is no moment to put it at that would not be invented. Leaving it out loses a line of the psalm, which is a real loss and a visible one - the person who timed the passage watches the video and sees at once that they stopped one line early. The alternative loses the whole video quietly, because a line given a time it never had is a card standing over the singing at the wrong moment, and the worst of those times is zero, which puts it over every other line from the first frame to the last.";
   "EVERY LETTERING SIZE IS ASKED FOR, AND THE SMALLER ONES USED TO BE WORKED OUT AS A SHARE OF THE LARGER. Tying them together says they are one decision, and they are not: the words are sized to be read across a room from a phone lying on a table, the passage to be read at a glance by somebody arriving in the middle, and the translation to be findable by somebody who wants it without ever competing with the psalm. Making the words bigger through a fixed share drags all of that up with them into exactly that competition, and the only way out was to change a number that no document could see.";
   "EVERY LINE OF LETTERING CARRIES A BLACK BORDER AND A BLACK SHADOW, AND BOTH ARE WORKED OUT RATHER THAN ASKED FOR. They are the exception the paragraph above does not cover, because neither is a decision about who is reading; each is a fact about the letters it belongs to, and each is asked for by its own lettering size alone. The reasoning lives with the border and with the shadow rather than here.";
@@ -74,6 +76,14 @@ export function lyric_video_subtitles_text(document) {
     let r = started && ended;
     return r;
   }
+  function line_text(line) {
+    if (line.words) {
+      let marked = lyric_video_line_words_text(line, lead);
+      return marked;
+    }
+    let r2 = line.text;
+    return r2;
+  }
   function line_event(line) {
     let shown_start = subtract(line.start, lead);
     let shown_end = subtract(line.end, lead);
@@ -83,7 +93,7 @@ export function lyric_video_subtitles_text(document) {
       end: subtitles_time_text(shown_end),
       style: "Lyric",
       effect: lyric_place + size_text,
-      text: line.text,
+      text: line_text(line),
     });
     return event;
   }
