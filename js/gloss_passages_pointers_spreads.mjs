@@ -1,11 +1,10 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { property_equals } from "./property_equals.mjs";
-import { greater_than } from "./greater_than.mjs";
 import { gloss_passages_pointers_mets } from "./gloss_passages_pointers_mets.mjs";
 import { null_is } from "./null_is.mjs";
 import { not } from "./not.mjs";
 import { gloss_met_pointer } from "./gloss_met_pointer.mjs";
 import { gloss_passages_same_as_spread } from "./gloss_passages_same_as_spread.mjs";
-import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 export function gloss_passages_pointers_spreads(passages, lambda$pointer_is) {
   "For every pointing explanation in a chapter whose address catches more than one explanation, a plain sentence saying where those explanations are lying.";
@@ -19,8 +18,7 @@ export function gloss_passages_pointers_spreads(passages, lambda$pointer_is) {
     if (not(missing)) {
       let pointer = gloss_met_pointer(met);
       let spread = gloss_passages_same_as_spread(passages, pointer);
-      let explains = property_get(spread, "explains");
-      let several = greater_than(explains, 1);
+      let several = property_greater_than(spread, "explains", 1);
       if (several) {
         let alone = property_equals(spread, "passages", 1);
         if (alone) {
@@ -29,8 +27,7 @@ export function gloss_passages_pointers_spreads(passages, lambda$pointer_is) {
             "one passage holds the verse and explains the word several ways inside itself",
           );
         } else {
-          let most = property_get(spread, "most");
-          let deep = greater_than(most, 1);
+          let deep = property_greater_than(spread, "most", 1);
           if (deep) {
             list_add(
               spreads,
