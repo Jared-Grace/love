@@ -1,3 +1,4 @@
+import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_crossing_glance } from "./bless_crossing_glance.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
