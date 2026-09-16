@@ -92,6 +92,14 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ]);
   let given_sum = js_code_assign_statement(name_first, names_sum);
   html_div_code(box_itself, given_sum);
+  ("the log line closes the box it belongs to. It reads the name that box just filled, so it is the end of that program rather than the start of the next point.");
+  html_div_cycle_code(box_itself, [
+    "Then we can log out the value of ",
+    name_first,
+    ":",
+  ]);
+  let logged_total = js_code_console_log_statement(name_first);
+  app_code_code_lines_writes_out(box_itself, [logged_total], total);
   ("the total is a code chip like the sum beside it. A number written in a program is code, and every other number on this screen is drawn as code, so a total set in plain writing would be the one number here dressed as prose.");
   ("The lesson before this one says at length why a sum may be swapped for its value, with the two lines set side by side and the reason underneath. Here it is three short ones and no side-by-side pair, because a learner has just read that and this screen is about a different thing - that the name being filled may be one the sum was read from.");
   ("Three short lines rather than one long one, because they are three steps and a learner is being walked down them: the sum has a value, so the sum did not have to be written, so the value could have been written in its place. Said in one line the middle step is missing and the last line arrives as a claim; said in three, each line is the reason for the one under it.");
@@ -106,11 +114,4 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   ]);
   let given_total = js_code_assign_statement(name_first, total);
   html_div_code(box_value, given_total);
-  html_div_cycle_code(box_value, [
-    "Then we can log out the value of ",
-    name_first,
-    ":",
-  ]);
-  let logged_total = js_code_console_log_statement(name_first);
-  app_code_code_lines_writes_out(box_value, [logged_total], total);
 }
