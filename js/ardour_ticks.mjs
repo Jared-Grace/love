@@ -12,7 +12,7 @@ export function ardour_ticks(value) {
   if (not(beats)) {
     error("this Ardour time is not kept in beats: " + value);
   }
-  let digits = text_skip(value, 1);
-  let ticks = Number(digits);
+  let count_text = text_skip(value, 1);
+  let ticks = Number(count_text);
   return ticks;
 }

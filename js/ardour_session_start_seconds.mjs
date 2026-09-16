@@ -1,7 +1,7 @@
-import { list_find } from "./list_find.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { xml_tags_attributes } from "./xml_tags_attributes.mjs";
 import { text_includes } from "./text_includes.mjs";
+import { list_find } from "./list_find.mjs";
 import { list_single } from "./list_single.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { not } from "./not.mjs";
@@ -18,17 +18,17 @@ export function ardour_session_start_seconds(text) {
     let b = text_includes(location.flags, "IsSessionRange");
     return b;
   }
-  let range = list_find(locations, range_is);
+  let session_range = list_find(locations, range_is);
   let list = xml_tags_attributes(text, "TempoMap");
   let map = list_single(list);
-  let samples = text_starts_with(range.start, "a");
+  let samples = text_starts_with(session_range.start, "a");
   if (not(samples)) {
     error(
       "this Ardour session's range does not begin at a clock time: " +
-        range.start,
+        session_range.start,
     );
   }
-  let skipped = text_skip(range.start, 1);
+  let skipped = text_skip(session_range.start, 1);
   let clocks = Number(skipped);
   let bottom = Number(map["superclocks-per-second"]);
   let seconds = divide(clocks, bottom);
