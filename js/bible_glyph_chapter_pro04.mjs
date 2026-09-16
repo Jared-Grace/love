@@ -283,7 +283,7 @@ export function bible_glyph_chapter_pro04() {
           "of",
           "the",
           "$thumbs_down,",
-          "or",
+          "$no_entry",
           "walk",
           "in",
           "the",
