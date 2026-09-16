@@ -632,7 +632,7 @@ export function bible_glyph_chapter_num14() {
           "You",
           "have",
           "forgiven",
-          "them",
+          "$family",
           "ever",
           "since",
           "they",
