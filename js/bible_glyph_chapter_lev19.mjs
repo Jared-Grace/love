@@ -370,7 +370,7 @@ export function bible_glyph_chapter_lev19() {
           "to",
           "the",
           "poor",
-          "or",
+          "$no_entry",
           "favouritism",
           "to",
           "the",
