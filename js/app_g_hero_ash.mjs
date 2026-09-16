@@ -32,14 +32,7 @@ export async function app_g_hero_ash(hero, point, evil) {
     app_g_hero_smoke(fx, point, width, index);
   }
   each(puffs, puff_rise);
-  let x = property_get(evil, "x");
-  let y = property_get(evil, "y");
-  let tile = {
-    x,
-    y,
-  };
-  let scorch = g_img_square_div(div_map, tile, "ground_tint");
-  html_click_none(scorch);
+  let scorch = app_g_hero_ground_div(div_map, evil);
   html_style_assign(scorch, {
     background:
       "radial-gradient(circle, rgba(25, 10, 5, 0.85) 0%, rgba(40, 15, 5, 0.5) 45%, rgba(0, 0, 0, 0) 70%)",

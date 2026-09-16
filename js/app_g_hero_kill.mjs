@@ -63,14 +63,7 @@ export async function app_g_hero_kill(hero, evil, victim) {
   );
   let elements = app_shared_game_npc_elements(victim);
   each(elements, html_remove);
-  let x = property_get(victim, "x");
-  let y = property_get(victim, "y");
-  let tile = {
-    x,
-    y,
-  };
-  let grave = g_img_square_div(div_map, tile, "ground_tint");
-  html_click_none(grave);
+  let grave = app_g_hero_ground_div(div_map, victim);
   let font_size = g_img_square_size_times(0.8);
   html_style_assign(grave, {
     display: "flex",
@@ -80,8 +73,9 @@ export async function app_g_hero_kill(hero, evil, victim) {
   });
   let headstone = emoji_headstone();
   html_text_set(grave, headstone);
+  ("The dead are kept, so the squares their graves stand on stay off the list of places a newcomer may be set down.");
   let graves = property_get(hero, "graves");
-  list_add(graves, tile);
+  list_add(graves, victim);
   let world = property_get(hero, "world");
   ("The newcomer moves in beside somebody picked from the whole crowd, not beside the one killed, so the street refills everywhere and the killer is not handed a queue of victims walking home to the spot where they stand.");
   let neighbour = list_random_item(npcs);
