@@ -6,7 +6,7 @@ import { list_includes } from "./list_includes.mjs";
 import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_is } from "./text_is.mjs";
-export function app_code_lesson_lines(lesson, rounds) {
+export function app_code_lesson_lines_solved(lesson, rounds) {
   arguments_assert(arguments, 2);
   ("Every different piece of code one lesson asks a learner to work out, each one listed once however often it comes up.");
   ("An exercise that only matches one written form with another is passed over, lines and all. Nothing on it is ever valued - the signs are there to be recognised, not counted - so pricing those lines by the signs on them charges a lesson for working out it never asks for.");
