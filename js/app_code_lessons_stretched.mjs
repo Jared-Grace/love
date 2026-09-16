@@ -1,8 +1,7 @@
+import { list_includes_not } from "./list_includes_not.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_includes } from "./list_includes.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { add_1 } from "./add_1.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
@@ -20,8 +19,7 @@ export function app_code_lessons_stretched(shapes) {
     let kinds = property_get(shape, "kinds");
     function unseen_is(kind) {
       "this kind of thing, if no lesson before this one wrote it";
-      let already = list_includes(seen, kind);
-      let n = not(already);
+      let n = list_includes_not(seen, kind);
       return n;
     }
     let fresh = list_filter(kinds, unseen_is);
