@@ -813,7 +813,7 @@ export function bible_glyph_chapter_jer07() {
           "$no_entry",
           "$ear",
           "Me",
-          "or",
+          "$no_entry",
           "incline",
           "their",
           "ear,",
