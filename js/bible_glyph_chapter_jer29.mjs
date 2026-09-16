@@ -1078,7 +1078,7 @@ export function bible_glyph_chapter_jer29() {
           "among",
           "this",
           "$family,",
-          "nor",
+          "$no_entry",
           "will",
           "he",
           "$eye",
