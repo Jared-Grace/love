@@ -1,3 +1,4 @@
+import { app_g_hero_taller } from "./app_g_hero_taller.mjs";
 import { app_g_hero_clash } from "./app_g_hero_clash.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { bless_person_replace } from "./bless_person_replace.mjs";
@@ -32,7 +33,8 @@ export async function app_g_hero_burn(hero) {
   await app_g_hero_clash(hero, evil_img, from, to);
   app_g_hero_impact(hero, to);
   await app_g_hero_engulf(hero, to, evil_img);
-  await app_g_hero_ash(hero, to, evil); await app_g_hero_taller(hero);
+  await app_g_hero_ash(hero, to, evil);
+  await app_g_hero_taller(hero);
   list_remove_if_exists(npcs, evil);
   let world = property_get(hero, "world");
   let div_map = property_get(hero, "div_map");
