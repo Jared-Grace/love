@@ -122,5 +122,7 @@ export async function bless_walk(
     app_shared_game_player_center(to, player_img_c, div_map);
     on_arrive();
   }
+  ("The road is given back when the walk ENDS, whether or not this walk ever touched one. A claim is cheap to give back and ruinous to leave behind - an unreleased one stops that street permanently - and every walk reaches here, while a release written into the step that leaves the road would be missed by a walk that ends in the middle of it.");
+  bless_crossing_release(world);
   world.way = {};
 }

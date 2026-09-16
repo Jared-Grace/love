@@ -47,6 +47,7 @@ export function bless_world(rows, coordinates, player, npcs, blocks, vehicles) {
   ("question. A car gives way to anybody standing on the road at all, on a crossing or not,");
   ("so it asks the plain lookup; somebody on foot asks which squares are forbidden, and that");
   ("is this one.");
+  ("NOBODY IS CROSSING is written down as plainly as everything else, because the traffic asks every tick and a question nothing answers is a question that throws. It holds the square a walker has claimed while she is on the road, and nothing the rest of the time.");
   let roads = bless_blocks_road_keys(blocks);
   let shut = bless_blocks_road_shut_keys(blocks);
   let world = {
@@ -58,6 +59,7 @@ export function bless_world(rows, coordinates, player, npcs, blocks, vehicles) {
     vehicles: vehicles,
     roads: roads,
     shut: shut,
+    crossing: null,
   };
   return world;
 }

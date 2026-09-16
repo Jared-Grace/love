@@ -63,6 +63,12 @@ export function bless_vehicle_hold_is(vehicle, world) {
   let r = bless_vehicle_landing(vehicle);
   let landing = property_get(r, "landing");
   let gone = property_get(r, "gone");
+  ("A CLAIMED CROSSING outranks everything else this asks. Somebody is on the road because the traffic was clear when she stepped out, and the promise she stepped out on was that nothing would come within a square of her until she was over. So the square being moved onto is checked against that band first, and a vehicle whose next square is inside it simply does not take it.");
+  ("It is asked before the question below about whether the player is on the road, and that ordering is the whole fix. Giving way only once she is ALREADY on the road is a decision taken one tick too late: at the moment she steps off the kerb, a vehicle a square away has not yet been told to stop, and the square it moves onto that tick is hers. The band is claimed BEFORE she steps, so there is no tick in which nothing is holding the traffic back.");
+  let barred = bless_crossing_barred_is(world, vehicle, landing);
+  if (barred) {
+    return true;
+  }
   let y = property_get(vehicle, "y");
   let vehicles = property_get(world, "vehicles");
   function in_landing_is(other) {
