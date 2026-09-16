@@ -1,5 +1,4 @@
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
-import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { bless_crossing_claim } from "./bless_crossing_claim.mjs";
 import { bless_camera_close_factor } from "./bless_camera_close_factor.mjs";
