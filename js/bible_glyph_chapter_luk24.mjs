@@ -296,7 +296,7 @@ export function bible_glyph_chapter_luk24() {
         words: [
           "$plus",
           "that",
-          "same",
+          "$pointing_back",
           "$sun",
           "two",
           "$tray_out",
