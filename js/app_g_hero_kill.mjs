@@ -1,3 +1,4 @@
+import { app_g_hero_ground_div } from "./app_g_hero_ground_div.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { list_add } from "./list_add.mjs";
 import { bless_person_replace } from "./bless_person_replace.mjs";
