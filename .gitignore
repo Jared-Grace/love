@@ -133,3 +133,22 @@ Thumbs.db
 # commit out into its own folder, and a dirty tree there aborts the checkout —
 # so every deploy of every app was refused, for a file nobody wrote.
 __pycache__/
+
+# One spoken clip for every different word in the Bible, said by a voice. The
+# whole Bible is about 76,000 different words once the chanting marks are off, at
+# roughly 9 KB a clip, so this folder grows to somewhere near 700 MB. The pack is
+# 216 MiB today and the worst accident this repo has had was 360 MiB, so tracking
+# these would be that accident again, deliberately and three times over.
+#
+# Nothing is lost by it. Every clip is named after the word it says, so the
+# recording is asked for once and the file for a word is the same file wherever
+# that word appears; and every one of them can be made again by naming its chapter
+# and its voice. Where they are actually read from is storage, which is fed from
+# this disk folder rather than from git.
+#
+# The first chapter, John 1, was swept into a commit before this rule was written.
+# It is 387 files of 3.8 to 12 KB, none of them near the 50 KB line the heavy-file
+# gate watches, so untracking them leaves no gate red and history carries 3.5 MB
+# that nobody will read. Dropping that costs a whole rewrite window, which is not
+# worth paying for 3.5 MB.
+/web/assets/bible_word_voice/
