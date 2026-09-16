@@ -18,6 +18,7 @@ export function bible_glyph_gloss_plain_word_hit_or_null(glosses, plain) {
   ("IT MATCHES ON A SHORTENED STEM BECAUSE ENGLISH INFLECTS AND A GLOSS DOES NOT. The interlinear says do and the sentence says doing, it says son and the sentence says sons. Cutting the last two letters off the gloss and asking whether a plain word starts that way catches those without a dictionary.");
   ("IT IGNORES PIECES SHORTER THAN THREE LETTERS, because a gloss like son of arrives as several words and the short ones are the joining words every sentence is full of, so keeping them would match everything and the answer would always be yes.");
   ("IT DROPS THE JOINING WORDS OUT OF A GLOSS THAT HAS ANYTHING ELSE IN IT, and that rule was written after the first run of this got it wrong. The covenant name is glossed The LORD, and the three letter rule kept the, which is in every verse in the bible, so hundreds of verses came back matched on a word the gloss did not mean. A gloss that is ONLY joining words keeps them, because the Greek kai really does mean and and the Hebrew lo really does mean not, and there the little word is the whole meaning.");
+  ("THE STEM IS NEVER CUT BELOW FOUR LETTERS, because cutting two off a five letter gloss leaves three, and a three letter stem is a short English word rather than a stem. Their became the and matched the article, and their again became the and matched these; both were read as a word the author had left in plain letters, and neither gloss meant anything of the sort. Four letters still catches what the cut was for - years reaches year, joseph reaches josephs - because inflection lengthens a word and hardly ever shortens it.");
   ("IT ANSWERS THE PAIR RATHER THAN TRUE, because a stem match is a guess about English and the person reading the repair list is the one who can tell a real one from an accident. Handing back only a yes would hide the guess inside a number.");
   let letters = regex_letters_not();
   let joining = english_joining_words();
@@ -45,6 +46,10 @@ export function bible_glyph_gloss_plain_word_hit_or_null(glosses, plain) {
       let long = less_than(4, keep);
       if (long) {
         keep = subtract(keep, 2);
+      }
+      let cut_too_far = less_than(keep, 4);
+      if (cut_too_far) {
+        keep = 4;
       }
       let stem = piece.slice(0, keep);
       for (let word of plain) {
