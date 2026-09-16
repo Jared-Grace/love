@@ -1,3 +1,4 @@
+import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { multiply } from "./multiply.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -31,7 +32,8 @@ export async function bless_camera_close(div_map, player_img_c, focus, factor) {
   ("this much larger.");
   ("The way back out is a separate call on purpose, because how long to stay is the caller's");
   ("question and never this one's. A wait at a kerb lasts as long as the traffic does.");
-  ("The size is read from how the player is LAID OUT rather than from how she is drawn, because she carries a permanent scale that grows with every victory. Measured as drawn, each close-up would be taken through the last one and the camera would end up nearer on a tenth victory than on a first, for no reason anybody chose.");  let tile_now = html_element_width_layout(player_img_c);
+  ("The size is read from how the player is LAID OUT rather than from how she is drawn, because she carries a permanent scale that grows with every victory. Measured as drawn, each close-up would be taken through the last one and the camera would end up nearer on a tenth victory than on a first, for no reason anybody chose.");
+  let tile_now = html_element_width_layout(player_img_c);
   let near = multiply(tile_now, factor);
   let size = text_combine_multiple([near, "px"]);
   let container_map = bless_camera_map_get(div_map);
