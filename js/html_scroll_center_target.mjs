@@ -22,6 +22,7 @@ export function html_scroll_center_target(
   ("of a square as it is drawn right now, and where the grid currently sits inside the box.");
   ("Both of those move when the squares are resized.");
   let container_e = html_component_element_get(container);
+  ("How wide a square is LAID OUT, never how wide the thing handed in is drawn. What is handed in is usually a character standing on a square, and a character is allowed to carry a scale of her own - so measured as drawn, every square on the board would be counted at her size and the scroll would land that much too far along, further with every growth.");
   let tile_size = html_element_width_layout(tile_component);
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
