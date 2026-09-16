@@ -1,5 +1,5 @@
 import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordinates.mjs";
-import { app_g_bless_camera_people_get } from "./app_g_bless_camera_people_get.mjs";
+import { bless_camera_people_get } from "./bless_camera_people_get.mjs";
 import { app_g_bless_people_still_start } from "./app_g_bless_people_still_start.mjs";
 import { app_g_bless_people_still_end } from "./app_g_bless_people_still_end.mjs";
 import { html_element_width } from "./html_element_width.mjs";
@@ -70,7 +70,7 @@ export async function bless_camera_glide(
   ("where they have got to first, there is no step left under way for the switch to finish.");
   ("They are asked of the map rather than handed in, so that a journey knows about the");
   ("crowd without every caller of one having to.");
-  let crowd = app_g_bless_camera_people_get(container_map);
+  let crowd = bless_camera_people_get(container_map);
   app_g_bless_people_still_start(crowd, player_img_c);
   app_g_bless_camera_still_start(container_map);
   ("Where the camera is standing is read off the box BEFORE anything at all is written to");

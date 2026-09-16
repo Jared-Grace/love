@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { list_is } from "./list_is.mjs";
-export function app_g_bless_camera_people_get(container_map) {
+export function bless_camera_people_get(container_map) {
   arguments_assert(arguments, 1);
   ("Who is walking about on this map, for a camera journey that has to hold them still -");
   ("and nobody at all when the map was never told.");
