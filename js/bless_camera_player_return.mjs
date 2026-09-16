@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bless_tile_size } from "./bless_tile_size.mjs";
 import { bless_camera_glide } from "./bless_camera_glide.mjs";
-export async function app_g_bless_camera_player_return(
+export async function bless_camera_player_return(
   container_map,
   div_map,
   player_img_c,
