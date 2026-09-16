@@ -1279,7 +1279,7 @@ export function bible_glyph_chapter_deu01() {
           "for",
           "I",
           "am",
-          "not",
+          "$no_entry",
           "with",
           "you",
           "to",
