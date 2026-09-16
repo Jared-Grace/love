@@ -29,6 +29,15 @@ export async function app_g_hero_evil_step(hero, evil) {
   let player = property_get(world, "player");
   let pace = app_g_hero_evil_pace_ms();
   let pause = app_g_hero_evil_pause_ms();
+  ("A killer locked with the player does not walk. Throwing dark power at her takes a second");
+  ("or more, and the hunt went on stepping right through it - so a player watching the two of");
+  ("them trade blows watched the killer stroll away mid-throw, and sometimes clean off the");
+  ("screen. A fight is two people holding still and facing each other; anything else is two");
+  ("people who happen to be near one another.");
+  let clash = property_get(evil, "clash");
+  if (clash) {
+    return pace;
+  }
   bless_person_crossing_clear(evil);
   let on_foot = bless_world_on_foot(world);
   let alone = g_world_without_npcs(on_foot);
