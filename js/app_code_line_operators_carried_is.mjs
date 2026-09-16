@@ -1,8 +1,7 @@
+import { property_greater_than } from "./property_greater_than.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_line_shape } from "./app_code_line_shape.mjs";
 import { null_is } from "./null_is.mjs";
-import { property_get } from "./property_get.mjs";
-import { greater_than } from "./greater_than.mjs";
 export function app_code_line_operators_carried_is(code) {
   arguments_assert(arguments, 1);
   ("Whether one line of code has any operator standing on it at all.");
@@ -13,7 +12,6 @@ export function app_code_line_operators_carried_is(code) {
   if (unread) {
     return false;
   }
-  let operators = property_get(shape, "operators");
-  let carried_is = greater_than(operators, 0);
+  let carried_is = property_greater_than(shape, "operators", 0);
   return carried_is;
 }
