@@ -1,3 +1,5 @@
+import { app_code_line_part_is } from "./app_code_line_part_is.mjs";
+import { or } from "./or.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_line_operators_carried_is } from "./app_code_line_operators_carried_is.mjs";
@@ -13,7 +15,13 @@ export function app_code_exercise_solving_is(exercise) {
   let answer = property_get(exercise, "answer");
   let question_carried = app_code_line_operators_carried_is(question);
   let answer_carried = app_code_line_operators_carried_is(answer);
-  let matched_is = and(question_carried, answer_carried);
+  let both_carried = and(question_carried, answer_carried);
+  ("a lesson asking which part is worked out first answers with a part of the line it showed, and that is working out. Only a rewriting of the whole of it is a match.");
+  let answer_inside = app_code_line_part_is(question, answer);
+  let question_inside = app_code_line_part_is(answer, question);
+  let part_is = or(answer_inside, question_inside);
+  let rewritten_is = not(part_is);
+  let matched_is = and(both_carried, rewritten_is);
   let solving_is = not(matched_is);
   return solving_is;
 }
