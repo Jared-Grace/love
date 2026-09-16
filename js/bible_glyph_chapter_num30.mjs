@@ -351,7 +351,6 @@ export function bible_glyph_chapter_num30() {
           "or",
           "pledges",
           "$person_other,",
-          "$no_entry",
           "shall",
           "stand.",
           "$man_beard",
