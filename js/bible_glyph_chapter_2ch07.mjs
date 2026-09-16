@@ -789,7 +789,7 @@ export function bible_glyph_chapter_2ch07() {
           "have",
           "embraced",
           "other",
-          "gods,",
+          "$fire,",
           "$bowing",
           "and",
           "$kneeling",
