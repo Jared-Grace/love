@@ -9,7 +9,7 @@ import { divide } from "./divide.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
-export function app_g_bless_camera_glide_frames({
+export function bless_camera_glide_frames({
   container_map,
   player_img_c,
   container,
