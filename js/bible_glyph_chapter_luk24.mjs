@@ -1237,7 +1237,7 @@ export function bible_glyph_chapter_luk24() {
         verse_number: 52,
         words: [
           "$plus",
-          "they",
+          "$pointing_back",
           "$bowing",
           "$pointing_back",
           "and",
