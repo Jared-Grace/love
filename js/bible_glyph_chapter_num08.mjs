@@ -14,7 +14,14 @@ export function bible_glyph_chapter_num08() {
     verses: [
       {
         verse_number: 1,
-        words: ["$mouth", "Then", "$name_tag", "to", "Moses,", "$speech,"],
+        words: [
+          "Then",
+          "$name_tag",
+          "$mouth",
+          "to",
+          "Moses,",
+          "$speech,",
+        ],
       },
       {
         verse_number: 2,
