@@ -90,7 +90,7 @@ export async function bless_walk(
     ("them touches a road. It answers no almost every time and costs two lookups when it does.");
     let stepping_out = bless_kerb_step_is(world, from, to);
     if (stepping_out) {
-      await bless_crossing_wait(world, to, player, player_img_c);
+      await bless_crossing_pause(world, to, player, player_img_c, div_map);
     }
     app_shared_game_character_face(player, player_img_c, direction);
     ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
