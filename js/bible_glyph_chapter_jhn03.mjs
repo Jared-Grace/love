@@ -825,7 +825,7 @@ export function bible_glyph_chapter_jhn03() {
           "$eye$n",
           "$plus",
           "$ear$d,",
-          "and",
+          "$plus",
           "yet",
           "$no_entry",
           "one",
