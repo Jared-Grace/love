@@ -1,3 +1,4 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
@@ -31,8 +32,7 @@ export async function bible_glyph_chapters_gloss_column_walked() {
     for (let row of both.rows) {
       let column = [];
       for (let word of row.words) {
-        let b = equal(word.glyph, "");
-        let seated = not(b);
+        let seated = equal_not(word.glyph, "");
         if (seated) {
           list_add(column, "$" + word.glyph);
           continue;
