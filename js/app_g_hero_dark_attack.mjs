@@ -1,3 +1,4 @@
+import { property_set } from "./property_set.mjs";
 import { app_g_hero_face_off } from "./app_g_hero_face_off.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
