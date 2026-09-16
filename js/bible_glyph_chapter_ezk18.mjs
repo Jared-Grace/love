@@ -433,7 +433,7 @@ export function bible_glyph_chapter_ezk18() {
           "the",
           "$mountain",
           "shrines",
-          "or",
+          "$no_entry",
           "lift",
           "up",
           "his",
