@@ -1,15 +1,20 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
-import { app_shared_animation_sleep } from "./app_shared_animation_sleep.mjs";
+import { bless_crossing_glance } from "./bless_crossing_glance.mjs";
+import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 import { bless_crossing_glance_tries } from "./bless_crossing_glance_tries.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { bless_crossing_clear_is } from "./bless_crossing_clear_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { less_than_equal } from "./less_than_equal.mjs";
-import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
-export async function bless_crossing_wait(world, to, player, player_img_c) {
-  arguments_assert(arguments, 4);
+export async function bless_crossing_wait(
+  world,
+  to,
+  player,
+  player_img_c,
+  div_map,
+) {
+  arguments_assert(arguments, 5);
   ("Holds the walker at the kerb: they look one way, then the other, then stand there looking");
   ("up and down the road until it is clear, and only then does the walk go on.");
   ("LOOKING is the part that is worth the time it costs. The waiting could have been done");
@@ -17,6 +22,10 @@ export async function bless_crossing_wait(world, to, player, player_img_c) {
   ("having stuck. A person who turns their head has visibly decided something, and what they");
   ("have decided is the thing this whole crossing exists to teach - you look before you step");
   ("into a road.");
+  ("A look is a HEAD AND A CAMERA together, and what says it is a single call rather than");
+  ("anything written here. There are three places in this that a walker looks, and keeping a");
+  ("camera in step with three of them by hand is a thing that goes wrong once and then reads");
+  ("as the screen having drifted.");
   ("It looks WEST first and then EAST, in that order, because a walk is a sequence and a");
   ("sequence has to have an order; either would do, and doing both is the point. Turning once");
   ("would be checking the lane in front and trusting the other one.");
@@ -35,17 +44,21 @@ export async function bless_crossing_wait(world, to, player, player_img_c) {
   ("measured in car-lengths and closes while it is being looked at, so a walker who checked");
   ("only when they turned their head would step out on a gap that was true half a second ago.");
   ("Ask quickly, turn slowly.");
+  ("A look takes most of its half second in the camera's own slide, so what is added after it");
+  ("is the short hold at the end of a turn rather than the whole of the pause. Left at the");
+  ("full pause the two would add up and the opening pair of looks alone would take the best");
+  ("part of two seconds, which is a walker being ponderous rather than careful.");
   ("The wait is BOUNDED, and it is worth being plain about why that is safe rather than");
   ("merely convenient. Cars give way to anybody standing on the road, so a walker who steps");
   ("out stops the traffic instead of being hurt by it. The bound therefore cannot cause an");
   ("accident; all it can do is stop the game freezing if the traffic somehow never leaves a");
   ("gap. Waiting for ever is the one outcome that would be worse than crossing.");
   let facing = "west";
-  app_shared_game_character_face(player, player_img_c, facing);
-  await app_shared_animation_sleep();
+  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  await app_shared_animation_sleep_quick();
   facing = g_direction_opposite(facing);
-  app_shared_game_character_face(player, player_img_c, facing);
-  await app_shared_animation_sleep();
+  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  await app_shared_animation_sleep_quick();
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
@@ -60,7 +73,7 @@ export async function bless_crossing_wait(world, to, player, player_img_c) {
     let due = less_than_equal(glance, 0);
     if (due) {
       facing = g_direction_opposite(facing);
-      app_shared_game_character_face(player, player_img_c, facing);
+      await bless_crossing_glance(player, player_img_c, facing, div_map);
       glance = bless_crossing_glance_tries();
     }
     await app_shared_animation_sleep_quick();
