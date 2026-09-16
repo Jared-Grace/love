@@ -16,7 +16,7 @@ export function html_scroll_centered_coordinates_element(
   ("FRACTIONAL, because a box almost never stands exactly on a square. One that has been dragged, or stopped part way through a journey somebody else took over, is between squares, and rounding to the nearest would begin the next journey with a jump of up to half a square. Half a square is easily enough to be seen on a phone, and a camera that also nudged sideways while it was only changing how big the squares are would look like one that could not make up its mind.");
   ("Everything is measured rather than remembered, for the same reason the forward sum measures: a camera that is changing how big the squares are changes this answer on every frame.");
   ("IT IS HANDED THE BOX ITSELF AND NOT SOMETHING TO LOOK IT UP FROM. That is the one line the two callers of this sum disagreed on - one holds a wrapped component and one holds a map that knows where its box is - and while the whole sum was written out twice that single difference was carrying eleven identical lines behind it.");
-  let tile_size = html_element_width(tile_component);
+  let tile_size = html_element_width_layout(tile_component);
   let origin = html_grid_tile_center_origin(tile_component);
   let origin_left = property_get(origin, "left");
   let origin_top = property_get(origin, "top");

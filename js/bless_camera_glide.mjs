@@ -77,10 +77,10 @@ export async function bless_camera_glide(
   ("it, and read as a place on the grid rather than as a scroll offset, because the squares");
   ("it counts are about to change size underneath it.");
   let centered = html_scroll_centered_coordinates(player_img_c, container);
-  let from = html_element_width(player_img_c);
+  let from = html_element_width_layout(player_img_c);
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
-  let to = html_element_width(player_img_c);
+  let to = html_element_width_layout(player_img_c);
   let same = equal(from, to);
   if (same) {
     bless_camera_still_end(container_map);

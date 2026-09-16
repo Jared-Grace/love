@@ -1,7 +1,8 @@
 import { gloss_chapter_passages_collect_all } from "./gloss_chapter_passages_collect_all.mjs";
 import { property_get } from "./property_get.mjs";
 import { gloss_entry_explain_key } from "./gloss_entry_explain_key.mjs";
-import { list_first } from "./list_first.mjs";
+import { list_join } from "./list_join.mjs";
+import { app_shared_bible_verses_separator } from "./app_shared_bible_verses_separator.mjs";
 import { gloss_passage_entries } from "./gloss_passage_entries.mjs";
 import { gloss_passage_entries_pointers_filled } from "./gloss_passage_entries_pointers_filled.mjs";
 import { list_size } from "./list_size.mjs";
@@ -22,7 +23,7 @@ export async function gloss_chapter_pointers_shown_generic(chapter_code, fn) {
   let shown = [];
   for (let passage of passages) {
     let verse_numbers = property_get(passage, "verse_numbers");
-    let verse = list_first(verse_numbers);
+    let verse = list_join(verse_numbers, app_shared_bible_verses_separator());
     let entries = gloss_passage_entries(passage);
     let filled = gloss_passage_entries_pointers_filled(
       entries,

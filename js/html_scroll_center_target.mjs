@@ -22,7 +22,7 @@ export function html_scroll_center_target(
   ("of a square as it is drawn right now, and where the grid currently sits inside the box.");
   ("Both of those move when the squares are resized.");
   let container_e = html_component_element_get(container);
-  let tile_size = html_element_width(tile_component);
+  let tile_size = html_element_width_layout(tile_component);
   let x = property_get(coordinates, "x");
   let y = property_get(coordinates, "y");
   ("counted out from the middle of the grid's first square, which is where a coordinate of nothing points. That origin already carries the grid's own offset inside whatever scrolls, so a wrapper holding empty room around the grid is accounted for without anything here assuming it away.");

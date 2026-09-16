@@ -11,7 +11,7 @@ export function html_grid_tile_center_origin(tile_component) {
   ("Half a square, and not a whole one, because a coordinate counts squares from a corner while a camera points at a centre. Left as corners the picture sits half a square up and to the left of where it was asked to be, which on a phone is a visible amount of the screen.");
   ("It reads the width of a square as it is drawn right now rather than being told, because that is the number that moves: a camera changing how big the squares are moves this origin on every frame, and an origin worked out once would aim the whole grid at where it used to be.");
   let corner = html_component_offset_parent_corner(tile_component);
-  let tile_size = html_element_width(tile_component);
+  let tile_size = html_element_width_layout(tile_component);
   let half_tile = divide(tile_size, 2);
   let grid_left = property_get(corner, "left");
   let grid_top = property_get(corner, "top");
