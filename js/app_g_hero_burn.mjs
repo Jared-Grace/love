@@ -26,13 +26,13 @@ export async function app_g_hero_burn(hero) {
   let render = property_get(hero, "render");
   property_set(evil, "burning", true);
   let evil_img = app_shared_game_npc_img_get(evil);
-  await app_g_hero_burn_charge(player_img_c);
+  await app_g_hero_burn_charge(hero);
   let from = app_g_hero_fx_point(fx, player_img_c);
   let to = app_g_hero_fx_point(fx, evil_img);
   await app_g_hero_clash(hero, evil_img, from, to);
   app_g_hero_impact(hero, to);
   await app_g_hero_engulf(hero, to, evil_img);
-  await app_g_hero_ash(hero, to, evil);
+  await app_g_hero_ash(hero, to, evil); await app_g_hero_taller(hero);
   list_remove_if_exists(npcs, evil);
   let world = property_get(hero, "world");
   let div_map = property_get(hero, "div_map");

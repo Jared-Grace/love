@@ -52,7 +52,7 @@ export function app_g_hero_play(container_map) {
     fx,
     evil: null,
     graves: [],
-    busy: false,
+    busy: false, slain: 0,
   };
   function render() {
     app_g_hero_edge(hero);
