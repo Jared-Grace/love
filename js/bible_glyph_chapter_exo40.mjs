@@ -230,7 +230,7 @@ export function bible_glyph_chapter_exo40() {
           "it",
           "shall",
           "be",
-          "most",
+          "$sparkle",
           "$sparkle.",
         ],
       },
