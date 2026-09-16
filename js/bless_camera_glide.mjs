@@ -1,25 +1,31 @@
-import { html_element_width_layout } from "./html_element_width_layout.mjs";
-import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordinates.mjs";
-import { bless_camera_people_get } from "./bless_camera_people_get.mjs";
-import { bless_people_still_start } from "./bless_people_still_start.mjs";
-import { bless_people_still_end } from "./bless_people_still_end.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { g_img_square_size_variable } from "./g_img_square_size_variable.mjs";
+import { bless_camera_people_get } from "./bless_camera_people_get.mjs";
+import { bless_people_still_start } from "./bless_people_still_start.mjs";
 import { bless_camera_still_start } from "./bless_camera_still_start.mjs";
-import { property_get } from "./property_get.mjs";
+import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordinates.mjs";
+import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { html_reflow_force } from "./html_reflow_force.mjs";
 import { equal } from "./equal.mjs";
 import { bless_camera_still_end } from "./bless_camera_still_end.mjs";
+import { bless_people_still_end } from "./bless_people_still_end.mjs";
 import { html_scroll_center_coordinates } from "./html_scroll_center_coordinates.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
+import { property_get } from "./property_get.mjs";
 import { html_scroll_animate_start } from "./html_scroll_animate_start.mjs";
+import { html_component_offset_parent_corner } from "./html_component_offset_parent_corner.mjs";
+import { divide } from "./divide.mjs";
+import { subtract } from "./subtract.mjs";
+import { add } from "./add.mjs";
+import { html_component_offset_parent } from "./html_component_offset_parent.mjs";
 import { bless_camera_glide_frames } from "./bless_camera_glide_frames.mjs";
+import { html_scale_translate_clear } from "./html_scale_translate_clear.mjs";
 import { not_equal } from "./not_equal.mjs";
 import { not } from "./not.mjs";
-import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
 export async function bless_camera_glide(
   container_map,
   div_map,
@@ -38,9 +44,20 @@ export async function bless_camera_glide(
   ("Zoom and pan are one move here rather than two. They were two, and the seam showed: the");
   ("size jumped in a single frame and the scroll then slid smoothly to somewhere the map no");
   ("longer was, so a player watching a household get its prayer saw the street snap and");
-  ("then drift. Where the box must stand to hold a square in the middle is a sum ABOUT the");
+  ("then drift. Where the map must be drawn to hold a square in the middle is a sum ABOUT the");
   ("square size, so the two cannot be run side by side and be right - one has to be worked");
   ("out from the other, every frame.");
+  ("The travelling is DRAWN rather than laid out. Giving the squares a new size makes the page");
+  ("work out afresh where every square and every person on the street goes, which measured at");
+  ("about thirty milliseconds on a laptop against a frame that lasts under seventeen - so the");
+  ("journey could not keep up with itself and the zoom arrived in steps. The human reported it");
+  ("as rocky. Drawing the same picture bigger and shifted measured at nought, because the");
+  ("browser already has the picture. So the squares keep the size they started at for the");
+  ("whole journey and only the drawing moves; the real size is written once, at the end.");
+  ("Everything the frames need is therefore worked out HERE, while nothing is drawn over and");
+  ("the page can still be asked where things are. Once a scale is drawn on the map, what the");
+  ("page says about where a thing appears counts that scale, so a sum asked mid-journey would");
+  ("answer about the picture instead of about the street.");
   ("How far to go is measured rather than worked out. The size wanted may be written as a");
   ("sum the browser does - the ordinary playing size is - so the only honest way to learn");
   ("what it comes to is to write it, let the page lay itself out, and read a square back.");
@@ -73,9 +90,6 @@ export async function bless_camera_glide(
   let crowd = bless_camera_people_get(container_map);
   bless_people_still_start(crowd, player_img_c);
   bless_camera_still_start(container_map);
-  ("Where the camera is standing is read off the box BEFORE anything at all is written to");
-  ("it, and read as a place on the grid rather than as a scroll offset, because the squares");
-  ("it counts are about to change size underneath it.");
   let centered = html_scroll_centered_coordinates(player_img_c, container);
   let from = html_element_width_layout(player_img_c);
   html_style_variable_set(container_map, variable, size);
@@ -107,23 +121,63 @@ export async function bless_camera_glide(
   ("It is put back from the place on the grid rather than from a remembered offset, so it");
   ("lands where the player was looking whatever the browser did in between.");
   let standing = html_scroll_center_target(centered, player_img_c, container);
-  container_e.scrollLeft = property_get(standing, "left");
-  container_e.scrollTop = property_get(standing, "top");
+  let scroll_left = property_get(standing, "left");
+  let scroll_top = property_get(standing, "top");
+  container_e.scrollLeft = scroll_left;
+  container_e.scrollTop = scroll_top;
   let claim = html_scroll_animate_start(container_e);
   let token = property_get(claim, "token");
+  ("That standing place is then FIXED for the whole journey, and the frames travel by drawing");
+  ("the map somewhere else instead of by scrolling the box. Scrolling would be free, but");
+  ("where to scroll to is a sum about how big a square is drawn, and asking it is what cost");
+  ("the journey its smoothness.");
+  ("Both ends of the pan are asked here, while the squares are still the size they started");
+  ("at. The answer for the far end is not where the box will finally stand - the squares will");
+  ("be a different size by then - but it does not need to be: the two are in proportion, so a");
+  ("reach measured at the starting size and multiplied by how much bigger this frame is comes");
+  ("out at the same place. That proportion is the whole reason this may be asked once.");
+  ("A reach is counted from the corner the grid is drawn out of, and NOT from the corner of");
+  ("the box that scrolls. A wrapper holds blank room around the grid so that an outermost");
+  ("square can still be brought to the middle of the window, and that room does not grow when");
+  ("the squares do - so a distance holding it inside grows by more than it should, and the map");
+  ("drifts further off the further it has zoomed.");
+  let arriving = html_scroll_center_target(focus, player_img_c, container);
+  let corner = html_component_offset_parent_corner(player_img_c);
+  let corner_left = property_get(corner, "left");
+  let corner_top = property_get(corner, "top");
+  let half_width = divide(container_e.clientWidth, 2);
+  let half_height = divide(container_e.clientHeight, 2);
+  let reach_start = {
+    left: subtract(add(scroll_left, half_width), corner_left),
+    top: subtract(add(scroll_top, half_height), corner_top),
+  };
+  let reach_end = {
+    left: subtract(
+      add(property_get(arriving, "left"), half_width),
+      corner_left,
+    ),
+    top: subtract(add(property_get(arriving, "top"), half_height), corner_top),
+  };
+  ("The scale is drawn on the thing the squares are POSITIONED by, which is the one element");
+  ("every coordinate on this map is already counted from. Drawn on the wrapper outside it the");
+  ("blank room would scale too; drawn on anything inside it, only part of the street would.");
+  let map_c = html_component_offset_parent(player_img_c);
   let animate = bless_camera_glide_frames({
-    container_map,
-    player_img_c,
     container,
-    focus,
-    variable,
+    map_c,
+    reach_start,
+    reach_end,
     from,
     to,
     token,
-    centered,
   });
   let promise = new Promise(animate);
   await promise;
+  ("The drawn-on scale comes off BEFORE the real size is written, and before anything else is");
+  ("measured. Left on, the two would multiply and the map would be drawn at nearly twice the");
+  ("size it just arrived at; and every sum below about where to stand would answer about the");
+  ("picture rather than about the street.");
+  html_scale_translate_clear(map_c);
   html_style_variable_set(container_map, variable, size);
   html_reflow_force(div_map);
   ("The last placing is skipped when something else has taken the camera over. It would be");
