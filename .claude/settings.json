@@ -2645,6 +2645,7 @@
       "Bash(node scripts/ai.mjs ebible_verses_include:*)",
       "Bash(node scripts/ai.mjs bible_usfm_version_chapter_verses_text:*)",
       "Bash(node scripts/ai.mjs ebible_book_codes_new_testament_first:*)",
+      "Bash(node scripts/ai.mjs bible_glyph_chapter_verse_text_write:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args work_options:*)",
@@ -5181,6 +5182,7 @@
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_verses_include:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args bible_usfm_version_chapter_verses_text:*)",
       "Bash(node scripts/ai.mjs ai_git_command_args ebible_book_codes_new_testament_first:*)",
+      "Bash(node scripts/ai.mjs ai_git_command_args bible_glyph_chapter_verse_text_write:*)",
       "Bash(node scripts/aig.mjs ai_git:*)",
       "Bash(node scripts/aig.mjs ai_log_add:*)",
       "Bash(node scripts/aig.mjs work_options:*)",
@@ -7716,6 +7718,7 @@
       "Bash(node scripts/aig.mjs ebible_verses_include:*)",
       "Bash(node scripts/aig.mjs bible_usfm_version_chapter_verses_text:*)",
       "Bash(node scripts/aig.mjs ebible_book_codes_new_testament_first:*)",
+      "Bash(node scripts/aig.mjs bible_glyph_chapter_verse_text_write:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_git:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ai_log_add:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args work_options:*)",
@@ -10251,7 +10254,8 @@
       "Bash(node scripts/aig.mjs ai_git_command_args bible_interlinear_verse_lines:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args ebible_verses_include:*)",
       "Bash(node scripts/aig.mjs ai_git_command_args bible_usfm_version_chapter_verses_text:*)",
-      "Bash(node scripts/aig.mjs ai_git_command_args ebible_book_codes_new_testament_first:*)"
+      "Bash(node scripts/aig.mjs ai_git_command_args ebible_book_codes_new_testament_first:*)",
+      "Bash(node scripts/aig.mjs ai_git_command_args bible_glyph_chapter_verse_text_write:*)"
     ],
     "defaultMode": "acceptEdits"
   },
