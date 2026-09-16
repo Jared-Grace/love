@@ -1,6 +1,8 @@
 {
  "known": [
   "app_code_lesson_color_wheel",
+  "app_code_lesson_same_as_message",
+  "app_code_lesson_same_message",
   "app_code_review_exercises_gather",
   "app_shared_api_fn",
   "app_shared_game_map_square_key",
