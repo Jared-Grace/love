@@ -223,7 +223,7 @@ export function bible_glyph_chapter_ezk18() {
           "$hands_giving",
           "at",
           "usury",
-          "or",
+          "$no_entry",
           "$hand_receiving",
           "excess",
           "interest,",
