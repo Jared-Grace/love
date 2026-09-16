@@ -1,44 +1,63 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_combine_multiple } from "./text_combine_multiple.mjs";
-import { html_style_variable_set } from "./html_style_variable_set.mjs";
-import { g_coordinates_part_way } from "./g_coordinates_part_way.mjs";
-import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
+import { divide } from "./divide.mjs";
+import { number_part_way } from "./number_part_way.mjs";
 import { property_get } from "./property_get.mjs";
+import { subtract } from "./subtract.mjs";
+import { multiply } from "./multiply.mjs";
+import { html_scale_translate_set } from "./html_scale_translate_set.mjs";
 export function bless_camera_glide_frames_draw(
   value,
-  {
-    container_map,
-    variable,
-    focus,
-    player_img_c,
-    container,
-    container_e,
-    centered,
-    ease,
-  },
+  { map_c, from, reach_start, reach_end, ease },
 ) {
   arguments_assert(arguments, 2);
-  ("One frame of a camera journey: the squares are drawn at the size this frame calls for,");
-  ("and the box is moved to hold the point this frame is looking at in the middle.");
-  ("BOTH ends of the journey move on the same eased fraction. The size walks from the size");
-  ("it started at to the size it is going to, and the point being held in the middle walks");
-  ("from wherever the camera was standing to the square it was sent to. Only the size used");
-  ("to move: the middle was set to the destination square on every frame, first one");
-  ("included, so the entire pan across the street happened in a single frame and the zoom");
-  ("then played out over a camera that had already arrived. A player who prayed over a");
-  ("family from a pulled-back view saw the screen snap onto the house and only then zoom in,");
-  ("which reads as a cut followed by a move rather than as one journey.");
+  ("One frame of a camera journey: the map is DRAWN at the size this frame calls for, shifted");
+  ("so that the point this frame is looking at sits in the middle of the screen.");
+  ("BOTH ends of the journey move on the same eased fraction. The size walks from the size it");
+  ("started at to the size it is going to, and the point held in the middle walks from");
+  ("wherever the camera was standing to the square it was sent to. Only the size used to move:");
+  ("the middle was set to the destination square on every frame, first one included, so the");
+  ("entire pan across the street happened in a single frame and the zoom then played out over");
+  ("a camera that had already arrived. A player who prayed over a family from a pulled-back");
+  ("view saw the screen snap onto the house and only then zoom in, which reads as a cut");
+  ("followed by a move rather than as one journey.");
   ("The point aimed at is a fraction of a square rather than a square, which is the whole of");
   ("what makes the pan smooth. Rounded to squares the camera would tick across the street a");
   ("square at a time.");
-  ("The size is written FIRST and the standing place worked out afterwards, in that order,");
-  ("because where the box has to stand is a sum about how big a square is drawn. Asked");
-  ("before the size is written it answers for the previous frame, and the picture slides");
-  ("half a frame behind the zoom the whole way.");
-  let size = text_combine_multiple([value, "px"]);
-  html_style_variable_set(container_map, variable, size);
-  let aim = g_coordinates_part_way(centered, focus, ease);
-  let target = html_scroll_center_target(aim, player_img_c, container);
-  container_e.scrollLeft = property_get(target, "left");
-  container_e.scrollTop = property_get(target, "top");
+  ("Nothing here MEASURES anything, and that is the point of it. This used to give the squares");
+  ("their new size and then ask where the box had to stand, which is a sum about how big a");
+  ("square is drawn - so every frame made the page lay out a street of two thousand pieces and");
+  ("then wait for the answer. On a laptop that came back at about thirty milliseconds against");
+  ("a frame lasting under seventeen, so the journey could not keep up with itself and the zoom");
+  ("arrived in lurches; the human reported it as rocky. Drawing the same picture bigger");
+  ("measured at nought, because the browser has the picture already.");
+  ("What that costs is that the box may not be scrolled during the journey. The shift drawn");
+  ("here does the whole of the travelling, and it is worked out from where the box was");
+  ("standing when the journey began. So the standing place is fixed before the first frame and");
+  ("the real size and the real scroll are written once, at the end, where one lay-out is a");
+  ("price worth paying and nobody can see it.");
+  ("The reach is measured from the corner the map is drawn out of, so it is the one number");
+  ("that may be multiplied by the scale. Distances from anywhere else - from the corner of the");
+  ("screen, say - hold the blank room around the grid inside them, and blank room does not");
+  ("grow when the squares do.");
+  ("The reach the journey STARTED at doubles as the place the shift is counted back from, and");
+  ("that is arithmetic rather than a coincidence worth naming twice. The shift needed is");
+  ("however far the screen's middle sits from the map's corner, less however far the point");
+  ("being looked at has been pushed out by the scale - and the first of those two is exactly");
+  ("what the reach was at the moment the box stopped being allowed to move. So the first frame");
+  ("comes out as no shift at all, which is the proof: a journey that has not begun draws the");
+  ("map exactly where the page laid it.");
+  let scale = divide(value, from);
+  let start = property_get(reach_start, "left");
+  let end = property_get(reach_end, "left");
+  let reach_left = number_part_way(start, end, ease);
+  let start2 = property_get(reach_start, "top");
+  let end2 = property_get(reach_end, "top");
+  let reach_top = number_part_way(start2, end2, ease);
+  let left2 = property_get(reach_start, "left");
+  let right = multiply(scale, reach_left);
+  let left = subtract(left2, right);
+  let left3 = property_get(reach_start, "top");
+  let right2 = multiply(scale, reach_top);
+  let top = subtract(left3, right2);
+  html_scale_translate_set(map_c, left, top, scale);
 }
