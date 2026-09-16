@@ -24,7 +24,7 @@ export function bible_glyph_chapter_deu14() {
           "do",
           "$no_entry",
           "cut",
-          "$no_entry",
+          "yourselves",
           "or",
           "shave",
           "your",
