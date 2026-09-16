@@ -1,5 +1,5 @@
 import { number_part_way } from "./number_part_way.mjs";
-import { app_g_bless_camera_glide_frames_draw } from "./app_g_bless_camera_glide_frames_draw.mjs";
+import { bless_camera_glide_frames_draw } from "./bless_camera_glide_frames_draw.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";
 import { not_equal } from "./not_equal.mjs";
@@ -83,7 +83,7 @@ export function app_g_bless_camera_glide_frames({
       let rest = subtract(3, twice);
       let ease = multiply(squared, rest);
       let value = number_part_way(from, to, ease);
-      app_g_bless_camera_glide_frames_draw(value, {
+      bless_camera_glide_frames_draw(value, {
         container_map,
         variable,
         focus,
