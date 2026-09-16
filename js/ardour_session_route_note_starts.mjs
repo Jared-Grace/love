@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { file_read } from "./file_read.mjs";
 import { list_filter_property } from "./list_filter_property.mjs";
@@ -37,8 +38,7 @@ export async function ardour_session_route_note_starts(
   let text = await file_read(path_session);
   let list = xml_tags_attributes(text, "Route");
   let routes = list_filter_property(list, "name", name_route);
-  let left = list_size(routes);
-  let b = equal(left, 1);
+  let b = list_size_equal(routes, 1);
   if (not(b)) {
     error(
       "this Ardour session has " +
