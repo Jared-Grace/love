@@ -51,7 +51,12 @@ export function bless_person_replace(world, div_map, neighbour, blocked) {
   }
   each(npcs, npc_take);
   let land = g_coordinates_land_reachable_get(coordinates);
-  bless_people_place([person], land, taken);
+  ("A newcomer joins the street on the PAVEMENT, never in the road, for the same reason");
+  ("nobody else may be set down there: the ring around their door reaches well past the kerb,");
+  ("and once somebody is standing on the road they are allowed to go on walking along it.");
+  let roads = property_get(world, "roads");
+  let footway = bless_coordinates_footway(land, roads);
+  bless_people_place([person], footway, taken);
   g_npc_id_ensure(person);
   let ci = g_character_img(div_map, person);
   app_shared_game_npc_img_set(person, ci);

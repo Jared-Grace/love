@@ -42,10 +42,16 @@ export function bless_people(player_img, coordinates_land, blocks, player) {
   let people = list_map(indexes, person_new);
   bless_places_ensure(people);
   bless_homes_ensure(people, blocks);
+  ("Nobody is set down in the ROAD. The kerb was kept at every step a person takes and it was");
+  ("never asked at the moment they were first stood somewhere, so a share of the crowd began");
+  ("standing in the traffic - and somebody already on the road is let off the kerb so they can");
+  ("get away from the cars, which let them go on walking down it.");
+  let roads = bless_blocks_road_keys(blocks);
+  let footway = bless_coordinates_footway(coordinates_land, roads);
   let taken = set_new();
   let key_player = g_coordinates_key(player);
   set_add(taken, key_player);
-  bless_people_place(people, coordinates_land, taken);
+  bless_people_place(people, footway, taken);
   g_npcs_ids_ensure(people);
   return people;
 }
