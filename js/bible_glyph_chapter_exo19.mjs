@@ -251,7 +251,7 @@ export function bible_glyph_chapter_exo19() {
           "So",
           "Moses",
           "$turn_back",
-          "their",
+          "$family",
           "$speech",
           "to",
           "the",
