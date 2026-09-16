@@ -139,7 +139,7 @@ export function bible_glyph_chapter_exo14() {
           "their",
           "$heart_organ",
           "about",
-          "them",
+          "$family",
           "and",
           "$speech,",
           "What",
