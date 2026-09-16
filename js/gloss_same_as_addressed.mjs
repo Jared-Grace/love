@@ -16,7 +16,8 @@ export function gloss_same_as_addressed(passages, met) {
     return null;
   }
   let explains = property_get(met, "explains");
-  let alone = equal(list_size(explains), 1);
+  let left = list_size(explains);
+  let alone = equal(left, 1);
   if (not(alone)) {
     return null;
   }
@@ -25,11 +26,14 @@ export function gloss_same_as_addressed(passages, met) {
     verse: property_get(met, "verse"),
   };
   let found = gloss_passages_same_as_explains(passages, pointer);
-  let settled = equal(list_size(found), 1);
+  let left2 = list_size(found);
+  let settled = equal(left2, 1);
   if (not(settled)) {
     return null;
   }
-  let same = equal(list_first(found), list_first(explains));
+  let left3 = list_first(found);
+  let right = list_first(explains);
+  let same = equal(left3, right);
   if (not(same)) {
     return null;
   }
