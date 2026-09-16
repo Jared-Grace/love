@@ -4,7 +4,7 @@ import { html_style_variable_set } from "./html_style_variable_set.mjs";
 import { g_coordinates_part_way } from "./g_coordinates_part_way.mjs";
 import { html_scroll_center_target } from "./html_scroll_center_target.mjs";
 import { property_get } from "./property_get.mjs";
-export function app_g_bless_camera_glide_frames_draw(
+export function bless_camera_glide_frames_draw(
   value,
   {
     container_map,
