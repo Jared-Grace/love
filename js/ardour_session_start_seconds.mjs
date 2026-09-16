@@ -1,7 +1,7 @@
+import { list_find } from "./list_find.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { xml_tags_attributes } from "./xml_tags_attributes.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { list_filter } from "./list_filter.mjs";
 import { list_single } from "./list_single.mjs";
 import { text_starts_with } from "./text_starts_with.mjs";
 import { not } from "./not.mjs";
@@ -18,8 +18,7 @@ export function ardour_session_start_seconds(text) {
     let b = text_includes(location.flags, "IsSessionRange");
     return b;
   }
-  let ranges = list_filter(locations, range_is);
-  let range = list_single(ranges);
+  let range = list_find(locations, range_is);
   let list = xml_tags_attributes(text, "TempoMap");
   let map = list_single(list);
   let samples = text_starts_with(range.start, "a");
