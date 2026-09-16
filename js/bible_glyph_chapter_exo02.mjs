@@ -720,7 +720,7 @@ export function bible_glyph_chapter_exo02() {
           "$eye",
           "the",
           "Israelites",
-          "$fire",
+          "and",
           "took",
           "$lightbulb.",
         ],

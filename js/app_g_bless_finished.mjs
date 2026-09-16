@@ -123,10 +123,5 @@ export async function app_g_bless_finished(
   if (told) {
     app_g_bless_finished_modal(container_map, line, noop);
   }
-  await bless_camera_player_return(
-    container_map,
-    div_map,
-    player_img_c,
-    player,
-  );
+  await bless_camera_player_return(div_map, player_img_c, player);
 }

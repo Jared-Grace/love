@@ -645,7 +645,7 @@ export function bible_glyph_chapter_exo19() {
           "of",
           "$mountain",
           "Sinai",
-          "$name_tag",
+          "and",
           "called",
           "Moses",
           "to",

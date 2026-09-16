@@ -952,7 +952,7 @@ export function bible_glyph_chapter_jer32() {
           "of",
           "the",
           "Chaldeans",
-          "$hand",
+          "and",
           "of",
           "Nebuchadnezzar",
           "$king",
