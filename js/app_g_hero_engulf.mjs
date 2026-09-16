@@ -14,8 +14,8 @@ import { html_style_set } from "./html_style_set.mjs";
 import { html_animate_remove } from "./html_animate_remove.mjs";
 import { app_g_hero_flame } from "./app_g_hero_flame.mjs";
 import { sleep } from "./sleep.mjs";
-export async function app_g_hero_engulf(hero, point, evil_img) {
-  arguments_assert(arguments, 3);
+export async function app_g_hero_engulf(hero, point, evil_img, sheet) {
+  arguments_assert(arguments, 4);
   ("The fire takes hold: the street darkens around the evil person, flames leap up all over them one after another, and they writhe as they glow white, then orange, then black.");
   ("The darkness is what makes the fire bright. The same flames over an ordinary daylight street read as a decoration; with everything else pushed back into shadow they are the only thing on the screen.");
   let fx = property_get(hero, "fx");
@@ -96,8 +96,23 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
     },
   );
   let width = html_element_width(evil_img);
+  ("THE FLAMES ARE DRAWN IN THE STREET and not on the screen. The darkening above is a whole");
+  ("screen going dim and belongs where it is; the fire belongs to the person burning, and the");
+  ("person is standing on a square. Drawn on the screen it was drawn at the place on it where");
+  ("he stood when the fire struck - and the camera re-centres on the player at every step she");
+  ("takes, so a player who walked while he burned watched him slide out from under his own");
+  ("fire. The sheet had no way of learning the street had moved.");
+  ("The middle of the square is asked of the BOX rather than worked out, because the box is");
+  ("laid over one square by the same sums that put a person on one, so its own width is the");
+  ("width of a square however far the map has been zoomed.");
+  let square = html_element_width(sheet);
+  let half = divide(square, 2);
+  let spot = {
+    x: half,
+    y: half,
+  };
   let fire = emoji_fire();
-  let pillar = app_g_hero_sprite(fx, point, fire, 1);
+  let pillar = app_g_hero_sprite(sheet, spot, fire, 1);
   html_style_set(
     pillar,
     "filter",
@@ -139,7 +154,7 @@ export async function app_g_hero_engulf(hero, point, evil_img) {
   let count = 28;
   let gap = divide(duration, count);
   async function flame_next() {
-    app_g_hero_flame(fx, point, width);
+    app_g_hero_flame(sheet, spot, width);
     await sleep(gap);
   }
   await each_range_async(count, flame_next);
