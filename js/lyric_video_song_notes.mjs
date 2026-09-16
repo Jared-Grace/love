@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_song_document_read } from "./lyric_video_song_document_read.mjs";
 import { null_is } from "./null_is.mjs";
@@ -5,8 +6,6 @@ import { property_get } from "./property_get.mjs";
 import { lyric_video_picture_note_key } from "./lyric_video_picture_note_key.mjs";
 import { lyric_video_picture_notes } from "./lyric_video_picture_notes.mjs";
 import { list_map } from "./list_map.mjs";
-import { list_empty_is } from "./list_empty_is.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function lyric_video_song_notes(name) {
   "$plain name";
@@ -37,8 +36,7 @@ export async function lyric_video_song_notes(name) {
   let entries = await Promise.all(asked);
   function noted(entry) {
     let notes = property_get(entry, "notes");
-    let empty = list_empty_is(notes);
-    let any = not(empty);
+    let any = list_empty_not_is(notes);
     return any;
   }
   let against = list_filter(entries, noted);
