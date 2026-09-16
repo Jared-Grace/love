@@ -72,12 +72,15 @@ export async function bless_crossing_wait(
   await app_shared_animation_sleep_quick();
   ("Which lane to look up is WORKED OUT from the way she is crossing rather than named. A");
   ("road is crossed at right angles to itself, so the crossing already says it.");
+  ("There is no hold written between the two looks any more. A look now turns through a");
+  ("half-way picture and holds THERE instead, so the beat that used to sit between the looks");
+  ("sits inside each of them, where it is the middle of a turn rather than a wait on a turn");
+  ("already finished. Left in both places it would be paid twice, and the length of this was");
+  ("measured as too long twice running.");
   let facing = g_direction_across(toward);
   await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
-  await app_shared_animation_sleep_quick();
   facing = g_direction_opposite(facing);
   await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
-  await app_shared_animation_sleep_quick();
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
