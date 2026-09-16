@@ -3,7 +3,6 @@ import { html_scroll_centered_coordinates } from "./html_scroll_centered_coordin
 import { bless_camera_people_get } from "./bless_camera_people_get.mjs";
 import { bless_people_still_start } from "./bless_people_still_start.mjs";
 import { bless_people_still_end } from "./bless_people_still_end.mjs";
-import { html_element_width } from "./html_element_width.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_shared_game_div_map_container_get } from "./app_shared_game_div_map_container_get.mjs";
 import { html_component_element_get } from "./html_component_element_get.mjs";

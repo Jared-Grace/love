@@ -1,6 +1,5 @@
 import { html_element_width_layout } from "./html_element_width_layout.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { html_element_width } from "./html_element_width.mjs";
 import { html_grid_tile_center_origin } from "./html_grid_tile_center_origin.mjs";
 import { property_get } from "./property_get.mjs";
 import { divide } from "./divide.mjs";
