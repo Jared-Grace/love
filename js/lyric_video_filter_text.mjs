@@ -1,3 +1,5 @@
+import { lyric_video_frames_per_second } from "./lyric_video_frames_per_second.mjs";
+import { lyric_video_picture_fade_seconds } from "./lyric_video_picture_fade_seconds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { lyric_video_lead_seconds } from "./lyric_video_lead_seconds.mjs";
 import { equal } from "./equal.mjs";
@@ -34,6 +36,22 @@ export function lyric_video_filter_text(
   let lead = lyric_video_lead_seconds();
   function picture_steps(picture, index) {
     let first = equal(index, 0);
+    let ahead = subtract(picture.start, lead);
+    let rate = lyric_video_frames_per_second();
+    let span = lyric_video_picture_fade_seconds();
+    let crossed = add(ahead, span);
+    let rising =
+      ",format=yuva420p,fps=" +
+      rate +
+      ",fade=t=in:st=" +
+      ahead +
+      ":d=" +
+      span +
+      ":alpha=1:enable='between(t," +
+      ahead +
+      "," +
+      crossed +
+      ")'";
     let under = first ? ground : "[over" + subtract(index, 1) + "]";
     let source = "[" + add(index, 2) + ":v]";
     let fitted = "[fitted" + index + "]";
@@ -45,9 +63,11 @@ export function lyric_video_filter_text(
       size +
       ":force_original_aspect_ratio=decrease" +
       lit +
+      rising +
       fitted;
-    let ahead = subtract(picture.start, lead);
-    let shown = "enable='between(t," + ahead + "," + picture.end + ")'";
+    let right = subtract(span, lead);
+    let held = add(picture.end, right);
+    let shown = "enable='between(t," + ahead + "," + held + ")'";
     let lay = under + fitted + "overlay=x=(W-w)/2:y=(H-h)/2:" + shown + over;
     let steps_picture = [fit, lay];
     return steps_picture;
