@@ -17,7 +17,6 @@ export async function app_g_hero_ash(hero, evil, sheet) {
   arguments_assert(arguments, 3);
   ("The end of the burning: what is left of the evil person crumbles down into nothing, embers burst outward, smoke rises, and a scorch mark is left on the ground that slowly fades.");
   ("Everything the person was made of is taken off the map afterwards - their picture and the devil's face over them - so nothing of them is left standing on the street.");
-  property_get(hero, "fx");
   let div_map = property_get(hero, "div_map");
   let evil_img = app_shared_game_npc_img_get(evil);
   let width = html_element_width(evil_img);
