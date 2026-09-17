@@ -24,6 +24,12 @@ export function app_index_dev_links() {
       text: "Every way into the praying game, listed to pick from. The street opens past the prayer at the door so it is not said carelessly; the other openings hand you a world already part way along, to save praying your way back to the thing you came to look at. Nothing is saved, so every visit is a street nobody has prayed for yet",
     },
     {
+      app_fn: fn_name("app_g_hero"),
+      hash_name: "",
+      label: "Hero game",
+      text: "A large town of people walking about. One of them may turn to evil and hunt the others. The hero waits for the cars before crossing, and grows a little taller each time evil is overpowered",
+    },
+    {
       app_fn: fn_name("app_en_learn_bible"),
       hash_name: "",
       label: "English from the Bible, in Urdu",
