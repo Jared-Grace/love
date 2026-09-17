@@ -16,7 +16,7 @@ export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
   "Where everybody is standing is kept up to date as they go, so a later run cannot be worked out against people who have already moved.";
   let steps = g_path_steps(route);
   let outward = list_copy_reverse(steps);
-  async function shift(step, index) {
+  function shift(step, index) {
     let from = property_get(step, "from");
     let to = property_get(step, "to");
     let key = g_coordinates_key(from);
@@ -26,7 +26,7 @@ export function app_shared_game_crowd_push_shift(npc_index, route, delay) {
     property_set(npc_index, key_next, npc);
     let wait = g_ripple_delay_seconds(index);
     let waited = add(delay, wait);
-    await app_shared_game_npc_move(npc, to, waited);
+    app_shared_game_npc_move(npc, to, waited);
   }
   each_index(outward, shift);
 }

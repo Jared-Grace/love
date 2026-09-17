@@ -10,7 +10,7 @@ import { property_set } from "./property_set.mjs";
 import { list_remove } from "./list_remove.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
+import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
 import { html_animate } from "./html_animate.mjs";
 import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs";
 import { each } from "./each.mjs";
@@ -32,7 +32,7 @@ export async function app_g_hero_kill(hero, evil, victim) {
   list_remove(npcs, victim);
   let evil_img = app_shared_game_npc_img_get(evil);
   let direction = g_direction(evil, victim);
-  await app_shared_game_character_turn(evil, evil_img, direction);
+  app_shared_game_character_turn_start(evil, evil_img, direction);
   let victim_img = app_shared_game_npc_img_get(victim);
   await html_animate(
     victim_img,

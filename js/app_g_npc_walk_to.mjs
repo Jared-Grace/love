@@ -11,5 +11,5 @@ export async function app_g_npc_walk_to(g, npc, to) {
     await app_g_npc_walk(npc, path);
     return;
   }
-  await app_shared_game_npc_move(npc, to, 0);
+  app_shared_game_npc_move(npc, to, 0);
 }

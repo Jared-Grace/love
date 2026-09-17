@@ -109,7 +109,7 @@ export async function bless_walk(
     ("all: each of the two wants exactly the tile the other is giving up. So the parting");
     ("handles the crowd and this handles whoever the parting could not, and between them no");
     ("walk ever passes through anybody.");
-    await app_shared_game_player_npc_swap_if(world, from, to);
+    app_shared_game_player_npc_swap_if(world, from, to);
     ("the player is written down on the tile they reached, the same way the gospel game writes it: everything the tile knows is copied onto them. Writing only the two numbers would be the smaller change and it is the wrong one - the tile carries what it is made of, and the player standing on it is standing on that.");
     ("It is written as the step BEGINS and not when the picture arrives. The crowd reads the");
     ("player's tile to know the one square nobody may step onto, so while a slide is playing");

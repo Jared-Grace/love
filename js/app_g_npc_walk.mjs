@@ -11,7 +11,7 @@ export async function app_g_npc_walk(npc, path) {
   let seconds = g_img_square_slide_seconds();
   async function walk(step) {
     let to = property_get(step, "to");
-    await app_shared_game_npc_move(npc, to, 0);
+    app_shared_game_npc_move(npc, to, 0);
     await sleep_seconds(seconds);
   }
   await each_async(steps, walk);
