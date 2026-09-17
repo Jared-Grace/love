@@ -1,7 +1,6 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { list_to_indices } from "./list_to_indices.mjs";
 import { list_get } from "./list_get.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_code_lines_missing_index(lines) {
@@ -10,8 +9,7 @@ export function app_code_lines_missing_index(lines) {
   let indices = list_to_indices(lines);
   function index_code_is(index) {
     let line = list_get(lines, index);
-    let comment = text_starts_with(line, "//");
-    let code_is = not(comment);
+    let code_is = text_starts_with_not(line, "//");
     return code_is;
   }
   let kept = list_filter(indices, index_code_is);
