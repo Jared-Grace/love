@@ -409,7 +409,7 @@ export function bible_glyph_chapter_2sa11() {
           "$hammer",
           "such",
           "a",
-          "thing.",
+          "$speech.",
         ],
       },
       {
