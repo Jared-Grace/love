@@ -9,6 +9,7 @@ import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
+import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { app_shared_color_red } from "./app_shared_color_red.mjs";
@@ -40,7 +41,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   html_font_color_set(under, gray);
   let lines = property_get(proposal, "lines");
   let card = app_reply_rules_file_card(block, "changed file", f_name);
-  let diff = html_div(card);
+  let diff = app_reply_rules_file_contents(card);
   app_reply_rules_diff_show(diff, lines);
   let unplaced = property_get(proposal, "unplaced");
   let stale = list_empty_not_is(unplaced);
