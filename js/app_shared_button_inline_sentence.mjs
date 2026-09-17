@@ -7,11 +7,11 @@ import { html_style_assign } from "./html_style_assign.mjs";
 export function app_shared_button_inline_sentence(div, text, lambda) {
   arguments_assert(arguments, 3);
   let button = app_shared_button_inline(div, text, lambda);
-  ("the same thin edge the app draws round every other pale button, so a number standing in a sentence still reads as one of them");
+  ("the same thin edge the app draws round every other pale button, so words standing in a sentence still read as one of them");
   let border_color = app_shared_color_gray_medium();
   let border_width = app_shared_button_border_width();
   html_border(button, border_width, border_color);
-  ("the comma that follows the number sits against it, the way it would against a number written as plain writing, so the gap the button keeps on its right is taken away");
+  ("the punctuation that follows sits against it, the way it would against the same words written plainly, so the gap the button keeps on its right is taken away");
   html_style_assign(button, {
     "margin-right": "0",
   });
