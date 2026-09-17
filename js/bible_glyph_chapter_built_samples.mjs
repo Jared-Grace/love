@@ -3279,8 +3279,12 @@ export function bible_glyph_chapter_built_samples() {
     "verse_number": 16,
     "words": [
      [
-      2504,
-      "And I"
+      "2532",
+      "And"
+     ],
+     [
+      "1473",
+      "I"
      ],
      [
       2065,
@@ -3635,8 +3639,12 @@ export function bible_glyph_chapter_built_samples() {
       "Me"
      ],
      [
-      2504,
-      "and I [am]"
+      "2532",
+      "and"
+     ],
+     [
+      "1473",
+      "I [am]"
      ],
      [
       1722,
@@ -3740,8 +3748,12 @@ export function bible_glyph_chapter_built_samples() {
       "Father"
      ],
      [
-      2504,
-      "and I"
+      "2532",
+      "and"
+     ],
+     [
+      "1473",
+      "I"
      ],
      [
       25,
