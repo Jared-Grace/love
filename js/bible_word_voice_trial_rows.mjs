@@ -25,6 +25,7 @@ export async function bible_word_voice_trial_rows() {
         ["gemini_told", "Told the sounds", "told"],
         ["gemini_once", "Told, once", "once"],
         ["gemini_translit", "Transliteration only", "translit"],
+        ["gemini_joined", "No dots", "joined"],
       ],
       rtl: true,
     },
