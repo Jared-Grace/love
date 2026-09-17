@@ -1,5 +1,7 @@
+import { property_get } from "./property_get.mjs";
+import { bless_person_turn_quarters } from "./bless_person_turn_quarters.mjs";
+import { date_now_milliseconds } from "./date_now_milliseconds.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_person_turn_rest_ticks } from "./bless_person_turn_rest_ticks.mjs";
 import { property_set } from "./property_set.mjs";
 import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 export function bless_person_face(person, direction) {
