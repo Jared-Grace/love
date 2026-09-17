@@ -66,10 +66,17 @@ export async function app_shared_game_character_turn(
   let ahead = modulo(left2, count);
   let half_ring = 4;
   let backwards = greater_than(ahead, half_ring);
+  ("A turn right ROUND goes back the way the last turn came, unwinding it. Half a turn is a dead heat, and settled the same way every time, two turn abouts in a row carried on round in one direction - south to north through the east, then north to south through the west - so a person pacing two squares spun full circles. Unwinding reads as turning round and turning back.");
+  let tie = equal(ahead, half_ring);
+  if (tie) {
+    let step_last = property_get_or(img, "turn_step", -1);
+    backwards = equal(step_last, 1);
+  }
   let step = 1;
   if (backwards) {
     step = -1;
   }
+  property_set(img, "turn_step", step);
   let going = true;
   while (going) {
     let left3 = add(index, step);
