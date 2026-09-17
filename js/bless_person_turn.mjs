@@ -1,3 +1,5 @@
+import { g_direction_opposite } from "./g_direction_opposite.mjs";
+import { list_without } from "./list_without.mjs";
 import { bless_person_face } from "./bless_person_face.mjs";
 import { g_direction_sides } from "./g_direction_sides.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -23,7 +25,11 @@ export function bless_person_turn(person) {
   ("what makes turning and walking read as one person rather than two behaviours.");
   let facing = property_get(person, "direction");
   ("A look round is a QUARTER turn, to one side or the other, and never a turn about. A person who spins to face the way they came, and then again a moment later, twirls on the spot; somebody standing about glances left and right. Turning right round is kept for giving up on a walk, where it happens once and means something.");
-  let others = g_direction_sides(facing);
+  ("And a look never turns their back on where they were going. Two quarter turns the same way are a turn about, and four are a spin: picking either side at random kept turning the same way half the time, and a person looking about their doorstep went round and round. So from a side they look back along their way, and from their way they look to a side - left, ahead, right, ahead.");
+  let heading = property_get(person, "heading");
+  let away = g_direction_opposite(heading);
+  let sides = g_direction_sides(facing);
+  let others = list_without(sides, away);
   let direction = list_random_item(others);
   bless_person_face(person, direction);
 }
