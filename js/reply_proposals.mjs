@@ -151,10 +151,54 @@ export function reply_proposals() {
   let f_name55 = fn_name("reply_names_common");
   let f_name_bible = fn_name("reply_names_bible");
   let f_name_authored = fn_name("reply_names_authored");
+  let f_name68 = fn_name("list_adder_unique_sorted");
+  let f_name69 = fn_name("reply_names_akan");
+  let f_name70 = fn_name("reply_names_arabic");
+  let f_name71 = fn_name("reply_names_english");
+  let f_name72 = fn_name("reply_names_filipino");
+  let f_name73 = fn_name("reply_names_igbo");
+  let f_name74 = fn_name("reply_names_kalenjin");
+  let f_name75 = fn_name("reply_names_kamba");
+  let f_name76 = fn_name("reply_names_kikuyu");
+  let f_name77 = fn_name("reply_names_luhya");
+  let f_name78 = fn_name("reply_names_luo");
+  let f_name79 = fn_name("reply_names_mandinka");
+  let f_name80 = fn_name("reply_names_persian");
+  let f_name81 = fn_name("reply_names_sanskrit");
+  let f_name82 = fn_name("reply_names_shona");
+  let f_name83 = fn_name("reply_names_sotho");
+  let f_name84 = fn_name("reply_names_spanish");
+  let f_name85 = fn_name("reply_names_swahili");
+  let f_name86 = fn_name("reply_names_yoruba");
+  let f_name87 = fn_name("reply_names_zulu");
   let name_out = {
     title: "stop needing to be told somebody's name before it will answer them",
     fn: fn_name("app_message_reply_iam_titled_name"),
-    whole: [f_name55, f_name_bible, f_name_authored],
+    whole: [
+      f_name55,
+      f_name_bible,
+      f_name68,
+      f_name_authored,
+      f_name69,
+      f_name70,
+      f_name71,
+      f_name72,
+      f_name73,
+      f_name74,
+      f_name75,
+      f_name76,
+      f_name77,
+      f_name78,
+      f_name79,
+      f_name80,
+      f_name81,
+      f_name82,
+      f_name83,
+      f_name84,
+      f_name85,
+      f_name86,
+      f_name87,
+    ],
     diff: [
       combined9,
       combined10,
@@ -539,10 +583,21 @@ export function reply_proposals() {
   let f_name64 = fn_name("reply_typo_costs");
   let f_name65 = fn_name("reply_typo_sounds");
   let f_name66 = fn_name("reply_keys_nearby");
+  let f_name88 = fn_name("list_pairs_both_ways");
+  let f_name89 = fn_name("keyboard_letter_rows");
   let typo_layer = {
     title: "read a word that was mistyped, and know what the forgiving cost",
     fn: fn_name("reply_wrap_invoke"),
-    whole: [f_name61, f_name62, f_name63, f_name64, f_name65, f_name66],
+    whole: [
+      f_name61,
+      f_name62,
+      f_name63,
+      f_name64,
+      f_name65,
+      f_name88,
+      f_name66,
+      f_name89,
+    ],
     diff: [
       combined42,
       "   let size = null;",
