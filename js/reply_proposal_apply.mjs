@@ -1,3 +1,4 @@
+import { text_starts_with_not } from "./text_starts_with_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { list_find_property } from "./list_find_property.mjs";
@@ -6,8 +7,6 @@ import { reply_proposal_approved_is } from "./reply_proposal_approved_is.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { property_get } from "./property_get.mjs";
-import { text_starts_with } from "./text_starts_with.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { text_slice_from } from "./text_slice_from.mjs";
 import { list_map } from "./list_map.mjs";
@@ -38,8 +37,7 @@ export async function reply_proposal_apply(title) {
   let drawn = await reply_proposal_drawn(proposal);
   let lines = property_get(drawn, "lines");
   function kept_is(line) {
-    let removed = text_starts_with(line, "-");
-    let r = not(removed);
+    let r = text_starts_with_not(line, "-");
     return r;
   }
   let kept = list_filter(lines, kept_is);
