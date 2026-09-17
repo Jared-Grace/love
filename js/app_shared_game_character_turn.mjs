@@ -64,8 +64,8 @@ export async function app_shared_game_character_turn(
   let left = add(target, count);
   let left2 = subtract(left, index);
   let ahead = modulo(left2, count);
-  let half = 4;
-  let backwards = greater_than(ahead, half);
+  let half_ring = 4;
+  let backwards = greater_than(ahead, half_ring);
   let step = 1;
   if (backwards) {
     step = -1;
