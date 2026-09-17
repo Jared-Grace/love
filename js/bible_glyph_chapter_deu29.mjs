@@ -626,7 +626,7 @@ export function bible_glyph_chapter_deu29() {
           "blot",
           "out",
           "his",
-          "name",
+          "$name_tag",
           "from",
           "under",
           "$sky",
