@@ -1,3 +1,4 @@
+import { property_get_or_null_equal } from "./property_get_or_null_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { app_original_bible_gloss_generate } from "./app_original_bible_gloss_generate.mjs";
@@ -11,7 +12,6 @@ import { gloss_entry_word_read } from "./gloss_entry_word_read.mjs";
 import { bible_word_form } from "./bible_word_form.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
-import { equal } from "./equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { gloss_passage_entries_changed_set } from "./gloss_passage_entries_changed_set.mjs";
@@ -57,8 +57,7 @@ export async function app_original_bible_gloss_chapter_translits_add(
       if (absent) {
         return;
       }
-      let had = property_get_or_null(entry, key);
-      let same = equal(had, said);
+      let same = property_get_or_null_equal(entry, key, said);
       if (same) {
         return;
       }
