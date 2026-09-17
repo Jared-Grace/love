@@ -2,7 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
 import { multiply_round } from "./multiply_round.mjs";
 import { math_max } from "./math_max.mjs";
-import { divide } from "./divide.mjs";
+import { half } from "./half.mjs";
 import { add } from "./add.mjs";
 import { lyric_video_word_done } from "./lyric_video_word_done.mjs";
 import { math_min } from "./math_min.mjs";
@@ -30,21 +30,21 @@ export function lyric_video_line_words_text(line, lead) {
     return kept;
   }
   function change(seconds, fade, colour) {
-    let half = divide(fade, 2);
-    let difference = subtract(seconds, half);
-    let from = moment(difference);
-    let sum = add(seconds, half);
-    let end = moment(sum);
-    let b = add(from, 1);
-    let to = math_max(end, b);
+    let halved = half(fade);
+    let before = subtract(seconds, halved);
+    let from = moment(before);
+    let after = add(seconds, halved);
+    let end = moment(after);
+    let shortest = add(from, 1);
+    let to = math_max(end, shortest);
     let text_change = "\\t(" + from + "," + to + ",\\1c" + colour + ")";
     return text_change;
   }
   function word_text(word, index) {
     let done = lyric_video_word_done(words, index);
     let lit = subtract(done, word.start);
-    let b2 = math_max(lit, 0);
-    let fade = math_min(fade_most, b2);
+    let lit_kept = math_max(lit, 0);
+    let fade = math_min(fade_most, lit_kept);
     let red = change(word.start, fade, "&H0000FF&");
     let white = change(done, fade, "&HFFFFFF&");
     let text = "{\\1c&HFFFFFF&" + red + white + "}" + word.text;
