@@ -3,11 +3,12 @@ import { bible_glyph_characters } from "./bible_glyph_characters.mjs";
 import { equal } from "./equal.mjs";
 import { null_is } from "./null_is.mjs";
 import { error } from "./error.mjs";
-import { text_letters_only } from "./text_letters_only.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
+import { text_letters_only } from "./text_letters_only.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
-import { not } from "./not.mjs";
 import { text_is } from "./text_is.mjs";
+import { not } from "./not.mjs";
+import { list_add } from "./list_add.mjs";
 import { bible_glyph_chapter_verse_word_replace } from "./bible_glyph_chapter_verse_word_replace.mjs";
 export async function bible_glyph_chapter_verse_word_mark(
   chapter_code,
@@ -58,7 +59,7 @@ export async function bible_glyph_chapter_verse_word_mark(
     });
   }
   let seen = 0;
-  let spelled_seen = {};
+  let spelled_before = [];
   let entry = null;
   let spelled_occurrence = 0;
   for (let one of verse.words) {
@@ -66,11 +67,10 @@ export async function bible_glyph_chapter_verse_word_mark(
     if (not(b)) {
       continue;
     }
-    let count = spelled_seen[one] || 0;
-    spelled_seen[one] = count + 1;
+    list_add(spelled_before, one);
     let t2 = text_lower_to(one);
-    let letters = text_letters_only(t2);
-    let b2 = equal(letters, wanted);
+    let one_letters = text_letters_only(t2);
+    let b2 = equal(one_letters, wanted);
     if (not(b2)) {
       continue;
     }
@@ -79,7 +79,11 @@ export async function bible_glyph_chapter_verse_word_mark(
     let right2 = String(occurrence);
     if (equal(left2, right2)) {
       entry = one;
-      spelled_occurrence = spelled_seen[one];
+      for (let before of spelled_before) {
+        if (equal(before, one)) {
+          spelled_occurrence = spelled_occurrence + 1;
+        }
+      }
     }
   }
   if (null_is(entry)) {
