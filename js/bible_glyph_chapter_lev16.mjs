@@ -74,7 +74,7 @@ export function bible_glyph_chapter_lev16() {
           "the",
           "ark,",
           "or",
-          "else",
+          "$no_entry",
           "he",
           "will",
           "$skull,",
