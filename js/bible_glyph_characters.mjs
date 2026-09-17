@@ -44,6 +44,7 @@ export function bible_glyph_characters() {
   "IT WAS ASKED FOR BY THE VERSE THAT SETS FEAR AGAINST LOVE. The eighteenth verse of the fourth chapter of the first letter of John says that perfect love drives out fear and that fear involves punishment, which is terror and nothing else, so the first place this mark is drawn is a place where its narrowness is not a compromise but the exact reading.";
   "THE LAST FOUR RELATIONS WERE BOUGHT FOR THE SMALL WORDS JOINED ONTO A HEBREW WORD, which had been left in letters on purpose until the goal became pictures only. The person with no face is me - the profile picture every screen already uses for whoever is looking at it - and the hand pointing straight out of the picture is you, which joins the two pointing hands as the third direction a hand can point. The target is to and for, a going toward and a being meant for. The mirror is like and as, because a likeness is what a mirror hands back; the equals sign was not reused for it, since that sign is held back as the record of a claim this Bible refused to make.";
   "NONE OF THE FOUR SAYS HOW MANY. We shares the mark for me and a crowd of you shares the mark for you, the way he and they already share the hand pointing back. The two busts were not taken for we because they already draw a crowd.";
+  "THE PUSHPIN IS THE ARTICLE, bought on 2026-09-17 when the goal was widened from pictures only to every word of the original having one. A pin marks this particular one out of all the others on the board, which is what the does to a noun. The digit one was proposed and refused because the article sits on plurals and on things nobody counts - the men, the waters, the truth - and a one there claims a number the text does not. Drawing it is what lets a reader SEE where it is missing: the first verse of John leaves it off God in its last clause, and that absence only shows on a page where every present article is drawn.";
   let characters = [
     {
       name: "cross",
@@ -404,6 +405,10 @@ export function bible_glyph_characters() {
     {
       name: "likeness",
       character: "🪞",
+    },
+    {
+      name: "pin",
+      character: "📌",
     },
     {
       name: "water",
