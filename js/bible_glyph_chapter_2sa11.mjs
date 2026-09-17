@@ -837,7 +837,7 @@ export function bible_glyph_chapter_2sa11() {
           "Do",
           "$no_entry",
           "let",
-          "this",
+          "$speech",
           "be",
           "evil",
           "in",
