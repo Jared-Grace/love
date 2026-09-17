@@ -1,3 +1,4 @@
+import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
 import { bless_crossing_release } from "./bless_crossing_release.mjs";
 import { bless_crossing_pause } from "./bless_crossing_pause.mjs";
 import { bless_kerb_step_is } from "./bless_kerb_step_is.mjs";
