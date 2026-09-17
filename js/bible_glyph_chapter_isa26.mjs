@@ -352,7 +352,7 @@ export function bible_glyph_chapter_isa26() {
           "us,",
           "but",
           "Your",
-          "name",
+          "$name_tag",
           "alone",
           "do",
           "we",
