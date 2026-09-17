@@ -1,7 +1,7 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
-import { html_div } from "./html_div.mjs";
+import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 export function app_reply_rules_whole_show(root, file, approvals) {
@@ -12,7 +12,7 @@ export function app_reply_rules_whole_show(root, file, approvals) {
   let name = property_get(file, "name");
   let lines = property_get(file, "lines");
   let card = app_reply_rules_file_card(root, "new file", name);
-  let diff = html_div(card);
+  let diff = app_reply_rules_file_contents(card);
   app_reply_rules_diff_show(diff, lines);
   ("The verdict is asked for under the file rather than beside its name, because a reviewer reaches it by getting to the bottom of what they are being asked about. A button at the top can be pressed on the way past.");
   let asked = app_reply_rules_approve_button(
