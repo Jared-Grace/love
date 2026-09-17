@@ -1,3 +1,4 @@
+import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_sequence_output } from "./reply_sequence_output.mjs";
 import { reply_phrase_my_dear_brother } from "./reply_phrase_my_dear_brother.mjs";
 import { reply_choice } from "./reply_choice.mjs";
@@ -6,7 +7,9 @@ import { reply_response_greetings } from "./reply_response_greetings.mjs";
 export function app_message_reply_greeting() {
   let greeting_response = reply_response_greetings();
   let hello = reply_word_hello();
-  let hi_word = reply_choice(["hi", hello, "hey"]);
+  let time_of_day = reply_choice(["morning", "afternoon", "evening"]);
+  let good_time = reply_sequence(["good", time_of_day]);
+  let hi_word = reply_choice(["hi", hello, "hey", good_time]);
   let my_dear_brother = reply_phrase_my_dear_brother();
   let greeting = reply_sequence_output(
     [hi_word, my_dear_brother],
