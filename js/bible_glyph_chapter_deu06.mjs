@@ -408,7 +408,7 @@ export function bible_glyph_chapter_deu06() {
           "oaths",
           "in",
           "His",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
