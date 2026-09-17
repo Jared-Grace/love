@@ -2,7 +2,7 @@ import { app_shared_game_npc_turn_ready } from "./app_shared_game_npc_turn_ready
 import { not } from "./not.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 import { list_without } from "./list_without.mjs";
-import { bless_person_face } from "./bless_person_face.mjs";
+import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 import { g_direction_sides } from "./g_direction_sides.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
@@ -38,5 +38,5 @@ export function bless_person_turn(person) {
   if (not(ready)) {
     return;
   }
-  bless_person_face(person, direction);
+  app_shared_game_npc_face(person, direction);
 }
