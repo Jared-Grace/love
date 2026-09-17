@@ -515,7 +515,7 @@ export function bible_glyph_chapter_psa118() {
           "$footprints",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$name_tag.",
