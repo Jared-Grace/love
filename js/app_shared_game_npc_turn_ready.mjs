@@ -11,12 +11,15 @@ import { not } from "./not.mjs";
 export function app_shared_game_npc_turn_ready(person, direction) {
   arguments_assert(arguments, 2);
   ("Whether somebody on the street has rested long enough since their last turn to turn to face this way now.");
-  ("The rest is set by the BIGGER of the two turns - the one they last made and the one they are about to make - so a turn about is kept away from other turns on both sides of it.");
+  ("The rest is set by the BIGGEST of the turns - the one they last made, the one they are about to make, and the two taken together - so a turn about is kept away from other turns on both sides of it.");
   ("Somebody who has never turned is ready at once.");
   let facing = property_get(person, "direction");
   let quarters = app_shared_game_npc_turn_quarters(facing, direction);
   let quarters_last = property_get_or(person, "turn_quarters", 0);
-  let bigger = list_max([quarters, quarters_last]);
+  ("Two quarter turns the same way ARE a turn about, just taken in two goes - west, then south, then east is facing the other way. Measured one at a time each was only a quarter turn, so a person looking about swept round half a circle in a moment and read as twirling. So the two turns are also measured together, from the way they faced before the last turn to the way they would face after this one.");
+  let from = property_get_or(person, "turn_from", facing);
+  let swept = app_shared_game_npc_turn_quarters(from, direction);
+  let bigger = list_max([quarters, quarters_last, swept]);
   let rest_ms = app_shared_game_npc_turn_rest_ms();
   let rest = multiply(rest_ms, bigger);
   let turned_at = property_get_or(person, "turn_at", 0);
