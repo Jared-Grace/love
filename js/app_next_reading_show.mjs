@@ -28,6 +28,8 @@ export function app_next_reading_show({
   arguments_assert(arguments, 1);
   let card = app_shared_container_blue(content);
   app_shared_spaced_small(card);
+  ("The same copying stands first inside the card as well, so somebody who opens the page reaches it without scrolling past a long passage to find it. The two buttons bracket the card: what either one copies is everything between them.");
+  app_next_copy_button(card, reading_text);
   function block_show(block) {
     let reference = property_get(block, "reference");
     let entries = property_get(block, "entries");
