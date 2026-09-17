@@ -1,3 +1,5 @@
+import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
+import { not } from "./not.mjs";
 import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
 import { bless_person_slide } from "./bless_person_slide.mjs";
 import { divide } from "./divide.mjs";

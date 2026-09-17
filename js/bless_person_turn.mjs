@@ -1,10 +1,8 @@
+import { g_direction_sides } from "./g_direction_sides.mjs";
+import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { g_directions } from "./g_directions.mjs";
-import { list_without } from "./list_without.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
-import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
 export function bless_person_turn(person) {
   arguments_assert(arguments, 1);
   ("Somebody looks another way without going anywhere - the whole of what standing about");
