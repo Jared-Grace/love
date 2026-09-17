@@ -58,6 +58,9 @@ export function bible_glyph_roots_hebrew() {
   "THE TREE, THE BIRD AND THE FISH WERE BOUGHT BY GENESIS ONE and are the first three seats here that draw a creature rather than a word about God or about people. Ets is the tree and the wood, oph is the flying creature, dag and dagah are the same fish in its two genders and take one picture between them the way chayah takes one across its two numbers. Creation is made of animals and plants and this table had been built out of the name, the gift, the glory and the fire, so the first chapter of the Bible was always going to be the one that met a part of it the covenant words never reached.";
   "AND UPH, TO FLY, IS DELIBERATELY NOT SEATED ON THE BIRD. It stands one word away from oph and is the verb beside that noun, so seating it looks free; it is not. Genesis one verse twenty holds both, and a mark on the noun with the verb left in English is exactly what the underdrawn reading is built to catch - it would have made the verse red the moment the verb was seated. The picture is a bird and not a flight, which is the reason as well as the accident that revealed it.";
   "This is a SEED and not a finished mapping, exactly as the Greek table is. It exists to be run through the survey, which reports what is still undrawn in order of how often a reader would meet it, so the next words to author are measured rather than guessed at.";
+  "THE STANDING PRONOUNS AND SMALL WORDS WEAR THE PICTURES THEIR JOINED FORMS ALREADY WEAR (2026-09-17). Hebrew writes my as a letter on the end of a word and I as a word of its own, and a reader meeting the person bust on my soul and the English letters on I would learn two things for one. So ani and anokhi and anachnu take the bust, attah takes the finger pointing at the reader, el takes the target that the joined le takes, kemo takes the mirror that the joined ke takes, and hu and hem take the pointing-back hand that the joined he and they already take. None of those says how many, and the joined forms were chosen for exactly that, so I and we sharing one mark is the same choice made again rather than a new one. The Greek table seats ego, su, pros and hos on the same four, so the shared vocabulary holds across the two testaments as well as across the two ways Hebrew writes a word.";
+  "THE WORDINGS WERE READ BEFORE SEATING AND THEY ARE CLEAN IN THE WAY A PRONOUN CAN BE. Ani is I five hundred and forty six times and anokhi two hundred and twenty one; attah is you in every one of its top wordings; el is to eighteen hundred and ninety six times against into a hundred and thirty four and against a hundred and two, which is a direction in all three; kemo is like and as. Hu is he and it and she and also that - on that day - and the pointing-back hand draws that one honestly too, since that day is a day already named.";
+  "THE OBJECT MARKER ET IS DELIBERATELY NOT SEATED HERE. It has no English of its own - its wordings are the pronouns the interlinear resolved onto it - so whether it is silent, as the article is, is the article's question asked again, and nobody has asked it.";
   let roots = [
     {
       root: "yhwh",
@@ -1030,6 +1033,68 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "4480",
           glyph: "tray_out",
+        },
+      ],
+    },
+    {
+      root: "ani",
+      gloss: "I, we",
+      words: [
+        {
+          strong: "589",
+          glyph: "me",
+        },
+        {
+          strong: "595",
+          glyph: "me",
+        },
+        {
+          strong: "587",
+          glyph: "me",
+        },
+      ],
+    },
+    {
+      root: "attah",
+      gloss: "you",
+      words: [
+        {
+          strong: "859",
+          glyph: "you",
+        },
+      ],
+    },
+    {
+      root: "el",
+      gloss: "to, toward",
+      words: [
+        {
+          strong: "413",
+          glyph: "toward",
+        },
+      ],
+    },
+    {
+      root: "kemo",
+      gloss: "like, as",
+      words: [
+        {
+          strong: "3644",
+          glyph: "likeness",
+        },
+      ],
+    },
+    {
+      root: "hu",
+      gloss: "he, she, it, they",
+      words: [
+        {
+          strong: "1931",
+          glyph: "pointing_back",
+        },
+        {
+          strong: "1992",
+          glyph: "pointing_back",
         },
       ],
     },

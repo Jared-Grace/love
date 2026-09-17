@@ -82,6 +82,8 @@ export function bible_glyph_roots() {
   ("WHICH TWO NEGATIVES ARE THE IDIOM IS ASKED WORD BY WORD THROUGH THE VERSE, never over the negations alone. Read over the negations alone, a sentence that negates twice in two separate clauses shows its two negatives as neighbours while they stand far apart in the sentence - the twenty fourth of Mark twelve and the thirty seventh of John ten are both that shape, and both are two real negations wanting two real marks. Immediately before is the whole of the test and ",
     fn_name("bible_glyph_negation_idiom_closes_is"),
     " is where it lives.");
+  ("EGO, SU, PROS AND HOS WEAR THE PICTURES THE HEBREW JOINED SMALL WORDS WEAR (2026-09-17): the bust for I and we, the finger pointing at the reader for you, the target for to, and the mirror for as and like. The interlinear files every form of I and we under 1473 and every form of you under 4771, so one number each carries the singular and the plural, and none of the four pictures says how many - which is why they were chosen for the Hebrew in the first place. Pros is to three hundred and forty five times against with forty two; hos is as and like, and kathos and hosper are that word built on, so the three sit in one row.");
+  ("EIS IS DELIBERATELY NOT SEATED ON THE TARGET. It is to four hundred and sixty two times, into two hundred and ninety four, in a hundred and seventy two and for a hundred and twenty three, and whether a movement into a place wants the target or the tray that en already draws is a question about the word rather than a count.");
   let roots = [
     {
       root: "agape",
@@ -1156,6 +1158,54 @@ export function bible_glyph_roots() {
         {
           strong: "240",
           glyph: "arrow_both_ways",
+        },
+      ],
+    },
+    {
+      root: "ego",
+      gloss: "I, me, my, we, us, our",
+      words: [
+        {
+          strong: "1473",
+          glyph: "me",
+        },
+      ],
+    },
+    {
+      root: "su",
+      gloss: "you, your",
+      words: [
+        {
+          strong: "4771",
+          glyph: "you",
+        },
+      ],
+    },
+    {
+      root: "pros",
+      gloss: "to, toward, with",
+      words: [
+        {
+          strong: "4314",
+          glyph: "toward",
+        },
+      ],
+    },
+    {
+      root: "hos",
+      gloss: "as, like, just as",
+      words: [
+        {
+          strong: "5613",
+          glyph: "likeness",
+        },
+        {
+          strong: "5618",
+          glyph: "likeness",
+        },
+        {
+          strong: "2531",
+          glyph: "likeness",
         },
       ],
     },
