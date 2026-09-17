@@ -1,10 +1,10 @@
+import { bless_crossing_glance_facing_road } from "./bless_crossing_glance_facing_road.mjs";
 import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { g_direction_across } from "./g_direction_across.mjs";
 import { and } from "./and.mjs";
 import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { bless_crossing_glance } from "./bless_crossing_glance.mjs";
 import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 import { bless_crossing_glance_tries } from "./bless_crossing_glance_tries.mjs";
@@ -82,9 +82,21 @@ export async function bless_crossing_wait(
   ("already finished. Left in both places it would be paid twice, and the length of this was");
   ("measured as too long twice running.");
   let facing = g_direction_across(toward);
-  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  await bless_crossing_glance_facing_road(
+    player,
+    player_img_c,
+    toward,
+    facing,
+    div_map,
+  );
   facing = g_direction_opposite(facing);
-  await bless_crossing_glance(player, player_img_c, facing, div_map);
+  await bless_crossing_glance_facing_road(
+    player,
+    player_img_c,
+    toward,
+    facing,
+    div_map,
+  );
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
@@ -108,7 +120,13 @@ export async function bless_crossing_wait(
     let due = less_than_equal(glance, 0);
     if (due) {
       facing = g_direction_opposite(facing);
-      await bless_crossing_glance(player, player_img_c, facing, div_map);
+      await bless_crossing_glance_facing_road(
+        player,
+        player_img_c,
+        toward,
+        facing,
+        div_map,
+      );
       glance = bless_crossing_glance_tries();
     }
     await app_shared_animation_sleep_quick();
