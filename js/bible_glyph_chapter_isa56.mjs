@@ -211,7 +211,7 @@ export function bible_glyph_chapter_isa56() {
           "to",
           "$heart_red",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$name_tag,",
