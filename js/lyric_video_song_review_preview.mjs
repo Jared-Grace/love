@@ -1,3 +1,4 @@
+import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -10,7 +11,6 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_song_review_card } from "./lyric_video_song_review_card.mjs";
 import { each } from "./each.mjs";
-import { html_button_list } from "./html_button_list.mjs";
 export async function lyric_video_song_review_preview() {
   "The screen for going through a song's background pictures one after another, on the sandbox app at hash lyric_video_song_review.";
   "EVERY PICTURE IS ON THE PAGE AT ONCE, WHICH IS WHAT SEPARATES THIS FROM WATCHING THE FILM. Judging a drawing against the words sung over it is the film's question, and the film answers it in the order and at the speed it was rendered at; going back to the one that looked wrong means finding that second again. Here the pictures are a list that can be scrolled up as easily as down, and two drawings meant to sit next to each other can be looked at next to each other.";
@@ -42,11 +42,6 @@ export async function lyric_video_song_review_preview() {
     }
     each(pictures, card);
   }
-  function name_text(name) {
-    return name;
-  }
-  let f_names = fn_name("lyric_video_song_names");
-  let names = await api_read(f_names, []);
-  html_button_list(chosen, names, name_text, song_show);
+  await lyric_video_song_buttons(chosen, song_show);
   return told;
 }
