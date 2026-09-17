@@ -1,3 +1,4 @@
+import { bible_word_voice_trial_phoneme_rows } from "./bible_word_voice_trial_phoneme_rows.mjs";
 import { bible_word_voice_trial_short_rows } from "./bible_word_voice_trial_short_rows.mjs";
 import { bible_interlinear_chapter_word_forms_first } from "./bible_interlinear_chapter_word_forms_first.mjs";
 export async function bible_word_voice_trial_rows() {
@@ -79,6 +80,12 @@ export async function bible_word_voice_trial_rows() {
     label: "Short-word tests",
     rtl: false,
     rows: bible_word_voice_trial_short_rows(),
+  });
+  result.push({
+    key: "phoneme",
+    label: "Hebrew · told the sounds",
+    rtl: false,
+    rows: bible_word_voice_trial_phoneme_rows(),
   });
   return result;
 }
