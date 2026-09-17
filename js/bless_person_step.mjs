@@ -1,7 +1,4 @@
-import { property_get_or } from "./property_get_or.mjs";
-import { positive_is } from "./positive_is.mjs";
-import { property_subtract_1 } from "./property_subtract_1.mjs";
-import { and } from "./and.mjs";
+import { bless_person_turn_ready } from "./bless_person_turn_ready.mjs";
 import { bless_person_face } from "./bless_person_face.mjs";
 import { not } from "./not.mjs";
 import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";

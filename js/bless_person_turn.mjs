@@ -1,3 +1,5 @@
+import { bless_person_turn_ready } from "./bless_person_turn_ready.mjs";
+import { not } from "./not.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 import { list_without } from "./list_without.mjs";
 import { bless_person_face } from "./bless_person_face.mjs";
