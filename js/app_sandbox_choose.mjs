@@ -10,7 +10,7 @@ export async function app_sandbox_choose(name) {
   let previews = app_sandbox_previews();
   let first = name.split("/")[0];
   if (property_exists(previews, first)) {
-    let load = property_get(previews, first);
+    html_title_set(first + " (sandbox)"); let load = property_get(previews, first);
     let preview = await load();
     preview();
     return;

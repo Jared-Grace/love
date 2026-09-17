@@ -11,6 +11,7 @@ export async function bible_word_voice_trial_gemini_write() {
   "★ A THIRD READING TELLS IT TO SAY THE WORD EXACTLY ONCE, because told the sounds alone, 14 of the first 25 came back at least twice as long as the plain reading and the listener heard the word said twice.";
   "★ A FOURTH READING SENDS ONLY THE TRANSLITERATION, because told once still came back said twice, two different ways, as if the Hebrew letters and the transliteration were each read; with one spelling sent there is nothing to say a second time.";
   "★ A FIFTH READING SENDS THE TRANSLITERATION WITH ITS SYLLABLE DOTS TAKEN OUT, because with the dots in it was never said twice but was said syllable by syllable, evenly and with no stress, not as a word.";
+  "★ A SIXTH READING SENDS THE HEBREW LETTERS AND ASKS ONLY FOR BIBLICAL RATHER THAN MODERN PRONUNCIATION, naming no sound, because a transliteration sent either way was misread or said twice, while the plain letters were right apart from modern v for waw - and naming only that one sound would leave any other modern habit unasked.";
   "★ A WORD ALREADY RECORDED IS SKIPPED AND EACH REQUEST WAITS SEVEN SECONDS, because Gemini voices are limited per minute per project: the first run stopped after 14 recordings, refused for exceeding it. Skipping lets a stopped run carry on where it stopped, and the wait keeps under the limit.";
   "It writes under gitignore because these are for one listener to hear on this machine, not for the app.";
   let voice = google_text_to_speech_voice_gemini("he-IL", "Charon");
@@ -56,6 +57,14 @@ export async function bible_word_voice_trial_gemini_write() {
           prompt:
             "This is a transliteration of one Biblical Hebrew word. Say it once, naturally, as a single spoken word with its normal stress.",
           text: w.translit.replaceAll("·", ""),
+        },
+      ],
+      [
+        "gemini_biblical",
+        {
+          prompt:
+            "Say this word once, pronounced as in Biblical Hebrew rather than Modern Hebrew.",
+          text: w.text,
         },
       ],
     ];
