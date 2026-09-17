@@ -1,5 +1,5 @@
 import { property_equals } from "./property_equals.mjs";
-import { bless_person_turn_ready } from "./bless_person_turn_ready.mjs";
+import { app_shared_game_npc_turn_ready } from "./app_shared_game_npc_turn_ready.mjs";
 import { bless_person_face } from "./bless_person_face.mjs";
 import { not } from "./not.mjs";
 import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
@@ -62,7 +62,7 @@ export function bless_person_step(world, person) {
   let facing_way = property_equals(person, "direction", way);
   if (not(facing_way)) {
     ("EVERY turn waits out the rest after their last one, standing where they are. A turn hard on the heels of another turn is a person spinning; somebody pacing two squares turned about on every one of them, and on a phone even the quarter turns of stepping round somebody came quick enough to read as twirling. Standing a moment longer in somebody's way is what a real person does anyway.");
-    let ready = bless_person_turn_ready(person, way);
+    let ready = app_shared_game_npc_turn_ready(person, way);
     if (not(ready)) {
       return;
     }

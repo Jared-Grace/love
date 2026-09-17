@@ -1,4 +1,4 @@
-import { bless_person_turn_ready } from "./bless_person_turn_ready.mjs";
+import { app_shared_game_npc_turn_ready } from "./app_shared_game_npc_turn_ready.mjs";
 import { not } from "./not.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
 import { list_without } from "./list_without.mjs";
@@ -34,7 +34,7 @@ export function bless_person_turn(person) {
   let others = list_without(sides, away);
   let direction = list_random_item(others);
   ("Too soon after their last turn, they hold the way they are looking instead - a look held a little longer, never a quick look back.");
-  let ready = bless_person_turn_ready(person, direction);
+  let ready = app_shared_game_npc_turn_ready(person, direction);
   if (not(ready)) {
     return;
   }
