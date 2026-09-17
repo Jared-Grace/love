@@ -1,6 +1,6 @@
+import { property_difference } from "./property_difference.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
 import { multiply } from "./multiply.mjs";
 import { app_g_hero_translate_text } from "./app_g_hero_translate_text.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -27,12 +27,8 @@ export async function app_g_hero_struggle(hero, fire, dark, mid, to) {
   ("far while they are locked, and a still screen would read as the animation having stuck;");
   ("the shaking is what says that something enormous is being held in one place.");
   let container_map = property_get(hero, "container_map");
-  let left = property_get(to, "x");
-  let right = property_get(mid, "x");
-  let dx = subtract(left, right);
-  let left2 = property_get(to, "y");
-  let right2 = property_get(mid, "y");
-  let dy = subtract(left2, right2);
+  let dx = property_difference(to, mid, "x");
+  let dy = property_difference(to, mid, "y");
   function shove_text(fraction, scale) {
     let x = multiply(dx, fraction);
     let y = multiply(dy, fraction);
