@@ -43,6 +43,18 @@ export async function bible_word_voice_trial_rows() {
       rtl: true,
     },
     {
+      key: "gem_chosen",
+      label: "Hebrew · chosen voices",
+      chapter_code: "GEN01",
+      voices: [
+        ["Iapetus", "Iapetus (male)", "iapetus"],
+        ["Achird", "Achird (male)", "achird"],
+        ["Erinome", "Erinome (female)", "erinome"],
+        ["Vindemiatrix", "Vindemiatrix (female)", "vindemiatrix"],
+      ],
+      rtl: true,
+    },
+    {
       key: "grc",
       label: "Greek · John 1",
       chapter_code: "JHN01",
