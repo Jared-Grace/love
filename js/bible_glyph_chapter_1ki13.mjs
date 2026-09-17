@@ -80,7 +80,7 @@ export function bible_glyph_chapter_1ki13() {
           "David,",
           "Josiah",
           "by",
-          "name,",
+          "$name_tag,",
           "and",
           "he",
           "will",
