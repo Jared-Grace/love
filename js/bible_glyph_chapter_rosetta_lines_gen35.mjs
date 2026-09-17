@@ -128,7 +128,7 @@ export function bible_glyph_chapter_rosetta_lines_gen35() {
         original:
           "וַיְהִ֞י בְּצֵ֤את נַפְשָׁהּ֙ כִּ֣י מֵ֔תָה וַתִּקְרָ֥א שְׁמ֖וֹ בֶּן־ אוֹנִ֑י וְאָבִ֖יו קָֽרָא־ ל֥וֹ בִנְיָמִֽין׃",
         english:
-          "And with her last breath for she was dying she named vvv him Ben-oni But his father called him Benjamin",
+          "And with her last breath for she was dying she named him Ben-oni But his father called him Benjamin",
       },
       {
         verse_number: 19,
