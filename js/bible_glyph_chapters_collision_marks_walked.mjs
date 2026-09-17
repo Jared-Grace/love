@@ -123,7 +123,8 @@ export async function bible_glyph_chapters_collision_marks_walked() {
       }
       let spoken = {};
       let spoken_found = property_get_or_null(spoken_by_verse, verse_number);
-      let spoken_known = not(null_is(spoken_found));
+      let b = null_is(spoken_found);
+      let spoken_known = not(b);
       if (spoken_known) {
         spoken = spoken_found;
       }
@@ -132,7 +133,8 @@ export async function bible_glyph_chapters_collision_marks_walked() {
         spoken_wanted_by_verse,
         verse_number,
       );
-      let spoken_counted = not(null_is(spoken_asked));
+      let b2 = null_is(spoken_asked);
+      let spoken_counted = not(b2);
       if (spoken_counted) {
         spoken_wanted = spoken_asked;
       }
