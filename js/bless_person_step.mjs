@@ -1,4 +1,8 @@
-import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { positive_is } from "./positive_is.mjs";
+import { property_subtract_1 } from "./property_subtract_1.mjs";
+import { and } from "./and.mjs";
+import { bless_person_face } from "./bless_person_face.mjs";
 import { not } from "./not.mjs";
 import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
 import { bless_person_slide } from "./bless_person_slide.mjs";
@@ -43,6 +47,11 @@ export function bless_person_step(world, person) {
   ("person can only have got there by being set down there when their doorstep was full -");
   ("and held to a rule they already break, they would never take a step again. Loose, they");
   ("wander until they meet the street they belong to, and are kept from then on.");
+  ("The rest after a turn runs down by one on every step they are asked for, whether or not they move - standing boxed in is time passing too.");
+  let rest = property_get_or(person, "turn_rest", 0);
+  if (positive_is(rest)) {
+    property_subtract_1(person, "turn_rest");
+  }
   let r = bless_person_step_boxed(world, person);
   let boxed = property_get(r, "boxed");
   let way = property_get(r, "way");
@@ -60,7 +69,15 @@ export function bless_person_step(world, person) {
   let facing = property_get(person, "direction");
   let facing_way = equal(facing, way);
   if (not(facing_way)) {
-    app_shared_game_npc_face(person, way);
+    ("Turning right ROUND waits out the rest after their last turn, standing where they are. A turn about hard on the heels of another turn is a person spinning; somebody pacing two squares turned about on every one of them. Only the turn about waits - a quarter turn is how they step round somebody, and making that wait would leave people standing in each other's way.");
+    let back_facing = g_direction_opposite(facing);
+    let about = equal(way, back_facing);
+    let resting = positive_is(rest);
+    let wait = and(about, resting);
+    if (wait) {
+      return;
+    }
+    bless_person_face(person, way);
     return;
   }
   let to = property_get(tiles, way);
