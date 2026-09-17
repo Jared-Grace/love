@@ -1432,7 +1432,7 @@ export function bible_glyph_chapter_1sa20() {
           "sworn",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$name_tag,",
