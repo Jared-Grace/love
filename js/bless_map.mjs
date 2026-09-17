@@ -1,3 +1,4 @@
+import { g_character_img_preload } from "./g_character_img_preload.mjs";
 import { bless_vehicles_draw } from "./bless_vehicles_draw.mjs";
 import { app_shared_game_player_style } from "./app_shared_game_player_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -55,6 +56,8 @@ export function bless_map(container, world) {
   ("they are looking out of has to be findable without being hunted for.");
   let player_img_c = g_character_img(div_map, player);
   app_shared_game_player_style(player_img_c);
+  ("every facing the player has is fetched NOW, before any of them is asked for. A turn shows each in-between picture for a fraction of a second, and a picture still downloading when the next one is asked for is never drawn at all - so without this every turn skipped its 45 degree frames and read as a snap.");
+  g_character_img_preload(player);
   let drawn = {
     div_map: div_map,
     wash: wash,
