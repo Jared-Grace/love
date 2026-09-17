@@ -23,6 +23,7 @@ export async function bible_word_voice_trial_rows() {
       voices: [
         ["gemini_plain", "Plain", "plain"],
         ["gemini_told", "Told the sounds", "told"],
+        ["gemini_once", "Told, once", "once"],
       ],
       rtl: true,
     },
