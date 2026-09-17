@@ -1,4 +1,3 @@
-import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { html_div } from "./html_div.mjs";
@@ -7,6 +6,7 @@ import { html_p_text } from "./html_p_text.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
@@ -38,7 +38,8 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   html_style_font_size(under, value);
   html_font_color_set(under, gray);
   let lines = property_get(proposal, "lines");
-  app_reply_rules_diff_show(block, lines);
+  let diff = html_div(block);
+  app_reply_rules_diff_show(diff, lines);
   let unplaced = property_get(proposal, "unplaced");
   let stale = list_empty_not_is(unplaced);
   if (stale) {
@@ -55,7 +56,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   ("★ THE ALTERED FILE IS OFFERED NO VERDICT WHILE ANY OF ITS LINES ARE MISSING. What is drawn above in that case is the change with a piece taken out of it, and a yes recorded against it would be a yes to something nobody was shown. It is the one place on this bench where the button is withheld rather than left to the reader, because the reader cannot see what is not there.");
   let whole_shown = not(stale);
   if (whole_shown) {
-    app_reply_rules_approve_button(block, f_name, lines, approvals);
+    app_reply_rules_approve_button(block, f_name, lines, approvals, diff);
   }
   let whole = property_get(proposal, "whole");
   function each_file(file) {

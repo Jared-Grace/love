@@ -1,12 +1,13 @@
-import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_style_margin_top } from "./html_style_margin_top.mjs";
+import { app_reply_rules_font_size_small } from "./app_reply_rules_font_size_small.mjs";
 import { html_style_font_size } from "./html_style_font_size.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
+import { html_div } from "./html_div.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
 export function app_reply_rules_whole_show(root, file, approvals) {
@@ -23,8 +24,15 @@ export function app_reply_rules_whole_show(root, file, approvals) {
   html_style_font_size(head, value);
   let color = app_shared_color_gray_dark();
   html_font_color_set(head, color);
-  app_reply_rules_diff_show(root, lines);
+  let diff = html_div(root);
+  app_reply_rules_diff_show(diff, lines);
   ("The verdict is asked for under the file rather than beside its name, because a reviewer reaches it by getting to the bottom of what they are being asked about. A button at the top can be pressed on the way past.");
-  let asked = app_reply_rules_approve_button(root, name, lines, approvals);
+  let asked = app_reply_rules_approve_button(
+    root,
+    name,
+    lines,
+    approvals,
+    diff,
+  );
   return asked;
 }
