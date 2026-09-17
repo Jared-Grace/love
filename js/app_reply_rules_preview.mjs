@@ -36,6 +36,9 @@ export async function app_reply_rules_preview() {
   let status = html_p_text(root, "Reading...");
   let chooser = html_div(root);
   let listed = html_div(root);
+  ("Every change whose files are all approved is put into the code before anything is read, so a change finished on a visit that was cut off goes in now and is not offered again.");
+  let f_apply = fn_name("reply_proposals_approved_apply");
+  await app_shared_api_named(f_apply, []);
   let f = fn_name("app_message_reply_proposals_shown");
   let shown = await app_shared_api_named(f, []);
   let proposals = property_get(shown, "proposals");
