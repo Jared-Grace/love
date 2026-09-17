@@ -8,7 +8,7 @@ import { app_shared_game_npc_turn_rest_ms } from "./app_shared_game_npc_turn_res
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
-export function bless_person_turn_ready(person, direction) {
+export function app_shared_game_npc_turn_ready(person, direction) {
   arguments_assert(arguments, 2);
   ("Whether somebody on the street has rested long enough since their last turn to turn to face this way now.");
   ("The rest is set by the BIGGER of the two turns - the one they last made and the one they are about to make - so a turn about is kept away from other turns on both sides of it.");
