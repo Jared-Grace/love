@@ -8,8 +8,7 @@ import { object_copy } from "./object_copy.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { app_code_lesson_quiz_token_select } from "./app_code_lesson_quiz_token_select.mjs";
 import { each } from "./each.mjs";
-import { app_code_lesson_quiz_lines_order } from "./app_code_lesson_quiz_lines_order.mjs";
-import { app_code_lesson_quiz_line_missing } from "./app_code_lesson_quiz_line_missing.mjs";
+import { app_code_lesson_quizzes_lines_add } from "./app_code_lesson_quizzes_lines_add.mjs";
 import { app_code_lesson_quiz } from "./app_code_lesson_quiz.mjs";
 import { list_map } from "./list_map.mjs";
 export function app_code_lesson_quizzes_generic(params) {
@@ -67,19 +66,9 @@ export function app_code_lesson_quizzes_generic(params) {
   }
   each(codes, lambda2);
   ("THE QUIZZES ABOUT LINES COME LAST, after every quiz a lesson already had, so a quiz keeps its place in the list and the progress kept against that place still names the same quiz");
-  ("Both run in the backwards direction, because the program is what gets built: the learner is shown what it logs and puts the program together that logs it");
   let lines = property_get_or(params, "lines", false);
   if (lines) {
-    let lines_order = object_copy_assign(backwards, {
-      on_answer: app_code_lesson_quiz_lines_order,
-      answer_label: "Please put the lines in order: ",
-    });
-    list_add(infos, lines_order);
-    let line_missing = object_copy_assign(backwards, {
-      on_answer: app_code_lesson_quiz_line_missing,
-      answer_label: "Please build the missing line: ",
-    });
-    list_add(infos, line_missing);
+    app_code_lesson_quizzes_lines_add(infos, backwards);
   }
   let quizzes_get = function lambda(question, answer) {
     function each_info(qa) {
