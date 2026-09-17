@@ -39,7 +39,7 @@ export function bible_glyph_chapter_psa096() {
           "$name_tag,",
           "$speech+thumbs_up",
           "His",
-          "name;",
+          "$name_tag;",
           "proclaim",
           "His",
           "salvation",
