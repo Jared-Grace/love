@@ -24,7 +24,7 @@ export function app_code_lesson_statement_name_sum() {
     batch_get: batch,
     example_count: 1,
     on_question: html_text_set_code_dark_lines,
-    unscramble: false,
+    unscramble: false, lines: true,
     quiz_backwards_answer_count_override: null,
     forwards_answer_count_override: null,
   });
