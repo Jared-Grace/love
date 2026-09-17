@@ -1,7 +1,4 @@
-import { property_equals } from "./property_equals.mjs";
-import { app_shared_game_npc_turn_ready } from "./app_shared_game_npc_turn_ready.mjs";
-import { bless_person_face } from "./bless_person_face.mjs";
-import { not } from "./not.mjs";
+import { app_shared_game_npc_face_first } from "./app_shared_game_npc_face_first.mjs";
 import { bless_person_step_boxed } from "./bless_person_step_boxed.mjs";
 import { bless_person_slide } from "./bless_person_slide.mjs";
 import { divide } from "./divide.mjs";
@@ -58,15 +55,9 @@ export function bless_person_step(world, person) {
   if (turned) {
     property_set(person, "heading", back);
   }
-  ("Turning and walking are TWO steps, never one. A person whose way is not the way they face spends this step turning to face it, standing where they are, and walks it on the next. Turned while sliding, somebody going back the way they came walked backwards while spinning round, which reads as a person twirling rather than a person changing their mind.");
-  let facing_way = property_equals(person, "direction", way);
-  if (not(facing_way)) {
-    ("EVERY turn waits out the rest after their last one, standing where they are. A turn hard on the heels of another turn is a person spinning; somebody pacing two squares turned about on every one of them, and on a phone even the quarter turns of stepping round somebody came quick enough to read as twirling. Standing a moment longer in somebody's way is what a real person does anyway.");
-    let ready = app_shared_game_npc_turn_ready(person, way);
-    if (not(ready)) {
-      return;
-    }
-    bless_person_face(person, way);
+  ("A person whose way is not the way they face spends this step turning to face it - or waiting until they may - and walks it on a later one.");
+  let turning = app_shared_game_npc_face_first(person, way);
+  if (turning) {
     return;
   }
   let to = property_get(tiles, way);
