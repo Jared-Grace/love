@@ -1,6 +1,5 @@
 import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction_across } from "./g_direction_across.mjs";
 import { and } from "./and.mjs";
 import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
