@@ -1,3 +1,4 @@
+import { app_code_lesson_comment_after_code } from "./app_code_lesson_comment_after_code.mjs";
 import { app_code_lesson_expression_choose_order_parentheses_minus_divide } from "./app_code_lesson_expression_choose_order_parentheses_minus_divide.mjs";
 import { app_code_lesson_expression_choose_order_arithmetic_less_than } from "./app_code_lesson_expression_choose_order_arithmetic_less_than.mjs";
 import { app_code_lesson_expression_choose_order_swapping_add } from "./app_code_lesson_expression_choose_order_swapping_add.mjs";
@@ -305,6 +306,7 @@ export function app_code_lessons_fns() {
     app_code_lesson_comment_note,
     app_code_lesson_log_twice,
     app_code_lesson_comment_skip_line,
+    app_code_lesson_comment_after_code,
     app_code_lesson_statement_name_value,
     app_code_lesson_statement_name_identifier,
     app_code_lesson_statement_name_two,
