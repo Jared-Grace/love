@@ -16,7 +16,9 @@ export async function lyric_video_song_melody_write(
   "Makes a song's lyric video from its recording and its drafted document in one go: hears where each line and each word is sung, moves every word onto the note of the melody it is sung on, and renders the video with the word being sung lit red.";
   "★ THE DOCUMENT HAS TO SAY WHICH ARDOUR SESSION AND WHICH TRACKS CARRY THE MELODY BEFORE THIS IS RUN, as ardour: { session, tracks }. That is the one thing about a song only the person who made it knows, and everything else here is heard or read.";
   "★ EACH STEP WRITES THE DOCUMENT BEFORE THE NEXT READS IT, so a run that fails partway leaves every step before it done and readable, and the failing step can be run on its own once whatever it refused is fixed.";
-  "★ THE LINES ARE HEARD AGAIN EVERY TIME, WHICH REPLACES ANY LINE A PERSON HAS MOVED BY HAND. This is the whole song from nothing; a song already timed that only needs its video again is lyric_video_song_video_write, which keeps every hand move.";
+  ("★ THE LINES ARE HEARD AGAIN EVERY TIME, WHICH REPLACES ANY LINE A PERSON HAS MOVED BY HAND. This is the whole song from nothing; a song already timed that only needs its video again is ",
+    fn_name("lyric_video_song_video_write"),
+    ", which keeps every hand move.");
   ("The subtitle file is kept where ",
     fn_name("lyric_video_document_subtitles_path"),
     " says, the same place the psalms' render keeps theirs, so the timing stays readable after the video is made.");
