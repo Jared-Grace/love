@@ -13,7 +13,7 @@ export function app_code_lesson_statement_name_copy_kept() {
   ("The screen that taught copying said in the picture that nothing was removed from the cup that was copied. This one asks the question from the other end - the copied cup changes afterwards - and the answer is the same fact seen from the side a learner will actually meet it on.");
   ("So the new fact is that the copying happened once, when that line was reached, and is over. A name is not tied to the name it was filled from; it holds a value, and the value it holds is the one that was there at the moment it was filled.");
   ("This is the misreading that survives longest if it is never asked about. Nothing before this screen can tell a learner whether a name follows another name or holds a copy of it - every program up to here would write out the same thing either way - so a learner who has quietly decided it follows has been right every time so far.");
-  ("Two names and four lines, which is the copying screen's program with one line put in. The line put in is the changing line from three screens back, so the program is made only of lines a learner has read, and everything new is in the order they come in.");
+  ("Two names and four lines, which is the copying screen's program with one line put in. The line put in is the changing line from the lesson that gives a name a new value, so the program is made only of lines a learner has read, and everything new is in the order they come in.");
   ("Building the code from tokens stays switched off, for the reason the screens before give.");
   let name_id = app_code_lesson_statement_name_copy_kept_title_name_id();
   let batch = app_code_batch_question_answer_fns(
