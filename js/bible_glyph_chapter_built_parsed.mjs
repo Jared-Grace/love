@@ -3,8 +3,8 @@ import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { list_add } from "./list_add.mjs";
 import { bible_glyph_word_parse } from "./bible_glyph_word_parse.mjs";
+import { list_add } from "./list_add.mjs";
 export function bible_glyph_chapter_built_parsed(built, drawn) {
   arguments_assert(arguments, 2);
   ("$plain built");
@@ -13,6 +13,7 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
   ("One built picture Bible chapter turned into the parsed form every drawing of a chapter already reads, with each word's picture looked up by its number at the moment it is asked for.");
   ("THE LOOKUP IS HANDED IN, and that is where a reader's own choices will go. The table's pictures are one lookup; a reader who prefers another picture for a word lays their choice over it and hands in the result, and nothing here needs to know which of the two a picture came from.");
   ("A WORD GOES THROUGH THE SAME PARSER A HAND-WRITTEN WORD DOES. It is spelled in the shorthand first - a dollar and the picture's name, or its English - and then parsed, so a built chapter and a written one cannot come out in two different shapes for the drawing to disagree about.");
+  ("Each verse keeps its whole original line and its whole English line as they came, because the key under a verse reads them off the chapter it already holds rather than sending for them again.");
   ("A word with no picture and no English of its own is left out: its English was pulled into a neighbour, which already says it.");
   let verses = [];
   for (let verse of built.verses) {
@@ -31,6 +32,8 @@ export function bible_glyph_chapter_built_parsed(built, drawn) {
     }
     list_add(verses, {
       verse_number: verse.verse_number,
+      original: verse.original,
+      english: verse.english,
       words,
     });
   }
