@@ -1,18 +1,22 @@
+import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
 import { html_div } from "./html_div.mjs";
 import { bible_glyph_characters_lookup } from "./bible_glyph_characters_lookup.mjs";
 import { html_clear } from "./html_clear.mjs";
-import { html_div_text } from "./html_div_text.mjs";
 import { text_combine } from "./text_combine.mjs";
+import { html_div_text } from "./html_div_text.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
-import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
+import { bible_glyph_testament_drawn } from "./bible_glyph_testament_drawn.mjs";
+import { equal } from "./equal.mjs";
+import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
 import { bible_glyph_chapter_built_parsed } from "./bible_glyph_chapter_built_parsed.mjs";
 import { bible_glyph_chapter_fetched } from "./bible_glyph_chapter_fetched.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { bible_glyph_verse_draw_html } from "./bible_glyph_verse_draw_html.mjs";
+import { html_direction_rtl_set } from "./html_direction_rtl_set.mjs";
+import { bible_glyph_verse_original_parsed } from "./bible_glyph_verse_original_parsed.mjs";
 import { html_button } from "./html_button.mjs";
 import { bible_glyph_chapter_built_samples } from "./bible_glyph_chapter_built_samples.mjs";
 import { list_map } from "./list_map.mjs";
@@ -24,7 +28,7 @@ export function bible_glyph_chapter_built_preview() {
   let root = html_body_div();
   html_p_text(
     root,
-    "Tap a chapter. Each verse shows ✍️ the hand-written line, then ⚙️ the built line.",
+    "Tap a chapter. Each verse shows ✍️ the hand-written line, then ⚙️ the built line, then 📜 the built line in the order the original was written.",
   );
   let row = html_div(root);
   let holder = html_div(root);
@@ -35,8 +39,9 @@ export function bible_glyph_chapter_built_preview() {
     let text = text_combine("loading ", chapter_code);
     html_div_text(holder, text);
     let testament_name = bible_chapter_testament_name(chapter_code);
-    let roots = bible_glyph_roots_testament_table(testament_name);
-    let drawn = bible_glyph_roots_drawn_lookup(roots);
+    let drawn = bible_glyph_testament_drawn(testament_name);
+    let right = ebible_testament_old_name();
+    let rtl = equal(testament_name, right);
     let parsed = bible_glyph_chapter_built_parsed(built, drawn);
     let hand = await bible_glyph_chapter_fetched(chapter_code);
     html_clear(holder);
@@ -54,6 +59,15 @@ export function bible_glyph_chapter_built_preview() {
       let built_line = html_div(block);
       html_span_text(built_line, "⚙️ ");
       bible_glyph_verse_draw_html(built_line, verse.words, lookup);
+      let original_line = html_div(block);
+      html_direction_rtl_set(original_line, rtl);
+      html_span_text(original_line, "📜 ");
+      let built_verse = built.verses[subtract(index, 1)];
+      let original_words = bible_glyph_verse_original_parsed(
+        built_verse.original_words,
+        drawn,
+      );
+      bible_glyph_verse_draw_html(original_line, original_words, lookup);
       html_div_text(block, " ");
     }
   }
