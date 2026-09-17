@@ -10,6 +10,7 @@ import { not } from "./not.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
 import { property_count_add } from "./property_count_add.mjs";
+import { bible_glyph_gloss_english_absent_is } from "./bible_glyph_gloss_english_absent_is.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { bible_glyph_verse_glyph_counts } from "./bible_glyph_verse_glyph_counts.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -20,6 +21,7 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
+import { list_unique } from "./list_unique.mjs";
 export async function bible_glyph_chapters_collision_marks_walked() {
   "Every mark an authored chapter has already DRAWN using a picture two roots share, told apart by asking the interlinear which of those roots actually stands in that verse.";
   "SPLITTING A SHARED PICTURE IS CHEAP AND RE-DRAWING THE CHAPTERS IS NOT. The moment one of the two roots is moved to a picture of its own, every mark already on the page becomes a question - it was drawn when one picture served both, so the page records the picture and never the word. Read by hand that is hundreds of verses; read against the interlinear most of them are not a question at all, because only one of the two roots occurs in the verse and the mark can only have been that one.";
@@ -28,6 +30,7 @@ export async function bible_glyph_chapters_collision_marks_walked() {
   "HOW MANY MARKS THE WORDS WANT IS NOT ALWAYS HOW MANY WORDS THERE ARE. One word wanting one mark is the rule and the Greek emphatic double negative is its one exception: two negatives standing together that mean certainly not, which a reader meeting as two negation marks in a row cancels back into the verse's own opposite. So the closing half of that idiom wants no mark of its own, and whether a word is that closing half is asked over the verse word by word rather than over the negations alone - in two separate clauses the two negatives are neighbours in a list of negations while standing far apart in the sentence.";
   "THE PAIRING ASSUMES THE AUTHOR DREW IN THE ORIGINAL'S ORDER. That is an assumption and not a fact - English is free to move a word past another, and a chapter is written as readable English. Three things hold it up. The counts have to agree, which is a strong precondition and not a formality. The pairing is never attempted where they differ, because marks and words that will not pair one for one will not pair by position either. And it was read by hand against every verse this reading left over, twenty-six of them, where the order held in all twenty-six.";
   "EVERY OCCURRENCE COUNTS, including one English turned into a pronoun or dropped. The narrow reading would be to skip those, and it would be wrong in the dangerous direction: skipping an occurrence can leave one root standing alone and report a verse as DECIDED that a person would have had to read. Counting them also makes the pairing safer rather than riskier - a word English dropped is one the chapter cannot have drawn, so it breaks the count agreement and sends that verse to a person instead of pairing it wrongly.";
+  "AND THEN IT IS ASKED A SECOND TIME WITHOUT THE WORDS ENGLISH GIVES NOTHING, BUT ONLY WHERE THAT MAKES THE COUNTS AGREE (2026-09-17). The paragraph above is right that a dropped word cannot have been drawn, and that same fact is what lets it go: once the words the interlinear prints as dots, a dash or a blank are set aside, a verse whose marks number exactly the words left is fully paired - each mark has a spoken word to be, and none is left over for a dropped one. The danger named above survives only where an author drew a mark English does not say, and such a mark makes the count one too many, so that verse still goes to a person. Vvv is not set aside, because its English is printed, only in the next row. This moved a hundred and eighteen marks written after the record was taken - chiefly lemor, the saying that introduces speech and that English turns into a colon, standing beside dabar.";
   arguments_assert(arguments, 0);
   let chapters = bible_glyph_chapters();
   let decided = [];
@@ -49,9 +52,13 @@ export async function bible_glyph_chapters_collision_marks_walked() {
     let rows = both.rows;
     let present_by_verse = {};
     let wanted_by_verse = {};
+    let spoken_by_verse = {};
+    let spoken_wanted_by_verse = {};
     for (let row of rows) {
       let present = {};
       let wanted = {};
+      let spoken = {};
+      let spoken_wanted = {};
       let previous_strong = "";
       for (let word of row.words) {
         let closes = bible_glyph_negation_idiom_closes_is(
@@ -76,9 +83,25 @@ export async function bible_glyph_chapters_collision_marks_walked() {
         if (opens) {
           property_count_add(wanted, glyph, 1);
         }
+        let started_spoken = property_exists(spoken, glyph);
+        if (not(started_spoken)) {
+          property_set(spoken, glyph, []);
+          property_set(spoken_wanted, glyph, 0);
+        }
+        let absent = bible_glyph_gloss_english_absent_is(word.gloss);
+        if (absent) {
+          continue;
+        }
+        let named_spoken = property_get(spoken, glyph);
+        list_add(named_spoken, root_name);
+        if (opens) {
+          property_count_add(spoken_wanted, glyph, 1);
+        }
       }
       property_set(present_by_verse, row.verse_number, present);
       property_set(wanted_by_verse, row.verse_number, wanted);
+      property_set(spoken_by_verse, row.verse_number, spoken);
+      property_set(spoken_wanted_by_verse, row.verse_number, spoken_wanted);
     }
     let parsed = bible_glyph_chapter(chapter_code);
     for (let verse of parsed.verses) {
@@ -97,6 +120,21 @@ export async function bible_glyph_chapters_collision_marks_walked() {
       let counted = not(unasked);
       if (counted) {
         wanted = asked;
+      }
+      let spoken = {};
+      let spoken_found = property_get_or_null(spoken_by_verse, verse_number);
+      let spoken_known = not(null_is(spoken_found));
+      if (spoken_known) {
+        spoken = spoken_found;
+      }
+      let spoken_wanted = {};
+      let spoken_asked = property_get_or_null(
+        spoken_wanted_by_verse,
+        verse_number,
+      );
+      let spoken_counted = not(null_is(spoken_asked));
+      if (spoken_counted) {
+        spoken_wanted = spoken_asked;
       }
       for (let glyph of object_property_names(drawn)) {
         let collides = property_exists(shared, glyph);
@@ -147,6 +185,39 @@ export async function bible_glyph_chapters_collision_marks_walked() {
         let paired = equal(left, drew);
         if (paired) {
           list_add(aligned, entry);
+          continue;
+        }
+        let spoken_order = property_get_or_null(spoken, glyph);
+        let spoken_none = null_is(spoken_order);
+        if (spoken_none) {
+          spoken_order = [];
+        }
+        let spoken_left = property_get_or_null(spoken_wanted, glyph);
+        let spoken_unwanted = null_is(spoken_left);
+        if (spoken_unwanted) {
+          spoken_left = 0;
+        }
+        let spoken_paired = equal(spoken_left, drew);
+        if (spoken_paired) {
+          let spoken_distinct = list_unique(spoken_order);
+          let spoken_sorted = list_sort_text(spoken_distinct);
+          let spoken_entry = {
+            chapter_code,
+            verse_number,
+            glyph,
+            drew,
+            order: spoken_order,
+            wanted: spoken_left,
+            roots: spoken_sorted,
+            sharers: property_get(shared, glyph),
+          };
+          let spoken_count = list_size(spoken_sorted);
+          let spoken_decidable = equal(spoken_count, 1);
+          if (spoken_decidable) {
+            list_add(decided, spoken_entry);
+            continue;
+          }
+          list_add(aligned, spoken_entry);
           continue;
         }
         list_add(ambiguous, entry);
