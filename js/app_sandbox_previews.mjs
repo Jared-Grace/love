@@ -1,3 +1,4 @@
+import { app_sandbox_previews_lyric_video_song_swaps_load } from "./app_sandbox_previews_lyric_video_song_swaps_load.mjs";
 import { app_sandbox_previews_code_review_load } from "./app_sandbox_previews_code_review_load.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_sandbox_previews_lyric_timing_load } from "./app_sandbox_previews_lyric_timing_load.mjs";
@@ -67,6 +68,7 @@ export function app_sandbox_previews() {
     lyric_timing: lyric_timing_load,
     lyric_video_review: lyric_video_review_load,
     lyric_video_song_review: app_sandbox_previews_lyric_video_song_review_load,
+    lyric_video_song_swaps: app_sandbox_previews_lyric_video_song_swaps_load,
     lyric_video_song_words_timing:
       app_sandbox_previews_lyric_video_song_words_timing_load,
     lyric_video_pictures_review:
