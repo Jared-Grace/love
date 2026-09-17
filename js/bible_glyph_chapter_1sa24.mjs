@@ -202,7 +202,7 @@ export function bible_glyph_chapter_1sa24() {
           "$hammer",
           "such",
           "a",
-          "thing",
+          "$speech",
           "to",
           "my",
           "$crown,",
