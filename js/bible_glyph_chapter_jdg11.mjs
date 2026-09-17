@@ -1234,7 +1234,7 @@ export function bible_glyph_chapter_jdg11() {
           "$hammer",
           "this",
           "one",
-          "thing",
+          "$speech",
           "for",
           "two",
           "months.",
