@@ -1,9 +1,3 @@
-import { equal } from "./equal.mjs";
-import { subtract } from "./subtract.mjs";
-import { less_than } from "./less_than.mjs";
-import { not_equal } from "./not_equal.mjs";
-import { less_than_equal } from "./less_than_equal.mjs";
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -11,19 +5,26 @@ import { html_div } from "./html_div.mjs";
 import { html_style_assign } from "./html_style_assign.mjs";
 import { html_audio_controls } from "./html_audio_controls.mjs";
 import { html_div_text } from "./html_div_text.mjs";
+import { equal } from "./equal.mjs";
+import { subtract } from "./subtract.mjs";
+import { less_than } from "./less_than.mjs";
 import { html_media_time_set } from "./html_media_time_set.mjs";
 import { html_media_play } from "./html_media_play.mjs";
+import { not_equal } from "./not_equal.mjs";
 import { html_text_set } from "./html_text_set.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { api_read } from "./api_read.mjs";
 import { html_button_list } from "./html_button_list.mjs";
 import { html_button } from "./html_button.mjs";
+import { less_than_equal } from "./less_than_equal.mjs";
+import { lyric_video_word_done } from "./lyric_video_word_done.mjs";
+import { not } from "./not.mjs";
 import { html_request_animation_frame } from "./html_request_animation_frame.mjs";
 import { html_media_time } from "./html_media_time.mjs";
 import { html_clear } from "./html_clear.mjs";
 import { null_is } from "./null_is.mjs";
-import { html_src_set } from "./html_src_set.mjs";
 import { lyric_video_song_audio_url } from "./lyric_video_song_audio_url.mjs";
+import { html_src_set } from "./html_src_set.mjs";
 export async function lyric_video_song_words_timing_preview() {
   arguments_assert(arguments, 0);
   ("The screen for correcting when each word of a song turns red, on the sandbox app at hash lyric_video_song_words_timing: every word is a button, the song plays with the word being sung lit, and a picked word is moved earlier or later by a quarter, an eighth or a sixteenth note.");
@@ -160,27 +161,13 @@ export async function lyric_video_song_words_timing_preview() {
     word_play(entry);
   }
   html_button(row, "Play again", again);
-  function word_done(index) {
-    let entry = desk.words[index];
-    let next_entry = desk.words[index + 1];
-    if (
-      equal(next_entry, undefined) ||
-      not_equal(next_entry.line_index, entry.line_index)
-    ) {
-      let r2 = entry.word.end;
-      return r2;
-    }
-    let gap = subtract(next_entry.word.start, entry.word.end);
-    let runs_on = less_than(gap, 1);
-    let done = runs_on ? next_entry.word.start : entry.word.end;
-    return done;
-  }
   function word_lit_at(seconds) {
     let found = null;
     for (let index = 0; less_than(index, desk.words.length); index++) {
       let entry = desk.words[index];
       let begun = less_than_equal(entry.word.start, seconds);
-      let a = word_done(index);
+      let line_words = desk.lines[entry.line_index].words;
+      let a = lyric_video_word_done(line_words, entry.word_index);
       let over = less_than_equal(a, seconds);
       if (begun && not(over)) {
         found = entry;
