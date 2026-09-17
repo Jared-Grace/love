@@ -712,7 +712,7 @@ export function bible_glyph_chapter_deu26() {
           "in",
           "praise",
           "and",
-          "name",
+          "$name_tag",
           "and",
           "honor,",
           "and",
