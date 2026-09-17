@@ -42,6 +42,8 @@ export function bible_glyph_characters() {
   "THE SCREAMING FACE IS FEAR, AND IT IS NARROWER THAN THE WORD IT CARRIES. Phobos and phobeomai are glossed fear or afraid in most of their places and awe, respect or reverent in a handful, and English keeps that same double sense inside its one word - the fear of the LORD is the same noun as the fear that runs away. A screaming face says only the second of the two. So the picture is as wide as the commoner sense and no wider, and what covers the rest is a rule for whoever writes a chapter rather than another row in this table.";
   "WHERE THE INTERLINEAR GLOSSES THE WORD AWE OR RESPECT, WRITE IT IN ENGLISH. That costs no picture at all - every undrawn word in this Bible already stands in letters - and it puts the repair one verse at a time, where the ambiguity actually arises, instead of in a table that cannot see which sense is in front of it. The alternative was refusing the mark altogether, and that would have left the commonest word for terror in the New Testament blank in order to guard a handful of places no single picture was ever going to reach.";
   "IT WAS ASKED FOR BY THE VERSE THAT SETS FEAR AGAINST LOVE. The eighteenth verse of the fourth chapter of the first letter of John says that perfect love drives out fear and that fear involves punishment, which is terror and nothing else, so the first place this mark is drawn is a place where its narrowness is not a compromise but the exact reading.";
+  "THE LAST FOUR RELATIONS WERE BOUGHT FOR THE SMALL WORDS JOINED ONTO A HEBREW WORD, which had been left in letters on purpose until the goal became pictures only. The person with no face is me - the profile picture every screen already uses for whoever is looking at it - and the hand pointing straight out of the picture is you, which joins the two pointing hands as the third direction a hand can point. The target is to and for, a going toward and a being meant for. The mirror is like and as, because a likeness is what a mirror hands back; the equals sign was not reused for it, since that sign is held back as the record of a claim this Bible refused to make.";
+  "NONE OF THE FOUR SAYS HOW MANY. We shares the mark for me and a crowd of you shares the mark for you, the way he and they already share the hand pointing back. The two busts were not taken for we because they already draw a crowd.";
   let characters = [
     {
       name: "cross",
@@ -386,6 +388,22 @@ export function bible_glyph_characters() {
     {
       name: "arrow_both_ways",
       character: "↔️",
+    },
+    {
+      name: "me",
+      character: "👤",
+    },
+    {
+      name: "you",
+      character: "🫵",
+    },
+    {
+      name: "toward",
+      character: "🎯",
+    },
+    {
+      name: "likeness",
+      character: "🪞",
     },
     {
       name: "water",
