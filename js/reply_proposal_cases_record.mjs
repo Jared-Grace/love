@@ -1,3 +1,4 @@
+import { property_equals_json } from "./property_equals_json.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals } from "./reply_proposals.mjs";
@@ -7,7 +8,6 @@ import { file_read_json } from "./file_read_json.mjs";
 import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
-import { json_equal } from "./json_equal.mjs";
 import { property_set } from "./property_set.mjs";
 import { list_add } from "./list_add.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
@@ -39,10 +39,8 @@ export async function reply_proposal_cases_record(title) {
       }
       let answered = property_get(wanted, "answered");
       let outputs = property_get(wanted, "outputs");
-      let left3 = property_get(one, "answered");
-      let left4 = json_equal(left3, answered);
-      let left5 = property_get(one, "outputs");
-      let right = json_equal(left5, outputs);
+      let left4 = property_equals_json(one, "answered", answered);
+      let right = property_equals_json(one, "outputs", outputs);
       let already = and(left4, right);
       if (already) {
         continue;
