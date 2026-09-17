@@ -1,3 +1,4 @@
+import { property_equals } from "./property_equals.mjs";
 import { property_equals_json } from "./property_equals_json.mjs";
 import { list_find_property_get } from "./list_find_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -5,7 +6,6 @@ import { reply_proposals } from "./reply_proposals.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_cases_path } from "./reply_cases_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
-import { equal } from "./equal.mjs";
 import { and } from "./and.mjs";
 import { not } from "./not.mjs";
 import { property_set } from "./property_set.mjs";
@@ -29,10 +29,8 @@ export async function reply_proposal_cases_record(title) {
     let from = property_get(one, "from");
     let message = property_get(one, "message");
     for (let wanted of measured) {
-      let left = property_get(wanted, "from");
-      let same_from = equal(left, from);
-      let left2 = property_get(wanted, "message");
-      let same_message = equal(left2, message);
+      let same_from = property_equals(wanted, "from", from);
+      let same_message = property_equals(wanted, "message", message);
       let same = and(same_from, same_message);
       if (not(same)) {
         continue;
