@@ -64,7 +64,7 @@ export async function app_g_hero_evil_step(hero, evil) {
     return pause;
   }
   bless_person_crossing_set(evil);
-  app_shared_game_npc_move(evil, to, 0);
+  await app_shared_game_npc_move(evil, to, 0);
   let seconds = divide(pace, 1000);
   bless_person_slide(evil, seconds);
   return pace;
