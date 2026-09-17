@@ -1,9 +1,9 @@
+import { property_text_to } from "./property_text_to.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_sum_lines } from "./app_code_lesson_sum_lines.mjs";
 import { js_code_comment_prefix } from "./js_code_comment_prefix.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
-import { text_to } from "./text_to.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_comment_skip_line } from "./app_code_lesson_comment_skip_line.mjs";
@@ -24,8 +24,7 @@ export function app_code_lesson_comment_after_code_above(root, context) {
   let first_line = property_get(lines, "first_line");
   let last_line = property_get(lines, "last_line");
   let last_noted = text_combine(prefix, last_line);
-  let first_total = property_get(lines, "first_total");
-  let value = text_to(first_total);
+  let value = property_text_to(lines, "first_total");
   let box_lines = app_code_container_light_blue(root);
   app_code_remember_from_lesson(
     box_lines,
