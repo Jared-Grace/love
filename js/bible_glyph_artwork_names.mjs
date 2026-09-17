@@ -365,6 +365,10 @@ export function bible_glyph_artwork_names() {
       asset: "Mirror",
     },
     {
+      glyph: "pin",
+      asset: "Pushpin",
+    },
+    {
       glyph: "equals",
       asset: "Heavy equals sign",
     },

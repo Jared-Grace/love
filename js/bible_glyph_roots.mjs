@@ -83,6 +83,7 @@ export function bible_glyph_roots() {
     fn_name("bible_glyph_negation_idiom_closes_is"),
     " is where it lives.");
   ("EGO, SU, PROS AND HOS WEAR THE PICTURES THE HEBREW JOINED SMALL WORDS WEAR (2026-09-17): the bust for I and we, the finger pointing at the reader for you, the target for to, and the mirror for as and like. The interlinear files every form of I and we under 1473 and every form of you under 4771, so one number each carries the singular and the plural, and none of the four pictures says how many - which is why they were chosen for the Hebrew in the first place. Pros is to three hundred and forty five times against with forty two; hos is as and like, and kathos and hosper are that word built on, so the three sit in one row.");
+  ("THE ARTICLE IS SEATED ON THE PUSHPIN (2026-09-17), the same mark the Hebrew article draws, because every word of the original is to have a picture. It is the in five thousand five hundred and eighty three of its top wordings, and its who and those who are the article standing for the one who, which is the same word doing its own work. Drawing every article is also what makes the one left off God in the first verse of John visible, where silence would have hidden that difference along with all the rest.");
   ("EIS IS DELIBERATELY NOT SEATED ON THE TARGET. It is to four hundred and sixty two times, into two hundred and ninety four, in a hundred and seventy two and for a hundred and twenty three, and whether a movement into a place wants the target or the tray that en already draws is a question about the word rather than a count.");
   let roots = [
     {
@@ -1188,6 +1189,16 @@ export function bible_glyph_roots() {
         {
           strong: "4314",
           glyph: "toward",
+        },
+      ],
+    },
+    {
+      root: "ho",
+      gloss: "the",
+      words: [
+        {
+          strong: "3588",
+          glyph: "pin",
         },
       ],
     },
