@@ -1,3 +1,4 @@
+import { html_hash_name_get } from "./html_hash_name_get.mjs";
 import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
 import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
 import { greater_than } from "./greater_than.mjs";
@@ -26,6 +27,7 @@ import { html_on_input } from "./html_on_input.mjs";
 import { html_value_get } from "./html_value_get.mjs";
 export async function app_original_bible_word_voice_trial_preview() {
   "The screen for judging which Google voice says a single Hebrew or Greek Bible word better, on the sandbox app at hash bible_word_voice_trial: play both recordings of a word, pick the better one or call them the same, and write what was heard.";
+  "A THIRD PART OF THE HASH NAMES WHICH WORDS TO SHOW, as their numbers joined by commas - #bible_word_voice_trial/gem/6,8,11 - so a request to listen to a few words hands over a link that opens on exactly those; choosing a tab drops it and shows the whole set again.";
   "PICKS AND COMMENTS ARE KEPT ON THIS MACHINE THROUGH THE API, so whoever reads the review back reads the file rather than asking for it to be copied out of a phone.";
   "A COMMENT IS SENT A MOMENT AFTER TYPING STOPS AND NOT ON EVERY KEY, and it is sent together with the pick, because the stored record for a word is always the whole of what its row shows.";
   let root = html_body_div();
@@ -116,9 +118,16 @@ export async function app_original_bible_word_voice_trial_preview() {
     await api_read(f_name3, [id, r.pick, r.note]);
     html_text_set(saved, "saved");
   }
+  function shown(row) {
+    let pieces = html_hash_name_get().split("/");
+    let numbers = greater_than(pieces.length, 2) ? pieces[2].split(",") : [];
+    let all = equal(numbers.length, 0);
+    let r11 = all || numbers.includes(String(row.number));
+    return r11;
+  }
   function set_render(s) {
     html_clear(list);
-    for (let row of s.rows) {
+    for (let row of s.rows.filter(shown)) {
       let card = html_div(list);
       let right = app_shared_color_gray_light();
       html_style_assign(card, {
