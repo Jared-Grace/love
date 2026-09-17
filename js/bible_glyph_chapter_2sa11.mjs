@@ -121,7 +121,7 @@ export function bible_glyph_chapter_2sa11() {
           "$no_entry",
           "Bathsheba,",
           "the",
-          "daughter",
+          "$woman",
           "of",
           "Eliam",
           "and",
