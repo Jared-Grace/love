@@ -1,3 +1,4 @@
+import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
 import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
 import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
 import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
@@ -1125,6 +1126,7 @@ export function qa_gates() {
     bible_glyph_chapters_unlisted_gate_run,
     gloss_same_as_gate_run,
     bible_glyph_chapters_name_tag_fire_joined_gate_run,
+    app_code_lessons_released_gate_run,
   ];
   return gates;
 }
