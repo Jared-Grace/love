@@ -1,5 +1,5 @@
-import { html_hash_set } from "./html_hash_set.mjs";
-import { html_hash_name_get } from "./html_hash_name_get.mjs";
+import { html_hash_name_second_set } from "./html_hash_name_second_set.mjs";
+import { html_hash_name_second_or_empty } from "./html_hash_name_second_or_empty.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { app_shared_color_gray_light } from "./app_shared_color_gray_light.mjs";
@@ -233,7 +233,7 @@ export async function app_original_bible_word_voice_trial_preview() {
   }
   for (let s of sets) {
     function lambda10() {
-      html_hash_set("#bible_word_voice_trial/" + s.key);
+      html_hash_name_second_set(s.key);
       let r8 = set_render(s);
       return r8;
     }
@@ -244,8 +244,7 @@ export async function app_original_bible_word_voice_trial_preview() {
     "Both Hebrew voices are male. Google has only a female WaveNet voice for Greek, so Greek also has a female Chirp voice to compare it with fairly.",
   );
   tally_render();
-  let parts = html_hash_name_get().split("/");
-  let asked = greater_than(parts.length, 1) ? parts[1] : "";
+  let asked = html_hash_name_second_or_empty();
   function lambda14(s) {
     let eq = equal(s.key, asked);
     return eq;
