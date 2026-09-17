@@ -1,3 +1,4 @@
+import { app_shared_game_npc_turn_note } from "./app_shared_game_npc_turn_note.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { app_shared_game_npc_elements } from "./app_shared_game_npc_elements.mjs";
 import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
@@ -16,6 +17,7 @@ export function app_shared_game_npc_move(npc, to, delay) {
   let elements = app_shared_game_npc_elements(npc);
   let direction = g_direction(npc, to);
   object_assign(npc, to);
+  app_shared_game_npc_turn_note(npc, direction);
   app_shared_game_character_turn_start(npc, img, direction);
   function element_place(element) {
     g_img_square_style_position_object(npc, element);
