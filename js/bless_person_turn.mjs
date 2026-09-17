@@ -24,9 +24,8 @@ export function bless_person_turn(person) {
   ("have taken - so a turn is a step's worth of intention with the step withheld, which is");
   ("what makes turning and walking read as one person rather than two behaviours.");
   let facing = property_get(person, "direction");
-  let all = g_directions();
-  let others = list_without(all, facing);
+  ("A look round is a QUARTER turn, to one side or the other, and never a turn about. A person who spins to face the way they came, and then again a moment later, twirls on the spot; somebody standing about glances left and right. Turning right round is kept for giving up on a walk, where it happens once and means something.");
+  let others = g_direction_sides(facing);
   let direction = list_random_item(others);
-  let img = app_shared_game_npc_img_get(person);
-  app_shared_game_character_turn_start(person, img, direction);
+  app_shared_game_npc_face(person, direction);
 }

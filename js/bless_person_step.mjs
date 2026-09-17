@@ -54,6 +54,13 @@ export function bless_person_step(world, person) {
   if (turned) {
     property_set(person, "heading", back);
   }
+  ("Turning and walking are TWO steps, never one. A person whose way is not the way they face spends this step turning to face it, standing where they are, and walks it on the next. Turned while sliding, somebody going back the way they came walked backwards while spinning round, which reads as a person twirling rather than a person changing their mind.");
+  let facing = property_get(person, "direction");
+  let facing_way = equal(facing, way);
+  if (not(facing_way)) {
+    app_shared_game_npc_face(person, way);
+    return;
+  }
   let to = property_get(tiles, way);
   ("The square they are leaving is written down first, because the move writes the square");
   ("they are heading for over the top of it - and until they arrive, BOTH are true. Anything");

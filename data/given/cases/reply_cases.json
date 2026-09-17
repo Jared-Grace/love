@@ -16,8 +16,10 @@
  {
   "from": "90a90a48e23dcc51",
   "message": "Good morning",
-  "answered": false,
-  "outputs": []
+  "answered": true,
+  "outputs": [
+   "👋😁 Greetings in the name of our LORD Jesus Christ! ✝️"
+  ]
  },
  {
   "from": "185f8db32271fe25",
@@ -30,8 +32,10 @@
  {
   "from": "69fb4a16808a5bf9",
   "message": "Good morningbrother",
-  "answered": false,
-  "outputs": []
+  "answered": true,
+  "outputs": [
+   "👋😁 Greetings in the name of our LORD Jesus Christ! ✝️"
+  ]
  },
  {
   "from": "bbbc8bb621f025ac",
