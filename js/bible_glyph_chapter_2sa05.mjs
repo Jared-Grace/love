@@ -426,7 +426,7 @@ export function bible_glyph_chapter_2sa05() {
           "more",
           "$son",
           "and",
-          "daughters",
+          "$woman",
           "were",
           "born",
           "to",
