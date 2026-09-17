@@ -15,7 +15,8 @@ export async function bible_glyph_chapter_built(chapter_code) {
   ("the code names one chapter, spelled as the chapter codes spell it. It names a chapter to build and nothing that runs.");
   ("One built picture Bible chapter in the form it is kept in: every verse as its words in English order, each word only its Strong's number and its English.");
   ("THE PICTURE IS LEFT OUT ON PURPOSE. A kept chapter that named its pictures would be stale the moment the table seated another word, and a reader's own choice of picture would have nothing to replace. So what is kept is the part that never changes - which word stands where - and the picture is looked up when the page is drawn.");
-  ("Each word is a pair rather than an object with named fields, because a chapter holds some hundreds of words and the names would be most of its size.");
+  ("Each word is a list rather than an object with named fields, because a chapter holds some hundreds of words and the names would be most of its size.");
+  ("A WORD'S THIRD ELEMENT IS THE KEYS OF ITS PARTS IN ENGLISH ORDER, so a Hebrew word with and or a joined pronoun draws those parts too. It comes third and not first because chapters already kept hold only the first two, and a page reading one of those must still find the number and the English where they were.");
   ("EACH VERSE ALSO KEEPS ITS WHOLE ORIGINAL LINE AND ITS WHOLE ENGLISH LINE, because the key under a verse shows both and a page on a phone has no interlinear to build them from. The derived chapter walks the interlinear verses in order and makes one verse for each, so the two lists line up by place.");
   ("EACH VERSE ALSO KEEPS ITS WORDS IN THE ORDER THEY WERE WRITTEN, for a reader of the original rather than of the English. Each written word is its letters followed by the keys of its parts, from ",
     fn_name("bible_glyph_word_original_keys"),
@@ -28,7 +29,7 @@ export async function bible_glyph_chapter_built(chapter_code) {
   for (let verse of derived.verses) {
     let words = [];
     for (let word of verse.words) {
-      list_add(words, [word.strong, word.english]);
+      list_add(words, [word.strong, word.english, word.keys]);
     }
     let row = list_get(source, index);
     index = add(index, 1);
