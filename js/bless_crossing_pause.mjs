@@ -1,3 +1,4 @@
+import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
 import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction } from "./g_direction.mjs";
 import { bless_crossing_claim } from "./bless_crossing_claim.mjs";
