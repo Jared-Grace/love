@@ -17,6 +17,16 @@ export async function bible_word_voice_trial_rows() {
       rtl: true,
     },
     {
+      key: "gem",
+      label: "Hebrew · Gemini",
+      chapter_code: "GEN01",
+      voices: [
+        ["gemini_plain", "Plain", "plain"],
+        ["gemini_told", "Told the sounds", "told"],
+      ],
+      rtl: true,
+    },
+    {
       key: "grc",
       label: "Greek · John 1",
       chapter_code: "JHN01",
