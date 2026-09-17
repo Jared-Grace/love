@@ -11,12 +11,11 @@ import { list_add } from "./list_add.mjs";
 import { not } from "./not.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_letters_only } from "./text_letters_only.mjs";
+import { text_lower_words_letters } from "./text_lower_words_letters.mjs";
+import { list_includes } from "./list_includes.mjs";
 import { bible_glyph_chapter } from "./bible_glyph_chapter.mjs";
 import { text_is } from "./text_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { add } from "./add.mjs";
-import { regex_letters_not } from "./regex_letters_not.mjs";
-import { text_empty_is } from "./text_empty_is.mjs";
 import { subtract } from "./subtract.mjs";
 import { function_call_commit } from "./function_call_commit.mjs";
 import { bible_glyph_chapter_verse_word_replace } from "./bible_glyph_chapter_verse_word_replace.mjs";
@@ -28,9 +27,10 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_word_draw() {
   "A LITTLE WORD IS ONLY DRAWN ON WHEN THE ROOT ITSELF MEANS THAT LITTLE WORD, AND THAT RULE WAS PAID FOR. The interlinear lines its glosses up with the translation word by word, and that lining up slips: the Hebrew and the LORD, sitting on the covenant name, came back glossed with the bare word and, and a verse reading the LORD was with him and made him prosper lost its conjunction to a second name tag. Thirteen verses were repaired that way before the slip was seen, and every one of them read as broken English afterwards. So a joining word now has to be spelled in the root's own gloss before a mark may stand on it, which is why the Greek kai still takes the and it means and the Hebrew covenant name no longer does.";
   "THE SAME GUARD RUNS THE OTHER WAY ROUND FOR A ROOT THAT IS ITSELF A LITTLE WORD. The negation root means not and nothing else, so a row of it glossed yourselves is the lining up slipping again rather than an English word to draw on - do not cut yourselves came back with the second not sitting on yourselves. When a root's whole gloss is made of joining words, only those words may carry its mark.";
   "EVERY OTHER VERSE IS REFUSED, AND THE REFUSALS ARE THE ANSWER AS MUCH AS THE REPAIRS ARE. Two shared words is a choice between them, one leftover row against two plain words is a choice of place, and a choice is a person's. A gloss that names no plain word at all is a different fault wearing the same report line - a word genuinely left out of the English, or a word swallowed into another - and drawing a mark on a guess would file that fault away as fixed.";
-  "A GLOSS IS COMPARED BY ITS LETTERS ALONE, so case and the full stop at the end of a verse cannot part two spellings of one word, and a gloss of several words matches nothing, which is the safe way round: a row glossed the LORD names no single word of the English and is passed over rather than guessed at.";
+  "A GLOSS IS COMPARED BY ITS LETTERS ALONE, so case and the full stop at the end of a verse cannot part two spellings of one word, and a gloss of several words matches only through the one word of it the root's own gloss names - see the phrase paragraph below - so a phrase naming none of the root, or two words of it, still matches nothing and is passed over rather than guessed at.";
   "ONLY THE PLAIN WORDS OF A VERSE ARE LOOKED AT, because a parsed verse holds two kinds of thing - the English a person typed, and the picture groups the shorthand turned into objects - and asking a group for its letters is asking a thing that has none.";
   "EACH VERSE COMMITS ITSELF under the name of the one entry it changed, because a run of independent repairs that commits once at the end loses every one of their names to a single sweep.";
+  "A ROW'S GLOSS IS OFTEN A PHRASE AND ONLY ONE WORD OF IT IS THE ROOT (2026-09-17). The interlinear prints but Your name under a single Hebrew word, and read whole that phrase is spelled nowhere in the verse, so a hundred and fourteen of a hundred and forty six short verses were being refused for want of one shared word. So a row now stands for the one word of its phrase that the root's own gloss names, when exactly one does - name, out of but Your name, for the root glossed name. Nothing downstream moves: the word still has to stand in the verse as many times as the mark is short, on both sides, before a mark is drawn.";
   arguments_assert(arguments, 0);
   let joining_words = english_joining_words();
   let offenders = await bible_glyph_chapters_verse_marks_underdrawn();
@@ -75,6 +75,24 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_word_draw() {
       }
       let lowered = text_lower_to(word.gloss);
       let bare = text_letters_only(lowered);
+      let root_gloss_seat = property_get_or_null(root_glosses, word.strong);
+      let b = null_is(root_gloss_seat);
+      let root_known = not(b);
+      if (root_known) {
+        let root_parts = text_lower_words_letters(root_gloss_seat);
+        let named_parts = [];
+        for (let part of text_lower_words_letters(word.gloss)) {
+          let named = list_includes(root_parts, part);
+          let again = list_includes(named_parts, part);
+          if (named && not(again)) {
+            list_add(named_parts, part);
+          }
+        }
+        let one_named = equal(named_parts.length, 1);
+        if (one_named) {
+          bare = named_parts[0];
+        }
+      }
       list_add(seated_rows, {
         bare,
         strong: word.strong,
@@ -143,13 +161,7 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_word_draw() {
       if (rootless) {
         continue;
       }
-      let lowered4 = text_lower_to(root_gloss);
-      let r2 = regex_letters_not();
-      for (let part of lowered4.split(r2)) {
-        let blank = text_empty_is(part);
-        if (blank) {
-          continue;
-        }
+      for (let part of text_lower_words_letters(root_gloss)) {
         list_add(root_words, part);
       }
     }
