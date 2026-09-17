@@ -1,7 +1,10 @@
+import { bless_crossing_lane_first } from "./bless_crossing_lane_first.mjs";
+import { property_get_or } from "./property_get_or.mjs";
+import { bless_crossing_glance } from "./bless_crossing_glance.mjs";
+import { equal } from "./equal.mjs";
 import { bless_crossing_glance_facing_road } from "./bless_crossing_glance_facing_road.mjs";
 import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { g_direction_across } from "./g_direction_across.mjs";
 import { and } from "./and.mjs";
 import { bless_crossing_column_clear_is } from "./bless_crossing_column_clear_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -72,8 +75,23 @@ export async function bless_crossing_wait(
   ("the one that says a walk has become a decision, so a swap of one picture for another is");
   ("the last thing it should be.");
   let toward = g_direction(player, to);
-  await app_shared_game_character_turn(player, player_img_c, toward);
-  await app_shared_animation_sleep_quick();
+  ("Already looking up a lane, she has made that look: it is taken where she stands, and the next turn goes straight through the road to the other lane.");
+  let facing = bless_crossing_lane_first(player, toward);
+  let pointed = property_get_or(player, "direction", "south");
+  let looking = equal(pointed, facing);
+  if (looking) {
+    await bless_crossing_glance(player, player_img_c, facing, div_map);
+  } else {
+    await app_shared_game_character_turn(player, player_img_c, toward);
+    await app_shared_animation_sleep_quick();
+    await bless_crossing_glance_facing_road(
+      player,
+      player_img_c,
+      toward,
+      facing,
+      div_map,
+    );
+  }
   ("Which lane to look up is WORKED OUT from the way she is crossing rather than named. A");
   ("road is crossed at right angles to itself, so the crossing already says it.");
   ("There is no hold written between the two looks any more. A look now turns through a");
@@ -81,14 +99,6 @@ export async function bless_crossing_wait(
   ("sits inside each of them, where it is the middle of a turn rather than a wait on a turn");
   ("already finished. Left in both places it would be paid twice, and the length of this was");
   ("measured as too long twice running.");
-  let facing = g_direction_across(toward);
-  await bless_crossing_glance_facing_road(
-    player,
-    player_img_c,
-    toward,
-    facing,
-    div_map,
-  );
   facing = g_direction_opposite(facing);
   await bless_crossing_glance_facing_road(
     player,
