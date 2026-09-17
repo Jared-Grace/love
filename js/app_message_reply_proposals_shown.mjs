@@ -1,13 +1,11 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_message_reply_records_by_key } from "./app_message_reply_records_by_key.mjs";
-import { reply_proposals } from "./reply_proposals.mjs";
+import { reply_proposals_waiting } from "./reply_proposals_waiting.mjs";
 import { app_message_reply_cases_checked } from "./app_message_reply_cases_checked.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_case_real_or_null } from "./reply_case_real_or_null.mjs";
 import { list_map } from "./list_map.mjs";
-import { function_read } from "./function_read.mjs";
-import { reply_proposal_diff_whole } from "./reply_proposal_diff_whole.mjs";
-import { reply_proposal_whole_added } from "./reply_proposal_whole_added.mjs";
+import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { list_add } from "./list_add.mjs";
 export async function app_message_reply_proposals_shown() {
   arguments_assert(arguments, 0);
@@ -19,7 +17,7 @@ export async function app_message_reply_proposals_shown() {
   ("Lines the change names and its file no longer holds come through separately rather than being quietly dropped, so a change that has gone stale says so on the screen instead of drawing as though it still applied.");
   ("The corpus comes through checked rather than raw, so a case that has quietly stopped doing what it was written to do shows on the same screen as the change being proposed. A change is reviewed against a rule set somebody believes is working, and the cheapest way to be wrong about that is to have never looked.");
   let by_key = await app_message_reply_records_by_key();
-  let proposals = await reply_proposals();
+  let proposals = await reply_proposals_waiting();
   let checked = await app_message_reply_cases_checked();
   function each_case(one) {
     let from = property_get(one, "from");
@@ -36,26 +34,13 @@ export async function app_message_reply_proposals_shown() {
   async function each_proposal(proposal) {
     let cases = property_get(proposal, "cases");
     let joined = list_map(cases, each_case);
-    let f_name = property_get(proposal, "fn");
-    let diff = property_get(proposal, "diff");
-    let source = await function_read(f_name);
-    let drawn = reply_proposal_diff_whole(source, diff);
-    let names = property_get(proposal, "whole");
-    let files = [];
-    for (let name of names) {
-      let text = await function_read(name);
-      let one = {
-        name: name,
-        lines: reply_proposal_whole_added(text),
-      };
-      list_add(files, one);
-    }
+    let drawn = await reply_proposal_drawn(proposal);
     let carried = {
       title: property_get(proposal, "title"),
-      fn: f_name,
+      fn: property_get(proposal, "fn"),
       lines: property_get(drawn, "lines"),
       unplaced: property_get(drawn, "unplaced"),
-      whole: files,
+      whole: property_get(drawn, "whole"),
       decide: property_get(proposal, "decide"),
       cases: joined,
     };
