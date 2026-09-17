@@ -600,7 +600,7 @@ export function bible_glyph_chapter_deu29() {
           "forgive",
           "him.",
           "Instead,",
-          "His",
+          "$name_tag",
           "anger",
           "and",
           "$heart_on_fire",
