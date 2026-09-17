@@ -743,7 +743,7 @@ export function bible_glyph_chapter_1sa02() {
           "about",
           "your",
           "$thumbs_down",
-          "deeds",
+          "$speech",
           "from",
           "all",
           "these",
