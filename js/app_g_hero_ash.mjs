@@ -30,10 +30,10 @@ export async function app_g_hero_ash(hero, evil, sheet) {
   ("Where it drifts TO is still its own business. Standing in the right place is not the same");
   ("as standing still, and a puff of smoke is supposed to leave the square it rose from.");
   let square = html_element_width(sheet);
-  let half = divide(square, 2);
+  let half_ring = divide(square, 2);
   let spot = {
-    x: half,
-    y: half,
+    x: half_ring,
+    y: half_ring,
   };
   let embers = range(22);
   function ember_burst(index) {
