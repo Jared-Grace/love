@@ -1,3 +1,4 @@
+import { html_title_set } from "./html_title_set.mjs";
 import { app_sandbox_previews } from "./app_sandbox_previews.mjs";
 import { property_exists } from "./property_exists.mjs";
 import { property_get } from "./property_get.mjs";
@@ -10,7 +11,8 @@ export async function app_sandbox_choose(name) {
   let previews = app_sandbox_previews();
   let first = name.split("/")[0];
   if (property_exists(previews, first)) {
-    html_title_set(first + " (sandbox)"); let load = property_get(previews, first);
+    html_title_set(first + " (sandbox)");
+    let load = property_get(previews, first);
     let preview = await load();
     preview();
     return;
