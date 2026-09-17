@@ -93,7 +93,10 @@ export async function bless_walk(
     if (stepping_out) {
       await bless_crossing_pause(world, to, player, player_img_c, div_map);
     }
-    app_shared_game_character_face(player, player_img_c, direction);
+    ("Turning a corner is DRAWN as a turn, through the facings in between. It costs nothing on");
+    ("a straight walk, where the facing has not changed and the turn does nothing at all - it");
+    ("is paid only at the corners, which are the only steps where anybody would see it.");
+    await app_shared_game_character_turn(player, player_img_c, direction);
     ("Somebody still standing where the player is about to step TRADES PLACES with them: the");
     ("player goes on, and that person steps back into the tile being left. The gospel game's");
     ("own trade, called and not copied, at the same moment in the step that it makes it.");

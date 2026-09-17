@@ -67,8 +67,12 @@ export async function bless_crossing_wait(
   ("It is also what the glances are measured FROM. Each one is drawn half way between the");
   ("road and the lane, so the road has to be somewhere she is actually pointed or the half");
   ("way facing is half way between the lane and a direction she abandoned two steps ago.");
+  ("Squaring up is itself a TURN and is drawn as one, through whatever facings lie between");
+  ("the way the last step left her and the road. It is the first movement of the crossing and");
+  ("the one that says a walk has become a decision, so a swap of one picture for another is");
+  ("the last thing it should be.");
   let toward = g_direction(player, to);
-  app_shared_game_character_face(player, player_img_c, toward);
+  await app_shared_game_character_turn(player, player_img_c, toward);
   await app_shared_animation_sleep_quick();
   ("Which lane to look up is WORKED OUT from the way she is crossing rather than named. A");
   ("road is crossed at right angles to itself, so the crossing already says it.");
@@ -78,9 +82,9 @@ export async function bless_crossing_wait(
   ("already finished. Left in both places it would be paid twice, and the length of this was");
   ("measured as too long twice running.");
   let facing = g_direction_across(toward);
-  await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
+  await bless_crossing_glance(player, player_img_c, facing, div_map);
   facing = g_direction_opposite(facing);
-  await bless_crossing_glance(player, player_img_c, facing, div_map, toward);
+  await bless_crossing_glance(player, player_img_c, facing, div_map);
   ("Forty looks at the road is several times longer than the longest gap between two cars on");
   ("a lane this length, so reaching the end of it means something is wrong rather than that");
   ("the traffic was heavy.");
@@ -104,13 +108,7 @@ export async function bless_crossing_wait(
     let due = less_than_equal(glance, 0);
     if (due) {
       facing = g_direction_opposite(facing);
-      await bless_crossing_glance(
-        player,
-        player_img_c,
-        facing,
-        div_map,
-        toward,
-      );
+      await bless_crossing_glance(player, player_img_c, facing, div_map);
       glance = bless_crossing_glance_tries();
     }
     await app_shared_animation_sleep_quick();

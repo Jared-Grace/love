@@ -13,9 +13,8 @@ export async function bless_crossing_glance(
   player_img_c,
   facing,
   div_map,
-  toward,
 ) {
-  arguments_assert(arguments, 5);
+  arguments_assert(arguments, 4);
   ("One look up the road: the walker turns their head that way and the screen slides that way");
   ("with them, so that what they are looking at is what is being shown.");
   ("The head and the camera are ONE act, said once, rather than two things kept in step by");
@@ -48,16 +47,15 @@ export async function bless_crossing_glance(
   ("south that a head turn reads as nothing having happened, while west is a clean profile");
   ("that cannot be mistaken for anything else. The half-way facing is a good picture of a");
   ("GLANCE and a bad picture of a CHANGE, and what has to be legible at a kerb is the change.");
-  ("So it is used as the frame BETWEEN the two, which is what a half-way picture is for. The");
-  ("walker turns, is caught mid-turn, and ends squared up the lane where a player can see");
-  ("which way she is looking.");
-  ("It costs no time. The hold that used to sit AFTER each look now sits in the middle of the");
-  ("turn, so the same half second buys a turn that can be read instead of a pause held on a");
-  ("picture that could not be.");
-  let look = g_direction_between(toward, facing);
-  app_shared_game_character_face(player, player_img_c, look);
-  await app_shared_animation_sleep_quick();
-  app_shared_game_character_face(player, player_img_c, facing);
+  ("So the diagonals are used as FRAMES BETWEEN the two, which is what a half-way picture is");
+  ("for. The walker turns, is caught mid-turn, and ends squared up the lane where a player");
+  ("can see which way she is looking.");
+  ("Which frames those are is not worked out here, and the way she was already pointed is not");
+  ("passed in any more. A turn is a turn wherever it happens, so it is one thing that knows");
+  ("how to draw one - and it reads where she is pointed off the person, who has been carrying");
+  ("it all along. Handing it in was a second copy of a fact already on the walker, and a");
+  ("second copy is a thing that can disagree.");
+  await app_shared_game_character_turn(player, player_img_c, facing);
   let step = g_direction_step(facing);
   let tiles = bless_crossing_look_ahead_tiles();
   let both = {

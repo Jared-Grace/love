@@ -52,7 +52,7 @@ export async function bless_crossing_pause(
     ("There is no HOLD here any more, and there does not need to be one. The opening-out on the way through the guard below takes about half a second and she stands facing the road for the whole of it, so the pause the eye reads is the street growing around somebody who has already decided - which is the same picture a written-in wait was drawing, paid for twice. Waits either side of it were measured as too long twice running; this one is the one that was free to remove, because something else was already doing its job.");
     ("It comes AFTER the road is claimed, and must. The claim is what stops the traffic, and this pause is time a car would otherwise spend driving into the squares she is about to cross - so claiming first is what makes this a pause rather than a risk.");
     let forward = g_direction(player, to);
-    app_shared_game_character_face(player, player_img_c, forward);
+    await app_shared_game_character_turn(player, player_img_c, forward);
   } finally {
     await bless_camera_player_return(div_map, player_img_c, player);
   }
