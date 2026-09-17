@@ -156,7 +156,7 @@ export function bible_glyph_chapter_psa096() {
           "$star",
           "due",
           "His",
-          "name;",
+          "$name_tag;",
           "bring",
           "an",
           "offering",
