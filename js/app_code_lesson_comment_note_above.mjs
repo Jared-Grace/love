@@ -1,15 +1,15 @@
+import { arguments_assert } from "./arguments_assert.mjs";
+import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
+import { add } from "./add.mjs";
+import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
 import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
-import { add } from "./add.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { arguments_assert } from "./arguments_assert.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
 import { js_code_comment_line } from "./js_code_comment_line.mjs";
-import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { js_comment_start } from "./js_comment_start.mjs";
-import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 export function app_code_lesson_comment_note_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: a line a learner already knows, that same line with a comment written above it, and then what the two slashes are");
@@ -45,10 +45,14 @@ export function app_code_lesson_comment_note_above(root, context) {
     ")",
   ]);
   html_div_cycle_code(box_slashes, [
-    "The computer skips the rest of that line",
+    "When a computer sees ",
+    slashes,
+    ", then the computer skips the rest of that line",
   ]);
   ("the last box says what a comment is FOR, in the plainest word there is for it. The word comment says nothing on its own to somebody meeting it here for the first time - note does, and the two put together give a learner the thing and its real name in one line.");
   html_div_cycle_code(box_slashes, [
     "A comment is a note for people reading the code",
   ]);
+  html_div_cycle_code(box_slashes, ["Code is read by computers (And people)"]);
+  html_div_cycle_code(box_slashes, ["Comments are read by people"]);
 }

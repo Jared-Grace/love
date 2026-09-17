@@ -1,11 +1,13 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-import { text_combine } from "./text_combine.mjs";
 import { js_console_log_name } from "./js_console_log_name.mjs";
 import { js_code_parenthesis_left } from "./js_code_parenthesis_left.mjs";
-import { js_code_statement } from "./js_code_statement.mjs";
+import { text_combine } from "./text_combine.mjs";
 import { js_code_parenthesis_right } from "./js_code_parenthesis_right.mjs";
+import { js_code_statement } from "./js_code_statement.mjs";
 import { html_span_text } from "./html_span_text.mjs";
 import { app_code_placeholder_dots } from "./app_code_placeholder_dots.mjs";
+import { html_span } from "./html_span.mjs";
+import { html_style_white_space } from "./html_style_white_space.mjs";
 import { app_code_code_tile } from "./app_code_code_tile.mjs";
 import { app_code_lesson_statement_title_name_id_paint } from "./app_code_lesson_statement_title_name_id_paint.mjs";
 export function app_code_lesson_log_twice_title_name_id() {
@@ -24,16 +26,19 @@ export function app_code_lesson_log_twice_title_name_id() {
   let opening = text_combine(left, right);
   let code = js_code_parenthesis_right();
   let closing = js_code_statement(code);
-  let counted = text_combine(closing, "(x2)");
   function fill(host) {
-    "the line with its gap: console.log( then the grey dots then );(x2)";
+    "the line with its gap: console.log( then the grey dots then );";
     html_span_text(host, opening);
     app_code_placeholder_dots(host);
-    html_span_text(host, counted);
+    html_span_text(host, closing);
   }
   function paint_code(parent) {
-    "the line drawn as one code tile, so it reads as a single line and never breaks across two rows";
-    app_code_code_tile(parent, fill);
+    "the line drawn as one code tile, and then the count outside it";
+    "The count is not code, so it stands outside the tile in plain text. Drawn inside the tile, it read as five more characters the line has. The tile and the count share one span that refuses to wrap, so the count never lands alone on a row of its own.";
+    let row = html_span(parent);
+    html_style_white_space(row, "nowrap");
+    app_code_code_tile(row, fill);
+    html_span_text(row, "(x2)");
   }
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
