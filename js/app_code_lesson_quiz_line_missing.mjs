@@ -1,6 +1,5 @@
 import { property_get } from "./property_get.mjs";
 import { text_split_newline } from "./text_split_newline.mjs";
-import { app_code_lines_missing_index } from "./app_code_lines_missing_index.mjs";
 import { html_div_code_dark } from "./html_div_code_dark.mjs";
 import { html_text_align_left } from "./html_text_align_left.mjs";
 import { html_div } from "./html_div.mjs";
@@ -32,7 +31,9 @@ export function app_code_lesson_quiz_line_missing(
   let answer_property = property_get(info, "answer_property");
   let code = property_get(qa, answer_property);
   let lines = text_split_newline(code);
-  let index = app_code_lines_missing_index(lines);
+  ("WHICH LINE IS MISSING IS ASKED OF THE QUIZ, not chosen here, because this is drawn afresh for every question and so cannot remember which line the last one left out");
+  let line_next = property_get(info, "line_next");
+  let index = line_next(lines);
   let program = html_div_code_dark(parent);
   html_text_align_left(program);
   function line_draw(line) {
