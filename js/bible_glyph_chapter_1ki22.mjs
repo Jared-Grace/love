@@ -545,7 +545,7 @@ export function bible_glyph_chapter_1ki22() {
           "$check",
           "in",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$name_tag?",
