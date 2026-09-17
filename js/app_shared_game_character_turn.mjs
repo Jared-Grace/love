@@ -34,8 +34,7 @@ export async function app_shared_game_character_turn(
   ("in the world, which is a fact the list itself promises to keep.");
   ("It goes the SHORT way round. More than half a turn one way is less than half the other,");
   ("so a walker asked to face about turns through the nearer side rather than sweeping all");
-  ("the way round the long side like a lighthouse. Exactly half is a dead heat and it goes");
-  ("forward, because a rule that has to answer must answer something and neither is wrong.");
+  ("the way round the long side like a lighthouse. Exactly half is a dead heat, settled below.");
   ("Already facing that way is not a turn and costs nothing - no frame, no wait, no picture");
   ("written. That matters because this is called on every step of a walk, where the facing");
   ("usually has not changed, and a turn that always slept would put a stutter into walking in");
