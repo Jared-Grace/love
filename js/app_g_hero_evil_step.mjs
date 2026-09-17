@@ -1,3 +1,5 @@
+import { g_direction } from "./g_direction.mjs";
+import { app_shared_game_npc_face_first } from "./app_shared_game_npc_face_first.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_first } from "./list_first.mjs";
@@ -62,6 +64,12 @@ export async function app_g_hero_evil_step(hero, evil) {
     let blocker = list_first(blockers);
     await app_g_hero_kill(hero, evil, blocker);
     return pause;
+  }
+  ("A killer turns before walking, and waits between turns, the same as everybody else on the street. Hunting somebody who keeps moving bends the way to them at almost every step, and turning and walking at once at this pace spun a killer round and round as they came.");
+  let way = g_direction(evil, to);
+  let turning = app_shared_game_npc_face_first(evil, way);
+  if (turning) {
+    return pace;
   }
   bless_person_crossing_set(evil);
   app_shared_game_npc_move(evil, to, 0);
