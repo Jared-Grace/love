@@ -21,14 +21,14 @@ export function app_g_npcs_spots_fill(npcs, wanted, player) {
     return d;
   }
   list_sort_number_mapper(moving, nearness);
-  async function fill(tile, index) {
+  function fill(tile, index) {
     let npc = moving[index];
     let none = undefined_is(npc);
     if (none) {
       ("fewer people on the map than the arrangement asks for - stand the ones there are and leave it short, because a shape missing somebody still shows most of what it is for");
       return;
     }
-    await app_shared_game_npc_move(npc, tile, 0);
+    app_shared_game_npc_move(npc, tile, 0);
   }
   each_index(to_fill, fill);
   let filled = list_size(to_fill);

@@ -8,7 +8,7 @@ import { property_set } from "./property_set.mjs";
 import { app_shared_game_npc_move } from "./app_shared_game_npc_move.mjs";
 import { bless_person_crossing_set } from "./bless_person_crossing_set.mjs";
 import { g_direction_opposite } from "./g_direction_opposite.mjs";
-export async function bless_person_step(world, person) {
+export function bless_person_step(world, person) {
   arguments_assert(arguments, 2);
   ("One person takes one step - onward if they can, round whoever is in the way if they");
   ("cannot, back the way they came if there is nowhere else, and nowhere at all when they");
@@ -60,7 +60,7 @@ export async function bless_person_step(world, person) {
   ("reading only the new one is reading where this person will be rather than where they");
   ("are, which is how a tap on somebody walking used to find nobody.");
   bless_person_crossing_set(person);
-  await app_shared_game_npc_move(person, to, 0);
+  app_shared_game_npc_move(person, to, 0);
   ("The step is then made to LAST as long as the wait before their next one, so the");
   ("picture is still crossing the tile when the following step is asked for and the person");
   ("is walking rather than appearing a tile further on.");

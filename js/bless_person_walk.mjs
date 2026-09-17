@@ -89,7 +89,7 @@ export function bless_person_walk(world, person) {
       stepped();
       return;
     }
-    await bless_person_step(world, person);
+    bless_person_step(world, person);
     setTimeout(stepped, pace);
   }
   let left = random();
