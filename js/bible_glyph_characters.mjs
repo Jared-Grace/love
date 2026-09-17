@@ -9,6 +9,7 @@ export function bible_glyph_characters() {
   "THE TWO TEXTS ARE NOT A RENDERING AND A BETTER RENDERING. The emoji text reaches a terminal, a text file, a phone with no network and a message sent to somebody who installed nothing, and it can never say altar. The drawn text says everything and reaches a page. Neither is a degraded copy of the other, they are two products sharing one authored source, and a verse is written once for both.";
   "SO A DRAWN-ONLY GLYPH TAKES AWAY NOTHING. The page already draws every glyph as a picture with its character hidden underneath and swaps them only if the picture fails to load, so a glyph whose character is a word draws the picture where there is one and the English where there is not. Adding one can only ever move a word from English to a picture in the drawn text and leave the emoji text exactly as it was, which is why seating them needs no permission and no deadline.";
   "A DRAWN-ONLY GLYPH MUST BE NAMED WITH THE WORD A READER SHOULD SEE, because its name and its fallback are the same English and there is nowhere else for that word to come from. That is a rule about these and not about the others - name_tag, tray_out and heart_red are all named for what they are FOR rather than for what they say, and they may be, because a reader never meets their names.";
+  "FORTY ONE WORDS STOPPED BEING DRAWN-ONLY AT ONCE (2026-09-17), because each had been seated as a word before anybody checked whether a font draws it, and every one of them turned out to have a picture in the artwork set - which is the set saying a character exists. Each character was then read from that picture's own record in the set rather than typed from memory, because a name and a character can disagree quietly: the set's horse is the whole animal and not the horse's face, and its camel has one hump. So the emoji text now shows what the drawn text already drew, and the two agree by construction rather than by care.";
   "THE LAST FOUR ARE NOT THINGS, and they are the first glyphs here that are not. Every other picture in this list is something a reader could point at - a cross, a hand, a house - and those four draw a RELATION instead: joining, being inside, coming out of, and pointing at what follows. They are grouped at the end rather than mixed in because that difference is real and a later reader should be able to see where it starts.";
   "A relation is drawn as a DIAGRAM rather than as a picture, which is why the relations look plainer than everything above them. The in-tray and the out-tray are deliberately the same box with the arrow reversed: neither one teaches anything alone, and the pair teaches itself, which is the only way a reader with no shared language can learn a relation at all.";
   "THE TWO HANDS ARE THE SECOND SUCH PAIR, built the same way. The hand pointing forward stands for the word that introduces what comes next, and the hand pointing back stands for the word that refers to whoever was just named - one hand, two directions, and the direction carries the whole difference. Where a pair can be made it is worth more than two unrelated pictures, because the reader learns both from meeting either.";
@@ -460,7 +461,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "night",
-      character: "night",
+      character: "🌃",
     },
     {
       name: "ark",
@@ -468,11 +469,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "morning",
-      character: "morning",
+      character: "🌅",
     },
     {
       name: "tent",
-      character: "tent",
+      character: "⛺",
     },
     {
       name: "gold",
@@ -484,7 +485,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "wine",
-      character: "wine",
+      character: "🍷",
     },
     {
       name: "mother",
@@ -492,7 +493,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "wilderness",
-      character: "wilderness",
+      character: "🏜️",
     },
     {
       name: "camp",
@@ -500,7 +501,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "foot",
-      character: "foot",
+      character: "🦶",
     },
     {
       name: "stone",
@@ -528,15 +529,15 @@ export function bible_glyph_characters() {
     },
     {
       name: "horse",
-      character: "horse",
+      character: "🐎",
     },
     {
       name: "cloud",
-      character: "cloud",
+      character: "☁️",
     },
     {
       name: "donkey",
-      character: "donkey",
+      character: "🫏",
     },
     {
       name: "incense",
@@ -552,7 +553,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "lion",
-      character: "lion",
+      character: "🦁",
     },
     {
       name: "sackcloth",
@@ -560,7 +561,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "bed",
-      character: "bed",
+      character: "🛏️",
     },
     {
       name: "mule",
@@ -576,11 +577,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "rain",
-      character: "rain",
+      character: "🌧️",
     },
     {
       name: "rock",
-      character: "rock",
+      character: "🪨",
     },
     {
       name: "horn",
@@ -588,7 +589,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "trumpet",
-      character: "trumpet",
+      character: "🎺",
     },
     {
       name: "foreigner",
@@ -596,7 +597,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "camel",
-      character: "camel",
+      character: "🐪",
     },
     {
       name: "famine",
@@ -608,7 +609,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "ox",
-      character: "ox",
+      character: "🐂",
     },
     {
       name: "vineyard",
@@ -616,7 +617,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "basket",
-      character: "basket",
+      character: "🧺",
     },
     {
       name: "poor",
@@ -636,11 +637,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "honey",
-      character: "honey",
+      character: "🍯",
     },
     {
       name: "milk",
-      character: "milk",
+      character: "🥛",
     },
     {
       name: "cloak",
@@ -656,23 +657,23 @@ export function bible_glyph_characters() {
     },
     {
       name: "goat",
-      character: "goat",
+      character: "🐐",
     },
     {
       name: "ram",
-      character: "ram",
+      character: "🐏",
     },
     {
       name: "jar",
-      character: "jar",
+      character: "🫙",
     },
     {
       name: "song",
-      character: "song",
+      character: "🎶",
     },
     {
       name: "olive",
-      character: "olive",
+      character: "🫒",
     },
     {
       name: "calf",
@@ -680,7 +681,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "grapes",
-      character: "grapes",
+      character: "🍇",
     },
     {
       name: "sister",
@@ -696,7 +697,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "girl",
-      character: "girl",
+      character: "👧",
     },
     {
       name: "garment",
@@ -708,7 +709,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "dog",
-      character: "dog",
+      character: "🐕",
     },
     {
       name: "queen",
@@ -732,11 +733,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "snow",
-      character: "snow",
+      character: "❄️",
     },
     {
       name: "snake",
-      character: "snake",
+      character: "🐍",
     },
     {
       name: "tower",
@@ -756,11 +757,11 @@ export function bible_glyph_characters() {
     },
     {
       name: "ring",
-      character: "ring",
+      character: "💍",
     },
     {
       name: "eagle",
-      character: "eagle",
+      character: "🦅",
     },
     {
       name: "cherub",
@@ -780,7 +781,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "ship",
-      character: "ship",
+      character: "🚢",
     },
     {
       name: "beard",
@@ -832,7 +833,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "shield",
-      character: "shield",
+      character: "🛡️",
     },
     {
       name: "spear",
@@ -844,15 +845,15 @@ export function bible_glyph_characters() {
     },
     {
       name: "sandal",
-      character: "sandal",
+      character: "🩴",
     },
     {
       name: "lamp",
-      character: "lamp",
+      character: "🪔",
     },
     {
       name: "window",
-      character: "window",
+      character: "🪟",
     },
     {
       name: "bronze",
@@ -864,7 +865,7 @@ export function bible_glyph_characters() {
     },
     {
       name: "cedar",
-      character: "cedar",
+      character: "🌲",
     },
     {
       name: "fig",
@@ -892,19 +893,19 @@ export function bible_glyph_characters() {
     },
     {
       name: "wolf",
-      character: "wolf",
+      character: "🐺",
     },
     {
       name: "fox",
-      character: "fox",
+      character: "🦊",
     },
     {
       name: "frog",
-      character: "frog",
+      character: "🐸",
     },
     {
       name: "scorpion",
-      character: "scorpion",
+      character: "🦂",
     },
     {
       name: "place",

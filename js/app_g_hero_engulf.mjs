@@ -106,10 +106,10 @@ export async function app_g_hero_engulf(hero, point, evil_img, sheet) {
   ("laid over one square by the same sums that put a person on one, so its own width is the");
   ("width of a square however far the map has been zoomed.");
   let square = html_element_width(sheet);
-  let half_ring = divide(square, 2);
+  let middle = divide(square, 2);
   let spot = {
-    x: half_ring,
-    y: half_ring,
+    x: middle,
+    y: middle,
   };
   let fire = emoji_fire();
   let pillar = app_g_hero_sprite(sheet, spot, fire, 1);
