@@ -1,3 +1,4 @@
+import { reply_cheapest } from "./reply_cheapest.mjs";
 import { reply_last } from "./reply_last.mjs";
 import { reply_messages_inner_transform } from "./reply_messages_inner_transform.mjs";
 import { list_add } from "./list_add.mjs";
@@ -7,7 +8,6 @@ import { property_set } from "./property_set.mjs";
 import { reply_property_codes } from "./reply_property_codes.mjs";
 import { reply_matches } from "./reply_matches.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
-import { list_first } from "./list_first.mjs";
 export async function reply_messages_inner(message, start) {
   "Run the reply rules over one message and hand back the best reading of it.";
   "★ EVERY PLACE A RULE APPENDS TO IS LAID OUT EMPTY HERE FIRST, and the names come from the same two functions the rules append through. A rule that appended to a place nobody had laid out threw instead of replying, and the message it threw on sat in the app saying Loading for good; a rule can only append to a list that is already there.";
@@ -21,6 +21,7 @@ export async function reply_messages_inner(message, start) {
     tokens,
     index: 0,
     matches: true,
+    cost: 0,
   };
   object_merge_set(possbility_start, base);
   let name_outputs = reply_property_outputs();
@@ -37,7 +38,7 @@ export async function reply_messages_inner(message, start) {
     };
     object_merge_set(result, base);
   } else {
-    result = list_first(result);
+    result = reply_cheapest(result);
   }
   return result;
 }
