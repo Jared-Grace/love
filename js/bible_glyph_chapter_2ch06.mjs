@@ -213,7 +213,7 @@ export function bible_glyph_chapter_2ch06() {
           "$house",
           "for",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "$name_tag,",
