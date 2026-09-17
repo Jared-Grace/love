@@ -479,7 +479,7 @@ export function bible_glyph_chapter_jos02() {
           "$no_entry",
           "report",
           "our",
-          "mission,",
+          "$speech,",
           "we",
           "will",
           "show",
