@@ -902,7 +902,7 @@ export function bible_glyph_chapter_2ki10() {
           "And",
           "they",
           "$footprints",
-          "$footprints",
+          "in",
           "to",
           "$hammer",
           "sacrifices",
