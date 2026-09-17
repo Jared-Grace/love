@@ -1,10 +1,7 @@
+import { property_difference } from "./property_difference.mjs";
 import { equal } from "./equal.mjs";
-import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
 export function g_direction(from, to) {
-  let left = property_get(to, "x");
-  let right = property_get(from, "x");
-  let dx = subtract(left, right);
+  let dx = property_difference(to, from, "x");
   if (equal(dx, 1)) {
     let r = "east";
     return r;
@@ -13,9 +10,7 @@ export function g_direction(from, to) {
     let r2 = "west";
     return r2;
   }
-  let left2 = property_get(to, "y");
-  let right2 = property_get(from, "y");
-  let dy = subtract(left2, right2);
+  let dy = property_difference(to, from, "y");
   if (equal(dy, 1)) {
     let r3 = "south";
     return r3;
