@@ -31,6 +31,7 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_word_draw() {
   "ONLY THE PLAIN WORDS OF A VERSE ARE LOOKED AT, because a parsed verse holds two kinds of thing - the English a person typed, and the picture groups the shorthand turned into objects - and asking a group for its letters is asking a thing that has none.";
   "EACH VERSE COMMITS ITSELF under the name of the one entry it changed, because a run of independent repairs that commits once at the end loses every one of their names to a single sweep.";
   "A ROW'S GLOSS IS OFTEN A PHRASE AND ONLY ONE WORD OF IT IS THE ROOT (2026-09-17). The interlinear prints but Your name under a single Hebrew word, and read whole that phrase is spelled nowhere in the verse, so a hundred and fourteen of a hundred and forty six short verses were being refused for want of one shared word. So a row now stands for the one word of its phrase that the root's own gloss names, when exactly one does - name, out of but Your name, for the root glossed name. Nothing downstream moves: the word still has to stand in the verse as many times as the mark is short, on both sides, before a mark is drawn.";
+  "A PHRASE NEVER NARROWS TO A LITTLE WORD UNLESS THE ROOT IS ONLY LITTLE WORDS (2026-09-17). The first run drew twenty nine marks and one was wrong: and they went in to offer seats the root for coming in twice, the interlinear glossed the first went in, and the one word of that phrase the root's gloss names is in - so a second footprints landed on in, while the second seat of that root was really bring, further down the verse. The little-word guard further on only looks at the word once it is shared, and by then in had already been chosen out of the phrase. So the phrase step keeps the same rule itself: a joining word may be what a phrase stands for only when the root's own gloss is nothing but joining words.";
   arguments_assert(arguments, 0);
   let joining_words = english_joining_words();
   let offenders = await bible_glyph_chapters_verse_marks_underdrawn();
@@ -80,11 +81,20 @@ export async function bible_glyph_chapters_verse_marks_underdrawn_word_draw() {
       let root_known = not(b);
       if (root_known) {
         let root_parts = text_lower_words_letters(root_gloss_seat);
+        let root_little = true;
+        for (let part of root_parts) {
+          let joins = list_includes(joining_words, part);
+          if (not(joins)) {
+            root_little = false;
+          }
+        }
         let named_parts = [];
         for (let part of text_lower_words_letters(word.gloss)) {
           let named = list_includes(root_parts, part);
           let again = list_includes(named_parts, part);
-          if (named && not(again)) {
+          let part_joins = list_includes(joining_words, part);
+          let allowed = root_little || not(part_joins);
+          if (named && not(again) && allowed) {
             list_add(named_parts, part);
           }
         }
