@@ -198,7 +198,7 @@ export function bible_glyph_chapter_gen43() {
           "we",
           "answered",
           "him",
-          "accordingly.",
+          "$speech.",
           "How",
           "could",
           "we",
