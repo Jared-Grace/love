@@ -1257,6 +1257,16 @@ export function bible_glyph_roots() {
         },
       ],
     },
+    {
+      root: "peristera",
+      gloss: "dove",
+      words: [
+        {
+          strong: "4058",
+          glyph: "dove",
+        },
+      ],
+    },
   ];
   return roots;
 }
