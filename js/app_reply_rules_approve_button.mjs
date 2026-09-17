@@ -16,6 +16,9 @@ import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { app_shared_color_gray_dark } from "./app_shared_color_gray_dark.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { app_shared_api_named } from "./app_shared_api_named.mjs";
+import { list_empty_is } from "./list_empty_is.mjs";
+import { list_join_comma_space } from "./list_join_comma_space.mjs";
+import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { app_shared_button_uncolored } from "./app_shared_button_uncolored.mjs";
 export function app_reply_rules_approve_button(
   root,
@@ -71,6 +74,20 @@ export function app_reply_rules_approve_button(
       let f = fn_name("reply_approved_write");
       await app_shared_api_named(f, [f_name, text]);
       state_show("approved");
+      ("Every approval may be the last one a change was waiting on, so each one asks for the finished changes to be put into the code, and says so here when one was.");
+      let f_apply = fn_name("reply_proposals_approved_apply");
+      let applied = await app_shared_api_named(f_apply, []);
+      let none = list_empty_is(applied);
+      if (none) {
+        return;
+      }
+      let titles = list_join_comma_space(applied);
+      let put = text_combine_multiple([
+        "Approved by you, and that was the last file. Now in the code: ",
+        titles,
+        ".",
+      ]);
+      html_text_content_set(said, put);
     }
     app_shared_button_uncolored(holder, "approve this file", on_press);
   }
