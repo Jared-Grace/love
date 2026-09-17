@@ -36,7 +36,7 @@ export async function lyric_video_song_swaps_preview() {
     }
     let listed = property_get(swaps, "swaps");
     function card(swap) {
-      lyric_video_song_swap_card(cards, document, swap);
+      lyric_video_song_swap_card(cards, document, swap, name);
     }
     each(listed, card);
   }

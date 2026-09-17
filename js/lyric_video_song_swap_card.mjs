@@ -6,16 +6,26 @@ import { list_find_property } from "./list_find_property.mjs";
 import { lyric_video_picture_lines } from "./lyric_video_picture_lines.mjs";
 import { lyric_video_review_lines } from "./lyric_video_review_lines.mjs";
 import { html_flex_row_gap } from "./html_flex_row_gap.mjs";
+import { list_includes } from "./list_includes.mjs";
+import { lyric_video_song_swap_column_mark } from "./lyric_video_song_swap_column_mark.mjs";
 import { lyric_video_song_swap_column } from "./lyric_video_song_swap_column.mjs";
+import { fn_name } from "./fn_name.mjs";
+import { api_read } from "./api_read.mjs";
+import { html_on_click } from "./html_on_click.mjs";
+import { list_add } from "./list_add.mjs";
 import { each } from "./each.mjs";
-export function lyric_video_song_swap_card(parent, document, swap) {
+import { property_get_or } from "./property_get_or.mjs";
+export function lyric_video_song_swap_card(parent, document, swap, name) {
   "$plain parent";
   "$plain document";
   "$plain swap";
+  "$plain name";
   "One picture of a song set beside the pictures offered to take its place, under the words sung over it.";
   "THE CURRENT PICTURE COMES FIRST IN THE ROW, so before and after read left to right.";
   "THE WORDS ARE FOUND THROUGH THE DOCUMENT'S OWN PICTURE AT THAT PATH, because that entry holds the start and end the words are chosen by; a candidate has no times of its own until it is chosen.";
-  arguments_assert(arguments, 3);
+  "A PRESS ON ANY PICTURE CHOOSES IT, AND A SECOND PRESS UNCHOOSES IT. Any number may be chosen, the current one included, and the choice is written to disk at once, so nothing is lost by closing the page.";
+  "THE FRAMES ARE DRAWN FROM WHAT THE DISK ANSWERS, never from what the press assumed, so a frame on screen is a choice that was really kept.";
+  arguments_assert(arguments, 4);
   let card = html_div(parent);
   html_style_assign(card, {
     "margin-top": "24px",
@@ -30,13 +40,35 @@ export function lyric_video_song_swap_card(parent, document, swap) {
   lyric_video_review_lines(card, over);
   let row = html_div(card);
   html_flex_row_gap(row, "8px");
-  lyric_video_song_swap_column(row, "now", before);
+  let columns = [];
+  function marks(chosen) {
+    for (let entry of columns) {
+      let chosen_is = list_includes(chosen, entry.path);
+      lyric_video_song_swap_column_mark(entry.column, chosen_is);
+    }
+  }
+  function offer(label, path) {
+    let column = lyric_video_song_swap_column(row, label, path);
+    async function press() {
+      let f_toggle = fn_name("lyric_video_song_swap_toggle");
+      let chosen = await api_read(f_toggle, [name, before, path]);
+      marks(chosen);
+    }
+    html_on_click(column, press);
+    list_add(columns, {
+      column,
+      path,
+    });
+  }
+  offer("now", before);
   let after = property_get(swap, "after");
   function candidate(offered) {
     let label = property_get(offered, "label");
     let path = property_get(offered, "path");
-    lyric_video_song_swap_column(row, label, path);
+    offer(label, path);
   }
   each(after, candidate);
+  let chosen_before = property_get_or(swap, "chosen", []);
+  marks(chosen_before);
   return card;
 }
