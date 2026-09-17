@@ -321,7 +321,7 @@ export function bible_glyph_chapter_2ki06() {
           "his",
           "$heart_organ",
           "over",
-          "this,",
+          "$speech,",
           "and",
           "he",
           "called",
