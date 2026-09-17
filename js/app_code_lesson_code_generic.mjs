@@ -1,16 +1,16 @@
-import { app_code_button_value_lines } from "./app_code_button_value_lines.mjs";
+import { property_get } from "./property_get.mjs";
 import { app_code_label_of_code } from "./app_code_label_of_code.mjs";
-import { value_or_if_null } from "./value_or_if_null.mjs";
-import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
-import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
-import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
-import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
-import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { text_combine } from "./text_combine.mjs";
 import { text_first_upper_to } from "./text_first_upper_to.mjs";
-import { property_get } from "./property_get.mjs";
+import { app_code_label_code_question } from "./app_code_label_code_question.mjs";
 import { property_get_or } from "./property_get_or.mjs";
+import { html_text_set_code_dark } from "./html_text_set_code_dark.mjs";
+import { value_or_if_null } from "./value_or_if_null.mjs";
+import { app_code_button_value_lines } from "./app_code_button_value_lines.mjs";
+import { app_code_style_normal_text } from "./app_code_style_normal_text.mjs";
+import { app_code_lesson_quizzes_unscramble } from "./app_code_lesson_quizzes_unscramble.mjs";
+import { app_code_lesson_base } from "./app_code_lesson_base.mjs";
 export function app_code_lesson_code_generic(params) {
   let value = property_get(params, "value");
   let batch_get = property_get(params, "batch_get");
@@ -35,8 +35,8 @@ export function app_code_lesson_code_generic(params) {
     value,
     "? ",
   ]);
-  let s2 = text_combine(value, ": ");
-  let backwards_question_label = text_first_upper_to(s2);
+  let s = text_combine(value, ": ");
+  let backwards_question_label = text_first_upper_to(s);
   let example_question_label = app_code_label_code_question();
   let example_count = property_get(params, "example_count");
   ("a lesson whose code stands on more than one line may say how its code is painted, so the line breaks survive the drawing; absent, code is painted as the single-line chip every other lesson has always used");
@@ -113,6 +113,8 @@ export function app_code_lesson_code_generic(params) {
   let unscramble_label = property_get_or(params, "unscramble_label", null);
   let unscramble = property_get_or(params, "unscramble", true);
   let backwards_include = property_get_or(params, "backwards_include", true);
+  ("a lesson whose code stands on more than one line may ask for the two quizzes about lines: putting them in order, and building the one that is missing");
+  let lines = property_get_or(params, "lines", false);
   let quizzes_get = app_code_lesson_quizzes_unscramble({
     batch_get,
     forwards,
@@ -120,6 +122,7 @@ export function app_code_lesson_code_generic(params) {
     unscramble_label,
     unscramble,
     backwards_include,
+    lines,
   });
   let lesson = app_code_lesson_base(
     name_id,
