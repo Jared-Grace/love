@@ -33,6 +33,7 @@
   "qa_gates -> app_code_lessons_above_broken_gate_run",
   "qa_gates -> app_code_lessons_order_ahead_gate_run",
   "qa_gates -> app_code_lessons_read_through_last_gate_run",
+  "qa_gates -> app_code_lessons_released_gate_run",
   "qa_gates -> app_code_lessons_rights_space_gate_run",
   "qa_gates -> app_code_quiz_choice_pool_gate_run",
   "qa_gates -> app_code_quiz_leniency_gate_run",
