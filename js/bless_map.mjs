@@ -1,4 +1,3 @@
-import { g_character_img_preload } from "./g_character_img_preload.mjs";
 import { bless_vehicles_draw } from "./bless_vehicles_draw.mjs";
 import { app_shared_game_player_style } from "./app_shared_game_player_style.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
@@ -56,8 +55,6 @@ export function bless_map(container, world) {
   ("they are looking out of has to be findable without being hunted for.");
   let player_img_c = g_character_img(div_map, player);
   app_shared_game_player_style(player_img_c);
-
-
   let drawn = {
     div_map: div_map,
     wash: wash,
