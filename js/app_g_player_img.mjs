@@ -6,6 +6,6 @@ export async function app_g_player_img(parent) {
   let player = await app_g_player_get();
   let player_img_c = g_character_img(parent, player);
   app_shared_game_player_style(player_img_c);
-  g_character_img_preload(player);
+
   return player_img_c;
 }
