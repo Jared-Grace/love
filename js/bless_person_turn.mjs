@@ -1,5 +1,5 @@
+import { bless_person_face } from "./bless_person_face.mjs";
 import { g_direction_sides } from "./g_direction_sides.mjs";
-import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_random_item } from "./list_random_item.mjs";
@@ -25,5 +25,5 @@ export function bless_person_turn(person) {
   ("A look round is a QUARTER turn, to one side or the other, and never a turn about. A person who spins to face the way they came, and then again a moment later, twirls on the spot; somebody standing about glances left and right. Turning right round is kept for giving up on a walk, where it happens once and means something.");
   let others = g_direction_sides(facing);
   let direction = list_random_item(others);
-  app_shared_game_npc_face(person, direction);
+  bless_person_face(person, direction);
 }
