@@ -573,7 +573,7 @@ export function bible_glyph_chapter_gen02() {
           "that",
           "was",
           "its",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
