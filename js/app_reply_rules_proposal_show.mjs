@@ -13,6 +13,7 @@ import { app_shared_color_red } from "./app_shared_color_red.mjs";
 import { html_font_color_set } from "./html_font_color_set.mjs";
 import { not } from "./not.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
+import { app_reply_rules_file_notes } from "./app_reply_rules_file_notes.mjs";
 import { app_reply_rules_whole_show } from "./app_reply_rules_whole_show.mjs";
 import { list_map } from "./list_map.mjs";
 import { app_reply_rules_case_show } from "./app_reply_rules_case_show.mjs";
@@ -54,6 +55,7 @@ export function app_reply_rules_proposal_show(root, proposal, approvals) {
   if (whole_shown) {
     app_reply_rules_approve_button(card, f_name, lines, approvals, diff);
   }
+  app_reply_rules_file_notes(card, f_name);
   let whole = property_get(proposal, "whole");
   function each_file(file) {
     let shown = app_reply_rules_whole_show(block, file, approvals);
