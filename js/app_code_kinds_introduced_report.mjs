@@ -1,10 +1,9 @@
+import { equal_not } from "./equal_not.mjs";
 import { subtract } from "./subtract.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_order_rounds } from "./app_code_lessons_order_rounds.mjs";
 import { app_code_kinds_introduced } from "./app_code_kinds_introduced.mjs";
 import { property_get } from "./property_get.mjs";
-import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 import { list_filter } from "./list_filter.mjs";
 import { list_size } from "./list_size.mjs";
 export function app_code_kinds_introduced_report() {
@@ -19,8 +18,7 @@ export function app_code_kinds_introduced_report() {
     "this lesson, if some of its lines do not carry what it brings in";
     let carrying = property_get(entry, "carrying");
     let lines = property_get(entry, "lines");
-    let all_is = equal(carrying, lines);
-    let partly = not(all_is);
+    let partly = equal_not(carrying, lines);
     return partly;
   }
   let partly = list_filter(introduced, partly_is);
