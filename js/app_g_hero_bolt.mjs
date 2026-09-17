@@ -1,9 +1,8 @@
+import { property_difference } from "./property_difference.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_g_hero_sprite } from "./app_g_hero_sprite.mjs";
 import { html_style_set } from "./html_style_set.mjs";
-import { property_get } from "./property_get.mjs";
-import { subtract } from "./subtract.mjs";
 import { app_g_hero_translate_text } from "./app_g_hero_translate_text.mjs";
 import { app_g_hero_projectile_ms } from "./app_g_hero_projectile_ms.mjs";
 import { html_animate_start } from "./html_animate_start.mjs";
@@ -25,12 +24,8 @@ export function app_g_hero_bolt(fx, from, to, text, glow) {
   ("knows whether what comes next replaces it or carries it on.");
   let ball = app_g_hero_sprite(fx, from, text, 1.4);
   html_style_set(ball, "filter", glow);
-  let left = property_get(to, "x");
-  let right = property_get(from, "x");
-  let dx = subtract(left, right);
-  let left2 = property_get(to, "y");
-  let right2 = property_get(from, "y");
-  let dy = subtract(left2, right2);
+  let dx = property_difference(to, from, "x");
+  let dy = property_difference(to, from, "y");
   let travel = app_g_hero_translate_text(dx, dy);
   let duration = app_g_hero_projectile_ms();
   html_animate_start(
