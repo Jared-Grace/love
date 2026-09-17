@@ -1,7 +1,7 @@
+import { property_list_empty_not_is } from "./property_list_empty_not_is.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposal_drawn } from "./reply_proposal_drawn.mjs";
 import { property_get } from "./property_get.mjs";
-import { list_empty_not_is } from "./list_empty_not_is.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
@@ -14,8 +14,7 @@ export async function reply_proposal_approved_is(proposal, approvals) {
   ("★ ONE FILE NOT APPROVED, OR APPROVED IN AN OLDER WORDING, IS A NO FOR THE WHOLE CHANGE. The change is applied on the strength of this answer and nobody is asked again, so a yes here has to mean that a person read every line that is about to go in.");
   ("A change with lines its file no longer holds is never approved, whatever was stored for it. The screen offers no button for one, and a verdict left over from before the file moved was given for a change that can no longer be drawn.");
   let drawn = await reply_proposal_drawn(proposal);
-  let unplaced = property_get(drawn, "unplaced");
-  let missing = list_empty_not_is(unplaced);
+  let missing = property_list_empty_not_is(drawn, "unplaced");
   if (missing) {
     return false;
   }
