@@ -1,6 +1,6 @@
+import { list_find_property_get } from "./list_find_property_get.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals } from "./reply_proposals.mjs";
-import { list_find_property } from "./list_find_property.mjs";
 import { property_get } from "./property_get.mjs";
 import { reply_cases_path } from "./reply_cases_path.mjs";
 import { file_read_json } from "./file_read_json.mjs";
@@ -21,8 +21,7 @@ export async function reply_proposal_cases_record(title) {
   ("★ ONLY CASES THE CORPUS ALREADY HOLDS ARE WRITTEN, MATCHED ON BOTH THE MESSAGE AND THE WORD FOR THE REAL MESSAGE IT WAS DRAWN FROM. Every message in the corpus is a rewrite of one somebody really sent; a change's own cases also include ones made up to show the rule's edges, and those would put a message nobody sent among the ones people did.");
   ("It looks the change up among every change and not only the waiting ones, because it is asked right after the change goes in, when it has just stopped waiting.");
   let proposals = await reply_proposals();
-  let proposal = list_find_property(proposals, "title", title);
-  let measured = property_get(proposal, "cases");
+  let measured = list_find_property_get(proposals, "title", title, "cases");
   let path = reply_cases_path();
   let cases = await file_read_json(path);
   let changed = [];
