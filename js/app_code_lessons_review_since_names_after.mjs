@@ -2,6 +2,7 @@ import { arguments_assert } from "./arguments_assert.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
 import { git_folder_run } from "./git_folder_run.mjs";
 import { app_code_lessons_review_since_lesson_names_of_text } from "./app_code_lessons_review_since_lesson_names_of_text.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { app_code_lessons_review_since_changed_path } from "./app_code_lessons_review_since_changed_path.mjs";
 import { property_get } from "./property_get.mjs";
 import { app_code_lessons_review_since_lesson_name } from "./app_code_lessons_review_since_lesson_name.mjs";
@@ -10,7 +11,7 @@ export async function app_code_lessons_review_since_names_after(
   list_path,
   folder,
 ) {
-  "What has become of the code lessons since a given commit - which were added, changed, hidden, moved or taken away, which shared helpers were edited, and where the run a student can reach now stops.";
+  "What has become of the code lessons since a given commit - which were added, changed, hidden, moved or taken away, which shared helpers were edited, and how many of the lessons a student can reach are released.";
   arguments_assert(arguments, 3);
   let lesson_prefix = "app_code_lesson_";
   let shown = text_combine_multiple([commit, ":", list_path]);
@@ -19,12 +20,22 @@ export async function app_code_lessons_review_since_names_after(
     list_text,
     lesson_prefix,
   );
+  ("What was released at the commit is read from the released list as it stood then, so a lesson is reported hidden only when it really was on a learner's screen. A commit from before that list existed has no such file and this throws - there is no release list to measure against there.");
+  let released_f_name = fn_name("app_code_lessons_released_fns");
+  let released_path = text_combine_multiple(["js/", released_f_name, ".mjs"]);
+  let released_shown = text_combine_multiple([commit, ":", released_path]);
+  let released_text = await git_folder_run(folder, ["show", released_shown]);
+  let released_before = app_code_lessons_review_since_lesson_names_of_text(
+    released_text,
+    lesson_prefix,
+  );
   let r2 = await app_code_lessons_review_since_changed_path(folder, commit);
   let files_of_lesson = property_get(r2, "files_of_lesson");
   let r3 = app_code_lessons_review_since_lesson_name(
     r2,
     names_before,
     files_of_lesson,
+    released_before,
   );
   let helpers_shared_edited = property_get(r3, "helpers_shared_edited");
   let lessons_removed = property_get(r3, "lessons_removed");
@@ -32,9 +43,8 @@ export async function app_code_lessons_review_since_names_after(
   let lessons_moved = property_get(r3, "lessons_moved");
   let lessons_changed = property_get(r3, "lessons_changed");
   let lessons_added = property_get(r3, "lessons_added");
-  let cut_place = property_get(r3, "cut_place");
-  let beyond_cut = property_get(r3, "beyond_cut");
-  let cut_fn = property_get(r3, "cut_fn");
+  let released = property_get(r3, "released");
+  let unreleased = property_get(r3, "unreleased");
   let names_after = property_get(r3, "names_after");
   let r = {
     names_before,
@@ -44,9 +54,8 @@ export async function app_code_lessons_review_since_names_after(
     lessons_moved,
     lessons_changed,
     lessons_added,
-    cut_place,
-    beyond_cut,
-    cut_fn,
+    released,
+    unreleased,
     names_after,
   };
   return r;
