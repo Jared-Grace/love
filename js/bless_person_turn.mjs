@@ -31,5 +31,10 @@ export function bless_person_turn(person) {
   let sides = g_direction_sides(facing);
   let others = list_without(sides, away);
   let direction = list_random_item(others);
+  ("Too soon after their last turn, they hold the way they are looking instead - a look held a little longer, never a quick look back.");
+  let ready = bless_person_turn_ready(person, direction);
+  if (not(ready)) {
+    return;
+  }
   bless_person_face(person, direction);
 }
