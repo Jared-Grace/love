@@ -241,12 +241,7 @@ export async function lyric_video_song_words_timing_preview() {
       }
     }
   }
-  function name_text(name_song) {
-    return name_song;
-  }
-  let f_names = fn_name("lyric_video_song_names");
-  let names = await api_read(f_names, []);
-  html_button_list(chosen, names, name_text, song_show);
+  await lyric_video_song_buttons(chosen, song_show);
   follow();
   return desk;
 }
