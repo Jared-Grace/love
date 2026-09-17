@@ -1,3 +1,4 @@
+import { text_accent_marks_removed } from "./text_accent_marks_removed.mjs";
 import { equal_not } from "./equal_not.mjs";
 import { text_split } from "./text_split.mjs";
 import { text_trim } from "./text_trim.mjs";
@@ -19,11 +20,13 @@ export function gloss_explain_claim_sentences_stripped(
   "A whole sentence goes rather than the matched words, because a claim is made by a sentence. Cutting the words out of the middle of one leaves a reader with the wreckage of a sentence that still reads as though it were saying something.";
   "An explanation making no such claim comes back exactly as itself, which is what lets this be asked of every word of a chapter rather than only of the ones somebody has already picked out. That holds because an empty piece is dropped and then one is put back, so a text already ending in the mark ends in it again.";
   "An explanation that is nothing but the claim comes back untouched instead of empty. A word with no explanation at all is a worse thing to leave behind than a word with a wrong one, and which of the two to write is a judgement, not something to be decided by a fall-through here.";
+  "A sentence is matched with its accent and vowel marks taken off - the same reading the gate that finds the claim uses - so a claim the gate flags is always one this can find to take out.";
   let pieces = text_split(explain, sentence_end);
   let kept = [];
   for (let piece of pieces) {
     let sentence = text_trim(piece);
-    let claimed = text_includes_any(sentence, claims);
+    let s = text_accent_marks_removed(sentence);
+    let claimed = text_includes_any(s, claims);
     let keep = not(claimed);
     if (keep) {
       let content = equal_not(sentence, "");
