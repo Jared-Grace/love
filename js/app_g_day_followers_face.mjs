@@ -15,14 +15,14 @@ export async function app_g_day_followers_face(player) {
   let seconds = g_img_square_slide_seconds();
   await sleep_seconds(seconds);
   let followers = app_g_day_state_property("followers");
-  function face(npc, index) {
+  async function face(npc, index) {
     let ahead = app_g_day_follower_ahead(player, followers, index);
     let beside = g_distance_1(npc, ahead);
     if (not(beside)) {
       return;
     }
     let direction = g_direction(npc, ahead);
-    app_g_npc_face(npc, direction);
+    await app_g_npc_face(npc, direction);
   }
   each_index(followers, face);
 }

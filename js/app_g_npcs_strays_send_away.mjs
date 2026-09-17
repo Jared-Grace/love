@@ -37,13 +37,13 @@ export function app_g_npcs_strays_send_away(npcs, wanted, coordinates, player) {
   }
   let land = g_coordinates_land(coordinates);
   let away = list_filter(land, far_free_is);
-  function evacuate(npc, index) {
+  async function evacuate(npc, index) {
     let tile = away[index];
     let none = undefined_is(tile);
     if (none) {
       return;
     }
-    app_shared_game_npc_move(npc, tile, 0);
+    await app_shared_game_npc_move(npc, tile, 0);
   }
   each_index(strays, evacuate);
   let sent = list_size(strays);

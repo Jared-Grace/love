@@ -21,15 +21,15 @@ export function app_g_day_followers_step(g) {
   }
   let trail = app_g_day_state_property("trail");
   let length = list_size(trail);
-  function step(npc, index) {
+  async function step(npc, index) {
     let known = less_than(index, length);
     if (not(known)) {
       return;
     }
     let to = list_get(trail, index);
     let delay = app_g_day_follower_delay_seconds(index);
-    app_g_day_follower_stranger_pass(g, npc, to, delay);
-    app_shared_game_npc_move(npc, to, delay);
+    await app_g_day_follower_stranger_pass(g, npc, to, delay);
+    await app_shared_game_npc_move(npc, to, delay);
   }
   each_index(followers, step);
 }
