@@ -1,3 +1,4 @@
+import { property_in_list_not } from "./property_in_list_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { reply_proposals } from "./reply_proposals.mjs";
 import { data_given_reply_applied_folder } from "./data_given_reply_applied_folder.mjs";
@@ -6,7 +7,6 @@ import { path_join } from "./path_join.mjs";
 import { file_read_json } from "./file_read_json.mjs";
 import { property_get } from "./property_get.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_includes_not } from "./list_includes_not.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function reply_proposals_waiting() {
   arguments_assert(arguments, 0);
@@ -24,8 +24,7 @@ export async function reply_proposals_waiting() {
     list_add(applied, title);
   }
   function waiting_is(proposal) {
-    let title = property_get(proposal, "title");
-    let r = list_includes_not(applied, title);
+    let r = property_in_list_not(proposal, "title", applied);
     return r;
   }
   let waiting = list_filter(proposals, waiting_is);
