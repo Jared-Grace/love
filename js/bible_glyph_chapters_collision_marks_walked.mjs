@@ -1,3 +1,4 @@
+import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
@@ -22,7 +23,6 @@ import { list_includes_not } from "./list_includes_not.mjs";
 import { list_sort_text } from "./list_sort_text.mjs";
 import { list_size } from "./list_size.mjs";
 import { equal } from "./equal.mjs";
-import { list_unique } from "./list_unique.mjs";
 export async function bible_glyph_chapters_collision_marks_walked() {
   "Every mark an authored chapter has already DRAWN using a picture two roots share, told apart by asking the interlinear which of those roots actually stands in that verse.";
   "SPLITTING A SHARED PICTURE IS CHEAP AND RE-DRAWING THE CHAPTERS IS NOT. The moment one of the two roots is moved to a picture of its own, every mark already on the page becomes a question - it was drawn when one picture served both, so the page records the picture and never the word. Read by hand that is hundreds of verses; read against the interlinear most of them are not a question at all, because only one of the two roots occurs in the verse and the mark can only have been that one.";
@@ -202,8 +202,7 @@ export async function bible_glyph_chapters_collision_marks_walked() {
         }
         let spoken_paired = equal(spoken_left, drew);
         if (spoken_paired) {
-          let spoken_distinct = list_unique(spoken_order);
-          let spoken_sorted = list_sort_text(spoken_distinct);
+          let spoken_sorted = list_unique_sorted(spoken_order);
           let spoken_entry = {
             chapter_code,
             verse_number,
