@@ -1,9 +1,9 @@
+import { property_difference } from "./property_difference.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { song_wordings } from "./song_wordings.mjs";
 import { property_get } from "./property_get.mjs";
 import { song_wording_echo } from "./song_wording_echo.mjs";
 import { list_map } from "./list_map.mjs";
-import { subtract } from "./subtract.mjs";
 import { equal } from "./equal.mjs";
 export async function song_wordings_echoed(references, reference_lines) {
   arguments_assert(arguments, 2);
@@ -25,14 +25,10 @@ export async function song_wordings_echoed(references, reference_lines) {
     }
     let wordings = list_map(distinct, heard);
     function ordered(one, other) {
-      let other_run = property_get(other, "folded_run");
-      let one_run = property_get(one, "folded_run");
-      let runs = subtract(other_run, one_run);
+      let runs = property_difference(other, one, "folded_run");
       let tied = equal(runs, 0);
       if (tied) {
-        let other_shared = property_get(other, "folded_shared");
-        let one_shared = property_get(one, "folded_shared");
-        let shares = subtract(other_shared, one_shared);
+        let shares = property_difference(other, one, "folded_shared");
         return shares;
       }
       return runs;
