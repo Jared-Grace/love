@@ -439,7 +439,7 @@ export function bible_glyph_chapter_exo02() {
           "and",
           "$speech,",
           "This",
-          "thing",
+          "$speech",
           "I",
           "have",
           "done",
