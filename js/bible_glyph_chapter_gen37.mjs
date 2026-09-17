@@ -395,7 +395,7 @@ export function bible_glyph_chapter_gen37() {
         words: [
           "Then",
           "Israel",
-          "told",
+          "$speech",
           "him,",
           "$walking",
           "now",
