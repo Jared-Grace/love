@@ -4,6 +4,7 @@ import { app_reply_rules_file_card } from "./app_reply_rules_file_card.mjs";
 import { app_reply_rules_file_contents } from "./app_reply_rules_file_contents.mjs";
 import { app_reply_rules_diff_show } from "./app_reply_rules_diff_show.mjs";
 import { app_reply_rules_approve_button } from "./app_reply_rules_approve_button.mjs";
+import { app_reply_rules_file_notes } from "./app_reply_rules_file_notes.mjs";
 export function app_reply_rules_whole_show(root, file, approvals) {
   arguments_assert(arguments, 3);
   ("One file a change would bring into being, drawn under its name with every line of it marked as arriving.");
@@ -22,5 +23,6 @@ export function app_reply_rules_whole_show(root, file, approvals) {
     approvals,
     diff,
   );
+  app_reply_rules_file_notes(card, name);
   return asked;
 }
