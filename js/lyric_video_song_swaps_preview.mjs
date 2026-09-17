@@ -1,3 +1,4 @@
+import { lyric_video_song_buttons } from "./lyric_video_song_buttons.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { html_body_div } from "./html_body_div.mjs";
 import { html_p_text } from "./html_p_text.mjs";
@@ -10,7 +11,6 @@ import { null_is } from "./null_is.mjs";
 import { property_get } from "./property_get.mjs";
 import { lyric_video_song_swap_card } from "./lyric_video_song_swap_card.mjs";
 import { each } from "./each.mjs";
-import { html_button_list } from "./html_button_list.mjs";
 export async function lyric_video_song_swaps_preview() {
   "The screen for choosing between a song's current background pictures and the pictures offered to replace them, on the sandbox app at hash lyric_video_song_swaps.";
   "BEFORE AND AFTER SIT SIDE BY SIDE, because a replacement is judged against what it replaces; seen alone, a candidate is judged against nothing.";
@@ -40,11 +40,6 @@ export async function lyric_video_song_swaps_preview() {
     }
     each(listed, card);
   }
-  function name_text(name) {
-    return name;
-  }
-  let f_names = fn_name("lyric_video_song_names");
-  let names = await api_read(f_names, []);
-  html_button_list(chosen, names, name_text, song_show);
+  await lyric_video_song_buttons(chosen, song_show);
   return told;
 }
