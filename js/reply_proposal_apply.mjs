@@ -14,6 +14,7 @@ import { list_map } from "./list_map.mjs";
 import { list_join_newline } from "./list_join_newline.mjs";
 import { function_source_formatted_overwrite } from "./function_source_formatted_overwrite.mjs";
 import { function_auto_checked } from "./function_auto_checked.mjs";
+import { reply_proposal_cases_record } from "./reply_proposal_cases_record.mjs";
 import { data_given_reply_applied_folder } from "./data_given_reply_applied_folder.mjs";
 import { folder_exists_ensure } from "./folder_exists_ensure.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -57,6 +58,7 @@ export async function reply_proposal_apply(title) {
     checked,
     hint: "the approved lines were written but the canonicalizing pass refused the file - read it before anything else runs it",
   });
+  await reply_proposal_cases_record(title);
   let folder = data_given_reply_applied_folder();
   await folder_exists_ensure(folder);
   let stored = {
