@@ -48,7 +48,7 @@ export function bless_person_walk(world, person) {
   ("thing that finishes.");
   let pace = property_get(person, "pace");
   let walker = property_get(person, "walker");
-  async function stepped() {
+  function stepped() {
     "Their last step is over by the time they are asked what to do next, because the step";
     "is made to last exactly this long - so the square they were crossing off is forgotten";
     "here, first of all and whatever they go on to do. Every way of doing nothing passes";
@@ -73,7 +73,7 @@ export function bless_person_walk(world, person) {
     let standing = property_get(person, "standing");
     let still = positive_is(standing);
     if (still) {
-      await bless_person_turn(person);
+      bless_person_turn(person);
       property_subtract_1(person, "standing");
       let held = random();
       let wait = bless_still_wait_ms(pace, held);

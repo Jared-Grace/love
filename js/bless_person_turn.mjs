@@ -5,7 +5,7 @@ import { list_without } from "./list_without.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
-export async function bless_person_turn(person) {
+export function bless_person_turn(person) {
   arguments_assert(arguments, 1);
   ("Somebody looks another way without going anywhere - the whole of what standing about");
   ("outside your own front door consists of.");
@@ -28,5 +28,5 @@ export async function bless_person_turn(person) {
   let others = list_without(all, facing);
   let direction = list_random_item(others);
   let img = app_shared_game_npc_img_get(person);
-  await app_shared_game_character_turn_start(person, img, direction);
+  app_shared_game_character_turn_start(person, img, direction);
 }
