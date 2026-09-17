@@ -1,10 +1,12 @@
-import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
+import { fn_name } from "./fn_name.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join } from "./list_join.mjs";
 import { property_get_or_null } from "./property_get_or_null.mjs";
-import { null_is } from "./null_is.mjs";
 import { equal } from "./equal.mjs";
+import { bible_glyph_silent_name } from "./bible_glyph_silent_name.mjs";
+import { null_is } from "./null_is.mjs";
+import { not } from "./not.mjs";
 import { list_add } from "./list_add.mjs";
 export function bible_glyph_keys_spelled(keys, letters, drawn) {
   arguments_assert(arguments, 3);
@@ -16,6 +18,9 @@ export function bible_glyph_keys_spelled(keys, letters, drawn) {
   ("the table maps a key to the name of its picture. It is data to read and nothing that runs.");
   ("One word written in the picture shorthand: each part with a picture as that picture, the pictures touching, and the letters of the word where the first part with no picture stands.");
   ("A PART WITH NO PICTURE SHOWS THE LETTERS OF ITS WORD, once. Nothing a word says is dropped in silence that way - the letters hold every part, drawn or not - and a word whose parts are all drawn shows no letters at all. The letters are the placeholder.");
+  ("A PART THE TABLE CALLS SILENT IS LEFT OUT ALTOGETHER, picture and letters both - see ",
+    fn_name("bible_glyph_silent_name"),
+    ". A word whose every part is silent comes back empty.");
   let spelled = "";
   let run = [];
   let letters_shown = false;
@@ -28,6 +33,10 @@ export function bible_glyph_keys_spelled(keys, letters, drawn) {
   }
   for (let key of keys) {
     let glyph = property_get_or_null(drawn, key);
+    let right = bible_glyph_silent_name();
+    if (equal(glyph, right)) {
+      continue;
+    }
     let undrawn = null_is(glyph) || equal(glyph, "");
     if (not(undrawn)) {
       list_add(run, glyph);

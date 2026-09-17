@@ -1,8 +1,9 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_glyph_keys_spelled } from "./bible_glyph_keys_spelled.mjs";
-import { list_add } from "./list_add.mjs";
+import { equal } from "./equal.mjs";
 import { bible_glyph_word_parse } from "./bible_glyph_word_parse.mjs";
+import { list_add } from "./list_add.mjs";
 export function bible_glyph_verse_original_parsed(original_words, drawn) {
   arguments_assert(arguments, 2);
   ("$plain original_words");
@@ -13,11 +14,15 @@ export function bible_glyph_verse_original_parsed(original_words, drawn) {
   ("What a part with no picture shows is answered by ",
     fn_name("bible_glyph_keys_spelled"),
     ", the same as on the English line.");
+  ("A word whose every part is silent is left out, as it is on the English line.");
   let words = [];
   for (let original_word of original_words) {
     let letters = original_word[0];
     let keys = original_word.slice(1);
     let spelled = bible_glyph_keys_spelled(keys, letters, drawn);
+    if (equal(spelled, "")) {
+      continue;
+    }
     let item = bible_glyph_word_parse(spelled);
     list_add(words, item);
   }

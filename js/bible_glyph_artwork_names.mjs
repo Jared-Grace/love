@@ -349,6 +349,22 @@ export function bible_glyph_artwork_names() {
       asset: "Backhand index pointing left",
     },
     {
+      glyph: "me",
+      asset: "Bust in silhouette",
+    },
+    {
+      glyph: "you",
+      asset: "Index pointing at the viewer",
+    },
+    {
+      glyph: "toward",
+      asset: "Bullseye",
+    },
+    {
+      glyph: "likeness",
+      asset: "Mirror",
+    },
+    {
       glyph: "equals",
       asset: "Heavy equals sign",
     },
