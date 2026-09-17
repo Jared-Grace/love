@@ -6,6 +6,7 @@ export function bible_glyph_artwork_names() {
   "THE LAST THREE WERE ASKED OF THE SET BEFORE THEY WERE WRITTEN, which is the cheap way round and the one to copy. Searching the set's own names for a word costs one listing and answers with the whole neighbourhood of that word, so the name lands correct the first time; guessing costs a fetching run for every guess and only ever answers yes or no.";
   "THE LAST TWO WERE ASKED OF THE SET THE SAME WAY and both came back on the first search, which is what the line above is describing rather than recommending. The set answers to Grinning face and to Left-right arrow, spelled its way and not this repo's, and neither spelling could have been guessed from the glyph name here - which is the whole reason this table exists.";
   "A GLYPH MISSING FROM THIS TABLE IS NOT AN OVERSIGHT. Two of them are named next door instead, in the list of pictures the set simply does not have, because no spelling would have found them. This table is the glyphs that can be fetched, and that list is the glyphs that cannot - together they are all of them.";
+  "THE LAST FORTY ONE CAME IN ONE BATCH, for the glyphs seated with an English word as their character. Twenty nine of them the set answers to under the glyph's own word. The other twelve are the set's picture of the same thing under its own name - the oil lamp is the Diya lamp, the wilderness is the Desert, the cedar is the Evergreen tree - and each was taken only where the picture draws the thing itself, never a symbol for it and never a picture this table already spends. The morning took the Sunrise because it is the commoner word; the dawn was left without one, since the set's other sunrise is the same picture with mountains behind it and two words drawn alike would read as one.";
   let names = [
     {
       glyph: "cross",
@@ -402,6 +403,170 @@ export function bible_glyph_artwork_names() {
     {
       glyph: "tree",
       asset: "Deciduous tree",
+    },
+    {
+      glyph: "tent",
+      asset: "Tent",
+    },
+    {
+      glyph: "foot",
+      asset: "Foot",
+    },
+    {
+      glyph: "horse",
+      asset: "Horse",
+    },
+    {
+      glyph: "cloud",
+      asset: "Cloud",
+    },
+    {
+      glyph: "donkey",
+      asset: "Donkey",
+    },
+    {
+      glyph: "lion",
+      asset: "Lion",
+    },
+    {
+      glyph: "bed",
+      asset: "Bed",
+    },
+    {
+      glyph: "rock",
+      asset: "Rock",
+    },
+    {
+      glyph: "trumpet",
+      asset: "Trumpet",
+    },
+    {
+      glyph: "camel",
+      asset: "Camel",
+    },
+    {
+      glyph: "ox",
+      asset: "Ox",
+    },
+    {
+      glyph: "basket",
+      asset: "Basket",
+    },
+    {
+      glyph: "goat",
+      asset: "Goat",
+    },
+    {
+      glyph: "ram",
+      asset: "Ram",
+    },
+    {
+      glyph: "jar",
+      asset: "Jar",
+    },
+    {
+      glyph: "olive",
+      asset: "Olive",
+    },
+    {
+      glyph: "grapes",
+      asset: "Grapes",
+    },
+    {
+      glyph: "girl",
+      asset: "Girl",
+    },
+    {
+      glyph: "dog",
+      asset: "Dog",
+    },
+    {
+      glyph: "snake",
+      asset: "Snake",
+    },
+    {
+      glyph: "ring",
+      asset: "Ring",
+    },
+    {
+      glyph: "eagle",
+      asset: "Eagle",
+    },
+    {
+      glyph: "ship",
+      asset: "Ship",
+    },
+    {
+      glyph: "shield",
+      asset: "Shield",
+    },
+    {
+      glyph: "window",
+      asset: "Window",
+    },
+    {
+      glyph: "wolf",
+      asset: "Wolf",
+    },
+    {
+      glyph: "fox",
+      asset: "Fox",
+    },
+    {
+      glyph: "frog",
+      asset: "Frog",
+    },
+    {
+      glyph: "scorpion",
+      asset: "Scorpion",
+    },
+    {
+      glyph: "night",
+      asset: "Night with stars",
+    },
+    {
+      glyph: "wine",
+      asset: "Wine glass",
+    },
+    {
+      glyph: "honey",
+      asset: "Honey pot",
+    },
+    {
+      glyph: "milk",
+      asset: "Glass of milk",
+    },
+    {
+      glyph: "snow",
+      asset: "Snowflake",
+    },
+    {
+      glyph: "sandal",
+      asset: "Thong sandal",
+    },
+    {
+      glyph: "lamp",
+      asset: "Diya lamp",
+    },
+    {
+      glyph: "morning",
+      asset: "Sunrise",
+    },
+    {
+      glyph: "cedar",
+      asset: "Evergreen tree",
+    },
+    {
+      glyph: "song",
+      asset: "Musical notes",
+    },
+    {
+      glyph: "wilderness",
+      asset: "Desert",
+    },
+    {
+      glyph: "rain",
+      asset: "Cloud with rain",
     },
   ];
   return names;
