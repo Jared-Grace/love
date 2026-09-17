@@ -1,3 +1,4 @@
+import { bible_gloss_placeholder_words_dropped } from "./bible_gloss_placeholder_words_dropped.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_copy } from "./list_copy.mjs";
 import { bible_interlinear_gloss_key } from "./bible_interlinear_gloss_key.mjs";
@@ -35,7 +36,8 @@ export function bible_interlinear_rows_english_text(rows) {
     let text = absent ? "" : String(raw);
     let trimmed = text_trim(text);
     let stripped = bible_gloss_brackets_dropped(trimmed);
-    let gloss = bible_gloss_lone_marks_dropped(stripped);
+    let gloss2 = bible_gloss_lone_marks_dropped(stripped);
+    let gloss = bible_gloss_placeholder_words_dropped(gloss2);
     let filler = bible_glyph_gloss_placeholder_is(gloss);
     if (filler) {
       continue;
