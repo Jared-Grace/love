@@ -5,6 +5,8 @@ import { add } from "./add.mjs";
 import { subtract } from "./subtract.mjs";
 import { list_max } from "./list_max.mjs";
 import { less_than } from "./less_than.mjs";
+import { not } from "./not.mjs";
+import { equal } from "./equal.mjs";
 import { number_round_places } from "./number_round_places.mjs";
 import { divide } from "./divide.mjs";
 import { math_max } from "./math_max.mjs";
@@ -26,6 +28,7 @@ export function lyric_video_picture_motion_text(
   ("★ A SECOND BOX TOO CLOSE TO THE FIRST IS DRAWN AGAIN. Two boxes chosen at random can land almost on top of each other, and the picture would then sit still, which is the one thing this is for preventing. Some corner has to move by at least a tenth of the picture; the draws stay keyed to the path, so the redraw is as repeatable as the first.");
   ("A BOX IS BETWEEN HALF AND SEVENTEEN TWENTIETHS OF THE PICTURE ACROSS, so the closest view is at most twice as near as the whole and a picture is never zoomed until it turns to mush. The whole picture is never a box: the human watched boxes reaching all the way out and asked for more zoom overall.");
   ("★ THE BOX IS CUT BETWEEN PIXELS, NEVER ON THEM, AND THAT IS WHY THIS DOES NOT USE THE TOOL MADE FOR ZOOMING. That tool rounds the box's corner and its size to whole pixels separately, so a slow move becomes a run of small jumps and every few frames the two roundings disagree and the picture jerks back the other way. The human watched it and saw pulses that were not all the same direction. Measured on a black bar moving across 600 frames, 352 of the steps went backwards even with the picture enlarged twice first; cut between pixels, none did and every step was the same size to within a tenth of a pixel.");
+  ("★ A PICTURE MAY NAME ITS OWN TWO BOXES, AND THEN THOSE ARE USED INSTEAD OF THE RANDOM ONES. Some pictures carry a motion of their own meaning: the human asked for the torn temple curtain to travel from top to bottom, the way the curtain was torn. The document holds it as motion with a from box and a to box, each a size, an x and a y given as parts of the picture, exactly the shape the random boxes have. The random boxes are still drawn first, so choosing a motion for one picture leaves every other picture's draws where they were.");
   ("THE PICTURE IS NOT ENLARGED BEFORE IT IS MOVED. Enlarging was only ever a way to make the whole-pixel steps smaller, and cutting between pixels makes them vanish instead; measured, the enlarged and the plain version moved equally smoothly and the plain one took a quarter of the time. The pictures are drawn at the size of the frame, so enlarging added no detail either.");
   ("It is fitted and padded with nothing into the frame first, exactly as a still picture is fitted, so a picture of another shape keeps a see-through margin rather than being stretched. It is then repeated once for every frame it is shown, because the tool that cuts between pixels moves frames that already exist rather than making them.");
   let next = random_seed_generator_from_text(picture.path);
@@ -64,6 +67,12 @@ export function lyric_video_picture_motion_text(
   let second = box();
   while (less_than(moved(first, second), 0.1)) {
     second = box();
+  }
+  let authored = picture.motion;
+  let b2 = equal(authored, undefined);
+  if (not(b2)) {
+    first = authored.from;
+    second = authored.to;
   }
   let size_from = number_round_places(first.size, 4);
   let value = divide(second.size, first.size);
