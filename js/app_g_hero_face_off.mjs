@@ -3,7 +3,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_game_npc_img_get } from "./app_shared_game_npc_img_get.mjs";
 import { g_direction_toward } from "./g_direction_toward.mjs";
 import { app_shared_game_character_turn_start } from "./app_shared_game_character_turn_start.mjs";
-export async function app_g_hero_face_off(hero, evil) {
+export function app_g_hero_face_off(hero, evil) {
   arguments_assert(arguments, 2);
   ("Turns the player and the killer to look at each other, each as squarely as four");
   ("directions allow.");
@@ -21,7 +21,7 @@ export async function app_g_hero_face_off(hero, evil) {
   let player_img_c = property_get(hero, "player_img_c");
   let evil_img = app_shared_game_npc_img_get(evil);
   let at_evil = g_direction_toward(player, evil);
-  await app_shared_game_character_turn_start(player, player_img_c, at_evil);
+  app_shared_game_character_turn_start(player, player_img_c, at_evil);
   let at_player = g_direction_toward(evil, player);
-  await app_shared_game_character_turn_start(evil, evil_img, at_player);
+  app_shared_game_character_turn_start(evil, evil_img, at_player);
 }

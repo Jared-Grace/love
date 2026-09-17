@@ -29,7 +29,7 @@ export async function app_g_hero_burn(hero) {
   let player_img_c = property_get(hero, "player_img_c");
   let npcs = property_path_get_2(hero, "world", "npcs");
   let render = property_get(hero, "render");
-  await app_g_hero_face_off(hero, evil);
+  app_g_hero_face_off(hero, evil);
   property_set(evil, "burning", true);
   let evil_img = app_shared_game_npc_img_get(evil);
   await app_g_hero_burn_charge(hero);

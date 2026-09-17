@@ -24,7 +24,7 @@ export async function app_g_hero_dark_attack(hero, evil) {
   let fx = property_get(hero, "fx");
   let player_img_c = property_get(hero, "player_img_c");
   let evil_img = app_shared_game_npc_img_get(evil);
-  await app_g_hero_face_off(hero, evil);
+  app_g_hero_face_off(hero, evil);
   ("The killer is held where they stand for the whole of the throw, and let go again");
   ("afterwards. Gathering, throwing and watching it break takes well over a second, and the");
   ("hunt is a separate thing that kept stepping them along through all of it: the player saw");
