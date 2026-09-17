@@ -197,7 +197,7 @@ export function bible_glyph_chapter_jer29() {
           "have",
           "$son",
           "and",
-          "daughters.",
+          "$woman.",
           "Multiply",
           "there;",
           "do",
