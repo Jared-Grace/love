@@ -12,7 +12,6 @@ import { g_coordinates_path_shortest_crowd } from "./g_coordinates_path_shortest
 import { arguments_assert } from "./arguments_assert.mjs";
 import { object_assign } from "./object_assign.mjs";
 import { property_get } from "./property_get.mjs";
-import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { app_shared_game_player_center } from "./app_shared_game_player_center.mjs";
 import { app_shared_game_player_move_animate } from "./app_shared_game_player_move_animate.mjs";
 import { g_direction } from "./g_direction.mjs";
