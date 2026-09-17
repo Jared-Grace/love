@@ -1,14 +1,14 @@
-import { list_unique_sorted } from "./list_unique_sorted.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_names_men } from "./bible_names_men.mjs";
 import { bible_names_women } from "./bible_names_women.mjs";
 import { list_concat_multiple } from "./list_concat_multiple.mjs";
 import { text_lower_to } from "./text_lower_to.mjs";
 import { text_includes } from "./text_includes.mjs";
-import { greater_than_equal } from "./greater_than_equal.mjs";
 import { text_size } from "./text_size.mjs";
+import { greater_than_equal } from "./greater_than_equal.mjs";
 import { not } from "./not.mjs";
-import { list_add } from "./list_add.mjs";
+import { each } from "./each.mjs";
+import { list_adder_unique_sorted } from "./list_adder_unique_sorted.mjs";
 export function reply_names_bible() {
   "Every name of a person in the Bible, written the way somebody typing a message would write it: all in small letters, one spelling each, and only the ones that are a single plain word.";
   "★ IT PUBLISHES NOBODY, AND THAT IS THE WHOLE REASON IT IS THE FIRST SOURCE REACHED FOR. A list of the names the people writing in actually have is that list of people, put in a public repository, and it grows by one real person every time somebody new writes. These names have been in print for two thousand years, and a person recognised by one of them is recognised by a word that millions of people share.";
@@ -21,20 +21,22 @@ export function reply_names_bible() {
   let men = bible_names_men();
   let women = bible_names_women();
   let both = list_concat_multiple([men, women]);
-  let names = [];
-  for (let name of both) {
-    let lower = text_lower_to(name);
-    let compound = text_includes(lower, "-");
-    if (compound) {
-      continue;
+  function names_add(la) {
+    function each_name(name) {
+      let lower = text_lower_to(name);
+      let compound = text_includes(lower, "-");
+      if (compound) {
+        return;
+      }
+      let a = text_size(lower);
+      let long_enough = greater_than_equal(a, 3);
+      if (not(long_enough)) {
+        return;
+      }
+      la(lower);
     }
-    let a = text_size(lower);
-    let long_enough = greater_than_equal(a, 3);
-    if (not(long_enough)) {
-      continue;
-    }
-    list_add(names, lower);
+    each(both, each_name);
   }
-  let sorted = list_unique_sorted(names);
+  let sorted = list_adder_unique_sorted(names_add);
   return sorted;
 }

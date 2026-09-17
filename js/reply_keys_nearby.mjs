@@ -1,3 +1,4 @@
+import { keyboard_letter_rows } from "./keyboard_letter_rows.mjs";
 import { less_than } from "./less_than.mjs";
 import { greater_than } from "./greater_than.mjs";
 import { subtract } from "./subtract.mjs";
@@ -5,7 +6,7 @@ export function reply_keys_nearby() {
   "Which letters a finger can reach by mistake instead of the one it meant, read straight off the three letter rows of a keyboard. Answers a letter with the set of letters touching it.";
   "★ EACH ROW SITS A LITTLE TO THE RIGHT OF THE ONE ABOVE IT, and getting that offset backwards is silent. The key above this one is at the same place along its row or one further on; the key below is at the same place or one further back. Written the other way round the table says `n` sits under `g` and `f`, and `kejya` stops reading as `kenya` - which is exactly how the mistake was found.";
   "Only the letters are here. Digits are a fourth row and no word in these rules holds one, and the punctuation keys are dropped before a message is ever looked at.";
-  let rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
+  let rows = keyboard_letter_rows();
   let nearby = new Map();
   let r = 0;
   while (less_than(r, rows.length)) {
