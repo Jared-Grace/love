@@ -1,8 +1,5 @@
 import { app_shared_game_character_turn } from "./app_shared_game_character_turn.mjs";
-import { app_shared_animation_sleep_quick } from "./app_shared_animation_sleep_quick.mjs";
-import { g_direction_between } from "./g_direction_between.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
-import { app_shared_game_character_face } from "./app_shared_game_character_face.mjs";
 import { g_direction_step } from "./g_direction_step.mjs";
 import { bless_crossing_look_ahead_tiles } from "./bless_crossing_look_ahead_tiles.mjs";
 import { g_coordinates_axes_generic } from "./g_coordinates_axes_generic.mjs";
