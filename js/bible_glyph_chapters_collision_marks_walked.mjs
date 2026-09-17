@@ -1,3 +1,4 @@
+import { list_size_equal } from "./list_size_equal.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { bible_glyph_chapters } from "./bible_glyph_chapters.mjs";
 import { bible_glyph_chapter_rows_filed } from "./bible_glyph_chapter_rows_filed.mjs";
@@ -213,8 +214,7 @@ export async function bible_glyph_chapters_collision_marks_walked() {
             roots: spoken_sorted,
             sharers: property_get(shared, glyph),
           };
-          let spoken_count = list_size(spoken_sorted);
-          let spoken_decidable = equal(spoken_count, 1);
+          let spoken_decidable = list_size_equal(spoken_sorted, 1);
           if (spoken_decidable) {
             list_add(decided, spoken_entry);
             continue;
