@@ -5,7 +5,7 @@ import { app_shared_bible_font_size } from "./app_shared_bible_font_size.mjs";
 import { app_shared_mobile_default_font_size_generic } from "./app_shared_mobile_default_font_size_generic.mjs";
 import { app_shared_bar_content_root_sticky_padded } from "./app_shared_bar_content_root_sticky_padded.mjs";
 import { property_get } from "./property_get.mjs";
-import { bible_glyph_chapter_references } from "./bible_glyph_chapter_references.mjs";
+import { bible_glyph_chapter_references_browser } from "./bible_glyph_chapter_references_browser.mjs";
 import { app_emoji_bible_chapter_chosen } from "./app_emoji_bible_chapter_chosen.mjs";
 import { null_is } from "./null_is.mjs";
 import { html_div_text_bold } from "./html_div_text_bold.mjs";
@@ -18,12 +18,12 @@ import { app_emoji_bible_traditions } from "./app_emoji_bible_traditions.mjs";
 import { app_emoji_bible_chapter_body } from "./app_emoji_bible_chapter_body.mjs";
 import { app_emoji_bible_words_button } from "./app_emoji_bible_words_button.mjs";
 export async function app_emoji_bible(context) {
-  "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and a list of every chapter written so far to reach them by.";
+  "The picture Bible as a page: one chapter at a time, drawn with its pictures in place of its words, and the books and chapters to reach them by.";
   "THE PAGE READS ONE CHAPTER AT A TIME AND FINDS IT BY THE SAME WORD THE BIBLE READER NEXT DOOR USES. That word is taken from the reader's own key rather than spelled again here, so a link naming a chapter opens that chapter in either app, and the day the pictures become a version somebody picks inside the reader every link anybody saved goes on working.";
   "The whole Bible used to be poured onto one page, which was right while there was one chapter and had become wrong at twenty five. A picker costs the reader a tap; a page of twenty five chapters costs them the whole scroll every time they want the second one, and costs them any way at all of sending somebody a single chapter.";
   "THE PAGE CARRIES THE LIST OF CHAPTERS AND NOT THE CHAPTERS, which is why what is asked for here is the references and never the whole Bible. It was carrying all twenty five however few were read, and that was measured on the twenty eighth of August rather than guessed: the twenty five chapter files were four hundred and forty KiB of source inside a bundle of five hundred and thirty two, so about five sixths of what a visitor downloaded was Bible they did not open, and somebody who landed on the index and read nothing paid all of it. The chapters, their written-out keys and the whole Tagalog were all moved behind a fetch on the same day, and the page a visitor first downloads went from five hundred and forty one thousand bytes to eighty five thousand. The third of those was found only by weighing what the page could reach, function by function, after the other two were already fixed and the page looked done - which is why there is now a gate rather than a habit.";
-  "THE LIST IS FIFTY SHORT WORDS STANDING IN FOR THAT, and it holds exactly what every screen short of a chapter needs - the code a link spells and the reference a person reads. The index, the bar with its arrows, and the deciding of which chapter the address names all work from those two and touch no verse, so a chapter is sent for at the one moment a chapter is actually going to be drawn.";
-  "It is already in canon order and is not sorted again here. The order is the order it is written in, and it is a gate rather than a habit that keeps it so.";
+  "THE LIST HOLDS exactly what every screen short of a chapter needs - the code a link spells and the reference a person reads. The index, the bar with its arrows, and the deciding of which chapter the address names all work from those two and touch no verse, so a chapter is sent for at the one moment a chapter is actually going to be drawn.";
+  "It is every chapter of the canon, asked the way the bible reader next door asks, because every chapter is built. It comes in canon order and is not sorted again here.";
   ("It is not given a ceiling in ",
     fn_name("bundle_size_ceilings"),
     ", and that file's own prose says why: a ceiling has to be raised on every honest growth, and this page used to grow by twenty KiB every time a chapter was written. THAT REASON HAS JUST STOPPED BEING TRUE - the page now grows by one line per chapter - so a ceiling has become affordable here for the first time, and that is a thing to decide rather than a thing done in passing. ",
@@ -50,7 +50,7 @@ export async function app_emoji_bible(context) {
   let frame = app_shared_bar_content_root_sticky_padded(root);
   let bar = property_get(frame, "bar");
   let content = property_get(frame, "content");
-  let chapters = bible_glyph_chapter_references();
+  let chapters = await bible_glyph_chapter_references_browser();
   let chosen = app_emoji_bible_chapter_chosen(chapters);
   let index_shown = null_is(chosen);
   if (index_shown) {
