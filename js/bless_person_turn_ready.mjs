@@ -4,7 +4,7 @@ import { property_get } from "./property_get.mjs";
 import { app_shared_game_npc_turn_quarters } from "./app_shared_game_npc_turn_quarters.mjs";
 import { property_get_or } from "./property_get_or.mjs";
 import { list_max } from "./list_max.mjs";
-import { bless_person_turn_rest_ms } from "./bless_person_turn_rest_ms.mjs";
+import { app_shared_game_npc_turn_rest_ms } from "./app_shared_game_npc_turn_rest_ms.mjs";
 import { multiply } from "./multiply.mjs";
 import { less_than } from "./less_than.mjs";
 import { not } from "./not.mjs";
@@ -17,7 +17,7 @@ export function bless_person_turn_ready(person, direction) {
   let quarters = app_shared_game_npc_turn_quarters(facing, direction);
   let quarters_last = property_get_or(person, "turn_quarters", 0);
   let bigger = list_max([quarters, quarters_last]);
-  let rest_ms = bless_person_turn_rest_ms();
+  let rest_ms = app_shared_game_npc_turn_rest_ms();
   let rest = multiply(rest_ms, bigger);
   let turned_at = property_get_or(person, "turn_at", 0);
   let since = date_milliseconds_since(turned_at);

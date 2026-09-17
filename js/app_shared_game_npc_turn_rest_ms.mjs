@@ -1,5 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
-export function bless_person_turn_rest_ms() {
+export function app_shared_game_npc_turn_rest_ms() {
   arguments_assert(arguments, 0);
   ("How long somebody on the street waits between turns, for every quarter of the bigger of the two turns.");
   ("So a quarter turn follows a quarter turn after this long, and a turn right about comes at least twice this long after any other turn - and holds off any other turn for twice this long after it. A turn about straight after a quarter turn, or a quarter turn straight after a turn about, is a person twirling.");
