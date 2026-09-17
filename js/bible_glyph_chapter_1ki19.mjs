@@ -740,7 +740,7 @@ export function bible_glyph_chapter_1ki19() {
           "will",
           "$walking",
           "you.",
-          "Go",
+          "$walking",
           "on",
           "$turn_back,",
           "Elijah",
