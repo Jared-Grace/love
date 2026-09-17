@@ -1,6 +1,5 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_bible_pictures_button } from "./app_bible_pictures_button.mjs";
-import { null_not_is } from "./null_not_is.mjs";
 import { app_shared_button_gap_above } from "./app_shared_button_gap_above.mjs";
 export function app_bible_pictures_chapter_button(content, chapter_code) {
   arguments_assert(arguments, 2);
@@ -10,8 +9,5 @@ export function app_bible_pictures_chapter_button(content, chapter_code) {
   ("The chapter is handed in rather than read out of the address, because this screen can arrive at a chapter by following a reference the address never spelled.");
   ("A gap above it, because it stands under prose rather than beside other buttons, and a button hard against the last line of a chapter reads as part of the chapter.");
   let component = app_bible_pictures_button(content, chapter_code);
-  let drawn = null_not_is(component);
-  if (drawn) {
-    app_shared_button_gap_above(component);
-  }
+  app_shared_button_gap_above(component);
 }

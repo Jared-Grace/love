@@ -31,6 +31,18 @@ export async function bible_word_voice_trial_rows() {
       rtl: true,
     },
     {
+      key: "gem_voices",
+      label: "Hebrew · Gemini voices",
+      chapter_code: "GEN01",
+      voices: [
+        ["Charon", "Charon (male)", "charon"],
+        ["Puck", "Puck (male)", "puck"],
+        ["Kore", "Kore (female)", "kore"],
+        ["Aoede", "Aoede (female)", "aoede"],
+      ],
+      rtl: true,
+    },
+    {
       key: "grc",
       label: "Greek · John 1",
       chapter_code: "JHN01",
