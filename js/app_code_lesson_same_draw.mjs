@@ -1,3 +1,4 @@
+import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { html_div } from "./html_div.mjs";
@@ -5,7 +6,6 @@ import { html_span_text } from "./html_span_text.mjs";
 import { app_code_lesson_same_which } from "./app_code_lesson_same_which.mjs";
 import { app_code_lesson_fn_id_set } from "./app_code_lesson_fn_id_set.mjs";
 import { app_code_lesson_go } from "./app_code_lesson_go.mjs";
-import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { text_combine } from "./text_combine.mjs";
 export function app_code_lesson_same_draw(
   parent,
@@ -28,7 +28,7 @@ export function app_code_lesson_same_draw(
     let lesson = app_code_lesson_fn_id_set(fn_repeated);
     await app_code_lesson_go(lesson, context);
   }
-  app_shared_button_inline(div, which, go);
+  app_shared_button_inline_sentence(div, which, go);
   let tail = text_combine(", except ", right);
   html_span_text(div, tail);
   return c;
