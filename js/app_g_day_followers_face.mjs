@@ -4,7 +4,7 @@ import { app_g_day_state_property } from "./app_g_day_state_property.mjs";
 import { app_g_day_follower_ahead } from "./app_g_day_follower_ahead.mjs";
 import { g_distance_1 } from "./g_distance_1.mjs";
 import { g_direction } from "./g_direction.mjs";
-import { app_g_npc_face } from "./app_g_npc_face.mjs";
+import { app_shared_game_npc_face } from "./app_shared_game_npc_face.mjs";
 import { each_index } from "./each_index.mjs";
 import { not } from "./not.mjs";
 export async function app_g_day_followers_face(player) {
@@ -22,7 +22,7 @@ export async function app_g_day_followers_face(player) {
       return;
     }
     let direction = g_direction(npc, ahead);
-    app_g_npc_face(npc, direction);
+    app_shared_game_npc_face(npc, direction);
   }
   each_index(followers, face);
 }
