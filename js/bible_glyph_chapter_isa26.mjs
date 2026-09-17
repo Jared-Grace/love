@@ -191,7 +191,7 @@ export function bible_glyph_chapter_isa26() {
           "Your",
           "$scales.",
           "Your",
-          "name",
+          "$name_tag",
           "and",
           "renown",
           "are",
