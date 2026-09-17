@@ -1,9 +1,9 @@
+import { equal_not } from "./equal_not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { ssml_phoneme_speak } from "./ssml_phoneme_speak.mjs";
 import { google_text_to_speech_audio } from "./google_text_to_speech_audio.mjs";
 import { sha256_hash } from "./sha256_hash.mjs";
 import { equal } from "./equal.mjs";
-import { not } from "./not.mjs";
 export async function google_text_to_speech_phoneme_probe(
   voice_name,
   word,
@@ -32,8 +32,7 @@ export async function google_text_to_speech_phoneme_probe(
   let second_sha = sha256_hash(second);
   let marked_sha = sha256_hash(spoken);
   let steady = equal(first_sha, second_sha);
-  let same = equal(second_sha, marked_sha);
-  let heard = not(same);
+  let heard = equal_not(second_sha, marked_sha);
   let r = {
     voice_name,
     word,
