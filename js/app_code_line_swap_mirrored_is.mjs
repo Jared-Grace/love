@@ -1,3 +1,4 @@
+import { property_in_list } from "./property_in_list.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { js_parse_try } from "./js_parse_try.mjs";
 import { null_is } from "./null_is.mjs";
@@ -8,7 +9,6 @@ import { equal } from "./equal.mjs";
 import { not } from "./not.mjs";
 import { list_first } from "./list_first.mjs";
 import { js_node_type_is } from "./js_node_type_is.mjs";
-import { list_includes } from "./list_includes.mjs";
 import { and } from "./and.mjs";
 export function app_code_line_swap_mirrored_is(code) {
   arguments_assert(arguments, 1);
@@ -51,8 +51,7 @@ export function app_code_line_swap_mirrored_is(code) {
   }
   ("the signs that ask whether two sides agree, which are the only ones a swapping lesson ever puts in the middle");
   let comparisons = ["===", "!==", "==", "!="];
-  let operator = property_get(node, "operator");
-  let comparing = list_includes(comparisons, operator);
+  let comparing = property_in_list(node, "operator", comparisons);
   if (not(comparing)) {
     return false;
   }
