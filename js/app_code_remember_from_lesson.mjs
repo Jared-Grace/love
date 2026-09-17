@@ -1,7 +1,4 @@
-import { app_shared_color_gray_medium } from "./app_shared_color_gray_medium.mjs";
-import { app_shared_button_border_width } from "./app_shared_button_border_width.mjs";
-import { html_border } from "./html_border.mjs";
-import { html_style_assign } from "./html_style_assign.mjs";
+import { app_shared_button_inline_sentence } from "./app_shared_button_inline_sentence.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lessons_fns } from "./app_code_lessons_fns.mjs";
 import { list_index_of } from "./list_index_of.mjs";
@@ -12,7 +9,6 @@ import { app_shared_screen_go_tab } from "./app_shared_screen_go_tab.mjs";
 import { app_code_examples } from "./app_code_examples.mjs";
 import { html_div } from "./html_div.mjs";
 import { html_span_text_content } from "./html_span_text_content.mjs";
-import { app_shared_button_inline } from "./app_shared_button_inline.mjs";
 import { list_first } from "./list_first.mjs";
 import { list_skip } from "./list_skip.mjs";
 import { text_combine_multiple } from "./text_combine_multiple.mjs";
@@ -42,15 +38,7 @@ export function app_code_remember_from_lesson(
   }
   let div = html_div(parent);
   html_span_text_content(div, "Remember, from lesson ");
-  let button = app_shared_button_inline(div, number, on_click);
-  ("the same thin edge the app draws round every other pale button, so a number standing in a sentence still reads as one of them");
-  let border_color = app_shared_color_gray_medium();
-  let border_width = app_shared_button_border_width();
-  html_border(button, border_width, border_color);
-  ("the comma that follows the number sits against it, the way it would against a number written as plain writing, so the gap the button keeps on its right is taken away");
-  html_style_assign(button, {
-    "margin-right": "0",
-  });
+  app_shared_button_inline_sentence(div, number, on_click);
   let first = list_first(parts);
   let rest = list_skip(parts, 1);
   let opening = text_combine_multiple([", ", first]);
