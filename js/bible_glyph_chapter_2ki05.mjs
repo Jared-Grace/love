@@ -148,7 +148,7 @@ export function bible_glyph_chapter_2ki05() {
       {
         verse_number: 5,
         words: [
-          "Go",
+          "$walking",
           "now,",
           "$speech",
           "the",
