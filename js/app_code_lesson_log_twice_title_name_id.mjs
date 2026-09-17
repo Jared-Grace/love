@@ -20,7 +20,7 @@ export function app_code_lesson_log_twice_title_name_id() {
   ("Painted rather than spelled, because a line handed over as a string is one colour all the way across. The two ends of it are still built from the marks rather than typed, so the title cannot come to say something the app would not print.");
   ("The words below are what the id is built from, so they are the one thing here that is not free to change. These were reworded once, on 2026-08-23, from two things to twice - safe only because the lesson had never been reachable in prod and had stood in latest for three days. Anything less certain than that is a decision about learners' records rather than about wording.");
   let words = "Writing out twice";
-  ("No space before the count. Measured on a phone, the line and its count with a space between them reached nine pixels past the right edge of its own row, and without one they finish three pixels inside it - the space was the whole of the difference.");
+  ("A space before the count, asked for on 2026-09-17: with none, the count reads as part of the line. Measured on a phone when the count was still inside the code tile, a space there took the row nine pixels past its right edge - so after any change here, look at this title on a narrow screen.");
   let left = js_console_log_name();
   let right = js_code_parenthesis_left();
   let opening = text_combine(left, right);
@@ -38,7 +38,7 @@ export function app_code_lesson_log_twice_title_name_id() {
     let row = html_span(parent);
     html_style_white_space(row, "nowrap");
     app_code_code_tile(row, fill);
-    html_span_text(row, "(x2)");
+    html_span_text(row, " (x2)");
   }
   let built = app_code_lesson_statement_title_name_id_paint(words, paint_code);
   return built;
