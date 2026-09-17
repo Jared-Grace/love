@@ -423,7 +423,7 @@ export function bible_glyph_chapter_exo02() {
           "us?",
           "Are",
           "you",
-          "planning",
+          "$speech",
           "to",
           "kill",
           "me",
