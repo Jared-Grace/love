@@ -1,3 +1,4 @@
+import { not } from "./not.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { list_empty_is } from "./list_empty_is.mjs";
 import { list_join } from "./list_join.mjs";
@@ -30,7 +31,7 @@ export function bible_glyph_verse_original_parsed(original_words, drawn) {
     for (let key of original_word.slice(1)) {
       let glyph = property_get_or_null(drawn, key);
       let undrawn = null_is(glyph) || equal(glyph, "");
-      if (!undrawn) {
+      if (not(undrawn)) {
         list_add(run, glyph);
         continue;
       }
@@ -45,7 +46,8 @@ export function bible_glyph_verse_original_parsed(original_words, drawn) {
     if (equal(spelled, "")) {
       spelled = letters;
     }
-    list_add(words, bible_glyph_word_parse(spelled));
+    let item = bible_glyph_word_parse(spelled);
+    list_add(words, item);
   }
   return words;
 }
