@@ -31,16 +31,20 @@ export function lyric_video_line_words_text(line, lead) {
   }
   function change(seconds, fade, colour) {
     let half = divide(fade, 2);
-    let from = moment(subtract(seconds, half));
-    let end = moment(add(seconds, half));
-    let to = math_max(end, add(from, 1));
+    let difference = subtract(seconds, half);
+    let from = moment(difference);
+    let sum = add(seconds, half);
+    let end = moment(sum);
+    let b = add(from, 1);
+    let to = math_max(end, b);
     let text_change = "\\t(" + from + "," + to + ",\\1c" + colour + ")";
     return text_change;
   }
   function word_text(word, index) {
     let done = lyric_video_word_done(words, index);
     let lit = subtract(done, word.start);
-    let fade = math_min(fade_most, math_max(lit, 0));
+    let b2 = math_max(lit, 0);
+    let fade = math_min(fade_most, b2);
     let red = change(word.start, fade, "&H0000FF&");
     let white = change(done, fade, "&HFFFFFF&");
     let text = "{\\1c&HFFFFFF&" + red + white + "}" + word.text;
