@@ -1,5 +1,3 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
@@ -9,8 +7,10 @@ import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_one_more } from "./app_code_lesson_statement_name_one_more.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 export function app_code_lesson_statement_name_count_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: the program the screen before this one ended on, and then that same program with its middle line said a second time");
@@ -20,9 +20,12 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   let name = app_code_lesson_statement_name_value_name();
   let plus = js_operator_plus_symbol();
   let start = 7;
-  let more = js_code_binary_spaced_nb(name, plus, 1);
-  let once = add(start, 1);
-  let twice = add(once, 1);
+  ("the number the line adds is named once and every other number on the screen is worked out from it, because the sentence below says both how far the name moves and how far one copy of the line would have moved it. Typed into the sentence instead, a reworded line and the program under it could say different numbers.");
+  let number_more = 1;
+  let more = js_code_binary_spaced_nb(name, plus, number_more);
+  let once = add(start, number_more);
+  let twice = add(once, number_more);
+  let number_twice = add(number_more, number_more);
   let held = js_code_let_statement(name, start);
   let grown = js_code_assign_statement(name, more);
   let logged = js_code_console_log_statement(name);
@@ -36,10 +39,15 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   app_code_code_lines_writes_out(box_once, [held, grown, logged], once);
   let box_twice = app_code_container_light_blue(root);
+  ("how far the name moves is said as a number rather than as the word twice, and the number one copy of the line would have moved it is said beside it. Twice named the count of lines and left the reader to carry it over to the value, which is the step being shown; the two numbers side by side are that step, written.");
   html_div_cycle_code(box_twice, [
-    "Say that line (",
+    "Write that line (",
     grown,
-    ") twice and the name goes up twice:",
+    ") twice and the value of the name goes up by ",
+    number_twice,
+    " instead of ",
+    number_more,
+    ":",
   ]);
   app_code_code_lines_writes_out(
     box_twice,
