@@ -30,11 +30,12 @@ export function app_code_lesson_statement_name_count_above(root, context) {
   let grown = js_code_assign_statement(name, more);
   let logged = js_code_console_log_statement(name);
   let box_once = app_code_container_light_blue(root);
+  ("the reminder names the whole line, semicolon and all, rather than the sum on its right. The sentence below it names a line and so does this one, and the two are the same line - said as half of it here and whole there, a learner has to put the halves together to see that. Every other reminder on these screens names the line it is about whole.");
   app_code_remember_from_lesson(
     box_once,
     context,
     app_code_lesson_statement_name_one_more,
-    ["we can give a name (", name, ") one more than it holds (", more, "):"],
+    ["we can give a name (", name, ") one more than it holds (", grown, "):"],
   );
   ("the lines are handed over together rather than one at a time, because nothing is said between them: each box is one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
   app_code_code_lines_writes_out(box_once, [held, grown, logged], once);
