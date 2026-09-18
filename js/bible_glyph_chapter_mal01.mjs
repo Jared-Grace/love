@@ -402,7 +402,7 @@ export function bible_glyph_chapter_mal01() {
           "it",
           "sets,",
           "My",
-          "name",
+          "$name_tag",
           "will",
           "be",
           "great",
