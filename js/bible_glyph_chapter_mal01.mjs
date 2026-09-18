@@ -215,7 +215,7 @@ export function bible_glyph_chapter_mal01() {
           "who",
           "despise",
           "My",
-          "name.",
+          "$name_tag.",
           "But",
           "you",
           "$speech,",
