@@ -1203,7 +1203,7 @@ export function bible_glyph_chapter_num22() {
           "Did",
           "I",
           "$no_entry",
-          "send",
+          "$hand_sending",
           "you",
           "an",
           "urgent",
