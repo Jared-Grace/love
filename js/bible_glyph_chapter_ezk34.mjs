@@ -404,7 +404,7 @@ export function bible_glyph_chapter_ezk34() {
         words: [
           "I",
           "will",
-          "bring",
+          "$walking+tray_out",
           "them",
           "out",
           "$tray_out",
