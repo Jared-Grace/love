@@ -18,7 +18,7 @@ export function bible_glyph_chapter_3jn01() {
           "The",
           "elder,",
           "To",
-          "Gaius",
+          "$proper_name$Gaius",
           "the",
           "$heart_red,",
           "whom",
@@ -202,7 +202,7 @@ export function bible_glyph_chapter_3jn01() {
           "the",
           "$church,",
           "but",
-          "Diotrephes,",
+          "$proper_name$Diotrephes,",
           "who",
           "loves",
           "to",
@@ -299,7 +299,7 @@ export function bible_glyph_chapter_3jn01() {
       {
         verse_number: 12,
         words: [
-          "Demetrius",
+          "$proper_name$Demetrius",
           "has",
           "good",
           "$witness",
