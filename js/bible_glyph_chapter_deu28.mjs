@@ -689,7 +689,7 @@ export function bible_glyph_chapter_deu28() {
           "The",
           "$i_am",
           "will",
-          "strike",
+          "$fist",
           "you",
           "with",
           "wasting",
