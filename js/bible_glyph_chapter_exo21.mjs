@@ -34,7 +34,7 @@ export function bible_glyph_chapter_exo21() {
           "you",
           "buy",
           "a",
-          "Hebrew",
+          "$proper_name$Hebrew",
           "$kneeling,",
           "he",
           "is",
