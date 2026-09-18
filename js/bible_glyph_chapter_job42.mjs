@@ -255,7 +255,7 @@ export function bible_glyph_chapter_job42() {
           "and",
           "the",
           "$i_am",
-          "accepted",
+          "$lifting",
           "$proper_name$Job's",
           "prayer.",
         ],
