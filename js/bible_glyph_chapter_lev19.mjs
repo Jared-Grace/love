@@ -296,7 +296,7 @@ export function bible_glyph_chapter_lev19() {
           "I",
           "am",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
       {
