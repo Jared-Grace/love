@@ -120,7 +120,7 @@ export function bible_glyph_chapter_jer31() {
           "your",
           "tambourines",
           "and",
-          "go",
+          "$walking+tray_out",
           "out",
           "in",
           "joyful",
