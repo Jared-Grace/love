@@ -663,7 +663,7 @@ export function bible_glyph_chapter_zec14() {
           "that",
           "do",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "celebrate",
