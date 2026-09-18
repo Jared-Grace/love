@@ -698,7 +698,7 @@ export function bible_glyph_chapter_lev19() {
           "in",
           "the",
           "fifth",
-          "year",
+          "$year",
           "you",
           "may",
           "eat",
