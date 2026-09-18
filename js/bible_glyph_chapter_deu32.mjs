@@ -1358,7 +1358,7 @@ export function bible_glyph_chapter_deu32() {
       {
         verse_number: 49,
         words: [
-          "Go",
+          "$walking+pointing_up",
           "up",
           "into",
           "the",
