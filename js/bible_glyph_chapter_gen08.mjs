@@ -360,7 +360,7 @@ export function bible_glyph_chapter_gen08() {
           "hundred",
           "and",
           "first",
-          "year",
+          "$year",
           "of",
           "Noah,",
           "on",
