@@ -457,7 +457,7 @@ export function bible_glyph_chapter_exo35() {
           "$son",
           "of",
           "$proper_name$Israel",
-          "withdrew",
+          "$walking+tray_out",
           "from",
           "the",
           "presence",
