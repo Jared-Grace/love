@@ -675,7 +675,7 @@ export function bible_glyph_chapter_deu12() {
           "I",
           "want",
           "to",
-          "eat",
+          "$eating",
           "$meat,",
           "you",
           "may",
