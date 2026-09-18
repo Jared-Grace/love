@@ -433,7 +433,7 @@ export function bible_glyph_chapter_isa02() {
           "against",
           "every",
           "high",
-          "tower",
+          "$tower",
           "and",
           "against",
           "every",
