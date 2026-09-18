@@ -328,7 +328,7 @@ export function bible_glyph_chapter_lam05() {
           "You,",
           "O",
           "$i_am,",
-          "reign",
+          "$person+house",
           "$hourglass;",
           "Your",
           "throne",
