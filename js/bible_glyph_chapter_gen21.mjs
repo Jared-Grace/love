@@ -862,7 +862,7 @@ export function bible_glyph_chapter_gen21() {
           "name",
           "of",
           "the",
-          "LORD,",
+          "$i_am,",
           "$fire",
           "the",
           "$hourglass.",
