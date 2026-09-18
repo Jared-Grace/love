@@ -62,7 +62,7 @@ export function bible_glyph_chapter_exo07() {
           "$son",
           "of",
           "Israel",
-          "go",
+          "$hand_sending",
           "out",
           "of",
           "his",
