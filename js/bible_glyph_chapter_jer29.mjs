@@ -537,7 +537,7 @@ export function bible_glyph_chapter_jer29() {
           "$speech:",
           "I",
           "will",
-          "send",
+          "$hand_sending",
           "$sword",
           "and",
           "famine",
