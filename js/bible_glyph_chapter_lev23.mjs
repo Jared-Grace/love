@@ -1289,7 +1289,7 @@ export function bible_glyph_chapter_lev23() {
           "of",
           "$proper_name$Israel",
           "must",
-          "dwell",
+          "$person+house",
           "in",
           "booths,",
         ],
