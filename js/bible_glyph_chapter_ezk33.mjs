@@ -913,7 +913,7 @@ export function bible_glyph_chapter_ezk33() {
           "in",
           "it,",
           "you",
-          "lift",
+          "$lifting",
           "up",
           "your",
           "$eyes",
