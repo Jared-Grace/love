@@ -1895,7 +1895,7 @@ export function bible_glyph_chapter_deu28() {
           "glorious",
           "and",
           "awesome",
-          "name,",
+          "$name_tag,",
           "the",
           "$i_am",
           "your",
