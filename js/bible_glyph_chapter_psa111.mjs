@@ -190,7 +190,7 @@ export function bible_glyph_chapter_psa111() {
           "awesome",
           "is",
           "His",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
