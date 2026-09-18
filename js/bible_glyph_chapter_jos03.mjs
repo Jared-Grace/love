@@ -483,7 +483,7 @@ export function bible_glyph_chapter_jos03() {
           "as",
           "the",
           "$priest",
-          "carrying",
+          "$lifting",
           "the",
           "ark",
           "$footprints",
