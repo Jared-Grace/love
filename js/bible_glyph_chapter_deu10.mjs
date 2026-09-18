@@ -36,7 +36,7 @@ export function bible_glyph_chapter_deu10() {
           "the",
           "originals,",
           "and",
-          "come",
+          "$walking+pointing_up",
           "up",
           "to",
           "Me",
