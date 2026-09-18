@@ -45,7 +45,7 @@ export async function lyric_video_song_word_move(
   let quarter_seconds = multiply(tick_seconds, 1920);
   let line = document.lines[line_index];
   let word = line.words[word_index];
-  let seconds = multiply(quarters, quarter_seconds);
+  let quarters_number = Number(quarters); let seconds = multiply(quarters_number, quarter_seconds);
   let moved = add(word.start, seconds);
   let rounded = number_round_places(moved, 3);
   let start = math_max(rounded, 0);
@@ -55,7 +55,7 @@ export async function lyric_video_song_word_move(
   }
   let before = word.moved_quarters;
   let so_far = equal(before, undefined) ? 0 : before;
-  word.moved_quarters = add(so_far, quarters);
+  word.moved_quarters = add(so_far, quarters_number);
   await file_overwrite_json(path_document, document);
   return word;
 }
