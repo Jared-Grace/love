@@ -346,7 +346,7 @@ export function bible_glyph_chapter_mrk10() {
         "child",
         "will",
         "never",
-        "enter",
+        "$footprints+tray_in",
         "$pointing_back.”",
       ],
     },
