@@ -250,7 +250,7 @@ export function bible_glyph_chapter_exo33() {
           "the",
           "$i_am",
           "would",
-          "go",
+          "$walking+tray_out",
           "to",
           "the",
           "Tent",
