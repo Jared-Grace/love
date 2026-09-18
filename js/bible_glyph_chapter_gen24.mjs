@@ -634,7 +634,7 @@ export function bible_glyph_chapter_gen24() {
           "quickly",
           "emptied",
           "her",
-          "jar",
+          "$jar",
           "into",
           "the",
           "trough",
