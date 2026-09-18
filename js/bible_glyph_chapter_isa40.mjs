@@ -732,7 +732,7 @@ export function bible_glyph_chapter_isa40() {
       {
         verse_number: 26,
         words: [
-          "Lift",
+          "$lifting",
           "up",
           "your",
           "$eyes",
