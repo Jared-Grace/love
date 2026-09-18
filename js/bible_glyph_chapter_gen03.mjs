@@ -234,7 +234,7 @@ export function bible_glyph_chapter_gen03() {
           "they",
           "sewed",
           "together",
-          "fig",
+          "$fig",
           "leaves",
           "and",
           "$hammer",
