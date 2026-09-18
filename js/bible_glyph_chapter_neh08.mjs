@@ -528,7 +528,7 @@ export function bible_glyph_chapter_neh08() {
           "$son",
           "were",
           "to",
-          "dwell",
+          "$person+house",
           "in",
           "booths",
           "during",
