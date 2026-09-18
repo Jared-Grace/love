@@ -353,7 +353,7 @@ export function bible_glyph_chapter_exo40() {
         verse_number: 16,
         words: [
           "So",
-          "Moses",
+          "$proper_name$Moses",
           "$hammer",
           "everything",
           "just",
@@ -817,7 +817,7 @@ export function bible_glyph_chapter_exo40() {
       {
         verse_number: 35,
         words: [
-          "Moses",
+          "$proper_name$Moses",
           "was",
           "$no_entry",
           "able",
@@ -927,7 +927,7 @@ export function bible_glyph_chapter_exo40() {
           "the",
           "$house",
           "of",
-          "Israel",
+          "$proper_name$Israel",
           "through",
           "all",
           "their",
