@@ -405,7 +405,7 @@ export function bible_glyph_chapter_num11() {
         words: [
           "I",
           "$no_entry",
-          "carry",
+          "$lifting",
           "all",
           "these",
           "$family",
