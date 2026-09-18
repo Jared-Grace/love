@@ -498,7 +498,7 @@ export function bible_glyph_chapter_1sa24() {
           "$king",
           "of",
           "$proper_name$Israel",
-          "come",
+          "$walking+tray_out",
           "out?",
           "Whom",
           "are",
