@@ -642,7 +642,7 @@ export function bible_glyph_chapter_jud01() {
       {
         verse_number: 23,
         words: [
-          "save",
+          "$rescue",
           "others",
           "by",
           "snatching",
