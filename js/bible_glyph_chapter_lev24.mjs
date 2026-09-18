@@ -408,7 +408,7 @@ export function bible_glyph_chapter_lev24() {
           "$fire,",
           "he",
           "shall",
-          "bear",
+          "$lifting",
           "the",
           "consequences",
           "of",
