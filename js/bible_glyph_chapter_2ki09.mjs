@@ -1081,7 +1081,7 @@ export function bible_glyph_chapter_2ki09() {
           "In",
           "the",
           "eleventh",
-          "year",
+          "$year",
           "of",
           "$proper_name$Joram",
           "$son",
