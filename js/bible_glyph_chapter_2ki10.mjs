@@ -154,7 +154,7 @@ export function bible_glyph_chapter_2ki10() {
           "and",
           "the",
           "$anchor",
-          "sent",
+          "$hand_sending",
           "a",
           "message",
           "to",
