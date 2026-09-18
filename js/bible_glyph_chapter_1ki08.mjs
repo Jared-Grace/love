@@ -1516,7 +1516,7 @@ export function bible_glyph_chapter_1ki08() {
           "When",
           "Your",
           "$family",
-          "go",
+          "$walking+tray_out",
           "to",
           "war",
           "against",
