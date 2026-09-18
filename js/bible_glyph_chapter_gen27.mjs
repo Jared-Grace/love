@@ -85,7 +85,7 @@ export function bible_glyph_chapter_gen27() {
           "and",
           "bow,",
           "and",
-          "go",
+          "$walking+tray_out",
           "out",
           "into",
           "the",
