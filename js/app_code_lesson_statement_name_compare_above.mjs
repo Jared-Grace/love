@@ -98,9 +98,11 @@ export function app_code_lesson_statement_name_compare_above(root, context) {
     names_compared,
     "):",
   ]);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two naming lines are drawn once above as the thing being supposed, and again inside this program because the answer under it is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down from further up the box, and the box below this one already draws all three.");
   let logged_names = js_code_console_log_statement(names_compared);
   let value2 = js_keyword_true();
-  app_code_code_lines_writes_out(box_names, [logged_names], value2);
+  let lines_names = [held_first, held_last, logged_names];
+  app_code_code_lines_writes_out(box_names, lines_names, value2);
   let box_turned = app_code_container_light_blue(root);
   ("the swap is written out as the two comparisons themselves, one turning into the other, before the answer is spoken about. Asked the other way round named the change in words only, and a learner had to build the turned-round line in their head to see what was being asked - which is exactly the line drawn a row below.");
   html_div_cycle_code(box_turned, [
