@@ -670,7 +670,7 @@ export function bible_glyph_chapter_ezk01() {
           "$voice",
           "of",
           "the",
-          "Almighty,",
+          "$might,",
           "like",
           "the",
           "$voice",
