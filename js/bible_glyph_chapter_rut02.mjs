@@ -776,7 +776,7 @@ export function bible_glyph_chapter_rut02() {
           "work",
           "with",
           "his",
-          "young",
+          "$girl",
           "women,",
           "so",
           "that",
