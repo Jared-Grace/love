@@ -65,7 +65,7 @@ export function bible_glyph_chapter_mic03() {
         verse_number: 3,
         words: [
           "You",
-          "eat",
+          "$eating",
           "the",
           "flesh",
           "of",
