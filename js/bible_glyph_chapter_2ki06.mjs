@@ -245,7 +245,7 @@ export function bible_glyph_chapter_2ki06() {
           "$man_beard",
           "of",
           "$fire",
-          "sent",
+          "$hand_sending",
           "$speech",
           "to",
           "the",
