@@ -342,7 +342,7 @@ export function bible_glyph_chapter_2ch07() {
           "sent",
           "the",
           "$family",
-          "away",
+          "$hand_sending",
           "to",
           "their",
           "homes,",
