@@ -148,7 +148,7 @@ export function bible_glyph_chapter_2sa05() {
           "over",
           "$proper_name$Judah",
           "seven",
-          "years",
+          "$year",
           "and",
           "six",
           "months,",
