@@ -371,7 +371,7 @@ export function bible_glyph_chapter_gen04() {
           "than",
           "I",
           "can",
-          "bear.",
+          "$lifting.",
         ],
       },
       {
