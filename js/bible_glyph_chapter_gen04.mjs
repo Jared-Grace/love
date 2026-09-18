@@ -577,7 +577,7 @@ export function bible_glyph_chapter_gen04() {
           "of",
           "those",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "tents",
           "and",
