@@ -409,7 +409,7 @@ export function bible_glyph_chapter_lev10() {
           "and",
           "$woman",
           "may",
-          "eat",
+          "$eating",
           "in",
           "a",
           "ceremonially",
