@@ -238,7 +238,7 @@ export function bible_glyph_chapter_isa43() {
           "called",
           "by",
           "My",
-          "name,",
+          "$name_tag,",
           "whom",
           "I",
           "created",
