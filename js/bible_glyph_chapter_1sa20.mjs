@@ -1182,7 +1182,7 @@ export function bible_glyph_chapter_1sa20() {
           "he",
           "did",
           "$no_entry",
-          "eat",
+          "$eating",
           "any",
           "$bread",
           "on",
