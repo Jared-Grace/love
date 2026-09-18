@@ -378,7 +378,7 @@ export function bible_glyph_chapter_num32() {
           "the",
           "$wilderness",
           "forty",
-          "years,",
+          "$year,",
           "until",
           "the",
           "whole",
