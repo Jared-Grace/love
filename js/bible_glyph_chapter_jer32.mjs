@@ -29,7 +29,7 @@ export function bible_glyph_chapter_jer32() {
           "in",
           "the",
           "tenth",
-          "year",
+          "$year",
           "of",
           "$proper_name$Zedekiah",
           "$king",
