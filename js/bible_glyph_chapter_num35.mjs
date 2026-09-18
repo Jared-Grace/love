@@ -1022,7 +1022,7 @@ export function bible_glyph_chapter_num35() {
           "$earth",
           "where",
           "you",
-          "live,",
+          "$person+house,",
           "and",
           "where",
           "I",
