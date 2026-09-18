@@ -1484,7 +1484,7 @@ export function bible_glyph_chapter_1ki02() {
         words: [
           "the",
           "$king",
-          "summoned",
+          "$hand_sending",
           "$proper_name$Shimei",
           "and",
           "$speech",
