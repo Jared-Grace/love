@@ -1024,7 +1024,7 @@ export function bible_glyph_chapter_jol02() {
           "called",
           "by",
           "the",
-          "LORD.",
+          "$i_am.",
         ],
       },
     ],
