@@ -852,7 +852,7 @@ export function bible_glyph_chapter_1ch29() {
         words: [
           "So",
           "Solomon",
-          "sat",
+          "$person+house",
           "on",
           "the",
           "throne",
