@@ -500,7 +500,7 @@ export function bible_glyph_chapter_lam03() {
         words: [
           "Let",
           "him",
-          "sit",
+          "$person+house",
           "alone",
           "in",
           "silence,",
