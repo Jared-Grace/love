@@ -14,7 +14,7 @@ export function bible_glyph_chapter_exo40() {
     verses: [
       {
         verse_number: 1,
-        words: ["Then", "the", "$i_am", "$mouth", "to", "Moses,"],
+        words: ["Then", "the", "$i_am", "$mouth", "to", "$proper_name$Moses,"],
       },
       {
         verse_number: 2,
@@ -253,7 +253,7 @@ export function bible_glyph_chapter_exo40() {
         words: [
           "Then",
           "bring",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son",
@@ -280,7 +280,7 @@ export function bible_glyph_chapter_exo40() {
           "are",
           "to",
           "clothe",
-          "Aaron",
+          "$proper_name$Aaron",
           "with",
           "the",
           "$sparkle",
@@ -722,8 +722,8 @@ export function bible_glyph_chapter_exo40() {
           "and",
           "$tray_out",
           "it",
-          "Moses,",
-          "Aaron,",
+          "$proper_name$Moses,",
+          "$proper_name$Aaron,",
           "and",
           "his",
           "$son",
@@ -756,7 +756,7 @@ export function bible_glyph_chapter_exo40() {
           "$i_am",
           "had",
           "commanded",
-          "Moses.",
+          "$proper_name$Moses.",
         ],
       },
       {
