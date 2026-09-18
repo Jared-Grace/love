@@ -1,14 +1,13 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
-import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_value_word } from "./app_code_lesson_statement_name_value_word.mjs";
 import { app_code_lesson_statement_name_two_word } from "./app_code_lesson_statement_name_two_word.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
 import { list_join_empty } from "./list_join_empty.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_statement_name_value } from "./app_code_lesson_statement_name_value.mjs";
 import { app_code_lesson_cup_fruit } from "./app_code_lesson_cup_fruit.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_assign_statement } from "./js_code_assign_statement.mjs";
@@ -16,6 +15,7 @@ import { js_code_console_log_statement } from "./js_code_console_log_statement.m
 import { html_div_code } from "./html_div_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { js_code_semicolon } from "./js_code_semicolon.mjs";
+import { app_code_lesson_functions_console_log_statement } from "./app_code_lesson_functions_console_log_statement.mjs";
 export function app_code_lesson_statement_name_again_above(root, context) {
   arguments_assert(arguments, 2);
   ("the boxes read before the first question: one cup, what was in it, what is in it now, and the line that changed it");
@@ -69,7 +69,9 @@ export function app_code_lesson_statement_name_again_above(root, context) {
   ]);
   html_div_code(box_code, again);
   html_div_cycle_code(box_code, ["Then we write out what is in the cup:"]);
-  app_code_code_lines_writes_out(box_code, [logged], word_after);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The line that makes the cup and the line that fills it again stand above as the two lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down the box - and on this screen the whole question is which of two words comes out, which only both lines together answer.");
+  let lines = [held, again, logged];
+  app_code_code_lines_writes_out(box_code, lines, word_after);
   ("The last box says the order rule in the words the course already owns. A statement, and the ; that ends one, were taught long before this lesson - so the rule is stated about statements rather than about LINES, which is a word about how the program is laid out on the screen and not about the language. Two statements on one line would still happen in the order they were written, and a learner told the rule in terms of lines has been given something that is nearly true.");
   ("The recall comes first, because the sentence under it leans on it. A learner who has to remember what a statement is while reading a rule about statements is doing two things at once, and the first of them is free to give them.");
   ("Then the rule is spent on the very cup in front of them rather than left general. WHAT COMES OUT IS WHATEVER WENT IN LAST is true and says nothing about this screen; naming the cup, and saying out loud that its value was set twice here, is the same rule with the working shown - and this screen is the one place a learner can check it against a picture.");
