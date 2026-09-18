@@ -576,7 +576,7 @@ export function bible_glyph_chapter_zec14() {
           "the",
           "$earth",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$proper_name$Jerusalem",
