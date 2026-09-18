@@ -263,7 +263,7 @@ export function bible_glyph_chapter_isa35() {
           "vicious",
           "$sprout",
           "will",
-          "go",
+          "$walking+pointing_up",
           "up",
           "on",
           "it.",
