@@ -768,7 +768,7 @@ export function bible_glyph_chapter_amo05() {
           "Damascus,",
           "$speech",
           "the",
-          "LORD,",
+          "$i_am,",
           "whose",
           "name",
           "is",
