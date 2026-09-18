@@ -1035,7 +1035,7 @@ export function bible_glyph_chapter_jdg06() {
           "$speech",
           "to",
           "$proper_name$Joash,",
-          "Bring",
+          "$walking+tray_out",
           "out",
           "your",
           "$son.",
