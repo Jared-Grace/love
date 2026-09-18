@@ -673,7 +673,7 @@ export function bible_glyph_chapter_isa07() {
           "the",
           "$earth",
           "will",
-          "eat",
+          "$eating",
           "curds",
           "and",
           "honey.",
