@@ -951,7 +951,7 @@ export function bible_glyph_chapter_exo23() {
           "They",
           "must",
           "$no_entry",
-          "remain",
+          "$person+house",
           "in",
           "your",
           "$earth,",
