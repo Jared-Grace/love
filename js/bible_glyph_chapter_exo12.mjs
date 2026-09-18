@@ -199,7 +199,7 @@ export function bible_glyph_chapter_exo12() {
           "$house",
           "where",
           "they",
-          "eat",
+          "$eating",
           "the",
           "lambs.",
         ],
