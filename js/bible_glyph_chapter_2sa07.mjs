@@ -742,7 +742,7 @@ export function bible_glyph_chapter_2sa07() {
           "to",
           "make",
           "a",
-          "name",
+          "$name_tag",
           "for",
           "Himself,",
           "and",
