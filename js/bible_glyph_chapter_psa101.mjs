@@ -149,7 +149,7 @@ export function bible_glyph_chapter_psa101() {
           "that",
           "they",
           "may",
-          "dwell",
+          "$person+house",
           "with",
           "me;",
           "he",
