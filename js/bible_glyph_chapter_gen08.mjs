@@ -119,7 +119,7 @@ export function bible_glyph_chapter_gen08() {
           "the",
           "$mountain",
           "of",
-          "Ararat.",
+          "$proper_name$Ararat.",
         ],
       },
       {
