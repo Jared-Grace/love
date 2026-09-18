@@ -740,7 +740,7 @@ export function bible_glyph_chapter_luk15() {
         "$plus",
         "$no_entry",
         "would",
-        "go",
+        "$footprints+tray_in",
         "in.",
         "So",
         "$pointing_back",
