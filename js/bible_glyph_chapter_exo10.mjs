@@ -277,7 +277,7 @@ export function bible_glyph_chapter_exo10() {
           "Let",
           "the",
           "people",
-          "go,",
+          "$hand_sending,",
           "so",
           "that",
           "they",
