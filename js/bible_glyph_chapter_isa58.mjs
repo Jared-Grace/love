@@ -143,7 +143,7 @@ export function bible_glyph_chapter_isa58() {
           "and",
           "strife,",
           "to",
-          "strike",
+          "$fist",
           "viciously",
           "with",
           "your",
