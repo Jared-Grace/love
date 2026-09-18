@@ -76,7 +76,7 @@ export function bible_glyph_chapter_exo34() {
           "$no_entry",
           "$man_beard",
           "may",
-          "go",
+          "$walking+pointing_up",
           "up",
           "with",
           "you,",
