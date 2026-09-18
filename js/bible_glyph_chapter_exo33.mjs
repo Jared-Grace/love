@@ -650,7 +650,7 @@ export function bible_glyph_chapter_exo33() {
           "will",
           "proclaim",
           "My",
-          "name,",
+          "$name_tag,",
           "the",
           "LORD,",
           "in",
