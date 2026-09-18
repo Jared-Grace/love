@@ -53,7 +53,7 @@ export function bible_glyph_chapter_psa027() {
           "upon",
           "me",
           "to",
-          "devour",
+          "$eating",
           "my",
           "$meat,",
           "my",
