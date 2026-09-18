@@ -353,7 +353,7 @@ export function bible_glyph_chapter_2ki05() {
         words: [
           "Then",
           "Elisha",
-          "sent",
+          "$hand_sending",
           "him",
           "an",
           "$angel,",
