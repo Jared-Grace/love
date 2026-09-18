@@ -433,7 +433,7 @@ export function bible_glyph_chapter_exo16() {
           "evening",
           "the",
           "quail",
-          "came",
+          "$walking+pointing_up",
           "and",
           "covered",
           "the",
