@@ -450,7 +450,7 @@ export function bible_glyph_chapter_num10() {
           "Merari",
           "set",
           "out,",
-          "transporting",
+          "$lifting",
           "it.",
         ],
       },
