@@ -393,6 +393,10 @@ export function bible_glyph_artwork_names() {
       asset: "Hundred points",
     },
     {
+      glyph: "i_am",
+      asset: "Infinity",
+    },
+    {
       glyph: "equals",
       asset: "Heavy equals sign",
     },
