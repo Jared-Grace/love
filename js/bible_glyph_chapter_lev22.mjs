@@ -269,7 +269,7 @@ export function bible_glyph_chapter_lev22() {
           "charge,",
           "$no_entry",
           "they",
-          "bear",
+          "$lifting",
           "the",
           "guilt",
           "and",
