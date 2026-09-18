@@ -545,7 +545,7 @@ export function bible_glyph_chapter_num11() {
           "$no_entry",
           "have",
           "to",
-          "bear",
+          "$lifting",
           "it",
           "by",
           "yourself.",
