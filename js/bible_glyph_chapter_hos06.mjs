@@ -175,7 +175,7 @@ export function bible_glyph_chapter_hos06() {
           "and",
           "My",
           "$scales",
-          "go",
+          "$walking+tray_out",
           "forth",
           "like",
           "$light.",
