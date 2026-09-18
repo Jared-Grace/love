@@ -1,19 +1,19 @@
-import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
-import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { function_duplicate_kind_parallel } from "./function_duplicate_kind_parallel.mjs";
-import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
-import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { app_code_lesson_statement_name_value_name } from "./app_code_lesson_statement_name_value_name.mjs";
 import { app_code_lesson_statement_name_two_name } from "./app_code_lesson_statement_name_two_name.mjs";
 import { js_operator_plus_symbol } from "./js_operator_plus_symbol.mjs";
 import { add } from "./add.mjs";
 import { js_code_binary_spaced_nb } from "./js_code_binary_spaced_nb.mjs";
+import { app_code_lesson_statement_names_added } from "./app_code_lesson_statement_names_added.mjs";
 import { app_code_container_light_blue } from "./app_code_container_light_blue.mjs";
-import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
+import { app_code_remember_from_lesson } from "./app_code_remember_from_lesson.mjs";
+import { app_code_lesson_functions_console_log_arithmetic } from "./app_code_lesson_functions_console_log_arithmetic.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
+import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
+import { html_div_code_lines } from "./html_div_code_lines.mjs";
 export function app_code_lesson_statement_name_sum_above(root, context) {
   function_duplicate_kind_parallel();
   arguments_assert(arguments, 2);
@@ -55,6 +55,8 @@ export function app_code_lesson_statement_name_sum_above(root, context) {
     names_sum,
     "):",
   ]);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two naming lines are drawn once above as the thing being supposed, and again inside this program because the total written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the total rested on two lines a learner had to carry down from higher in the box - and which number each name holds is the whole of why the total comes out as it does.");
   let logged_names = js_code_console_log_statement(names_sum);
-  app_code_code_lines_writes_out(box_names, [logged_names], total);
+  let lines_names = [held_first, held_last, logged_names];
+  app_code_code_lines_writes_out(box_names, lines_names, total);
 }

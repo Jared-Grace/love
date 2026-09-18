@@ -63,7 +63,9 @@ export function app_code_lesson_statement_name_two_above(root, context) {
     "Then we write out whatever is inside the cup called ",
     name_last,
   ]);
-  app_code_code_lines_writes_out(box_code, [logged], word_last);
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two lines that make the cups stand a row up as the lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on two lines a learner had to carry down from higher in the box - and with two cups on the screen, which word comes out is exactly the thing those two lines decide.");
+  let lines = [held_first, held_last, logged];
+  app_code_code_lines_writes_out(box_code, lines, word_last);
   ("the last box says which of the two names comes out, and says it by colour rather than by words - the name written out and the word inside wear the same coloured tile a line apart");
   app_code_lesson_inside_parenthesis_box(root, name_last, name_first);
 }
