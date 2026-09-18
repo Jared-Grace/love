@@ -277,7 +277,7 @@ export function bible_glyph_chapter_deu10() {
           "stand",
           "before",
           "the",
-          "LORD",
+          "$i_am",
           "to",
           "serve",
           "Him,",
