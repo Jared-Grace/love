@@ -1,6 +1,3 @@
-import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
-import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
-import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contested_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -567,6 +564,10 @@ import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyp
 import { bible_glyph_marks_wordless_assert } from "./bible_glyph_marks_wordless_assert.mjs";
 import { bible_glyph_divine_numbers_assert } from "./bible_glyph_divine_numbers_assert.mjs";
 import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
+import { bible_glyph_seats_contested_gate_run } from "./bible_glyph_seats_contested_gate_run.mjs";
+import { messages_real_quoted_gate_run } from "./messages_real_quoted_gate_run.mjs";
+import { reply_parser_gate_run } from "./reply_parser_gate_run.mjs";
+import { app_code_note_name_contrast_gate_run } from "./app_code_note_name_contrast_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -1139,6 +1140,7 @@ export function qa_gates() {
     bible_glyph_seats_contested_gate_run,
     messages_real_quoted_gate_run,
     reply_parser_gate_run,
+    app_code_note_name_contrast_gate_run,
   ];
   return gates;
 }

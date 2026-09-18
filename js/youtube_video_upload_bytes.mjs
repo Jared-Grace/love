@@ -1,3 +1,5 @@
+import { youtube_video_upload_patience_ms } from "./youtube_video_upload_patience_ms.mjs";
+import { Agent, setGlobalDispatcher } from "undici";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { property_get } from "./property_get.mjs";
 import { text_combine } from "./text_combine.mjs";
@@ -12,9 +14,16 @@ export async function youtube_video_upload_bytes(session_url, bytes) {
   "$plain bytes";
   "Hands the whole of a film to the address kept open for it, and gives back the record of the video that now exists, including the word it can be reached by.";
   "The address already carries who is asking inside it, so nothing is signed here. Signing it again is not harmless - the permission written on the ask disagrees with the permission the address was opened under, and the refusal that follows names the permission rather than the repetition.";
+  "★ THE WAITING IS WIDENED BEFORE ANYTHING IS SENT, because the fetch built into node gives up after five minutes of waiting for headers and a film says nothing back until every byte of it has landed. So on a large enough film the five minutes is not a timeout at all - it is the sending still in progress, killed and reported as though the far end had gone quiet. Nothing was created that time, which is the only mercy in it.";
   "The whole file goes in one go rather than in pieces. Pieces are what the two-step way is for and they are worth having for a film large enough that losing the sending halfway matters, but a piece is only worth sending once there is something that counts how far it got - and until that exists, sending in pieces is the same single failure with more places to get the counting wrong.";
   "The reply is read as a record rather than thrown away, because the name YouTube gives the video is decided by YouTube and appears nowhere else. Whoever asked for the sending cannot work it out and cannot ask for it afterwards without it.";
   arguments_assert(arguments, 2);
+  let patience = youtube_video_upload_patience_ms();
+  let agent = new Agent({
+    headersTimeout: patience,
+    bodyTimeout: patience,
+  });
+  setGlobalDispatcher(agent);
   let byte_count = property_get(bytes, "length");
   let length = text_combine("", byte_count);
   let options = {
