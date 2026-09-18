@@ -83,6 +83,13 @@ export function bible_glyph_roots_hebrew() {
   "A DEDICATED ARROW WAS PROPOSED FOR EACH AND BOTH WERE REFUSED, and this is the losing reading worth recording. An arrow pointing up is clearer at a glance than a walking figure beside a pointing hand, and it is free to take. What it is not is a verb: an arrow says up and alah says to go up, and the difference shows the moment the word is causative - Moses brings the people up, and an arrow standing there says up about a sentence whose subject is a man doing something. The pair keeps the going in the mark, so the causative reads as a going that somebody caused, which is what the Hebrew is.";
   "THE GOING DOWN WAS REFUSED IN THE SAME PASS FOR A REASON THAT IS ABOUT THIS TABLE AND NOT ABOUT YARAD. The obvious mark is the walking figure beside a hand pointing down, and the hand pointing down is already spent: it is et, the mark Hebrew puts in front of the thing a verb acts on. A group whose second half is a grammar particle does not read as down, it reads as going, object - so yarad waits for a mark of its own rather than borrowing one that says something else. Half of a pair is still worth having, and the blank beside it asks the reader a question instead of answering one wrongly.";
   "BOTH ARE ONE SENSE AND NEITHER NEEDED A SPLIT, which had to be asked because both are common enough to hide a second meaning. The interlinear gives yatsa went out, came out and go out, and gives alah went up, Go up and came up; every wording of both is the same motion seen from a different side of it, and the sides are the English translator's rather than the Hebrew's. A word being frequent is not the same as a word being ambiguous, and only the second costs a pair.";
+  "FIVE MORE CAME OFF THE SAME COUNT THE SAME DAY, and they are the first seats this table has taken that cost a picture. The going out and the going up were free because the vocabulary happened to hold both halves of each; below them the list runs dwelling, the year, sending, eating and lifting, four thousand two hundred occurrences between them, and only one of those four could be said with marks already bought. A compromise mark on a word used eight hundred times is paid for by every reader of every verse that holds it, so three pictures were added instead.";
+  "THE DWELLING IS A HUMAN AND A HOUSE AND THE SEAT WAS REFUSED FOR A HARD REASON. Yashab is the commonest undrawn Hebrew word there is - it sits, it dwells, it remains, and its participle is the inhabitants - and a chair was the obvious picture. The artwork set has no chair: it answers to wheelchairs and to the lotus position, and the lotus is unspendable here because a figure sitting cross-legged beside the praying hands reads as a second kind of prayer. So the group does the work, and it does all three senses - the inhabitants of the land, he dwelt in Hebron, and he sat in the gate all read as a human housed.";
+  "THE HOUSEHOLD IS THE MISREADING TO WATCH AND IT IS TOLERABLE. A human beside a house can be read as a household, which is bayith and is drawn as the house alone. The two stay apart because the house alone is the building and the pair is a person put into one, and the gate that walks touching marks will say if any verse ever spells the pair by accident.";
+  "THE SENDING COST NOTHING AND IT WAS ALREADY DECIDED ELSEWHERE. The hand held out is apostello on the Greek side of this Bible, which is the same word in the other language, so seating shalach on it is not a choice about Hebrew at all - it is the two tables agreeing, which is worth more than either picture. The out-tray was the alternative and was refused: that mark is now half of the going out, and it is the goer's side of the movement while shalach is the sender's.";
+  "THE YEAR, THE EATING AND THE LIFTING WERE ASKED OF THE ARTWORK SET FIRST. Each of the three exists there - a calendar, a plate with a fork and knife, a person lifting weights - so none of them is a name nothing can draw. The hourglass could not be reused for the year because it is olam, forever, and a picture of time already spent on the endless one must not also mean a countable one.";
+  "THE LIFTING WILL DRAW THE FORGIVING AS A CARRYING, AND THAT IS THE LITERAL READING RATHER THAN A FAULT. Nasa lifts, carries, bears and takes away, and where it is used of sin the Hebrew idiom is to carry it; a reader who sees the lifting in bear his iniquity has read what the text says, and forgive is the interpretation English translations add. The mark is a gym figure and nothing in this Bible is a gym, which was the argument against it - but the set has no picture of carrying at all, and no mark is worse than an anachronistic one.";
+  "FOUR WORDS ABOVE THESE ON THE LIST WERE LOOKED AT AND LEFT. Qara to call, qum to arise, hinneh behold and the two words for with are all commoner than the lifting and none of them found an honest mark. The pointing hand is hoti on the Greek side and so cannot be behold; the upward hand is al, the preposition, so a human beside it says man upon rather than man rising; and calling would need a second horn beside the megaphone, which is the prophet, and two horns drawn alike read as one word. They are left undrawn on purpose and this paragraph is the record of why, so nobody spends a day rediscovering it.";
   let roots = [
     {
       root: "yhwh",
@@ -363,6 +370,56 @@ export function bible_glyph_roots_hebrew() {
         {
           strong: "5927",
           glyph: "walking+pointing_up",
+        },
+      ],
+    },
+    {
+      root: "yashab",
+      gloss: "sit, dwell, remain, inhabit",
+      words: [
+        {
+          strong: "3427",
+          glyph: "person+house",
+        },
+      ],
+    },
+    {
+      root: "shalach",
+      gloss: "send, send away, stretch out",
+      words: [
+        {
+          strong: "7971",
+          glyph: "hand_sending",
+        },
+      ],
+    },
+    {
+      root: "shanah",
+      gloss: "year",
+      words: [
+        {
+          strong: "8141",
+          glyph: "year",
+        },
+      ],
+    },
+    {
+      root: "akal",
+      gloss: "eat, devour, consume",
+      words: [
+        {
+          strong: "398",
+          glyph: "eating",
+        },
+      ],
+    },
+    {
+      root: "nasa",
+      gloss: "lift, carry, bear, take away",
+      words: [
+        {
+          strong: "5375",
+          glyph: "lifting",
         },
       ],
     },
