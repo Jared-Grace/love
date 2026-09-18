@@ -383,7 +383,7 @@ export function bible_glyph_chapter_exo18() {
           "of",
           "$proper_name$Israel",
           "to",
-          "eat",
+          "$eating",
           "$bread",
           "with",
           "$proper_name$Moses",
