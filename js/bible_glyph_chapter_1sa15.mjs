@@ -24,7 +24,7 @@ export function bible_glyph_chapter_1sa15() {
           "$proper_name$Saul,",
           "The",
           "$i_am",
-          "sent",
+          "$hand_sending",
           "me",
           "to",
           "$oil",
