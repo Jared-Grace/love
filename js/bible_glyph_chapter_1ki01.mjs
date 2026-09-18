@@ -209,7 +209,7 @@ export function bible_glyph_chapter_1ki01() {
           "and",
           "he",
           "was",
-          "born",
+          "$baby",
           "next",
           "after",
           "$proper_name$Absalom.",
