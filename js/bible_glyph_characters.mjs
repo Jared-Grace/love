@@ -61,6 +61,10 @@ export function bible_glyph_characters() {
   "THE INFINITY SIGN IS THE COVENANT NAME. It was chosen for what it does not do as much as for what it does. It is not a picture of anything made - no face, no fire, no crown, nothing in heaven above or in the earth beneath - so it does not break the second commandment to draw the one who gave it. It says without beginning and without end, which is the nearest a mark can come to I AM, and it is the one place in this vocabulary where that is the point rather than a compromise.";
   "THE FIRE STAYS GOD AND THE SIGN IS THE NAME, and the two are deliberately different marks. Elohim and theos are the word God, which many may be called and one truly is; the four letters are the name that belongs to one. A reader who learns the fire in a letter of John and then meets the sign in Genesis is meant to see that they have met something else - which is exactly what this table's own opening paragraph said should happen, and had not been true of it until now.";
   "SOMETHING ELSE COULD BE DRAWN FOR IT AND THE ROW WOULD COST ONE LINE. The tables seat Strong's numbers rather than pictures, so the covenant name can be given a drawn mark of its own the day anybody draws one, without a chapter being touched. That is the right way round: the reverence is in the name having a mark nothing else wears, not in which mark it is.";
+  "THE NAME BADGE IS NOT A WORD AND IT IS THE FIRST MARK HERE THAT IS NOT. Every other picture in this table stands FOR an original word - the flame is elohim, the tag is shem, the sign is the four letters. This one stands for nothing in the Hebrew or the Greek at all. It says that the letters beside it are a person or a place being called by their name rather than English standing in for a picture nobody has drawn yet, and it is the answer to the one thing a picture Bible cannot draw: there is no picture of David.";
+  "A NAME WAS ALWAYS GOING TO STAY IN LETTERS AND THE READER HAD NO WAY OF KNOWING THAT. Undrawn English on this page means one thing today - a word waiting for a picture - so a reader meeting Abraham in letters is being told, wrongly, that somebody has not got round to him yet. Nobody ever will, and that is not a gap but a decision: a name is a sound a person answers to, and drawing it would be translating it, which is the one thing a name must never have done to it. The mark is how the page says so.";
+  "IT IS A SECOND MARK AND NOT THE TAG REUSED, AND THAT WAS TRIED FIRST. The proposal was that the tag alone means the word name and the tag with letters after it means a name - one picture, read by what follows it. That cannot be read left to right. The fourteenth of Ruth now says may his TAG become famous, where the tag is shem and the word after it is become; a reader following the rule sees letters after a tag and reads the name Become. The rule needs the reader to already know which English words are names, which is the very thing the mark was bought to tell them.";
+  "SO THE TWO PICTURES DIVIDE THE WORK THE WAY THE FLAME AND THE SIGN DO. The tag is a word of the original text and is drawn where that word stands. The badge is a mark ABOUT the text, and the letters beside it are the text. A reader who has met the pair reads may his TAG become famous and BADGE David without either one needing the other explained, because nothing in the first is waiting for a second word and nothing in the second is a translation.";
   let characters = [
     {
       name: "cross",
@@ -453,6 +457,10 @@ export function bible_glyph_characters() {
     {
       name: "i_am",
       character: "♾️",
+    },
+    {
+      name: "proper_name",
+      character: "📛",
     },
     {
       name: "water",

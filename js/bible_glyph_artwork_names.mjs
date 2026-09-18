@@ -397,6 +397,10 @@ export function bible_glyph_artwork_names() {
       asset: "Infinity",
     },
     {
+      glyph: "proper_name",
+      asset: "Name badge",
+    },
+    {
       glyph: "equals",
       asset: "Heavy equals sign",
     },
