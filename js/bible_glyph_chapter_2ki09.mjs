@@ -602,7 +602,7 @@ export function bible_glyph_chapter_2ki09() {
           "standing",
           "on",
           "the",
-          "tower",
+          "$tower",
           "in",
           "$proper_name$Jezreel",
           "$eye",
