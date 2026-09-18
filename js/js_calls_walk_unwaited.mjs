@@ -12,6 +12,7 @@ export function js_calls_walk_unwaited(walkers, ast) {
   ("★ THE GATE NEXT DOOR CANNOT SEE THIS SHAPE, WHICH IS WHY THIS ONE EXISTS. The reading of calls nobody waits for looks at the name being called, and a job handed over as an argument is never called by its name in the file it is written in. So the walk calls it, receives a promise, and the loop carries straight on. Nothing is waiting anywhere, and nothing throws.");
   ("What it costs was measured on 2026-09-18: the reply parser's own test walked its eighteen cases this way, so it handed back success before a single one had answered and its failures arrived afterwards as rejections outside every caller's catch. It had been wrong for eleven days, and the reason nobody heard was that it could not fail.");
   ("A job held for a moment on purpose is not this. Handing a list of them to something that waits for them all is the concurrent shape the repo writes deliberately, and it goes through a mapping rather than a walk, so it never reaches this reading.");
+  ("★ WHAT AN ARGUMENT IS NAMED IS ASKED ONLY OF ARGUMENTS THAT HAVE A NAME. The first writing of this worked out whether the argument was an identifier and then read its name anyway, one line above the answer it had just been given. Most arguments in the repo are identifiers, so it looked right everywhere it was tried; the first list written out inside a call threw, and the whole sweep of seventeen thousand functions died with it rather than reporting nothing. A guard computed and not obeyed is worse than no guard, because the reader believes it is there.");
   let async_named = [];
   let declarations = js_list_type(ast, "FunctionDeclaration");
   for (let visited of declarations) {
@@ -48,7 +49,7 @@ export function js_calls_walk_unwaited(walkers, ast) {
       let expression_is = js_node_type_is(arg, "FunctionExpression");
       let written_is = arrow_is || expression_is;
       let async_is = written_is ? property_get(arg, "async") : false;
-      let item = property_get(arg, "name");
+      let item = named_is ? property_get(arg, "name") : "";
       let name_async_is = named_is ? list_includes(async_named, item) : false;
       let handed_is = async_is || name_async_is;
       if (handed_is) {

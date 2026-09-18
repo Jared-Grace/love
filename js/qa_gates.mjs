@@ -1,3 +1,4 @@
+import { functions_calls_walk_unwaited_gate_run } from "./functions_calls_walk_unwaited_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -1143,6 +1144,7 @@ export function qa_gates() {
     messages_real_quoted_gate_run,
     reply_parser_gate_run,
     app_code_note_name_contrast_gate_run,
+    functions_calls_walk_unwaited_gate_run,
   ];
   return gates;
 }
