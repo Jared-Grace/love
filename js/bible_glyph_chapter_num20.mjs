@@ -410,7 +410,7 @@ export function bible_glyph_chapter_num20() {
           "From",
           "Kadesh",
           "$proper_name$Moses",
-          "sent",
+          "$hand_sending",
           "$angel",
           "to",
           "the",
