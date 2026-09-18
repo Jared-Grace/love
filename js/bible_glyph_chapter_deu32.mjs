@@ -1015,7 +1015,7 @@ export function bible_glyph_chapter_deu32() {
         verse_number: 38,
         words: [
           "which",
-          "ate",
+          "$eating",
           "the",
           "fat",
           "of",
