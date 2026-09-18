@@ -139,7 +139,7 @@ export function bible_glyph_chapter_gen03() {
           "the",
           "$sun",
           "you",
-          "eat",
+          "$eating",
           "$tray_out",
           "it",
           "your",
