@@ -468,7 +468,7 @@ export function bible_glyph_chapter_num22() {
         words: [
           "Then",
           "Balak",
-          "sent",
+          "$hand_sending",
           "other",
           "princes,",
           "more",
