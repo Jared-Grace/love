@@ -900,7 +900,7 @@ export function bible_glyph_chapter_lev16() {
           "Then",
           "he",
           "must",
-          "go",
+          "$walking+tray_out",
           "out",
           "and",
           "$hammer",
