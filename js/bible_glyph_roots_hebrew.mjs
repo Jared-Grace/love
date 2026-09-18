@@ -67,6 +67,11 @@ export function bible_glyph_roots_hebrew() {
   "AL IS THE HAND POINTING UP AND ET IS THE HAND POINTING DOWN, which is the whole reason this one was cheap. The downward hand had been bought the same week for the thing under it, so a reader who has met it reads the upward one without being told. Al is wider than the picture - it is also against and concerning - and those senses stay in letters where a chapter's writer can see which is in front of them, the same rule the screaming face already lives under.";
   "KOL IS THE HUNDRED, AND IT IS THE ONE SEAT HERE THAT IS ARGUED RATHER THAN OBVIOUS. The mark is made of digits, which is the closest this Bible comes to letters, and it was taken because the alternative was worse rather than because it is good: unseated, kol prints the English word all five thousand four hundred times. What decided it is that the mark a reader already arrives with - completely, the whole of it - does not fight the word it is being taught, which is the test the pushpin was admitted under.";
   "THE THREE COMMONER NUMBERS ABOVE THESE WERE LOOKED AT AND LEFT. Asher, the relative who and which, stands on five thousand five hundred and two words and has no honest picture: every arrow and loop the vocabulary could spare says repeat or return, and a relative pronoun says neither. Ki, for and because, stands on four thousand four hundred and eighty six and is the same problem - a cause is a relation between two clauses and nothing draws it. They are left in letters deliberately, which is not the same as overlooked, and whoever finds a mark for either should take it.";
+  "THE COVENANT NAME STOPPED SHARING A MARK WITH THE WORD NAME ON 2026-09-18, and the paragraph five lines above this one had been promising that since the table was written. It says the covenant name is not the Greek word for God with Hebrew letters, so it is not drawn as the fire - it gets its own glyph. It did not have one. Yhwh and shem were both seated on the name tag, so the table's own statement of intent and the table's own rows disagreed, and the rows were what got drawn.";
+  "WHAT SETTLED IT WAS THE WORDS AND NOT A PREFERENCE. Shem is the ordinary noun, the thing a person or a place has one of. Yhwh is the four letters given out of the bush when Moses asks what to say, built on the verb to be - I AM WHO I AM. Those are two words, so they are two marks, by the same rule that keeps the blood apart from the darkness. That the two senses both sound like naming in English is a fact about English and about nothing else.";
+  "AND THE SHARING HAD BEEN COSTING PICTURES THE WHOLE TIME. Where one line held both words every mark of that picture in the line had to be stood down, because a reader meeting the same picture twice cannot tell which is which - a hundred and forty one marks, across the written chapters, blank for that reason and no other. The fourteenth verse of the fourth of Ruth is the one the chapters themselves complain about: the neighbours bless God for giving Naomi a redeemer and pray the child will be famous, and it was the emptiest line on the page.";
+  "THE PAGES WERE REDRAWN BY COMMAND AND NOT BY HAND. Three thousand six hundred and thirty two marks were already standing, and a mark on a page records the picture rather than the word, so every one of them became a question the moment the seats parted. The collision walk answered all of them from the interlinear - three thousand four hundred and one were the name and two hundred and thirty one were the word - with nothing ambiguous and nothing unseated, which is what the walk was built for and the first time it has been spent.";
+  "ADONAI KEEPS THE CROWN AND IS NOT AFFECTED. The lord is a title and may be said of a man - Sarah says it of Abraham - so it is drawn as a crown wherever it stands, and 3069 is the covenant name behind that title rather than the title itself. So a Lord GOD in the prophets now draws the crown and the sign, which is two words and two marks, and says exactly what the Hebrew says.";
   let roots = [
     {
       root: "yhwh",
@@ -74,11 +79,11 @@ export function bible_glyph_roots_hebrew() {
       words: [
         {
           strong: "3068",
-          glyph: "name_tag",
+          glyph: "i_am",
         },
         {
           strong: "3069",
-          glyph: "name_tag",
+          glyph: "i_am",
         },
       ],
     },
