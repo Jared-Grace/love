@@ -896,7 +896,7 @@ export function bible_glyph_chapter_1ki12() {
           "If",
           "these",
           "$family",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$hammer",
