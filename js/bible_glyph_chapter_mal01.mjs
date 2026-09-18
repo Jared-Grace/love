@@ -206,7 +206,7 @@ export function bible_glyph_chapter_mal01() {
           "Me?",
           "$speech",
           "the",
-          "LORD",
+          "$i_am",
           "of",
           "Hosts",
           "to",
