@@ -903,7 +903,7 @@ export function bible_glyph_chapter_2ki02() {
           "name",
           "of",
           "the",
-          "LORD.",
+          "$i_am.",
           "Suddenly",
           "two",
           "female",
