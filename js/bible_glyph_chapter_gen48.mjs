@@ -71,7 +71,7 @@ export function bible_glyph_chapter_gen48() {
           "to",
           "$proper_name$Joseph,",
           "$fire",
-          "Almighty",
+          "$might",
           "$eye",
           "to",
           "me",
