@@ -159,7 +159,7 @@ export function bible_glyph_chapter_exo07() {
           "against",
           "$proper_name$Egypt",
           "and",
-          "bring",
+          "$walking+tray_out",
           "the",
           "$son",
           "of",
