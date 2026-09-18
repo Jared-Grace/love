@@ -18,7 +18,7 @@ export function bible_glyph_chapter_isa06() {
           "year",
           "that",
           "$king",
-          "Uzziah",
+          "$proper_name$Uzziah",
           "$skull,",
           "I",
           "$eye",
