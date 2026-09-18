@@ -6,7 +6,7 @@ import { bible_interlinear_gloss_sort_key } from "./bible_interlinear_gloss_sort
 import { list_sort_number_mapper } from "./list_sort_number_mapper.mjs";
 import { equal } from "./equal.mjs";
 import { text_trim } from "./text_trim.mjs";
-import { bible_gloss_brackets_dropped } from "./bible_gloss_brackets_dropped.mjs";
+import { bible_gloss_notation_dropped } from "./bible_gloss_notation_dropped.mjs";
 import { bible_gloss_lone_marks_dropped } from "./bible_gloss_lone_marks_dropped.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
 import { list_add } from "./list_add.mjs";
@@ -35,7 +35,7 @@ export function bible_interlinear_rows_english_text(rows) {
     let absent = equal(raw, undefined) || equal(raw, null);
     let text = absent ? "" : String(raw);
     let trimmed = text_trim(text);
-    let stripped = bible_gloss_brackets_dropped(trimmed);
+    let stripped = bible_gloss_notation_dropped(trimmed);
     let gloss2 = bible_gloss_lone_marks_dropped(stripped);
     let gloss = bible_gloss_placeholder_words_dropped(gloss2);
     let filler = bible_glyph_gloss_placeholder_is(gloss);
