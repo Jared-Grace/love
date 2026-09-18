@@ -100,7 +100,7 @@ export function bible_glyph_chapter_mal03() {
           "And",
           "He",
           "will",
-          "sit",
+          "$person+house",
           "as",
           "a",
           "refiner",
