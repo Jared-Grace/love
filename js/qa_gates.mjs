@@ -1,33 +1,3 @@
-import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
-import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
-import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
-import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
-import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_unlisted_gate_run.mjs";
-import { app_code_expression_written_gate_run } from "./app_code_expression_written_gate_run.mjs";
-import { app_code_lessons_above_broken_gate_run } from "./app_code_lessons_above_broken_gate_run.mjs";
-import { ebible_version_words_spelled_gate_run } from "./ebible_version_words_spelled_gate_run.mjs";
-import { bible_usfm_markers_named_gate_run } from "./bible_usfm_markers_named_gate_run.mjs";
-import { bible_usfm_version_lines_dropped_gate_run } from "./bible_usfm_version_lines_dropped_gate_run.mjs";
-import { bible_usfm_reading_junk_words_gate_run } from "./bible_usfm_reading_junk_words_gate_run.mjs";
-import { text_word_junk_why_or_null_cases_gate_run } from "./text_word_junk_why_or_null_cases_gate_run.mjs";
-import { bible_usfm_book_typos_gate_run } from "./bible_usfm_book_typos_gate_run.mjs";
-import { bible_usfm_interlinear_words_apart_gate_run } from "./bible_usfm_interlinear_words_apart_gate_run.mjs";
-import { bible_usfm_lines_division_subtitles_dropped_cases_gate_run } from "./bible_usfm_lines_division_subtitles_dropped_cases_gate_run.mjs";
-import { bible_glyph_chapters_verse_marks_overdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_overdrawn_gate_run.mjs";
-import { memory_index_oversize_gate_run } from "./memory_index_oversize_gate_run.mjs";
-import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
-import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
-import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
-import { gloss_explains_repeated_gate_run } from "./gloss_explains_repeated_gate_run.mjs";
-import { bible_glyph_chapters_marks_doubled_gate_run } from "./bible_glyph_chapters_marks_doubled_gate_run.mjs";
-import { app_ceb_bible_gloss_words_explained_apart_gate_run } from "./app_ceb_bible_gloss_words_explained_apart_gate_run.mjs";
-import { app_ceb_bible_gloss_words_edged_gate_run } from "./app_ceb_bible_gloss_words_edged_gate_run.mjs";
-import { app_ceb_bible_gloss_words_unwritten_gate_run } from "./app_ceb_bible_gloss_words_unwritten_gate_run.mjs";
-import { app_ceb_bible_gloss_chapters_absent_gate_run } from "./app_ceb_bible_gloss_chapters_absent_gate_run.mjs";
-import { app_ceb_bible_gloss_verse_claims_wrong_gate_run } from "./app_ceb_bible_gloss_verse_claims_wrong_gate_run.mjs";
-import { app_ceb_bible_gloss_passages_respell_refused_gate_run } from "./app_ceb_bible_gloss_passages_respell_refused_gate_run.mjs";
-import { app_code_lesson_titles_capital_gate_run } from "./app_code_lesson_titles_capital_gate_run.mjs";
-import { lyric_video_picture_scene_alternative_gate_run } from "./lyric_video_picture_scene_alternative_gate_run.mjs";
 import { guard_gate_run } from "./guard_gate_run.mjs";
 import { memory_hook_gate_run } from "./memory_hook_gate_run.mjs";
 import { stop_next_steps_hook_gate_run } from "./stop_next_steps_hook_gate_run.mjs";
@@ -207,6 +177,7 @@ import { bible_glyph_gate_run } from "./bible_glyph_gate_run.mjs";
 import { bible_glyph_artwork_gate_run } from "./bible_glyph_artwork_gate_run.mjs";
 import { bible_glyph_roots_characters_gate_run } from "./bible_glyph_roots_characters_gate_run.mjs";
 import { bible_glyph_undrawn_lists_gate_run } from "./bible_glyph_undrawn_lists_gate_run.mjs";
+import { bible_glyph_gloss_notation_gate_run } from "./bible_glyph_gloss_notation_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_gate_run } from "./bible_glyph_chapters_rosetta_lines_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_notation_gate_run } from "./bible_glyph_chapters_rosetta_lines_notation_gate_run.mjs";
 import { bible_glyph_chapters_rosetta_lines_marks_gate_run } from "./bible_glyph_chapters_rosetta_lines_marks_gate_run.mjs";
@@ -271,6 +242,7 @@ import { qa_gate_told_answered_cases_gate_run } from "./qa_gate_told_answered_ca
 import { examples_registers_gate_run } from "./examples_registers_gate_run.mjs";
 import { functions_selects_unsafe_gate_run } from "./functions_selects_unsafe_gate_run.mjs";
 import { color_near_miss_gate_run } from "./color_near_miss_gate_run.mjs";
+import { color_palette_outside_gate_run } from "./color_palette_outside_gate_run.mjs";
 import { functions_shadowing_operator_gate_run } from "./functions_shadowing_operator_gate_run.mjs";
 import { functions_native_callback_gate_run } from "./functions_native_callback_gate_run.mjs";
 import { functions_shadowing_function_gate_run } from "./functions_shadowing_function_gate_run.mjs";
@@ -401,6 +373,7 @@ import { app_shared_description_gate_run } from "./app_shared_description_gate_r
 import { git_push_urls_gate_run } from "./git_push_urls_gate_run.mjs";
 import { git_history_heavy_absent_gate_run } from "./git_history_heavy_absent_gate_run.mjs";
 import { gloss_back_references_gate_run } from "./gloss_back_references_gate_run.mjs";
+import { gloss_explains_repeated_gate_run } from "./gloss_explains_repeated_gate_run.mjs";
 import { daemons_stale_gate_run } from "./daemons_stale_gate_run.mjs";
 import { g_tiles_window_axis_cases_gate_run } from "./g_tiles_window_axis_cases_gate_run.mjs";
 import { app_g_player_walk_cases_gate_run } from "./app_g_player_walk_cases_gate_run.mjs";
@@ -492,6 +465,7 @@ import { js_ast_return_key_shapes_disagreeing_cases_gate_run } from "./js_ast_re
 import { functions_return_key_shapes_gate_run } from "./functions_return_key_shapes_gate_run.mjs";
 import { bible_usfm_versions_withheld_gate_run } from "./bible_usfm_versions_withheld_gate_run.mjs";
 import { app_code_lesson_telling_shapes_gate_run } from "./app_code_lesson_telling_shapes_gate_run.mjs";
+import { app_code_expression_written_gate_run } from "./app_code_expression_written_gate_run.mjs";
 import { bible_usfm_versions_apart_gate_run } from "./bible_usfm_versions_apart_gate_run.mjs";
 import { js_ast_return_key_shapes_agree_cases_gate_run } from "./js_ast_return_key_shapes_agree_cases_gate_run.mjs";
 import { bible_versions_sung_gate_run } from "./bible_versions_sung_gate_run.mjs";
@@ -560,6 +534,33 @@ import { gloss_explain_root_before_said_gate_run } from "./gloss_explain_root_be
 import { app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run } from "./app_ceb_bible_gloss_roots_claimed_stopped_short_gate_run.mjs";
 import { lyric_video_picture_scene_style_conflict_gate_run } from "./lyric_video_picture_scene_style_conflict_gate_run.mjs";
 import { ebible_chapter_code_padded_cases_gate_run } from "./ebible_chapter_code_padded_cases_gate_run.mjs";
+import { lyric_video_picture_scene_alternative_gate_run } from "./lyric_video_picture_scene_alternative_gate_run.mjs";
+import { app_code_lesson_titles_capital_gate_run } from "./app_code_lesson_titles_capital_gate_run.mjs";
+import { app_ceb_bible_gloss_passages_respell_refused_gate_run } from "./app_ceb_bible_gloss_passages_respell_refused_gate_run.mjs";
+import { app_ceb_bible_gloss_verse_claims_wrong_gate_run } from "./app_ceb_bible_gloss_verse_claims_wrong_gate_run.mjs";
+import { app_ceb_bible_gloss_chapters_absent_gate_run } from "./app_ceb_bible_gloss_chapters_absent_gate_run.mjs";
+import { app_ceb_bible_gloss_words_unwritten_gate_run } from "./app_ceb_bible_gloss_words_unwritten_gate_run.mjs";
+import { app_ceb_bible_gloss_words_edged_gate_run } from "./app_ceb_bible_gloss_words_edged_gate_run.mjs";
+import { app_ceb_bible_gloss_words_explained_apart_gate_run } from "./app_ceb_bible_gloss_words_explained_apart_gate_run.mjs";
+import { bible_glyph_chapters_marks_doubled_gate_run } from "./bible_glyph_chapters_marks_doubled_gate_run.mjs";
+import { gloss_pointers_dangling_gate_run } from "./gloss_pointers_dangling_gate_run.mjs";
+import { gloss_capital_claim_wrong_gate_run } from "./gloss_capital_claim_wrong_gate_run.mjs";
+import { memory_index_welded_gate_run } from "./memory_index_welded_gate_run.mjs";
+import { memory_index_oversize_gate_run } from "./memory_index_oversize_gate_run.mjs";
+import { bible_glyph_chapters_verse_marks_overdrawn_gate_run } from "./bible_glyph_chapters_verse_marks_overdrawn_gate_run.mjs";
+import { bible_usfm_lines_division_subtitles_dropped_cases_gate_run } from "./bible_usfm_lines_division_subtitles_dropped_cases_gate_run.mjs";
+import { bible_usfm_interlinear_words_apart_gate_run } from "./bible_usfm_interlinear_words_apart_gate_run.mjs";
+import { bible_usfm_book_typos_gate_run } from "./bible_usfm_book_typos_gate_run.mjs";
+import { text_word_junk_why_or_null_cases_gate_run } from "./text_word_junk_why_or_null_cases_gate_run.mjs";
+import { bible_usfm_reading_junk_words_gate_run } from "./bible_usfm_reading_junk_words_gate_run.mjs";
+import { bible_usfm_version_lines_dropped_gate_run } from "./bible_usfm_version_lines_dropped_gate_run.mjs";
+import { bible_usfm_markers_named_gate_run } from "./bible_usfm_markers_named_gate_run.mjs";
+import { ebible_version_words_spelled_gate_run } from "./ebible_version_words_spelled_gate_run.mjs";
+import { app_code_lessons_above_broken_gate_run } from "./app_code_lessons_above_broken_gate_run.mjs";
+import { bible_glyph_chapters_unlisted_gate_run } from "./bible_glyph_chapters_unlisted_gate_run.mjs";
+import { gloss_same_as_gate_run } from "./gloss_same_as_gate_run.mjs";
+import { bible_glyph_chapters_name_tag_fire_joined_gate_run } from "./bible_glyph_chapters_name_tag_fire_joined_gate_run.mjs";
+import { app_code_lessons_released_gate_run } from "./app_code_lessons_released_gate_run.mjs";
 export function qa_gates() {
   "Every gate the repo-wide check runs, gathered in one list, so adding a function here is the whole of wiring a new gate in.";
   let gates = [
@@ -742,6 +743,7 @@ export function qa_gates() {
     bible_glyph_artwork_gate_run,
     bible_glyph_roots_characters_gate_run,
     bible_glyph_undrawn_lists_gate_run,
+    bible_glyph_gloss_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_gate_run,
     bible_glyph_chapters_rosetta_lines_notation_gate_run,
     bible_glyph_chapters_rosetta_lines_marks_gate_run,
