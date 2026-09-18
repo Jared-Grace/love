@@ -647,7 +647,7 @@ export function bible_glyph_chapter_1sa17() {
           "suddenly",
           "the",
           "$man_beard",
-          "named",
+          "$name_tag",
           "Goliath",
           "the",
           "Philistine",
