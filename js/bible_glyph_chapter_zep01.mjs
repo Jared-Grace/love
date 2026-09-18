@@ -135,7 +135,7 @@ export function bible_glyph_chapter_zep01() {
           "against",
           "all",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "$proper_name$Jerusalem.",
           "I",
