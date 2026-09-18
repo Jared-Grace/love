@@ -1,8 +1,8 @@
 import { arguments_assert } from "./arguments_assert.mjs";
 import { fn_name } from "./fn_name.mjs";
 import { bible_chapter_testament_name } from "./bible_chapter_testament_name.mjs";
-import { equal } from "./equal.mjs";
 import { ebible_testament_old_name } from "./ebible_testament_old_name.mjs";
+import { equal } from "./equal.mjs";
 import { bible_glyph_roots_testament_table } from "./bible_glyph_roots_testament_table.mjs";
 import { bible_glyph_roots_drawn_lookup } from "./bible_glyph_roots_drawn_lookup.mjs";
 import { bible_interlinear_chapter_words } from "./bible_interlinear_chapter_words.mjs";
@@ -13,6 +13,7 @@ import { bible_glyph_word_crasis_parts } from "./bible_glyph_word_crasis_parts.m
 import { property_get_or_null } from "./property_get_or_null.mjs";
 import { null_is } from "./null_is.mjs";
 import { bible_glyph_gloss_placeholder_is } from "./bible_glyph_gloss_placeholder_is.mjs";
+import { bible_glyph_gloss_supplied_dropped } from "./bible_glyph_gloss_supplied_dropped.mjs";
 import { bible_glyph_hebrew_word_english_keys } from "./bible_glyph_hebrew_word_english_keys.mjs";
 import { list_add } from "./list_add.mjs";
 export async function bible_glyph_chapter_derived(chapter_code) {
@@ -29,6 +30,9 @@ export async function bible_glyph_chapter_derived(chapter_code) {
   ("EACH WORD ALSO KEEPS THE KEYS OF ITS PARTS in the order English says them, so a Hebrew word with and or in joined to its front, or his at its end, draws that small word too rather than letting the stem's picture stand for the whole English chunk. The order is ",
     fn_name("bible_glyph_hebrew_word_english_keys"),
     "; a Greek word, already split at crasis, is its one number.");
+  ("THE ENGLISH KEPT ON A WORD IS THE INTERLINEAR'S CHUNK WITH THE TRANSLATORS' OWN WORDS TAKEN OUT, by ",
+    fn_name("bible_glyph_gloss_supplied_dropped"),
+    ". It is dropped here rather than when the page is drawn because the English is a stand-in for a picture, and a stand-in for a word nobody wrote is not wanted at any later step either.");
   ("The verses are numbered by their place, the way the authoring draft numbers them, so the two can be laid side by side.");
   let testament_name = bible_chapter_testament_name(chapter_code);
   let right = ebible_testament_old_name();
@@ -57,7 +61,8 @@ export async function bible_glyph_chapter_derived(chapter_code) {
         let seated = property_get_or_null(drawn, part.strong);
         let glyph = null_is(seated) ? "" : seated;
         let filler = bible_glyph_gloss_placeholder_is(part.gloss);
-        let english = filler ? "" : part.gloss;
+        let said = bible_glyph_gloss_supplied_dropped(part.gloss);
+        let english = filler ? "" : said;
         let keys = hebrew
           ? bible_glyph_hebrew_word_english_keys(word)
           : [part.strong];
