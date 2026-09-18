@@ -336,7 +336,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "dogs",
           "will",
-          "devour",
+          "$eating",
           "$proper_name$Jezebel",
           "on",
           "the",
