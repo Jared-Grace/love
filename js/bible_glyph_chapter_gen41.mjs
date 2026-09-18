@@ -105,7 +105,7 @@ export function bible_glyph_chapter_gen41() {
           "thin",
           "of",
           "$meat",
-          "devoured",
+          "$eating",
           "the",
           "seven",
           "sleek,",
