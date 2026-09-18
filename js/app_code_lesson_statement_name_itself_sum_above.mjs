@@ -123,11 +123,8 @@ export function app_code_lesson_statement_name_itself_sum_above(root, context) {
   html_div_cycle_code(box_value, ["", names_sum, " solves to ", total]);
   ("both sentences name a whole line rather than the half of it that changes, and the line they are about is drawn once, underneath, inside the program it belongs to. Named as a sum and a number, the two sentences were about the right-hand sides and a learner had to work out for themselves that the rest of the line stayed as it was.");
   let given_total = js_code_assign_statement(name_first, total);
-  html_div_cycle_code(box_value, [
-    "So we did not have to write ",
-    given_sum,
-    ":",
-  ]);
+  ("this line ends on the line it names and no colon, because nothing follows it. A colon promises the reader something is coming next; the line under this one starts a new sentence of its own, and the program it does introduce is two rows further down under the line that offers it.");
+  html_div_cycle_code(box_value, ["So we did not have to write ", given_sum]);
   html_div_cycle_code(box_value, [
     "Instead, we could have just written ",
     given_total,
