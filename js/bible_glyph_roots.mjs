@@ -78,6 +78,9 @@ export function bible_glyph_roots() {
   "This is a SEED and not a finished mapping. It exists to be run through the survey, whose job is to report where two roots want one glyph and where one glyph is being asked to cover senses too far apart to share it. The mapping is data so that answering those reports costs an edit rather than a rewrite.";
   "PHOBOS AND PHOBEOMAI ARE SEATED ON A MARK NARROWER THAN THEY ARE, and the rule that makes that honest is written beside the screaming face in the character table: draw it where the word means terror, and write the word in English where the interlinear glosses it awe or respect. This is the one row here whose correctness rests on the author of a verse rather than on the number in it.";
   "THE GREEK EMPHATIC DOUBLE NEGATIVE IS DRAWN AS ONE MARK AND THE CERTAINLY IS SPELLED OUT IN WORDS. Ou followed immediately by me is one idiom meaning certainly not, and a reader who meets two prohibition marks in a row does the arithmetic and cancels them - the twenty eighth of John ten shipped that way and was read as they will perish, which is the exact inverse of the strongest assurance in the chapter. So the pair takes one mark and the force the second negative carries goes into plain English standing beside it: at all, for ever, never. The fifth and the twenty eighth of John ten already read that way and are the model to copy.";
+  "PANTOKRATOR IS DRAWN AS THE TWO WORDS IT IS MADE OF, and that is the method to copy for any title whose own parts are visible. The Greek is panto joined to krator, all joined to one who holds power, and English says the same thing with the same seam when it says Almighty - so all followed by might is not an interpretation of the word, it is the word spelled in pictures. A single new picture invented for the whole title would have been somebody's summary of it; two pictures already in the vocabulary are the thing itself.";
+  "IT IS A TITLE OF GOD AND IT TAKES NO NAME BADGE, which is why it is seated here rather than left to the badge writer. The badge says a name stands here and is right over Pharaoh and over Nineveh; over the Almighty it would say the same thing it says over Pharaoh. A title whose parts can be drawn does not need the badge at all - it can be read, and being read is better than being labelled.";
+  "THE MIGHT PICTURE IS NEW AND IS NOT THE MEASURING RULER. The ruler already seats dikaios, straight and therefore righteous, so it was the obvious wrong seat for the ruling half of this word: all plus that ruler reads as all righteous. Two pictures are not interchangeable because two English words for them rhyme, and the check that catches it is asking what the glyph already seats before spending it.";
   "THAT IS NOT A LOSS OF THE ORIGINAL AND THE ARGUMENT FOR TWO MARKS ASSUMES IT IS. Two marks are closer to the Greek word count and further from the Greek meaning, and the meaning is the only thing a picture can carry - a reader with no language cannot be told that these two negatives are the emphatic kind and those two are two separate clauses. Closeness to the wording is already served losslessly by the Rosetta band, which ships the Greek and its word-for-word English beside every verse. The picture line is readable English written in pictures and it is not an interlinear.";
   ("WHICH TWO NEGATIVES ARE THE IDIOM IS ASKED WORD BY WORD THROUGH THE VERSE, never over the negations alone. Read over the negations alone, a sentence that negates twice in two separate clauses shows its two negatives as neighbours while they stand far apart in the sentence - the twenty fourth of Mark twelve and the thirty seventh of John ten are both that shape, and both are two real negations wanting two real marks. Immediately before is the whole of the test and ",
     fn_name("bible_glyph_negation_idiom_closes_is"),
@@ -1397,6 +1400,16 @@ export function bible_glyph_roots() {
         {
           strong: "3956",
           glyph: "all",
+        },
+      ],
+    },
+    {
+      root: "pantokrator",
+      gloss: "almighty, ruler of all",
+      words: [
+        {
+          strong: "3841",
+          glyph: "all+might",
         },
       ],
     },
