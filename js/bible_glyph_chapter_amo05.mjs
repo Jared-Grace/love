@@ -720,7 +720,7 @@ export function bible_glyph_chapter_amo05() {
           "and",
           "offerings",
           "forty",
-          "years",
+          "$year",
           "in",
           "the",
           "wilderness,",
