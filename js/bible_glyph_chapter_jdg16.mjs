@@ -169,7 +169,7 @@ export function bible_glyph_chapter_jdg16() {
           "of",
           "the",
           "$proper_name$Philistines",
-          "went",
+          "$walking+pointing_up",
           "to",
           "her",
           "and",
