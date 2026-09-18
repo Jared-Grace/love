@@ -657,7 +657,7 @@ export function bible_glyph_chapter_gen03() {
           "And",
           "the",
           "$person",
-          "named",
+          "$name_tag",
           "his",
           "$woman",
           "Eve,",
