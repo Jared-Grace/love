@@ -245,7 +245,7 @@ export function bible_glyph_chapter_amo05() {
           "$i_am",
           "is",
           "His",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
