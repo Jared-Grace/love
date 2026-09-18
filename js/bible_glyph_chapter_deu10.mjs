@@ -256,7 +256,7 @@ export function bible_glyph_chapter_deu10() {
           "that",
           "time",
           "the",
-          "LORD",
+          "$i_am",
           "set",
           "apart",
           "the",
