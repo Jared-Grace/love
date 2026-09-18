@@ -167,7 +167,7 @@ export function bible_glyph_chapter_2ki17() {
           "it",
           "for",
           "three",
-          "years.",
+          "$year.",
         ],
       },
       {
