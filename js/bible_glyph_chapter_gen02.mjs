@@ -488,7 +488,7 @@ export function bible_glyph_chapter_gen02() {
           "the",
           "$sun",
           "you",
-          "eat",
+          "$eating",
           "$tray_out",
           "it,",
           "you",
