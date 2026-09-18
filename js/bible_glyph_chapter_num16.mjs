@@ -1406,7 +1406,7 @@ export function bible_glyph_chapter_num16() {
           "because",
           "wrath",
           "has",
-          "come",
+          "$walking+tray_out",
           "out",
           "from",
           "the",
