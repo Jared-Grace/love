@@ -20,7 +20,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "tribes",
           "of",
-          "Israel",
+          "$proper_name$Israel",
           "at",
           "$proper_name$Shechem.",
           "He",
@@ -834,7 +834,7 @@ export function bible_glyph_chapter_jos24() {
           "On",
           "that",
           "$sun",
-          "Joshua",
+          "$proper_name$Joshua",
           "made",
           "a",
           "covenant",
@@ -858,7 +858,7 @@ export function bible_glyph_chapter_jos24() {
       {
         verse_number: 26,
         words: [
-          "Joshua",
+          "$proper_name$Joshua",
           "recorded",
           "these",
           "$speech",
@@ -964,7 +964,7 @@ export function bible_glyph_chapter_jos24() {
           "Some",
           "time",
           "later",
-          "Joshua",
+          "$proper_name$Joshua",
           "$son",
           "of",
           "$proper_name$Nun,",
@@ -1011,7 +1011,7 @@ export function bible_glyph_chapter_jos24() {
       {
         verse_number: 31,
         words: [
-          "Israel",
+          "$proper_name$Israel",
           "had",
           "$kneeling",
           "the",
@@ -1020,7 +1020,7 @@ export function bible_glyph_chapter_jos24() {
           "the",
           "$sun",
           "of",
-          "Joshua",
+          "$proper_name$Joshua",
           "and",
           "of",
           "the",
