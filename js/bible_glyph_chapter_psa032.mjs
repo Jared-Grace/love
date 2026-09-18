@@ -127,7 +127,7 @@ export function bible_glyph_chapter_psa032() {
           "$i_am,",
           "and",
           "You",
-          "forgave",
+          "$lifting",
           "the",
           "guilt",
           "of",
