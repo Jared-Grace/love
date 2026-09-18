@@ -194,7 +194,7 @@ export function bible_glyph_chapter_gen05() {
           "hundred",
           "and",
           "twelve",
-          "years,",
+          "$year,",
           "and",
           "$skull.",
         ],
