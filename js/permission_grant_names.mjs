@@ -896,7 +896,7 @@ export function permission_grant_names() {
   let spelled881 = fn_name("functions_rename_names_prefix_change");
   let spelled882 = fn_name("functions_rename_if_starts_with_replace");
   let spelled883 = fn_name("object_merge_match_test");
-  let spelled884 = fn_name("reply_test");
+  let spelled884 = fn_name("reply_parser_gate_run");
   let spelled885 = fn_name("cpu_count");
   let spelled886 = fn_name("app_shared_font_size_label");
   let spelled887 = fn_name("browser_secure_context_all");
