@@ -89,7 +89,7 @@ export function bible_glyph_chapter_gen30() {
           "that",
           "she",
           "may",
-          "bear",
+          "$baby",
           "on",
           "my",
           "knees,",
