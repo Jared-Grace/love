@@ -399,7 +399,7 @@ export function bible_glyph_chapter_1ki17() {
           "you",
           "have,",
           "and",
-          "bring",
+          "$walking+tray_out",
           "it",
           "out",
           "to",
