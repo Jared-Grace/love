@@ -234,7 +234,7 @@ export function bible_glyph_chapter_deu18() {
         words: [
           "They",
           "shall",
-          "eat",
+          "$eating",
           "equal",
           "portions,",
           "even",
