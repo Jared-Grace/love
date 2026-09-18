@@ -61,7 +61,7 @@ export function bible_glyph_chapter_mic05() {
           "$tray_out",
           "you",
           "will",
-          "come",
+          "$walking+tray_out",
           "forth",
           "for",
           "Me",
