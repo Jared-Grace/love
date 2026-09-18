@@ -22,7 +22,7 @@ export function bible_glyph_chapter_psa034() {
           "be",
           "insane",
           "before",
-          "Abimelech,",
+          "$proper_name$Abimelech,",
           "so",
           "that",
           "the",
