@@ -23,7 +23,7 @@ export function bible_glyph_chapter_psa110() {
           "to",
           "my",
           "$crown:",
-          "Sit",
+          "$person+house",
           "at",
           "My",
           "right",
