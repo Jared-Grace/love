@@ -5,9 +5,10 @@ import { app_code_container_light_blue } from "./app_code_container_light_blue.m
 import { app_code_string_code } from "./app_code_string_code.mjs";
 import { js_code_let_statement } from "./js_code_let_statement.mjs";
 import { js_code_console_log_statement } from "./js_code_console_log_statement.mjs";
+import { js_code_comment_line } from "./js_code_comment_line.mjs";
+import { list_join_empty } from "./list_join_empty.mjs";
+import { text_empty } from "./text_empty.mjs";
 import { html_div_cycle_code } from "./html_div_cycle_code.mjs";
-import { html_div_code_lines } from "./html_div_code_lines.mjs";
-import { html_div_code } from "./html_div_code.mjs";
 import { app_code_code_lines_writes_out } from "./app_code_code_lines_writes_out.mjs";
 import { app_code_lesson_name_no_quotes_box } from "./app_code_lesson_name_no_quotes_box.mjs";
 export function app_code_lesson_statement_name_copy_code_box(
@@ -32,31 +33,42 @@ export function app_code_lesson_statement_name_copy_code_box(
   let held_last = js_code_let_statement(name_last, quoted_last);
   let copied = js_code_let_statement(name_copy, name_first);
   let logged = js_code_console_log_statement(name_copy);
-  html_div_cycle_code(box_code, [
-    "In JS we make cups ",
+  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own - and this screen's whole point is which cup the copied word came from, which only the copying line says.");
+  ("THE EXPLANATION IS WRITTEN AS NOTES INSIDE THE PROGRAM. Each line of English stands directly above the line it is about, so nothing has to be matched up by eye, and no line is drawn twice. Said as writing outside the box, each line had to be shown twice over - once where it was being explained and once inside the program - and the three lines of this screen came out six.");
+  ("Notes rather than writing, because a note may be as long as it needs to be and costs nothing: the machine does not read it, the painter of this chip draws every note dimmer than the code around it, and this course taught notes four lessons before this one. Two slashes only - the other kind of note is not taught anywhere in this course, and a screen is not the place to introduce one.");
+  ("A blank line between each note and the group before it, because the notes are what would otherwise have been separate sentences with code between them, and the blank line is what is left of that break.");
+  let words = list_join_empty([
+    "We make cups ",
     name_first,
     " and ",
     name_last,
-    " like this:",
   ]);
-  ("the two lines are handed over together rather than one at a time, because nothing is said between them: they are one program, and the quiz and the worked example of this same lesson have always drawn a program as one chip.");
-  html_div_code_lines(box_code, [held_first, held_last]);
-  html_div_cycle_code(box_code, [
-    "Then we make ",
+  let note_cups = js_code_comment_line(words);
+  let words2 = list_join_empty([
+    "We make ",
     name_copy,
     " and fill it with whatever is in ",
     name_first,
-    " (and this does not remove it from ",
-    name_first,
-    "):",
   ]);
-  html_div_code(box_code, copied);
-  html_div_cycle_code(box_code, [
-    "Then we write out what is inside ",
-    name_copy,
-  ]);
-  ("A BOX THAT SHOWS WHAT A PROGRAM WRITES OUT SHOWS THE WHOLE PROGRAM. The two lines that make the cups and the line that copies one of them stand above as the lines being taught, and stand here again because the word written out underneath is a claim, and a claim about what a program writes out is only checkable against a program that runs on its own. Shown as the log line alone, the answer rested on three lines a learner had to carry down the box - and this screen's whole point is which cup the copied word came from, which only the copying line says.");
-  let lines = [held_first, held_last, copied, logged];
+  let note_copy = js_code_comment_line(words2);
+  let words3 = list_join_empty(["This does not remove it from ", name_first]);
+  let note_kept = js_code_comment_line(words3);
+  let words4 = list_join_empty(["We write out what is inside ", name_copy]);
+  let note_logged = js_code_comment_line(words4);
+  let blank = text_empty();
+  html_div_cycle_code(box_code, ["In JS we write the same thing like this:"]);
+  let lines = [
+    note_cups,
+    held_first,
+    held_last,
+    blank,
+    note_copy,
+    note_kept,
+    copied,
+    blank,
+    note_logged,
+    logged,
+  ];
   app_code_code_lines_writes_out(box_code, lines, word_first);
   app_code_lesson_name_no_quotes_box(root, name_first, name_copy, word_first);
   return box_code;
