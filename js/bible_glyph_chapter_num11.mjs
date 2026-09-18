@@ -532,7 +532,7 @@ export function bible_glyph_chapter_num11() {
           "will",
           "help",
           "you",
-          "bear",
+          "$lifting",
           "the",
           "burden",
           "of",
