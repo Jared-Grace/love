@@ -653,7 +653,7 @@ export function bible_glyph_chapter_exo25() {
           "the",
           "poles",
           "to",
-          "carry",
+          "$lifting",
           "the",
           "table.",
         ],
