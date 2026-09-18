@@ -635,7 +635,7 @@ export function bible_glyph_chapter_zec14() {
           "who",
           "do",
           "$no_entry",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "celebrate",
