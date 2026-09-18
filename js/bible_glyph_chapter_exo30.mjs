@@ -255,7 +255,7 @@ export function bible_glyph_chapter_exo30() {
           "Once",
           "a",
           "year",
-          "Aaron",
+          "$proper_name$Aaron",
           "shall",
           "make",
           "atonement",
@@ -295,7 +295,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 11,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
       },
       {
         verse_number: 12,
@@ -476,7 +476,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 17,
-        words: ["And", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["And", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
       },
       {
         verse_number: 18,
@@ -511,7 +511,7 @@ export function bible_glyph_chapter_exo30() {
       {
         verse_number: 19,
         words: [
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son",
@@ -604,7 +604,7 @@ export function bible_glyph_chapter_exo30() {
       },
       {
         verse_number: 22,
-        words: ["Then", "$i_am", "$mouth", "to", "Moses,", "$speech,"],
+        words: ["Then", "$i_am", "$mouth", "to", "$proper_name$Moses,", "$speech,"],
       },
       {
         verse_number: 23,
@@ -775,7 +775,7 @@ export function bible_glyph_chapter_exo30() {
         verse_number: 30,
         words: [
           "$oil",
-          "Aaron",
+          "$proper_name$Aaron",
           "and",
           "his",
           "$son",
@@ -889,7 +889,7 @@ export function bible_glyph_chapter_exo30() {
           "also",
           "$speech",
           "to",
-          "Moses,",
+          "$proper_name$Moses,",
           "$hand_receiving",
           "fragrant",
           "spices:",
