@@ -613,7 +613,7 @@ export function bible_glyph_chapter_exo33() {
           "$lightbulb",
           "you",
           "by",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
