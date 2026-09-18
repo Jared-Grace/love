@@ -67,7 +67,7 @@ export function bible_glyph_chapter_hos14() {
       {
         verse_number: 3,
         words: [
-          "Assyria",
+          "$proper_name$Assyria",
           "will",
           "$no_entry",
           "save",
@@ -134,7 +134,7 @@ export function bible_glyph_chapter_hos14() {
           "the",
           "dew",
           "to",
-          "Israel;",
+          "$proper_name$Israel;",
           "he",
           "will",
           "blossom",
@@ -148,7 +148,7 @@ export function bible_glyph_chapter_hos14() {
           "the",
           "cedars",
           "of",
-          "Lebanon.",
+          "$proper_name$Lebanon.",
         ],
       },
       {
@@ -173,7 +173,7 @@ export function bible_glyph_chapter_hos14() {
           "the",
           "cedars",
           "of",
-          "Lebanon.",
+          "$proper_name$Lebanon.",
         ],
       },
       {
@@ -204,7 +204,7 @@ export function bible_glyph_chapter_hos14() {
           "the",
           "wine",
           "of",
-          "Lebanon.",
+          "$proper_name$Lebanon.",
         ],
       },
       {
