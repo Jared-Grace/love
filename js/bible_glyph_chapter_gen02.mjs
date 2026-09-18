@@ -392,7 +392,7 @@ export function bible_glyph_chapter_gen02() {
         verse_number: 14,
         words: [
           "The",
-          "name",
+          "$name_tag",
           "of",
           "the",
           "third",
