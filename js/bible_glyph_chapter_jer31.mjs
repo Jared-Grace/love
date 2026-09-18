@@ -172,7 +172,7 @@ export function bible_glyph_chapter_jer31() {
           "Arise,",
           "let",
           "us",
-          "go",
+          "$walking+pointing_up",
           "up",
           "to",
           "$proper_name$Zion,",
