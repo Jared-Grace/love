@@ -404,7 +404,7 @@ export function bible_glyph_chapter_deu14() {
           "are",
           "$no_entry",
           "to",
-          "eat",
+          "$eating",
           "any",
           "carcass;",
           "you",
