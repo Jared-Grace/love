@@ -735,7 +735,7 @@ export function bible_glyph_chapter_exo03() {
           "My",
           "$hand",
           "and",
-          "strike",
+          "$fist",
           "the",
           "$proper_name$Egyptians",
           "with",
