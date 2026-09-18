@@ -289,7 +289,7 @@ export function bible_glyph_chapter_lev19() {
           "so",
           "profane",
           "the",
-          "name",
+          "$name_tag",
           "of",
           "your",
           "$fire.",
