@@ -158,7 +158,7 @@ export function bible_glyph_chapter_isa02() {
           "$map",
           "will",
           "$no_entry",
-          "take",
+          "$lifting",
           "up",
           "the",
           "$sword",
