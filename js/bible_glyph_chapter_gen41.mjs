@@ -788,7 +788,7 @@ export function bible_glyph_chapter_gen41() {
         words: [
           "Behold,",
           "seven",
-          "years",
+          "$year",
           "of",
           "great",
           "abundance",
