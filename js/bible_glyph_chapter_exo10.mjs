@@ -151,7 +151,7 @@ export function bible_glyph_chapter_exo10() {
           "let",
           "My",
           "$family",
-          "go,",
+          "$hand_sending,",
           "then",
           "tomorrow",
           "I",
