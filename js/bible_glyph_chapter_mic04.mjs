@@ -222,7 +222,7 @@ export function bible_glyph_chapter_mic04() {
           "name",
           "of",
           "the",
-          "LORD",
+          "$i_am",
           "our",
           "$fire",
           "$hourglass",
