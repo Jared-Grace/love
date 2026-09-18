@@ -311,7 +311,7 @@ export function bible_glyph_chapter_amo05() {
           "you",
           "will",
           "$no_entry",
-          "live",
+          "$person+house",
           "in",
           "the",
           "stone",
