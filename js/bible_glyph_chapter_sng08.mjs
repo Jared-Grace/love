@@ -106,7 +106,7 @@ export function bible_glyph_chapter_sng08() {
           "O",
           "$woman",
           "of",
-          "Jerusalem,",
+          "$proper_name$Jerusalem,",
           "do",
           "not",
           "arouse",
@@ -325,7 +325,7 @@ export function bible_glyph_chapter_sng08() {
       {
         verse_number: 11,
         words: [
-          "Solomon",
+          "$proper_name$Solomon",
           "had",
           "a",
           "vineyard",
