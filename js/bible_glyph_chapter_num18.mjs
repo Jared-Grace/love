@@ -1123,7 +1123,7 @@ export function bible_glyph_chapter_num18() {
           "you",
           "will",
           "$no_entry",
-          "incur",
+          "$lifting",
           "guilt",
           "because",
           "of",
