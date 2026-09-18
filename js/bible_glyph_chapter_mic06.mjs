@@ -296,7 +296,7 @@ export function bible_glyph_chapter_mic06() {
           "to",
           "$eye",
           "Your",
-          "name.",
+          "$name_tag.",
           "$ear",
           "the",
           "rod,",
