@@ -1,3 +1,4 @@
+import { bible_word_voice_compare_rows } from "./bible_word_voice_compare_rows.mjs";
 import { bible_word_voice_dash_rows } from "./bible_word_voice_dash_rows.mjs";
 import { bible_word_voice_chapter_rows } from "./bible_word_voice_chapter_rows.mjs";
 import { bible_word_voice_trial_phoneme_rows } from "./bible_word_voice_trial_phoneme_rows.mjs";
@@ -138,6 +139,12 @@ export async function bible_word_voice_trial_rows() {
     label: "Genesis 1 · joining dash",
     rtl: true,
     rows: await bible_word_voice_dash_rows("GEN01", "Achird,Vindemiatrix"),
+  });
+  result.push({
+    key: "eleven",
+    label: "Genesis 1 · Google against ElevenLabs",
+    rtl: true,
+    rows: await bible_word_voice_compare_rows("GEN01", 25),
   });
   result.push({
     key: "test",
