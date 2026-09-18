@@ -327,7 +327,7 @@ export function bible_glyph_chapter_jos06() {
           "let",
           "one",
           "$speech",
-          "come",
+          "$walking+tray_out",
           "out",
           "of",
           "your",
