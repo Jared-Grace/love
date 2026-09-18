@@ -1226,7 +1226,7 @@ export function bible_glyph_chapter_jer31() {
           "Hosts",
           "is",
           "His",
-          "name.",
+          "$name_tag.",
         ],
       },
       {
