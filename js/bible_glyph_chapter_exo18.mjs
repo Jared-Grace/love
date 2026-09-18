@@ -455,7 +455,7 @@ export function bible_glyph_chapter_exo18() {
           "Why",
           "do",
           "you",
-          "sit",
+          "$person+house",
           "alone",
           "as",
           "judge,",
