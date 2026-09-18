@@ -15,7 +15,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 1,
         words: [
           "Then",
-          "Jacob",
+          "$proper_name$Jacob",
           "resumed",
           "his",
           "journey",
@@ -120,7 +120,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 4,
         words: [
-          "Jacob",
+          "$proper_name$Jacob",
           "$speech",
           "the",
           "shepherds,",
@@ -278,7 +278,7 @@ export function bible_glyph_chapter_gen29() {
           "As",
           "soon",
           "as",
-          "Jacob",
+          "$proper_name$Jacob",
           "$eye",
           "$proper_name$Rachel",
           "the",
@@ -360,7 +360,7 @@ export function bible_glyph_chapter_gen29() {
           "his",
           "sister",
           "$son",
-          "Jacob,",
+          "$proper_name$Jacob,",
           "he",
           "ran",
           "out",
@@ -380,7 +380,7 @@ export function bible_glyph_chapter_gen29() {
           "his",
           "$house,",
           "where",
-          "Jacob",
+          "$proper_name$Jacob",
           "told",
           "him",
           "all",
@@ -416,7 +416,7 @@ export function bible_glyph_chapter_gen29() {
         verse_number: 15,
         words: [
           "Then",
-          "Laban",
+          "$proper_name$Laban",
           "$speech",
           "to",
           "him,",
@@ -464,7 +464,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 17,
         words: [
-          "Leah",
+          "$proper_name$Leah",
           "had",
           "weak",
           "$eyes,",
@@ -501,7 +501,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 19,
         words: [
-          "Laban",
+          "$proper_name$Laban",
           "$speech,",
           "$thumbs_up",
           "that",
@@ -602,7 +602,7 @@ export function bible_glyph_chapter_gen29() {
           "$hand_receiving",
           "his",
           "$woman",
-          "Leah",
+          "$proper_name$Leah",
           "and",
           "gave",
           "her",
@@ -628,7 +628,7 @@ export function bible_glyph_chapter_gen29() {
           "to",
           "his",
           "$woman",
-          "Leah",
+          "$proper_name$Leah",
           "as",
           "her",
           "maidservant.",
@@ -671,7 +671,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 26,
         words: [
-          "Laban",
+          "$proper_name$Laban",
           "$speech,",
           "It",
           "is",
@@ -744,7 +744,7 @@ export function bible_glyph_chapter_gen29() {
       {
         verse_number: 29,
         words: [
-          "Laban",
+          "$proper_name$Laban",
           "also",
           "$hands_giving",
           "his",
@@ -795,7 +795,7 @@ export function bible_glyph_chapter_gen29() {
           "$i_am",
           "$eye",
           "that",
-          "Leah",
+          "$proper_name$Leah",
           "was",
           "unloved,",
           "He",
