@@ -610,7 +610,7 @@ export function bible_glyph_chapter_exo23() {
           "he",
           "will",
           "$no_entry",
-          "forgive",
+          "$lifting",
           "rebellion,",
           "since",
           "My",
