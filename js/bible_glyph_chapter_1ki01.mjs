@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1ki01() {
           "them",
           "who",
           "will",
-          "sit",
+          "$person+house",
           "on",
           "the",
           "throne",
