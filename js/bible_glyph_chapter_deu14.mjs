@@ -735,7 +735,7 @@ export function bible_glyph_chapter_deu14() {
           "may",
           "$footprints",
           "and",
-          "eat",
+          "$eating",
           "and",
           "be",
           "satisfied.",
