@@ -1317,7 +1317,7 @@ export function bible_glyph_chapter_jer32() {
           "and",
           "make",
           "them",
-          "dwell",
+          "$person+house",
           "in",
           "safety.",
         ],
