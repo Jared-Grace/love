@@ -982,7 +982,7 @@ export function bible_glyph_chapter_gen44() {
           "how",
           "can",
           "I",
-          "go",
+          "$walking+pointing_up",
           "back",
           "to",
           "my",
