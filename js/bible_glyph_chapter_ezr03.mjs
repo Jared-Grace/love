@@ -298,7 +298,7 @@ export function bible_glyph_chapter_ezr03() {
           "$son",
           "of",
           "$proper_name$Shealtiel,",
-          "Jeshua",
+          "$proper_name$Jeshua",
           "$son",
           "of",
           "$proper_name$Jozadak,",
