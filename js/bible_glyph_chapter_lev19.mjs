@@ -655,7 +655,7 @@ export function bible_glyph_chapter_lev19() {
           "forbidden.",
           "For",
           "three",
-          "years",
+          "$year",
           "it",
           "will",
           "be",
