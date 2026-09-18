@@ -526,7 +526,7 @@ export function bible_glyph_chapter_est01() {
           "$speech",
           "of",
           "the",
-          "queen",
+          "$queen",
           "will",
           "become",
           "known",
