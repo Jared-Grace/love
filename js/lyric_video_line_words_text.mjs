@@ -1,3 +1,4 @@
+import { lyric_video_fade_longest_seconds } from "./lyric_video_fade_longest_seconds.mjs";
 import { lyric_video_line_lit_colour } from "./lyric_video_line_lit_colour.mjs";
 import { arguments_assert } from "./arguments_assert.mjs";
 import { subtract } from "./subtract.mjs";
@@ -24,7 +25,7 @@ export function lyric_video_line_words_text(line, lead) {
   arguments_assert(arguments, 2);
   let shown = subtract(line.start, lead);
   let words = line.words;
-  let fade_most = 0.3;
+  let fade_most = lyric_video_fade_longest_seconds();
   let lit_colour = lyric_video_line_lit_colour(line);
   function moment(seconds) {
     let since = subtract(seconds, shown);
