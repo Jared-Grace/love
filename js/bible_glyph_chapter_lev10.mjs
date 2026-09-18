@@ -212,7 +212,7 @@ export function bible_glyph_chapter_lev10() {
         verse_number: 7,
         words: [
           "$no_entry",
-          "go",
+          "$walking+tray_out",
           "outside",
           "the",
           "entrance",
