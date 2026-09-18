@@ -169,7 +169,7 @@ export function bible_glyph_chapter_lev19() {
           "eats",
           "it",
           "will",
-          "bear",
+          "$lifting",
           "his",
           "iniquity,",
           "for",
