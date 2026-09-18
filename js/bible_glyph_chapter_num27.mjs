@@ -327,7 +327,7 @@ export function bible_glyph_chapter_num27() {
           "$speech",
           "to",
           "$proper_name$Moses:",
-          "Go",
+          "$walking+pointing_up",
           "up",
           "this",
           "$mountain",
