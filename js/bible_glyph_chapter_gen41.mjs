@@ -540,7 +540,7 @@ export function bible_glyph_chapter_gen41() {
           "thin,",
           "$thumbs_down",
           "cows",
-          "devoured",
+          "$eating",
           "the",
           "seven",
           "well-fed",
