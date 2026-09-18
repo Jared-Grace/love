@@ -20,7 +20,7 @@ export function bible_glyph_chapter_1ki18() {
           "in",
           "the",
           "third",
-          "year",
+          "$year",
           "of",
           "the",
           "drought,",
