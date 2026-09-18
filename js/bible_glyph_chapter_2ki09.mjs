@@ -1306,7 +1306,7 @@ export function bible_glyph_chapter_2ki09() {
           "the",
           "dogs",
           "will",
-          "devour",
+          "$eating",
           "the",
           "$meat",
           "of",
