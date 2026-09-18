@@ -30,7 +30,7 @@ export function bible_glyph_chapter_jol02() {
           "Let",
           "all",
           "who",
-          "dwell",
+          "$person+house",
           "in",
           "the",
           "$earth",
