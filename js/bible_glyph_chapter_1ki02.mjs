@@ -1305,7 +1305,7 @@ export function bible_glyph_chapter_1ki02() {
           "Then",
           "the",
           "$king",
-          "summoned",
+          "$hand_sending",
           "$proper_name$Shimei",
           "and",
           "$speech",
