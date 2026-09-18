@@ -604,7 +604,7 @@ export function bible_glyph_chapter_oba01() {
           "it",
           "ablaze",
           "and",
-          "consume",
+          "$eating",
           "it.",
           "Therefore",
           "$no_entry",
