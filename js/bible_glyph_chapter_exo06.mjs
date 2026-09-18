@@ -81,7 +81,7 @@ export function bible_glyph_chapter_exo06() {
           "$proper_name$Jacob",
           "as",
           "$fire",
-          "Almighty,",
+          "$might,",
           "but",
           "by",
           "My",
