@@ -20,7 +20,7 @@ export function bible_glyph_chapter_isa43() {
           "is",
           "what",
           "the",
-          "LORD",
+          "$i_am",
           "$speech,",
           "He",
           "who",
