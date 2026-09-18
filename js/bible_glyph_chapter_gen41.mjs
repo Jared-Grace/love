@@ -934,7 +934,7 @@ export function bible_glyph_chapter_gen41() {
           "during",
           "the",
           "seven",
-          "years",
+          "$year",
           "of",
           "abundance.",
         ],
