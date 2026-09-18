@@ -850,7 +850,7 @@ export function bible_glyph_chapter_exo28() {
           "$proper_name$Aaron",
           "will",
           "continually",
-          "carry",
+          "$lifting",
           "the",
           "$scales",
           "of",
