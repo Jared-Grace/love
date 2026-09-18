@@ -64,7 +64,7 @@ export function bible_glyph_chapter_isa61() {
           "to",
           "proclaim",
           "the",
-          "year",
+          "$year",
           "of",
           "the",
           "$i_am",
