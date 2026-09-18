@@ -484,7 +484,7 @@ export function bible_glyph_chapter_lev03() {
           "live:",
           "you",
           "$no_entry",
-          "eat",
+          "$eating",
           "any",
           "fat",
           "or",
