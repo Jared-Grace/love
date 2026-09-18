@@ -1433,7 +1433,7 @@ export function bible_glyph_chapter_exo12() {
           "hand",
           "shall",
           "$no_entry",
-          "eat",
+          "$eating",
           "the",
           "Passover.",
         ],
