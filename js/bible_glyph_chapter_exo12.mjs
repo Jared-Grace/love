@@ -344,7 +344,7 @@ export function bible_glyph_chapter_exo12() {
           "of",
           "$proper_name$Egypt",
           "and",
-          "strike",
+          "$fist",
           "down",
           "every",
           "firstborn",
