@@ -33,7 +33,7 @@ export function bible_glyph_chapter_mic05() {
           "rod",
           "they",
           "will",
-          "strike",
+          "$fist",
           "the",
           "cheek",
           "of",
