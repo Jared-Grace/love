@@ -687,7 +687,7 @@ export function bible_glyph_chapter_lev07() {
         words: [
           "You",
           "$no_entry",
-          "eat",
+          "$eating",
           "$blood,",
           "of",
           "$bird",
