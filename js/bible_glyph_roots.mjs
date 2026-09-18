@@ -91,6 +91,8 @@ export function bible_glyph_roots() {
   ("FOUR SEATS WERE ADDED ON 2026-09-18 AS THE GREEK HALVES OF FOUR HEBREW ONES. Epi, heos, prosopon and pas are the same four relations as al, ad, panim and kol, and they were seated in the same hour on purpose. A mark that means over in the Old Testament and something else in the New would be two marks wearing one picture, and a reader who learns this Bible in Genesis would have to learn it again in Matthew. Seating both sides together is what keeps the vocabulary one vocabulary.");
   ("IT ALSO COSTS NOTHING EXTRA, which is why it is worth doing every time rather than when somebody remembers. The picture was already argued for on the Hebrew side and the artwork is already fetched; the Greek half is a row. The cheap moment is the moment the mark is bought, and a Greek seat left for later is a seat somebody has to re-argue from scratch.");
   ("DE AND GAR WERE LOOKED AT AND LEFT IN LETTERS. De stands on two thousand seven hundred and seventy seven New Testament words and gar on one thousand and thirty nine, which makes them the two biggest unseated numbers here, and neither has an honest picture. De is the softest of connectives - and, but, now, and very often nothing English says at all - so any mark strong enough to see would say more than the word does; the plus sign is already kai's and giving it to de would tell a reader the two words are one, which is exactly the difference a Greek reader is hearing. Gar is a cause, and a cause is a relation between clauses that nothing in this vocabulary draws.");
+  ("MESSIAS JOINED CHRISTOS ON 2026-09-18 AND THE TEXT ITSELF SETTLED IT. John writes the word twice and both times translates it in the same breath - we have found the Messias, WHICH IS TO SAY the Christ - so the seat is not an argument from the meaning of the two words, it is the argument the evangelist already made in the verse. Messias is the Hebrew word carried across in Greek letters and christos is the same word carried across in Greek meaning, and both are the anointed one, so both are the oil.");
+  ("IT WAS ONE OF FIVE NAMES OF GOD FOUND STANDING IN PLAIN LETTERS, and the five did not all end the same way. A reading of every word still written in English turned up Yah, Messias, soter, shaddai and pantokrator sitting among the proper names. Two of them were the same word as a mark already drawn and cost nothing - Yah is the covenant name said short, and this one. Soter is not a name at all but the ordinary noun a saviour, and belongs in the queue of words waiting for a picture rather than among names. The last two are titles with no mark yet and are the only part of this that anybody had to decide.");
   let roots = [
     {
       root: "agape",
@@ -200,6 +202,10 @@ export function bible_glyph_roots() {
       words: [
         {
           strong: "5547",
+          glyph: "oil",
+        },
+        {
+          strong: "3323",
           glyph: "oil",
         },
       ],
