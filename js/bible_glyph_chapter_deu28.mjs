@@ -1846,7 +1846,7 @@ export function bible_glyph_chapter_deu28() {
           "she",
           "will",
           "secretly",
-          "eat",
+          "$eating",
           "them",
           "in",
           "the",
