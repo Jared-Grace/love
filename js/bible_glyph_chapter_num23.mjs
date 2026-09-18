@@ -49,7 +49,7 @@ export function bible_glyph_chapter_num23() {
           "$proper_name$Balak",
           "and",
           "$proper_name$Balaam",
-          "offered",
+          "$walking+pointing_up",
           "a",
           "$bull",
           "and",
