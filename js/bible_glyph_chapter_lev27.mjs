@@ -711,7 +711,7 @@ export function bible_glyph_chapter_lev27() {
           "up",
           "to",
           "the",
-          "Year",
+          "$year",
           "of",
           "Jubilee,",
           "and",
