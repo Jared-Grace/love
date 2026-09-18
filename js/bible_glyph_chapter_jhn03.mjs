@@ -591,7 +591,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 23,
         words: [
           "Now",
-          "John",
+          "$proper_name$John",
           "was",
           "$plus",
           "baptizing",
@@ -618,7 +618,7 @@ export function bible_glyph_chapter_jhn03() {
         verse_number: 24,
         words: [
           "(For",
-          "John",
+          "$proper_name$John",
           "had",
           "not",
           "yet",
@@ -690,7 +690,7 @@ export function bible_glyph_chapter_jhn03() {
       {
         verse_number: 27,
         words: [
-          "John",
+          "$proper_name$John",
           "replied,",
           "“A",
           "$person",
