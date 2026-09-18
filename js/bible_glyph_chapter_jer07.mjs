@@ -654,7 +654,7 @@ export function bible_glyph_chapter_jer07() {
           "other",
           "$sacrifice",
           "and",
-          "eat",
+          "$eating",
           "the",
           "$meat",
           "yourselves.",
