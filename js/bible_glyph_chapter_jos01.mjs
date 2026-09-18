@@ -554,7 +554,7 @@ export function bible_glyph_chapter_jos01() {
           "and",
           "everywhere",
           "you",
-          "send",
+          "$hand_sending",
           "us",
           "we",
           "will",
