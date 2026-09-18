@@ -176,7 +176,7 @@ export function bible_glyph_chapter_2ki17() {
           "In",
           "the",
           "ninth",
-          "year",
+          "$year",
           "of",
           "$proper_name$Hoshea",
           "the",
