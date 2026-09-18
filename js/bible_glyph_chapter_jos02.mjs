@@ -714,7 +714,7 @@ export function bible_glyph_chapter_jos02() {
           "she",
           "sent",
           "them",
-          "away.",
+          "$hand_sending.",
           "And",
           "when",
           "they",
