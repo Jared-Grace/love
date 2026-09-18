@@ -323,7 +323,7 @@ export function bible_glyph_chapter_job23() {
           "$heart_organ",
           "faint;",
           "the",
-          "Almighty",
+          "$might",
           "has",
           "terrified",
           "me.",
