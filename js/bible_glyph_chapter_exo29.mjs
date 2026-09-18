@@ -965,7 +965,7 @@ export function bible_glyph_chapter_exo29() {
           "$son",
           "are",
           "to",
-          "eat",
+          "$eating",
           "the",
           "$meat",
           "of",
