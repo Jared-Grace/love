@@ -357,7 +357,7 @@ export function bible_glyph_chapter_deu06() {
           "and",
           "when",
           "you",
-          "eat",
+          "$eating",
           "and",
           "are",
           "satisfied,",
