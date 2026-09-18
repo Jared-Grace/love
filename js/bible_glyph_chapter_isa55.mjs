@@ -320,7 +320,7 @@ export function bible_glyph_chapter_isa55() {
           "and",
           "$bread",
           "to",
-          "eat,",
+          "$eating,",
         ],
       },
       {
