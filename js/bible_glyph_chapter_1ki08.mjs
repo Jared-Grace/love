@@ -642,7 +642,7 @@ export function bible_glyph_chapter_1ki08() {
           "Israel,",
           "as",
           "the",
-          "LORD",
+          "$i_am",
           "$mouth.",
           "I",
           "have",
